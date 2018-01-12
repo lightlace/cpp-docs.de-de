@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021740039044a43972cb51390ecf5cc1babdafe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL-Assistent für Active Server Page-Komponenten
 Dieser Assistent fügt dem Projekt eine Komponente Active Server Pages (ASP). Microsoft Internet Information Services (IIS) verwendet ASP-Komponenten im Rahmen der verbesserten Webseite Entwicklung-Architektur.  
@@ -70,7 +71,7 @@ Dieser Assistent fügt dem Projekt eine Komponente Active Server Pages (ASP). Mi
  **Co-Klasse**  
  Legt den Namen der Komponentenklasse, die eine Liste von Schnittstellen, die vom Objekt unterstützten enthält. Das Projekt oder Objekt Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist die **Coclass** Attribut.  
   
- **Typ**  
+ **Type**  
  Legt die Beschreibung des Objekts, die in der Registrierung für die Co-Klasse angezeigt wird.  
   
  **Interface**  

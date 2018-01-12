@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wctob
+apiname: wctob
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wctob
-dev_langs:
-- C++
+f1_keywords: wctob
+dev_langs: C++
 helpviewer_keywords:
 - wide characters, converting
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae0b23c099bb681b43daf4b61af84a52bba24982
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctob"></a>wctob
 Bestimmt, ob ein Breitzeichen einem Multibytezeichen entspricht und gibt dessen Multibytezeichen-Darstellung zurück.  
@@ -82,7 +64,7 @@ int wctob(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`wctob`|\<wchar.h>|  
   
@@ -124,7 +106,7 @@ Determined the corresponding multibyte character to be "A".
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
  [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   

@@ -34,11 +34,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2ae187d0132ca53b1ffba2b26ef18fa467b9072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb6a8bdea6cb37bd70d6aeda490e2470aa74e999
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="quickexit"></a>quick_exit
 Bewirkt eine normale Programmbeendigung.  
@@ -67,14 +68,14 @@ __declspec(noreturn) void quick_exit(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`quick_exit`|\<process.h> oder\<stdlib.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
  [_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)   

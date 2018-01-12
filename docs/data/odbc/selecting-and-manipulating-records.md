@@ -1,46 +1,49 @@
 ---
-title: "Ausw&#228;hlen und Ver&#228;ndern von Datens&#228;tzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC-Recordsets, Auswählen von Datensätzen"
-  - "Datensatzauswahl, MFC-ODBC-Klassen"
-  - "Datensätze, Auswählen"
+title: "Auswählen und Verändern von Datensätzen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, selecting
+- record selection, MFC ODBC classes
+- ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dec5e0094405cf9d038e53959da97ba079736505
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ausw&#228;hlen und Ver&#228;ndern von Datens&#228;tzen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie normalerweise mit einer SQL\-**SELECT**\-Anweisung Datensätze aus einer Datenquelle auswählen, erhalten Sie ein Resultset, d. h. eine Gruppe von Datensätzen aus einer Tabelle oder einer Abfrage.  Mit den Datenbankklassen wählen Sie mithilfe eines Recordset\-Objekts das Resultset aus und greifen darauf zu.  Dies ist ein Objekt einer anwendungsspezifischen Klasse, das Sie von der [CRecordset](../../mfc/reference/crecordset-class.md)\-Klasse ableiten.  Wenn Sie eine Recordset\-Klasse definieren, geben Sie die damit zu verknüpfende Datenquelle, die zu verwendende Tabelle und die Spalten der Tabelle an.  Der MFC\-Anwendungs\-Assistent oder **Klasse hinzufügen** \(wie beschrieben unter [Hinzufügen eines MFC\-ODBC\-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)\) erstellt eine Klasse mit einer Verbindung zu einer bestimmten Datenquelle.  Die Assistenten schreiben die [GetDefaultSQL](../Topic/CRecordset::GetDefaultSQL.md)\-Memberfunktion der `CRecordset`\-Klasse, sodass diese den Tabellennamen zurückgibt.  Weitere Informationen zum Erstellen von Recordset\-Klassen mithilfe der Assistenten finden Sie unter [Datenbankunterstützung, MFC\-Anwendungs\-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md) und [Hinzufügen eines MFC\-ODBC\-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
+# <a name="selecting-and-manipulating-records"></a>Auswählen und Verändern von Datensätzen
+Normalerweise bei Auswahl Datensätze aus einer Datenquelle mit einer SQL **wählen** -Anweisung, erhalten Sie ein Resultset, das eine Gruppe von Datensätzen aus einer Tabelle oder einer Abfrage ist. Mit den Datenbankklassen verwenden Sie ein Recordset-Objekt auswählen und das Resultset zuzugreifen. Dies ist ein Objekt einer anwendungsspezifischen-Klasse, die Sie von der Klasse ableiten [CRecordset](../../mfc/reference/crecordset-class.md). Wenn Sie eine Recordset-Klasse definieren, geben Sie an der Datenquelle zum Zuordnen der Tabelle und die Spalten der Tabelle. MFC-Anwendung-Assistenten oder **Klasse hinzufügen** (wie in beschrieben [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) erstellt eine Klasse mit einer Verbindung mit einer bestimmten Datenquelle. Schreiben Sie die Assistenten der [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) Memberfunktion der Klasse `CRecordset` zum Zurückgeben des Namens der Tabelle. Weitere Informationen zum Verwenden der Assistenten zum Erstellen von Recordset-Klassen finden Sie unter [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md) und [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
- Mit einem [CRecordset](../../mfc/reference/crecordset-class.md)\-Objekt können Sie zur Laufzeit:  
+ Mit einem [CRecordset](../../mfc/reference/crecordset-class.md) -Objekt zur Laufzeit können Sie:  
   
--   die Datenfelder des aktuellen Datensatzes untersuchen;  
+-   Überprüfen Sie die Datenfelder des aktuellen Datensatzes.  
   
--   das Recordset filtern oder sortieren;  
+-   Filtern Sie oder sortieren Sie das Recordset.  
   
--   die Standard\-SQL\-**SELECT**\-Anweisung anpassen;  
+-   Anpassen des Standard-SQL **wählen** Anweisung.  
   
--   zwischen den ausgewählten Datensätzen wechseln;  
+-   Führen Sie einen Bildlauf durch die ausgewählten Datensätze.  
   
--   Datensätze hinzufügen, aktualisieren oder löschen \(falls sowohl die Datenquelle als auch das Recordset aktualisierbar sind\);  
+-   Hinzufügen, aktualisieren oder Löschen von Datensätzen (wenn die Datenquelle und das Recordset aktualisierbar sind).  
   
--   überprüfen, ob das Recordset Neuabfragen ermöglicht, und den Inhalt des Recordsets aktualisieren.  
+-   Testen Sie, ob das Recordset erneutes Abfragen zulässt, und aktualisieren Sie den Inhalt des Recordsets.  
   
- Wenn Sie das Recordset\-Objekt nicht mehr verwenden, schließen und zerstören Sie es.  Weitere Informationen über Recordsets finden Sie unter [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md).  
+ Wenn Sie fertig sind, verwenden das Recordset-Objekt, Sie schließen und zerstören. Weitere Informationen über Recordsets finden Sie unter [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ODBC und MFC](../../data/odbc/odbc-and-mfc.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wperror
 - _tperror
 - perror
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tperror function
 - tperror function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f263a40a56c7f94e022a8410724a7b2f3379e5d0
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bb8dc68154c9a1302fe69dd8416309bf377bdd3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 Druckt eine Fehlermeldung.  
@@ -102,7 +86,7 @@ void _wperror(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`perror`|\<stdio.h > oder \<stdlib.h >|  
 |`_wperror`|\<stdio.h> oder \<wchar.h>|  
@@ -110,7 +94,7 @@ void _wperror(
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -163,7 +147,7 @@ _strerror says open failed: No such file or directory
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
  [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)

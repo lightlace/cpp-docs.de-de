@@ -1,35 +1,37 @@
 ---
-title: "CSession::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CSession::Open"
-  - "CSession::Open"
-  - "CSession.Open"
-  - "ATL.CSession.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open-Methode"
+title: 'CSession:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CSession::Open
+- CSession::Open
+- CSession.Open
+- ATL.CSession.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: c2050c2c-9817-4857-be49-189f346968f6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3aa0f6b694bc594ec00511ce39b7887bf26ecae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CSession::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="csessionopen"></a>CSession::Open
 Öffnet eine neue Sitzung für das Datenquellenobjekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,24 +42,24 @@ caps.handback.revision: 10
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ds`  
- \[in\] die Datenquelle, die für die Sitzung geöffnet werden soll.  
+ [in] Die Datenquelle für die ist die Sitzung geöffnet werden.  
   
- *pPropSet*  
- \[in\] strukturiert Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) das Einbinden von festgelegt werden Eigenschaften und Werte.  Siehe [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/en-us/library/ms713696.aspx) in *der OLE DB\-Programmierreferenz* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ *DBPROPSET*  
+ [in] Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) Strukturen, die Eigenschaften und Werten festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/en-us/library/ms713696.aspx) in der *OLE DB Programmer's Reference* im Windows SDK.  
   
  `ulPropSets`  
- \[in\] hat die Anzahl der [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)\-Strukturen in das *pPropSet*\-Argument.  
+ [in] Die Anzahl der [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) Strukturen zu übergeben, der *DBPROPSET* Argument.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Sie müssen das Datenquellenobjekt mit dem [CDataSource::Open](../../data/oledb/cdatasource-open.md) öffnen, bevor Sie es an `CSession::Open` übergeben.  
+## <a name="remarks"></a>Hinweise  
+ Sie müssen die Datenquelle Objekt mit öffnen [CDataSource:: Open](../../data/oledb/cdatasource-open.md) vor der Übergabe an `CSession::Open`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CSession\-Klasse](../../data/oledb/csession-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CSession-Klasse](../../data/oledb/csession-class.md)

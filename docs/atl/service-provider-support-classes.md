@@ -1,32 +1,32 @@
 ---
-title: "Service Provider Support Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.service"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "service provider support classes"
+title: "Service-Anbieter-Unterstützungsklassen (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.service
+dev_langs: C++
+helpviewer_keywords: service provider support classes
 ms.assetid: 190f598e-fb32-4d37-adf1-21de395b04d9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15e121f54ae1567910e361564dcb8833edee434e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Service Provider Support Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="service-provider-support-classes"></a>Unterstützung von Dienstklassen-Anbieter
 Die folgende Klasse bietet Unterstützung für Dienstanbieter:  
   
--   [IServiceProviderImpl](../atl/reference/iserviceproviderimpl-class.md) lokalisiert einen Dienst, der von der GUID angegeben und gibt den Schnittstellenzeiger für die angeforderte Schnittstelle auf dem Dienst zurück.  
+-   [IServiceProviderImpl](../atl/reference/iserviceproviderimpl-class.md) sucht nach einem Dienst, angegeben durch ihre GUID Schnittstellenzeiger und gibt die für die angeforderte Schnittstelle für den Dienst.  
   
-## Siehe auch  
- [Class Overview](../atl/atl-class-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassenübersicht](../atl/atl-class-overview.md)
+

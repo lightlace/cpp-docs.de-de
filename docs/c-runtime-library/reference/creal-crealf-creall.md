@@ -1,57 +1,59 @@
 ---
-title: "Creal, Crealf, creall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "creal"
-  - "crealf"
-  - "creall"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "creal"
-  - "crealf"
-  - "creall"
-  - "complex/creal"
-  - "complex/crealf"
-  - "complex/creall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creal-Funktion"
-  - "Crealf-Funktion"
-  - "Creall-Funktion"
+title: creal, crealf, creall | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- creal
+- crealf
+- creall
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- creal
+- crealf
+- creall
+- complex/creal
+- complex/crealf
+- complex/creall
+dev_langs: C++
+helpviewer_keywords:
+- creal function
+- crealf function
+- creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 116ab4c4822f6bc1431f1c66a2666fedadde71de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Creal, Crealf, creall
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft den Realteil einer komplexen Zahl ab.  
+# <a name="creal-crealf-creall"></a>creal, crealf, creall
+Ruft den Realteil einer komplexen Zahl ab  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double creal(   
@@ -71,29 +73,29 @@ long double creall(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `z`  
  Eine komplexe Zahl.  
   
-## Rückgabewert  
- Der reelle Teil von `z`.  
+## <a name="return-value"></a>Rückgabewert  
+ Der Realteil von `z`  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von Aufrufen `creal` nehmen `_Fcomplex` oder `_Lcomplex` Werte und Rückgabetypen `float` oder `long double` Werte. In einem C\-Programm `creal` immer einen `_Dcomplex` Wert und gibt einen `double` Wert.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `creal` aufrufen, die `_Fcomplex`- oder `_Lcomplex`-Werte annehmen und `float`- oder `long double`-Werte zurückgeben. In einem C-Programm nimmt `creal` immer einen `_Dcomplex`-Wert an und gibt einen `double`-Wert zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Routine|C\-Header|C\+\+\-Header|  
-|-------------|---------------|-------------------|  
-|`creal`, `crealf`, `creall`|\<complex.h\>|\< Ccomplex \>|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
+|-------------|--------------|------------------|  
+|`creal`,               `crealf`, `creall`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Norm, Normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [Cproj, Cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [Conj, Conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [Cimag, Cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [Carg, Cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [CAB\-Dateien, Cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
+ [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
+ [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
+ [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)

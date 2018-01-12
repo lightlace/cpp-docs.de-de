@@ -34,11 +34,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae5a0d527bd503422176fb01f4024d98100ef351
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d721cefd20ae5eb208c74d973069fb9365273d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-typedefs"></a>ATL-Typdefinitionen
 Der Active Template Library enthält die folgenden typedefs-Elementen.  
@@ -159,7 +160,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
   
  Zusätzlich zu `CComGlobalsThreadModel`, ATL stellt die `typedef` Namen [CComObjectThreadModel](#ccomobjectthreadmodel). Die Klasse verwiesen, die von jedem `typedef` hängt von der Threadingmodell verwendet, wie in der folgenden Tabelle dargestellt:  
   
-|typedef|Single-threading|Apartmentthreading|Freies threading|  
+|Typedef|Single-threading|Apartmentthreading|Freies threading|  
 |-------------|----------------------|-------------------------|--------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
@@ -196,7 +197,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
   
  Zusätzlich zu `CComObjectThreadModel`, ATL stellt die `typedef` Namen [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Die Klasse verwiesen, die von jedem `typedef` hängt von der Threadingmodell verwendet, wie in der folgenden Tabelle dargestellt:  
   
-|typedef|Single-threading|Apartmentthreading|Freies threading|  
+|Typedef|Single-threading|Apartmentthreading|Freies threading|  
 |-------------|----------------------|-------------------------|--------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
@@ -308,7 +309,7 @@ typedef CUrl* LPURL;
 ## <a name="see-also"></a>Siehe auch  
  [ATL COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
  [Funktionen](../../atl/reference/atl-functions.md)   
- [Globale Variablen](../../atl/reference/atl-global-variables.md)   
+ [Global Variables (Globale Variablen)](../../atl/reference/atl-global-variables.md)   
  [Strukturen](../../atl/reference/atl-structures.md)   
  [Makros](../../atl/reference/atl-macros.md)   
  [Klassen](../../atl/reference/atl-classes.md)

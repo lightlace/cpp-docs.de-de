@@ -1,46 +1,47 @@
 ---
-title: "Invoking Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StringRegister"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Skripts, invoking registry in ATL"
-  - "StringRegister method"
+title: Aufrufen von Skripts (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: StringRegister
+dev_langs: C++
+helpviewer_keywords:
+- StringRegister method
+- scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbf969f601bd90e84bf0ee15ae2ea3dcb392610
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Invoking Scripts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="invoking-scripts"></a>Aufrufen von Skripts
+[Mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) Ersatz Maps erläutert und die Registrierungsstelle Methode erwähnt **AddReplacement**. Die Registrierungsstelle ist acht andere spezifische Methoden des Skripts, und alle in der folgenden Tabelle beschrieben sind.  
+  
+|Methode|Syntaxbeschreibung /|  
+|------------|-------------------------|  
+|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***ResFileName* **, "uint"** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Registriert das Skript in einem Modul Ressource enthalten sind. *ResFileName* gibt den UNC-Pfad für das Modul selbst. `nID`und `szType` enthalten bzw. die ID und den Typ der Ressource.|  
+|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***ResFileName* **, "uint"** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Hebt die Registrierung des Skripts in der Ressource eines Moduls enthalten sind. *ResFileName* gibt den UNC-Pfad für das Modul selbst. `nID`und `szType` enthalten bzw. die ID und den Typ der Ressource.|  
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***ResFileName* **, LPCOLESTR***SzID* **, LPCOLESTR** `szType` **);** <br /><br /> Registriert das Skript in einem Modul Ressource enthalten sind. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *SzID* und `szType` enthalten bzw. Zeichenfolgenbezeichner und Typ der Ressource.|  
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***ResFileName* **, LPCOLESTR***SzID* **, LPCOLESTR** `szType` **);** <br /><br /> Hebt die Registrierung des Skripts in der Ressource eines Moduls enthalten sind. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *SzID* und `szType` enthalten bzw. Zeichenfolgenbezeichner und Typ der Ressource.|  
+|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***FileName***);** <br /><br /> Registriert das Skript in einer Datei an. *FileName* ist ein UNC-Pfad in eine Datei, die ein Ressourcenskript enthält (oder ist).|  
+|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***FileName***);** <br /><br /> Hebt die Registrierung des Skripts in einer Datei. *FileName* ist ein UNC-Pfad in eine Datei, die ein Ressourcenskript enthält (oder ist).|  
+|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***Daten***);** <br /><br /> Registriert das Skript in einer Zeichenfolge. *Daten* enthält das Skript selbst.|  
+|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***Daten***);** <br /><br /> Hebt die Registrierung des Skripts in einer Zeichenfolge. *Daten* enthält das Skript selbst.|  
+  
+ **ResourceRegisterSz** und **ResourceUnregisterSz**, ähneln **ResourceRegister** und **ResourceUnregister**, können Sie angeben, aber ein Zeichenfolgenbezeichner.  
+  
+ Die Methoden **FileRegister** und **FileUnregister** sind nützlich, wenn Sie nicht, dass das Skript in einer Ressource möchten oder das Skript in einer eigenen Datei verwendet werden soll. Die Methoden **StringRegister** und **StringUnregister** RGS-Datei in einem dynamisch zugewiesenen Zeichenfolge gespeichert werden können.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)
 
-[Verwenden von ersetzbaren Parameter \(der Präprozessor der Registrierungsstelle\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) erläutert Ersatzzuordnungen und erwähnt die Registrierungsstellenmethode **AddReplacement**.  Die Registrierungsstelle hat acht andere Methoden, die dem Skripterstellung spezifisch sind, und alle werden in der folgenden Tabelle beschrieben.  
-  
-|Methode|Syntax\/Beschreibung|  
-|-------------|--------------------------|  
-|**ResourceRegister**|**HRESULT ResourceRegister\( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType`\);<br /><br /> Registriert das Skript, das in der Ressource eines Moduls enthalten ist.  *resFileName* gibt den UNC\-Pfad des Modul selbst an.  `nID` und `szType` enthalten die ID und den Typ der Ressource, bzw.|  
-|**ResourceUnregister**|**HRESULT ResourceUnregister\( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType`\);<br /><br /> Hebt das Skript Registrierung in der Ressource eines Moduls enthalten ist.  *resFileName* gibt den UNC\-Pfad des Modul selbst an.  `nID` und `szType` enthalten die ID und den Typ der Ressource, bzw.|  
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz\( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType`\);<br /><br /> Registriert das Skript, das in der Ressource eines Moduls enthalten ist.  *resFileName* gibt den UNC\-Pfad des Modul selbst an.  *szID* und `szType` enthalten den Zeichenfolgenbezeichner und \- typ der Ressource, bzw.|  
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz\( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType`\);<br /><br /> Hebt das Skript Registrierung in der Ressource eines Moduls enthalten ist.  *resFileName* gibt den UNC\-Pfad des Modul selbst an.  *szID* und `szType` enthalten den Zeichenfolgenbezeichner und \- typ der Ressource, bzw.|  
-|**FileRegister**|**HRESULT FileRegister\( LPCOLESTR**  *Dateiname* \);<br /><br /> Registriert das Skript in einer Datei.  *Dateiname*  ist ein UNC\-Pfad zu einer Datei, die \(oder\) ist ein Ressourcenskript enthält.|  
-|**FileUnregister**|**HRESULT FileUnregister\( LPCOLESTR**  *Dateiname* \);<br /><br /> Hebt das Skript in einer Datei Registrierung auf.  *Dateiname*  ist ein UNC\-Pfad zu einer Datei, die \(oder\) ist ein Ressourcenskript enthält.|  
-|**StringRegister**|**HRESULT StringRegister\( LPCOLESTR**  *Daten* \);<br /><br /> Registriert das Skript in eine Zeichenfolge.  *Daten*  enthalten das Skript selbst.|  
-|**StringUnregister**|**HRESULT StringUnregister\( LPCOLESTR**  *Daten* \);<br /><br /> Hebt das Skript in einer Zeichenfolge Registrierung auf.  *Daten*  enthalten das Skript selbst.|  
-  
- **ResourceRegisterSz** und **ResourceUnregisterSz**, sind für **ResourceRegister** und zu **ResourceUnregister** ähnlich, aber es Ihnen ermöglicht, einen Zeichenfolgenbezeichner anzugeben.  
-  
- Die Methoden **FileRegister** und **FileUnregister** sind nützlich, wenn Sie nicht das Skript in einer Ressource verwenden möchten, oder wenn Sie das Skript in einer eigenen Datei soll.  Die Methoden **StringRegister** und **StringUnregister** ermöglichen die in einer dynamisch zugeordneten Zeichenfolge gespeichert werden RGS\-Datei.  
-  
-## Siehe auch  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

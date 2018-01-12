@@ -1,34 +1,35 @@
 ---
-title: "MASM-Makrodirektiven in der Inlineassembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Direktiven, Makros"
-  - "Inlineassembly, Makrodirektiven"
-  - "Makros, Direktiven"
-  - "MASM (Microsoft-Makroassembler), Inlineassembly-Makrodirektiven"
+title: MASM-Makroanweisungen in der Inlineassembly | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- directives, macros
+- inline assembly, macro directives
+- macros, directives
+- MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0df9f8584b87e511c43430a5c0df7dac61805ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# MASM-Makrodirektiven in der Inlineassembly
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Der Inlineassembler ist nicht Macro Assembler.  Sie können MASM\-Makro Directive \(**MAKRO**, `REPT`, **IRC**, `IRP`und `ENDM`\) oder Makrofunktionen \(**\<\>\!**, **&**`%`und `.TYPE`\) nicht verwenden.  Ein `__asm`\-Block kann jedoch C\-Präprozessordirektive verwenden.  Weitere Informationen finden Sie unter [Verwenden von Blöcken \_\_asm in C oder C\+\+](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) .  
+# <a name="masm-macro-directives-in-inline-assembly"></a>MASM-Makroanweisungen in der Inlineassembly
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Der Inlineassembler ist ein Makroassembler. Sie können keine MASM-makrodirektiven (**MAKRO**, `REPT`, **IRC**, `IRP`, und `ENDM`) oder Makro-Operatoren (**<>**, **!** ,  **&** , `%`, und `.TYPE`). Ein `__asm` Block C#-Präprozessordirektiven, jedoch verwenden kann. Finden Sie unter [mithilfe von C oder C++ in __asm-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) für Weitere Informationen.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Verwenden von Assemblysprache in \_\_asm\-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

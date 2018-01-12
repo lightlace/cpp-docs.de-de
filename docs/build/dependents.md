@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58c342e5e9081d393cdea30e0d668c16f4d81424
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99d1bae16c79d5714cf7ca6488853b9c5d2a6d21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dependents"></a>Abhängige Dateien
 Geben Sie in einer Abhängigkeitszeile keinem oder mehreren abhängigen Elemente nach dem Doppelpunkt (:) oder zwei Doppelpunkten (:), verwenden einen gültigen Dateinamen oder [Pseudoziel](../build/pseudotargets.md). Trennen Sie mehrere abhängige durch eine oder mehrere Leerzeichen bzw. Tabstopps ein. Abhängige Dateien sind nicht in der Groß-/Kleinschreibung beachtet. Pfade sind mit Dateinamen zulässig.  

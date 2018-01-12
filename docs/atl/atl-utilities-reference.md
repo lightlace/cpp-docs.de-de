@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>Referenz zu ATL-Hilfsprogrammen
 ATL stellt Code zum Bearbeiten von Pfaden und URLs in Form von [CPathT](../atl/reference/cpatht-class.md) und [CUrl](../atl/reference/curl-class.md). Ein Threadpool [CThreadPool](../atl/reference/cthreadpool-class.md), können in Anwendungen verwendet werden. Dieser Code kann in atlpath.h und atlutil.h gefunden werden.  
@@ -34,7 +35,7 @@ ATL stellt Code zum Bearbeiten von Pfaden und URLs in Form von [CPathT](../atl/r
 |[CUrl-Klasse](../atl/reference/curl-class.md)|Diese Klasse stellt eine URL an. Dadurch können Sie jedes Element der URL unabhängig von den anderen bearbeiten, ob eine vorhandene URL analysieren Zeichenfolge oder eine Zeichenfolge von Grund auf neu erstellen.|  
 |[CWorkerThread-Klasse](../atl/reference/cworkerthread-class.md)|Diese Klasse wird ein Arbeitsthread erstellt oder verwendet eine vorhandene, wartet auf eine oder mehrere Kernel-Objekt-Handles und führt eine angegebene Client-Funktion aus, wenn Sie einen der Ziehpunkte signalisiert wird.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

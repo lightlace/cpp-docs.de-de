@@ -39,11 +39,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f0dcc7490ee6b2d9468bc1c5f83a4585f073295
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c24a7426c788ac7ecfc98f3e649397912960505a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 Übersetzt das erste Multibytezeichen in einer schmalen Zeichenfolge in das entsprechende UTF-16- oder UTF-32-Zeichen.  
@@ -108,7 +109,7 @@ size_t mbrtoc32(
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
  [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   

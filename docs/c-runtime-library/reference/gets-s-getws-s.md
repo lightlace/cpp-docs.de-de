@@ -42,11 +42,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea0c9053ef052359a0dc827299ade1ef2bbcb20f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4a14a5166e357c3b25622c49f75b2b26fed4f55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Ruft eine Zeile aus dem `stdin` -Stream ab. Diese Versionen von [gets, _getws](../../c-runtime-library/gets-getws.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
@@ -91,7 +92,7 @@ wchar_t *_getws_s(
   
  Wenn `buffer` `NULL` ist oder wenn `sizeInCharacters` kleiner oder gleich null, oder wenn der Puffer zu klein für die Eingabezeile und das abschließende NULL-Zeichen ist, rufen diese Funktionen einen ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `NULL` zurück und setzen "errno" auf `ERANGE`.  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -101,7 +102,7 @@ wchar_t *_getws_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`gets_s`|\<stdio.h>|  
 |`_getws`|\<stdio.h> oder \<wchar.h>|  

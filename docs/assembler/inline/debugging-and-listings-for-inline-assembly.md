@@ -1,42 +1,43 @@
 ---
-title: "Debuggen und Listen f&#252;r die Inlineassembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], Debuggen"
-  - "Probleme, __asm-Blöcke"
-  - "Debuggen [C++], Inlineassemblycode"
-  - "Inlineassembly, Debuggen"
-  - "Inlineassembly, Auflistungen"
-  - "Debugger auf Quellcodeebene"
+title: "Debuggen und Listen für die Inlineassembly | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- source level debugger
+- __asm keyword [C++], debugging
+- inline assembly, listings
+- bugs, __asm blocks
+- debugging [C++], inline assembly code
+- inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5fea943c30d48ac122ae5d848306e4fe251f58da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Debuggen und Listen f&#252;r die Inlineassembly
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Bei Programmen, die Inlineassemblycode enthalten, können mit einem SOURCE LEVEL\-Debugger gedebuggt werden, wenn Sie mit der [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) Option kompilieren.  
+# <a name="debugging-and-listings-for-inline-assembly"></a>Debuggen und Listen für die Inlineassembly
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Programme mit Inline-Assemblycode können mit einem Debugger auf Quellcodeebene gedebuggt werden, wenn beim Kompilieren mit der [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) Option.  
   
- Innerhalb des Debuggers können Sie Haltepunkte in C oder C\+\+ und Assemblersprachen von Zeilen festlegen.  Wenn Sie mehrere assembly\- Quellspalten und aktivieren Sie den Modus können Sie die Quelle und disassembliertes Form des Assemblycodes anzeigen.  
+ Innerhalb des Debuggers können Sie Haltepunkte für C- oder C++ und Assemblersprache Zeilen festlegen. Wenn Sie gemischten Assembly und der Modus aktivieren, können Sie die Quell- und den disassemblierten Form der Assemblycode anzeigen.  
   
- Beachten Sie, dass mehrere Assemblyanweisungen Quelle oder legt sprachanweisungen Debugging können in einer eigenen Zeile hemmen.  Quellspalten im Modus können Sie den Debugger können Sie Haltepunkte in einer einzigen Zeile jedoch nicht für einzelne Anweisungen in der gleichen Zeile festzulegen.  Das gleiche Prinzip gilt für `__asm` einen Block, der als Wechselstrom\-Makro definiert wird, das zu einer einzelnen logischen Zeile erstreckt.  
+ Beachten Sie, dass mehrere Assemblyanweisungen oder Quellsprache-Anweisungen in einer Zeile platzieren Debuggen behindern kann. Im Modus "Quelle" können Sie den Debugger verwenden, Festlegen von Haltepunkten in einer einzelnen Zeile, jedoch nicht auf einzelne Anweisungen in derselben Zeile. Das gleiche Prinzip gilt für eine `__asm` Block als C-Makro, der erweitert, um einen einzelnen logischen Zeile wird definiert.  
   
- Wenn Sie eine gemischte quell\- und Umwandlungsliste mit der Compileroption [\/FAs](../../build/reference/fa-fa-listing-file.md) erstellen, die die Listen enthalten Quell\- und Assembly Assemblersprachen formulare jeder Zeile.  Makros werden nicht in den Listen erweitert, sie werden jedoch während der Kompilierung erweitert.  
+ Bei der Erstellung einer gemischten Quell- und die Assembly, die mit der [Angabe von/FAS](../../build/reference/fa-fa-listing-file.md) (Compileroption), die Liste enthält sowohl die Quell-als auch die Assembly Formen von jeder Zeile Assemblersprache. Makros werden in den Codebeispielen nicht erweitert, aber sie werden erweitert, während der Kompilierung.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Verwenden von Assemblysprache in \_\_asm\-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

@@ -1,39 +1,38 @@
 ---
-title: "SBYTE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sbyte"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SBYTE directive"
+title: SBYTE (MASM) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: sbyte
+dev_langs: C++
+helpviewer_keywords: SBYTE directive
 ms.assetid: ae9323cc-4ed5-45fa-9cd6-c241868e4cfd
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c7224b8cbbb9866a552da28b7678a54336aa370b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SBYTE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet zu und initialisiert optional ein Byte mit Vorzeichen Speicher für jedes `initializer`.  Kann auch verwendet werden, da ein Typspezifizierer wo ein Typ gültig ist.  
+# <a name="sbyte-masm"></a>SBYTE (MASM)
+Zum Belegen und optional einen Bytewert mit Vorzeichen des Speichers für die einzelnen initialisiert `initializer`. Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-name SBYTE initializer [[, initializer]]...  
+name SBYTEinitializer [[, initializer]]...  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Direktiven – Referenz](../../assembler/masm/directives-reference.md)   
  [BYTE](../../assembler/masm/byte-masm.md)   
  [DB](../../assembler/masm/db.md)

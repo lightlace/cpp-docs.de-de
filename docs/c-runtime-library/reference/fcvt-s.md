@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fcvt_s
+apiname: _fcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9c282757ae79367cdc2ee72b3f3ce8d0e50983fa
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 Konvertiert eine Gleitkommazahl in eine Zeichenfolge. Dies ist eine sicherere Version von [_fcvt](../../c-runtime-library/reference/fcvt.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -111,10 +94,10 @@ errno_t _fcvt_s(
   
 |`buffer`|`sizeInBytes`|Wert|count|dec|sign|Return|Wert in `buffer`.|  
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
-|`NULL`|alle|alle|alle|alle|alle|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` (zeigt gültigen Speicher an)|<=0|any|alle|alle|alle|`EINVAL`|Nicht geändert.|  
-|any|alle|alle|alle|`NULL`|alle|`EINVAL`|Nicht geändert.|  
-|any|alle|alle|alle|alle|`NULL`|`EINVAL`|Nicht geändert.|  
+|`NULL`|any|any|any|any|any|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|<=0|any|any|any|any|`EINVAL`|Nicht geändert.|  
+|any|any|any|any|`NULL`|any|`EINVAL`|Nicht geändert.|  
+|any|any|any|any|any|`NULL`|`EINVAL`|Nicht geändert.|  
   
  **Sicherheitsprobleme**  
   
@@ -129,7 +112,7 @@ errno_t _fcvt_s(
   
  `_ecvt_s` und `_fcvt_s` unterscheiden sich hinsichtlich der Interpretation des Parameters `count`. `_ecvt_s`interpretiert `count` als die Gesamtzahl der Ziffern in der Ausgabezeichenfolge und `_fcvt_s` interpretiert `count` als die Anzahl der Ziffern nach dem Dezimaltrennzeichen an.  
   
- Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -178,7 +161,7 @@ Converted value: 120000
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
  [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   

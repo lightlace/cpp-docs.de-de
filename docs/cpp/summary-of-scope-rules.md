@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class scope [C++], rules
 - classes [C++], scope
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e4a728d23dc9a04b62c9852823f359c3a7cb150
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>Zusammenfassung der Bereichsregeln
 Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu dem Punkt, an dem das Überladen bestimmt wird). Wenn der Name eine Funktion kennzeichnet, muss die Funktion im Hinblick auf Anzahl und Typ der Parameter eindeutig sein. Wenn der Name eindeutig bleibt [Memberzugriff](../cpp/member-access-control-cpp.md) Regeln angewendet werden.  
@@ -46,11 +44,11 @@ Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu 
 ## <a name="qualified-names"></a>Qualifizierte Namen  
  Namen, die mit dem binären Bereichsauflösungsoperator (`::`) verwendet werden, werden als "qualifizierte Namen" bezeichnet. Der Name, der nach dem binären Bereichsauflösungsoperator angegeben wird, muss einem Member der Klasse entsprechen, der auf der linken Seite des Operators angegeben oder ein Member der Basisklasse(n) ist.  
   
- Namen angegeben, nach dem Memberauswahloperator (**.** oder ** -> **) müssen Mitglieder des Klassentyps des Objekts, auf der linken Seite des Operators oder Member der Basisklasse(n) angegeben sein. Auf der rechten Seite des Operators Memberauswahl festgelegten Namen (**->**) kann auch Objekte eines anderen Klassentyps sein bereitgestellt, die auf die linke Seite des ** -> ** ein Klassenobjekt ist und die Klasse einen überladenen Memberauswahloperator definiert (**->**), die in einen Zeiger auf einen anderen Klassentyp ausgewertet wird. (Diese Bereitstellung wird ausführlicher im [Klassenmemberzugriff](../cpp/member-access.md).)  
+ Namen angegeben, nach dem Memberauswahloperator (**.** oder  **->** ) müssen Mitglieder des Klassentyps des Objekts, auf der linken Seite des Operators oder Member der Basisklasse(n) angegeben sein. Auf der rechten Seite des Operators Memberauswahl festgelegten Namen (**->**) kann auch Objekte eines anderen Klassentyps sein bereitgestellt, die auf die linke Seite des  **->**  ein Klassenobjekt ist und die Klasse einen überladenen Memberauswahloperator definiert (**->**), die in einen Zeiger auf einen anderen Klassentyp ausgewertet wird. (Diese Bereitstellung wird ausführlicher im [Klassenmemberzugriff](../cpp/member-access.md).)  
   
  Der Compiler sucht nach Namen in der folgenden Reihenfolge und hört auf, wenn der Name gefunden wird:  
   
-1.  Aktueller Blockgültigkeitsbereich, wenn der Name innerhalb einer Funktion verwendet wird; andernfalls globaler Gültigkeitsbereich.  
+1.  Aktueller Blockbereich, wenn der Name innerhalb einer Funktion verwendet wird; andernfalls globaler Gültigkeitsbereich.  
   
 2.  Nach außen durch jeden einschließenden Blockbereich, einschließlich des äußersten Gültigkeitsbereichs der Funktion (der Funktionsparameter enthält).  
   
@@ -66,7 +64,7 @@ Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu 
   
 1.  Namen, denen `::` vorangestellt wird, zwingen die Suche, im globalen Gültigkeitsbereich zu starten.  
   
-2.  Vor dem Namen der **Klasse**, `struct`, und **Union** Schlüsselwörter zwingen den Compiler, die nur für Suchen **Klasse**, `struct`, oder **Union ** Namen.  
+2.  Vor dem Namen der **Klasse**, `struct`, und **Union** Schlüsselwörter zwingen den Compiler, die nur für Suchen **Klasse**, `struct`, oder **Union**  Namen.  
   
 3.  Namen auf der linken Seite des Operators Bereichsauflösungsoperator (`::`) kann nur **Klasse**, `struct`, **Namespace**, oder **Union** Namen.  
   

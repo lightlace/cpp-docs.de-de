@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>Bereich (Visual C++)
 C++-Namen können nur in bestimmten Bereichen eines Programms verwendet werden. Dieser Bereich wird als Gültigkeitsbereich des Namens bezeichnet. Der Gültigkeitsbereich bestimmt die Lebensdauer eines Namens, der kein statisches Objekt angibt. Der Gültigkeitsbereich bestimmt außerdem die Sichtbarkeit eines Namens, wenn Klassenkonstruktoren und -destruktoren aufgerufen werden, und wenn lokale Gültigkeitsbereichsvariablen initialisiert werden. (Weitere Informationen finden Sie unter [Konstruktoren](../cpp/constructors-cpp.md) und [Destruktoren](../cpp/destructors-cpp.md).) Es gibt fünf Arten von Gültigkeitsbereichen:  

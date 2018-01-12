@@ -56,11 +56,12 @@ caps.latest.revision: "47"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e1121604d602eec08e7173c790d0a42ac568774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d99dbf05d6ce70177b6ef3c5344e5f4059c0aac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 Kopiert Zeichen aus einer Zeichenfolge in eine andere.  Diese Versionen von [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -174,17 +175,17 @@ errno_t _mbsncpy_s_l(
   
 |`strDest`|`numberOfElements`|`strSource`|Rückgabewert|Inhalt von `strDest`|  
 |---------------|------------------------|-----------------|------------------|---------------------------|  
-|`NULL`|any|alle|`EINVAL`|nicht geändert|  
-|any|alle|`NULL`|`EINVAL`|`strDest`[0] auf 0 festgelegt|  
+|`NULL`|any|any|`EINVAL`|nicht geändert|  
+|any|any|`NULL`|`EINVAL`|`strDest`[0] auf 0 festgelegt|  
 |any|0|any|`EINVAL`|nicht geändert|  
-|nicht `NULL`|zu klein|alle|`ERANGE`|`strDest`[0] auf 0 festgelegt|  
+|nicht `NULL`|zu klein|any|`ERANGE`|`strDest`[0] auf 0 festgelegt|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Funktionen versuchen, die ersten `D`-Zeichen aus `strSource` nach `strDest` zu kopieren. `D` ist dabei geringer an `count` und die Länge von `strSource`. Wenn diese `D`-Zeichen in `strDest` passen (dessen Größe als `numberOfElements` angegeben ist) und noch Platz für einen NULL-Terminator ist, dann werden diese Zeichen kopiert und ein abschließendes NULL-Zeichen wird angefügt. Andernfalls wird `strDest`[0] auf das NULL-Zeichen festgelegt und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.  
   
  Zu der oberen Aufführung gibt es eine Ausnahme. Wenn `count``_TRUNCATE` ist, wird so viel von `strSource` wie in `strDest` passt kopiert, wobei noch Platz für das abschließende NULL-Zeichen bleibt, das immer angefügt wird.  
   
- Beispiel:  
+ Ein auf ein Objekt angewendeter  
   
  `char dst[5];`  
   
@@ -208,7 +209,7 @@ errno_t _mbsncpy_s_l(
   
  Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -224,7 +225,7 @@ errno_t _mbsncpy_s_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`strncpy_s`, `_strncpy_s_l`|\<string.h>|  
 |`wcsncpy_s`, `_wcsncpy_s_l`|\<string.h> oder \<wchar.h>|  
@@ -405,7 +406,7 @@ After strncpy_s (with null-termination):
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
  [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   

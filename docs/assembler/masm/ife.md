@@ -1,40 +1,39 @@
 ---
-title: "IFE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IFE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IFE directive"
+title: IFE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IFE
+dev_langs: C++
+helpviewer_keywords: IFE directive
 ms.assetid: bac5659d-9d2e-406d-89b7-e05b335ab0fd
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f4e1f079c45253beec27a8af00f2ceb20042e61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IFE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Erteilt Assembly, wenn *Ausdruck* false ist \(0\).  
+# <a name="ife"></a>IFE
+Assembly gewährt, wenn *Ausdruck* lautet "false" (0).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 IFE expression  
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [IF](../../assembler/masm/if-masm.md) für vollständige Syntax.  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [IF](../../assembler/masm/if-masm.md) für die vollständige Syntax.  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

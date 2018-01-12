@@ -75,11 +75,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 971d67e75594649851f3c21f7727fe697486be85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 719ee1e0a39cbf3cd7d7721807bb4a9dcf2883d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl-Klasse
 Diese Klasse stellt Methoden für die Unterstützung der Systemeigenschaft Werte bereit.  
@@ -124,7 +125,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
  `tihclass`  
  Die Klasse, die zum Verwalten der Typinformationen für `T`. Der Standardwert ist `CComTypeInfoHolder`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -191,7 +192,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
   
  Visual C++ bietet Unterstützung für Basiseigenschaften über seine Assistenten. Weitere Informationen zum Hinzufügen von vordefinierten Eigenschaften zu einem Steuerelement finden Sie unter der [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md).  
   
- Für die Abwärtskompatibilität `CStockPropImpl` macht auch `get_Window` und `put_Window` Methoden, die einfach aufrufen `get_HWND` und `put_HWND`bzw.. Die standardmäßige Implementierung des `put_HWND` gibt **E_FAIL** da `HWND` muss eine schreibgeschützte Eigenschaft.  
+ Für die Abwärtskompatibilität `CStockPropImpl` macht auch `get_Window` und `put_Window` Methoden, die einfach aufrufen `get_HWND` und `put_HWND`bzw. Die standardmäßige Implementierung des `put_HWND` gibt **E_FAIL** da `HWND` muss eine schreibgeschützte Eigenschaft.  
   
  Die folgenden Eigenschaften aufweisen, auch eine **Putref** Implementierung:  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3a2683fbc259cbac3551840f9ebe6e7c651430bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76172804cc271a740244d06e791db35d534c69e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-your-own-helper-function"></a>Entwickeln eigener Hilfsfunktionen
 Sie möchten eine eigene Version der Routine zur spezifischen Verarbeitung basierend auf den Namen der DLL oder Importe sind bereitstellen. Es gibt zwei Methoden, die Auswirkungen dieses: eigene Codierung, meist basierend auf den angegebenen Code oder lediglich die angegebene Version mit der zuvor beschriebenen Benachrichtigungshooks einbinden.  

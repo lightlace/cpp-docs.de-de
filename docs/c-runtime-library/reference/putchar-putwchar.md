@@ -39,11 +39,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1999c32aea84e613ce9e1a34b0c5b913d313ac7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3320f40f822c9559b411144ecc621824eedbd3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 Schreibt ein Zeichen in **stdout**.  
@@ -72,7 +73,7 @@ wint_t putwchar(
 ## <a name="remarks"></a>Hinweise  
  Die `putc`-Routine schreibt das einzelne Zeichen `c` in die aktuelle Position der `stream`-Ausgabe. Jede beliebige ganze Zahl kann an `putc` übergeben werden, aber es werden nur die unteren 8 Bits geschrieben. Die `putchar`-Routine ist mit **putc(** `c`**, stdout )** identisch. Wenn ein Lesefehler auftritt, wird für jede Routine die Fehleranzeige für den Stream festgelegt. `putc` und `putchar` ähneln jeweils `fputc` und `_fputchar`, werden jedoch sowohl als Funktionen als auch als Makros implementiert (siehe [Auswählen zwischen Funktionen und Makros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` und `putwchar` sind jeweils Breitzeichenversionen von `putc` und `putchar`.  
   
- Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
+ Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -82,7 +83,7 @@ wint_t putwchar(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`putchar`|\<stdio.h>|  
 |`putwchar`|\<stdio.h> oder \<wchar.h>|  
@@ -90,7 +91,7 @@ wint_t putwchar(
  Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   

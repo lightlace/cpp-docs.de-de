@@ -34,11 +34,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f5e2a97661ad47ed0cf46e0feaa2ccba292f5043
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a942c3414fa7801912de59ec41fd6477d7c19f2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="div"></a>div
 Berechnet den Quotienten und den Rest von zwei ganzzahligen Werten.  
@@ -77,7 +78,7 @@ lldiv_t div(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`div`|\<stdlib.h>|  
   
@@ -122,6 +123,6 @@ The quotient is 67, and the remainder is 5
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)

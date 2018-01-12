@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -60,30 +58,16 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4a2029db9b38ca1edad0e20764278ec77d205c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie sie an die Zeitzoneneinstellungen an. Dies sind Versionen von [ctime, _ctime64, _wctime, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) mit Sicherheitserweiterungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -168,9 +152,9 @@ errno_t _wctime64_s(
   
 |`buffer`|`numberOfElements`|`time`|Zurück|Wert in `buffer`.|  
 |--------------|------------------------|------------|------------|-----------------------|  
-|`NULL`|alle|alle|`EINVAL`|Nicht geändert|  
-|Nicht `NULL` (zeigt auf gültigen Speicher)|0|alle|`EINVAL`|Nicht geändert|  
-|Nicht `NULL`|0< Größe < 26|alle|`EINVAL`|Leere Zeichenfolge|  
+|`NULL`|any|any|`EINVAL`|Nicht geändert|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|0|any|`EINVAL`|Nicht geändert|  
+|Nicht `NULL`|0< Größe < 26|any|`EINVAL`|Leere Zeichenfolge|  
 |Nicht `NULL`|>= 26|NULL|`EINVAL`|Leere Zeichenfolge|  
 |Nicht `NULL`|>= 26|< 0|`EINVAL`|Leere Zeichenfolge|  
   
@@ -187,7 +171,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
  `_wctime32_s` und `_wctime64_s` sind die Breitzeichenversion von `_ctime32_s` und `_ctime64_s` und geben einen Zeiger auf die Breitzeichen-Zeichenfolge zurück. Andernfalls verhalten sich `_ctime64_s`, `_wctime32_s` und `_wctime64_s` identisch zu `_ctime32_s`.  
   
- `ctime_s` ist eine Inlinefunktion, die `_ctime64_s` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit-`time_t` zu interpretieren, können Sie `_USE_32BIT_TIME_T` definieren. Dadurch wird `ctime_s` mit `_ctime32_s` ausgewertet. Dies ist nicht zu empfehlen, weil Ihre Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
+ `ctime_s` ist eine Inlinefunktion, die `_ctime64_s` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit- `time_t`zu interpretieren, definieren Sie `_USE_32BIT_TIME_T`. Dadurch wird `ctime_s` mit `_ctime32_s` ausgewertet. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
   
  Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -201,7 +185,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
 |`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> oder \<wchar.h>|  
@@ -209,7 +193,7 @@ Wed Jan 02 02:03:55 1980\n\0
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -249,7 +233,7 @@ The time is Fri Apr 25 13:03:39 2003
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

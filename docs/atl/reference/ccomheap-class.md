@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 771685ce7e3ff5c4ffc01cb793be9f4f93e7ee26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomheap-class"></a>CComHeap-Klasse
 Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mit COM-Speicherverwaltungsfunktionen.  
@@ -39,7 +40,7 @@ Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)
 class CComHeap : public IAtlMemMgr
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

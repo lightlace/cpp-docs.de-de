@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Destruktoren (C++)
 Ein Destruktor ist eine Memberfunktion, die automatisch aufgerufen wird, wenn das Objekt den Gültigkeitsbereich verlässt oder ausdrücklich durch einen Aufruf von zerstört wird `delete`. Ein Destruktor hat den gleichen Namen wie die Klasse, die vorangestellten Tilde (`~`). Beispielsweise wird der Destruktor für die `String`-Klasse folgendermaßen deklariert: `~String()`. Wenn Sie keinen Destruktor definieren, wird der Compiler eine standardmäßige bereit; Dies ist für viele Klassen ausreichend. Müssen Sie nur einen benutzerdefinierten Destruktor definieren, wenn die Klasse Handles für Systemressourcen speichert, die freigegeben werden müssen, oder Zeiger, die den Speicher besitzen, die sie zu verweisen.
@@ -74,7 +72,7 @@ int main() {
   
  Im vorangehenden Beispiel verwendet der `String::~String`-Destruktor den `delete`-Operator, um den Speicherplatz freizugeben, der dynamisch Textspeicher zugeordnet wird.  
   
-## <a name="delcaring-destructors"></a>Deklarieren von Destruktoren  
+## <a name="declaring-destructors"></a>Deklarieren von Destruktoren  
  Destruktoren sind Funktionen mit dem gleichen Namen wie die Klasse, jedoch mit einer vorangestellten Tilde (`~`).  
   
  Mehrere Regeln bestimmen die Deklaration von Destruktoren. Destruktoren:  
@@ -232,4 +230,3 @@ ps->~String();     // Virtual call
 ```  
   
  Die Notation für explizite Aufrufe von Destruktoren (zuvor gezeigt) kann unabhängig davon verwendet werden, ob der Typ einen Destruktor definiert. Dies ermöglicht Ihnen solche expliziten Aufrufe, ohne zu wissen, ob ein Destruktor für den Typ definiert ist. Ein expliziter Aufruf von einem Destruktor, wenn keiner definiert ist, hat keine Auswirkungen.  
-

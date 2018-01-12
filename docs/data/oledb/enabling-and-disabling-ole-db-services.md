@@ -1,31 +1,34 @@
 ---
-title: "Aktivieren und Deaktivieren von OLE&#160;DB-Diensten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Dienste [OLE DB], Aktivieren und Deaktivieren"
-  - "Serviceanbieter [OLE DB]"
+title: Aktivieren und Deaktivieren von OLE DB-Dienste | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB services [OLE DB], enabling and disabling
+- service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59b1a50c44d5719cf3c699a14e5139d9e9816938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Aktivieren und Deaktivieren von OLE&#160;DB-Diensten
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Komponenten\-Manager für OLE DB\-Dienste vergleicht die vom Consumer festgelegten Eigenschaften mit den vom Anbieter unterstützten Eigenschaften, um festzustellen, ob einzelne Dienstkomponenten aufgerufen werden können, um eine vom Consumer angeforderte, erweiterte Funktionalität bereitzustellen.  Wenn eine Anwendung beispielsweise einen bildlauffähigen Cursor anfordert, der Anbieter jedoch nur einen Vorwärtscursor unterstützt, ruft der Dienstkomponenten\-Manager die Client Cursor Engine\-Dienstkomponente auf, um Bildlauffähigkeit zu implementieren.  Wenn die Anwendung auf der vom Anbieterrowset standardmäßig unterstützten, erweiterten Funktionalität basiert und die Eigenschaften zum Anfordern dieser Funktionen von der Anwendung nicht explizit festgelegt wurden, sind diese Funktionen u. U. nicht in dem von der Client Cursor Engine zurückgegebenen Rowset enthalten.  Aus Gründen der Interoperabilität sollten Anwendungen immer Eigenschaften festlegen, durch die erweiterte Funktionen ggf. explizit angefordert werden können.  
+# <a name="enabling-and-disabling-ole-db-services"></a>Aktivieren und Deaktivieren von OLE DB-Diensten
+Komponenten-Manager für OLE DB-Dienst vergleicht die Eigenschaften, die vom Consumer vom Anbieter, um festzustellen, ob einzelne Dienstkomponenten aufgerufen werden können, um erweiterte Funktionalität, die vom Consumer angeforderte erfüllen unterstützten angegeben werden. Wenn eine Anwendung, welches einen bildlauffähigen Cursor anfordert, und der Anbieter nur einen Vorwärtscursor unterstützt, ruft die Dienst-Standortkomponenten-Manager die Client-Cursormoduls-Dienstkomponente um bildlauffähigen Funktionalität bereitzustellen. Wenn die Anwendung ist auf die erweiterten Funktionen, die standardmäßig für den Anbieter-Rowset unterstützt zurückzugreifen, und die Anwendung nicht explizit die Eigenschaften, um anzufordern, dass Funktionen, die Funktionalität für das vom Client zurückgegebenen Rowset nicht angezeigt wird ggf. Cursor-Modul. Um interoperable werden Anwendungen sollten immer Eigenschaften festlegen, um erweiterte Funktionalität explizit anfordern, falls erforderlich.  
   
- In einigen Fällen kann es erforderlich sein, einzelne OLE DB\-Dienste zu deaktivieren, um die erfolgreiche Kooperation zwischen vorhandenen Anwendungen, die Annahmen hinsichtlich der Merkmale eines Anbieters anstellen, zu gewährleisten.  OLE DB\-Dienste sind in der Lage, einzelne Dienste oder alle Dienste zu deaktivieren. Dies ist auf der Basis einzelner Verbindungen oder für alle Anwendungen möglich, die einen einzelnen Anbieter verwenden.  
+ In einigen Fällen ist es möglicherweise notwendig, einzelne OLE DB-Dienste mit vorhandenen Anwendungen optimiert, die Annahmen über die Merkmale eines Anbieters treffen zu deaktivieren. OLE DB-Dienste bieten die Möglichkeit, einzelne Dienste oder alle Dienste, entweder für eine Verbindung von Verbindung oder für alle Anwendungen, die über einen einzelnen Anbieter deaktivieren.  
   
-## Siehe auch  
- [OLE DB\-Ressourcenpooling und \-Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)

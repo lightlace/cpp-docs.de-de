@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 28475df3c5d13d1b90483213173f5343f6b85d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException-Klasse
 Stellt COM-Fehler dar, die beim Ausführen einer Anwendung auftreten. COMException ist die Basisklasse für einen Satz vordefinierter Standardausnahmen.  
@@ -60,7 +61,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>Abgeleitete Ausnahmen  
  Die folgenden vordefinierten Ausnahmen werden von COMException abgeleitet. Sie unterscheiden sich von COMException nur im Namen, im Namen des Konstruktors und dem zugrunde liegenden HRESULT-Wert.  
   
-|Name|Zugrunde liegendes HRESULT|Beschreibung|  
+|name|Zugrunde liegendes HRESULT|Beschreibung|  
 |----------|------------------------|-----------------|  
 |COMException|*Benutzerdefiniertes HRESULT*|Wird ausgelöst, wenn ein COM-Methodenaufruf ein unbekanntes HRESULT zurückgibt.|  
 |AccessDeniedException|E_ACCESSDENIED|Wird ausgelöst, wenn der Zugriff auf eine Ressource oder eine Funktion verweigert wird.|  

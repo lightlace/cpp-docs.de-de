@@ -1,44 +1,46 @@
 ---
-title: "default::(type_name)::GetHashCode-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Object::GetHashCode"
-dev_langs: 
-  - "C++"
+title: "standardmäßige:: (Type_name):: GetHashCode-Methode | Microsoft Docs"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Object::GetHashCode
+dev_langs: C++
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 067ead44f000aae8999c0815191089f081edaa67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# default::(type_name)::GetHashCode-Methode
+# <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode-Methode
 Gibt den Hashcode für diese Instanz zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 public:int GetHashCode()  
 ```  
   
-## Rückgabewert  
+### <a name="return-value"></a>Rückgabewert  
  Der Hashcode für diese Instanz.  
   
-## Anforderungen  
- **Unterstützter Client \(Mindestversion\):** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Anforderungen  
+ **Unterstützter Client:** Windows 8  
   
- **Unterstützter Server \(Mindestversion\):** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Unterstützter Server:** Windows Server 2012  
   
  **Namespace:** Standard  
   
  **Header:** vccorlib.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Standardnamespace](../cppcx/default-namespace.md)

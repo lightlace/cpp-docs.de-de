@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -41,8 +40,7 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -58,30 +56,16 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d2993016e9c6b3a4ea7d47ba8071fab1267e483f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 Ruft Informationen über eine geöffnete Datei ab  
@@ -254,7 +238,7 @@ Time modified : Wed May 07 15:25:11 2003
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
  [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
  [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_filelength, _filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   

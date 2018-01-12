@@ -45,11 +45,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe50e74b85ed11878cc6a1dd15ca93082ef818f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71cc3edcecaf9cf9717fe38705a8e3a8660efb8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Dies sind Versionen von [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) mit Sicherheitserweiterungen, die unter [Security Features in the CRT (Sicherheitserweiterungen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben werden.  
@@ -108,7 +109,7 @@ int _vfwprintf_s_l(
   
  `vfwprintf_s` ist die Breitzeichenversion von `vfprintf_s`; die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. `vfprintf_s` unterstützt derzeit die Ausgabe in einen UNICODE-Stream nicht.  
   
- Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -122,7 +123,7 @@ int _vfwprintf_s_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionale Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|  
 |-------------|---------------------|----------------------|  
 |`vfprintf_s`, `_vfprintf_s_l`|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|  
 |`vfwprintf_s`, `_vfwprintf_s_l`|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|  
@@ -132,7 +133,7 @@ int _vfwprintf_s_l(
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [vprintf Functions (vprintf-Funktionen)](../../c-runtime-library/vprintf-functions.md)   
  [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   

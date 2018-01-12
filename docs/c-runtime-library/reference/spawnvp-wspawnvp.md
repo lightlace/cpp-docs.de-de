@@ -41,11 +41,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 646921389ee4f6473872b55bc7c1e2f430385c3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49e51ca52f92d5df73d4ea5b5259cebbbf2c5380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
 Erstellt einen Prozess und führt ihn aus.  
@@ -105,7 +106,7 @@ intptr_t _wspawnvp(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_spawnvp`|\<stdio.h> oder \<process.h>|  
 |`_wspawnvp`|\<stdio.h> oder \<wchar.h>|  
@@ -116,7 +117,7 @@ intptr_t _wspawnvp(
  Siehe das Beispiel in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
  [_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   

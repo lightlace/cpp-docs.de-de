@@ -1,51 +1,52 @@
 ---
-title: "What Is the ATL Control-Hosting API?"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "APIs [C++], Hosting"
-  - "control-hosting API"
-  - "Steuerelemente [ATL], Hosting-APIs"
+title: Was ist die ATL-Steuerelement-Hosting-API? | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- APIs [C++], hosting
+- control-hosting API
+- controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 15
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# What Is the ATL Control-Hosting API?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-SteuerelementHosting API ATL ist der Satz von Funktionen, der jedem Fenster ermöglicht, als ein ActiveX\-Steuerelementcontainer fungiert.  Diese Funktionen können in das Projekt statisch oder dynamisch zu verknüpfen, da sie als Quellcode verfügbar sind und von ATL90.dll verfügbar gemacht.  Die SteuerelementHosting Funktionen sind in der folgenden Tabelle aufgelistet.  
+# <a name="what-is-the-atl-control-hosting-api"></a>Was ist die ATL-Steuerelement-Hosting-API?
+ATL des Steuerelements hosting-API ist der Satz von Funktionen, die einem beliebigen Fenster fungieren als ActiveX-Steuerelement-Container ermöglicht. Diese Funktionen können statisch oder dynamisch in das Projekt eingebunden werden, da sie als Quellcode verfügbar sind und von ATL90.dll verfügbar gemacht werden. Das Hosten von Steuerelementen Funktionen werden in der folgenden Tabelle aufgeführt.  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
-|[AtlAxAttachControl](../Topic/AtlAxAttachControl.md)|Erstellt ein Hostobjekt, schließt die an das angegebene Fenster, fügt dann ein vorhandenes Steuerelement an.|  
-|[AtlAxCreateControl](../Topic/AtlAxCreateControl.md)|Erstellt ein Hostobjekt, schließt die an das angegebene Fenster, dann wird ein Steuerelement.|  
-|[AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)|Erstellt ein lizenziertes ActiveX\-Steuerelement, initialisiert und hostet es im angegebenen Fenster, das zu [AtlAxCreateControl](../Topic/AtlAxCreateControl.md) ähnelt.|  
-|[AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)|Erstellt ein Hostobjekt, schließt die an das angegebene Fenster, dann wird ein Steuerelement \(ermöglicht auch die installiert werden Ereignissenken,\).|  
-|[AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)|Erstellt ein lizenziertes ActiveX\-Steuerelement, initialisiert und hostet es im angegebenen Fenster, das zu [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md) ähnelt.|  
-|[AtlAxCreateDialog](../Topic/AtlAxCreateDialog.md)|Stellt ein nicht modales Dialogfeld aus einer Dialogfeldressource erstellt und gibt das Fensterhandle zurück.|  
-|[AtlAxDialogBox](../Topic/AtlAxDialogBox.md)|Stellt ein modales Dialogfeld aus einer Dialogfeldressource erstellt.|  
-|[AtlAxGetControl](../Topic/AtlAxGetControl.md)|Gibt den **IUnknown**\-Schnittstellenzeiger des Steuerelements zurück, die in einem Fenster gehostet wird.|  
-|[AtlAxGetHost](../Topic/AtlAxGetHost.md)|Gibt den **IUnknown**\-Schnittstellenzeiger des Hostobjekts zurück, das an ein Fenster verbunden ist.|  
-|[AtlAxWinInit](../Topic/AtlAxWinInit.md)|Initialisiert den SteuerelementHosting Code.|  
-|[AtlAxWinTerm](../Topic/AtlAxWinTerm.md)|Deinitialisiert den SteuerelementHosting Code.|  
+|[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Erstellt ein Hostobjekt, verbindet ihn mit dem bereitgestellten Fenster, und fügt ein vorhandenes Steuerelement.|  
+|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Ein Objekt erstellt, wird eine Verbindung mit dem bereitgestellten Fenster und lädt dann ein Steuerelement.|  
+|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|  
+|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Erstellt ein Objekt, stellt eine Verbindung mit dem bereitgestellten Fenster her und lädt dann ein Steuerelement (auch Ereignissenken um eingerichtet werden können).|  
+|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|  
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Erstellt ein nicht modales Dialogfeld aus einer Ressource, und gibt das Fensterhandle.|  
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxdialogbox)|Erstellt ein modales Dialogfeld aus einer Ressource an.|  
+|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Gibt die **IUnknown** Schnittstellenzeiger des Steuerelements in einem Fenster gehostet.|  
+|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Gibt die **IUnknown** Schnittstellenzeiger, der das Hostobjekt in einem Fenster verbunden.|  
+|[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Initialisiert den Code zum Hosten von Steuerelementen an.|  
+|[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Hebt die Initialisierung des Codes zum Hosten von Steuerelementen.|  
   
- Die `HWND`\-Parameter in den ersten drei Funktionen muss ein vorhandenes Fenster \(fast\) eines beliebigen Typs sein.  Wenn Sie alle drei Funktionen explizit \(in der Regel, sind Sie nicht müssen\), aufrufen, übergeben Sie ein Handle nicht zu einem Fenster, das bereits als Host fungiert \(wenn Sie ausführen, wird das vorhandene Hostobjekt nicht freigegeben\).  
+ Die `HWND` Parameter in den ersten drei Funktionen müssen ein vorhandenes Fenster (fast) in einen beliebigen Typ sein. Wenn Sie jede dieser drei Funktionen explizit aufrufen (in der Regel wird nicht müssen), übergeben Sie ein Handle nicht an ein Fenster, das bereits als Host fungiert (Wenn Sie dies tun, das vorhandene Hostobjekt wird nicht freigegeben).  
   
- Der erste Aufruf [AtlAxWinInit](../Topic/AtlAxWinInit.md) mit sieben Funktionen implizit.  
+ Die ersten sieben Funktionen aufrufen [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implizit.  
   
 > [!NOTE]
->  Das SteuerelementHosting API bildet die Grundlage Unterstützung ATL für ActiveX\-Steuerelement\-Kapselung.  Es gibt jedoch normalerweise wenig Anforderung, diese Funktionen direkt aufrufen, wenn Sie vollständigen Verwendung Wrapperklassen ATL nutzen oder ausführen.  Weitere Informationen finden Sie unter [Welche ATL klassifiziert erleichtert ActiveX\-Steuerelement\-Kapselung?](../atl/which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  Die Steuerelement-hosting-API bildet die Grundlage für ATLs-Unterstützung für ActiveX-Steuerelementcontainern. Es ist jedoch in der Regel kaum Bedarf, die diese Funktionen direkt aufzurufen, wenn Sie nutzen oder ATL Wrapperklassen voll nutzen. Weitere Informationen finden Sie unter [die ATL-Klassen vereinfachen ActiveX-Steuerelementcontainern](which-atl-classes-facilitate-activex-control-containment-q.md).  
   
-## Siehe auch  
- [Fragen und Antworten zur Steuerelementkapselung](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zur steuerelementkapselung](which-atl-classes-facilitate-activex-control-containment-q.md)

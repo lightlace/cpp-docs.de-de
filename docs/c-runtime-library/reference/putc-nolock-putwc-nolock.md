@@ -45,11 +45,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8da1041a5d719145625470aaed542cc3030bd80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad994b11cecb304bd91d357516aa7c81a7351917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
 Schreibt ein Zeichen in einen Stream, ohne den Thread zu sperren.  
@@ -79,7 +80,7 @@ wint_t _putwc_nolock(
  Siehe **putc, putwc**.  
   
 ## <a name="remarks"></a>Hinweise  
- `_putc_nolock` und `_putwc_nolock` sind identisch mit den Versionen ohne das **_nolock**-Suffix; allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
+ `_putc_nolock` und `_putwc_nolock` sind identisch mit den Versionen ohne das **_nolock**-Suffix; allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
   
  `_putwc_nolock` ist die Breitzeichenversion von `_putc_nolock`; die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. `_putc_nolock` unterstützt derzeit die Ausgabe in einen UNICODE-Stream nicht.  
   
@@ -91,7 +92,7 @@ wint_t _putwc_nolock(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_putc_nolock`|\<stdio.h>|  
 |`_putwc_nolock`|\<stdio.h> oder \<wchar.h>|  
@@ -99,7 +100,7 @@ wint_t _putwc_nolock(
  Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   

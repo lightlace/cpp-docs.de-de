@@ -1,41 +1,42 @@
 ---
-title: "CAtlServiceModuleT::ServiceMain Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceMain"
-  - "CServiceModule::ServiceMain"
-  - "CServiceModule.ServiceMain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ServiceMain method"
+title: CAtlServiceModuleT::ServiceMain Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ServiceMain
+- CServiceModule::ServiceMain
+- CServiceModule.ServiceMain
+dev_langs: C++
+helpviewer_keywords: ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 633e9bc4689ced93e1c22151b32654f7ae9d7ece
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CAtlServiceModuleT::ServiceMain Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Dienststeuerungs\-Manager \(SCM\) ruft `ServiceMain` auf, wenn Sie die Dienste\-Systemsteuerungs\-Anwendung öffnen, den Dienst auswählen und auf **Start** klicken.  
+# <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain-Funktion
+Ruft der dienststeuerungs-Manager (SCM) `ServiceMain` Wenn Sie die Anwendung Dienste in der Systemsteuerung öffnen, wählen Sie den Dienst, und klicken Sie auf **starten**.  
   
- Nachdem das SCM `ServiceMain` aufruft, muss ein Dienst dem SCM eine Handlerfunktion geben.  Diese Funktion ermöglicht das SCM Abrufen des Status des Diensts und bestimmte Anweisungen übergeben \(wie Anhalten oder Beenden\).  Das SCM ruft diese Funktion wenn die Dienstübergaben **\_Handler** an die Win32\-API, [RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054).  \(**\_Handler** ist eine statische Memberfunktion, die die nicht statische Memberfunktion [Handler](../atl/catlservicemodulet-handler-function.md) aufruft\).  
+ Ruft nach dem SCM `ServiceMain`, ein Dienst muss dem SCM eine Handlerfunktion erteilen. Diese Funktion ermöglicht den SCM, der Status des Dienstes zu erhalten und übergeben Sie spezifische Anweisungen (z. B. durch das Anhalten oder Beenden). SCM ruft diese Funktion aus, wenn der Dienst übergibt **_Handler** der Win32-API-Funktion, [' RegisterServiceCtrlHandler '](http://msdn.microsoft.com/library/windows/desktop/ms685054). (**_Handler** ist eine statische Memberfunktion, die nicht statische Memberfunktion aufruft [Handler](../atl/reference/catlservicemodulet-class.md#handler).)  
   
- Am Start sollte ein Dienst das SCM über seinen aktuellen Status auch informieren.  Das geschieht, indem **SERVICE\_START\_PENDING** zur Win32\-API, [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241) übergibt.  
+ Beim Start sollte ein Dienst auch SCM über seinen aktuellen Status informieren. Dies geschieht durch übergeben **SERVICE_START_PENDING** der Win32-API-Funktion, [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
   
- `ServiceMain` ruft dann `CAtlExeModuleT::InitializeCom` auf, das die Win32\-API [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) aufruft.  Standardmäßig wird das `InitializeCom`**COINIT\_MULTITHREADED**\-Flag für die Funktion.  Dieses Flag gibt an, dass das Programm, ein Freethreadserver sein soll.  
+ `ServiceMain`Ruft dann `CAtlExeModuleT::InitializeCom`, die Win32-API-Funktion aufruft [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Standardmäßig `InitializeCom` übergibt die **COINIT_MULTITHREADED** Flag an die Funktion. Dieses Flag gibt an, dass das Programm eine Freethread-Server sein.  
   
- Jetzt wird `CAtlServiceModuleT::Run` aufgerufen, um die zentrale Arbeit des Diensts auszuführen.  **Run** wird fortgesetzt, um auszuführen, bis der Dienst beendet wurde.  
+ Jetzt `CAtlServiceModuleT::Run` aufgerufen, um die Hauptarbeit des Dienstes vorzunehmen. **Führen Sie** wird weiterhin ausgeführt, bis der Dienst beendet wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dienste](../atl/atl-services.md)   
- [CAtlServiceModuleT::ServiceMain](../Topic/CAtlServiceModuleT::ServiceMain.md)
+ [CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+

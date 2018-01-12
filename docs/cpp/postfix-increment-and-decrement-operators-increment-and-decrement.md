@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Inkrementierungs- und Dekrementierungsoperatoren in Postfixnotation: ++ und --
 ## <a name="syntax"></a>Syntax  
@@ -55,7 +53,7 @@ i++;
   
  Wenn ein Postfix-Operator auf ein Funktionsargument angewendet wird, ist für den Wert des Arguments nicht gewährleistet, dass er vor der Übergabe an die Funktion inkrementiert oder dekrementiert wird.  Weitere Informationen finden Sie in Abschnitt 1.9.17 im C++-Standard.  
   
- Anwenden des Postfix-Inkrement-Operators auf einen Zeiger auf ein Array von Objekten des Typs **lange** 4 für die interne Darstellung des Zeigers tatsächlich hinzugefügt. Dieses Verhalten führt dazu, dass den Zeiger, der zuvor genannten der * n *th-Element des Arrays, zum Verweisen auf die (*n*+ 1) th-Element.  
+ Anwenden des Postfix-Inkrement-Operators auf einen Zeiger auf ein Array von Objekten des Typs **lange** 4 für die interne Darstellung des Zeigers tatsächlich hinzugefügt. Dieses Verhalten führt dazu, dass den Zeiger, der zuvor genannten der  *n* th-Element des Arrays, zum Verweisen auf die (*n*+ 1) th-Element.  
   
  Die Operanden der Postfixinkrement- und Postfixdekrement-Operatoren muss geändert werden kann (nicht **const**) l-Werte des arithmetischen oder vom Zeigertyp-Typ. Der Typ des Ergebnisses ist dieselbe wie die *postfixausdruck*, aber es ist nicht mehr ein l-Wert.  
   

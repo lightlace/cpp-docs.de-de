@@ -1,37 +1,39 @@
 ---
-title: "Interfaces (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM-Schnittstellen"
-  - "Schnittstellen, COM"
+title: Schnittstellen (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM interfaces
+- interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf1dd68a3ca8e6735b07c5bd7247b457bd7d246d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Interfaces (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine Schnittstelle ist die Methode, in der ein Objekt seine Funktionen der Außenwelt verfügbar macht.  In COM ist eine Schnittstelle eine Tabelle von Zeigern \(\(beispielsweise eine vtable\) auf Funktionen, die durch das Objekt implementiert werden.  Die Tabelle stellt die Schnittstelle dar, und die Funktionen auf der es verweist, sind die Methoden dieser Schnittstelle.  Ein Objekt kann bis zu Schnittstellen verfügbar machen, es auswählt.  
+# <a name="interfaces-atl"></a>Schnittstellen (ATL)
+Eine Schnittstelle ist die Möglichkeit, in der ein Objekt seine Funktionalität an die Außenwelt verfügbar macht. In COM ist eine Schnittstelle eine Tabelle von Zeigern (z. B. eine C++-Vtable) auf Funktionen, die von dem Objekt implementiert. Die Tabelle stellt die Schnittstelle dar, und die Funktionen, die auf denen er zeigt, sind die Methoden dieser Schnittstelle. Ein Objekt kann beliebig viele Schnittstellen verfügbar machen.  
   
- Jede Schnittstelle basiert auf die grundlegende COM\-Schnittstelle, [IUnknown](../atl/iunknown.md).  Die Methoden von **IUnknown** ermöglichen die Navigation zu anderen Schnittstellen, die vom Objekt verfügbar gemacht werden.  
+ Jede Schnittstelle basiert auf der grundlegenden COM-Schnittstelle [IUnknown](../atl/iunknown.md). Die Methoden der **IUnknown** ermöglichen die Navigation zu anderen Schnittstellen, die vom Objekt verfügbar gemacht.  
   
- Außerdem wird jede Schnittstelle eindeutigen Schnittstellen\-ID \(IID\) zugewiesen.  Diese Eindeutigkeit erleichtert es, Schnittstellenversionsverwaltung zu unterstützen.  Eine neue Version einer Schnittstelle ist einfach eine neue Schnittstelle, mit einem neuen IID.  
+ Darüber hinaus erhält jede Schnittstelle eine eindeutige ID (IID)-Schnittstelle. Diese Eindeutigkeit vereinfacht die Unterstützung. Eine neue Version einer Schnittstelle ist einfach eine neue Schnittstelle mit einer neuen IID.  
   
 > [!NOTE]
->  IID für den standardmäßigen COM und OLE\-Schnittstellen werden vordefiniert.  
+>  IIDs für die standardmäßigen COM und OLE-Schnittstellen sind vordefiniert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einführung in COM](../atl/introduction-to-com.md)   
- [COM Objects and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM-Objekte und Schnittstellen](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+

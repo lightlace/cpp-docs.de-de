@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,24 +28,23 @@ f1_keywords:
 - mbsbtype_l
 - _mbsbtype_l
 - _mbsbtype
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsbtype function
 - mbsbtype function
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05c106136c36d09b06e5b168a0c582b87c306d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a20ff8b10229714a434dc0f77748f37f9c15064a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 Gibt den Bytetyp in einer Zeichenfolge zurück.  
@@ -91,13 +89,13 @@ int _mbsbtype_l(
 ## <a name="remarks"></a>Hinweise  
  Die `_mbsbtype`-Funktion bestimmt den Typ eines Bytes in einer Multibyte-Zeichenfolge. Die Funktion überprüft nur das Byte am Offset `count` in `mbstr` und ignoriert ungültige Zeichen vor dem angegebenen Byte.  
   
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Version dieser Funktion ohne das `_l`-Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Version dieser Funktion ohne das `_l`-Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
  Wenn die Eingabezeichenfolge `NULL` ist, wird der ungültige Parameterhandler wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `_MBC_ILLEGAL` zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_mbsbtype`|\<mbstring.h>|\<mbctype.h>*|  
 |`_mbsbtype_l`|\<mbstring.h>|\<mbctype.h>*|  

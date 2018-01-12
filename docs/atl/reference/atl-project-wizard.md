@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e547f09e303386d3bb28ebd9dab94854ee67599e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373e39461aed7c3aadb7107e61a8aecab1177ee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-project-wizard"></a>ATL-Projekt-Assistent
 Die Active Template Library (ATL) ist eine Reihe von Template-basierten C++-Klassen, die Schreiben von kleinen und schnelle COM-Objekten vereinfachen. ATL-Projekt-Assistent erstellt ein Projekt mit den Strukturen, die COM-Objekte enthalten.  

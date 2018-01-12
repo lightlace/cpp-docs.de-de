@@ -53,11 +53,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 089ad22184700509b651f31b830c6414d3455e6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a52c7643a465bfaf24db6988d531943284e6416
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 Gibt die Anzahl der Zeichen in der formatierten Zeichenfolge mithilfe eines Zeigers auf eine Liste von Argumenten zurück.  
@@ -102,10 +103,10 @@ int _vscwprintf_l(
   
  Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
- Wenn `format` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
+ Wenn `format` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
   
 ## <a name="remarks"></a>Hinweise  
- Jedes `argument` (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert. Das Format besteht aus normalen Zeichen und hat die gleiche Form und Funktion wie das `format`-Argument für [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ Jedes `argument` (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert. Das Format besteht aus normalen Zeichen und hat die gleiche Form und Funktion wie das `format` -Argument für [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` mit NULL abgeschlossen wird, wenn es sich dabei um eine benutzerdefinierte Zeichenfolge handelt, und dass es über die richtige Anzahl und den richtigen Typ von Parametern verfügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -119,7 +120,7 @@ int _vscwprintf_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
 |`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> oder \<wchar.h>|  

@@ -1,32 +1,31 @@
 ---
-title: ".LISTMACRO"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTMACRO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTMACRO directive"
+title: . LISTMACRO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTMACRO
+dev_langs: C++
+helpviewer_keywords: .LISTMACRO directive
 ms.assetid: f8dadf8c-ca6f-4bb9-a4f8-86a0e769a845
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f7ed9e0fde8137fb9b2098b74b6ca6965a2e325
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .LISTMACRO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Startet Makroumwandlungs Listen von Anweisungen, die Code oder Daten generieren.  
+# <a name="listmacro"></a>.LISTMACRO
+Startet eine Liste der Makro Expansion-Anweisungen, die Code- oder Datenmenge zu generieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,8 +33,8 @@ Startet Makroumwandlungs Listen von Anweisungen, die Code oder Daten generieren.
   
 ```  
   
-## Hinweise  
- Dies ist die Standardeinstellung.  Identisch mit [.XALL](../../assembler/masm/dot-xall.md).  
+## <a name="remarks"></a>Hinweise  
+ Dies ist die Standardeinstellung. Identisch mit [. XALL](../../assembler/masm/dot-xall.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

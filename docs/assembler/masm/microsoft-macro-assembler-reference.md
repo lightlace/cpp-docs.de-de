@@ -1,62 +1,60 @@
 ---
-title: "Microsoft Macro Assembler Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MASM (Microsoft Macro Assembler), reference"
-  - "MASM (Microsoft Macro Assembler), overview"
-  - "MASM (Microsoft Macro Assembler)"
-  - "MASM (Microsoft Macro Assembler), documentation overview"
+title: Referenz zum Microsoft Macro Assembler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MASM (Microsoft Macro Assembler), reference
+- MASM (Microsoft Macro Assembler), overview
+- MASM (Microsoft Macro Assembler)
+- MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Microsoft Macro Assembler Reference
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Macro Assembler \(MASM\) bietet mehrere Vorteile gegenüber Inline\-Assemblierung.  MASM enthält eine Makrosprache, die Features wie Schleifen, arithmetische und Text String\-Verarbeitung hat.  MASM Ihnen außerdem mehr Kontrolle über die Hardware da Befehlssätze der 386, 486 und Pentium\-Prozessoren unterstützt.  Mithilfe von MASM können Sie auch Zeit und Speicher\-Overhead reduzieren.  
+# <a name="microsoft-macro-assembler-reference"></a>Referenz zum Microsoft Macro Assembler
+Microsoft Macro Assembler (MASM) bietet verschiedene Vorteile gegenüber Inlineassembly. MASM enthält eine Makrosprache, die Features wie die Verarbeitung von Schleifen, arithmetische und Text Zeichenfolge verfügt. MASM Ihnen außerdem mehr Kontrolle über die Hardware, da es sich um die Anweisungssets der 386, 486 und Pentium-Prozessoren unterstützt. Mithilfe von MASM können Sie auch der Mehraufwand für Zeit und Speicherplatz reduziert.  
   
-## In diesem Abschnitt  
- [ML und ML64\-Befehlszeilenoption](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
- Beschreibt die Befehlszeilenoptionen ML.exe und ML64.exe.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [ML- und ML64-Befehlszeilenoption](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
+ Beschreibt die Befehlszeilenoptionen ML.exe und ML64.exe an.  
   
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)  
+ [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)  
  Beschreibt ML.exe Schwerwiegender und nicht schwerwiegende Fehlermeldungen und Warnungen.  
   
- [Directives Reference](../../assembler/masm/directives-reference.md)  
- Enthält Links zu Artikeln, die die Verwendung von Richtlinien in MASM zu diskutieren.  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)  
+ Enthält Links zu Artikeln über die Verwendung der Direktiven in MASM.  
   
- [Symbols Reference](../../assembler/masm/symbols-reference.md)  
- Enthält Links zu Artikeln, die die Verwendung von Symbolen in MASM zu diskutieren.  
+ [Symbole – Verweis](../../assembler/masm/symbols-reference.md)  
+ Enthält Links zu Artikeln über die Verwendung von Symbolen in MASM.  
   
- [Operators Reference](../../assembler/masm/operators-reference.md)  
- Enthält Links zu Artikeln, die die Verwendung von Operatoren in MASM zu diskutieren.  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)  
+ Enthält Links zu Artikeln über die Verwendung von Operatoren in MASM.  
   
  [Programmierungshandbücher von Prozessorherstellern](../../assembler/masm/processor-manufacturer-programming-manuals.md)  
- Enthält Links zu Websites, die Informationen zur Programmierung über Prozessoren, die nicht hergestellt enthalten können, verkauft oder von Microsoft unterstützt.  
+ Enthält Links zu Websites, die Informationen zur Programmierung zu Prozessoren, die nicht hergestellt enthalten können, verkauft wurde, oder von Microsoft unterstützt.  
   
- [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
- Informationen zum Erstellen der Ausgabe\-Dateien für [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
+ [MASM für x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
+ Informationen zum Erstellen der Ausgabe von Dateien für [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
   
-## Verwandte Abschnitte  
- [Visual C\+\+](../../top/visual-cpp-in-visual-studio-2015.md)  
- Enthält Links zu verschiedenen Bereichen der Visual Studio und Visual C\+\+\-Dokumentation.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ Enthält Links zu verschiedenen Bereichen der Visual Studio und Visual C++-Dokumentation.  
   
- [Visual C\+\+ Reference](assetId:///1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Enthält Links zu Artikeln, die C\- und C\+\+\-Sprachreferenzen, die Bibliotheken, die mit Visual C\+\+ und Visual C\+\+\-Erweiterbarkeitsobjektmodell enthalten sind.  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../../intrinsics/compiler-intrinsics.md)   
- [x 86\-Spezifikationen](../../intrinsics/x86-intrinsics-list.md)   
- [x 64 \(amd64\)\-Spezifikationen](../../intrinsics/x64-amd64-intrinsics-list.md)
+ [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)   
+ [X64 (amd64) systeminterne Funktionen](../../intrinsics/x64-amd64-intrinsics-list.md)

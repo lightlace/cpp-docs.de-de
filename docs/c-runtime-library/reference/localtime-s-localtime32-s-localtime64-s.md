@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - localtime_s
 - localtime64_s
 - _localtime64_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _localtime64_s function
 - localtime32_s function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 Konvertiert einen Zeitwert und berichtigt die lokale Zeitzone. Dies sind Versionen von [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) mit Sicherheitsverbesserungen wie in den [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -100,9 +84,9 @@ errno_t _localtime64_s(
   
 |`_tm`|`time`|Rückgabewert|Wert in `_tm`|Ruft ungültige Parametertyphandler auf|  
 |-----------|------------|------------------|--------------------|---------------------------------------|  
-|`NULL`|alle|`EINVAL`|Nicht geändert|Ja|  
-|Nicht `NULL` (zeigt gültigen Speicher an)|`NULL`|`EINVAL`|Alle Felder auf-1 festgelegt|Ja|  
-|Nicht `NULL` (zeigt gültigen Speicher an)|kleiner als 0 (null) oder größer als `_MAX__TIME64_T`|`EINVAL`|Alle Felder auf-1 festgelegt|Nein|  
+|`NULL`|any|`EINVAL`|Nicht geändert|Ja|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|`NULL`|`EINVAL`|Alle Felder auf-1 festgelegt|Ja|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|kleiner als 0 (null) oder größer als `_MAX__TIME64_T`|`EINVAL`|Alle Felder auf-1 festgelegt|Nein|  
   
  Im Fall der ersten zwei Fehlerbedingungen, wird der ungültige Parameterhandler aufgerufen, so wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.  
   
@@ -116,7 +100,7 @@ errno_t _localtime64_s(
   
  `_localtime64_s`, das die `__time64_t`-Struktur verwendet, erlaubt das Ausdrücken von Daten über den 18. Januar 3001, 23:59:59 UTC (Koordinierte Weltzeit) hinaus, während `_localtime32_s` Datumsangaben bis zum 18. Januar 2038, 23:59:59, UTC, darstellt.  
   
- `localtime_s` ist eine Inlinefunktion, die `_localtime64_s` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit-`time_t` zu interpretieren, definieren Sie `_USE_32BIT_TIME_T`. Dadurch wird `localtime_s` mit `_localtime32_s` ausgewertet. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
+ `localtime_s` ist eine Inlinefunktion, die `_localtime64_s` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit-`time_t` zu interpretieren, definieren Sie `_USE_32BIT_TIME_T`. Dadurch wird `localtime_s` mit `_localtime32_s` ausgewertet. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
   
  Die Felder des Strukturtyps [tm](../../c-runtime-library/standard-types.md) speichern die folgenden Werte, von denen jeder `int` darstellt:  
   
@@ -149,7 +133,7 @@ errno_t _localtime64_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`localtime_s`|\<time.h>|  
 |`_localtime32_s`|\<time.h>|  
@@ -214,7 +198,7 @@ Fri Apr 25 01:19:27 PM
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
@@ -222,4 +206,3 @@ Fri Apr 25 01:19:27 PM
  [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)
-

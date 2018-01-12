@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -39,31 +37,16 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 50070672e990333073f5ad7f7ba604110c3a3cfa
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 476df668657739c9f67ca1323c2c0ce630260110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 Registriert eine Routine, die zum Zeitpunkt der Beendigung aufgerufen werden soll.  
@@ -95,7 +78,7 @@ _onexit_t_m _onexit_m(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_onexit`|\<stdlib.h>|  
   
@@ -154,7 +137,7 @@ This is executed next.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
  [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [__dllonexit](../../c-runtime-library/dllonexit.md)

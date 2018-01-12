@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dfeadfba46f1dd0b033f3d82571e82c59a449ec9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 916bd22a982e70a7acb50793723be23416516d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread-Klasse
 Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle, und ermöglicht es Objekten, die in mehreren Apartments erstellt werden.  
@@ -39,7 +40,7 @@ class CComClassFactoryAutoThread
      public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

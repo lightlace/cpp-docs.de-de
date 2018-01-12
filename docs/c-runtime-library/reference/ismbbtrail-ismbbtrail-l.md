@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b99e318e95644b327f3629658ac5100f08c05d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 Bestimmt, ob ein Byte ein führendes Byte eines Multibytezeichens ist.  
@@ -75,7 +76,7 @@ int _ismbbtrail_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_ismbbtrail`|\<mbctype.h> oder \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
 |`_ismbbtrail_l`|\<mbctype.h> oder \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  

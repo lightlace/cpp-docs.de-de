@@ -1,32 +1,35 @@
 ---
-title: "Durchlaufen eines einfachen Rowsets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Accessoren [C++], Rowsets"
-  - "Datenzugriff [C++], Rowsets"
-  - "OLE DB-Consumer [C++], Datenbankattribute"
-  - "Rowsets [C++], Aufrufen"
-  - "Einfache Rowsets"
+title: Durchlaufen eines einfachen Rowsets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], rowsets
+- rowsets [C++], accessing
+- simple rowsets
+- OLE DB consumers [C++], database attributes
+- accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9f792e7a65a55cb63fb275d4d606a743e00a0e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Durchlaufen eines einfachen Rowsets
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Beispiel sehen Sie eine schnelle und einfache Art des Datenbankzugriffs, die ohne Befehle auskommt.  Der folgende Consumercode in einem ATL\-Projekt ruft Datensätze aus einer Tabelle mit der Bezeichnung *Künstler* ab, die Teil einer Microsoft Access\-Datenbank ist. Hierzu wird der Microsoft\-OLE DB\-Anbieter für ODBC verwendet.  Der Code erstellt ein [CTable](../../data/oledb/ctable-class.md)\-Tabellenobjekt mit einem Accessor, der auf der Benutzerdatensatz\-Klasse `CArtists` basiert.  Er öffnet eine Verbindung, eine Sitzung über die Verbindung sowie die Tabelle in der Sitzung.  
+# <a name="traversing-a-simple-rowset"></a>Durchlaufen eines einfachen Rowsets
+Das folgende Beispiel zeigt die eine schnellen und einfachen Zugriff, die keine Befehle beinhaltet. Die folgenden Consumercode in einem ATL-Projekt ruft Datensätze aus einer Tabelle mit dem Namen *Künstler* in einer Microsoft Access-Datenbank mithilfe der Microsoft OLE DB-Anbieter für ODBC. Der Code erstellt ein [CTable](../../data/oledb/ctable-class.md) Table-Objekt mit einem Accessor basierend auf die Benutzerdatensatz-Klasse `CArtists`. Öffnet eine Verbindung, wird eine Sitzung für die Verbindung geöffnet und die Tabelle in der Sitzung geöffnet.  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Der Benutzerdatensatz `CArtists` sieht wie folgt aus:  
+ Der Benutzerdatensatz `CArtists`, wie folgt aussieht:  
   
 ```  
 class CArtists  
@@ -70,5 +73,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## Siehe auch  
- [Arbeiten mit OLE DB\-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

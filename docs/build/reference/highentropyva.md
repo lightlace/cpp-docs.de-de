@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 189344645cff785b2957131303cabbe1946954ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36ca3ea93f494587663d863b1dc4646750d38e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 Gibt an, ob das ausführbare Image 64-bit-ASLR mit hoher Entropie unterstützt.  
@@ -33,7 +34,7 @@ Gibt an, ob das ausführbare Image 64-bit-ASLR mit hoher Entropie unterstützt.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Mit dieser Option wird der Header einer DLL- oder EXE-Datei geändert, um anzugeben, ob ASLR mit 64-Bit-Adressen unterstützt wird. Wenn diese Option auf einer ausführbaren Datei und allen Modulen festgelegt wird, von denen sie abhängt, kann ein 64-Bit-ASLR unterstützendes Betriebssystem die Segmente des ausführbaren Images zur Ladezeit umbasieren, indem zufällige Adressen in einem virtuellen 64-Bit-Adressbereich verwendet werden. Aufgrund dieses großen Adressbereichs ist es für einen Angreifer schwieriger, den Ort eines bestimmten Speicherbereichs zu schätzen.  
+ Mit dieser Option wird der Header einer DLL- oder EXE-Datei geändert, um anzugeben, ob ASLR mit 64-Bit-Adressen unterstützt wird. Wenn diese Option auf einer ausführbaren Datei und allen Modulen festgelegt wird, von denen sie abhängt, kann ein 64-Bit-ASLR unterstützendes Betriebssystem für die Segmente des ausführbaren Images zur Ladezeit ein Rebase ausführen, indem zufällige Adressen in einem virtuellen 64-Bit-Adressbereich verwendet werden. Aufgrund dieses großen Adressbereichs ist es für einen Angreifer schwieriger, den Ort eines bestimmten Speicherbereichs zu schätzen.  
   
  Standardmäßig legt der Linker diese Option für ausführbare 64-Bit-Images fest. Zum Festlegen dieser Option die ["/ DynamicBase"](../../build/reference/dynamicbase.md) Option muss auch festgelegt werden.  
   

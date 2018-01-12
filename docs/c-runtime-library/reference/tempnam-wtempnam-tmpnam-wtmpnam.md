@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - tmpnam
 - _wtempnam
 - _tempnam
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wtempnam function
 - file names [C++], creating temporary
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9708c23fc76095a591a2eceafcb875ce173383ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 Generiert Namen, die Sie verwenden können, um temporäre Dateien zu erstellen. Sicherere Versionen einiger dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [tmpnam_s, _wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
@@ -127,7 +111,7 @@ wchar_t *_wtmpnam(
   
  Der von `_tempnam` zurückgegebene Name ist eine Verkettung von `prefix` und einer sequentiellen Nummer, die kombiniert werden, um einen eindeutigen Verzeichnisnamen für das angegebene Verzeichnis zu erstellen. `_tempnam` generiert Dateinamen, die keine Erweiterung haben. `_tempnam` verwendet [malloc](../../c-runtime-library/reference/malloc.md), um Arbeitsspeicher für den Dateinamen zuzuweisen. Das Programm ist für die Freigabe dieses Speicherplatzes verantwortlich, wenn er nicht mehr benötigt wird.  
   
- `_tempnam` und `tmpnam` behandeln Multibyte-Zeichenfolgenargumente automatisch als richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der Codepage des OEM aus dem Betriebssystem. `_wtempnam` ist eine Breitzeichenversion von `_tempnam`. Die Argumente und der Rückgabewert von `_wtempnam` sind Zeichenfolgen mit Breitzeichen. `_wtempnam` und `_tempnam` verhalten sich identisch, mit dem Unterschied, dass `_wtempnam` keine Multibyte-Zeichenfolgen verarbeitet. `_wtmpnam` ist eine Breitzeichenversion von `tmpnam`. Das Argument und der Rückgabewert von `_wtmpnam` sind Zeichenfolgen mit Breitzeichen. `_wtmpnam` und `tmpnam` verhalten sich identisch, mit dem Unterschied, dass `_wtmpnam` keine Multibyte-Zeichenfolgen verarbeitet.  
+ `_tempnam` und `tmpnam` behandeln Multibyte-Zeichenfolgenargumente automatisch als richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der Codepage des OEM aus dem Betriebssystem. `_wtempnam` ist eine Breitzeichenversion von `_tempnam`. Die Argumente und der Rückgabewert von `_wtempnam` sind Zeichenfolgen mit Breitzeichen. `_wtempnam` und `_tempnam` verhalten sich nahezu identisch, allerdings verarbeitet `_wtempnam` keine Multibyte-Zeichenfolgen. `_wtmpnam` ist eine Breitzeichenversion von `tmpnam`. Das Argument und der Rückgabewert von `_wtmpnam` sind Zeichenfolgen mit Breitzeichen. `_wtmpnam` und `tmpnam` verhalten sich nahezu identisch, allerdings verarbeitet `_wtmpnam` keine Multibyte-Zeichenfolgen.  
   
  Wenn `_DEBUG` und `_CRTDBG_MAP_ALLOC` definiert sind, werden `_tempnam` und `_wtempnam` durch Aufrufe für [_tempnam_dbg und _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md) ersetzt.  
   
@@ -140,7 +124,7 @@ wchar_t *_wtmpnam(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_tempnam`|\<stdio.h>|  
 |`_wtempnam`, `_wtmpnam`|\<stdio.h> oder \<wchar.h>|  

@@ -1,93 +1,93 @@
 ---
-title: "/Yd (Debuginformationen in Objektdatei ablegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Yd (Compileroption) [C++]"
-  - "Debuggen [C++], Debuginformationsdateien"
-  - "Yd (Compileroption) [C++]"
-  - "-Yd (Compileroption) [C++]"
+title: -Yd (Debuginformationen in Objektdatei) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yd
+dev_langs: C++
+helpviewer_keywords:
+- /Yd compiler option [C++]
+- -Yd compiler option [C++]
+- debugging [C++], debug information files
+- Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Yd (Debuginformationen in Objektdatei ablegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn diese Option zusammen mit der [\/Yc](../../build/reference/yc-create-precompiled-header-file.md)\-Option und der [\/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)\-Option verwendet wird, werden die vollständigen Debuginformationen in sämtlichen Objektdateien analysiert, die aus der vorkompilierten Headerdatei \(PCH\-Datei\) erstellt werden.  Veraltet.  
+# <a name="yd-place-debug-information-in-object-file"></a>/Yd (Debuginformationen in Objektdatei ablegen)
+Vollständige Debuginformationen in allen Objektdateien Leerzeichen aus einer vorkompilierten Headerdatei (PCH)-Datei bei Verwendung mit erstellt die ["/ Yc"](../../build/reference/yc-create-precompiled-header-file.md) und ["/ Z7"](../../build/reference/z7-zi-zi-debug-information-format.md) Optionen. Veraltet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Yd  
 ```  
   
-## Hinweise  
- **\/Yd** ist veraltetet, verwenden Sie stattdessen [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]. Von **\/Zi** wird nun das Schreiben mehrerer Objekte in eine einzelne PDB\-Datei unterstützt.  Weitere Informationen finden Sie unter [Deprecated Compiler Options in Visual C\+\+ 2005](assetId:///aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+## <a name="remarks"></a>Hinweise  
+ **/ Yd ablegen** ist veraltet. [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] unterstützt jetzt mehrere Objekte, die beim Schreiben in eine einzelne PDB-Datei verwenden **/Zi** stattdessen. Eine Liste der veralteten Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md).  
   
- Solange es nicht erforderlich ist, eine Bibliothek zu verteilen, die Debuginformationen enthält, verwenden Sie die [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)\-Option anstelle von **\/Z7** und **\/Yd**.  
+ Verwenden, es sei denn, Sie eine Bibliothek mit-Debuginformationen zu verteilen müssen, die [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) Option statt **"/ Z7"** und **/Yd ablegen**.  
   
- Das Speichern vollständiger Debuginformationen in jeder OBJ\-Datei ist nur notwendig, um Bibliotheken mit Debuginformationen weiterzugeben.  Es verlangsamt die Kompilierung und erfordert beträchtliche Speicherkapazitäten.  Wenn **\/Yc** und **\/Z7** ohne **\/Yd** verwendet werden, speichert der Compiler allgemeine Debuginformationen in der ersten OBJ\-Datei, die von der PCH\-Datei erstellt wird.  Der Compiler fügt diese Informationen nicht in die OBJ\-Dateien ein, die anschließend von der PCH\-Datei erstellt werden, sondern fügt Querverweise auf diese Informationen ein.  Unabhängig von der Anzahl der OBJ\-Dateien, die die PCH\-Datei verwenden, enthält nur eine OBJ\-Datei die allgemeinen Debuginformationen.  
+ Vollständige Debuginformationen in jeder OBJ-Datei gespeichert ist nur erforderlich, um Bibliotheken zu verteilen, die Debuginformationen enthalten. Er verlangsamt die Kompilierung und erheblichen Speicherplatz benötigt. Wenn **"/ Yc"** und **"/ Z7"** werden verwendet, ohne **/Yd ablegen**, speichert der Compiler allgemeine Debuginformationen in der ersten OBJ-Datei aus der PCH-Datei erstellt. Der Compiler fügt diese Informationen nicht in OBJ-Dateien, die anschließend aus der PCH-Datei erstellt ein; Es fügt Querverweise auf die Informationen ein. Unabhängig davon, wie viele OBJ-Dateien die PCH-Datei verwenden enthält nur eine OBJ-Datei die allgemeinen Debuginformationen.  
   
- Obwohl dieses Standardverhalten kürzere Erstellungszeiten zur Folge hat und die Anforderungen an den Festplattenspeicher reduziert werden, ist es nicht wünschenswert, wenn eine kleine Änderung die Neuerstellung der OBJ\-Datei mit den allgemeinen Debuginformationen erfordert.  In diesem Fall muss der Compiler alle OBJ\-Dateien neu erstellen, die Querverweise auf die ursprüngliche OBJ\-Datei enthalten.  Darüber hinaus ist es problematisch, auf die Querverweise einer einzigen OBJ\-Datei zu vertrauen, wenn eine gemeinsame PCH\-Datei von verschiedenen Projekten verwendet wird.  
+ Obwohl diese Standardeinstellung führt zu Buildzeiten schneller und Speicherplatz Anforderungen reduziert, ist es nicht erwünscht, wenn eine kleine Änderung erfordert das Neuerstellen der OBJ-Datei mit allgemeinen Informationen über das Debuggen. In diesem Fall muss der Compiler alle OBJ-Dateien, die mit Querverweisen, in der ursprünglichen OBJ-Datei neu erstellen. Wenn eine gemeinsame PCH-Datei von verschiedenen Projekten verwendet wird, ist außerdem Abhängigkeit von Querverweisen auf einem einzelnen OBJ-Datei schwierig.  
   
  Weitere Informationen zu vorkompilierten Headern finden Sie unter:  
   
--   [\/Y \(Vorkompilierte Header\)](../../build/reference/y-precompiled-headers.md)  
+-   [/ Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
 4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Beispiele  
- Angenommen, Sie arbeiten mit zwei Basisdateien, F.cpp und G.cpp, die jeweils die folgenden **\#include**\-Anweisungen enthalten:  
+## <a name="examples"></a>Beispiele  
+ Angenommen, Sie haben zwei Bankdateien F.cpp und g.cpp zu, mit jeweils diese **#include** Anweisungen:  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- Mit dem nachfolgenden Befehl werden die vorkompilierte Headerdatei **ETC.pch** und die Objektdatei **F.obj** erstellt:  
+ Der folgende Befehl erstellt den vorkompilierten Header ETC.pch und die Objektdatei F.obj:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- Die Objektdatei **F.obj** schließt Typ\- und Symbolinformationen für **WINDOWS.h** und **ETC.h** ein \(sowie beliebige andere Headerdateien, die darin enthalten sind\).  Sie können nun den vorkompilierten Header **ETC.pch** verwenden, um die Quelldatei **G.cpp** zu kompilieren:  
+ Die Objektdatei F.obj enthält Typ und Symbolinformationen für WINDOWS.h und etc.h ein (und alle anderen darin enthaltenen Headerdateien). Jetzt können Sie den vorkompilierten Header ETC.pch verwenden, um die Quelldatei g.cpp zu kompilieren:  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- Die Objektdatei **G.obj** schließt die Debuginformationen für den vorkompilierten Header nicht ein, sondern verweist direkt auf diese Informationen in der Datei **F.obj**.  Beachten Sie, dass Sie **F.obj** einbinden müssen.  
+ Die Objektdatei ein einfach verweist diese Informationen in der Datei F.obj jedoch enthält keine Debuginformationen für den vorkompilierten Header. Beachten Sie, dass Sie mit der Datei F.obj verknüpft werden müssen.  
   
- Wenn der vorkompilierte Header nicht mit **\/Z7** kompiliert wurde, können Sie ihn dennoch bei späteren Kompilierungen zusammen mit **\/Z7** verwenden.  Die Debuginformationen werden in der aktuellen Objektdatei gespeichert, jedoch stehen lokale Symbole für Funktionen und Typen, die im vorkompilierten Header definiert sind, dem Debugger nicht zur Verfügung.  
+ Wenn der vorkompilierte Header nicht mit kompiliert wurde **"/ Z7"**, noch können Sie sie in späteren Kompilierungen zusammen mit **"/ Z7"**. Allerdings wird die Debuginformationen in der aktuellen Objektdatei platziert, und lokale Symbole für Funktionen und in der vorkompilierten Headerdatei definierten Typen sind nicht verfügbar, die im Debugger.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

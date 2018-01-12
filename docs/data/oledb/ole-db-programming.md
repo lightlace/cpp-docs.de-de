@@ -1,51 +1,51 @@
 ---
-title: "OLE&#160;DB-Programmierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenzugriff [C++], OLE DB-Programmierung"
-  - "OLE DB [C++]"
-  - "OLE DB [C++], Informationen über OLE DB"
+title: OLE DB-Programmierung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB [C++]
+- data access [C++], OLE DB programming
+- OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: df532b1ffdc8eba635af93f34e0d77fd3da0d115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# OLE&#160;DB-Programmierung
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Diese Startseite ist der Ausgangspunkt, um Informationen über die Microsoft OLE DB\-Datenbanktechnologie und die OLE DB\-Vorlagenbibliothek zu erhalten.  
+# <a name="ole-db-programming"></a>OLE DB-Programmierung
+Microsoft OLE DB ist eine veraltete Technologie. für neue Anwendungen ist es die erforderlichen Datenzugriffs-API für verknüpfte SQL Server. Andere neue Anwendungen sollten ODBC verwenden. Der aktuelle OLE DB-Anbieter für SQL Server ist SQLNCLI11. DLL. Der Anbieter ist immer noch in SQL Server 2016 konzipiert. Diese Dokumentation ist für Entwickler konzipiert, die vorhandene Anwendungen beibehalten werden, die bereits OLE DB-verwenden.
   
- Es ist wichtig zu wissen, dass Microsoft verschiedene Implementierungen der OLE DB bietet.  OLE DB ist ein Satz von COM\-Schnittstellen, die einen einheitlichen Zugriff auf Daten in verschiedenen Datenquellen und Formaten bieten.  
+ Die OLE DB-Vorlagen sind C++-Vorlagen, die die Arbeit mit der OLE DB-Hochleistungsdatenbanktechnologie vereinfachen, indem sie Klassen bereitstellen, die viele häufig verwendete OLE DB-Schnittstellen implementieren. Diese Vorlagenbibliothek ist in Verbraucher- und Anbietervorlagen unterteilt.  
   
- Die OLE DB\-Vorlagen sind C\+\+\-Vorlagen, die die Arbeit mit der OLE DB\-Hochleistungsdatenbanktechnologie vereinfachen, indem sie Klassen bereitstellen, die viele häufig verwendete OLE DB\-Schnittstellen implementieren.  Diese Vorlagenbibliothek ist in Verbraucher\- und Anbietervorlagen unterteilt.  
+ Visual C++ verfügt auch über Assistentenunterstützung zum Erstellen von OLE DB-Startanwendungen.  
   
- Visual C\+\+ verfügt auch über Assistentenunterstützung zum Erstellen von OLE DB\-Startanwendungen.  
-  
- Darüber hinaus können Sie Attribute verwenden, um die OLE DB\-Verbrauchervorlagen zu implementieren.  
+ Darüber hinaus können Sie Attribute verwenden, um die OLE DB-Verbrauchervorlagen zu implementieren.  
   
 |Themenbereich|Siehe|  
-|-------------------|-----------|  
-|Verwenden von OLE DB\-Consumervorlagen \(konzeptionelle Themen\)|[OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)|  
-|Verwenden von OLE DB\-Anbietervorlagen \(konzeptionelle Themen\)|[OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)|  
-|OLE DB\-Vorlagenklassen und \-Makros|[Referenz für OLE DB\-Vorlagen](../../data/oledb/ole-db-templates.md) \(Visual C\+\+\)|  
-|OLE DB\-Consumerattribute|[OLE DB\-Consumerattribute](../../windows/ole-db-consumer-attributes.md)|  
-|OLE DB\-Schnittstellen|[Referenz des OLE DB\-Programmierers](https://msdn.microsoft.com/en-us/library/ms713643.aspx) \(im [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)]\)|  
-|OLE DB\-Vorlagenbeispiele|[OLE DB\-Vorlagenbeispiele](assetId:///08958863-0b5f-41ad-ae99-fca7440c553c)|  
-|Übersicht über die Datenzugriffsprogrammierung \(Visual C\+\+\)|[Datenzugriffsprogrammierung](../../data/data-access-programming-mfc-atl.md)|  
-|ODBC im Vergleich zu  DAO|[Sollte DAO oder ODBC verwendet werden?](../../data/should-i-use-dao-or-odbc-q.md)|  
-|Konzeptionelle ODBC\-Themen|[Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)|  
-|Konzeptionelle Themen zu datengebundenen Steuerelementen \(ADO und RDO\)|[Datengebundene Steuerelemente \(ADO und RDO\)](../../data/ado-rdo/data-bound-controls-ado-and-rdo.md)|  
+|-------------------------|---------|  
+|Verwenden von OLE DB-Consumervorlagen (konzeptionelle Themen)|[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)|  
+|Verwenden von OLE DB-Anbietervorlagen (konzeptionelle Themen)|[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)|  
+|OLE DB-Vorlagenklassen und -Makros|[Referenz der OLE DB-Vorlagen](../../data/oledb/ole-db-templates.md) (Visual C++)|  
+|OLE DB-Consumerattribute|[OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md)|  
+|OLE DB-Schnittstellen|[OLE DB-Programmierreferenz](https://msdn.microsoft.com/en-us/library/ms713643.aspx) (im Windows SDK)|  
+|OLE DB-Vorlagenbeispiele|[Beispiele für OLE DB-Vorlagen](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Übersicht über die Datenzugriffsprogrammierung (Visual C++)|[Datenzugriffsprogrammierung](../../data/data-access-programming-mfc-atl.md)|  
+|Konzeptionelle ODBC-Themen|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
+
   
-## Siehe auch  
- [Datenzugriff](../Topic/Data%20Access%20in%20Visual%20C++.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datenzugriff](../data-access-in-cpp.md)

@@ -33,11 +33,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a2fa4448bc71fc8b01abffaa0655f63e6ef474a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78eb884950e2175815caf2ac645dc0e70c262566
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetestexcept"></a>fetestexcept
 Bestimmt, welche der angegebenen Gleitkommaausnahme-Statusflags momentan festgelegt sind  
@@ -83,6 +84,6 @@ int fetestexcept(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feraiseexcept](../../c-runtime-library/reference/feraiseexcept.md)

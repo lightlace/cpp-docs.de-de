@@ -1,28 +1,28 @@
 ---
-title: "Schaltfl&#228;che &quot;Suchen&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Suchen (Schaltfläche)"
+title: "Suchen Sie die Schaltfläche | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Look Up button
 ms.assetid: 61da61ec-5bb5-462a-85ef-501df5e93551
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e5277b4f18fb109960d3e45c00a995318ed8b623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Schaltfl&#228;che &quot;Suchen&quot;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Klicken Sie auf **Suchen**, um die Fehlermeldung abzurufen, die dem eingegebenen System\- oder Modulwert entspricht.  Werte können im Hexadezimal\- oder Dezimalformat \(einschließlich negativer Dezimalwerte\) eingegeben werden.  Auch die im Dialogfeld **Weitere Module zur Fehlersuche** aufgeführten Module werden durchsucht.  
+# <a name="look-up-button"></a>Suchen (Schaltfläche)
+Klicken Sie auf **Nachschlagen** um die Fehlermeldung abzurufen, die dem System oder ein Modul eingegebenen Wert entspricht. Werte können im Hexadezimal- oder Dezimalformat Formular (einschließlich negative Dezimalwerte) eingegeben werden. Module der **zusätzliche Module zur Fehlersuche** Dialogfeld werden ebenfalls durchsucht.  
   
-## Siehe auch  
- [Edit\-Steuerelement für Werte](../../build/reference/value-edit-control.md)
+## <a name="see-also"></a>Siehe auch  
+ [Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6db04d7742d31198cf61f124f251fa5c32100f86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b777a50376df29b6b814c4f32bf3a24cf0d24b48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exe-files-as-linker-input"></a>EXE-Dateien als Eingabe für den Linker
 Die [MS-DOS-Stub-Dateiname](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) Option gibt den Namen des eine .exe-Datei, die mit MS-DOS-ausgeführt wird. LINK untersucht die angegebene Datei, um sicherzustellen, dass es sich um ein gültiges MS-DOS-Programm handelt.  

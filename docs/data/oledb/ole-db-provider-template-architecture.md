@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289d1d5f09f60b829c6dd7d1f1b00c0de3562518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8c1baa921f4a12aae40a01995cfd0b638cf614d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektur von OLE DB-Anbietervorlagen
 ## <a name="data-sources-and-sessions"></a>Datenquellen und Sitzungen  
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/24/2017
   
  Die folgende Tabelle enthält die erforderliche und optionale Schnittstellen für die oben aufgeführten Objekte gemäß der [OLE DB 2.6 SDK-Dokumentation](https://msdn.microsoft.com/en-us/library/ms722784.aspx).  
   
-|Komponente|Schnittstelle|Kommentar|  
+|Komponente|Interface|Kommentar|  
 |---------------|---------------|-------------|  
 |[Datenquelle](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[erforderlich] **IDBCreateSession**<br /><br /> [erforderlich] **IDBInitialize**<br /><br /> [erforderlich]`IDBProperties`<br /><br /> [erforderlich]`IPersist`<br /><br /> [optional] **IConnectionPointContainer**<br /><br /> [optional] **IDBAsynchStatus**<br /><br /> [optional] **IDBDataSourceAdmin**<br /><br /> [optional] **IDBInfo**<br /><br /> [optional]`IPersistFile`<br /><br /> [optional] **ISupportErrorInfo**|Die Verbindung vom Consumer an den Anbieter. Das Objekt wird verwendet, um Eigenschaften auf der Verbindung z. B. Benutzer-ID, Kennwort und Daten Quellname anzugeben. Das Objekt kann auch zum Verwalten von einer Datenquelle verwendet werden (erstellen, aktualisieren, Löschen von Tabellen und so weiter).|  
 |[Sitzung](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[erforderlich] **IGetDataSource**<br /><br /> [erforderlich]`IOpenRowset`<br /><br /> [erforderlich] **ISessionProperties**<br /><br /> [optional] **IAlterIndex**<br /><br /> [optional] **IAlterTable**<br /><br /> [optional] **IBindResource**<br /><br /> [optional] **ICreateRow**<br /><br /> [optional] **IDBCreateCommand**<br /><br /> [optional] **IDBSchemaRowset**<br /><br /> [optional] **IIndexDefinition**<br /><br /> [optional] **ISupportErrorInfo**<br /><br /> [optional] **ITableCreation**<br /><br /> [optional] **ITableDefinition**<br /><br /> [optional] **ITableDefinitionWithConstraints**<br /><br /> [optional] **ITransaction**<br /><br /> [optional] **ITransactionJoin**<br /><br /> [optional] **ITransactionLocal**<br /><br /> [optional] **ITransactionObject**|Das Sitzungsobjekt stellt eine einfache Konversation zwischen einem Consumer und Anbieter dar. Es ähnelt der ODBC **Befehls beschäftigt** , es können viele gleichzeitige Sitzungen aktiv sein.<br /><br /> Das Sitzungsobjekt ist der primäre Link, um OLE DB-Funktionalität zu erhalten. Um einen Befehl, Transaktion oder Rowsetobjekt abzurufen, durchlaufen Sie das Sitzungsobjekt.|  

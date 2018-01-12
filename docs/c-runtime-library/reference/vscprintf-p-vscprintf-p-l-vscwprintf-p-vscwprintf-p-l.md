@@ -52,11 +52,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 465260a07a6e18922a67cbb12f3e36b75f60e51a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b920931cf524ef44d1c09814576dbf22e54a640b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 Gibt die Anzahl von Zeichen in der formatierten Zeichenfolge mit einem Zeiger auf eine Liste von Argumenten mit der Möglichkeit zurück, die Reihenfolge anzugeben, in der die Argumente verwendet werden.  
@@ -104,7 +105,7 @@ int _vscwprintf_p _l(
   
  Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
- Wenn `format` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
+ Wenn `format` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` mit NULL abgeschlossen wird, wenn es sich dabei um eine benutzerdefinierte Zeichenfolge handelt, und dass die richtige Anzahl und der richtige Parametertyp vorhanden ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -118,7 +119,7 @@ int _vscwprintf_p _l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_vscprintf_p`, `_vscprintf_p_l`|\<stdio.h>|  
 |`_vscwprintf_p`, `_vscwprintf_p_l`|\<stdio.h> oder \<wchar.h>|  

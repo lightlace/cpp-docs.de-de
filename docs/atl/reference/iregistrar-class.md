@@ -1,11 +1,10 @@
 ---
-title: IRegistrar-Schnittstelle | Microsoft-Dokumentation
+title: IRegistrar Schnittstelle | Microsoft Docs
 ms.custom: 
 ms.date: 2/1/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
-helpviewer_keywords:
-- Iregistrar Interface
+dev_langs: C++
+helpviewer_keywords: Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 199cdfd91a7d1b9882b57118c852352f6fdda43e
-ms.openlocfilehash: e73e095d253d5ec5ca53e4e446019b2da79e5d39
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>IRegistrar-Schnittstelle
-Diese Schnittstelle ist konnte IRegistrar definiert und wird intern verwendet, durch die Memberfunktionen von CAtlModule wie z. B. [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Diese Schnittstelle wird konnte IRegistrar definiert und wird intern verwendet von Memberfunktionen von CAtlModule wie z. B. [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,21 +40,21 @@ Diese Schnittstelle ist konnte IRegistrar definiert und wird intern verwendet, d
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Hinweise
-Finden Sie unter [mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) für weitere Details.  
+Finden Sie im Thema [mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) Weitere Details.  
 
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registriert die. |  
+|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registriert die Ressource an. |  
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Hebt die Registrierung der Ressourcenanbieters.|  
 |[IRegistrar::FileRegister](#fileregister)|Registriert die Datei.|  
 |[IRegistrar::FileUnregister](#fileunregister)|Hebt die Registrierung der das.|  
 |[IRegistrar::StringRegister](#stringregister)|Registriert die Zeichenfolge an.|  
 |[IRegistrar::StringUnregister](#stringunregister)|Hebt die Registrierung der Zeichenfolge|  
-|[IRegistrar::ResourceRegister](#resourceregister)|Registriert die.|  
+|[IRegistrar::ResourceRegister](#resourceregister)|Registriert die Ressource an.|  
 |[IRegistrar::ResourceUnregister](#resourceunregister)|Hebt die Registrierung der Ressourcenanbieters.| 
   
 
@@ -80,7 +63,7 @@ Finden Sie unter [mithilfe von ersetzbaren Parametern (die Registrierungsstelle 
  **Header:** atlifase.h  
   
 ##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz 
- Registriert die.  
+ Registriert die Ressource an.  
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz( 
@@ -121,14 +104,14 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
   
  
 ##  <a name="stringregister"></a>IRegistrar::StringRegister  
-  Registriert die Daten der angegebenen Zeichenfolge.
+  Registriert die angegebene Zeichenfolgendaten an.
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister( 
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```  
   
 ##  <a name="stringunregister"></a>IRegistrar::StringUnregister
- Hebt die Registrierung die Daten der angegebenen Zeichenfolge.  
+ Hebt die Registrierung der angegebenen Zeichenfolgendaten.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -137,7 +120,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
 
   
 ##  <a name="resourceregister"></a>IRegistrar::ResourceRegister  
- Registriert die.  
+ Registriert die Ressource an.  
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceRegister( 
@@ -158,8 +141,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ```  
  
 ## <a name="see-also"></a>Siehe auch  
- [Mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [Verwenden von ersetzbaren Parametern (Der Registrierungspräprozessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+ [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Modulklassen](../../atl/atl-module-classes.md)   
  [Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md)  
-

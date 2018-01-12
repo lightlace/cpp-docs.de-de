@@ -63,11 +63,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4850299b43b805c93136a59d5ee227e8bf79d2dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 710f4119ef943be5b58e4b617c1da1bc75e01c3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).  
@@ -199,7 +200,7 @@ int _vsnwprintf_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|  
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|  
 |-------------|---------------------------|-------------------------------|  
 |`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h>|\<stdio.h> oder \<cstdio>|  
 |`_vsnwprintf`, `_vsnwprintf_l`|\<stdio.h> oder \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> oder \<cwchar>|  
@@ -285,8 +286,8 @@ nSize: 10, buff: Hi there!
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
- [vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [vprintf Functions (vprintf-Funktionen)](../../c-runtime-library/vprintf-functions.md)   
  [Syntax der Formatangabe: printf- und wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
  [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   

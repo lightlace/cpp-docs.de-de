@@ -1,39 +1,39 @@
 ---
-title: "/ERRORREPORT (editbin.exe)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "/ERRORREPORT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ERRORREPORT (editbin-Option)"
-  - "ERRORREPORT (editbin-Option)"
-  - "-ERRORREPORT (editbin-Option)"
+title: -ERRORREPORT (editbin.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /ERRORREPORT
+dev_langs: C++
+helpviewer_keywords:
+- -ERRORREPORT editbin option
+- ERRORREPORT editbin option
+- /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7fa507e02b00ed8be055fbd12db6e22daf92645b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /ERRORREPORT (editbin.exe)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 ```  
 /ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
 ```  
   
-## Hinweise  
- Wenn die Ausführung von editbin.exe zur Laufzeit fehlschlägt, können mit **\/ERRORREPORT** Informationen über diese internen Fehler an Microsoft gesendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn editbin.exe zur Laufzeit fehlschlägt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.  
   
- Weitere Informationen zu **\/ERRORREPORT** finden Sie unter [\/errorReport \(Meldung über interne Compilerfehler\)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
+ Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
   
-## Siehe auch  
- [EDITBIN\-Optionen](../../build/reference/editbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [EDITBIN-Optionen](../../build/reference/editbin-options.md)

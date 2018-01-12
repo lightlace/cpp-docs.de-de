@@ -1,41 +1,41 @@
 ---
-title: "Extrahieren eines Bibliothekmembers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EXTRACT (Bibliotheks-Manager-Option)"
-  - "EXTRACT (Bibliotheks-Manager-Option)"
-  - "-EXTRACT (Bibliotheks-Manager-Option)"
-  - "Extrahieren von Bibliotheksmembern"
-  - "LIB [C++], Extrahieren von Bibliotheksmembern"
-  - "Bibliotheken, Extrahieren von Membern"
+title: Extrahieren eines Bibliothekmembers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords:
+- LIB [C++], extracting library members
+- EXTRACT library manager option
+- libraries, extracting members
+- -EXTRACT library manager option
+- extracting library members
+- /EXTRACT library manager option
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38f45463bb76f858d1b88c059de57a4b8b86227e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Extrahieren eines Bibliothekmembers
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mithilfe von LIB können Sie eine Objektdatei \(**.obj**\) erstellen, die eine Kopie eines Members aus einer bestehenden Bibliothek enthält.  Um eine Kopie eines Members zu extrahieren, verwenden Sie die folgende Syntax:  
+# <a name="extracting-a-library-member"></a>Extrahieren eines Bibliothekmembers
+Sie können LIB verwenden, um eine Objektdatei (obj) zu erstellen, die eine Kopie des Mitglied einer vorhandenen Bibliotheksfreigabe enthält. Verwenden Sie die folgende Syntax, um eine Kopie eines Elements zu extrahieren:  
   
 ```  
 LIB library /EXTRACT:member /OUT:objectfile  
 ```  
   
- Mit diesem Befehl wird eine OBJ\-Datei mit dem Namen *objectfile* erstellt, die eine Kopie eines Members \(`member`\) einer Bibliothek \(*library*\) enthält.  Beim `member`\-Namen wird die Groß\-\/Kleinschreibung berücksichtigt.  Sie können mit diesem Befehl jeweils nur einen Member extrahieren.  Die **\/OUT**\-Option ist erforderlich, da es keinen Standardausgabenamen gibt.  Wenn im angegebenen Verzeichnis bereits eine Datei mit dem Namen *objectfile* vorhanden ist \(oder im aktuellen Verzeichnis, falls für *objectfile* kein Verzeichnis angegeben wurde\), dann ersetzt die extrahierte Objektdatei die bestehende Datei.  
+ Dieser Befehl erstellt eine OBJ-Datei mit dem Namen *Objektdatei* , enthält eine Kopie einer `member` von einer *Bibliothek*. Die `member` Namen wird Groß-/Kleinschreibung beachtet. Sie können nur ein Element in einem einzigen Befehl extrahieren. Die Option/Out ist erforderlich. Es ist keine standardausgabename. Wenn eine Datei namens *Objektdatei* bereits im angegebenen Verzeichnis (das aktuelle Verzeichnis, wenn kein Verzeichnis angegeben wird oder *Objektdatei*), die extrahierte *Objektdatei*ersetzt die vorhandene Datei.  
   
-## Siehe auch  
- [LIB\-Referenz](../../build/reference/lib-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [LIB-Referenz](../../build/reference/lib-reference.md)

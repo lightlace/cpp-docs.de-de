@@ -1,67 +1,70 @@
 ---
-title: "Recordset: Erneutes Abfragen eines Recordsets (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC-Recordsets, Erneutes Abfragen"
-  - "Recordsets, Erneutes Abfragen"
-  - "Aktualisieren von Recordsets"
-  - "Requery-Methode"
-  - "Erneutes Abfragen von Recordsets"
+title: 'Recordset: Erneutes Abfragen eines Recordsets (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, requerying
+- requerying recordsets
+- Requery method
+- ODBC recordsets, requerying
+- refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: Erneutes Abfragen eines Recordsets (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: Erneutes Abfragen eines Recordsets (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird erläutert, wie Sie ein Recordset\-Objekt durch Aufruf seiner [Requery](../Topic/CRecordset::Requery.md)\-Memberfunktion dazu verwenden können, sich selbst in der Datenbank neu abzufragen \(zu aktualisieren\).  
+ In diesem Thema wird erläutert, wie Sie einem Recordset-Objekt verwenden können, um requery (d. h. aktualisieren) selbst aus der Datenbank, und wenn Sie möchten, dass bei der [Requery](../../mfc/reference/crecordset-class.md#requery) Memberfunktion.  
   
- Die Hauptgründe für die Neuabfrage eines Recordsets sind:  
+ Die Hauptgründe für erneutes Abfragen eines Recordsets sind:  
   
--   Die von Ihnen oder anderen Benutzern neu hinzugefügten und gelöschten Datensätze sollen richtig angezeigt werden \(die gelöschten Datensätze werden bereits richtig im Recordset widergespiegelt\).  
+-   Schalten Sie das Recordset, das auf dem neuesten Stand in Bezug auf die von Ihnen oder von anderen Benutzern hinzugefügt und Datensätze, die von anderen Benutzern (diejenigen, die Sie löschen, sind bereits im Recordset widergespiegelt) gelöscht.  
   
--   Das Recordset soll aufgrund geänderter Parameterwerte aktualisiert werden.  
+-   Aktualisieren Sie das Recordset basierend auf Parameterwerte zu ändern.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> Aktualisieren des Recordsets  
- Sie werden das Recordset\-Objekt gelegentlich neu abfragen müssen, um es zu aktualisieren.  In einer Mehrbenutzerdatenbankumgebung können andere Benutzer innerhalb der Lebensdauer des Recordsets Änderungen an den Daten vornehmen.  Weitere Informationen darüber, wann das Recordset von anderen Benutzern vorgenommene Änderungen widerspiegelt und wann im Gegenzug von Ihnen vorgenommene Änderungen in den Recordsets anderer Benutzer widergespiegelt werden, finden Sie in unter [Recordset: Datensatzaktualisierung durch Recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) und [Dynaset](../../data/odbc/dynaset.md).  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a>Aktualisieren des Recordsets bis Datum  
+ In vielen Fällen möchten Sie das Recordset-Objekt, um ihn zu schalten requery auf dem neuesten Stand. In einer Umgebung Mehrbenutzer-Datenbank können anderen Benutzern während der Lebensdauer des Recordsets Änderungen an den Daten vornehmen. Weitere Informationen zu Wenn Recordset von anderen Benutzern vorgenommene Änderungen wiedergibt, und wenn Recordsets anderer Benutzer die Änderung zu reflektieren, finden Sie unter [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) und [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a> Neuabfragen mit geänderten Parameterwerten  
- Ein anderer wichtiger Verwendungszweck für [Requery](../Topic/CRecordset::Requery.md) ist das Auswählen einer neuen Gruppe von Datensätzen, wenn sich Parameterwerte geändert haben.  
+##  <a name="_core_requerying_based_on_new_parameters"></a>Erneutes Abfragen basierend auf neuen Parametern  
+ Eine andere häufige – und ebenso wichtig – verwenden der [Requery](../../mfc/reference/crecordset-class.md#requery) entspricht, wählen Sie einen neuen Satz von Datensätzen auf Grundlage der Parameterwerte zu ändern.  
   
 > [!TIP]
->  Die Geschwindigkeit der Abfrage ist wahrscheinlich wesentlich größer, wenn Sie **Requery** mit geänderten Parameterwerten aufrufen, als dies bei einem erneuten Aufruf von **Open** der Fall ist.  
+>  Geschwindigkeit der Abfrage ist wahrscheinlich wesentlich schneller, wenn Sie aufrufen **Requery** veränderlichen Parameterwerte als, wenn Sie aufrufen **öffnen** erneut aus.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Neuabfragen von Dynasets und Momentaufnahmen  
- Da Dynasets eine Gruppe von Datensätzen mit dynamischen, aktuellen Daten repräsentieren sollen, werden Sie Dynasets häufig abfragen, um die Ergänzungen anderer Benutzer widerzuspiegeln.  Momentaufnahmen sind dagegen insofern praktisch, als Sie sich darauf verlassen können, dass ihr Inhalt gleich bleibt, während Sie Berichte erstellen, Summen berechnen usw.  Trotzdem gibt es gelegentlich die Notwendigkeit, auch eine Momentaufnahme neu abzufragen.  In einer Mehrbenutzerumgebung kann bei Momentaufnahmedaten die Synchronisierung mit der Datenquelle verloren gehen, wenn andere Benutzer die Datenbank ändern.  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Erneutes Abfragen Dynasets Vs aus. Momentaufnahmen  
+ Da Dynasets vorgesehen sind, um eine Gruppe von Datensätzen mit dynamischen auf dem neuesten Stand Daten darzustellen, möchten Sie Dynasets requery häufig, wenn andere Benutzer den Ergänzungen widerspiegeln werden sollen. Momentaufnahmen sind hingegen, hilfreich, da Sie problemlos auf ihren statischen Inhalten verlassen können, während Sie Berichte vorbereiten, Berechnen von Summen und so weiter. Weiterhin, sollten Sie in einigen Fällen auch eine Momentaufnahme erneut abgefragt. In einer mehrbenutzerumgebung können momentaufnahmedaten Synchronisierung mit der Datenquelle verloren gehen als anderer Benutzer die Datenbank zu ändern.  
   
-#### So fragen Sie ein Recordset\-Objekt neu ab  
+#### <a name="to-requery-a-recordset-object"></a>Um einem Recordset-Objekt zu aktualisieren.  
   
-1.  Rufen Sie die [Requery](../Topic/CRecordset::Requery.md)\-Memberfunktion des Objekts auf.  
+1.  Rufen Sie die [Requery](../../mfc/reference/crecordset-class.md#requery) -Memberfunktion des Objekts.  
   
- Alternativ können Sie auch das ursprüngliche Recordset schließen und erneut öffnen.  In beiden Fällen repräsentiert das neue Recordset den aktuellen Zustand der Datenquelle.  
+ Alternativ können Sie schließen und öffnen das ursprüngliche Recordset. In beiden Fällen stellt die neue Recordset den aktuellen Status der Datenquelle dar.  
   
- Ein Beispiel hierzu finden Sie unter [Füllen eines Listenfelds aus einem zweiten Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
+ Ein Beispiel finden Sie unter [Datensatzansichten: Füllen eines Listenfelds aus einem zweiten Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
   
 > [!TIP]
->  Zur Optimierung der **Requery**\-Leistung vermeiden Sie Änderungen am [Filter](../../data/odbc/recordset-filtering-records-odbc.md) oder der [Sortierung](../../data/odbc/recordset-sorting-records-odbc.md) des Recordsets.  Ändern Sie vor dem Aufruf von **Requery** ausschließlich den Parameterwert.  
+>  Zur Optimierung **Requery** Leistung zu erzielen, sollten nicht ändern, des Recordsets [Filter](../../data/odbc/recordset-filtering-records-odbc.md) oder [sortieren](../../data/odbc/recordset-sorting-records-odbc.md). Ändern Sie nur den Parameterwert vor dem Aufruf **Requery**.  
   
- Wenn beim Aufruf von **Requery** ein Fehler auftritt, können Sie versuchen, den Aufruf noch einmal durchzuführen. Andernfalls sollte die Anwendung ordnungsgemäß beendet werden.  Beim Aufruf von **Requery** oder **Open** kann eine ganze Reihe von Fehlern auftreten.  Es kann z. B. ein Netzwerkfehler auftreten oder zwischen dem Zeitpunkt, an dem die alten Daten verworfen werden und dem Zeitpunkt, an dem die neuen Daten abgerufen werden, könnte ein anderer Benutzer den exklusiven Zugriff erhalten. Die Tabelle, auf die sich das Recordset bezieht, könnte jedoch auch gelöscht werden.  
+ Wenn die **Requery** rufen ein Fehler auftritt, können Sie den Aufruf wiederholen; andernfalls, die Anwendung beendet werden sollen, ordnungsgemäß. Ein Aufruf von **Requery** oder **öffnen** für eine beliebige Anzahl von Gründen fehlschlagen. Möglicherweise tritt ein Netzwerkfehler aufgetreten. oder während des Aufrufs, nachdem die vorhandenen Daten freigegeben sind, aber bevor die neuen Daten abgerufen werden, ein anderer Benutzer erhalten möglicherweise exklusiven Zugriff; oder die Tabelle Recordset abhängt gelöscht werden konnte.  
   
-## Siehe auch  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Dynamisches Binden von Datenspalten \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
- [Recordset: Erstellen und Schließen von Recordsets \(ODBC\)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
+ [Recordset: Erstellen und Schließen von Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

@@ -1,34 +1,36 @@
 ---
-title: "IDBCreateSessionImpl-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBCreateSessionImpl"
-  - "ATL.IDBCreateSessionImpl"
-  - "ATL::IDBCreateSessionImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBCreateSessionImpl-Klasse"
+title: IDBCreateSessionImpl-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBCreateSessionImpl
+- ATL.IDBCreateSessionImpl
+- ATL::IDBCreateSessionImpl
+dev_langs: C++
+helpviewer_keywords: IDBCreateSessionImpl class
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f5f8cb4e35c14ddbb8a7f8df3fe3686025cf5eae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IDBCreateSessionImpl-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt eine Implementierung für die [IDBCreateSession](https://msdn.microsoft.com/en-us/library/ms724076.aspx)\-Schnittstelle bereit.  
+# <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl-Klasse
+Stellt eine Implementierung für die [IDBCreateSession](https://msdn.microsoft.com/en-us/library/ms724076.aspx) Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T, class SessionClass>  
@@ -36,27 +38,27 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- IHRE CLASS\-Attribut, ABGELEITET OF  
+ DER KLASSE ABGELEITET WURDE.  
   
  `SessionClass`  
  Das Sitzungsobjekt.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Schnittstellenmethoden  
+### <a name="interface-methods"></a>Schnittstellenmethoden  
   
 |||  
 |-|-|  
-|[CreateSession](../../data/oledb/idbcreatesessionimpl-createsession.md)|Erstellt eine neue Sitzung vom Datenquellenobjekt und die angeforderte Schnittstelle der neu erstellten Sitzung zurückkehren.|  
+|[CreateSession](../../data/oledb/idbcreatesessionimpl-createsession.md)|Erstellt eine neue Sitzung aus dem Datenquellensicht-Objekt und gibt die angeforderte Schnittstelle auf die neu erstellte Sitzung zurück.|  
   
-## Hinweise  
- Eine erforderliche Schnittstelle auf Datenquellenobjekte.  
+## <a name="remarks"></a>Hinweise  
+ Keine verbindliche Schnittstelle für Datenquellenobjekte.  
   
-## Anforderungen  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 982760deff4c5e2439c8743aa0de736a24faa02a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ea88de83d10699c07dd387a616178c0043e925c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 Testet, ob ein Gleitkommawert keine Zahl ist (NAN).  
@@ -74,7 +75,7 @@ bool isnan(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Der zu testende Gleitkommawert.  
   
 ## <a name="return-value"></a>Rückgabewert  
@@ -91,7 +92,7 @@ bool isnan(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|  
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|  
 |-------------|---------------------------|-------------------------------|  
 |`isnan`, `_isnanf`|\<math.h>|\<math.h> oder \<cmath>|  
 |`_isnan`|\<float.h>|\<float.h> oder \<cfloat>|  

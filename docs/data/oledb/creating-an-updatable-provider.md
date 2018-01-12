@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9360e9446d4e42e6e6c08c97694743e14d2e0d14
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert werden können (Schreiben) den Datenspeicher. In diesem Thema erläutert, wie aktualisierbare Anbieter mithilfe von OLE DB-Vorlagen zu erstellen.  
@@ -124,7 +127,7 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
   
      Wenn Sie implementieren `IRowsetUpdateImpl`, müssen Sie die folgenden Eigenschaften für den Anbieter darüber hinaus auf festlegen Festlegen der Eigenschaften für `IRowsetChangeImpl` zuvor aufgeführt:  
   
-    -   `DBPROP_IRowsetUpdate`.  
+    -   `DBPROP_IRowsetUpdate`  
   
     -   `DBPROP_OWNINSERT`: READ_ONLY und VARIANT_TRUE muss sein werden.  
   
@@ -136,7 +139,7 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
   
     -   `DBPROP_REMOVEDELETED`: READ_ONLY und VARIANT_TRUE muss sein werden.  
   
-    -   `DBPROP_MAXPENDINGROWS`.  
+    -   `DBPROP_MAXPENDINGROWS`  
   
         > [!NOTE]
         >  Wenn Sie Benachrichtigungen unterstützen, müssen Sie möglicherweise auch über einige andere Eigenschaften als auch; Siehe den Abschnitt `IRowsetNotifyCP` für diese Liste.  

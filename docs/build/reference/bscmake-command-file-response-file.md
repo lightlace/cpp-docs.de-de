@@ -1,47 +1,48 @@
 ---
-title: "BSCMAKE-Befehlsdatei (Antwortdatei) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSCMAKE, Befehlsdatei"
-  - "BSCMAKE, Antwortdatei"
-  - "Befehlsdateien"
-  - "Befehlsdateien, BSCMAKE"
-  - "Antwortdateien"
-  - "Antwortdateien, BSCMAKE"
+title: BSCMAKE-Befehlsdatei (Antwortdatei) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BSCMAKE, response file
+- BSCMAKE, command file
+- response files, BSCMAKE
+- command files, BSCMAKE
+- response files
+- command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c250af9f1af96bb051be0b2cd347ecd8d98d809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# BSCMAKE-Befehlsdatei (Antwortdatei)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Befehlszeileneingabe kann ganz oder teilweise in einer Befehlsdatei bereitgestellt werden.  Geben Sie die Befehlsdatei in folgender Syntax an:  
+# <a name="bscmake-command-file-response-file"></a>BSCMAKE-Befehlsdatei (Antwortdatei)
+Sie können die Befehlszeileneingabe in einer Befehlsdatei ganz oder teilweise bereitstellen. Geben Sie die Befehlsdatei, die mit der folgenden Syntax:  
   
 ```  
 BSCMAKE @filename  
 ```  
   
- Die Verwendung mehrerer Befehlsdateien ist nicht zulässig.  Sie können einen Pfad mit *filename* angeben.  Geben Sie vor *filename* das @\-Zeichen an.  BSCMAKE nimmt keine Standarderweiterung an.  In der Befehlszeile können Sie nach *filename* zusätzliche *sbrfiles* angeben.  Bei der Befehlsdatei handelt es sich um eine Textdatei, die die Eingabe für BSCMAKE in derselben Reihenfolge enthält, wie Sie diese in der Befehlszeile angeben würden.  Trennen Sie die Befehlszeilenargumente durch ein oder mehrere Leerzeichen, Tabulatoren oder Zeilenumbruchzeichen.  
+ Nur eine Befehlsdatei ist zulässig. Sie können angeben, einen Pfad mit *Filename*. Vorausgehen *Filename* mit einem at-Zeichen (@). Eine Erweiterung von BSCMAKE nicht vorausgesetzt. Sie können zusätzliche angeben *Sbrfiles* in der Befehlszeile nach *Filename*. Die Befehlsdatei ist eine Textdatei, die die Eingabe für BSCMAKE in derselben Reihenfolge enthält, wie Sie es in der Befehlszeile angeben würden. Trennen Sie die Befehlszeilenargumente durch ein oder mehrere Leerzeichen, Tabstopps oder neue Zeilenumbruchzeichen.  
   
- Der folgende Befehl ruft BSCMAKE mit einer Befehlsdatei auf:  
+ Der folgende Befehl ruft BSCMAKE eine Befehlsdatei mit:  
   
 ```  
 BSCMAKE @prog1.txt  
 ```  
   
- Nachstehend ist eine Beispielbefehlsdatei angegeben:  
+ Im folgenden finden eine Beispieldatei für Befehl:  
   
 ```  
 /n /v /o main.bsc /El  
@@ -52,5 +53,5 @@ verdate.h c:\src\inc\screen.h
 file1.sbr file2.sbr file3.sbr file4.sbr  
 ```  
   
-## Siehe auch  
- [BSCMAKE\-Referenz](../../build/reference/bscmake-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)

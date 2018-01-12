@@ -1,70 +1,70 @@
 ---
-title: "/F (Stapelgr&#246;&#223;e festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/F (Compileroption) [C++]"
-  - "F (Compileroption) [C++]"
-  - "-F (Compileroption) [C++]"
-  - "Stapelgröße festlegen (Compileroption)"
-  - "Stapel, Festlegen der Größe"
+title: "-F (Stapelgröße festlegen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /f
+dev_langs: C++
+helpviewer_keywords:
+- set stack size compiler option
+- F compiler option [C++]
+- -F compiler option [C++]
+- /F compiler option [C++]
+- stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b464a4fb28eb83ef0570416d0cb18fd8f965e0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /F (Stapelgr&#246;&#223;e festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Legt die Programmstapelgröße in Byte fest.  
+# <a name="f-set-stack-size"></a>/F (Stapelgröße festlegen)
+Legt die Stapelgröße der Anwendung in Bytes fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /F number  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `number`  
- die Stapelgröße in Bytes.  
+ Die Stapelgröße in Bytes.  
   
-## Hinweise  
- Ohne diese Option beträgt die Stapelgröße standardmäßig 1 MB.  Das Argument *number* kann dezimal oder in C\-Notation angegeben werden.  Das Argument muss zwischen 1 und der maximalen vom Linker zugelassenen Stapelgröße liegen.  Der Linker rundet den angegebenen Wert auf die nächsten 4 Bytes auf.  Das Leerzeichen zwischen **\/F** und `number`ist optional.  
+## <a name="remarks"></a>Hinweise  
+ Ohne diese Option wird standardmäßig die Größe des Stapels auf 1 MB. Die `number` Argument Decimal oder C-Notation werden kann. Das Argument reichen von 1 bis die maximale Stapelgröße, die vom Linker akzeptiert. Der Linker rundet den angegebenen Wert in der nächsten 4 Bytes. Der Abstand zwischen den **/f** und `number` ist optional.  
   
- Es kann sich als notwendig erweisen, die Stapelgröße zu erhöhen, wenn für Ihr Programm ein Stapelüberlauf gemeldet wird.  
+ Sie müssen möglicherweise die Größe des Stapels zu erhöhen, wenn das Programm Stapelüberlauf Nachrichten abruft.  
   
- Sie können die Stapelgröße auch wie folgt festlegen:  
+ Sie können auch die Größe des Stapels festgelegt:  
   
--   Verwenden der **\/STACK**\-Linkeroption.  Weitere Informationen finden Sie unter [\/STACK](../../build/reference/stack.md).  
+-   Mithilfe der **/STACK** (Linkeroption). Weitere Informationen finden Sie unter [/STACK](../../build/reference/stack.md).  
   
--   Verwenden von EDITBIN für die EXE\-Datei.  Weitere Informationen finden Sie unter [EDITBIN\-Referenz](../../build/reference/editbin-reference.md).  
+-   Verwenden von EDITBIN für die .exe-Datei. Weitere Informationen finden Sie unter [EDITBIN-Referenz](../../build/reference/editbin-reference.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
 4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

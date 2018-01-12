@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fclose_nolock
+apiname: _fclose_nolock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 1e42b9835d6c1775f21e3a908c67913f0559b43e
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a993376f1174a86506f5c61d3b403953bedec3f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 Schließt einen Stream, ohne Threads zu sperren (thread-locking).  
@@ -89,7 +72,7 @@ int _fclose_nolock(
   
 ## <a name="see-also"></a>Siehe auch  
  [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [_close](../../c-runtime-library/reference/close.md)   
+ [_schließen](../../c-runtime-library/reference/close.md)   
  [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
  [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6240b779977f99d362f7fd37ef5526ce08e89bd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr-Klasse
 Ein intelligenter Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger auf.  
@@ -41,7 +42,7 @@ class CComQIPtr: public CComPtr<T>
  `piid`  
  Ein Zeiger auf die IID der `T`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06b8e0e835cbcb2e2d1b96d5ce861967c7251fca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6d3d0fa1dc4e2e4d817280fa83b26c56732cb2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ellipses-and-variadic-templates"></a>Auslassungszeichen- und Variadic-Vorlagen
 In diesem Artikel wird gezeigt, wie die Auslassungspunkte (`...`) mit variadic Vorlagen von C++ verwendet werden. Das Auslassungszeichen hatte vielseitig in C und C++. Hierzu gehören Variablenargumentlisten für Funktionen. Die `printf()`-Funktion der C-Laufzeitbibliothek ist eines der bekanntesten Beispiele.  

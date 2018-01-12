@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - tolower
 - _tolower
 - towlower
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tolower_l function
 - _tolower_l function
@@ -51,30 +49,16 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 33949110690ef671a7a2b0d40e98f81c9d7fbc2f
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7fe06748a6e349f612fdf564c9aed917e43f164b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 Konvertiert ein Zeichen in Kleinbuchstaben.  
@@ -128,7 +112,7 @@ int _towlower_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`tolower`|\<ctype.h>|  
 |`_tolower`|\<ctype.h>|  
@@ -143,5 +127,5 @@ int _towlower_l(
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   
  [to-Funktionen](../../c-runtime-library/to-functions.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

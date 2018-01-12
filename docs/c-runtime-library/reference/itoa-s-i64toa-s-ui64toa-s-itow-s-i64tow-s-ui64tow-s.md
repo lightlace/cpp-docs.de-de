@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,8 +45,7 @@ f1_keywords:
 - _ui64tot_s
 - i64tow_s
 - itot_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -67,30 +65,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7e163c78f3a6b011c8670ad71277fb6770935066
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Konvertiert eine ganze Zahl in eine Zeichenfolge. Dies sind Versionen von [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) mit Sicherheitsverbesserungen wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -166,12 +150,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|Wert|buffer|sizeInCharacters|radix|Return|  
+|Wert|buffer|sizeInCharacters|radix|Zurück|  
 |-----------|------------|----------------------|-----------|------------|  
-|alle|`NULL`|alle|alle|`EINVAL`|  
-|alle|any|<=0|any|`EINVAL`|  
-|alle|any|<= Länge der erforderlichen Ergebniszeichenfolge|alle|`EINVAL`|  
-|alle|alle|any|`radix` < 2 oder `radix` > 36|`EINVAL`|  
+|any|`NULL`|any|any|`EINVAL`|  
+|any|any|<=0|any|`EINVAL`|  
+|any|any|<= Länge der erforderlichen Ergebniszeichenfolge|any|`EINVAL`|  
+|any|any|any|`radix` < 2 oder `radix` > 36|`EINVAL`|  
   
  **Sicherheitsprobleme**  
   
@@ -180,7 +164,7 @@ errno_t _itow_s(
 ## <a name="remarks"></a>Hinweise  
  Mit Ausnahme der Parameter und des Rückgabewerts weisen die `_itoa_s`-Funktionen das gleiche Verhalten wie die entsprechenden weniger sicheren Versionen auf.  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -194,7 +178,7 @@ errno_t _itow_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  

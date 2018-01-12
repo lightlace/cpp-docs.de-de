@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,38 +25,23 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - snap-ins, property pages
 - snap-ins
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl-Klasse
 Diese Klasse stellt Methoden zum Implementieren einer Snap-in-Eigenschaft Page-Objekt.  
@@ -71,7 +55,7 @@ Diese Klasse stellt Methoden zum Implementieren einer Snap-in-Eigenschaft Page-O
 CSnapInPropertyPageImpl : public CDialogImplBase
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -163,7 +147,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Struktur, um die Darstellung einer Eigenschaftenseite initialisiert werden, nachdem es erstellt wurde.  
   
- Weitere Informationen zu dieser Struktur, einschließlich einer Liste der Member, finden Sie unter [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zu dieser Struktur, einschließlich einer Liste der Member, finden Sie unter [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) im Windows SDK.  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **OK** oder **jetzt anwenden** Schaltfläche.  
@@ -332,4 +316,3 @@ void SetModified(BOOL bChanged = TRUE);
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

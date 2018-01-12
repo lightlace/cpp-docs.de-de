@@ -1,59 +1,59 @@
 ---
-title: "/Fi (Ausgabedateiname vorverarbeiten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Fi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fi-Compileroption [C++]"
-  - "Fi-Compileroption [C++]"
-  - "-Fi-Compileroption [C++]"
-  - "Vorverarbeiten von Ausgabedateien, Dateiname"
+title: -Fi (Ausgabedateiname vorverarbeiten) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Fi
+dev_langs: C++
+helpviewer_keywords:
+- Fi compiler option (C++)
+- -Fi compiler option (C++)
+- /Fi compiler option (C++)
+- preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9bc3076a529984358aed16902f509ceb01423f9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Fi (Ausgabedateiname vorverarbeiten)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Namen der Ausgabedatei an, in die die [\/P \(Vorverarbeitung in eine Datei\)](../../build/reference/p-preprocess-to-a-file.md)\-Compileroption die vorverarbeitete Ausgabe schreibt.  
+# <a name="fi-preprocess-output-file-name"></a>/Fi (Ausgabedateiname vorverarbeiten)
+Gibt den Namen der Ausgabedatei an, in dem die [/p (Vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md) Compileroption schreibt vorverarbeiteten Ausgabedatei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Fipathname  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
-|Parameter|**Beschreibung**|  
-|---------------|----------------------|  
-|`pathname`|Der Name und Pfad der Ausgabedatei, die von der **\/P**\-Compileroption erstellt wurde.|  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`pathname`|Der Name und Pfad der Ausgabedatei erstellt, indem die **/p** -Compileroption.|  
   
-## Hinweise  
- Verwenden Sie die **\/Fi**\-Compileroption zusammen mit der **\/P**\-Compileroption.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden der **/Fi** (Compileroption) in Kombination mit der **/p** -Compileroption.  
   
- Wenn Sie nur einen Pfad für den `pathname`\-Parameter angeben, wird der Basisname der Quelldatei als Basisname der vorverarbeiteten Ausgabedatei verwendet.  Der `pathname`\-Parameter erfordert keine bestimmte Dateinamenerweiterung.  Falls Sie keine Dateinamenerweiterungen angeben, wird eine I\-Erweiterung verwendet.  
+ Wenn Sie angeben, dass nur einen Pfad zu der `pathname` Parameter, der Basisname der Quelldatei als den Namen der vorverarbeiteten Ausgabedatei verwendet wird. Die `pathname` Parameter erfordert eine bestimmte Dateinamenerweiterung. Allerdings ist eine Erweiterung der "trägt" verwendet, wenn Sie keine Dateinamenerweiterung angeben.  
   
-## Beispiel  
- Mit der folgenden Befehlszeile werden eine Vorverarbeitung von PROGRAM.cpp durchgeführt, die Kommentare übernommen, [\#line](../../preprocessor/hash-line-directive-c-cpp.md)\-Direktiven hinzugefügt und das Ergebnis in die Datei "MYPROCESS.i" geschrieben:  
+## <a name="example"></a>Beispiel  
+ Die folgende Befehlszeile führt eine vorverarbeitung PROGRAM.cpp, behält Kommentare, fügt [#line](../../preprocessor/hash-line-directive-c-cpp.md) Direktiven und das Ergebnis in der Datei MYPROCESS.i schreibt.  
   
 ```  
 CL /P /FiMYPROCESS.I PROGRAM.CPP  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
- [\/P \(Vorverarbeitung in eine Datei\)](../../build/reference/p-preprocess-to-a-file.md)   
+ [/ P (vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md)   
  [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

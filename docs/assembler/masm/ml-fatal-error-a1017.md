@@ -1,36 +1,35 @@
 ---
-title: "ML Fatal Error A1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1017"
+title: ML-Schwerwiegender Fehler A1017 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1017
+dev_langs: C++
+helpviewer_keywords: A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0603ccb1de5767294afcfc012c1b9c8b18ac776d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**fehlender Quelldateiname**  
+# <a name="ml-fatal-error-a1017"></a>Schwerwiegender ML-Fehler A1017
+**Name der Quelldatei fehlt**  
   
- ML konnte eine Datei nicht durchsuchen, um zusammenstellen und an den Linker übergeben werden sollen.  
+ ML wurde nicht gefunden, eine Datei, assemblieren oder an den Linker übergeben.  
   
- Dieser Fehler wird generiert, wenn Sie ML\-Befehlszeilenoptionen geben, ohne einen Dateinamen angeben zu fungieren.  Um Dateien zusammenzustellen die keine .asm\-Erweiterung haben, verwenden Sie die **\/Ta** Befehlszeilenoption.  
+ Dieser Fehler wird generiert, wenn Sie die Befehlszeilenoptionen ML erteilen, ohne einen Dateinamen zu reagieren. Zum assemblieren von Dateien, die keine Erweiterung ASM haben, verwenden Sie die **/TA** Befehlszeilenoption.  
   
- Dieser Fehler kann auch generiert werden, indem ML ohne Parameter aufgerufen wird, wenn die ML\-Umgebungsvariable Befehlszeilenoptionen enthält.  
+ Dieser Fehler kann auch durch ML ohne Parameter aufrufen, wenn die Umgebungsvariable ML Befehlszeilenoptionen enthält generiert werden.  
   
-## Siehe auch  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Siehe auch  
+ [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)

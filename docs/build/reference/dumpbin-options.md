@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8945eb3ca53d6402e2db31c8a174d45394bcfb2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-options"></a>DUMPBIN-Optionen
 Eine Option besteht aus einem Optionsbezeichner, entweder einem Bindestrich (-) oder einem Schrägstrich (/), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben Argumente, die nach einem Doppelpunkt (:) angegeben werden. Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Bei Optionsnamen und ihren aus Schlüsselwörtern oder Dateinamen bestehenden Argumenten wird keine Groß-/Kleinschreibung berücksichtigt. Die meisten Optionen sind auf alle Binärdateien anwendbar; einige wenige können nur auf bestimmte Dateitypen angewendet werden. Standardmäßig sendet DUMPBIN die Informationen an die Standardausgabe. Verwenden der [/OUT](../../build/reference/out-dumpbin.md) Option zum Senden der Ausgabe in eine Datei.  

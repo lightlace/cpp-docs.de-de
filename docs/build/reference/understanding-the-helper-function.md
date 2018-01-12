@@ -1,76 +1,77 @@
 ---
-title: "Die Hilfsfunktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delayLoadHelper-Funktion"
-  - "__delayLoadHelper2-Funktion"
-  - "Verzögertes Laden von DLLs, Hilfsfunktion"
-  - "delayhlp.cpp"
-  - "delayimp.h"
-  - "delayimp.lib"
-  - "Hilfsfunktionen"
+title: Die Hilfsfunktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- delayed loading of DLLs, helper function
+- __delayLoadHelper2 function
+- delayimp.lib
+- __delayLoadHelper function
+- delayhlp.cpp
+- delayimp.h
+- helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Die Hilfsfunktion
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Hilfsfunktion für linkergestütztes verzögertes Laden stellt die Funktion dar, von der die DLL zur Laufzeit geladen wird.  Das Verhalten der Hilfsfunktion kann angepasst werden, indem eine eigene Funktion geschrieben und mit dem Programm verknüpft wird, anstatt die gelieferte Hilfsfunktion in Delayimp.lib zu verwenden.  Eine einzige Hilfsfunktion ist für alle verzögert geladenen DLLs verantwortlich.  
+# <a name="understanding-the-helper-function"></a>Die Hilfsfunktion
+Die Hilfsfunktion für das verzögerte Laden Linker unterstützt wird, was tatsächlich die DLL zur Laufzeit geladen wird. Sie können die Hilfsfunktion, um das Verhalten anpassen, indem Sie eine eigene Funktion schreiben, und verknüpfen es mit Ihrer Anwendung anstelle der angegebenen Hilfsfunktion in "delayimp.lib" ändern. Eine Hilfsfunktion ist für alle verzögert geladene DLLs.  
   
- Eine eigene Version der Hilfsfunktion kann bereitgestellt werden, um bestimmte Verarbeitungsschritte, die vom Namen der DLL oder Importe abhängen, durchzuführen.  
+ Sie können eine eigene Version der Hilfsfunktion bereitstellen, wenn spezifischen Verarbeitung basierend auf den Namen der DLL oder importiert werden sollen.  
   
- Von der Hilfsfunktion werden die folgenden Aktionen durchgeführt:  
+ Die Hilfsfunktion führt die folgenden Aktionen aus:  
   
--   Das gespeicherte Handle auf die Bibliothek wird überprüft, um festzustellen, ob diese bereits geladen wurde.  
+-   Überprüft die gespeicherte Handle für die Bibliothek aus, um festzustellen, ob sie bereits geladen wurde  
   
--   **LoadLibrary** wird aufgerufen, um die DLL zu laden.  
+-   Aufrufe **LoadLibrary** zum Laden der DLL versuchen  
   
--   **GetProcAddress** wird aufgerufen, um die Prozeduradresse abzurufen.  
+-   Aufrufe **GetProcAddress** versucht, die Adresse der Prozedur abrufen  
   
--   Es erfolgt eine Rückkehr zum verzögert geladenen Import\-Thunk, um den neu geladenen Einstiegspunkt aufzurufen.  
+-   Gibt die Verzögerung importieren Thunk, um der neu geladenen Einstiegspunkt aufzurufen.  
   
- Ein Benachrichtigungshook im Programm kann von der Hilfsfunktion nach jeder der folgenden Aktionen zurückgerufen werden:  
+ Die Hilfsfunktion kann Benachrichtigungshook im Programm nach jedem der folgenden Aktionen Rückruf:  
   
--   beim Starten der Hilfsfunktion  
+-   Wenn die Hilfsfunktion gestartet wird  
   
--   unmittelbar vor dem Aufruf von **LoadLibrary** in der Hilfsfunktion  
+-   Unmittelbar vor dem **LoadLibrary** in die Hilfsfunktion aufgerufen wird  
   
--   unmittelbar vor dem Aufruf von **GetProcAddress** in der Hilfsfunktion  
+-   Unmittelbar vor dem **GetProcAddress** in die Hilfsfunktion aufgerufen wird  
   
--   bei fehlerhaftem Aufruf von **LoadLibrary** in der Hilfsfunktion  
+-   Wenn der Aufruf von **LoadLibrary** Fehler in der Hilfsfunktion  
   
--   bei fehlerhaftem Aufruf von **GetProcAddress** in der Hilfsfunktion  
+-   Wenn der Aufruf von **GetProcAddress** Fehler in der Hilfsfunktion  
   
--   nach Beendigung der Hilfsfunktion  
+-   Nach dem Hilfsprogramm Funktion erfolgt Verarbeitung  
   
- Jeder solche Hookpunkt kann einen Wert zurückgeben, mit dem die normale Verarbeitung der Hilfsfunktion geändert wird, mit Ausnahme der Rückkehr zum verzögert geladenen Import\-Thunk.  
+ Jede dieser Punkte verknüpfen kann einen Wert, der normalen Verarbeitung der Hilfsfunktion auf eine Weise mit Ausnahme der Rückkehr zum Verzögerung Import Thunk dahingehend geändert, wird zurückgegeben.  
   
- Der Standardcode der Hilfsfunktion befindet sich in Delayhlp.cpp und Delayimp.h \(in vc\\include\) und ist in Delayimp.lib \(in vc\\lib\) kompiliert.  Diese Bibliothek muss beim Kompilieren eingeschlossen werden, es sei denn, eine eigene Hilfsfunktion wird geschrieben.  
+ Der Standard-Hilfscode verwendbaren in Delayhlp.cpp und Delayimp.h (im Vc\include) und ist in "delayimp.lib" (in Vc\lib) kompiliert. Sie müssen diese Bibliothek in den Kompilierungen eingeschlossen, es sei denn, Sie eine eigene Hilfsfunktion schreiben.  
   
- In den folgenden Themen wird die Hilfsfunktion beschrieben:  
+ Die folgenden Themen beschreiben die Hilfsfunktion:  
   
--   [Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C\+\+ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
+-   [Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
   
 -   [Aufrufkonventionen, Parameter und Rückgabetyp](../../build/reference/calling-conventions-parameters-and-return-type.md)  
   
--   [Struktur\- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md)  
+-   [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md)  
   
 -   [Berechnen der erforderlichen Werte](../../build/reference/calculating-necessary-values.md)  
   
 -   [Entladen einer verzögert geladenen DLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

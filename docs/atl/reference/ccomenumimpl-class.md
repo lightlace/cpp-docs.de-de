@@ -1,11 +1,10 @@
 ---
-title: CComEnumImpl Klasse | Microsoft-Dokumentation
+title: CComEnumImpl Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,38 +21,22 @@ f1_keywords:
 - ATLCOM/ATL::CComEnumImpl::m_end
 - ATLCOM/ATL::CComEnumImpl::m_iter
 - ATLCOM/ATL::CComEnumImpl::m_spUnk
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComEnumImpl class
+dev_langs: C++
+helpviewer_keywords: CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6dc6a8ed6a318642efe58dfb94835d45b2163b54
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl-Klasse
-Diese Klasse stellt die Implementierung für eine COM-Enumerator-Schnittstelle, wo die aufzulistenden Elemente in einem Array gespeichert werden.  
+Diese Klasse stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +59,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
  `Copy`  
  Eine homogene [kopieren Richtlinienklasse](../../atl/atl-copy-policy-classes.md).  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -101,19 +84,19 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |----------|-----------------|  
 |[CComEnumImpl::m_begin](#m_begin)|Ein Zeiger auf das erste Element im Array.|  
 |[CComEnumImpl::m_dwFlags](#m_dwflags)|Kopieren Sie Flags übergeben `Init`.|  
-|[CComEnumImpl::m_end](#m_end)|Ein Zeiger auf die Position direkt hinter das letzte Element im Array.|  
+|[CComEnumImpl::m_end](#m_end)|Ein Zeiger auf die Position direkt hinter dem letzten Element im Array.|  
 |[CComEnumImpl::m_iter](#m_iter)|Ein Zeiger auf das aktuelle Element im Array.|  
-|[CComEnumImpl::m_spUnk](#m_spunk)|Die **IUnknown** -Zeiger des Objekts, das die Auflistung bereitstellt.|  
+|[CComEnumImpl::m_spUnk](#m_spunk)|Die **IUnknown** Zeiger, der das Objekt, das Angeben der Auflistung aufgezählt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComEnumImpl`Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, wo die aufzulistenden Elemente in einem Array gespeichert werden. Diese Klasse entspricht der `IEnumOnSTLImpl` -Klasse, die eine Implementierung einer Schnittstelle Enumerator bereitstellt, auf Basis einer C++-Standardbibliothek Containers.  
+ `CComEnumImpl`Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden. Diese Klasse ist analog zu den `IEnumOnSTLImpl` -Klasse, die eine Implementierung einer Schnittstelle Enumerator bereitstellt, basierend auf einen Container für die C++-Standardbibliothek.  
   
 > [!NOTE]
 >  Weitere Informationen zu weiteren Unterschieden zwischen `CComEnumImpl` und `IEnumOnSTLImpl`, finden Sie unter [CComEnumImpl::Init](#init).  
   
- In der Regel werden Sie *nicht* müssen Ihre eigenen Enumerator-Klasse durch Ableiten von dieser Implementierung zu erstellen. Wenn Sie einen ATL bereitgestellten Enumerator basierend auf einem Array verwenden möchten, es ist üblicher zum Erstellen einer Instanz von [CComEnum](../../atl/reference/ccomenum-class.md).  
+ Sehen Sie in der Regel *nicht* müssen eigene Enumeratorklasse durch Ableiten von dieser Implementierung zu erstellen. Wenn Sie einen ATL bereitgestellte basierten auf ein Array-Enumerator verwenden möchten, ist eher üblich, dass das Erstellen einer Instanz des [CComEnum](../../atl/reference/ccomenum-class.md).  
   
- Sie müssen einen benutzerdefinierten Enumerator (z. B. eine, die zusätzlich zu der Enumeratorschnittstelle-Schnittstellen bereitstellen) bereitstellen, können Sie von dieser Klasse ableiten. In diesem Fall ist es wahrscheinlich, dass Sie überschreiben müssen die [CComEnumImpl::Clone](#clone) Methode, um Ihre eigene Implementierung bereitzustellen.  
+ Sie benötigen, geben Sie einen benutzerdefinierten Enumerator (z. B. eine, die Schnittstellen, die zusätzlich zu den Enumeratorschnittstelle verfügbar macht), können Sie von dieser Klasse ableiten. In diesem Fall ist es wahrscheinlich, dass Sie außer Kraft setzen müssen die [CComEnumImpl::Clone](#clone) Methode, um Ihre eigene Implementierung bereitzustellen.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungen und-Enumerationen](../../atl/atl-collections-and-enumerators.md).  
   
@@ -123,7 +106,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
  `CComEnumImpl`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
   
 ##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
  Der Konstruktor.  
@@ -140,7 +123,7 @@ CComEnumImpl();
 ```  
   
 ##  <a name="init"></a>CComEnumImpl::Init  
- Sie müssen diese Methode aufrufen, bevor Sie einen Zeiger auf die Enumeratorschnittstelle für den zurück auf Clients übergeben.  
+ Sie müssen diese Methode aufrufen, bevor die Übergabe eines Zeigers auf die Enumeratorschnittstelle an alle Clients.  
   
 ```
 HRESULT Init(
@@ -158,20 +141,20 @@ HRESULT Init(
  Ein Zeiger auf die Position direkt hinter dem letzten Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
  *pUnk*  
- [in] Die **IUnknown** Zeiger eines Objekts, die während der Lebensdauer des Enumerators beibehalten werden muss. Übergeben Sie **NULL** Wenn kein solches Objekt vorhanden ist.  
+ [in] Die **IUnknown** Zeiger eines Objekts, das während der Lebensdauer des Enumerators beibehalten werden muss. Übergeben Sie **NULL** Wenn kein solches Objekt vorhanden ist.  
   
  `flags`  
- Flags, die angibt, ob der Enumerator des Arrays Besitz oder erstellen Sie eine Kopie davon sollten. Eine Beschreibung der möglichen Werte finden Sie unter.  
+ Flags, die angibt, ob der Enumerator des Arrays Inbesitznahme sollte, oder erstellen Sie eine Kopie des Zertifikats. Mögliche Werte sind unten beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode nur einmal – den Enumerator zu initialisieren, verwenden Sie diese, und wegwerfen.  
+ Rufen Sie diese Methode nur einmal – Initialisieren des Enumerators, verwenden Sie es, und wirft den Zettel unterwegs.  
   
- Wenn Sie Zeiger auf Elemente in einem Array in ein anderes Objekt enthaltene übergeben (und Sie nicht den Enumerator zum Kopieren der Daten mehr), können Sie die *pUnk* Parameter, um sicherzustellen, dass das Objekt und das Array, das sie enthält für verfügbar sind, solange der Enumerator benötigt. Der Enumerator enthält einfach einen COM-Verweis auf das Objekt, das beibehalten werden soll. Die COM-Verweis wird automatisch freigegeben, wenn der Enumerator zerstört wird.  
+ Wenn Sie Elemente in einem Array in ein anderes Objekt gespeicherten Zeiger übergeben (und nicht, Sie den Enumerator bitten auf die Daten zu kopieren), können Sie mithilfe der *pUnk* Parameter, um sicherzustellen, dass das Objekt und das Array er enthält so lange als den Enumerator verfügbar sind benötigt. Der Enumerator ist einfach einen COM-Verweis auf das Objekt, das am Leben zu erhalten. Der COM-Verweis wird automatisch freigegeben, wenn der Enumerator zerstört wird.  
   
- Die `flags` Parameter können Sie angeben, wie der Enumerator die Elemente des Arrays übergeben werden soll. `flags`akzeptiert einen der Werte aus den **CComEnumFlags** Enumeration unten:  
+ Die `flags` Parameter können Sie angeben, wie der Enumerator die Array-Elemente, die an sie übergebenen behandeln soll. `flags`akzeptiert einen der Werte aus den **CComEnumFlags** Enumeration unten angezeigt:  
   
 ```  
 enum CComEnumFlags  
@@ -182,17 +165,17 @@ enum CComEnumFlags
    };  
 ```  
   
- **AtlFlagNoCopy** bedeutet, dass das Array Lebensdauer nicht vom Enumerator gesteuert wird. In diesem Fall entweder das Array werden statische oder identifizierte Objekt *pUnk* ist zuständig für das Array freigeben, wenn er nicht mehr benötigt wird.  
+ **AtlFlagNoCopy** bedeutet, dass die Lebensdauer des Arrays nicht vom Enumerator gesteuert wird. In diesem Fall wird entweder das Array werden statische oder das identifizierte Objekt *pUnk* ist zuständig für das Array freigeben, wenn er nicht mehr benötigt wird.  
   
- **AtlFlagTakeOwnership** bedeutet, dass die Zerstörung des Arrays ist vom Enumerator gesteuert werden. In diesem Fall das Array muss dynamisch zugeordnet wurde mit **neue**. Der Enumerator wird das Array in seinem Destruktor gelöscht. Übergeben Sie i. d. r. **NULL** für *pUnk*, obwohl Sie noch einen gültigen Zeiger übergeben können, wenn aus irgendeinem Grund die Zerstörung des Enumerators benachrichtigt werden sollen.  
+ **AtlFlagTakeOwnership** darauf hin, dass die Zerstörung des Arrays vom Enumerator gesteuert werden. In diesem Fall das Array muss zugeordnet worden sein dynamisch mit **neue**. Der Enumerator löscht das Array in seinem Destruktor. Übergeben Sie in der Regel **NULL** für *pUnk*, obwohl Sie immer noch einen gültigen Zeiger übergeben können, wenn Sie aus irgendeinem Grund die Zerstörung des Enumerators benachrichtigt werden müssen.  
   
- **AtlFlagCopy** bedeutet, dass ein neues Array erstellt werden, durch Kopieren der übergebenen Arrays auf `Init`. Das neue Array Lebensdauer wird vom Enumerator gesteuert werden. Der Enumerator wird das Array in seinem Destruktor gelöscht. Übergeben Sie i. d. r. **NULL** für *pUnk*, obwohl Sie noch einen gültigen Zeiger übergeben können, wenn aus irgendeinem Grund die Zerstörung des Enumerators benachrichtigt werden sollen.  
+ **AtlFlagCopy** darauf hin, dass ein neues Array erstellt werden, durch Kopieren der übergebenen Arrays auf `Init`. Lebensdauer für das neue Array wird vom Enumerator gesteuert werden. Der Enumerator löscht das Array in seinem Destruktor. Übergeben Sie in der Regel **NULL** für *pUnk*, obwohl Sie immer noch einen gültigen Zeiger übergeben können, wenn Sie aus irgendeinem Grund die Zerstörung des Enumerators benachrichtigt werden müssen.  
   
 > [!NOTE]
->  Der Prototyp dieser Methode gibt die Elemente des Arrays als Typ **T**, wobei **T** als einen Vorlagenparameter an die Klasse definiert wurde. Dies ist die desselben Typs, die durch die COM-Schnittstelle-Methode verfügbar gemacht wird [CComEnumImpl::Next](#next). Dies besteht darin, dass im Gegensatz zu [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), diese Klasse unterstützt keine anderen Speicher und Datentypen verfügbar. Der Datentyp der Elemente im Array muss identisch mit dem Datentyp, der mithilfe der COM-Schnittstelle verfügbar gemacht werden.  
+>  Der Prototyp dieser Methode gibt die Elemente des Arrays als Typ **T**, wobei **T** als Vorlagenparameter für die Klasse definiert wurde. Dies ist der gleichen Typ, der über die Schnittstellenmethode COM verfügbar gemacht wird [CComEnumImpl::Next](#next). Die Implikation hiervon ist, dass im Gegensatz zu [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), diese Klasse unterstützt keine anderen Speicher und verfügbar gemacht werden Datentypen. Der Datentyp der Elemente im Array muss identisch mit dem Datentyp, der mittels der COM-Schnittstelle verfügbar gemacht werden.  
   
 ##  <a name="clone"></a>CComEnumImpl::Clone  
- Diese Methode stellt die Implementierung der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode erstellen Sie ein Objekt vom Typ `CComEnum`, initialisieren es mit dem gleichen Array und Iterator vom aktuellen Objekt verwendet, und die Schnittstelle für das neu erstellte Objekt zurückgibt.  
+ Diese Methode stellt die Implementierung des der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode durch das Erstellen eines Objekts vom Typ `CComEnum`, initialisieren es mit dem gleichen Array und Iterator vom aktuellen Objekt verwendet, und Zurückgeben der Benutzeroberfläche für die neu erstellte Objekt.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -200,16 +183,16 @@ STDMETHOD(Clone)(Base** ppEnum);
   
 ### <a name="parameters"></a>Parameter  
  `ppEnum`  
- [out] Der Enumeratorschnittstelle auf ein neu erstelltes Objekt, das aus dem aktuellen Enumerator geklont werden soll.  
+ [out] Der Enumeratorschnittstelle in einem neu erstellten Objekt aus dem aktuellen Enumerator geklont werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, dass die geklonte Enumeratoren nicht ihre eigenen, kopieren (oder Besitz übernehmen) der Daten vom ursprünglichen Enumerator verwendet. Bei Bedarf werden geklonte Enumeratoren den ursprünglichen Enumerator (mithilfe eines COM-Verweis) aufrechtzuerhalten um sicherzustellen, dass die Daten für verfügbar ist, solange sie sie benötigen.  
+ Beachten Sie, dass die geklonte Enumeratoren eigene nehmen Sie niemals kopieren (oder Take Ownership) der Daten vom ursprünglichen Enumerator verwendet. Bei Bedarf werden geklonte Enumeratoren den ursprünglichen Enumerator (mit einem COM-Verweis) aufrechtzuerhalten um sicherzustellen, dass die Daten für verfügbar sind, wie sie ihn benötigen.  
   
 ##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
- Diese intelligente Zeiger unterhält einen Verweis auf das Objekt übergeben [CComEnumImpl::Init](#init), sicherstellen, dass während der Lebensdauer des Enumerators aktiv bleibt.  
+ Diese intelligente Zeiger behält einen Verweis auf das übergebene Objekt [CComEnumImpl::Init](#init), um sicherzustellen, dass es während der Lebensdauer des Enumerators aktiv bleibt.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
@@ -237,7 +220,7 @@ T* m_iter;
 ```  
   
 ##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
- Die Flags übergeben [CComEnumImpl::Init](#init).  
+ Die Flags an übergeben [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
@@ -258,7 +241,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  [out] Das Array mit den Elementen gefüllt werden soll.  
   
  `pceltFetched`  
- [out] Die Anzahl der Elemente, die tatsächlich im zurückgegebenen `rgelt`. Dies kann weniger als `celt` Wenn weniger als `celt` Elemente in der Liste verblieben ist.  
+ [out] Die Anzahl der Elemente, die tatsächlich im zurückgegebenen `rgelt`. Dies kann weniger als `celt` Wenn weniger als `celt` Elemente in der Liste verblieben sind.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
@@ -288,10 +271,9 @@ STDMETHOD(Skip)(ULONG celt);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt E_INVALIDARG zurück, wenn `celt` NULL ist, gibt S_FALSE zurück, wenn es weniger als `celt` Elemente zurückgegeben werden, andernfalls wird S_OK zurückgegeben.  
+ Gibt E_INVALIDARG zurück, wenn `celt` 0 (null) ist, gibt "S_FALSE" zurück, wenn weniger als `celt` Elemente zurückgegeben werden, andernfalls gibt S_OK zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IEnumOnSTLImpl-Klasse](../../atl/reference/ienumonstlimpl-class.md)   
  [CComEnum-Klasse](../../atl/reference/ccomenum-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

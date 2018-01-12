@@ -1,76 +1,77 @@
 ---
-title: "/EP (Vorverarbeitung an &quot;stdout&quot; ohne #line-Direktiven)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "/ep"
-  - "VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EP (Compileroption) [C++]"
-  - "Kopieren der Präprozessorausgabe nach stdout"
-  - "EP (Compileroption) [C++]"
-  - "-EP (Compileroption) [C++]"
-  - "Präprozessorausgabe, Kopieren nach stdout"
+title: '-EP (Vorverarbeitung an "stdout" ohne #line-Direktiven) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ep
+- VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines
+dev_langs: C++
+helpviewer_keywords:
+- copy preprocessor output to stdout
+- preprocessor output, copy to stdout
+- -EP compiler option [C++]
+- EP compiler option [C++]
+- /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d7b2a64ec8fa7565d17ab04683fec07c48aea3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /EP (Vorverarbeitung an &quot;stdout&quot; ohne #line-Direktiven)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verarbeitet C\- und C\+\+\-Quelldateien vor und übermittelt die vorverarbeiteten Dateien an das Standardausgabegerät.  
+# <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (Vorverarbeitung an "stdout" ohne #line-Anweisungen)
+Führt eine vorverarbeitung für C- und C++-Quelldateien und die vorverarbeiteten Dateien in das Standardausgabegerät kopiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /EP  
 ```  
   
-## Hinweise  
- In dem Prozess werden alle Präprozessordirektiven und Makroerweiterungen ausgeführt sowie Kommentare entfernt.  Wenn Sie Kommentare in der vorverarbeiteten Ausgabe beibehalten möchten, verwenden Sie die Option [\/C \(Kommentare bei der Vorverarbeitung beibehalten\)](../../build/reference/c-preserve-comments-during-preprocessing.md) in Verbindung mit **\/EP**.  
+## <a name="remarks"></a>Hinweise  
+ In den Prozess alle Präprozessordirektiven durchgeführt werden, makroerweiterungen erfolgen und Kommentare werden entfernt. Um Kommentare in der vorverarbeiteten Ausgabedatei beizubehalten, verwenden Sie die [/c (beibehalten Kommentare beim Präprozessorlauf)](../../build/reference/c-preserve-comments-during-preprocessing.md) mit option **/EP**.  
   
- Mit der **\/EP**\-Option wird die Kompilierung unterdrückt.  Sie müssen die vorverarbeitete Datei erneut zum Kompilieren übergeben.  **\/EP** unterdrückt auch die Ausgabedateien der Optionen **\/FA**, **\/Fa** und **\/Fm**.  Weitere Informationen finden Sie unter [\/FA, \/Fa \(Listendatei\)](../../build/reference/fa-fa-listing-file.md) und [\/Fm \(Name der Zuordnungsdatei\)](../../build/reference/fm-name-mapfile.md).  
+ Die **/EP** Option unterdrückt die Kompilierung. Sie müssen die vorverarbeitete Datei für die Kompilierung erneut. **/ EP** unterdrückt auch die Ausgabedateien der **/FA**, **/FA**, und **/FM** Optionen. Weitere Informationen finden Sie unter [/FA, / FA (Listing File)](../../build/reference/fa-fa-listing-file.md) und [/FM (Name der Zuordnungsdatei)](../../build/reference/fm-name-mapfile.md).  
   
- Fehlermeldungen in späteren Verarbeitungsstufen beziehen sich auf die Zeilennummern der vorverarbeiteten Datei, nicht auf die Zeilen in der ursprünglichen Quelldatei.  Wenn sich Zeilennummern auf die ursprüngliche Quelldatei beziehen sollen, verwenden Sie stattdessen [\/E \(Vorverarbeitung an "stdout"\)](../../build/reference/e-preprocess-to-stdout.md).  Die Option **\/E** fügt der Ausgabe zu diesem Zweck `#line`\-Direktiven hinzu.  
+ Fehler bei späteren Phasen der Verarbeitung finden Sie in die Zeilennummern der vorverarbeiteten Datei statt auf die ursprüngliche Quelldatei. Verwenden Sie gegebenenfalls Zeilennummern zum Verweisen auf die ursprüngliche Quelldatei [/e (Vorverarbeitung an "stdout")](../../build/reference/e-preprocess-to-stdout.md) stattdessen. Die **/e** Option fügt `#line` Anweisungen an die Ausgabe für diesen Zweck.  
   
- Um die vorverarbeitete Ausgabe mit `#line`\-Direktiven in eine Datei zu übergeben, verwenden Sie stattdessen die Option [\/P \(Vorverarbeitung in eine Datei\)](../../build/reference/p-preprocess-to-a-file.md).  
+ Zum Senden der vorverarbeiteten Ausgabedatei mit `#line` Direktiven in eine Datei mithilfe der [/p (Vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md) -option von Windows.  
   
- Um die vorverarbeitete Ausgabe mit `#line`\-Direktiven an stdout zu übergeben, verwenden Sie **\/P** und **\/EP** zusammen.  
+ "Stdout", mit der vorverarbeiteten Ausgabedatei an `#line` -Direktiven verwenden **/p** und **/EP** zusammen.  
   
- Vorkompilierte Header können nicht mit der **\/EP**\-Option verwendet werden.  
+ Sie können keine vorkompilierten Header mit dem **/EP** Option.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Präprozessor**.  
+3.  Klicken Sie auf die **Präprozessor** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Präprozessorlauf**.  
+4.  Ändern der **Präprozessorlauf** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.  
   
-## Beispiel  
- Mit der folgenden Befehlszeile werden eine Vorverarbeitung von `ADD.C` durchgeführt, die Kommentare übernommen und das Ergebnis auf dem Standardausgabegerät angezeigt:  
+## <a name="example"></a>Beispiel  
+ Die folgende Befehlszeile führt eine vorverarbeitung der Datei `ADD.C`behält Kommentare und das Ergebnis auf dem Standardausgabegerät angezeigt:  
   
 ```  
 CL /EP /C ADD.C  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

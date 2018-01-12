@@ -67,11 +67,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2079cb0b00513babd6dc2d5b6c91e82675acc74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e06106db699ba98d3821cdf09bbe668f745f73fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 Bestimmt, ob ein Zeichen ein Grafikzeichen, ein Anzeigenzeichen, ein Interpunktionszeichen oder ein Leerzeichen ist.  
@@ -134,7 +135,7 @@ int _ismbcspace_l(
 ## <a name="remarks"></a>Hinweise  
  Jede dieser Funktionen testet ein angegebenes Mehrbytezeichen auf eine angegebene Bedingung.  
   
-|Routine|Testbedingung|Beispiel für Codepage 932|  
+|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|  
 |-------------|--------------------|---------------------------|  
 |`_ismbcgraph`|Grafik|Gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder druckbaren Katakana-Zeichens außer eines Leerzeichens ( ) ist.|  
 |`_ismbcprint`|Druckbar|Gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder druckbaren Katakana-Zeichens einschließlich eines Leerzeichens ( ) ist.|  
@@ -144,7 +145,7 @@ int _ismbcspace_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ismbcgraph`|\<mbstring.h>|  
 |`_ismbcgraph_l`|\<mbstring.h>|  
@@ -164,7 +165,7 @@ int _ismbcspace_l(
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_ismbc-Routinen](../../c-runtime-library/ismbc-routines.md)   
  [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   

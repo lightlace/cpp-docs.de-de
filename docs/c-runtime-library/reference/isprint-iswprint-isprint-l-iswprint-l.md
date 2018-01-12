@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4bd8aa30969399eb634f8ce6872eb6438c21562d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ab79ddcf6232e8c3d4345cc1bc3cda7c7deb1dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 Bestimmt, ob eine ganze Zahl ein druckbares Zeichen darstellt.  
@@ -94,7 +95,7 @@ int _iswprint_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`isprint`|\<ctype.h>|  
 |`iswprint`|\<ctype.h> oder \<wchar.h>|  
@@ -105,5 +106,5 @@ int _iswprint_l(
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)

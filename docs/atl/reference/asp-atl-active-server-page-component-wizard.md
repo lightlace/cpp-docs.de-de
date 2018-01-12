@@ -1,47 +1,47 @@
 ---
-title: "ASP, ATL-Assistent f&#252;r Active Server Page-Komponenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.asp.asp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Assistent für Active Server Page-Komponenten, ASP"
+title: "ASP, ATL-Assistent für Active Server Page-Komponenten | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.codewiz.class.atl.asp.asp
+dev_langs: C++
+helpviewer_keywords: ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 69d3837cc0996c0e0e0784214cfbfa6744afbf94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ASP, ATL-Assistent f&#252;r Active Server Page-Komponenten
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Auf dieser Seite des ATL\-Assistenten für Active Server Page\-Komponenten können Sie optionale Einstellungen zur Behandlung von Informationen und Zuständen der ASP\-Komponente festlegen.  
+# <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL-Assistent für Active Server Page-Komponenten
+Mit der optionale Einstellungen angeben, für die Behandlung von Informationen und Status, die im Zusammenhang mit der ASP-Komponente auf dieser Seite des ATL-Assistenten für Active Server Page-Komponente.  
   
  **Optionale Methoden**  
- Fügt dem Objekt die optionalen ASP\-Methoden **OnStartPage** und **OnEndPage** hinzu.  Diese Option muss aktiviert sein, damit immanente Active Server Pages\-Objekte festgelegt werden können.  Die Option ist standardmäßig aktiviert.  
+ Fügt die optionalen ASP-Methoden **OnStartPage** und **OnEndPage**, für Ihr Objekt. Diese Option muss ausgewählt werden, alle systeminternen Objekten von Active Server Pages festlegen. Es ist standardmäßig ausgewählt.  
   
--   **OnStartPage\/OnEndPage** [OnStartPage](https://msdn.microsoft.com/en-us/library/ms691624.aspx) wird aufgerufen, wenn das Skript zum ersten Mal versucht, auf das Objekt zuzugreifen.  **OnEndPage** wird aufgerufen, wenn die Skriptverarbeitung durch das Objekt abgeschlossen ist.  
+-   **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) zum ersten Mal das Skript versucht, auf das Objekt aufgerufen wird. **OnEndPage** wird aufgerufen, wenn das Objekt beendet, wird das Skript zu verarbeiten.  
   
- **Immanente Objekte**  
- Die Option **OnStartPage\/OnEndPage** muss aktiviert sein, damit immanente ASP\-Objekte festgelegt werden können.  
+ **Systeminterne Objekt**  
+ Wählen Sie die **OnStartPage/OnEndPage** Option aus, um alle ASP-Objekte festgelegt.  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**Anforderung**|Ermöglicht den Zugriff auf das immanente Anforderungsobjekt der Active Server Pages.  Das Anforderungsobjekt wird zur Übergabe einer HTTP\-Anforderung verwendet.|  
-|**Antwort**|Ermöglicht den Zugriff auf das immanente Antwortobjekt der Active Server Pages.  Das Antwortobjekt sendet als Reaktion auf eine Anforderung Informationen für den Benutzer an den Browser.|  
-|**Sitzung**|Ermöglicht den Zugriff auf das immanente Sitzungsobjekt der Active Server Pages.  Das Sitzungsobjekt verwaltet Informationen über die aktuelle Benutzersitzung und wird zum Speichern und Abrufen von Zustandsinformationen verwendet.|  
-|**Anwendung**|Ermöglicht den Zugriff auf das immanente Anwendungsobjekt der Active Server Pages.  Das Anwendungsobjekt wird zur Verwaltung des Zustands verwendet, der von mehreren ASP\-Objekten gemeinsam genutzt wird.|  
-|**Server**|Ermöglicht den Zugriff auf das immanente Serverobjekt der Active Server Pages.  Mithilfe des Serverobjekts können andere ASP\-Objekte erstellt werden.|  
+|**Anforderung**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **anfordern** Objekt. Das Request-Objekt wird verwendet, um eine HTTP-Anforderung übergeben.|  
+|**Antwort**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Antwort** Objekt. Als Antwort auf eine Anforderung sendet das Antwortobjekt Informationen an den Browser, den Benutzer angezeigt.|  
+|**Sitzung**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Sitzung** Objekt. Die **Sitzung** Objekt enthält Informationen über die aktuelle benutzersitzung, z. B. speichern und Abrufen von Statusinformationen.|  
+|**Anwendung**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Anwendung** Objekt. Die **Anwendung** Objekt verwaltet den Zustand, die für mehrere ASP-Objekte freigegeben wird.|  
+|**Server**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Server** Objekt. Die **Server** Objekts können Sie zum Erstellen anderer ASP-Objekte.|  
   
-## Siehe auch  
- [ATL\-Assistent für Active Server Page\-Komponenten](../../atl/reference/atl-active-server-page-component-wizard.md)   
- [ATL Active Server Page Component](../../atl/reference/adding-an-atl-active-server-page-component.md)
+## <a name="see-also"></a>Siehe auch  
+ [ATL-Assistent für Active Server Page-Komponenten](../../atl/reference/atl-active-server-page-component-wizard.md)   
+ [ATL Active Server Page-Komponenten](../../atl/reference/adding-an-atl-active-server-page-component.md)
+

@@ -1,76 +1,79 @@
 ---
-title: "Recordset: Sperren von Datens&#228;tzen (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Daten [C++], Sperren"
-  - "Sperren [C++], Recordsets"
-  - "ODBC-Recordsets [C++], Sperren von Datensätzen"
-  - "Eingeschränktes Sperren"
-  - "Eingeschränktes Sperren, ODBC"
-  - "Eingeschränktes Sperren in ODBC"
-  - "Recordsets [C++], Sperren von Datensätzen"
+title: "Recordset: Sperren von Datensätzen (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- locks [C++], recordsets
+- optimistic locking
+- pessimistic locking in ODBC
+- recordsets [C++], locking records
+- optimistic locking, ODBC
+- ODBC recordsets [C++], locking records
+- data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 76d7ab2df01e485ffff70120609227b9fbae6ac5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: Sperren von Datens&#228;tzen (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="recordset-locking-records-odbc"></a>Recordset: Sperren von Datensätzen (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
  In diesem Thema wird Folgendes erläutert:  
   
--   [Verschiedene Arten, einen Datensatz zu sperren](#_core_record.2d.locking_modes).  
+-   [Die Arten von Datensatz zu sperren](#_core_record.2d.locking_modes).  
   
--   [Sperren von Datensätzen im Recordset während Aktualisierungen](#_core_locking_records_in_your_recordset).  
+-   [Das Sperren von Datensätzen im Recordset während eines Updates](#_core_locking_records_in_your_recordset).  
   
- Wenn Sie mithilfe eines Recordsets einen Datensatz der Datenquelle aktualisieren, kann die Anwendung den Datensatz sperren, sodass kein anderer Benutzer den Datensatz gleichzeitig aktualisieren kann.  Der Zustand eines Datensatzes, der von zwei Benutzern gleichzeitig aktualisiert wurde, ist nicht definiert, solange nicht sichergestellt ist, dass ein Datensatz nicht gleichzeitig von zwei Benutzern aktualisiert werden kann.  
-  
-> [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde.  Falls Sie das gesammelte Abrufen von Zeilen einsetzen, treffen einige dieser Informationen nicht zu.  Sie können z. B. nicht die **Edit\-**Memberfunktion oder die **Update\-**Memberfunktion aufrufen.  Weitere Informationen über das gesammelte Abrufen von Zeilen finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
-  
-##  <a name="_core_record.2d.locking_modes"></a> Sperrverhalten für Datensätze  
- Die Datenbankklassen stellen zwei Arten von [Datensatz\-Sperrverhalten](../Topic/CRecordset::SetLockingMode.md) bereit:  
-  
--   eingeschränktes Sperren \(dies ist der Standard\);  
-  
--   vollständiges Sperren.  
-  
- Die Aktualisierung eines Datensatzes umfasst drei Schritte:  
-  
-1.  Sie starten die Operation durch einen Aufruf der [Edit](../Topic/CRecordset::Edit.md)\-Memberfunktion.  
-  
-2.  Sie ändern die gewünschten Felder des aktuellen Datensatzes.  
-  
-3.  Sie beenden die Operation \(und führen normalerweise einen Commit für die Aktualisierung aus\), indem Sie die [Update](../Topic/CRecordset::Update.md)\-Memberfunktion aufrufen.  
-  
- Beim eingeschränkten Sperren wird der Datensatz in der Datenquelle nur während des **Update**\-Aufrufs gesperrt.  Wenn Sie das eingeschränkte Sperren in einer Mehrbenutzerumgebung verwenden, muss die Anwendung darauf vorbereitet sein, dass während des **Update**\-Aufrufs eine Fehlerbedingung auftreten könnte.  Beim vollständigen Sperren wird der Datensatz gesperrt, sobald Sie **Edit** aufrufen. Die Sperre wird erst wieder aufgehoben, wenn Sie **Update** aufrufen \(Fehler werden über den `CDBException`\-Mechanismus angezeigt, nicht durch Rückgabe von **FALSE** von **Update**\).  Das vollständige Sperren resultiert für andere Benutzer in manchen Fällen in einer Leistungseinbuße, da der Zugriff auf denselben Datensatz möglicherweise so lange verzögert werden muss, bis die Anwendung den **Update**\-Prozess abgeschlossen hat.  
-  
-##  <a name="_core_locking_records_in_your_recordset"></a> Sperren von Datensätzen im Recordset  
- Um das standardmäßige [Sperrverhalten](#_core_record.2d.locking_modes) eines Recordset\-Objekts zu ändern, müssen Sie den Modus noch vor dem Aufruf von **Edit** ändern.  
-  
-#### So ändern Sie das aktuelle Sperrverhalten für das Recordset  
-  
-1.  Rufen Sie die [SetLockingMode](../Topic/CRecordset::SetLockingMode.md)\-Memberfunktion auf, und übergeben Sie ihr entweder den Wert **CRecordset::pessimistic** oder **CRecordset::optimistic**.  
-  
- Das neue Sperrverhalten wird angewendet, bis Sie es erneut ändern oder bis das Recordset geschlossen wird.  
+ Wenn Sie ein Recordset verwenden, um einen Datensatz in der Datenquelle zu aktualisieren, kann die Anwendung den Datensatz sperren, sodass kein anderer Benutzer den Datensatz zur gleichen Zeit aktualisiert werden kann. Der Status eines Datensatzes, der von zwei Benutzern gleichzeitig aktualisiert ist nicht definiert, es sei denn, das System garantieren kann, dass einen Datensatz von zwei Benutzern gleichzeitig aktualisiert werden können.  
   
 > [!NOTE]
->  Derzeit wird das vollständige Sperren nur durch verhältnismäßig wenige ODBC\-Treiber unterstützt.  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie das gesammelte Abrufen von Zeilen implementiert haben, einige der Informationen ist nicht relevant. Angenommen, Sie können nicht aufgerufen werden der **bearbeiten** und **Update** Memberfunktionen. Weitere Informationen über das gesammelte finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-## Siehe auch  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Ausführen einer Verknüpfung \(ODBC\)](../../data/odbc/recordset-performing-a-join-odbc.md)   
- [Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+##  <a name="_core_record.2d.locking_modes"></a>Datensatz Sperrverhalten  
+ Die Datenbankklassen bieten zwei [Datensatz Sperrverhalten](../../mfc/reference/crecordset-class.md#setlockingmode):  
+  
+-   Eingeschränktes Sperren (Standard)  
+  
+-   vollständige Sperren  
+  
+ Aktualisieren eines Datensatzes erfolgt in drei Schritten:  
+  
+1.  Starten Sie den Vorgang durch einen Aufruf der [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Memberfunktion.  
+  
+2.  Sie ändern die entsprechenden Feldern des aktuellen Datensatzes.  
+  
+3.  Sie den Vorgang beenden, und normalerweise einen commit für das Update – durch Aufrufen der [aktualisieren](../../mfc/reference/crecordset-class.md#update) Memberfunktion.  
+  
+ Eingeschränktes Sperren sperrt den Datensatz in der Datenquelle nur während der **Update** aufrufen. Bei Verwendung von Parallelität in einer mehrbenutzerumgebung, sollte die Anwendung verarbeiten einer **Update** fehlerbedingung. Eingeschränkte Sperren wird den Datensatz als Sie rufen **bearbeiten** und ist nicht freigegeben werden, bis Sie Aufruf **Update** (Fehler werden angezeigt, über die `CDBException` Mechanismus nicht in einem Abstand von **"False"** zurückgegebenes **Update**). Vollständige Sperren eine Leistungseinbuße für andere Benutzer hat, da es sich bei gleichzeitigen Zugriff auf den gleichen Datensatz möglicherweise warten, bis zur Fertigstellung Ihrer Anwendung **Update** Prozess.  
+  
+##  <a name="_core_locking_records_in_your_recordset"></a>Sperren von Datensätzen im Recordset  
+ Wenn Sie einem Recordset-Objekt ändern möchten [Sperrverhalten](#_core_record.2d.locking_modes) von der Standardeinstellung müssen Sie den Modus ändern, vor dem Aufruf **bearbeiten**.  
+  
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>So ändern Sie das aktuelle Sperrverhalten für das recordset  
+  
+1.  Rufen Sie die [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) -Memberfunktion, entweder **pessimistic** oder **CRecordset:: optimistic**.  
+  
+ Das neue Sperrverhalten bleibt wirksam, bis Sie ihn erneut ändern oder das Recordset geschlossen wird.  
+  
+> [!NOTE]
+>  Nur relativ wenige ODBC-Treiber unterstützen zurzeit pessimistische Sperren.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Ausführen einer Verknüpfung (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)   
+ [Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

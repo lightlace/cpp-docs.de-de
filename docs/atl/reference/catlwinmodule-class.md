@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59f555f129548b3ced008b61364fa4a9900e062d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule-Klasse
 Diese Klasse bietet Unterstützung für ATL Windowing-Komponenten.  
@@ -38,7 +39,7 @@ Diese Klasse bietet Unterstützung für ATL Windowing-Komponenten.
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

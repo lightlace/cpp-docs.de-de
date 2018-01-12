@@ -46,11 +46,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 709e3ac033f72c59732f93b1143886d3b90cbf52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13f358548b7155b281ffd77821b9a413e1e6fb43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 Geben formatierte Daten an einen Stream aus Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
@@ -105,7 +106,7 @@ int _fwprintf_l(
   
  `fwprintf` ist eine Breitzeichen-Version von `fprintf`; in `fwprintf` ist `format` eine Zeichenfolge mit Breitzeichen. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. `fprintf` unterstützt die Ausgabe in einen UNICODE-Stream augenblicklich nicht.  
   
- Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist.  

@@ -1,50 +1,51 @@
 ---
-title: "Moduldefinitionsdateien (.Def)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".DEF-Dateien"
-  - "DEF-Dateien"
-  - "Moduldefinitionsdateien"
+title: Moduldefinitionsdateien (. "Def")-Dateien | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- def files
+- module definition files
+- .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Moduldefinitionsdateien (.Def)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Moduldefinitionsdateien \(**.def**\) versorgen den Linker mit Informationen über Exporte, Attribute und andere Informationen im Hinblick auf das zu verknüpfende Programm.  Eine DEF\-Datei ist besonders beim Erstellen einer DLL von Nutzen.  Da anstelle von Moduldefinitionsanweisungen auch [Linkeroptionen](../../build/reference/linker-options.md) verwendet werden können, sind DEF\-Dateien im Allgemeinen nicht erforderlich.  Sie können auch [\_\_declspec\(dllexport\)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) zur Angabe exportierter Funktionen verwenden.  
+# <a name="module-definition-def-files"></a>Moduldefinitionsdateien (.Def)
+Moduldefinitionsdateien (.def) Geben Sie den Linker mit Informationen über Exporte, Attribute und andere Informationen über das Programm zu verknüpfenden. Eine DEF-Datei ist besonders hilfreich, wenn Sie eine DLL erstellen. Da sind [Optionen des Linkers](../../build/reference/linker-options.md) verwendet werden können statt moduldefinitionsanweisungen, DEF-Dateien sind im Allgemeinen nicht erforderlich. Sie können auch [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) als eine Möglichkeit, geben Sie die exportierten Funktionen.  
   
- Eine DEF\-Datei kann während der Linkerphase mit der Linkeroption [\/DEF \(Moduldefinitionsdatei angeben\)](../../build/reference/def-specify-module-definition-file.md) aufgerufen werden.  
+ Sie können eine DEF-Datei aufrufen, während der Linkerphase mit der [/DEF (Moduldefinitionsdatei festlegen)](../../build/reference/def-specify-module-definition-file.md) (Linkeroption).  
   
- Falls Sie eine EXE\-Datei erstellen, die ohne Exporte auskommt, ist die Ausgabedatei bei Verwendung der DEF\-Datei umfangreicher und wird langsamer geladen.  
+ Wenn Sie eine .exe-Datei, die über keine Exportdaten verfügt erstellen, wird die über eine DEF-Datei Ihrer langsamer und größer Laden der Datei Ausgabe stellen.  
   
- Ein Beispiel finden Sie unter [Exportieren aus einer DLL mithilfe von DEF\-Dateien](../../build/exporting-from-a-dll-using-def-files.md).  
+ Ein Beispiel finden Sie unter [exportieren aus einer DLL mithilfe von DEF-Dateien](../../build/exporting-from-a-dll-using-def-files.md).  
   
- Weitere Informationen finden Sie in den folgenden Abschnitten:  
+ Finden Sie in den folgenden Abschnitten Weitere Informationen:  
   
 -   [Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)  
   
--   [EXPORTS](../../build/reference/exports.md)  
+-   [EXPORTE](../../build/reference/exports.md)  
   
 -   [HEAPSIZE](../../build/reference/heapsize.md)  
   
--   [LIBRARY](../../build/reference/library.md)  
+-   [BIBLIOTHEK](../../build/reference/library.md)  
   
 -   [NAME](../../build/reference/name-c-cpp.md)  
   
--   [SECTIONS](../../build/reference/sections-c-cpp.md)  
+-   [ABSCHNITTE](../../build/reference/sections-c-cpp.md)  
   
 -   [STACKSIZE](../../build/reference/stacksize.md)  
   
@@ -54,7 +55,6 @@ Moduldefinitionsdateien \(**.def**\) versorgen den Linker mit Informationen übe
   
 -   [Reservierte Wörter](../../build/reference/reserved-words.md)  
   
-## Siehe auch  
- [Referenz zur C\/C\+\+\-Erstellung](../../build/reference/c-cpp-building-reference.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)   
- [Frequently Asked Questions on Building](assetId:///56a3bb8f-0181-4989-bab4-a07ba950ab08)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)   
+ [Linkeroptionen](../../build/reference/linker-options.md)  

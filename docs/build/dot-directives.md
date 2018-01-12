@@ -1,50 +1,51 @@
 ---
-title: "Punktdirektiven | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Punktdirektiven in NMAKE"
-  - "NMAKE (Programm), Punktdirektiven"
+title: Dot-Richtlinien | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, dot directives
+- dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9958b13a6f06b0024ec2d4dd304abfe93b16741e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Punktdirektiven
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Punktdirektiven werden außerhalb eines Beschreibungsblockes am Zeilenanfang angegeben.  Punktdirektiven beginnen mit einem Punkt \(. \), auf den ein Doppelpunkt \(:\) folgt.  Leerzeichen und Tabstopps sind zulässig.  Bei den Namen von Punktdirektiven wird die Groß\-\/Kleinschreibung beachtet. Die Namen bestehen aus Großbuchstaben.  
+# <a name="dot-directives"></a>Punktanweisungen
+Punktdirektiven Sie außerhalb eines Blocks von Beschreibung, am Anfang einer Zeile. Punktdirektiven beginnen mit einem Punkt (. ), gefolgt von einem Doppelpunkt (:). Registerkarten "und" Leerzeichen sind zulässig. Punkt-Direktivennamen sind Groß-/Kleinschreibung beachtet und Großbuchstaben.  
   
 |Direktive|Zweck|  
-|---------------|-----------|  
-|**.IGNORE :**|Ignoriert von Befehlen zurückgegebene Exitcodes ungleich null ab der durch die Direktive angegebenen Stelle bis zum Ende des Makefiles.  Standardmäßig wird NMAKE angehalten, wenn ein Befehl einen Exitcode ungleich null zurückgibt.  Mit **\!CMDSWITCHES** kann die Fehlerprüfung wiederhergestellt werden.  Um den Exitcode für einen einzelnen Befehl zu ignorieren, wird der Bindestrichmodifizierer \(**–**\) verwendet.  Mit \/I können Exitcodes für eine gesamte Datei ignoriert werden.|  
-|**.PRECIOUS :** *targets*|Behält *targets* auf dem Datenträger, wenn die Befehle für das Aktualisieren der Ziele angehalten werden. Hat keine Auswirkungen, wenn ein Befehl auf eine Unterbrechung durch Löschen der Datei reagiert.  Die Namen der Ziele werden mit einem oder mehreren Leerzeichen oder Tabstopps getrennt.  Standardmäßig wird ein Ziel von NMAKE gelöscht, wenn ein Build durch STRG\+C oder STRG\+UNTBR unterbrochen wird.  **.PRECIOUS** ist für das gesamte Makefile gültig. Mehrere Spezifikationen sind kumulativ.|  
-|**.SILENT :**|Unterdrückt die Anzeige von ausgeführten Befehlen ab der Stelle der Angabe bis zum Ende des Makefiles.  Standardmäßig werden aufgerufene Befehle angezeigt.  Mit **\!CMDSWITCHES** kann das Echo wiederhergestellt werden.  Um das Echo für einen einzelnen Befehl zu unterdrücken, wird der **@**\-Modifizierer verwendet.  Mit \/S wird das Echo für eine gesamte Datei unterdrückt.|  
-|**.SUFFIXES :** `list`|Listet Erweiterungen für Rückschlussregeln auf, vordefiniert als folgende Dateierweiterungen: .exe .obj .asm .c .cpp .cxx .bas .cbl .for .pas .res .rc .f .f90|  
+|---------------|-------------|  
+|**. IGNORIEREN:**|Ignoriert Exitcodes ungleich NULL zurückgegeben, die von Befehlen, aus dem sie bis zum Ende des Makefiles angegeben ist. Standardmäßig wird NMAKE angehalten, wenn ein Befehl einen Exitcode ungleich NULL zurückgibt. Verwenden Sie zum Wiederherstellen der fehlerüberprüfung **! CMDSWITCHES**. Wenn den Exitcode für einen einzelnen Befehl ignorieren möchten, verwenden Sie den Bindestrich (-)-Modifizierer. Um Exitcodes für eine gesamte Datei ignorieren möchten, verwenden Sie / I.|  
+|**. PRECIOUS:** *Ziele*|Behält *Ziele* auf dem Datenträger, wenn die Befehle, deren Aktualisierung angehalten werden; hat keine Auswirkung, wenn ein Befehl einen Interrupt behandelt, durch Löschen der Datei. Trennen Sie die Zielnamen mit Leerzeichen oder Tabstopps. Standardmäßig löscht NMAKE ein Ziel aus, wenn ein Build, indem Sie STRG + C oder STRG + UNTBR unterbrochen wird. Jede Verwendung von **. WERTVOLLE** gilt für das gesamte Makefile; mehrere Spezifikationen sind kumulativ.|  
+|**. AUTOMATISCHE:**|Unterdrückt die Anzeige von ausgeführten Befehle, aus dem sie bis zum Ende des Makefiles angegeben ist. Standardmäßig zeigt NMAKE die Befehlen verwenden, die ihn aufruft. Verwenden Sie zum Wiederherstellen der Echo **! CMDSWITCHES**. Verwenden Sie zur Eingabe eines einzelnen Befehls zu unterdrücken, die  **@**  Modifizierer. Um die Eingabe für eine gesamte Datei zu unterdrücken, verwenden Sie/S.|  
+|**. SUFFIXE:**`list`|Führt die Erweiterungen für den Abgleich Rückschlussregel; die folgenden Erweiterungen enthalten vordefinierte: .exe .obj asm .c .cpp .cxx BAS .cbl zurückgegeben .pas Res RC .f .f90|  
   
- Um die Reihenfolge der **.SUFFIXES**\-Liste zu ändern oder eine neue Liste anzugeben, wird die Liste gelöscht und dann eine neue Einstellung angegeben.  Um die Liste zu löschen, werden keine Erweiterungen nach dem Doppelpunkt angegeben:  
+ So ändern Sie die **. SUFFIXE** -Liste zu ändern oder um eine neue Liste angeben, löschen Sie die Liste, und geben Sie eine neue Einstellung. Um die Liste zu löschen, müssen Geben Sie keine Erweiterungen hinter dem Doppelpunkt stehenden an:  
   
 ```  
 .SUFFIXES :  
 ```  
   
- Um dem Ende der Liste zusätzliche Suffixe hinzuzufügen, wird Folgendes angegeben:  
+ Geben Sie zum Hinzufügen von zusätzlichen Suffixe an das Ende der Liste  
   
 ```  
 .SUFFIXES : suffixlist  
 ```  
   
- Bei *suffixlist* handelt es sich um eine Liste mit zusätzlichen Suffixen, die mit einem oder mehreren Leerzeichen oder Tabstopps getrennt sind.  Um die aktuellen Einstellungen von **.SUFFIXES** anzuzeigen, wird NMAKE mit der \/P\-Option gestartet.  
+ wobei *Suffixlist* ist eine Liste der Suffixe durch eine oder mehrere Leerzeichen bzw. Tabstopps getrennt. Um die aktuelle Einstellung der finden Sie unter **. SUFFIXE**, anzuzeigen NMAKE mit  
   
-## Siehe auch  
- [NMAKE\-Referenz](../build/nmake-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [NMAKE-Referenz](../build/nmake-reference.md)

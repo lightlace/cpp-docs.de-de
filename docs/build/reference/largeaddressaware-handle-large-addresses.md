@@ -1,55 +1,56 @@
 ---
-title: "/LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.LargeAddressAware"
-  - "/largeaddressaware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LARGEADDRESSAWARE (Linkeroption)"
-  - "LARGEADDRESSAWARE (Linkeroption)"
-  - "-LARGEADDRESSAWARE (Linkeroption)"
+title: -LARGEADDRESSAWARE (umfangreiche Adressen verarbeiten) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.LargeAddressAware
+- /largeaddressaware
+dev_langs: C++
+helpviewer_keywords:
+- LARGEADDRESSAWARE linker option
+- -LARGEADDRESSAWARE linker option
+- /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ecda14f6faf7230066bb1c2b374ca475cc98cb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten)
 ```  
 /LARGEADDRESSAWARE[:NO]  
 ```  
   
-## Hinweise  
- Die \/LARGEADDRESSAWARE\-Option teilt dem Linker mit, dass die Anwendung Adressen, die größer sind als 2 Gigabyte, verarbeiten kann.  In den 64\-Bit\-Compilern ist diese Option standardmäßig aktiviert.  In den 32\-Bit\-Compilern wird \/LARGEADDRESSAWARE:NO aktiviert, wenn für \/LARGEADDRESSAWARE nichts anderes in der Linkerzeile angegeben wurde.  
+## <a name="remarks"></a>Hinweise  
+ Die Option/LARGEADDRESSAWARE weist den Linker, dass die Anwendung Adressen größer als 2 GB verarbeiten kann. In der 64-Bit-Compilern wird diese Option standardmäßig aktiviert. In der 32-Bit-Compiler ist/LARGEADDRESSAWARE: No aktiviert LARGEADDRESSAWARE in der Linkerzeile nicht anders angegeben ist.  
   
- Wenn eine Anwendung mit **\/LARGEADDRESSAWARE** verknüpft wurde, zeigt **DUMPBIN**[\/HEADERS](../../build/reference/headers.md) diesbezüglich weitere Informationen an.  
+ Wenn eine Anwendung mit LARGEADDRESSAWARE DUMPBIN verknüpft wurde [/Headers](../../build/reference/headers.md) zeigen Informationen zu diesem Zweck.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **System**.  
+3.  Klicken Sie auf die **System** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Große Adressen aktivieren**.  
+4.  Ändern der **große Adressen aktivieren** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

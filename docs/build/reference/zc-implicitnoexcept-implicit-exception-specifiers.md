@@ -1,49 +1,49 @@
 ---
-title: "/Zc:implicitNoexcept (implizite Ausnahmespezifizierer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc:implicitNoexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc:implicitNoexcept"
-  - "Zc:implicitNoexcept"
-  - "-Zc:implicitNoexcept"
+title: '-Zc: ImplicitNoexcept (implizite Ausnahmespezifizierer) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Zc:implicitNoexcept
+dev_langs: C++
+helpviewer_keywords:
+- /Zc:implicitNoexcept
+- Zc:implicitNoexcept
+- -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9af0a7a3a175699a4f4b738271fe0d4c5bbac4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:implicitNoexcept (implizite Ausnahmespezifizierer)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn die **\/Zc:implicitNoexcept**\-Option angegeben ist, fügt der Compiler den speziellen vom Compiler definierten Memberfunktionen und benutzerdefinierten Destruktoren und Deallokatoren einen impliziten [noexcept](../../cpp/noexcept-cpp.md)\-Ausnahmebezeichner hinzu.  **\/Zc:implicitNoexcept** ist gemäß dem ISO\-Standard C\+\+11 standardmäßig aktiviert.  Durch Deaktivieren dieser Option wird für das implizite `noexcept`\-Element für benutzerdefinierte Destruktoren und Deallokatoren und die speziellen vom Compiler definierten Memberfunktionen deaktiviert.  
+# <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (implizite Ausnahmespezifizierer)
+Wenn die **/Zc: implicitnoexcept** angegeben wird, der Compiler Fügt eine implizite [Noexcept](../../cpp/noexcept-cpp.md) -ausnahmebezeichner Compiler definiert spezielle Memberfunktionen und benutzerdefinierten Destruktoren und deallokatoren. Standardmäßig **/Zc: implicitnoexcept** ist aktiviert, um dem ISO-C ++ 11-standard entsprechen. Durch Deaktivieren dieser Option wird für das implizite `noexcept`-Element für benutzerdefinierte Destruktoren und Deallokatoren und die speziellen vom Compiler definierten Memberfunktionen deaktiviert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```vb  
+```cpp  
 /Zc:implicitNoexcept[-]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
-## Hinweise  
- In der Standardeinstellung und wenn **\/Zc:implicitNoexcept** angegeben ist, folgt der Compiler dem Abschnitt 15.4 des ISO\-Standards C\+\+11 und fügt jeder implizit deklarierten oder explizit als Standard festgelegten speziellen Memberfunktion – dem Standardkonstruktor, Kopierkonstruktor, Bewegungskonstruktor, Destruktor, Kopierzuweisungsoperator oder dem Bewegungszuweisungsoperator – und jeder benutzerdefinierten Destruktor\- oder Deallokatorfunktion implizit einen `noexcept`\-Ausnahmebezeichner hinzu.  Ein benutzerdefinierter Deallokator verfügt über einen impliziten `noexcept(true)`\-Ausnahmebezeichner.  Für benutzerdefinierte Destruktoren ist `noexcept(true)` der implizite Ausnahmebezeichner, es sei denn eine enthaltene Elementklasse oder Basisklasse weist einen Destruktor auf, der nicht `noexcept(true)` ist.  Für vom Compiler generierte spezielle Memberfunktionen ist `noexcept(false)` der implizite Ausnahmebezeichner, wenn eine von dieser Funktion aufgerufene Funktion `noexcept(false)` ist.  Andernfalls ist `noexcept(true)` der implizite Ausnahmebezeichner.  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig wird **/Zc: implicitnoexcept** angegeben wird, der Compiler folgt Abschnitt 15.4 des ISO-standard C ++ 11 und fügt implizit eine `noexcept` -ausnahmebezeichner jeder implizit deklarierten oder explizit vorgegebene spezielle Memberfunktion – dem Standardkonstruktor, Kopierkonstruktor, bewegungskonstruktor, Destruktor, Kopierzuweisungsoperator oder bewegungszuweisungsoperator – und jeder benutzerdefinierten Destruktor- oder deallokatorfunktion-Funktion. Ein benutzerdefinierter Deallokator verfügt über einen impliziten `noexcept(true)`-Ausnahmebezeichner. Für benutzerdefinierte Destruktoren ist `noexcept(true)` der implizite Ausnahmebezeichner, es sei denn eine enthaltene Elementklasse oder Basisklasse weist einen Destruktor auf, der nicht `noexcept(true)` ist. Für vom Compiler generierte spezielle Memberfunktionen ist `noexcept(false)` der implizite Ausnahmebezeichner, wenn eine von dieser Funktion aufgerufene Funktion `noexcept(false)` ist. Andernfalls ist `noexcept(true)` der implizite Ausnahmebezeichner.  
   
- Für Funktionen, die mit expliziten `noexcept`\- oder `throw`\-Bezeichnern oder einem `__declspec(nothrow)`\-Attribut deklariert wurden, generiert der Compiler keinen impliziten Ausnahmebezeichner.  
+ Für Funktionen, die mit expliziten `noexcept`- oder `throw`-Bezeichnern oder einem `__declspec(nothrow)`-Attribut deklariert wurden, generiert der Compiler keinen impliziten Ausnahmebezeichner.  
   
- Wenn diese Option durch Angabe von **\/Zc:implicitNoexcept\-** deaktiviert ist, werden keine impliziten Ausnahmebezeichner vom Compiler generiert.  Dieses Verhalten ist mit dem in Visual Studio 2013 identisch, wo Destruktoren und Deallokatoren ohne Ausnahmebezeichner über `throw`\-Anweisungen verfügen können.  In der Standardeinstellung und wenn **\/Zc:implicitNoexcept** angegeben ist, wird bei Feststellung einer `throw`\-Anweisung in einer Funktion mit einem impliziten `noexcept(true)`\-Bezeichner zur Laufzeit unmittelbar `std::terminate` aufgerufen, und es kann kein normales Entladungsverhalten für Ausnahmehandler garantiert werden.  Wenn dieser Fall auftritt, generiert der Compiler die [Compilerwarnung \(Stufe 1\) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md).  Wenn `throw` beabsichtigt ist, wird empfohlen, die Funktionsdeklaration so zu ändern, dass sie einen `noexcept(false)`\-Bezeichner enthält, statt **\/Zc:implicitNoexcept\-** zu verwenden.  
+ Wenn die Option, durch Angabe deaktiviert ist **/Zc:implicitNoexcept-**, werden keine impliziten ausnahmebezeichner vom Compiler generiert. Dieses Verhalten ist mit dem in Visual Studio 2013 identisch, wo Destruktoren und Deallokatoren ohne Ausnahmebezeichner über `throw`-Anweisungen verfügen können. Standardmäßig und wann **/Zc: implicitnoexcept** angegeben wird, wenn eine `throw` Anweisung gefunden wird, zur Laufzeit in eine Funktion mit einem impliziten `noexcept(true)` Formatbezeichner, wird eine sofortige Aufrufen von `std::terminate`, und normales entladungsverhalten für Ausnahmehandler wird nicht garantiert. Um diese Situation zu identifizieren, generiert der Compiler [Compilerwarnung (Stufe 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Wenn die `throw` ist beabsichtigt ist, sollten Sie ändern die Funktionsdeklaration aus, um eine explizite `noexcept(false)` Spezifizierer anstatt **/Zc:implicitNoexcept-**.  
   
- In diesem Beispiel wird das Verhalten eines benutzerdefinierten Destruktors ohne expliziten Ausnahmebezeichner veranschaulicht, wenn die **\/Zc:implicitNoexcept**\-Option festgelegt oder deaktiviert ist.  Kompilieren Sie zur Veranschaulichung des Verhaltens, wenn diese festgelegt ist, mithilfe von `cl /EHsc /W4 implicitNoexcept.cpp`.  Kompilieren Sie zur Veranschaulichung des Verhaltens, wenn diese deaktiviert ist, mithilfe von `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.  
+ Dieses Beispiel zeigt, wie ein benutzerdefinierte Destruktor, der keine expliziten ausnahmebezeichner Wenn verhält sich die **/Zc: implicitnoexcept** Option festgelegt oder deaktiviert ist. Das Verhalten bei der Einstellung, kompilieren Sie mit `cl /EHsc /W4 implicitNoexcept.cpp`. Um das Verhalten bei deaktivierter anzuzeigen, kompilieren Sie mit `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.  
   
 ```  
 // implicitNoexcept.cpp  
@@ -120,28 +120,36 @@ int main()
   
 ```  
   
- Beim Kompilieren mit der Standardeinstellung **\/Zc:implicitNoexcept** wird mit dem Beispiel die folgende Ausgabe generiert:  
+ Beim Kompilieren mit der Standardeinstellung **/Zc: implicitnoexcept**, im Beispiel die folgende Ausgabe generiert:  
   
-  **~B Exception caught**  
-**Unexpected throw caused std::terminate**  
-**Exit returning EXIT\_FAILURE** Beim Kompilieren mit der Einstellung **\/Zc:implicitNoexcept\-** wird mit dem Beispiel die folgende Ausgabe generiert:  
+```Output  
+~B Exception caught  
+Unexpected throw caused std::terminate  
+Exit returning EXIT_FAILURE  
+```  
   
-  **~B Exception caught**  
-**~D Exception caught**  
-**Exit returning EXIT\_SUCCESS** Weitere Informationen über Konformitätsprobleme in Visual C\+\+ finden Sie unter [Nicht dem Standard entsprechendes Verhalten](../../cpp/nonstandard-behavior.md).  
+ Beim Kompilieren mit der Einstellung **/Zc:implicitNoexcept-**, im Beispiel die folgende Ausgabe generiert:  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+```Output  
+~B Exception caught  
+~D Exception caught  
+Exit returning EXIT_SUCCESS  
+```  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-2.  Wählen Sie den Ordner **C\/C\+\+** aus.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-3.  Wählen Sie die Eigenschaftenseite **Befehlszeile** aus.  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-4.  Ändern Sie die Eigenschaft **Zusätzliche Optionen** so, dass **\/Zc:implicitNoexcept** oder **\/Zc:implicitNoexcept\-** eingeschlossen wird, und wählen Sie dann **OK**.  
+2.  Wählen Sie die **C/C++-** Ordner.  
   
-## Siehe auch  
- [\/Zc \(Übereinstimmung\)](../../build/reference/zc-conformance.md)   
+3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
+  
+4.  Ändern der **Zusatzoptionen** Eigenschaft einschließen **/Zc: implicitnoexcept** oder **/Zc:implicitNoexcept-** und wählen Sie dann **OK**.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)   
  [noexcept](../../cpp/noexcept-cpp.md)   
- [Ausnahmespezifikationen \(throw\)](../../cpp/exception-specifications-throw-cpp.md)   
- [terminate](../Topic/terminate%20\(%3Cexception%3E\).md)
+ [Ausnahmespezifikationen (Throw)](../../cpp/exception-specifications-throw-cpp.md)   
+ [terminate](../../standard-library/exception-functions.md#terminate)

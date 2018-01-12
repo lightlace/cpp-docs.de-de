@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0a6e811e1fe074ce488b09fca29926989bc7f355
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primary-expressions"></a>Primäre Ausdrücke
 Primäre Ausdrücke sind die Bausteine für komplexere Ausdrücke. Es handelt sich um Literale, Namen und Namen, die vom Bereichsauflösungsoperator (`::`) qualifiziert werden.  Ein primärer Ausdruck kann jede der folgenden Formen haben:  
@@ -42,7 +40,7 @@ Primäre Ausdrücke sind die Bausteine für komplexere Ausdrücke. Es handelt si
   
  Die **dies** -Schlüsselwort ist ein Zeiger auf ein Klassenobjekt. Es ist innerhalb von nicht statische Memberfunktionen verfügbar und zeigt auf die Instanz der Klasse, für die die Funktion aufgerufen wurde. Die **dies** Schlüsselwort kann nicht außerhalb des Texts eine Klassenmemberfunktion verwendet werden.  
   
- Der Typ des der **dies** Zeiger ist `type` ** \*const** (, in denen `type` der Klassenname ist) innerhalb von Funktionen, die nicht speziell ändern die **dieser** Zeiger. Das folgende Beispiel zeigt Member Funktionsdeklarationen und die Typen von **dies**:  
+ Der Typ des der **dies** Zeiger ist `type`  **\*const** (, in denen `type` der Klassenname ist) innerhalb von Funktionen, die nicht speziell ändern die **dieser** Zeiger. Das folgende Beispiel zeigt Member Funktionsdeklarationen und die Typen von **dies**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

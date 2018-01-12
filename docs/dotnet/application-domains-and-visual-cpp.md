@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57a45bd6f73040623fe90626b1c3896df3258dd8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a66731b9645458441f1c3e1f211c74be698e7231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-domains-and-visual-c"></a>Anwendungsdomänen und Visual C++
 Wenn Sie haben eine `__clrcall` virtuelle Funktion, werden die Vtable pro Anwendungsdomäne (Appdomain). Wenn Sie ein Objekt in einer Appdomain erstellen, können Sie nur die virtuelle Funktion von innerhalb dieser Appdomain aufrufen. Alle Funktionen in **/CLR: pure** Compilands verwenden die `__clrcall` Aufrufkonvention. Aus diesem Grund alle v-Tabellen definiert, **/CLR: pure** Compilands sind pro-Appdomain. Im gemischten Modus (**"/ CLR"**) müssen pro Prozess-v-Tabellen, wenn der Typ keine enthält `__clrcall` virtuelle Funktionen. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  

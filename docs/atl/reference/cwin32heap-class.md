@@ -1,11 +1,10 @@
 ---
-title: Klasse CWin32Heap | Microsoft-Dokumentation
+title: CWin32Heap-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,41 +19,25 @@ f1_keywords:
 - ATLMEM/ATL::CWin32Heap::Reallocate
 - ATLMEM/ATL::CWin32Heap::m_bOwnHeap
 - ATLMEM/ATL::CWin32Heap::m_hHeap
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWin32Heap class
+dev_langs: C++
+helpviewer_keywords: CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 407f777b52529a333251c7d00481fdbfb14db619
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap-Klasse
-Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der Win32-Heapreservierungsfunktionen.  
+Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe von Win32-Heapreservierungsfunktionen.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +45,7 @@ Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)
 class CWin32Heap : public IAtlMemMgr
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -75,22 +58,22 @@ class CWin32Heap : public IAtlMemMgr
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CWin32Heap::Allocate](#allocate)|Führt eine Belegung eines Speicherblocks vom Heapobjekt durch.|  
-|[CWin32Heap:: Attach](#attach)|Fügt die heapobjekt an ein vorhandenes Heap.|  
-|[CWin32Heap::Detach](#detach)|Trennt die heapobjekt aus einem vorhandenen Heap.|  
-|[CWin32Heap::Free](#free)|Zuvor aus dem Heap zugeordneten Arbeitsspeicher frei.|  
-|[CWin32Heap::GetSize](#getsize)|Gibt die Größe des Objekts Heap belegten Speicherblocks zurück.|  
-|[CWin32Heap::Reallocate](#reallocate)|Führt eine Neubelegung eines Speicherblocks vom Heapobjekt durch.|  
+|[CWin32Heap:: Allocate](#allocate)|Führt eine Belegung eines Speicherblocks vom Heapobjekt durch.|  
+|[CWin32Heap:: Attach](#attach)|Fügt das heapobjekt in einem vorhandenen Heap an.|  
+|[CWin32Heap::Detach](#detach)|Trennt das heapobjekt aus einem vorhandenen Heap an.|  
+|[CWin32Heap:: Free](#free)|Zuvor aus dem Heap reserviert Speicher frei.|  
+|[CWin32Heap::GetSize](#getsize)|Gibt die Größe eines Speicherblocks vom heapobjekt zugeordnet.|  
+|[CWin32Heap:: ReAllocate](#reallocate)|Führt eine Neubelegung eines Speicherblocks vom Heapobjekt durch.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Ein Flag, das zum Ermitteln der aktuellen Besitzer des Heap-Handles.|  
+|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Ein Flag verwendet, um die aktuellen Besitzverhältnisse des Heap-Handles zu bestimmen.|  
 |[CWin32Heap::m_hHeap](#m_hheap)|Handle für den heapobjekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CWin32Heap`Arbeitsspeicher-Zuordnungsmethoden mit Win32 Heapreservierungsfunktionen, einschließlich implementiert [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) und [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Im Gegensatz zu anderen Klassen Heap `CWin32Heap` muss einem gültigen Heaphandle bereitgestellt werden, bevor der Speicher belegt wird: der andere Klassen die standardmäßig den Prozessheap. Das Handle kann angegeben werden, an den Konstruktor oder in der [CWin32Heap:: Attach](#attach) Methode. Finden Sie unter der [CWin32Heap::CWin32Heap](#cwin32heap) Methode für weitere Details.  
+ `CWin32Heap`Arbeitsspeicher-Zuordnungsmethoden mit Win32 Heapreservierungsfunktionen, einschließlich implementiert [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) und [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Im Gegensatz zu anderen Klassen Heap `CWin32Heap` muss einem gültigen Heaphandle bereitgestellt werden, bevor der Speicher belegt wird: der andere Klassen standardmäßig den Prozessheap. Das Handle kann angegeben werden, an den Konstruktor oder auf die [CWin32Heap:: Attach](#attach) Methode. Finden Sie unter der [CWin32Heap::CWin32Heap](#cwin32heap) Methode für die weitere Details.  
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -103,7 +86,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlmem.h  
   
-##  <a name="allocate"></a>CWin32Heap::Allocate  
+##  <a name="allocate"></a>CWin32Heap:: Allocate  
  Führt eine Belegung eines Speicherblocks vom Heapobjekt durch.  
   
 ```
@@ -118,12 +101,12 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
  Gibt einen Zeiger auf den neu belegten Speicherblock zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie [CWin32Heap::Free](#free) oder [CWin32Heap::Reallocate](#reallocate) , die von dieser Methode belegten Arbeitsspeicher freizugeben.  
+ Rufen Sie [CWin32Heap:: Free](#free) oder [CWin32Heap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
   
  Implementiert mit [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
   
 ##  <a name="attach"></a>CWin32Heap:: Attach  
- Fügt die heapobjekt an ein vorhandenes Heap.  
+ Fügt das heapobjekt in einem vorhandenen Heap an.  
   
 ```
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
@@ -134,10 +117,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
  Ein vorhandenes Heaphandle.  
   
  `bTakeOwnership`  
- Ein Flag gibt an, wenn die `CWin32Heap` Objekt besteht darin, den Besitz über die Ressourcen des Heaps.  
+ Ein Flag, das angibt, wenn die `CWin32Heap` Objekt ist in Besitz zu nehmen, über die Ressourcen des Heaps.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bTakeOwnership` true festgelegt ist, wird die `CWin32Heap` -Objekt ist verantwortlich für das Löschen des Heap-Handles.  
+ Wenn `bTakeOwnership` ist "true", die `CWin32Heap` -Objekt ist verantwortlich für das Handle des Heaps zu löschen.  
   
 ##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
  Der Konstruktor.  
@@ -167,19 +150,19 @@ CWin32Heap(
 ### <a name="remarks"></a>Hinweise  
  Vor dem Zuordnen von Speicher muss das `CWin32Heap`-Objekt mit einem gültigen Heaphandle bereitgestellt werden. Das geht am einfachsten mit dem Prozessheap:  
   
- [!code-cpp[NVC_ATL_Utilities&#92;](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]  
   
  Es ist auch möglich, ein vorhandenes Heaphandle an den Konstruktor auszugeben; in diesem Fall übernimmt das neue Objekt nicht Besitz des Heaps. Wenn das `CWin32Heap`-Objekt gelöscht wird, ist das ursprüngliche Heaphandle weiterhin gültig.  
   
- Ein vorhandenes Heap kann auch angefügt werden, auf das neue Objekt mit [CWin32Heap:: Attach](#attach).  
+ Einem vorhandenen Heap kann auch angefügt werden, auf das neue Objekt mit [CWin32Heap:: Attach](#attach).  
   
  Wenn ein Heap erforderlich ist, in dem alle Operationen von einem einzigen Thread ausgeführt werden, empfiehlt es sich, das Objekt folgendermaßen zu erstellen:  
   
- [!code-cpp[NVC_ATL_Utilities&#93;](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#93](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]  
   
- Der Parameter **HEAP_NO_SERIALIZE** gibt an, dass der gegenseitiger Ausschluss nicht verwendet wird, wenn die Heapfunktionen zuordnen und Freigeben von Arbeitsspeicher, mit der sich die Leistung in.  
+ Der Parameter **HEAP_NO_SERIALIZE** gibt an, dass die gegenseitiger Ausschluss nicht verwendet wird, wenn die Heapfunktionen reservieren und Freigeben von Arbeitsspeicher, mit einer entsprechenden Erhöhung der Leistung.  
   
- Der dritte Parameter beträgt standardmäßig 0; dadurch kann das Heap nach Bedarf vergrößert werden. Finden Sie unter [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) eine Erläuterung der Speichergrößen und Flags.  
+ Der dritte Parameter beträgt standardmäßig 0; dadurch kann das Heap nach Bedarf vergrößert werden. Finden Sie unter [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) eine Erläuterung der Arbeitsspeichergrößen und Kennzeichen.  
   
 ##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
  Der Destruktor.  
@@ -189,10 +172,10 @@ CWin32Heap(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Handle des Heaps zerstört, wenn die `CWin32Heap` Objekt hat den Besitz des Heaps.  
+ Zerstört das Handle des Heaps, wenn die `CWin32Heap` Objekt hat den Besitz des Heaps.  
   
 ##  <a name="detach"></a>CWin32Heap::Detach  
- Trennt die heapobjekt aus einem vorhandenen Heap.  
+ Trennt das heapobjekt aus einem vorhandenen Heap an.  
   
 ```
 HANDLE Detach() throw();
@@ -201,8 +184,8 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt das Handle für den Heap, den das Objekt bereits vorher angefügt wurde.  
   
-##  <a name="free"></a>CWin32Heap::Free  
- Zuvor aus dem Heap vom zugeordneten Arbeitsspeicher frei [CWin32Heap::Allocate](#allocate) oder [CWin32Heap::Reallocate](#reallocate).  
+##  <a name="free"></a>CWin32Heap:: Free  
+ Zuvor aus dem Heap durch zugewiesene Arbeitsspeicher freigegeben [CWin32Heap:: Allocate](#allocate) oder [CWin32Heap:: ReAllocate](#reallocate).  
   
 ```
 virtual void Free(void* p) throw();
@@ -210,10 +193,10 @@ virtual void Free(void* p) throw();
   
 ### <a name="parameters"></a>Parameter  
  `p`  
- Zeiger auf den Speicherblock freizugeben. NULL ist ein gültiger Wert, und es wird keine Aktion ausgeführt.  
+ Ein Zeiger auf den Speicherblock freizugeben. NULL ist ein gültiger Wert, und es wird keine Aktion ausgeführt.  
   
 ##  <a name="getsize"></a>CWin32Heap::GetSize  
- Gibt die Größe des Objekts Heap belegten Speicherblocks zurück.  
+ Gibt die Größe eines Speicherblocks vom heapobjekt zugeordnet.  
   
 ```
 virtual size_t GetSize(void* p) throw();
@@ -221,13 +204,13 @@ virtual size_t GetSize(void* p) throw();
   
 ### <a name="parameters"></a>Parameter  
  `p`  
- Zeiger auf den Speicherblock, deren Größe die Methode erhält. Dies ist ein Zeiger, der von zurückgegebene [CWin32Heap::Allocate](#allocate) oder [CWin32Heap::Reallocate](#reallocate).  
+ Zeiger zum Speicherblock, deren Größe die Methode erhält. Dies ist ein Zeiger zurückgegebenes [CWin32Heap:: Allocate](#allocate) oder [CWin32Heap:: ReAllocate](#reallocate).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Größe des belegten Speicherblocks in Bytes zurück.  
   
 ##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
- Ein Flag, das zum Ermitteln der aktuellen Besitzer des Heap-Handles, die in gespeicherten [M_hHeap](#m_hheap).  
+ Ein Flag, das zum Ermitteln der aktuellen Besitzverhältnisse des Heap-Handles, die in gespeicherten [M_hHeap](#m_hheap).  
   
 ```
 bool m_bOwnHeap;
@@ -241,9 +224,9 @@ HANDLE m_hHeap;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Variable verwendet, um ein Handle für den heapobjekt zu speichern.  
+ Eine Variable verwendet, um ein Handle für das heapobjekt zu speichern.  
   
-##  <a name="reallocate"></a>CWin32Heap::Reallocate  
+##  <a name="reallocate"></a>CWin32Heap:: ReAllocate  
  Führt eine Neubelegung eines Speicherblocks vom Heapobjekt durch.  
   
 ```
@@ -261,13 +244,12 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
  Gibt einen Zeiger auf den neu belegten Speicherblock zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `p` NULL ist, wird davon ausgegangen, dass der Speicherblock noch nicht zugeordnet wurde und [CWin32Heap::Allocate](#allocate) aufgerufen wird, mit dem Argument `nBytes`.  
+ Wenn `p` NULL ist, es wird davon ausgegangen, dass der Speicherblock noch nicht belegt wurde und [CWin32Heap:: Allocate](#allocate) aufgerufen wird, mit dem Argument `nBytes`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)   
  [IAtlMemMgr-Klasse](../../atl/reference/iatlmemmgr-class.md)   
- [CLocalHeap-Klasse](../../atl/reference/clocalheap-class.md)   
+ [Clocalheap – Klasse](../../atl/reference/clocalheap-class.md)   
  [CGlobalHeap-Klasse](../../atl/reference/cglobalheap-class.md)   
  [CCRTHeap-Klasse](../../atl/reference/ccrtheap-class.md)   
  [CComHeap-Klasse](../../atl/reference/ccomheap-class.md)
-

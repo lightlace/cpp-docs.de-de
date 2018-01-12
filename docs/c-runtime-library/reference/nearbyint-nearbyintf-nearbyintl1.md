@@ -43,11 +43,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d95f92d15dcf4b8baf84b762b994bdb52930346d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 Rundet den angegebenen Gleitkommawert auf eine ganze Zahl und gibt diesen Wert in einem Gleitkommaformat zurück.  
@@ -86,8 +87,8 @@ long double nearbyintl(
   
 |Problem|Zurück|  
 |-----------|------------|  
-|`x` = ±INFINITY|±INFINITY, unverändert|  
-|`x` = ±0|±0, unverändert|  
+|`x`= ±INFINITY|±Infinity, unverändert bleiben sollen|  
+|`x` = ±0|±0, unverändert bleiben sollen|  
 |`x` = NaN|NaN|  
   
  Fehler werden nicht über [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet. Diese Funktion meldet vor allem keine FE_INEXACT-Ausnahmen.  

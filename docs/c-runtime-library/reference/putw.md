@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b942b2d1e8e7422d0bec9fbc1f1b70330b5d6ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bca1143f123b0092266f7a314ac0c863779950ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putw"></a>_putw
 Schreibt eine ganze Zahl in einen Stream.  
@@ -71,14 +72,14 @@ Schreibt eine ganze Zahl in einen Stream.
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_putw`|\<stdio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -119,5 +120,5 @@ Wrote ten words
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [E/A-Stream](../../c-runtime-library/stream-i-o.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [_getw](../../c-runtime-library/reference/getw.md)

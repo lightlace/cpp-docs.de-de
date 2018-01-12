@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Ausnahmespezifikationen (Throw, Noexcept) (C++)
 Ausnahmespezifikationen sind eine Sprachfunktion in C++, die der Programmierer die Ausnahmetypen angeben, die von einer Funktion weitergegeben werden können. Sie können angeben, dass eine Funktion kann nicht mithilfe von einer Ausnahme beendet ggf. ein *Ausnahmespezifikation*. Der Compiler kann diese Informationen verwenden, um die Aufrufe an die Funktion zu optimieren und versieht die Funktion zum Beenden des Programms, wenn eine unerwartete Ausnahme. Es gibt zwei Arten von Ausnahmespezifikation. Die *Noexcept-Spezifikation* ist neu in C ++ 11. Es gibt an, ob der Satz der möglichen Ausnahmen, die überwechseln können, dass Sie die Funktion leer ist. Die *dynamische Ausnahmespezifikation*, oder `throw(optional_type_list)` -Spezifikation ist in C ++ 11 veraltet und wird von Visual Studio nur teilweise unterstützt. Diese Ausnahmespezifikation wurde entworfen, um zusammenfassende Informationen dazu, welche Ausnahmen können, aus einer Funktion ausgelöst werden bereitzustellen, aber in der Praxis befand er sich problematisch sein. Eine dynamische Ausnahmespezifikation, die sich als nützlich erwies wurde die unbedingte `throw()` Spezifikation. Um beispielsweise die Funktionsdeklaration:  

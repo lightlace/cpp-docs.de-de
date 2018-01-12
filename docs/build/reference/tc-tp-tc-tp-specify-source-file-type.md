@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3b7508bf3ff65e27cab3260577d2831de00eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69ccd08967d386780744fb85476033430127ba3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Typ der Quelldatei angeben)
 Die **/TC** Option gibt an, dass `filename` eine C-Quelldatei ist, auch wenn sie nicht über eine c-Erweiterung verfügt. Die **/TP** Option gibt an, dass `filename` eine C++-Quelldatei ist, auch wenn sie eine Erweiterung .cpp oder .cxx besitzt. Ein Leerzeichen zwischen der Option und `filename` ist optional. Jede Option gibt eine Datei an. Wiederholen Sie die Option, um zusätzliche Dateien anzugeben.  

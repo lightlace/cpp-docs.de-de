@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
 - external_cpp
 - static_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- storage classes [C++], basic concepts
+dev_langs: C++
+helpviewer_keywords: storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Speicherklassen (C++)  
   
@@ -221,14 +218,12 @@ void DoSomething()
 ```  
   
 Dinge zu beachten Sie die `thread_local` Bezeichner:  
+
+- Dynamisch initialisierte Thread-lokalen Variablen in DLLs können für alle aufrufenden Threads nicht ordnungsgemäß initialisiert werden. Weitere Informationen finden Sie unter [Thread](thread.md).
   
 -  Die `thread_local` Bezeichner kann mit kombiniert werden `static` oder `extern`.  
   
 -  Sie können anwenden `thread_local` nur auf Datendeklarationen und-Definitionen; `thread_local` kann nicht für Funktionsdeklarationen oder-Definitionen verwendet werden.  
-  
--  Die Verwendung von `thread_local` beeinträchtigen möglicherweise [das verzögerte Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL-Importen. 
-  
--  Auf XP-Systemen `thread_local` möglicherweise nicht ordnungsgemäß, wenn eine DLL verwendet `thread_local` Daten und dynamisch über geladen wird `LoadLibrary`.  
   
 -  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl `static` und `extern`), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; also am Blockbereich `thread_local` entspricht `thread_local static`. 
   
@@ -329,4 +324,3 @@ Es gibt einige Punkte zu beachten über das Programm:
 ## <a name="see-also"></a>Siehe auch  
   
  [Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)
-

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8492610721846e8252cbe71b358e428a2aaf024f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3d22a5c3f20480d1e904ec8e087114385ba7ee9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varargs"></a>VarArgs
 Wenn Parameter über Varargs (z. B. mit den Auslassungspunkten Argumente) übergeben werden, gilt im Wesentlichen die normale Parameter übergeben, einschließlich Überlaufs die fünfte und nachfolgende Argumente. Es wird erneut die aufgerufene Dump-Argumenten, deren Adresse akzeptiert haben. Nur Gleitkommawerte werden die ganze Zahl und die Gleitkommaregister enthalten, wenn von der aufgerufene den Wert in der Ganzzahlregister erwartet.  

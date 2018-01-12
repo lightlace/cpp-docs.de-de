@@ -1,32 +1,33 @@
 ---
-title: "BLOB_NAME_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BLOB_NAME_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB_NAME_LENGTH-Makro"
+title: BLOB_NAME_LENGTH | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BLOB_NAME_LENGTH
+dev_langs: C++
+helpviewer_keywords: BLOB_NAME_LENGTH macro
 ms.assetid: 38150260-a127-486d-a7ab-0d01b731b6fd
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 66037fdb217585096a5251039205eb3e0b208faa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# BLOB_NAME_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wird mit `BEGIN_COLUMN_MAP` und `END_COLUMN_MAP`, um ein Binary Large Object \([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)\) zu binden.  Wie auch [BLOB\_NAME](../../data/oledb/blob-name.md), außer dass zu diesem Makro ruft auch Längen in Bytes in der BLOBdatenspalte ab.  
+# <a name="blobnamelength"></a>BLOB_NAME_LENGTH
+Mit verwendet `BEGIN_COLUMN_MAP` und `END_COLUMN_MAP` binden ein binary large Object ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass Sie dieses Makro auch die Länge in Bytes der BLOB-Spalte erhält.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -42,30 +43,30 @@ data
 length )  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pszName`  
- \[in\] Ein Zeiger auf den Spaltennamen.  Der Name muss eine Unicode\-Zeichenfolge sein.  Sie können dies bewerkstelligen, indem Sie "L" vor dem Namen, zum Beispiel einfügen: `L"MyColumn"`.  
+ [in] Ein Zeiger auf den Namen der Spalte. Der Name muss eine Unicode-Zeichenfolge sein. Sie können dies bewerkstelligen, verlegen Sie eine "L" vor dem Namen, z. B.: `L"MyColumn"`.  
   
- *IIDs*  
- \[in\] GUID schließen Sie, wie **IDD\_ISequentialStream** an, verwendet, um das BLOB abzurufen.  
+ *IID*  
+ [in] Schnittstellen-GUID, wie z. B. **IDD_ISequentialStream**, mit denen das BLOB abrufen.  
   
  `flags`  
- \[in\] Flags Speicher\-Modus, wie vom OLE strukturierte Speichermodell, \(beispielsweise **STGM\_READ**\) definiert.  
+ [in] Vom OLE Structured Storage Modell definierte Speichermodus flags (z. B. **STGM_READ**).  
   
  `data`  
- \[in\] der entsprechenden Datenmember im Benutzerdatensatz.  
+ [in] Die entsprechenden Datenmember im Benutzerdatensatz.  
   
  *length*  
- \[out\] Die \(tatsächliche\) Länge in Bytes der BLOBspalte.  
+ [out] Die (tatsächlich) Länge in Bytes der BLOB-Spalte.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [Makros und globale Funktionen für OLE\-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [BLOB\_NAME](../../data/oledb/blob-name.md)   
- [BLOB\_NAME\_LENGTH\_STATUS](../../data/oledb/blob-name-length-status.md)   
- [BLOB\_NAME\_STATUS](../../data/oledb/blob-name-status.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Funktionen für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [BLOB_NAME](../../data/oledb/blob-name.md)   
+ [BLOB_NAME_LENGTH_STATUS](../../data/oledb/blob-name-length-status.md)   
+ [BLOB_NAME_STATUS](../../data/oledb/blob-name-status.md)

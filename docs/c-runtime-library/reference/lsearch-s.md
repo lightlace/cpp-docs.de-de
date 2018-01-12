@@ -38,11 +38,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb44e7b2c79b1e8719768634bfe028207b9e8d11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Führt eine lineare Suche für einen Wert aus. Eine Version von [_lsearch](../../c-runtime-library/reference/lsearch.md) mit Sicherheitserweiterungen, so wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -88,13 +89,13 @@ void *_lsearch_s(
   
 |`key`|`base`|`compare`|`num`|`size`|`errno`|  
 |-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|alle|alle|alle|alle|`EINVAL`|  
-|alle|`NULL`|alle|!= 0|alle|`EINVAL`|  
-|alle|alle|alle|any|Null|`EINVAL`|  
-|any|alle|`NULL`|ein|alle|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|Null|`EINVAL`|  
+|any|any|`NULL`|ein|alle|`EINVAL`|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_lsearch_s`-Funktion führt eine lineare Suche nach dem Wert `key` in einem Array aus `num`-Elementen durch, die jeweils aus `width`-Bytes bestehen. Im Gegensatz zu `bsearch_s`, muss bei `_lsearch_s` kein Array sortiert werden. Wenn `key` nicht gefunden wird, dann fügt `_lsearch_s` es am Ende des Arrays hinzu und inkrementiert `num`.  
+ Die `_lsearch_s`-Funktion führt eine lineare Suche nach dem Wert `key` in einem Array aus `num`-Elementen durch, die jeweils aus `width`-Bytes bestehen. Im Gegensatz zu `bsearch_s` muss bei `_lsearch_s` kein Array sortiert werden. Wenn `key` nicht gefunden wird, dann fügt `_lsearch_s` es am Ende des Arrays hinzu und inkrementiert `num`.  
   
  Die `compare`-Funktion ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und einen Wert zurückgibt, der die Beziehung angibt. Die `compare`-Funktion übernimmt auch den Zeiger auf den Kontext als erstes Argument. `_lsearch_s` ruft `compare` einmal oder mehrere Male während der Suche auf, wodurch bei jedem Aufruf Zeiger auf zwei Array-Elemente übergeben werden. `compare` muss die Elemente vergleichen und entweder ungleich null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.  
   
@@ -102,7 +103,7 @@ void *_lsearch_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_lsearch_s`|\<search.h>|  
   

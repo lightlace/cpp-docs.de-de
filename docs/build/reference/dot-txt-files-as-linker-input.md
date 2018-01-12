@@ -1,31 +1,32 @@
 ---
-title: "TXT-Dateien als Eingabe f&#252;r den Linker"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".txt-Dateien, Linkereingabe"
-  - "Textdateien, Linkereingabe"
-  - "TXT-Dateien, Linkereingabe"
+title: . TXT-Dateien als Linkereingabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .txt files, linker input
+- text files, linker input
+- txt files, linker input
 ms.assetid: 220b5a59-8b78-43f6-a8c3-f3134ccddf9e
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61112fc5c701c7fa027d98b873332fd00df3dfad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# TXT-Dateien als Eingabe f&#252;r den Linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**LINK** erwartet verschiedene Textdateien als zusätzliche Eingabe.  Textdateien werden durch die [LINK\-Befehlsdateien](../../build/reference/link-command-files.md)\-Kennung \(@\) und die Optionen [\(\/BASE\) Basisadresse](../../build/reference/base-base-address.md), [\/DEF](../../build/reference/def-specify-module-definition-file.md) und [\/ORDER](../../build/reference/order-put-functions-in-order.md) festgelegt.  Diese Dateien können außer **.txt** auch jede andere Dateinamenerweiterung haben.  
+# <a name="txt-files-as-linker-input"></a>TXT-Dateien als Eingabe für den Linker
+LINK erwartet verschiedene Textdateien als zusätzliche Eingabe. Die [Befehlsdatei](../../build/reference/link-command-files.md) Spezifizierer (@) und die [Basisadresse](../../build/reference/base-base-address.md) (/ BASE) [DEF](../../build/reference/def-specify-module-definition-file.md), und [/ORDER](../../build/reference/order-put-functions-in-order.md) alle Optionen geben Textdateien. Diese Dateien können eine beliebige Erweiterung, die nicht nur ".txt".  
   
-## Siehe auch  
- [LINK\-Eingabedateien](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

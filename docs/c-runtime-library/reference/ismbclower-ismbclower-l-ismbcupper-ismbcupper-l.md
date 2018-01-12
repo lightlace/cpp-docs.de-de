@@ -43,11 +43,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 Überprüft, ob ein Multibytezeichen in Klein- oder Großschreibung vorliegt.  
@@ -89,7 +90,7 @@ int _ismbcupper_l(
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch das ihnen übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-|Routine|Testbedingung|Beispiel für Codepage 932|  
+|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|  
 |-------------|--------------------|---------------------------|  
 |`_ismbclower`|Kleinbuchstaben alphabetisch|Gibt nur dann einen Wert ungleich null zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Kleinbuchstabens ist: 0x61<=`c`<=0x7A.|  
 |`_ismbclower_l`|Kleinbuchstaben alphabetisch|Gibt nur dann einen Wert ungleich null zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Kleinbuchstabens ist: 0x61<=`c`<=0x7A.|  
@@ -98,7 +99,7 @@ int _ismbcupper_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ismbclower`|\<mbstring.h>|  
 |`_ismbclower_l`|\<mbstring.h>|  
@@ -110,7 +111,7 @@ int _ismbcupper_l(
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
  [_ismbc-Routinen](../../c-runtime-library/ismbc-routines.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   
  [_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)

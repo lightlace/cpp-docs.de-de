@@ -1,62 +1,63 @@
 ---
-title: "/ALLOWISOLATION (Manifestsuche) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ALLOWISOLATION"
-  - "VC.Project.VCLinkerTool.AllowIsolation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALLOWISOLATION (Linkeroption)"
-  - "-ALLOWISOLATION (Linkeroption)"
+title: -ALLOWISOLATION (Manifestsuche) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ALLOWISOLATION
+- VC.Project.VCLinkerTool.AllowIsolation
+dev_langs: C++
+helpviewer_keywords:
+- -ALLOWISOLATION linker option
+- /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0ca939021a6fc530b11c6ec66fc74cc012da1c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /ALLOWISOLATION (Manifestsuche)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Manifestsuche)
 Gibt das Verhalten bei der Manifestsuche an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /ALLOWISOLATION[:NO]  
 ```  
   
-## Hinweise  
- Durch **\/ALLOWISOLATION:NO** werden DLLs ohne Manifest geladen, und vom Linker wird im optionalen `DllCharacteristics`\-Feld des Headers das `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION`\-Bit festgelegt.  
+## <a name="remarks"></a>Hinweise  
+ **/ALLOWISOLATION:No** DLLs geladen, als wäre kein Manifest und führt dazu, dass den Linker Festlegen der `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit im optionalen-Headers `DllCharacteristics` Feld.  
   
- **\/ALLOWISOLATION** führt dazu, dass das Betriebssystem nach Manifesten sucht und diese lädt.  
+ **/ ALLOWISOLATION** bewirkt, dass das Betriebssystem, Suchvorgänge und-Ladevorgänge durchführt.  
   
- Standardmäßig ist **\/ALLOWISOLATION** festgelegt.  
+ **/ ALLOWISOLATION** ist die Standardeinstellung.  
   
- Wenn für eine ausführbare Datei die Isolation deaktiviert ist, wird vom Windows\-Ladeprogramm für den neu erstellten Prozess nicht nach einem Anwendungsmanifest gesucht.  Der neue Prozess hat keine Standardaktivierungskontext, selbst wenn ein Manifest in der ausführbaren Datei oder in demselben Verzeichnis wie die ausführbare Datei mit Namen *executable\-name***.exe.manifest** platziert wird.  
+ Wenn Isolation für eine ausführbare Datei deaktiviert ist, wird das Windows-Ladeprogramm nicht versucht, ein Anwendungsmanifest für den neu erstellten Prozess gefunden. Der neue Prozess keinen Standard-Aktivierungskontext, auch wenn es ein Manifest in die ausführbare Datei oder eine platzierten im selben Verzeichnis wie die ausführbare Datei mit dem Namen *Name der ausführbaren Datei***. exe.manifest**.  
   
- Weitere Informationen finden Sie in [Manifestdateien\-Verweis](http://msdn.microsoft.com/library/aa375632).  
+ Weitere Informationen finden Sie unter [Manifestdateienreferenz](http://msdn.microsoft.com/library/aa375632).  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-3.  Erweitern Sie den Knoten **Linker**.  
+3.  Erweitern Sie die **Linker** Knoten.  
   
-4.  Wählen Sie die Eigenschaftenseite **Manifestdatei** aus.  
+4.  Wählen Sie die **Manifestdatei** Eigenschaftenseite.  
   
-5.  Ändern Sie die Eigenschaft **Isolation zulassen**.  
+5.  Ändern der **Isolation zulassen** Eigenschaft.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4178d9d6a48e10510bb739bc2e1a55ecbe2714e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7453fbab0ade6cfe2cbdd836d7d59ba49c3ccfd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-c"></a>Verweise (C++)
 Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf einer benannten Variablen und Rvalue-Verweise, die zum beziehen verweisen einer [temporäres Objekt](../cpp/temporary-objects.md). Der &-Operator gibt einen Lvalue-Verweis und der & &-Operator gibt einen Rvalue-Verweis oder einen universellen Verweis (Rvalue oder Lvalue) je nach Kontext.  

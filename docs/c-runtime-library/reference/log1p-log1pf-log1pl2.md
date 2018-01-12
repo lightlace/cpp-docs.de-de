@@ -42,11 +42,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d0228b24a97c2b7113cf9ceccf337c15ef904c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 Berechnet den natürlichen Logarithmus von 1 plus den angegebenen Ausdruck.  
@@ -94,7 +95,7 @@ long double log1pl(
 |< -1|nan|INVALID|EDOM|  
 |-inf|nan|INVALID|EDOM|  
 |±SNaN|Identisch mit der Eingabe|INVALID||  
-|±QNaN, unbestimmt|Identisch mit der Eingabe|||  
+|±QNaN unbestimmtes|Identisch mit der Eingabe|||  
   
  Der `errno`-Wert wird auf ERANGE festgelegt, wenn `x`=1. Die `errno` Wert auf EDOM festgelegt wird, wenn `x` <-1 zurück.  
   
@@ -114,6 +115,6 @@ long double log1pl(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

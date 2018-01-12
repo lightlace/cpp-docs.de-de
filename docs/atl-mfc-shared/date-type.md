@@ -1,78 +1,79 @@
 ---
-title: "DATE Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "DATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Date-Datentyp"
-  - "Date-Datentyp, about Date data type"
-  - "Date-Datentyp, Implementieren"
-  - "DATE type"
-  - "hour values representation"
-  - "MFC, Datum und Uhrzeit"
+title: DATE-Typ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: DATE
+dev_langs: C++
+helpviewer_keywords:
+- Date data type, implementing
+- Date data type
+- DATE type
+- Date data type, about Date data type
+- MFC, date and time
+- hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# DATE Type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der **date**\-Typ wird mithilfe einer 8\-Byte\-Gleitkommawert\-Zahl implementiert.  Tage werden durch die Schritte der ganzen Zahl dargestellt, die mit am 30. Dezember 1899, Mitternacht wie Zeit null starten.  Stundenwerte werden wie der absolute Wert des Nachkommastellen der Zahl ausgedrückt.  In der folgenden Tabelle werden einige Datumsangaben zusammen mit ihrer Entsprechung **date** numerischen Typs:  
+# <a name="date-type"></a>DATE-Typ
+Die **Datum** Typ wird mit einer 8-Byte-Gleitkommazahl implementiert. Tage werden durch ganze Zahl erhöht werden beginnend am 30. Dezember 1899 Mitternacht als jeweils auf die nächsthöhere dargestellt. Stundenwerte werden als der Absolute Wert des Bruchteils der Zahl dargestellt. Die folgende Tabelle zeigt verschiedene Datumsangaben zusammen mit ihren **Datum** Typ numerische Entsprechung:  
   
 |Datum und Uhrzeit|Darstellung|  
-|-----------------------|-----------------|  
-|30. Dezember 1899 Mitternacht|0.00|  
-|1. Januar 1900 Mitternacht|2.00|  
-|4. Januar 1900 Mitternacht|5.00|  
-|4. Januar 1900 6 Uhr..|5.25|  
+|-------------------|--------------------|  
+|Am 30. Dezember 1899 Mitternacht|0,00|  
+|1. Januar 1900, Mitternacht|2.00|  
+|4. Januar 1900, Mitternacht|5.00|  
+|4. Januar 1900, 6 Uhr|5.25|  
 |4. Januar 1900 Mittag|5.50|  
-|4. Januar 1900 9 PM..|5.875|  
+|4. Januar 1900, 9-Uhr|5.875|  
   
- Der **date** Datumstyp sowie die `COleDateTime`\-Klasse, stellt Datumsangaben und Uhrzeiten als klassischer Zahlenstrahl dar.  Die `COleDateTime`\-Klasse enthält mehrere Methoden zum Bearbeiten von Datumswerten, einschließlich Konvertierung nach und anderen allgemeinen Datumsformate.  
+ Die **Datum** Typ Datum als auch die `COleDateTime` -Klasse stellt Datums- und Uhrzeitangaben als eine klassische Position. Die `COleDateTime` Klasse enthält mehrere Methoden zum Bearbeiten von Datumswerten, einschließlich der Konvertierung in und aus anderen allgemeinen Datumsformate.  
   
- Die folgenden Punkte sollten beim Arbeiten erwähnt werden, mit diesen Datums\- und Uhrzeitformate in der Automatisierung:  
+ Beachten Sie die folgenden Punkte bei der Arbeit mit diesen Datums- und Uhrzeitformate in Automation:  
   
--   Datumsangaben werden in der Ortszeit angegeben; Synchronisierung muss manuell ausgeführt werden beim Arbeiten mit Datumsangaben in verschiedenen Zeitzonen.  
+-   Datumsangaben werden in Ortszeit angegeben. Synchronisierung muss manuell ausgeführt werden, bei der Arbeit mit Datumsangaben in unterschiedlichen Zeitzonen.  
   
--   Die Datumstypen für nicht Sommerzeit.  
+-   Date-Datentypen für die Sommerzeit nicht berücksichtigt.  
   
--   Die Datumszeitachse wird für Datumswerte kleiner als 0 unterbrochen \(vor dem 30. Dezember 1899\).  Das liegt daran, dass der Teil der ganzen Zahl des Datumswerts behandelt wird, wie signiert, während der Sekundenbruchteile Teil behandelt wird, wie ohne Vorzeichen.  Das heißt, kann der Teil der ganzen Zahl des Datumswerts positiv oder negativ, während der Sekundenbruchteile Teil des Datumswerts immer mit dem gesamten logischen Datum hinzugefügt wird.  In der folgenden Tabelle werden einige Beispiele:  
+-   Die Zeitachse Datum wird (vor dem 30. Dezember 1899) unterbrochenen für Datumswerte kleiner als 0. Dies ist, da der ganzzahlige Teil des Datumswerts behandelt wird als signiert, während der Bruchteil behandelt wird, als Zahl ohne Vorzeichen. Das heißt, kann der ganzzahlige Teil des Datumswerts positiv oder negativ sein, während der Bruchteil des Datumswerts immer dem gesamten logischen Datum hinzugefügt wird. Die folgende Tabelle zeigt einige Beispiele:  
   
 |Datum und Uhrzeit|Darstellung|  
-|-----------------------|-----------------|  
-|27. Dezember 1899 Mitternacht|\-3.00|  
-|28. Dezember 1899 Mittag|\-2.50|  
-|28. Dezember 1899 Mitternacht|\-2.00|  
-|29. Dezember 1899 Mitternacht|\-1.00|  
-|30. Dezember 1899 6 PM..|\-0.75|  
-|30. Dezember 1899 Mittag|\-0.50|  
-|30. Dezember 1899 6 Uhr..|\-0.25|  
-|30. Dezember 1899 Mitternacht|0.00|  
-|30. Dezember 1899 6 Uhr..|0.25|  
-|30. Dezember 1899 Mittag|0.50|  
-|30. Dezember 1899 6 PM..|0.75|  
-|31. Dezember 1899 Mitternacht|1.00|  
-|1. Januar 1900 Mitternacht|2.00|  
+|-------------------|--------------------|  
+|27 Dezember 1899 (Mitternacht)|-3.00|  
+|28 Dezember 1899 Mittag|-2.50|  
+|28 Dezember 1899 (Mitternacht)|-2.00|  
+|29. Dezember 1899, Mitternacht|-1.00|  
+|Am 30. Dezember 1899 18: 00 Uhr|-0.75|  
+|Am 30. Dezember 1899 Mittag|-0.50|  
+|Am 30. Dezember 1899 6 Uhr|-0.25|  
+|Am 30. Dezember 1899 Mitternacht|0,00|  
+|Am 30. Dezember 1899 6 Uhr|0.25|  
+|Am 30. Dezember 1899 Mittag|0.50|  
+|Am 30. Dezember 1899 18: 00 Uhr|0.75|  
+|31. Dezember 1899, Mitternacht|1.00|  
+|1. Januar 1900, Mitternacht|2.00|  
 |1. Januar 1900 Mittag|2.50|  
-|2. Januar 1900 Mitternacht|3.00|  
+|2 Januar 1900 (Mitternacht)|3.00|  
   
 > [!CAUTION]
->  Beachten Sie, dass da 6:00 AM immer über einen Bruchen Wert 0,25 unabhängig davon, ob die ganze Zahl, die den Tag darstellt, dass positiv ist \(nach dem 30. Dezember 1899\) oder negativ \(vor dem 30. Dezember 1899\), ein einfacher Gleitkommavergleich würde fälschlicherweise sortieren jedes **date** dargestellt wird, das ein Tag um 6:00 Uhr früher als 12\/30\/1899 darstellt, wie *später* als **date**, das 7:00 Uhr an diesem gleichen Tag darstellt.  
+>  Beachten Sie, dass, weil 6:00 Uhr wird durch ein Dezimalstellenwert 0,25 unabhängig davon, ob die ganze Zahl, die den Tag darstellt (nach dem 30. Dezember 1899 wieder) positiv ist immer dargestellt oder negative (vor dem 30. Dezember 1899 wieder), ein einfachen floating Point-Vergleich würde fälschlicherweise sortieren alle **Datum** für 6:00 an einem Tag älter als 12/30/1899 zurück als *später* als eine **Datum** 7:00 Uhr für denselben Tag darstellt.  
   
- Weitere Informationen zu Problemen, die den **date** und `COleDateTime`\-Typen verknüpft sind, können mit [COleDateTime Class](../atl-mfc-shared/reference/coledatetime-class.md) und [Date and Time: Automation Support](../atl-mfc-shared/date-and-time-automation-support.md) gefunden werden.  
+ Weitere Informationen zu Problemen im Zusammenhang mit der **Datum** und `COleDateTime` Typen finden Sie unter [COleDateTime Klasse](../atl-mfc-shared/reference/coledatetime-class.md) und [Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md).  
   
-## Siehe auch  
- [Date and Time](../atl-mfc-shared/date-and-time.md)   
- [COleDateTime Class](../atl-mfc-shared/reference/coledatetime-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md)   
+ [COleDateTime-Klasse](../atl-mfc-shared/reference/coledatetime-class.md)
+

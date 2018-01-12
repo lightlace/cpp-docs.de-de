@@ -44,11 +44,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9554272eda10c77dcbb464904897f47729b45f44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 112e5b6c29f73cb162a1d417fb23842fafc80ff9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 Kopieren der Zeit in einen Puffer. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strtime_s, _wstrtime_s](../../c-runtime-library/reference/strtime-s-wstrtime-s.md).  
@@ -94,7 +95,7 @@ wchar_t *_wstrtime(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_strtime`|\<time.h>|  
 |`_wstrtime`|\<time.h> oder \<wchar.h>|  
@@ -124,7 +125,7 @@ The current time is 14:21:44
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   

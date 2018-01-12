@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d542c508b84da14d4f628796ae5fd42983db0114
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-of-operator-amp"></a>Address-of-Operator:&amp;
 ## <a name="syntax"></a>Syntax  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  Der address-of-Operator kann nur auf Variablen vom Typ „Basis“, „Struktur“, „Klasse“ oder „Union“ angewendet werden, die auf Dateibereichsebene deklariert wurden, oder auf indizierte Arrayverweise. In diesen Ausdrücken kann ein konstanter Ausdruck, der nicht den address-of-Operator einschließt, dem address-of-Ausdruck hinzugefügt oder von diesem subtrahiert werden.  
   
- Bei Anwendung auf Funktionen oder l-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn beispielsweise der Operand vom Typ `char` ist, ist das Ergebnis des Ausdrucks ein Typzeiger auf `char`. Address-of-Operators, um angewendet **const** oder `volatile` Objekte, ergibt **const** `type`  **\***  oder `volatile` `type`  **\*** , wobei `type` ist der Typ des ursprünglichen Objekts.  
+ Bei Anwendung auf Funktionen oder L-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn beispielsweise der Operand vom Typ `char` ist, ist das Ergebnis des Ausdrucks ein Typzeiger auf `char`. Address-of-Operators, um angewendet **const** oder `volatile` Objekte, ergibt **const** `type`  **\***  oder `volatile` `type`  **\*** , wobei `type` ist der Typ des ursprünglichen Objekts.  
   
  Wenn die Address-of-Operator angewendet wird, um eine [qualifizierten Namen](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), das Ergebnis hängt davon ab, ob die *qualifizierten Namen* einen statischen Member angibt. Wenn dies der Fall ist, ist das Ergebnis ein Zeiger auf den Typ, der in der Deklaration des Members angegeben wird. Wenn der Member nicht statisch ist, wird das Ergebnis ist ein Zeiger auf den Member *Namen* der Klasse, indem *qualified-Class-Name*. (Siehe [Primärausdrücke](../cpp/primary-expressions.md) Weitere Informationen zu den *qualified-Class-Name*.) Das folgende Codefragment zeigt, wie sich das Ergebnis unterscheidet, abhängig davon, ob der Member statisch ist.  
   

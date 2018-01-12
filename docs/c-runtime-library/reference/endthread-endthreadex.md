@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - endthreadex
 - _endthreadex
 - endthread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _endthread function
 - endthread function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5abe2f0aa2f62048fefb2f79614e018fbdb51e08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 Beendet einen Thread. `_endthread` beendet einen von `_beginthread` erstellten Thread, und  `_endthreadex` beendet einen von `_beginthreadex`erstellten Thread.  
@@ -88,7 +72,7 @@ void _endthreadex(
   
  `_endthread` schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich von dem der `ExitThread`-Win32-API.) Wenn Sie also `_beginthread` und `_endthread` verwenden, schließen Sie das Threadhandle nicht explizit mit dem Aufruf der [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx)-Win32-API.  
   
- Wie die `ExitThread` -Win32-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex`verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle` -Win32-API schließen.  
+ Wie die `ExitThread` -Win32-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex` verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle`-Win32-API schließen.  
   
 > [!NOTE]
 >  `_endthread` und `_endthreadex` führen dazu, dass im Thread ausstehende C++-Destruktoren nicht aufgerufen werden.  

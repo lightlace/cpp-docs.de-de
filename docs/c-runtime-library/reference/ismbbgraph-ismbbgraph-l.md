@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3638740d4a62e42da71a7b076e636443e0530cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0f4ac9be945802b596505f723b1a9da00356d8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 Bestimmt, ob ein bestimmtes Multibytezeichen ein Grafikzeichen ist.  
@@ -74,11 +75,11 @@ int _ismbbgraph_l (
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- ist für `c`ungleich 0, bzw. andernfalls 0. `_ismbbgraph` verwendet das aktuelle Gebietsschema für jedes gebietsschemaabhängige Verhalten. `_ismbbgraph_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ ist für `c` ungleich 0, bzw. andernfalls 0. `_ismbbgraph` verwendet das aktuelle Gebietsschema für jedes gebietsschemaabhängige Verhalten. `_ismbbgraph_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ismbbgraph`|\<mbctype.h>|  
 |`_ismbbgraph_l`|\<mbctype.h>|  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4519bee0d1f9c5e433114f12a6568bde6b8c4fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8985499c76a7dc65523a5c2904bcb774a4364d41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-property-pages"></a>Festlegen von Eigenschaftenseiten
 Wenn Sie ein ActiveX-Steuerelement erstellen, sollten Sie häufig mit Eigenschaftenseiten zuordnen, die zum Festlegen der Eigenschaften des Steuerelements verwendet werden können. Steuern der Verwendung von Containern die **ISpecifyPropertyPages** Schnittstelle, um herauszufinden, welche Eigenschaftenseiten zum Festlegen der Eigenschaften des Steuerelements verwendet werden können. Sie müssen diese Schnittstelle für das Steuerelement zu implementieren.  

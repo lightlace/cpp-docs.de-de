@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21ca1d07a39950c5d5de83ed6e3a09c12c775d4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementieren einer C++-Standard-Library-basierte-Auflistung
 ATL stellt die `ICollectionOnSTLImpl` Schnittstelle, um C++-Standardbibliothek basierende Auflistungsschnittstellen schnell auf Ihre Objekte implementieren können. Um zu verstehen, wie diese Klasse funktioniert, arbeiten Sie über ein einfaches Beispiel (siehe unten), die diese Klasse verwendet, um eine schreibgeschützte Auflistung, die Automatisierungsclients Vorbeugung zu implementieren.  

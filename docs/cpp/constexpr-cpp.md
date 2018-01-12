@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 Das Schlüsselwort `constexpr` wurde in C++11 eingeführt und in C++14 verbessert. Es bedeutet *Konstantenausdruck*. Wie `const` kann es auf Variablen angewendet werden, sodass ein Compilerfehler ausgelöst wird, wenn der Code versucht, den Wert zu ändern. Im Gegensatz zu `const` kann `constexpr` auch auf Funktionen und Klassenkonstruktoren angewendet werden. `constexpr` gibt an, dass der Wert oder der Rückgabewert eine Konstante ist und nach Möglichkeit zur Kompilierungszeit berechnet wird.  Ein ganzzahliger `constexpr`-Wert kann verwendet werden, wenn eine ganzzahlige Konstante erforderlich ist, wie z. B. in Vorlagenargumenten und Arraydeklarationen. Und wenn ein Wert zur Kompilierzeit statt zur Laufzeit berechnet werden kann, können sie das Programm schneller ausgeführt und belegen weniger Arbeitsspeicher.  

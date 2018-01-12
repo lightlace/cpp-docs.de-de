@@ -1,30 +1,31 @@
 ---
-title: "DEF-Dateien als Eingabe f&#252;r den Linker"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".DEF-Dateien, Als Linkereingabe"
-  - "DEF-Dateien, Als Linkereingabe"
+title: . DEF-Dateien als Linkereingabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .def files, as linker input
+- def files, as linker input
 ms.assetid: ecb32d7c-e3be-4782-85a1-1c77d30f6e59
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cd025280b599af35e0e1a9d9626d8d107084aaae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# DEF-Dateien als Eingabe f&#252;r den Linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Weitere Informationen finden Sie unter [Moduldefinitionsdateien \(.def\)](../../build/reference/module-definition-dot-def-files.md).  Der DEF\-Dateiname wird über die Option [\/DEF](../../build/reference/def-specify-module-definition-file.md) festgelegt.  
+# <a name="def-files-as-linker-input"></a>DEF-Dateien als Eingabe für den Linker
+Finden Sie unter [Moduldefinitionsdateien (.def)](../../build/reference/module-definition-dot-def-files.md) für Weitere Informationen. Verwenden der [DEF](../../build/reference/def-specify-module-definition-file.md) Option, um den Namen der DEF-Datei anzugeben.  
   
-## Siehe auch  
- [LINK\-Eingabedateien](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

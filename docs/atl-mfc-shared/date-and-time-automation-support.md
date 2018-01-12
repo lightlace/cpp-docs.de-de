@@ -1,64 +1,66 @@
 ---
-title: "Date and Time: Automation Support | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "adding dates"
-  - "Automatisierung, date and time support"
-  - "calculating dates and times"
-  - "Berechnungen, Datum und Uhrzeit"
-  - "COleDateTime class, Automation date/time support"
-  - "COleDateTimeSpan class, Automation date/time support"
-  - "Datumsangaben, Automation support"
-  - "Verstrichene Zeit, calculating in Automation"
-  - "Formatieren [Visual Studio], Datumsangaben"
-  - "Formatieren [Visual Studio], Uhrzeit"
-  - "Uhrzeit [Visual Studio], Automation support"
+title: "Datum und Uhrzeit: Automatisierungsunterstützung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- adding dates
+- calculating dates and times
+- formatting [Visual Studio], dates
+- dates, Automation support
+- elapsed time, calculating in Automation
+- COleDateTime class, Automation date/time support
+- COleDateTimeSpan class, Automation date/time support
+- Automation, date and time support
+- formatting [Visual Studio], time
+- calculations, date and time
+- time [Visual Studio], Automation support
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a40a8fe49d9564714c328b657bc0d85d52ad84b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Date and Time: Automation Support
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Artikel wird beschrieben, wie die Klassenbibliotheksdienstleistungen nutzt, die bisher verknüpft und Zeitverwaltung.  Prozeduren beschriebenes zählen:  
+# <a name="date-and-time-automation-support"></a>Datum und Uhrzeit:-Unterstützung
+Dieser Artikel beschreibt, wie die Klasse Bibliotheksdienste im Zusammenhang mit der Verwaltung von Datum und Uhrzeit nutzen. Verfahren beschriebenen Schritten:  
   
 -   [Abrufen der aktuellen Uhrzeit](../atl-mfc-shared/current-time-automation-classes.md)  
   
 -   [Berechnen der verstrichenen Zeit](../atl-mfc-shared/elapsed-time-automation-classes.md)  
   
--   [Formatieren einer Zeichenfolgendarstellung einer Datum\/Uhrzeit](../atl-mfc-shared/formatting-time-automation-classes.md)  
+-   [Eine Zeichenfolgendarstellung einer Datums-/Uhrzeit formatieren](../atl-mfc-shared/formatting-time-automation-classes.md)  
   
- Die [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)\-Klasse bietet eine Möglichkeit, Datums\- und Uhrzeitinformationen darzustellen.  Es stellt feinere Granularität und einen größeren Bereich als die [CTime](../atl-mfc-shared/reference/ctime-class.md)\-Klasse.  Die Klasse stellt [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) Laufzeit, wie der Unterschied zwischen zwei `COleDateTime`\-Objekten dar.  
+ Die [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) -Klasse bietet eine Möglichkeit zur Darstellung von Datums-und Uhrzeitinformationen. Er bietet eine geringere Granularität und einen größeren Bereich als das [CTime](../atl-mfc-shared/reference/ctime-class.md) Klasse. Die [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) Klasse darstellt, verstrichene Zeit, beispielsweise den Unterschied zwischen zwei `COleDateTime` Objekte.  
   
- Die `COleDateTime` und `COleDateTimeSpan`\-Klassen dienen dazu, mit der `COleVariant`\-Klasse verwendet werden, die in der Automatisierung verwendet wird.  `COleDateTime` und `COleDateTimeSpan` sind auch in der MFC\-Datenbankprogrammierung hilfreich, aber sie können verwendet werden, wenn Sie Datums\- und Uhrzeitwerte bearbeiten möchten.  Obwohl die `COleDateTime`\-Klasse einen größeren Wertebereich und eine feinere Granularität als die `CTime`\-Klasse hat, erfordert sie mehr Speicherplatz pro Objekt als `CTime`.  Es gibt auch einige besondere Überlegungen beim Arbeiten mit dem zugrunde liegenden **DATE**\-Typ.  Siehe [Der DATUM Typ](../atl-mfc-shared/date-type.md) für weitere Details auf der Implementierung von **DATE**.  
+ Die `COleDateTime` und `COleDateTimeSpan` Klassen dienen, mit der `COleVariant` Klasse zur Verwendung in Automation. `COleDateTime`und `COleDateTimeSpan` sind auch nützlich, bei der MFC-datenbankprogrammierung, aber Sie können jederzeit zum Bearbeiten von Datums-und Uhrzeitwerte verwendet werden können. Obwohl die `COleDateTime` -Klasse verfügt über einen größeren Bereich von Werten und feineren Granularität als die `CTime` -Klasse, es erfordert mehr Speicherplatz pro Objekt als `CTime`. Es gibt auch einige Besonderheiten beim Arbeiten mit den zugrunde liegenden **Datum** Typ. Finden Sie unter [DATE-Datentyps](../atl-mfc-shared/date-type.md) Weitere Details zur Implementierung **Datum**.  
   
- `COleDateTime`\-Objekte können verwendet werden, um Datumsangaben, 100, 9999 und 31. Dezember zwischen 1. Januar darzustellen.  `COleDateTime`\-Objekte sind Gleitkommawerte, mit einer ungefähren Auflösung von 1 Millisekunden.  `COleDateTime` basiert auf dem **DATE** Datentyp definiert, in der MFC\-Dokumentation unter [COleDateTime::operator\-DATUM](../Topic/COleDateTime::operator%20DATE.md).  Die tatsächliche Implementierung von **DATE** erstreckt sich über diesen Grenzen hinaus.  Die `COleDateTime` Implementierung erzwingt diese Grenzen auf, um mit der Klasse zu arbeiten, erleichtern.  
+ `COleDateTime`Objekte können verwendet werden, um die Datumsangaben zwischen dem 1. Januar 100 und dem 31. Dezember 9999 darstellen. `COleDateTime`Objekte sind Gleitkomma-Point-Werte mit einer Auflösung von 1 Millisekunde. `COleDateTime`basiert auf der **Datum** Datentyp in der MFC-Dokumentation unter [COleDateTime:: Operator Datum](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). Die tatsächliche Implementierung der **Datum** diese Grenzen überschreitet. Die `COleDateTime` Implementierung erzwingt diese Grenzen, um die Arbeit mit der Klasse zu erleichtern.  
   
- `COleDateTime` unterstützt nicht julianische Datumsangaben.  Der gregorianische Kalender wird angenommen, dass die in der Zeit 1. Januar zu erweitern, 100.  
+ `COleDateTime`julianischen unterstützt nicht. Wird davon ausgegangen, dass dem gregorianischen Kalender um zeitlich zurückversetzt auf dem 1. Januar 100 zu erweitern.  
   
- `COleDateTime` ignoriert Sommerzeit \(DST\).  Im folgenden Codebeispiel vergleicht zwei Methoden der Ableitung einer Zeit, die das DST\-Umschaltendatum überschreitet: ein mithilfe des CRT und das andere mithilfe `COleDateTime`.  DST\-Schalter von, in den meisten Gebietsschemas, in der zweiten Woche im April und im dritten im Oktober.  
+ `COleDateTime`Daylight Saving Time (DST) wird ignoriert. Im folgenden Codebeispiel wird vergleicht zwei Methoden zur Berechnung eine Zeitspanne, die die DST-Umstellungsdatum schneidet: einer mit der CRT, und der andere mit `COleDateTime`. DST wechselt über, in den meisten Gebietsschemas in der zweiten Woche im April und der dritte im Oktober.  
   
- Die erste Methode werden zwei `CTime`\-Objekte, *time1* und *time2*, um 5. April und 6. April verwenden, mithilfe der standardmäßigen Cstrukturen **tm** und `time_t` fest.  Der Code zeigt *time1* und *time2* und die Zeitspanne zwischen ihnen.  
+ Die erste Methode legt zwei `CTime` Objekte *zeitpunkt1* und *zeitpunkt2*April 5 und 6. April, mithilfe der standard C-Typ-Strukturen **tm** und `time_t`. Zeigt der Code *zeitpunkt1* und *zeitpunkt2* und die Zeitspanne zwischen ihnen.  
   
- Die zweite Methode erstellt zwei `COleDateTime`\-Objekte, `oletime1` und `oletime2`, und legt sie auf die gleichen Daten wie *time1* und *time2* fest.  Sie zeigt `oletime1` und `oletime2` und die Zeitspanne zwischen ihnen.  
+ Die zweite Methode erstellt zwei `COleDateTime` Objekte `oletime1` und `oletime2`, und setzt sie auf der gleichen Datumsangaben als *zeitpunkt1* und *zeitpunkt2*. Es zeigt `oletime1` und `oletime2` und die Zeitspanne zwischen ihnen.  
   
- Die CRT\- berechnet ordnungsgemäß einen Unterschied von 23 Stunden.  `COleDateTimeSpan` berechnet einen Unterschied von 24 Stunden.  
+ Die CRT berechnet ordnungsgemäß eine Differenz von 23 Stunden an. `COleDateTimeSpan`berechnet einen Unterschied von 24 Stunden.  
   
- Beachten Sie, dass eine Problemumgehung neben dem Ende des Beispiels verwendet wird, um das Datum mit dem `COleDateTime::Format` ordnungsgemäß angezeigt wird.  Weitere Informationen finden Sie im Knowledge Base\-Artikel "FEHLER: Format\("%D"\) schlägt für `COleDateTime` und `COleDateTimeSpan` fehl" \(Q167338\).  
+ Beachten Sie, dass dieses Problem zu umgehen gegen Ende des Beispiels verwendet wird, um das Datum, die ordnungsgemäß mit anzuzeigen `COleDateTime::Format`. Finden Sie im Knowledge Base-Artikel "BUG: Format("%D") Fails für `COleDateTime` und `COleDateTimeSpan`" (Q167338).  
   
- [!CODE [NVC_ATLMFC_Utilities#176](../CodeSnippet/VS_Snippets_Cpp/NVC_ATLMFC_Utilities#176)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]  
   
-## Siehe auch  
- [Date and Time](../atl-mfc-shared/date-and-time.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md)
+

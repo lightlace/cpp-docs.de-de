@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _ltot
 - _ltoa
 - _ltow
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting integers
 - _ltoa function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - long integer conversion to string
 - converting numbers, to strings
 ms.assetid: 14036104-2c25-4759-87c0-918ed8521e47
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5e67ca683ac8946f88389e9ca2323f1255da6695
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7e7ae79ed3505e4570b453e7fd56b68730010388
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
 Konvertiert eine lange ganze Zahl in eine Zeichenfolge Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_ltoa_s, _ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
@@ -102,7 +86,7 @@ wchar_t *_ltow(
  Zeichenfolgenergebnis.  
   
  `radix`  
- Basis von `value`  
+ Basis von `value`.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Jede dieser Funktionen gibt einen Zeiger auf `str` zurück. Es gibt keine Fehlerrückgabe.  
@@ -113,7 +97,7 @@ wchar_t *_ltow(
 > [!IMPORTANT]
 >  Um Pufferüberläufe zu verhindern, muss der `str`-Puffer groß genug für die konvertierten Ziffern, das abschließende NULL-Zeichen sowie ein Zeichen sein.  
   
- In C++ gibt es für diese Funktionen Vorlagenüberladungen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ gibt es für diese Funktionen Vorlagenüberladungen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -123,7 +107,7 @@ wchar_t *_ltow(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ltoa`|\<stdlib.h>|  
 |`_ltow`|\<stdlib.h>|  

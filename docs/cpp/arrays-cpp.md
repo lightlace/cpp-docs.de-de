@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines Arrays ist ein Vektor, der mit der folgenden Sequenz deklariert werden kann:  
@@ -56,7 +54,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Ein optionaler Initialisierer.  Finden Sie unter [Initialisierer](../cpp/initializers.md).  
   
- Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. Element und das letzte Element ist das (*n*-1) Element, in dem * n * ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist gültig, nur, wenn das Array das letzte Feld in ist eine `struct` oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
+ Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. Element und das letzte Element ist das (*n*-1) Element, in dem  *n*  ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist gültig, nur, wenn das Array das letzte Feld in ist eine `struct` oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
   
  Die folgenden Beispiele zeigen, wie ein Array zur Laufzeit definiert wird:  
   

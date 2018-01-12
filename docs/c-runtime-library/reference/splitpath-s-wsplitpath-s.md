@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6cfb2d72b728b64aeb00c3b8437f9c47e02fb813
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 Unterteilen eines Pfadnamens in Komponenten Dies sind Versionen von [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -160,7 +144,7 @@ errno_t _wsplitpath_s(
  Wenn einer der Puffer zu kurz ist, um das Ergebnis aufzunehmen, löschen diese Funktionen alle Puffer in leere Zeichenfolgen, setzen `errno` auf `ERANGE` und geben `ERANGE` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_splitpath_s`-Funktion teilt einen Pfad in seine vier Komponenten auf. `_splitpath_s` behandelt Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wsplitpath_s` ist eine Breitzeichenversion von `_splitpath_s`. Die Argumente für `_``wsplitpath_s` sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich diese Funktionen identisch  
+ Die `_splitpath_s`-Funktion teilt einen Pfad in seine vier Komponenten auf. `_splitpath_s` verarbeitet Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichensequenzen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wsplitpath_s` ist eine Breitzeichenversion von `_splitpath_s`. Die Argumente für `_wsplitpath_s` sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich diese Funktionen identisch  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -172,7 +156,7 @@ errno_t _wsplitpath_s(
   
  In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.  
   
-|Name|Wert|  
+|name|Wert|  
 |----------|-----------|  
 |_MAX_DRIVE|3|  
 |_MAX_DIR|256|  
@@ -181,13 +165,13 @@ errno_t _wsplitpath_s(
   
  Wenn der vollständige Pfad keine Komponente (z.B. Dateiname) enthält, weist `_splitpath_s` dem entsprechenden Puffer eine leere Zeichenfolge zu.  
   
- Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_splitpath_s`|\<stdlib.h>|  
 |`_wsplitpath_s`|\<stdlib.h> oder \<wchar.h>|  
@@ -198,7 +182,7 @@ errno_t _wsplitpath_s(
  Siehe das Beispiel für [_makepath_s _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
  [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
  [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
  [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   

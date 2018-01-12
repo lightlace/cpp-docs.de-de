@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __hook_cpp
-dev_langs:
-- C++
+f1_keywords: __hook_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hook"></a>__hook
 Ordnet eine Handlermethode einem Ereignis zu.  
@@ -86,7 +83,7 @@ long __hook(
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie die systeminterne Funktion `__hook` in einem Ereignisempfänger, um eine Handlermethode einer Ereignismethode zuzuordnen oder an sie zu binden. Der angegebene Handler wird aufgerufen, wenn die Quelle das angegebene Ereignis auslöst. Sie können mehrere Handler an ein einzelnes Ereignis binden oder mehrere Ereignisse an einen einzigen Handler.  
   
- Es gibt zwei Formen von `__hook`. Können Sie die erste (Four-Argument) Formular in den meisten Fällen insbesondere für COM-Ereignisempfänger, in dem die *Layout_dependent* Parameter von der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"false" **.  
+ Es gibt zwei Formen von `__hook`. Können Sie die erste (Four-Argument) Formular in den meisten Fällen insbesondere für COM-Ereignisempfänger, in dem die *Layout_dependent* Parameter von der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"false"** .  
   
  In diesen Fällen müssen Sie nicht alle Methoden an eine Schnittstelle binden, bevor nicht bei einer der Methoden ein Ereignis ausgelöst wird; nur die Methode für die Ereignisbehandlung muss eingebunden werden. Sie können die zweite (Two-Argument) Formular von `__hook` nur für einen COM-Ereignisempfänger, in dem *Layout_dependent***= "true"**.  
   

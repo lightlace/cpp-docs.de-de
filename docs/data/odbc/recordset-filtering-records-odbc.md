@@ -1,44 +1,47 @@
 ---
-title: "Recordset: Filtern von Datens&#228;tzen (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Daten [MFC], Filtern"
-  - "Filtern von Recordsets"
-  - "Filter [C++], Recordset-Objekt"
-  - "ODBC-Recordsets [C++], Filtern von Datensätzen"
-  - "Recordsets [C++], Filtern"
+title: "Recordset: Filtern von Datensätzen (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [MFC], filtering
+- recordsets [C++], filtering
+- filtering recordsets
+- ODBC recordsets [C++], filtering records
+- filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b6d6e8b41e67c9f33d643a2f64c7bdf2d2251eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: Filtern von Datens&#228;tzen (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="recordset-filtering-records-odbc"></a>Recordset: Filtern von Datensätzen (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird erläutert, wie Sie ein Recordset so filtern, dass es nur eine bestimmte Untermenge der verfügbaren Datensätze auswählt.  Sie haben z. B. die Möglichkeit, nur die Kursabschnitte für eine bestimmte Vorlesung auszuwählen, etwa MATH101.  Ein Filter ist eine Suchbedingung, die vom Inhalt einer SQL\-**WHERE**\-Klausel definiert wird.  Wenn das Framework den Filter an die SQL\-Anweisung eines Recordsets anhängt, schränkt die **WHERE**\-Klausel die Auswahl ein.  
+ In diesem Thema wird erläutert, wie auf einem Recordset filtern, sodass nur eine bestimmte Teilmenge der verfügbaren Datensätze ausgewählt werden. Sie möchten z. B. nur die Klasse Abschnitte für einen bestimmten Kurs, z. B. MATH101 auswählen. Ein Filter ist eine Suchbedingung erfüllen, definiert durch den Inhalt eines SQL- **, in denen** Klausel. Wenn das Framework für das Recordset-SQL-Anweisung, fügt die **, in denen** Klausel schränkt die Auswahl.  
   
- Sie müssen den Filter eines Recordset\-Objekts einrichten, nachdem Sie das Objekt konstruiert haben, aber noch vor Aufruf seiner **Open**\-Memberfunktion \(oder bevor Sie für ein bereits vorhandenes Recordset\-Objekt, dessen **Open**\-Memberfunktion zuvor aufgerufen wurde, die **Requery**\-Memberfunktion aufrufen\).  
+ Sie müssen einem Recordset-Objekt Filter einrichten, nach dem Erstellen des Objekts, aber vor dem Aufrufen der **öffnen** Memberfunktion (oder vor dem Aufruf der **Requery** Memberfunktion für ein bereits vorhandenes Recordset Objekt, dessen **öffnen** Memberfunktion zuvor aufgerufen wurde).  
   
-#### So geben Sie einen Filter für ein Recordset\-Objekt an  
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Angeben ein Filters für ein Recordset-Objekt  
   
-1.  Konstruieren Sie ein neues Recordset\-Objekt oder bereiten Sie ein bereits vorhandenes Recordset\-Objekt für einen **Requery**\-Aufruf vor.  
+1.  Erstellen Sie ein neues Recordset-Objekt (oder bereiten Aufrufen **Requery** für ein vorhandenes Objekt).  
   
-2.  Tragen Sie einen passenden Wert in den [m\_strFilter](../Topic/CRecordset::m_strFilter.md)\-Datenmember des Objekts ein.  
+2.  Legen Sie den Wert, der des Objekts [M_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) -Datenmember.  
   
-     Der Filter ist eine auf NULL abschließende Zeichenfolge, die den Inhalt der SQL\-**WHERE**\-Klausel, jedoch nicht das Schlüsselwort **WHERE** enthält.  Verwenden Sie z. B.  
+     Der Filter ist eine Null-terminierte Zeichenfolge mit dem Inhalt der SQL- **, in denen** -Klausel jedoch nicht das Schlüsselwort **, in denen**. Beispielsweise verwenden:  
   
     ```  
     m_pSet->m_strFilter = "CourseID = 'MATH101'";  
@@ -51,19 +54,19 @@ Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.
     ```  
   
     > [!NOTE]
-    >  In diesem Beispiel wurde die Zeichenfolge "MATH101" in einfache Anführungszeichen eingeschlossen.  In der ODBC\-SQL\-Angabe werden einfache Anführungszeichen dazu verwendet, ein Zeichenfolgenliteral zu kennzeichnen.  Lesen Sie in der Dokumentation des ODBC\-Treibers nach, welche Anführungszeichen das DBMS in diesen Fällen benötigt.  Diese Syntax wird gegen Ende dieses Themas noch genauer beschrieben.  
+    >  Das Zeichenfolgenliteral "MATH101" wird durch einfache Anführungszeichen, die oben angezeigt. In der ODBC-SQL-Spezifikation sind einfache Anführungszeichen verwendet, um ein Zeichenfolgenliteral zu kennzeichnen. Überprüfen der ODBC-Treiber-Dokumentation für die zitieren Anforderungen des DBMS in dieser Situation. Diese Syntax wird ebenfalls erläutert weiter hinten in diesem Thema.  
   
-3.  Stellen Sie alle sonstigen benötigten Optionen ein, z. B. die Sortierreihenfolge, das Sperrverhalten und die Parameter.  Die Angabe eines Parameters ist besonders praktisch.  Informationen zur Parametrisierung eines Filters finden Sie unter [Recordset: Parametrisieren eines Recordsets \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+3.  Legen Sie alle anderen Optionen, die Sie, die z. b. Sortierreihenfolge, Sperrverhalten oder Parameter benötigen. Es ist besonders nützlich, einen Parameter angeben. Informationen zur Parametrisierung eines Filters finden Sie unter [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-4.  Rufen Sie die **Open**\-Memberfunktion des neuen Objekts auf \(oder **Requery** bei einem bereits vorher geöffneten Objekt\).  
-  
-> [!TIP]
->  Der Einsatz von Parametern im Filter ist in den meisten Fällen die effizienteste Methode für das Abrufen von Datensätzen.  
+4.  Rufen Sie **öffnen** für das neue Objekt (oder **Requery** für ein zuvor geöffneten Objekt).  
   
 > [!TIP]
->  Recordsetfilter eignen sich für das [Verknüpfen](../../data/odbc/recordset-performing-a-join-odbc.md) von Tabellen und für den Einsatz von [Parametern](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md), und zwar basierend auf Informationen, die zur Laufzeit abgerufen oder berechnet werden.  
+>  Verwenden von Parametern im Filter ist möglicherweise die effizienteste Methode zum Abrufen von Datensätzen.  
   
- Das Recordset wählt nur die Datensätze aus, die der angegebenen Suchbedingung genügen.  Um z. B. den weiter oben beschriebenen Vorlesungsfilter einzurichten, gehen Sie folgendermaßen vor \(angenommen, die Variable `strCourseID` ist auf einen sinnvollen Wert gesetzt, wie etwa "MATH101"\):  
+> [!TIP]
+>  Recordset-Filter sind nützlich für [verknüpfen](../../data/odbc/recordset-performing-a-join-odbc.md) Tabellen und für die Verwendung von [Parameter](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) auf Basis der Informationen abgerufen oder zur Laufzeit berechnet.  
+  
+ Das Recordset wählt nur die Datensätze, die die Suchbedingung erfüllen, die Sie angegeben haben. Oben z. B. an, dass der Kurs Filter beschriebenen (vorausgesetzt, eine Variable `strCourseID` derzeit festgelegt, z. B. "MATH101"), gehen Sie folgendermaßen vor:  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -77,28 +80,28 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset  
 ```  
   
- Das Recordset enthält Datensätze für alle Kursabschnitte von MATH101.  
+ Das Recordset enthält Datensätze für alle Bereiche der Klasse für MATH101.  
   
- Beachten Sie, wie in dem letzten Beispiel die Filterzeichenfolge mithilfe einer Zeichenfolgenvariablen gesetzt wurde.  Diese Methode wird am häufigsten verwendet.  Wenn Sie dagegen den Literalwert 100 für die Vorlesungs\-ID verwenden möchten,  müssen Sie die Filterzeichenfolge folgendermaßen festlegen:  
+ Beachten Sie, wie die Filterzeichenfolge im Beispiel oben, verwenden eine Zeichenfolgenvariable festgelegt wurde. Dies ist die typische Nutzung. Aber angenommen, Sie möchten, geben Sie den literalen Wert 100 für die Kurs-ID Der folgende Code zeigt, wie Sie die Filterzeichenfolge ordnungsgemäß mit einem Literalwert festlegen:  
   
 ```  
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- Beachten Sie hierbei die Verwendung der einfachen Anführungszeichen. Wenn Sie die Filterzeichenfolge direkt festlegen, dürfen Sie **nicht** schreiben:  
+ Beachten Sie die Verwendung der einfachen Anführungszeichen. Wenn Sie die Filterzeichenfolge direkt festlegen, wird die Filterzeichenfolge **nicht**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- Diese Verwendung der Anführungszeichen entspricht zwar den ODBC\-Angaben, manche Datenbank\-Management\-Systeme erfordern jedoch möglicherweise andere Anführungszeichen.  Weitere Informationen finden Sie unter [SQL: Anpassen der SQL\-Anweisung eines Recordsets \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md).  
+ Der ODBC-Spezifikation entspricht der oben gezeigten zitieren, jedoch einige DBMS möglicherweise andere Anführungszeichen erforderlich. Weitere Informationen finden Sie unter [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 > [!NOTE]
->  Wenn Sie die Standard\-SQL\-Zeichenfolge des Recordsets überschreiben, indem Sie eine eigene SQL\-Zeichenfolge an **Open** übergeben, dürfen Sie keinen Filter festlegen, sofern die benutzerdefinierte Zeichenfolge eine **WHERE**\-Klausel enthält.  Weitere Informationen zur Überschreibung von Standard\-SQL finden Sie unter [SQL: Anpassen der SQL\-Anweisung eines Recordsets \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md).  
+>  Wunsch das Recordset Standard-SQL-Zeichenfolge zu überschreiben, indem Sie eine eigene SQL-Zeichenfolge zu übergeben **öffnen**, einen Filter sollte nicht festgelegt werden, wenn die benutzerdefinierte Zeichenfolge ist ein **, in denen** Klausel. Weitere Informationen zum Überschreiben des Standard-SQL finden Sie unter [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
-## Siehe auch  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Sortieren von Datensätzen \(ODBC\)](../../data/odbc/recordset-sorting-records-odbc.md)   
- [Recordset: Datensatzauswahl durch Recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [Recordset: Datensatzaktualisierung durch Recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
- [Recordset: Sperren von Datensätzen \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Sortieren von Datensätzen (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)   
+ [Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [Recordset: Datensatzaktualisierung durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
+ [Recordset: Sperren von Datensätzen (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

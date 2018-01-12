@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -38,31 +36,16 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0d3ac02a0ac8dfa7f681c8585be7e1b6f41f0f82
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9b808d41bfb0d9da3f709f8f655a86c168b15e00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 Erstellt einen Pfadnamen aus Komponenten Dies sind Versionen von [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -133,7 +116,7 @@ errno_t _wmakepath_s(
   
 |`path`|`sizeInWords` / `sizeInBytes`|Zurück|Inhalt von `path`|  
 |------------|------------------------------------|------------|------------------------|  
-|`NULL`|alle|`EINVAL`|nicht geändert|  
+|`NULL`|any|`EINVAL`|nicht geändert|  
 |any|<= 0|`EINVAL`|nicht geändert|  
   
  Wenn Fehlerzustände wie die oben genannten auftreten, wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wird die weitere Ausführung zugelassen, wird `errno` auf `EINVAL` gesetzt, und die Funktionen geben `EINVAL` zurück. `NULL` ist für die Parameter `drive`, `fname` und `ext` zulässig. Weitere Informationen zum Verhalten, wenn diese Parameter NULL-Zeiger oder leere Zeichenfolgen sind, finden Sie im Abschnitt „Hinweise“.  
@@ -151,13 +134,13 @@ errno_t _wmakepath_s(
   
  Wenn der Pfad `NULL` ist, wird der ungültige Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Darüber hinaus wird `errno` auf `EINVAL` festgelegt. `NULL`-Werte sind für alle anderen Parameter zugelassen.  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_makepath_s`|\<stdlib.h>|  
 |`_wmakepath_s`|\<stdlib.h> oder \<wchar.h>|  
@@ -217,7 +200,7 @@ Path extracted with _splitpath_s:
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
  [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
  [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
  [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)

@@ -1,37 +1,36 @@
 ---
-title: ".FARDATA"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".FARDATA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".FARDATA directive"
+title: . FARDATA | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .FARDATA
+dev_langs: C++
+helpviewer_keywords: .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 63e712ff69f3735f69968eb1888762463ddc6ed1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .FARDATA
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie mit [.MODEL](../../assembler/masm/dot-model.md)beginnt, ein Datensegment weites für initialisierte Daten verwendet werden \(FAR\_DATA Name des Segments oder *Name*\).  
+# <a name="fardata"></a>.FARDATA
+Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), startet ein weit Datensegment für initialisierte Daten (Segmentnamen FAR_DATA oder *Namen*).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 .FARDATA [[name]]  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

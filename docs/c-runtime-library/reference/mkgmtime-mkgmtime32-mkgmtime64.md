@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -45,33 +43,19 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f99e367d263d3ba49837b269fd04159a70cf549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
-Konvertiert eine UTC-Zeit des Typs `tm``struct` in eine UTC-Zeit des Typs `time_t`.  
+Konvertiert eine UTC-Zeit des Typs `tm struct` in eine UTC-Zeit des Typs `time_t`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -90,7 +74,7 @@ __time64_t _mkgmtime64(
   
 #### <a name="parameters"></a>Parameter  
  `timeptr`  
- Ein Zeiger auf die UTC-Zeit als `struct``tm` für die Konvertierung.  
+ Ein Zeiger auf die UTC-Zeit als `struct tm` für die Konvertierung.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Eine Menge von Typ `__time32_t` oder `__time64_t`, die die seit Mitternacht (UTC) des 1. Januar 1970 verstrichenen Sekunden darstellt. Wenn das Datum außerhalb des gültigen Bereichs liegt (siehe Abschnitt "Hinweise") oder die Eingabe kann nicht als gültig interpretiert werden kann, wird-1 zurückgegeben.  
@@ -210,7 +194,7 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   

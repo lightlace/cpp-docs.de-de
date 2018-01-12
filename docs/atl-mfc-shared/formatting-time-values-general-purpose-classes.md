@@ -1,45 +1,47 @@
 ---
-title: "Formatting Time Values: General-Purpose Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datumsangaben, calculating intervals"
-  - "Verstrichene Zeit, string representation"
-  - "formatting [C++], Uhrzeit"
-  - "time [C++], formatting"
+title: 'Formatierung von Zeitwerten: Allzweckklassen | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- dates, calculating intervals
+- elapsed time, string representation
+- time [C++], formatting
+- formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4479fea641a21edf3f037924b50247798f5a6e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Formatting Time Values: General-Purpose Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Verfahren wird veranschaulicht, wie Zeitwerte formatiert.  
+# <a name="formatting-time-values-general-purpose-classes"></a>Formatierung Time-Werten: Allgemeine Klassen
+Das folgende Verfahren zeigt, wie so formatieren Sie Time-Werten.  
   
-#### So fügen Sie eine Zeichenfolgendarstellung einer Uhrzeit oder der Laufzeit formatieren  
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>So formatieren Sie eine Zeichenfolgendarstellung bzw. eine verstrichene Zeit  
   
-1.  Verwenden Sie die **Format**\-Memberfunktion entweder von den [CTime](../atl-mfc-shared/reference/ctime-class.md) oder [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)\-Klassen, um eine Zeichenfolgendarstellung der Zeit oder Laufzeit, wie dargestellt durch das folgende Beispiel zu erstellen.  
+1.  Verwenden der **Format** Memberfunktion entweder aus der [CTime](../atl-mfc-shared/reference/ctime-class.md) oder [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) Klassen zum Erstellen eines Zeichens Zeichenfolgendarstellung bzw. die verstrichene Zeit, wie durch die folgende.  
   
-     [!CODE [NVC_ATLMFC_Utilities#175](../CodeSnippet/VS_Snippets_Cpp/NVC_ATLMFC_Utilities#175)]  
+     [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   
--   [Allgemeine Datums\- und Zeitprogrammierung in MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Allgemeine Datums- und zeitprogrammierung in MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Arbeiten mit SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Automatisierungsunterstützung der Datums\- und Zeitprogrammierung](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Automatisierungssupport bei der Datums- und zeitprogrammierung](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## Siehe auch  
- [Date and Time: General\-Purpose Classes](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datum und Uhrzeit: Allgemeine Klassen](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+

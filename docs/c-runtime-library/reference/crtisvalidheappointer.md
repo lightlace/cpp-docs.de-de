@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 87b944cfce1f61aa2ff6469210b719d2e7b92430
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0af543a4462c5cc9dec32c279750be744efa7303
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 Überprüft, ob sich ein angegebener Zeiger in einem Heap befindet, der durch eine C-Laufzeitbibliothek zugewiesen wurde, aber nicht notwendigerweise durch die CRT-Bibliothek des Aufrufers. In CRT-Versionen vor Visual Studio 2010 wird dadurch überprüft, ob sich der angegebene Zeiger im lokalen Heap befindet (nur Debugversion).  
@@ -66,11 +67,11 @@ ms.lasthandoff: 10/24/2017
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );  
 ```  
   
- Weitere Informationen dazu, wie `_CrtIsValidHeapPointer` mit anderen Debugfunktionen und -makros verwendet werden kann, finden Sie unter [Makros für die Berichterstellung](/visualstudio/debugger/macros-for-reporting). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
+ Weitere Informationen dazu, wie `_CrtIsValidHeapPointer` mit anderen Debugfunktionen und -makros verwendet werden kann, finden Sie unter [Makros für die Berichterstellung](/visualstudio/debugger/macros-for-reporting). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_CrtIsValidHeapPointer`|\<crtdbg.h>|  
   

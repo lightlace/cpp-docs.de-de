@@ -1,79 +1,47 @@
 ---
-title: "Datenzugriffsprogrammierung (MFC/ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Daten [C++], Datenzugriffstechnologien"
-  - "Datenzugriff [C++], Klassenbibliotheken für Datenbanken"
-  - "Datenbanken [C++], MFC"
-  - "MFC [C++], Datenzugriffsanwendungen"
-  - "OLE DB [C++], Datenzugriffstechnologien"
+title: Datenzugriffsprogrammierung (MFC-ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], data access applications
+- databases [C++], MFC
+- OLE DB [C++], data access technologies
+- data [C++], data access technologies
+- data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 06ab0ff17db77975d365280b6ee95cafb094db3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Datenzugriffsprogrammierung (MFC/ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="data-access-programming-mfcatl"></a>Datenzugriffsprogrammierung (MFC/ATL)
+Über die Jahre hinweg hat Visual C++ mehrere Möglichkeiten zum Arbeiten mit Datenbanken bereitgestellt. 2011 kündigte Microsoft an, dass das Ausrichten auf ODBC als bevorzugte Technologie für den Zugriff auf SQL Server-Produkte über nativen Code angewendet wird. ODBC ist ein Branchenstandard, durch dessen Verwendung Sie die maximale Portabilität Ihres Codes über mehrere Plattformen und Datenquellen erreichen. Die meisten SQL-Datenbankprodukte und viele NoSQL-Produkte unterstützen ODBC. Sie können ODBC direkt verwenden, indem Sie die ODBC-APIs auf niedriger Ebene aufrufen, oder Sie können die MFC-ODBC-Wrapperklassen oder eine C++-Wrapperbibliothek eines Drittanbieters verwenden. 
 
-Visual C\+\+ bietet verschiedene Methoden zum Arbeiten mit Datenbanken.  Die bevorzugte Zugriffsart besteht in der Verwendung einer der Klassenbibliotheken, z. B. ATL \(Active Template Class Library\) oder MFC \(Microsoft Foundation Class\), die die Arbeit mit Datenbank\-APIs vereinfachen.  
+OLE DB ist eine leistungsstarke API auf niedriger Ebene, die auf der COM-Spezifikation basiert und nur unter Windows unterstützt wird. Verwenden Sie OLE DB, wenn Ihr Programm auf [Verbindungsserver](/sql/relational-databases/linked-servers/linked-servers-database-engine) zugreift. ATL stellt OLE DB-Vorlagen bereit, die das Erstellen von benutzerdefinierten OLE DB-Anbietern und -Consumern vereinfachen. Die neueste Version von OLE DB wird mit SQL Native Client 11 bereitgestellt.  
+
+Wenn Ihre ältere Anwendung OLE DB oder die ADO-Schnittstelle auf höherer Ebene verwendet, um eine Verbindung mit SQL Server herzustellen, und Sie nicht auf Verbindungsserver zugreifen, sollten Sie eine Migration zu ODBC in naher Zukunft in Betracht ziehen. Wenn Sie keine plattformübergreifende Portabilität oder keine der neuesten SQL Server-Funktionen benötigen, können Sie wahrscheinlich den Microsoft OLE DB-Anbieter für ODBC (MSDASQL) verwenden.  MSDASQL ermöglicht Anwendungen, die auf OLE DB und ADO (das OLE DB intern verwendet) erstellt wurden, den Zugriff auf Datenquellen über einen ODBC-Treiber. Wie bei jeder Translationsebene kann sich MSDASQL auf die Datenbankleistung auswirken. Sie sollten testen, ob die Auswirkung für Ihre Anwendung erheblich ist. MSDASQL ist im Lieferumfang des Windows-Betriebssystems enthalten, und Windows Server 2008 sowie Windows Vista SP1 sind die ersten Windows-Releases, in denen eine 64-Bit-Version der Technologie enthalten ist.
+
+Die SQL Native Client-Komponente (SNAC), die OLE DB- und ODBC-Treiber in eine einzelne DLL packt, wird in ODBC-Anwendungen nicht mehr unterstützt. Die SQL Server 2012-Version von SNAC (SQLNCLI11.DLL) wird mit SQL Server 2016 geliefert, da andere SQL Server-Komponenten davon abhängig sind. Allerdings sollten neue C++-Anwendungen, die über ODBC eine Verbindung mit SQL Server oder Azure SQL-Datenbank herstellen, [den neuesten ODBC-Treiber](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server) verwenden. Weitere Informationen finden Sie unter [SQL Server Native Client Programming (SQL Server Native Client-Programmierung)](/sql/relational-databases/native-client/sql-server-native-client-programming)
+
+Wenn Sie C++/CLI verwenden, können Sie weiterhin wie gewohnt ADO.NET verwenden. Weitere Informationen finden Sie unter [Datenzugriff mit ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) und [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   
-> [!NOTE]
->  In diesem Thema werden die älteren Technologien behandelt, die Sie zum Programmieren von Datenbanken in Visual C\+\+ verwenden können.  Informationen über die Datenzugriffsprogrammierung mit Visual C\+\+ und SQL Server 2005 finden Sie unter [Datenzugriff](../dotnet/data-access-using-adonet-cpp-cli.md), [Zugreifen auf Daten in Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md) und [Creating SQL Server 2005 Objects In Managed Code](assetId:///5358a825-e19b-49aa-8214-674ce5fed1da).  
-  
- Die Bibliotheksklassen unterstützen die folgenden Arten des Datenzugriffs:  
-  
--   ATL stellt OLE DB\-Vorlagen und Datenbankattribute bereit.  
-  
--   MFC bietet Open Database Connectivity \(ODBC\) und einen ODBC\-Treiber.  
-  
- Diese Bibliotheken stellen Abstraktionen bereit, die das Arbeiten mit Datenbanken erleichtern und mit der Geschwindigkeit, Leistungsfähigkeit und Flexibilität von C\+\+ kombinieren.  Sie integrieren Datenzugriffe mit dem Anwendungsframework der Bibliothek.  
-  
- Sie können auch Datenbank\-API\-Funktionen direkt aus den COM\-, ODBC\- oder DAO\-Software Development Kits \(SDKs\) aufrufen.  Weitere Informationen über die direkte Programmierung mit den COM\-, DAO\- oder ODBC\-API\-Funktionen finden Sie in den SDKs für COM, DAO oder ODBC.  
-  
- Wenn der Datenzugriff unabhängig von der Art der gespeicherten Daten erfolgen soll, verwenden Sie ATL\-OLE DB.  Verwenden Sie die ODBC\-Klassen von MFC, wenn Sie keine Microsoft Jet\-Datenbanken \(**.mdb**\) einsetzen und mit der ODBC\-API arbeiten möchten, um vollständige Datenquellenunabhängigkeit zu erzielen.  Verwenden Sie die DAO\-Klassen von MFC, wenn Sie Microsoft Jet\-Datenbanken \(.mdb\) \(oder externe Datenbanken, z. B. ODBC\-Datenquellen\) einsetzen möchten.  
-  
-> [!NOTE]
->  Microsoft empfiehlt für neue Projekte die Verwendung von OLE DB oder ODBC.  DAO sollte lediglich für die Verwaltung bereits vorhandener Anwendungen eingesetzt werden.  
-  
- Neben der Entwicklung eigenständiger Datenbankanwendungen können Sie eine Datenbank auch in anderen Programmtypen oft als sehr effizientes Medium zum Speichern und Abrufen von Informationen verwenden.  
-  
-|Themenbereich|Siehe|  
-|-------------------|-----------|  
-|**Auswahl einer Datenbanktechnologie**||  
-|ODBC im Vergleich zu  DAO|[Sollte DAO oder ODBC verwendet werden?](../data/should-i-use-dao-or-odbc-q.md)|  
-|Verwenden der Microsoft Knowledge Base zum Suchen von zusätzlichen Artikeln zu Datenbankthemen, die von Produktsupportspezialisten verfasst wurden.|[Microsoft Knowledge Base](../data/where-can-i-find-microsoft-knowledge-base-articles-on-database-topics-q.md)|  
-|**ATL\-Datenbankunterstützung \(OLE DB\)**||  
-|OLE DB\-Programmierung \(konzeptionelle Themen\)|[Übersicht über die OLE DB\-Programmierung](../data/oledb/ole-db-programming-overview.md)|  
-|Verwenden von OLE DB\-Consumervorlagen \(konzeptionelle Themen\)|[OLE DB\-Consumervorlagen](../data/oledb/ole-db-consumer-templates-cpp.md)|  
-|OLE DB\-Consumerattribute|[OLE DB\-Consumerattribute](../windows/ole-db-consumer-attributes.md)|  
-|Verwenden von OLE DB\-Anbietervorlagen \(konzeptionelle Themen\)|[OLE DB\-Anbietervorlagen](../data/oledb/ole-db-provider-templates-cpp.md)|  
-|Hinzufügen eines OLE DB\-Consumers zu einem MFC\-Projekt|[Erstellen eines OLE DB\-Consumers](../data/oledb/creating-an-ole-db-consumer.md)|  
-|**MFC\-Datenbankunterstützung \(ODBC und DAO\)**||  
-|Was sind DAO und ODBC?|[Was sind DAO und ODBC?](../data/what-are-dao-and-odbc-q.md)|  
-|Verwenden von MFC\-Datenbankklassen|[Wann sollten Datenbankklassen verwendet werden?](../data/when-should-i-use-the-database-classes-q.md)|  
-|Informationen zum MFC\-Datenbankprogrammier\-Modell|[Wie ist das MFC\-Modell für die Datenbankprogrammierung aufgebaut?](../data/what-is-the-mfc-database-programming-model-q.md)|  
-|Wählen zwischen den MFC\-DAO\-Klassen und den MFC\-ODBC\-Klassen|[Sollte DAO oder ODBC verwendet werden?](../data/should-i-use-dao-or-odbc-q.md)|  
-|Datenquellen, auf die mit DAO und ODBC zugegriffen werden kann|[Auf welche Datenquellen kann mit DAO und ODBC zugegriffen werden?](../data/what-data-sources-can-i-access-with-dao-and-odbc-q.md)|  
-|Open Database Connectivity \(ODBC\)|[ODBC und MFC](../data/odbc/odbc-and-mfc.md)|  
-|Möglichkeit des direkten Aufrufens von DAO\-APIs oder ODBC\-APIs während der Verwendung der Klassen|[Kann DAO oder ODBC direkt aufgerufen werden?](../data/can-i-call-dao-or-odbc-directly-q.md)|  
-|Zur Verfügung stehende ODBC\-Treiber|[Liste der ODBC\-Treiber](../data/odbc/odbc-driver-list.md)|  
-|Zusammenwirken der Datenbankklassen mit der MFC\-Dokument\-\/\-Ansichtarchitektur|[MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten](../data/mfc-using-database-classes-with-documents-and-views.md)|  
-|Installieren der MFC\-Datenbankunterstützung; in Visual C\+\+ standardmäßig installierte ODBC\-Treiber; installierte ODBC SDK\- und DAO SDK\-Komponenten|[Installieren der MFC\-Datenbankunterstützung](../data/installing-mfc-database-support.md)|  
-|**Datengebundene Steuerelemente \(ADO und RDO\)**||  
-|Erstellen eines Programms, das datengebundene Steuerelemente verwendet|[Datengebundene Steuerelemente \(ADO und RDO\)](../data/ado-rdo/data-bound-controls-ado-and-rdo.md)|  
-|Datenbindung mithilfe von ActiveX\-Steuerelementen|[MFC\-ActiveX\-Steuerelemente: Verwenden der Datenbindung in einem ActiveX\-Steuerelement](../mfc/mfc-activex-controls-using-data-binding-in-an-activex-control.md)|  
-|Weitergabe von ActiveX\-Steuerelementen|[MFC\-ActiveX\-Steuerelemente: Weitergabe von ActiveX\-Steuerelementen](../mfc/mfc-activex-controls-distributing-activex-controls.md)|  
-  
-## Siehe auch  
- [Datenzugriff](../Topic/Data%20Access%20in%20Visual%20C++.md)
+-   Zusätzlich zu den ODBC-Wrapperklassen stellt MFC auch Datenzugriffsobjekt-Wrapperklassen (Data Access Object, DAO) zum Herstellen einer Verbindung mit Access-Datenbanken bereit.  DAO ist jedoch veraltet. Jeglicher Code, der auf CDaoDatabase oder CDaoRecordset basiert, sollte upgegradet werden. 
+
+Weitere Informationen zur Geschichte von Datenzugriffstechnologien unter Windows finden Sie unter [Microsoft Data Access Components (Wikipedia) (Microsoft-Datenzugriffskomponenten)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).  
+
+## <a name="see-also"></a>Siehe auch  
+ [Datenzugriff](data-access-in-cpp.md) [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) [Datenzugriff Technologies Road Map](https://msdn.microsoft.com/en-us/library/ms810810.aspx)

@@ -1,32 +1,35 @@
 ---
-title: "&#220;berschreiben eines dynamischen Accessors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Accessoren [C++], dynamisch"
-  - "Dynamische Accessoren"
-  - "Überschreiben, Dynamische Accessoren"
+title: "Überschreiben eines dynamischen Accessors | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e06e1d5b0a5aa34116456c342f9cec233edcb6a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#220;berschreiben eines dynamischen Accessors
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie einen dynamischen Accessor \(z. B. `CDynamicAccessor`\) verwenden, erstellt die **Open**\-Methode auf der Grundlage der Spalteninformationen des geöffneten Rowsets automatisch einen Accessor.  Sie können den dynamischen Accessor überschreiben, damit Sie die Spaltenbindung exakt steuern können.  
+# <a name="overriding-a-dynamic-accessor"></a>Überschreiben einer dynamischen Zugriffsmethode
+Bei Verwendung ein dynamisches Accessors wie z. B. `CDynamicAccessor`, den Befehl **öffnen** Methode erstellt einen Accessor für automatisch der Informationen in der Spalte des Rowsets bereits geöffnet anhand. Sie können den dynamischen Accessor, um zu steuern, wie genau die Spalten gebunden sind, überschreiben.  
   
- Um den dynamischen Accessor zu überschreiben, übergeben Sie der `CCommand::Open`\-Methode **false** als letzten Parameter.  Dadurch wird verhindert, dass **Open** automatisch einen Accessor erstellt.  Anschließend können Sie `GetColumnInfo` aufrufen und `AddBindEntry` für jede zu bindende Spalte aufrufen.  Im folgenden Code wird dies veranschaulicht:  
+ Um den dynamischen Accessor zu überschreiben, übergeben **"false"** als letzter Parameter an die `CCommand::Open` Methode. Dies verhindert, dass **öffnen** einen Accessor automatisch zu erstellen. Sie können dann aufrufen `GetColumnInfo` , und rufen Sie `AddBindEntry` für jede Spalte, die Sie binden möchten. Der folgende Code zeigt, wie Sie dies durchführen:  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +79,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von Accessoren](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

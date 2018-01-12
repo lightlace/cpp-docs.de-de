@@ -1,57 +1,59 @@
 ---
-title: "CXMLAccessor::GetXMLRowData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor::GetXMLRowData"
-  - "ATL.CXMLAccessor.GetXMLRowData"
-  - "CXMLAccessor::GetXMLRowData"
-  - "CXMLAccessor.GetXMLRowData"
-  - "GetXMLRowData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLRowData-Methode"
+title: 'CXMLAccessor:: GetXMLRowData | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor::GetXMLRowData
+- ATL.CXMLAccessor.GetXMLRowData
+- CXMLAccessor::GetXMLRowData
+- CXMLAccessor.GetXMLRowData
+- GetXMLRowData
+dev_langs: C++
+helpviewer_keywords: GetXMLRowData method
 ms.assetid: 156b66e3-42fd-491c-8943-38cf5e36f687
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1cfd67065b267f01704bb0658b89d9bab2186100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CXMLAccessor::GetXMLRowData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft den gesamten Inhalt einer Tabelle als Zeichenfolgendaten im XML\-Format, nach Zeile ab.  
+# <a name="cxmlaccessorgetxmlrowdata"></a>CXMLAccessor::GetXMLRowData
+Ruft den gesamten Inhalt einer Tabelle als XML-formatierte Zeichenfolgedaten zeilenweise ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT GetXMLRowData(   
-   CSimpleStringW& strOutput,   
-   bool bAppend = false    
+      HRESULT GetXMLRowData(   
+   CSimpleStringW& strOutput,   
+   bool bAppend = false    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `strOutput`  
- \[out\] Einen Verweis auf einen Puffer, der die Tabellendaten enthält abgerufen werden.  Die Daten werden als Zeichenfolgendaten mit XML\-Tagnamen formatiert, die die Spaltennamen des Datenspeichers übereinstimmen.  
+ [out] Ein Verweis auf einen Puffer, enthält die Tabellendaten abgerufen werden sollen. Die Daten werden als Zeichenfolge mit XML-Tagnamen formatiert, die den Datenspeicher Spaltennamen entsprechen.  
   
  *bAppend*  
- \[in\] Ein boolescher Wert, ob eine Zeichenfolge zum Ende der Ausgabedaten angefügt werden.  
+ [in] Ein boolescher Wert, der angibt, ob eine Zeichenfolge bis zum Ende der Ausgabedaten angefügt ist.  
   
-## Rückgabewert  
- Einer der Standard\- `HRESULT`\-Werte.  
+## <a name="return-value"></a>Rückgabewert  
+ Zu den standardmäßigen `HRESULT` Werte.  
   
-## Hinweise  
- Im Folgenden wird gezeigt, wie der Zeilendaten in XML formatiert werden.  Nächstes `DATA` stellt die Zeilendaten dar.  Verwendungs\-Verschiebungsmethoden, der an die gewünschte Zeile zu wechseln.  
+## <a name="remarks"></a>Hinweise  
+ Das folgende Beispiel zeigt, wie Daten aus der Zeile in XML formatiert ist. `DATA`unten stellt Sie Daten aus der Zeile dar. Verwenden Sie move Methoden, um in die gewünschte Zeile wechseln.  
   
  `<row>`  
   
@@ -59,8 +61,8 @@ Ruft den gesamten Inhalt einer Tabelle als Zeichenfolgendaten im XML\-Format, na
   
  `</row>`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CXMLAccessor\-Klasse](../../data/oledb/cxmlaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CXMLAccessor-Klasse](../../data/oledb/cxmlaccessor-class.md)

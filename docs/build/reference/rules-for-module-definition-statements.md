@@ -1,50 +1,49 @@
 ---
-title: "Regeln f&#252;r Moduldefinitionsanweisungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".def"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Moduldefinitionsdateien"
-  - "Moduldefinitionsdateien, Anweisungssyntax"
+title: "Regeln für Moduldefinitionsanweisungen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .def
+dev_langs: C++
+helpviewer_keywords:
+- module definition files, statement syntax
+- module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Regeln f&#252;r Moduldefinitionsanweisungen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden Syntaxregeln gelten für alle Anweisungen in einer DEF\-Datei.  Andere Regeln, die nur bestimmte Anweisungen betreffen, werden unter den Ausführungen zur jeweiligen Anweisung beschrieben.  
+# <a name="rules-for-module-definition-statements"></a>Regeln für Moduldefinitionsanweisungen
+Die folgenden Syntaxregeln gelten für alle Anweisungen in einer DEF-Datei. Andere Regeln, die für bestimmte Anweisungen gelten, werden mit jeder Anweisung beschrieben.  
   
--   Bei Anweisungen, Attributschlüsselwörtern und benutzerdefinierten Bezeichnern muss die Groß\-\/Kleinschreibung beachtet werden.  
+-   Anweisungen, die Attribut-Schlüsselwörter und benutzerdefinierten Bezeichner sind Groß-/Kleinschreibung beachtet.  
   
--   Lange Dateinamen, die Leerzeichen oder Semikolons \(;\) enthalten, müssen in Anführungszeichen \("\) eingeschlossen werden.  
+-   Lange Dateinamen mit Leerzeichen oder ein Semikolon (;) muss in Anführungszeichen (") eingeschlossen werden.  
   
--   Verwenden Sie eines oder mehrere Leerzeichen, Tabstoppzeichen oder Zeilenumbruchzeichen, um das Schlüsselwort der Anweisung von den Argumenten zu trennen und um mehrere Anweisungen voneinander zu trennen.  Ein Doppelpunkt \(:\) oder Gleichheitszeichen \(\=\), der bzw. das ein Argument kennzeichnet, ist von keinem oder mehreren Leerzeichen, Tabstoppzeichen oder Zeilenumbruchzeichen umgeben.  
+-   Verwenden Sie eine oder mehrere Leerzeichen, Tabstopps oder neue Zeilenumbruchzeichen aus, um ein Anweisungsschlüsselwort von den Argumenten zu trennen und Anweisungen voneinander zu trennen. Ein Doppelpunkt (:) oder Gleichheitszeichen (=), der ein Argument kennzeichnet von 0 (null) oder mehr Leerzeichen, Tabulatoren oder Zeilenvorschubzeichen umgeben ist.  
   
--   Eine **NAME**\-Anweisung oder **LIBRARY**\-Anweisung muss, sofern verwendet, vor allen anderen Anweisungen stehen.  
+-   Ein **Namen** oder **Bibliothek** -Anweisung, wenn verwendet, muss andere vor allen Anweisungen stehen.  
   
--   Die Anweisungen **SECTIONS** und **EXPORTS** können mehr als einmal in der DEF\-Datei auftreten.  Jede Anweisung kann Mehrfachangaben enthalten, die durch eines oder mehrere Leerzeichen, Tabstoppzeichen oder Zeilenumbruchzeichen voneinander getrennt werden müssen.  Das Anweisungsschlüsselwort muss einmal vor der ersten Angabe genannt werden, kann aber auch vor jeder weiteren Angabe wiederholt werden.  
+-   Die **Abschnitte** und **EXPORTE** Anweisungen können mehr als einmal in der DEF-Datei angezeigt. Jede Anweisung kann mehrere Spezifikationen annehmen und somit die durch eine oder mehrere Leerzeichen, Tabstopps oder neue Zeilenumbruchzeichen getrennt werden müssen. Das Anweisungsschlüsselwort muss vor der ersten Spezifikation einmal angezeigt werden und kann wiederholt werden, bevor Sie jede zusätzliche Spezifikation.  
   
--   Viele Anweisungen verfügen über äquivalente **LINK**\-Befehlszeilenoptionen.  Weitere Einzelheiten finden Sie in der Beschreibung der entsprechenden **LINK**\-Option.  
+-   Viele Anweisungen haben eine entsprechende LINK-Befehlszeilenoption. Finden Sie in der Beschreibung der Option zur entsprechenden LINK für zusätzliche Details.  
   
--   In der DEF\-Datei werden Kommentare durch ein Semikolon \(;\) am Anfang jeder Kommentarzeile gekennzeichnet.  Ein Kommentar kann nicht zugleich mit einer Anweisung in einer Zeile stehen; zwischen den Angaben in einer mehrzeiligen Anweisung können jedoch Kommentarzeilen eingefügt werden. \(**SECTIONS** und **EXPORTS** sind mehrzeilige Anweisungen.\)  
+-   Kommentare in der DEF-Datei sind gekennzeichnet durch ein Semikolon (;) am Anfang jeder Kommentarzeile. Ein Kommentar kann nicht Leitung mit einer Anweisung verwendet kann, aber es zwischen Spezifikationen in einer mehrzeiligen Anweisungen. (**Abschnitte** und **EXPORTE** sind mehrzeilige Anweisungen.)  
   
--   Numerische Argumente werden im Basis 10\- oder Hexadezimalformat angegeben.  
+-   Numerische Argumente sind in der Basis 10 angegeben oder im Hexadezimalformat.  
   
--   Wenn ein Zeichenfolgenargument mit einem [reservierten Wort](../../build/reference/reserved-words.md) übereinstimmt, muss es in doppelten Anführungszeichen \("\) eingeschlossen werden.  
+-   Wenn ein Argument entspricht einem [reservierten Wort](../../build/reference/reserved-words.md), muss das Argument in doppelte Anführungszeichen (") eingeschlossen werden.  
   
-## Siehe auch  
- [Moduldefinitionsdateien \(.Def\)](../../build/reference/module-definition-dot-def-files.md)   
- [Frequently Asked Questions on Building](assetId:///56a3bb8f-0181-4989-bab4-a07ba950ab08)
+## <a name="see-also"></a>Siehe auch  
+ [Moduldefinitionsdateien (.Def)](../../build/reference/module-definition-dot-def-files.md)  

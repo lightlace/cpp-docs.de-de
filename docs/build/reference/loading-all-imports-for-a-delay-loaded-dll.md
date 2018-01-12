@@ -1,36 +1,36 @@
 ---
-title: "Laden aller Importe f&#252;r eine verz&#246;gert geladene DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__HrLoadAllImportsForDll (Linkeroption)"
+title: "Laden aller Importe für eine verzögert geladene DLL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8afa206e62702407d9974802f9422c8597d772ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Laden aller Importe f&#252;r eine verz&#246;gert geladene DLL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die in **delayhlp.cpp** definierte **\_\_HrLoadAllImportsForDll**\-Funktion weist den Linker an, alle Importe aus einer DLL zu laden, die mit der Linkeroption [\/delayload](../../build/reference/delayload-delay-load-import.md) festgelegt wurde.  
+# <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Laden aller Importe für eine verzögert geladene DLL
+Die **__HrLoadAllImportsForDll** -Funktion, die in delayhlp.cpp definiert ist, weist den Linker an, alle Importe aus einer DLL zu laden, die mit angegeben wurde die [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) (Linkeroption).  
   
- Das Laden aller Importe ermöglicht Ihnen, die Fehlerbehandlung an einer Stelle im Code zu zentrieren, sodass in den eigentlichen Aufrufen der Importe keine Ausnahmebehandlung erforderlich ist.  Außerdem wird dadurch eine Situation vermieden, in der ein Anwendungsprozess fehlschlägt, da ein Import vom Hilfscode nicht geladen werden konnte.  
+ Laden aller Importe, können Sie Fehlerbehandlung, die an einer Stelle im Code und nicht den eigentlichen aufrufen, um die Importe Ausnahmebehandlung zu verwenden. Es verhindert auch eine Situation, in denen Ihre Anwendung teilweise durch einen Prozess aufgrund der Hilfscode nicht geladen werden einen Import fehlschlägt.  
   
- Das Verhalten von Hooks und der Fehlerbehandlung wird durch Aufrufen von **\_\_HrLoadAllImportsForDll** nicht geändert; weitere Informationen finden Sie unter [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md).  
+ Aufrufen von **__HrLoadAllImportsForDll** ändert sich nicht auf das Verhalten von Hooks und Fehler behandeln; finden Sie unter [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md) für Weitere Informationen.  
   
- Der DLL\-Name, der **\_\_HrLoadAllImportsForDll** übergeben wird, wird mit dem in der DLL selbst gespeicherten Namen verglichen; bei ihm wird die Groß\- und Kleinschreibung berücksichtigt.  
+ Das an den Namen der DLL **__HrLoadAllImportsForDll** im Vergleich zu den Namen in der DLL-Datei selbst gespeichert und Groß-/Kleinschreibung beachtet.  
   
- Im folgenden Beispiel wird veranschaulicht, wie Sie **\_\_HrLoadAllImportsForDll** aufrufen:  
+ Im folgende Beispiel wird gezeigt, wie Aufrufen **__HrLoadAllImportsForDll**:  
   
 ```  
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {  
@@ -39,5 +39,5 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

@@ -1,58 +1,58 @@
 ---
-title: "IUnknown Implementation Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.Iunknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IUnknown implementation classes"
+title: IUnknown-Implementierungsklassen (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.Iunknown
+dev_langs: C++
+helpviewer_keywords: IUnknown implementation classes
 ms.assetid: 47b69bb5-69d8-4a9c-84a8-329bdde2bb3f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 34c0b46d8a7d89ca46dc4361fe85469bd64e538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IUnknown Implementation Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden Klassen implementieren **IUnknown** und verwandte Methoden:  
+# <a name="iunknown-implementation-classes"></a>IUnknown-Implementierungsklassen
+Die folgenden Klassen implementieren **IUnknown** und die zugehörigen Methoden:  
   
--   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) verwaltet Verweiszählung für die aggregierten und nicht aggregierten Objekte.  Ermöglicht es Ihnen, ein Threadingmodell festzulegen.  
+-   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) verweiszählung für zusammengefasste und aggregierte Objekte verwaltet. Ermöglicht Ihnen die Angabe ein Threadingmodell.  
   
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) verwaltet Verweiszählung für die aggregierten und nicht aggregierten Objekte.  Wird das standardmäßige Threadingmodell des Servers.  
+-   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) verweiszählung für zusammengefasste und aggregierte Objekte verwaltet. Verwendet den standardmäßigen Threadingmodell des Servers.  
   
 -   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementiert **IUnknown** für ein zusammengesetztes Objekt.  
   
--   [CComObject](../atl/reference/ccomobject-class.md) implementiert **IUnknown** für ein nicht aggregiertes Objekt.  
+-   [CComObject](../atl/reference/ccomobject-class.md) implementiert **IUnknown** für eine aggregierte Objekt.  
   
--   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementiert **IUnknown** für die aggregierten und nicht aggregierten Objekte.  Verwenden `CComPolyObject` vermieden werden, `CComAggObject` und `CComObject` im Modul zu haben.  Einzelne `CComPolyObject`\-Objekthandles aggregiert und nicht aggregierte Fälle.  
+-   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementiert **IUnknown** für zusammengefasste und aggregierte Objekte. Mit `CComPolyObject` vermeidet beide `CComAggObject` und `CComObject` innerhalb des Moduls. Ein einzelnes `CComPolyObject` Objekt verarbeitet die zusammengefasste und aggregierte Fälle.  
   
--   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementiert **IUnknown** für ein Objekt nicht aggregiertes, ohne die Modulsperrenanzahl zu ändern.  
+-   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementiert **IUnknown** für eine aggregierte Objekt ohne Änderung der Anzahl der Module Sperre.  
   
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementiert **IUnknown** für eine Tearoff\-Schnittstelle.  
+-   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementiert **IUnknown** für eine abtrennbare-Schnittstelle.  
   
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementiert **IUnknown** für eine "zwischengespeicherte" Tearoff\-Schnittstelle.  
+-   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementiert **IUnknown** für eine "zwischengespeicherte" abtrennbare-Schnittstelle.  
   
--   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementiert **IUnknown** für das innere Objekt einer Aggregation oder der Tearoff\-Schnittstelle.  
+-   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementiert **IUnknown** für das innere Objekt des eine Aggregation oder eine abtrennbare-Schnittstelle.  
   
--   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) erreicht einen Verweiszähler für das Modul, um sicherzustellen, dass das Objekt nicht gelöscht.  
+-   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) Management ein Verweiszähler für das Modul, um sicherzustellen, dass das Objekt nicht gelöscht werden wird.  
   
--   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) erstellt ein temporäres COM\-Objekt, mit einer skelettartigen Implementierung von **IUnknown**.  
+-   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) erstellt ein temporäres COM-Objekt, mit einem skeletal-Implementierung des **IUnknown**.  
   
-## Verwandte Elemente  
- [Grundlagen von ATL\-COM\-Objekten](../atl/fundamentals-of-atl-com-objects.md)  
+## <a name="related-articles"></a>Verwandte Artikel  
+ [Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)  
   
-## Siehe auch  
- [Class Overview](../atl/atl-class-overview.md)   
- [Aggregation and Class Factory Macros](../atl/reference/aggregation-and-class-factory-macros.md)   
- [COM Map Macros](../atl/reference/com-map-macros.md)   
- [COM Map Global Functions](../atl/reference/com-map-global-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassenübersicht](../atl/atl-class-overview.md)   
+ [Aggregation und Klasse Factory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)   
+ [COM-Zuordnungsmakros](../atl/reference/com-map-macros.md)   
+ [Globale COM-Zuordnungs-Funktionen](../atl/reference/com-map-global-functions.md)
+

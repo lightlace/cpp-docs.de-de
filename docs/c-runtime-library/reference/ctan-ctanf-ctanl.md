@@ -1,57 +1,59 @@
 ---
-title: "Ctan, Ctanf, ctanl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ctan"
-  - "ctanf"
-  - "ctanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ctan"
-  - "ctanf"
-  - "ctanl"
-  - "complex/ctan"
-  - "complex/ctanf"
-  - "complex/ctanl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ctan-Funktion"
-  - "Ctanf-Funktion"
-  - "Ctanl-Funktion"
+title: ctan, ctanf, ctanl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ctan
+- ctanf
+- ctanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ctan
+- ctanf
+- ctanl
+- complex/ctan
+- complex/ctanf
+- complex/ctanl
+dev_langs: C++
+helpviewer_keywords:
+- ctan function
+- ctanf function
+- ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8cf5ceb03a91210ed7ce03c59cef38b36bea487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ctan, Ctanf, ctanl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft den Tangens einer komplexen Zahl ab.  
+# <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
+Ruft den Tangens einer komplexen Zahl ab  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _Dcomplex ctan(   
@@ -71,40 +73,40 @@ _Lcomplex ctanl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `z`  
- Eine komplexe Zahl, die den Winkel im Bogenmaß darstellt.  
+ Eine komplexe Zahl, die den Winkel als Bogenmaß darstellt  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Der Tangens von `z`.  
   
-|Eingabe|SEH\-Ausnahme|`_matherr`\-Ausnahme|  
-|-------------|-------------------|--------------------------|  
-|± ∞, QNAN, IND|Keine|\_DOMAIN|  
-|± ∞ \(`tan`, `tanf`\)|INVALID|\_DOMAIN|  
+|Eingabe|SEH-Ausnahme|`_matherr`-Ausnahme|  
+|-----------|-------------------|--------------------------|  
+|± ∞, QNAN, IND|Keine|_DOMAIN|  
+|± ∞ (`tan`, `tanf`)|INVALID|_DOMAIN|  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `ctan` aufrufen, die `_Fcomplex`\- und `_Lcomplex`\-Werte verwenden und zurückgeben. In einem C\-Programm `ctan` immer Double und gibt ein `_Dcomplex` Wert.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `ctan` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `ctan` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Routine|C\-Header|C\+\+\-Header|  
-|-------------|---------------|-------------------|  
-|`ctan`, `ctanf`, `ctanl`|\<complex.h\>|\< Ccomplex \>|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
+|-------------|--------------|------------------|  
+|`ctan`,               `ctanf`, `ctanl`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Catanh, Catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [Ctanh, Ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [Catan, Catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [Csinh, Csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [Casinh, Casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [Ccosh, Ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [Cacosh, Cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [Cacos, Cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [Csin, Csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [Casin, Casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [Ccos, Ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [Csqrt, Csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
+ [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
+ [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
+ [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
+ [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
+ [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
+ [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
+ [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
+ [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
+ [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
+ [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
+ [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)

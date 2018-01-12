@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLWIN/ATL::m_szAutoName
 - ATLWIN/ATL::m_wc
 - ATLWIN/ATL::pWndProc
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWndClassInfo class
+dev_langs: C++
+helpviewer_keywords: CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 071a6683a459c1b668cfa3eb5e866b461d82ab29
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo-Klasse
 Diese Klasse stellt Methoden zum Erfassen von Informationen für eine Fensterklasse.  
@@ -61,7 +44,7 @@ Diese Klasse stellt Methoden zum Erfassen von Informationen für eine Fensterkla
 class CWndClassInfo
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -94,9 +77,9 @@ class CWndClassInfo
   
  Wenn Sie beim Erstellen eines Fensters basierend auf eine vorhandene Fensterklasse überordnen möchten, leiten Sie eine Klasse von `CWindowImpl` und enthalten die `DECLARE_WND_SUPERCLASS` Makros in der Klasse. Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_Windowing #43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Weitere Informationen zu Fensterklassen, finden Sie unter [Fensterklassen](http://msdn.microsoft.com/library/windows/desktop/ms632596) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zu Fensterklassen, finden Sie unter [Fensterklassen](http://msdn.microsoft.com/library/windows/desktop/ms632596) im Windows SDK.  
   
  Weitere Informationen zum Verwenden von Fenstern in ATL finden Sie im Artikel [ATL-Fensterklassen](../../atl/atl-window-classes.md).  
   
@@ -152,7 +135,7 @@ TCHAR m_szAutoName[13];
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `CWndClassInfo`verwendet `m_szAutoName` nur, wenn **NULL** übergeben wird, für die `WndClassName` Parameter [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) oder [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL wird ein Name erstellt, bei der die Fensterklasse registriert ist.  
+ `CWndClassInfo`verwendet `m_szAutoName` nur, wenn **NULL** übergeben wird, für die `WndClassName` Parameter [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) oder [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL wird ein Name erstellt, bei der die Fensterklasse registriert ist.  
   
 ##  <a name="m_wc"></a>CWndClassInfo::m_wc  
  Verwaltet die fensterklasseninformationen in einem [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) Struktur.  
@@ -162,7 +145,7 @@ WNDCLASSEX m_wc;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie angegeben haben die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) -Makro, `m_wc` enthält Informationen über eine neue Windows-Klasse.  
+ Wenn Sie angegeben haben der [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) -Makro, `m_wc` enthält Informationen zu einer neue Windows-Klasse.  
   
  Wenn Sie angegeben haben die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro `m_wc` enthält Informationen zu einer übergeordneten Klasse – eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine anderes Zeitfenster-Prozedur. [M_lpszOrigName](#m_lpszorigname) und [pWndProc](#pwndproc) speichern Sie die vorhandene Fensterklasse überordnen Name und Fensterprozedur,.  
   

@@ -1,48 +1,49 @@
 ---
-title: "Dateinamenmakros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateinamenmakros in NMAKE"
-  - "Makros, NMAKE"
-  - "NMAKE (Programm), Dateinamenmakros"
+title: Dateinamenmakros | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, NMAKE
+- filename macros in NMAKE
+- NMAKE program, filename macros
 ms.assetid: 20afd6b3-5b6c-4e33-9d01-309ce98ef9db
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2073e4fcb365b3beb10d4040c0f54d9f61a0431
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Dateinamenmakros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dateinamenmakros sind als Dateinamen vordefiniert, die in der Abhängigkeit angegeben sind \(keine vollständigen Dateinamenangaben auf Datenträger\).  Diese Makros müssen beim Aufruf nicht in Klammern eingeschlossen werden. Geben Sie lediglich `$` an, wie in der folgenden Tabelle gezeigt wird.  
+# <a name="filename-macros"></a>Dateinamenmakros
+Dateinamenmakros sind als der Abhängigkeit (nicht der vollständige Dateiname Spezifikationen auf dem Datenträger) angegebene Dateinamen vordefiniert. Diese Makros müssen nicht in Klammern, die beim Aufrufen eingeschlossen werden. Geben Sie nur ein $ wie gezeigt.  
   
 |Makro|Bedeutung|  
-|-----------|---------------|  
-|**$@**|Vollständiger Name des aktuellen Ziels \(Pfad, Basisname, Erweiterung\), wie momentan angegeben.|  
-|**$$@**|Vollständiger Name des aktuellen Ziels \(Pfad, Basisname, Erweiterung\), wie momentan angegeben.  Nur als abhängige Datei in einer Abhängigkeit gültig.|  
-|**$\***|Pfad und Basisname des aktuellen Ziels ohne Dateierweiterung.|  
-|**$\*\***|Alle abhängigen Dateien des aktuellen Ziels.|  
-|**$?**|Alle abhängigen Dateien mit einem späteren Timestamp als das aktuelle Ziel.|  
-|**$\<**|Abhängige Dateien mit einem späteren Timestamp als das aktuelle Ziel.  Nur in Befehlen in Rückschlussregeln gültig.|  
+|-----------|-------------|  
+|**$@**|Aktuelle Ziel vollständigen Namen (Pfad, Basisname, Erweiterung), wie zurzeit angegeben.|  
+|**$$@**|Aktuelle Ziel vollständigen Namen (Pfad, Basisname, Erweiterung), wie zurzeit angegeben. Nur als abhängige Datei in eine Abhängigkeit gültig.|  
+|**$\***|Des Ziels für den aktuellen Pfad und Base Namen ohne die Dateierweiterung.|  
+|**$\*\***|Alle abhängigen Elemente des aktuellen Ziels.|  
+|**$?**|Alle abhängigen Elemente mit einem höheren Zeitstempel als das aktuelle Ziel.|  
+|**$<**|Abhängige Datei mit einem höheren Zeitstempel als das aktuelle Ziel. Nur in Befehlen in Rückschlussregeln gültig.|  
   
- Um einen Teil eines vordefinierten Dateinamenmakros anzugeben, wird ein Makromodifizierer angefügt und das geänderte Makro in Klammern eingeschlossen.  
+ Um Teil eines vordefinierten Dateinamenmakros anzugeben, fügen Sie einen Makromodifizierer aus, und schließen Sie das geänderte Makro in Klammern ein.  
   
 |Modifizierer|Teil des Dateinamens|  
-|------------------|--------------------------|  
+|--------------|-----------------------------|  
 |**D**|Laufwerk plus Verzeichnis|  
 |**B**|Basisname|  
-|**F**|Basisname plus Erweiterung|  
+|**F**|Basisnamen und Erweiterung|  
 |**R**|Laufwerk plus Verzeichnis plus Basisname|  
   
-## Siehe auch  
- [Besondere NMAKE\-Makros](../build/special-nmake-macros.md)
+## <a name="see-also"></a>Siehe auch  
+ [Besondere NMAKE-Makros](../build/special-nmake-macros.md)

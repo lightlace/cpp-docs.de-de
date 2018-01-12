@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 Konvertiert einen Gleitkommawert in eine Zeichenfolge. Dies ist eine sicherere Version von [_gcvt](../../c-runtime-library/reference/gcvt.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
@@ -85,9 +86,9 @@ errno_t _gcvt_s(
   
 |`buffer`|`sizeInBytes`|`value`|`digits`|Zurück|Wert in `buffer`.|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
-|`NULL`|alle|alle|alle|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` (zeigt gültigen Speicher an)|Null|any|alle|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` (zeigt gültigen Speicher an)|any|alle|>= `sizeInBytes`|`EINVAL`|Nicht geändert.|  
+|`NULL`|any|any|any|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|Null|any|any|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|any|any|>= `sizeInBytes`|`EINVAL`|Nicht geändert.|  
   
  **Sicherheitsprobleme**  
   
@@ -96,13 +97,13 @@ errno_t _gcvt_s(
 ## <a name="remarks"></a>Hinweise  
  Die `_gcvt_s` Funktion konvertiert ein Gleitkomma `value` in eine Zeichenfolge (mit einem Dezimaltrennzeichen und einem möglichen Zeichen-Byte) und speichert die Zeichenfolge in `buffer`. `buffer` sollte groß genug für den konvertierten Wert und ein abschließendes Zeichen NULL sein, das automatisch angefügt wird. Ein Puffer der Länge `_CVTBUFSIZE` reicht für alle Gleitkommawerte aus. Wenn eine Puffergröße von `digits` + 1 verwendet wird, überschreibt die Funktion nicht das Pufferende. Stellen Sie also sicher, dass Sie genug Puffer für diesen Vorgang bereitstellen. `_gcvt_s` versucht `digits`-Ziffern im Dezimalformat zu erzeugen. Wenn es nicht möglich ist, erzeugt es `digits`-Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.  
   
- Die Verwendung dieser Funktion in C++ wird durch eine Überladung (als Vorlagen vorhanden) vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktion in C++ wird durch eine Überladung (als Vorlagen vorhanden) vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
@@ -142,7 +143,7 @@ Converted value: 1.2
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
  [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   

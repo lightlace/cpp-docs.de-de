@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>Allgemeine Regeln für die Überladung von Operatoren
 Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatoren implementiert werden. Aber sie gelten nicht für die [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren, die separat behandelt werden.  
@@ -58,7 +55,7 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
   
 -   Binäre Operatoren, die als Memberfunktionen deklariert werden, akzeptieren ein Argument. Wenn sie als globale Funktionen deklariert werden, nehmen sie zwei Argumente an.  
   
--   Wenn ein Operator als unärer oder binärer Operator verwendet werden kann (**&**, ** \* **, ** + **, und ** - **), können Sie jede Verwendung separat überladen.  
+-   Wenn ein Operator als unärer oder binärer Operator verwendet werden kann (**&**,  **\*** ,  **+** , und  **-** ), können Sie jede Verwendung separat überladen.  
   
 -   Überladene Operatoren können keine Standardargumente haben.  
   

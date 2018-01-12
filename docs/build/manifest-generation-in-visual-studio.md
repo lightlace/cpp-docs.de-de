@@ -1,45 +1,45 @@
 ---
-title: "Manifestgenerierung in Visual&#160;Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Manifeste [C++]"
+title: Manifestgenerierung in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Manifestgenerierung in Visual&#160;Studio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Generierung einer Manifestdatei für ein bestimmtes Projekt wird mithilfe des Dialogfelds **Eigenschaftenseiten** des Projekts gesteuert.  Klicken Sie auf der Registerkarte **Konfigurationseigenschaften** auf die Option **Linker**, dann auf **Manifestdatei** und anschließend auf **Manifest generieren**.  Standardmäßig werden die Projekteigenschaften neuer Projekte so festgelegt, dass eine Manifestdatei generiert wird.  Die Generierung eines Manifests für ein Projekt kann jedoch über die Projekteigenschaft **Manifest generieren** deaktiviert werden.  Wenn diese Eigenschaft auf **Ja** festgelegt ist, wird das Manifest für dieses Projekt generiert.  Andernfalls ignoriert der Linker die Assemblyinformationen beim Auflösen der Abhängigkeiten des Anwendungscodes und generiert kein Manifest.  
+# <a name="manifest-generation-in-visual-studio"></a>Manifestgenerierung in Visual Studio
+Die Generierung einer Manifestdatei für ein bestimmtes Projekt kann gesteuert werden, in das Projekt **Eigenschaftenseiten** Dialogfeld. Auf der **Konfigurationseigenschaften** auf **Linker**, klicken Sie dann **Manifestdatei**, klicken Sie dann **Manifest generieren**. Standardmäßig werden die Projekteigenschaften des neuen Projekten festgelegt, eine Manifestdatei generiert. Jedoch ist es möglich, deaktivieren Sie die Generierung des Manifests für ein Projekt mit der **Manifest generieren** -Eigenschaft des Projekts. Wenn diese Eigenschaft festgelegt wird, um **Ja**, das Manifest für dieses Projekt generiert wird. Andernfalls der vom Linker ignoriert Assemblyinformationen beim Auflösen der Abhängigkeiten des Anwendungscodes, und nicht das Manifest zu generieren.  
   
- Das Buildsystem von Visual Studio erlaubt sowohl die Einbettung des Manifests in die endgültige Binärdatei der Anwendung als auch die Generierung als externe Datei.  Dieses Verhalten wird von der Option **Manifest einbetten** im Dialogfeld **Projekteigenschaften** gesteuert.  Öffnen Sie zum Festlegen dieser Eigenschaft den Knoten **Manifesttool**, und wählen Sie dann die Option **Eingabe und Ausgabe** aus.  Wenn das Manifest nicht eingebettet wird, wird es als externe Datei generiert und in demselben Verzeichnis wie die endgültige Binärdatei gespeichert.  Wenn das Manifest eingebettet wird, bettet Visual Studio die endgültigen Manifeste mithilfe des folgenden Prozesses ein:  
+ Das Buildsystem von Visual Studio ermöglicht das Manifest in die endgültige Binärdatei der Anwendung-Datei eingebettet oder als externe Datei generiert werden. Dieses Verhalten wird gesteuert, indem Sie die **Manifest einbetten** -Option in der **Projekteigenschaften** Dialogfeld. Öffnen Sie zum Festlegen dieser Eigenschaft die **Manifesttool** Knoten, wählen Sie dann **ein- und Ausgabe**. Wenn das Manifest nicht eingebettet ist, wird er als externe Datei generiert und im selben Verzeichnis wie die endgültige Binärdatei gespeichert. Wenn das Manifest eingebettet wird, bettet Visual Studio die endgültigen Manifeste mit dem folgenden Prozess:  
   
-1.  Nach dem Kompilieren des Quellcodes zu Objektdateien sammelt der Linker Informationen zu abhängigen Assemblys.  Während des Linkens der endgültigen Binärdatei generiert der Linker ein Zwischenmanifest, das zur späteren Generierung des endgültigen Manifests dient.  
+1.  Nachdem Sie der Quellcode in Objektdateien kompiliert wird, erfasst der Linker zur abhängigen Assembly an. Beim Verknüpfen der endgültigen Binärdatei, generiert der Linker ein intermediate Manifest, das später verwendet wird, um die endgültige Manifest zu generieren.  
   
-2.  Nachdem die Generierung des Zwischenmanifests und das Linken abgeschlossen sind, wird das Manifesttool ausgeführt, das das endgültige Manifest zusammenführt und in einer externen Datei speichert.  
+2.  Nachdem die Zwischendateien Produktmanifest und verknüpfen fertig gestellt wurden, werden Manifesttool zum Zusammenführen einer endgültigen Manifest, und speichern Sie sie als externe Datei ausgeführt.  
   
-3.  Anschließend überprüft das Projektbuildsystem, ob das vom Manifesttool generierte Manifest Informationen enthält, die von dem bereits in der Binärdatei eingebetteten Manifest abweichen.  
+3.  Das Projekt Buildsystem und erkennt, ob das Manifest generiert, die für die Manifesttool unterschiedliche Informationen als die bereits in die Binärdatei eingebettetes Manifest enthält.  
   
-4.  Wenn sich das in der Binärdatei eingebettete Manifest von dem Manifest unterscheidet, das vom Manifesttool generiert wurde, oder wenn die Binärdatei kein eingebettetes Manifest enthält, ruft Visual Studio den Linker ein weiteres Mal auf, um die externe Manifestdatei als Ressource in die Binärdatei einzubetten.  
+4.  Wenn das Manifest in die Binärdatei eingebettet unterscheidet sich von das Manifest von Manifesttool generiert oder die Binärdatei kein eingebettetes Manifest enthält, Visual Studio wird aufrufen den Linker ein weiteres Mal die externe Manifestdatei als in die Binärdatei eingebettet ein die Ressource.  
   
-5.  Wenn sich das in der Binärdatei eingebettete Manifest nicht von dem Manifest unterscheidet, das vom Manifesttool generiert wurde, wird der Buildvorgang mit dem nächsten Schritt fortgesetzt.  
+5.  Wenn das Manifest in die Binärdatei eingebettet das Manifest generiert, die für die Manifesttool identisch ist, wird der Build auf dem nächsten Schritt fortgesetzt.  
   
- Das Manifest wird als Textressource in die endgültige Binärdatei eingebettet. Es kann durch Öffnen der endgültigen Binärdatei in Visual Studio als Datei angezeigt werden.  Um sicherzustellen, dass das Manifest auf die richtigen Bibliotheken zeigt, folgen Sie den in [Grundlegendes zu den Abhängigkeiten einer Visual C\+\+\-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) beschriebenen Anweisungen, oder befolgen Sie die Vorschläge im Abschnitt [Problembehandlung](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
+ Das Manifest in die endgültige Binärdatei als Text Ressource eingebettet ist, und es kann angezeigt werden, indem Sie die endgültige Binärdatei als Datei in Visual Studio öffnen. Um sicherzustellen, dass das Manifest mit den richtigen Bibliotheken verweist, befolgen Sie die Schritte in [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) oder führen Sie die Vorschläge in beschriebenen der [Problembehandlung](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Abschnitt.  
   
-## Siehe auch  
- [Gewusst wie: Einbetten eines Manifests in eine C\/C\+\+\-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
- [Private Assemblys](_win32_private_assemblies)   
+## <a name="see-also"></a>Siehe auch  
+ [Vorgehensweise: Einbetten eines Manifests in einer C/C++-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
+ [Informationen zu privaten Assemblys](http://msdn.microsoft.com/library/ff951638)   
  [Manifesttool](http://msdn.microsoft.com/library/aa375649)   
- [Manifestgenerierung für C\/C\+\+\-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+ [Manifestgenerierung für C/C++-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)

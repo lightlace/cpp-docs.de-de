@@ -41,11 +41,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e13ef57486a948b8cb702c004ca144d4ec6d2e59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 10738f2236e5ecc4f04edfe21a25d6d5da80a841
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cassertions-cassertioninfo"></a>CAssertions, CAssertionInfo
 Rufen Sie die-typedefklasse **CAssertions** zum Implementieren der Parameterklasse **CAssertionInfo**.  
@@ -64,7 +67,7 @@ Rufen Sie die-typedefklasse **CAssertions** zum Implementieren der Parameterklas
 |m_szName|CONSTRAINT_NAME|  
 |m_bIsDeferrable|IS_DEFERRABLE|  
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|  
-|m_szDescription|BESCHREIBUNG|  
+|m_szDescription|DESCRIPTION|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** "atldbsch.h" Einfügen  

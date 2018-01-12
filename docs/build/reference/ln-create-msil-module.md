@@ -1,61 +1,61 @@
 ---
-title: "/LN (Erstellen eines MSIL-Moduls) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/LN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LN (Compileroption) [C++]"
-  - "-LN (Compileroption) [C++]"
+title: -LN (Erstellen von MSIL-Modul) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /LN
+dev_langs: C++
+helpviewer_keywords:
+- -LN compiler option [C++]
+- /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0278d59af9a62393f90a91655e3d7f0323e08118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /LN (Erstellen eines MSIL-Moduls)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ln-create-msil-module"></a>/LN (Erstellen eines MSIL-Moduls)
 Legt fest, dass ein Assemblymanifest nicht in die Ausgabedatei eingefügt wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /LN  
 ```  
   
-## Hinweise  
- Standardmäßig ist **\/LN** nicht aktiviert \(ein Assemblymanifest wird in die Ausgabedatei eingefügt\).  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig **/ln** ist nicht aktiv (ein Assemblymanifest in die Ausgabedatei eingefügt wird).  
   
- Wenn **\/LN** verwendet wird, muss auch eine der [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md)\-Optionen verwendet werden.  
+ Wenn **/ln** verwendet wird, eines der [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) Optionen müssen auch verwendet werden.  
   
- Ein verwaltetes Programm, das keine Assemblymetadaten im Manifest aufweist, wird als Modul bezeichnet.  Wenn Sie mit [\/c \(Kompilieren ohne Verknüpfen\)](../../build/reference/c-compile-without-linking.md) und **\/LN** kompilieren, legen Sie in der Linkerphase die [\/NOASSEMBLY \(MSIL\-Modul erstellen\)](../../build/reference/noassembly-create-a-msil-module.md)\-Option fest, um ein Modul zu erstellen.  
+ Ein verwaltetes Programm, das keine Assemblymetadaten im Manifest aufweist, wird ein Modul aufgerufen. Beim Kompilieren mit [/c (Kompilieren ohne Verknüpfen)](../../build/reference/c-compile-without-linking.md) und **/ln**, geben Sie [/NOASSEMBLY (Erstellen eines MSIL-Moduls)](../../build/reference/noassembly-create-a-msil-module.md) in der Linkerphase zum Erstellen der Ausgabedatei.  
   
- Sie sollten Module erstellen, wenn Sie Assemblys mit einer komponentenbasierte Methode erstellen möchten.  Auf diese Weise können Sie Typen erstellen und sie in Module kompilieren.  Anschließend generieren Sie eine Assembly aus einem oder mehreren Modulen.  Weitere Informationen zum Erstellen von Assemblys aus Modulen finden Sie unter [.NETMODULE\-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md) oder [Al.exe \(Assembly Linker\-Tool\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).  
+ Sie sollten Protokollierungsmodule erstellen, wenn Sie einen komponentenbasierter Ansatz zum Erstellen von Assemblys möchten.  D. h. können Sie Typen erstellen und diese in Module kompilieren.  Anschließend können Sie eine Assembly aus einem oder mehreren Modulen generieren.  Weitere Informationen zum Erstellen von Assemblys aus Modulen finden Sie unter [NETMODULE-Dateien als Linkereingabe](../../build/reference/netmodule-files-as-linker-input.md) oder [Al.exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).  
   
- Die Standarddateierweiterung für ein Modul handelt .netmodule.  
+ Die standarddateierweiterung für ein Modul ist NETMODULE-Datei.  
   
- In [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]\-Versionen vor Visual C\+\+ 2005 wurde ein Modul mit **\/clr:noAssembly** erstellt.  
+ In [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Versionen vor Visual C++ 2005 wurde ein Modul mit **/CLR: noAssembly**.  
   
- Der Visual C\+\+\-Linker akzeptiert .netmodule\-Dateien, als Eingabe und der Ausgabedatei erzeugt vom Linker eine Assembly oder .netmodule ohne Ablaufabhängigkeit auf einem der .netmodules ist, die als Eingabe für den Linker wurden.  Weitere Informationen finden Sie unter [.NETMODULE\-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md).  
+ Der Visual C++-Linker NETMODULE-Dateien als Eingabe akzeptiert und die vom Linker generierte Ausgabedatei ist eine Assembly oder eine NETMODULE-Datei mit keine Abhängigkeit zur Laufzeit auf die NETMODULE-Dateien, die an den Linker eingegeben wurden.  Weitere Informationen finden Sie unter [NETMODULE-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
--   Geben in der Linkerphase [\/NOASSEMBLY \(MSIL\-Modul erstellen\)](../../build/reference/noassembly-create-a-msil-module.md) an, um die Ausgabedatei zu erstellen.  
+-   Geben Sie [/NOASSEMBLY (Erstellen eines MSIL-Moduls)](../../build/reference/noassembly-create-a-msil-module.md) in der Linkerphase zum Erstellen der Ausgabedatei.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Diese Compileroption kann nicht programmgesteuert geändert werden.  
+-   Diese Compileroption kann programmgesteuert geändert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

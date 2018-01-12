@@ -1,77 +1,79 @@
 ---
-title: "CDynamicParameterAccessor::GetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::GetParam"
-  - "ATL.CDynamicParameterAccessor.GetParam"
-  - "CDynamicParameterAccessor::GetParam<ctype>"
-  - "CDynamicParameterAccessor.GetParam"
-  - "GetParam"
-  - "ATL::CDynamicParameterAccessor::GetParam<ctype>"
-  - "ATL::CDynamicParameterAccessor::GetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParam-Methode"
+title: 'CDynamicParameterAccessor:: GetParam | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::GetParam
+- ATL.CDynamicParameterAccessor.GetParam
+- CDynamicParameterAccessor::GetParam<ctype>
+- CDynamicParameterAccessor.GetParam
+- GetParam
+- ATL::CDynamicParameterAccessor::GetParam<ctype>
+- ATL::CDynamicParameterAccessor::GetParam
+dev_langs: C++
+helpviewer_keywords: GetParam method
 ms.assetid: 893a6bf8-7b55-4f6d-8a10-a43b13be7f56
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7cdd27cfdd173e556bb9d4c6fd27a9d801a7f8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die nonstring Daten für einen bestimmten Parameter vom Parameterpuffer ab.  
+# <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
+Ruft die Zeichenfolgendaten für einen angegebenen Parameter aus dem Parameterpuffer ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      template < class ctype > bool GetParam(   
-   DBORDINAL nParam,   
-   ctype* pData    
+      template < class ctype > bool GetParam(   
+   DBORDINAL nParam,   
+   ctype* pData    
 ) const throw( );  
-template < class ctype > bool GetParam(   
-   TCHAR* pParamName,   
-   ctype* pData    
+template < class ctype > bool GetParam(   
+   TCHAR* pParamName,   
+   ctype* pData    
 ) const throw( );  
-void* GetParam(   
-   DBORDINAL nParam    
+void* GetParam(   
+   DBORDINAL nParam    
 ) const throw( );  
-void* GetParam(   
-   TCHAR* pParamName    
+void* GetParam(   
+   TCHAR* pParamName    
 ) const throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ctype`  
- Ein auf Vorlagen basierenden Parameter, der der Datentyp ist.  
+ Ein aus einer Vorlage gebildete-Parameter, der den Datentyp darstellt.  
   
  `nParam`  
- \[in\] die einen Parameterwert \(Offset von 1\).  Parameter 0 wird für Rückgabewerte reserviert.  In einen Parameterwert ist der Index des Parameters anhand ihrer Reihenfolge im SQL\- oder Prozeduraufruf.  Ein Beispiel finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) ein Beispiel.  
   
  `pParamName`  
- \[in\] Der Name des Parameters.  
+ [in] Der Name des Parameters.  
   
  `pData`  
- \[out\] der Zeiger auf den Speicher abgerufen, der die Daten aus dem Puffer enthält.  
+ [out] Der Zeiger auf den Speicher mit den Daten aus dem Puffer abgerufen werden soll.  
   
-## Rückgabewert  
- Nicht auf Vorlagen basierende Versionen Punkte im Speicher, der die Daten abgerufen aus dem Puffer enthält.  Für auf Vorlagen basierende Versionen, gibt **true** bei Erfolg oder **false** auf Fehler.  
+## <a name="return-value"></a>Rückgabewert  
+ Für auf Vorlagen basierende Versionen abgerufen, verweist auf den Speicher mit den Daten aus dem Puffer. Für auf Vorlagen basierende Versionen gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
   
- Verwenden Sie `GetParam`, um nonstring Parameterdaten aus dem Puffer abrufen.  Verwenden Sie [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md), Zeichenfolgenparameterdaten aus dem Puffer abrufen.  
+ Verwendung `GetParam` abzurufenden Objektressourcen Parameterdaten aus dem Puffer. Verwendung [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) abzurufenden Zeichenfolge Parameterdaten aus dem Puffer.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)

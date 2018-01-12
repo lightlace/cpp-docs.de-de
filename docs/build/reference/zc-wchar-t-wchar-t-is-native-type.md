@@ -1,67 +1,68 @@
 ---
-title: "/Zc:wchar_t (wchar_t ist der systemeigene Typ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType"
-  - "VC.Project.VCCLCompilerTool.TreatWChar_tAsBuiltInType"
-  - "/Zc:wchar_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc (Compileroptionen) [C++]"
-  - "Übereinstimmung (Compileroptionen)"
-  - "wchar_t-Typ"
-  - "Zc (Compileroptionen) [C++]"
-  - "-Zc (Compileroptionen) [C++]"
+title: '-Zc: Wchar_t (Wchar_t ist der systemeigene Typ) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType
+- VC.Project.VCCLCompilerTool.TreatWChar_tAsBuiltInType
+- /Zc:wchar_t
+dev_langs: C++
+helpviewer_keywords:
+- /Zc compiler options [C++]
+- -Zc compiler options [C++]
+- wchar_t type
+- Conformance compiler options
+- Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3375e39120fdc8f2b0d8d5502aa6def997511ff5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:wchar_t (wchar_t ist der systemeigene Typ)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Analysieren Sie `wchar_t` als integrierten Typ entsprechend dem C\+\+\-Standard.  Standardmäßig ist **\/Zc:wchar\_t** aktiviert.  
+# <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t ist der systemeigene Typ)
+Analysieren Sie `wchar_t` als integrierten Typ entsprechend dem C++-Standard. Standardmäßig **/Zc: wchar_t** befindet sich auf.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Zc:wchar_t[-]  
 ```  
   
-## Hinweise  
- Wenn **\/Zc:wchar\_t** aktiviert ist, erfolgt eine Zuordnung zwischen `wchar_t` und dem Microsoft\-spezifischen systemeigenen Typ `__wchar_t`.  Wenn **\/Zc:wchar\_t\-** \(mit einem Minuszeichen\) angegeben wird, erfolgt eine Zuordnung zwischen `wchar_t` und einer `typedef` für `unsigned short`.  \(In Visual C\+\+ 6.0 und früher wurde `wchar_t` nicht als integrierter Typ implementiert, sondern in wchar.h als `typedef` für `unsigned short` deklariert.\) Es wird davon abgeraten, **\/Zc:wchar\_t\-** zu verwenden, da gemäß C\+\+\-Standard `wchar_t` ein integrierter Typ sein muss.  Die Verwendung der `typedef`\-Version kann Portabilitätsprobleme verursachen.  Wenn Sie ein Upgrade von früheren Visual C\+\+\-Versionen durchführen und der Compilerfehler [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) auftritt, da der Code versucht, `wchar_t` implizit in `unsigned short` zu konvertieren, empfiehlt es sich, den Fehler durch eine Codeänderung zu beheben anstatt durch die Einstellung **\/Zc:wchar\_t\-**.  
+## <a name="remarks"></a>Hinweise  
+ Wenn **/Zc: wchar_t** aktiviert ist, `wchar_t` ordnet die Microsoft-spezifischen systemeigenen Typ `__wchar_t`. Wenn **/Zc:wchar_t-** (mit einem Minuszeichen) angegeben wird, `wchar_t` ordnet eine `typedef` für `unsigned short`. (In Visual C++ 6.0 und früher wurde `wchar_t` nicht als integrierter Typ implementiert, sondern in wchar.h als `typedef` für `unsigned short` deklariert.) Wir empfehlen nicht **/Zc:wchar_t-** , da die C++-Standard, die erfordert `wchar_t` ein integrierter Typ sein. Die Verwendung der `typedef`-Version kann Portabilitätsprobleme verursachen. Wenn Sie ein von früheren Versionen von Visual C++ Upgrade und Compilerfehler auftreten, [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) , da der Code versucht, eine implizite Konvertierung einer `wchar_t` auf `unsigned short`, es wird empfohlen, dass Sie den Code, um den Fehler zu beheben, stattdessen ändern Einstellung **/Zc:wchar_t-**.  
   
- Microsoft implementiert `wchar_t` als 2\-Byte\-Wert ohne Vorzeichen.  Weitere Informationen zu `wchar_t` finden Sie unter [Datentypbereiche](../../cpp/data-type-ranges.md) und [Grundlegende Typen](../../cpp/fundamental-types-cpp.md).  
+ Microsoft implementiert `wchar_t` als 2-Byte-Wert ohne Vorzeichen. Weitere Informationen zu `wchar_t`, finden Sie unter [Datentypbereiche](../../cpp/data-type-ranges.md) und [grundlegende Typen](../../cpp/fundamental-types-cpp.md).  
   
- Wenn Sie neuen Code schreiben, der mit älterem Code zusammenwirken muss, und Letzterer noch die `typedef`\-Version von `wchar_t` verwendet, können Sie Überladungen für die Varianten `unsigned short` und `__wchar_t` von `wchar_t` bereitstellen. So kann der neue Code gleichermaßen mit Code verknüpft werden, der mit oder ohne **\/Zc:wchar\_t** kompiliert wurde.  Gleichzeitig entfällt die Notwendigkeit, zwei verschiedene Builds der Bibliothek bereitzustellen \(eines mit aktiviertem **\/Zc:wchar\_t** und eines ohne\).  Allerdings wird in beiden Fällen empfohlen, den älteren und den neuen Code mit demselben Compiler zu erstellen.  Kombinieren Sie niemals die Binärdateien, die mit unterschiedlichen Compilern erstellt wurden.  
+ Wenn Sie neuen Code schreiben, der mit älterem Code zusammenwirken, die noch verwendet die `typedef` Version `wchar_t`, können Sie für beide Überladungen Bereitstellen der `unsigned short` und `__wchar_t` Variationen des `wchar_t`, sodass der Code mit der verknüpft werden kann mit Code kompiliert **/Zc: wchar_t** oder Code kompiliert, ohne ihn. Andernfalls müssen Sie zwei verschiedene builds der Bibliothek bereitstellen – mit und ohne **/Zc: wchar_t** aktiviert. Allerdings wird in beiden Fällen empfohlen, den älteren und den neuen Code mit demselben Compiler zu erstellen. Kombinieren Sie niemals die Binärdateien, die mit unterschiedlichen Compilern erstellt wurden.  
   
- Wenn **\/Zc:wchar\_t** angegeben ist, werden die Symbole **\_WCHAR\_T\_DEFINED** und **\_NATIVE\_WCHAR\_T\_DEFINED** definiert.  Weitere Informationen finden Sie unter [Vordefinierte Makros](../../preprocessor/predefined-macros.md).  
+ Wenn **/Zc: wchar_t** angegeben wird, **_WCHAR_T_DEFINED** und **_NATIVE_WCHAR_T_DEFINED** Symbole definiert sind. Weitere Informationen finden Sie unter [Predefined Macros](../../preprocessor/predefined-macros.md).  
   
- Wenn der Code aufgrund der standardmäßigen Aktivierung von **\/Zc:wchar\_t** die globalen COM\-Funktionen des Compilers verwendet, empfiehlt es sich, explizite Verweise auf comsupp.lib – vom [Kommentarpragma](../../preprocessor/comment-c-cpp.md) oder von der Befehlszeile aus – in Verweise auf comsuppw.lib oder zu comsuppwd.lib zu ändern.  \(Wenn Sie mit **\/Zc:wchar\_t\-** kompilieren müssen, verwenden Sie comsupp.lib.\) Wenn Sie die comdef.h\-Headerdatei einschließen, wird die richtige Bibliothek für Sie angegeben.  Weitere Informationen zur COM\-Unterstützung des Compilers finden Sie unter [COM\-Unterstützung des Compilers](../../cpp/compiler-com-support.md).  
+ Wenn Ihr Code die globalen Compiler-COM-Funktionen verwendet, da **/Zc: wchar_t** ist jetzt auf standardmäßig, es wird empfohlen, dass Sie explizite Verweise auf comsupp.lib – Ändern der [comment-Pragma](../../preprocessor/comment-c-cpp.md) oder zum Befehl "" Zeile – entweder "comsuppw.lib" oder "comsuppwd.lib". (Muss beim Kompilieren mit **/Zc:wchar_t-**, verwenden Sie "comsupp.lib".) Wenn Sie die comdef.h-Headerdatei einfügen, wird die richtige Bibliothek für Sie angegeben. Weitere Informationen zur Compiler-COM-Unterstützung finden Sie unter [Compiler COM unterstützt](../../cpp/compiler-com-support.md).  
   
- Der Typ `wchar_t` wird nicht unterstützt, wenn Sie C\-Code kompilieren.  Weitere Informationen über Konformitätsprobleme mit Visual C\+\+ finden Sie unter [Nicht dem Standard entsprechendes Verhalten](../../cpp/nonstandard-behavior.md).  
+ Der Typ `wchar_t` wird nicht unterstützt, wenn Sie C-Code kompilieren. Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [nicht standardmäßigem Verhalten](../../cpp/nonstandard-behavior.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie im linken Bereich die Struktur **Konfigurationseigenschaften**, **C\/C\+\+** und wählen Sie dann **Sprache** aus.  
+2.  Erweitern Sie im linken Bereich **Konfigurationseigenschaften**, **C/C++-**, und wählen Sie dann **Sprache**.  
   
-3.  Ändern Sie die Eigenschaft **WChar\_t als integrierten Typ behandeln**.  
+3.  Ändern der **Wchar_t als integrierten Typ behandeln** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.TreatWChar_tAsBuiltInType*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.TreatWChar_tAsBuiltInType%2A>.  
   
-## Siehe auch  
- [\/Zc \(Übereinstimmung\)](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)

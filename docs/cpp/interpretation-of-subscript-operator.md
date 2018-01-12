@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fcd376a5322c525c59b2423bd59507699f0a7c4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretation des Subscript-Operators
 Wie andere Operatoren kann der Indexoperator (**[]**) können vom Benutzer neu definiert werden. Das Standardverhalten des Indexoperators, wenn er nicht überladen ist, besteht darin, den Arraynamen und den Index unter Verwendung der folgenden Methode zu kombinieren:  
@@ -35,7 +36,7 @@ Wie andere Operatoren kann der Indexoperator (**[]**) können vom Benutzer neu d
   
  **((**   
  ***Array-Name* ) + ()**   
- ***Tiefgestellt* 1***max*2  *\* max*3*.. .max*n)  **+**  *Feldindex*2  *\* max*3*.. .max*n). . . *+**Feldindex*n))  
+ ***Tiefgestellt* 1***max*2  *\* max*3*.. .max*n)  **+**  *Feldindex*2  *\* max*3*.. .max*n). sein. sein. *+**Feldindex*n))  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arrays](../cpp/arrays-cpp.md)

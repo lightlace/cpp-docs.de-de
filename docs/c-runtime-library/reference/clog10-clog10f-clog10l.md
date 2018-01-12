@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bab5be9a8c686c2c6cd207232ddc6f98d11aa519
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a3e77d3ae6ba74c2a7522492432db6a46db3188
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 Ruft den Logarithmus zur Basis 10 einer komplexen Zahl ab.  
@@ -92,14 +93,14 @@ _Lcomplex clog10l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|C-Header|C++-Header|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
 |-------------|--------------|------------------|  
 |`clog10`,               `clog10f`, `clogl`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CRT-Funktionsreferenz (alphabetisch)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cexp, cexpf, cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
  [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
  [clog, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)

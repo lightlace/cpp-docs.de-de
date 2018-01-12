@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2cb390fa0b6cf90a76d0b751b8bdce7d4a3e54b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 375f954f3df300b50a11067b009614ff8879b9b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombination von C (strukturiert)- und C++-Ausnahmen
 Wenn Sie besser portierbaren Code schreiben möchten, wird das Verwenden der strukturierten Ausnahmebehandlung in einem C++-Programm nicht empfohlen. Möchten Sie jedoch möglicherweise manchmal mit Kompilieren **/EHa** strukturierte Ausnahmen und C++-Quellcode kombinieren und benötigen daher einige Funktionen zur Behandlung beider Arten von Ausnahmen. Da ein strukturierter Ausnahmehandler kein Konzept von Objekten oder typisierten Ausnahmen verfügt, wird es kann nicht von C++-Code ausgelöste Ausnahmen behandelt; Allerdings C++ **catch** Handler strukturierte Ausnahmen behandeln können. Als solche, C++-ausnahmebehandlungssyntax (**versuchen**, `throw`, **catch**) wird nicht akzeptiert, durch den C-Compiler, aber strukturierte ausnahmebehandlungssyntax (`__try`, `__except`, `__finally`) wird vom C++-Compiler unterstützt.  

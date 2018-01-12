@@ -1,65 +1,65 @@
 ---
-title: "/CLRUNMANAGEDCODECHECK (Hinzuf&#252;gen von SuppressUnmanagedCodeSecurity-Attribut) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRUNMANAGEDCODECHECK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRUNMANAGEDCODECHECK (Linkeroption)"
-  - "-CLRUNMANAGEDCODECHECK (Linkeroption)"
+title: "-CLRUNMANAGEDCODECHECK (Hinzufügen von SuppressUnmanagedCodeSecurity-Attribut) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRUNMANAGEDCODECHECK
+dev_langs: C++
+helpviewer_keywords:
+- -CLRUNMANAGEDCODECHECK linker option
+- /CLRUNMANAGEDCODECHECK linker option
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0ac6b7c2c0ba9ea14a2ddd9c227143ec71e2b93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /CLRUNMANAGEDCODECHECK (Hinzuf&#252;gen von SuppressUnmanagedCodeSecurity-Attribut)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/CLRUNMANAGEDCODECHECK** gibt an, ob vom Linker <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> auf Linker\-generierte `PInvoke`\-Aufrufe von verwaltetem Code in systemeigene DLLs angewendet werden soll.  
+# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Hinzufügen von SuppressUnmanagedCodeSecurity-Attribut)
+**/ CLRUNMANAGEDCODECHECK** gibt an, ob der Linker anwendet <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> auf vom Linker generierte `PInvoke` Aufrufe von verwaltetem Code aus systemeigene DLLs.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /CLRUNMANAGEDCODECHECK[:NO]  
 ```  
   
-## Hinweise  
- Standardmäßig übernimmt der Linker den SuppressUnmanagedCodeSecurityAttribute für Linker\-generierte `PInvoke`\-Aufrufe.  Wenn **\/CLRUNMANAGEDCODECHECK** gültig ist, wird SuppressUnmanagedCodeSecurityAttribute nicht übernommen.  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig übernimmt der Linker den SuppressUnmanagedCodeSecurityAttribute auf vom Linker generierte `PInvoke` aufrufen. Wenn **/CLRUNMANAGEDCODECHECK** ist faktisch SuppressUnmanagedCodeSecurityAttribute nicht übernommen.  
   
- Das Attribut wird vom Linker nur Objekten hinzugefügt, die mit **\/clr** oder **\/clr:pure** kompiliert werden.  Vom Linker werden keine `PInvoke`\-Aufrufe in Objekten erzeugt, die mit **\/clr:safe** kompiliert werden.  Weitere Informationen finden Sie unter [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Der Linker fügt das Attribut nur auf Objekte, die mit kompiliert werden, **"/ CLR"** oder **/CLR: pure**. Der Linker löst keine `PInvoke` ruft in Objekte, die mit kompiliert **/CLR: safe**. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md). Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
- Ein `PInvoke`\-Aufruf wird erzeugt, wenn vom Linker kein verwaltetes, jedoch ein systemeigenes Symbol gefunden wird, das einem Verweis in einer aufrufenden verwalteten Funktion entspricht.  Weitere Informationen zu `PInvoke` finden Sie unter [Aufrufen systemeigener Funktionen aus verwaltetem Code](../../dotnet/calling-native-functions-from-managed-code.md).  
+ Ein `PInvoke` Aufruf wird vom Linker generiert, wenn der Linker kann kein verwaltetes Symbol, um einen Verweis von einem verwalteten Aufrufer zu erfüllen, jedoch ein systemeigenes Symbol erfüllen diesen Verweis gefunden. Weitere Informationen zu `PInvoke`, finden Sie unter [Aufrufen systemeigener Funktionen aus verwaltetem Code](../../dotnet/calling-native-functions-from-managed-code.md).  
   
- Beachten Sie, dass bei Verwendung von <xref:System.Security.AllowPartiallyTrustedCallersAttribute> im Code **\/CLRUNMANAGEDCODECHECK** explizit festgelegt werden sollte.  Wenn ein Bild sowohl das SuppressUnmanagedCodeSecurity\-Attribut als auch das AllowPartiallyTrustedCallers\-Attribut enthält, stellt dies unter Umständen ein Sicherheitsrisiko dar.  
+ Beachten Sie, dass bei Verwendung von <xref:System.Security.AllowPartiallyTrustedCallersAttribute> in Ihrem Code sollten Sie explizit festlegen **/CLRUNMANAGEDCODECHECK**. Es ist Sicherheitsrisiko, wenn ein Bild sowohl die AllowPartiallyTrustedCallers das SuppressUnmanagedCodeSecurity-Attribute enthält.  
   
- Weitere Informationen über die Auswirkungen des SuppressUnmanagedCodeSecurity\-Attributs finden Sie unter [Security Optimizations](assetId:///cf255069-d85d-4de3-914a-e4625215a7c0).  
+ Finden Sie unter [Codierungsrichtlinien für nicht verwalteten Code Secure](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) für Weitere Informationen zu den Auswirkungen der Verwendung von SuppressUnmanagedCodeSecurityAttribute.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-3.  Erweitern Sie den Knoten **Linker**.  
+3.  Erweitern Sie die **Linker** Knoten.  
   
-4.  Wählen Sie die Eigenschaftenseite **Erweitert** aus.  
+4.  Wählen Sie die **erweitert** Eigenschaftenseite.  
   
-5.  Ändern Sie die Eigenschaft **Nicht verwalteten CLR\-Code überprüfen**.  
+5.  Ändern der **nicht verwalteten CLR-Code überprüfen** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck*>.  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

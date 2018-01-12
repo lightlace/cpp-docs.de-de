@@ -40,11 +40,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d391e24a5b14bd015b43f88b2a687011d84d35fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 Ruft einen Wert aus der aktuellen Umgebung ab. Diese Versionen von [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
@@ -101,9 +102,9 @@ errno_t _wgetenv_s(
   
 |`pReturnValue`|`buffer`|`numberOfElements`|`varname`|Rückgabewert|  
 |--------------------|--------------|------------------------|---------------|------------------|  
-|`NULL`|alle|alle|alle|`EINVAL`|  
-|alle|`NULL`|>0|alle|`EINVAL`|  
-|alle|alle|alle|`NULL`|`EINVAL`|  
+|`NULL`|any|any|any|`EINVAL`|  
+|any|`NULL`|>0|any|`EINVAL`|  
+|any|any|any|`NULL`|`EINVAL`|  
   
  Bei diesen Fehlerbedingungen wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen die Funktionen `errno` auf `EINVAL` fest und geben `EINVAL` zurück.  
   
@@ -138,7 +139,7 @@ errno_t _wgetenv_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h> oder \<wchar.h>|  

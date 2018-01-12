@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - controlfp
 - control87_2
 - _control87_2
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - _control87 function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 25dfd357f0b3385f1e9bdcc4249ad3cf4399e0b6
-ms.contentlocale: de-de
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4c6188917737e46807979d5f4a7fec350cb3e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 Ruft das Gleitkommasteuerwort ab und legt es fest. Eine sicherere Version von `_controlfp` ist verfügbar. Informationen dazu finden Sie unter [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md).  
@@ -165,7 +149,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_control87`, `_controlfp`, `_control87_2`|\<float.h>|  
   
@@ -219,7 +203,7 @@ Default:  0x0001
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
  [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
  [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

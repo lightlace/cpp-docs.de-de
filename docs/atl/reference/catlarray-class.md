@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffebf8289b7c1eb5ccaae5a6b6a5f2a3f939cbb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlarray-class"></a>CAtlArray-Klasse
 Diese Klasse implementiert ein Arrayobjekt.  
@@ -58,7 +59,7 @@ class CAtlArray
  *ETraits*  
  Der Code verwendet, um die Elemente kopiert oder verschoben.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
@@ -90,7 +91,7 @@ class CAtlArray
 |[Operator &#91; &#93;](#operator_at)|Rufen Sie diesen Operator, um einen Verweis auf ein Element im Array zurückzugeben.|  
 
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

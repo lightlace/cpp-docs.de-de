@@ -1,7 +1,7 @@
 ---
 title: _open_osfhandle | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -34,64 +34,66 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d214df5d1e1cd3a48336723cecbf530402eafe3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff05c99180ff8933316e1db9366da3b985c10305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
-Ordnet den C-Laufzeit-Dateideskriptor einem vorhandenen Betriebssystem-Dateihandle zu.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      int _open_osfhandle (  
-   intptr_t osfhandle,  
-   int flags   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `osfhandle`  
- Betriebssystem-Dateihandle.  
-  
- `flags`  
- Zulässige Vorgangsarten.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall gibt `_open_osfhandle` einen C-Laufzeit-Dateideskriptor zurück. Andernfalls wird-1 zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_open_osfhandle`-Funktion weist einen C-Laufzeit-Dateideskriptor zu und ordnet diesen der von `osfhandle` angegebenen Betriebssystem-Dateihandle zu. Das `flags`-Argument ist ein Ganzzahlausdruck, der von einer oder mehreren der folgenden Manifestkonstanten gebildet wurde, die in Fcntl.h definiert sind. Wenn zwei oder mehr Manifestkonstanten verwendet werden, um das `flags`-Argument zu bilden, werden die Konstanten mit dem bitweisen OR-Operator kombiniert ( **&#124;** ).  
-  
- Fcntl.h definiert die folgenden Manifestkonstanten.  
-  
- **_O_APPEND**  
- Positioniert einen Dateizeiger vor jedem Schreibvorgang am Ende der Datei.  
-  
- **_O_RDONLY**  
- Öffnet eine Datei nur zum Lesen.  
-  
- **_O_TEXT**  
- Öffnet eine Datei im Textmodus (übersetzt).  
-  
- **_O_WTEXT**  
- Öffnet eine Datei in Unicode (übersetzt UTF-16).  
-  
- Rufen Sie `_close` auf, um eine mit `_open_osfhandle` geöffnete Datei zu schließen. Durch einen Aufruf von `_close` wird auch das zugrunde liegende Handle geschlossen; daher ist es nicht notwendig die Win32-Funktion `CloseHandle` am ursprünglichen Handle aufzurufen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Routine|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_open_osfhandle`|\<io.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)
+
+Ordnet den C-Laufzeit-Dateideskriptor einem vorhandenen Betriebssystem-Dateihandle zu.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+int _open_osfhandle (
+   intptr_t osfhandle,
+   int flags
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*osfhandle*  
+Betriebssystem-Dateihandle.
+
+*flags*  
+Zulässige Vorgangsarten.
+
+## <a name="return-value"></a>Rückgabewert
+
+Im Erfolgsfall gibt `_open_osfhandle` einen C-Laufzeit-Dateideskriptor zurück. Andernfalls wird-1 zurückgegeben.
+
+## <a name="remarks"></a>Hinweise
+
+Die `_open_osfhandle` Funktion weist einen C-Laufzeit-Dateideskriptor und ordnet das Betriebssystem-Dateihandle gemäß *Osfhandle*. Die *Flags* Argument ist ein Ganzzahlausdruck, der aus einer oder mehreren der in Fcntl.h definierten Manifestkonstanten gebildet. Wenn zwei oder mehr Manifestkonstanten verwendet werden, in Form der *Flags* Argument, werden die Konstanten mit dem bitweisen OR-Operator kombiniert ( **&#124;** ).
+
+Fcntl.h definiert die folgenden Manifestkonstanten besteht:
+
+**\_O\_ANFÜGEN**  
+Positioniert einen Dateizeiger vor jedem Schreibvorgang am Ende der Datei.
+
+**\_O\_RDONLY**  
+Öffnet eine Datei nur zum Lesen.
+
+**\_O\_TEXT**  
+Öffnet eine Datei im Textmodus (übersetzt).
+
+**\_O\_WTEXT**  
+Öffnet eine Datei in Unicode (übersetzt UTF-16).
+
+Schließen eine geöffnete Datei `_open_osfhandle`, rufen Sie [ \_schließen](../../c-runtime-library/reference/close.md). Das zugrunde liegende Betriebssystem-Dateihandle ist ebenfalls geschlossen, durch den Aufruf von `_close`, daher ist es nicht notwendig, die Win32-Funktion `CloseHandle` auf das ursprüngliche Handle. Wenn der Dateideskriptor Besitz ist ein `FILE *` Stream und anschließend durch Aufrufen [Fclose](../../c-runtime-library/reference/fclose-fcloseall.md) darauf `FILE *` Stream schließt auch den Dateideskriptor und das zugrunde liegende Handle. Rufen Sie in diesem Fall nicht `_close` auf den Dateideskriptor.
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
+|`_open_osfhandle`|\<io.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Dateibehandlung](../../c-runtime-library/file-handling.md)  

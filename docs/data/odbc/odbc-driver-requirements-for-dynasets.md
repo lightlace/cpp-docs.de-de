@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 387520b478be07cd1829f9665663173cfa15efcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2c444cd8e8d13cca7d891dba92e881b8ca167bbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>ODBC-Treiberanforderungen für Dynasets
 In den MFC-ODBC-Datenbankklassen sind Dynasets Recordsets mit dynamischen Eigenschaften. Sie sind, mit der Datenquelle auf bestimmte Weise synchronisiert bleiben. MFC-Dynasets (jedoch nicht Forward-only-Recordsets) erfordern einen ODBC-Treiber mit Level 2-API-Konformität. Wenn der Treiber für Ihre [Datenquelle](../../data/odbc/data-source-odbc.md) entspricht der Ebene-1-API festgelegt werden, noch können Sie aktualisierbar und schreibgeschützt sind und Momentaufnahmen und Forward-only-Recordsets, jedoch keine Dynasets. Level 1-Treiber kann allerdings Dynasets unterstützen, wenn es sich um erweiterte Fetch und keysetgesteuerte Cursor unterstützt.  

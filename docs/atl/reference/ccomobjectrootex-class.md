@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,19 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx-Klasse
 Diese Klasse stellt Methoden zum Behandeln von objektverwaltung Verweis Anzahl für aggregierte und aggregierte Objekte bereit.  
@@ -70,7 +52,7 @@ class CComObjectRootEx : public CComObjectRootBase
  Die Klasse, deren Methoden implementieren Sie das gewünschte Threadingmodell. Sie können das Threadingmodell explizit auswählen, indem er `ThreadModel` auf [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), oder [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Sie können die Thread-Standardmodell des Servers übernehmen, durch Festlegen von `ThreadModel` auf [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oder [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
 
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
@@ -111,7 +93,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  Eine Klasse, die einen COM-Server muss von erben `CComObjectRootEx` oder [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
- Wenn Ihre Klassendefinition gibt an, die [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) -Makro, ATL erstellt eine Instanz des **CComPolyObject\<CYourClass >** Wenn **IClassFactory:: CreateInstance** aufgerufen wird. Während der Erstellung wird der Wert, der die äußere unbekannte überprüft. Ist er **NULL**, **IUnknown** für eine aggregierte Objekt implementiert wird. Wenn die äußere unbekannte nicht **NULL**, **IUnknown** für ein zusammengesetztes Objekt implementiert wird.  
+ Wenn Ihre Klassendefinition gibt die [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) -Makro, ATL erstellt eine Instanz des **CComPolyObject\<CYourClass >** Wenn **IClassFactory:: CreateInstance** aufgerufen wird. Während der Erstellung wird der Wert, der die äußere unbekannte überprüft. Ist er **NULL**, **IUnknown** für eine aggregierte Objekt implementiert wird. Wenn die äußere unbekannte nicht **NULL**, **IUnknown** für ein zusammengesetztes Objekt implementiert wird.  
   
  Wenn Ihre Klasse keine der `DECLARE_POLY_AGGREGATABLE` -Makro, ATL erstellt eine Instanz des **CAggComObject\<CYourClass >** für aggregierte Objekte oder einer Instanz von **CComObject\<CYourClass >** für aggregierte Objekte.  
   
@@ -157,7 +139,7 @@ HRESULT FinalConstruct();
 ### <a name="example"></a>Beispiel  
  Überschreiben Sie diese Methode in der abgeleiteten Klasse in der Regel `CComObjectRootEx` aggregiert Sie Objekte erstellen. Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_COM &#40;](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  Wenn es sich bei die Erstellung ein Fehler auftritt, können Sie einen Fehler zurück. Sie können auch das Makro [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) zum Schutz Ihrer äußeren Objekts nicht gelöscht werden soll, wenn während der Erstellung der internen aggregierte-Objekt den Verweiszähler dieser Planergruppe dann verringert die Anzahl auf 0 erhöht.  
   
@@ -310,10 +292,10 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Hinweise  
  Der Wert, der die `bStarting` Parameter gibt an, ob das Modul wird initialisiert oder beendet. Die standardmäßige Implementierung des `ObjectMain` wird keine Aktion ausgeführt, aber Sie können diese Funktion überschreiben, in der Klasse initialisieren oder Bereinigen von Ressourcen, die für die Klasse zugewiesen werden soll. Beachten Sie, dass `ObjectMain` wird aufgerufen, bevor alle Instanzen der Klasse angefordert werden.  
   
- `ObjectMain`wird aufgerufen vom Einstiegspunkt der DLL, damit der Typ des Vorgangs, die die Einstiegspunktfunktion ausführen können beschränkt ist. Weitere Informationen zu diesen Einschränkungen finden Sie unter [Verhalten der Laufzeitbibliothek](../../build/run-time-library-behavior.md) und [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain`wird aufgerufen vom Einstiegspunkt der DLL, damit der Typ des Vorgangs, die die Einstiegspunktfunktion ausführen können beschränkt ist. Weitere Informationen zu diesen Einschränkungen finden Sie unter [DLLs und Visual C++-Laufzeitbibliothek Verhalten](../../build/run-time-library-behavior.md) und [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM #41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  Inkrementiert den Verweiszähler für die äußere unbekannte einer Aggregation.  
@@ -369,4 +351,3 @@ void Unlock();
  [CComObject-Klasse](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

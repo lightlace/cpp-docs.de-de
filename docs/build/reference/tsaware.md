@@ -1,37 +1,37 @@
 ---
-title: "/TSAWARE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tsaware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TSAWARE (editbin-Option)"
-  - "TSAWARE (editbin-Option)"
-  - "-TSAWARE (editbin-Option)"
+title: -TSAWARE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /tsaware
+dev_langs: C++
+helpviewer_keywords:
+- -TSAWARE editbin option
+- /TSAWARE editbin option
+- TSAWARE editbin option
 ms.assetid: 84715050-c907-4118-8cff-2973411ae931
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 68cdcb1253eca6eb168aab0b846bd7a49daa6fd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /TSAWARE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tsaware"></a>/TSAWARE
 ```  
 /TSAWARE[:NO]  
 ```  
   
-## Hinweise  
- Die **\/TSAWAR**E\-Option des EDITBIN\-Dienstprogramms ermöglicht es Ihnen, ein Programmabbild so zu ändern, als hätten Sie die [\/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)\-Linkeroption verwendet.  
+## <a name="remarks"></a>Hinweise  
+ E Dienstprogramms EDITBIN-Option können Sie ein Programmimage genauso ändern, als hätten Sie verwendet die [/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md) (Linkeroption).  
   
-## Siehe auch  
- [EDITBIN\-Optionen](../../build/reference/editbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [EDITBIN-Optionen](../../build/reference/editbin-options.md)

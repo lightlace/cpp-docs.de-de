@@ -13,16 +13,17 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 642a811f1be5afcda31d83abfd22c122e7d1b369
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Typumwandlungen und Typsicherheit (Modern C++)
 In diesem Dokument werden allgemeine Typkonvertierungsprobleme behandelt, und es wird beschrieben, wie Sie diese im C++-Code vermeiden können.  
   
- Beim Schreiben eines C++-Programms müssen Sie sicherzustellen, dass es typsicher ist. Das bedeutet, dass alle Variablen, Funktionsargumente und Rückgabewerte von Funktionen akzeptable Daten speichern und dass Vorgänge, bei denen Werte verschiedener Typen verwendet werden, einen "Sinn" ergeben und nicht zu Datenverlust, falschen Interpretationen von Bitmustern oder Speicherschäden führen. Ein Programm, das nie explizit oder implizit Werte von einem Typ in einen anderen konvertiert, ist definitionsgemäß typsicher. Manchmal sind jedoch Typkonvertierungen oder sogar unsichere Konvertierungen erforderlich. Dies kann z. B. der Fall sein, wenn Sie das Ergebnis einer Gleitkommaoperation in einer Variablen des Typs `int` speichern oder den Wert in einer `int` ohne Vorzeichen an eine Funktion übergeben müssen, die eine `int` mit Vorzeichen akzeptiert. Beide Beispiele stehen für unsichere Konvertierungen, da sie zu Datenverlust oder einer Neuinterpretation eines Werts führen können.  
+ Beim Schreiben eines C++-Programms müssen Sie sicherzustellen, dass es typsicher ist. Das bedeutet, dass alle Variablen, Funktionsargumente und Rückgabewerte von Funktionen akzeptable Daten speichern und dass Vorgänge, bei denen Werte verschiedener Typen verwendet werden, einen „Sinn“ ergeben und nicht zu Datenverlust, falschen Interpretationen von Bitmustern oder Speicherschäden führen. Ein Programm, das nie explizit oder implizit Werte von einem Typ in einen anderen konvertiert, ist definitionsgemäß typsicher. Manchmal sind jedoch Typkonvertierungen oder sogar unsichere Konvertierungen erforderlich. Dies kann z. B. der Fall sein, wenn Sie das Ergebnis einer Gleitkommaoperation in einer Variablen des Typs `int` speichern oder den Wert in einer `int` ohne Vorzeichen an eine Funktion übergeben müssen, die eine `int` mit Vorzeichen akzeptiert. Beide Beispiele stehen für unsichere Konvertierungen, da sie zu Datenverlust oder einer Neuinterpretation eines Werts führen können.  
   
  Wenn der Compiler eine unsichere Konvertierung erkennt, wird entweder ein Fehler oder eine Warnung ausgegeben. Ein Fehler beendet die Kompilierung. Bei einer Warnung kann die Kompilierung fortgesetzt werden, es wird jedoch ein möglicher Fehler im Code angegeben. Auch wenn Ihr Programm ohne Warnungen kompiliert wird, kann es trotzdem noch Code enthalten, der zu impliziten Typkonvertierungen führt, welche falsche Ergebnisse erzeugen. Typfehler können auch durch explizite Konvertierungen oder Umwandlungen im Code verursacht werden.  
   

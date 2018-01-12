@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e01b39eb7393d171b2c1fb30193810f62be85b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt
 Sie können eines ATL-Code-Assistenten verwenden, auf ein Objekt oder ein Steuerelement zu ATL und MFC-basierten Projekten hinzufügen. Für jedes COM-Objekt oder ein Steuerelement hinzufügen Sie, generiert der Assistent cpp und h-Dateien als auch eine RGS-Datei für die Registrierung skriptbasierte-Unterstützung. Die folgenden ATL-Code-Assistenten sind in Visual Studio verfügbar:  

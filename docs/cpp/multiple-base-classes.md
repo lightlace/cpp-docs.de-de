@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43f15ec1bf80c15f160d2a0b08a899806a3a7e01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-base-classes"></a>Mehrere Basisklassen
 Wie in beschrieben [Mehrfachvererbung](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), eine Klasse kann von mehr als einer Basisklasse abgeleitet werden. In einem mehrfachvererbungsmodell (Klassen sind, in denen von mehr als einer Basisklasse abgeleitet), mit der Basisklassen angegeben die *Base-List* Grammatik-Element. Beispielsweise kann die Klassendeklaration für `CollectionOfBook`, abgeleitet von `Collection` und `Book`, angegeben werden:  
@@ -89,7 +90,7 @@ Simuliertes Warteschlangenobjekt mit virtuellen Basisklassen
  ![Virtuelle und nicht virtuelle Komponenten einer Klasse](../cpp/media/vc38xp4.gif "vc38XP4")  
 Virtuelle und nicht virtuelle Komponenten der gleichen Klasse  
   
- In der Abbildung verwenden `CashierQueue` und `LunchQueue` `Queue` als virtuelle Basisklasse. Allerdings spezifiziert `TakeoutQueue` `Queue` als Basisklasse und nicht als virtuelle Basisklasse. Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt. Dies wird in der folgenden Abbildung verdeutlicht.  
+ In der Abbildung verwenden `CashierQueue` und `LunchQueue``Queue` als virtuelle Basisklasse. Allerdings spezifiziert `TakeoutQueue` `Queue` als Basisklasse und nicht als virtuelle Basisklasse. Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt. Dies wird in der folgenden Abbildung verdeutlicht.  
   
  ![Virtuelle und nicht virtuelle Vererbung in Objektlayout](../cpp/media/vc38xp5.gif "vc38XP5")  
 Objektlayout mit virtueller und nicht virtueller Vererbung  

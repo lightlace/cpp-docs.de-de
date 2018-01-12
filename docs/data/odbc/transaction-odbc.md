@@ -1,60 +1,63 @@
 ---
-title: "Transaktion (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenbanken [C++], Transaktionen"
-  - "ODBC [C++], Transaktionen"
-  - "ODBC-Recordsets [C++], Transaktionen"
-  - "ODBC-Recordsets [C++], Aktualisieren"
-  - "Recordsets [C++], Transaktionen"
-  - "Recordsets [C++], Aktualisieren"
-  - "Transaktionen [C++], MFC-ODBC-Klassen"
+title: Transaktion (ODBC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets [C++], updating
+- transactions [C++], MFC ODBC classes
+- ODBC [C++], transactions
+- recordsets [C++], updating
+- databases [C++], transactions
+- recordsets [C++], transactions
+- ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2816e1cfe3c62fecede5c909bc1593779aa90d54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Transaktion (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="transaction-odbc"></a>Transaktion (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- Eine Transaktion ist eine Methode, um eine Reihe von Aktualisierungen an einer [Datenquelle](../../data/odbc/data-source-odbc.md) zu gruppieren oder in einem Batch zusammenzufassen, sodass für alle gleichzeitig ein Commit ausgeführt werden kann oder kein Commit erfolgt, falls ein Rollback für die Transaktion ausgeführt wird.  Falls Sie keine Transaktion verwenden, werden Änderungen an der Datenquelle automatisch durchgeführt, nicht erst nach einer Bestätigung.  
+ Eine Transaktion ist eine Möglichkeit, eine Gruppe oder ein batch, eine Reihe von Updates für eine [Datenquelle](../../data/odbc/data-source-odbc.md) , damit alle gleichzeitig ein Commit ausgeführt werden oder keine ein Commit ausgeführt, sind Wenn Sie ein Rollback der Transaktion auszuführen. Wenn Sie eine Transaktion nicht verwenden, sind Änderungen an der Datenquelle automatisch anstatt bei Bedarf Commit ein Commit ausgeführt.  
   
 > [!NOTE]
->  Nicht alle ODBC\-Datenbanktreiber unterstützen Transaktionen.  Rufen Sie die `CanTransact`\-Memberfunktion eines [CDatabase](../../mfc/reference/cdatabase-class.md)\-Objekts oder [CRecordset](../../mfc/reference/crecordset-class.md)\-Objekts auf, um zu bestimmen, ob der Treiber Transaktionen für eine bestimmte Datenbank unterstützt.  Beachten Sie, dass `CanTransact` Sie nicht informiert, ob die Datenquelle eine vollständige Transaktionsunterstützung bietet.  Sie müssen nach **CommitTrans** und **Rollback** zusätzlich `CDatabase::GetCursorCommitBehavior` und `CDatabase::GetCursorRollbackBehavior` aufrufen, um die Auswirkung der Transaktion auf das geöffnete `CRecordset`\-Objekt zu überprüfen.  
+>  Nicht alle ODBC-Datenbanktreiber unterstützen Transaktionen. Rufen Sie die `CanTransact` Memberfunktion von Ihrem [CDatabase](../../mfc/reference/cdatabase-class.md) oder [CRecordset](../../mfc/reference/crecordset-class.md) bestimmt, ob der Treiber für eine bestimmte Datenbank Transaktionen unterstützt. Beachten Sie, dass `CanTransact` können Sie nicht ermitteln, ob die Datenquelle volle transaktionsunterstützung bereitstellt. Sie müssen auch aufrufen, `CDatabase::GetCursorCommitBehavior` und `CDatabase::GetCursorRollbackBehavior` nach **CommitTrans** und **Rollback** , überprüfen Sie die Auswirkungen der Transaktion auf der Open `CRecordset` Objekt.  
   
- Aufrufe der `AddNew`\-Memberfunktion und **Edit**\-Memberfunktion eines `CRecordset`\-Objekts wirken sich sofort auf die Datenquelle aus, sobald Sie **Update** aufrufen.  **Delete**\-Aufrufe wirken sich ebenfalls sofort aus.  Wenn Sie im Gegensatz dazu eine Transaktion verwenden, die aus mehreren Aufrufen von `AddNew`, **Edit**, **Update** und **Delete** besteht, werden diese Operationen erst dann ausgeführt, wenn Sie explizit **CommitTrans** aufrufen.  Indem Sie eine Transaktion einrichten, können Sie eine Reihe solcher Aufrufe ausführen und sich trotzdem die Möglichkeit vorbehalten, diese zurückzusetzen.  Falls eine wichtige Ressource nicht verfügbar ist oder eine andere Bedingung verhindert, dass die vollständige Transaktion abgeschlossen werden kann, können Sie die Transaktion zurücksetzen, statt sie zu bestätigen.  In diesem Fall wirkt sich keine der in der Transaktion ausgeführten Änderungen auf die Datenquelle aus.  
-  
-> [!NOTE]
->  Zurzeit unterstützt die `CRecordset`\-Klasse keine Aktualisierungen der Datenquelle, wenn Sie das gesammelte Abrufen von Zeilen implementiert haben.  Dies bedeutet, dass Sie `AddNew`, **Edit**, **Delete** oder **Update** nicht aufrufen können.  Sie können jedoch eigene Funktionen erstellen, um Aktualisierungen durchzuführen und die Funktionen in Transaktionen aufzurufen.  Weitere Informationen über das gesammelte Abrufen von Zeilen finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ Aufrufe von der `AddNew` und **bearbeiten** Memberfunktionen von einem `CRecordset` Objekt auswirken, die die Datenquelle sofort beim Aufruf **Update**. **Löschen Sie** Aufrufe auch sofort wirksam. Im Gegensatz dazu können Sie eine Transaktion besteht aus mehreren Aufrufen an `AddNew`, **bearbeiten**, **Update**, und **löschen**, die ausgeführt werden, doch kein Commit ausgeführt, bis Rufen Sie **CommitTrans** explizit. Durch die Einrichtung einer Transaktions, können Sie eine Reihe von solche Aufrufe ausführen, und behalten Sie die Möglichkeit, die sie für einen Rollback auszuführen. Wenn eine wichtige Ressource nicht verfügbar ist, oder eine andere Bedingung verhindert, dass die gesamte Transaktion abgeschlossen werden, können Sie die Transaktion ein Commit anstelle von zurücksetzen. In diesem Fall keine der Änderungen, die für die Transaktion gehören wirken sich auf die Datenquelle.  
   
 > [!NOTE]
->  Neben dem Recordset wirken sich Transaktionen auch auf SQL\-Anweisungen aus, die Sie direkt ausführen, sofern Sie eine mit einem `CDatabase`\-Objekt verknüpfte ODBC\-**HDBC** oder ein auf dieser **HDBC** basiertes ODBC\-**HSTMT** verwenden.  
-  
- Transaktionen sind besonders nützlich, wenn mehrere Datensätze gleichzeitig zu aktualisieren sind.  In diesem Fall sollten Sie halbfertige Transaktionen vermeiden, wie sie z. B. auftreten, wenn eine Ausnahme vor Durchführung der letzten Aktualisierung ausgelöst wird.  Die Gruppierung solcher Aktualisierungen zu einer Transaktion gibt Ihnen die Möglichkeit, die Änderungen rückgängig zu machen \(zurückzusetzen\) und die Datensätze in den Zustand zu versetzen, in dem sie sich vor Beginn der Transaktion befanden.  Wenn eine Bank z. B. Geld von Konto A auf Konto B transferiert, müssen sowohl das Abheben von Konto A als auch die Einzahlung auf Konto B erfolgreich durchgeführt werden, damit die Überweisung fehlerfrei erfolgt. Andernfalls schlägt die gesamte Transaktion fehl.  
-  
- In den Datenbankklassen führen Sie Transaktionen über `CDatabase`\-Objekte aus.  Ein `CDatabase`\-Objekt repräsentiert eine Verbindung zu einer Datenquelle. Eine oder mehrere mit diesem `CDatabase`\-Objekt verknüpfte Recordsets bearbeiten Datenbanktabellen mithilfe von Recordset\-Memberfunktionen.  
+>  Derzeit-Klasse `CRecordset` unterstützt keine Updates für die Datenquelle aus, wenn Sie massenzeilenabruf implementiert haben. Dies bedeutet, Sie können keine Aufrufe an `AddNew`, **bearbeiten**, **löschen**, oder **Update**. Allerdings können Sie Sie eigene Funktionen schreiben Updates ausführen, und rufen Sie anschließend diese Funktionen innerhalb einer bestimmten Transaktion. Weitere Informationen über das gesammelte finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Es wird nur eine Transaktionsebene unterstützt.  Sie können Transaktionen nicht schachteln. Eine Transaktion kann auch nicht mehrere Datenbankobjekte umfassen.  
+>  Neben Auswirkungen auf das Recordset, Transaktionen Auswirkungen auf den SQL-Anweisungen, die Sie direkt ausgeführt, solange Sie die ODBC verwenden **HDBC** zugeordneten Ihrer `CDatabase` Objekt oder eine ODBC- **Befehls beschäftigt** basierend auf **HDBC**.  
   
- Die folgenden Themen enthalten weitere Informationen über die Ausführung von Transaktionen:  
+ Transaktionen sind besonders nützlich, wenn Sie mehrere Datensätze verfügen, die gleichzeitig aktualisiert werden müssen. In diesem Fall möchten Sie vermeiden eine Transaktion Halb fertig gestelltes, z. B. vorkommen, wenn eine Ausnahme ausgelöst wurde, bevor die letzte Aktualisierung vorgenommen wurde. Solche Updates zu einer Transaktion gruppiert ermöglichen die Wiederherstellung (Rollback) von Änderungen und gibt die Datensätze in den Zustand versetzt. Z. B. wenn eine Bank Geld von Konto A auf Konto B übertragen, sowohl die Abbuchung von als auch die Einzahlung auf B erfolgreich sein, damit die Überweisung fehlerfrei erfolgt oder muss die gesamte Transaktion ein Fehler auftreten.  
   
--   [Transaktion: Ausführen einer Transaktion in einem Recordset \(ODBC\)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
+ In den Datenbankklassen führen Sie Transaktionen über `CDatabase` Objekte. Ein `CDatabase` Objekt stellt eine Verbindung mit einer Datenquelle dar und eine oder mehrere Recordsets zugeordnet sind, `CDatabase` Objekt arbeiten mit Tabellen der Datenbank über Memberfunktionen Recordset.  
   
--   [Transaktion: Auswirkungen von Transaktionen auf Aktualisierungen \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
+> [!NOTE]
+>  Es wird nur eine Ebene von Transaktionen unterstützt. Transaktionen können nicht geschachtelt, noch kann eine Transaktion umfassen mehrere Datenbankobjekte.  
   
-## Siehe auch  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+ Die folgenden Themen enthalten weitere Informationen, wie Transaktionen ausgeführt werden:  
+  
+-   [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
+  
+-   [Transaktion: Wie Transaktionen sich auf Aktualisierungen auswirken (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

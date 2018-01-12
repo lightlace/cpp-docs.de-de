@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbbee2fc1402a49aa773afc8eb6ae830edaffcc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ba88017e0003c7a552c985516dba9a6254317a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Manifestgenerierung über die Befehlszeile
 Beim Erstellen von C/C++-Anwendungen über die Befehlszeile mithilfe von Nmake oder ähnliche Tools, wird das Manifest generiert, nachdem der Linker verarbeitet alle Objektdateien und die endgültige Binärdatei erstellt hat. Der Linker in Objektdateien gespeicherten Assemblyinformationen erfasst und kombiniert diese Informationen in einer endgültigen Manifestdatei. Standardmäßig generiert der Linker eine Datei mit dem Namen < name_der_binärdatei >. \<Erweiterung > Manifest, um die endgültige Binärdatei zu beschreiben. Der Linker bettet die Manifestdatei in die Binärdatei nicht und kann nur ein Manifest als externe Datei generieren. Es gibt mehrere Möglichkeiten zum Einbetten eines Manifests in die endgültige Binärdatei, z. B. mit der [Manifesttool (mt.exe)](http://msdn.microsoft.com/library/aa375649) oder Kompilieren das Manifest in eine Ressourcendatei. Es ist wichtig zu bedenken, die bestimmte Regeln befolgt werden, wenn das Einbetten eines Manifests in die endgültige Binärdatei mit Funktionen wie inkrementelles Verknüpfen aktivieren "Signierung", und bearbeiten und fortfahren. Diese und andere Optionen werden im erläutert [Vorgehensweise: Einbetten einer Manifest innerhalb eines C/C++-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) beim Erstellen über die Befehlszeile.  

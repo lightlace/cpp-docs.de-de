@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>ATL-Eigenschaftenseiten-Assistent
 Dieser Assistent [eines ATL-Projekts fügt eine Eigenschaftenseite](../../atl/reference/adding-an-atl-property-page.md) oder zu einem MFC-Projekt mit ATL-Unterstützung. Eine ATL-Eigenschaftenseite bietet eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder die Methoden aufrufen) von einem oder mehreren COM-Objekten.  
@@ -56,7 +57,7 @@ Dieser Assistent [eines ATL-Projekts fügt eine Eigenschaftenseite](../../atl/re
 > [!NOTE]
 >  Wenn Sie das Projekt, das Verwenden von Attributen erstellen oder auf dieser Seite des Assistenten angeben, dass die Eigenschaftenseite Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthält die `coclass` Attribut.  
   
- **Typ**  
+ **Type**  
  Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird  
   
  **ProgID**  

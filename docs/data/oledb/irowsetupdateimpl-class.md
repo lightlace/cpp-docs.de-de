@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe93031417b8fc7717be13007b0fcfc5d08a2c40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl-Klasse
 Die OLE DB-Vorlagen-Implementierung von der [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) Schnittstelle.  
@@ -65,7 +68,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
  `MapClass`  
  Für alle Zeilenhandles, die vom Anbieter Storage-Einheit.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="interface-methods-used-with-irowsetchange"></a>Schnittstellenmethoden (mit IRowsetChange verwendet)  
   

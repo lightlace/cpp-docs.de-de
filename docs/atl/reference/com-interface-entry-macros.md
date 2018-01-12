@@ -28,11 +28,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 281829593087a936f201000faaa42f698344d3b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76352cf2015661bc970b2987b9794f3bf023cc15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros  
  Diese Makros Geben Sie die Schnittstellen eines Objekts in die COM-Zuordnung, damit diese von zugegriffen werden kann `QueryInterface`. Die Reihenfolge der Einträge in der COM-Zuordnung wird die Order-Schnittstellen für einen übereinstimmenden überprüft **IID** während `QueryInterface`.  
@@ -92,7 +93,7 @@ COM_INTERFACE_ENTRY2(x, x2)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  [in] Der Name einer Schnittstelle, die Sie vom Objekt verfügbar machen möchten.  
   
  `x2`  
@@ -116,7 +117,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
  `iid`  
  [in] Die GUID der Schnittstelle verfügbar gemacht werden.  
   
- *x*  
+ *w*  
  [in] Der Name der Klasse verfügbar, deren Vtable als Schnittstelle identifizierten gemacht `iid`.  
   
  
@@ -134,7 +135,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
  `iid`  
  [in] Die GUID, die Sie für die Benutzeroberfläche angeben.  
   
- *x*  
+ *w*  
  [in] Der Name einer Schnittstelle, die das Klassenobjekt direkt abgeleitet.  
   
  `x2`  
@@ -235,7 +236,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  [in] Text, die zum Erstellen des Schnittstellenbezeichner verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -254,7 +255,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
  `iid`  
  [in] Die GUID der Schnittstelle abtrennbare.  
   
- *x*  
+ *w*  
  [in] Der Name der Klasse, die die Schnittstelle implementiert.  
   
  `punk`  
@@ -279,7 +280,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
  `iid`  
  [in] Die GUID der Schnittstelle abtrennbare.  
   
- *x*  
+ *w*  
  [in] Der Name der Klasse, die die Schnittstelle implementiert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -364,7 +365,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  [in] Text, die zum Erstellen des Schnittstellenbezeichner verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  

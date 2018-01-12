@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _expand_dbg
+apiname: _expand_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,38 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e398d641cde32b90b4502b9ae38dc3918aa65704
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expanddbg"></a>_expand_dbg
 Ändert die Größe eines angegebenen Speicherblocks im Heap durch Erweitern oder Verkürzen des Blocks (nur Debugversion).  
@@ -95,7 +77,7 @@ void *_expand_dbg(
  Bei erfolgreichem Abschluss gibt `_expand_dbg` einen Zeiger zum vergrößerten/verkleinerten Speicherblock zurück. Da der Speicher nicht verschoben wird, ist die Adresse identisch mit "userData". Wenn ein Fehler aufgetreten ist oder der Block nicht auf die angeforderte Größe erweitert werden konnte, wird `NULL` zurückgegeben. Wenn ein Fehler auftritt, wird `errno` mit Informationen des Betriebssystems über die Art des Fehlers angegeben. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion `_expand_dbg` ist eine Debugversion der [expand](../../c-runtime-library/reference/expand.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder Aufruf von `_expand_dbg` zu einem Aufruf von `_expand` reduziert. Sowohl `_expand` als auch `_expand_dbg` ändern die Größe eines Speicherblocks im Basisheap, jedoch verfügt `_expand_dbg` über mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen Blocktypparameter zum Nachverfolgen von bestimmten Belegungstypen und `filename`//`linenumber`-Informationen zum Ermitteln des Ursprungs von Belegungsanforderungen.  
+ Die Funktion `_expand_dbg` ist eine Debugversion der [expand](../../c-runtime-library/reference/expand.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder `_expand_dbg`-Aufruf zu einem `_expand`-Aufruf reduziert. Sowohl `_expand` als auch `_expand_dbg` ändern die Größe eines Speicherblocks im Basisheap, jedoch verfügt `_expand_dbg` über mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen Blocktypparameter zum Nachverfolgen von bestimmten Belegungstypen und `filename`//`linenumber`-Informationen zum Ermitteln des Ursprungs von Belegungsanforderungen.  
   
  `_expand_dbg` ändert die Größe des angegebenen Speicherblocks mit etwas mehr Speicherplatz als der angeforderten `newSize`. `newSize` kann größer oder kleiner sein als die Größe des ursprünglich belegten Speicherblocks. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Die Größenänderung wird erreicht, indem der ursprüngliche Speicherblock erweitert oder verkürzt wird. Im Gegensatz zur [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md)-Funktion verschiebt `_expand_dbg` nicht den Speicherblock.  
   
@@ -107,7 +89,7 @@ void *_expand_dbg(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_expand_dbg`|\<crtdbg.h>|  
   

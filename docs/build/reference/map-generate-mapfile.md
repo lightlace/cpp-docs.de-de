@@ -1,81 +1,82 @@
 ---
-title: "/MAP (Zuordnungsdatei generieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/map"
-  - "VC.Project.VCLinkerTool.MapFileName"
-  - "VC.Project.VCLinkerTool.GenerateMapFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MAP (Linkeroption)"
-  - "Zuordnungsdatei generieren (Linkeroption)"
-  - "MAP (Linkeroption)"
-  - "-MAP (Linkeroption)"
-  - "mapfile (Linkeroption)"
-  - "Zuordnungsdateien, Erstellen des Linkers"
-  - "Zuordnungsdateien, Informationen über das zu verknüpfende Programm"
-  - "Zuordnungsdateien, Angeben des Dateinamens"
+title: -MAP (Zuordnungsdatei generieren) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /map
+- VC.Project.VCLinkerTool.MapFileName
+- VC.Project.VCLinkerTool.GenerateMapFile
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles, creating linker
+- generate mapfile linker option
+- mapfile linker option
+- mapfiles, information about program being linked
+- MAP linker option
+- -MAP linker option
+- mapfiles, specifying file name
+- /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f01daff11d41263766b66ed335c60d4bf83ced45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /MAP (Zuordnungsdatei generieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="map-generate-mapfile"></a>/MAP (Zuordnungsdatei generieren)
 ```  
 /MAP[:filename]  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  *filename*  
- ein benutzerdefinierter Name für die Map\-Datei.  Er wird anstelle des Standardnamens verwendet.  
+ Ein vom Benutzer angegebener Name für die Zuordnungsdatei ein. Er ersetzt den Standardnamen.  
   
-## Hinweise  
- Die \/MAP\-Option weist den Linker an, eine Zuordnungsdatei zu erstellen.  
+## <a name="remarks"></a>Hinweise  
+ Die Map-Option weist den Linker erstellen eine Zuordnungsdatei.  
   
- Der Linker gibt der MAP\-Datei standardmäßig den Basisnamen des Programms mit der Erweiterung **.map**.  Der optionale *Dateiname* ermöglicht das Überschreiben des Standardnamens einer MAP\-Datei.  
+ Standardmäßig den Namen des Linkers die Zuordnungsdatei mit den Namen des Programms und die Erweiterung .map. Das optionale *Filename* können Sie den Standardnamen für eine Zuordnungsdatei zu überschreiben.  
   
- Eine MAP\-Datei ist eine Textdatei, die die folgenden Informationen über das zu verknüpfende Programm enthält:  
+ Eine Zuordnungsdatei ist eine Textdatei, die die folgende Informationen zu der zu verknüpfende Programm enthält:  
   
--   Den Modulnamen, der dem Basisnamen der Datei entspricht  
+-   Der Modulname, also der Basisname der Datei  
   
--   Der Timestamp aus dem Header der Programmdatei \(nicht aus dem Dateisystem\)  
+-   Der Zeitstempel aus dem Dateiheader Programm (nicht aus dem Dateisystem)  
   
--   Eine Liste von Gruppen im Programm, mit Angabe der Startadresse \(als *section*:*offset*\), der Länge, des Gruppennamens und der Klasse für jede Gruppe  
+-   Eine Liste der Gruppen in der Anwendung mit jeder Gruppe Startadresse (als *Abschnitt*:*Offset*), Länge, Gruppenname und -Klasse  
   
--   Eine Liste der öffentlichen Symbole, mit Angabe der jeweiligen Adresse \(als *section*:*offset*\), dem jeweiligen Symbolnamen, der Adresse im linearen Adressraum und der OBJ\-Datei, in der das Symbol definiert ist  
+-   Eine Liste der öffentlichen Symbole, die mit jeder Adresse (als *Abschnitt*:*Offset*), Symbolnamen, Flatfile-Adresse und der OBJ-Datei, in dem das Symbol definiert ist,  
   
--   Den Einstiegspunkt \(als *section*:*offset*\)  
+-   Der Einstiegspunkt (als *Abschnitt*:*Offset*)  
   
- Die Option [\/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) gibt weitere Informationen an, die in der MAP\-Datei mit enthalten werden sollen.  
+ Die [/MapInfo](../../build/reference/mapinfo-include-information-in-mapfile.md) Option gibt zusätzliche Informationen, die in der Map-Datei eingeschlossen werden.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Debuggen**.  
+3.  Klicken Sie auf die **Debuggen** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Zuordnungsdatei generieren**.  
+4.  Ändern der **Zuordnungsdatei generieren** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile*> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName*>.  
+1.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

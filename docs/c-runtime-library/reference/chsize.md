@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f232929282b8884f1362985d9c9b68bf0fc5a1cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c48c9978650dc88ff2579a2838faf9bcb02cefa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsize"></a>_chsize
 Ändert die Größe einer Datei. Es ist eine sicherere Version verfügbar. Informationen dazu finden Sie unter [_chsize_s](../../c-runtime-library/reference/chsize-s.md).  
@@ -71,7 +72,7 @@ int _chsize(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_chsize`|\<io.h>|\<errno.h>|  
   
@@ -119,6 +120,6 @@ File length after:  329678
   
 ## <a name="see-also"></a>Siehe auch  
  [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [_close](../../c-runtime-library/reference/close.md)   
+ [_schließen](../../c-runtime-library/reference/close.md)   
  [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

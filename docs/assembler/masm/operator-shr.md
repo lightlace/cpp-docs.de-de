@@ -1,39 +1,40 @@
 ---
-title: "operator SHR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SHR"
-  - "operator SHR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator SHR"
-  - "SHR operator"
+title: Operator SHR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SHR
+- operator SHR
+dev_langs: C++
+helpviewer_keywords:
+- operator SHR
+- SHR operator
 ms.assetid: f7b401bd-e3b3-495e-b83d-b6b9cde0a30d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05348ffa042ee0d0a1b4501aedf0e7e7b6fb455b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# operator SHR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt das Ergebnis des Verschiebens der Bits *der* Anzahl von Bits recht\-Anzahl *Ausdrucks* zurück.  
+# <a name="operator-shr"></a>Operator SHR
+Gibt das Ergebnis der Verschiebung der Bits eines *Ausdruck* rechten *Anzahl* Anzahl von Bits.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 expression SHR count  
 ```  
   
-## Siehe auch  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)

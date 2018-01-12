@@ -11,8 +11,7 @@ apiname:
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
-apilocation:
-- api-ms-win-crt-runtime-l1-1-0.dll
+apilocation: api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CORECRT/_invalid_parameter
@@ -24,15 +23,16 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 49ae87567cd311e271a0ab50d7112a4a8f0c1b4a
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4db706387387d00d754f2afe74e34e85aecc5199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 Diese Funktionen werden von der C-Laufzeitbibliothek verwendet, um ungültige Parameter zu behandeln, die an CRT-Bibliotheksfunktionen übergeben werden. Ihr Code verwendet diese Funktionen möglicherweise auch zur Unterstützung der Standard- oder anpassbaren Behandlung der ungültigen Parameter.
@@ -98,8 +98,7 @@ Wenn der Standardhandler `_invoke_watson` aufgerufen wird, wird der Prozessor, f
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)  
  [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)  
  [Parametervalidierung](../../c-runtime-library/parameter-validation.md)
-

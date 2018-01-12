@@ -1,68 +1,68 @@
 ---
-title: "Benachrichtigungshooks | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verzögertes Laden von DLLs, Benachrichtigungshooks"
+title: Benachrichtigungshooks | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 31490e3bb591af6568ffecddf68219c89a25e055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Benachrichtigungshooks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Benachrichtigungshooks werden aufgerufen, unmittelbar bevor in der Hilfsroutine die folgenden Aktionen durchgeführt werden:  
+# <a name="notification-hooks"></a>Benachrichtigungshooks
+Die Benachrichtigungshooks werden aufgerufen, kurz bevor die folgenden Aktionen, in die Hilfsroutine hat ausgeführt werden:  
   
--   Das gespeicherte Handle auf die Bibliothek wird überprüft, um festzustellen, ob diese bereits geladen wurde.  
+-   Das gespeicherte Handle für die Bibliothek wird überprüft, um festzustellen, ob sie bereits geladen wurde.  
   
--   LoadLibrary wird aufgerufen, um die DLL zu laden.  
+-   **LoadLibrary** wird aufgerufen, um die DLL zu laden.  
   
--   GetProcAddress wird aufgerufen, um die Prozeduradresse abzurufen.  
+-   **GetProcAddress** wird aufgerufen, um zu versuchen, erhalten die Adresse der Prozedur.  
   
--   Kehren Sie zum verzögert geladenen Import\-Thunk zurück.  
+-   Zurück zum Thunk Verzögerung importieren.  
   
- Der Benachrichtigungshook wird wie folgt aktiviert:  
+ Der Benachrichtigungshook aktiviert ist:  
   
--   Durch Bereitstellen einer neuen Definition des **\_\_pfnDliNotifyHook2**\-Zeigers, der so initialisiert wurde, dass er auf die eigene Funktion für den Empfang von Benachrichtigungen zeigt,  
+-   Indem Sie eine neue Definition des Zeigers **__pfnDliNotifyHook2** , um auf Ihre eigene Funktion zu verweisen, die Benachrichtigungen empfangenden initialisiert wird.  
   
-     \- oder \-  
+     - oder -   
   
--   durch Festlegen des **\_\_pfnDliNotifyHook2**\-Zeigers auf die Hookfunktion, bevor Aufrufe der DLL erfolgen, die vom Programm verzögert geladen werden.  
+-   Durch Festlegen des Zeigers **__pfnDliNotifyHook2** auf die Hookfunktion, bevor Aufrufe an die DLL, die das Programm ist laden verzögern.  
   
- Handelt es sich bei der Benachrichtigung um **dliStartProcessing**, können von der Hookfunktion folgende Werte zurückgegeben werden:  
+ Wenn die Benachrichtigung ist **DliStartProcessing**, kann die Hookfunktion zurückgeben:  
   
  NULL  
- Das Laden der DLL wird von der Standardhilfsfunktion behandelt.  Dieser Aufruf ist nur zu Informationszwecken sinnvoll.  
+ Die Standard-Hilfsprogramm verarbeitet das Laden der DLL. Dies ist hilfreich, die nur für Informationszwecke aufgerufen werden.  
   
  Funktionszeiger  
- Die Standardbehandlung des verzögerten Ladens wird umgangen.  Hiermit können Sie einen eigenen Ladehandler bereitstellen.  
+ Das verzögerte Laden Standardbehandlung zu umgehen. Dadurch können Sie einen eigenen Handler laden angeben.  
   
- Handelt es sich bei der Benachrichtigung um **dliNotePreLoadLibrary**, können von der Hookfunktion folgende Werte zurückgegeben werden:  
+ Wenn die Benachrichtigung ist **DliNotePreLoadLibrary**, kann die Hookfunktion zurückgeben:  
   
--   0, falls nur Informationsbenachrichtigungen erwünscht sind.  
+-   0, wenn er nur zu Informationszwecken Benachrichtigungen will.  
   
--   das **HMODULE** für die geladene DLL, falls die DLL von ihm selbst geladen wurde.  
+-   Das HMODULE für geladenen DLL, wenn sie die DLL selbst geladen.  
   
- Handelt es sich bei der Benachrichtigung um **dliNotePreGetProcAddress**, können von der Hookfunktion folgende Werte zurückgegeben werden:  
+ Wenn die Benachrichtigung ist **DliNotePreGetProcAddress**, kann die Hookfunktion zurückgeben:  
   
--   0, falls nur Informationsbenachrichtigungen erwünscht sind.  
+-   0, wenn er nur zu Informationszwecken Benachrichtigungen will.  
   
--   die Adresse der importierten Funktion, falls die Adresse von der Hookfunktion abgerufen wurde.  
+-   Importiert die Adresse der Funktion, wenn die Hookfunktion die Adresse selbst abruft.  
   
- Handelt es sich bei der Benachrichtigung um **dliNoteEndProcessing**, wird der Rückgabewert der Hookfunktion ignoriert.  
+ Wenn die Benachrichtigung ist **um DliNoteEndProcessing**, die Hookfunktion Rückgabewert wird ignoriert.  
   
- Wenn dieser Zeiger mit einem Wert ungleich 0 \(null\) initialisiert ist, wird die Funktion von der Hilfsfunktion für verzögertes Laden an bestimmten Benachrichtigungspunkten gestartet, während die Hilfsfunktion ausgeführt wird.  Der Funktionszeiger weist folgende Definition auf:  
+ Wenn dieser Zeiger (ungleich null) initialisiert wird, wird die Hilfsfunktion für verzögertes Laden Aufrufen der Funktion an bestimmten Punkten Benachrichtigung während seiner Ausführung. Der Funktionszeiger ist wie folgt definiert:  
   
 ```  
 // The "notify hook" gets called for every call to the  
@@ -84,7 +84,7 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- Die Benachrichtigungen werden in einer **DelayLoadInfo**\-Struktur zusammen mit dem Benachrichtigungswert an die Hookfunktion übergeben.  Es werden dieselben Daten verwendet wie bei der Hilfsroutine für verzögertes Laden.  Die möglichen Benachrichtigungswerte sind unter [Struktur\- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md) definiert.  
+ Übergeben Sie die Benachrichtigungen eine **DelayLoadInfo** -Struktur mit die Hookfunktion zusammen mit der Benachrichtigung-Wert. Diese Daten sind identisch mit dem von der Hilfsfunktion für verzögertes Laden verwendet. Die Benachrichtigung Werte werden in definierten Werte werden [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md)

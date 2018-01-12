@@ -14,17 +14,18 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>Übersicht über MSBuild (Visual C++)  
   
 MSBuild ist das Standardbuildsystem für Visual C++-Projekte. Wenn Sie ein Projekt in der integrierten Entwicklungsumgebung von Visual Studio (IDE) erstellen, werden das Tool "msbuild.exe", eine XML-basierte Projektdatei und optionale Einstellungsdateien verwendet. Obwohl Sie "msbuild.exe" und eine Projektdatei in der Befehlszeile verwenden können, stellt die IDE eine Benutzeroberfläche zur leichteren Konfiguration von Einstellungen und Erstellung von Projekten bereit. In dieser Übersicht wird beschrieben, wie Visual C++ das MSBuild-System verwendet.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 Lesen Sie die folgenden Dokumente zu MSBuild.  
   
@@ -34,13 +35,13 @@ Lesen Sie die folgenden Dokumente zu MSBuild.
 - [MSBuild-Referenz](/visualstudio/msbuild/msbuild-reference)  
  Referenzinformationen zum MSBuild-System.  
   
-- [Referenz zum MSBuild-Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference)  
+- [Project File Schema Reference](/visualstudio/msbuild/msbuild-project-file-schema-reference) (Referenz zum Projektdateischema von MSBuild)  
  Führt die MSBuild-XML-Schemaelemente, ihre Attribute sowie die übergeordneten und untergeordneten Elemente auf. Achten Sie gesondert der [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild), [Ziel](/visualstudio/msbuild/target-element-msbuild), und [Aufgabe](/visualstudio/msbuild/task-element-msbuild) Elemente.  
   
 - [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (MSBuild-Befehlszeilenreferenz)  
  Beschreibt die Befehlszeilenargumente und die Optionen, die Sie mit „msbuild.exe“ verwenden können.  
   
-- [Task Reference](/visualstudio/msbuild/msbuild-task-reference) (MSBuild-Aufgabenreferenz)  
+- [Aufgabenreferenz](/visualstudio/msbuild/msbuild-task-reference)  
  Beschreibt MSBuild-Aufgaben. Achten Sie gesondert diese Aufgaben, die Visual C++-spezifisch sind: [BscMake-Aufgabe](/visualstudio/msbuild/bscmake-task), [CL-Aufgabe](/visualstudio/msbuild/cl-task), [CPPClean-Aufgabe](/visualstudio/msbuild/cppclean-task), [LIB-Aufgabe](/visualstudio/msbuild/lib-task), [Verknüpfen Aufgabe](/visualstudio/msbuild/link-task), [MIDL-Aufgabe](/visualstudio/msbuild/midl-task), [MT-Aufgabe](/visualstudio/msbuild/mt-task), [RC-Aufgabe](/visualstudio/msbuild/rc-task), [SetEnv-Aufgabe](/visualstudio/msbuild/setenv-task), [ VCMessage-Aufgabe](/visualstudio/msbuild/vcmessage-task), [XDCMake-Aufgabe](/visualstudio/msbuild/xdcmake-task), [XSD-Aufgabe](/visualstudio/msbuild/xsd-task).  
   
 ## <a name="msbuild-on-the-command-line"></a>MSBuild in der Befehlszeile  

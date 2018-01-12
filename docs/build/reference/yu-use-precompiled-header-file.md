@@ -1,88 +1,88 @@
 ---
-title: "/Yu (Vorkompilierte Headerdatei verwenden) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pch-Dateien, Verwenden von vorhandenen"
-  - "/Yu (Compileroption) [C++]"
-  - "PCH-Dateien, Verwenden von vorhandenen"
-  - "Vorkompilierte Headerdateien, Verwenden von vorhandenen"
-  - "Yu (Compileroption) [C++]"
-  - "-Yu (Compileroption) [C++]"
+title: -Yu (vorkompilierte Headerdatei verwenden) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yu
+dev_langs: C++
+helpviewer_keywords:
+- Yu compiler option [C++]
+- /Yu compiler option [C++]
+- -Yu compiler option [C++]
+- PCH files, use existing
+- .pch files, use existing
+- precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c83f159882b9ed6fcfe5557c150413303c401dda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Yu (Vorkompilierte Headerdatei verwenden)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Weist den Compiler an, eine vorhandene vorkompilierte Headerdatei \(.pch\) in der aktuellen Kompilierung zu verwenden.  
+# <a name="yu-use-precompiled-header-file"></a>/Yu (Vorkompilierte Headerdatei verwenden)
+Weist den Compiler an, eine vorhandene Datei der vorkompilierten Headerdatei (PCH) in der aktuellen Kompilierung verwenden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Yu[filename]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *filename*  
- Der Name einer Headerdatei, die mit der **\#include**\-Präprozessordirektive in die Quelldatei eingebunden wird.  
+ Der Name des Header-Datei, die in der Quelldatei über enthalten ist ein **#include** Präprozessordirektive angegeben.  
   
-## Hinweise  
- Der Name der Includedatei muss bei der **\/Yc**\-Option, die den vorkompilierten Header erstellt, und jeder nachfolgenden **\/Yu**\-Option, die die Verwendung des vorkompilierten Headers angibt, derselbe sein.  
+## <a name="remarks"></a>Hinweise  
+ Der Name der Include-Datei muss sowohl für die **"/ Yc"** Option, der vorkompilierte Header und alle erstellt, nachfolgenden **"/ Yu"** Option angeben der Verwendung des vorkompilierten Headers.  
   
- Bei **\/Yc** gibt `filename` den Punkt an, an dem die Vorkompilierung anhält. Der Compiler kompiliert den gesamten Code bis einschließlich `filename` und benennt den resultierenden vorkompilierten Header mit dem Basisnamen der Includedatei und der Erweiterung .pch.  
+ Für **"/ Yc"**, `filename` gibt die Stelle, an welche Vorkompilierung beendet; der Compiler wird jedoch der gesamte Code vorkompiliert `filename` und benennt den resultierenden vorkompilierten Header, die mit der Basisname der Include-Datei und die Erweiterung PCH.  
   
- Die PCH\-Datei muss mit **\/Yc** erstellt worden sein.  
+ Die PCH-Datei muss erstellt worden mit **"/ Yc"**.  
   
- Der Compiler behandelt den gesamten Code vor der H\-Datei als vorkompiliert.  Er überspringt diesen bis hinter die die der H\-Datei zugeordneten **\#include**\-Direktive, verwendet den in der PCH\-Datei enthaltenen Code und kompiliert dann den gesamten Code hinter `filename`.  
+ Der Compiler behandelt den gesamten Code vor der .h-Datei als vorkompilierte auftreten. Wird übersprungen hinter der **#include** .h-Datei zugeordnete Richtlinie verwendet den Code in die PCH-Datei, und klicken Sie dann kompiliert alle Code nach `filename`.  
   
- In der Befehlszeile sind keine Leerzeichen zwischen **\/Yu** und `filename` zulässig.  
+ In der Befehlszeile darf kein Leerzeichen zwischen **"/ Yu"** und `filename`.  
   
- Wenn Sie die Option **\/Yu** ohne einen Dateinamen angeben, muss das Quellprogramm ein [\#pragma hdrstop](../../preprocessor/hdrstop.md)\-Pragma enthalten, das den Dateinamen der vorkompilierten Headerdatei \(PCH\-Datei\) angibt.  In diesem Fall verwendet der Compiler die durch [\/Fp \(Name der PCH\-Datei\)](../../build/reference/fp-name-dot-pch-file.md) angegebene vorkompilierte Headerdatei \(PCH\-Datei\).  Der Compiler überspringt den Code bis zu diesem Pragma, stellt den kompilierten Zustand von der vorkompilierten Headerdatei, die im Pragma angegeben ist, wieder her und kompiliert dann nur den Code, der dem Pragma folgt.  Wenn **\#pragma hdrstop** keinen Dateinamen angibt, sucht der Compiler nach einer Datei mit einem vom Basisnamen der Quelldatei abgeleiteten Namen und der Erweiterung .pch.  Sie können auch die Option **\/Fp** verwenden, um eine andere PCH\-Datei anzugeben.  
+ Geben Sie bei der **"/ Yu"** Option ohne einen Dateinamen Ihrer Quellprogramm darf eine [#pragma Hdrstop](../../preprocessor/hdrstop.md) Pragma, das den Dateinamen des vorkompilierten Headers, der PCH-Datei angibt. In diesem Fall verwendet der Compiler die vorkompilierte Headerdatei (PCH-Datei) von  [ /fp (Name. PCH-Datei)](../../build/reference/fp-name-dot-pch-file.md). Der Compiler auf den Speicherort der diesem Pragma überspringt, wird den kompilierten Zustand aus der vorkompilierten Headerdatei angegeben werden, indem Sie das Pragma wiederhergestellt und kompiliert dann nur Code, der dem Pragma folgt. Wenn **#pragma Hdrstop** gibt keinen Namen einer Datei, der Compiler sucht nach einer Datei mit einem Namen, die von der Basisname der Quelldatei mit einer .pch-Erweiterung abgeleitet. Sie können auch die **/fp** Option aus, um eine andere PCH-Datei angeben.  
   
- Wenn Sie die Option **\/Yu** ohne einen Dateinamen verwenden und kein **hdrstop**\-Pragma angeben, wird eine Fehlermeldung generiert und die Kompilierung schlägt fehl.  
+ Bei Angabe der **"/ Yu"** ohne einen Dateinamen aus, und geben Sie keine **Hdrstop** Pragma, wird eine Fehlermeldung generiert und die Kompilierung schlägt fehl.  
   
- Wenn die Optionen **\/Yc**`filename` und  **\/Yu**`filename` in derselben Befehlszeile vorkommen und beide auf denselben Dateinamen verweisen, hat **\/Yc**`filename` Vorrang bei der Vorkompilierung des gesamten Codes bis einschließlich der benannten Datei.  Diese Funktion vereinfacht das Schreiben von Makefiles.  
+ Wenn die **"/ Yc"** `filename` und **"/ Yu"** `filename` Optionen auf derselben Befehlszeile auftreten und beide verweisen auf den gleichen Dateinamen **"/ Yc"** `filename` akzeptiert Vorrang bei der Vorkompilierung des gesamten Codes bis einschließlich der benannten Datei. Diese Funktion vereinfacht das Schreiben von Makefiles.  
   
- Da PCH\-Dateien ebenso Informationen über die Computerumgebung wie Speicheradresseninformationen über das Programm enthalten, sollten Sie eine PCH\-Datei nur auf dem Computer verwenden, auf dem sie erstellt wurde.  
+ Da PCH-Dateien Informationen über die Umgebung des Computers sowie Arbeitsspeicher Adressinformationen über das Programm enthalten, sollten Sie nur eine Pch-Datei auf dem Computer verwenden, in dem es erstellt wurde.  
   
  Weitere Informationen zu vorkompilierten Headern finden Sie unter:  
   
--   [\/Y \(Vorkompilierte Header\)](../../build/reference/y-precompiled-headers.md)  
+-   [/ Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Geben Sie [\/Yc \(Datei der vorkompilierten Header erstellen\)](../../build/reference/yc-create-precompiled-header-file.md) für eine CPP\-Datei im Projekt an.  
+1.  Geben Sie [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md) für eine CPP-Datei in Ihrem Projekt.  
   
-2.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+2.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-3.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+3.  Klicken Sie auf den Ordner **C/C++** .  
   
-4.  Klicken Sie auf die Eigenschaftenseite **Vorkompilierte Header**.  
+4.  Klicken Sie auf die **vorkompilierte Header** Eigenschaftenseite.  
   
-5.  Ändern Sie die Eigenschaft **PCH durch Datei erstellen** oder **Erstellen\/Verwenden eines vorkompilierten Headers**.  
+5.  Ändern der **PCH durch Datei erstellen/verwenden** Eigenschaft oder die **vorkompilierten Header erstellen/verwenden** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough*> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader*>.  
+-   Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Wenn der folgende Code:  
   
 ```  
@@ -92,16 +92,16 @@ Weist den Compiler an, eine vorhandene vorkompilierte Headerdatei \(.pch\) in de
 ...  
 ```  
   
- mit der Befehlszeile `CL /YuMYAPP.H PROG.CPP` kompiliert wird, verarbeitet der Compiler die drei Include\-Anweisungen nicht, sondern verwendet vorkompilierten Code aus MYAPP.pch. Dadurch wird die Zeit eingespart, die zum Vorverarbeiten aller drei Dateien \(und etwaiger eingebundener Dateien\) nötig wäre.  
+ wird über die Befehlszeile kompiliert `CL /YuMYAPP.H PROG.CPP`, verarbeitet der Compiler nicht die drei Anweisungen, aber verwendet vorkompilierter Code aus MYAPP.pch, dadurch Zeitersparnis beteiligten vorverarbeitung alle drei Dateien (und alle Dateien, die sie möglicherweise enthalten) enthalten.  
   
- Sie können die [\/Fp \(Name der PCH\-Datei\)](../../build/reference/fp-name-dot-pch-file.md)\-Option mit der **\/Yu**\-Option verwenden, um den Namen der PCH\-Datei anzugeben, wenn sich dieser vom Dateinamenargument für **\/Yc** oder dem Basisnamen der Quelldatei unterscheidet, wie im folgenden Beispiel:  
+ Sie können die  [ /fp (Name. PCH-Datei)](../../build/reference/fp-name-dot-pch-file.md) -Option mit der **"/ Yu"** Option aus, um den Namen der PCH-Datei angeben, wenn der Name entweder Datei Name-Arguments, unterscheidet **"/ Yc"** oder der Basisname der Quelldatei, wie in der befolgen:  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP  
 ```  
   
- Dieser Befehl legt eine vorkompilierte Headerdatei mit der Bezeichnung MYPCH.pch fest.  Der Compiler verwendet die Inhalte dieser Datei, um den vorkompilierten Status aller Headerdateien bis zu einschließlich MYAPP.h wiederherzustellen.  Der Compiler kompiliert dann den Code, der auf die **include**\-Anweisung für MYAPP.h folgt.  
+ Dieser Befehl gibt eine vorkompilierte Headerdatei mit dem Namen MYPCH.pch an. Der Compiler verwendet den Inhalt, den vorkompilierten Status aller Headerdateien bis zur und einschließlich MYAPP.h wiederherzustellen. Klicken Sie dann kompiliert der Compiler den Code, der auftritt, nachdem die MYAPP.h **enthalten** Anweisung.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lfind_s
+apiname: _lfind_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 Führt eine lineare Suche für den angegebenen Schlüssel aus. Dies ist eine Version von [_lfind](../../c-runtime-library/reference/lfind.md) mit Sicherheitserweiterungen, wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -105,10 +88,10 @@ void *_lfind_s(
   
 |Key|Basis|compare|num|size|errno|  
 |---------|----------|-------------|---------|----------|-----------|  
-|`NULL`|alle|alle|alle|alle|`EINVAL`|  
-|alle|`NULL`|alle|!= 0|alle|`EINVAL`|  
-|alle|alle|alle|any|Null|`EINVAL`|  
-|any|alle|`NULL`|ein|alle|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|Null|`EINVAL`|  
+|any|any|`NULL`|ein|alle|`EINVAL`|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_lfind_s`-Funktion führt eine lineare Suche nach dem Wert `key` in einem Array aus `num`-Elementen durch, die jeweils aus `width`-Bytes bestehen. Im Gegensatz zu `bsearch_s` muss bei `_lfind_s` kein Array sortiert werden. Das `base`-Argument ist ein Zeiger auf die Basis des zu suchenden Arrays. Das `compare`-Argument ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Arrayelemente vergleicht und einen Wert zurückgibt, der die Beziehung angibt. `_lfind_s` ruft die `compare`-Routine einmal oder mehrere Male während der Suche auf, wodurch bei jedem Aufruf der `context`-Zeiger übergeben wird und auf zwei Arrayelemente zeigt. Die `compare`-Routine muss die Elemente vergleichen und entweder ungleich null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.  
@@ -117,7 +100,7 @@ void *_lfind_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_lfind_s`|\<search.h>|  
   

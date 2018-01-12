@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _recalloc_dbg
+apiname: _recalloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - recalloc_dbg
 - _recalloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _recalloc_dbg function
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dfd6489945ee4eb5ede32f010d474a2cb428ff97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 02ac41e22a5080576339b00e54f339bb878a794d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 Ordnet ein Array neu zu und initialisiert seine Elemente auf 0 (nur Debugversion).  
@@ -79,7 +76,7 @@ void *_recalloc_dbg(
  `linenumber`  
  Zeilennummer in der Quelldatei, in der die Zuordnung angefordert wurde, oder `NULL`.  
   
- Die `filename`- und `linenumber`-Parameter sind nur verfügbar, wenn `_recalloc_dbg` explizit aufgerufen oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)-Präprozessorkonstante definiert wurde.  
+ Die Parameter `filename` und `linenumber` sind nur verfügbar, wenn `_recalloc_dbg` explizit aufgerufen wurde oder die Präprozessorkonstante [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) definiert wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Bei erfolgreichem Abschluss gibt diese Funktion entweder einen Zeiger an den Benutzerteil des neu belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt NULL zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [_recalloc](../../c-runtime-library/reference/recalloc.md)-Funktion.  
@@ -95,14 +92,14 @@ void *_recalloc_dbg(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_recalloc_dbg`|\<crtdbg.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md)  
+ Nur Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)

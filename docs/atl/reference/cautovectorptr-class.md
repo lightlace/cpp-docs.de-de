@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr-Klasse
 Diese Klasse stellt von einem intelligenten Zeigerobjekt mit neuen und Operatoren löschen.  
@@ -64,7 +47,7 @@ class CAutoVectorPtr
  `T`  
  Der Zeigertyp.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -96,7 +79,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|Die Zeiger-Membervariable.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt Methoden zum Erstellen und verwalten einen intelligenten Zeiger, die geschützt werden anhand von Arbeitsspeicherverlusten Ressourcen automatisch freigegeben werden, wenn sie außerhalb des gültigen Bereichs liegt. `CAutoVectorPtr`ähnelt dem `CAutoPtr`, der einzige Unterschied ist, dass `CAutoVectorPtr` verwendet [Vektor neue &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) und [Vektor Delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) zu reservieren und Freigeben von Arbeitsspeicher, anstatt die C++ **neue** und **löschen** Operatoren. Finden Sie unter [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Wenn Auflistungsklassen von `CAutoVectorPtr` erforderlich sind.  
+ Diese Klasse stellt Methoden zum Erstellen und verwalten einen intelligenten Zeiger, die geschützt werden anhand von Arbeitsspeicherverlusten Ressourcen automatisch freigegeben werden, wenn sie außerhalb des gültigen Bereichs liegt. `CAutoVectorPtr`ähnelt dem `CAutoPtr`, der einzige Unterschied ist, dass `CAutoVectorPtr` verwendet [Vektor neue &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) und [Vektor Delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) zu reservieren und Freigeben von Arbeitsspeicher anstelle von die C++ **neue** und **löschen** Operatoren. Finden Sie unter [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Wenn Auflistungsklassen von `CAutoVectorPtr` erforderlich sind.  
 
   
  Finden Sie unter [CAutoPtr](../../atl/reference/cautoptr-class.md) für gezeigt, wie eine intelligenter Zeiger-Klasse.  
@@ -226,4 +209,3 @@ operator T*() const throw();
 ## <a name="see-also"></a>Siehe auch  
  [CAutoPtr-Klasse](../../atl/reference/cautoptr-class.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

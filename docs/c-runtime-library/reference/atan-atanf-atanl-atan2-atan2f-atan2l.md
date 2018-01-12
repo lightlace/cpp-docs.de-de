@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b13ccda9dd613b0150276d8471f2a5330016e95e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36e90d781c4cc4512f4869247c296b69b19c1f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 Berechnet den Arkustangens von `x` (`atan`, `atanf` und `atanl`) oder den Arkustangens von `y`/`x` (`atan2`, `atan2f` und `atan2l`).  
@@ -120,7 +121,7 @@ long double atan2l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   
@@ -156,7 +157,7 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   

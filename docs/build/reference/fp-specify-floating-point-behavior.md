@@ -1,117 +1,118 @@
 ---
-title: "/fp (Festlegen des Gleitkommaverhaltens) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.floatingPointModel"
-  - "VC.Project.VCCLWCECompilerTool.FloatingPointExceptions"
-  - "/fp"
-  - "VC.Project.VCCLWCECompilerTool.floatingPointModel"
-  - "VC.Project.VCCLCompilerTool.FloatingPointExceptions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fp (Compileroption) [C++]"
-  - "-Fp (Compileroption) [C++]"
+title: -fp (Festlegen des Gleitkommaverhaltens) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.floatingPointModel
+- VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
+- /fp
+- VC.Project.VCCLWCECompilerTool.floatingPointModel
+- VC.Project.VCCLCompilerTool.FloatingPointExceptions
+dev_langs: C++
+helpviewer_keywords:
+- -fp compiler option [C++]
+- /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /fp (Festlegen des Gleitkommaverhaltens)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fp-specify-floating-point-behavior"></a>/fp (Festlegen des Gleitkommaverhaltens)
 Gibt das Gleitkommaverhalten in einer Quellcodedatei an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /fp:[precise | except[-] | fast | strict ]  
 ```  
   
-## Flags  
- **precise**  
+## <a name="flags"></a>Flags  
+ **präzise**  
  Der Standardwert.  
   
- Verbessert die Konsistenz von Gleitkommatests auf Gleichheit und Ungleichheit durch Deaktivierung von Optimierungen, die die Genauigkeit von Gleitkommaberechnungen beeinflussen können. \(Für die strikte ANSI\-Konformität ist eine bestimmte Genauigkeit erforderlich.\) Standardmäßig verwendet der Compiler im Code von x86\-Architekturen die 80\-Bit\-Register des Coprozessors, um Zwischenergebnisse von Gleitkommaberechnungen zu speichern.  Damit wird die Geschwindigkeit des Programms erhöht und die Größe verringert.  Da allerdings die Berechnung mit Gleitkomma\-Datentypen durchgeführt wird, die im Speicher mit weniger als 80 Bit dargestellt werden, kann die Verwendung der zusätzlichen Bits für die Genauigkeit \(80 Bit minus der Anzahl von Bits in einem kleineren Gleitkommatyp\) in längeren Berechnungen jedoch zu inkonsistenten Ergebnissen führen.  
+ Verbessert die Konsistenz von Gleitkommatests auf Gleichheit und Ungleichheit durch Deaktivierung von Optimierungen, die die Genauigkeit von Gleitkommaberechnungen beeinflussen können. (Für die strikte ANSI-Konformität ist eine bestimmte Genauigkeit erforderlich.) Standardmäßig verwendet der Compiler im Code von x86-Architekturen die 80-Bit-Register des Coprozessors, um Zwischenergebnisse von Gleitkommaberechnungen zu speichern. Damit wird die Geschwindigkeit des Programms erhöht und die Größe verringert. Da allerdings die Berechnung mit Gleitkomma-Datentypen durchgeführt wird, die im Speicher mit weniger als 80 Bit dargestellt werden, kann die Verwendung der zusätzlichen Bits für die Genauigkeit (80 Bit minus der Anzahl von Bits in einem kleineren Gleitkommatyp) in längeren Berechnungen jedoch zu inkonsistenten Ergebnissen führen.  
   
- Mit **\/fp:precise** auf x86\-Prozessoren führt der Compiler bei Variablen vom Typ `float` für Zuweisungen und Typumwandlungen eine Rundung auf die entsprechende Genauigkeit durch, und das ebenso, wenn Parameter an eine Funktion übergeben werden.  Durch diese Rundung wird gewährleistet, dass die Daten keinen höheren Stellenwert als die Kapazität ihres Typs beibehalten.  Ein mit **\/fp:precise** kompiliertes Programm kann langsamer und größer sein als eines, das ohne **\/fp:precise** kompiliert wurde.  Mit **\/fp:precise** werden systeminterne Funktionen deaktiviert und stattdessen die standardisierten Laufzeitbibliotheksroutinen verwendet.  Weitere Informationen finden Sie unter [\/Oi \(Systeminterne Funktionen erstellen\)](../../build/reference/oi-generate-intrinsic-functions.md).  
+ Mit **/fp: präzise** auf X86 Prozessoren, führt der Compiler bei Variablen vom Typ Rundung `float` die entsprechende Genauigkeit für Zuweisungen und Typumwandlungen und wenn Parameter an eine Funktion übergeben werden. Durch diese Rundung wird gewährleistet, dass die Daten keinen höheren Stellenwert als die Kapazität ihres Typs beibehalten. Kompilieren eines Programms mit **/fp: präzise** kann langsamer und größer als 1 ohne kompiliert **/fp: präzise**. **/ fp: präzise** systeminterne Funktionen deaktiviert; der standard-Laufzeitbibliothek Routinen dienen. Weitere Informationen finden Sie unter [/Oi (Systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md).  
   
- Mit **\/fp:precise** wird das folgende Gleitkommaverhalten aktiviert:  
+ Das folgende Gleitkommaverhalten aktiviert **/fp: präzise**:  
   
 -   Kontraktionen, das bedeutet das Ersetzen mehrerer Operationen durch Verwendung einer zusammengesetzten Operation mit einer einzigen Rundung am Ende.  
   
--   Unzulässig sind Ausdruckoptimierungen, die für spezielle Werte \(NaN, \+unendlich, –unendlich, \+ 0, – 0\) ungültig sind.  Die Optimierungen x\-x \=\> 0, x\*0 \=\> 0, x\-0 \=\> x, x\+0 \=\> x und 0\-x \=\> \-x sind aus verschiedenen Gründen ungültig. \(Siehe IEEE 754 und C99\-Standard.\)  
+-   Unzulässig sind Ausdruckoptimierungen, die für spezielle Werte (NaN, +unendlich, –unendlich, + 0, – 0) ungültig sind. Das X-"X" Optimierungen > 0 = X * 0 = > 0, x-0 = > X, X + 0 = > x und 0 X = > - X sind aus verschiedenen Gründen ungültig. (Siehe IEEE 754 und C99-Standard.)  
   
--   Der Compiler verarbeitet Vergleichsoperationen bezüglich NaN ordnungsgemäß.  Beispielsweise ergibt x \!\= x den Wert **true**, wenn `x` gleich NaN ist und geordnete Vergleiche mit NaN eine Ausnahme auslösen.  
+-   Der Compiler verarbeitet Vergleichsoperationen bezüglich NaN ordnungsgemäß. Z. B. X! = X ergibt **"true"** Wenn `x` gleich NaN ist und geordnete Vergleiche mit NaN eine Ausnahme ausgelöst.  
   
--   Die Auswertung des Ausdrucks folgt C99 FLT\_EVAL\_METHOD\=2 mit folgender Ausnahme: Beim Programmieren für x86\-Prozessoren wird die Genauigkeit "long double" angewendet, da die FPU auf eine Genauigkeit von 53 Bit festgelegt ist.  
+-   Die Auswertung des Ausdrucks folgt C99 FLT_EVAL_METHOD=2 mit folgender Ausnahme: Beim Programmieren für x86-Prozessoren wird die Genauigkeit "long double" angewendet, da die FPU auf eine Genauigkeit von 53 Bit festgelegt ist.  
   
--   Die Multiplikation mit exakt 1,0 wird wird so umgewandelt, dass nur der andere Faktor verwendet wird.  x\*y\*1.0 wird umgewandelt in x\*y.  Entsprechend wird x\*1.0\*y in x\*y umgewandelt.  
+-   Die Multiplikation mit exakt 1,0 wird so umgewandelt, dass nur der andere Faktor verwendet wird. X * y\*1.0 wird transformiert in x\*y. Auf ähnliche Weise X\*1.0\*y wird transformiert in x\*y.  
   
--   Die Division durch exakt 1,0 wird so umgewandelt, dass nur der Dividend verwendet wird.  x\*y\/1.0 wird umgewandelt in x\*y.  Entsprechend wird x\/1.0\*y in x\*y umgewandelt.  
+-   Die Division durch exakt 1,0 wird so transformiert, dass nur der Dividend verwendet wird. X * Y/1.0 wird transformiert in x\*y. Auf ähnliche Weise X / 1.0\*y wird transformiert in x\*y.  
   
- Durch Verwendung von **\/fp:precise** mit [fenv\_access](../../preprocessor/fenv-access.md) ON werden einige Optimierungen deaktiviert, beispielsweise Auswertungen von Gleitkommaausdrücken zur Kompilierungszeit.  Wenn Sie beispielsweise das Rundungsverhalten mit [\_control87, \_controlfp, \_\_control87\_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) ändern und der Compiler eine Gleitkommaberechnung durchführt, wird das von Ihnen angegebene Rundungsverhalten erst angewendet, wenn `fenv_access` auf ON festgelegt ist.  
+ Mit **/fp: präzise** Wenn [Fenv_access](../../preprocessor/fenv-access.md) wird auf deaktiviert Optimierungen, wie z. B. den Zeitpunkt der Kompilierung auswertungen von Gleitkomma-Ausdrücke. Angenommen, Sie verwenden [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) so ändern Sie den Rundungsmodus und der Compiler eine Gleitkommazahl Berechnung ausführt, angegebene Rundungsmodus ist nicht aktiviert, es sei denn, `fenv_access`auf ON festgelegt ist.  
   
- Die Compileroption **\/Op** wird durch **\/fp:precise** ersetzt.  
+ **/ fp: präzise** ersetzt die **op** -Compileroption.  
   
- **fast**  
- Erstellt durch Lockerung der Regeln zum Optimieren von Gleitkommaoperationen meistens den schnellsten Code.  Dadurch kann der Compiler die Geschwindigkeit von Gleitkommacode optimieren, was allerdings zulasten seiner Genauigkeit und Richtigkeit geht.  Wenn **\/fp:fast** angegeben wird, kann der Compiler möglicherweise Zuweisungsanweisungen, Typenumwandlungen oder Funktionsaufrufe nicht korrekt und Zwischenausdrücke gar nicht runden.  Der Compiler ordnet möglicherweise Operationen neu an oder führt ungeachtet der Auswirkung auf Ergebnisse mit endlicher Genauigkeit algebraische Transformationen aus, z. B. durch assoziative und distributive Regeln.  Der Compiler kann die Genauigkeit von Operationen und Operanden in die einfache Genauigkeit ändern, anstatt die C\+\+\-Typerweiterungsregeln zu befolgen.  Optimierungen für gleitkommaspezifische Kontraktionen sind immer aktiviert \([fp\_contract](../../preprocessor/fp-contract.md) ist ON\).  Gleitkommaausnahmen und der Zugriff auf die FPU\-Umgebung sind deaktiviert \(**\/fp:except\-** wird impliziert und [fenv\_access](../../preprocessor/fenv-access.md) ist OFF\).  
+ **Schnelle**  
+ Erstellt durch Lockerung der Regeln zum Optimieren von Gleitkommaoperationen meistens den schnellsten Code. Dadurch kann der Compiler die Geschwindigkeit von Gleitkommacode optimieren, was allerdings zulasten seiner Genauigkeit und Richtigkeit geht. Wenn **/fp: fast** angegeben wird, der Compiler, typenumwandlungen oder Funktionsaufrufe und zwischenausdrücke möglicherweise nicht ausgeführt werden, möglicherweise nicht ordnungsgemäß am zuweisungsanweisungen runden. Der Compiler ordnet möglicherweise Operationen neu an oder führt ungeachtet der Auswirkung auf Ergebnisse mit endlicher Genauigkeit algebraische Transformationen aus, z. B. durch assoziative und distributive Regeln. Der Compiler kann die Genauigkeit von Operationen und Operanden in die einfache Genauigkeit ändern, anstatt die C++-Typerweiterungsregeln zu befolgen. Floating-point-spezifischen Kontraktion Optimierungen sind immer aktiviert ([Fp_contract](../../preprocessor/fp-contract.md) auf ON festgelegt ist). Gleitkommaausnahmen und FPU Umgebung Zugriff deaktiviert (**/fp: außer-** impliziert und [Fenv_access](../../preprocessor/fenv-access.md) auf OFF festgelegt ist).  
   
- **\/fp:fast** kann nicht mit **\/fp:strict** oder **\/fp:precise** verwendet werden.  Die letzte in der Befehlszeile angegebene Option wird verwendet.  Die Festlegung von **\/fp:fast** und **\/fp:except** generiert einen Compilerfehler.  
+ **/ fp: fast** kann nicht verwendet werden, mit **/fp: strict** oder **/fp: präzise**. Die letzte in der Befehlszeile angegebene Option wird verwendet. Angeben von sowohl **/fp: fast** und **/fp: außer** generiert einen Compilerfehler.  
   
- Die Angabe von [\/Za, \/Ze \(Spracherweiterungen deaktivieren\)](../../build/reference/za-ze-disable-language-extensions.md) \(ANSI\-Kompatibilität\) und **\/fp:fast** kann ein unerwartetes Verhalten verursachen.  Zum Beispiel werden Gleitkommaoperationen mit einfacher Genauigkeit möglicherweise nicht auf einfache Genauigkeit gerundet.  
+ Angeben von [/Za, / Ze (Spracherweiterungen deaktivieren)](../../build/reference/za-ze-disable-language-extensions.md) (ANSI-Kompatibilität) und **/fp: fast** führen möglicherweise zu unerwartetem Verhalten. Zum Beispiel werden Gleitkommaoperationen mit einfacher Genauigkeit möglicherweise nicht auf einfache Genauigkeit gerundet.  
   
- **except\[\-\]**  
- Verlässliches Modell für Gleitkommaausnahmen.  Ausnahmen werden sofort ausgelöst, wenn sie auftreten.  Diese Option ist standardmäßig deaktiviert.  Durch Hinzufügen eines Minuszeichens zur Option wird diese explizit deaktiviert.  
+ **mit Ausnahme [-]**  
+ Verlässliches Modell für Gleitkommaausnahmen. Ausnahmen werden sofort ausgelöst, wenn sie auftreten. Diese Option ist standardmäßig deaktiviert. Durch Hinzufügen eines Minuszeichens zur Option wird diese explizit deaktiviert.  
   
- **strict**  
- Das strengste Gleitkommamodell.  **\/fp:strict** führt dazu, dass [fp\_contract](../../preprocessor/fp-contract.md) auf OFF und [fenv\_access](../../preprocessor/fenv-access.md) auf ON festgelegt wird.  **\/fp:except** ist aktiviert und kann durch die explizite Festlegung von **\/fp:except\-** deaktiviert werden.  Wird **\/fp:strict** zusammen mit **\/fp:except\-** verwendet, wird eine strikte Gleitkommasemantik erzwungen, jedoch ohne Beachtung von Ausnahmeereignissen.  
+ **Strict**  
+ Das strengste Gleitkommamodell. **/ fp: strict** bewirkt, dass [Fp_contract](../../preprocessor/fp-contract.md) auf OFF festgelegt werden und [Fenv_access](../../preprocessor/fenv-access.md) auf ON festgelegt sein. **/ fp: außer** wird dies angegeben und kann deaktiviert werden, indem Sie ausdrücklich angeben **/fp: außer-**. Bei Verwendung mit **/fp: außer-**, **/fp: strict** strikte Gleitkommasemantik jedoch ohne Beachtung von Ausnahmeereignissen.  
   
-## Hinweise  
- Mehrere **\/fp**\-Optionen können in der gleichen Kompilierung angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Mehrere **/fp** -Optionen können in der gleichen Kompilierung angegeben werden.  
   
- Informationen zum Steuern des Gleitkommaverhaltens für eine Funktion werden im Zusammenhang mit dem [](../../preprocessor/float-control.md "float_control")\-Pragma erläutert.  Dies überschreibt die Einstellung des **\/fp**\-Compilers.  Als gutes Entwicklungsverfahren wird empfohlen, das lokale Gleitkommaverhalten zu speichern und wiederherzustellen:  
+ Um Gleitkommaverhalten von Funktion zu steuern, finden Sie unter der [Float_control](../../preprocessor/float-control.md) Pragma. Dies überschreibt die **/fp** compilereinstellung. Als gutes Entwicklungsverfahren wird empfohlen, das lokale Gleitkommaverhalten zu speichern und wiederherzustellen:  
   
-```css  
+```cpp  
 #pragma float_control(precise, on, push)  
 // Code that uses /fp:precise mode  
 #pragma float_control(pop)  
 ```  
   
- Die meisten Gleitkommaoptimierungen für die Pragmas **\/fp:strict**, **\/fp:except** \(sowie zugehörige Pragmas\) und `fp_contract` sind abhängig vom Computer.  **\/fp:strict** und **\/fp:except** sind mit **\/clr** nicht kompatibel.  
+ Die meisten der gleitkommaoptimierungen betreffen **/fp: strict**, **/fp: außer** (sowie zugehörige Pragmas) und die `fp_contract` Pragma sind abhängig vom Computer. **/ fp: strict** und **/fp: außer** sind nicht kompatibel mit **"/ CLR"**.  
   
- **\/fp:precise** sollte den meisten Gleitkommaanforderungen einer Anwendung genügen.  Gegebenenfalls können Sie **\/fp:except** und **\/fp:strict** verwenden, was jedoch zu einer Verringerung der Leistung führen kann.  Liegt die Priorität auf der Leistung, sollten Sie **\/fp:fast** verwenden.  
+ **/ fp: präzise** sollte den meisten gleitkommaanforderungen einer Anwendung beheben. Sie können **/fp: außer** und **/fp: strict**, stehen jedoch ggf. einige Abnahme der Leistung. Wenn die Leistung am wichtigsten ist, erwägen, ob **/fp: fast**.  
   
- **\/fp:strict**, **\/fp:fast** und **\/fp:precise** sind Modi zur Festlegung der Genauigkeit \(Korrektheit\).  Es kann jeweils nur ein Modus aktiv sein.  Sind sowohl **\/fp:strict** als auch **\/fp:precise** angegeben, wird vom Compiler der Modus verwendet, der zuletzt verarbeitet wurde.  Es ist nicht möglich, sowohl **\/fp:strict** als auch **\/fp:fast** anzugeben.  
+ **/ fp: strict**, **/fp: fast**, und **/fp: präzise** Genauigkeit (Korrektheit) Modi sind. Es kann jeweils nur ein Modus aktiv sein. Wenn beide **/fp: strict** und **/fp: präzise** angegeben sind, wird der Compiler verwendet den Typ, der es zuletzt verarbeitet. Beide **/fp: strict** und **/fp: fast** kann nicht angegeben werden.  
   
- Weitere Informationen finden Sie unter [Microsoft Visual C\+\+ Floating\-Point Optimization](http://msdn.microsoft.com/library/aa289157.aspx).  
+ Weitere Informationen finden Sie unter [Microsoft Visual C++ Floating Optimierung](http://msdn.microsoft.com/library/aa289157.aspx).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-3.  Erweitern Sie den Knoten **C\/C\+\+**.  
+3.  Erweitern Sie die **C/C++-** Knoten.  
   
-4.  Wählen Sie die Eigenschaftenseite **Codegenerierung** aus.  
+4.  Wählen Sie die **Codegenerierung** Eigenschaftenseite.  
   
-5.  Ändern Sie die Eigenschaft **Gleitkommamodell**.  
+5.  Ändern der **Gleitkommamodell** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
- [Microsoft Visual C\+\+\-Gleitkommaoptimierung](http://msdn.microsoft.com/library/aa289157.aspx)
+ [Microsoft Visual C++ Floating Point-Optimierung](http://msdn.microsoft.com/library/aa289157.aspx)

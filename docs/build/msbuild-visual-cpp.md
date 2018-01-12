@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebabc94a289cf28d76903714e9440f50cc1abea2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Sie können die **MSBuild** Tool zum Erstellen einer Visual C++-Anwendung von der Befehlszeile aus. Während des Erstellungsprozesses wird durch die Informationen in einer Projektdatei (.vcxproj) gesteuert, die Sie erstellen und bearbeiten können. Die Projektdatei gibt Buildoptionen basierend auf Phasen, Bedingungen und Ereignisse zu erstellen.  

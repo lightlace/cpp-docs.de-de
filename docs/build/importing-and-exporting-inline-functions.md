@@ -1,57 +1,58 @@
 ---
-title: "Importieren und Exportieren von Inlinefunktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], Exportieren aus"
-  - "DLLs [C++], Importieren"
-  - "Exportieren von Funktionen [C++], Inlinefunktionen"
-  - "Funktionen [C++], Exportieren"
-  - "Funktionen [C++], Importieren"
-  - "Importieren von Funktionen [C++]"
-  - "Importieren von Inlinefunktionen [C++]"
-  - "Inlinefunktionen [C++], Exportieren"
-  - "Inlinefunktionen [C++], Importieren"
+title: Importieren und Exportieren von Inlinefunktionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions [C++], inline functions
+- inline functions [C++], importing
+- DLLs [C++], importing
+- importing functions [C++]
+- DLLs [C++], exporting from
+- importing inline functions [C++]
+- inline functions [C++], exporting
+- functions [C++], importing
+- functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Importieren und Exportieren von Inlinefunktionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Importierte Funktionen können als Inlinefunktionen definiert werden.  Der Effekt ist ungefähr derselbe wie bei der Definition einer Standardfunktion als Inlinefunktion. Aufrufe der Funktion werden, ähnlich wie bei einem Makro, als Inlinecode erweitert.  Diese Methode stellt eine hilfreiche Möglichkeit dar, C\+\+\-Klassen in einer DLL zu unterstützen, die einige ihrer Memberfunktionen zur Effizienzsteigerung inline umsetzen.  
+# <a name="importing-and-exporting-inline-functions"></a>Importieren und Exportieren von Inlinefunktionen
+Importierte Funktionen können als Inline definiert werden. Die Wirkung gleicht ungefähr identisch mit eine standard-Funktion Inline zu definieren; Aufrufe der Funktion werden als Inlinecode, ähnlich wie ein Makro erweitert. Dies eignet sich hauptsächlich als eine Methode zur Unterstützung von C++ in einer DLL Bindungselementklassen, kommt es möglicherweise Inline Teil ihrer Member-Funktionen für die Effizienz.  
   
- Ein Feature einer importierten Inlinefunktion besteht darin, dass ihre Adresse in C\+\+ verwendet werden kann.  Der Compiler gibt die Adresse der Kopie der Inlinefunktion zurück, die sich innerhalb der DLL befindet.  Ein weiteres Feature importierter Inlinefunktionen besteht darin, dass Sie, anders als bei globalen importierten Daten, statische lokale Daten der importierten Funktion initialisieren können.  
+ Eine Funktion des Inline-importierten Funktion ist, deren Adresse in C++ zu übernehmen. Der Compiler gibt die Adresse der Kopie in der DLL Inlinefunktion zurück. Eine weitere Funktion von importierten Inlinefunktionen ist, dass Sie die statische lokale Daten der importierten Funktion, im Gegensatz zu globalen importierten Daten initialisiert werden können.  
   
 > [!CAUTION]
->  Beim Bereitstellen importierter Inlinefunktionen sollten Sie Sorgfalt walten lassen, da u. U. Versionskonflikte entstehen können.  Eine Inlinefunktion wird als Anwendungscode erweitert. Wenn Sie die Funktion später neu schreiben, wird sie daher nur aktualisiert, wenn die Anwendung selbst neu kompiliert wird. \(Normalerweise können DLL\-Funktionen aktualisiert werden, ohne dass die Anwendungen, von denen sie verwendet werden, neu erstellt werden müssen.\)  
+>  Inlinefunktionen Bereitstellung importiert werden, da die Möglichkeit, dass Konflikte zwischen Versionen erstellt werden kann, sollten Sie Sorgfalt walten. Eine Inlinefunktion ruft in den Code der Anwendung erweitert. Deshalb, wenn Sie die Funktion später neu schreiben, wird er nicht aktualisiert, wenn die Anwendung selbst neu kompiliert wird. (In der Regel können DLL-Funktionen aktualisiert werden, ohne das Neuerstellen der Anwendungen, die sie verwenden.)  
   
-## Was möchten Sie tun?  
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   
--   [Aus einer DLL exportieren](../build/exporting-from-a-dll.md)  
+-   [Exportieren aus einer DLL](../build/exporting-from-a-dll.md)  
   
--   [Exportieren aus einer DLL mithilfe von DEF\-Dateien](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Exportieren Sie aus einer DLL verwenden. DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Exportieren aus einer DLL mithilfe von \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Exportieren Sie aus einer DLL mithilfe von __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Exportieren und Importieren mithilfe von AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Exportieren Sie und importieren Sie mithilfe von AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Exportieren von C\+\+\-Funktionen zur Verwendung in ausführbaren C\-Dateien](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Exportieren von C++-Funktionen zur Verwendung in ausführbaren c-Dateien](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Ermitteln, welche Exportmethode verwendet werden soll](../build/determining-which-exporting-method-to-use.md)  
+-   [Welche Exportmethode ermitteln](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importieren in eine Anwendung mithilfe von \_\_declspec\(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Importieren und Exportieren](../build/importing-and-exporting.md)

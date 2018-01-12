@@ -30,11 +30,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 35299f80b85432286859ed76afdd7a599809f67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c371b6805616ff0b114be24bb291469eae2dd26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector-Klasse
 Stellt eine sequenzielle Auflistung von Objekten dar, auf die einzeln über einen Index zugegriffen werden kann.  
@@ -51,7 +52,7 @@ template <typename T, typename E>
  Der Typ der im Vektorobjekt enthaltenen Elemente.  
   
  `E`  
- Gibt ein binäres Prädikat zum Testen der Übereinstimmung mit Werten des Typs `T`an. Der Standardwert ist `std::equal_to<T>`.  
+ Gibt ein binäres Prädikat zum Testen der Übereinstimmung mit Werten des Typs `T` an. Der Standardwert ist `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Hinweise  
  Zulässige Typen sind:  
@@ -70,7 +71,7 @@ template <typename T, typename E>
   
  Wenn Sie versuchen, einen Vector-Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wir der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, indem Sie den Typ des Parameters oder des Rückgabewerts in [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410)ändern. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
   
-### <a name="members"></a>Mitglieder  
+### <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -100,7 +101,7 @@ template <typename T, typename E>
   
 |||  
 |-|-|  
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |Ereignis [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Tritt auf, wenn sich der Vektor ändert.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  

@@ -1,67 +1,69 @@
 ---
-title: "CDBErrorInfo::GetErrorRecords | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBErrorInfo.GetErrorRecords"
-  - "ATL.CDBErrorInfo.GetErrorRecords"
-  - "ATL::CDBErrorInfo::GetErrorRecords"
-  - "GetErrorRecords"
-  - "CDBErrorInfo::GetErrorRecords"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorRecords-Methode"
+title: 'Cdberrorinfo:: Geterrorrecords | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBErrorInfo.GetErrorRecords
+- ATL.CDBErrorInfo.GetErrorRecords
+- ATL::CDBErrorInfo::GetErrorRecords
+- GetErrorRecords
+- CDBErrorInfo::GetErrorRecords
+dev_langs: C++
+helpviewer_keywords: GetErrorRecords method
 ms.assetid: 07746774-bcca-4833-8f55-a619e9777c17
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 560477035eee06e80b56b428e3c11d8c91f2b749
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDBErrorInfo::GetErrorRecords
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft Fehlerdatensätze für das angegebene Objekt ab.  
+# <a name="cdberrorinfogeterrorrecords"></a>CDBErrorInfo::GetErrorRecords
+Ruft die Error-Datensätze für das angegebene Objekt ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT GetErrorRecords(   
-   IUnknown* pUnk,   
-   const IID& iid,   
-   ULONG* pcRecords    
+      HRESULT GetErrorRecords(   
+   IUnknown* pUnk,   
+   const IID& iid,   
+   ULONG* pcRecords    
 ) throw( );  
-HRESULT GetErrorRecords(   
-   ULONG* pcRecords    
+HRESULT GetErrorRecords(   
+   ULONG* pcRecords    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *pUnk*  
- \[in\] schließen Sie das Objekt an, damit das Fehlerdatensätze abruft.  
+ [in] Schnittstelle für das Objekt für den Fehlerdatensätze abgerufen.  
   
  `iid`  
- \[in\] die IID der Schnittstelle zugeordnet mit dem Fehler.  
+ [in] Die IID der Schnittstelle, die dem Fehler zugeordnet.  
   
  *pcRecords*  
- \[out\] Ein Zeiger auf \(1\-basierte\) Anzahl von Fehlerdatensätzen.  
+ [out] Ein Zeiger auf die (1-basiert) Anzahl der Error-Datensätze.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Verwenden Sie das erste Formular der Funktion, wenn Sie überprüfen möchten, dem Sie verbinden, um zu der die Fehlerinformationen aus.  Andernfalls verwenden Sie das zweite Format.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie die erste Form der Funktion, wenn Sie die Schnittstelle zum Abrufen der Fehlerinformationen aus überprüfen möchten. Verwenden Sie andernfalls die zweite Form.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDBErrorInfo\-Klasse](../../data/oledb/cdberrorinfo-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDBErrorInfo-Klasse](../../data/oledb/cdberrorinfo-class.md)

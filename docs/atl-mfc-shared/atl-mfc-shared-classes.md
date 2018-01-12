@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e0910ddf8ec43adab68c5354c0aec596616d8d1
-ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.workload: cplusplus
+ms.openlocfilehash: 2da6815b1620d855c6850c657a85e539c3e4b3c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlmfc-shared-classes"></a>Freigegebene ATL-/MFC-Klassen
 Diese Hilfsklassen können ohne MFC-DLL in systemeigenem C++-Projekte verwendet werden.  

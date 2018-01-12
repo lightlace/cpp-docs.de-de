@@ -1,38 +1,39 @@
 ---
-title: "Springen zu Bezeichnungen in der Inlineassembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], Bezeichnungen"
-  - "Berücksichtigung der Groß-/Kleinschreibung, Bezeichnungen in der Inlineassembly"
-  - "Inlineassembly, Springen zu Bezeichnungen"
-  - "Springen zu Bezeichnungen in der Inlineassembly"
-  - "Bezeichnungen, In __asm-Blöcken"
-  - "Bezeichnungen, In der Inlineassembly"
+title: Springen zu Bezeichnungen in der Inlineassembly | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembly, jumping to labels
+- labels, in inline assembly
+- __asm keyword [C++], labels
+- case sensitivity, labels in inline assembly
+- labels, in __asm blocks
+- jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1170a12aefeb53083d5627b1b84639403ea17182
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Springen zu Bezeichnungen in der Inlineassembly
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Wie eine gewöhnliche C\# oder C\+\+\-Bezeichnung weist eine Bezeichnung in einem Block Bereich `__asm` während der Funktion, in der er definiert wurde \(nicht nur im Block\).  `goto` und Assemblyanweisungen können Anweisungen zu den Bezeichnungen innerhalb oder außerhalb der Bindung `__asm`\-Block.  
+# <a name="jumping-to-labels-in-inline-assembly"></a>Springen zu Bezeichnungen in der Inlineassembly
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Wie eine normale C oder C++ Bezeichnung und eine Bezeichnung in einem `__asm` Block ist der Gültigkeitsbereich der Funktion, die in der sie (nicht nur in dem Block definiert ist). Beide Assemblyanweisungen und `goto` Anweisungen können springen zu Bezeichnungen innerhalb oder außerhalb der `__asm` Block.  
   
- Die Bezeichnungen, die in `__asm` Blöcke definiert sind, wird die Groß\-\/Kleinschreibung nicht beachtet. `goto` können diese Assemblyanweisungen \- Anweisungen und Sprungmarken ohne Berücksichtigung der Groß\-\/Kleinschreibung verweisen.  C\- und C\+\+\-Bezeichnungen wird die Groß\-\/Kleinschreibung beachtet, wenn sie nur von `goto`\-Anweisungen verwendet werden.  Assemblyanweisungen können eine oder C\+\+\-Bezeichnung ohne Berücksichtigung der Groß\-\/Kleinschreibung wechseln.  
+ Bezeichnungen `__asm` Blöcke sind nicht in der Groß-/Kleinschreibung beachtet; beide `goto` Anweisungen und Assemblyanweisungen verweisen auf diese Bezeichnungen unabhängig von der Fall. C- und C++-Bezeichnungen Groß-/Kleinschreibung beachtet nur bei Verwendung durch `goto` Anweisungen. Assemblyanweisungen können auf eine C- oder C++-Bezeichnung ohne Berücksichtigung von Groß-springen.  
   
- Der folgende Code zeigt alle Permutationen an:  
+ Der folgende Code zeigt alle Permutationen:  
   
 ```  
 void func( void )  
@@ -62,7 +63,7 @@ int main()
 }  
 ```  
   
- Verwenden Sie C\-Bibliotheks funktionsnamen nicht als Bezeichnungen in `__asm` Blöcke.  Beispielsweise können Sie gereizt werden, um `exit` als Bezeichnung verwendet werden soll, wie folgt:  
+ Verwenden Sie nicht als Bezeichnungen in der C-Bibliothek-Funktionsnamen `__asm` blockiert. Möchten Sie verwenden z. B. möglicherweise `exit` als Bezeichnung, wie folgt:  
   
 ```  
 ; BAD TECHNIQUE: using library function name as label  
@@ -74,9 +75,9 @@ exit:
    ; More __asm code follows  
 ```  
   
- Da **Beenden** der Name der Wechselstrom\-Bibliotheksfunktion ist, kann dieser Code einen Sprung zur **Beenden**\-Funktion statt an die gewünschte Position.  
+ Da **beenden** ist der Name einer C-Bibliothek-Funktion mit diesem Code kann dazu führen, dass einen Sprung zu den **beenden** -Funktion anstelle von an die gewünschte Position.  
   
- Wie in MASM\-Programmen, liefert das Dollar \(Symbol\)`$`als aktueller Adressenzähler.  Es handelt sich um eine Bezeichnung für die Anweisung, die gerade assembliert wird.  In `__asm` Blöcke ist die wichtigste mit langen bedingte Sprünge auszuführen:  
+ Wie in MASM-Programme, Dollarsymbols (`$`) dient als den aktuellen Speicherort Leistungsindikator. Es ist eine Bezeichnung für die Anweisung, die derzeit zusammengestellt. In `__asm` blockiert sein Hauptverwendungszweck besteht, lange bedingte Sprünge:  
   
 ```  
 jne $+5 ; next instruction is 5 bytes long  
@@ -88,7 +89,7 @@ jmp farlabel
 farlabel:  
 ```  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inlineassembler](../../assembler/inline/inline-assembler.md)

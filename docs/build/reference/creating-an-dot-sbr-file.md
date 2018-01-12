@@ -1,41 +1,42 @@
 ---
-title: "Erstellen einer SBR-Datei"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".sbr-Dateien"
-  - "BSCMAKE, Eingabedateien"
-  - "Lokale Symbole in den Browseinformationen"
-  - "SBR-Dateien"
-  - "Quellbrowserdateien"
-  - "Symbole"
+title: Erstellen einer. SBR-Datei | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SBR files
+- BSCMAKE, input files
+- .sbr files
+- source browser files
+- local symbols in browse information
+- symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d87b71daaf5d7b37e67c2c0e56e844bd5251a490
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Erstellen einer SBR-Datei
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-SBR\-Dateien stellen die Eingabedateien für BSCMAKE dar.  Der Compiler legt für jede kompilierte Objektdatei \(.obj\) eine SBR\-Datei an.  Wenn Sie die Browserinformationsdatei erstellen oder aktualisieren möchten, müssen alle SBR\-Dateien für das Projekt auf dem Datenträger verfügbar sein.  
+# <a name="creating-an-sbr-file"></a>Erstellen einer SBR-Datei
+Die Eingabedateien für BSCMAKE sind SBR-Dateien. Der Compiler erstellt eine SBR-Datei für die einzelnen Objektdateien (.obj) kompiliert. Beim Erstellen oder aktualisieren Ihre Browseinformationsdatei müssen alle SBR-Dateien für Ihr Projekt auf dem Datenträger verfügbar sein.  
   
- Um eine SBR\-Datei mit allen möglichen Informationen zu erstellen, geben Sie [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) an.  
+ Geben Sie zum Erstellen einer SBR-Datei mit allen möglichen Informationen [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md).  
   
- Um eine SBR\-Datei zu erstellen, die keine lokalen Symbole enthält, geben Sie [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) an.  Wenn die SBR\-Dateien lokale Symbole enthalten, können Sie diese dennoch mit der [\/El\-Option](../../build/reference/bscmake-options.md) von BSCMAKE aus der BSC\-Datei ausschließen`.`  
+ Geben Sie zum Erstellen einer SBR-Datei, die keine lokalen Symbole enthält [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md). Wenn die SBR-Dateien lokale Symbole enthalten, Sie können weiterhin sie auslassen von BSC-Datei mithilfe von BSCMAKE  [ /El-Option](../../build/reference/bscmake-options.md)`.`  
   
- Eine SBR\-Datei kann ohne eine vollständige Kompilierung erstellt werden.  Beispielsweise können Sie den Compiler mit der \/Zs\-Option veranlassen, eine Syntaxprüfung auszuführen, und dennoch durch Angabe von \/FR oder \/Fr eine SBR\-Datei generieren.  
+ Sie können eine SBR-Datei erstellen, ohne eine vollständige Kompilierung auszuführen. Beispielsweise können Sie angeben, die/ZS-Option aus, um den Compiler an, überprüfen Sie die Syntax und generieren weiterhin eine SBR-Datei aus, wenn Sie/fr oder /Fr. angeben  
   
- Der Erstellungsprozess kann effizienter sein, wenn die SBR\-Dateien zunächst gepackt werden. So können Definitionen, auf die nicht verwiesen wird, entfernt werden.  Der Compiler packt SBR\-Dateien automatisch.  
+ Während des Erstellungsprozesses kann effizienter, wenn zunächst die SBR-Dateien gepackt werden, um Unreferenzierte Definitionen zu entfernen. Der Compiler packs automatisch SBR-Dateien.  
   
-## Siehe auch  
- [Erstellen einer BSC\-Datei](../../build/reference/building-a-dot-bsc-file.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen einer BSC-Datei](../../build/reference/building-a-dot-bsc-file.md)

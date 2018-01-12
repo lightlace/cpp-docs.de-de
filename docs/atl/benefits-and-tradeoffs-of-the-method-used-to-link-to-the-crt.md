@@ -1,37 +1,38 @@
 ---
-title: "Benefits and Tradeoffs of the Method Used to Link to the CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_MIN_CRT-Makro"
+title: "Vorteile und Nachteile der Methode zum Verknüpfen mit der CRT verwendet | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 244415a947918a836e8c4c67dbd18758ec40393c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Benefits and Tradeoffs of the Method Used to Link to the CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Projekt kann mit dem CRT dynamisch oder statisch verknüpft werden.  In der Tabelle unten wird beschreibt die Vorteile und die Kompromisse, die beim Auswählen anfallen, welche Methode.  
+# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vorteile und Nachteile der Methode zum Verknüpfen mit der CRT verwendet
+Das Projekt kann statisch oder dynamisch mit der CRT verknüpfen. In der folgenden Tabelle werden die vor- und Nachteile bei der Auswahl der zu verwendenden Methode.  
   
 |Methode|Vorteil|Kompromiss|  
-|-------------|-------------|----------------|  
-|Statisch, Verknüpfen mit CRT<br /><br /> \(**Runtime Library** festgelegt **Singlethreaded**\)|Das CRT\-DLL ist nicht auf dem System erforderlich, auf dem das Bild ausgeführt wird.|Über 25K des Startcodes wird dem Bild hinzugefügt und erheblich verbessert die Größe.|  
-|Dynamisch, Verknüpfen mit CRT<br /><br /> \(**Runtime Library** festgelegt **Multithreaded**\)|das Bild nicht den erfordert CRT\-Startcode, sodass es viel kleiner.|Das CRT\-DLL muss auf dem System sein, das das Bild ausführt.|  
+|------------|-------------|--------------|  
+|Das statische Verknüpfen mit der CRT<br /><br /> (**-Laufzeitbibliothek** festgelegt **Singlethread-**)|Die CRT-DLL muss nicht auf dem System, in dem das Abbild ausgeführt wird.|Das Abbild erheblich erhöhen die Größe ca. 25 KB Startcode hinzugefügt.|  
+|Dynamisches Verknüpfen mit der CRT<br /><br /> (**-Laufzeitbibliothek** festgelegt **Multithreaded**)|Das Bild erfordert keine den CRT-Startcode, daher ist es wesentlich kleiner.|Die CRT-DLL muss auf dem System, das Abbild ausgeführt werden.|  
   
- Das Thema [Verknüpfen mit CRT in dem ATL\-Projekt](../atl/linking-to-the-crt-in-your-atl-project.md) erläutert, wie die Art auswählt, in der mit CRT verknüpfen.  
+ Das Thema [Verknüpfen mit der CRT in ATL-Projekt](../atl/linking-to-the-crt-in-your-atl-project.md) erläutert, wie auf die Art und Weise, in, das mit der CRT verknüpft.  
   
-## Siehe auch  
- [Programmieren mit ATL\- und C\-Laufzeitcode](../atl/programming-with-atl-and-c-run-time-code.md)   
- [Verhalten der Laufzeitbibliothek](../build/run-time-library-behavior.md)   
- [CRT\-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Siehe auch  
+ [Programmieren mit ATL- und C-Laufzeitcode](../atl/programming-with-atl-and-c-run-time-code.md)   
+ [DLLs und Verhalten von Visual C++-Laufzeitbibliothek](../build/run-time-library-behavior.md)   
+ [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
+

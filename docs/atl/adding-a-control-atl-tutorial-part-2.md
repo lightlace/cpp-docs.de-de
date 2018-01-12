@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8802dc25400b96d70bfaec65cd88f68db7650023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2)
 In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es und testen es auf einer Webseite.  
@@ -48,7 +49,7 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
 |**CPP-Datei**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
 |**Co-Klasse**|Der Name der Komponentenklasse für dieses Steuerelement.|  
 |**Interface**|Der Name der Schnittstelle, auf der das Steuerelement die benutzerdefinierten Methoden und Eigenschaften implementiert.|  
-|**Typ**|Eine Beschreibung für das Steuerelement.|  
+|**Type**|Eine Beschreibung für das Steuerelement.|  
 |**ProgID**|Der lesbare Name, der verwendet werden kann, um die CLSID des Steuerelements zu suchen.|  
   
  Sie müssen einige zusätzliche Einstellungen im ATL-Steuerelement-Assistenten vornehmen.  

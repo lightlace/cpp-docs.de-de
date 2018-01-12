@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - mktemp_s
 - _mktemp_s
 - _wmktemp_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tmktemp_s function
 - mktemp_s function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6231031dd0bbc5b455e3555731f711ee7de971e7
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 Erstellt einen eindeutigen Dateinamen. Dabei handelt es sich um Versionen von [_mktemp, _wmktem](../../c-runtime-library/reference/mktemp-wmktemp.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.  
@@ -103,8 +87,8 @@ errno_t _wmktemp_s(
   
 |`template`|`sizeInChars`|**Rückgabewert**|**Neuer Wert in Vorlage**|  
 |----------------|-------------------|----------------------|-------------------------------|  
-|`NULL`|alle|`EINVAL`|`NULL`|  
-|Ungültiges Format (für gültiges Format siehe Abschnitt `Remarks`)|alle|`EINVAL`|Leere Zeichenfolge|  
+|`NULL`|any|`EINVAL`|`NULL`|  
+|Ungültiges Format (für gültiges Format siehe Abschnitt `Remarks`)|any|`EINVAL`|Leere Zeichenfolge|  
 |any|<= Anzahl von X|`EINVAL`|Leere Zeichenfolge|  
   
  Wenn eine der genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wird die weitere Ausführung zugelassen, wird `errno` auf `EINVAL` gesetzt, und die Funktionen geben `EINVAL` zurück.  
@@ -146,11 +130,11 @@ fna12345
   
  `_mktemp_s` kann bis zu 26 eindeutige Dateinamen für eine beliebige Kombination aus Basis- und Vorlagenwerten erstellen. Daher ist FNZ12345 der letzte eindeutige Dateiname, den `_mktemp_s` für die in diesem Beispiel verwendeten Werte für `base` und `template` vergeben kann.  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_mktemp_s`|\<io.h>|  
 |`_wmktemp_s`|\<io.h> oder \<wchar.h>|  
@@ -212,7 +196,7 @@ Unique filename is fne03188
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
  [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [_getpid](../../c-runtime-library/reference/getpid.md)   

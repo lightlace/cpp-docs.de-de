@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5ad74cf1905b14db46cb119766914e5e57f6cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3200ea0fc8241007c1c97c1ab296166eb7889734
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-control"></a>Hinzufügen eines ATL-Steuerelements
 Verwenden Sie diesen Assistenten, um ein Benutzerobjekt für die Schnittstelle zu einem Projekt hinzufügen, die Schnittstellen für alle möglichen Container unterstützt. Um diese Schnittstellen unterstützen zu können, dass das Projekt als ATL-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  

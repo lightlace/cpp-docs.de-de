@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,41 +16,25 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfo
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f052ddf0194cf28a0845ae51b9503841ca880912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl-Klasse
 Diese Klasse stellt Implementierungen von der `IDispatch` Methoden.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,18 +59,18 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  Der Zeiger auf die IID der ereignisanzeigeschnittstelle, die von dieser Klasse implementiert. Diese Schnittstelle muss definiert werden, in der Typbibliothek gekennzeichnet durch `plibid`, `wMajor`, und `wMinor`.  
   
  `plibid`  
- Ein Zeiger auf die Typbibliothek, die die Dispatchschnittstelle definiert verweist `pdiid`. Wenn **/ GUID_NULL**, aus dem Objekt, das als Quelle der Ereignisse wird die Typbibliothek geladen werden.  
+ Ein Zeiger auf die Typbibliothek, die die Dispatchschnittstelle definiert verweist `pdiid`. Wenn **& GUID_NULL**, aus dem Objekt, das als Quelle der Ereignisse wird die Typbibliothek geladen werden.  
   
  `wMajor`  
- Die Hauptversion der Typbibliothek. Der Standardwert ist 0.  
+ Die Hauptversion der Typbibliothek Der Standardwert ist 0.  
   
  `wMinor`  
- Die Nebenversion der Typbibliothek. Der Standardwert ist 0.  
+ Die Nebenversion der Typbibliothek Der Standardwert ist 0.  
   
  `tihclass`  
  Die Klasse, die zum Verwalten der Typinformationen für `T`. Der Standardwert ist eine Klasse des Typs `CComTypeInfoHolder`, aber Sie können diesen Vorlagenparameter überschreiben, indem Sie eine Klasse von einem Typ außer bereitstellen `CComTypeInfoHolder`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -122,10 +105,10 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
  Leiten Sie von `IDispEventImpl` (verwenden einen eindeutigen Wert für `nID`) für jedes Objekt, das für die Ereignisse behandelt werden müssen. Sie können die Basisklasse wiederverwenden, indem Sie für ein Quellobjekt, das dann für eine andere Quellobjekt Beratung abmelden, aber die maximale Anzahl der Objekte, die gleichzeitig durch ein einzelnes Objekt behandelt werden kann, wird durch die Anzahl der beschränkt `IDispEventImpl` Basisklassen.  
   
- `IDispEventImpl`bietet die gleiche Funktionalität wie [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), außer dass er Ruft Typinformationen über die Schnittstelle aus einer Typbibliothek, anstatt sie bereitgestellt, als Zeiger auf eine [Sie _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) Struktur. Verwendung `IDispEventSimpleImpl` bei eine Typbibliothek, beschreibt die Ereignisschnittstelle haben oder nicht den Mehrbedarf in Verbindung mit der Verwendung der Typbibliothek vermeiden möchten.  
+ `IDispEventImpl`bietet die gleiche Funktionalität wie [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), außer dass er Ruft Typinformationen über die Schnittstelle aus einer Typbibliothek, anstatt sie bereitgestellt, als Zeiger auf eine [Sie _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) -Struktur. Verwendung `IDispEventSimpleImpl` bei eine Typbibliothek, beschreibt die Ereignisschnittstelle haben oder nicht den Mehrbedarf in Verbindung mit der Verwendung der Typbibliothek vermeiden möchten.  
   
 > [!NOTE]
-> `IDispEventImpl`und `IDispEventSimpleImpl` Geben Sie eine eigene Implementierung von **IUnknown:: QueryInterface** aktivieren jedes `IDispEventImpl` und `IDispEventSimpleImpl` -Basisklasse als separate COM-Identität fungieren, während nach wie vor direkten Zugriff auf Member der Klasse in der wichtigsten COM-Objekt.  
+> `IDispEventImpl`und `IDispEventSimpleImpl` Geben Sie eine eigene Implementierung von **IUnknown:: QueryInterface** aktivieren jedes `IDispEventImpl` und `IDispEventSimpleImpl` -Basisklasse als separate COM-Identität fungieren, während nach wie vor direkten Zugriff auf die Klasse Elemente in der wichtigsten COM-Objekt.  
   
  CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
   
@@ -183,7 +166,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) im Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.  
@@ -205,7 +188,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) im Windows SDK.  
   
 ##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  Ruft den einfachen Typ eines benutzerdefinierten Typs ab.  

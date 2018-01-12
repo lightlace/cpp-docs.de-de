@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- frexp
+apiname: frexp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c281f59ebf90030abf2046e8639135aa47fc6058
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 86152082b081cb93ba264e607b256a2448874af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frexp"></a>frexp
 Ruft die Mantisse und den Exponenten einer Gleitkommazahl ab  
@@ -92,7 +75,7 @@ long double frexp(
  `frexp` gibt die Mantisse zurück. Wenn `x` 0 ist, gibt die Funktion 0 für die Mantisse und den Exponenten zurück. Wenn `expptr` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, setzt diese Funktion `errno` auf `EINVAL` und gibt "0" zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion `frexp` gliedert den Gleitkommawert (`x`) in einer Mantisse (`m`) und einem Exponenten (`n`), sodass der absolute Wert `m` größer gleich 0,5 und kleiner als 1,0 und `x` = `m`*2<sup>n</sup> ist. Der Integer-Exponent `n` wird an dem Speicherort gespeichert, auf den `expptr` zeigt.  
+ Die `frexp` -Funktion gliedert den Gleitkommawert (`x`) in einer Mantisse (`m`) und einen Exponenten (`n`), sodass der Absolute Wert des `m` ist größer als oder gleich 0,5 und kleiner als 1,0 und `x`  =  `m`* 2<sup>n</sup>. Der Integer-Exponent `n` wird an dem Speicherort gespeichert, auf den `expptr` zeigt.  
   
  Da C++ ein Überladen zulässt, können Sie Überladungen von `frexp` aufrufen. In einem C-Programm verwendet `frexp` immer einen double- und einen Integer-Wert und gibt einen double zurück.  
   
@@ -130,6 +113,6 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)   
  [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

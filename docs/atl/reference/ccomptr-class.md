@@ -1,49 +1,32 @@
 ---
-title: CComPtr-Klasse | Microsoft-Dokumentation
+title: Klasse von CComPtr-| Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
 - ATLBASE/ATL::CComPtr::CComPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtr class
+dev_langs: C++
+helpviewer_keywords: CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ae7bb5e85f23492bdbef4af86d9f68fa83c991e2
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ef8c49b04a769fd6202aa58324f20216948cf3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ccomptr-class"></a>CComPtr-Klasse
-Ein intelligenter Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeigern.  
+# <a name="ccomptr-class"></a>Von CComPtr--Klasse
+Ein intelligenter Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,9 +37,9 @@ class CComPtr
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
+ Eine COM-Schnittstelle, die Angabe des Typs der Zeiger gespeichert werden soll.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -71,15 +54,15 @@ class CComPtr
 |[CComPtr::operator =](#operator_eq)|Weist einen Zeiger auf den Member-Zeiger.|  
   
 ## <a name="remarks"></a>Hinweise  
- ATL verwendet `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM-Schnittstellenzeiger zu verwalten. Beide abgeleitet sind [CComPtrBase](../../atl/reference/ccomptrbase-class.md), und führen Sie sowohl automatische verweiszählung.  
+ ATL verwendet `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) zum Verwalten von COM-Schnittstellenzeiger auf. Beide abgeleitet [CComPtrBase](../../atl/reference/ccomptrbase-class.md), und führen Sie sowohl automatische verweiszählung.  
   
- Die **CComPtr** und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Klassen können Speicherverluste zu vermeiden, indem Sie automatische verweiszählung ausführen.  Die folgenden Funktionen werden die gleichen logischen Operationen ausführen; Beachten Sie jedoch, wie die zweite Version weniger fehleranfällig mit möglicherweise die **CComPtr** Klasse:  
+ Die **CComPtr** und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Klassen können helfen, Speicherverluste zu beseitigen, durch automatische verweiszählung ausführen.  Die folgenden Funktionen ausführen derselben logischen Operationen; Beachten Sie jedoch, wie die zweite Version weniger fehleranfällig mit möglicherweise die **CComPtr** Klasse:  
   
- [!code-cpp[NVC_ATL_Utilities&#130;](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
- [!code-cpp[NVC_ATL_Utilities&#131;](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- Verknüpfen Sie in Debugbuilds atlsd.lib für codeablaufverfolgung.  
+ Verknüpfen Sie atlsd.lib für codeablaufverfolgung Debug-Builds.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -117,10 +100,9 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Gibt einen Zeiger auf die aktualisierte `CComPtr` Objekt  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Vorgang AddRefs das neue Objekt und Versionen, die im vorhandene Objekt, wenn eine vorhanden ist.  
+ Dieser Vorgang AddRefs das neue Objekt und Versionen, die das vorhandene Objekt, sofern vorhanden ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

@@ -61,11 +61,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb2434cf25e6746637c13cdf8df7725555e839c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27c2d107da6c937705cacac770a50d912cadda84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 Gibt die Anzahl von Bytes oder Zeichen innerhalb einer angegebenen Zählers zurück.  
@@ -131,7 +132,7 @@ size_t _mbsnccnt_l(
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|-Routine zurückgegebener Wert|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
 |-------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnbcnt`|`_strncnt`|`_mbsnbcnt`|`_wcsncnt`|  
 |`_tcsnccnt`|`_strncnt`|`_mbsnbcnt`|`n/a`|  
@@ -141,7 +142,7 @@ size_t _mbsnccnt_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_mbsnbcnt`|\<mbstring.h>|  
 |`_mbsnbcnt_l`|\<mbstring.h>|  
@@ -181,6 +182,6 @@ The first 10 characters are single-byte.
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)

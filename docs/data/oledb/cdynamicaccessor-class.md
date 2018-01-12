@@ -1,79 +1,81 @@
 ---
-title: "CDynamicAccessor-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor"
-  - "ATL::CDynamicAccessor"
-  - "CDynamicAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicAccessor-Klasse"
+title: CDynamicAccessor-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor
+- ATL::CDynamicAccessor
+- CDynamicAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f88c3eff9c8160a0e322c93dacf6985dc7b8a20b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht Ihnen, auf eine Datenquelle zuzugreifen, wenn Ihnen das Datenbankschema \(die zugrunde liegende Struktur\).  
+# <a name="cdynamicaccessor-class"></a>CDynamicAccessor-Klasse
+Können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse des Datenbankschemas (die zugrunde liegende Struktur) verfügen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDynamicAccessor : public CAccessorBase  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[AddBindEntry](../../data/oledb/cdynamicaccessor-addbindentry.md)|Fügt einem Bindungseintrag den Ausgabespalten hinzu, wenn, den Standardaccessor Überschreiben.|  
-|[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)|Instanziiert und initialisiert das `CDynamicAccessor`\-Objekt.|  
-|[Schließen](../../data/oledb/cdynamicaccessor-close.md)|Befreit alle Spalten, gibt den reservierten Speicher frei und gibt die [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) von Schnittstellenzeigern in der Klasse frei.|  
+|[AddBindEntry](../../data/oledb/cdynamicaccessor-addbindentry.md)|Fügt eine Bindung den Ausgabespalten zum Überschreiben den Standardeinstellung-Accessor.|  
+|[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)|Instanziiert und initialisiert die `CDynamicAccessor` Objekt.|  
+|[Schließen](../../data/oledb/cdynamicaccessor-close.md)|Hebt die Bindung auf alle Spalten, die den zugeordneten Arbeitsspeicher frei und gibt die [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) Schnittstellenzeiger in der Klasse.|  
 |[GetBookmark](../../data/oledb/cdynamicaccessor-getbookmark.md)|Ruft das Lesezeichen für die aktuelle Zeile ab.|  
-|[GetBlobHandling](../../data/oledb/cdynamicaccessor-getblobhandling.md)|Ruft den BLOBbehandlungswert für die aktuelle Zeile ab.|  
-|[GetBlobSizeLimit](../../data/oledb/cdynamicaccessor-getblobsizelimit.md)|Ruft die maximale BLOBgröße in Bytes ab.|  
+|[GetBlobHandling](../../data/oledb/cdynamicaccessor-getblobhandling.md)|Ruft das BLOB Behandlung von Wert für die aktuelle Zeile ab.|  
+|[GetBlobSizeLimit](../../data/oledb/cdynamicaccessor-getblobsizelimit.md)|Ruft die maximale BLOB-Größe in Bytes ab.|  
 |[GetColumnCount](../../data/oledb/cdynamicaccessor-getcolumncount.md)|Ruft die Anzahl der Spalten im Rowset ab.|  
 |[GetColumnFlags](../../data/oledb/cdynamicaccessor-getcolumnflags.md)|Ruft die Spalteneigenschaften ab.|  
-|[GetColumnInfo](../../data/oledb/cdynamicaccessor-getcolumninfo.md)|Ruft die Spaltenmetadaten ab.|  
-|[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Ruft den Namen einer bestimmten Spalte ab.|  
-|[GetColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|Ruft den Datentyp einer bestimmten Spalte ab.|  
-|[GetLength](../../data/oledb/cdynamicaccessor-getlength.md)|Ruft die maximale beliebige Länge einer Spalte in Bytes ab.|  
-|[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|Ruft den Spaltenindex ab, der einen Spaltennamen zugewiesen wird.|  
-|[GetStatus](../../data/oledb/cdynamicaccessor-getstatus.md)|Ruft den Status einer bestimmten Spalte ab.|  
+|[GetColumnInfo](../../data/oledb/cdynamicaccessor-getcolumninfo.md)|Ruft die Metadaten ab.|  
+|[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Ruft den Namen einer angegebenen Spalte ab.|  
+|[GetColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|Ruft den Datentyp einer angegebenen Spalte ab.|  
+|[GetLength](../../data/oledb/cdynamicaccessor-getlength.md)|Ruft die maximal mögliche Länge einer Spalte in Bytes ab.|  
+|[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|Ruft den Spaltenindex erhält einen Spaltennamen ab.|  
+|[GetStatus](../../data/oledb/cdynamicaccessor-getstatus.md)|Ruft den Status einer angegebenen Spalte ab.|  
 |[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)|Ruft die Daten aus dem Puffer ab.|  
-|[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)|Legt den BLOBbehandlungswert für die aktuelle Zeile fest.|  
-|[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)|Legt die maximale BLOBgröße in Bytes fest.|  
-|[SetLength](../../data/oledb/cdynamicaccessor-setlength.md)|Gibt die Länge der Spalte in Bytes fest.|  
-|[SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)|Legt den Status einer bestimmten Spalte fest.|  
+|[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)|Legt das BLOB Behandlung von Wert für die aktuelle Zeile fest.|  
+|[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)|Legt die maximale BLOB-Größe in Bytes fest.|  
+|[SetLength](../../data/oledb/cdynamicaccessor-setlength.md)|Legt die Länge der Spalte in Bytes fest.|  
+|[SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)|Setzt den Status einer angegebenen Spalte.|  
 |[SetValue](../../data/oledb/cdynamicaccessor-setvalue.md)|Speichert die Daten in den Puffer.|  
   
-## Hinweise  
- Verwenden Sie `CDynamicAccessor`\-Methoden, um Spalteninformationen wie Spaltennamen, Spaltenanzahl, Datentyp usw. abzurufen.  Sie verwenden diese Spalteninformationen, um einen Accessor zur Laufzeit dynamisch zu erstellen.  
+## <a name="remarks"></a>Hinweise  
+ Verwendung `CDynamicAccessor` Methoden zum Abrufen von Informationen in der Spalte z. B. Spaltennamen, Spaltenanzahl, Datentyp und So weiter. Klicken Sie dann verwenden Sie diese Informationen in der Spalte um einen Accessor zur Laufzeit dynamisch zu erstellen.  
   
- Die Spalteninformation wird in einem Puffer gespeichert, der von dieser Klasse erstellt und verwaltet wird.  Rufen Sie Daten aus dem Puffer mithilfe von [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
+ Die Informationen in der Spalte wird in einem Puffer gespeichert, die erstellt und verwaltet wird von dieser Klasse. Abrufen von Daten aus dem Puffer mithilfe [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
   
- Erläuterungen und Beispiele der dynamischen Accessorklassen, finden Sie unter [Verwenden von dynamischen Accessoren](../../data/oledb/using-dynamic-accessors.md).  
+ Ausführliche Informationen und Beispiele für die Verwendung der dynamischen Accessors-Klassen finden Sie unter [mithilfe von dynamischen Accessoren](../../data/oledb/using-dynamic-accessors.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header**: atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor\-Klasse](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor\-Klasse](../../data/oledb/cmanualaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB-Consumer-Vorlagenreferenz](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessor-Klasse](../../data/oledb/caccessor-class.md)   
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
+ [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)

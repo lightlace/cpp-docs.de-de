@@ -1,68 +1,69 @@
 ---
-title: "/X (Standardincludepfade ignorieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/x"
-  - "VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath"
-  - "VC.Project.VCCLWCECompilerTool.IgnoreStandardIncludePath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/X (Compileroption) [C++]"
-  - "Standardincludepfad ignorieren (Compileroption)"
-  - "Includeverzeichnisse, Standard ignorieren"
-  - "Includedateien, Standardpfad ignorieren"
-  - "X (Compileroption)"
-  - "-X (Compileroption) [C++]"
+title: -X (ignorieren Includepfaden) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /x
+- VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+dev_langs: C++
+helpviewer_keywords:
+- /X compiler option [C++]
+- include files, ignore standard path
+- -X compiler option [C++]
+- include directories, ignore standard
+- X compiler option
+- Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a15294e1a63b16124d8907639fbd2e6bb705f1aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /X (Standardincludepfade ignorieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Hindert den Compiler daran, in den Verzeichnissen, die in den Umgebungsvariablen PATH und INCLUDE angegeben sind, nach Includedateien zu suchen.  
+# <a name="x-ignore-standard-include-paths"></a>/X (Standardincludepfade ignorieren)
+Verhindert, dass den Compiler nach Includedateien in in der PATH und INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse durchsucht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /X  
 ```  
   
-## Hinweise  
- Sie können diese Option zusammen mit der [\/I \(Zusätzliche Includeverzeichnisse\)](../../build/reference/i-additional-include-directories.md)\-Option \(**\/I**`directory`\) verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Sie können diese Option mit der [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md) (**/i**`directory`) Option.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Präprozessor**.  
+3.  Klicken Sie auf die **Präprozessor** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Standardincludepfad ignorieren**.  
+4.  Ändern der **Standardincludepfad ignorieren** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.  
   
-## Beispiel  
- Im folgenden Befehl weist `/X` den Compiler an, von den Umgebungsvariablen **PATH** und **INCLUDE** festgelegte Speicherorte zu ignorieren, und `/I` gibt das Verzeichnis an, in dem nach Includedateien gesucht werden soll:  
+## <a name="example"></a>Beispiel  
+ In den folgenden Befehl `/X` teilt dem Compiler, um die Umgebungsvariablen PATH und INCLUDE angegebenen Speicherorten zu ignorieren und `/I` gibt das Verzeichnis, in dem Suchen nach Includedateien:  
   
 ```  
 CL /X /I \ALT\INCLUDE MAIN.C  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

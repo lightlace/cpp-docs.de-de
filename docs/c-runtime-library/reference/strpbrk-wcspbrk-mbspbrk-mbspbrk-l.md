@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -53,30 +51,16 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9eb1dfc77694c9c1b85aa21fe039058facb98c71
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 323ee2842799cdfe948bdf0a8af7ec2bfad92439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Durchsucht Zeichenfolgen nach Zeichen in angegebenen Zeichensätzen.  
@@ -162,7 +146,7 @@ const unsigned char *_mbspbrk_l(
   
  `_mbspbrk` ähnelt `_mbscspn`, außer dass `_mbspbrk` einen Zeiger anstelle eines Werts vom Typ [size_t](../../c-runtime-library/standard-types.md) zurückgibt.  
   
- In C akzeptieren diese Funktionen einen `const`-Zeiger als erstes Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger zu `const` akzeptiert, gibt einen Zeiger zu `const` zurück; die Version, die einen Zeiger auf Nicht-`const` akzeptiert, gibt einen Zeiger auf Nicht-`const` zurück. Das Makro _CONST_CORRECT_OVERLOADS wird definiert, wenn sowohl die `const`-Version als auch die Nicht-`const`-Version dieser Funktionen verfügbar sind. Wenn Sie das Nicht-`const`-Verhalten für beide C++-Überladungen benötigen, definieren Sie das Symbol _CONST_RETURN.  
+ In C akzeptieren diese Funktionen einen `const`-Zeiger als erstes Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger zu `const` akzeptiert, gibt einen Zeiger zu `const` zurück; die Version, die einen Zeiger auf Nicht-`const` akzeptiert, gibt einen Zeiger auf Nicht-`const` zurück. Das Makro `_CRT_CONST_CORRECT_OVERLOADS` wird definiert, wenn sowohl die `const` und nicht-`const` Versionen dieser Funktionen sind verfügbar. Wenn Sie das nicht-`const` -Verhalten für beide C++-Überladungen, definieren Sie das Symbol `_CONST_RETURN`.  
   
  Die Ausgabewert ist von der Einstellung der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -175,7 +159,7 @@ const unsigned char *_mbspbrk_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`strpbrk`|\<string.h>|  
 |`wcspbrk`|\<string.h> oder \<wchar.h>|  
@@ -219,7 +203,7 @@ int main( void )
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   

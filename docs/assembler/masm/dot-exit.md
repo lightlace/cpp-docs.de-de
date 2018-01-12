@@ -1,40 +1,39 @@
 ---
-title: ".EXIT"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".EXIT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".EXIT directive"
+title: . BEENDEN | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .EXIT
+dev_langs: C++
+helpviewer_keywords: .EXIT directive
 ms.assetid: 5f77c281-3d65-4174-83ea-34dcc7085ecf
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5f5ad4fbc03dcac64bcbf0503856365b8230d917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .EXIT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Generiert Terminierungscode.  
+# <a name="exit"></a>.EXIT
+Generiert Code für das Beenden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 .EXIT [[expression]]  
 ```  
   
-## Hinweise  
- Gibt optionalen *Ausdruck* der Shell zurück.  
+## <a name="remarks"></a>Hinweise  
+ Gibt optional *Ausdruck* Shell.  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

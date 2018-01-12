@@ -1,55 +1,56 @@
 ---
-title: "/MAPINFO (Daten in Zuordnungsdatei einf&#252;gen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.MapLines"
-  - "VC.Project.VCLinkerTool.MapInfoFixups"
-  - "VC.Project.VCLinkerTool.MapExports"
-  - "/mapinfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MAPINFO (Linkeroption)"
-  - "MAPINFO (Linkeroption)"
-  - "-MAPINFO (Linkeroption)"
+title: "-MAPINFO (einschließlich der Informationen in der Zuordnungsdatei) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.MapLines
+- VC.Project.VCLinkerTool.MapInfoFixups
+- VC.Project.VCLinkerTool.MapExports
+- /mapinfo
+dev_langs: C++
+helpviewer_keywords:
+- /MAPINFO linker option
+- MAPINFO linker option
+- -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 56306af3d87116ff82ebee9d3f314836a1aa74db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /MAPINFO (Daten in Zuordnungsdatei einf&#252;gen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Daten in Zuordnungsdatei einfügen)
 ```  
 /MAPINFO:EXPORTS  
 ```  
   
-## Hinweise  
- Durch die Option **\/MAPINFO** wird der Linker angewiesen, bestimmte Informationen in eine MAP\-Datei einzufügen, die erstellt wird, wenn Sie die Option [\/MAP](../../build/reference/map-generate-mapfile.md) festlegen.  EXPORTS weist den Linker an, exportierte Funktionen einzuschließen.  
+## <a name="remarks"></a>Hinweise  
+ Die Option/MapInfo weist den Linker an den angegebenen Informationen in eine Zuordnungsdatei einschließen, die erstellt wird, wenn Sie angeben, die [/MAP](../../build/reference/map-generate-mapfile.md) Option.  EXPORTE weist den Linker um exportierte Funktionen einzuschließen.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Debuggen**.  
+3.  Klicken Sie auf die **Debuggen** Eigenschaftenseite.  
   
-4.  Ändern Sie die **Zuordnungsexport**\-Eigenschaften:  
+4.  Ändern Sie die **Zuordnung Exporte** Eigenschaften:  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

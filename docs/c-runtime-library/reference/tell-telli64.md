@@ -41,11 +41,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 57e628419bbf074418d053c755269618f480743e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c65ed3f0829370c0fe7a9f9e6a12a57688a5ca1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 Aktuelle Position des Dateizeigers  
@@ -70,14 +71,14 @@ __int64 _telli64(
   
  Ein Rückgabewert von-1 L gibt einen Fehler an. Wenn `handle` ein ungültiger Dateideskriptor ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen `errno` auf `EBADF` fest und geben „-1L“ zurück.  
   
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_tell`-Funktion ruft die aktuelle Position des Dateizeigers (sofern vorhanden) ab, der mit dem `handle`-Argument verknüpft ist. Die Position wird als Anzahl von Bytes ab dem Anfang der Datei angegeben. Für die `_telli64`-Funktion wird dieser Wert als 64-Bit-Ganzzahl angegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_tell`, `_telli64`|\<io.h>|  
   

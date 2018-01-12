@@ -60,11 +60,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5c845d5662e8193f1a4e3c3357086bd207696559
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea51455d2b02c651aeb8e7bb599cbc3133585c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 Konvertiert eine Zeichenfolge in einen double (`_atodbl`)-, long double (`_atoldbl`)- oder float (`_atoflt`)-Wert.  
@@ -185,6 +186,6 @@ Return value: 3
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

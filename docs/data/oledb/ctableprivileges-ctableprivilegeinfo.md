@@ -1,75 +1,78 @@
 ---
-title: "CTablePrivileges, CTablePrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szCatalog"
-  - "m_bIsGrantable"
-  - "IS_GRANTABLE"
-  - "m_szType"
-  - "m_szSchema"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "CTablePrivileges"
-  - "CTablePrivilegeInfo"
-  - "m_szName"
-  - "m_szGrantee"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTablePrivilegeInfo-Parameterklasse"
-  - "CTablePrivileges-Typedefklasse"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_szCatalog"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szType"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CTablePrivileges, CTablePrivilegeInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szCatalog
+- m_bIsGrantable
+- IS_GRANTABLE
+- m_szType
+- m_szSchema
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- CTablePrivileges
+- CTablePrivilegeInfo
+- m_szName
+- m_szGrantee
+dev_langs: C++
+helpviewer_keywords:
+- GRANTOR
+- CTablePrivilegeInfo parameter class
+- m_szSchema
+- TABLE_CATALOG
+- m_szType
+- m_szCatalog
+- TABLE_NAME
+- IS_GRANTABLE
+- TABLE_SCHEMA
+- m_szName
+- m_szGrantee
+- CTablePrivileges typedef class
+- m_szGrantor
+- GRANTEE
+- m_bIsGrantable
 ms.assetid: ffcd6f73-022e-452a-8342-f2b9362d256b
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4af4debc152e2c1c84dcfd1fbd7f4950922fa7df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CTablePrivileges, CTablePrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rufen Sie die typedef\-Klasse **CTablePrivileges** auf, um dessen Parameterklasse **CTablePrivilegeInfo** zu implementieren.  
+# <a name="ctableprivileges-ctableprivilegeinfo"></a>CTablePrivileges, CTablePrivilegeInfo
+Rufen Sie die-typedefklasse **CTablePrivileges** zum Implementieren der Parameterklasse **CTablePrivilegeInfo**.  
   
-## Hinweise  
- Siehe [Schemarowset\-Klassen und typedef\-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) weitere Informationen zur Verwendung von Informationen.  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse identifiziert die Tabellen, die im Katalog definiert werden, die für einen spezifischen Benutzer zugänglich sind.  
+ Diese Klasse gibt die im Katalog definierten Tabellen, die mit einem gegebenen Benutzer zugegriffen werden kann.  
   
- Die folgende Tabelle zeigt die Klassendatenmember und ihre entsprechenden OLE DB Spalten auf.  Siehe [TABLE\_PRIVILEGES\-Rowset](https://msdn.microsoft.com/en-us/library/ms725428.aspx) in *der OLE DB\-Programmierreferenz* weitere Informationen über das Schema und Spalten.  
+ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_PRIVILEGES-Rowset](https://msdn.microsoft.com/en-us/library/ms725428.aspx) in der *OLE DB Programmer's Reference* für Weitere Informationen über das Schema und die Spalten.  
   
-|Datenmember|OLE DB\-Spalten|  
-|-----------------|---------------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szCatalog|TABLE\_CATALOG|  
-|m\_szSchema|TABLE\_SCHEMA|  
-|m\_szName|TABLE\_NAME|  
-|m\_szType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|Datenmember|OLE DB-Spalten|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szCatalog|TABLE_CATALOG|  
+|m_szSchema|TABLE_SCHEMA|  
+|m_szName|TABLE_NAME|  
+|m_szType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## Voraussetzungen  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** "atldbsch.h" Einfügen  
   
-## Siehe auch  
- [CRestrictions\-Klasse](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRestrictions-Klasse](../../data/oledb/crestrictions-class.md)

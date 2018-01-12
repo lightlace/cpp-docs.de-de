@@ -44,11 +44,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9770c84f2035687ca1ce9a7e3ae1d1e34df7d5d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d926158275e56c6d845d73fe2d8b4092a84c096c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 Löscht ein Verzeichnis.  
@@ -96,7 +97,7 @@ int _wrmdir(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_rmdir`|\<direct.h>|  
 |`_wrmdir`|\<direct.h> oder \<wchar.h>|  
@@ -104,12 +105,12 @@ int _wrmdir(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
  Siehe Beispiele für [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verzeichnissteuerung](../../c-runtime-library/directory-control.md)   
+ [Directory Control (Verzeichnissteuerung)](../../c-runtime-library/directory-control.md)   
  [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)

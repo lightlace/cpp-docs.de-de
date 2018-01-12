@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ad914a9aa5e7207d1b39e4917a965d755564848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Erstellen mit mehreren Prozessen)
 Die Option **/MP** kann die Gesamtzeit für die Kompilierung der Quelldateien in der Befehlszeile reduzieren. Die Option **/MP** bewirkt, dass der Compiler eine oder mehrere Kopien von sich selbst erstellt, jeweils in einem separaten Prozess. Diese Kopien kompilieren dann gleichzeitig die Quelldateien. Daher kann die Gesamtzeit für die Erstellung der Quelldateien erheblich reduziert werden.  

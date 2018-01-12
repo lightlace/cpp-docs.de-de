@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: eaf06a81979294b20f3b9b2f15cfcaab6be0008b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 035fe5c222f6de5b3f0d71c0ce9133c1101f2993
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
 In C ++ 11 und höher, ein Lambda-Ausdruck – wird häufig aufgerufen, eine *Lambda*– bequem ein anonymes Funktionsobjekt definiert ist (eine *Closure*) direkt an der Position, wo es aufgerufen oder als Argument übergeben, Um eine Funktion. Lambda-Ausdrücke werden in der Regel verwendet, um ein paar Codezeilen zu kapseln, die an Algorithmen oder asynchrone Methoden übergeben werden. Dieser Artikel definiert, was Lambdas sind, vergleicht sie mit anderen Programmierverfahren, beschreibt ihre Vorteile und bietet ein grundlegendes Beispiel.  
@@ -141,7 +139,7 @@ pNums = make_unique<vector<int>>(nums);
  Neben dem Erfassen von Variablen werden in einem Lambda-Ausdruck Eingabeparameter akzeptiert. Eine Parameterliste (*Lambda Declarator* in der Standardsyntax) ist optional und ähnelt Sie in den meisten Aspekten die Parameterliste für eine Funktion.  
   
 ```cpp  
-int y = [] (int first, int second)  
+auto y = [] (int first, int second)  
 {  
     return first + second;  
 };  
@@ -157,9 +155,9 @@ auto y = [] (auto first, auto second)
 };  
 ```  
   
- Ein Lambda-Ausdruck kann einen anderen Lambda-Ausdruck als Argument übernehmen. Weitere Informationen finden Sie unter "Lambdaausdrücke höherer Ordnung" im Thema [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).  
+ Ein Lambdaausdruck kann einen anderen Lambdaausdruck als Argument übernehmen. Weitere Informationen finden Sie unter "Lambdaausdrücke höherer Ordnung" im Thema [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).  
   
- Da die Parameterliste optional ist, können Sie die leeren Klammern weglassen, wenn führen Sie nicht das Übergeben von Argumenten an den Lambda-Ausdruck und dessen Lambda-Declarator keine enthält *Ausnahmespezifikation*, * Trailing-Return-Type*, oder `mutable`.  
+ Da die Parameterliste optional ist, können Sie die leeren Klammern weglassen, wenn führen Sie nicht das Übergeben von Argumenten an den Lambda-Ausdruck und dessen Lambda-Declarator keine enthält *Ausnahmespezifikation*,  *Trailing-Return-Type*, oder `mutable`.  
   
 ### <a name="mutable-specification"></a>Änderbare Spezifikation  
  Normalerweise ist ein Aufrufoperator einer Lambda-Funktion "const-by-value", aber das Schlüsselwort `mutable` hebt dies auf. Er erstellt keine änderbaren Datenmember. Die änderbare Spezifikation aktiviert den Text eines Lambda-Ausdrucks, um Variablen zu ändern, die als Wert erfasst werden. Einige der späteren Beispiele in diesem Artikel veranschaulichen die Verwendung von `mutable`.  

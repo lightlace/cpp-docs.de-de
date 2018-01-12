@@ -1,28 +1,28 @@
 ---
-title: "Edit-Steuerelement f&#252;r Fehlermeldungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Edit-Steuerelement für Fehlermeldungen"
+title: Fehlermeldung Bearbeitungssteuerelement | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Error Message edit control
 ms.assetid: 79320694-c30e-4c37-bb94-6cb36c32d4e6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 748ad27e9b4e5a1742b7704e6c7e5e14765ec1bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Edit-Steuerelement f&#252;r Fehlermeldungen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im Feld **Fehlermeldung** wird der Text der System\- oder Modulfehlermeldung auf der Grundlage des eingegebenen Werts angezeigt.  
+# <a name="error-message-edit-control"></a>Edit-Steuerelement für Fehlermeldungen
+Die **Fehlermeldung** Feld enthält den Text der Systemfehlermeldung oder Modulfehlermeldung auf Grundlage des eingegebenen Werts.  
   
-## Siehe auch  
- [Edit\-Steuerelement für Werte](../../build/reference/value-edit-control.md)
+## <a name="see-also"></a>Siehe auch  
+ [Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)

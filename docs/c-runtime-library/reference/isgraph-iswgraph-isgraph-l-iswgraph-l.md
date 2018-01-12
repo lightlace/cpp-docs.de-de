@@ -48,11 +48,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5141944b387de8866e2d4c5009e818e3359ee65c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc1dd32d2b427f6d22fad330cc25804ac528ea83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 Bestimmt, ob eine ganze Zahl ein Grafikzeichen darstellt.  
@@ -96,7 +97,7 @@ int _iswgraph_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`isgraph`|\<ctype.h>|  
 |`iswgraph`|\<ctype.h> oder \<wchar.h>|  
@@ -107,5 +108,5 @@ int _iswgraph_l(
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)

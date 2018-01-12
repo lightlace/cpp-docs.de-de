@@ -1,83 +1,84 @@
 ---
-title: "/I (Zus&#228;tzliche Includeverzeichnisse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories"
-  - "/I"
-  - "VC.Project.VCNMakeTool.IncludeSearchPath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/I (Compileroption) [C++]"
-  - "Zusätzliche Includeverzeichnisse (Compileroption)"
-  - "I (Compileroption) [C++]"
-  - "-I (Compileroption) [C++]"
-  - "Includeverzeichnisse, Compileroption [C++]"
-  - "Einrichten von Include-Verzeichnissen"
+title: "– I (Zusätzliche Includeverzeichnisse) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
+- /I
+- VC.Project.VCNMakeTool.IncludeSearchPath
+dev_langs: C++
+helpviewer_keywords:
+- /I compiler option [C++]
+- Additional Include Directories compiler option
+- I compiler option [C++]
+- -I compiler option [C++]
+- set include directories
+- include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bfbf962a92af22d3e724c592fec6cf812b610dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /I (Zus&#228;tzliche Includeverzeichnisse)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fügt ein Verzeichnis zur Verzeichnisliste hinzu, in der nach Includedateien gesucht wird.  
+# <a name="i-additional-include-directories"></a>/I (Zusätzliche Includeverzeichnisse)
+Fügt ein Verzeichnis zur Liste der Verzeichnisse, die nach Includedateien gesucht wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /I[ ]directory  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `directory`  
- das Verzeichnis, das zur Verzeichnisliste hinzugefügt werden soll, in der nach Includedateien gesucht wird.  
+ Das Verzeichnis aus, um die Liste der Verzeichnisse hinzugefügt werden, die nach Includedateien gesucht werden.  
   
-## Hinweise  
- Um mehrere Verzeichnisse hinzuzufügen, verwenden Sie diese Option mehrmals.  Verzeichnisse werden nur solange durchsucht, bis die angegebene Includedatei gefunden worden ist.  
+## <a name="remarks"></a>Hinweise  
+ Um mehr als ein Verzeichnis hinzuzufügen, verwenden Sie diese Option mehrmals. Nur verwendet werden, bis die angegebene Includedatei gefunden wird, werden die Verzeichnisse durchsucht.  
   
- Sie können diese Option mit der Option "Include\-Standardpfad ignorieren" \([\/X \(Standardincludepfade ignorieren\)](../../build/reference/x-ignore-standard-include-paths.md)\) verwenden.  
+ Verwenden Sie diese Option, mit der ignorieren Standard Standardincludepfad ([/x (ignorieren Standard Standardincludepfad)](../../build/reference/x-ignore-standard-include-paths.md)) Option.  
   
- Der Compiler durchsucht die Verzeichnisse in folgender Reihenfolge:  
+ Der Compiler durchsucht die Verzeichnisse in der folgenden Reihenfolge:  
   
-1.  Verzeichnisse, die die Quelldatei enthalten.  
+1.  Verzeichnisse, die die Quelldatei enthält.  
   
-2.  Verzeichnisse, die mit der Option **\/I** angegeben werden, und zwar in der Reihenfolge, in der der CL\-Befehl sie antrifft.  
+2.  Mit angegebenen Verzeichnissen der **/i** Option in der Reihenfolge, in der CL sie gefunden wird.  
   
-3.  Verzeichnisse, die in der Umgebungsvariablen **INCLUDE** angegeben sind.  
+3.  Angegebenen Verzeichnissen der **INCLUDE** -Umgebungsvariablen angegeben.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Allgemein**.  
+3.  Klicken Sie auf die **allgemeine** Eigenschaftenseite.  
   
-4.  Bearbeiten Sie die Eigenschaft **Zusätzliche Includeverzeichnisse**.  
+4.  Ändern der **Zusätzliche Includeverzeichnisse** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.  
   
-## Beispiel  
- Mit dem folgenden Befehl wird die von **MAIN.c** angeforderte Includedatei in folgender Reihenfolge gesucht: zuerst in dem Verzeichnis, in dem sich **MAIN.c** befindet, dann im Verzeichnis **\\INCLUDE**, anschließend im Verzeichnis **\\MY\\INCLUDE** und zuletzt in den Verzeichnissen, die der Umgebungsvariablen **INCLUDE** zugeordnet sind.  
+## <a name="example"></a>Beispiel  
+ Der folgende Befehl sucht die Includedateien, die von MAIN.c angefordert wird, in der folgenden Reihenfolge: zuerst in das Verzeichnis, MAIN.c, enthält, klicken Sie dann in das Verzeichnis \include"-Unterverzeichnis aus, und klicken Sie dann in das Verzeichnis \MY\INCLUDE und schließlich in den Verzeichnissen zugewiesen EINSCHLIEßEN Umgebungsvariable.  
   
 ```  
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

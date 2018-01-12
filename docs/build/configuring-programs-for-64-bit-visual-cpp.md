@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1506eb2f2220ebfdf4c116c8e7b4a41ccf0e9085
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0ee3eaa3dd5e53d213496fa2520f4de1e1776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurieren von Visual C++ für die 64-Bit-X64 Ziele
 
@@ -31,7 +32,7 @@ Dieser Abschnitt enthält Themen zur Zielgruppenadressierung X64 64-Bit-Hardware
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Vorgehensweise: Konfigurieren von Visual C++-Projekte für 64-Bit-X64 Plattformen](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
+-   [Vorgehensweise: Konfigurieren von Visual C++-Projekten für 64-Bit-x64-Zielplattformen](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
   
 -   [Vorgehensweise: Aktivieren eines 64-Bit-Visual C++-Toolsets auf der Befehlszeile](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   

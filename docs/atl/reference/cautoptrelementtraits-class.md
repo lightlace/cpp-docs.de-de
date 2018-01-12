@@ -1,11 +1,10 @@
 ---
-title: Klasse CAutoPtrElementTraits | Microsoft-Dokumentation
+title: CAutoPtrElementTraits Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,41 +12,25 @@ f1_keywords:
 - ATLCOLL/ATL::CAutoPtrElementTraits
 - ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 1c543eaa678d86e083207915bcb4f43766ee23c5
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ffbec269e7bbf750cc3b877aa7a93d1cde74756b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrelementtraits-class"></a>CAutoPtrElementTraits-Klasse
 Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich beim Erstellen von Auflistungen von intelligenten Zeigern.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,17 +44,17 @@ class CAutoPtrElementTraits
  `T`  
  Der Zeigertyp.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.|  
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.|  
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen für die Erstellung von Auflistungsobjekten-Klasse, die intelligente Zeiger Netzwerkstack. Die Klassen [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) und [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) ableiten `CAutoPtrElementTraits`. Wenn beim Erstellen einer Auflistung von intelligenten Zeigern, die neue Vektor und Delete-Operatoren erfordert, verwenden [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) stattdessen.  
+ Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen für die Erstellung von Auflistungsobjekten-Klasse mit intelligenten Zeigern Beihilfe. Die Klassen [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) und [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) abgeleitet `CAutoPtrElementTraits`. Wenn beim Erstellen einer Auflistung von intelligenten Zeigern, der neue Vektor und Delete-Operatoren erfordert, verwenden [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) stattdessen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -88,14 +71,14 @@ class CAutoPtrElementTraits
  **Header:** atlcoll.h  
   
 ##  <a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
- Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.  
+ Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.  
   
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
- Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.  
+ Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.  
   
 ```
 typedef T *& OUTARGTYPE;
@@ -103,5 +86,4 @@ typedef T *& OUTARGTYPE;
   
 ## <a name="see-also"></a>Siehe auch  
  [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

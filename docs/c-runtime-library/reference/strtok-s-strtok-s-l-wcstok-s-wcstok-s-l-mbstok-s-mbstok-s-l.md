@@ -58,11 +58,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fd0738d1a08eb0c2285f12314770ec1120e7d97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -136,9 +137,9 @@ Gibt einen Zeiger auf das nächste Token in gefunden *str*. Gibt `NULL` Wenn kei
   
 |*str*|*Trennzeichen*|*Kontext*|Rückgabewert|`errno`|  
 |----------------|------------------|---------------|------------------|-------------|  
-|`NULL`|alle|Zeiger auf einen NULL-Zeiger|`NULL`|`EINVAL`|  
-|alle|`NULL`|alle|`NULL`|`EINVAL`|  
-|alle|alle|`NULL`|`NULL`|`EINVAL`|  
+|`NULL`|any|Zeiger auf einen NULL-Zeiger|`NULL`|`EINVAL`|  
+|any|`NULL`|any|`NULL`|`EINVAL`|  
+|any|any|`NULL`|`NULL`|`EINVAL`|  
   
 Wenn *str* ist `NULL` jedoch *Kontext* ist ein Zeiger auf einen gültigen Kontextzeiger kein Fehler vorliegt.  
   
@@ -156,7 +157,7 @@ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas b
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |`strtok_s`|\<string.h>|
 |`_strtok_s_l`|\<string.h>|
