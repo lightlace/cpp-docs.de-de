@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4715 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4715"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4715"
+title: Compilerwarnung (Stufe 1) C4715 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4715
+dev_langs: C++
+helpviewer_keywords: C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b060585cd3ba6b51c9c91d42e5f3fecaf74ae1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4715
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Funktion': Nicht alle Steuerelementpfade geben einen Wert zurück  
+# <a name="compiler-warning-level-1-c4715"></a>Compilerwarnung (Stufe 1) C4715
+'Funktion': nicht alle Steuerelementpfade geben einen Wert zurück.  
   
- Die angegebene Funktion kann unter gewissen Umständen kein Ergebnis zurückgeben.  
+ Die angegebene Funktion kann möglicherweise keinen Wert zurück.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4715a.cpp  
@@ -40,7 +39,7 @@ int func1( int i )
 }  
 ```  
   
- Um diese Warnung zu verhindern, ändern Sie den Code so, dass der Funktion durch alle Pfade ein Rückgabewert zugewiesen wird:  
+ Um diese Warnung zu vermeiden, ändern Sie den Code, damit alle Pfade einen Rückgabewert der Funktion zugewiesen werden:  
   
 ```  
 // C4715b.cpp  
@@ -52,7 +51,7 @@ int func1( int i )
 }  
 ```  
   
- Der Code kann aber auch den Aufruf einer Funktion enthalten, durch die niemals ein Wert zurückgegeben wird. Siehe folgendes Beispiel:  
+ Es ist möglich, dass Ihr Code einen Aufruf einer Funktion, die nie zurückgegeben enthalten kann, wie im folgenden Beispiel gezeigt:  
   
 ```  
 // C4715c.cpp  
@@ -71,4 +70,4 @@ int glue()
 }  
 ```  
   
- Dieser Code generiert ebenfalls eine Warnung, da der Compiler nicht weiß, dass `fatal` niemals zurückgegeben wird.  Um zu verhindern, dass dieser Code eine Fehlermeldung erzeugt, deklarieren Sie `fatal` unter Verwendung von [\_\_declspec\(noreturn\)](../../cpp/noreturn.md).
+ Dieser Code wird auch eine Warnung generiert, da der Compiler nicht, dass weiß `fatal` nie zurückgegeben. Um zu verhindern, dass dieser Code generiert eine Fehlermeldung, deklarieren `fatal` mit [__declspec(noreturn)](../../cpp/noreturn.md).

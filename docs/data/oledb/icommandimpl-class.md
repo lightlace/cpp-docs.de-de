@@ -1,72 +1,73 @@
 ---
-title: "ICommandImpl-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandImpl-Klasse"
+title: ICommandImpl-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandImpl
+dev_langs: C++
+helpviewer_keywords: ICommandImpl class
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c553effb6ad6a4aa9571eed62f30e4e83910afbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt Implementierung für die [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx)\-Schnittstelle bereit.  
+# <a name="icommandimpl-class"></a>ICommandImpl-Klasse
+Stellt die Implementierung für die [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T, class CommandBase = ICommand>   
 class ATL_NO_VTABLE ICommandImpl : public CommandBase  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Die Klasse, von `ICommandImpl` abgeleitet.  
+ Die Klasse abgeleitet `ICommandImpl`.  
   
  `CommandBase`  
- Eine Befehlsschnittstelle.  Die Standardeinstellung ist `ICommand`.  
+ Eine Befehlsschnittstelle. Die Standardeinstellung ist `ICommand`.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|Bricht die aktuelle Befehlsausführung ab.|  
-|[Abbrechen](../../data/oledb/icommandimpl-cancel.md)|Bricht die aktuelle Befehlsausführung ab.|  
+|[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|Bricht die Ausführung des aktuellen Befehls ab.|  
+|[Abbrechen](../../data/oledb/icommandimpl-cancel.md)|Bricht die Ausführung des aktuellen Befehls ab.|  
 |[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|Erstellt ein Rowsetobjekt.|  
-|[Ausführen](../../data/oledb/icommandimpl-execute.md)|Führt den Befehl aus.|  
-|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|Gibt einen Schnittstellenzeiger auf die Sitzung zurückkehren, die den Befehl erstellt hat.|  
-|[ICommandImpl](../../data/oledb/icommandimpl-icommandimpl.md)|Der \-Konstruktor.|  
+|[Führen Sie](../../data/oledb/icommandimpl-execute.md)|Führt den Befehl.|  
+|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|Gibt einen Schnittstellenzeiger zurück, mit der Sitzung, die der Befehl erstellt.|  
+|[ICommandImpl](../../data/oledb/icommandimpl-icommandimpl.md)|Der Konstruktor.|  
   
-### Datenmember  
+### <a name="data-members"></a>Datenmember  
   
 |||  
 |-|-|  
-|[m\_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|Gibt an, ob der Befehl abgebrochen werden soll.|  
-|[M\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|Gibt an, ob der Befehl beim Ausführen abgebrochen werden soll.|  
-|[M\_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|Gibt an, ob der Befehl zur Zeit ausführt.|  
+|[m_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|Gibt an, ob der Befehl abgebrochen wird.|  
+|[m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|Gibt an, ob der Befehl ist für die Ausführung abgebrochen wird.|  
+|[m_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|Gibt an, ob der Befehl derzeit ausgeführt wird.|  
   
-## Hinweise  
- Eine erforderliche Schnittstelle im Befehlsobjekt.  
+## <a name="remarks"></a>Hinweise  
+ Keine verbindliche Schnittstelle für das Command-Objekt.  
   
-## Anforderungen  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

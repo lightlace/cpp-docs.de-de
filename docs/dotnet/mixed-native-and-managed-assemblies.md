@@ -1,70 +1,73 @@
 ---
-title: "Gemischte (systemeigene und verwaltete) Assemblys | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr-Compileroption [C++], Gemischte Assemblys"
-  - "Assemblys [C++], Gemischt"
-  - "Interop [C++], Gemischte Assemblys"
-  - "Interoperabilität [C++], Gemischte Assemblys"
-  - "Verwalteter Code [C++], Interoperabilität"
-  - "Gemischte Assemblys [C++]"
-  - "Gemischte Assemblys [C++], Informationen zu gemischten Assemblys"
-  - "Gemischte DLL laden [C++]"
-  - "Systemeigener Code [C++], .NET-Interoperabilität"
+title: Gemischte (systemeigene und verwaltete) Assemblys | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], mixed assemblies
+- /clr compiler option [C++], mixed assemblies
+- managed code [C++], interoperability
+- interoperability [C++], mixed assemblies
+- mixed DLL loading [C++]
+- mixed assemblies [C++], about mixed assemblies
+- assemblies [C++], mixed
+- mixed assemblies [C++]
+- native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 35
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gemischte (systemeigene und verwaltete) Assemblys
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gemischte Assemblys können sowohl nicht verwaltete Maschinenanweisungen als auch MSIL\-Anweisungen enthalten.  Dadurch können sie .NET\-Komponenten aufrufen und von ihnen aufgerufen werden, wobei die Kompatibilität mit vollständig nicht verwalteten Komponenten erhalten bleibt.  Mit gemischten Assemblys können Entwickler Anwendungen mit einer Mischung aus verwalteten und nicht verwalteten Funktionen erstellen.  Deshalb sind gemischte Assemblys optimal für das Migrieren von vorhandenen Visual C\+\+\-Anwendungen zur .NET\-Plattform geeignet.  
+# <a name="mixed-native-and-managed-assemblies"></a>Gemischte (systemeigene und verwaltete) Assemblys
+Gemischte Assemblys können sowohl nicht verwaltete Maschinenanweisungen als auch MSIL-Anweisungen enthalten. Dadurch können sie .NET-Komponenten aufrufen und von ihnen aufgerufen werden, wobei die Kompatibilität mit vollständig nicht verwalteten Komponenten erhalten bleibt. Mit gemischten Assemblys können Entwickler Anwendungen mit einer Mischung aus verwalteten und nicht verwalteten Funktionen erstellen. Deshalb sind gemischte Assemblys optimal für das Migrieren von vorhandenen Visual C++-Anwendungen zur .NET-Plattform geeignet.  
   
- So kann z. B. eine vorhandene Anwendung, die vollständig aus nicht verwalteten Funktionen besteht, in die .NET\-Plattform integriert werden, indem lediglich ein Modul mit dem **\/clr**\-Compilerschalter neu kompiliert wird.  Dieses Modul kann dann .NET\-Features verwenden, bleibt aber mit dem Rest der Anwendung kompatibel.  Dadurch kann eine Anwendung schrittweise in die .NET\-Plattform konvertiert werden.  Es ist sogar möglich, sich für die verwaltete oder die nicht verwaltete Kompilierung für jede einzelne Funktion in derselben Datei gesondert zu entscheiden \(siehe [managed, unmanaged](../preprocessor/managed-unmanaged.md)\).  
+ Beispielsweise kann eine vorhandene Anwendung, die vollständig aus nicht verwalteten Funktionen besteht in die .NET-Plattform geschaltet werden, durch das erneute Kompilieren lediglich ein Modul mit der **"/ CLR"** Compilerschalter. Dieses Modul kann dann .NET-Funktionen verwenden, bleibt aber mit dem Rest der Anwendung kompatibel. Dadurch kann eine Anwendung schrittweise in die .NET-Plattform konvertiert werden. Es ist sogar möglich, um zu entscheiden, zwischen verwaltetem und nicht verwaltetem Kompilierung in Abständen von Funktion innerhalb der gleichen Datei (siehe [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md)).  
   
- Visual C\+\+ unterstützt das Generieren von drei verschiedenen Typen verwalteter Assemblys: gemischte, reine und überprüfbare Assemblys.  Die beiden letzteren Typen werden unter [Reiner und überprüfbarer Code](../dotnet/pure-and-verifiable-code-cpp-cli.md) behandelt.  
+ Visual C++ unterstützt das Generieren von drei verschiedenen Typen verwalteter Assemblys: gemischte, reine und überprüfbare Assemblys. Die letzten zwei finden Sie im Abschnitt [reiner und überprüfbarer Code (C + c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
-## In diesem Abschnitt  
- [Gewusst wie: Migrieren zu \/clr](../dotnet/how-to-migrate-to-clr.md)  
- Beschreibt die empfohlenen Schritte zum Einführen bzw. Aktualisieren der .NET\-Funktionen in der Anwendung.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Vorgehensweise: Migrieren auf/CLR](../dotnet/how-to-migrate-to-clr.md)  
+ Beschreibt die empfohlenen Schritte zum Einführen bzw. Aktualisieren der .NET-Funktionen in der Anwendung.  
   
- [Gewusst wie: Kompilieren von MFC\-Code und ATL\-Code mit \/clr](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)  
- Erläutert, wie vorhandene MFC\- und ATL\-Programme für die Common Language Runtime kompiliert werden können.  
+ [Vorgehensweise: Kompilieren von MFC und ATL-Code durch Verwenden von "/ CLR"](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)  
+ Erläutert, wie vorhandene MFC- und ATL-Programme für die Common Language Runtime kompiliert werden können.  
   
  [Initialisierung gemischter Assemblys](../dotnet/initialization-of-mixed-assemblies.md)  
  Beschreibt das Problem der "Ladeprogrammsperren" und die entsprechenden Lösungen.  
   
  [Bibliotheksunterstützung für verschiedene Assemblys](../dotnet/library-support-for-mixed-assemblies.md)  
- Erörtert, wie systemeigene Bibliotheken in **\/clr**\-Kompilierungen verwendet werden.  
+ Erläutert, wie systemeigene Bibliotheken in **"/ CLR"** Kompilierungen.  
   
  [Überlegungen zur Leistung](../dotnet/performance-considerations-for-interop-cpp.md)  
  Beschreibt, wie sich gemischte Assemblys und das Marshalling von Daten auf die Leistung auswirken.  
   
- [Anwendungsdomänen und Visual C\+\+](../dotnet/application-domains-and-visual-cpp.md)  
- Erörtert die Visual C\+\+\-Unterstützung für Anwendungsdomänen.  
+ [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md)  
+ Erörtert die Visual C++-Unterstützung für Anwendungsdomänen.  
   
  [Doppeltes Thunking](../dotnet/double-thunking-cpp.md)  
  Erörtert, wie sich ein systemeigener Einstiegspunkt für eine verwaltete Funktion auf die Leistung auswirkt.  
   
- [Vermeiden von Ausnahmen beim Herunterfahren der CLR, wenn mit \/clr erstellte COM\-Objekte verwendet werden](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)  
- Erörtert, wie das ordnungsgemäße Schließen einer verwalteten Anwendung sichergestellt wird, die ein mit **\/clr** kompiliertes COM\-Objekt verwendet.  
+ [Vermeiden von Ausnahmen beim CLR Herunterfahren bei erstellte COM-Objekte mit "/ CLR"](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)  
+ Erläutert das ordnungsgemäße Schließen einer verwalteten Anwendung sichergestellt ist, die ein COM-Objekt, das mit kompiliert nutzt **"/ CLR"**.  
   
- [Gewusst wie: Erstellen einer teilweise vertrauenswürdigen Anwendung durch Entfernen der Abhängigkeit der CRT\-Bibliotheks\-DLL](../dotnet/create-a-partially-trusted-application.md)  
- Beschreibt das Erstellen einer teilweise vertrauenswürdigen Common Language Runtime\-Anwendung mithilfe von [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)], indem die Abhängigkeit von msvcm90.dll aufgehoben wird.  
+ [Vorgehensweise: Erstellen einer teilweise vertrauenswürdigen Anwendung durch Entfernen der Abhängigkeit der CRT-Bibliotheks-DLL](../dotnet/create-a-partially-trusted-application.md)  
+ Erläutert das Erstellen einer teilweise vertrauenswürdigen Common Language Runtime-Anwendung, indem Sie in Visual C++ Abhängigkeit von msvcm90.dll aufgehoben.  
   
- Weitere Informationen über Codierungsrichtlinien für gemischte Assemblys finden Sie im MSDN\-Artikel zur Übersicht über die Interoperabilität von verwaltetem\/nicht verwaltetem Code unter [http:\/\/msdn.microsoft.com\/netframework\/default.aspx?pull\=\/library\/dndotnet\/html\/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Weitere Informationen zu Codierungsrichtlinien bei gemischten Assemblys finden Sie im MSDN-Artikel "Eine Übersicht über die der verwaltete/nicht verwaltete Codeinteroperabilität" unter [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
-## Siehe auch  
- [Interoperabilität von systemeigenem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)
+## <a name="see-also"></a>Siehe auch  
+ [Interoperabilität von nativem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)

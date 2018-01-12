@@ -1,32 +1,34 @@
 ---
-title: "Erstellen eines Consumers ohne Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Consumer, Erstellen"
+title: Erstellen eines Consumers ohne Assistent | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b31f1ad51d9015c491439650060ab3cefaf3270b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Erstellen eines Consumers ohne Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Beispiel wird davon ausgegangen, dass Sie einem bestehenden ATL\-Projekt OLE DB\-Consumerunterstützung hinzufügen.  Wenn Sie OLE DB\-Consumerunterstützung zu einer MFC\-Anwendung hinzufügen möchten, sollten Sie den MFC\-Anwendungs\-Assistenten ausführen. Er erstellt die benötigte Unterstützung und ruft die zur Ausführung der Anwendung notwendigen MFC\-Routinen auf.  
+# <a name="creating-a-consumer-without-using-a-wizard"></a>Erstellen eines Consumers ohne Assistent
+Im folgende Beispiel wird davon ausgegangen, dass Sie ein vorhandenes ATL-Projekt OLE DB-Consumer-Unterstützung hinzufügen. Wenn Sie OLE DB-Consumer-Unterstützung für eine MFC_Anwendung hinzufügen möchten, sollten Sie die MFC-Anwendung-Assistenten ausführen erstellt alle Unterstützung erforderlich sind, und ruft MFC-Routinen, die zum Ausführen der Anwendung.  
   
- So fügen Sie OLE DB\-Consumerunterstützung ohne Verwendung des ATL\-OLE DB\-Consumer\-Assistenten hinzu:  
+ OLE DB-Consumer-Unterstützung hinzufügen, ohne dass mit der ATL-OLE DB-Consumer-Assistent:  
   
--   Fügen Sie in der Datei stdafx.h die folgenden `#include`\-Anweisungen an:  
+-   Fügen Sie in der Datei "stdafx.h" die folgenden `#include` Anweisungen:  
   
     ```  
     #include <atlbase.h>  
@@ -34,14 +36,14 @@ Im folgenden Beispiel wird davon ausgegangen, dass Sie einem bestehenden ATL\-Pr
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- Programmtechnisch führt ein Consumer in der Regel die folgende Operationsabfolge aus:  
+ Ein Consumer werden programmgesteuert in der Regel die folgende Abfolge der Vorgänge ausgeführt:  
   
--   Erstellen einer Benutzerdatensatz\-Klasse, die Spalten an lokale Variablen bindet.  In diesem Beispiel ist `CMyTableNameAccessor` die Benutzerdatensatzklasse \(siehe [Benutzerdatensätze](../../data/oledb/user-records.md)\).  Diese Klasse enthält die Spaltenzuordnung und die Parameterzuordnung.  Deklarieren Sie in der Benutzerdatensatz\-Klasse einen Datenmember für jedes in der Spaltenzuordnung festgelegte Feld. Deklarieren Sie außerdem für jeden dieser Datenmember einen Statusdatenmember und einen Längendatenmember.  Weitere Informationen finden Sie unter [Feldstatus\-Datenmember in vom Assistenten generierten Accessoren](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+-   Erstellen Sie eine Benutzerdatensatz-Klasse, die Spalten an lokale Variablen zu binden. In diesem Beispiel `CMyTableNameAccessor` wird die Benutzerdatensatz-Klasse (siehe [Benutzerdatensätze](../../data/oledb/user-records.md)). Diese Klasse enthält die spaltenzuordnung und die Parameter zuordnen. Deklarieren Sie einen Datenmember in der Benutzerdatensatz-Klasse für jedes Feld, das Sie in der spaltenzuordnung angeben. für jede von diesen Datenmembern müssen Sie auch deklarieren Sie einen Datenmember für Status und Längendatenmember. Weitere Informationen finden Sie unter [Feldstatus-Datenmember in vom Assistenten generierten Accessoren](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Wenn Sie einen eigenen Consumer schreiben, müssen die Datenvariablen vor den Status\- und Längenvariablen stehen.  
+    >  Wenn Sie einen eigenen Consumer schreiben, müssen die Datenvariablen vor den Status- und Längenvariablen liegen.  
   
--   Instanziieren einer Datenquelle und einer Sitzung.  Entscheiden Sie, welcher Accessor\- und Rowsettyp verwendet wird, und instanziieren Sie dann ein Rowset mit [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md):  
+-   Instanziieren Sie eine Datenquelle und eine Sitzung. Entscheiden, welche Art von Accessor und Rowset verwenden, und klicken Sie dann instanziiert ein Rowset mit [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md):  
   
     ```  
     CDataSource ds;  
@@ -49,15 +51,15 @@ Im folgenden Beispiel wird davon ausgegangen, dass Sie einem bestehenden ATL\-Pr
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor> >  
     ```  
   
--   Aufrufen von **CoInitialize** zum Initialisieren von COM.  Dies erfolgt üblicherweise im Hauptcode.  Beispiel:  
+-   Rufen Sie **CoInitialize** COM-Initialisierung Dies wird in der Regel in die Hauptcodedatei bezeichnet. Zum Beispiel:  
   
     ```  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   Aufrufen von [CDataSource::Open](../../data/oledb/cdatasource-open.md) oder einer Variation davon.  
+-   Rufen Sie [CDataSource:: Open](../../data/oledb/cdatasource-open.md) oder eine seiner Variationen.  
   
--   Öffnen einer Verbindung zur Datenquelle, Öffnen der Sitzung und Öffnen und Initalisieren des Rowsets \(bei einem Befehl auch Ausführen dieses Befehls\):  
+-   Herstellen einer Verbindung mit der Datenquelle, öffnen Sie die Sitzung öffnen und initialisieren Sie das Rowset (und, wenn ein Befehl auch ausführen):  
   
     ```  
     hr = ds.Open();  
@@ -65,11 +67,11 @@ Im folgenden Beispiel wird davon ausgegangen, dass Sie einem bestehenden ATL\-Pr
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   Optional Festlegen von Rowseteigenschaften mit `CDBPropSet::AddProperty` und Übergeben dieser Eigenschaften als Parameter an `rs.Open`.  Ein Beispiel zur Vorgehensweise finden Sie unter GetRowsetProperties im Thema [Vom Consumer\-Assistenten generierte Methoden](../../data/oledb/consumer-wizard-generated-methods.md).  
+-   Optional Satz Rowseteigenschaften mit `CDBPropSet::AddProperty` und übergeben sie als Parameter an `rs.Open`. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter GetRowsetProperties im [vom Methoden](../../data/oledb/consumer-wizard-generated-methods.md).  
   
--   Sie können nun das Rowset zum Abrufen\/Bearbeiten der Daten verwenden.  
+-   Sie können jetzt mithilfe des Rowsets abrufen/Bearbeiten der Daten.  
   
--   Schließen Sie nach Fertigstellung der Anwendung die Verbindung, die Sitzung und das Rowset:  
+-   Wenn die Anwendung ausgeführt wird, schließen Sie die Verbindung, Sitzung und Rowset:  
   
     ```  
     rs.Close();  
@@ -77,13 +79,13 @@ Im folgenden Beispiel wird davon ausgegangen, dass Sie einem bestehenden ATL\-Pr
     ds.Close();  
     ```  
   
-     Wenn Sie einen Befehl verwenden, empfiehlt es sich, `ReleaseCommand` nach **Close** aufzurufen.  Im Codebeispiel unter [CCommand::Close](../../data/oledb/ccommand-close.md) wird gezeigt, wie **Close** und `ReleaseCommand` aufgerufen werden.  
+     Wenn Sie einen Befehl verwenden, möchten Sie möglicherweise Aufrufen `ReleaseCommand` nach **schließen**. Das Codebeispiel in [CCommand:: Close](../../data/oledb/ccommand-close.md) zeigt, wie **schließen** und `ReleaseCommand`.  
   
--   Aufrufen von **CoUnInitialize**, um COM nicht zu initialisieren.  Dies erfolgt üblicherweise im Hauptcode.  
+-   Rufen Sie **CoUnInitialize** Aufhebung der Initialisierung der COM. Dies wird in der Regel in die Hauptcodedatei bezeichnet.  
   
     ```  
     CoUninitialize();  
     ```  
   
-## Siehe auch  
- [Erstellen eines OLE DB\-Consumers](../../data/oledb/creating-an-ole-db-consumer.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen eines OLE DB-Consumers](../../data/oledb/creating-an-ole-db-consumer.md)

@@ -1,64 +1,67 @@
 ---
-title: "&#220;berlegungen zur Leistung von Interop (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr-Compileroption [C++], Interop-Leistungsaspekte"
-  - "Interop [C++], Überlegungen zur Leistung"
-  - "Interoperabilität [C++], Überlegungen zur Leistung"
-  - "Gemischte Assemblys [C++], Überlegungen zur Leistung"
-  - "Plattformaufruf [C++], Interoperabilität"
+title: "Überlegungen zur Leistung für Interop (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /clr compiler option [C++], interop performance considerations
+- platform invoke [C++], interoperability
+- interop [C++], performance consideraitons
+- mixed assemblies [C++], performance considerations
+- interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 25d098ebb52809a36735f71eecedcc4c2a186225
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#220;berlegungen zur Leistung von Interop (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema enthält Richtlinien zum Reduzieren der Auswirkungen von Interop\-Übergängen zwischen verwalteten und nicht verwalteten Funktionen auf die Laufzeitleistung.  
+# <a name="performance-considerations-for-interop-c"></a>Überlegungen zur Leistung von Interop (C++)
+Dieses Thema enthält Richtlinien für verwaltete/nicht verwaltete Interop-Übergänge auf die Leistung zur Laufzeit zu reduzieren.  
   
- Visual C\+\+ unterstützt dieselben Interoperabilitätsmechanismen wie andere .NET\-Sprachen, etwa Visual Basic oder C\# \(P\/Invoke\), bietet jedoch auch eine spezifische Interoperabilitätsunterstützung für Visual C\+\+ \(C\+\+\-Interop\).  Bei leistungskritischen Anwendungen ist es wichtig, die Leistungsauswirkungen der einzelnen Interop\-Techniken zu kennen.  
+ Visual C++ unterstützt die gleichen Interoperabilitätsmechanismen wie andere z. B. Visual Basic und c# (P/Invoke), bietet jedoch darüber hinaus Interop-Unterstützung, die für Visual C++ (C++-Interop) spezifisch sind. Für leistungskritische Anwendungen ist es wichtig zu verstehen, die Auswirkungen auf die Leistung der einzelnen Interop-Verfahren.  
   
- Unabhängig von der verwendeten Interop\-Technik sind bei jedem Aufruf einer nicht verwalteten Funktion durch eine verwaltete Funktion und umgekehrt spezielle Übergangssequenzen, so genannte Thunks, erforderlich.  Diese Thunks werden automatisch vom Visual C\+\+\-Compiler eingefügt, wobei jedoch beachtet werden muss, dass diese Übergänge zusammengenommen die Leistung beeinträchtigen können.  
+ Unabhängig von der Interop-Technik, die verwendet wird müssen spezielle Übergang Sequenzen genannte Thunks, jedes Mal eine verwaltete Funktion aufruft, eine nicht verwaltete Funktion und umgekehrt zu. Diese Thunks werden von der Visual C++-Compiler automatisch eingefügt, aber es ist wichtig zu bedenken, dass kumulativ, diese Übergänge im Hinblick auf Leistung teuer sein können.  
   
-## Reduzieren von Übergängen  
- Eine Möglichkeit zur Vermeidung oder Reduzierung der Kosten solcher Interop\-Thunks besteht darin, die beteiligten Schnittstellen umzugestalten, um Übergänge zwischen verwalteten und unverwalteten Funktionen zu minimieren.  Beträchtliche Leistungsverbesserungen können durch eine genaue Prüfung solcher Schnittstellen erreicht werden, bei denen häufig Aufrufe über Grenzen verwalteter und nicht verwalteter Funktionen hinweg auftreten.  Beispielsweise wäre eine verwaltete Funktion, die eine nicht verwaltete Funktion in einer kurzen Schleife aufruft, ein guter Kandidat für die Umgestaltung.  Wenn die Schleife selbst auf die nicht verwaltete Seite verschoben oder eine verwaltete Alternative zu den nicht verwalteten Aufrufen gewählt wird \(möglicherweise durch Einreihen der Daten auf der verwalteten Seite in eine Warteschlange und dem gemeinsamen Marshalling all dieser Daten auf eine nicht verwaltete API, wenn die Schleife beendet ist\), kann die Anzahl der Übergänge bedeutend reduziert werden.  
+## <a name="reducing-transitions"></a>Reduzieren von Übergängen  
+ Eine Möglichkeit, um zu vermeiden oder reduzieren Sie die Kosten der Interop-Thunks ist umgestaltet werden die Beteiligten minimieren, Übergänge verwalteten und unverwalteten Schnittstellen. Erhebliche Leistungssteigerungen können vorgenommen werden, indem Sie als Ziel ' geschwätzige ' Schnittstellen, die die Apartmentgrenze verwalteten und unverwalteten häufige Aufrufe beteiligt sind. Eine verwaltete Funktion, die eine nicht verwaltete Funktion, in einer Schleife aufruft ist z. B. ein guter Kandidat für die Umgestaltung. Wenn die Schleife selbst wird in der nicht verwalteten Seite verschoben, oder der nicht verwaltete Aufruf wird erstellt, wenn eine verwaltete Alternative zu (vielleicht queuing Daten auf der verwalteten Seite und klicken Sie dann auf die nicht verwaltete API alle auf einmal nach der Schleife Marshalling) kann die Anzahl der Übergänge reduziert anmelden Ificantly.  
   
-## P\/Invoke und C\+\+\-Interop  
- In .NET\-Sprachen wie Visual Basic und C\# ist die empfohlene Methode für die Interoperation mit systemeigenen Komponenten P\/Invoke.  Da P\/Invoke durch .NET Framework unterstützt wird, wird es auch von Visual C\+\+ unterstützt. Visual C\+\+ verfügt jedoch auch über eine eigene Interoperabilitätsunterstützung, die als C\+\+\-Interop bezeichnet wird.  C\+\+\-Interop wird gegenüber P\/Invoke bevorzugt, da P\/Invoke nicht typsicher ist.  In der Konsequenz werden Fehler hauptsächlich zur Laufzeit gemeldet, jedoch besitzt C\+\+\-Interop auch Leistungsvorteile gegenüber P\/Invoke.  
+## <a name="pinvoke-vs-c-interop"></a>Im Vergleich mit P/Invoke. C++ Interop  
+ Für .NET-Sprachen wie z. B. Visual Basic und C#-ist die vorgeschriebene Methode für die Interoperation mit systemeigenen Komponenten P/Invoke. Da P/Invoke durch .NET Framework unterstützt wird, Visual C++ ebenfalls unterstützt, aber Visual C++ bietet auch eine eigene interoperabilitätsunterstützung, der als C++ Interop bezeichnet wird. C++-Interop wird über P/Invoke bevorzugt, da P/Invoke nicht typsicher ist. Folglich wird Fehler werden in erster Linie zur Laufzeit gemeldet, aber C++-Interop verfügt auch über die Leistungsvorteile gegenüber P/Invoke.  
   
- Bei beiden Techniken müssen bei Aufrufen einer nicht verwalteten durch eine verwaltete Funktion mehrere Schritte ausgeführt werden:  
+ Beide Verfahren erfordert mehrere Schritte ausgeführt werden, wenn eine verwaltete Funktion eine nicht verwaltete Funktion aufruft:  
   
--   Die Funktionsaufrufargumente werden von CLR zu systemeigenen Typen gemarshallt.  
+-   Funktionsargumente Aufruf werden aus der CLR in systemeigenen Typen gemarshallt.  
   
--   Ein Thunk für den Übergang von verwalteten auf nicht verwalteten Code wird ausgeführt.  
+-   Ein Thunk verwaltet, nicht verwaltete ausgeführt wird.  
   
--   Die nicht verwaltete Funktion wird aufgerufen \(unter Verwendung der systemeigenen Versionen der Argumente\).  
+-   Die nicht verwaltete Funktion wird aufgerufen (unter Verwendung der systemeigenen Versionen der Argumente).  
   
--   Ein Thunk für den Übergang von nicht verwalteten auf verwalteten Code wird ausgeführt.  
+-   Ein Thunk nicht verwalteten zum verwalteten ausgeführt wird.  
   
--   Der Rückgabetyp und alle "out" oder "in, out"\-Argumente werden von systemeigenen zu CLR\-Typen gemarshallt.  
+-   Der Rückgabetyp und "out" oder "in, out" Argumente von systemeigenen CLR-Typen gemarshallt werden.  
   
- Die Thunks für den Übergang von verwaltetem auf nicht verwalteten Code sind für Interop grundsätzlich erforderlich, doch das erforderliche Datenmarshalling hängt von den beteiligten Datentypen, der Funktionssignatur und der Art der Verwendung der Daten ab.  
+ Die verwalteten und unverwalteten Thunks für Interop überhaupt Arbeit erforderlich sind, aber das Marshalling von Daten, das erforderlich ist, hängt davon ab, die Datentypen, die Funktionssignatur und wie die Daten verwendet werden soll.  
   
- C\+\+\-Interop führt ein Datenmarshalling in der einfachsten möglichen Form durch: Die Parameter werden einfach bitweise über die Grenze zwischen verwaltetem und nicht verwaltetem Code hinweg kopiert, ohne dass eine Transformation erfolgt.  Bei P\/Invoke ist dies nur der Fall, wenn alle Parameter einfache, blitfähige Typen sind.  Andernfalls führt P\/Invoke sehr stabile Schritte zur Konvertierung jedes verwalteten Parameters in einen geeigneten systemeigenen Typ und umgekehrt aus, wenn die Argumente als "out" oder "in,out" gekennzeichnet sind.  
+ Die einfachste mögliche Form der Daten-Marshalling von C++-Interop durchgeführt wird: die Parameter einfach über die verwalteten und unverwalteten Grenze in einer bitweisen Weise; kopiert werden überhaupt wird keine Transformation ausgeführt. Für P/Invoke, dies ist nur "true", wenn alle Parameter einfache, blitfähige Typen. Andernfalls führt P/Invoke sehr robuste Schritte aus, um jeden verwalteten Parameter in einen geeigneten systemeigenen Typ zu konvertieren und umgekehrt, wenn die Argumente als "Out", markiert sind oder "in, out".  
   
- Anders ausgedrückt verwendet C\+\+\-Interop die schnellstmögliche Methode des Datenmarshalling, P\/Invoke die stabilste.  Das bedeutet, dass C\+\+\-Interop \(auf eine für C\+\+ typische Weise\) standardmäßig optimale Leistung bietet und der Programmierer die Aufgabe hat, sich um Fälle zu kümmern, in denen dieses Verhalten nicht sicher oder ungeeignet ist.  
+ Das heißt, verwendet die C++-Interop die schnellste Methode des Daten-Marshalling, während P/Invoke die zuverlässigste Methode verwendet. Dies bedeutet, dass die C++-Interop (in einer Weise, die typisch für C++) bietet eine optimale Leistung standardmäßig, und der Programmierer ist verantwortlich für die Adressierung von Fällen, in denen dieses Verhalten nicht sicheren oder geeigneten ist.  
   
- C\+\+\-Interop erfordert daher eine explizite Bereitstellung des Datenmarshalling, doch für den Programmierer liegt der Vorteil darin, dass er frei entscheiden kann, welche Form je nach Daten geeignet ist und wie das Marshalling verwendet werden soll.  Das Verhalten des P\/Invoke\-Datenmarshalling kann zwar geändert und zu einem gewissen Grad angepasst werden, jedoch erlaubt C\+\+\-Interop darüber hinaus eine Anpassung auf Basis einzelner Aufrufe.  Mit P\/Invoke ist das nicht möglich.  
+ C++-Interop erfordert daher Daten-Marshalling muss explizit angegeben werden, jedoch den Vorteil besteht darin, dass der Programmierer kostenlos ist, um zu entscheiden, was die Art der Daten geeignet ist, und wie sie verwendet wird. Darüber hinaus, obwohl das Verhalten von P/Invoke Marshalling von Daten zur geändert werden kann bis zu einem gewissen Grad angepasst, können die C++-Interop, Daten-Marshalling, um auf Basis von Aufrufen angepasst werden. Dies ist nicht möglich mit P/Invoke.  
   
- Weitere Informationen über C\+\+\-Interop finden Sie unter [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+ Weitere Informationen zu C++-Interop finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
-## Siehe auch  
- [Gemischte \(systemeigene und verwaltete\) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Siehe auch  
+ [Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)

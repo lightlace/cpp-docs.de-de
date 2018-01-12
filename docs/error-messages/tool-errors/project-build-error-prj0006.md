@@ -1,47 +1,46 @@
 ---
-title: "Projektbuildfehler PRJ0006 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0006"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0006"
+title: Projektbuildfehler prj0006 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0006
+dev_langs: C++
+helpviewer_keywords: PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 817450fb6b72f985d7ff49f7e65f9dfa0933b4d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektbuildfehler PRJ0006
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die temporäre Datei "Datei" konnte nicht geöffnet werden.Stellen Sie sicher, dass die Datei vorhanden ist und dass das Verzeichnis nicht schreibgeschützt ist.  
+# <a name="project-build-error-prj0006"></a>Projektbuildfehler PRJ0006
+Die temporäre Datei "File" konnte nicht geöffnet werden. Stellen Sie sicher, dass die Datei vorhanden ist, dass das Verzeichnis nicht schreibgeschützt ist.  
   
- Visual C\+\+ konnte während des Buildprozesses keine temporäre Datei erstellen.  Folgende Gründe können vorliegen:  
+ Visual C++ konnte eine temporäre Datei nicht während des Buildprozesses erstellt werden. Die Gründe hierfür sind:  
   
--   Es ist kein temporäres Verzeichnis vorhanden.  
+-   Keine temp-Verzeichnis.  
   
--   Das temporäre Verzeichnis ist schreibgeschützt.  
+-   Nur-Lese temp-Verzeichnis.  
   
--   Es ist nicht genügend Festplattenspeicher verfügbar.  
+-   Nicht genügend Speicherplatz vorhanden.  
   
--   Der Ordner **$\(IntDir\)** ist entweder schreibgeschützt oder enthält temporäre Dateien, die schreibgeschützt sind.  
+-   Der Ordner $(IntDir) ist entweder schreibgeschützt oder enthält temporäre Dateien, die schreibgeschützt sind.  
   
- Dieser Fehler tritt auch im Anschluss an Fehler PRJ0007 auf: Das Ausgabeverzeichnis "*Verzeichnis*" konnte nicht erstellt werden.  Fehler PRJ0007 weist darauf hin, dass das Verzeichnis **$\(IntDir\)** nicht erstellt werden konnte, woraus folgt, dass auch keine temporären Dateien erstellt werden konnten.  
+ Dieser Fehler tritt auch folgenden Fehler PRJ0007: Ausgabe "Verzeichnis" konnte nicht erstellt werden. Fehler PRJ0007 bedeutet, dass das $(IntDir) Verzeichnis konnte nicht erstellt werden, die Erstellung von temporären Dateien Gleichzeichen schlägt auch fehl.  
   
- Temporäre Dateien werden erstellt, wenn Sie Folgendes festlegen:  
+ Wenn Sie angeben, werden temporäre Dateien erstellt:  
   
--   Eine Antwortdatei  
+-   Eine Antwortdatei.  
   
--   Ein benutzerdefinierter Buildschritt  
+-   Einen benutzerdefinierten Buildschritt.  
   
--   Ein Buildereignis
+-   Ein Buildereignis.

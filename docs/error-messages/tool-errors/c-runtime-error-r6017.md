@@ -1,60 +1,41 @@
 ---
-title: C-Laufzeitfehler R6017 | Microsoft-Dokumentation
+title: C-Laufzeitfehler R6017 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- R6017
-dev_langs:
-- C++
-helpviewer_keywords:
-- R6017
+f1_keywords: R6017
+dev_langs: C++
+helpviewer_keywords: R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 903d440dbedbe704ae28be643337619ca1e09c69
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 57345feed2044683a1d5fd2a6ee7d14c412a827d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-runtime-error-r6017"></a>C-Laufzeitfehler R6017
 Unerwarteter multithread-Lock-Fehler  
   
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung erhalten, während eine Anwendung ausgeführt wird, wurde die app beendet, da es sich um ein internes Problem enthält. Es gibt mehrere mögliche Ursachen für diesen Fehler, jedoch wird häufig durch einen Fehler in der app-Code verursacht.  
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Es gibt mehrere mögliche Ursachen für diesen Fehler wird häufig durch einen Fehler in der app-Code verursacht.  
 >   
 >  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
 >   
->  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** Seite der **Systemsteuerung** zu reparieren oder installieren Sie das Programm.  
+>  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
 > -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie eine aktualisierte Version der app. Besteht das Problem weiterhin, wenden Sie sich an den app-Hersteller.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
   
  **Informationen für Programmierer**  
   
- Der Prozess empfangen einen unerwarteten Fehler beim Versuch, eine C-Laufzeit multithread-Sperre auf eine Systemressource zugreifen. Dieser Fehler tritt gewöhnlich auf, wenn der Prozess unbeabsichtigt die Laufzeit-Heapdaten ändert. Sie können jedoch auch durch einen internen Fehler in der Common Language runtimebibliothek oder Betriebssystem-Code verursacht werden.  
+ Der Prozess empfangen einen unerwarteten Fehler beim Versuch, eine C-Laufzeit multithread-Sperre auf eine Systemressource zugreifen. Dieser Fehler tritt gewöhnlich auf, wenn der Prozess versehentlich die Common Language Runtime-Heap-Daten ändert. Es kann jedoch auch durch einen internen Fehler in der Common Language runtimebibliothek oder ein Betriebssystem-Code verursacht werden.  
   
- Um dieses Problem zu beheben, überprüfen Sie die Heap-Beschädigung Fehlern im Code. Weitere Informationen und Beispiele finden Sie unter [CRT-Debuggen Heap Details](/visualstudio/debugger/crt-debug-heap-details). Als Nächstes überprüfen Sie, dass Sie die neuesten verteilbaren Komponenten für Ihre app-Bereitstellung verwenden. Weitere Informationen finden Sie unter [Bereitstellung in Visual C++](../../ide/deployment-in-visual-cpp.md).
+ Um dieses Problem zu beheben, suchen Sie nach Heap-Beschädigung-Fehler im Code. Weitere Informationen und Beispiele finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Überprüfen Sie, dass Sie die neuesten verteilbaren Komponenten für Ihre app-Bereitstellung verwenden. Informationen finden Sie unter [Bereitstellung in Visual C++](../../ide/deployment-in-visual-cpp.md).

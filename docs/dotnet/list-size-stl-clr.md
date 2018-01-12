@@ -1,41 +1,42 @@
 ---
-title: "list::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size-Member [STL/CLR]"
+title: 'List:: Size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 409e39fb-4468-44bb-b179-52c90e2fa293
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5a6081faf7034c158c53e36f930a3057168808a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# list::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermittelt die Anzahl der Elemente.  
+# <a name="listsize-stlclr"></a>list::size (STL/CLR)
+Ermittelt die Anzahl von Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_type size();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gesteuerten gibt die Länge der Sequenz zurück.  Sie verwenden sie, um die Anzahl der Elemente in der Sequenz gesteuerten derzeit zu bestimmen.  Wenn alle Elemente, die Sie sich interessieren, geht, ob die Reihenfolge Größe ungleich 0 \(null\) aufweist, finden Sie unter [list::empty](../dotnet/list-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Sie können erkennen, die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz. Wenn Sie von Interesse ist, ob die Sequenz ungleich Größe finden Sie unter hat, [List:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_size.cpp   
@@ -68,15 +69,18 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 3 beginnend mit 3**  
-**size\(\) \= 0 nach dem Löschen**  
-**size\(\) \= 2, wenn 2 hinzugefügt wurden**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::empty](../dotnet/list-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)

@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: Abrufen eines Zeigers auf ein Byte-Array | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bytearrays"
-  - "Zeiger, Auf Bytearray"
+title: 'Vorgehensweise: Abrufen eines Zeigers auf Bytearray | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- pointers, to Byte array
+- Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 270f2b6b79edc4b5c3ab0846381bb65788b12504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Abrufen eines Zeigers auf ein Byte-Array
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können einen Zeiger auf den Array\-Block in einem <xref:System.Byte>\-Array abrufen, indem Sie die Adresse des ersten Elements nehmen, und diese einem Zeiger zuweisen.  
+# <a name="how-to-obtain-a-pointer-to-byte-array"></a>Gewusst wie: Abrufen eines Zeigers auf ein Byte-Array
+Sie erhalten einen Zeiger auf den Array-Block in ein <xref:System.Byte> Array nach Übernahme der Adresse des ersten Elements und einem Zeiger zuzuweisen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // pointer_to_Byte_array.cpp  
@@ -40,5 +43,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

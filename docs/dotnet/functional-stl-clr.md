@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7e80a97ca54dae725a31e9d203ecd4710a4c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8e731767401964045307635a428d7606d628aca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 Fügen Sie den STL/CLR-Header `<cliext/functional>` zu definieren, die eine Reihe von Vorlagenklassen und zugehörige Vorlage Delegaten und Funktionen.  
@@ -35,7 +38,7 @@ Fügen Sie den STL/CLR-Header `<cliext/functional>` zu definieren, die eine Reih
   
 ## <a name="declarations"></a>Deklarationen  
   
-|Delegate|Beschreibung|  
+|delegate|Beschreibung|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|Delegaten mit zwei Argumenten.|  
 |[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|Zurückgeben von Delegaten mit zwei Argumenten `void`.|  

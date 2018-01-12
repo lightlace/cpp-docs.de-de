@@ -1,34 +1,37 @@
 ---
-title: "Gliederung der &#196;nderungen (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Gliederung der Änderungen (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: "14"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gliederung der &#196;nderungen (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgende Gliederung soll als Kurzreferenz der Sprachänderungen in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ dienen.  Folgen Sie den jeweiligen Links, um weitere Informationen zu erhalten.  
+# <a name="outline-of-changes-ccli"></a>Gliederung der Änderungen (C++/CLI)
+Dieser Umriss zeigt Sie Beispiele für einige der Änderungen in der Sprache von Managed Extensions for C++ zu Visual C++. Führen Sie den Link, der jedes Element Informationen begleitet.  
   
-## Keine Schlüsselwörter mit doppeltem Unterstrich  
- Der allen Schlüsselwörtern vorangestellte doppelte Unterstrich wurde entfernt – mit einer Ausnahme.  Somit wird `__value` zu `value` und `__interface` zu `interface` usw.  Um Namenskonflikte zwischen Schlüsselwörtern und Bezeichnern im Benutzercode zu verhindern, werden Schlüsselwörter hauptsächlich kontextbezogen behandelt.  
+## <a name="no-double-underscore-keywords"></a>Keine doppelten Unterstrich-Schlüsselwörter  
+ Der doppelte Unterstrich vor alle Schlüsselwörter wurde entfernt, mit einer Ausnahme. Folglich `__value` wird `value`, und `__interface` wird `interface`und so weiter. Um Namenskonflikte zwischen Schlüsselwörtern und Bezeichnern im Benutzercode zu verhindern, werden Schlüsselwörter hauptsächlich kontextbezogen behandelt.  
   
- Weitere Informationen finden Sie unter [Sprachschlüsselwörter \(C\+\+\/CLI\)](../dotnet/language-keywords-cpp-cli.md).  
+ Finden Sie unter [Programmiersprachen-Schlüsselwörter (C + c++ / CLI)](../dotnet/language-keywords-cpp-cli.md) für Weitere Informationen.  
   
-## Klassendeklarationen  
- Managed Extensions\-Syntax:  
+## <a name="class-declarations"></a>Klassendeklarationen  
+ Verwaltete Extensions-Syntax:  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -48,10 +51,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- Weitere Informationen finden Sie unter [Verwaltete Typen \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md).  
+ Finden Sie unter [verwaltete Typen (C + c++ / CL)](../dotnet/managed-types-cpp-cl.md) für Weitere Informationen.  
   
-## Objektdeklaration  
- Managed Extensions\-Syntax:  
+## <a name="object-declaration"></a>Objektdeklaration  
+ Verwaltete Extensions-Syntax:  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -74,10 +77,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- Weitere Informationen finden Sie unter [Deklaration eines CLR\-Verweisklassenobjekts](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Finden Sie unter [Deklaration eines CLR-Klasse Verweisobjekt](../dotnet/declaration-of-a-clr-reference-class-object.md) für Weitere Informationen.  
   
-### Reservierung auf dem verwalteten Heap  
- Managed Extensions\-Syntax:  
+### <a name="managed-heap-allocation"></a>Verwaltete Heapreservierung  
+ Verwaltete Extensions-Syntax:  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -93,10 +96,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- Weitere Informationen finden Sie unter [Deklaration eines CLR\-Verweisklassenobjekts](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Finden Sie unter [Deklaration eines CLR-Klasse Verweisobjekt](../dotnet/declaration-of-a-clr-reference-class-object.md) für Weitere Informationen.  
   
-### Ein Nachverfolgungsverweis auf kein Objekt  
- Managed Extensions\-Syntax:  
+### <a name="a-tracking-reference-to-no-object"></a>Ein Nachverfolgungsverweis auf kein Objekt  
+ Verwaltete Extensions-Syntax:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -122,15 +125,15 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- Weitere Informationen finden Sie unter [Deklaration eines CLR\-Verweisklassenobjekts](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Finden Sie unter [Deklaration eines CLR-Klasse Verweisobjekt](../dotnet/declaration-of-a-clr-reference-class-object.md) für Weitere Informationen.  
   
-## Arraydeklaration  
- Das CLR\-Array ist umgestaltet worden.  Es ähnelt der stl\-`vector`\-Vorlagenauflistung, ist jedoch der zugrunde liegenden `System::Array`\-Klasse zugeordnet, d. h. es handelt sich nicht um eine Vorlagenimplementierung.  
+## <a name="array-declaration"></a>Arraydeklaration  
+ Die CLR-Array wurde überarbeitet. Es ist ähnlich der STL- `vector` Vorlagensammlung jedoch Zuordnungen auf den zugrunde liegenden `System::Array` class: d. h. es ist keine Vorlage Implementierung.  
   
- Weitere Informationen finden Sie unter [Deklaration eines CLR\-Arrays](../dotnet/declaration-of-a-clr-array.md).  
+ Finden Sie unter [Deklaration eines CLR-Arrays](../dotnet/declaration-of-a-clr-array.md) für Weitere Informationen.  
   
-### Arrays als Parameter  
- Managed Extensions\-Arraysyntax:  
+### <a name="array-as-parameter"></a>Arrays als Parameter  
+ Verwaltete Erweiterungen Array-Syntax:  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
@@ -144,8 +147,8 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### Arrays als Rückgabetyp  
- Managed Extensions\-Arraysyntax:  
+### <a name="array-as-return-type"></a>Arrays als Rückgabetyp.  
+ Verwaltete Erweiterungen Array-Syntax:  
   
 ```  
 Int32 f() [];   
@@ -159,8 +162,8 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
-### Kurznotation für die Initialisierung lokaler CLR\-Arrays  
- Managed Extensions\-Arraysyntax:  
+### <a name="shorthand-initialization-of-local-clr-array"></a>Kurznotation für die Initialisierung des lokalen CLR-Array  
+ Verwaltete Erweiterungen Array-Syntax:  
   
 ```  
 int GetArray() __gc[] {  
@@ -183,8 +186,8 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### Explizite CLR\-Arraydeklaration  
- Managed Extensions\-Arraysyntax:  
+### <a name="explicit-clr-array-declaration"></a>Explizite CLR-Arraydeklaration  
+ Verwaltete Erweiterungen Array-Syntax:  
   
 ```  
 Object* myArray[] = new Object*[2];  
@@ -198,7 +201,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- Neue Sprachelemente: explizite, auf gcnew folgende Arrayinitialisierung  
+ Neue Sprachelemente: explizite Arrayinitialisierung Gcnew der folgende  
   
 ```  
 // explicit initialization list follow gcnew   
@@ -207,8 +210,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## Skalare Eigenschaften  
- Managed Extensions\-Eigenschaftensyntax:  
+## <a name="scalar-properties"></a>Skalare Eigenschaften  
+ Verwaltete Eigenschaft Extensions-Syntax:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -220,7 +223,7 @@ public:
 };  
 ```  
   
- Neue Eigenschaftensyntax:  
+ Neue Eigenschaftensyntax für die:  
   
 ```  
 public ref class Vector sealed {   
@@ -231,11 +234,11 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
- Neue Sprachelemente: Triviale Eigenschaften  
+ Neue Sprachelemente: triviale Eigenschaften  
   
 ```  
 public ref class Vector sealed {   
@@ -246,10 +249,10 @@ public:
 };  
 ```  
   
- Weitere Informationen finden Sie unter [Eigenschaftendeklaration](../dotnet/property-declaration.md).  
+ Finden Sie unter [Eigenschaftendeklaration](../dotnet/property-declaration.md) für Weitere Informationen.  
   
-## Indizierte Eigenschaften  
- Indizierte Eigenschaftensyntax in Managed Extensions:  
+## <a name="indexed-properties"></a>Indizierte Eigenschaften  
+ Managed Extensions indizierte Eigenschaftensyntax:  
   
 ```  
 public __gc class Matrix {  
@@ -261,7 +264,7 @@ public:
 };  
 ```  
   
- Neue indizierte Eigenschaftensyntax:  
+ Neue Syntax für die indizierte Eigenschaft:  
   
 ```  
 public ref class Matrix {  
@@ -275,7 +278,7 @@ public:
 };  
 ```  
   
- Neue Sprachelemente: Indizierte Eigenschaften auf Klassenebene  
+ Neue Sprachelemente: indizierte Eigenschaft auf Klassenebene  
   
 ```  
 public ref class Matrix {  
@@ -295,10 +298,10 @@ public:
 };  
 ```  
   
- Weitere Informationen finden Sie unter [Deklaration von Eigenschaftenindizes](../dotnet/property-index-declaration.md).  
+ Finden Sie unter [Eigenschaftenindizes](../dotnet/property-index-declaration.md) für Weitere Informationen.  
   
-## Überladene Operatoren  
- Managed Extensions\-Operatorüberladungssyntax:  
+## <a name="overloaded-operators"></a>Überladene Operatoren  
+ Verwaltete Erweiterungen Überladung Operatorsyntax:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -320,7 +323,7 @@ int main() {
 }  
 ```  
   
- Neue Operatorüberladungssyntax:  
+ Neuer Operator Überladung Syntax:  
   
 ```  
 public ref class Vector sealed {  
@@ -341,10 +344,10 @@ int main() {
 }  
 ```  
   
- Weitere Informationen finden Sie unter [Überladene Operatoren](../dotnet/overloaded-operators.md).  
+ Finden Sie unter [überladene Operatoren](../dotnet/overloaded-operators.md) für Weitere Informationen.  
   
-## Konvertierungsoperatoren  
- Managed Extensions\-Konvertierungsoperatorsyntax:  
+## <a name="conversion-operators"></a>Konvertierungsoperatoren  
+ Verwaltete Erweiterungen Konvertierungsoperatorsyntax:  
   
 ```  
 __gc struct MyDouble {  
@@ -354,7 +357,7 @@ __gc struct MyDouble {
 };  
 ```  
   
- Neue Konvertierungsoperatorsyntax:  
+ Neue Syntax für die Konvertierung-Operator:  
   
 ```  
 ref struct MyDouble {  
@@ -365,10 +368,10 @@ public:
 };  
 ```  
   
- Weitere Informationen finden Sie unter [Änderungen bei Konvertierungsoperatoren](../dotnet/changes-to-conversion-operators.md).  
+ Finden Sie unter [Änderungen bei Konvertierungsoperatoren](../dotnet/changes-to-conversion-operators.md) für Weitere Informationen.  
   
-## Explizites Überschreiben eines Schnittstellenmembers  
- Syntax für explizites Überschreiben in Managed Extensions:  
+## <a name="explicit-override-of-an-interface-member"></a>Explizites Überschreiben eines Schnittstellenmembers  
+ Managed Extensions expliziten überschreiben Syntax:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -392,10 +395,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- Weitere Informationen finden Sie unter [Explizites Überschreiben eines Schnittstellenmembers](../dotnet/explicit-override-of-an-interface-member.md).  
+ Finden Sie unter [explizites Überschreiben eines Schnittstellenmembers](../dotnet/explicit-override-of-an-interface-member.md) für Weitere Informationen.  
   
-## Private virtuelle Funktionen  
- Syntax für private virtuelle Funktionen in Managed Extensions:  
+## <a name="private-virtual-functions"></a>Private virtuelle Funktionen  
+ Verwaltete private virtuelle Funktionen Extensions-Syntax:  
   
 ```  
 __gc class Base {  
@@ -427,10 +430,10 @@ public:
 };  
 ```  
   
- Weitere Informationen finden Sie unter [Private virtuelle Funktionen](../dotnet/private-virtual-functions.md).  
+ Finden Sie unter [Private virtuelle Funktionen](../dotnet/private-virtual-functions.md) für Weitere Informationen.  
   
-## CLR\-Enumerationstyp  
- Managed Extensions\-Enumerationssyntax:  
+## <a name="clr-enum-type"></a>CLR-Enumerationstyp  
+ Verwaltete Enumeration Extensions-Syntax:  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -450,18 +453,18 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- Abgesehen von dieser kleinen syntaktischen Änderung hat sich eine Reihe von Änderungen beim Verhalten des CLR\-Enumerationstyps ergeben:  
+ Abgesehen von dieser kleinen syntaktischen Änderung wurde das Verhalten der CLR-Enumerationstyp auf vielfältige Weise geändert:  
   
--   Die Vorwärtsdeklaration einer CLR\-Enumeration wird nicht mehr unterstützt.  
+-   Eine Vorwärtsdeklaration einer CLR-Enumeration wird nicht mehr unterstützt.  
   
--   Die Überladungsauflösung zwischen den integrierten arithmetischen Typen und der Objektklassenhierarchie wurde in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions umgekehrt.  Als Nebeneffekt werden CLR\-Enumerationen nicht mehr implizit in arithmetische Typen konvertiert.  
+-   Managed Extensions und Visual C++ verfügt über die Auflösung von funktionsüberladungen zwischen den integrierten arithmetischen Typen und die Klassenhierarchie für Objekt umgekehrt. Als Nebeneffekt werden die CLR-Enumerationen nicht mehr implizit in arithmetische Typen konvertiert.  
   
--   In der neuen Syntax verwaltet eine CLR\-Enumeration ihren eigenen Gültigkeitsbereich, was bei Managed Extensions nicht der Fall ist.  Vorher waren die Enumeratoren im enthaltenen Gültigkeitsbereich der Enumeration sichtbar; jetzt sind die Enumeratoren im Gültigkeitsbereich der Enumeration gekapselt.  
+-   In der neuen Syntax verwaltet eine CLR-Enumeration einen eigenen Bereich, der nicht der Fall in Managed Extensions ist. Zuvor waren Enumeratoren innerhalb des enthaltenen Bereichs der Enumeration sichtbar; Enumeratoren werden jetzt innerhalb des Bereichs der Enumeration gekapselt.  
   
- Weitere Informationen finden Sie unter [CLR\-Enumerationstyp](../dotnet/clr-enum-type.md).  
+ Finden Sie unter [CLR-Enumerationstyp](../dotnet/clr-enum-type.md) für Weitere Informationen.  
   
-## Entfernen des \_\_box\-Schlüsselworts  
- Managed Extensions\-Boxingsyntax:  
+## <a name="removal-of-box-keyword"></a>Entfernen des __box-Schlüsselwort  
+ Managed Extensions boxing Syntax:  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
@@ -473,10 +476,10 @@ Object *o = __box( 1024 ); // explicit boxing
 Object ^o = 1024; // implicit boxing  
 ```  
   
- Weitere Informationen finden Sie unter [Ein Trackinghandle für einen geschachtelten Wert](../dotnet/a-tracking-handle-to-a-boxed-value.md).  
+ Finden Sie unter [Tracking Handle für einen Wert mittels Boxing konvertiert](../dotnet/a-tracking-handle-to-a-boxed-value.md) für Weitere Informationen.  
   
-## Feste Zeiger  
- Syntax für feste Zeiger in Managed Extensions:  
+## <a name="pinning-pointer"></a>Feste Zeiger  
+ Managed Extensions-Syntax für feste Zeiger:  
   
 ```  
 __gc struct H { int j; };  
@@ -498,26 +501,27 @@ int main() {
 }  
 ```  
   
- Weitere Informationen finden Sie unter [Werttypsemantik](../dotnet/value-type-semantics.md).  
+ Finden Sie unter [Werttypsemantik](../dotnet/value-type-semantics.md) für Weitere Informationen.  
   
-## \_\_typeof\-Schlüsselwort wird zu typeid  
- Managed Extensions\-typeof\-Syntax:  
+## <a name="typeof-keyword-becomes-typeid"></a>__typeof-Schlüsselwort wird typeid  
+ Verwaltete Erweiterungen "typeof"-Schlüsselwort Syntax:  
   
 ```  
 Array* myIntArray =   
    Array::CreateInstance( __typeof(Int32), 5 );  
 ```  
   
- Neue typeid\-Syntax:  
+ Neue Typeid-Syntax:  
   
 ```  
 Array^ myIntArray =   
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- Weitere Informationen finden Sie unter [typeof wird zu T::typeid](../dotnet/typeof-goes-to-t-typeid.md).  
+ Finden Sie unter [Typeof wird zu t:: typeid](../dotnet/typeof-goes-to-t-typeid.md) für Weitere Informationen.  
   
-## Siehe auch  
- [Einführung in die C\+\+\/CLI\-Migration](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](assetId:///edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [C + c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md)   
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+
+

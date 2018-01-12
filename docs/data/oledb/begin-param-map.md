@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PARAM_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PARAM_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PARAM_MAP-Makro"
+title: BEGIN_PARAM_MAP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PARAM_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PARAM_MAP macro
 ms.assetid: 32f3f70e-c7c6-4b80-ab98-e02c8eb3a894
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 448558ad32bb558f9daa417b49ebc733664295d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PARAM_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Markiert den Beginn der Parameterzuordnungseinträge.  
+# <a name="beginparammap"></a>BEGIN_PARAM_MAP
+Markiert den Beginn der Parameter-Zuordnungseinträge.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,20 +37,20 @@ x
   
 ```  
   
-#### Parameter  
- *x*  
- \[in\] Der Name der Benutzerdatensatz\-Klasse.  
+#### <a name="parameters"></a>Parameter  
+ *w*  
+ [in] Der Name der Benutzerdatensatzklasse.  
   
-## Hinweise  
- Parameter werden von [Befehle](https://msdn.microsoft.com/en-us/library/ms724608.aspx) verwendet.  
+## <a name="remarks"></a>Hinweise  
+ Parameter werden verwendet, indem [Befehle](https://msdn.microsoft.com/en-us/library/ms724608.aspx).  
   
-## Beispiel  
- Im Beispiel für das [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)\-Makro.  
+## <a name="example"></a>Beispiel  
+ Siehe das Beispiel für die [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) Makro.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [Makros und globale Funktionen für OLE\-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [END\_PARAM\_MAP](../../data/oledb/end-param-map.md)   
- [SET\_PARAM\_TYPE](../../data/oledb/set-param-type.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Funktionen für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [END_PARAM_MAP](../../data/oledb/end-param-map.md)   
+ [SET_PARAM_TYPE](../../data/oledb/set-param-type.md)

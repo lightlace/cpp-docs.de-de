@@ -1,34 +1,37 @@
 ---
-title: "Versionsprobleme bei in systemeigenen Typen geschachtelten Werttypen (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nogc-Typdeklarationen"
-  - "__value-Schlüsselwort, Probleme bei Schachtelung"
+title: Versionsprobleme bei Werttypen in systemeigenen Typen geschachtelten (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Versionsprobleme bei in systemeigenen Typen geschachtelten Werttypen (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellen Sie sich eine signierte Assemblykomponente vor \(mit starkem Namen\), die zum Erstellen einer Clientassembly verwendet wird.  Die Komponente enthält einen Werttyp, der auf dem Client als Typ für einen Member einer systemeigenen Union, einer Klasse oder eines Arrays verwendet wird.  Wenn in einer zukünftigen Version der Komponente die Größe oder das Layout des Werttyps geändert wird, muss der Client neu kompiliert werden.  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Versionsprobleme bei in systemeigenen Typen geschachtelten Werttypen (C++/CLI)
+Beispiel: eine mit Vorzeichen (starker Name)-Assembly-Komponente verwendet, um eine Clientassembly zu erstellen. Die Komponente enthält einen Werttyp, der auf dem Client als Typ für ein Mitglied einer systemeigenen Union, eine Klasse oder ein Array verwendet wird. Wenn die Größe oder das Layout des Werttyps eine zukünftige Version der Komponente geändert wird, muss der Client neu kompiliert werden.  
   
- Erstellen Sie mithilfe von [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) eine Schlüsseldatei \(`sn -k mykey.snk`\).  
+ Erstellen Sie eine Schlüsseldatei mit [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## Beispiel  
- Das folgende Beispiel stellt die Komponente dar.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel ist die Komponente.  
   
 ```  
 // nested_value_types.cpp  
@@ -45,8 +48,8 @@ public value struct S {
 };  
 ```  
   
-## Beispiel  
- Dieses Beispiel stellt den Client dar:  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird der Client:  
   
 ```  
 // nested_value_types_2.cpp  
@@ -71,7 +74,7 @@ int main() {
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 S.i = 5  
@@ -80,8 +83,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### Kommentare  
- Wenn Sie jedoch in nested\_value\_types.cpp einen weiteren Member zu `struct S` hinzufügen \(zum Beispiel `double d;`\) und die Komponente ohne Neukompilierung des Clients neu kompilieren, erhalten Sie als Ergebnis eine unbehandelte Ausnahme \(vom Typ <xref:System.IO.FileLoadException?displayProperty=fullName>\).  
+### <a name="comments"></a>Kommentare  
+ Jedoch, wenn Sie einen anderen Member hinzufügen `struct S` in nested_value_types.cpp, (z. B. `double d;`) und kompilieren Sie die Komponente ohne erneute Kompilierung des Clients, das Ergebnis ist eine nicht behandelte Ausnahme (vom Typ <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
-## Siehe auch  
- [Verwaltete Typen](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

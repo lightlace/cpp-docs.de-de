@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622fb25c957749b9fbd2f4fee51ffa131cfef7f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf9bea3e2a0b79e8e38fbdb61c851f5a1ab72f01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Wie das Framework Meldungszuordnungen durchsucht
 Das Framework durchsucht die Message-Zuordnungstabelle für Übereinstimmungen mit eingehenden Nachrichten. Sobald Sie eine Meldungszuordnungseintrags für jede Nachricht, dass eine Klasse zum Behandeln und die entsprechenden Handler schreiben sollen schreiben, ruft das Framework automatisch die Handler an. In den folgenden Themen wird erläutert, meldungszuordnung suchen:  

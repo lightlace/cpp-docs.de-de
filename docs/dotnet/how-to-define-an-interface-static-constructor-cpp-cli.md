@@ -1,34 +1,35 @@
 ---
-title: "Gewusst wie: Definieren eines statischen Schnittstellenkonstruktors (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konstruktoren [C++]"
-  - "Statische Schnittstellenkonstruktoren"
-  - "Statische Konstruktoren, Schnittstelle"
+title: 'Vorgehensweise: definieren ein statischen Schnittstellenkonstruktors (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- constructors [C++]
+- static constructors, interface
+- interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-caps.latest.revision: 10
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8bdafde3fd6485b98ff960433218b49c0aa99eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Definieren eines statischen Schnittstellenkonstruktors (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine Schnittstelle kann keinen statischen Konstruktor haben, der verwendet werden kann, um Member der statischen Daten zu initialisieren.  Ein statischer Konstruktor wird höchstens einmal aufgerufen und wird zuvor aufgerufen, wenn auf einen statischen Schnittstellenmember zugegriffen wird.  
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Gewusst wie: Definieren eines statischen Schnittstellenkonstruktors (C++/CLI)
+Eine Schnittstelle kann einen statischen Konstruktor besitzen, die zum Initialisieren von statischen Datenmembern verwendet werden können.  Ein statischer Konstruktor wird höchstens einmal aufgerufen werden, und wird vor dem Zugriff auf ein statischen Schnittstellenmember zum ersten Mal aufgerufen werden.  
   
- Weitere Informationen zu statischen Konstruktoren, finden Sie unter [Gewusst wie: Definieren eines statischen Konstruktors in einer Klasse oder Struktur](../misc/how-to-define-static-constructors-in-a-class-or-struct.md).  
-  
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // mcppv2_interface_class2.cpp  
@@ -58,9 +59,12 @@ int main() {
 }  
 ```  
   
-  **in statischen Konstruktor MyInterface**  
-**99**  
-**99**  
-**99**   
-## Siehe auch  
- [interface class](../windows/interface-class-cpp-component-extensions.md)
+```Output  
+in MyInterface static constructor  
+99  
+99  
+99  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md)

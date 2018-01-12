@@ -1,36 +1,38 @@
 ---
-title: "finally | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finally-Schlüsselwort [C++]"
+title: "Schließlich | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd357c8eeed9eddc6940ce02de6e5d2b4f8c68d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# finally
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Neben `try` und `catch` CLR\-Ausnahmebehandlung Klauseln unterstützt eine `finally`\-Klausel.  Die Semantik entspricht dem `__finally`\-Block in der strukturierten Ausnahmebehandlung \(SEH\) identisch.  Ein `__finally`\-Block kann einem `try` oder `catch`\-Block folgen.  
+# <a name="finally"></a>finally
+Zusätzlich zu `try` und `catch` -Klauseln, CLR-Ausnahmebehandlung unterstützt eine `finally` Klausel. Die Semantik ist identisch mit der `__finally` strukturierte Ausnahmebehandlung (SEH) blockieren. Ein `__finally` -Block folgen kann eine `try` oder `catch` Block.  
   
-## Hinweise  
- Der Zweck des `finally`\-Blocks ist, alle Ressourcen zu bereinigen, die nach der Ausnahme verbleiben, aufgetreten ist.  Beachten Sie, dass der `finally`\-Block wird immer ausgeführt, wenn keine Ausnahme ausgelöst wurde.  Der `catch`\-Block wird nur ausgeführt, wenn eine verwaltete Ausnahme innerhalb des Blocks zugeordneten `try` ausgelöst wird.  
+## <a name="remarks"></a>Hinweise  
+ Der Zweck der `finally` Block wird zum Bereinigen von Ressourcen übrig bleiben, nachdem die Ausnahme aufgetreten ist. Beachten Sie, dass die `finally` Block wird immer ausgeführt, auch wenn keine Ausnahme ausgelöst wurde. Die `catch` Block wird nur ausgeführt, wenn eine verwaltete Ausnahme ausgelöst wird, innerhalb der zugeordneten `try` Block.  
   
- `finally` ist ein kontextbezogenes Schlüsselwort. Weitere Informationen siehe [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `finally`ist ein kontextbezogenes Schlüsselwort. finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md) für Weitere Informationen.  
   
-## Beispiel  
- Das folgende Beispiel zeigt einen einfachen `finally`\-Block:  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt eine einfache `finally` blockieren:  
   
 ```  
 // keyword__finally.cpp  
@@ -57,8 +59,11 @@ int main() {
 }  
 ```  
   
-  **in der Erfassung**  
-**MyException**  
-**in einer finally\-Klausel**   
-## Siehe auch  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+```Output  
+in catch  
+MyException  
+in finally  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)

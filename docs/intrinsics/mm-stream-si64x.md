@@ -1,64 +1,67 @@
 ---
-title: "_mm_stream_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movnti-Anweisung"
-  - "_mm_stream_si64x intrinsic"
+title: _mm_stream_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_si64x
+dev_langs: C++
+helpviewer_keywords:
+- movnti instruction
+- _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 00d3420fc070eaaecfd368ef27a33915f3dbfa2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_stream_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
- Generiert die MOVNTI\-Anweisung.  Schreibt die Daten in `Source` an einer bestimmten Speicheradresse, die von `Dest`angegeben wurde, ohne den Cache zu verunreinigen.  
+**Microsoft-spezifisch**  
   
-## Syntax  
+ Generiert die MOVNTI-Anweisung. Schreibt die Daten in `Source` auf einen Speicherbereich durch angegebenen `Dest`, ohne die Caches beschädigen.  
+  
+## <a name="syntax"></a>Syntax  
   
 ```  
-void _mm_stream_si64x(   
-   __int64 * Dest,   
-   __int64 Source   
+void _mm_stream_si64x(   
+   __int64 * Dest,   
+   __int64 Source   
 );  
 ```  
   
-#### Parameter  
- \[out\] `Dest`  
- Ein Zeiger auf den Speicherort, an dem die Quelldaten geschrieben werden soll.  
+#### <a name="parameters"></a>Parameter  
   
- \[in\] `Source`  
- Die zu schreibenden Daten.  
+ [out] `Dest`  
+ Ein Zeiger auf die Position, an die Quelldaten zu schreiben.  
   
-## Anforderungen  
+ [in] `Source`  
+ Den zu schreibenden Daten.  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+## <a name="requirements"></a>Anforderungen  
+  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+## <a name="remarks"></a>Hinweise  
   
-## Beispiel  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-```  
+## <a name="example"></a>Beispiel  
+  
+```C  
 // _mm_stream_si64x.c  
 // processor: x64  
   
@@ -78,9 +81,11 @@ int main()
 }  
 ```  
   
-  **ffffffffffff 0 0 0**   
-## Microsoft ENDES bestimmten  
+```Output  
+0 ffffffffffff 0 0  
+```  
   
-## Siehe auch  
- [Cache Support for Streaming SIMD Extensions 2 Integer Operations](assetId:///a9c9b42f-de9e-4374-aeb6-5f65bfb669b6)   
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

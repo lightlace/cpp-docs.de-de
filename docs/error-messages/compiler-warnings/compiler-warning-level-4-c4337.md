@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4337 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4337"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4337"
+title: Compilerwarnung (Stufe 4) C4337 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4337
+dev_langs: C++
+helpviewer_keywords: C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b620d43e595ca959622cd8fca1396a96718e80df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4337
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die übergreifende Typbibliothek 'Typbibliothek1' in 'Typbibliothek2' wird automatisch importiert  
+# <a name="compiler-warning-level-4-c4337"></a>Compilerwarnung (Stufe 4) C4337
+übergreifenden Typbibliothek 'Typbibliothek1' in 'Typbibliothek2' wird automatisch importiert  
   
- Durch das `auto_search`\-Attribut der [\#import\-Direktive](../../preprocessor/hash-import-directive-cpp.md) wurde eine Typbibliothek implizit importiert.  
+ Auto_search-Attribut des [die #import-Direktive](../../preprocessor/hash-import-directive-cpp.md) verursacht eine Typbibliothek implizit importiert werden sollen.  
   
- Angenommen, Sie verfügen über zwei auf einem Datenträger gespeicherte Typbibliotheken, die aus den folgenden beiden \(mit midl.exe kompilierten\) Dateien erstellt wurden:  
+ Zwei Typbibliotheken auf dem Datenträger erstellt aus den folgenden zwei Dateien (kompiliert mit midl.exe):  
   
 ```  
 // C4337a.idl  
@@ -47,7 +46,7 @@ library C4337aLib
 };  
 ```  
   
- und dann die zweite IDL\-Datei:  
+ und klicken Sie dann die zweite IDL-Datei,  
   
 ```  
 // C4337b.idl  

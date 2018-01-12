@@ -1,69 +1,69 @@
 ---
-title: "__movsb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsb-Anweisung"
-  - "rep movsb-Anweisung"
-  - "__movsb intrinsic"
+title: __movsb | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsb
+dev_langs: C++
+helpviewer_keywords:
+- movsb instruction
+- rep movsb instruction
+- __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 92d748b9242dcf9e068774703cceba86fce747c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# __movsb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="movsb"></a>__movsb
+**Microsoft-spezifisch**  
   
- Generiert eine Anweisung der Verschiebungs\-Zeichenfolge \(`rep movsb`\).  
+ Generiert eine Zeichenfolge zu verschieben (`rep movsb`) Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-void __movsb(   
-   unsigned char* Destination,   
-   unsigned const char* Source,   
-   size_t Count   
+void __movsb(   
+   unsigned char* Destination,   
+   unsigned const char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Parameter  
- \[out\] `Destination`  
- Ein Zeiger auf das Ziel der Kopie.  
+#### <a name="parameters"></a>Parameter  
+ [out] `Destination`  
+ Ein Zeiger auf das Ziel des Kopiervorgangs.  
   
- \[in\] `Source`  
+ [in] `Source`  
  Ein Zeiger auf die Quelle der Kopie.  
   
- \[in\] `Count`  
+ [in] `Count`  
  Die Anzahl der zu kopierenden Bytes.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das Ergebnis ist, dass die ersten `Count` Bytes, die durch `Source` dargestellt werden, auf die `Destination` Zeichenfolge kopiert werden.  
+## <a name="remarks"></a>Hinweise  
+ Das Ergebnis ist, die die erste `Count` Bytes verweist `Source` kopiert werden, um die `Destination` Zeichenfolge.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // movsb.cpp  
@@ -83,8 +83,11 @@ int main()
 }  
 ```  
   
-  **Ein großer schwarzer Hund.  Ein großer schwarzer Hund.**    
-## Microsoft ENDES bestimmten  
+```Output  
+A big black dog. A big black dog.  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

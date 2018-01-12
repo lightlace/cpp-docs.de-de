@@ -1,56 +1,56 @@
 ---
-title: "&#220;berschreiben einer virtuellen Funktion (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.virtualfunc.override"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Basisklassen, Überschreiben virtueller Funktionen in"
-  - "Eigenschaftenfenster, Überschreiben virtueller Funktionen in"
-  - "Virtuelle Funktionen, Überschreiben"
+title: "Überschreiben einer virtuellen Funktion (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.virtualfunc.override
+dev_langs: C++
+helpviewer_keywords:
+- virtual functions, overriding
+- base classes, overriding virtual functions defined in
+- Properties window, overriding virtual functions in
 ms.assetid: 2d8c76f2-7a6b-4c9c-8de5-4282ce7755b6
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 98e77579d511f4c78f0f7835c0b3c1dcea632734
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#220;berschreiben einer virtuellen Funktion (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können virtuelle Funktionen, die über das [Eigenschaftenfenster](../Topic/Properties%20Window.md) von Visual Studio in einer Basisklasse definiert werden, überschreiben.  
+# <a name="overriding-a-virtual-function-visual-c"></a>Überschreiben einer virtuellen Funktion (Visual C++)
+Sie können angeben, überschreiben virtuelle Funktionen in einer Basisklasse von Visual Studio [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
   
-### So überschreiben Sie eine virtuelle Funktion im Eigenschaftenfenster  
+### <a name="to-override-a-virtual-function-in-the-properties-window"></a>Eine virtuelle Funktion im Fenster Eigenschaften überschreiben  
   
 1.  Klicken Sie in der Klassenansicht auf die Klasse.  
   
-2.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche **Überschreibungen**.  
+2.  Klicken Sie im Eigenschaftenfenster auf die **überschreibt** Schaltfläche.  
   
     > [!NOTE]
-    >  Die Schaltfläche **Überschreibungen** ist verfügbar, wenn Sie entweder den Klassennamen in der Klassenansicht markieren oder wenn Sie auf eine beliebige Stelle im Quellcodefenster klicken.  
+    >  Die **überschreibt** Schaltfläche ist verfügbar, wenn Sie entweder den Klassennamen in der Klassenansicht oder im Quellcodefenster auf auswählen.  
   
-     In der linken Spalte sind die virtuellen Funktionen aufgeführt.  Erscheint der Name einer virtuellen Funktion außerdem in der rechten Spalte, wurde bereits eine Überschreibung implementiert.  
+     Die linke Spalte listet die virtuellen Funktionen. Wenn der Name einer virtuellen Funktion auch in der rechten Spalte angezeigt wird, wurde bereits eine Überschreibung implementiert.  
   
-3.  Wenn die Funktion keine Überschreibung enthält, klicken Sie auf die Zelle in der rechten Spalte des Eigenschaftenfensters, um den von der Funktionsüberschreibung vorgeschlagenen Namen als \<add\>*FuncName* anzuzeigen.  
+3.  Wenn die Funktion keine Überschreibung, klicken Sie dann auf die Zelle in der rechten Spalte im Fenster "Eigenschaften" den empfohlenen Name der Funktion angezeigt auf Überschreiben als \<hinzufügen >*FuncName*.  
   
-4.  Klicken Sie auf den vorgeschlagenen Namen, um der Funktion Stubcode hinzuzufügen.  
+4.  Klicken Sie auf den vorgeschlagenen Namen Stubcode für die Funktion hinzufügen.  
   
-5.  Um eine Überschreibungsfunktion zu bearbeiten, doppelklicken Sie in der Klassenansicht auf den Funktionsnamen und bearbeiten den Code im Quellcodefenster.  
+5.  Um eine überschreibende Funktion bearbeiten möchten, doppelklicken Sie auf den Namen der Funktion in der Klassenansicht und bearbeiten Sie den Code im Quellcodefenster.  
   
- Um eine Überschreibung zu entfernen, klicken Sie in der rechten Spalte auf den Namen der Überschreibungsfunktion und wählen \<delete\>*FuncName*.  Der Funktionscode wird auskommentiert.  
+ Um eine Überschreibung zu entfernen, klicken Sie auf die Außerkraftsetzung Funktionsnamen in der rechten Spalte aus, und wählen Sie \<Löschen >*FuncName*. Der Code der Funktion wird auskommentiert.  
   
-## Siehe auch  
- [Hinzufügen neuer Funktionen mit Code\-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)   
  [Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)   
  [Hinzufügen einer Membervariablen](../ide/adding-a-member-variable-visual-cpp.md)   
- [MFC\-Meldungshandler](../mfc/reference/adding-an-mfc-message-handler.md)   
+ [MFC-Meldungshandler](../mfc/reference/adding-an-mfc-message-handler.md)   
  [Navigieren in der Klassenstruktur](../ide/navigating-the-class-structure-visual-cpp.md)

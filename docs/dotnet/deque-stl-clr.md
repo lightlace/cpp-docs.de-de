@@ -1,36 +1,38 @@
 ---
-title: "deque (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/deque>-Header [STL/CLR]"
-  - "<deque>-Header [STL/CLR]"
-  - "deque-Klasse [STL/CLR]"
+title: Deque (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque
+dev_langs: C++
+helpviewer_keywords:
+- deque class [STL/CLR]
+- <deque> header [STL/CLR]
+- <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# deque (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Objekt, das eine VARYINGLängen\-Folge von Elementen steuert, die wahlfreien Zugriff hat.  Mit dem Container `deque`, um eine Sequenz von Elementen zu verwalten, die wie ein zusammenhängender Block Speicher aussieht, die an jedem Ende ohne die Anforderung wächst oder verringern kann, alle verbleibenden Elemente zu kopieren.  Daher kann sie `double-ended queue` effizient implementieren. \(Daher der Name\).  
+# <a name="deque-stlclr"></a>deque (STL/CLR)
+Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die zufälligen Zugriff hat. Verwenden Sie den Container `deque` um eine Sequenz von Elementen zu verwalten, sieht, die einen zusammenhängenden Block von Speicher, aber die vergrößert oder verkleinert werden, an beiden Enden, ohne die Notwendigkeit, alle verbleibenden Elemente kopieren können. Sie können daher effizient implementieren, eine `double-ended queue`. (Daher den Namen.)  
   
- In der unten stehenden Beschreibung, `GValue` ist das `Value` identisch, es sei denn, das zweite ein Referenz\-Typ ist, in diesem Fall `Value^` dar.  
+ In der folgenden Beschreibung `GValue` ist identisch mit `Value` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Value^`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value>  
@@ -46,103 +48,103 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  GValue  
- Der generische Typ eines Elements in der Sequenz. gesteuerten  
+ Der generische Typ eines Elements in der kontrollierten Sequenz.  
   
  Wert  
  Der Typ eines Elements in der kontrollierten Sequenz.  
   
-## Member  
+## <a name="members"></a>Member  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|[deque::const\_iterator](../dotnet/deque-const-iterator-stl-clr.md)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
-|[deque::const\_reference](../dotnet/deque-const-reference-stl-clr.md)|Der Typ eines konstanten Verweises auf ein Element.|  
-|[deque::const\_reverse\_iterator](../dotnet/deque-const-reverse-iterator-stl-clr.md)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[deque::difference\_type](../dotnet/deque-difference-type-stl-clr.md)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
-|[deque::generic\_container](../dotnet/deque-generic-container-stl-clr.md)|Der Typ der generischen Schnittstelle für den Container.|  
-|[deque::generic\_iterator](../dotnet/deque-generic-iterator-stl-clr.md)|Der Typ eines Iterators für die generische Schnittstelle für den Container.|  
-|[deque::generic\_reverse\_iterator](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die generische Schnittstelle für den Container.|  
-|[deque::generic\_value](../dotnet/deque-generic-value-stl-clr.md)|Der Typ des Elements für die generische Schnittstelle für den Container.|  
-|[deque::iterator](../dotnet/deque-iterator-stl-clr.md)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
-|[deque::reference](../dotnet/deque-reference-stl-clr.md)|Der Typ eines Verweises auf ein Element.|  
-|[deque::reverse\_iterator](../dotnet/deque-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[deque::size\_type](../dotnet/deque-size-type-stl-clr.md)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
-|[deque::value\_type](../dotnet/deque-value-type-stl-clr.md)|Der Typ eines Elements.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|[deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
+|[deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)|Der Typ eines konstanten Verweises auf ein Element.|  
+|[deque::const_reverse_iterator (STL/CLR)](../dotnet/deque-const-reverse-iterator-stl-clr.md)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|  
+|[deque::difference_type (STL/CLR)](../dotnet/deque-difference-type-stl-clr.md)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
+|[deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)|Der Typ der generischen Schnittstelle für den Container.|  
+|[deque::generic_iterator (STL/CLR)](../dotnet/deque-generic-iterator-stl-clr.md)|Der Typ eines Iterators für die generische Schnittstelle für den Container.|  
+|[deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die generische Schnittstelle für den Container.|  
+|[deque::generic_value (STL/CLR)](../dotnet/deque-generic-value-stl-clr.md)|Der Typ eines Elements für die generische Schnittstelle für den Container.|  
+|[deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
+|[deque::reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|Der Typ eines Verweises auf ein Element.|  
+|[deque::reverse_iterator (STL/CLR)](../dotnet/deque-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|  
+|[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
+|[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|Der Typ eines Elements.|  
   
-|Memberfunktion|**Beschreibung**|  
-|--------------------|----------------------|  
-|[deque::assign](../dotnet/deque-assign-stl-clr.md)|Ersetzt alle Elemente.|  
-|[deque::at](../dotnet/deque-at-stl-clr.md)|Greift auf ein Element in einer angegebenen Position zu.|  
-|[deque::back](../dotnet/deque-back-stl-clr.md)|Greift auf das letzte Element zu.|  
-|[deque::begin](../dotnet/deque-begin-stl-clr.md)|Legt den Anfang der kontrollierten Sequenz fest.|  
-|[deque::clear](../dotnet/deque-clear-stl-clr.md)|Entfernt alle Elemente.|  
-|[deque::deque](../dotnet/deque-deque-stl-clr.md)|Erstellt ein container\-Objekt.|  
-|[deque::empty](../dotnet/deque-empty-stl-clr.md)|Testet, dass keine Elemente vorhanden sind.|  
-|[deque::end](../dotnet/deque-end-stl-clr.md)|Legt das Ende der kontrollierten Sequenz fest.|  
-|[deque::erase](../dotnet/deque-erase-stl-clr.md)|Entfernt Elemente an den angegebenen Positionen.|  
-|[deque::front](../dotnet/deque-front-stl-clr.md)|Greift auf das erste Element zu.|  
-|[deque::insert](../dotnet/deque-insert-stl-clr.md)|Fügt Elemente in einer bestimmten Position hinzu.|  
-|[deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)|Entfernt das letzte Element.|  
-|[deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)|Entfernt das erste Element.|  
-|[deque::push\_back](../dotnet/deque-push-back-stl-clr.md)|Fügt ein neues letzte Element hinzu.|  
-|[deque::push\_front](../dotnet/deque-push-front-stl-clr.md)|Fügt ein neues erstes Element hinzu.|  
-|[deque::rbegin](../dotnet/deque-rbegin-stl-clr.md)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|  
-|[deque::rend](../dotnet/deque-rend-stl-clr.md)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|  
-|[deque::resize](../dotnet/deque-resize-stl-clr.md)|Ändert die Anzahl der Elemente.|  
-|[deque::size](../dotnet/deque-size-stl-clr.md)|Ermittelt die Anzahl der Elemente.|  
-|[deque::swap](../dotnet/deque-swap-stl-clr.md)|Vertauscht den Inhalt von zwei Containern.|  
-|[deque::to\_array](../dotnet/deque-to-array-stl-clr.md)|Kopiert die gesteuerte Sequenz zu einem neuen Array.|  
+|Memberfunktion|Beschreibung|  
+|---------------------|-----------------|  
+|[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Ersetzt alle Elemente.|  
+|[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Greift auf ein Element an einer angegebenen Position zu.|  
+|[deque::back (STL/CLR)](../dotnet/deque-back-stl-clr.md)|Greift auf das letzte Element zu.|  
+|[deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)|Legt den Anfang der kontrollierten Sequenz fest.|  
+|[deque::clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)|Entfernt alle Elemente.|  
+|[deque::deque (STL/CLR)](../dotnet/deque-deque-stl-clr.md)|Erstellt ein container-Objekt.|  
+|[deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|Testet, ob keine Elemente vorhanden sind.|  
+|[deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md)|Legt das Ende der kontrollierten Sequenz fest.|  
+|[deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|Entfernt Elemente an den angegebenen Positionen.|  
+|[deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)|Greift auf das erste Element zu.|  
+|[deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|Fügt Elemente an einer angegebenen Position hinzu.|  
+|[deque::pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)|Entfernt das letzte Element.|  
+|[deque::pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)|Entfernt das erste Element.|  
+|[deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)|Fügt ein neues Letztes Element hinzu.|  
+|[deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)|Fügt ein neues erstes Element hinzu.|  
+|[deque::rbegin (STL/CLR)](../dotnet/deque-rbegin-stl-clr.md)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|  
+|[deque::rend (STL/CLR)](../dotnet/deque-rend-stl-clr.md)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|  
+|[deque::resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|Ändert die Anzahl der Elemente an.|  
+|[deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)|Ermittelt die Anzahl von Elementen.|  
+|[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|Vertauscht den Inhalt von zwei Containern.|  
+|[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|Kopiert die gesteuerte Sequenz in ein neues Array.|  
   
-|Eigenschaft|**Beschreibung**|  
-|-----------------|----------------------|  
-|[deque::back\_item](../dotnet/deque-back-item-stl-clr.md)|Greift auf das letzte Element zu.|  
-|[deque::front\_item](../dotnet/deque-front-item-stl-clr.md)|Greift auf das erste Element zu.|  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|[deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)|Greift auf das letzte Element zu.|  
+|[deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)|Greift auf das erste Element zu.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|[deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)|Bestimmt, ob zwei `deque`\-Objekte ungleich sind.|  
-|[deque::operator](../dotnet/deque-operator-stl-clr.md)|Greift auf ein Element in einer angegebenen Position zu.|  
-|[operator\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)|Bestimmt, ob ein `deque`\-Objekt kleiner als ein anderes `deque`\-Objekt ist.|  
-|[operator\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Bestimmt, ob ein `deque`\-Objekt maximal ein anderes `deque`\-Objekt ist.|  
-|[operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)|Ersetzt die gesteuerte Sequenz.|  
-|[operator\=\= \(deque\)](../dotnet/operator-equality-deque-stl-clr.md)|Bestimmt, ob ein `deque`\-Objekt ein anderes Objekt gleich `deque` ist.|  
-|[operator\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)|Bestimmt, ob ein `deque`\-Objekt größer als ein anderes `deque`\-Objekt ist.|  
-|[operator\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Bestimmt, ob ein `deque`\-Objekt größer oder gleich einem anderen `deque`\-Objekt ist.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Bestimmt, ob zwei `deque` -Objekte ungleich sind.|  
+|[deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)|Greift auf ein Element an einer angegebenen Position zu.|  
+|[operator< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|Bestimmt, ob eine `deque` Objekt ist kleiner als ein anderes `deque` Objekt.|  
+|[operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Bestimmt, ob eine `deque` Objekt ist kleiner als oder gleich einem anderen `deque` Objekt.|  
+|[operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|Ersetzt die kontrollierte Sequenz.|  
+|[operator== (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|Bestimmt, ob eine `deque` -Objekt gleich einem anderen `deque` Objekt.|  
+|[operator> (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|Bestimmt, ob eine `deque` -Quellobjekt ist größer als ein anderes `deque` Objekt.|  
+|[operator>= (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Bestimmt, ob eine `deque` Objekt ist größer als oder gleich einem anderen `deque` Objekt.|  
   
-## Schnittstellen  
+## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|**Beschreibung**|  
-|-------------------|----------------------|  
-|<xref:System.ICloneable>|Ein Objekt duplizieren.|  
-|<xref:System.Collections.IEnumerable>|Sequenz durch Elemente.|  
-|<xref:System.Collections.ICollection>|Unbegrenztes Beibehalten Elementgruppe bei.|  
-|<xref:System.Collections.Generic.IEnumerable`1>|Sequenz von typisierten Elemente.|  
-|<xref:System.Collections.Generic.ICollection`1>|Unbegrenztes Beibehalten Gruppe typisierten Elemente bei.|  
-|<xref:System.Collections.Generic.IList`1>|Maintain bestellte Gruppe typisierten Elemente.|  
-|IDequeValue \<\>|Warten Sie generischen Container.|  
+|Interface|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
+|<xref:System.Collections.IEnumerable>|Durch die Elemente der Sequenz.|  
+|<xref:System.Collections.ICollection>|Behalten Sie die Gruppe von Elementen.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Durch die Elemente der typisierte Sequenz.|  
+|<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
+|<xref:System.Collections.Generic.IList%601>|Verwalten Sie geordnete Gruppe von typisierten Elementen.|  
+|IDeque < Wert\>|Verwalten von generischen Container.|  
   
-## Hinweise  
- Das Objekt belegt und gibt die Sequenz für Speicher frei, die durch ein gespeichertes Array von Handles steuert, die vorgesehene Blöcke `Value`\-Elemente.  Das Array nimmt bei Bedarf.  Erhöhung tritt auf, sodass die Kosten entweder mit Voranstellens oder des Anfügens eines neuen Elements konstante Zeit sind, und keine verbleibenden Elemente behindert werden.  Sie können ein Element an jedem Ende in der konstanten Zeit und ohne beunruhigende verbleibende Elemente auch entfernen.  Daher ist eine Doppelschlange gut für den zugrunde liegenden Container für Vorlagenklasse [queue](../dotnet/queue-stl-clr.md) oder Vorlagenklasse [Stapel](../dotnet/stack-stl-clr.md).  
+## <a name="remarks"></a>Hinweise  
+ Das Objekt weist speicherbelegungen und-Freigaben für die Sequenz, über eine gespeicherte Array von Handles, die Blöcke von festlegen `Value` Elemente. Das Array wird bei Bedarf. Wachstum tritt auf, auf eine Weise, dass die Kosten für vorangestellt wird, oder ein neues Element anfügen konstanter Zeit, und keine verbleibenden Elemente gestört werden. Sie können auch ein Element an beiden Enden in konstanter Zeit und ohne beunruhigende verbleibenden Elemente entfernen. Daher eine doppelschlange ist ein guter Kandidat für die zugrunde liegenden Container für die Vorlagenklasse [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md) oder Vorlagenklasse [Stapel (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- Ein `deque`\-Objekt unterstützt Iteratoren mit wahlfreier Zugriff, dass Sie ein Element verweisen kann, das direkt [deque::size](../dotnet/deque-size-stl-clr.md)`() - 1` für das letzte \(Hintergrundfarbe\) Element seine numerische Position angegeben und Null für das erste Element \(vordere\) zählen.  Dies bedeutet auch, dass eine Doppelschlange gut für den zugrunde liegenden Container für Vorlagenklasse [priority\_queue](../dotnet/priority-queue-stl-clr.md) ist.  
+ Ein `deque` Objekt unterstützt Iteratoren mit zufälligem Zugriff, d. h., Sie verweisen auf ein Element direkt die numerische Position von 0 (null) für das erste (front) Elemente gezählt werden, um [deque:: Size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() - 1` für das letzte Element für (zurück). Es bedeutet auch, dass eine doppelschlange ein guter Kandidat für die zugrunde liegenden Container für die Vorlagenklasse ist [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Ein Doppelschlangeniterator speichert ein Handle auf dem zugeordneten Doppelschlangenobjekt, zusammen mit der die Neigung des Elements, das sie festgelegt werden.  Sie können Iteratoren nur mit ihren zugeordneten Containerobjekten verwenden.  Durch Neigen eines Doppelschlangenelements `not` ist unbedingt identisch seine Position.  Das erste Element hat schräges eingefügte null, hat das folgende schräges angefügte Element 1, aber der nächste vorangestellte Element verfügt schräges \-1.  
+ Ein Iterator Deque speichert einen Handle für seine zugeordneten Deque-Objekt, zusammen mit den Zeitunterschied des Elements, die er festlegt. Sie können nur mit ihrer zugeordneten Containerobjekte Iteratoren verwenden. Die Verschiebung des ein doppelschlangenelement ist `not` notwendigerweise identisch mit seiner Position. Das erste Element eingefügt wurde Bias 0 (null), das nächste Element des angefügte ist Bias 1, aber das nächste Element vorangestellt wurde Bias-1 zurück.  
   
- Das Einfügen oder Löschen von Elementen an jedem Ende hat `not` ändern den Wert eines Elements, das bei jeder gültigen Neigung gespeichert wird.  Ein Innenelement Einfügen oder Löschen kann jedoch `can` Änderung Elementwert, der an einer angegebenen Neigung, sodass gespeichert werden, der Wert, der durch einen Iterator festgelegt ist, ändern. \(Der Container kann Elemente muss auf oder ab kopieren, um ein Loch vor einer Einfügung zu erstellen oder ein Loch nach einem Löschvorgang auszufüllen.\) Trotzdem bleibt ein Doppelschlangeniterator gültig, solange die Neigung ein gültiges Element festlegt.  Darüber hinaus wird ein gültiger dereferencable Iterator \- Sie können ihn verwenden, um auf den Elementwert zuzugreifen oder zu ändern, der festlegt wird \- sofern die Neigung ungleich die Neigung für den Iterator ist, der von `end()` zurückgegeben wird.  
+ Einfügen und Löschen von Elementen an beiden Enden ist `not` ändern Sie den Wert eines Elements auf eine beliebige gültige Bias gespeichert. Einfügen oder Löschen eines inneren Elements `can` ändern Sie den Elementwert, der an eine angegebene Verschiebung gespeichert werden, damit von einem Iterator festgelegten auch ändern kann. (Der Container möglicherweise, kopieren Sie Elemente oben oder nach unten, um eine Lücke vor einer INSERT-Anweisung zu erstellen oder nach einer löschen eine Lücke zu füllen). Ein Iterator Deque bleibt dennoch gültig, solange ihre Bias ein gültiges Element kennzeichnet. Darüber hinaus ein gültiger Iterator bleibt dereferencable – Sie können es verwenden, um Zugriff haben und den Elementwert, die er festlegt – ändern, solange der Zeitunterschied die Verschiebung für den Iterator zurückgegebenes nicht entspricht `end()`.  
   
- Ein Element Löschen oder entfernen, wird der Destruktor für den gespeicherten Wert auf.  Die Container Löschen eines Auflistungsobjekts, löscht alle Elemente.  Somit wird sichergestellt ein Container, dessen Elementtyp eine Verweisklasse, ist, dass keine Elemente den Container Beibehaltene Objekte.  Beachten Sie jedoch dem Container Handles `not` bewirkt, zerstören seine Elemente.  
+ Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [Stapel](../dotnet/stack-stl-clr.md)   
- [Vektor](../dotnet/vector-stl-clr.md)   
- [STL\/CLR\-Bibliothek](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Referenz zur STL/CLR-Bibliothek](../dotnet/stl-clr-library-reference.md)

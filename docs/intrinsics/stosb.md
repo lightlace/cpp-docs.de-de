@@ -1,69 +1,69 @@
 ---
-title: "__stosb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep stosb-Anweisung"
-  - "__stosb (systemintern)"
-  - "stosb-Anweisung"
+title: __stosb | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosb
+dev_langs: C++
+helpviewer_keywords:
+- rep stosb instruction
+- __stosb intrinsic
+- stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e86154a3d56d7ef9a27640dfe70f739c630de91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# __stosb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="stosb"></a>__stosb
+**Microsoft-spezifisch**  
   
- Generiert eine Speicherung von Zeichenfolgen Statement \(`rep stosb`\).  
+ Generiert eine Store-Zeichenfolge-Anweisung (`rep stosb`).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-void __stosb(   
-   unsigned char* Dest,   
-   unsigned char Data,   
-   size_t Count   
+void __stosb(   
+   unsigned char* Dest,   
+   unsigned char Data,   
+   size_t Count   
 );  
 ```  
   
-#### Parameter  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parameter  
+ [out] `Dest`  
  Das Ziel des Vorgangs.  
   
- \[in\] `Data`  
- Die zu speichernden Daten.  
+ [in] `Data`  
+ Die Daten zu speichern.  
   
- \[in\] `Count`  
- Die Länge des Blocks zu schreibenden Bytes.  
+ [in] `Count`  
+ Die Länge des Blocks der zu schreibenden Bytes.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das Ergebnis ist, dass das Zeichen `Data` in einen Block von Bytes in der `Count``Dest` Zeichenfolge geschrieben wird.  
+## <a name="remarks"></a>Hinweise  
+ Das Ergebnis ist, die das Zeichen `Data` wird geschrieben, in einen Block von `Count` Bytes in den `Dest` Zeichenfolge.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // stosb.c  
@@ -85,9 +85,12 @@ int main()
 }  
 ```  
   
-  **\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***  
-**\*@@@@@@\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***   
-## Microsoft ENDES bestimmten  
+```Output  
+*********************************  
+*@@@@@@**************************  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,32 +1,33 @@
 ---
-title: "queue::queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "queue-Member [STL/CLR]"
+title: 'Queue:: Queue (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::queue
+dev_langs: C++
+helpviewer_keywords: queue member [STL/CLR]
 ms.assetid: 6106c07f-d5eb-4f0b-82df-ee4e2e751047
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d6c4b24ad40bf19b7a20aafcfa2d02fb6490fed1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# queue::queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein Containeradapterobjekt.  
+# <a name="queuequeue-stlclr"></a>queue::queue (STL/CLR)
+Erstellt ein Container-Adapter-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 queue();  
@@ -35,39 +36,39 @@ queue(queue<Value, Container>^ right);
 explicit queue(container_type% wrapped);  
 ```  
   
-#### Parameter  
- right  
- Objekt für die Kopie.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Zu kopierende Objekt.  
   
- umbrochen  
- Eingebundener verwenden Container.  
+ umschlossen  
+ Umschlossene Container verwendet.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `queue();`  
   
- stellt einen leeren umschlossenen Container.  Sie verwenden sie, um eine leere ursprünglichen gesteuerten Sequenz angeben.  
+ erstellt einen leeren umschlossenen Container an. Sie können damit Geben Sie eine leere gesteuerte Sequenz.  
   
  Der Konstruktor:  
   
  `queue(queue<Value, Container>% right);`  
   
- umschlossenen stellt einen Container, die eine Kopie von `right.get_container()`.  Sie verwenden diesen, um einer gesteuerten ursprünglichen Sequenz angeben, die eine Kopie dieser Folge ist, die von `right`\- Objekt gesteuert wird.  
+ erstellt einen umschlossenen Container, der eine Kopie des `right.get_container()`. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die durch das Warteschlangenobjekt gesteuert wird `right`.  
   
  Der Konstruktor:  
   
  `queue(queue<Value, Container>^ right);`  
   
- umschlossenen stellt einen Container, die eine Kopie von `right->get_container()`.  Sie verwenden diesen, um einer gesteuerten ursprünglichen Sequenz angeben, die eine Kopie dieser Folge ist, die von `*right`\- Objekt gesteuert wird.  
+ erstellt einen umschlossenen Container, der eine Kopie des `right->get_container()`. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die durch das Warteschlangenobjekt gesteuert wird `*right`.  
   
  Der Konstruktor:  
   
  `explicit queue(container_type wrapped);`  
   
- verwendet den vorhandenen `wrapped` als Container der umschlossene Container.  Sie verwenden diesen, um eine Warteschlange aus einem vorhandenen Container zu erstellen.  
+ verwendet den vorhandenen Container `wrapped` als umschlossene Container. Verwenden Sie es, um eine Warteschlange aus einem vorhandenen Container erstellen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_construct.cpp   
@@ -107,17 +108,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::assign](../dotnet/queue-assign-stl-clr.md)   
- [queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::Assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)   
+ [Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)   
+ [queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3719
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3719
+f1_keywords: C3719
+dev_langs: C++
+helpviewer_keywords: C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6f1f4ad2757d94ebff9c7f0906192944d9f5c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3719"></a>Compilerfehler C3719
 'Schnittstelle': eine Ereignisquelle Schnittstelle basiert kann nur verwendet werden, für COM-Ereignisse  

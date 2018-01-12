@@ -1,34 +1,36 @@
 ---
-title: "CCommand-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CCommand"
-  - "CCommand"
-  - "ATL.CCommand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCommand-Klasse"
+title: CCommand-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CCommand
+- CCommand
+- ATL.CCommand
+dev_langs: C++
+helpviewer_keywords: CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt Methoden bereit, um einen Befehl festzulegen und auszuführen.  
+# <a name="ccommand-class"></a>CCommand-Klasse
+Stellt Methoden zum Festlegen und Ausführen eines Befehls bereit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -45,48 +47,48 @@ class CCommand :
    public TMultiple  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TAccessor`  
- Der Typ der Accessorklasse \(wie `CDynamicParameterAccessor`, `CDynamicStringAccessor` oder `CEnumeratorAccessor`\) dieser sollten Sie den Befehl zu verwenden.  Der Standard ist `CNoAccessor`, was Parameter oder \-Ausgabespalten der Klasse nicht Stützangibt.  
+ Der Typ der Accessorklasse (z. B. `CDynamicParameterAccessor`, `CDynamicStringAccessor`, oder `CEnumeratorAccessor`), dass Sie den Befehl verwenden möchten. Die Standardeinstellung ist `CNoAccessor`, was bedeutet, dass die Klasse nicht unterstützen Parameter oder Spalten ausgeben.  
   
  `TRowset`  
- Der Typ der Rowsetklasse \(wie `CArrayRowset` oder `CNoRowset`\) dieser sollten Sie den Befehl zu verwenden.  Die Standardeinstellung ist `CRowset`.  
+ Der Typ der Rowsetklasse (z. B. `CArrayRowset` oder `CNoRowset`), dass Sie den Befehl verwenden möchten. Die Standardeinstellung ist `CRowset`.  
   
  `TMultiple`  
- Um einer OLE DB\- verwenden Sie einen EXE\-Befehl die verschiedenen Ergebnisse zurückgeben kann, [CMultipleResults](../../data/oledb/cmultipleresults-class.md) angeben.  Andernfalls wird mithilfe von [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md).  Ausführliche Informationen finden Sie unter [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
+ Um einen OLE DB-Befehl verwenden, die mehrere Ergebnisse zurückgegeben werden können, geben [CMultipleResults](../../data/oledb/cmultipleresults-class.md). Verwenden Sie andernfalls [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Weitere Informationen finden Sie unter [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
-  
-|||  
-|-|-|  
-|[Schließen](../../data/oledb/ccommand-close.md)|Schließt den aktuellen Befehl.|  
-|[GetNextResult](../../data/oledb/ccommand-getnextresult.md)|Ruft das folgende Ergebnis, wenn, mehrere Resultsets.|  
-|[Öffnen](../../data/oledb/ccommand-open.md)|Führt aus und bindet optional den Befehl.|  
-  
-### Geerbte Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[Create](../../data/oledb/ccommand-create.md)|Erstellt einen neuen Befehl für die angegebene Sitzung, legt dann den Befehlstext fest.|  
+|[Schließen](../../data/oledb/ccommand-close.md)|Schließt den aktuellen Befehl an.|  
+|[GetNextResult](../../data/oledb/ccommand-getnextresult.md)|Dadurch wird das nächste Ergebnis beim Verwenden von mehreren Resultsets.|  
+|[Öffnen](../../data/oledb/ccommand-open.md)|Führt ein, und bindet optional den Befehl.|  
+  
+### <a name="inherited-methods"></a>Geerbte Methoden  
+  
+|||  
+|-|-|  
+|[Erstellen](../../data/oledb/ccommand-create.md)|Erstellt einen neuen Befehl für die angegebene Sitzung, und legt dann den Befehlstext.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Erstellt einen neuen Befehl.|  
-|[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Ruft eine Liste der Parameter des Befehls, ihre Namen und ihre Typen ab.|  
-|[Vorbereiten vor](../../data/oledb/ccommand-prepare.md)|Überprüft und optimiert den aktuellen Befehl.|  
-|[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Befreit den Parameteraccessor ggf., gibt den Befehl frei.|  
-|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Gibt dem systemeigenen Typ jedes Befehlsparameters an.|  
-|[Unprepare](../../data/oledb/ccommand-unprepare.md)|Gibt den aktuellen Befehlsausführungsplan auf.|  
+|[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Ruft eine Liste der Parameter des Befehls, ihren Namen und ihre Typen ab.|  
+|[Vorbereiten](../../data/oledb/ccommand-prepare.md)|Überprüft, und den aktuellen Befehl optimiert.|  
+|[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Bei Bedarf die Parameteraccessor frei, und gibt der Befehl frei.|  
+|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Gibt den systemeigenen Typ eines jeden Befehlsparameter.|  
+|[Unprepare](../../data/oledb/ccommand-unprepare.md)|Verwirft den aktuellen Befehl Ausführungsplan.|  
   
-## Hinweise  
- Verwenden Sie diese Klasse, um einen auf Parametern basierenden Vorgang oder einen Befehl auszuführen.  Wenn Sie lediglich ein einfaches Rowset öffnen müssen, verwenden Sie stattdessen [CTable](../../data/oledb/ctable-class.md).  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Klasse, wenn Sie einen Parameter-basierte-Vorgang oder einen Befehl ausführen müssen. Wenn Sie nur ein einfaches Rowsets öffnen möchten, verwenden Sie [CTable](../../data/oledb/ctable-class.md) stattdessen.  
   
- Die Accessorklasse, die Sie verwenden, bestimmt die Methode von Bindungsparametern und Daten.  
+ Die Accessorklasse, die Sie verwenden bestimmt die Methode der Bindung von Parametern und Daten.  
   
- Beachten Sie, dass Sie gespeicherte Prozeduren mit dem OLE DB\-Anbieter für Jet nicht verwenden können, da dieser Anbieter unterstützt keine gespeicherten Prozeduren \(In Abfragezeichenfolgen sind lediglich Konstanten\).  
+ Beachten Sie, dass Sie gespeicherte Prozeduren mit dem OLE DB-Anbieter für Jet verwenden können, da dieser Anbieter nicht unterstützt gespeicherte Prozeduren, die (nur Konstanten sind in Abfragezeichenfolgen zulässig).  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

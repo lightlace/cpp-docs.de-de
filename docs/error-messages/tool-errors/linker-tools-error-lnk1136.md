@@ -1,31 +1,30 @@
 ---
-title: "Linkertoolfehler LNK1136 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1136"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1136"
+title: Linkertoolfehler Lnk1136 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1136
+dev_langs: C++
+helpviewer_keywords: LNK1136
 ms.assetid: 40c6d909-eb3f-4045-a0fc-4caa2f6db506
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1530ead978d2bb2c6883a5ab3c0f9b2c347de942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolfehler LNK1136
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="linker-tools-error-lnk1136"></a>Linkertoolfehler LNK1136
 Ungültige oder beschädigte Datei  
   
- Die Eingabedatei hat entweder einen beschädigten Header oder die Größe 0 bzw. ist ungewöhnlich klein.  
+ Die Eingabedatei verfügt über einen Header beschädigt, oder 0 (null), Größe oder ungewöhnlich klein ist.  
   
- LNK1136 wird möglicherweise auch verursacht, wenn die Datei falsch als zusätzliche Abhängigkeit angegeben wurde.
+ LNK1136 kann auch verursacht werden, wenn die Datei als zusätzliche Abhängigkeit nicht ordnungsgemäß angegeben wurde.

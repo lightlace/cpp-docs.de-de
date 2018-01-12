@@ -1,51 +1,53 @@
 ---
-title: "ptr::operator-&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.operator->"
-  - "ptr.operator->"
-  - "ptr::operator->"
-  - "msclr::com::ptr::operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator->"
+title: PTR::Operator -&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.operator->
+- ptr.operator->
+- ptr::operator->
+- msclr::com::ptr::operator->
+dev_langs: C++
+helpviewer_keywords: ptr::operator->
 ms.assetid: e752b549-74ed-430d-9a60-6c8e0e441998
-caps.latest.revision: 10
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9814413a77275183e6f36b49bf721f9b305d9763
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Memberzugriffsoperator, verwendet den Festlegen im zugehörigen COM\-Objekt.  
+# <a name="ptroperator-gt"></a>PTR::Operator-&gt;
+Memberzugriffsoperator, zum Aufrufen von Methoden für die im Besitz befindlichen COM-Objekt verwendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _detail::smart_com_ptr<_interface_type> operator->();  
 ```  
   
-## Rückgabewert  
- `smart_com_ptr` zum COM\-Objekt.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein `smart_com_ptr` auf COM-Objekt.  
   
-## Ausnahmen  
- Intern wird `QueryInterface` für den besitzenden COM\-Objekt aufgerufen und jeder Fehler `HRESULT` wird einer Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR*> konvertiert.  
+## <a name="exceptions"></a>Ausnahmen  
+ Intern `QueryInterface` aufgerufen wird, auf das im Besitz befindlichen COM-Objekt und alle Fehler `HRESULT` wird konvertiert, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Hinweise  
- Dieser Operator ermöglicht das Festlegen des besitzenden COM\-Objekts.  Es gibt temporären `smart_com_ptr` zurück, das automatisch ein eigenes `AddRef` und `Release` behandelt.  
+## <a name="remarks"></a>Hinweise  
+ Mithilfe dieses Operators können Sie zum Aufrufen von Methoden, die im Besitz befindlichen COM-Objekts. Gibt einen temporären `smart_com_ptr` , automatisch verarbeitet einen eigenen `AddRef` und `Release`.  
   
-## Beispiel  
- Dieses Beispiel implementiert eine CLR\-Klasse, die `com::ptr` verwendet, um sein `IXMLDOMDocument`\-Objekt des privaten Members zu umschließen.  `WriteDocument` funktioniert mit `operator->`, `get_firstChild` den Member des document\-Objekts aufzurufen.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `WriteDocument` verwendet Funktionen `operator->` Aufrufen der `get_firstChild` Mitglied der Document-Objekt.  
   
 ```  
 // comptr_op_member.cpp  
@@ -161,11 +163,14 @@ int main() {
 }  
 ```  
   
-  **\<wordpersnickety\>\<\/Wort\>**   
-## Anforderungen  
- **Headerdatei** \<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## Siehe auch  
- [ptr\-Member](../dotnet/ptr-members.md)
+## <a name="see-also"></a>Siehe auch  
+ [ptr-Member](../dotnet/ptr-members.md)

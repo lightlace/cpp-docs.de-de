@@ -1,43 +1,46 @@
 ---
-title: "Serialisierung (C++/CLI)"
-ms.custom: na
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], Serialisierung"
-  - "Verwalteter Code [C++], Serialisieren"
-  - "NonSerializedAttribute-Klasse, Verwaltete Anwendungen"
-  - "SerializableAttribute-Klasse, Verwaltete Anwendungen"
-  - "Serialisierung [C++]"
-  - "Serialisierung [C++], Informationen über die Serialisierung"
+title: Serialisierung (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- serialization [C++]
+- SerializableAttribute class, managed applications
+- NonSerializedAttribute class, managed applications
+- managed code [C++], serializing
+- .NET Framework [C++], serialization
+- serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6efd56655cb5b262eab7d7f14c197e11466fb8bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Serialisierung (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Serialisierung \(der Prozess des Speicherns des Status eines Objekts oder Members auf einem permanenten Speichermedium\) von verwalteten Klassen \(einschließlich einzelner Felder und Eigenschaften\) wird durch die <xref:System.SerializableAttribute>\-Klasse und die <xref:System.NonSerializedAttribute>\-Klasse unterstützt.  
+# <a name="serialization-ccli"></a>Serialisierung (C++/CLI)
+Serialisierung (der Prozess des Speicherns des Status eines Objekts oder Mitglied auf einem permanenten Speichermedium) von verwalteten Klassen (einschließlich der einzelnen Felder oder Eigenschaften) wird unterstützt durch die <xref:System.SerializableAttribute> und <xref:System.NonSerializedAttribute> Klassen.  
   
-## Hinweise  
- Wenden Sie das benutzerdefinierte Attribut **SerializableAttribute** auf eine verwaltete Klasse an, um eine ganze Klasse zu serialisieren, oder wenden Sie es nur auf bestimmte Felder oder Eigenschaften an, um Teile einer verwalteten Klasse zu serialisieren.  Verwenden Sie das benutzerdefinierte Attribut **NonSerializedAttribute**, um Felder und Eigenschaften einer verwalteten Klasse von der Serialisierung auszuschließen.  
+## <a name="remarks"></a>Hinweise  
+ Anwenden der **SerializableAttribute** benutzerdefinierten Attributs zur Verwendung einer verwalteten Klasse serialisiert die gesamte Klasse oder gelten nur für spezielle Felder oder Eigenschaften, die Teile der verwalteten Klasse serialisiert. Verwenden der **NonSerializedAttribute** benutzerdefinierten Attributs zur Felder und Eigenschaften einer verwalteten Klasse aus, das serialisiert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Im folgenden Beispiel ist die Klasse `MyClass` \(und die Eigenschaft `m_nCount`\) als serialisierbar gekennzeichnet.  Die Eigenschaft `m_nData` ist jedoch nicht serialisiert, wie das benutzerdefinierte Attribut **NonSerialized** angibt:  
+### <a name="description"></a>Beschreibung  
+ Im folgenden Beispiel die Klasse `MyClass` (und die Eigenschaft `m_nCount`) ist als serialisierbar markiert. Allerdings die `m_nData` Eigenschaft wird nicht serialisiert, wie die **NonSerialized** benutzerdefiniertes Attribut:  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // serialization_and_mcpp.cpp  
@@ -54,8 +57,8 @@ private:
 };  
 ```  
   
-### Kommentare  
- Auf beide Attribute kann unter Verwendung des kurzen Namens \(**Serializable** und **NonSerialized**\) verwiesen werden.  Dies wird unter [Anwenden von Attributen](../Topic/Applying%20Attributes.md) ausführlich erläutert.  
+### <a name="comments"></a>Kommentare  
+ Beachten Sie, dass beide Attribute unter Verwendung des Namens"short" verwiesen werden können (**Serializable** und **NonSerialized**). Dies wird ausführlich erläutert [Anwenden von Attributen](/dotnet/standard/attributes/applying-attributes).  
   
-## Siehe auch  
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

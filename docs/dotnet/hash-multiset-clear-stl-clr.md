@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear-Member [STL/CLR]"
+title: 'hash_multiset:: Clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 2253d5e3-38e6-4ad4-aff4-b546fe95830f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 535e3e56c1851d6aec25406b3242dfde54b1215b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetclear-stlclr"></a>hash_multiset::clear (STL/CLR)
 Entfernt alle Elemente.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void clear();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird effektiv [hash\_multiset::erase](../dotnet/hash-multiset-erase-stl-clr.md)`(` [hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())` auf.  Sie verwenden sie, um sicherzustellen, dass die gesteuerte Sequenz leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion ruft tatsächlich [hash_multiset:: Erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset:: begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset:: End (STL/CLR) ](../dotnet/hash-multiset-end-stl-clr.md)`())`. Sie verwenden es, um sicherzustellen, dass die kontrollierte Sequenz leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multiset_clear.cpp   
@@ -73,15 +74,18 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 0**  
- **ein b**  
-**size\(\) \= 0**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
-## Siehe auch  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::erase](../dotnet/hash-multiset-erase-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multiset-Element (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)

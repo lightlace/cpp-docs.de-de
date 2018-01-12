@@ -1,62 +1,64 @@
 ---
-title: "utility (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/utility>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/utility>-Header [STL/CLR]"
-  - "<utility>-Header [STL/CLR]"
-  - "utility-Header [STL/CLR]"
+title: Hilfsprogramm (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/utility>
+dev_langs: C++
+helpviewer_keywords:
+- <utility> header [STL/CLR]
+- utility header [STL/CLR]
+- <cliext/utility> header [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3876ee887cfeec811d88684927ea9a03af1a8f1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# utility (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Schließen Sie die STL\/CLR\-Header `<cliext/utility>` ein, um die Vorlagenklasse `pair` und einige unterstützende Vorlagenfunktionen zu definieren.  
+# <a name="utility-stlclr"></a>utility (STL/CLR)
+Fügen Sie den STL/CLR-Header `<cliext/utility>` definiert die Vorlagenklasse `pair` und mehrere unterstützende Vorlagenfunktionen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <utility>  
 ```  
   
-## Deklarationen  
+## <a name="declarations"></a>Deklarationen  
   
-|Klasse|**Beschreibung**|  
-|------------|----------------------|  
-|[pair](../dotnet/pair-stl-clr.md)|Binden Sie ein Paar von Elementen ein.|  
+|Klasse|Beschreibung|  
+|-----------|-----------------|  
+|[pair (STL/CLR)](../dotnet/pair-stl-clr.md)|Ein Paar von Elementen zu umschließen.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|[operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)|Gleicher Vergleich der Paare.|  
-|[operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)|Ordnen Sie nicht denselben Vergleich zu.|  
-|[operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)|Paarkleiner\-als\-vergleich.|  
-|[operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|Paare kleiner als oder gleicher Vergleich.|  
-|[operator\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)|Paargrößer\-als\-vergleich.|  
-|[operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Paare größer als oder gleicher Vergleich.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|[operator== (pair) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)|Paar gleich Vergleich.|  
+|[operator!= (pair) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)|Kombinieren Sie nicht gleich Vergleich.|  
+|[operator< (pair) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)|Paar kleiner-als-Vergleich.|  
+|[Operator\<= (Paar) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|Koppeln Sie kleiner oder gleich Vergleich.|  
+|[operator> (pair) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)|Das Paar ist größer als-Vergleich.|  
+|[operator>= (pair) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Paar größer als oder gleich Vergleich.|  
   
-|Funktion|**Beschreibung**|  
-|--------------|----------------------|  
-|[make\_pair](../dotnet/make-pair-stl-clr.md)|Formatieren Sie ein Paar von einem Paar Werten.|  
+|Funktion|Beschreibung|  
+|--------------|-----------------|  
+|[make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)|Stellen Sie ein Paar aus einem Paar von Werten.|  
   
-## Anforderungen  
- **Header:** \<cliext\/Hilfsprogramm\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Hilfsprogramm >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [STL\/CLR\-Bibliothek](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz zur STL/CLR-Bibliothek](../dotnet/stl-clr-library-reference.md)

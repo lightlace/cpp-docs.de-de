@@ -1,35 +1,37 @@
 ---
-title: "IRowsetLocateImpl::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetLocateImpl.Compare"
-  - "IRowsetLocateImpl::Compare"
-  - "IRowsetLocateImpl.Compare"
-  - "ATL::IRowsetLocateImpl::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compare-Methode"
+title: 'IRowsetLocateImpl:: Compare | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetLocateImpl.Compare
+- IRowsetLocateImpl::Compare
+- IRowsetLocateImpl.Compare
+- ATL::IRowsetLocateImpl::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: 6f84052c-c68c-480a-982f-03748faa7d5d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9eaa0aaecd1ff30e51416aaaccebcc8fe6746222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetLocateImpl::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
 Vergleicht zwei Lesezeichen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -43,24 +45,24 @@ Vergleicht zwei Lesezeichen.
 );  
 ```  
   
-#### Parameter  
- Siehe [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Hinweise  
- Alle der Lesezeichen kann ein standardmäßiges OLE DB\-definiertes [Standardlesezeichen](https://msdn.microsoft.com/en-us/library/ms712954.aspx) \(**DBBMK\_FIRST**, **DBBMK\_LAST** oder **DBBMK\_INVALID**\).  Der Wert, der von `pComparison` zurückgegeben wird, gibt der Beziehung zwischen den beiden Lesezeichen an:  
+## <a name="remarks"></a>Hinweise  
+ Eines der Textmarke kann ein Standard OLE DB-definierten [standard Lesezeichen](https://msdn.microsoft.com/en-us/library/ms712954.aspx) (**DBBMK_FIRST**, **DBBMK_LAST**, oder **DBBMK_INVALID**). Der zurückgegebene Wert in `pComparison` gibt die Beziehung zwischen den zwei Lesezeichen:  
   
--   **DBCOMPARE\_LT** \(`cbBookmark1` ist vor `cbBookmark2`.\)  
+-   **DBCOMPARE_LT** (`cbBookmark1` ist, bevor Sie `cbBookmark2`.)  
   
--   **DBCOMPARE\_EQ** \(`cbBookmark1` entspricht `cbBookmark2`.\)  
+-   **DBCOMPARE_EQ** (`cbBookmark1` gleich `cbBookmark2`.)  
   
--   **DBCOMPARE\_GT** \(`cbBookmark1` wird nach `cbBookmark2`.\)  
+-   **DBCOMPARE_GT** (`cbBookmark1` ist nach `cbBookmark2`.)  
   
--   **DBCOMPARE\_NE** \(der Lesezeichen sind gleich und. nicht geordnet\)  
+-   **DBCOMPARE_NE** (Lesezeichen sind gleich und nicht sortiert.)  
   
--   **DBCOMPARE\_NOTCOMPARABLE** \(der Lesezeichen können nicht verglichen werden.\)  
+-   **DBCOMPARE_NOTCOMPARABLE** (das Lesezeichen können nicht verglichen werden.)  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [IRowsetLocateImpl\-Klasse](../../data/oledb/irowsetlocateimpl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [IRowsetLocateImpl-Klasse](../../data/oledb/irowsetlocateimpl-class.md)

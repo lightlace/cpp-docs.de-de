@@ -1,7 +1,7 @@
 ---
 title: C/C++-Buildfehler | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -311,24 +311,20 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>C/C++-Buildfehler
-Die Artikel in diesem Abschnitt der Dokumentation erläutern Fehlermeldungen, die von den Buildtools generiert werden. Der [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]-Compiler und die Buildtools können Warnungen und Meldungen zu vielen Arten von Fehlern generieren. Die Buildtools sind in der Lage, Annahmen über den beabsichtigten Zweck des Codes machen, und sie versuchen, den Code nach einem Fehler oder einer Warnung weiterhin auszuführen, sodass mehrere Probleme gleichzeitig gemeldet werden können. Wenn die Tools allerdings von falschen Annahmen ausgehen, sind spätere Fehler oder Warnungen möglicherweise nicht auf das Projekt anwendbar. Wenn Sie Probleme im Projekt beheben, sollten Sie immer mit dem ersten gemeldeten Problem (Fehler oder Warnung) beginnen, und häufig einen Rebuild für das Projekt ausführen.  
-  
- Um Hilfe zu einer bestimmten Fehlermeldung in Visual Studio zu erhalten, wählen Sie eine Fehlernummer in der **Ausgabe** Fenster, und drücken Sie die Taste F1 drücken, öffnen Sie im MSDN-Seite für diesen Fehler. In MSDN können Sie auch nach Artikeln zu Fehlern suchen oder die nach Kategorien sortierte Fehlerliste im Navigationsbereich durchsuchen.  
-  
-> [!NOTE]
->  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler oder eine Warnung in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
-  
- Links zu weiteren Ressourcen [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], finden Sie unter [Visual C++-Hilfe und Community](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)   
- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+
+Die Artikel in diesem Abschnitt der Dokumentation erläutern diagnostische Fehler- und Warnmeldungen, die von den Buildtools generiert werden.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>Siehe auch
+
+[Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)   
+[Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

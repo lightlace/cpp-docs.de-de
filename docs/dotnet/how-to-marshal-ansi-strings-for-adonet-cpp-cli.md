@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c65647d2e4bd6107b53d4980b4c243af1b4cf3bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91d97658436e2d5563c70765da5c3c98e1cbeed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>Gewusst wie: Marshallen von ANSI-Zeichenfolgen für ADO.NET (C++/CLI)
 Veranschaulicht das Hinzufügen einer systemeigenen Zeichenfolge (`char *`) mit einer Datenbank und das Marshallen einer <xref:System.String?displayProperty=fullName> aus einer Datenbank in eine systemeigene Zeichenfolge.  

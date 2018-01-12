@@ -1,60 +1,42 @@
 ---
-title: Linkertoolwarnung Lnk4075 | Microsoft-Dokumentation
+title: Linkertoolwarnung Lnk4075 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4075
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4075
+f1_keywords: LNK4075
+dev_langs: C++
+helpviewer_keywords: LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
-ms.openlocfilehash: 84dea754a1d2268c92e703dd04b0169ccc258ab3
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e8c3330e637ae0e0dce5e875fcc349c6deefcf27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Linkertoolwarnung LNK4075
-"option1" aufgrund der Spezifikation "option2" werden ignoriert.  
+ignorieren die Option "1" aufgrund von "option2" Spezifikation  
   
- Die zweite Option überschreibt die erste.  
+ Die zweite Option überschreibt das erste.  
   
- Sich gegenseitig ausschließende Linkeroptionen werden angegeben.  Überprüfen Sie die Linkeroptionen.  Wobei die Optionen des Linkers angegeben werden, hängt davon ab, wie Sie das Projekt erstellen.  
+ Sich gegenseitig ausschließende Linkeroptionen werden angegeben wird.  Überprüfen Sie die Optionen des Linkers an.  Wobei die Optionen des Linkers angegeben werden, hängt davon ab, wie Sie das Projekt erstellen.  
   
--   Wenn Sie in der Entwicklungsumgebung erstellen, in der Linker-Eigenschaftenseiten für das Projekt suchen Sie und finden Sie unter, in denen beide Optionen des Linkers angegeben werden.  Finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md) Weitere Informationen.  
+-   Wenn Sie in der Entwicklungsumgebung erstellen, suchen Sie in den Linker-Eigenschaftenseiten für das Projekt und anzeigen Sie, in denen beide Optionen des Linkers angegeben werden.  Finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md) für Weitere Informationen.  
   
--   Wenn Sie in der Befehlszeile erstellen, betrachten Sie den dort angegebenen Linkeroptionen.  
+-   Wenn Sie in der Befehlszeile erstellen, sehen Sie sich die dort angegebenen Optionen des Linkers.  
   
--   Wenn Sie mit Buildskripts erstellen, Durchsuchen Sie Ihre Skripts an, in dem diese Optionen des Linkers angegeben werden.  
+-   Wenn Sie mit Buildskripts erstellen, Durchsuchen Sie Ihre Skripts, um anzuzeigen, in dem diese Optionen des Linkers angegeben werden.  
   
- Wenn Sie feststellen, wo sich gegenseitig ausschließende Linkeroptionen angegeben sind, entfernen Sie eine der Linkeroptionen verfügbar.  
+ Wenn Sie feststellen, wo sich gegenseitig ausschließende Linkeroptionen angegeben sind, entfernen Sie eine der Optionen des Linkers.  
   
  Einige spezifische Beispiele:  
   
--   Wenn Sie ein Modul verknüpfen, die mit kompiliert wurde **/Zi**, d. h. eine interne Linkeroption EDITANDCONTINUE und ein kompiliertes Modul wurde mit/OPT: REF, / OPT: ICF oder/INCREMENTAL: No, das keine EDITANDCONTINUE aufgerufen, wird LNK4075.  Finden Sie unter [/Z7, / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md) für Weitere Informationen.
+-   Wenn Sie ein Modul verknüpfen, die mit kompiliert wurde **/Zi**, was bedeutet, dass eine interne Linkeroption EDITANDCONTINUE und ein Modul, das kompiliert wurde, die mit/OPT: REF, / OPT: ICF oder Standardlink, das keine/EDITANDCONTINUE aufgerufen wird, werden Sie Rufen Sie LNK4075.  Finden Sie unter ["/ Z7", / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md) für Weitere Informationen.

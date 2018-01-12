@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c674bc7711de8a7991ad6906d62a768f9360e6b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 097ae6d1486292d7dcc62dd4191e16f57e6f0a3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
 Ressourcen sind Benutzeroberflächenelemente, die Informationen für den Benutzer bereitstellen. Bitmaps, Symbole, Symbolleisten und Cursor sind alle Ressourcen auf. Einige Ressourcen können bearbeitet werden, um eine Aktion, z. B. in einem Menü auswählen oder Eingeben von Daten in das Dialogfeld Ausführen.  

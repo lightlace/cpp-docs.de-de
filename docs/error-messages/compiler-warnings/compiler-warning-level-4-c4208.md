@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4208 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4208"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4208"
+title: Compilerwarnung (Stufe 4) C4208 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4208
+dev_langs: C++
+helpviewer_keywords: C4208
 ms.assetid: 5cb0a36e-3fb5-422f-a5f9-e40b70776c27
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aefe97e67c566418067c0a7bff594c42f89364b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4208
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: delete \[Ausdruck\] \- Ausdruck ausgewertet, aber ignoriert  
+# <a name="compiler-warning-level-4-c4208"></a>Compilerwarnung (Stufe 4) C4208
+nicht dem Standard entsprechende Erweiterung: Delete [Ausdruck] - Ausdruck ausgewertet, aber ignoriert  
   
- Bei Verwendung der Microsoft\-Erweiterungen \(**\/Ze**\) können Sie ein Array durch einen in eckigen Klammern eingeschlossenen Wert mit dem [Operator "delete"](../../cpp/delete-operator-cpp.md) löschen.  Der Wert wird ignoriert.  
+ Mit Microsoft-Erweiterungen (/ Ze), können Sie ein Array mit einem Wert in Klammern mit Löschen der [delete-Operator](../../cpp/delete-operator-cpp.md). Der Wert wird ignoriert.  
   
 ```  
 // C4208.cpp  
@@ -40,4 +39,4 @@ int main()
 }  
 ```  
   
- Derartige Werte sind bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) ungültig.
+ Diese Werte sind ungültig, ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).

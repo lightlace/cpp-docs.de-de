@@ -1,41 +1,42 @@
 ---
-title: "queue::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container-Member [STL/CLR]"
+title: 'Queue:: get_container (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: d87e7433-a352-4bea-8041-1ffc03287436
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 183a8ac80e11a8991741014347f56ad37fcee728
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# queue::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Greift auf den zugrunde liegenden Container zu.  
+# <a name="queuegetcontainer-stlclr"></a>queue::get_container (STL/CLR)
+Greift auf die zugrunde liegenden Containers.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 container_type^ get_container();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird der zugrunde liegenden Container zurück.  Sie verwenden sie, um die Einschränkungen umgehen, die durch den Containerwrapper entstehen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt den zugrunde liegenden Container zurück. Sie verwenden es, um die Einschränkungen von dem Container-Wrapper zu umgehen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_get_container.cpp   
@@ -59,12 +60,15 @@ int main()
   
 ```  
   
-  **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::container\_type](../dotnet/queue-container-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)

@@ -1,33 +1,36 @@
 ---
-title: "Deklaration von Eigenschaftenindizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Standardindexer"
-  - "Standardwerte, Indexer"
-  - "Indizierte Eigenschaften, C++"
-  - "Indexer"
+title: Eigenschaftenindizes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- indexers
+- default indexers
+- defaults, indexers
+- indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Deklaration von Eigenschaftenindizes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Syntax zum Deklarieren einer indizierten Eigenschaft hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="property-index-declaration"></a>Deklaration von Eigenschaftenindizes
+Die Syntax zum Deklarieren einer indizierten Eigenschaft wurde von Managed Extensions für C++ in Visual C++ geändert.  
   
- Ein grundlegendes Defizit der Managed Extensions\-Programmiersprachenunterstützung für indizierte Eigenschaften ist die fehlende Unterstützung für eine Indizierung auf Klassenebene. Dies bedeutet, dass für alle indizierten Eigenschaften ein Name erforderlich ist und z. B. keine Möglichkeit besteht, einen verwalteten Indexoperator bereitzustellen, der direkt auf ein `Vector`\-Klassenobjekt oder ein `Matrix`\-Klassenobjekt angewendet werden kann.  Ein zweiter, weniger bedeutender Nachteil besteht darin, dass sich eine herkömmliche Eigenschaft visuell nur schwer von einer indizierten Eigenschaft unterscheiden lässt. Der einzige Anhaltspunkt ist die Anzahl der Parameter.  Schließlich haben indizierte Eigenschaften die gleichen Schwächen wie nicht indizierte Eigenschaften: Die Accessoren werden nicht als atomare Einheit behandelt, sondern in einzelne Methoden unterteilt.  Beispiel:  
+ Die zwei primären Mangel, der die Managed Extensions-sprachunterstützung indizierter Eigenschaften ist die Unfähigkeit in Bezug auf Klassenebene Indizierung bereitstellen. d. h. alle indizierte Eigenschaften sind erforderlich, um ein Name zugewiesen werden und daher besteht keine Möglichkeit, z. B. um einen verwalteten Indexoperator bereitzustellen, die direkt zugewiesen werden kann ein `Vector` oder `Matrix` Klassenobjekt. Ein zweites weniger wichtige Mangel ist, es visuell schwierig ist, eine Eigenschaft, die von einer indizierten Eigenschaft unterscheiden zu können – die Anzahl von Parametern das einzige Anzeichen ist. Schließlich indizierte Eigenschaften beeinträchtigt werden, über die gleichen Probleme wie bei nicht indizierten Eigenschaften - Accessor nicht als eine unteilbare Einheit behandelt, sondern in einzelne Methoden unterteilt.  Zum Beispiel:  
   
 ```  
 public __gc class Vector;  
@@ -43,7 +46,7 @@ public:
 };  
 ```  
   
- Beachten Sie, dass sich die Indexer nur durch die zusätzlichen Parameter unterscheiden, welche die Ein\- oder Zweidimensionalität eines Index angeben.  Nach der neuen Syntax lassen sich die Indexer anhand der Klammern \(\[,\]\) hinter dem Indexernamen unterscheiden, die die Nummer und den Typ eines jeden Index angeben:  
+ Wie Sie hier sehen können, unterscheiden sich die Indexer nur durch die zusätzlichen Parameter, geben Sie ein aus zwei oder einzelne Dimension Index. Der Indexer unterscheiden sich in der neuen Syntax wird die schließende Klammer ([,]) hinter den Namen des Indexers und, der angibt, die Anzahl und Typ der einzelnen Indizes:  
   
 ```  
 public ref class Vector {};  
@@ -64,7 +67,7 @@ public:
 };  
 ```  
   
- Um in der neuen Syntax einen Indexer auf Klassenebene anzugeben, der direkt auf Objekte der Klasse angewendet werden kann, wird das `default`\-Schlüsselwort erneut verwendet, um damit einen expliziten Namen zu ersetzen.  Beispiel:  
+ Um einen Indexer auf Klassenebene anzugeben, die direkt auf Objekte der Klasse in der neuen Syntax angewendet werden, können die `default` Schlüsselwort wird wiederverwendet, um einen expliziten Namen zu ersetzen. Zum Beispiel:  
   
 ```  
 public ref class Matrix {  
@@ -74,10 +77,10 @@ private:
 public:  
    // ok: class level indexer now  
    //  
-   //     Matrix mat …  
+   //     Matrix mat;  
    //     mat[ 0, 0 ] = 1;   
    //  
-   // invokes the set accessor of the default indexer …  
+   // invokes the set accessor of the default indexer  
   
    property float default [int,int] {  
       float get( int r, int c );  
@@ -91,10 +94,10 @@ public:
 };  
 ```  
   
- Wenn die indizierte Standardeigenschaft in der neuen Syntax angegeben wird, werden die beiden folgenden Namen reserviert: `get_Item` und `set_Item`.  Das liegt daran, dass es sich dabei um die zugrunde liegenden, für die indizierte Standardeigenschaft generierten Namen handelt.  
+ Wenn die indizierte Standardeigenschaft in der neuen Syntax-Eigenschaft angegeben wird, werden die beiden folgenden Namen sind reserviert: `get_Item` und `set_Item`. Dies ist, da diese die zugrunde liegenden Namen für die indizierte Standardeigenschaft generiert werden.  
   
- Beachten Sie, dass es keine einfache Indexsyntax gibt, die zur einfachen Eigenschaftensyntax analog ist.  
+ Beachten Sie, dass es keine einfachen Index-Syntax analog zu den einfachen Eigenschaftensyntax gibt.  
   
-## Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Gewusst wie: Verwenden von indizierten Eigenschaften](../misc/how-to-use-indexed-properties.md)
+## <a name="see-also"></a>Siehe auch  
+ [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ 

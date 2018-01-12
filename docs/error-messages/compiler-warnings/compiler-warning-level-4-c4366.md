@@ -1,38 +1,37 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4366 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4366"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4366"
+title: Compilerwarnung (Stufe 4) C4366 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4366
+dev_langs: C++
+helpviewer_keywords: C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 221cc02e5a2592599bad0ee9a77de59b19dda6f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4366
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Das Ergebnis des unären Operators 'Operator' ist möglicherweise nicht ausgerichtet  
+# <a name="compiler-warning-level-4-c4366"></a>Compilerwarnung (Stufe 4) C4366
+Das Ergebnis des Operators "Operator" unärer möglicherweise nicht ausgerichteten sein.  
   
- Wenn ein Strukturmember aufgrund von Komprimierung nicht ausgerichtet sein könnte, gibt der Compiler eine Warnmeldung aus, wenn die Adresse dieses Members einem ausgerichteten Zeiger zugewiesen wird.  In der Standardeinstellung sind alle Zeiger ausgerichtet.  
+ Wenn ein Strukturmember jemals nicht ausgerichteten aufgrund der Komprimierung werden konnte, werden der Compiler beim informiert, dass die Adresse des Mitglieds einer ausgerichtete Zeiger zugewiesen ist. Standardmäßig werden alle Zeiger ausgerichtet.  
   
- Zur Behebung von C4366 ändern Sie entweder die Ausrichtung der Struktur, oder Sie deklarieren den Zeiger mit dem [\_\_unaligned](../../cpp/unaligned.md)\-Schlüsselwort.  
+ Um C4366 zu beheben, ändern Sie die Ausrichtung der Struktur oder deklarieren den Zeiger mit dem [__unaligned](../../cpp/unaligned.md) Schlüsselwort.  
   
- Weitere Informationen finden Sie unter \_\_unaligned und [pack](../../preprocessor/pack.md).  
+ Weitere Informationen finden Sie unter __unaligned und [Pack](../../preprocessor/pack.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4366 generiert.  
   
 ```  

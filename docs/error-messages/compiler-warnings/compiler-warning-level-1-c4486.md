@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4486"
+title: Compilerwarnung (Stufe 1) C4486 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4486
+dev_langs: C++
+helpviewer_keywords: C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 086e74947753ddbb801a46c3d7918591cf83cee0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Funktion': Eine private virtuelle Methode einer Verweisklasse oder einer Werteklasse sollte als 'sealed' markiert sein.  
+# <a name="compiler-warning-level-1-c4486"></a>Compilerwarnung (Stufe 1) C4486
+'Funktion': eine private virtuelle Methode einer Verweisklasse oder eine Wertklasse, sollte "sealed" markiert werden  
   
- Da auf eine private virtuelle Memberfunktion einer verwalteten Klasse oder Struktur nicht zugegriffen werden kann und diese nicht überschrieben werden kann, sollte sie mit [sealed](../../windows/sealed-cpp-component-extensions.md) gekennzeichnet werden.  
+ Da eine private virtuelle Memberfunktion einer verwalteten Klasse oder Struktur zugegriffen oder Überschreiben nicht möglich, es sollte markiert sein [versiegelten](../../windows/sealed-cpp-component-extensions.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4486 generiert.  
   
 ```  
@@ -41,8 +40,8 @@ private:
 };  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird eine mögliche Verwendung einer privaten versiegelten virtuellen Funktion gezeigt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt eine mögliche Verwendung der einer privaten versiegelte virtuelle Funktion.  
   
 ```  
 // C4486_b.cpp  

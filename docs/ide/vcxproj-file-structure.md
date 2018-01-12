@@ -14,11 +14,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc57a69b71bd7fbdbf97d5c34e7e6ec0694bb5df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdfd703b819b40a2fc391c1c6cb17edd0eff4cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcxproj-and-props-file-structure"></a>VCXPROJ und PROPS-Datei-Struktur
 MSBuild ist das Standard-Projektsystem in Visual Studio. Bei Auswahl **Datei | Neues Projekt** in Visual C++, die Sie Erstellen eines MSBuild-Projekts, deren Einstellungen werden gespeichert, in eine XML-Projektdatei mit der Erweiterung `.vcxproj`. Die Projektdatei kann auch importieren, props- und TARGETS-Dateien, in denen Einstellungen gespeichert werden können. In den meisten Fällen müssen Sie niemals die Projektdatei manuell bearbeiten, und in der Tat Sie sollte nicht manuell bearbeiten, wenn Sie ein gutes Verständnis von MSBuild verfügen. Nach Möglichkeit sollten Sie die Eigenschaftenseiten für Visual Studio verwenden, um die projekteinstellungen ändern (siehe [arbeiten mit Projekteigenschaften](working-with-project-properties.md). In einigen Fällen müssen Sie jedoch einem Projekt Datei oder ein Eigenschaftenblatt manuell ändern. Für die Fälle enthält in diesem Artikel grundlegende Informationen zur Struktur der Datei. 
@@ -193,7 +194,7 @@ Verweise in einem ItemGroup-Element angegeben werden, und sie weisen diese Einsc
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
-Definiert (direkt oder über Importe) Visual C++-Ziele, wie z. B. erstellen, fehlerfreien usw..
+Definiert (direkt oder über Importe) Visual C++-Ziele, wie z. B. erstellen, fehlerfreien usw.
 
 ```xml
 <ImportGroup Label="ExtensionTargets" />

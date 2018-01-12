@@ -1,31 +1,34 @@
 ---
-title: "Arbeiten mit OLE&#160;DB-Anbietervorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Vorlagen"
-  - "OLE DB, Anbietervorlagen"
-  - "Referenz, OLE DB-Anbietervorlagen"
-  - "Vorlagen, OLE DB-Anbieter"
+title: Arbeiten mit OLE DB-Anbietervorlagen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reference, OLE DB provider templates
+- OLE DB, provider templates
+- templates, OLE DB provider
+- OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3411463070055a8ba1d1f37085c45bd2ed42a28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Arbeiten mit OLE&#160;DB-Anbietervorlagen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Unter den folgenden Themen finden Sie Informationen zur Verwendung von OLE DB\-Anbietervorlagen:  
+# <a name="working-with-ole-db-provider-templates"></a>Arbeiten mit OLE DB-Anbietervorlagen
+Informationen zum Arbeiten mit OLE DB-Anbietervorlagen, finden Sie unter den folgenden Themen:  
   
 -   [Hinzufügen einer Schnittstelle zum Anbieter](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
@@ -43,6 +46,6 @@ Unter den folgenden Themen finden Sie Informationen zur Verwendung von OLE DB\-
   
 -   [Konvertieren von Daten, die nicht vom Anbieter unterstützt werden](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
-## Siehe auch  
- [Referenz der OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbieter-Vorlagenreferenz](../../data/oledb/ole-db-provider-templates-reference.md)   
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

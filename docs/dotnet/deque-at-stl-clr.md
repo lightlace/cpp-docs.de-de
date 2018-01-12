@@ -1,45 +1,46 @@
 ---
-title: "deque::at (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at-Member [STL/CLR]"
+title: 'deque:: AT (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af83d8a-c519-4b2a-a25f-d3dc8bbb87fb
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 703a24917ffdc42ef5668032bc21e166ba451d61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# deque::at (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Greift auf ein Element in einer angegebenen Position zu.  
+# <a name="dequeat-stlclr"></a>deque::at (STL/CLR)
+Greift auf ein Element an einer angegebenen Position zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### Parameter  
- Position  
- Die Position des Elements, auf das zugegriffen wird.  
+#### <a name="parameters"></a>Parameter  
+ pos  
+ Position des Elements, auf das zugegriffen wird  
   
-## Hinweise  
- Die Memberfunktion wird ein Verweis auf das Element der Sequenz in Position gesteuerten `pos` zurück.  Sie verwenden sie, um ein Element zu lesen oder zu schreiben, dessen Position Sie kennen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen Verweis auf das Element der kontrollierten Sequenz an der Position `pos`. Verwenden sie zum Lesen oder schreiben ein Element, dessen Position Sie kennen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_deque_at.cpp   
@@ -68,13 +69,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **x c ein**   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+```Output  
+a b c  
+a x c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
-## Siehe auch  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::operator](../dotnet/deque-operator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)

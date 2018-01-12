@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: &#196;ndern der Verweisklasse in einer systemeigenen Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Plattformaufruf, Verweisklassen"
-  - "Verweistypen, Bearbeiten in einer C++-eigenen Funktion"
+title: "Vorgehensweise: Ändern der Verweisklasse in einer systemeigenen Funktion | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke, reference class
+- reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: &#196;ndern der Verweisklasse in einer systemeigenen Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können eine Verweisklasse mit einem CLR\-Array an eine systemeigene Funktion übergeben und die Klasse mithilfe der PInvoke\-Dienste bearbeiten.  
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Gewusst wie: Ändern der Verweisklasse in einer systemeigenen Funktion
+Sie können eine Verweisklasse mit einem CLR-Array an eine systemeigene Funktion übergeben, und ändern Sie die Klasse auf die Verwendung von PInvoke-Dienste.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Kompilieren Sie die folgenden systemeigene Bibliothek.  
   
 ```  
@@ -54,8 +57,8 @@ extern "C"  {
 };  
 ```  
   
-## Beispiel  
- Kompilieren Sie die folgende Assembly.  
+## <a name="example"></a>Beispiel  
+ Die folgende Assembly zu kompilieren.  
   
 ```  
 // modify_ref_class_in_native_function_2.cpp  
@@ -89,8 +92,11 @@ int main() {
 }  
 ```  
   
-  **str: Hello**  
-**Im systemeigenen Code: intarr: 100, 200**  
-**In verwaltetem Code: intarr: 300, 400**   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+str: Hello  
+In native: intarr: 100, 200  
+In managed: intarr: 300, 400  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 973500cc276d95e523859a5fcc1b9a5f7a707bb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>Deklaration eines CLR-Verweisklassenobjekts
 Die Syntax zum Deklarieren und instanziieren Sie ein Objekt eines Verweistyps für die Klasse hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
@@ -73,7 +76,7 @@ private:
 ```  
   
 ## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>Dynamische Zuweisung eines Objekts auf dem CLR-Heap  
- In Managed Extensions wird das Vorhandensein von zwei `new` Ausdrücke, die zwischen dem systemeigenen und verwalteten Heap zugeordnet war weitestgehend transparent. In fast allen Fällen kann der Compiler den Kontext verwenden, um zu ermitteln, ob aus dem systemeigenen oder verwalteten Heap belegt. Beispiel:  
+ In Managed Extensions wird das Vorhandensein von zwei `new` Ausdrücke, die zwischen dem systemeigenen und verwalteten Heap zugeordnet war weitestgehend transparent. In fast allen Fällen kann der Compiler den Kontext verwenden, um zu ermitteln, ob aus dem systemeigenen oder verwalteten Heap belegt. Ein auf ein Objekt angewendeter  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  

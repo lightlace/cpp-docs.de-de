@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0616e76985a06f9525a300c318fe1518cd6a70c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c304b3d01fa8d1cdece410d70ebe437d41d72cd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Gewusst wie: Umwandeln von System::String nach wchar_t* oder char*
 Mit `PtrToStringChars` in Vcclr.h können Sie <xref:System.String> in das systemeigene `wchar_t *` oder `char *` konvertieren.  Dadurch wird immer ein Zeiger mit breiter Unicode-Zeichenfolge zurückgegeben, da CLR-Zeichenfolgen intern Unicode sind. Sie können dann von breit konvertieren, wie im folgenden Beispiel gezeigt wird.  

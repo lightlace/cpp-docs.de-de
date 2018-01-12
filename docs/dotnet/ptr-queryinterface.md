@@ -1,35 +1,37 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface-Methode"
+title: PTR::QueryInterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fragt das Besitze COM\-Objekt für eine Schnittstelle ab und fügt das Ergebnis in einen anderen `com::ptr`.  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+Fragt das im Besitz befindlichen COM-Objekt für eine Schnittstelle und fügt das Ergebnis in einen anderen `com::ptr`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _other_type>  
@@ -38,18 +40,18 @@ void QueryInterface(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `other`  
- `com::ptr`, das die Schnittstelle abgerufen.  
+ Die `com::ptr` erhalten, dass die Schnittstelle.  
   
-## Ausnahmen  
- Intern wird `QueryInterface` für den besitzenden COM\-Objekt aufgerufen und jeder Fehler `HRESULT` wird einer Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR*> konvertiert.  
+## <a name="exceptions"></a>Ausnahmen  
+ Intern `QueryInterface` aufgerufen wird, auf das im Besitz befindlichen COM-Objekt und alle Fehler `HRESULT` wird konvertiert, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Hinweise  
- Verwenden Sie diese Methode, um einen COM\-Wrapper für eine andere Schnittstelle des COM\-Objekts zu erstellen, das vom aktuellen Wrapper verwendet wird.  Diese Methode ruft `QueryInterface` durch das Besitze COM\-Objekt, einen Zeiger auf eine bestimmte Schnittstelle des COM\-Objekts und der wird der zurückgegebene Schnittstellenzeiger zu übergebenen `com::ptr`\- Informationen.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode, um ein COM-Wrapper für eine andere Schnittstelle des COM-Objekts, das im Besitz von der aktuellen Wrapper erstellen. Diese Methode ruft `QueryInterface` über das im Besitz befindlichen COM-Objekt zum Anfordern der eines Zeigers auf eine bestimmte Schnittstelle die COM-Objekt, und fügt den zurückgegebenen Schnittstellenzeiger in den übergebenen `com::ptr`.  
   
-## Beispiel  
- Dieses Beispiel implementiert eine CLR\-Klasse, die `com::ptr` verwendet, um sein `IXMLDOMDocument`\-Objekt des privaten Members zu umschließen.  Die `WriteTopLevelNode`\-Memberfunktion wird `QueryInterface` verwendet, um lokalen `com::ptr` mit `IXMLDOMNode` auszufüllen und dann `com::ptr` \(mithilfe Nachverfolgungsverweis\) in einer privaten Memberfunktion, die die Namens\- und Texteigenschaften des Knotens an die Konsole ausgibt.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `WriteTopLevelNode` Memberfunktion verwendet `QueryInterface` zum Auffüllen einer lokales `com::ptr` mit einem `IXMLDOMNode` und übergibt dann die `com::ptr` (durch Nachverfolgungsverweis) auf eine Private Memberfunktion, die der Knoten Eigenschaften für Name und Text in die Konsole schreibt.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +152,15 @@ int main() {
 }  
 ```  
   
-  **\<\#documentpersnickety\/\#document\>\<\>**   
-## Anforderungen  
- **Headerdatei** \<msclr\\com\\ptr.h\>  
+```Output  
+<#document>persnickety</#document>  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## Siehe auch  
- [ptr\-Member](../dotnet/ptr-members.md)   
+## <a name="see-also"></a>Siehe auch  
+ [PTR-Member](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

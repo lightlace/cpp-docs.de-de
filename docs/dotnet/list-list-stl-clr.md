@@ -1,32 +1,33 @@
 ---
-title: "list::list (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Listenmember [STL/CLR]"
+title: 'List:: List (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::list
+dev_langs: C++
+helpviewer_keywords: list member [STL/CLR]
 ms.assetid: 51b58f63-c65a-4d54-b746-0c10635b123b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ae85dbdab7bb1d72862aa315949821ba5cdb830
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# list::list (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein container\-Objekt.  
+# <a name="listlist-stlclr"></a>list::list (STL/CLR)
+Erstellt ein container-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 list();  
@@ -39,52 +40,53 @@ template<typename InIt>
 list(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parameter  
- count  
- Zahl einzufügen Elemente.  
+#### <a name="parameters"></a>Parameter  
+ `count`  
+ Die Anzahl einzufügender Elemente.  
   
- first  
- Anfang Einfügen des Bereichs.  
+ `first`  
+ Anfang des Bereichs, der eingefügt.  
   
- last  
- Ende Einfügen des Bereichs.  
+ `last`  
+ Das Ende des Bereichs einfügen.  
   
- right  
- Objekt oder Bereich Einfüge\-.  
+ `right`  
+ Einzufügendes Objekt bzw. einzufügender Bereich.  
   
- val  
- Wert des Elements eingefügt.  
+ `val`  
+ Der Wert des einzufügenden Elements.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
+  
  Der Konstruktor:  
   
  `list();`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente.  Sie verwenden sie, um eine leere ursprünglichen gesteuerten Sequenz angeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente. Sie können damit Geben Sie eine leere gesteuerte Sequenz.  
   
  Der Konstruktor:  
   
  `list(list<Value>% right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``.`[list::begin](../dotnet/list-begin-stl-clr.md)`(),` `right``.`[list::end](../dotnet/list-end-stl-clr.md)`())`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz angeben, die eine Kopie dieser Folge ist das Listenobjekt, die durch `right` gesteuert wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right.begin()`, `right.end()`). Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das Listenobjekt gesteuert wird `right`.  
   
  Der Konstruktor:  
   
  `list(list<Value>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``->`[list::begin](../dotnet/list-begin-stl-clr.md)`(),` `right``->`[list::end](../dotnet/list-end-stl-clr.md)`())`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz angeben, die eine Kopie dieser Folge ist, die das Listenobjekt gesteuert wird, dessen Handle `right` ist.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right->begin()`, `right->end()`). Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch die List-Objekt, dessen Handle, gesteuert wird `right`.  
   
  Der Konstruktor:  
   
  `explicit list(size_type count);`  
   
- initialisiert die gesteuerte Sequenz mit `count`\-Elemente jede mit Wert `value_type()`.  Sie verwenden ihn, um den Container mit allen Elementen füllen, der den Standardwert aufweist.  
+ Initialisiert die gesteuerte Sequenz mit `count` jedes Elemente mit dem Wert `value_type()`. Sie verwenden es den Container mit Elementen gefüllt alle mit dem Standardwert.  
   
  Der Konstruktor:  
   
  `list(size_type count, value_type val);`  
   
- initialisiert die gesteuerte Sequenz mit `count`\-Elemente jede mit Wert `val`.  Sie verwenden sie, um den Container mit allen Elementen füllen, der denselben Wert verfügt.  
+ Initialisiert die gesteuerte Sequenz mit `count` jedes Elemente mit dem Wert `val`. Sie verwenden sie den Container mit Elementen gefüllt alle mit dem gleichen Wert.  
   
  Der Konstruktor:  
   
@@ -92,17 +94,17 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list(InIt first, InIt last);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`). Sie können damit der gesteuerten Sequenz eine Kopie einer anderen Sequenz erstellen.  
   
  Der Konstruktor:  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right` festgelegt wird.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator beschrieben wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`. Sie können damit der gesteuerten Sequenz eine Kopie einer anderen Sequenz beschrieben durch einen Enumerator erstellen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cliext_list_construct.cpp   
 // compile with: /clr   
 #include <cliext/list>   
@@ -156,20 +158,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [List::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

@@ -1,45 +1,26 @@
 ---
-title: Compiler-Fehler C3392 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3392 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3392
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3392
+f1_keywords: C3392
+dev_langs: C++
+helpviewer_keywords: C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: ca0d37c75c61e1280c0f13ef6a26cd4ab920d1d9
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 32477f657a3293617b3831be1812aececa521df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3392"></a>Compilerfehler C3392
 'Typargument': Ungültiges Typargument für den generischen 'Param'-Parameter von 'generischer_Typ' (generisch). Muss einen öffentlichen parameterlosen Konstruktor aufweisen.  
@@ -47,7 +28,7 @@ ms.lasthandoff: 02/24/2017
  Ein generischer Typ wurde fehlerhaft instanziiert. Überprüfen Sie die Typdefinition. Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgende Beispiel wird c# verwendet eine Komponente erstellen, die einen generischen Typ enthält, die bestimmte Einschränkungen nicht, beim Erstellen von generischer Typen in C++ unterstützt werden / CLI. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
+Im folgende Beispiel wird c# verwendet zum Erstellen einer Komponente, die einen generischen Typ mit bestimmten Einschränkungen, die nicht unterstützt werden, wenn generische Typen in C++ zu erstellen, enthält c++ / CLI. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
 ```cs  
 // C3392.cs  
@@ -59,7 +40,7 @@ where V : struct
 where N : new() {}  
 ```  
   
-Wenn die Komponente C3392.dll verfügbar ist, wird im folgende Beispiel C3392 generiert.  
+Wenn die Komponente C3392.dll verfügbar ist, im folgende Beispiel wird C3392 generiert:  
   
 ```cpp  
 // C3392_b.cpp  

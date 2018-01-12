@@ -1,48 +1,51 @@
 ---
-title: "Gewusst wie: Erstellen von leeren CLR-Projekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Leere CLR-Projekte"
-  - "Leere CLR-Projekte, Erstellen"
+title: 'Vorgehensweise: Erstellen von leeren CLR-Projekte | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CLR empty projects
+- CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81d24698ccdc769f93882287dfa94dbb12d9d197
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Erstellen von leeren CLR-Projekten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um ein leeres CLR\-Projekt zu erstellen, verwenden Sie die Vorlage **Leeres CLR\-Projekt**, die im Dialogfeld **Neues Projekt** verfügbar ist.  
+# <a name="how-to-create-clr-empty-projects"></a>Gewusst wie: Erstellen von leeren CLR-Projekten
+Verwenden Sie zum Erstellen eines leeren CLR-Projekts die **leere CLR-Projekts** Vorlage, in der **neues Projekt** (Dialogfeld).  
   
 > [!NOTE]
->  Die in der IDE dargestellten Features können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Features unterscheiden.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](assetId:///22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Die in der IDE dargestellten Funktionen können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Funktionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So erstellen Sie ein leeres CLR\-Projekt  
+### <a name="to-create-a-clr-empty-project"></a>Zum Erstellen eines leeren CLR-Projekts  
   
-1.  Klicken Sie im Menü **Datei** erst auf **Neu** und dann auf **Projekt**.  
+1.  Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  Klicken Sie unter **Installierte Vorlagen** auf den Knoten **Visual C\+\+**, und klicken Sie anschließend auf den Knoten **CLR**.  Wählen Sie das Symbol **Leeres CLR\-Projekt** aus.  
+2.  Klicken Sie unter **installierte Vorlagen**, klicken Sie auf die **Visual C++** Knoten; klicken Sie dann auf die **CLR** Knoten. Wählen Sie die **leere CLR-Projekts** Symbol.  
   
 3.  Geben Sie im Feld **Name** einen eindeutigen Namen für die Anwendung ein.  
   
     > [!NOTE]
-    >  Sie können im Dialogfeld **Neues Projekt** auch andere Projekt\- und Projektmappeneinstellungen festlegen, diese Einstellungen sind aber nicht unbedingt erforderlich.  
+    >  Sie können auch auf anderen Projekt- und Projektmappendateien Einstellungen angeben der **neues Projekt** (Dialogfeld), doch diese Einstellungen sind nicht erforderlich.  
   
 4.  Klicken Sie auf **OK**.  
   
-## Siehe auch  
- [Visual C\+\+\-Projekttypen](../ide/visual-cpp-project-types.md)   
- [Visual C\+\+\-Projekttypen](../Topic/Debugging%20Preparation:%20Visual%20C++%20Project%20Types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)   
+ [Visual C++-Projekttypen](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

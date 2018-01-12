@@ -1,35 +1,35 @@
 ---
-title: "Schwerwiegender Fehler C1001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1001"
+title: Schwerwiegender Fehler C1001 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C1001
+dev_langs: C++
+helpviewer_keywords: C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4a72a99e566474145857e265edde548ebf38e180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Schwerwiegender Fehler C1001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="fatal-error-c1001"></a>Schwerwiegender Fehler C1001
 
-INTERNER COMPILERFEHLER \(Compilerdatei Datei, Zeilennummer\)  
+> Interner Compilerfehler ERROR(compiler file *file*, line *number*)  
   
- Aufgrund der Kombination eines Ausdrucks und einer Optimierungsoption ist der Compiler u. U. nicht in der Lage, korrekten Code für ein Konstrukt zu generieren.  Versuchen Sie, eine oder mehrere Optimierungsoptionen zu entfernen, und kompilieren Sie die Funktion mit der in der Fehlermeldung angegebenen Zeile neu.  
-  
- Sie können das Problem ggf. beheben, indem Sie eine oder mehrere Optimierungsoptionen entfernen.  Um festzustellen, welche Option fehlerhaft ist, entfernen Sie die Optionen nacheinander und führen eine Neukompilierung aus, bis die Fehlermeldung ausbleibt.  Am häufigsten tritt das Problem mit den Optionen **\/Og**, **\/Oi** und `/Oa` auf.  Nachdem Sie die verantwortliche Option ermittelt haben, können Sie sie deaktivieren. Während die Option für das übrige Modul aktiviert bleibt, führen Sie für die Funktion, in der der Fehler aufgetreten ist, das [optimize](../../preprocessor/optimize.md)\-Pragma aus.  
-  
- Die Microsoft Knowledge Base hat Weitere Informationen zu C1001; Sie finden [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
-  
- Schreiben Sie die Zeile mit dem Fehler bzw. einige Codezeilen vor und hinter dieser Zeile neu.
+Der Compiler kann nicht die korrekten Code für ein Konstrukt, häufig aufgrund der Kombination aus einem bestimmten Ausdruck und eine Optimierungsoption oder ein Problem bei der Analyse generieren. Verfügt der aufgeführten Compilerdatei ein utc oder der C2-OData-Pfadsegment, ist es wahrscheinlich ein Fehler für die Optimierung. Wenn die Datei ein Pfadsegment Cxxfe oder c1xx hat oder msc1.cpp ist, ist es wahrscheinlich ein Fehler im Parser. Wenn die Datei namens cl.exe ist, ist keine weiteren Informationen verfügbar.  
+
+Sie können oft eine Optimierungsproblem beheben, indem Sie eine oder mehrere Optimierungsoptionen entfernen. Um zu bestimmen, welche Option fehlerhaft ist, entfernen Sie diese Optionen eine zu einem Zeitpunkt Recompile, bis die Fehlermeldung beendet wurde. Die Optionen, die am häufigsten sind [/Og (globale Optimierungen)](../../build/reference/og-global-optimizations.md) und [/Oi (systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md). Sobald Sie feststellen, welche Optimierungsoption zuständig ist, können Sie es deaktivieren, um die Funktion, in dem der Fehler tritt auf, mit, der [optimieren](../../preprocessor/optimize.md) Pragma, und fahren Sie mit der Option für den Rest des Moduls verwendet werden. Weitere Informationen zu den Optimierungsoptionen, finden Sie unter [bewährte Vorgehensweisen für die Optimierung](../../build/reference/optimization-best-practices.md).
+
+Wenn Optimierungen nicht für den Fehler verantwortlich sind, versuchen Sie die Zeile, in dem der Fehler gemeldet wird, oder mehrere dieser Zeile umgebenden Codezeilen umschreiben. Um den Code wie der Compiler es nach der vorverarbeitung erkennt angezeigt wird, können Sie die [/p (Vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md) Option.
+
+Weitere Informationen wie die Quelle des Fehlers zu isolieren und wie einen interner Compilerfehler an Microsoft zu melden, finden Sie unter [zum Melden eines Problems mit der Visual C++-Toolsets](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).

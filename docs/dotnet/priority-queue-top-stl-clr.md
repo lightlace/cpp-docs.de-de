@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::top (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::top"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top-Member [STL/CLR]"
+title: 'priority_queue:: Top (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::top
+dev_langs: C++
+helpviewer_keywords: top member [STL/CLR]
 ms.assetid: e45211d5-e6df-4c03-97fd-57afb87af58c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c1614d1babb06aa3b36b6932fd23c1f2700a3ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::top (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Greift auf das höchste Element zu.  
+# <a name="priorityqueuetop-stlclr"></a>priority_queue::top (STL/CLR)
+Greift auf das Element der höchsten Priorität.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reference top();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird ein Verweis auf den obersten \(höchsten\) gesteuerten Element der Sequenz zurück, die nicht leer sein muss.  Sie verwenden sie, um auf das höchste Element zugreifen, wenn Sie wissen, dass es vorhanden ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen Verweis auf das Element der obersten (höchste Priorität) der gesteuerten Sequenz, die nicht leer sein darf. Sie können damit die höchste Priorität Element zuzugreifen, wenn Sie wissen, dass sie vorhanden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_priority_queue_top.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **c ein b**  
-**top\(\) \= c**  
- **x b ein**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ c a b  
+top() = c  
+ x a b  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::top\_item](../dotnet/priority-queue-top-item-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)

@@ -1,31 +1,34 @@
 ---
-title: "&#220;berladene Operatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operatoren überladen, In einer CLR-Klasse"
-  - "Operatoren [C++], Überladen"
+title: "Überladene Operatoren | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#220;berladene Operatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Überladen von Operatoren hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] im Vergleich zu Managed Extensions for C\+\+ wesentlich geändert.  
+# <a name="overloaded-operators"></a>Überladene Operatoren
+Operatoren überladen wurde erheblich von Managed Extensions für C++ in Visual C++ geändert.  
   
- Bei der Deklaration eines Referenztyps kann beispielsweise nicht die systemeigene `operator+`\-Syntax verwendet werden, sondern es muss der zugrunde liegende interne Name des Operators explizit ausgeschrieben werden – in diesem Fall ist dies `op_Addition`.  Darüber hinaus muss der Aufruf eines Operators explizit über diesen Namen erfolgen, wodurch die zwei Hauptvorteile des Überladens von Operatoren bedeutungslos werden: \(a\) die intuitive Syntax und \(b\) die Möglichkeit, neue und vorhandene Typen zu kombinieren.  Beispiel:  
+ In der Deklaration eines Verweistyps, zum Beispiel, anstatt mithilfe der systemeigenen `operator+` -Syntax explizit ausgeschrieben der zugrunde liegende interne Name des Operators - in diesem Fall `op_Addition`. Darüber hinaus weist der Aufruf eines Operators über diesen Namen, daher erfolgen zwei Hauptvorteile operatorüberladung explizit aufgerufen werden: (a) die intuitive Syntax und (b) die Möglichkeit, neue und vorhandene Typen zu kombinieren. Zum Beispiel:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +55,7 @@ int main()
 }  
 ```  
   
- In der neuen Syntax erfolgen die Deklaration und die Verwendung von statischen Operatoren wieder so, wie es C\+\+\-Programmierer ursprünglich gewohnt waren.  Das folgende Beispiel zeigt die `Vector`\-Klasse übersetzt in die neue Syntax:  
+ In der neuen Syntax werden die üblichen Erwartungen systemeigenen C++-Programmierer, sowohl in der Deklaration und Verwendung von statischen Operatoren wiederhergestellt. So sieht die `Vector` Klasse in der neuen Syntax übersetzt:  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +82,5 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

@@ -1,32 +1,33 @@
 ---
-title: "bind2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind2nd-Funktion [STL/CLR]"
+title: bind2nd (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind2nd
+dev_langs: C++
+helpviewer_keywords: bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3617cb917012a48398c6c9f530c2419aa8ea195b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# bind2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Generiert `binder2nd` für ein Argument und ein Funktionselement.  
+# <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
+Generiert eine `binder2nd` für ein Argument und ein Funktionselement ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Fun,  
@@ -35,24 +36,24 @@ template<typename Fun,
         Arg right);  
 ```  
   
-## Vorlagenparameter  
- Arg  
+## <a name="template-parameters"></a>Vorlagenparameter  
+ arg  
  Der Typ des Arguments.  
   
  Fun  
- Der Typ des Feature\-Elements.  
+ Der Typ, der das Funktionselement.  
   
-## Funktionsparameter  
+## <a name="function-parameters"></a>Funktionsparameter  
  Funktionselement  
- Das Funktionselement einzubindende.  
+ Das Funktionselement umschließen.  
   
- right  
- Das zweite Argument einzubindende.  
+ Rechts  
+ Das zweite Argument umschließen.  
   
-## Hinweise  
- Die Vorlagenfunktion [binder2nd](../dotnet/binder2nd-stl-clr.md) gibt `<Fun>(functor, right)` zurück.  Sie verwenden sie als bequeme Möglichkeit, ein ZweiArgumentfunktionselement und sein zweites Argument in einem EinArgumentfunktionselement einzubinden, das Aufrufe sie einem ersten Argument.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion gibt [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Sie verwenden es als eine einfache Möglichkeit, ein Funktionselement ist zwei Argumente und das zweite Argument in ein Funktionselement ist nur einem Argument zu umschließen, den sie mit dem ersten Argument aufruft.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_bind2nd.cpp   
@@ -95,13 +96,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [binder2nd](../dotnet/binder2nd-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)

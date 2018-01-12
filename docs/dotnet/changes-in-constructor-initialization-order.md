@@ -1,49 +1,51 @@
 ---
-title: "&#196;nderungen in der Initialisierungsreihenfolge f&#252;r Konstruktoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konstruktoren, C++"
+title: "Änderungen in der Initialisierungsreihenfolge für Konstruktoren | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#196;nderungen in der Initialisierungsreihenfolge f&#252;r Konstruktoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Initialisierungsreihenfolge für Klassenkonstruktoren hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="changes-in-constructor-initialization-order"></a>Änderungen in der Initialisierungsreihenfolge für Konstruktoren
+Die Reihenfolge der Initialisierung für Klassenkonstruktoren wurde von Managed Extensions für C++ in Visual C++ geändert.  
   
-## Vergleich der Initialisierungsreihenfolge für Konstruktoren  
- In Managed Extensions for C\+\+ wurden Konstruktoren in der folgenden Reihenfolge initialisiert:  
+## <a name="comparison-of-constructor-initialization-order"></a>Vergleich der Initialisierungsreihenfolge für Konstruktoren  
+ In Managed Extensions für C++ Konstruktorinitialisierung, die in der folgenden Reihenfolge ist aufgetreten:  
   
-1.  Der Konstruktor der Basisklasse wird aufgerufen, falls vorhanden.  
+1.  Der Konstruktor der Basisklasse, wird ggf. aufgerufen.  
   
 2.  Die Initialisierungsliste der Klasse wird ausgewertet.  
   
-3.  Der Codetext des Klassenkonstruktors wird ausgeführt.  
+3.  Der Codetext der Klassenkonstruktor wird ausgeführt.  
   
- Diese Ausführungsreihenfolge basiert auf den gleichen Konventionen wie bei der systemeigenen C\+\+\-Programmierung.  Die neue Visual C\+\+\-Sprache sieht für CLR\-Klassen die folgende Ausführungsreihenfolge vor:  
+ Diese Reihenfolge der Ausführung folgt die gleichen Konventionen wie systemeigene C++-Programmierung. Die neue Visual C++-Sprache gibt die folgenden Ausführungsreihenfolge für CLR-Klassen vor:  
   
 1.  Die Initialisierungsliste der Klasse wird ausgewertet.  
   
-2.  Der Konstruktor der Basisklasse wird aufgerufen, falls vorhanden.  
+2.  Der Konstruktor der Basisklasse, wird ggf. aufgerufen.  
   
-3.  Der Codetext des Klassenkonstruktors wird ausgeführt.  
+3.  Der Codetext der Klassenkonstruktor wird ausgeführt.  
   
- Beachten Sie, dass diese Änderung nur für CLR\-Klassen gilt; systemeigene Klassen in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] folgen weiterhin den alten Konventionen.  In beiden Fällen setzen sich diese Regeln durch die gesamte Hierarchiekette einer bestimmten Klasse nach oben fort.  
+ Beachten Sie, dass diese Änderung nur für CLR-Klassen gilt. systemeigene Klassen in Visual C++ folgen weiterhin früheren Konventionen. In beiden Fällen kaskadiert werden diese Regeln nach oben in der Kette gesamte Hierarchie einer angegebenen Klasse.  
   
- Betrachten Sie das folgende Codebeispiel aus Managed Extensions for C\+\+:  
+ Beachten Sie im folgenden Codebeispiel wird die Verwendung von Managed Extensions for C++:  
   
 ```  
 __gc class A  
@@ -68,15 +70,15 @@ private:
 };  
 ```  
   
- Gemäß der oben genannten Initialisierungsreihenfolge für Konstruktoren ist die folgende Ausführungsreihenfolge zu erwarten, wenn neue Instanzen der Klasse `B` erstellt werden:  
+ Nach der Initialisierungsreihenfolge für Konstruktoren oben vorgeschrieben, sehen wir die folgende Reihenfolge der Ausführung, wenn neue Instanzen der Klasse `B` erstellt werden:  
   
-1.  Der Konstruktor der Basisklasse `A` wird aufgerufen.  Der `_n`\-Member wird mit `1` initialisiert.  
+1.  Der Konstruktor der Basisklasse `A` aufgerufen wird. Die `_n` Member wird initialisiert, um `1`.  
   
-2.  Die Initialisierungsliste für die Klasse `B` wird ausgewertet.  Der `_m`\-Member wird mit `1` initialisiert.  
+2.  Der Initialisierungsliste für Klasse `B` ausgewertet wird. Die `_m` Member wird initialisiert, um `1`.  
   
-3.  Der Codetext der Klasse `B` wird ausgeführt.  
+3.  Der Codetext "der Klasse `B` ausgeführt wird.  
   
- Betrachten Sie nun den gleichen Code in der neuen Visual C\+\+\-Syntax:  
+ Nun sehen wir uns mit den gleichen Code in der neuen Visual C++-Syntax:  
   
 ```  
 ref class A  
@@ -101,20 +103,20 @@ private:
 };  
 ```  
   
- Die Ausführungsreihenfolge beim Erstellen neuer Instanzen der Klasse `B` sieht in der neuen Syntax wie folgt aus:  
+ Die Reihenfolge der Ausführung, wenn neue Instanzen der Klasse `B` erstellt werden, unter der neuen Syntax lautet:  
   
-1.  Die Initialisierungsliste für die Klasse `B` wird ausgewertet.  Der `_m`\-Member wird mit `0` initialisiert \(`0` ist der nicht initialisierte Wert des `_m`\-Klassenmembers\).  
+1.  Der Initialisierungsliste für Klasse `B` ausgewertet wird. Die `_m` Member wird initialisiert, um `0` (`0` ist der Wert nicht initialisierte, der die `_m` Klassenmember).  
   
-2.  Der Konstruktor der Basisklasse `A` wird aufgerufen.  Der `_n`\-Member wird mit `1` initialisiert.  
+2.  Der Konstruktor der Basisklasse `A` aufgerufen wird. Die `_n` Member wird initialisiert, um `1`.  
   
-3.  Der Codetext der Klasse `B` wird ausgeführt.  
+3.  Der Codetext "der Klasse `B` ausgeführt wird.  
   
- Beachten Sie, dass bei diesen Codebeispielen eine ähnliche Syntax zu unterschiedlichen Ergebnissen führt.  Der Konstruktor der Klasse `B` benötigt zum Initialisieren seines Members einen Wert der Basisklasse `A`.  Der Konstruktor für die Klasse `A` wurde jedoch noch nicht aufgerufen.  Eine derartige Abhängigkeit kann besonders dann riskant sein, wenn die geerbte Klasse auf eine Speicherbelegung oder Ressourcenreservierung im Basisklassenkonstruktor angewiesen ist.  
+ Beachten Sie, dass eine ähnliche Syntax für diese Codebeispiele unterschiedliche Ergebnisse erzeugt. Der Konstruktor der Klasse `B` richtet sich nach einem Wert von der Basisklasse `A` zum Initialisieren des Elements. Allerdings der Konstruktor für die Klasse `A` noch nicht aufgerufen. Diese Abhängigkeit kann besonders gefährlich sein, wenn eine Speicher- oder Zuweisung im Konstruktor Basisklasse die geerbte Klasse abhängig ist.  
   
-## Was dies für den Wechsel von Managed Extensions for C\+\+ zu Visual C\+\+ 2010 bedeutet  
- Häufig sind die Änderungen an der Ausführungsreihenfolge von Klassenkonstruktoren für den Programmierer transparent, da sich Basisklassen vollkommen anders verhalten als geerbte Klassen.  Wie diese Codebeispiele veranschaulichen, können die Konstruktoren geerbter Klassen jedoch stark betroffen sein, wenn ihre Initialisierungslisten von den Werten der Basisklassenmember abhängen.  Wenn Sie Code aus Managed Extensions for C\+\+ in die neue Syntax umwandeln, sollten Sie solche Konstrukte ggf. in den Textteil des Klassenkonstruktors verschieben, der nachweislich zuletzt ausgeführt wird.  
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>Was dies bedeutet, die für den Wechsel von Managed Extensions for C++ auf Visual C++ 2010  
+ In vielen Fällen sollte die Änderungen an die Ausführungsreihenfolge der Klassenkonstruktoren für den Programmierer transparent sein, da Basisklassen nicht notwendig, das Verhalten des geerbten Klassen aufweisen. Jedoch, wie diese Codebeispiele veranschaulichen zu können, können die Konstruktoren des geerbten Klassen erheblich beeinträchtigt werden bei ihrer Initialisierungslisten von den Werten der Basisklassenmember abhängen. Wenn Sie den Code von Managed Extensions für C++ in der neuen Syntax verschieben, erwägen Sie, solche Konstrukte in den Text der Konstruktor der Klasse, in dem die Ausführung garantiert wird, zuletzt ausgeführt.  
   
-## Siehe auch  
- [Verwaltete Typen \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwaltete Typen (C + c++ / CL)](../dotnet/managed-types-cpp-cl.md)   
  [Konstruktoren](../cpp/constructors-cpp.md)   
- [Konstruktorinitialisierer](../misc/constructor-initializers.md)
+ 

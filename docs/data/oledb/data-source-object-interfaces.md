@@ -1,47 +1,50 @@
 ---
-title: "Datenquellenobjekt-Schnittstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenquellenobjekte [C++]"
-  - "Datenquellenobjekte [C++], Schnittstellen"
-  - "Schnittstellen [C++], Liste"
-  - "Schnittstellen [C++], OLE DB"
-  - "OLE DB [C++], Schnittstellen"
-  - "OLE DB-Anbietervorlagen [C++], Objektschnittstelle"
+title: Datenquelle Objektschnittstelle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data source objects [C++], interfaces
+- data source objects [C++]
+- interfaces [C++], OLE DB
+- interfaces [C++], list of
+- OLE DB provider templates [C++], object interfaces
+- OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b15ff70c505496fa6375ef01091e0826ec08d98d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Datenquellenobjekt-Schnittstellen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In der folgenden Tabelle sind die erforderlichen und optionalen Schnittstellen aufgeführt, die in OLE DB für Datenquellenobjekte definiert sind.  
+# <a name="data-source-object-interfaces"></a>Datenquellenobjekt-Schnittstellen
+Die folgende Tabelle zeigt die obligatorischen und optionalen Schnittstellen, die durch OLE DB für ein Datenquellenobjekt definiert.  
   
-|Schnittstelle|Erforderlich?|Durch OLE DB\-Vorlagen implementiert?|  
-|-------------------|-------------------|-------------------------------------------|  
-|`IDBCreateSession`|Erforderlich|ja|  
-|`IDBInitialize`|Erforderlich|ja|  
-|`IDBProperties`|Erforderlich|ja|  
-|[\<caps:sentence id\="tgt14" sentenceid\="731a3344bc1c6b5f8f54d9de3524f18a" class\="tgtSentence"\>IPersist\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms688695)|Erforderlich|ja|  
-|[\<caps:sentence id\="tgt17" sentenceid\="63e99e63156fc90f114fa402662387ef" class\="tgtSentence"\>IConnectionPointContainer\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|nein|  
-|`IDBDataSourceAdmin`|Optional|nein|  
-|`IDBInfo`|Optional|nein|  
-|[\<caps:sentence id\="tgt26" sentenceid\="7e6a12ecd4cb3b1bd45dccf9421ed567" class\="tgtSentence"\>IPersistFile\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Optional|nein|  
-|`ISupportErrorInfo`|Optional|nein|  
+|Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
+|---------------|---------------|--------------------------------------|  
+|`IDBCreateSession`|Erforderlich|Ja|  
+|`IDBInitialize`|Erforderlich|Ja|  
+|`IDBProperties`|Erforderlich|Ja|  
+|[IPersist](http://msdn.microsoft.com/library/windows/desktop/ms688695)|Erforderlich|Ja|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|Nein|  
+|`IDBDataSourceAdmin`|Optional|Nein|  
+|`IDBInfo`|Optional|Nein|  
+|[IPersistFile](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Optional|Nein|  
+|`ISupportErrorInfo`|Optional|Nein|  
   
- Das Datenquellenobjekt implementiert die Schnittstellen `IDBProperties`, `IDBInitialize` und `IDBCreateSession` durch Vererbung.  Es können zusätzliche Funktionen unterstützt werden, je nachdem, ob Sie die Vererbung von einer dieser Implementierungsklassen zulassen oder nicht.  Wenn Sie die `IDBDataSourceAdmin`\-Schnittstelle unterstützen möchten, müssen Sie die `IDBDataSourceAdminImpl`\-Klasse erben.  
+ Das Datenquellenobjekt implementiert die `IDBProperties`, `IDBInitialize`, und `IDBCreateSession` Schnittstellen durch Vererbung. Sie können auswählen, um zusätzliche Funktionalität durch Vererben oder erben nicht von einer dieser Implementierungsklassen zu unterstützen. Wenn Sie unterstützen möchten die `IDBDataSourceAdmin` Schnittstelle erbt von der `IDBDataSourceAdminImpl` Klasse.  
   
-## Siehe auch  
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

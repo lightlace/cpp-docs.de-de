@@ -1,29 +1,29 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4821 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4821"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4821"
+title: Compilerwarnung (Stufe 1) C4821 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4821
+dev_langs: C++
+helpviewer_keywords: C4821
 ms.assetid: c7768e77-0ee5-491e-8aa4-3915bf5bcbdf
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ecadacfacbaf41adc9116460207c36e48ebe84d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4821
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Unicode\-Codierungstyp konnte nicht bestimmt werden, speichern Sie die Datei mit Signatur \(BOM\).  
+# <a name="compiler-warning-level-1-c4821"></a>Compilerwarnung (Stufe 1) C4821  
   
- Der Compiler konnte den Codierungstyp für eine Datei nicht bestimmen.  Um diese Warnung zu verhindern, speichern Sie die Datei mit einer Bytereihenfolgemarkierung.  Weitere Informationen finden Sie unter [Verwalten von Dateien mit Codierung](assetId:///ab3a74da-5c8f-4680-8882-f1def4909e82).
+> Kann nicht zum Ermitteln von Unicode-Codierungstyp, speichern Sie die Datei mit Signatur (BOM)  
+  
+Der Compiler konnte den Codierungstyp für eine Datei nicht ermittelt werden. Um diese Warnung zu beheben, speichern Sie die Datei mit einem Byte-sortierungsmarkierung. Finden Sie unter [Verwalten von Dateien mit Codierung](/sql/ssms/solution/manage-files-with-encoding) für Weitere Informationen.  

@@ -1,36 +1,39 @@
 ---
-title: "Gewusst wie: Marshallen von eingebetteten Zeigern mit C++-Interop"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, Eingebettete Zeiger"
-  - "Datenmarshalling [C++], Eingebettete Zeiger"
-  - "Interop [C++], Eingebettete Zeiger"
-  - "Marshaling [C++], Eingebettete Zeiger"
-  - "Zeiger [C++], Marshalling"
-  - "Strukturen [C++], Marshallen von eingebetteten Zeigern"
+title: 'Wie: Marshallen von eingebetteten Zeigern mit C++-Interop | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- structures [C++], marshaling embedded pointers
+- interop [C++], embedded pointers
+- C++ Interop, embedded pointers
+- marshaling [C++], embedded pointers
+- pointers [C++], marshaling
+- data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-caps.latest.revision: 12
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 202d48e44419da3bf5dd5832845d63aac8408061
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Marshallen von eingebetteten Zeigern mit C++-Interop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In den folgenden Codebeispielen werden die [managed, unmanaged](../preprocessor/managed-unmanaged.md)\-\#pragma\-Direktiven verwendet, um verwaltete und nicht verwaltete Funktionen in derselben Datei zu implementieren. Diese Funktionen arbeiten jedoch auf dieselbe Weise zusammen, wenn sie in separaten Dateien definiert werden.  Dateien, die ausschließlich nicht verwaltete Funktionen enthalten, müssen nicht mit [\/clr \(Common Language Runtime\-Kompilierung\)](../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden.  
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Gewusst wie: Marshallen von eingebetteten Zeigern mit C++-Interop
+Im folgenden Codebeispiel Beispiele verwenden die [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) #pragma-Direktiven zum Implementieren verwalteten und nicht verwaltete Funktionen in derselben Datei, aber diese Funktionen auf dieselbe Weise zusammenarbeiten, wenn in separaten Dateien definiert. Dateien, die ausschließlich nicht verwaltete Funktionen müssen nicht kompiliert werden [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie eine nicht verwaltete Funktion, die eine Zeiger enthaltende Struktur akzeptiert, durch eine verwaltete Funktion aufgerufen werden kann.  Durch die verwaltete Funktion wird eine Instanz der Struktur erstellt und ein eingebetteter Zeiger mit dem neuen Schlüsselwort initialisiert \(anstelle des [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)\-Schlüsselworts\).  Dadurch wird der Speicher auf dem systemeigenen Heap belegt, und aus diesem Grund ist es nicht erforderlich, das Array für die unterdrückte Garbage Collection zu fixieren.  Der Arbeitsspeicher muss jedoch explizit gelöscht werden, um Memory Leakage zu vermeiden.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, wie eine nicht verwaltete Funktion, die eine Struktur mit Zeigern akzeptiert aus einer verwalteten Funktion aufgerufen werden kann. Die verwaltete Funktion erstellt eine Instanz der Struktur und eingebetteter Zeiger mit dem neuen Schlüsselwort initialisiert (anstelle von der [Ref neue Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) Schlüsselwort). Da dies den Arbeitsspeicher auf dem systemeigenen Heap belegt wird, besteht keine Notwendigkeit zum Anheften des Arrays an die Garbagecollection zu unterdrücken. Der Arbeitsspeicher muss jedoch explizit gelöscht werden, um Arbeitsspeicher Datenlecks zu vermeiden.  
   
 ```  
 // marshal_embedded_pointer.cpp  
@@ -73,27 +76,30 @@ int main() {
 }  
 ```  
   
-  **\[managed\] count \= 10**  
-**array\[0\] \= 72.624326996796**  
-**array\[1\] \= 81.7325359590969**  
-**array\[2\] \= 76.8022689394663**  
-**array\[3\] \= 55.8161191436537**  
-**array\[4\] \= 20.6033154021033**  
-**array\[5\] \= 55.8884794618415**  
-**array\[6\] \= 90.6027066011926**  
-**array\[7\] \= 44.2177873310716**  
-**array\[8\] \= 97.754975314138**  
-**array\[9\] \= 27.370445768987**  
-**\[unmanaged\] count \= 10**  
-**array\[0\] \= 72.624327**  
-**array\[1\] \= 81.732536**  
-**array\[2\] \= 76.802269**  
-**array\[3\] \= 55.816119**  
-**array\[4\] \= 20.603315**  
-**array\[5\] \= 55.888479**  
-**array\[6\] \= 90.602707**  
-**array\[7\] \= 44.217787**  
-**array\[8\] \= 97.754975**  
-**array\[9\] \= 27.370446**   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+[managed] count = 10  
+array[0] = 72.624326996796  
+array[1] = 81.7325359590969  
+array[2] = 76.8022689394663  
+array[3] = 55.8161191436537  
+array[4] = 20.6033154021033  
+array[5] = 55.8884794618415  
+array[6] = 90.6027066011926  
+array[7] = 44.2177873310716  
+array[8] = 97.754975314138  
+array[9] = 27.370445768987  
+[unmanaged] count = 10  
+array[0] = 72.624327  
+array[1] = 81.732536  
+array[2] = 76.802269  
+array[3] = 55.816119  
+array[4] = 20.603315  
+array[5] = 55.888479  
+array[6] = 90.602707  
+array[7] = 44.217787  
+array[8] = 97.754975  
+array[9] = 27.370446  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

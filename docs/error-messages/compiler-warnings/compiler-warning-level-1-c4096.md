@@ -1,37 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4096 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4096"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4096"
+title: Compilerwarnung (Stufe 1) C4096 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4096
+dev_langs: C++
+helpviewer_keywords: C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3c8fd8e18743a4cf0c9004236ab60bb30219119e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4096
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**"**   
- ***a* ": die Schnittstelle ist keine COM\-Schnittstelle; wird nicht nach IDL emittiert**  
+# <a name="compiler-warning-level-1-c4096"></a>Compilerwarnung (Stufe 1) C4096 generiert
+"a": Schnittstelle ist nicht mit einem COM-Schnittstelle wird nicht an IDL ausgegeben werden  
   
- Eine Schnittstellendefinition, die u. U. als COM\-Schnittstelle fungieren sollte, wurde nicht als COM\-Schnittstelle definiert und wird daher nicht in die IDL\-Datei ausgegeben.  
+ Die Schnittstellendefinition einer, die Sie als COM-Schnittstelle vorgesehen haben möglicherweise wurde nicht als COM-Schnittstelle definiert und wird daher nicht in der IDL-Datei ausgegeben werden.  
   
- Eine Liste der Attribute, durch die eine Schnittstelle als COM\-Schnittstelle definiert wird, finden Sie unter [Schnittstellenattribute](../../windows/interface-attributes.md).  
+ Finden Sie unter [Schnittstellenattribute](../../windows/interface-attributes.md) für eine Liste der Attribute, die angeben, eine Schnittstelle ist eine COM-Schnittstelle.  
   
- Im folgenden Beispiel wird C4096 generiert:  
+ Im folgende Beispiel wird C4096 generiert:  
   
 ```  
 // C4096.cpp  
