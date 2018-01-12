@@ -1,33 +1,32 @@
 ---
-title: "Ressourcencompiler: Fehler RC2165 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2165"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2165"
+title: 'Ressourcencompiler: Fehler RC2165 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2165
+dev_langs: C++
+helpviewer_keywords: RC2165
 ms.assetid: bf7d4630-9355-47e3-87fa-6693fcf0ef0d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 16c2d226d6212ba2cdbffbaba7f21f5c8019f2e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ressourcencompiler: Fehler RC2165
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Zeichenfolge in DLGINCLUDE\-Anweisung nicht gefunden  
+# <a name="resource-compiler-error-rc2165"></a>Ressourcencompiler: Fehler RC2165
+Zeichenfolge in DLGINCLUDE-Anweisung nicht gefunden.  
   
- In der Anweisung wurde keine gültige Includedatei angegeben.  
+ Die Anweisung eine gültige Include-Datei nicht angeben.  
   
- Die **DLGINCLUDE**\-Anweisung muss folgende Syntax aufweisen:  
+ Die **DLGINCLUDE** Anweisung muss die folgende Syntax verwenden:  
   
- **DLGINCLUDE "*filename*.h"**
+ **DLGINCLUDE "*Filename*h" **

@@ -1,34 +1,33 @@
 ---
-title: "Linkertoolfehler LNK2004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2004"
+title: Linkertoolfehler Lnk2004 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2004
+dev_langs: C++
+helpviewer_keywords: LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3fdbd32bbc59d9c18df5544f07ec7e7097b9e02e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolfehler LNK2004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-gp relativer Fixup\-Überlauf zu 'Ziel'; der short\-Abschnitt 'Abschnitt' ist zu groß oder liegt außerhalb des gültigen Bereichs.  
+# <a name="linker-tools-error-lnk2004"></a>Linkertoolfehler LNK2004
+Gp relativer Fixup-Überlauf zu 'Ziel'; kurzer Abschnitt "Abschnitt" ist zu groß ist oder außerhalb des gültigen Bereichs.  
   
  Der Abschnitt war zu groß.  
   
- Um diesen Fehler zu beheben, verringern Sie die Größe des short\-Abschnitts, indem Sie in den long\-Abschnitten mit \#pragma section\(".sectionname", read, write, long\) Daten explizit einfügen und `__declspec(allocate(".sectionname"))` für Datendefinitionen und \-deklarationen verwenden.  Beispiel:  
+ Um diesen Fehler zu beheben, verringern Sie die Größe des short-Abschnitts, indem Sie explizit Einfügen von Daten in den long-Abschnitten mit #pragma Section (".sectionname", read, Write, Long) und `__declspec(allocate(".sectionname"))` -Definitionen und Deklarationen.  Ein auf ein Objekt angewendeter  
   
 ```  
 #pragma section(".data$mylong", read, write, long)  
@@ -41,7 +40,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };  
 ```  
   
- Sie können auch logisch gruppierte Daten in ihre eigene Struktur verschieben, die eine Auflistung von Daten mit einer Größe von mehr als 8 Bytes darstellt und vom Compiler einem Abschnitt mit long\-Daten zugewiesen wird.  Beispiel:  
+ Sie können auch logisch gruppierte Daten in ihre eigene Struktur verschieben, die eine Auflistung von Daten, die größer als 8 Bytes festgelegt, werden die der Compiler in einem Abschnitt long-Daten zuordnet.  Ein auf ein Objekt angewendeter  
   
 ```  
 // from this...  
@@ -60,4 +59,4 @@ struct X {
   
 ```  
   
- Auf diesen Fehler folgt der schwerwiegende Fehler `LNK1165`.
+ Diesem Fehler folgt der schwerwiegende Fehler `LNK1165`.

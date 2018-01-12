@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4073"
+title: Compilerwarnung (Stufe 3) C4073 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4073
+dev_langs: C++
+helpviewer_keywords: C4073
 ms.assetid: 50081a6e-6acd-45ff-8484-9b1ea926cc5c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e30c8439ed146658b3d1fcf258d3b13c37f3dd10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Initialisierungen stehen im Initialisierungsbereich einer Bibliothek  
+# <a name="compiler-warning-level-3-c4073"></a>Compilerwarnung (Stufe 3) C4073 generiert
+Fügen Sie in der Bibliothek Initialisierungsbereich Initialisierer  
   
- Der Initialisierungsbereich einer Bibliothek, der durch [\#pragma init\_seg](../../preprocessor/init-seg.md) festgelegt wird, sollte nur von Entwicklern verwendet werden, die Bibliotheken anderer Hersteller entwickeln.  Im folgenden Beispiel wird C4073 generiert:  
+ Nur Entwicklern von Bibliotheken von Drittanbietern sollten die Initialisierungsbereich Bibliothek verwenden, der durch angegeben ist [#pragma Init_seg](../../preprocessor/init-seg.md). Im folgende Beispiel wird C4073 generiert:  
   
 ```  
 // C4073.cpp  
