@@ -1,56 +1,57 @@
 ---
-title: "&lt;exception&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "exception"
-  - "<exception>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<exception> C++-XML-Tag"
-  - "exception (C++ XML-Tag)"
+title: '&lt;Ausnahme&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- exception
+- <exception>
+dev_langs: C++
+helpviewer_keywords:
+- <exception> C++ XML tag
+- exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c07dde806938b38dd55a3258b3724b0937d5601d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;exception&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit dem \<exception\>\-Tag können Sie festlegen, welche Ausnahmen ausgelöst werden können.  Dieses Tag wird auf eine Methodendefinition angewendet.  
+# <a name="ltexceptiongt-visual-c"></a>&lt;Ausnahme&gt; (Visual C++)
+Mit dem Tag \<exception> können Sie angeben, welche Ausnahmen ausgelöst werden können. Dieses Tag wird auf eine Methodendefinition angewendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <exception cref="member">description</exception>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `member`  
- ein Verweis auf eine Ausnahme, die in der aktuellen Kompilierungsumgebung verfügbar ist.  Verwenden der Namesuchenregeln die Compilerprüfungen, ob die angegebene Ausnahme vorhanden ist und `member` den kanonischen Elementnamen in der Ausgabe XML übersetzt.  Der Compiler gibt eine Warnung aus, wenn nicht `member` sucht.  
+ Ein Verweis auf eine Ausnahme, die von der aktuellen Kompilierungsumgebung verfügbar ist. Verwenden die Name-Suchregeln, überprüft der Compiler, dass die angegebene Ausnahme vorhanden ist, und übersetzt `member` an den kanonischen Elementnamen in der XML-Ausgabe.  Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.  
   
- Fügen Sie den Namen in einfache oder doppelte Anführungszeichen eingeschlossen werden.  
+ Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  
   
- Informationen für das Erstellen von cref\-Verweisen auf einen generischen Typ finden Sie unter [\<see\>](../ide/see-visual-cpp.md).  
+ Weitere Informationen zum Erstellen eines cref-Verweises auf einen generischen Typ finden Sie unter [\<see>](../ide/see-visual-cpp.md).  
   
  `description`  
- eine Beschreibung.  
+ Eine Beschreibung.  
   
-## Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+## <a name="remarks"></a>Hinweise  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
- Der Visual C\+\+\-Compiler versucht, cref Verweise in einer Durchlauf durch die Dokumentationskommentare aufzulösen.  Wenn, die C\+\+\-Suchenregeln verwenden, ein Symbol vom Compiler nicht gefunden wird, wird der Verweis markiert, wie nicht aufgelöst.  Weitere Informationen finden Sie unter [\<seealso\>](../ide/seealso-visual-cpp.md).  
+ Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Finden Sie unter [ \<Seealso >](../ide/seealso-visual-cpp.md) Weitere Informationen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // xml_exception_tag.cpp  
@@ -74,5 +75,5 @@ public ref class TestClass {
 };  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

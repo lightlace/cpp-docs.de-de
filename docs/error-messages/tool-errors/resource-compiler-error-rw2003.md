@@ -1,69 +1,68 @@
 ---
-title: "Ressourcencompiler: Fehler RW2003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW2003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW2003"
+title: 'Ressourcencompiler: Fehler RW2003 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW2003
+dev_langs: C++
+helpviewer_keywords: RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f388ca21d95e7d675a6b9890a7368765b5c0d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ressourcencompiler: Fehler RW2003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Erstellungsfehler  
+# <a name="resource-compiler-error-rw2003"></a>Ressourcencompiler: Fehler RW2003
+Generation-Fehler  
   
-### Dieser Fehler kann eine der folgenden Ursachen haben:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
   
-1.  **Fehler: Bitmapdatei entspricht nicht 3.00\-Format**  
+1.  **Fehler:-Bitmapdatei ist nicht 3.00-Format**  
   
-     Bitmaps im Format von Windows, Version 2.x, können nicht in Ressourcendateien der Version 3.x verwendet werden.  Die Bitmap muss neu gezeichnet oder in das 3.x\-Format konvertiert werden.  
+     Bitmaps mit dem Windows-Version 2.x-Format können nicht in Ressourcendateien der Version 3.x verwendet werden. Die Bitmap muss neu gezeichnet oder in das 3.x-Format konvertiert werden.  
   
-2.  **Fehler: Alte DIB im Ressourcennamen.  Verwenden Sie SDKPAINT.**  
+2.  **Fehler: Alte DIB im Ressourcenname. SDKPAINT durchlaufen**  
   
-     Eine Device Indipendent Bitmap \(DIB\) in der angegebenen Ressource ist nicht mit dem Format von Windows 3.0 kompatibel.  Die Bitmap muss neu gezeichnet oder in das 3.x\-Format konvertiert werden.  
+     Ein Gerät Independent Bitmap (DIB) in die angegebene Ressource ist nicht kompatibel mit dem Windows-3.0-Format. Die Bitmap muss neu gezeichnet oder in das 3.x-Format konvertiert werden.  
   
-3.  **Fehler: Ressourcendatei entspricht nicht 3.00\-Format**  
+3.  **Fehler: Ressourcen-Dateiname-Ressource ist nicht 3.00-Format**  
   
-     Das Format einer früheren Version von Windows wurde vom Symbol oder Cursor in der angegebenen Ressource verwendet.  Das Symbol oder der Cursor muss neu gezeichnet oder in das 3.x\-Format konvertiert werden.  
+     Ein Symbol oder Cursor in die angegebene Ressource verwendet ein Format aus einer früheren Version von Windows. Das Symbol oder Cursor muss neu gezeichnet oder in das 3.x-Format konvertiert werden.  
   
-4.  **Unbekanntes DIB\-Headerformat**  
+4.  **Unbekannte DIB-Headerformat**  
   
-     Der Bitmapheader enthält keine BITMAPCOREHEADER\-Struktur oder BITMAPINFOHEADER\-Struktur.  
+     Die Bitmapheader ist keine enthält oder BITMAPINFOHEADER Struktur.  
   
-5.  **Symbolinformationen können nicht initialisiert werden**  
+5.  **Kann nicht zum Initialisieren von Symbolinformationen**  
   
-     Dieser Fehler tritt nur in Visual C\+\+ auf.  Er wird möglicherweise dadurch verursacht, dass zu viele Dateien geöffnet sind oder die Datendateien, die für Visual C\+\+ benötigt werden, um die Symbole in das Skript zu importieren, nicht geöffnet werden können oder nicht in sie geschrieben werden kann.  Es wird versucht, diese Dateien in dem Verzeichnis, das in der **TMP**\-Umgebungsvariablen angegeben ist, oder, falls kein temporäres Verzeichnis angegeben ist, im aktuellen Verzeichnis zu erstellen.  
+     Dieser Fehler tritt nur in Visual C++. Die wahrscheinlichste Ursache ist, dass Sie zu viele Dateien geöffnet haben, oder Sie können nicht geöffnet oder Schreiben auf die Datendateien für Visual C++, um die Symbole in Ihrem Skript importieren benötigt. Visual C++ zur Erstellung dieser Dateien im Verzeichnis angegeben werden, indem versucht die **TMP** -Umgebungsvariablen oder das aktuelle Verzeichnis, falls keiner angegeben ist.  
   
-6.  **Symbolinformationen können nicht gespeichert werden**  
+6.  **Kann nicht gespeichert werden Symbolinformationen**  
   
-     Dieser Fehler tritt nur in Visual C\+\+ auf.  Er wird möglicherweise dadurch verursacht, dass zu viele Dateien geöffnet sind oder die Datendateien, die für Visual C\+\+ benötigt werden, um die Symbole in das Skript zu importieren, nicht geschlossen werden können oder nicht in sie geschrieben werden kann.  Es wird versucht, diese Dateien in dem Verzeichnis, das in der **TMP**\-Umgebungsvariablen angegeben ist, oder, falls kein temporäres Verzeichnis angegeben ist, im aktuellen Verzeichnis zu verwenden.  
+     Dieser Fehler tritt nur in Visual C++. Die wahrscheinlichste Ursache ist, dass Sie zu viele Dateien geöffnet haben, oder Sie nicht geschlossen oder Schreiben auf die Datendateien für Visual C++, um die Symbole in Ihrem Skript importieren benötigt. Visual C++ versucht, verwenden Sie diese Dateien in das Verzeichnis, das gemäß der **TMP** -Umgebungsvariablen oder das aktuelle Verzeichnis, falls keiner angegeben ist.  
   
-7.  **Bitmapdatei entspricht nicht 2.03\-Format**  
+7.  **Bitmapdatei ist nicht 2.03-Format**  
   
-     Es wurde ein Format einer früheren Version als Version 2.03 von einer Bitmap verwendet.  Die Bitmap muss neu gezeichnet oder in das Format für Version 3.00 oder eine höhere Version konvertiert werden.  
+     Für eine Bitmap wurde ein Format einer früheren Version als Version 2.03 verwendet. Die Bitmap muss neu gezeichnet oder in das Format für Version 3.00 oder eine höhere Version konvertiert werden.  
   
-8.  **Ressource ist zu groß.**  
+8.  **Ressource ist zu groß**  
   
-     Ressourcendateien dürfen unter Windows 3.1 ungefähr 65.000 Bytes nicht überschreiten.  Ressourcendateien, die diese Grenze überschreiten, können weder mit Visual C\+\+ noch mit dem Befehlszeilen\-Ressourcencompiler kompiliert werden.  Diese Grenze betrifft nicht Cursor, Symbole, Bitmaps oder andere dateibasierte Ressourcen.  
+     Für Windows 3.1 eine Ressource ungefähr 65.000 Bytes nicht überschreiten darf. Wenn die Ressource der Fall ist, wird nicht können mit Visual C++ oder der Befehlszeile Ressourcencompiler kompiliert werden. Dieser Grenzwert gilt nicht für Cursor, Symbole, Bitmaps oder andere dateibasierte Ressourcen.  
   
-9. **Ressourcendatei entspricht nicht 3.00\-Format**  
+9. **Ressourcendatei ist nicht 3.00-Format**  
   
-     Es wurde das Format einer früheren Version als Version 3.00 von einem Cursor oder einem Symbol verwendet.  Die Ressource muss in das Format für Version 3.00 oder eine höhere Version konvertiert oder neu gezeichnet werden.  
+     Ein Cursor oder Symbol verwendet Format vor Version 3.00. Die Ressource muss konvertierte oder neu gezeichnet, mit dem Format für Version 3.00 oder höher sein.  
   
-10. **Temporäre Datei kann nicht geöffnet werden**  
+10. **Temporäre Datei konnte nicht geöffnet**  
   
-     Eine temporäre Datei konnte vom Ressourcencompiler\/Visual C\+\+ nicht geöffnet werden.  Möglicherweise besitzen Sie keine Schreibberechtigung für das Verzeichnis, oder das Verzeichnis ist nicht vorhanden.  Es wird versucht, diese Dateien in dem Verzeichnis, das in der **TMP**\-Umgebungsvariablen angegeben ist, oder, falls kein temporäres Verzeichnis angegeben ist, im aktuellen Verzeichnis zu verwenden.
+     Der Ressourcencompiler/Visual C++ konnte eine temporäre Datei nicht öffnen. Die wahrscheinlichste Ursache ist, dass Sie nicht über Schreibberechtigungen für das Verzeichnis verfügen oder dass das Verzeichnis nicht vorhanden ist. Der Ressourcencompiler/Visual C++ versucht, diese Dateien im von der **TMP** -Umgebungsvariablen angegebenen Verzeichnis bzw. im aktuellen Verzeichnis zu verwenden, wenn kein Verzeichnis angegeben ist.

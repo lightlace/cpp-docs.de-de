@@ -1,41 +1,47 @@
 ---
-title: "C-Laufzeitfehler R6002 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6002"
+title: C-Laufzeitfehler R6002 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6002
+dev_langs: C++
+helpviewer_keywords: R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6652435425cdb04084d183987ea25be7c11114ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# C-Laufzeitfehler R6002
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gleitkommaunterstützung ist nicht geladen  
+# <a name="c-runtime-error-r6002"></a>C-Laufzeitfehler R6002
+gleitkommaunterstützung nicht geladen  
   
- Die benötigte Gleitkommabibliothek wurde nicht verknüpft.  
+ Die notwendige Gleitkomma-Bibliothek wurde nicht verknüpft.  
   
-### Dieser Fehler kann eine der folgenden Ursachen haben:  
+> [!NOTE]
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Es gibt mehrere mögliche Ursachen für diesen Fehler, aber es ist häufig verursacht durch einen Fehler in der app-Code oder indem Sie versuchen, die zum Ausführen einer app, die nicht für den bestimmten Computer-Prozessor erstellt wurde.  
+>   
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
+>   
+>  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
+> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
   
-1.  Das Programm wurde mit einer Option \(z. B. **\/FPi87**\), für die ein Coprozessor erforderlich ist, kompiliert bzw. verknüpft. Das Programm wurde jedoch auf einem Computer ausgeführt, auf dem kein Coprozessor installiert ist.  
+ **Informationen für Programmierer**  
   
-2.  Eine Formatzeichenfolge für eine `printf_s`\-Funktion oder `scanf_s`\-Funktion enthält die Angabe eines Gleitkommaformats, das Programm enthielt jedoch keinerlei Gleitkommawerte bzw. \-variablen.  
+ Dieser Fehler kann in Ihrer app auftreten, wenn die Gleitkomma-Bibliothek wurde nicht verknüpft. Überprüfen Sie eine der folgenden Ursachen:  
   
-3.  Der Compiler minimiert die Größe eines Programms, indem er die Gleitkommaunterstützung nur bei Bedarf lädt.  Der Compiler kann keine Gleitkommaformate in Formatzeichenfolgen finden und lädt daher die benötigten Gleitkommaroutinen nicht.  
+-   Eine Formatzeichenfolge für einen `printf_s` oder `scanf_s` Funktion enthalten eine Gleitkommaformat-Spezifikation und die Anwendung keine, Gleitkommazahlen-Punktwerte oder Variablen. Um dieses Problem zu beheben, verwenden eines gleitkommaarguments Gleitkommaformat-Spezifikation entsprechen, oder führen Sie eine Gleitkomma-Zuweisung an anderer Stelle im Programm. Dies bewirkt, dass gleitkommaunterstützung geladen werden soll.  
   
-4.  Verwenden Sie ein Gleitkommaargument für das angegebene Gleitkommaformat, oder führen Sie an beliebiger Stelle im Programm eine Gleitkommazuweisung durch.  Dies bewirkt das Laden der Gleitkommaunterstützung.  
+-   Der Compiler minimiert Größe eines Programms durch gleitkommaunterstützung nur bei Bedarf geladen. Der Compiler kann nicht erkennt Gleitkommaoperationen oder Gleitkommaformat Spezifikationen in Formatzeichenfolgen, die erforderlichen Gleitkomma-Routinen nicht geladen werden kann. Um dieses Problem zu beheben, verwenden eines Gleitkommaformats und Angeben eines gleitkommaarguments, oder führen Sie eine Gleitkomma-Zuweisung an anderer Stelle im Programm. Dies bewirkt, dass gleitkommaunterstützung geladen werden soll.  
   
-5.  In einem Programm mit gemischten Sprachen wurde beim Verknüpfen des Programms eine C\-Bibliothek vor einer FORTRAN\-Bibliothek angegeben.  Geben Sie die C\-Bibliothek an letzter Stelle an, und verknüpfen Sie das Programm neu.
+-   Beim Verknüpfen des Programms wurde eine C-Bibliothek in einem Programm gemischtsprachigen vor einer FORTRAN-Bibliothek angegeben. Erneut binden Sie, und geben Sie zuletzt die C-Bibliothek.

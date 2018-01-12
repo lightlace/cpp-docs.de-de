@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4243 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4243"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4243"
+title: Compilerwarnung (Stufe 3) C4243 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4243
+dev_langs: C++
+helpviewer_keywords: C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b3449dc305495848517687b7404dbdab5528e9a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4243
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Konvertierungstyp'\-Konvertierung von 'Typ1' in 'Typ2' existiert, ist aber nicht verfügbar  
+# <a name="compiler-warning-level-3-c4243"></a>Compilerwarnung (Stufe 3) C4243
+'Konvertierungstyp'-Konvertierung von "Typ1" in "Typ2" vorhanden ist, aber nicht zugegriffen werden kann  
   
- Ein Zeiger auf eine abgeleitete Klasse wurde in einen Zeiger auf eine Basisklasse konvertiert, die abgeleitete Klasse erbt jedoch die Basisklasse mit dem Zugriff `private` oder `protected`.  
+ Ein Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse konvertiert wird, aber die abgeleitete Klasse erbt die Basisklasse mit privaten oder geschützten Zugriff.  
   
  Im folgenden Beispiel wird C4243 generiert:  
   

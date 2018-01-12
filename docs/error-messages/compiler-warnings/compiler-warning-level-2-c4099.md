@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4099 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4099"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4099"
+title: Compilerwarnung (Stufe 2) C4099 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4099
+dev_langs: C++
+helpviewer_keywords: C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1eb64e859ef40397edeb872cc7f6f228f7ae89e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 2) C4099
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Bezeichner': Geben Sie den zuerst unter Verwendung von 'Objekttyp1' und jetzt unter Verwendung von 'Objekttyp2' gesehenen Namen ein  
+# <a name="compiler-warning-level-2-c4099"></a>Compilerwarnung (Stufe 2) C4099
+'Bezeichner': Typnamen, die mit 'Objekttyp1 ' und jetzt mithilfe von "%objecttype2" für die erstmalige Sichtbarkeit  
   
- Ein als Struktur deklariertes Objekt wird als Klasse definiert, oder ein als Klasse deklariertes Objekt wird als Struktur definiert.  Der Compiler verwendet den in der Definition festgelegten Typ.  
+ Ein Objekt, das als Struktur deklariert wird als Klasse definiert, oder ein Objekt als eine Klasse deklariert wird als Struktur definiert. Der Compiler verwendet den Typ in der Definition.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4099 generiert.  
   
 ```  

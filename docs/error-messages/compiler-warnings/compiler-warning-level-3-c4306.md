@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4306 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4306"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4306"
+title: Compilerwarnung (Stufe 3) C4306 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4306
+dev_langs: C++
+helpviewer_keywords: C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c341f968e8484228431c9ca870b7cdc5ae5bb6e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4306
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-3-c4306"></a>Compilerwarnung (Stufe 3) C4306
 **'**   
  ***Bezeichner* ': Konvertierung von '**   
- ***Typ1* ' in größeren Typ '**   
- ***Typ2* '**  
+ ***Typ1* 'to'**   
+ ***Typ2* "größerem**  
   
- Der Bezeichner wurde durch Typumwandlung in einen größeren Zeiger konvertiert.  Die höherwertigen Bits des neuen Typs werden auf 0 festgelegt.  
+ Der Bezeichner wurde auf einen größeren Zeiger umgewandelt. Die höherwertigen Bits des neuen Typs werden auf 0 (null).  
   
- Diese Warnung kann auf eine nicht erwünschte Konvertierung hinweisen.  Der resultierende Zeiger ist möglicherweise ungültig.
+ Diese Warnung kann es sich um eine unerwünschte Konvertierung hinweisen. Der resultierende Zeiger möglicherweise nicht gültig.

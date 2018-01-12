@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d3bf5e85f148553513fd7bd8c6f7bad678196ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c484b8287f5743e3bee7e0e12f7d0c6740bceef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deployment-examples"></a>Bereitstellungsbeispiele
 Dieser Abschnitt enthält Beispiele zur Veranschaulichung zum Bereitstellen von Visual C++-Anwendungen.  

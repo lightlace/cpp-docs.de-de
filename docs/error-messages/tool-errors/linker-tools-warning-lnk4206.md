@@ -1,31 +1,27 @@
 ---
-title: "Linkertoolwarnung LNK4206 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4206"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4206"
+title: Linkertoolwarnung Lnk4206 | Microsoft Docs
+ms.date: 12/05/2017
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4206
+dev_langs: C++
+helpviewer_keywords: LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cd13ac59aefa074db869f0502743c7a49d23082c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolwarnung LNK4206
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-tools-warning-lnk4206"></a>Linkertoolwarnung LNK4206
 
-Vorkompilierte Typinformationen nicht gefunden; 'Dateiname' wurde nicht verknüpft oder überschrieben; Objekt wird verknüpft, als ob keine Debuginformationen vorhanden wären.  
-  
- Die angegebene Objektdatei, die mit [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) kompiliert wurde, wurde entweder im LINK\-Befehl nicht angegeben oder außer Kraft gesetzt.  
-  
- Eine häufige Ursache für diese Warnung ist der Umstand, dass sich die mit \/Yc kompilierte OBJ\-Datei in einer Bibliothek befindet, und keine Symbolverweise auf diese OBJ\-Datei im Code vorhanden sind.  In diesem Fall wird die OBJ\-Datei vom Linker nicht verwendet. Der Linker ist tatsächlich nicht einmal in der Lage, diese Datei zu erkennen.  Um das Problem zu beheben, sollte der Code neu kompiliert und für die übrigen Objekte \(die nicht mit \/Yc kompiliert wurden\) [\/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) verwendet werden.
+> Vorkompilierte Typinformationen nicht gefunden; "*Filename*' nicht verknüpft oder überschrieben; Objekt wird verknüpft, als ob keine Debuginformationen vorhanden wären
+
+Die *Filename* kompilierte Objektdatei wird, mithilfe von ["/ Yc"](../../build/reference/yc-create-precompiled-header-file.md), wurde entweder nicht im LINK-Befehl angegeben oder überschrieben wurde.
+
+Ein übliches Szenario für diese Warnung wird in einer Bibliothek wird die obj, die mit/Yc kompiliert wurde und auf denen keine Symbolverweise auf diese OBJ-Datei aus Ihrem Code vorhanden sind.  In diesem Fall der Linker nicht verwenden (oder sogar finden Sie unter) die OBJ-Datei.  In diesem Fall sollten Sie Ihr Code neu kompilieren und verwenden [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) für die Objekte, die mithilfe von kompiliert ["/ Yu"](../../build/reference/yu-use-precompiled-header-file.md).

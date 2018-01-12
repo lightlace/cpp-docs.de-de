@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4056 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4056"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4056"
+title: Compilerwarnung (Stufe 2) C4056 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4056
+dev_langs: C++
+helpviewer_keywords: C4056
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 78b95111e69cdb8b27e65654fbf64756786d2097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 2) C4056
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Überlauf bei Gleitkommakonstanten\-Arithmetik  
+# <a name="compiler-warning-level-2-c4056"></a>Compilerwarnung (Stufe 2) C4056 generiert
+in der Gleitkommaarithmetik Konstanten "Überlauf"  
   
- Durch die Gleitkommakonstanten\-Arithmetik wird ein Ergebnis erzeugt, das den maximal zulässigen Wert überschreitet.  
+ Konstante Gleitkommazahlen generiert ein Ergebnis, das den maximalen zulässigen Wert überschreitet.  
   
- Diese Warnung wird möglicherweise durch Compileroptimierungen verursacht, die während der arithmetischen Auswertung von Konstanten ausgeführt werden.  Sie können diese Warnung gefahrlos ignorieren, wenn sie durch Deaktivieren der Optimierung \([\/Od](../../build/reference/od-disable-debug.md)\) vermieden werden kann.  
+ Diese Warnung kann durch compileroptimierungen, die während der Arithmetik ausgeführt verursacht werden. Sie können diese Warnung gefahrlos ignorieren, wenn er beendet wurde, wenn Sie durch Deaktivieren der Optimierung ([/Od](../../build/reference/od-disable-debug.md)).  
   
- Im folgenden Beispiel wird C4056 generiert:  
+ Im folgende Beispiel wird C4056 generiert:  
   
 ```  
 // C4056.cpp  

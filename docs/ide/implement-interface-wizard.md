@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c2179d3745f42164ef8cf70162ed560b331d783
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-interface-wizard"></a>Assistent zum Implementieren von Schnittstellen
 Dieser Assistent implementiert eine Schnittstelle für ein COM-Objekt. Implementierungen von vielen Schnittstellen sind in der COM-Bibliotheken in Visual Studio und Windows verfügbare enthalten. Eine Implementierung bezieht sich auf ein Objekt zur Verfügung, wenn eine Instanz dieses Objekts erstellt wird, und darüber, dass die Dienste, die das Objekt bietet.  
@@ -32,7 +33,7 @@ Dieser Assistent implementiert eine Schnittstelle für ein COM-Objekt. Implement
 |Option|Beschreibung|  
 |------------|-----------------|  
 |**Projekt**|Die Typbibliothek ist Teil des Projekts.|  
-|**Registrierung**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken in aufgelisteten **verfügbaren Typbibliotheken**.|  
+|**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken in aufgelisteten **verfügbaren Typbibliotheken**.|  
 |**Datei**|Die Typbibliothek ist nicht unbedingt im System registriert, aber in einer Datei enthalten ist. Geben Sie den Dateispeicherort in **Speicherort**.|  
   
  **Verfügbare Typbibliotheken**  

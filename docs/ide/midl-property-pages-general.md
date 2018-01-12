@@ -1,63 +1,63 @@
 ---
-title: "Eigenschaftenseiten &quot;MIDL&quot;: &quot;Allgemein&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCMidlTool.PreprocessorDefinitions"
-  - "VC.Project.VCMidlTool.DefaultCharType"
-  - "VC.Project.VCMidlTool.WarnAsError"
-  - "VC.Project.VCMidlTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCMidlTool.WarningLevel"
-  - "VC.Project.VCMidlTool.MkTypLibCompatible"
-  - "VC.Project.VCMidlTool.GenerateStublessProxies"
-  - "VC.Project.VCMidlTool.SuppressStartupBanner"
-  - "VC.Project.VCMidlTool.TargetEnvironment"
-  - "VC.Project.VCMidlTool.IgnoreStandardIncludePath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Eigenschaftenseiten „MIDL“"
+title: 'Eigenschaftenseiten "MIDL": Allgemein | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCMidlTool.PreprocessorDefinitions
+- VC.Project.VCMidlTool.DefaultCharType
+- VC.Project.VCMidlTool.WarnAsError
+- VC.Project.VCMidlTool.AdditionalIncludeDirectories
+- VC.Project.VCMidlTool.WarningLevel
+- VC.Project.VCMidlTool.MkTypLibCompatible
+- VC.Project.VCMidlTool.GenerateStublessProxies
+- VC.Project.VCMidlTool.SuppressStartupBanner
+- VC.Project.VCMidlTool.TargetEnvironment
+- VC.Project.VCMidlTool.OVERWRITEStandardIncludePath
+dev_langs: C++
+helpviewer_keywords: MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 58b88ec67a265cecac0f5ea2d9facd2170d5da01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Eigenschaftenseiten &quot;MIDL&quot;: &quot;Allgemein&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Auf der Eigenschaftenseite **Allgemein** des Ordners **MIDL** werden folgende MIDL\-Compileroptionen festgelegt:  
+# <a name="midl-property-pages-general"></a>Eigenschaftenseiten "MIDL": "Allgemein"
+Die **allgemeine** Eigenschaftenseite in der **"MIDL"** Ordner angibt, die folgenden Compileroptionen in "MIDL":  
   
--   Präprozessordefinitionen [\(\/D](http://msdn.microsoft.com/library/windows/desktop/aa367321)\)  
+-   Präprozessordefinitionen [(/ d](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Zusätzliche Includeverzeichnisse \([\/I](http://msdn.microsoft.com/library/windows/desktop/aa367328)\)  
+-   Zusätzliche Includeverzeichnisse ([/i](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Standardincludepfad ignorieren \([\/no\_def\_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347)\)  
+-   Standardincludepfad ignorieren ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   MkTypLib\-Kompatibilität \([\/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332)\)  
+-   MkTypLib-Kompatibilität ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Warnungsstufe \([\/W](http://msdn.microsoft.com/library/windows/desktop/aa367383)\)  
+-   Warnstufe ([/w](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Als Fehler warnen \([\/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387)\)  
+-   Warnhinweis anzeigen, wie Fehler ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Startbanner unterdrücken \([\/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341)\)  
+-   Startbanner unterdrücken ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   MIDL\-Zeichentyp \([\/char](http://msdn.microsoft.com/library/windows/desktop/aa367314)\)  
+-   "MIDL" Char-Datentyp ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   Zielumgebung \([\/env](http://msdn.microsoft.com/library/windows/desktop/aa367323)\)  
+-   Zielumgebung ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Proxys ohne Stubs erstellen \([\/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352)\)  
+-   Proxys ohne Stubs erstellen ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- Wie Sie auf die Eigenschaftenseite **Allgemein** im Ordner **MIDL** zugreifen, erfahren Sie unter [Gewusst wie: Festlegen von Projekteigenschaften mit Eigenschaftenseiten](../misc/how-to-specify-project-properties-with-property-pages.md).  
+ Informationen zum Zugreifen auf die **allgemeine** Eigenschaftenseite in der **"MIDL"** Ordner finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
- Informationen dazu, wie Sie programmgesteuert auf die MIDL\-Optionen für C\+\+\-Projekte zugreifen, finden Sie unter den Erläuterungen zum <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>\-Objekt.  
+ Informationen zum programmgesteuert MIDL-Optionen für C++-Projekte zugreifen, finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> Objekt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten "MIDL"](../ide/midl-property-pages.md)

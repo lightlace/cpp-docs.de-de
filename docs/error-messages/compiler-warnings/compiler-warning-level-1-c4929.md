@@ -1,35 +1,34 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4929 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4929"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4929"
+title: Compilerwarnung (Stufe 1) C4929 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4929
+dev_langs: C++
+helpviewer_keywords: C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfd20538db1f11ab2f7f20ab4079e9ed201bc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4929
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Datei': Die Typbibliothek enthält eine Union. Der 'embedded\_idl'\-Qualifizierer wird ignoriert.  
+# <a name="compiler-warning-level-1-c4929"></a>Compilerwarnung (Stufe 1) C4929
+"File": Typbibliothek enthält eine Union. den Qualifizierer 'Embedded_idl' ignorieren  
   
- Das embedded\_idl\-Attribut von [\#import](../../preprocessor/hash-import-directive-cpp.md) konnte nicht auf die Typbibliothek angewendet werden, da sich in ihr eine Union befindet.  Verwenden Sie embedded\_idl nicht, um diese Warnung zu umgehen.  
+ Das Embedded_idl-Attribut des [#import](../../preprocessor/hash-import-directive-cpp.md) konnte nicht auf die Typbibliothek angewendet werden, da eine Union in der Typbibliothek vorhanden ist. Um diese Warnung zu beheben, verwenden Sie keine Embedded_idl.  
   
-## Beispiel  
- Das folgende Beispiel legt eine Komponente fest.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird eine Komponente definiert.  
   
 ```  
 // C4929a.cpp  
@@ -61,8 +60,8 @@ struct C : I {
 };  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C4929 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4929 generiert.  
   
 ```  
 // C4929b.cpp  

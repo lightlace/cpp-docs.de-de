@@ -1,58 +1,59 @@
 ---
-title: "Eigenschaftenseiten &quot;HLSL&quot;: &quot;Ausgabedateien&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.AssemblerOutput"
-  - "VC.Project.FXCompilerTool.ObjectFileOutput"
-  - "VC.Project.FXCompilerTool.HeaderFileOutput"
-  - "VC.Project.FXCompilerTool.VariableName"
-  - "VC.Project.FXCompilerTool.AssemblerOutputFile"
-dev_langs: 
-  - "C++"
+title: 'Eigenschaftenseiten "HLSL": Ausgabedateien | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.AssemblerOutput
+- VC.Project.FXCompilerTool.ObjectFileOutput
+- VC.Project.FXCompilerTool.HeaderFileOutput
+- VC.Project.FXCompilerTool.VariableName
+- VC.Project.FXCompilerTool.AssemblerOutputFile
+dev_langs: C++
 ms.assetid: c5ba1e72-30de-43eb-a15a-5b0ae58e55c2
-caps.latest.revision: 5
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 04f6ad8889c9a713b3b64284b329c21d5a2cd49e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Eigenschaftenseiten &quot;HLSL&quot;: &quot;Ausgabedateien&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um die folgenden Eigenschaften des HLSL\-Compilers \(fxc.exe\) konfigurieren, verwenden Sie die Eigenschaft **Ausgabedateien**.  Informationen darüber, wie Sie auf die Eigenschaftenseite **Ausgabedateien** im HLSL\-Ordner, finden Sie unter [Gewusst wie: Festlegen von Projekteigenschaften mit Eigenschaftenseiten](../misc/how-to-specify-project-properties-with-property-pages.md) zugreift.  
+# <a name="hlsl-property-pages-output-files"></a>Eigenschaftenseiten "HLSL": "Ausgabedateien"
+Um die folgenden Eigenschaften des HLSL-Compilers (fxc.exe) zu konfigurieren, verwenden die **Ausgabedateien** Eigenschaft. Informationen über den Zugriff auf die **Ausgabedateien** Eigenschaftenseite im Ordner "HLSL" finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
-## UIElement-Liste  
- **Header\-Variablenname**  
- Gibt den Namen eines Arrays an, das verwendeter codierten HLSL\-Objektcode ist.  Das Array wird in einer Headerdatei enthalten, die von den HLSL\-Compiler ausgegeben wird.  Der Name der Headerdatei wird durch die Eigenschaft **Header\-Dateiname** angegeben.  
+## <a name="uielement-list"></a>UIElement-Liste  
+ **Header-Variablenname**  
+ Gibt den Namen eines Arrays, die zum codierten HLSL-Objektcode verwendet wird. Das Array ist in einer Headerdatei, die Ausgabe wird vom Compiler "HLSL" enthalten. Der Name der Headerdatei wird gemäß der **Headerdateinamen** Eigenschaft.  
   
- Diese Eigenschaft entspricht dem **\/Vn\[name\]** Befehlszeilenargument.  
+ Diese Eigenschaft entspricht der **/Vn [Name]** Befehlszeilenargument.  
   
- **Header\-Dateiname**  
- Gibt den Namen der Headerdatei an, die vom HLSL\-Compiler ausgegeben wird.  Der Header enthält HLSL\-Objektcode, der in ein Array codiert ist.  Der Name des Arrays wird durch die Eigenschaft **Header\-Variablenname** angegeben.  
+ **Headerdateinamen**  
+ Gibt den Namen der Headerdatei, die vom Compiler "HLSL" ausgegeben wird. Der Header enthält HLSL-Objektcode, die in ein Array codiert ist. Der Name des Arrays wird angegeben, indem die **Header Variablenname** Eigenschaft.  
   
- Diese Eigenschaft entspricht dem **\/Fh\[name\]** Befehlszeilenargument.  
+ Diese Eigenschaft entspricht der **/Fh [Name]** Befehlszeilenargument.  
   
- **Objektdateiname**  
- Gibt den Namen der Objektdatei an, die vom HLSL\-Compiler ausgegeben wird.  Standardmäßig ist der Wert **$\(OutDir\)%\(Filename\).cso**.  
+ **Name der Objektdatei**  
+ Gibt den Namen der Objektdatei, die vom Compiler "HLSL" ausgegeben wird. Standardmäßig ist der Wert **$(OutDir) % (Dateiname) .cso**.  
   
- Diese Eigenschaft entspricht dem **\/Fo\[name\]** Befehlszeilenargument.  
+ Diese Eigenschaft entspricht der **/Fo [Name]** Befehlszeilenargument.  
   
  **Assemblyausgabe**  
- **Nur die Assembly auflisten \(\/Fc\)**, dem aktuell von Assemblysprachanweisungen auszugeben.  **Assemblycode und \-Hexadezimalwerte \(\/Fx\)**, von Assemblysprachanweisungen und der entsprechenden OPCode im Hexadezimalformat auszugeben.  Standardmäßig werden keine Listen ausgegeben.  
+ **Nur die Assembly auflisten (/ Fc)** nur Assemblysprache-Anweisungen ausgegeben. **Assemblycode und Hex (/ Fx)** Assemblysprache-Anweisungen und den entsprechenden Op-Code im Hexadezimalformat ausgegeben. Standardmäßig ist kein Angebot Ausgabe.  
   
- **Assembler\-Ausgabedatei**  
- Gibt den Namen der Assemblylistendatei an, die vom HLSL\-Compiler ausgegeben wird.  
+ **Assembler-Ausgabedatei**  
+ Gibt den Namen der Assemblylistendatei, die vom Compiler "HLSL" ausgegeben wird.  
   
- Diese Eigenschaft entspricht den **\/Fc\[name\]** und **\/Fx \[name\]** Befehlszeilenargumente.  
+ Diese Eigenschaft entspricht der **/FC [Name]** und **/FX [Name]** Befehlszeilenargumente.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten "HLSL"](../ide/hlsl-property-pages.md)   
- [Eigenschaftenseiten "HLSL": "Allgemein"](../ide/hlsl-property-pages-general.md)   
- [Eigenschaftenseiten "HLSL": "Erweitert"](../ide/hlsl-property-pages-advanced.md)
+ [Eigenschaftenseiten "HLSL": Allgemein](../ide/hlsl-property-pages-general.md)   
+ [Eigenschaftenseiten "HLSL": Erweitert](../ide/hlsl-property-pages-advanced.md)

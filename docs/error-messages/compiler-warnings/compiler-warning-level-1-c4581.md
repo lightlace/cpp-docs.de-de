@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+title: Compilerwarnung (Stufe 1) C4581 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59bf4eafe722283f5fced046e845c6b46ca3ce82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Veraltetes Verhalten: '"Zeichenfolge1"' wird zur Verarbeitung des Attributs durch 'Zeichenfolge2' ersetzt  
+# <a name="compiler-warning-level-1-c4581"></a>Compilerwarnung (Stufe 1) C4581
+Verhalten veraltet: "string1" ersetzt durch "Zeichenfolge2" Prozess-Attribut  
   
- Dieser Fehler kann infolge einer Verbesserung der Compilerkonformität für Visual C\+\+ 2005 ausgegeben werden, und zwar beim Überprüfen der Parameter für Visual C\+\+\-Attribute.  
+ Dieser Fehler kann infolge einer konformitätsverbesserung für Visual C++ 2005 erstellt wurde, die generiert werden: Überprüfen der Parameter für Visual C++-Attribute.  
   
- In früheren Versionen wurden Attributwerte mit oder ohne Anführungszeichen akzeptiert.  Wenn der Wert eine Enumeration ist, darf er nicht in Anführungszeichen stehen.  
+ In früheren Versionen wurden Attributwerte akzeptiert, und zwar unabhängig davon, ob sie in Anführungszeichen eingeschlossen wurden. Wenn der Wert einer Enumeration ist, muss er nicht in Anführungszeichen eingeschlossen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4581 generiert.  
   
 ```  

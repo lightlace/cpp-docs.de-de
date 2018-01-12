@@ -1,38 +1,37 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4512 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4512"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4512"
+title: Compilerwarnung (Stufe 4) C4512 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4512
+dev_langs: C++
+helpviewer_keywords: C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd2e50f97cfc0242e1ac4af93f2d6609ff4b59cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4512
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4512"></a>Compilerwarnung (Stufe 4) C4512
 'Klasse': Zuweisungsoperator konnte nicht generiert werden  
   
- Der Compiler kann keinen Zuweisungsoperator für die angegebene Klasse generieren.  Es wurde kein Zuweisungsoperator erstellt.  
+ Der Compiler kann keinen Zuweisungsoperator für die angegebene Klasse generieren. Es wurde kein Zuweisungsoperator erstellt.  
   
  Ein Zuweisungsoperator für die Basisklasse, auf die nicht von der abgeleiteten Klasse zugegriffen werden kann, kann diese Warnung verursachen.  
   
  Um diese Warnung zu vermeiden, geben Sie einen benutzerdefinierten Zuweisungsoperator für die Klasse an.  
   
- Der Compiler generiert auch eine Zuweisungs\-Operator\-Funktion für eine Klasse, die keine definiert.  Dieser Zuweisungsoperator fungiert als memberspezifische Kopie der Datenmember eines Objekts.  Da `const`\-Datenelemente nicht nach der Initialisierung geändert werden können, wenn die Klasse ein `const`\-Element enthält, würde der standardmäßige Zuweisungsoperator nicht funktionieren.  Ein weiterer Grund für die C4512\-Warnung ist eine Deklaration eines nicht statischen Datenmembers des Verweistyps.  Ziel ist es, einen nicht kopierbaren Typ zu erstellen, Sie müssen auch die Erstellung eines Standardkopiekonstruktors verhindern.  
+ Der Compiler generiert auch eine Zuweisungs-Operator-Funktion für eine Klasse, die keine definiert. Dieser Zuweisungsoperator fungiert als memberspezifische Kopie der Datenmember eines Objekts. Da `const`-Datenelemente nicht nach der Initialisierung geändert werden können, wenn die Klasse ein `const`-Element enthält, würde der standardmäßige Zuweisungsoperator nicht funktionieren. Ein weiterer Grund für die C4512-Warnung ist eine Deklaration eines nicht statischen Datenmembers des Verweistyps. Ziel ist es, einen nicht kopierbaren Typ zu erstellen, Sie müssen auch die Erstellung eines Standardkopiekonstruktors verhindern.  
   
  Sie können die Warnung C4512 für Ihren Code auf eine von drei Arten beheben:  
   
@@ -40,9 +39,9 @@ caps.handback.revision: 16
   
 -   Entfernen Sie **const** oder den Zuweisungsoperator aus dem Datenelement in der Klasse.  
   
--   Verwenden Sie die \#pragma [Warnung](../../preprocessor/warning.md) Anweisung, um diese Warnung zu unterdrücken.  
+-   Verwenden Sie die #pragma [Warnung](../../preprocessor/warning.md) Anweisung zur Unterdrückung der Warnung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4512 generiert.  
   
 ```  
@@ -94,5 +93,4 @@ int main() {
    Base3 first3(c);  
    Base3 second3 = first3; // C2280 if no default copy ctor  
 }  
-  
 ```

@@ -1,48 +1,47 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4714"
+title: Compilerwarnung (Stufe 4) C4714 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4714
+dev_langs: C++
+helpviewer_keywords: C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d49ff1bbf6538965d277b0afdd6c96fd9c71ef0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Funktion', als \_\_forceinline markiert, ist keine Inline\-Funktion  
+# <a name="compiler-warning-level-4-c4714"></a>Compilerwarnung (Stufe 4) C4714
+'Funktion' als __forceinline markiert nicht inline  
   
- Die festgelegte Funktion wurde als Inlinefunktion angegeben, aber nicht entsprechend erweitert.  
+ Die angegebene Funktion für die Inlineerweiterung ausgewählt wurde, aber der Compiler hat nicht ausgeführt, das inlining.  
   
- Obwohl der Compiler durch `__forceinline` stärker gebunden wird als durch `__inline`, entscheidet auch hier der Compiler darüber, ob eine Funktion "inline" erweitert wird oder nicht. Jedoch wird nicht heuristisch ermittelt, welche Vorteile die Inline\-Erweiterung dieser Funktion bietet.  
+ Obwohl `__forceinline` stärker an den Compiler als `__inline`, inlining erfolgt immer noch nach Ermessen des Compilers, jedoch keine Heuristik werden verwendet, um zu bestimmen, die Vorteile von inlining dieser Funktion.  
   
- In einigen Situationen erweitert der Compiler eine bestimmte Funktion aus technischen Gründen nicht "inline".  Beispielsweise erweitert der Compiler die folgenden Funktionen nicht "inline":  
+ In einigen Fällen der Compiler wird nicht Inline eine bestimmte Funktion mechanische Gründen. Beispielsweise wird der Compiler nicht Inline:  
   
--   Funktionen, bei denen strukturierte Ausnahmebehandlung und C\+\+\- Ausnahmebehandlung gemischt würden.  
+-   Eine Funktion, wenn sie zu mischen von SEH und C++ EH führen würde.  
   
--   Einige Funktionen, deren Objekte durch Kopieren erstellt und mit Wert übergeben werden, wenn \-GX\/EHs\/EHa aktiviert ist.  
+-   Einige Funktionen für die Kopie erstellt Objekte, die als Wert übergeben wird, wenn - GX/EHs/EHa aktiviert ist.  
   
--   Funktionen, die ein nicht entladbares Objekt anhand des Werts zurückgeben, wenn \-GX\/EHs\/Eha aktiviert ist.  
+-   Funktionen, die ein entladbarer Objekt nach Wert zurückgeben, wenn - GX/EHs/EHa aktiviert ist.  
   
--   Funktionen mit Inlineassembly, wenn ohne \-Og\/Ox\/O1\/O2 kompiliert wird.  
+-   Funktionen mit der Inlineassembly beim Kompilieren ohne - Benutzeranmeldung/Ox/O1/O2.  
   
--   Funktionen mit variabler Argumentliste.  
+-   Funktionen mit einer Liste variabler Argumente.  
   
--   Funktionen mit einer **try**\-Anweisung \(C\+\+\-Ausnahmebehandlung\).  
+-   Eine Funktion mit einem **versuchen** -Anweisung (C++-Ausnahmebehandlung).  
   
  Im folgenden Beispiel wird C4714 generiert:  
   

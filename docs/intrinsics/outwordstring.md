@@ -1,67 +1,67 @@
 ---
-title: "__outwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outwordstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep outsw-Anweisung"
-  - "__outwordstring intrinsic"
-  - "outsw-Anweisung"
+title: __outwordstring | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outwordstring
+dev_langs: C++
+helpviewer_keywords:
+- rep outsw instruction
+- __outwordstring intrinsic
+- outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6cb11329c01e7d3f6496de6015b36b4ad79624cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# __outwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="outwordstring"></a>__outwordstring
+**Microsoft-spezifisch**  
   
- Generiert die `rep outsw`\-Anweisung, die `Count` Wörter sendet, die bei `Buffer` den E\/A\-Port beginnen, der von `Port`angegeben wird.  
+ Generiert die `rep outsw` -Anweisung, die sendet `Count` beginnenden Wörtern `Buffer` Ausgang von angegebenen e/a- `Port`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-void __outwordstring(   
-   unsigned short Port,   
-   unsigned short* Buffer,   
-   unsigned long Count   
+void __outwordstring(   
+   unsigned short Port,   
+   unsigned short* Buffer,   
+   unsigned long Count   
 );  
 ```  
   
-#### Parameter  
- \[in\] `Port`  
- Der Anschluss, um die Daten zu senden.  
+#### <a name="parameters"></a>Parameter  
+ [in] `Port`  
+ Der Port, an die die Daten gesendet werden soll.  
   
- \[in\] `Buffer`  
- Ein Zeiger auf die Daten werden ausgesendet, den angegebenen Anschluss.  
+ [in] `Buffer`  
+ Ein Zeiger auf die Daten auf den angegebenen Port gesendet werden.  
   
- \[in\] `Count`  
- Die Anzahl der zu sendenden den Wörtern.  
+ [in] `Count`  
+ Die Anzahl der Wörter zu senden.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+## <a name="remarks"></a>Hinweise  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

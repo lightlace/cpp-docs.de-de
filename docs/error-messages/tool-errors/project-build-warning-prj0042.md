@@ -1,38 +1,37 @@
 ---
-title: "Projektbuildwarnung PRJ0042 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0042"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0042"
+title: Projektbuildwarnung prj0042 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0042
+dev_langs: C++
+helpviewer_keywords: PRJ0042
 ms.assetid: 682c9999-6f85-409f-b102-00c93243f74f
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c727c9ff319885c5face28e2de08655a21794629
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektbuildwarnung PRJ0042
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Die 'Outputs'\-Eigenschaft für den benutzerdefinierten Buildschritt für die Datei '**   
- ***Datei* ' wurde nicht festgelegt. Der benutzerdefinierte Buildschritt wird übersprungen.**  
+# <a name="project-build-warning-prj0042"></a>Projektbuildwarnung PRJ0042
+**Die Outputs-Eigenschaft für den benutzerdefinierten Buildschritt für die Datei"**   
+ ***Datei* "ist nicht festgelegt. Der benutzerdefinierte Buildschritt wird übersprungen.**  
   
- Es wurde kein benutzerdefinierter Buildschritt ausgeführt, da keine Ausgabe festgelegt war.  
+ Ein benutzerdefinierten Buildschritt wurde nicht ausgeführt werden, da keine Ausgabe angegeben wurde.  
   
- Führen Sie zur Behebung dieses Fehlers einen der folgenden Schritte aus:  
+ Um diesen Fehler zu beheben, führen Sie eine der folgenden:  
   
--   Schließen Sie den benutzerdefinierten Buildschritt aus dem Build aus.  
+-   Schließen Sie den benutzerdefinierten Buildschritt aus dem Build.  
   
 -   Fügen Sie eine Ausgabe hinzu.  
   
--   Löschen Sie den Inhalt des Befehls für den benutzerdefinierten Buildschritt.
+-   Löschen Sie den Inhalt der benutzerdefinierte Buildschritt-Befehl.

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e79222f908a7b71e81033fb34517834987e6590
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ceadc55945a31e4787287beb6943897784aeaad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Ein Portrait der Dokument-/Ansichtarchitektur
 Dokumente und Ansichten werden in einer normalen MFC-Anwendung zugeordnet. Daten werden im Dokument gespeichert, aber die Ansicht verfügt über privilegierte Zugriff auf die Daten. Die Trennung des Dokuments aus der Ansicht trennt der Speicherung und Verwaltung von Daten aus der Anzeige.  

@@ -1,31 +1,30 @@
 ---
-title: "NMAKE: Schwerwiegender Fehler U1055 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1055"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1055"
+title: 'NMAKE: Schwerwiegender Fehler U1055 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1055
+dev_langs: C++
+helpviewer_keywords: U1055
 ms.assetid: 1d453922-ba7e-497f-a795-d8d959c40555
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49c003d579343b59abfdc29bb0b814e2e9c5306d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE: Schwerwiegender Fehler U1055
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht genügend Umgebungsspeicher  
+# <a name="nmake-fatal-error-u1055"></a>NMAKE: Schwerwiegender Fehler U1055
+Umgebung erschöpft  
   
- Dem Betriebssystem steht kein Speicherplatz mehr für Umgebungsvariablen zur Verfügung.  
+ Das Betriebssystem war nicht genügend Platz für Umgebungsvariablen.  
   
- Vergrößern Sie entweder den Umgebungsspeicher, oder legen Sie weniger Umgebungsvariablen fest.
+ Erhöhen Sie die Umgebung Speicherplatz oder weniger Umgebungsvariablen festgelegt.

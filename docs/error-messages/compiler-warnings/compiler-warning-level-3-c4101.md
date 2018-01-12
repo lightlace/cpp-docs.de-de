@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4101 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4101"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4101"
+title: Compilerwarnung (Stufe 3) C4101 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4101
+dev_langs: C++
+helpviewer_keywords: C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 162ad70f6d87ba6de51f677d95f1af7c1b6d8054
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4101
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Bezeichner': Unreferenzierte lokale Variable  
+# <a name="compiler-warning-level-3-c4101"></a>Compilerwarnung (Stufe 3) C4101
+"Bezeichner": Unreferenzierte lokale Variable  
   
- Die lokale Variable wird keinesfalls verwendet.  Im folgenden Fall wird die Warnung eindeutig ausgegeben:  
+ Die lokale Variable wird nie verwendet. Diese Warnung wird in der offensichtlich Situation auftreten:  
   
 ```  
 // C4101a.cpp  
@@ -36,7 +35,7 @@ int i;   // C4101
 }  
 ```  
   
- Die Warnung tritt jedoch auch auf, wenn eine **static**\-Memberfunktion durch eine Instanz der Klasse aufgerufen wird:  
+ Diese Warnung auch erfolgt jedoch beim Aufrufen einer **statische** Memberfunktion über eine Instanz der Klasse:  
   
 ```  
 // C4101b.cpp  
@@ -55,10 +54,10 @@ int main() {
 }  
 ```  
   
- In dieser Situation greift der Compiler unter Verwendung der Informationen für `si` auf die **static**\-Funktion zu, die Klasseninstanz ist jedoch für den Aufruf der **static**\-Funktion nicht nötig, sodass wiederum die Warnung ausgegeben wird.  Sie haben folgende Möglichkeiten, um die Warnung aufzulösen:  
+ In diesem Fall verwendet der Compiler Informationen zu `si` für den Zugriff auf die **statische** -Funktion, aber die Instanz der Klasse ist nicht erforderlich, um das Aufrufen der **statische** ausgeführt; daher die Warnung. Um diese Warnung zu beheben, können Sie folgende Aktionen ausführen:  
   
--   Fügen Sie einen Konstruktor hinzu, in dem der Compiler die Instanz von `si` für den Aufruf von `func` verwenden würde.  
+-   Fügen Sie einen Konstruktor, in denen der Compiler die Instanz von verwenden würde `si` im Aufruf von `func`.  
   
--   Entfernen Sie das **static**\-Schlüsselwort aus der `func`\-Definition.  
+-   Entfernen Sie die **statische** Schlüsselwort aus der Definition der `func`.  
   
--   Rufen Sie die **static**\-Funktion explizit auf: `int y = S::func();`.
+-   Rufen Sie die **statische** -Funktion legt explizit: `int y = S::func();`.

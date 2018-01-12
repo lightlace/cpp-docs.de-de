@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4946 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4946"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4946"
+title: Compilerwarnung (Stufe 1) C4946 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4946
+dev_langs: C++
+helpviewer_keywords: C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 800d940c3005762bddf6402a14af4416da4bc50e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4946
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-reinterpret\_cast wird zwischen verknüpften Klassen verwendet: 'Klasse1' und 'Klasse2'  
+# <a name="compiler-warning-level-1-c4946"></a>Compilerwarnung (Stufe 1) C4946
+reinterpret_cast wird zwischen verknüpften Klassen verwendet: 'Klasse1' und 'Klasse2'  
   
- Verwenden Sie nicht [reinterpret\_cast](../../cpp/reinterpret-cast-operator.md), die sich aufeinander Typen umzuwandeln.  Verwenden Sie stattdessen [static\_cast](../../cpp/static-cast-operator.md) oder für polymorphe Typen, dem [Der Operator dynamic\_cast](../../cpp/dynamic-cast-operator.md).  
+ Verwenden Sie keine [Reinterpret_cast](../../cpp/reinterpret-cast-operator.md) zwischen verwandten Typen umgewandelt. Verwenden Sie [Static_cast](../../cpp/static-cast-operator.md) stattdessen oder für die polymorphe Typen verwenden [Dynamic_cast](../../cpp/dynamic-cast-operator.md).  
   
- Standardmäßig ist diese Warnung aus.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
- Im folgenden Codebeispiel C4946 generiert:  
+ Im folgenden Codebeispiel wird die C4946 generiert:  
   
 ```  
 // C4946.cpp  

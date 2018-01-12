@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834475840fbe20a0d6938c563f3541c294e09bee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e86bedbf83cd417cfc41317e5887304cda7ee76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-makefile-project"></a>Erstellen eines Makefile-Projekts
 Wenn Sie ein Projekt von der Befehlszeile mit einem Makefile erstellen, wird das Projekt in der Visual Studio-Entwicklungsumgebung nicht erkannt. Öffnen und erstellen das Projekt mithilfe [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], Visual Studio Professional oder Visual Studio Express für Windows Desktop, müssen Sie ein leeres Projekt zuerst erstellen, indem Sie die MakeFile-Projektvorlage auswählen. Anschließend können Sie Ihr Projekt auf der Grundlage dieses Projekts in der Visual Studio-Entwicklungsumgebung erstellen.  

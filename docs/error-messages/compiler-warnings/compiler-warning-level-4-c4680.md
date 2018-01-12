@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4680"
+title: Compilerwarnung (Stufe 4) C4680 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4680
+dev_langs: C++
+helpviewer_keywords: C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d460e705a928e01b8bb203e24ea4df21ae79e087
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Klasse': Co\-Klasse gibt keine Standardschnittstelle an  
+# <a name="compiler-warning-level-4-c4680"></a>Compilerwarnung (Stufe 4) C4680
+'Klasse': Co-Klasse gibt keine Standardschnittstelle  
   
- Für eine mit dem [coclass](../../windows/coclass.md)\-Attribut gekennzeichnete Klasse wurde keine [default](../../windows/default-cpp.md)\-Schnittstelle angegeben.  Damit ein Objekt sinnvoll genutzt werden kann, muss es eine Schnittstelle implementieren.  
+ Ein [Standard](../../windows/default-cpp.md) Schnittstelle wurde nicht angegeben, für eine Klasse, die mit der [Co-Klasse](../../windows/coclass.md) Attribut. Damit für ein Objekt, das hilfreich sein können müssen sie eine Schnittstelle zu implementieren.  
   
  Im folgenden Beispiel wird C4680 generiert:  
   

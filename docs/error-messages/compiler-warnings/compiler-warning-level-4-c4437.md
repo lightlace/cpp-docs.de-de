@@ -1,43 +1,44 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4437 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilerwarnung (Stufe 4) C4437 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a50534ca7e25b18d32d37a9120e478f78ea56daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4437
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Operator dynamic\_cast von der virtuellen Basisklasse "Klasse1" zu "Klasse2" kann in mehreren Kontexten fehlgeschlagenen kompilieren mit \/vd2 oder definieren "Klasse2" mit \#pragma vtordisp wirksam \(2\)  
+# <a name="compiler-warning-level-4-c4437"></a>Compilerwarnung (Stufe 4) C4437
+Dynamic_cast von virtueller Basis 'class1' zu 'class2' konnte in bestimmten Kontexten Kompilieren mit/vd2 fehl oder definieren wirksam "Klasse2" mit der #pragma-vtordisp(2)  
   
- Diese Warnung ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Der Compiler hat einen Vorgang `dynamic_cast` mit den folgenden Eigenschaften gefunden.  
+ Der Compiler hat eine `dynamic_cast` Operation mit den folgenden Merkmalen.  
   
--   Die Umwandlung wird über einen Basisklassenzeiger einem Zeiger der abgeleiteten Klasse.  
+-   Die Umwandlung ist von einem Zeiger Basisklasse in einer abgeleiteten Klasse Zeiger.  
   
--   Die abgeleitete Klasse erbt virtuell die Basisklasse.  
+-   Die abgeleitete Klasse erbt praktisch die Basisklasse.  
   
--   Die abgeleitete Klasse hat kein `vtordisp` \- Feld für die virtuelle Basisklasse.  
+-   Die abgeleitete Klasse verfügt nicht über eine `vtordisp` Feld für die virtuelle Basisklasse.  
   
--   Die Umwandlung wird nicht in einem Konstruktor oder einem Destruktor der abgeleiteten Klasse oder in irgendeiner Klasse gefunden, die weiter von der abgeleiteten Klasse erbt \(; andernfalls wird C4436 Compilerwarnung ausgegeben\).  
+-   Die Umwandlung in einen Konstruktor oder Destruktor der abgeleiteten Klasse nicht gefunden wird, oder einige Klasse was erbt von der abgeleiteten Klasse (hingegen compilerwarnung, die C4436 ausgegeben werden).  
   
- Die Warnung gibt an, dass `dynamic_cast` ggf. nicht ordnungsgemäß ausgeführt, wenn es auf einem teilweis\-erstellten Objekt funktioniert.  Diese Situation tritt auf, wenn die einschließende Funktion von einem Konstruktor oder einem Destruktor einer Klasse aufgerufen wird, die die abgeleitete Klasse erbt, die in der Warnung ".  Wenn die abgeleitete Klasse, die in der Warnung ", nie eine weitere abgeleitete oder die einschließende Funktion wird aufgerufen nicht während der Objekterstellung oder der Zerstörung ist, kann die Warnung ignoriert werden.  
+ Die Warnung gibt an, dass die `dynamic_cast` möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn sie für eine teilweise konstruiert Objekt ausgeführt wird.  Diese Situation tritt auf, wenn die einschließende Funktion aufgerufen wird, von einem Konstruktor oder Destruktor einer Klasse, die die abgeleitete Klasse erbt, mit dem Namen in der Warnung.  Wenn die abgeleitete Klasse mit dem Namen in der Warnung nie weiteren wird abgeleitet werden, oder die einschließende Funktion wird nicht bei der objekterstellung oder Zerstörung aufgerufen, die Warnung kann ignoriert werden.  
   
-## Beispiel  
- Das folgende Beispiel generiert C4437 und zeigt das Codegenerierungsproblem, das aus dem fehlenden `vtordisp` Feld entsteht.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C4437 generiert und veranschaulicht, das Code-Generation-Problem, das aus den fehlenden `vtordisp` Feld.  
   
 ```cpp  
 // C4437.cpp  
@@ -85,7 +86,7 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [dynamic\_cast\-Operator](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Dynamic_cast-Operator](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Compilerwarnung \(Stufe 1\) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+ [Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

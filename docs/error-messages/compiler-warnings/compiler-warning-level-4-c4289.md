@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4289 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4289"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4289"
+title: Compilerwarnung (Stufe 4) C4289 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4289
+dev_langs: C++
+helpviewer_keywords: C4289
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 98acda62a984f2625ddc742e309aca7628d9c9f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4289
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: 'var': Die loop\-Steuerelementvariable, die in der for\-Schleife deklariert wurde, wird außerhalb des for\-Schleifenbereichs verwendet  
+# <a name="compiler-warning-level-4-c4289"></a>Compilerwarnung (Stufe 4) C4289
+Nicht dem Standard entsprechende Erweiterung: 'var': Die loop-Steuerelementvariable, die in der for-Schleife deklariert wurde, wird außerhalb des for-Schleifenbereichs verwendet  
   
- Bei der Kompilierung mit [\/Ze](../../build/reference/za-ze-disable-language-extensions.md) und **\/Zc:forScope\-** wurde eine in einer [for](../../cpp/for-statement-cpp.md)\-Schleife deklarierte Variable außerhalb des Gültigkeitsbereichs der **for**\-Schleife verwendet.  
+ Beim Kompilieren mit ["/ Ze"](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope**, eine Variable deklariert, die einer [für](../../cpp/for-statement-cpp.md) Schleife verwendet wurde, nach der **für**-Schleife-Bereich.  
   
- Weitere Informationen dazu, wie Sie das Standardverhalten in **for**\-Schleifen mit **\/Ze** festlegen, finden Sie unter [\/Zc:forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md).  
+ Finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Informationen über das Standardverhalten in angeben **für** mit Schleifen **"/ Ze"**.  
   
- Diese Warnung ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  Im folgenden Beispiel wird C4289 generiert:  
   

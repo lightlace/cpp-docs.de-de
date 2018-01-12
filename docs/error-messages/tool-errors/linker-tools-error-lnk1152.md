@@ -1,29 +1,28 @@
 ---
-title: "Linkertoolfehler LNK1152 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1152"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1152"
+title: Linkertoolfehler Lnk1152 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1152
+dev_langs: C++
+helpviewer_keywords: LNK1152
 ms.assetid: 2523b61a-1359-4612-9c16-7d1f705f32e6
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d2171b41a3601e6d20913118893f714bd6555a25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolfehler LNK1152
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ein oder mehrere nicht ergänzte Symbole konnten nicht aufgelöst werden  
+# <a name="linker-tools-error-lnk1152"></a>Linkertoolfehler LNK1152
+eine oder mehrere nicht ergänzte Symbole kann nicht aufgelöst werden.  
   
- Diesem Fehler geht eine Warnung [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) voraus, und zwar für jedes nicht ergänzte Symbol, das nicht aufgelöst werden konnte. Mindestens zwei Warnungen [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) gehen diesem Fehler für die doppelten Symbole voraus, die für das nicht ergänzte Symbol gefunden wurden.
+ Dieser Fehler ist eine einzige Warnung vorangestellt [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) für jedes nicht ergänzte Symbol, das nicht aufgelöst werden konnte und von mindestens zwei Warnungen [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) für die doppelte Symbole für das nicht ergänzte Symbol gefunden.

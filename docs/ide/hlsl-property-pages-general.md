@@ -1,70 +1,71 @@
 ---
-title: "Eigenschaftenseiten &quot;HLSL&quot;: &quot;Allgemein&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.ShaderModel"
-  - "VC.Project.FXCompilerTool.PreprocessorDefinitions"
-  - "VC.Project.FXCompilerTool.ShaderType"
-  - "VC.Project.FXCompilerTool.EnableDebuggingInformation"
-  - "VC.Project.FXCompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.FXCompilerTool.DisableOptimizations"
-  - "VC.Project.FXCompilerTool.EntryPointName"
-dev_langs: 
-  - "C++"
+title: 'Eigenschaftenseiten "HLSL": Allgemein | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.ShaderModel
+- VC.Project.FXCompilerTool.PreprocessorDefinitions
+- VC.Project.FXCompilerTool.ShaderType
+- VC.Project.FXCompilerTool.EnableDebuggingInformation
+- VC.Project.FXCompilerTool.AdditionalIncludeDirectories
+- VC.Project.FXCompilerTool.DisableOptimizations
+- VC.Project.FXCompilerTool.EntryPointName
+dev_langs: C++
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-caps.latest.revision: 8
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: be548966f6e75afde2c137c8beab38903844667c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Eigenschaftenseiten &quot;HLSL&quot;: &quot;Allgemein&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um die folgenden Eigenschaften des HLSL\-Compilers \(fxc.exe\) konfigurieren, verwenden Sie die Eigenschaftenseite **Allgemein**.  Informationen darüber, wie Sie auf die Eigenschaftenseite **Allgemein** im HLSL\-Ordner, finden Sie unter [Gewusst wie: Festlegen von Projekteigenschaften mit Eigenschaftenseiten](../misc/how-to-specify-project-properties-with-property-pages.md) zugreift.  
+# <a name="hlsl-property-pages-general"></a>Eigenschaftenseiten "HLSL": "Allgemein"
+Um die folgenden Eigenschaften des HLSL-Compilers (fxc.exe) zu konfigurieren, verwenden die **allgemeine** Eigenschaftenseite. Informationen über den Zugriff auf die **allgemeine** Eigenschaftenseite im Ordner "HLSL" finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
-## UIElement-Liste  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Zusätzliche Includeverzeichnisse**  
- Fügt eine oder mehrere Verzeichnisse Includepfad hinzu.  verwendet Semikolons, um die Verzeichnisse zu trennen.  
+ Fügt eine oder mehrere Verzeichnisse der Include-Pfad an. Verwenden Sie Semikolons, um die Verzeichnisse zu trennen.  
   
- Diese Eigenschaft entspricht dem **\/I\[path\]** Befehlszeilenargument.  
+ Diese Eigenschaft entspricht der **/i [Pfad] /** Befehlszeilenargument.  
   
- **Einstiegspunktname**  
- Gibt den Einstiegspunkt für den Shader an.  Standardmäßig ist der Wert **main**.  
+ **EntryPoint-Name**  
+ Gibt den Einstiegspunkt für den Shader. Standardmäßig ist der Wert **main**.  
   
- Diese Eigenschaft entspricht dem **\/E\[name\]** Befehlszeilenargument.  
+ Diese Eigenschaft entspricht der **/e [Name]** Befehlszeilenargument.  
   
- **Optimierungen deaktivieren**  
- **Ja \(\/Od\)**, um der Optimierungen deaktivieren möchten; andernfalls **Nein**.  Standardmäßig ist der Wert **Ja \(\/Od\)** für **Debug**\-Konfigurationen und **Nein** für **Release**\-Konfigurationen.  
+ **Deaktivieren von Optimierungen**  
+ **Ja (/ Od)** um Optimierungen zu deaktivieren, andernfalls **keine**. Standardmäßig ist der Wert **Ja (/ Od)** für **Debuggen** Konfigurationen und **keine** für **Version** Konfigurationen.  
   
- Das **\/Od** Befehlszeilenargument zum HLSL\-Compiler wendet implizit das **\/Gfp** Befehlszeilenargument, aber ausgegeben kann nicht in die Ausgabe identisch sein, die erzeugt wird, indem Sie explizit die **\/Od** und **\/Gfp** Befehlszeilenargumente übergeben.  
+ Die **/Od** Befehlszeilenargument für den HLSL-Compiler implizit gilt die **/Gfp** Befehlszeilenargument, aber die Ausgabe möglicherweise nicht identisch mit der Ausgabe, die erstellt wird, indem Sie beide übergeben der   **/od**  und **/Gfp** Befehlszeilenargumente explizit.  
   
- **Debuginformationen aktivieren**  
- **Ja \(\/Zi\)**, von Debuginformationen zu ermöglichen; andernfalls **Nein**.  Standardmäßig ist der Wert **Ja \(\/Zi\)** für **Debug**\-Konfigurationen und **Nein** für **Release**\-Konfigurationen.  
+ **Aktivieren Sie die Debuginformationen**  
+ **Ja (/ Zi)** Debuginformationen; aktivieren, andernfalls **keine**. Standardmäßig ist der Wert **Ja (/ Zi)** für **Debuggen** Konfigurationen und **keine** für **Version** Konfigurationen.  
   
  **Shadertyp**  
- Gibt die Art des Shaders an.  Verschiedene Arten von verschiedenen Teilen des Shaderwerkzeuges der Grafikpipeline.  Bestimmte Arten von Shadern sind nur in späteren Shadermodellen \(die durch die Eigenschaft **Shadermodell** angegeben werden\) – z. B. wurden Berechnungsshader in Shadermodell 5 eingeführt.  
+ Gibt die Art des Shader. Verschiedene Arten von Shadern implementieren verschiedene Teile der Grafikpipeline. Bestimmte Arten von Shadern stehen nur in neueren Shader-Modelle (werbeeinblendungen angegeben werden, indem die **Shadermodell** Eigenschaft) – z. B. compute Shadern in Shadermodell 5 eingeführt wurden.  
   
- Diese Eigenschaft entspricht dem **\[type\]** Teil des **\/T \[type\]\_\[model\]** Befehlszeilenarguments zum HLSL\-Compiler.  Die Eigenschaft **Shadermodelle** gibt den **\[model\]** Teil des Arguments an.  
+ Diese Eigenschaft entspricht der **[Typ]** Teil der **/t [Typ] _ [Modell]** Befehlszeilenargument für den HLSL-Compiler. Die **Shader Modelle** Eigenschaft gibt an, die **[Modell]** Teil des Arguments.  
   
  **Shadermodell**  
- Legt das Shadermodell fest.  Verschiedene Shadermodelle haben unterschiedliche Funktionen.  Im Allgemeinen bieten neuere Shadermodelle an, erweiterte Funktionen erfordern aber modernere Grafikhardware, den Shadercode auszuführen.  Bestimmte Arten von Shadern \(die durch die Eigenschaft **Shadertyp** angegeben werden\), sind nur im späteren Shader Modell – z. B. Berechnungsshader wurden in eingeführt. Shadermodell 5 verfügbar.  
+ Gibt das Shadermodell an. Verschiedene Shader Modelle verfügen über andere Funktionen. Im Allgemeinen aktuelleren Shader Modelle bieten erweiterte Funktionen jedoch erfordern mehr moderner Grafikhardware Ausführen des Shader-Codes. Bestimmte Arten von Shader (werbeeinblendungen angegeben werden, indem der **Shader-Typ** Eigenschaft) stehen nur in neueren Shader-Modelle – z. B. compute Shadern in Shadermodell 5 eingeführt wurden.  
   
- Diese Eigenschaft entspricht dem **\[model\]** Teil des **\/T \[type\]\_\[model\]** Befehlszeilenarguments zum HLSL\-Compiler.  Die Eigenschaft **Shadertyp** gibt den **\[type\]** Teil des Arguments an.  
+ Diese Eigenschaft entspricht der **[Modell]** Teil der **/t [Typ] _ [Modell]** Befehlszeilenargument für den HLSL-Compiler. Die **Shadertyp** Eigenschaft gibt an, die **[Typ]** Teil des Arguments.  
   
- **Präprozessordefinitionen**  
- Fügt eine oder mehrere Präprozessorsymboldefinitionen hinzu, um auf die HLSL\-Quellcodedatei anzuwenden.  verwendet Semikolons, um die Symboldefinitionen zu trennen.  
+ **Präprozessor-Definitionen**  
+ Fügt eine oder mehrere Präprozessorsymbol Definitionen der HLSL-Quellcodedatei zuweisen. Verwenden Sie Semikolons, um die Symboldefinitionen.  
   
- Diese Eigenschaft entspricht dem **\/D \[definitions\]** Befehlszeilenargument zum HLSL\-Compiler.  
+ Diese Eigenschaft entspricht der **/d [Definitionen]** Befehlszeilenargument für den HLSL-Compiler.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten "HLSL"](../ide/hlsl-property-pages.md)   
- [Eigenschaftenseiten "HLSL": "Erweitert"](../ide/hlsl-property-pages-advanced.md)   
- [Eigenschaftenseiten "HLSL": "Ausgabedateien"](../ide/hlsl-property-pages-output-files.md)
+ [Eigenschaftenseiten "HLSL": erweitert](../ide/hlsl-property-pages-advanced.md)   
+ [Eigenschaftenseiten "HLSL": Ausgabedateien](../ide/hlsl-property-pages-output-files.md)

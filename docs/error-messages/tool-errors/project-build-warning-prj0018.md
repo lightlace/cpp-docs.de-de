@@ -1,31 +1,30 @@
 ---
-title: "Projektbuildwarnung PRJ0018 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0018"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0018"
+title: Projektbuildwarnung prj0018 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0018
+dev_langs: C++
+helpviewer_keywords: PRJ0018
 ms.assetid: 1a3d9e40-6a35-4a74-b6ba-8079f7a82217
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b5ed1a404a96f60d2e18a4970766f4821453b12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektbuildwarnung PRJ0018
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Folgende Umgebungsvariablen konnten nicht gefunden werden:  
+# <a name="project-build-warning-prj0018"></a>Projektbuildwarnung PRJ0018
+Die folgenden Umgebungsvariablen wurden nicht gefunden:  
   
- Es wurde keine Umgebungsvariable definiert.  In dieser Fehlermeldung werden die nicht definierten Umgebungsvariablen aufgelistet.  
+ Eine Umgebungsvariable ist nicht definiert. Dieser Fehler führt die Umgebungsvariablen, die nicht definiert wurden.  
   
- Weitere Informationen zur Verwendung von Makros im Buildprozess finden Sie unter [Makros für Buildbefehle und \-eigenschaften](../../ide/common-macros-for-build-commands-and-properties.md).
+ Finden Sie unter [Makros für Buildbefehle und-Eigenschaften](../../ide/common-macros-for-build-commands-and-properties.md) Informationen zur Verwendung von Makros im Buildprozess.

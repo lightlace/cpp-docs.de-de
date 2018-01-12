@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4965 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4965"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4965"
+title: Compilerwarnung (Stufe 1) C4965 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4965
+dev_langs: C++
+helpviewer_keywords: C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f92cc2115bc35c669b4d45784e1e1d79875551e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4965
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implizites Feld von integer 0; nullptr oder explizite Typumwandlung verwenden  
+# <a name="compiler-warning-level-1-c4965"></a>Compilerwarnung (Stufe 1) C4965
+Implizites Feld der Ganzzahl 0; Nullptr oder explizite Typumwandlung verwenden  
   
- Visual C\+\+ verfügt über implizites Boxing von Werttypen.  Eine Anweisung, die unter Managed Extensions for C\+\+ eine NULL\-Zuweisung ergibt, wird nun zu einer Zuweisung an einen geschachtelten int\-Wert.  
+ Visual C++ bietet implizites Boxing von Werttypen. Eine Anweisung, die einen null-Zuweisung mit Managed Extensions for C++ jetzt geführt hat, wird eine Zuweisung zu einem geschachtelten "int".  
   
  Weitere Informationen finden Sie unter [Boxing](../../windows/boxing-cpp-component-extensions.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4965 generiert.  
   
 ```  

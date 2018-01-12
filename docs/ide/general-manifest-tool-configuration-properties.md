@@ -1,52 +1,52 @@
 ---
-title: "Allgemein, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projectname&gt; -Eigenschaftenseiten“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.MergeRulesFile"
-  - "VC.Project.VCManifestTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCManifestTool.SuppressStartupBanner"
-  - "VC.Project.VCManifestTool.UseFAT32Workaround"
-  - "VC.Project.VCManifestTool.VerboseOutput"
-  - "VC.Project.VCManifestTool.AssemblyIdentity"
-dev_langs: 
-  - "C++"
+title: Manifest Tool-Konfigurationseigenschaften (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.MergeRulesFile
+- VC.Project.VCManifestTool.UseUnicodeResponseFiles
+- VC.Project.VCManifestTool.SuppressStartupBanner
+- VC.Project.VCManifestTool.UseFAT32Workaround
+- VC.Project.VCManifestTool.VerboseOutput
+- VC.Project.VCManifestTool.AssemblyIdentity
+dev_langs: C++
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5e56c823a7a30850e24e393a545f0df6a6637a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Allgemein, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projectname&gt; -Eigenschaftenseiten“
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie dieses Dialogfeld, um allgemeine Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Tool Allgemein, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt; Eigenschaftenseiten (Dialogfeld)
+Verwenden Sie das Dialogfeld zu öffnen, geben Sie allgemeine Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Um auf dieses Eigenschaftenseiten\-Dialogfeld zuzugreifen, öffnen Sie die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt.  Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und wählen Sie dann **Allgemein** aus.  
+ Öffnen Sie diese Eigenschaftenseiten-Dialogfeld für den Zugriff auf die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt. Erweitern Sie die **Manifesttool** Knoten unter **Konfigurationseigenschaften**, und wählen Sie dann **allgemeine**.  
   
-## UIElement-Liste  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Startbanner unterdrücken**  
- **Ja \(\/nologo\)** legt fest, dass standardmäßige Copyrightinformationen von Microsoft beim Starten des Manifesttools ausgeblendet werden.  Verwenden Sie diese Option, um unerwünschte Ausgaben in Protokolldateien zu unterdrücken, wenn mt.exe als Teil eines Buildvorgangs oder aus einer Buildumgebung heraus ausgeführt wird.  
+ **Ja (/ Nologo)** gibt an, dass standardmäßige Copyrightinformationen von Microsoft beim Starten der Manifesttools ausgeblendet werden. Verwenden Sie diese Option, um unerwünschte Ausgaben in Protokolldateien zu unterdrücken, wenn Sie mt.exe als Teil des Buildprozesses oder aus einem Buildumgebung ausführen.  
   
- **Ausführliche Ausgabe**  
- **Ja \(\/verbose\)** gibt an, dass zusätzliche Buildinformationen während der Generierung des Manifests angezeigt werden.  
+ **Eine ausführliche Ausgabe**  
+ **Ja (/ verbose)** gibt an, dass zusätzliche Informationen während der Generierung von Manifesten angezeigt wird.  
   
  **Assemblyidentität**  
- Verwendet die Option \/identity, um eine Identitätszeichenfolge anzugeben, die die Attribute für das [\<assemblyIdentity\> Element](../Topic/%3CassemblyIdentity%3E%20Element%20\(ClickOnce%20Application\).md) umfasst.  Eine Identitätszeichenfolge beginnt mit dem Wert für das `name`\-Attribut, gefolgt von *Attribut* \= *Wert*\-Paaren.  Die Attribute in einer Identitätszeichenfolge werden durch Kommas getrennt.  
+ Die Option/Identity verwendet, um eine Identitätszeichenfolge anzugeben die umfasst die Attribute für die [ \<AssemblyIdentity >-Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Eine Identitätszeichenfolge beginnt mit dem Wert für die `name` Attribut, und folgen *Attribut* = *Wert* Paare. Die Attribute in einer Identitätszeichenfolge werden durch ein Komma getrennt.  
   
- Im Folgenden sehen Sie ein Beispiel für eine Identitätszeichenfolge:  
+ Im folgenden finden eine Beispiel-Identity-Zeichenfolge:  
   
  `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
   
-## Siehe auch  
- [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Eigenschaftenseiten des Manifesttools](../ide/manifest-tool-property-pages.md)   
- [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../misc/how-to-open-project-property-pages.md)   
- [Gewusst wie: Bearbeiten von Projekteigenschaftenblättern](../misc/how-to-edit-project-property-sheets.md)
+## <a name="see-also"></a>Siehe auch  
+ [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
+ [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   

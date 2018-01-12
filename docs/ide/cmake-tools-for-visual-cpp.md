@@ -13,11 +13,12 @@ ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 770b7f70e52859b1489b984d8aef3c3876a9ca83
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: d38538ce929410782eee7a0a6540bb62a05b7669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake Projekte in Visual C++
 In diesem Artikel wird davon ausgegangen, dass Sie mit CMake ein plattformübergreifende Open-Source-Tool zum Definieren von Buildprozesse, die auf mehreren Plattformen ausgeführt vertraut sind.  
@@ -26,7 +27,7 @@ Erst vor kurzem konnte Visual Studio-Benutzer CMake verwenden, um MSBuild-Projek
 
 **Visual Studio 2017 Version 15.3**: Unterstützung für Ninja und Visual Studio-Generatoren angeboten wird.
 
-**Visual Studio 2017 Version 15.4**: Unterstützung für CMake unter Linux hinzugefügt wird. Weitere Informationen finden Sie unter [Konfigurieren eines Linux-Projekts CMake](../linux/cmake-linux-project.md).
+**Visual Studio 2017 Version 15.4**: Unterstützung für CMake unter Linux hinzugefügt wird. Weitere Informationen finden Sie unter [Konfigurieren eines Linux CMake-Projekts](../linux/cmake-linux-project.md).
 
 ## <a name="installing"></a>Installation
 Visual C++-Tools für CMake wird als Teil der Desktopentwicklung Arbeitslast C++ standardmäßig installiert.

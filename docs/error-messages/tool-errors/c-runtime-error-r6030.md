@@ -1,29 +1,42 @@
 ---
-title: "C-Laufzeitfehler R6030 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6030"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6030"
+title: C-Laufzeitfehler R6030 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6030
+dev_langs: C++
+helpviewer_keywords: R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7bc7c5db2b486ef051975c0e8d31d6c24ca5aa6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# C-Laufzeitfehler R6030
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="c-runtime-error-r6030"></a>C-Laufzeitfehler R6030
 CRT nicht initialisiert  
   
- Dieser Fehler tritt auf, wenn Sie CRT verwenden, ohne dass der CRT\-Startcode ausgeführt wurde.  Dieser Fehler kann auftreten, wenn der Linkerschalter [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) zum Überschreiben der Standardstartadresse verwendet wird. Gewöhnlich sind dies **mainCRTStartup**, **wmainCRTStartup** für eine Konsolen\-EXE\-Datei, **WinMainCRTStartup** oder **wWinMainCRTStartup** für eine Windows\-EXE\-Datei oder **\_DllMainCRTStartup** für eine DLL\-Datei.  Die C\-Laufzeit wird nur initialisiert, wenn beim Start eine der oben genannten Funktionen aufgerufen wird.
+> [!NOTE]
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Dieses Problem wird am häufigsten durch bestimmte Softwareprogramme Sicherheit oder in seltenen Fällen durch einen Fehler im Programm verursacht.  
+>   
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
+>   
+>  -   Ihre Sicherheitssoftware möglicherweise spezifische Anweisungen zum Umgehen dieses Problems. Überprüfen Sie die Sicherheit Software der Website des Herstellers für Details. Alternativ können prüfen Sie, ob aktualisierte Versionen der Ihre Sicherheitssoftware, oder Wiederholen Sie den anderen Sicherheitssoftware.  
+> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
+> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
+  
+ **Informationen für Programmierer**  
+  
+ Dieser Fehler tritt auf, wenn Sie die C-Laufzeit (CRT) verwenden, aber der CRT-Startcode wurde nicht ausgeführt. Es ist möglich, diesen Fehler zu erhalten, wenn der Linker wechseln [/Entry](../../build/reference/entry-entry-point-symbol.md) wird verwendet, um das Überschreiben der standardmäßigen Startadresse, in der Regel **MainCRTStartup**, **WmainCRTStartup** für eine EXE-Datei, Konsole **WinMainCRTStartup** oder **wWinMainCRTStartup** für eine Windows-EXE oder **_DllMainCRTStartup** für eine DLL. Wenn eine der oben genannten Funktionen beim Start aufgerufen wird, wird der C-Laufzeit nicht initialisiert werden. Diese Start-Funktionen werden normalerweise standardmäßig aufgerufen, wenn Sie mit der C-Laufzeitbibliothek verknüpfen und die normalen verwenden **main**, **"wmain"**, **WinMain**, oder  **DllMain** Einstiegspunkte.  
+  
+ Es ist auch möglich, diese Fehlermeldung erhalten, wenn ein anderes Programm Code Injection Techniken verwendet, um das Abfangen bestimmter Library-DLL aufgerufen. Einige Sicherheitsprogramme setzen verwenden Sie dieses Verfahren. In Versionen von Visual C++ vor Visual Studio 2015 es ist möglich, eine statisch verknüpften CRT-Bibliothek zu verwenden, um das Problem zu beheben, aber dies wird nicht empfohlen, aus Gründen der Sicherheit und Anwendung von Updates. Korrigieren dieses Problem kann durch Endbenutzer Aktion erfordern.

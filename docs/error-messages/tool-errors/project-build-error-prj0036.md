@@ -1,33 +1,32 @@
 ---
-title: "Projektbuildfehler PRJ0036 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0036"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0036"
+title: Projektbuildfehler prj0036 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0036
+dev_langs: C++
+helpviewer_keywords: PRJ0036
 ms.assetid: ee215cd1-2d66-474d-9a63-b9096f1c4923
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 590c6cb8b69e7c6af4589e74817aa69f25737a11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektbuildfehler PRJ0036
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Eigenschaft 'Additional Files' für das Webbereitstellungstool enthält einen ungültigen Eintrag.  
+# <a name="project-build-error-prj0036"></a>Projektbuildfehler PRJ0036
+Die 'Zusätzliche Dateien'-Eigenschaft für das Webbereitstellungstool enthielt einen ungültigen Eintrag.  
   
- Die Eigenschaft **Additional Files** auf der Eigenschaftenseite **Webbereitstellung** enthielt einen Fehler, der möglicherweise auf ein Problem mit der Makroauswertung zurückzuführen ist.  Dieser Fehler kann außerdem darauf hinweisen, dass die Pfadangaben fehlerhaft sind; sie enthalten möglicherweise Zeichen oder Zeichenkombinationen, die in einem Dateipfad nicht zulässig sind.  
+ Die zusätzlichen Dateien-Eigenschaft auf der Eigenschaftenseite für die Webbereitstellung enthalten Fehler, mögliche Ursachen sind ein Makro Auswertung Problem. Dieser Fehler kann auch dies bedeuten, dass der Pfad weist ein ungültiges Format ist, enthält Zeichen oder eine Kombination von Zeichen, die in einem Dateipfad unzulässig sind.  
   
- Um diesen Fehler zu beheben, korrigieren Sie das Makro oder die Pfadangabe.  Der ausgewertete Pfad ist ein absoluter Pfad aus dem Projektverzeichnis.  
+ Um diesen Fehler zu beheben, korrigieren Sie das Makro oder die Pfadangabe. Der ausgewertete Pfad ist ein absoluter Pfad vom Projektverzeichnis.  
   
- Dieser Fehler könnte auch darauf hinweisen, dass eine der Dateien, auf die verwiesen wird, nicht existiert.
+ Dieser Fehler kann auch dies bedeuten, dass eine der Dateien, die nicht vorhanden ist.

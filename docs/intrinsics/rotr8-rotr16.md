@@ -1,64 +1,72 @@
 ---
-title: "_rotr8, _rotr16 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_rotr16"
-  - "_rotr8"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_rotr16 intrinsic"
-  - "_rotr8 intrinsic"
+title: _rotr8 _rotr16 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _rotr16
+- _rotr8
+dev_langs: C++
+helpviewer_keywords:
+- _rotr8 intrinsic
+- _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7a4205131ba5690f24216997fcfd8884077d0d9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# _rotr8, _rotr16
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="rotr8-rotr16"></a>_rotr8, _rotr16
+**Microsoft-spezifisch**  
   
  Drehen Sie die Eingabewerte nach rechts um eine bestimmte Anzahl von Bitpositionen zu dem unwichtigsten Bit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-unsigned char _rotr8(     unsigned char value,     unsigned char shift  ); unsigned short _rotr16(     unsigned short value,     unsigned char shift  );  
+unsigned char _rotr8(   
+   unsigned char value,   
+   unsigned char shift   
+);  
+unsigned short _rotr16(   
+   unsigned short value,   
+   unsigned char shift   
+);  
 ```  
   
-#### Parameter  
- \[in\] `value`  
+#### <a name="parameters"></a>Parameter  
+ [in] `value`  
  Der zu drehende Wert.  
   
- \[in\] `shift`  
+ [in] `shift`  
  Die Anzahl der Bits für die Drehung.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Der gedrehte Wert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
-|------------------|-----------------|  
+|---------------|------------------|  
 |`_rotr8`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_rotr16`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Im Gegensatz zu einem Verschiebevorgang nach rechts werden bei der Ausführung einer Drehung nach rechts die niedrigen Bits, die am unteren Ende verloren gehen, an die Positioen der höheren Bits verschoben.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // rotr.cpp  
@@ -86,17 +94,20 @@ int main()
 }  
 ```  
   
-  **Drehen von 0x41 nach rechts um 0 Bit ergibt 0x41**  
-**Drehen von 0x41 nach rechts um 1 Bit ergibt 0xa0**  
-**Drehen von 0x41 nach rechts um 2 Bit ergibt 0x50**  
-**Drehen von 0x41 nach rechts um 3 Bit ergibt 0x28**  
-**Drehen von 0x41 nach rechts um 4 Bit ergibt 0x14**  
-**Drehen von 0x41 nach rechts um 5 Bit ergibt 0xa**  
-**Drehen von 0x41 nach rechts um 6 Bit ergibt 0x5**  
-**Drehen von 0x41 nach rechts um 7 Bit ergibt 0x82**  
-**Drehen von 0x12 \(unsigned short\) nach rechts um 10 Bit ergibt 0x480**   
-## Ende Microsoft\-spezifisch  
+```Output  
+Rotating 0x41 right by 0 bits gives 0x41  
+Rotating 0x41 right by 1 bits gives 0xa0  
+Rotating 0x41 right by 2 bits gives 0x50  
+Rotating 0x41 right by 3 bits gives 0x28  
+Rotating 0x41 right by 4 bits gives 0x14  
+Rotating 0x41 right by 5 bits gives 0xa  
+Rotating 0x41 right by 6 bits gives 0x5  
+Rotating 0x41 right by 7 bits gives 0x82  
+Rotating unsigned short 0x12 right by 10 bits gives 0x480  
+```  
   
-## Siehe auch  
- [\_rotl8, \_rotl16](../intrinsics/rotl8-rotl16.md)   
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [_rotl8 _rotl16](../intrinsics/rotl8-rotl16.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

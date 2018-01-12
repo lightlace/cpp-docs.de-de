@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1766075663ef924e9a731169a09c3d396d643d2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d03eed129fd5a2a7c73f7c7948cb766813f63c34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages"></a>Mitteilungen
 Die Nachrichtenschleife in der **ausführen** Memberfunktion der Klasse `CWinApp` ruft in der Warteschlange Nachrichten durch verschiedene Ereignisse generiert. Angenommen, klickt der Benutzer die Maus, sendet Windows mehrerer mausbezogenen Nachrichten wie z. B. `WM_LBUTTONDOWN` Wenn die linke Maustaste gedrückt wird und `WM_LBUTTONUP` Wenn die linke Maustaste losgelassen wird. Die Framework-Implementierung der Standardnachrichtenschleife einer Anwendung sendet die Nachricht an das entsprechende Fenster.  

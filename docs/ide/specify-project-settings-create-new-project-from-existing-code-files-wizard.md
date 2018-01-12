@@ -1,78 +1,77 @@
 ---
-title: "Projekteinstellungen angeben, Assistent &quot;Neues Projekt aus vorhandenen Codedateien erstellen&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.appsettings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "„Neues Projekt aus vorhandenen Codedateien erstellen“ (Assistent), Projekteinstellungen"
+title: "Geben Sie Einstellungen für Projektdateien, neues Projekt aus vorhandenen Code Assistent Erstellen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.appsettings
+dev_langs: C++
+helpviewer_keywords: Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2cf1e8eba11063f7f2e46f836cd2ef84cc70dfe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projekteinstellungen angeben, Assistent &quot;Neues Projekt aus vorhandenen Codedateien erstellen&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie diese Seite des Assistenten Neues Projekt aus vorhandenen Codedateien erstellen, um Folgendes anzugeben:  
+# <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Projekteinstellungen angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"
+Geben Sie mithilfe dieser Seite des Assistenten für neue Projekt aus vorhandenen Codedateien erstellen:  
   
--   Die Buildumgebung für das neue Projekt  
+-   Der Buildumgebung für das neue Projekt  
   
--   Buildeinstellungen für einen bestimmten Typ, den das neue Projekt aufweisen soll  
+-   Erstellen von Einstellungen entsprechend des neuen Projekts zum Generieren ein bestimmtes Typs  
   
-## Aufgabenliste  
- [Gewusst wie: Erstellen eines C\+\+\-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>Aufgabenliste  
+ [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## UIElement-Liste  
- **Visual Studio verwenden**  
- Gibt an, dass zum Erstellen des neuen Projekts Buildtools aus Visual Studio verwendet werden sollen.  Diese Option ist standardmäßig aktiviert.  
+## <a name="uielement-list"></a>UIElement-Liste  
+ **Verwenden Sie Visual Studio**  
+ Gibt an, dass Build-Tools, die zum Erstellen des neuen Projekts in Visual Studio enthalten sind. Diese Option ist standardmäßig ausgewählt.  
   
  **Projekttyp**  
- Gibt den vom Assistenten zu generierenden Projekttyp an.  
+ Gibt den Typ des Projekts, das der Assistent generiert wird.  
   
- **Windows\-Anwendungsprojekt**  
- Gibt an, dass der Assistent ein Projekt für eine ausführbare Windows\-Anwendung generiert.  Diese Option ist im Dropdown\-Listenfeld **Projekttyp** verfügbar.  
+ **Windows-Anwendungsprojekts**  
+ Gibt an, dass der Assistent ein Projekt für eine ausführbare Windows-Anwendung generiert wird. Diese Option ist verfügbar, von der **Projekttyp** Dropdown Listenfeld aus.  
   
  **Konsolenanwendungsprojekt**  
- Gibt an, dass der Assistent ein Projekt für eine Konsolenanwendung generiert.  Diese Option ist im Dropdown\-Listenfeld **Projekttyp** verfügbar.  
+ Gibt an, dass der Assistent ein Projekt für eine Konsolenanwendung generiert wird. Diese Option ist verfügbar, von der **Projekttyp** Dropdown Listenfeld aus.  
   
- **DLL\-Projekt \(Dynamically Linked Library\)**  
- Gibt an, dass der Assistent ein Projekt für eine leere Dynamic Link Library\-Anwendung generiert.  Diese Option ist im Dropdown\-Listenfeld **Projekttyp** verfügbar.  
+ **Dynamisch verknüpfte Klassenbibliotheksprojekt (DLL)**  
+ Gibt an, dass der Assistent ein Projekt für eine leere dynamic Link Library-Anwendung generiert wird. Diese Option ist verfügbar, von der **Projekttyp** Dropdown Listenfeld aus.  
   
- **LIB\-Projekt \(Static Library, Statische Bibliothek\)**  
- Gibt an, dass der Assistent ein Projekt für eine statische Bibliotheksanwendung generiert.  Diese Option ist im Dropdown\-Listenfeld **Projekttyp** verfügbar.  
+ **Statische Bibliothek (LIB)-Projekt**  
+ Gibt an, dass der Assistent ein Projekt für eine statische bibliotheksanwendung generiert wird. Diese Option ist verfügbar, von der **Projekttyp** Dropdown Listenfeld aus.  
   
- **ATL\-Unterstützung hinzufügen**  
- Fügt dem neuen Projekt ATL\-Unterstützung hinzu.  
+ **ATL-Unterstützung hinzufügen**  
+ Das neue Projekt hinzugefügt ATL-Unterstützung.  
   
- **Unterstützung für MFC hinzufügen**  
- Fügt dem neuen Projekt MFC\-Unterstützung hinzu.  
+ **Hinzufügen von Unterstützung für MFC**  
+ Das neue Projekt hinzugefügt MFC-Unterstützung.  
   
- **Unterstützung für die Common Language Runtime hinzufügen**  
- Fügt dem neuen Projekt Unterstützung für die CLR\-Programmierung hinzu.  
+ **Hinzufügen von Unterstützung für die Common Language Runtime**  
+ Fügt die CLR-Programmierung Support, um das neue Projekt.  
   
  **Common Language Runtime**  
- Gibt an, dass das neue Projekt mit CLR\-Features kompatibel ist.  
+ Gibt das neue Projekt ein, um mit der CLR-Funktionen kompatibel sein.  
   
- **Common Language Runtime \(alte Syntax\)**  
- Gibt an, dass das neue Projekt mit der Managed Extensions for C\+\+\-Syntax kompatibel ist, die vor Visual C\+\+ 2005 als Syntax für die CLR\-Programmierung verwendet wurde.  
+ **Common Language Runtime (alte Syntax)**  
+ Gibt das neue Projekt ein, um mit Managed Extensions for C++-Syntax kompatibel sein, die das CLR-Programmiersyntax vor Visual C++ 2005 ist.  
   
- **Externes Buildsystem verwenden**  
- Gibt an, dass zum Erstellen des neuen Projekts Buildtools verwendet werden sollen, die nicht in Visual Studio enthalten sind.  Wenn diese Option aktiviert ist, können Sie auf den Seiten **Einstellungen für Debugkonfiguration angeben** und **Einstellungen für Releasekonfiguration angeben** Buildbefehlszeilen festlegen.  
+ **Verwenden von externen Buildsystems**  
+ Gibt an, dass Buildtools, die nicht in Visual Studio enthalten sind, für das neue Projekt zu erstellen. Wenn diese Option ausgewählt ist, können Sie die Build-Befehlszeilen angeben, auf die **Debuggen Konfigurationseinstellungen geben** und **Einstellungen für Releasekonfiguration angeben** Seiten.  
   
 > [!NOTE]
->  Wenn die Option **Externes Buildsystem verwenden** aktiviert ist, wird das neue Projekt von der IDE nicht erstellt. Die Optionen \/D, \/I, \/FI, \/AI oder \/FU sind folglich für die Kompilierung nicht erforderlich.  Diese Optionen müssen jedoch korrekt festgelegt werden, damit IntelliSense ordnungsgemäß funktioniert.  
+>  Wenn die **externen Buildsystems verwenden** Option aktiviert ist, werden die IDE erstellt das neue Projekt, nicht das/d, / I, / Fi, / AI verwenden oder/fu Optionen sind nicht für die Kompilierung erforderlich. Allerdings müssen diese Optionen damit IntelliSense ordnungsgemäß funktioniert ordnungsgemäß festgelegt werden.  
   
-## Siehe auch  
- [Einstellungen für Debugkonfiguration angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"](../ide/specify-debug-configuration-settings.md)   
- [Einstellungen für Releasekonfiguration angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"](../ide/specify-release-configuration.md)
+## <a name="see-also"></a>Siehe auch  
+ [Einstellungen für Debugkonfiguration angeben, neues Projekt aus vorhandenen Code Dateien-Assistenten erstellen](../ide/specify-debug-configuration-settings.md)   
+ [Einstellungen für Releasekonfiguration angeben, Assistent „Neues Projekt aus vorhandenen Codedateien erstellen“](../ide/specify-release-configuration.md)
