@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 34a505aec6619243e6f7822724f2c9d5944d3e90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59784b713ce1c40cb9b946bc885827fb7141772f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Nach 64-Bit-Portabilitätsproblemen suchen)
 
@@ -75,4 +76,4 @@ Variablen der folgenden Typen werden auf einem 32-Bit-Betriebssystem getestet, a
 
 [Compileroptionen](../../build/reference/compiler-options.md)   
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
-[Konfigurieren von Visual C++ für die 64-Bit-X64 Ziele](../../build/configuring-programs-for-64-bit-visual-cpp.md)
+[Konfigurieren von Visual C++ für 64-Bit-x64-Ziele](../../build/configuring-programs-for-64-bit-visual-cpp.md)
