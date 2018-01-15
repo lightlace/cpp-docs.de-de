@@ -1,32 +1,33 @@
 ---
-title: "SafeEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeEquals-Funktion"
+title: SafeEquals | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeEquals
+dev_langs: C++
+helpviewer_keywords: SafeEquals function
 ms.assetid: 6019627d-f170-413b-9abd-2b5b34396a72
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c6a608a80ea299f951e5f58e59ad57dad5876c1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SafeEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vergleicht zwei Zahlen, um zu bestimmen, ob sie gleich sind.  
+# <a name="safeequals"></a>SafeEquals
+Vergleicht zwei Zahlen, um festzustellen, ob sie gleich sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename T, typename U>  
@@ -36,33 +37,33 @@ inline bool SafeEquals (
 ) throw ();  
 ```  
   
-#### Parameter  
- \[in\] `t`  
- Die erste zu vergleichende Zahl.  Dies muss vom Typ T sein.  
+#### <a name="parameters"></a>Parameter  
+ [in] `t`  
+ Die erste zu vergleichende Zahl. Dies muss vom Typ t sein.  
   
- \[in\] `u`  
- Die zweite zu vergleichende Zahl.  Dies muss vom Typ U sein.  
+ [in] `u`  
+ Die zweite zu vergleichende Zahl. Dies muss vom Typ u sein.  
   
-## Rückgabewert  
- `true`, wenn `t` und `u` gleich sind, andernfalls `false`.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn `t` und `u` gleich sind; andernfalls `false`.  
   
-## Hinweise  
- Die Methode erhöht `==`, da `SafeEquals` Sie ermöglicht, zwei verschiedene Typen Zahlen zu vergleichen.  
+## <a name="remarks"></a>Hinweise  
+ Die Methode erweitert `==` da `SafeEquals` ermöglicht Ihnen, zwei verschiedene Arten von Zahlen zu vergleichen.  
   
- Diese Methode ist ein Teil von [SafeInt\-Bibliothek](../windows/safeint-library.md) und für einen einzelnen Vergleichsoperation entworfen, ohne Instanz [SafeInt\-Klasse](../windows/safeint-class.md).  
+ Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und eignet sich für einen einzelnen Vergleich aus ohne Erstellen einer Instanz von der [SafeInt-Klasse](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Diese Methode sollte nur verwendet werden, wenn ein einzelner mathematischer Vorgang geschützt werden muss.  Wenn mehrere Operationen gibt, sollten Sie die `SafeInt`\-Klasse verwenden, anstatt, die einzelnen eigenständigen Funktionen aufzurufen.  
+>  Diese Methode sollte nur verwendet werden, wenn eine einzelne mathematische Operation, die geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen aufrufen.  
   
- Weitere Informationen zu von Vorlagentypen T und U, finden Sie unter [SafeInt\-Funktionen](../windows/safeint-functions.md).  
+ Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Siehe auch  
- [SafeInt\-Funktionen](../windows/safeint-functions.md)   
- [SafeInt\-Bibliothek](../windows/safeint-library.md)   
- [SafeInt\-Klasse](../windows/safeint-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [SafeInt-Funktionen](../windows/safeint-functions.md)   
+ [SafeInt-Bibliothek](../windows/safeint-library.md)   
+ [SafeInt-Klasse](../windows/safeint-class.md)   
  [SafeNotEquals](../windows/safenotequals.md)

@@ -1,34 +1,36 @@
 ---
-title: "Attributziele (Komponentenerweiterungen f&#252;r C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "benutzerdefinierte Attribute, Ziele"
+title: "Ziele (Komponentenerweiterungen für C++)-Attribut | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Attributziele (Komponentenerweiterungen f&#252;r C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut wird definiert, um für bestimmte Sprachelemente zu übernehmen. Beispielsweise kann ein Attribut definiert werden, um gelten nur für Klassen und Strukturen.  Die folgende Liste zeigt die möglichen syntaktischen Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (mit oder) können verwendet werden.  
+# <a name="attribute-targets-c-component-extensions"></a>Attributziele (Komponentenerweiterungen für C++)
+Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribut wird definiert, um auf bestimmte Sprachelemente zu übernehmen. Beispielsweise könnte ein Attribut definiert werden, um gelten nur für Klassen und Strukturen.  Die folgende Liste enthält die möglichen syntaktischen Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (mithilfe von logischen oder) kann verwendet werden.  
   
- Attributziel, um eine oder mehrere übergeben an <xref:System.AttributeTargets> Enumeratoren <xref:System.AttributeUsageAttribute> beim Definieren des Attributs.  
+ An Attributziel, übergeben Sie eine oder mehrere <xref:System.AttributeTargets> Enumeratoren <xref:System.AttributeUsageAttribute> Wenn Sie das Attribut zu definieren.  
   
- Im folgenden finden eine Liste der gültigen Attributnamen Ziele:  
+ Im folgenden finden eine Liste der gültigen Attributtyp Ziele:  
   
--   `All` (gilt für alle Konstrukte)  
+-   `All`(gilt für alle Konstrukte)  
   
     ```  
   
@@ -40,7 +42,7 @@ Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut w
   
     ```  
   
--   `Assembly` (gilt für eine gesamte Assembly)  
+-   `Assembly`(gilt für eine Assembly als Ganzes)  
   
     ```  
   
@@ -52,7 +54,7 @@ Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut w
   
     ```  
   
--   `Module` (gilt für ein Modul als Ganzes)  
+-   `Module`(gilt für ein Modul als Ganzes)  
   
     ```  
   
@@ -231,23 +233,23 @@ Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut w
   
     ```  
   
- Ein Attribut steht in der Regel das Language-Element wird direkt vor. In einigen Fällen ist jedoch die Position eines Attributs nicht ausreichen, um das beabsichtigte Ziel des Attributs bestimmt. Betrachten Sie das folgende Beispiel:  
+ Ein Attribut ist in der Regel das Language-Element, für das er gilt, direkt vorangestellt. In einigen Fällen ist jedoch die Position eines Attributs nicht ausreichend, um das beabsichtigte Ziel für das Attribut zu bestimmen. Betrachten Sie das folgende Beispiel:  
   
 ```  
 [Attr] int MyFn(double x)...  
 ```  
   
- Syntaktisch gesehen besteht keine Möglichkeit, festzustellen, ob das Attribut an die Methode oder auf den Rückgabewert der Methode angewendet werden soll (in diesem Fall wird standardmäßig der Methode). In solchen Fällen kann ein Attribut Nutzung-Bezeichner verwendet werden. Damit wird das Attribut auf den Rückgabewert angewendet, z. B. Verwenden der `returnvalue` -Bezeichner wie folgt:  
+ Syntaktisch, besteht keine Möglichkeit mitteilen, ob das Attribut an die Methode oder Rückgabewert der Methode angewendet werden soll (in diesem Fall wird standardmäßig an die Methode). In solchen Fällen kann eine Verwendung der Attributspezifizierer verwendet werden. Beispielsweise verwenden, um das Attribut für den Rückgabewert gelten zu machen, die `returnvalue` Spezifizierer wie folgt:  
   
 ```  
 [returnvalue:Attr] int MyFn(double x)... // applies to return value  
 ```  
   
- Attribut Nutzung Bezeichner sind in den folgenden Situationen erforderlich:  
+ Attribut Nutzung Spezifizierer sind in den folgenden Situationen erforderlich:  
   
 -   Ein Attribut auf Assemblyebene oder Modul angeben.  
   
--   So geben Sie an, dass ein Attribut für den Rückgabewert einer Methode, nicht die Methode gilt  
+-   So geben Sie an, dass ein Attribut für den Rückgabewert einer Methode, nicht die Methode gilt:  
   
     ```  
     [method:Attr] int MyFn(double x)...     // Attr applies to method  
@@ -255,7 +257,7 @@ Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut w
     [Attr] int MyFn(double x)...            // default: method  
     ```  
   
--   So geben Sie an, dass ein Attribut auf einen Eigenschaftenaccessor nicht die Eigenschaft angewendet wird  
+-   So geben Sie an, dass ein Attribut für einen Eigenschaftenaccessor nicht die Eigenschaft gilt:  
   
     ```  
     [method:MyAttr(123)] property int Property()    
@@ -263,7 +265,7 @@ Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut w
     [MyAttr(123)] property int get_MyPropy() // default: property  
     ```  
   
--   Um anzugeben, dass ein Attribut auf ein Ereignis Accessor, nicht auf das Ereignis angewendet wird:  
+-   So geben Sie an, dass ein Attribut für ein Ereignis Accessor, nicht auf das Ereignis gilt:  
   
     ```  
     delegate void MyDel();  
@@ -274,7 +276,7 @@ Attribut Nutzung Bezeichner können Sie Attributziele angeben.  Jedes Attribut w
     }  
     ```  
   
- Ein Attribut Nutzung Spezifizierer gilt nur für das Attribut, das unmittelbar auf ihn folgt. Das heißt  
+ Eine Verwendung der Attributspezifizierer gilt nur für das Attribut, das unmittelbar; Das heißt  
   
 ```  
 [returnvalue:Attr1, Attr2]  

@@ -1,32 +1,33 @@
 ---
-title: "CreatorMap::activationId-Datenmember | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap::activationId"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activationId-Datenmember"
+title: 'Creatormap:: ActivationID-Datenmember | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreatorMap::activationId
+dev_langs: C++
+helpviewer_keywords: activationId data member
 ms.assetid: 77518b76-6e6a-4b48-8e2e-a4c7c67769e0
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 912b18ff3e1be04913cb9345e4ac5bde25d2e039
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CreatorMap::activationId-Datenmember
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId-Datenmember
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 union {   
@@ -35,21 +36,21 @@ union {
 } activationId;  
 ```  
   
-## Parameter  
+## <a name="parameters"></a>Parameter  
  `clsid`  
- Eine Schnittstelle ID  
+ Eine Schnittstellen-ID.  
   
  `getRuntimeName`  
- Eine Funktion, die den Windows\-Ablaufnamen eines Objekts abgerufen.  
+ Eine Funktion, die die Windows-Runtime-Namen eines Objekts abgerufen.  
   
-## Hinweise  
- Stellt eine Objekt\-ID dar, die entweder durch einer herkömmlichen COM\-Klassen\-ID oder einen Windows\-Ablaufnamen identifiziert wird.  
+## <a name="remarks"></a>Hinweise  
+ Stellt eine Objekt-ID, die entweder durch eine klassische COM-Klassen-ID oder der Name einer Windows-Runtime identifiziert wird.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [CreatorMap\-Struktur](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [CreatorMap-Struktur](../windows/creatormap-structure.md)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

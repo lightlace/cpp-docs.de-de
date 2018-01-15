@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a580a62c8ee8588386ceb92e10a8593881f6e28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3863ea5a6edfd0c7bc605231182a8d5dfc17b9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-scalar-types"></a>Initialisieren von skalaren Typen
 Beim Initialisieren von skalaren Typen wird der Wert von *assignment-expression* der Variablen zugewiesen. Die Konvertierungsregeln für Zuweisungen gelten. (Weitere Informationen zu Konvertierungsregeln finden Sie unter [Typkonvertierungen](../c-language/type-conversions-c.md).)  
@@ -46,7 +47,7 @@ Beim Initialisieren von skalaren Typen wird der Wert von *assignment-expression*
  *init-declarator-list*:  
  *init-declarator*  
   
- *init-declarator-list*  **,**  *init-declarator*  
+ *init-declarator-list* **,** *init-declarator*  
   
  *init-declarator*:  
  *declarator*  

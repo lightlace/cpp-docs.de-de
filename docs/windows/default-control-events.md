@@ -1,67 +1,71 @@
 ---
-title: "Default Control Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, default control events"
-  - "controls [C++], default control events"
-  - "events [C++], controls"
-  - "dialog box controls, events"
+title: Standard-Steuerelementereignisse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, default control events
+- controls [C++], default control events
+- events [C++], controls
+- dialog box controls, events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 83c7b6e4d019b895973345805027d428d7af766d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Default Control Events
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im Folgenden sehen Sie eine Auflistung von Steuerelementen und den zugehörigen Standardereignissen:  
+# <a name="default-control-events"></a>Standardereignisse für Steuerelemente
+Die folgenden Namen von Steuerelementen haben die zugehörigen Standardereignissen:  
   
 |Steuerelementname|Standardereignis|  
-|-----------------------|----------------------|  
-|Animationssteuerung|**ACN\_START**|  
-|Kontrollkästchen|**BN\_CLICKED**|  
-|Kombinationsfeld|**CBN\_SELCHANGE**|  
-|Benutzerdefiniert|**TTN\_GETDISPINFO**|  
-|Datums\-\/Zeitauswahl|**DTN\_DATETIMECHANGE**|  
-|Eingabefeld|**EN\_CHANGE**|  
-|Gruppenfeld|\(Nicht zutreffend\)|  
-|Abkürzungstaste|**NM\_OUTOFMEMORY**|  
-|IP\-Adresse|**IPN\_FIELDCHANGED**|  
-|List|**LVN\_ITEMCHANGE**|  
-|Listenfeld|**LBN\_SELCHANGE**|  
-|Monatskalender|**MCN\_SELCHANGE**|  
-|Bildsteuerelemente|\(Nicht zutreffend\)|  
-|Statuskontrolle|**NM\_CUSTOMDRAW**|  
-|Schaltfläche|**BN\_CLICKED**|  
-|Optionsfeld|**BN\_CLICKED**|  
-|Rich\-Edit|**EN\_CHANGE**|  
-|Bildlaufleiste|**NM\_THEMECHANGED**|  
-|Schieberegler|**NM\_CUSTOMDRAW**|  
-|Drehfeld|**UDN\_DELTAPOS**|  
-|Statischer Text|\(Nicht zutreffend\)|  
-|Registerkarte|**TCN\_SELCHANGE**|  
-|Strukturansicht|**TVN\_SELCHANGE**|  
+|------------------|-------------------|  
+|Animieren|**ACN_START**|  
+|Kontrollkästchen|**BN_CLICKED**|  
+|Kombinationsfeld|**CBN_SELCHANGE**|  
+|Benutzerdefiniert|**TTN_GETDISPINFO**|  
+|Datums-/Zeitauswahl|**DTN_DATETIMECHANGE**|  
+|Eingabefeld|**EN_CHANGE**|  
+|Gruppenfeld|(Nicht zutreffend)|  
+|Abkürzungstaste|**NM_OUTOFMEMORY**|  
+|IP-Adresse|**IPN_FIELDCHANGED**|  
+|Liste|**LVN_ITEMCHANGE**|  
+|Listenfeld|**LBN_SELCHANGE**|  
+|Monatskalender|**MCN_SELCHANGE**|  
+|Bildsteuerelement|(Nicht zutreffend)|  
+|Status|**NM_CUSTOMDRAW**|  
+|Push-Schaltfläche|**BN_CLICKED**|  
+|Optionsfeld|**BN_CLICKED**|  
+|Rich-edit|**EN_CHANGE**|  
+|Bildlaufleiste|**NM_THEMECHANGED**|  
+|Slider|**NM_CUSTOMDRAW**|  
+|Drehfeld|**UDN_DELTAPOS**|  
+|Statischer Text|(Nicht zutreffend)|  
+|Registerkarte|**TCN_SELCHANGE**|  
+|Struktur|**TVN_SELCHANGE**|  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Defining Member Variables for Dialog Controls](../mfc/defining-member-variables-for-dialog-controls.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)   
  [Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen](../mfc/reference/message-types-associated-with-user-interface-objects.md)   
  [Bearbeiten eines Meldungshandlers](../mfc/reference/editing-a-message-handler.md)   
  [Definieren eines Meldungshandlers für eine reflektierte Meldung](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
- [Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
+ [Deklarieren einer Variablen, die basierend auf der neuen Steuerelementklasse](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
  [Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)
+

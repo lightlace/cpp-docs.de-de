@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58a777a049b270702e63391ebc7bd4c1addc3b32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
 Generiert mithilfe des Mersenne-Twisteralgorithmus eine qualitativ hochwertige Zufallssequenz aus Ganzzahlen.  
@@ -36,19 +37,19 @@ class mersenne_twister_engine;
   
 #### <a name="parameters"></a>Parameter  
  `UIntType`  
- Der unsigned integer-Ergebnistyp. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+ Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
  `W`  
- **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**: `2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
  **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.  
   
  `M`  
- **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**: `0 < M ≤ N`  
+ **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`  
   
  `R`  
- **Maskenbits**. **Vorbedingung**: `R ≤ W`  
+ **Maskenbits**. **Vorbedingung**:`R ≤ W`  
   
  `A`  
  **XOR-Maske**. **Vorbedingung**: `A ≤ (1u<<W) - 1u`  
@@ -104,7 +105,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- Ausführliche Informationen über den Mersenne-Twisteralgorithmus erhalten Sie im Wikipedia-Artikel [Mersenne twister (Mersenne-Twister)](http://go.microsoft.com/fwlink/LinkId=402356).  
+ Ausführliche Informationen über den Mersenne-Twisteralgorithmus erhalten Sie im Wikipedia-Artikel [Mersenne twister (Mersenne-Twister)](http://go.microsoft.com/fwlink/p/?linkid=402356).  
   
 ## <a name="example"></a>Beispiel  
  Ein Codebeispiel finden Sie unter [\<random>](../standard-library/random.md).  

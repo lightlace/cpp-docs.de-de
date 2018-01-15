@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0293785b9552b2e5696b9334e81aebf44c3bc4b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7579dc9d3f7aec17982a0f60e20719c0b52eda42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-c"></a>string (C++)
 Gibt an, dass das eindimensionale `char`, `wchar_t`, **Byte** (oder gleichwertigen) Array oder der Zeiger auf ein solches Array als Zeichenfolge behandelt werden muss.  
@@ -59,8 +62,8 @@ __interface IFireTabCtrl
 |-|-|  
 |**Betrifft**|Array oder Zeiger auf ein Array, Schnittstellenparameter, Schnittstellen-Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keine|  
-|**Ungültige Attribute**|Keine|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   

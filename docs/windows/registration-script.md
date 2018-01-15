@@ -1,32 +1,33 @@
 ---
-title: "registration_script | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.registration_script"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registration_script attribute"
+title: Registration_script | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.registration_script
+dev_langs: C++
+helpviewer_keywords: registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 40790788fdb5ce73a6c33e62b6ee55d2da4c5364
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# registration_script
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Führt die angegebene benutzerdefinierte Registrierung von Skripts aus.  
+# <a name="registrationscript"></a>registration_script
+Führt die angegebene benutzerdefinierte Registrierung-Skript aus.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,17 +36,17 @@ Führt die angegebene benutzerdefinierte Registrierung von Skripts aus.
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *Skript*  
- Der vollständige Pfad einer benutzerdefinierten Datei des Registrierungsdaten skripts \(.rgs\).  Ein Wert aus **Nein**, wie `script = "none"`gibt an, dass die Registrierung keine Co\-Klasse Anforderungen verfügt.  
+ Der vollständige Pfad zu einer benutzerdefinierten Registrierungsskriptdatei (.rgs). Der Wert **keine**, wie z. B. `script = "none"`, gibt an, dass die Co-Klasse keine Registrierung erforderlich ist.  
   
-## Hinweise  
- Das Attribut **registration\_script** C\+\+ wird das benutzerdefinierte Registrierung von Skripts aus, das von **Skript**angegeben wird.  Wenn dieses Attribut nicht angegeben wird, wird eine Datei des Standards \(.rgs Informationen zum Registrieren einer Komponente enthalten\) verwendet.  Weitere Informationen zu .rgs\-Dateien finden Sie unter [Die Registrierungsstelle \(ATL\-Registrierungs\-Komponente\)](../atl/atl-registry-component-registrar.md).  
+## <a name="remarks"></a>Hinweise  
+ Die **Registration_script** C++-Attribut führt gemäß benutzerdefinierten Registrierungsskript **Skript**. Wenn dieses Attribut nicht angegeben ist, wird eine standard RGS-Datei (mit Informationen zum Registrieren der Komponente) verwendet. Weitere Informationen zu RGS-Dateien finden Sie unter [der ATL-Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md).  
   
- Dieses Attribut erfordert, dass [Co\-Klasse](../windows/coclass.md), [ProgID](../windows/progid.md)oder [vi\_progid](../windows/vi-progid.md)\-Attribut \(oder ein anderes Attribut, das ein solcher Test vorhanden\), bedeutet auch auf das gleiche Element übernommen werden.  
+ Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden.  
   
-## Beispiel  
- Der folgende Code gibt an, dass die Komponente ein Registrierung von Skripts, die cpp\_attr\_ref\_registration\_script.rgs aufgerufen wird.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code gibt an, dass die Komponente eine Registrierungsdatei cpp_attr_ref_registration_script.rgs aufgerufen hat.  
   
 ```  
 // cpp_attr_ref_registration_script.cpp  
@@ -66,21 +67,20 @@ __interface IFace {};
 class CMyClass:public IFace {};  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Ein oder mehrere der folgenden Schritte aus: **coclass**, **progid**oder **vi\_progid**.|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [COM-Attribute](../windows/com-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
  [rdx](../windows/rdx.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

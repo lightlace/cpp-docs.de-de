@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsyncBase-Klasse"
+title: AsyncBase-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase
+dev_langs: C++
+helpviewer_keywords: AsyncBase class
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Implementiert den asynchronen Zustandsautomaten Windows\-Runtime.  
+# <a name="asyncbase-class"></a>AsyncBase-Klasse
+Implementiert den asynchronen Zustandsautomat der Windows-Runtime.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -44,66 +45,66 @@ template <
 class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::Implements< IAsyncInfo >;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TComplete`  
- Ein Ereignishandler, der aufgerufen wird, wenn der asynchrone Vorgang abgeschlossen wird.  
+ Ein Ereignishandler, der beim Abschluss eines asynchronen Vorgangs aufgerufen wird.  
   
  `TProgress`  
- Ein Ereignishandler, der aufgerufen wird, wenn ein ausgeführter asynchroner Vorgang über den aktuellen Status der Operation angezeigt.  
+ Ein Ereignishandler, der aufgerufen wird, wenn ein asynchrones ausgeführten Vorgangs meldet, das den aktuellen Status des Vorgangs.  
   
  `resultType`  
- Einer der Enumerationswerte. [AsyncResultType](../windows/asyncresulttype-enumeration.md) Standardmäßig SingleResult.  
+ Eines der [AsyncResultType](../windows/asyncresulttype-enumeration.md) Enumerationswerte. Standardmäßig SingleResult.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[AsyncBase::AsyncBase\-Konstruktor](../windows/asyncbase-asyncbase-constructor.md)|Initialisiert eine Instanz der AsyncBase\-Klasse.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[AsyncBase::AsyncBase-Konstruktor](../windows/asyncbase-asyncbase-constructor.md)|Initialisiert eine Instanz der AsyncBase-Klasse.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[AsyncBase::Cancel\-Methode](../windows/asyncbase-cancel-method.md)|Bricht einen asynchronen Vorgang ab.|  
-|[AsyncBase::Close\-Methode](../windows/asyncbase-close-method.md)|Schließt den asynchronen Vorgang.|  
-|[AsyncBase::FireCompletion\-Methode](../windows/asyncbase-firecompletion-method.md)|Ruft den Abschlussereignishandler auf oder legt den internen Statusdelegaten zurück.|  
-|[AsyncBase::FireProgress\-Methode](../windows/asyncbase-fireprogress-method.md)|Ruft den aktuellen Statusereignishandler auf.|  
-|[AsyncBase::get\_ErrorCode\-Methode](../windows/asyncbase-get-errorcode-method.md)|Ruft den Fehlercode für den aktuellen asynchronen Vorgang ab.|  
-|[AsyncBase::get\_Id\-Methode](../windows/asyncbase-get-id-method.md)|Ruft das Handle des asynchronen Vorgangs ab.|  
-|[AsyncBase::get\_Status\-Methode](../windows/asyncbase-get-status-method.md)|Ruft einen Wert ab, der den Status des asynchronen Vorgangs angibt.|  
-|[AsyncBase::GetOnComplete\-Methode](../windows/asyncbase-getoncomplete-method.md)|Kopiert die Adresse des aktuellen Abschlussereignishandlers der angegebenen Variable.|  
-|[AsyncBase::GetOnProgress\-Methode](../windows/asyncbase-getonprogress-method.md)|Kopiert die Adresse des aktuellen Statusereignishandlers der angegebenen Variable.|  
-|[AsyncBase::put\_Id\-Methode](../windows/asyncbase-put-id-method.md)|Legt das Handle des asynchronen Vorgangs fest.|  
-|[AsyncBase::PutOnComplete\-Methode](../windows/asyncbase-putoncomplete-method.md)|Legt die Adresse des Abschlussereignishandlers auf den angegebenen Wert festgelegt.|  
-|[AsyncBase::PutOnProgress\-Methode](../windows/asyncbase-putonprogress-method.md)|Legt die Adresse des Statusereignishandlers auf den angegebenen Wert festgelegt.|  
-|[AsyncBase::Start\-Methode](../windows/asyncbase-start-method.md)|Startet den asynchronen Vorgang.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[AsyncBase::Cancel-Methode](../windows/asyncbase-cancel-method.md)|Bricht einen asynchronen Vorgang ab.|  
+|[AsyncBase::Close-Methode](../windows/asyncbase-close-method.md)|Schließt den asynchronen Vorgang an.|  
+|[AsyncBase::FireCompletion-Methode](../windows/asyncbase-firecompletion-method.md)|Wird der Ereignishandler für den Abschluss des Vorgangs aufgerufen, oder setzt den internen Status Delegaten zurück.|  
+|[AsyncBase::FireProgress-Methode](../windows/asyncbase-fireprogress-method.md)|Wird der aktuelle Fortschritt-Ereignishandler aufgerufen.|  
+|[AsyncBase::get_ErrorCode-Methode](../windows/asyncbase-get-errorcode-method.md)|Ruft den Fehlercode für den aktuellen asynchronen Vorgang ab.|  
+|[AsyncBase::get_Id-Methode](../windows/asyncbase-get-id-method.md)|Ruft das Handle des asynchronen Vorgangs ab.|  
+|[AsyncBase::get_Status-Methode](../windows/asyncbase-get-status-method.md)|Ruft einen Wert, der den Status des asynchronen Vorgangs angibt.|  
+|[AsyncBase::GetOnComplete-Methode](../windows/asyncbase-getoncomplete-method.md)|Kopiert die Adresse des aktuellen ereignishandlers Abschluss der angegebenen Variablen.|  
+|[AsyncBase::GetOnProgress-Methode](../windows/asyncbase-getonprogress-method.md)|Kopiert die Adresse des aktuellen ereignishandlers Status der angegebenen Variablen.|  
+|[AsyncBase::put_Id-Methode](../windows/asyncbase-put-id-method.md)|Legt das Handle des asynchronen Vorgangs fest.|  
+|[AsyncBase::PutOnComplete-Methode](../windows/asyncbase-putoncomplete-method.md)|Legt die Adresse des ereignishandlers Abschluss auf den angegebenen Wert fest.|  
+|[AsyncBase::PutOnProgress-Methode](../windows/asyncbase-putonprogress-method.md)|Legt die Adresse des ereignishandlers Status mit dem angegebenen Wert fest.|  
+|[AsyncBase::Start-Methode](../windows/asyncbase-start-method.md)|Beginnt den asynchronen Vorgang an.|  
   
-### Geschützte Methoden  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[AsyncBase::CheckValidStateForDelegateCall\-Methode](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Testet, ob Delegateigenschaften im aktuellen asynchronen Zustand geändert werden können.|  
-|[AsyncBase::CheckValidStateForResultsCall\-Methode](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Testet, ob die Ergebnisse eines asynchronen Vorgangs im aktuellen asynchronen Zustand erfasst werden können.|  
-|[AsyncBase::ContinueAsyncOperation\-Methode](../windows/asyncbase-continueasyncoperation-method.md)|Bestimmt, ob die asynchrone Operation mit der Verarbeitung fortzufahren sollte oder sollte enthalten.|  
-|[AsyncBase::CurrentStatus\-Methode](../windows/asyncbase-currentstatus-method.md)|Ruft den Status des aktuellen asynchronen Vorgangs ab.|  
-|[AsyncBase::ErrorCode\-Methode](../windows/asyncbase-errorcode-method.md)|Ruft den Fehlercode für den aktuellen asynchronen Vorgang ab.|  
-|[AsyncBase::OnCancel\-Methode](../windows/asyncbase-oncancel-method.md)|Wenn Sie in einer abgeleiteten Klasse, Löschen ein asynchroner Vorgang überschrieben werden.|  
-|[AsyncBase::OnClose\-Methode](../windows/asyncbase-onclose-method.md)|Wenn Sie in einer abgeleiteten Klasse überschrieben werden, enthält einen asynchronen Vorgang.|  
-|[AsyncBase::OnStart\-Methode](../windows/asyncbase-onstart-method.md)|Wenn Sie in einer abgeleiteten Klasse, beginnt ein asynchroner Vorgang überschrieben werden.|  
-|[AsyncBase::TryTransitionToCompleted\-Methode](../windows/asyncbase-trytransitiontocompleted-method.md)|Gibt an, ob der aktuelle asynchrone Operation abgeschlossen wurde.|  
-|[AsyncBase::TryTransitionToError\-Methode](../windows/asyncbase-trytransitiontoerror-method.md)|Gibt an, ob der angegebene Fehlercode den Zustand des internen Fehlers ändern kann.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[AsyncBase::CheckValidStateForDelegateCall-Methode](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Testet, ob in den aktuellen Status des asynchronen delegateigenschaften geändert werden können.|  
+|[AsyncBase::CheckValidStateForResultsCall-Methode](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Testet, ob die Ergebnisse eines asynchronen Vorgangs in den aktuellen Status des asynchronen gesammelt werden können.|  
+|[AsyncBase::ContinueAsyncOperation-Methode](../windows/asyncbase-continueasyncoperation-method.md)|Bestimmt, ob der asynchrone Vorgang der Verarbeitung fortsetzen oder Anhalten sollte.|  
+|[AsyncBase::CurrentStatus-Methode](../windows/asyncbase-currentstatus-method.md)|Ruft den Status der aktuellen asynchronen Vorgang ab.|  
+|[AsyncBase::ErrorCode-Methode](../windows/asyncbase-errorcode-method.md)|Ruft den Fehlercode für den aktuellen asynchronen Vorgang ab.|  
+|[AsyncBase::OnCancel-Methode](../windows/asyncbase-oncancel-method.md)|Ruft beim Überschreiben in einer abgeleiteten Klasse Bricht einen asynchronen Vorgang ab.|  
+|[AsyncBase::OnClose-Methode](../windows/asyncbase-onclose-method.md)|Ruft beim Überschreiben in einer abgeleiteten Klasse schließt einen asynchronen Vorgang.|  
+|[AsyncBase::OnStart-Methode](../windows/asyncbase-onstart-method.md)|Ruft beim Überschreiben in einer abgeleiteten Klasse startet einen asynchronen Vorgang.|  
+|[AsyncBase::TryTransitionToCompleted-Methode](../windows/asyncbase-trytransitiontocompleted-method.md)|Gibt an, ob die aktuelle asynchrone Vorgang abgeschlossen ist.|  
+|[AsyncBase::TryTransitionToError-Methode](../windows/asyncbase-trytransitiontoerror-method.md)|Gibt an, ob der angegebene Fehlercode Zustand "Interner Fehler" ändern kann.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `AsyncBase`  
   
  `AsyncBase`  
   
-## Anforderungen  
- **Header:**  async.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** async.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

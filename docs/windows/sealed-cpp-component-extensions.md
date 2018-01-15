@@ -1,76 +1,77 @@
 ---
-title: "sealed  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sealed_cpp"
-  - "sealed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sealed keyword [C++]"
+title: "sealed (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sealed_cpp
+- sealed
+dev_langs: C++
+helpviewer_keywords: sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 26
-caps.handback.revision: "24"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# sealed  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sealed--c-component-extensions"></a>sealed (Komponentenerweiterungen für C++)
 `sealed` ist ein kontextbezogenes Schlüsselwort für Verweisklassen, das anzeigt, dass ein virtuelles Element nicht außer Kraft gesetzt werden kann oder ein bestimmter Typ nicht als Basistyp verwendet werden kann.  
   
 > [!NOTE]
->  Die Standardsprache gemäß ISO C\+\+11 weist das Schlüsselwort [final](../cpp/final-specifier.md) auf, das in Visual Studio unterstützt wird.  Verwenden Sie `final` für Standardklassen und `sealed` für Verweisklassen.  
+>  Die ISO C ++ 11 Standard Language besteht aus den [endgültigen](../cpp/final-specifier.md) Schlüsselwort, das in Visual Studio unterstützt wird. Verwenden Sie `final` für Standardklassen und `sealed` für Verweisklassen.  
   
-## Alle Laufzeiten  
- **Syntax**  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+  
+## <a name="syntax"></a>Syntax
   
 ```  
-  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
-  
 ```  
   
- **Parameter**  
+### <a name="parameters"></a>Parameter  
   
- *Bezeichner*  
+ *identifier*  
  Der Name der Funktion oder Klasse.  
   
  *Rückgabetyp*  
  Der Typ, der von einer Funktion zurückgegeben wird.  
   
- **Hinweise**  
+## <a name="remarks"></a>Hinweise  
   
- Im ersten Syntaxbeispiel wird eine Klasse versiegelt.  Im zweiten Beispiel wird eine virtuelle Funktion versiegelt.  
+ Im ersten Syntaxbeispiel wird eine Klasse versiegelt. Im zweiten Beispiel wird eine virtuelle Funktion versiegelt.  
   
- Das Schlüsselwort `sealed` ist für systemeigene Ziele und ebenso für die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] und die CLR \(Common Language Runtime\) gültig.  Weitere Informationen finden Sie unter [Überschreibungsspezifizierer und systemeigene Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Die `sealed` Schlüsselwort ist gültig für systemeigene Ziele sowie für die Windows-Runtime und die common Language Runtime (CLR). Weitere Informationen finden Sie unter [Überschreibungsspezifizierer und Native Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Sie können zur Kompilierzeit erkennen, ob ein Typ "sealed" ist, indem Sie das Typmerkmal `__is_sealed (``type``)` verwenden.  Weitere Informationen finden Sie unter [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Sie zur Kompilierzeit erkennen können, ob ein Typ, mithilfe versiegelt ist der `__is_sealed(type)` Merkmal "Typ". Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
  `sealed` ist ein kontextbezogenes Schlüsselwort.  Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Siehe dazu [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ Finden Sie unter [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### Anforderungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## Common Language Runtime  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die nur für Common Language Runtime gelten.\)  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Common Language Runtime gelten.)  
   
-### Anforderungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  Das folgende Codebeispiel zeigt die Wirkung von `sealed` auf ein virtuelles Element.  
   
 ```cpp  
@@ -116,11 +117,13 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
+```Output  
+X::f override of I1::f  
+X::f override of I1::g  
+Y::f override of I1::f  
+```  
   
-  **X::f Überschreibung von I1::f**  
- **X::f Überschreibung von I1::g**  
- **Y::f Überschreibung von I1::f** Das nächste Codebeispiel zeigt , wie eine Klasse als versiegelt markiert wird.  
+ Das nächste Codebeispiel zeigt , wie eine Klasse als versiegelt markiert wird.  
   
 ```cpp  
 // sealed_keyword_2.cpp  
@@ -140,5 +143,5 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

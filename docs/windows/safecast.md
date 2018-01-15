@@ -1,32 +1,33 @@
 ---
-title: "SafeCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeCast-Funktion"
+title: SafeCast | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeCast
+dev_langs: C++
+helpviewer_keywords: SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4c3c9bb208cc2be2f91d8a464787d3299cd0b386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SafeCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Typumwandlungen ein Typ Zahl einem anderen Typ.  
+# <a name="safecast"></a>SafeCast
+Wandelt einen Typ von der Anzahl in einen anderen Typ.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename T, typename U>  
@@ -36,30 +37,30 @@ inline bool SafeCast (
 );  
 ```  
   
-#### Parameter  
- \[in\] `From`  
- Die Quellzahl zu konvertieren.  Dies muss vom Typ T sein.  
+#### <a name="parameters"></a>Parameter  
+ [in] `From`  
+ Die Quelle zu konvertierende Zahl. Dies muss vom Typ t sein.  
   
- \[out\] `To`  
- Ein Verweis zum neuen Zahlentyp.  Dies muss vom Typ U sein.  
+ [out] `To`  
+ Ein Verweis auf die neue Zahlentyp. Dies muss vom Typ u sein.  
   
-## Rückgabewert  
- `true`, wenn kein Fehler auftritt; `false`, wenn ein Fehler auftritt.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
   
-## Hinweise  
- Diese Methode ist ein Teil von [SafeInt\-Bibliothek](../windows/safeint-library.md) und für einen einzelnen Umwandlungsvorgang entworfen, ohne Instanz [SafeInt\-Klasse](../windows/safeint-class.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ohne Erstellen einer Instanz von für eine einzelnes Umwandlungsoperation dient der [SafeInt-Klasse](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Diese Methode sollte nur verwendet werden, wenn ein einzelner Vorgang geschützt werden muss.  Wenn mehrere Operationen gibt, sollten Sie die `SafeInt`\-Klasse verwenden, anstatt, die einzelnen eigenständigen Funktionen aufzurufen.  
+>  Diese Methode sollte nur verwendet werden, wenn ein einzelner Vorgang geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen aufrufen.  
   
- Weitere Informationen zu von Vorlagentypen T und U, finden Sie unter [SafeInt\-Funktionen](../windows/safeint-functions.md).  
+ Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Siehe auch  
- [SafeInt\-Funktionen](../windows/safeint-functions.md)   
- [SafeInt\-Bibliothek](../windows/safeint-library.md)   
- [SafeInt\-Klasse](../windows/safeint-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [SafeInt-Funktionen](../windows/safeint-functions.md)   
+ [SafeInt-Bibliothek](../windows/safeint-library.md)   
+ [SafeInt-Klasse](../windows/safeint-class.md)

@@ -1,32 +1,33 @@
 ---
-title: "ClassFactory::QueryInterface-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface-Methode"
+title: 'ClassFactory:: QueryInterface-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 9593881f-4585-4d70-8ca6-b328918d4d6b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0c4abb408ded66f9768cd1e1476f131b3f82cd30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ClassFactory::QueryInterface-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft einen Zeiger auf eine Schnittstelle ab, die durch Parameter angegeben wird.  
+# <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface-Methode
+Ruft einen Zeiger auf die Schnittstelle, die durch Parameter angegeben wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHOD(  
@@ -34,20 +35,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `riid`  
- Eine Schnittstelle ID  
+ Eine Schnittstellen-ID.  
   
  `ppvObject`  
- Wenn dieser Vorgang abgeschlossen hat, bestand ein Zeiger zur Schnittstelle durch Parameter `riid` an.  
+ Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf die Schnittstelle, die vom Parameter angegebenen `riid`.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.  
+## <a name="return-value"></a>Rückgabewert  
+ „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ClassFactory\-Klasse](../windows/classfactory-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ClassFactory-Klasse](../windows/classfactory-class.md)

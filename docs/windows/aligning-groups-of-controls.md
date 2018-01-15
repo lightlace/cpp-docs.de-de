@@ -1,56 +1,59 @@
 ---
-title: "Aligning Groups of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], aligning"
+title: Ausrichten von Steuerelementgruppen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ebec5697faf252a13befdf2a9b3c98888db96c19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Aligning Groups of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In der folgenden Prozedur wird gezeigt, wie Gruppen von Steuerelementen ausgerichtet werden.  
+# <a name="aligning-groups-of-controls"></a>Ausrichten von Steuerelementgruppen
+Das folgende Verfahren wird gezeigt, wie zum Ausrichten von Steuerelementgruppen.  
   
-### So richten Sie Steuerelementgruppen aus  
+### <a name="to-align-groups-of-controls"></a>Ausrichten von Steuerelementgruppen  
   
-1.  [Markieren Sie die Steuerelemente](../mfc/selecting-multiple-controls.md), die ausgerichtet werden sollen.  Achten Sie darauf, zuerst das Steuerelement auszuwählen, das als bestimmendes Steuerelement verwendet werden soll, oder legen Sie das bestimmende Steuerelement fest, bevor Sie den Befehl zur Ausrichtung bzw. Größenänderung ausführen.  
+1.  [Wählen Sie die Steuerelemente](../windows/selecting-multiple-controls.md) Sie ausrichten möchten. Achten Sie darauf, dass Sie das Steuerelement auszuwählen, des bestimmenden Steuerelements werden sollen, oder Festlegen des bestimmenden Steuerelements vor dem Ausführen der Ausrichtung oder Befehl Größe sein.  
   
-     Die endgültige Position der Steuerelemente in der Gruppe hängt von der Position des bestimmenden Steuerelements ab.  Weitere Informationen über die Auswahl des bestimmenden Steuerelements finden Sie unter [Festlegen des bestimmenden Steuerelements](../mfc/specifying-the-dominant-control.md).  
+     Die endgültige Position der Gruppe von Steuerelementen, hängt von der Position des bestimmenden Steuerelements ab. Weitere Informationen zum Auswählen des bestimmenden Steuerelements finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).  
   
-2.  Klicken Sie im Menü **Layout** auf **Ausrichten**, und wählen Sie dann eine der folgenden Ausrichtungen:  
+2.  Aus der **Format** Menü wählen **ausrichten**, und wählen Sie dann eine der folgenden Ausrichtungen:  
   
-    -   **Links**: Richtet die markierten Steuerelemente entlang ihrer linken Seite aus.  
+    -   **Links ausrichten**: der ausgewählten Steuerelemente linksbündig ausgerichtet.  
   
-    -   **Zentriert**: Richtet die markierten Steuerelemente horizontal an ihrem Mittelpunkt aus.  
+    -   **Rechenzentren**: Richtet die ausgewählten Steuerelemente horizontal an ihrem Mittelpunkt.  
   
-    -   **Rechts**: Richtet die markierten Steuerelemente entlang ihrer rechten Seite aus.  
+    -   **Rechte**: Richtet die ausgewählten Steuerelemente entlang der rechten Seite liegen.  
   
-    -   **Oben**: Richtet die markierten Steuerelemente entlang ihrer Oberkante aus.  
+    -   **ToPS**: Richtet die ausgewählten Steuerelemente an die oberen Ränder.  
   
-    -   **Mitte**: Richtet die markierten Steuerelemente vertikal an ihrem Mittelpunkt aus.  
+    -   **Mitte**: Richtet die ausgewählten Steuerelemente vertikal an ihren Mittelpunkt.  
   
-    -   **Unten**: Richtet die markierten Steuerelemente entlang ihrer Unterkante aus.  
+    -   **Tiefständen**: Richtet die ausgewählten Steuerelemente an die unteren Ränder.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

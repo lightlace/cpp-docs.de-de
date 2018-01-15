@@ -1,47 +1,49 @@
 ---
-title: "C-Style Casts with /clr (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C-style casts and /clr"
+title: C-Stil mit Clr - wandelt (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e529a40f8eb876791f49559d3970696fdece489d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# C-Style Casts with /clr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das folgende Thema gilt nur für Common Language Runtime zu.  
+# <a name="c-style-casts-with-clr-ccli"></a>C-stilartige Umwandlungen mit /clr (C++/CLI)
+Das folgende Thema gilt nur für die Common Language Runtime.  
   
- Wenn Sie mit CLR verwendet werden, gibt, der Compiler versucht, im C\-Format bis eine der Licht zuzuordnen Umwandlung ein, unten, in der folgenden Reihenfolge aufgeführt sind:  
+ Mit CLR-Typen verwendet, versucht der Compiler die C-Format eine Umwandlung in einen der unten aufgeführten, in der folgenden Reihenfolge Umwandlungen zuordnen:  
   
-1.  const\_cast  
+1.  const_cast  
   
-2.  safe\_cast  
+2.  safe_cast  
   
-3.  safe\_cast plus const\_cast  
+3.  "safe_cast" plus const_cast-Operator  
   
-4.  static\_cast  
+4.  static_cast  
   
-5.  static\_cast plus const\_cast  
+5.  Static_cast plus const_cast-Operator  
   
- Wenn keine der Umwandlungen, die oben aufgeführten, gültig und wenn der Typ des Ausdrucks und des Zieltyps CLR\-Verweistypen sind, Umwandlungszuordnungen im C\-Format an eine LaufzeitÜberprüfung \(castclass MSIL Anweisung\).  Andernfalls wird eine C\-Typumwandlung ungültig und die Compilerprobleme ein Fehler betrachtet.  
+ Wenn keines der oben aufgeführten Umwandlungen gültig ist und der Typ des Ausdrucks und der Zieltyp CLR-Verweistypen sind, wird eine laufzeitüberprüfung (Castclass MSIL-Anweisung) Umwandlung im C-Stil zugeordnet. Andernfalls eine Umwandlung im C-Format ist als ungültig betrachtet, und der Compiler eines Fehlers.  
   
-## Hinweise  
- E\-ähnlich Umwandlung einer wird nicht empfohlen.  Beim Kompilieren mit [\/clr \(Common Language Runtime\-Kompilierung\)](../build/reference/clr-common-language-runtime-compilation.md), verwenden Sie [safe\_cast](../windows/safe-cast-cpp-component-extensions.md).  
+## <a name="remarks"></a>Hinweise  
+ Eine Umwandlung im C-Format wird nicht empfohlen. Beim Kompilieren mit [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md), verwenden Sie ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md).  
   
- Im folgenden Beispiel wird eine Formatzeichenfolge Umwandlung veranschaulicht, die `const_cast` zugeordnet wird.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `const_cast`.  
   
 ```  
 // cstyle_casts_1.cpp  
@@ -55,7 +57,7 @@ int main() {
 }  
 ```  
   
- Im folgenden Beispiel wird eine Formatzeichenfolge Umwandlung veranschaulicht, die `safe_cast` zugeordnet wird.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `safe_cast`.  
   
 ```  
 // cstyle_casts_2.cpp  
@@ -67,7 +69,7 @@ int main() {
 }  
 ```  
   
- Im folgenden Beispiel wird eine Formatzeichenfolge Umwandlung veranschaulicht, die `safe_cast` und `const_cast` zuordnet.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `safe_cast` plus `const_cast`.  
   
 ```  
 // cstyle_casts_3.cpp  
@@ -88,7 +90,7 @@ int main() {
 }  
 ```  
   
- Im folgenden Beispiel wird eine Formatzeichenfolge Umwandlung veranschaulicht, die `static_cast` zugeordnet wird.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `static_cast`.  
   
 ```  
 // cstyle_casts_4.cpp  
@@ -109,7 +111,7 @@ int main() {
 }  
 ```  
   
- Im folgenden Beispiel wird eine Formatzeichenfolge Umwandlung veranschaulicht, die `static_cast` und `const_cast` zuordnet.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `static_cast` plus `const_cast`.  
   
 ```  
 // cstyle_casts_5.cpp  
@@ -130,7 +132,7 @@ int main() {
 }  
 ```  
   
- Im folgenden Beispiel wird eine Formatzeichenfolge Umwandlung veranschaulicht, die in eine Laufzeitüberprüfung zuordnet.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das eine Überprüfung zur Laufzeit zugeordnet.  
   
 ```  
 // cstyle_casts_6.cpp  
@@ -151,7 +153,7 @@ int main() {
 }  
 ```  
   
- Im folgenden Beispiel wird eine ungültige Umwandlung im C\-Format an, die der Compiler angewiesen wird, einen Fehler ausgegeben.  
+ Das folgende Beispiel zeigt ein ungültige C-Format umgewandelt, die bewirkt, dass der Compiler einen Fehler ausgeben.  
   
 ```  
 // cstyle_casts_7.cpp  
@@ -163,8 +165,8 @@ int main() {
 }  
 ```  
   
-## Voraussetzungen  
- Compileroption: **\/clr**  
+## <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

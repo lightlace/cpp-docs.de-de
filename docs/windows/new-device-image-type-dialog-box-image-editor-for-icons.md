@@ -1,53 +1,54 @@
 ---
-title: "Neuer &lt;Ger&#228;t&gt;-Bildtyp (Dialogfeld) (Bild-Editor f&#252;r Symbole) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newimagetype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Neuer <Gerät>-Bildtyp (Dialogfeld)"
+title: "Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newimagetype
+dev_langs: C++
+helpviewer_keywords: New <Device> Image Type dialog box
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Neuer &lt;Ger&#228;t&gt;-Bildtyp (Dialogfeld) (Bild-Editor f&#252;r Symbole)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Dialogfeld können Sie ein neues Gerätebild eines bestimmten Typs erstellen.  Um das Dialogfeld **Neuer \<Gerät\> Bildtyp** zu öffnen, klicken Sie im Menü **Bild** auf **Neuer Bildtyp**.  Weitere Informationen über die in Windows verwendeten Symbolgrößen finden Sie unter [Icons](_win32_Icons_cpp) in der Windows SDK\-Dokumentation.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole)
+Ermöglicht Ihnen die Erstellung ein neuen Gerätebildes eines angegebenen Typs. So öffnen die **neu \<Gerät > Image** (Dialogfeld), klicken Sie auf **Neuer Bildtyp** auf der **Image** im Menü.  
   
- **Zielbildtyp**  
- Listet die verfügbaren Bildtypen auf.  Wählen Sie den Bildtyp aus, den Sie öffnen möchten:  
+ **Ziel-Bildtyp**  
+ Listet die verfügbaren Bildtypen an. Wählen Sie den "Image", die, den Sie öffnen möchten:  
   
 ||||  
 |-|-|-|  
-|-   16 x 16, 16 Farben|-   48 x 48, 16 Farben|-   96 x 96, 16 Farben|  
-|-   16 x 16, 256 Farben|-   48 x 48, 256 Farben|-   96 x 96, 256 Farben|  
-|-   16 x 16, Monochrom|-   48 x 48, Monochrom|-   96 x 96, Monochrom|  
-|-   32 x 32, 16 Farben|-   64 x 64, 16 Farben||  
-|-   32 x 32, 256 Farben|-   64 x 64, 256 Farben||  
-|-   32 x 32, Monochrom|-   64 x 64, Monochrom||  
+|– 16 x 16, 16 Farben|-48 x 48, 16 Farben|-96 x 96, 16 Farben|  
+|– 16 x 16, 256 Farben|-48 x 48, 256 Farben|-96 x 96, 256 Farben|  
+|– 16 x 16, Monochrom|-48 x 48, Monochrom|-96 x 96, Monochrom|  
+|-32 x 32 Pixel und 16 Farben|-64, x 64, 16 Farben||  
+|-32 x 32, 256 Farben|-64, x 64, 256 Farben||  
+|-32 x 32, Monochrom|-64, x 64, Monochrom||  
   
 > [!NOTE]
->  Vorhandene Bilder werden in dieser Liste nicht angezeigt.  
+>  Alle vorhandenen Images werden in dieser Liste nicht angezeigt.  
   
  **Benutzerdefiniert**  
- Öffnet das [Dialogfeld "Benutzerdefiniertes Bild"](../mfc/custom-image-dialog-box-image-editor-for-icons.md), in dem Sie ein neues Bild mit einer benutzerdefinierten Größe und Anzahl von Farben erstellen können.  
+ Öffnet die [benutzerdefiniertes Bild (Dialogfeld)](custom-image-dialog-box-image-editor-for-icons.md) in dem Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben erstellen können.  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keiner  
   
-## Siehe auch  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Menü "Bild"](../mfc/image-menu-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

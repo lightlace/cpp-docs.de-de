@@ -1,32 +1,33 @@
 ---
-title: "last_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.last_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "last_is attribute"
+title: Last_is | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.last_is
+dev_langs: C++
+helpviewer_keywords: last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7d7a230299a94ba33a142ca44ebc34981f7201ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# last_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Index des letzten gesendet werden sollen, Arrayelements an.  
+# <a name="lastis"></a>last_is
+Gibt den Index des letzten Arrayelements übermittelt werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,35 +36,34 @@ Gibt den Index des letzten gesendet werden sollen, Arrayelements an.
 ) ]  
 ```  
   
-#### Parameter  
- *expression*  
- Eine oder mehrere C\-Sprache Ausdrücke.  Leere Argument slots sind zulässig.  
+#### <a name="parameters"></a>Parameter  
+ *Ausdruck*  
+ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
   
-## Hinweise  
- Das Attribut **last\_is** C\+\+ verfügt über die gleichen Funktionen wie das [last\_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Last_is** C++-Attribut hat die gleiche Funktionalität wie die [Last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL-Attribut.  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [first\_is](../windows/first-is.md) als ein Beispiel dafür, wie Sie einen Abschnitt eines Arrays angibt.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Feld in `struct`**Union**, Schnittstellen oder Parameter, Schnittstellenmethode|  
+|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

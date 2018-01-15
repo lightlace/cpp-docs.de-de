@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7d8b351f7cc58d37d4da8bc273d8541aee54446
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-declarations"></a>Zeigerdeklarationen
 Eine "Zeigerdeklaration" benennt eine Zeigervariable und gibt den Typ des Objekts an, auf das die Variable zeigt. Eine Variable, die als Zeiger deklariert ist, enthält eine Speicheradresse.  
@@ -36,11 +37,11 @@ Eine "Zeigerdeklaration" benennt eine Zeigervariable und gibt den Typ des Objekt
   
  &nbsp;&nbsp;**(** *declarator* **)**  
   
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>-Opt</sub> **]**  
+ &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
   
  &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
   
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>-Opt</sub> **)**  
+ &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
   
  *pointer*:  
  &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>-Opt</sub>  

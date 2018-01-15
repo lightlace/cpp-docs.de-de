@@ -1,35 +1,36 @@
 ---
-title: "IID_PPV_ARGS_Helper-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/IID_PPV_ARGS_Helper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IID_PPV_ARGS_Helper-Funktion"
+title: IID_PPV_ARGS_Helper-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/IID_PPV_ARGS_Helper
+dev_langs: C++
+helpviewer_keywords: IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9839fe71439fde54545a18ef107cec178b8bdcd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IID_PPV_ARGS_Helper-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Überprüft, ob der Typ des Arguments von der angegebenen `IUnknown`\-Schnittstelle abgeleitet wird.  
+# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper-Funktion
+Stellt sicher, dass der Typ des angegebenen Arguments abgeleitet die `IUnknown` Schnittstelle.  
   
 > [!IMPORTANT]
->  Diese Vorlagenspezialisierung unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  Verwendung [IID\_PPV\_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx).  
+>  Diese Spezialisierung einer Klassenvorlage unterstützt die WRL-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Verwendung [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) stattdessen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -40,21 +41,21 @@ void** IID_PPV_ARGS_Helper(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der Typ des Arguments `pp`.  
   
  `pp`  
- Ein doppelt\-indirekter Zeiger.  
+ Ein doppelt indirekter Zeiger.  
   
-## Rückgabewert  
- Argument `pp` wandelte zu einem Zeiger\-zu\-einZeiger in `void` um.  
+## <a name="return-value"></a>Rückgabewert  
+ Argument `pp` umgewandelt in einen Zeiger-auf-a-Zeiger auf `void`.  
   
-## Hinweise  
- Ein Fehler wird generiert, wenn der Vorlagenparameter `T` nicht von `IUnknown` abgeleitet.  
+## <a name="remarks"></a>Hinweise  
+ Ein Fehler während der Kompilierung wird generiert, wenn die Vorlagenparameter `T` nicht ableiten `IUnknown`.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
-## Siehe auch  
- [Reference \(Windows Runtime Library\)](assetId:///00000000-0000-0000-0000-000000000000)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz (Windows-Runtime-Bibliothek)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)

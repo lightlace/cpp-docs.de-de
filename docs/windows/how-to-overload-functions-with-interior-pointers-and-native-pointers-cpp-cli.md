@@ -1,35 +1,37 @@
 ---
-title: "How to: Overload Functions with Interior Pointers and Native Pointers (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Functions with interior and native pointers, overloading"
+title: "Vorgehensweise: Überladen von Funktionen mit inneren und systemeigenen Zeigern (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f5f46abca993acb2990c3310e8fefd9ab970b751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Overload Functions with Interior Pointers and Native Pointers (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Features können abhängig von überladen werden, dass der Parametertyp ein innerer Zeiger oder systemeigener Zeiger ist.  
+# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Gewusst wie: Überladen von Funktionen mit inneren und systemeigenen Zeigern (C++/CLI)
+Funktionen können überladen werden, je nachdem, ob der Parametertyp ein innerer Zeiger oder einen systemeigenen Zeiger.  
   
 > [!IMPORTANT]
->  Diese Sprachfunktion wird durch die **\/clr**\-Compileroption, jedoch nicht durch die **\/ZW**\-Compileroption unterstützt.  
+>  Diese Sprachfunktion wird unterstützt, indem Sie die **"/ CLR"** (Compileroption), jedoch nicht von der **/Zw** -Compileroption.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // interior_ptr_overload.cpp  
@@ -66,12 +68,12 @@ int main() {
 };  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  
   
-## Siehe auch  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

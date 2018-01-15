@@ -1,44 +1,44 @@
 ---
-title: "Projektbuildfehler PRJ0003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0003"
+title: Projektbuildfehler prj0003 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0003
+dev_langs: C++
+helpviewer_keywords: PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bcf80eb4d45fe1ae163772b96339c123996ae377
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# Projektbuildfehler PRJ0003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="project-build-error-prj0003"></a>Projektbuildfehler PRJ0003  
+  
+> Fehler beim Erstellen des "*Befehlszeile*".  
+  
+Die *Befehlszeile* Befehl formatiert wird, aus der Eingabe in die **Eigenschaftenseiten** (Dialogfeld), ein Fehlercode zurückgegeben, aber keine Informationen angezeigt, der **Ausgabe** Fenster.  
 
-Fehler beim Starten von "Befehlszeile".  
+Mögliche Ursachen für diesen Fehler  
   
- Ein Befehl, ***Befehlszeile***, der aus einer Eingabe im Dialogfeld **Eigenschaftenseiten** resultiert, hat einen Fehlercode zurückgegeben, das Ausgabefenster enthält jedoch keine diesbezüglichen Informationen.  
+-   Das Projekt ist abhängig von ATL-Server. Ab Visual Studio 2008, ATL-Server ist nicht mehr Bestandteil von Visual Studio, aber als shared Source-Projekt auf CodePlex freigegeben wurde. Um die ATL-Server-Quellcode und Tools herunterzuladen, wechseln Sie zu [ATL-Serverbibliothek und Tools](http://go.microsoft.com/fwlink/p/?linkid=81979).  
   
- Folgende Gründe können für diesen Fehler vorliegen:  
+-   Geringe Systemressourcen. Schließen Sie einige Anwendungen, um dieses Problem zu beheben.  
   
--   Das Projekt hängt von ATL\-Server ab.  Ab [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)] ist ATL\-Server nicht mehr Teil von Visual Studio, sondern wurde unter CodePlex als Shared\-Source\-Projekt veröffentlicht.  Um den ATL\-Server\-Quellcode und die Tools herunterzuladen, wechseln Sie zu [http:\/\/go.microsoft.com\/fwlink\/?LinkID\=81979](http://go.microsoft.com/fwlink/?LinkID=81979).  
+-   Unzureichende Sicherheitsberechtigungen. Stellen Sie sicher, dass Sie über ausreichende Sicherheitsberechtigungen verfügen.  
   
--   Unzureichende Systemressourcen.  Schließen Sie einige Anwendungen, um diesen Fehler zu beheben.  
+-   Die ausführbare Datei im angegebenen Pfade **VC++-Verzeichnisse** enthalten nicht den Pfad für das Tool an, die Sie ausführen möchten. Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md)  
   
--   Unzureichende Sicherheitsberechtigungen.  Stellen Sie sicher, dass Sie über ausreichende Sicherheitsberechtigungen verfügen.  
+-   Makefile-Projekte, werden Sie einen Befehl für die Ausführung fehlt **erstellen über die Befehlszeile** oder **neu erstellen über die Befehlszeile**.  
   
--   Der Pfad für das auszuführende Tool ist nicht in den unter [VC\+\+\-Verzeichnisse](assetId:///e027448b-c811-4c3d-8531-4325ad3f6e02) angegebenen Pfaden für ausführbare Dateien enthalten.  
-  
--   Im Fall von Makefile\-Projekten fehlt ein Befehl für die Ausführung mit **Buildbefehlszeile** oder **Neu erstellte Befehlszeile**.  
-  
-## Siehe auch  
- [Projektbuildfehler und \-warnungen \(PRJxxxx\)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+## <a name="see-also"></a>Siehe auch  
+ [Projektbuildfehler und -warnungen (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

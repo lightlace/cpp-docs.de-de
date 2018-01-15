@@ -1,43 +1,47 @@
 ---
-title: "Adding Multiple Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [Visual Studio], adding multiple"
-  - "dialog box controls, adding to dialog boxes"
+title: "Hinzufügen mehrerer Steuerelemente | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [Visual Studio], adding multiple
+- dialog box controls, adding to dialog boxes
 ms.assetid: cc100201-0669-4e74-bb08-f7134ddd03aa
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6fe2040594db17e84aaf1c3d0985ed07f355f187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Multiple Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### So fügen Sie mehrere Steuerelemente hinzu  
+# <a name="adding-multiple-controls"></a>Hinzufügen mehrerer Steuerelemente
+### <a name="to-add-multiple-controls"></a>So fügen Sie mehrere Steuerelemente hinzu  
   
-1.  Halten Sie **STRG** gedrückt, und wählen Sie ein Steuerelement im [Fenster "Toolbox"](../Topic/Toolbox.md) aus.  
+1.  Halten Sie die **STRG** -Taste, wählen Sie ein Steuerelement in der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox).  
   
-2.  Lassen Sie **STRG** los, und klicken Sie so viele Male in das Dialogfeld, wie das jeweilige Steuerelement hinzugefügt werden soll.  
+2.  Version der **STRG** Taste, und klicken Sie auf das Dialogfeld so häufig wie das jeweilige Steuerelement hinzugefügt werden soll.  
   
-3.  Drücken Sie **ESC**, um das Platzieren von Steuerelementen zu beenden.  
+3.  Drücken Sie **ESC** zum Platzieren von Steuerelementen zu beenden.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Dialogfeld\-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
+ [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+

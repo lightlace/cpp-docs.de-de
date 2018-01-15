@@ -1,37 +1,41 @@
 ---
-title: "Specifying the Location and Size of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, size"
-  - "dialog boxes, positioning"
+title: "Festlegen der Position und Größe eines Dialogfelds | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, size
+- dialog boxes, positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 03c4c6d6afb13a0e4ed8801838356ff0d1e851f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Specifying the Location and Size of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Position und Größe eines Dialogfelds sowie der darin enthaltenen Steuerelemente werden in Dialogeinheiten \(DLUs\) gemessen.  Die Werte für einzelne Steuerelemente und für das Dialogfeld werden unten rechts in der Visual Studio\-Statusleiste angezeigt, sobald Sie eines der Elemente markieren.  
+# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Festlegen der Position und Größe eines Dialogfelds
+Der Speicherort und ein Dialogfeld, als auch die Position und Größe von Steuerelementen in ihr werden in Dialogeinheiten gemessen. In der unteren rechten Ecke der Visual Studio-Statusleiste angezeigt, wenn Sie sie auswählen, werden die Werte für einzelne Steuerelemente und das Dialogfeld angezeigt.  
   
- Das [Eigenschaftenfenster](../Topic/Properties%20Window.md) enthält drei Eigenschaften, über die Sie festlegen können, an welcher Stelle ein Dialogfeld auf dem Bildschirm angezeigt wird.  Die Eigenschaft **Zentriert** ist vom Typ `Boolean`. Wenn Sie diese Eigenschaft auf **True** festlegen, wird das Dialogfeld immer in der Bildschirmmitte angezeigt.  Wenn Sie die Eigenschaft auf **False** festlegen, können Sie die **XPos**\-Eigenschaft und die **YPos**\-Eigenschaft festlegen, um explizit anzugeben, an welcher Stelle das Dialogfeld auf dem Bildschirm angezeigt werden soll.  Die Positionseigenschaften sind Offsetwerte, deren Ursprung in der oberen linken Ecke des als {X\=0, Y\=0} definierten Anzeigebereichs liegt.  Zusätzlich basiert die Position auf der Eigenschaft **Absolute Ausrichtung**: Falls **True**, verhalten sich die Koordinaten relativ zum Bildschirm; falls **False**, verhalten sie sich relativ zum Fenster des Dialogfeldbesitzers.  
+ Es gibt drei Eigenschaften, die Sie, in festlegen können der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) angeben, wo ein Dialogfeld auf dem Bildschirm angezeigt wird. Die Eigenschaft zentriert ist boolescher Wert; Wenn Sie den Wert auf "true" festlegen, wird das Dialogfeld immer in der Mitte des Bildschirms angezeigt. Wenn sie auf "false" festgelegt wird, können Sie dann die XPos und YPos Eigenschaften explizit definieren, auf dem Bildschirm, erscheint das Dialogfeld festlegen. Die Positionseigenschaften sind Offsetwerte aus der linken oberen Ecke des Ansichtsbereichs, der als {X = 0, Y = 0} definiert ist. Die Position basiert auch auf die **Absolute Ausrichtung** Eigenschaft: bei "true", die Koordinaten sind relativ zu dem Bildschirm; Wenn "false", die Koordinaten sind relativ zu dem Dialogfeld Besitzerfenster.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

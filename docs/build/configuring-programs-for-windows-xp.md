@@ -1,75 +1,76 @@
 ---
-title: "Konfigurieren von C++ 11-Programmen f&#252;r Windows XP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Konfigurieren von Programmen für Windows XP | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# Konfigurieren von C++ 11-Programmen f&#252;r Windows XP
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Da [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] mehrere Plattformtoolsets unterstützt, können Sie Betriebssysteme und Laufzeitbibliotheken als Ziel festlegen, die vom Standardtoolset nicht unterstützt werden.  Beispielsweise können Sie die C\+\+11\-Spracherweiterungen, \-Compiler, \-Bibliotheken und andere Features verwenden, die in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] implementiert sind, um Apps für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] zu erstellen.  Sie können ältere Plattformtoolsets verwenden, um binärkompatiblen Legacycode zu verwalten und dennoch die neuesten Features der [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]\-IDE zu nutzen.  
+# <a name="configuring-programs-for-windows-xp"></a>Konfigurieren von Programmen für Windows XP
+Da Visual Studio mehrere Plattformtoolsets unterstützt, können Sie abzielen, Betriebssysteme und Laufzeitbibliotheken, die die vom Standardtoolset nicht unterstützt werden. Beispielsweise durch den Wechsel des Plattformtoolsets, können C ++ 11 und C ++ 14 C ++ 17-spracherweiterungen unterstützt, die vom Visual C++-Compiler in Visual Studio zum Erstellen von apps, die auf [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Sie können auch ältere Plattformtoolsets verwenden, um binärkompatiblen Legacycode zu verwalten und dennoch die neuesten Funktionen von Visual Studio-IDE nutzen.  
   
 > [!NOTE]
->  Sie müssen [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] Update 4 installieren, um Plattformtoolset\-Unterstützung für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] zu [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] hinzuzufügen.  Informationen zum Herunterladen und Installieren einer Kopie von [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] Update 4 finden Sie unter [Microsoft Visual Studio Express 2012 für Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) im Microsoft Download Center.  Installieren Sie dann [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900), um das v110\_xp\-Plattformtoolset zu erhalten.  Verwenden Sie Windows Update, um nach der Installation die aktuellsten Softwareupdates abzurufen.  
+>  Bei Verwendung von [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], müssen Sie installieren [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] Update 4 hinzuzufügende Plattformtoolset-Unterstützung für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Zum Herunterladen und installieren eine Kopie des [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] Update 4, finden Sie unter [Microsoft Visual Studio Express 2012 für Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) im Microsoft Download Center. Installieren Sie dann [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/p/?linkid=335900) , die das v110_xp-Plattformtoolset zu erhalten. Verwenden Sie Windows Update, um nach der Installation die aktuellsten Softwareupdates abzurufen.  
   
-## Windows XP als Ziel  
- Das in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] enthaltene Windows XP\-Plattformtoolset ist eine Version des [!INCLUDE[win7](../build/includes/win7_md.md)]\-SDK, das in [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] enthalten war, verwendet jedoch den aktuellen C\+\+\-Compiler.  Es konfiguriert außerdem Projekteigenschaften auf entsprechende Standardwerte, z. B. die Spezifikation eines kompatiblen Linkers kompatibel für die Zielfestlegung auf Elementebene.  Nur Windows Desktop\-Apps, die unter Verwendung des Windows XP\-Plattformtoolsets erstellt werden, können unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] ausgeführt werden; diese Apps können jedoch auch unter neueren Betriebssysteme ausgeführt werden, z. B. Windows Vista, [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/includes/winsvr08_md.md)], [!INCLUDE[win8](../build/includes/win8_md.md)] oder [!INCLUDE[winserver8](../build/includes/winserver8_md.md)].  
+## <a name="windows-xp-targeting-experience"></a>Windows XP als Ziel  
+ Die Windows XP-Plattformtoolset, die in Visual Studio enthalten ist, ist eine Version von der [!INCLUDE[win7](../build/includes/win7_md.md)] SDK, das im Lieferumfang [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], jedoch den aktuellen C++-Compiler verwendet. Es konfiguriert außerdem Projekteigenschaften auf entsprechende Standardwerte, z. B. die Spezifikation eines kompatiblen Linkers kompatibel für die Zielfestlegung auf Elementebene. Nur Windows desktop-apps, die erstellt werden, mithilfe der Windows XP-Plattformtoolset weiterlaufen [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], aber diese apps können auch auf neueren Windows-Betriebssysteme ausführen.  
   
-#### So entwickeln Sie für Windows XP  
+#### <a name="to-target-windows-xp"></a>So entwickeln Sie für Windows XP  
   
-1.  Öffnen Sie im **Projektmappen\-Explorer** das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften** aus.  
+1.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften** aus.  
   
-2.  Legen Sie im Dialogfeld **Eigenschaftenseiten** für das Projekt unter **Konfigurationseigenschaften**, **Allgemein** die Eigenschaft **Platform Toolset** auf das gewünschte Windows XP\-Toolset fest.  Wählen Sie z. B. **Visual Studio 2012 – Windows XP \(v110\_xp\)** aus, um Code zu erstellen, der mit Microsoft Visual C\+\+ 2012 Redistributable\-Bibliotheken binärkompatibel ist.  
+2.  In der **Eigenschaftenseiten** Dialogfeld für das Projekt unter **Konfigurationseigenschaften**, **allgemeine**legen die **Plattformtoolset** die Eigenschaft auf das gewünschte Windows XP-Toolset. Wählen Sie z. B. **Visual Studio 2015 – Windows XP (v140_xp)** zum Erstellen von Code für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] mithilfe des Microsoft Visual C++ 2015-Compilers.  
   
-### C\+\+\-Laufzeitunterstützung  
- Die C\-Laufzeitbibliothek \(CRT\), Standard Template Library \(STL\), Active Template Library \(ATL\), Concurrency Runtime\-Bibliothek \(ConCRT\), Parallel Patterns Library \(PPL\), Microsoft Foundation Class\-Bibliothek \(MFC\) und C\+\+ AMP \(C\+\+ Accelerated Massive Programming\)\-Bibliothek enthalten neben dem Windows XP\-Plattformtoolset Laufzeitunterstützung für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  Für diese Betriebssysteme werden folgenden Versionen unterstützt: [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 \(SP3\) für x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 \(SP2\) für x64 und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 \(SP2\) für x86 und x64.  
+### <a name="c-runtime-support"></a>C++-Laufzeitunterstützung  
+ Zusammen mit dem Windows XP-Plattformtoolset, die C-Laufzeitbibliothek (CRT), C++-Standardbibliothek, Active Template Library (ATL), Concurrency Runtime-Bibliothek (ConCRT), Parallel Patterns Library (PPL), Microsoft Foundation Class-Bibliothek (MFC) und C++ AMP (C++- Accelerated Massive Programmierung) Bibliothek enthalten Laufzeitunterstützung für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Für diese Betriebssysteme, die minimalen unterstützten Versionen sind [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) für X86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) für X64, und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) für x X86 und X64.  
   
- Diese Bibliotheken werden in Abhängigkeit vom Ziel von den von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installierten Plattformtoolsets unterstützt:  
+ Diese Bibliotheken werden durch die von Visual Studio installiert ist, abhängig von der Ziel-Plattformtoolsets unterstützt:  
   
-|Bibliothek|Standard\-Plattformtoolset mit Windows\-Desktop\-Apps als Ziel|Standard\-Plattformtoolset mit [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-Apps als Ziel|Windows XP\-Plattformtoolset mit [!INCLUDE[winxp](../build/includes/winxp_md.md)],[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] als Ziel|  
-|----------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Bibliothek|Standard-Plattformtoolset mit Windows-Desktop-Apps als Ziel|Standard-Plattformtoolset mit [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]-Apps als Ziel|Windows XP-Plattformtoolset mit [!INCLUDE[winxp](../build/includes/winxp_md.md)],[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] als Ziel|  
+|-------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |CRT|X|X|X|  
-|STL|X|X|X|  
+|C++-Standardbibliothek|X|X|X|  
 |ATL|X|X|X|  
-|ConCRT\/PPL|X|X|X|  
+|ConCRT/PPL|X|X|X|  
 |MFC|X||X|  
-|C\+\+ AMP|X|X||  
+|C++ AMP|X|X||  
   
 > [!NOTE]
->  Apps, die in C\+\+\/CLI geschrieben sind und .NET Framework 4 als Ziel haben, können unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] ausgeführt werden.  
+>  Apps, die in C++/CLI geschrieben sind und .NET Framework 4 als Ziel haben, können unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] ausgeführt werden.  
   
-### Unterschiede zwischen den Toolsets  
- Aufgrund von Unterschieden bei Plattform\- und Bibliotheksunterstützung ist die Entwicklungsumgebung für Apps, die ein Windows XP\-Plattformtoolset verwenden, nicht so umfassend wie für Apps, die das standardmäßige [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]\-Plattformtoolset verwenden.  
+### <a name="differences-between-the-toolsets"></a>Unterschiede zwischen den Toolsets  
+ Aufgrund von Unterschieden bei Plattform-und bibliotheksunterstützung ist ist die Entwicklungsumgebung für apps, die ein Windows XP-Plattformtoolset verwenden, nicht so umfassend wie für apps, die die Standard-Plattformtoolset Visual Studio verwenden.  
   
--   **Features der Programmiersprache C\+\+**  
+-   **C++-Sprachfunktionen**  
   
-     In Apps, die das v110\_xp\-Plattformtoolset verwenden, werden nur die Features der Programiersprache C\+\+11 unterstützt, die in [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] implementiert sind.  In Apps, die das v120\_xp\-Plattformtoolset verwenden, werden nur die Features der Programiersprache C\+\+11 unterstützt, die in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] implementiert sind.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] verwendet den entsprechenden Compiler bei der Erstellung der älteren Plattformtoolsets.  Verwenden Sie ein neueres Windows XP\-Plattformtoolset. um weitere C\+\+11\-Features zu nutzen, die in dieser Version implementiert sind.  
+     Nur C++-Sprachfeatures in implementiert [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] werden in apps, die das v110_xp-Plattformtoolset verwenden unterstützt. Nur C++-Sprachfeatures in implementiert [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] werden in apps, die das v120_xp-Plattformtoolset verwenden unterstützt. Visual Studio verwendet den entsprechenden Compiler bei der Erstellung der älteren Plattformtoolsets. Verwenden Sie das neueste Windows XP-Plattformtoolset, um zusätzliche Funktionen der Programmiersprache C++ in dieser Version des Compilers implementiert nutzen.  
   
 -   **Remotedebuggen**  
   
-     Remotetools für [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] unterstützen das Remotedebuggen unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] nicht.  Zum Debuggen einer App, die unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] ausgeführt wird, können Sie einen Debugger aus einer älteren Version von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] verwenden, um diese lokal oder remote zu debuggen.  Dies ähnelt dem Debuggen einer Anwendung unter Windows Vista, das ein Laufzeitziel des Plattformtoolsets, aber kein Remotedebuggingziel ist.  
+     Remotetools für Visual Studio unterstützen nicht das Remotedebuggen auf [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Zum Debuggen einer app, wenn er ausgeführt wird, auf [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], können Sie einen Debugger aus einer älteren Version von Visual Studio lokal oder Remote Debuggen. Dies ähnelt dem Debuggen einer Anwendung unter Windows Vista, das ein Laufzeitziel des Plattformtoolsets, aber kein Remotedebuggingziel ist.  
   
 -   **Statische Analyse**  
   
-     Die Windows XP\-Plattformtoolsets unterstützen keine statischen Analysen, da die SAL\-Anmerkungen für das [!INCLUDE[win7](../build/includes/win7_md.md)]\-SDK und die Laufzeitbibliotheken nicht kompatibel sind.  Wenn Sie statische Analysen für eine App durchführen möchten, die [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] unterstützt, können sie vorübergehend die Projektmappe so umschalten, dass sie zum Durchführen der Analyse das Standard\-Plattformtoolset als Ziel verwendet, und dann zum Windows XP\-Plattformtoolset zurückwechseln, um die App zu erstellen.  
+     Die Windows XP-Plattformtoolsets unterstützen keine statischen Analysen, da die SAL-Anmerkungen für das [!INCLUDE[win7](../build/includes/win7_md.md)]-SDK und die Laufzeitbibliotheken nicht kompatibel sind. Wenn Sie statische Analysen für eine App durchführen möchten, die [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] unterstützt, können sie vorübergehend die Projektmappe so umschalten, dass sie zum Durchführen der Analyse das Standard-Plattformtoolset als Ziel verwendet, und dann zum Windows XP-Plattformtoolset zurückwechseln, um die App zu erstellen.  
   
--   **Debuggen von DirectX\-Grafiken**  
+-   **Debuggen von DirectX-Grafiken**  
   
-     Da der Grafikdebugger die Direct3D 9\-API nicht unterstützt, kann sie nicht zum Debuggen von Apps verwendet werden, die Direct3D unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] verwenden.  Wenn die App jedoch einen alternative Renderer implementiert, der die Direct3D 10\- oder Direct3D 11\-API verwendet, kann der Grafikdebugger verwendet werden, um Probleme mit der Verwendung dieser APIs zu diagnostizieren.  
+     Da der Grafikdebugger die Direct3D 9-API nicht unterstützt, kann sie nicht zum Debuggen von Apps verwendet werden, die Direct3D unter [!INCLUDE[winxp](../build/includes/winxp_md.md)] oder [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] verwenden. Wenn die App jedoch einen alternative Renderer implementiert, der die Direct3D 10- oder Direct3D 11-API verwendet, kann der Grafikdebugger verwendet werden, um Probleme mit der Verwendung dieser APIs zu diagnostizieren.  
   
 -   **Erstellen von HLSL**  
   
-     Standardmäßig kompiliert das Windows XP\-Toolset keine HLSL\-Quellcodedateien.  Zur Kompilierung von HLSL\-Dateien laden Sie das June 2010 DirectX SDK herunter und installieren es und legen dann die VC\-Verzeichnisse des Projekts so fest, dass es eingeschlossen ist.  Weitere Informationen finden Sie im Abschnitt „DirectX\-SDK registriert keine Include\/Library\-Pfade bei Visual Studio 2010“ der [June 2010 DirectX SDK\-Downloadseite](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+     Standardmäßig kompiliert das Windows XP-Toolset keine HLSL-Quellcodedateien. Zur Kompilierung von HLSL-Dateien laden Sie das June 2010 DirectX SDK herunter und installieren es und legen dann die VC-Verzeichnisse des Projekts so fest, dass es eingeschlossen ist. Weitere Informationen finden Sie unter der "DirectX-SDK registriert keine Include/Library-Pfade bei Visual Studio 2010" im Abschnitt der [June 2010 DirectX SDK-Downloadseite](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

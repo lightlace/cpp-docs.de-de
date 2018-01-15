@@ -1,32 +1,33 @@
 ---
-title: "noncreatable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.noncreatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "noncreatable attribute"
+title: Noncreatable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.noncreatable
+dev_langs: C++
+helpviewer_keywords: noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb9f67b4efac28a1cacd6301c8ca849246f9a481
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# noncreatable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definiert ein Objekt, das nicht allein instanziiert werden kann.  
+# <a name="noncreatable"></a>noncreatable
+Definiert ein Objekt, das allein nicht instanziiert werden kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,12 +35,12 @@ Definiert ein Objekt, das nicht allein instanziiert werden kann.
   
 ```  
   
-## Hinweise  
- Das Attribut **nicht erstellbar** C\+\+ verfügt über die gleichen Funktionen wie das [nicht erstellbar](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL\-Attribut und wird automatisch durch die generierten IDL\-Datei vom Compiler übergeben.  
+## <a name="remarks"></a>Hinweise  
+ Die **Noncreatable** C++-Attribut hat die gleiche Funktionalität wie die [Noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL-Attribut und wird automatisch auf die generierten übergeben. IDL-Datei durch den Compiler.  
   
- Wenn dieses Attribut innerhalb eines Projekts verwendet wird, das ATL verwendet, ändert sich das Verhalten des Attributs.  Neben den oben beschriebenen Verhalten fügt das Attribut auch das [OBJECT\_ENTRY\_NON\_CREATEABLE\_EX\_AUTO](../Topic/OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO.md) Makro eingefügt.  Dieses Makro gibt in ATL an, dass das Objekt nicht extern erstellt werden kann.  
+ Wenn dieses Attribut in einem Projekt, die ATL verwendet verwendet wird, ändert sich das Verhalten des Attributs. Zusätzlich zu den oben beschriebene Verhalten fügt das Attribut auch die [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) Makro. Dieses Makro zeigt ATL, dass das Objekt kann nicht extern erstellt werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_noncreatable.cpp  
@@ -59,20 +60,19 @@ class CMyClass : public A
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**Co\-Klasse**|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|**coclass**|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   

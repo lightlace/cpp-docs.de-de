@@ -1,53 +1,60 @@
 ---
-title: "RuntimeClass::GetRuntimeClassName-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRuntimeClassName-Methode"
+title: 'Runtimeclass:: Getruntimeclassname-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName
+dev_langs: C++
+helpviewer_keywords: GetRuntimeClassName method
 ms.assetid: f6388163-fe65-4948-a4bc-ae6826f480e7
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9987c539bb67e3989af851c3e4088e25b67f9136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass::GetRuntimeClassName-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName-Methode
 
-Ruft den Ablaufklassennamen des aktuellen RuntimeClass\-Objekts ab.  
-  
-## Syntax  
-  
-```  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-## Parameter  
- `runtimeName`  
- Wenn dieser Vorgang abgeschlossen wurde, der Ablaufklassenname.  
-  
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## Hinweise  
- Ein Assertionsfehler wird ausgegeben, wenn \_\_WRL\_STRICT\_\_or \_\_WRL\_FORCE\_INSPECTABLE\_CLASS\_MACRO nicht definiert ist.  
-  
-## Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## Siehe auch  
- [RuntimeClass\-Klasse](../windows/runtimeclass-class.md)
+Ruft die Laufzeitklasse-Namen des aktuellen RuntimeClass-Objekts ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*runtimeName*  
+Wenn dieser Vorgang abgeschlossen wird, der Name der Common Language Runtime-Klasse.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Ein Assert-Fehler wird ausgegeben, wenn & #95; & #95; WRL_STRICT & #95; & #95; oder & #95; & #95; WRL_FORCE_INSPECTABLE_CLASS_MACRO & #95; & #95; ist nicht definiert.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[RuntimeClass-Klasse](../windows/runtimeclass-class.md)

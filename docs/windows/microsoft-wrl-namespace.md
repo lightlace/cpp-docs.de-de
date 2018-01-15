@@ -1,37 +1,39 @@
 ---
-title: "Microsoft::WRL-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL"
-  - "module/Microsoft::WRL"
-  - "async/Microsoft::WRL"
-  - "internal/Microsoft::WRL"
-  - "event/Microsoft::WRL"
-  - "ftm/Microsoft::WRL"
-  - "client/Microsoft::WRL"
-  - "corewrappers/Microsoft::WRL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WRL-Namespace"
+title: 'Microsoft:: wrl-Namespace | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- implements/Microsoft::WRL
+- module/Microsoft::WRL
+- async/Microsoft::WRL
+- internal/Microsoft::WRL
+- event/Microsoft::WRL
+- ftm/Microsoft::WRL
+- client/Microsoft::WRL
+- corewrappers/Microsoft::WRL
+dev_langs: C++
+helpviewer_keywords: WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Microsoft::WRL-Namespace
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definiert die grundlegenden Typen, die [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] bilden.  
+# <a name="microsoftwrl-namespace"></a>Microsoft::WRL-Namespace
+Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +41,7 @@ Definiert die grundlegenden Typen, die [!INCLUDE[cppwrl_short](../windows/includ
 namespace Microsoft::WRL;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -62,7 +64,7 @@ namespace Microsoft::WRL;
 |[RuntimeClass-Klasse](../windows/runtimeclass-class.md)|Stellt eine instanziierte Klasse dar, die die angegebene Anzahl von Schnittstellen erbt, und gewährt Unterstützung für die angegebene Windows-Runtime, klassisches COM und schwache Verweise.|  
 |[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)|Stellt einen grundlegenden Mechanismus für das Erstellen einer Windows-Runtime oder einer klassischen COM-Basisklasse bereit.|  
 |[SimpleClassFactory-Klasse](../windows/simpleclassfactory-class.md)|Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.|  
-|[WeakRef-Klasse](../windows/weakref-class.md)|Stellt eine *schwachen Verweis* die verwendet werden kann, indem nur die Windows-Runtime nicht klassischen COM Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|  
+|[WeakRef-Klasse](../windows/weakref-class.md)|Stellt einen *schwachen Verweis* dar, der nur durch die Windows-Runtime und nicht durch die klassische COM verwendet werden kann. Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|  
   
 ### <a name="structures"></a>Strukturen  
   
@@ -72,11 +74,11 @@ namespace Microsoft::WRL;
 |[CloakedIid-Struktur](../windows/cloakediid-structure.md)|Zeigt „RuntimeClass“-, „Implements“- und „ChainInterfaces“-Vorlagen an, dass auf die angegebene Schnittstelle in der IID-Liste nicht zugegriffen werden kann.|  
 |[Implements-Struktur](../windows/implements-structure.md)|Implementiert „QueryInterface“ und „GetIid“ für die angegebene Schnittstelle.|  
 |[MixIn-Struktur](../windows/mixin-structure.md)|Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofern vorhanden) und dann aus klassischen COM-Schnittstellen abgeleitet wird.|  
-|[RuntimeClassFlags-Struktur](../windows/runtimeclassflags-structure.md)|Enthält den Typ für eine Instanz von einer [RuntimeClass](../windows/runtimeclass-class.md).|  
+|[RuntimeClassFlags-Struktur](../windows/runtimeclassflags-structure.md)|Enthält den Typ für eine Instanz von einem [RuntimeClass](../windows/runtimeclass-class.md).|  
   
 ### <a name="enumerations"></a>Enumerationen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[AsyncResultType-Enumeration](../windows/asyncresulttype-enumeration.md)|Gibt den Typ des durch die Methode „GetResults()“ zurückgegebenen Ergebnisses zurück.|  
 |[ModuleType-Enumeration](../windows/moduletype-enumeration.md)|Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte. |  
@@ -87,15 +89,15 @@ namespace Microsoft::WRL;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[AsWeak-Funktion](../windows/asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|  
-|[Callback-Funktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|  
+|[Rückruffunktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|  
 |[CreateActivationFactory-Funktion](../windows/createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|  
 |[CreateClassFactory-Funktion](../windows/createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|  
-|[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]-Klasse.|  
+|[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** async.h client.h corewrappers.h event.h ftm.h implements.h internal.h, module.h  
+ **Header:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
   
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft::wrl::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)

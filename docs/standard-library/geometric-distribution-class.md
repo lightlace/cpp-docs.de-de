@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::geometric_distribution::param_type::p
 - random/std::geometric_distribution::param_type::operator==
 - random/std::geometric_distribution::param_type::operator!=
-- random/std::geometric_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::geometric_distribution [C++]
 - std::geometric_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 23ab208a32b193c8cf30eefd9382ac253e2518d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 21665d4ef570f7451e3c1f9739eafaf067659541
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution-Klasse
 Generiert eine geometrische Verteilung.  
@@ -78,9 +75,9 @@ public:
 ```  
 #### <a name="parameters"></a>Parameter  
 *IntType*  
-Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+*URNG* Das einheitliche Zufallszahlengenerator-Modul. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Hinweise  
 Diese Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Ganzzahltyps mit einer geometrischen Verteilung produziert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
@@ -102,7 +99,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
   
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
-Ausführliche Informationen über die Chi-Quadrat-Verteilung finden Sie im Wolfram MathWorld-Artikel [Geometric Distribution (Geometrische Verteilung)](http://go.microsoft.com/fwlink/LinkId=400529).  
+Ausführliche Informationen über die Chi-Quadrat-Verteilung finden Sie im Wolfram MathWorld-Artikel [Geometric Distribution (Geometrische Verteilung)](http://go.microsoft.com/fwlink/p/?linkid=400529).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -237,7 +234,7 @@ Die für die Erstellung der Verteilung verwendete Parameterstruktur.
   
 Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherter `p`-Wert den Wert *p* enthält.  
   
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
   
 ##  <a name="param_type"></a> geometric_distribution::param_type  
 Speichert die Parameter der Verteilung.  
@@ -267,6 +264,5 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
   
 ## <a name="see-also"></a>Siehe auch  
 [\<random>](../standard-library/random.md)
-
 
 

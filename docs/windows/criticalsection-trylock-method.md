@@ -1,32 +1,33 @@
 ---
-title: "CriticalSection::TryLock-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::TryLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLock-Methode"
+title: 'CriticalSection:: TryLock-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::TryLock
+dev_langs: C++
+helpviewer_keywords: TryLock method
 ms.assetid: 504bb87c-2cd0-4f54-b458-b3efb9789053
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f2bd717e3a91d2e0210adced36e33a89f3752fa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CriticalSection::TryLock-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Versucht, einen kritischen Abschnitt einzugeben, ohne zu blockieren.  Wenn der Aufruf erfolgreich ist, wird der aufrufende Thread Besitz des kritischen Abschnitts.  
+# <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock-Methode
+Versucht, einen kritischen Abschnitt ohne Blockierung zu geben. Wenn der Aufruf erfolgreich ist, übernimmt der aufrufende Thread den Besitz der kritische Abschnitt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 SyncLock TryLock();  
@@ -36,20 +37,20 @@ static SyncLock TryLock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `cs`  
- Ein vom Benutzer angegebenes kritisches Abschnittsobjekt.  
+ Ein benutzerdefiniertes kritischen Abschnitt-Objekt.  
   
-## Rückgabewert  
- Ein Wert ungleich 0 \(null\), wenn ein kritischer Abschnitt erfolgreich eingegeben wird oder der aktuelle Thread besitzt bereits den kritischen Abschnitt.  Null wenn ein anderer Thread bereits den kritischen Abschnitt besitzt.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Wert ungleich NULL, wenn der kritische Abschnitt erfolgreich eingegeben wird oder der aktuelle Thread besitzt bereits den kritischen Abschnitt. 0 (null), wenn ein anderer Thread den kritischen Abschnitt bereits besitzt.  
   
-## Hinweise  
- Die erste Funktion **TryLock** beeinflusst das aktuelle kritischen Abschnittsobjekt.  Die zweite **TryLock**\-Funktion betrifft einen vom Benutzer angegebenen kritischen Abschnitt.  
+## <a name="remarks"></a>Hinweise  
+ Die erste **TryLock** Funktion wirkt sich auf das aktuelle Objekt von kritischen Abschnitts. Die zweite **TryLock** Funktion wirkt sich auf ein benutzerdefiniertes kritischen Abschnitts.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [Critical\_Section\-Klasse](../windows/criticalsection-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CriticalSection-Klasse](../windows/criticalsection-class.md)

@@ -1,32 +1,33 @@
 ---
-title: "db_column | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_column"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_column attribute"
+title: Db_column | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_column
+dev_langs: C++
+helpviewer_keywords: db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5fe2d3c5edb4b90676c3880ae422c1fb507cd164
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# db_column
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dbcolumn"></a>db_column
 Bindet eine angegebene Spalte auf eine Variable im Rowset.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,41 +41,41 @@ Bindet eine angegebene Spalte auf eine Variable im Rowset.
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ordinal`  
- Der ordinale Spaltennummer \(**DBCOLUMNINFO** Ordnungszahl\) oder Spaltenname \(ANSI oder Unicode\-Zeichenfolge\) entspricht einem Feld im Rowset, um Daten zu binden.  Wenn Sie Zahlen verwenden, können Sie nachfolgende Ordnungszahlen überspringen \(z. B.: 1, 2, 3, 5\).  Der Name enthält möglicherweise leer, wenn der OLE DB\-Anbieter, den Sie verwenden sie unterstützen.  Sie können z. B. eines der folgenden Formate aufweisen:  
+ Die Spaltenordnungszahl (**DBCOLUMNINFO** Ordnungszahl) oder Spaltennamen (ANSI oder Unicode-Zeichenfolge), ein Feld in das Rowset, das zum Binden von Daten entspricht. Wenn Sie Zahlen verwenden, können Sie aufeinander folgende Ordinalzahlen überspringen (z. B.: 1, 2, 3, 5). Der Name darf Leerzeichen enthalten, sofern die Verwendung von OLE DB-Anbieter unterstützt. Beispielsweise können Sie eine der folgenden Formate:  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  
   
- *dbtype* \(optional\)  
- OLE DB [Typ\-Indikator](https://msdn.microsoft.com/en-us/library/ms711251.aspx) für den Eintrag Spalten.  
+ *DbType* (optional)  
+ OLE DB- ["Typindikator" als](https://msdn.microsoft.com/en-us/library/ms711251.aspx) für den Eintrag in der Spalte.  
   
- *Genauigkeit* \(optional\)  
- Die für den Eintrag Spalten zu verwendenden Genauigkeit.  Weitere Informationen finden Sie in der Beschreibung des `bPrecision`\-Elements [DBBINDING\-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *Genauigkeit* (optional)  
+ Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Einzelheiten finden Sie in der Beschreibung der `bPrecision` Element von der [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *Dezimalstellen* \(optional\)  
- Die für den Eintrag Spalten, Skalierung verwendet werden soll.  Ausführliche Informationen finden Sie in der Beschreibung von `bScale`\-Element [DBBINDING\-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *Skalierung* (optional)  
+ Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element von der [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *Status* \(optional\)  
- Eine Membervariable verwendet, um den Status dieser Spalte enthält.  Der Status gibt, ob der Spaltenwert ein Datenwert oder ein anderer Wert ist, z **NULL**an.  Mögliche Werte finden Sie in der [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx)*OLE DB\-Programmierreferenz*.  
+ *Status* (optional)  
+ Eine Membervariable verwendet, um den Status dieser Spalte zu halten. Der Status gibt an, ob der Spaltenwert wie z. B. einen Datenwert oder ein anderer Wert ist **NULL**. Mögliche Werte finden Sie unter [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE DB Programmer's Reference*.  
   
- *Length* \(optional\)  
- Eine Membervariable verwendet, um die Größe der Spalte in Bytes enthält.  
+ *Länge* (optional)  
+ Eine Membervariable dar, das die Größe der Spalte in Bytes enthält.  
   
-## Hinweise  
- **db\_column** bindet die angegebene Tabellenspalte auf eine Variable im Rowset.  Sie schränkt Memberdaten ab, die an er\-basiert Bindung in OLE DB `IAccessor`teilnehmen können.  Dieses Attribut richtet die Spaltenzuordnung, die normalerweise mithilfe der OLE DB\-Consumer\-Makros [BEGIN\_COLUMN\_MAP](../data/oledb/begin-column-map.md), [END\_COLUMN\_MAP](../data/oledb/end-column-map.md)und [COLUMN\_ENTRY](../data/oledb/column-entry.md)definiert wurde.  Diese bearbeiten OLE DB [DBBINDING\-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx) , um die angegebene Spalte gebunden wird.  Jeder Member, den Sie mit dem **db\_column**\-Attribut kennzeichnen, nimmt einen Eintrag in der Spaltenzuordnung in Form eines Spalten Zieleintrags.  Daher rufen Sie dieses Attribut an, in dem Sie die Spaltenzuordnung, d. h. in den Befehl oder die Tabellenklasse einfügen würden.  
+## <a name="remarks"></a>Hinweise  
+ **Db_column** bindet die angegebene Tabellenspalte an eine Variable im Rowset. Er begrenzt Memberdaten, die OLE DB-beteiligt sein können `IAccessor`-basierten Bindung. Dieses Attribut richtet die spaltenzuordnung normalerweise definiert mithilfe der OLE DB-Consumer-Makros [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), und [COLUMN_ENTRY](../data/oledb/column-entry.md). Diese Bearbeitung der OLE DB- [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx) die angegebene Spalte zu binden. Jedes Element aus, markieren Sie mit, der **Db_column** Attribut nimmt einen Eintrag in der spaltenzuordnung in Form von einem Eintrag in der Spalte. Daher rufen Sie dieses Attribut, in dem Sie die spaltenzuordnung, also in der Klasse Befehlsklasse oder Tabellenklasse setzen würden.  
   
- Verwenden Sie **db\_column** entweder in Verbindung mit den [db\_table](../windows/db-table.md) oder [db\_command](../windows/db-command.md)\-Attributen.  
+ Verwendung **Db_column** in Verbindung mit der [Db_table](../windows/db-table.md) oder [Db_command](../windows/db-command.md) Attribute.  
   
- Wenn der Consumer Attribut für Textanbieter dieses Attribut auf eine Klasse angewendet wird, benennt der Compiler die Klasse zum \_TheClassNameAccessor, in dem *TheClassName* der Name ist, den Sie für die Klasse haben, und der Compiler außerdem eine Klasse erstellt, die *TheClassName* aufgerufen wird *,* die vom \_TheClassNameAccessor berechnet.  In der Klassenansicht finden Sie unter beide Klassen.  
+ Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
- Beispiele dieses Attributs, das in einer Anwendung verwendet wird, finden Sie in den Beispielen [AtlAgent](assetId:///52bef5da-c1a0-4223-b4e6-9e464b6db409)und [MultiRead](assetId:///5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Beispiele für dieses Attribut in einer Anwendung verwendet, finden Sie unter den Beispielen [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), und [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
-## Beispiel  
- In diesem Beispiel umschließt eine Spalte in einer Tabelle zu einem **long** Datenmember und gibt Datenmember für Status und Länge Feldern an.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel bindet eine Spalte in einer Tabelle zu einer **lange** -Datenmember und Felder Status und Länge angegeben.  
   
 ```  
 // db_column_1.cpp  
@@ -92,8 +93,8 @@ class CProducts {
 };  
 ```  
   
-## Beispiel  
- In diesem Beispiel umschließt vier Spalten **long**, einer Zeichenfolge, einen Zeitstempel und eine **DB\_NUMERIC** Ganzzahl, in dieser Reihenfolge.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel bindet vier Spalten zu einer **lange**, eine Zeichenfolge, die einen Zeitstempel an, und ein **DB_NUMERIC** ganze Zahl, die in dieser Reihenfolge.  
   
 ```  
 // db_column_2.cpp  
@@ -111,20 +112,19 @@ class CProducts {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, Member, Methode|  
+|**Betrifft**|**Klasse**, `struct`, Member, -Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [OLE Consumerattribute DB-](../windows/ole-db-consumer-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   

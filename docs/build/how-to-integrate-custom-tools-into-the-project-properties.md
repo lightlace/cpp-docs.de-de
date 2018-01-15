@@ -15,18 +15,19 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b19c1175fb5f39599a9ccaeae66d1fc53fdab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a762fc573953bcfb09180b9b830b761448d87a0d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Gewusst wie: Integrieren von benutzerdefinierte Tools in die Projekteigenschaften
 Sie können Optionen für benutzerdefinierte Tools in Visual Studio hinzufügen **Eigenschaftenseiten** Fenster durch das Erstellen einer zugrunde liegenden XML-Schemadatei.  
   
  Die **Konfigurationseigenschaften** Teil der **Eigenschaftenseiten** Fenster wird angezeigt, die als bekanntermaßen Einstellungsgruppen *Regeln*. Jede Regel enthält die Einstellungen für ein Tool oder eine Gruppe von Funktionen. Z. B. die **Linker** Regel enthält die Einstellungen für den Linkertool. Die Einstellungen in einer Regel können unterteilt *Kategorien*.  
   
- Dieses Dokument erläutert, wie Sie eine Datei in einem Set-Verzeichnis zu erstellen, die Eigenschaften für ein eigenes Tool enthält, sodass die Eigenschaften beim Start von Visual Studio geladen werden. Informationen zum Ändern der Datei finden Sie unter [Plattform Erweiterbarkeit Teil 2](http://go.microsoft.com/fwlink/?LinkID=191489) im Visual Studio-Projekt-Team-Blog.  
+ Dieses Dokument erläutert, wie Sie eine Datei in einem Set-Verzeichnis zu erstellen, die Eigenschaften für ein eigenes Tool enthält, sodass die Eigenschaften beim Start von Visual Studio geladen werden. Informationen zum Ändern der Datei finden Sie unter [Plattform Erweiterbarkeit Teil 2](http://go.microsoft.com/fwlink/p/?linkid=191489) im Visual Studio-Projekt-Team-Blog.  
   
 ### <a name="to-add-or-change-project-properties"></a>Hinzufügen oder Ändern von Projekteigenschaften  
   

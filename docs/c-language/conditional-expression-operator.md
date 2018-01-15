@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e8c9b14ece9f3af56be11909679592cfe5ca2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acfb89584de60c41d17c532b389099b815d0fb3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conditional-expression-operator"></a>Bedingter Ausdrucksoperator
 C hat einen ternären Operator: den bedingten Ausdrucksoperator (**? :**).  
@@ -30,7 +31,7 @@ C hat einen ternären Operator: den bedingten Ausdrucksoperator (**? :**).
  *conditional-expression*:  
  *logical-OR-expression*  
   
- *logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*  
+ *logical-OR expression*  **?**  *expression* **:** *conditional-expression*  
   
  Der Ausdruck für *logical-OR-expression* muss über Ganzzahl-, Gleitkomma- oder Zeigertypen verfügen. Er wird hinsichtlich seiner Übereinstimmung mit 0 ausgewertet. Ein Sequenzpunkt folgt dem Ausdruck für *logical-OR-expression*. Die Auswertung der Operanden wird wie folgt ausgeführt:  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3dc050418d8053e04053d5eafbd328e49bd473b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Exemplarische Vorgehensweise: Debuggen einer C++ AMP-Anwendung
 In diesem Thema veranschaulicht, wie eine Anwendung zu debuggen, die C++ Accelerated Massive Parallelism (C++-AMP) verwendet wird, um die grafikverarbeitungseinheit (GPU) nutzen. Er verwendet ein paralleler Reduction-Programm, das sich ein großes Array von ganzen Zahlen addiert. In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
@@ -60,7 +61,7 @@ In diesem Thema veranschaulicht, wie eine Anwendung zu debuggen, die C++ Acceler
   
 4.  Wählen Sie **Win32-Konsolenanwendung**, Typ `AMPMapReduce` in der **Namen** ein, und wählen Sie dann die **OK** Schaltfläche.  
   
-5.  Wählen Sie die **Weiter** Schaltfläche.  
+5.  Klicken Sie auf **Weiter**.  
   
 6.  Deaktivieren der **vorkompilierter Header** Kontrollkästchen, und wählen Sie dann die **Fertig stellen** Schaltfläche.  
   
@@ -212,11 +213,11 @@ In diesem Thema veranschaulicht, wie eine Anwendung zu debuggen, die C++ Acceler
      ![CPU-Haltepunkte](../../parallel/amp/media/campcpubreakpoints.png "Campcpubreakpoints")  
 CPU-Haltepunkte  
   
-5.  Wählen Sie in der Menüleiste **Debuggen**, **Debuggen**.  
+5.  Klicken Sie in der Menüleiste auf **Debuggen** und dann auf **Debuggen starten**.  
   
 6.  In der **"lokal"** Fenster, beachten Sie den Wert für `stride_size` fort, bis der Haltepunkt in Zeile 70 erreicht ist.  
   
-7.  Wählen Sie in der Menüleiste **Debuggen**, **Beenden des Debuggens**.  
+7.  Wählen Sie auf der Menüleiste **Debuggen** und dann **Debuggen beenden** aus.  
   
 ## <a name="debugging-the-gpu-code"></a>Debuggen von GPU-Code  
  In diesem Abschnitt wird gezeigt, wie die GPU-Code zu debuggen, dem Code enthalten in der `sum_kernel_tiled` Funktion. GPU-Code berechnet die Summe von ganzen Zahlen für jeden "Block" Parallel.  
@@ -238,7 +239,7 @@ CPU-Haltepunkte
      ![GPU-Haltepunkte](../../parallel/amp/media/campgpubreakpoints.png "Campgpubreakpoints")  
 GPU-Haltepunkt  
   
-7.  Wählen Sie in der Menüleiste **Debuggen**, **Debuggen**. Die Haltepunkte in der CPU-Code in den Zeilen 67 und 70 werden nicht ausgeführt, während der GPU-debugging, da diese Codezeilen auf der CPU ausgeführt werden.  
+7.  Klicken Sie in der Menüleiste auf **Debuggen** und dann auf **Debuggen starten**. Die Haltepunkte in der CPU-Code in den Zeilen 67 und 70 werden nicht ausgeführt, während der GPU-debugging, da diese Codezeilen auf der CPU ausgeführt werden.  
   
 ### <a name="to-use-the-gpu-threads-window"></a>Verwenden Sie das GPU-Threadfenster  
   
@@ -393,5 +394,5 @@ Gruppierte Threads im GPU-Threadfenster
  [Debuggen von GPU-Code](/visualstudio/debugger/debugging-gpu-code)   
  [Vorgehensweise: Verwenden Sie das GPU-Threadfenster](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
  [Vorgehensweise: Verwenden des parallelen Überwachungsfensters](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
- [Analysieren von C++ AMP-Code mit der Parallelitätsschnellansicht](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)
+ [Analysieren von C++ AMP-Code mit der Parallelitätsschnellansicht](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
 

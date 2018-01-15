@@ -1,28 +1,29 @@
 ---
-title: "ARM Assembler Command-Line Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Befehlszeilenreferenz des ARM-Assembler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# ARM Assembler Command-Line Reference
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieser Artikel enthält Angaben über die Microsoft\-ARM\-Assembler in der Befehlszeile  *Armasm*, die ARMv7\-Thumb\-Assemblysprache kompiliert, in der Microsoft\-Implementierung von der COFF Common Object File Format \(\).  Der Linker kann COFF\-Code, mit dem Objektcode verknüpfen, die produziert wird, durch den ARM\-Assembler oder C\-Compiler, zusammen mit Objektbibliotheken, die durch den Bibliothekar erstellt werden.  
+# <a name="arm-assembler-command-line-reference"></a>Befehlszeilenreferenz des ARM-Assemblers
+Dieser Artikel enthält Befehlszeilen Informationen zu den Microsoft-ARM-Assembler *Armasm*, die kompiliert ARMv7 Thumb-Assemblysprache in die Microsoft-Implementierung des Common Object File Format (COFF). Der Linker kann COFF-Code mit Objektcode verknüpfen, das erzeugt wird, indem der ARM-Assembler oder der C-Compiler, zusammen mit der Objektbibliotheken, die durch den Bibliothekar erstellt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 armasm [[options]] sourcefile objectfile  
@@ -32,65 +33,65 @@ armasm [[options]] sourcefile objectfile
 armasm [[options]] -o objectfile sourcefile  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `options`  
- \-Fehler`filename`  
- Umleiten von Fehler\- und Warnmeldungen, `filename`.  
+ -Fehler`filename`  
+ Umleiten von Fehler- und Warnmeldungen zu `filename`.  
   
- \-i`dir[;dir]`  
- Fügen Sie die angegebenen Verzeichnisse zu Include\-Suchpfad.  
+ -i`dir[;dir]`  
+ Die angegebenen Verzeichnisse zur Suche Includepfad hinzufügen.  
   
- \-vordefinieren`directive`  
- Geben Sie eine Richtlinie SETA, SETL oder Sätze ein Symbol vordefinieren.  Beispiel: **armasm.exe \-predefine "COUNT SETA 150" source.asm** Weitere Informationen finden Sie unter der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ -vordefinieren`directive`  
+ Geben Sie eine Direktive SETEINE, SETL oder SETS vordefinieren ein Symbol. Beispiel: **armasm.exe-vordefinieren "COUNT SETEINE 150" source.asm**. Weitere Informationen finden Sie unter der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
- Nowarn\-  
+ -nowarn  
  Deaktivieren Sie alle Warnmeldungen.  
   
- \-ignorieren`warning`  
- Die angegebene Warnung zu deaktivieren.  Mögliche Werte finden Sie im Abschnitt über Warnungen.  
+ -ignorieren`warning`  
+ Deaktivieren Sie die angegebene Warnung. Mögliche Werte finden Sie im Abschnitt zu den Warnungen.  
   
- \-Hilfe  
- Drucken Sie die Befehlszeilenhilfe angezeigt.  
+ -Hilfe  
+ Drucken Sie die Befehlszeilenhilfe-Nachricht.  
   
- \-Maschine`machine`  
- Geben Sie den Computer im PE\-Header festlegen.  Mögliche Werte für `machine` sind:   
-**ARM**– Legt den Computertyp zu IMAGE\_FILE\_MACHINE\_ARMNT.  Dies ist die Standardeinstellung.   
-**THUMB**– Legt den Computertyp zu IMAGE\_FILE\_MACHINE\_THUMB.  
+ -Computer`machine`  
+ Geben Sie den Computer im PE-Header festgelegt.  Mögliche Werte für `machine` sind:  
+**ARM**– legt den Computertyp auf IMAGE_FILE_MACHINE_ARMNT fest. Dies ist die Standardeinstellung.   
+**THUMB**– legt den Computertyp auf IMAGE_FILE_MACHINE_THUMB fest.  
   
- \-oldit  
- ARMv7\-Stil generieren IT\-Blöcke.  In der Standardeinstellung ARMv8\-kompatible IT\-Blöcke werden generiert.  
+ -oldit  
+ ARMv7-Stil generieren IT-Blöcken.  Standardmäßig ARMv8-kompatiblen IT-Blöcke werden generiert.  
   
- \-über`filename`  
- Lesen zusätzliche Befehlszeilenargumente von `filename`.  
+ -über`filename`  
+ Lesen zusätzliche Befehlszeilenargumente aus `filename`.  
   
- \-16  
- Bauen Sie die Quelle als 16\-Bit\-Thumb\-Anweisungen.  Dies ist die Standardeinstellung.  
+ -16  
+ Quelle als 16-Bit-Thumb-Anweisungen zu assemblieren.  Dies ist die Standardeinstellung.  
   
- \-32  
- Bauen Sie die Quelle als 32\-Bit\-ARM\-Anweisungen.  
+ -32  
+ Quelle als 32-Bit-ARM-Instruktionen zu assemblieren.  
   
- \-g  
- Debuginformationen generiert.  
+ -g  
+ Debuginformationen zu generieren.  
   
- \-ErrorReport:`option`  
- Geben Sie wie interne Assembler Fehler an Microsoft gemeldet werden.  Mögliche Werte für `option` sind:   
-**none**— Senden Sie keine Berichte.   
-**prompt**— Der Benutzer aufgefordert, umgehend Berichten.   
-**queue**— Fordert den Benutzer zum Senden von Berichten bei der nächsten Administratoranmeldung von.  Dies ist die Standardeinstellung.   
-**send**— Senden Sie Berichte automatisch.  
+ -ErrorReport:`option`  
+ Geben Sie an, wie interne Assembler Fehler an Microsoft gemeldet werden.  Mögliche Werte für `option` sind:   
+**keine**– keine Berichte senden.   
+**Eingabeaufforderung**– der Benutzer aufgefordert, die Berichte sofort übertragen.   
+**Warteschlange**– der Benutzer aufgefordert, die Berichte bei der nächsten administratoranmeldung zu senden. Dies ist die Standardeinstellung.   
+**Senden von**– automatisch Berichte senden.  
   
  `sourcefile`  
  Der Name der Quelldatei.  
   
  `objectfile`  
- Der Name der Objektdatei \(Output\).  
+ Der Name der Objektdatei (Ausgabe).  
   
- Im folgenden Beispiel wird veranschaulicht, wie mithilfe von Armasm in einem typischen Szenario.  Verwenden Sie zuerst Armasm, um eine Assembly Language\-Quelldatei \(ASM\) in eine Objektdatei \(.obj\) erstellen.  Dann verwenden Sie die CL\-Befehlszeile C\-Compiler zum Kompilieren einer Quelldatei \(c\), und auch Geben Sie die Linker\-Option zum Verknüpfen der ARM\-Objekt\-Datei an.  
+ Im folgenden Beispiel wird veranschaulicht, wie Armasm in einem typischen Szenario verwendet wird. Verwenden Sie zuerst Armasm zum Erstellen einer Quelldatei Assemblysprache (ASM) eine Objektdatei (obj). Klicken Sie dann verwenden Sie der CL-Befehlszeilen-C-Compiler zum Kompilieren einer Quelldatei (c), und auch die Linkeroption zum Verknüpfen der ARM-Objektdatei.  
   
- **armasm myasmcode.asm \-o myasmcode.obj**  
+ **Armasm myasmcode.asm -o myasmcode.obj**  
   
- **cl myccode.c \/link myasmcode.obj**  
+ **CL myccode.c/Link myasmcode.obj**  
   
-## Siehe auch  
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)   
- [ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)
+## <a name="see-also"></a>Siehe auch  
+ [Diagnosemeldungen des ARM-Assembler](../../assembler/arm/arm-assembler-diagnostic-messages.md)   
+ [ARM-Assemblyanweisungen](../../assembler/arm/arm-assembler-directives.md)

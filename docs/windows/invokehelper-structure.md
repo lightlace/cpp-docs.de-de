@@ -1,32 +1,33 @@
 ---
-title: "InvokeHelper-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeHelper-Struktur"
+title: InvokeHelper-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper
+dev_langs: C++
+helpviewer_keywords: InvokeHelper structure
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acabc6833e23c4f17bc337b67a89578bc95bbd6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# InvokeHelper-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="invokehelper-structure"></a>InvokeHelper-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -87,50 +88,50 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TDelegateInterface`  
  `TCallback`  
- Der Typ der Ereignishandlerfunktion.  
+ Der Typ des Ereignishandlerfunktion.  
   
  `argCount`  
- Die Anzahl von Argumenten in einer InvokeHelper\-Spezialisierung.  
+ Die Anzahl der Argumente in der eine Spezialisierung InvokeHelper.  
   
-## Hinweise  
- Stellt eine Implementierung der Invoke\(\) Methode auf Grundlage der angegebenen Anzahl und den Typ von Argumenten bereit.  
+## <a name="remarks"></a>Hinweise  
+ Stellt eine Implementierung der Methode Invoke() basierend auf der angegebenen Nummer und Typ der Argumente.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`Traits`|Ein Synonym für die Klasse, die den Typ jedes Ereignishandlerarguments definiert.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`Traits`|Ein Synonym für die Klasse, die den Typ jedes Arguments der Ereignis-Handler definiert.|  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[InvokeHelper::InvokeHelper\-Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Initialisiert eine neue Instanz der InvokeHelper\-Klasse.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[InvokeHelper::InvokeHelper-Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Initialisiert eine neue Instanz der InvokeHelper-Klasse.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[InvokeHelper::Invoke\-Methode](../windows/invokehelper-invoke-method.md)|Ruft den Ereignishandler auf, dessen Signatur die angegebene Anzahl von Argumenten enthält.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[InvokeHelper::Invoke-Methode](../windows/invokehelper-invoke-method.md)|Ruft den Ereignishandler, dessen Signatur mit der angegebene Anzahl von Argumenten enthält.|  
   
-### Öffentliche Datenmember  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[InvokeHelper::callback\_\-Datenmember](../windows/invokehelper-callback-data-member.md)|Stellt den Ereignishandler dar, die aufgerufen werden soll, wenn ein Ereignis eintritt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[InvokeHelper::callback_-Datenmember](../windows/invokehelper-callback-data-member.md)|Stellt den Ereignishandler, der beim Eintreten eines Ereignisses aufgerufen.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `InvokeHelper`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

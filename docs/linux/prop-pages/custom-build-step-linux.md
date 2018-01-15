@@ -11,24 +11,21 @@ ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.IVCEventTool.CommandLine
-- VC.Project.IVCEventTool.Description
-- VC.Project.IVCEventTool.ExcludedFromBuild
-- VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: 77d483e9d4dc74cbe9ba2736a26561bb410fa6ca
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: ae749fa161dba2957f3e621ce42c610153594e66
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="custom-build-step-properties-linux-c"></a>Benutzerdefinierte Buildschritteigenschaften (Linux C++)
 
-
-Eigenschaft | Beschreibung
+Eigenschaft | description
 --- | ---
 Befehlszeile | Der vom benutzerdefinierten Buildschritt auszuführende Befehl.
-Beschreibung | Eine Meldung, die anzeigt, wann der benutzerdefinierte Buildschritt läuft.
+description | Eine Meldung, die anzeigt, wann der benutzerdefinierte Buildschritt läuft.
 Ausgaben | Die Ausgabedatei, die der benutzerdefinierte Buildschritt generiert. Diese Einstellung ist erforderlich, damit inkrementelle Builds ordnungsgemäß funktionieren.
 Zusätzliche Abhängigkeiten | Eine durch Semikolons getrennte Liste von zusätzlichen Eingabedateien, die für den benutzerdefinierten Buildschritt verwendet werden soll.
 Im Anschluss ausführen und vorher ausführen | Diese Optionen definieren, wann ein benutzerdefinierter Buildschritt im Buildprozess relativ zu den aufgelisteten Zielen ausgeführt wird. Die am häufigste aufgelisteten Ziele sind BuildGenerateSources, BuildCompile und BuildLink, da sie die Hauptschritte im Buildprozess darstellen. Andere oft aufgelisteten Ziele sind Midl, CLCompile und Link.

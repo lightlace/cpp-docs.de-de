@@ -1,30 +1,31 @@
 ---
-title: "ClassFactory::LockServer-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::LockServer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LockServer-Methode"
+title: 'ClassFactory:: Lockserver-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::LockServer
+dev_langs: C++
+helpviewer_keywords: LockServer method
 ms.assetid: 8d859815-956d-4f81-a5af-7cdee7e945de
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5f646f198d884e677b622a312cfdb6187802e1c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ClassFactory::LockServer-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte, die vom aktuellen ClassFactory Objekt nachverfolgt werden.  
+# <a name="classfactorylockserver-method"></a>ClassFactory::LockServer-Methode
+Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte, die vom aktuellen Objekt ClassFactory nachverfolgt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +37,13 @@ STDMETHOD(
   
 #### <a name="parameters"></a>Parameter  
  `fLock`  
- `true` die Anzahl der überwachten Objekte zu erhöhen. `false` um die Anzahl der überwachten Objekte zu verringern.  
+ `true`die Anzahl der überwachten Objekte zu erhöhen. `false`um die Anzahl der überwachten Objekte zu verringern.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_FAIL.  
+ S_OK, wenn erfolgreich; andernfalls E_FAIL zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- ClassFactory verfolgt des Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
+ ClassFactory der nachverfolgt Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

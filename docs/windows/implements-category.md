@@ -1,32 +1,33 @@
 ---
-title: "implements_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements_category attribute"
+title: Implements_category | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements_category
+dev_langs: C++
+helpviewer_keywords: implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6ab6206851385dcf7bf73cf56730093e7fc5c48f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# implements_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Kategorien an, die von der Zielklasse implementiert werden.  
+# <a name="implementscategory"></a>implements_category
+Gibt die Komponentenkategorien, die von der Zielklasse implementiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,17 +36,17 @@ Gibt die Kategorien an, die von der Zielklasse implementiert werden.
 ) ]  
 ```  
   
-#### Parameter  
- **implements\_category**  
- Die ID der implementierten Kategorie.  
+#### <a name="parameters"></a>Parameter  
+ **implements_category**  
+ Die ID der Kategorie implementiert.  
   
-## Hinweise  
- Das Attribut **implements\_category** C\+\+ gibt die Kategorien an, die von der Zielklasse implementiert werden.  Dies geschieht, indem eine KATEGORIEN erstellt und die anderen Einträge zugeordnet, die durch das Hinzufügen **implements\_category**\-Attribut angegeben werden.  Weitere Informationen finden Sie unter [Was sind Teil von Kategorien und ihrer Funktionsweise?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
+## <a name="remarks"></a>Hinweise  
+ Die **Implements_category** C++-Attribut gibt an, die von der Zielklasse implementiert Komponentenkategorien. Dies erfolgt durch Erstellen einer Kategorie Zuordnung und Hinzufügen von trennen Sie die Einträge gemäß der **Implements_category** Attribut. Weitere Informationen finden Sie unter [was Komponentenkategorien und führen sie Funktionsweise sind?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
   
- Dieses Attribut erfordert, dass [Co\-Klasse](../windows/coclass.md), [ProgID](../windows/progid.md)oder [vi\_progid](../windows/vi-progid.md)\-Attribut \(oder ein anderes Attribut, das ein solcher Test vorhanden\), bedeutet auch auf das gleiche Element übernommen werden.  Wenn ein einzelnes Attribut wird, die anderen zwei automatisch angewendet werden.  Wenn z. B. **progid** angewendet wird, werden **vi\_progid** und **coclass** ebenfalls angewendet.  
+ Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Wenn z.B. **progid** angewendet wird, werden **vi_progid** und **coclass** ebenso angewendet.  
   
-## Beispiel  
- Der folgende Code gibt an, dass das nächste Objekt die Kategorie Steuerelements implementiert.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code gibt an, dass das folgende Objekt die Steuerelement-Kategorie implementiert.  
   
 ```  
 // cpp_attr_ref_implements_category.cpp  
@@ -60,21 +61,21 @@ Gibt die Kategorien an, die von der Zielklasse implementiert werden.
 class CMyClass {};  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|Eines der folgenden Schritte aus: **coclass**, **progid**oder **vi\_progid**|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Eines der folgenden: **Coclass**, **progid**, oder **Vi_progid**|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [IMPLEMENTED\_CATEGORY](../Topic/IMPLEMENTED_CATEGORY.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [COM-Attribute](../windows/com-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
+ 

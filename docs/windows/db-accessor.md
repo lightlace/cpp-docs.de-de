@@ -1,32 +1,33 @@
 ---
-title: "db_accessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_accessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_accessor attribute"
+title: Db_accessor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_accessor
+dev_langs: C++
+helpviewer_keywords: db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5faa84773fbf1fe15fd0223c97f0361f1215b149
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# db_accessor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gruppen **db\_column**\-Attribute, die an er\-basiert Bindung `IAccessor`teilnehmen.  
+# <a name="dbaccessor"></a>db_accessor
+Gruppen **Db_column** Attribute, die Teilnahme an `IAccessor`-basierten Bindung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,24 +37,24 @@ Gruppen **db\_column**\-Attribute, die an er\-basiert Bindung `IAccessor`teilneh
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *num*  
- Gibt die Zahl an \(Accessor einen nullbasierten ganzzahligen Index\).  Sie müssen in Zahlen Accessor mithilfe der Reihenfolge zunehmender ganze Zahlen oder der definierten Werte angeben.  
+ Gibt die Anzahl der Accessor (einen nullbasierten ganzzahligen Index). Sie müssen die Zugriffsmethode Zahlen in aufsteigender Reihenfolge anhand von ganzen Zahlen oder benutzerdefinierte Werte angeben.  
   
- *Auto*  
- Ein boolescher Wert, der angibt, ob der Accessor automatisch abgerufenes \(TRUE\) ist oder nicht abgerufen \(**FALSE**\).  
+ *auto*  
+ Ein boolescher Wert, der angibt, ob der Accessor automatisch abgerufen wird (**"true"**) oder nicht abgerufen (**"false"**).  
   
-## Hinweise  
- **db\_accessor** definiert den zugrunde liegenden OLE DB\-Accessor für folgende **db\_column** und **db\_param**\-Attribute in der gleichen Klasse oder Funktion.  **db\_accessor** ist ein Member der Ebene verwendet werden und wird verwendet, um **db\_column**\-Attribute zu gruppieren, die an er\-basiert Bindung in OLE DB `IAccessor`teilnehmen.  Es wird entweder in Verbindung mit den **db\_table** oder **db\_command**\-Attributen verwendet.  Dieses Attribut aufrufen und [BEGIN\_ACCESSOR](../data/oledb/begin-accessor.md) entspricht dem Aufrufen der [END\_ACCESSOR](../data/oledb/end-accessor.md) Makros vergleichbar.  
+## <a name="remarks"></a>Hinweise  
+ **Db_accessor** definiert den zugrunde liegenden OLE DB-Accessor für nachfolgende **Db_column** und **Db_param** Attribute innerhalb der gleichen Klasse oder Funktion. **Db_accessor** kann auf Memberebene verwendet werden und wird verwendet, zur Gruppe **Db_column** Attribute, die Bestandteil der OLE DB- `IAccessor`-basierten Bindung. Es dient in Verbindung mit der **Db_table** oder **Db_command** Attribute. Dieses Attribut aufrufen gleicht dem Aufruf der [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) und [END_ACCESSOR](../data/oledb/end-accessor.md) Makros.  
   
- **db\_accessor** generiert ein Rowset und bindet es an den entsprechenden Accessor ist.  Wenn Sie nicht **db\_accessor**aufrufen, wird Accessor 0 automatisch generiert und Spaltenbindungen werden alle zu diesem Accessor Datenbindungsausdrücken zugeordnet.  
+ **Db_accessor** ein Rowset generiert und bindet sie an der entsprechenden Accessor Zuordnungen. Wenn Sie nicht aufrufen **Db_accessor**Accessor 0 wird automatisch generiert und alle spaltenbindungen werden dieser Accessorblock zugeordnet werden.  
   
- **db\_accessor** Gruppen datenbank\-Spalten Befehlsbindungen in eine oder mehrere Accessoren.  Ausführliche Informationen über die Szenarien, in denen mehrere Accessoren verwenden müssen, finden Sie unter [Verwenden mehrerer Accessoren in einem Rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md).  Siehe auch „Benutzer\-Datensatz\-Unterstützung für mehrere Accessoren“ in [Benutzerdatensätze](../data/oledb/user-records.md).  
+ **Db_accessor** Gruppen Datenbank in eine oder mehrere Accessoren spaltenbindungen. Eine Erläuterung der Szenarien, in denen Sie mehrere Accessoren für Ereigniseigenschaften verwenden müssen, finden Sie unter [Verwenden mehrerer Accessoren für ein Rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md). Siehe auch "Benutzer Datensatz Unterstützung für mehrere Accessoren" in [Benutzerdatensätze](../data/oledb/user-records.md).  
   
- Wenn der Consumer Attribut für Textanbieter dieses Attribut auf eine Klasse angewendet wird, benennt der Compiler die Klasse zum \_TheClassNameAccessor, in dem *TheClassName* der Name ist, den Sie für die Klasse haben, und der Compiler außerdem eine Klasse erstellt, die *TheClassName* aufgerufen wird *,* die vom \_TheClassNameAccessor berechnet.  In der Klassenansicht finden Sie unter beide Klassen.  
+ Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
-## Beispiel  
- Im folgenden Beispiel wird **db\_accessor** , um Spalten aus der Tabelle Orders der Datenbank Northwind in zwei Accessoren zu gruppieren.  Accessor 0 ist ein automatischer Accessor, und Accessor 1 ist nicht möglich.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird **Db_accessor** zum Gruppieren der Spalten in der Orders-Tabelle aus der Northwind-Datenbank in beiden Accessoren. 0-Accessor ist eine automatische Zugriffsmethode und 1 der Accessor ist kein.  
   
 ```  
 // cpp_attr_ref_db_accessor.cpp  
@@ -75,19 +76,18 @@ public:
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Attributblöcke|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)   

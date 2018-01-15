@@ -1,32 +1,33 @@
 ---
-title: "com_interface_entry (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.com_interface_entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "com_interface_entry attribute"
+title: COM_INTERFACE_ENTRY (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.com_interface_entry
+dev_langs: C++
+helpviewer_keywords: com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 58c74602c4170cbe0816dcdf14e0196cca44af42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# com_interface_entry (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fügt einen Eintrag Schnittstellen in die COM\-Zuordnung der Zielklasse hinzu.  
+# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+Fügt einen Eintrag Schnittstelle in der Zielklasse der COM-Zuordnung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,28 +36,28 @@ Fügt einen Eintrag Schnittstellen in die COM\-Zuordnung der Zielklasse hinzu.
 ) ]  
 ```  
   
-#### Parameter  
- *com\_interface\_entry*  
- Eine Zeichenfolge, die den tatsächlichen Text des Eintrags enthält.  Eine Liste der möglichen Werte finden Sie unter [COM\_INTERFACE\_ENTRY\-Makros](../Topic/COM_INTERFACE_ENTRY%20Macros.md).  
+#### <a name="parameters"></a>Parameter  
+ *COM_INTERFACE_ENTRY*  
+ Eine Zeichenfolge mit den tatsächlichen Text des Eintrags. Eine Liste der möglichen Werte finden Sie unter [COM_INTERFACE_ENTRY Makros](../atl/reference/com-interface-entry-macros.md).  
   
-## Hinweise  
- Das Attribut `com_interface_entry` C\+\+ fügt die ungekürzten Inhalt einer Zeichenfolge in die COM\-Schnittstellenzuordnung des Zielobjekts.  Wenn das Attribut auf das Zielobjekt einmal angewendet wurde, wird der Eintrag in den Beginn der vorhandenen Schnittstellen eingefügt zugeordnet.  Wenn das Attribut wiederholt auf dasselbe Zielobjekt angewendet wird, werden die Einträge am Anfang der Schnittstellen in der Reihenfolge zugeordnet eingefügt, die sie empfangen werden.  
+## <a name="remarks"></a>Hinweise  
+ Die `com_interface_entry` C++-Attribut fügt den ungekürzt Inhalt einer Zeichenfolge in die Zuordnung des COM-Schnittstelle des Zielobjekts. Wenn das Attribut angewendet wird, sobald auf das Zielobjekt der Eintrag in der Anfang des vorhandenen schnittstellenzuordnung eingefügt wird. Wenn das Attribut mehrmals auf dasselbe Zielobjekt angewendet wird, werden die Einträge am Anfang der schnittstellenzuordnung in der Reihenfolge eingefügt, die sie empfangen werden.  
   
- Dieses Attribut erfordert, dass [Co\-Klasse](../windows/coclass.md), [ProgID](../windows/progid.md)oder [vi\_progid](../windows/vi-progid.md)\-Attribut \(oder ein anderes Attribut, das ein solcher Test vorhanden\), bedeutet auch auf das gleiche Element übernommen werden.  Wenn ein einzelnes Attribut wird, die anderen zwei automatisch angewendet werden.  Wenn z. B. **progid** angewendet wird, werden **vi\_progid** und **coclass** ebenfalls angewendet.  
+ Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Wenn z.B. **progid** angewendet wird, werden **vi_progid** und **coclass** ebenso angewendet.  
   
- Da die erste Verwendung von `com_interface_entry` bewirkt, dass die neue Schnittstelle zugeordnet zu Beginn der Schnittstellen eingefügt werden soll, muss sie eine der folgenden COM\_INTERFACE\_ENTRY\-Typen sein:  
+ Da der ersten Verwendung des `com_interface_entry` bewirkt, dass die neue Schnittstelle, um am Anfang der schnittstellenzuordnung eingefügt werden muss es sich um eine der folgenden COM_INTERFACE_ENTRY-Typen:  
   
--   COM\_INTERFACE\_ENTRY  
+-   COM_INTERFACE_ENTRY  
   
--   COM\_INTERFACE\_ENTRY\_IID  
+-   COM_INTERFACE_ENTRY_IID  
   
--   COM\_INTERFACE\_ENTRY2  
+-   COM_INTERFACE_ENTRY2  
   
--   COM\_INTERFACE\_ENTRY2\_IID  
+-   COM_INTERFACE_ENTRY2_IID  
   
- Zusätzliche Verwendung des `com_interface_entry`\-Attributs kann alle unterstützten COM\_INTERFACE\_ENTRY\-Typen verwenden.  
+ Zusätzliche Verwendungen von der `com_interface_entry` Attribut kann alle unterstützte COM_INTERFACE_ENTRY-Typen verwenden.  
   
- Diese Einschränkung ist erforderlich, da ATL den ersten Eintrag in der Schnittstellen als Identität zugeordnet **IUnknown**verwendet. Daher muss der Eintrag eine gültige Schnittstelle sein.  Beispielsweise ist das folgende Codebeispiel ungültig, da der erste Eintrag in der Schnittstellen keine wirkliche COM\-Schnittstelle zugeordnet.  
+ Diese Einschränkung ist notwendig, da den ersten Eintrag in die schnittstellenzuordnung von ATL als Identität verwendet **IUnknown**daher der Eintrag muss eine gültige Schnittstelle sein. Im folgenden Codebeispiel ist beispielsweise ungültig, da der erste Eintrag in die schnittstellenzuordnung eine tatsächliche COM-Schnittstelle nicht angegeben ist.  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -67,8 +68,8 @@ Fügt einen Eintrag Schnittstellen in die COM\-Zuordnung der Zielklasse hinzu.
    };  
 ```  
   
-## Beispiel  
- Der folgende Code fügt zwei Einträge in der vorhandenen COM\-Schnittstellenzuordnung von **CMyBaseClass**hinzu.  Das erste Element ist eine Standardschnittstelle und die zweite blendet die **IDebugTest**\-Schnittstelle aus.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code fügt zwei Einträge auf der vorhandenen COM-schnittstellenzuordnung der **CMyBaseClass**. Die erste ist eine standard-Schnittstelle, und die zweite Blendet die **IDebugTest** Schnittstelle.  
   
 ```  
 // cpp_attr_ref_com_interface_entry.cpp  
@@ -98,7 +99,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- Die resultierende COM\-Objekt\-Karte für **CMyBaseClass** lautet wie folgt:  
+ Der resultierende COM-Objekt-Zuordnung für **CMyBaseClass** lautet wie folgt:  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -111,21 +112,20 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|Ein oder mehrere der folgenden Schritte aus: **coclass**, **progid**oder **vi\_progid**.|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [COM-Attribute](../windows/com-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   

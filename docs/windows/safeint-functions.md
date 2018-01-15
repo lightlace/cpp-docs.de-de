@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7b71ee1088c60ea1c13b04fef517169f40a32d96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6ae482b7f58d64a46b82b32c6c6d62d7f69f0dce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-functions"></a>SafeInt-Funktionen
 SafeInt-Bibliothek stellt mehrere Funktionen, die Sie verwenden können, ohne das Erstellen einer Instanz von der [SafeInt-Klasse](../windows/safeint-class.md). Wenn Sie einen einzelnen mathematischen Vorgang vor Ganzzahlüberlauf schützen möchten, können Sie diese Funktionen verwenden. Wenn Sie mehrere mathematische Vorgänge zu schützen möchten, sollten Sie erstellen `SafeInt` Objekte. Es ist jedoch effizienter erstellen `SafeInt` Objekte als die Verwendung dieser Funktionen mehrmals.  
@@ -41,7 +44,7 @@ SafeInt-Bibliothek stellt mehrere Funktionen, die Sie verwenden können, ohne da
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
-|Abschnitt|Beschreibung|  
+|Bereich|Beschreibung|  
 |-------------|-----------------|  
 |[SafeInt-Klasse](../windows/safeint-class.md)|Der `SafeInt`-Klasse.|  
 |[SafeIntException-Klasse](../windows/safeintexception-class.md)|Die Exception-Klasse, die spezifisch für die SafeInt-Bibliothek.|

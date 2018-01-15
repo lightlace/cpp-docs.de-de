@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
-Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in Kapitel 7 dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102). Allerdings unterscheiden sich die Microsoft-Implementierungen von einigen Assemblydirektiven aus ARM-Assemblydirektiven ein. In diesem Artikel werden die Unterschiede erläutert.  
+Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in Kapitel 7 dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102). Allerdings unterscheiden sich die Microsoft-Implementierungen von einigen Assemblydirektiven aus ARM-Assemblydirektiven ein. In diesem Artikel werden die Unterschiede erläutert.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft-Implementierungen von ARM-Assemblydirektiven  
  BEREICH  
  Der Microsoft-ARM-Assembler unterstützt diese strukturbereichattribute: AUSZURICHTEN, CODE CODEALIGN Daten NOINIT READONLY Lese-/SCHREIBMODUS ZIEHPUNKT, ARM.  
   
- Alle außer DAUMEN und ARM funktioniert wie beschrieben in der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Alle außer DAUMEN und ARM funktioniert wie beschrieben in der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  Der Microsoft-ARM-Assembler gibt ZIEHPUNKT an, dass ein Codeabschnitt Thumb-Code enthält, und die Standardeinstellung für Codeabschnitten ist.  ARM gibt an, dass der Abschnitt ARM-Code enthält.  
   

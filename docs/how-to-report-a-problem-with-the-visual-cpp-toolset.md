@@ -1,23 +1,22 @@
 ---
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Melden eines Problems mit dem Visual C++-Toolset
 
@@ -29,9 +28,9 @@ In diesem Dokument geht es um Folgendes
 
 - [Vorbereiten des Berichts](#prepare) und Merkmale eines guten Berichts.
 
-- [Möglichkeiten zum Senden Ihres Berichts](#send) und deren Unterschiede.
-
 - [Generieren einer Reproduktion](#generate) und verschiedene Arten von Reproduktionen.
+
+- [Möglichkeiten zum Senden Ihres Berichts](#send) und deren Unterschiede.
 
 Ihre Berichte sind wichtig für uns und andere Entwickler wie Sie. Vielen Dank für Ihren Beitrag zur Verbesserung von Visual C++!
 
@@ -94,7 +93,7 @@ Diese Informationen finden Sie am besten unmittelbar nach Auftreten des Problems
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>So melden Sie den Inhalt der Befehlszeile
 
-1. Wechseln Sie zur Daten **CL.command.1.tlog**, und öffnen Sie sie. Standardmäßig befindet sich diese Datei unter \\...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog.
+1. Wechseln Sie zur Daten **CL.command.1.tlog**, und öffnen Sie sie. Standardmäßig befindet sich diese Datei unter \\...\Visual Studio *Version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog.
 
    In dieser Datei finden Sie die Namen von Quellcodedateien, gefolgt von den Befehlszeilenargumenten zu deren Kompilierung, jeweils in separaten Zeilen.
 
@@ -221,50 +220,13 @@ Die Generierung von fehlerhaftem Code ist selten, erfolgt jedoch, wenn der Compi
 
 Stellen Sie bei dieser Art des Absturzes bei Verwendung von Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) eine [Linkreproduktion](#link-repros) oder andernfalls eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereit. LTGC wird aktiviert, indem „cl.exe“ das Befehlszeilenargument `/GL` angegeben wird.
 
-## <a name="send"></a> Möglichkeiten zum Senden Ihres Berichts
-
-Es gibt mehrere Möglichkeiten, uns Ihren Bericht zu übermitteln. Sie können das in Visual Studio integrierte Tool [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) verwenden oder uns eine E-Mail senden. Die beste Wahl für Ihren Bericht hängt von der Art des aufgetretenen Problems und davon ab, wie Sie sich mit den Entwicklern austauschen möchten, die Ihren Bericht untersuchen. Ein weiterer Aspekt ist, ob Sie den Status nachverfolgen oder Ihren Bericht mit der Community teilen möchten.
-
-> [!NOTE]
-> Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie unter [Microsoft Visual Studio-Produktfamilie – Datenschutzbestimmungen](https://www.visualstudio.com/dn948229).
-
-### <a name="send-an-email"></a>Senden einer E-Mail
-
-E-Mail ist eine weitere Möglichkeit, den Bericht direkt an das Visual C++-Team zu senden. Sie erreichen uns unter [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com).
-
-Wenn Sie den Bericht per E-Mail senden möchten, können Sie die folgende Vorlage als Text der E-Mail-Nachricht nutzen. Vergessen Sie nicht, Quellcode- oder andere Dateien anzufügen, wenn Sie diese Informationen nicht dem Text der E-Mail hinzugefügt haben.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>Nutzen des Tools „Problem melden“
-
-Das Tool „Problem melden“ in Visual Studio bietet Benutzern von Visual Studio die Möglichkeit, eine Vielzahl von Problemen über ein paar Mausklicks zu melden. Es bietet ein einfaches Formular, in dem Sie detaillierte Informationen zum aufgetretenen Problem angeben und Ihren Bericht anschließend übermitteln können, ohne die IDE verlassen zu müssen.
-
-Das Melden Ihres Problems über das Tool „Problem melden“ ist allerdings nicht die Regel für die Arten von Toolsetproblemen, die in diesem Dokument behandelt werden. Dennoch ist es eine Option, die ggf. Ihren Vorlieben entspricht.
-
-> [!TIP]
-> Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und ohne Beziehung zum Toolset sind (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das Tool „Problem melden“ eine gute Wahl sein, und zwar aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben. Diese anderen Arten von Fehlern dürfen Sie auf keinen Fall durch Senden einer E-Mail an compilercrash@microsoft.com melden.
-
 ## <a name="generate"></a> Generieren einer Reproduktion
 
-Eine Reproduktion ist ein vollständiges und unabhängiges Codebeispiel, das das Problem veranschaulicht, das Sie melden. Eine Reproduktion ist **kein** Codeausschnitt, sondern muss ein vollständiges Beispiel sein, für das ein Build erstellt wird und die Ausführung erfolgt (bzw. erfolgen würde, wenn es die Probleme nicht gäbe, die Sie melden). Es muss alle erforderlichen #include-Direktiven, sogar für die Standardheader, enthalten.
+Eine Reproduktion ist ein vollständiges und unabhängiges Codebeispiel, das das Problem veranschaulicht, das Sie melden. Eine Reproduktion ist **kein** Codeausschnitt, sondern muss ein vollständiges Beispiel sein, für das ein Build erstellt wird und das ausgeführt wird (bzw. erfolgen würde, wenn es die Probleme nicht gäbe, die Sie melden). Es muss alle erforderlichen #include-Direktiven, sogar für die Standardheader, enthalten.
 
 Es folgen weitere Eigenschaften einer guten Reproduktion:
 
-- **Minimal.** Reproduktionen sollte so klein wie möglich sein und dennoch das aufgetretene Problem exakt veranschaulichen. Reproduktionen müssen nicht unbedingt komplex oder realistisch, sondern sollten einfach und „auf den Punkt“ sein. Sie müssen auch keine Gegenbeispiele von Code hinzufügen, der funktioniert, können dies aber zur Veranschaulichung tun. Nur Beispielcode, der das Problem verursacht, ist erforderlich.
+- **Minimal.** Reproduktionen sollte so klein wie möglich sein und dennoch das aufgetretene Problem exakt veranschaulichen. Reproduktionen müssen nicht unbedingt komplex oder realistisch sein, sondern einfach und „auf den Punkt“. Sie müssen auch keine Gegenbeispiele von Code hinzufügen, der funktioniert, können dies aber zur Veranschaulichung tun. Nur Beispielcode, der das Problem verursacht, ist erforderlich.
 
 - **Unabhängig.** In Reproduktionen sollten unnötige Abhängigkeiten vermieden werden. Wenn Sie das Problem ohne Drittanbieterbibliotheken reproduzieren können, machen Sie dies. Wenn Sie das Problem ohne Bibliothekscode reproduzieren können (`std::out`, `printf()` sind zulässig), machen Sie dies. Für uns ist es enorm hilfreich, wenn Sie die Menge des Codes verringern, den wir als mögliche Ursache des Problems untersuchen müssen.
 
@@ -330,3 +292,51 @@ Packen Sie abschließend die Reproduktion durch Komprimieren des gesamten Verzei
 Wenn Sie das Problem nicht auf eine einzelne Quelldatei oder vorverarbeitete Reproduktion reduzieren können und das Problem keine Linkreproduktion verlangt, können wir ein IDE-Projekt untersuchen. Der Code im Projekt darf weiter nur minimal sein, wobei weiter alle in diesem Dokument beschriebenen Leitlinien gelten.
 
 Erstellen Sie Ihre Reproduktion als minimales IDE-Projekt, und erstellen Sie dann ein Paket, indem Sie die gesamte Verzeichnisstruktur in einer ZIP-Datei o.ä. komprimieren und diese an Ihren Bericht anfügen.
+
+## <a name="send"></a> Möglichkeiten zum Senden Ihres Berichts
+
+Es gibt mehrere Möglichkeiten, uns Ihren Bericht zu übermitteln. Die können das in Visual Studio integrierte [Tool „Problem melden“](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) oder die Seiten der [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) verwenden. Es ist auch möglich, eine E-Mail mit Ihrem Bericht zu senden, jedoch werden die ersten beiden Methoden bevorzugt. Die Wahl hängt davon ab, wie Sie sich mit den Entwicklern austauschen möchten, die Ihren Bericht untersuchen. Ein weiterer Aspekt ist, ob Sie den Status nachverfolgen oder Ihren Bericht mit der Community teilen möchten.
+
+> [!NOTE]
+> Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie unter [Microsoft Visual Studio-Produktfamilie – Datenschutzbestimmungen](https://www.visualstudio.com/dn948229).
+
+### <a name="use-the-report-a-problem-tool"></a>Nutzen des Tools „Problem melden“
+
+Das Tool **Problem melden** in Visual Studio bietet Benutzern von Visual Studio die Möglichkeit, eine Vielzahl von Problemen über ein paar Mausklicks zu melden. Es bietet ein einfaches Formular, in dem Sie detaillierte Informationen zum aufgetretenen Problem angeben und Ihren Bericht anschließend übermitteln können, ohne die IDE verlassen zu müssen.
+
+Es ist einfach und praktisch, von der IDE aus ein Problem über das Tool **Problem melden** zu melden. Sie können über die Titelleiste auf das Tool zugreifen, indem Sie auf das Symbol **Feedback senden** neben dem Suchfeld **Schnellstart** klicken. Alternativ finden Sie es auf der Menüleiste unter **Hilfe** > **Feedback senden** > **Problem melden**.
+
+Wenn Sie ein Problem melden möchten, suchen Sie zunächst in der Developer Community nach ähnlichen Problemen. Wenn das Problem bereits zuvor gemeldet wurde, stimmen Sie für das Thema ab, und fügen Sie Kommentare mit zusätzlichen Einzelheiten hinzu. Wenn Sie kein Problem dieser Art finden, klicken Sie auf die Schaltfläche **Neues Problem melden** am Ende des Feedbackdialogfelds von Visual Studio, und befolgen Sie die Schritte, um Ihr Problem einzureichen.
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>Verwenden Sie die Seiten der Visual Studio Developer Community
+
+Die Seiten der Visual Studio Developer Community bietet eine weitere einfache Möglichkeit zum Melden von Problemen und zum Finden von Lösungen für Visual Studio, den C++-Compiler, für Tools und für Bibliotheken. Auf der Seite [Visual Studio Questions (Fragen zu Visual Studio)](https://developercommunity.visualstudio.com/spaces/8/index.html) können Sie Probleme mit der IDE oder der Installation melden. Verwenden Sie bei Problemen mit dem C++-Compiler, dem Linker und anderen Tools und Bibliotheken die Seite [C++ Questions (C++-Fragen)](https://developercommunity.visualstudio.com/spaces/62/index.html).
+
+Im Developer Community-Banner oben auf jeder Seite finden Sie ein Suchfeld, über das Sie Beiträge oder Themen finden können, die Ihrem Problem ähneln. Möglicherweise sind eine Lösung oder andere nützliche Informationen bezüglich Ihres Problem bereits in einem anderen Thema vorhanden. Wenn jemand zuvor das gleiche Problem gemeldet hat, stimmen Sie für dieses Thema ab, kommentieren Sie es, und erstellen Sie keinen neuen Problembericht.
+
+Wenn Ihr Problem noch nicht aufgekommen ist, klicken Sie auf die Schaltfläche **Report problem** (Problem melden) neben dem Suchfeld auf der Developer Community-Seite. Sie werden möglicherweise dazu aufgefordert, sich bei Ihrem Visual Studio-Konto anzumelden und der Developer Community-App Zugriff auf Ihr Profil zu gewähren. Wenn Sie sich angemeldet haben, werden Sie direkt zu einer Seite weitergeleitet, auf der Sie Ihr Problem melden können. Sie können Ihren Reproduktionscode und die Befehlszeile sowie Screenshots, Links zu ähnlichen Diskussionen oder andere Informationen hinzufügen, die relevant und nützlich für dieses Thema sind.
+
+### <a name="send-an-email"></a>Senden einer E-Mail
+
+E-Mail ist eine weitere Möglichkeit, den Bericht direkt an das Visual C++-Team zu senden. Sie erreichen uns unter [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com). Verwenden Sie diese Methode nur, wenn die anderen zwei Möglichkeiten nicht verfügbar sind, da E-Mails nicht so schnell bearbeitet werden wie Probleme, die mithilfe des Tools **Problem melden** oder über die Webseiten an die Developer Community gesendet werden. Außerdem sind Kommentare und Lösungen nicht für andere Visual Studio-Benutzer sichtbar.
+
+Wenn Sie den Bericht per E-Mail senden möchten, können Sie die folgende Vorlage als Text der E-Mail-Nachricht nutzen. Vergessen Sie nicht, Quellcode- oder andere Dateien anzufügen, wenn Sie diese Informationen nicht dem Text der E-Mail hinzugefügt haben.
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und ohne Beziehung zum Toolset sind (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das Tool „Problem melden“ eine gute Wahl sein, und zwar aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben. Diese anderen Arten von Fehlern dürfen Sie auf keinen Fall durch Senden einer E-Mail an compilercrash@microsoft.com melden.
+

@@ -1,76 +1,80 @@
 ---
-title: "Creating a Custom Brush (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colors [C++], brush"
-  - "brushes, colors"
-  - "brushes, creating custom"
-  - "images [C++], creating custom brushes"
-  - "graphics [C++], custom brushes"
-  - "custom brushes"
+title: "Erstellen von benutzerdefinierten Pinseln (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], brush
+- brushes, colors
+- brushes, creating custom
+- images [C++], creating custom brushes
+- graphics [C++], custom brushes
+- custom brushes
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 38f376053635708372c09a37aa0810e4305db60a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a Custom Brush (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="creating-a-custom-brush-image-editor-for-icons"></a>Erstellen von benutzerdefinierten Pinseln (Bildbearbeitung für Symbole)
+Benutzerdefinierte Pinsel ist eine rechteckige Teil eines Bildes, das Sie übernehmen, und wie eine vorgefertigte Pinsel für den Grafik-Editor verwenden. Alle Vorgänge auf einer Auswahl von ausgeführt werden können, können Sie für einen benutzerdefinierten Pinsel ebenfalls ausführen.  
+  
+### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>So erstellen Sie einen benutzerdefinierten Pinsel aus einem Teil eines Bildes  
+  
+1.  [Wählen Sie den Teil des Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , die für den Pinsel verwendet werden sollen.  
+  
+2.  Mit der **UMSCHALT** nach-unten-Taste, klicken Sie in der Auswahl auf, und ziehen Sie es über das Bild.  
+  
+     \- oder –  
+  
+3.  Aus der **Image** Menü wählen **Auswahl als Pinsel verwenden**.  
+  
+     Ihre Auswahl wird eine benutzerdefinierte Pinsel, der die Farben in der Auswahl auf das Bild verteilt. Kopien der Auswahl befinden sich entlang des Pfads ziehen. Sie ziehen, desto langsamer, die mehrere Kopien erfolgen.  
+  
+     **Hinweis** auf die **verwenden eine Markierung als Pinsel** ohne Sie zuerst einen Teil des Bilds auswählen, wird das gesamte Bild als Pinsel verwendet. Das Ergebnis der Verwendung von benutzerdefinierten Pinseln hängt außerdem, ob Sie ausgewählt haben eine [undurchsichtig oder Transparent im Hintergrund](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+  
+ Pixel in einem benutzerdefinierten Pinsel, die mit die aktuellen Hintergrundfarbe übereinstimmen, sind normalerweise transparent: sie nicht über das vorhandene Bild gezeichnet. Sie können dieses Verhalten ändern, sodass Hintergrundfarbe Pixel über das vorhandene Bild gezeichnet.  
+  
+ Den benutzerdefinierte Pinsel wie einen Zeitstempel oder eine Schablone können Sie um eine Vielzahl von Spezialeffekte zu erstellen.  
+  
+#### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Zum Zeichnen von benutzerdefinierten Pinselformen in die Farbe des Hintergrunds  
+  
+1.  [Wählen Sie einen Hintergrund undurchsichtig oder transparenten](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+  
+2.  [Legen Sie die Farbe des Hintergrunds](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) , in dem Sie die gewünschte Farbe gezeichnet werden soll.  
+  
+3.  Positionieren Sie den benutzerdefinierten Pinsel, in dem gezeichnet werden soll.  
+  
+4.  Klicken Sie auf die rechte Maustaste gedrückt. Nicht transparente Bereiche von benutzerdefinierten Pinseln werden in der Hintergrundfarbe gezeichnet.  
+  
+#### <a name="to-double-or-halve-the-custom-brush-size"></a>Doppelklicken oder die benutzerdefinierte Pinselgröße halbiert  
+  
+1.  Drücken Sie die **Pluszeichen** (**+**)-Taste, um die Pinselgröße doppelklicken oder die **Minuszeichen (-)** (**-**)-Taste, um es halbiert .  
+  
+#### <a name="to-cancel-the-custom-brush"></a>Abbrechen von benutzerdefinierten Pinseln  
+  
+1.  Drücken Sie **ESC** , oder wählen Sie ein anderes Zeichenblattes Tool.  
+  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+  
+### <a name="requirements"></a>Anforderungen  
+ Keiner  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
 
-Ein benutzerdefinierter Pinsel ist ein rechteckiger Ausschnitt eines Bildes, den Sie auswählen und wie einen vorgegebenen Pinsel des Grafik\-Editors verwenden können.  Alle Operationen, die Sie für eine Markierung durchführen können, können Sie auch für einen benutzerdefinierten Pinsel durchführen.  
-  
-### So erstellen Sie einen benutzerdefinierten Pinsel aus einem Bildbereich  
-  
-1.  [Markieren Sie den Bildbereich](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md), der für den Pinsel verwendet werden soll.  
-  
-2.  Halten Sie die UMSCHALTTASTE gedrückt, klicken Sie auf die Markierung, und ziehen Sie sie über das Bild.  
-  
-     \- oder \-  
-  
-3.  Klicken Sie im Menü **Bild** auf **Auswahl als Pinsel verwenden**.  
-  
-     Die Markierung wird zu einem benutzerdefinierten Pinsel, durch den die in der Markierung enthaltenen Farben auf das Bild verteilt werden.  Entlang dem Ziehpfad werden Kopien der Markierung abgelegt.  Je langsamer Sie ziehen, desto mehr Kopien werden erstellt.  
-  
-     **Hinweis** Wenn Sie auf **Auswahl als Pinsel verwenden** klicken, ohne zuerst einen Bildbereich auszuwählen, wird das gesamte Bild als Pinsel verwendet.  Der Effekt eines benutzerdefinierten Pinsels hängt außerdem davon ab, ob Sie einen [deckenden oder transparenten Hintergrund](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) ausgewählt haben.  
-  
- In der Regel sind Pixel eines benutzerdefinierten Pinsels, die mit der aktuellen Hintergrundfarbe übereinstimmen, transparent: Das vorhandene Bild wird also nicht übermalt.  Sie können dieses Verhalten ändern, sodass die Pixel in der Hintergrundfarbe das vorhandene Bild übermalen.  
-  
- Der benutzerdefinierte Pinsel kann wie ein Stempel oder eine Schablone verwendet werden, um eine Vielzahl von Spezialeffekten zu erzielen.  
-  
-#### So zeichnen Sie Formen mit einem benutzerdefinierten Pinsel in der Hintergrundfarbe  
-  
-1.  [Wählen Sie einen deckenden oder transparenten Hintergrund aus](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
-  
-2.  [Wählen Sie als Hintergrundfarbe](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) die Farbe, in der Sie zeichnen möchten.  
-  
-3.  Positionieren Sie den benutzerdefinierten Pinsel an der Stelle, an der Sie zeichnen möchten.  
-  
-4.  Klicken Sie mit der rechten Maustaste.  Die deckenden Bereiche des benutzerdefinierten Pinsels werden in der Hintergrundfarbe gezeichnet.  
-  
-#### So verdoppeln oder halbieren Sie die benutzerdefinierte Pinselstärke  
-  
-1.  Drücken Sie die PLUSZEICHENTASTE \(**\+**\), um die Pinselstärke zu verdoppeln, oder die MINUSZEICHENTASTE \(**\-**\), um sie zu halbieren.  
-  
-#### So löschen Sie den benutzerdefinierten Pinsel  
-  
-1.  Drücken Sie ESC, oder wählen Sie ein anderes Zeichentool.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
-  
-### Anforderungen  
- None  
-  
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)

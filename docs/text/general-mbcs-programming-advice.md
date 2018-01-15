@@ -1,50 +1,50 @@
 ---
-title: "Allgemeine Ratschl&#228;ge f&#252;r die MBCS-Programmierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mbcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialogfelder [C++], Schriftarten"
-  - "MBCS [C++], Dialogfeldschriftarten"
-  - "MBCS [C++], Programmieren"
-  - "MS Shell Dlg"
+title: "Ratschläge für allgemeine MBCS-Programmierung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mbcs
+dev_langs: C++
+helpviewer_keywords:
+- MBCS [C++], dialog box fonts
+- MS Shell Dlg
+- MBCS [C++], programming
+- dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Allgemeine Ratschl&#228;ge f&#252;r die MBCS-Programmierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Beachten Sie folgende Tipps:  
+# <a name="general-mbcs-programming-advice"></a>Allgemeine Ratschläge für die MBCS-Programmierung
+Verwenden Sie die folgenden Tipps:  
   
--   Verwenden Sie aus Flexibilitätsgründen nach Möglichkeit Laufzeitmakros wie `_tcschr` und `_tcscpy`.  Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Verwenden Sie Flexibilität erhalten Sie, wie z. B. Makros zur Laufzeit `_tcschr` und `_tcscpy` nach Möglichkeit. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   Verwenden Sie die C\-Laufzeitfunktion `_getmbcp`, um Informationen über die aktuelle Codepage abzufragen.  
+-   Verwenden Sie die C-Laufzeit `_getmbcp` Funktion zum Abrufen von Informationen über die aktuelle Codepage.  
   
--   Verwenden Sie Zeichenfolgenressourcen nur einmal.  Abhängig von der Zielsprache kann eine Zeichenfolge nach der Übersetzung unterschiedliche Bedeutungen haben.  Das Wort "Datei" wird z. B. im Hauptmenü der Anwendung häufig anders übersetzt als die entsprechende Zeichenfolge in einem Dialogfeld.  Wenn Sie gleichlautende Zeichenfolgen verwenden müssen, versehen Sie jede Zeichenfolge mit einer anderen Zeichenfolgen\-ID.  
+-   Zeichenfolgenressourcen nicht wiederverwendet werden. Abhängig von der Zielsprache möglicherweise eine bestimmte Zeichenfolge eine andere Bedeutung, wenn übersetzt. Hauptmenü "File" auf der Anwendungsverzeichnis könnte z. B. unterschiedlich aus der Zeichenfolge "File" in einem Dialogfeld übersetzen. Wenn Sie mehr als eine Zeichenfolge mit dem gleichen Namen verwenden möchten, verwenden Sie für jede verschiedenen Zeichenfolgen-IDs.  
   
--   In bestimmten Fällen müssen Sie herausfinden, ob eine Anwendung unter einem MBCS\-aktivierten Betriebssystem ausgeführt wird.  Legen Sie zu diesem Zweck ein entsprechendes Flag beim Programmstart fest. API\-Aufrufe sind in dieser Hinsicht unzuverlässig.  
+-   Möglicherweise möchten herausfinden, ob Ihre Anwendung unter einem MBCS-fähigen Betriebssystem ausgeführt wird. Zu diesem Zweck legen Sie ein Flag beim Programmstart; verlassen Sie sich nicht auf API-Aufrufe.  
   
--   Halten Sie beim Entwurf von Dialogfeldern in statischen Textsteuerelementen etwa ein Drittel zusätzlichen Platz frei, um die MBCS\-Übersetzung zu ermöglichen.  
+-   Beim Entwerfen von Dialogfeldern können Sie ca. 30 % zusätzliche Leerzeichen am Ende des statischen Text-Steuerelemente für die MBCS-Übersetzung.  
   
--   Gehen Sie bei der Schriftartenauswahl für eine Anwendung überlegt vor, da bestimmte Schriftarten nicht auf jedem System verfügbar sind.  Die japanische Version von Windows 2000 unterstützt z. B. die Schriftart Helvetica nicht.  
+-   Gehen Sie beim Auswählen von Schriftarten für Ihre Anwendung sein, da einige Schriftarten nicht auf allen Systemen verfügbar sind. Die japanische Version von Windows 2000 unterstützt beispielsweise nicht die Schriftart Helvetica.  
   
--   Verwenden Sie als Schriftart für Dialogfelder statt MS Sans Serif oder Helvetica [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112).  MS Shell Dlg wird vor Erstellung des Dialogfelds vom System gegen die korrekte Schriftart ausgetauscht.  Mit MS Shell Dlg können Sie sicherstellen, dass sämtliche Änderungen im Betriebssystem, die sich auf diese Schriftart beziehen, automatisch zur Verfügung gestellt werden. \(MFC ersetzt MS Shell Dlg mit DEFAULT\_GUI\_FONT oder der Systemschrift unter Windows 95, Windows 98 und Windows NT 4, da diese Systeme MS Shell Dlg nicht ordnungsgemäß behandeln.\)  
+-   Verwenden Sie bei der Auswahl der Schriftart für Dialogfelder [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) anstelle von MS Sans Serif oder Helvetica. MS Shell Dlg wird durch die richtige Schriftart vom System vor dem Erstellen des Dialogfelds "" ersetzt. Die Verwendung von MS Shell Dlg wird sichergestellt, dass alle Änderungen im Betriebssystem für den Umgang mit dieser Schriftart automatisch zur Verfügung stehen. (MFC ersetzt MS Shell Dlg durch DEFAULT_GUI_FONT oder Systemschriftart unter Windows 95, Windows 98 und Windows NT 4, da diese Systeme MS Shell Dlg nicht ordnungsgemäß behandeln.)  
   
--   Legen Sie beim Entwurf einer Anwendung fest, welche Zeichenfolgen lokalisiert werden können.  Gehen Sie im Zweifelsfall davon aus, dass eine Zeichenfolge lokalisiert wird.  Kombinieren Sie daher auf keinen Fall lokalisierbare und nicht lokalisierbare Zeichenfolgen.  
+-   Beim Entwerfen Ihrer Anwendung entscheiden Sie, welche Zeichenfolgen lokalisiert werden können. Im Zweifelsfall wird davon ausgegangen Sie, dass alle angegebene Zeichenfolge lokalisiert werden. Kombinieren Sie Zeichenfolgen, die lokalisiert werden können daher nicht mit denen, die nicht.  
   
-## Siehe auch  
- [Tipps für die MBCS\-Programmierung](../text/mbcs-programming-tips.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md)   
  [Inkrementieren und Dekrementieren von Zeigern](../text/incrementing-and-decrementing-pointers.md)

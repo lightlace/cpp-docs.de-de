@@ -1,32 +1,33 @@
 ---
-title: "db_table | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_table"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_table attribute"
+title: Db_table | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_table
+dev_langs: C++
+helpviewer_keywords: db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37dd6fd80a0d18f1b9d93f5299fca797238a509f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# db_table
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Öffnet eine OLE DB\-Tabelle.  
+# <a name="dbtable"></a>db_table
+Öffnet eine OLE DB-Tabelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,26 +39,26 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### Parameter  
- *db\_table*  
- Eine Zeichenfolge, die den Namen einer Datenbanktabelle angibt \(z. B. „Products“\).  
+#### <a name="parameters"></a>Parameter  
+ *db_table*  
+ Eine Zeichenfolge, die den Namen einer Datenbanktabelle (z. B. "Products") angeben.  
   
- *Name* \(optional\)  
- Der Name des Handles, das Sie verwenden, um mit der Tabelle zu bearbeiten.  Sie müssen diesen Parameter angeben, wenn Sie mehr als eine Zeile der Ergebnisse zurückgeben möchten.  **db\_table** generiert eine Variable mit dem angegebenen *Namen,* der verwendet werden kann, um das Rowset zu durchlaufen oder Abfragen mehrerer Aktion auszuführen.  
+ *name* (optional)  
+ Der Name des Handles, die Sie zum Arbeiten mit der Tabelle verwenden. Sie müssen diesen Parameter angeben, wenn mehr als eine Zeile von Ergebnissen zurückgegeben werden soll. **Db_table** generiert eine Variable mit dem angegebenen *Namen* , die verwendet werden kann, durchlaufen das Rowset oder mehrere Aktionsabfragen ausführen.  
   
- *source\_name* \(optional\)  
- Die `CSession`\-Variable oder eine Instanz einer Klasse, die das `db_source` darauf angewendeten Attribut enthält, auf dem der Befehl ausgeführt wird, oder legt diesen fest.  Weitere Informationen finden Sie unter [db\_source](../windows/db-source.md).  
+ *source_name* (optional)  
+ Die Variable `CSession` oder die Instanz einer Klasse, auf die das `db_source` -Attribut angewendet wird, auf Grundlage dessen der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](../windows/db-source.md).  
   
- `hresult` \(optional\)  
- Identifiziert die Variable, die `HRESULT` dieses Befehls Datenbank erhält.  Wenn die Variable nicht vorhanden ist, wird sie automatisch vom Attribut eingefügt.  
+ `hresult` (optional)  
+ Identifiziert die Variable, die `HRESULT` von diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
   
-## Hinweise  
- **db\_table** erstellt ein [CTable](../data/oledb/ctable-class.md)\-Objekt, das durch einen OLE DB\-Consumer verwendet wird, um eine Tabelle zu öffnen.  Dieses Attribut kann nur auf Klassenebene verwenden. Sie können sie nicht inline verwenden.  Verwenden Sie **db\_column** , um Tabellenspalten zu den Variablen gebunden werden soll. \(Verwenden Sie **db\_param** festgelegt usw.\) entnehmen dem Parametertyp getrennt.  
+## <a name="remarks"></a>Hinweise  
+ **Db_table** erstellt eine [CTable](../data/oledb/ctable-class.md) -Objekt, das von einer OLE DB-Consumer verwendet wird, um eine Tabelle zu öffnen. Sie können dieses Attribut nur auf Klassenebene verwenden; Sie können nicht Inline verwenden. Verwenden Sie **Db_column** zum Binden von Spalten in der Tabelle an Variablen; verwenden Sie **Db_param** zur Begrenzung von (Festlegen der Parametertyp und daher auf) von Parametern.  
   
- Wenn der Consumer Attribut für Textanbieter dieses Attribut auf eine Klasse angewendet wird, benennt der Compiler die Klasse zum \_TheClassNameAccessor, in dem *TheClassName* der Name ist, den Sie für die Klasse haben, und der Compiler außerdem eine Klasse erstellt, die *TheClassName* aufgerufen wird *,* die vom \_TheClassNameAccessor berechnet.  In der Klassenansicht finden Sie unter beide Klassen.  
+ Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
-## Beispiel  
- Im folgenden Beispiel wird die Tabelle Products für `CProducts`.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die Products-Tabelle für die Verwendung durch `CProducts`.  
   
 ```  
 // db_table.cpp  
@@ -72,21 +73,20 @@ class CProducts {
 };  
 ```  
   
- Ein Beispiel für dieses Attribut, das in einer Anwendung verwendet wird, finden Sie in den Beispielen [AtlAgent](assetId:///52bef5da-c1a0-4223-b4e6-9e464b6db409) und [MultiRead](assetId:///5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Ein Beispiel für dieses Attribut in einer Anwendung verwendet, finden Sie in den Beispielen [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) und [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)   

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>Threadlokaler Speicher
 **Microsoft-spezifisch**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  Diese Richtlinien müssen bei der Deklaration von statisch gebundenen threadlokalen Variablen beachtet werden:  
   
--   Die Verwendung von **__declspec(thread)** kann beim [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL-Importen zu Konflikten führen**.**  
+-   Lokale Threadvariablen, die über dynamische Initialisierung verfügen, werden nur auf in dem Thread initialisiert, durch den die DLL geladen wird, und in Threads, die bereits im Prozess ausgeführt werden. Weitere Informationen finden Sie unter [Thread](../cpp/thread.md).  
   
 -   Sie können das Threadattribut nur auf Datendeklarationen und -definitionen anwenden. Die Verwendung in Funktionsdeklarationen oder -definitionen ist nicht zulässig. Beispielsweise verursacht der folgende Code einen Compilerfehler:  
   

@@ -1,42 +1,37 @@
 ---
-title: "Consuming Generics (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], consuming from .NET languages"
+title: Verwenden von Generika (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 14
-caps.handback.revision: "14"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Consuming Generics (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Generika, das in einer .NET\-Sprache erstellt wird, wird in anderen .NET\-Sprachen verwendet werden.  Anders als Vorlagen bleibt ein generisches in einer kompilierten Assembly weiterhin generisch.  Daher instanziiert möglicherweise von den generischen Typ in einer anderen Assembly und sogar in einer anderen Sprache als die Assembly, in der der generische Typ definiert wurde.  
+# <a name="consuming-generics-ccli"></a>Verwenden von Generika (C++/CLI)
+Generika in einer .NET-Sprache geschrieben, möglicherweise in anderen .NET-Sprachen verwendet werden. Im Gegensatz zu Vorlagen bleibt eine generische in einer kompilierten Assembly noch generische. Daher kann eine instanziieren, den generischen Typ in einer anderen Assembly und sogar in einer anderen Sprache als die Assembly, in der der generische Typ definiert wurde.  
   
-## Hinweise  
- Weitere Informationen finden Sie unter:  
+## <a name="example"></a>Beispiel  
   
--   [Einführung in Generika](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
+### <a name="description"></a>Beschreibung  
+ Dieses Beispiel zeigt eine generische Klasse, die in c# definiert.  
   
--   [Generische Typen in Visual Basic](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
-  
-## Beispiel  
-  
-### **Beschreibung**  
- In diesem Beispiel wird eine generische Klasse, die in C\# definiert wird.  
-  
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // consuming_generics_from_other_NET_languages.cs  
@@ -94,12 +89,12 @@ public class CircularList<ItemType> {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird die Assembly, die in C\# erstellt wird.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel verbraucht die Assembly, die in c# erstellt.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // consuming_generics_from_other_NET_languages_2.cpp  
@@ -120,7 +115,7 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 90  
@@ -133,5 +128,5 @@ int main() {
 10  
 ```  
   
-## Siehe auch  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Generika](../windows/generics-cpp-component-extensions.md)

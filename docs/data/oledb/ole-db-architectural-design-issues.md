@@ -14,11 +14,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b894ec1cbd227663d46e98e523ffe8c1c5d84475
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>Fragen zum OLE DB-Architekturdesign
 Vor dem Starten der OLE DB-Anwendung sollten Sie Folgendes berücksichtigen:  
@@ -37,11 +40,11 @@ Vor dem Starten der OLE DB-Anwendung sollten Sie Folgendes berücksichtigen:
  **Haben Sie älterem Code mit einem anderen datenzugriffstechnologie (ADO, ODBC- oder DAO)?**  
  Angesichts der möglichen Kombinationen von Technologien (z. B. Verwenden von ADO-Komponenten mit OLE DB-Komponenten, und Migrieren von ODBC-Code von OLE DB), ist in allen Situationen abdecken, Gegenstand des Visual C++-Dokumentation. Allerdings stehen viele verschiedene Szenarien abdecken Artikel auf den folgenden Microsoft-Websites:  
   
--   [Microsoft-Hilfe und -Support](http://go.microsoft.com/fwlink/?linkid=148218)  
+-   [Microsoft-Hilfe und -Support](http://go.microsoft.com/fwlink/p/?linkid=148218)  
   
--   [Microsoft Data Access – technische Artikel (Übersicht)](http://go.microsoft.com/fwlink/?linkid=148217)  
+-   [Microsoft Data Access – technische Artikel (Übersicht)](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Visual Studio-Lösungscenter](http://go.microsoft.com/fwlink/?linkid=148215)  
+-   [Visual Studio-Lösungscenter](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Suchen Sie "Microsoft.com"](http://search.microsoft.com/)  
   

@@ -1,60 +1,64 @@
 ---
-title: "Creating a Tool Tip for a Toolbar Button | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tool tips [C++], adding to toolbar buttons"
-  - "\n in tool tip"
-  - "toolbar buttons [C++], tool tips"
-  - "buttons [C++], tool tips"
-  - "Toolbar editor, creating tool tips"
+title: "Erstellen eine QuickInfo für eine Symbolleisten-Schaltfläche | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tool tips [C++], adding to toolbar buttons
+- "\nin tool tip"
+- toolbar buttons [C++], tool tips
+- buttons [C++], tool tips
+- Toolbar editor, creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5b5bb25a14d68c01c25d9242df89c1183511ca83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a Tool Tip for a Toolbar Button
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### So erstellen Sie eine QuickInfo  
+# <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Erstellen einer QuickInfo für eine Symbolleisten-Schaltfläche
+### <a name="to-create-a-tool-tip"></a>So erstellen eine QuickInfo  
   
-1.  Markieren Sie die Symbolleisten\-Schaltfläche.  
+1.  Wählen Sie die Symbolleisten-Schaltfläche.  
   
-2.  Geben Sie im [Eigenschaftenfenster](../Topic/Properties%20Window.md) im Eigenschaftenfeld **Eingabeaufforderung** eine Schaltflächenbeschreibung für die Statusleiste ein. Fügen Sie hinter der Meldung "\\n" sowie den Namen der QuickInfo ein.  
+2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)in der **Prompt** Eigenschaftenfeld, fügen Sie eine Beschreibung der Schaltfläche für die Statusleiste, nachdem die Nachricht, \n und der QuickInfo-Name des Tools hinzufügen.  
   
- Ein bekanntes Beispiel für eine QuickInfo ist die Schaltfläche **Drucken** in WordPad:  
+ Ein allgemeines Beispiel für eine QuickInfo ist die Schaltfläche "Drucken" in WordPad:  
   
- 1.  Öffnen Sie WordPad.  
+ 1. Öffnen Sie WordPad.  
   
- 2.  Zeigen Sie mit dem Mauszeiger auf die Symbolleisten\-Schaltfläche **Drucken**.  
+ 2. Zeigen Sie den Mauszeiger auf die **Drucken** Symbolleisten-Schaltfläche.  
   
- 3.  Beachten Sie, dass nun der Begriff "Drucken" unterhalb des Mauszeigers angezeigt wird.  
+ 3. Beachten Sie, dass das Wort "Drucken" jetzt unter den Mauszeiger unverankert ist.  
   
- 4.  Beachten Sie die Statusleiste \(ganz unten im WordPad\-Fenster\); dort wird jetzt der Text "Druckt das aktive Dokument" angezeigt.  
+ 4. Betrachten Sie die Statusleiste (ganz unten in der WordPad-Fenster) – Beachten Sie, dass es jetzt der Text zeigt "Das aktive Dokument gedruckt".  
   
- Der Begriff "Drucken" in Schritt 3 entspricht dem Namen der QuickInfo, und "Druckt das aktuelle Dokument" unter Schritt 4 ist die Schaltflächenbeschreibung für die Statusleiste.  
+ "Drucken" in Schritt 3 ist der "Tipp Name des Tools", und die "das aktive Dokument gedruckt" in Schritt 4 ist "Beschreibung der Schaltfläche für die Statusleiste."  
   
- Sie erzielen diesen Effekt über den Symbolleisten\-Editor, indem Sie für die Eigenschaft **Eingabeaufforderung** die Zeichenfolge **Druckt das aktive Dokument\\nDrucken** angeben.  
+ Wenn Sie möchten diesen Effekt mit der **Symbolleiste** -Editor Festlegen der **Prompt** Eigenschaft, um **druckt die \nKonsolendokument**.  
   
 > [!NOTE]
->  Aufforderungstext kann im [Eigenschaftenfenster](../Topic/Properties%20Window.md) bearbeitet werden.  
+>  Sie können bearbeiten, indem Aufforderungstext der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  MFC oder ATL  
   
-## Siehe auch  
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen, verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Symbolleisten-Editor](../windows/toolbar-editor.md)
+

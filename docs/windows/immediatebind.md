@@ -1,32 +1,33 @@
 ---
-title: "immediatebind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.immediatebind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "immediatebind attribute"
+title: Immediatebind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.immediatebind
+dev_langs: C++
+helpviewer_keywords: immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 31dddbbb205715e46de5d3382923ef4d73261b53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# immediatebind
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass die Datenbank sofort alle Änderungen einer Eigenschaft eines datengebundenen Objekts benachrichtigt wird.  
+# <a name="immediatebind"></a>immediatebind
+Gibt an, die Datenbank sofort aller Änderungen an eine Eigenschaft eines Objekts von datengebundenen benachrichtigt wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,29 +35,28 @@ Gibt an, dass die Datenbank sofort alle Änderungen einer Eigenschaft eines date
   
 ```  
   
-## Hinweise  
- Das Attribut **immediatebind** C\+\+ verfügt über die gleichen Funktionen wie das [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Immediatebind** C++-Attribut hat die gleiche Funktionalität wie die [Immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL-Attribut.  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [bindbar](../windows/bindable.md) als Beispiel zur Verwendung **immediatebind**verwendet.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [bindbare](../windows/bindable.md) ein Beispiel zum Verwenden von **Immediatebind**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

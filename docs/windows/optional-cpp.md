@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb1ae05d7b674f3f1d2c984792bb2bd53dd3de30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 028cb0f911ac389e4ad17f54fc16e24f29c8d9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optional-c"></a>optional (C++)
 Gibt ein optionaler Parameter für eine Memberfunktion an.  
@@ -59,8 +62,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|  
 |**Betrifft**|Schnittstellenparameter|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keine|  
-|**Ungültige Attribute**|Keine|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   

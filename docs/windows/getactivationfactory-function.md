@@ -1,34 +1,36 @@
 ---
-title: "GetActivationFactory-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::GetActivationFactory"
-  - "client/ABI::Windows::Foundation::GetActivationFactory"
-  - "client/Windows::Foundation::GetActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetActivationFactory-Funktion"
+title: GetActivationFactory-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::Details::GetActivationFactory
+- client/ABI::Windows::Foundation::GetActivationFactory
+- client/Windows::Foundation::GetActivationFactory
+dev_langs: C++
+helpviewer_keywords: GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6419ef4d48c3f151f8acfb49d40e10853f5d17f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# GetActivationFactory-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft eine Aktivierungsfactory für den Typ ab, der mit dem Vorlagenparameter angegeben wird.  
+# <a name="getactivationfactory-function"></a>GetActivationFactory-Funktion
+Ruft eine aktivierungsfactory für den durch den Vorlagenparameter angegebenen Typ ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -40,23 +42,23 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Ein Vorlagenparameter, der den Typ der Aktivierungsfactorys angibt.  
+ Ein Vorlagenparameter, der den Typ der aktivierungsfactory angibt.  
   
  `activatableClassId`  
- Der Name der Klasse, die die Aktivierungsfactory erzeugen kann.  
+ Der Name der Klasse, die die aktivierungsfactory erstellt werden kann.  
   
  `factory`  
- Wenn dieser Vorgang abgeschlossen wird, ein Verweis auf die Aktivierungsfactory für Typ `T`.  
+ Wenn dieser Vorgang abgeschlossen wird, einen Verweis auf die aktivierungsfactory für Typ `T`.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, der angibt, warum dieser Vorgang fehlgeschlagen ist.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, das angibt, warum diese Operation fehlgeschlagen ist.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
- **Namespace:**  Windows::Foundation  
+ **Namespace:** Windows:: Foundation  
   
-## Siehe auch  
- [Windows::Foundation\-Namespace](../windows/windows-foundation-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows::Foundation-Namespace](../windows/windows-foundation-namespace.md)

@@ -1,32 +1,33 @@
 ---
-title: "vi_progid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.vi_progid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vi_progid attribute"
+title: Vi_progid | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.vi_progid
+dev_langs: C++
+helpviewer_keywords: vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b7581a4a10d9f101526aeb1a17ba7e26c4646b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# vi_progid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt ein versionsunabhängiges ProgID des Formulars an.  
+# <a name="viprogid"></a>vi_progid
+Gibt eine versionsunabhängige Form der ProgID an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,40 +36,39 @@ Gibt ein versionsunabhängiges ProgID des Formulars an.
 ) ];  
 ```  
   
-#### Parameter  
- *Name*  
- Das versionsunabhängige Programm\-ID, das das Objekt darstellt.  
+#### <a name="parameters"></a>Parameter  
+ *name*  
+ Die versionsunabhängige ProgID das Objekt darstellt.  
   
- ProgIDs\-Geschenk einer lesbaren Version der Klassenbezeichner \(CLSID\) verwendet, um COM\-\/ActiveX Objekte zu identifizieren.  
+ Programm-IDs präsentieren eine lesbaren Version von den Klassenbezeichner (CLSID) verwendet, um COM/ActiveX-Objekte zu identifizieren.  
   
-## Hinweise  
- Das Attribut **vi\_progid** C\+\+ können Sie ein versionsunabhängiges ProgID für ein COM\-Objekt angeben.  Ein ProgID hat das Formular *name1.name2.version*.  Ein versionsunabhängiges ProgID hat keine *Version*.  Es ist möglich, **progid** und die **vi\_progid**\-Attribute für eine Co\-Klasse anzugeben.  Wenn Sie nicht angeben, ist das **vi\_progid**versionsunabhängige Programm\-ID sich der Wert des vom [ProgID](../windows/progid.md)\-Attribut angegeben ist.  
+## <a name="remarks"></a>Hinweise  
+ Die **Vi_progid** C++-Attribut ermöglicht die Angabe eine versionsunabhängige ProgID für ein COM-Objekt. Eine ProgID hat das Format *name1.name2.version*. Eine versionsunabhängige Programm-ID verfügt nicht über eine *Version*. Es ist möglich, beide geben die **progid** und **Vi_progid** Attribute auf einer Co-Klasse. Wenn Sie keinen angeben **Vi_progid**die versionsunabhängige Programm-ID ist der Wert von der [progid](../windows/progid.md) Attribut.  
   
- Das bedeutet**vi\_progid** coclass\-Attribut, d.h., wenn Sie **vi\_progid**angeben, wird die **coclass** , wie dasselbe Ziel und **vi\_progid**\-Attribute angibt.  
+ **Vi_progid** impliziert die **Co-Klasse** Attribut zu verwenden, d. h. bei Angabe von **Vi_progid**, ist dasselbe wie das Angeben der **Co-Klasse** und **Vi_progid** Attribute.  
   
- Das **vi\_progid**\-Attribut wird eine Klasse mit dem angegebenen Namen automatisch registriert werden.  Die generierten IDL\-Datei wird nicht der ProgID\-Wert an.  
+ Die **Vi_progid** Attribut bewirkt, dass eine Klasse, unter dem angegebenen Namen automatisch registriert werden. Der generierten IDL-Datei wird keine den ProgID-Wert angezeigt.  
   
- In den ATL\-Projekten wenn das [Co\-Klasse](../windows/coclass.md)\-Attribut vorhanden ist, wird das angegebene ProgID \( **GetVersionIndependentProgID** durch die Funktion durch das Einfügen coclass\-Attribut\).  
+ Im ATL-Projekte Wenn die [Co-Klasse](../windows/coclass.md) Attribut ebenfalls vorhanden ist, wird durch die angegebene ProgID verwendet die **GetVersionIndependentProgID** Funktion (eingefügt, indem die **Co-Klasse** Attribut "").  
   
-## Beispiel  
- Weitere Informationen finden Sie im [Co\-Klasse](../windows/coclass.md) Beispiel für eine Beispiel verwenden aus **vi\_progid**.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter der [Coclass](../windows/coclass.md) Beispiel für ein Beispiel für die Verwendung von **Vi_progid**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [ProgID Key](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [Schlüssel progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

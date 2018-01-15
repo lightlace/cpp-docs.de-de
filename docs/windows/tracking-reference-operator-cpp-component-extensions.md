@@ -1,49 +1,51 @@
 ---
-title: "Tracking Reference Operator (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tracking references"
-  - "% tracking reference [C++]"
+title: "Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '%'
+dev_langs: C++
+helpviewer_keywords:
+- tracking references
+- '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-caps.latest.revision: 31
-caps.handback.revision: "29"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "31"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 71389a622b02d5c0379b2be1a91783e8235077bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Tracking Reference Operator (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ein *Nachverfolgungsverweis* \(`%`\) verhält sich fast wie ein normaler C\+\+\-Verweis \(`&`\) – der Unterschied ist, dass nach der Zuweisung eines Objekts zu einem Nachverfolgungsverweis der Verweiszähler des Objekts erhöht wird.  
+# <a name="tracking-reference-operator-c-component-extensions"></a>Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++)
+Ein *Nachverfolgungsverweis* (`%`) verhält sich wie ein normaler C++-Verweis (`&`) mit dem Unterschied, dass wenn ein Objekt zu einem Nachverfolgungsverweis zugewiesen wird, wird das Objekt Verweiszähler erhöht.  
   
-## Alle Plattformen  
+## <a name="all-platforms"></a>Alle Plattformen  
  Ein Nachverfolgungsverweis verfügt über die folgenden Eigenschaften.  
   
 -   Die Zuweisung eines Objekts zu einem Nachverfolgungsverweis bewirkt, dass der Verweiszähler des Objekts erhöht wird.  
   
--   Wenn Sie einen \* dereferenzieren, ist das Ergebnis ein systemeigener Verweis \(&\).  Wenn Sie einen ^ dereferenzieren, ist das Ergebnis ein Nachverfolgungsverweis \(%\).  Solange Sie über einen % zu einem Objekt verfügen, bleibt das Objekt im Speicher erhalten.  
+-   Wenn Sie einen * dereferenzieren, ist das Ergebnis ein systemeigener Verweis (&). Wenn Sie einen ^ dereferenzieren, ist das Ergebnis ein Nachverfolgungsverweis (%). Solange Sie über einen % zu einem Objekt verfügen, bleibt das Objekt im Speicher erhalten.  
   
--   Der Punktzugriffsoperator \(`.`\) für Member wird verwendet, um auf einen Member des Objekts zuzugreifen.  
+-   Der Punktzugriffsoperator (`.`) für Member wird verwendet, um auf einen Member des Objekts zuzugreifen.  
   
--   Nachverfolgungsverweise gelten für Werttypen und Handles \(beispielsweise `String^`\).  
+-   Nachverfolgungsverweise gelten für Werttypen und Handles (beispielsweise `String^`).  
   
--   Einem Nachverfolgungsverweis kann kein NULL\- oder `nullptr`\-Wert zugewiesen werden.  Ein Nachverfolgungsverweis kann einem anderen gültigen Objekt so oft wie erforderlich neu zugewiesen werden.  
+-   Einem Nachverfolgungsverweis kann kein NULL- oder `nullptr`-Wert zugewiesen werden. Ein Nachverfolgungsverweis kann einem anderen gültigen Objekt so oft wie erforderlich neu zugewiesen werden.  
   
--   Ein Nachverfolgungsverweis kann nicht als unärer Adressenübernahmeoperator \(Take\-Address\-Operator\) verwendet werden.  
+-   Ein Nachverfolgungsverweis kann nicht als unärer Adressenübernahmeoperator (Take-Address-Operator) verwendet werden.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Ein Nachverfolgungsverweis verhält sich wie ein Standard\-C\+\+\-Verweis, und zwar mit Ausnahme, dass ein % per Referenzzählung behandelt wird.  Der folgende Ausschnitt zeigt die Konvertierung zwischen %\- und ^\-Typen:  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ Ein Nachverfolgungsverweis verhält sich wie ein Standard-C++-Verweis, und zwar mit Ausnahme, dass ein % per Referenzzählung behandelt wird. Der folgende Ausschnitt zeigt die Konvertierung zwischen %- und ^-Typen:  
   
 ```  
 Foo^ spFoo = ref new Foo();  
@@ -51,7 +53,7 @@ Foo% srFoo = *spFoo;
 Foo^ spFoo2 = %srFoo;  
 ```  
   
- Im folgenden Beispiel wird das Übergeben einer ^\-Funktion gezeigt, die ein % aufweist.  
+ Im folgenden Beispiel wird das Übergeben einer ^-Funktion gezeigt, die ein % aufweist.  
   
 ```  
   
@@ -68,32 +70,25 @@ ref class Foo sealed {};
     {  
         if (f != nullptr) { UseFooHelper(*f); }  
     }  
-  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Sie können in C\+\+\/CLI einen Nachverfolgungsverweis auf ein Handle verwenden, um eine Bindung zu einem Objekt eines CLR\-Typs auf dem Heap der Garbage Collection herzustellen.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Sie können in C++/CLI einen Nachverfolgungsverweis auf ein Handle verwenden, um eine Bindung zu einem Objekt eines CLR-Typs auf dem Heap der Garbage Collection herzustellen.  
   
  In der CLR wird der Wert einer Nachverfolgungsverweisvariablen automatisch aktualisiert, wenn der Garbage Collector das referenzierte Objekt verschiebt.  
   
- Ein Nachverfolgungsverweis kann nur auf dem Stapel deklariert werden.  Ein Nachverfolgungsverweis kann kein Klassenmember sein.  
+ Ein Nachverfolgungsverweis kann nur auf dem Stapel deklariert werden. Ein Nachverfolgungsverweis kann kein Klassenmember sein.  
   
- Die Verwendung eines systemeigenen C\+\+\-Verweises auf ein Objekt auf dem Heap der Garbage Collection ist nicht möglich.  
+ Die Verwendung eines systemeigenen C++-Verweises auf ein Objekt auf dem Heap der Garbage Collection ist nicht möglich.  
   
- Weitere Informationen über Nachverfolgungsverweise in C\+\+\/CLI finden Sie unter:  
+ Weitere Informationen über Nachverfolgungsverweise in C++/CLI finden Sie unter:  
   
--   [Gewusst wie: Verwenden von Nachverfolgungsverweisen in C\+\+\/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)  
+-   [Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
--   [Gewusst wie: Verwenden von Nachverfolgungsverweisen und Werttypen](../misc/how-to-use-tracking-references-and-value-types.md)  
-  
--   [Gewusst wie: Verwenden von Nachverfolgungsverweisen und inneren Zeigern](../misc/how-to-use-tracking-references-and-interior-pointers.md)  
-  
--   [Gewusst wie: Schreiben von Vorlagenfunktionen, die native, Wert\- oder Referenzparameter übernehmen](../misc/how-to-write-template-functions-that-take-native-value-or-reference-parameters.md)  
-  
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Das folgende Beispiel für C\+\+\/CLI veranschaulicht, wie ein Nachverfolgungsverweis mit systemeigenen und verwalteten Typen verwendet wird.  
+ Das folgende Beispiel für C++/CLI veranschaulicht, wie ein Nachverfolgungsverweis mit systemeigenen und verwalteten Typen verwendet wird.  
   
 ```  
 // tracking_reference_1.cpp  
@@ -134,7 +129,7 @@ int main() {
   
  **Beispiel**  
   
- Das folgende Beispiel für C\+\+\/CLI veranschaulicht, wie ein Nachverfolgungsverweis an ein Array gebunden wird.  
+ Das folgende Beispiel für C++/CLI veranschaulicht, wie ein Nachverfolgungsverweis an ein Array gebunden wird.  
   
 ```  
 // tracking_reference_2.cpp  
@@ -153,5 +148,7 @@ int main() {
   
  **Ausgabe**  
   
-  **21**  
- **222**
+```Output  
+21  
+222  
+```

@@ -11,37 +11,20 @@ ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCLinkerTool.OutputFile
-- VC.Project.VCLinkerTool.ShowProgress
-- VC.Project.VCLinkerTool.Version
-- VC.Project.VCLinkerTool.VerboseOutput
-- VC.Project.VCLinkerTool.UnresolvedReferences
-- VC.Project.VCLinkerTool.OptimizeForMemory
-- VC.Project.VCLinkerTool.SharedLibrarySearchPath
-- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
-- VC.Project.VCLinkerTool.ForceSymbolReferences
-- VC.Project.VCLinkerTool.LibraryDependencies
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.GenerateMapFile
-- VC.Project.VCLinkerTool.Relocation
-- VC.Project.VCLinkerTool.FunctionBinding
-- VC.Project.VCLinkerTool.NoExecStackRequired
-- VC.Project.WholeArchive
-- VC.Project.AdditionalOptionsPage
-- VC.Project.VCLinkerTool.AdditionalDependencies
-ms.openlocfilehash: 963d73e73e42930f0245c0fef443da27bf451bc6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 5396021410ec04baa8eb1218c676919a322ac978
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="linker-properties-linux-c"></a>Linkereigenschaften (Linux C++)
 
 ## <a name="general"></a>Allgemein
-Eigenschaft | Beschreibung | Auswahlmöglichkeiten
+
+Eigenschaft | description | Auswahlmöglichkeiten
 --- | ---| ---
 Ausgabedatei | Die Option überschreibt den Standardnamen und den Speicherort des Programms, das der Linker erstellt. (-o)
 Status anzeigen | Gibt Linkerstatusmeldungen aus.
@@ -59,7 +42,8 @@ Linktimeout | Timeout für Remotelinking in Millisekunden.
 Ausgabe kopieren | Gibt an, ob die Buildausgabedatei vom Remotesystem auf den lokalen Computer kopiert werden soll.
 
 ## <a name="input"></a>Eingabe
-Eigenschaft | Beschreibung | Auswahlmöglichkeiten
+
+Eigenschaft | description | Auswahlmöglichkeiten
 --- | ---| ---
 Bestimmte Standardbibliotheken ignorieren | Gibt einen oder mehrere Namen der zu ignorierenden Standardbibliotheken an. (--exclude-libs lib,lib)
 Standardbibliotheken ignorieren | Ignoriert Standardbibliotheken und sucht nur nach explizit angegebenen Bibliotheken.
@@ -68,21 +52,17 @@ Bibliothekabhängigkeiten | Mit dieser Option können zusätzliche Bibliotheken 
 Zusätzliche Abhängigkeiten | Gibt zusätzliche Elemente an, die der Linkerbefehlszeile hinzugefügt werden sollen.
 
 ## <a name="debugging"></a>Debuggen
-Eigenschaft | Beschreibung | Auswahlmöglichkeiten
+
+Eigenschaft | description | Auswahlmöglichkeiten
 --- | ---| ---
 Debuggersymbolinformationen | Debuggersymbolinformationen aus der Ausgabedatei. | **Alle einschließen**<br>**Nur Debuggersymbolinformationen auslassen**<br>**Alle Symbolinformationen auslassen**<br>
 Name der Zuordnungsdatei | Die Option Map weist den Linker an, eine Zuordnungsdatei mit dem vom Benutzer angegebenen Namen zu erstellen. (-Map=)
 
 ## <a name="advanced"></a>Erweitert
-Eigenschaft | Beschreibung | Auswahlmöglichkeiten
+
+Eigenschaft | description | Auswahlmöglichkeiten
 --- | ---| ---
 Variablen nach dem Umsetzen als ReadOnly kennzeichnen | Diese Option kennzeichnet Variablen nach dem Umsetzen als schreibgeschützt.
 Sofortige Funktionsbindung aktivieren | Diese Option kennzeichnet das Objekt für sofortige Funktionsbindung.
 Keinen ausführbaren Stapel erfordern | Diese Option gibt an, dass die Ausgabe keinen ausführbaren Stapel erfordert.
 Gesamtes Archiv | Diese Option verwendet den gesamten Code aus den Quellen und zusätzlichen Abhängigkeiten.
-
-
-## <a name="additional-options"></a>Zusätzliche Optionen
-
-
-

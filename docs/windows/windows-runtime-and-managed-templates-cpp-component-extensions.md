@@ -1,50 +1,52 @@
 ---
-title: "Windows Runtime and Managed Templates (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "templates, with CLR types"
+title: "Windows-Runtime und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 14
-caps.handback.revision: "14"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Windows Runtime and Managed Templates (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vorlagen können Sie, um einen Prototyp eines Windows Common Language Runtime oder Runtime\-Typs zu definieren und instanziieren dann Variationen dieses Typs, indem verschiedene Vorlagentypparameter verwenden.  
+# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
+Vorlagen ermöglichen es Ihnen, einen Prototyp eines Windows-Runtime oder der common Language Runtime-Typ definieren und dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.  
   
-## Alle Laufzeiten  
- Sie können Vorlagen im Wert oder von Referenztypen erstellen.  Weitere Informationen zum Erstellen des Werts oder der Verweistypen, finden Sie unter [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ Sie können Vorlagen von Werttypen oder Referenztypen erstellen.  Weitere Informationen zum Erstellen von Werttypen oder Referenztypen, finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Weitere Informationen über Standard\-C\+\+\-Klassenvorlagen, finden Sie unter [Klassenvorlagen](../cpp/class-templates.md).  
+ Weitere Informationen zu Standard-c++-Klassenvorlagen, finden Sie unter [Klassenvorlagen](../cpp/class-templates.md).  
   
-## Windows\-Runtime  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows\-Runtime gelten.\)  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows-Runtime gelten.)  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## Common Language Runtime  
- Es gibt einige Einschränkungen zum Erstellen von Klassenvorlagen in verwalteten Typen, die in den folgenden Codebeispielen veranschaulicht werden.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Es gibt einige Einschränkungen für das Erstellen von Klassenvorlagen von verwalteten Typen, bei denen in den folgenden Codebeispielen dargestellt werden.  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Es ist möglich, einen generischen Typ mit einem Vorlagenparameter des verwalteten Typs zu instanziieren, aber Sie können eine verwaltete Vorlage mit dem Vorlagenparameter des generischen Typs nicht instanziieren.  Dies ist, da generische Typen zur Laufzeit aufgelöst werden.  Weitere Informationen finden Sie unter [Generics and Templates \(Visual C\+\+\)](../windows/generics-and-templates-visual-cpp.md).  
+ Es ist möglich, beim Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden.  Dies liegt daran generische Typen zur Laufzeit aufgelöst werden.  Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -68,7 +70,7 @@ ref class R {
   
  **Beispiel**  
   
- Ein generischer Typ oder eine verwaltete Funktion kann nicht in einer verwalteten Vorlage geschachtelt werden.  
+ Ein generischer Typ oder die Funktion kann nicht in einer verwalteten Vorlage geschachtelt werden.  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -81,7 +83,7 @@ template<class T> public ref class R {
   
  **Beispiel**  
   
- Sie können auf die Vorlagen nicht zugreifen, die in einer Assembly, auf die verwiesen wird, mit C\+\+\/CLI\-Sprachensyntax definiert sind, aber Sie können Reflektion verwenden.  Wenn eine Vorlage nicht instanziiert wird, wird sie nicht in den Metadaten ausgegeben.  Wenn eine Vorlage instanziiert wird, wird nur Memberfunktionen in den Metadaten angezeigt werden.  
+ Kann nicht auf Vorlagen definiert, die in einer referenzierten Assembly C + c++ / CLI-Sprachsyntax, aber Sie können mithilfe von Reflektion.  Wenn eine Vorlage nicht instanziiert wird, wird er nicht in den Metadaten ausgegeben.  Wenn eine Vorlage instanziiert wird, werden nur auf die verwiesen wird Memberfunktionen in den Metadaten angezeigt.  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -113,7 +115,7 @@ int main() {
   
  **Beispiel**  
   
- Sie können den verwalteten Modifizierer einer Klasse in einer teilweisen Spezialisierung oder der expliziten Spezialisierung einer Klassenvorlage ändern.  
+ Sie können die verwalteten Modifizierer einer Klasse in eine teilweise Spezialisierung oder explizite Spezialisierung einer Klassenvorlage ändern.  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -141,5 +143,5 @@ class A <int> {};
   
 ```  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

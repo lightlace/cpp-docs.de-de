@@ -1,32 +1,33 @@
 ---
-title: "includelib (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.includelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "includelib attribute"
+title: Includelib (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.includelib
+dev_langs: C++
+helpviewer_keywords: includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: df6c38889db24cc1b4f28ce0bfe4cf96eb6b03a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# includelib (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bewirkt, dass ein in der generierten IDL\-Datei oder H\-Datei .idl eingeschlossen werden soll.  
+# <a name="includelib-c"></a>includelib (C++)
+Bewirkt, dass eine IDL oder .h-Datei, in der generierten IDL-Datei eingeschlossen werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,15 +36,15 @@ Bewirkt, dass ein in der generierten IDL\-Datei oder H\-Datei .idl eingeschlosse
 ) ];  
 ```  
   
-#### Parameter  
- *name.idl*  
- Der Name der IDL\-Datei enthaltenes, die Sie als Teil der generierten IDL\-Datei soll.  
+#### <a name="parameters"></a>Parameter  
+ *Name.idl*  
+ Der Name der IDL-Datei, die als Teil der generierten IDL-Datei eingeschlossen werden sollen.  
   
-## Hinweise  
- Das Attribut `includelib` C\+\+ verursacht ein in der generierten IDL\-Datei oder H\-Datei .idl enthalten sein sollen, nach der `importlib`\-Anweisung.  
+## <a name="remarks"></a>Hinweise  
+ Die `includelib` C++-Attribut bewirkt, dass eine IDL oder .h-Datei, in der generierten IDL-Datei eingeschlossen werden sollen, nachdem die `importlib` Anweisung.  
   
-## Beispiel  
- Im folgenden Code wird in einer CPP\-Datei dargestellt:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code ist in einer CPP-Datei gezeigt:  
   
 ```  
 // cpp_attr_ref_includelib.cpp  
@@ -52,24 +53,23 @@ Bewirkt, dass ein in der generierten IDL\-Datei oder H\-Datei .idl eingeschlosse
 [includelib("includelib.idl")];  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
+ [Importieren](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [include](../windows/include-cpp.md)   
+ [einschließen](../windows/include-cpp.md)   
  [importlib](../windows/importlib.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 839a597624c0f1a00ab983ecd5f2f31aeefbd953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 Vorhandenen ActiveX-Steuerelementen (früher OLE-Steuerelemente) im Internet, ohne Änderungen verwendet werden können. Allerdings empfiehlt es sich so ändern Sie Steuerelemente, um ihre Leistung zu verbessern. Wenn das Steuerelement auf einer Webseite verwenden, sind weitere Überlegungen. Die Datei ".ocx" und alle unterstützenden Dateien müssen auf dem Zielcomputer sein oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch Download Zeit einen wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
@@ -85,7 +86,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
  CAB-Dateien sind die empfohlene Methode zum Paket ActiveX-Steuerelemente, die MFC verwenden. Ein MFC-ActiveX-Steuerelement in einer CAB-Datei verpacken ermöglicht eine INF-Datei mit der die Installation von ActiveX-Steuerelement und alle abhängigen DLLs (z. B. die MFC-DLLs) eingeschlossen werden sollen. Verwenden eine CAB-Datei automatisch komprimiert den Code schneller herunterladen. Wenn Sie eine CAB-Datei für den Download der Komponenten verwenden, ist es schneller, um die gesamte CAB-Datei anstelle der einzelnen Komponenten zu signieren.  
   
 ### <a name="creating-cab-files"></a>Erstellen von CAB-Dateien  
- Sie können die CAB-Datei Development Kit herunterladen, aus dem Knowledge Base-Artikel [310618: Microsoft CAB-Datei Software Development Kit](http://go.microsoft.com/fwlink/linkid=148204). In diesem Kit finden Sie die erforderlichen Tools zum Erstellen von CAB-Dateien.  
+ Sie können die CAB-Datei Development Kit herunterladen, aus dem Knowledge Base-Artikel [310618: Microsoft CAB-Datei Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). In diesem Kit finden Sie die erforderlichen Tools zum Erstellen von CAB-Dateien.  
   
  Die CAB-Datei verweist `CODEBASE` sollte die Datei ".ocx" für das ActiveX-Steuerelement und eine INF-Datei zur Steuerung der Installation enthalten. Erstellen Sie die CAB-Datei den Namen der Steuerelementdatei angeben und eine INF-Datei. Verwenden Sie keine abhängigen DLLs, die möglicherweise bereits auf dem System in der CAB-Datei vorhanden. MFC-DLLs werden z. B. in einer separaten CAB-Datei gepackt und von der steuernde INF-Datei bezeichnet.  
   

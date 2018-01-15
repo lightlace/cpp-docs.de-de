@@ -1,32 +1,33 @@
 ---
-title: "SRWLock::LockExclusive-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockExclusive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LockExclusive-Methode"
+title: 'SRWLOCK:: Lockexclusive-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockExclusive
+dev_langs: C++
+helpviewer_keywords: LockExclusive method
 ms.assetid: f361b672-fca6-45cc-a9b4-310cc0d23fdc
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 345a2a4b52e0bb0811709c71e9e0b1d4a9b4d494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLock::LockExclusive-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft ein SRWLock\-Objekt im exklusiven Modus ab.  
+# <a name="srwlocklockexclusive-method"></a>SRWLock::LockExclusive-Methode
+Ruft ein Objekt SRWLock, im exklusiven Modus ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 SyncLockExclusive LockExclusive();  
@@ -36,17 +37,17 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `lock`  
- Zeiger zu einem SRWLock\-Objekt.  
+ Zeiger auf ein SRWLock-Objekt.  
   
-## Rückgabewert  
- Ein SRWLock\-Objekt im exklusiven Modus.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein im exklusiven Modus SRWLock-Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [SRWLock\-Klasse](../windows/srwlock-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [SRWLock-Klasse](../windows/srwlock-class.md)

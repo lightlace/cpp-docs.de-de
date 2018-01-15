@@ -1,45 +1,46 @@
 ---
-title: "ComPtr::ReleaseAndGetAddressOf-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::ReleaseAndGetAddressOf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseAndGetAddressOf-Methode"
+title: 'Comptr:: Releaseandgetaddressof-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::ReleaseAndGetAddressOf
+dev_langs: C++
+helpviewer_keywords: ReleaseAndGetAddressOf method
 ms.assetid: 3751dcb4-d50e-432c-89e4-e736be34d434
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be56e7afb23295e9b03d801943af25c652d18758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::ReleaseAndGetAddressOf-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Schnittstelle frei, die diesem ComPtr zugeordnet wird und dann die Adresse des [ptr\_](../windows/comptr-ptr-data-member.md) Datenmembers ab, der einen Zeiger zur Schnittstelle enthält, die freigegeben wurde.  
+# <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf-Methode
+Gibt die Schnittstelle frei, die diesem ComPtr-Objekt zugeordnet ist, und ruft dann die Adresse des [ptr_](../windows/comptr-ptr-data-member.md) -Datenmembers ab, der einen Zeiger auf die Schnittstelle enthält, die freigegeben wurde.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 T** ReleaseAndGetAddressOf();  
 ```  
   
-## Rückgabewert  
- Die Adresse des [ptr\_](../windows/comptr-ptr-data-member.md) Datenmembers von diesem ComPtr.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Adresse der [Ptr_](../windows/comptr-ptr-data-member.md) Datenmember der dieses comptr-Objekt.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)   
- [ComPtr::ptr\_\-Datenmember](../windows/comptr-ptr-data-member.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)   
+ [ComPtr::ptr_-Datenmember](../windows/comptr-ptr-data-member.md)

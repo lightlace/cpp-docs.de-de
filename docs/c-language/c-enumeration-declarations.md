@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-enumeration-declarations"></a>C-Enumerationsdeklarationen
 Eine Enumeration besteht aus einem Satz von benannten ganzzahligen Konstanten. Die Deklaration eines Enumerationstyps gibt den Namen des (optionalen) Enumerationstags an und definiert den Satz benannter ganzzahliger Bezeichner (bezeichnet als "Enumerationssatz", "Enumeratorkonstanten", "Enumeratoren" oder "Member"). Eine Variable mit Enumerationstyp speichert einen der Werte des Enumerationssatzes, der durch diesen Typ definiert ist.  
@@ -59,7 +60,7 @@ enumerator-list
  *enumerator-list*:  
  *enumerator*  
   
- *enumerator-list* **,**  `enumerator`  
+ *enumerator-list* **,** `enumerator`  
   
  `enumerator`:  
  *enumeration-constant*  

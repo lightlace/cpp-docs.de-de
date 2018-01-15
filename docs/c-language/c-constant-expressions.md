@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>C-Ausdrücke (konstant)
 Ein konstanter Ausdruck wird zur Kompilierzeit, nicht zur Laufzeit, ausgewertet und kann an einem beliebigen Ort verwendet werden, an dem eine Konstante verwendet werden kann. Der konstante Ausdruck muss eine Konstante auswerten, die sich im Bereich der darstellbaren Werte für diesen Typ befindet. Die Operanden eines konstanten Ausdrucks können ganzzahlige Konstanten, Zeichenkonstanten, Gleitkommakonstanten, Enumerationskonstanten, Typumwandlungen, `sizeof`-Ausdrücke und andere konstante Ausdrücke sein.  
@@ -38,7 +39,7 @@ Ein konstanter Ausdruck wird zur Kompilierzeit, nicht zur Laufzeit, ausgewertet 
  *expression*:  
  *assignment-expression*  
   
- *expression* **,**  *assignment-expression*  
+ *expression* **,** *assignment-expression*  
   
  *assignment-expression*:  
  *conditional-expression*  

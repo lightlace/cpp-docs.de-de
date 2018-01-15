@@ -1,47 +1,48 @@
 ---
-title: "Module::ReleaseNotifier::ReleaseNotifier-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseNotifier, Konstruktor"
+title: Module::ReleaseNotifier::ReleaseNotifier Konstruktor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: ReleaseNotifier, constructor
 ms.assetid: 889a3c9a-2366-44a1-ba7d-a59c1885e7f3
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81d4f136fc9982b7260ce08d3fca4e9037f60c22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Module::ReleaseNotifier::ReleaseNotifier-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert eine neue Instanz der Module::ReleaseNotifier\-Klasse.  
+# <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier-Konstruktor
+Initialisiert eine neue Instanz der releasenotifier-Klasse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `release`  
- `true`, um diese Instanz zu löschen, wenn die Versionsmethode aufgerufen wird; `false`, um diese Instanz nicht gelöscht.  
+ `true`Diese Instanz gelöscht, wenn die Release-Methode aufgerufen wird; `false` diese Instanz nicht gelöscht.  
   
-## Ausnahmen  
+## <a name="exceptions"></a>Ausnahmen  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Module::ReleaseNotifier\-Klasse](../windows/module-releasenotifier-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)

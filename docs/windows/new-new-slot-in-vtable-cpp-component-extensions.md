@@ -1,53 +1,52 @@
 ---
-title: "new (new slot in vtable)  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new keyword [C++]"
+title: "New (neuer Slot in Vtable) (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 20
-caps.handback.revision: "18"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# new (new slot in vtable)  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (neuer Slot in vtable) (Komponentenerweiterungen für C++)
 Das Schlüsselwort `new` gibt an, dass ein virtuelles Member einen neuen Platz im vtable erhält.  
   
-> [!NOTE]
->  Das Schlüsselwort `new` hat viele Verwendungszwecke und Bedeutungen.  Weitere Informationen finden Sie im Thema zur Erläuterung der Mehrdeutigkeit von [neu](../misc/new.md).  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
   
-## Alle Laufzeiten  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.\)  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ In Windows-Runtime unterstützt nicht.  
   
-## Windows\-Runtime  
- Nicht unterstützt in [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
-  
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- In einer **\/clr**\-Kompilierung gibt `new` an, dass ein virtuelles Member einen neuen PLatz im vtable erhält und dass die Funktion keine Basisklassenmethode überschreibt.  
+ In einem **"/ CLR"** Kompilierung `new` gibt an, dass ein virtuelles Member einen neuen Platz im Vtable erhält,, aus dem die Funktion überschreibt keine Basisklassenmethode.  
   
- `new` veranlasst, dass der newslot\-Modifizierer dem IL für die Funktion hinzugefügt wird.  Weitere Informationen zu "newslot" finden Sie unter:  
+ `new` veranlasst, dass der newslot-Modifizierer dem IL für die Funktion hinzugefügt wird.  Weitere Informationen zu "newslot" finden Sie unter:  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="e9bb59a12f97840a5c3173bb77c6b5b1" class\="tgtSentence"\>MethodInfo.GetBaseDefinition\-Methode\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition-Methode](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [\<caps:sentence id\="tgt12" sentenceid\="f6ceddd85a425f38e7ed06e94a9808a9" class\="tgtSentence"\>MethodAttributes\-Enumeration\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [MethodAttributes-Enumeration](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
  Im folgenden Beispiel werden die Auswirkungen von `new` gezeigt.  
@@ -101,11 +100,18 @@ int main() {
   
  **Ausgabe**  
   
-  **C::f\(\) aufgerufen**  
- **D::f\(\) aufgerufen**  
- **D::g\(\) aufgerufen**  
- **D::g\(\) aufgerufen**  
- **E::f\(\) aufgerufen**   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+C::f() called  
+  
+D::f() called  
+  
+D::g() called  
+  
+D::g() called  
+  
+E::f() called  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)   
  [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)

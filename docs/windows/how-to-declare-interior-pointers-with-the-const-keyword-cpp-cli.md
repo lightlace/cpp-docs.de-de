@@ -1,33 +1,35 @@
 ---
-title: "How to: Declare Interior Pointers with the const Keyword (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, interior"
+title: "Vorgehensweise: Deklarieren von inneren Zeigern mit dem const-Schlüsselwort (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aadd1573a5110960ba74eabe4fc6c696fad887ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Interior Pointers with the const Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das folgende Beispiel zeigt, wie `const` in der Deklaration eines inneren Zeigers verwendet.  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Gewusst wie: Deklarieren von inneren Zeigern mit dem const-Schlüsselwort (C++/CLI)
+Das folgende Beispiel zeigt, wie `const` in der Deklaration eines inneren Zeigers.  
   
 > [!IMPORTANT]
->  Diese Sprachfunktion wird durch die **\/clr**\-Compileroption, jedoch nicht durch die **\/ZW**\-Compileroption unterstützt.  
+>  Diese Sprachfunktion wird unterstützt, indem Sie die **"/ CLR"** (Compileroption), jedoch nicht von der **/Zw** -Compileroption.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // interior_ptr_const.cpp  
@@ -86,5 +88,5 @@ int main() {
 };  
 ```  
   
-## Siehe auch  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

@@ -20,7 +20,7 @@ f1_keywords:
 - string/std::to_string
 - string/std::to_wstring
 ms.assetid: 1a4ffd11-dce5-4cc6-a043-b95de034c7c4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
+ms.workload: cplusplus
+ms.openlocfilehash: 9b1d77b464ea9e9ab4ca6e9511836c490c1c622a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5f6b8c5da1b8d848d751a8ce2189b864538f4cfe
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;-Funktionen
 ||||  
@@ -391,7 +391,7 @@ unsigned long long stoull(
 ### <a name="remarks"></a>Hinweise  
  Mit der Funktion wird die Abfolge von Elementen in `str` in einen Wert `val` des Typs `unsigned long long` konvertiert, als ob `strtoull( str.c_str(), _Eptr, idx)` aufgerufen wird, wobei `_Eptr` ein internes Objekt für die Funktion ist. Bei ` str.c_str() == *_Eptr` wird ein Objekt vom Typ `invalid_argument` ausgegeben. Wenn solch ein Aufruf `errno` festlegt, wird ein Objekt vom Typ `out_of_range` ausgegeben. Andernfalls gilt: Wenn `idx` kein NULL-Zeiger ist, speichert die Funktion `*_Eptr -  str.c_str()` in `*idx` und gibt `val` zurück.  
   
-##  <a name="swap"></a> swap  
+##  <a name="swap"></a>  swap  
  Tauscht die Arrays von Zeichen für zwei Zeichenfolgen aus.  
   
 ```  
@@ -536,5 +536,4 @@ wstring to_wstring(long double Val);
   
 ## <a name="see-also"></a>Siehe auch  
  [\<string>](../standard-library/string.md)
-
 

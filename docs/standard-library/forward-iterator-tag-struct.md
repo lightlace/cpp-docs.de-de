@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a6d48940faf4645421a863411058ebfce1949aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4874163e1060658c03757507cba2953c35c56557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forwarditeratortag-struct"></a>forward_iterator_tag-Struktur
 Eine Klasse, die einen Rückgabetyp für eine **iterator_category**-Funktion bereitstellt, die einen Forward-Iterator darstellt.  
@@ -47,7 +48,7 @@ struct forward_iterator_tag    : public input_iterator_tag {};
   
 ## <a name="see-also"></a>Siehe auch  
  [input_iterator_tag-Struktur](../standard-library/input-iterator-tag-struct.md)   
- [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 

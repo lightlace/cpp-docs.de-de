@@ -1,106 +1,109 @@
 ---
-title: "pin_ptr (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "pin_ptr_cpp"
-  - "stdcli::language::pin_ptr"
-  - "pin_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pinning pointers"
-  - "pin_ptr keyword [C++]"
+title: Pin_ptr (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- pin_ptr_cpp
+- stdcli::language::pin_ptr
+- pin_ptr
+dev_langs: C++
+helpviewer_keywords:
+- pinning pointers
+- pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 28
-caps.handback.revision: "26"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "28"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# pin_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Deklariert einen *festen Zeiger*, der nur mit der Common Language Runtime.  
+# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwendet wird.  
   
-## Alle Laufzeiten  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.\)  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
   
-## Windows\-Runtime  
- \(Diese Sprachfunktion wird nicht in Windows Runtime unterstützt.\)  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ (Diese Sprachfunktion wird in der Windows-Runtime nicht unterstützt.)  
   
-## Common Language Runtime  
- Ein *fester Zeiger* ist ein innerer Zeiger, der das Objekt verhindert, das dazu dem auf dem Heap der Garbage Collection dargestellt wird.  Das bedeutet, dass der Wert eines festen Zeigers von der Common Language Runtime nicht geändert.  Dies ist erforderlich, wenn Sie die Adresse einer verwalteten Klasse an eine nicht verwaltete Funktion übergeben, sodass die Adresse unerwartet nicht bei der Auflösung von nicht verwaltetem Funktionsaufrufs ändert.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Ein *feste Zeiger* ein inneren Zeigers, der verhindert, das Objekt dass verweist auf dem Heap der Garbage Collection verschoben. Der Wert, der einen festen Zeiger ist, also nicht von der common Language Runtime geändert. Dies ist erforderlich, wenn Sie die Adresse einer verwalteten Klasse an eine nicht verwaltete Funktion übergeben, sodass die Adresse nicht unerwartet während der Auflösung des nicht verwalteten Funktionsaufrufs ändert.  
   
-### Syntax  
+### <a name="syntax"></a>Syntax  
   
 ```cpp  
-[cli::]pin_ptr<cv_qualifier type> var = &initializer;  
+[cli::]pin_ptr<cv_qualifiertype>var = &initializer;  
 ```  
   
-### Parameter  
- *cv\_qualifier*  
- Qualifizierer `const` oder `volatile`.  Standardmäßig ist ein fester Zeiger `volatile`.  Es ist jedoch redundant kein Fehler, einen festen Zeiger deklarieren `volatile`.  
+### <a name="parameters"></a>Parameter  
+ *cv_qualifier*  
+ `const`oder `volatile` Qualifizierer. Standardmäßig ist ein fester Zeiger `volatile`. Es ist jedoch nicht um einen Fehler, deklarieren einen festen Zeiger redundant `volatile`.  
   
- *type*  
- Der `initializer`\-Typ.  
+ *Typ*  
+ Der `initializer`-Typ.  
   
  *var*  
- Der Name der Variablen `pin_ptr`.  
+ Der Name des der `pin_ptr` Variable.  
   
  *initializer*  
- Ein Member eines Referenztyps, des Elements eines verwalteten Arrays oder einem anderen Objekt, das auf einem systemeigenen Zeiger zuweisen können.  
+ Ein Element ein Verweistyp, ein Element ein verwaltetes Array oder ein anderes Objekt, das einen systemeigenen Zeiger zugewiesen werden können.  
   
-### Hinweise  
- `pin_ptr` stellt eine Obermenge der Funktionalität eines systemeigenen Zeiger dar.  Daher alles kann, das auf einem systemeigenen Zeiger zugewiesen werden kann, auch zugewiesen sind `pin_ptr`.  Ein innerer Zeiger ist zulässig, um den gleichen Satz von Vorgängen wie systemeigene Zeiger, einschließlich den Vergleich und Zeigerarithmetik auszuführen.  
+### <a name="remarks"></a>Hinweise  
+ Ein `pin_ptr` eine Obermenge der Funktionen der systemeigenen Zeiger darstellt. Aus diesem Grund kann Elemente, die einen systemeigenen Zeiger zugewiesen werden kann auch zum zugewiesen eine `pin_ptr`. Ein innerer Zeiger ist zulässig, um den gleichen Satz von Vorgängen wie systemeigene Zeiger, einschließlich Vergleich und Zeigerarithmetik auszuführen.  
   
- Ein Objekt oder ein Unterobjekt einer verwalteten Klasse können angeheftet werden, in diesem Fall die Common Language Runtime sie nicht während der Garbage Collection verschoben wird.  Die grundlegende Verwendung dieses ist, einen Zeiger an verwaltete Daten als tatsächliche Parameter eines Funktionsaufrufs nicht verwaltetem zu übergeben.  Während eines Auflistungszyklus untersucht die Laufzeit die Metadaten, die für festen Zeiger erstellt und verschiebt nicht das Element, das auf sie zeigt.  
+ Ein Objekt oder untergeordnete Objekt einer verwalteten Klasse kann angeheftet werden in diesem Fall wird die common Language Runtime nicht es während der Garbagecollection verschoben. Hauptverwendungszweck für diese ist einen Zeiger auf verwaltete Daten, die als übergebener Parameter eines nicht verwalteten Funktionsaufrufs zu übergeben. Während einer Collection-Zyklus die Laufzeit überprüfen Sie die Metadaten für die feste Zeiger erstellt wird und das Element, auf die verwiesen, wird nicht verschoben.  
   
- Ein Objekt, Fixieren fixiert auch seine Wertfelder an; das heißt, Felder von Primitiven oder von Werttyp.  Allerdings werden die Felder, die durch Trackinghandle \(`%`\) deklariert werden nicht fixiert.  
+ Anheften eines Objekts pins auch die Wertfelder; d. h. type Felder von primitiven oder Wert. Allerdings deklariert Felder von Trackinghandle (`%`) nicht angeheftet werden.  
   
- Das Fixieren eines Unterobjekts, das in einem verwalteten Objekt definiert wurde, hat den Auswirkungen des Anheftens des vollständigen Objekts.  
+ Anheften eines untergeordneten Objekts in ein verwaltetes Objekt definierten wirkt sich das anheften als ganze Objekt aus.  
   
- Wenn der feste Zeiger neu zugewiesen wird, um auf einen neuen Wert zu veranschaulichen, wird die vorherige Instanz, auf die verwiesen wird, nicht mehr als fixiert.  
+ Wenn der feste Zeiger neu zugewiesen wird, um einen neuen Wert zu verweisen, die vorherige Instanz, auf die gezeigt wird nicht mehr als fixiert betrachtet.  
   
- Ein Objekt ist fixiert, nur während `pin_ptr` darauf gezeigt.  Das Objekt wird nicht mehr, fixiert, wenn sein fester Zeiger des Gültigkeitsbereichs, oder wird auf [Nullptr\-Schlüsselwort](../windows/nullptr-cpp-component-extensions.md) festgelegt.  Nachdem `pin_ptr` ungültig wird, kann das Objekt, die angeheftet wurde, in den Heap vom Garbage Collector verschoben werden.  Keine systemeigenen Zeiger, die sich noch im Objekt zeigen, werden nicht aktualisiert, und einen davon Funktionsverweises, könnten eine nicht behebbare Ausnahme auslösen.  
+ Ein Objekt fixiert ist nur eine `pin_ptr` darauf verweist. Das Objekt ist nicht mehr fixiert, wenn der feste Zeiger den Gültigkeitsbereich verlässt oder auf festgelegt ist [Nullptr](../windows/nullptr-cpp-component-extensions.md). Nach der `pin_ptr` sinkt außerhalb des gültigen Bereichs, das Objekt, das angeheftet wurde im Heap durch den Garbage Collector verschoben werden können. Jeder systemeigene Zeiger, die weiterhin auf das Objekt verweisen werden nicht aktualisiert werden, und Verweises auf eine von ihnen konnte eine nicht behebbare Ausnahme auslösen.  
   
- Wenn keine festen Zeiger auf das Objekt alle \(festen Zeiger erloschen den Gültigkeitsbereich, wurden neu zugewiesen, die auf andere Objekte verweisen oder wurden [Nullptr\-Schlüsselwort](../windows/nullptr-cpp-component-extensions.md) zugewiesen\), zeigen, wird das Objekt kann nicht fixiert werden.  
+ Wenn keine feste Zeiger auf das Objekt verweisen (alle feste Zeiger ist ein Fehler aufgetreten, außerhalb des gültigen Bereichs, zugewiesen wurden, um auf andere Objekte verweisen oder zugewiesen wurden [Nullptr](../windows/nullptr-cpp-component-extensions.md)), das Objekt ist garantiert nicht angeheftet werden.  
   
- Ein fester Zeiger kann auf einem Bezugshandle, ein Werttyp oder eingepacktes Typhandle, Member eines verwalteten Typs anzeigen bzw. ein Element eines verwalteten Arrays.  Es kann nicht auf einen Referenztyp wird.  
+ Ein fester Zeiger verweisen auf einen Verweis Handle Werttyp oder mittels Boxing gepackter Typhandle, Member eines verwalteten Typs oder ein Element von einem verwalteten Array. Es kann nicht auf einen Verweistyp verweisen.  
   
- Das Vornehmen der Adresse von `pin_ptr`, die auf einem systemeigenen Objekt zeigt, verursacht nicht definiertes Verhalten.  
+ Übernahme der Adresse einer `pin_ptr` , verweist auf ein systemeigenes Objekt verursacht nicht definiertes Verhalten.  
   
- Feste Zeiger können als nicht statische lokale Variablen auf dem Stapel nur deklariert werden.  
+ Feste Zeiger können nur auf dem Stapel als nicht statische lokale Variablen deklariert werden.  
   
- Feste Zeiger können nicht wie verwendet werden:  
+ Feste Zeiger können nicht als verwendet werden:  
   
 -   Funktionsparameter  
   
--   Rückgabetyp einer Funktion  
+-   der Rückgabetyp einer Funktion  
   
--   Mitglied einer Klasse  
+-   ein Member einer Klasse  
   
--   der Zieltyp einer Umwandlung.  
+-   der Zieltyp einer Typumwandlung.  
   
- `pin_ptr` ist im Namespace `cli`.  Weitere Informationen finden Sie unter [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `pin_ptr`befindet sich in der `cli` Namespace. Weitere Informationen finden Sie unter [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Weitere Informationen zum inneren Zeiger, finden Sie unter [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md).  
+ Weitere Informationen zu inneren Zeigern, finden Sie unter [Interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Weitere Informationen über feste Zeiger, finden Sie unter [How to: Pin Pointers and Arrays](../windows/how-to-pin-pointers-and-arrays.md) und [How to: Declare Pinning Pointers and Value Types](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Weitere Informationen zum Festhalten von Zeigern, finden Sie unter [wie: Anheften von Zeigern und Arrays](../windows/how-to-pin-pointers-and-arrays.md) und [wie: Deklarieren Festhalten von Zeigern und Werttypen](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Beispiel wird `pin_ptr` verwendet, um die Position des ersten Elements eines Arrays einzuschränken.  
+ Im folgenden Beispiel wird `pin_ptr` , die die Position des ersten Elements eines Arrays zu beschränken.  
   
 ```  
 // pin_ptr_1.cpp  
@@ -148,9 +151,13 @@ int main() {
   
  **Ausgabe**  
   
-  **45** **Beispiel**  
+```Output  
+45  
+```  
   
- Das folgende Beispiel zeigt, dass ein innerer Zeiger zu einem festen Zeiger konvertiert werden kann und dass der Rückgabetyp des address\-of\-Operators \(`&`\) ein innerer Zeiger ist, wenn der Operand auf dem verwalteten Heap ist.  
+ **Beispiel**  
+  
+ Das folgende Beispiel zeigt, dass ein innerer Zeiger zu einem festen Zeiger konvertiert werden kann und der Rückgabetyp des Address-of-Operators (`&`) wird ein innerer Zeiger, wenn der Operand auf dem verwalteten Heap ist.  
   
 ```  
 // pin_ptr_2.cpp  
@@ -182,9 +189,13 @@ int main() {
   
  **Ausgabe**  
   
- **1** **Beispiel**  
+```Output  
+1  
+```  
   
- Das folgende Beispiel zeigt, dass ein fester Zeiger auf einen anderen Typ umgewandelt werden kann.  
+ **Beispiel**  
+  
+ Das folgende Beispiel zeigt, dass ein fester Zeiger in einen anderen Typ umgewandelt werden kann.  
   
 ```  
 // pin_ptr_3.cpp  
@@ -210,5 +221,7 @@ int main() {
   
  **Ausgabe**  
   
- **8**   
-**255**
+```Output  
+8  
+255  
+```

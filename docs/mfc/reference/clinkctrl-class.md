@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-SysLink-Steuerelements bereit.  
@@ -60,7 +61,7 @@ Stellt die Funktionalität des allgemeinen Windows-SysLink-Steuerelements bereit
 class CLinkCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Parameter  
  `lpszLinkMarkup`  
- Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das markierte anzuzeigenden Text enthält. Weitere Informationen finden Sie im Abschnitt "Markup und Link-Zugriff" in diesem Thema [Übersicht-SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706) in der [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das markierte anzuzeigenden Text enthält. Weitere Informationen finden Sie im Abschnitt "Markup und Link-Zugriff" in diesem Thema [Übersicht-SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwStyle`  
  Gibt das Format der Link-Steuerelements an. Wenden Sie eine beliebige Kombination von Steuerelementtypen. Finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) in der `Windows SDK` für Weitere Informationen.  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Parameter  
  `lpszLinkMarkup`  
- Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das markierte anzuzeigenden Text enthält. Weitere Informationen finden Sie im Abschnitt "Markup und Link-Zugriff" in diesem Thema [Übersicht-SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706) in der [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das markierte anzuzeigenden Text enthält. Weitere Informationen finden Sie im Abschnitt "Markup und Link-Zugriff" in diesem Thema [Übersicht-SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwExStyle`  
  Gibt den erweiterten Stil des Link-Steuerelements an. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  

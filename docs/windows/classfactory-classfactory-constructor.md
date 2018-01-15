@@ -1,41 +1,42 @@
 ---
-title: "ClassFactory::ClassFactory-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::ClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ClassFactory, Konstruktor"
+title: 'ClassFactory:: ClassFactory-Konstruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::ClassFactory
+dev_langs: C++
+helpviewer_keywords: ClassFactory, constructor
 ms.assetid: ea273cde-22ef-4723-9e2b-41097cb521ad
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e6de903d2db315bde409a2abbbed3387143f2630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ClassFactory::ClassFactory-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Syntax  
+# <a name="classfactoryclassfactory-constructor"></a>ClassFactory::ClassFactory-Konstruktor
+## <a name="syntax"></a>Syntax  
   
 ```  
 WRL_NOTHROW ClassFactory();  
 ```  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ClassFactory\-Klasse](../windows/classfactory-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ClassFactory-Klasse](../windows/classfactory-class.md)

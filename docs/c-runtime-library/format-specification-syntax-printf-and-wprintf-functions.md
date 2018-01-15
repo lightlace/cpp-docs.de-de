@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
@@ -70,16 +71,16 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**d**|Ganze Zahl|Ganze Dezimalzahl mit Vorzeichen|
 |**i**|Ganze Zahl|Ganze Dezimalzahl mit Vorzeichen|
 |**o**|Ganze Zahl|Oktale ganze Zahl ohne Vorzeichen|
-|**u**|Ganze Zahl|Ganze Dezimalzahl ohne Vorzeichen|
+|**n**|Ganze Zahl|Ganze Dezimalzahl ohne Vorzeichen|
 |**x**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „abcdef“.|
 |**X**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „ABCDEF“.|
-|**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße|
+|**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße.|
 |**E**|Gleitkomma|Identisch mit dem **e**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt.|
 |**f**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*dddd*__.__*dddd*, wobei *dddd* eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit oder standardmäßig sechs.|
 |**F**|Gleitkomma|Identisch mit dem Format **f**, außer dass die infinity- und die NaN-Ausgabe groß geschrieben werden.|
 |**g**|Gleitkomma|Werte mit Vorzeichen werden im **f**- oder **e**-Format angezeigt, je nachdem, was für den angegebenen Wert und die Genauigkeit kompakter ist. Das **e**-Format wird nur verwendet, wenn der Exponent des Werts kleiner als -4 oder größer als oder gleich dem *precision*-Argument ist. Nachfolgende Nullen werden abgeschnitten, und das Dezimaltrennzeichen wird nur angezeigt, wenn eine oder mehrere Ziffern darauf folgen.|
 |**G**|Gleitkomma|Identisch mit dem **g**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt (falls zutreffend).|
-|**a**|Gleitkomma|Ein hexadezimaler Gleitkommawert mit Vorzeichen mit doppelter Genauigkeit mit der Form [−]0x*h.hhhh*__p±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Kleinbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|
+|**a**|Gleitkomma|Ein hexadezimaler Gleitkommawert mit Vorzeichen mit doppelter Genauigkeit in der Form [−]0x*h.hhhh*__p±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Kleinbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|
 |**A**|Gleitkomma|Ein hexadezimaler Gleitkommawert mit Vorzeichen mit doppelter Genauigkeit mit der Form [−]0X*h.hhhh*__P±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Großbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|
 |**n**|Zeiger auf eine ganze Zahl|Anzahl der Zeichen, die bisher erfolgreich in den Stream oder Puffer geschrieben wurden. Dieser Wert wird in der ganzen Zahl gespeichert, deren Adresse als Argument angegeben ist. Die Größe des Integers, auf den gezeigt wird, kann durch ein Präfix mit Argumentengrößenangabe gesteuert werden. Der **n**-Bezeichner ist standardmäßig deaktiviert. Weitere Informationen finden Sie im wichtigen Sicherheitshinweis.|
 |**p**|Zeigertyp|Zeigt das Argument als Adresse in Hexadezimalziffern an.|

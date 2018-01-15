@@ -1,32 +1,33 @@
 ---
-title: "HandleT::Attach-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach-Methode"
+title: 'Handlet:: Attach-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: a8783a18-bbf6-456c-98a3-e2048a10d79f
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 200a3ad664008b9a9217eb4331d43e6f7ffd124c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# HandleT::Attach-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet das angegebene Handle mit dem aktuellen HandleT\-Objekt zu.  
+# <a name="handletattach-method"></a>HandleT::Attach-Methode
+Ordnet das angegebene Handle mit dem aktuellen HandleT-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void Attach(  
@@ -34,14 +35,14 @@ void Attach(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `h`  
- Ein Handler.  
+ Ein Handle.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [HandleT\-Klasse](../windows/handlet-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [HandleT-Klasse](../windows/handlet-class.md)

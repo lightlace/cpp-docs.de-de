@@ -1,7 +1,7 @@
 ---
 title: raise | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -28,65 +28,65 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.assetid: a3ccd3ad-f68f-4a7b-a005-c3ebfb217e8b
-caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 703f82f5c91cfecd65cb7ca7cf875729d9967f62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b7ec6c886c96bae93f511e54119500d58d6fea5
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="raise"></a>raise
-Sendet ein Signal an das ausführende Programm.  
-  
+
+Sendet ein Signal an das ausführende Programm.
+
 > [!NOTE]
->  Verwenden Sie diese Methode nicht, um eine [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-App zu schließen, außer bei Tests oder in Debugszenarios. Programmgesteuerte oder UI-Methoden zum Schließen einer [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-App sind gemäß Abschnitt 3.6 der [Zertifizierungsanforderungen für Windows 8-Apps](http://go.microsoft.com/fwlink/?LinkId=262889) nicht zulässig. Weitere Informationen finden Sie unter [Anwendungslebenszyklus (Windows Store-Apps)](http://go.microsoft.com/fwlink/?LinkId=262853).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      int raise(  
-int sig   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *sig*  
- Auszulösendes Signal.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg gibt **raise** 0 zurück . Andernfalls gibt es einen Wert ungleich 0 (null) zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorheriger Aufruf von **signal** eine Signalverarbeitungsfunktion für *sig* installiert hat, führt **raise** diese Funktion aus. Wenn keine Handlerfunktion installiert wurde, wird die dem Signalwert *sig* zugeordnete Standardaktion wie folgt ausgeführt.  
-  
-|Signal|Bedeutung|Default|  
-|------------|-------------|-------------|  
-|`SIGABRT`|Nicht ordnungsgemäße Beendigung|Beendet das aufrufende Programm mit Exitcode 3|  
-|`SIGFPE`|Gleitkommafehler|Beendet das aufrufende Programm|  
-|`SIGILL`|Ungültige Anweisung|Beendet das aufrufende Programm|  
-|`SIGINT`|STRG+C-Unterbrechung|Beendet das aufrufende Programm|  
-|`SIGSEGV`|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|  
-|`SIGTERM`|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|  
-  
- Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Falls keine Behandlung erfolgt, legt die Funktion `errno` auf `EINVAL` fest und gibt einen Wert ungleich 0 (null) zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Routine|Erforderlicher Header|  
-|-------------|---------------------|  
-|**raise**|\<signal.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [signal](../../c-runtime-library/reference/signal.md)
+> Verwenden Sie diese Methode nicht, eine Microsoft Store-app mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=865936). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int raise(
+   int sig
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*sig*  
+Auszulösendes Signal.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei Erfolg gibt **raise** 0 zurück . Andernfalls gibt es einen Wert ungleich 0 (null) zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorheriger Aufruf von **signal** eine Signalverarbeitungsfunktion für *sig* installiert hat, führt **raise** diese Funktion aus. Wenn keine Handlerfunktion installiert wurde, wird die dem Signalwert *sig* zugeordnete Standardaktion wie folgt ausgeführt.
+
+|Signal|Bedeutung|Standard|
+|------------|-------------|-------------|
+|`SIGABRT`|Nicht ordnungsgemäße Beendigung|Beendet das aufrufende Programm mit Exitcode 3|
+|`SIGFPE`|Gleitkommafehler|Beendet das aufrufende Programm|
+|`SIGILL`|Ungültige Anweisung|Beendet das aufrufende Programm|
+|`SIGINT`|STRG+C-Unterbrechung|Beendet das aufrufende Programm|
+|`SIGSEGV`|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|
+|`SIGTERM`|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|
+
+Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Falls keine Behandlung erfolgt, legt die Funktion `errno` auf `EINVAL` fest und gibt einen Wert ungleich 0 (null) zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
+|**raise**|\<signal.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)  
+[abort](../../c-runtime-library/reference/abort.md)  
+[signal](../../c-runtime-library/reference/signal.md)  

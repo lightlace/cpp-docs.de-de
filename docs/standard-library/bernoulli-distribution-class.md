@@ -34,11 +34,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd4d0e5e5fb88eae5ca0247f1672e816dc35c601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution-Klasse
 Generiert eine Bernoulli-Verteilung.  
@@ -75,7 +76,7 @@ public:
   
 ### <a name="parameters"></a>Parameter  
   
-*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+*URNG* Das einheitliche Zufallszahlengenerator-Modul. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Hinweise  
 Die Klasse beschreibt eine Verteilung, die Werte vom Typ `bool` produziert. Diese werden entsprechend der diskreten Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
@@ -97,7 +98,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
   
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
-Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung finden Sie im Wolfram MathWorld-Artikel [Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467).  
+Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung finden Sie im Wolfram MathWorld-Artikel [Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -184,7 +185,7 @@ explicit bernoulli_distribution(const param_type& parm);
   
 Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherter `p`-Wert den Wert *p* enthält.  
   
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
   
 ##  <a name="param_type"></a> bernoulli_distribution::param_type  
 Enthält die Parameter der Verteilung.  

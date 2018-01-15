@@ -1,75 +1,74 @@
 ---
-title: "/errorReport (Meldung &#252;ber interne Compilerfehler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ErrorReporting"
-  - "/errorreport"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/errorReport (Compileroption) [C++]"
-  - "-errorReport (Compileroption) [C++]"
+title: -ErrorReport (Meldung interne Compilerfehler) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ErrorReporting
+- /errorreport
+dev_langs: C++
+helpviewer_keywords:
+- /errorReport compiler option [C++]
+- -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b34df09ca53441789fc90061748ad591149d6b2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# /errorReport (Meldung &#252;ber interne Compilerfehler)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht die direkte Weitergabe interner Compilerfehlerinformationen an Microsoft.  
+# <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Meldung über interne Compilerfehler)
+Ermöglicht es Ihnen, Informationen über interne Compilerfehler (ICE) direkt an Microsoft zu senden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /errorReport:[ none | prompt | queue | send ]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  **none**  
  Berichte zu internen Compilerfehlern werden nicht gesammelt oder an Microsoft gesendet.  
   
- **prompt**  
- Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen.  **prompt** ist der Standard, wenn eine Anwendung in der Entwicklungsumgebung kompiliert wird.  
+ **Aufforderung**  
+ Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen. **Eingabeaufforderung** ist die Standardeinstellung, wenn eine Anwendung in der Entwicklungsumgebung kompiliert wird.  
   
- **queue**  
- Der Fehlerbericht wird in die Warteschleife eingereiht.  Wenn Sie sich mit Administratorberechtigung anmelden, wird ein Fenster angezeigt, über das Sie alle Fehler seit der letzten Anmeldung melden können \(Sie werden nicht öfter als alle drei Tage einmal aufgefordert, Fehlerberichte zu versenden\).  **queue** ist der Standard, wenn eine Anwendung in einer Eingabeaufforderung kompiliert wird.  
+ **Warteschlange**  
+ Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratorrechten anmelden, wird ein Fenster angezeigt, sodass Sie alle Fehler seit der letzten Ausführung melden können, wurden Sie sich angemeldet (nicht werden Sie aufgefordert, Fehlerberichte Senden von mehr als einmal alle drei Tage). **Warteschlange** ist die Standardeinstellung, wenn eine Anwendung in einer Befehlszeile kompiliert wird.  
   
- **send**  
- Berichte über interne Compilerfehler werden automatisch an Microsoft gesendet.  Um diese Option zu aktivieren, müssen Sie zuerst der Datensammlungsrichtlinie von Microsoft zustimmen.  Wenn Sie **\/errorReport:send** das erste Mal auf einem Computer angeben, werden Sie in einer Compilermeldung auf eine Website mit der Datensammlungsrichtlinie von Microsoft verwiesen.  
+ **Senden**  
+ Automatisch Berichte über interne Compilerfehler an Microsoft gesendet, sofern reporting durch die Einstellungen für das Windows-Fehlerberichterstattung aktiviert ist.  
   
- Diese Option hängt von den Registrierungseinstellungen ab.  Weitere Informationen darüber, wie die entsprechenden Werte in der Registrierung, finden Sie auf [Verwenden von automatischen Fehlerbericht in Visual Studio 2008\-Befehlszeilentools einschaltet](http://go.microsoft.com/fwlink/?LinkID=184695) der MSDN\-Website festlegt.  
+## <a name="remarks"></a>Hinweise  
+ Ein interner Compilerfehler (ICE) entsteht, wenn der Compiler eine Quellcodedatei nicht verarbeiten kann. Tritt ein ICE auf, erzeugt der Compiler keine Ausgabedatei oder eine hilfreiche Diagnose, die Sie verwenden können, um Ihren Code zu beheben.  
   
-## Hinweise  
- Ein interner Compilerfehler tritt auf, wenn der Compiler eine Quellcodedatei nicht verarbeiten kann.  Bei Auftreten eines internen Compilerfehlers wird vom Compiler keine Ausgabedatei oder hilfreiche Analyse erstellt, die Sie zum Beheben des Fehlers im Code verwenden können.  
+ In früheren Versionen wurden Sie bei einer Compilerfehlers aufgefordert, rufen Sie die Microsoft-Produktsupport, um das Problem zu melden. Mit **/errorreport**, können Sie ICE-Informationen direkt an Microsoft bereitstellen. Die Fehlerberichte können dabei helfen, zukünftige Compilerversionen zu verbessern.  
   
- In früheren Versionen wurden Sie beim Auftreten eines internen Compilerfehlers aufgefordert, das Problem dem Microsoft\-Produktsupport zu melden.  Mit **\/errorReport** können ICE\-Informationen direkt an Microsoft gesendet werden.  Die Fehlerberichte können dazu beitragen, zukünftige Compilerversionen zu verbessern.  
+ Die Fähigkeit eines Benutzers zum Senden von Berichten hängt vom Computer und den Benutzerberechtigungen ab.  
   
- Ob Benutzer Berichte versenden können, ist von den Computer\- und den Benutzerberechtigungen abhängig.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Weitere Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+3.  Klicken Sie auf die **erweitert** Eigenschaftenseite.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Erweitert**.  
+4.  Ändern der **-Fehlerberichterstattung** Eigenschaft.  
   
-4.  Ändern Sie die Eigenschaft **Problembericht**.  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting*>.  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

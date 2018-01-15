@@ -1,96 +1,98 @@
 ---
-title: "interior_ptr (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "stdcli::language::interior_ptr"
-  - "interior_ptr_cpp"
-  - "interior_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interior_ptr keyword [C++]"
+title: Interior_ptr (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- stdcli::language::interior_ptr
+- interior_ptr_cpp
+- interior_ptr
+dev_langs: C++
+helpviewer_keywords: interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 17
-caps.handback.revision: "15"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# interior_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ein *innerer Zeiger* deklarieren einen Zeiger in einen Verweistyp, jedoch nicht auf das Objekt selbst.  Ein innerer Zeiger kann auf einem Bezugshandle, Werttyp, eingepacktes Typhandle, Member eines verwalteten Typs oder ein Element eines verwalteten Arrays wird.  
+# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+Ein *innerer Zeiger* deklariert einen Zeiger auf in einen Verweistyp handelt, aber nicht auf das Objekt selbst. Ein innerer Zeiger kann auf eine Verweis-Handle, der Werttyp, der mittels Boxing gepackter Typhandle, Member eines verwalteten Typs oder auf ein Element eines verwalteten Arrays zeigen.  
   
-## Alle Laufzeiten  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.\)  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
   
-## Windows\-Runtime  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows\-Runtime gelten.\)  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows-Runtime gelten.)  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## Common Language Runtime  
- Im folgenden Syntaxbeispiel zeigt einen inneren Zeiger.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Die folgende Syntax veranschaulicht, eines inneren Zeigers.  
   
-### Syntax  
+### <a name="syntax"></a>Syntax  
   
 ```cpp  
 cli::interior_ptr<cv_qualifier type> var = &initializer;  
 ```  
   
-### Parameter  
- *cv\_qualifier*  
- **const** oder Qualifizierer `volatile`.  
+### <a name="parameters"></a>Parameter  
+ *cv_qualifier*  
+ **const** oder `volatile` Qualifizierer.  
   
- *type*  
- Der *initializer*\-Typ.  
+ *Typ*  
+ Der Typ des *Initialisierer*.  
   
  *var*  
- Der Name der Variablen `interior_ptr`.  
+ Der Name des der `interior_ptr` Variable.  
   
  *initializer*  
- Ein Member eines Referenztyps, des Elements eines verwalteten Arrays oder einem anderen Objekt, das auf einem systemeigenen Zeiger zuweisen können.  
+ Ein Element ein Verweistyp, ein Element ein verwaltetes Array oder ein anderes Objekt, das einen systemeigenen Zeiger zugewiesen werden können.  
   
-### Hinweise  
- Ein systemeigener Zeiger ist nicht in der Lage, ein Element zu verfolgen, da sein Speicherort auf dem verwalteten Heap ändern, der von den verschobenen Instanzen des Garbage Collectors eines Objekts entsteht.  Damit ein Zeiger ordnungsgemäß die Instanz, die Common Language Runtime muss den Zeiger auf das neu positionierbare Objekt aktualisieren verweist.  
+### <a name="remarks"></a>Hinweise  
+ Ein systemeigenen Zeiger kann sich nicht um ein Element als seine Änderungen am Speicherort auf dem verwalteten Heap nachzuverfolgen, die durch den Garbage Collector Verschieben von Instanzen eines Objekts führt. Damit für einen Zeiger auf das ordnungsgemäß auf die Instanz verweisen, muss die Common Language Runtime zum Aktualisieren des Zeigers auf das Objekt neu positioniert.  
   
- `interior_ptr` stellt eine Obermenge der Funktionalität eines systemeigenen Zeiger dar.  Daher alles kann, das auf einem systemeigenen Zeiger zugewiesen werden kann, auch zugewiesen sind `interior_ptr`.  Ein innerer Zeiger ist zulässig, um den gleichen Satz von Vorgängen wie systemeigene Zeiger, einschließlich den Vergleich und Zeigerarithmetik auszuführen.  
+ Ein `interior_ptr` eine Obermenge der Funktionen der systemeigenen Zeiger darstellt.  Aus diesem Grund kann Elemente, die einen systemeigenen Zeiger zugewiesen werden kann auch zum zugewiesen ein `interior_ptr`.  Ein innerer Zeiger ist zulässig, um den gleichen Satz von Vorgängen wie systemeigene Zeiger, einschließlich Vergleich und Zeigerarithmetik auszuführen.  
   
- Ein innerer Zeiger kann auf dem Stapel nur deklariert werden.  Ein innerer Zeiger kann nicht als Member einer Klasse deklariert werden.  
+ Ein innerer Zeiger kann nur auf dem Stapel deklariert werden.  Ein innerer Zeiger kann nicht als Member einer Klasse deklariert werden.  
   
- Da innere Zeiger nur vom Stapel vorhanden und nehmen die Adresse von Erträgen eines inneren Zeigers einen nicht verwalteten Zeiger.  
+ Da innere Zeigern nur auf dem Stapel vorhanden sind, ergibt die Übernahme der Adresse eines inneren Zeigers einen nicht verwalteten Zeiger.  
   
- `interior_ptr` enthält eine implizite Konvertierung in `bool`, die dessen Verwendung in Bedingungsanweisungen zulässt.  
+ `interior_ptr`verfügt über eine implizite Konvertierung in `bool`, die für die Verwendung in bedingten Anweisungen ermöglicht.  
   
- Informationen dazu, wie Sie einen inneren Zeiger, der auf ein Objekt verweist, das nicht auf dem Heap der Garbage Collection verschoben werden kann, finden Sie unter [pin\_ptr](../windows/pin-ptr-cpp-cli.md) deklariert.  
+ Informationen, wie einen inneren Zeiger deklariert, die in ein Objekt verweist, die auf dem Heap der Garbage Collection verschoben werden kann, finden Sie unter [Pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` befindet sich im cli\-Namespace.  Weitere Informationen finden Sie unter [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `interior_ptr` befindet sich im cli-Namespace.  Finden Sie unter [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) für Weitere Informationen.  
   
- Weitere Informationen zum inneren Zeiger, finden Sie unter  
+ Weitere Informationen zu inneren Zeigern finden Sie unter  
   
--   [How to: Declare and Use Interior Pointers and Managed Arrays \(C\+\+\/CLI\)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
+-   [Vorgehensweise: Deklarieren und Verwenden von inneren Zeigern und verwalteten Arrays (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
--   [How to: Declare Value Types with the interior\_ptr Keyword \(C\+\+\/CLI\)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
+-   [Vorgehensweise: Deklarieren von Werttypen mit dem interior_ptr-Schlüsselwort (C++/CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
   
--   [How to: Overload Functions with Interior Pointers and Native Pointers \(C\+\+\/CLI\)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
+-   [Vorgehensweise: Überladen von Funktionen mit inneren und nativen Zeigern (C++/CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
   
--   [How to: Declare Interior Pointers with the const Keyword \(C\+\+\/CLI\)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
+-   [Vorgehensweise: Deklarieren von inneren Zeigern mit dem const-Schlüsselwort (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Das folgende Beispiel zeigt, wie ein innerer Zeiger in einen Verweistyp deklariert und verwendet.  
+ Das folgende Beispiel zeigt, wie deklarieren und Verwenden eines inneren Zeigers in einen Referenztyp darstellt.  
   
 ```cpp  
 // interior_ptr.cpp  
@@ -120,8 +122,11 @@ int main() {
   
  **Ausgabe**  
   
- **1**   
-**2**   
-**3**   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+2  
+3  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

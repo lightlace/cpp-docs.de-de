@@ -1,32 +1,33 @@
 ---
-title: "CriticalSectionTraits::Unlock-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock-Methode"
+title: 'Criticalsectiontraits:: Unlock-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 8fb382f5-6eda-407e-9673-71d77bda4962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f9880364c24b1e2e5889e9e9e2666683c2237f7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CriticalSectionTraits::Unlock-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spezialisiert eine CriticalSections\-Vorlage, sodass sie das Freigeben des Besitzes des angegebenen Abschnittsobjekts kritischen unterstützt.  
+# <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock-Methode
+Eine Vorlage CriticalSection spezialisiert, damit sie freigeben Besitzer des Objekts angegebenen kritischen Abschnitt unterstützt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 inline static void Unlock(  
@@ -34,19 +35,19 @@ inline static void Unlock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `cs`  
- Ein Zeiger zu einem kritischen Abschnittsobjekt.  
+ Ein Zeiger auf ein kritisches Abschnittsobjekt.  
   
-## Hinweise  
- Der *Type*\-Modifizierer wird als `typedef CRITICAL_SECTION* Type;` definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die *Typ* Modifizierer ist definiert als `typedef CRITICAL_SECTION* Type;`.  
   
- Weitere Informationen finden Sie unter "LeaveCriticalSections\-Funktion" im "Synchronisierungs\-Funktions" Abschnitt der Windows\-API\-Dokumentation.  
+ Weitere Informationen finden Sie unter "LeaveCriticalSection Function" im Abschnitt "Synchronisierungsfunktionen" der Windows-API-Dokumentation.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Siehe auch  
- [CriticalSectionTraits\-Struktur](../windows/criticalsectiontraits-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [CriticalSectionTraits-Struktur](../windows/criticalsectiontraits-structure.md)

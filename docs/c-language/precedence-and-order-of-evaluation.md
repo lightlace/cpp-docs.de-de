@@ -18,36 +18,37 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Vorrang und Auswertungsreihenfolge
 Die Rangfolge und Assoziativität von C-Operatoren beeinflussen das Gruppieren und die Auswertung von Operanden in Ausdrücken. Eine Operatorrangfolge ist nur sinnvoll, wenn andere Operatoren mit einer höheren oder niedrigerer Rangfolge vorhanden sind. Ausdrücke mit vorrangigen Operatoren werden zuerst ausgewertet. Rangfolge kann auch mit dem Wort "Bindung" beschrieben werden. Es wird davon ausgegangen, dass Operatoren mit einer höheren Priorität eine festere Bindung haben.  
   
  In der folgenden Tabelle werden die Rangfolge und Assoziativität (die Reihenfolge, in der Operanden überprüft werden) von C-Operatoren zusammengefasst, wobei sie nach Priorität von der höchsten bis zur niedrigsten aufgeführt werden. Wenn mehrere Operatoren zusammengefasst werden, weisen sie einen gleichen Rang auf, und sie werden gemäß ihrer Assoziativität ausgewertet. Die Operatoren in der Tabelle werden in den Abschnitten beschrieben, die mit [Postfix-Operatoren](../c-language/postfix-operators.md) beginnen. Im Rest dieses Abschnitts sind allgemeine Informationen über die Rangfolge und Assoziativität aufgeführt.  
   
-### <a name="precedence-and-associativity-of-c-operators"></a>Rangfolge und Assoziativität von C-Operatoren  
+## <a name="precedence-and-associativity-of-c-operators"></a>Rangfolge und Assoziativität von C-Operatoren  
   
-|Symbol1|Vorgangstyp|Assoziativität|  
+|Symbol <sup>1</sup>|Vorgangstyp|Assoziativität|  
 |-------------|-----------------------|-------------------|  
-|**[ ] ( ) . ->** Postfix `++` und Postfix **--**|Ausdruck|Von links nach rechts|  
-|Präfix `++` und Präfix **-- sizeof &   \*   + - ~ !**|Unär|Von rechts nach links|  
+|**\[ ] ( ) . ->**<br /><br />**++** **--** (Postfix)|Ausdruck|Von links nach rechts|  
+**sizeof & \* + - ~ !**<br /><br />**++ --** (Präfix)|Unär|Von rechts nach links|  
 |*Typumwandlungen*|Unär|Von rechts nach links|  
 |**\* / %**|Multiplikativ|Von links nach rechts|  
 |**+ -**|Additiv|Von links nach rechts|  
-|**<\< >>**|Bitweise Verschiebung|Von links nach rechts|  
+|**\<\< >>**|Bitweise Verschiebung|Von links nach rechts|  
 |**\< > \<= >=**|Relational|Von links nach rechts|  
 |**== !=**|Gleichheit|Von links nach rechts|  
 |**&**|Bitweises AND|Von links nach rechts|  
 |**^**|Bitweises exklusives OR|Von links nach rechts|  
 |**&#124;**|Bitweises inklusives OR|Von links nach rechts|  
 |**&&**|Logisches AND|Von links nach rechts|  
-|`&#124;&#124;`|Logisches OR|Von links nach rechts|  
+|**&#124;&#124;**|Logisches OR|Von links nach rechts|  
 |**? :**|Bedingter Ausdruck|Von rechts nach links|  
-|**= \*= /= %=**<br /><br /> **+= -= <\<= >>=&=**<br /><br /> **^= &#124;=**|Einfache und Verbundzuweisung 2|Von rechts nach links|  
+|**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Einfache und Verbundzuweisung <sup>2</sup>|Von rechts nach links|  
 |**,**|Sequenzielle Auswertung|Von links nach rechts|  
   
  1. Operatoren werden in absteigender Prioritätsreihenfolge aufgeführt. Wenn mehrere Operatoren in der gleichen Zeile oder in einer Gruppe stehen, haben sie denselben Rang.  
@@ -60,22 +61,20 @@ Die Rangfolge und Assoziativität von C-Operatoren beeinflussen das Gruppieren u
   
  Logische Operatoren gewährleisten auch die Auswertung ihrer Operanden von links nach rechts. Allerdings werten Sie die kleinste Anzahl von Operanden aus, die erforderlich sind, um das Ergebnis des Ausdrucks zu bestimmen. Dies wird als "Kurzschlussauswertung" bezeichnet. Somit werden einige Operanden des Ausdrucks möglicherweise nicht ausgewertet. Beispielsweise wird im Ausdruck  
   
-```  
-x && y++  
-```  
+`x && y++`  
   
  der zweite Operand, `y++`, nur ausgewertet, wenn `x` zutrifft (Wert ungleich Null). Folglich wird `y` nicht inkrementiert, wenn `x` false (0) ist.  
   
- **Beispiele**  
+## <a name="examples"></a>Beispiele
   
  Die folgende Liste zeigt, wie der Compiler automatisch mehrere Musterausdrücke bindet:  
-  
+
 |Ausdruck|Automatische Bindung|  
 |----------------|-----------------------|  
-|`a & b &#124;&#124; c`|`(a & b) &#124;&#124; c`|  
-|`a = b &#124;&#124; c`|`a = (b &#124;&#124; c)`|  
-|`q && r &#124;&#124; s--`|`(q && r) &#124;&#124; s--`|  
-  
+|a & b || c|(a & b) || c|  
+|a = b || c|a = (b || c)|  
+|q && r || s--|(q && r) || s--|  
+
  Im ersten Ausdruck hat der bitweise AND-Operator (`&`) Vorrang vor dem logischen OR-Operator (`||`), deshalb bildet `a & b` den ersten Operanden der logischen OR-Operation.  
   
  Im zweiten Ausdruck hat der logische Operator OR (`||`) Vorrang vor dem SIMPLE-Zuweisungsoperator (`=`), sodass `b || c` als rechter Operand in der Zuweisung gruppiert wird. Beachten Sie, dass der Wert, der `a` zugewiesen wird, entweder 0 oder 1 ist.  
@@ -86,13 +85,11 @@ x && y++
   
 |Ungültiger Ausdruck|Standardmäßiges Gruppieren|  
 |------------------------|----------------------|  
-|`p == 0 ? p += 1: p += 2`|`( p == 0 ? p += 1 : p ) += 2`|  
+|p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|  
   
  In diesem Ausdruck hat der Gleichheitsoperator (`==`) den höchsten Rang, sodass `p == 0` als Operand gruppiert wird. Der bedingte Ausdrucksoperator (`? :`) hat die nächsthöhere Priorität. Sein erster Operand ist `p == 0`, und sein zweiter Operand ist `p += 1`. Allerdings wird der letzte Operand des bedingten Ausdrucksoperators als `p` und nicht als `p += 2` betrachtet, da dieses Vorkommen von `p` genauer an den bedingten Ausdrucksoperator bindet als an den kombinierten Zuweisungsoperator. Ein Syntaxfehler tritt auf, weil `+= 2` keinen linken Operanden besitzt. Sie sollten Klammern verwenden, um Fehler dieser Art zu vermeiden und den Code verständlicher zu erzeugen. Beispielsweise können Sie Klammern verwenden, wie weiter unten dargestellt, um das vorherige Beispiel zu korrigieren und zu verdeutlichen:  
   
-```  
-( p == 0 ) ? ( p += 1 ) : ( p += 2 )  
-```  
+`( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Operatoren](../c-language/c-operators.md)

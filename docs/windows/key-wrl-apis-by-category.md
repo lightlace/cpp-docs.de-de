@@ -13,11 +13,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4748220f0115f9bd05d051ca5f1bb3f6fcc8ded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="key-wrl-apis-by-category"></a>Schlüssel-WRL-APIs nach Kategorie
 Die folgenden Tabellen sind die primären Windows Runtime C++ Template Library-Klassen, Strukturen, Funktionen und Makros. Konstrukte im Hilfsprogramm-Namespaces und-Klassen werden ausgelassen. Diese Listen erweitern die API-Dokumentation nach Namespace sortiert ist.  
@@ -75,4 +78,4 @@ Die folgenden Tabellen sind die primären Windows Runtime C++ Template Library-K
 |[InspectableClass-Makro](../windows/inspectableclass-macro.md)|Legt den Ablaufklassennamen und die Vertrauensebene fest.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows Runtime C++-Vorlagenbibliothek (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+ [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

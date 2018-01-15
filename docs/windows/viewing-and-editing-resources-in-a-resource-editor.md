@@ -1,89 +1,92 @@
 ---
-title: "Viewing and Editing Resources in a Resource Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.resourceview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], viewing"
-  - "rc files, viewing resources"
-  - "Resource View pane"
-  - "layouts, previewing resource"
-  - "code, viewing resources"
-  - "resource editors, viewing resources"
-  - ".rc files, viewing resources"
-  - "resources [Visual Studio], editing"
+title: Anzeigen und Bearbeiten von Ressourcen in einem Ressourcen-Editor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.resourceview
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], viewing
+- rc files, viewing resources
+- Resource View pane
+- layouts, previewing resource
+- code, viewing resources
+- resource editors, viewing resources
+- .rc files, viewing resources
+- resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Viewing and Editing Resources in a Resource Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Jeder Ressourcentyp verfügt über einen Ressourcen\-Editor, der für diesen Ressourcentyp spezifisch ist.  Sie können Steuerelemente und Features neu anordnen, verkleinern bzw. vergrößern oder hinzufügen und Aspekte einer Ressource mit dem zugehörigen Editor anderweitig ändern.  Ressourcen können auch im [Textformat](../windows/how-to-open-a-resource-script-file-in-text-format.md) und [Binärformat](../mfc/opening-a-resource-for-binary-editing.md) bearbeitet werden.  
+# <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Anzeigen und Bearbeiten von Ressourcen in einem Ressourcen-Editor
+Jeder Ressource verfügt über einen Ressourcen-Editor für diesen Ressourcentyp spezifisch. Sie können neu anordnen, Größe, Steuerelemente und Features hinzufügen oder ändern andernfalls Aspekte einer Ressource mit dem Editor zugeordnet. Sie können auch in eine Ressource bearbeiten [Textformat](../windows/how-to-open-a-resource-script-file-in-text-format.md) und [Binärformat](../windows/opening-a-resource-for-binary-editing.md).  
   
- Einige Ressourcentypen sind einzelne Dateien, die importiert und vielfältig verwendet werden können. Dazu gehören Bitmaps, Symbole, Cursor, Symbolleisten und HTML\-Dateien.  Derartige Ressourcen verfügen sowohl über Dateinamen als auch über [Ressourcenbezeichner](../mfc/symbols-resource-identifiers.md).  Andere Ressourcen, z. B. Dialogfelder, Menüs und Zeichenfolgentabellen in Win32\-Projekten, sind nur als Teil einer Ressourcenskriptdatei \(**.rc**\) oder einer Ressourcenvorlagendatei \(**.rct**\) verfügbar.  
+ Einige Ressourcentypen sind einzelne Dateien, die nicht importiert und auf verschiedene Weise verwendet werden können. Dazu gehören Bitmaps, Symbole, Cursor, Symbolleisten und html-Dateien. Diese Ressourcen müssen Dateinamen sowie [Ressourcenbezeichner](../windows/symbols-resource-identifiers.md). Andere vorhanden z. B. Dialogfelder, Menüs und Zeichenfolgentabellen in Win32-Projekten können nur als Teil einer Ressourcenskriptdatei (.rc) oder eine Ressourcenvorlagendatei (.rct).  
   
 > [!NOTE]
->  Eigenschaften einer Ressource [können mithilfe des Eigenschaftenfensters geändert werden](../windows/changing-the-properties-of-a-resource.md).  
+>  Eigenschaften einer Ressource [kann geändert werden, mithilfe des Eigenschaftenfensters](../windows/changing-the-properties-of-a-resource.md).  
   
-## Win32\-Ressourcen  
- Um auf Win32\-Ressourcen zuzugreifen, können Sie das Fenster [Ressourcenansicht](../windows/resource-view-window.md) verwenden.  
+## <a name="win32-resources"></a>Win32-Ressourcen  
+ Sie erreichen die Win32-Ressourcen in der [Ressourcenansicht](../windows/resource-view-window.md) Bereich.  
   
-#### So zeigen Sie eine Win32\-Ressource in einem Ressourcen\-Editor an  
+#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>So zeigen Sie eine Win32-Ressource in einem Ressourcen-Editor an  
   
-1.  Wählen Sie im Menü **Ansicht** die Option **Ressourcenansicht** aus.  
+1.  Wählen Sie **Ressourcenansicht** aus der **Ansicht** Menü.  
   
-2.  Wenn die Ressourcenansicht nicht im Vordergrund angezeigt wird, klicken Sie auf die Registerkarte **Ressourcenansicht**, um das Fenster in den Vordergrund zu verschieben.  
+2.  Wenn das Fenster "Ressourcenansicht" nicht das oberste Fenster ist, klicken Sie auf die **Ressourcenansicht** Tab, um es in den Vordergrund zu bringen.  
   
-3.  Erweitern Sie im Bereich **Ressourcenansicht** den Ordner für das Projekt, dessen Ressourcen Sie anzeigen möchten.  Wenn Sie z. B. eine Dialogfeldressource anzeigen möchten, erweitern Sie den Dialogordner.  
-  
-    > [!NOTE]
-    >  Wenn das Projekt noch keine RC\-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-4.  Doppelklicken Sie auf die Ressource, z. B. auf **IDD\_ABOUTBOX**.  
-  
-     Die Ressource wird im geeigneten Editor geöffnet.  Bei Dialogfeldressourcen wird die Ressource z. B. im Dialog\-Editor geöffnet.  
-  
-     Sie können [Ressourcen auch in einer RC\-Datei \(Ressourcenskript\) anzeigen, ohne dass ein Projekt geöffnet ist](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
-  
-#### So löschen Sie eine vorhandene Win32\-Ressource  
-  
-1.  Erweitern Sie in der Ressourcenansicht den Knoten für einen Ressourcentyp.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf die zu löschende Ressource, und wählen Sie im Kontextmenü den Befehl **Löschen**.  
+3.  Ressourcenansicht erweitern Sie den Ordner für das Projekt, das Ressourcen enthält, die Sie anzeigen möchten. Wenn Sie eine Ressource anzeigen möchten, erweitern Sie beispielsweise den Ordner Dialog.  
   
     > [!NOTE]
-    >  Eine Ressource kann mit demselben Kontextmenübefehl gelöscht werden, wenn die RC\-Datei in einem Dokumentfenster außerhalb eines Projekts geöffnet ist.  
+    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-## Ressourcen in verwalteten Projekten  
- Da in verwalteten Projekten keine Ressourcenskriptdateien verwendet werden, müssen Sie die Ressourcen über den **Projektmappen\-Explorer** öffnen.  Mit dem [Grafik\-Editor](../mfc/image-editor-for-icons.md) und dem [Binär\-Editor](../mfc/binary-editor.md) können Sie Ressourcendateien in verwalteten Projekten bearbeiten.  Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln.  Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio\-Ressourcen\-Editoren nicht unterstützt.  
+4.  Doppelklicken Sie auf die Ressource, z. B. "IDD_ABOUTBOX".  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+     Die Ressource wird im geeigneten Editor geöffnet. Beispielsweise wird für Ressourcen innerhalb der Dialog-Editor die Ressource geöffnet.  
   
-#### So zeigen Sie eine verwaltete Ressource in einem Ressourcen\-Editor an  
+     Sie können auch [Ressourcen in einer RC (Ressourcenskript)-Datei anzeigen, ohne dass ein Projekt öffnen](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-1.  Doppelklicken Sie im Projektmappen\-Explorer auf die Ressource, z. B. **Bitmap1.bmp**.  
+#### <a name="to-delete-an-existing-win-32-resource"></a>So löschen Sie eine vorhandene Win32-Ressource  
+  
+1.  Erweitern Sie in der Ressourcenansicht den Knoten für einen Ressourcentyp aus.  
+  
+2.  Mit der rechten Maustaste auf die Ressource, die Sie löschen möchten und wählen **löschen** aus dem Kontextmenü.  
+  
+    > [!NOTE]
+    >  Sie können eine Ressource mit demselben Kontextmenübefehl aus, wenn Sie die RC-Datei, die in einem Dokumentfenster außerhalb eines Projekts geöffnet haben, löschen.  
+  
+## <a name="resources-in-managed-projects"></a>Ressourcen in verwalteten Projekten  
+ Da verwaltete Projekte keine Ressourcenskriptdateien verwenden, müssen Sie Ihre Ressourcen im Öffnen **Projektmappen-Explorer**. Mit der [Bildbearbeitung](../windows/image-editor-for-icons.md) und dem [Binär-Editor](binary-editor.md) ist die Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio-Ressourcen-Editoren nicht unterstützt.  
+  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+  
+#### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>So zeigen Sie eine verwaltete Ressource in einer Ressourcen-Editor an  
+  
+1.  Doppelklicken Sie im Projektmappen-Explorer auf die Ressource, z. B. Bitmap1.bmp.  
   
      Die Ressource wird im geeigneten Editor geöffnet.  
   
-#### So löschen Sie eine vorhandene verwaltete Ressource  
+#### <a name="to-delete-an-existing-managed-resource"></a>So löschen Sie eine vorhandene verwaltete Ressource  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf die zu löschende Ressource, und wählen Sie im Kontextmenü den Befehl **Löschen**.  
+1.  Im Projektmappen-Explorer mit der Maustaste der Ressource, die Sie löschen möchten und wählen **löschen** aus dem Kontextmenü.  
   
-### Anforderungen  
- None  
+### <a name="requirements"></a>Anforderungen  
+ Keiner  
   
-## Siehe auch  
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ressourcen-Editor](../windows/resource-editors.md)
+
