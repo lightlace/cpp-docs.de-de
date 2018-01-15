@@ -1,26 +1,27 @@
 ---
-title: "A.11   Specifying a Fixed Number of Threads"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Festlegen einer festen Anzahl von Threads A.11 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1d06b142-4c35-44b8-994b-20f2aed5462b
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72c8aca2b90f021771ba9f9fc8a86d784ffe24a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# A.11   Specifying a Fixed Number of Threads
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Einige Programme, prespecified basieren auf einer festen Anzahl von Threads ordnungsgemäß ausgeführt wird.  Da die Standardeinstellung für die dynamische Anpassung der Anzahl von Threads Implementierung\-definiert wird, können solche Programme die dynamische Thread Funktion zu deaktivieren und die Anzahl von Threads explizit festzulegen, um Portabilität sicherzustellen.  Im folgenden Beispiel wird gezeigt, wie dies mit `omp_set_dynamic` \([3.1.7 Abschnitt](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39\) und hat `omp_set_num_threads` \([3.1.1 Abschnitt](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36\):  
+# <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Angeben einer festgelegten Anzahl von Threads
+Einige Programme basieren auf einer festen, vordefinierten Anzahl von Threads ordnungsgemäß ausgeführt.  Da die Standardeinstellung für die dynamische Anpassung der Anzahl von Threads Implementierung definiert ist, können diese Programme deaktivieren Sie die dynamische Threads-Funktion, und legen Sie die Anzahl der Threads explizit, um Portabilität sicherzustellen. Im folgende Beispiel wird gezeigt, wie Sie diesen Vorgang mit `omp_set_dynamic` ([Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39), und `omp_set_num_threads` ([Abschnitt 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36):  
   
 ```  
 omp_set_dynamic(0);  
@@ -35,6 +36,6 @@ omp_set_num_threads(16);
 }  
 ```  
   
- In diesem Beispiel führt das Programm einwandfrei nur ausgeführt, wenn er von 16 Threads ausgeführt wird.  Wenn die Implementierung nicht zu unterstützenden 16 Threads Lage ist, ist das Verhalten dieses Beispiels Implementierung\-definiert.  
+ In diesem Beispiel wird das Programm ordnungsgemäß ausgeführt, nur dann, wenn er vom 16 Threads ausgeführt wird. Ist die Implementierung nicht 16 Threads unterstützen kann, ist das Verhalten dieses Beispiels mit der Implementierung definiert.  
   
- Beachten Sie, dass die Anzahl der Threads, die einen parallelen Bereich beim Ausführen eines parallelen Bereichs konstant bleibt, unabhängig davon, welche dynamischen Thread festlegen.  Der Mechanismus für den Thread dynamische bestimmt die Anzahl der Threads, die am Anfang des parallelen Bereichs zu verwenden und behält sie konstant für die Dauer des Bereichs.
+ Beachten Sie, dass die Anzahl der Threads, die Ausführung eines parallelen Bereichs während eines parallelen Bereichs ist, unabhängig von der Einstellung "Threads" dynamische konstant bleibt. Der Mechanismus für die dynamische Threads bestimmt die Anzahl der Threads an, die am Anfang des parallelen Bereichs verwenden und bleibt sie konstant für die Dauer des Bereichs.

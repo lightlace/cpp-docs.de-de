@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 09c3ac2317fce1e539ed02a501078fe83c217ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;-Operatoren
 ||||  
@@ -104,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Hinweise  
  Die Vorlagenfunktion überlädt **operator<<**, sodass ein Bitset ausgegeben werden kann, ohne es zuerst in eine Zeichenfolge zu konvertieren. Die Vorlagenfunktion führt Folgendes aus:  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>Beispiel  
   
@@ -161,7 +162,7 @@ _Istr,
  Die Vorlagenfunktion gibt die Zeichenfolge `_Istr` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion überlädt **operator>>**, um im Bitset _ *Right* den Wert bitset( `str`) zu speichern, wobei `str` ein Objekt des Typs [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** ist, das aus `_Istr` extrahiert wurde.  
+ Die Vorlagenfunktion überlädt **operator>>**, um im Bitset _ *Right* den Wert bitset( `str`) zu speichern, wobei `str` ein Objekt des Typs [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** ist, das aus `_Istr` extrahiert wurde.  
   
  Die Vorlagenfunktion extrahiert Elemente aus `_Istr` und fügt sie so lange in das Bitset ein, bis:  
   

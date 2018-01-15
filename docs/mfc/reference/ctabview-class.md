@@ -33,11 +33,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ebbf63d409e54ee3d71c4da43aea8bff12fd51c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctabview-class"></a>CTabView-Klasse
 Die `CTabView` Klasse vereinfacht die Verwendung der Registerkarte "-Steuerelementklasse ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) in Anwendungen, die MFC Dokument-/ Ansichtarchitektur verwenden.  
@@ -48,7 +49,7 @@ Die `CTabView` Klasse vereinfacht die Verwendung der Registerkarte "-Steuereleme
 class CTabbedView : public CView  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -71,7 +72,7 @@ class CTabbedView : public CView
 ## <a name="remarks"></a>Hinweise  
  Diese Klasse vereinfacht die Ansicht im Registerkartenformat in einer Anwendung für die Dokument-/Ansichtarchitektur zu versetzen. `CTabView`ist eine `CView`-abgeleitete Klasse, die ein eingebettetes enthält `CMFCTabCtrl` Objekt. `CTabView`behandelt alle Nachrichten, die zur Unterstützung der `CMFCTabCtrl` Objekt. Leiten Sie eine Klasse aus einfach `CTabView` stecken Sie es in Ihrer Anwendung, und fügen `CView`-abgeleitete Klassen mithilfe der `AddView` Methode. Das Registerkarten-Steuerelement werden diese Sichten als Registerkarten angezeigt werden.  
   
- Angenommen, Sie müssen möglicherweise ein Dokument, das auf verschiedene Weise dargestellt werden kann: als ein Arbeitsblatt, ein Diagramm, ein bearbeitbares Formular usw.. Sie können einzelne Ansichten, zeichnen die Daten nach Bedarf erstellen, fügen Sie sie in Ihrem `CTabView`-abgeleitetes Objekt darum zu bitten, ohne eine zusätzliche Codierung im Registerkartenformat.  
+ Angenommen, Sie müssen möglicherweise ein Dokument, das auf verschiedene Weise dargestellt werden kann: als ein Arbeitsblatt, ein Diagramm, ein bearbeitbares Formular usw. Sie können einzelne Ansichten, zeichnen die Daten nach Bedarf erstellen, fügen Sie sie in Ihrem `CTabView`-abgeleitetes Objekt darum zu bitten, ohne eine zusätzliche Codierung im Registerkartenformat.  
   
  [TabbedView-Beispiel: MFC im Registerkartenformat View Application](../../visual-cpp-samples.md) veranschaulicht die Verwendung von `CTabView`.  
   

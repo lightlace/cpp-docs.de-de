@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6aea339b4ddb91336405d281d9b902a8f2a86c3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc8ad34ccce059caca8e86a014622e29c14022ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandsource-interface"></a>ICommandSource-Schnittstelle
 Verwaltet die Befehle, die von einem Befehlsquellobjekt in einem Benutzersteuerelement gesendet.  
@@ -42,7 +43,7 @@ Verwaltet die Befehle, die von einem Befehlsquellobjekt in einem Benutzersteuere
 interface class ICommandSource  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -85,7 +86,7 @@ Ein Handle für die Handlermethode.
 
 ### <a name="remarks"></a>Hinweise
 Diese Methode das Befehlsquellobjekt der Befehl Handler CmdHandler hinzugefügt und ist den Handler CmdID zugeordnet.
-Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](https://msdn.microsoft.com/library/y33d8624.aspx) ein Beispiel zum AddCommandHandler verwenden.
+Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum AddCommandHandler verwenden.
 
 ## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
 

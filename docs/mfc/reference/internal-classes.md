@@ -318,11 +318,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c571a86aaa93a6712cb57ebff5ccd275c73bd4af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-classes"></a>Interne Klassen
 Die folgenden Klassen werden in MFC intern verwendet. Vollständigkeitshalber werden diese internen Klassen in diesem Abschnitt beschreiben. Sie sollen allerdings nicht direkt im Code verwendet werden.  

@@ -1,11 +1,10 @@
 ---
-title: int_4-Klasse | Microsoft-Dokumentation
+title: int_4-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::abrg
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2a974f97837ff6e4d57aec3c3f2558077a65b3c9
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fa890cf7fc41160b91d77a564328f8f674a11c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int4-class"></a>int_4-Klasse
 Stellt einen kurzen Vektor aus vier ganzen Zahlen dar.  
@@ -311,7 +295,7 @@ Stellt einen kurzen Vektor aus vier ganzen Zahlen dar.
 class int_4;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -472,23 +456,23 @@ class int_4;
 |----------|-----------------|  
 |int_4::-||  
 |int_4::--||  
-|int_4:: % =||  
+|int_4:: Operator% =||  
 |int_4:: & =||  
 |int_4:: * =||  
 |int_4:: Operator / =||  
 |int_4:: ^ =||  
-|int_4:: | =||  
+|int_4:: &#124; =||  
 |int_4:: ~||  
-|int_4:: Operator++||  
+|int_4:: Operator++-||  
 |int_4:: Operator +=||  
-|int_4::\<=||  
+|int_4:: <\<=||  
 |int_4:: =||  
 |int_4:: Operator-=||  
 |int_4:: >> =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#int_4__size)||  
   
@@ -687,16 +671,16 @@ explicit inline int_4(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V3`  
- Der Wert 3-Element zu initialisieren.  
+ Der Wert 3-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -712,4 +696,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

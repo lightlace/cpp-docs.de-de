@@ -1,30 +1,31 @@
 ---
-title: "3.1.6 omp_in_parallel Function"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.1.6 Omp_in_parallel-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: db6e3a63-2a0a-4b8e-8cc6-c6b49edca5fb
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2e5d05af81eb112894ca27a7599c271138893ee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.6 omp_in_parallel Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **omp\_in\_parallel**\-Funktion gibt einen Wert ungleich 0 \(null\) zurück, wenn sie innerhalb des dynamischen Wertebereichs eines parallelen Bereichs aufgerufen wird, der parallel ausgeführt werden. Andernfalls wird 0 zurückgegeben.  Es wird folgendes Format verwendet:  
+# <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel-Funktion
+Die **Omp_in_parallel** Funktion gibt einen Wert ungleich NULL zurück, wenn sie in der dynamischen Wertebereich einen parallel ausgeführten parallelen Bereichs aufgerufen wird; andernfalls wird 0 zurückgegeben. Es wird folgendes Format verwendet:  
   
 ```  
 #include <omp.h>  
 int omp_in_parallel(void);  
 ```  
   
- Diese Funktion gibt einen Wert ungleich 0 \(null\) zurück, wenn sie aus einem Bereich aufgerufen wird, der parallel, einschließlich geschachtelter Panel\-Elemente ausführt, die serialisiert werden.
+ Diese Funktion gibt einen Wert ungleich NULL beim Aufrufen durch innerhalb einer Region parallelen ausführen, einschließlich geschachtelter Bereiche, die serialisiert werden.

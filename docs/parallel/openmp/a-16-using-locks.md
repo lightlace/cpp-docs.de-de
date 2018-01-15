@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a16---using-locks"></a>A. 16   Verwenden von Sperren
 Im folgenden Beispiel (für [Abschnitt 3.2](../../parallel/openmp/3-2-lock-functions.md) auf Seite 41) Beachten Sie, dass das Argument für die Lock-Funktionen Typ aufweisen soll `omp_lock_t`, und dass keine Notwendigkeit zum geleert besteht.  Die Lock-Funktionen dazu führen, dass die Threads im Leerlauf befindlich beim Eintritt in den ersten kritischen Abschnitt warten, jedoch andere Aufgaben während des Wartens auf dem zweiten Eintrag.  Die `omp_set_lock` Funktion blockiert, aber die `omp_test_lock` Funktion nicht der Fall, können die Arbeit in skip() durchgeführt werden.  

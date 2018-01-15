@@ -1,36 +1,37 @@
 ---
-title: "Vermeiden von Problembereichen bei Multithreadprogrammen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fehler [C++], Multithreadprogramme"
-  - "Multithreading [C++], Problembehandlung"
-  - "Threading [C++], Problembehandlung"
-  - "Problembehandlung [C++], Multithreading"
+title: Vermeiden von Problembereichen bei Multithreadprogrammen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multithreading [C++], troubleshooting
+- errors [C++], multithreaded programs
+- threading [C++], troubleshooting
+- troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 546f5b5daa88578fc7dd062018257f0929bc0cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Vermeiden von Problembereichen bei Multithreadprogrammen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bei der Erstellung, Bindung oder Ausführung eines C\-Multithreadprogramms können verschiedene Probleme auftreten.  Einige der allgemeineren Probleme werden in der folgenden Tabelle beschrieben. \(Eine vergleichbare Erläuterung in Bezug auf MFC finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).\)  
+# <a name="avoiding-problem-areas-with-multithread-programs"></a>Vermeiden von Problembereichen bei Multithreadprogrammen
+Es gibt mehrere Probleme, die Sie erstellen, verknüpfen oder Ausführen einer C-Multithreadprogramm auftreten können. Einige der häufigsten Probleme werden in der folgenden Tabelle beschrieben. (Eine ähnliche Erläuterung von MFC-Sicht, finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).)  
   
 |Problem|Mögliche Ursache|  
-|-------------|----------------------|  
-|Es wird eine Meldung ausgegeben, der zufolge durch das Programm eine allgemeine Schutzverletzung verursacht wurde.|Durch viele Win32\-Programmierfehler werden allgemeine Schutzverletzungen verursacht.  Eine häufige Ursache für allgemeine Schutzverletzungen ist die indirekte Zuweisung von Daten zu NULL\-Zeigern.  Da dies dazu führt, dass ein Programm versucht, auf Speicher zuzugreifen, der ihm nicht zugewiesen ist, wird eine allgemeine Schutzverletzung verursacht.<br /><br /> Die Ursache einer allgemeinen Schutzverletzung lässt sich am einfachsten ermitteln, indem Sie ein Programm mit Debuginformationen kompilieren und es anschließend in der Visual C\+\+\-Umgebung mit dem Debugger überprüfen.  Wenn der Schutzverletzungsfehler auftritt, übergibt Windows die Steuerung an den Debugger, und der Cursor wird in der Zeile positioniert, durch die das Problem verursacht wurde.|  
-|Ein Programm generiert zahlreiche Fehler beim Kompilieren und Binden.|Sie können viele potenzielle Probleme beseitigen, indem Sie die Warnstufe des Compilers auf einen der höchsten Werte einstellen und die Warnungen beachten.  Mit den Warnstufen 3 oder 4 lassen sich unbeabsichtigte Datenkonvertierungen, fehlende Funktionsprototypen und die Verwendung von Nicht\-ANSI\-Funktionen feststellen.|  
+|-------------|--------------------|  
+|Sie erhalten ein Meldungsfeld angezeigt, dass das Programm eine Schutz-Verletzung verursacht hat.|Viele Win32-Programmierfehler zu Verletzungen der Schutz führen. Eine häufige Ursache von Verletzungen der Schutz wird der indirekte Zuweisung zu null-Zeiger. Da dies führt dazu, dass das Programm versucht auf Arbeitsspeicher zuzugreifen, die nicht zu der er gehört, wird ein Verstoß Schutz ausgegeben.<br /><br /> Eine einfache Möglichkeit zum Ermitteln der Ursache eines Verstoßes Schutz wird das Programm mit Debuginformationen kompiliert, und führen Sie es dann mithilfe des Debuggers in der Visual C++-Umgebung. Wenn die allgemeine schutzverletzung tritt auf, Windows übergibt die Steuerung an den Debugger, und der Cursor befindet sich auf die Zeile, die das Problem verursacht hat.|  
+|Das Programm generiert zahlreiche Fehler in der Kompilierung und Verknüpfung.|Sie können viele potenzielle Probleme vermeiden, indem der Compiler Warnstufe auf die höchsten Werte festlegen und heeding die Warnmeldungen an. Mithilfe der Ebene 3 oder Ebene 4 Warnungsoptionen können Sie unbeabsichtigte datenkonvertierungen, fehlende Funktionsprototypen und Verwendung von nicht-ANSI-Features erkennen.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)

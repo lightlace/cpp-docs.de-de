@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb13e31df1b30c775d1e961f09b10163d06b1ea7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27046704975bf8f5e28f12acbfa72e860660fdbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-limitations-with-earlier-operating-systems"></a>Einschränkungen für CImage in früheren Betriebssystemen
 Viele `CImage` Funktionen funktionieren nur mit neueren Versionen von Windows: Windows 95-und Windows 98 oder Windows NT 4.0 oder Windows 2000. Dieser Artikel beschreibt die Einschränkungen Version bestimmter Methoden.  

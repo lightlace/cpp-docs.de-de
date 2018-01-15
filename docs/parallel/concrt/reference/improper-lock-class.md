@@ -1,46 +1,29 @@
 ---
-title: Improper_lock-Klasse | Microsoft-Dokumentation
+title: Improper_lock-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - improper_lock
 - CONCRT/concurrency::improper_lock
 - CONCRT/concurrency::improper_lock::improper_lock
-dev_langs:
-- C++
-helpviewer_keywords:
-- improper_lock class
+dev_langs: C++
+helpviewer_keywords: improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 336cd222ee70253954905b1ea01144160eeb2f06
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 876023cbc559364a51f7c0774b7b5d04a11a65d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improperlock-class"></a>improper_lock-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn eine Sperre nicht ordnungsgemäß abgerufen wird.  
@@ -51,7 +34,7 @@ Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn eine Sperre nic
 class improper_lock : public std::exception;
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -60,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|Überladen. Konstruiert ein `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Hinweise  
- In der Regel wird diese Ausnahme ausgelöst, wenn versucht wird, einen nicht wiedereintretende Sperre rekursiv im gleichen Kontext abzurufen.  
+ In der Regel wird diese Ausnahme ausgelöst, bei dem Versuch, einen nicht wiedereintretende Sperre rekursiv im gleichen Kontext abzurufen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -90,4 +73,3 @@ improper_lock() throw();
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Critical_section-Klasse](critical-section-class.md)   
  [reader_writer_lock-Klasse](reader-writer-lock-class.md)
-

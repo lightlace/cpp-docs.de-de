@@ -41,11 +41,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dbccf88ee493b0d9343660bbbcd447049ca8c19c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38600b2e6eac6ad181baf1263d9e4d10295732b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld) ( [CMFCToolBarsCustomizeDialog Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ermöglicht es dem Benutzer, Benutzertools hinzuzufügen und um anzugeben, der Name, den Befehl, die Argumente, und ursprüngliche Verzeichnis für jedes benutzertool.  
@@ -56,7 +57,7 @@ Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die
 class CUserTool : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -79,7 +80,7 @@ class CUserTool : public CObject
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|Die Befehlszeilenargumente für das benutzertool.|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Das Ausgangsverzeichnis für die benutzertool.|  

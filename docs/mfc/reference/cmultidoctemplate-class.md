@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94c06dec9a886a107a3e383b236900e429a67940
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d5862a547b41ec8d359b09795f7b9985530fc97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate-Klasse
 Definiert eine Dokumentvorlage, welche die Multiple Document Interface (MDI) implementiert.  
@@ -33,7 +34,7 @@ Definiert eine Dokumentvorlage, welche die Multiple Document Interface (MDI) imp
 class CMultiDocTemplate : public CDocTemplate  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

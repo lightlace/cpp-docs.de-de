@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3eb7d6c18e1a1fd77e0c0c8506d46536add5cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Verwenden von Sockets mit Archiven
 Dieser Artikel beschreibt die [CSocket-Programmiermodell](#_core_the_csocket_programming_model). Klasse [CSocket](../mfc/reference/csocket-class.md) -Socket-Unterstützung auf eine höhere Abstraktionsebene bereitstellt, als Klasse [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket`verwendet eine Version des Protokolls die MFC-Serialisierung zum Übergeben von Daten in und aus einem Socketobjekt, über ein MFC- [CArchive](../mfc/reference/carchive-class.md) Objekt. `CSocket`enthält (beim Verwalten von hintergrundverarbeitung von Windows-Nachrichten) blockieren und ermöglicht den Zugriff auf `CArchive`, die zahlreiche Aspekte der Kommunikation, die Sie selbst unter Verwendung der raw-API oder Klasse verwaltet `CAsyncSocket`.  

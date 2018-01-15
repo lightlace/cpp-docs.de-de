@@ -27,11 +27,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 692f02f6ad2d7486c8460d3dae42500f165f60b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Aufgabenplaner (Concurrency Runtime)
 Die Themen in diesem Teil der Dokumentation beschreiben die wichtigsten Funktionen des Taskplaners der Concurrency Runtime. Der Taskplaner ist hilfreich, wenn Sie die Leistung von vorhandenem Code optimieren möchten, der die Concurrency Runtime verwendet.  

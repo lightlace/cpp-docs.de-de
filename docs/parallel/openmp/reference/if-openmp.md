@@ -1,55 +1,54 @@
 ---
-title: "if (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "if OpenMP clause"
+title: Wenn (OpenMP) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: if
+dev_langs: C++
+helpviewer_keywords: if OpenMP clause
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81952612a80ac74cd4bfca62a1b2d62c910cb8f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# if (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, ob eine Schleife in der Serie oder parallel ausgeführt werden sollte.  
+# <a name="if-openmp"></a>if (OpenMP)
+Gibt an, ob eine Schleife parallel oder seriell ausgeführt werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 if(expression)  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `expression`  
- Ein ganzzahliger Ausdruck, der ausgewertet wird, wenn er true \(\), Ungleich 0 \(null\) wird der Code im parallelen Bereich wird parallel auszuführen.  Wenn der Ausdruck false \(null\) ergibt, wird der parallelen Bereichs in der Serie ausgeführt \(durch einen einzelnen Thread.\)  
+ Ein ganzzahliger Ausdruck, der, wenn es als true (ungleich null) führt der Code in den parallelen Bereich parallel ausgeführt. Ergibt der Ausdruck "false" (null), wird der parallelen Bereichs (über einen einzelnen Thread) seriell ausgeführt.  
   
-## Hinweise  
- `if` gilt für die folgenden Direktiven an:  
+## <a name="remarks"></a>Hinweise  
+ `if`gilt für die folgenden Direktiven:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Weitere Informationen finden Sie unter [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Weitere Informationen finden Sie unter [2.3 parallel-Konstrukt](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_if.cpp  
@@ -80,7 +79,10 @@ int main( )
 }  
 ```  
   
-  **0 \= val serialisiert**  
-**val \= 2, parallelisiert mit 2 Threads**   
-## Siehe auch  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+val = 0, serialized  
+val = 2, parallelized with 2 threads  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)

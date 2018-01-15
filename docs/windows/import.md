@@ -1,32 +1,33 @@
 ---
-title: "import | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.import"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "import attribute"
+title: Importieren Sie | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.import
+dev_langs: C++
+helpviewer_keywords: import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 011cabb37f388d4be6a9a69f685a7c711f0209a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# import
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt ein weiteres .idl, .odl oder Headerdatei, die Definitionen enthält, die Sie in der Main IDL verweisen möchten.  
+# <a name="import"></a>import
+Gibt eine andere IDL, ODL oder Header-Datei enthält Definitionen, die Sie von Ihrem wichtigsten IDL verweisen möchten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,17 +36,17 @@ Gibt ein weiteres .idl, .odl oder Headerdatei, die Definitionen enthält, die Si
 ) ];  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `idl_file`  
- Der Name einer IDL\-Datei, importierte in die Typbibliothek des aktuellen Projekts.  
+ Der Name einer IDL-Datei, die in der Typbibliothek des aktuellen Projekts importiert werden sollen.  
   
-## Hinweise  
- Das Attribut **Import** C\+\+ wird eine `#import` unterhalb der Anweisung `import "docobj.idl"`\-Anweisung in der generierten IDL\-Datei abgelegt werden soll.  Das **Import**\-Attribut verfügt über die gleichen Funktionen wie das [Import](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **importieren** C++-Attribut bewirkt, dass ein `#import` Anweisung unten versetzt werden die `import "docobj.idl"` -Anweisung in der generierten IDL-Datei. Die **importieren** Attribut hat die gleiche Funktionalität wie die [importieren](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL-Attribut.  
   
- Das Attribut wird nur **Import** die angegebene Datei in die IDL\-Datei, die vom Projekt generiert wird. **Import** das Attribut können Sie keine Konstrukte in der angegebenen Datei aus dem Quellcode im Projekt aufrufen.  Um Konstrukte in der angegebenen Datei aus dem Quellcode im Projekt aufzurufen, entweder Verwendung [\#import](../preprocessor/hash-import-directive-cpp.md) und das `embedded_idl`\-Attribut oder Sie können die H\-Datei für `idl_file`umfassen, wenn eine H\-Datei vorhanden ist.  
+ Die **importieren** Attribut wird nur die angegebene Datei in der IDL-Datei, die vom Projekt; generiert werden, die **importieren** Attribut ist nicht möglich, die Konstrukte in der angegebenen Datei aus dem Quellcode aufrufen in Ihrem Projekt.  Um Konstrukte in der angegebenen Datei aus dem Quellcode in Ihrem Projekt aufrufen zu können, verwenden Sie entweder [#import](../preprocessor/hash-import-directive-cpp.md) und `embedded_idl` -Attribut, oder Sie können schließen die .h-Datei für die `idl_file`, wenn eine .h-Datei vorhanden ist.  
   
-## Beispiel  
- Der folgende Code:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code  
   
 ```  
 // cpp_attr_ref_import.cpp  
@@ -54,7 +55,7 @@ Gibt ein weiteres .idl, .odl oder Headerdatei, die Definitionen enthält, die Si
 [import(import.idl)];  
 ```  
   
- erzeugt den folgenden Code in der generierten IDL\-Datei:  
+ erzeugt den folgenden Code in der generierten IDL-Datei:  
   
 ```  
 import "docobj.idl";  
@@ -67,24 +68,23 @@ library MyLib {
 ...  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [einschließen](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

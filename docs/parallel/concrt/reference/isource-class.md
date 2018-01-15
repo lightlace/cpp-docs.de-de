@@ -1,11 +1,10 @@
 ---
-title: ISource-Klasse | Microsoft-Dokumentation
+title: ISource-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,35 +19,19 @@ f1_keywords:
 - AGENTS/concurrency::ISource::reserve
 - AGENTS/concurrency::ISource::unlink_target
 - AGENTS/concurrency::ISource::unlink_targets
-dev_langs:
-- C++
-helpviewer_keywords:
-- ISource class
+dev_langs: C++
+helpviewer_keywords: ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b5545f666dccb251152dc6c9a83101662848be1c
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6db1fe614de8a3f47bae989ccb26512c375cec50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isource-class"></a>ISource-Klasse
 Die `ISource`-Klasse ist die Schnittstelle für alle Quellblöcke. Quellblöcke geben Meldungen an `ITarget`-Blöcke weiter.  
@@ -62,9 +45,9 @@ class ISource;
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Der Datentyp der Nutzlast in den Nachrichten vom Quellblock erzeugt.  
+ Der Datentyp der Nutzlast innerhalb der Nachrichten, die vom Quellblock erzeugt wurde.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -82,15 +65,15 @@ class ISource;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[akzeptieren](#accept)|Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine Nachricht, die von diesem angeboten wurde `ISource` Block überträgt den Besitz an den Aufrufer.|  
-|[acquire_ref](#acquire_ref)|Ruft beim Überschreiben in einer abgeleiteten Klasse eine Verweisanzahl für diesen `ISource` Block, um das Löschen zu verhindern.|  
-|[Nutzen](#consume)|Ruft beim Überschreiben in einer abgeleiteten Klasse nimmt eine Meldung, die zuvor von diesem angebotenen `ISource` blockieren und erfolgreich vom Ziel reserviert wurde, überträgt den Besitz an den Aufrufer.|  
-|[link_target](#link_target)|Ruft beim Überschreiben in einer abgeleiteten Klasse verknüpft einen Zielblock mit diesem `ISource` Block.|  
+|[akzeptieren](#accept)|Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine Meldung, die von diesem angebotenen wurde `ISource` -Block übertragen des Besitzes an den Aufrufer.|  
+|[acquire_ref](#acquire_ref)|Ruft beim Überschreiben in einer abgeleiteten Klasse eine Verweisanzahl für dieses `ISource` Block, um den Löschvorgang zu verhindern.|  
+|[Nutzen](#consume)|Ruft beim Überschreiben in einer abgeleiteten Klasse verwendet eine Meldung, die zuvor von diesem angebotenen `ISource` blockieren und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
+|[link_target](#link_target)|Ruft beim Überschreiben in einer abgeleiteten Klasse einen Zielblock verknüpft, mit diesem `ISource` Block.|  
 |[release](#release)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.|  
-|[release_ref](#release_ref)|Ruft beim Überschreiben in einer abgeleiteten Klasse einen Verweiszähler für diese frei `ISource` Block.|  
+|[release_ref](#release_ref)|Ruft beim Überschreiben in einer abgeleiteten Klasse einen Verweiszähler für dieses frei `ISource` Block.|  
 |[reserve](#reserve)|Ruft beim Überschreiben in einer abgeleiteten Klasse reserviert eine Meldung, die zuvor von diesem angebotenen `ISource` Block.|  
-|[unlink_target](#unlink_target)|Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung mit einem Zielblock aus diesem `ISource` zu blockieren, wenn zuvor Verknüpfung.|  
-|[unlink_targets](#unlink_targets)|Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Zielblöcke mit diesem `ISource` Block.|  
+|[unlink_target](#unlink_target)|Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung mit einem Zielblock und dies `ISource` blockieren, wenn gefunden, die zuvor verknüpft werden.|  
+|[unlink_targets](#unlink_targets)|Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung von diesem alle Zielblöcke `ISource` Block.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -105,7 +88,7 @@ class ISource;
   
 ##  <a name="accept"></a>akzeptieren 
 
- Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine Nachricht, die von diesem angeboten wurde `ISource` Block überträgt den Besitz an den Aufrufer.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine Meldung, die von diesem angebotenen wurde `ISource` -Block übertragen des Besitzes an den Aufrufer.  
   
 ```
 virtual message<T>* accept(
@@ -118,17 +101,17 @@ virtual message<T>* accept(
  Die `runtime_object_identity` von der angebotenen `message` Objekt.  
   
  `_PTarget`  
- Ein Zeiger auf den Zielblock, der den Aufruf der `accept` Methode.  
+ Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `accept` Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Meldung, der der Aufrufer nun Eigentümer ist.  
+ Ein Zeiger auf die Meldung, der der Aufrufer nun den Besitz von verfügt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `accept` Methode wird von einem Ziel aufgerufen, während eine Nachricht von diesem angeboten wird `ISource` Block. Der zurückgegebene möglicherweise nicht das Übergeben der `propagate` Methode der `ITarget` zu blockieren, wenn diese Quelle entscheidet, eine Kopie der Nachricht zu erstellen.  
+ Die `accept` Methode wird von einem Ziel aufgerufen, während eine Nachricht von diesem angeboten wird `ISource` Block. Der zurückgegebene Meldungszeiger möglicherweise andere als die übergebenen der `propagate` Methode der `ITarget` blockieren, wenn diese Quelle entscheidet, eine Kopie der Nachricht zu erstellen.  
   
 ##  <a name="acquire_ref"></a>acquire_ref 
 
- Ruft beim Überschreiben in einer abgeleiteten Klasse eine Verweisanzahl für diesen `ISource` Block, um das Löschen zu verhindern.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse eine Verweisanzahl für dieses `ISource` Block, um den Löschvorgang zu verhindern.  
   
 ```
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -139,11 +122,11 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
  Ein Zeiger auf den Zielblock, der diese Methode aufruft.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das mit dieser Quelle während verknüpft wird, ist die `link_target` Methode.  
+ Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das mit dieser Quelle während verknüpft wird, wird die `link_target` Methode.  
   
 ##  <a name="consume"></a>Nutzen 
 
- Ruft beim Überschreiben in einer abgeleiteten Klasse nimmt eine Meldung, die zuvor von diesem angebotenen `ISource` blockieren und erfolgreich vom Ziel reserviert wurde, überträgt den Besitz an den Aufrufer.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse verwendet eine Meldung, die zuvor von diesem angebotenen `ISource` blockieren und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.  
   
 ```
 virtual message<T>* consume(
@@ -156,13 +139,13 @@ virtual message<T>* consume(
  Die `runtime_object_identity` des reservierten `message` Objekt.  
   
  `_PTarget`  
- Ein Zeiger auf den Zielblock, der den Aufruf der `consume` Methode.  
+ Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `consume` Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die `message` Objekt, das der Aufrufer nun Eigentümer ist.  
+ Ein Zeiger auf die `message` -Objekt, dass der Aufrufer nun den Besitz von aufweist.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `consume` Methode ähnelt `accept`, steht aber immer nach einem Aufruf werden müssen `reserve` zurückgegebenen `true`.  
+ Die `consume` Methode ist vergleichbar mit `accept`, aber immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen `true`.  
   
 ##  <a name="dtor"></a>~ ISource 
 
@@ -174,7 +157,7 @@ virtual ~ISource();
   
 ##  <a name="link_target"></a>link_target 
 
- Ruft beim Überschreiben in einer abgeleiteten Klasse verknüpft einen Zielblock mit diesem `ISource` Block.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse einen Zielblock verknüpft, mit diesem `ISource` Block.  
   
 ```
 virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -199,11 +182,11 @@ virtual void release(
  Die `runtime_object_identity` des reservierten `message` Objekt.  
   
  `_PTarget`  
- Ein Zeiger auf den Zielblock, der den Aufruf der `release` Methode.  
+ Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `release` Methode.  
   
 ##  <a name="release_ref"></a>release_ref 
 
- Ruft beim Überschreiben in einer abgeleiteten Klasse einen Verweiszähler für diese frei `ISource` Block.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse einen Verweiszähler für dieses frei `ISource` Block.  
   
 ```
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -214,7 +197,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
  Ein Zeiger auf den Zielblock, der diese Methode aufruft.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das von dieser Quelle aufgehoben wird, ist. Quellblock darf für den Zielblock reservierte Ressourcen freizugeben.  
+ Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das aus dieser Quelle aufgehoben wird, ist. Quellblock darf für den Zielblock reservierten Ressourcen freizugeben.  
   
 ##  <a name="reserve"></a>Reservieren 
 
@@ -231,17 +214,17 @@ virtual bool reserve(
  Die `runtime_object_identity` von der angebotenen `message` Objekt.  
   
  `_PTarget`  
- Ein Zeiger auf den Zielblock, der den Aufruf der `reserve` Methode.  
+ Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `reserve` Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können viele Ursachen haben, z. B. fehlschlagen: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, konnte die Quelle Reservierungen verweigern und so weiter.  
+ `true`Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können viele Gründe geben, einschließlich fehl: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, die Quelle konnte verweigern Reservierungen usw.  
   
 ### <a name="remarks"></a>Hinweise  
- Nach dem Aufruf von `reserve`, das erfolgreich ist, rufen Sie entweder `consume` oder `release` um übernehmen oder der Besitz der Nachricht bzw. abzugeben.  
+ Nach dem Aufruf `reserve`, wenn er erfolgreich ausgeführt wird, müssen Sie entweder Aufrufen `consume` oder `release` um übernehmen oder der Besitz der Nachricht bzw. abzugeben.  
   
 ##  <a name="unlink_target"></a>unlink_target 
 
- Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung mit einem Zielblock aus diesem `ISource` zu blockieren, wenn zuvor Verknüpfung.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung mit einem Zielblock und dies `ISource` blockieren, wenn gefunden, die zuvor verknüpft werden.  
   
 ```
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -253,7 +236,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
   
 ##  <a name="unlink_targets"></a>unlink_targets 
 
- Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Zielblöcke mit diesem `ISource` Block.  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse hebt die Verknüpfung von diesem alle Zielblöcke `ISource` Block.  
   
 ```
 virtual void unlink_targets() = 0;
@@ -262,4 +245,3 @@ virtual void unlink_targets() = 0;
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [ITarget-Klasse](itarget-class.md)
-

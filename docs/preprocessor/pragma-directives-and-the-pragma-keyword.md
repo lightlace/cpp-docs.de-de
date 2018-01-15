@@ -23,14 +23,15 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 93bb3b8f1b765b70128537b096142a9d7ac3ae8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 845c2fab98d246ccee51aff721b1ceb011e3803c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma-Anweisungen und das __Pragma-Schlüsselwort
-Pragma-Direktiven geben computer- oder betriebssystemspezifische Compilerfunktionen an. Das `__pragma`-Schlüsselwort, das für den Microsoft-Compiler spezifisch ist, ermöglicht das Codieren von Pragma-Direktiven innerhalb von Makrodefinitionen.  
+Pragma-Anweisungen geben computer- oder betriebssystemspezifische Compilerfunktionen an. Das `__pragma`-Schlüsselwort, das für den Microsoft-Compiler spezifisch ist, ermöglicht das Codieren von Pragma-Direktiven innerhalb von Makrodefinitionen.  
   
 ## <a name="syntax"></a>Syntax  
   

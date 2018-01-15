@@ -49,11 +49,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a774573a2a42904d89159697dd444db98ddc8243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005-Klasse
 `CMFCVisualManagerVS2005`ermöglicht es einer Anwendung eine Microsoft Visual Studio 2005-Darstellung.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/24/2017
 class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

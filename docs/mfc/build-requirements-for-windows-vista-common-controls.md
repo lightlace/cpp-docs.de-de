@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6f6dabd14ddb95f1b4c2b49389c27f61a69970f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
 Die Microsoft Foundation Class (MFC)-Bibliothek unterstützt allgemeine Windows-Steuerelemente, Version 6.1. Allgemeine Steuerelemente sind in enthalten [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] und in die Bibliothek enthalten die [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Die Bibliothek stellt neue Methoden, die Verbesserung der vorhandenen Klassen und neue Klassen und Methoden, die unterstützen [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] allgemeine Steuerelemente. Wenn Sie eine Anwendung erstellen, sollten Sie die Kompilierung und die Migration Anforderungen befolgen, die in den folgenden Abschnitten beschrieben werden.  

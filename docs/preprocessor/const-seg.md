@@ -1,66 +1,67 @@
 ---
-title: "const_seg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.const_seg"
-  - "const_seg_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_seg-Pragma"
-  - "Pragmas, const_seg"
+title: Const_seg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.const_seg
+- const_seg_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, const_seg
+- const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49d145bc80b524176b381b2b5938c9707e8c1b19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# const_seg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt das Segment an, in dem [const](../cpp/const-cpp.md)\-Variablen in der OBJ\-Datei gespeichert werden.  
+# <a name="constseg"></a>const_seg
+Gibt das Segment an, in dem [const](../cpp/const-cpp.md) Variablen werden in der OBJ-Datei gespeichert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## Hinweise  
- Die Ausdrücke *Segment* und *Abschnitt* sind in diesem Thema gleichbedeutend.  
+## <a name="remarks"></a>Hinweise  
+ Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind in diesem Thema gleichbedeutend.  
   
- OBJ\-Dateien können mit der [dumpbin](../build/reference/dumpbin-command-line.md)\-Anwendung angezeigt werden.  Das Standardsegment in der OBJ\-Datei für `const`\-Variablen ist .rdata.  Einige `const`\-Variablen, z. B. Skalare, sind automatisch im Codestream enthalten.  Inlinecode erscheint nicht in .rdata.  
+ OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment in der OBJ-Datei für `const`-Variablen ist .rdata. Einige `const`-Variablen, z. B. Skalare, sind automatisch im Codestream enthalten. Inlinecode erscheint nicht in .rdata.  
   
  Das Definieren eines Objekts, das eine dynamische Initialisierung in einem `const_seg` benötigt, führt zu einem nicht definierten Verhalten.  
   
  `#pragma const_seg` ohne Parameter setzt das Segment auf .rdata zurück.  
   
- `push` \(optional\)  
- Legt einen Datensatz auf den internen Compilerstapel.  Ein `push` kann über einen `identifier` und einen `segment-name` verfügen.  
+ `push` (optional)  
+ Legt einen Datensatz auf den internen Compilerstapel. Ein `push` kann über einen `identifier` und einen `segment-name` verfügen.  
   
- `pop` \(optional\)  
+ `pop` (optional)  
  Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
   
- `identifier` \(optional\)  
- Bei Verwendung mit `push` wird dem Datensatz im internen Compilerstapel ein Name zugewiesen.  Bei Verwendung mit `pop` werden Datensätze vom internen Stapel geholt, bis `identifier` entfernt wird. Wenn `identifier` im internen Stapel nicht gefunden wird, wird kein Element vom Stapel geholt.  
+ `identifier` (optional)  
+ Bei Verwendung mit `push` wird dem Datensatz im internen Compilerstapel ein Name zugewiesen. Bei Verwendung mit `pop` werden Datensätze vom internen Stapel geholt, bis `identifier` entfernt wird. Wenn `identifier` im internen Stapel nicht gefunden wird, wird kein Element vom Stapel geholt.  
   
- `identifier` ermöglicht, mehrere Datensätze mit einem `pop`\-Befehl zu entfernen.  
+ `identifier` ermöglicht, mehrere Datensätze mit einem `pop`-Befehl zu entfernen.  
   
- "`segment-name`" \(optional\)  
- Der Name eines Segments.  Bei Verwendung mit `pop` wird das Element vom Stapel geholt und `segment-name` wird zum aktiven Segmentnamen.  
+ "`segment-name`" (optional)  
+ Der Name eines Segments. Bei Verwendung mit `pop` wird das Element vom Stapel geholt und `segment-name` wird zum aktiven Segmentnamen.  
   
- "`segment-class`" \(optional\)  
- Zum Gewährleisten der Kompatibilität mit C\+\+ vor Version 2.0 eingeführt.  Wird ignoriert.  
+ "`segment-class`" (optional)  
+ Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // pragma_directive_const_seg.cpp  
@@ -89,14 +90,17 @@ int main() {
 }  
 ```  
   
-  **test1**  
-**test2**  
-**test3**  
-**test4**   
-## Kommentare  
- Eine Liste der Namen, die Sie beim Erstellen eines Abschnitts nicht verwenden sollten, finden Sie unter [\/SECTION](../build/reference/section-specify-section-attributes.md).  
+```Output  
+test1  
+test2  
+test3  
+test4  
+```  
   
- Sie können auch Abschnitte für initialisierte Daten \([data\_seg](../preprocessor/data-seg.md)\) nicht initialisierte Daten \([bss\_seg](../preprocessor/bss-seg.md)\) und Funktionen \([code\_seg](../preprocessor/code-seg.md)\) angeben.  
+## <a name="comments"></a>Kommentare  
+ Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und Funktionen ([Code_seg](../preprocessor/code-seg.md)).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

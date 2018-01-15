@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>MFC-Anwendungs-Assistent
 Der MFC-Anwendungs-Assistent erstellt eine Anwendung, die beim Kompilieren die grundlegenden Funktionen einer ausführbaren Windows-Anwendung (.exe) implementiert. Die MFC-Startanwendung umfasst C++-Quelldateien (.cpp), Ressourcendateien (.rc), Headerdateien (.h) sowie eine Projektdatei (.vcxproj). Der in diesen Startdateien generierte Code basiert auf MFC.  
@@ -40,9 +41,9 @@ Der MFC-Anwendungs-Assistent erstellt eine Anwendung, die beim Kompilieren die g
   
     -   Das Projekt verwendet Unicode-Bibliotheken.  
   
-    -   Das Projekt wird mit dem Visual Studio-Projektformat erstellt und aktiviert visuelle Stilumschaltung.  
+    -   Das Projekt wird mit dem Visual Studio-Projektformat erstellt und aktiviert visuelles Stilswitching.  
   
-    -   Das Projekt verwendet MFC in einer gemeinsam genutzten DLL. Weitere Informationen finden Sie unter [-DLLs in Visual C++](../../build/dlls-in-visual-cpp.md).  
+    -   Das Projekt verwendet MFC in einer gemeinsam genutzten DLL. Weitere Informationen finden Sie unter [DLLs in Visual C++](../../build/dlls-in-visual-cpp.md).  
   
 -   [Verbunddokumentunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   

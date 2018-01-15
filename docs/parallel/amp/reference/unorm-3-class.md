@@ -1,11 +1,10 @@
 ---
-title: unorm_3-Klasse | Microsoft-Dokumentation
+title: unorm_3-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_y
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 14c85a46b8026878c3b5502931f937e2cf6196cd
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4051b7f872803a8ef799178b7ad158e588da08bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm3-class"></a>unorm_3-Klasse
 Stellt einen kurzen Vektor aus drei normalen Zahlen ohne Vorzeichen dar.  
@@ -115,7 +99,7 @@ Stellt einen kurzen Vektor aus drei normalen Zahlen ohne Vorzeichen dar.
 class unorm_3;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -176,7 +160,7 @@ class unorm_3;
 |----------|-----------------|  
 |unorm_3::Operator--||  
 |unorm_3::Operator * =||  
-|unorm_3::Operator / =||  
+|unorm_3::Operator Operator / =||  
 |unorm_3::Operator ++||  
 |unorm_3::Operator +=||  
 |unorm_3::Operator =||  
@@ -184,7 +168,7 @@ class unorm_3;
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#unorm_3__size)||  
   
@@ -296,13 +280,13 @@ explicit inline unorm_3(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -318,4 +302,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

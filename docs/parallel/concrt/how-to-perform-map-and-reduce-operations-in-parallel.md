@@ -1,52 +1,54 @@
 ---
-title: "Gewusst wie: Paralleles Ausf&#252;hren von Zuordnungs- und Reduzierungsoperationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Parallel_transform-Funktion, Beispiel:"
-  - "Parallele Zuordnung und Reduzierung, Beispiel"
-  - "Parallel_reduce-Funktion, Beispiel:"
+title: "Vorgehensweise: Ausführen von Zuordnungs- und Reduzierungsoperationen Parallel | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parallel_transform function, example
+- parallel map and reduce, example
+- parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Paralleles Ausf&#252;hren von Zuordnungs- und Reduzierungsoperationen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Gewusst wie: Paralleles Ausführen von Zuordnungs- und Reduzierungsoperationen
 
-Dieses Beispiel zeigt, wie Sie die [parallel_transform](../Topic/parallel_transform%20Function.md) und [concurrency::parallel_reduce](../Topic/parallel_reduce%20Function.md) Algorithmen und [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) Klasse, um die Vorkommen der Wörter in Dateien zu zählen.  
+Dieses Beispiel zeigt, wie die [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) und [Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) Algorithmen und die [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)Klasse, um die Vorkommen von Wörtern in Dateien gezählt.  
   
- Ein *Karte* -Vorgang gilt eine Funktion für jeden Wert in einer Sequenz. Ein *reduzieren* Vorgang kombiniert die Elemente einer Sequenz in einen Wert. Sie können die Standardvorlagenbibliothek (STL) [std::transform](../Topic/transform.md)[Std:: Accumulate](../Topic/accumulate.md) Klassen zum Ausführen von Zuordnungs- und Vorgänge zu reduzieren. Zur Verbesserung der Leistung bei vielen Problemen können Sie mit dem `parallel_transform`-Algorithmus parallel den Zuordnungsvorgang und mit dem `parallel_reduce`-Algorithmus parallel den Reduzierungsvorgang ausführen. In einigen Fällen können Sie mit `concurrent_unordered_map` die Zuordnung und Reduzierung in einem Vorgang durchführen.  
+ Ein *Zuordnung* wendet eine Funktion auf jeden Wert in einer Sequenz. Ein *reduzieren* kombiniert die Elemente einer Sequenz zu einem einzelnen Wert. Sie können die C++-Standardbibliothek [reduzierungsvorgänge](../../standard-library/algorithm-functions.md#transform) und [Std:: Accumulate](../../standard-library/numeric-functions.md#accumulate) Funktionen zum Ausführen von Zuordnungs- und Operationen verringern. Zur Verbesserung der Leistung bei vielen Problemen können Sie mit dem `parallel_transform`-Algorithmus parallel den Zuordnungsvorgang und mit dem `parallel_reduce`-Algorithmus parallel den Reduzierungsvorgang ausführen. In einigen Fällen können Sie mit `concurrent_unordered_map` die Zuordnung und Reduzierung in einem Vorgang durchführen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird das Vorkommen von Wörtern in Dateien gezählt. Er verwendet [Std:: vector](vector%20Class.md) zur Darstellung des Inhalts von zwei Dateien. Der Zuordnungsvorgang berechnet das Vorkommen von jedem Wort in jedem Vektor. Der Reduzierungsvorang zählt die Wörter in den zwei Vektoren zusammen.  
+ Im folgenden Beispiel wird das Vorkommen von Wörtern in Dateien gezählt. Er verwendet [Std:: vector](../../standard-library/vector-class.md) zur Darstellung des Inhalts von zwei Dateien. Der Zuordnungsvorgang berechnet das Vorkommen von jedem Wort in jedem Vektor. Der Reduzierungsvorang zählt die Wörter in den zwei Vektoren zusammen.  
   
- [!CODE [concrt-parallel-map-reduce#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-map-reduce#1)]  
+ [!code-cpp[concrt-parallel-map-reduce#1](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_1.cpp)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt bzw. Fügen Sie ihn in eine Datei mit dem Namen `parallel-map-reduce.cpp` und dann den folgenden Befehl in einer Visual Studio-Eingabeaufforderungsfenster ausführen.  
+ Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-map-reduce.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
- **CL.exe/EHsc Parallel-Map-reduce.cpp**  
+ **/ EHsc / CL.exe Parallel-Map-reduce.cpp**  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  In diesem Beispiel können Sie mit der in concurrent_unordered_map.h definierten `concurrent_unordered_map`-Klasse die Zuordnung und Reduzierung in einem Vorgang durchführen.  
   
- [!CODE [concrt-parallel-map-reduce#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-map-reduce#2)]  
+ [!code-cpp[concrt-parallel-map-reduce#2](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_2.cpp)]  
   
  In der Regel wird nur die äußere oder die innere Schleife parallel ausgeführt. Führen Sie die innere Schleife parallel aus, wenn Sie über relativ wenige Dateien mit vielen Wörtern verfügen. Führen Sie die äußere Schleife parallel aus, wenn Sie über relativ viele Dateien mit wenigen Wörtern verfügen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)   
- [Parallel_transform-Funktion](../Topic/parallel_transform%20Function.md)   
- [Parallel_reduce-Funktion](../Topic/parallel_reduce%20Function.md)   
- [Concurrent_unordered_map-Klasse](../../parallel/concrt/reference/concurrent-unordered-map-class.md)
+ [Parallel_transform-Funktion](reference/concurrency-namespace-functions.md#parallel_transform)   
+ [Parallel_reduce-Funktion](reference/concurrency-namespace-functions.md#parallel_reduce)   
+ [concurrent_unordered_map-Klasse](../../parallel/concrt/reference/concurrent-unordered-map-class.md)

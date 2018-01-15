@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c226d59ee3444abb32789d40ccf68a05c535b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6758cce9ab42c0dea490dd8ac9803588edceac5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-list-control-styles"></a>Ändern der Stile von Listensteuerelementen
 Sie können den Fensterstil eines Steuerelements ändern ([CListCtrl](../mfc/reference/clistctrl-class.md)) zu einem beliebigen Zeitpunkt nach der Erstellung. Ändern den Fensterstil, ändern Sie die Art der Ansicht, die das Steuerelement verwendet. Z. B. zum Emulieren des Explorers möglicherweise standardimages Menüelemente und Symbolleisten-Schaltflächen für das Steuerelement zwischen verschiedenen Ansichten wechseln: Symbolansicht, Listenansicht und So weiter.  

@@ -1,35 +1,34 @@
 ---
-title: "Zeichenoperator (#@)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "#@"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "#@-Präprozessoroperator"
-  - "Zeichenoperator"
-  - "Präprozessor, Operatoren"
+title: Zeichenoperator (#@) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '#@'
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor, operators
+- charizing operator
+- '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 933e97732462b61919d9e5a1e73f2a72d26ea01b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Zeichenoperator (#@)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="charizing-operator-"></a>Zeichenoperator (#@)
+**Microsoft-spezifisch**  
   
- Der Zeichenoperator kann nur mit Argumenten von Makros verwendet werden.  Wenn **\#@** vor einem formalen Parameter in der Definition des Makros steht, wird das tatsächliche Argument in einfache Anführungszeichen eingeschlossen und als Zeichen behandelt, wenn das Makro erweitert wird.  Beispiel:  
+ Der Zeichenoperator kann nur mit Argumenten von Makros verwendet werden. Wenn  **#@**  steht vor einem formalen Parameter in der Definition des Makros, das tatsächliche Argument in einfache Anführungszeichen eingeschlossen und als Zeichen behandelt wird, wenn das Makro erweitert wird. Zum Beispiel:  
   
 ```  
 #define makechar(x)  #@x  
@@ -49,7 +48,7 @@ a = 'b';
   
  Das einfache Anführungszeichen kann nicht mit dem Zeichenoperator verwendet werden.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)

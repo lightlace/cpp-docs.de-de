@@ -1,49 +1,52 @@
 ---
-title: "deprecated (C/C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.deprecated"
-  - "deprecated_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "deprecated-Pragma"
-  - "Pragmas, deprecated"
+title: veraltet (C/C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.deprecated
+- deprecated_CPP
+dev_langs: C++
+helpviewer_keywords:
+- deprecated pragma
+- pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7ee6f8c77c1596789fcb731833a1fb432e77d7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# deprecated (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Pragma **deprecated** ermöglicht es Ihnen anzugeben, dass eine Funktion, ein Typ oder ein anderer Bezeichner in einer zukünftigen Version möglicherweise nicht mehr unterstützt wird oder nicht mehr verwendet werden sollte.  
+# <a name="deprecated-cc"></a>deprecated (C/C++)
+Die **veraltet** Pragma ermöglicht es Ihnen anzugeben, dass eine Funktion, Typ oder ein anderer Bezeichner in der Zukunft nicht mehr unterstützt werden möglicherweise freigegeben oder nicht mehr verwendet werden soll.  
+> [!NOTE]
+> Informationen zu den C ++ 14 `[[deprecated]]` Attribut und Hinweise dazu, wann verwendet Vs Attribut, das Microsoft-Declspec oder Pragma, finden Sie unter [Standard C++-Attribute](../cpp/attributes2.md) Attribut.
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma deprecated( identifier1 [,identifier2, ...] )  
 ```  
   
-## Hinweise  
- Wenn der Compiler ein veraltetes Symbol findet, gibt er [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md) aus.  
+## <a name="remarks"></a>Hinweise  
+ Wenn der Compiler erkennt einen Bezeichner, der gemäß einem **veraltet** Pragma ausgestellten compilerwarnung [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
   
- Sie können Makronamen als veraltet deklarieren.  Platzieren Sie den Makronamen in Anführungszeichen; andernfalls tritt eine Makroerweiterung auf.  
+ Sie können Makronamen als veraltet deklarieren. Platzieren Sie den Makronamen in Anführungszeichen; andernfalls tritt eine Makroerweiterung auf.  
   
- Der Modifizierer [deprecated](../cpp/deprecated-cpp.md) `__declspec` ermöglicht es Ihnen, den veralteten Zustand von bestimmten Formen überladener Funktionen zu bestimmen.  
+ Da die **veraltet** Pragma kann für alle übereinstimmenden IDs und nimmt kein Signaturen berücksichtigt, es ist nicht die beste Option für bestimmte Versionen von überladenen Funktionen eingestellt. Alle übereinstimmenden Funktionsname, die eingebunden ist wird die Warnung ausgelöst.
+
+  Es wird empfohlen, die C ++ 14 `[[deprecated]]` Attribut, nach Möglichkeit anstelle der **veraltet** Pragma. Der Microsoft-spezifische [__declspec(deprecated)](../cpp/deprecated-cpp.md) deklarationsmodifizierer ist die bessere Wahl in vielen Fällen als auch die **veraltet** Pragma. Die `[[deprecated]]` Attribut und `__declspec(deprecated)` Modifizierer ermöglichen es Ihnen, die für bestimmte Arten von überladenen Funktionen als veraltet markierte Status angeben. Die Diagnose Warnung wird nur angezeigt, für Verweise auf den bestimmten überladenen Funktion das Attribut oder Modifizierer betrifft.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // pragma_directive_deprecated.cpp  
@@ -80,5 +83,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

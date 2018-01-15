@@ -1,5 +1,5 @@
 ---
-title: Concurrency-Namespace Enumerationen | Microsoft-Dokumentation
+title: Concurrency-Namespace Enumerationen | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,18 +16,18 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7589f0054e9393f938bf69d4e1751202cbc02456
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums"></a>Concurrency-Namespace-Enumerationen
 ||||  
@@ -50,8 +50,8 @@ enum agent_status;
 |----------|-----------------|  
 |`agent_canceled`|Das `agent` wurde abgebrochen.|  
 |`agent_created`|Die `agent` erstellt, jedoch nicht gestartet wurde.|  
-|`agent_done`|Die `agent` ohne Abbruch beendet.|  
-|`agent_runnable`|Die `agent` gestartet, aber nicht eingegeben wurde die `run` Methode.|  
+|`agent_done`|Die `agent` wurde ohne Abbruchs abgeschlossen.|  
+|`agent_runnable`|Die `agent` gestartet wurde, aber nicht eingegeben seine `run` Methode.|  
 |`agent_started`|Die `agent` wurde gestartet.|  
 
 ### <a name="remarks"></a>Hinweise  
@@ -73,12 +73,12 @@ enum Agents_EventType;
 |----------|-----------------|  
 |`AGENTS_EVENT_CREATE`|Ein Ereignistyp, der die Erstellung eines Objekts darstellt.|  
 |`AGENTS_EVENT_DESTROY`|Ein Ereignistyp, der das Löschen eines Objekts darstellt.|  
-|`AGENTS_EVENT_END`|Ein Ereignistyp, der den Abschluss der Verarbeitung|  
-|`AGENTS_EVENT_LINK`|Ein Ereignistyp, der das Verknüpfen von Nachrichtenblöcken darstellt|  
+|`AGENTS_EVENT_END`|Ein Ereignistyp, der den Abschluss des einige darstellt verarbeiten|  
+|`AGENTS_EVENT_LINK`|Ein Ereignistyp, der die Verknüpfung der Meldungsblöcke darstellt|  
 |`AGENTS_EVENT_NAME`|Ein Ereignistyp, der den Namen für ein Objekt darstellt.|  
 |`AGENTS_EVENT_SCHEDULE`|Ein Ereignistyp, der darstellt, die Planung eines Prozesses|  
-|`AGENTS_EVENT_START`|Ein Ereignistyp, der die Initiierung von einigen darstellt verarbeiten|  
-|`AGENTS_EVENT_UNLINK`|Ein Ereignistyp, der das Aufheben der Verknüpfung von Nachrichtenblöcken darstellt|  
+|`AGENTS_EVENT_START`|Ein Ereignistyp, die für die Initiierung von einigen verarbeiten|  
+|`AGENTS_EVENT_UNLINK`|Ein Ereignistyp, der das Aufheben der Verknüpfung der Meldungsblöcke darstellt|  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** concrt.h hinzu
@@ -94,17 +94,17 @@ enum ConcRT_EventType;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |`CONCRT_EVENT_ATTACH`|Ein Ereignistyp, der das Act, der das Anfügen an einen Planer darstellt.|  
-|`CONCRT_EVENT_BLOCK`|Ein Ereignistyp, der Vorgang blockieren eines Kontexts darstellt.|  
-|`CONCRT_EVENT_DETACH`|Ein Ereignistyp, der das Aufheben der Verknüpfung mit einen Planer darstellt.|  
-|`CONCRT_EVENT_END`|Ein Ereignistyp, der den Beginn einer Start-/Endzeit Ereignispaar markiert.|  
+|`CONCRT_EVENT_BLOCK`|Ein Ereignistyp, der der Vorgang des Blockieren eines Kontexts darstellt.|  
+|`CONCRT_EVENT_DETACH`|Ein Ereignistyp, der der Vorgang eine durch das Trennen von einem Planer darstellt.|  
+|`CONCRT_EVENT_END`|Ein Ereignistyp, der den Anfang des ein Ereignispaar Start/Ende markiert.|  
 |`CONCRT_EVENT_GENERIC`|Ein Ereignistyp, der für verschiedene Ereignisse verwendet wird.|  
-|`CONCRT_EVENT_IDLE`|Ein Ereignistyp, der den Übergang eines Kontexts in Leerlauf darstellt.|  
-|`CONCRT_EVENT_START`|Ein Ereignistyp, der den Beginn einer Start-/Endzeit Ereignispaar markiert.|  
-|`CONCRT_EVENT_UNBLOCK`|Ein Ereignistyp, der das Aufheben der Blockierung eines Kontexts darstellt.|  
-|`CONCRT_EVENT_YIELD`|Ein Ereignistyp, der das von einem Kontext Gewinnung darstellt.|  
+|`CONCRT_EVENT_IDLE`|Ein Ereignistyp, der das Act eines Kontexts Leerlauf darstellt.|  
+|`CONCRT_EVENT_START`|Ein Ereignistyp, der den Anfang des ein Ereignispaar Start/Ende markiert.|  
+|`CONCRT_EVENT_UNBLOCK`|Ein Ereignistyp, der der Vorgang zum Aufheben der Blockierung von eines Kontexts darstellt.|  
+|`CONCRT_EVENT_YIELD`|Ein Ereignistyp, der einen Kontext und gibt der Vorgang darstellt.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  **Namespace:** Parallelität
+ **Header:** concrt.h hinzu **Namespace:** Parallelität
 
 ##  <a name="concrt_traceflags"></a>Concrt_TraceFlags-Enumeration  
  Ablaufverfolgungskennzeichen für die Ereignistypen  
@@ -137,8 +137,8 @@ enum CriticalRegionType;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`InsideCriticalRegion`|Gibt an, dass der Kontext in einem wichtigen Bereich ist. Wenn in einem kritischen Bereich sind asynchrone Unterbrechungen vom Planer ausgeblendet. So eine Unterbrechung erfolgen sollte, der Ressourcen-Manager gewartet wird, bis der Thread ausführbar und setzt ihn einfach fort, statt den Planer erneut aufzurufen. Alle in so einem Bereich vorgenommenen Sperren müssen mit äußerster Sorgfalt durchgeführt werden.|  
-|`InsideHyperCriticalRegion`|Gibt an, dass der Kontext in einem äußerst wichtigen Bereich ist. Synchrone und asynchrone Unterbrechungen werden in einem äußerst wichtigen Bereich vom Planer ausgeblendet. Falls so eine Unterbrechung oder Blockierung auftritt, der Ressourcen-Manager gewartet wird, bis der Thread ausführbar und setzt ihn einfach fort, statt den Planer erneut aufzurufen. In so einem Bereich vorgenommenen Sperren müssen niemals für Code, der außerhalb so eines Bereichs ausgeführt freigegeben werden. Auf diese Weise wird zu einem unvorhersehbaren Deadlock.|  
+|`InsideCriticalRegion`|Gibt an, dass der Kontext in einem wichtigen Bereich ist. In einem kritischen Bereich werden asynchrone Eingangsseite vom Planer ausgeblendet. So eine Unterbrechung sollte erfolgen, der Ressourcen-Manager gewartet wird, für den Thread ausführbar werden, und es einfach fortsetzen, statt den Planer erneut aufzurufen. Alle sperren, die in solchen Bereichs müssen mit Sorgfalt ausgeführt werden.|  
+|`InsideHyperCriticalRegion`|Gibt an, dass der Kontext in einem hyper-wichtigen Bereich ist. Synchrone und asynchrone Eingangsseite werden in einem hyper-wichtigen Bereich vom Planer ausgeblendet. Sollten Sie so eine Unterbrechung oder Blockierung auftritt, der Ressourcen-Manager gewartet wird, für den Thread ausführbar werden, und es einfach fortsetzen, statt den Planer erneut aufzurufen. In so einem Bereich Sperren müssen niemals für Code außerhalb eines solchen Bereichs ausgeführt freigegeben werden. Auf diese Weise wird zu einem unvorhersehbaren Deadlock.|  
 |`OutsideCriticalRegion`|Gibt an, dass der Kontext außerhalb eines wichtigen Bereichs ist.|  
   
 ### <a name="requirements"></a>Anforderungen  
@@ -154,8 +154,8 @@ enum DynamicProgressFeedbackType;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`ProgressFeedbackDisabled`|Der Planer ist keine Statusinformationen sammeln. Neuverteilen von ausschließlich auf Abonnementebene des zugrunde liegenden Hardwarethreads erfolgt basierend. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Dieser Wert ist für die Verwendung durch die Common Language Runtime reserviert.|  
-|`ProgressFeedbackEnabled`|Der Planer erfasst Statusinformationen und übergibt sie an dem Ressourcen-Manager. Der Ressourcen-Manager nutzt diese statistischen Informationen, um Ressourcen im Auftrag des Planers zusätzlich zur Abonnementebene des zugrunde liegenden Hardwarethreads neu zu verteilen. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
+|`ProgressFeedbackDisabled`|Der Planer erfasst nur die Statusinformationen zu erhalten. Neuverteilen ist ausschließlich auf Abonnementebene der zugrunde liegenden Hardwarethread beruhen. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Dieser Wert wird von der Laufzeit für die Verwendung reserviert.|  
+|`ProgressFeedbackEnabled`|Der Planer erfasst Statusinformationen und übergibt sie an dem Ressourcen-Manager. Der Ressourcen-Manager wird diese statistischen Informationen, um im Auftrag der Planer neben Abonnementebene des zugrunde liegenden Hardwarethreads Ressourcenausgleich nutzen. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
 ##  <a name="join_type"></a>Join_type-Enumeration  
  Der Typ eines `join`-Meldungsblocks.  
   
@@ -166,8 +166,8 @@ enum join_type;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`greedy`|Gierige `join` Meldungsblöcken sofort nach der Weitergabe eine Meldung akzeptiert. Dies ist effizienter, aber hat die Möglichkeit für live-Sperre, abhängig von der Netzwerkkonfiguration.|  
-|`non_greedy`|Nicht gierige `join` Meldungsblöcken Verschieben von Nachrichten und versuchen Sie es und nutzen Sie diese, nachdem alle angekommen sind. Diese sind garantiert funktioniert, aber langsamer.|  
+|`greedy`|Gierige `join` Meldungsblöcken sofort nach der Weitergabe eine Meldung akzeptiert. Dies ist jedoch effizienter, aber die Gefahr von live-Sperre, abhängig von der Netzwerkkonfiguration wurde.|  
+|`non_greedy`|Nicht gieriger `join` Meldungsblöcken Verschieben von Nachrichten, und versuchen Sie es, und nutzen müssen, nachdem alle angekommen sind. Diese sind notwendigerweise auch funktionsfähig, aber verlangsamt.|  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** agents.h  
@@ -183,15 +183,15 @@ enum message_status;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |`accepted`|Das Ziel hat die Meldung akzeptiert.|  
-|`declined`|Das Ziel hat die Meldung nicht akzeptiert.|  
-|`missed`|Das Ziel hat versucht, die Nachricht zu übernehmen, aber es war nicht mehr verfügbar.|  
-|`postponed`|Das Ziel hat die Meldung aufgeschoben.|  
+|`declined`|Das Ziel hat die Nachricht nicht akzeptiert.|  
+|`missed`|Das Ziel hat versucht, die Nachricht akzeptiert, aber es war nicht mehr verfügbar.|  
+|`postponed`|Das Ziel verschoben, sodass die Nachricht.|  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** agents.h  
 
 ##  <a name="policyelementkey"></a>PolicyElementKey-Enumeration  
- Richtlinienschlüssel, die Aspekte des Planerverhaltens beschreiben. Jedes Richtlinienelement wird mit einem Schlüssel-Wert-Paar beschrieben. Weitere Informationen zu Planerrichtlinien und ihren Auswirkungen auf Planer finden Sie unter [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+ Richtlinienschlüssel, die Aspekte des Planerverhaltens beschreiben. Jedes Richtlinienelement wird mit einem Schlüssel-Wert-Paar beschrieben. Weitere Informationen zu Planerrichtlinien und deren Auswirkungen auf Planer finden Sie unter [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
 enum PolicyElementKey;
@@ -200,16 +200,16 @@ enum PolicyElementKey;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`ContextPriority`|Die Betriebssystem-Threadpriorität der einzelnen Kontexte im Planer. Wenn dieser Schlüssel, auf den Wert festgelegt ist `INHERIT_THREAD_PRIORITY` erben die Kontexte im Planer die Priorität des Threads, der den Planer erstellt hat.<br /><br /> Gültige Werte: einer der gültigen Werte für den Windows- `SetThreadPriority` -Funktion und der besondere Wert`INHERIT_THREAD_PRIORITY`<br /><br /> Standardwert:`THREAD_PRIORITY_NORMAL`|  
-|`ContextStackSize`|Die reservierte Stapelgröße jedes Kontexts im Planer in Kilobyte.<br /><br /> Gültige Werte: Positive ganze Zahlen<br /><br /> Standardwert: `0`, gibt an, dass der Standardwert für die Stapelgröße des Prozesses verwendet werden.|  
-|`DynamicProgressFeedback`|Bestimmt, ob die Ressourcen für den Planer anhand statistischer Informationen gesammelt, die vom Planer oder nur auf Grundlage der Abonnementebene des zugrunde liegenden Hardwarethreads neu verteilt werden. Weitere Informationen finden Sie unter [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Gültige Werte: ein Mitglied der `DynamicProgressFeedbackType` Enumeration, entweder `ProgressFeedbackEnabled` oder`ProgressFeedbackDisabled`<br /><br /> Standardwert:`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|Wenn die `SchedulingProtocol` Richtlinienschlüssel festgelegt ist, auf den Wert `EnhanceScheduleGroupLocality`, gibt die maximale Anzahl ausführbarer Kontexte pro virtueller Prozessor lokalen Warteschlangen im zwischengespeichert werden. Solche Kontexte werden in der Regel nacheinander Last in, First Out (LIFO) für den virtuellen Prozessor ausgeführt, die sie ausführbar geworden sind verursacht hat. Beachten Sie, dass dieser Richtlinienschlüssel keine Bedeutung bei der `SchedulingProtocol` Schlüsselsatz auf den Wert `EnhanceForwardProgress`.<br /><br /> Gültige Werte: positive ganze Zahlen<br /><br /> Standardwert:`8`|  
-|`MaxConcurrency`|Die maximale vom Planer gewünschte Parallelitätsebene. Der Ressourcen-Manager versucht, diese vielen virtuelle Prozessoren anfänglich zuzuordnen. Der spezielle Wert [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) gibt an, dass die gewünschte Parallelitätsebene mit der Anzahl von Hardwarethreads auf dem Computer identisch ist. Wenn der Wert für angegeben `MinConcurrency` ist größer als die Anzahl der Hardwarethreads auf dem Computer und `MaxConcurrency` als angegeben `MaxExecutionResources`, den Wert der `MaxConcurrency` wird ausgelöst, um übereinstimmen, was für festgelegt ist `MinConcurrency`.<br /><br /> Gültige Werte: Positive ganze Zahlen und der besondere Wert`MaxExecutionResources`<br /><br /> Standardwert:`MaxExecutionResources`|  
-|`MaxPolicyElementKey`|Der maximale Richtlinienelementschlüssel. Kein gültiger Elementschlüssel.|  
-|`MinConcurrency`|Die minimale Parallelitätsebene, die auf dem Planer vom Ressourcen-Manager bereitgestellt werden muss. Die Anzahl virtueller Prozessoren, die einem Planer zugewiesen geht nie unter dem Mindestwert. Der spezielle Wert [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) gibt an, dass die minimale Parallelitätsebene mit der Anzahl von Hardwarethreads auf dem Computer identisch ist. Wenn der Wert für angegeben `MaxConcurrency` ist kleiner als die Anzahl der Hardwarethreads auf dem Computer und `MinConcurrency` angegeben ist, als `MaxExecutionResources`, den Wert der `MinConcurrency` wird verkleinert, was für festgelegt ist `MaxConcurrency`.<br /><br /> Gültige Werte: positive ganze Zahlen und der besondere Wert `MaxExecutionResources`. Beachten Sie, dass für Planerrichtlinien verwendet für die Erstellung der Concurrency Runtime-Planer, der Wert `0` ist ungültig.<br /><br /> Standardwert:`1`|  
-|`SchedulerKind`|Der Typ der Threads, die der Planer für zugrunde liegende Ausführungskontexte verwenden wird. Weitere Informationen finden Sie unter [SchedulerType](#schedulertype).<br /><br /> Gültige Werte: ein Mitglied der `SchedulerType` -Enumeration, z. B.`ThreadScheduler`<br /><br /> Standardwert: `ThreadScheduler`. Dies führt zur Win32-Threads für alle Betriebssysteme.|  
+|`ContextPriority`|Die Betriebssystem-Threadpriorität der einzelnen Kontexte im Planer. Wenn dieser Schlüssel, auf den Wert festgelegt ist `INHERIT_THREAD_PRIORITY` erben die Kontexte im Planer die Priorität des Threads, der den Planer erstellt hat.<br /><br /> Gültige Werte: einer der gültigen Werte für den Windows- `SetThreadPriority` -Funktion und der spezielle Wert`INHERIT_THREAD_PRIORITY`<br /><br /> Standardwert:`THREAD_PRIORITY_NORMAL`|  
+|`ContextStackSize`|Die reservierte Stapelgröße der einzelnen Kontexte im Planer in Kilobyte.<br /><br /> Gültige Werte: Positive ganze Zahlen<br /><br /> Standardwert: `0`, gibt an, dass der Standardwert für die Stapelgröße des Prozesses verwendet werden.|  
+|`DynamicProgressFeedback`|Bestimmt, ob die Ressourcen für den Planer anhand statistischer Informationen gesammelt, die vom Planer oder nur basierend auf der Abonnementebene des zugrunde liegenden Hardwarethreads neu verteilt werden. Weitere Informationen finden Sie unter [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Gültige Werte: ein Mitglied der `DynamicProgressFeedbackType` Enumeration, entweder `ProgressFeedbackEnabled` oder`ProgressFeedbackDisabled`<br /><br /> Standardwert:`ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|Wenn die `SchedulingProtocol` Richtlinienschlüssel festgelegt ist, auf den Wert `EnhanceScheduleGroupLocality`, gibt die maximale Anzahl ausführbarer Kontexte zulässig pro virtueller Prozessor lokale Warteschlangen in zwischengespeichert werden. Solche Kontexte werden in der Regel nacheinander Last in First Out (LIFO) für den virtuellen Prozessor ausgeführt werden, die ausführbar wird damit verursacht hat. Beachten Sie, dass dieser Richtlinienschlüssel hat keine Bedeutung bei der `SchedulingProtocol` Schlüssel festgelegt ist, auf den Wert `EnhanceForwardProgress`.<br /><br /> Gültige Werte: nicht Negative ganze Zahlen<br /><br /> Standardwert:`8`|  
+|`MaxConcurrency`|Die maximale vom Planer gewünschte Parallelitätsebene. Der Ressourcen-Manager versucht, anfänglich so viele virtuelle Prozessoren reserviert werden. Der spezielle Wert [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) gibt an, dass die gewünschte Parallelitätsebene mit der Anzahl von Hardwarethreads auf dem Computer identisch ist. Wenn der Wert für die angegebene `MinConcurrency` ist größer als die Anzahl von Hardwarethreads auf dem Computer und `MaxConcurrency` angegeben ist, als `MaxExecutionResources`, den Wert für `MaxConcurrency` wird ausgelöst, um übereinstimmen, was für festgelegt ist `MinConcurrency`.<br /><br /> Gültige Werte: Positive ganze Zahlen und der spezielle Wert`MaxExecutionResources`<br /><br /> Standardwert:`MaxExecutionResources`|  
+|`MaxPolicyElementKey`|Der maximale Richtlinienelementschlüssel. Eine gültige Element-Schlüssel.|  
+|`MinConcurrency`|Die minimale Parallelitätsebene, die auf dem Planer vom Ressourcenmanager bereitgestellt werden müssen. Die Anzahl virtueller Prozessoren, die einem Planer zugewiesen wird nie unter dem Mindestwert gesendet. Der spezielle Wert [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) gibt an, dass die minimale Parallelitätsebene mit der Anzahl von Hardwarethreads auf dem Computer identisch ist. Wenn der Wert für die angegebene `MaxConcurrency` ist kleiner als die Anzahl von Hardwarethreads auf dem Computer und `MinConcurrency` angegeben ist, als `MaxExecutionResources`, den Wert für `MinConcurrency` gesenkt werden, um übereinstimmen, was für festgelegt ist `MaxConcurrency`.<br /><br /> Gültige Werte: nicht Negative ganze Zahlen und der spezielle Wert `MaxExecutionResources`. Beachten Sie, dass für verwendet für die Erstellung der Concurrency Runtime-Planern, den Wert mithilfe von Planerrichtlinien `0` ist ungültig.<br /><br /> Standardwert:`1`|  
+|`SchedulerKind`|Der Typ der Threads, die der Planer für zugrunde liegende Ausführungskontexte verwenden wird. Weitere Informationen finden Sie unter [SchedulerType](#schedulertype).<br /><br /> Gültige Werte: ein Mitglied der `SchedulerType` -Enumeration, z. B.`ThreadScheduler`<br /><br /> Standardwert: `ThreadScheduler`. Dies führt zur Win32-Threads auf allen Betriebssystemen.|  
 |`SchedulingProtocol`|Beschreibt, welcher Planungsalgorithmus vom Planer verwendet wird. Weitere Informationen finden Sie unter [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Gültige Werte: ein Mitglied der `SchedulingProtocolType` Enumeration, entweder `EnhanceScheduleGroupLocality` oder`EnhanceForwardProgress`<br /><br /> Standardwert:`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|Vorläufige Anzahl virtueller Prozessoren pro Hardwarethread. Der Zielüberzeichnungsfaktor erhöht werden kann der Ressourcen-Manager, bei Bedarf, um erfüllen `MaxConcurrency` mit den Hardwarethreads auf dem Computer.<br /><br /> Gültige Werte: Positive ganze Zahlen<br /><br /> Standardwert:`1`|  
+|`TargetOversubscriptionFactor`|Vorläufige Anzahl virtueller Prozessoren pro Hardwarethread. Faktor für die Ziel-Überzeichnung kann vom Ressourcen-Manager, bei Bedarf, um erfüllen erhöht werden `MaxConcurrency` mit dem Zuordnen von Hardwarethreads auf dem Computer.<br /><br /> Gültige Werte: Positive ganze Zahlen<br /><br /> Standardwert:`1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Anforderungen  
@@ -242,8 +242,8 @@ enum SchedulingProtocolType;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`EnhanceForwardProgress`|Der Planer bevorzugt Round-Robin-zwischen Planungsgruppen nach der Ausführung jeder Aufgabe. Entsperrt Kontexte sind in der Regel in einer First in, First Out (FIFO) Weise geplant. Virtuelle Prozessoren zwischengespeichert entsperrt Kontexten nicht.|  
-|`EnhanceScheduleGroupLocality`|Der Planer bevorzugt weiterhin auf Aufgaben in der aktuellen Planungsgruppe bevor Sie zu einer anderen Planungsgruppe verschieben. Entsperrt Kontexte pro virtuellem Prozessor zwischengespeichert werden und in der Regel in einer Last in, First Out (LIFO) Weise geplant sind, durch den virtuellen Prozessor, der Blockierung aufgehoben hat.|  
+|`EnhanceForwardProgress`|Der Planer bevorzugt Roundrobin-Verfahren über Planungsgruppen nach der Ausführung von jeder Aufgabe. Entsperrt Kontexte sind in der Regel in einer First in First Out (FIFO)-Weise geplant. Virtuelle Prozessoren Zwischenspeichern entsperrt Kontexten nicht.|  
+|`EnhanceScheduleGroupLocality`|Der Planer bevorzugt weiterhin auf Vorgänge innerhalb der aktuellen Planungsgruppe ausgeführt werden soll, vor dem Wechsel in einer anderen Planungsgruppe. Entsperrt Kontexten pro virtueller Prozessor zwischengespeichert werden und in der Regel in einer Weise der Last in First Out (LIFO) geplant sind, durch den virtuellen Prozessor, der Blockierung aufgehoben hat.|  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** concrt.h hinzu  
@@ -258,12 +258,12 @@ enum SwitchingProxyState;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`Blocking`|Gibt an, dass der aufrufende Thread kooperativ blockiert und sollte ausschließlich im Besitz des Aufrufers erst später erneut ausführen und andere Aktionen durchführt.|  
-|`Idle`|Gibt an, dass der aufrufende Thread nicht mehr vom Planer benötigt wird und der Ressourcen-Manager zurückgegeben wird. Der Kontext, der weitergeleitet wurde, ist nicht mehr vom Ressourcen-Manager genutzt werden können.|  
-|`Nesting`|Gibt an, dass der aufrufende Thread einen untergeordneten Planer schachtelt und Anfügen an einen anderen Planer vom Aufrufer erforderlich ist.|  
+|`Blocking`|Gibt an, dass der aufrufende Thread kooperativ blockiert und sollte ausschließlich im Besitz des Aufrufers erst danach erneut ausführen und andere Aktion ausgeführt.|  
+|`Idle`|Gibt an, dass der aufrufende Thread nicht mehr werden vom Zeitplanungsmodul benötigt und zum Ressourcen-Manager zurückgegeben wird. Der Kontext, der weitergeleitet wurde ist nicht mehr vom Ressourcen-Manager genutzt werden können.|  
+|`Nesting`|Gibt an, dass der aufrufende Thread einen untergeordneten Planer schachteln ist und das Anfügen an einen anderen Planer vom Aufrufer erforderlich ist.|  
 
 ### <a name="remarks"></a>Hinweise  
- Ein Parameter vom Typ `SwitchingProxyState` wird an die Methode übergebenen `IThreadProxy::SwitchTo` der Ressourcen-Manager anweisen, wie den Threadproxy behandelt, die den Aufruf ausgeführt hat.  
+ Einen Parameter vom Typ `SwitchingProxyState` an die Methode übergeben `IThreadProxy::SwitchTo` der Ressourcen-Manager angewiesen, wie den Threadproxy behandelt werden sollen, die den Aufruf ausgeführt hat.  
   
  Weitere Informationen zur Verwendung dieses Typs finden Sie unter [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto).  
   
@@ -302,4 +302,3 @@ enum WinRTInitializationType;
 
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

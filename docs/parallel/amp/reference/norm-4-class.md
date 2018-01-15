@@ -279,11 +279,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 788f9ebe23e02a2ba14be534063f4934d6f5040f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd224633ae41fcdfdae09f4fe2f7de97e0b3836
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm4-class"></a>norm_4-Klasse
 Stellt einen kurzen Vektor aus vier normalen Zahlen dar.  
@@ -294,7 +295,7 @@ Stellt einen kurzen Vektor aus vier normalen Zahlen dar.
 class norm_4;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -464,7 +465,7 @@ class norm_4;
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#norm_4__size)||  
   

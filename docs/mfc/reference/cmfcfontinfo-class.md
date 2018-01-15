@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27d3a1fc08dea41add59b19ec42d4b18db940648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0ea0572667ef45264fd52934cd2d4ee750a6d4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo-Klasse
 Die `CMFCFontInfo` Klasse beschreibt den Namen und andere Attribute einer Schriftart.  
@@ -44,7 +45,7 @@ Die `CMFCFontInfo` Klasse beschreibt den Namen und andere Attribute einer Schrif
 class CMFCFontInfo : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -60,7 +61,7 @@ class CMFCFontInfo : public CObject
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Ein Wert, der angibt, den Zeichensatz (Skript), Schriftart zugeordnet.|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Ein Wert, der die Zeichenbreite und Familie der Schriftart angibt.|  

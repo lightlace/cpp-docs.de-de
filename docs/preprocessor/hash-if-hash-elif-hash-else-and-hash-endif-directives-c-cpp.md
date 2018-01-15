@@ -1,5 +1,5 @@
 ---
-title: '#<a name="if-elif-else-and-endif-directives-cc--microsoft-docs"></a>IF, #elif-, #else- und #endif-Direktiven (C/C++) | Microsoft Docs'
+title: '#IF, #elif-, #else- und #endif-Direktiven (C/C++) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,11 +32,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01dc273b4c878db4ba48ce38bf69919eb2bfae3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8acd8444295175e6aa9fe329e7851456fcd5f7c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
 Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die Kompilierung von Teilen einer Quelldatei. Wenn der Ausdruck, den Sie schreiben (nach `#if`), einen Wert ungleich 0 (null) aufweist, wird die Zeilengruppe, die unmittelbar auf die `#if`-Direktive folgt, in der Übersetzungseinheit beibehalten.  

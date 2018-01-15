@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1596e4c890142947af74f8a117222705082d553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString-Formatierung und Meldungsfeldanzeige
 Eine Reihe von Funktionen werden bereitgestellt, um formatieren und Analysieren von `CString` Objekte. Wenn Sie bearbeiten müssen, verwenden Sie diese Funktionen können `CString` Objekte, aber sie sind besonders nützlich für das Formatieren von Zeichenfolgen, die in der MessageBox-Text angezeigt werden.  

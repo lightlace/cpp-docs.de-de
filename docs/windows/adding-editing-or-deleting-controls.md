@@ -1,53 +1,57 @@
 ---
-title: "Adding, Editing, or Deleting Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, creating controls"
-  - "dialog box controls, adding to dialog boxes"
-  - "controls [C++], adding to dialog boxes"
+title: "Hinzufügen, bearbeiten oder Löschen von Steuerelementen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, creating controls
+- dialog box controls, adding to dialog boxes
+- controls [C++], adding to dialog boxes
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f54904a0be2fdb45e17637dbacdb4d8f81dc3dc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Adding, Editing, or Deleting Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mithilfe des Dialog\-Editors können Sie Steuerelemente in einem Dialogfeld hinzufügen, vergrößern, verkleinern, bearbeiten und löschen.  Sie können auch die Eigenschaften eines Steuerelements bearbeiten, z. B. seine ID, oder festlegen, ob es zur Laufzeit anfangs sichtbar ist oder nicht.  
+# <a name="adding-editing-or-deleting-controls"></a>Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
+Mit dem Dialog-Editor, können Sie hinzufügen, ändern Sie die Größe, bearbeiten und Löschen von Steuerelementen in Dialogfeldern. Sie können auch die Eigenschaften eines Steuerelements, z. B. seine ID, bearbeiten oder ob es sichtbare zur Laufzeit handelt.  
   
- Das Kontextmenü im Dialog\-Editor ermöglicht es Ihnen, einem Dialogfeld schnell und einfach registrierte ActiveX\-Steuerelemente hinzuzufügen. Außerdem können Sie der Toolbox ActiveX\-Steuerelemente hinzufügen, um schnell darauf zuzugreifen \(weitere Informationen finden Sie unter [Dialogfeld "Toolbox anpassen"](assetId:///bd07835f-18a8-433e-bccc-7141f65263bb)\).  
+ Mithilfe des Kontextmenüs der Dialog-Editor zum schnellen Hinzufügen von registrierten ActiveX-Steuerelementen zu einem Dialogfeld, und Sie können ActiveX-Steuerelemente zur Toolbox für den Schnellzugriff hinzufügen (Weitere Informationen finden Sie unter [Dialogfeld "Toolbox" anpassen](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)).  
   
--   [Hinzufügen eines Steuerelements zu einem Dialogfeld](../mfc/adding-a-control-to-a-dialog-box.md)  
+-   [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)  
   
--   [Ändern der Steuerelementgröße beim Hinzufügen](../mfc/sizing-a-control-while-you-add-it.md)  
+-   [Ändern der Steuerelementgröße beim Hinzufügen](sizing-a-control-while-you-add-it.md)  
   
--   [Hinzufügen mehrerer Steuerelemente](../mfc/adding-multiple-controls.md)  
+-   [Fügen Sie mehrerer Steuerelemente hinzu](adding-multiple-controls.md)  
   
--   [Hinzufügen von ActiveX\-Steuerelementen zu einem Dialogfeld](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)  
+-   [Fügen Sie ein ActiveX-Steuerelement in einem Dialogfeld](viewing-and-adding-activex-controls-to-a-dialog-box.md)  
   
--   [Bearbeiten von Steuerelementeigenschaften](../mfc/editing-control-properties.md)  
+-   [Bearbeiten Sie die Eigenschaften eines Steuerelements oder Steuerelemente](editing-control-properties.md)  
   
--   [Löschen eines Steuerelements](../mfc/deleting-a-control.md)  
+-   [Löschen eines Steuerelements](deleting-a-control.md)  
   
--   [Ein\- oder Ausblenden der Symbolleiste des Dialog\-Editors](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md)  
+-   [Ein- oder Ausblenden der Fenster "Toolbox"](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Dialogfeld\-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](controls-in-dialog-boxes.md)   
+ [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](adding-event-handlers-for-dialog-box-controls.md)   
+ [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+

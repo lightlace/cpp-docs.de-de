@@ -1,11 +1,10 @@
 ---
-title: SchedulerPolicy-Klasse | Microsoft-Dokumentation
+title: SchedulerPolicy-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,19 @@ f1_keywords:
 - concrt/concurrency::SchedulerPolicy::GetPolicyValue
 - concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
 - concrt/concurrency::SchedulerPolicy::SetPolicyValue
-dev_langs:
-- C++
-helpviewer_keywords:
-- SchedulerPolicy class
+dev_langs: C++
+helpviewer_keywords: SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy-Klasse
 Die `SchedulerPolicy`-Klasse enthält einen Satz von Schlüssel-Wert-Paaren. Einen für jedes Richtlinienelement, von dem das Verhalten einer Planerinstanz gesteuert wird.  
@@ -54,7 +37,7 @@ Die `SchedulerPolicy`-Klasse enthält einen Satz von Schlüssel-Wert-Paaren. Ein
 class SchedulerPolicy;
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -78,7 +61,7 @@ class SchedulerPolicy;
 |[operator=](#operator_eq)|Weist die Planerrichtlinie von einer anderen Planerrichtlinie zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den Richtlinien, die mit gesteuert werden können die `SchedulerPolicy` Klasse, finden Sie unter [PolicyElementKey](concurrency-namespace-enums.md).  
+ Weitere Informationen über kontrolliert werden können Richtlinien für die `SchedulerPolicy` Klasse, finden Sie unter [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SchedulerPolicy`  
@@ -98,10 +81,10 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
   
 ### <a name="parameters"></a>Parameter  
  `key`  
- Der zum Abrufen eines Werts für die Richtlinienschlüssel.  
+ Der Richtlinienschlüssel zum Abrufen eines Werts für.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn durch der Schlüssel angegeben der `key` Parameter unterstützt, wandeln Sie der Richtlinienwert für den Schlüssel zu einer `unsigned int`.  
+ Wenn der Schlüssel, wird angegeben die `key` Parameter unterstützt wird, der Richtlinienwert für den Schlüssel umgewandelt ein `unsigned int`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Methode löst [Invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) für einen ungültigen Richtlinienschlüssel.  
@@ -116,7 +99,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
   
 ### <a name="parameters"></a>Parameter  
  `_RhsPolicy`  
- Die Richtlinie zu dieser Richtlinie zuzuweisen.  
+ Die Richtlinie für diese Richtlinie zuweisen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die Planerrichtlinie.  
@@ -179,7 +162,7 @@ void SetConcurrencyLimits(
  Der Wert für die `MaxConcurrency` Richtlinienschlüssel.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Methode löst [Invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) , wenn der Wert für angegeben der `MinConcurrency` Richtlinie ist größer als der angegebene für die `MaxConcurrency` Richtlinie.  
+ Die Methode löst [Invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) Wenn der angegebene Wert für die `MinConcurrency` Richtlinie ist größer als der angegebene für die `MaxConcurrency` Richtlinie.  
   
  Die Methode kann auch Auslösen [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) für andere ungültige Werte.  
   
@@ -195,20 +178,20 @@ unsigned int SetPolicyValue(
   
 ### <a name="parameters"></a>Parameter  
  `key`  
- Der Richtlinienschlüssel, einen Wert für festzulegen.  
+ Den Richtlinienschlüssel, einen Wert für festzulegen.  
   
  `value`  
- Der Wert für die Richtlinie auf festlegen.  
+ Der Wert auf den Richtlinienschlüssel festgelegt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Schlüssel von angegeben der `key` Parameter unterstützt, wenn der alte Richtlinienwert für den Schlüssel zu einer `unsigned int`.  
+ Wenn der Schlüssel, wird angegeben die `key` Parameter unterstützt wird, der alten Richtlinienwert für den Schlüssel umgewandelt ein `unsigned int`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Methode löst [Invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) für einen ungültigen Richtlinienschlüssel oder einen beliebigen Richtlinienschlüssel, deren Wert nicht, indem festgelegt werden, die `SetPolicyValue` Methode.  
+ Die Methode löst [Invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) für einen ungültigen Richtlinienschlüssel oder jeder Richtlinienschlüssel, dessen Wert kann nicht festgelegt werden, indem Sie, die `SetPolicyValue` Methode.  
   
- Die Methode löst [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) für ein Wert, der für den angegebenen Schlüssel nicht unterstützt wird die `key` Parameter.  
+ Die Methode löst [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) für ein Wert, der für den Schlüssel gemäß nicht unterstützt wird die `key` Parameter.  
   
- Hinweis, der diese Methode nicht zulässig ist, Festlegen der `MinConcurrency` oder `MaxConcurrency` Richtlinien. Um diese Werte festzulegen, verwenden Sie die [SetConcurrencyLimits](#setconcurrencylimits) Methode.  
+ Beachten Sie, die diese Methode darf nicht festgelegt die `MinConcurrency` oder `MaxConcurrency` Richtlinien. Um diese Werte festzulegen, verwenden die [SetConcurrencyLimits](#setconcurrencylimits) Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
@@ -216,7 +199,6 @@ unsigned int SetPolicyValue(
  [CurrentScheduler-Klasse](currentscheduler-class.md)   
  [Scheduler-Klasse](scheduler-class.md)   
  [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
 
 
 

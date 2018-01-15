@@ -1,32 +1,33 @@
 ---
-title: "InterfaceListHelper-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceListHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceListHelper-Struktur"
+title: InterfaceListHelper-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceListHelper
+dev_langs: C++
+helpviewer_keywords: InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 241613f94431903c7d9e3957cece46844dc67ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceListHelper-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="interfacelisthelper-structure"></a>InterfaceListHelper-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -49,57 +50,57 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T0`  
- Vorlagenparameter 0, der erforderlich ist.  
+ Vorlagenparameter 0 (null) ist erforderlich.  
   
  `T1`  
- Vorlagenparameter 1, standardmäßig nicht angegeben ist.  
+ Template-Parameter 1, die standardmäßig nicht angegeben wird.  
   
  `T2`  
- Vorlagenparameter 2, standardmäßig nicht angegeben ist. Der dritte Vorlagenparameter.  
+ Template-Parameter 2, die standardmäßig nicht angegeben wird. Der dritte Vorlagenparameter.  
   
  `T3`  
- Vorlagenparameter 3, standardmäßig nicht angegeben ist.  
+ Template-Parameter 3, die standardmäßig nicht angegeben wird.  
   
  `T4`  
- Vorlagenparameter 4, standardmäßig nicht angegeben ist.  
+ Vorlagenparameter 4, die standardmäßig nicht angegeben wird.  
   
  `T5`  
- Vorlagenparameter 5, standardmäßig nicht angegeben ist.  
+ Vorlagenparameter 5, die standardmäßig nicht angegeben wird.  
   
  `T6`  
- Vorlagenparameter 6, standardmäßig nicht angegeben ist.  
+ Vorlagenparameter 6, die standardmäßig nicht angegeben wird.  
   
  `T7`  
- Vorlagenparameter 7, standardmäßig nicht angegeben ist.  
+ Vorlagenparameter 7, die standardmäßig nicht angegeben wird.  
   
  `T8`  
- Vorlagenparameter 8, standardmäßig nicht angegeben ist.  
+ Vorlagenparameter 8, die standardmäßig nicht angegeben wird.  
   
  `T9`  
- Vorlagenparameter 9, standardmäßig nicht angegeben ist.  
+ Vorlagenparameter 9, die standardmäßig nicht angegeben wird.  
   
-## Hinweise  
- Erstellt einen InterfaceList\-Typ, indem die angegebenen Vorlagenparameterargumente rekursiv anwenden.  
+## <a name="remarks"></a>Hinweise  
+ Erstellt einen InterfaceList-Typ durch Anwenden der angegebenen Parameter Vorlagenargumente rekursiv.  
   
- Die InterfaceListHelper\-Vorlage Vorlagenparameter verwendet `T0`, um den ersten Datenmember in einer InterfaceList\-Struktur definieren und dann wird rekursiv die InterfaceListHelper\-Vorlage allen verbleibenden Vorlagenparametern.  InterfaceListHelper stoppt, wenn keine verbleibenden Vorlagenparameter gibt.  
+ InterfaceListHelper-Vorlage verwendet Vorlagenparameter `T0` definieren die ersten Daten Member in einem InterfaceList-Struktur, und klicken Sie dann rekursiv die InterfaceListHelper-Vorlage auf alle verbleibenden Vorlagenparameter angewendet. InterfaceListHelper wird beendet, wenn keine verbleibenden Vorlagenparameter vorhanden sind.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`TypeT`|Ein Synonym für den InterfaceList\-Typ.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`TypeT`|Ein Synonym für den InterfaceList-Typ.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `InterfaceListHelper`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,44 +1,50 @@
 ---
-title: "Gewusst wie: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Paralleler Suchalgorithmus, Schreiben [Concurrency Runtime]"
-  - "Schreiben eines parallelen Suchalgorithmus [Concurrency Runtime]"
+title: 'Vorgehensweise: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- writing a parallel search algorithm [Concurrency Runtime]
+- parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 27c6b4a216609c788978e4b857b5996587f899f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Gewusst wie: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife
+In diesem Beispiel wird gezeigt, wie auf den Abbruch zu verwenden, um eine grundlegende paralleler Suchalgorithmus implementiert wird.  
+  
+## <a name="example"></a>Beispiel  
 
-Dieses Beispiel zeigt, wie Abbrüche verwendet, um einen einfachen Algorithmus paralleler Suchalgorithmus implementiert wird.  
+ Im folgenden Beispiel wird Abbruch, nach einem Element in einem Array gesucht werden soll. Die `parallel_find_any` Funktion verwendet die [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus und die [Concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) Funktion, für die Position gesucht werden soll, die den angegebenen Wert enthält. Wenn den Wert von die parallele Schleife gefunden wird, ruft er die [Concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) Methode, um zukünftige Arbeitsvorgänge abzubrechen.  
+
+
   
-## Beispiel  
- Das folgende Beispiel verwendet das Abbrechen, um in einem Array nach einem Element zu suchen.  Die Funktion `parallel_find_any` wird der Algorithmus [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) und die [concurrency::run\_with\_cancellation\_token](../Topic/run_with_cancellation_token%20Function.md)\-Funktion, die die Position zu suchen, die den angegebenen Wert enthält.  Wenn von der parallelen Schleife den Wert ermittelt, ruft sie die [concurrency::cancellation\_token\_source::cancel](../Topic/cancellation_token_source::cancel%20Method.md)\-Methode auf, um die weitere Verarbeitung abzubrechen.  
+ [!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]  
   
- [!CODE [concrt-parallel-array-search#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-array-search#1)]  
+
+ Die [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus fungiert gleichzeitig. Aus diesem Grund ist es nicht die Vorgänge in einer vordefinierten Reihenfolge ausführen. Wenn das Array mehrere Instanzen des Werts enthält, kann das Ergebnis eines seiner Positionen sein.  
+
   
- Der [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) \- Algorithmus handelt gleichzeitig.  Daher führt er die Operationen nicht in einer vorgegebenen Reihenfolge aus.  Wenn das Array mehrere Instanzen des Werts enthält, kann das Ergebnis eine beliebige seiner Positionen sein.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-array-search.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
-## Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio\-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-array-search.cpp` ein, und dann folgenden Befehl in einem Visual Studio\-Eingabeaufforderung ausgeführt.  
+ **/ EHsc / CL.exe Parallel-Array-search.cpp**  
   
- **cl.exe \/EHsc parallel\-array\-search.cpp**  
-  
-## Siehe auch  
- [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Abbruch in der PPL](cancellation-in-the-ppl.md)   
  [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)   
- [parallel\_for\-Funktion](../Topic/parallel_for%20Function.md)   
- [cancellation\_token\_source\-Klasse](../../parallel/concrt/reference/cancellation-token-source-class.md)
+ [Parallel_for-Funktion](reference/concurrency-namespace-functions.md#parallel_for)   
+ [cancellation_token_source-Klasse](../../parallel/concrt/reference/cancellation-token-source-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d2a3f42522ecceb09261de7437446f0d5be2d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-implementing-server-documents"></a>Server: Implementieren von Serverdokumenten
 Dieser Artikel beschreibt die Schritte, die Sie ausführen müssen, um erfolgreich Serverdokument implementieren, wenn Sie nicht die OLE-Serveroption im Anwendungs-Assistenten angegeben haben.  

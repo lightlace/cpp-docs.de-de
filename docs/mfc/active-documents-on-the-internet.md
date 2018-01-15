@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fdedaf9b100ae85352b1514f96fe7e229e4f9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents-on-the-internet"></a>Active Documents für das Internet
 Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte. Aktive Dokumente möglicherweise mehrseitigen und werden in den gesamten Clientbereich angezeigt. Sie herkömmliche Menü-Aushandlung und direkte als auch in einem geöffneten Fenster in der Serveranwendung bearbeitet werden können. Anstatt als kleine Rechteck von einem schraffierten Rahmen umgeben sind aktive Dokumente vollständigen Frame und immer direkt aktiv.  
@@ -53,7 +54,7 @@ Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte
   
 |Ein Dokument...|Implementiert diese Schnittstellen|  
 |-------------------------|---------------------------------|  
-|Verwendet Verbunddateien als Speichermechanismus.|`IPersistStorage`.|  
+|Verwendet Verbunddateien als Speichermechanismus.|`IPersistStorage`|  
 |Unterstützt die grundlegenden Einbetten von Funktionen für aktive Dokumente, einschließlich aus Datei erstellen.|`IPersistFile`, `IOleObject` und `IDataObject`.|  
 |Unterstützt direkte Aktivierung.|`IOleInPlaceObject`und `IOleInPlaceActiveObject` (unter Verwendung des Containers `IOleInPlaceSite` und **IOleInPlaceFrame** Schnittstellen).|  
 |Unterstützt das aktive Dokument-Erweiterungen, die diese neuen Schnittstellen einschließen. Einige Schnittstellen sind optional.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` und `IPrint`.|  

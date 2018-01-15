@@ -1,32 +1,31 @@
 ---
-title: "critical | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Critical"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "critical OpenMP directive"
+title: kritische | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Critical
+dev_langs: C++
+helpviewer_keywords: critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1df2a70c53272415789ef381874fe4bc46327381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# critical
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass Code nur auf einem Thread ausgeführt wird, einmal auf.  
+# <a name="critical"></a>critical
+Gibt an, dass der Code wird nur in einem Thread zu einem Zeitpunkt ausgeführt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma omp critical [(name)]  
@@ -35,18 +34,18 @@ Gibt an, dass Code nur auf einem Thread ausgeführt wird, einmal auf.
 }  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
- \(`name`\) \(optional\)  
- Ein Name, der im kritischen Code zu identifizieren.  Beachten Sie, dass der Name in Klammern eingeschlossen werden muss.  
+ (`name`) (optional)  
+ Ein Name zum Identifizieren der kritischen Code. Beachten Sie, dass dieser Name in Klammern eingeschlossen werden muss.  
   
-## Hinweise  
- Die **Kritisch**\-Direktiven unterstützen keine OpenMP\-Klauseln.  
+## <a name="remarks"></a>Hinweise  
+ Die **kritische** Richtlinie unterstützt kein OpenMP-Klauseln.  
   
- Weitere Informationen finden Sie unter [2.6.2 critical Construct](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Weitere Informationen finden Sie unter [2.6.2 kritische erstellen](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_critical.cpp  
@@ -90,16 +89,19 @@ int main()
 }  
 ```  
   
-  **41**  
-**18467**  
-**6334**  
-**26500**  
-**19169**  
-**15724**  
-**11478**  
-**29358**  
-**26962**  
-**24464**  
-**29358 \= Maximum**   
-## Siehe auch  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+41  
+18467  
+6334  
+26500  
+19169  
+15724  
+11478  
+29358  
+26962  
+24464  
+max = 29358  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

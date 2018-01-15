@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 290b48c5417aa5511b34f2e4ec2e0d4b7358b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvt-class"></a>codecvt-Klasse
 Eine Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann. Sie ist in der Lage, Konvertierungen zwischen einer Sequenz von Werten zu steuern, mit denen Zeichen innerhalb des Programms codiert werden, und einer Sequenz von Werten, mit denen Zeichen außerhalb des Programms codiert werden.  
@@ -112,7 +113,7 @@ class codecvt : public locale::facet, codecvt_base;
 |-|-|  
 |[codecvt](#codecvt)|Der Konstruktor für Objekte der `codecvt`-Klasse, die als Gebietsschemafacet zur Behandlung von Konvertierungen dient.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -605,7 +606,7 @@ typedef CharType intern_type;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
+ Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.  
   
 ##  <a name="length"></a> codecvt::length  
  Bestimmt, wie viele **Byte**s einer bestimmten Sequenz externer **Byte**s nicht mehr als eine bestimmte Anzahl von **CharType**-Objekten ergeben, und gibt die Anzahl dieser **Byte**s zurück.  

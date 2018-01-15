@@ -171,11 +171,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a19688b10cb0e3b7966044c725cebb236ca30660
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f1a436ab6bfbc5e21e43267d3992310ed6f6a20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager-Klasse
 Implementiert die Kernfunktionen, die das Andocklayout in einem Hauptrahmenfenster steuern.  
@@ -186,7 +187,7 @@ Implementiert die Kernfunktionen, die das Andocklayout in einem Hauptrahmenfenst
 class CDockingManager : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -267,7 +268,7 @@ class CDockingManager : public CObject
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Gibt an, ob es sich bei Dock-Manager Bereiche im Modus für OLE-Container ausgeblendet.|  
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Gibt die globalen Andockmodus an.|  

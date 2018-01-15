@@ -34,11 +34,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ab949e97c6fc19d4443c511441870e3d4729c1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fccae4629bc4c1c9b6af71f254c28311210ec0e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freedbg"></a>_free_dbg
 Gibt einen Speicherblock im Heap frei (nur Debugversion).  
@@ -60,7 +61,7 @@ void _free_dbg(
  Typ des belegten, freizugebenden Speicherblocks: `_CLIENT_BLOCK`, `_NORMAL_BLOCK` oder `_IGNORE_BLOCK`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion `_free_dbg` ist eine Debugversion der Funktion [free](../../c-runtime-library/reference/free.md). Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder Aufruf von `_free_dbg` zu einem Aufruf von `free` reduziert. `free` und `_free_dbg` geben einen Speicherblock im Basisheap frei, jedoch hat `_free_dbg` zwei Debugfunktionen: die Möglichkeit, freigegebene Blöcke in der verknüpften Liste des Heaps beizubehalten, um Speichermangel zu simulieren, und einen Blocktypparameter zum Freigeben bestimmter Belegungstypen.  
+ Die Funktion `_free_dbg` ist eine Debugversion der Funktion [free](../../c-runtime-library/reference/free.md). Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder `_free_dbg`-Aufruf zu einem `free`-Aufruf reduziert. `free` und `_free_dbg` geben einen Speicherblock im Basisheap frei, jedoch hat `_free_dbg` zwei Debugfunktionen: die Möglichkeit, freigegebene Blöcke in der verknüpften Liste des Heaps beizubehalten, um Speichermangel zu simulieren, und einen Blocktypparameter zum Freigeben bestimmter Belegungstypen.  
   
  `_free_dbg` führt eine Gültigkeitsüberprüfung für alle angegebenen Dateien und Blockspeicherorte aus, bevor eine Freigabe erfolgt. Die Anwendung stellt diese Informationen wahrscheinlich nicht bereit. Wenn ein Speicherblock freigegeben wird, überprüft der Debugheapmanager automatisch die Pufferintegrität auf beiden Seiten des Benutzerteils und erstellt einen Fehlerbericht, falls über den Puffer hinaus geschrieben wurde. Wenn das Bitfeld `_CRTDBG_DELAY_FREE_MEM_DF` des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)-Flags festgelegt ist, wird der freigegebene Block mit dem Wert „0xDD“ gefüllt. Außerdem wird dem Block der `_FREE_BLOCK`-Blocktyp zugewiesen und in der verknüpften Liste des Heaps im Speicherblock beibehalten.  
   
@@ -70,7 +71,7 @@ void _free_dbg(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_free_dbg`|\<crtdbg.h>|  
   

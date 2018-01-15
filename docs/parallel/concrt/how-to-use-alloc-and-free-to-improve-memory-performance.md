@@ -1,64 +1,72 @@
 ---
-title: "Gewusst wie: Verbessern der Arbeitsspeicherleistung mithilfe von Alloc und Free | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Alloc und Free, Verwenden [Concurrency Runtime]"
-  - "Verwenden von Alloc und Free [Concurrency Runtime]"
+title: 'Vorgehensweise: Verwenden von Alloc und Free Verbessern der Arbeitsspeicherleistung | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Alloc and Free, using [Concurrency Runtime]
+- Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 984e39cbec3016a3baa747cfa382220a04db1bbb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Verbessern der Arbeitsspeicherleistung mithilfe von Alloc und Free
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Gewusst wie: Verbessern der Arbeitsspeicherleistung mithilfe von Alloc und Free
 
-In diesem Dokument wird gezeigt, wie sich mit der [concurrency::Alloc](../Topic/Alloc%20Function.md)\-Funktion und der [concurrency::Free](../Topic/Free%20Function.md)\-Funktion die Arbeitsspeicherleistung steigern lässt.  In ihm wird die Zeit verglichen, die erforderlich ist, um die Elemente eines Arrays parallel für drei verschiedene Typen umzukehren, für die jeweils die Operatoren `new` und `delete` angegeben sind.  
+Dieses Dokument zeigt, wie die [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) und [Free](reference/concurrency-namespace-functions.md#free) Funktionen zur Verbesserung der Leistung des Speichers. In ihm wird die Zeit verglichen, die erforderlich ist, um die Elemente eines Arrays parallel für drei verschiedene Typen umzukehren, für die jeweils die Operatoren `new` und `delete` angegeben sind.  
+
   
- Die Funktionen `Alloc` und `Free` sind besonders dann nützlich, wenn mehrere Threads häufig sowohl `Alloc` als auch `Free` aufrufen.  Die Laufzeit besitzt für jeden Thread einen separaten Arbeitsspeichercache. Aus diesem Grund verwaltet die Laufzeit Arbeitsspeicher, ohne dabei Sperren oder Arbeitsspeicherbarrieren zu verwenden.  
+ Die Funktionen `Alloc` und `Free` sind besonders dann nützlich, wenn mehrere Threads häufig sowohl `Alloc` als auch `Free` aufrufen. Die Laufzeit besitzt für jeden Thread einen separaten Arbeitsspeichercache. Aus diesem Grund verwaltet die Laufzeit Arbeitsspeicher, ohne dabei Sperren oder Arbeitsspeicherbarrieren zu verwenden.  
   
-## Beispiel  
- Das folgende Beispiel zeigt drei Typen, die jeweils über die Operatoren `new` und `delete` verfügen.  Von der `new_delete`\-Klasse werden die globalen Operatoren `new` und `delete` verwendet, von der `malloc_free`\-Klasse die C\-Laufzeitfunktionen [malloc](../../c-runtime-library/reference/malloc.md) und [free](../../c-runtime-library/reference/free.md) sowie von der `Alloc_Free`\-Klasse die Concurrency Runtime\-Funktionen `Alloc` und `Free`.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt drei Typen, die jeweils über die Operatoren `new` und `delete` verfügen. Die `new_delete` Klasse verwendet die globale `new` und `delete` Operatoren, die `malloc_free` Klasse verwendet die C-Laufzeit ["malloc"](../../c-runtime-library/reference/malloc.md) und [freien](../../c-runtime-library/reference/free.md) Funktionen, und die `Alloc_Free` Klasse verwendet die Concurrency Runtime `Alloc` und `Free` Funktionen.  
   
- [!CODE [concrt-allocators#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#1)]  
+ [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]  
   
-## Beispiel  
- Im folgenden Beispiel werden die Funktionen `swap` und `reverse_array` dargestellt.  Die `swap`\-Funktion tauscht den Inhalt des Arrays bei den angegebenen Indizes aus.  Sie weist Speicher vom Heap für die temporäre Variable zu.  Die `reverse_array`\-Funktion erstellt ein großes Array und berechnet die Zeit, die erforderlich ist, um dieses Array mehrmals parallel umzukehren.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel werden die Funktionen `swap` und `reverse_array` dargestellt. Die `swap`-Funktion tauscht den Inhalt des Arrays bei den angegebenen Indizes aus. Sie weist Speicher vom Heap für die temporäre Variable zu. Die `reverse_array`-Funktion erstellt ein großes Array und berechnet die Zeit, die erforderlich ist, um dieses Array mehrmals parallel umzukehren.  
   
- [!CODE [concrt-allocators#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#2)]  
+ [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]  
   
-## Beispiel  
- Im folgenden Beispiel wird die `wmain`\-Funktion angezeigt, mit der man die Zeit berechnet, die erforderlich ist, damit die `reverse_array`\-Funktion auf die Typen `new_delete`, `malloc_free` und `Alloc_Free` reagiert, von denen jeweils ein anderes Speicherbelegungsschema verwendet wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `wmain`-Funktion angezeigt, mit der man die Zeit berechnet, die erforderlich ist, damit die `reverse_array`-Funktion auf die Typen `new_delete`, `malloc_free` und `Alloc_Free` reagiert, von denen jeweils ein anderes Speicherbelegungsschema verwendet wird.  
   
- [!CODE [concrt-allocators#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#3)]  
+ [!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im Folgenden finden Sie das vollständige Beispiel.  
   
- [!CODE [concrt-allocators#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-allocators#4)]  
+ [!code-cpp[concrt-allocators#4](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_4.cpp)]  
   
  In diesem Beispiel wird folgende Beispielausgabe für einen Computer mit vier Prozessoren erzeugt.  
   
-  **Took 2031 ms with new\/delete.**  
-**Took 1672 ms with malloc\/free.**  
-**Took 656 ms with Alloc\/Free.** In diesem Beispiel stellt der Typ, der die Funktionen `Alloc` und `Free` verwendet, die beste Arbeitsspeicherleistung bereit, da die Funktionen `Alloc` und `Free` zum häufigen Zuordnen und Befreien von Speicherblöcken von mehreren Threads optimiert werden.  
+```Output  
+Took 2031 ms with new/delete.  
+Took 1672 ms with malloc/free.  
+Took 656 ms with Alloc/Free.  
+```  
   
-## Kompilieren des Codes  
- Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio\-Projekt ein. Alternativ dazu können Sie ihn auch in eine Datei mit dem Namen `allocators.cpp` einfügen und dann folgenden Befehl in einem Visual Studio\-Eingabeaufforderungsfenster ausführen.  
+ In diesem Beispiel stellt der Typ, der die Funktionen `Alloc` und `Free` verwendet, die beste Arbeitsspeicherleistung bereit, da die Funktionen `Alloc` und `Free` zum häufigen Zuordnen und Befreien von Speicherblöcken von mehreren Threads optimiert werden.  
   
- **cl.exe \/EHsc allocators.cpp**  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `allocators.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
-## Siehe auch  
+ **CL.exe/EHsc / allocators.cpp**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Speicherverwaltungsfunktionen](../../parallel/concrt/memory-management-functions.md)   
- [Alloc\-Funktion](../Topic/Alloc%20Function.md)   
- [Free\-Funktion](../Topic/Free%20Function.md)
+ [Alloc-Funktion](reference/concurrency-namespace-functions.md#alloc)   
+ [Free-Funktion](reference/concurrency-namespace-functions.md#free)
+

@@ -1,47 +1,47 @@
 ---
-title: "Parallel Patterns Library (PPL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Parallel Patterns Library (PPL)"
+title: Parallel Patterns Library (PPL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Parallel Patterns Library (PPL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="parallel-patterns-library-ppl"></a>Parallel Patterns Library (PPL)
 Die Parallel Patterns Library (PPL) stellt ein obligatorisches Programmiermodell bereit, das die Skalierbarkeit und Benutzerfreundlichkeit beim Entwickeln gleichzeitiger Anwendungen fördert. Die PPL baut auf den Planungs- und Ressourcenverwaltungskomponenten der Concurrency Runtime auf. Sie stuft die Abstraktionebene zwischen dem Anwendungscode und dem zugrunde liegenden Threadingmechanismus herauf, indem sie generische, typsichere Algorithmen und Container bereitstellt, die Daten parallel verarbeiten. Mit der PPL können Sie auch Anwendungen entwickeln, die durch die Bereitstellung von Alternativen zum freigegebenen Status skalieren.  
   
  Die PPL bietet die folgenden Funktionen:  
   
-- *Aufgabenparallelität*: ein Mechanismus, der zusätzlich zu den Windows-ThreadPool zur parallelen Ausführung mehrerer Arbeitsaufgaben (Aufgaben)  
+- *Aufgabenparallelität*: ein Mechanismus, zusätzlich zu den Windows-ThreadPool, um unterschiedliche Arbeitselemente (Aufgaben) gleichzeitig auszuführen  
   
-- *Parallele Algorithmen*: generische Algorithmen, die über die Concurrency Runtime fungieren Auflistungen von Daten parallel funktioniert  
+- *Parallele Algorithmen*: generische Algorithmen, der auf Grundlage der Concurrency Runtime fungieren Auflistungen von Daten parallel  
   
 - *Parallele Container und Objekte*: generische Containertypen, die sicheren gleichzeitigen Zugriff auf ihre Elemente bieten  
   
 ## <a name="example"></a>Beispiel  
- Die PPL stellt ein Programmiermodell bereit, das der Standardvorlagenbibliothek (STL) ähnelt. Im folgenden Beispiel werden zahlreiche PPL-Funktionen veranschaulicht. Darin werden mehrere Fibonacci-Zahlen seriell sowie parallel berechnet. Beide Berechnungen werden für eine [Std:: Array](../../standard-library/array-class-stl.md) Objekt. Das Beispiel gibt außerdem die Zeit, die zum Ausführen beider Berechnungen benötigt wird, in der Konsole aus.  
+ Die PPL bietet ein Programmiermodell, das der C++-Standardbibliothek ähnelt. Im folgenden Beispiel werden zahlreiche PPL-Funktionen veranschaulicht. Darin werden mehrere Fibonacci-Zahlen seriell sowie parallel berechnet. Beide Berechnungen werden für eine [Std:: Array](../../standard-library/array-class-stl.md) Objekt. Das Beispiel gibt außerdem die Zeit, die zum Ausführen beider Berechnungen benötigt wird, in der Konsole aus.  
   
- Die serielle Version mithilfe des STL- [Std:: for_each](../Topic/for_each.md) Algorithmus durchläuft das Array und speichert die Ergebnisse in einem [Std:: vector](vector%20Class.md) Objekt. Die parallele Version führt die gleiche Aufgabe, aber die PPL verwendet [Concurrency:: parallel_for_each](../Topic/parallel_for_each%20Function.md) -Algorithmus und speichert die Ergebnisse in einem [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) Objekt. Die `concurrent_vector`-Klasse aktiviert die einzelnen Schleifeniterationen, Elemente gleichzeitig hinzuzufügen, ohne dass erforderlich ist, den Schreibzugriff auf den Container zu synchronisieren.  
+ Die serielle Version verwendet der C++-Standardbibliothek [Std:: for_each](../../standard-library/algorithm-functions.md#for_each) Algorithmus durchläuft das Array und speichert die Ergebnisse in einem [Std:: vector](../../standard-library/vector-class.md) Objekt. Die parallele Version führt die gleiche Aufgabe, verwendet jedoch den PPL- [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) -Algorithmus und speichert die Ergebnisse in einem [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) Objekt. Die `concurrent_vector`-Klasse aktiviert die einzelnen Schleifeniterationen, Elemente gleichzeitig hinzuzufügen, ohne dass erforderlich ist, den Schreibzugriff auf den Container zu synchronisieren.  
   
  Da `parallel_for_each` gleichzeitig ausführt, muss die parallele Version dieses Beispiels das `concurrent_vector`-Objekt so sortieren, dass die gleichen Ergebnisse wie bei der seriellen Version erzielt werden.  
   
  Beachten Sie, dass in dem Beispiel die Fibonacci-Zahlen mithilfe einer naiven Methode berechnet werden; diese Methode veranschaulicht jedoch, wie die Concurrency Runtime die Leistung bei langen Berechnungen verbessern kann.  
   
- [!CODE [concrt-parallel-fibonacci#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-fibonacci#1)]  
+ [!code-cpp[concrt-parallel-fibonacci#1](../../parallel/concrt/codesnippet/cpp/parallel-patterns-library-ppl_1.cpp)]  
   
  Die folgende Beispielausgabe entspricht einem Ergebnis auf einem Computer mit vier Prozessoren.  
   
@@ -64,6 +64,6 @@ fib(42): 267914296
 |[Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Beschreibt die Rolle von Aufgaben und Aufgabengruppen in der PPL.|  
 |[Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)|Beschreibt die Verwendung parallele Algorithmen, wie z. B. `parallel_for` und `parallel_for_each`.|  
 |[Parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md)|Beschreibt die verschiedenen parallelen Container und die Objekte, die von der PPL bereitgestellt werden.|  
-|[Abbruch](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation_in_the_ppl)|Erläutert, wie die von einem parallelen Algorithmus ausgeführte Verarbeitung abgebrochen wird.|  
+|[Abbruch in der PPL](cancellation-in-the-ppl.md)|Erläutert, wie die von einem parallelen Algorithmus ausgeführte Verarbeitung abgebrochen wird.|  
 |[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Beschreibt die Concurrency Runtime, die die parallele Programmierung vereinfacht, und stellt Links zu verwandten Themen bereit.|
 

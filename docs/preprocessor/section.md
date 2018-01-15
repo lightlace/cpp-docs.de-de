@@ -1,48 +1,49 @@
 ---
-title: "section | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section_CPP"
-  - "vc-pragma.section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Pragmas, section"
-  - "section-Pragma"
+title: Abschnitt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section_CPP
+- vc-pragma.section
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, section
+- section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# section
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt einen Abschnitt in einer OBJ\-Datei.  
+# <a name="section"></a>section
+Erstellt einen Abschnitt in einer OBJ-Datei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #pragma section( "section-name" [, attributes] )  
 ```  
   
-## Hinweise  
- Die Ausdrücke *Segment* und *Abschnitt* sind in diesem Thema gleichbedeutend.  
+## <a name="remarks"></a>Hinweise  
+ Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind in diesem Thema gleichbedeutend.  
   
- Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung gültig.  Sie müssen jedoch [\_\_declspec\(allocate\)](../cpp/allocate.md) verwenden, da sonst nichts in den Abschnitt eingefügt wird.  
+ Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung gültig. Sie müssen allerdings verwenden [__declspec(allocate)](../cpp/allocate.md) oder nichts wird im Abschnitt platziert werden.  
   
- *section\-name* ist ein erforderlicher Parameter, der den Namen des Abschnitts darstellt.  Der Name darf keinem Standard\-Abschnittsnamen ähneln.  Eine Liste der Namen, die Sie beim Erstellen eines Abschnitts nicht verwenden sollten, finden Sie unter [\/SECTION](../build/reference/section-specify-section-attributes.md).  
+ *Abschnittsname* ist ein erforderlicher Parameter, die den Namen des Abschnitts. Der Name darf keinem Standard-Abschnittsnamen ähneln. Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
   
- `attributes` ist ein optionaler Parameter, der aus einem oder mehreren durch Kommas getrennten Attributen besteht, die Sie dem Abschnitt zuweisen möchten.  Mögliche `attributes`\-Parameter sind:  
+ `attributes` ist ein optionaler Parameter, der aus einem oder mehreren durch Kommas getrennten Attributen besteht, die Sie dem Abschnitt zuweisen möchten. Mögliche `attributes`-Parameter sind:  
   
  **read**  
  Ermöglicht Lesevorgänge für Daten.  
@@ -50,28 +51,28 @@ Erstellt einen Abschnitt in einer OBJ\-Datei.
  **write**  
  Ermöglicht Schreibvorgänge für Daten.  
   
- **execute**  
+ **Führen Sie**  
  Ermöglicht die Ausführung von Code.  
   
- **shared**  
+ **freigegebene**  
  Gibt den Abschnitt für alle Prozesse frei, die das Image laden.  
   
  **nopage**  
- Markiert den Abschnitt als nicht auslagerbar; nützlich für Win32\-Gerätetreiber.  
+ Markiert den Abschnitt als nicht auslagerbar; nützlich für Win32-Gerätetreiber.  
   
- **nocache**  
- Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32\-Gerätetreiber.  
+ **NoCache**  
+ Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32-Gerätetreiber.  
   
- **discard**  
- Markiert den Abschnitt als entfernbar; nützlich für Win32\-Gerätetreiber.  
+ **verwerfen**  
+ Markiert den Abschnitt als entfernbar; nützlich für Win32-Gerätetreiber.  
   
  **remove**  
- Markiert den Abschnitt als nicht speicherresident; nur virtuelle Gerätetreiber \(V*x*D\).  
+ Markiert den Abschnitt als nicht speicherresident; Virtuelle Gerätetreiber (V*x*D) nur.  
   
- Wenn Sie keine Attribute angeben, enthält der Abschnitt Lese\- und Schreibattribute.  
+ Wenn Sie keine Attribute angeben, enthält der Abschnitt Lese- und Schreibattribute.  
   
-## Beispiel  
- Im folgenden Beispiel identifiziert die erste Anweisung den Abschnitt und seine Attribute.  Die Ganzzahl `j` wird nicht in `mysec` eingefügt, da sie nicht mit `__declspec(allocate)` deklariert wurde. `j` wird in den Datenbereich eingefügt.  Die Ganzzahl `i` wird aufgrund ihres `__declspec(allocate)`\-Speicherklassenattributs in `mysec` eingefügt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel identifiziert die erste Anweisung den Abschnitt und seine Attribute. Die Ganzzahl `j` wird nicht in `mysec` eingefügt, da sie nicht mit `__declspec(allocate)` deklariert wurde. `j` wird in den Datenbereich eingefügt. Die Ganzzahl `i` wird aufgrund ihres `mysec`-Speicherklassenattributs in `__declspec(allocate)` eingefügt.  
   
 ```  
 // pragma_section.cpp  
@@ -84,5 +85,5 @@ int i = 0;
 int main(){}  
 ```  
   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,30 +1,31 @@
 ---
-title: "Beispiel f&#252;r ein C-Multithreadprogramm | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Beispiel C-Multithreadprogramm | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Beispiel f&#252;r ein C-Multithreadprogramm
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bei Bounce.c handelt es sich um ein Beispiel für ein Multithreadprogramm, von dem bei jeder Eingabe des Buchstabens **a** bzw. **A** ein neuer Thread erstellt wird.  Bei jedem Thread bewegt sich ein lachendes Gesicht in einer anderen Farbe über den Bildschirm.  Es können bis zu 32 Threads erstellt werden.  Die reguläre Beendung des Programms erfolgt, wenn der Buchstabe `q` bzw. **Q** eingegeben wird.  Informationen über die Kompilierung und Bindung von Bounce.c finden Sie unter [Kompilieren und Binden von Multithreadprogrammen](../parallel/compiling-and-linking-multithread-programs.md).  
+# <a name="sample-multithread-c-program"></a>Beispiel für ein C-Multithreadprogramm
+Bounce.c ist ein Beispiel für ein Multithreadprogramm, die eine neue erstellt bei jedem thread den Buchstaben **eine** oder **ein** typisiert ist. Bei jedem Thread bewegt sich ein lachendes Gesicht in einer anderen Farbe über den Bildschirm. Es können bis zu 32 Threads erstellt werden. Normale Beendigung des Programms tritt auf, wenn `q` oder **Q** typisiert ist. Informationen zum Kompilieren und Verknüpfen von Bounce.c finden Sie unter [kompilieren und Binden von Multithreadprogrammen](../parallel/compiling-and-linking-multithread-programs.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // sample_multithread_c_program.c  
@@ -211,12 +212,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### Eingabe  
+### <a name="input"></a>Eingabe  
   
 ```  
 a  
 q  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)

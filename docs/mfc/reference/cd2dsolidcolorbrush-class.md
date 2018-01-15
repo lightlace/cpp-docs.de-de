@@ -37,11 +37,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54509981af3222d455a822c99bec506f6a861408
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd1f4d6de1565ae4c457a562d9056c020d44f771
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush-Klasse
 Ein Wrapper für ID2D1SolidColorBrush.  
@@ -52,7 +53,7 @@ Ein Wrapper für ID2D1SolidColorBrush.
 class CD2DSolidColorBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -81,7 +82,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Pinsel Volltonfarbe aus.|  
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Speichert einen Zeiger auf ein ID2D1SolidColorBrush-Objekt.|  

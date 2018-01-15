@@ -1,46 +1,45 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: sortiert (OpenMP-Direktiven) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa5db4e92603519314750886c28db7d097183b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass Code mit einer parallelisierten Schleife z. B. für eine sequenzielle Schleife ausgeführt werden soll.  
+# <a name="ordered-openmp-directives"></a>ordered (OpenMP Directives)
+Gibt diesen Code unter einem parallelisierte Schleife wie eine sequenzielle Schleife ausgeführt werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## Hinweise  
- Die **geordnet**\-Direktive muss innerhalb des dynamischen [for](../../../parallel/openmp/reference/for-openmp.md) eines Wertebereichs oder **für Ähnlichkeit** \- Konstrukt mit einer **geordnet**\-Klausel sein.  
+## <a name="remarks"></a>Hinweise  
+ Die **sortiert** Richtlinie muss innerhalb der dynamischen Wertebereich einer [für](../../../parallel/openmp/reference/for-openmp.md) oder **für parallele** erstellen mit einer **sortiert** Klausel.  
   
- Die **geordnet**\-Direktiven unterstützen keine OpenMP\-Klauseln.  
+ Die **sortiert** Richtlinie unterstützt kein OpenMP-Klauseln.  
   
- Weitere Informationen finden Sie unter [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md).  
+ Weitere Informationen finden Sie unter [2.6.6 ordered-Konstrukt](../../../parallel/openmp/2-6-6-ordered-construct.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +81,17 @@ int main( )
 }  
 ```  
   
-  **Testen Sie die Iteration 1 \(\)**  
-**Testen Sie die Iteration 3 \(\)**  
-**Testen Sie die Iteration 5 \(\)**  
-**Testen Sie die Iteration 7 \(\)**  
-**test2 Iteration 0 \(\)**  
-**test2 Iteration 1 \(\)**  
-**test2 Iteration 2 \(\)**  
-**test2 Iteration 3 \(\)**  
-**test2 Iteration 4 \(\)**   
-## Siehe auch  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

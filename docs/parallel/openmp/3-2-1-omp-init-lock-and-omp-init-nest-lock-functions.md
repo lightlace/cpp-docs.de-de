@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e00772d4abb7fc72827a116d18c30940ade499db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3802822465d6527e4c98a0be6a8c274d767b0f52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock and omp_init_nest_lock-Funktionen
 Diese Funktionen geben die einzige Möglichkeit, eine Sperre zu initialisieren. Jede Funktion initialisiert die Sperre dem Parameter zugeordnet *Sperre* für die Verwendung in nachfolgenden Aufrufen. Es wird folgendes Format verwendet:  

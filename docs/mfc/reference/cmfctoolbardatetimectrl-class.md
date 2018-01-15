@@ -59,11 +59,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60e9427b569c7f3e15b779b0764e0316945880b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4f7bdc964da8df8d8a402ae70b38eec1dbbf436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Datums- und Zeitauswahl-Steuerelement enthält.  
@@ -74,7 +75,7 @@ Eine Symbolleisten-Schaltfläche, die ein Datums- und Zeitauswahl-Steuerelement 
 class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -404,7 +405,7 @@ virtual HBRUSH OnCtlColor(
  Ein Handle für den globalen Pinsel, den das Framework verwendet, um den Hintergrund der Schaltfläche zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die basisklassenimplementierung [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)durch Festlegen des Texts und Hintergrundfarben des Gerätekontexts bereitgestellten auf den globalen Text und Hintergrundfarben, bzw..  
+ Diese Methode überschreibt die basisklassenimplementierung [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)durch Festlegen des Texts und Hintergrundfarben des Gerätekontexts bereitgestellten auf den globalen Text und Hintergrundfarben, bzw.  
   
  Weitere Informationen zu globalen Optionen, die für Ihre Anwendung verfügbar sind, finden Sie unter [AFX_GLOBAL_DATA-Struktur](../../mfc/reference/afx-global-data-structure.md).  
   

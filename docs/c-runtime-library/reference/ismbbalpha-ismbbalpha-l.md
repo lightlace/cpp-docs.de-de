@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2218d7b563666429aeeed07059b4e32640ffefe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 506dafbbb2f1954584af0e6be613ecbcc9292a0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
 Bestimmt, ob ein angegebenes Multibytezeichen ein Alpha ist.  
@@ -73,11 +74,11 @@ int _ismbbalpha_l(
 isalpha || _ismbbkalnum  
 ```  
   
- ist für `c`ungleich 0, bzw. andernfalls 0. `_ismbbalpha` verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige Zeicheneinstellungen. `_ismbbalpha_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema.  
+ ist für `c` ungleich 0, bzw. andernfalls 0. `_ismbbalpha` verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige Zeicheneinstellungen. `_ismbbalpha_l` ist nahezu identisch, verwendet jedoch stattdessen das übergebene Gebietsschema.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ismbbalpha`|\<mbctype.h>|  
 |`_ismbbalpha_l`|\<mbctype.h>|  

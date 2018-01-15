@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactory-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactory-Klasse"
+title: ActivationFactory-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory
+dev_langs: C++
+helpviewer_keywords: ActivationFactory class
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactory-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Aktiviert eine oder mehrere von der Windows Runtime zu aktivierenden Klassen.  
+# <a name="activationfactory-class"></a>ActivationFactory-Klasse
+Ermöglicht, dass eine oder mehrere Klassen durch die Windows-Runtime aktiviert werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -37,9 +38,9 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `I0`  
- Die zeroth Schnittstelle.  
+ Die nullte-Schnittstelle.  
   
  `I1`  
  Die erste Schnittstelle.  
@@ -47,37 +48,37 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
  `I2`  
  Die zweite Schnittstelle.  
   
-## Hinweise  
- ActivationFactory stellt Registrierungsmethoden und \-grundlegende Funktionen für die IActivationFactory\-Schnittstelle bereit.  ActivationFactory können Sie auch, um eine benutzerdefinierte Factoryimplementierung bereitzustellen.  
+## <a name="remarks"></a>Hinweise  
+ ActivationFactory bietet Registrierungsmethoden und grundlegende Funktionalität für die IActivationFactory-Schnittstelle. ActivationFactory ermöglicht Ihnen, eine benutzerdefinierte Factory-Implementierung zu senden.  
   
- Das folgende Codefragment veranschaulicht symbolisch, wie ActivationFactory verwendet.  
+ Das folgende Codefragment veranschaulicht symbolisch ActivationFactory verwenden.  
   
- [!CODE [wrl-microsoft__wrl__activationfactory#1](../CodeSnippet/VS_Snippets_Misc/wrl-microsoft__wrl__activationfactory#1)]  
+ [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- Das folgende Codefragment zeigt, wie die [Implementiert](../windows/implements-structure.md)\-Struktur verwendet, um mehr als drei Schnittstellen\-IDs anzugeben.  
+ Das folgende Codefragment zeigt, wie die [implementiert](../windows/implements-structure.md) Struktur mehr als drei Schnittstellen-IDs angeben.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[ActivationFactory::ActivationFactory\-Konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Initialisiert die ActivationFactory\-Klasse.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[ActivationFactory::ActivationFactory-Konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Initialisiert die ActivationFactory-Klasse.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[ActivationFactory::AddRef\-Methode](../windows/activationfactory-addref-method.md)|Inkrementiert den Verweiszählerwert des aktuellen ActivationFactory\-Objekts.|  
-|[ActivationFactory::GetIids\-Methode](../windows/activationfactory-getiids-method.md)|Ruft ein Array implementierte Schnittstellen\-IDs ab.|  
-|[ActivationFactory::GetRuntimeClassName\-Methode](../windows/activationfactory-getruntimeclassname-method.md)|Ruft den Ablaufklassennamen des Objekts, das der aktuelle ActivationFactory instanziiert.|  
-|[ActivationFactory::GetTrustLevel\-Methode](../windows/activationfactory-gettrustlevel-method.md)|Ruft die Vertrauensebene des Objekts, das der aktuelle ActivationFactory instanziiert.|  
-|[ActivationFactory::QueryInterface\-Methode](../windows/activationfactory-queryinterface-method.md)|Ruft einen Zeiger auf die angegebene Schnittstelle ab.|  
-|[ActivationFactory::Release\-Methode](../windows/activationfactory-release-method.md)|Dekrementiert den Verweiszählerwert des aktuellen ActivationFactory\-Objekts.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[ActivationFactory::AddRef-Methode](../windows/activationfactory-addref-method.md)|Inkrementiert den Verweiszähler des aktuellen ActivationFactory-Objekts.|  
+|[ActivationFactory::GetIids-Methode](../windows/activationfactory-getiids-method.md)|Ruft ein Array von implementierten Schnittstellen-IDs ab.|  
+|[ActivationFactory::GetRuntimeClassName-Methode](../windows/activationfactory-getruntimeclassname-method.md)|Ruft die Laufzeitklasse-Namen des Objekts, das den aktuellen ActivationFactory instanziiert.|  
+|[ActivationFactory::GetTrustLevel-Methode](../windows/activationfactory-gettrustlevel-method.md)|Ruft die Vertrauensebene des Objekts, das den aktuellen ActivationFactory instanziiert.|  
+|[ActivationFactory::QueryInterface-Methode](../windows/activationfactory-queryinterface-method.md)|Ruft einen Zeiger auf die angegebene Schnittstelle ab.|  
+|[ActivationFactory::Release-Methode](../windows/activationfactory-release-method.md)|Dekrementiert den Verweiszähler des aktuellen ActivationFactory-Objekts.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `I0`  
   
  `ChainInterfaces`  
@@ -98,10 +99,10 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
  `ActivationFactory`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

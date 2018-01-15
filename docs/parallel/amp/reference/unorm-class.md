@@ -1,48 +1,31 @@
 ---
-title: Unorm-Klasse | Microsoft-Dokumentation
+title: "\"unorm\"-Klasse | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - unorm
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fffce416bebda4bcc1d5aa0078135aff27bdb7e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm-class"></a>unorm-Klasse
-Darstellen Sie eine Zahl Unorm. Jedes Element ist ein Gleitkommatyp Gleitkommazahl im Bereich von [0, 0F, 1. 0f].  
+Eine Zahl "unorm" darstellen. Jedes Element ist ein Gleitkommatyp Gleitkommazahl im Bereich [0, 0F, 1. 0f].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,22 +33,22 @@ Darstellen Sie eine Zahl Unorm. Jedes Element ist ein Gleitkommatyp Gleitkommaza
 class unorm;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Unorm-Konstruktor](#ctor)|Überladen. Standardkonstruktor 0, 0F initialisieren.|  
+|[Unorm-Konstruktor](#ctor)|Überladen. Standardkonstruktor Mit 0, 0F initialisiert werden.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |unorm::Operator--||  
-|unorm::Operator float|Operator für die Konvertierung. Konvertiert die Unorm Zahl in eine Gleitkommazahl doppelter Wert.|  
+|unorm::Operator "float"|Konvertierungsoperator. Konvertieren Sie die Anzahl der "unorm" in eine Gleitkommazahl Datenpunktwert.|  
 |unorm::Operator * =||  
-|unorm::Operator / =||  
+|unorm::Operator Operator / =||  
 |unorm::Operator ++||  
 |unorm::Operator +=||  
 |unorm::Operator =||  
@@ -81,7 +64,7 @@ class unorm;
   
 ##  <a name="ctor"></a>"unorm" 
 
- Standardkonstruktor 0, 0F initialisieren.  
+ Standardkonstruktor Mit 0, 0F initialisiert werden.  
   
 ```  
 unorm(
@@ -124,8 +107,7 @@ inline explicit unorm(
  Der Wert, der zum Initialisieren verwendet wird.  
   
  `_Other`  
- Die Norm-Objekt, das zum Initialisieren verwendet.  
+ Der Norm-Objekt, das zum Initialisieren verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

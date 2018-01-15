@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce45b5467032b7660202749117e60a1bb3b88b74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19c80094cb613900ce8ffb2713b8e94a5826def4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
 Ruft ein Zeichen aus der Konsole ab und wiederholt es.  
@@ -74,7 +75,7 @@ wint_t _getwche( void );
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_getche`|\<conio.h>|  
 |`_getwche`|\<conio.h> oder \<wchar.h>|  
@@ -118,7 +119,7 @@ Type 'Y' when finished typing keys: abcdefyY
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konsolen- und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)   
+ [Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)   
  [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
  [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)

@@ -1,57 +1,56 @@
 ---
-title: "threadprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "threadprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threadprivate OpenMP directive"
+title: Threadprivate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: threadprivate
+dev_langs: C++
+helpviewer_keywords: threadprivate OpenMP directive
 ms.assetid: 3515aaed-6f9d-4d59-85eb-342378bea2d3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25685991222b02f4c622f344b06e9faaea4caf02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# threadprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass eine Variable zu einem Thread privat ist.  
+# <a name="threadprivate"></a>threadprivate
+Gibt an, dass eine Variable einem Thread zugehörig ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma omp threadprivate(var)  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `var`  
- Eine durch Trennzeichen getrennte Liste von Variablen, die als privat Sie zu einem Thread ausführen möchten.  `var` NAMESPACE\-bewertete muss entweder eine globale oder statische Variable sein oder eine lokale Variable.  
+ Eine durch Trennzeichen getrennte Liste von Variablen, die an einen Thread privat machen möchten. `var`entweder eine globale - oder Namespace-bewertete Variable oder eine statische lokale Variable muss sein.  
   
-## Hinweise  
- Die `threadprivate`\-Direktiven unterstützen keine OpenMP\-Klauseln.  
+## <a name="remarks"></a>Hinweise  
+ Die `threadprivate` Richtlinie unterstützt kein OpenMP-Klauseln.  
   
- Weitere Informationen finden Sie unter [threadprivate Direktive 2.7.1](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
+ Weitere Informationen finden Sie unter [2.7.1 Threadprivate-Direktive](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
   
- Die `threadprivate`\-Direktive basieren auf das Attribut [Thread](../../../cpp/thread.md)`__declspec` . **\_\_declspec \(thread\)** Begrenzungen gelten für `threadprivate`.  
+ Die `threadprivate` Richtlinie basiert auf der [Thread](../../../cpp/thread.md) `__declspec` -Attribut; die Beschränkungen **__declspec(thread)** gelten für `threadprivate`.  
   
- Sie können in jedem `threadprivate` DLL nicht verwenden, das über [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)geladen wird.  Dies schließt DLL ein, das [\/DELAYLOAD \(Laden von Import verzögern\)](../../../build/reference/delayload-delay-load-import.md)geladen werden, das auch **LoadLibrary**verwendet.  
+ Sie können keine `threadprivate` in DLLs, die geladen wird, über [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175).  Dies schließt die DLLs, die geladen werden, mit [/DELAYLOAD (Laden von Import verzögern)](../../../build/reference/delayload-delay-load-import.md), die auch verwendet **LoadLibrary**.  
   
- Sie können `threadprivate` in einer DLL verwenden, die statisch am Start Prozess geladen wird.  
+ Sie können `threadprivate` in eine DLL, die beim Prozessstart statisch geladen wird.  
   
- Da `threadprivate` auf Grundlage **\_\_declspec \(thread\)**vorhanden ist `threadprivate` eine Variable in einem beliebigen Thread, der im Prozess, nicht nur diese Threads gestartet wird, die Teil eines Threads Teams sind, das durch einen parallelen Bereich erstellt wird.  Dies ist ein Implementierungsdetail, die Sie beachten sollten, da Sie sich z. B. Konstruktoren für einen benutzerdefinierten Typ `threadprivate` erwartet dann häufig aufgerufen.  
+ Da `threadprivate` basiert auf **__declspec(thread)**ein `threadprivate` Variable wird in einen beliebigen Thread, die Schritte im Prozess, nicht nur auf diese Threads, die Teil eines Thread-Teams, die vom eines parallelen Bereichs erzeugte sind vorhanden.  Dies ist ein Implementierungsdetail, die Sie kennen sollten, sein, da Sie, z. B. Konstruktoren für möglicherweise bemerken sollten eine `threadprivate` einen benutzerdefinierten Typ aufgerufen häufig wird erwartet.  
   
- Eine `threadprivate`\-Variable eines Typs destructable ist nicht gewährleistet, dass ihr aufgerufene Destruktoren verfügen.  Beispiele:  
+ Ein `threadprivate` Variablen eines destructable nicht notwendigerweise sein Destruktor aufgerufen haben.  Zum Beispiel:  
   
 ```  
 struct MyType   
@@ -68,10 +67,10 @@ int main()
 }  
 ```  
   
- Benutzer haben kein Steuerelement in Bezug auf, wenn die Threads, die den parallelen Bereich beendet wird, bewertet.  Wenn diese Threads vorhanden sein, wenn der Prozess beendet wird, die Threads nicht zu den Prozess beendet wird benachrichtigt werden und der Destruktor nicht für `threaded_var` auf einen beliebigen Thread aufgerufen wird, der außer dem hier beendet \(der primäre Thread\).  Deshalb sollte Code nicht auf richtiger Zerstörung von `threadprivate`\-Variablen zählen.  
+ Benutzer haben keinen Einfluss auf, wenn die Threads enthalten sind, die den parallelen Bereich beendet wird.  Wenn diese Threads vorhanden sind, wenn der Prozess beendet wird, die Threads über das Beenden des Prozesses nicht benachrichtigt und der Destruktor nicht aufgerufen werden, für die wird `threaded_var` auf einen beliebigen Thread mit Ausnahme des beendet wird (Hier wird der primäre Thread).  Damit der Code nicht auf ordnungsgemäße Zerstörung von zählen sollten `threadprivate` Variablen.  
   
-## Beispiel  
- Ein Beispiel zur Verwendung von `threadprivate`finden Sie unter [Private](../../../parallel/openmp/reference/private-openmp.md).  
+## <a name="example"></a>Beispiel  
+ Ein Beispiel der Verwendung von `threadprivate`, finden Sie unter [private](../../../parallel/openmp/reference/private-openmp.md).  
   
-## Siehe auch  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

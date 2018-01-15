@@ -1,37 +1,32 @@
 ---
-title: "Ausf&#252;hren von Memberfunktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWinApp-Klasse, Run"
-  - "Nachrichtensystem in CWinApp::Run"
-  - "Meldungen, Schleifen"
-  - "Run-Methode, Nachrichten- und Leerlaufverarbeitung"
-  - "WinMain-Methode"
-  - "WinMain-Methode, calls CWinApp::Run"
+title: "Ausführen von Memberfunktion | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: WinMain method [MFC]
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 90436e3b775cd547a67be49c120d1fb94b32a5dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ausf&#252;hren von Memberfunktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine Framework\-Anwendung aufwendet den Großteil der Zeit in der [Ausführen](../Topic/CWinApp::Run.md)\-Memberfunktion der Klasse [CWinApp](../mfc/reference/cwinapp-class.md).  Nach Initialisierung `WinMain` ruft **Ausführen** auf, um die Meldungsschleife zu verarbeiten.  
+# <a name="run-member-function"></a>Ausführen von Memberfunktion
+Framework-Anwendung verbringt die meiste Zeit in die [ausführen](../mfc/reference/cwinapp-class.md#run) Memberfunktion der Klasse [CWinApp](../mfc/reference/cwinapp-class.md). Nach der Initialisierung können `WinMain` Aufrufe **ausführen** die Nachrichtenschleife zu verarbeiten.  
   
- **Ausführen** wird über eine Nachrichtenschleife rad und überprüft die Meldungswarteschlange nach verfügbaren Meldungen.  Wenn eine Nachricht verfügbar ist, wird **Ausführen** diese Aktion für weiter.  Wenn keine Nachrichten verfügbar sind, das häufig zutrifft, **Ausführen** Ruft `OnIdle` auf, um eines Leerlaufs auszuführen, die verarbeitet, dass Sie möglicherweise oder das Framework durchgeführt benötigen.  Wenn keine Meldungen und keine Leerlaufverarbeitung gibt, auszuführen, wartet die Anwendung, wenn etwas geschieht.  Wenn die Anwendung **Ausführen** endet, ruft `ExitInstance` auf.  Die Abbildung in [OnIdle\-Memberfunktion](../mfc/onidle-member-function.md) zeigt die Aktionsfolge in der Meldungsschleife an.  
+ **Führen Sie** durchläuft eine Nachrichtenschleife, überprüfen die Nachrichtenwarteschlange für verfügbaren Nachrichten. Wenn eine Nachricht verfügbar ist, wird **ausführen** Behandlung für die Aktion. Wenn keine Nachrichten verfügbar sind, also häufig "true" **ausführen** Aufrufe `OnIdle` zu jeder Zeit im Leerlauf Verarbeitungsvorgänge ausführen, das Sie oder das Framework ggf. ausgeführt. Wenn keine Nachrichten und keine leerlaufverarbeitung Vorgehensweise vorhanden sind, wartet die Anwendung erst etwas passiert. Wenn die Anwendung beendet wird, **ausführen** Aufrufe `ExitInstance`. Die Abbildung im [OnIdle-Memberfunktion](../mfc/onidle-member-function.md) veranschaulicht die Abfolge von Aktionen in der Nachrichtenschleife.  
   
- Das Meldungsweiterleiten hängt von der Art von Meldung ab.  Weitere Informationen finden Sie unter [Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md).  
+ Die nachrichtenverteilung, hängt von der Art der Nachricht ab. Weitere Informationen finden Sie unter [, Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)

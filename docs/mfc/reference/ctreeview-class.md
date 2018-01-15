@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d1d8ee7d06e9926a240ca185ce36ba0b1a180af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7530569d5e5313ebfcbdaf92ebd245962b9e443c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctreeview-class"></a>CTreeView-Klasse
 Vereinfacht die Verwendung des Strukturansicht-Steuerelements und der [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), die Klasse, die Strukturansicht-steuerelemenfunktionalität per MFC Dokument-/ Ansichtsarchitektur kapselt.  
@@ -36,7 +37,7 @@ Vereinfacht die Verwendung des Strukturansicht-Steuerelements und der [CTreeCtrl
 class CTreeView : public CCtrlView  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

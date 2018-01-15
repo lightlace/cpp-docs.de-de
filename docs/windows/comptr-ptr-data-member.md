@@ -1,44 +1,45 @@
 ---
-title: "ComPtr::ptr_-Datenmember | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::ptr_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr_-Datenmember"
+title: 'Comptr:: Ptr_-Datenmember | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::ptr_
+dev_langs: C++
+helpviewer_keywords: ptr_ data member
 ms.assetid: c84f9dda-8ff9-422d-91f2-1a41206bf9ad
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2048c4a6885889e9f398c7eded60807956e3e5cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::ptr_-Datenmember
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Enthält einen Zeiger auf die Schnittstelle, der zugeordnet ist und von diesem ComPtr verwaltet.  
+# <a name="comptrptr-data-member"></a>ComPtr::ptr_-Datenmember
+Enthält einen Zeiger auf die Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist und von ihm verwaltet wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 InterfaceType *ptr_;  
 ```  
   
-## Hinweise  
- `ptr_` ist ein interner, geschützter Datenmember.  
+## <a name="remarks"></a>Hinweise  
+ `ptr_`eine interne, geschützte Daten gehört.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

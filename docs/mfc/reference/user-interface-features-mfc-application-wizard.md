@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.ui
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, user interface features
+f1_keywords: vc.appwiz.mfc.exe.ui
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 78bc0d034c7f4e3b5c34596ee83de1b68d8d9173
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Benutzeroberflächen-Features, MFC-Anwendungs-Assistent
 Dieser Artikel beschreibt die Optionen, die Sie verwenden können, um das Aussehen Ihrer Anwendung anzugeben. Features der Benutzeroberfläche für das Projekt verfügbaren hängt vom Typ der Anwendung, die Sie, in angegeben der [Anwendungstyp, MFC-Anwendungs-Assistent](../../mfc/reference/application-type-mfc-application-wizard.md) Seite des Assistenten für die MFC-Anwendung. Wenn Sie eine SDI-Anwendung erstellen, können nicht Sie z. B. Stile für untergeordnete Rahmen hinzufügen.  
@@ -71,5 +67,4 @@ Dieser Artikel beschreibt die Optionen, die Sie verwenden können, um das Ausseh
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Anwendungs-Assistent](../../mfc/reference/mfc-application-wizard.md)
-
 

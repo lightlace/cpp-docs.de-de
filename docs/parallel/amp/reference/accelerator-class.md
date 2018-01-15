@@ -1,11 +1,10 @@
 ---
-title: zugriffstastenklasse | Microsoft-Dokumentation
+title: zugriffstastenklasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -44,35 +43,19 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator::supports_double_precision
 - AMPRT/Concurrency::accelerator::supports_limited_double_precision
 - AMPRT/Concurrency::accelerator::version
-dev_langs:
-- C++
-helpviewer_keywords:
-- accelerator class
+dev_langs: C++
+helpviewer_keywords: accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d1e68b3533452ec1e47053086c59654337c995fa
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ff64eeedb324d3a849029b15744cd630603aef67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-class"></a>Zugriffstastenklasse
 Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervorgänge optimiert ist. Eine Zugriffstaste ist ein Gerät, das einem PCIe-Bus angefügt wird (wie einem GPU-Computer), oder es handelt sich um einen erweiterten Befehl, der auf der Haupt-CPU festgelegt ist.  
@@ -83,7 +66,7 @@ Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervo
 class accelerator;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -100,7 +83,7 @@ class accelerator;
 |[get_all](#get_all)|Gibt einen Vektor von `accelerator`-Objekten zurück, die alle verfügbaren Zugriffstasten darstellen.|  
 |[get_auto_selection_view](#get_auto_selection_view)|Gibt das `accelerator_view`-Objekt für die automatische Auswahl zurück.|  
 |[get_dedicated_memory](#get_dedicated_memory)|Gibt den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB zurück.|  
-|[get_default_cpu_access_type](#get_default_cpu_access_type)|Gibt den Standardwert zurück [Access_type](concurrency-namespace-enums-amp.md#access_type) für die Puffer auf dieser Zugriffstaste erstellt.|  
+|[get_default_cpu_access_type](#get_default_cpu_access_type)|Gibt die standardmäßige [Access_type](concurrency-namespace-enums-amp.md#access_type) für Puffer, die auf dieser Zugriffstaste erstellt.|  
 |[get_default_view](#get_default_view)|Gibt das standardmäßige `accelerator_view`-Objekt zurück, das mit dem `accelerator`-Objekt verknüpft ist.|  
 |[get_Description](#get_description)|Gibt eine kurze Beschreibung des `accelerator`-Geräts zurück.|  
 |[get_device_path](#get_device_path)|Gibt den Pfad des physischen Geräts zurück.|  
@@ -129,12 +112,12 @@ class accelerator;
 |[cpu_accelerator](#cpu_accelerator)|Ruft eine Zeichenfolgenkonstante für die CPU-`accelerator` ab.|  
 |[dedicated_memory](#dedicated_memory)|Ruft den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB ab.|  
 |[default_accelerator](#default_accelerator)|Ruft eine Zeichenfolgenkonstante für die standardmäßige `accelerator` ab.|  
-|[default_cpu_access_type-Objekt](#default_cpu_access_type)|Ruft ab oder legt die Standard-CPU [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.|  
+|[default_cpu_access_type](#default_cpu_access_type)|Ruft ab oder legt die Standard-CPU [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.|  
 |[default_view](#default_view)|Ruft das standardmäßige `accelerator_view`-Objekt ab, das dem `accelerator`-Element zugeordnet ist.|  
 |[Beschreibung](#description)|Ruft eine kurze Beschreibung des `accelerator`-Geräts ab.|  
 |[device_path](#device_path)|Ruft den Pfad des physischen Geräts ab.|  
 |[direct3d_ref](#direct3d_ref)|Ruft eine Zeichenfolgenkonstante für eine Direct3D-Verweis-`accelerator` ab.|  
-|[direct3d_warp](#direct3d_warp)|Ruft die Zeichenfolge für die Konstante ein `accelerator` Objekt, das Sie verwenden können, für die Ausführung von C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.|  
+|[direct3d_warp](#direct3d_warp)|Ruft die Zeichenfolge Zeichenfolgenkonstante für ein `accelerator` Objekt, das Sie verwenden können, zum Ausführen des C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.|  
 |[has_display](#has_display)|Ruft einen booleschen Wert ab, der angibt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|  
 |[is_debug](#is_debug)|Gibt an, ob für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|  
 |[is_emulated](#is_emulated)|Gibt an, ob das `accelerator`-Objekt emuliert ist.|  
@@ -189,7 +172,7 @@ accelerator(const accelerator& _Other);
   
 ##  <a name="cpu_accelerator"></a>cpu_accelerator 
 
- Ruft eine Zeichenfolge für die CPU-Zugriffstaste.  
+ Ruft eine Zeichenfolge für die CPU-Zugriffstaste konstant.  
   
 ```  
 static const wchar_t cpu_accelerator[];  
@@ -197,7 +180,7 @@ static const wchar_t cpu_accelerator[];
   
 ##  <a name="create_view"></a>CREATE_VIEW 
 
- Erstellt und gibt ein `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange. Wenn der queuingmodus nicht angegeben wird, wird das neue `accelerator_view` verwendet die [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) queuingmodus.  
+ Erstellt und gibt ein `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange. Wenn der queuingmodus nicht angegeben wird, wird die neue `accelerator_view` verwendet die [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) queuingmodus.  
   
 ```  
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
@@ -205,7 +188,7 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
   
 ### <a name="parameters"></a>Parameter  
  `qmode`  
- Der Warteschlangen-Modus.  
+ Der queuingmodus.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein neues `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange.  
@@ -226,7 +209,7 @@ __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
 static const wchar_t default_accelerator[];  
 ```  
   
-##  <a name="default_cpu_access_type"></a>default_cpu_access_type-Objekt 
+##  <a name="default_cpu_access_type"></a>default_cpu_access_type 
 
  Die Standardeinstellung cpu [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.  
   
@@ -236,7 +219,7 @@ __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_a
   
 ##  <a name="default_view"></a>default_view 
 
- Ruft die Accelerator-Standardansicht, die zugeordnet ist die `accelerator`.  
+ Ruft die Zugriffstaste-Standardansicht, die mit zugeordnetem der `accelerator`.  
   
 ```  
 __declspec(property(get= get_default_view)) accelerator_view default_view;  
@@ -252,7 +235,7 @@ __declspec(property(get= get_description)) std::wstring description;
   
 ##  <a name="device_path"></a>device_path 
 
- Ruft den Pfad der Zugriffstaste. Der Pfad ist im System eindeutig.  
+ Ruft den Pfad der Zugriffstaste ab. Der Pfad ist auf dem System eindeutig.  
   
 ```  
 __declspec(property(get= get_device_path)) std::wstring device_path;  
@@ -260,7 +243,7 @@ __declspec(property(get= get_device_path)) std::wstring device_path;
   
 ##  <a name="direct3d_ref"></a>direct3d_ref 
 
- Ruft eine Zeichenfolge für die Zugriffstaste eine Direct3D-Verweis.  
+ Ruft eine Zeichenfolge für eine Direct3D-Verweis-Zugriffstaste konstant.  
   
 ```  
 static const wchar_t direct3d_ref[];  
@@ -268,7 +251,7 @@ static const wchar_t direct3d_ref[];
   
 ##  <a name="direct3d_warp"></a>direct3d_warp 
 
- Ruft die Zeichenfolge für die Konstante ein `accelerator` Objekt, das Sie zur Ausführung von C++ AMP-Code in Multi-Core-CPUs mit Streaming SIMD Extensions (SSE) verwenden können.  
+ Ruft die Zeichenfolge Zeichenfolgenkonstante für ein `accelerator` Objekt, das Sie verwenden können, zum Ausführen des C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.  
   
 ```  
 static const wchar_t direct3d_warp[];  
@@ -283,7 +266,7 @@ static inline std::vector<accelerator> get_all();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Vektor der verfügbaren Zugriffstasten  
+ Der Vektor, der verfügbaren Zugriffstasten  
   
 ##  <a name="get_auto_selection_view"></a>get_auto_selection_view 
 
@@ -350,7 +333,7 @@ std::wstring get_description() const;
   
 ##  <a name="get_device_path"></a>get_device_path 
 
- Gibt den Pfad der Zugriffstaste. Der Pfad ist im System eindeutig.  
+ Gibt den Pfad der Zugriffstaste zurück. Der Pfad ist auf dem System eindeutig.  
   
 ```  
 std::wstring get_device_path() const;
@@ -363,7 +346,7 @@ std::wstring get_device_path() const;
   
 ##  <a name="get_has_display"></a>get_has_display 
 
- Gibt einen booleschen Wert, der angibt, ob die `accelerator` eine Anzeige ausgeben kann.  
+ Gibt einen booleschen Wert, der angibt, ob die `accelerator` an eine Anzeige ausgeben kann.  
   
 ```  
 bool get_has_display() const;
@@ -428,7 +411,7 @@ bool get_supports_double_precision() const;
   
 ##  <a name="get_supports_limited_double_precision"></a>get_supports_limited_double_precision 
 
- Gibt einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für mathematische Funktionen doppelter Genauigkeit verfügt. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, dann fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.  
+ Gibt einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für Genauigkeit mathematische Funktionen mit doppelter hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.  
   
 ```  
 bool get_supports_limited_double_precision() const;
@@ -437,7 +420,7 @@ bool get_supports_limited_double_precision() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische; verfügt andernfalls `false`.  
+ `true`Wenn die Zugriffstaste über beschränkte Unterstützung für Genauigkeit mathematische Funktionen mit doppelter; hat andernfalls `false`.  
   
 ##  <a name="get_version"></a>get_version 
 
@@ -454,7 +437,7 @@ unsigned int get_version() const;
   
 ##  <a name="has_display"></a>has_display 
 
- Ruft einen booleschen Wert, der angibt, ob die `accelerator` eine Anzeige ausgeben kann.  
+ Ruft einen booleschen Wert, der angibt, ob die `accelerator` an eine Anzeige ausgeben kann.  
   
 ```  
 __declspec(property(get= get_has_display)) bool has_display;  
@@ -462,7 +445,7 @@ __declspec(property(get= get_has_display)) bool has_display;
   
 ##  <a name="is_debug"></a>is_debug 
 
- Ruft einen booleschen Wert, der angibt, ob die `accelerator` die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
+ Ruft einen booleschen Wert, der angibt, ob die `accelerator` -Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert.  
   
 ```  
 __declspec(property(get= get_is_debug)) bool is_debug;  
@@ -488,7 +471,7 @@ bool operator!= (const accelerator& _Other) const;
   
 ### <a name="parameters"></a>Parameter  
  `_Other`  
- Die `accelerator` dieses Objekt zu vergleichende Objekt.  
+ Die `accelerator` mit dieses Objekt zu vergleichende Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `false`Wenn die beiden `accelerator` -Objekte identisch sind, andernfalls `true`.  
@@ -520,7 +503,7 @@ bool operator== (const accelerator& _Other) const;
   
 ### <a name="parameters"></a>Parameter  
  `_Other`  
- Die `accelerator` dieses Objekt zu vergleichende Objekt.  
+ Die `accelerator` mit dieses Objekt zu vergleichende Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn die andere `accelerator` Objekt entspricht dies `accelerator` Objekt; andernfalls `false`.  
@@ -573,7 +556,7 @@ __declspec(property(get= get_supports_double_precision)) bool supports_double_pr
   
 ##  <a name="supports_limited_double_precision"></a>supports_limited_double_precision 
 
- Ruft einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für mathematische Funktionen doppelter Genauigkeit verfügt. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, dann fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.  
+ Ruft einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für Genauigkeit mathematische Funktionen mit doppelter hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.  
   
 ```  
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;  
@@ -589,7 +572,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ##  <a name="dtor"></a></a> ~ accelerator_view-Objekt 
 
- Zerstört die [Accelerator_view](accelerator-view-class.md) Objekt.  
+ Zerstört die ["accelerator_view"](accelerator-view-class.md) Objekt.  
   
 ```  
 ~accelerator_view();
@@ -599,15 +582,15 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ##  <a name="accelerator"></a>Zugriffstaste 
 
- Ruft die `accelerator` -Objekt für die [Accelerator_view](accelerator-view-class.md) Objekt.  
+ Ruft die `accelerator` -Objekt für die ["accelerator_view"](accelerator-view-class.md) Objekt.  
   
 ```  
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
 ```  
   
-##  <a name="ctor"></a>accelerator_view-Objekt 
+##  <a name="ctor"></a>"accelerator_view" 
 
- Initialisiert eine neue Instanz der dem [Accelerator_view](accelerator-view-class.md) -Klasse durch Kopieren einer vorhandenen `accelerator_view` Objekt.  
+ Initialisiert eine neue Instanz der dem ["accelerator_view"](accelerator-view-class.md) -Klasse durch Kopieren einer vorhandenen `accelerator_view` Objekt.  
   
 ```  
 accelerator_view(const accelerator_view& _Other);
@@ -630,7 +613,7 @@ concurrency::completion_future create_marker();
   
 ##  <a name="flush"></a>leeren 
 
- Sendet alle ausstehenden Befehle in der Warteschlange für die [Accelerator_view](accelerator-view-class.md) Objekt zur Ausführung der Zugriffstaste.  
+ Sendet alle ausstehenden Befehle in der Warteschlange für die ["accelerator_view"](accelerator-view-class.md) Objekt, das die Zugriffstaste für die Ausführung.  
   
 ```  
 void flush();
@@ -641,7 +624,7 @@ void flush();
   
 ##  <a name="get_accelerator"></a>get_accelerator 
 
- Gibt die `accelerator` -Objekt für die [Accelerator_view](accelerator-view-class.md) Objekt.  
+ Gibt die `accelerator` -Objekt für die ["accelerator_view"](accelerator-view-class.md) Objekt.  
   
 ```  
 accelerator get_accelerator() const;
@@ -654,7 +637,7 @@ accelerator get_accelerator() const;
   
 ##  <a name="get_is_auto_selection"></a>get_is_auto_selection 
 
- Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn das accelerator_view-Objekt übergeben wird ein [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).  
+ Gibt einen booleschen Wert, der angibt, ob die Common Language Runtime automatisch eine entsprechende Zugriffstaste auswählt, wenn an die "accelerator_view" übergeben wird eine [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).  
   
 ```  
 bool get_is_auto_selection() const;
@@ -667,7 +650,7 @@ bool get_is_auto_selection() const;
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
- Gibt einen booleschen Wert, der angibt, ob die [Accelerator_view](accelerator-view-class.md) -Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
+ Gibt einen booleschen Wert, der angibt, ob die ["accelerator_view"](accelerator-view-class.md) Objekt hat die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert.  
   
 ```  
 bool get_is_debug() const;
@@ -676,11 +659,11 @@ bool get_is_debug() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der angibt, ob die `accelerator_view` -Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
+ Ein boolescher Wert, der angibt, ob die `accelerator_view` Objekt hat die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert.  
   
 ##  <a name="get_queuing_mode"></a>get_queuing_mode 
 
- Gibt den queuingmodus für das [Accelerator_view](accelerator-view-class.md) Objekt.  
+ Gibt den queuingmodus für das ["accelerator_view"](accelerator-view-class.md) Objekt.  
   
 ```  
 queuing_mode get_queuing_mode() const;
@@ -693,7 +676,7 @@ queuing_mode get_queuing_mode() const;
   
 ##  <a name="get_version"></a>get_version 
 
- Gibt die Version der [Accelerator_view](accelerator-view-class.md).  
+ Gibt die Version der ["accelerator_view"](accelerator-view-class.md).  
   
 ```  
 unsigned int get_version() const;
@@ -706,7 +689,7 @@ unsigned int get_version() const;
   
 ##  <a name="is_auto_selection"></a>is_auto_selection 
 
- Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn das accelerator_view-Objekt übergeben wird ein [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).  
+ Ruft einen booleschen Wert, der angibt, ob die Common Language Runtime automatisch eine entsprechende Zugriffstaste auswählt, wenn an die "accelerator_view" übergeben wird eine [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).  
   
 ```  
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
@@ -714,7 +697,7 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
   
 ##  <a name="is_debug"></a>is_debug 
 
- Ruft einen booleschen Wert, der angibt, ob die [Accelerator_view](accelerator-view-class.md) -Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
+ Ruft einen booleschen Wert, der angibt, ob die ["accelerator_view"](accelerator-view-class.md) Objekt hat die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert.  
   
 ```  
 __declspec(property(get= get_is_debug)) bool is_debug;  
@@ -722,7 +705,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
   
 ##  <a name="operator_neq"></a>Operator! = 
 
- Vergleicht dieses [Accelerator_view](accelerator-view-class.md) Objekt mit einem anderen und gibt `false` werden; andernfalls `true`.  
+ Vergleicht dieses ["accelerator_view"](accelerator-view-class.md) -Objekt mit einem anderen und gibt `false` , wenn sie identisch sind; gibt andernfalls wird `true`.  
   
 ```  
 bool operator!= (const accelerator_view& _Other) const;
@@ -732,14 +715,14 @@ bool operator!= (const accelerator_view& _Other) const;
   
 ### <a name="parameters"></a>Parameter  
  `_Other`  
- Die `accelerator_view` dieses Objekt zu vergleichende Objekt.  
+ Die `accelerator_view` mit dieses Objekt zu vergleichende Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `false`, wenn die beiden Objekte identisch sind, andernfalls `true`.  
   
 ##  <a name="operator_eq"></a>Operator = 
 
- Kopiert den Inhalt des angegebenen [Accelerator_view](accelerator-view-class.md) -Objekts in dieses Objekt.  
+ Kopiert den Inhalt des angegebenen ["accelerator_view"](accelerator-view-class.md) -Objekts in dieses Objekt.  
   
 ```  
 accelerator_view& operator= (const accelerator_view& _Other);
@@ -750,11 +733,11 @@ accelerator_view& operator= (const accelerator_view& _Other);
  Das `accelerator_view`-Objekt, aus dem kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf die geänderte `accelerator_view` Objekt.  
+ Ein Verweis auf das geänderte `accelerator_view` Objekt.  
   
 ##  <a name="operator_eq_eq"></a>Operator == 
 
- Vergleicht dieses [Accelerator_view](accelerator-view-class.md) Objekt mit einem anderen und gibt `true` werden; andernfalls `false`.  
+ Vergleicht dieses ["accelerator_view"](accelerator-view-class.md) -Objekt mit einem anderen und gibt `true` , wenn sie identisch sind; gibt andernfalls wird `false`.  
   
 ```  
 bool operator== (const accelerator_view& _Other) const;
@@ -764,14 +747,14 @@ bool operator== (const accelerator_view& _Other) const;
   
 ### <a name="parameters"></a>Parameter  
  `_Other`  
- Die `accelerator_view` dieses Objekt zu vergleichende Objekt.  
+ Die `accelerator_view` mit dieses Objekt zu vergleichende Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die beiden Objekte identisch sind, andernfalls `false`.  
   
 ##  <a name="queuing_mode"></a>queuing_mode 
 
- Ruft den queuingmodus für das [Accelerator_view](accelerator-view-class.md) Objekt.  
+ Ruft den queuingmodus für das ["accelerator_view"](accelerator-view-class.md) Objekt.  
   
 ```  
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
@@ -779,7 +762,7 @@ __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mo
   
 ##  <a name="version"></a>Version 
 
- Ruft die Version des der [Accelerator_view](accelerator-view-class.md).  
+ Ruft die Version der ["accelerator_view"](accelerator-view-class.md).  
   
 ```  
 __declspec(property(get= get_version)) unsigned int version;  
@@ -787,7 +770,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ##  <a name="wait"></a>Warte 
 
- Wartet, bis alle Befehle an übermittelt die [Accelerator_view](accelerator-view-class.md) Objekt abgeschlossen.  
+ Wartet, bis alle Befehle, die gesendet werden, um die ["accelerator_view"](accelerator-view-class.md) Objekt, um den Vorgang abzuschließen.  
   
 ```  
 void wait();
@@ -798,4 +781,3 @@ void wait();
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

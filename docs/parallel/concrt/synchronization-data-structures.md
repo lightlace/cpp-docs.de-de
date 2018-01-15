@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>Synchronisierungsdatenstrukturen
 Die Concurrency Runtime bietet verschiedene Datenstrukturen, mit denen Sie Zugriff auf freigegebene Daten von mehreren Threads synchronisiert. Diese Datenstrukturen sind nützlich, wenn Sie Daten freigegeben haben, die selten geändert werden. Ein Synchronisierungsobjekt, z. B. einen kritischen Abschnitt führt dazu, dass andere Threads zu warten, bis die freigegebene Ressource verfügbar ist. Wenn Sie ein solches Objekt verwenden, um den Zugriff auf Daten zu synchronisieren, die häufig verwendet wird, können Sie Skalierbarkeit in Ihrer Anwendung verlieren. Die [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) bietet die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Klasse, die Sie zum Freigeben einer Ressource auf mehrere Threads oder Aufgaben ohne die Notwendigkeit einer Synchronisierung ermöglicht. Weitere Informationen zu den `combinable` Klasse, finden Sie unter [parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md).  

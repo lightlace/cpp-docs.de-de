@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65417079c3241feca9c43e058026674c6e35d18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7aaf4a087fbcfc28686e7ec8d2411d6f7531466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-server-additions"></a>Menüs und Ressourcen: Servererweiterungen
 Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressourcen in ein visual bearbeitungsanwendung-Server (Komponente) vorgenommen werden müssen. Eine Serveranwendung muss viele Ergänzungen für die Menüstruktur und andere Ressourcen, da er in einem von drei Modi gestartet werden kann: Standalone, eingebettet sind, oder vorhanden. Wie in beschrieben die [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md) Artikel, es sind maximal vier Sätze von Menüs. Alle vier werden für eine MDI-Vollserver-Anwendung verwendet, während nur drei für ein Miniserver verwendet werden. Der Anwendungs-Assistent wird das Layout im Menü für den Typ des Servers erforderlich erstellt werden sollen. Einige Anpassung kann notwendig sein.  
@@ -67,7 +68,7 @@ Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressou
 ##  <a name="_core_string_table_additions_for_server_applications"></a>Zeichenfolge Tabelle Ergänzungen für Serveranwendungen  
  Die Tabelle außerdem nur eine Zeichenfolge ist erforderlich, in einer Serveranwendung – eine Zeichenfolge, um anzugeben, dass der OLE-Initialisierung fehlgeschlagen ist. Beispielsweise ist hier der Zeichenfolgentabelle Eintrag, den die Anwendungs-Assistent erstellt ein:  
   
-|ID|Zeichenfolge|  
+|Id|Zeichenfolge|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|  
   

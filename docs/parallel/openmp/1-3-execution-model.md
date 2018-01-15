@@ -1,33 +1,34 @@
 ---
-title: "1.3 Execution Model"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1.3 Ausführungsmodell | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 1.3 Execution Model
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OpenMP fork Join verwendet das Modell der parallelen Ausführung.  Obwohl dies fork Join Modell zum Auslösen einer Vielzahl von Problemen nützlich sein kann, wird er etwas für große Array\-basierte Anwendungen geeignet.  OpenMP ist für Dienstprogramme für die korrekt als parallele Programme \(mehrere Ausführungsthreads und der vollständigen OpenMP\-Stütz Library\) und als Ablaufprogramme ausführen \(die OpenMP einfache Direktiven und ignoriert rodet Bibliothek\).  Es ist jedoch möglich, und kann ein Programm zu entwickeln, das nicht ordnungsgemäß verhält, wenn es sequenziell ausgeführt wird.  Darüber hinaus führen möglicherweise andere Maße an Parallelität verschiedene numerische Ergebnisse aufgrund von Änderungen in der Zuordnung numerische Vorgänge.  Zum Beispiel kann eine Verringerung der seriellen zusätzlich ein weiteres Muster von Hinzufügungs von Namespacezuordnungen als eine parallele Verringerung.  Diese verschiedenen Zuordnungen ändern sich die Ergebnisse der Gleitkommaaddition.  
+# <a name="13-execution-model"></a>1.3 Ausführungsmodell
+OpenMP verwendet der Fork-Join-Modell der parallelen Ausführung. Obwohl diese Fork-Join-Modell zur Lösung verschiedener Probleme hilfreich sein kann, ist es etwas für große Array-basierte Anwendungen angepasst werden. OpenMP ist dazu vorgesehen, Support-Programme, die ordnungsgemäß sowohl als parallele (mehrere Ausführungsthreads und eine vollständige OpenMP-Unterstützungsbibliothek) Programme ausgeführt werden und als sequenzielle Programme (Direktiven ignoriert und eine einfache Klassenbibliothek der OpenMP-Stubs). Es ist jedoch möglich und zulässig, um eine Anwendung entwickeln, die beim sequenziell ausgeführt, nicht ordnungsgemäß verhält. Darüber hinaus können verschiedene Grade der Parallelität aufgrund von Änderungen an der Zuordnung von numerischen Operationen verschiedene numerische Ergebnisse führen. Z. B. möglicherweise eine Reduzierung der seriellen Addition ein anderes Muster von Zuordnungen hinzufügen, als eine parallele Reduzierung. Diese verschiedenen Zuordnungen können es sich um die Ergebnisse der gleitkommaaddition ändern.  
   
- Ein Programm, das mit OpenMP C\/C\+\+ API geschrieben wird, startet die Ausführung, wie ein Thread die Ausführung *Masterthread*aufgerufen haben.  Der Masterthread führt in einem seriellen Bereich aus, bis die erste parallelen Konstrukt gefunden wird.  In C\/C\+\+ OpenMP APIs, die **Ähnlichkeit**\-Direktive ein paralleles Konstrukt fest.  Wenn ein paralleles Konstrukt gefunden wird, stellt der Masterthread ein Team von Threads erstellt, und der Master\- wird Master des Teams.  Jeder Thread im Team führt die Anweisungen im dynamischen Wertebereich eines parallelen Bereichs mit Ausnahme der Arbeitsteilungs konstrukten aus.  Arbeitsteilungs Konstrukte müssen alle Threads im Team in der gleichen Reihenfolge auftreten, und die Anweisungen innerhalb des zugeordneten strukturierten Blocks werden von einer oder mehrere Threads ausgeführt.  Die Barriere, die am Ende eines Arbeitsteilungs konstrukts ohne eine `nowait`\-Klausel impliziert wird, wird von allen Threads im Team ausgeführt.  
+ Mit der OpenMP-C-/C++-API geschriebenes Programm startet die Ausführung als ein einziger Thread der Ausführung aufgerufen, die *"master" Thread*. Bis das erste parallele Konstrukt ist in einer seriellen Region der master-Thread ausgeführt. In der OpenMP-C-/C++-API die **parallele** Richtlinie stellt eine parallele Konstrukt dar. Wenn ein paralleles Konstrukts erkannt wird, die master-Thread erstellt, ein Team von Threads, und der Master wird master des Teams. Jeder Thread in das Team führt die Anweisungen in der dynamischen Wertebereich eines parallelen Bereichs ist, mit Ausnahme der Arbeitsteilungskonstrukte. Arbeitsteilungskonstrukte müssen von allen Threads im Team in der gleichen Reihenfolge auftreten und die Anweisungen innerhalb der zugehörigen strukturierten Block von einer oder mehreren Threads ausgeführt werden. Die Grenze am Ende eines Konstrukts Freigeben von Arbeit ohne impliziert einen `nowait` -Klausel von allen Threads im Team ausgeführt wird.  
   
- Wenn ein Thread ein freigegebenes Objekt geändert wird, wirkt sich dies nicht nur ihre eigene Ausführungsumgebung, sondern auch die anderen Threads im Programm.  Die Änderung wird garantiert, entsprechend einem der anderen Threads abgeschlossen sind, am nächsten Sequenzpunkt \(wie in der Sprache definiert\) nur wenn das Objekt deklariert wird, um flüchtige sein.  Andernfalls wird sichergestellt, dass die Änderung zunächst nach dem Thread abgeschlossen sein, der geändert wird. Anschließend \(oder anderen Threads gleichzeitig\) gelten, **leer**\-Direktiven an, die das Objekt angibt \(entweder implizit oder explizit\).  Beachten Sie, dass, wenn die **leer**\-Direktive, die von anderen OpenMP\-Direktive werden, bedeutet nicht ausreichen, um die gewünschte Reihenfolge von Nebeneffekten sichergestellt, es in der Verantwortung des Programmierers ist, zusätzliche explizite **leer**\-Direktive anzugeben.  
+ Wenn ein Thread ein freigegebenes Objekt geändert werden, sind davon betroffen, nicht nur einen eigenen ausführungsumgebung, sondern auch die von anderen Threads im Programm. Die Änderung ist garantiert Vorgang abgeschlossen ist, aus der Sicht eines anderen Threads, am nächsten Sequenz (wie in der Basissprache definiert) nur, wenn das Objekt deklariert wurde, dass flüchtig sein. Hingegen die Änderung ist gewährleistet, dass abgeschlossen werden, nachdem zuerst thread die ändern, und anschließend (oder gleichzeitig) auftreten, die von anderen Threads eine **leeren** -Direktive, die das Objekt (entweder implizit oder explizit) angibt. Beachten Sie, dass bei der **leeren** Direktiven, die durch andere OpenMP-Direktiven impliziert werden sind nicht ausreichend, um sicherzustellen, dass die gewünschte Reihenfolge der Nebeneffekte, die es dem Programmierer ist dafür verantwortlich, geben Sie zusätzliche, explizite  **Flush** Direktiven.  
   
- Bei Abschluss des parallelen Konstrukt synchronisieren die Threads im Team an einer impliziten Barriere, und nur der Masterthread setzt die Ausführung fort.  Parallele beliebig viele Konstrukte können in einem einzelnen Programm angegeben werden.  Folglich ein Programm sich viele Male während der Ausführung zu erzeugen und hergestellt werden.  
+ Nach Abschluss des parallelen Konstrukts die Threads im Team eine implizite Barriere zu synchronisieren, und nur die master-Thread wird die Ausführung fortgesetzt. Eine beliebige Anzahl von parallelen Konstrukten kann in einem einzelnen Programm angegeben werden. Daher kann ein Programm Verzweigen (fork) und verknüpfen oft während der Ausführung.  
   
- OpenMP C\/C\+\+ können Programmierer APIs verwenden, die in Funktionen direktiven aus parallelen Konstrukte aufgerufen werden.  Direktiven, die nicht im lexikalischen Wertebereich eines parallelen Konstrukt angezeigt werden, jedoch möglicherweise im dynamischen Wertebereichs liegen, werden als *verwaiste* Direktive.  Verwaiste Direktiven geben Programmierer die Möglichkeit, wesentliche Teile des Programms parallel mit nur minimalen Änderungen am Ablaufprogramm auszuführen.  Mit dieser Funktion können Benutzer Ebenen der Code parallelen Konstrukte der Programm \- Struktur und rufen Direktiven verwenden, führen Sie in einem der aufgerufenen Funktionen oben steuern.  
+ OpenMP-C-/C++-API können Programmierer das zur Verwendung von Anweisungen in Funktionen, die aus den parallelen Konstrukten aufgerufen. Direktiven, die nicht im lexikalischen Block eines parallelen Konstrukts angezeigt, jedoch möglicherweise liegen in einem dynamischen Block heißen *verwaiste* Direktiven. Verwaiste Direktiven geben Programmierer die Möglichkeit, große Teile des Programms parallel mit nur minimale Änderungen an das sequenzielle Programm auszuführen. Benutzer können mit dieser Funktionalität können code auf den oberen Ebenen der Aufrufstruktur der Anwendung den parallele Konstrukten und Verwenden von Richtlinien zur Steuerung der Ausführung in der aufgerufenen Funktionen.  
   
- Unsynchronisierte Aufrufe von C\- und C\+\+\-Ausgabefunktionen, die auf dieselbe Datei schreiben, treten möglicherweise Ausgabe, in der die Daten, die von verschiedenen Threads geschrieben werden, in der Reihenfolge nicht deterministisch.  Entsprechend lesen unsynchronisierte Aufrufe möglicherweise zu den Eingaben, die von derselben Datei lesen, Daten in der Reihenfolge nicht deterministisch.  Unsynchronisierte Verwendung der E\/A, sodass jeder Thread eine andere Datei zugreift, stellt die gleichen Ergebnisse wie serielle Ausführung der E\/A\-Funktionen.
+ Nicht synchronisierte Aufrufe an C und C++ ausgegeben werden, dass Funktionen, die auf dieselbe Datei Schreiben in Ausgabe führen können, in der von anderen Threads geschriebene Daten nicht deterministisch nacheinander angezeigt wird. Nicht synchronisierte Aufrufe zur Eingabe von Funktionen, die aus der gleichen Datei lesen können auf ähnliche Weise Daten in nicht deterministisch Reihenfolge lesen. Nicht synchronisierte Verwendung von e/a erzeugt, dass jeder Thread eine andere Datei greift auf die gleichen Ergebnisse wie die serielle Ausführung der e/a-Funktionen.

@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d31f2dd9ce5855a6d31bf5896643de72cb6135a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bc3219ff6570fab18b19f350f7dca3171ab4832
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwindowdc-class"></a>CWindowDC-Klasse
 Abgeleitet von `CDC`.  
@@ -36,7 +37,7 @@ Abgeleitet von `CDC`.
 class CWindowDC : public CDC  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -46,7 +47,7 @@ class CWindowDC : public CDC
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CWindowDC::m_hWnd](#m_hwnd)|Das `HWND`, an das `CWindowDC` angefügt ist.|  
   

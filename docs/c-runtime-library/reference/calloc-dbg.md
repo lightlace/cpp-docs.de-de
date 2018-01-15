@@ -32,11 +32,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a44f6b7ff132bc402e1b7256b298ce0d3ac9985
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4295dd84e8066de0906a6fcd7b154c94875f7f5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 Belegt einige Speicherblöcke im Heap mit zusätzlichem Speicherplatz für einen Debugheader und Überschreibungspuffer (nur Debugversion).  
@@ -71,13 +72,13 @@ void *_calloc_dbg(
  `linenumber`  
  Zeilennummer in der Quelldatei, in der die Zuordnung angefordert wurde, oder `NULL`.  
   
- Die `filename`- und `linenumber`-Parameter sind nur verfügbar, wenn `_calloc_dbg` explizit aufgerufen oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)-Präprozessorkonstante definiert wurde.  
+ Die Parameter `filename` und `linenumber` sind nur verfügbar, wenn `_calloc_dbg` explizit aufgerufen wurde oder die Präprozessorkonstante [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) definiert wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Bei erfolgreichem Abschluss gibt diese Funktion entweder einen Zeiger an den Benutzerteil des zuletzt belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt `NULL` zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [calloc](../../c-runtime-library/reference/calloc.md)-Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- `_calloc_dbg` ist eine Debugversion der [calloc](../../c-runtime-library/reference/calloc.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder Aufruf von `_calloc_dbg` zu einem Aufruf von `calloc` reduziert. `calloc` und `_calloc_dbg` belegen `num`-Speicherblöcke im Basisheap, jedoch bietet `_calloc_dbg` mehrere Debugfunktionen:  
+ `_calloc_dbg` ist eine Debugversion der [calloc](../../c-runtime-library/reference/calloc.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder `_calloc_dbg`-Aufruf zu einem `calloc`-Aufruf reduziert. `calloc` und `_calloc_dbg` belegen `num`-Speicherblöcke im Basisheap, jedoch bietet `_calloc_dbg` mehrere Debugfunktionen:  
   
 -   Puffer auf beiden Seiten des Benutzerteils des Blocks zum Prüfen auf Speicherverluste.  
   
@@ -89,11 +90,11 @@ void *_calloc_dbg(
   
  `_calloc_dbg` legt `errno` auf `ENOMEM` fest, wenn eine Speicherbelegung fehlschlägt. `EINVAL` wird zurückgegeben, wenn der benötigte Speicherplatz (einschließlich des bereits erwähnten Mehraufwands) `_HEAP_MAXREQ` überschreitet. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
+ Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_calloc_dbg`|\<crtdbg.h>|  
   

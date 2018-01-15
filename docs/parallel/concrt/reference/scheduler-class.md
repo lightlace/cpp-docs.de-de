@@ -31,11 +31,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69f26f344fd4cdccd2ff2a700dcd7e7d473e26a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-class"></a>Scheduler-Klasse
 Stellt eine Abstraktion für einen Concurrency Runtime-Planer dar.  
@@ -66,7 +67,7 @@ class Scheduler;
 |[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.|  
 |[ID](#id)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|  
 |[IsAvailableLocation](#isavailablelocation)|Bestimmt, ob eine angegebene Position im Zeitplanungsmodul verfügbar ist.|  
-|[Referenz](#reference)|Inkrementiert den Verweiszähler für den Planer.|  
+|[Verweis](#reference)|Inkrementiert den Verweiszähler für den Planer.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Der Windows-Ereignishandle übergebene Ursachen der `_Event` -Parameter signalisiert wird, wenn der Planer herunterfährt und zerstört. Zum Zeitpunkt der das Ereignis signalisiert wird, ist die gesamte Arbeit, die auf den Planer geplant wurde abgeschlossen. Durch diese Methode können mehrere Herunterfahrereignisse registriert werden.|  
 |[Version](#release)|Dekrementiert den Planer Verweiszähler.|  
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Die Standardrichtlinie für den Planer zurückgesetzt auf die Common Language Runtime-Standardeinstellungen. Das nächste Mal, das ein Standardplaner erstellt wird, das wird die Standardrichtlinien der Common Language Runtime verwendet.|  

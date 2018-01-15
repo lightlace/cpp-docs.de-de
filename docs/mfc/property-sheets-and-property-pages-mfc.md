@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 409bb0fadf994e793323c5585098f12c7f5f6c32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 877d83a6833b9505c326bc5312d2f151add07cb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Eigenschaftenblätter und Eigenschaftenseiten (MFC)
 Eine MFC [Dialogfeld](../mfc/dialog-boxes.md) für einen Blick "Registerkarte Dialogfeld" ausführen können, die durch das Integrieren von Eigenschaftenblätter und Eigenschaftenseiten. "Eigenschaftenblatt" in MFC aufgerufen, wird diese Art von Dialogfeldern, ähnlich wie bei vielen Dialogfeldern in Microsoft Word, Excel und Visual C++ enthält einen Stapel von im Registerkartenformat Blättern, ähnlich wie ein Stapel Dateiordner von vorne nach hinten oder eine Gruppe von kaskadierenden Windows angezeigt. Die Steuerelemente auf der Registerkarte "front" sind sichtbar. nur der Registerkarte "mit der Bezeichnung" wird auf der rückseitigen Registerkarten angezeigt. Eigenschaftenblätter sind besonders nützlich für das Verwalten einer großen Anzahl von Eigenschaften oder Einstellungen, die relativ sauber in verschiedene Gruppen liegen. In der Regel kann ein Eigenschaftenblatt eine Benutzeroberfläche vereinfachen, indem Sie mehrere separate Dialogfelder ersetzen.  

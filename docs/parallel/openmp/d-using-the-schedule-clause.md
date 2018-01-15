@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0566157f2dd4d9a278113f2246bd36671e3217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Unter Berücksichtigung des Zeitplans-Klausel
 Ein paralleler Bereich verfügt über mindestens eine Grenze, auf das Ende und möglicherweise zusätzliche Barrieren darin. Bei jeder Grenze müssen der letzte Thread auf das Eintreffen der anderen Mitgliedern des Teams warten. Um diese Wartezeit zu minimieren, sollten gemeinsam genutzte verteilt werden, damit alle Threads mit der Barriere auf etwa zur gleichen Zeit ankommen. Wenn ein Teil, freigegeben in Arbeit enthaltenen **für** erstellt, die `schedule` -Klausel kann für diesen Zweck verwendet werden.  
@@ -88,4 +89,4 @@ for(i=0; i<n; i++) {
   
  Wenn alle Threads zur gleichen Zeit starten der **statische** Zeitplan wird dazu führen, dass das Konstrukt in 125 Einheiten, bei der keine Synchronisierung ausgeführt. Aber nehmen wir an, dass ein Thread 100 Einheiten spät im, die empfangen wird. Warten Sie dann die restlichen sieben Threads 100 Einheiten auf die Grenze, und die Ausführungszeit für das gesamte-Konstrukt auf 225 erhöht.  
   
- Da sowohl die **dynamische** und **geführtes** Zeitpläne stellen Sie sicher, dass kein Thread wartet auf mehr als eine Einheit der Barriere, die verzögerte Threads bewirkt, dass ihre Ausführungszeiten für das Konstrukt nur auf 138 erhöhen Einheiten, um Verzögerungen bei der Synchronisierung möglicherweise erhöht. Wenn solche Verzögerungen nicht unerheblich sind, ist wichtig, dass die Anzahl der Synchronisierungen 1.000 ist **dynamische** jedoch nur 41 für **geführtes**, vorausgesetzt die Standardblockgröße eines. Mit einer Größe von 25 **dynamische** und **geführtes** sowohl beendet 150 Einheiten sowie Verzögerungen bei der über die erforderlichen Synchronisierungen, welche Anzahl jetzt nur 40 und 20 bzw..
+ Da sowohl die **dynamische** und **geführtes** Zeitpläne stellen Sie sicher, dass kein Thread wartet auf mehr als eine Einheit der Barriere, die verzögerte Threads bewirkt, dass ihre Ausführungszeiten für das Konstrukt nur auf 138 erhöhen Einheiten, um Verzögerungen bei der Synchronisierung möglicherweise erhöht. Wenn solche Verzögerungen nicht unerheblich sind, ist wichtig, dass die Anzahl der Synchronisierungen 1.000 ist **dynamische** jedoch nur 41 für **geführtes**, vorausgesetzt die Standardblockgröße eines. Mit einer Größe von 25 **dynamische** und **geführtes** sowohl beendet 150 Einheiten sowie Verzögerungen bei der über die erforderlichen Synchronisierungen, welche Anzahl jetzt nur 40 und 20 bzw.

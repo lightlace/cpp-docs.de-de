@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec11875a7004f8b833869440e59252325558cada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efe0a5f6dae2cece571eddabc4094ebb87df175b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-ole"></a>Menüs und Ressourcen (OLE)
 Diese Gruppe von Artikeln wird die Verwendung von Menüs und Ressourcen in MFC-OLE-dokumentanwendungen erläutert.  
@@ -52,7 +53,7 @@ Diese Gruppe von Artikeln wird die Verwendung von Menüs und Ressourcen in MFC-O
   
  Aufgrund dieser Probleme können mit Anwendungs-Assistenten erstellte OLE-dokumentanwendungen bis zu vier separate Menüs und Ressourcen der Accelerator-Tabelle verfügen. Diese werden aus den folgenden Gründen verwendet:  
   
-|Ressourcenname|Verwendung|  
+|Ressourcenname|Mit|  
 |-------------------|---------|  
 |**IDR_MAINFRAME**|In einer MDI-Anwendung, wenn keine Datei geöffnet ist oder in einer SDI-Anwendung unabhängig von der geöffneten Dateien verwendet. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|  
 |**IDR_\<Projekt > Typ**|In einer MDI-Anwendung verwendet, wenn Dateien geöffnet sind. Verwendet, wenn eine Anwendung eigenständig ausgeführt wird. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|  

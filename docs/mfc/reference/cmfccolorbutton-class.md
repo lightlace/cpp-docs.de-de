@@ -55,11 +55,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cedbcd404e0f9dd575fe19486e97382e5975196c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e49cec1c34af066d6f30cf70003252f28e2bb8dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton-Klasse
 Die `CMFCColorButton` und [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Klassen werden zusammen verwendet, um ein Farben-Auswahlsteuerelement zu implementieren.  
@@ -70,7 +71,7 @@ Die `CMFCColorButton` und [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar
 class CMFCColorButton : public CMFCButton  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -107,7 +108,7 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |`m_bAltColorDlg`|Ein boolescher Wert. Wenn `TRUE`, zeigt das Framework der [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Farbe Dialogfeld bei der *andere* Schaltfläche geklickt wird, oder, wenn `FALSE`, das System Farbe (Dialogfeld). Der Standardwert ist `TRUE`. Weitere Informationen finden Sie unter [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
 |`m_bAutoSetFocus`|Ein boolescher Wert. Wenn `TRUE`, das Framework legt den Fokus auf das Menü Farbe fest, wenn das Menü angezeigt wird, oder wenn `FALSE`, ändert sich nicht auf den Fokus. Der Standardwert ist `TRUE`.|  

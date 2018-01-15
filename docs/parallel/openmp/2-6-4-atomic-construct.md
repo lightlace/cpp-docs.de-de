@@ -1,34 +1,35 @@
 ---
-title: "2.6.4 atomic-Konstrukt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.4 atomic-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.4 atomic-Konstrukt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `atomic` Richtlinie stellt sicher, dass ein bestimmten Speicherbereich atomar aktualisiert wird, anstatt das Verfügbarmachen für die Möglichkeit, mehrere gleichzeitige Threads schreiben. Die Syntax der `atomic` Richtlinie lautet wie folgt:  
+# <a name="264-atomic-construct"></a>2.6.4 atomic-Konstrukt
+Die `atomic` Richtlinie stellt sicher, dass eine bestimmte Speicheradresse atomar aktualisiert wird, anstatt eine Offenlegung für die Möglichkeit, mehrere gleichzeitige Threads zu schreiben. Die Syntax der `atomic` Richtlinie lautet wie folgt:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- Die Ausdrucksanweisung muss eine der folgenden Formen haben:  
+ Die Ausdrucksanweisung muss einen der folgenden Formate aufweisen:  
   
- *X binop*= *Ausdruck*  
+ *X binop*= *Expr*  
   
  x++  
   
@@ -42,17 +43,17 @@ Die `atomic` Richtlinie stellt sicher, dass ein bestimmten Speicherbereich atoma
   
 -   *X* ist ein Lvalue-Ausdruck mit skalaren Typ.  
   
--   *Expr* ist ein Ausdruck mit skalaren Typ und keinen Verweis auf das Objekt von benannten *x*.  
+-   *Expr* ist ein Ausdruck mit skalaren Typ und keinen Verweis auf das Objekt vom angegebenen *x*.  
   
--   `binop` kein überladener Operator und eines +, *, -, /, &, ^, &#124; <\<, oder >>.  
+-   `binop`ist kein überladenen Operators und ist von +, *, -, /, &, ^, &#124; <\<, oder >>.  
   
- Zwar Implementierung definiert, ob eine Implementierung ersetzt `atomic` Direktiven mit **kritische** Direktiven, die den gleichen eindeutigen *Namen*,  `atomic` Richtlinie ermöglicht bessere Optimierung. Häufig Hardware Anweisungen stehen zur Verfügung, die atomare Aktualisierung mit der geringsten Aufwand ausführen kann.  
+ Obwohl es Implementierung definiert ist, gibt an, ob eine Implementierung ersetzt `atomic` Direktiven mit **kritische** Direktiven, die den gleichen eindeutigen *Name*, die `atomic` Richtlinie ermöglicht eine bessere Optimierung. Häufig Hardware Anweisungen stehen zur Verfügung, das atomarische Update mit der geringsten Aufwand ausführen kann.  
   
- Nur für das Laden und Speichern des Objekts bezeichneten *x* atomar sind; die Auswertung der *Expr* ist nicht atomar. Um Racebedingungen zu vermeiden, sollten alle Updates des Speicherorts parallel mit geschützt werden die `atomic` Richtlinie, mit Ausnahme derjenigen, die bekanntermaßen frei von Racebedingungen.  
+ Nur für das Laden und Speichern des Objekts, das vom angegebenen *x* sind atomar; die Auswertung der *Expr* ist nicht atomar. Um Racebedingungen zu vermeiden, sollten alle Updates des Speicherorts parallel mit geschützt werden die `atomic` Richtlinie, mit Ausnahme derjenigen, die bekanntermaßen frei von Racebedingungen.  
   
- Einschränkungen auf die `atomic` Richtlinie lauten wie folgt:  
+ Einschränkungen für die `atomic` Richtlinie lauten wie folgt:  
   
--   Alle atomic Verweise auf den Speicherort X in der gesamten Anwendung sind erforderlich, um einen kompatiblen Typ aufweisen.  
+-   Alle atomic Verweise auf den Speicherort X in der gesamten Anwendung muss einen kompatiblen Typ sein.  
   
 ## <a name="examples"></a>Beispiele:  
   

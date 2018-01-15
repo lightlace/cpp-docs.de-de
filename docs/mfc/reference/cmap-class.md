@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b745bb345377336377e46b9e49a45b340a2609b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmap-class"></a>CMap-Klasse
 Eine Wörterbuchauflistungsklasse, die eindeutigen Schlüsseln Werte zuordnet.  
@@ -77,11 +78,11 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `ARG` *_* `VALUE`  
  Für verwendeten Datentyp `VALUE` Argumente, in der Regel einen Verweis auf `VALUE`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-structures"></a>Öffentliche Strukturen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|Eine geschachtelte Struktur mit einem Schlüssel-Wert und den Wert des zugeordneten Objekts.|  
   
@@ -213,7 +214,7 @@ void GetNextAssoc(
  `rNextPosition`  
  Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextAssoc` oder `GetStartPosition` aufrufen.  
   
- *SCHLÜSSEL*  
+ *KEY*  
  Vorlagenparameter, den Typ des Schlüssels der Zuordnung angibt.  
   
  `rKey`  

@@ -1,142 +1,143 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Ereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Click-Ereignis, Benutzerdefinierte Ereignisse"
-  - "ClickIn-Ereignis"
-  - "COleControl-Klasse, Benutzerdefinierte Ereignisse"
-  - "Benutzerdefinierte Ereignisse"
-  - "Benutzerdefinierte Ereignisse, Hinzufügen zu ActiveX-Steuerelementen"
-  - "EVENT_CUSTOM-Makro"
-  - "EVENT_CUSTOM-Präfix"
-  - "Ereignisse [C++], ActiveX-Steuerelemente"
-  - "FireClickIn-Ereignis"
-  - "FireEvent-Methode, Hinzufügen von benutzerdefinierten Ereignissen"
-  - "InCircle-Methode"
-  - "MFC-ActiveX-Steuerelemente, Ereignisse"
+title: "MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], events [MFC]
+- EVENT_CUSTOM prefix [MFC]
+- custom events [MFC], adding to ActiveX controls
+- EVENT_CUSTOM macro [MFC]
+- InCircle method [MFC]
+- ClickIn event
+- FireClickIn event
+- COleControl class [MFC], custom events [MFC]
+- Click event, custom events [MFC]
+- events [MFC], ActiveX controls
+- custom events [MFC]
+- FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Ereignissen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Benutzerdefinierte Ereignisse unterscheiden sich aus vordefinierten Ereignissen, da sie nicht automatisch durch Klasse `COleControl` ausgelöst werden.  Ein benutzerdefiniertes Ereignis feststellt eine bestimmte Aktion, bestimmt vom Steuerelemententwickler, als Ereignis.  Die Ereigniszuordnungseinträge für benutzerdefinierte Ereignisse werden durch das Makro `EVENT_CUSTOM` dargestellt.  Der folgende Abschnitt implementiert ein benutzerdefiniertes Ereignis für ein ActiveX\-Steuerelementprojekt, das mithilfe des ActiveX\-Steuerelement\-Assistenten erstellt wurde.  
+# <a name="mfc-activex-controls-adding-custom-events"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen
+Benutzerdefinierte Ereignisse unterscheiden sich von vordefinierten Ereignissen, da sie nicht automatisch von-Klasse ausgelöst wurden `COleControl`. Ein benutzerdefiniertes Ereignis erkennt eine bestimmte Aktion vom Entwickler Steuerelements als Ereignis bestimmt. Der Ereignis-Zuordnungseinträge für benutzerdefinierte Ereignisse werden durch dargestellt die `EVENT_CUSTOM` Makro. Im folgende Abschnitt implementiert ein benutzerdefiniertes Ereignis für ein ActiveX-Steuerelement-Projekt, das mit dem ActiveX-Steuerelement-Assistenten erstellt wurde.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Hinzufügen eines benutzerdefinierten Ereignisses mit dem Assistenten zum Hinzufügen von Ereignissen  
- Im folgenden Verfahren wird ein bestimmtes benutzerdefiniertes Ereignis, ClickIn hinzu.  Sie können diese Prozedur verwenden, um andere benutzerdefinierte Ereignisse hinzuzufügen.  Ersetzen Sie den benutzerdefinierten Ereignisnamen und die Parameter für den ClickIn\-Ereignisnamen und Parameter zu variieren.  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Hinzufügen eines benutzerdefinierten Ereignisses mit der Ereignis-Assistent zum Hinzufügen von  
+ Das folgende Verfahren wird ein bestimmtes benutzerdefiniertes Ereignis ClickIn hinzugefügt. Sie können dieses Verfahren verwenden, andere benutzerdefinierte Ereignisse hinzufügen. Ersetzen Sie den Ereignisnamen Ihres benutzerdefinierten und seine Parameter für die ClickIn Ereignisnamen und Parameter an.  
   
-#### So fügen Sie das benutzerdefinierte Ereignis ClickIn mit dem Assistenten zum Hinzufügen von Ereignissen hinzufügen  
+#### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>So fügen Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignis hinzu  
   
-1.  Laden Sie das Projekt des Steuerelements.  
+1.  Laden Sie das Steuerelementprojekt.  
   
-2.  Klicken Sie in der Klassenansicht auf die ActiveX\-Steuerelementklasse mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
+2.  In der Klassenansicht mit der rechten Maustaste der ActiveX-Steuerelementklasse, um das Kontextmenü zu öffnen.  
   
-3.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Ereignis hinzufügen**.  
+3.  Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Add Event**.  
   
-     Dadurch wird der Assistent zum Hinzufügen von Ereignissen.  
+     Dies öffnet den Assistenten zum Hinzufügen eines Ereignisses.  
   
-4.  **Ereignisname** Im Feld zuerst wählen Sie jedes vorhandene Ereignis aus, klicken Sie auf das Optionsfeld **Benutzerdefiniert**, dann den Typ `ClickIn`.  
+4.  In der **Ereignisname** Feld Sie zunächst alle vorhandenes Ereignis auswählen, und klicken Sie auf die **benutzerdefinierte** Radio Schaltfläche aus, und geben Sie dann `ClickIn`.  
   
-5.  Im Feld **Interner Name** geben Sie den Namen der Auslösenfunktion des Ereignisses ein.  Für dieses Beispiel verwenden Sie den Standardwert, der im Assistenten zum Hinzufügen von Ereignissen \(`FireClickIn`\) bereitgestellt wird.  
+5.  In der **internen Namen** geben den Namen der Funktion für das Ereignis ausgelöst. In diesem Beispiel verwenden Sie den Standardwert, der durch den Assistenten zum Hinzufügen von Ereignis bereitgestellt (`FireClickIn`).  
   
-6.  Fügen Sie einen Parameter hinzu, die `xCoord`\-Typ \( `OLE_XPOS_PIXELS`\), mit **Parametername** und **Parametertyp** \-Steuerelemente.  
+6.  Fügen Sie einen Parameter namens `xCoord` (Typ `OLE_XPOS_PIXELS`) unter Verwendung der **Parametername** und **Parametertyp** Steuerelemente.  
   
-7.  Fügen Sie einen zweiten Parameter hinzu, die `yCoord`\-Typ \( `OLE_YPOS_PIXELS`\).  
+7.  Fügen Sie einen zweiten Parameter namens `yCoord` (Typ `OLE_YPOS_PIXELS`).  
   
-8.  Klicken Sie auf **Fertig stellen**, um das Ereignis zu erstellen.  
+8.  Klicken Sie auf **Fertig stellen** das Ereignis erstellt.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a> Assistent zum Hinzufügen von Ereignissenen\-Änderungen für benutzerdefinierte Ereignisse  
- Wenn Sie ein benutzerdefiniertes Ereignis hinzufügen, wird der Assistent zum Hinzufügen von Ereignissen Änderungen der Steuerelementklasse vor. H, .CPP und IDL\-Dateien.  Die folgenden Codebeispiele zum ClickIn\-Ereignis bestimmt.  
+##  <a name="_core_classwizard_changes_for_custom_events"></a>Änderungen der Ereignis-Assistenten für benutzerdefinierte Ereignisse hinzufügen  
+ Wenn Sie ein benutzerdefiniertes Ereignis hinzufügen, werden mit dem Assistenten zum Hinzufügen von Ereignis Änderungen an der Control-Klasse. H. CPP und. IDL-Dateien. Die folgenden Codebeispiele sind speziell für die ClickIn-Ereignis.  
   
- Die folgenden Zeilen werden an den Header hinzugefügt \(.H\) Datei der Steuerelementklasse:  
+ Die folgenden Zeilen, die dem Header hinzugefügt werden (. H)-Datei der Steuerelementklasse:  
   
- [!CODE [NVC_MFC_AxUI#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#7)]  
+ [!code-cpp[NVC_MFC_AxUI#7](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_1.h)]  
   
- Dieser Code deklariert eine Inline\-Funktion Namen `FireClickIn`, die die [COleControl::FireEvent](../Topic/COleControl::FireEvent.md) dem Ereignis und den Parametern ClickIn aufruft, die, Sie mit dem Assistenten zum Hinzufügen von Ereignissen definiert haben.  
+ Dieser Code deklariert eine Inlinefunktion aufgerufen `FireClickIn` damaligen [COleControl::](../mfc/reference/colecontrol-class.md#fireevent) mit dem ClickIn-Ereignis und die Parameter Sie mithilfe des Assistenten zum Hinzufügen von Ereignis definiert.  
   
- Außerdem wird die folgende Zeile zur Ereigniszuordnung für das Steuerelement hinzugefügt, in der Implementierungsdatei \(.CPP\) der Steuerelementklasse:  
+ Darüber hinaus wird die folgende Zeile auf der ereigniszuordnung für das Steuerelement, in der Implementierung hinzugefügt (. Der Steuerelementklasse CPP)-Datei:  
   
- [!CODE [NVC_MFC_AxUI#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#8)]  
+ [!code-cpp[NVC_MFC_AxUI#8](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_2.cpp)]  
   
- In diesem Code wird dem Ereignis ClickIn der Inlinefunktion `FireClickIn` auf und übergibt die Parameter, die Sie mit dem Assistenten zum Hinzufügen von Ereignissen definiert haben.  
+ Dieser Code ordnet das ClickIn Inlinefunktion `FireClickIn`, die Sie mithilfe des Assistenten zum Hinzufügen von Ereignis definierten Parametern übergeben.  
   
- Schließlich wird die folgende Zeile in die IDL\-Datei des Steuerelements hinzugefügt:  
+ Schließlich wird die folgende Zeile des Steuerelements hinzugefügt. IDL-Datei:  
   
- [!CODE [NVC_MFC_AxUI#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#9)]  
+ [!code-cpp[NVC_MFC_AxUI#9](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_3.idl)]  
   
- Diese Zeile weist dem ClickIn\-Ereignis ein die bestimmte ID\-Nummer zu, aufgezeichnet von der Position des Ereignisses in der Assistent zum Hinzufügen von Ereignissenen\-Ereignisliste.  Die Liste des Eintrags im Ereignishandler ermöglicht einem Container, um das Ereignis zu bedenken.  Beispielsweise könnte der ausgeführt werden Handler zur Verfügungcode, wenn das Ereignis ausgelöst wird.  
+ Diese Zeile weist dem ClickIn-Ereignis eine bestimmte ID-Nummer der Position des Ereignisses in der Ereignisliste des Assistenten zum Hinzufügen von Ereignis entnommen. Der Eintrag in der Ereignisliste kann Container für das Ereignis zu erwarten. Es kann z. B. Handlercode ausgeführt werden, wenn das Ereignis ausgelöst wird bereitstellen.  
   
-##  <a name="_core_calling_fireclickin"></a> Aufrufen von FireClickIn  
- Nachdem Sie das benutzerdefinierte Ereignis ClickIn mit dem Assistenten zum Hinzufügen von Ereignissen hinzugefügt haben, müssen Sie entscheiden, sobald das Ereignis ausgelöst werden soll.  Sie erreichen dies, indem Sie `FireClickIn` aufrufen, wenn die richtige Aktion auftreten.  Für diese Diskussion verwendet das Steuerelement die `InCircle`\-Funktion innerhalb eines `WM_LBUTTONDOWN` Meldungshandlers, um das ClickIn\-Ereignis auszulösen, wenn ein Benutzer in einer Kreis\- oder elliptischen Bereichs klicken.  Im folgenden Verfahren werden die Handler `WM_LBUTTONDOWN` hinzu.  
+##  <a name="_core_calling_fireclickin"></a>FireClickIn aufrufen  
+ Nun, dass Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignis hinzugefügt haben, müssen Sie entscheiden, wenn dieses Ereignis wird ausgelöst werden. Dazu rufen `FireClickIn` Wenn die entsprechende Aktion ausgeführt wird. Bei dieser Erläuterung verwendet das Steuerelement die `InCircle` Funktion innerhalb einer `WM_LBUTTONDOWN` Message-Handler für das Auslösen der ClickIn-Ereignis, wenn ein Benutzer in einer kreisförmigen oder elliptischen Bereich klickt. Die folgende Prozedur fügt der `WM_LBUTTONDOWN` Handler.  
   
-#### Um einen Meldungshandler mit dem Assistenten zum Hinzufügen von Ereignissen hinzufügen  
+#### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Message-Handler mit den Assistenten zum Hinzufügen von Ereignis hinzugefügt werden.  
   
-1.  Laden Sie das Projekt des Steuerelements.  
+1.  Laden Sie das Steuerelementprojekt.  
   
-2.  In der Klassenansicht wählen Sie die ActiveX\-Steuerelementklasse aus.  
+2.  Wählen Sie in der Klassenansicht die ActiveX-Steuerelement-Klasse.  
   
-3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche **Meldungen**.  
+3.  Klicken Sie im Eigenschaftenfenster auf die **Nachrichten** Schaltfläche.  
   
-     Das Eigenschaftenfenster zeigt eine Liste der Meldungen an, die das ActiveX\-Steuerelement bearbeitet werden können.  Jede Nachricht, die in Fettdruck wurde veranschaulicht wird, bereits eine Handlerfunktion, die an sie zugewiesen wird.  
+     Das Eigenschaftenfenster zeigt eine Liste der Nachrichten, die von der ActiveX-Steuerelement behandelt werden können. Jede Nachricht, die bereits in fetter Schrift hat eine Handlerfunktion zugewiesen.  
   
-4.  Wählen Sie im Eigenschaftenfenster die Meldung aus, die Sie bearbeiten möchten.  Wählen Sie für dieses Beispiel `WM_LBUTTONDOWN` aus.  
+4.  Wählen Sie im Fenster Eigenschaften die Nachricht, die Sie behandeln möchten. Wählen Sie für dieses Beispiel `WM_LBUTTONDOWN`.  
   
-5.  Wählen Sie im Dropdown\-Listenfeld rechts, und wählen Sie **\<Add\> OnLButtonDown** aus.  
+5.  Wählen Sie aus dem Dropdown-Listenfeld auf der rechten Seite  **\<hinzufügen > OnLButtonDown**.  
   
-6.  Doppelklicken Sie auf die neue Handlerfunktion in der Klassenansicht, um zum Meldungshandlercode in der Implementierungsdatei \(.CPP\) des ActiveX\-Steuerelements zu springen.  
+6.  Doppelklicken Sie auf die neue Handlerfunktion in der Klassenansicht springen zu Code in der Implementierung des Nachricht (. CPP)-Datei des ActiveX-Steuerelements.  
   
- Im folgenden Codebeispiel wird die **InCircle**\-Funktion auf, wenn auf die linke Maustaste im Steuerfensters geklickt wird.  Dieses Beispiel kann in der `WM_LBUTTONDOWN`\-Handlerfunktion, `OnLButtonDown` gefunden werden, in der Zusammenfassung [Circ\-Beispiel](../top/visual-cpp-samples.md).  
+ Der folgende code Beispiel ruft die **InCircle** Funktion jedes Mal, wenn die linke Maustaste in das Fenster des Steuerelements geklickt wird. In diesem Beispiel finden Sie in der `WM_LBUTTONDOWN` Handlerfunktion, `OnLButtonDown`in der [für CIRC](../visual-cpp-samples.md) abstrakte.  
   
- [!CODE [NVC_MFC_AxUI#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#10)]  
+ [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   
 > [!NOTE]
->  Wenn der Assistent zum Hinzufügen von Ereignissen Meldungshandler für Maustastenaktionen erstellt wird, wird ein Aufruf an den gleichen Meldungshandler der Basisklasse automatisch hinzugefügt.  Entfernen Sie diesen Aufruf.  Wenn das Steuerelement eine der vordefinierten Mausmeldungen Meldungshandler verwendet, müssen die in der Basisklasse aufgerufen werden, um sicherzustellen, dass ordnungsgemäß Mausauswahl behandelt wird.  
+>  Wenn der Assistent zum Hinzufügen von Ereignis Meldungshandler für Schaltfläche Mausaktionen erstellt, ist ein Aufruf an den gleichen Meldungshandler der Basisklasse automatisch hinzugefügt. Entfernen Sie diesen Aufruf nicht. Wenn das Steuerelement eine der vordefinierten Maus Nachrichten verwendet wird, müssen die Message-Handler in der Basisklasse aufgerufen werden, um sicherzustellen, dass die mausaufzeichnung ordnungsgemäß verarbeitet wird.  
   
- Im folgenden Beispiel löst sie das Ereignis aus, wenn der Klick innerhalb eines kreisförmigen oder elliptischen Bereichs im Steuerelement auftritt.  Um dieses Verhalten zu erreichen, können Sie die Funktion `InCircle` in der Implementierung des Steuerelements platzieren \(.CPP\):  
+ Im folgenden Beispiel wird das Ereignis ausgelöst, nur bei der auf in einer kreisförmigen oder elliptischen Bereich innerhalb des Steuerelements ausgelöst. Um dieses Verhalten zu erreichen, setzen Sie die `InCircle` -Funktion in der Implementierung des Steuerelements (. CPP)-Datei:  
   
- [!CODE [NVC_MFC_AxUI#11](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#11)]  
+ [!code-cpp[NVC_MFC_AxUI#11](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_5.cpp)]  
   
- Außerdem müssen Sie die folgende Deklaration `InCircle` der Funktion des Headers des Steuerelements hinzufügen \(.H\) Datei:  
+ Sie müssen auch die folgende Deklaration hinzufügen der `InCircle` Funktion, um die Control-Header (. H)-Datei:  
   
- [!CODE [NVC_MFC_AxUI#12](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#12)]  
+ [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a> Benutzerdefinierte Ereignisse mit vordefinierten Namen  
- Sie können benutzerdefinierte Ereignisse mit demselben Namen wie vordefinierte Ereignisse erstellt, z Sie beide im gleichen Steuerelement nicht implementieren können.  Beispielsweise können Sie ein benutzerdefiniertes Ereignis erstellen, das auf aufgerufen wird, der nicht ausgelöst, als der vordefinierte Ereignis Klick für gewöhnlich ausgelöst würde.  Sie könnten das Click\-Ereignis dann jederzeit auslösen, indem Sie seine Auslösenfunktion aufgerufen haben.  
+##  <a name="_core_custom_events_with_stock_names"></a>Benutzerdefinierte Ereignisse mit vordefinierten Namen  
+ Sie können benutzerdefinierte Ereignisse mit dem gleichen Namen wie die vordefinierten Ereignissen erstellen, jedoch beide im gleichen Steuerelement nicht implementieren kann. Sie möchten z. B. erstellen ein benutzerdefiniertes Ereignisses aufgerufen, klicken Sie auf, die nicht ausgelöst wird, wenn die vordefinierten Ereignisses auf normalerweise auslösen würde. Sie konnte das Click-Ereignis dann zu einem beliebigen Zeitpunkt auslösen, durch Aufrufen der Funktion ausgelöst.  
   
- Im folgenden Verfahren wird ein benutzerdefiniertes Click\-Ereignis hinzu.  
+ Das folgende Verfahren fügt eine benutzerdefinierte auf Ereignis.  
   
-#### Um ein benutzerdefiniertes Ereignis hinzufügen, das einen vordefinierten Ereignisnamen verwendet  
+#### <a name="to-add-a-custom-event-that-uses-a-stock-event-name"></a>Ein benutzerdefiniertes Ereignis hinzufügen verwendet, eine vordefinierte Ereignisname  
   
-1.  Laden Sie das Projekt des Steuerelements.  
+1.  Laden Sie das Steuerelementprojekt.  
   
-2.  Klicken Sie in der Klassenansicht auf die ActiveX\-Steuerelementklasse mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
+2.  In der Klassenansicht mit der rechten Maustaste der ActiveX-Steuerelementklasse, um das Kontextmenü zu öffnen.  
   
-3.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Ereignis hinzufügen**.  
+3.  Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Add Event**.  
   
-     Dadurch wird der Assistent zum Hinzufügen von Ereignissen.  
+     Dies öffnet den Assistenten zum Hinzufügen eines Ereignisses.  
   
-4.  In der Dropdownliste **Ereignisname** Wählen Sie einen vordefinierten Ereignisnamen aus.  In diesem Beispiel die Option **Klicken** aus.  
+4.  In der **Ereignisname** Dropdown-Liste, wählen Sie einen vordefinierten Ereignisnamen. Wählen Sie für dieses Beispiel **klicken Sie auf**.  
   
-5.  Für **Ereignistyp** die Option **Benutzerdefiniert** aus.  
+5.  Für **Ereignistyp**Option **benutzerdefinierte**.  
   
-6.  Klicken Sie auf **Fertig stellen**, um das Ereignis zu erstellen.  
+6.  Klicken Sie auf **Fertig stellen** das Ereignis erstellt.  
   
-7.  Aufruf `FireClick` an den entsprechenden Stellen im Code.  
+7.  Rufen Sie `FireClick` an den entsprechenden Stellen im Code.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)   
- [MFC\-ActiveX\-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
- [COleControl Class](../mfc/reference/colecontrol-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC-ActiveX-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
+ [COleControl-Klasse](../mfc/reference/colecontrol-class.md)

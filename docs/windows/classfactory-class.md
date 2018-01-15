@@ -1,32 +1,33 @@
 ---
-title: "ClassFactory-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ClassFactory-Klasse"
+title: ClassFactory-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory
+dev_langs: C++
+helpviewer_keywords: ClassFactory class
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c37c016809d31fcb072f23768e9f54313331016
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ClassFactory-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Implementiert die grundlegende Funktion der IClassFactory\-Schnittstelle.  
+# <a name="classfactory-class"></a>ClassFactory-Klasse
+Implementiert die grundlegende Funktion der IClassFactory-Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -44,9 +45,9 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `I0`  
- Die zeroth Schnittstelle.  
+ Die nullte-Schnittstelle.  
   
  `I1`  
  Die erste Schnittstelle.  
@@ -54,31 +55,31 @@ class ClassFactory : public Details::RuntimeClass<
  `I2`  
  Die zweite Schnittstelle.  
   
-## Hinweise  
- Verwenden Sie `ClassFactory`, um eine benutzerdefinierte Factoryimplementierung bereitzustellen.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie `ClassFactory` eine benutzerdefinierte Factoryimplementierung zur Verfügung gestellt.  
   
- Im folgenden Programmierungsmuster zeigt, wie die [Implementiert](../windows/implements-structure.md)\-Struktur verwendet, um mehr als drei Schnittstellen auf einer Klassenfactory anzugeben.  
+ Die folgenden programmierschema veranschaulicht, wie die [implementiert](../windows/implements-structure.md) Struktur, um mehr als drei Schnittstellen auf einer Klassenfactory anzugeben.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[ClassFactory::ClassFactory\-Konstruktor](../windows/classfactory-classfactory-constructor.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[ClassFactory::ClassFactory-Konstruktor](../windows/classfactory-classfactory-constructor.md)||  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[ClassFactory::AddRef\-Methode](../windows/classfactory-addref-method.md)|Inkrementiert den Verweiszähler für das aktuelle ClassFactory\-Objekt.|  
-|[ClassFactory::LockServer\-Methode](../windows/classfactory-lockserver-method.md)|Inkrementiert oder wird die Anzahl der zugrunde liegenden Objekte, die vom aktuellen ClassFactory\-Objekt nachverfolgt werden.|  
-|[ClassFactory::QueryInterface\-Methode](../windows/classfactory-queryinterface-method.md)|Ruft einen Zeiger auf eine Schnittstelle ab, die durch Parameter angegeben wird.|  
-|[ClassFactory::Release\-Methode](../windows/classfactory-release-method.md)|Dekrementiert den Verweiszähler für das aktuelle ClassFactory\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[ClassFactory::AddRef-Methode](../windows/classfactory-addref-method.md)|Inkrementiert den Verweiszähler für das aktuelle ClassFactory-Objekt.|  
+|[ClassFactory::LockServer-Methode](../windows/classfactory-lockserver-method.md)|Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte, die vom aktuellen Objekt ClassFactory nachverfolgt werden.|  
+|[ClassFactory::QueryInterface-Methode](../windows/classfactory-queryinterface-method.md)|Ruft einen Zeiger auf die Schnittstelle, die durch Parameter angegeben wird.|  
+|[ClassFactory::Release-Methode](../windows/classfactory-release-method.md)|Dekrementiert den Verweiszähler für das aktuelle ClassFactory-Objekt.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `I0`  
   
  `ChainInterfaces`  
@@ -99,11 +100,11 @@ class ClassFactory : public Details::RuntimeClass<
   
  `ClassFactory`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)   
- [RuntimeClassType\-Enumeration](../windows/runtimeclasstype-enumeration.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft:: wrl-Namespace](../windows/microsoft-wrl-namespace.md)   
+ [RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md)

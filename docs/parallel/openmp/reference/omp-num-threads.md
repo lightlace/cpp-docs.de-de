@@ -1,62 +1,61 @@
 ---
-title: "OMP_NUM_THREADS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_NUM_THREADS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_NUM_THREADS OpenMP environment variable"
+title: OMP_NUM_THREADS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_NUM_THREADS
+dev_langs: C++
+helpviewer_keywords: OMP_NUM_THREADS OpenMP environment variable
 ms.assetid: 4b558124-1387-4c30-a6a5-ff5345a9ced6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a5f6af2ff547ddb95b6d4ef6b9c6d353399c17c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# OMP_NUM_THREADS
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Legt die maximale Anzahl von Threads im parallelen Bereichs fest, sofern kein Überschreiben durch [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oder [num\_threads](../../../parallel/openmp/reference/num-threads.md).  
+# <a name="ompnumthreads"></a>OMP_NUM_THREADS
+Legt die maximale Anzahl von Threads in den parallelen Bereich, es sei denn, durch Überschreiben [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oder [Num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `num`  
- Die maximale Anzahl von Threads, die Sie im parallelen Bereich soll, und 64 in der Visual C\+\+\-Implementierung.  
+ Die maximale Anzahl von Threads ab, die in den parallelen Bereich, bis zu 64 in der Visual C++-Implementierung werden sollen.  
   
-## Hinweise  
- Die **OMP\_NUM\_THREADS** Umgebungsvariable kann über die [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)\-Funktion oder durch [num\_threads](../../../parallel/openmp/reference/num-threads.md)überschrieben werden.  
+## <a name="remarks"></a>Hinweise  
+ Die **OMP_NUM_THREADS** -Umgebungsvariable kann überschrieben werden, indem die [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) Funktion oder durch [Num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- Der Standardwert von `num` in der Visual C\+\+\-Implementierung des OpenMP\-Standards ist die Anzahl der virtuellen Prozessoren, darunter die Hyperthreading CPUs.  
+ Der Standardwert von `num` in der Visual C++-Implementierung des OpenMP-Standards ist die Anzahl virtueller Prozessoren, einschließlich der Hyperthreading-CPUs.  
   
- Weitere Informationen finden Sie unter [4.2 OMP\_NUM\_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
+ Weitere Informationen finden Sie unter [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
-## Beispiel  
- Mit dem folgenden Befehl wird die **OMP\_NUM\_THREADS** Umgebungsvariable auf 16 fest:  
+## <a name="example"></a>Beispiel  
+ Der folgende Befehl legt die **OMP_NUM_THREADS** -Umgebungsvariable um 16:  
   
 ```  
 set OMP_NUM_THREADS=16  
 ```  
   
- Der folgende Befehl zeigt die aktuelle Einstellung der **OMP\_NUM\_THREADS** Umgebungsvariablen an:  
+ Der folgende Befehl zeigt die aktuelle Einstellung der **OMP_NUM_THREADS** -Umgebungsvariablen angegeben:  
   
 ```  
 set OMP_NUM_THREADS  
 ```  
   
-## Siehe auch  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>Siehe auch  
+ [Umgebungsvariablen](../../../parallel/openmp/reference/openmp-environment-variables.md)

@@ -91,11 +91,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e1099d7d19ec27c55442ce6a0eff61486346466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed8ccb584b9bf750e1f17da9ce3e0bf71058abbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd-Klasse
 Die `CMultiPaneFrameWnd` -Klasse erweitert [CPaneFrameWnd Klasse](../../mfc/reference/cpaneframewnd-class.md). Es können mehrere Bereiche unterstützt werden. Anstelle eines einzelnen eingebetteten Handles auf eine Steuerleiste `CMultiPaneFrameWnd` enthält eine [CPaneContainerManager Klasse](../../mfc/reference/cpanecontainermanager-class.md) -Objekt, das dem Benutzer ermöglicht, eine Andocken `CMultiPaneFrameWnd` zu einem anderen und dynamisch mehrere Gleitkommawert erstellen, die im Registerkartenformat Windows.  
@@ -108,7 +109,7 @@ Die `CMultiPaneFrameWnd` -Klasse erweitert [CPaneFrameWnd Klasse](../../mfc/refe
 class CMultiPaneFrameWnd : public CPaneFrameWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

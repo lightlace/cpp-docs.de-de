@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7c1681daf0f0ccae7d6307b2f6c000c01a313c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 734b118cfdd1523379e9fb1e5e157bf9da9824af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP in Visual C++
 Die OpenMP-C- und C++-Anwendungsprogrammierschnittstelle können Sie Anwendungen schreiben, die effektiv auf mehrere Prozessoren verwenden. Visual C++ unterstützt den OpenMP 2.0-Standard.  
@@ -40,7 +41,7 @@ Die OpenMP-C- und C++-Anwendungsprogrammierschnittstelle können Sie Anwendungen
  OpenMP-C- und C++-API erläutert, wie in der 2.0-Versionsspezifikation von Prüfungsgremium der OpenMP-Architektur beschrieben.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [/ OpenMP (Aktivieren der OpenMP 2.0-Unterstützung)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
+ [/openmp (OpenMP 2.0-Unterstützung aktivieren)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
  Bewirkt, dass der Compiler verarbeiten `#pragma omp`.  
   
  [Vordefinierte Makros](../../preprocessor/predefined-macros.md)  

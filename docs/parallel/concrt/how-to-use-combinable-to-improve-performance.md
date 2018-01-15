@@ -1,70 +1,77 @@
 ---
-title: "Gewusst wie: Verbessern der Leistung mithilfe von combinable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combinable-Klasse, Beispiel"
-  - "Verbessern der parallelen Leistung mit Combinable [Concurrency Runtime]"
+title: 'Vorgehensweise: Verbessern der Leistung mithilfe von combinable | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- combinable class, example
+- improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dea28bd31812449e34bb481d316070f8f21aaede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Verbessern der Leistung mithilfe von combinable
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Beispiel wird gezeigt, wie die [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)\-Klasse verwendet wird, um die Summe der Zahlen in einem [std::array](../../standard-library/array-class-stl.md)\-Objekt zu berechnen, bei denen es sich um Primzahlen handelt.  Die `combinable`\-Klasse steigert die Leistung, indem sie Freigabezustand ausschließt.  
+# <a name="how-to-use-combinable-to-improve-performance"></a>Gewusst wie: Verbessern der Leistung mithilfe von combinable
+Dieses Beispiel zeigt, wie die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Klasse berechnet die Summe der Zahlen in einer [Std:: Array](../../standard-library/array-class-stl.md) Objekt, die Primzahlen sind. Die `combinable`-Klasse steigert die Leistung, indem sie Freigabezustand ausschließt.  
   
 > [!TIP]
->  In einigen Fällen kann die parallele Zuordnung \([concurrency::parallel\_transform](../Topic/parallel_transform%20Function.md)\) und eine Reduzierung \([concurrency::parallel\_reduce](../Topic/parallel_reduce%20Function.md)\) zu Leistungsverbesserungen im Vergleich zu `combinable` führen.  Ein Beispiel, in dem Zuordnungs\- und Reduzierungsoperationen verwendet werden, und das die gleichen Ergebnisse wie dieses Beispiel ergibt, finden Sie unter [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).  
+>  In einigen Fällen parallele Zuordnung ([Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)) und zur Reduzierung der ([Concurrency:: Parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) bieten leistungsverbesserungen über `combinable`. Ein Beispiel, verwendet der Zuordnung und Reduzierung Operations um die gleichen Ergebnisse wie in diesem Beispiel zu erzeugen, finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird die [std::accumulate](../Topic/accumulate.md)\-Funktion verwendet, um die Summe der Elemente in einem Array zu berechnen, bei denen es sich um Primzahlen handelt.  In diesem Beispiel ist `a` ein `array`\-Objekt, und die `is_prime`\-Funktion bestimmt, ob sein Eingabewert eine Primzahl ist.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die [Std:: Accumulate](../../standard-library/numeric-functions.md#accumulate) Funktion, um die Summe der Elemente in einem Array zu berechnen, die Primzahlen sind. In diesem Beispiel ist `a` ein `array`-Objekt, und die `is_prime`-Funktion bestimmt, ob sein Eingabewert eine Primzahl ist.  
   
- [!CODE [concrt-parallel-sum-of-primes#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-sum-of-primes#1)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]  
   
-## Beispiel  
- Das folgende Beispiel zeigt einen naiven Weg, das vorherige Beispiel zu parallelisieren.  In diesem Beispiel wird der [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md)\-Algorithmus zum parallelen Verarbeiten des Arrays und ein [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md)\-Objekt zum Synchronisieren des Zugriffs auf die `prime_sum`\-Variable verwendet.  Dieses Beispiel skaliert nicht, da jeder Thread warten muss, bis die freigegebene Ressource verfügbar wird.  
+## <a name="example"></a>Beispiel  
+
+ Das folgende Beispiel zeigt einen naiven Weg, das vorherige Beispiel zu parallelisieren. Dieses Beispiel verwendet die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus zum Verarbeiten des Arrays parallel und ein [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) -Objekt zum Synchronisieren des Zugriffs auf die `prime_sum` Variable . Dieses Beispiel skaliert nicht, da jeder Thread warten muss, bis die freigegebene Ressource verfügbar wird.  
   
- [!CODE [concrt-parallel-sum-of-primes#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-sum-of-primes#2)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]  
   
-## Beispiel  
- Im folgenden Beispiel wird ein `combinable`\-Objekt zum Steigern der Leistung des vorherigen Beispiels verwendet.  In diesem Beispiel sind keine Synchronisierungsobjekte erforderlich. Es skaliert, da das `combinable`\-Objekt dafür sorgt, dass jeder Thread seine Aufgabe unabhängig ausführt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird ein `combinable`-Objekt zum Steigern der Leistung des vorherigen Beispiels verwendet. In diesem Beispiel sind keine Synchronisierungsobjekte erforderlich. Es skaliert, da das `combinable`-Objekt dafür sorgt, dass jeder Thread seine Aufgabe unabhängig ausführt.  
   
- Ein `combinable`\-Objekt wird in der Regel in zwei Schritten verwendet.  Erzeugen Sie zuerst eine Reihe von differenzierten Berechnungen, indem Sie Arbeiten parallel ausführen.  Fassen Sie danach die Berechnungen in einem Endergebnis zusammen \(oder reduzieren Sie sie\).  In diesem Beispiel wird die [concurrency::combinable::local](../Topic/combinable::local%20Method.md)\-Methode verwendet, um einen Verweis auf die lokale Summe zu erhalten.  Anschließend werden mit der [concurrency::combinable::combine](../Topic/combinable::combine%20Method.md)\-Methode und einem [std::plus](../../standard-library/plus-struct.md)\-Objekt die lokalen Berechnungen zum Endergebnis zusammengefasst.  
+ Ein `combinable`-Objekt wird in der Regel in zwei Schritten verwendet. Erzeugen Sie zuerst eine Reihe von differenzierten Berechnungen, indem Sie Arbeiten parallel ausführen. Fassen Sie danach die Berechnungen in einem Endergebnis zusammen (oder reduzieren Sie sie). Dieses Beispiel verwendet die [Concurrency::combinable::local](reference/combinable-class.md#local) Methode, um einen Verweis auf die lokale Summe zu erhalten. Es verwendet dann die [Combine](reference/combinable-class.md#combine) Methode und eine [Std](../../standard-library/plus-struct.md) Objekt, das die lokalen Berechnungen zum Endergebnis kombinieren.  
+
   
- [!CODE [concrt-parallel-sum-of-primes#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-sum-of-primes#3)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]  
   
-## Beispiel  
- Im folgenden vollständigen Beispiel wird die Summe von Primzahlen sowohl seriell als auch parallel berechnet.  Das Beispiel gibt die Zeit, die zum Ausführen beider Berechnungen benötigt wird, in der Konsole aus.  
+## <a name="example"></a>Beispiel  
+ Im folgenden vollständigen Beispiel wird die Summe von Primzahlen sowohl seriell als auch parallel berechnet. Das Beispiel gibt die Zeit, die zum Ausführen beider Berechnungen benötigt wird, in der Konsole aus.  
   
- [!CODE [concrt-parallel-sum-of-primes#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-sum-of-primes#4)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]  
   
  Die folgende Beispielausgabe entspricht einem Ergebnis auf einem Computer mit vier Prozessoren.  
   
-  **1709600813**  
-**serielle Uhrzeit: 6178 ms**  
-**1709600813**  
-**parallele Uhrzeit: 1638 ms**   
-## Kompilieren des Codes  
- Zum Kompilieren kopieren Sie den Code, und fügen Sie ihn in ein Visual Studio\-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-sum-of-primes.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio\-Eingabeaufforderungsfenster aus.  
+```Output  
+1709600813  
+serial time: 6178 ms  
+ 
+1709600813  
+parallel time: 1638 ms  
+```  
   
- **cl.exe \/EHsc parallel\-sum\-of\-primes.cpp**  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-sum-of-primes.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
-## Robuste Programmierung  
- Ein Beispiel, in dem Zuordnungs\- und Reduzierungsoperationen verwendet werden, und das die gleichen Ergebnisse erzeugt, finden Sie unter [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).  
+ **CL.exe/EHsc / Parallel-Sum-of-primes.cpp**  
   
-## Siehe auch  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Ein Beispiel, verwendet der Zuordnung und Reduzierung Operations um dieselben Ergebnisse zu erzeugen, finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md)   
- [combinable\-Klasse](../../parallel/concrt/reference/combinable-class.md)   
- [critical\_section\-Klasse](../../parallel/concrt/reference/critical-section-class.md)
+ [combinable-Klasse](../../parallel/concrt/reference/combinable-class.md)   
+ [critical_section-Klasse](../../parallel/concrt/reference/critical-section-class.md)
