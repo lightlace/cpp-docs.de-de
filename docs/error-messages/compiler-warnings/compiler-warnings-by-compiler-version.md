@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f4a4aedc85cade0d5b7b895e5998733460a7ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion  
   
@@ -362,7 +363,7 @@ C4678|Basisklasse*Deklaration*"ist weniger zugreifbar als"*Namen*"
 C4679|"*Beschreibung*": Schnittstellenmember konnte nicht importiert
 C4687|"*Typ*': eine versiegelte abstrakte Klasse kann nicht zu eine Schnittstelle implementieren"*Typ*"
 C4688|"*Namen*": Einschränkungsliste enthält den privaten Assemblytyp "*Deklaration*"
-C4690|[Emitidl (Pop)]: mehr POP-als Push-Vorgänge
+C4690|[ Emitidl( Pop ) ]: mehr POP-als Push-Vorgänge
 C4691|"*Typ*': Typ verwiesen wurde erwartet. im nicht referenzierten *Modul* "*Beschreibung*", in der aktuellen Übersetzungseinheit verwendet stattdessen definierten Typs
 C4692|"*Namen*": die Signatur des nicht privaten Members enthält den privaten systemeigenen Assemblytyp '*Deklaration*"
 C4693|"*Typ*': eine versiegelte abstrakte Klasse kann nicht Instanzmember aufweisen*Namen*"

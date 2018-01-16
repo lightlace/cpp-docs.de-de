@@ -1,6 +1,6 @@
 ---
 title: "Compilerfehler Warnungen C4600 über C4799 | Microsoft Docs"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -67,22 +67,20 @@ ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 456d35247f25d20684e8b6957d61428a2b113ca0
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Compilerfehler Warnungen C4600 über C4799
 
-In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über eine Teilmenge von Visual C++-Compiler-Warnungen. Sie können die Informationen hier aufrufen oder, im Ausgabefenster in Visual Studio, können Sie eine Fehlernummer auswählen und dann die F1-Taste drücken.
+Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmenge der warnungsmeldungen, die vom Compiler generiert werden.
 
-> [!NOTE]
-> Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler oder eine Warnung in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).
-
-## <a name="in-this-section"></a>In diesem Abschnitt
+## <a name="warning-messages"></a>Warnmeldungen
 
 |Warnung|Meldung|
 |-------------|-------------|
@@ -163,7 +161,7 @@ Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für d
 |[Compilerwarnung C4687 (Fehler)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'Klasse': eine versiegelte abstrakte Klasse kann nicht implementiert eine Schnittstelle "Schnittstelle"|
 |Compilerwarnung (Stufe 1) C4688|"constraint": Die Einschränkungsliste enthält den privaten Assemblytyp "type".|
 |Compilerwarnung (Stufe 1) C4689|'%c': nicht unterstützte Zeichen in #pragma Detect_mismatch; #pragma ignoriert|
-|Compilerwarnung (Stufe 4) C4690|[Emitidl (Pop)]: mehr POP-als Push-Vorgänge|
+|Compilerwarnung (Stufe 4) C4690|[ Emitidl( Pop ) ]: mehr POP-als Push-Vorgänge|
 |[Compilerwarnung (Ebene 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'Typ': Typ verwiesen wurde in nicht referenzierte Assembly "File", in der aktuellen Übersetzungseinheit verwendet stattdessen definierten Typ erwartet|
 |[Compilerwarnung (Ebene 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'Funktion': Die Signatur des nicht privaten Members enthält den privaten systemeigenen Assemblytyp 'systemeigener_Typ'|
 |[Compilerwarnung (Stufe 1, Fehler) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'Klasse': eine versiegelte abstrakte Klasse kann nicht einer beliebigen Instanz Instanz Member 'Member' aufweisen|
