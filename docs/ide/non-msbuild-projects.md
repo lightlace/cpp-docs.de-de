@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Öffnen Sie Ordner Projekte in Visual C++
 Visual Studio-2017 führt die Funktion "Ordner geöffnet" ermöglicht es Ihnen, öffnen Sie einen Ordner für Quelldateien und sofort Codieren mit Unterstützung für IntelliSense, durchsuchen, Umgestaltung, Debuggen, beginnen und so weiter. Keine sln oder vcxproj-Dateien werden geladen. bei Bedarf können Sie benutzerdefinierte Tasks angeben sowie erstellen und starten Sie die Parameter durch einfache JSON-Dateien. Unterstützt von Ordner öffnen, kann Visual C++ jetzt nicht nur lose Sammlungen von Dateien, sondern auch nahezu alle Buildsystem, darunter CMake, Ninja, QMake (für unbedingt Projekte), Gyp, SCons, Gradle, Buck, stellen und vieles mehr unterstützen. 
@@ -39,8 +39,8 @@ Sie können über drei JSON-Dateien einen Ordner öffnen-Projekt anpassen:
 |||
 |-|-|
 |CppProperties.json|Geben Sie für das Durchsuchen von benutzerdefinierten Konfigurationsinformationen. Erstellen Sie diese Datei, die ggf. im Stammordner des Projekts.|
-|Launch.VS.JSON|Geben Sie die Befehlszeilenargumente. Über die **Projektmappen-Explorer** Kontextmenüelement **Debug- und Starteinstellungen**.|
-|Tasks.VS.JSON|Geben Sie benutzerdefinierte Buildbefehle und Compilerschalter. Über die **Projektmappen-Explorer** Kontextmenüelement **Tasks konfigurieren**.|
+|launch.vs.json|Geben Sie die Befehlszeilenargumente. Über die **Projektmappen-Explorer** Kontextmenüelement **Debug- und Starteinstellungen**.|
+|tasks.vs.json|Geben Sie benutzerdefinierte Buildbefehle und Compilerschalter. Über die **Projektmappen-Explorer** Kontextmenüelement **Tasks konfigurieren**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Konfigurieren von IntelliSense mit CppProperties.json
 IntelliSense und Durchsuchen das Verhalten teilweise hängt von der aktiven Buildkonfiguration, die definiert #include Bereichspfade, Compilerschalter sowie anderen Parametern. Visual Studio bietet standardmäßig Debug- und Releasekonfigurationen. Bei einigen Projekten müssen Sie zum Erstellen einer benutzerdefinierten Konfigurations in der Reihenfolge von IntelliSense und Suchfunktionen zu Ihrem Code vollständig zu verstehen. Um eine neue Konfiguration zu definieren, erstellen Sie eine Datei namens CppProperties.json im Stammordner. Im Folgenden ein Beispiel:
@@ -71,20 +71,131 @@ Eine Konfiguration kann die folgenden Eigenschaften aufweisen:
 |`forcedInclude`|Header, automatisch in jeder Kompilierungseinheit eingeschlossen werden sollen (ordnet/Fi für MSVC oder - umfassen für Clang)|
 |`undefines`|die Liste der Makros undefiniert (ergibt/u für MSVC) sein|
 |`intelliSenseMode`|das IntelliSense-Modul verwendet werden. Sie können die Architektur spezifischen Varianten für MSVC, die erforderlichen gcc- und Clang angeben:
-- MSVC-X86 (Standard)
-- MSVC x64
-- MSVC arm
-- Windows-Clang-x86
-- Windows-Clang-x64
-- Windows-Clang-arm
+- msvc-x86 (default)
+- msvc-x64
+- msvc-arm
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
 - Linux-x64
 - Linux-x86
 - Linux-arm
 - gccarm
 
-CppProperties.json unterstützt umgebungsvariablenerweiterung für gehören Pfade und andere Eigenschaftswerte. Die Syntax lautet `${env.FOODIR}` erweitert eine Umgebungsvariable `%FOODIR%`.
+#### <a name="environment-variables"></a>Umgebungsvariablen
+CppProperties.json unterstützt System umgebungsvariablenerweiterung für gehören Pfade und andere Eigenschaftswerte. Die Syntax lautet `${env.FOODIR}` erweitert eine Umgebungsvariable `%FOODIR%`. Die folgenden vom System definierte Variablen werden ebenfalls unterstützt:
 
-Sie haben außerdem Zugriff auf die folgenden vordefinierten Makros in dieser Datei:
+|Variablenname|Beschreibung|  
+|-----------|-----------------|
+|vsdev|Der standardmäßige Visual Studio-Umgebung|
+|msvc_x86|Kompilieren für X86 X86 mit Tools|
+|msvc_arm|Kompilieren für ARM X86 mit Tools|
+|msvc_arm64|Kompilieren für ARM64 X86 mit Tools|
+|msvc_x86_x64|Kompilieren für AMD64 X86 mit Tools|
+|msvc_x64_x64|Für AMD64 Kompilieren mithilfe von 64-Bit-tools|
+|msvc_arm_x64|Kompilieren Sie für ARM mit 64-Bit-tools|
+|msvc_arm64_x64|Für ARM64 Kompilieren mithilfe von 64-Bit-tools|
+
+Wenn die arbeitsauslastung Linux installiert ist, sind die folgenden Umgebungen für Remote angesprochen Linux- und WSL verfügbar:
+
+|Variablenname|Beschreibung|  
+|-----------|-----------------|
+|linux_x86|Ziel X86 Linux Remote|
+|linux_x64|Ziel X64 Linux Remote|
+|linux_arm|ARM Linux Remote als Ziel|
+
+Sie können benutzerdefinierte Umgebungsvariablen in definieren CppProperties.json entweder global oder pro-Konfiguration. Im folgende Beispiel wird gezeigt, wie Standard- und benutzerdefinierten Umgebungsvariablen deklariert und verwendet werden können. Die globale **Umgebungen** Eigenschaft deklariert eine Variable namens **INCLUDE** , die durch eine Konfiguration verwendet werden kann:
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+Außerdem können Sie definieren eine **Umgebungen** Eigenschaft in einer Konfiguration, damit, dass er nur für die Konfiguration gilt und alle globalen Variablen mit dem gleichen Namen überschreibt. Im folgenden Beispiel die X64 Konfiguration definiert eine lokale **INCLUDE** Variable, die den globalen Wert außer Kraft:
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+Alle benutzerdefinierten und Standard-Umgebungsvariablen auch im tasks.vs.json und launch.vs.json verfügbar sind.
+
+#### <a name="macros"></a>Makros
+Sie haben Zugriff auf die folgenden vordefinierten Makros in CppProperties.json:
 |||
 |-|-|
 |`${workspaceRoot}`| den vollständigen Pfad zu dem Arbeitsbereichsordner im|
@@ -138,7 +249,7 @@ Sie können automatisieren Buildskripts oder andere externe Vorgänge auf die Da
 
 ![Tasks für Ordner öffnen konfigurieren](media/open-folder-config-tasks.png)
 
-Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visual Studio im Stammordner des Projekts erstellt. Sie können jede beliebige Aufgabe in dieser Datei zu definieren und dann aus der **Projektmappen-Explorer** Kontextmenü. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die eine einzelne Aufgabe definiert. `taskName`definiert den angezeigten Namen im Kontextmenü an. `appliesTo`definiert, welche Dateien für der Befehl ausgeführt werden kann. Die `command` Eigenschaft bezieht sich auf die PATHEXT für die Umgebung, die den Pfad für die Konsole (cmd.exe unter Windows) identifiziert. Die `args` Eigenschaft gibt die Befehlszeile aufgerufen werden. Die `${file}` Makro ruft die ausgewählte Datei in **Projektmappen-Explorer**. Im folgende Beispiel wird der Dateiname der aktuell ausgewählten cpp-Datei angezeigt.
+Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visual Studio im Stammordner des Projekts erstellt. Sie können jede beliebige Aufgabe in dieser Datei zu definieren und dann aus der **Projektmappen-Explorer** Kontextmenü. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die eine einzelne Aufgabe definiert. `taskName`definiert den angezeigten Namen im Kontextmenü an. `appliesTo`definiert, welche Dateien für der Befehl ausgeführt werden kann. Die `command` Eigenschaft bezieht sich auf die PATHEXT für die Umgebung, die den Pfad für die Konsole (cmd.exe unter Windows) identifiziert. Sie können auch Umgebungsvariablen verweisen, die in CppProperties.json oder CMakeSettings.json deklariert werden. Die `args` Eigenschaft gibt die Befehlszeile aufgerufen werden. Die `${file}` Makro ruft die ausgewählte Datei in **Projektmappen-Explorer**. Im folgende Beispiel wird der Dateiname der aktuell ausgewählten cpp-Datei angezeigt.
 
 ```json
 {
@@ -155,6 +266,8 @@ Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visu
 }
 ```
 Nach dem Speichern tasks.vs.json, können Sie mit der rechten Maustaste alle cpp-Datei im Ordner "", wählen Sie **Echo Filename** aus dem Kontextmenü, und finden Sie unter der Dateinamen im Ausgabefenster angezeigt.
+
+
 
 #### <a name="appliesto"></a>appliesTo
 Sie können Aufgaben für alle Dateien oder Ordner erstellen, indem Sie ihren Namen in der `appliesTo` Feld, z. B. `"appliesTo" : "hello.cpp"`. Die folgenden Dateimasken können als Werte verwendet werden:

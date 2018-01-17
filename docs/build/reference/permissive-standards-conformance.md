@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ liberalen-(Einhaltung von Standards)
 
@@ -30,7 +30,7 @@ Geben Sie die Konformität der Standardmodus für den Compiler. Verwenden Sie di
 
 ## <a name="syntax"></a>Syntax
 
-> **/ liberalen-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -42,7 +42,7 @@ Die **/ liberalen-** Option ist kompatibel mit fast allen die Headerdateien, von
 
 Die **/ liberalen-** -Option wird die [/Zc: strictstrings](../../build/reference/zc-conformance.md) und [/Zc: rvaluecast](../../build/reference/zc-conformance.md) Optionen konforme Verhalten. Sie standardmäßig nicht konforme Verhalten verwendet. Sie können bestimmte übergeben **/Zc** Optionen nach **/ liberalen-** in der Befehlszeile aus, um dieses Verhalten zu überschreiben.
 
-In Versionen des Compilers Anfangs in Visual Studio 2017 Version 15.3 die **/ liberalen-** -Option wird die **/Zc:ternary** Option. Der Compiler implementiert auch weitere Anforderungen für Zweiphasen Namenssuche. Wenn die **/ liberalen-** Option festgelegt ist, wird der Compiler analysiert Funktion und der Klasse Vorlagendefinitionen, Identifizieren von abhängigen und nicht abhängigen Namen in den Vorlagen verwendet. In dieser Version wird nur die Abhängigkeitsanalyse Namen ausgeführt.
+In Versionen des Compilers Anfangs in Visual Studio 2017 Version 15.3 die **/ liberalen-** -Option wird die [/Zc:ternary](../../build/reference/zc-ternary.md) Option. Der Compiler implementiert auch weitere Anforderungen für Zweiphasen Namenssuche. Wenn die **/ liberalen-** Option festgelegt ist, wird der Compiler analysiert Funktion und der Klasse Vorlagendefinitionen, Identifizieren von abhängigen und nicht abhängigen Namen in den Vorlagen verwendet. In dieser Version wird nur die Abhängigkeitsanalyse Namen ausgeführt.
 
 Umgebungsspezifische-Erweiterungen und Language-Bereiche, die der Standard der Implementierung verlässt sind nicht betroffen, durch **/ liberalen-**. Z. B. der Microsoft-spezifische `__declspec`, Aufrufkonvention und die strukturierte Ausnahmebehandlung Keywords-Eigenschaft, und compilerspezifisch pragma-Direktiven oder Attribute sind nicht gekennzeichnet, vom Compiler in **/ liberalen-** Modus.
 
@@ -376,7 +376,7 @@ struct tagRESTRICTION
 
 Um dieses Problem zu beheben, kompilieren Sie Dateien, Query.h ohne einschließlich, die **/ liberalen-** Option.
 
-#### <a name="issue-in-umcellularapioemh"></a>Problem beim um\cellularapi_oem.h
+#### <a name="issue-in-umcellularapioemh"></a>Issue in um\cellularapi_oem.h
 
 Bei Verwendung der **/ liberalen-** Compilerschalter, die Vorwärtsdeklaration `enum UICCDATASTOREACCESSMODE` bewirkt, dass eine Warnung:
 
@@ -386,7 +386,7 @@ typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
 
 Die Vorwärtsdeklaration ohne bereichseinschränkung ist eine Microsoft-Erweiterung. Um dieses Problem zu beheben, kompilieren Sie Dateien, cellularapi_oem.h ohne einschließlich, die **/ liberalen-** oder verwenden Sie die [/WD](../../build/reference/compiler-option-warning-level.md) Option aus, um die Warnung C4471 unterdrücken.
 
-#### <a name="issue-in-umomscripth"></a>Problem beim um\omscript.h
+#### <a name="issue-in-umomscripth"></a>Issue in um\omscript.h
 
 In C ++ 03 eine Konvertierung von einem Zeichenfolgenliteral zu BSTR (d. h. einer Typdefinition, "Wchar_t *") ist als veraltet markiert, aber zulässig. In C ++ 11 ist die Konvertierung nicht mehr zulässig.
 
