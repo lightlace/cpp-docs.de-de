@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut geschriebene C++-Programme sind schnell und effizient. Die Sprache ist flexibler als andere Sprachen, da sie verwendet werden kann, um eine breite Palette von Apps zu erstellen: lustige und aufregende Spiele, leistungsstarke wissenschaftliche Software, Gerätetreiber, eingebettete Programme und Windows-Clientapps. Seit mehr als 20 Jahren wird C++ zum Lösen von Problemen wie dieser und vieler anderer. Ihnen ist möglicherweise nicht bekannt, dass eine zunehmende Anzahl von C++-Programmierern sich von der uneleganten Programmierung im C-Stil von einst abgewandt haben, hin zu einem modernen C++.  
@@ -50,40 +50,60 @@ C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut ge
  Die Programmiersprache C++ selbst hat sich auch entwickelt. Vergleichen Sie die folgenden Codeausschnitte. In diesem Ausschnitt wird ursprünglicher C++-Code verwendet:  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  In diesem wird gezeigt, wie die gleiche Aufgabe in modernem C++ erreicht wird:  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Bei Verwendung der `auto` typableitung und [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md), können Sie Code schneller, schreiben, kompakter und ihn besser verstehen. Die `for_each`-Schleife ist klarer, einfacher anzuwenden und weniger anfällig für unbeabsichtigte Fehler als eine `for`-Schleife. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Bei Verwendung der `auto` typableitung und [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md), können Sie Code schneller, schreiben, kompakter und ihn besser verstehen. Und eine bereichsbasierte `for` Schleife ist, Bereinigung, einfacher zu verwenden und weniger anfällig für unbeabsichtigte Fehler als eine C-Stil `for` Schleife. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.  
   
  Modernes C++ enthält zwei Arten von Polymorphie: Kompilierzeit, durch Vorlagen, und Laufzeit, durch Vererbung und Virtualisierung. Sie können die beiden Polymorphiearten mit großer Wirkungen kombinieren. Die C++-Standardbibliothek Vorlage `shared_ptr` interne virtuelle Methoden zum Erreichen der anscheinend mühelosen typlöschung verwendet. Doch überbeanspruchen Sie die Virtualisierung für Polymorphie nicht, wenn eine Vorlage die bessere Wahl ist. Vorlagen können sehr leistungsstark sein.  
   
