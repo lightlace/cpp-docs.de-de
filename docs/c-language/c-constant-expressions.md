@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>C-Ausdrücke (konstant)
-Ein konstanter Ausdruck wird zur Kompilierzeit, nicht zur Laufzeit, ausgewertet und kann an einem beliebigen Ort verwendet werden, an dem eine Konstante verwendet werden kann. Der konstante Ausdruck muss eine Konstante auswerten, die sich im Bereich der darstellbaren Werte für diesen Typ befindet. Die Operanden eines konstanten Ausdrucks können ganzzahlige Konstanten, Zeichenkonstanten, Gleitkommakonstanten, Enumerationskonstanten, Typumwandlungen, `sizeof`-Ausdrücke und andere konstante Ausdrücke sein.  
+Ein konstanter Ausdruck wird zur Kompilierzeit, nicht zur Laufzeit, ausgewertet und kann an einem beliebigen Ort verwendet werden, an dem eine Konstante verwendet werden kann. Ergebnis des konstanten Austrucks muss eine Konstante sein, die sich im Bereich der darstellbaren Werte für diesen Typ befindet. Die Operanden eines konstanten Ausdrucks können ganzzahlige Konstanten, Zeichenkonstanten, Gleitkommakonstanten, Enumerationskonstanten, Typumwandlungen, `sizeof`-Ausdrücke und andere konstante Ausdrücke sein.  
   
 ## <a name="syntax"></a>Syntax  
  *constant-expression*:  
