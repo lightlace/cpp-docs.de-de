@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
 
@@ -40,7 +40,7 @@ Es gibt mehrere allgemeine Kategorien von Windows-Apps, die mit Visual C++ entwi
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 
-Mit Windows-10 können Apps auf allen Windows-10-Geräten ausgeführt werden, z. B. Tablet-PCs und Mobiltelefone sowie auf dem Desktop. Auf dem Desktop können Sie als Desktop-Fenster ausgeführt werden, statt sie immer im Vollbildmodus ausführen zu müssen. Diese Anwendungen können auch auf der Xbox und auf zukünftigen Geräten ausgeführt werden.  Das Programmiermodell für die beiden App-Typen unterscheideb sich von Win32-Desktopanwendungen. Diese Windows-Anwendungen werden unter Windows-Runtime ausgeführt, sie stellt Benutzeroberflächenelemente, grundlegende Dienste für diese Apps und eine Schnittstelle zu verschiedenen Hardwaregeräten bereit, die unterstützt werden. Diese Apps werden in systemeigenem Code kompiliert, verfügen über eine XAML-Benutzeroberfläche oder verwenden DirectX. Sie können auch Windows-Runtime-Komponenten schreiben, in systemeigenen Code, der andere Windows-apps genutzt werden können – dazu gehören in c#, Visual Basic oder JavaScript geschriebene apps. Weitere Informationen finden Sie unter [erstellen Sie eine universelle Windows-Plattform-app in C++](http://go.microsoft.com/fwlink/p/?linkid=534976), [Erstellen Ihrer ersten uwp-Spiels mit DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), und [Erstellen von Windows-Runtime-Komponenten in C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Mit Windows-10 können Apps auf allen Windows-10-Geräten ausgeführt werden, z. B. Tablet-PCs und Mobiltelefone sowie auf dem Desktop. Auf dem Desktop können Sie als Desktop-Fenster ausgeführt werden, statt sie immer im Vollbildmodus ausführen zu müssen. Diese Anwendungen können auch auf der Xbox und auf zukünftigen Geräten ausgeführt werden.  Das Programmiermodell für die beiden App-Typen unterscheideb sich von Win32-Desktopanwendungen. Diese Windows-Anwendungen werden unter Windows-Runtime ausgeführt, sie stellt Benutzeroberflächenelemente, grundlegende Dienste für diese Apps und eine Schnittstelle zu verschiedenen Hardwaregeräten bereit, die unterstützt werden. Diese Apps werden in systemeigenem Code kompiliert, verfügen über eine XAML-Benutzeroberfläche oder verwenden DirectX. Sie können auch Windows-Runtime-Komponenten schreiben, in systemeigenen Code, der andere Windows-apps genutzt werden können – dazu gehören in c#, Visual Basic oder JavaScript geschriebene apps. Weitere Informationen finden Sie unter [erstellen Sie eine UWP-app "Hello World" in C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [erstellen ein einfachen uwp-Spiels mit DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
 > Für Windows 10 können Sie den Desktop-App-Konverter verwenden, um Ihre vorhandenen desktop-Anwendung für die Bereitstellung über den Windows Store verpacken. Weitere Informationen finden Sie im Blogbeitrag [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) und unter [Überführen Ihrer Desktop-App auf die universelle Windows-Plattform (UWP) mit Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
