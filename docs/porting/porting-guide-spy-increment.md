@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 In dieser Portierungsfallstudie erhalten Sie eine Vorstellung über ein typisches Portierungsprojekt, die Problemtypen, die auftreten können, und einige allgemeine Tipps und Tricks zum Beheben von Portierungsproblemen. Sie stellt keine endgültige Anleitung zum Portieren dar, da das Portieren eines Projekts stark von den Codebesonderheiten abhängig ist.  
@@ -141,7 +141,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- Das Projekt wird derzeit mit dem Multibyte-Zeichensatz (Multi-byte Character Set, MBCS ) erstellt, sodass char der entsprechende Zeichendatentyp ist. Um eine einfache Aktualisierung des Codes auf UTF-16-Unicode zu ermöglichen, wird diese auf TCHAR aktualisiert, was je nachdem ob die **Zeichensatz**-Eigenschaft in den Projekteinstellungen auf MBCS oder Unicode festgelegt ist, zu char oder wchar_t aufgelöst wird.  
+ Derzeit wird das Projekt mit dem Multibyte-Zeichensatz (Multi-byte Character Set, MBCS) erstellt, somit stellt `char` den entsprechenden Zeichendatentyp dar. Für eine Aktualisierung des Codes auf UTF-16-Unicode wird dieser Zeichensatz auf `TCHAR` aktualisiert. Diese Zeichenfolge wird je nachdem, ob die Eigenschaft **Zeichensatz** in den Projekteinstellungen auf MBCS oder Unicode festgelegt ist, zu `char` oder `wchar_t` aufgelöst.  
   
  Es müssen auch einige weitere Codeelemente aktualisiert werden.  Die ios-Basisklasse wird mit ios_base und ostream mit basic_ostream\<T> ersetzt. Als nächstes werden zwei weitere Typdefinitionen hinzugefügt und es wird der folgende Abschnitt kompiliert.  
   
@@ -514,8 +514,9 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  Das Problem tritt auf, wenn eine Variable zunächst als `extern` deklariert und später als `static` deklariert wird. Die Bedeutungen dieser zwei Speicherklassenspezifizierer schließen sich gegenseitig aus, dies ist jedoch als Microsoft-Erweiterung zulässig. Wenn der Code auf andere Compiler übertragbar sein oder mit /Za (ANSI-Kompatibilität) kompiliert werden soll, müssen Sie die Deklarationen so ändern, dass die Speicherklassenspezifizierer übereinstimmen.  
   
-##  <a name="porting_to_unicode"></a> Schritt 11. Portieren von MBCS zu Unicode  
- Beachten Sie, dass mit Unicode in der Windows-Welt in der Regel UTF-16 gemeint ist. Andere Betriebssysteme wie Linux verwenden UTF-8, bei Windows ist dies in der Regel nicht der Fall. Bevor Sie MBCS-Code zu UTF-16-Unicode portieren, müssen Sie ggf. die Warnungen  vorübergehend beseitigen, dass MBCS veraltet ist, um mit anderen Aufgaben fortzufahren oder das Portieren auf später verschieben. Der aktuelle Code verwendet MBCS. Zum Fortfahren müssen Sie die MBCS-Version von MFC herunterladen.  Diese recht große Bibliothek wurde aus der Standardinstallation von Visual Studio entfernt und muss separat heruntergeladen werden. Weitere Informationen finden Sie unter [MFC MBCS DLL-Add-On](../mfc/mfc-mbcs-dll-add-on.md). Wenn Sie diese Software heruntergeladen und Visual Studio neu gestartet haben, können Sie die Kompilierung und Verknüpfung mit der MBCS-Version von MFC durchführen. Um jedoch alle Warnungen für MBCS zu beheben, müssen Sie auch NO_WARN_MBCS_MFC_DEPRECATION der Liste der vordefinierten Makros im Abschnitt „Präprozessor“ in den Projekteigenschaften oder am Anfang der stdafx.h-Headerdatei oder einer anderen gemeinsamen Headerdatei hinzufügen.  
+##  <a name="porting_to_unicode"></a> Schritt 11. Portieren von MBCS zu Unicode
+
+ Beachten Sie, dass mit Unicode in der Windows-Welt in der Regel UTF-16 gemeint ist. Andere Betriebssysteme wie Linux verwenden UTF-8, bei Windows ist dies in der Regel nicht der Fall. Die MBCS-Version von Microsoft Foundation Classes (MFC) ist in Visual Studio 2013 und 2015 veraltet, wurde in Visual Studio 2017 jedoch aktualisiert. Wenn Sie Visual Studio 2013 oder 2015 verwenden, müssen Sie gegebenenfalls die Warnung, dass MBCS veraltet ist, vorübergehend entfernen, bevor Sie MBCS-Code zu UTF-16-Unicode portieren, um mit anderen Aufgaben fortzufahren oder das Portieren auf später zu verschieben. Da der aktuelle Code MBCS verwendet, müssen Sie die ANSI/MBCS-Version von MFC installieren, um fortfahren zu können. Die umfangreiche MFC-Bibliothek gehört nicht zur Standardinstallation der **Desktopentwicklung mit C++** in Visual Studio, deshalb müssen Sie diese unter den optionalen Komponenten im Installer auswählen. Weitere Informationen finden Sie unter [MFC MBCS DLL-Add-On](../mfc/mfc-mbcs-dll-add-on.md). Wenn Sie diese Software heruntergeladen und Visual Studio neu gestartet haben, können Sie die Kompilierung und Verknüpfung mit der MBCS-Version von MFC durchführen. Wenn Sie jedoch Visual Studio 2013 oder 2015 verwenden, müssen Sie ebenfalls **NO_WARN_MBCS_MFC_DEPRECATION** der Liste der vordefinierten Makros im Abschnitt „Präprozessor“ in den Projekteigenschaften oder am Anfang der stdafx.h-Headerdatei bzw. einer anderen gemeinsamen Headerdatei hinzufügen, um alle Warnungen für MBCS zu entfernen.  
   
  Im Folgenden werden einige Linkerfehler behandelt.  
   
@@ -531,7 +532,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
   
  Im nächsten Schritt wird der alte MBCS-Code in Unicode aktualisiert. Da dies eine Windows-Anwendung ist, die eng an die Windows-Desktopplattform gebunden ist, wird der Code in von Windows verwendeten UTF-16-Unicode portiert. Wenn Sie plattformübergreifenden Code schreiben oder eine Windows-Anwendung in eine andere Plattform portieren, möchten Sie möglicherweise in UTF-8 portieren, was häufig unter anderen Betriebssystemen verwendet wird.  
   
- Beim Portieren in UTF-16-Unicode müssen Sie entscheiden, ob in MBCS kompiliert werden soll.  Wenn Sie die Unterstützung von MBCS benötigen, müssen Sie das TCHAR-Makro als Zeichentyp verwenden, mit dem, je nachdem, ob beim Kompilieren _MBCS oder _UNICODE definiert wird, entweder in char oder wchar_t aufgelöst wird. Wenn Sie statt wchar_t und den zugehörigen APIs zu TCHAR und den TCHAR-Versionen der verschiedenen APIs wechseln, können Sie einfach zu einer MBCS-Version des Codes wechseln, indem Sie statt _UNICODE das _MBCS-Makro definieren. Neben TCHAR gibt es eine Vielzahl von TCHAR-Versionen wie häufig verwendete Typdefinitionen, Makros und Funktionen. Beispielsweise LPCTSTR anstelle von LPCSTR usw. Ändern Sie im Dialogfeld „Projekteigenschaften“ unter **Konfigurationseigenschaften** im Abschnitt **Allgemein** die Eigenschaft **Zeichensatz** von **MBCS-Zeichensatz verwenden** in **Unicode-Zeichensatz verwenden**. Mit dieser Einstellung wird festgelegt, welches Makro während der Kompilierung vordefiniert ist. Es sind zwei Makros vorhanden: ein UNICODE-Makro und ein _UNICODE-Makro. Die Projekteigenschaft wirkt sich konsistent auf beide aus. Windows-Header verwenden UNICODE, während Visual C++-Header wie MFC _UNICODE verwenden, wenn jedoch eins definiert ist, ist das andere ebenfalls immer definiert.  
+ Beim Portieren in UTF-16-Unicode müssen Sie entscheiden, ob in MBCS kompiliert werden soll.  Wenn Sie die Unterstützung von MBCS benötigen, müssen Sie das TCHAR-Makro als Zeichentyp verwenden, das in `char` oder `wchar_t` aufgelöst wird, je nachdem, ob beim Kompilieren _MBCS oder _UNICODE definiert wird. Wenn Sie statt `wchar_t` und den zugehörigen APIs zu TCHAR und den TCHAR-Versionen der verschiedenen APIs wechseln, können Sie einfach zu einer MBCS-Version des Codes zurückwechseln, indem Sie das_MBCS-Makro statt dem _UNICODE-Makro definieren. Neben TCHAR gibt es eine Vielzahl von TCHAR-Versionen wie häufig verwendete Typdefinitionen, Makros und Funktionen. Beispielsweise LPCTSTR anstelle von LPCSTR usw. Ändern Sie im Dialogfeld „Projekteigenschaften“ unter **Konfigurationseigenschaften** im Abschnitt **Allgemein** die Eigenschaft **Zeichensatz** von **MBCS-Zeichensatz verwenden** in **Unicode-Zeichensatz verwenden**. Mit dieser Einstellung wird festgelegt, welches Makro während der Kompilierung vordefiniert ist. Es sind zwei Makros vorhanden: ein UNICODE-Makro und ein _UNICODE-Makro. Die Projekteigenschaft wirkt sich konsistent auf beide aus. Windows-Header verwenden UNICODE, während Visual C++-Header wie MFC _UNICODE verwenden, wenn jedoch eins definiert ist, ist das andere ebenfalls immer definiert.  
   
  Eine gute [Anleitung](http://msdn.microsoft.com/library/cc194801.aspx) zum Portieren von MBCS zu UTF-16-Unicode mithilfe von TCHAR ist verfügbar. Diesen Weg haben wir ausgewählt. Ändern Sie zunächst die Eigenschaft **Zeichensatz** in **Unicode-Zeichensatz verwenden**, und erstellen Sie das Projekt neu.  
   
@@ -555,7 +556,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- Mit dem _T-Makro wird ein Zeichenfolgenliteral entsprechend der Einstellung von MBCS oder UNICODE als char-Zeichenfolge oder als wchar_t-Zeichenfolge kompiliert. Öffnen Sie zum Ersetzen aller Zeichenfolgen durch _T in Visual Studio das Feld **Schnellersetzung** (Tastatur: STRG+F) oder **In Dateien ersetzen** (Tastatur: STRG+UMSCHALT+H), und aktivieren Sie dann das Kontrollkästchen **Reguläre Ausdrücke verwenden**. Geben Sie `((\".*?\")|('.+?'))` als zu suchenden Text und `_T($1)` als Text ein, mit dem dieser ersetzt werden soll. Wenn einige Zeichenfolgen bereits vom _T-Makro eingeschlossen sind, wird es mit diesem Verfahren erneut hinzugefügt, und es werden möglicherweise Suchergebnisse angezeigt, wo das _T nicht gewünscht ist, wenn Sie beispielsweise `#include` verwenden. Daher wird empfohlen, **Nächstes ersetzen**, und nicht **Alle ersetzen** zu verwenden.  
+ Mit dem _T-Makro wird ein Zeichenfolgenliteral entsprechend der Einstellung von MBCS oder UNICODE als `char`-Zeichenfolge oder als `wchar_t`-Zeichenfolge kompiliert. Öffnen Sie zum Ersetzen aller Zeichenfolgen durch _T in Visual Studio das Feld **Schnellersetzung** (Tastatur: STRG+F) oder **In Dateien ersetzen** (Tastatur: STRG+UMSCHALT+H), und aktivieren Sie dann das Kontrollkästchen **Reguläre Ausdrücke verwenden**. Geben Sie `((\".*?\")|('.+?'))` als zu suchenden Text und `_T($1)` als Text ein, mit dem dieser ersetzt werden soll. Wenn einige Zeichenfolgen bereits vom _T-Makro eingeschlossen sind, wird es mit diesem Verfahren erneut hinzugefügt, und es werden möglicherweise Suchergebnisse angezeigt, wo das _T nicht gewünscht ist, wenn Sie beispielsweise `#include` verwenden. Daher wird empfohlen, **Nächstes ersetzen**, und nicht **Alle ersetzen** zu verwenden.  
   
  Diese bestimmte Funktion, [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx), ist in den Windows-Headern definiert, und laut Dokumentation wird ihre Verwendung aufgrund möglichem Pufferüberlauf nicht empfohlen. Für den `szTmp`-Puffer ist keine Größe angegeben. Die Funktion kann somit nicht prüfen, ob der Puffer alle Daten aufnehmen kann, die in diesen geschrieben werden sollen. Informationen zum Portieren in Secure CRT finden Sie im folgenden Abschnitt, in dem die Behebung weiterer ähnlichen Probleme erläutert wird. Das Ersetzen mit [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) ist abgeschlossen.  
   
@@ -573,7 +574,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- Obwohl die _tcscpy-Funktion verwendet wurde, die die TCHARstrcpy-Funktion zum Kopieren einer Zeichenfolge darstellt, handelte es sich beim zugeordneten Puffer um einen char-Puffer. Dies kann problemlos zu TCHAR geändert werden.  
+ Obwohl die _tcscpy-Funktion verwendet wurde, die die TCHAR strcpy-Funktion zum Kopieren einer Zeichenfolge darstellt, handelte es sich beim zugeordneten Puffer um einen `char`-Puffer. Dies kann problemlos zu TCHAR geändert werden.  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,7 +582,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- Ebenso werden `LPSTR` (langer Zeiger auf Zeichenfolge) und `LPCSTR` (langer Zeiger auf konstante Zeichenfolge) zu `LPTSTR` (langer Zeiger auf TCHAR-Zeichenfolge) und zu `LPCTSTR` (langer Zeiger auf konstante TCHAR-Zeichenfolge) geändert, wenn durch einen Compilerfehler gewährt. Solche Ersetzungen wurden in diesem Fall nicht mit der globalen Option „Suchen und Ersetzen“ vorgenommen, da jede Situation individuell betrachtet werden muss. In einigen Fällen ist die char-Version erwünscht, z. B. beim Verarbeiten bestimmter Windows-Meldungen, die Windows-Strukturen mit dem A-Suffix verwenden. In der Windows-API steht das Suffix A für ASCII oder ANSI (gilt auch für MBCS) und das Suffix W für Breitzeichen oder UTF-16-Unicode. Dieses in Windows-Headern verwendete Benennungsmuster wird auch im Spy++-Code beim Hinzufügen einer Unicode-Version einer Funktion verwendet, die bisher nur in einer MBCS-Version definiert ist.  
+ Ebenso werden `LPSTR` (langer Zeiger auf Zeichenfolge) und `LPCSTR` (langer Zeiger auf konstante Zeichenfolge) zu `LPTSTR` (langer Zeiger auf TCHAR-Zeichenfolge) und zu `LPCTSTR` (langer Zeiger auf konstante TCHAR-Zeichenfolge) geändert, wenn durch einen Compilerfehler gewährt. Solche Ersetzungen wurden in diesem Fall nicht mit der globalen Option „Suchen und Ersetzen“ vorgenommen, da jede Situation individuell betrachtet werden muss. In einigen Fällen ist die `char`-Version erwünscht, z.B. beim Verarbeiten bestimmter Windows-Meldungen, die Windows-Strukturen mit dem A-Suffix verwenden. In der Windows-API steht das Suffix A für ASCII oder ANSI (gilt auch für MBCS) und das Suffix W für Breitzeichen oder UTF-16-Unicode. Dieses in Windows-Headern verwendete Benennungsmuster wird auch im Spy++-Code beim Hinzufügen einer Unicode-Version einer Funktion verwendet, die bisher nur in einer MBCS-Version definiert ist.  
   
  In einigen Fällen muss ein Typ ersetzt werden, damit eine Version verwendet wird, die ordnungsgemäß aufgelöst wird (z. B. WNDCLASS anstelle von WNDCLASSA).  
   
