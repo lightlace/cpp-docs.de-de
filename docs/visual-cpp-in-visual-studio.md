@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
@@ -32,7 +32,7 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
 
 Dieser Inhalt ist für C++-Entwickler gedacht, die Programme schreiben.
 
-- Wenn Sie zum Ausführen eines Programms ein verteilbares C++-Paket sowie Laufzeitkomponenten suchen, wechseln Sie zum [Microsoft Download Center](http://www.microsoft.com/en-us/download/) , und geben Sie **Visual C++** in das Suchfeld ein.
+- Wenn Sie ein bestimmtes verteilbares C++-Paket und Runtimekomponenten benötigen, um ein Programm auszuführen, geben Sie auf der Website von [Microsoft](http://www.microsoft.com/) **Visual C++ Redistributable** in das Suchfeld ein. Laden Sie das verteilbare Paket für die Architektur Ihres Computers (z.B. x64, wenn Sie 64-Bit-Windows ausführen) und die erforderliche Version von Visual C++ herunter, und installieren Sie diese. 
 
 - Wenn Sie eine Einführung in C++-Programmierkonzepte suchen, besuchen Sie eine der zahlreichen Websites mit dem entsprechenden Inhalt, oder holen Sie sich ein Exemplar von [Programming – Principles and Practice Using C++ (Second Edition)](http://stroustrup.com/Programming/) vom C++-Erfinder Bjarne Stroustrup. Der Buchinhalt setzt voraus, dass Sie bereits über grundlegende C++-Kenntnisse verfügen.
 

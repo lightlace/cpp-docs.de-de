@@ -1,9 +1,6 @@
 ---
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 1/03/2018
-ms.reviewer: 
-ms.suite: 
+ms.date: 1/11/2018
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,31 +9,31 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Melden eines Problems mit dem Visual C++-Toolset
 
-Wenn Sie Probleme mit dem Visual C++-Compiler, -Linker oder anderen Tools haben, möchten wir davon erfahren.
+Wenn Sie Probleme mit dem Visual C++-Compiler, -Linker oder anderen Tools und Bibliotheken haben, informieren Sie uns darüber.
 
-Die beste Möglichkeit, uns über ein Problem zu informieren, ist das Senden eines Berichts mit einer Beschreibung des aufgetretenen Problems, mit Details dazu, wie Sie Ihr Programm entwickeln, und mit einem Codeausschnitt, den wir zum Reproduzieren des Problems auf unseren Computern nutzen können. Anhand dieser Informationen können wir rasch prüfen, ob das Problem existiert und nicht bloß lokal in Ihrer Umgebung vorliegt. Außerdem können wir bestimmen, ob es sich auf andere Versionen des Compilers auswirkt, und seine Ursache ermitteln.
+Die beste Möglichkeit, uns über ein Problem zu informieren, ist das Senden eines Berichts. Dieser sollte die Beschreibung des aufgetretenen Problems enthalten sowie Details dazu, wie Sie Ihr Programm entwickeln, und eine *Reproduktion*, die wir als vollständigen Testfall zum Reproduzieren des Problems auf unseren Computern verwenden können. Anhand dieser Informationen können wir schnell überprüfen, ob das Problem in Ihrem Code besteht oder lokal in Ihrer Umgebung vorliegt. Außerdem können wir bestimmen, ob es sich auf andere Versionen des Compilers auswirkt, und wir können die Ursache ermitteln.
 
 In diesem Dokument geht es um Folgendes
 
-- [Vorbereiten des Berichts](#prepare) und Merkmale eines guten Berichts.
+- [Vorbereiten des Berichts](#how-to-prepare-your-report) und Merkmale eines guten Berichts.
 
-- [Generieren einer Reproduktion](#generate) und verschiedene Arten von Reproduktionen.
+- [Generieren einer Reproduktion](#how-to-generate-a-repro) und verschiedene Arten von Reproduktionen.
 
-- [Möglichkeiten zum Senden Ihres Berichts](#send) und deren Unterschiede.
+- [Möglichkeiten zum Senden Ihres Berichts](#ways-to-send-your-report) und deren Unterschiede.
 
 Ihre Berichte sind wichtig für uns und andere Entwickler wie Sie. Vielen Dank für Ihren Beitrag zur Verbesserung von Visual C++!
 
-## <a name="prepare"></a> Vorbereiten des Berichts
+## <a name="how-to-prepare-your-report"></a>Vorbereiten des Berichts
 
-Das Erstellen eines Berichts hoher Qualität ist wichtig, da es sehr schwierig ist, das bei Ihnen aufgetretene Problem auf unseren Computern zu reproduzieren, wenn die Informationen nicht vollständig sind. Je besser Ihr Bericht, desto effektiver können wir das Problem reproduzieren und untersuchen.
+Das Erstellen eines verwertbaren Berichts ist wichtig, da es sehr schwierig ist, das bei Ihnen aufgetretene Problem auf unseren Computern zu reproduzieren, wenn die Informationen nicht vollständig sind. Je besser Ihr Bericht, desto effektiver können wir das Problem reproduzieren und untersuchen.
 
 Ihr Bericht sollte mindestens die folgenden Elemente enthalten:
 
@@ -46,58 +43,45 @@ Ihr Bericht sollte mindestens die folgenden Elemente enthalten:
 
 - Eine ausführliche Beschreibung des aufgetretenen Problems.
 
-- Eine „Reproduktion“, d.h. Quellcode zum Veranschaulichen des Problems.
+- Bei einer Reproduktion handelt es sich um ein vollständiges, vereinfachtes und unabhängiges Quellcodebeispiel, das das Problem veranschaulicht.
 
-Lesen Sie weiter, um mehr über die spezifischen Informationen zu erfahren, die wir benötigen und wo Sie sie finden können.
+Lesen Sie weiter, um mehr über das Erstellen einer guten Reproduktion und die spezifischen Informationen zu erfahren, die wir benötigen, und wo Sie diese finden können.
 
 ### <a name="the-toolset-version"></a>Die Version des Toolsets
 
-Wir benötigen die vollständigen Versionsinformationen zum Toolset, das Sie verwenden, damit wir Ihre Reproduktion mit demselben Toolset auf unseren Computern testen können. Wenn wir das Problem reproduzieren können, verfügen wir über einen Ausgangspunkt, um zu untersuchen, welche anderen Versionen des Toolsets dasselbe Problem aufweisen.
+Wir benötigen die vollständigen Versionsinformationen und die Zielarchitektur des Toolsets, das das Problem verursacht, um Ihre Reproduktion mit dem gleichen Toolset auf unseren Computern zu testen. Wenn wir das Problem reproduzieren können, verfügen wir über einen Ausgangspunkt, um zu untersuchen, welche anderen Versionen des Toolsets dasselbe Problem aufweisen.
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>So melden Sie die vollständige Version des von Ihnen verwendeten Compilers
 
-1. Drücken Sie auf der Tastatur die WINDOWS-TASTE, und beginnen Sie mit dem Eingeben von `Developer Command Prompt`.
+1. Öffnen Sie die **Developer-Eingabeaufforderung**, die der Version von Visual Studio entspricht, und die Konfigurationsarchitektur, die zum Erstellen Ihres Projekts verwendet wurde. Wenn Sie beispielsweise Anwendungen für x64-Ziele mithilfe von Visual Studio 2017 für x64 erstellen, wählen Sie **x64 Native Tools-Eingabeaufforderung für Visual Studio 2017** aus. Weitere Informationen finden Sie unter [Developer command prompt shortcuts (Tastenkombinationen für die Developer-Eingabeaufforderung)](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. Wählen Sie die Version der **Developer-Eingabeaufforderung**, die Ihrer Version von Visual Studio entspricht, sobald sie in der Liste der Suchergebnisse angezeigt wird.
-
-1. Geben Sie in der Konsole **Developer-Eingabeaufforderung** den Befehl `cl /Bv /CLR` ein.
+1. Geben Sie im Fenster „Developer-Eingabeaufforderung“ den Befehl **cl** ein.
 
 Die Ausgabe sollte etwa so aussehen:
 
 ```Output
-C:\Compiler>cl /Bv /CLR
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40209
-for Microsoft (R) .NET Framework version 4.00.30319.34014
+C:\Users\username\Source>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-Compiler Passes:
- C:\WinCComp\binaries.x86chk\bin\i386\cl.exe:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1xx.dll:      Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c2.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\link.exe:      Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\mspdb120.dll:  Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\1033\clui.dll: Version 18.00.40209.0
- Common Language Runtime:                            Version  4.00.30319.34014
-
-cl : Command line error D8003 : missing source filename
+usage: cl [ option... ] filename... [ /link linkoption... ]
 ```
 
 Kopieren Sie die gesamte Ausgabe in den Bericht.
 
 ### <a name="the-command-line"></a>Die Befehlszeile
 
-Wir benötigen die vollständige Befehlszeile („cl.exe“ samt Argumenten), die verwendet wurde, um den Code zu erstellen, damit wir ihn auf exakt dieselbe Weise auf unseren Computer nachbilden können. Dies ist wichtig, da das aufgetretene Problem eventuell nur existiert, wenn der Build mit einem bestimmten Argument oder einer Kombination von Argumenten erstellt wird.
+Wir benötigen die genaue Befehlszeile („cl.exe“ mit allen Argumenten), die verwendet wurde, um den Code zu erstellen, damit wir diesen auf die gleiche Weise auf unseren Computer nachbilden können. Dies ist wichtig, da das aufgetretene Problem eventuell nur existiert, wenn der Build mit einem bestimmten Argument oder einer Kombination von Argumenten erstellt wird.
 
 Diese Informationen finden Sie am besten unmittelbar nach Auftreten des Problems im Buildprotokoll. Dadurch wird sichergestellt, dass die Befehlszeile genau die gleichen Argumente enthält, die ggf. zum Problem beitragen.
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>So melden Sie den Inhalt der Befehlszeile
 
-1. Wechseln Sie zur Daten **CL.command.1.tlog**, und öffnen Sie sie. Standardmäßig befindet sich diese Datei unter \\...\Visual Studio *Version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog.
+1. Wechseln Sie zur Daten **CL.command.1.tlog**, und öffnen Sie sie. Standardmäßig befindet sich diese Datei im Ordner „Dokumente“ unter \\Visual Studio*Version*\\Projects\\*Projektmappenname*\\*Projektname*\\*Configuration*\\*Projektname*.tlog\\CL.command.1.tlog oder im Ordner „Benutzer“ unter \\Source\\Repos\\*Projektmappenname*\\*Projektname*\\*Configuration*\\*Projektname*.tlog\\CL.command.1.tlog. Wenn Sie ein anderes Buildsystem verwenden oder den Standardspeicherort für Ihr Projekt geändert haben, kann dieses sich an einem anderen Speicherort befinden.
 
    In dieser Datei finden Sie die Namen von Quellcodedateien, gefolgt von den Befehlszeilenargumenten zu deren Kompilierung, jeweils in separaten Zeilen.
 
-1. Suchen Sie die Zeile mit dem Namen der Quellcodedatei, in der das Problem auftritt. Die Zeile darunter enthält den entsprechenden cl.exe-Befehl und seine Argumente.
+1. Suchen Sie die Zeile mit dem Namen der Quellcodedatei, in der das Problem auftritt. Die Zeile darunter enthält die entsprechenden Argumente des cl.exe-Befehls.
 
 Kopieren Sie die gesamte Befehlszeile in den Bericht.
 
@@ -105,18 +89,37 @@ Kopieren Sie die gesamte Befehlszeile in den Bericht.
 
 Wir benötigen eine ausführliche Beschreibung des aufgetretenen Problems, damit wir überprüfen können, ob es die gleiche Auswirkung auf unseren Computern hat. Außerdem ist es mitunter nützlich, von Ihnen zu erfahren, was Sie erreichen möchten und was Sie erwartet hatten.
 
-Fügen Sie exakt die vom Toolset ausgegebenen Fehlermeldungen, eine Kurzbeschreibung ihrer Absicht, damit wir Ihren Reproduktionscode verstehen, und andere Details hinzu, mit deren Hilfe wir das bei Ihnen aufgetretene Problem untersuchen können, wie z.B. Problemumgehungen, die Sie ggf. gefunden haben. Vermeiden Sie die Wiederholung von Informationen, die an anderer Stelle in Ihrem Bericht vorhanden ist.
+Geben Sie die genauen Fehlermeldungen an, die das Toolset ausgibt bzw. das genaue Laufzeitverhalten. Wir benötigen diese Informationen, um zu überprüfen, ob das Problem richtig reproduziert wurde. Geben Sie bitte nicht nur die letzte Fehlermeldung, sondern die gesamte Ausgabe des Compilers an. Wir müssen alle Gegebenheiten überblicken können, die vor dem Ihnen ausgestellten Bericht vorhanden waren. Wenn Sie das Problem mithilfe des Befehlszeilencompilers duplizieren können, bevorzugen wir diese Compilerausgabe. Die IDE und andere Buildsysteme filtern die Fehlermeldung möglicherweise heraus, die Ihnen angezeigt wird, oder erfassen nur die erste Zeile einer Fehlermeldung.
+
+Wenn der Fehler darin besteht, dass der Compiler ungültigen Code akzeptiert und keine Diagnose generiert, erwähnen Sie dies in Ihrem Bericht.
+
+Fügen Sie zum Melden eines Problems mit dem Laufzeitverhalten eine genaue Kopie der Ausgabe des Programms oder die erwartete Ausgabe hinzu. Diese wird idealerweise in der Ausgabeanweisung eingebettet, z.B. `printf("This should be 5: %d\n", actual_result);`. Erwähnen Sie ebenfalls, falls das Programm abstürzt oder nicht reagiert.
+
+Fügen Sie weitere Details hinzu, die beim Diagnostizieren Ihres Problems hilfreich sein können, z.B. Problemumgehungen, die Sie möglicherweise entdeckt haben. Vermeiden Sie die Wiederholung von Informationen, die an anderer Stelle in Ihrem Bericht vorhanden ist.
 
 ### <a name="the-repro"></a>Die Reproduktion
 
-Wir benötigen eine *Reproduktion* (ein eigenständiges Codebeispiel zum Demonstrieren des aufgetretenen Problems), damit wir den Fehler auf unseren Computern reproduzieren können. Die Art des aufgetretenen Problems bestimmt, welche Art von Reproduktion in den Bericht aufgenommen werden soll. Ohne geeignete Reproduktion gibt es nichts, was wir untersuchen könnten.
+Bei einer Reproduktion handelt es sich um ein vollständiges, eigenständiges Quellcodebeispiel, das Ihr Problem reproduzierbar veranschaulicht. Wir benötigen eine Reproduktion, um den Fehler auf unseren Computern zu reproduzieren. Der Code sollte dafür ausreichen, eine einfache ausführbare Datei zu erstellen, die kompiliert und ausgeführt werden kann bzw. die kompiliert und ausgeführt werden könnte, wenn kein Problem vorliegen würde. Bei einer Reproduktion handelt es sich nicht um einen Codeausschnitt. Es sollten alle Funktionen und Klassen sowie alle erforderlichen #include-Anweisungen (auch für die Standardheader) enthalten sein.
 
-Kurze, eigenständige Reproduktionen können Sie direkt dem Berichtstext hinzufügen. Größere Quellcodereproduktionen sollten jedoch als Anlage an den Bericht angefügt werden. Reproduktionen, die nicht auf eine eine einzelne Quellcodedatei verkleinert werden können, sollten gepackt werden, indem ein Verzeichnis mit allen Dateien zu einer ZIP-Datei o.ä. komprimiert und an den Bericht angefügt wird. Alle weiteren szenariospezifischen Details sollten stets dem Berichtstext und nie dem Quellcode hinzugefügt werden.
+#### <a name="what-makes-a-good-repro"></a>Was zeichnet eine gute Reproduktion aus?
 
-Die beste Art der Reproduktion, die Sie uns bereitstellen können, ist eine *minimale Reproduktion*. Dies ist eine einzelne, eigenständige Quellcodedatei (ohne Verweise auf Benutzerheader), die gerade genug Code enthält, um das Problem zu demonstrieren. Wenn Sie eine Reproduktion in dieser Form bereitstellen können, fügen Sie die Quellcodedatei einfach an Ihren Bericht an, da dies alles ist, was wir brauchen.
+Eine gute Reproduktion weist folgende Merkmale auf:
 
-Wenn Sie das Problem nicht auf eine minimale Reproduktion ohne Abhängigkeiten verkleinern können, finden Sie in den folgenden Abschnitten Informationen dazu, wie Sie die Art von Reproduktion bestimmen, die Sie Ihrem Bericht hinzufügen sollten.
+- **Minimal.** Die Reproduktionen sollte so klein wie möglich sein und dennoch das aufgetretene Problem exakt veranschaulichen. Reproduktionen müssen nicht komplex oder realistisch sein, sondern nur den Code anzeigen, der dem Standard oder der dokumentierten Compilerimplementierung entspricht. Im Fall einer fehlenden Diagnose muss der Code angezeigt werden, der nicht konform ist. Einfache Reproduktionen, die nur den Code enthalten, der für das Veranschaulichen des Problems relevant ist, sind am besten. Wenn Sie Code entfernen oder den Code vereinfachen können, ohne Konformität einzubüßen oder das Problem zu verändern, ist dies erwünscht. Sie müssen keine Beispiele für funktionierenden Code einfügen. 
 
+- **Unabhängig.** In Reproduktionen sollten unnötige Abhängigkeiten vermieden werden. Wenn Sie das Problem ohne Drittanbieterbibliotheken reproduzieren können, machen Sie dies. Wenn Sie das Problem abgesehen von einfachen Ausgabeanweisungen (`puts("this shouldn't compile");`, `std::cout << value;` und `printf("%d\n", value);` sind beispielsweise zulässig) ohne Bibliothekscode reproduzieren können, ist dies erwünscht. Idealerweise kann das Beispiel in eine einzige Quellcodedatei ohne Verweise auf Benutzerheader komprimiert werden. Für uns ist es enorm hilfreich, wenn Sie die Menge des Codes verringern, den wir als mögliche Ursache des Problems untersuchen müssen.
+
+- **Neueste Compilerversion.** Für Reproduktionen sollte nach Möglichkeit das neueste Update der aktuellen Version des Toolsets oder das aktuelle Vorabrelease des nächsten Updates oder des nächsten Hauptreleases verwendet werden. Probleme, die in älteren Versionen des Toolsets auftreten, wurden in neueren Versionen häufig behoben. Fehlerbehebungen werden nur in Ausnahmefälle für ältere Versionen bereitgestellt.
+
+- Ein **Vergleich mit anderen Compilern** wurde durchgeführt (falls relevant). Bei Reproduktionen, die portablen C++-Code enthalten, muss das Verhalten mit anderen Compilern, falls möglich, verglichen werden. Der Standard bestimmt letztendlich die Richtigkeit des Programms und kein Compiler ist perfekt. Wenn Clang und GCC Ihren Code jedoch ohne Diagnose akzeptieren, MSVC jedoch nicht, liegt wahrscheinlich ein Fehler im Compiler vor. (Weitere Möglichkeiten bestehen in den unterschiedlichen Verhaltensweisen von Unix und Windows, in verschiedenen Implementierungsebenen der C++-Standards usw.) Wenn Ihr Code andererseits von allen Compilern abgelehnt ist, ist Ihr Code wahrscheinlich fehlerhaft. Die verschiedenen angezeigten Fehlermeldungen können Sie dabei unterstützen, das Problem selbst zu diagnostizieren.
+
+   Eine Liste der Onlinecompiler, mit denen Sie Ihren Code testen können, finden Sie unter [Online C++ compilers (C++-Onlinecompiler)](https://isocpp.org/blog/2013/01/online-c-compilers) auf der ISO C++-Website, oder Sie verwenden diese zusammengestellte [List of Online C++ Compilers (Liste der C++-Onlinecompiler)](https://arnemertz.github.io/online-compilers/) auf GitHub. Zu den Beispielen zählen [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) und [Coliru](http://coliru.stacked-crooked.com/). 
+
+   > [!NOTE]
+   > Die Websites für Onlinecompiler stehen nicht in Verbindung mit Microsoft. Viele Websites für Onlinecompiler werden als persönliche Projekte geführt. Einige dieser Seiten sind möglicherweise nicht mehr verfügbar, über eine Suche sollten Sie jedoch andere Seiten finden, die Sie verwenden können.
+
+Probleme mit dem Compiler, dem Linker und den Bibliotheken weisen üblicherweise bestimmte Merkmale auf. Die Art des aufgetretenen Problems bestimmt, welche Art von Reproduktion in den Bericht aufgenommen werden soll. Ohne geeignete Reproduktion gibt es nichts, was wir untersuchen könnten. Im Folgenden finden Sie einige Probleme, die bei Ihnen auftreten können, sowie Anweisungen für das Generieren der Reproduktionen, die Sie für das Melden des jeweiligen Problems verwenden sollten.
+ 
 #### <a name="frontend-parser-crash"></a>Front-End-Absturz (in der Analysephase)
 
 Front-End-Abstürze erfolgen in der Analysephase des Compilers. Der Compiler gibt in der Regel [Schwerwiegender Fehler C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) aus und verweist auf die Quellcodedatei und Zeilennummer, in der der Fehler aufgetreten ist. Häufig wird eine Datei des Typs „msc1.cpp“ erwähnt, die Sie jedoch ignorieren können.
@@ -144,13 +147,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend_crash"></a> Back-End-Absturz (Codegenerierung)
+#### <a name="backend-code-generation-crash"></a>Back-End-Absturz (Codegenerierung)
 
-Back-End-Abstürze erfolgen in der Codegenerierungsphase des Compilers. Der Compiler gibt in der Regel [Schwerwiegender Fehler C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) aus und verweist ggf. nicht auf die Quellcodedatei und Zeilennummer, in der das Problem aufgetreten ist. Häufig wird eine Datei des Typs „compiler\utc\src\p2\main.c“ erwähnt, was Sie jedoch ignorieren können.
+Back-End-Abstürze erfolgen in der Codegenerierungsphase des Compilers. Der Compiler gibt in der Regel [Schwerwiegender Fehler C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) aus und verweist ggf. nicht auf die Quellcodedatei und Zeilennummer, in der das Problem aufgetreten ist. Häufig wird die Datei „compiler\\utc\\src\\p2\\main.c“ erwähnt, dies können Sie jedoch ignorieren.
 
-Stellen Sie bei dieser Art des Absturzes bei Verwendung von Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) eine [Linkreproduktion](#link-repros) oder andernfalls eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereit. LTGC wird aktiviert, indem „cl.exe“ das Befehlszeilenargument `/GL` angegeben wird.
+Stellen Sie für diese Art von Absturz eine [Linkreproduktion](#link-repros) bereit, wenn Sie die Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) verwenden, die vom Befehlszeilenargument **/GL** für „cl.exe“ aktiviert wurde. Wenn dies nicht der Fall ist, stellen Sie stattdessen eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereit.
 
-Hier ist ein Beispiel der Ausgabe des Compilers bei dieser Art von Absturz, wenn LTCG **nicht** verwendet wird. Wenn Ihre Compilerausgabe wie folgt aussieht, sollten Sie eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereitstellen.
+Hier finden Sie ein Beispiel der Ausgabe des Compilers bei einem Back-End-Absturz, wenn LTCG nicht verwendet wird. Wenn Ihre Compilerausgabe wie folgt aussieht, sollten Sie eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereitstellen.
 
 ```Output
 repro.cpp
@@ -167,16 +170,16 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Wenn in der Zeile, die mit **Interner Compilerfehler** beginnt, „link.exe“ anstatt „cl.exe“ angegeben ist, war LTCG aktiviert, weshalb Sie eine [Linkreproduktion](#link-repros) bereitstellen sollten. Wenn anhand der Fehlermeldung des Compilers nicht klar ist, ob LTCG aktiviert war, müssen Sie möglicherweise die Befehlszeilenargumente untersuchen, die Sie in einem vorherigen Schritt aus dem Buildprotokoll für das Befehlszeilenargument `/GL` kopiert haben.
+Wenn in der Zeile, die mit **Interner Compilerfehler** beginnt, „link.exe“ anstatt „cl.exe“ angegeben ist, war LTCG aktiviert, weshalb Sie eine [Linkreproduktion](#link-repros) bereitstellen sollten. Wenn anhand der Fehlermeldung des Compilers nicht klar ist, ob LTCG aktiviert war, müssen Sie möglicherweise die Befehlszeilenargumente untersuchen, die Sie in einem vorherigen Schritt aus dem Buildprotokoll für das Befehlszeilenargument **/GL** kopiert haben.
 
 #### <a name="linker-crash"></a>Linkerabstürze
 
 Linkerabstürze treten in der Verknüpfungsphase nach Ausführung des Compilers auf. In der Regel gibt der Linker [Linkertoolfehler LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md) aus.
 
 > [!NOTE]
-> Wenn die Ausgabe C1001 oder LTCG enthält, finden Sie unter [Back-End-Absturz (Codegenerierung)](#backend_crash) weitere Informationen.
+> Wenn die Ausgabe C1001 oder LTCG enthält, finden Sie unter [Back-End-Absturz (Codegenerierung)](#backend-code-generation-crash) weitere Informationen.
 
-Fügen Sie bei dieser Art des Absturzes eine [Linkreproduktion](#link-repros) hinzu.
+Fügen Sie bei dieser Art von Absturz eine [Linkreproduktion](#link-repros) hinzu.
 
 Hier ist ein Beispiel der Ausgabe des Compilers bei dieser Art von Absturz.
 
@@ -212,88 +215,80 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Wenn inkrementelles Verknüpfen aktiviert ist und der Absturz nach dem anfänglichen Verknüpfen stattgefunden hat (d.h. erst nach der ersten vollständigen Verknüpfung, auf der nachfolgende inkrementelle Verknüpfungen basieren), fügen Sie eine Kopie der Objekt- und Bibliotheksdateien (OBJ und LIB) hinzu, die den Quelldateien entsprechen, die nach Abschluss der anfänglichen Verknüpfung geändert wurden.
+Wenn inkrementelles Verknüpfen aktiviert ist und der Absturz nach dem erfolgreichen anfänglichen Verknüpfen stattgefunden hat (d.h. erst nach der ersten vollständigen Verknüpfung, auf der nachfolgende inkrementelle Verknüpfungen basieren), fügen Sie eine Kopie der Objekt- und Bibliotheksdateien (OBJ und LIB) hinzu, die den Quelldateien entsprechen, die nach Abschluss der anfänglichen Verknüpfung geändert wurden.
 
 #### <a name="bad-code-generation"></a>Generierung von fehlerhaftem Code
 
-Die Generierung von fehlerhaftem Code ist selten, erfolgt jedoch, wenn der Compiler versehentlich falschen Code erzeugt, der den Absturz Ihrer Anwendung zur Laufzeit bewirkt, anstatt dieses Problem zur Kompilierungszeit zu erkennen. Wenn Sie meinen, dass das aufgetretene Problem zur Generierung von fehlerhaftem Code führt, erstellen Sie Ihren Bericht analog zu [ Back-End-Absturz (Codegenerierung)](#backend_crash).
+Die Generierung von fehlerhaftem Code ist selten, erfolgt jedoch, wenn der Compiler versehentlich falschen Code erzeugt, der den Absturz Ihrer Anwendung zur Laufzeit bewirkt, anstatt dieses Problem zur Kompilierungszeit zu erkennen. Wenn Sie meinen, dass das aufgetretene Problem zur Generierung von fehlerhaftem Code führt, erstellen Sie Ihren Bericht analog zu [ Back-End-Absturz (Codegenerierung)](#backend-code-generation-crash).
 
-Stellen Sie bei dieser Art des Absturzes bei Verwendung von Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) eine [Linkreproduktion](#link-repros) oder andernfalls eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereit. LTGC wird aktiviert, indem „cl.exe“ das Befehlszeilenargument `/GL` angegeben wird.
+Stellen Sie für diese Art von Absturz eine [Linkreproduktion](#link-repros) bereit, wenn Sie die Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) verwenden, die vom Befehlszeilenargument **/GL** für „cl.exe“ aktiviert wurde. Wenn dies nicht der Fall ist, stellen Sie eine [vorverarbeitete Reproduktion](#preprocessed-repros) bereit.
 
-## <a name="generate"></a> Generieren einer Reproduktion
+## <a name="how-to-generate-a-repro"></a>Generieren einer Reproduktion
 
-Eine Reproduktion ist ein vollständiges und unabhängiges Codebeispiel, das das Problem veranschaulicht, das Sie melden. Eine Reproduktion ist **kein** Codeausschnitt, sondern muss ein vollständiges Beispiel sein, für das ein Build erstellt wird und das ausgeführt wird (bzw. erfolgen würde, wenn es die Probleme nicht gäbe, die Sie melden). Es muss alle erforderlichen #include-Direktiven, sogar für die Standardheader, enthalten.
-
-Es folgen weitere Eigenschaften einer guten Reproduktion:
-
-- **Minimal.** Reproduktionen sollte so klein wie möglich sein und dennoch das aufgetretene Problem exakt veranschaulichen. Reproduktionen müssen nicht unbedingt komplex oder realistisch sein, sondern einfach und „auf den Punkt“. Sie müssen auch keine Gegenbeispiele von Code hinzufügen, der funktioniert, können dies aber zur Veranschaulichung tun. Nur Beispielcode, der das Problem verursacht, ist erforderlich.
-
-- **Unabhängig.** In Reproduktionen sollten unnötige Abhängigkeiten vermieden werden. Wenn Sie das Problem ohne Drittanbieterbibliotheken reproduzieren können, machen Sie dies. Wenn Sie das Problem ohne Bibliothekscode reproduzieren können (`std::out`, `printf()` sind zulässig), machen Sie dies. Für uns ist es enorm hilfreich, wenn Sie die Menge des Codes verringern, den wir als mögliche Ursache des Problems untersuchen müssen.
-
-- **Neueste Compilerversion.** Reproduktionen müssen mit der neuesten Version des Toolsets erstellt werden. Probleme, die in älteren Versionen des Toolsets immer noch auftreten, wurden sehr häufig in neueren Versionen behoben.
-
-- **Vergleich mit anderen Compilern**, falls relevant. Bei Reproduktionen, die portablen C++-Code enthalten, muss das Verhalten mit anderen Compilern, falls möglich, verglichen werden.
-
-   Dieser Schritt ist hilfreich, um zu bestimmen, ob der Code richtig ist, z.B. wenn MSVC nicht mit Clang und GCC übereinstimmt, oder falsch ist, wenn MSVC, Clang und GCC darin übereinstimmen, dass Ihr Code den Fehler erzeugt.
+Eine [gute Reproduktion](#what-makes-a-good-repro) ist entscheidend, damit wir die Quelle des Problems ermitteln können. Bevor Sie einen der im Folgenden beschriebenen Schritte für bestimmte Arten von Reproduktionen ausführen, versuchen Sie, den Code, der das Problem veranschaulicht, so weit wie möglich zu reduzieren. Versuchen Sie, Abhängigkeiten, erforderliche Header und Bibliotheken zu entfernen oder zu minimieren, und begrenzen Sie nach Möglichkeit die verwendeten Compileroptionen und Präprozessordefinitionen.
 
 Es folgenden Anweisungen zum Generieren der verschiedenen Arten von Reproduktionen, mit deren Hilfe Sie verschiedene Arten von Problemen melden.
 
 ### <a name="preprocessed-repros"></a>Vorverarbeitete Reproduktionen
 
-Eine vorverarbeitete Reproduktion ist eine einzelne Quelldatei, die ein Problem veranschaulicht und aus der Ausgabe des C-Präprozessors generiert wurde, indem die ursprüngliche Quelldatei verarbeitet wurde. Bei diesem Prozess wird für eingeschlossene Header „inline“ angegeben, um Abhängigkeiten von zusätzlichen Quell- und Headerdateien zu entfernen und zudem Makros, ifdefs und andere Präprozessorbefehle aufzulösen, die von Ihrer lokalen Umgebung abhängig sein könnten.
+Bei einer *vorverarbeiteten Reproduktion* handelt es sich um eine einzelne Quelldatei, die ein Problem veranschaulicht und aus der Ausgabe des C-Präprozessors generiert wurde, indem die Compileroption **/P** in der ursprünglichen Quelldatei der Reproduktion verwendet wurde. Dabei wird für eingeschlossene Header eine inline-Ersetzung vorgenommen, um Abhängigkeiten von zusätzlichen Quell- und Headerdateien sowie Makros, #ifdef-Direktiven und andere Präprozessorbefehle zu entfernen, die von Ihrer lokalen Umgebung abhängig sein können.
 
 > [!NOTE]
-> Beachten Sie, dass vorverarbeitete Reproduktionen für Probleme am unpraktischsten sind, die das Ergebnis von Fehlern in unserer Standardbibliotheksimplementierung sein können, da wir unsere neueste in Bearbeitung befindliche Implementierung häufig austauschen, um zu prüfen, ob wir das Problem bereits behoben haben. Führen Sie in diesem Fall keine Vorverarbeitung der Reproduktion aus. Wenn Sie das Problem nicht zu einer einzelne Quelldatei reduzieren können, packen Sie Ihren Code in eine ZIP-Datei o.ä., oder erwägen Sie eine IDE-Projektreproduktion (siehe [Andere Reproduktionen](#other-repros) weiter unten).
+> Vorverarbeitete Reproduktionen sind für Probleme nicht besonders nützlich, die das Ergebnis von Fehlern der Implementierung unserer Standardbibliothek sein können, da die neueste in Bearbeitung befindliche Implementierung häufig ausgetauscht wird, um zu prüfen, ob das Problem bereits behoben wurde. Führen Sie in diesem Fall keine Vorverarbeitung der Reproduktion aus. Wenn Sie das Problem nicht zu einer einzelne Quelldatei reduzieren können, packen Sie Ihren Code in eine ZIP-Datei o.ä., oder erwägen Sie eine IDE-Projektreproduktion. Weitere Informationen finden Sie unter [Andere Reproduktionen](#other-repros).
 
 #### <a name="to-preprocess-a-source-code-file"></a>So erfolgt die Vorverarbeitung einer Quellcodedatei
 
-1. Drücken Sie auf der Tastatur die WINDOWS-TASTE, und beginnen Sie mit dem Eingeben von `Developer Command Prompt`.
+1. Erfassen Sie die Befehlszeilenargumente, die zum Erstellen Ihrer Reproduktion verwendet wurden. Dieser Vorgang wird unter [So melden Sie den Inhalt der Befehlszeile](#to-report-the-contents-of-the-command-line) beschrieben.
 
-1. Wählen Sie die Version der **Developer-Eingabeaufforderung**, die Ihrer Version von Visual Studio entspricht, sobald sie in der Liste der Suchergebnisse angezeigt wird.
+1. Öffnen Sie die **Developer-Eingabeaufforderung**, die der Version von Visual Studio entspricht, und die Konfigurationsarchitektur, die zum Erstellen Ihres Projekts verwendet wurde.
 
-1. Geben Sie im Fenster **Developer-Eingabeaufforderung** den Befehl `cl /P argumentsfilename.cpp` ein.
+1. Wechseln Sie zu dem Verzeichnis, das die Reproduktion Ihres Projekts enthält.
 
-Nachdem Sie die Datei vorverarbeitet haben, (die jetzt DATEINAME.I heißt), empfiehlt es sich sicherzustellen, dass das Problem mithilfe der vorverarbeiteten Datei weiter reproduziert wird. Sie können das Befehlszeilenargument `/TP` verwenden, um „cl.exe“ anzuweisen, den Präprozessorschritt zu überspringen und eine Kompilierung wie üblich zu versuchen.
+1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **cl /P** *Argumente* *Dateiname.cpp* ein. Hierbei stellt *Argumente* die Liste der oben erfassten Argumente und *Dateiname.cpp* den Namen der Quelldatei Ihrer Reproduktion dar. Dieser Befehl repliziert die Befehlszeile, die für die Reproduktion verwendet wurde, beendet jedoch die Kompilierung nach dem Durchlauf des Präprozessors und gibt den vorverarbeiteten Quellcode in der Datei „*Dateiname*.i“ aus.
+
+Nachdem Sie die vorverarbeitete Datei generiert haben, sollten Sie sicherstellen, dass das Problem mithilfe der vorverarbeiteten Datei reproduziert werden kann.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>So bestätigen Sie, dass der Fehler mit der vorverarbeiteten Datei weiter reproduziert wird
 
-1. Drücken Sie auf der Tastatur die WINDOWS-TASTE, und beginnen Sie mit dem Eingeben von `Developer Command Prompt`.
-
-1. Wählen Sie die Version der **Developer-Eingabeaufforderung**, die Ihrer Version von Visual Studio entspricht, sobald sie in der Liste der Suchergebnisse angezeigt wird.
-
-1. Geben Sie im Fenster **Developer-Eingabeaufforderung** den Befehl `cl arguments /TP filename.i` ein.
+1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **cl** *Argumente* **/TP** *Dateiname***.i** ein, damit „cl.exe“ die vorverarbeitete Datei als C++-Quelldatei kompiliert. Hierbei stellt *Argumente* die Liste der oben erfassten Argumente dar, bei der jedoch alle **/D**- und **/I**-Argumente entfernt wurden (da diese bereits in der vorverarbeiteten Datei enthalten sind), und *Dateiname***.i** stellt den Namen der vorverarbeiteten Datei dar.
 
 1. Vergewissern Sie sich, dass das Problem reproduziert wird.
 
-Fügen Sie schließlich diese Reproduktion an Ihren Bericht an.
+Fügen Sie Ihrem Bericht schließlich die vorverarbeitete Reproduktion (*Dateiname*.i) an.
 
 ### <a name="link-repros"></a>Linkreproduktionen
 
-Eine Linkreproduktion ist ein einzelnes Verzeichnis mit Buildartefakten, die zusammen ein Problem veranschaulichen, das zur Verknüpfungszeit auftritt. Dies kann ein Back-End-Absturz bei Verwenden von LTCG (Link-Time Code Generation, Link-Zeitcodegenerierung) oder Linkerabsturz sein. Die enthaltenen Buildartefakte sind diejenigen, die als Linkereingabe benötigt werden, damit das Problem reproduziert werden kann. Linkreproduktionen können problemlos mithilfe der Funktionen erstellt werden, die der Linker bietet.
+Bei einer *Linkreproduktion* handelt es sich um die vom Linker generierten Inhalte eines Verzeichnisses, das von der Umgebungsvariable **link\_repro** angegeben wird. In dieser sind die Buildartefakte enthalten, die ein Problem veranschaulichen, das zur Linkzeit auftritt, z.B. ein Back-End-Absturz in Zusammenhang mit der Link-Zeitcodegenerierung (LTCG) oder ein Absturz des Linkers. Diese Buildartefakte sind als Linkereingabe erforderlich, damit das Problem reproduziert werden kann. Eine Linkreproduktion kann einfach erstellt werden, indem Sie diese Umgebungsvariable verwenden, um die integrierte Funktion des Linkers zum Generieren einer Reproduktion zu aktivieren.
 
 #### <a name="to-generate-a-link-repro"></a>So generieren Sie eine Linkreproduktion
 
-1. Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den Befehl `mkdir directory` zum Erstellen eines Verzeichnisses für die Linkreproduktion ein.
+1. Erfassen Sie die Befehlszeilenargumente, die zum Erstellen Ihrer Reproduktion verwendet wurden. Dieser Vorgang wird unter [So melden Sie den Inhalt der Befehlszeile](#to-report-the-contents-of-the-command-line) beschrieben.
 
-1. Legen Sie die Umgebungsvariable „link_repro“ auf das Verzeichnis fest, das Sie gerade erstellt haben, und geben Sie den Befehl `set link_repro=directory` ein.
+1. Öffnen Sie die **Developer-Eingabeaufforderung**, die der Version von Visual Studio entspricht, und die Konfigurationsarchitektur, die zum Erstellen Ihres Projekts verwendet wurde.
 
-1. Wenn der Buildvorgang in Visual Studio erfolgen soll, starten Sie ihn im Eingabeaufforderungsfenster durch Eingabe des Befehls `devenv`. Dadurch wird sichergestellt, dass der Wert der Umgebungsvariablen „link_repro“ für Visual Studio sichtbar ist.
+1. Wechseln Sie im Konsolenfenster der Developer-Eingabeaufforderung zu dem Verzeichnis, das die Reproduktion Ihres Projekts enthält.
 
-1. Erstellen Sie die Anwendung, und vergewissern Sie sich, dass das erwartete Problem aufgetreten ist.
+1. Geben Sie **mkdir linkrepro** ein, um ein Verzeichnis für die Linkreproduktion zu erstellen.
 
-1. Schließen Sie Visual Studio jetzt, falls Sie es in Schritt 3 gestartet haben.
+1. Geben Sie den Befehl **set link\_repro=linkrepro** ein, um die Umgebungsvariable **link\_repro** auf das Verzeichnis festzulegen, das Sie gerade erstellt haben.
 
-1. Löschen Sie die Umgebungsvariable „link_repro“. Geben Sie den Befehl `set link_repro=` ein.
+1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **devenv** ein, um das reproduzierte Projekt in Visual Studio zu erstellen. Dadurch wird sichergestellt, dass der Wert der Umgebungsvariablen **link\_repro** für Visual Studio sichtbar ist. Verwenden Sie zum Erstellen des Projekts über die Befehlszeile die oben erfassten Befehlszeilenargumente, um den reproduzierten Build zu duplizieren.
 
-Packen Sie abschließend die Reproduktion durch Komprimieren des gesamten Verzeichnisses in einer ZIP-Datei o.ä., und fügen Sie sie an Ihren Bericht an.
+1. Erstellen Sie das reproduzierte Projekt, und vergewissern Sie sich, dass das erwartete Problem aufgetreten ist.
+
+1. Wenn Sie Visual Studio für den Build verwendet haben, schließen Sie das Programm.
+
+1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **set link\_repro=** ein, um die Umgebungsvariable **link\_repro** zu löschen.
+
+Packen Sie abschließend die Reproduktion, indem Sie das gesamte Verzeichnis der Linkreproduktion in einer ZIP-Datei o.ä. komprimieren, und fügen Sie diese an Ihren Bericht an.
 
 ### <a name="other-repros"></a>Andere Reproduktionen
 
-Wenn Sie das Problem nicht auf eine einzelne Quelldatei oder vorverarbeitete Reproduktion reduzieren können und das Problem keine Linkreproduktion verlangt, können wir ein IDE-Projekt untersuchen. Der Code im Projekt darf weiter nur minimal sein, wobei weiter alle in diesem Dokument beschriebenen Leitlinien gelten.
+Wenn Sie das Problem nicht auf eine einzelne Quelldatei oder vorverarbeitete Reproduktion reduzieren können und das Problem keine Linkreproduktion verlangt, können wir ein IDE-Projekt untersuchen. Die Anleitung für das Erstellen einer guten Reproduktion gilt hierfür ebenfalls: Der Code sollte minimal und eigenständig sein, das Problem sollte in den neuesten Tools auftreten und das Problem sollte nicht in anderen Compilern angezeigt werden (falls relevant).
 
 Erstellen Sie Ihre Reproduktion als minimales IDE-Projekt, und erstellen Sie dann ein Paket, indem Sie die gesamte Verzeichnisstruktur in einer ZIP-Datei o.ä. komprimieren und diese an Ihren Bericht anfügen.
 
-## <a name="send"></a> Möglichkeiten zum Senden Ihres Berichts
+## <a name="ways-to-send-your-report"></a>Möglichkeiten zum Senden Ihres Berichts
 
 Es gibt mehrere Möglichkeiten, uns Ihren Bericht zu übermitteln. Die können das in Visual Studio integrierte [Tool „Problem melden“](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) oder die Seiten der [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) verwenden. Es ist auch möglich, eine E-Mail mit Ihrem Bericht zu senden, jedoch werden die ersten beiden Methoden bevorzugt. Die Wahl hängt davon ab, wie Sie sich mit den Entwicklern austauschen möchten, die Ihren Bericht untersuchen. Ein weiterer Aspekt ist, ob Sie den Status nachverfolgen oder Ihren Bericht mit der Community teilen möchten.
 
@@ -339,4 +334,3 @@ Source code and repro steps:
 
 > [!TIP]
 > Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und ohne Beziehung zum Toolset sind (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das Tool „Problem melden“ eine gute Wahl sein, und zwar aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben. Diese anderen Arten von Fehlern dürfen Sie auf keinen Fall durch Senden einer E-Mail an compilercrash@microsoft.com melden.
-
