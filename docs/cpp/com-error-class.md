@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error-Klasse
 **Microsoft-spezifisch**  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[Operator =](../cpp/com-error-operator-equal.md)|Weist ein vorhandenes `_com_error`-Objekt einem anderen zu.|  
+|[operator =](../cpp/com-error-operator-equal.md)|Weist ein vorhandenes `_com_error`-Objekt einem anderen zu.|  
   
 ### <a name="extractor-functions"></a>Funktionen des Extrahierungsprogramms  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **Ende Microsoft-spezifisch**  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** comdef.h  
+ **Header:** \<comdef.h>  
   
  `Lib:`"comsuppw.lib" oder "comsuppwd.lib" (siehe [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) für Weitere Informationen)  
   

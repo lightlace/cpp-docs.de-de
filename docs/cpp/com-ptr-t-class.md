@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t-Klasse
 **Microsoft-spezifisch**  
@@ -60,14 +60,14 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[Operator =](../cpp/com-ptr-t-operator-equal.md)|Weist einem vorhandenen `_com_ptr_t`-Objekt einen neuen Wert zu.|  
-|[Operatoren ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Vergleichen Sie das intelligente Zeigerobjekt mit einem anderen intelligenten Zeiger, unformatierten Schnittstellenzeiger oder **NULL**.|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|Weist einem vorhandenen `_com_ptr_t`-Objekt einen neuen Wert zu.|  
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Vergleichen Sie das intelligente Zeigerobjekt mit einem anderen intelligenten Zeiger, unformatierten Schnittstellenzeiger oder **NULL**.|  
 |[Extraktoren](../cpp/com-ptr-t-extractors.md)|Extrahieren Sie den gekapselten COM-Schnittstellenzeiger.|  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** "comip.h"  
+ **Header:** \<comip.h>  
   
  **LIB:** "comsuppw.lib" oder "comsuppwd.lib" (siehe [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) für Weitere Informationen)  
   

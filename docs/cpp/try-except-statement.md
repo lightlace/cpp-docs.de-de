@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except-Anweisung
 
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-Die Zeigertypen `PEXCEPTION_RECORD` und `PCONTEXT` in der Includedatei WINNT definiert sind. H und `_EXCEPTION_RECORD` und `_CONTEXT` in der Includedatei EXCPT definiert sind. H
+Die Zeigertypen `PEXCEPTION_RECORD` und `PCONTEXT` werden in der Includedatei definiert \<"Winnt.h" >, und `_EXCEPTION_RECORD` und `_CONTEXT` werden in der Includedatei definiert \<excpt.h >
 
 Sie können `GetExceptionCode` innerhalb des ausnahmehandlers. Sie können jedoch `GetExceptionInformation` nur innerhalb des ausnahmefilterausdrucks. Die Information, auf die verwiesen wird, befindet sich im Allgemeinen auf dem Stapel und ist nicht mehr verfügbar, wenn die Steuerung an den Ausnahmehandler übertragen wird.
 
 Die systeminterne Funktion `AbnormalTermination` wird innerhalb eines beendigungshandlers zur Verfügung. Es gibt 0 zurück, wenn der Hauptteil der **Try-finally-** -Anweisung nacheinander beendet wird. In allen anderen Fällen wird 1 zurückgegeben.
 
-EXCPT.H definiert mehrere alternative Namen für diese systeminternen Funktionen:
+excpt.h definiert mehrere alternativen Namen für diese systeminternen Funktionen:
 
 `GetExceptionCode`ist gleich`_exception_code`
 

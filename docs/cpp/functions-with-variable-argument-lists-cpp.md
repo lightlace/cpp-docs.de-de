@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funktionen mit Variablenargumentlisten Listen (C++)
 Funktionsdeklarationen, in denen der letzte Member von  das Auslassungszeichen (...) ist, können eine variable Anzahl von Argumenten akzeptieren. In diesen Fällen stellt C++ die Typüberprüfung nur für die explizit deklarierten Argumente bereit. Sie können Variablenargumentlisten verwenden, wenn Sie eine Funktion so allgemein gestalten müssen, dass sogar die Anzahl und Typen von Argumenten variieren können. Die Funktionsreihe ist ein Beispiel für Funktionen, die Variable Argumentlisten verwenden. `printf` *Argument-Declaration-List*  
   
 ## <a name="functions-with-variable-arguments"></a>Funktionen mit Variablenargumenten  
- Um auf Argumente nach den deklarierten Argumenten zuzugreifen, verwenden Sie die Makros, die in der Standardincludedatei STDARG.H enthalten sind, wie dies im Folgenden beschrieben wird.  
+ Um auf Argumente nach den deklarierten zuzugreifen, verwenden Sie die Makros in der standardincludedatei \<stdarg.h > wie unten beschrieben.  
   
  **Microsoft-spezifisch**  
   
@@ -43,9 +43,9 @@ Funktionsdeklarationen, in denen der letzte Member von  das Auslassungszeichen (
   
  Wenn Argumente des Typs `char` als Variablenargumente übergeben werden, werden sie in den Typ `int` konvertiert. Auf ähnliche Weise, wenn Argumente des Typs **"float"** übergeben werden als Variable Argumente, sie sind in den Typ konvertiert **doppelte**. Argumente anderer Typen unterliegen den üblichen Ganzzahl- und Gleitkomma-Erweiterungen. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen.  
   
- Funktionen, für die Variablenlisten erforderlich sind, werden mithilfe von Auslassungspunkten (...) in der Argumentliste deklariert. Verwenden Sie die Typen und Makros, die in der STDARG.H-Includedatei beschrieben werden, um auf Argumente zuzugreifen, die von einer Variablenliste übergeben werden. Weitere Informationen zu diesen Makros finden Sie unter [Va_arg, Va_copy, Va_end, Va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). in der Dokumentation für die C-Laufzeitbibliothek.  
+ Funktionen, für die Variablenlisten erforderlich sind, werden mithilfe von Auslassungspunkten (...) in der Argumentliste deklariert. Verwenden Sie die Typen und Makros, die in beschriebenen der \<stdarg.h > include-Datei, um auf Argumente zuzugreifen, die von einer Variablenliste übergeben werden. Weitere Informationen zu diesen Makros finden Sie unter [Va_arg, Va_copy, Va_end, Va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). in der Dokumentation für die C-Laufzeitbibliothek.  
   
- Das folgende Beispiel zeigt die Funktionsweise der Makros zusammen mit den Typ (deklariert in STDARG. H): 
+ Das folgende Beispiel zeigt, wie die Makros zusammen mit dem Typ funktionieren (deklariert \<stdarg.h >): 
   
 ```  
 // variable_argument_lists.cpp  

@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
@@ -53,10 +53,10 @@ Die beiden Bereiche für `operator new`-Funktionen werden in der folgenden Tabel
   
 |Operator|Bereich|  
 |--------------|-----------|  
-|**:: new-Operator**|Global|  
-|*Klassenname* **:: new-Operator**|Klasse|  
+|**::operator new**|Global|  
+|*class-name* **::operator new**|Klasse|  
   
- Das erste Argument für **new-Operator** muss vom Typ **Size_t** (ein Typ, der im STDDEF definiert ist. H), und der Rückgabetyp ist immer **"void" \*** .  
+ Das erste Argument für **new-Operator** muss vom Typ **Size_t** (einen Typ in \<stddef.h >), und der Rückgabetyp ist immer **"void" \***  .  
   
  Die globale **new-Operator** Funktion wird aufgerufen, wenn die **neue** Operator wird verwendet, um Objekte des integrierten Typs zuweisen, Objekte des Klassentyps, die keine enthalten benutzerdefinierte **new-Operator** Funktionen und Arrays eines beliebigen Typs. Wenn die **neue** Operator wird verwendet, um Objekte eines Klassentyps zuzuweisen, in denen ein **new-Operator** definiert ist, dieser Klasse **new-Operator** aufgerufen wird.  
   

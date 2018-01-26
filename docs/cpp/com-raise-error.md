@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Microsoft-spezifisch**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **IErrorInfo** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- `_com_raise_error`, das in comdef.h definiert ist, kann durch eine vom Benutzer erstellte Version desselben Namens und Prototyps ersetzt werden. Dies kann ausgeführt werden, wenn Sie `#import` verwenden möchten, jedoch nicht die C++-Ausnahmebehandlung. In diesem Fall kann eine Version **_com_raise_error** führen Sie ggf. eine `longjmp` oder Anzeigen eines Meldungsfelds und anzuhalten. Die Benutzerversion sollte nicht zurückkehren. Denn die COM-Unterstützung des Compiler-Codes erwartet keine Rückkehr.  
+ `_com_raise_error`, definiert \<comdef.h >, kann von einer vom Benutzer erstellter Version desselben Namens und Prototyps ersetzt werden. Dies kann ausgeführt werden, wenn Sie `#import` verwenden möchten, jedoch nicht die C++-Ausnahmebehandlung. In diesem Fall kann eine Version **_com_raise_error** führen Sie ggf. eine `longjmp` oder Anzeigen eines Meldungsfelds und anzuhalten. Die Benutzerversion sollte nicht zurückkehren. Denn die COM-Unterstützung des Compiler-Codes erwartet keine Rückkehr.  
   
  Sie können auch [_set_com_error_handler](../cpp/set-com-error-handler.md) ersetzt die Standardfunktion für die Fehlerbehandlung.  
   
@@ -60,7 +60,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 **Ende Microsoft-spezifisch**  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** comdef.h  
+ **Header:** \<comdef.h>  
   
  **LIB:** Wenn die **Wchar_t ist der systemeigene Typ** Compileroption ist, verwenden Sie "comsuppw.lib" oder "comsuppwd.lib". Wenn **Wchar_t ist der systemeigene Typ** deaktiviert ist, verwenden "comsupp.lib". Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

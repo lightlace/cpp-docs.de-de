@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t-Klasse
 **Microsoft-spezifisch**  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[Operator =](../cpp/variant-t-operator-equal.md)|Weist einem vorhandenen `_variant_t`-Objekt einen neuen Wert zu.|  
-|[Operator ==,! =](../cpp/variant-t-relational-operators.md)|Überprüft zwei `_variant_t`-Objekte auf Gleichheit bzw. Ungleichheit.|  
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|Überprüft zwei `_variant_t`-Objekte auf Gleichheit bzw. Ungleichheit.|  
 |[Extraktoren](../cpp/variant-t-extractors.md)|Extrahieren von Daten aus dem gekapselten **VARIANT** Objekt.|  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** comutil.h  
+ **Header:** \<comutil.h>  
   
  **LIB:** "comsuppw.lib" oder "comsuppwd.lib" (siehe [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) für Weitere Informationen)  
   

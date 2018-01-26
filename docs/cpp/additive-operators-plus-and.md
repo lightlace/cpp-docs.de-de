@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>Additive Operatoren: + und -
 ## <a name="syntax"></a>Syntax  
@@ -55,21 +55,21 @@ expression - expression
   
 |Typ|Bedeutung|  
 |----------|-------------|  
-|*arithmetische Operationen*|Ganzzahlige und nicht verankerte Typen werden kollektiv als "arithmetische" Typen bezeichnet.|  
-|*ganzzahlige*|Die Typen "char" und "int" in sämtlichen Größen ("long", "short") und Enumerationen sind ganzzahlige Typen.|  
-|*skalare*|Skalare Operanden sind entweder arithmetische oder Zeiger-Operanden.|  
+|*arithmetic*|Ganzzahlige und nicht verankerte Typen werden kollektiv als "arithmetische" Typen bezeichnet.|  
+|*integral*|Die Typen "char" und "int" in sämtlichen Größen ("long", "short") und Enumerationen sind ganzzahlige Typen.|  
+|*scalar*|Skalare Operanden sind entweder arithmetische oder Zeiger-Operanden.|  
   
  Die gültigen Kombinationen für diese Operatoren sind:  
   
- *arithmetische* + *arithmetische*  
+ *arithmetic* + *arithmetic*  
   
- *Skalare* + *ganzzahligen*  
+ *scalar* + *integral*  
   
- *ganzzahlige* + *skalare*  
+ *integral* + *scalar*  
   
- *arithmetische* - *arithmetische*  
+ *arithmetic* - *arithmetic*  
   
- *Skalare* - *skalare*  
+ *scalar* - *scalar*  
   
  Beachten Sie, dass Addition und Subtraktion keine äquivalenten Vorgänge sind.  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  Code in Form von `pIntArray = pIntArray + 1` ist in C++-Programmen selten. Um ein Inkrement auszuführen, werden diese Formen bevorzugt: `pIntArray++` oder `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Zeigersubtraktion  
- Wenn beide Operanden Zeiger sind, ist das Ergebnis der Subtraktion die Differenz (in Arrayelementen) zwischen den Operanden. Der Subtraktionsausdruck gibt ein ganzzahliges Ergebnis mit Vorzeichen vom Typ ptrdiff_t (definiert in der Standardincludedatei STDDEF.H) zurück.  
+ Wenn beide Operanden Zeiger sind, ist das Ergebnis der Subtraktion die Differenz (in Arrayelementen) zwischen den Operanden. Der subtraktionsausdruck gibt ein ganzzahliges-Ergebnis mit Vorzeichen vom Typ Ptrdiff_t (definiert in der standardincludedatei \<stddef.h >).  
   
  Einer der Operanden kann vom ganzzahligen Typ sein, solange er der zweite Operand ist. Das Ergebnis der Subtraktion ist vom selben Datentyp wie der ursprüngliche Zeiger. Der Wert der Subtraktion ist ein Zeiger auf die (*n* - *ich*) te Arrayelement, wobei  *n*  das Element verweist der ursprüngliche Zeiger und *ich* ist der ganzzahlige Wert des zweiten Operanden.  
   

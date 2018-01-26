@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new-Operator (C++)
 Belegt Speicher für ein Objekt oder Array von Objekten des *Typname* aus dem freien Speicher und einen typisierten Zeiger ungleich NULL für das Objekt zurückgegeben.  
@@ -69,10 +69,10 @@ delete *p;
   
  Die folgende Liste beschreibt die Grammatikelemente von **neue**:  
   
- *Platzierung*  
+ *placement*  
  Bietet eine Möglichkeit, zusätzliche Argumente übergeben, wenn Sie überladen **neue**.  
   
- *Typname*  
+ *type-name*  
  Gibt den zuzuweisenden Typ an. Es kann entweder ein integrierter oder ein benutzerdefinierter Typ sein. Eine komplizierte Typspezifikation können Sie in Klammern einschließen, um die Reihenfolge der Bindung zu erzwingen.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  Wenn der Compiler erkennt die **neue** Operator, um ein Objekt des Typs zuordnen `type`, einen Aufruf von ausgestellten `type` **:: new-Operator ("sizeof" (** `type` **))**  oder, wenn keine benutzerdefinierten `operator new` definiert ist, **:: new-Operator (Sizeof (** `type` **))**. Aus diesem Grund die **neue** -Operator die richtige Menge an Arbeitsspeicher für das Objekt zuordnen kann.  
   
 > [!NOTE]
->  Das Argument für `operator new` ist vom Typ **Size_t**. Dieser Typ ist in DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H und TIME.H definiert.  
+>  Das Argument für `operator new` ist vom Typ **Size_t**. Dieser Typ ist definiert \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, und \<time.h >.  
   
  Eine Option in der Grammatik ermöglicht die Festlegung der *Platzierung* (finden Sie in der Grammatik für [new-Operator](../cpp/new-operator-cpp.md)). Die *Platzierung* Parameter kann verwendet werden, nur für benutzerdefinierte Implementierungen der `operator new`; damit können weitere Informationen zu übergebenden `operator new`. Ein Ausdruck mit einem *Platzierung* Feld, z. B. `T *TObject = new ( 0x0040 ) T;` übersetzt `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Wenn die Klasse T Memberoperator neue, andernfalls hat `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

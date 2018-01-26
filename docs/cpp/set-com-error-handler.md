@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 2cfb1e0dedf8d5ff90092d7eee2246791a491d2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c04c6b2a1177288544536130cf88c8fd8fb673e6
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft-spezifisch**  
@@ -94,7 +94,7 @@ Exception raised: Unable to establish the connection!
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** comdef.h  
+ **Header:** \<comdef.h>  
   
  **LIB:** Wenn die **Wchar_t ist der systemeigene Typ** Compileroption ist, verwenden Sie "comsuppw.lib" oder "comsuppwd.lib". Wenn **Wchar_t ist der systemeigene Typ** deaktiviert ist, verwenden "comsupp.lib". Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

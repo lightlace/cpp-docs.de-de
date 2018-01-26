@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen
 In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Objekte (oder genauer gesagt, als COM-Server) implementiert. Viele Windows-Betriebssystemkomponenten werden als COM-Server implementiert, und viele Mitwirkende bieten Bibliotheken in dieser Form. Informationen zu den COM-Grundlagen finden Sie unter [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -30,7 +30,7 @@ In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Ob
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` und die zugehörigen Elemente sind Teil der ATL und in „atlcomcli.h“ definiert. `_com_ptr_t` wird in „comip.h“ deklariert. Der Compiler erstellt Spezialisierungen von `_com_ptr_t` , wenn er Wrapperklassen für Typbibliotheken generiert.  
+ `CComPtr`und die zugehörigen Elemente sind Teil der ATL und werden im definiert \<"atlcomcli.h" >. `_com_ptr_t`im deklarierten \<"comip.h" >. Der Compiler erstellt Spezialisierungen von `_com_ptr_t` , wenn er Wrapperklassen für Typbibliotheken generiert.  
   
 ## <a name="example"></a>Beispiel  
  ATL stellt auch `CComQIPtr`bereit, der eine einfachere Syntax verwendet, um ein COM-Objekt zum Abrufen einer zusätzlichen Schnittstelle abzufragen. Wir empfehlen jedoch `CComPtr` , da er alles beherrscht, was `CComQIPtr` kann, und semantisch mehr mit unformatierten COM-Schnittstellenzeigern übereinstimmt. Bei Verwendung eines `CComPtr` zum Abfragen einer Schnittstelle wird der neue Schnittstellenzeiger in einem Ausgabeparameter platziert. Wenn bei dem Aufruf ein Fehler auftritt, wird HRESULT – das normale COM-Muster – zurückgegeben. Mit `CComQIPtr`ist der Zeiger selbst der Rückgabewert, und wenn bei dem Aufruf ein Fehler auftritt, ist kein Zugriff auf den internen HRESULT-Rückgabewert möglich. Die folgenden beiden Zeilen zeigen, wie sich die Fehlerbehandlungsmechanismen in `CComPtr` und `CComQIPtr` unterscheiden.  
