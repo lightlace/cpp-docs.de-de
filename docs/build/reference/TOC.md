@@ -102,6 +102,7 @@
 ##### [/Qpar (Automatische Parallelisierung)](qpar-auto-parallelizer.md)
 ##### [/Qpar-report (Berichtebene der automatischen Parallelisierung)](qpar-report-auto-parallelizer-reporting-level.md)
 ##### [/Qsafe_fp_loads](qsafe-fp-loads.md)
+##### [/Qspectre](qspectre.md)
 ##### [/Qvec-report (Berichtebene der automatischen Vektorisierung)](qvec-report-auto-vectorizer-reporting-level.md)
 #### [/RTC (Laufzeitfehlerüberprüfungen)](rtc-run-time-error-checks.md)
 #### [/sdl (Zusätzliche Sicherheitsprüfungen aktivieren)](sdl-enable-additional-security-checks.md)
