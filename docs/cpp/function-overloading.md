@@ -1,33 +1,38 @@
 ---
 title: "Funktionsüberladung | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
-C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese werden als überladene Funktionen bezeichnet und ausführlich unter "Überladen" beschrieben. Überladene Funktionen ermöglichen Programmierern das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und der Anzahl von Argumenten.  
+C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und Anzahl von Argumenten. 
   
- Z. B. eine **Drucken** Funktion, die eine Zeichenfolge akzeptiert (oder **Char \*** ) Argument führt sehr unterschiedliche Aufgaben als eine, die ein Argument des Typs **doppelte** . Das Überladen ermöglicht eine einheitliche Benennung und verhindert, dass Programmierer Namen wie `print_sz` oder `print_d` erfinden müssen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.  
+ Z. B. eine **Drucken** -Funktion, akzeptiert eine **Std:: String** Argument adäquat sehr unterschiedliche Aufgaben einer, die ein Argument des Typs **doppelte**. Überladen von erspart Ihnen von Namen verwenden, z. B. `print_string` oder `print_double`. Zum Zeitpunkt der Kompilierung wählt der Compiler an, welche Überladung verwendet auf den Typ der Argumente, die von der aufrufenden Funktion übergebene basieren.  Beim Aufrufen **print(42.0)** die **"void" Print (double-d)** -Funktion wird aufgerufen werden. Beim Aufrufen **drucken ("hello World")** die **"void" print(std::string)** Überladung aufgerufen wird.
+
+Sie können Memberfunktionen und nicht-Memberfunktionen überladen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.  
   
 ### <a name="overloading-considerations"></a>Überlegungen zur Überladung  
   
@@ -39,9 +44,8 @@ C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gü
 |Vorhandensein oder Abwesenheit von Auslassungszeichen|Ja|  
 |Verwendung von `typedef`-Namen|Nein|  
 |Nicht angegebene Arraygrenzen|Nein|  
-|**const** oder `volatile` (siehe unten)|Ja|  
-  
- Obwohl Funktionen auf Grundlage des Rückgabetyps unterschieden werden können, können sie nicht auf dieser Grundlage überladen werden.  `Const`oder `volatile` dienen nur als Grundlage zum Überladen, wenn sie in einer Klasse verwendet werden, zum Anwenden der **dies** Zeiger für die Klasse, die nicht den Rückgabetyp der Funktion.  Das heißt, Überladung gilt nur, wenn die **const** oder `volatile` Schlüsselwort folgt Argumentliste der Funktion in der Deklaration.  
+|**const** oder`volatile`|Ja, wenn auf die gesamte Funktion angewendet|
+|[ref-qualifier](#ref-qualifier)|Ja|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht, wie das Überladen verwendet werden kann.  
@@ -51,68 +55,71 @@ C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gü
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |Konvertieren von Typ|Konvertiert in Typ|  
 |-----------------------|---------------------|  
-|*Typname*|*Typname***&**|  
-|*Typname***&**|*Typname*|  
-|*Typname* **]**|*Typname\**|  
+|*type-name*|*type-name* **&**|  
+|*type-name* **&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
 |*Typname* **(** *Argumentliste* **)**|**(**  *\*Typname* **) (** *Argumentliste* **)**|  
-|*Typname*|**const** *Typname*|  
-|*Typname*|`volatile`*Typname*|  
-|*Typname\**|**const** *Typname\**|  
-|*Typname\**|`volatile`*Typname\**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile`*Typname*|  
+|*type-name\**|**const** *type-name\**|  
+|*type-name\**|`volatile`*Typname\**|  
   
  Die Reihenfolge für Konvertierungen lautet wie folgt:  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  Der linke Operand der Operatoren `->*` und `.*` (Zeiger auf Member) wird hinsichtlich der Argumentübereinstimmung genauso wie der `.`-Operator und der `->`-Operator (Memberauswahl) behandelt.  
+
+## <a name="ref-qualifiers"></a>REF-Qualifizierer auf Memberfunktionen  
+REF-Qualifizierer stellen das Überladen auf Grundlage, ob das Objekt, zeigt einer Memberfunktion `this` Rvalue oder Lvalue ist.  Diese Funktion kann verwendet werden, vermeiden Sie unnötige Kopiervorgänge in Szenarien, in denen gewählte nicht, die Zeiger auf die Daten zugegriffen. Nehmen wir beispielsweise an Klasse **C** einige Daten in seinem Konstruktor initialisiert, und gibt eine Kopie der Daten in der Memberfunktion **get_data()**. Wenn ein Objekt des Typs **C** ist ein Rvalue-Wert, der zerstört werden, und klicken Sie dann wählt der Compiler die **get_data() & &** überladen, wodurch die Daten verschoben werden, anstatt Sie zu kopieren. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Beschränkungen  
+## <a name="restrictions-on-overloading"></a>Einschränkungen beim Überladen  
  Mehrere Einschränkungen steuern eine akzeptable Gruppe von überladenen Funktionen:  
   
 -   Zwei beliebige Funktionen in einer Gruppe von überladenen Funktionen müssen unterschiedliche Argumentlisten haben.  
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Deklarationsübereinstimmung  
+## <a name="overloading-overriding-and-hiding"></a>Überladen, überschreiben und ausblenden
+  
  Zwei beliebige Funktionsdeklarationen des gleichen Namens im gleichen Bereich können auf die gleiche Funktion oder zwei einzelne Funktionen, die überladen werden, verweisen. Wenn die Argumentlisten der Deklarationen Argumente äquivalenter Typen enthalten (wie im vorherigen Abschnitt beschrieben), beziehen sich die Funktionsdeklarationen auf die gleiche Funktion. Andernfalls beziehen sie sich auf zwei separate Funktionen, die mithilfe des Überladens ausgewählt werden.  
   
- Der Klassenbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die in einer Basisklasse deklariert wurde, nicht im selben Bereich wie eine Funktion, die in einer abgeleiteten Klasse deklariert wurde. Wenn eine Funktion in einer abgeleiteten Klasse mit dem gleichen Namen wie eine Funktion in der Basisklasse deklariert ist, blendet die Funktion der abgeleiteten Klasse die Basisklassenfunktion aus, und es erfolgt keine Überladung.  
+ Der Klassenbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die in einer Basisklasse deklariert wurde, nicht im selben Bereich wie eine Funktion, die in einer abgeleiteten Klasse deklariert wurde. Wenn eine Funktion in einer abgeleiteten Klasse, mit dem gleichen Namen wie eine virtuelle Funktion in der Basisklasse abgeleitete Klassenfunktion deklariert wird *überschreibt* die Basisklassenfunktion. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
+
+Wenn die Funktion der Basisklasse ist nicht als "virtual" deklariert, und klicken Sie dann die Funktion der abgeleiteten Klasse gilt als *ausblenden* es. Sowohl überschreiben und Ausblenden von unterscheiden sich von überladen.  
   
  Der Blockbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die im Dateibereich deklariert ist, nicht im selben Bereich wie eine lokal deklarierte Funktion. Wenn eine lokal deklarierte Funktion den gleichen Namen wie eine Funktion besitzt, die im Dateibereich deklariert wird, blendet die lokal deklarierte Funktion die Funktion im Dateibereich aus, und es erfolgt keine Überladung. Zum Beispiel:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen (C++)](../cpp/functions-cpp.md)

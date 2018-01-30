@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>Algorithmen
 Algorithmen sind grundlegender Bestandteil der C++-Standardbibliothek. Algorithmen arbeiten nicht mit Containern selbst, sondern mit Iteratoren. Daher kann der gleiche Algorithmus von den meisten, wenn nicht gar allen, C++-Standardbibliothekcontainern verwendet werden. Dieser Abschnitt beschreibt die Konventionen und die Terminologie von C++-Standardbibliothekalgorithmen.  
@@ -56,7 +59,7 @@ Algorithmen sind grundlegender Bestandteil der C++-Standardbibliothek. Algorithm
   
  Eine Sequenz von Elementen, durch Iteratoren festgelegt, im Bereich (`First`, `Last`) ist eine durch den Operator **<** sortierte Sequenz, wenn für jedes *N* im Bereich (0, `Last` - `First`) und für jedes *M* im Bereich (N, `Last` - `First`) das Prädikat !(\*(`First` + *M*) < \*(*First* + *N*) erfüllt ist. (Beachten Sie, dass die Elemente in aufsteigender Reihenfolge sortiert werden.) Die Prädikatfunktion **operator<**, oder jeder Ersatz hierfür, darf keinen der beiden Operanden ändern. Sie muss bei jeder Auswertung dasselbe `bool`-Ergebnis ausgeben. Außerdem muss sie dasselbe Ergebnis ausgeben, wenn eine Kopie einer der Operanden für den Operanden ersetzt wird. Darüber hinaus muss sie eine strikte schwache Sortierung für die verglichenen Operanden anwenden.  
   
- Eine durch Iteratoren im Bereich (`First`, `Last`) festgelegte Sequenz von Elementen ist ein Heap, der von **operator>** sortiert wird, wenn für jedes *N* im Bereich (1, `Last` - `First`) das Prädikat !(\*`First` < \*(`First` + *N*)) erfüllt ist. (Das erste Element ist das größte.) Seine interne Struktur ist ansonsten nur der Vorlagenfunktion [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap), and [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap) bekannt. Wie bei einer geordneten Sequenz darf die Prädikatfunktion **operator<**, oder jeder Ersatz hierfür, keinen der beiden Operanden ändern, und sie muss eine strikte schwache Sortierung auf die verglichenen Operanden anwenden. Sie muss bei jeder Auswertung dasselbe `bool`-Ergebnis ausgeben. Außerdem muss sie dasselbe Ergebnis ausgeben, wenn eine Kopie einer der Operanden für den Operanden ersetzt wird.  
+ Eine durch Iteratoren im Bereich (`First`, `Last`) festgelegte Sequenz von Elementen ist ein Heap, der von **operator>** sortiert wird, wenn für jedes *N* im Bereich (1, `Last` - `First`) das Prädikat !(\*`First` < \*(`First` + *N*)) erfüllt ist. (Das erste Element ist das größte.) Ihre interne Struktur ist andernfalls nur an die Vorlagenfunktionen bekannt [Make_heap](../standard-library/algorithm-functions.md#make_heap), [Pop_heap](../standard-library/algorithm-functions.md#pop_heap), und [Push_heap](../standard-library/algorithm-functions.md#push_heap). Wie bei einer geordneten Sequenz darf die Prädikatfunktion **operator<**, oder jeder Ersatz hierfür, keinen der beiden Operanden ändern, und sie muss eine strikte schwache Sortierung auf die verglichenen Operanden anwenden. Sie muss bei jeder Auswertung dasselbe `bool`-Ergebnis ausgeben. Außerdem muss sie dasselbe Ergebnis ausgeben, wenn eine Kopie einer der Operanden für den Operanden ersetzt wird.  
   
  Die C++-Standardbibliotheksalgorithmen in den Headerdateien [\<algorithm>](../standard-library/algorithm.md) und [\<numeric>](../standard-library/numeric.md) zu finden.  
   

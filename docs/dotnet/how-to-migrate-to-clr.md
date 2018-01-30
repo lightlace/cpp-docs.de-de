@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 Dieses Thema behandelt Probleme, die beim Kompilieren von systemeigenem Code mit auftreten **"/ CLR"** (siehe [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen). **"/ CLR"** Visual C++-Module aufgerufen und gleichzeitig die Kompatibilität mit nicht verwalteten Modulen beibehalten von .NET-Assemblys aus aufgerufen werden können. Finden Sie unter [gemischte (systemeigene und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [einheitlichen als auch .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>Verwenden neuer Visual C++-Funktionen  
  Nach der Anwendung kompiliert, Links und ausgeführt wird, können Sie beginnen, mithilfe der Features von .NET in einem Modul kompiliert mit **"/ CLR"**. Weitere Informationen finden Sie unter [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md).  
   
- Wenn Sie Managed Extensions für C++ verwendet haben, können Sie den Code für die Verwendung der neuen Syntax konvertieren. Eine Zusammenfassung der syntaktischen Unterschiede, finden Sie unter der [(NOTINBUILD) Managed Extensions for C++ Syntax Upgrade Checklist](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada). Weitere Informationen zum Konvertieren von Managed Extensions für C++ finden Sie unter [C + c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).  
+ Wenn Sie Managed Extensions für C++ verwendet haben, können Sie den Code für die Verwendung der neuen Syntax konvertieren. Weitere Informationen zum Konvertieren von Managed Extensions für C++ finden Sie unter [C + c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).  
   
  Informationen zur .NET-Programmierung in Visual C++ finden Sie unter:  
   

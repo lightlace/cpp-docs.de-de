@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>Spezielle CWinApp-Dienste
 Neben die Nachrichtenschleife ausführen und und Sie haben die Gelegenheit, die Anwendung zu initialisieren und bereinigen, [CWinApp](../mfc/reference/cwinapp-class.md) mehrere andere Dienste bereitstellt.  
@@ -60,9 +63,9 @@ Neben die Nachrichtenschleife ausführen und und Sie haben die Gelegenheit, die 
   
  Diese Unterstützung für die automatische Registrierung in `CWinApp` entfällt die Notwendigkeit eine REG-Datei mit Ihrer Anwendung zu senden oder zu besondere Installationsarbeit zu erledigen.  
   
- Initialisieren von GDI + für Ihre Anwendung verwendet werden sollen (durch Aufrufen von [GdiplusStartup]--Brokenlink--(_Gdiplus_FUNC_GdiplusStartup_token_input_output_) in Ihrer [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) Funktion), müssen Sie GDI +-Hintergrundthread zu unterdrücken.  
+ Initialisieren von GDI + für Ihre Anwendung verwendet werden sollen (durch Aufrufen von [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) in Ihrer [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) Funktion), müssen Sie die GDI +-Hintergrundthread zu unterdrücken.  
   
- Hierzu können Sie durch Festlegen der **SuppressBackgroundThread** Mitglied der [GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput)-Struktur, um **"true"**. Wenn Unterdrücken von GDI + Hintergrundthread, der **NotificationHook** und **NotificationUnhook** aufrufen (Siehe [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) sollten unmittelbar vor dem eingeben, und beenden die Anwendung die Meldungsschleife vorgenommen Sie werden. Aus diesem Grund ist eine gute Aufrufen **GdiplusStartup** und die Benachrichtigung Hookfunktionen wäre in einer Überschreibung der virtuellen Funktion [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), wie unten dargestellt:  
+ Hierzu können Sie durch Festlegen der **SuppressBackgroundThread** Mitglied der [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) -Struktur an **"true"**. Wenn Unterdrücken von GDI + Hintergrundthread, der **NotificationHook** und **NotificationUnhook** sollte aufgerufen werden direkt vor der eingeben, und beenden die Anwendung die Meldungsschleife. Weitere Informationen zu diesen aufrufen, finden Sie unter [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Aus diesem Grund ist eine gute Aufrufen **GdiplusStartup** und die Benachrichtigung Hookfunktionen wäre in einer Überschreibung der virtuellen Funktion [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), wie unten dargestellt:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

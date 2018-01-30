@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Verwenden von Einfügeoperatoren und Festlegen des Formats
 In diesem Thema wird veranschaulicht, wie Sie das Format steuern und Einfügeoperatoren für Ihre eigenen Klassen erstellen. Der Einfügeoperator (**<<**), der für alle standardmäßigen C++-Datentypen vorprogrammiert ist, sendet Bytes an ein Ausgabestreamobjekt. Einfügeoperatoren arbeiten mit vordefinierten „Manipulatoren“, d. h. Elementen, die das Standardformat von Ganzzahlargumenten ändern.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Dieses Verhalten können Sie manuell umgehen, um Zeichenfolgen-Roundtrips aber praktischer zu gestalten, fügt C++ 14 den `std::quoted`-Streammanipulator in `<iomanip>` ein. Beim Einfügen umgibt `quoted()` die Zeichenfolge mit einem Trennzeichen (standardmäßig doppelte Anführungszeichen „"“), und bei der Extraktion wird der Stream so manipuliert, dass alle Zeichen extrahiert werden, bis das finale Trennzeichen gefunden wird. Eingebettete Anführungszeichen werden mit Escapezeichen versehen (standardmäßig „\\\\“).  
   
- Die Trennzeichen sind nur im Streamobjekt vorhanden. Sie sind nicht in der extrahierten Zeichenfolge vorhanden, aber in der von [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str)() zurückgegebenen Zeichenfolge.  
+ Die Trennzeichen sind nur im Streamobjekt vorhanden. Sie sind nicht in der extrahierten Zeichenfolge vorhanden, aber sie sind in der Zeichenfolge zurückgegebenes vorhanden [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str).  
   
  Das Leerzeichenverhalten der Einfüge- und Extraktionsvorgänge ist unabhängig von der Art der Darstellung einer Zeichenfolge im Code, sodass der in Anführungszeichen gesetzte Operator unabhängig davon nützlich ist, ob die Eingabezeichenfolge ein unformatiertes Zeichenfolgenliteral oder eine reguläre Zeichenfolge ist. Die Eingabezeichenfolge kann unabhängig vom Format eingebettete Anführungszeichen, Zeilenumbrüche, Tabulatoren usw. aufweisen, und diese werden vom quoted()-Manipulator beibehalten.  
   
- Weitere Informationen sowie Beispiele für vollständigen Code finden Sie unter [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted).  
+ Weitere Informationen und vollständige Codebeispiele finden Sie unter [in Anführungszeichen](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausgabestreams](../standard-library/output-streams.md)   

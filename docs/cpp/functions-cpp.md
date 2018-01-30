@@ -1,13 +1,15 @@
 ---
 title: Funktionen (C++) | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>Funktionen (C++)
 Eine Funktion ist ein Codeblock, der einige Vorgänge ausführt. Eine Funktion kann optional Eingabeparameter definieren, die Aufrufern ermöglichen, Argumente in die Funktion weiterzugeben. Eine Funktion kann einen Wert optional als Ausgabe zurückgeben. Funktionen sind für das Kapseln allgemeiner Vorgänge in einem einzelnen wiederverwendbaren Block nützlich, und zwar ideal unter Verwendung eines Namens, der deutlich das beschreibt, was die Funktion vornimmt. Die folgende Funktion akzeptiert zwei Ganzzahlen von einem Aufrufer und gibt deren Summe zurück; `a` und `b` sind *Parameter* vom Typ `int`.  
@@ -50,6 +53,8 @@ int main()
  Es gibt keine praktische Begrenzung für die Funktionslänge, jedoch angemessene Entwurfsziele für Funktionen, die eine einzelne klar definierte Aufgabe ausführen. Komplexe Algorithmen sollten möglichst in leicht verständliche einfachere Funktionen aufgeschlüsselt werden.  
   
  Im Klassenbereich definierte Funktionen werden als Memberfunktionen bezeichnet. In C++ kann eine Funktion im Gegensatz zu anderen Sprachen auch im Namespacebereich (einschließlich des impliziten globalen Namespace) definiert werden. Solche Funktionen heißen *freien Funktionen* oder *nicht-Memberfunktionen*; sie werden umfassend in der Standardbibliothek verwendet.  
+
+Funktionen werden möglicherweise *überladen*, was bedeutet, dass unterschiedliche Versionen einer Funktion kann den gleichen Namen freigeben, wenn sich die Anzahl und/oder den Typ des formalen Parameter unterscheidet. Weitere Informationen finden Sie unter [Funktionsüberladung](../cpp/function-overloading.md).
   
 ## <a name="parts-of-a-function-declaration"></a>Bestandteile einer Funktionsdeklaration  
  Eine minimale Funktion *Deklaration* besteht aus den Rückgabetyp, den Funktionsnamen und die Parameterliste (die leer sein kann) sowie optionalen Schlüsselwörtern, die dem Compiler zusätzliche Anweisungen bereitstellen. Im folgende Beispiel wird die Deklaration einer Funktion:
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (nur Memberfunktionen) Wenn `static` auf eine Memberfunktion angewendet ist, bedeutet dies, dass die Funktion nicht mit Objektinstanzen der Klasse verknüpft ist.   
   
-8.  (Gilt nur für nicht statische Memberfunktionen) Ref-Qualifizierer, der für den Compiler, welche Überladung einer Funktion angibt, um auszuwählen, wann der implizite Objektparameter (* dies) ein Rvalue-Verweis oder ein Lvalue-Verweis ist.  
+8.  (Gilt nur für nicht statische Memberfunktionen) Ref-Qualifizierer, der für den Compiler, welche Überladung einer Funktion angibt, um auszuwählen, wann der implizite Objektparameter (* dies) ein Rvalue-Verweis oder ein Lvalue-Verweis ist. Weitere Informationen finden Sie unter [Funktionsüberladung](function-overloading.md#ref-qualifiers). 
   
  Die folgende Abbildung zeigt die Teile einer Funktionsdefinition. Der schattierte Bereich ist der Funktionsrumpf.  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. Zusätzlich zur Verwendung des Rückgabewert selbst, können Sie "return" Werte definieren Sie eine beliebige Anzahl von Parametern zum Übergeben als Verweis verwendet werden, damit die Funktion zu ändern, oder initialisieren die Werte der Objekte, die der Aufrufer enthält. Weitere Informationen finden Sie unter [Verweistyp Funktionsargumente](reference-type-function-arguments.md).
+4. Zusätzlich zur Verwendung des Rückgabewert selbst, können Sie "return" Werte definieren Sie eine beliebige Anzahl von Parametern zum Übergeben als Verweis verwendet werden, damit die Funktion zu ändern, oder initialisieren die Werte der Objekte, die der Aufrufer enthält. Weitere Informationen finden Sie unter [Verweistyp Funktionsargumente](reference-type-function-arguments.md).  
   
 ## <a name="function-pointers"></a>Funktionszeiger  
  C++ unterstützt Funktionszeiger auf die gleiche Weise wie die C-Sprache. Eine typsichere Alternative besteht jedoch darin, ein Funktionsobjekt zu verwenden.  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - AFXMOUSEMANAGER/CMouseManager::LoadState
 - AFXMOUSEMANAGER/CMouseManager::SaveState
 - AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMouseManager [MFC], AddView
 - CMouseManager [MFC], GetViewDblClickCommand
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f50b74731089346a9675b5340ba0ea1a0b2879f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cmousemanager-class"></a>CMouseManager-Klasse
 Ermöglicht einem Benutzer, unterschiedliche Befehle einem bestimmten zuordnen [CView](../../mfc/reference/cview-class.md) Objekt, wenn der Benutzer in dieser Ansicht doppelklickt.  
@@ -138,7 +141,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Befehlsbezeichner, ob die Sicht einen Befehl zugeordnet ist; andernfalls 0.  
   
-##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId  
  Ruft das Symbol, das eine Ansicht-ID zugeordnet ist  
   
 ```  
@@ -241,7 +244,7 @@ void SetCommandForDblClk(
  Der Befehlsbezeichner.  
   
 ### <a name="remarks"></a>Hinweise  
- Um eine Ansicht ein benutzerdefiniertes Befehls zuzuordnen, müssen Sie zuerst die Sicht registrieren, mit [CMouseManager::AddView](#addview). Die `AddView` Methode erfordert einen Bezeichner als Eingabeparameter. Nachdem Sie eine Sicht registriert haben, können Sie aufrufen `CMouseManager::SetCommandForDblClk` mit der gleichen Ansicht Bezeichner Eingabeparameter, die Sie an `AddView`. Danach, wenn der Benutzer die Maus in der registrierten Ansicht doppelklickt, die Anwendung wird führen Sie den Befehl erkennbar `uiCmd.` um das benutzerdefinierte Verhalten zu unterstützen, Sie müssen auch zum Anpassen der Ansicht mit der Maus-Manager registriert. Weitere Informationen zu benutzerdefinierten Verhalten, finden Sie unter [Anpassen von Tastatur und Maus]--Brokenlink--(.. / Maus-und-Tastatur-customization.md).  
+ Um eine Ansicht ein benutzerdefiniertes Befehls zuzuordnen, müssen Sie zuerst die Sicht registrieren, mit [CMouseManager::AddView](#addview). Die `AddView` Methode erfordert einen Bezeichner als Eingabeparameter. Nachdem Sie eine Sicht registriert haben, können Sie aufrufen `CMouseManager::SetCommandForDblClk` mit der gleichen Ansicht Bezeichner Eingabeparameter, die Sie an `AddView`. Danach, wenn der Benutzer die Maus in der registrierten Ansicht doppelklickt, die Anwendung wird führen Sie den Befehl erkennbar `uiCmd.` um das benutzerdefinierte Verhalten zu unterstützen, Sie müssen auch zum Anpassen der Ansicht mit der Maus-Manager registriert. Weitere Informationen zu benutzerdefinierten Verhalten, finden Sie unter [Anpassen von Tastatur und Maus](../keyboard-and-mouse-customization.md).  
   
  Wenn `uiCmd` festgelegt ist, 0, die angegebene Ansicht ist nicht mehr mit einem Befehl verknüpft.  
   

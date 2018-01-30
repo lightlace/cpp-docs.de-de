@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - redistributing DLLs
 - manifests [C++]
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1c444b3319c60b80bdfdc14000a41d65869d0514
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Auswählen einer Bereitstellungsmethode
 Es sei denn, die Visual C++-Anwendung eigenständig und kann mithilfe eines Kopierbefehls bereitgestellt werden, wird empfohlen, dass Sie Windows Installer für die Bereitstellung verwenden. Windows Installer unterstützt die Installation, Reparatur und Deinstallation, und es unterstützt das atomische Aktualisieren von Anwendungsdateien, Abhängigkeiten und Registrierungseinträgen.  
@@ -57,7 +60,5 @@ Es sei denn, die Visual C++-Anwendung eigenständig und kann mithilfe eines Kopi
   
 ## <a name="see-also"></a>Siehe auch  
  [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Nicht im Build: Auswählen einer Bereitstellungsstrategie](http://msdn.microsoft.com/en-us/ecd632d8-063c-4028-b785-81bba045107b)   
- [Übersicht über die Windows Installer-Bereitstellung](http://msdn.microsoft.com/en-us/3ce4610a-b54f-404e-b650-42f4a55dfc3b)   
  [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Bereitstellungsbeispiele](../ide/deployment-examples.md)

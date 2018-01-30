@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Beenden von Threads
 In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemäß ausgelöst: die Steuerungsfunktion wird beendet, oder der Thread darf nicht vollständig ausgeführt werden. Falls z. B. in einem Textverarbeitungsprogramm ein Thread für den Hintergrunddruck verwendet wird, wird die Steuerungsfunktion normal beendet, sobald der Druckauftrag erfolgreich abgeschlossen ist. Wenn der Benutzer den Druckvorgang jedoch abbrechen möchte, muss der Thread für den Hintergrunddruck vorzeitig beendet werden. In diesem Thema wird beschrieben, wie jede Situation zu implementieren ist und wie der Exitcode des Threads nach seiner Beendigung ermittelt wird.  
@@ -58,7 +62,7 @@ In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemä�
   
 -   Legen Sie die `m_bAutoDelete` Datenmember **"false"**. Auf diese Weise ist ein `CWinThread`-Objekt auch nach dem Beenden des Threads noch vorhanden. Sie können dann auf den `m_hThread`-Datenmember zugreifen, nachdem der Thread beendet wurde. Bei dieser Methode müssen Sie das Zerstören des `CWinThread`-Objekts selbst übernehmen, da es nicht automatisch vom Framework gelöscht wird. Dies ist die bevorzugte Methode.  
   
--   Speichern Sie das Handle des Threads separat. Kopieren Sie nach der Erstellung des Threads, dessen `m_hThread` Datenmember (mit **:: DuplicateHandle**) einer anderen Variablen und über diese Variable darauf zugreifen. Auf diese Weise wird das Objekt automatisch bei Beendigung gelöscht, und Sie haben dennoch die Möglichkeit, den Grund für die Beendigung des Threads zu ermitteln. Achten Sie darauf, dass der Thread nicht beendet wird, bevor Sie die Möglichkeit hatten, das Handle zu duplizieren. Die sicherste Möglichkeit hierzu ist die Übergabe **CREATE_SUSPENDED** auf [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), das Handle speichern, und klicken Sie dann die Ausführung des Threads durch Aufrufen [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Speichern Sie das Handle des Threads separat. Kopieren Sie nach der Erstellung des Threads, dessen `m_hThread` Datenmember (mit **:: DuplicateHandle**) einer anderen Variablen und über diese Variable darauf zugreifen. Auf diese Weise wird das Objekt automatisch bei Beendigung gelöscht, und Sie haben dennoch die Möglichkeit, den Grund für die Beendigung des Threads zu ermitteln. Achten Sie darauf, dass der Thread nicht beendet wird, bevor Sie die Möglichkeit hatten, das Handle zu duplizieren. Die sicherste Möglichkeit hierzu ist die Übergabe **CREATE_SUSPENDED** auf [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), das Handle speichern, und klicken Sie dann die Ausführung des Threads durch Aufrufen [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  Bei beiden Methoden lässt sich ermitteln, warum ein `CWinThread`-Objekt beendet wurde.  
   
