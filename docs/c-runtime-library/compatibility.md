@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>Kompatibilität
 Die universelle C-Laufzeitbibliothek (UCRT, Universal C Run-Time Library) unterstützt den größten Teil der C-Standardbibliothek, der für die C++-Kompatibilität erforderlich ist. Sie implementiert die C99-Bibliothek (ISO/IEC 9899:1999), mit Ausnahme der in \<tgmath.h> definierten typgenerischen Makros und der strengen Typkompatibilität in \<complex.h>. Die UCRT implementiert darüber hinaus eine große Teilmenge der POSIX.1-C-Bibliothek (ISO/IEC 9945-1:1996, die POSIX-System-Anwendungsprogrammierschnittstelle), ist aber nicht vollständig mit einem spezifischen POSIX-Standard konform.  Außerdem implementiert die UCRT eine Reihe von Microsoft-spezifischen Funktionen und Makros, die nicht Bestandteil eines Standards sind.  
@@ -34,7 +38,7 @@ Die universelle C-Laufzeitbibliothek (UCRT, Universal C Run-Time Library) unters
   
  Bestimmte Funktionen in der Standard-C-Bibliothek wurden in der Vergangenheit aufgrund missbräuchlich verwendeter Parameter und nicht deaktivierter Puffer häufig unsicher verwendet. Diese Funktionen stellen oft die Ursache von Sicherheitsproblemen im Code dar. Microsoft hat eine Sammlung sichererer Versionen dieser Funktionen erstellt, die die Verwendung der Parameter überprüfen und den Handler für ungültige Parameter aufrufen, wenn hier zur Laufzeit ein Problem erkannt wird.  Standardmäßig gibt der Visual C++-Compiler eine Veraltungswarnung aus, wenn eine Funktion verwendet wird, zu der eine sicherere Variante verfügbar ist. Wenn Sie Ihren Code als C++ kompilieren, können Sie `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` auf 1 festlegen, um die meisten Warnungen zu beseitigen. Dabei werden Vorlagenüberladungen verwendet, um die sichereren Varianten aufzurufen, zugleich aber den portierbaren Quelltext beizubehalten. Um die Warnung zu unterdrücken, definieren Sie `_CRT_SECURE_NO_WARNINGS` , bevor Sie Header in den Code einschließen, die diese Funktionen verwenden. Weitere Informationen finden Sie unter [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
- Sofern nicht in der Dokumentation zu bestimmten Funktionen anders vermerkt, ist die UCRT mit der Windows-API kompatibel.  Bestimmte Funktionen werden in Apps für den Windows 8-Store oder in universellen Windows-Apps unter Windows 10 nicht unterstützt. Diese Funktionen sind in [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)aufgelistet, worin die von der [Windows-Runtime](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9)nicht unterstützten Funktionen aufgezählt sind.  
+ Sofern nicht in der Dokumentation zu bestimmten Funktionen anders vermerkt, ist die UCRT mit der Windows-API kompatibel.  Bestimmte Funktionen werden in Apps für den Windows 8 Store oder in universellen Windows Plattform-Apps (UWP) unter Windows 10 nicht unterstützt. Diese Funktionen sind unter [CRT-Funktionen, die nicht von UWP-Apps unterstützt werden](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) aufgelistet, dort sind die von der Windows-Runtime und [UWP](/uwp) nicht unterstützten Funktionen aufgezählt.  
   
 ## <a name="related-articles"></a>Verwandte Artikel  
   
