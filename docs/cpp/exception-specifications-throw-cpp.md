@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -18,12 +20,13 @@ ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Ausnahmespezifikationen (Throw, Noexcept) (C++)
 
@@ -34,24 +37,22 @@ Vor C ++ 17 gab es zwei Arten von Ausnahmespezifikation. Die *Noexcept-Spezifika
 ```cpp
 void MyFunction(int i) throw();
 ```
-
- weist den Compiler an, dass die Funktion keine Ausnahmen auslöst. Allerdings in **/std:c ++ 14** Modus könnte dies zu nicht definiertes Verhalten, wenn die Funktion eine Ausnahme auslöst. Daher empfehlen wir verwenden die [Noexcept](../cpp/noexcept-cpp.md) Operator oben:
+weist den Compiler an, dass die Funktion keine Ausnahmen auslöst. Allerdings in **/std:c ++ 14** Modus könnte dies zu nicht definiertes Verhalten, wenn die Funktion eine Ausnahme auslöst. Daher empfehlen wir verwenden die [Noexcept](../cpp/noexcept-cpp.md) Operator oben:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-
-In der folgenden Tabelle wird die Implementierung von Ausnahmespezifikationen in Visual C++ zusammengefasst.
+In der folgenden Tabelle sind die Microsoft Visual C++-Implementierung von Ausnahmespezifikationen zusammengefasst:
 
 |Ausnahmespezifikation|Bedeutung|
 |-----------------------------|-------------|
 |`noexcept`<br>`noexcept(true)`<br>`throw()`|Die Funktion löst keine Ausnahme aus. In [/std:c ++ 14](../build/reference/std-specify-language-standard-version.md) Modus (Standard), `noexcept` und `noexcept(true)` sind gleichwertig. Wenn eine Ausnahme ausgelöst wird, von einer Funktion, die deklariert wird `noexcept` oder `noexcept(true)`, [Terminate](../standard-library/exception-functions.md#terminate) aufgerufen wird. Wenn eine Ausnahme ausgelöst wird, von einer Funktion deklariert als `throw()` in **/std:c ++ 14** Modus, das Ergebnis ist nicht definiertes Verhalten. Es wird keine bestimmte Funktion aufgerufen. Dies ist eine Abweichung von der C ++ 14-standard, die den Compiler aufzurufenden erforderlich [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 15.5 und höher**: In **/std:c ++ 17** Modus `noexcept`, `noexcept(true)`, und `throw()` alle äquivalent sind. In **/std:c ++ 17** Modus `throw()` ist ein Alias für `noexcept(true)`. In **/std:c ++ 17** Modus, wenn eine Ausnahme, von einer Funktion deklariert, die mit den Spezifikationen ausgelöst wird [Terminate](../standard-library/exception-functions.md#terminate) wird aufgerufen, wie für C ++ 17-standard erforderlich.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Keine Angabe|Die Funktion kann eine Ausnahme eines beliebigen Typs.|
-|`throw(type)`| (**C ++ 14 und früher**) die Funktion kann eine Ausnahme vom Typ `type`. Microsoft C++-Compiler akzeptiert die Syntax, aber interpretiert ihn als `noexcept(false)`. In **/std:c ++ 17** Modus der Compiler die Warnung C5040.|
+|`throw(type)`| (**C ++ 14 und früher**) die Funktion kann eine Ausnahme vom Typ `type`. Der Compiler akzeptiert der Syntax, jedoch interpretiert ihn als `noexcept(false)`. In **/std:c ++ 17** Modus der Compiler die Warnung C5040.|
 
- Behandlung von Ausnahmen in einer Anwendung verwendet, es muss eine Funktion in der Aufrufliste, die Handles Ausnahmen ausgelöst, bevor sie den äußeren Bereich einer Funktion beendet markiert `noexcept`, `noexcept(true)`, oder `throw()`. Wenn alle Funktionen zwischen aufgerufen derjenige, der eine Ausnahme auslöst und das Projekt, das die Ausnahme behandelt werden als angegeben `noexcept`, `noexcept(true)` (oder `throw()` in **/std:c ++ 17** Modus), das Programm wird beendet, wenn die Noexcept-Funktion gibt die Ausnahme weiter.
+Behandlung von Ausnahmen in einer Anwendung verwendet, es muss eine Funktion in der Aufrufliste, die Handles Ausnahmen ausgelöst, bevor sie den äußeren Bereich einer Funktion beendet markiert `noexcept`, `noexcept(true)`, oder `throw()`. Wenn alle Funktionen zwischen aufgerufen derjenige, der eine Ausnahme auslöst und das Projekt, das die Ausnahme behandelt werden als angegeben `noexcept`, `noexcept(true)` (oder `throw()` in **/std:c ++ 17** Modus), das Programm wird beendet, wenn die Noexcept-Funktion gibt die Ausnahme weiter.
 
- Das Ausnahmeverhalten einer Funktion hängt von den folgenden Faktoren ab:
+Das Ausnahmeverhalten einer Funktion hängt von den folgenden Faktoren ab:
 
 - Die [Sprache standard Kompilierungsmodus](../build/reference/std-specify-language-standard-version.md) festgelegt ist.
 - Ob die Funktion mit C oder C++ kompiliert wird.
@@ -60,9 +61,9 @@ In der folgenden Tabelle wird die Implementierung von Ausnahmespezifikationen in
 
 - Ob die Ausnahmespezifikation explizit angegeben wird.
 
- Explizite Ausnahmespezifikationen sind für C-Funktionen nicht zulässig. Eine C-Funktion wird davon ausgegangen, dass nicht Auslösen von Ausnahmen unter **/EHsc /**, und strukturierte Ausnahmen auslösen **/EHs**, **/EHa**, oder **EHac**.
+Explizite Ausnahmespezifikationen sind für C-Funktionen nicht zulässig. Eine C-Funktion wird davon ausgegangen, dass nicht Auslösen von Ausnahmen unter **/EHsc /**, und strukturierte Ausnahmen auslösen **/EHs**, **/EHa**, oder **EHac**.
 
- In der folgenden Tabelle wird zusammengefasst, ob es sich bei eine C++-Funktion möglicherweise unter verschiedenen Optionen der Compiler-Ausnahmebehandlung auslösen kann:
+In der folgenden Tabelle wird zusammengefasst, ob es sich bei eine C++-Funktion möglicherweise unter verschiedenen Optionen der Compiler-Ausnahmebehandlung auslösen kann:
 
 |Funktion|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
@@ -110,7 +111,7 @@ void __declspec(nothrow) f2(void) {
     }
 }
 
-// only valid if compiled without /EHc 
+// only valid if compiled without /EHc
 // /EHc means assume extern "C" functions don't throw exceptions
 extern "C" void f4(void);
 void f4(void) {
