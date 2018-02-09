@@ -531,7 +531,6 @@
 ##### [Grafikobjekte](graphic-objects.md)
 ###### [Ein- und zweistufige Konstruktion von Objekten](one-stage-and-two-stage-construction-of-objects.md)
 ###### [Auswählen eines Grafikobjekts für einen Gerätekontext](selecting-a-graphic-object-into-a-device-context.md)
-###### [Einschränkungen für CImage in früheren Betriebssystemen](cimage-limitations-with-earlier-operating-systems.md)
 #### [Rahmenfenster](frame-windows.md)
 ##### [Rahmenfensterklassen](frame-window-classes.md)
 ###### [Vom Anwendungs-Assistenten erstellte Rahmenfensterklassen](frame-window-classes-created-by-the-application-wizard.md)
