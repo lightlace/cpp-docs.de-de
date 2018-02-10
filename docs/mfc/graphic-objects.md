@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - HRGN
 - HFONT
 - HBITMAP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRgn class [MFC], HRGN handle type
 - HPEN [MFC]
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="graphic-objects"></a>Grafikobjekte
 Windows bietet eine Reihe von Zeichentools an, die in Gerätekontexten verwendet werden können. Es bietet Stifte zum Zeichnen von Linien, Pinsel zum Auffüllen von Innenbereichen und Schriftarten zum Zeichnen von Text. MFC stellt Grafikobjektklassen bereit, die den Zeichentools in Windows ähneln. In der folgenden Tabelle werden die verfügbaren Klassen und die entsprechenden Windows-GDI-Handletypen (Graphics Device Interface) gezeigt.  
   
 > [!NOTE]
->  GDI+ ist in Windows XP enthalten und ist als verteilbare Komponente für Windows NT 4.0 SP6, Windows 2000, Windows 98 und Windows Me verfügbar. Informationen zum Herunterladen des neuesten verteilbaren Pakets finden Sie unter [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). Weitere Informationen finden Sie unter den GDI + SDK-Dokumentation unter: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Weitere Informationen finden Sie unter den GDI + SDK-Dokumentation unter: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Dieser Artikel beschreibt die Verwendung von diesen Grafikobjektklassen:  
   
@@ -111,8 +114,6 @@ Windows bietet eine Reihe von Zeichentools an, die in Gerätekontexten verwendet
 -   [Auswählen eines Grafikobjekts für einen Gerätekontext](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
 -   [Gerätekontexte](../mfc/device-contexts.md)  
-  
--   [Einschränkungen für CImage in früheren Betriebssystemen](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fensterobjekte](../mfc/window-objects.md)

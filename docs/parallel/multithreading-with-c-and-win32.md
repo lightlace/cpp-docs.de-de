@@ -1,13 +1,15 @@
 ---
 title: Multithreading bei C und Win32 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows API [C++], multithreading
 - multithreading [C++], C and Win32
@@ -17,19 +19,20 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16353937046384f9dc130048c510197697fb678f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading bei C und Win32
-Microsoft Visual C++ bietet Unterstützung zum Erstellen von Multithreadanwendungen mit Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me und Windows 98. Wenn Ihre Anwendung mehrere Aktivitäten verwalten muss, z. B. gleichzeitige Tastatur- und Mauseingaben, sollten Sie die Verwendung mehrerer Threads in Erwägung ziehen. Dabei verarbeitet ein Thread die Tastatureingabe, während ein zweiter Thread Mausaktivitäten filtert. Ein dritter Thread kann die Bildschirmanzeige auf Basis der Daten aus den Maus- und Tastaturthreads aktualisieren. Gleichzeitig können andere Threads auf Datenträgerdateien zugreifen oder Daten von einem Kommunikationsanschluss abrufen.  
+Microsoft Visual C++ bietet Unterstützung für Multithreadanwendungen erstellen. Sie sollten in Betracht ziehen, mehrere Threads verwenden, wenn Ihre Anwendung benötigt, um kostenintensive Vorgänge auszuführen, die die Benutzeroberfläche reagiert führen würde.  
   
  Visual C++ ermöglicht zwei Arten der Programmierung mit mehreren Threads: mit der MFC-Bibliothek (Microsoft Foundation Classes) oder der C-Laufzeitbibliothek und der Win32-API. Informationen zum Erstellen von Multithreadanwendungen mit MFC finden Sie unter [Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md) nach dem Lesen der folgenden Themen über Multithreading in c  
   

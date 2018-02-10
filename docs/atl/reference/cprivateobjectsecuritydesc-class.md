@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc-Klasse
 Diese Klasse stellt ein privates Objekt sicherheitsbeschreibungsobjekt.  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Der Konstruktor.|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Der Destruktor.|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -60,7 +64,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
 |||  
 |-|-|  
-|[Operator =](#operator_eq)|Zuweisungsoperator.|  
+|[operator =](#operator_eq)|Zuweisungsoperator.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Klasse abgeleitet [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), stellt Methoden zum Erstellen und Verwalten von Sicherheitsbeschreibung des ein privates Objekt bereit.  
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) oder [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
- Die zweite Methode, die ermöglicht, die den Objekttyp GUID des neuen Objekts angibt, oder steuern, wie ACEs geerbt werden, nur auf Systemen mit Windows 2000 und höher verfügbar ist.  
+ Die zweite Methode ermöglicht das Angeben der GUID des Objekttyp des neuen Objekts oder steuern, wie ACEs geerbt werden.  
   
 > [!NOTE]
 >  Eine selbstbezogenen Sicherheitsbeschreibung ist eine Sicherheitsbeschreibung, die alle ihre Sicherheitsinformationen in einen zusammenhängenden Block von Arbeitsspeicher speichert.  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  Rufen Sie diese Methode zum Abrufen von Informationen aus dem Sicherheitsdeskriptor ein privates Objekt.  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zweite Methode, die ermöglicht, die den Objekttyp GUID des Objekts angibt, oder steuern, wie ACEs geerbt werden, nur auf Systemen mit Windows 2000 und höher verfügbar ist.  
+ Die zweite Methode ermöglicht, die den Objekttyp GUID des Objekts angibt, oder steuern, wie ACEs geerbt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,19 +17,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CDacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cdacl-class"></a>CDacl-Klasse
 Diese Klasse ist ein Wrapper für eine Struktur DACL (discretionary Access Control List).  
@@ -49,7 +53,7 @@ class CDacl : public CAcl
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|Der Konstruktor.|  
-|[CDacl:: ~ CDacl](#dtor)|Der Destruktor.|  
+|[CDacl::~CDacl](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -123,9 +127,6 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Hinweise  
  Ein `CDacl` Objekt enthält 0 (null) oder mehreren Zugriffssteuerungseinträgen (Access Control-Einträge), die identifizieren, die Benutzer und Gruppen, die das Objekt zugreifen können. Diese Methode fügt einen ACE, durch den Zugriff auf die `CDacl` Objekt.  
   
-> [!NOTE]
->  Die zweite Form der `AddAllowedAce` ist nur auf Windows 2000 und höher verfügbar.  
-  
  Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) eine Beschreibung der verschiedenen Flags, die festgelegt werden kann, in der `AceFlags` Parameter.  
   
 ##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
@@ -167,9 +168,6 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Hinweise  
  Ein `CDacl` Objekt enthält 0 (null) oder mehreren Zugriffssteuerungseinträgen (Access Control-Einträge), die identifizieren, die Benutzer und Gruppen, die das Objekt zugreifen können. Diese Methode fügt einen ACE, durch den verweigert den Zugriff auf die `CDacl` Objekt.  
   
-> [!NOTE]
->  Die zweite Form der `AddDeniedAce` ist nur auf Windows 2000 und höher verfügbar.  
-  
  Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) eine Beschreibung der verschiedenen Flags, die festgelegt werden kann, in der `AceFlags` Parameter.  
   
 ##  <a name="cdacl"></a>CDacl::CDacl  
@@ -187,7 +185,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Hinweise  
  Die `CDacl` -Objekt kann optional mithilfe eines vorhandenen erstellt werden **ACL** Struktur. Es ist wichtig zu beachten, dass nur eine DACL (discretionary Access Control List), und keine SACL (System Access Control List), sollten als diesen Parameter übergeben werden. Debug-Builds bewirkt und übergeben einer SACL ASSERT. In Releasebuilds übergeben einer SACL wird dazu führen, dass die Zugriffssteuerungseinträge (Access Control-Einträge) in der ACL, ignoriert werden sollen, und tritt kein Fehler auf.  
   
-##  <a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>  CDacl::~CDacl  
  Der Destruktor.  
   
 ```
@@ -238,7 +236,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird von abgeleiteten [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CDacl::RemoveAllAces  
  Entfernt alle der in enthaltenen ACEs (Access Control-Einträge) die `CDacl` Objekt.  
   
 ```

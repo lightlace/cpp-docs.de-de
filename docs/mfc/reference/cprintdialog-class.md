@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialog::PrintRange
 - AFXDLGS/CPrintDialog::PrintSelection
 - AFXDLGS/CPrintDialog::m_pd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialog [MFC], CPrintDialog
 - CPrintDialog [MFC], CreatePrinterDC
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 653cdc4580862288d98600603c1b45526ea38675
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog-Klasse
 Kapselt die Dienste, die vom allgemeinen Windows-Dialogfeld für das Drucken bereitgestellt werden.  
@@ -105,7 +108,7 @@ class CPrintDialog : public CCommonDialog
  Allgemeine drucken Dialogfelder bieten eine einfache Möglichkeit zum Implementieren von Druck- und Einrichten von Dialogfeldern in Übereinstimmung mit den Windows-Standards.  
   
 > [!NOTE]
->  Die `CPrintDialogEx` -Klasse kapselt die Dienste, die von der Windows 2000-druckeigenschaftenblatt bereitgestellt. Weitere Informationen finden Sie unter der [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) (Übersicht).  
+>  Die `CPrintDialogEx` -Klasse kapselt die Dienste, die von der Windows-druckeigenschaftenblatt bereitgestellt. Weitere Informationen finden Sie unter der [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) (Übersicht).  
   
  `CPrintDialog`die Funktionalität wird ersetzt durch die [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), dem dient ein häufig verwendetes Dialogfeld stellen für beide Setup und Seite drucken.  
   
@@ -177,7 +180,7 @@ CPrintDialog(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC  
  Erstellt einen Drucker-Gerätekontext (DC) aus der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
   
 ```  
@@ -193,7 +196,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#106](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>  CPrintDialog::DoModal  
  Zeigt das Dialogfeld "Drucken" Allgemeine Windows an und ermöglicht es dem Benutzer auf verschiedenen Druckoptionen, z. B. die Anzahl der Kopien, Bereich, und gibt an, ob Kopien sortiert werden sollen.  
   
 ```  
@@ -382,7 +385,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#111](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>  CPrintDialog::PrintAll  
  Bestimmt, ob alle Seiten des Dokuments gedruckt.  
   
 ```  
@@ -414,7 +417,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#110](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>  CPrintDialog::PrintRange  
  Bestimmt, ob nur einen bestimmten Bereich von Seiten drucken.  
   
 ```  

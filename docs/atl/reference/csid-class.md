@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>CSid-Klasse
 Diese Klasse ist ein Wrapper für eine `SID` Struktur (Sicherheits-ID).  
@@ -63,7 +67,7 @@ class CSid
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|Der Konstruktor.|  
-|[CSid:: ~ CSid](#dtor)|Der Destruktor.|  
+|[CSid::~CSid](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -86,19 +90,19 @@ class CSid
   
 |||  
 |-|-|  
-|[Operator =](#operator_eq)|Zuweisungsoperator.|  
+|[operator =](#operator_eq)|Zuweisungsoperator.|  
 |[Operator const SID *](#operator_const_sid__star)|Wandelt eine `CSid` Objekt in einen Zeiger auf eine `SID` Struktur.|  
   
 ### <a name="global-operators"></a>Globale Operatoren  
   
 |||  
 |-|-|  
-|[Operator ==](#operator_eq_eq)|Testet zwei Security Descriptor-Objekte auf Gleichheit|  
-|[Operator! =](#operator_neq)|Testet zwei Security Descriptor-Objekte auf Ungleichheit|  
+|[operator ==](#operator_eq_eq)|Testet zwei Security Descriptor-Objekte auf Gleichheit|  
+|[operator !=](#operator_neq)|Testet zwei Security Descriptor-Objekte auf Ungleichheit|  
 |[Operator\<](#operator_lt_)|Vergleicht zwei Sicherheitsobjekte Deskriptor relative Wert.|  
-|[Operator >](#operator_gt_)|Vergleicht zwei Sicherheitsobjekte Deskriptor relative Wert.|  
+|[operator >](#operator_gt_)|Vergleicht zwei Sicherheitsobjekte Deskriptor relative Wert.|  
 |[Operator\<=](#operator_lt__eq)|Vergleicht zwei Sicherheitsobjekte Deskriptor relative Wert.|  
-|[Operator > =](#operator_gt__eq)|Vergleicht zwei Sicherheitsobjekte Deskriptor relative Wert.|  
+|[operator >=](#operator_gt__eq)|Vergleicht zwei Sicherheitsobjekte Deskriptor relative Wert.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `SID` Struktur ist eine Struktur variabler Länge verwendet, um die Identifizierung von Benutzern oder Gruppen.  
@@ -171,7 +175,7 @@ explicit CSid(
   
  Wenn die Initialisierung fehlschlägt, löst der Konstruktor eine [CAtlException Klasse](../../atl/reference/catlexception-class.md).  
   
-##  <a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid::~CSid  
  Der Destruktor.  
   
 ```
@@ -181,7 +185,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor gibt alle Ressourcen, die vom Objekt abgerufen.  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  Ein Array von [CSid](../../atl/reference/csid-class.md) Objekte.  
   
 ```
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  Wenn kein Kontoname für den `SID` gefunden werden kann, **Domäne** gibt die Domäne als eine leere Zeichenfolge zurück. Dies kann auftreten, wenn eine Netzwerktimeout verhindert, dass diese Methode suchen nach dem Namen. Sie kommt auch für die Sicherheits-IDs mit keine entsprechenden Kontonamen wie eine Anmeldung `SID` , die eine Sitzung identifiziert.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  Tests `SID` (Sicherheits-ID) Präfixe auf Gleichheit.  
   
 ```
@@ -240,7 +244,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  Unter Debug-Builds, die die Funktion verursacht eine ASSERTION aus, wenn die `CSid` -Objekt ist ungültig.  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  Gibt einen Zeiger auf eine `SID` Struktur (Sicherheits-ID).  
   
 ```
@@ -250,7 +254,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Adresse des dem `CSid` Objekt zugrunde liegenden `SID` Struktur.  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  Gibt einen Zeiger auf die **SID_IDENTIFIER_AUTHORITY** Struktur.  
   
 ```
@@ -298,7 +302,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  Unter Debug-Builds, die die Funktion verursacht eine ASSERTION aus, wenn die `CSid` -Objekt ist ungültig.  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  Tests der `CSid` Objekt auf seine Gültigkeit.  
   
 ```
@@ -479,7 +483,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>Hinweise  
  Gibt die Adresse des dem `SID` Struktur.  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  Gibt die `SID` (Sicherheits-ID) der Struktur als Zeichenfolge.  
   
 ```
@@ -487,9 +491,9 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die `SID` Struktur als eine Zeichenfolge in ein Format für die Anzeige, Speicher oder Übertragung geeignet ist. Entspricht [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), obwohl diese Funktion nur auf Windows 2000 oder höher ausgeführt wird und daher für ältere Betriebssysteme emuliert wird.  
+ Gibt die `SID` Struktur als eine Zeichenfolge in ein Format für die Anzeige, Speicher oder Übertragung geeignet ist. Entspricht [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Gibt eine Beschreibung des Zustands der `CSid` Objekt.  
   
 ```
@@ -501,14 +505,14 @@ SID_NAME_USE SidNameUse() const throw();
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|SID|Gibt eine `SID` (Sicherheits-ID).|  
-|SID|Gibt eine Gruppe an `SID`.|  
-|Alias|Zeigt eine Domäne an `SID`.|  
-|SID|Zeigt einen Alias `SID`.|  
-|SID|Gibt eine `SID` für eine bekannte Gruppe.|  
-|Ungültiger SID-Typ|Gibt eine `SID` für gelöschte Konto.|  
-|Ungültiger SID-Typ|Kennzeichnet eine ungültige `SID`.|  
-|Computer|Gibt einen unbekannten `SID` Typ.|  
+|SidTypeUser|Gibt eine `SID` (Sicherheits-ID).|  
+|SidTypeGroup|Gibt eine Gruppe an `SID`.|  
+|SidTypeDomain|Zeigt eine Domäne an `SID`.|  
+|SidTypeAlias|Zeigt einen Alias `SID`.|  
+|SidTypeWellKnownGroup|Gibt eine `SID` für eine bekannte Gruppe.|  
+|SidTypeDeletedAccount|Gibt eine `SID` für gelöschte Konto.|  
+|SidTypeInvalid|Kennzeichnet eine ungültige `SID`.|  
+|SidTypeUnknown|Gibt einen unbekannten `SID` Typ.|  
 |SidTypeComputer|Gibt eine `SID` für einen Computer.|  
   
 ### <a name="remarks"></a>Hinweise  

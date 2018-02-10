@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,19 +20,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenGroups::GetPTOKEN_GROUPS
 - ATLSECURITY/ATL::CTokenGroups::GetSidsAndAttributes
 - ATLSECURITY/ATL::CTokenGroups::LookupSid
-dev_langs: C++
-helpviewer_keywords: CTokenGroups class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b6f0e8e2f63d5765e0e888c7a98cea77c862e241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a5a958fcc1bd8c26599272774c86cd64fa2c720
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups-Klasse
 Diese Klasse ist ein Wrapper für die **TOKEN_GROUPS** Struktur.  
@@ -52,7 +56,7 @@ class CTokenGroups
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Der Konstruktor.|  
-|[CTokenGroups:: ~ CTokenGroups](#dtor)|Der Destruktor.|  
+|[CTokenGroups::~CTokenGroups](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -75,7 +79,7 @@ class CTokenGroups
 |[CTokenGroups::operator =](#operator_eq)|Zuweisungsoperator.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ein Objekt, das den Sicherheitskontext für einen Prozess oder Thread beschreibt und erhält jeder Benutzer ein Windows NT oder Windows 2000-System angemeldet ist.  
+ Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ein Objekt, das den Sicherheitskontext für einen Prozess oder Thread beschreibt und erhält jeder Benutzer auf einem Windows-Betriebssystem angemeldet ist.  
   
  Die **CTokenGroups** Klasse ist ein Wrapper für die [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) Struktur mit Informationen über die Gruppe Sicherheits-IDs (SIDs) in ein Zugriffstoken.  
   
@@ -221,7 +225,7 @@ bool LookupSid(
  Gibt "true" zurück, wenn die `CSid` gefunden wird, wird "false" andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Festlegen von `pdwAttributes` auf NULL bietet eine Möglichkeit, bestätigen Sie das Vorhandensein der `CSid` ohne den Zugriff auf das Attribut. Beachten Sie, dass diese Methode nicht verwendet werden soll, um Zugriffsrechte zu überprüfen, wie unter Windows 2000 falsche Ergebnisse auftreten können. Anwendungen sollte stattdessen verwendet die [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) Methode.  
+ Festlegen von `pdwAttributes` auf NULL bietet eine Möglichkeit, bestätigen Sie das Vorhandensein der `CSid` ohne den Zugriff auf das Attribut. Beachten Sie, dass diese Methode nicht verwendet werden soll, um Zugriffsrechte zu überprüfen. Anwendungen sollte stattdessen verwendet die [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) Methode.  
   
 ##  <a name="operator_eq"></a>CTokenGroups::operator =  
  Zuweisungsoperator.  

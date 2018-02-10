@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Registrierung
 Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet OLE eine Liste der Objekttypen zur Auswahl. OLE ruft diese Liste in die Systemdatenbank für die Registrierung, die durch alle serveranwendungen bereitgestellten Informationen enthält. Wenn ein Server selbst registriert, wird der Einträge, die sie in der Registrierung Systemdatenbank (Registrierung) legt beschreiben jeden Typ von ihm bereitgestellten Objekt, Erweiterungen und den Pfad auf sich selbst neben anderen Informationen die Datei.  
@@ -44,12 +47,12 @@ Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet O
 > [!NOTE]
 >  MFC-Anwendungen, die automatisch generiert, indem Sie den Assistenten zum registrieren sich, wenn sie als eigenständige Anwendungen ausgeführt werden.  
   
- Wenn Sie Ihre Anwendung während der Installation registrieren möchten, verwenden Sie das Programm RegEdit.exe. (In Windows 95, Windows 98 und Windows ME ist RegEdit im Windows-Verzeichnis verwenden. In Windows NT und Windows 2000 ist RegEdit in das Verzeichnis "Windows" System32 ".) Wenn Sie ein Setupprogramm, das mit der Anwendung einschließen, haben Sie das Setup-Programm ausführen "RegEdit/s *Appname*reg". (Das Flag/s Zeigt automatischen Vorgang an, d. h. das Dialogfeld reporting erfolgreichen Abschluss des Befehls wird nicht angezeigt.) Andernfalls weisen Sie den Benutzer RegEdit manuell ausführen.  
+ Wenn Sie Ihre Anwendung während der Installation registrieren möchten, verwenden Sie das Programm RegEdit.exe. Wenn Sie ein Setupprogramm, das mit der Anwendung einschließen, haben Sie das Setup-Programm ausführen "RegEdit/s *Appname*reg". (Das Flag/s Zeigt automatischen Vorgang an, d. h. das Dialogfeld reporting erfolgreichen Abschluss des Befehls wird nicht angezeigt.) Andernfalls weisen Sie den Benutzer RegEdit manuell ausführen.  
   
 > [!NOTE]
 >  Die REG-Datei erstellt, die vom Anwendungs-Assistenten umfasst nicht den vollständigen Pfad für die ausführbare Datei. Das Installationsprogramm muss entweder die Registrierungsdatei, um den vollständigen Pfad zur ausführbaren Datei enthalten, oder ändern die PATH-Umgebungsvariable das Installationsverzeichnis Einbeziehung ändern.  
   
- RegEdit fügt den Inhalt der .reg-Textdatei in die Registrierungsdatenbank. Um die Datenbank zu überprüfen oder zu reparieren, verwenden Sie den Registrierungs-Editor. Achten Sie zum Löschen von wichtigen OLE-Einträge zu vermeiden. (In Windows 95, Windows 98 und Windows ME wird der Registrierungs-Editor RegEdit.exe. In Windows NT und Windows 2000 ist es RegEdit32.exe.)  
+ RegEdit fügt den Inhalt der .reg-Textdatei in die Registrierungsdatenbank. Um die Datenbank zu überprüfen oder zu reparieren, verwenden Sie den Registrierungs-Editor. Achten Sie zum Löschen von wichtigen OLE-Einträge zu vermeiden.  
   
 ##  <a name="_core_server_initialization"></a>Server-Initialisierung  
  Wenn Sie eine Server-Anwendung mit dem Assistenten zum Erstellen, schließt der Assistent alle Initialisierungsaufgaben für Sie automatisch ein. In diesem Abschnitt wird beschrieben, was Sie tun müssen, wenn eine Serveranwendung manuell schreiben.  

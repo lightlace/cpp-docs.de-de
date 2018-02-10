@@ -1,10 +1,11 @@
 ---
 title: CImage-Klasse | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +51,8 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -61,16 +63,17 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cimage-class"></a>CImage-Klasse
 `CImage`bietet erweiterte Bitmapunterstützung, einschließlich der Möglichkeit zum Laden und speichern Sie die Bilder in JPEG, GIF, BMP und Portable Network Graphics (PNG).  
@@ -120,7 +123,7 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|Bestimmt, ob die angefügte Bitmap ein DIB-Abschnitt ist.|  
 |[CImage::IsIndexed](#isindexed)|Gibt an, dass eine indizierte Palette eine Bitmap Farben zugeordnet werden.|  
 |[CImage::IsNull](#isnull)|Gibt an, ob eine Quellbitmap momentan geladen ist.|  
-|[IsTransparencySupported](#istransparencysupported)|Gibt an, ob die Anwendung unterstützt transparente Bitmaps für Windows 2000 oder höher kompiliert wurde.|  
+|[CImage::IsTransparencySupported](#istransparencysupported)|Gibt an, ob die Anwendung transparente Bitmaps unterstützt.|  
 |[CImage::Load](#load)|Lädt ein Bild aus der angegebenen Datei.|  
 |[CImage::LoadFromResource](#loadfromresource)|Lädt ein Bild aus der angegebenen Ressource an.|  
 |[CImage::MaskBlt](#maskblt)|Kombiniert die Farbdaten für die Quell- und Zielschemas Bitmaps, die unter Verwendung der angegebenen Maske und auszuführenden Vorgangs an.|  
@@ -198,17 +201,6 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 
   
  Über `CImage`, haben Sie Zugriff auf die tatsächlichen Bits von einem Abschnitt DIB. Sie können eine `CImage` Objekt Sie zuvor einen Abschnitt Win32 HBITMAP oder DIB verwendet.  
-  
-> [!NOTE]
->  Die folgenden `CImage` Methoden besitzen Beschränkungen für ihre Verwendung:  
-  
-|Methode|Einschränkung|  
-|------------|----------------|  
-|[PlgBlt](#plgblt)|Funktioniert mit nur Windows NT 4.0 oder höher. Funktioniert nicht auf Anwendungen auf Windows 95-und Windows 98 oder höher ausgeführt.|  
-|[MaskBlt](#maskblt)|Funktioniert mit nur Windows NT 4.0 oder höher. Funktioniert nicht auf Anwendungen auf Windows 95-und Windows 98 oder höher ausgeführt.|  
-|[AlphaBlend](#alphablend)|Verwendet nur Windows 2000, Windows 98 und höher.|  
-|[TransparentBlt](#transparentblt)|Verwendet nur Windows 2000, Windows 98 und höher.|  
-|[Zeichnen-Befehl](#draw)|Transparenz mit nur Windows 2000, Windows 98 und höher unterstützt.|  
   
  Sie können `CImage` von MFC oder ATL  
   
@@ -727,7 +719,7 @@ CImage::GetExporterFilterString(
   
 - **ExcludeDefaultLoad** = 0 für alle Typen sind standardmäßig eingeschlossen Datei laden  
   
-- **ExcludeDefaultSave** = **ExcludeIcon &#124; ExcludeEMF &#124; ExcludeWMF** zum Speichern, werden diese Dateien standardmäßig ausgeschlossen, da sie in der Regel über besondere Anforderungen verfügen.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** For saving, these files are excluded by default because they usually have special requirements.  
   
  `chSeparator`  
  Das Trennzeichen zwischen den Bildformate verwendet. Finden Sie unter **"Hinweise"** für Weitere Informationen.  
@@ -740,7 +732,7 @@ CImage::GetExporterFilterString(
   
  Der Parameter *StrExporter* weist das Format auf:  
   
- Datei description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*ext1 &#124;... DateiBeschreibung  *n* &#124;\*. Ext  *n* &#124; &#124;  
+ file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;  
   
  wobei "&#124;" wird durch das Zeichen als Trennzeichen angegeben `chSeparator`. Zum Beispiel:  
   
@@ -816,7 +808,7 @@ CImage::GetImporterFilterString(
   
 - **ExcludeDefaultLoad** = 0 für alle Typen sind standardmäßig eingeschlossen Datei laden  
   
-- **ExcludeDefaultSave** = **ExcludeIcon &#124; ExcludeEMF &#124; ExcludeWMF** zum Speichern, werden diese Dateien standardmäßig ausgeschlossen, da sie in der Regel über besondere Anforderungen verfügen.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** For saving, these files are excluded by default because they usually have special requirements.  
   
  `chSeparator`  
  Das Trennzeichen zwischen den Bildformate verwendet. Finden Sie unter **"Hinweise"** für Weitere Informationen.  
@@ -826,7 +818,7 @@ CImage::GetImporterFilterString(
   
  Der Parameter *StrImporter* weist das Format auf:  
   
- Datei description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*ext1 &#124;... DateiBeschreibung  *n* &#124;\*. Ext  *n* &#124; &#124;  
+ file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;  
   
  wobei "&#124;" wird durch das Zeichen als Trennzeichen angegeben `chSeparator`. Zum Beispiel:  
   
@@ -978,7 +970,7 @@ bool IsNull() const throw();
  Diese Methode gibt **"true"** ist eine Bitmap nicht aktuell geladen wird; andernfalls **"false"**.  
   
 ##  <a name="istransparencysupported"></a>IsTransparencySupported  
- Gibt an, ob die Anwendung unterstützt transparente Bitmaps für Windows 2000 oder höher kompiliert wurde.  
+ Gibt an, ob die Anwendung transparente Bitmaps unterstützt.  
   
 ```
 static BOOL IsTransparencySupported() throw();
@@ -989,8 +981,6 @@ static BOOL IsTransparencySupported() throw();
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der zurückgegebene Wert ungleich NULL ist und Transparenz unterstützt wird, einen Aufruf von [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), oder [zeichnen](#draw) transparente Farben behandelt.  
-  
- Wenn die Anwendung für die Verwendung mit Betriebssystemen vor Windows 2000 oder Windows 98 kompiliert wird, gibt diese Methode immer 0, auch unter neueren Betriebssystemen zurück.  
   
 
 ##  <a name="load"></a>CImage::Load  

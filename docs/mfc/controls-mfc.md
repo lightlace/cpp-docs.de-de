@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controls-mfc"></a>Steuerelemente (MFC)
 Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Daten einzugeben oder zu ändern. Sie werden im Allgemeinen in Dialogfeldern oder auf Symbolleisten angezeigt. Diese Themenfamilie umfasst drei grundlegende Arten von Steuerelementen:  
@@ -36,15 +39,7 @@ Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Date
 ## <a name="windows-common-controls"></a>Allgemeine Windows-Steuerelemente  
  Das Windows-Betriebssystem verfügt immer über einige allgemeine Windows-Steuerelemente. Diese Steuerelementobjekte sind programmierbar, und der Dialog-Editor von Visual C++ unterstützt, dass sie in den Dialogfeldern hinzugefügt werden. Die Microsoft Foundation Class-Bibliothek (MFC-Bibliothek) stellt Klassen bereit, die jedes dieser Steuerelemente umfassen. Dies ist in der Tabelle [Allgemeine Windows-Steuerelemente und MFC-Klassen](#_core_windows_common_controls_and_mfc_classes)dargestellt. (Einige Elemente in der Tabelle sind mit Themen verknüpft, in denen sie weiter beschrieben werden. Informationen zu Steuerelementen, die nicht mit Themen verknüpft sind, finden Sie in der Dokumentation für die MFC-Klasse.)  
   
- Die Klasse [CWnd](../mfc/reference/cwnd-class.md) ist die Basisklasse aller Fensterklassen, einschließlich aller Steuerelementklassen. Die allgemeinen Windows-Steuerelemente werden in den folgenden Umgebungen unterstützt:  
-  
--   Windows 95, Windows 98 und Windows 2000  
-  
--   Windows NT, Version 3.51 und höher  
-  
--   Win32s, Version 1.3 (Visual C++-Versionen 4.2 und höher bieten keine Unterstützung für Win32s)  
-  
- Die älteren allgemeinen Steuerelemente - Kontrollkästchen, Kombinationsfelder, Eingabefelder, Listenfelder, Optionsfelder, Druckknöpfe, Bildlaufleisten-Steuerelemente und statische Steuerelemente - waren auch in früheren Versionen von Windows verfügbar.  
+ Die Klasse [CWnd](../mfc/reference/cwnd-class.md) ist die Basisklasse aller Fensterklassen, einschließlich aller Steuerelementklassen. 
   
 ## <a name="activex-controls"></a>ActiveX-Steuerelemente  
  ActiveX-Steuerelemente, früher bekannt als OLE-Steuerelemente, können in Dialogfeldern in Anwendungen für Windows oder auf HTML-Seiten im World Wide Web verwendet werden. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md).  
@@ -114,7 +109,7 @@ Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Date
   
 -   [Empfangen von Benachrichtigungsmeldungen aus den allgemeinen Steuerelementen](../mfc/receiving-notification-from-common-controls.md)  
   
--   [Proben](../mfc/common-control-sample-list.md)  
+-   [Beispiele](../mfc/common-control-sample-list.md)  
   
  Informationen zu allgemeinen Windows-Steuerelementen in Windows SDK finden Sie unter [Standardsteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
   

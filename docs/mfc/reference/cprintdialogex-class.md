@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,7 +27,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialogEx::PrintRange
 - AFXDLGS/CPrintDialogEx::PrintSelection
 - AFXDLGS/CPrintDialogEx::m_pdex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialogEx [MFC], CPrintDialogEx
 - CPrintDialogEx [MFC], CreatePrinterDC
@@ -45,19 +47,20 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 147a3d638f76f291a9732b340335331730f5b74d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx-Klasse
-Kapselt die Dienste, die vom Windows 2000-Druckeigenschaftenblatt bereitgestellt werden.  
+Kapselt die Dienste, die von der Windows-druckeigenschaftenblatt bereitgestellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -137,8 +140,8 @@ class CPrintDialogEx : public CCommonDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx  
- Erstellt eine Windows 2000-druckeigenschaftenblatt an.  
+##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
+ Erstellt eine Windows-druckeigenschaftenblatt an.  
   
 ```  
 CPrintDialogEx(
@@ -156,7 +159,7 @@ CPrintDialogEx(
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion erstellt nur das Objekt. Verwenden der `DoModal` Member-Funktion, um das Dialogfeld anzuzeigen.  
   
-##  <a name="createprinterdc"></a>CPrintDialogEx::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC  
  Erstellt einen Drucker-Gerätekontext (DC) aus der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
   
 ```  
@@ -171,8 +174,8 @@ HDC CreatePrinterDC();
   
  Diesen DC wird davon ausgegangen, dass der aktuelle Drucker-Gerätekontext und anderen zuvor abgerufene Drucker DCs müssen gelöscht werden. Diese Funktion kann aufgerufen werden, und der resultierende DC verwendet, ohne jemals Anzeige des Dialogfelds drucken.  
   
-##  <a name="domodal"></a>CPrintDialogEx::DoModal  
- Mit dieser Funktion können Sie die Windows 2000 common-druckeigenschaftenblatt angezeigt und ermöglicht dem Benutzer verschiedene Druckoptionen, z. B. die Anzahl der Kopien, Seitenbereich, wählen und gibt an, ob Kopien sortiert werden sollen.  
+##  <a name="domodal"></a>  CPrintDialogEx::DoModal  
+ Mit dieser Funktion können Sie die Windows-druckeigenschaftenblatt angezeigt und ermöglicht dem Benutzer verschiedene Druckoptionen, z. B. die Anzahl der Kopien, Seitenbereich, wählen und gibt an, ob Kopien sortiert werden sollen.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -261,7 +264,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Name des aktuell ausgewählten Drucker Ports.  
   
-##  <a name="getprinterdc"></a>CPrintDialogEx::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialogEx::GetPrinterDC  
  Gibt ein Handle für den Drucker-Gerätekontext zurück.  
   
 ```  
@@ -286,7 +289,7 @@ PRINTDLGEX m_pdex;
   
  Wenn Sie ändern die `m_pdex` Datenmember direkt, Sie Standardverhalten überschreiben.  
   
-##  <a name="printall"></a>CPrintDialogEx::PrintAll  
+##  <a name="printall"></a>  CPrintDialogEx::PrintAll  
  Mit dieser Funktion wird nach dem Aufruf `DoModal` bestimmt, ob alle Seiten im Dokument zu drucken.  
   
 ```  
@@ -306,7 +309,7 @@ BOOL PrintCollate() const;
 ### <a name="return-value"></a>Rückgabewert  
  **"True"** klickt der Benutzer das Kontrollkästchen "Collate" im Dialogfeld; andernfalls **"false"**.  
   
-##  <a name="printcurrentpage"></a>CPrintDialogEx::PrintCurrentPage  
+##  <a name="printcurrentpage"></a>  CPrintDialogEx::PrintCurrentPage  
  Mit dieser Funktion wird nach dem Aufruf `DoModal` bestimmt, ob die aktuelle Seite im Dokument zu drucken.  
   
 ```  

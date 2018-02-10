@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -55,19 +56,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
 - ATLSECURITY/ATL::CAccessToken::SetOwner
 - ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
-dev_langs: C++
-helpviewer_keywords: CAccessToken class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="caccesstoken-class"></a>CAccessToken-Klasse
 Diese Klasse ist ein Wrapper für ein Zugriffstoken an.  
@@ -87,7 +91,7 @@ class CAccessToken
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccessToken:: ~ CAccessToken](#dtor)|Der Destruktor.|  
+|[CAccessToken::~CAccessToken](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -140,7 +144,7 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Rufen Sie diese Methode, um die primäre Gruppe der `CAccessToken` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ein Objekt, das den Sicherheitskontext für einen Prozess oder Thread beschreibt und erhält jeder Benutzer ein Windows NT oder Windows 2000-System angemeldet ist.  
+ Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ein Objekt, das den Sicherheitskontext für einen Prozess oder Thread beschreibt und erhält jeder Benutzer auf einem Windows-Betriebssystem angemeldet ist.  
   
  Eine Einführung in das Zugriffssteuerungsmodell in Windows erhalten finden Sie unter [Access Control](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
   
@@ -246,7 +250,7 @@ bool CreatePrimaryToken(
 ### <a name="remarks"></a>Hinweise  
  `CreatePrimaryToken`Aufrufe [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) um ein neues primäres Token zu erstellen.  
   
-##  <a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
+##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Rufen Sie diese Methode zum Erstellen eines neuen Prozesses ausgeführt wird, im Sicherheitskontext des Benutzers, dargestellt durch die `CAccessToken` Objekt.  
   
 ```
@@ -288,7 +292,7 @@ bool CreateProcessAsUser(
  *pThreadAttributes*  
  Zeiger auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die eine Sicherheitsbeschreibung für den neuen Thread gibt an, und bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden können. Wenn *pThreadAttributes* NULL ist, der Thread Ruft eine standardsicherheitsbeschreibung und das Handle kann nicht vererbt werden.  
   
- *bBerechtigungen*  
+ *bInherit*  
  Gibt an, ob der neue Prozess Handles von der aufrufende Prozess erbt. Bei "true", wird jede vererbbare geöffnete Handle des aufrufenden Prozesses durch den neuen Prozess geerbt. Geerbte Handles haben die gleichen Wert und Berechtigungen wie die ursprünglichen Handles.  
   
  *pCurrentDirectory*  
@@ -302,7 +306,7 @@ bool CreateProcessAsUser(
   
  Für diese Methode erfolgreich ausgeführt werden kann die `CAccessToken` Objekt muss AssignPrimaryToken aufnehmen, (es sei denn, er keinem eingeschränkten Token befindet) und IncreaseQuota Berechtigungen.  
   
-##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
+##  <a name="createrestrictedtoken"></a>  CAccessToken::CreateRestrictedToken  
  Rufen Sie diese Methode zum Erstellen einer neuen, eingeschränkten `CAccessToken` Objekt.  
   
 ```
@@ -331,9 +335,6 @@ bool CreateRestrictedToken(
   
 ### <a name="remarks"></a>Hinweise  
  `CreateRestrictedToken`verwendet die [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32-Funktion zum Erstellen eines neuen `CAccessToken` Objekt, mit Einschränkungen.  
-  
-> [!NOTE]
->  Diese Methode ist nur verfügbar, die unter Windows 2000 oder höher.  
   
 > [!IMPORTANT]
 >  Bei Verwendung `CreateRestrictedToken`, überprüfen Sie Folgendes: das vorhandene Token gültig ist (und nicht vom Benutzer eingegebenen) und `SidsToDisable` und `PrivilegesToDelete` sind sowohl gültig (und nicht vom Benutzer eingegebenen). Wenn die Methode "false" zurückgibt, verweigern Sie Funktionalität.  
@@ -945,7 +946,7 @@ bool OpenThreadToken(
   
  Die [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md) können verwendet werden, um dessen Identität angenommen wurde Zugriffstoken erstellt, indem automatisch zurückgesetzt der `bImpersonate` flag *"true"*.  
   
-##  <a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
+##  <a name="privilegecheck"></a>  CAccessToken::PrivilegeCheck  
  Rufen Sie diese Methode, um zu bestimmen, ob eine angegebene Gruppe von Berechtigungen in aktiviert sind die **CAccessToken** Objekt.  
   
 ```

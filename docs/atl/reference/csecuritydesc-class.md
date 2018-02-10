@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 Diese Klasse ist ein Wrapper für die **SECURITY_DESCRIPTOR** Struktur.  
@@ -70,14 +74,14 @@ class CSecurityDesc
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Der Konstruktor.|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Der Destruktor.|  
+|[CSecurityDesc::~CSecurityDesc](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CSecurityDesc::FromString](#fromstring)|Konvertiert eine Sicherheitsbeschreibung Format der Zeichenfolge in einen gültigen, funktionale Sicherheitsdeskriptor.|  
-|[CSecurityDesc:: Getcontrol](#getcontrol)|Ruft Informationen aus dem Sicherheitsdeskriptor zu steuern.|  
+|[CSecurityDesc::GetControl](#getcontrol)|Ruft Informationen aus dem Sicherheitsdeskriptor zu steuern.|  
 |[CSecurityDesc::GetDacl](#getdacl)|Ruft die Zugriffssteuerungsliste (DACL) Informationen aus dem Sicherheitsdeskriptor ab.|  
 |[CSecurityDesc::GetGroup](#getgroup)|Ruft die primäre Gruppeninformationen aus dem Sicherheitsdeskriptor ab.|  
 |[CSecurityDesc::GetOwner](#getowner)|Ruft den Besitzer Informationen aus dem Sicherheitsdeskriptor ab.|  
@@ -97,10 +101,10 @@ class CSecurityDesc
 |[CSecurityDesc::MakeAbsolute](#makeabsolute)|Rufen Sie diese Methode, um die Sicherheitsbeschreibung in absoluten Format zu konvertieren.|  
 |[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|Rufen Sie diese Methode, um die Sicherheitsbeschreibung in das selbstbezogene Format konvertiert.|  
 |[CSecurityDesc::SetControl](#setcontrol)|Legt die Steuerungsbits einer Sicherheitsbeschreibung fest.|  
-|[CSecurityDesc:: SetDacl](#setdacl)|Legt die Informationen in eine DACL fest. Wenn eine DACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.|  
-|[CSecurityDesc:: setGroup](#setgroup)|Legt fest, den primären Gruppeninformationen des ein absolutes Format Sicherheitsbeschreibung, und Ersetzen Sie dabei alle primären Gruppeninformationen bereits vorhanden.|  
-|[CSecurityDesc:: SetOwner](#setowner)|Legt die Informationen zum Besitzer der ein absolutes Format Sicherheitsbeschreibung, ersetzen alle Informationen zum Geräteeigentümer bereits vorhanden.|  
-|[CSecurityDesc:: Setsacl](#setsacl)|Legt die Informationen in einer SACL fest. Wenn eine SACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.|  
+|[CSecurityDesc::SetDacl](#setdacl)|Legt die Informationen in eine DACL fest. Wenn eine DACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.|  
+|[CSecurityDesc::SetGroup](#setgroup)|Legt fest, den primären Gruppeninformationen des ein absolutes Format Sicherheitsbeschreibung, und Ersetzen Sie dabei alle primären Gruppeninformationen bereits vorhanden.|  
+|[CSecurityDesc::SetOwner](#setowner)|Legt die Informationen zum Besitzer der ein absolutes Format Sicherheitsbeschreibung, ersetzen alle Informationen zum Geräteeigentümer bereits vorhanden.|  
+|[CSecurityDesc::SetSacl](#setsacl)|Legt die Informationen in einer SACL fest. Wenn eine SACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.|  
 |[CSecurityDesc::ToString](#tostring)|Eine Sicherheitsbeschreibung konvertiert in ein Zeichenfolgenformat.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
@@ -163,9 +167,9 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die Zeichenfolge kann erstellt werden, mithilfe von [CSecurityDesc::ToString](#tostring). Die Sicherheits-ID in einer Zeichenfolge konvertieren erleichtert das Speichern und übertragen.  
   
- Diese Methode ist nur verfügbar, mit Windows 2000 und höher da aufruft [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Diese Methode ruft [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
-##  <a name="getcontrol"></a>CSecurityDesc:: Getcontrol  
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Ruft Informationen aus dem Sicherheitsdeskriptor zu steuern.  
   
 ```
@@ -180,7 +184,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Gibt "true" zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ist nur sinnvoll, wenn mithilfe von Windows 2000 oder höher, wie er ruft [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Diese Methode ruft [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
  Ruft die Zugriffssteuerungsliste (DACL) Informationen aus dem Sicherheitsdeskriptor ab.  
@@ -243,7 +247,7 @@ bool GetOwner(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  Gibt einen Zeiger auf die **SECURITY_DESCRIPTOR** Struktur.  
   
 ```
@@ -306,7 +310,7 @@ bool IsDaclDefaulted() const throw();
   
  Verwenden Sie zum Festlegen dieses Flag die [CSecurityDesc:: SetDacl](#setdacl) Methode.  
   
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent  
  Bestimmt, ob die Sicherheitsbeschreibung eine DACL (discretionary Access Control List) enthält.  
   
 ```
@@ -336,7 +340,7 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Festlegen dieses Flag die [CSecurityDesc:: SetDacl](#setdacl) Methode.  
   
- Diese Methode ist nur sinnvoll, für Windows 2000 oder höher, als nur Windows 2000 automatische Weitergabe von vererbbaren ACEs unterstützt.  
+ Diese Methode unterstützt die automatische Weitergabe von vererbbaren ACEs.  
   
 ##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
  Bestimmt, ob die Sicherheitsbeschreibung Gruppensicherheits-ID (SID) standardmäßig festgelegt wurde.  
@@ -418,9 +422,9 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Festlegen dieses Flag die [CSecurityDesc:: Setsacl](#setsacl) Methode.  
   
- Diese Methode ist nur sinnvoll, für Windows 2000 oder höher, als nur Windows 2000 automatische Weitergabe von vererbbaren ACEs unterstützt.  
+ Diese Methode unterstützt die automatische Weitergabe von vererbbaren ACEs.  
   
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative  
  Bestimmt, ob die Sicherheitsbeschreibung im selbstbezogenen Format ist.  
   
 ```
@@ -498,7 +502,7 @@ bool SetControl(
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ist nur unter Windows 2000 und höher, als er ruft [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Diese Methode ruft [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
 ##  <a name="setdacl"></a>CSecurityDesc:: SetDacl  
  Legt die Informationen in eine DACL (discretionary Access Control List) fest. Wenn eine DACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.  
@@ -514,7 +518,7 @@ inline void SetDacl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DACL*  
+ *Dacl*  
  Ein Verweis auf ein `CDacl` Objekt, das die DACL für die Sicherheitsbeschreibung angibt. Dieser Parameter darf nicht NULL sein. Um eine NULL-DACL in die Sicherheitsbeschreibung festgelegt werden, sollte die erste Form der Methode mit verwendet werden `bPresent` auf "false" festgelegt.  
   
  `bPresent`  
@@ -580,7 +584,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>  CSecurityDesc::ToString  
  Eine Sicherheitsbeschreibung konvertiert in ein Zeichenfolgenformat.  
   
 ```
@@ -616,7 +620,7 @@ bool ToString(
   
  Wenn die DACL NULL ist, und die SE_DACL_PRESENT Steuerbit nicht, in dem die eingabesicherheitsbeschreibung festgelegt ist, resultierende sicherheitsbeschreibungs-Zeichenfolge eine Komponente D: keinen. Finden Sie unter [Sicherheitsbeschreibungsformat Zeichenfolge](http://msdn.microsoft.com/library/windows/desktop/aa379570) Weitere Details.  
   
- Diese Methode ist nur verfügbar mit Windows 2000 und höher, wie er ruft [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Diese Methode ruft [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für nachrichtensicherheit](../../visual-cpp-samples.md)   

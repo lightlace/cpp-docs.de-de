@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, creating programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Erstellen von Programmen, die Remoteautomatisierung verwenden
 Ein Automatisierungsobjekt und alle Automatisierungscontroller kann ohne Änderung auf den Quellcode, ohne die Notwendigkeit für die Neukompilierung und ohne erneute Remoteautomatisierung verwenden. Nachdem Sie eine eingerichtet haben, die lokal funktioniert (d. h. auf dem gleichen Computer), müssen nur wenige Schritte für die es Remoteausführung durchlaufen.  
@@ -46,7 +50,7 @@ Ein Automatisierungsobjekt und alle Automatisierungscontroller kann ohne Änderu
   
  Schritt 3 umfasst ordnungsgemäß zu installieren und registrieren die Server-Anwendung auf dem ausgewählten Server oder mehreren Computern. Erneut, wenn die Anwendung selbst registrieren, werden einmal Ausführung auch registriert.  
   
- Schritt 4 umfasst die Konfiguration des Servers, um remote-Ausführung zu ermöglichen. RAC-Manager auf dem Servercomputer ausführen und sicherstellen, dass die **Clientzugriff** Registerkarte den Fokus besitzt. Wählen Sie das gewünschte Aktivierungsmodell (i. d. r. **zulassen Remote erstellt, indem Schlüssel**. Wenn Sie diese Option auswählen, müssen Sie auch auf die **Remoteaktivierung zulassen** Kontrollkästchen, um den Wert des Registrierungseintrags 'Y' festgelegt). Wenn Sie Windows NT ausgeführt werden, oder Windows 2000 und Sie die Option zulassen Remote erstellt (ACL), haben Sie auch die Option zum Bearbeiten der ACL durch Betätigen der **ACL bearbeiten** Schaltfläche.  
+ Schritt 4 umfasst die Konfiguration des Servers, um remote-Ausführung zu ermöglichen. RAC-Manager auf dem Servercomputer ausführen und sicherstellen, dass die **Clientzugriff** Registerkarte den Fokus besitzt. Wählen Sie das gewünschte Aktivierungsmodell (i. d. r. **zulassen Remote erstellt, indem Schlüssel**. Wenn Sie diese Option auswählen, müssen Sie auch auf die **Remoteaktivierung zulassen** Kontrollkästchen, um den Wert des Registrierungseintrags 'Y' festgelegt). Bei der Option ermöglichen Remote erstellt (ACL) haben Sie auch die Option zum Bearbeiten der ACL durch Betätigen der **ACL bearbeiten** Schaltfläche.  
   
  Damit um Remoteautomatisierung arbeiten zu können, müssen Sie Sie dann stellen Sie sicher, dass die Automatisierungs-Manager installiert ist und auf dem Server oder mehreren Computern ausgeführt wird. Wenn es nicht installiert ist, kopieren Sie AUTMGR32. EXE-Datei für das Windows-Systemverzeichnis. Informationen dazu finden Sie unter [Remoteinstallation Automation](../mfc/remote-automation-installation.md). Führen Sie zum Starten von Remoteautomatisierung Automatisierungs-Manager ein. Es wird eine kleine Statusfenster angezeigt, in dem eine Anzahl von Nachrichten angezeigt werden. Nachdem es gestartet wurde, wird es selbst minimieren. Wenn weiterhin Statusinformationen angezeigt werden sollen, können Sie klicken die **Automatisierungs-Manager** Registerkarte auf der Taskleiste, um das Fenster wiederherzustellen.  
   

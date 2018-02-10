@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,19 +22,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs: C++
-helpviewer_keywords: CTokenPrivileges class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges-Klasse
 Diese Klasse ist ein Wrapper für die **TOKEN_PRIVILEGES** Struktur.  
@@ -54,7 +58,7 @@ class CTokenPrivileges
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Der Konstruktor.|  
-|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|Der Destruktor.|  
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -79,7 +83,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Zuweisungsoperator.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ein Objekt, das den Sicherheitskontext für einen Prozess oder Thread beschreibt und erhält jeder Benutzer ein Windows NT oder Windows 2000-System angemeldet ist.  
+ Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ein Objekt, das den Sicherheitskontext für einen Prozess oder Thread beschreibt und erhält jeder Benutzer auf einem Windows-Betriebssystem angemeldet ist.  
   
  Das Zugriffstoken wird verwendet, um die verschiedenen Sicherheitsprivilegien gewährt jedem Benutzer zu beschreiben. Eine Berechtigung besteht aus einer 64-Bit-Zahl, die eine lokal eindeutige Kennung aufgerufen ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) und eine sicherheitsbeschreibungs-Zeichenfolge.  
   
@@ -155,7 +159,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
  Gibt "true" zurück, wenn die Berechtigung wurde erfolgreich gelöscht, andernfalls false wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode eignet sich als ein Tool zum Erstellen von eingeschränkten Token unter Windows 2000.  
+ Diese Methode eignet sich als ein Tool zum Erstellen von eingeschränkten Token.  
   
 ##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  Löscht alle Berechtigungen aus der `CTokenPrivileges` Access-token-Objekt.  
@@ -304,6 +308,6 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
  [Beispiel für nachrichtensicherheit](../../visual-cpp-samples.md)   
  [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
  [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- ["LUID_AND_ATTRIBUTES"](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
  [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>"LoadLibrary" und "AfxLoadLibrary"
 Verarbeitet Aufruf [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (oder ["AfxLoadLibrary"](../mfc/reference/application-information-and-management.md#afxloadlibrary)) zum expliziten Verknüpfen einer DLL. Wenn der Aufruf erfolgreich ist, ordnet die Funktion die angegebene DLL im Adressbereich des aufrufenden Prozesses zu und gibt ein Handle für die DLL zurück. Dieses Handle kann zusammen mit anderen Funktionen, beispielsweise `GetProcAddress` und `FreeLibrary`, für die explizite Verknüpfung verwendet werden.  
@@ -39,7 +43,7 @@ Verarbeitet Aufruf [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187
  Wenn die DLL von Windows nicht geladen werden kann, versucht der Prozess, die Verarbeitung fortzusetzen. So könnte der Prozess z. B. dem Benutzer den Fehler melden und ihn veranlassen, einen anderen Pfad für die DLL anzugeben.  
   
 > [!IMPORTANT]
->  Ist der Code für die Ausführung unter Windows NT 4, Windows 2000 oder Windows XP (vor Installation von SP1), stellen Sie sicher, dass sämtliche DLLs der vollständige Pfadname angegeben. Unter diesen Betriebssystemen wird beim Laden von Dateien zuerst das aktuelle Verzeichnis durchsucht. Wenn Sie den Pfad für die Datei nicht qualifizieren, wird unter Umständen eine falsche Datei geladen.  
+>  Stellen Sie sicher, dass sämtliche DLLs der vollständige Pfadname angegeben. Das aktuelle Verzeichnis wird zuerst durchsucht, wenn Dateien geladen werden. Wenn Sie den Pfad für die Datei nicht qualifizieren, wird unter Umständen eine falsche Datei geladen.  
   
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   
@@ -58,4 +62,4 @@ Verarbeitet Aufruf [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187
 ## <a name="see-also"></a>Siehe auch  
  [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)   
  [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187)   
- ["AfxLoadLibrary"](../mfc/reference/application-information-and-management.md#afxloadlibrary)
+ [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - dialog classes [MFC]
 - dialog boxes [MFC], Windows common dialogs
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="common-dialog-classes"></a>Standarddialogfeld-Klassen
 Zusätzlich zur Klasse [CDialog](../mfc/reference/cdialog-class.md), MFC stellt mehrere Klassen abgeleitet `CDialog` , häufig verwendete Dialogfelder kapseln, wie in der folgenden Tabelle gezeigt. Diese Dialogfelder werden als "häufig verwendete Dialogfelder" bezeichnet und sind Teil der Windows-allgemeine Dialogfeld Bibliothek (COMMDLG. (DLL). Der Dialogfeld-Vorlagenressourcen und den Code für diese Klassen werden in den Fenstern häufig verwendete Dialogfelder bereitgestellt, die Teil von Windows-Versionen 3.1 und höher sind.  
@@ -41,7 +44,7 @@ Zusätzlich zur Klasse [CDialog](../mfc/reference/cdialog-class.md), MFC stellt 
 |[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Ermöglicht Benutzer das Initiieren einer Suche oder Ersetzungsvorgangs in einer Textdatei.|  
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Können Benutzer eine Schriftart angeben.|  
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Ermöglicht Benutzer, die Informationen für einen Druckauftrag angeben.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Windows 2000-Eigenschaftenblatt Drucken.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Windows-druckeigenschaftenblatt.|  
   
  Weitere Informationen über das Standarddialogfeld-Klassen finden Sie unter den einzelnen Klassennamen in der *MFC-Referenz*. MFC bietet auch eine Reihe von Standarddialogfeld-Klassen, die für OLE verwendet. Informationen zu diesen Klassen finden Sie unter der Basisklasse [COleDialog](../mfc/reference/coledialog-class.md)in der *MFC-Referenz*.  
   

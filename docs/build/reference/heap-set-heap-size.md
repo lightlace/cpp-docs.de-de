@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
 - /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - -HEAP linker option
 - heap allocation, setting heap size
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ddbbeb373a5c1c9a7b5a14d124900782048fbeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5dd4ba44a76fa7881ebee2ec2f472dad8675e2c8
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Heapgröße festlegen)
 ```  
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  Die *reservieren* Argument gibt die gesamte Heapreservierung im virtuellen Speicher an. Die Standard-Heapgröße beträgt 1 MB. Der Linker rundet den angegebenen Wert in der nächsten 4 Bytes.  
   
- Das optionale `commit` -Argument vom Betriebssystem interpretiert wird. In Windows NT, Windows 2000 gibt es die Menge an physikalischem Arbeitsspeicher, zu einem Zeitpunkt belegen. Die Zusicherung von virtuellem Speicher bewirkt die Belegung von Speicher in der Auslagerungsdatei. Eine höhere `commit` -Wert spart Zeit, wenn die Anwendung mehr Heapspeicher benötigt, erhöht aber die arbeitsspeicheranforderungen und möglicherweise die Startzeit.  
+ Das optionale `commit` -Argument gibt die Menge an physikalischem Arbeitsspeicher, zu einem Zeitpunkt belegen. Die Zusicherung von virtuellem Speicher bewirkt die Belegung von Speicher in der Auslagerungsdatei. Eine höhere `commit` -Wert spart Zeit, wenn die Anwendung mehr Heapspeicher benötigt, erhöht aber die arbeitsspeicheranforderungen und möglicherweise die Startzeit.  
   
  Geben Sie die *reservieren* und `commit` Werten in Decimal oder C-Notation.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>CSacl-Klasse
 Diese Klasse ist ein Wrapper für eine Struktur SACL (System Access Control List).  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Der Konstruktor.|  
-|[CSacl:: ~ CSacl](#dtor)|Der Destruktor.|  
+|[CSacl::~CSacl](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -129,7 +133,7 @@ bool AddAuditAce(
  Gibt **"true"** Wenn ACE hinzugefügt wird die `CSacl` Objekt **"false"** bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein `CSacl` Objekt enthält die Access-Zugriffssteuerungseinträge (ACEs), die die Typen von Zugriffsversuchen angeben, die Überwachungsdatensätze in das Sicherheitsereignisprotokoll generieren. Diese Methode fügt diese einen ACE zum die `CSacl` Objekt. Die zweite Form der `AddAuditAce` ist nur auf Windows 2000 und höher verfügbar.  
+ Ein `CSacl` Objekt enthält die Access-Zugriffssteuerungseinträge (ACEs), die die Typen von Zugriffsversuchen angeben, die Überwachungsdatensätze in das Sicherheitsereignisprotokoll generieren. Diese Methode fügt diese einen ACE zum die `CSacl` Objekt.  
   
  Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) eine Beschreibung der verschiedenen Flags, die festgelegt werden kann, in der `AceFlags` Parameter.  
   
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die `CSacl` -Objekt kann optional mithilfe eines vorhandenen erstellt werden **ACL** Struktur. Stellen Sie sicher, dass dieser Parameter eine System Access Control List (SACL) und keiner Liste von Zugriffssteuerungsliste (DACL) ist. Debug-Builds, wenn eine DACL angegeben, wird eine Assertion erfolgt. In Releasebuilds werden alle Einträge aus einer DACL ignoriert.  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  Der Destruktor.  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf die aktualisierte `CSacl` Objekt. Sicherstellen, dass die **ACL** Parameter ist tatsächlich eine System Access Control List (SACL) und keiner Liste von Zugriffssteuerungsliste (DACL). Debug-Builds, die eine Assertion tritt auf, und klicken Sie in Releasebuilds die **ACL** -Parameter wird ignoriert.  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  Entfernt einen bestimmten ACE (Access Control Entry) aus der **CSacl** Objekt.  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird von abgeleiteten [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  Entfernt alle von der Access-Zugriffssteuerungseinträge (ACEs) in enthalten die `CSacl` Objekt.  
   
 ```

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>Dialogfeldklassen
 Klasse `CDialog` und die abgeleiteten Klassen kapseln Dialogfeld-Funktionalität. Da ein Dialogfeld eine besondere Art von Fenster ist `CDialog` stammt aus `CWnd`. Leiten Sie Ihre Dialogfeldklassen aus `CDialog` oder verwenden Sie eines der allgemeine Dialogfeldklassen für Dialogfelder "standard", z. B. Öffnen oder Speichern einer Datei, drucken, Auswählen einer Schriftart oder die Farbe, initiiert einen Vorgang suchen und ersetzen oder Durchführen von verschiedenen OLE-bezogene DDL-Vorgänge.  
@@ -58,7 +62,7 @@ Klasse `CDialog` und die abgeleiteten Klassen kapseln Dialogfeld-Funktionalität
  Stellt ein Standarddialogfeld zum Drucken einer Datei an.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Stellt einen Windows 2000-druckeigenschaftenblatt bereit.  
+ Stellt ein Windows-druckeigenschaftenblatt bereit.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  Kapselt die Dienste von Seiteneinrichtung-Standarddialogfeld Windows mit zusätzlicher Unterstützung für das Festlegen und Ändern von druckrändern.  
