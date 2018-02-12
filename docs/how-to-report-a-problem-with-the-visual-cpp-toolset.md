@@ -1,23 +1,26 @@
 ---
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
 ms.date: 1/11/2018
-ms.technology: cpp
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Melden eines Problems mit dem Visual C++-Toolset
 
-Wenn Sie Probleme mit dem Visual C++-Compiler, -Linker oder anderen Tools und Bibliotheken haben, informieren Sie uns darüber.
+Wenn Sie Probleme mit dem Microsoft Visual C++-Compiler, -Linker oder anderen Tools und Bibliotheken haben, informieren Sie uns darüber.
 
 Die beste Möglichkeit, uns über ein Problem zu informieren, ist das Senden eines Berichts. Dieser sollte die Beschreibung des aufgetretenen Problems enthalten sowie Details dazu, wie Sie Ihr Programm entwickeln, und eine *Reproduktion*, die wir als vollständigen Testfall zum Reproduzieren des Problems auf unseren Computern verwenden können. Anhand dieser Informationen können wir schnell überprüfen, ob das Problem in Ihrem Code besteht oder lokal in Ihrer Umgebung vorliegt. Außerdem können wir bestimmen, ob es sich auf andere Versionen des Compilers auswirkt, und wir können die Ursache ermitteln.
 

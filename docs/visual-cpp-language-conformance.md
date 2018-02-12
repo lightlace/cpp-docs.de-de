@@ -1,29 +1,32 @@
 ---
 title: "Visual C++-Sprachkonformität | Microsoft-Dokumentation"
 ms.date: 11/15/2017
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++-Sprachkonformität
 
-Dieses Thema bietet einen Überblick über die Konformität von Compiler- und Standardbibliotheksfeatures für Visual C++ in Visual Studio 2017 und früheren Versionen mit den Sprachstandards ISO C++03, C++11, C++14, C++17 und dem Entwurf von C++20. Jeder Name eines Features im Compiler und in der Standardbibliothek verweist auf das ISO C++-Standardvorschlagsdokument, in dem das Feature beschrieben ist, falls zum Zeitpunkt der Veröffentlichung ein solches Dokument verfügbar ist. Die Spalte „Supported“ (Unterstützt) listet die Visual Studio-Version auf, in der die Unterstützung für die Funktion zum ersten Mal aufgetreten ist.
+Dieses Thema bietet einen Überblick über die Konformität von Compiler- und Standardbibliotheksfeatures des C++-Compilers in Visual Studio 2017 und früheren Versionen mit den Sprachstandards ISO C++03, C++11, C++14, C++17 und dem Entwurf von C++20. Jeder Name eines Features im Compiler und in der Standardbibliothek verweist auf das ISO C++-Standardvorschlagsdokument, in dem das Feature beschrieben ist, falls zum Zeitpunkt der Veröffentlichung ein solches Dokument verfügbar ist. Die Spalte „Supported“ (Unterstützt) listet die Visual Studio-Version auf, in der die Unterstützung für die Funktion zum ersten Mal aufgetreten ist.
 
-Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visual Studio 2017 finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) und [Neuerungen bei Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Kompatibilitätsänderungen in früheren Versionen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](porting/visual-cpp-change-history-2003-2015.md) und [Visual C++ What's New 2003 through 2015](porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ – Neuerungen von 2003 bis 2015). Aktuelle Nachrichten vom C++-Team finden Sie im [Visual C++-Teamblog](https://blogs.msdn.microsoft.com/vcblog/).  
+Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visual Studio 2017 finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) und [Neuerungen bei Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Kompatibilitätsänderungen in früheren Versionen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](porting/visual-cpp-change-history-2003-2015.md) und [Visual C++ What's New 2003 through 2015](porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ – Neuerungen von 2003 bis 2015). Aktuelle Nachrichten vom C++-Team finden Sie im [Visual C++-Teamblog](https://blogs.msdn.microsoft.com/vcblog/).
 
- > [!NOTE]
- > Es gibt keine binären Änderungen von Visual Studio 2015 auf Visual Studio 2017.
+> [!NOTE]
+> Es gibt keine binären Änderungen von Visual Studio 2015 auf Visual Studio 2017.
 
 ## <a name="compiler-features"></a>Compilerfunktionen
 

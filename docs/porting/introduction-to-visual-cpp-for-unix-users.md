@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: UNIX [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Einführung in Visual C++ für UNIX-Benutzer
 
-Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrungen mit Visual C++ sammeln konnten und Visual C++ und die integrierte Entwicklungsumgebung (IDE) von Visual Studio produktiv einsetzen möchten.  
+Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrungen mit Visual Studio sammeln konnten und C++ und die integrierte Entwicklungsumgebung (IDE) von Visual Studio produktiv einsetzen möchten.
   
 ## <a name="getting-started-on-the-command-line"></a>Erste Schritte über die Befehlszeile  
 
-Sie können Visual C++ von der Befehlszeile aus auf ähnliche Weise wie eine Befehlszeilenumgebung unter UNIX verwenden. Die Kompilierung erfolgt mithilfe der Eingabeaufforderung mit dem C/C++-Befehlszeilencompiler (CL.EXE), dem Linker (LINK.EXE) und weiteren Tools, darunter NMAKE.EXE, der Microsoft-Version des UNIX-Dienstprogramms Make.  
+Sie können den C++-Compiler von der Befehlszeile aus auf ähnliche Weise wie eine Befehlszeilenumgebung unter UNIX verwenden. Die Kompilierung erfolgt mithilfe der Eingabeaufforderung mit dem C/C++-Befehlszeilencompiler (CL.EXE), dem Linker (LINK.EXE) und weiteren Tools, darunter NMAKE.EXE, der Microsoft-Version des UNIX-Dienstprogramms Make.  
   
-Unter UNIX werden Befehle in einem gemeinsam genutzten Ordner, z. B. /usr/bin, installiert. In Visual C++ werden die Befehlszeilentools in Ihrem Visual Studio-Installationsverzeichnis im Unterverzeichnis „VC\bin“ und seinen Unterverzeichnissen installiert. Im Gegensatz zu UNIX sind diese Tools nicht in einem einfachen Eingabeaufforderungsfenster verfügbar. Um die Befehlszeilentools zu verwenden, verwenden Sie einen Eingabeaufforderungskurzbefehl für Entwickler, oder führen Sie eine Entwicklerbefehlsdatei wie „vcvarsall.bat“ aus. Dadurch werden der Pfad und andere Umgebungsvariablen festgelegt, die erforderlich sind, um Visual C++-Programme von der Befehlszeile aus zu kompilieren. Weitere Informationen finden Sie unter [Erstellen von C/C++-Code über die Befehlszeile](../build/building-on-the-command-line.md) und unter [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+Unter UNIX werden Befehle in einem gemeinsam genutzten Ordner, z. B. /usr/bin, installiert. In Visual Studio werden die Befehlszeilentools in Ihrem Visual Studio-Installationsverzeichnis im Unterverzeichnis „VC\bin“ und seinen Unterverzeichnissen installiert. Im Gegensatz zu UNIX sind diese Tools nicht in einem einfachen Eingabeaufforderungsfenster verfügbar. Um die Befehlszeilentools zu verwenden, verwenden Sie einen Eingabeaufforderungskurzbefehl für Entwickler, oder führen Sie eine Entwicklerbefehlsdatei wie „vcvarsall.bat“ aus. Dadurch werden der Pfad und andere Umgebungsvariablen festgelegt, die erforderlich sind, um C++-Programme von der Befehlszeile aus zu kompilieren. Weitere Informationen finden Sie unter [Erstellen von C/C++-Code über die Befehlszeile](../build/building-on-the-command-line.md) und unter [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 Um einen Eingabeaufforderungskurzbefehl für Entwickler zu öffnen, geben Sie *Entwicklereingabeaufforderung* in das Desktopsuchsteuerelement ein, und wählen Sie das Ergebnis **Entwicklereingabeaufforderung** für Ihre Version von Visual Studio aus. Um eine Entwicklereingabeaufforderung auszuwählen, die für einen bestimmten Host und eine Zielarchitektur vorkonfiguriert ist, öffnen Sie das Menü **Start** (das Windows-Symbol in der Ecke des Desktops), und scrollen Sie dann zu dem Ordner für Ihre Visual Studio-Version, z. B. **Visual Studio 2017**. Öffnen Sie den Ordner, und wählen Sie den Eingabeaufforderungskurzbefehl für Ihren bevorzugten Host und eine Zielarchitektur aus.
   
@@ -47,11 +51,11 @@ Eine Anwendung, die aus mehreren Bibliotheken und ausführbaren Dateien besteht,
   
 ## <a name="importing-your-existing-code"></a>Importieren von vorhandenem Code 
  
-Sie können Visual C++ verwenden, um vorhandenen Code zu erstellen, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde, und Sie können diesen Code in ein [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]-Projekt einfügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Sie können den C++-Compiler verwenden, um vorhandenen Code zu erstellen, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde, und Sie können diesen Code in ein [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]-Projekt einfügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Erstellen eines neuen Projekts  
 
-Sie können in der Entwicklungsumgebung neue Projekte erstellen. Visual C++ bietet eine Vielzahl von Vorlagen, die Standardcode für verschiedene, häufig verwendete Projekte enthalten. Mit Anwendungs-Assistenten können Sie Projekte mit Codegliederungen für verschiedene Anwendungstypen generieren.  
+Sie können in der Entwicklungsumgebung neue Projekte erstellen. Visual Studio bietet eine Vielzahl von Vorlagen, die Standardcode für verschiedene, häufig verwendete Projekte enthalten. Mit Anwendungs-Assistenten können Sie Projekte mit Codegliederungen für verschiedene Anwendungstypen generieren.  
   
 Sie können mit einem leeren Projekt beginnen, indem Sie den **Assistenten für Konsolenanwendungen (Win32)** verwenden. Aktivieren Sie das Kontrollkästchen **Leeres Projekt**. Sie können dem Projekt dann später neue Dateien und bereits vorhandene Dateien hinzufügen.  
   
@@ -59,9 +63,9 @@ Beim Erstellen eines Projekts müssen Sie dem Projekt einen Namen geben. Standar
   
 ## <a name="microsoft-specific-modifiers"></a>Microsoft-spezifische Modifizierer  
 
-Visual C++ enthält mehrere Erweiterungen der C++-Standardprogrammiersprache, um die Programmierung für Windows-Betriebssysteme zu unterstützen. Diese Erweiterungen werden unter anderem zum Angeben von Speicherklassenattributen, Funktionsaufrufknventionen sowie der Adressierungsart verwendet. Eine vollständige Liste aller Visual C++-Erweiterungen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
+Der Microsoft Visual C++-Compiler implementiert mehrere Erweiterungen der C++-Standardprogrammiersprache, um die Programmierung für Windows-Betriebssysteme zu unterstützen. Diese Erweiterungen werden unter anderem zum Angeben von Speicherklassenattributen, Funktionsaufrufknventionen sowie der Adressierungsart verwendet. Eine vollständige Liste aller unterstützten C++-Erweiterungen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
   
-Sie können alle Microsoft-spezifischen Erweiterungen von C++ deaktivieren, indem Sie die **/Za**-Compileroption verwenden. Diese Option wird für das Schreiben von Code empfohlen, der auf mehreren Plattformen ausgeführt werden soll. Weitere Informationen zur **/Za**-Compileroption finden Sie unter [/Za, /Ze (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md). Weitere Informationen zur Visual C++-Konformität finden Sie unter [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md).  
+Sie können alle Microsoft-spezifischen Erweiterungen von C++ deaktivieren, indem Sie die **/Za**-Compileroption verwenden. Diese Option wird für das Schreiben von Code empfohlen, der auf mehreren Plattformen ausgeführt werden soll. Weitere Informationen zur **/Za**-Compileroption finden Sie unter [/Za, /Ze (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md). Weitere Informationen zu Konformität des C++-Compilers finden Sie in den Artikeln zur [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md) und zu [Verhalten, das nicht dem Standard entspricht](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Vorkompilierte Header  
 

@@ -1,18 +1,20 @@
 ---
 title: Neuerungen bei Visual C++ in Visual Studio 2015 | Microsoft-Dokumentation
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Neuerungen bei Visual C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
@@ -32,11 +34,11 @@ In dieser Version haben wir den C++-Compiler und die Standardbibliothek mit erwe
 
    **Visual Studio 2017 Version 15.3**:
 
-   Die Option **/std:c++17** aktiviert die C++17-Features, die vom Visual C++-Compiler implementiert werden. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden. Verwenden Sie zum Aktivieren dieser Funktionen **/std:c++latest**.
+   Die Option **/std:c++17** aktiviert die C++17-Features, die vom Compiler implementiert werden. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden. Verwenden Sie zum Aktivieren dieser Funktionen **/std:c++latest**.
 
    **Visual Studio 2017 Version 15.5**:
 
-   Der Visual C++-Compiler unterstützt ungefähr 75 % der Features, die neu in C++17 sind (z.B. strukturierte Bindungen, `constexpr`-Lambdas, `if constexpr`, Inlinevariablen, „fold“-Ausdrücke und das Hinzufügen von `noexcept` zum Typsystem). Diese Features sind unter der Option **/std:c++17** verfügbar. Weitere Informationen finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio 2017](cpp-conformance-improvements-2017.md).
+   Der Compiler unterstützt ungefähr 75 % der Features, die neu in C++17 sind (z.B. strukturierte Bindungen, `constexpr`-Lambdaausdrücke, `if constexpr`, Inlinevariablen, „fold“-Ausdrücke und das Hinzufügen von `noexcept` zum Typsystem). Diese Features sind unter der Option **/std:c++17** verfügbar. Weitere Informationen finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
 - [/permissive-](build/reference/permissive-standards-conformance.md): Aktiviert alle strengen Compileroptionen für die Übereinstimmung mit Standards und deaktiviert die meisten Microsoft-spezifischen Compilererweiterungen (aber z.B. nicht `__declspec(dllimport)`). Diese Option ist standardmäßig deaktiviert, soll aber in nächster Zeit aktiviert werden.
 
@@ -48,7 +50,7 @@ In dieser Version haben wir den C++-Compiler und die Standardbibliothek mit erwe
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): Ermöglicht um bis zu 30 % schnellere inkrementelle Verknüpfungszeiten (im Vergleich mit Visual Studio 2015), indem nicht alle Debuginformationen in die PDB-Datei kopiert werden. Die PDB-Datei zeigt stattdessen auf die Debuginformationen für das Objekt und die Bibliotheksdateien, die zum Erstellen der ausführbaren Datei verwendet wurden. Weitere Informationen finden Sie in den Blogbeiträgen [Faster C++ build cycle in VS "15" with /Debug:fastlink (Schnellerer C++-Buildzyklus in VS „15“ mit /Debug:fastlink)](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) und [Recommendations to speed C++ builds in Visual Studio (Empfehlungen zum Beschleunigen von C++-Builds in Visual Studio)](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/).
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ermöglicht das Verwenden von [/sdl](build/reference/sdl-enable-additional-security-checks.md) mit [/await](build/reference/await-enable-coroutine-support.md). Die [/RTC](build/reference/rtc-run-time-error-checks.md)-Einschränkung mit Coroutinen wurde beseitigt.
+- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ermöglicht das Verwenden von [/sdl](build/reference/sdl-enable-additional-security-checks.md) mit [/await](build/reference/await-enable-coroutine-support.md) Die [/RTC](build/reference/rtc-run-time-error-checks.md)-Einschränkung mit Coroutinen wurde beseitigt.
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>CODEGEN, Sicherheit, Diagnose und Versionsverwaltung
 
@@ -259,7 +261,7 @@ Mehrere Vorgänge in C++, die das IntelliSense-Modul für Refactoring und Codena
 
 |||
 |-|-|
-|Funktion|Leistungssteigerung|
+|Feature|Leistungssteigerung|
 |Umbenennen|5,3-fach|
 |Signatur ändern |4,5-fach|
 |Alle Verweise suchen|4,7-fach|

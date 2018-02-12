@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgraden Ihres Codes auf die Universal CRT
 
@@ -42,7 +43,7 @@ Wenn Sie Ihre Visual C++-Projekte aktualisieren und Sie die **Linker** -Eigensch
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Bereitstellung und Neuverteilung der Universal CRT
   
-Da die UCRT jetzt eine Komponente des Betriebssystems Microsoft Windows ist, ist sie als Teil des Betriebssystems in Windows 10 enthalten und ist über Windows Update für ältere Betriebssysteme erhältlich und für Windows Vista über Windows 8.1. Eine neu verteilbare Version ist für Windows XP verfügbar. Als Komponente des Betriebssystems werden UCRT-Updates und die UCRT-Wartung von Windows Update unabhängig von Visual Studio und Visual C++-Compilerversionen verwaltet. Da die UCRT eine Windows-Komponente ist, empfehlen für zur Sicherheit und Erleichterung von Updates sowie für eine kleinere Imagegröße die zentrale Bereitstellung der UCRT für Ihre App.  
+Da die UCRT jetzt eine Komponente des Betriebssystems Microsoft Windows ist, ist sie als Teil des Betriebssystems in Windows 10 enthalten und ist über Windows Update für ältere Betriebssysteme erhältlich und für Windows Vista über Windows 8.1. Eine neu verteilbare Version ist für Windows XP verfügbar. Als Komponente des Betriebssystems werden UCRT-Updates und die UCRT-Wartung von Windows Update unabhängig von Visual Studio und Microsoft C++-Compilerversionen verwaltet. Da die UCRT eine Windows-Komponente ist, empfehlen für zur Sicherheit und Erleichterung von Updates sowie für eine kleinere Imagegröße die zentrale Bereitstellung der UCRT für Ihre App.  
   
 Sie können die UCRT unter jeder Version von Windows verwenden, die von Visual Studio 2015 oder Visual Studio 2017 unterstützt wird. Sie können die URCT über ein vcredist-Paket für unterstützte Versionen von Windows neu verteilen, die nicht Windows 10 sind. Die vcredist-Pakete enthalten die UCRT-Komponenten und installieren diese automatisch auf Windows-Betriebssystemen, auf denen sie nicht automatisch installiert sind. Weitere Informationen finden Sie unter [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md).  
   

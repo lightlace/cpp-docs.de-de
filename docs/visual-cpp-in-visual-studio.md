@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -17,26 +19,17 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
-Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 können Sie native universelle Windows-Apps, native Desktop- und Serveranwendungen, plattformübergreifende Bibliotheken, die unter Android, iOS und Windows ausgeführt werden können, und verwaltete Apps für .NET Framework entwickeln.
-
-**An wen richtet sich diese Dokumentation?**
-
-Dieser Inhalt ist für C++-Entwickler gedacht, die Programme schreiben.
-
-- Wenn Sie ein bestimmtes verteilbares C++-Paket und Runtimekomponenten benötigen, um ein Programm auszuführen, geben Sie auf der Website von [Microsoft](http://www.microsoft.com/) **Visual C++ Redistributable** in das Suchfeld ein. Laden Sie das verteilbare Paket für die Architektur Ihres Computers (z.B. x64, wenn Sie 64-Bit-Windows ausführen) und die erforderliche Version von Visual C++ herunter, und installieren Sie diese. 
-
-- Wenn Sie eine Einführung in C++-Programmierkonzepte suchen, besuchen Sie eine der zahlreichen Websites mit dem entsprechenden Inhalt, oder holen Sie sich ein Exemplar von [Programming – Principles and Practice Using C++ (Second Edition)](http://stroustrup.com/Programming/) vom C++-Erfinder Bjarne Stroustrup. Der Buchinhalt setzt voraus, dass Sie bereits über grundlegende C++-Kenntnisse verfügen.
-
-- Wenn Sie den Visual C++-Compiler suchen, müssen Sie entweder eine kostenpflichtige oder kostenlose Edition von Visual Studio von [https://www.visualstudio.com/](https://www.visualstudio.com/) herunterladen.
+Microsoft Visual C++, üblicherweise mit Visual C++ oder MSVC abgekürzt, ist der Name für Entwicklungstools und Bibliotheken für C++, C und Assemblysprachen, die als Teil von Visual Studio unter Windows verfügbar sind. Mit diesen Tools und Bibliotheken können Sie Apps für die Universelle Windows Plattform (UWP), Windows-Desktop- und Serveranwendungen und plattformübergreifende Bibliotheken und Apps erstellen, die unter Windows, Linux, Android und iOS ausgeführt werden, sowie Apps und Bibliotheken verwalten, die .NET Framework verwenden. Sie können Visual C++ verwenden, um einfache Konsolen-Apps bis hin zu anspruchsvollen und komplexen Apps für Windows-Desktop zu schreiben, z.B. von Gerätetreibern und Betriebssystemkomponenten bis hin zu plattformübergreifenden Spielen für mobile Geräte, und von den kleinsten IoT-Geräten bis hin zu Hochleistungscomputing auf mehreren Servern in der Azure-Cloud.
 
 ## <a name="general-information-about-visual-c"></a>Allgemeine Informationen über Visual C++
 
@@ -47,7 +40,7 @@ Neue Funktionen in Visual C++.
 Weitere Informationen zu Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017.
 
 [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md)  
-Eine Liste der Konformitätsstatus nach Feature in Visual C++.
+Eine Liste der Konformitätsstatus nach Feature im MSVC-C++-Compiler.
 
 [Änderungsverlauf von Visual C++ von 2003 bis 2015](porting/visual-cpp-change-history-2003-2015.md)  
 Machen Sie sich mit den bedeutenden Änderungen in Vorversionen vertraut.
@@ -59,13 +52,13 @@ Erfahren Sie mehr über moderne C++-Programmiertechniken, die auf C++11 und C++1
  Erfahren Sie mehr über die Erstellung effektiver Fehlerberichte für das Visual C++-Toolset (Compiler, Linker und andere Tools) und über die verschiedenen Wege, auf denen Sie den Bericht versenden können.
 
 [Visual C++-Handbuch: Portieren und Aktualisieren](porting/visual-cpp-porting-and-upgrading-guide.md)  
-Leitfaden für das Portieren von Code und das Aktualisieren von Projekten auf Visual C++ in Visual Studio 2017, einschließlich der Portierung von C++-Code zu Windows 10 und der universellen Windows-Plattform.
+Leitfaden für das Portieren von Code und das Aktualisieren von Projekten auf Visual Studio 2017, einschließlich der Portierung von C++-Code zu Windows 10 und zur universellen Windows-Plattform.
 
 [Visual C++-Team-Blog](http://blogs.msdn.com/b/vcblog/)  
  Weitere Informationen über neue Funktionen und die neuesten Informationen von den Entwicklern von [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
 
 [Visual Studio-Downloads](http://go.microsoft.com/fwlink/p/?linkid=235233)  
-Laden Sie Visual C++ herunter.
+Visual Studio herunterladen
 
 [Visual C++-Tools und -Features in Visual Studio-Editionen](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)  
 Informieren Sie sich über die verschiedenen Visual Studio-Editionen.
@@ -84,7 +77,7 @@ Informieren Sie sich, wie Sie Hilfe erhalten, Fehler melden und Vorschläge für
 [Universelle Windows-Apps](windows/universal-windows-apps-cpp.md)  
 Rufen Sie Anleitungen und Referenzmaterial im Windows Developer Center ab. Informationen zum Entwickeln von Windows Store-Apps finden Sie unter [Entwickeln von Windows Store-Apps mit Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) und [Roadmap für Windows Store-Apps mit C++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
 
-[Desktopanwendungen (Visual C++)](windows/desktop-applications-visual-cpp.md)  
+[Desktop-Anwendungen (C++)](windows/desktop-applications-visual-cpp.md)  
 Erfahren Sie, wie Sie Desktopanwendungen erstellen, die eine Nachrichtenschleife und Rückrufe haben.
 
 [DLLs in Visual C++](build/dlls-in-visual-cpp.md)  
@@ -117,7 +110,7 @@ Weitere Informationen zum C++-Präprozessor finden Sie unter [C/C++ Preprocessor
 
 ## <a name="c-libraries-in-visual-studio"></a>C++-Bibliotheken in Visual Studio
 
-Die folgenden Abschnitte enthalten Informationen über die verschiedenen C++-Bibliotheken.
+Die folgenden Abschnitte enthalten Informationen über die verschiedenen C- und C++-Bibliotheken, die in Visual Studio enthalten sind.
 
 [C-Laufzeitbibliotheksreferenz](c-runtime-library/c-run-time-library-reference.md)  
 Umfasst Alternativen mit erhöhter Sicherheit für Funktionen, die bekanntermaßen Sicherheitsprobleme aufwerfen.
@@ -138,27 +131,18 @@ Asynchrone und parallele Algorithmen, die auf der CPU ausgeführt werden.
 Enorm parallele Algorithmen, die auf der GPU ausgeführt werden.
 
 [Windows Runtime Template Library (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)]-Apps und -Komponenten.
+[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] -Apps und -Komponenten.
 
-[.NET-Programmierung mit C++/CLI (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[.NET-Programmierung mit C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Programmierung für die Common Language Runtime (CLR).
 
 Siehe auch die Dokumentation für [STL/CLR](dotnet/stl-clr-library-reference.md) und [C++ Support Library](dotnet/cpp-support-library.md).
 
 ## <a name="other-c-libraries"></a>Weitere Visual C++-Bibliotheken
 
-Dieser Abschnitt enthält Links zu Bibliotheken, die nicht in Visual Studio enthalten sind jedoch heruntergeladen und mit Visual C++ verwendet werden können.
-
-[Boost](http://www.boost.org/)  
-Eine beliebte und häufig verwendete Bibliothek.
-
-[C++-REST-SDK](http://casablanca.codeplex.com).  
-Eine Microsoft-Bibliothek für die Kommunikation mit Webdiensten über HTTP.
+Sie können das Befehlszeilentool vcpkg verwenden, um die Erkennung und Installation von mehr als 600 Open Source-Bibliotheken von C++ stark zu vereinfachen. Weitere Informationen finden Sie unter [vcpkg: Ein C++-Paket-Manager für Windows](vcpkg.md).
 
 ## <a name="more-resources"></a>Weitere Ressourcen
-
-[Visual C++-Ressourcen](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
-Weitere Visual C++-Ressourcen.
 
 [Standard C++](http://isocpp.org/)  
 Lernen Sie C++ kennen, verschaffen Sie sich einen Überblick über das moderne C++, und greifen Sie auf Links für Bücher, Artikel, Gespräche und Ereignisse zu.

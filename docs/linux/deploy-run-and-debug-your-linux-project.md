@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-linux
+ms.technology:
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 734fc0f88d1cf8f97c7cac215f366eb6834fc517
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
+ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Bereitstellen, Ausführen und Debuggen eines Linux-Projekts
 
@@ -28,6 +29,9 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
 * Debuggen Sie mit herkömmlichen Features von Visual Studio wie Haltepunkten, Überwachungsfenstern und Positionieren des Mauszeigers über einer Variablen. Mit diesen Methoden können Sie wie bei anderen Projekttypen debuggen.
 * Zeigen Sie die Ausgabe vom Zielcomputer in einem speziellen Fenster der Linux-Konsole an. Sie können die Konsole auch verwenden, um Eingaben an den Zielcomputer zu senden.
+
+> [!NOTE]
+> Informationen zum ARM-Debuggen unter Linux finden Sie in folgendem Blogbeitrag: [Debugging an embedded ARM device in Visual Studio (Debuggen eines eingebetteten ARM-Geräts in Visual Studio)](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="debug-your-linux-project"></a>Debuggen eines Linux-Projekts
 

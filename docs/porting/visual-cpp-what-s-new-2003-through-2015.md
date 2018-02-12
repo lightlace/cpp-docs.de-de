@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1485,7 +1487,7 @@ In Visual Studio 2015 und höher können sich fortlaufende Verbesserungen der Ko
 
 #### <a name="compiler"></a>Compiler
 
-Der Microsoft C++-Compiler unterstützt die folgenden ISO C++11-Sprachfeatures:
+Der Microsoft Visual C++-Compiler unterstützt die folgenden ISO C++11-Sprachfeatures:
 
 - Standardvorlagenargumente für Funktionsvorlagen.
 - Delegierende Konstruktoren
@@ -1502,8 +1504,8 @@ Der Microsoft C++-Compiler unterstützt die folgenden ISO C++11-Sprachfeatures:
 - Verbundliterale
 - Festgelegte Initialisierer
 - Mischen von Deklarationen mit Code
-- Zeichenfolgenliteralkonvertierung an änderbaren Werten kann als unzulässig erklärt werden, indem die neue Compileroption „/Zc:strictStrings“ verwendet wird. Seit C++98 ist die Konvertierung aus Zeichenfolgenliteralen in char\* (und von breiten Zeichenfolgenliteralen in wchar_t\*) veraltet. In C++11 wurde die Konvertierung vollständig entfernt. Obwohl der Compiler dem Standard genau entsprechen könnte, wird stattdessen die Option „/Zc:strictStrings“ bereitgestellt, mit der die Konvertierung gesteuert werden kann. Standardmäßig ist die Option deaktiviert. Beachten Sie, dass bei Verwendung dieser Option im Debugmodus STL nicht kompiliert.
-- rvalue/lvalue-Verweisumwandlungen. Mit rvalu-Verweisen kann C++11 eindeutig zwischen lvalues und rvalues unterscheiden. Zuvor war das mit dem Visual C++-Compiler in bestimmten Umwandlungsszenarien nicht möglich. Die neue Compileroption „/Zc:rvalueCast“ wurde hinzugefügt, damit der Compiler mit dem C++-Sprachenarbeitspapier (siehe Abschnitt 5.4, [expr.cast]/1) kompatibel ist. Wenn diese Option nicht angegeben wird, entspricht das Standardverhalten dem von Visual Studio 2012.
+- Zeichenfolgenliteralkonvertierung an änderbaren Werten kann als unzulässig erklärt werden, indem die neue Compileroption **/Zc:strictStrings** verwendet wird. Seit C++98 ist die Konvertierung aus Zeichenfolgenliteralen in char\* (und von breiten Zeichenfolgenliteralen in wchar_t\*) veraltet. In C++11 wurde die Konvertierung vollständig entfernt. Obwohl der Compiler dem Standard genau entsprechen könnte, wird stattdessen die Option **/Zc:strictStrings** bereitgestellt, mit der die Konvertierung gesteuert werden kann. Standardmäßig ist die Option deaktiviert. Beachten Sie, dass bei Verwendung dieser Option im Debugmodus STL nicht kompiliert.
+- rvalue/lvalue-Verweisumwandlungen. Mit rvalu-Verweisen kann C++11 eindeutig zwischen lvalues und rvalues unterscheiden. Zuvor war das mit dem Compiler in bestimmten Umwandlungsszenarios nicht möglich. Die neue Compileroption **/Zc:rvalueCast** wurde hinzugefügt, damit der Compiler mit dem C++-Sprachenarbeitspapier (siehe Abschnitt 5.4, [expr.cast]/1) kompatibel ist. Wenn diese Option nicht angegeben wird, entspricht das Standardverhalten dem von Visual Studio 2012.
   - Hinweis: Für Standardwertfunktionen wird die Verwendung von „=default“ nicht unterstützt, um memberweise Bewegungskonstruktoren und Bewegungszuweisungsoperatoren anzufordern.
 
 ### <a name="c99-libraries"></a>C99-Bibliotheken
