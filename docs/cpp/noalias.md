@@ -1,28 +1,32 @@
 ---
 title: Noalias | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
@@ -32,13 +36,15 @@ ms.lasthandoff: 12/21/2017
 
 Wenn eine Funktion als `noalias` kommentiert wird, kann der Optimierer davon ausgehen, dass zusätzlich zu den Parametern selbst innerhalb der Funktion nur auf Dereferenzierungen der ersten Ebene von Zeigerparametern verwiesen wird oder diese geändert werden. Der sichtbare globale Zustand ist der Satz aller Daten, die nicht außerhalb des Kompilierungsbereichs definiert werden oder auf die nicht außerhalb des Kompilierungsbereichs verwiesen wird, und ihre Adresse wird nicht akzeptiert. Kompilierung bezieht sich auf alle Quelldateien ([/LTCG (Link-Time Code Generation)](../build/reference/ltcg-link-time-code-generation.md) erstellt) oder eine einzelne Quelldatei (nicht -**/LTCG** erstellen).
 
+Die `noalias` -Anmerkung gilt nur innerhalb eines Texts der mit Anmerkung versehenen Funktion. Markieren eine Funktion als `__declspec(noalias)` wirkt sich nicht auf das Aliasing von Zeigern, die von der Funktion zurückgegeben.
+
+Eine andere Anmerkung, die Aliasing auswirken kann, finden Sie unter [__declspec(restrict)](../cpp/restrict.md).
+
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Verwendung von `__declspec(restrict)` und `__declspec(noalias)`. In der Regel zurückgegebene Arbeitsspeicher aus `malloc` ist `restrict` , da die CRT-Header entsprechend ergänzt werden.
+Im folgende Beispiel veranschaulicht die Verwendung von `__declspec(noalias)`.
 
-In diesem Beispiel die Zeiger jedoch `mempool` und `memptr` sind global, damit der Compiler verfügt über keine Zusicherung, die der Arbeitsspeicher nicht Aliasing unterliegt. Durch Ergänzen der Funktionen, die Zeiger zurückgeben, mit `__declspec(restrict)` wird der Compiler angewiesen, dass für den Arbeitsspeicher, auf den der Rückgabewert zeigt, kein Aliasing durchgeführt wird.
-
-Durch Ergänzen der Funktion im Beispiel, die auf Arbeitsspeicher zugreift, mit `__declspec(noalias)` wird der Compiler angewiesen, dass diese Funktion den globalen Zustand nicht beeinträchtigt, außer durch die Zeiger in ihrer Parameterliste .
+Wenn die Funktion `multiply` , dass zugreift kommentiert wird `__declspec(noalias)`, es weist den Compiler, dass diese Funktion den globalen Status außer durch die Zeiger in der Parameterliste nicht verändert wird.
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ Durch Ergänzen der Funktion im Beispiel, die auf Arbeitsspeicher zugreift, mit 
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>Siehe auch
 
 [__declspec](../cpp/declspec.md)  
-[Schlüsselwörter](../cpp/keywords-cpp.md)
+[Schlüsselwörter](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
