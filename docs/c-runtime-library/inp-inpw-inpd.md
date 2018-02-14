@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _inp
 - _inpw
 - _inpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - inp function
 - inpw function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15fa7169f46e84cf60e1b869e5eb68a392b16a3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Eingaben von einem Port, einem Byte (`_inp`), einem Wort (`_inpw`) oder von einem Doppelwort (`_inpd`).  
@@ -80,7 +83,7 @@ unsigned long _inpd(
 ## <a name="remarks"></a>Hinweise  
  Die Funktionen `_inp`, `_inpw`und `_inpd` lesen aus dem angegebenen Eingangsport jeweils ein Byte, ein Wort und ein Doppelwort. Der Eingabewert kann jede beliebige kurze ganze Zahl ohne Vorzeichen im Bereich von 0 bis 65.535 sein.  
   
- Da diese Funktionen direkt von einem E/A-Port lesen, können sie möglicherweise in Windows NT, Windows 2000, Windows XP und Windows Server 2003 nicht im Benutzercode verwendet werden.  
+ Da diese Funktionen direkt aus einem E/A-Port lesen, können sie nicht im Benutzercode verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
   

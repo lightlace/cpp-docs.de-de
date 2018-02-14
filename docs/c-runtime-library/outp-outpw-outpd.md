@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _outpd
 - _outp
 - outpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - outpw function
 - words
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f2b32b17ed65120aa98b19ed3b2cf599364fee0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Gibt an einem Port ein Byte (`_outp`), ein Wort (`_outpw`) oder ein Doppelwort (`_outpd`) aus.  
@@ -91,7 +94,7 @@ unsigned long dataword
 ## <a name="remarks"></a>Hinweise  
  Die Funktionen `_outp`, `_outpw`und `_outpd` schreiben in den angegebenen Ausgabeport jeweils ein Byte, ein Wort und ein Doppelwort. Das *port*-Argument kann eine beliebige ganzen Zahl ohne Vorzeichen im Bereich 0-65.535 sein, *databyte* kann eine beliebige ganze Zahl im Bereich 0–255 sein und *dataword* kann jeder Wert im Bereich einer ganzen Zahl, einer kurzen ganzen Zahl ohne Vorzeichen bzw. einer langen ganzen Zahl ohne Vorzeichen sein.  
   
- Da diese Funktionen direkt in einen E/A-Port schreiben, können sie in Windows NT, Windows 2000, Windows XP und Windows Server 2003 nicht im Benutzercode verwendet werden. Informationen über die Verwendung von E/A-Ports in diesen Betriebssystemen erhalten Sie, wenn Sie in MSDN nach "serielle Kommunikation in Win32" suchen.  
+ Da diese Funktionen direkt in einen E/A-Port schreiben, können sie nicht im Benutzercode verwendet werden. Informationen über die Verwendung von E/A-Ports in diesen Betriebssystemen erhalten Sie, wenn Sie in MSDN nach "serielle Kommunikation in Win32" suchen.  
   
 ## <a name="requirements"></a>Anforderungen  
   
