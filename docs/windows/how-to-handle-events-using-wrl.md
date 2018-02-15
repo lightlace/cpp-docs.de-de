@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Gewusst wie: Behandeln von Ereignissen mit WRL
 Dieses Dokument zeigt, wie die Windows Runtime C++ Template Library (WRL) zu abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.  
@@ -31,7 +33,7 @@ Dieses Dokument zeigt, wie die Windows Runtime C++ Template Library (WRL) zu abo
  Mit den folgenden Schritten starten Sie ein `ABI::Windows::System::Threading::IDeviceWatcher`-Objekt und überwachen den Fortschritt mit Ereignishandlern. Die `IDeviceWatcher`-Schnittstelle ermöglicht es Ihnen, Geräte asynchron oder im Hintergrund aufzulisten und benachrichtigt zu werden, wenn Geräte hinzugefügt, entfernt oder geändert werden. Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library.md) Funktion ist ein wichtiger Teil dieses Beispiels, da es bei der Angabe von Ereignishandlern, die die Ergebnisse des Hintergrundvorgangs verarbeiten können. Im Folgenden finden Sie das vollständige Beispiel.  
   
 > [!WARNING]
->  Obwohl Sie die Windows Runtime C++ Template Library in einer universellen Windows-Plattform-app in der Regel verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer Uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer universellen Windows-Plattform-app verwenden können, finden Sie unter [mit/Zw nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und [Win32 und COM für Windows Store-apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Obwohl Sie die Windows Runtime C++ Template Library in einer universellen Windows-Plattform-app in der Regel verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer Uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer universellen Windows-Plattform-app verwenden können, finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) und [Win32 und COM für uwp-apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Einschließen (`#include`) alle erforderlichen Windows-Runtime, C++-Vorlagenbibliothek für Windows-Runtime oder C++-Standardbibliothek-Header.  
   

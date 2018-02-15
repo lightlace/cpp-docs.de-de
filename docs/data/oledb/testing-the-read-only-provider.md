@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="testing-the-read-only-provider"></a>Testen des schreibgeschützten Anbieters
 Um einen Anbieter zu testen, benötigen Sie einen Consumer. Es ist hilfreich, wenn der Consumer mit dem Anbieter übereinstimmen kann. Der OLE DB-Consumervorlagen werden ein schlanker Wrapper für OLE DB und übereinstimmen, mit dem Anbieter-COM-Objekten. Da die Quelle mit den Consumervorlagen ausgeliefert wird, ist es einfach, einen Anbieter mit dem sie debuggen. Die Consumervorlagen werden auch sehr klein und schnelle Möglichkeit, Consumer-Anwendungen zu entwickeln.  
@@ -53,7 +55,7 @@ Um einen Anbieter zu testen, benötigen Sie einen Consumer. Es ist hilfreich, we
   
  Öffnen Sie die Headerdatei für die Dialogfeldklasse (in diesem Fall TestProvDlg.h). Fügen Sie der Headerdatei (außerhalb alle Klassendeklarationen) den folgenden Code hinzu:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // TestProvDlg.h  
   
@@ -76,13 +78,13 @@ END_COLUMN_MAP()
   
  Eine Handlerfunktion zum Hinzufügen der **ausführen** Schaltfläche durch Drücken von STRG, und doppelklicken Sie auf die **ausführen** Schaltfläche. Fügen Sie folgenden Code in der Funktion:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   
 void CtestProvDlg::OnRun()  
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -122,7 +124,7 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
   
  Übergeben Sie die Zeichenfolge "" c: "\\\samples\\\myprov\\\MyData.txt" in der `table.Open` Zeile. Wenn Sie in Schritt der `Open` aufrufen, sehen Sie, dass diese Zeichenfolge, um übergeben wird die `SetCommandText` Methode im Anbieter. Beachten Sie, dass die `ICommandText::Execute` Methode verwendet diese Zeichenfolge.  
   
- Um die Daten abzurufen, rufen Sie `MoveNext` für die Tabelle. `MoveNext`Ruft die **IRowset:: GetNextRows**, `GetRowCount`, und `GetData` Funktionen. Wenn keine weiteren Zeilen vorhanden sind (d. h. die aktuelle Position im Rowset ist größer als `GetRowCount`), die Schleife beendet:  
+ Um die Daten abzurufen, rufen Sie `MoveNext` für die Tabelle. `MoveNext` Ruft die **IRowset:: GetNextRows**, `GetRowCount`, und `GetData` Funktionen. Wenn keine weiteren Zeilen vorhanden sind (d. h. die aktuelle Position im Rowset ist größer als `GetRowCount`), die Schleife beendet:  
   
 ```  
 while (table.MoveNext() == S_OK)  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,7 +15,8 @@ f1_keywords:
 - vc-attr.db_command
 - vc-attr.db_table
 - vc-attr.db_source
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -25,18 +27,18 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 584b83c4b3aa9ea5fd2f98fd59969ab46ce712ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec5eed15f9837637cff51c47c4b000b7e30eeb25
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Vereinfachen des Datenzugriffs mit Datenbankattributen
 Dieses Thema veranschaulicht die Verwendung von Datenbankattributen, um Datenbankvorgänge zu vereinfachen.  
@@ -54,7 +56,7 @@ Dieses Thema veranschaulicht die Verwendung von Datenbankattributen, um Datenban
 -   Die **Db_table** Aufruf in der Version entspricht der folgenden Vorlagendeklaration:  
   
     ```  
-    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 -   Die **Db_column** Aufrufe in der Version entsprechen der spaltenzuordnung (siehe `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) in der Vorlagendeklaration.  
@@ -66,11 +68,11 @@ Dieses Thema veranschaulicht die Verwendung von Datenbankattributen, um Datenban
  Weitere Informationen zu den Attributen, die in diesem Thema erläutert, finden Sie unter [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md).  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Tabelle und der Accessordeklaration, die mithilfe von Attributen  
- Der folgende code ruft `db_source` und **Db_table** in der Tabellenklasse. `db_source`Gibt die Datenquelle und die zu verwendende Verbindung. **Db_table** wird die entsprechende Vorlagencode zum Deklarieren einer Tabellenklasse eingefügt. **Db_column** der spaltenzuordnung angeben und die Accessordeklaration einfügen. Sie können OLE DB-Consumerattribute in jedem Projekt verwenden, die ATL unterstützt.  
+ Der folgende code ruft `db_source` und **Db_table** in der Tabellenklasse. `db_source` Gibt die Datenquelle und die zu verwendende Verbindung. **Db_table** wird die entsprechende Vorlagencode zum Deklarieren einer Tabellenklasse eingefügt. **Db_column** der spaltenzuordnung angeben und die Accessordeklaration einfügen. Sie können OLE DB-Consumerattribute in jedem Projekt verwenden, die ATL unterstützt.  
   
  Hier ist die Tabelle "und"-Accessor-Deklaration, die mithilfe von Attributen:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and accessor declaration using attributes  
 // authors.h  
@@ -106,7 +108,7 @@ public:
 ## <a name="table-and-accessor-declaration-using-templates"></a>Tabelle und der Accessordeklaration, die mithilfe von Vorlagen  
  Hier ist die Tabelle "und"-Accessor-Deklaration, die mithilfe von Vorlagen.  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and user record class declaration using templates  
 // authors.h  
@@ -134,7 +136,8 @@ public:
    HRESULT OpenDataSource()  
    {  
       CDataSource _db;  
-      HRESULT hr;  
+
+HRESULT hr;  
       hr = _db.OpenFromInitializationString(L"your connection string");  
       if (FAILED(hr))  
       {  
@@ -160,12 +163,12 @@ public:
       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, m_dwYearBornLength, m_dwYearBornStatus)  
    END_COLUMN_MAP()  
 };  
-class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
 {  
 public:  
    HRESULT OpenAll()  
    {  
-      HRESULT hr;  
+HRESULT hr;  
       hr = OpenDataSource();  
       if (FAILED(hr))  
          return hr;  
@@ -192,7 +195,7 @@ public:
    }  
    HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
    {  
-      HRESULT hr = Open(m_session, "Authors", pPropSet);  
+HRESULT hr = Open(m_session, "Authors", pPropSet);  
 #ifdef _DEBUG  
       if(FAILED(hr))  
          AtlTraceErrorRecords(hr);  

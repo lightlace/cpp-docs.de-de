@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - safe assemblies [C++], vs. pure
 - mixed assemblies [C++], vs. pure
@@ -24,18 +26,18 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ee9fbed3fd82fd450fd179683fd119cb1630034
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac5e094dd252ec908f352bcc1b19c923513debfb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Funktionsvergleich zwischen „gemischt“, „rein“ und „überprüfbar“ (C++/CLI)
 In diesem Thema werden die Funktionen zwischen den verschiedenen verglichen **"/ CLR"** Kompilierung Modi. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -44,15 +46,15 @@ In diesem Thema werden die Funktionen zwischen den verschiedenen verglichen **"/
   
 ## <a name="feature-comparison"></a>Featurevergleich zwischen "  
   
-|Funktion|Gemischt (/clr)|Rein (/clr:pure)|Safe (/ CLR: safe)|Verwandte Informationen|  
+|Feature|Gemischt (/clr)|Rein (/clr:pure)|Safe (/clr:safe)|Verwandte Informationen|  
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|CRT-Bibliothek|Unterstützt|Unterstützt||[Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)|  
+|CRT-Bibliothek|Unterstützt|deprecated||[Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)|  
 |MFC/ATL|Unterstützt|||[MFC-Desktopanwendungen](../mfc/mfc-desktop-applications.md) &#124; [Klassenübersicht](../atl/atl-class-overview.md)|  
 |Nicht verwaltete Funktionen|Unterstützt|||[Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)|  
-|Nicht verwaltete Daten|Unterstützt|Unterstützt||[Reiner und überprüfbarer Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
-|Aus nicht verwalteten Funktionen aufgerufen werden kann|Unterstützt|||[Vorgehensweise: Migrieren auf/CLR: pure (C + c++ / CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
-|Unterstützt das Aufrufen von nicht verwalteter Funktionen|Unterstützt|Nur die Funktionen der C-Format|P/Invoke aufrufen nur|[Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Unterstützt die Reflektion|Nur DLLs|Unterstützt|Unterstützt|[Reflexion (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
+|Nicht verwaltete Daten|Unterstützt|deprecated||[Reiner und überprüfbarer Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
+|Aus nicht verwalteten Funktionen aufgerufen werden kann|Unterstützt||||  
+|Unterstützt das Aufrufen von nicht verwalteter Funktionen|Unterstützt|deprecated|deprecated|[Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
+|Unterstützt die Reflektion|Nur DLLs|deprecated|deprecated|[Reflexion (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reiner und überprüfbarer Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

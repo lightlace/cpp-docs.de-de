@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
 Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher abrufen, ohne die zugrunde liegende Struktur bzw. das Schema. Beispielsweise ggf. ein Datenspeicher Tabellen in einer benutzerdefinierten Hierarchie organisiert, damit gäbe es keine Möglichkeit, die Kenntnis des Schemas mit Ausnahme von sichergestellt werden, lesen. (Ein weiteres Beispiel beachten Sie, dass die Visual C++-Assistenten-Schemarowsets verwenden, um die Zugriffsmethoden für den Consumer zu generieren.) Damit wird den Consumer dazu, macht der Anbieter-Sitzungsobjekt Methoden auf die [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) Schnittstelle. In Visual C++-Anwendungen verwenden Sie die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`unterstützt die folgenden Methoden:  
+ `IDBSchemaRowsetImpl` unterstützt die folgenden Methoden:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) überprüft die Gültigkeit von Einschränkungen für ein Schemarowset.  
   
@@ -55,13 +57,13 @@ Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher ab
   
 -   **C** *ShortName* **SessionTRSchemaRowset** verarbeitet Anforderungen für den Tabelleninformationen (die `DBSCHEMA_TABLES` -Schemarowsets).  
   
--   **C** *ShortName* **SessionColSchemaRowset** verarbeitet Anforderungen für die Spalteninformationen (die **DBSCHEMA_COLUMNS** -Schemarowsets). Der Assistent stellt die Beispiel-Implementierungen für diese Klassen, die Schemainformationen für einen DOS-Anbieter zurück.  
+-   **C** *ShortName* **SessionColSchemaRowset** handles requests for column information (the **DBSCHEMA_COLUMNS** schema rowset). Der Assistent stellt die Beispiel-Implementierungen für diese Klassen, die Schemainformationen für einen DOS-Anbieter zurück.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** verarbeitet Anforderungen, die Informationen zu den Anbietertyp-Schema (die **DBSCHEMA_PROVIDER_TYPES** Schemarowsets). Gibt die standardmäßige Implementierung, die vom Assistenten bereitgestellte `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** handles requests for schema information about the provider type (the **DBSCHEMA_PROVIDER_TYPES** schema rowset). Gibt die standardmäßige Implementierung, die vom Assistenten bereitgestellte `S_OK`.  
   
  Sie können diese Klassen zum Behandeln von Schemainformationen für den Anbieter geeignete anpassen:  
   
--   In **C***ShortName***SessionTRSchemaRowset**, müssen Sie die Felder Katalog, Tabellen- und Beschreibung ausfüllen (**M_sztype**, **trData. M_sztable**, und **M_szdesc**). Die vom Assistenten generierten-Beispiel verwendet nur eine Zeile (Tabelle). Andere Anbieter möglicherweise mehr als eine Tabelle zurück.  
+-   In **C***ShortName***SessionTRSchemaRowset**, müssen Sie die Felder Katalog, Tabellen- und Beschreibung ausfüllen (**M_sztype**, **trData. M_sztable** , und **M_szdesc**). Die vom Assistenten generierten-Beispiel verwendet nur eine Zeile (Tabelle). Andere Anbieter möglicherweise mehr als eine Tabelle zurück.  
   
 -   In **C***ShortName***SessionColSchemaRowset**, übergeben Sie den Namen der Tabelle als eine **DBID**.  
   
@@ -103,9 +105,9 @@ class CUpdateSessionTRSchemaRowset :
   
 |Schema-Rowset-Einschränkung|Einschränkungswert|  
 |-------------------------------|-----------------------|  
-|**"TABLE_CATALOG"**|0 x 1 (binär 1)|  
+|**TABLE_CATALOG**|0 x 1 (binär 1)|  
 |**TABLE_SCHEMA**|0 x 2 (binär 10)|  
-|**TABELLENNAME**|0 x 4 (binär 100)|  
+|**TABLE_NAME**|0 x 4 (binär 100)|  
 |**TABLE_TYPE**|0 x 8 (binär 1000)|  
   
  Als Nächstes, beachten Sie, dass ein Bit für jede Einschränkung. Da Sie unterstützen möchten **TABLE_NAME** nur, würden Sie zurückkehren, 0 x 4 in der `rgRestrictions` Element. Wenn Sie unterstützten **"TABLE_CATALOG"** und **TABLE_NAME**, würden Sie 0 x 5 (binär 101) zurückgeben.  
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

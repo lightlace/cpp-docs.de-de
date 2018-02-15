@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Übersicht über die Concurrency Runtime
 Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es beschreibt die Vorteile der Concurrency Runtime, wann sie verwendet wird und wie ihre Komponenten miteinander und mit dem Betriebssystem und den Anwendungen interagieren.  
@@ -42,7 +45,7 @@ Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es besch
   
 -   [Anforderungen](#requirements)  
   
-##  <a name="runtime"></a>Warum eine Laufzeit für die Parallelität wichtig ist  
+##  <a name="runtime">Warum eine Laufzeit für die Parallelität wichtig ist</a>  
  Eine Laufzeit für die Parallelität bietet die Einheitlichkeit und Vorhersagbarkeit für Anwendungen und Anwendungskomponenten, die gleichzeitig ausgeführt werden. Zwei Beispiele für die Vorteile der Concurrency Runtime sind *kooperative aufgabenplanung* und *Kooperative Blockierung*.  
   
  Die Concurrency Runtime verwendet einen kooperativen Aufgabenplaner, der einen Arbeitsübernahme-Algorithmus implementiert, um die Arbeit effizient auf die Computerressourcen zu verteilen. Betrachten Sie beispielsweise eine Anwendung mit zwei Threads, die beide von der gleichen Laufzeit verwaltet werden. Wenn ein Thread die geplante Aufgabe abgeschlossen hat, kann dieser die Arbeit des anderen Threads auslagern. Dieser Mechanismus gleicht die gesamte Arbeitsauslastung der Anwendung aus.  
@@ -59,7 +62,7 @@ Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es besch
  ![Architektur von Concurrency Runtime](../../parallel/concrt/media/concurrencyrun.png "Concurrencyrun")  
   
 > [!IMPORTANT]
->  Die Taskplaner- und die Ressourcen-Manager-Komponenten sind nicht über eine [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-App verfügbar oder wenn Sie die Aufgabenklasse oder andere Typen in „ppltasks.h“ verwenden.  
+>  Die Taskplaner- und die Ressourcen-Manager-Komponenten sind nicht verfügbar, aus einer app für die universelle Windows-Plattform (UWP), oder wenn Sie die Aufgabenklasse oder andere Typen in "ppltasks.h" verwenden.  
   
  Die Concurrency Runtime ist hochgradig *zusammensetzbar*, d. h. Sie können die vorhandene Funktionalität kombinieren hierzu mehr. Die Concurrency Runtime kombiniert viele Funktionen aus Komponenten auf niedrigerer Ebene, wie z. B. parallele Algorithmen.  
   
@@ -95,7 +98,7 @@ Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es besch
   
  [[Nach oben](#top)]  
   
-##  <a name="lambda"></a>C++-Lambda-Ausdrücke  
+##  <a name="lambda">C++-Lambda-Ausdrücke</a>  
  Viele der Typen und Algorithmen, die von der Concurrency Runtime definiert werden, werden als C++-Vorlagen implementiert. Einige dieser Typen und Algorithmen nehmen als Parameter eine Routine an, die die Arbeit ausführt. Dieser Parameter kann eine Lambda-Funktion, ein Funktionsobjekt oder ein Funktionszeiger sein. Diese Entitäten werden auch als bezeichnet *Arbeitsfunktionen* oder *Arbeitsroutinen*.  
   
  Die Lambdaausdrücke sind eine wichtige neue Sprachfunktion in Visual C++, da sie eine kompakte Art und Weise zum Definieren von Arbeitsfunktionen für die Parallelverarbeitung bieten. Funktionsobjekte und Funktionszeiger ermöglichen Ihnen die Verwendung der Concurrency Runtime mit dem vorhandenen Code. Microsoft empfiehlt jedoch, Lambdaausdrücke beim Schreiben von neuem Code zu verwenden, da diese bezüglich der Sicherheit und Produktivität viele Vorteile bieten.  

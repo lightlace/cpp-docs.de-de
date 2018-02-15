@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - notifications [C++], OLE DB consumers
 - events [C++], notifications in OLE DB
@@ -16,24 +18,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a859a9f3b2061d1cb18c93cd9f46d30600ada28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbdb3b7faaec99f9893df29e8d368fd05c8fd111
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-notifications"></a>Unterstützen von Benachrichtigungen
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementieren von Verbindungspunkt-Schnittstellen für Anbieter und Consumer  
  Um Benachrichtigungen zu implementieren, muss von eine Klasse erben [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) und [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).  
   
- `IRowsetNotifyCP`die Anbieter-Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx). `IRowsetNotifyCP`implementiert broadcast Funktionen, um die advise-Listener auf dem Verbindungspunkt **IID_IRowsetNotify** Änderungen an den Inhalt des Rowsets.  
+ `IRowsetNotifyCP` die Anbieter-Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx). `IRowsetNotifyCP` implementiert broadcast Funktionen, um die advise-Listener auf dem Verbindungspunkt **IID_IRowsetNotify** Änderungen an den Inhalt des Rowsets.  
   
  Beachten Sie, die Sie implementieren und registrieren Außerdem müssen `IRowsetNotify` auf Consumer (auch bekannt als die Senke) mit [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , damit der Consumer Benachrichtigungen behandeln kann. Informationen zum Implementieren der Verbindungspunkt-Schnittstelle auf der Consumer finden Sie unter [empfangen von Benachrichtigungen](../../data/oledb/receiving-notifications.md).  
   
@@ -53,14 +55,14 @@ END_CONNECTION_POINT_MAP
 > [!NOTE]
 >  Der Beispielcode weicht möglicherweise von den hier genannten der; den Code sollte als aktuellere Version angesehen werden.  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
   
 class RUpdateRowset :   
 public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,   
-         CAtlArray< CAgentMan, CAtlArray<CAgentMan> >, CSimpleRow,   
-         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll > >,  
+         CAtlArray< CAgentMan, CAtlArray<CAgentMan>>, CSimpleRow,   
+         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll >>,  
       public IRowsetUpdateImpl< RUpdateRowset, CAgentMan >,  
       public IConnectionPointContainerImpl<RUpdateRowset>,  
       public IRowsetNotifyCP<RUpdateRowset>  
@@ -99,9 +101,9 @@ END_CONNECTION_POINT_MAP()
 |**DBPROP_NOTIFYROWDELETE**|`IRowsetChange`|  
 |**DBPROP_NOTIFYROWINSERT**|`IRowsetChange`|  
 |**DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE**|Immer|  
-|**DBPROP_NOTIFYROWFIRSTCHANGE**|`IRowsetUpdate`|  
+|DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWSETRELEASE**|Immer|  
-|**DBPROP_NOTIFYROWUNDOCHANGE**|`IRowsetUpdate`|  
+|DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUNDODELETE**|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUNDOINSERT**|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUPDATE**|`IRowsetUpdate`|  

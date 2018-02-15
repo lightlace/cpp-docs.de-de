@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
-Die Windows Runtime C++ Template Library (WRL) ist eine Vorlagenbibliothek, die eine Low-Level Methode zum Erstellen und Verwenden von Windows-Runtime-Komponenten bereitstellt.  
+Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek, die eine niederschwelligen Zugang zur Erstellung und Verwendung von Windows-Runtime-Komponenten bietet.  
   
 ## <a name="benefits"></a>Vorteile  
  Der Windows Runtime C++ Template Library können Sie leichter zu implementieren und die Nutzung von Component Object Model (COM)-Komponenten. Sie stellt Verwaltungstechniken wie die Verweiszählung bereit, mit der die Lebensdauer der Objekte verwaltet wird, oder wie Tests von `HRESULT` -Werten, mit denen festgestellt wird, ob ein Vorgang erfolgreich war oder einen Fehler verursacht hat. Um die Windows Runtime C++ Template Library erfolgreich verwenden zu können, müssen Sie die folgenden Regeln und Techniken sorgfältig befolgen.  
@@ -45,7 +47,7 @@ Die Windows Runtime C++ Template Library (WRL) ist eine Vorlagenbibliothek, die 
  Hier sind einige Ressourcen, mit denen Sie sofort mit der Windows Runtime C++ Template Library arbeiten abrufen können.  
   
  [Die Windows-Runtime-Bibliothek (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- Erfahren Sie in diesem Channel 9-Video mehr darüber, wie die Windows Runtime C++ Template Library hilft, dass Sie Schreibberechtigungen universelle Windows-Plattform-apps und das Erstellen und Nutzen von Windows-Runtime-Komponenten.  
+ Erfahren Sie in diesem Channel 9-Video mehr darüber, wie die Windows Runtime C++ Template Library hilft, dass Sie Schreibberechtigungen apps der universellen Windows-Plattform (UWP) und Informationen zum Erstellen und die Nutzung von Windows-Runtime-Komponenten.  
   
  [Vorgehensweise: Aktivieren und verwenden Sie eine Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Zeigt, wie die Windows Runtime C++ Template Library verwenden, um Windows-Runtime zu initialisieren und zu aktivieren und verwenden Sie eine Windows-Runtime-Komponente.  
@@ -57,10 +59,10 @@ Die Windows Runtime C++ Template Library (WRL) ist eine Vorlagenbibliothek, die 
  Zeigt, wie die Windows Runtime C++ Template Library zu abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.  
   
  [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Windows-Runtime-Komponente](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Zeigt, wie die Windows Runtime C++ Template Library verwenden, um einer grundlegenden Komponente für Windows-Runtime zu erstellen, die zwei Zahlen addiert. Außerdem veranschaulicht, wie Ereignisse auslösen und mithilfe der Komponente aus einer Uwp-app, die JavaScript nutzt.  
+ Zeigt, wie die Windows Runtime C++ Template Library verwenden, um einer grundlegenden Komponente für Windows-Runtime zu erstellen, die zwei Zahlen addiert. Außerdem veranschaulicht, wie Ereignisse auslösen und die Komponente aus einer uwp-app, die JavaScript nutzt.  
   
- [Exemplarische Vorgehensweise: Erstellen einer Windows Store-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Erfahren Sie, wie Sie eine universelle Windows-Plattform-app erstellen, verwendet [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ [Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ Erfahren Sie, wie Sie eine uwp-app erstellen, verwendet [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Zeigt, wie die Windows Runtime C++ Template Library verwenden, um eine grundlegende COM-Komponente und eine einfache Methode zur Registrierung und Nutzung der COM-Komponente aus einer desktop-app zu erstellen.  
@@ -72,10 +74,10 @@ Die Windows Runtime C++ Template Library (WRL) ist eine Vorlagenbibliothek, die 
  Zeigt, wie benutzerdefinierte Komponenten für Windows-Runtime von WRL durch Erstellen einer IDL-Datei von den WINMD-Metadaten verarbeitet werden.  
   
  [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Zeigt, wie die [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) und [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) Schnittstellen zusammen mit Aufgaben für HTTP GET und POST-Anforderungen an einen Webdienst in einer universellen Windows-Plattform-app zu senden.  
+ Zeigt, wie die [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) und [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) Schnittstellen zusammen mit Aufgaben für HTTP GET und POST-Anforderungen an einen Webdienst in einer uwp-app zu senden.  
   
  [Beispiel des Reise-Optimierer von Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Verwendet die `HttpRequest` in definierten Klasse [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Rahmen einer vollständigen universelle Windows-Plattform-app.  
+ Verwendet die `HttpRequest` in definierten Klasse [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Rahmen einer vollständigen uwp-app.  
   
  [Erstellen eine Windows-Runtime-DLL-Komponente mit C++-Beispiel](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  Zeigt, wie die Windows Runtime C++ Template Library eine prozessinterne DLL-Komponente erstellen und nutzen ihn von C + c++ / CX, JavaScript und c#.  
@@ -89,7 +91,7 @@ Die Windows Runtime C++ Template Library (WRL) ist eine Vorlagenbibliothek, die 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime C++ Template Library, die im Vergleich mit ATL  
  Windows Runtime C++ Template Library ähnelt der Active Template Library (ATL), da es verwenden zu können, um kleine, schnelle COM-Objekte erstellen. Windows Runtime C++ Template Library und ATL-Konzepte, wie die Definition von Objekten in Modulen, die explizite Registrierung von Schnittstellen, freigeben und offene Erstellung von Objekten durch Factorys. Sie können in den mit Windows Runtime C++ Template Library vertraut sein, wenn Sie mit ATL vertraut sind.  
   
- Windows Runtime C++ Template Library unterstützt die COM-Funktionalität, die für die universelle Windows-Plattform-apps erforderlich ist. Daher unterscheidet sie sich von ATL, da die direkte Unterstützung für COM-Funktionen wie Folgende fehlt:  
+ Windows Runtime C++ Template Library unterstützt die COM-Funktionalität, die für die uwp-apps erforderlich ist. Daher unterscheidet sie sich von ATL, da die direkte Unterstützung für COM-Funktionen wie Folgende fehlt:  
   
 -   Aggregation  
   

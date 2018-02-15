@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Auswählen einer Bereitstellungsmethode
 Es sei denn, die Visual C++-Anwendung eigenständig und kann mithilfe eines Kopierbefehls bereitgestellt werden, wird empfohlen, dass Sie Windows Installer für die Bereitstellung verwenden. Windows Installer unterstützt die Installation, Reparatur und Deinstallation, und es unterstützt das atomische Aktualisieren von Anwendungsdateien, Abhängigkeiten und Registrierungseinträgen.  
@@ -45,7 +45,7 @@ Es sei denn, die Visual C++-Anwendung eigenständig und kann mithilfe eines Kopi
 ## <a name="redistributing-visual-c-libraries"></a>Verteilen von Visual C++-Bibliotheken  
  In Ihren Bereitstellungen können Sie jede Version einer Visual C++-Bibliothek weiter verteilen, die für die Weiterverteilung lizenziert ist. Hierfür gibt es drei Möglichkeiten, sie bereitzustellen:  
   
--   Zentrale Bereitstellung mithilfe von weiter verteilbaren Paketen, die Visual C++-Bibliotheken als freigegebene DLLs im %windir%\system32 installiert\\. (Die Installation in diesen Ordner erfordert Administratorrechte.) Sie können einen Skript oder ein Setupprogramm erstellen, dass das verteilbare Paket ausführt, bevor Ihre Anwendung auf dem Zielcomputer installiert wird. Verteilbare Pakete sind für die Plattformen x86, x64 und ARM (VCRedist_x86.exe, VCRedist_x64.exe oder VCRedist_arm.exe) verfügbar. Visual Studio umfasst diese Pakete in % ProgramFiles% (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Sie können auch herunterladen aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Suchen Sie nach dem Download Center die "Visual C++ Redistributable Package *Visual Studio-Version und Update*", die mit die Anwendung übereinstimmt. Wenn Sie beispielsweise Visual Studio 2012 Update 4 zum Erstellen Ihrer Anwendung verwendet haben, suchen Sie nach „Visual C++ Redistributable Package 2012 update 4“.) Informationen zur Verwendung von verteilbares Paket finden Sie unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe der Visual C++ Redistributable Package](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Zentrale Bereitstellung mithilfe von weiter verteilbaren Paketen, die Visual C++-Bibliotheken als freigegebene DLLs im %windir%\system32 installiert\\. (Die Installation in diesen Ordner erfordert Administratorrechte.) Sie können einen Skript oder ein Setupprogramm erstellen, dass das verteilbare Paket ausführt, bevor Ihre Anwendung auf dem Zielcomputer installiert wird. Verteilbare Pakete sind für die Plattformen x86, x64 und ARM (VCRedist_x86.exe, VCRedist_x64.exe oder VCRedist_arm.exe) verfügbar. Visual Studio umfasst diese Pakete in % ProgramFiles% (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Sie können auch herunterladen aus der [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Verwenden Sie das Suchfeld im Download Center für die Suche nach der "Visual C++ Redistributable Package *Visual Studio-Version und Update*", die mit die Anwendung übereinstimmt. Deutet an, wenn Sie Visual Studio 2015 Update 3 verwendet, um die Anwendung zu erstellen, suchen Sie nach "Visual C++ Redistributable Package 2015 Update 3".) Informationen zur Verwendung von verteilbares Paket finden Sie unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe der Visual C++ Redistributable Package](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Zentrale Bereitstellung mithilfe von Mergemodulen, von denen jedes eine bestimmte Visual C++-Bibliothek als eine freigegebene DLL in %windir%\system32 installiert\\. (Die Installation in diesen Ordner erfordert Administratorrechte.) Mergemodule werden Teil der MSI-Installationsdatei Ihrer Anwendung. Visual C++ redistributable-Mergemodule sind in Visual Studio in \Programme (x86) \Common Files\Merge Module enthalten\\. Weitere Informationen finden Sie unter [Neuverteilen von Komponenten von mithilfe von Mergemodulen](../ide/redistributing-components-by-using-merge-modules.md).  
   

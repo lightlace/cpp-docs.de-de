@@ -1,30 +1,33 @@
 ---
-title: Verwenden von C++ AMP in Windows Store-Apps | Microsoft Docs
+title: Verwenden von C++ AMP in uwp-Apps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-c-amp-in-windows-store-apps"></a>Verwenden von C++ AMP in Windows Store-Apps
-Sie können C++ AMP (C++ Accelerated Massive Parallelism) in der [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-App verwenden, um Berechnungen anhand des Grafikprozessors (Graphics Processing Unit, GPU) oder anderer rechnergestützter Beschleuniger auszuführen. bietet jedoch keine APIs, um mit Windows-Runtime-Typen direkt zu arbeiten, und die Windows-Runtime stellt keinen Wrapper für  bereit. Wenn Sie Windows-Runtime-Typen im Code verwenden (einschließlich selbst erstellter), müssen sie in Typen konvertiert werden, die mit  kompatibel sind.  
+# <a name="using-c-amp-in-uwp-apps"></a>Verwenden von C++ AMP in uwp-Apps
+Sie können C++ AMP (C++ Accelerated Massive Parallelism) in Ihrer app (Universelle Windows Plattform) verwenden, um Berechnungen anhand der GPU (Graphics Processing Unit) oder anderer rechnergestützter Beschleuniger auszuführen. bietet jedoch keine APIs, um mit Windows-Runtime-Typen direkt zu arbeiten, und die Windows-Runtime stellt keinen Wrapper für  bereit. Wenn Sie Windows-Runtime-Typen im Code verwenden (einschließlich selbst erstellter), müssen sie in Typen konvertiert werden, die mit  kompatibel sind.  
   
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
- Wenn Sie [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) verwenden, um die [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-App zu erstellen, empfiehlt es sich, POD (Plain Old Data)-Typen zusammen mit zusammenhängendem Speicher (z. B. `std::vector` oder Arrays im C-Format) für Daten zu verwenden, die mit C++ AMP verwendet werden. Damit können Sie eine höhere Leistung erzielen als durch Verwenden von Nicht-POD-Typen oder Windows RT-Containern, da kein Marshallen auftreten muss.  
+ Bei Verwendung von [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) zum Erstellen Ihrer app (Universelle Windows Plattform) wird empfohlen, dass Sie Plain Old Data (POD) Typen zusammen mit zusammenhängendem Speicher verwenden – z. B. `std::vector` oder Arrays im C-Stil – für Daten, die verwendet werden mit C++ AMP. Damit können Sie eine höhere Leistung erzielen als durch Verwenden von Nicht-POD-Typen oder Windows RT-Containern, da kein Marshallen auftreten muss.  
   
  Damit Sie in einem C++ AMP-Kernel auf Daten zugreifen können, die auf diese Weise gespeichert sind, umschließen Sie einfach den `std::vector`- oder Arrayspeicher in einer `concurrency::array_view` und verwenden die Arrayansicht dann in einer `concurrency::parallel_for_each`-Schleife:  
   
@@ -120,6 +123,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie Ihrer ersten Windows Store-app mit C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [Erstellen Sie Ihrer ersten uwp-app mit C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

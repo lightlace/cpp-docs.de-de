@@ -1,29 +1,31 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen einer Windows Store-Apps mithilfe von WRL und Media Foundation | Microsoft Docs'
+title: 'Exemplarische Vorgehensweise: Erstellen einer uwp-app mithilfe von WRL und Media Foundation | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer Windows Store-App mithilfe von WRL und Media Foundation
-Erfahren Sie, wie die Windows Runtime C++ Template Library (WRL) zu verwenden, um eine universelle Windows-Plattform-app erstellen, verwendet [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer uwp-app mithilfe von WRL und Media Foundation
+Erfahren Sie, wie die Windows Runtime C++ Template Library (WRL) zu verwenden, um eine app für die universelle Windows-Plattform (UWP) erstellen, verwendet [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  In diesem Beispiel wird eine benutzerdefinierte Media Foundation-Transformation erstellt, in der ein Graustufeneffekt auf Bilder angewendet wird, die über eine Webcam erfasst werden. Die App verwendet C++ zum Definieren der benutzerdefinierten Transformation und C# zum Verwenden der Komponente für das Transformieren der erfassten Bilder.  
   
@@ -59,13 +61,13 @@ Erfahren Sie, wie die Windows Runtime C++ Template Library (WRL) zu verwenden, u
   
 -   Verknüpfen Sie die Komponenten-DLL mit „runtimeobject.lib“. Geben Sie auch [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) in der Linkerzeile an Windows-Metadaten zu generieren.  
   
--   Verwenden Sie Projektverweise, auf die WRL-Komponenten, um für universelle Windows-Plattform-apps verfügbar.  
+-   Verwenden Sie Projektverweise, auf die WRL-Komponenten uwp-apps zu ermöglichen.  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Verwendung der WRL zum Erstellen der Media Foundation Graustufen Transformationskomponente  
   
 1.  Erstellen Sie in Visual Studio eine **leere Projektmappe** Projekt. Nennen Sie das Projekt, z. B. `MediaCapture`.  
   
-2.  Hinzufügen einer **DLL (Windows Store-apps)** Projekt der Projektmappe. Nennen Sie das Projekt, z. B. `GrayscaleTransform`.  
+2.  Hinzufügen einer **DLL (Uwp)** Projekt der Projektmappe. Nennen Sie das Projekt, z. B. `GrayscaleTransform`.  
   
 3.  Hinzufügen einer **Midl-Datei (.idl)** Datei zum Projekt. Nennen Sie die Datei, z. B. `GrayscaleTransform.idl`.  
   

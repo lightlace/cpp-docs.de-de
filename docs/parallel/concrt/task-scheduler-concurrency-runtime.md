@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Aufgabenplaner (Concurrency Runtime)
-Die Themen in diesem Teil der Dokumentation beschreiben die wichtigsten Funktionen des Taskplaners der Concurrency Runtime. Der Taskplaner ist hilfreich, wenn Sie die Leistung von vorhandenem Code optimieren möchten, der die Concurrency Runtime verwendet.  
+Die Themen in diesem Teil der Dokumentation beschreiben die wichtigsten Funktionen des Taskplaners der Concurrency Runtime. Der Aufgabenplaner ist hilfreich, wenn Sie die Leistung von vorhandenem Code optimieren möchten, der die Concurrency Runtime verwendet.  
   
 > [!IMPORTANT]
->  Der Taskplaner ist nicht über eine [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-App verfügbar. Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows Store-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  Der Taskplaner ist nicht verfügbar ist, aus einer app für die universelle Windows-Plattform (UWP). Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für uwp-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
 >   
 >  In Visual Studio 2015 und höher die [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) -Klasse und verwandte Typen in "ppltasks.h" verwenden Sie den Windows-ThreadPool als Planer. Dieses Thema gilt nicht mehr für Typen, die in „ppltasks.h“ definiert sind. Parallele Algorithmen, wie z. B. „parallel_for“, verwenden weiterhin die Concurrency Runtime als standardmäßigen Planer.  
   

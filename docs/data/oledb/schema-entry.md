@@ -4,37 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SCHEMA_ENTRY
-dev_langs: C++
-helpviewer_keywords: SCHEMA_ENTRY macro
+f1_keywords:
+- SCHEMA_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 12a4026e94ea5fe5e310e0aeec7cdad10d33d2bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b1ddabb976cdf4897dbd414433f013a84825d01
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="schemaentry"></a>SCHEMA_ENTRY
 Ordnet eine GUID mit einer Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-      SCHEMA_ENTRY(  
-   guid,  
-   rowsetClass   
-);   
+```cpp
+      SCHEMA_ENTRY(guid,  
+   rowsetClass);   
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -48,8 +49,7 @@ Ordnet eine GUID mit einer Klasse.
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) können dann die Abfrage der Zuordnung für eine Liste von GUIDs, oder es kann ein Rowset erstellen, wenn sie eine GUID angegeben wird. Das Schemarowset `IDBSchemaRowsetImpl` erstellt ähnelt einer standardmäßigen `CRowsetImpl`-abgeleitete Klasse, mit der Ausnahme bereitgestellt werden müssen eine **Execute** Methode, die die folgende Signatur:  
   
 ```  
-HRESULT Execute (
-    LONG* pcRowsAffected,  
+HRESULT Execute (LONG* pcRowsAffected,  
     ULONG cRestrictions,  
     const VARIANT* rgRestrictions);  
 ```  

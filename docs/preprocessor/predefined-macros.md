@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 53acac18902e261eede565987d6b9c053a8f1707
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -192,7 +195,7 @@ Der Compiler unterstützt diesen vordefinierten Makros, die durch die ISO C99 un
 
 - **&#95; &#95; STDC++ &#95; &#95;**  Als 1 definiert wird, nur, wenn als C kompiliert und die ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption angegeben ist. Andernfalls nicht definiert.
 
-- **&#95; &#95; STDC++ &#95; GEHOSTETE &#95; &#95;**  Als 1 definiert wird, wenn die Implementierung ist ein *gehostete Implementierung*, eine, die die gesamte erforderliche Standardbibliothek unterstützt. Definiert, andernfalls 0.
+- **&#95;&#95;STDC&#95;HOSTED&#95;&#95;** Defined as 1 if the implementation is a *hosted implementation*, one that supports the entire required standard library. Definiert, andernfalls 0.
 
 - **&#95; &#95; STDCPP &#95; THREADS &#95; &#95;**  Als 1 definiert wird, wenn ein Programm mehrere Ausführungsthreads haben kann und als C++ kompiliert wird. Andernfalls nicht definiert.
 
@@ -286,7 +289,7 @@ Microsoft Visual C++ unterstützt diesen zusätzlichen vordefinierten Makros.
 
 - **&#95; CPPRTTI** definiert als 1, wenn die [/GR (Laufzeit-Typinformationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) (Compileroption) festgelegt ist. Andernfalls nicht definiert.
 
-- **&#95; CPPUNWIND** als 1 definiert wird, wenn eine oder mehrere der der [/GX (Ausnahmebehandlung aktivieren)](../build/reference/gx-enable-exception-handling.md), [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md), oder  [ /EH (Ausnahmebehandlungsmodell) ](../build/reference/eh-exception-handling-model.md) Compileroptionen werden festgelegt. Andernfalls nicht definiert.
+- **&#95; CPPUNWIND** als 1 definiert wird, wenn eine oder mehrere der der [/GX (Ausnahmebehandlung aktivieren)](../build/reference/gx-enable-exception-handling.md), [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md), oder  [ /EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md) Compileroptionen werden festgelegt. Andernfalls nicht definiert.
 
 - **&#95; DEBUG** als When 1 definiert die ["/ LDD"](../build/reference/md-mt-ld-use-run-time-library.md), [/MDd](../build/reference/md-mt-ld-use-run-time-library.md), oder [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) (Compileroption) festgelegt ist. Andernfalls nicht definiert.
 
@@ -372,7 +375,7 @@ Microsoft Visual C++ unterstützt diesen zusätzlichen vordefinierten Makros.
 
 - **&#95; MSC &#95; VER** definiert als ein Ganzzahlliteral, das die Haupt- und Nebenversionsnummern Anzahl der Elemente der Versionsnummer des Compilers codiert. Die Nummer der Hauptversion ist das erste Element der durch Punkte getrennten Versionsnummer und die Nebenversionsnummer ist das zweite Element. Die Versionsnummer des Visual C++-Compilers beispielsweise "17.00.51106.1" ist, die **&#95; MSC &#95; VER** -Makro in 1700 ausgewertet. Geben Sie **cl /?** in der Befehlszeile, um die Versionsnummer des Compilers anzuzeigen. Dieses Makro wird immer definiert.
 
-- **&#95; MSVC &#95; LANG** definiert als ein Integer-literal, der angibt, die C++-sprachenstandard, durch den Compiler vorgesehen. Wenn als C++ kompiliert wird, ist das Makro die Integer-Literalwert 201402 an, wenn die [/std:c ++ 14](../build/reference/std-specify-language-standard-version.md) (Compileroption) festgelegt ist, oder in der Standardeinstellung; wird festgelegt, um 201703 Wenn die [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md) (Compileroption) festgelegt ist; und ist ein höhere, nicht angegebener Wert, wenn die [/std:c ++ neueste](../build/reference/std-specify-language-standard-version.md). Das Makro ist, andernfalls nicht definiert. Die **&#95; MSVC &#95; LANG** Makro und [/std (Geben Sie Standard Sprachversion)](../build/reference/std-specify-language-standard-version.md) Compileroptionen sind ab Visual Studio 2015 Update 3.
+- **&#95; MSVC &#95; LANG** definiert als ein Integer-literal, der angibt, die C++-sprachenstandard, durch den Compiler vorgesehen. Wenn als C++ kompiliert wird, ist das Makro die Integer-Literalwert 201402L, wenn die [/std:c ++ 14](../build/reference/std-specify-language-standard-version.md) (Compileroption) festgelegt ist, oder in der Standardeinstellung; wird festgelegt, um 201703 L Wenn die [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md) (Compileroption) festgelegt ist; und ist ein höhere, nicht angegebener Wert, wenn die [/std:c ++ neueste](../build/reference/std-specify-language-standard-version.md). Das Makro ist, andernfalls nicht definiert. Die **&#95; MSVC &#95; LANG** Makro und [/std (Geben Sie Standard Sprachversion)](../build/reference/std-specify-language-standard-version.md) Compileroptionen sind ab Visual Studio 2015 Update 3.
 
 - **&#95; &#95; MSVC &#95; Common Language RUNTIME &#95; ÜBERPRÜFT** definiert als 1, wenn mindestens ein von der [/RTC](../build/reference/rtc-run-time-error-checks.md) Compileroptionen festgelegt ist. Andernfalls nicht definiert.
 

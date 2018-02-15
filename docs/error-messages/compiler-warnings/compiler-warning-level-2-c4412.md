@@ -4,28 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4412
-dev_langs: C++
-helpviewer_keywords: C4412
+f1_keywords:
+- C4412
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92898b9c8e8845ecc8bc650b80cf41a33b3a59d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Compilerwarnung (Stufe 2) C4412
 'Funktion': Funktionssignatur enthält Typ 'Typ'; C++-Objekte sind nicht sicher zwischen reinem Code übergeben und gemischtem oder systemeigenem.  
   
- Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert ist.  
+ Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert ist. Wenn Sie Code besitzen, "rein" sein muss, wird empfohlen, dass Sie es in c# portieren.  
   
  Der Compiler hat eine potenziell unsichere Situation, die zu einem Laufzeitfehler führen konnte: erfolgt ein Aufruf von einer **/CLR: pure** Kompiliereinheit an eine Funktion, die über Dllimport und Funktionssignatur importiert wurde, enthält einen unsicheren Typ . Ein Typ ist unsicher, wenn er eine Memberfunktion enthält oder einen Datenmember, der einem unsicheren Typ oder eine Dereferenzierung zu einem unsicheren Typ ist.  
   
@@ -33,7 +38,6 @@ ms.lasthandoff: 12/21/2017
   
  Eine virtuelle Memberfunktion ist besonders anfällig für unerwartete Ergebnisse zurückgibt.  Allerdings sollten auch eine nicht virtuelle Funktion, die getestet werden, um sicherzustellen, dass die richtigen Ergebnisse zu erhalten. Wenn Sie sicher sind, dass Sie die richtigen Ergebnisse ausgegeben werden, können Sie diese Warnung ignorieren.  
   
- Weitere Informationen zu **/CLR: pure**, finden Sie unter [wie: Migrieren auf/CLR: pure (C + c++ / CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md).  
   
  C4412 ist standardmäßig deaktiviert. Finden Sie unter [Compiler deaktivierte Compilerwarnungen standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md) und [Dllexport, Dllimport](../../cpp/dllexport-dllimport.md) für Weitere Informationen.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>Automatisierung
 Automation (früher: OLE-Automatisierung) ermöglicht es einer Anwendung, die in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können.  
@@ -47,7 +50,7 @@ Automation (früher: OLE-Automatisierung) ermöglicht es einer Anwendung, die in
   
 -   Automatisierung (lokal).  
   
--   [Remoteautomatisierung](../mfc/remote-automation.md) (über ein Netzwerk mithilfe von Distributed COM, oder DCOM).  
+-   Remoteautomatisierung (über ein Netzwerk mithilfe von Distributed COM, oder DCOM).  
   
  Das Verfügbarmachen von Objekten ist nützlich, wenn Anwendungen Funktionen bereitstellen, die hilfreich für andere Anwendungen sind. Ein ActiveX-Steuerelement ist beispielsweise ein Automatisierungsservertyp; die Anwendung, in der das ActiveX-Steuerelement gehostet wird, ist der Automatisierungsclient dieses Steuerelements.  
   
@@ -81,8 +84,6 @@ Automation (früher: OLE-Automatisierung) ermöglicht es einer Anwendung, die in
 -   [Automatisierungsclients](../mfc/automation-clients.md)  
   
 -   [Automatisierungsserver](../mfc/automation-servers.md)  
-  
--   [Remoteautomatisierung](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

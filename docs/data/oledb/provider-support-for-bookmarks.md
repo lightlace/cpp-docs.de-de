@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - IRowsetLocate class, provider support for bookmarks
 - OLE DB provider templates, bookmarks
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Anbieterunterstützung für Lesezeichen
 Im Beispiel in diesem Thema wird die `IRowsetLocate` Schnittstelle für die `CMyProviderRowset` Klasse. In fast allen Fällen starten Sie durch Hinzufügen einer Schnittstelle zu einem vorhandenen COM-Objekt. Anschließend können Sie sie testen, indem mehr Aufrufe über die Consumervorlagen hinzufügen. Im Beispiel wird veranschaulicht, wie Sie:  
@@ -41,7 +43,7 @@ Im Beispiel in diesem Thema wird die `IRowsetLocate` Schnittstelle für die `CMy
   
  Hinzufügen der `IRowsetLocate` Schnittstelle unterscheidet sich etwas von den meisten Schnittstellen. Stellen Sie die v-Tabellen-Zeile nach oben, den OLE DB-haben Anbietervorlagen einen Vorlagenparameter, die abgeleitete Schnittstelle zu behandeln. Der folgende Code zeigt die neue Vererbungsliste:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -49,18 +51,18 @@ Im Beispiel in diesem Thema wird die `IRowsetLocate` Schnittstelle für die `CMy
 class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,   
       CTextData, CMyProviderCommand, CAtlArray<CTextData>,   
       CSimpleRow,   
-          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
+          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- Die vierten, fünften und sechsten Parameter, die alle hinzugefügt werden. In diesem Beispiel verwendet die Standardeinstellungen für die vierte und fünfte Parameter jedoch angeben `IRowsetLocateImpl` als sechsten Parameters. `IRowsetLocateImpl`ist eine OLE DB-Vorlagenklasse, die zwei Vorlagenparameter akzeptiert: Diese verknüpfen die `IRowsetLocate` Schnittstelle für die `CMyProviderRowset` Klasse. Um die meisten Schnittstellen hinzuzufügen, können Sie diesen Schritt überspringen und mit dem nächsten zu verschieben. Nur die `IRowsetLocate` und `IRowsetScroll` Schnittstellen, die auf diese Weise behandelt werden müssen.  
+ Die vierten, fünften und sechsten Parameter, die alle hinzugefügt werden. In diesem Beispiel verwendet die Standardeinstellungen für die vierte und fünfte Parameter jedoch angeben `IRowsetLocateImpl` als sechsten Parameters. `IRowsetLocateImpl` ist eine OLE DB-Vorlagenklasse, die zwei Vorlagenparameter akzeptiert: Diese verknüpfen die `IRowsetLocate` Schnittstelle für die `CMyProviderRowset` Klasse. Um die meisten Schnittstellen hinzuzufügen, können Sie diesen Schritt überspringen und mit dem nächsten zu verschieben. Nur die `IRowsetLocate` und `IRowsetScroll` Schnittstellen, die auf diese Weise behandelt werden müssen.  
   
  Dann müssen Sie die `CMyProviderRowset` Aufrufen `QueryInterface` für die `IRowsetLocate` Schnittstelle. Fügen Sie die Zeile `COM_INTERFACE_ENTRY(IRowsetLocate)` zur Zuordnung. Die schnittstellenzuordnung für `CMyProviderRowset` sollte angezeigt werden, wie im folgenden Code gezeigt:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> > _RowsetBaseClass;  
+typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>> _RowsetBaseClass;  
   
 BEGIN_COM_MAP(CMyProviderRowset)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
@@ -74,7 +76,7 @@ END_COM_MAP()
   
  Behandeln der **IColumnsInfo:: GetColumnsInfo** aufrufen, löschen Sie die **PROVIDER_COLUMN** ordnen die `CTextData` Klasse. Das Makro-Makro definiert eine Funktion `GetColumnInfo`. Sie definieren müssen eigene `GetColumnInfo` Funktion. Die Funktionsdeklaration sollte wie folgt aussehen:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -92,7 +94,7 @@ class CTextData
   
  Implementieren Sie anschließend die `GetColumnInfo` -Funktion in der Datei MyProviderRS.cpp wie folgt:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
   
@@ -161,13 +163,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`prüft zunächst, um festzustellen, ob eine Eigenschaft mit dem Namen **DBPROP_IRowsetLocate** festgelegt ist. OLE DB verfügt über Eigenschaften für jede der optionalen Schnittstellen außerhalb der Rowset-Objekte. Wenn der Consumer eine dieser optionalen Schnittstellen verwenden möchte, legt eine Eigenschaft auf "true" fest. Der Anbieter kann dann überprüfen Sie diese Eigenschaft und besondere Maßnahmen darauf basieren.  
+ `GetColumnInfo` prüft zunächst, um festzustellen, ob eine Eigenschaft mit dem Namen **DBPROP_IRowsetLocate** festgelegt ist. OLE DB verfügt über Eigenschaften für jede der optionalen Schnittstellen außerhalb der Rowset-Objekte. Wenn der Consumer eine dieser optionalen Schnittstellen verwenden möchte, legt eine Eigenschaft auf "true" fest. Der Anbieter kann dann überprüfen Sie diese Eigenschaft und besondere Maßnahmen darauf basieren.  
   
  In der Implementierung rufen Sie diese Eigenschaft mithilfe des Zeigers auf das Befehlsobjekt aus. Die `pThis` -Zeiger stellt die Rowset- oder -Klasse. Da hier Vorlagen verwendet werden, müssen Sie diesen als übergeben einer `void` Zeiger oder den Code nicht kompiliert.  
   
  Geben Sie einen statischen Array, um die Informationen in der Spalte enthalten. Wenn der Consumer die Lesezeichenspalte nicht möchten, wird ein Eintrag im Array verschwendet. Sie können dieses Array dynamisch reservieren, jedoch müssen Sie sicherstellen, dass sie ordnungsgemäß zerstört werden. In diesem Beispiel definiert und die Makros ADD_COLUMN_ENTRY und ADD_COLUMN_ENTRY_EX verwendet, um die Informationen in das Array eingefügt werden. Sie können die Makros in der Datei MyProviderRS.H wie im folgenden Code gezeigt hinzufügen:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -198,13 +200,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
   
  Um den Code in der Consumer zu testen, müssen Sie einige Änderungen an der `OnRun` Handler. Die erste Änderung an die Funktion ist, fügen Sie Code zum Hinzufügen einer Eigenschaft zum Eigenschaftensatz hinzu. Der Code legt die **DBPROP_IRowsetLocate** Eigenschaft auf "true", wodurch der Anbieter darüber informiert wird, die Lesezeichenspalte wirklich. Die `OnRun` Handlercode sollte wie folgt aussehen:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // TestProv Consumer Application in TestProvDlg.cpp  
   
 void CTestProvDlg::OnRun()   
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -229,7 +231,8 @@ void CTestProvDlg::OnRun()
       DBCOMPARE compare;  
       if (ulCount == 2)  
          tempBookmark = table.bookmark;  
-      HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
+
+HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
                  &compare);  
       if (FAILED(hr))  
          ATLTRACE(_T("Compare failed: 0x%X\n"), hr);  
@@ -251,7 +254,7 @@ void CTestProvDlg::OnRun()
   
  Sie müssen auch die Benutzerdatensatz im Consumer zu aktualisieren. Fügen Sie einen Eintrag in der Klasse zum Behandeln von Lesezeichen und einen Eintrag in der **COLUMN_MAP**:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   

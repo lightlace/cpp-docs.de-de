@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>Übersicht über C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) beschleunigt die Ausführung von C++-Code, indem die Vorteile Daten parallel verarbeitender Hardware, beispielsweise ein Grafikprozessor (Graphics Processing Unit, GPU) auf einer separaten Grafikkarte, genutzt werden. Sie können mithilfe von C++ AMP mehrdimensionale Datenalgorithmen programmieren, sodass die Ausführung durch die parallele Verarbeitung auf heterogener Hardware beschleunigt werden kann. Das C++ AMP-Programmiermodell umfasst mehrdimensionale Arrays, Indizierung, Arbeitsspeicherübertragung, Kacheln und eine Bibliothek mathematischer Funktionen. Sie können C++ AMP-Spracherweiterungen verwenden, um zu steuern, wie Daten von der CPU zur GPU und umgekehrt verschoben werden, sodass Sie die Leistung verbessern können.  
   
 ## <a name="system-requirements"></a>Systemanforderungen  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] oder [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], oder [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11-Funktionsebene 11.0 oder aktuellere Hardware  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [Kurze Vektor Bibliothek](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): definiert einen Satz von kurzvektortypen der Länge 2, 3 und 4 auf der Grundlage von `int`, `uint`, `float`, `double`, [Norm](../../parallel/amp/reference/norm-class.md), oder ["unorm"](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps  
- Sie können C++ AMP wie andere C++-Bibliotheken in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwenden. In diesen Artikeln wird beschrieben, wie C++ AMP-Code in Apps verwendet wird, die mit C++, C#, Visual Basic oder JavaScript erstellt werden:  
+## <a name="universal-windows-platform-uwp-apps"></a>Universelle Windows-Plattform (UWP)-Apps  
+ Wie andere C++-Bibliotheken können Sie C++ AMP in uwp-apps verwenden. In diesen Artikeln wird beschrieben, wie C++ AMP-Code in Apps verwendet wird, die mit C++, C#, Visual Basic oder JavaScript erstellt werden:  
   
-- [Verwenden von C++ AMP in Windows Store-Apps](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [C++ AMP in UWP-Apps](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Windows-Runtime-Komponente in C++ und Aufrufen von JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Gewusst wie: Abschließen asynchroner Vorgänge mit WRL
 Dieses Dokument wird gezeigt, wie der Windows Runtime C++ Template Library (WRL) verwenden, um asynchrone Vorgänge starten und Arbeiten ausführen, wenn die Vorgänge abgeschlossen werden.  
@@ -36,7 +38,7 @@ Dieses Dokument wird gezeigt, wie der Windows Runtime C++ Template Library (WRL)
  Mit den folgenden Schritten wird ein asynchroner Timer und gestartet und gewartet, bis der Timer abläuft. Im Folgenden finden Sie das vollständige Beispiel.  
   
 > [!WARNING]
->  Obwohl Sie die Windows Runtime C++ Template Library in einer universellen Windows-Plattform-app in der Regel verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer Uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer universellen Windows-Plattform-app verwenden können, finden Sie unter [von/Zw nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und [Win32 und COM für Windows Store-apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Obwohl Sie in der Regel die Windows Runtime C++ Template Library in einer app (Universelle Windows Plattform) verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer uwp-app verwenden können, finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) und [Win32 und COM für uwp-apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Einschließen (`#include`) alle erforderlichen Windows-Runtime, C++-Vorlagenbibliothek für Windows-Runtime oder C++-Standardbibliothek-Header.  
   
@@ -78,7 +80,7 @@ Dieses Dokument wird gezeigt, wie der Windows Runtime C++ Template Library (WRL)
 ### <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-async.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
- **CL.exe Wrl-consume-async.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>Beispiel: Arbeiten mit einem Hintergrundthread  
  Mit den folgenden Schritten starten Sie einen Arbeitsthread und definieren die Aktion, die von diesem Thread ausgeführt wird. Im Folgenden finden Sie das vollständige Beispiel.  
@@ -126,7 +128,7 @@ Dieses Dokument wird gezeigt, wie der Windows Runtime C++ Template Library (WRL)
 ### <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-asyncOp.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
- **CL.exe Wrl-consume-asyncOp.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

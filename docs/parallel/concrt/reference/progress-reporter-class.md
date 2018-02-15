@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,19 +13,22 @@ f1_keywords:
 - PPLTASKS/concurrency::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::report
-dev_langs: C++
-helpviewer_keywords: progress_reporter class
+dev_langs:
+- C++
+helpviewer_keywords:
+- progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1dcdba2e5242dcd750eea42b61575ebea921d7b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aaac198ab17c33330cbc63d951bfbee97c1d4e94
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="progressreporter-class"></a>progress_reporter-Klasse
 Die Status-Reporter-Klasse ermöglicht Benachrichtigungen zum Status der Berichterstellung eines bestimmten Typs. Jedes progress_reporter-Objekt ist an eine bestimmte asynchrone Aktion bzw. einen Vorgang gebunden.  
@@ -52,26 +56,26 @@ class progress_reporter;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Bericht](#report)|Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.|  
+|[report](#report)|Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieser Typ ist nur für Windows Store-Apps verfügbar.  
+ Dieser Typ ist nur für Windows-Runtime-apps verfügbar.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `progress_reporter`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** "ppltasks.h"  
+ **Header:** ppltasks.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a> progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="report"></a>Bericht 
+##  <a name="report"></a> Bericht 
 
  Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.  
   

@@ -1,32 +1,57 @@
 ---
 title: Compilerwarnung (Stufe 1) C4305 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/17/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4305
-dev_langs: C++
-helpviewer_keywords: C4305
-ms.assetid: 56eecc21-2092-4e36-8017-0a8ca0ea0466
-caps.latest.revision: "6"
+f1_keywords:
+- C4305
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4305
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df1626d188d1b8e00674d6af6ce604998d317b78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8fe4b2b420c44584fdd5b4d48b4264bbc7a51bee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Compilerwarnung (Stufe 1) C4305
-'Bezeichner': Verkürzung von 'Typ1' in 'Typ2'  
-  
- Der Bezeichner wird in einem kleineren Typ, was zu einem Verlust von Daten konvertiert.  
-  
- Wenn Sie den ATL-Assistenten verwendet haben, finden Sie in Knowledge Base-Artikel:  
-  
--   Q250847: ATL-Connection Point-Assistent generiert Code für das Ereignis "mit" Argument vom Typ VARIANT C4305 Warnung angezeigt wird
+
+> "*Kontext*': Verkürzung von '*Typ1*'to'*Typ2*"  
+
+## <a name="remarks"></a>Hinweise
+
+Diese Warnung wird ausgegeben, wenn ein Wert in einen kleineren Typ in einer Initialisierung oder als ein Konstruktorargument führt zu einem Dienstausfall Informationen konvertiert wird.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel werden zwei Möglichkeiten, die Sie möglicherweise diese Warnung angezeigt:
+
+```cpp
+// C4305.cpp
+// Compile by using: cl /EHsc /W4 C4305.cpp
+
+struct item
+{
+    item(float) {}
+};
+
+int main()
+{
+    float f = 2.71828;          // C4305 'initializing'
+    item i(3.14159);            // C4305 'argument'
+    return static_cast<int>(f);
+}
+```
+
+Um dieses Problem zu beheben, initialisieren Sie, indem Sie einen Wert mit dem richtigen Typ, oder verwenden Sie eine explizite Umwandlung in den richtigen Typ. Verwenden Sie z. B. eine **"float"** z. B. 2.71828f anstelle von literalen eine **doppelte** (dem Standardtyp für gleitkommaliterale) initialisiert werden, eine **"float"** Variable, oder Übergabe an ein Konstruktor, akzeptiert eine **"float"** Argument.

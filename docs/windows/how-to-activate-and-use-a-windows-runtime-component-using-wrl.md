@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL
 Dieses Dokument wird gezeigt, wie die Windows Runtime C++ Template Library (WRL) verwenden, um die Windows-Runtime zu initialisieren und zu aktivieren und verwenden eine Windows-Runtime-Komponente.  
@@ -39,7 +41,7 @@ Dieses Dokument wird gezeigt, wie die Windows Runtime C++ Template Library (WRL)
  Die folgenden Schritte verwenden den `Windows::Foundation::IUriRuntimeClass` Schnittstelle zu veranschaulichen, wie Sie eine aktivierungsfactory für eine Windows-Runtime-Komponente erstellen, erstellen Sie eine Instanz dieser Komponente und Abrufen eines Eigenschaftswerts. Außerdem wird gezeigt, wie die Windows-Runtime initialisiert. Im Folgenden finden Sie das vollständige Beispiel.  
   
 > [!IMPORTANT]
->  Obwohl Sie die Windows Runtime C++ Template Library in einer universellen Windows-Plattform-app in der Regel verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer Uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer universellen Windows-Plattform-app verwenden können, finden Sie unter [mit/Zw nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und [Win32 und COM für Windows Store-apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Obwohl Sie in der Regel die Windows Runtime C++ Template Library in einer app (Universelle Windows Plattform) verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer uwp-app verwenden können, finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) und [Win32 und COM für uwp-apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>So aktivieren und verwenden Sie eine Windows Runtime-Komponente  
   
@@ -88,7 +90,7 @@ Dieses Dokument wird gezeigt, wie die Windows Runtime C++ Template Library (WRL)
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-component.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
- **CL.exe Wrl-consume-component.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-component.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

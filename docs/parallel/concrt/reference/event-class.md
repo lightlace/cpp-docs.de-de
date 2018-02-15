@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c14cce1f34e4957b8c22bdbb8eab82fb4c0c58
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="event-class"></a>event-Klasse
 Ein Ereignis für manuelles Zurücksetzen, das explizit die Concurrency Runtime beachtet.  
@@ -52,7 +56,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|Setzt das Ereignis auf einen nicht signalisierten Zustand zurück.|  
 |[set](#set)|Signalisiert das Ereignis.|  
-|[Warte](#wait)|Wartet, bis das Ereignis signalisiert wird.|  
+|[wait](#wait)|Wartet, bis das Ereignis signalisiert wird.|  
 |[wait_for_multiple](#wait_for_multiple)|Wartet, bis mehrere Ereignisse signalisiert werden.|  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
@@ -68,11 +72,11 @@ class event;
  `event`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
+ **Header:** concrt.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="ctor"></a>Ereignis 
+##  <a name="ctor"></a> Ereignis 
 
  Erstellt ein neues Ereignis.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="dtor"></a>~ Ereignis 
+##  <a name="dtor"></a> ~ Ereignis 
 
  Zerstört ein Ereignis.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Hinweise  
  Es wird erwartet, dass keine Threads auf das Ereignis warten, wenn der Destruktor ausgeführt wird. Wenn das Ereignis zerstört wird, während Threads auf das Ereignis warten, kann dies zu einem nicht definiertem Verhalten führen.  
   
-##  <a name="reset"></a>Zurücksetzen 
+##  <a name="reset"></a> Zurücksetzen 
 
  Setzt das Ereignis auf einen nicht signalisierten Zustand zurück.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>Festlegen 
+##  <a name="set"></a> set 
 
  Signalisiert das Ereignis.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>Hinweise  
  Das Signalisieren des Ereignisses kann möglicherweise dazu führen, dass eine beliebige Anzahl von Kontexten, die auf das Ereignis warten, ausführbar werden.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  Ein Wert, der angibt, dass ein Wartevorgang nie durch einen Timeout beendet werden sollte.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>Warte 
+##  <a name="wait"></a> Warte 
 
  Wartet, bis das Ereignis signalisiert wird.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  Wenn der Wartezustand erfüllt wurde, wird der Wert `0` zurückgegeben. Andernfalls gibt der Wert `COOPERATIVE_WAIT_TIMEOUT` an, dass der Wartezustand durch einen Timeout beendet wurde, ohne dass das Ereignis signalisiert wurde.  
   
 > [!IMPORTANT]
->  Rufen Sie [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] in einer `wait`-App nicht auf dem ASTA-Thread auf, da dieser Aufruf den aktuellen Thread blockieren kann und die App dadurch möglicherweise nicht mehr reagiert.  
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die Anwendung dass kann reagiert auf dem ASTA-thread.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  Wartet, bis mehrere Ereignisse signalisiert werden.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  Wenn der Parameter `_FWaitAll` auf den Wert `true` festgelegt wurde, um anzugeben, dass alle Ereignisse signalisiert werden müssen, um den Wartevorgang zu beenden, hat der von der Funktion zurückgegebene Index keine andere besondere Bedeutung außer der Tatsache, dass er nicht den Wert `COOPERATIVE_WAIT_TIMEOUT` darstellt.  
   
 > [!IMPORTANT]
->  Rufen Sie [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] in einer `wait_for_multiple`-App nicht auf dem ASTA-Thread auf, da dieser Aufruf den aktuellen Thread blockieren kann und die App dadurch möglicherweise nicht mehr reagiert.  
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait_for_multiple` da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die Anwendung dass kann reagiert auf dem ASTA-thread.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
