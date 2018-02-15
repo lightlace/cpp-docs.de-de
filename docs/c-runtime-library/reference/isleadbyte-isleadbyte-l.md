@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -27,7 +28,8 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -35,22 +37,23 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 Bestimmt, ob ein Zeichen das führende Byte eines Multibytezeichens ist.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter                  [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,7 +74,7 @@ int _isleadbyte_l(
  `isleadbyte` gibt einen Wert ungleich 0 zurück, wenn das Argument die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Im Gebietsschema "C" und in Einzelbyte-Zeichensatz(SBCS)-Gebietsschemas, gibt `isleadbyte` immer 0 zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Makro `isleadbyte` gibt einen Wert ungleich 0 (null) zurück, wenn dessen Argument das erste Byte eines Multibytezeichens ist. `isleadbyte`erzeugt ein aussagekräftiges Ergebnis für ein Ganzzahlargument von – 1 (`EOF`) zu `UCHAR_MAX` (0xFF) inklusive.  
+ Das Makro `isleadbyte` gibt einen Wert ungleich 0 (null) zurück, wenn dessen Argument das erste Byte eines Multibytezeichens ist. `isleadbyte` erzeugt ein aussagekräftiges Ergebnis für ein Ganzzahlargument von – 1 (`EOF`) zu `UCHAR_MAX` (0xFF) inklusive.  
   
  Der erwartete Argumenttyp von `isleadbyte` ist `int`. Ein mit Vorzeichen übergebenes Zeichen wird vom Compiler möglicherweise durch Vorzeichenerweiterung in eine ganze Zahl konvertiert, was zu unvorhersehbaren Ergebnissen führt.  
   

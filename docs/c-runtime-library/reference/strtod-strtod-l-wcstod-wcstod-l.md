@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-`strtod`Gibt den Wert der Gleitkommazahl, außer wenn die Darstellung einen Überlauf verursachen würde in dem Fall wird die Funktion zurückgegeben werden +/-`HUGE_VAL`. Das Zeichen von `HUGE_VAL` entspricht dem Zeichen des Werts, der nicht angezeigt werden kann. `strtod` gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+`strtod` Gibt den Wert der Gleitkommazahl, außer wenn die Darstellung einen Überlauf verursachen würde in dem Fall wird die Funktion zurückgegeben werden +/-`HUGE_VAL`. Das Zeichen von `HUGE_VAL` entspricht dem Zeichen des Werts, der nicht angezeigt werden kann. `strtod` gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
 
 `wcstod` gibt Werte analog zu `strtod` zurück. `errno` wird für beide Funktionen auf `ERANGE` gesetzt, wenn ein Überlauf oder ein Unterlauf auftritt, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Funktion wandelt die Eingabezeichenfolge *Nptr* zu einem `double`. Die `strtod` -Funktion konvertiert *Nptr* auf einen Wert mit doppelter Genauigkeit. `strtod`Stoppt das Lesen der Zeichenfolge *Nptr* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. `wcstod`ist eine Breitzeichen-Version von `strtod`; die *Nptr* -Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+Jede Funktion wandelt die Eingabezeichenfolge *Nptr* zu einem `double`. Die `strtod` -Funktion konvertiert *Nptr* auf einen Wert mit doppelter Genauigkeit. `strtod` Stoppt das Lesen der Zeichenfolge *Nptr* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. `wcstod` ist eine Breitzeichen-Version von `strtod`; die *Nptr* -Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -119,12 +122,12 @@ Die `LC_NUMERIC` -kategorieneinstellung des aktuellen Gebietsschemas bestimmt er
 
 Wenn *Endptr* nicht `NULL`, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Speicherstelle *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *Nptr* an der Speicherstelle gespeichert *Endptr*.
 
-`strtod`erwartet *Nptr* , zeigen Sie auf eine Zeichenfolge mit einem der folgenden Formate:
+`strtod` erwartet *Nptr* , zeigen Sie auf eine Zeichenfolge mit einem der folgenden Formate:
 
 [*Leerzeichen*] [*Anmeldung*] {*Ziffern* [*Basis* *Ziffern*] &#124; *Basis* *Ziffern*} [{**e** &#124; **E**} [*Anmeldung*] *Ziffern*]  
 [*Leerzeichen*] [*Anmeldung*] {**0 X** &#124; **0 X**} {*Hexdigits* [*Basis* *Hexdigits*] &#124; *Basis* *Hexdigits*} [{**p** &#124; **P**} [*Anmeldung*] *Hexdigits*]  
 [*Leerzeichen*] [*Anmeldung*] {**INF** &#124; **UNENDLICH**}  
-[*Leerzeichen*] [*Anmeldung*] **"NaN"** [*Sequenz*]
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 Das optionale führende *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Anmeldung* ist entweder Pluszeichen (+) oder Minuszeichen (-) *Ziffern* sind mindestens eine Dezimalstelle; *Hexdigits* sind eine oder mehrere hexadezimale Ziffern; *Basis* ist der Punkt Basiszeichens, entweder einen Punkt (.) im Gebietsschema "C" "Standard" oder die Gebietsschema-spezifische Wert, wenn das aktuelle Gebietsschema unterschiedlich ist, oder wenn *Gebietsschema* angegeben ist; ein *Sequenz* ist eine Sequenz von alphanumerischen Zeichen oder Unterstriche enthalten. In dezimaler und hexadezimaler bildet Wenn keine Ziffern vor dem Basiszeichen Punkt stehen muss mindestens eine nach dem Punkt Basiszeichen stehen. Das Dezimalformat Dezimalstellen können werden ein Exponent folgen, besteht aus einem einführenden Buchstaben (**e** oder **E**) und einer optional Zahl mit Vorzeichen. In im hexadezimalen Format die Hexadezimalzeichen können werden ein Exponent folgen, besteht aus einem einführenden Buchstaben (**p** oder **P**) und optional mit Vorzeichen ganze Hexadezimalzahl darstellt, die die der Exponent als Potenz von 2. In einer der Formen Wenn weder ein exponententeil noch ein Punkt Basiszeichen angezeigt wird, wird ein Punkt Basiszeichen angenommen, dass die letzte Ziffer in der Zeichenfolge folgt. Groß-/Kleinschreibung wird ignoriert, sowohl die **INF** und **"NaN"** Forms. Das erste Zeichen, das nicht mit einer der folgenden Formen passt beendet die Überprüfung.
 

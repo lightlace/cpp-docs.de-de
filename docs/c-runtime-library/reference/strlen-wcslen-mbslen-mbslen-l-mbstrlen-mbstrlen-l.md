@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbslen
 - _mbslen_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _ftcslen
 - strlen
 - _mbslen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcslen function
 - string length, getting
@@ -55,22 +57,23 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c7277a52dfbc77bb41fe0603129813ee682b4bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 40f3689c11eea367a2c8bf268713c0fad6e434c8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 Ruft die Länge einer Zeichenfolge mithilfe des aktuellen Gebietsschemas oder einem angegebenen Gebietsschema ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](../../c-runtime-library/reference/strnlen-strnlen-s.md)  
   
 > [!IMPORTANT]
->  `_mbslen`, `_mbslen_l`, `_mbstrlen` und `_mbstrlen_l` können nicht in Anwendungen eingesetzt werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbslen`, `_mbslen_l`, `_mbstrlen` und `_mbstrlen_l` können nicht in Anwendungen eingesetzt werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntax  
   

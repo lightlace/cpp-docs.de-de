@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/PlatformIntPtr::IntPtr
 - VCCORLIB/PlatformIntPtr::op_explicit Operator
 - VCCORLIB/PlatformIntPtr::ToInt32
-dev_langs: C++
-helpviewer_keywords: Platform::IntPtr Struct
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 787e8aaa0dc46a651fc4d0ac8b16d9521aebd010
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 93263e1347857b9c78a62852bea96e10c8d68fac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr-Wertklasse
 Stellt einen Zeiger oder ein Handle mit Vorzeichen dar, dessen Größe plattformspezifisch ist (32-Bit oder 64-Bit).  
@@ -39,9 +42,9 @@ public value struct IntPtr
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[IntPtr:: IntPtr](#ctor)|Initialisiert eine neue Instanz von IntPtr.|  
+|[IntPtr::IntPtr](#ctor)|Initialisiert eine neue Instanz von IntPtr.|  
 |[IntPtr::op_explicit-Operator](#op-explicit)|Konvertiert den angegebenen Parameter in einen IntPtr oder einen Zeiger auf einen IntPtr-Wert.|  
-|[IntPtr:: Toint32](#toint32)|Konvertiert den aktuellen IntPtr in eine 32-Bit-Ganzzahl.|  
+|[IntPtr::ToInt32](#toint32)|Konvertiert den aktuellen IntPtr in eine 32-Bit-Ganzzahl.|  
   
 ### <a name="requirements"></a>Anforderungen  
  **Unterstützter Client:** Windows 8  
@@ -91,7 +94,7 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
   
 
 
-## <a name="toint32"></a> IntPtr:: Toint32-Methode
+## <a name="toint32"> </a> IntPtr:: Toint32-Methode
 Konvertiert den aktuellen IntPtr-Wert in eine 32-Bit-Ganzzahl.  
   
 ### <a name="syntax"></a>Syntax  

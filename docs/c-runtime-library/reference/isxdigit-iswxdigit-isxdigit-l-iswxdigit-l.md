@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -29,7 +30,8 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ba714f78696cd806cbf1f200e72e09a03168d94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a5849caeddac4b52c80a29b5f4a6e85e2fe3e47b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 Bestimmt, ob eine ganze Zahl ein Zeichen darstellt, das eine Hexadezimalziffer ist.  
@@ -82,7 +85,7 @@ int _iswxdigit_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung einer Hexadezimalziffer ist. `isxdigit`Gibt einen Wert ungleich NULL zurück, wenn `c` eine Hexadezimalziffer (A - F, a - f oder 0 - 9). `iswxdigit` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Hexadezimalziffernzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
+ Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung einer Hexadezimalziffer ist. `isxdigit` Gibt einen Wert ungleich NULL zurück, wenn `c` eine Hexadezimalziffer (A - F, a - f oder 0 - 9). `iswxdigit` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Hexadezimalziffernzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
   
  Für das Gebietsschema "C " unterstützt die `iswxdigit`-Funktion keine Unicode-Hexadezimalzeichen voller Breite.  
   

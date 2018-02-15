@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>Einschränkungen für "/clr"
 Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:  
@@ -50,7 +54,7 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
   
     -   **/ fp: strict** und **/fp: außer** (siehe [/fp (Festlegen von Floating-Verhalten)](../../build/reference/fp-specify-floating-point-behavior.md))  
   
-    -   ["/ Zd"](../../build/reference/z7-zi-zi-debug-information-format.md)  
+    -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
     -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
@@ -58,13 +62,9 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
   
     -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
-    -   **/ ZI**  
+    -   **/ZI**  
   
--   Die Kombination aus der `_STATIC_CPPLIB` Präprozessordefinition (`/D_STATIC_CPPLIB`) und die **"/ CLR"** oder **/CLR: reine** (Compileroption) wird nicht unterstützt. Dies rührt daher, dass die Definition würde die Anwendung zur Verknüpfung mit der Statische multithreaded C++-Standardbibliothek, die nicht unterstützt wird. Weitere Informationen finden Sie unter der [/MD, / MT, / ld (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md) Thema.  
-  
--   ["/ J"](../../build/reference/j-default-char-type-is-unsigned.md) wird nicht unterstützt, mit **/CLR: safe** oder **/CLR: pure**. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
-  
--   ATL und MFC-Bibliotheken werden von der Kompilierung im pure-Modus nicht unterstützt (**/CLR: pure**). Sie können **/CLR: pure** mit der C++-Standardbibliothek und die CRT auch beim Kompilieren mit **/MD** oder **/MDd**.  
+-   Die Kombination der `_STATIC_CPPLIB` Präprozessordefinition (`/D_STATIC_CPPLIB`) und die **"/ CLR"** (Compileroption) wird nicht unterstützt. Dies rührt daher, dass die Definition würde die Anwendung zur Verknüpfung mit der Statische multithreaded C++-Standardbibliothek, die nicht unterstützt wird. Weitere Informationen finden Sie unter der [/MD, / MT, / ld (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md) Thema.  
   
 -   Bei Verwendung **/Zi** mit **"/ CLR"**, stehen Sie Auswirkungen auf die Leistung. Weitere Informationen finden Sie unter [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
@@ -75,7 +75,7 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/ GS](../../build/reference/gs-buffer-security-check.md) wird ignoriert, wenn die Kompilierung mit **"/ CLR"**, es sei denn, eine Funktion unterliegt `#pragma` [nicht verwalteten](../../preprocessor/managed-unmanaged.md) oder wenn die Funktion in systemeigenen kompiliert werden muss, in diesem Fall wird der Compiler Generieren Sie die Warnung C4793, die standardmäßig deaktiviert ist.  
+-   [/ GS](../../build/reference/gs-buffer-security-check.md) wird ignoriert, wenn die Kompilierung mit **"/ CLR"**, es sei denn, eine Funktion unterliegt `#pragma` [nicht verwalteten](../../preprocessor/managed-unmanaged.md) oder wenn die Funktion in systemeigenen kompiliert werden muss, in diesem Fall generiert der Compiler Warnung C4793, das standardmäßig deaktiviert ist.  
   
 -   Finden Sie unter [/Entry](../../build/reference/entry-entry-point-symbol.md) Funktion Signatur Anforderungen von einer verwalteten Anwendung.  
   
@@ -84,8 +84,6 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
 -   Funktionen, die eine Variable Anzahl von Argumenten (Varargs) akzeptieren, werden als systemeigene Funktionen generiert. Alle verwalteten Datentypen in der Variablen Argumentposition werden in systemeigenen Typen gemarshallt werden. Beachten Sie, dass <xref:System.String?displayProperty=fullName> Typen sind tatsächlich Breitzeichen-Zeichenfolgen, aber diese Einzelbyte-Zeichenfolgen gemarshallt werden. Daher ist ein Printf-Spezifizierer %S (Wchar_t *), wird er in eine Zeichenfolge %s stattdessen gemarshallt.  
   
 -   Wenn das Makro Va_arg verwenden, erhalten Sie möglicherweise unerwartete Ergebnisse beim Kompilieren mit **/CLR: pure**.  Weitere Informationen finden Sie unter [Va_arg, Va_copy, Va_end, Va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
-  
--   Wenn Ihre Anwendung ein Argument des Typs übergibt [Va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) an eine Funktion deklariert werden, um eine Variable Anzahl von Argumenten akzeptieren, und die Anwendung kompiliert wird, mit **/CLR: pure**, löst die CLR <xref:System.NotSupportedException>. Wenn **"/ CLR"** wird verwendet, stattdessen die entsprechenden Funktionen werden in systemeigenen Code kompiliert und ordnungsgemäß ausgeführt. Wenn **/CLR: safe** wird verwendet, wird eine Fehlerdiagnose ausgegeben.  
   
 -   Rufen Sie nicht, aus verwaltetem Code, der alle Funktionen, die den Stapel, um die Parameterinformationen (Funktionsargumente) abzurufen, führt die P/Invoke-Ebene bewirkt, dass Informationen weiter unten im Stapel werden.  Kompilieren Sie z. B. nicht Proxy/Stub mit **"/ CLR"**.  
   
@@ -101,7 +99,5 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
   
     -   Eine Funktion, die Verweise auf enthält ausgerichtet Typen, d. h. Typen deklariert mit `__declspec(align(...))`.  
   
--   Können keine der [Compiler-COM-Unterstützung](../../cpp/compiler-com-support.md) Klassen mit **/CLR: pure** oder **/CLR: safe**.  
-  
 ## <a name="see-also"></a>Siehe auch  
- [/ CLR (common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)

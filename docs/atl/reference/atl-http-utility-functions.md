@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>ATL-HTTP-Hilfsfunktionen
 
@@ -35,7 +36,7 @@ Diese Funktionen unterstützen die Bearbeitung von URLs.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 Mit dieser Funktion wird eine URL kanonisiert, wobei unsichere Zeichen und Leerzeichen in Escapesequenzen konvertiert werden.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  ATL_URL-Flags, die Steuerung des Verhaltens dieser Funktion. 
 
-- `ATL_URL_BROWSER_MODE`Nicht codieren oder Decodieren von Zeichen nach "#" oder "?", und wird nicht entfernt nachgestellte Leerzeichen nach "?". Wenn dieser Wert nicht angegeben wird, wird die gesamte URL codiert, und nachfolgendes Leerzeichen entfernt.
-- `ATL_URL_DECODE`Konvertiert alle % XX Sequenzen und Zeichen, Escapesequenzen, bevor die URL analysiert wird.
-- `ATL_URL_ENCODE_PERCENT`Codiert alle Prozentzeichen gefunden. Standardmäßig werden die Prozentzeichen nicht codiert.
-- `ATL_URL_ENCODE_SPACES_ONLY`Codiert nur aus Leerzeichen bestehen.
-- `ATL_URL_ESCAPE`Konvertiert alle Escapezeichen ("% XX") auf den entsprechenden Zeichen.
-- `ATL_URL_NO_ENCODE`Keine unsichere Zeichen in Escapesequenzen konvertiert werden.
-- `ATL_URL_NO_META`Entfernt Metadaten Sequenzen nicht (wie z. B. "."und"..") aus der URL. 
+- `ATL_URL_BROWSER_MODE` Nicht codieren oder Decodieren von Zeichen nach "#" oder "?", und wird nicht entfernt nachgestellte Leerzeichen nach "?". Wenn dieser Wert nicht angegeben wird, wird die gesamte URL codiert, und nachfolgendes Leerzeichen entfernt.
+- `ATL_URL_DECODE` Konvertiert alle % XX Sequenzen und Zeichen, Escapesequenzen, bevor die URL analysiert wird.
+- `ATL_URL_ENCODE_PERCENT` Codiert alle Prozentzeichen gefunden. Standardmäßig werden die Prozentzeichen nicht codiert.
+- `ATL_URL_ENCODE_SPACES_ONLY` Codiert nur aus Leerzeichen bestehen.
+- `ATL_URL_ESCAPE` Konvertiert alle Escapezeichen ("% XX") auf den entsprechenden Zeichen.
+- `ATL_URL_NO_ENCODE` Keine unsichere Zeichen in Escapesequenzen konvertiert werden.
+- `ATL_URL_NO_META` Entfernt Metadaten Sequenzen nicht (wie z. B. "."und"..") aus der URL. 
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>Siehe auch  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  Mit dieser Funktion wird eine Basis-URL und eine relative URL zu einer einzelnen kanonischen URL zusammengefasst.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>Hinweise  
  Verhält sich wie die aktuelle Version des [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) jedoch keine zu installierenden WinInet oder der Internet Explorer erforderlich ist.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  Mit dieser Funktion werden alle unsicheren Zeichen in Escapesequenzen konvertiert.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Die [ATL_URL_PORT](atl-typedefs.md#atl_url_port) dem angegebenen Schema oder ATL_URL_INVALID_PORT_NUMBER zugeordnet, wenn das Schema nicht erkannt wird.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Mit dieser Funktion finden Sie heraus, ob die Verwendung eines bestimmten Zeichens in einer URL sicher ist.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Hinweise  
  Zeichen, die nicht in URLs verwendet werden sollte mit dieser Funktion getestet werden können und mit konvertiert [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Mit dieser Funktion können Sie Escapezeichen zurück in ihre ursprünglichen Werte konvertieren.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>Hinweise  
  Kehrt den Konvertierungsprozess angewendet, indem [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 Konvertiert eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert in den entsprechenden auf diesem Farbwert HTML-Text.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>Hinweise  
  Ein HTML-Farbwert ist ein Nummernzeichen gefolgt von einem hexadezimalen Ziffern 6-Wert mit 2 Ziffern für den Rot-, Grün- und blauen-Komponenten der Farbe (z. B. #FFFFFF ist weiß).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Mit dieser Funktion konvertieren Sie die Systemzeit in eine Zeichenfolge, deren Format sich für die Verwendung in HTTP-Headern eignet.  
   
 ```  

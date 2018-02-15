@@ -4,34 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: appdomain_cpp
-dev_langs: C++
+f1_keywords:
+- appdomain_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677206e37cb4761112f66dc59dc44b2eccbabaf5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="appdomain"></a>appdomain
 Gibt an, dass jede Anwendungsdomäne der verwalteten Anwendung eine eigene Kopie einer bestimmten globalen Variable oder statischen Membervariable haben soll. Finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md) für Weitere Informationen.  
   
  Jede Anwendungsdomäne verfügt über eine eigene Kopie einer Anwendungsdomänenvariable. Ein Konstruktor einer Anwendungsdomänenvariable wird ausgeführt, wenn eine Assembly in eine Anwendungsdomäne geladen wird, und der Destruktor wird ausgeführt, wenn die Anwendungsdomäne entladen wird.  
   
- Wenn alle Anwendungsdomänen innerhalb eines Prozesses in der Common Language Runtime eine globale Variable gemeinsam nutzen sollen, verwenden Sie den `__declspec(process)`-Modifizierer. `__declspec(process)`ist wirksam standardmäßig unter ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) und `__declspec(appdomain)` ist wirksam standardmäßig unter **/CLR: pure**. `__declspec(appdomain)`wird unter erzwungen **/CLR: safe**. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
+ Wenn alle Anwendungsdomänen innerhalb eines Prozesses in der Common Language Runtime eine globale Variable gemeinsam nutzen sollen, verwenden Sie den `__declspec(process)`-Modifizierer. `__declspec(process)` ist wirksam standardmäßig unter ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md). Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
- `__declspec(appdomain)`ist nur gültig, wenn eines der **"/ CLR"** -Compileroptionen verwendet wird. Nur eine globale Variable, eine statische Membervariable oder eine statische lokale Variable kann mit `__declspec(appdomain)` markiert werden. Es ist nicht zulässig, `__declspec(appdomain)` auf statische Member von verwalteten Typen anzuwenden, da diese immer dieses Verhalten aufweisen.  
+ `__declspec(appdomain)` ist nur gültig, wenn eines der **"/ CLR"** -Compileroptionen verwendet wird. Nur eine globale Variable, eine statische Membervariable oder eine statische lokale Variable kann mit `__declspec(appdomain)` markiert werden. Es ist nicht zulässig, `__declspec(appdomain)` auf statische Member von verwalteten Typen anzuwenden, da diese immer dieses Verhalten aufweisen.  
   
  Mit `__declspec(appdomain)` ähnelt der Verwendung [Thread-lokalen Threadspeicher (TLS)](../parallel/thread-local-storage-tls.md). Threads verfügen über einen eigenen Speicher, genau wie Anwendungsdomänen. Die Verwendung `__declspec(appdomain)` stellt sicher, dass die globale Variable einen eigenen Speicher in jeder Anwendungsdomäne aufweist, die für die Anwendung erstellt wird.  
   

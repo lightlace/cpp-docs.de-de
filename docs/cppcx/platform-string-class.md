@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 Stellt eine sequenzielle Auflistung von Unicode-Zeichen dar, die zum Darstellen von Text verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Zeichenfolgen](../cppcx/strings-c-cx.md).  
@@ -65,7 +68,7 @@ public ref class String sealed : Object,
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[String:: String](#ctor)|Initialisiert eine neue Instanz der Zeichenfolgenklasse.|  
+|[String::String](#ctor)|Initialisiert eine neue Instanz der Zeichenfolgenklasse.|  
   
  **Methoden**  
   
@@ -73,18 +76,18 @@ public ref class String sealed : Object,
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[String:: begin](#begin)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
-|[String:: CompareOrdinal](#compareordinal)|Vergleicht zwei `String` -Objekte durch Auswertung der numerischen Werte der entsprechenden Zeichen in den beiden Zeichenfolgenwerten, die durch die Objekte dargestellt werden.|  
-|[String:: concat](#concat)|Verkettet die Werte von zwei Zeichenfolgenobjekten.|  
-|[String:: Data](#data)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
+|[String::Begin](#begin)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
+|[String::CompareOrdinal](#compareordinal)|Vergleicht zwei `String` -Objekte durch Auswertung der numerischen Werte der entsprechenden Zeichen in den beiden Zeichenfolgenwerten, die durch die Objekte dargestellt werden.|  
+|[String::Concat](#concat)|Verkettet die Werte von zwei Zeichenfolgenobjekten.|  
+|[String::Data](#data)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
 |[String:: Dispose](#dispose)|Gibt Ressourcen frei.|  
-|[String:: End](#end)|Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.|  
-|[String:: Equals](#equals)|Gibt an, ob das angegebene Objekt gleich dem aktuellen Objekt ist.|  
-|[String:: GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
-|[String:: IsEmpty](#isempty)|Gibt an, ob das aktuelle String-Objekt leer ist.|  
-|[String:: isfastpass](#isfastpass)|Gibt an, ob das aktuelle String-Objekt an einem *Fast-Pass* -Vorgang teilnimmt. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.|  
-|[String:: Length](#length)|Ruft die Länge des aktuellen Zeichenfolgenobjekts ab.|  
-|[String:: ToString](#tostring)|Gibt ein neues Zeichenfolgenobjekt zurück, dessen Wert mit der aktuellen Zeichenfolge identisch ist.|  
+|[String::End](#end)|Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.|  
+|[String::Equals](#equals)|Gibt an, ob das angegebene Objekt gleich dem aktuellen Objekt ist.|  
+|[String::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
+|[String::IsEmpty](#isempty)|Gibt an, ob das aktuelle String-Objekt leer ist.|  
+|[String::IsFastPass](#isfastpass)|Gibt an, ob das aktuelle String-Objekt an einem *Fast-Pass* -Vorgang teilnimmt. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.|  
+|[String::Length](#length)|Ruft die Länge des aktuellen Zeichenfolgenobjekts ab.|  
+|[String::ToString](#tostring)|Gibt ein neues Zeichenfolgenobjekt zurück, dessen Wert mit der aktuellen Zeichenfolge identisch ist.|  
   
  **Operatoren**  
   
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **Header** vccorlib.h (standardmäßig eingeschlossen)  
 
  
-## <a name="begin"></a>String:: Begin-Methode
+## <a name="begin"></a>  String:: Begin-Methode
 Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Anfang der aktuellen Zeichenfolge.  
   
-## <a name="compareordinal"></a>String:: CompareOrdinal-Methode
+## <a name="compareordinal"></a>  String:: CompareOrdinal-Methode
 Vergleicht zwei `String` -Objekte durch Auswertung der numerischen Werte der entsprechenden Zeichen in den beiden Zeichenfolgenwerten, die durch die Objekte dargestellt werden.  
   
 ### <a name="syntax"></a>Syntax  
@@ -153,7 +156,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>String:: concat-Methode
+## <a name="concat"></a>  String:: concat-Methode
 Verkettet die Werte von zwei Zeichenfolgenobjekten.  
   
 ### <a name="syntax"></a>Syntax  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>String:: Data-Methode
+## <a name="data"></a>  String:: Data-Methode
 Gibt einen Zeiger zum Anfang des Datenpuffers des Objekts als ein Array im C-Format mit `char16`-Elementen (`wchar_t`) zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>String:: Dispose-Methode
+## <a name="dispose"></a>  String:: Dispose-Methode
 Gibt Ressourcen frei.  
   
 ### <a name="syntax"></a>Syntax  
@@ -203,7 +206,7 @@ Gibt Ressourcen frei.
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>String:: End-Methode
+## <a name="end"></a>  String:: End-Methode
 Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>String:: Equals-Methode
+## <a name="equals"></a>  String:: Equals-Methode
 Gibt an, ob die angegebene Zeichenfolge über den gleichen Wert wie das aktuelle Objekt verfügt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -246,7 +249,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>String:: GetHashCode-Methode
+## <a name="gethashcode"></a>  String:: GetHashCode-Methode
 Gibt den Hashcode für diese Instanz zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>String:: isEmpty-Methode
+## <a name="isempty"></a>  String:: isEmpty-Methode
 Gibt an, ob das aktuelle String-Objekt leer ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -275,7 +278,7 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>String:: isfastpass-Methode
+## <a name="isfastpass"></a>  String:: isfastpass-Methode
 Gibt an, ob das aktuelle String-Objekt an einem *Fast-Pass* -Vorgang teilnimmt. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.  
   
 ### <a name="syntax"></a>Syntax  
@@ -292,7 +295,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>String:: Length-Methode
+## <a name="length"></a>  String:: Length-Methode
 Ruft die Anzahl von Zeichen im aktuellen Zeichenfolgenobjekt ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>String:: Operator +-Operator
+## <a name="operator-plus"></a>  String:: Operator +-Operator
 Verkettet zwei [Zeichenfolge](../cppcx/platform-string-class.md) Objekte in eine neue [Zeichenfolge](../cppcx/platform-string-class.md) Objekt.
   
 ### <a name="syntax"></a>Syntax  
@@ -339,7 +342,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator erstellt ein `String^`-Objekt mit den Daten aus den zwei Operanden. Verwenden Sie es zur Vereinfachung, wenn nicht unbedingt extreme Leistung gefordert ist. Einige Aufrufe von "`+`" in einer Funktion werden sich wahrscheinlich nicht bemerkbar machen. Wenn Sie jedoch große Objekte oder Textdaten in einer kurzen Schleife bearbeiten, sollten Sie die standardmäßigen C++-Mechanismen und -typen verwenden.  
   
-##  <a name="operator-equality"></a>String:: Operator ==-Operator
+##  <a name="operator-equality">String:: Operator ==-Operator</a>
 Gibt an, ob zwei angegebene Zeichenfolgenobjekte denselben Textwert haben.  
   
 ### <a name="syntax"></a>Syntax  
@@ -363,7 +366,7 @@ bool String::operator==( String^ str1, String^ str2)
   
 
 
-##  <a name="operator-greater-than"></a>String:: Operator&gt; 
+##  <a name="operator-greater-than"></a>  String:: Operator&gt; 
 Gibt an, ob der Wert eines Zeichenfolgenobjekts größer als der Wert eines zweiten Zeichenfolgenobjekts ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -387,7 +390,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String:: Operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
 Gibt an, ob der Wert eines String-Objekts größer oder gleich dem Wert eines zweiten String-Objekts ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -408,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a>String:: Operator! = 
+## <a name="operator-inequality"></a> String:: Operator! = 
 Gibt an, ob zwei angegebene Zeichenfolgenobjekte unterschiedliche Werte haben.  
   
 ### <a name="syntax"></a>Syntax  
@@ -428,7 +431,7 @@ bool String::operator!=( String^ str1, String^ str2)
  `true`, wenn `str1` und `str2` ungleich sind, andernfalls `false`.   
 
 
-## <a name="operator-less-than"></a>String:: Operator&lt; 
+## <a name="operator-less-than"></a> String::operator&lt; 
 Gibt an, ob der Wert eines Zeichenfolgenobjekts kleiner als der Wert eines zweiten Zeichenfolgenobjekts ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -447,7 +450,7 @@ bool String::operator<( String^ str1, String^ str2)
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn der Wert von `str1` kleiner als der Wert von `str2` ist, andernfalls `false`.  
   
-## <a name="ctor"></a>String:: String-Konstruktor
+## <a name="ctor"></a> String:: String-Konstruktor
 Initialisiert eine neue Instanz der Zeichenfolgenklasse mit einer Kopie der Eingabezeichenfolgendaten.  
   
 ### <a name="syntax"></a>Syntax  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>String:: ToString
+## <a name="tostring"></a> String::ToString
 Gibt ein neues Zeichenfolgenobjekt zurück, dessen Wert mit der aktuellen Zeichenfolge identisch ist.  
   
 ### <a name="syntax"></a>Syntax  

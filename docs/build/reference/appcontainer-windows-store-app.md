@@ -1,26 +1,29 @@
 ---
-title: -APPCONTAINER (Windows Store-App) | Microsoft Docs
+title: / APPCONTAINER (universelle Windows-Plattform/Microsoft Store-App) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22ca7bec885f20518950626d33f7e3af553d0d52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1cc6e1d4c6e18cd2118571e57f671f85a0a3fb55
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="appcontainer-windows-store-app"></a>/APPCONTAINER (Windows Store-App)
+# <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (Microsoft Store-App)
 Gibt an, ob der Linker ein ausführbares Image erstellt, das in einem App-Container ausgeführt werden muss.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,7 +35,7 @@ Gibt an, ob der Linker ein ausführbares Image erstellt, das in einem App-Contai
 ## <a name="remarks"></a>Hinweise  
  Die /APPCONTAINER-Option ist standardmäßig deaktiviert.  
   
- Diese Option ändert eine ausführbare Datei, um anzugeben, ob die App in der App-Container- Prozessisolationsumgebung ausgeführt werden muss. Geben Sie "/APPCONTAINER" für eine App an, die in der App-Containerumgebung ausgeführt werden muss, zum Beispiel für eine [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)]-App. (Die Option wird in Visual Studio automatisch festgelegt, wenn Sie eine [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)]-App mit einer Vorlage erstellen.) Für eine Desktop-App geben Sie "/APPCONTAINER:NO" an, oder Sie lassen die Option einfach weg.  
+ Diese Option ändert eine ausführbare Datei, um anzugeben, ob die App in der App-Container- Prozessisolationsumgebung ausgeführt werden muss. Geben Sie "/ appcontainer" für eine app, die in der App-containerumgebung ausgeführt werden muss, z. B. eine universelle Windows-Plattform (UWP) oder Windows Phone 8.x-app. (Die Option wird automatisch in Visual Studio festgelegt, wenn Sie eine universelle Windows-app aus einer Vorlage erstellen.) Für eine Desktop-App geben Sie "/APPCONTAINER:NO" an, oder Sie lassen die Option einfach weg.  
   
  Die /APPCONTAINER-Option wurde in [!INCLUDE[win8](../../build/reference/includes/win8_md.md)] eingeführt.  
   

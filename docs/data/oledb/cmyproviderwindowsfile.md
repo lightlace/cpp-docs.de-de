@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-Der Assistent erstellt eine Klasse, um eine Zeile mit Daten enthalten. In diesem Fall heißt es `CMyProviderWindowsFile`. Der folgende code für `CMyProviderWindowsFile` Assistenten generiert wird, und listet alle Dateien in einem Verzeichnis mithilfe der **WIN32_FIND_DATA** Struktur. `CMyProviderWindowsFile`erbt von der **WIN32_FIND_DATA** Struktur:  
+Der Assistent erstellt eine Klasse, um eine Zeile mit Daten enthalten. In diesem Fall heißt es `CMyProviderWindowsFile`. Der folgende code für `CMyProviderWindowsFile` Assistenten generiert wird, und listet alle Dateien in einem Verzeichnis mithilfe der **WIN32_FIND_DATA** Struktur. `CMyProviderWindowsFile` erbt von der **WIN32_FIND_DATA** Struktur:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`wird aufgerufen, die [Benutzerdatensatz-Klasse](../../data/oledb/user-record.md) , da es enthält auch eine Zuordnung, die Beschreibung der Spalten im Rowset des Anbieters. Die Anbieter-Spalte-Zuordnung enthält einen Eintrag für jedes Feld in das Rowset mit der-Makros. Die Makros Geben Sie Spaltennamen, ordinal, und das Offset für einen Struktureintrag. Der Anbieterspalteneinträge in den oben aufgeführten Code enthalten Offsets in die **WIN32_FIND_DATA** Struktur. Wenn der Consumer ruft **IRowset:: GetData**, Daten in einem zusammenhängenden Puffer übertragen. Statt Zeigerarithmetik möglich ist, können mit die Zuordnung geben Sie einen Datenmember.  
+ `CMyProviderWindowsFile` wird aufgerufen, die [Benutzerdatensatz-Klasse](../../data/oledb/user-record.md) , da es enthält auch eine Zuordnung, die Beschreibung der Spalten im Rowset des Anbieters. Die Anbieter-Spalte-Zuordnung enthält einen Eintrag für jedes Feld in das Rowset mit der-Makros. Die Makros Geben Sie Spaltennamen, ordinal, und das Offset für einen Struktureintrag. Der Anbieterspalteneinträge in den oben aufgeführten Code enthalten Offsets in die **WIN32_FIND_DATA** Struktur. Wenn der Consumer ruft **IRowset:: GetData**, Daten in einem zusammenhängenden Puffer übertragen. Statt Zeigerarithmetik möglich ist, können mit die Zuordnung geben Sie einen Datenmember.  
   
- Die `CMyProviderRowset` Klasse enthält auch die `Execute` Methode. `Execute`ist, was tatsächlich die Daten in der systemeigenen-Quelle liest. Der folgende Code zeigt die vom Assistenten generierten `Execute` Methode. Die Funktion verwendet die Win32 **FindFirstFile** und `FindNextFile` APIs zum Abrufen von Informationen zu den Dateien im Verzeichnis, und fügen Sie sie in Instanzen von der `CMyProviderWindowsFile` Klasse.  
+ Die `CMyProviderRowset` Klasse enthält auch die `Execute` Methode. `Execute` ist, was tatsächlich die Daten in der systemeigenen-Quelle liest. Der folgende Code zeigt die vom Assistenten generierten `Execute` Methode. Die Funktion verwendet die Win32 **FindFirstFile** und `FindNextFile` APIs zum Abrufen von Informationen zu den Dateien im Verzeichnis, und fügen Sie sie in Instanzen von der `CMyProviderWindowsFile` Klasse.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

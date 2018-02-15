@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Schreiben Sie formatierte Daten in eine Zeichenfolge mit der Möglichkeit, die Reihenfolge anzugeben, in der die Parameter in der Formatzeichenfolge verwendet werden.  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p` ist eine Breitzeichen-Version von `_sprintf_p`. Die Zeigerargumente zu `_swprintf_p` sind Breitzeichen-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `_swprintf_p` unterscheidet sich möglicherweise von der in `_sprintf_p`. `_swprintf_p` und `fwprintf_p` verhalten sich identisch, außer dass die Ausgabe von `_swprintf_p` in eine Zeichenfolge anstatt an ein Ziel des `FILE`-Typs schreibt, und dass `_swprintf_p` den `count`-Parameter zur Angabe der maximale Anzahl zu schreibender Zeichen erfordert. Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
- `_sprintf_p` gibt die in `buffer` gespeicherte Byteanzahl zurück. Das beendende `NULL`-Zeichen wird dabei nicht mitgezählt. `_swprintf_p`Gibt die Anzahl der Breitzeichen, die in gespeicherten `buffer`, wird dabei nicht mitgezählt das abschließende `NULL` Breitzeichen. Wenn `buffer` oder `format` ein NULL-Zeiger ist oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL`fest.  
+ `_sprintf_p` gibt die in `buffer` gespeicherte Byteanzahl zurück. Das beendende `NULL`-Zeichen wird dabei nicht mitgezählt. `_swprintf_p` Gibt die Anzahl der Breitzeichen, die in gespeicherten `buffer`, wird dabei nicht mitgezählt das abschließende `NULL` Breitzeichen. Wenn `buffer` oder `format` ein NULL-Zeiger ist oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL`fest.  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   

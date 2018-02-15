@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: abort
+ms.topic: reference
+apiname:
+- abort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: Abort
-dev_langs: C++
+f1_keywords:
+- Abort
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting current process
 - abort function
@@ -30,19 +34,20 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6577ca7927d42e12aa62ed100b9572b7270208f
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02e8c81ef539dc2f078a3b120ca673a0ef612779
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abort"></a>abort
 
 Bricht den aktuellen Prozess ab und gibt einen Fehlercode zurück.
 
 > [!NOTE]
-> Verwenden Sie diese Methode nicht, um eine Microsoft Store-app zu schließen oder [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app, außer bei Tests oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
+> Verwenden Sie diese Methode nicht, eine Microsoft Store-app oder universelle Windows-Plattform (UWP)-app, mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntax
 
@@ -132,3 +137,4 @@ File could not be opened: No such file or directory
 [_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)  
 [_DEBUG](../../c-runtime-library/debug.md)  
 [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
+

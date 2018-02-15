@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: cgets
+ms.topic: reference
+apiname:
+- cgets
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,23 +22,28 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: cgets
-dev_langs: C++
-helpviewer_keywords: cgets function
+f1_keywords:
+- cgets
+dev_langs:
+- C++
+helpviewer_keywords:
+- cgets function
 ms.assetid: 54faf257-5ed6-4301-be19-66d953e901fa
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0ec12a9da8a468d3b81e30961eb3eff25de9894a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d96e6699281e74d2ea11489f4541baf9b1d55953
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cgets"></a>cgets
-Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_cgets](../../c-runtime-library/cgets-cgetws.md) oder die Funktion mit erweiterter Sicherheit [_cgets_s](../../c-runtime-library/reference/cgets-s-cgetws-s.md).  
-  
+
+Diese POSIX-Funktion ist veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_cgets](../../c-runtime-library/cgets-cgetws.md) oder die Funktion mit erweiterter Sicherheit [_cgets_s](../../c-runtime-library/reference/cgets-s-cgetws-s.md).
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter dem [HYPERLINK "http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx" \o "CRT functions not supported with /ZW" CRT functions not supported with /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) über in Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen.
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

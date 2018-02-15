@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Gewusst wie: Marshallen von Funktionszeigern mit PInvoke
 In diesem Thema wird erläutert, wie verwaltete Delegaten anstelle von Funktionszeigern verwendet werden können, bei der Interoperation mit Funktionen, die mit .NET Framework P/Invoke-Funktionen nicht verwaltetem. Visual C++-Programmierer sind jedoch empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da P/Invoke bietet nur wenig Kompilierzeitfehler reporting, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API wird als DLL verpackt, und der Quellcode nicht verfügbar ist, ist P/Invoke die einzige Option. Andernfalls finden Sie unter den folgenden Themen:  
@@ -42,8 +44,6 @@ In diesem Thema wird erläutert, wie verwaltete Delegaten anstelle von Funktions
  Das verwaltete Modul definiert einen Delegaten, die vom nativen Code als Funktionszeiger gemarshallt, und verwendet die <xref:System.Runtime.InteropServices.DllImportAttribute> Attribut, um die systemeigenen TakesCallback-Funktion auf den verwalteten Code verfügbar zu machen. In der main-Funktion ist eine Instanz des Delegaten erstellt und an die TakesCallback-Funktion übergeben. Der Programmausgabe veranschaulicht, dass diese Funktion von der systemeigenen TakesCallback-Funktion ausgeführt wird.  
   
  Die verwaltete Funktion unterdrückt Garbagecollection für den verwalteten Delegaten, um zu verhindern, dass .NET Framework Garbagecollection des Delegaten verschieben, während der Ausführung der systemeigenen Funktion.  
-  
- Verwaltete Modul mit "/ CLR", aber "/ CLR" kompiliert wird: reine funktioniert ebenfalls. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
 ```cpp  
 // TraditionalDll5.cpp  

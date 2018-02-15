@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView-Klasse
 Stellt eine schreibgeschützte Ansicht einer *Zuordnung*dar, die eine Auflistung von Schlüssel-Wert-Paaren ist.  
@@ -60,17 +63,17 @@ ref class MapView sealed;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Mapview:: Mapview](#ctor)|Initialisiert eine neue Instanz der MapView-Klasse.|  
+|[MapView::MapView](#ctor)|Initialisiert eine neue Instanz der MapView-Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Mapview:: First](#first)|Gibt einen Iterator zurück, der mit dem ersten Element der Zuordnungsansicht initialisiert wird.|  
-|[Mapview:: Haskey](#haskey)|Ermittelt, ob die aktuelle MapView den angegebenen Schlüssel enthält.|  
-|[Mapview:: Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen MapView-Objekt ab.|  
-|[Mapview:: Size](#size)|Gibt die Anzahl von Elementen im aktuellen MapView-Objekt zurück.|  
-|[Mapview:: Split](#split)|Teilt ein Original-MapView-Objekt in zwei MapView-Objekte.|  
+|[MapView::First](#first)|Gibt einen Iterator zurück, der mit dem ersten Element der Zuordnungsansicht initialisiert wird.|  
+|[MapView::HasKey](#haskey)|Ermittelt, ob die aktuelle MapView den angegebenen Schlüssel enthält.|  
+|[MapView::Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen MapView-Objekt ab.|  
+|[MapView::Size](#size)|Gibt die Anzahl von Elementen im aktuellen MapView-Objekt zurück.|  
+|[MapView::Split](#split)|Teilt ein Original-MapView-Objekt in zwei MapView-Objekte.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `MapView`  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **Namespace:** Platform::Collections  
 
 
-## <a name="first"></a>Mapview:: First-Methode
+## <a name="first"></a> Mapview:: First-Methode
 Gibt einen Iterator zurück, der das erste Element in der Kartenansicht angibt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>Mapview:: Haskey-Methode
+## <a name="haskey"></a>  Mapview:: Haskey-Methode
 Ermittelt, ob die aktuelle MapView den angegebenen Schlüssel enthält.  
   
 ### <a name="syntax"></a>Syntax  
@@ -118,7 +121,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a>Mapview:: Lookup-Methode
+##  <a name="lookup"></a> Mapview:: Lookup-Methode
 Ruft den Wert des Typs V ab, der dem angegebenen Schlüssel des Typs K zugeordnet ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>Mapview:: Mapview-Konstruktor
+##  <a name="ctor"></a> Mapview:: Mapview-Konstruktor
 Initialisiert eine neue Instanz der MapView-Klasse.  
   
 ### <a name="syntax"></a>Syntax  
@@ -179,7 +182,7 @@ MapView(
 
 
 
-##  <a name="size"></a>Mapview:: size-Methode
+##  <a name="size"></a> Mapview:: size-Methode
 Gibt die Anzahl von Elementen im aktuellen MapView-Objekt zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>Mapview:: Split-Methode
+##  <a name="split"></a> Mapview:: Split-Methode
 Teilt das aktuelle MapView-Objekt in zwei MapView-Objekte. Diese Methode führt keine Operationen aus.  
   
 ### <a name="syntax"></a>Syntax  

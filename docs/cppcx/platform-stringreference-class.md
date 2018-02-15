@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference-Klasse
 Ein Optimierungstyp, den Sie verwenden können, um Zeichenfolgendaten in `Platform::String^` Eingabeparametern mit minimalem Kopiervorgängen weitere Methoden zu übergeben.  
@@ -43,22 +45,22 @@ class StringReference
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Stringreference:: Stringreference](#ctor)|Zwei Konstruktoren für das Erstellen von Instanzen von `StringReference`.|  
+|[StringReference::StringReference](#ctor)|Zwei Konstruktoren für das Erstellen von Instanzen von `StringReference`.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Stringreference:: Data](#data)|Gibt die Zeichenfolgendaten als char16-Wertearray zurück.|  
-|[Stringreference:: Length](#length)|Gibt die Anzahl der Zeichen in der Zeichenfolge zurück.|  
-|[Stringreference:: Gethstring](#gethstring)|Gibt die Zeichenfolgendaten als HSTRING zurück.|  
-|[Stringreference:: GetString](#getstring)|Gibt die Zeichenfolgendaten als `Platform::String^`zurück.|  
+|[StringReference::Data](#data)|Gibt die Zeichenfolgendaten als char16-Wertearray zurück.|  
+|[StringReference::Length](#length)|Gibt die Anzahl der Zeichen in der Zeichenfolge zurück.|  
+|[StringReference::GetHSTRING](#gethstring)|Gibt die Zeichenfolgendaten als HSTRING zurück.|  
+|[StringReference::GetString](#getstring)|Gibt die Zeichenfolgendaten als `Platform::String^`zurück.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Stringreference:: =](#operator-assign)|Weist ein `StringReference` -Element einer neuen `StringReference` -Instanz zu.|  
+|[StringReference::operator=](#operator-assign)|Weist ein `StringReference` -Element einer neuen `StringReference` -Instanz zu.|  
 |[StringReference::operator()](#operator-call)|Konvertiert ein `StringReference` -Element in ein `Platform::String^`-Element.|  
   
 ### <a name="requirements"></a>Anforderungen  
@@ -70,7 +72,7 @@ class StringReference
   
  **Header:** vccorlib.h  
 
-## <a name="data"></a>Stringreference:: Data-Methode
+## <a name="data"></a>  Stringreference:: Data-Methode
 Gibt den Inhalt dieses `StringReference` als ein Array von char16-Werten.  
   
 ### <a name="syntax"></a>Syntax  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>Stringreference:: Gethstring-Methode
+## <a name="gethstring"></a>  Stringreference:: Gethstring-Methode
 Gibt den Inhalt der Zeichenfolge als `__abi_HSTRING` zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>Stringreference:: GetString-Methode
+## <a name="getstring"></a>  Stringreference:: GetString-Methode
 Gibt den Inhalt der Zeichenfolge als `Platform::String^` zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Rückgabewert  
  Ein `Platform::String^`, das die eigentlichen Zeichenfolgedaten enthält.  
 
-## <a name="length"></a>Stringreference:: Length-Methode
+## <a name="length"></a>  Stringreference:: Length-Methode
 Gibt die Anzahl der Zeichen in der Zeichenfolge zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>Stringreference:: Operator =-Operator
+## <a name="operator-assign"></a>  Stringreference:: Operator =-Operator
 Weist das angegebene Objekt dem aktuellen `StringReference`-Objekt zu.  
   
 ### <a name="syntax"></a>Syntax  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>Stringreference::Operator()-Operator
+## <a name="operator-call"></a>  Stringreference::Operator()-Operator
 Konvertiert ein `StringReference`-Objekt in ein `Platform::String^`-Objekt.  
   
 ### <a name="syntax"></a>Syntax  

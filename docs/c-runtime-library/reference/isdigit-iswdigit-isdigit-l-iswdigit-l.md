@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -32,7 +33,8 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84b2293114acd31d0baf1f3a595deba9247d6120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 004186bc7ea74cb6ab2c39d25a9b3d3efeb556fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 Bestimmt, ob eine ganze Zahl ein Dezimalstellenzeichen darstellt.  
@@ -86,7 +89,7 @@ int _iswdigit_l(
  Das zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Dezimalstellenzeichens ist. `isdigit`Gibt einen Wert ungleich NULL zurück, wenn `c` ist eine dezimale Ziffer (0 - 9). `iswdigit` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Dezimalstellenzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
+ Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Dezimalstellenzeichens ist. `isdigit` Gibt einen Wert ungleich NULL zurück, wenn `c` ist eine dezimale Ziffer (0 - 9). `iswdigit` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Dezimalstellenzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   

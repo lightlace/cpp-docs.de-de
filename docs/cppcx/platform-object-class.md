@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object-Klasse
-Stellt gemeinsames Verhalten für Verweisklassen und Referenzstrukturen in Windows Store-Apps bereit. Alle Verweisklassen- und Referenzstruktur-Instanzen sind implizit konvertierbar in Platform::Object^ und können seine virtuelle ToString-Methode überschreiben.  
+Stellt gemeinsames Verhalten für Verweisklassen und referenzstrukturen in Windows-Runtime-apps bereit. Alle Verweisklassen- und Referenzstruktur-Instanzen sind implizit konvertierbar in Platform::Object^ und können seine virtuelle ToString-Methode überschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,8 +53,8 @@ public ref class Object : Object
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Object:: Equals](#equals)|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.|  
-|[Object:: GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
-|[Object:: ReferenceEquals](#referenceequals)|Stellt fest, ob die angegebenen Objekt-Instanzen dieselbe Instanz sind.|  
+|[Object::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
+|[Object::ReferenceEquals](#referenceequals)|Stellt fest, ob die angegebenen Objekt-Instanzen dieselbe Instanz sind.|  
 |[ToString](#tostring)|Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt. Kann überschrieben werden.|  
 |[GetType](#gettype)|Ruft einen [Platform::Type](../cppcx/platform-type-class.md) ab, der die aktuelle Instanz beschreibt.|  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Namespace:** Platform  
 
   
-## <a name="equals"></a>Object:: Equals-Methode
+## <a name="equals"></a> Object:: Equals-Methode
 Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Object:: GetHashCode-Methode
+## <a name="gethashcode"></a>  Object:: GetHashCode-Methode
 Gibt den `IUnknown`*-Identitätswert für diese Instanz zurück, wenn es sich um ein COM-Objekt handelt, bzw. einen berechneten Hashwert, wenn es kein COM-Objekt ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object:: GetType-Methode
+## <a name="gettype"></a>  Object:: GetType-Methode
 Gibt eine [Platform:: Type](../cppcx/platform-type-class.md) -Objekt, das den Laufzeittyp eines Objekts beschreibt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -133,7 +136,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
  [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)   
  [Typsystem] (.. /cppcx/Type-System-c-CX.MD
   
-## <a name="ctor"></a>Object:: Object-Konstruktor
+## <a name="ctor"></a>  Object:: Object-Konstruktor
 Initialisiert eine neue Instanz der Objektklasse.  
   
 ### <a name="syntax"></a>Syntax  
@@ -142,7 +145,7 @@ Initialisiert eine neue Instanz der Objektklasse.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object:: ReferenceEquals-Methode
+## <a name="referenceequals"></a>  Object:: ReferenceEquals-Methode
 Stellt fest, ob die angegebenen Objekt-Instanzen dieselbe Instanz sind.  
   
 ### <a name="syntax"></a>Syntax  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die beiden Objekte identisch sind, andernfalls `false`.  
  
-## <a name="tostring"></a>Object:: ToString-Methode (C + c++ / CX)
+## <a name="tostring"></a>  Object:: ToString-Methode (C + c++ / CX)
 Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.  
   
 ### <a name="syntax"></a>Syntax  

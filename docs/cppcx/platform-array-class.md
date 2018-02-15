@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Array Constructors
 - VCCORLIB/Namespace not found::Platform::Array::Value
-dev_langs: C++
-helpviewer_keywords: Platform::Array Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarray-class"></a>Platform::Array-Klasse
 Stellt ein änderbares, eindimensionales Array dar, das über die Anwendungsbinärdateischnittstelle (ABI) empfangen und übergeben werden kann.  
@@ -53,7 +56,7 @@ private ref class Array<TArg, 1> :
   
 |||  
 |-|-|  
-|[Array:: value](#value)|Ruft ein Handle für das aktuelle Array ab.|  
+|[Array::Value](#value)|Ruft ein Handle für das aktuelle Array ab.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die Array-Klasse wird versiegelt und kann nicht vererbt werden.  
@@ -70,7 +73,7 @@ private ref class Array<TArg, 1> :
  Compileroption: **/ZW**  
 
  
-## <a name="ctor"></a>Array-Konstruktoren
+## <a name="ctor"></a>  Array-Konstruktoren
 Initialisiert ein eindimensionales, änderbares Array von Typen, die gemäß der Klassenvorlagenparameter *T*.  
   
 ## <a name="syntax"></a>Syntax  
@@ -93,7 +96,7 @@ Array(T* data, unsigned int size);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zum Erstellen von Instanzen von Platform:: Array finden Sie unter [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>Array:: Get-Methode
+## <a name="get"></a>  Array:: Get-Methode
 Ruft einen Verweis auf das Arrayelement an der angegebenen Indexposition ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -109,7 +112,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>Rückgabewert  
  Das durch den `index`-Parameter spezifizierte Arrayelement.  
   
-## <a name="value"></a>Array:: Value-Eigenschaft
+## <a name="value"></a>  Array:: Value-Eigenschaft
 Ruft ein Handle für das aktuelle Array ab.  
   
 ## <a name="syntax"></a>Syntax  

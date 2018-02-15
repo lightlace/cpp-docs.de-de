@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee2673f98f219559fd42d192dd934c8fe3eaed8c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 Konvertiert die Ortszeit in einen Kalenderwert.  
@@ -73,7 +76,7 @@ __time64_t _mktime64(
 ## <a name="return-value"></a>Rückgabewert  
  `_mktime32` gibt die angegebene Kalenderzeit als einen Wert des Typs [time_t](../../c-runtime-library/standard-types.md) zurück. Wenn *Timeptr* auf ein Datum vor Mitternacht, 1. Januar 1970 verweist oder wenn die Kalenderzeit nicht dargestellt werden kann, `_mktime32` gibt-1 zurück, die in den Typ umgewandelt `time_t`. Bei Verwendung `_mktime32` und *Timeptr* Verweise ein Datum nach 23:59:59 am 18. Januar 2038 Coordinated Universal Time (UTC), es gibt-1 zurück, in den Typ umgewandelt `time_t`.  
   
- `_mktime64`Gibt den Typ umgewandelt-1 zurück, `__time64_t` Wenn *Timeptr* verweist auf ein Datum nach 23:59:59 am 31. Dezember 3000 UTC.  
+ `_mktime64` Gibt den Typ umgewandelt-1 zurück, `__time64_t` Wenn *Timeptr* verweist auf ein Datum nach 23:59:59 am 31. Dezember 3000 UTC.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktionen `mktime`, `_mktime32` und `_mktime64` konvertieren die angegebene Zeitstruktur (möglicherweise unvollständig), auf die durch *timeptr* verwiesen wird, in eine vollständig definierte Struktur mit normalisierten Werten. Anschließend konvertieren sie die Struktur in einen Kalenderzeitwert des Typs `time_t`. Die konvertierte Zeit hat dieselbe Codierung wie die Werte, die von der Funktion [Uhrzeit](../../c-runtime-library/reference/time-time32-time64.md) zurückgegeben wurden. Die ursprünglichen Werte der Komponenten `tm_wday` und `tm_yday` der Struktur *timeptr* werden ignoriert. Die ursprünglichen Werte der anderen Komponenten werden nicht auf ihre Normbereiche beschränkt.  

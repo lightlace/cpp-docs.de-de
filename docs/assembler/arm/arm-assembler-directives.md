@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
 Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in Kapitel 7 dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102). Allerdings unterscheiden sich die Microsoft-Implementierungen von einigen Assemblydirektiven aus ARM-Assemblydirektiven ein. In diesem Artikel werden die Unterschiede erläutert.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft-Implementierungen von ARM-Assemblydirektiven  
- BEREICH  
+ AREA  
  Der Microsoft-ARM-Assembler unterstützt diese strukturbereichattribute: AUSZURICHTEN, CODE CODEALIGN Daten NOINIT READONLY Lese-/SCHREIBMODUS ZIEHPUNKT, ARM.  
   
  Alle außer DAUMEN und ARM funktioniert wie beschrieben in der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102).  
@@ -43,7 +46,7 @@ Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in 
  DCDO  
  Wird nicht unterstützt.  
   
- DN QN, "SN".  
+ DN, QN, SN  
  Die Spezifikation eines Typs oder einer Klasse auf die Register-Alias wird nicht unterstützt.  
   
  EINTRAG  
@@ -57,7 +60,7 @@ Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in 
 EXPORTsym {[type]}  
 ```  
   
- `sym`ist das Symbol exportiert werden soll.  `[type]`, wenn angegeben, kann es sich um `[DATA]` um anzugeben, dass das Symbol auf Daten verweist oder `[FUNC]` , um anzugeben, dass das Symbol auf Code verweist.  
+ `sym` ist das Symbol exportiert werden soll.  `[type]`, wenn angegeben, kann es sich um `[DATA]` um anzugeben, dass das Symbol auf Daten verweist oder `[FUNC]` , um anzugeben, dass das Symbol auf Code verweist.  
   
  Globale ist ein Synonym für den EXPORT aus.  
   
@@ -75,13 +78,13 @@ EXPORTsym {[type]}
 IMPORT sym{, WEAK alias{, TYPE t}}  
 ```  
   
- `sym`ist der Name des Symbols importiert werden sollen.  
+ `sym` ist der Name des Symbols importiert werden sollen.  
   
  Wenn der SCHWACHE `alias` angegeben wird, bedeutet dies, dass `sym` eine schwache extern ist. Wenn keine Definition für ihn zum Zeitpunkt der Verknüpfung gefunden wird, und klicken Sie dann alle Verweise darauf binden stattdessen an `alias`.  
   
  Wenn Typ `t` angegeben ist, klicken Sie dann `t` gibt an, wie der Linker versucht werden soll, zum Auflösen `sym`.  Diese Werte für `t` sind möglich:   
-1 – Führen Sie eine Bibliothek nach nicht`sym`  
-2 – Ausführen einer Suche Bibliothek für`sym`  
+1 – Führen Sie eine Bibliothek nach nicht `sym`  
+2 – Ausführen einer Suche Bibliothek für `sym`  
 3 –`sym` ist ein Alias für `alias` (Standard)  
   
  "Extern" ist ein Synonym für den IMPORT, außer dass `sym` wird nur aus, wenn Verweise darauf in der aktuellen Assembly importiert.  
@@ -98,8 +101,8 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  PRESERVE8  
  Wird nicht unterstützt.  
   
- UMSETZUNG  
- `RELOC n`kann nur eine Anweisung oder ein Daten-Definition-Direktive folgen. Es gibt keine "Anonym"Symbol", die verschoben werden kann.  
+ RELOC  
+ `RELOC n` kann nur eine Anweisung oder ein Daten-Definition-Direktive folgen. Es gibt keine "Anonym"Symbol", die verschoben werden kann.  
   
  ERFORDERN  
  Wird nicht unterstützt.  

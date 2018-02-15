@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: editbin
-dev_langs: C++
-helpviewer_keywords: EDITBIN program, options
+f1_keywords:
+- editbin
+dev_langs:
+- C++
+helpviewer_keywords:
+- EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="editbin-options"></a>EDITBIN-Optionen
 EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLLs) zu ändern. Optionen zum Angeben der Änderungen, die EDITBIN vornimmt.  
@@ -31,26 +36,26 @@ EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Librari
   
 |Option|Zweck|  
 |------------|-------------|  
-|[/ ALLOWBIND](../../build/reference/allowbind.md)|Gibt an, ob eine DLL gebunden werden kann.|  
-|[/ ALLOWISOLATION](../../build/reference/allowisolation.md)|Gibt an, DLL oder ausführbare Datei Manifestsuche Verhalten.|  
-|[/ APPCONTAINER](../../build/reference/appcontainer.md)|Gibt an, ob die app in einer AppContainer ausgeführt werden muss, z. B. eine [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app.|  
-|[/ BIND](../../build/reference/bind.md)|Legt die Adressen für die Einstiegspunkte in die angegebenen Objekte zur Ladezeit Geschwindigkeit fest.|  
-|[/ DYNAMICBASE](../../build/reference/dynamicbase.md)|Gibt an, ob die DLL oder ausführbaren Images nach dem Zufallsprinzip zur Ladezeit ein REBASE werden kann Adresse Space Layout Randomization (ASLR).|  
-|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Interner Fehler an Microsoft gemeldet.|  
-|[/ HEAP](../../build/reference/heap.md)|Legt die Größe des ausführbaren Images Heap in Bytes fest.|  
-|[/ HIGHENTROPYVA](../../build/reference/highentropyva.md)|Gibt an, ob die DLL oder ausführbaren Images mit hoher Entropie (64-Bit) Adresse Space Layout Randomization (ASLR) unterstützt.|  
-|[/ INTEGRITYCHECK](../../build/reference/integritycheck.md)|Gibt an, ob die digitale Signatur zur Ladezeit überprüft werden soll.|  
-|[/ LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als 2 GB sind.|  
-|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|  
-|[/ NXCOMPAT](../../build/reference/nxcompat.md)|Gibt an, ob das ausführbare Image mit Datenausführungsverhinderung kompatibel ist.|  
-|[/ REBASE](../../build/reference/rebase.md)|Legt die Basisadressen für die angegebenen Objekte.|  
-|[/ RELEASE](../../build/reference/release.md)|Legt die Prüfsumme im Header fest.|  
-|[/ SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|  
-|[/ STACK](../../build/reference/stack.md)|Legt das ausführbare Image Stapelgröße in Bytes fest.|  
-|[/ SUBSYSTEM](../../build/reference/subsystem.md)|Gibt die ausführungsumgebung bereitstellt.|  
-|[/ SWAPRUN](../../build/reference/swaprun.md)|Gibt an, dass das ausführbare Image muss in die Auslagerungsdatei kopiert, und führen Sie von dort aus.|  
-|[/ TSAWARE](../../build/reference/tsaware.md)|Gibt an, dass die app in einer Umgebung mit mehreren Benutzern ausgeführt werden sollen.|  
-|[/ VERSION](../../build/reference/version.md)|Legt die Versionsnummer im Header fest.|  
+|[/ALLOWBIND](../../build/reference/allowbind.md)|Gibt an, ob eine DLL gebunden werden kann.|  
+|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Gibt an, DLL oder ausführbare Datei Manifestsuche Verhalten.|  
+|[/APPCONTAINER](../../build/reference/appcontainer.md)|Gibt an, ob die app in einer AppContainer ausgeführt werden muss, z. B. einer uwp-app.|  
+|[/BIND](../../build/reference/bind.md)|Legt die Adressen für die Einstiegspunkte in die angegebenen Objekte zur Ladezeit Geschwindigkeit fest.|  
+|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Gibt an, ob die DLL oder ausführbaren Images nach dem Zufallsprinzip zur Ladezeit ein REBASE werden kann Adresse Space Layout Randomization (ASLR).|  
+|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Interner Fehler an Microsoft gemeldet.|  
+|[/HEAP](../../build/reference/heap.md)|Legt die Größe des ausführbaren Images Heap in Bytes fest.|  
+|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Gibt an, ob die DLL oder ausführbaren Images mit hoher Entropie (64-Bit) Adresse Space Layout Randomization (ASLR) unterstützt.|  
+|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Gibt an, ob die digitale Signatur zur Ladezeit überprüft werden soll.|  
+|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als 2 GB sind.|  
+|[/NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|  
+|[/NXCOMPAT](../../build/reference/nxcompat.md)|Gibt an, ob das ausführbare Image mit Datenausführungsverhinderung kompatibel ist.|  
+|[/REBASE](../../build/reference/rebase.md)|Legt die Basisadressen für die angegebenen Objekte.|  
+|[/RELEASE](../../build/reference/release.md)|Legt die Prüfsumme im Header fest.|  
+|[/SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|  
+|[/STACK](../../build/reference/stack.md)|Legt das ausführbare Image Stapelgröße in Bytes fest.|  
+|[/SUBSYSTEM](../../build/reference/subsystem.md)|Gibt die ausführungsumgebung bereitstellt.|  
+|[/SWAPRUN](../../build/reference/swaprun.md)|Gibt an, dass das ausführbare Image muss in die Auslagerungsdatei kopiert, und führen Sie von dort aus.|  
+|[/TSAWARE](../../build/reference/tsaware.md)|Gibt an, dass die app in einer Umgebung mit mehreren Benutzern ausgeführt werden sollen.|  
+|[/VERSION](../../build/reference/version.md)|Legt die Versionsnummer im Header fest.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)   

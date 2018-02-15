@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CDBErrorInfo
 - ATL::CDBErrorInfo
 - ATL.CDBErrorInfo
-dev_langs: C++
-helpviewer_keywords: CDBErrorInfo class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDBErrorInfo class
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed20f02b51afcd338b0a84f92def104c079869b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26ed1bdaff6746e74029111dae0ce1abc0ea7493
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo-Klasse
 Bietet Unterstützung für OLE DB-Fehler beim Verarbeiten, die mit dem OLE DB- [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) Schnittstelle.  
   
-## <a name="syntax"></a>Syntax  
-  
-```  
+## <a name="syntax"></a>Syntax
+
+```cpp
 class CDBErrorInfo  
 ```  
   
@@ -56,6 +59,6 @@ class CDBErrorInfo
  **Header:** atldbcli.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dieses Beispiel](../../visual-cpp-samples.md)   
+ [DBViewer](../../visual-cpp-samples.md)   
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

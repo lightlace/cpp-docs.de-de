@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
-dev_langs: C++
-helpviewer_keywords: BackInsertIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator-Klasse
 Stellt einen Iterator dar, der Elemente am Ende einer sequenziellen Auflistung einfügt, anstatt sie zu überschreiben.  
@@ -46,7 +50,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Backinsertiterator:: Backinsertiterator](#ctor)|Initialisiert eine neue Instanz der BackInsertIterator-Klasse.|  
+|[BackInsertIterator::BackInsertIterator](#ctor)|Initialisiert eine neue Instanz der BackInsertIterator-Klasse.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -65,7 +69,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **Namespace:** Platform::Collections  
   
 ---
-## <a name="ctor"></a>Backinsertiterator:: Backinsertiterator-Konstruktor
+## <a name="ctor"></a>  Backinsertiterator:: Backinsertiterator-Konstruktor
 Initialisiert eine neue Instanz der `BackInsertIterator`-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
@@ -83,7 +87,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>Hinweise  
  Ein `BackInsertIterator` fügt Elemente nach dem letzten Element des Objekts ein, das vom Parameter `v` angegeben wird.  
  
-## <a name="operator-assign"></a>Backinsertiterator:: Operator =-Operator
+## <a name="operator-assign"></a>  Backinsertiterator:: Operator =-Operator
 Fügt das angegebene Objekt am Ende der aktuellen sequenziellen Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -99,7 +103,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf den aktuellen BackInsertIterator.  
 
-## <a name="operator-dereference"></a>Backinsertiterator:: *-Operator
+## <a name="operator-dereference"></a>  Backinsertiterator:: *-Operator
 Ruft einen Verweis auf den aktuellen BackInsertIterator ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -114,7 +118,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator gibt einen Verweis auf den aktuellen BackInsertIterator zurück; nicht auf ein Element in der aktuellen Sammlung.  
  
-## <a name="operator-increment"></a>Backinsertiterator:: Operator++-Operator
+## <a name="operator-increment"></a>  Backinsertiterator:: Operator++-Operator
 Gibt einen Verweis auf den aktuellen BackInsertIterator zurück. Der Iterator ist unverändert.  
   
 ## <a name="syntax"></a>Syntax  

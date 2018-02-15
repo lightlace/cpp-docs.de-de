@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector-Klasse
 
@@ -117,7 +120,7 @@ Wenn Sie versuchen, verwenden Sie eine **Vektor** Typ in einem öffentlichen Rü
 
 **Namespace:** Platform::Collections
 
-## <a name="append"></a>Vector:: Append-Methode
+## <a name="append"></a>  Vector:: Append-Methode
 
 Fügt das angegebene Element nach dem letzten Element im aktuellen Vektor ein.
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 Das Element, das in den Vektor eingefügt werden soll. Der Typ des *Element* wird definiert, indem die *T* Typname.
 
-## <a name="clear"></a>Vector:: Clear-Methode
+## <a name="clear"></a>  Vector:: Clear-Methode
 
 Löscht alle Elemente im aktuellen Vector.
 
@@ -142,7 +145,7 @@ Löscht alle Elemente im aktuellen Vector.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector:: First-Methode
+## <a name="first"></a>  Vector:: First-Methode
 
 Gibt einen Iterator zurück, der auf das erste Element im Vektor verweist.
 
@@ -162,7 +165,7 @@ Eine einfache Möglichkeit, den von First() zurückgegeben Iterator zu halten, d
 
 Wenn Sie ein Paar von Iteratoren zur Übergabe an eine STL-Funktion benötigen, verwenden Sie die freien-Funktionen [Collections:: begin](../cppcx/begin-function.md) und [Windows](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector:: GetAt-Methode
+## <a name="getat"></a>  Vector:: GetAt-Methode
 
 Ruft das Element des aktuellen Vector ab, das durch den angegebenen Index bezeichnet wird.
 
@@ -181,7 +184,7 @@ Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vec
 
 Das angegebene Element der *Index* Parameter. Der Elementtyp wird durch definiert die *T* Typname.
 
-## <a name="getmany"></a>Vector:: getmany-Methode
+## <a name="getmany"></a>  Vector:: getmany-Methode
 
 Ruft eine Sequenz von Elementen vom aktuellen Vektor ab, die am angegebenen Index beginnt, und kopiert sie in das vom Aufrufer reservierten Array.
 
@@ -209,7 +212,7 @@ Die Anzahl der abgerufenen Elemente.
 
 Diese Funktion ist nicht für die direkte Verwendung durch Clientcode vorgesehen. Sie wird intern in verwendet das [To_vector-Funktion](../cppcx/to-vector-function.md) auf effiziente Konvertierung von Platform:: Std:: Vector-Instanzen zu ermöglichen.
 
-## <a name="getview"></a>Vector:: GetView-Methode
+## <a name="getview"></a>  Vector:: GetView-Methode
 
 Gibt eine schreibgeschützte Ansicht eines Vektors zurück, das heißt, eine IVectorView.
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Ein IVectorView-Objekt.
 
-## <a name="indexof"></a>Vector:: IndexOf-Methode
+## <a name="indexof"></a>  Vector:: IndexOf-Methode
 
 Sucht das angegebene Element im aktuellen Vector und gibt, wenn es gefunden wurde, den Index des Elements zurück.
 
@@ -251,7 +254,7 @@ Die *Index* -Parameter ist 0, wenn das Element das erste Element des Vektors ist
 
 IndexOf verwendet std::find_if, um das Element zu suchen. Benutzerdefinierte Elementtypen sollten deshalb den Operator == und != überladen, um die Übereinstimmungsvergleiche zu ermöglichen, die für "find_if" erforderlich sind.
 
-##  <a name="insertat"></a>Vector:: InsertAt-Methode
+##  <a name="insertat"></a>  Vector:: InsertAt-Methode
 
 Fügt das angegebene Element in den aktuellen Vector nach dem Element ein, das durch den angegebenen Index identifiziert wird.
 
@@ -269,7 +272,7 @@ Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vec
 *item*  
 Ein Element aus, um nach dem das angegebene Element in den Vektor eingefügt *Index*. Der Typ des *Element* wird definiert, indem die *T* Typname.
 
-## <a name="removeat"></a>Vector:: RemoveAt-Methode
+## <a name="removeat"></a>  Vector:: RemoveAt-Methode
 
 Löscht das Element, das durch den angegebenen Index von dem aktuellen Vektor identifiziert wird.
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vector-Objekt spezifiziert.
 
-## <a name="removeatend"></a>Vector:: removeatend-Methode
+## <a name="removeatend"></a>  Vector:: removeatend-Methode
 
 Löscht das Element am Ende des aktuellen Vektors.
 
@@ -294,7 +297,7 @@ Löscht das Element am Ende des aktuellen Vektors.
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector:: ReplaceAll-Methode
+## <a name="replaceall"></a>  Vector:: ReplaceAll-Methode
 
 Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem angegebenen Array ein.
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 Ein Array von Objekten, deren Typ, indem definiert, die *T* Typname.
 
-## <a name="setat"></a>Vector:: SetAt-Methode
+## <a name="setat"></a>  Vector:: SetAt-Methode
 
 Weist den angegebenen Wert dem Element im aktuellen Vektor zu, der vom angegebenen Index identifiziert wird.
 
@@ -327,7 +330,7 @@ Eine nullbasierte, ganze Zahl ohne Vorzeichen, die ein bestimmtes Element im Vec
 *item*  
 Der dem angegebenen Element zuzuweisende Wert. Der Typ des *Element* wird definiert, indem die *T* Typname.
 
-## <a name="size"></a>Vector:: size-Methode
+## <a name="size"></a>  Vector:: size-Methode
 
 Gibt die Anzahl von Elementen im aktuellen Vector-Objekt zurück.
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 Die Anzahl der Elemente im aktuellen Vector.
 
-## <a name="ctor"></a>Vector:: Vector-Konstruktor
+## <a name="ctor"></a>  Vector:: Vector-Konstruktor
 
 Initialisiert eine neue Instanz der Vector-Klasse.
 

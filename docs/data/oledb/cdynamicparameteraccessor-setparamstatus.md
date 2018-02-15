@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,47 +14,45 @@ f1_keywords:
 - ATL::CDynamicParameterAccessor::SetParamStatus
 - CDynamicParameterAccessor.SetParamStatus
 - SetParamStatus
-dev_langs: C++
-helpviewer_keywords: SetParamStatus method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParamStatus method
 ms.assetid: 0c2271f6-457d-46ca-88b7-4590aadb20d7
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 52059675e20eb1789addf20dbf7a0e772f779efb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d958514a0e9b784fa969695bbb75e530d0ae6db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicparameteraccessorsetparamstatus"></a>CDynamicParameterAccessor::SetParamStatus
 Legt den Status des angegebenen Parameters fest, der im Puffer gespeichert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```
+bool SetParamStatus(DBORDINAL nParam,  
+   DBSTATUS status);  ```  
   
-      bool SetParamStatus(  
-   DBORDINAL nParam,  
-   DBSTATUS status  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+#### Parameters  
  `nParam`  
- [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) ein Beispiel.  
+ [in] The parameter number (offset from 1). Parameter 0 is reserved for return values. The parameter number is the index of the parameter based on its order in the SQL or stored procedure call. See [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) for an example.  
   
  *status*  
- [in] Die `DBSTATUS` Status des angegebenen Parameters. Informationen zu `DBSTATUS` -Werte finden Sie in [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE DB Programmer's Reference*, oder suchen Sie nach `DBSTATUS` in "OleDb.h".  
+ [in] The `DBSTATUS` status of the specified parameter. For information on `DBSTATUS` values, see [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in the *OLE DB Programmer's Reference*, or search for `DBSTATUS` in oledb.h.  
   
-## <a name="remarks"></a>Hinweise  
- Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
+## Remarks  
+ Returns **true** on success or **false** on failure.  
   
-## <a name="requirements"></a>Anforderungen  
+## Requirements  
  **Header:** atldbcli.h  
   
-## <a name="see-also"></a>Siehe auch  
- [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## See Also  
+ [CDynamicParameterAccessor Class](../../data/oledb/cdynamicparameteraccessor-class.md)

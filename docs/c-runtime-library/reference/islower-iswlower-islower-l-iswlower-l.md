@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Bestimmt, ob eine ganze Zahl einen Kleinbuchstaben darstellt.  
@@ -89,7 +92,7 @@ int _iswlower_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Zeichens in Kleinbuchstaben ist. `islower`Gibt einen Wert ungleich NULL zurück, wenn `c` ein Kleinbuchstabe (a bis Z). `iswlower` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Kleinbuchstaben entspricht, oder wenn `c` ein von der Implementierung abhängiger Breitzeichensatz ist, in dem weder `iswcntrl`, `iswdigit`, `iswpunct` noch `iswspace` ungleich 0 (null) ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
+ Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Zeichens in Kleinbuchstaben ist. `islower` Gibt einen Wert ungleich NULL zurück, wenn `c` ein Kleinbuchstabe (a bis Z). `iswlower` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Kleinbuchstaben entspricht, oder wenn `c` ein von der Implementierung abhängiger Breitzeichensatz ist, in dem weder `iswcntrl`, `iswdigit`, `iswpunct` noch `iswspace` ungleich 0 (null) ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   

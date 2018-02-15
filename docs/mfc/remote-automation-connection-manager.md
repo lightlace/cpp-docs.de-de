@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>Manager für Remoteautomatisierungsverbindungen
 Um Client- und Servercomputern konfigurieren zu können, müssen Sie registrierungsänderungen vornehmen. Anstatt auf diese Weise manuell ist es sehr viel einfacher, die Remote Automation-Verbindung (RAC)-Manager-Tool zu verwenden. Dieses Tool RACMGR32. EXE-Datei, zusammen mit RACREG32. DLL muss in einem beliebigen Verzeichnis gewählten kopiert werden. Verlegen sie den Pfad, kann er aus der Taskleiste mit der Ausführung ausgeführt werden. Sie können alternativ erstellen Sie eine Verknüpfung, oder platzieren einen Verweis darauf im Startmenü.  

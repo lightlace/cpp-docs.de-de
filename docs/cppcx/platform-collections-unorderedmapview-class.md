@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView-Klasse
 Stellt eine schreibgeschützte Ansicht einer *Zuordnung*dar, die eine Auflistung von Schlüssel-Wert-Paaren ist.  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Unorderedmapview:: Unorderedmapview](#ctor)|Initialisiert eine neue Instanz der UnorderedMapView-Klasse.|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|Initialisiert eine neue Instanz der UnorderedMapView-Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Unorderedmapview:: First](#first)|Gibt einen Iterator zurück, der mit dem ersten Element der Zuordnungsansicht initialisiert wird.|  
-|[Unorderedmapview:: Haskey](#haskey)|Ermittelt, ob die aktuelle UnorderedMapView den angegebenen Schlüssel enthält.|  
-|[Unorderedmapview:: Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen UnorderedMapView-Objekt ab.|  
-|[Unorderedmapview:: Size](#size)|Gibt die Anzahl von Elementen im aktuellen UnorderedMapView-Objekt zurück.|  
-|[Unorderedmapview:: Split](#split)|Teilt ein originales UnorderedMapView-Objekt in zwei UnorderedMapView-Objekte.|  
+|[UnorderedMapView::First](#first)|Gibt einen Iterator zurück, der mit dem ersten Element der Zuordnungsansicht initialisiert wird.|  
+|[UnorderedMapView::HasKey](#haskey)|Ermittelt, ob die aktuelle UnorderedMapView den angegebenen Schlüssel enthält.|  
+|[UnorderedMapView::Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen UnorderedMapView-Objekt ab.|  
+|[UnorderedMapView::Size](#size)|Gibt die Anzahl von Elementen im aktuellen UnorderedMapView-Objekt zurück.|  
+|[UnorderedMapView::Split](#split)|Teilt ein originales UnorderedMapView-Objekt in zwei UnorderedMapView-Objekte.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `UnorderedMapView`  
@@ -226,7 +228,7 @@ UnorderedMapView(
  Ein Funktionsobjekt, das einen Hashwert für einen Schlüssel haben kann. Standardmäßig [Std:: Hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) für die Typen, die `std::hash` unterstützt.  
   
  `P`  
- Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Schlüssel vergleichen kann, um deren Gleichheit zu bestimmen. Standardmäßig [Std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
+ Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Schlüssel vergleichen kann, um deren Gleichheit zu bestimmen. Defaults to [std::equal_to\<K>](../standard-library/equal-to-struct.md).  
   
  `m`  
  Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem [Std:: unordered_map](../standard-library/unordered-map-class.md) , wird verwendet, um die UnorderedMapView zu initialisieren.  

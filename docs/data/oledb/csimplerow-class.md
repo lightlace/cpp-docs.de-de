@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CSimpleRow
 - ATL::CSimpleRow
 - ATL.CSimpleRow
-dev_langs: C++
-helpviewer_keywords: CSimpleRow class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSimpleRow class
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8a5d8777a1219e204e0db1a16858ef30009dc67d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c241118d13f7efecef9413851d3d47ff9a08b58
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="csimplerow-class"></a>CSimpleRow-Klasse
 Stellt eine Standardimplementierung für das Zeilenhandle, im dient der [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) Klasse.  
   
-## <a name="syntax"></a>Syntax  
-  
-```  
+## <a name="syntax"></a>Syntax
+
+```cpp
 class CSimpleRow  
 ```  
   
@@ -55,7 +58,7 @@ class CSimpleRow
 |[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)|Ein Index in das Rowset, das den Cursor darstellt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl`erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow`kann auch durch Ihre eigene Implementierung der das Zeilenhandle ersetzt werden, entspricht ein Standardvorlagenargument zu `IRowsetImpl`. Die einzige Anforderung zum Ersetzen von dieser Klasse ist, haben Sie die Klasse einen Konstruktor bereitstellen, die einen einzelnen Parameter vom Typ akzeptiert **lang**.  
+ Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl` erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` kann auch durch Ihre eigene Implementierung der das Zeilenhandle ersetzt werden, entspricht ein Standardvorlagenargument zu `IRowsetImpl`. Die einzige Anforderung zum Ersetzen von dieser Klasse ist, haben Sie die Klasse einen Konstruktor bereitstellen, die einen einzelnen Parameter vom Typ akzeptiert **lang**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** „atldb.h“  

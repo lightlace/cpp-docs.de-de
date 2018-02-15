@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /bigobj
-dev_langs: C++
+f1_keywords:
+- /bigobj
+dev_langs:
+- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 384ec0de9e5cb1b3172b980bf7f412abe759ff91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 178206536522630616bfae0506bfa3edec98068c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Erhöhen der Anzahl von Abschnitten in der OBJ-Datei)
 **/ bigobj** erhöht die Anzahl von Abschnitten, die eine Objektdatei enthalten kann.  
@@ -37,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Hinweise  
  In der Standardeinstellung kann eine Objektdatei bis zu 65.536 (2^16) adressierbare Abschnitte enthalten. Dabei spielt es keine Rolle, welche Zielplattform angegeben ist. **/ bigobj** erhöht diese Adressenkapazität auf 4.294.967.296 (2 ^ 32).  
   
- Von den meisten Modulen werden keine OBJ-Dateien erzeugt, die mehr als 65.536 Abschnitte enthalten. Für computergenerierten Code oder Code, in dem häufig Gebrauch von Vorlagenbibliotheken gemacht wird, sind allerdings unter Umständen OBJ-Dateien erforderlich, die mehr Abschnitte enthalten. **/ bigobj** auf Windows Store-Projekte standardmäßig aktiviert ist, da der computergenerierte XAML-Code viele Header enthält. Wenn Sie diese Option in einem Windows Store-App-Projekt deaktivieren, ist es wahrscheinlich, dass der Compilerfehler C1128 auftritt.  
+ Von den meisten Modulen werden keine OBJ-Dateien erzeugt, die mehr als 65.536 Abschnitte enthalten. Für computergenerierten Code oder Code, in dem häufig Gebrauch von Vorlagenbibliotheken gemacht wird, sind allerdings unter Umständen OBJ-Dateien erforderlich, die mehr Abschnitte enthalten. **/ bigobj** für Projekte der universellen Windows-Plattform (UWP) standardmäßig aktiviert ist, da der computergenerierte XAML-Code viele Header enthält. Wenn Sie diese Option auf eine uwp-app-Projekt deaktivieren, werden Sie wahrscheinlich Compilerfehler C1128 auftritt.  
   
  Linker, die vor Visual C++ 2005 ausgeliefert OBJ-Dateien, die mit erzeugt wurden können nicht gelesen werden **/bigobj**.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbset
 - _mbsnbset_l
@@ -28,7 +29,8 @@ f1_keywords:
 - mbsnbset_l
 - _mbsnbset
 - _mbsnbset_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsnset function
 - _tcsnset_l function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f868cdf5d0200df174c5df3629b5578dbf06d31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c98745ae2d995dea5a65caab55cc7e45172a9f53
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 Legt die ersten `n` Bytes einer Multibyte-Zeichenfolge auf ein bestimmtes Zeichen fest. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcpy_s, _mbsnbcpy_s_l](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md).  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,9 +92,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` gibt einen Zeiger auf die geänderte Zeichenfolge zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen `_mbsnbset` und `_mbsnbset_l` legen höchstens die ersten `count` Bytes von `str` auf `c` fest. Wenn `count` größer als die Länge von `str` ist, wird die Länge von `str` anstelle von `count` verwendet. Wenn `c` ein Multibytezeichen ist und nicht vollständig auf das von `count` angegebene letzte Byte festgelegt werden kann, dann wird das letzte Byte mit einem Leerzeichen aufgefüllt. `_mbsnbset`und `_mbsnbset_l` eine terminierende ist nicht platziert werden, null am Ende der `str`.  
+ Die Funktionen `_mbsnbset` und `_mbsnbset_l` legen höchstens die ersten `count` Bytes von `str` auf `c` fest. Wenn `count` größer als die Länge von `str` ist, wird die Länge von `str` anstelle von `count` verwendet. Wenn `c` ein Multibytezeichen ist und nicht vollständig auf das von `count` angegebene letzte Byte festgelegt werden kann, dann wird das letzte Byte mit einem Leerzeichen aufgefüllt. `_mbsnbset` und `_mbsnbset_l` eine terminierende ist nicht platziert werden, null am Ende der `str`.  
   
- `_mbsnbset`und `_mbsnbset_l` ähnelt `_mbsnset`, Ausnahme, dass `count` Bytes anstatt `count` Zeichen des `c`.  
+ `_mbsnbset` und `_mbsnbset_l` ähnelt `_mbsnset`, Ausnahme, dass `count` Bytes anstatt `count` Zeichen des `c`.  
   
  Wenn `str` gleich `NULL` ist oder`count` null ist, generiert diese Funktion eine Ausnahme wegen eines ungültigen Parameters, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück. Wenn `c` kein gültiges Multibytezeichen ist, wird `errno` auf `EINVAL` festgelegt und ein Leerzeichen wird stattdessen verwendet.  
   

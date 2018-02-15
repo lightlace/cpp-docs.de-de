@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>Umwandlung von Typen (C++/CX)
 Vier verschiedene Umwandlungsoperatoren von Windows-Runtime-Typen: [Static_cast Operator](../cpp/static-cast-operator.md), [Dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **Safe_cast Operator**, und [ Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md). `safe_cast` und `static_cast` lösen eine Ausnahme aus, wenn die Umwandlung nicht ausgeführt werden kann; der Operator [static_cast](../cpp/static-cast-operator.md) führt außerdem bei der Kompilierung eine Typprüfung durch. `dynamic_cast` gibt `nullptr` zurück, wenn der Typ nicht umgewandelt werden kann. Obwohl `reinterpret_cast` einen Wert ungleich Null zurückgibt, ist er möglicherweise ungültig. Aus diesem Grund wird empfohlen, dass Sie `reinterpret_cast` nur verwenden, wenn Sie wissen, dass die Umwandlung folgt. Darüber hinaus wird empfohlen, keine C-stilartige Umwandlungen zu, in die C verwenden + c++ / CX code, da sie identisch sind `reinterpret_cast`.  
@@ -61,7 +62,7 @@ Windows-Runtime ist eine Abstraktion über COM, wodurch die HRESULT-Fehlercodes 
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- Verwendung `dynamic_cast` bei Umwandlung ein Objekts (genauer gesagt, ein Zirkumflexzeichen `^`) in einen stärker abgeleiteten Typ. Sie erwarten entweder, dass das Zielobjekt eventuell `nullptr` oder dass die Umwandlung möglicherweise fehlschlägt, und Sie sollten diese Bedingung als reguläre Code behandeln der Pfad nicht mit einer Ausnahme. Beispielsweise verwendet in der **Leere Windows Store-App** -Projektvorlage die `OnLaunched` -Methode in `app.xamp.cpp` `dynamic_cast` , um zu prüfen, ob das App-Fenster über Inhalt verfügt. Es ist kein Fehler, wenn kein Inhalt vorhanden ist; es ist eine erwartete Bedingung. `Windows::Current::Content` ist ein `Windows::UI::XAML::UIElement` und die Konvertierung erfolgt in einen `Windows::UI.XAML::Controls::Frame`, der ein besser abgeleiteter Typ in der Vererbungshierarchie ist.  
+ Verwendung `dynamic_cast` bei Umwandlung ein Objekts (genauer gesagt, ein Zirkumflexzeichen `^`) in einen stärker abgeleiteten Typ. Sie erwarten entweder, dass das Zielobjekt eventuell `nullptr` oder dass die Umwandlung möglicherweise fehlschlägt, und Sie sollten diese Bedingung als reguläre Code behandeln der Pfad nicht mit einer Ausnahme. Beispielsweise ist in der **leere App (universelle Windows)** Projektvorlage für Startseiten, die `OnLaunched` Methode in `app.xamp.cpp` verwendet `dynamic_cast` zu prüfen, ob die app-Fenster über Inhalt verfügt. Es ist kein Fehler, wenn kein Inhalt vorhanden ist; es ist eine erwartete Bedingung. `Windows::Current::Content` ist ein `Windows::UI::XAML::UIElement` und die Konvertierung erfolgt in einen `Windows::UI.XAML::Controls::Frame`, der ein besser abgeleiteter Typ in der Vererbungshierarchie ist.  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  

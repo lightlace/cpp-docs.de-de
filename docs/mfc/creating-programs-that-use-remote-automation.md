@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Erstellen von Programmen, die Remoteautomatisierung verwenden
 Ein Automatisierungsobjekt und alle Automatisierungscontroller kann ohne Änderung auf den Quellcode, ohne die Notwendigkeit für die Neukompilierung und ohne erneute Remoteautomatisierung verwenden. Nachdem Sie eine eingerichtet haben, die lokal funktioniert (d. h. auf dem gleichen Computer), müssen nur wenige Schritte für die es Remoteausführung durchlaufen.  

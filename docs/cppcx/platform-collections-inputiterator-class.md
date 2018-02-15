@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs: C++
-helpviewer_keywords: InputIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator-Klasse
 Stellt einen InputIterator der Standardvorlagenbibliothek für Auflistungen, die von der Windows-Runtime abgeleitet.  
@@ -52,7 +56,7 @@ class InputIterator;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Inputiterator:: Inputiterator](#ctor)|Initialisiert eine neue Instanz der InputIterator-Klasse.|  
+|[InputIterator::InputIterator](#ctor)|Initialisiert eine neue Instanz der InputIterator-Klasse.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -72,7 +76,7 @@ class InputIterator;
   
  **Namespace:** Platform::Collections  
 
-## <a name="ctor"></a>Inputiterator:: Inputiterator-Konstruktor
+## <a name="ctor"></a>  Inputiterator:: Inputiterator-Konstruktor
 Initialisiert eine neue Instanz der InputIterator-Klasse.  
   
 ### <a name="syntax"></a>Syntax  
@@ -88,7 +92,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>Inputiterator:: -&gt; Operator
+## <a name="operator-arrow"></a>  Inputiterator:: -&gt; Operator
 Ruft die Adresse des Elements ab, das vom aktuellen InputIterator angegeben wird.  
   
 ### <a name="syntax"></a>Syntax  
@@ -102,7 +106,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>Inputiterator:: *-Operator
+## <a name="operator-dereference"></a>  Inputiterator:: *-Operator
 Ruft einen Verweis auf das Element ab, das vom aktuellen InputIterator angegeben wird.  
   
 ### <a name="syntax"></a>Syntax  
@@ -116,7 +120,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Inputiterator:: Operator ==-Operator
+## <a name="operator-equality"></a>  Inputiterator:: Operator ==-Operator
 Gibt an, ob der aktuelle InputIterator gleich einem angegebenen InputIterator ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -134,7 +138,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Inputiterator:: Operator++-Operator
+## <a name="operator-increment"></a>  Inputiterator:: Operator++-Operator
 Inkrementiert den aktuellen InputIterator.  
   
 ### <a name="syntax"></a>Syntax  
@@ -154,7 +158,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Inputiterator::! =-Operator
+## <a name="operator-inequality"></a>  Inputiterator::! =-Operator
 Gibt an, ob der aktuelle InputIterator ungleich einem angegebenen InputIterator ist.  
   
 ### <a name="syntax"></a>Syntax  

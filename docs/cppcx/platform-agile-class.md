@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile-Klasse
 Stellt ein Objekt dar, das über „MashalingBehavior=Standard“ als Agile-Objekt verfügt, das die Chancen für Threadingausnahmen zur Laufzeit erheblich verringert. `Agile<T>` ermöglicht es dem Nicht-Agile-Objekt, denselben oder einen anderen Thread aufzurufen oder von diesem aufgerufen zu werden. Weitere Informationen finden Sie unter [Threading und Marshalling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -53,7 +56,7 @@ class Agile;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Agile:: Agile](#ctor)|Initialisiert eine neue Instanz der Agile-Klasse.|  
+|[Agile::Agile](#ctor)|Initialisiert eine neue Instanz der Agile-Klasse.|  
 |[Agile::~Agile-Destruktor](#dtor)|Zerstört die aktuelle Instanz der Agile-Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -86,7 +89,7 @@ class Agile;
   
  **Header:** agile.h  
 
-## <a name="ctor"></a>Agile:: Agile-Konstruktor
+## <a name="ctor"></a>  Agile:: Agile-Konstruktor
 Initialisiert eine neue Instanz der Agile-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Hinweise  
  Die erste Version dieses Konstruktors ist der Standardkonstruktor. Die zweite Version initialisiert eine neue Agile-Instanzklasse aus dem Objekt, das durch den `object`-Parameter spezifiziert wird. Die dritte Version ist der Kopierkonstruktor. Die vierte Version ist der Verschiebungskonstruktor. Dieser Konstruktor kann keine Ausnahmen auslösen.  
 
-## <a name="dtor"></a>Agile:: ~ Agile-Destruktor
+## <a name="dtor"></a>  Agile:: ~ Agile-Destruktor
 Zerstört die aktuelle Instanz der Agile-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
@@ -126,7 +129,7 @@ Zerstört die aktuelle Instanz der Agile-Klasse.
 ### <a name="remarks"></a>Hinweise  
  Dieser Destruktor gibt auch das Objekt frei, das vom aktuellen Agile-Objekt dargestellt wird.  
   
-## <a name="get"></a>Agile:: Get-Methode
+## <a name="get"></a>   Agile:: Get-Methode
 Gibt den Handle auf das Objekt zurück, das vom aktuellen Agile-Objekt dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -142,7 +145,7 @@ Gibt den Handle auf das Objekt zurück, das vom aktuellen Agile-Objekt dargestel
   
  Der Typ des Rückgabewerts ist eigentlich ein nicht genannter interner Typ. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, die es einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>Agile:: getaddressof-Methode
+## <a name="getaddressof"></a>  Agile:: getaddressof-Methode
 Initialisiert das aktuelle Agile-Objekt neu und gibt dann die Adresse eines Handles für ein Objekt vom Typ `T`zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>Hinweise  
  Dieser Vorgang gibt die aktuelle Darstellung eines Objekts vom Typ `T`, sofern vorhanden, werden die Agile-Objekt Datenmember initialisiert; der aktuelle threadingkontext abgerufen und gibt dann die Adresse einer Handle-to-Object-Variablen, die darstellen, können eine nicht-agile-Objekt. Damit eine Agile-Klasseninstanz ein Objekt darstellen, verwenden den Zuweisungsoperator ([Agile:: =](#operator-assign)) auf das Objekt auf der Agile-Klasseninstanz zuzuweisen.  
 
-## <a name="getaddressofforinout"></a>Agile:: getaddressofforinout-Methode
+## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout-Methode
 Gibt die Adresse eines Handles zum Objekt zurück, das vom aktuellen Agile-Objekt dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Hinweise  
  Durch diesen Vorgang wird der aktuelle Threadingkontext abgerufen und dann die Adresse eines Handles zum zugrunde liegenden Objekt zurückgegeben.  
 
-## <a name="release"></a>Agile:: Release-Methode
+## <a name="release"></a>  Agile:: Release-Methode
 Verwirft das Objekt und den Kontext, die dem aktuellen Agile-Objekt zugrunde liegen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>Hinweise  
  Das Objekt und der Kontext, die dem aktuellen Agile-Objekt zugrunde liegen, werden verworfen, falls sie vorhanden sind. Anschließend wird der Wert des Agile-Objekts auf Null gesetzt.  
 
-## <a name="operator-arrow"></a>Agile:: -&gt; Operator
+## <a name="operator-arrow"></a>  Agile:: -&gt; Operator
 Ruft ein Handle auf das Objekt ab, das vom aktuellen Agile-Objekt dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -214,7 +217,7 @@ const throw();
   
  Dieser Operator gibt tatsächlich einen nicht veröffentlichten internen Typ zurück. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, die es einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort.  
 
-## <a name="operator-assign"></a>Agile:: Operator =-Operator
+## <a name="operator-assign"></a>  Agile:: Operator =-Operator
 Weist das angegebene Objekt dem aktuellen Agile-Objekt zu.  
   
 ## <a name="syntax"></a>Syntax  

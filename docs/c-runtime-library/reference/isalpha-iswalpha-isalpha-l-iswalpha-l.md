@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 Bestimmt, ob eine ganze Zahl ein alphabetisches Zeichen darstellt.  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  Das statt des aktuellen Gebietsschemas zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich Null zurück, wenn `c` eine bestimmte Darstellung eines alphabetischen Zeichens ist. `isalpha`Gibt einen Wert ungleich NULL zurück, wenn `c` innerhalb der Bereiche A - Z oder a - Z. `iswalpha` gibt einen Wert ungleich 0 (null) nur für Breitzeichen zurück, für die `iswupper` oder `iswlower` ungleich 0 ist, das heißt für jedes Breitzeichen, das einen von der Implementierung abhängigen Satz darstellt, für den weder `iswcntrl`, `iswdigit`, `iswpunct` noch `iswspace` ungleich 0 ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
+ Jede dieser Routinen gibt einen Wert ungleich Null zurück, wenn `c` eine bestimmte Darstellung eines alphabetischen Zeichens ist. `isalpha` Gibt einen Wert ungleich NULL zurück, wenn `c` innerhalb der Bereiche A - Z oder a - Z. `iswalpha` gibt einen Wert ungleich 0 (null) nur für Breitzeichen zurück, für die `iswupper` oder `iswlower` ungleich 0 ist, das heißt für jedes Breitzeichen, das einen von der Implementierung abhängigen Satz darstellt, für den weder `iswcntrl`, `iswdigit`, `iswpunct` noch `iswspace` ungleich 0 ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   

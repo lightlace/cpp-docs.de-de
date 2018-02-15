@@ -4,39 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
-helpviewer_keywords: operators [ATL]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bcd8ce5e46617958f0188a3563771061a37d22c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bcbe04fb057ffc8077f422cd784b5d31691df1e3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-operators"></a>ATL-Operatoren
 Dieser Abschnitt enthält die Referenzthemen für die globalen ATL-Operatoren.  
   
 |Operator|Beschreibung|  
 |--------------|-----------------|  
-|[Operator ==](#operator_eq_eq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Gleichheit.|  
-|[Operator! =](#operator_neq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Ungleichheit.|  
+|[operator ==](#operator_eq_eq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Gleichheit.|  
+|[operator !=](#operator_neq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Ungleichheit.|  
 |[Operator <](#operator_lt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als das `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
-|[Operator >](#operator_gt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als die `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
-|[Operator < =](#operator_lt__eq)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
-|[Operator > =](#operator_gt__eq)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
+|[operator >](#operator_gt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als die `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
+|[operator <=](#operator_lt__eq)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
+|[operator >=](#operator_gt__eq)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h.  
   
-##  <a name="operator_eq_eq"></a>Operator ==  
+##  <a name="operator_eq_eq"></a>  Operator ==  
  Vergleicht `CSid` Objekte oder `SID` (Sicherheits-ID) Strukturen auf Gleichheit.  
   
 ```   
@@ -53,7 +57,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** , wenn die Objekte gleich sind, **"false"** Wenn sie nicht gleich sind.  
   
-##  <a name="operator_neq"></a>Operator! =  
+##  <a name="operator_neq"></a>  Operator! =  
  Vergleicht `CSid` Objekte oder `SID` (Sicherheits-ID) Strukturen auf Ungleichheit.  
   
 ```   
@@ -70,7 +74,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** , wenn die Objekte nicht gleich sind, **"false"** bei vorliegender.  
   
-##  <a name="operator_lt"></a>Operator <  
+##  <a name="operator_lt">Operator <</a>  
  Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als das `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).  
   
 ```   
@@ -90,7 +94,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` Struktur und wird implementiert, um Kompatibilität mit C++-Standardbibliothek Auflistungsklassen bereitzustellen.  
   
-##  <a name="operator_gt"></a>Operator >  
+##  <a name="operator_gt"></a>  Operator >  
  Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als die `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).  
   
 ```   
@@ -110,7 +114,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` Struktur und wird implementiert, um Kompatibilität mit C++-Standardbibliothek Auflistungsklassen bereitzustellen.  
   
-##  <a name="operator_lt__eq"></a>Operator < =  
+##  <a name="operator_lt__eq"></a>  Operator < =  
  Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).  
   
 ```   
@@ -130,7 +134,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` Struktur und wird implementiert, um Kompatibilität mit C++-Standardbibliothek Auflistungsklassen bereitzustellen.  
   
-##  <a name="operator_gt__eq"></a>Operator > =  
+##  <a name="operator_gt__eq"></a>  Operator > =  
  Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).  
   
 ```   

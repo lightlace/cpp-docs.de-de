@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /subsystem
-dev_langs: C++
+f1_keywords:
+- /subsystem
+dev_langs:
+- C++
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 945e0d6da5ff1c5f24f8c0e10693f06334e0a25c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Gibt die vom ausführbaren Image benötigte Ausführungsumgebung an.  
@@ -40,7 +44,7 @@ Gibt die vom ausführbaren Image benötigte Ausführungsumgebung an.
  Sie können jedes der folgenden Subsysteme angeben:  
   
  BOOT_APPLICATION  
- Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter[zu der BCD WMI-Provider](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter [zu der BCD WMI-Provider](http://msdn.microsoft.com/library/aa362639.aspx).  
   
  CONSOLE  
  Eine Windows-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Konsolenanwendungen zur Verfügung gestellt.  
@@ -55,7 +59,7 @@ Gibt die vom ausführbaren Image benötigte Ausführungsumgebung an.
  Eine App, die im POSIX-Subsystem in Windows ausgeführt wird.  
   
  WINDOWS  
- Eine App, die in der grafischen Umgebung von Windows ausgeführt wird. Dies umfasst Desktop-Apps und Windows Store-Apps.  
+ Eine App, die in der grafischen Umgebung von Windows ausgeführt wird. Dies umfasst desktop-apps und apps der universellen Windows-Plattform (UWP).  
   
  WINDOWSCE  
  Das WINDOWSCE-Subsystem gibt an, dass die App dafür vorgesehen ist, auf einem Gerät mit einer Version von Windows CE-Kernels ausgeführt zu werden. Kernelversionen schließen PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 und Windows Embedded Compact 7 ein.  

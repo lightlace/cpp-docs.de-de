@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception-Klasse
 Stellt Fehler dar, die beim Ausführen einer Anwendung auftreten. Benutzerdefinierte Ausnahmeklassen können nicht von `Platform::Exception`abgeleitet werden. Wenn Sie eine benutzerdefinierte Ausnahme benötigen, können Sie `Platform::COMException` verwenden und ein app-spezifisches HRESULT angeben.  
@@ -44,22 +47,22 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[Exception:: Exception](#ctor)|Initialisiert eine neue Instanz der `Exception`-Klasse.|  
+|[Exception::Exception](#ctor)|Initialisiert eine neue Instanz der `Exception`-Klasse.|  
   
 ### <a name="methods"></a>Methoden  
  Die `Exception` -Klasse erbt die Methoden `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`und `ToString()` von [Platform::Object Class](../cppcx/platform-object-class.md)abgeleitet werden. Die `Exception` -Klasse verfügt auch über die folgende Methode.  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[Exception:: createexception](#createexception)|Erstellt eine Ausnahme, die den angegebenen HRESULT-Wert darstellt.|  
+|[Exception::CreateException](#createexception)|Erstellt eine Ausnahme, die den angegebenen HRESULT-Wert darstellt.|  
   
 ### <a name="properties"></a>Eigenschaften  
  Die Ausnahmeklasse verfügt auch über die folgenden Eigenschaften:  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[Exception:: HRESULT](#hresult)|Das HRESULT, das der Ausnahme entspricht.|  
-|[Exception:: Message](#message)|Eine Meldung, in der die Ausnahme beschrieben wird. Dieser Wert ist schreibgeschützt und kann nicht geändert werden, nachdem `Exception` erstellt wurde.|  
+|[Exception::HResult](#hresult)|Das HRESULT, das der Ausnahme entspricht.|  
+|[Exception::Message](#message)|Eine Meldung, in der die Ausnahme beschrieben wird. Dieser Wert ist schreibgeschützt und kann nicht geändert werden, nachdem `Exception` erstellt wurde.|  
   
 ### <a name="requirements"></a>Anforderungen  
  **Unterstützter Client:** Windows 8  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Metadaten:** platform.winmd  
 
-## <a name="createexception"></a>Exception:: createexception-Methode
+## <a name="createexception"></a> Exception:: createexception-Methode
 Erstellt ein Platform::Exception^ aus einem angegebenen HRESULT-Wert.  
   
 ### <a name="syntax"></a>Syntax  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Exception:: Exception-Konstruktor
+## <a name="ctor"></a>  Exception:: Exception-Konstruktor
 Initialisiert eine neue Instanz der Exception-Klasse.  
   
 ### <a name="syntax"></a>Syntax  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Exception:: HRESULT-Eigenschaft
+## <a name="hresult"></a>  Exception:: HRESULT-Eigenschaft
 Das HRESULT, das der Ausnahme entspricht.  
   
 ### <a name="syntax"></a>Syntax  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Exception:: Message-Eigenschaft
+## <a name="message"></a> Exception:: Message-Eigenschaft
 Die Meldung, in der der Fehler beschrieben wird.  
   
 ### <a name="syntax"></a>Syntax  

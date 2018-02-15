@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Vom Consumer-Assistenten generierte Methoden
 ATL-OLE DB-Consumer-Assistent und der MFC-Anwendungs-Assistent generiert bestimmte Funktionen, die Sie berücksichtigen sollten. Beachten Sie, dass einige Methoden in attributierten Projekten unterschiedlich implementiert werden, daher gibt es einige Einschränkungen. jeder Fall wird im folgenden erläutert. Informationen zum Anzeigen von injiziertem Code finden Sie unter [Debuggen von injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`Öffnet die Datenquelle und Rowsets und aktiviert Lesezeichen, sofern diese verfügbar sind.  
+-   `OpenAll` Öffnet die Datenquelle und Rowsets und aktiviert Lesezeichen, sofern diese verfügbar sind.  
   
--   `CloseAll`Schließt alle geöffneten Rowsets und alle befehlsausführungen frei.  
+-   `CloseAll` Schließt alle geöffneten Rowsets und alle befehlsausführungen frei.  
   
--   `OpenRowset`wird von OpenAll zum Öffnen des Consumers oder mehrere Rowsets aufgerufen.  
+-   `OpenRowset` wird von OpenAll zum Öffnen des Consumers oder mehrere Rowsets aufgerufen.  
   
--   `GetRowsetProperties`Ruft einen Zeiger auf das Rowset-Eigenschaftengruppe mit dem Eigenschaften festgelegt werden können.  
+-   `GetRowsetProperties` Ruft einen Zeiger auf das Rowset-Eigenschaftengruppe mit dem Eigenschaften festgelegt werden können.  
   
--   `OpenDataSource`Öffnet die Datenquelle unter Verwendung der Initialisierungszeichenfolge, die Sie, in angegeben der **Datenlinkeigenschaften** (Dialogfeld).  
+-   `OpenDataSource` Öffnet die Datenquelle unter Verwendung der Initialisierungszeichenfolge, die Sie, in angegeben der **Datenlinkeigenschaften** (Dialogfeld).  
   
--   `CloseDataSource`Schließt die Datenquelle auf eine geeignete Weise.  
+-   `CloseDataSource` Schließt die Datenquelle auf eine geeignete Weise.  
   
 ## <a name="openall-and-closeall"></a>OpenAll und CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** ruft diese Methode, um die oder mehrere Rowsets in den Consumer zu öffnen. Sie müssen normalerweise nicht aufrufen, `OpenRowset` es sei denn, Sie zum Arbeiten mit mehreren Data Sources/Sitzungen/Rowsets. `OpenRowset`wird in der Headerdatei Befehlsklasse oder Tabellenklasse Klasse deklariert werden:  
+ **OpenAll** ruft diese Methode, um die oder mehrere Rowsets in den Consumer zu öffnen. Sie müssen normalerweise nicht aufrufen, `OpenRowset` es sei denn, Sie zum Arbeiten mit mehreren Data Sources/Sitzungen/Rowsets. `OpenRowset` wird in der Headerdatei Befehlsklasse oder Tabellenklasse Klasse deklariert werden:  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Diese Methode ruft einen Zeiger auf das Rowset-Eigenschaftengruppe ab; this-Zeiger können Eigenschaften wie DBPROP_IRowsetChange fest. `GetRowsetProperties`wird wie folgt in die Benutzerdatensatz-Klasse verwendet. Sie können diesen Code aus, um zusätzliche Rowseteigenschaften festlegen ändern:  
+ Diese Methode ruft einen Zeiger auf das Rowset-Eigenschaftengruppe ab; this-Zeiger können Eigenschaften wie DBPROP_IRowsetChange fest. `GetRowsetProperties` wird wie folgt in die Benutzerdatensatz-Klasse verwendet. Sie können diesen Code aus, um zusätzliche Rowseteigenschaften festlegen ändern:  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

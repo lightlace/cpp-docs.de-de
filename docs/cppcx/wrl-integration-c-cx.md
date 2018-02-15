@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 859a25f4fc9698899f1139038e161d28da06220e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 234141df693f67b97bf2ec83bd9063f69addeb0f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wrl-integration-ccx"></a>WRL-Integration (C++/CX)
 
@@ -31,7 +32,7 @@ Weitere Informationen zum Erstellen und konsumieren [!INCLUDE[cppwrl_short](incl
 
 Der folgende Codeausschnitt veranschaulicht die Verwendung von WRL und [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] nutzen [!INCLUDE[wrt](includes/wrt-md.md)] Klassen und eine Metadatendatei überprüft.
 
-Das Beispiel stammt aus einem Codeausschnitt im die [Forum zum Erstellen von Windows Store-apps](http://social.msdn.microsoft.com/Forums/winappswithnativecode/thread/211ef583-db11-4e55-926b-6d9ab53dbdb4). Der Autor dieses Codeausschnitts bietet die folgenden Haftungsausschlüsse und Bedingungen an:
+Das Beispiel stammt von einem Codeausschnitt im Forum zum Erstellen von Microsoft Store-apps. Der Autor dieses Codeausschnitts bietet die folgenden Haftungsausschlüsse und Bedingungen an:
 
 1. C++ stellt keine bestimmte API bereit, um über [!INCLUDE[wrt](includes/wrt-md.md)] -Typen nachzudenken, aber Windows-Metadatendateien (WINMD) für einen Typ sind mit CLR-Metadatendateien vollständig kompatibel. Windows bietet die neuen APIs zur Metadatenermittlung (RoGetMetaDataFile), um zur WINMD-Datei für einen bestimmten Typ zu gelangen. Diese APIs sind für C++-Entwickler jedoch nur von begrenztem Nutzen, da Sie Klassen nicht instanziieren können.
 

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -115,7 +118,7 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>Map:: Clear-Methode
+## <a name="clear"></a>  Map:: Clear-Methode
 
 Entfernt alle Schlüssel-Wert-Paare aus dem derzeitigen Map-Objekt.
 
@@ -125,7 +128,7 @@ Entfernt alle Schlüssel-Wert-Paare aus dem derzeitigen Map-Objekt.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Map:: First-Methode
+## <a name="first"></a>  Map:: First-Methode
 
 Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt, oder `nullptr`, wenn die Zuordnung leer ist.
 
@@ -144,7 +147,7 @@ Ein Iterator, der das erste Element in der Zuordnung angibt.
 
 Eine einfache Möglichkeit, den von First() zurückgegeben Iterator zu halten, den Rückgabewert einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myMap->First();`.
 
-## <a name="getview"></a>Map:: GetView-Methode
+## <a name="getview"></a>  Map:: GetView-Methode
 
 Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück; d. h. eine [Platform::Collections::MapView Klasse](../cppcx/platform-collections-mapview-class.md), implementiert die [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) Schnittstelle.
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Ein `MapView`-Objekt.
 
-## <a name="haskey"></a>Map:: haskey-Methode
+## <a name="haskey"></a>  Map:: haskey-Methode
 
 Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.
 
@@ -177,7 +180,7 @@ Der zum Suchen des Map-Elements verwendete Schlüssel. Der Typ des *Schlüssel* 
 
 `true`, wenn der Schlüssel gefunden wurde, andernfalls `false`.
 
-## <a name="insert"></a>Map:: Insert-Methode
+## <a name="insert"></a>  Map:: Insert-Methode
 
 Fügt das angegebene Schlüssel-Wert-Paar dem aktuellen Map-Objekt hinzu.
 
@@ -197,9 +200,9 @@ Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Map entspricht *Schlüssel* und der Wertteil dieses Elements wird festgelegt, um *Wert*. `false`Wenn kein vorhandenes Element in der aktuellen Map entspricht *Schlüssel* und *Schlüssel* und *Wert* -Parameter zu einem Schlüssel-Wert-Paar gemacht und anschließend zur aktuellen Map hinzugefügt werden.
+`true` Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Map entspricht *Schlüssel* und der Wertteil dieses Elements wird festgelegt, um *Wert*. `false` Wenn kein vorhandenes Element in der aktuellen Map entspricht *Schlüssel* und *Schlüssel* und *Wert* -Parameter zu einem Schlüssel-Wert-Paar gemacht und anschließend zur aktuellen Map hinzugefügt werden.
 
-## <a name="lookup"></a>Map:: Lookup-Methode
+## <a name="lookup"></a>  Map:: Lookup-Methode
 
 Ruft den Wert des Typs V ab, der mit dem angegebenen Schlüssel des Typs K verknüpft ist, sofern der Schlüssel vorhanden ist.
 
@@ -222,7 +225,7 @@ Der Wert, der zugeordnet ist die *Schlüssel*. Der Typ des Rückgabewerts ist de
 
 Wenn der Schlüssel nicht vorhanden ist, wird eine [Platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) ausgelöst wird.
 
-## <a name="ctor"></a>Map:: Map-Konstruktor
+## <a name="ctor"></a>  Map:: Map-Konstruktor
 
 Initialisiert eine neue Instanz der Map-Klasse.
 
@@ -256,7 +259,7 @@ Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verw
 *last*  
 Der Eingabeiterator des ersten Elements nach einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
 
-## <a name="mapchanged"></a>Map:: mapchanged-Ereignis
+## <a name="mapchanged"></a>  Map:: mapchanged-Ereignis
 
 Wird ausgelöst, wenn ein Element in eine Zuordnung eingefügt bzw. aus der Zuordnung entfernt wird.
 
@@ -272,9 +275,9 @@ Ein [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/a
 
 ## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework
 
-Windows Store-apps, die mithilfe von c# oder Visual Basic-Projekt IMap\<K, V > als IDictionary\<K, V >.
+Windows-Runtime-apps, die mithilfe von c# oder Visual Basic-Projekt IMap\<K, V > als IDictionary\<K, V >.
 
-## <a name="remove"></a>Map:: Remove-Methode
+## <a name="remove"></a>  Map:: Remove-Methode
 
 Löscht das angegebene Schlüssel-Wert-Paar vom aktuellen Map-Objekt.
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
-## <a name="size"></a>Map:: size-Methode
+## <a name="size"></a>  Map:: size-Methode
 
 Gibt die Anzahl der [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) Elementen in der Zuordnung.
 

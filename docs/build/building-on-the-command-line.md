@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Erstellen von C/C++-Code in der Befehlszeile
 
@@ -82,7 +85,7 @@ Zusätzliche Befehlsdateien stehen zum Einrichten von bestimmten Build-Architekt
 >   
 > Die vcvarsall.bat-Datei ist auch von Version zu Version unterschiedlich. Wenn die aktuelle Version von Visual C++ auf einem Computer, die auch eine frühere Version von Visual C++ verfügt installiert ist, werden nicht ausgeführt "vcvarsall.bat" oder eine andere Befehlsdatei aus unterschiedlichen Versionen im selben Eingabeaufforderungsfenster.  
  
-Die einfachste Möglichkeit, geben Sie eine bestimmten Build-Architektur in einer vorhandenen Befehlsfenster ist die Verwendung die Datei "vcvarsall.bat". "Vcvarsall.bat" können Sie die Umgebungsvariablen so konfigurieren Sie die Befehlszeile für systeminterne Kompilierung für 32-Bit oder 64-Bit- oder Cross-Kompilierung, X86 X64 oder ARM-Prozessoren festzulegen; Windows Store, universelle Windows-Plattform oder Windows-Desktop-Plattformen als Ziel; an welche Windows-SDK verwenden; und die Version der Plattform Toolset angeben. Wenn keine Argumente bereitgestellt werden, konfiguriert die vcvarsall.bat die Umgebungsvariablen für die Verwendung des aktuellen systemeigenen 32-Bit-Compilers für X86 Windows-Desktop-Ziele. Allerdings können Sie ihn so konfigurieren Sie alle für das systemeigene und cross Compilertools verwenden. Wenn Sie eine Compilerkonfiguration, die nicht installiert oder ist nicht auf der buildcomputerarchitektur verfügbar angeben, wird eine Fehlermeldung angezeigt. Diese Tabelle zeigt die Architektur, die unterstützt Argumente:  
+Die einfachste Möglichkeit, geben Sie eine bestimmten Build-Architektur in einer vorhandenen Befehlsfenster ist die Verwendung die Datei "vcvarsall.bat". "Vcvarsall.bat" können Sie die Umgebungsvariablen so konfigurieren Sie die Befehlszeile für systeminterne Kompilierung für 32-Bit oder 64-Bit- oder Cross-Kompilierung, X86 X64 oder ARM-Prozessoren festzulegen; Microsoft Store, universelle Windows-Plattform oder Windows-Desktop-Plattformen als Ziel; an welche Windows-SDK verwenden; und die Version der Plattform Toolset angeben. Wenn keine Argumente bereitgestellt werden, konfiguriert die vcvarsall.bat die Umgebungsvariablen für die Verwendung des aktuellen systemeigenen 32-Bit-Compilers für X86 Windows-Desktop-Ziele. Allerdings können Sie ihn so konfigurieren Sie alle für das systemeigene und cross Compilertools verwenden. Wenn Sie eine Compilerkonfiguration, die nicht installiert oder ist nicht auf der buildcomputerarchitektur verfügbar angeben, wird eine Fehlermeldung angezeigt. Diese Tabelle zeigt die Architektur, die unterstützt Argumente:  
   
 |Vcvarsall.bat-Architektur-argument|Compiler|Architektur des Host-Computers|Buildausgabearchitektur|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  

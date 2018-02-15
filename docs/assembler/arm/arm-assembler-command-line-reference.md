@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Befehlszeilenreferenz des ARM-Assemblers
 Dieser Artikel enthält Befehlszeilen Informationen zu den Microsoft-ARM-Assembler *Armasm*, die kompiliert ARMv7 Thumb-Assemblysprache in die Microsoft-Implementierung des Common Object File Format (COFF). Der Linker kann COFF-Code mit Objektcode verknüpfen, das erzeugt wird, indem der ARM-Assembler oder der C-Compiler, zusammen mit der Objektbibliotheken, die durch den Bibliothekar erstellt werden.  
@@ -35,25 +38,25 @@ armasm [[options]] -o objectfile sourcefile
   
 #### <a name="parameters"></a>Parameter  
  `options`  
- -Fehler`filename`  
+ -Fehler `filename`  
  Umleiten von Fehler- und Warnmeldungen zu `filename`.  
   
- -i`dir[;dir]`  
+ -i `dir[;dir]`  
  Die angegebenen Verzeichnisse zur Suche Includepfad hinzufügen.  
   
- -vordefinieren`directive`  
+ -vordefinieren `directive`  
  Geben Sie eine Direktive SETEINE, SETL oder SETS vordefinieren ein Symbol. Beispiel: **armasm.exe-vordefinieren "COUNT SETEINE 150" source.asm**. Weitere Informationen finden Sie unter der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Deaktivieren Sie alle Warnmeldungen.  
   
- -ignorieren`warning`  
+ -ignorieren `warning`  
  Deaktivieren Sie die angegebene Warnung. Mögliche Werte finden Sie im Abschnitt zu den Warnungen.  
   
  -Hilfe  
  Drucken Sie die Befehlszeilenhilfe-Nachricht.  
   
- -Computer`machine`  
+ -Computer `machine`  
  Geben Sie den Computer im PE-Header festgelegt.  Mögliche Werte für `machine` sind:  
 **ARM**– legt den Computertyp auf IMAGE_FILE_MACHINE_ARMNT fest. Dies ist die Standardeinstellung.   
 **THUMB**– legt den Computertyp auf IMAGE_FILE_MACHINE_THUMB fest.  
@@ -61,7 +64,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  ARMv7-Stil generieren IT-Blöcken.  Standardmäßig ARMv8-kompatiblen IT-Blöcke werden generiert.  
   
- -über`filename`  
+ -via `filename`  
  Lesen zusätzliche Befehlszeilenargumente aus `filename`.  
   
  -16  
@@ -73,7 +76,7 @@ armasm [[options]] -o objectfile sourcefile
  -g  
  Debuginformationen zu generieren.  
   
- -ErrorReport:`option`  
+ -errorReport: `option`  
  Geben Sie an, wie interne Assembler Fehler an Microsoft gemeldet werden.  Mögliche Werte für `option` sind:   
 **keine**– keine Berichte senden.   
 **Eingabeaufforderung**– der Benutzer aufgefordert, die Berichte sofort übertragen.   
@@ -88,9 +91,9 @@ armasm [[options]] -o objectfile sourcefile
   
  Im folgenden Beispiel wird veranschaulicht, wie Armasm in einem typischen Szenario verwendet wird. Verwenden Sie zuerst Armasm zum Erstellen einer Quelldatei Assemblysprache (ASM) eine Objektdatei (obj). Klicken Sie dann verwenden Sie der CL-Befehlszeilen-C-Compiler zum Kompilieren einer Quelldatei (c), und auch die Linkeroption zum Verknüpfen der ARM-Objektdatei.  
   
- **Armasm myasmcode.asm -o myasmcode.obj**  
+ **armasm myasmcode.asm -o myasmcode.obj**  
   
- **CL myccode.c/Link myasmcode.obj**  
+ **cl myccode.c /link myasmcode.obj**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Diagnosemeldungen des ARM-Assembler](../../assembler/arm/arm-assembler-diagnostic-messages.md)   

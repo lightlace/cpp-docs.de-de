@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap-Klasse
 
@@ -102,7 +104,7 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap:: Clear-Methode
+## <a name="clear"></a>  Unorderedmap:: Clear-Methode
 
 Entfernt alle Schlüssel-Wert-Paare aus dem aktuellen UnorderedMap-Objekt.
 
@@ -112,7 +114,7 @@ Entfernt alle Schlüssel-Wert-Paare aus dem aktuellen UnorderedMap-Objekt.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap:: First-Methode
+## <a name="first"></a>  Unorderedmap:: First-Methode
 
 Gibt einen Iterator, der angibt, das erste [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) Element in der ungeordneten Zuordnung.
 
@@ -132,7 +134,7 @@ Ein Iterator, der das erste Element in der Zuordnung angibt.
 
 Eine einfache Möglichkeit, den von First() zurückgegeben Iterator zu halten, den Rückgabewert einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>Unorderedmap:: GetView-Methode
+## <a name="getview"></a>  Unorderedmap:: GetView-Methode
 
 Gibt eine schreibgeschützte Ansicht der aktuellen UnorderedMap zurück; d. h. eine [Platform::Collections::UnorderedMapView Klasse](../cppcx/platform-collections-unorderedmapview-class.md) , implementiert die [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) Schnittstelle.
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Ein `UnorderedMapView`-Objekt.
 
-## <a name="haskey"></a>Unorderedmap:: Haskey-Methode
+## <a name="haskey"></a>  Unorderedmap:: Haskey-Methode
 
 Ermittelt, ob die aktuelle ungeordnete Zuordnung den angegebenen Schlüssel enthält.
 
@@ -190,9 +192,9 @@ Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Map entspricht *Schlüssel* und der Wertteil dieses Elements wird festgelegt, um *Wert*. `false`Wenn kein vorhandenes Element in der aktuellen Map entspricht *Schlüssel* und *Schlüssel* und *Wert* -Parameter zu einem Schlüssel-Wert-Paar gemacht und anschließend zur aktuellen ungeordneten Zuordnung hinzugefügt werden.
+`true` Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Map entspricht *Schlüssel* und der Wertteil dieses Elements wird festgelegt, um *Wert*. `false` Wenn kein vorhandenes Element in der aktuellen Map entspricht *Schlüssel* und *Schlüssel* und *Wert* -Parameter zu einem Schlüssel-Wert-Paar gemacht und anschließend zur aktuellen ungeordneten Zuordnung hinzugefügt werden.
 
-## <a name="lookup"></a>Unorderedmap:: Lookup-Methode
+## <a name="lookup"></a>  Unorderedmap:: Lookup-Methode
 
 Ruft den Wert des Typs V ab, der dem angegebenen Schlüssel des Typs K zugeordnet ist.
 
@@ -213,7 +215,7 @@ Der zum Suchen eines in der UnorderedMap vorhandenen Elements verwendete Schlüs
 
 Der Wert, der zugeordnet ist die *Schlüssel*. Der Typ des Rückgabewerts ist der Typname *V*.
 
-## <a name="mapchanged"></a>Unorderedmap:: Mapchanged
+## <a name="mapchanged"></a>  Unorderedmap:: Mapchanged
 
 Wird ausgelöst, wenn ein Element in eine Zuordnung eingefügt bzw. aus der Zuordnung entfernt wird.
 
@@ -229,9 +231,9 @@ Ein [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/a
 
 ## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework
 
-Windows Store-apps, die C#- oder Visual Basic-IMap Projekt\<K, V > als IDictionary\<K, V >.
+Windows-Runtime-apps, die für C#- oder Visual Basic-IMap Projekt\<K, V > als IDictionary\<K, V >.
 
-## <a name="remove"></a>Unorderedmap:: Remove-Methode
+## <a name="remove"></a>  Unorderedmap:: Remove-Methode
 
 Löscht das angegebene Schlüssel-Wert-Paar vom UnorderedMap-Objekt.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
-## <a name="size"></a>Unorderedmap:: size-Methode
+## <a name="size"></a>  Unorderedmap:: size-Methode
 
 Gibt die Anzahl der [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) Elemente in der unorderedmap zurück.
 

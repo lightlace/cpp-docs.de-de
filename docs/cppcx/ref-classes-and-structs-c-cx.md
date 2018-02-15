@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Verweisklassen und Strukturen (C++/CX)
 Die C + c++ / CX unterstützt benutzerdefinierte *Verweisklassen* und *referenzstrukturen*, und eine benutzerdefinierte *Wert Klassen* und *Wert Strukturen*. Diese Datenstrukturen sind die primären Container, durch die C + c++ / CX unterstützt die Windows-Runtime-Typsystem. Die Inhalte werden nach bestimmten Regeln an Metadaten ausgegeben und können dadurch zwischen Windows-Runtime-Komponenten und universelle Windows-Plattform-apps, die in C++ oder anderen Sprachen geschrieben sind ausgetauscht werden.  
@@ -100,7 +101,7 @@ Die C + c++ / CX unterstützt benutzerdefinierte *Verweisklassen* und *referenzs
   
  Das Verhalten ist nicht definiert, wenn Sie versuchen, auf die Member einer Klasse zuzugreifen, deren Destruktor bereits ausgeführt wurde. Wahrscheinlich wird das Programm abstürzen. Das Aufrufen von `delete t` für einen Typ, der keinen öffentlichen Destruktor besitzt, hat keine Auswirkungen. Das Aufrufen von `delete this` für einen Typ oder eine Basisklasse, der bzw. die einen bekannten `private` - oder `protected private` -Destruktor besitzt, aus der Typhierarchie hat keine Auswirkungen.  
   
- Wenn Sie einen öffentlichen Destruktor deklarieren, generiert der Compiler den Code so, dass die Verweisklasse `Platform::IDisposable` implementiert und der Destruktor die `Dispose` -Methode implementiert. `Platform::IDisposable`ist die C + c++ / CX-Projektion `Windows::Foundation::IClosable`. Implementieren Sie niemals explizit diese Schnittstellen.  
+ Wenn Sie einen öffentlichen Destruktor deklarieren, generiert der Compiler den Code so, dass die Verweisklasse `Platform::IDisposable` implementiert und der Destruktor die `Dispose` -Methode implementiert. `Platform::IDisposable` ist die C + c++ / CX-Projektion `Windows::Foundation::IClosable`. Implementieren Sie niemals explizit diese Schnittstellen.  
   
 ## <a name="inheritance"></a>Vererbung  
  Platform::Object ist die universelle Basisklasse für alle Verweisklassen. Alle Verweisklassen sind implizit konvertierbar in Platform::Object und können [Object::ToString](../cppcx/platform-object-class.md#tostring)überschreiben. Allerdings soll das Vererbungsmodell von Windows-Runtime keine allgemeine Vererbungsmodell; in C + c++ / CX bedeutet dies, dass eine benutzerdefinierte öffentliche Verweisklasse als Basisklasse verwendet werden kann.  

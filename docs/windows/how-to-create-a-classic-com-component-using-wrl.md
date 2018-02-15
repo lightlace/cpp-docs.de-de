@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Gewusst wie: Erstellen einer klassischen COM-Komponente mit WRL
-Sie können Windows Runtime C++ Template Library (WRL) verwenden, um grundlegende klassische COM-Komponenten für die Verwendung in desktop-apps erstellen außerdem Verwendung für [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] apps. Für die Erstellung von COM-Komponenten möglicherweise die Windows Runtime C++ Template Library weniger Code als das ATL. Weitere Informationen über die Teilmenge von COM, die die Windows Runtime C++ Template Library unterstützt, finden Sie unter [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
+Sie können Windows Runtime C++ Template Library (WRL) verwenden, um grundlegende klassische COM-Komponenten für die Verwendung in desktop-apps, zusätzlich zur Verwendung für apps der universellen Windows-Plattform (UWP) zu erstellen. Für die Erstellung von COM-Komponenten möglicherweise die Windows Runtime C++ Template Library weniger Code als das ATL. Weitere Informationen über die Teilmenge von COM, die die Windows Runtime C++ Template Library unterstützt, finden Sie unter [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
  Dieses Dokument wird gezeigt, wie die Windows Runtime C++ Template Library verwenden, um eine grundlegende COM-Komponente zu erstellen. Obwohl Sie den Bereitstellungsmechanismus, der für Ihre Anforderungen am besten geeignet ist, verwenden können, zeigt dieses Dokument auch eine einfache Möglichkeit zur Registrierung und Nutzung der COM-Komponente aus einer Desktop-App.  
   
@@ -39,7 +41,7 @@ Sie können Windows Runtime C++ Template Library (WRL) verwenden, um grundlegend
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  Definieren Sie die `CalculatorComponent` Klasse in CalculatorComponent.cpp. Die `CalculatorComponent` Klasse erbt von [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::wrl::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) gibt an, dass die Klasse abgeleitet [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) und nicht ["iinspectable"](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` steht nur [!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)] app-Komponenten.) `CoCreatableClass` erstellt eine Factory für die Klasse, die mit Funktionen wie z. B. verwendet werden kann [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
+5.  Definieren Sie die `CalculatorComponent` Klasse in CalculatorComponent.cpp. Die `CalculatorComponent` Klasse erbt von [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::wrl::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) gibt an, dass die Klasse abgeleitet [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) und nicht ["iinspectable"](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` ist nur für Windows-Runtime-app-Komponenten verfügbar.) `CoCreatableClass` erstellt eine Factory für die Klasse, die mit Funktionen wie z. B. verwendet werden kann [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   

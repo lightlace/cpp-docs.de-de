@@ -4,19 +4,22 @@ description: "Installieren Sie Visual Studio-Unterstützung für Visual C++"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Erstellen und Ausführen eines C++-Konsolen-app-Projekts
 
@@ -83,6 +86,8 @@ Wenn die rote Wellenlinien unter alle Elemente in der Quellcode-Editors angezeig
 ### <a name="run-your-code-in-a-command-window-issues"></a>Führen Sie den Code in einem Befehlsfenster Probleme
 
 Sie können auch in den Projektmappenordner für Debuggen in der Befehlszeile zur Ausführung Ihrer Anwendung navigieren. Ihre app kann nicht aus anderen Verzeichnissen ausgeführt werden, ohne den Pfad zu der app angeben. Allerdings können Sie Ihre app in ein anderes Verzeichnis kopieren und führen Sie es von dort aus.
+
+Wenn Sie nicht sehen **als Pfad kopieren** klicken Sie im Kontextmenü verworfen werden, klicken Sie im Menü, und klicken Sie dann die UMSCHALTTASTE gedrückt halten, während Sie es erneut öffnen. Dies wird nur ergänzend bereitgestellt. Sie können auch kopieren Sie den Pfad zu dem Ordner, aus der Datei-Explorer Suchleiste und fügen Sie ihn in die **ausführen** Dialogfeld, und geben Sie dann den Namen der ausführbaren Datei am Ende. Es ist ein wenig mehr eingeben, aber es bringt das gleiche Ergebnis.
 
 [Zurück.](#run-your-code-in-a-command-window)
 

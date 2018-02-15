@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstombs_s_l
 - wcstombs_s
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstombs_s function
 - string conversion, wide characters
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 863f6dc5b1c7a41145607e8f8ba83466324dac07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -97,16 +100,16 @@ Die Anzahl von konvertierten Zeichen.
 [out] *Mbstr*  
 Die Pufferadresse für die resultierende konvertierte Multibyte-Zeichenfolge.  
   
-[in] *SizeInBytes*  
+[in] *sizeInBytes*  
 Die Größe in Bytes, der die *Mbstr* Puffer.  
   
-[in] *Wcstr*  
+[in] *wcstr*  
 Zeigt auf die zu konvertierende Breitzeichenfolge.  
   
-[in] *Anzahl*  
+[in] *count*  
 Die maximale Anzahl von Bytes zum Speichern in der *Mbstr* Puffer, nicht einschließlich des abschließenden Null-Zeichens, oder [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
-[in] *Gebietsschema*  
+[in] *locale*  
 Das zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
@@ -116,7 +119,7 @@ Null, wenn erfolgreich, Fehlercode bei Fehler.
 |Fehlerbedingung|Rückgabewert und `errno`|  
 |---------------------|------------------------------|  
 |*Mbstr* ist `NULL` und *SizeInBytes* > 0|`EINVAL`|  
-|*Wcstr* ist`NULL`|`EINVAL`|  
+|*wcstr* is `NULL`|`EINVAL`|  
 |Der Zielpuffer ist zu klein, um die konvertierte Zeichenfolge enthalten (es sei denn, *Anzahl* ist `_TRUNCATE`; finden Sie unter "Hinweise" weiter unten)|`ERANGE`|  
   
 Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die Ausführung fortgesetzt werden kann, gibt die Funktion einen Fehlercode zurück und legt `errno` wie in der Tabelle angegeben fest.  

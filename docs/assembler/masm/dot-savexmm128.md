@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: .SAVEXMM128
-dev_langs: C++
-helpviewer_keywords: .SAVEXMM128 directive
+ms.topic: reference
+f1_keywords:
+- .SAVEXMM128
+dev_langs:
+- C++
+helpviewer_keywords:
+- .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 384615a0c58c3c28a2e0958d6909546f5753ce6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e163f71b0c1d49f845cc871a26d4ee369843597
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 Entweder generiert eine `UWOP_SAVE_XMM128` oder ein `UWOP_SAVE_XMM128_FAR` Entladen von Codeeintrag für den angegebenen XMM-Register und offset unter Verwendung der aktuellen Prolog Verschiebung. MASM wird die effizienteste Codierung auswählen.  
@@ -34,7 +39,7 @@ Entweder generiert eine `UWOP_SAVE_XMM128` oder ein `UWOP_SAVE_XMM128_FAR` Entla
 ## <a name="remarks"></a>Hinweise  
  . SAVEXMM128 ermöglicht Benutzern das ml64.exe angeben, wie eine Funktion Frame entlädt und ist nur zulässig, innerhalb der Prolog, die aus erweitert die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren keine Code; Es werden nur generiert, `.xdata` und `.pdata`. . SAVEXMM128 sollte Anweisungen vorangestellt werden, die die Aktionen, entladen werden tatsächlich implementieren. Es wird empfohlen, die Direktiven entladen und der Code, den sie in einem Makro Entladung vorgesehen sind, um sicherzustellen, dass Vereinbarung zu umschließen.  
   
- `offset`ein Vielfaches von 16 muss sein.  
+ `offset` ein Vielfaches von 16 muss sein.  
   
  Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   

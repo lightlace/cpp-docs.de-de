@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Wann ist Remoteautomatisierung angebracht?
 DCOM 1996 veröffentlicht wurde, und ist mit 32-Bit und 64-Bit-Plattformen verfügbar. Visual Basic-Team bei Microsoft hat Visual Basic als mithilfe der Automatisierung um seiner Komponenten für die Kommunikation zu ermöglichen immer sichtbar. Das Fehlen einer verteilten Version begrenzt die Verwendung dieser Funktionen in Enterprise-Umgebungen schwerwiegend ist, das Team, das Entwickeln von Visual Basic 4.0 Enterprise Edition entschieden, einen eigenen Satz von Remoting-Komponenten für die Automatisierung die Erstellung untersuchen Teile des OLE und COM. Ein Hauptziel war klar, stellen Sie sicher, dass das Ergebnis mit kompatibel wäre und von DCOM ersetzt werden, kann wenn er verfügbar ist. Sie optimiert dann Remote Automatisierung (RA) für 16-Bit- und 32-Bit-Windows-Plattformen zu implementieren.  

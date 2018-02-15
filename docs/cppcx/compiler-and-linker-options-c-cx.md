@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Optionen für Compiler und Linker (C++/CX)
 Eine Umgebungsvariable C + c++ / CX-Compileroptionen und Linkeroptionen unterstützen die Erstellung von apps für Windows-Runtime.  
@@ -39,7 +40,7 @@ Eine Umgebungsvariable C + c++ / CX-Compileroptionen und Linkeroptionen unterst�
 |Option|Beschreibung|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|Markiert die ausführbare Datei als (nur) „im App-Container ausführbar“.|  
-|/ WINMD [: {NEIN &#124;}]|Gibt eine WINMD-Datei und eine zugeordnete Binärdatei aus. Diese Option muss an den Linker übergeben werden, damit eine WINMD-Datei ausgegeben wird.<br /><br /> **NO**– Gibt keine WINMD-Datei, aber eine Binärdatei aus<br /><br /> **ONLY**– Gibt eine WINMD-Datei, aber keine Binärdatei aus|  
+|/WINMD[:{NO&#124;ONLY}]|Gibt eine WINMD-Datei und eine zugeordnete Binärdatei aus. Diese Option muss an den Linker übergeben werden, damit eine WINMD-Datei ausgegeben wird.<br /><br /> **NO**– Gibt keine WINMD-Datei, aber eine Binärdatei aus<br /><br /> **ONLY**– Gibt eine WINMD-Datei, aber keine Binärdatei aus|  
 |/WINMDFILE:*Dateiname*|Der Name der auszugebenden WINMD-Datei, anstelle des Namens der WINMD-Standarddatei. Wenn mehrere Dateinamen in der Befehlszeile angegeben werden, wird der letzte Name verwendet.|  
 |/WINMDDELAYSIGN[:NO]|Signiert die WINMD-Datei teilweise und platziert den öffentlichen Schlüssel in der Binärdatei.<br /><br /> **NO**– (Standard) Die WINMD-Datei wird nicht signiert.<br /><br /> /WINMDDELAYSIGN hat keine Auswirkung, sofern nicht /WINMDKEYFILE oder /WINMDKEYCONTAINER ebenfalls angegeben sind.|  
 |/WINMDKEYCONTAINER:*Name*|Gibt einen Schlüsselcontainer zum Signieren einer Assembly an. Der *Name* -Parameter entspricht dem Schlüsselcontainer, der zum Signieren der Metadatendatei verwendet wird.|  

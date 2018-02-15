@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Code zur Verknüpfungszeit generieren)
 ```  
@@ -40,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  :INCREMENTAL (optional)  
  Gibt an, dass der Linker nur ganzen Programms Optimierungs- oder Link-Time-codegenerierung (zur linkzeit LTCG) auf den Satz der von einer Bearbeitung, statt des gesamten Projekts betroffenen Dateien anwendet. Standardmäßig ist dieses Flag nicht festgelegt, wenn/LTCG angegeben wird, und das gesamte Projekt wird mit Optimierung des gesamten Programms gelinkt.  
   
- : NOSTATUS &#124; : STATUS (optional)  
+ :NOSTATUS &#124; :STATUS (optional)  
  Gibt an, ob der Linker eine Statusanzeige, die anzeigt ausgibt, welcher Prozentsatz des Linkvorgangs abgeschlossen ist. Standardmäßig wird diese Statusinformationen nicht angezeigt.  
   
  :OFF (optional)  
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/ LTCG und MSIL-Module  
  Mit [/GL](../../build/reference/gl-whole-program-optimization.md) und [/clr](../../build/reference/clr-common-language-runtime-compilation.md) kompilierte Module können als Eingabe für den Linker verwendet werden, wenn **/LTCG** angegeben ist.  
   
--   **/ LTCG** können akzeptiert systemeigene Objektdateien, gemischte systemeigene/verwaltete Objektdateien (kompiliert mit **"/ CLR"**), reine Objektdateien (kompiliert mit **/CLR: reine**), und sichere Objekt Dateien ( Mithilfe von kompiliert **/CLR: safe**). Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
+-   **/ LTCG** können akzeptiert systemeigene Objektdateien und gemischte systemeigene/verwaltete Objektdateien (kompiliert mit **"/ CLR"**). Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
--   **/ LTCG** akzeptiert sichere NETMODULE-Dateien, die erstellt werden können **/CLR: safe/LN** in Visual C++ und **/target: Module** in einem Visual Studio .NET Compiler. NETMODULE-Dateien, die mit **/clr** oder **/clr:pure** erzeugt wurden, werden von **/LTCG**jedoch nicht akzeptiert.  
-  
--   /LTCG:PGI akzeptiert keine systemeigenen mit **/GL** und **/clr**, kompilierten Module und keine reinen (mithilfe von **/clr:pure**erzeugten) Module  
+-   / LTCG: PGI akzeptiert keine systemeigenen Module mit kompiliert **/GL** und **"/ CLR"**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
