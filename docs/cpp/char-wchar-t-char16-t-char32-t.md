@@ -1,10 +1,11 @@
 ---
 title: Char, Wchar_t, char16_t und char32_t | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -12,33 +13,40 @@ f1_keywords:
 - char16_t_cpp
 - wchar_t_cpp
 - char32_t_cpp
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c01d4718bbc1781ea4705945bb90874384e09058
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a87eff9801b2754909159ef4d5e2c24c079ee8f1
+ms.sourcegitcommit: 23a0ddd271bbcc31631283542981ff5f1693d27f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
-Die Typen char, wchar_t, char16_t und char32_t sind integrierte Typen, die alphanumerische Zeichen, alphanumerische Glyphen und Zeichen darstellen, die nicht gedruckt werden können. char weist eine Größe von 8 Bit, wchar_t und char16_t von 16 Bit und char32_t von 32 Bit auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
+Die Typen **Char**, **Wchar_t**, **char16_t** und **char32_t** sind integrierte Typen, die alphanumerische Zeichen darstellen sowie nicht-alphanumerische Glyphen und nicht druckbaren Zeichen.
+
+## <a name="syntax"></a>Syntax
+
 ```cpp  
-char     ch1{ 'a' };    
-wchar_t  ch2{ 'a' }; // or {L'a'}    
-char16_t ch3{ L'a' };// or {L'a'}    
-char32_t ch4{ L'a' };// or {L'a'}  
+char     ch1{ 'a' };  // or { u8'a' }   
+wchar_t  ch2{ L'a' };    
+char16_t ch3{ u'a' };    
+char32_t ch4{ U'a' };  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Der `char`-Typ war der ursprüngliche Zeichentyp in C und C++. Dieser kann zum Speichern von Zeichen aus dem ASCII-Zeichensatz, einem ISO-8859-Zeichensatz oder dem UTF-8-Zeichensatz verwendet werden. Der Typ `unsigned char` häufig zur Darstellung einer *Byte* einen integrierten Typ in C++ ist. Der char-Typ ist für den Text in zahlreichen Sprachen nicht geeignet. Im Allgemeinen sollten moderne Programme zur Darstellung von Text Breitzeichentypen verwenden. Unicode ist  
-  
- Der basic_string-Typ ist in der C++-Standardbibliothek weist Spezialisierungen für schmale und Breitzeichenfolgen auf. Verwenden Sie std::string für Zeichen vom Typ char und std::wstring, wenn die Zeichen vom Typ wchar_t sind. Andere Typen zur Darstellung von Text einschließlich std::stringstream und std::cout weisen Spezialisierungen für schmale und Breitzeichenfolgen auf.  
+## <a name="remarks"></a>Hinweise
+
+Die **Char** Typ war der ursprüngliche Zeichentyp in C und C++. Der Typ **unsigned Char** häufig zur Darstellung einer *Byte*, einen integrierten Typ in C++ ist. Die **Char** -Typ kann zum Speichern von Zeichen aus dem ASCII-Zeichensatz oder keines der ISO-8859-Zeichensätze, und einzelne Bytes von Multi-Byte-Zeichen, z. B. Shift-JIS oder UTF-8-Codierung von Unicode-Zeichensatz verwendet werden. Zeichenfolgen in **Char** Typ als bezeichnet *eingrenzen* Zeichenfolgen, selbst wenn verwendet, um Multi-Byte-Zeichen zu codieren. In der Microsoft-Compiler **Char** ist ein 8-Bit-Typ.
+
+Die **Wchar_t** Typ ist ein Breitzeichen Implementierung definierten Typ. In der Microsoft-Compiler, stellt er ein 16-Bit-Breitzeichen, die zum Speichern von Unicode codiert als UTF-16LE verwendet die systemeigenen Zeichentyp auf Windows-Betriebssystemen. Die Breitzeichenversionen der Universal C Runtime (UCRT) Library-Funktionen verwenden **Wchar_t** und seine Zeiger und das Array als Parameter und Rückgabewerte, Typen, wie die Breitzeichenversionen der systemeigene Windows-API.
+
+Die **char16_t** und **char32_t** Typen 16-Bit- und 32-Bit-Breitzeichen bzw. darstellen. Unicode codiert als UTF-16 kann, in gespeichert werden der **char16_t** Typ und Unicode codiert als UTF-32 kann, in gespeichert werden der **char32_t** Typ. Zeichenfolgen dieser Typen und **Wchar_t** sind als alle genannten *wide* Zeichenfolgen, obwohl der Begriff häufig speziell für die Zeichenfolgen der bezieht sich **Wchar_t** Typ.
+
+In der C++-Standardbibliothek der `basic_string` Typ für schmale und breitzeichenfolgen spezialisiert ist. Verwendung `std::string` Wenn sind die Zeichen vom Typ **Char**, `std::u16string` Wenn sind die Zeichen vom Typ **char16_t**, `std::u32string` Wenn sind die Zeichen vom Typ **char32_t** , und `std::wstring` Wenn sind die Zeichen vom Typ **Wchar_t**. Andere Typen, die Darstellung von Text einschließlich `std::stringstream` und `std::cout` weisen spezialisierungen für schmale und breitzeichenfolgen.  
   
