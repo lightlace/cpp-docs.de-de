@@ -15,15 +15,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c447389de1accfe95674855645fe044e1d3df41
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Standardmäßig deaktivierte Compilerwarnungen
 
-Der Compiler schließt Warnungen ein, die standardmäßig deaktiviert sind, da die meisten Benutzer sieh nicht sehen möchten. Sie können jedoch diese Warnungen aktivieren, indem Sie eine der folgenden Optionen verwenden.
+Der Compiler schließt Warnungen ein, die standardmäßig deaktiviert sind, da die meisten Entwickler nicht, um sie anzuzeigen möchten. Sie können jedoch diese Warnungen aktivieren, indem Sie eine der folgenden Optionen verwenden.
 
 **#pragma warning(default :** *warning_number* **)**  
 Die angegebene Warnung (*Warning_number*) auf der Standardebene aktiviert ist. Dokumentation für die Warnung enthält die Standardebene der Warnung.

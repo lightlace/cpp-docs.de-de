@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurieren von Programmen für Windows XP
 
 Da Visual Studio mehrere Plattformtoolsets unterstützt, können Sie abzielen, Betriebssysteme und Laufzeitbibliotheken, die die vom Standardtoolset nicht unterstützt werden. Beispielsweise durch den Wechsel des Plattformtoolsets, können C ++ 11 und C ++ 14 C ++ 17-spracherweiterungen unterstützt, die vom Visual C++-Compiler in Visual Studio zum Erstellen von apps, die auf [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Sie können auch ältere Plattformtoolsets verwenden, um binärkompatiblen Legacycode zu verwalten und dennoch die neuesten Funktionen von Visual Studio-IDE nutzen.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installieren Sie die Windows XP-Plattformtoolset
-
 Zum Abrufen der Plattformtoolset und Komponenten Ziel [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] führen Sie in Visual Studio 2017 Installer für Visual Studio. Wenn Sie ursprünglich Visual Studio installieren oder wenn Sie die Option **ändern** zum Ändern einer vorhandenen Installations sicher, dass die **Desktopentwicklung mit C++** arbeitsauslastung ausgewählt ist. Wählen Sie in der Liste der optionalen Komponenten, die für diese arbeitsauslastung **Windows XP-Unterstützung für C++**, und wählen Sie dann **installieren** oder **ändern**.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP als Ziel
@@ -65,7 +64,7 @@ Aufgrund von Unterschieden bei Plattform-und bibliotheksunterstützung ist ist d
 
 - **C++-Sprachfunktionen**
 
-   Nur Features der Programmiersprache C++ in Visual Studio 2012 implementiert werden in apps, die die v110 unterstützt\_Xp-Plattformtoolset. Nur Features der Programmiersprache C++ in Visual Studio 2013 implementiert werden in apps, die die v120 unterstützt\_Xp-Plattformtoolset. Nur Features der Programmiersprache C++ in Visual Studio 2012 implementiert werden in apps, die die v140 unterstützt\_Xp-Plattformtoolset. Visual Studio verwendet den entsprechenden Compiler bei der Erstellung der älteren Plattformtoolsets. Verwenden Sie das neueste Windows XP-Plattformtoolset, um zusätzliche Funktionen der Programmiersprache C++ in dieser Version des Compilers implementiert nutzen.
+   Nur Features der Programmiersprache C++ in Visual Studio 2012 implementiert werden in apps, die die v110 unterstützt\_Xp-Plattformtoolset. Nur Features der Programmiersprache C++ in Visual Studio 2013 implementiert werden in apps, die die v120 unterstützt\_Xp-Plattformtoolset. Nur Features der Programmiersprache C++ in Visual Studio 2015 implementiert werden in apps, die die v140 unterstützt\_Xp-Plattformtoolset. Visual Studio verwendet den entsprechenden Compiler bei der Erstellung der älteren Plattformtoolsets. Verwenden Sie das neueste Windows XP-Plattformtoolset, um zusätzliche Funktionen der Programmiersprache C++ in dieser Version des Compilers implementiert nutzen.
 
 - **Remotedebuggen**
 
