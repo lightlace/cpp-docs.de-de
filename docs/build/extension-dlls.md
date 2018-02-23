@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>MFC-Erweiterungs-DLLs
 Eine MFC-Erweiterungs-DLL ist eine DLL, die typischerweise wiederverwendbare Klassen implementiert, welche von bestehenden Microsoft Foundation Class Library-Klassen abgeleitet wurden.  
@@ -61,7 +65,7 @@ Eine MFC-Erweiterungs-DLL ist eine DLL, die typischerweise wiederverwendbare Kla
   
  Vor MFC, Version 4.0, wurde dieser DLL-Typ AFXDLL genannt. Diese Bezeichnung bezieht sich auf die `_AFXDLL` Präprozessorsymbol, das beim Erstellen der DLL definiert ist.  
   
- Die Importbibliotheken für die gemeinsam genutzte MFC-Version werden gemäß der Konvention, die in beschriebenen benannt [Namenskonventionen für MFC-DLLs](../build/naming-conventions-for-mfc-dlls.md). Visual C++ bietet vordefinierte Versionen der MFC-DLLs sowie eine Reihe von MFC-fremden DLLs, die Sie mit Ihren Anwendungen verwenden und weitergeben können. Diese sind in der Datei Redist.txt dokumentiert, die im Ordner Programme\Microsoft Visual Studio installiert ist.  
+ Die Importbibliotheken für die gemeinsam genutzte MFC-Version werden gemäß der Konvention, die in beschriebenen benannt [Namenskonventionen für MFC-DLLs](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ bietet vordefinierte Versionen der MFC-DLLs sowie eine Reihe von MFC-fremden DLLs, die Sie mit Ihren Anwendungen verwenden und weitergeben können. Diese sind in der Datei Redist.txt dokumentiert, die im Ordner Programme\Microsoft Visual Studio installiert ist.  
   
  Wenn Sie den Export über eine DEF-Datei vornehmen, fügen Sie den folgenden Code am Anfang und am Ende der Headerdatei ein:  
   

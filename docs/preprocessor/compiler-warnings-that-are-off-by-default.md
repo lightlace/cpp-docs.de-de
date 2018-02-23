@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Standardmäßig deaktivierte Compilerwarnungen
+# <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen standardmäßig deaktiviert sind
 
-Der Compiler schließt Warnungen ein, die standardmäßig deaktiviert sind, da die meisten Entwickler nicht, um sie anzuzeigen möchten. Sie können jedoch diese Warnungen aktivieren, indem Sie eine der folgenden Optionen verwenden.
+Der Compiler schließt Warnungen ein, die standardmäßig deaktiviert, da die meisten Entwickler nicht, um sie anzuzeigen möchten. In einigen Fällen eine stilistischer Wahl darstellen oder sind allgemeine Idiome in älterem Code oder eine Microsoft-Erweiterung zur Programmiersprache nutzen. In anderen Fällen geben sie einen Bereich, in denen Programmierer häufig falsche Annahmen stellen, die zu unerwarteten oder nicht definierten Verhalten führen kann. Einige Warnungen möglicherweise großen abweichungen in der Bibliothek-Header.
 
-**#pragma warning(default :** *warning_number* **)**  
-Die angegebene Warnung (*Warning_number*) auf der Standardebene aktiviert ist. Dokumentation für die Warnung enthält die Standardebene der Warnung.
+Sie können diese Warnungen aktivieren, indem Sie mit einer der folgenden Optionen:
 
-**#pragma warning(** *warning_level* **:** *warning_number* **)**  
-Die angegebene Warnung (*Warning_number*) aktiviert ist, auf der angegebenen Ebene (*Warning_level*).
+- **#pragma warning(default :** *warning_number* **)**  
+   Die angegebene Warnung (*Warning_number*) auf der Standardebene aktiviert ist. Dokumentation für die Warnung enthält die Standardebene der Warnung.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Wall** aktiviert alle Warnungen, die standardmäßig deaktiviert sind.
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**  
+   Die angegebene Warnung (*Warning_number*) aktiviert ist, auf der angegebenen Ebene (*Warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Wall** aktiviert alle Warnungen, die standardmäßig deaktiviert sind. Wenn Sie diese Option verwenden, Sie können einzelne Warnungen über Deaktivieren der [/WD](../build/reference/compiler-option-warning-level.md) Option.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   Dadurch können die Warnung  *nnnn*  Ebene *l*.
 
 Standardmäßig werden die folgenden Warnungen deaktiviert.
 
@@ -133,6 +138,7 @@ Standardmäßig werden die folgenden Warnungen deaktiviert.
 |C5032 (Stufe 4)|#pragma warning"(Push) ohne entsprechende #pragma warning"(POP) erkannt|
 |C5035|Verwenden der Funktion "*Feature*" bewirkt, dass Funktion *Funktion* als Gast-Code kompiliert werden|
 |C5036 (Stufe 1)|Beim Kompilieren mit /hybrid:x86arm64-Funktion Varargs zeigerkonvertierung "*Typ1*'to'*Typ2*"|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|Datenmember "*member1*"wird so initialisiert, nach der Datenmember"*member2*"|
 
 Diese Warnungen sind deaktiviert, es sei denn, die [/ liberalen-](../build/reference/permissive-standards-conformance.md) (Compileroption) festgelegt ist:
 

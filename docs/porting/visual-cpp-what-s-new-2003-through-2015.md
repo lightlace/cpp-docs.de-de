@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1545,16 +1545,16 @@ Diese verbesserte Unterstützung für ISO-C/C++-Standards erfordert möglicherwe
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>Verbesserungen der profilgesteuerten Optimierung (PGO)
 
 - Leistungsverbesserungen durch eine Reduzierung der Arbeitsseiten von Apps, die durch die Verwendung von PGO optimiert werden.
-- Neue profilgesteuerte Optimierung für die Entwicklung von Windows Store-Apps.
+- Neue profilgesteuerte Optimierung für die Entwicklung von Windows-Runtime-Apps.
 
-### <a name="windows-store-app-development-support"></a>Support für die Entwicklung von Windows Store-Apps
+### <a name="windows-runtime-app-development-support"></a>Unterstützung für die Entwicklung von Windows-Runtime-Apps
 
-- **Unterstützung für geschachtelte Typen in Wertstrukturen.** Sie können jetzt Werttypen definieren, indem Sie Felder verwenden, die NULL sein können – z.B. „IBox<int>^“ im Gegensatz zu „int“. Das bedeutet, dass die Felder entweder einen Wert haben oder „nullptr“ entsprechen.
+- **Unterstützung für geschachtelte Typen in Wertstrukturen.** Sie können jetzt Werttypen definieren, indem Sie Felder verwenden, die NULL sein können – z.B. „IBox\<int>^“ im Gegensatz zu „int“. Das bedeutet, dass die Felder entweder einen Wert haben oder „nullptr“ entsprechen.
 - **Umfangreichere Ausnahmeinformationen.** C++/CX unterstützt das neue Windows-Fehlermodell, das die Erfassung und die Weitergabe von umfangreichen Ausnahmeinformationen über der Anwendungsbinärdateischnittstelle (ABI) aktiviert. Dies schließt auch Aufruflisten und benutzerdefinierte Meldungs- ein.
 - **„Object::ToString()“ ist jetzt virtuell.** Sie können „ToString“ in benutzerdefinierten Windows-Runtime-Referenztypen überschreiben.
 - **Unterstützung für veraltete APIs.** Öffentliche Windows-Runtime-APIs können jetzt als veraltet markiert und ihnen kann eine benutzerdefinierte Meldung zugewiesen werden, die als Buildwarnung angezeigt werden und Migrationsanleitungen bereitstellen kann.
 - **Debugger-Verbesserungen.** Unterstützung für systemeigenes/JavaScript-Interop-Debuggen, Windows Runtime-Ausnahmediagnose und asynchrones Debuggen von Code (Windows Runtime und PPL).
-  - Hinweis: Zusätzlich zu den C++-spezifischen Features und Erweiterungen, die in diesem Abschnitt beschrieben werden, können Sie mithilfe anderer Erweiterungen in Visual Studio bessere Apps für den Windows Store schreiben.
+  - Hinweis: Zusätzlich zu den C++-spezifischen Features und Erweiterungen, die in diesem Abschnitt beschrieben werden, können Sie mithilfe anderer Erweiterungen in Visual Studio bessere Apps für Windows-Runtime schreiben.
 
 ### <a name="diagnostics-enhancements"></a>Verbesserungen bei Diagnosen
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Support für die Entwicklung von Windows Store-Apps
+### <a name="windows-runtime-app-development-support"></a>Unterstützung für die Entwicklung von Windows-Runtime-Apps
 
-- **Natives XAML-basiertes Benutzeroberflächenmodell.** Sie können jetzt für Windows Store-Apps das neue XAML-basierte Benutzeroberflächenmodell verwenden.
-- **Komponentenerweiterungen für Visual C++.** Diese Erweiterungen vereinfachen die Verarbeitung von Windows-Runtime-Objekten – ein wichtiger Bestandteil von Windows Store-Apps. Weitere Informationen finden Sie unter „Roadmap for Windows Store apps using C++ (Übersicht zur Verwendung von C++ für Windows Store-Apps)“ und in der Sprachreferenz zu Visual C++ (C++/CX).
-- **DirectX-Spiele.** Sie können spannende Spiele entwickeln, indem Sie die neue DirectX-Unterstützung für Windows Store-Apps verwenden.
-- **XAML/DirectX-Interop.** Windows Store-Apps, die XAML und DirectX verwenden, arbeiten jetzt auf effiziente Weise zusammen.
+- **Natives XAML-basiertes Benutzeroberflächenmodell.** Sie können jetzt für Windows Runtime-Apps das neue native XAML-basierte Benutzeroberflächenmodell verwenden.
+- **Komponentenerweiterungen für Visual C++.** Diese Erweiterungen vereinfachen die Verarbeitung von Windows-Runtime-Objekten, die ein wichtiger Bestandteil von Windows Runtime-Apps sind. Weitere Informationen finden Sie unter [Roadmap for Windows Runtime apps using C++ (Übersicht zur Verwendung von C++ für Windows-Runtime-Apps)](../windows/universal-windows-apps-cpp.md) und in der [Sprachreferenz zu Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md).
+- **DirectX-Spiele.** Sie können spannende Spiele entwickeln, indem Sie die neue DirectX-Unterstützung für Windows-Runtime-Apps verwenden.
+- **XAML/DirectX-Interop.** Windows-Runtime-Apps, die XAML und DirectX verwenden, arbeiten jetzt auf effiziente Weise zusammen.
 - **Komponente für die Windows-Runtime für die DLL-Entwicklung.** Durch die Komponente für die DLL-Entwicklung wird die Windows-Runtime-Umgebung erweiterbar.
 
 ### <a name="compiler-and-linker"></a>Compiler und Linker
@@ -1941,7 +1941,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Native 64-Bit-Compiler und Cross-Compiler.
 - Die /analyze-Compileroption (Enterprise-Codeanalyse) wurde hinzugefügt.
 - Die /bigobj-Compileroption wurde hinzugefügt.
-- „/clr:pure“, „/clr:safe“ und „/clr:oldSyntax“ wurden hinzugefügt.
+- „/clr:pure“, „/clr:safe“ und „/clr:oldSyntax“ wurden hinzugefügt. (Später in Visual Studio 2015 veraltet.)
 - Veraltete Compileroptionen: Viele Compileroptionen wurden in diesem Release als veraltet gekennzeichnet. Weitere Informationen finden Sie unter „Deprecated Compiler Options (Veraltete Compileroptionen)“.
 - Das doppelte Thunking in /clr-Code wurde reduziert. Weitere Informationen finden Sie unter „Doppeltes Thunking (C++)“.
 - „/EH“ (Ausnahmebehandlungsmodell) oder „/EHs“ können nicht mehr verwendet werden, um eine Ausnahme zu erfassen, die mit einer anderen Funktion als mit „Throw“ ausgelöst wird. Verwenden Sie stattdessen „/EHa“.

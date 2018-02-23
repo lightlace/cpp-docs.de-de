@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>Klassenvorlagen
 Dieses Thema beschreibt die Regeln, die spezifisch für C++-Klassenvorlagen sind.  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  Lokale Klassen dürfen keine Membervorlagen haben.  
   
 ## <a name="template-friends"></a>Friend-Vorlagen  
- Klassenvorlagen können haben [Freunde](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Eine Klasse oder Klassenvorlage, Funktion oder Funktionsvorlage kann ein Friend einer Vorlagenklasse sein. Friends können auch Spezialisierungen einer Klassenvorlage oder Funktionsvorlage sein, jedoch keine teilweisen Spezialisierungen.  
+ Klassenvorlagen können haben [Freunde](friend-cpp.md). Eine Klasse oder Klassenvorlage, Funktion oder Funktionsvorlage kann ein Friend einer Vorlagenklasse sein. Friends können auch Spezialisierungen einer Klassenvorlage oder Funktionsvorlage sein, jedoch keine teilweisen Spezialisierungen.  
   
  Im folgenden Beispiel wird eine Friend-Funktion als Funktionsvorlage innerhalb der Klassenvorlage definiert. Dieser Code erstellt eine Version der Friend-Funktion für jede Instanziierung der Vorlage. Dieses Konstrukt ist nützlich, wenn die Friend-Funktion von denselben Vorlagenparametern wie die Klasse abhängt.  
   

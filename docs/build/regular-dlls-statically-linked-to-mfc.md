@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - regular MFC DLLs [C++]
 - DLLs [C++], regular
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Statisch mit MFC verknüpfte reguläre MFC-DLLs
 Eine reguläre MFC-DLL statisch mit MFC verknüpft wird, eine DLL, die MFC intern verwendet und von ausführbaren MFC oder MFC-Dateien können in der DLL exportierten Funktionen aufgerufen werden. Wie der Name beschrieben wird, wird diese Art von DLL erstellt mithilfe der static Link Library-Version von MFC. Funktionen sind in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert. Ein Beispiel zu schreiben, erstellen und eine reguläre MFC-DLL verwenden, finden Sie im Beispiel [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
@@ -72,7 +75,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
  Eine, die statisch mit MFC verknüpften DLL kann nicht mit der gemeinsam genutzten MFC-DLLs auch dynamisch verknüpfen. Eine DLL, die statisch mit MFC verknüpften ist dynamisch zu einer Anwendung genau wie jede andere DLL gebunden. Anwendungen, die mit es genau wie jede andere DLL verknüpft wird.  
   
- Die standardmäßigen MFC-static Link Libraries heißen gemäß der Konvention, die in beschriebenen [Namenskonventionen für MFC-DLLs](../build/naming-conventions-for-mfc-dlls.md). Mit MFC, Version 3.0 und höher ist es jedoch nicht mehr erforderlich, manuell an den Linker geben die Version der MFC-Bibliothek, die eingebunden werden soll. Stattdessen automatisch die MFC-Headerdateien bestimmt die richtige Version der MFC-Bibliothek zur Verknüpfung von basierend auf Präprozessor definiert, wie z. B.  **\_DEBUGGEN** oder **_UNICODE**. Die MFC-Headerdateien hinzufügen Option Direktiven den Linker angewiesen wird, um in einer bestimmten Version der MFC-Bibliothek zu verknüpfen.  
+ Die standardmäßigen MFC-static Link Libraries heißen gemäß der Konvention, die in beschriebenen [Namenskonventionen für MFC-DLLs](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Mit MFC, Version 3.0 und höher ist es jedoch nicht mehr erforderlich, manuell an den Linker geben die Version der MFC-Bibliothek, die eingebunden werden soll. Stattdessen automatisch die MFC-Headerdateien bestimmt die richtige Version der MFC-Bibliothek zur Verknüpfung von basierend auf Präprozessor definiert, wie z. B.  **\_DEBUGGEN** oder **_UNICODE**. Die MFC-Headerdateien hinzufügen Option Direktiven den Linker angewiesen wird, um in einer bestimmten Version der MFC-Bibliothek zu verknüpfen.  
   
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   

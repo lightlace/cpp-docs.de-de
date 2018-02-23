@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
@@ -75,7 +75,7 @@ Informieren Sie sich, wie Sie Hilfe erhalten, Fehler melden und Vorschläge für
 ## <a name="writing-applications-in-c"></a>Schreiben von Anwendungen in C++
 
 [Universelle Windows-Apps](windows/universal-windows-apps-cpp.md)  
-Rufen Sie Anleitungen und Referenzmaterial im Windows Developer Center ab. Informationen zum Entwickeln von Windows Store-Apps finden Sie unter [Entwickeln von Windows Store-Apps mit Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) und [Roadmap für Windows Store-Apps mit C++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
+Rufen Sie Anleitungen und Referenzmaterial im Windows Developer Center ab. Weitere Informationen zur Entwicklung von UWP-Apps finden Sie unter [Einführung in die Universelle Windows-Plattform](/windows/uwp/get-started/universal-application-platform-guide) und [Erstellen Ihrer ersten UWP-App mit C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Desktop-Anwendungen (C++)](windows/desktop-applications-visual-cpp.md)  
 Erfahren Sie, wie Sie Desktopanwendungen erstellen, die eine Nachrichtenschleife und Rückrufe haben.
@@ -131,7 +131,7 @@ Asynchrone und parallele Algorithmen, die auf der CPU ausgeführt werden.
 Enorm parallele Algorithmen, die auf der GPU ausgeführt werden.
 
 [Windows Runtime Template Library (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] -Apps und -Komponenten.
+Apps und Komponenten für UWP (Universelle Windows-Plattform).
 
 [.NET-Programmierung mit C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Programmierung für die Common Language Runtime (CLR).

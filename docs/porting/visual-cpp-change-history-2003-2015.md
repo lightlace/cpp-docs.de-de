@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -97,7 +97,7 @@ Wenn Sie auf eine neue Version von Visual Studio upgraden, treten unter Umständ
   
 -   **Operatoren „new“ und „delete“**In früheren Bibliotheksversionen wurden die in der Implementierung definierten Operatorfunktionen „new“ und „delete“ aus der DLL-Datei der Laufzeitbibliothek (z. B. msvcr120.dll) exportiert. Dieser Operatorfunktionen sind immer statisch mit Ihren Binärdateien verknüpft, selbst wenn DLL-Dateien der Laufzeitbibliothek verwendet werden.  
   
-     Es handelt sich dabei nicht um eine wichtige Änderung für nativen oder gemischten Code (/clr), sondern eher für Code, der als [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, denn diese Änderung kann dann zu einem Fehler beim Kompilieren führen. Wenn Sie Code als !/clr:pure kompilieren, müssen Sie möglicherweise #include \<new> oder #include \<new.h> hinzufügen, um Buildfehler aufgrund dieser Änderung zu umgehen. Beachten Sie, dass „/clr:pure“ in Visual Studio 2015 veraltet ist und in zukünftigen Releases ggf. entfernt wird.  
+     Es handelt sich dabei nicht um eine wichtige Änderung für nativen oder gemischten Code (/clr), sondern eher für Code, der als [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, denn diese Änderung kann dann zu einem Fehler beim Kompilieren führen. Wenn Sie Code als !/clr:pure kompilieren, müssen Sie möglicherweise #include \<new> oder #include \<new.h> hinzufügen, um Buildfehler aufgrund dieser Änderung zu umgehen. Beachten Sie, dass „/clr:pure“ in Visual Studio 2015 veraltet ist und in zukünftigen Releases ggf. entfernt wird. Code der „rein“ sein muss, sollte zu C# portiert werden.  
   
 #### <a name="processh"></a>\<process.h>  
   
