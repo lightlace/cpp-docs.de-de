@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="map-class"></a>map-Klasse
 Wird zum Speichern und Abrufen von Daten aus einer Auflistung verwendet, in der jedes Element ein Paar ist, das einen Datenwert und einen Sortierschlüssel aufweist. Der Wert des Schlüssels ist eindeutig und wird verwendet, zum automatischen Sortieren der Daten verwendet.  
@@ -1504,7 +1507,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der **Iterator**, der durch map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das von Typ `pair`*\<***constKey**, **Type***>* ist. Dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
+ Die **Iterator** durch Zuordnung verweist auf Elemente, die Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair` * \< * **ConstKey** , **Typ *** >*, dessen erste Member ist der Schlüssel, der dem Element und, deren zweite Element ist der zugeordnete Bezug frei, die für das Element.  
   
  Verwenden Sie den **->**-Operator, um einen **Iterator**`Iter` zu dereferenzieren, der auf ein Element in einer Zuordnung zeigt.  
   
@@ -1526,7 +1529,7 @@ key_compare key_comp() const;
 ### <a name="remarks"></a>Hinweise  
  Das gespeicherte Objekt definiert die Memberfunktion  
   
- **Bool-Operator**( **ConstKey &**`left`, **const Schlüssel &**`right`);  
+ **bool operator**( **constKey&**`left`, **const Key&**`right`);  
   
  die **TRUE** zurückgibt, wenn `left` vorangestellt ist und nicht gleich `right` in der Sortierreihenfolge ist.  
   
@@ -2310,7 +2313,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Hinweise  
  Ein `reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um die Zuordnung in umgekehrter Reihenfolge zu durchlaufen.  
   
- Der `reverse_iterator`, der durch map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das heißt von Typ `pair`*\<***constKey**, **Type***>*. Dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
+ Die `reverse_iterator` durch Zuordnung verweist auf Elemente, die Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair` * \< * **ConstKey**, * *Typ *** >*, dessen erste Member ist der Schlüssel, der dem Element und, deren zweite Element ist der zugeordnete Bezug frei, die für das Element.  
   
  Dereferenziert einen `reverse_iterator` `rIter` auf ein Element in einer Zuordnung verweist, verwenden Sie die  **->**  Operator.  
   
@@ -2519,7 +2522,7 @@ value_compare value_comp() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn zwei Elemente *e*1(*k*1, *d*1) und *e*2(*k*2, `d`2) mit *k*1 und *k*2 als ihre Schlüssel des Typs `key_type` sowie `d`1 und `d`2 als ihre Daten des Typs `mapped_type` in einer Zuordnung *m* Objekte des Typs `value_type` sind, dann sind *m.*`value_comp`(*e*1, *e*2) und *m.*`key_comp`(*k*1, *k*2) gleichwertig. Ein gespeichertes Objekt definiert die Memberfunktion  
   
- **Bool-Operator**( **Value_type &**`left`, **Value_type &**`right`);  
+ **bool operator**( **value_type&**`left`, **value_type&**`right`);  
   
  die **TRUE** zurückgibt, wenn der Schlüsselwert von `left` vorangestellt ist und nicht dem Schüsselwert von `right` in der Sortierreihenfolge entspricht.  
   

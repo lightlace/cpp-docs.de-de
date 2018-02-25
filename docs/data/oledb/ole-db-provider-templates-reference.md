@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenz der OLE DB-Anbietervorlagen
 Die Klassen und Schnittstellen für OLE DB-Anbietervorlagen können in folgenden Kategorien gruppiert werden. Das Referenzmaterial enthält auch Informationen zu den [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -42,7 +46,7 @@ Die Klassen und Schnittstellen für OLE DB-Anbietervorlagen können in folgenden
  Stellt eine Standardimplementierung der OLE DB-Rowset ohne mehrfache Vererbung von vielen Implementierung Schnittstellen bereit. Die einzige Methode, die für die Sie bereitstellen müssen, Implementierung **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Stellt eine Standardimplementierung für das Zeilenhandle, im dient der `IRowsetImpl` Klasse. Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl`erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten `IRowsetImpl::GetNextRows`.  
+ Stellt eine Standardimplementierung für das Zeilenhandle, im dient der `IRowsetImpl` Klasse. Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl` erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB benötigt Anbietern zum Implementieren einer **HACCESSOR**, dies ist ein Tag auf ein Array von **DBBINDING** Strukturen. Bietet **HACCESSOR**e, die Adressen der sind die **BindType** Strukturen. Erforderlich für Rowsets und Befehle.  
@@ -63,7 +67,7 @@ Die Klassen und Schnittstellen für OLE DB-Anbietervorlagen können in folgenden
  Implementiert die OLE DB- [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) -Schnittstelle, die Aktualisieren der Werte der Spalten in vorhandenen Zeilen löschen von Zeilen, und neue Zeilen einfügen kann.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Diese Klasse erbt von ["IObjectWithSite"](http://msdn.microsoft.com/library/windows/desktop/ms693765) und überschreibt [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`führt die gleichen Funktionen wie `IObjectWithSite` können jedoch auch die Eigenschaften des OLE DB- **DBPROPCANSCROLLBACKWARDS** und **DBPROPCANFETCHBACKWARDS**.  
+ Diese Klasse erbt von ["IObjectWithSite"](http://msdn.microsoft.com/library/windows/desktop/ms693765) und überschreibt [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` führt die gleichen Funktionen wie `IObjectWithSite` können jedoch auch die Eigenschaften des OLE DB- **DBPROPCANSCROLLBACKWARDS** und **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Implementiert die **IRowsetIdentity** -Schnittstelle, die können Sie vergleichen, ob zwei Zeilen mit Daten identisch sind.  
@@ -103,7 +107,7 @@ Die Klassen und Schnittstellen für OLE DB-Anbietervorlagen können in folgenden
  Erstellt und löscht die Verbindung mit dem Consumer. Verbindliche Schnittstelle für Datenquellenobjekte und eine optionale Schnittstelle auf Enumeratoren.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`ist keine verbindliche Schnittstelle für Datenquellenobjekte und eine optionale Schnittstelle für Enumeratoren. Jedoch, wenn Sie einen Enumerator verfügbar macht **IDBInitialize**, verfügbar machen `IDBProperties` (Eigenschaften für die Datenquelle).  
+ `IDBProperties` ist keine verbindliche Schnittstelle für Datenquellenobjekte und eine optionale Schnittstelle für Enumeratoren. Jedoch, wenn Sie einen Enumerator verfügbar macht **IDBInitialize**, verfügbar machen `IDBProperties` (Eigenschaften für die Datenquelle).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  Ruft einen Schnittstellenzeiger auf das Datenquellenobjekt ab. Verbindliche Schnittstelle für die Sitzung.  

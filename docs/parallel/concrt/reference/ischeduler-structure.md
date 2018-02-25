@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IScheduler
 - CONCRTRM/concurrency::IScheduler
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
 - CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
 - CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
-dev_langs: C++
-helpviewer_keywords: IScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c639bd760b837923f3011e9209d923fef31f8aee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler-Struktur
 Eine Schnittstelle zu der Abstraktion eines Arbeitsplaners. Der Ressourcen-Manager der Concurrency Runtime kommuniziert mithilfe dieser Schnittstelle mit Arbeitsplanern.  
@@ -46,13 +50,13 @@ struct IScheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Seine Verwendung bereit ein Planers mit einer Reihe von Stämme virtueller Prozessoren. Jede `IVirtualProcessorRoot` Schnittstelle darstellt, das Recht, die einen einzelnen Thread auszuführen, die Arbeit im Auftrag der Planer ausführen können.|  
-|[IScheduler:: GetID](#getid)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|  
-|[IScheduler:: GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie für den Planer zurück. Weitere Informationen über Planerrichtlinien finden Sie unter [SchedulerPolicy](schedulerpolicy-class.md).|  
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Seine Verwendung bereit ein Planers mit einer Reihe von Stämme virtueller Prozessoren. Jede `IVirtualProcessorRoot` Schnittstelle darstellt, das Recht, die einen einzelnen Thread auszuführen, die Arbeit im Auftrag der Planer ausführen können.|  
+|[IScheduler::GetId](#getid)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|  
+|[IScheduler::GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie für den Planer zurück. Weitere Informationen über Planerrichtlinien finden Sie unter [SchedulerPolicy](schedulerpolicy-class.md).|  
 |[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Benachrichtigt diesen Planer, die die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` jetzt von anderen Planern verwendet werden.|  
 |[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Benachrichtigt diesen Planer, die die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` werden nicht von anderen Planern verwendet wird.|  
-|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Initiiert das Entfernen der Stämme virtueller Prozessoren, die zuvor auf diesem Planer zugewiesen wurden.|  
-|[IScheduler:: STATISTICS](#statistics)|Enthält Informationen, die im Zusammenhang mit der Aufgabe Eingang und Abschluss von Sätzen und Änderung der Länge der Warteschlange für einen Planer.|  
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Initiiert das Entfernen der Stämme virtueller Prozessoren, die zuvor auf diesem Planer zugewiesen wurden.|  
+|[IScheduler::Statistics](#statistics)|Enthält Informationen, die im Zusammenhang mit der Aufgabe Eingang und Abschluss von Sätzen und Änderung der Länge der Warteschlange für einen Planer.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie einen benutzerdefinierten Planer, der mit dem Ressourcen-Manager kommuniziert implementieren, sollten Sie eine Implementierung bereitstellen der `IScheduler` Schnittstelle. Diese Schnittstelle ist ein Ende eines Kanals bidirektionale Kommunikation zwischen einem Planer und den Ressourcen-Manager. Das andere Ende wird dargestellt, indem die `IResourceManager` und `ISchedulerProxy` Schnittstellen, die vom Ressourcen-Manager implementiert werden.  
@@ -65,7 +69,7 @@ struct IScheduler;
   
  **Namespace:** Parallelität  
   
-##  <a name="addvirtualprocessors"></a>IScheduler:: AddVirtualProcessors-Methode  
+##  <a name="addvirtualprocessors"></a>  IScheduler:: AddVirtualProcessors-Methode  
  Seine Verwendung bereit ein Planers mit einer Reihe von Stämme virtueller Prozessoren. Jede `IVirtualProcessorRoot` Schnittstelle darstellt, das Recht, die einen einzelnen Thread auszuführen, die Arbeit im Auftrag der Planer ausführen können.  
   
 ```
@@ -84,7 +88,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>Hinweise  
  Der Ressourcen-Manager ruft die `AddVirtualProcessor` Methode, um einen anfänglichen Satz von Stämme virtueller Prozessoren an einem Planer zu erteilen. Es könnte auch die Methode, um Stämme virtueller Prozessoren auf den Planer hinzufügen, wenn sie Ressourcen für Planer Nutzung-aufrufen.  
   
-##  <a name="getid"></a>IScheduler:: GetID-Methode  
+##  <a name="getid"></a>  IScheduler:: GetID-Methode  
  Gibt einen eindeutigen Bezeichner für den Planer zurück.  
   
 ```
@@ -99,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  Ein Bezeichner, der aus einer anderen Quelle abgerufen kann zu nicht definiertem Verhalten führen.  
   
-##  <a name="getpolicy"></a>IScheduler:: GetPolicy-Methode  
+##  <a name="getpolicy"></a>  IScheduler:: GetPolicy-Methode  
  Gibt eine Kopie der Richtlinie für den Planer zurück. Weitere Informationen über Planerrichtlinien finden Sie unter [SchedulerPolicy](schedulerpolicy-class.md).  
   
 ```
@@ -109,7 +113,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie des Planers Richtlinie.  
   
-##  <a name="notifyresourcesexternallybusy"></a>IScheduler:: NotifyResourcesExternallyBusy-Methode  
+##  <a name="notifyresourcesexternallybusy"></a>  IScheduler:: NotifyResourcesExternallyBusy-Methode  
  Benachrichtigt diesen Planer, die die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` jetzt von anderen Planern verwendet werden.  
   
 ```
@@ -134,7 +138,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  Ein Planer, der für Benachrichtigungen qualifiziert Ruft einen Satz der ersten Benachrichtigungen während der Erstellung, informiert sie, ob die Ressourcen, die sie soeben zugewiesen wurde extern ausgelastet oder im Leerlauf sind.  
   
-##  <a name="notifyresourcesexternallyidle"></a>IScheduler:: NotifyResourcesExternallyIdle-Methode  
+##  <a name="notifyresourcesexternallyidle"></a>  IScheduler:: NotifyResourcesExternallyIdle-Methode  
  Benachrichtigt diesen Planer, die die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` werden nicht von anderen Planern verwendet wird.  
   
 ```
@@ -159,7 +163,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Ein Planer, der für Benachrichtigungen qualifiziert Ruft einen Satz der ersten Benachrichtigungen während der Erstellung, informiert sie, ob die Ressourcen, die sie soeben zugewiesen wurde extern ausgelastet oder im Leerlauf sind.  
   
-##  <a name="removevirtualprocessors"></a>IScheduler:: RemoveVirtualProcessors-Methode  
+##  <a name="removevirtualprocessors"></a>  IScheduler:: RemoveVirtualProcessors-Methode  
  Initiiert das Entfernen der Stämme virtueller Prozessoren, die zuvor auf diesem Planer zugewiesen wurden.  
   
 ```
@@ -180,7 +184,7 @@ virtual void RemoveVirtualProcessors(
   
  Der Parameter `ppVirtualProcessorRoots` verweist auf ein Array von Schnittstellen. In der Gruppe der Stämme virtueller Prozessoren, die entfernt werden, die Stämme nie aktiviert sein kann zurückgegeben werden, sofort mit der `Remove` Methode. Die Stämme, die aktiviert sein und entweder Arbeit ausführen oder wurden deaktiviert und werden in die Arbeit eingehen, wartet sollte asynchron zurückgegeben werden. Der Planer achten jeder Versuch, den virtuellen Prozessorstamm so schnell wie möglich zu entfernen. Verzögern der Entfernung von der Stämme virtueller Prozessoren kann zu unbeabsichtigten Überzeichnung innerhalb des Planers führen.  
   
-##  <a name="statistics"></a>IScheduler:: Statistics-Methode  
+##  <a name="statistics"></a>  IScheduler:: Statistics-Methode  
  Enthält Informationen, die im Zusammenhang mit der Aufgabe Eingang und Abschluss von Sätzen und Änderung der Länge der Warteschlange für einen Planer.  
   
 ```

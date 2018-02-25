@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_queue
 - CONCURRENT_QUEUE/concurrency::concurrent_queue
@@ -19,19 +20,22 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs: C++
-helpviewer_keywords: concurrent_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue-Klasse
 Die `concurrent_queue`-Klasse ist eine Sequenzcontainerklasse, die "First In, First Out"-Zugriff auf ihre Elemente zulässt. Sie aktiviert einen beschränkten Satz von parallelitätssicheren Vorgängen, z. B. `push` und `try_pop`.  
@@ -70,7 +74,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|Überladen. Erstellt eine gleichzeitige Warteschlange an.|  
-|[~ Concurrent_queue-Destruktor](#dtor)|Zerstört die gleichzeitige Warteschlange an.|  
+|[~concurrent_queue Destructor](#dtor)|Zerstört die gleichzeitige Warteschlange an.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -96,7 +100,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Namespace:** Parallelität  
   
-##  <a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a> Deaktivieren 
 
  Löscht die gleichzeitige Warteschlange, zerstört alle derzeit in die Warteschlange eingereihten Elemente. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -104,7 +108,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_queue 
+##  <a name="ctor"></a> concurrent_queue 
 
  Erstellt eine gleichzeitige Warteschlange an.  
   
@@ -152,7 +156,7 @@ concurrent_queue(_InputIterator _Begin,
   
  Der vierte Konstruktor gibt vom Iteratorbereich bereitgestellte Werte [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ Concurrent_queue 
+##  <a name="dtor"></a> ~concurrent_queue 
 
  Zerstört die gleichzeitige Warteschlange an.  
   
@@ -160,7 +164,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="empty"></a>leere 
+##  <a name="empty"></a> leere 
 
  Testet, ob zum Zeitpunkt die gleichzeitige Warteschlange leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -169,12 +173,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn zum Zeitpunkt die gleichzeitige Warteschlange leer erläutert war, `false` andernfalls.  
+ `true` Wenn zum Zeitpunkt die gleichzeitige Warteschlange leer erläutert war, `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Während dieser Methode parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`, der zurückgegebene Wert ist möglicherweise falsch nach der Zeit, die er vom aufrufenden Thread überprüft wird.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Gibt eine Kopie der Zuweisung verwendet, um den gleichzeitigen Warteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -185,7 +189,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie der Zuweisung verwendet, um den gleichzeitigen Warteschlange zu erstellen.  
   
-##  <a name="push"></a>Push 
+##  <a name="push"></a> Mithilfe von Push übertragen 
 
  Fügt ein Element am Ende der gleichzeitigen Warteschlange. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -200,9 +204,9 @@ void push(T&& _Src);
  Das Element, das der Warteschlange hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- `push`parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.  
+ `push` parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Entfernt ein Element aus der Warteschlange an, wenn ein solcher verfügbar ist. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -215,14 +219,14 @@ bool try_pop(T& _Dest);
  Ein Verweis auf einen Speicherort zum Speichern des Warteschlange entfernte Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde `false` andernfalls.  
+ `true` Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde der Parameter `_Dest` empfängt den Warteschlange entfernten Wert, der ursprüngliche Wert in die Warteschlange eingereiht wird zerstört, und diese Funktion gibt `true`. Wenn kein Element aus der Warteschlange entfernt wurde, gibt diese Funktion `false` ohne Blockierung und den Inhalt der `_Dest` Parameter sind nicht definiert.  
   
- `try_pop`parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.  
+ `try_pop` parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  Gibt einen Iterator vom Typ `iterator` oder `const_iterator` am Anfang der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -238,7 +242,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>Hinweise  
  Die Iteratoren für den `concurrent_queue` Klasse dienen in erster Linie für das Debuggen, wie sie sind langsam und Iteration ist nicht nebenläufigkeitssicher in Bezug auf andere Warteschlangenvorgänge.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  Gibt einen Iterator vom Typ `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -254,7 +258,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>Hinweise  
  Die Iteratoren für den `concurrent_queue` Klasse dienen in erster Linie für das Debuggen, wie sie sind langsam und Iteration ist nicht nebenläufigkeitssicher in Bezug auf andere Warteschlangenvorgänge.  
   
-##  <a name="unsafe_size"></a>unsafe_size 
+##  <a name="unsafe_size"></a> unsafe_size 
 
  Gibt die Anzahl der Elemente in der Warteschlange zurück. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -266,7 +270,7 @@ size_type unsafe_size() const;
  Die Größe der gleichzeitigen Warteschlange.  
   
 ### <a name="remarks"></a>Hinweise  
- `unsafe_size`ist nicht nebenläufigkeitssicher und können falsche Ergebnisse erzeugen, wenn gleichzeitig mit Aufrufen der Methoden aufgerufen `push`, `try_pop`, und `empty`.  
+ `unsafe_size` ist nicht nebenläufigkeitssicher und können falsche Ergebnisse erzeugen, wenn gleichzeitig mit Aufrufen der Methoden aufgerufen `push`, `try_pop`, und `empty`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

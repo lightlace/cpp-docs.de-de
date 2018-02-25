@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
@@ -14,19 +15,22 @@ f1_keywords:
 - concrt/concurrency::SchedulerPolicy::GetPolicyValue
 - concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
 - concrt/concurrency::SchedulerPolicy::SetPolicyValue
-dev_langs: C++
-helpviewer_keywords: SchedulerPolicy class
+dev_langs:
+- C++
+helpviewer_keywords:
+- SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy-Klasse
 Die `SchedulerPolicy`-Klasse enthält einen Satz von Schlüssel-Wert-Paaren. Einen für jedes Richtlinienelement, von dem das Verhalten einer Planerinstanz gesteuert wird.  
@@ -67,11 +71,11 @@ class SchedulerPolicy;
  `SchedulerPolicy`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu, concrtrm.h  
+ **Header:** concrt.h, concrtrm.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a> GetPolicyValue 
 
  Ruft den Wert des als `key`-Parameter angegebenen Richtlinienschlüssels ab.  
   
@@ -89,7 +93,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Hinweise  
  Die Methode löst [Invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) für einen ungültigen Richtlinienschlüssel.  
   
-##  <a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a> Operator = 
 
  Weist die Planerrichtlinie von einer anderen Planerrichtlinie zu.  
   
@@ -107,7 +111,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Hinweise  
  Oft ist die zweckmäßigste Art, eine neue Planerrichtlinie zu definieren, das Kopieren einer vorhandenen Richtlinie und das anschließende Bearbeiten mit der `SetPolicyValue`-Methode oder der `SetConcurrencyLimits`-Methode.  
   
-##  <a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a> SchedulerPolicy 
 
  Erstellt eine neue Planerrichtlinie und füllt sie mit Werten für [Richtlinienschlüssel](concurrency-namespace-enums.md) von Concurrency Runtime-Planern und dem Ressourcen-Manager unterstützt werden.  
   
@@ -136,7 +140,7 @@ SchedulerPolicy(
   
  Der dritte Konstruktor ist ein Kopierkonstruktor. Oft ist die zweckmäßigste Art, eine neue Planerrichtlinie zu definieren, das Kopieren einer vorhandenen Richtlinie und das anschließende Bearbeiten mit der `SetPolicyValue`-Methode oder der `SetConcurrencyLimits`-Methode.  
   
-##  <a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a> ~ SchedulerPolicy 
 
  Zerstört eine Planerrichtlinie.  
   
@@ -144,7 +148,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits 
 
  Legt gleichzeitig die `MinConcurrency`-Richtlinie und die `MaxConcurrency`-Richtlinie des `SchedulerPolicy`-Objekts fest.  
   
@@ -166,7 +170,7 @@ void SetConcurrencyLimits(
   
  Die Methode kann auch Auslösen [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) für andere ungültige Werte.  
   
-##  <a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a> SetPolicyValue 
 
  Legt den Wert des Richtlinienschlüssels fest, der als `key`-Parameter angegeben wurde, und gibt den alten Wert zurück.  
   

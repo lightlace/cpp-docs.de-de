@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -18,18 +19,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent-Klasse
 Ein `tiled_extent`-Objekt ist ein `extent`-Objekt einer bis drei Dimensionen, das den "extent"-Bereich in ein-, zwei- oder dreidimensionale Kacheln unterteilt.  
@@ -80,8 +83,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Gibt ein `extent`-Objekt zurück, das die Werte der `tiled_extent`-Vorlagenargumente `_Dim0`, `_Dim1` und `_Dim2` erfasst.|  
-|[mit Leerstellen auffüllen](#pad)|Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die aufgerundet werden, um durch die Kacheldimensionen teilbar zu sein.|  
-|[Abschneiden](#truncate)|Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die abgerundet werden, um durch die Kacheldimensionen teilbar zu sein.|  
+|[pad](#pad)|Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die aufgerundet werden, um durch die Kacheldimensionen teilbar zu sein.|  
+|[truncate](#truncate)|Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die abgerundet werden, um durch die Kacheldimensionen teilbar zu sein.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -94,9 +97,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[tile_dim0-Konstante](#tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
-|[tile_dim1-Konstante](#tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
-|[tile_dim2-Konstante](#tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
+|[tile_dim0 Constant](#tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
+|[tile_dim1 Constant](#tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
+|[tile_dim2 Constant](#tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
 
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
@@ -115,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Namespace:** Parallelität  
 
-## <a name="ctor"></a> Tiled_extent-Konstruktor  
+## <a name="ctor">Tiled_extent-Konstruktor</a>  
 Initialisiert eine neue Instanz der `tiled_extent`-Klasse.  
   
 ### <a name="syntax"></a>Syntax  
@@ -137,7 +140,7 @@ tiled_extent(
 
   
 
-## <a name="get_tile_extent"></a> Get_tile_extent   
+## <a name="get_tile_extent"> </a>  get_tile_extent   
 Gibt eine `extent` -Objekt, das die Werte der erfasst die `tiled_extent` Vorlagenargumente `_Dim0`, `_Dim1`, und `_Dim2`.  
   
 ### <a name="syntax"></a>Syntax  
@@ -150,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Ein `extent`-Objekt, das die Dimensionen dieser `tiled_extent`-Instanz erfasst.  
   
 
-## <a name="pad"></a> mit Leerstellen auffüllen   
+## <a name="pad"> </a>  mit Leerstellen auffüllen   
 Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die aufgerundet werden, um durch die Kacheldimensionen teilbar zu sein.  
   
 ### <a name="syntax"></a>Syntax  
@@ -161,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Rückgabewert  
  Das neue `tiled_extent`-Objekts, nach Wert. 
-## <a name="truncate"></a> Abschneiden   
+## <a name="truncate"> </a>  Abschneiden   
 Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die abgerundet werden, um durch die Kacheldimensionen teilbar zu sein.  
   
 ### <a name="syntax"></a>Syntax  
@@ -173,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die abgerundet werden, um durch die Kacheldimensionen teilbar zu sein.  
 
-## <a name="operator_eq"></a> Operator =   
+## <a name="operator_eq"> </a>  Operator =   
 Kopiert den Inhalt des angegebenen `tiled_index`-Objekts in dieses Objekt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -190,7 +193,7 @@ tiled_extent&  operator= (
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf diese `tiled_index`-Instanz.  
 
-## <a name="tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"> </a>  tile_dim0   
 Speichert die Länge der wichtigsten Dimension.  
   
 ### <a name="syntax"></a>Syntax  
@@ -199,7 +202,7 @@ Speichert die Länge der wichtigsten Dimension.
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"> </a>  tile_dim1   
 Speichert die Länge der zweitwichtigsten Dimension.  
   
 ### <a name="syntax"></a>Syntax  
@@ -207,7 +210,7 @@ Speichert die Länge der zweitwichtigsten Dimension.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tile_dim2"></a> tile_dim2   
+## <a name="tile_dim2"> </a>  tile_dim2   
 Speichert die Länge der unwichtigsten Dimension.  
   
 ### <a name="syntax"></a>Syntax  
@@ -215,7 +218,7 @@ Speichert die Länge der unwichtigsten Dimension.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tile_extent"></a> Tile_extent   
+## <a name="tile_extent"> </a>  tile_extent   
   Ruft eine `extent` -Objekt, das die Werte der erfasst die `tiled_extent` Vorlagenargumente `_Dim0`, `_Dim1`, und `_Dim2`.  
   
 ### <a name="syntax"></a>Syntax  

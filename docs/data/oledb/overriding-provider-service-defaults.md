@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8788de8ad28dc3c746155f59dee3ba5bb763bcaa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-provider-service-defaults"></a>Überschreiben der Standardwerte für Anbieterdienste
 Der Anbieter-Registrierungswert für **OLEDB_SERVICES** wird zurückgegeben, als der Standardwert für die [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) Initialisierungseigenschaft auf das Datenquellenobjekt.  
@@ -33,10 +35,10 @@ Der Anbieter-Registrierungswert für **OLEDB_SERVICES** wird zurückgegeben, als
 |Standarddienste aktiviert|DBPROP_INIT_OLEDBSERVICES-Eigenschaftswert|Wert in der Verbindungszeichenfolge|  
 |------------------------------|------------------------------------------------|--------------------------------|  
 |Alle Dienste (Standard)|**DBPROPVAL_OS_ENABLEALL**|"OLE DB-Dienste =-1;"|  
-|Alle außer Pooling und AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB-Dienste =-4;"|  
+|Alle außer Pooling und AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB-Dienste =-4;"|  
 |Alle außer den Clientcursor|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB-Dienste =-5;"|  
-|Alle Dienste außer Pooling, AutoEnlistment und Clientcursor|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~ DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB-Dienste =-7;"|  
-|Keine Dienste|~**DBPROPVAL_OS_ENABLEALL**|"OLE DB-Dienste = 0;"|  
+|Alle Dienste außer Pooling, AutoEnlistment und Clientcursor|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB-Dienste =-7;"|  
+|Keine Dienste|~**DBPROPVAL_OS_ENABLEALL**|"OLE DB Services = 0;"|  
   
  Wenn der Registrierungseintrag für den Anbieter nicht vorhanden ist, die Komponenten-Manager wird der Anbieter-Objekte nicht aggregiert und keine Dienste aufgerufen, auch wenn dies explizit vom Benutzer angefordert.  
   

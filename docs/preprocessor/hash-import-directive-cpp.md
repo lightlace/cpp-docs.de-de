@@ -1,14 +1,17 @@
 ---
-title: '#<a name="import-directive-c--microsoft-docs"></a>Importieren der Richtlinie (C++) | Microsoft Docs'
+title: '#Importieren der Richtlinie (C++) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import-Anweisung (C++)
 **C++-spezifisch**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Hinweise  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Suchreihenfolge für Dateinamen  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Suchreihenfolge für Dateinamen  
  *FileName* optional eine Verzeichnisangabe vorangestellt ist. Der Dateiname muss eine vorhandene Datei benennen. Der Unterschied zwischen den beiden Syntaxformen liegt in der Reihenfolge, in der der Präprozessor nach den Typbibliotheksdateien sucht, wenn der Pfad unvollständig angegeben wird.  
   
 |Syntaxformat|Aktion|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Format mit Anführungszeichen|Weist den Präprozessor an, nach Typbibliotheksdateien zuerst im Verzeichnis der Datei, die die `#import`-Anweisung enthält, und dann in den Verzeichnissen beliebiger Dateien, die diese Datei enthalten (`#include`), zu suchen. Der Präprozessor sucht dann in den unten aufgeführten Verzeichnissen.|  
 |Format mit spitzer Klammer|Weist den Präprozessor an, nach Typbibliotheksdateien in den folgenden Verzeichnissen zu suchen:<br /><br /> 1.  Die **Pfad** Umgebungsvariablen-Pfadliste<br />2.  Die **LIB** Umgebungsvariablen-Pfadliste<br />3.  Der Pfad angegeben, durch die/i (Zusätzliche Includeverzeichnisse) (Compileroption), außer es sucht der Compiler eine Typbibliothek, die aus einer anderen Typbibliothek mit verwiesen wurde die [No_registry](../preprocessor/no-registry.md) Attribut.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Angeben der Lokalisierungs-ID und Versionsnummer  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Angeben der Lokalisierungs-ID und Versionsnummer  
  Wenn Sie eine ProgID angeben, können Sie auch die Lokalisierungs-ID und die Versionsnummer der ProgID angeben. Zum Beispiel:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Wenn Sie keine Versionsnummer angeben, wird die neueste Version verwendet.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Header-Dateien, die durch Importvorgang erstellt werden  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Header-Dateien, die durch Importvorgang erstellt werden  
  `#import` erstellt zwei Headerdateien, die den Inhalt der Typbibliothek in C++-Quellcode wiederherstellen. Die primäre Headerdatei entspricht der Datei, die vom MIDL-Compiler (Microsoft Interface Definition Language) erstellt wird, sie verfügt jedoch über zusätzlichen vom Compiler generierten Code und Daten. Die [primäre Headerdatei](#_predir_the_primary_type_library_header_file) hat den gleichen Basisnamen wie die Typbibliothek sowie eine. TLH-Erweiterung. Die sekundäre Headerdatei weist den gleichen Basisnamen wie die Typbibliothek auf, mit einer TLI-Erweiterung. Sie enthält die Implementierungen für vom Compiler generierte Memberfunktionen und wird in die primäre Headerdatei eingefügt (`#include`).  
   
  Beim Importieren eine Dispinterface-Eigenschaft, die Byref-Parametern verwendet, generiert #import keine __declspec ([Eigenschaft](../cpp/property-cpp.md))-Anweisung für die Funktion.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  Die `#import`-Direktive ist auch an der minimalen Neuerstellung beteiligt und kann in eine vorkompilierte Headerdatei eingefügt werden. Finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/reference/creating-precompiled-header-files.md) für Weitere Informationen.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Primäre Typbibliotheks-Headerdatei  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Primäre Typbibliotheks-Headerdatei  
  Die primäre Headerdatei der Typbibliothek umfasst sieben Abschnitte:  
   
 -   Textbaustein für Überschrift: Besteht aus Kommentaren, der `#include`-Anweisung für COMDEF.H (das mehrere Standardmakros definiert, die im Header verwendet werden) und weiteren verschiedenen Setupinformationen.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  Weitere Informationen finden Sie im Knowledge Base-Artikel über mögliche Zugriffsverletzungen durch #import-Wrappermethoden (Q242527) oder im Artikel über Compilerfehler bei der Verwendung von #import mit XML (Q269194). Sie finden Knowledge Base-Artikeln auf der MSDN Library-Medien oder unter [Microsoft-Support](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>#import-Attribute  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import-Attribute  
  `#import` kann optional ein oder mehrere Attribute einschließen. Diese Attribute weisen den Compiler an, den Inhalt der Typbibliotheksheader zu ändern. Ein umgekehrter Schrägstrich (**\\**) Symbol kann verwendet werden, um zusätzliche Zeilen in einer einzelnen einschließen `#import` Anweisung. Zum Beispiel:  
   
 ```  

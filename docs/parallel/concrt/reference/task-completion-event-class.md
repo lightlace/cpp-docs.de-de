@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_completion_event
 - PPLTASKS/concurrency::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs: C++
-helpviewer_keywords: task_completion_event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event-Klasse
 Mit der `task_completion_event`-Klasse können Sie die Ausführung einer Aufgabe verzögern, bis eine Bedingung erfüllt ist, oder eine Aufgabe als Reaktion auf ein externes Ereignis starten.  
@@ -72,11 +76,11 @@ class task_completion_event<void>;
  `task_completion_event`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** "ppltasks.h"  
+ **Header:** ppltasks.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="set"></a>Festlegen 
+##  <a name="set"></a> set 
 
  Legt das Aufgabenabschlussereignis fest.  
   
@@ -96,7 +100,7 @@ bool set() const ;
 ### <a name="remarks"></a>Hinweise  
  Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die über eine `_ResultType` außer `void` übergeben den Wert an ihre Fortsetzungen.  
   
-##  <a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a> set_exception 
 
  Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.  
   
@@ -114,7 +118,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a> task_completion_event 
 
  Erstellt ein `task_completion_event`-Objekt.  
   

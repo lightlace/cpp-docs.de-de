@@ -1,14 +1,17 @@
 ---
-title: '#<a name="define-directive-cc--microsoft-docs"></a>#define-Direktive (C/C++) | Microsoft Docs'
+title: '##define-Direktive (C/C++) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#define'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#define'
+dev_langs:
+- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-directive-cc"></a>#define-Anweisung (C/C++)
 Die `#define` erstellt eine *Makro*, dies ist die Zuordnung eines Bezeichners oder parametrisierten Bezeichners zu einer tokenzeichenkette darstellt. Nachdem das Makro definiert wurde, kann der Compiler die Tokenzeichenkette für jedes Vorkommen des Bezeichners in der Quelldatei ersetzen.  
   
 ## <a name="syntax"></a>Syntax  
- `#define`*Bezeichner* *-Token-String*abonnieren  
+ `#define` *Bezeichner* *-Token-String*abonnieren  
   
- `#define`*Bezeichner* `(` *Bezeichner*opt`,`*...*  `,` *Bezeichner*opt`)`*-Token-String*abonnieren  
+ `#define` *Bezeichner* `(` *Bezeichner*opt`,`*...*  `,` *Bezeichner*opt`)`*-Token-String*abonnieren  
   
 ## <a name="remarks"></a>Hinweise  
  Die `#define` Richtlinie weist den Compiler zu ersetzen, *-Token-String* für jedes Auftreten der *Bezeichner* in der Quelldatei. Die *Bezeichner* wird ersetzt, nur, wenn sie ein Token bildet. D. h. *Bezeichner* wird nicht ersetzt werden, wenn er in einem Kommentar, der in einer Zeichenfolge oder als Teil eines längeren Bezeichners angezeigt wird. Weitere Informationen finden Sie unter [Token](../cpp/tokens-cpp.md).  
@@ -73,7 +77,7 @@ Die `#define` erstellt eine *Makro*, dies ist die Zuordnung eines Bezeichners od
   
  Mit Microsoft C/C++ können Sie ein Makro neu definieren, wenn die neue Definition mit der ursprünglichen Definition syntaktisch identisch ist. Das bedeutet, dass die beiden Definitionen über unterschiedliche Parameternamen verfügen können. Dieses Verhalten unterscheidet sich von [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C, wo die beiden Definitionen lexikalisch gleich sind.  
   
- Beispielsweise sind die folgenden beiden Makros identisch, abgesehen von den Parameternamen. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]C lässt keine solche Neudefinition, aber Microsoft C/C++-wird ohne Fehler kompiliert.  
+ Beispielsweise sind die folgenden beiden Makros identisch, abgesehen von den Parameternamen. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C lässt keine solche Neudefinition, aber Microsoft C/C++-wird ohne Fehler kompiliert.  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  

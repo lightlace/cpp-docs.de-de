@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>combinable-Klasse
 Das `combinable<T>`-Objekt ist dazu gedacht, threadprivate Kopien von Daten bereitzustellen, mit denen sperrenfreie, threadlokale Unterberechnungen in parallelen Algorithmen durchgeführt werden können. Am Ende des Parallelvorgangs können die threadprivaten Unterbrechungen in einem Endergebnis zusammengeführt werden. Diese Klasse kann anstelle einer freigegebenen Variable verwendet werden, und sie kann zu einer Leistungsverbesserung führen, wenn andernfalls Konflikte mit dieser freigegebenen Variable entstehen würden.  
@@ -59,7 +63,7 @@ class combinable;
 |[clear](#clear)|Löscht alle berechneten Zwischenergebnisse aus einer früheren Verwendung.|  
 |[combine](#combine)|Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der Funktionselement angegebenen kombinieren.|  
 |[combine_each](#combine_each)|Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung an. Das Endergebnis werden durch das Funktionsobjekt gesammelt.|  
-|[lokale](#local)|Überladen. Gibt einen Verweis auf die untergeordnete Threads privaten-Berechnung.|  
+|[local](#local)|Überladen. Gibt einen Verweis auf die untergeordnete Threads privaten-Berechnung.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -78,7 +82,7 @@ class combinable;
   
  **Namespace:** Parallelität  
   
-##  <a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a> Deaktivieren 
 
  Löscht alle berechneten Zwischenergebnisse aus einer früheren Verwendung.  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>combinable 
+##  <a name="ctor"></a> combinable 
 
  Erstellt ein neues `combinable`-Objekt.  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  Der dritte Konstruktor ist der Kopierkonstruktor.  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~ combinable 
 
  Zerstört ein `combinable`-Objekt.  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>Kombinieren 
+##  <a name="combine"></a> Kombinieren 
 
  Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der Funktionselement angegebenen kombinieren.  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Rückgabewert  
  Das endgültige Ergebnis der Kombination von allen Threads privaten unterberechnungen.  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung an. Das Endergebnis werden durch das Funktionsobjekt gesammelt.  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Das Funktionselement ist, das verwendet wird, um eine untergeordnete Berechnung zu kombinieren. Die Signatur lautet `void (T)` oder `void (const T&)`, assoziativen und kommutativen muss.  
   
-##  <a name="local"></a>lokale 
+##  <a name="local"></a> lokale 
 
  Gibt einen Verweis auf die untergeordnete Threads privaten-Berechnung.  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die untergeordnete Threads privaten-Berechnung.  
   
-##  <a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a> Operator = 
 
  Weist eine `combinable` Objekt von einem anderen `combinable` Objekt.  
   

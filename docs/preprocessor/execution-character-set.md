@@ -8,23 +8,26 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - execution_character_set
 - vc-pragma.execution_character_set
-dev_langs: C++
-helpviewer_keywords: pragma execution_character_set
+dev_langs:
+- C++
+helpviewer_keywords:
+- pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1064f5cf97ba6b919e718c60c8346e86d643ced
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eda04de6975708b2460e53681e50f8ea4f9dbcd3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 Gibt die ausführungszeichengruppe für Zeichenfolgen- und Zeichenliterale verwendet. Diese Direktive ist für Literale, die mit dem Präfix u8 markiert nicht erforderlich.  
@@ -51,4 +54,4 @@ Gibt die ausführungszeichengruppe für Zeichenfolgen- und Zeichenliterale verwe
 ## <a name="see-also"></a>Siehe auch  
  [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
  [/Execution-CharSet (Festlegen der Ausführung-Zeichensatz)](../build/reference/execution-charset-set-execution-character-set.md)   
- [/UTF-8 (Quelle festlegen und ausführbare Datei Zeichensätze in UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+ [/utf-8 (Quelle und ausführbare Zeichensätze auf UTF-8 festlegen)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

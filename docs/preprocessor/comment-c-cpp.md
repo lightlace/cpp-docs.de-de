@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - annotations [C++]
 - comments [C++], compiled files
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4dc4c9036565c2571371c172f61de4948c188f83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 Platziert einen Kommentardatensatz in einer Objektdatei oder ausführbaren Datei.  
@@ -41,7 +44,7 @@ Platziert einen Kommentardatensatz in einer Objektdatei oder ausführbaren Datei
 ## <a name="remarks"></a>Hinweise  
  Die *Kommentartyp* ist eine vordefinierte Bezeichner, die unten beschriebenen, der den Typ des Kommentardatensatzes angibt. Das optionale Zeichenfolgenliteral `commentstring` bietet zusätzliche Informationen für einige Kommentartypen. Da `commentstring` ist ein Zeichenfolgenliteral ist, entspricht es allen Regeln für Zeichenfolgenliterale in Zusammenhang mit Escapezeichen, eingebetteten Anführungszeichen (**"**), und Verkettung.  
   
- **Compilerfehler**  
+ **compiler**  
  Platziert den Namen und die Versionsnummer des Compilers in der Objektdatei. Dieser Kommentardatensatz wird vom Linker ignoriert. Wenn Sie einen `commentstring`-Parameter für diesen Datensatztyp angeben, generiert der Compiler eine Warnung.  
   
  **exestr**  
@@ -49,12 +52,12 @@ Platziert einen Kommentardatensatz in einer Objektdatei oder ausführbaren Datei
   
  `exestr` ist veraltet und wird in einer der nächsten Versionen entfernt. Der Linker verarbeitet den Kommentardatensatz nicht.  
   
- **LIB**  
+ **lib**  
  Platziert einen einen Datensatz für Bibliothekssuchvorgänge in der Objektdatei. Dieser Kommentartyp muss von einem `commentstring`-Parameter begleitet werden, der den Namen (und ggf. den Pfad) der Bibliothek enthält, den der Linker suchen soll. Der Bibliotheksname folgt den Standard-bibliothekssuchvorgängen in der Objektdatei; der Linker sucht nach dieser Bibliothek, als ob Sie es in der Befehlszeile genannt hätten, vorausgesetzt, dass die Bibliothek nicht angegeben ist, mit [/NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). Sie können mehrere Datensätze an Bibliothekssuchvorgängen in derselben Quelldatei platzieren. Jeder Datensatz ist in der Objektdatei in der gleichen Reihenfolge enthalten, in der er in der Quelldatei auftritt.  
   
  Wenn die Reihenfolge der Standardbibliothek und einer hinzugefügten Bibliothek wichtig ist, kompilieren Sie mit der [Zl](../build/reference/zl-omit-default-library-name.md) Switch wird verhindert, dass der Standardname der Bibliothek, die in das Objektmodul platziert wird. Ein zweites comment-Pragma kann dann verwendet werden, um den Namen der Standardbibliothek nach der hinzugefügten Bibliothek einzufügen. Die Bibliotheken, die mit diesen Pragmas aufgelistet werden, werden im Objektmodul in derselben Reihenfolge angezeigt, wie sie sich im Quellcode befinden.  
   
- **Linker**  
+ **linker**  
  Stellen ein [Linkeroption](../build/reference/linker-options.md) in der Objektdatei. Sie können diesen Kommentartyp verwenden, um eine Linkeroption anzugeben, statt sie an die Befehlszeile zu übergeben oder in der Entwicklungsumgebung anzugeben. Beispielsweise können Sie die /include-Option angeben, um das Einfügen eines Symbols zu erzwingen:  
   
 ```  
@@ -63,19 +66,19 @@ Platziert einen Kommentardatensatz in einer Objektdatei oder ausführbaren Datei
   
  Nur die folgenden (*Kommentartyp*) stehen Linkeroptionen können dem linkerbezeichner übergeben werden:  
   
--   [/ DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
+-   [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
   
--   [/ EXPORT](../build/reference/export-exports-a-function.md)  
+-   [/EXPORT](../build/reference/export-exports-a-function.md)  
   
--   [/ INCLUDE](../build/reference/include-force-symbol-references.md)  
+-   [/INCLUDE](../build/reference/include-force-symbol-references.md)  
   
--   [/ MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
+-   [/MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/ ' MERGE '](../build/reference/merge-combine-sections.md)  
+-   [/MERGE](../build/reference/merge-combine-sections.md)  
   
--   [/ SECTION](../build/reference/section-specify-section-attributes.md)  
+-   [/SECTION](../build/reference/section-specify-section-attributes.md)  
   
- **Benutzer**  
+ **user**  
  Platziert einen allgemeinen Kommentar in der Objektdatei. Der `commentstring`-Parameter enthält den Text des Kommentars. Dieser Kommentardatensatz wird vom Linker ignoriert.  
   
  Das folgende Pragma bewirkt, dass der Linker während der Verknüpfung nach der EMAPI.LIB-Bibliothek sucht. Der Linker sucht zunächst im aktuellen Arbeitsverzeichnis und anschließend im Pfad, der in der LIB-Umgebungsvariablen angegeben wird.  

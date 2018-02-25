@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy-Struktur
 Eine Abstraktion für einen Thread der Ausführung. Abhängig von dem von Ihnen erstellten `SchedulerType`-Richtlinienschlüssel des Planers, gewährt der Ressourcen-Manager eine Threadproxy, der entweder von einem regulären Win32-Thread oder einem im Benutzermodus planbaren (UMS) Thread unterstützt wird. UMS-Threads werden auf 64-Bit-Betriebssystemen mit Version Windows 7 und höher unterstützt.  
@@ -43,10 +47,10 @@ struct IThreadProxy;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IThreadProxy:: GetID](#getid)|Gibt einen eindeutigen Bezeichner für den Threadproxy zurück.|  
-|[IThreadProxy:: SwitchOut](#switchout)|Hebt die Zuordnung des Kontexts vom zugrunde liegenden virtuellen Prozessorstamm auf.|  
-|[IThreadProxy:: SwitchTo](#switchto)|Führt einen kooperativen Kontextwechsel aus dem Kontext des derzeit ausgeführten an eine andere Definition aus.|  
-|[IThreadProxy:: YieldToSystem](#yieldtosystem)|Bewirkt, dass der aufrufende Thread die Ausführung an einen anderen Thread übergibt, der auf dem aktuellen Prozessor ausgeführt werden kann. Das Betriebssystem wählt den nächsten Thread ausgeführt werden.|  
+|[IThreadProxy::GetId](#getid)|Gibt einen eindeutigen Bezeichner für den Threadproxy zurück.|  
+|[IThreadProxy::SwitchOut](#switchout)|Hebt die Zuordnung des Kontexts vom zugrunde liegenden virtuellen Prozessorstamm auf.|  
+|[IThreadProxy::SwitchTo](#switchto)|Führt einen kooperativen Kontextwechsel aus dem Kontext des derzeit ausgeführten an eine andere Definition aus.|  
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|Bewirkt, dass der aufrufende Thread die Ausführung an einen anderen Thread übergibt, der auf dem aktuellen Prozessor ausgeführt werden kann. Das Betriebssystem wählt den nächsten Thread ausgeführt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Threadproxys werden mit Ausführungskontexten verbunden, dargestellt durch die Schnittstelle `IExecutionContext` als Mittel zum Weiterleiten von Arbeit.  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **Namespace:** Parallelität  
   
-##  <a name="getid"></a>IThreadProxy:: GetID-Methode  
+##  <a name="getid"></a>  IThreadProxy:: GetID-Methode  
  Gibt einen eindeutigen Bezeichner für den Threadproxy zurück.  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Eine eindeutige ganzzahlige Bezeichner.  
   
-##  <a name="switchout"></a>IThreadProxy:: SwitchOut-Methode  
+##  <a name="switchout"></a>  IThreadProxy:: SwitchOut-Methode  
  Hebt die Zuordnung des Kontexts vom zugrunde liegenden virtuellen Prozessorstamm auf.  
   
 ```
@@ -93,7 +97,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  In den Bibliotheken und Headern, die mit Visual Studio 2010 geliefert wurden, weist diese Methode keinen Parameter auf, und der virtuelle Prozessorstamm wurde nicht initialisiert. Um altes Verhalten beizubehalten, wird der Standardparameterwert von `Blocking` angegeben.  
   
-##  <a name="switchto"></a>IThreadProxy:: SwitchTo-Methode  
+##  <a name="switchto"></a>  IThreadProxy:: SwitchTo-Methode  
  Führt einen kooperativen Kontextwechsel aus dem Kontext des derzeit ausgeführten an eine andere Definition aus.  
   
 ```
@@ -120,7 +124,7 @@ virtual void SwitchTo(
   
  `SwitchTo` muss für die `IThreadProxy`-Schnittstelle aufgerufen werden, die den gerade ausgeführten Thread darstellt, oder die Ergebnisse sind nicht definiert. Löst die Funktion `invalid_argument` Wenn der Parameter `pContext` festgelegt ist, um `NULL`.  
   
-##  <a name="yieldtosystem"></a>IThreadProxy:: YieldToSystem-Methode  
+##  <a name="yieldtosystem"></a>  IThreadProxy:: YieldToSystem-Methode  
  Bewirkt, dass der aufrufende Thread die Ausführung an einen anderen Thread übergibt, der auf dem aktuellen Prozessor ausgeführt werden kann. Das Betriebssystem wählt den nächsten Thread ausgeführt werden.  
   
 ```

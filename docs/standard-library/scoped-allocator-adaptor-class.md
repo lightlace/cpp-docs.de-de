@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
@@ -18,7 +19,8 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcfc9d5ca7b988be2dad0451aa2f58aacd15c789
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor-Klasse
 Stellt einen Satz von Zuweisern dar.  
@@ -119,7 +122,7 @@ class scoped_allocator_adaptor;
   
  **Namespace:** std  
   
-##  <a name="allocate"></a>scoped_allocator_adaptor:: Allocate
+##  <a name="allocate"></a>  scoped_allocator_adaptor:: Allocate
  Weist Speicher mithilfe des `Outer`-Zuweisers zu  
   
 ```cpp  
@@ -136,7 +139,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>Rückgabewert  
  Die erste Memberfunktion gibt `Outer_traits::allocate(outer_allocator(), count)` zurück. Die zweite Memberfunktion gibt `Outer_traits::allocate(outer_allocator(), count, hint)` zurück.  
   
-##  <a name="construct"></a>scoped_allocator_adaptor:: Construct
+##  <a name="construct"></a>  scoped_allocator_adaptor:: Construct
  Erstellt ein Objekt  
   
 ```cpp  
@@ -197,7 +200,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  Die sechste Methode verhält sich wie `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.  
   
-##  <a name="deallocate"></a>scoped_allocator_adaptor:: DEALLOCATE
+##  <a name="deallocate"></a>  scoped_allocator_adaptor:: DEALLOCATE
  Hebt die Zuweisung von Objekten mithilfe des äußeren Zuweisers auf  
   
 ```cpp  
@@ -211,7 +214,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  Die Anzahl von Objekten, deren Zuweisung aufzuheben ist.  
   
-##  <a name="destroy"></a>scoped_allocator_adaptor:: Destroy
+##  <a name="destroy"></a>  scoped_allocator_adaptor:: Destroy
  Zerstört ein angegebenes Objekt  
   
 ```cpp  
@@ -226,7 +229,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>Rückgabewert  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="inner_allocator"></a>scoped_allocator_adaptor:: inner_allocator
+##  <a name="inner_allocator"></a>  scoped_allocator_adaptor:: inner_allocator
  Ruft einen Verweis auf das gespeicherte Objekt vom Typ `inner_allocator_type` ab  
   
 ```cpp  
@@ -237,7 +240,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das gespeicherte Objekt vom Typ `inner_allocator_type`  
   
-##  <a name="max_size"></a>scoped_allocator_adaptor:: max_size
+##  <a name="max_size"></a>  scoped_allocator_adaptor:: max_size
  Bestimmt die maximale Anzahl von Objekten, die vom äußeren Zuweiser zugewiesen werden kann.  
   
 ```cpp  
@@ -247,7 +250,7 @@ size_type max_size();
 ### <a name="return-value"></a>Rückgabewert  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="outer_allocator"></a>scoped_allocator_adaptor:: outer_allocator
+##  <a name="outer_allocator"></a>  scoped_allocator_adaptor:: outer_allocator
  Ruft einen Verweis auf das gespeicherte Objekt vom Typ `outer_allocator_type` ab  
   
 ```cpp  
@@ -298,7 +301,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>Hinweise  
  Der erste Konstruktorstandard erstellt seine gespeicherten Zuweiserobjekte. Jeder der nächsten drei Konstruktoren erstellt die gespeicherten Zuweiserobjekte aus den entsprechenden Objekten in `right`. Der letzte Konstruktor erstellt seine gespeicherten Zuweiserobjekte aus den entsprechenden Argumenten in der Argumentliste.  
   
-##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor:: select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor:: select_on_container_copy_construction
  Erstellt ein neues `scoped_allocator_adaptor`-Objekt mit jedem gespeicherten Zuweiserobjekt, das durch Aufrufen von `select_on_container_copy_construction` für jeden entsprechenden Zuweiser initialisiert wird.  
   
 ```cpp  

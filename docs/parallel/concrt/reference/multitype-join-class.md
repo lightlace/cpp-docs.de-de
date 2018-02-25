@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - multitype_join
 - AGENTS/concurrency::multitype_join
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::multitype_join::reserve
 - AGENTS/concurrency::multitype_join::unlink_target
 - AGENTS/concurrency::multitype_join::unlink_targets
-dev_langs: C++
-helpviewer_keywords: multitype_join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join-Klasse
 Ein `multitype_join`-Meldungsblock ist ein Block mit mehreren Quellen und einem einzelnen Ziel, der Meldungen verschiedener Typen aus allen Quellen kombiniert und dem Ziel ein Tupel der kombinierten Meldungen bereitstellt.  
@@ -52,7 +56,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
  Die `tuple` Nutzlasttyp der Nachrichten hinzugefügt und vom Block weitergegeben.  
   
  `_Jtype`  
- Die Art der `join` Blocks, entweder `greedy` oder`non_greedy`  
+ Die Art der `join` Blocks, entweder `greedy` oder `non_greedy`  
   
 ## <a name="members"></a>Member  
   
@@ -73,9 +77,9 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[akzeptieren](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` -Block übertragen des Besitzes an den Aufrufer.|  
+|[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` -Block übertragen des Besitzes an den Aufrufer.|  
 |[acquire_ref](#acquire_ref)|Ruft eine Verweisanzahl für dieses `multitype_join` Meldungsblock, um den Löschvorgang zu verhindern.|  
-|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
+|[consume](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `multitype_join` Meldungsblock.|  
 |[release](#release)|Gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.|  
 |[release_ref](#release_ref)|Gibt einen Verweiszähler für dieses `multiple_join` Meldungsblock.|  
@@ -96,7 +100,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  **Namespace:** Parallelität  
   
-##  <a name="accept"></a>akzeptieren 
+##  <a name="accept"></a> Akzeptieren 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` -Block übertragen des Besitzes an den Aufrufer.  
   
@@ -116,7 +120,7 @@ virtual message<_Destination_type>* accept(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Meldung, der der Aufrufer nun den Besitz von verfügt.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  Ruft eine Verweisanzahl für dieses `multitype_join` Meldungsblock, um den Löschvorgang zu verhindern.  
   
@@ -131,7 +135,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das mit dieser Quelle während verknüpft wird, wird die `link_target` Methode.  
   
-##  <a name="consume"></a>Nutzen 
+##  <a name="consume"></a> Nutzen 
 
  Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.  
   
@@ -154,7 +158,7 @@ virtual message<_Destination_type>* consume(
 ### <a name="remarks"></a>Hinweise  
  Die `consume` Methode ist vergleichbar mit `accept`, aber immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen `true`.  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  Verknüpft einen Zielblock mit diesem `multitype_join` Meldungsblock.  
   
@@ -166,7 +170,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf ein `ITarget` Block, mit dem Verknüpfen dieser `multitype_join` Meldungsblock.  
   
-##  <a name="ctor"></a>multitype_join 
+##  <a name="ctor"></a> multitype_join 
 
  Erstellt einen `multitype_join` -Meldungsblock.  
   
@@ -207,7 +211,7 @@ multitype_join(
   
  Bewegungskonstruktion wird bei einer aktiven Sperre nicht ausgeführt, d. h., der Benutzer muss sicherstellen, dass zum Zeitpunkt der Bewegung keine einfachen Aufgaben aktiv sind. Andernfalls können zahlreiche Wettläufe auftreten, wodurch Ausnahmen oder inkonsistente Zuständen verursacht werden.  
   
-##  <a name="dtor"></a>~ Multitype_join 
+##  <a name="dtor"></a> ~multitype_join 
 
  Zerstört die `multitype_join` Meldungsblock.  
   
@@ -215,7 +219,7 @@ multitype_join(
 ~multitype_join();
 ```  
   
-##  <a name="release"></a>Version 
+##  <a name="release"></a> Version 
 
  Gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.  
   
@@ -232,7 +236,7 @@ virtual void release(
  `_PTarget`  
  Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `release` Methode.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  Gibt einen Verweiszähler für dieses `multiple_join` Meldungsblock.  
   
@@ -247,7 +251,7 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das aus dieser Quelle aufgehoben wird, ist. Quellblock darf für den Zielblock reservierten Ressourcen freizugeben.  
   
-##  <a name="reserve"></a>Reservieren 
+##  <a name="reserve"></a> Hostreserven 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `multitype_join` Meldungsblock.  
   
@@ -265,12 +269,12 @@ virtual bool reserve(
  Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `reserve` Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können viele Gründe geben, einschließlich fehl: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, die Quelle konnte verweigern Reservierungen usw.  
+ `true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können viele Gründe geben, einschließlich fehl: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, die Quelle konnte verweigern Reservierungen usw.  
   
 ### <a name="remarks"></a>Hinweise  
  Nach dem Aufruf `reserve`, wenn er erfolgreich ausgeführt wird, müssen Sie entweder Aufrufen `consume` oder `release` um übernehmen oder der Besitz der Nachricht bzw. abzugeben.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  Hebt die Verknüpfung mit einem Zielblock und dies `multitype_join` Meldungsblock.  
   
@@ -282,7 +286,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf ein `ITarget` Block zum Aufheben der Verknüpfung von diesem `multitype_join` Meldungsblock.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  Hebt die Verknüpfung mit allen Zielen, die von diesem `multitype_join` Meldungsblock.  
   

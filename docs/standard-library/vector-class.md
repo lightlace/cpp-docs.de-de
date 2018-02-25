@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -49,7 +50,8 @@ f1_keywords:
 - vector/std::vector::shrink_to_fit
 - vector/std::vector::size
 - vector/std::vector::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::vector [C++], allocator_type
 - std::vector [C++], const_iterator
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f38fb67c20da6b1022c6365e66b1626cd8276313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15fca6437626b09ee2995f9afe268f44a5f4b34f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vector-class"></a>vector-Klasse
 Die Vektorklasse der C++-Standardbibliothek ist eine Vorlagenklasse von Sequenzcontainern, die Elemente eines bestimmten Typs in einer linearen Anordnung organisieren und schnellen, wahlfreien Zugriff auf jedes Element ermöglichen. Sie sollten der jeweils bevorzugte Container für eine Sequenz sein, wenn die Leistung mit wahlfreiem Zugriff ein wichtiger Faktor ist.  
@@ -119,7 +122,7 @@ class vector
  Der im Vektor zu speichernde Elementdatentyp.  
   
  `Allocator`  
- Der Typ, der das gespeicherte allocator-Objekt darstellt, das Details zum Belegen und Freigeben von Arbeitsspeicher für den Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist **allocator***\<Type>.*  
+ Der Typ, der das gespeicherte allocator-Objekt darstellt, das Details zum Belegen und Freigeben von Arbeitsspeicher für den Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator ***\<Typ >.*  
   
 ## <a name="remarks"></a>Hinweise  
  Vektoren ermöglichen konstante Zeiteinfügungen und -löschungen am Ende der Sequenz. Für das Einfügen oder Löschen von Elementen in der Mitte eines Vektors ist lineare Zeit erforderlich. Der Container der [deque-Klasse](../standard-library/deque-class.md) ist in Bezug auf Einfügungen und Löschungen am Anfang und Ende einer Sequenz leistungsfähiger. Der Container der [list-Klasse](../standard-library/list-class.md) ist in Bezug auf Einfügungen und Löschungen an einer beliebigen Position innerhalb der Sequenz leistungsfähiger.  

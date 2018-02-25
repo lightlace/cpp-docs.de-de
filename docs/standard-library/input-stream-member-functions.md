@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="input-stream-member-functions"></a>Eingabestream-Memberfunktionen
 Eingabestream-Memberfunktionen werden für Datenträgereingaben verwendet. Diese Memberfunktionen umfassen:  
@@ -52,7 +55,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a>Die get
+##  <a name="vclrfthegetfunctionanchor12">Die get</a>
  Die unformatierte **get**-Memberfunktion funktioniert wie der **>>**-Operator, mit zwei Ausnahmen. Erstens enthält die **get**-Funktion Leerzeichen, wohingegen der Extraktor Leerzeichen ausschließt, wenn das **skipws**-Flag festgelegt ist (Standardwert). Zweitens wird die **get**-Funktion weniger wahrscheinlich dazu führen, dass ein gebundener Ausgabestream (z.B. `cout`) gelöscht wird.  
   
  Eine Variante der **get**-Funktion gibt eine Pufferadresse und die maximale Anzahl zu lesender Zeichen an. Dies hilft dabei, die Anzahl der Zeichen einzuschränken, die zu einer bestimmten Variable gesendet werden, wie dieses Beispiel zeigt:  
@@ -86,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a>Die getline
+##  <a name="vclrfthegetlinefunctionanchor13">Die getline</a>
  Die **getline**-Memberfunktion ähnelt der **get**-Funktion. Beide Funktionen ermöglichen ein drittes Argument, das abschließende Zeichen für die Eingabe angibt. Der Standardwert ist das Zeilenumbruchzeichen. Beide Funktionen reservieren ein Zeichen für das benötigte abschließende Zeichen. Allerdings lässt **get** das abschließende Zeichen im Stream und **getline** entfernt das abschließende Zeichen.  
   
  Im folgenden Beispiel wird ein abschließendes Zeichen für den Eingabestream angegeben:  
@@ -112,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a>Die schreibgeschützte
+##  <a name="vclrfthereadfunctionanchor14">Die schreibgeschützte</a>
  Die **read**-Memberfunktion liest Bytes aus einer Datei in einem angegebenen Speicherbereich. Das Längenargument bestimmt die Anzahl gelesener Bytes. Wenn Sie dieses Argument nicht einfügen, wird das Lesen beendet, sobald das physische Ende der Datei erreicht ist, oder, bei einer Textmodusdatei, wenn ein eingebettetes `EOF`-Zeichen gelesen wird.  
   
  Dieses Beispiel liest einen binären Datensatz aus einer Lohnabrechnungsdatei in eine Struktur:  

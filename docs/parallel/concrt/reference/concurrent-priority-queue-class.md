@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
@@ -18,19 +19,22 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs: C++
-helpviewer_keywords: concurrent_priority_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue-Klasse
 Die `concurrent_priority_queue`-Klasse ist ein Container, der es mehreren Threads gleichzeitig ermöglicht, für Elemente die Vorgänge "push" und "pop" auszuführen. Elemente werden in Reihenfolge ihrer Priorität per pop ausgelesen, wenn die Priorität mit einem als Vorlagenargument angegebenen Funktionselement bestimmt wird.  
@@ -102,7 +106,7 @@ template <typename T,
   
  **Namespace:** Parallelität  
   
-##  <a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a> Deaktivieren 
 
  Löscht alle Elemente in der gleichzeitigen Priorität. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -111,9 +115,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `clear`ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für die gleichzeitige Prioritätswarteschlange aufrufen, wenn Sie diese Methode aufrufen. `clear`Gibt Arbeitsspeicher frei.  
+ `clear` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für die gleichzeitige Prioritätswarteschlange aufrufen, wenn Sie diese Methode aufrufen. `clear` Gibt Arbeitsspeicher frei.  
   
-##  <a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a> concurrent_priority_queue 
 
  Erstellt eine gleichzeitige Prioritätswarteschlange an.  
   
@@ -177,7 +181,7 @@ concurrent_priority_queue(
   
  Die sechsten und siebten Konstruktoren geben eine Verschiebung von der Prioritätswarteschlange `_Src`.  
   
-##  <a name="empty"></a>leere 
+##  <a name="empty"></a> leere 
 
  Testet, ob die gleichzeitige Prioritätswarteschlange zu diesem Zeitpunkt leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -186,9 +190,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn zum Zeitpunkt der Prioritätswarteschlange leer die Funktion aufgerufen wurde war, `false` andernfalls.  
+ `true` Wenn zum Zeitpunkt der Prioritätswarteschlange leer die Funktion aufgerufen wurde war, `false` andernfalls.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Gibt eine Kopie der Zuweisung verwendet, um die gleichzeitige Prioritätswarteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -199,7 +203,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie der Zuweisung zum Erstellen der `concurrent_priority_queue` Objekt.  
   
-##  <a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a> Operator = 
 
  Weist den Inhalt eines anderen `concurrent_priority_queue`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -216,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `concurrent_priority_queue`-Objekt.  
   
-##  <a name="push"></a>Push 
+##  <a name="push"></a> Mithilfe von Push übertragen 
 
  Fügt ein Element in die Prioritätswarteschlange für gleichzeitige. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -230,7 +234,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  Das Element, das gleichzeitige Prioritätswarteschlange hinzugefügt werden.  
   
-##  <a name="size"></a>Größe 
+##  <a name="size"></a> Größe 
 
  Gibt die Anzahl der Elemente in der Prioritätswarteschlange für gleichzeitige zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -244,7 +248,7 @@ size_type size() const;
 ### <a name="remarks"></a>Hinweise  
  Wird sichergestellt, dass die zurückgegebene Größe enthalten alle Elemente, die von Aufrufen an die Funktion hinzugefügt `push`. Er kann jedoch nicht die Ergebnisse der ausstehenden gleichzeitige Vorgänge wiedergeben.  
   
-##  <a name="swap"></a>Swap 
+##  <a name="swap"></a> Swap 
 
  Vertauscht den Inhalt von zwei gleichzeitige Priorität Warteschlangen. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -256,7 +260,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  Die `concurrent_priority_queue` Objekt, das Inhalt mit austauschen.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Entfernt, und gibt das Element der höchsten Priorität aus der Warteschlange zurück, wenn die Warteschlange nicht leer ist. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -269,7 +273,7 @@ bool try_pop(reference _Elem);
  Ein Verweis auf eine Variable, die mit der höchsten Prioritätselement aufgefüllt wird, wenn die Warteschlange nicht leer ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn ein Wert per pop ausgelesen wurde, `false` andernfalls.  
+ `true` Wenn ein Wert per pop ausgelesen wurde, `false` andernfalls.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

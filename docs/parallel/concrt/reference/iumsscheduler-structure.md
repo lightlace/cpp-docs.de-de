@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
-dev_langs: C++
-helpviewer_keywords: IUMSScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler-Struktur
 Eine Schnittstelle zu der Abstraktion eines Arbeitsplaners, der planbare Threads vom Ressourcen-Manager der Concurrency Runtime im Benutzermodus erwartet. Der Ressourcen-Manager verwendet diese Schnittstelle für die Kommunikation mit UMS-Threadplanern. Die `IUMSScheduler`-Schnittstelle erbt von der `IScheduler`-Schnittstelle.  
@@ -40,7 +44,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Weist ein `IUMSCompletionList` Schnittstelle, um ein UMS-Zeitplanungsmodul Thread.|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Weist ein `IUMSCompletionList` Schnittstelle, um ein UMS-Zeitplanungsmodul Thread.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie einen benutzerdefinierten Planer, der mit dem Ressourcen-Manager kommuniziert implementieren und UMS-Threads, die an dem Planer anstelle von gewöhnlichen Win32-Threads übergegeben werden sollen, sollten Sie eine Implementierung bereitstellen der `IUMSScheduler` Schnittstelle. Darüber hinaus sollten Sie festlegen, den Richtlinienwert für den Planerrichtlinienschlüssel `SchedulerKind` werden `UmsThreadDefault`. Wenn die Richtlinie gibt UMS-Threads an die `IScheduler` Schnittstelle, die als Parameter übergeben wird der [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) Methode muss ein `IUMSScheduler` Schnittstelle.  
@@ -59,7 +63,7 @@ struct IUMSScheduler : public IScheduler;
   
  **Namespace:** Parallelität  
   
-##  <a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList-Methode  
+##  <a name="setcompletionlist"></a>  IUMSScheduler:: SetCompletionList-Methode  
  Weist ein `IUMSCompletionList` Schnittstelle, um ein UMS-Zeitplanungsmodul Thread.  
   
 ```

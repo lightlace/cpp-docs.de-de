@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
@@ -54,7 +55,8 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_multimap
 - std::unordered_multimap::allocator_type
@@ -144,16 +146,17 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a0fa73588a2ee2b593e12f98cac387d9d4323ad9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c13e19d920b0b8ae61d3f3bd0ba2ae77cc3477bd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap-Klasse
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge vom Typ `std::pair<const Key, Ty>` steuert. Die Sequenz wird grob durch eine Hashfunktion sortiert, die die Sequenz in eine geordnete Gruppe von Untersequenzen, so genannte Buckets, unterteilt. Innerhalb jedes Buckets bestimmt eine Vergleichsfunktion, ob ein Elementpaar eine entsprechende Reihenfolge hat. Jedes Element speichert zwei Objekte, einen Sortierschlüssel und einen Wert. Die Sequenz wird so dargestellt, dass die Suche, das Einfügen und das Entfernen eines beliebigen Elements mit einer Reihen von Vorgängen möglich ist, die unabhängig von der Anzahl von Elementen in der Sequenz (konstante Zeit) sein können, zumindest, wenn alle Buckets von ungefähr gleicher Länge sind. Im schlimmsten Fall, d. h., wenn sich alle Elemente in einem Bucket befinden, ist die Anzahl von Vorgängen proportional zur Anzahl von Elementen in der Sequenz (lineare Zeit). Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
@@ -191,7 +194,7 @@ class unordered_multimap;
 |[const_pointer](#const_pointer)|Der Typ eines konstanten Zeigers auf ein Element.|  
 |[const_reference](#const_reference)|Der Typ eines konstanten Verweises auf ein Element.|  
 |[difference_type](#difference_type)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
-|[Hasher](#hasher)|Der Typ der Hashfunktion.|  
+|[hasher](#hasher)|Der Typ der Hashfunktion.|  
 |[Iterator](#iterator)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
 |[key_equal](#key_equal)|Der Typ der Vergleichsfunktion.|  
 |[key_type](#key_type)|Der Typ eines Sortierschlüssels.|  
@@ -206,8 +209,8 @@ class unordered_multimap;
 |-|-|  
 |Memberfunktion|Beschreibung|  
 |[begin](#begin)|Legt den Anfang der kontrollierten Sequenz fest.|  
-|[Bucket](#bucket)|Ruft die Bucketnummer für einen Schlüsselwert ab.|  
-|[bucket_count-Wert](#bucket_count)|Ruft die Anzahl von Buckets ab.|  
+|[bucket](#bucket)|Ruft die Bucketnummer für einen Schlüsselwert ab.|  
+|[bucket_count](#bucket_count)|Ruft die Anzahl von Buckets ab.|  
 |[bucket_size](#bucket_size)|Ruft die Größe eines Buckets ab.|  
 |[cbegin](#cbegin)|Legt den Anfang der kontrollierten Sequenz fest.|  
 |[cend](#cend)|Legt das Ende der kontrollierten Sequenz fest.|  
@@ -228,10 +231,10 @@ class unordered_multimap;
 |[max_bucket_count](#max_bucket_count)|Ruft die maximale Anzahl von Buckets ab.|  
 |[max_load_factor](#max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|  
 |[max_size](#max_size)|Ruft die maximale Größe der gesteuerten Sequenz ab.|  
-|[Rehash-](#rehash)|Erstellt die Hashtabelle neu.|  
+|[rehash](#rehash)|Erstellt die Hashtabelle neu.|  
 |[size](#size)|Ermittelt die Anzahl von Elementen.|  
 |[swap](#swap)|Vertauscht den Inhalt von zwei Containern.|  
-|[unordered_multimap-Element](#unordered_multimap)|Erstellt ein container-Objekt.|  
+|[unordered_multimap](#unordered_multimap)|Erstellt ein container-Objekt.|  
   
 |||  
 |-|-|  

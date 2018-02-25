@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
 - AMP/Concurrency::index::rank
-dev_langs: C++
-helpviewer_keywords: index structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 04a10524a46fe7351b881e436d7aaf422b2a9acb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-class"></a>index-Klasse
 Definiert eine *N*-dimensionalen Index Pographics-Cpp-amp.md.  
@@ -52,10 +56,10 @@ class index;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[operator--](#operator--)|Dekrementiert jedes Element des `index`-Objekts.|  
-|[Operator(MOD) =](#operator_mod_eq)|Berechnet den Modul (Rest) jedes Elements im `index`-Objekt, wenn dieses Element durch eine Zahl dividiert wird.|  
+|[operator(mod)=](#operator_mod_eq)|Berechnet den Modul (Rest) jedes Elements im `index`-Objekt, wenn dieses Element durch eine Zahl dividiert wird.|  
 |[operator*=](#operator_star_eq)|Multipliziert jedes Element des `index`-Objekts mit einer Zahl.|  
 |[operator/=](#operator_div_eq)|Dividiert jedes Element des `index`-Objekts durch eine Zahl.|  
-|[Index::\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|  
+|[index::operator\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|  
 |[operator++](#operator_add_add)|Inkrementiert jedes Element des `index`-Objekts.|  
 |[operator+=](#operator_add_eq)|Fügt die angegebene Zahl jedem Element des `index`-Objekts hinzu.|  
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `index`-Objekts in dieses Objekt.|  
@@ -66,7 +70,7 @@ class index;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[Rank-Konstante](#rank)|Speichert den Rang des `index`-Objekts.|  
+|[rank Constant](#rank)|Speichert den Rang des `index`-Objekts.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `index`  
@@ -80,7 +84,7 @@ class index;
  **Namespace:** Parallelität  
 
 
-## <a name="index_ctor"></a>Index-Konstruktor
+## <a name="index_ctor">Index-Konstruktor</a>
 Initialisiert eine neue Instanz der indexklasse an.
 
 ```  
@@ -114,7 +118,7 @@ explicit index(
 
 _Array  
 Ein eindimensionales Array mit den Rangwerten.  
-_ICH  
+_I  
 Die Indexposition in einem eindimensionalen Index.  
 _I0  
 Die Länge der wichtigsten Dimension.  
@@ -125,7 +129,7 @@ Die Länge der unwichtigsten Dimension.
 _Other  
 Ein Indexobjekt, das auf dem das neue Indexobjekt basiert.  
 
-## <a name="operator--"></a>Operator--
+## <a name="operator--"></a>  Operator--
 Dekrementiert jedes Element des Index-Objekts.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -137,7 +141,7 @@ index operator--(
 ### <a name="return-values"></a>Rückgabewert
 Für den Präfixoperator das Indexobjekt (* dies). Für den suffixoperator ein neues Indexobjekt.
 
-## <a name="operator_mod_eq"></a>Operator(MOD) =   
+## <a name="operator_mod_eq"></a>  Operator(MOD) =   
 Berechnet den Modul (Rest) jedes Elements im Index-Objekt, wenn dieses Element mit der angegebenen Zahl dividiert wird.
 
 ```  
@@ -149,7 +153,7 @@ index<_Rank>& operator%=(
 _Rhs die Zahl, dividiert durch den Modulo finden.
 Der Rückgabewert die Index-Objekt.
 
-## <a name="operator_star_eq"></a>Operator * =   
+## <a name="operator_star_eq"></a>  Operator * =   
 Multipliziert jedes Element in das Indexobjekt, um die angegebene Anzahl an.
 ```
 index<_Rank>& operator*=(
@@ -160,7 +164,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Parameter
 _Rhs die zu multiplizierende Zahl.
 
-## <a name="operator_div_eq"></a>Operator / = 
+## <a name="operator_div_eq"></a>  Operator / = 
 Dividiert jedes Element in die Index-Objekt mit der angegebenen Zahl.
 
 ```
@@ -200,7 +204,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>Operator ++   
+## <a name="operator_add_add"></a>  Operator ++   
 Inkrementiert jedes Element des Index-Objekts.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -212,7 +216,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>Rückgabewert
 Für den Präfixoperator das Indexobjekt (* dies). Für den suffixoperator ein neues Indexobjekt.
 
-## <a name="operator_add_eq"></a>Operator +=   
+## <a name="operator_add_eq"></a>  Operator +=   
 Fügt die angegebene Anzahl auf jedes Element des Index-Objekts.
 ```  
 index<_Rank>& operator+=(
@@ -242,7 +246,7 @@ _Other die Indexobjekt, das kopiert.
 ### <a name="return-value"></a>Rückgabewert
 Ein Verweis auf dieses Indexobjekt.
 
-## <a name="operator_-_eq"></a>Operator =
+## <a name="operator_-_eq"></a>  Operator =
 Subtrahiert die angegebene Anzahl von jedem Element des Index-Objekt.
 ```  
 index<_Rank>& operator-=(
@@ -259,7 +263,7 @@ _Rhs die zu subtrahierende Zahl.
 ### <a name="return-value"></a>Rückgabewert
 Die Indexobjekt.   
 
-## <a name="rank"></a>Rang  
+## <a name="rank"></a>  Rang  
   Ruft den Rang des Index-Objekts ab.
 ```
 static const int rank = _Rank;

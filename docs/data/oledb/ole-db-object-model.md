@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB-Objektmodell
 Der OLE DB-Objektmodell besteht aus den folgenden Objekten oder Komponenten. Die ersten vier Objekte oder aufgelisteten Komponenten (Datenquellen, Sitzungen, Befehle und Rowsets) ermöglichen Ihnen, eine Verbindung mit einer Datenquelle herstellen und Sie ansehen. Der Rest, beginnend mit den Accessoren beziehen sich auf das Arbeiten mit den Daten, wenn er angezeigt wird.  
@@ -55,7 +57,7 @@ Der OLE DB-Objektmodell besteht aus den folgenden Objekten oder Komponenten. Die
 ## <a name="accessors"></a>Accessoren  
  Nur OLE DB verwendet das Konzept der Accessoren. Ein Accessor wird beschrieben, wie Daten in einem Consumer gespeichert werden. Sie enthält einen Satz von Bindungen (eine spaltenzuordnung bezeichnet) zwischen Rowset-Feldern (Spalten) und Datenmember, dass Sie in der Consumer nicht deklariert werden.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Transaktionen  
+##  <a name="vcconoledbcomponents_transactions"></a> Transaktionen  
  Transaktionsobjekte werden verwendet, wenn ein Commit oder Abbruch geschachtelte Transaktionen auf als der untersten. Eine Transaktion ist eine unteilbare Arbeitseinheit, die vom Test ACID-Eigenschaften definiert. ACID steht für:  
   
 -   Unteilbarkeit: kann nicht in kleinere Arbeitseinheiten unterteilt werden.  

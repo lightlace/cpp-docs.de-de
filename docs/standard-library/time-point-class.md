@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], time_point
-ms.workload: cplusplus
-ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], time_point
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d81f49fd94dcedacfe33de75e307a441f74a94e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timepoint-class"></a>time_point-Klasse
 Mit `time_point` wird ein Typ beschrieben, der einen bestimmten Zeitpunkt darstellt. Er enthält ein Objekt des Typs [duration](../standard-library/duration-class.md), in dem die verstrichene Zeit seit dem vom Vorlagenargument `Clock` dargestellten Zeitraum gespeichert ist.  
@@ -71,11 +75,11 @@ class time_point;
 |[time_point::operator-=](#operator-_eq)|Subtrahiert einen angegebenen Wert von der gespeicherten Dauer.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \<Chrono >  
+ **Header:** \<chrono>  
   
  **Namespace:** std::chrono  
   
-##  <a name="max"></a>time_point:: Max
+##  <a name="max"></a>  time_point:: Max
  Statische Methode, von der die Obergrenze für Werte vom Typ `time_point::ref` zurückgegeben wird.  
   
 ```  
@@ -85,7 +89,7 @@ static constexpr time_point max();
 ### <a name="return-value"></a>Rückgabewert  
  Tatsächlich wird `time_point(duration::max())` zurückgegeben.  
   
-##  <a name="min"></a>time_point:: Min
+##  <a name="min"></a>  time_point:: Min
  Statische Methode, von der die Untergrenze für Werte vom Typ `time_point::ref` zurückgegeben wird.  
   
 ```  
@@ -149,7 +153,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
   
  Mit dem dritten Konstruktor wird der `duration`-Wert initialisiert, indem `Tp.time_since_epoch()` verwendet wird.  
   
-##  <a name="time_since_epoch"></a>time_point:: time_since_epoch
+##  <a name="time_since_epoch"></a>  time_point:: time_since_epoch
  Ruft den gespeicherten [duration](../standard-library/duration-class.md)-Wert ab.  
   
 ```  

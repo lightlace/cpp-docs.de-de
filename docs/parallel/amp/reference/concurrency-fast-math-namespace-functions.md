@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
 - amp_math/Concurrency::fast_math::asin
@@ -50,18 +50,20 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 406f92d4a13502ed784936398070f1b4a7b4eb95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math-Namespace-Funktionen
 ||||  
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/21/2017
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|  
 |[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|  
 |[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
-|[isFinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|  
+|[isfinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|  
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|  
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|  
@@ -103,7 +105,7 @@ inline float acos(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den arkuskosinuswert des Arguments zurück  
   
-##  <a name="acosf"></a>acosf  
+##  <a name="acosf"></a>  acosf  
  Berechnet den Arkuskosinus des Arguments  
   
 ```  
@@ -131,7 +133,7 @@ inline float asin(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den arkussinuswert des Arguments zurück  
   
-##  <a name="asinf"></a>asinf  
+##  <a name="asinf"></a>  asinf  
  Berechnet den Arkussinus des Arguments  
   
 ```  
@@ -178,7 +180,7 @@ inline float atan2(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Wert der Arkustangens von _Y/_X  
   
-##  <a name="atan2f"></a>atan2f  
+##  <a name="atan2f"></a>  atan2f  
  Berechnet den Arkustangens von _Y/_X  
   
 ```  
@@ -197,7 +199,7 @@ inline float atan2f(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Wert der Arkustangens von _Y/_X  
   
-##  <a name="atanf"></a>atanf  
+##  <a name="atanf"></a>  atanf  
  Berechnet den Arkustangens des Arguments  
   
 ```  
@@ -211,7 +213,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Arkustangens-Wert des Arguments zurück  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>  ceil  
  Berechnet den Höchstwert des Arguments  
   
 ```  
@@ -225,7 +227,7 @@ inline float ceil(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Höchstwert des Arguments zurück  
   
-##  <a name="ceilf"></a>ceilf  
+##  <a name="ceilf"></a>  ceilf  
  Berechnet den Höchstwert des Arguments  
   
 ```  
@@ -239,7 +241,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Höchstwert des Arguments zurück  
   
-##  <a name="cosf"></a>cosf  
+##  <a name="cosf"></a>  cosf  
  Berechnet den Kosinus des Arguments  
   
 ```  
@@ -253,7 +255,7 @@ inline float cosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kosinuswert des Arguments zurück  
   
-##  <a name="coshf"></a>coshf  
+##  <a name="coshf"></a>  coshf  
  Berechnet den Hyperbelkosinuswert des Arguments  
   
 ```  
@@ -309,7 +311,7 @@ inline float exp(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Exponentialzahl zur Basis e des Arguments  
   
-##  <a name="exp2"></a>EXP2  
+##  <a name="exp2"></a>  exp2  
  Berechnet die Basis-2, die vom Argument exponential ist  
   
 ```  
@@ -323,7 +325,7 @@ inline float exp2(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-2, die vom Argument Exponential ist  
   
-##  <a name="exp2f"></a>exp2f  
+##  <a name="exp2f"></a>  exp2f  
  Berechnet die Basis-2, die vom Argument exponential ist  
   
 ```  
@@ -337,7 +339,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-2, die vom Argument Exponential ist  
   
-##  <a name="expf"></a>expf  
+##  <a name="expf"></a>  expf  
  Berechnet die Basis-E, die vom Argument exponential ist  
   
 ```  
@@ -351,7 +353,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Exponentialzahl zur Basis e des Arguments  
   
-##  <a name="fabs"></a>Fabs  
+##  <a name="fabs"></a>  Fabs  
  Gibt den absoluten Wert des Arguments zurück.  
   
 ```  
@@ -365,7 +367,7 @@ inline float fabs(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den absoluten Wert des Arguments zurück.  
   
-##  <a name="fabsf"></a>fabsf  
+##  <a name="fabsf"></a>  fabsf  
  Gibt den absoluten Wert des Arguments zurück.  
   
 ```  
@@ -379,7 +381,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den absoluten Wert des Arguments zurück.  
   
-##  <a name="floor"></a>Floor  
+##  <a name="floor"></a>  Floor  
  Berechnet den Tiefstwert des Arguments  
   
 ```  
@@ -393,7 +395,7 @@ inline float floor(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tiefstwert des Arguments zurück  
   
-##  <a name="floorf"></a>floorf  
+##  <a name="floorf"></a>  floorf  
  Berechnet den Tiefstwert des Arguments  
   
 ```  
@@ -407,7 +409,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tiefstwert des Arguments zurück  
   
-##  <a name="fmax"></a>Fmax  
+##  <a name="fmax"></a>  Fmax  
  Festlegung des höchsten numerischen Werts der Argumente  
   
 ```  
@@ -426,7 +428,7 @@ inline float max(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des höchsten numerischen Werts der Argumente  
   
-##  <a name="fmaxf"></a>fmaxf  
+##  <a name="fmaxf"></a>  fmaxf  
  Festlegung des höchsten numerischen Werts der Argumente  
   
 ```  
@@ -445,7 +447,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des höchsten numerischen Werts der Argumente  
   
-##  <a name="fmin"></a>fmin  
+##  <a name="fmin"></a>  fmin  
  Festlegung des niedrigsten numerischen Werts der Argumente  
   
 ```  
@@ -464,7 +466,7 @@ inline float min(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des niedrigsten numerischen Werts der Argumente  
   
-##  <a name="fminf"></a>fminf  
+##  <a name="fminf"></a>  fminf  
  Festlegung des niedrigsten numerischen Werts der Argumente  
   
 ```  
@@ -483,7 +485,7 @@ inline float fminf(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des niedrigsten numerischen Werts der Argumente  
   
-##  <a name="fmod"></a>fmod  
+##  <a name="fmod"></a>  fmod  
  Berechnet den Gleitkommarest von _X/_Y  
   
 ```  
@@ -502,7 +504,7 @@ inline float fmod(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Gleitkommarest von _X/_Y  
   
-##  <a name="fmodf"></a>fmodf  
+##  <a name="fmodf"></a>  fmodf  
  Berechnet den Gleitkommarest von _X/_Y.  
   
 ```  
@@ -521,7 +523,7 @@ inline float fmodf(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Gleitkommarest von _X/_Y  
   
-##  <a name="frexp"></a>frexp  
+##  <a name="frexp"></a>  frexp  
  Ruft die Mantisse und den Exponenten von _X ab  
   
 ```  
@@ -540,7 +542,7 @@ inline float frexp(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Mantisse _X  
   
-##  <a name="frexpf"></a>frexpf  
+##  <a name="frexpf"></a>  frexpf  
  Ruft die Mantisse und den Exponenten von _X ab  
   
 ```  
@@ -559,7 +561,7 @@ inline float frexpf(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Mantisse _X  
   
-##  <a name="isfinite"></a>isFinite  
+##  <a name="isfinite"></a>  isFinite  
  Bestimmt, ob das Argument einen über begrenzten Wert verfügt  
   
 ```  
@@ -573,7 +575,7 @@ inline int isfinite(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn das Argument einen endlichen Wert verfügt  
   
-##  <a name="isinf"></a>isinf  
+##  <a name="isinf"></a>  isinf  
  Bestimmt, ob das Argument unendlich ist  
   
 ```  
@@ -587,7 +589,7 @@ inline int isinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn das Argument einen unendlichen Wert verfügt  
   
-##  <a name="isnan"></a>IsNaN  
+##  <a name="isnan"></a>  IsNaN  
  Bestimmt, ob das Argument ein NaN  
   
 ```  
@@ -601,7 +603,7 @@ inline int isnan(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn das Argument einen NaN-Wert verfügt  
   
-##  <a name="ldexp"></a>ldexp  
+##  <a name="ldexp"></a>  ldexp  
  Berechnet eine reelle Zahl aus der Mantisse und dem Exponent  
   
 ```  
@@ -620,7 +622,7 @@ inline float ldexp(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt _X * 2^_Exp zurück  
   
-##  <a name="ldexpf"></a>ldexpf  
+##  <a name="ldexpf"></a>  ldexpf  
  Berechnet eine reelle Zahl aus der Mantisse und dem Exponent  
   
 ```  
@@ -667,7 +669,7 @@ inline float log10(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Base-10-Logarithmus des Arguments zurück  
   
-##  <a name="log10f"></a>log10f  
+##  <a name="log10f"></a>  log10f  
  Berechnet den Basis-10-Logarithmus des Arguments  
   
 ```  
@@ -681,7 +683,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Base-10-Logarithmus des Arguments zurück  
   
-##  <a name="log2"></a>Log2  
+##  <a name="log2"></a>  log2  
  Berechnet den Basis-2-Logarithmus des Arguments  
   
 ```  
@@ -695,7 +697,7 @@ inline float log2(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Logarithmus Basis 2 des Arguments zurück  
   
-##  <a name="log2f"></a>log2f  
+##  <a name="log2f"></a>  log2f  
  Berechnet den Basis-2-Logarithmus des Arguments  
   
 ```  
@@ -709,7 +711,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Base-10-Logarithmus des Arguments zurück  
   
-##  <a name="logf"></a>logf  
+##  <a name="logf"></a>  logf  
  Berechnet den Basis-E-Logarithmus des Arguments  
   
 ```  
@@ -723,7 +725,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-e-Logarithmus des Arguments  
   
-##  <a name="modf"></a>modf  
+##  <a name="modf"></a>  modf  
  Teilt _X in Nachkommastellen und ganze Zahlen auf.  
   
 ```  
@@ -741,7 +743,7 @@ inline float modf(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Bruchteil mit Vorzeichen von _x ab  
   
-##  <a name="modff"></a>modff  
+##  <a name="modff"></a>  modff  
  Teilt _X in Nachkommastellen und ganze Zahlen auf.  
   
 ```  
@@ -778,7 +780,7 @@ inline float pow(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Wert von _X potenziert mit _y  
   
-##  <a name="powf"></a>powf  
+##  <a name="powf"></a>  powf  
  Berechnet _X potenziert mit _Y  
   
 ```  
@@ -796,7 +798,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="round"></a>Roundrobin  
+##  <a name="round"></a>  Roundrobin  
  Rundet _X auf die nächste ganze Zahl  
   
 ```  
@@ -810,7 +812,7 @@ inline float round(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die nächste ganze Zahl von _x ab  
   
-##  <a name="roundf"></a>roundf  
+##  <a name="roundf"></a>  roundf  
  Rundet _X auf die nächste ganze Zahl  
   
 ```  
@@ -824,7 +826,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die nächste ganze Zahl von _x ab  
   
-##  <a name="rsqrt"></a>rsqrt  
+##  <a name="rsqrt"></a>  rsqrt  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
   
 ```  
@@ -838,7 +840,7 @@ inline float rsqrt(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
   
-##  <a name="rsqrtf"></a>rsqrtf  
+##  <a name="rsqrtf"></a>  rsqrtf  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
   
 ```  
@@ -852,7 +854,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
   
-##  <a name="signbit"></a>signbit  
+##  <a name="signbit"></a>  signbit  
  Bestimmt, ob die Vorzeichen des _X negativ ist.  
   
 ```  
@@ -866,7 +868,7 @@ inline int signbit(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen des _X negativ ist.  
   
-##  <a name="signbitf"></a>signbitf  
+##  <a name="signbitf"></a>  signbitf  
  Bestimmt, ob die Vorzeichen des _X negativ ist.  
   
 ```  
@@ -894,7 +896,7 @@ inline float sin(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Sinuswert des Arguments zurück  
   
-##  <a name="sinf"></a>sinf  
+##  <a name="sinf"></a>  sinf  
  Berechnet den Sinuswert des Arguments  
   
 ```  
@@ -908,7 +910,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Sinuswert des Arguments zurück  
   
-##  <a name="sincos"></a>sincos  
+##  <a name="sincos"></a>  sincos  
  Berechnet Sinus- und Kosinuswert von _X  
   
 ```  
@@ -928,7 +930,7 @@ inline void sincos(
  `_C`  
  Gibt den Kosinuswert von _x ab  
   
-##  <a name="sincosf"></a>sincosf  
+##  <a name="sincosf"></a>  sincosf  
  Berechnet Sinus- und Kosinuswert von _X  
   
 ```  
@@ -962,7 +964,7 @@ inline float sinh(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbelsinuswert des Arguments zurück  
   
-##  <a name="sinhf"></a>sinhf  
+##  <a name="sinhf"></a>  sinhf  
  Berechnet den Hyperbelsinuswert des Arguments  
   
 ```  
@@ -990,7 +992,7 @@ inline float sqrt(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Stamm Squre des Arguments zurück  
   
-##  <a name="sqrtf"></a>sqrtf  
+##  <a name="sqrtf"></a>  sqrtf  
  Berechnet den Squre Stamm des Arguments  
   
 ```  
@@ -1018,7 +1020,7 @@ inline float tan(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tangenswert des Arguments zurück  
   
-##  <a name="tanf"></a>tanf  
+##  <a name="tanf"></a>  tanf  
  Berechnet den Tangenswert des Arguments  
   
 ```  
@@ -1046,7 +1048,7 @@ inline float tanh(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbeltangenswert des Arguments zurück  
   
-##  <a name="tanhf"></a>tanhf  
+##  <a name="tanhf"></a>  tanhf  
  Berechnet den Hyperbeltangenswert des Arguments  
   
 ```  
@@ -1060,7 +1062,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbeltangenswert des Arguments zurück  
   
-##  <a name="trunc"></a>trunc  
+##  <a name="trunc"></a>  trunc  
  Schneidet das Argument der ganzzahligen Komponente ab  
   
 ```  
@@ -1074,7 +1076,7 @@ inline float trunc(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den ganzzahligen des Arguments zurück  
   
-##  <a name="truncf"></a>truncf  
+##  <a name="truncf"></a>  truncf  
  Schneidet das Argument der ganzzahligen Komponente ab  
   
 ```  

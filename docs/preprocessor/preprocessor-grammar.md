@@ -4,75 +4,78 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
-**#define***Bezeichner* *-Token-String*abonnieren  
+**#define***Bezeichner* *-Token-String*abonnieren    
   
- *#***definieren***Bezeichner*[**(** *Bezeichner*opt**,** *...*  **,** *Bezeichner*opt **)**] *-Token-String*abonnieren  
+ *#* **Definieren Sie***Bezeichner*[**(** *Bezeichner*opt**,** *...*  **,** *Bezeichner*opt **)**] *-Token-String*abonnieren    
   
  **definiert (***Bezeichner* **)**   
   
  **definiert***Bezeichner*   
   
- `#include`**"***Path-Spec***"**  
+ `#include` **"***Path-Spec***"**  
   
- `#include` **\<**  *Path-Spec***>**  
+ `#include` **\<***path-spec***>**  
   
- **#line***Ziffernfolge***"** *Filename* **"**abonnieren  
+ **#line***Ziffernfolge***"** *Filename* **"**abonnieren      
   
- *#***Undef***Bezeichner*   
+ *#* **undef**  *identifier*  
   
  **#error***-Token-Zeichenfolge*   
   
- **#pragma***-Token-Zeichenfolge*   
+ **#pragma**  *token-string*  
   
- *bedingte* :  
+ *conditional* :  
  *If-Teil Elif-Teile*opt*else-Teil*opt*Endif-Zeile*  
   
  *If-Teil* :  
- *If-linetext*  
+ *if-linetext*  
   
- *If-Line-* :  
+ *if-line* :  
  **#if***Konstantenausdruck*   
   
- **#ifdef***Bezeichner*   
+ **#ifdef**  *identifier*  
   
  **#ifndef***Bezeichner*   
   
  *Elif-Teile* :  
- *Elif-Line-text*  
+ *elif-line text*  
   
- *Elif-Teile Elif-Line-text*  
+ *elif-parts elif-line text*  
   
- *Elif-Line-* :  
- **#elif***Konstantenausdruck*   
+ *elif-line* :  
+ **#elif**  *constant-expression*  
   
  *else-Teil* :  
- *Else-linetext*  
+ *else-linetext*  
   
- *Else-Line* :  
+ *else-line* :  
  `#else`  
   
- *Endif-Line-* :  
+ *endif-line* :  
  `#endif`  
   
  *Ziffernfolge* :  
@@ -86,7 +89,7 @@ ms.lasthandoff: 12/21/2017
  *Token-String* :  
  Zeichenfolge von Tokens  
   
- *Token* :  
+ *token* :  
  *keyword*  
   
  *identifier*  
@@ -100,10 +103,10 @@ ms.lasthandoff: 12/21/2017
  *FileName* :  
  Gültiger Dateiname des Betriebssystems  
   
- *Path-Spec* :  
+ *path-spec* :  
  Gültiger Dateipfad  
   
- *Text* :  
+ *text* :  
  Eine beliebige Textsequenz  
   
 > [!NOTE]

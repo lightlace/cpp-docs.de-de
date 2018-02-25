@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Benutzerdatensätze
 Um einen statischen Accessor verwenden (d. h. ein Accessor abgeleitet **CAccessor)**, der Consumer muss einen Benutzerdatensatz haben. Der Benutzerdatensatz ist eine C++-Klasse, die Datenelemente Handle Eingabe oder Ausgabe enthält. ATL-OLE DB-Consumer-Assistent generiert einen Benutzerdatensatz für den Consumer. Sie können Methoden Benutzerdatensatzes für optionale Aufgaben wie das Behandeln von Kommentaren hinzufügen.  
   
- Der folgende Code zeigt einen Beispieldatensatz, der Befehle behandelt. In der Benutzerdatensatz `BEGIN_COLUMN_MAP` stellt ein Datenrowset, das an den Consumer von einem Anbieter übergeben. `BEGIN_PARAM_MAP`Stellt einen Satz von Befehlsparametern. Dieses Beispiel verwendet eine [CCommand](../../data/oledb/ccommand-class.md) Klasse, die Befehlsparameter zu behandeln. Die Datenelemente in der Zuordnungseinträge stellen Offsets in einen zusammenhängenden Block von Arbeitsspeicher für jede Instanz der Klasse dar. Die `COLUMN_ENTRY` Makros entsprechen den `PROVIDER_COLUMN_ENTRY` Makros auf der Anbieterseite.  
+ Der folgende Code zeigt einen Beispieldatensatz, der Befehle behandelt. In der Benutzerdatensatz `BEGIN_COLUMN_MAP` stellt ein Datenrowset, das an den Consumer von einem Anbieter übergeben. `BEGIN_PARAM_MAP` Stellt einen Satz von Befehlsparametern. Dieses Beispiel verwendet eine [CCommand](../../data/oledb/ccommand-class.md) Klasse, die Befehlsparameter zu behandeln. Die Datenelemente in der Zuordnungseinträge stellen Offsets in einen zusammenhängenden Block von Arbeitsspeicher für jede Instanz der Klasse dar. Die `COLUMN_ENTRY` Makros entsprechen den `PROVIDER_COLUMN_ENTRY` Makros auf der Anbieterseite.  
   
  Weitere Informationen zu den **COLUMN_MAP** und **PARAM_MAP** Makros finden Sie unter [Makros für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

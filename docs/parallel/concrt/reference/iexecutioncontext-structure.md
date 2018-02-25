@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionContext
 - CONCRTRM/concurrency::IExecutionContext
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
-dev_langs: C++
-helpviewer_keywords: IExecutionContext structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9e3edffb10aad7b5793907c8c95ad5028f4d1d23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext-Struktur
 Eine Schnittstelle zu einem Ausführungskontext, der auf einem angegebenen virtuellen Prozessor ausgeführt werden kann und einen gemeinsamen Kontextwechsel zulässt.  
@@ -44,11 +48,11 @@ struct IExecutionContext;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IExecutionContext:: Dispatch](#dispatch)|Die Methode, die aufgerufen wird, wenn ein Threadproxy startet die Ausführung eines bestimmten Ausführungskontexts. Dies sollte die Haupt-Worker-Routine, für den Planer sein.|  
-|[IExecutionContext:: GetID](#getid)|Gibt einen eindeutigen Bezeichner für den Ausführungskontext zurück.|  
-|[IExecutionContext:: GetProxy](#getproxy)|Gibt eine Schnittstelle zu den Threadproxy, der diesem Kontext ausgeführt wird.|  
-|[IExecutionContext:: GetScheduler](#getscheduler)|Gibt eine Schnittstelle auf den Planer dieser Ausführungskontext gehört.|  
-|[IExecutionContext:: SetProxy](#setproxy)|Ordnet einen Threadproxy dieser Ausführungskontext. Der zugeordnete Threadproxy ruft diese Methode auf, unmittelbar vor dem Beginn des Kontexts ausgeführt `Dispatch` Methode.|  
+|[IExecutionContext::Dispatch](#dispatch)|Die Methode, die aufgerufen wird, wenn ein Threadproxy startet die Ausführung eines bestimmten Ausführungskontexts. Dies sollte die Haupt-Worker-Routine, für den Planer sein.|  
+|[IExecutionContext::GetId](#getid)|Gibt einen eindeutigen Bezeichner für den Ausführungskontext zurück.|  
+|[IExecutionContext::GetProxy](#getproxy)|Gibt eine Schnittstelle zu den Threadproxy, der diesem Kontext ausgeführt wird.|  
+|[IExecutionContext::GetScheduler](#getscheduler)|Gibt eine Schnittstelle auf den Planer dieser Ausführungskontext gehört.|  
+|[IExecutionContext::SetProxy](#setproxy)|Ordnet einen Threadproxy dieser Ausführungskontext. Der zugeordnete Threadproxy ruft diese Methode auf, unmittelbar vor dem Beginn des Kontexts ausgeführt `Dispatch` Methode.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie einen benutzerdefinierten Planer, das mit der Concurrency Runtime-Ressourcen-Manager kommuniziert implementieren, müssen Sie zum Implementieren der `IExecutionContext` Schnittstelle. Die Threads vom Ressourcen-Manager erstellt arbeiten für den Planer ausführen, durch das Ausführen der `IExecutionContext::Dispatch` Methode.  
@@ -61,7 +65,7 @@ struct IExecutionContext;
   
  **Namespace:** Parallelität  
   
-##  <a name="dispatch"></a>IExecutionContext:: Dispatch-Methode  
+##  <a name="dispatch"></a>  IExecutionContext:: Dispatch-Methode  
  Die Methode, die aufgerufen wird, wenn ein Threadproxy startet die Ausführung eines bestimmten Ausführungskontexts. Dies sollte die Haupt-Worker-Routine, für den Planer sein.  
   
 ```
@@ -72,7 +76,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Ein Zeiger auf den Zustand, unter dem dieser Ausführungskontext weitergeleitet wird. Weitere Informationen zum Status der Verteilung, finden Sie unter [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="getid"></a>IExecutionContext:: GetID-Methode  
+##  <a name="getid"></a>  IExecutionContext:: GetID-Methode  
  Gibt einen eindeutigen Bezeichner für den Ausführungskontext zurück.  
   
 ```
@@ -87,7 +91,7 @@ virtual unsigned int GetId() const = 0;
   
  Ein Bezeichner, der aus einer anderen Quelle abgerufen kann zu nicht definiertem Verhalten führen.  
   
-##  <a name="getproxy"></a>IExecutionContext:: GetProxy-Methode  
+##  <a name="getproxy"></a>  IExecutionContext:: GetProxy-Methode  
  Gibt eine Schnittstelle zu den Threadproxy, der diesem Kontext ausgeführt wird.  
   
 ```
@@ -100,7 +104,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Hinweise  
  Der Ressourcen-Manager aufgerufen wird die `SetProxy` -Methode für einen Ausführungskontext mit ein `IThreadProxy` Schnittstelle als Parameter vor dem Eintreten in die `Dispatch` Methode auf die auf dem Kontext. Ihnen wird erwartet, dieses Argument zu speichern und bei Aufrufen zurückgegeben `GetProxy()`.  
   
-##  <a name="getscheduler"></a>IExecutionContext:: GetScheduler-Methode  
+##  <a name="getscheduler"></a>  IExecutionContext:: GetScheduler-Methode  
  Gibt eine Schnittstelle auf den Planer dieser Ausführungskontext gehört.  
   
 ```
@@ -113,7 +117,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Hinweise  
  Sie sind erforderlich, um den Ausführungskontext mit einer gültigen zu initialisieren `IScheduler` Schnittstelle vor der Verwendung als Parameter für Methoden angegeben, der Ressourcen-Manager.  
   
-##  <a name="setproxy"></a>IExecutionContext:: SetProxy-Methode  
+##  <a name="setproxy"></a>  IExecutionContext:: SetProxy-Methode  
  Ordnet einen Threadproxy dieser Ausführungskontext. Der zugeordnete Threadproxy ruft diese Methode auf, unmittelbar vor dem Beginn des Kontexts ausgeführt `Dispatch` Methode.  
   
 ```

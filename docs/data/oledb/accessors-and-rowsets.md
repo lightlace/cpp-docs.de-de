@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>Accessoren und Rowsets
 Zum Festlegen und Abrufen von Daten, OLE DB-Vorlagen verwenden, einen Accessor und ein Rowset über die [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) Klasse. Diese Klasse kann mehrere verschiedene Accessoren behandeln.  
   
 ## <a name="accessor-types"></a>Accessortypen  
- Alle Accessoren abgeleitet [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`Stellt Parameter und spaltenbindung bereit.  
+ Alle Accessoren abgeleitet [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` Stellt Parameter und spaltenbindung bereit.  
   
  Die folgende Abbildung zeigt die zugriffsmethodentypen.  
   
  ![Accessortypen](../../data/oledb/media/vcaccessortypes.gif "Vcaccessortypes")  
 Accessorklassen  
   
--   [CAccessor](../../data/oledb/caccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbankquelle zur Entwurfszeit bekannt. `CAccessor`statisch bindet ein Datenbankeintrag, der den Puffer enthält, an die Datenquelle.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbankquelle zur Entwurfszeit bekannt. `CAccessor` statisch bindet ein Datenbankeintrag, der den Puffer enthält, an die Datenquelle.  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden Sie diesen Accessor, wenn Sie nicht über die Struktur der Datenbank zur Entwurfszeit kennen. `CDynamicAccessor`Aufrufe `IColumnsInfo::GetColumnInfo` auf die Datenbank-Spalteninformationen abgerufen werden. Es erstellt und verwaltet einen Accessor und den Puffer.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden Sie diesen Accessor, wenn Sie nicht über die Struktur der Datenbank zur Entwurfszeit kennen. `CDynamicAccessor` Aufrufe `IColumnsInfo::GetColumnInfo` auf die Datenbank-Spalteninformationen abgerufen werden. Es erstellt und verwaltet einen Accessor und den Puffer.  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) verwenden Sie diesen Accessor, um unbekannte Befehlstypen zu behandeln. Wenn Sie die Befehle vorbereiten `CDynamicParameterAccessor` erhalten Parameterinformationen aus der `ICommandWithParameters` -Schnittstelle ein, wenn der Anbieter unterstützt `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), und [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) verwenden Sie diese Klassen, wenn Sie keine Kenntnisse des Datenbankschemas verfügen. `CDynamicStringAccessorA`Ruft die Daten als ANSI-Zeichenfolgen ab. `CDynamicStringAccessorW` Ruft Daten als Unicode-Zeichenfolgen ab.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), and [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) Use these classes when you have no knowledge of the database schema. `CDynamicStringAccessorA` Ruft die Daten als ANSI-Zeichenfolgen ab. `CDynamicStringAccessorW` Ruft Daten als Unicode-Zeichenfolgen ab.  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) mit dieser Klasse können Sie beliebige Datentypen soll, wenn der Anbieter den Typ konvertieren kann. Er verarbeitet die Ergebnisspalten und Befehlsparameter.  
   

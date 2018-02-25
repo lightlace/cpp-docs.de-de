@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - improper_lock
 - CONCRT/concurrency::improper_lock
 - CONCRT/concurrency::improper_lock::improper_lock
-dev_langs: C++
-helpviewer_keywords: improper_lock class
+dev_langs:
+- C++
+helpviewer_keywords:
+- improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 876023cbc559364a51f7c0774b7b5d04a11a65d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 37cf615460cda6d0f33f0431e258cac843f456c4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="improperlock-class"></a>improper_lock-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn eine Sperre nicht ordnungsgemäß abgerufen wird.  
@@ -51,11 +55,11 @@ class improper_lock : public std::exception;
  `improper_lock`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
+ **Header:** concrt.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="ctor"></a>improper_lock 
+##  <a name="ctor"></a> improper_lock 
 
  Konstruiert ein `improper_lock exception`.  
   

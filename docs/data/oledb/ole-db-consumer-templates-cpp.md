@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - databases [C++], OLE DB templates
 - OLE DB consumers [C++], data access
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 953711a6fd026c0b5409392393d854917c650cbf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB-Consumervorlagen (C++)
 Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version 2.6. (Die OLE DB-Consumervorlagen werden mit OLE DB 2.6 getestet, unterstützen aber nicht alle Schnittstellen in der Spezifikation.) Die Consumervorlagen minimieren die Menge an Code, den Sie schreiben müssen, um einen OLE DB-Consumer zu implementieren. Die Vorlagen bieten Folgendes:  

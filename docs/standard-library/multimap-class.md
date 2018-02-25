@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::multimap
 - map/std::multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multimap [C++]
 - std::multimap [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multimap-class"></a>multimap-Klasse
 Die Mehrfachzuordnungsklasse der C++-Standardbibliothek wird zum Speichern und Abrufen von Daten aus Auflistungen verwendet, in denen es sich bei jedem Element um ein Paar mit einem Datenwert und einem Sortierschlüssel handelt. Der Wert der Schlüssel muss nicht eindeutig sein und wird verwendet, um die Daten automatisch zu sortieren. Der Wert eines Elements in einer Mehrfachzuordnung, aber nicht der zugehörige Schlüsselwert, wird möglicherweise direkt geändert. Stattdessen müssen die Schlüsselwerte, die alten Elementen zugeordnet sind, gelöscht, und stattdessen neuen Schlüsselwerten für neue Elemente zugeordnet werden.  
@@ -391,7 +394,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>Hinweise  
  Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.  
   
- Der durch Mehrfachzuordnung definierte `const_iterator` zeigt auf Objekte von [value_type](#value_type) des Typs `pair`*\<***const Key**, **Type***>*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
+ Die `const_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
   
  Dereferenziert einen `const_iterator` `cIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die  **->**  Operator.  
   
@@ -471,7 +474,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>Hinweise  
  Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern. Er wird verwendet, um die Mehrfachzuordnung in umgekehrter Reihenfolge zu durchlaufen.  
   
- Der durch Mehrfachzuordnung definierte `const_reverse_iterator` zeigt auf Objekte von [value_type](#value_type) des Typs `pair`*\<***const Key**, **Type***>*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
+ Die `const_reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
   
  Dereferenziert einen `const_reverse_iterator` `crIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die  **->**  Operator.  
   
@@ -1298,7 +1301,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der durch Mehrfachzuordnung definierte **iterator**-Typ zeigt auf Objekte von [value_type](#value_type) des Typs `pair`*\<***const Key**, **Type***>*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
+ Die **Iterator** durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
   
  Verwenden Sie den Operator **->**, um einen **iterator**`Iter`-Typ zu dereferenzieren, der auf ein Element in einer Mehrfachzuordnung zeigt.  
   
@@ -2017,7 +2020,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Hinweise  
  Mit einem `reverse_iterator`-Typ lässt sich die Mehrfachzuordnung in umgekehrter Reihenfolge durchlaufen.  
   
- Der durch Mehrfachzuordnung definierte `reverse_iterator` zeigt auf Objekte von [value_type](#value_type) des Typs `pair`*\<***const Key**, **Type***>*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
+ Die `reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
   
  Dereferenziert eine `reverse_iterator` `rIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die Operator ->.  
   

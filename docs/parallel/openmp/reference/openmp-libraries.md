@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f89abf97-67e3-4327-bc30-43f85b9533a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c0f009c26789fd771d55dab5fcfe5f342aa03b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 760e7d138ab71244419ff71960948d4d10f125eb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-libraries"></a>OpenMP-Bibliotheken
 Erläutert die LIB-Dateien, aus denen die OpenMP-Laufzeitbibliotheken in Visual C++ besteht.  
@@ -27,8 +30,8 @@ Erläutert die LIB-Dateien, aus denen die OpenMP-Laufzeitbibliotheken in Visual 
   
 |OpenMP-Laufzeitbibliothek|Eigenschaften|  
 |------------------------------|---------------------|  
-|VCOMP. LIB|Multithreaded, dynamischer Link (Importbibliothek für VCOMP. LIB).|  
-|VCOMPD. LIB|Multithreaded, dynamischer Link (Importbibliothek für VCOMPD. LID) (Debuggen)|  
+|VCOMP.LIB|Multithreaded, dynamischer Link (Importbibliothek für VCOMP. LIB).|  
+|VCOMPD.LIB|Multithreaded, dynamischer Link (Importbibliothek für VCOMPD. LID) (Debuggen)|  
   
  Wenn in einer Kompilierung _DEBUG definiert ist und `#include omp.h` im Quellcode, VCOMPD ist. LIB werden die Standard-Bibliothek. Andernfalls VCOMP. LIB wird verwendet.  
   

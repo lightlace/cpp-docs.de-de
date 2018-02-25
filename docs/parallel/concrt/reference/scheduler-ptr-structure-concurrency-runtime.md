@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerptr-structure"></a>Scheduler_ptr-Struktur
 Stellt einen Zeiger auf einen Planer dar. Diese Klasse ist vorhanden, um die Spezifikation einer freigegebenen Lebensdauer mithilfe von "shared_ptr" oder nur eines einfachen Verweises und eines unformatierten Zeigers zu ermöglichen.  
@@ -41,20 +44,20 @@ struct scheduler_ptr;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[scheduler_ptr:: scheduler_ptr](#ctor)|Überladen. Erstellt einen scheduler-Zeiger von "shared_ptr" auf "scheduler".|  
+|[scheduler_ptr::scheduler_ptr](#ctor)|Überladen. Erstellt einen scheduler-Zeiger von "shared_ptr" auf "scheduler".|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[scheduler_ptr::Get](#get)|Gibt den Rohzeiger auf den Planer zurück.|  
+|[scheduler_ptr::get](#get)|Gibt den Rohzeiger auf den Planer zurück.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[scheduler_ptr:: Operator bool](#operator_bool)|Testet, dass der scheduler-Zeiger nicht NULL ist.|  
-|[scheduler_ptr:: Operator-&gt;](#operator_ptr)|Verhält sich wie ein Zeiger.|  
+|[scheduler_ptr::operator bool](#operator_bool)|Testet, dass der scheduler-Zeiger nicht NULL ist.|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Verhält sich wie ein Zeiger.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `scheduler_ptr`  
@@ -64,7 +67,7 @@ struct scheduler_ptr;
   
  **Namespace:** Parallelität  
   
-##  <a name="get"></a>scheduler_ptr::Get-Methode  
+##  <a name="get"></a>  scheduler_ptr::Get-Methode  
  Gibt den Rohzeiger auf den Planer zurück.  
   
 ```
@@ -73,10 +76,10 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="operator_bool"></a>scheduler_ptr:: Operator bool   
+##  <a name="operator_bool"></a>  scheduler_ptr:: Operator bool   
  Testet, dass der scheduler-Zeiger nicht NULL ist.  
   
-'''Operator bool() const;
+```operator bool() const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
@@ -92,7 +95,7 @@ Scheduler_interface * Operator -> (const);
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-explizite Scheduler_ptr (Std:: shared_ptr < Scheduler_interface > Zeitplanungsmodul);
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 
 explizite Scheduler_ptr (_In_opt_ Scheduler_interface * pScheduler);
 ```  

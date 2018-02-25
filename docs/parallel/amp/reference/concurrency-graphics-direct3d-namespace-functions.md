@@ -5,23 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::Graphics::Direct3D Namespace-Funktionen
 ||||  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler  
+##  <a name="get_sampler"></a>  get_sampler  
  Rufen Sie die D3D-Samplerstatus-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger, der dem D3D-Samplerstatus entspricht, der den angegebenen Sampler darstellt.  
   
-##  <a name="get_texture"></a>get_texture  
+##  <a name="get_texture"></a>  get_texture  
  Ruft die zugrunde liegende angegebenen Direct3D-texturschnittstelle [Textur](texture-class.md) Objekt.  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger, der der Direct3D-Textur entspricht, die der Textur zugrunde liegt.  
   
-##  <a name="make_sampler"></a>make_sampler  
+##  <a name="make_sampler"></a>  make_sampler  
  Erstellen Sie einen Sampler aus einem D3D-Samplerstatusschnittstellenzeiger.  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Sampler stellt den bereitgestellten D3D-Samplerstatus dar.  
   
-##  <a name="make_texture"></a>make_texture  
+##  <a name="make_texture"></a>  make_texture  
  Erstellt eine [Textur](texture-class.md) Objekt mit den angegebenen Parametern.  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Rückgabewert  
  Eine Textur, die die bereitgestellte D3D-Textur verwendet.  
   
-##  <a name="msad4"></a>msad4  
+##  <a name="msad4"></a>  msad4  
  Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert.  
   
 ```  

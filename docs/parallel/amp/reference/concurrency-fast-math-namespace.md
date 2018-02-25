@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: amp_math/Concurrency::fast_math
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- amp_math/Concurrency::fast_math
+dev_langs:
+- C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math-Namespace
 Funktionen im `fast_math`-Namespace haben eine geringere Genauigkeit, unterstützen nur mit einfacher Genauigkeit (`float`) und rufen die systeminternen DirectX-Funktionen auf. Es gibt zwei Versionen jeder Funktion, beispielsweise `cos` und `cosf`. Beide Versionen erstellen und geben einen `float`-Wert zurück, aber jede ruft die gleiche systeminterne DirectX-Funktion auf.  
@@ -66,7 +70,7 @@ namespace fast_math;
 |[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Berechnet den Gleitkommarest von _X/_Y|  
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Ruft die Mantisse und den Exponenten von _X ab|  
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Ruft die Mantisse und den Exponenten von _X ab|  
-|[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Bestimmt, ob das Argument einen über begrenzten Wert verfügt|  
+|[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Bestimmt, ob das Argument einen über begrenzten Wert verfügt|  
 |[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Bestimmt, ob das Argument unendlich ist|  
 |[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Bestimmt, ob das Argument ein NaN|  
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Berechnet eine reelle Zahl aus der Mantisse und dem Exponent|  

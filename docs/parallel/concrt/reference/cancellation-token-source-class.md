@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source
@@ -14,19 +15,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs: C++
-helpviewer_keywords: cancellation_token_source class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 02669609e25fc772f1efa49f55045eaddbaad6b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source-Klasse
 Mit der `cancellation_token_source` -Klasse kann ein abbrechbarer Vorgang abgebrochen werden.  
@@ -50,7 +54,7 @@ class cancellation_token_source;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Abbrechen](#cancel)|Bricht das Token ab. Jede `task_group`, `structured_task_group` oder jeder `task`, der das Token nutzt, wird bei diesem Aufruf abgebrochen und löst eine Ausnahme am nächsten Unterbrechungspunkt aus.|  
+|[cancel](#cancel)|Bricht das Token ab. Jede `task_group`, `structured_task_group` oder jeder `task`, der das Token nutzt, wird bei diesem Aufruf abgebrochen und löst eine Ausnahme am nächsten Unterbrechungspunkt aus.|  
 |[create_linked_source](#create_linked_source)|Überladen. Erstellt eine `cancellation_token_source`, die abgebrochen wird, wenn das bereitgestellte Token abgebrochen wird.|  
 |[get_token](#get_token)|Gibt ein Abbruchtoken zurück, das dieser Quelle zugeordnet ist. Das zurückgegebene Token kann für einen Abbruch abgerufen werden oder einen Rückruf bereitstellen, wenn ein Abbruch auftritt.|  
   
@@ -70,13 +74,13 @@ class cancellation_token_source;
   
  **Namespace:** Parallelität  
   
-##  <a name="dtor"></a>~ Cancellation_token_source 
+##  <a name="dtor"></a> ~cancellation_token_source 
 
 ```
 ~cancellation_token_source();
 ```  
   
-##  <a name="cancel"></a>Abbrechen 
+##  <a name="cancel"></a> Abbrechen 
 
  Bricht das Token ab. Jede `task_group`, `structured_task_group` oder jeder `task`, der das Token nutzt, wird bei diesem Aufruf abgebrochen und löst eine Ausnahme am nächsten Unterbrechungspunkt aus.  
   
@@ -84,7 +88,7 @@ class cancellation_token_source;
 void cancel() const;
 ```  
   
-##  <a name="ctor"></a>cancellation_token_source 
+##  <a name="ctor"></a> cancellation_token_source 
 
  Erstellt eine neue `cancellation_token_source`. Die Quelle kann verwendet werden, um den Abbruch eines abbrechbaren Vorgangs zu kennzeichnen.  
   
@@ -99,7 +103,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ### <a name="parameters"></a>Parameter  
  `_Src`  
   
-##  <a name="create_linked_source"></a>create_linked_source 
+##  <a name="create_linked_source"></a> create_linked_source 
 
  Erstellt eine `cancellation_token_source`, die abgebrochen wird, wenn das bereitgestellte Token abgebrochen wird.  
   
@@ -125,7 +129,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ### <a name="return-value"></a>Rückgabewert  
  Eine `cancellation_token_source`, die abgebrochen wird, wenn das vom `_Src`-Parameter bereitgestellte Token abgebrochen wird.  
   
-##  <a name="get_token"></a>get_token 
+##  <a name="get_token"></a> get_token 
 
  Gibt ein Abbruchtoken zurück, das dieser Quelle zugeordnet ist. Das zurückgegebene Token kann für einen Abbruch abgerufen werden oder einen Rückruf bereitstellen, wenn ein Abbruch auftritt.  
   
@@ -136,7 +140,7 @@ cancellation_token get_token() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Abbruchtoken, der dieser Quelle zugeordnet ist.  
   
-##  <a name="operator_neq"></a>Operator! = 
+##  <a name="operator_neq"></a> Operator! = 
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -147,7 +151,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a> Operator = 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -160,7 +164,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="operator_eq_eq"></a>Operator == 
+##  <a name="operator_eq_eq"></a> Operator == 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

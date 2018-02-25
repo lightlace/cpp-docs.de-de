@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -30,11 +30,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b9ee0a1a044a7e1f87b6da4bec9418c42e6b6ba1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Vom Consumer-Assistenten generierte Methoden
 ATL-OLE DB-Consumer-Assistent und der MFC-Anwendungs-Assistent generiert bestimmte Funktionen, die Sie berücksichtigen sollten. Beachten Sie, dass einige Methoden in attributierten Projekten unterschiedlich implementiert werden, daher gibt es einige Einschränkungen. jeder Fall wird im folgenden erläutert. Informationen zum Anzeigen von injiziertem Code finden Sie unter [Debuggen von injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).  

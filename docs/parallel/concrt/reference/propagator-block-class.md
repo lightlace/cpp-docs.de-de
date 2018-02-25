@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - propagator_block
 - AGENTS/concurrency::propagator_block
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::propagator_block::send_message
 - AGENTS/concurrency::propagator_block::unlink_source
 - AGENTS/concurrency::propagator_block::unlink_sources
-dev_langs: C++
-helpviewer_keywords: propagator_block class
+dev_langs:
+- C++
+helpviewer_keywords:
+- propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff31849020c9daed7999ae1569e8c12249a4b834
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block-Klasse
 Die `propagator_block`-Klasse ist eine abstrakte Basisklasse für Meldungsblöcke, die sowohl Quelle als auch Ziel sind. Kombiniert die Funktion der `source_block`-Klasse mit der Funktion der `target_block`-Klasse.  
@@ -72,13 +76,13 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[propagator_block](#ctor)|Erstellt ein `propagator_block`-Objekt.|  
-|[~ Propagator_block-Destruktor](#dtor)|Zerstört ein `propagator_block`-Objekt.|  
+|[~propagator_block Destructor](#dtor)|Zerstört ein `propagator_block`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[weitergeben](#propagate)|Übergibt eine Meldung asynchron aus ein Quellblock an diesen Zielblock.|  
+|[propagate](#propagate)|Übergibt eine Meldung asynchron aus ein Quellblock an diesen Zielblock.|  
 |[Senden](#send)|Initiiert synchron eine Meldung an diesen Block. Wird aufgerufen, indem ein `ISource` Block. Wenn diese Funktion abgeschlossen ist, wird die Nachricht bereits in den Block weitergegeben wurden.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
@@ -113,7 +117,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  **Namespace:** Parallelität  
   
-##  <a name="decline_incoming_messages"></a>decline_incoming_messages 
+##  <a name="decline_incoming_messages"></a> decline_incoming_messages 
 
  Zeigt den Block an, dass neue Nachrichten abgelehnt werden sollte.  
   
@@ -124,7 +128,7 @@ void decline_incoming_messages();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, durch den Destruktor, um sicherzustellen, dass neue Nachrichten abgelehnt werden, während Zerstörung ausgeführt wird.  
   
-##  <a name="initialize_source_and_target"></a>initialize_source_and_target 
+##  <a name="initialize_source_and_target"></a> initialize_source_and_target 
 
  Initialisiert das Basisobjekt. Insbesondere die `message_processor` Objekt muss initialisiert werden.  
   
@@ -141,7 +145,7 @@ void initialize_source_and_target(
  `_PScheduleGroup`  
  Der Planungsgruppe zum Planen von Aufgaben verwendet werden soll.  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  Verknüpft einen angegebenen Quellblock mit diesem `propagator_block` Objekt.  
   
@@ -153,7 +157,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  Ein Zeiger auf die `ISource` Block, der verknüpft werden soll.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  Prozess eingehende Nachrichten. Dies ist nur sinnvoll für weitergabeblöcke, die von Source_block abgeleitet werden  
   
@@ -164,7 +168,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ### <a name="parameters"></a>Parameter  
  `_PMessage`  
   
-##  <a name="propagate"></a>weitergeben 
+##  <a name="propagate"></a> weitergeben 
 
  Übergibt eine Meldung asynchron aus ein Quellblock an diesen Zielblock.  
   
@@ -189,7 +193,7 @@ virtual message_status propagate(
   
  Die Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn entweder die `_PMessage` oder `_PSource` Parameter ist `NULL`.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Diese Methode übergibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine Nachricht von einer `ISource` Block dieser `propagator_block` Objekt. Wird aufgerufen, indem die `propagate` Methode, wenn von ein Quellblock aufgerufen wird.  
   
@@ -209,7 +213,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Überblick, was das Ziel beschlossen, mit der Nachricht geschehen soll.  
   
-##  <a name="ctor"></a>propagator_block 
+##  <a name="ctor"></a> propagator_block 
 
  Erstellt ein `propagator_block`-Objekt.  
   
@@ -217,7 +221,7 @@ virtual message_status propagate_message(
 propagator_block();
 ```  
   
-##  <a name="dtor"></a>~ Propagator_block 
+##  <a name="dtor"></a> ~propagator_block 
 
  Zerstört ein `propagator_block`-Objekt.  
   
@@ -225,7 +229,7 @@ propagator_block();
 virtual ~propagator_block();
 ```  
   
-##  <a name="register_filter"></a>register_filter 
+##  <a name="register_filter"></a> register_filter 
 
  Registriert eine Filtermethode, die für jede empfangene Nachricht aufgerufen wird.  
   
@@ -237,7 +241,7 @@ void register_filter(filter_method const& _Filter);
  `_Filter`  
  Die Filtermethode.  
   
-##  <a name="remove_network_links"></a>remove_network_links 
+##  <a name="remove_network_links"></a> remove_network_links 
 
  Entfernt alle Quell- und Netzwerkverbindungen aus diesem `propagator_block` Objekt.  
   
@@ -245,7 +249,7 @@ void register_filter(filter_method const& _Filter);
 void remove_network_links();
 ```  
   
-##  <a name="send"></a>Senden 
+##  <a name="send"></a> Senden 
 
  Initiiert synchron eine Meldung an diesen Block. Wird aufgerufen, indem ein `ISource` Block. Wenn diese Funktion abgeschlossen ist, wird die Nachricht bereits in den Block weitergegeben wurden.  
   
@@ -268,7 +272,7 @@ virtual message_status send(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn entweder die `_PMessage` oder `_PSource` Parameter ist `NULL`.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Diese Methode übergibt beim Überschreiben in einer abgeleiteten Klasse synchron eine Meldung von einer `ISource` Block dieser `propagator_block` Objekt. Wird aufgerufen, indem die `send` Methode, wenn von ein Quellblock aufgerufen wird.  
   
@@ -284,7 +288,7 @@ virtual message_status send_message(
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt dieser Block `declined` , sofern nicht durch eine abgeleitete Klasse überschrieben.  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  Hebt die Verknüpfung mit einer angegebenen Quellblock aus diesem `propagator_block` Objekt.  
   
@@ -296,7 +300,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  Ein Zeiger auf die `ISource` Block, der aufgehoben werden soll.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  Hebt die Verknüpfung von diesem alle Quellblöcke `propagator_block` Objekt.  
   

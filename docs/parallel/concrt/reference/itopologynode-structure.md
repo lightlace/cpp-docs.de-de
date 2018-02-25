@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyNode
 - CONCRTRM/concurrency::ITopologyNode
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs: C++
-helpviewer_keywords: ITopologyNode structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode-Struktur
 Eine Schnittstelle für einen vom Ressourcen-Manager definierten Topologieknoten. Ein Knoten enthält mindestens eine Ausführungsressource.  
@@ -44,11 +48,11 @@ struct ITopologyNode;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|Gibt die Anzahl der Ressourcen zur Ausführung unter diesem Knoten gruppiert.|  
-|[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|Gibt die erste Ausführungsressource unter diesem Knoten Reihenfolge gruppiert.|  
-|[Itopologynode:: GetID](#getid)|Gibt die Ressourcen-Manager eindeutige Bezeichner für diesen Knoten zurück.|  
-|[Itopologynode:: GetNext](#getnext)|Gibt eine Schnittstelle auf den nächsten Knoten der Topologie Reihenfolge zurück.|  
-|[Itopologynode:: Getnumanode](#getnumanode)|Gibt die von Windows zugewiesene NUMA-Knotenzahl zurück, zu der dieser Ressource-Manager-Knoten gehört.|  
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Gibt die Anzahl der Ressourcen zur Ausführung unter diesem Knoten gruppiert.|  
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Gibt die erste Ausführungsressource unter diesem Knoten Reihenfolge gruppiert.|  
+|[ITopologyNode::GetId](#getid)|Gibt die Ressourcen-Manager eindeutige Bezeichner für diesen Knoten zurück.|  
+|[ITopologyNode::GetNext](#getnext)|Gibt eine Schnittstelle auf den nächsten Knoten der Topologie Reihenfolge zurück.|  
+|[ITopologyNode::GetNumaNode](#getnumanode)|Gibt die von Windows zugewiesene NUMA-Knotenzahl zurück, zu der dieser Ressource-Manager-Knoten gehört.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Schnittstelle ist in der Regel verwendet, um die Topologie des Systems zu durchlaufen, als vom Ressourcen-Manager überwacht.  
@@ -61,7 +65,7 @@ struct ITopologyNode;
   
  **Namespace:** Parallelität  
   
-##  <a name="getexecutionresourcecount"></a>Itopologynode:: Getexecutionresourcecount-Methode  
+##  <a name="getexecutionresourcecount"></a>  Itopologynode:: Getexecutionresourcecount-Methode  
  Gibt die Anzahl der Ressourcen zur Ausführung unter diesem Knoten gruppiert.  
   
 ```
@@ -71,7 +75,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Ressourcen zur Ausführung unter diesem Knoten gruppiert.  
   
-##  <a name="getfirstexecutionresource"></a>Itopologynode:: Getfirstexecutionresource-Methode  
+##  <a name="getfirstexecutionresource"></a>  Itopologynode:: Getfirstexecutionresource-Methode  
  Gibt die erste Ausführungsressource unter diesem Knoten Reihenfolge gruppiert.  
   
 ```
@@ -81,7 +85,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die erste Ausführungsressource gruppiert unter diesem Knoten in der Reihenfolge der Enumeration.  
   
-##  <a name="getid"></a>Itopologynode:: GetID-Methode  
+##  <a name="getid"></a>  Itopologynode:: GetID-Methode  
  Gibt die Ressourcen-Manager eindeutige Bezeichner für diesen Knoten zurück.  
   
 ```
@@ -96,7 +100,7 @@ virtual unsigned int GetId() const = 0;
   
  Die Anzahl der Knoten abgerufen werden kann, von der Funktion [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="getnext"></a>Itopologynode:: GetNext-Methode  
+##  <a name="getnext"></a>  Itopologynode:: GetNext-Methode  
  Gibt eine Schnittstelle auf den nächsten Knoten der Topologie Reihenfolge zurück.  
   
 ```
@@ -106,7 +110,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Schnittstelle zu den nächsten Knoten in der Reihenfolge der Enumeration. Wenn die Reihenfolge der Systemtopologie keine weiteren Knoten vorhanden sind, gibt diese Methode den Wert zurück `NULL`.  
   
-##  <a name="getnumanode"></a>Itopologynode:: Getnumanode-Methode  
+##  <a name="getnumanode"></a>  Itopologynode:: Getnumanode-Methode  
  Gibt die von Windows zugewiesene NUMA-Knotenzahl zurück, zu der dieser Ressource-Manager-Knoten gehört.  
   
 ```

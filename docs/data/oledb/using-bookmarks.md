@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27c6b4a98eeaf3ffcae07d8277e823375176eed2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-bookmarks"></a>Verwenden von Lesezeichen
 Bevor Sie das Rowset zu öffnen, muss dem Anbieter Aufschluss darüber, dass Sie Lesezeichen verwenden möchten. Legen Sie hierzu die **DBPROP_BOOKMARKS** Eigenschaft **"true"** in Ihrer Eigenschaft festgelegt. Der Anbieter Lesezeichen als Spalte 0 (null), abruft, daher müssen Sie das spezielle Makro verwenden `BOOKMARK_ENTRY` und die `CBookmark` Klasse, wenn Sie einen statischen Accessor verwenden. `CBookmark` ist eine Vorlagenklasse, in dem das Argument die Länge in Bytes des Lesezeichenpuffers ist. Die Länge des Puffers für ein Lesezeichen benötigte hängt vom Anbieter ab. Wenn Sie den ODBC-OLE DB-Anbieter verwenden, wie im folgenden Beispiel gezeigt, muss der Puffer 4 Bytes.  

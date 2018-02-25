@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource-Struktur
 Eine Abstraktion für einen Hardwarethread.  
@@ -43,10 +47,10 @@ struct IExecutionResource;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Gibt die Anzahl der aktivierten virtuellen Prozessors Stämme und abonnierten externen Threads, die derzeit zugewiesen ist, mit der Hardwarethread des zugrunde liegenden, den diese Ausführungsressource darstellt.|  
-|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|Gibt einen eindeutigen Bezeichner für die Hardwarethread, den diese Ausführungsressource darstellt.|  
-|[IExecutionResource:: GetNodeId](#getnodeid)|Gibt einen eindeutigen Bezeichner für den Prozessorknoten, zu der diese Ausführungsressource gehört.|  
-|[IExecutionResource:: Remove](#remove)|Gibt diese Ausführungsressource an den Ressourcen-Manager zurück.|  
+|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Gibt die Anzahl der aktivierten virtuellen Prozessors Stämme und abonnierten externen Threads, die derzeit zugewiesen ist, mit der Hardwarethread des zugrunde liegenden, den diese Ausführungsressource darstellt.|  
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Gibt einen eindeutigen Bezeichner für die Hardwarethread, den diese Ausführungsressource darstellt.|  
+|[IExecutionResource::GetNodeId](#getnodeid)|Gibt einen eindeutigen Bezeichner für den Prozessorknoten, zu der diese Ausführungsressource gehört.|  
+|[IExecutionResource::Remove](#remove)|Gibt diese Ausführungsressource an den Ressourcen-Manager zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ressourcen zur Ausführung können eigenständig oder Stämme virtueller Prozessoren zugeordnet. Eine eigenständige Ausführungsressource wird erstellt, wenn ein Thread in der Anwendung ein Thread erstellt. Die Methoden [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) und [RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) Threadabonnements erstellen und Zurückgeben einer `IExecutionResource` Schnittstelle darstellt. die das Abonnement. Erstellen eines Abonnements Thread ist eine Möglichkeit, den Ressourcen-Manager zu informieren, die ein bestimmter Thread in die Arbeit einbezogen werden für einen Planer, zusammen mit der Stämme virtueller Prozessoren in der Warteschlange, die Ressourcen-Manager auf den Planer zugewiesen. Der Ressourcen-Manager verwendet die Informationen um zu vermeiden, eine Überabonnierung von Hardwarethreads können, in denen es verwendet wird.  
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **Namespace:** Parallelität  
   
-##  <a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel-Methode  
+##  <a name="currentsubscriptionlevel"></a>  IExecutionResource:: CurrentSubscriptionLevel-Methode  
  Gibt die Anzahl der aktivierten virtuellen Prozessors Stämme und abonnierten externen Threads, die derzeit zugewiesen ist, mit der Hardwarethread des zugrunde liegenden, den diese Ausführungsressource darstellt.  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Der Ressourcen-Manager verwendet die Ebene Abonnementinformationen als eines der Möglichkeiten, um zu bestimmen, wann das Verschieben von Ressourcen zwischen Planern.  
   
-##  <a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId-Methode  
+##  <a name="getexecutionresourceid"></a>  IExecutionResource:: GetExecutionResourceId-Methode  
  Gibt einen eindeutigen Bezeichner für die Hardwarethread, den diese Ausführungsressource darstellt.  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Hinweise  
  Jede Hardwarethread wird von der Concurrency Runtime einen eindeutigen Bezeichner zugewiesen. Wenn mehrere Ausführungsressourcen, die entsprechende Hardware sind Thread, sie haben alle den gleichen Ressourcenbezeichner für die Ausführung.  
   
-##  <a name="getnodeid"></a>IExecutionResource:: GetNodeId-Methode  
+##  <a name="getnodeid"></a>  IExecutionResource:: GetNodeId-Methode  
  Gibt einen eindeutigen Bezeichner für den Prozessorknoten, zu der diese Ausführungsressource gehört.  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Die Anzahl der Knoten abgerufen werden kann, von der Funktion [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="remove"></a>IExecutionResource:: Remove-Methode  
+##  <a name="remove"></a>  IExecutionResource:: Remove-Methode  
  Gibt diese Ausführungsressource an den Ressourcen-Manager zurück.  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  Stämme virtueller Prozessoren zu, können zurückgegeben werden, der Ressourcen-Manager durch Aufrufen der `Remove` -Methode, da die Schnittstelle `IVirtualProcessorRoot` erbt von der `IExecutionResource` Schnittstelle. Möglicherweise müssen Sie einem virtuellen Prozessorstamm entweder als Antwort auf einen Aufruf zum Zurückgeben der [IScheduler:: RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) -Methode, oder wenn Sie mit den Stamm eines überzeichneten virtuellen Prozessors Sie erworben haben haben, aus der [ ISchedulerProxy:: CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) Methode. Stämme virtueller Prozessoren, es gibt keine Einschränkungen für die Bestimmung des Threads aufgerufen werden soll, können die `Remove` Methode.  
   
- `invalid_argument`wird ausgelöst, wenn der Parameter `pScheduler` festgelegt ist, um `NULL`.  
+ `invalid_argument` wird ausgelöst, wenn der Parameter `pScheduler` festgelegt ist, um `NULL`.  
   
- `invalid_operation`wird ausgelöst, wenn der Parameter `pScheduler` unterscheidet sich vom Planer, dass diese Ausführungsressource, oder können Sie mit der eine eigenständige Ausführungsressource erstellt wurde ist der aktuelle Thread anderen als den Thread, der das Threadabonnement erstellt.  
+ `invalid_operation` wird ausgelöst, wenn der Parameter `pScheduler` unterscheidet sich vom Planer, dass diese Ausführungsressource, oder können Sie mit der eine eigenständige Ausführungsressource erstellt wurde ist der aktuelle Thread anderen als den Thread, der das Threadabonnement erstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
