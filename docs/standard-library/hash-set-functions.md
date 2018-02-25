@@ -5,25 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 4fcd6f0d72d31823a0d35108f087f2ad680e2f48
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.openlocfilehash: e9d6b5fa1588809b99b26d30234337a890b08157
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; Funktionen
 |||  
 |-|-|  
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|  
   
-##  <a name="swap"></a> swap  
+##  <a name="swap"></a>  swap  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist [unordered_set-Klasse](../standard-library/unordered-set-class.md).  

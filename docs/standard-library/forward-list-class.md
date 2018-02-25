@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -46,7 +47,8 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -87,16 +89,17 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2861f4b51b5d1deefd1d4959343d16c2979b67d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="forwardlist-class"></a>forward_list-Klasse
 Beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert. Die Sequenz wird als einfach verknüpfte Knotenliste gespeichert, die jeweils einen Member vom Typ `Type` enthält.  
@@ -606,7 +609,7 @@ void merge(forward_list& right, Predicate comp);
 |`comp`|Der Funktionenvergleichsobjekt, das zum Sortieren der Elemente verwendet wird|  
   
 ### <a name="remarks"></a>Hinweise  
- `forward_list::merge`Entfernt Elemente aus der `forward_list` `right`, und fügt sie in dieser `forward_list`. Beide Sequenzen müssen nach dem gleichen Prädikat sortiert werden, wie unten beschrieben. Die kombinierte Ereignissequenz wird ebenfalls nach diesem Funktionenvergleichssobjekt sortiert.  
+ `forward_list::merge` Entfernt Elemente aus der `forward_list` `right`, und fügt sie in dieser `forward_list`. Beide Sequenzen müssen nach dem gleichen Prädikat sortiert werden, wie unten beschrieben. Die kombinierte Ereignissequenz wird ebenfalls nach diesem Funktionenvergleichssobjekt sortiert.  
   
  Für die Iteratoren `Pi` und `Pj`, die Elemente an den Positionen `i` und `j` festlegen, erzwingt die erste Memberfunktion die Reihenfolge `!(*Pj < *Pi)`, immer wenn `i < j` vorliegt. (Die Elemente werden in aufsteigender Reihenfolge (`ascending`) sortiert.) Die zweite Memberfunktion erzwingt die Reihenfolge `! comp(*Pj, *Pi)`, immer wenn `i < j` vorliegt.  
   

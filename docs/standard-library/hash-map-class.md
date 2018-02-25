@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_map
 - hash_map/stdext::hash_map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - hash_map/stdext::hash_map::swap
 - hash_map/stdext::hash_map::upper_bound
 - hash_map/stdext::hash_map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_map
 - stdext::hash_map::allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 056d517779ca085152fea081271757329f7f3be8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmap-class"></a>hash_map-Klasse
 > [!NOTE]
@@ -518,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Hinweise  
  Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.  
   
- Der `const_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das von Typ `pair`*\<***const Key, Type***>* ist. Dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
+ Die `const_iterator` durch hash_map-Element verweist auf Elemente, die Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair`  *\< ***const Key, Type*** >* , dessen erste Member ist der Schlüssel, der dem Element und, deren zweite Element ist der zugeordnete Bezug frei, die für das Element.  
   
  Dereferenziert einen `const_iterator` `cIter` verweist auf ein Element in einer Hash_map, verwenden Sie die  **->**  Operator.  
   
@@ -2711,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `value_type` wird als `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* deklariert und nicht als `pair`**\<key_type, mapped_type>**, da die Schlüssel eines assoziativen Containers vielleicht nicht durch das Verwenden eines nonconstant-Iterators oder Verweises geändert werden können.  
+ `value_type` wird als deklariert `pair`  *\< * **const**[Key_type](#key_type), [Mapped_type](#mapped_type)*> * und nicht `pair`  **\<Key_type Mapped_type >** , da die Schlüssel des ein assoziativer Container nicht geändert werden können, mit einem nicht Konstanten Iterator oder Verweis.  
   
   
 ### <a name="example"></a>Beispiel  

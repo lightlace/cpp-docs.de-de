@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: atomic/std::atomic
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5525953e5f4ba68fdf1b84b02046d9ab4679abe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e5e7de7a5098aec10618c961444eb73b4597d0fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="atomic-structure"></a>atomic-Struktur
 Beschreibt ein Objekt, das auf einem gespeicherten Wert des Typs `Ty` atomische Vorgänge ausführt.  
@@ -43,8 +47,8 @@ struct atomic;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[atomic::operator Ty-Operator](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Liest und den gespeicherten Wert und gibt ihn zurück. ([Atomic:: Load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[atomic::operator=-Operator](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert. ([Atomic:: Store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator Ty-Operator](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Liest und den gespeicherten Wert und gibt ihn zurück. ([atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator=-Operator](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert. ([atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
 |[atomic::operator++-Operator](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Erhöht den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|  
 |[atomic::operator+=-Operator](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Fügt dem gespeicherten Wert einen angegebenen Wert hinzu. Wird nur von integrale und Zeigerspezialisierungen verwendet.|  
 |[atomic::operator---Operator](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Verringert den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|  
@@ -65,7 +69,7 @@ struct atomic;
 |[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Subtrahiert einen angegebenen Wert vom gespeicherten Wert.|  
 |[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
 |[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Gibt an, ob die atomischen Vorgänge auf `this` *sperrfrei* sind. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.|  
-|[Laden](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Liest und den gespeicherten Wert und gibt ihn zurück.|  
+|[load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Liest und den gespeicherten Wert und gibt ihn zurück.|  
 |[store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -86,7 +90,7 @@ struct atomic;
  Integralspezialisierungen werden von den entsprechenden `atomic_integral`-Typen abgeleitet. So wird `atomic<unsigned int>` z. B. von `atomic_uint` abgeleitet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \<atomic >  
+ **Header:** \<atomic>  
   
  **Namespace:** std  
   

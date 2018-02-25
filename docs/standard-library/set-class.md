@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::set
 - set/std::set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::set [C++]
 - std::set [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c2eba982b48181dee284bed63d3bab978d624fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-class"></a>set-Klasse
 Der Containerklassensatz der C++-Standardbibliothek wird zum Speichern und Abrufen von Daten aus einer Sammlung verwendet, in der die Werte der enthaltenen Elemente eindeutig sind und als Schlüsselwerte dienen, nach denen die Daten automatisch sortiert werden. Der Schlüsselwert eines Elements in einem Satz darf nicht direkt geändert werden. Stattdessen müssen Sie alte Werte löschen und Elemente mit neuen Werten einfügen.  
@@ -126,7 +129,7 @@ class set
  In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers des Satzes kapselt. Dieses Argument ist optional, und der Standardwert ist **allocator***\<Key>.*  
+ Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers des Satzes kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator ***\<Key >.*  
   
 ## <a name="remarks"></a>Hinweise  
  Ein C++-Standardbibliothekssatz ist:  

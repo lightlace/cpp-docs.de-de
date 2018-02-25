@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 Definiert Vorlagenklassen und Funktionen, die von C++-Programmen verwendet werden können, um verschiedene kulturelle Konventionen bezüglich der Darstellung und der Formatierung von numerischen, monetären und kalendarischen Daten, einschließlich Internationalisierungsunterstützung für Zeichenklassifizierung und Zeichenfolgensortierreihenfolge, zu kapseln und zu bearbeiten.  
@@ -65,7 +69,7 @@ Definiert Vorlagenklassen und Funktionen, die von C++-Programmen verwendet werde
 |[collate](../standard-library/collate-class.md)|Eine Sortierungsvorlagenklasse, die ein Facet bereitstellt, das Konventionen zum Sortieren von Zeichenfolgen verarbeitet.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Sortierungsfacet eines angegebenen Gebietsschemas dienen kann, sodass für einen kulturellen Bereich spezifische Informationen über Konventionen zum Sortieren von Zeichenfolgen abgerufen werden können.|  
 |[ctype](../standard-library/ctype-class.md)|Eine Vorlagenklasse, die ein Facet bereitstellt, das verwendet wird, um Zeichen zu klassifizieren, zwischen Groß- und Kleinbuchstaben zu wechseln und zwischen dem systemeigenen Zeichensatz und dem vom Gebietsschema verwendeten Zeichensatz zu konvertieren.|  
-|[CType\<Char >](../standard-library/ctype-char-class.md)|Eine Klasse, ist eine explizite Spezialisierung der Vorlagenklasse **Ctype\<CharType**> eingeben `char`, beschreibt ein Objekt, das als gebietsschemafacet zur verschiedene Eigenschaften eines Zeichens vom Typ charakterisieren dienen kann `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Eine Klasse, ist eine explizite Spezialisierung der Vorlagenklasse **Ctype\<CharType**> eingeben `char`, beschreibt ein Objekt, das als gebietsschemafacet zur verschiedene Eigenschaften eines Zeichens vom Typ charakterisieren dienen kann `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|Eine Basisklasse für die ctype-Klasse, die verwendet wird, um die Enumerationstypen zu definieren, mit denen Zeichen entweder einzeln oder innerhalb eines gesamten Bereichs klassifiziert oder getestet werden.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als ctype-Facet eines angegebenen Gebietsschemas dienen kann und die Klassifizierung von Zeichen sowie die Konvertierung von Zeichen zwischen Groß-/Kleinschreibung und zwischen systemeigenen und gebietsschemaspezifischen Zeichensätzen ermöglicht.|  
 |[locale](../standard-library/locale-class.md)|Eine Klasse, die ein Gebietsschemaobjekt beschreibt, das kulturspezifische Informationen als einen Satz von Facets kapselt, die zusammen eine bestimmte lokalisierte Umgebung definieren.|  

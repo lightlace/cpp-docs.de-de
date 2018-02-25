@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake Projekte in Visual C++
 
@@ -161,7 +165,7 @@ Sobald Sie die Datei speichern, die Konfigurationsschritte automatisch erneut au
 
    ![Fehler in der CMakeLists.txt](media/cmake-cmakelists-error.png "CMakeLists.txt Fehler")
 
-## <a name="cmake_settings"></a>CMake-Einstellungen und benutzerdefinierte Konfigurationen
+## <a name="cmake_settings"></a> CMake-Einstellungen und benutzerdefinierte Konfigurationen
 
 Visual Studio bietet standardmäßig sechs CMake Standardkonfigurationen ("X86-Debug", "X86-Version", "X64-Debug", "X64-Version", "Linux-Debug" und "Linux-Version"). Diese Konfigurationen definieren, wie CMake.exe aufgerufen wird, um den Cache CMake für ein angegebenes Projekt zu erstellen. Um diese Konfigurationen zu ändern oder eine neue benutzerdefinierte Konfiguration erstellen, wählen Sie **CMake | Ändern der Einstellungen CMake**, und wählen Sie dann die CMakeLists.txt-Datei, die die Einstellungen für gelten. Die **CMake Änderungseinstellungen** Befehl steht auch auf dem Dateikontextmenü im **Projektmappen-Explorer**. Dieser Befehl erstellt eine CMakeSettings.json-Datei im Projektordner. Diese Datei wird verwendet, um die Cachedatei CMake, z. B. nach dem Neuerstellen einer **Bereinigen** Vorgang. 
 
@@ -215,13 +219,13 @@ Um ein Visual Studio-Generator angeben möchten, öffnen Sie die CMakeSettings.j
 CMakeSettings.json unterstützt auch verbrauchende Umgebungsvariablen in einem der oben genannten Eigenschaften. Die zu verwendende Syntax wird `${env.FOO}` Umgebung Variable "% FOO" erweitern.
 Sie haben außerdem Zugriff auf vordefinierte Makros in dieser Datei:
 
-- `${workspaceRoot}`– Stellt den vollständigen Pfad des Arbeitsbereichsordners
-- `${workspaceHash}`– Hash des Arbeitsbereichs %Location; nützlich zum Erstellen von eines eindeutigen Bezeichner für den aktuellen Arbeitsbereich (z. B. zur Verwendung in Ordnerpfaden)
-- `${projectFile}`– der vollständige Pfad der Datei CMakeLists.txt Stamm
-- `${projectDir}`– der vollständige Pfad des Ordners, der die Stammdatei CMakeLists.txt
-- `${thisFile}`– der vollständige Pfad der Datei CMakeSettings.json
-- `${name}`– der Name der Konfiguration
-- `${generator}`– der Name des in dieser Konfiguration verwendete CMake-Generators
+- `${workspaceRoot}` – Stellt den vollständigen Pfad des Arbeitsbereichsordners
+- `${workspaceHash}` – Hash des Arbeitsbereichs %Location; nützlich zum Erstellen von eines eindeutigen Bezeichner für den aktuellen Arbeitsbereich (z. B. zur Verwendung in Ordnerpfaden)
+- `${projectFile}` – der vollständige Pfad der Datei CMakeLists.txt Stamm
+- `${projectDir}` – der vollständige Pfad des Ordners, der die Stammdatei CMakeLists.txt
+- `${thisFile}` – der vollständige Pfad der Datei CMakeSettings.json
+- `${name}` – der Name der Konfiguration
+- `${generator}` – der Name des in dieser Konfiguration verwendete CMake-Generators
 
 ### <a name="ninja-command-line-arguments"></a>Ninja-Befehlszeilenargumente
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w-FLAG  | Anpassen von Warnungen (Verwendung -w Liste in Warnungen)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Geerbte Umgebungen (Visual Studio 2017 Version 15.5)
-
-CmakeSettings.json unterstützt jetzt die geerbte Umgebungen. Dieses Feature ermöglicht Ihnen, (1) erben standardmäßig Umgebungen und (2) erstellen Sie benutzerdefinierte Umgebungsvariablen, die an CMake.exe übergeben werden, wenn er ausgeführt wird.
+CMakeSettings.json unterstützt jetzt die geerbte Umgebungen. Dieses Feature ermöglicht Ihnen, (1) erben standardmäßig Umgebungen und (2) erstellen Sie benutzerdefinierte Umgebungsvariablen, die an CMake.exe übergeben werden, wenn er ausgeführt wird.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ Die folgende Tabelle zeigt die Standardwerte und deren Entsprechungen Befehlszei
 |msvc_arm64_x64|Für ARM64 Kompilieren mithilfe von 64-Bit-tools|
 
 ### <a name="custom-environment-variables"></a>Benutzerdefinierte Umgebungsvariablen
-In CmakeSettings.json, können Sie Global benutzerdefinierten Umgebungsvariablen definieren oder pro-Konfiguration in der **Umgebungen** Eigenschaft. Das folgende Beispiel definiert eine globale Variable **BuildDir**, die in die X86-Debug- und die X64-Debug-Konfigurationen geerbt wird. Jede Konfiguration verwendet die Variable zum Angeben des Werts für die **BuildRoot** Eigenschaft für diese Konfiguration. Beachten Sie auch, wie jede Konfiguration verwendet die **InheritEnvironments** Eigenschaft, um eine Variable anzugeben, die nur für diese Konfiguration gilt.
+In CMakeSettings.json, können Sie Global benutzerdefinierten Umgebungsvariablen definieren oder pro-Konfiguration in der **Umgebungen** Eigenschaft. Das folgende Beispiel definiert eine globale Variable **BuildDir**, die in die X86-Debug- und die X64-Debug-Konfigurationen geerbt wird. Jede Konfiguration verwendet die Variable zum Angeben des Werts für die **BuildRoot** Eigenschaft für diese Konfiguration. Beachten Sie auch, wie jede Konfiguration verwendet die **InheritEnvironments** Eigenschaft, um eine Variable anzugeben, die nur für diese Konfiguration gilt.
 
 ```json
 {
@@ -290,8 +293,7 @@ In CmakeSettings.json, können Sie Global benutzerdefinierten Umgebungsvariablen
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ Im nächsten Beispiel definiert die X86-Debug-Konfiguration einen eigenen Wert f
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake konfigurieren Schritt
+## <a name="cmake-configure-step"></a>CMake konfigurieren Schritt
 
 Wichtige Änderungen in die CMakeSettings.json oder CMakeLists.txt Dateien, Visual Studio automatisch ausgeführt werden konfigurieren Schritt der CMake dann erneut ausgeführt. Wenn Schritt konfigurieren ohne Fehler abgeschlossen ist, die gesammelten Informationen steht im C++-IntelliSense und Dienste für Sprachen auch im build und zu debuggen Vorgänge.
 

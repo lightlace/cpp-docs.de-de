@@ -4,17 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::file_status
 - filesystem/std::experimental::filesystem::file_status::operator=
 - filesystem/std::experimental::filesystem::file_status::type
 - filesystem/std::experimental::filesystem::file_status::permissions
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9781840e-ad22-44dd-ad79-0fabaa94bac4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +25,13 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.workload: cplusplus
-ms.openlocfilehash: f76bbbe5c11b5fbd7a7e9cc7ed6a4f9851805f29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 406a747948276aecf30dcfbf88ffc870bb5804a3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="filestatus-class"></a>file_status-Klasse
 Umschließt [file_type](../standard-library/filesystem-enumerations.md#file_type) und Datei-[perms](../standard-library/filesystem-enumerations.md#perms)  
@@ -83,9 +86,9 @@ void permissions(perms mask) noexcept
  Verwenden Sie den Setter, um Datei mit einem Schreibschutz zu versehen oder entfernen Sie das readonly-Attribut.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \<Filesystem >  
+ **Header:** \<filesystem>  
   
- **Namespace:** Std::experimental::filesystem, Std::experimental::filesystem  
+ **Namespace:** std::experimental::filesystem, std::experimental::filesystem  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   

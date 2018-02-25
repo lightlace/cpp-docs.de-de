@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -53,7 +54,8 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_multiset
 - std::unordered_multiset::allocator_type
@@ -141,16 +143,17 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a958bf441809da24b317b777fd2f79946f3dc727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ca20b6f1e0c9fe44d234c7622d780e34142f6b6f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset-Klasse
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge vom Typ `const Key` steuert. Die Sequenz wird grob durch eine Hashfunktion sortiert, die die Sequenz in eine geordnete Gruppe von Untersequenzen, so genannte Buckets, unterteilt. Innerhalb jedes Buckets bestimmt eine Vergleichsfunktion, ob ein Elementpaar eine entsprechende Reihenfolge hat. Jedes Element dient sowohl als Sortierschlüssel als auch als Wert. Die Sequenz wird so dargestellt, dass die Suche, das Einfügen und das Entfernen eines beliebigen Elements mit einer Reihen von Vorgängen möglich ist, die unabhängig von der Anzahl von Elementen in der Sequenz (konstante Zeit) sein können, zumindest, wenn alle Buckets von ungefähr gleicher Länge sind. Im schlimmsten Fall, d. h., wenn sich alle Elemente in einem Bucket befinden, ist die Anzahl von Vorgängen proportional zur Anzahl von Elementen in der Sequenz (lineare Zeit). Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
@@ -186,7 +189,7 @@ class unordered_multiset;
 |[const_pointer](#const_pointer)|Der Typ eines konstanten Zeigers auf ein Element.|  
 |[const_reference](#const_reference)|Der Typ eines konstanten Verweises auf ein Element.|  
 |[difference_type](#difference_type)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
-|[Hasher](#hasher)|Der Typ der Hashfunktion.|  
+|[hasher](#hasher)|Der Typ der Hashfunktion.|  
 |[Iterator](#iterator)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
 |[key_equal](#key_equal)|Der Typ der Vergleichsfunktion.|  
 |[key_type](#key_type)|Der Typ eines Sortierschlüssels.|  
@@ -200,8 +203,8 @@ class unordered_multiset;
 |-|-|  
 |Memberfunktion|Beschreibung|  
 |[begin](#begin)|Legt den Anfang der kontrollierten Sequenz fest.|  
-|[Bucket](#bucket)|Ruft die Bucketnummer für einen Schlüsselwert ab.|  
-|[bucket_count-Wert](#bucket_count)|Ruft die Anzahl von Buckets ab.|  
+|[bucket](#bucket)|Ruft die Bucketnummer für einen Schlüsselwert ab.|  
+|[bucket_count](#bucket_count)|Ruft die Anzahl von Buckets ab.|  
 |[bucket_size](#bucket_size)|Ruft die Größe eines Buckets ab.|  
 |[cbegin](#cbegin)|Legt den Anfang der kontrollierten Sequenz fest.|  
 |[cend](#cend)|Legt das Ende der kontrollierten Sequenz fest.|  
@@ -222,10 +225,10 @@ class unordered_multiset;
 |[max_bucket_count](#max_bucket_count)|Ruft die maximale Anzahl von Buckets ab.|  
 |[max_load_factor](#max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|  
 |[max_size](#max_size)|Ruft die maximale Größe der gesteuerten Sequenz ab.|  
-|[Rehash-](#rehash)|Erstellt die Hashtabelle neu.|  
+|[rehash](#rehash)|Erstellt die Hashtabelle neu.|  
 |[size](#size)|Ermittelt die Anzahl von Elementen.|  
 |[swap](#swap)|Vertauscht den Inhalt von zwei Containern.|  
-|[unordered_multiset-Element](#unordered_multiset)|Erstellt ein container-Objekt.|  
+|[unordered_multiset](#unordered_multiset)|Erstellt ein container-Objekt.|  
   
 |||  
 |-|-|  

@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <future>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <future>
+dev_langs:
+- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f52f0e08d5612f5230f859c034825591af5ebd79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 Schließen Sie den Standardheader \<future> ein, um Vorlagenklassen und unterstützende Vorlagen zu definieren, die das Ausführen einer Funktion – möglicherweise in einem separaten Thread – und das Abrufen des Ergebnisses vereinfachen. Das Ergebnis zeigt entweder den Wert, der von der Funktion zurückgegeben wird oder eine Ausnahme, die von der Funktion ausgegeben, aber nicht in der Funktion abgefangen wird.  
@@ -86,7 +90,7 @@ Schließen Sie den Standardheader \<future> ein, um Vorlagenklassen und unterst�
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|Liefert symbolische Namen für die von der `future_error`-Klasse ausgegeben Fehler.|  
 |[future_status](../standard-library/future-enums.md#future_status)|Liefert symbolische Namen für die Gründe, aus denen eine zeitgesteuerte Wartefunktion eine Rückgabe ausführen kann.|  
-|[Starten Sie](../standard-library/future-enums.md#launch)|Stellt einen Bitmaskentyp dar, mit dem die möglichen Modi für die Vorlagenfunktion `async` beschrieben werden.|  
+|[launch](../standard-library/future-enums.md#launch)|Stellt einen Bitmaskentyp dar, mit dem die möglichen Modi für die Vorlagenfunktion `async` beschrieben werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

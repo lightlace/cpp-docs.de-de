@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deque-class"></a>deque-Klasse
 Ordnet Elemente eines angegebenen Typs in einer linearen Anordnung an, und aktiviert, wie ein Vektor, schnellen zufälligen Zugriff auf jedes Element sowie effizientes Einfügen und Löschen auf der Rückseite des Containers. Im Gegensatz zu einem Vektor, unterstützt die `deque`-Klasse allerdings auch das effiziente Einfügen und Löschen im Vordergrund des Containers.  
@@ -121,7 +124,7 @@ class deque
  Der in der Doppelschlange zu speichernde Elementdatentyp.  
   
  `Allocator`  
- Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist **allocator\<Type>***.*  
+ Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator\<Typ > ***.*  
   
 ## <a name="remarks"></a>Hinweise  
  Die Auswahl des Containertyps sollte im Allgemeinen auf Grundlage des für die Anwendung erforderlichen Suchen und Einfügetyps erfolgen. Als Container zum Verwalten einer Sequenz sollten bevorzugt [Vektoren](../standard-library/vector-class.md) verwendet werden, wenn es darauf ankommt, dass auf alle Elemente direkt zugegriffen werden kann, und wenn Elemente nur am Ende einer Sequenz eingefügt oder gelöscht werden müssen. Die Leistung des list-Containers ist optimal, wenn Elemente konstant an jeder Stelle innerhalb der Sequenz effizient eingefügt und gelöscht werden können. Solche Vorgänge in der Mitte der Sequenz benötigen Elementkopien und -Zuweisungen, die zur Anzahl von Elementen in der Sequenz proportional sind (lineare Zeit).  

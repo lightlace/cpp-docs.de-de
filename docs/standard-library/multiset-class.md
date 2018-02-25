@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::multiset::swap
 - set/std::multiset::upper_bound
 - set/std::multiset::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multiset [C++]
 - std::multiset [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8953fd24b62784e36f12fb96e3005e21a86bc62
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multiset-class"></a>multiset-Klasse
 Die multiset-Klasse der C++-Standardbibliothek wird zum Speichern und Abrufen von Daten aus Auflistungen verwendet, in denen die Werte der jeweiligen Elemente nicht eindeutig sein müssen und in denen sie als die Schlüsselwerte dienen, nach denen die Daten automatisch sortiert werden. Der Schlüsselwert eines Elements in einer Multimenge darf nicht direkt geändert werden. Stattdessen müssen alte Werte gelöscht und Elemente mit neuen Werten eingefügt werden.  
@@ -124,7 +127,7 @@ class multiset
  In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Der Typ, mit dem das gespeicherte Zuordnungsobjekt dargestellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers der Multimenge gekapselt werden. Der Standardwert lautet **allocator***\<Key>.*  
+ Der Typ, mit dem das gespeicherte Zuordnungsobjekt dargestellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers der Multimenge gekapselt werden. Der Standardwert ist **Allocator ***\<Key >.*  
   
 ## <a name="remarks"></a>Hinweise  
  Auf die multiset-Klasse der C++-Standardbibliothek treffen die folgenden Punkte zu:  

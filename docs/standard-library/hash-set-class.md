@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashset-class"></a>hash_set-Klasse
 > [!NOTE]
@@ -124,10 +127,10 @@ class hash_set
  Der im hash_set-Objekt zu speichernde Elementdatentyp.  
   
  `Traits`  
- Der Typ, der zwei Funktionsobjekte enthält: eines der Klasse „compare“, das ein binäres Prädikat ist, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hashfunktion, die ein unäres Prädikat ist, das Schlüsselwerte der Elemente zu vorzeichenlosen ganzen Zahlen des Typs **size_t** zuordnet. Dieses Argument ist optional, und der Standardwert ist `hash_compare`*<Key,* **less***\<Key>.>*.  
+ Der Typ, der zwei Funktionsobjekte enthält: eines der Klasse „compare“, das ein binäres Prädikat ist, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hashfunktion, die ein unäres Prädikat ist, das Schlüsselwerte der Elemente zu vorzeichenlosen ganzen Zahlen des Typs **size_t** zuordnet. Dieses Argument ist optional, und die `hash_compare` *< Key,* **weniger ***\<Schlüssel >>* ist der Standardwert.  
   
  `Allocator`  
- Der Typ, mit dem das gespeicherte allocator-Objekt dargestellt wird, mit dem Details zum Belegen und Freigeben von Arbeitsspeicher für das hash_set-Element gekapselt werden. Dieses Argument ist optional, und der Standardwert ist **allocator***\<Key>.*  
+ Der Typ, mit dem das gespeicherte allocator-Objekt dargestellt wird, mit dem Details zum Belegen und Freigeben von Arbeitsspeicher für das hash_set-Element gekapselt werden. Dieses Argument ist optional, und der Standardwert ist **Allocator ***\<Key >.*  
   
 ## <a name="remarks"></a>Hinweise  
  Ein hash_set-Objekt ist:  

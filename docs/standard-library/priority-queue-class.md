@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue-Klasse
 Eine Vorlagencontainer-Adapterklasse, die die Funktionalität einschränkt, indem sie den Zugriff auf das oberste Element eines zugrunde liegenden Containertyps beschränkt, das immer das größte oder wichtigste Element ist. Der Warteschlange mit hoher Priorität können neue Elemente hinzugefügt werden, und das oberste Element der Warteschlange mit hoher Priorität kann überprüft oder entfernt werden.  
@@ -56,7 +59,7 @@ class priority_queue
  Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange mit hoher Priorität zu implementieren.  
   
  *Compare*  
- Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Warteschlange mit hoher Priorität zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat **less***\<***typename** *Container***::value_type***>* ist der Standardwert.  
+ Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Warteschlange mit hoher Priorität zu bestimmen. Dieses Argument ist optional und das binäre Prädikat **weniger***\<***Typename** *Container***:: Value_type*** >* ist der Standardwert.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Type** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  

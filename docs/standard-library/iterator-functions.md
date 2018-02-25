@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::advance
 - xutility/std::back_inserter
@@ -22,7 +22,7 @@ f1_keywords:
 - xutility/std::next
 - xutility/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
-caps.latest.revision: "16"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::advance [C++]
@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 0474e52f9d5f0f68ec4a404ebe9c60d9e48f64d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 48b07418520402f4765c2f7cd3488dde112e192d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;-Funktionen
 ||||  
@@ -192,7 +192,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).  
 ```  
   
-##  <a name="begin"></a> begin  
+##  <a name="begin"></a>  begin  
  Ruft einen Iterator für das erste Element in einem angegebenen Container ab.  
   
 ```  
@@ -311,7 +311,7 @@ auto cbegin(const Container& cont)   `
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion arbeitet mit allen C++-Standardbibliothekscontainern und mit [initializer_list](../standard-library/initializer-list-class.md).  
   
- Sie können diese Memberfunktion anstelle der `begin()`-Vorlagenfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [automatischen](../cpp/auto-cpp.md) Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein änderbarer (nicht `const`) Container oder `initializer_list` eines beliebigen Typs, der `begin()` und `cbegin()` unterstützt.  
+ Sie können diese Memberfunktion anstelle der `begin()`-Vorlagenfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein änderbarer (nicht `const`) Container oder `initializer_list` eines beliebigen Typs, der `begin()` und `cbegin()` unterstützt.  
   
 ```cpp  
 auto i1 = Container.begin();
