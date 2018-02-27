@@ -1,124 +1,150 @@
 ---
 title: Compilerwarnungen nach Compilerversion | Microsoft Docs
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 01/31/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-cpp
+ms.technology:
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.assetid: 886c5a66-088c-4a4b-908b-aa3ec189e595
-caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion  
-  
-Der Compiler kann Unterdrücken von Warnungen, die nach der Version eingeführt wurden, können Sie angeben, mit, der [WV](../../build/reference/compiler-option-warning-level.md) -Compileroption. Dies ist nützlich für die Verwaltung des Buildprozesses, wenn Sie eine neue Toolsetversion eingeführt und vorübergehend neue Warnungen unterdrücken möchten. Diese Option unterdrückt keine neue Fehlermeldungen. Es wird nicht empfohlen, Sie alle neue Warnungen unterdrücken dauerhaft! Es wird empfohlen, immer auf der höchsten reguläre Warnebene Kompilieren __/W4__, und Entfernen der __WV__ Option in den Build so bald wie möglich.  
-  
+# <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion
+
+Der Compiler kann Unterdrücken von Warnungen, die nach der Version eingeführt wurden, Sie mithilfe geben, der [WV](../../build/reference/compiler-option-warning-level.md) -Compileroption. Dies ist nützlich für die Verwaltung des Buildprozesses, wenn Sie eine neue Toolsetversion eingeführt und vorübergehend neue Warnungen unterdrücken möchten. Diese Option unterdrückt keine neue Fehlermeldungen. Es wird nicht empfohlen, Sie alle neue Warnungen unterdrücken dauerhaft! Es wird empfohlen, immer auf der höchsten reguläre Warnebene Kompilieren __/W4__, und Entfernen der __WV__ Option in den Build so bald wie möglich. 
+
 Diese Versionen des Compilers wurden neue Warnungen eingeführt:
 
-| Produkt | Versionsnummer des Compilers |  
-|-|-|  
-| Visual C++ 2002 | 13.00.9466 |  
-| Visual C++ 2003 | 13.10.3077 |  
-| Visual C++ 2005 | 14.00.50727.762 |  
-| Visual C++ 2008 | 15.00.21022.08 |  
-| Visual C++ 2010 | 16.00.40219.01 |  
-| Visual C++ 2012 | 17.00.51106.1 |  
-| Visual C++ 2013 | 18.00.21005.1 |  
-| Visual C++ 2015 RTM | 19.00.23026.0 |  
-| Visual C++ 2015 Update 1 | 19.00.23506.0 |  
-| Visual C++ 2015 Update 2 | 19.00.23918.0 |  
-| Visual C++ 2015 Update 3 | 19.00.24215.1 |  
-| Visual C++ 2017 RTM | 19.10.24903.0 |  
-| Visual C++ 2017 Update 1 | 19.10.25017.0 |  
-  
-Sie geben nur die Nummer der Hauptversion, die Nummern für Haupt- und Nebenversionsnummern oder Haupt-oder Nebenversion, und erstellen Sie Zahlen können die __WV__ Option alle Warnungen für Versionen, die größer als die angegebene Anzahl unterdrückt. Z. B. zum Unterdrücken von Warnungen, eingeführt in Visual C++ 2015 Update 2 und höher können Sie __/Wv:19.00.23900__. Um alle Warnungen in Visual C++ 2013 und höher zu unterdrücken, verwenden Sie __/Wv:18__.  
-  
+| Produkt | Versionsnummer des Compilers |
+|-|-|
+| Visual C++ 2002 | 13.00.9466 |
+| Visual C++ 2003 | 13.10.3077 |
+| Visual C++ 2005 | 14.00.50727.762 |
+| Visual C++ 2008 | 15.00.21022.08 |
+| Visual C++ 2010 | 16.00.40219.01 |
+| Visual C++ 2012 | 17.00.51106.1 |
+| Visual C++ 2013 | 18.00.21005.1 |
+| Visual C++ 2015 RTM | 19.00.23026.0 |
+| Visual C++ 2015 Update 1 | 19.00.23506.0 |
+| Visual C++ 2015 Update 2 | 19.00.23918.0 |
+| Visual C++ 2015 Update 3 | 19.00.24215.1 |
+| Visual C++ 2017 RTM | 19.10.24903.0 |
+| Visual C++ 2017 Version 15.1 | 19.10.25017.0 |
+| Visual C++ 2017 Version 15.3 | 19.11.25506.0 |
+| Visual C++ 2017 Version 15.5 | 19.12.25827.0 |
+
+Sie geben nur die Nummer der Hauptversion, die Nummern für Haupt- und Nebenversionsnummern oder Haupt-oder Nebenversion, und erstellen Sie Zahlen können die __WV__ Option. Der Compiler meldet alle Warnungen, die Versionen stimmen überein, die mit der angegebenen Zahl beginnen und unterdrückt alle Warnungen für Versionen, die größer als die angegebene Anzahl. Beispielsweise __/Wv:17__ meldet alle Warnungen in oder vor einer Version von Visual Studio 2012 eingeführt und unterdrückt alle Warnungen, die von einem Compiler von Visual Studio 2013 (Version 18) oder höher eingeführt. Unterdrückt Warnungen, eingeführt in Visual Studio 2015 update 2 und höher können Sie __/Wv:19.00.23506__. Verwendung __/Wv:19.11__ melden Sie alle Warnungen in einer beliebigen Version von Visual Studio vor Visual Studio 2017 Version 15.5 eingeführt, aber unterdrückt Warnungen, die in Visual Studio 2017 15.5 und höher eingeführt wurden.
+
 Die folgenden Abschnitte Listen die Warnungen eingeführt, die von der jeweiligen Version von Visual C++, die Sie mithilfe von unterdrücken können die __WV__ -Compileroption. Die __WV__ Option keine Unterdrückung von Warnungen, die nicht aufgeführt sind, die schon vor die angegebenen Versionen des Compilers verfügbar waren.
-  
-## <a name="warnings-introduced-in-visual-c-2017-update-1"></a>Warnungen, die in Visual C++ 2017 Update 1 eingeführt wurden
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10.25000__.  
-  
-|||  
-|-|-|  
-C4597|ein nicht definiertes Verhalten: *Beschreibung*  
-C4604|"*Typ*": Argumentübergabe nach Wert systemeigenen und verwalteten Apartmentgrenze gültige Kopierkonstruktor erfordert. Andernfalls ist das Laufzeitverhalten nicht definiert  
-C4749|bedingt unterstützt: *Beschreibung*  
-C4768|__declspec-Attribute vor Verknüpfungsspezifikation werden ignoriert.  
-C4834|Verwerfen von Rückgabewert der Funktion mit 'Nodiscard'-Attribut  
+
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Warnungen, die in Visual C++ 2017 Version 15.5 (Compilerversion 19.12.25827.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.11__.
+
+|||
+|-|-|
+C5044|Ein Argument an die Befehlszeilenoption *Option* verweist auf einen Pfad "*Pfad*", nicht vorhanden
+
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Warnungen, die in Visual C++ 2017 Version 15.3 (Compilerversion 19.11.25506.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10__.
+
+|||
+|-|-|
+C4843|"*Typ1*": ein Ausnahmehandler eines Verweises auf Array- oder Funktionsausdruck Typ ist nicht erreichbar, verwenden Sie "*Typ2*" stattdessen
+C4844|"Exportieren Modul *Modulname*;" ist jetzt die bevorzugte Syntax zum Deklarieren einer Modul-Schnittstelle
+C5039|"*Funktion*': Zeiger oder Verweis auf potenziell Auslösen von Funktion" extern "C-Funktion unter - EHc übergeben. Nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst.
+C5040|Dynamische Ausnahmespezifikationen sind gültig, nur in C ++ 14 und früheren Versionen. zum Behandeln von als noexcept(false)
+C5041|"*Definition*": Out-of-Line-Definition für Constexpr statischer Datenmember ist nicht erforderlich und veraltetes Feature in C ++ 17
+C5042|"*Deklaration*": Funktionsdeklarationen im Gültigkeitsbereich der-Block nicht "Inline" angegeben sein, in standardmäßigem C++ – "Inlinespezifizierer" entfernen
+C5043|"*Spezifikation*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein
+
+## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Warnungen, die in Visual C++ 2017 Version 15.1 (Compilerversion 19.10.25017.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10.24903__.
+
+|||
+|-|-|
+C4597|ein nicht definiertes Verhalten: *Beschreibung*
+C4604|"*Typ*": Argumentübergabe nach Wert systemeigenen und verwalteten Apartmentgrenze gültige Kopierkonstruktor erfordert. Andernfalls ist das Laufzeitverhalten nicht definiert
+C4749|bedingt unterstützt: *Beschreibung*
+C4768|__declspec-Attribute vor Verknüpfungsspezifikation werden ignoriert.
+C4834|Verwerfen von Rückgabewert der Funktion mit 'Nodiscard'-Attribut
 C4841|nicht standardmäßige Erweiterung verwendet: *Erweiterung*
-C4842|Das Ergebnis des "Offsetof" auf einen Typ mit mehrfacher Vererbung angewendet wird nicht garantiert, Compilerversionen konsistent sein.  
-C4869|"Nodiscard" kann nur auf Klassen, Enumerationen und Funktionen mit nicht-Void-Rückgabetyp angewendet werden  
-C5033|"*speicherklassenattribute*" ist nicht mehr unterstützte Speicherklasse  
-C5034|Verwenden der systeminternen "*systeminterne*" bewirkt, dass Funktion *Funktion* als Gast-Code kompiliert werden  
-C5035|Verwenden der Funktion "*Feature*" bewirkt, dass Funktion *Funktion* als Gast-Code kompiliert werden  
-C5036|Beim Kompilieren mit /hybrid:x86arm64-Funktion Varargs zeigerkonvertierung "*Typ1*'to'*Typ2*"  
-C5037|"*Memberfunktion*': eine Out-of-Line-Definition eines Elements einer Klassenvorlage sind keine Standardargumente  
-  
-## <a name="warnings-introduced-in-visual-c-2017-rtm"></a>Warnungen, die in Visual C++ 2017 RTM eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10__.  
-  
-|||  
-|-|-|  
+C4842|Das Ergebnis des "Offsetof" auf einen Typ mit mehrfacher Vererbung angewendet wird nicht garantiert, Compilerversionen konsistent sein.
+C4869|"Nodiscard" kann nur auf Klassen, Enumerationen und Funktionen mit nicht-Void-Rückgabetyp angewendet werden
+C5033|"*speicherklassenattribute*" ist nicht mehr unterstützte Speicherklasse
+C5034|Verwenden der systeminternen "*systeminterne*" bewirkt, dass Funktion *Funktion* als Gast-Code kompiliert werden
+C5035|Verwenden der Funktion "*Feature*" bewirkt, dass Funktion *Funktion* als Gast-Code kompiliert werden
+C5036|Beim Kompilieren mit /hybrid:x86arm64-Funktion Varargs zeigerkonvertierung "*Typ1*'to'*Typ2*"
+C5037|"*Memberfunktion*': eine Out-of-Line-Definition eines Elements einer Klassenvorlage sind keine Standardargumente
+C5038|Datenmember "*member1*"wird so initialisiert, nach der Datenmember"*member2*"
+
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Warnungen, die in Visual C++ 2017 RTM (Compilerversion 19.10.24903) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00__.
+
+|||
+|-|-|
 C4468|"Fallthrough": Attribut muss gefolgt von einer Case-Bezeichnung oder einer standardbezeichnung
 C4698|"*Feature*" ist für die Auswertung nur zu Testzwecken und unterliegt Änderungen oder Entfernung in Zukunft aktualisiert.
 C4839|nicht standardmäßige Verwendung der Klasse*Klasse*"als Argument an eine Variadic-Funktion
 C4840|nicht Portable verwenden der Klasse*Klasse*"als Argument an eine Variadic-Funktion
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-3"></a>Warnungen, die in Visual C++ 2015 Update 3 eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00.24000__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Warnungen, die in Visual C++ 2015 Update 3 (Compilerversion 19.00.24215.1) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00.23918__.
+
+|||
+|-|-|
 C4467|Verwendung von ATL-Attribute ist veraltet.
 C4596|"*Namen*': Unzulässiger gekennzeichneter Name in Memberdeklaration
 C4598|' #include \< *Header*\>": Anzahl der Header *Anzahl* in der *Quelle* stimmt nicht überein *Quelle* an, die Position
 C4599|"*Argument*": *Quelle* Argumentennummer *Anzahl* entspricht nicht *Quelle*
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-2"></a>Warnungen, die in Visual C++ 2015 Update 2 eingeführt wurden  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00.23900__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Warnungen, die in Visual C++ 2015 Update 2 (Compilerversion 19.00.23918.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00.23506__.
+
+|||
+|-|-|
 C4466|Coroutine Heap Elision konnte nicht ausgeführt werden.
 C4595|"*Klasse*': nicht-memberoperators New- oder Delete-Funktionen dürfen nicht Inline deklariert werden
 C4828|Die Datei enthält ein Zeichen ab dem Offset 0 X*Wert* , die in der aktuellen quellzeichensatz ungültig ist (Codepage *Anzahl*).
 C4868|Compilerfehler möglicherweise die Reihenfolge der Auswertung von links nach rechts in der Initialisiererliste nicht erzwungen.
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-1"></a>Warnungen, die in Visual C++ 2015 Update 1 eingeführt wurden  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00.23500__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Warnungen, die in Visual C++ 2015 Update 1 (Compilerversion 19.00.23506.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00.23026__.
+
+|||
+|-|-|
 C4426|optimierungseinstellungen geändert, nachdem einschließlich Header, möglicherweise aufgrund von #pragma optimize()
 C4654|Code platziert werden, bevor der vorkompilierten Headerdatei umfassen Zeile werden ignoriert. Fügen Sie Code, um vorkompilierte Header.
 C5031|#pragma warning"(POP): wahrscheinlich Konflikt die Folge, herunternehmen Status" Warnung "in anderen Datei abgelegt
 C5032|#pragma warning"(Push) ohne entsprechende #pragma warning"(POP) erkannt
-  
-## <a name="warnings-introduced-in-visual-c-2015-rtm"></a>Warnungen, die in Visual C++ 2015 RTM eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Warnungen, die in Visual C++ 2015 RTM (Compilerversion 19.00.23026.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:18__.
+
+|||
+|-|-|
 C4427|"*Fehler*': Überlauf in Konstanten Division zu nicht definiertem Verhalten
 C4438|"*Typ*": kann nicht problemlos aufgerufen werden, / "await": Clrcompat-Modus. Wenn "*Typ*" Aufrufe in die CLR es möglicherweise CLR Head Beschädigung
 C4455|' Operator *Namen*": literales Suffix-Bezeichner, die nicht mit einem Unterstrich beginnen, sind reserviert.
@@ -128,17 +154,17 @@ C4458|Deklaration von "*Namen*" Blendet den Klassenmember
 C4459|Deklaration von "*Namen*" Blendet globale Deklaration
 C4462|"*Typ*": die GUID des Typs kann nicht bestimmt werden. Das Programm kann zur Laufzeit fehlschlagen.
 C4463|Überlauf; Zuweisen von *Wert* Bitfeld, das nur Werte aus enthalten können *Wert* zu *Wert*
-C4473|"*Beschreibung*': nicht genügend Argumente für Formatzeichenfolge
-C4474|"*Beschreibung*': zu viele Argumente zu übergeben, für die Formatzeichenfolge
-C4475|"*Beschreibung*": argumentlängenmodifizierer "*Modifizierer*'cannot be used with Typzeichen für Feld'*Zeichen*" im Formatbezeichner
-C4476|"*Beschreibung*": Unbekannte Typzeichen für Feld '*Zeichen*"im Formatbezeichner
-C4477|"*Beschreibung*": Formatzeichenfolge "*Zeichenfolge*"erfordert ein Argument des Typs"*Typ*", sondern Variadic-Argument *Anzahl* weist den Typ "*Typ*"
-C4478|"*Beschreibung*": können nicht mit Feldern fester Breite und nicht mit Feldern fester Breite Platzhalter in der gleichen Formatzeichenfolge kombiniert werden
+C4473|"*Funktion*': nicht genügend Argumente für Formatzeichenfolge
+C4474|"*Funktion*': zu viele Argumente zu übergeben, für die Formatzeichenfolge
+C4475|"*Funktion*": argumentlängenmodifizierer "*Modifizierer*'cannot be used with Typzeichen für Feld'*Zeichen*" im Formatbezeichner
+C4476|"*Funktion*": Unbekannte Typzeichen für Feld '*Zeichen*"im Formatbezeichner
+C4477|"*Funktion*": Formatzeichenfolge "*Zeichenfolge*"erfordert ein Argument des Typs"*Typ*", sondern Variadic-Argument *Anzahl* weist den Typ "*Typ*"
+C4478|"*Funktion*": können nicht mit Feldern fester Breite und nicht mit Feldern fester Breite Platzhalter in der gleichen Formatzeichenfolge kombiniert werden
 C4494|"*Typ*": __declspec(allocator) wird ignoriert, da der Rückgabetyp für der Funktion ist kein Zeiger oder Verweis
 C4495|nicht dem Standard entsprechende Erweiterung "__super": explizite Basisklassennamen ersetzt
 C4496|nicht dem Standard entsprechende Erweiterung 'for each"verwendet: Ersetzen Sie durch wie Serveradresse-for-Anweisung
 C4497|"sealed" verwendeten, nicht dem Standard entsprechende Erweiterung: 'letzte' ersetzt
-C4498|nicht dem Standard entsprechende Erweiterung: '*Erweiterung*"
+C4498|nonstandard extension used: '*extension*'
 C4499|"*Spezialisierung*': eine explizite Spezialisierung sind keine Speicherklasse (ignoriert)
 C4576|ein in Klammern gefolgt von einer Initialisiererliste ist eine nicht standardmäßige expliziten Typ Konvertierung-syntax
 C4577|"Noexcept" verwendet, mit der keine Ausnahmebehandlung angegebenen Modus; Beenden von Ausnahme ist nicht gewährleistet. Geben Sie/EHsc
@@ -171,13 +197,13 @@ C5027|"*Typ*': Zuweisungsoperator wurde implizit als gelöscht definiert, versch
 C5028|"*Namen*': Ausrichtung angegeben, in der vorherigen Deklaration (*Anzahl*) nicht in der Definition angegeben.
 C5029|nicht dem Standard entsprechende Erweiterung: Ausrichtungsattribute in C++, Zuweisen von Variablen, Datenmember und Transpondertypen nur
 C5030|Attribut "*Attribut*" wird nicht erkannt.
-  
-## <a name="warnings-introduced-in-visual-c-2013"></a>Warnungen, die in Visual C++ 2013 eingeführt wurden  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:18__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Warnungen, die in Visual C++ 2013 (Compilerversion 18.00.21005.1) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:17__.
+
+|||
+|-|-|
 C4301|"*Typ*": Überschreiben der virtuellen Funktion nur unterscheidet sich von "*Deklaration*" durch Const/Volatile-Qualifizierer
 C4316|"*Typ*": Objekt auf dem Heap reserviert möglicherweise nicht ausgerichtet *Anzahl*
 C4380|"*Typ*": ein Standardkonstruktor kann nicht als veraltet markiert werden
@@ -200,18 +226,18 @@ C4981|Warbird: Funktion "*Deklaration*" als __forceinline markiert nicht inline,
 C4990|Warbird: *Nachricht*
 C4991|Warbird: Funktion "*Deklaration*" als "__forceinline" nicht inline Schutzebene des Inlinees: größer als das übergeordnete Element ist markiert
 C4992|Warbird: Funktion "*Deklaration*" als __forceinline markiert nicht inline, da es sich um Inlineassembly enthält, der nicht geschützt werden können
-  
-## <a name="warnings-introduced-in-visual-c-2012"></a>Warnungen, die in Visual C++ 2012 eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:17__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Warnungen, die in Visual C++ 2012 (Compilerversion "17.00.51106.1") eingeführt
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:16__.
+
+|||
+|-|-|
 C4330|Attribut "*Attribut*"für den Abschnitt"*Abschnitt*" ignoriert
-C4415|Doppelte __declspec (Code_seg ("*Namen*"))
-C4416|__declspec(code_seg(...)) leere Zeichenfolge enthält: ignoriert
+C4415|duplicate __declspec(code_seg('*name*'))
+C4416|__declspec(code_seg(...)) contains empty string: ignored
 C4417|eine explizite Vorlageninstanziierung sind keine __declspec(code_seg(...)): ignoriert
-C4418|__declspec(code_seg(...)) für Enum ignoriert
+C4418|__declspec(code_seg(...)) ignored on an enum
 C4419|"*Namen*"wirkt sich nicht bei Anwendung auf private Verweisklasse"*Typ*".
 C4435|"*Typ*': das Objektlayout unter/vd2 ändert sich aufgrund der virtuellen Basis '*Typ*"
 C4436|Dynamic_cast von virtueller Basis '*Typ*'to'*Typ*"im Konstruktor oder Destruktor fehlschlagen mit teilweise erstelltes Objekt
@@ -229,27 +255,27 @@ C4454|"*Typ*" ist überladen, um mehr als die Anzahl von Eingabeparametern ohne 
 C4471|"*Namen*': eine Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung benötigen einen zugrunde liegenden Typ (Int wird angenommen)
 C4472|"*Namen*" ist eine systemeigene Enumeration: Fügen Sie einen Zugriffsspezifizierer (privat/öffentlich), um eine verwaltete/WinRT-Enumeration zu deklarieren.
 C4492|"*Typ*": Übereinstimmungen basieren Ref-Klassenmethode "*Typ*", aber nicht "override" markiert ist
-C4493 AUS|Delete-Ausdruck hat keine Wirkung, da der Destruktor von "*Typ*" keinen 'öffentlichen' Zugriff
+C4493|Delete-Ausdruck hat keine Wirkung, da der Destruktor von "*Typ*" keinen 'öffentlichen' Zugriff
 C4585|"*Typ*": ein WinRT "Öffentliche Verweisklasse" muss entweder versiegelt oder eine Ableitung von einer vorhandenen unversiegelten Klasse
 C4586|"*Typ*": ein öffentlicher Typ kann nicht in einem Namespace der obersten Ebene namens "Windows" deklariert werden
-C4695|#pragma Execution_character_set: "*Argument*' ist kein unterstützter Argument: derzeit wird nur"UTF-8"wird unterstützt.
+C4695|#pragma execution_character_set: '*argument*' is not a supported argument: currently only 'UTF-8' is supported
 C4703|potenziell nicht initialisierten lokalen Zeigervariablen "*Namen*" verwendet
 C4728|/ Yl-Option-ignoriert, weil die PCH-Verweis erforderlich ist.
 C4745|flüchtige Zugriff des "*Namen*" kann nicht berücksichtigt aufgrund ihrer Größe werden
-C4746|flüchtige Zugriff des "*Namen*" / volatile des unterliegt:\<Iso\|MS > festlegen; Erwägen Sie __iso_volatile_load/Store systeminterne Funktionen
+C4746|flüchtige Zugriff des "*Namen*" / volatile des unterliegt:\<Iso\|ms > festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen
 C4872|Floating Point Division durch 0 (null), die beim Kompilieren des Aufrufdiagramms für das Concurrency:: parallel_for_each am erkannt: '*Beschreibung*"
 C4880|Umwandlung von '*Typ*'to'*Typ*": Umwandeln von einem Zeiger oder Verweis Constness möglicherweise zu nicht definiertem Verhalten in einer eingeschränkten Amp-Funktion
 C4881|des Konstruktors und/oder des Destruktors wird nicht aufgerufen werden, für die "tile_static" Variable "*Typ*"
 C4966|"*Beschreibung*" __code_seg Anmerkung mit nicht unterstützten Segmentnamen Anmerkung ignoriert hat
 C4988|"*Typ*': Variable deklariert Bereichs der äußeren Klasse/Funktion
 C4989|"*Beschreibung*': Typ verfügt über in Konflikt stehende Definitionen.
-  
-## <a name="warnings-introduced-in-visual-c-2010"></a>Warnungen, die in Visual C++ 2010 eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:16__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Warnungen, die in Visual C++ 2010 (Compilerversion 16.00.40219.01) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:15__.
+
+|||
+|-|-|
 C4352|"*Namen*": systeminterne Funktion, die bereits definiert.
 C4573|die Verwendung von "*Typ*' benötigt den Compiler, 'this' jedoch Erfassen der aktuellen standarderfassungsmodus ein Modus lässt nicht zu
 C4574|"*Namen*'definiert ' 0': wollten Sie verwenden" #if *Namen*"?
@@ -259,28 +285,28 @@ C4752|Intel Advanced Vector Extensions; gefunden. Erwägen Sie die entsprechende
 C4837|Trigraph erkannt: '?? *Zeichen*"ersetzt durch"*Zeichen*"
 C4986|"*Deklaration*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein
 C4987|Es wurde eine nicht standardmäßige Erweiterung verwendet: 'throw (...)'
-  
-## <a name="warnings-introduced-in-visual-c-2008"></a>Warnungen, die in Visual C++ 2008 eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:15__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Warnungen, die in Visual C++ 2008 (Compilerversion 15.00.21022.08) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:14__.
+
+|||
+|-|-|
 C4396|"*Typ*": Der Inlinespezifizierer kann nicht verwendet werden, wenn eine Friend-Deklaration auf die Spezialisierung einer Funktionsvorlage verweist
 C4413|"*Deklaration*": Verweismember wird an einen temporären, die nicht beibehalten, nach dem Beenden des Konstruktors initialisiert.
 C4491|"*Beschreibung*": hat ein ungültiges Format der IDL-Version
 C4603|"*Namen*": Makro ist nicht definiert oder die Definition wurde nach Verwendung des vorkompilierten Headers
 C4627|"*Beschreibung*": bei der Suche nach Verwendung des vorkompilierten Headers übersprungen
 C4750|"*Beschreibung*': Funktion mit" _alloca()"" inline in einer Schleife
-C4910|"*Typ*": "__declspec(dllexport)" und "Extern" sind bei einer expliziten Instanziierung nicht kompatibel
+C4910|'*type*': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
 C4985|"*Deklaration*": Attribute in vorheriger Deklaration nicht vorhanden sind.
-  
-## <a name="warnings-introduced-in-visual-c-2005"></a>Warnungen, die in Visual C++ 2005 eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:14__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Warnungen, die in Visual C++ 2005 (Compilerversion 14.00.50727.762) eingeführt
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:13__.
+
+|||
+|-|-|
 C4000|Unbekannte Warnung wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie den technischen Support-Hilfedatei für Weitere Informationen
 C4272|"*Typ*": von "__declspec(dllimport)" "markiert; systemeigene Aufrufkonvention muss angeben werden, wenn eine Funktion zu importieren.
 C4333|"*Ausdruck*": von zu viel, Verlust von Daten nach rechts verschieben
@@ -328,7 +354,7 @@ C4461|"*Typ*": Diese Klasse verfügt über einen Finalizer '! *Typ*", jedoch kei
 C4470|gleitkommasteuerelements Pragmas unter/CLR ignoriert
 C4480|nicht dem Standard entsprechende Erweiterung: Angeben von zugrunde liegender Typ für Enum '*Typ*"
 C4481|nicht dem Standard entsprechende Erweiterung: Überschreibungsspezifizierer '*Spezifizierer*"
-C4482 GENERIERT|nicht dem Standard entsprechende Erweiterung: Enum '*Typ*"in qualifizierten Namen verwendet
+C4482|nicht dem Standard entsprechende Erweiterung: Enum '*Typ*"in qualifizierten Namen verwendet
 C4483|Syntaxfehler: C++-Schlüsselwort erwartet.
 C4484|"*Typ*": Übereinstimmungen basieren Ref-Klassenmethode "*Typ*", aber nicht "virtual", "new" oder "override"; markiert ist "new" (und nicht "virtual") wird angenommen.
 C4485|"*Typ*": Übereinstimmungen basieren Ref-Klassenmethode "*Typ*", aber nicht markierte 'new' oder 'override'; "new" (und "virtual") werden angenommen.
@@ -363,7 +389,7 @@ C4678|Basisklasse*Deklaration*"ist weniger zugreifbar als"*Namen*"
 C4679|"*Beschreibung*": Schnittstellenmember konnte nicht importiert
 C4687|"*Typ*': eine versiegelte abstrakte Klasse kann nicht zu eine Schnittstelle implementieren"*Typ*"
 C4688|"*Namen*": Einschränkungsliste enthält den privaten Assemblytyp "*Deklaration*"
-C4690|[ Emitidl( Pop ) ]: mehr POP-als Push-Vorgänge
+C4690|[ Emitidl ( Pop ) ]: mehr POP-als Push-Vorgänge
 C4691|"*Typ*': Typ verwiesen wurde erwartet. im nicht referenzierten *Modul* "*Beschreibung*", in der aktuellen Übersetzungseinheit verwendet stattdessen definierten Typs
 C4692|"*Namen*": die Signatur des nicht privaten Members enthält den privaten systemeigenen Assemblytyp '*Deklaration*"
 C4693|"*Typ*': eine versiegelte abstrakte Klasse kann nicht Instanzmember aufweisen*Namen*"
@@ -417,13 +443,13 @@ C4965|Implizites Feld der Ganzzahl 0; Nullptr oder explizite Typumwandlung verwe
 C4970|Delegatkonstruktor: Zielobjekt ignoriert, da "*Deklaration*" ist statisch
 C4971|Argument Order: \<Zielobjekt >, \<Funktion als Ziel > für Delegatkonstruktor veraltet ist, verwenden Sie \<Ziel Funktion >, \<Zielobjekt >
 C4972|Das direkte Ändern oder Behandeln des Ergebnisses eines Unboxing-Vorgangs als L-Wert kann nicht überprüft werden.
-  
-## <a name="warnings-introduced-in-visual-c-2003"></a>In Visual C++ 2003 eingeführt, Warnungen  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:13.10__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Warnungen, die in Visual C++ 2003 (Compilerversion 13.10.3077) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:13.00.9466__.
+
+|||
+|-|-|
 C4343|Optimieren von #pragma (*Beschreibung*, off) überschreibt/Og-Option
 C4344|Verändertes Programmverhalten: Verwenden der expliziten Vorlagenergebnisse, Argumente im Aufruf von "*Deklaration*"
 C4346|"*Typ*': abhängiger Name ist kein Typ
@@ -453,17 +479,17 @@ C4951|"*Beschreibung*" wurde bearbeitet, seit die Profildaten Daten erfasst wurd
 C4952|"*Beschreibung*': keine Profildaten gefunden wird, in der Programmdatenbank '*Beschreibung*"
 C4953|Inlinee "*Beschreibung*" wurde bearbeitet, seit die Profildaten Daten erfasst wurden, nicht verwendet Profildaten
 C4954|"*Beschreibung*": ein Profil nicht erstellt (__int64 Schalterausdruck enthält)
-  
-## <a name="warnings-introduced-in-visual-c-2002"></a>Warnungen, die in Visual C++ 2002 eingeführt  
-  
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:13__.  
-  
-|||  
-|-|-|  
-C4096 GENERIERT|"*Typ*": Schnittstelle "ist eine COM-Schnittstelle;" nicht auf IDL ausgegeben werden
+
+## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Warnungen, die in Visual C++ 2002 (Compilerversion 13.00.9466) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:12__.
+
+|||
+|-|-|
+C4096|"*Typ*": Schnittstelle "ist eine COM-Schnittstelle;" nicht auf IDL ausgegeben werden
 C4097|Erwarteter pragma-Parameter sollte "restore" oder "off" sein
 C4165|'HRESULT' wird "Bool" konvertiert sind Sie sicher, dass dies gewünscht ist?
-C4183 GENERIERT|"*Namen*": Rückgabetyp fehlt; davon ausgegangen, dass eine Memberfunktion, die Rückgabe von "Int" sein
+C4183|"*Namen*": Rückgabetyp fehlt; davon ausgegangen, dass eine Memberfunktion, die Rückgabe von "Int" sein
 C4199|*Beschreibung*
 C4255|"*Namen*': Kein Funktionsprototyp angegeben: '()', '(void)' konvertieren
 C4256|"*Deklaration*': Konstruktor für die Klasse mit virtuellen Basen besitzt"..."; Aufrufe möglicherweise nicht kompatibel mit früheren Versionen von Visual C++
@@ -507,7 +533,7 @@ C4338|#pragma *Beschreibung*: Standardabschnitt "*Abschnitt*" verwendet wird
 C4339|"*Typ*': Verwendung eines undefinierten Typs erkannt werden in CLR/WinRT - Metadaten verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme
 C4353|nicht dem Standard entsprechende Erweiterung: Konstante 0 als Funktionsausdruck.  Verwenden Sie stattdessen die systeminterne '__noop'-Funktion
 C4370|"*Deklaration*": Layout der Klasse wurde von einer früheren Version des Compilers aufgrund bessere Verpackung geändert
-C4371|"*Deklaration*": Layout der Klasse möglicherweise geändert haben, von einer früheren Version des Compilers aufgrund bessere Verpackung des Members '*Typ*"
+C4371|"*Deklaration*": Layout der Klasse möglicherweise geändert haben, von einer früheren Version des Compilers aufgrund bessere Verpackung des Members '*Member*"
 C4373|"*Typ*": virtuelle Funktion überschreibt*Deklaration*", frühere Versionen des Compilers nicht überschrieben, wenn der Parameter nur durch Const/Volatile-Qualifizierer beinhalteten
 C4387|"*Beschreibung*": wurde als
 C4389|"*Ausdruck*': Konflikt zwischen signed/unsigned
@@ -523,7 +549,7 @@ C4531|C++-Ausnahmebehandlung ist nicht verfügbar für Windows CE. Verwenden Sie
 C4532|"*Beschreibung*":-Anweisungsblock Herausspringen *schließlich* Block verfügt über ein nicht definiertes Verhalten während der Abbruchbehandlung
 C4533|Initialisierung von "*Deklaration*" wird übersprungen, indem Sie "Goto *Deklaration*"
 C4534|"*Deklaration*" können nicht auf ein Standardkonstruktor für *Klasse* "*Typ*" aufgrund der Standardargument
-C4535|aufrufende _set_se_translator() erfordert/EHa
+C4535|calling _set_se_translator() requires /EHa
 C4536|"*Beschreibung*': Typ größer als das Metadatenlimit von '*Anzahl*' Zeichen
 C4537|"*Deklaration*': '.' auf nicht-UDT-Typ angewendet wird
 C4542|Überspringen die Generierung von zusammengeführten eingefügter Text-Datei kann nicht geschrieben werden *Typ* Datei: "*Filename*": *Fehler*
@@ -597,13 +623,13 @@ C4934|"__delegate(multicast)" ist veraltet, verwenden Sie "stattdessen __delegat
 C4935|Assembly-Zugriffsspezifizierer geändert von "*Beschreibung*"
 C4944|"*Namen*": Symbol aus kann nicht importiert "*Quelle*': als*Deklaration*" ist im aktuellen Gültigkeitsbereich bereits vorhanden.
 C4945|"*Namen*": Symbol aus kann nicht importiert "*Quelle*': als*Deklaration*'wurde bereits importiert aus einer anderen Assembly'*Quelle*"
-C4946|Reinterpret_cast wird zwischen verknüpften Klassen verwendet: "*Deklaration*'und'*Deklaration*"
+C4946|reinterpret_cast used between related classes: '*declaration*' and '*declaration*'
 C4995|"*Namen*": Name wurde als veraltet #pragma markiert
 C4996|"*Problem*": *Beschreibung*
 C4997|"*Typ*': Coclass implementiert keine COM- oder Pseudoschnittstelle
 C4998|Erwartung fehlgeschlagen: *Beschreibung*(*Anzahl*)
-  
-## <a name="see-also"></a>Siehe auch  
-[WV (Compileroption)](../../build/reference/compiler-option-warning-level.md)  
-[Compiler-Warnungen standardmäßig deaktiviert sind](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
-[warning](../../preprocessor/warning.md)  
+
+## <a name="see-also"></a>Siehe auch
+[Compileroption WV](../../build/reference/compiler-option-warning-level.md)
+[Compilerwarnungen, die standardmäßig deaktiviert sind](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+[Warnung](../../preprocessor/warning.md)
