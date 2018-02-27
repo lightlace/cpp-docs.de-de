@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="collections-ccx"></a>Auflistungen (C++/CX)
 In C + c++ / CX-Programm möglich der Container der Standardvorlagenbibliothek (STL) oder eines anderen benutzerdefinierten Auflistungstyps frei verwenden. Wenn Sie jedoch übergeben Sammlungen hin-und über die Windows-Runtime-anwendungsbinärdateischnittstelle (ABI) – beispielsweise an ein XAML-Steuerelement oder einen JavaScript-Client – müssen Sie Windows-Runtime-Auflistungstypen verwenden.  
@@ -64,7 +65,7 @@ In C + c++ / CX-Programm möglich der Container der Standardvorlagenbibliothek (
    
   
 ## <a name="vectorproxy-elements"></a>VectorProxy-Elemente  
- [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) und [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) ermöglichen die Verwendung von `range for` -Schleifen und-Algorithmen wie [Std:: Sort](../standard-library/algorithm-functions.md#sort) mit einer [IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) Container. `IVector` -Elemente können jedoch nicht über C++-Zeigerdereferenzierungen aufgerufen werden; auf sie kann nur durch die [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) - und [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) -Methode zugegriffen werden. Daher verwenden diese Iteratoren die Proxyklassen `Platform::Details::VectorProxy<T>` und `Platform::Details::ArrowProxy<T>` , um Zugriff auf die einzelnen Elemente über die Operatoren `*`, `->`und `[]` zu ermöglichen, wie von STL gefordert. Streng genommen ist bei einer `IVector<Person^> vec`der Typ von `*begin(vec)` `VectorProxy<Person^>`. Allerdings ist das Proxyobjekt fast immer für Ihren Code transparent. Diese Proxyobjekte werden nicht dokumentiert, da sie nur für die interne Verwendung durch Iteratoren bestimmt sind. Es ist jedoch hilfreich zu wissen, wie der Mechanismus funktioniert.  
+ [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) und [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) ermöglichen die Verwendung von `range for` -Schleifen und-Algorithmen wie [Std:: Sort](../standard-library/algorithm-functions.md#sort) mit einer [ IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) Container. `IVector` -Elemente können jedoch nicht über C++-Zeigerdereferenzierungen aufgerufen werden; auf sie kann nur durch die [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) - und [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) -Methode zugegriffen werden. Daher verwenden diese Iteratoren die Proxyklassen `Platform::Details::VectorProxy<T>` und `Platform::Details::ArrowProxy<T>` , um Zugriff auf die einzelnen Elemente über die Operatoren `*`, `->`und `[]` zu ermöglichen, wie von STL gefordert. Streng genommen ist bei einer `IVector<Person^> vec`der Typ von `*begin(vec)` `VectorProxy<Person^>`. Allerdings ist das Proxyobjekt fast immer für Ihren Code transparent. Diese Proxyobjekte werden nicht dokumentiert, da sie nur für die interne Verwendung durch Iteratoren bestimmt sind. Es ist jedoch hilfreich zu wissen, wie der Mechanismus funktioniert.  
   
  Wenn Sie eine `range for` -Schleife über `IVector` -Container verwenden, verwenden Sie `auto&&` , damit die Iteratorvariable korrekt an die `VectorProxy` -Elemente gebunden werden kann. Wenn Sie `auto` oder `auto&`verwenden, wird die Compilerwarnung C4239 ausgelöst und `VectoryProxy` wird im Text der Warnung erwähnt.  
   
@@ -135,11 +136,11 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|Funktionen|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Speichert intern [Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) und int.)|[Begin](../cppcx/begin-function.md)/ [End](../cppcx/end-function.md)([Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
-|[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Speichert intern [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ und int.)|[Begin](../cppcx/begin-function.md)/ [End](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Speichert intern [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ und T.)|[Begin](../cppcx/begin-function.md)/ [End](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Speichert intern [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ und T.)|[Begin](../cppcx/begin-function.md)/ [End](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Speichert intern [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ und T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Speichert intern [Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) und int.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Speichert intern [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ und int.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IVectorView\<T>](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Speichert intern [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ und T.)|[Begin](../cppcx/begin-function.md)/ [End](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Speichert intern [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ und T.)|[Begin](../cppcx/begin-function.md)/ [End](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Speichert intern [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ und T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>Änderungsereignisse bei Auflistungen  
  `Vector` und `Map` unterstützen Datenbindung in XAML-Auflistungen durch Implementieren von Ereignissen, die auftreten, wenn ein Auflistungsobjekt geändert oder zurückgesetzt wird oder wenn ein Element in einer Auflistung eingefügt, aus dieser entfernt oder geändert wird. Sie können zwar eigene Typen schreiben, die Datenbindung unterstützen, können jedoch nicht von `Map` oder von `Vector` erben, da diese Typen versiegelt sind.  

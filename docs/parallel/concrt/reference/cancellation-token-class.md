@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token
@@ -16,19 +17,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs: C++
-helpviewer_keywords: cancellation_token class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token-Klasse
 Mit der `cancellation_token`-Klasse kann bestimmt werden, ob für einen Vorgang ein Abbruch angefordert wurde. Dem angegebenen Token kann `task_group`, `structured_task_group` oder `task` zugeordnet werden, um einen impliziten Abbruch bereitzustellen. Es kann auch zum Abbruch abgerufen oder für einen Rückruf registriert werden, wenn das zugeordnete `cancellation_token_source`-Element abgebrochen wird.  
@@ -45,7 +49,7 @@ class cancellation_token;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|["cancellation_token"](#ctor)||  
+|[cancellation_token](#ctor)||  
 |[~ Cancellation_token-Destruktor](#dtor)||  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -74,13 +78,13 @@ class cancellation_token;
   
  **Namespace:** Parallelität  
   
-##  <a name="dtor"></a>~ Cancellation_token 
+##  <a name="dtor"></a> ~cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a>"cancellation_token" 
+##  <a name="ctor"></a> "cancellation_token" 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -91,7 +95,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Parameter  
  `_Src`  
   
-##  <a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a> deregister_callback 
 
  Entfernt einen Rückruf, der zuvor über die Methode `register` registriert wurde, auf Grundlage des `cancellation_token_registration`-Objekts, das zum Zeitpunkt der Registrierung zurückgegeben wurde.  
   
@@ -103,7 +107,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  Das `cancellation_token_registration`-Objekt für den Rückruf, dessen Registrierung aufgehoben werden soll. Dieses Token muss zuvor von einem Aufruf der `register`-Methode zurückgegeben worden sein.  
   
-##  <a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a> is_cancelable 
 
  Gibt einen Hinweis zurück, ob dieses Token abgebrochen werden kann oder nicht.  
   
@@ -114,7 +118,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Hinweis darauf, ob dieses Token abgebrochen werden kann oder nicht.  
   
-##  <a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a> is_canceled 
 
  Gibt `true` zurück, wenn das Token abgebrochen wurde.  
   
@@ -125,7 +129,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert `true`, wenn das Token abgebrochen wurde, andernfalls der Wert `false`.  
   
-##  <a name="none"></a>keine 
+##  <a name="none"></a> Keine 
 
  Gibt ein Abbruchtoken zurück, das nie abgebrochen werden kann.  
   
@@ -136,7 +140,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Abbruchtoken, das nicht abgebrochen werden kann.  
   
-##  <a name="operator_neq"></a>Operator! = 
+##  <a name="operator_neq"></a> Operator! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -147,7 +151,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a> Operator = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -160,7 +164,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="operator_eq_eq"></a>Operator == 
+##  <a name="operator_eq_eq"></a> Operator == 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -171,7 +175,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a> register_callback 
 
  Verknüpft eine Rückruffunktion mit dem Token. Wenn das Token abgebrochen wird, wird der Rückruf vorgenommen. Wurde das Token bereits abgebrochen, wenn diese Methode aufgerufen wird, wird der Rückruf sofort und synchron ausgeführt.  
   

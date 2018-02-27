@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Scheduler
 - CONCRT/concurrency::Scheduler
@@ -24,19 +25,22 @@ f1_keywords:
 - CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
 - CONCRT/concurrency::Scheduler::ScheduleTask
 - CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
-dev_langs: C++
-helpviewer_keywords: Scheduler class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scheduler-class"></a>Scheduler-Klasse
 Stellt eine Abstraktion für einen Concurrency Runtime-Planer dar.  
@@ -53,7 +57,7 @@ class Scheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Taskplaner](#ctor)|Ein Objekt von der `Scheduler` -Klasse kann nur mit Factorymethoden, erstellt oder implizit.|  
+|[Scheduler](#ctor)|Ein Objekt von der `Scheduler` -Klasse kann nur mit Factorymethoden, erstellt oder implizit.|  
 |[~ Scheduler-Destruktor](#dtor)|Ein Objekt von der `Scheduler` Klasse wird implizit zerstört, sobald alle externen Verweise darauf nicht mehr vorhanden.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -61,11 +65,11 @@ class Scheduler;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Anfügen](#attach)|Wird den Planer an den aufrufenden Kontext angefügt. Nach dem Beenden dieser Methode der aufrufende Kontext wird vom Planer verwaltet, und das Zeitplanungsmodul wird als aktueller Planer.|  
-|[Erstellen](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter, platziert einen anfänglichen Verweis auf den Planer und gibt einen Zeiger darauf zurück.|  
+|[Create](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter, platziert einen anfänglichen Verweis auf den Planer und gibt einen Zeiger darauf zurück.|  
 |[CreateScheduleGroup](#createschedulegroup)|Überladen. Erstellt eine neue Planungsgruppe innerhalb des Planers. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass die Aufgaben innerhalb der neu erstellte Planungsgruppe auf Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer zurück.|  
 |[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.|  
-|[ID](#id)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|  
+|[Id](#id)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|  
 |[IsAvailableLocation](#isavailablelocation)|Bestimmt, ob eine angegebene Position im Zeitplanungsmodul verfügbar ist.|  
 |[Verweis](#reference)|Inkrementiert den Verweiszähler für den Planer.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Der Windows-Ereignishandle übergebene Ursachen der `_Event` -Parameter signalisiert wird, wenn der Planer herunterfährt und zerstört. Zum Zeitpunkt der das Ereignis signalisiert wird, ist die gesamte Arbeit, die auf den Planer geplant wurde abgeschlossen. Durch diese Methode können mehrere Herunterfahrereignisse registriert werden.|  
@@ -83,11 +87,11 @@ class Scheduler;
  `Scheduler`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
+ **Header:** concrt.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="attach"></a>Anfügen 
+##  <a name="attach"></a> Anfügen 
 
  Wird den Planer an den aufrufenden Kontext angefügt. Nach dem Beenden dieser Methode der aufrufende Kontext wird vom Planer verwaltet, und das Zeitplanungsmodul wird als aktueller Planer.  
   
@@ -104,7 +108,7 @@ virtual void Attach() = 0;
   
  Diese Methode löst eine [Improper_scheduler_attach](improper-scheduler-attach-class.md) -Ausnahme aus, wenn dieser Planer der aktuellen Planer des aufrufenden Kontext ist.  
   
-##  <a name="create"></a>Erstellen 
+##  <a name="create"></a> Erstellen 
 
  Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter, platziert einen anfänglichen Verweis auf den Planer und gibt einen Zeiger darauf zurück.  
   
@@ -126,7 +130,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  Diese Methode kann eine Vielzahl von Ausnahmen, einschließlich auslösen [Scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) und [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a> CreateScheduleGroup 
 
  Erstellt eine neue Planungsgruppe innerhalb des Planers. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass die Aufgaben innerhalb der neu erstellte Planungsgruppe auf Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.  
   
@@ -148,7 +152,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  Beachten Sie, dass Sie diesen Planer explizit erstellt haben, alle Verweise auf Planungsgruppen freigeben müssen, bevor Sie die Verweise auf den Planer freigeben.  
   
-##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors 
 
  Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer zurück.  
   
@@ -159,7 +163,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle Anzahl virtueller Prozessoren für den Planer.  
   
-##  <a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a> GetPolicy 
 
  Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.  
   
@@ -170,7 +174,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie der Richtlinie, der der Planer erstellt wurde.  
   
-##  <a name="id"></a>ID 
+##  <a name="id"></a> Id 
 
  Gibt einen eindeutigen Bezeichner für den Planer zurück.  
   
@@ -181,7 +185,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Ein eindeutiger Bezeichner für den Planer.  
   
-##  <a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a> IsAvailableLocation 
 
  Bestimmt, ob eine angegebene Position im Zeitplanungsmodul verfügbar ist.  
   
@@ -199,7 +203,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass der Rückgabewert ist eine sofortige Stichprobe an, ob am angegebene Speicherort verfügbar ist. Bei mehreren verborgenen Zeitplanungsmodulen angezeigt kann dynamische ressourcenverwaltung hinzufügen oder Ressourcen von Zeitplanungsmodulen zu einem beliebigen Zeitpunkt einsenden. Dies geschehen soll, kann die angegebene Position ändern Sie die Verfügbarkeit.  
   
-##  <a name="reference"></a>Referenz 
+##  <a name="reference"></a> Referenz 
 
  Inkrementiert den Verweiszähler für den Planer.  
   
@@ -215,7 +219,7 @@ virtual unsigned int Reference() = 0 ;
   
  Die Methode löst eine [Improper_scheduler_reference](improper-scheduler-reference-class.md) -Ausnahme aus, wenn der Verweiszähler vor dem Aufrufen der `Reference` Methode wurde von 0 (null) und der Aufruf erfolgt aus einem Kontext, der nicht im Besitz des Planers ist.  
   
-##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a> RegisterShutdownEvent 
 
  Der Windows-Ereignishandle übergebene Ursachen der `_Event` -Parameter signalisiert wird, wenn der Planer herunterfährt und zerstört. Zum Zeitpunkt der das Ereignis signalisiert wird, ist die gesamte Arbeit, die auf den Planer geplant wurde abgeschlossen. Durch diese Methode können mehrere Herunterfahrereignisse registriert werden.  
   
@@ -227,7 +231,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
  `_Event`  
  Ein Handle für ein Windows-Ereignisobjekt, das von der Laufzeit signalisiert wird, wenn der Planer herunterfährt und zerstört.  
   
-##  <a name="release"></a>Version 
+##  <a name="release"></a> Version 
 
  Dekrementiert den Planer Verweiszähler.  
   
@@ -241,7 +245,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>Hinweise  
  Dies wird normalerweise zum Verwalten der Lebensdauer des Zeitplanungsmoduls für Komposition verwendet. Wenn der Verweiszähler des ein Planer fällt auf 0 (null), der Planer wird heruntergefahren und Destruct selbst nachdem alle arbeiten, auf dem Zeitplanungsmodul wurde abgeschlossen.  
   
-##  <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy 
 
  Die Standardrichtlinie für den Planer zurückgesetzt auf die Common Language Runtime-Standardeinstellungen. Das nächste Mal, das ein Standardplaner erstellt wird, das wird die Standardrichtlinien der Common Language Runtime verwendet.  
   
@@ -252,7 +256,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann aufgerufen werden, während ein Standardplaner innerhalb des Prozesses vorhanden ist. Er wirkt sich nicht auf die Richtlinie des vorhandenen Standardplaner aus. Allerdings würde, wenn der Standardplaner wurden zum Herunterfahren und ein neuer Standardwert zu einem späteren Zeitpunkt erstellt werden, das neue Zeitplanungsmodul die Standardrichtlinien der Common Language Runtime verwenden.  
   
-##  <a name="ctor"></a>Taskplaner 
+##  <a name="ctor"></a> Taskplaner 
 
  Ein Objekt von der `Scheduler` -Klasse kann nur mit Factorymethoden, erstellt oder implizit.  
   
@@ -265,7 +269,7 @@ Scheduler();
   
  Sie können auch einen Planer entweder explizit durch Erstellen der `CurrentScheduler::Create` Methode oder die `Scheduler::Create` Methode.  
   
-##  <a name="dtor"></a>~ Scheduler 
+##  <a name="dtor"></a> ~ Scheduler 
 
  Ein Objekt von der `Scheduler` Klasse wird implizit zerstört, sobald alle externen Verweise darauf nicht mehr vorhanden.  
   
@@ -273,7 +277,7 @@ Scheduler();
 virtual ~Scheduler();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Plant eine einfache Aufgabe innerhalb des Planers. Die einfache Aufgabe wird in einer Planungsgruppe aus, die durch die Laufzeit bestimmt platziert werden. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass der Task Blockcontainer am angegebenen Speicherort ausgeführt werden.  
   
@@ -298,7 +302,7 @@ virtual void ScheduleTask(
  `_Placement`  
  Ein Verweis auf einen Speicherort, in dem die Aufgabe Lightweight-Blockcontainer werden wird ausgeführt.  
   
-##  <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy 
 
  Können eine benutzerdefinierte Richtlinie zu verwendende Standardplaner erstellen. Diese Methode kann aufgerufen werden, nur wenn kein Standardplaner innerhalb des Prozesses vorhanden ist. Nachdem eine Standardrichtlinie festgelegt wurde, bleibt Sie aktiv, bis zum nächsten gültigen Aufruf entweder die `SetDefaultSchedulerPolicy` oder [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) Methode.  
   

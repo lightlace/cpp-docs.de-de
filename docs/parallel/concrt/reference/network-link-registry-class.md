@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry-Klasse
 Die abstrakte `network_link_registry`-Basisklasse verwaltet die Verknüpfung zwischen Quell- und Zielblöcken.  
@@ -60,7 +64,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|Ruft beim Überschreiben in einer abgeleiteten Klasse fügt einen Link zu der `network_link_registry` Objekt.|  
 |[begin](#begin)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt einen Iterator auf das erste Element in der `network_link_registry` Objekt.|  
-|[enthält](#contains)|Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` Objekt für einen angegebenen Block.|  
+|[contains](#contains)|Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` Objekt für einen angegebenen Block.|  
 |[count](#count)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Elemente in der `network_link_registry` Objekt.|  
 |[remove](#remove)|Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt einen angegebenen Block aus der `network_link_registry` Objekt.|  
   
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Namespace:** Parallelität  
   
-##  <a name="add"></a>Hinzufügen 
+##  <a name="add"></a> Hinzufügen 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse fügt einen Link zu der `network_link_registry` Objekt.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Ein Zeiger auf einen Block hinzugefügt werden.  
   
-##  <a name="begin"></a>beginnen 
+##  <a name="begin"></a> Beginnen 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse gibt einen Iterator auf das erste Element in der `network_link_registry` Objekt.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Hinweise  
  Der Endzustand des Iterators erkennbar ist eine `NULL` Link.  
   
-##  <a name="contains"></a>enthält 
+##  <a name="contains"></a> Enthält 
 
  Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` Objekt für einen angegebenen Block.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Ein Zeiger auf einen Speicherblock, der für in durchsucht wird die `network_link_registry` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn der Block gefunden wurde, `false` andernfalls.  
+ `true` Wenn der Block gefunden wurde, `false` andernfalls.  
   
-##  <a name="count"></a>Anzahl 
+##  <a name="count"></a> Anzahl 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Elemente in der `network_link_registry` Objekt.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente in der `network_link_registry` Objekt.  
   
-##  <a name="remove"></a>Entfernen 
+##  <a name="remove"></a> Entfernen 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt einen angegebenen Block aus der `network_link_registry` Objekt.  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  Ein Zeiger auf einen Block, wenn entfernt gefunden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn der Link wurde gefunden und entfernt, `false` andernfalls.  
+ `true` Wenn der Link wurde gefunden und entfernt, `false` andernfalls.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

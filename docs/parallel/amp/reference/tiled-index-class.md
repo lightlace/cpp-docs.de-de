@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -22,19 +23,22 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs: C++
-helpviewer_keywords: tiled_index class
+dev_langs:
+- C++
+helpviewer_keywords:
+- tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 Stellt einen Index in einer [Tiled_extent](tiled-extent-class.md) Objekt. Diese Klasse verfügt über Eigenschaften, über die auf Elemente relativ zum lokalen Kachelursprung und relativ zum globalen Ursprung zugegriffen werden kann. Weitere Informationen gekachelter Leerzeichen finden Sie unter [mithilfe von Kacheln](../../../parallel/amp/using-tiles.md).  
@@ -96,12 +100,12 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |||  
 |[Globale Konstanten](#tiled_index__global)|Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die globale darstellt Index in einer [Raster](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) Objekt.|  
 |[lokale Konstante](#tiled_index__local)|Speichert ein `index` -Objekt von Rang 1, 2 oder 3, der den relativen Index in der aktuellen Kachel mit einer [Tiled_extent](tiled-extent-class.md) Objekt.|  
-|[Rank-Konstante](#tiled_index__rank)|Speichert den Rang des `tiled_index`-Objekts.|  
+|[rank Constant](#tiled_index__rank)|Speichert den Rang des `tiled_index`-Objekts.|  
 |[anordnungskonstante](#tiled_index__tile)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die Koordinaten der aktuellen Kachel eines `tiled_extent`-Objekts darstellt.|  
-|[tile_dim0-Konstante](#tiled_index__tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
-|[tile_dim1-Konstante](#tiled_index__tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
-|[tile_dim2-Konstante](#tiled_index__tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
-|[Tile_origin-Konstante](#tiled_index__tile_origin)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die globalen Koordinaten des Ursprungs der aktuellen Kachel in einem `tiled_extent`-Objekt darstellt.|  
+|[tile_dim0 Constant](#tiled_index__tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
+|[tile_dim1 Constant](#tiled_index__tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
+|[tile_dim2 Constant](#tiled_index__tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
+|[tile_origin Constant](#tiled_index__tile_origin)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die globalen Koordinaten des Ursprungs der aktuellen Kachel in einem `tiled_extent`-Objekt darstellt.|  
 
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
@@ -122,7 +126,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Namespace:** Parallelität  
 
 
-## <a name="tiled_index__ctor"></a>Tiled_index-Konstruktor  
+## <a name="tiled_index__ctor"></a>  Tiled_index-Konstruktor  
 Initialisiert eine neue Instanz der `tiled_index`-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
@@ -144,13 +148,13 @@ tiled_index(
  Die globale [Index](index-class.md) des erstellten `tiled_index`.  
   
  `_Local`  
- Die lokale [Index](index-class.md) des erstellten`tiled_index`  
+ Die lokale [Index](index-class.md) des erstellten `tiled_index`  
   
  `_Tile`  
- Die Kachel [Index](index-class.md) des erstellten`tiled_index`  
+ Die Kachel [Index](index-class.md) des erstellten `tiled_index`  
   
  `_Tile_origin`  
- Der kachelursprungs [Index](index-class.md) des erstellten`tiled_index`  
+ Der kachelursprungs [Index](index-class.md) des erstellten `tiled_index`  
   
  `_Barrier`  
  Die [Tile_barrier](tile-barrier-class.md) des erstellten Objekts `tiled_index`.  
@@ -167,7 +171,7 @@ tiled_index(
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Initialisiert eine neue Instanz der `tile_index`-Klasse, indem das angegebene `tiled_index`-Objekt kopiert wird.|  
 
 
-## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
 Gibt eine [Block](extent-class.md) -Objekt, das die Werte von wurde die `tiled_index` Vorlagenargumente `_Dim0`, `_Dim1`, und `_Dim2`.  
   
 ## <a name="syntax"></a>Syntax  
@@ -179,7 +183,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Rückgabewert  
  Ein `extent` -Objekt, das die Werte von wurde die `tiled_index` Vorlagenargumente `_Dim0`, `_Dim1`, und `_Dim2`.  
 
-## <a name="tiled_index__barrier"></a>Barriere   
+## <a name="tiled_index__barrier"></a>  Barriere   
 Speichert eine [Tile_barrier](tile-barrier-class.md) -Objekt, das eine Grenze in der aktuellen Kachel mit Threads darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -188,7 +192,7 @@ Speichert eine [Tile_barrier](tile-barrier-class.md) -Objekt, das eine Grenze in
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>globale   
+## <a name="tiled_index__global"></a>  Globale   
 Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die den globalen Index eines Objekts darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -197,7 +201,7 @@ Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die den glob
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>lokale   
+## <a name="tiled_index__local"></a>  lokale   
 Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, der den relativen Index in der aktuellen Kachel mit einer [Tiled_extent](tiled-extent-class.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -206,7 +210,7 @@ Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, der den rela
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>Rang   
+## <a name="tiled_index__rank"></a>  Rang   
 Speichert den Rang des `tiled_index`-Objekts.  
   
 ## <a name="syntax"></a>Syntax  
@@ -215,7 +219,7 @@ Speichert den Rang des `tiled_index`-Objekts.
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>Kachel   
+## <a name="tiled_index__tile"></a>  Kachel   
 Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, der die Koordinaten der aktuellen Kachel mit einer [Tiled_extent](tiled-extent-class.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -224,7 +228,7 @@ Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, der die Koor
 const index<rank> tile;  
 ```  
   
-## <a name="tiled_index__tile_dim0"></a>tile_dim0  
+## <a name="tiled_index__tile_dim0"></a>  tile_dim0  
 Speichert die Länge der wichtigsten Dimension.  
   
 ## <a name="syntax"></a>Syntax  
@@ -233,7 +237,7 @@ Speichert die Länge der wichtigsten Dimension.
 static const int tile_dim0 = _Dim0;  
 ```  
    
-## <a name="tiled_index__tile_dim1"></a>tile_dim1   
+## <a name="tiled_index__tile_dim1"></a>  tile_dim1   
 Speichert die Länge der zweitwichtigsten Dimension.  
   
 ## <a name="syntax"></a>Syntax  
@@ -241,7 +245,7 @@ Speichert die Länge der zweitwichtigsten Dimension.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+## <a name="tiled_index__tile_dim2"></a>  tile_dim2   
 Speichert die Länge der unwichtigsten Dimension.  
   
 ## <a name="syntax"></a>Syntax  
@@ -249,7 +253,7 @@ Speichert die Länge der unwichtigsten Dimension.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tiled_index__tile_origin"></a>tile_origin   
+## <a name="tiled_index__tile_origin"></a>  tile_origin   
 Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die globale darstellt Koordinaten des Ursprungs der aktuellen Kachel in eine [Tiled_extent](tiled-extent-class.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -257,7 +261,7 @@ Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die glob
 ```  
 const index<rank> tile_origin  
 ```  
-## <a name="tile_extent"></a>tile_extent
+## <a name="tile_extent"></a>  tile_extent
   Ruft eine [Block](extent-class.md) -Objekt, das die Werte von wurde die `tiled_index` Vorlagenargumente `tiled_index` Vorlagenargumente `_Dim0`, `_Dim1`, und `_Dim2`.  
   
 ## <a name="syntax"></a>Syntax  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - choice
 - AGENTS/concurrency::choice
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::choice::unlink_target
 - AGENTS/concurrency::choice::unlink_targets
 - AGENTS/concurrency::choice::value
-dev_langs: C++
-helpviewer_keywords: choice class
+dev_langs:
+- C++
+helpviewer_keywords:
+- choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="choice-class"></a>choice-Klasse
 Ein `choice`-Meldungsblock ist ein Block mit mehreren Quellen und einem einzelnen Ziel, der eine Kontrollflussinteraktion zwischen mehreren Quellen darstellt. Der Auswahlblock wartet, bis eine von mehreren Quellen eine Meldung erzeugt, und gibt den Index der Quelle, von der die Meldung erzeugt wurde, weiter.  
@@ -65,18 +69,18 @@ class choice: public ISource<size_t>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Auswahl](#ctor)|Überladen. Erstellt einen `choice` -Meldungsblock.|  
+|[choice](#ctor)|Überladen. Erstellt einen `choice` -Meldungsblock.|  
 |[~ Choice-Destruktor](#dtor)|Zerstört die `choice` Meldungsblock.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[akzeptieren](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `choice` -Block übertragen des Besitzes an den Aufrufer.|  
+|[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `choice` -Block übertragen des Besitzes an den Aufrufer.|  
 |[acquire_ref](#acquire_ref)|Ruft eine Verweisanzahl für dieses `choice` Meldungsblock, um den Löschvorgang zu verhindern.|  
-|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
+|[consume](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
 |[has_value](#has_value)|Überprüft, ob dies `choice` -Meldungsblock noch mit einem Wert initialisiert wurde.|  
-|[Index](#index)|Gibt einen Index in der `tuple` , die vom ausgewählten Element darstellt, die `choice` Meldungsblock.|  
+|[index](#index)|Gibt einen Index in der `tuple` , die vom ausgewählten Element darstellt, die `choice` Meldungsblock.|  
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `choice` Meldungsblock.|  
 |[release](#release)|Gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.|  
 |[release_ref](#release_ref)|Gibt einen Verweiszähler für dieses `choice` Meldungsblock.|  
@@ -100,7 +104,7 @@ class choice: public ISource<size_t>;
   
  **Namespace:** Parallelität  
   
-##  <a name="accept"></a>akzeptieren 
+##  <a name="accept"></a> Akzeptieren 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `choice` -Block übertragen des Besitzes an den Aufrufer.  
   
@@ -120,7 +124,7 @@ virtual message<size_t>* accept(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Meldung, der der Aufrufer nun den Besitz von verfügt.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  Ruft eine Verweisanzahl für dieses `choice` Meldungsblock, um den Löschvorgang zu verhindern.  
   
@@ -135,7 +139,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das mit dieser Quelle während verknüpft wird, wird die `link_target` Methode.  
   
-##  <a name="ctor"></a>Auswahl 
+##  <a name="ctor"></a> Auswahl 
 
  Erstellt einen `choice` -Meldungsblock.  
   
@@ -176,7 +180,7 @@ choice(
   
  Bewegungskonstruktion wird bei einer aktiven Sperre nicht ausgeführt, d. h., der Benutzer muss sicherstellen, dass zum Zeitpunkt der Bewegung keine einfachen Aufgaben aktiv sind. Andernfalls können zahlreiche Wettläufe auftreten, wodurch Ausnahmen oder inkonsistente Zuständen verursacht werden.  
   
-##  <a name="dtor"></a>~ Choice 
+##  <a name="dtor"></a> ~ Choice 
 
  Zerstört die `choice` Meldungsblock.  
   
@@ -184,7 +188,7 @@ choice(
 ~choice();
 ```  
   
-##  <a name="consume"></a>Nutzen 
+##  <a name="consume"></a> Nutzen 
 
  Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.  
   
@@ -207,7 +211,7 @@ virtual message<size_t>* consume(
 ### <a name="remarks"></a>Hinweise  
  Die `consume` Methode ist vergleichbar mit `accept`, aber immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen `true`.  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  Überprüft, ob dies `choice` -Meldungsblock noch mit einem Wert initialisiert wurde.  
   
@@ -218,9 +222,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn der Block einen Wert erhalten hat `false` andernfalls.  
+ `true` Wenn der Block einen Wert erhalten hat `false` andernfalls.  
   
-##  <a name="index"></a>Index 
+##  <a name="index"></a> index 
 
  Gibt einen Index in der `tuple` , die vom ausgewählten Element darstellt, die `choice` Meldungsblock.  
   
@@ -234,7 +238,7 @@ size_t index();
 ### <a name="remarks"></a>Hinweise  
  Die Nachrichtennutzlast kann extrahiert werden, mithilfe der `get` Methode.  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  Verknüpft einen Zielblock mit diesem `choice` Meldungsblock.  
   
@@ -246,7 +250,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf ein `ITarget` Block, mit dem Verknüpfen dieser `choice` Meldungsblock.  
   
-##  <a name="release"></a>Version 
+##  <a name="release"></a> Version 
 
  Gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.  
   
@@ -263,7 +267,7 @@ virtual void release(
  `_PTarget`  
  Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `release` Methode.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  Gibt einen Verweiszähler für dieses `choice` Meldungsblock.  
   
@@ -278,7 +282,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, indem ein `ITarget` -Objekt, das aus dieser Quelle aufgehoben wird, ist. Quellblock darf für den Zielblock reservierten Ressourcen freizugeben.  
   
-##  <a name="reserve"></a>Reservieren 
+##  <a name="reserve"></a> Hostreserven 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `choice` Meldungsblock.  
   
@@ -296,12 +300,12 @@ virtual bool reserve(
  Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `reserve` Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können viele Gründe geben, einschließlich fehl: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, die Quelle konnte verweigern Reservierungen usw.  
+ `true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können viele Gründe geben, einschließlich fehl: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, die Quelle konnte verweigern Reservierungen usw.  
   
 ### <a name="remarks"></a>Hinweise  
  Nach dem Aufruf `reserve`, wenn er erfolgreich ausgeführt wird, müssen Sie entweder Aufrufen `consume` oder `release` um übernehmen oder der Besitz der Nachricht bzw. abzugeben.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  Hebt die Verknüpfung mit einem Zielblock und dies `choice` Meldungsblock.  
   
@@ -313,7 +317,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf ein `ITarget` Block zum Aufheben der Verknüpfung von diesem `choice` Meldungsblock.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  Hebt die Verknüpfung mit allen Zielen, die von diesem `choice` Meldungsblock.  
   
@@ -324,7 +328,7 @@ virtual void unlink_targets();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode muss es sich nicht im Destruktor aufgerufen werden, da der Destruktor für die interne `single_assignment` Block ordnungsgemäß Verknüpfung aufheben.  
   
-##  <a name="value"></a>Wert 
+##  <a name="value"></a> Wert 
 
  Ruft die Meldung ab, deren Index, indem ausgewählt wurde, die `choice` Meldungsblock.  
   

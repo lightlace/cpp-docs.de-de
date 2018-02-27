@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - single_assignment
 - AGENTS/concurrency::single_assignment
@@ -22,19 +23,22 @@ f1_keywords:
 - AGENTS/concurrency::single_assignment::reserve_message
 - AGENTS/concurrency::single_assignment::resume_propagation
 - AGENTS/concurrency::single_assignment::send_message
-dev_langs: C++
-helpviewer_keywords: single_assignment class
+dev_langs:
+- C++
+helpviewer_keywords:
+- single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74d0dee7acb511add4b695506c0491368413e17b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="singleassignment-class"></a>single_assignment-Klasse
 Ein `single_assignment`-Meldungsblock ist ein geordneter `propagator_block` mit mehreren Zielen und mehreren Quellen, der eine einzelne, einmal beschreibbare `message` speichern kann.  
@@ -57,7 +61,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[single_assignment](#ctor)|Überladen. Erstellt eine `single_assignment` Meldungsblock.|  
-|[~ Single_assignment-Destruktor](#dtor)|Zerstört die `single_assignment` Meldungsblock.|  
+|[~single_assignment Destructor](#dtor)|Zerstört die `single_assignment` Meldungsblock.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -101,7 +105,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  **Namespace:** Parallelität  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `single_assignment` Meldungsblock, eine Kopie der Nachricht an den Aufrufer zurückgeben.  
   
@@ -119,7 +123,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Die `single_assignment` -Meldungsblock gibt Kopien der Nachricht an die Ziele, anstatt Sie zu übertragen des Besitzes der aktuell gespeicherte Nachricht.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Nimmt eine Meldung, die zuvor von Angeboten die `single_assignment` und durch das Ziel, das eine Kopie der Nachricht an den Aufrufer zurückgeben reserviert.  
   
@@ -137,7 +141,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Ähnlich wie `accept`, steht aber immer durch einen Aufruf von ist `reserve`.  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  Überprüft, ob dies `single_assignment` -Meldungsblock noch mit einem Wert initialisiert wurde.  
   
@@ -146,9 +150,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn der Block einen Wert erhalten hat `false` andernfalls.  
+ `true` Wenn der Block einen Wert erhalten hat `false` andernfalls.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `single_assignment` Meldungsblock.  
   
@@ -160,7 +164,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf das neu verknüpfte Ziel.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Übergibt asynchron eine Nachricht von einer `ISource` Block dieser `single_assignment` Meldungsblock. Wird aufgerufen, indem die `propagate` Methode, wenn von ein Quellblock aufgerufen wird.  
   
@@ -180,7 +184,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Überblick, was das Ziel beschlossen, mit der Nachricht geschehen soll.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Stellen die `message` `_PMessage` in diesem `single_assignment` -Meldungsblock und bietet daher für alle verknüpften Ziele.  
   
@@ -192,7 +196,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
  `_PMessage`  
  Ein Zeiger auf eine `message` , die von diesem `single_assignment` -Meldungsblock Besitz übernommen hat.  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Eine vorherige nachrichtenreservierung frei.  
   
@@ -204,7 +208,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Die `runtime_object_identity` von der `message` Objekt freigegeben wird.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `single_assignment` Meldungsblock.  
   
@@ -217,12 +221,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  Die `runtime_object_identity` von der `message` -Objekt reserviert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.  
+ `true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Nach dem `reserve` aufgerufen wird, wenn er zurückgibt `true`, entweder `consume` oder `release` aufgerufen werden, um entweder übernehmen oder den Besitz der Nachricht.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde.  
   
@@ -230,7 +234,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Übergibt synchron eine Meldung von einer `ISource` Block dieser `single_assignment` Meldungsblock. Wird aufgerufen, indem die `send` Methode, wenn von ein Quellblock aufgerufen wird.  
   
@@ -250,7 +254,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Überblick, was das Ziel beschlossen, mit der Nachricht geschehen soll.  
   
-##  <a name="ctor"></a>single_assignment 
+##  <a name="ctor"></a> single_assignment 
 
  Erstellt eine `single_assignment` Meldungsblock.  
   
@@ -290,7 +294,7 @@ single_assignment(
   
  Der Typ `filter_method` ist ein Funktionselement mit der Signatur `bool (T const &)` die aufgerufen wird, von diesem `single_assignment` Meldungsblock, um zu bestimmen, und zwar unabhängig davon, ob es eine angebotene Nachricht akzeptieren soll.  
   
-##  <a name="dtor"></a>~ Single_assignment 
+##  <a name="dtor"></a> ~single_assignment 
 
  Zerstört die `single_assignment` Meldungsblock.  
   
@@ -298,7 +302,7 @@ single_assignment(
 ~single_assignment();
 ```  
   
-##  <a name="value"></a>Wert 
+##  <a name="value"></a> Wert 
 
  Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `single_assignment` Meldungsblock.  
   

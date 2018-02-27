@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - reader_writer_lock
 - CONCRT/concurrency::reader_writer_lock
@@ -18,19 +19,22 @@ f1_keywords:
 - CONCRT/concurrency::reader_writer_lock::try_lock
 - CONCRT/concurrency::reader_writer_lock::try_lock_read
 - CONCRT/concurrency::reader_writer_lock::unlock
-dev_langs: C++
-helpviewer_keywords: reader_writer_lock class
+dev_langs:
+- C++
+helpviewer_keywords:
+- reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock-Klasse
 Eine im Writer festgelegte, warteschlangenbasierte Lese-/Schreibsperre mit ausschließlich lokalem Spinning. Die Sperre gewährt "First In, First Out"-Zugriff (FIFO-Zugriff) auf Writer und blockiert Reader unter einer fortlaufenden Last von Writern.  
@@ -74,11 +78,11 @@ class reader_writer_lock;
  `reader_writer_lock`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
+ **Header:** concrt.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="lock"></a>Sperre 
+##  <a name="lock"></a> Sperre 
 
  Ruft die Lese-/Schreibsperre als Writer ab.  
   
@@ -95,7 +99,7 @@ void lock();
   
  Wenn die Sperre bereits vom aufrufenden Kontext aufrechterhalten wird ein [Improper_lock](improper-lock-class.md) Ausnahme wird ausgelöst.  
   
-##  <a name="lock_read"></a>lock_read 
+##  <a name="lock_read"></a> lock_read 
 
  Ruft die Lese-/Schreibsperre als Reader ab. Wenn Writer, haben aktive Reader warten, bis sie fertig sind. Der Reader einfach registriert ein Interesse an die Sperre und wartet, bis Writer, diese freizugeben.  
   
@@ -108,7 +112,7 @@ void lock_read();
   
  Wenn Writer auf die Sperre warten, wird der Reader warten Sie, bis alle Writer in Zeile abgerufen und die Sperre aufgehoben haben. Diese Sperre ist Blockcontainer Writer und kann .NET-Threadpool blockiert Reader unter einer fortlaufenden Last von Writern.  
   
-##  <a name="ctor"></a>reader_writer_lock 
+##  <a name="ctor"></a> reader_writer_lock 
 
  Erstellt ein neues `reader_writer_lock`-Objekt.  
   
@@ -116,7 +120,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a>~ Reader_writer_lock 
+##  <a name="dtor"></a> ~reader_writer_lock 
 
  Zerstört das `reader_writer_lock`-Objekt.  
   
@@ -127,13 +131,13 @@ reader_writer_lock();
 ### <a name="remarks"></a>Hinweise  
  Es wird erwartet, dass die Sperre nicht mehr verwendet wird, wenn der Destruktor ausgeführt wird. Ermöglicht die Schreibsperre zerstört mit der Sperre aufrechterhalten noch Ergebnisse in einem nicht definierten Verhalten.  
   
-##  <a name="scoped_lock_class"></a>reader_writer_lock:: scoped_lock-Klasse  
+##  <a name="scoped_lock_class"></a>  reader_writer_lock:: scoped_lock-Klasse  
  Eine sichere RAII-Wrapper, die verwendet werden kann, erhalten `reader_writer_lock` Sperren von Objekten als Schreiber.  
   
 ```
 class scoped_lock;
 ``` 
-## <a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
 Erstellt eine `scoped_lock` Objekt, und ruft die `reader_writer_lock` Objekt übergeben, der `_Reader_writer_lock` Parameter als einen Writer. Wenn von einem anderen Thread die Sperre aufrechterhalten wird, wird dieser Aufruf blockiert.  
   
@@ -146,7 +150,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  Die `reader_writer_lock` Objekt, das als Writer abgerufen.  
   
-## <a name="scoped_lock_dtor"></a>Scoped_lock:: ~ Scoped_lock 
+## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
 
 Zerstört ein `reader_writer_lock` Objekt, und hebt die Sperre, die in seinem Konstruktor angegeben.   
 
@@ -154,18 +158,18 @@ Zerstört ein `reader_writer_lock` Objekt, und hebt die Sperre, die in seinem Ko
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class"></a>reader_writer_lock:: scoped_lock_read-Klasse  
+##  <a name="scoped_lock_read_class"></a>  reader_writer_lock:: scoped_lock_read-Klasse  
  Eine sichere RAII-Wrapper, die verwendet werden kann, erhalten `reader_writer_lock` Sperren von Objekten als Reader.  
   
 ```
 class scoped_lock_read;
 ```  
   
-##  <a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a> try_lock 
 
  Versucht, die Lese-/Schreibsperre als Writer ohne Blockierung zu erhalten.  
 
-## <a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+## <a name="scoped_lock_read_ctor"></a> scoped_lock_read::scoped_lock_read 
 
 Erstellt eine `scoped_lock_read` Objekt, und ruft die `reader_writer_lock` Objekt übergeben, der `_Reader_writer_lock` Parameter als Reader. Wenn die Sperre von einem anderen Thread als Writer oder ausstehende Writer vorhanden sind, wird dieser Aufruf blockiert.  
   
@@ -177,14 +181,14 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  Die `reader_writer_lock` Objekt, das als Reader abgerufen.  
   
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock:: scoped_lock_read:: ~ Scoped_lock_read-Destruktor
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock:: scoped_lock_read:: ~ Scoped_lock_read-Destruktor
 Zerstört ein `scoped_lock_read` Objekt, und hebt die Sperre, die in seinem Konstruktor angegeben.  
 
 ```
 ~scoped_lock_read();
 ```  
   
-## <a name="try_lock"></a>try_lock 
+## <a name="try_lock"></a> try_lock 
 
 ```
 bool try_lock();
@@ -193,7 +197,7 @@ bool try_lock();
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Sperre eingerichtet wurde, den Wert `true`ist, andernfalls der Wert `false`.  
   
-##  <a name="try_lock_read"></a>try_lock_read 
+##  <a name="try_lock_read"></a> try_lock_read 
 
  Versucht, die Lese-/Schreibsperre als Reader ohne Blockierung zu erhalten.  
   
@@ -204,7 +208,7 @@ bool try_lock_read();
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Sperre eingerichtet wurde, den Wert `true`ist, andernfalls der Wert `false`.  
   
-##  <a name="unlock"></a>Entsperren 
+##  <a name="unlock"></a> Entsperren 
 
  Entsperrt die Lese-/Schreibsperre basierend auf, die es Reader oder Writer gesperrt.  
   

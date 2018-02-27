@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - location
 - CONCRT/concurrency::location
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs: C++
-helpviewer_keywords: location class
+dev_langs:
+- C++
+helpviewer_keywords:
+- location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26a45809ce41beb36a5f69d2ab219b85e3aafcdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="location-class"></a>location-Klasse
 Die Abstraktion eines physischen Speicherorts auf der Hardware.  
@@ -42,14 +46,14 @@ class location;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Speicherort](#ctor)|Überladen. Erstellt ein `location`-Objekt.|  
+|[location](#ctor)|Überladen. Erstellt ein `location`-Objekt.|  
 |[~ Location-Destruktor](#dtor)|Zerstört ein `location`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[aktuelle](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.|  
+|[current](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.|  
 |[from_numa_node](#from_numa_node)|Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
@@ -64,11 +68,11 @@ class location;
  `location`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
+ **Header:** concrt.h  
   
  **Namespace:** Parallelität  
   
-##  <a name="dtor"></a>~ Speicherort 
+##  <a name="dtor"></a> ~ Speicherort 
 
  Zerstört ein `location`-Objekt.  
   
@@ -76,7 +80,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="current"></a>aktuelle 
+##  <a name="current"></a> Aktuelle 
 
  Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.  
   
@@ -87,7 +91,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>Rückgabewert  
  Einen Speicherort, der die spezifischste Stelle darstellt, an der aufrufende Thread ausgeführt wird.  
   
-##  <a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a> from_numa_node 
 
  Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.  
   
@@ -102,7 +106,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Rückgabewert  
  Eine Position, die gemäß den NUMA-Knoten darstellt. die `_NumaNodeNumber` Parameter.  
   
-##  <a name="ctor"></a>Speicherort 
+##  <a name="ctor"></a> Speicherort 
 
  Erstellt ein `location`-Objekt.  
   
@@ -129,7 +133,7 @@ location(
 ### <a name="remarks"></a>Hinweise  
  Ein standardmäßig erstelltes Speicherort stellt das System als Ganzes dar.  
   
-##  <a name="operator_neq"></a>Operator! = 
+##  <a name="operator_neq"></a> Operator! = 
 
  Bestimmt, ob zwei `location` Objekte darstellen anderen Speicherort.  
   
@@ -141,9 +145,9 @@ bool operator!= (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn es sich bei die beiden Speicherorten unterscheiden, `false` andernfalls.  
+ `true` Wenn es sich bei die beiden Speicherorten unterscheiden, `false` andernfalls.  
   
-##  <a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a> Operator = 
 
  Weist den Inhalt eines anderen `location` -Objekts in dieses Objekt.  
   
@@ -157,7 +161,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="operator_eq_eq"></a>Operator == 
+##  <a name="operator_eq_eq"></a> Operator == 
 
  Bestimmt, ob zwei `location` Objekte darstellen, den gleichen Speicherort.  
   
@@ -169,7 +173,7 @@ bool operator== (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn es sich bei die beiden Speicherorten identisch sind und `false` andernfalls.  
+ `true` Wenn es sich bei die beiden Speicherorten identisch sind und `false` andernfalls.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1ca3770d730752eacee2b017c932da720eff030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67659cd17d95135e2697cd8707142ce1b5c94ef1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="masm-operators-reference"></a>Referenz zu MASM
 
@@ -46,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|[UND](../../assembler/masm/operator-and.md)|[NICHT](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
+|[AND](../../assembler/masm/operator-and.md)|[NICHT](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
 |[SHL](../../assembler/masm/operator-shl.md)|[SHR](../../assembler/masm/operator-shr.md)|[XOR](../../assembler/masm/operator-xor.md)|  
   
 ## <a name="macro"></a>Makro  
@@ -62,14 +65,14 @@ ms.lasthandoff: 12/21/2017
 |-|-|-|  
 |[' '](../../assembler/masm/operator-single-quote.md)|[" "](../../assembler/masm/operator-double-quote.md)|[:](../../assembler/masm/operator-colon.md)|  
 |[::](../../assembler/masm/operator-semicolons.md)|[;](../../assembler/masm/operator-semicolon.md)|[CARRY?](../../assembler/masm/operator-carry-q.md)|  
-|[DUP](../../assembler/masm/operator-dup.md)|["ÜBERLAUF"?](../../assembler/masm/operator-overflow-q.md)|[PARITÄT?](../../assembler/masm/operator-parity-q.md)|  
-|[ANGEMELDET HABE?](../../assembler/masm/operator-sign-q.md)|[0 (NULL)?](../../assembler/masm/operator-zero-q.md)||  
+|[DUP](../../assembler/masm/operator-dup.md)|[OVERFLOW?](../../assembler/masm/operator-overflow-q.md)|[PARITÄT?](../../assembler/masm/operator-parity-q.md)|  
+|[SIGN?](../../assembler/masm/operator-sign-q.md)|[0 (NULL)?](../../assembler/masm/operator-zero-q.md)||  
   
 ## <a name="record"></a>Datensatz  
   
 |||  
 |-|-|  
-|[MASKE](../../assembler/masm/operator-mask.md)|[BREITE](../../assembler/masm/operator-width.md)|  
+|[MASKE](../../assembler/masm/operator-mask.md)|[WIDTH](../../assembler/masm/operator-width.md)|  
   
 ## <a name="relational"></a>Relational  
   
@@ -94,7 +97,7 @@ ms.lasthandoff: 12/21/2017
 |[LÄNGE](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[NIEDRIG](../../assembler/masm/operator-low.md)|  
 |[LOW32](../../assembler/masm/operator-low32.md)|[LOWWORD](../../assembler/masm/operator-lowword.md)|[OPATTR](../../assembler/masm/operator-opattr.md)|  
 |[PTR](../../assembler/masm/operator-ptr.md)|[SHORT](../../assembler/masm/operator-short.md)|[GRÖSSE](../../assembler/masm/operator-size.md)|  
-|["SIZEOF"](../../assembler/masm/operator-sizeof.md)|[DIES](../../assembler/masm/operator-this.md)|[DATENTYP](../../assembler/masm/operator-type.md)|  
+|[SIZEOF](../../assembler/masm/operator-sizeof.md)|[THIS](../../assembler/masm/operator-this.md)|[TYPE](../../assembler/masm/operator-type.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
 

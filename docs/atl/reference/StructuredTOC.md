@@ -235,7 +235,6 @@
 ## <a name="server-registration-global-functionsserver-registration-global-functionsmd"></a>[Globale Server-Registrierungs-Funktionen](server-registration-global-functions.md)
 ## <a name="winmodule-global-functionswinmodule-global-functionsmd"></a>[Globale WinModule-Funktionen](winmodule-global-functions.md)
 # <a name="atl-global-variablesatl-global-variablesmd"></a>[Globale ATL-Variablen](atl-global-variables.md)
-## <a name="patlmodulepatlmodulemd"></a>[_pAtlModule](patlmodule.md)
 # <a name="atl-structuresatl-structuresmd"></a>[ATL-Strukturen](atl-structures.md)
 ## <a name="atldrawinfo-structureatl-drawinfo-structuremd"></a>[ATL_DRAWINFO-Struktur](atl-drawinfo-structure.md)
 ## <a name="atlcreatewnddata-structureatlcreatewnddata-structuremd"></a>[_AtlCreateWndData-Struktur](atlcreatewnddata-structure.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message
 - AGENTS/concurrency::message
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs: C++
-helpviewer_keywords: message class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="message-class"></a>message-Klasse
 Der grundlegende Nachrichtenumschlag, der die zwischen den Meldungsblöcken übergebene Datennutzlast enthält.  
@@ -70,7 +74,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Nutzlast](#payload)|Die Nutzlast der `message` Objekt.|  
+|[payload](#payload)|Die Nutzlast der `message` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -83,7 +87,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **Namespace:** Parallelität  
   
-##  <a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a> add_ref 
 
  Fügt auf den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
   
@@ -94,7 +98,7 @@ long add_ref();
 ### <a name="return-value"></a>Rückgabewert  
  Der neue Wert des Verweiszählers.  
   
-##  <a name="ctor"></a>Nachricht 
+##  <a name="ctor"></a> Nachricht 
 
  Erstellt ein `message`-Objekt.  
   
@@ -126,7 +130,7 @@ message(
 ### <a name="remarks"></a>Hinweise  
  Des Konstruktors, der einen Zeiger auf eine `message` -Objekt als Argument löst ein [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_Msg` ist `NULL`.  
   
-##  <a name="dtor"></a>~ Nachricht 
+##  <a name="dtor"></a> ~ Nachricht 
 
  Zerstört das `message`-Objekt.  
   
@@ -134,7 +138,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a> msg_id 
 
  Gibt die ID des dem `message` Objekt.  
   
@@ -145,7 +149,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die `runtime_object_identity` von der `message` Objekt.  
   
-##  <a name="payload"></a>Nutzlast 
+##  <a name="payload"></a> Nutzlast 
 
  Die Nutzlast der `message` Objekt.  
   
@@ -153,7 +157,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a> remove_ref 
 
  Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
   
