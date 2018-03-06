@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
+- using_CPP
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +26,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
 Ein Namespace ist ein deklarativer Bereich, der einen Gültigkeitsbereich für die darin enthaltenen Bezeichner darstellt (die Namen von Typen, Funktionen, Variablen usw.). Namespaces werden verwendet, um Code in logischen Gruppen zu organisieren und Namenskonflikte zu vermeiden, die insbesondere dann auftreten können, wenn die Codebasis mehrere Bibliotheken enthält. Alle Bezeichner im Gültigkeitsbereich des Namespaces sind ohne Qualifizierung füreinander sichtbar. Bezeichner außerhalb des Namespaces können auf die Member zugreifen, z. B. den vollqualifizierten Namen für jeden Bezeichner mit `std::vector<std::string> vec;`, oder ansonsten durch eine [using-Deklaration](../cpp/using-declaration.md) für einen einzelnen Bezeichner (`using std::string`), oder eine [using-Direktive](../cpp/namespaces-cpp.md#using_directives) für alle Bezeichner im Namespace (`using namespace std;`). Der Code in Headerdateien muss immer den vollqualifizierten Namespacenamen verwenden.  
@@ -76,7 +77,7 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a>using-Direktiven  
+## <a id="using_directives"></a> using-Direktiven  
  Die `using` Richtlinie ermöglicht die Verwendung aller Namen in einem **Namespace** , ohne dass die *Namespacename* als expliziter Qualifizierer. Verwenden Sie eine Richtlinie in einer Implementierungsdatei (d. h. *.cpp), wenn Sie mehrere verschiedene Bezeichner in einem Namespace; verwenden Wenn Sie nur ein oder zwei Bezeichner verwenden, sollten Sie eine using Deklaration, um nur diese Bezeichner in den Bereich und nicht alle Bezeichner im Namespace einzubinden. Wenn eine lokale Variable denselben Namen wie eine Namespacevariable besitzt , wird die Namespacevariable ausgeblendet. Es ist ein Fehler, wenn eine Namespacevariable mit dem gleichen Namen wie eine globale Variable vorliegt.  
   
 > [!NOTE]
@@ -258,7 +259,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a>Namespace-Aliasen  
+## <a id="namespace_aliases"></a> Namespace-Aliasen  
  Namespacenamen müssen eindeutig sein, was bedeutet, dass sie häufig nicht zu kurz sein dürfen. Wenn Code aufgrund eines langen Namens schwer zu lesen ist oder die Eingabe einer Headerdatei Umstände bereitet, wenn keine using-Direktiven verwendet werden können, können Sie einen Namespacealias als Abkürzung für den tatsächlichen Namen erstellen. Zum Beispiel:  
   
 ```cpp  

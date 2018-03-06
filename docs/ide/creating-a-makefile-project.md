@@ -1,12 +1,9 @@
 ---
 title: Erstellen eines Makefile-Projekts | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vc.appwiz.makefile.project
@@ -22,32 +19,36 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e86bedbf83cd417cfc41317e5887304cda7ee76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f487126b58dddc0243646ebce7faa2754ffa7053
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="creating-a-makefile-project"></a>Erstellen eines Makefile-Projekts
-Wenn Sie ein Projekt von der Befehlszeile mit einem Makefile erstellen, wird das Projekt in der Visual Studio-Entwicklungsumgebung nicht erkannt. Öffnen und erstellen das Projekt mithilfe [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], Visual Studio Professional oder Visual Studio Express für Windows Desktop, müssen Sie ein leeres Projekt zuerst erstellen, indem Sie die MakeFile-Projektvorlage auswählen. Anschließend können Sie Ihr Projekt auf der Grundlage dieses Projekts in der Visual Studio-Entwicklungsumgebung erstellen.  
-  
- Im Projektmappen-Explorer werden keine Dateien dieses Projekts angezeigt. Die Buildeinstellungen, die auf der Eigenschaftenseite des Projekts angezeigt werden, werden vom Projekt festgelegt.  
-  
- Die Ausgabedatei, die Sie im Projekt festlegen, hat keinen Einfluss auf den vom Buildskript erstellten Namen; sie deklariert lediglich die Bestimmung.  
-  
-### <a name="to-create-a-makefile-project"></a>So erstellen Sie ein Makefile-Projekt  
-  
-1.  Befolgen Sie die Anweisungen im Hilfethema [Erstellen eines Projekts mit einem Visual C++-Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md).  
-  
-2.  In der **neues Projekt** wählen Sie im Dialogfeld **Makefile-Projekt** im Bereich Vorlagen aus, um den Assistenten zu öffnen.  
-  
-3.  In der [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) Seite, geben Sie den Befehl ausgeben, bereinigen und neuerstellungsinformationen.  
-  
-4.  Klicken Sie auf **Fertig stellen** um den Assistenten schließen und öffnen Sie das neu erstellte Projekt in **Projektmappen-Explorer**.  
-  
- Sie können die Projekteigenschaften auf der Eigenschaftenseite des Projekts anzeigen und bearbeiten. Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../ide/working-with-project-properties.md) Informationen zum Anzeigen der Eigenschaftenseite.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Makefile-Projekt-Assistent](../ide/makefile-project-wizard.md)   
- [Sonderzeichen in einem Makefile](../build/special-characters-in-a-makefile.md)   
- [Inhalt eines Makefiles](../build/contents-of-a-makefile.md)
+
+Wenn Sie eine vorhandene Quellcodeprojekt, die Sie über die Befehlszeile mit einem Makefile erstellen verfügen, hat der Visual Studio-Entwicklungsumgebung mehrere Möglichkeiten, wandelt sie in ein Projekt, das vollständige Visual Studio-IDE-Funktionen nutzen kann. Dieser Artikel beschreibt das Erstellen eines Makefile-Projekts in Visual Studio, die Ihre vorhandenen Makefile verwendet wird, um den Code in der IDE erstellen. Alternativ können Sie die **neues Projekt aus vorhandenen Codedateien erstellen** Assistenten zum Erstellen eines systemeigenen MSBuild-Projekts aus dem Quellcode. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](how-to-create-a-cpp-project-from-existing-code.md). Ab Visual Studio 2017, können Sie auch die **Ordner öffnen** -Funktion, die mehrere vorhandene Build Systeme verwenden kann, als wären sie systemeigene Visual Studio-Projekte. Weitere Informationen finden Sie unter [Ordner öffnen-Projekte in Visual C++](non-msbuild-projects.md).
+
+Verwendung von Visual Studio öffnen und den Quellcode mithilfe der vorhandenen Makefile erstellen, erstellen Sie zunächst ein neues Projekt, indem Sie die MakeFile-Projektvorlage auswählen. Ein Assistent können Sie die Befehle und die Umgebung verwendet wird, indem Sie die Makefile angeben. Dieses Projekt können dann um den Code in der Visual Studio-Entwicklungsumgebung zu erstellen.
+
+Standardmäßig werden keine Dateien von Makefile-Projekt im Projektmappen-Explorer angezeigt. Makefile-Projekt gibt die Buildeinstellungen, die auf der Seite der Projekteigenschaften wiedergegeben werden.
+
+Die Ausgabedatei, die Sie im Projekt festlegen, hat keinen Einfluss auf den vom Buildskript erstellten Namen; sie deklariert lediglich die Bestimmung. Makefile noch während des Erstellungsprozesses steuert und gibt an, die Build-Ziele.
+
+## <a name="to-create-a-makefile-project"></a>So erstellen Sie ein Makefile-Projekt
+
+1. Befolgen Sie die Anweisungen im Hilfethema [Erstellen eines Projekts mit einem Visual C++-Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md).
+
+1. In der **neues Projekt** Dialogfeld erweitern Sie **Visual C++** > **allgemeine** und wählen Sie dann **Makefile-Projekt** in der Vorlagen (Bereich) auf den Projektassistenten zu öffnen.
+
+1. In der [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) die Befehlsausgabe bereinigen, außerdem Rebuild-Informationen für die Debug- und im erstellt.
+
+1. Klicken Sie auf **Fertig stellen** um den Assistenten schließen und öffnen Sie das neu erstellte Projekt in **Projektmappen-Explorer**.
+
+Sie können die Projekteigenschaften auf der Eigenschaftenseite des Projekts anzeigen und bearbeiten. Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../ide/working-with-project-properties.md) Informationen zum Anzeigen der Eigenschaftenseite.
+
+## <a name="see-also"></a>Siehe auch
+
+[Makefile-Projekt-Assistent](../ide/makefile-project-wizard.md)<br/>
+[Sonderzeichen in einem Makefile](../build/special-characters-in-a-makefile.md)<br/>
+[Inhalt eines Makefiles](../build/contents-of-a-makefile.md)<br/>
