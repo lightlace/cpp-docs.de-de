@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ ZF (schneller PDB Generation)
 
@@ -32,7 +32,7 @@ Aktivieren Sie schnellere PDB-Generierung, bei der parallelen Builderstellung du
 
 Die **/ZF** Option ermöglicht die compilerunterstützung für schnellere Erstellung von PDB-Dateien, bei Verwendung der [/MP (erstellen mit mehreren Prozessen)](mp-build-with-multiple-processes.md) Option, oder wenn das Buildsystem (z. B. [MSBuild ](/visualstudio/msbuild/msbuild-reference) oder [CMake](../../ide/cmake-tools-for-visual-cpp.md)) möglicherweise führen mehrere cl.exe Compiler Prozesse zur gleichen Zeit. Diese Option bewirkt, dass Compiler-front-End für die Generierung von Typindizes für jeden Typ Datensatz in der PDB-Datei bis zum Ende der Kompilierung zu verzögern, und fordert sie alle in einem einzelnen RPC-Aufruf mspdbsrv.exe, anstatt eine RPC-Anforderung für jeden Datensatz. Dies kann Build Durchsatz wesentlich verbessern, indem Sie verringert die RPC-Last auf den Prozess mspdbsrv.exe in einer Umgebung, in denen mehrere cl.exe-Compiler Prozesse gleichzeitig ausgeführt.
 
-Da die **/ZF** Option gilt nur für PDF-Generierung, erfordert die [/Zi](z7-zi-zi-debug-information-format.md) oder [/Zi](z7-zi-zi-debug-information-format.md) Option.
+Da die **/ZF** Option gilt nur für die PDB-Datei generieren, erfordert die [/Zi](z7-zi-zi-debug-information-format.md) oder [/Zi](z7-zi-zi-debug-information-format.md) Option.
 
 Die **/ZF** Option wird in Visual Studio 2017 Version 15.1 ab und ist standardmäßig deaktiviert.
 

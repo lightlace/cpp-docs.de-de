@@ -19,14 +19,14 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="aggregates-and-unions"></a>Aggregate und Unions
-Andere Typen, z. B. Arrays, Strukturen und Unions gelten strengere Ausrichtung, die konsistent aggregieren und union-Speicher und zum Datenabruf zu gewährleisten. Hier werden die Definitionen für Arrays, Struktur und Union:  
+Andere Typen, z. B. Arrays, Strukturen und Unions, gelten strengere Ausrichtung, die konsistent aggregieren und union-Speicher und zum Datenabruf zu gewährleisten. Hier werden die Definitionen für Arrays, Struktur und Union:  
   
  Array  
  Enthält eine geordnete Gruppe von angrenzenden Datenobjekte. Jedes Objekt wird ein Element aufgerufen werden. Alle Elemente in einem Array haben die gleichen Größe und Datentyp.  
@@ -46,15 +46,15 @@ Andere Typen, z. B. Arrays, Strukturen und Unions gelten strengere Ausrichtung, 
 |**UINT8**|`unsigned char`|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**unsigned short**|Word|  
-|**INT32**|**Int, long**|Doppelwort|  
-|**UINT32**|**unsigned Int unsigned long**|Doppelwort|  
-|**INT64-TYP**|`__int64`|Vierfachwort|  
+|**INT32**|**Int, long**|Doubleword|  
+|**UINT32**|**unsigned Int unsigned long**|Doubleword|  
+|**INT64**|`__int64`|Vierfachwort|  
 |**UINT64**|**__int64 ohne Vorzeichen**|Vierfachwort|  
-|**FP32 (einfache Genauigkeit)**|**float**|Doppelwort|  
+|**FP32 (einfache Genauigkeit)**|**float**|Doubleword|  
 |**FP64 (doppelte Genauigkeit)**|**double**|Vierfachwort|  
 |**ZEIGER**|**\***|Vierfachwort|  
-|`__m64`|**Struktur __m64**|Vierfachwort|  
-|`__m128`|**Struktur __m128**|Octaword|  
+|`__m64`|**struct __m64**|Vierfachwort|  
+|`__m128`|**struct __m128**|Octaword|  
   
  Die folgenden aggregierten Ausrichtung Regeln gelten:  
   

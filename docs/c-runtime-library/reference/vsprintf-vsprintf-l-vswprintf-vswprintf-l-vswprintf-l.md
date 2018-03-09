@@ -60,11 +60,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
@@ -157,7 +157,7 @@ int _vswprintf_l(
  Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
 > [!IMPORTANT]
->  Bei der Verwendung von `vsprintf` gibt es keine Möglichkeit, die Anzahl der geschriebenen Zeichen einzuschränken. Demnach ist Code mit dieser Funktion für Pufferüberläufe anfällig. Verwenden Sie stattdessen [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oder rufen Sie [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) auf, um zu bestimmen, welche Puffergröße benötigt wird. Stellen Sie zudem sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Mit `vsprintf`, gibt es keine Möglichkeit, die Anzahl der Zeichen begrenzen geschrieben wird, was bedeutet, dass Code mit dieser Funktion für Pufferüberläufe anfällig ist. Verwenden Sie stattdessen [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oder rufen Sie [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) auf, um zu bestimmen, welche Puffergröße benötigt wird. Stellen Sie zudem sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
  `vswprintf` ist zum ISO-C-Standard konform. Dieser erfordert den zweiten Parameter `count` des `size_t`-Typs. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren Sie `_CRT_NON_CONFORMING_SWPRINTFS.` Da das alte Verhalten möglicherweise in zukünftigen Versionen nicht mehr enthalten ist, sollte der Code so geändert werden, dass er das neue konforme Verhalten verwendet.  
   

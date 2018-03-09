@@ -1,12 +1,13 @@
 ---
 layout: HubPage
+ms.topic: hub-page
 title: Visual C++-Dokumentation | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie mit C++ Anwendungen, Dienste und Tools für Ihre Plattformen und Geräte entwickeln können."
-ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -195,7 +196,7 @@ ms.lasthandoff: 10/24/2017
                 </ul>
             </li>
             <li>
-                <a href="#features">Features</a>
+                <a href="#features">Funktionen</a>
                 <ul id="features">
                     <li>
                         <a href="#features1">Features</a>
@@ -249,7 +250,7 @@ ms.lasthandoff: 10/24/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Debuggen</h3>
+                                                    <h3>Debug</h3>
                                                     <p>Debuggen Sie Ihren C++-Code mit dem Visual Studio Debugger.</p>
                                                 </div>
                                             </div>
