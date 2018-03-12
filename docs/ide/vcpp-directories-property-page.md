@@ -1,7 +1,7 @@
 ---
 title: VC++-Verzeichnisse Eigenschaftenseite | Microsoft Docs
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC++-Verzeichnisse Eigenschaftenseite (Windows)
 
@@ -42,23 +42,25 @@ Die Linux-Version auf dieser Seite finden Sie unter [VC++-Verzeichnisse (Linux C
 
 Für den Zugriff auf die **VC++-Verzeichnisse** Eigenschaftenseite:
 
-1. Wählen Sie im Hauptmenü **Ansicht | Projektmappen-Explorer**
-1. mit der rechten Maustaste auf den Projektknoten (nicht der obersten Ebene Projektmappe), und wählen Sie **Eigenschaften**
-1. im linken Bereich des der **Eigenschaftenseiten** Dialogfeld erweitern Sie **Konfigurationseigenschaften** , und wählen Sie **VC++-Verzeichnisse**.  
+1. Wenn die **Projektmappen-Explorer** nicht sichtbar ist, wählen Sie dann im Hauptmenü **Ansicht** > **Projektmappen-Explorer**.
+1. Mit der rechten Maustaste auf einen Projektknoten (nicht der obersten Ebene Projektmappe), und wählen Sie **Eigenschaften**.
+1. Im linken Bereich des der **Eigenschaftenseiten** wählen Sie im Dialogfeld **Konfigurationseigenschaften** > **VC++-Verzeichnisse**.  
 
-VC++-Verzeichnisse Eigenschaften gelten für ein Projekt, nicht den Projektmappenknoten auf oberster Ebene:
+VC++-Verzeichnisse Eigenschaften gelten für ein Projekt, nicht den Projektmappenknoten auf oberster Ebene. Wenn Sie nicht sehen **VC++-Verzeichnisse** unter **Konfigurationseigenschaften**, wählen Sie den Knoten eines C++-Projekts in der **Projektmappen-Explorer** Fenster: 
 
 ![Wählen Sie den Projektknoten](media/vcppdir.png "wählen Sie den Projektknoten, um die Eigenschaften der VC++-Verzeichnisse finden Sie unter")
 
-Wenn Sie die Eigenschaftenseite nicht angezeigt wird, stellen sicher, dass Sie den Projektknoten im ausgewählten **Projektmappen-Explorer**. Beachten Sie, dass eine **VC++-Verzeichnisse** Eigenschaftenseite für plattformübergreifende Projekte sieht anders. Nicht-Windows-Projekte finden Sie unter [VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md) oder. 
+Beachten Sie, dass die **VC++-Verzeichnisse** Eigenschaftenseite für plattformübergreifende Projekte sieht anders. Informationen zu Linux-C++-Projekten finden Sie unter [VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md). 
  
 Wenn Sie mit nicht vertraut sind *Projekteigenschaften* in Visual Studio Sie finden es vielleicht hilfreich sein, der erste Lesevorgang [arbeiten mit Projekteigenschaften](working-with-project-properties.md). 
  
-Die Standardeinstellungen für VC++-Verzeichnisse hängen vom Projekttyp ab. Für Desktopprojekte enthalten sie die Speicherorte VC++-Tools für eine bestimmte Plattformtoolset und den Speicherort des Windows SDK. Sie können ändern, die **Plattformtoolset** und **Version des Windows SDK** auf die **Konfigurationseigenschaften – Allgemein** Seite. So zeigen Sie die Werte für keines der Verzeichnisse an:
+Die Standardeinstellungen für **VC++-Verzeichnisse** Eigenschaften auf Grundlage des Projekttyps abhängig sind. Für Desktopprojekte enthalten sie die C++-Tools-Speicherorte für eine bestimmte Plattformtoolset und den Speicherort des Windows SDK. Sie können ändern, die **Plattformtoolset** und **Version des Windows SDK** auf die **Konfigurationseigenschaften** > **allgemeine** Seite ". 
 
-1. im Bereich rechts von der **VC++-Verzeichnisse** Seite, wählen Sie eine Zeile. Beispielsweise **Bibliotheksverzeichnisse**
-1. Wählen Sie die nach-unten Schaltfläche auf der rechten Seite
-1. Wählen Sie **bearbeiten**.
+So zeigen Sie die Werte für keines der Verzeichnisse an:
+
+1. Wählen Sie eine der Eigenschaften in der **VC++-Verzeichnisse** Seite. Wählen Sie z. B. **Bibliotheksverzeichnisse**.
+1. Wählen Sie die nach-unten Schaltfläche am Ende der dem Feld für Eigenschaftswerte aus.
+1. Wählen Sie in der Dropdown-Menü **bearbeiten**.
 
 ![Bearbeiten von Bibliotheksverzeichnisse](media/vcppdir_libdir_edit.png "Dialogfeld Bibliothekspfade bearbeiten")
 
@@ -90,22 +92,25 @@ Weitere Informationen finden Sie in folgenden Blogbeiträgen: [VC++-Verzeichniss
 
 Sie können auch andere Verzeichnisse wie folgt angeben.  
   
-**Ausführbare Verzeichnisse**  
+**Ausführbare Verzeichnisse**<br/>
 Verzeichnisse, in denen nach ausführbaren Dateien gesucht wird. Entspricht der **Pfad** -Umgebungsvariablen angegeben.
 
-**Includeverzeichnisse**  
+**Includeverzeichnisse**<br/>
 Verzeichnisse, in denen nach Includedateien gesucht wird, auf die im Quellcode verwiesen wird. Entspricht der **INCLUDE** -Umgebungsvariablen angegeben.
 
-**Verweisverzeichnisse**  
+**Verweisverzeichnisse**<br/>
  Verzeichnisse, in denen für die Suche nach Assembly- und Moduldateien (Metadaten), die in den Quellcode von referenziert werden die [#using](../preprocessor/hash-using-directive-cpp.md) Richtlinie. Entspricht der **LIBPATH** -Umgebungsvariablen angegeben.
 
-**Bibliotheksverzeichnisse**  
-Verzeichnisse, in denen nach Bibliotheksdateien (.LIB-Dateien) gesucht wird. Dies schließt auch die Laufzeitbibliotheken ein. Entspricht der **LIB** -Umgebungsvariablen angegeben. Diese Einstellung gilt nicht für OBJ-Dateien; für eine Verknüpfung mit einer OBJ-Datei, auf die [Linker](../ide/linker-property-pages.md)**allgemeine** Eigenschaftenseite select **Zusätzliche Bibliotheksverzeichnisse** , und geben Sie den relativen Pfad der Datei.
+**Bibliotheksverzeichnisse**<br/>
+Verzeichnisse, in denen nach Bibliotheksdateien (.LIB-Dateien) gesucht wird. Dies schließt auch die Laufzeitbibliotheken ein. Entspricht der **LIB** -Umgebungsvariablen angegeben. Diese Einstellung gilt nicht für OBJ-Dateien; für eine Verknüpfung mit einer OBJ-Datei, auf die **Konfigurationseigenschaften** > **Linker** > **allgemeine** Eigenschaftenseite  **Zusätzliche Bibliotheksverzeichnisse** , und geben Sie den relativen Pfad der Datei. Weitere Informationen finden Sie unter [Linker-Eigenschaftenseiten](../ide/linker-property-pages.md).
 
-**Quellverzeichnisse**  
+**WinRT Bibliotheksverzeichnisse**<br/>
+Verzeichnisse für WinRT-Bibliotheksdateien für die Suche in apps der universellen Windows-Plattform (UWP) verwenden. 
+
+**Quellverzeichnisse**<br/>
 Verzeichnisse, in denen nach Quelldateien gesucht wird, die für IntelliSense verwendet werden sollen.
 
-**Ausschließen von Verzeichnissen**  
+**Ausschließen von Verzeichnissen**<br/>
 Verzeichnisse, die beim Überprüfen von Buildabhängigkeiten nicht berücksichtigt werden.
 
 ## <a name="sharing-the-settings"></a>Freigeben der Einstellungen
