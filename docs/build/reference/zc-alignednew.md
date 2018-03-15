@@ -1,6 +1,6 @@
 ---
 title: /Zc:alignedNew (C ++ 17 ausgerichtetes Zuweisung) | Microsoft Docs
-ms.date: 12/14/2017
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a4d6e801b258697154a4b11c7b5e468c090cc94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d645534c398628afa533770d44094d23ca0325a5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (C ++ 17 ausgerichtetes Zuweisung)
 
@@ -33,7 +33,7 @@ Aktivieren der Unterstützung für C ++ 17-ausgerichtete **neue**, dynamische sp
 
 Visual Studio, Version 15.5 kann Compiler und Library-Unterstützung für C ++ 17 standard ausgerichtetes dynamischen Arbeitsspeicher. Wenn die **/Zc:alignedNew** angegeben wird, wie z. B. eine dynamische Zuweisung `new Example;` respektiert die Ausrichtung des *Beispiel* auch wenn es größer ist `max_align_t`, der größten Ausrichtung für alle fundamentaler Typ erforderlich. Wenn die Ausrichtung des zugeordneten Typs wird nicht mehr als die von der ursprünglichen Operator garantierten **neue**, die als Wert für das vordefinierte Makro  **\_ \_STDCPP\_Standard \_Neu\_Ausrichtung\_\_**, die Anweisung `new Example;` führt zu einem Aufruf von `::operator new(size_t)` wie in C ++ 14. Wenn die Ausrichtung ist größer als  **\_ \_STDCPP\_Standard\_neu\_Ausrichtung\_\_**, stattdessen Ruft die Implementierung der Arbeitsspeicher mit `::operator new(size_t, align_val_t)`. Löschen von ausgerichtetes Typen entsprechend ruft `::operator delete(void*, align_val_t)` oder löschen Sie die Größe Signatur `::operator delete(void*, size_t, align_val_t)`.
 
-Die **/Zc:alignedNew** Option ist nur verfügbar, wenn [/std:c ++ 17](std-specify-language-standard-version.md) oder [/std:c ++ neueste](std-specify-language-standard-version.md) aktiviert ist. Klicken Sie unter **/std:c ++ 17** oder **/std:c ++ neueste**, **/Zc:alignedNew** ist standardmäßig aktiviert, die ISO C ++ 17-standard entsprechen. Wenn der einzige Grund Operator zu implementieren **neue** und **löschen** dient zur Unterstützung von ausgerichteter Zuordnungen können Sie diesen Code im C ++ 17-Modus nicht mehr benötigen. Diese Option deaktivieren und zu den C ++ 14 Verhalten der **neue** und **löschen** Wenn **/std::c ++ 17** oder **/std:c ++ neueste** angegeben wird, Geben Sie **/Zc:alignedNew-**. Wenn Sie den Operator implementieren **neue** und **löschen** , aber Sie sind nicht bereit für die ausgerichtetes Operator implementieren **neue** und **löschen** Überladungen der `align_val_t` verwenden die **/Zc:alignedNew-** Option aus, um den Compiler und die Standardbibliothek generieren zu verhindern, dass der ausgerichtetes Überladungen aufruft.
+Die **/Zc:alignedNew** Option ist nur verfügbar, wenn [/std:c ++ 17](std-specify-language-standard-version.md) oder [/std:c ++ neueste](std-specify-language-standard-version.md) aktiviert ist. Klicken Sie unter **/std:c ++ 17** oder **/std:c ++ neueste**, **/Zc:alignedNew** ist standardmäßig aktiviert, die ISO C ++ 17-standard entsprechen. Wenn der einzige Grund Operator zu implementieren **neue** und **löschen** dient zur Unterstützung von ausgerichteter Zuordnungen können Sie diesen Code im C ++ 17-Modus nicht mehr benötigen. Diese Option deaktivieren und zu den C ++ 14 Verhalten der **neue** und **löschen** Wenn **/std::c ++ 17** oder **/std:c ++ neueste** angegeben wird, Geben Sie **/Zc:alignedNew-**. Wenn Sie den Operator implementieren **neue** und **löschen** , aber Sie sind nicht bereit für die ausgerichtetes Operator implementieren **neue** und **löschen** Überladungen der `align_val_t` verwenden die **/Zc:alignedNew-** Option aus, um den Compiler und die Standardbibliothek generieren zu verhindern, dass der ausgerichtetes Überladungen aufruft. Die [/ liberalen-](permissive-standards-conformance.md) Option ändert nicht die Standardeinstellung von **/Zc:alignedNew**.
 
 ## <a name="example"></a>Beispiel
 
@@ -106,10 +106,10 @@ Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [nicht 
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
 
-1. Wählen Sie die **Befehlszeile** Eigenschaftenseite in der **C/C++-** Ordner.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
 1. Ändern der **Zusatzoptionen** Eigenschaft einschließen **/Zc:alignedNew** oder **/Zc:alignedNew-** und wählen Sie dann **OK**.
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)  
+[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)  

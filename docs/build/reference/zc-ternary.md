@@ -1,6 +1,6 @@
 ---
 title: /Zc:ternary (Bedingungsoperator-Regeln erzwingen) | Microsoft Docs
-ms.date: 1/12/2018
+ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c4f4e17d3cf72284ec68cf10e75824722d5440
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (Bedingungsoperator-Regeln erzwingen)
 
@@ -33,7 +33,7 @@ Aktivieren Sie Erzwingung der C++-Standard-Regeln für die Typen und const oder 
 
 Visual Studio, Version 15.3 kann Compiler-Unterstützung für C++ standard bedingte (oder ternärer) Operator (**?:**) Verhalten. Der C++-Standard erfordert entweder die Operanden für den gleichen Typ und cv-Qualifizierung oder nur ein Operand für den gleichen Typ und cv-Qualifizierung, wie die anderen eindeutig konvertierbar sein, oder für eine oder beide der Operanden ein Throw-Ausdruck sein werden. In Versionen vor Visual Studio Version 15.5 zulässig der Compiler Konvertierungen, die gemäß dem Standard mehrdeutig berücksichtigt werden. Wenn die **/Zc:ternary** angegeben wird, der Compiler entspricht dem Standard und weist der Code, der die Regeln für übereinstimmende Typen und cv-Qualifizierung der zweiten und dritten Operanden nicht erfüllt.
 
-Die **/Zc:ternary** Option ist standardmäßig deaktiviert. Verwendung **/Zc:ternary** um konforme Verhalten zu aktivieren oder **/Zc:ternary-** das vorherige Compilerverhalten für nicht konforme explizit angeben. Die [/ liberalen-](permissive-standards-conformance.md) -Option aktiviert **/Zc:ternary**. 
+Die **/Zc:ternary** Option ist standardmäßig deaktiviert. Verwendung **/Zc:ternary** um konforme Verhalten zu aktivieren oder **/Zc:ternary-** das vorherige Compilerverhalten für nicht konforme explizit angeben. Die [/ liberalen-](permissive-standards-conformance.md) Option implizit kann mit dieser Option, jedoch können sie mithilfe von außer Kraft gesetzt werden **/Zc:ternary-**.
 
 ### <a name="examples"></a>Beispiele
 

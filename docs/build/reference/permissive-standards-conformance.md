@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ liberalen-(Einhaltung von Standards)
 
@@ -37,7 +37,7 @@ Geben Sie die Konformität der Standardmodus für den Compiler. Verwenden Sie di
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können die **/ einschränkend sein-** -Compileroption Compilerverhalten standardkonformen angeben. Diese Option deaktiviert einschränkend sein Verhalten und legt die [/Zc](../../build/reference/zc-conformance.md) Compileroptionen für strikte Konformität. In der IDE ist diese Option auch IntelliSense-Modul "Unterstreichen" nicht konforme-Code. 
+Sie können die **/ einschränkend sein-** -Compileroption Compilerverhalten standardkonformen angeben. Diese Option deaktiviert einschränkend sein Verhalten und legt die [/Zc](../../build/reference/zc-conformance.md) Compileroptionen für strikte Konformität. In der IDE ist diese Option auch IntelliSense-Modul "Unterstreichen" nicht konforme-Code.
 
 Wird standardmäßig die **/ liberalen-** Option wird festgelegt, in neuen Projekten, die von Visual Studio 2017 Version 15.5 und höheren Versionen erstellt. Es ist nicht standardmäßig in früheren Versionen festgelegt. Wenn die Option festgelegt ist, der Compiler diagnostische Fehler generiert oder Warnungen, wenn nicht standardmäßige Sprachkonstrukte im Code erkannt werden, einschließlich einige häufige Fehler in der Pre-C ++ 11-Code.
 
@@ -416,7 +416,7 @@ Verwenden Sie in Versionen vor Visual Studio 2017 Version 15.5 dieses Verfahren:
 
 1. Öffnen Sie das Projekt **Eigenschaftenseiten** (Dialogfeld).
 
-1. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **Befehlszeile** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
 1. Geben Sie die **/ liberalen-** -Compileroption in der **Zusatzoptionen** Feld. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
 
