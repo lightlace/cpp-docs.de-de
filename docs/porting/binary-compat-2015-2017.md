@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Binärdateienkompatibilität zwischen Visual Studio 2015 und Visual Studio 2017
 
@@ -34,7 +34,8 @@ Für diese Regel gelten zwei Ausnahmen: Die Binärdateienkompatibilität ist in 
 
 1) Wenn statische Bibliotheken oder Objektdateien mit dem Compilerschalter /GL kompiliert werden.  
 
-2) Wenn die Anwendung weiterverteilbare Bibliotheken nutzt, deren Versionsnummer kleiner ist als das Toolset, mit dem die Anwendung kompiliert wird. Mit anderen Worten: Wenn Sie ein Programm mit dem Plattformtoolset v141 kompilieren, müssen alle weiterverteilbaren Bibliotheken, die die Anwendung nutzt, mit v141 oder höher kompiliert werden.  
+2) Beim Verwenden von Bibliotheken, die mit einem Toolset erstellt wurden, dessen Version höher als die Version des Toolsets ist, das zum Kompilieren und Verknüpfen der Anwendung verwendet wurde. Zum Beispiel kann ein Programm, das mit dem Toolset 19.12 kompiliert und verknüpft wurde, Bibliotheken verwenden, die mit einem Toolset der Version 19.0 bis 19.12 kompiliert wurden. Das Verknüpfen von Programmen in Version 19.x wird nicht mit Bibliotheken unterstützt, die in Visual Studio 2013 oder früher erstellt wurden.
+
 
 ## <a name="see-also"></a>Siehe auch  
 
