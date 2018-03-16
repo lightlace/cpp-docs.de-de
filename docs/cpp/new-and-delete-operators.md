@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
@@ -38,7 +38,7 @@ C++ unterstützt die dynamische Zuordnung und Freigabe von Objekten mit dem [neu
   
  Eine Liste der Bibliotheksdateien, die die C-Laufzeitbibliothek und C++-Standardbibliothek umfassen, finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> Den new-Operator  
+##  <a id="new_operator"> </a> Das new-operator  
  Wenn eine Anweisung ähnlich der folgenden in einem Programm gefunden wird, wird sie in einen Aufruf der Funktion `operator new` übersetzt:  
   
 ```cpp  
@@ -59,7 +59,7 @@ Die beiden Bereiche für `operator new`-Funktionen werden in der folgenden Tabel
 |**::operator new**|Global|  
 |*class-name* **::operator new**|Klasse|  
   
- Das erste Argument für **new-Operator** muss vom Typ **Size_t** (einen Typ in \<stddef.h >), und der Rückgabetyp ist immer **"void" \***  .  
+ Das erste Argument für **new-Operator** muss vom Typ **Size_t** (einen Typ in \<stddef.h >), und der Rückgabetyp ist immer **"void" \* ** .  
   
  Die globale **new-Operator** Funktion wird aufgerufen, wenn die **neue** Operator wird verwendet, um Objekte des integrierten Typs zuweisen, Objekte des Klassentyps, die keine enthalten benutzerdefinierte **new-Operator** Funktionen und Arrays eines beliebigen Typs. Wenn die **neue** Operator wird verwendet, um Objekte eines Klassentyps zuzuweisen, in denen ein **new-Operator** definiert ist, dieser Klasse **new-Operator** aufgerufen wird.  
   
@@ -144,7 +144,7 @@ int main() {
   
  Es wird eine andere Möglichkeit, Fehler bei speicherbelegungsanforderungen zu behandeln: Schreiben Sie eine benutzerdefinierte wiederherstellungsroutine, um solche Fehler zu behandeln, und registrieren Sie Ihre Funktion durch Aufrufen der [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Laufzeitfunktion.  
   
-##  <a id="delete_operator"></a> Der Delete-Operator  
+##  <a id="delete_operator"> </a> Der Delete-operator  
  Arbeitsspeicher, der dynamisch zugeordnet wird mithilfe der **neue** Operator kann freigegeben werden, mithilfe der **löschen** Operator. Die Delete-Operator Ruft die **Delete-Operator** -Funktion, die Arbeitsspeicher für den verfügbaren Pool wieder frei. Mithilfe der **löschen** Operator auch der Klassendestruktor (sofern vorhanden), die aufgerufen wird.  
   
  Es gibt globale und klassenspezifische **Delete-Operator** Funktionen. Nur ein **Delete-Operator** -Funktion kann für eine angegebene Klasse definiert werden; Wenn definiert, blendet die globale **Delete-Operator** Funktion. Die globale **Delete-Operator** Funktion immer für Arrays jeglichen Typs aufgerufen wird.  
@@ -156,7 +156,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \*** , das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
+ Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \* **, das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
   
  Zur Beschleunigung Suche für die richtige Größenkategorie des Objekts, das gelöscht werden, die häufig nicht in der Nähe der Zuordnung selbst gespeichert und wahrscheinlich nicht zwischengespeichert wird ist die zweite Form; die zweite Form ist besonders nützlich, wenn ein **Delete-Operator** Funktion von einer Basisklasse wird verwendet, um ein Objekt einer abgeleiteten Klasse zu löschen.  
   

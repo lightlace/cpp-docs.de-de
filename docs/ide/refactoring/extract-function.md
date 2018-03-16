@@ -4,37 +4,39 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: dbcd323292e301857c65d908047ab14948b86573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="extract-function"></a>Extract-Funktion
 **Was:** können Sie ein Fragment des Codes in eine eigene Funktion zu aktivieren.
 
 **Wann:** haben Sie ein Fragment von vorhandenem Code, in eine Funktion, die von einer anderen Funktion aufgerufen werden muss.  
 
-**Grund:** Sie konnte Kopieren/Einfügen dieses Codes jedoch, die zu Duplizierung führen würde.  Eine bessere Lösung ist dieses Fragment in eine eigene Funktion umgestaltet werden, die kostenlos von jeder anderen Funktion aufgerufen werden kann.
+**Vorteile**: Sie könnten diesen Code kopieren und einfügen, dies würde jedoch zu einer Duplizierung führen.  Eine bessere Lösung ist dieses Fragment in eine eigene Funktion umgestaltet werden, die kostenlos von jeder anderen Funktion aufgerufen werden kann.
 
-**Vorgehensweise:**
+**Vorgehensweise**:
 
-1. Markieren Sie den Code, die extrahiert werden:
+1. Markieren Sie den zu extrahierenden Code:
 
-   ![Hervorgehobene code](images/extractfunction_highlight.png)
+   ![Markierter Code](images/extractfunction_highlight.png)
 
-1. Als Nächstes führen Sie eine der folgenden:
+1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG + R**, klicken Sie dann **STRG + M**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
-     * Drücken Sie **STRG +.** Trigger die **Schnellaktionen und Refactorings** Menü **Extract-Funktion (experimentell)** aus dem Kontextmenü.
+     * Drücken Sie **STRG+R** und dann **STRG+M**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
+     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **Extract-Funktion (experimentell)** aus dem Kontextmenü.
    * **Maus**
      * Wählen Sie **Bearbeiten > Umgestalten > Extract-Funktion (experimentell)**.
      * Mit der rechten Maustaste in des Codes, wählen Sie die **Schnellaktionen und Refactorings** Menü **Extract-Funktion (experimentell)** aus dem Kontextmenü.

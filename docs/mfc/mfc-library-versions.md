@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>MFC-Bibliotheksversionen
 
@@ -98,7 +98,7 @@ MFC-Projekten verwenden das Präprozessorsymbol  **\_UNICODE** an, dass UTF-16 B
 
 Statische Bibliotheken für MFC verwenden Sie die folgenden Benennungskonventionen. Die Bibliotheksnamen haben das Format
 
-> *u*AFX*c ** d*. LIB
+> *u*AFX*c**d*.LIB
 
 die Buchstaben kursiv dargestellten Kleinbuchstaben Platzhalter für Bezeichner gegangenem, dessen Bedeutung in der folgenden Tabelle angezeigt werden:
 
@@ -116,8 +116,8 @@ Alle Bibliotheken, die in der folgenden Tabelle aufgeführt sind, enthalten im V
 |NAFXCWD.LIB|MFC-Static Link Library Debugversion|
 |UAFXCW.LIB|MFC-Static Link Library mit Unicode-Unterstützung, Releaseversion|
 |UAFXCWD.LIB|Static Link Library mit Unicode-Unterstützung, die Debugversion von MFC|
-|AFXNMCD. LIB|MFC-Static Link Library ohne MFC-Dialogfeld-Steuerelemente, Originalversion|
-|AFXNMCDD. LIB|Static Link Library ohne MFC-Dialogfeld-Steuerelemente, Debugversion von MFC|
+|AFXNMCD.LIB|MFC-Static Link Library ohne MFC-Dialogfeld-Steuerelemente, Originalversion|
+|AFXNMCDD.LIB|Static Link Library ohne MFC-Dialogfeld-Steuerelemente, Debugversion von MFC|
 
 Debugger-Dateien, die den gleichen Basisnamen und eine Erweiterung ".pdb" verfügen, sind auch verfügbar, für jede der statischen Bibliotheken.
 
@@ -129,14 +129,14 @@ Die MFC-DLLs haben *Version* Zahlen, die Binärkompatibilität angeben. Verwende
 
 |DLL|Beschreibung|
 |---------|-----------------|
-|MFC*Version*. DLL|Version von MFC-DLL, ANSI oder MBCS-Version|
-|MFC*Version*U.DLL|MFC-DLL, Unicode-Release-version|
-|MFC*Version*D.DLL|MFC-DLL, ANSI oder Debuggen von MBCS-version|
-|MFC*Version*UD. DLL|MFC-DLL, Unicode-Debugversion|
-|MFCM*Version*. DLL|MFC-DLL mit Windows Forms-Steuerelemente ANSI- oder MBCS-Release-Version|
+|MFC*version*.DLL|Version von MFC-DLL, ANSI oder MBCS-Version|
+|MFC*version*U.DLL|MFC-DLL, Unicode-Release-version|
+|MFC*version*D.DLL|MFC-DLL, ANSI oder Debuggen von MBCS-version|
+|MFC*version*UD.DLL|MFC-DLL, Unicode-Debugversion|
+|MFCM*version*.DLL|MFC-DLL mit Windows Forms-Steuerelemente ANSI- oder MBCS-Release-Version|
 |MFCM*Version*U.DLL|MFC-DLL mit Unicode-Release-Version Windows Forms-Steuerelemente|
-|MFCM*Version*D.DLL|MFC-DLL mit Windows Forms-Steuerelemente ANSI- oder Debuggen von MBCS-Version|
-|MFCM*Version*UD. DLL|MFC-DLL mit Unicode-Debugversion Windows Forms-Steuerelemente|
+|MFCM*version*D.DLL|MFC-DLL mit Windows Forms-Steuerelemente ANSI- oder Debuggen von MBCS-Version|
+|MFCM*version*UD.DLL|MFC-DLL mit Unicode-Debugversion Windows Forms-Steuerelemente|
 
 Die Importbibliotheken zum Erstellen von Anwendungen oder MFC-Erweiterungs-DLLs, die diese gemeinsam genutzte DLLs verwenden den gleichen Basisnamen wie die DLL haben aber eine LIB-Dateinamenerweiterung. Bei Verwendung der gemeinsam genutzte DLLs muss eine kleine statische Bibliothek mit Ihrem Code weiterhin verknüpft sein; Diese Bibliothek heißt MFCS*Version*lib {U} {D}.
 

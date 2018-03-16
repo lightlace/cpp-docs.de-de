@@ -1,12 +1,9 @@
 ---
 title: Bereitstellung in Visual C++ | Microsoft Docs
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Bereitstellung in Visual C++
 
@@ -49,6 +45,8 @@ Da zentrale Bereitstellung mithilfe von verteilbares Paket oder Mergemodule Wind
 ## <a name="local-deployment"></a>Lokale Bereitstellung
 
 Bei der lokalen Bereitstellung werden Bibliotheksdateien im Anwendungsordner zusammen mit der ausführbaren Datei installiert. Verschiedene Versionen von Visual C++ redistributable-Bibliotheken können im selben Ordner installiert werden, da der Dateiname jeder Version die Versionsnummer enthält. Beispielsweise ist die Version 12 der C++-Laufzeitbibliothek msvcp120.dll und Version 14 msvcp140.dll ist.
+
+Eine Bibliothek kann auf mehrere zusätzliche DLLs, bekannt als verteilt *Punkt Bibliotheken*. Beispielsweise wurde einige Funktionen in der Standardbibliothek in Visual Studio 2017 Version 15,6 veröffentlicht in msvcp140_1.dll, Preverve die ABI-Kompatibilität der msvcp140.dll hinzugefügt. Wenn Sie Visual Studio 2017 Version 15,6 (Toolset 14.13) oder eine höhere Toolset, das von Visual Studio 2017 verwenden, müssen Sie diese Punkt-Bibliotheken sowie Hauptbibliothek lokal bereitstellen. Diese separaten Punkt Bibliotheken werden in der nächsten Hauptversion der Basisbibliothek enthalten, klicken Sie dann rückgängig gemacht, wenn die ABI ändert.
 
 Da Microsoft automatisch kann nicht lokal Update bereitgestellt Visual C++-Bibliotheken, wir empfehlen nicht die lokale Bereitstellung dieser Bibliotheken. Wenn Sie sich für die lokale Bereitstellung von weiter verteilbaren Bibliotheken entscheiden, wird empfohlen, dass Sie eine eigene Methode zur automatischen Aktualisierung von lokal bereitgestellten Bibliotheken implementieren.
 

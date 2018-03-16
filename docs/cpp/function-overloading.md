@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und Anzahl von Argumenten. 
@@ -44,7 +44,7 @@ Sie können Memberfunktionen und nicht-Memberfunktionen überladen. Die folgende
 |Vorhandensein oder Abwesenheit von Auslassungszeichen|Ja|  
 |Verwendung von `typedef`-Namen|Nein|  
 |Nicht angegebene Arraygrenzen|Nein|  
-|**const** oder`volatile`|Ja, wenn auf die gesamte Funktion angewendet|
+|**const** oder `volatile`|Ja, wenn auf die gesamte Funktion angewendet|
 |[ref-qualifier](#ref-qualifier)|Ja|  
   
 ## <a name="example"></a>Beispiel  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Beachten Sie, dass die Schnittmenge zwischen diesen beiden Sätzen leer ist. Aus diesem Grund generiert der Compiler eine Fehlermeldung.  
   
- Für die argumentübereinstimmung wird eine Funktion mit  *n*  Standardargumente so behandelt, als  *n* + 1 unterschiedliche Funktionen, jeweils mit einer anderen Anzahl von Argumenten.  
+ Für die argumentübereinstimmung wird eine Funktion mit *n* Standardargumente so behandelt, als *n*+ 1 unterschiedliche Funktionen, jeweils mit einer anderen Anzahl von Argumenten.  
   
  Die Ellipse (...) dient als Platzhalter; sie stimmt mit jedem tatsächlichen Argument überein. Dies kann zu vielen mehrdeutigen Gruppen führen, wenn Sie die überladene Funktion nicht mit größter Sorgfalt entwerfen.  
   
@@ -264,29 +264,29 @@ volatile Over&
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\**|  
-|*Typname* **(** *Argumentliste* **)**|**(**  *\*Typname* **) (** *Argumentliste* **)**|  
+|*Typname* **(** *Argumentliste* **)**|**(** * \*Typname* **) (** *Argumentliste* **)**|  
 |*type-name*|**const** *type-name*|  
-|*type-name*|`volatile`*Typname*|  
+|*type-name*|`volatile` *Typname*|  
 |*type-name\**|**const** *type-name\**|  
-|*type-name\**|`volatile`*Typname\**|  
+|*type-name\**|`volatile` *Typname\**|  
   
  Die Reihenfolge für Konvertierungen lautet wie folgt:  
   
 1.  Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:  
   
-    -   Von Zeiger in Zeiger auf **const** (`type`  **\***  auf **const** `type`  **\***  ).  
+    -   Von Zeiger in Zeiger auf **const** (`type` ** \* ** auf **const** `type` ** \* ** ).  
   
-    -   Von Zeiger in Zeiger auf `volatile` (`type`  **\***  auf `volatile` `type`  **\*** ).  
+    -   Von Zeiger in Zeiger auf `volatile` (`type` ** \* ** auf `volatile` `type` ** \* **).  
   
-    -   Von Verweis in Verweis auf **const** (`type`  **&**  auf **const** `type`  **&** ).  
+    -   Von Verweis in Verweis auf **const** (`type` ** & ** auf **const** `type` ** & **).  
   
-    -   Von Verweis in Verweis auf `volatile` (`type`  **&**  auf `volatile` `type`  **&** ).  
+    -   Von Verweis in Verweis auf `volatile` (`type` ** & ** auf `volatile` `type` ** & **).  
   
 2.  Übereinstimmung mithilfe von Erweiterungen. Jede beliebige Sequenz nicht als genaue Übereinstimmung, die nur ganzzahlige Erweiterungen, Konvertierungen von enthält klassifiziert **"float"** auf **doppelte**, und triviale Konvertierungen wird als Übereinstimmung mithilfe von Erweiterungen klassifiziert. Obwohl eine Übereinstimmung mit Erweiterungen besser ist als eine Übereinstimmung, die Standardkonvertierungen verwendet, ist sie nicht so gut wie eine genaue Übereinstimmung.  
   
 3.  Übereinstimmung mithilfe von Standardkonvertierungen. Jede beliebige Sequenz, die nicht als genaue Übereinstimmung klassifiziert wird, oder eine Übereinstimmung mithilfe von Erweiterungen, die nur Standardkonvertierungen und triviale Konvertierungen enthält, wird als Übereinstimmung mithilfe von Standardkonvertierungen klassifiziert. In dieser Kategorie gelten die folgenden Regeln:  
   
-    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \***  oder **const "void" \*** .  
+    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \* ** oder **const "void" \* **.  
   
     -   Die Konvertierung von einem Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse erzeugt eine bessere Übereinstimmung, je näher die Basisklasse der direkten Basisklasse ist. Angenommen, die Klassenhierarchie folgt der in der folgenden Abbildung dargestellten Klassenhierarchie.  
   
@@ -301,7 +301,7 @@ Diagramm zur Veranschaulichung bevorzugter Konvertierungen
   
  Die vorhergehende Regel gilt nur für einen bestimmten Ableitungspfad. Betrachten Sie das Diagramm, das in der folgenden Abbildung dargestellt wird.  
   
- ![Mehrere &#45; Vererbung mit bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Mehrere&#45;Vererbung mit bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "vc391T2")  
 Mehrfachvererbungsdiagramm zur Veranschaulichung bevorzugter Konvertierungen  
   
  Die Konvertierung von Typ `C*` in Typ `B*` ist der Konvertierung von Typ `C*` in Typ `A*` vorzuziehen. Der Grund liegt darin, dass sie sich auf dem gleichen Pfad befinden, und `B*` näher liegt. Allerdings ist die Konvertierung von Typ `C*` in Typ `D*` der Konvertierung in Typ `A*` nicht vorzuziehen. Keiner der Typen hat Vorrang gegenüber dem anderen, da die Konvertierungen verschiedenen Pfaden folgen.  
@@ -407,7 +407,7 @@ obj.name
   
  Der linke Operand der Operatoren `->*` und `.*` (Zeiger auf Member) wird hinsichtlich der Argumentübereinstimmung genauso wie der `.`-Operator und der `->`-Operator (Memberauswahl) behandelt.  
 
-## <a name="ref-qualifiers"></a>REF-Qualifizierer auf Memberfunktionen  
+## <a name="ref-qualifiers"></a> REF-Qualifizierer auf Memberfunktionen  
 REF-Qualifizierer stellen das Überladen auf Grundlage, ob das Objekt, zeigt einer Memberfunktion `this` Rvalue oder Lvalue ist.  Diese Funktion kann verwendet werden, vermeiden Sie unnötige Kopiervorgänge in Szenarien, in denen gewählte nicht, die Zeiger auf die Daten zugegriffen. Nehmen wir beispielsweise an Klasse **C** einige Daten in seinem Konstruktor initialisiert, und gibt eine Kopie der Daten in der Memberfunktion **get_data()**. Wenn ein Objekt des Typs **C** ist ein Rvalue-Wert, der zerstört werden, und klicken Sie dann wählt der Compiler die **get_data() & &** überladen, wodurch die Daten verschoben werden, anstatt Sie zu kopieren. 
 
 ```cpp
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR`ist ein Synonym für den Typ **Char \*** . Im Memberbereich generiert dieser Code einen Fehler.  
+     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ **Char \* **. Im Memberbereich generiert dieser Code einen Fehler.  
   
 -   Aufgelistete Typen sind verschiedene Typen und können verwendet werden, um zwischen überladenen Funktionen zu unterscheiden.  
   

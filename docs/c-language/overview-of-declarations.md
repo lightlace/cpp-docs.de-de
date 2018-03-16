@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>Übersicht über Deklarationen
 Eine "Deklaration" gibt die Interpretation und die Attribute eines Satzes von Bezeichnern an. Eine Deklaration, die auch bewirkt, dass Speicher für Objekte oder Funktionen reserviert wird, die vom Bezeichner benannt werden, wird "Definition" genannt. C-Deklarationen für Variablen, Funktionen und Typen haben diese Syntax:  

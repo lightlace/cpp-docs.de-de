@@ -24,15 +24,15 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a800aca290a178e3b193c245df515385311b5593
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="void-c"></a>void (C++)
 Wenn es als Funktionsrückgabetyp verwendet wird, legt das `void`-Schlüsselwort fest, dass die Funktion keinen Wert zurückgibt. Wenn es für die Parameterliste einer Funktion verwendet wird, gibt "void" an, dass die Funktion keine Parameter akzeptiert. Bei Verwendung in der Deklaration eines Zeigers gibt "void" an, dass der Zeiger "universal" ist.  
   
- Wenn der Typ eines Zeigers ist **"void" \*** , der Zeiger auf jede Variable, die nicht mit deklariert wird verweisen die **const** oder `volatile` Schlüsselwort. Ein void-Zeiger kann nicht dereferenziert werden, es sei denn, er wird in einen anderen Typ umgewandelt. Ein void-Zeiger kann in jeden anderen Datenzeigertyp konvertiert werden.  
+ Wenn der Typ eines Zeigers ist **"void" \* **, der Zeiger auf jede Variable, die nicht mit deklariert wird verweisen die **const** oder `volatile` Schlüsselwort. Ein void-Zeiger kann nicht dereferenziert werden, es sei denn, er wird in einen anderen Typ umgewandelt. Ein void-Zeiger kann in jeden anderen Datenzeigertyp konvertiert werden.  
   
  Ein void-Zeiger kann auf eine Funktion, jedoch nicht auf einen Klassenmember in C++ zeigen.  
   

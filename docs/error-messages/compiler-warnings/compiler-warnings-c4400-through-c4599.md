@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compilerfehler Warnungen C4400 über C4599
 
@@ -177,7 +175,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|"*Bezeichner*': Bezeichner ist ein reserviertes Wort|
 |[Compilerwarnung (Ebene 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|die Operanden in Direktive wird ignoriert|
 |[Compilerwarnung (Ebene 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|eine Umwandlung zwischen verschiedenen Zeiger auf Member-Darstellungen, möglicherweise Compiler fehlerhaftem Code generieren|
-|[Compilerwarnung (Ebene 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonyme "Struct &#124; Union" wurden keine Datenmember deklariert|
+|[Compilerwarnung (Ebene 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonyme "Struct&#124;Union" wurden keine Datenmember deklariert|
 |[Compilerwarnung (Ebene 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|Ungültige Anweisungsgröße|
 |[Compilerwarnung (Ebene 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|Unzulässige Größe für Operanden.|
 |[Compilerwarnung (Ebene 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|"*Bezeichner*": Symbol wird einem Indexregister|
@@ -210,7 +208,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4442|eingebettete null-Terminator im __annotation-Argument.  Wert wird abgeschnitten.|
 |Compilerwarnung (Stufe 1) C4443|Pragma-Parameter erwartet '0', '1' oder '2' sein.|
 |Compilerwarnung (Stufe 3) C4444|"*Bezeichner*": der obersten Ebene '__unaligned' ist in diesem Kontext nicht implementiert.|
-|[Compilerwarnung (Ebene 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|"*Funktion*': in einem" WinRT &#124; verwaltet "Typ eine virtuelle Methode kann nicht privat sein|
+|[Compilerwarnung (Ebene 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|"*Funktion*': in einem" WinRT&#124;verwaltet "Typ eine virtuelle Methode kann nicht privat sein|
 |Compilerwarnung (Stufe 1) C4446|"*Typ*': Member können nicht zugeordnet"*name1*"in diesem Typ aufgrund eines Konflikts mit dem Typnamen. Die Methode wurde umbenannt in "*name2*"|
 |Compilerwarnung (Stufe 1) C4447|'main' Signatur ohne Threadingmodell gefunden. Erwägen Sie ' Int main (Platform:: Array\<Platform:: String ^ > ^ Args) ".|
 |Compilerwarnung C4448|"*Typ*1" verfügt nicht über eine Standardschnittstelle, die in den Metadaten angegeben. Kommissionierung: "*Typ2*", die zur Laufzeit fehlschlagen.|
@@ -225,14 +223,14 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 4) C4457](compiler-warning-level-4-c4457.md)|Deklaration von "*Bezeichner*" Blendet Parameter-Funktion|
 |[Compilerwarnung (Ebene 4) C4458](compiler-warning-level-4-c4458.md)|Deklaration von "*Bezeichner*" Blendet den Klassenmember|
 |[Compilerwarnung (Stufe 4) C4459](compiler-warning-level-4-c4459.md)|Deklaration von "*Bezeichner*" Blendet globale Deklaration|
-|[Compilerwarnung (Ebene 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;managed' operator '*operator*', has parameter passed by reference. "WinRT &#124; verwaltet" Operator "*Operator*"hat eine andere Semantik als C++-Operator"*Cpp_operator*", wollten Sie als Wert übergeben?|
+|[Compilerwarnung (Ebene 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;managed' operator '*operator*', has parameter passed by reference. "WinRT&#124;verwaltet" Operator "*Operator*"hat eine andere Semantik als C++-Operator"*Cpp_operator*", wollten Sie als Wert übergeben?|
 |[Compilerwarnung (Ebene 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*Classname*": Diese Klasse verfügt über einen Finalizer '! *Finalizer*", jedoch keinen Destruktor ' ~*Dtor*"|
 |[Compilerwarnung (Stufe 1, Fehler) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*Typ*": die GUID des Typs kann nicht bestimmt werden. Das Programm kann zur Laufzeit fehlschlagen.|
 |[Compilerwarnung (Stufe 4) C4463](compiler-warning-level-4-c4463.md)|Überlauf; Zuweisen von "*Wert*'to Bitfeld, das nur Werte aus enthalten kann"*Min_value*'to'*Max_value*"|
-|Compilerwarnung (Stufe 4) C4464|Relative Includepfad enthält '..'|
+|[Compilerwarnung (Stufe 4) C4464](../../error-messages/compiler-warnings/c4464.md)|Relative Includepfad enthält '..'|
 |[Compilerwarnung (Ebene 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|gleitkommasteuerelements Pragmas unter/CLR ignoriert|
 |[Compilerwarnung (Stufe 4) C4471](compiler-warning-level-4-c4471.md)|"*Enumeration*': eine Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung benötigen einen zugrunde liegenden Typ (Int wird angenommen)|
-|Compilerwarnung (Stufe 1) C4472|"*Bezeichner*" ist eine systemeigene Enumeration: Fügen Sie einen Zugriffsspezifizierer (privat/öffentlich) zu deklarieren einer "WinRT &#124; verwaltet ' Enum|
+|Compilerwarnung (Stufe 1) C4472|"*Bezeichner*" ist eine systemeigene Enumeration: Fügen Sie einen Zugriffsspezifizierer (privat/öffentlich) zu deklarieren einer "WinRT&#124;verwaltet ' Enum|
 |[Compilerwarnung (Stufe 1) C4473](c4473.md)|"*Funktion*': nicht genügend Argumente für Formatzeichenfolge|
 |Compilerwarnung (Stufe 3) C4474|"*Funktion*': zu viele Argumente zu übergeben, für die Formatzeichenfolge|
 |Compilerwarnung (Stufe 3) C4475|"*Funktion*": argumentlängenmodifizierer "*Modifizierer*'cannot be used with Typzeichen für Feld'*Zeichen*" im Formatbezeichner|

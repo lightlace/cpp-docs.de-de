@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>CComObject-Klasse
 Diese Klasse implementiert **IUnknown** für eine aggregierte Objekt.  
@@ -54,7 +54,7 @@ class CComObject : public Base
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|Der Konstruktor.|  
-|[CComObject:: ~ CComObject](#dtor)|Der Destruktor.|  
+|[CComObject::~CComObject](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Dekrementiert den Verweiszähler für das Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComObject`implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für eine aggregierte Objekt. Allerdings Aufrufe von `QueryInterface`, `AddRef`, und **Release** werden an delegiert `CComObjectRootEx`.  
+ `CComObject` implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für eine aggregierte Objekt. Allerdings Aufrufe von `QueryInterface`, `AddRef`, und **Release** werden an delegiert `CComObjectRootEx`.  
   
  Weitere Informationen zur Verwendung von `CComObject`, finden Sie im Artikel [Grundlagen von ATL-COM-Objekte](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -78,7 +78,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  Inkrementiert den Verweiszähler für das Objekt an.  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Diese Funktion gibt den neuen inkrementierte Verweiszähler für das Objekt zurück. Dieser Wert kann für die Diagnose oder testen hilfreich sein.  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  Der Konstruktor inkrementiert die Anzahl der Module Sperre.  
   
 ```
@@ -97,14 +97,14 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parameter  
  **void\***  
- [in] Dieses unbenannte Parameter wird nicht verwendet. Es vorhanden ist, für die Symmetrie mit anderen **CCom***XXX*`Object`*XXX* Konstruktoren.  
+ [in] Dieses unbenannte Parameter wird nicht verwendet. Es vorhanden ist, für die Symmetrie mit anderen **CCom *** XXX*`Object`*XXX* Konstruktoren.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor verringert es.  
   
  Wenn eine `CComObject`-abgeleitete Objekt wird erfolgreich erstellt mithilfe der **neue** -Operator, der der Verweiszähler ist 0. Um den Verweiszähler dieser Planergruppe den richtigen Wert (1) festzulegen, nehmen Sie einen Aufruf der [AddRef](#addref) Funktion.  
   
-##  <a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>  CComObject:: ~ CComObject  
  Der Destruktor.  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](ccomobjectrootex-class.md#finalrelease), und verringert die Modul Sperrenanzahl.  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  Diese statische Funktion können Sie zum Erstellen eines neuen **CComObject <** `Base`  **>**  Objekt, ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  Dekrementiert den Verweiszähler für das Objekt.  
   
 ```

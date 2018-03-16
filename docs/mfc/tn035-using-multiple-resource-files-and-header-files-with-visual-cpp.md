@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++
 > [!NOTE]
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H definiert Standardsymbole, wie z. B. `ID_FILE_NEW`, die vom Framework und insbesondere in AFXRES.RC verwendet werden. AFXRES.H bindet mit #include auch die Datei WINRES.H ein, die eine Teilmenge von WINDOWS.H enthält. Diese wird von den von Visual C++ generierten RC-Dateien sowie AFXRES.RC benötigt. Die in AFXRES.H definierten Symbole stehen beim Bearbeiten der Anwendungsressourcendatei (MYAPP.RC) zur Verfügung. `ID_FILE_NEW` wird beispielsweise für das Menüelement "Neue Datei" in der Menüressource von MYAPP.RC verwendet. Sie können diese vom Framework definierten Symbole nicht ändern oder löschen.  
   
-## <a name="_mfcnotes_tn035_including"></a>Einschließen zusätzlicher Headerdateien  
+## <a name="_mfcnotes_tn035_including"></a> Einschließen zusätzlicher Headerdateien  
   
  Die von AppWizard erstellte Anwendung bindet nur zwei Headerdateien ein: RESOURCE.H und AFXRES.H. Nur RESOURCE.H ist eine anwendungsspezifische Datei. In folgenden Fällen müssen Sie möglicherweise zusätzliche schreibgeschützte Headerdateien einschließen:  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ fügt immer die Kommentarzeile //{{NO_DEPENDENCIES}} zu einer RC-Datei hinzu, wenn die Datei gespeichert wird. In einigen Fällen führt das Umgehen der Buildabhängigkeit von RESOURCE.H möglicherweise zu Laufzeitfehlern, die zum Zeitpunkt der Verknüpfung unentdeckt bleiben. Wenn Sie beispielsweise den Symbolbrowser zum Ändern des numerischen Werts verwenden, der einem Symbol für eine Ressource zugewiesen ist, wird die Ressource zur Anwendungslaufzeit möglicherweise nicht gefunden und ordnungsgemäß geladen, wenn die CPP-Datei, die auf die Ressource verweist, nicht neu kompiliert wird. In solchen Fällen sollten Sie alle kompilieren. CPP-Dateien, die Sie kennen, sind von den symboländerungen in Ressource betroffen. H oder Select **Rebuild All**. Wenn Sie Symbolwerte für eine bestimmte Gruppe von Ressourcen häufig ändern müssen, finden Sie es einfacher und sicherer zu unterbrechen, diese Symbole in eine separate schreibgeschützte Headerdatei, wie im vorherigen Abschnitt beschrieben [einschließlich Zusätzlicher Headerdateien](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>Wie Visual C++ verwaltet enthält Informationen **  
+## <a name="_mfcnotes_tn035_set_includes"></a> Wie Visual C++ verwaltet enthält Informationen **  
   
  Wie oben erläutert, können Sie mit dem "Gruppe enthält"-Befehl im Menü "Datei" drei Typen von Informationen angeben:  
   

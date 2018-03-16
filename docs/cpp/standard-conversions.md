@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen über Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normalerweise dieselben Ergebnisse. Allerdings können sie zu unterschiedlichen Ergebnissen führen, wenn das erweiterte Objekt eines der folgenden ist:  
   
--   Ein Operand vom  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , oder**>=**  
+-   Ein Operand vom  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , oder **>=**  
   
      Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Daher ergeben wert- und vorzeichenneutrale Erweiterungen andere Ergebnisse, wenn sie auf diese Operanden angewendet werden.  
   
--   Der linke Operand des  **>>**  oder**>>=**  
+-   Der linke Operand des  **>>**  oder **>>=**  
   
      Diese Operatoren behandeln Mengen mit Vorzeichen und Mengen ohne Vorzeichen unterschiedlich, wenn eine Verschiebeoperation ausgeführt wird. Für Mengen mit Vorzeichen wird das Vorzeichenbit beim Verschieben einer Menge nach rechts in die frei werdenden Bitpositionen übertragen. Bei Mengen ohne Vorzeichen werden die frei werdenden Bitpositionen mit Nullen gefüllt.  
   
@@ -199,7 +199,7 @@ int main() {
   
  Ob auf eine Basisklasse zugegriffen werden kann, hängt von der Art der Vererbung bei der Ableitung ab. Betrachten Sie die Vererbung, wie in der folgenden Abbildung veranschaulicht.  
   
- ![Vererbung Graph mit Base &#45; Klassen-Barrierefreiheit](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Vererbungsdiagramm zum Basis&#45;-Klasse Eingabehilfen](../cpp/media/vc38xa1.gif "vc38XA1")  
 Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit  
   
  Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei der Situation, die in der Abbildung veranschaulicht wird.  

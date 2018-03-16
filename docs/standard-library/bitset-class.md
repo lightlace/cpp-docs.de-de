@@ -50,10 +50,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="bitset-class"></a>bitset-Klasse
 Beschreibt einen Typ von Objekt, das eine Sequenz speichert, die aus einer festen Anzahl von Bits besteht, die eine kompakte Möglichkeit bieten, Flags für eine Menge von Elementen oder Bedingungen bereitzustellen. Die bitset-Klasse unterstützt Vorgänge für Objekte des Typs „bitset“, die eine Auflistung von Bits enthalten und zeitlich konstanten Zugriff auf jedes Bit ermöglichen.  

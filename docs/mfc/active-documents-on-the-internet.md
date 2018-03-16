@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>Active Documents für das Internet
 Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte. Aktive Dokumente möglicherweise mehrseitigen und werden in den gesamten Clientbereich angezeigt. Sie herkömmliche Menü-Aushandlung und direkte als auch in einem geöffneten Fenster in der Serveranwendung bearbeitet werden können. Anstatt als kleine Rechteck von einem schraffierten Rahmen umgeben sind aktive Dokumente vollständigen Frame und immer direkt aktiv.  
@@ -59,7 +59,7 @@ Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte
 |-------------------------|---------------------------------|  
 |Verwendet Verbunddateien als Speichermechanismus.|`IPersistStorage`|  
 |Unterstützt die grundlegenden Einbetten von Funktionen für aktive Dokumente, einschließlich aus Datei erstellen.|`IPersistFile`, `IOleObject` und `IDataObject`.|  
-|Unterstützt direkte Aktivierung.|`IOleInPlaceObject`und `IOleInPlaceActiveObject` (unter Verwendung des Containers `IOleInPlaceSite` und **IOleInPlaceFrame** Schnittstellen).|  
+|Unterstützt direkte Aktivierung.|`IOleInPlaceObject` und `IOleInPlaceActiveObject` (unter Verwendung des Containers `IOleInPlaceSite` und **IOleInPlaceFrame** Schnittstellen).|  
 |Unterstützt das aktive Dokument-Erweiterungen, die diese neuen Schnittstellen einschließen. Einige Schnittstellen sind optional.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` und `IPrint`.|  
   
  MFC bietet Unterstützung für die vorhandenen eingebetteten Serversupport, um aktive Dokumente zu erweitern.  
@@ -67,7 +67,7 @@ Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte
 ## <a name="add-active-document-support-to-a-new-application"></a>Active Document-Unterstützung in eine neue Anwendung hinzufügen  
  So erstellen Sie eine neue Anwendung mit Active Document-Unterstützung: In der MFC-Anwendung-Assistent auf die **zusammengesetzten Dokument unterstützen** Seite, wählen Sie unter "Select Verbunddokumente" **Vollserver** oder  **Container/Vollserver**, und wählen Sie unter "Weitere Optionen auswählen" das Kontrollkästchen für **Active Document-Server**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>Konvertieren einer vorhandenen MFC-In-Process-Servers mit einem aktiven Dokument-Server  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Konvertieren einer vorhandenen MFC-In-Process-Servers mit einem aktiven Dokument-Server  
  Wenn Ihre Anwendung mit einer Version von Visual C++ vor Version 4.2 erstellt wurde, und es bereits ein in-Process-Server ist, können Sie Active Document-Unterstützung hinzufügen, indem Sie Änderungen in der folgenden Klassen:  
   
 |Klassentyp|Früher abgeleitet wurde.|Ableiten von|  

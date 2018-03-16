@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Ausnahmen: Änderungen für Ausnahmemakros in Version 3.0
 Dies ist ein-Thema für fortgeschrittene.  
@@ -39,7 +39,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
 -   [Erneut auslösen von Ausnahmen](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Ausnahmetypen und das CATCH-Makro  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Ausnahmetypen und das CATCH-Makro  
  In früheren Versionen von MFC die **CATCH** Makro verwendet MFC-Laufzeit-Typinformationen, um eine Ausnahme zu bestimmen; Ausnahmetyps wird bestimmt, das heißt, an den Catch-Standort. Mit C++-Ausnahmen wird allerdings Ausnahmetyps immer am Standort Throw durch den Typ des Ausnahmeobjekts bestimmt, die ausgelöst wird. Dadurch wird Inkompatibilitäten in den seltenen Fällen verursacht, in denen der Typ des Zeigers auf das Objekt ausgelöst wird aus dem Typ des ausgelösten Objekts unterscheidet sich.  
   
  Das folgende Beispiel veranschaulicht die Folge von diesen Unterschied zwischen MFC-Version 3.0 und früheren Versionen:  
@@ -60,7 +60,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
  Um dieses Problem zu umgehen, verschieben Sie die Throw-Ausdruck von der Funktion an den aufrufenden Code, und löst eine Ausnahme des aktuellen Typs an den Compiler zu dem Zeitpunkt, den die Ausnahme generiert hat, ist bekannt.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Erneut auslösen von Ausnahmen  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Erneut auslösen von Ausnahmen  
  Ein Catch-Block kann keine derselbe Ausnahmezeiger auslösen, den sie abgefangen.  
   
  Beispielsweise diesen Code war in früheren Versionen gültig, aber hat unerwartete Ergebnisse mit der Version 3.0:  

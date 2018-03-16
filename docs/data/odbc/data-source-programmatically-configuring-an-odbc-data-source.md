@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Datenquelle: Programmgesteuertes Konfigurieren einer ODBC-Datenquelle
 In diesem Thema wird erläutert, wie ODBC-Datenquellennamen programmgesteuert konfiguriert werden können. Dies ermöglicht es, auf Daten zuzugreifen, ohne den Benutzer dazu zu zwingen, die Namen der Datenquellen explizit mit ODBC-Administrator oder einem anderen Programm anzugeben.  
@@ -40,7 +40,7 @@ In diesem Thema wird erläutert, wie ODBC-Datenquellennamen programmgesteuert ko
   
  Viele Datenbankmanagementsysteme ermöglichen jedoch das programmgesteuerte Erstellen einer Datenquelle. Einige Datenquellen verwenden eine Verzeichnisangabe für Datenbanken. Als Datenquelle wird also ein Verzeichnis verwendet. Jede Tabelle dieser Datenquelle ist in einer eigenen Datei gespeichert. Im Fall von dBASE ist jede Tabelle in einer eigenen DBF-Datei enthalten. Treiber für andere ODBC-Datenbanken, z. B. Microsoft Access und SQL Server, setzen voraus, dass bestimmte Kriterien erfüllt werden, bevor eine Datenquelle eingerichtet werden kann. Beispielsweise fallen bei Verwendung den SQL Server-ODBC-Treiber einen SQL Server-Computer eingerichtet haben.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource-Beispiel  
+##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource-Beispiel  
  Im folgenden Beispiel wird die **:: SQLConfigDataSource** ODBC-API-Funktion zum Erstellen einer neuen Excel-Datenquelle aufgerufen, neue Excel-Datenquelle:  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  Obwohl diese Informationen direkt in der Registrierung ohne geschrieben werden konnte **:: SQLConfigDataSource**, jede Anwendung, die Zweck ist der vertrauenden Seite, auf das aktuelle Verfahren, die der Treiber-Manager verwendet, um ihre Daten zu verwalten. Sollte eine spätere Version von ODBC-Treiber-Manager die Datensatzverwaltung für Datenquellen in einer anderen Weise implementieren, wäre eine solche Anwendung nicht mehr funktionsfähig. Soweit möglich, sollte immer eine API-Funktion verwendet werden. Der Code ist z. B. Übertragung von 16-Bit in 32-Bit, bei Verwendung der **:: SQLConfigDataSource** funktionieren, da die Funktion ordnungsgemäß in die Datei Odbc.ini oder in die Registrierung geschrieben.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Parameter von SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> Parameter von SQLConfigDataSource  
  Das folgende Beispiel erläutert die Parameter von der **:: SQLConfigDataSource** Funktion. Der Großteil dieser Informationen stammt aus der ODBC-API *Programmer's Reference* Lieferumfang von Visual C++, Version 1.5 und höher.  
   
-###  <a name="_core_function_prototype"></a>Funktionsprototyp  
+###  <a name="_core_function_prototype"></a> Funktionsprototyp  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>Hinweise  
   
-####  <a name="_core_parameters_and_usage"></a>Parameter und Ihre Verwendung  
+####  <a name="_core_parameters_and_usage"></a> Parameter und Ihre Verwendung  
  *hwndParent*  
  Das Besitzerfenster für alle Dialogfelder, das der ODBC-Treiber-Manager oder der spezifische ODBC-Treiber erstellt, um vom Benutzer zusätzliche Informationen über die neue Datenquelle anzufordern. Falls durch den `lpszAttributes`-Parameter nicht genügend Informationen bereitstellt werden, wird ein Dialogfeld angezeigt. Die *HwndParent* Parameter möglicherweise **NULL**.  
   

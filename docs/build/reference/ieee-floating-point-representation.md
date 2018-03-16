@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE-Gleitkommadarstellung
 Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt drei interne Varianten von reelle Zahlen ein. Echte\*4 und real\*8 in Visual C++ verwendet werden. Echte\*4 wird mit dem Wort deklariert **"float"**. Echte\*8 wird mit dem Wort deklariert **doppelte**. In der Windows-32-Bit-Programmierung die `long double` Datentyp zugeordnet **doppelte**. Es gibt allerdings Assemblysprache-Unterstützung für Berechnungen mit echten * 10-Datentyp.  
@@ -39,8 +39,8 @@ Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt 
   
 |Wert|Gespeichert als|  
 |-----------|---------------|  
-|Real * 4|Vorzeichenbit, 8-Bit-Exponenten, 23-Bit-Mantisse|  
-|Real * 8|Vorzeichenbit, 11-Bit-Exponenten, 52-Bit-Mantisse|  
+|real*4|Vorzeichenbit, 8-Bit-Exponenten, 23-Bit-Mantisse|  
+|real*8|Vorzeichenbit, 11-Bit-Exponenten, 52-Bit-Mantisse|  
 |Real * 10|Vorzeichenbit, 15-Bit-Exponenten, 64-Bit-Mantisse|  
   
  Real * 4 und real\*8 Formate, es wird eine führende 1 in der Mantisse, die nicht im Arbeitsspeicher gespeichert, sodass die Mantissen eigentlich 24 bzw. 53 Bits lang sind, obwohl nur 23 oder 52 Bits gespeichert werden. Die tatsächlichen\*10 Format Bits gespeichert.  
@@ -61,13 +61,13 @@ Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt 
   
  Das Format hat, für die verschiedenen Größen wie folgt:  
   
-|Format|1-BYTE|2-BYTE|BYTE 3|4-BYTE|...|BYTE-n|  
+|Format|BYTE 1|BYTE 2|BYTE 3|BYTE 4|...|BYTE-n|  
 |------------|------------|------------|------------|------------|---------|------------|  
-|Real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|Real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
+|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |Real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`Stellt das Vorzeichenbit der `X`des sind die Exponent Bits und die `M`des Mantissen-Bits sind. Beachten Sie, dass das höchstwertige Bit in Echtzeit voraussetzt, dass * 4 und real\*8 formatiert, aber als "1" in BYTE 3 des wahren vorhanden ist\*10 Format.  
+ `S` Stellt das Vorzeichenbit der `X`des sind die Exponent Bits und die `M`des Mantissen-Bits sind. Beachten Sie, dass das höchstwertige Bit in Echtzeit voraussetzt, dass * 4 und real\*8 formatiert, aber als "1" in BYTE 3 des wahren vorhanden ist\*10 Format.  
   
  Um den binären Punkt ordnungsgemäß zu verschieben, Sie zuerst Binärkomma den Exponenten und anschließend die binäre Punkt nach rechts verschieben oder links die entsprechende Anzahl von Bits.  
   

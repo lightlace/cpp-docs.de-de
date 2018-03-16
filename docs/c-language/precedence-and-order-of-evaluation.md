@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Vorrang und Auswertungsreihenfolge
 Die Rangfolge und Assoziativität von C-Operatoren beeinflussen das Gruppieren und die Auswertung von Operanden in Ausdrücken. Eine Operatorrangfolge ist nur sinnvoll, wenn andere Operatoren mit einer höheren oder niedrigerer Rangfolge vorhanden sind. Ausdrücke mit vorrangigen Operatoren werden zuerst ausgewertet. Rangfolge kann auch mit dem Wort "Bindung" beschrieben werden. Es wird davon ausgegangen, dass Operatoren mit einer höheren Priorität eine festere Bindung haben.  

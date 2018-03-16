@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Semantik von Ausdrücken
 Ausdrücke werden entsprechend der Rangfolge und Gruppierung ihrer Operatoren ausgewertet. ([Operatorrangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [lexikalische Konventionen](../cpp/lexical-conventions.md), zeigt die Beziehungen an die C++ Operatoren für Ausdrücke vorgeben.)  
@@ -80,10 +80,10 @@ Reihenfolge der Auswertung von Ausdrücken mit Klammern
   
 |Typ erwartet|Typen zulässig|  
 |-------------------|-------------------|  
-|*Typ*|`const`*Typ*<br /> `volatile`*Typ*<br /> *Datentyp*&<br /> `const`*Typ*&<br /> `volatile`*Typ*&<br /> `volatile const`*Typ*<br /> `volatile const`*Typ*&|  
-|*Datentyp*\*|*Datentyp*\*<br /> `const`*Typ*\*<br /> `volatile`*Typ*\*<br /> `volatile const`*Typ*\*|  
-|`const`*Typ*|*Typ*<br /> `const`*Typ*<br />`const`*Typ*&|  
-|`volatile`*Typ*|*Typ*<br /> `volatile`*Typ*<br /> `volatile`*Typ*&|  
+|*Typ*|`const` *Datentyp*<br /> `volatile` *Datentyp*<br /> *type*&<br /> `const` *Datentyp*&<br /> `volatile` *Datentyp*&<br /> `volatile const` *Datentyp*<br /> `volatile const` *Datentyp*&|  
+|*type*\*|*type*\*<br /> `const` *Datentyp*\*<br /> `volatile` *Datentyp*\*<br /> `volatile const` *Datentyp*\*|  
+|`const` *Datentyp*|*Typ*<br /> `const` *Datentyp*<br />`const` *Datentyp*&|  
+|`volatile` *Datentyp*|*Typ*<br /> `volatile` *Datentyp*<br /> `volatile` *Datentyp*&|  
   
  Da die vorangehenden Regeln immer in Kombination verwendet werden können, kann ein const-Zeiger auf ein flüchtiges Objekt angegeben werden, wo ein Zeiger erwartet wird.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   Linker Operand des logischen AND-Operators (&&). Der linke Operand des logischen AND-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Es gibt keine Garantie, dass der rechte Operand des logischen AND-Operators ausgewertet wird.  
   
--   Linker Operand des logischen OR-Operators (&#124; &#124;). Der linke Operand des logischen OR-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Es gibt keine Garantie, dass der rechte Operand des logischen OR-Operators ausgewertet wird.  
+-   Linker Operand des logischen OR-Operators (&#124;&#124;). Der linke Operand des logischen OR-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Es gibt keine Garantie, dass der rechte Operand des logischen OR-Operators ausgewertet wird.  
   
 -   Linker Operand des Komma-Operators. Der linke Operand des Komma-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Beide Operanden des Komma-Operators werden immer ausgewertet.  
   

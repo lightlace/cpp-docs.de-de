@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Mehrdimensionale Arrays (C)
 Ein indexierte Ausdruck kann auch mehrere Indizes haben, wie folgt:  
@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- indexierte Ausdrücke sind von links nach rechts angeordnet. Der äußerste linke indexierte Ausdruck *expression1***[***expression2***]** wird zuerst ausgewertet. Die Adresse, die sich aus dem Hinzufügen von *expression1* und *expression2* ergibt, bildet einen Zeigerausdruck. Dann wird *expression3* zu diesem Zeigerausdruck hinzugefügt, um einen neuen Zeigerausdruck zu bilden. Dies geht so lange weiter, bis der letzte Subscriptausdruck hinzugefügt wurde. Der Dereferenzierungsoperator (**\***) wird angewendet, nachdem der letzte indexierte Ausdruck ausgewertet ist, es sei denn, der finale Zeigerwert spricht einen Arraytypen an (siehe Beispiele unten).  
+ indexierte Ausdrücke sind von links nach rechts angeordnet. Die äußerste linke Indexierte Ausdruck * expression1***[***expression2 ***]**, wird zuerst ausgewertet. Die Adresse, die sich aus dem Hinzufügen von *expression1* und *expression2* ergibt, bildet einen Zeigerausdruck. Dann wird *expression3* zu diesem Zeigerausdruck hinzugefügt, um einen neuen Zeigerausdruck zu bilden. Dies geht so lange weiter, bis der letzte Subscriptausdruck hinzugefügt wurde. Der Dereferenzierungsoperator (**\***) wird angewendet, nachdem der letzte indexierte Ausdruck ausgewertet ist, es sei denn, der finale Zeigerwert spricht einen Arraytypen an (siehe Beispiele unten).  
   
  Ausdrücke mit mehreren Indizes verweisen auf Elemente aus "mehrdimensionalen Arrays". Ein mehrdimensionales Array ist ein Array, dessen Elemente Arrays sind. Beispielsweise ist das erste Element eines dreidimensionalen Arrays ein Array mit zwei Dimensionen.  
   

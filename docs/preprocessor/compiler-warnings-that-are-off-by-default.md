@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen standardmäßig deaktiviert sind
 
@@ -37,7 +37,7 @@ Sie können diese Warnungen aktivieren, indem Sie mit einer der folgenden Option
    **/ Wall** aktiviert alle Warnungen, die standardmäßig deaktiviert sind. Wenn Sie diese Option verwenden, Sie können einzelne Warnungen über Deaktivieren der [/WD](../build/reference/compiler-option-warning-level.md) Option.
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   Dadurch können die Warnung  *nnnn*  Ebene *l*.
+   Dadurch können die Warnung *Nnnn* Ebene *l*.
 
 Standardmäßig werden die folgenden Warnungen deaktiviert.
 
@@ -69,7 +69,7 @@ Standardmäßig werden die folgenden Warnungen deaktiviert.
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (Stufe 4)|"*class1*': das Objektlayout unter/vd2 ändert sich aufgrund der virtuellen Basis '*Klasse2*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (Stufe 4)|Dynamic_cast von virtueller Basis '*class1*'to'*Klasse2*' konnte in einigen Kontexten fehl|
 |C4444 (Stufe 3)|Höchste Ebene '__unaligned' ist in diesem Kontext nicht implementiert|
-|C4464 (Stufe 4)|Relative Includepfad enthält '..'|
+|[C4464](../error-messages/compiler-warnings/c4464.md) (Stufe 4)|Relative Includepfad enthält '..'|
 |C4472 (Stufe 1)|"*Bezeichner*" ist eine systemeigene Enumeration: Fügen Sie einen Zugriffsspezifizierer (privat/öffentlich), um eine verwaltete Enumeration zu deklarieren.|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (Stufe 4)|"*Funktion*': nicht referenzierte Inlinefunktion wurde entfernt|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (Stufe 4)|"Typname": Typ größer als das Metadatenlimit von '*Grenzwert*' Zeichen|
@@ -103,7 +103,7 @@ Standardmäßig werden die folgenden Warnungen deaktiviert.
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (Stufe 1)|"*Funktion*": die Signatur des nicht privaten Members enthält den privaten systemeigenen Assemblytyp '*systemeigener_Typ*"|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (Stufe 4)|"*Funktion*': Funktion nicht inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (Stufe 3)|Das 32-Bit-Gleitkommaergebnis wird im Speicher gespeichert. Möglicherweise kommt es zu einem Leistungsverlust|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|flüchtige Zugriff des "*Ausdruck*" / volatile des unterliegt:\<Iso &#124; ms > festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|flüchtige Zugriff des "*Ausdruck*" / volatile des unterliegt:\<Iso&#124;ms > festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen|
 |C4749 (Stufe 4)|bedingt unterstützt: Offsetof auf non-standard-Layout-Typ angewendet "*Typ*"|
 |C4767 (Stufe 4)|Name des Abschnitts "*Symbol*' ist länger als 8 Zeichen und wird vom Linker abgeschnitten|
 |C4768 (Stufe 3)|__declspec-Attribute vor Verknüpfungsspezifikation werden ignoriert.|

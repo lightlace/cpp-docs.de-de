@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0e16711a61b3c8060396ce10aa2061600903499e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-abstract-declarators"></a>C-Deklaratoren (abstrakt)
 Ein abstrakter Deklarator ist ein Deklarator ohne einen Bezeichner, der aus mindestens einem Zeiger-, Array- oder Funktionsmodifizierer besteht. Der Zeigermodifizierer (**\***) steht immer vor dem Bezeichner in einem Deklarator. Modifizierer des Arrays (**[ ]**) und der Funktion ( **( )** ) folgen dem Bezeichner. Vor diesem Hintergrund können Sie ermitteln, wo der Bezeichner in einem abstrakten Deklarator stehen würde, und den Deklarator entsprechend interpretieren. Weitere Informationen und Beispiele für komplexe Deklaratoren erhalten Sie unter [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md). Im Allgemeinen kann `typedef` verwendet werden, um Deklaratoren zu vereinfachen. Weitere Informationen finden Sie unter [Typedef-Deklarationen](../c-language/typedef-declarations.md).  

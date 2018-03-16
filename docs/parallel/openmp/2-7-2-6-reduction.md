@@ -18,16 +18,16 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
 Diese Klausel führt eine Reduzierung der skalaren Variablen in *Variablenliste*, mit dem Operator *Op*. Die Syntax der `reduction` -Klausel ist wie folgt:
 
-> Verringerung (*Op*: *Variablenliste*)
+> reduction(*op*: *variable-list*)
 
 Eine Verkleinerung ist in der Regel für eine Anweisung mit einem der folgenden Formate angegeben werden:
 
@@ -44,17 +44,17 @@ Dabei gilt:
 *w*  
 Einer der Reduction-Variablen, die im angegebenen der `list`.
 
-*Variable-Liste*  
+*variable-list*  
 Eine durch Trennzeichen getrennte Liste von skalaren Reduction-Variablen.
 
 *expr*  
 Ein Ausdruck mit skalaren Typ, der nicht verweist *x*.
 
 *op*  
-Keines überladenen Operators, aber eine der +, &#42; -, &amp;, ^, &#124; &amp; &amp;, oder &#124; &#124;.
+Keines überladenen Operators, aber eine der +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, oder &#124; &#124;.
 
 *binop*  
-Keines überladenen Operators, aber eine der +, &#42; -, &amp;, ^, oder &#124;.
+Keines überladenen Operators, aber eine der +, &#42;, -, &amp;, ^, oder &#124;.
 
 Im folgenden ist ein Beispiel für die `reduction` Klausel:  
   

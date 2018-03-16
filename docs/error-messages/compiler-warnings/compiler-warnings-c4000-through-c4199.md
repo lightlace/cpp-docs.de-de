@@ -105,10 +105,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Compilerfehler Warnungen C4000 über C4199
 
@@ -147,7 +147,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 4) C4032](../../error-messages/compiler-warnings/compiler-warning-level-4-c4032.md)|formaler Parameter "Parameter_number" verfügt über verschiedene Typ heraufgestuft|
 |Compilerwarnung (Stufe 1) C4033|"Funktion" muss einen Wert zurückgeben|
 |[Compilerwarnung (Ebene 1) C4034](../../error-messages/compiler-warnings/compiler-warning-level-1-c4034.md)|"sizeof" gibt 0 zurück.|
-|Compilerwarnung (Stufe 3) C4035|'Funktion': keinen Wert zurückgibt|
+|Compilerwarnung (Stufe 3) C4035|'function': no return value|
 |Compilerwarnung (Stufe 1) C4036|Unbenannter Typ 'Typ' als übergebener Parameter|
 |Compilerwarnung (Stufe 1) C4038|"Modifizierer": Unzulässiger Klassenmodifizierer|
 |Compilerwarnung (Stufe 1) C4041|Compilerlimit: Browserausgabe|
@@ -191,7 +191,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 2) C4094](../../error-messages/compiler-warnings/compiler-warning-level-2-c4094.md)|Unbenanntes 'token' deklariert keine Symbole|
 |[Compilerwarnung (Ebene 1) C4096](../../error-messages/compiler-warnings/compiler-warning-level-1-c4096.md)|'Bezeichner': Schnittstelle ist nicht mit einem COM-Schnittstelle wird nicht an IDL ausgegeben werden|
 |Compilerwarnung (Stufe 1) C4097|Erwarteter pragma-Parameter sollte "restore" oder "off" sein|
-|[Compilerwarnung (Ebene 1) C4098](../../error-messages/compiler-warnings/compiler-warning-level-1-c4098.md)|'Funktion': 'void'-Funktion einen Wert zurückgeben|
+|[Compilerwarnung (Ebene 1) C4098](../../error-messages/compiler-warnings/compiler-warning-level-1-c4098.md)|'function': 'void' function returning a value|
 |[Compilerwarnung (Ebene 2) C4099](../../error-messages/compiler-warnings/compiler-warning-level-2-c4099.md)|'Bezeichner': Typnamen, die mit "object_type1" nun gesehen, mit "object_type2" für die erstmalige Sichtbarkeit|
 |[Compilerwarnung (Ebene 4) C4100](../../error-messages/compiler-warnings/compiler-warning-level-4-c4100.md)|"Bezeichner": Unreferenzierter formaler Parameter|
 |[Compilerwarnung (Ebene 3) C4101](../../error-messages/compiler-warnings/compiler-warning-level-3-c4101.md)|"Bezeichner": Unreferenzierte lokale Variable|
@@ -232,7 +232,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4155|Löschen eines Arrayausdrucks ohne Verwendung der Arrayform von "delete"|
 |[Compilerwarnung (Ebene 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|Löschen eines Arrayausdrucks ohne Verwendung der Arrayform von "Delete". Arrayform ersetzt|
 |[Compilerwarnung (Ebene 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|Pragma wurde vom C-Compiler ignoriert.|
-|Compilerwarnung (Stufe 1) C4158|Annahme von #pragma Pointers_to_members (Full_generality, "Inheritance_type")|
+|Compilerwarnung (Stufe 1) C4158|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
 |[Compilerwarnung (Ebene 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma "pragma'(pop,...): wurde per pop ausgelesen zuvor per push abgelegten Bezeichner"Identifier"|
 |Compilerwarnung (Stufe 1) C4160|#pragma "pragma'(pop,...): zuvor per push abgelegten Bezeichner"Identifier"wurde nicht gefunden|
 |Compilerwarnung (Stufe 3) C4161|#pragma "pragma'(pop...): mehr POP-als Push-Vorgänge|
@@ -245,7 +245,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4168|Compilerlimit: nicht genügend Debuggertypen, löschen Sie Programmdatenbank 'Datenbank' und neu erstellen|
 |[Compilerwarnung (Ebene 1) C4172](../../error-messages/compiler-warnings/compiler-warning-level-1-c4172.md)|Adresse einer lokalen Variable oder temporäre zurückgeben|
 |Compilerwarnung (Stufe 1) C4174|'Name': nicht als #pragma-Komponente verfügbar|
-|Compilerwarnung (Stufe 1) C4175|#pragma Component(browser, on): Browserinformationen muss zunächst in der Befehlszeile angegeben werden|
+|Compilerwarnung (Stufe 1) C4175|#pragma component(browser, on): browser info must initially be specified on the command line|
 |Compilerwarnung (Stufe 1) C4176|"Subcomponent": Unbekannte Unterkomponente bei #pragma Component Browser|
 |Compilerwarnung (Stufe 1) C4177|#pragma "Pragma" sollte nur im globalen Gültigkeitsbereich oder Namespacebereich verwendet werden|
 |Compilerwarnung (Stufe 1) C4178|Die case-Konstante 'Konstante' ist zu groß für den Typ des switch-Ausdrucks.|
@@ -262,7 +262,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4190](../../error-messages/compiler-warnings/compiler-warning-level-1-c4190.md)|"Bezeichner1" C-Bindung angegeben wurde, gibt aber UDT "Bezeichner2" die mit C nicht kompatibel ist|
 |Compilerwarnung (Stufe 3) C4191|' Operator/Operation': unsichere Konvertierung von 'Type_of_expression' zu "Type_required" \nCalling diese Funktion über den Ergebniszeiger kann dazu führen, dass das Programm fehlschlägt|
 |[Compilerwarnung (Ebene 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|automatisch beim Importieren einer Typbibliothek "Library" ausgeschlossen "Bezeichner"|
-|Compilerwarnung (Stufe 3) C4193|#pragma warning"(POP): keine übereinstimmende""#pragma warning""|
+|Compilerwarnung (Stufe 3) C4193|#pragma warning(pop): no matching '#pragma warning(push)'|
 |Compilerwarnung (Stufe 1) C4194|#pragma Start_map_region kann nicht geschachtelt werden. ignoriert|
 |Compilerwarnung (Stufe 1) C4195|#pragma stop_map_region wurde ohne entsprechende #pragma Start_map_region verwendet; ignoriert|
 |Compilerwarnung (Stufe 1) C4196|erwartet wurde "%$L" oder "%$L;" "%$L" gefunden|

@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection-Klasse
 Verwaltet die Verbindung mit einem Gopherinternetserver.  
@@ -59,9 +59,9 @@ class CGopherConnection : public CInternetConnection
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CGopherConnection:: CreateLocator](#createlocator)|Erstellt eine [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt, um Dateien auf einem Gopherserver zu suchen.|  
+|[CGopherConnection::CreateLocator](#createlocator)|Erstellt eine [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt, um Dateien auf einem Gopherserver zu suchen.|  
 |[CGopherConnection::GetAttribute](#getattribute)|Ruft Informationen über das Gopher-Objekt ab.|  
-|[CGopherConnection:: OpenFile](#openfile)|Öffnet eine Gopherdatei.|  
+|[CGopherConnection::OpenFile](#openfile)|Öffnet eine Gopherdatei.|  
   
 ## <a name="remarks"></a>Hinweise  
  Gopher-Dienst ist einer der drei Internetdienste, die von der MFC-WinInet-Klassen erkannt.  
@@ -82,7 +82,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
  Diese Memberfunktion wird aufgerufen, um das Erstellen einer `CGopherConnection` Objekt.  
   
 ```  
@@ -113,7 +113,7 @@ CGopherConnection(
  Ein Zeiger auf eine Zeichenfolge, die den Namen des FTP-Server enthält.  
   
  `dwContext`  
- Der Kontextbezeichner für den Vorgang. `dwContext`identifiziert den Vorgang vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie eine bestimmten Kontext-ID für den Vorgang explizit zuweisen. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden.  
+ Der Kontextbezeichner für den Vorgang. `dwContext` identifiziert den Vorgang vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie eine bestimmten Kontext-ID für den Vorgang explizit zuweisen. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden.  
   
  `pstrUserName`  
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des Benutzers anmelden angibt. Wenn **NULL**, der Standardwert ist anonymous.  
@@ -123,7 +123,7 @@ CGopherConnection(
   
 |`pstrUserName`|`pstrPassword`|FTP-Server gesendeten Benutzernamen|Kennwort mit FTP-Server gesendet wird.|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** oder ""|**NULL** oder ""|"Anonym"|Die e-Mail-Namen des Benutzers|  
+|**NULL** oder ""|**NULL** oder ""|"anonymous"|Die e-Mail-Namen des Benutzers|  
 |Nicht- **NULL** Zeichenfolge|**NULL** oder ""|`pstrUserName`|" "|  
 |**NULL** nicht- **NULL** Zeichenfolge|**FEHLER**|**FEHLER**||  
 |Nicht- **NULL** Zeichenfolge|Nicht- **NULL** Zeichenfolge|`pstrUserName`|`pstrPassword`|  
@@ -134,7 +134,7 @@ CGopherConnection(
 ### <a name="remarks"></a>Hinweise  
  Erstellen Sie nie eine `CGopherConnection` direkt. Rufen Sie stattdessen [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), erstellt ein `CGopherConnection` -Objekt und gibt einen Zeiger darauf zurück.  
   
-##  <a name="createlocator"></a>CGopherConnection:: CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection:: CreateLocator  
  Rufen Sie diese Memberfunktion zum Erstellen eines Gopher-Locators, um zu suchen oder eine Datei auf einem Gopherserver zu identifizieren.  
   
 ```  
@@ -159,7 +159,7 @@ static CGopherLocator CreateLocator(
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Gopher-Dokuments oder des Verzeichnisses abgerufen werden sollen. Wenn die `pstrDisplayString` Parameter ist **NULL**, das Standardverzeichnis für das Gopher-Server zurückgegeben.  
   
  `pstrSelectorString`  
- Ein Zeiger auf die Auswahlzeiger-Zeichenfolge, die an den Gopherserver gesendet werden, um ein Element abgerufen werden. `pstrSelectorString`kann **NULL**.  
+ Ein Zeiger auf die Auswahlzeiger-Zeichenfolge, die an den Gopherserver gesendet werden, um ein Element abgerufen werden. `pstrSelectorString` kann **NULL**.  
   
  *dwGopherType*  
  Dies gibt an, ob `pstrSelectorString` bezieht sich auf ein Verzeichnis oder das Dokument, und gibt an, ob die Anforderung Gopher oder Gopher erfolgt. Finden Sie die Attribute für die Struktur [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) im Windows SDK.  
@@ -181,7 +181,7 @@ static CGopherLocator CreateLocator(
   
  Zum Abrufen von Informationen aus einem Gopherserver muss eine Anwendung zunächst einen Gopher-Locator abrufen. Die Anwendung muss dann des Locators als nicht transparenter Token behandeln (bedeutet, dass die Anwendung kann des Locators verwenden, aber nicht direkt bearbeiten oder vergleichen Sie sie). In der Regel wird die Anwendung den Locator für Aufrufe verwendet die [CGopherFileFind:: FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) Memberfunktion versucht, eine bestimmte Information abzurufen.  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
  Rufen Sie diese Memberfunktion, um spezifische Informationen über ein Element aus dem Gopherserver abzurufen.  
   
 ```  
@@ -203,7 +203,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden kann, um die Ursache des Fehlers zu ermitteln.  
   
-##  <a name="openfile"></a>CGopherConnection:: OpenFile  
+##  <a name="openfile"></a>  CGopherConnection:: OpenFile  
  Rufen Sie diese Memberfunktion, um eine Datei auf einem Gopherserver zu öffnen.  
   
 ```  

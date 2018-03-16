@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a> nth_element  
- Partitioniert einen Bereich von Elementen und ermittelt die  *n* th-Element der Sequenz im Bereich so, dass alle Elemente davor kleiner oder gleich und alle Elemente, die in der Sequenz folgen einem RE größer als oder gleich.  
+ Partitioniert einen Bereich von Elementen und ermittelt das *n*-te-Element der Sequenz im Bereich, sodass alle Elemente davor kleiner oder gleich sind und alle Elemente, die in der Sequenz folgen, größer oder gleich sind.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>Hinweise  
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar.  
   
- Die `nth_element` Algorithmus kann nicht garantiert, dass Elemente in untergeordneten Bereichen entweder Seite von der  *n* th-Element sortiert werden. Deshalb gibt es weniger Garantien als `partial_sort`, das Elemente in einem Bereich unter ausgewählten Elementen ordnet, und das möglicherweise als schnellere Alternative zu `partial_sort` verwendet werden kann, wenn eine Sortierung des niedrigeren Bereichs nicht erforderlich ist.  
+ Der `nth_element`-Algorithmus stellt nicht sicher, dass Elemente in Unterbereichen, die sich auf beiden Seiten des *n*-ten Elements befinden, sortiert werden. Deshalb gibt es weniger Garantien als `partial_sort`, das Elemente in einem Bereich unter ausgewählten Elementen ordnet, und das möglicherweise als schnellere Alternative zu `partial_sort` verwendet werden kann, wenn eine Sortierung des niedrigeren Bereichs nicht erforderlich ist.  
   
  Wenn keins kleiner als das andere ist, sind Elemente äquivalent, aber nicht unbedingt gleich.  
   

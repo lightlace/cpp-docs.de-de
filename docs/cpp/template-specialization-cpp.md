@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 572ef5ca7199fab5b9ffda686425cdd53547a60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="template-specialization-c"></a>Spezialisierung einer Klassenvorlage (C++)
 
@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Beispiel
 
- Wenn Sie eine vorlagenauflistungsklasse verfügen, die jeden Typ akzeptiert **T**, können Sie eine teilweise Spezialisierung, der einen Zeigertyp akzeptiert erstellen **T***. Der folgende Code zeigt die Auflistung von Klassenvorlagen `Bag` und eine teilweise Spezialisierung für Zeigertypen, wobei die Auflistung die Zeigertypen dereferenziert, bevor sie diese ins Array kopiert. Die Auflistung speichert dann die Werte, auf die gezeigt wird. Bei der ursprünglichen Vorlage wären nur die Zeiger selbst in der Auflistung gespeichert worden, sodass sich Löschungen und Änderungen auf die Daten auswirken können. In dieser speziellen Zeigerversion der Auflistung wird ein Code zur Suche eines NULL-Zeigers in der `add`-Methode hinzugefügt.  
+ Wenn Sie eine vorlagenauflistungsklasse verfügen, die jeden Typ akzeptiert **T**, können Sie eine teilweise Spezialisierung, der einen Zeigertyp akzeptiert erstellen ** T ***. Der folgende Code zeigt die Auflistung von Klassenvorlagen `Bag` und eine teilweise Spezialisierung für Zeigertypen, wobei die Auflistung die Zeigertypen dereferenziert, bevor sie diese ins Array kopiert. Die Auflistung speichert dann die Werte, auf die gezeigt wird. Bei der ursprünglichen Vorlage wären nur die Zeiger selbst in der Auflistung gespeichert worden, sodass sich Löschungen und Änderungen auf die Daten auswirken können. In dieser speziellen Zeigerversion der Auflistung wird ein Code zur Suche eines NULL-Zeigers in der `add`-Methode hinzugefügt.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  

@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Handler für Meldungszuordnungsbereiche
 In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine einzelne Nachricht Handler-Funktion (und nicht nur eine bestimmte Funktion eine Nachricht zuordnen) zugeordnet werden.  
@@ -66,7 +66,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
 -   [Beispiel für einen Bereich von Steuerelement-IDs](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>Schreiben Sie die Meldungszuordnungseintrags  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Schreiben Sie die Meldungszuordnungseintrags  
  In der. CPP-Datei, die Ihre Meldungszuordnungseintrags hinzufügen, wie im folgenden Beispiel gezeigt:  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
      Das dritte Makro `ON_CONTROL_RANGE`, akzeptiert einen weiteren ersten Parameter: eine Steuerelement-Benachrichtigung angezeigt, wie z. B. **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a>Deklarieren Sie die Handlerfunktion  
+##  <a name="_core_declaring_the_handler_function"></a> Deklarieren Sie die Handlerfunktion  
  Fügen Sie die Funktionsdeklaration Handler in der. H-Datei. Der folgende Code zeigt, wie dies aussehen könnte, wie unten dargestellt:  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
  Weitere Informationen zu den parameteranforderungen für die Aktualisierung von Handlerfunktionen finden Sie unter [Beispiel für einen Bereich der Befehls-IDs](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>Beispiel für einen Bereich von Befehls-IDs  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Beispiel für einen Bereich von Befehls-IDs  
  Wenn können Sie Bereiche, die ein Beispiel ist bei der Verarbeitung von Befehlen, wie mit dem Befehl "Zoom" in der MFC-Beispiel [HIERSVR](../visual-cpp-samples.md). Mit diesem Befehl wird die Ansicht zwischen 25 % und 300 % Normalgröße skalieren Zeitsegments vergrößert. HIERSVR des View-Klasse verwendet einen Bereich, um den Zoom-Befehle mit einem Meldungszuordnungseintrags ähnelt dies behandeln:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
  Aktualisieren von Handlerfunktionen für die einzelnen Befehle normalerweise einen einzelnen Parameter verwenden `pCmdUI`, des Typs **CCmdUI\***. Im Gegensatz zu Handlerfunktionen, Update Handlerfunktionen für Meldungszuordnungsbereiche erfordern keine zusätzlichen Parameter `nID`, des Typs **"uint"**. Die Befehls-ID, die benötigt wird, um anzugeben, mit welchem Befehl der Benutzer tatsächlich ausgewählt haben, befindet sich der `CCmdUI` Objekt.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>Beispiel für einen Bereich von Steuerelement-IDs  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Beispiel für einen Bereich von Steuerelement-IDs  
  Eine andere interessanter Fall Zuordnen der Steuerelemente-benachrichtigungsmeldungen für einen Bereich von Steuerelement-IDs an einen einzigen Handler. Nehmen Sie an, dass der Benutzer eine 10 Schaltflächen klicken kann. Um alle 10 Schaltflächen zu einem Handler zuzuordnen, Ihre Meldungszuordnungseintrags sieht dann folgendermaßen aus:  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

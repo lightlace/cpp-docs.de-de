@@ -22,10 +22,10 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;-Funktionen
 ||||  
@@ -313,7 +313,7 @@ Type inner_product(
 ### <a name="return-value"></a>Rückgabewert  
  Der erste Memberfunktion gibt die Summe des elementweisen Produkts zurück und fügt den angegebenen Anfangswert hinzu. Für Wertebereiche *a*i und *b*i wird folgendes zurückgegeben:  
   
- `val` + ( *eine*1 \* *b*1) + ( *eine*2 \* *b*2) +... + ( *eine* n  \* *b*n) 
+ `val` + ( *eine*1 \* *b*1) + ( *eine*2 \* *b*2) +... + ( *eine*n \* *b*n) 
   
  indem Sie iterativ ersetzen `val` mit `val` + ( *eine*ich \* *b*ich).  
   

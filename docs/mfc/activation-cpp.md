@@ -34,10 +34,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="activation-c"></a>Aktivierung (C++)
 Dieser Artikel beschreibt die Rolle der Aktivierung in die visuelle Bearbeitung von OLE-Elementen. Nachdem ein Benutzer ein OLE-Element in einem Containerdokument eingebettet ist, müssen sie möglicherweise verwendet werden. Zu diesem Zweck doppelklickt der Benutzer das Element, das dieses Element aktiviert wird. Die am häufigsten auftretende Aktivität für die Aktivierung wird bearbeitet. Viele aktuelle OLE-Elemente, wenn für die Bearbeitung aktiviert dazu führen, dass die Menüs und Symbolleisten in der aktuellen Rahmenfenster so ändern Sie entsprechend die Attribute für die Serveranwendung, die das Element erstellt. Dieses Verhalten, bekannt als direkte Aktivierung, kann der Benutzer ein eingebettetes Element in ein Verbunddokument bearbeiten, ohne das Containerdokument Fenster verlassen zu müssen.  

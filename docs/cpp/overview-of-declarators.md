@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarators"></a>Übersicht über Deklaratoren
 Deklaratoren sind die Komponenten einer Deklaration, die Namen von Objekten oder Funktionen angeben. Deklaratoren geben auch an, ob das benannte Objekt ein Objekt, ein Zeiger, ein Verweis oder ein Array ist.  Obwohl Deklaratoren nicht den Basistyp angeben, ändern sie die Typinformationen im Basistyp, sodass dieser abgeleitete Typen, wie Zeiger, Verweise und Arrays, angibt.  Auf Funktionen angewendet arbeitet der Deklarator mit dem Typspezifizierer, um den Rückgabetyp einer Funktion vollständig als Objekt, Zeiger oder Verweis anzugeben. (Bezeichner, die in beschriebenen [Deklarationen und Definitionen](declarations-and-definitions-cpp.md), übermitteln Eigenschaften, wie Typ und Speicherklasse. Modifizierer, erläutert in diesem Abschnitt und in [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md), ändern Deklaratoren.) Die folgende Abbildung zeigt eine vollständige Deklaration von `MyFunction` und ruft die Komponenten der Deklaration auf.  

@@ -1,7 +1,7 @@
 ---
 title: Bestimmen die zu verteilenden DLLs | Microsoft Docs
 ms.custom: 
-ms.date: 09/21/2017
+ms.date: 03/13/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ermitteln der neu zu verteilenden DLLs
 
@@ -53,18 +53,18 @@ In der folgenden Tabelle werden einige der Visual C++-DLLs beschrieben, von dene
 
 |Visual C++-Bibliothek|Beschreibung|Betrifft|
 |--------------------------|-----------------|----------------|
-|Vcruntime*Version*DLL|Runtime-Bibliothek für systemeigenen Code.|Anwendungen, die die normale C und C++ Language starten und Beenden eines Dienste verwenden.|
-|Vccorlib*Version*DLL|Runtime-Bibliothek für verwalteten Code.|Anwendungen, die die C++-Sprache-Dienste für verwalteten Code verwenden.|
-|Msvcp*Version*DLL|C++-Standardbibliothek für systemeigenen Code.|Anwendungen, die die [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).|
-|Concrt*Version*DLL|Concurrency Runtime-Bibliothek für systemeigenen Code.|Anwendungen, die die [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).|
-|MFC*Version*DLL|Microsoft Foundation Class-Bibliothek (MFC-Bibliothek).|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md).|
-|MFC*Version* *Sprache*DLL|Microsoft Foundation Class-Bibliotheksressourcen (MFC).|Anwendungen, die bestimmte Sprachressourcen für MFC zu verwenden.|
-|MFC*Version*u.dll|MFC-Bibliothek mit Unicode-Unterstützung.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) und Unicode-Unterstützung erfordern.|
+|vcruntime*version*.dll|Runtime-Bibliothek für systemeigenen Code.|Anwendungen, die die normale C und C++ Language starten und Beenden eines Dienste verwenden.|
+|vccorlib*version*.dll|Runtime-Bibliothek für verwalteten Code.|Anwendungen, die die C++-Sprache-Dienste für verwalteten Code verwenden.|
+|msvcp*version*.dll and msvcp*version*_*dotnumber*.dll|C++-Standardbibliothek für systemeigenen Code.|Anwendungen, die die [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).|
+|concrt*version*.dll|Concurrency Runtime-Bibliothek für systemeigenen Code.|Anwendungen, die die [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).|
+|mfc*version*.dll|Microsoft Foundation Class-Bibliothek (MFC-Bibliothek).|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md).|
+|mfc*version* *language*.dll|Microsoft Foundation Class-Bibliotheksressourcen (MFC).|Anwendungen, die bestimmte Sprachressourcen für MFC zu verwenden.|
+|mfc*version*u.dll|MFC-Bibliothek mit Unicode-Unterstützung.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) und Unicode-Unterstützung erfordern.|
 |mfcmifc80.dll|MFC-Bibliothek für verwaltete Schnittstellen.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index).|
-|Mfcm*Version*DLL|Verwaltete MFC-Bibliothek.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index).|
-|Mfcm*Version*u.dll|Verwaltete MFC-Bibliothek mit Unicode-Unterstützung.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index) und Unicode-Unterstützung erfordern.|
-|Vcamp*Version*DLL|AMP-Bibliothek für systemeigenen Code.|Anwendungen, die die [C++ AMP-Bibliothek](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) Code.|
-|Vcomp*Version*DLL|OpenMP-Bibliothek für systemeigenen Code.|Anwendungen, die die [OpenMP C++-Bibliothek](../parallel/openmp/openmp-in-visual-cpp.md) Code.|
+|mfcm*version*.dll|Verwaltete MFC-Bibliothek.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index).|
+|mfcm*version*u.dll|Verwaltete MFC-Bibliothek mit Unicode-Unterstützung.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index) und Unicode-Unterstützung erfordern.|
+|vcamp*version*.dll|AMP-Bibliothek für systemeigenen Code.|Anwendungen, die die [C++ AMP-Bibliothek](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) Code.|
+|vcomp*version*.dll|OpenMP-Bibliothek für systemeigenen Code.|Anwendungen, die die [OpenMP C++-Bibliothek](../parallel/openmp/openmp-in-visual-cpp.md) Code.|
 
 > [!NOTE]
 > Sie müssen nicht mehr die Active Template Library als eine separate DLL weiterverteilen. Die Funktionalität wurde in Header und eine statische Bibliothek verschoben.

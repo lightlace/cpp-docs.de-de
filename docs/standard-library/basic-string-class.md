@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string-Klasse
 Bei den von einem Objekt der `basic_string`-Vorlagenklasse gesteuerten Sequenzen handelt es sich um die Standard-C++-Zeichenfolgenklasse, und sie werden normalerweise als Zeichenfolgen bezeichnet. Allerdings sollten diese nicht mit den in der C++-Standardbibliothek verwendeten auf NULL endenden Zeichenfolgen im C-Stil verwechselt werden. Die C++-Standardzeichenfolge ist ein Container, der die Verwendung von Zeichenfolgen als Normaltypen, wie das Verwenden von Vergleichs- und Verkettungsvorgängen, Iteratoren, STL-Algorithmen sowie das Kopieren und Zuweisen mit von Klassenzuweisung verwaltetem Arbeitsspeicher, ermöglicht. Falls eine C++-Standardzeichenfolge in eine auf NULL endende Zeichenfolge im C-Stil konvertiert werden muss, verwenden Sie den Member [basic_string::c_str](#c_str).  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  Ein Verweis auf das Zeichen der Zeichenfolge an der Position, die durch den Parameterindex angegeben wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Das erste Element der Zeichenfolge hat den Index 0 (null) und die folgenden Elemente werden nacheinander durch positiven ganzen Zahlen indiziert, damit eine Zeichenfolge der Länge  *n*  verfügt über eine  *n* th Element indiziert werden, um die Anzahl *n -* 1.  
+ Das erste Element der Zeichenfolge hat den Index 0 (null) und die folgenden Elemente werden nacheinander durch positiven ganzen Zahlen indiziert, damit eine Zeichenfolge der Länge *n* verfügt über eine *n*th-Element ab, das durch die Anzahl *n -* 1.  
   
  Der Member [operator&#91;&#93;](#op_at) ist schneller als die Memberfunktion **at** beim Bereitstellen von Lese- und Schreibzugriff auf die Elemente einer Zeichenfolge.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Ein Verweis auf das Zeichen der Zeichenfolge an der Position, die durch den Parameterindex angegeben wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Das erste Element der Zeichenfolge hat den Index 0 (null), und die folgenden Elemente werden nacheinander durch positiven ganzen Zahlen indiziert, damit eine Zeichenfolge der Länge  *n*  verfügt über eine  *n*  th-Element ab, das durch die Anzahl  *n*  - 1.  
+ Das erste Element der Zeichenfolge hat einen Index von 0, und die folgenden Elemente werden nacheinander durch positive ganze Zahlen indiziert, sodass eine Zeichenfolge der Länge *n* über ein *n*-te Element verfügt, das durch die Zahl *n* - 1 indiziert wird.  
   
  `operator[]` ist schneller als die Memberfunktion [at](#at) beim Bereitstellen von Lese- und Schreibzugriff auf die Elemente einer Zeichenfolge.  
   

@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglichkeiten Literalwerte dieser einzelnen Typen auszudrücken. In Ihrem Quellcode stellen Sie die Inhalte Ihrer Zeichen- und Zeichenfolgenliterale mit einem Zeichensatz dar. Universelle Zeichennamen und Escapezeichen ermöglichen es Ihnen, eine beliebige Zeichenfolge darzustellen, indem Sie nur den grundlegenden Quellzeichensatz verwenden. Ein unformatiertes Zeichenfolgenliteral ermöglicht es Ihnen, die Verwendung von Escapezeichen zu vermeiden, und kann verwendet werden, um alle Typen von Zeichenfolgenliteralen auszudrücken. Sie können auch std::string-Literale erstellen, ohne zusätzliche Erstellungs- oder Konvertierungsschritte ausführen zu müssen.  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Zeichenliterale  
  Ein *Zeichenfolgenliteral* besteht aus einem konstanten Zeichen. Es wird durch das Zeichen dargestellt, das von einfachen Anführungszeichen eingeschlossen ist. Es gibt fünf Arten von Zeichenliteralen:  
   
--   Gewöhnliche Zeichenliterale vom Typ `char`, z. B.`'a'`  
+-   Gewöhnliche Zeichenliterale vom Typ `char`, z. B. `'a'`  
   
--   UTF-8-Zeichenliterale vom Typ `char`, z. B.`u8'a'`  
+-   UTF-8-Zeichenliterale vom Typ `char`, z. B. `u8'a'`  
   
 -   Breite Zeichenliterale vom Typ `wchar_t`, beispielsweise `L'a'`  
   
--   UTF-16-Zeichenliterale vom Typ `char16_t`, z. B.`u'a'`  
+-   UTF-16-Zeichenliterale vom Typ `char16_t`, z. B. `u'a'`  
   
--   UTF-32-Zeichenliterale vom Typ `char32_t`, z. B.`U'a'`  
+-   UTF-32-Zeichenliterale vom Typ `char32_t`, z. B. `U'a'`  
   
  Das Zeichen für ein Zeichenliteral verwendet möglicherweise ein beliebiges Zeichen, mit Ausnahme der reservierten Zeichen umgekehrter Schrägstrich ("\\"), einfaches Anführungszeichen (') oder eine neue Zeile. Reservierte Zeichen können mit einer Escapesequenz angegeben werden. Zeichen können mit universellen Zeichennamen angegeben werden, solange der Typ groß genug ist, das Zeichen zu enthalten.  
   

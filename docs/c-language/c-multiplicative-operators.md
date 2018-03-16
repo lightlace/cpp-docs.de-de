@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>C-Multiplikationsoperatoren
 Die Multiplikationsoperatoren führen Multiplikations(**\***)-, Divisions(**/**)- und Restoperationen (`%`) aus.  
@@ -55,7 +55,7 @@ Die Multiplikationsoperatoren führen Multiplikations(**\***)-, Divisions(**/**)
   
  Die multiplikativen C-Operatoren sind im Folgenden beschrieben:  
   
-|Operator|description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |**\***|Der multiplikative C-Operator bewirkt die Multiplizierung seiner beiden Operanden.|  
 |**/**|Der Divisionsoperator bewirkt, dass der erste Operanden durch den zweiten geteilt wird. Wenn zwei ganzzahlige Operanden dividiert werden und das Ergebnis keine ganze Zahl ist, wird sie gemäß den folgenden Regeln gekürzt:|  
