@@ -264,7 +264,7 @@ volatile Over&
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\**|  
-|*Typname* **(** *Argumentliste* **)**|**(** * \*Typname* **) (** *Argumentliste* **)**|  
+|*Typname* **(** *Argumentliste* **)**|**(**  *\*Typname* **) (** *Argumentliste* **)**|  
 |*type-name*|**const** *type-name*|  
 |*type-name*|`volatile` *Typname*|  
 |*type-name\**|**const** *type-name\**|  
@@ -274,19 +274,19 @@ volatile Over&
   
 1.  Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:  
   
-    -   Von Zeiger in Zeiger auf **const** (`type` ** \* ** auf **const** `type` ** \* ** ).  
+    -   Von Zeiger in Zeiger auf **const** (`type`  **\***  auf **const** `type`  **\***  ).  
   
-    -   Von Zeiger in Zeiger auf `volatile` (`type` ** \* ** auf `volatile` `type` ** \* **).  
+    -   Von Zeiger in Zeiger auf `volatile` (`type`  **\***  auf `volatile` `type`  **\*** ).  
   
-    -   Von Verweis in Verweis auf **const** (`type` ** & ** auf **const** `type` ** & **).  
+    -   Von Verweis in Verweis auf **const** (`type`  **&**  auf **const** `type`  **&** ).  
   
-    -   Von Verweis in Verweis auf `volatile` (`type` ** & ** auf `volatile` `type` ** & **).  
+    -   Von Verweis in Verweis auf `volatile` (`type`  **&**  auf `volatile` `type`  **&** ).  
   
 2.  Übereinstimmung mithilfe von Erweiterungen. Jede beliebige Sequenz nicht als genaue Übereinstimmung, die nur ganzzahlige Erweiterungen, Konvertierungen von enthält klassifiziert **"float"** auf **doppelte**, und triviale Konvertierungen wird als Übereinstimmung mithilfe von Erweiterungen klassifiziert. Obwohl eine Übereinstimmung mit Erweiterungen besser ist als eine Übereinstimmung, die Standardkonvertierungen verwendet, ist sie nicht so gut wie eine genaue Übereinstimmung.  
   
 3.  Übereinstimmung mithilfe von Standardkonvertierungen. Jede beliebige Sequenz, die nicht als genaue Übereinstimmung klassifiziert wird, oder eine Übereinstimmung mithilfe von Erweiterungen, die nur Standardkonvertierungen und triviale Konvertierungen enthält, wird als Übereinstimmung mithilfe von Standardkonvertierungen klassifiziert. In dieser Kategorie gelten die folgenden Regeln:  
   
-    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \* ** oder **const "void" \* **.  
+    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \***  oder **const "void" \*** .  
   
     -   Die Konvertierung von einem Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse erzeugt eine bessere Übereinstimmung, je näher die Basisklasse der direkten Basisklasse ist. Angenommen, die Klassenhierarchie folgt der in der folgenden Abbildung dargestellten Klassenhierarchie.  
   
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ **Char \* **. Im Memberbereich generiert dieser Code einen Fehler.  
+     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ **Char \*** . Im Memberbereich generiert dieser Code einen Fehler.  
   
 -   Aufgelistete Typen sind verschiedene Typen und können verwendet werden, um zwischen überladenen Funktionen zu unterscheiden.  
   

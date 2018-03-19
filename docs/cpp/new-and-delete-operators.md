@@ -59,7 +59,7 @@ Die beiden Bereiche für `operator new`-Funktionen werden in der folgenden Tabel
 |**::operator new**|Global|  
 |*class-name* **::operator new**|Klasse|  
   
- Das erste Argument für **new-Operator** muss vom Typ **Size_t** (einen Typ in \<stddef.h >), und der Rückgabetyp ist immer **"void" \* ** .  
+ Das erste Argument für **new-Operator** muss vom Typ **Size_t** (einen Typ in \<stddef.h >), und der Rückgabetyp ist immer **"void" \***  .  
   
  Die globale **new-Operator** Funktion wird aufgerufen, wenn die **neue** Operator wird verwendet, um Objekte des integrierten Typs zuweisen, Objekte des Klassentyps, die keine enthalten benutzerdefinierte **new-Operator** Funktionen und Arrays eines beliebigen Typs. Wenn die **neue** Operator wird verwendet, um Objekte eines Klassentyps zuzuweisen, in denen ein **new-Operator** definiert ist, dieser Klasse **new-Operator** aufgerufen wird.  
   
@@ -156,7 +156,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \* **, das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
+ Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \*** , das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
   
  Zur Beschleunigung Suche für die richtige Größenkategorie des Objekts, das gelöscht werden, die häufig nicht in der Nähe der Zuordnung selbst gespeichert und wahrscheinlich nicht zwischengespeichert wird ist die zweite Form; die zweite Form ist besonders nützlich, wenn ein **Delete-Operator** Funktion von einer Basisklasse wird verwendet, um ein Objekt einer abgeleiteten Klasse zu löschen.  
   

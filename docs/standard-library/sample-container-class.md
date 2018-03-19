@@ -82,11 +82,11 @@ ms.lasthandoff: 03/16/2018
   
 -   Der Typ **Alloc::const_pointer** ist derselbe wie **const Ty \***.  
   
--   Der Typ **Alloc::const_pointer** ist derselbe wie **const Ty& **.  
+-   Der Typ **Alloc::const_pointer** ist derselbe wie **const Ty&** .  
   
 -   Der Typ **Alloc::const_pointer** ist derselbe wie **Ty \***.  
   
--   Der Typ **Alloc::const_pointer** ist derselbe wie **Ty& **.  
+-   Der Typ **Alloc::const_pointer** ist derselbe wie **Ty&** .  
   
  In dieser Implementierung treffen Container jedoch nicht solche vereinfachende Annahmen. Daher arbeiten sie ordnungsgemäß mit Zuweisungsobjekten, die ehrgeiziger sind:  
   

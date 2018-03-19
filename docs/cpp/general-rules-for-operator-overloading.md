@@ -59,7 +59,7 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
   
 -   Binäre Operatoren, die als Memberfunktionen deklariert werden, akzeptieren ein Argument. Wenn sie als globale Funktionen deklariert werden, nehmen sie zwei Argumente an.  
   
--   Wenn ein Operator als unärer oder binärer Operator verwendet werden kann (**&**, ** \* **, ** + **, und ** - **), können Sie jede Verwendung separat überladen.  
+-   Wenn ein Operator als unärer oder binärer Operator verwendet werden kann (**&**,  **\*** ,  **+** , und  **-** ), können Sie jede Verwendung separat überladen.  
   
 -   Überladene Operatoren können keine Standardargumente haben.  
   

@@ -60,11 +60,11 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Hinweise  
   
--   **Operator Interface\* ** gibt den gekapselten Schnittstellenzeiger, der möglicherweise **NULL**.  
+-   **Operator Interface\***  gibt den gekapselten Schnittstellenzeiger, der möglicherweise **NULL**.  
   
 -   **Operator Interface &** gibt einen Verweis auf den gekapselten Schnittstellenzeiger und gibt einen Fehler aus, wenn der Zeiger **NULL**.  
   
--   **Operator\* ** ermöglicht es einem intelligenten Zeigerobjekt fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
+-   **Operator\***  ermöglicht es einem intelligenten Zeigerobjekt fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
   
 -   **Operator ->** ermöglicht es einem intelligenten Zeigerobjekt fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
   
