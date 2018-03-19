@@ -147,6 +147,7 @@
 ##### [/Zc:threadSafeInit (Threadsichere lokale statische Initialisierung)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (throw-Ausdrücke des Operators annehmen)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (Trigraphenersetzung)](zc-trigraphs-trigraphs-substitution.md)
+##### [/Zc:twoPhase- (Zweiphasen-Namenssuche deaktivieren)](zc-twophase.md)
 ##### [/Zc:wchar_t (wchar_t ist der native Typ)](zc-wchar-t-wchar-t-is-native-type.md)
 #### [/Zf (Schnellere PDB-Generierung)](zf.md)
 #### [/Zg (Funktionsprototypen generieren)](zg-generate-function-prototypes.md)
