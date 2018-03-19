@@ -310,7 +310,7 @@ HRESULT FlushData(HROW, HACCESSOR)
  Sehen Sie sich den Code in der [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) Beispiel; es wird veranschaulicht, wie ein Anbieter behandeln kann **NULL** Daten. In "UpdatePV" die Anbieter speichert **NULL** Daten durch die Zeichenfolge "NULL" in den Datenspeicher schreiben. Beim Lesen **NULL** Daten aus den Daten zu speichern, erkennt diese Zeichenfolge und anschließend leert den Puffer, erstellen eine **NULL** Zeichenfolge. Sie hat auch eine Überschreibung der `IRowsetImpl::GetDBStatus` in, die es zurück **DBSTATUS_S_ISNULL** Wenn dieser Wert leer ist.  
   
 ### <a name="marking-nullable-columns"></a>Markieren die Spalten NULL-Werte zulässt  
- Wenn Sie Schemarowsets auch implementieren (finden Sie unter `IDBSchemaRowsetImpl`), die Implementierung sollten angeben, der **DBSCHEMA_COLUMNS** Rowset (markiert in der Regel im Anbieter von **C***Xxx*** SchemaColSchemaRowset**), dass die Spalte NULL-Werte zulässt.  
+ Wenn Sie Schemarowsets auch implementieren (finden Sie unter `IDBSchemaRowsetImpl`), die Implementierung sollten angeben, der **DBSCHEMA_COLUMNS** Rowset (markiert in der Regel im Anbieter von **C***Xxx***SchemaColSchemaRowset**), dass die Spalte NULL-Werte zulässt.  
   
  Sie müssen auch angeben, dass alle Spalten enthalten die **DBCOLUMNFLAGS_ISNULLABLE** Wert in Ihrer Version von der `GetColumnInfo`.  
   
@@ -414,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Flags für Miningmodellspalten  
- Wenn Sie Standardwerte für Spalten unterstützt, müssen Sie mithilfe von Metadaten im Festlegen der  **\< ***Anbieterklasse***> SchemaRowset** Klasse. Legen Sie *lautet M_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Wenn Sie Standardwerte für Spalten unterstützt, müssen Sie mithilfe von Metadaten im Festlegen der **\<***Anbieterklasse***>SchemaRowset** Klasse. Legen Sie *lautet M_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Sie haben auch die Flags für Miningmodellspalten festlegen, die angegeben werden, mithilfe der **DBCOLUMNFLAGS** Aufzählungstyp. Die Flags für Miningmodellspalten werden Spalteneigenschaften beschrieben.  
   
