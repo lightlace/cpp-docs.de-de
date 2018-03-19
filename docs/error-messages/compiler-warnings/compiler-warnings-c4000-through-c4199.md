@@ -249,7 +249,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4176|"Subcomponent": Unbekannte Unterkomponente bei #pragma Component Browser|
 |Compilerwarnung (Stufe 1) C4177|#pragma "Pragma" sollte nur im globalen Gültigkeitsbereich oder Namespacebereich verwendet werden|
 |Compilerwarnung (Stufe 1) C4178|Die case-Konstante 'Konstante' ist zu groß für den Typ des switch-Ausdrucks.|
-|Compilerwarnung (Stufe 4) C4179|"/ / *': als analysiert '/' und ' /\*': Verwechslung mit Standardkommentaren ' / /" Kommentare|
+|Compilerwarnung (Stufe 4) C4179|"//*': als analysiert '/' und ' /\*': Verwechslung mit Standardkommentaren ' / /" Kommentare|
 |Compilerwarnung (Stufe 1) C4180|Auf Funktionstyp angewendeter Qualifizierer ist ohne Bedeutung; wird ignoriert|
 |Compilerwarnung C4181|Qualifizierer angewendet, um den Typ verweisen; ignoriert|
 |Compilerwarnung (Stufe 1) C4182|#include Schachtelungsebene ist "Nest_count" tief; Endlosschleife möglich|

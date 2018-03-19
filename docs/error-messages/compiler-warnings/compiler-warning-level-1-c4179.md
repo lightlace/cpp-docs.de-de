@@ -28,6 +28,6 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warning-level-1-c4179"></a>Compilerwarnung (Stufe 1) C4179
-"/ / *': als analysiert '/' und ' /\*': Verwechslung mit Standardkommentaren ' / /" Kommentare  
+"//*': als analysiert '/' und ' /\*': Verwechslung mit Standardkommentaren ' / /" Kommentare  
   
  **//\*** ist ein falsches Kommentartrennzeichen. Verwenden Sie stattdessen **//** oder **/\*** .

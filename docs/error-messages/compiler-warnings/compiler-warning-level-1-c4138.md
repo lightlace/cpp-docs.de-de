@@ -30,7 +30,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="compiler-warning-level-1-c4138"></a>Compilerwarnung (Stufe 1) C4138
 "*/" wurde außerhalb des Kommentars gefunden  
   
- Dem schließenden Kommentartrennzeichen geht kein öffnendes Kommentartrennzeichen voran. Der Compiler nimmt an, dass zwischen dem Sternchen (**\***) und dem Schrägstrich (/) ein Leerzeichen steht.  
+ Dem schließenden Kommentartrennzeichen geht kein öffnendes Kommentartrennzeichen voran. Der Compiler nimmt an, dass zwischen dem Sternchen (**\****) und dem Schrägstrich (/) ein Leerzeichen steht.  
   
 ## <a name="example"></a>Beispiel  
   

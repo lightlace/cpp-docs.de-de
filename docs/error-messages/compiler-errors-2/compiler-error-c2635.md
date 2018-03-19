@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-error-c2635"></a>Compiler-Fehler C2635 generiert
-Konvertierung einer 'Bezeichner1 *"in einer" Bezeichner2\*"; Konvertierung von einer virtuellen Basisklasse wird impliziert.  
+Konvertierung einer 'Bezeichner1*"in einer" Bezeichner2\*"; Konvertierung von einer virtuellen Basisklasse wird impliziert.  
   
  Die Konvertierung erfordert eine Umwandlung aus einem `virtual` Basisklasse in eine abgeleitete Klasse, was nicht zulässig ist.  
   
