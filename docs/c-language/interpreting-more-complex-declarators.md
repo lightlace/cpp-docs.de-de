@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretieren von komplexeren Deklaratoren
 Sie können einen beliebigen Deklarator in Klammern einschließen, um eine bestimmte Interpretation eines "komplexen Deklarators" anzugeben. Ein komplexer Deklarator ist ein Bezeichner, der durch mehr als einen Array-, Zeiger- oder Funktionsmodifizierer qualifiziert wird. Sie können verschiedene Kombinationen von Array-, Zeiger- und Funktionsmodifizierern auf einen einzelnen Bezeichner anwenden. Im Allgemeinen kann `typedef` verwendet werden, um Deklarationen zu vereinfachen. Weitere Informationen finden Sie unter [Typedef-Deklarationen](../c-language/typedef-declarations.md).  
@@ -47,7 +47,7 @@ Sie können einen beliebigen Deklarator in Klammern einschließen, um eine besti
      7   6  4 2 1   3    5  
     ```  
   
- In diesem Beispiel werden die Schritte in der entsprechenden Reihenfolge nummeriert und können wie folgt interpretiert werden:  
+In diesem Beispiel werden die Schritte in der entsprechenden Reihenfolge nummeriert und können wie folgt interpretiert werden:  
   
 1.  Der Bezeichner `var` wird deklariert als  
   
