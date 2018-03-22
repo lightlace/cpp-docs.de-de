@@ -1,23 +1,23 @@
 ---
-title: "Überblick über potenzielle Aktualisierungsprobleme (Visual C++) | Microsoft-Dokumentation"
-ms.custom: 
+title: Überblick über potenzielle Aktualisierungsprobleme (Visual C++) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
 
@@ -37,9 +37,11 @@ Die Dateiformate OBJ und LIB sind klar definiert und ändern sich nur selten. Ma
 
 C++ verfügt über keine stabile Anwendungsbinärdatei-Schnittstelle (ABI). Visual Studio verwaltet eine stabile C++-ABI für alle Nebenversionen eines Releases. Visual Studio 2017 und alle zugehörigen Updates sind beispielsweise binärkompatibel. Die ABI ist jedoch nicht unbedingt kompatibel mit allen Hauptversionen von Visual Studio (mit Ausnahme von 2015 und 2017, die _binärkompatibel sind_). Wir können also wichtige Änderungen an C++-Typlayout, Namensergänzung, Ausnahmebehandlung und anderen Teilen der C++-ABI vornehmen. Angenommen, Sie verfügen über eine Objektdatei, die externe Symbole mit C++-Verknüpfung enthält. Dann kann diese Objektdatei möglicherweise nicht ordnungsgemäß mit Objektdateien verknüpft werden, die mit einer anderen Hauptversion des Toolsets erzeugt wurden. Beachten Sie, dass hier „funktioniert möglicherweise nicht“ ganz unterschiedliche Formen annehmen kann: Die Verknüpfung kann vollständig fehlschlagen (z.B. bei geänderter Namensergänzung). Die Verknüpfung kann erfolgreich ausgeführt werden, aber zur Laufzeit treten Fehler auf (z.B. bei geändertem Typlayout). In vielen Fällen funktioniert auch alles fehlerfrei. Beachten Sie außerdem, dass die C++-ABI zwar nicht stabil ist, die C-ABI und die für COM erforderliche Teilmenge der C++-ABI jedoch stabil sind.
 
+Wenn Sie eine Verknüpfung mit einer Importbibliothek herstellen, können jegliche spätere Versionen der verteilbaren Visual Studio-Bibliotheken, die die ABI-Kompatibilität beibehalten, zur Laufzeit verwendet werden. Wenn Ihre App z.B.mit dem Toolset von Visual Studio 2015 Update 3 kompiliert und verknüpft ist, können Sie jede verteilbare Visual Studio 2017-Bibliothek verwenden, da die Bibliotheken von VS 2015 und 2017 die binäre Abwärtskompatibilität beibehalten haben. Umgekehrt ist dies nicht möglich. Sie können keine verteilbare Bibliothek für eine frühere Toolsetversion verwenden, als die Version, die Sie zum Erstellen Ihres Codes verwendet haben, auch wenn diese über eine kompatible ABI verfügt.
+
 ### <a name="libraries"></a>Bibliotheken
 
-Wenn Sie eine Quelldatei mit einer bestimmten Version der Visual Studio C++-Bibliotheksheaderdateien – durch Einschließen (#including) der Header – kompilieren, muss die resultierende Objektdatei mit der gleichen Bibliotheksversion verknüpft werden. Wenn Ihre Quelldatei also mit \<immintrin.h> von Visual Studio 2017 kompiliert wird, müssen Sie eine Verknüpfung zur Visual Studio 2017-Bibliothek „vcruntime“ herstellen. Entsprechend gilt: Wenn Ihre Quelldatei mit \<iostream> von Visual Studio 2017 kompiliert wird, müssen Sie eine Verknüpfung zur C++-Standardbibliothek von Visual Studio 2017 („msvcprt“) herstellen. Das Kombinieren und Anpassen wird nicht unterstützt.
+Wenn Sie eine Quelldatei mit einer bestimmten Version der Visual Studio C++-Bibliotheksheaderdateien – durch Einschließen (#including) der Header – kompilieren, muss die resultierende Objektdatei mit der gleichen Bibliotheksversion verknüpft werden. Wenn Ihre Quelldatei also mit \<immintrin.h> von Visual Studio 2015 Update 3 kompiliert wird, müssen Sie eine Verknüpfung zur Visual Studio 2015 Update 3-Bibliothek „vcruntime“ herstellen. Entsprechend gilt: Wenn Ihre Quelldatei mit \<iostream> von Visual Studio 2017 Version 15.5 kompiliert wird, müssen Sie eine Verknüpfung zur C++-Standardbibliothek von Visual Studio 2017 Version 15.5 („msvcprt“) herstellen. Das Kombinieren und Anpassen wird nicht unterstützt.
 
 Für die C++-Standardbibliothek wurde das Kombinieren und Anpassen durch Verwendung von `#pragma detect_mismatch` in den Standardheadern seit Visual Studio 2010 explizit gesperrt. Wenn Sie versuchen, inkompatible Objektdateien zu verknüpfen oder eine Verknüpfung zur falschen Standardbibliothek herzustellen, schlägt die Verknüpfung fehl.
 
