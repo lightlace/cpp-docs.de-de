@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f40dad6feff9e49deeb495e8acbf2584dea3e41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="pogosafemode"></a>PogoSafeMode
 Geben Sie an, ob der schnelle oder abgesicherte Modus zur Anwendungsprofilerstellung verwendet werden soll.  
