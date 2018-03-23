@@ -1,35 +1,35 @@
 ---
 title: 'Vorgehensweise: direkt instanziieren von WRL-Komponenten | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2d307304c103b62ff5ba20e1af25797745bd035
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8069ac8d079a879cb078d9e3e4b759b02817b5f
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Gewusst wie: Direktes Instanziieren von WRL-Komponenten
 Informationen zum Verwenden der Windows Runtime C++ Template Library (WRL)[Microsoft::WRL::Make](../windows/make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) Funktionen, um eine Komponente aus dem Modul instanziieren, definiert.  
   
  Durch die direkte Instanziierung von Komponenten können Sie den Mehraufwand reduzieren, wenn Klassenfactorys oder andere Mechanismen nicht benötigt werden. Sie können eine Komponente, die direkt in beide apps der universellen Windows-Plattform und desktop-apps instanziieren.  
   
- Gewusst wie: Verwenden von C++-Vorlagenbibliothek für Windows-Runtime zum Erstellen einer grundlegenden Komponente für Windows-Runtime und instanziieren es aus einer externen universelle Windows-Plattform-app finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Komponente für die Windows-Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md). So verwenden Sie Windows Runtime C++ Template Library, zum Erstellen einer klassischen COM‑Komponente und instanziieren Sie es aus einer externen desktop-app finden Sie unter [Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
+So verwenden Sie Windows Runtime C++ Template Library, zum Erstellen einer klassischen COM‑Komponente und instanziieren Sie es aus einer externen desktop-app finden Sie unter [Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
   
  Dieses Dokument enthält zwei Beispiele. Im ersten Beispiel wird eine Komponente mit der `Make`-Funktion instanziiert. Im zweiten Beispiel wird eine Komponente mit der `MakeAndInitialize`-Funktion instanziiert, die bei der Erstellung einen Fehler verursachen kann. (Da COM Fehler normalerweise mit `HRESULT`-Werten anstelle von Ausnahmen anzeigt, wird ein COM-Typ normalerweise nicht von seinem Konstruktor ausgelöst. `MakeAndInitialize` aktiviert eine Komponente, um ihre Konstruktionsargumente durch die `RuntimeClassInitialize`-Methode zu aktivieren.) Beide Beispiele definieren eine grundlegende Protokollierungsschnittstelle und implementieren diese Schnittstelle durch Definition einer Klasse, die Nachrichten an die Konsole ausgibt.  
   
@@ -60,5 +60,5 @@ Informationen zum Verwenden der Windows Runtime C++ Template Library (WRL)[Micro
   
 ## <a name="see-also"></a>Siehe auch  
  [Windows Runtime C++-Vorlagenbibliothek (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
- [Microsoft::wrl::Make](../windows/make-function.md)   
+ [Microsoft::WRL::Make](../windows/make-function.md)   
  [Microsoft::wrl::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

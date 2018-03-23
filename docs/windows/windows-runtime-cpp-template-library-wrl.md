@@ -1,31 +1,36 @@
 ---
 title: Windows Runtime C++-Vorlagenbibliothek (WRL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
-Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek, die eine niederschwelligen Zugang zur Erstellung und Verwendung von Windows-Runtime-Komponenten bietet.  
+Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek, die eine niederschwelligen Zugang zur Erstellung und Verwendung von Windows-Runtime-Komponenten bietet.
+
+> [!NOTE]
+> WRL wird jetzt von C + ersetzt c++ / WinRT ein standard C ++ 17-sprachprojektion für Windows-Runtime-APIs. C + c++ / WinRT steht in Windows 10-SDK Version 1803 Aufzeichnung. C + c++ / WinRT vollständig in den Headerdateien implementiert wird, und bietet Ihnen mit erstrangigem Zugriff auf die modernen Windows-API.
+
+> Mit C + c++ / WinRT, können Sie sowohl nutzen und Erstellen von Windows-Runtime-APIs mit beliebigen standardisierte C ++ 17-Compiler. C + c++ / WinRT in der Regel wird eine bessere Leistung und erzeugt kleinere Binärdateien als eine andere Sprachoption für die Windows-Runtime. Wir weiterhin zur Unterstützung von C + c++ / CX- und WRL, jedoch dringend empfohlen, neue Anwendungen C + c++ / WinRT. Weitere Informationen finden Sie unter [C + c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Vorteile  
  Der Windows Runtime C++ Template Library können Sie leichter zu implementieren und die Nutzung von Component Object Model (COM)-Komponenten. Sie stellt Verwaltungstechniken wie die Verweiszählung bereit, mit der die Lebensdauer der Objekte verwaltet wird, oder wie Tests von `HRESULT` -Werten, mit denen festgestellt wird, ob ein Vorgang erfolgreich war oder einen Fehler verursacht hat. Um die Windows Runtime C++ Template Library erfolgreich verwenden zu können, müssen Sie die folgenden Regeln und Techniken sorgfältig befolgen.  
@@ -57,9 +62,6 @@ Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek
   
  [Vorgehensweise: Behandeln von Ereignissen](../windows/how-to-handle-events-using-wrl.md)  
  Zeigt, wie die Windows Runtime C++ Template Library zu abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.  
-  
- [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Windows-Runtime-Komponente](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Zeigt, wie die Windows Runtime C++ Template Library verwenden, um einer grundlegenden Komponente für Windows-Runtime zu erstellen, die zwei Zahlen addiert. Außerdem veranschaulicht, wie Ereignisse auslösen und die Komponente aus einer uwp-app, die JavaScript nutzt.  
   
  [Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Erfahren Sie, wie Sie eine uwp-app erstellen, verwendet [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -144,7 +146,6 @@ Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek
   
 |||  
 |-|-|  
-|[Projektvorlage für Klassenbibliothek](../windows/wrl-class-library-project-template.md)|Beschreibt, wie auf die WRL-Klassenbibliotheksprojektvorlage zugegriffen wird. Mit dieser Vorlage können mit Visual Studio zum Erstellen von Windows-Runtime-Komponenten vereinfacht.|  
 |[Schlüssel-APIs nach Kategorie](../windows/key-wrl-apis-by-category.md)|Hebt die primären Windows Runtime C++ Template Library-Typen, Funktionen und Makros.|  
 |[Referenz](../windows/wrl-reference.md)|Enthält Referenzinformationen für die Windows Runtime C++ Template Library.|  
 |[Kurzreferenz (Windows-Runtime und Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Beschreibt kurz die C + c++ / CX-Funktionen, die die Windows-Runtime unterstützt.|  

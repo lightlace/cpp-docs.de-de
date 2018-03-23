@@ -1,12 +1,12 @@
 ---
 title: SafeInt-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt-Klasse
 Erweitert die ganze Zahl primitiven zur Vermeidung von Ganzzahlüberlauf und können Sie verschiedene Typen von ganzen Zahlen zu vergleichen.  
@@ -49,7 +49,7 @@ class SafeInt;
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
 |[in] rhs|Ein Eingabeparameter, der den Wert auf der rechten Seite des Operators in mehrere eigenständige Funktionen darstellt.|  
-|[in] ich|Ein Eingabeparameter, der den Wert auf der rechten Seite des Operators in mehrere eigenständige Funktionen darstellt.|  
+|[in] i|Ein Eingabeparameter, der den Wert auf der rechten Seite des Operators in mehrere eigenständige Funktionen darstellt.|  
 |[in] bits|Ein Eingabeparameter, der den Wert auf der rechten Seite des Operators in mehrere eigenständige Funktionen darstellt.|  
   
 ## <a name="members"></a>Member  
@@ -178,9 +178,9 @@ class SafeInt;
   
  In die entsprechenden Tabelle in diesem Thema listet die Vergleich und mathematischen Operatoren, die von unterstützt die `SafeInt` Klasse. Die meisten mathematische Operatoren geben eine `SafeInt` Objekt des Typs `T`.  
   
- Vergleichsvorgänge zwischen einem `SafeInt` und ein ganzzahliger Typ in beide Richtungen erfolgen kann. Beispielsweise beide `SafeInt<int>(x) < y` und `y > SafeInt<int>(x)` gültig sind, und gibt das gleiche Ergebnis zurück.  
+ Vergleichsvorgänge zwischen einem `SafeInt` und ein ganzzahliger Typ in beide Richtungen erfolgen kann. Beispielsweise beide `SafeInt<int>(x) < y` und `y> SafeInt<int>(x)` gültig sind, und gibt das gleiche Ergebnis zurück.  
   
- Viele binäre Operatoren nicht unterstützen zwei verschiedene `SafeInt` Typen. Ein Beispiel hierfür ist die `&` Operator. `SafeInt<T, E> & int`wird unterstützt, aber `SafeInt<T, E> & SafeInt<U, E>` nicht. Im letzteren Beispiel weiß der Compiler nicht Art des zurückzugebenden Parameters. Eine Lösung für dieses Problem ist den zweiten Parameter wieder auf den Basistyp umgewandelt. Verwenden Sie die gleichen Parameter, dies erreichen Sie mit `SafeInt<T, E> & (U)SafeInt<U, E>`.  
+ Viele binäre Operatoren nicht unterstützen zwei verschiedene `SafeInt` Typen. Ein Beispiel hierfür ist die `&` Operator. `SafeInt<T, E> & int` wird unterstützt, aber `SafeInt<T, E> & SafeInt<U, E>` nicht. Im letzteren Beispiel weiß der Compiler nicht Art des zurückzugebenden Parameters. Eine Lösung für dieses Problem ist den zweiten Parameter wieder auf den Basistyp umgewandelt. Verwenden Sie die gleichen Parameter, dies erreichen Sie mit `SafeInt<T, E> & (U)SafeInt<U, E>`.  
   
 > [!NOTE]
 >  Für alle bitweisen Operationen sollten die zwei verschiedenen Parameter genauso groß sein. Wenn die Größen unterschiedlich sind, löst der Compiler eine [ASSERT](../mfc/reference/diagnostic-services.md#assert) Ausnahme. Die Ergebnisse dieses Vorgangs können nicht garantiert werden, genau sein. Um dieses Problem zu beheben, wandeln Sie den kleineren Parameter, bis sie die gleiche Größe wie der Parameter größer ist.  
@@ -213,12 +213,12 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`und `U` kann ein Boolean-Typ, Zeichentyp oder Integer-Typ zugewiesen werden. Die ganzzahligen Typen mit oder ohne Vorzeichen sein können und beliebiger Größe von 8 Bit zu 64 Bit.  
+ `T` und `U` kann ein Boolean-Typ, Zeichentyp oder Integer-Typ zugewiesen werden. Die ganzzahligen Typen mit oder ohne Vorzeichen sein können und beliebiger Größe von 8 Bit zu 64 Bit.  
   
 > [!NOTE]
 >  Obwohl die `SafeInt` Klasse akzeptiert alle Arten von Integer, arbeitet effizienter, mit dem Typen ohne Vorzeichen.  
   
- `E`ist der Mechanismus zur Behandlung von Fehler, `SafeInt` verwendet. Zwei Mechanismen für die Fehlerbehandlung werden mit der SafeInt-Bibliothek bereitgestellt. Die Standardrichtlinie ist `SafeIntErrorPolicy_SafeIntException`, wodurch eine [SafeIntException-Klasse](../windows/safeintexception-class.md) -Ausnahme aus, wenn ein Fehler auftritt. Die andere Richtlinie ist `SafeIntErrorPolicy_InvalidParameter`, die das Programm beendet wird, wenn ein Fehler auftritt.  
+ `E` ist der Mechanismus zur Behandlung von Fehler, `SafeInt` verwendet. Zwei Mechanismen für die Fehlerbehandlung werden mit der SafeInt-Bibliothek bereitgestellt. Die Standardrichtlinie ist `SafeIntErrorPolicy_SafeIntException`, wodurch eine [SafeIntException-Klasse](../windows/safeintexception-class.md) -Ausnahme aus, wenn ein Fehler auftritt. Die andere Richtlinie ist `SafeIntErrorPolicy_InvalidParameter`, die das Programm beendet wird, wenn ein Fehler auftritt.  
   
  Es gibt zwei Optionen, um die Richtlinie Fehler anpassen. Die erste Möglichkeit besteht in der Parametersatz `E` beim Erstellen einer `SafeInt`. Verwenden Sie diese Option aus, wenn Sie den Fehler bei der Verarbeitung der Richtlinie für nur einen ändern möchten `SafeInt`. Die andere Möglichkeit besteht darin zu definieren `_SAFEINT_DEFAULT_ERROR_POLICY` Ihrer benutzerdefinierten Fehlerbehandlungs-Klasse sein, bevor Sie Einfügen der `SafeInt` Bibliothek. Verwenden Sie diese Option aus, wenn Sie die Richtlinie für alle Instanzen der standardmäßige Fehlerbehandlung ändern möchten die `SafeInt` Klasse in Ihrem Code.  
   

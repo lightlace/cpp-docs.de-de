@@ -1,12 +1,12 @@
 ---
 title: 'Weakref:: Weakref-Konstruktor | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef::WeakRef
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - WeakRef, constructor
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 125fe25179ddbe975530a0c368a4dfc7e4caaf1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c215006412a1ab882792546e575b6f448529a652
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef-Konstruktor
 Initialisiert eine neue Instanz der WeakRef-Klasse.  
@@ -61,7 +61,7 @@ WeakRef(
  Ein Zeiger, ein Verweis oder ein Rvalue-Verweis auf ein vorhandenes Objekt, das das aktuelle WeakRef-Objekt initialisiert.  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert ein leeres WeakRef-Objekt. Der zweite Konstruktor initialisiert ein WeakRef-Objekt von einem Zeiger auf die Schnittstelle "iweakreference". Der dritte Konstruktor initialisiert ein WeakRef-Objekt aus einem Verweis auf ein ComPtr\< "iweakreference" > Objekt. Der vierte und fünfte Konstruktor initialisiert ein WeakRef-Objekt aus einem anderen WeakRef-Objekt.  
+ Der erste Konstruktor initialisiert ein leeres WeakRef-Objekt. Der zweite Konstruktor initialisiert ein WeakRef-Objekt von einem Zeiger auf die Schnittstelle "iweakreference". Der dritte Konstruktor initialisiert ein WeakRef-Objekt aus einem Verweis auf ein ComPtr\<"iweakreference" > Objekt. Der vierte und fünfte Konstruktor initialisiert ein WeakRef-Objekt aus einem anderen WeakRef-Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

@@ -1,68 +1,70 @@
 ---
 title: Pgosweep | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - pgosweep program
 - profile-guided optimizations, pgosweep
 ms.assetid: f39dd3b7-1cd9-4c3b-8e8b-fb794744b757
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78ae6c36011e3c10359988cf2c501514d1bcf70a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9680dc47d850bd49eff343c0e382b7132697858d
+ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pgosweep"></a>pgosweep
-Bei profilgesteuerter Optimierung verwendet, um alle Profildaten aus ein aktives Programm in die PGC-Datei zu schreiben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-pgosweep [options] image pgcfile  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `options`  
- Ein optionaler Parameter, der leer gelassen werden kann. Die gültigen Werte für `options` lauten wie folgt:  
-  
--   **/?** oder **/Help,** zeigt die Hilfe an.  
-  
--   **/ noreset,** behält die Anzahl die in der Common Language Runtime-Datenstrukturen.  
-  
- `image`  
- Der vollständige Pfad einer .exe oder .dll-Datei, die mit dem Compiler Option/LTCG: PGINSTRUMENT erstellt wurde.  
-  
- `pgcfile`  
- Die PGC-Datei, in dem mit diesem Befehl die Daten Anzahlen schreibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Dieser Befehl funktioniert auf Programme, die mit der Compileroption/LTCG: PGINSTRUMENT erstellt wurden. Er unterbricht ein aktives Programm, und schreibt die Profildaten zu einer neuen PGC-Datei. Standardmäßig setzt der Befehl Anzahlen nach jedem Schreibvorgang. Bei Angabe der **/noreset** -Option der Befehl Notieren Sie die Werte, aber nicht zurückgesetzt werden sie in der laufenden Anwendung. Diese Option erhalten doppelte Daten Sie, wenn Sie die Profildaten später abrufen.  
-  
- Eine alternative Verwendung für `pgosweep` Profilinformationen nur für die Laufzeit der Anwendung abrufen. Sie könnten z. B. ausführen `pgosweep` kurz nach dem Starten der Anwendung und verwerfen die Datei. Dadurch würde Startkosten zugeordnete Profildaten entfernt. Führen Sie Sie dann `pgosweep` vor dem Beenden der Anwendung. Die gesammelten Daten hat jetzt Profilinformationen nur von der Common Language Runtime.  
-  
- Wenn Sie benennen eine PGC-Datei (`pgcfile`) können Sie das Standardformat ist *Appname! n*PGC. Wenn Sie dieses Format verwenden, findet der Compiler diese Daten in die/LTCG: PGO-Phase. Wenn Sie das Standardformat nicht verwenden, müssen Sie verwenden [Pgomgr](../../build/reference/pgomgr.md) die PGC-Dateien zusammenzuführen.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-pgosweep myapp.exe myapp!1.pgc  
-```  
-  
- In diesem Beispiel `pgosweep` schreibt die aktuellen Profilinformationen für myapp.exe in MyApp! 1.pgc.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Tools für die manuelle profilgesteuerte Optimierung (PGO)](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+
+Bei profilgesteuerter Optimierung verwendet, um alle Profildaten aus ein aktives Programm in die PGC-Datei zu schreiben.
+
+## <a name="syntax"></a>Syntax
+
+> **Pgosweep** [*Optionen*] *Image* *Pgcfile*
+
+### <a name="parameters"></a>Parameter
+
+*Optionen* (optional)<br/>
+Die gültigen Werte für *Optionen* sind:
+
+- **/?** oder **/help** zeigt die Hilfe an.
+
+- **/ noreset** behält die Anzahl die in der Common Language Runtime-Datenstrukturen.
+
+*image*<br/>
+Den vollständigen Pfad einer erstellten .exe oder .dll-Datei der [/genprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md), oder [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) Option.
+
+*pgcfile*<br/>
+Die PGC-Datei, in dem mit diesem Befehl die Daten Anzahlen ausgeschrieben.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Pgosweep** Befehl funktioniert in Programmen, die mit erstellt wurden die [/genprofile oder/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) Option oder veralteten [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) Option. Er unterbricht ein aktives Programm, und schreibt die Profildaten zu einer neuen PGC-Datei. Standardmäßig setzt der Befehl Anzahlen nach jedem Schreibvorgang. Bei Angabe der **/noreset** -Option der Befehl Notieren Sie die Werte, aber nicht zurückgesetzt werden sie in der laufenden Anwendung. Diese Option bietet Ihnen doppelte Daten, wenn Sie die Profildaten später abrufen.
+
+Eine alternative Verwendung für **Pgosweep** Profilinformationen nur für die normale Ausführung der Anwendung abrufen. Sie könnten z. B. ausführen **Pgosweep** kurz nach dem Starten der Anwendung und verwerfen die Datei. Dadurch würde Startkosten zugeordnete Profildaten entfernt. Sie können dann ausführen **Pgosweep** vor dem Beenden der Anwendung. Die gesammelten Daten hat jetzt Profilinformationen nur ab dem Zeitpunkt, dass der Benutzer mit dem Programm interagieren kann.
+
+Wenn Sie benennen eine PGC-Datei (mit der *Pgcfile* Parameter) können Sie das Standardformat ist *Appname! n*PGC. Wenn Sie dieses Format verwenden, sucht der Compiler automatisch diese Daten in der **/LTCG/useprofile** oder **/LTCG: PGO** Phase. Wenn Sie das Standardformat nicht verwenden, müssen Sie verwenden [Pgomgr](pgomgr.md) die PGC-Dateien zusammenzuführen.
+
+> [!NOTE]
+> Sie können dieses Tool nur von Visual Studio Developer-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.
+
+Informationen zum Erfassen der Profildaten aus innerhalb der ausführbaren Datei finden Sie unter [PgoAutoSweep](pgoautosweep.md).
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispielbefehl **Pgosweep** schreibt die aktuellen Profilinformationen für myapp.exe in MyApp! 1.pgc.
+
+`pgosweep myapp.exe myapp!1.pgc`
+
+## <a name="see-also"></a>Siehe auch
+
+[Profilgesteuerte Optimierungen](profile-guided-optimizations.md)<br/>
+[PgoAutoSweep](pgoautosweep.md)<br/>

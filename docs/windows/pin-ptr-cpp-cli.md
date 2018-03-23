@@ -1,12 +1,12 @@
 ---
 title: Pin_ptr (C + c++ / CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - pin_ptr_cpp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce63996cc2d93f4890f54c5edda318fca55f98aa
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwendet wird.  
@@ -51,7 +51,7 @@ Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwende
   
 ### <a name="parameters"></a>Parameter  
  *cv_qualifier*  
- `const`oder `volatile` Qualifizierer. Standardmäßig ist ein fester Zeiger `volatile`. Es ist jedoch nicht um einen Fehler, deklarieren einen festen Zeiger redundant `volatile`.  
+ `const` oder `volatile` Qualifizierer. Standardmäßig ist ein fester Zeiger `volatile`. Es ist jedoch nicht um einen Fehler, deklarieren einen festen Zeiger redundant `volatile`.  
   
  *Typ*  
  Der `initializer`-Typ.  
@@ -93,7 +93,7 @@ Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwende
   
 -   der Zieltyp einer Typumwandlung.  
   
- `pin_ptr`befindet sich in der `cli` Namespace. Weitere Informationen finden Sie unter [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `pin_ptr` befindet sich in der `cli` Namespace. Weitere Informationen finden Sie unter [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
  Weitere Informationen zu inneren Zeigern, finden Sie unter [Interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md).  
   
@@ -211,7 +211,7 @@ public:
   
 int main() {  
    ManagedType ^mt = gcnew ManagedType;  
-   pin_ptr< int > pt = &mt->i;  
+   pin_ptr<int> pt = &mt->i;  
    *pt = 8;  
    Console::WriteLine(mt->i);  
   

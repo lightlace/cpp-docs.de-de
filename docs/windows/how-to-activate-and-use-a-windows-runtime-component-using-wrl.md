@@ -1,34 +1,31 @@
 ---
 title: 'Vorgehensweise: Aktivieren und verwenden Sie eine Windows-Runtime-Komponente mit WRL | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL
 Dieses Dokument wird gezeigt, wie die Windows Runtime C++ Template Library (WRL) verwenden, um die Windows-Runtime zu initialisieren und zu aktivieren und verwenden eine Windows-Runtime-Komponente.  
-  
-> [!NOTE]
->  In diesem Beispiel wird eine integrierte Windows-Runtime-Komponente aktiviert. Um zu erfahren, wie Sie eine eigene Komponente erstellen, die auf ähnliche Weise aktiviert werden kann, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Komponente für die Windows-Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Um eine Komponente zu verwenden, müssen Sie einen Schnittstellenzeiger auf den Typ abrufen, der von der Komponente implementiert wird. Und da die zugrunde liegende Technologie der Windows-Runtime das Component Object Model (COM) ist, müssen Sie die COM-Regeln, um eine Instanz des Typs beizubehalten entsprechen. Sie müssen z. B. verwalten die *Verweiszähler* , der bestimmt, wenn der Typ aus dem Arbeitsspeicher gelöscht wird.  
   
