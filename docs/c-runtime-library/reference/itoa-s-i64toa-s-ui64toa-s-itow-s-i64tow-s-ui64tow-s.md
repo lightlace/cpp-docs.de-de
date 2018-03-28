@@ -1,12 +1,12 @@
 ---
 title: _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ui64tow_s
@@ -67,17 +67,17 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d349627bfe5f6c5049de128937215301411b86e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Konvertiert eine ganze Zahl in eine Zeichenfolge. Dies sind Versionen von [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) mit Sicherheitsverbesserungen wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -155,10 +155,10 @@ errno_t _itow_s(
   
 |Wert|buffer|sizeInCharacters|radix|Zurück|  
 |-----------|------------|----------------------|-----------|------------|  
-|any|`NULL`|any|any|`EINVAL`|  
-|any|any|<=0|any|`EINVAL`|  
-|any|any|<= Länge der erforderlichen Ergebniszeichenfolge|any|`EINVAL`|  
-|any|any|any|`radix` < 2 oder `radix` > 36|`EINVAL`|  
+|alle|`NULL`|alle|alle|`EINVAL`|  
+|alle|alle|<=0|alle|`EINVAL`|  
+|alle|alle|<= Länge der erforderlichen Ergebniszeichenfolge|alle|`EINVAL`|  
+|alle|alle|alle|`radix` < 2 oder `radix` > 36|`EINVAL`|  
   
  **Sicherheitsprobleme**  
   
@@ -181,7 +181,7 @@ errno_t _itow_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
+|Routine|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  

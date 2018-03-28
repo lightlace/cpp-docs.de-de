@@ -1,12 +1,12 @@
 ---
 title: _ultoa, _ultow | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ultoa
@@ -42,17 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 Konvertieren einer langen ganzen Zahl ohne Vorzeichen in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md).  
@@ -113,7 +113,7 @@ wchar_t *_ultow(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
+|Routine|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ultoa`|\<stdlib.h>|  
 |`_ultow`|\<stdlib.h> oder \<wchar.h>|  
