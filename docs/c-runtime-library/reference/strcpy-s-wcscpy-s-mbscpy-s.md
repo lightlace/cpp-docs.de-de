@@ -1,12 +1,9 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/22/2086
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - wcscpy_s
@@ -42,147 +39,187 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb37fe985340d2126cfc6f8db90cc236a2d5870
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8820dbda16d95a201d666a0f25b4e06a6b79c941
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
-Kopiert eine Zeichenfolge. Diese Versionen von [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
-  
+
+Kopiert eine Zeichenfolge. Diese Versionen von [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+
 > [!IMPORTANT]
->  `_mbscpy_s` kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t strcpy_s(  
-   char *strDestination,  
-   size_t numberOfElements,  
-   const char *strSource   
-);  
-errno_t wcscpy_s(  
-   wchar_t *strDestination,  
-   size_t numberOfElements,  
-   const wchar_t *strSource   
-);  
-errno_t _mbscpy_s(  
-   unsigned char *strDestination,  
-   size_t numberOfElements,  
-   const unsigned char *strSource   
-);  
-template <size_t size>  
-errno_t strcpy_s(  
-   char (&strDestination)[size],  
-   const char *strSource   
-); // C++ only  
-template <size_t size>  
-errno_t wcscpy_s(  
-   wchar_t (&strDestination)[size],  
-   const wchar_t *strSource   
-); // C++ only  
-template <size_t size>  
-errno_t _mbscpy_s(  
-   unsigned char (&strDestination)[size],  
-   const unsigned char *strSource   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `strDestination`  
- Speicherort des Zielzeichenfolgenpuffers.  
-  
- `numberOfElements`  
- Größe des Zielzeichenfolgenpuffers in `char` Einheiten für schmale und Multi-Byte-Funktionen und `wchar_t` Einheiten für große Funktionen.  
-  
- `strSource`  
- Auf NULL endender Quellzeichenfolgepuffer.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Null (0), wenn erfolgreich; andernfalls ein Fehler.  
-  
-### <a name="error-conditions"></a>Fehlerbedingungen  
-  
-|`strDestination`|`numberOfElements`|`strSource`|Rückgabewert|Inhalt von `strDestination`|  
-|----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|any|`EINVAL`|nicht geändert|  
-|any|any|`NULL`|`EINVAL`|`strDestination`[0] auf 0 festgelegt|  
-|any|0 oder zu klein|any|`ERANGE`|`strDestination`[0] auf 0 festgelegt|  
-  
-## <a name="remarks"></a>Hinweise  
- Die `strcpy_s`-Funktion kopiert den Inhalt der Adresse von `strSource`, einschließlich des abschließenden NULL-Zeichens, an den Speicherort, der von `strDestination` angegeben wird. Die Zielzeichenfolge muss groß genug sein, um die Quellzeichenfolge und ihr beendendes NULL-Zeichen zu enthalten. Wenn sich Quell- und Zielzeichenfolgen überlappen, ist das Verhalten von `strcpy_s` undefiniert.  
-  
- `wcscpy_s` ist die Breitzeichen-Version von `strcpy_s`, und `_mbscpy_s` ist die Mehrbytezeichen-Version. Die Argumente und der Rückgabewert von `wcscpy_s` sind Breitzeichen-Zeichenfolgen; die von `_mbscpy_s` sind Mehrbyte-Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.  
-  
- Wenn `strDestination` oder `strSource` ein NULL-Zeiger ist oder die Zielzeichenfolge zu klein ist, wird der Handler für ungültige Parameter, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die Ausführung fortgesetzt werden darf, geben diese Funktionen `EINVAL` zurück und legen `errno` auf `EINVAL` fest, wenn `strDestination` oder `strSource` ein NULL-Zeiger ist und sie `ERANGE` zurückgeben und `errno` auf `ERANGE` festlegen, wenn die Zielzeichenfolge zu klein ist.  
-  
- Nach erfolgreicher Ausführung endet die Zielzeichenfolge immer auf NULL.  
-  
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen, wodurch kein Größenargument mehr angegeben werden muss, und sie können automatisch die älteren, weniger sicheren Funktionen durch ihre neueren, sichereren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strcpy_s`|\<string.h>|  
-|`wcscpy_s`|\<string.h> oder \<wchar.h>|  
-|`_mbscpy_s`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_strcpy_s.cpp  
-// This program uses strcpy_s and strcat_s  
-// to build a phrase.  
-//  
-  
-#include <string.h>  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main( void )  
-{  
-   char string[80];  
-   // using template versions of strcpy_s and strcat_s:  
-   strcpy_s( string, "Hello world from " );  
-   strcat_s( string, "strcpy_s " );  
-   strcat_s( string, "and " );  
-   // of course we can supply the size explicitly if we want to:  
-   strcat_s( string, _countof(string), "strcat_s!" );  
-  
-   printf( "String = %s\n", string );  
-}  
-```  
-  
-```Output  
-String = Hello world from strcpy_s and strcat_s!  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> `_mbscpy_s` kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t strcpy_s(
+   char *dest,
+   rsize_t dest_size,
+   const char *src
+);
+errno_t wcscpy_s(
+   wchar_t *dest,
+   rsize_t dest_size,
+   const wchar_t *src
+);
+errno_t _mbscpy_s(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src
+);
+```
+
+```cpp
+// Template functions are C++ only:
+template <size_t size>
+errno_t strcpy_s(
+   char (&dest)[size],
+   const char *src
+); // C++ only
+template <size_t size>
+errno_t wcscpy_s(
+   wchar_t (&dest)[size],
+   const wchar_t *src
+); // C++ only
+template <size_t size>
+errno_t _mbscpy_s(
+   unsigned char (&dest)[size],
+   const unsigned char *src
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*dest*<br/>
+Speicherort des Zielzeichenfolgenpuffers.
+
+*dest_size*<br/>
+Größe des zielzeichenfolgenpuffers in **Char** Einheiten für schmale und Multi-Byte-Funktionen und **Wchar_t** Einheiten für große Funktionen. Dieser Wert muss größer als 0 (null) und nicht größer als **RSIZE_MAX**.
+
+*src*<br/>
+Auf NULL endender Quellzeichenfolgepuffer.
+
+## <a name="return-value"></a>Rückgabewert
+
+Null (0), wenn erfolgreich; andernfalls ein Fehler.
+
+### <a name="error-conditions"></a>Fehlerbedingungen
+
+|*dest*|*dest_size*|*src*|Rückgabewert|Inhalt der *Dest*|
+|----------------------|------------------------|-----------------|------------------|----------------------------------|
+|**NULL**|alle|alle|**EINVAL**|nicht geändert|
+|alle|alle|**NULL**|**EINVAL**|*Dest*[0] auf 0 festgelegt|
+|alle|0 oder zu klein|alle|**ERANGE**|*Dest*[0] auf 0 festgelegt|
+
+## <a name="remarks"></a>Hinweise
+
+Die `strcpy_s` Funktion übernimmt den Inhalt in die Adresse des *Src*, einschließlich des abschließenden Null-Zeichens zu dem Speicherort, der von angegeben wird *Dest*. Die Zielzeichenfolge muss groß genug sein, um die Quellzeichenfolge und ihr beendendes NULL-Zeichen zu enthalten. Wenn sich Quell- und Zielzeichenfolgen überlappen, ist das Verhalten von `strcpy_s` undefiniert.
+
+`wcscpy_s` ist die Breitzeichen-Version von `strcpy_s`, und `_mbscpy_s` ist die Mehrbytezeichen-Version. Die Argumente von `wcscpy_s` sind Breitzeichen-Zeichenfolgen, die von `_mbscpy_s` sind Multibyte-Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+
+Wenn *Dest* oder *Src* ein null-Zeiger ist oder wenn das Ziel Größe Zeichenfolge *Dest_size* zu klein ist, wird der Handler für ungültige Parameter aufgerufen, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** auf **EINVAL** Wenn *Dest* oder  *Src* ein null-Zeiger ist, und sie zurückgeben **ERANGE** und **Errno** auf **ERANGE** Wenn die Zielzeichenfolge zu klein ist.
+
+Nach erfolgreicher Ausführung endet die Zielzeichenfolge immer auf NULL.
+
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen, wodurch kein Größenargument mehr angegeben werden muss, und sie können automatisch die älteren, weniger sicheren Funktionen durch ihre neueren, sichereren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Die Bibliothek Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE". Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|`strcpy_s`|\<string.h>|
+|`wcscpy_s`|\<string.h> oder \<wchar.h>|
+|`_mbscpy_s`|\<mbstring.h>|
+
+Diese Funktionen sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Im Gegensatz zu Quality Produktionscode ruft in diesem Beispiel die sichere Zeichenfolge-Funktionen, ohne auf Fehler überprüft:
+
+```C
+// crt_strcpy_s.c
+// Compile by using: cl /W4 crt_strcpy_s.c
+// This program uses strcpy_s and strcat_s
+// to build a phrase.
+
+#include <string.h>     // for strcpy_s, strcat_s
+#include <stdlib.h>     // for _countof
+#include <stdio.h>      // for printf
+#include <errno.h>      // for return values
+
+int main(void)
+{
+    char string[80];
+
+    strcpy_s(string, _countof(string), "Hello world from ");
+    strcat_s(string, _countof(string), "strcpy_s ");
+    strcat_s(string, _countof(string), "and ");
+    strcat_s(string, _countof(string), "strcat_s!");
+
+    printf("String = %s\n", string);
+}
+```
+
+```Output
+String = Hello world from strcpy_s and strcat_s!
+```
+
+Beim Erstellen von C++-Code möglicherweise die Vorlagenversionen einfacher zu verwenden.
+
+```cpp
+// crt_wcscpy_s.cpp
+// Compile by using: cl /EHsc /W4 crt_wcscpy_s.cpp
+// This program uses wcscpy_s and wcscat_s
+// to build a phrase.
+
+#include <cstring>  // for wcscpy_s, wcscat_s
+#include <cstdlib>  // for _countof
+#include <iostream> // for cout, includes <cstdlib>, <cstring>
+#include <errno.h>  // for return values
+
+int main(void)
+{
+    wchar_t string[80];
+    // using template versions of wcscpy_s and wcscat_s:
+    wcscpy_s(string, L"Hello world from ");
+    wcscat_s(string, L"wcscpy_s ");
+    wcscat_s(string, L"and ");
+    // of course we can supply the size explicitly if we want to:
+    wcscat_s(string, _countof(string), L"wcscat_s!");
+
+    std::wcout << L"String = " << string << std::endl;
+}
+```
+
+```Output
+String = Hello world from wcscpy_s and wcscat_s!
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) <br/>
+[strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) <br/>
+[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

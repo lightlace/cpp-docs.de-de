@@ -1,27 +1,27 @@
 ---
-title: "Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2) | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2)
 In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es und testen es auf einer Webseite.  
@@ -32,9 +32,9 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
   
 1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf das Projekt "Polygon".  
   
-2.  Zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **Klasse** im Untermenü.  
+2.  Zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **neues Element** im Untermenü.  
   
-     Die **Klasse hinzufügen** Dialogfeld wird angezeigt. Die verschiedenen Objektkategorien werden in der Struktur links aufgeführt.  
+     Das Dialogfeld **Neues Element hinzufügen** wird angezeigt. Die verschiedenen Objektkategorien werden in der Struktur links aufgeführt.  
   
 3.  Klicken Sie auf die **ATL** Ordner.  
   
@@ -48,9 +48,9 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
 |-----------|--------------|  
 |**Kurzname**|Der Name, den Sie für das Steuerelement eingegeben haben.|  
 |**Klasse**|Der C++-Klassenname, der erstellt wurde, um das Steuerelement zu implementieren.|  
-|**.h-Datei**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
-|**CPP-Datei**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
-|**Co-Klasse**|Der Name der Komponentenklasse für dieses Steuerelement.|  
+|**.h file**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
+|**.cpp file**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
+|**CoClass**|Der Name der Komponentenklasse für dieses Steuerelement.|  
 |**Interface**|Der Name der Schnittstelle, auf der das Steuerelement die benutzerdefinierten Methoden und Eigenschaften implementiert.|  
 |**Type**|Eine Beschreibung für das Steuerelement.|  
 |**ProgID**|Der lesbare Name, der verwendet werden kann, um die CLSID des Steuerelements zu suchen.|  
@@ -113,8 +113,8 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
   
  Als Nächstes fügen Sie dem Steuerelement eine benutzerdefinierte Eigenschaft hinzu.  
   
- [Zurück zu Schritt 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Weiter zu Schritt 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [Zurück zu Schritt 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [weiter zu Schritt 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+ [Tutorial](../atl/active-template-library-atl-tutorial.md)
 
