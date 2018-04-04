@@ -1,28 +1,28 @@
 ---
 title: Desktopanwendungen (Visual C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
 Ein *Desktopanwendung* in C++ ist eine systemeigene Anwendung, die den vollständigen Satz von Windows-APIs und entweder ausgeführt wird, die in einem Fenster oder in der Systemkonsole zugreifen können. Desktopanwendungen in C++ können unter Windows XP bis Windows 10 ausgeführt werden (Obwohl Windows XP wird nicht mehr offiziell unterstützt, und es gibt viele Windows-APIs, die seitdem eingeführt wurden).   Eine Desktopanwendung unterscheidet sich von einer app für universelle Windows-Plattform (UWP), die auf PCs unter Windows 10 sowie auf XBox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden kann. Weitere Informationen zu desktop-Visual Studio. Uwp-Apps, finden Sie unter [wählen Sie Ihre Technologiekosten](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -54,7 +54,7 @@ Ein *Desktopanwendung* in C++ ist eine systemeigene Anwendung, die den vollstän
 |Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Windows-Entwicklung](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Enthält Informationen zur Windows-API und COM. (Einige Windows-APIs und Drittanbieter-DLLs werden als COM-Objekte implementiert).|  
-|[Hilo: Entwickeln von C++-Anwendungen für Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  Dieses Lernprogramm wurde nicht aktualisiert wurde, seit Windows 7, aber es bietet weiterhin eine Throough-Einführung in Win32-Programmierung.|  
+|[Hilo: Entwickeln von C++-Anwendungen für Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  Dieses Lernprogramm wurde nicht aktualisiert wurde, seit Windows 7, aber es bietet weiterhin eine umfassende Einführung in Win32-Programmierung.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Beschreibt die wichtigsten Features von Visual C++ in Visual Studio und verlinkt zum Rest der Visual C++-Dokumentation.|  
   
 ## <a name="see-also"></a>Siehe auch  
