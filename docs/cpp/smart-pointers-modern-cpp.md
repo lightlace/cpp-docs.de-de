@@ -1,33 +1,33 @@
 ---
 title: Intelligente Zeiger (Modern C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
 In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zeiger*, die verwendet werden, um sicherzustellen, dass Programme sind frei von Speicher- und Ressource von Speicherverlusten und ausnahmesicher sind.  
   
 ## <a name="uses-for-smart-pointers"></a>Anwendungsmöglichkeiten für intelligente Zeiger  
- Intelligente Zeiger werden definiert, der `std` Namespace in der [ \<Arbeitsspeicher >](../standard-library/memory.md) Headerdatei. Sie sind entscheidend für die [RAII](../cpp/objects-own-resources-raii.md) oder *Resource Acquisition ist Initialialization* Programmierung Idiom. Das wichtigste Ziel dieses Technik ist sicherzustellen, dass die Ressourcenerfassung zur gleichen Zeit erfolgt wie die Initialisierung des Objekts, damit alle Ressourcen für das Objekt in einer Codezeile erstellt und vorbereitet werden können. Praktisch ist es das Hauptprinzip von RAII, die Verfügung über jede auf dem Heap zugeordnete Ressource (beispielsweise dynamisch zugeordneter Arbeitsspeicher oder Systemobjekthandles) einem auf dem Stapel zugeordneten Objekt zu übertragen, dessen Destruktor sowohl den Code enthält, um die Ressource zu löschen oder freizugeben, als auch jeden zugehörigen Bereinigungscode.  
+ Intelligente Zeiger werden definiert, der `std` Namespace in der [ \<Arbeitsspeicher >](../standard-library/memory.md) Headerdatei. Sie sind entscheidend für die [RAII](../cpp/objects-own-resources-raii.md) oder *Resource Acquisition Is Initialization* Programmierung Idiom. Das wichtigste Ziel dieses Technik ist sicherzustellen, dass die Ressourcenerfassung zur gleichen Zeit erfolgt wie die Initialisierung des Objekts, damit alle Ressourcen für das Objekt in einer Codezeile erstellt und vorbereitet werden können. Praktisch ist es das Hauptprinzip von RAII, die Verfügung über jede auf dem Heap zugeordnete Ressource (beispielsweise dynamisch zugeordneter Arbeitsspeicher oder Systemobjekthandles) einem auf dem Stapel zugeordneten Objekt zu übertragen, dessen Destruktor sowohl den Code enthält, um die Ressource zu löschen oder freizugeben, als auch jeden zugehörigen Bereinigungscode.  
   
  Wenn Sie einen Rohzeiger oder ein Ressourcenhandle für eine aktuelle Ressource initialisieren, sollten Sie den Zeiger in den meisten Fällen sofort einem intelligenten Zeiger zuweisen. In modernem C++ werden Rohzeiger nur in kleinen Codeblöcken mit begrenztem Gültigkeitsbereich, in Schleifen oder Hilfsfunktionen verwendet, in denen Leistung ausschlaggebend ist und keine Verwirrung über den Besitzer entstehen kann.  
   
@@ -77,7 +77,7 @@ In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
  Verwenden Sie vorrangig diese intelligenten Zeiger zum Kapseln von Zeigern auf einfache alte C++-Objekte (Plain Old CLR Objects, POCOs).  
   
 -   `unique_ptr`   
-     Ermöglicht genau einen Besitzer für den zugrunde liegenden Zeiger. Verwenden Sie diesen Zeiger als Standardwahl für POCOs, es sei denn, Sie sind sicher, dass Sie einen `shared_ptr` benötigen. Kann zu einem neuen Besitzer verschoben werden, kann aber nicht kopiert oder freigegeben werden. Ersetzt `auto_ptr`, der veraltet ist. Ist vergleichbar mit `boost::scoped_ptr`. `unique_ptr`ist klein und effizient; die Größe ist ein Zeiger und Rvalue-Referenzen für schnelles Einfügen und Abrufen von C++-Standardbibliothek Auflistungen unterstützt. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md) und [Unique_ptr-Klasse](../standard-library/unique-ptr-class.md).  
+     Ermöglicht genau einen Besitzer für den zugrunde liegenden Zeiger. Verwenden Sie diesen Zeiger als Standardwahl für POCOs, es sei denn, Sie sind sicher, dass Sie einen `shared_ptr` benötigen. Kann zu einem neuen Besitzer verschoben werden, kann aber nicht kopiert oder freigegeben werden. Ersetzt `auto_ptr`, der veraltet ist. Ist vergleichbar mit `boost::scoped_ptr`. `unique_ptr` ist klein und effizient; die Größe ist ein Zeiger und Rvalue-Referenzen für schnelles Einfügen und Abrufen von C++-Standardbibliothek Auflistungen unterstützt. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md) und [Unique_ptr-Klasse](../standard-library/unique-ptr-class.md).  
   
 -   `shared_ptr`   
      Intelligenter Zeiger mit Referenzzählung. Verwenden Sie diesen Zeiger, wenn Sie mehreren Besitzern einen Rohzeiger zuweisen möchten. Beispiel: Sie geben eine Kopie eines Zeigers von einem Container zurück, möchten aber das Original behalten. Der Rohzeiger wird erst gelöscht, wenn alle `shared_ptr`-Besitzer den Gültigkeitsbereich verlassen haben oder auf andere Weise nicht mehr Besitzer sind. Die Größe beträgt zwei Zeiger; einen für das Objekt und einen für den freigegebenen Kontrollblock, der den Referenzzähler enthält. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen](../cpp/how-to-create-and-use-shared-ptr-instances.md) und [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md).  

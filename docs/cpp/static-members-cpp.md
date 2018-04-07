@@ -1,12 +1,12 @@
 ---
 title: Statische Member (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 420139a8e7eba02411ef0e1e3cf39cecc5b3e97a
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="static-members-c"></a>Statische Member (C++)
 Klassen können statische Memberdaten und Memberfunktionen enthalten. Wenn ein Datenmember deklariert wird, als **statische**, nur eine Kopie der Daten wird für alle Objekte der Klasse beibehalten.
   
  Statische Datenmember sind nicht Teil von Objekten eines angegebenen Klassentyps. Daher gilt die Deklaration eines statischen Datenmembers nicht als eine Definition. Der Datenmember wird im Klassenbereich deklariert, die Definition wird jedoch im Dateigültigkeitsbereich ausgeführt. Diese statischen Member verfügen über eine externe Bindung. Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
-```  
+```cpp  
 // static_data_members.cpp  
 class BufferedOutput  
 {  
@@ -72,13 +72,13 @@ int main()
   
  Auf statische Datenmember kann verwiesen werden, ohne dass auf ein Klassentypobjekt verwiesen wird. Die Anzahl von Bytes, die mithilfe von `BufferedOutput`-Objekten geschrieben wurden, kann wie folgt abgerufen werden:  
   
-```  
+```cpp  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Damit der statische Member vorhanden sein kann, ist es nicht notwendig, dass Klassentypobjekte vorhanden sind. Statische Member können auch mithilfe der memberauswahloperatoren zugegriffen werden (**.** und  **->** ) Operatoren. Zum Beispiel:  
+ Damit der statische Member vorhanden sein kann, ist es nicht notwendig, dass Klassentypobjekte vorhanden sind. Statische Member können auch mithilfe der memberauswahloperatoren zugegriffen werden (**.** und **->**) Operatoren. Zum Beispiel:  
   
-```  
+```cpp  
 BufferedOutput Console;  
   
 long nBytes = Console.bytecount;  

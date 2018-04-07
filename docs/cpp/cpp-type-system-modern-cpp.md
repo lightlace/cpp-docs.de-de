@@ -1,27 +1,27 @@
 ---
 title: C++-Typsystem (Modern C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsargument und jeder Rückgabewert muss über einen Typ verfügen, um kompiliert werden zu können. Außerdem wird jedem Ausdruck (einschließlich Literalwerten) vom Compiler implizit ein Typ angegeben, bevor der Ausdruck ausgewertet wird. Einige Beispiele für Typen `int` zum Speichern von ganzzahliger Werten `double` zum Speichern von Gleitkommawerten (auch bekannt als *skalare* Datentypen), oder der Standardbibliothek Klasse [Standardbibliotheksklasse](../standard-library/basic-string-class.md) zum Speichern von Text. Sie können auch einen eigenen Typ erstellen, indem Sie eine `class` oder ein `struct` definieren. Der Typ gibt den Speicher an, der für die Variable (oder das Ausdrucksergebnis) zugeordnet ist, die Wertarten, die in dieser Variablen gespeichert werden können, wie diese Werte (als Bitmuster) interpretiert werden, und die Vorgänge, die darauf ausgeführt werden können. In diesem Artikel ist eine informelle Übersicht der Hauptfunktionen des C++-Typsystems enthalten.  
@@ -44,7 +44,7 @@ Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsarg
   
  Im folgenden Beispiel werden einige einfache Variablendeklarationen dargestellt, jeweils mit einigen Beschreibungen. In dem Beispiel wird auch die Verwendung der Typinformationen durch den Compiler dargestellt, um bestimmte nachfolgende Vorgänge in den Variablen zuzulassen oder zu verweigern.  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  In der folgende Abbildung wird die relative Größe der integrierten Datentypen dargestellt:  
   
- ![Größe in Byte erstellt &#45; in Typen](../cpp/media/built-intypesizes.png "integrierte InTYpeSizes")  
+ ![Größe in Byte erstellt&#45;in Typen](../cpp/media/built-intypesizes.png "integrierte InTYpeSizes")  
   
  In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typen aufgelistet:  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>const-Typqualifizierer  
  Alle integrierten oder benutzerdefinierten Typen werden vom const-Schlüsselwort qualifiziert. Darüber hinaus werden Memberfunktionen möglicherweise von `const`- qualifiziert und sogar von `const`- überladen. Der Wert eines `const`-Typs kann nach der Initialisierung nicht geändert werden.  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  Als Erstes sollten Sie wissen, dass bei der Deklaration einer unformatierter Zeigervariable nur Speicher zugeordnet wird, der zum Speichern der Adresse des Speicherorts belegt wird, auf den der Zeiger verweist, wenn er dereferenziert wird. Speicherbelegung für den Datenwert selbst (so genannte *Sicherungsspeicher*) wurde noch nicht zugeordnet. Das heißt, indem Sie eine unformatierte Zeigervariable deklarieren, erstellen Sie eine Speicheradressenvariable, keine tatsächliche Datenvariable. Das Dereferenzieren einer Zeigervariable vor der Sicherstellung, dass sie eine gültige Adresse auf einen Sicherungsspeicher enthält, verursacht nicht definiertes Verhalten (normalerweise ein schwerwiegender Fehler) im Programm. Im folgenden Beispiel wird die Verwendung dieses Fehlertyps veranschaulicht.  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Das Beispiel dereferenziert einen Zeigertyp, ohne dass Arbeitsspeicher zum Speichern der tatsächlichen Ganzzahldaten belegt ist oder dass ein gültiger Speicherort zu zugewiesen wurde. Der folgende Code korrigiert diese Fehler:  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -151,7 +151,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Es ist jedoch schnell vergessen, eine dynamisch zugeordnete Objekt-besonders bei komplexem Code löschen, die eine bezeichneten Ressourcenfehler verursacht eine *Speicherverlust*. Aus diesem Grund wird vor der Verwendung unformatierter Zeigern in modernem C++ abgesehen. Es ist fast immer besser, einen unformatierten Zeiger in umschließen einer [intelligenten Zeiger](../cpp/smart-pointers-modern-cpp.md), wird der den Arbeitsspeicher automatisch freigibt, sobald sein Destruktor aufgerufen wird (wenn der Code den Bereich für den intelligenten Zeiger verlässt); durch die Verwendung von intelligenten Zeigern Sie praktisch Vermeiden Sie eine ganze Fehlerklasse in Ihren C++-Programmen. Im folgenden Beispiel wird angenommen, dass `MyClass` ein benutzerdefinierter Typ ist, der eine öffentliche Methode `DoSomeWork();` umfasst.  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
