@@ -1,12 +1,12 @@
 ---
-title: "Mithilfe von Visual C++ zum Hinzufügen neuer Elemente Vorlagen | Microsoft Docs"
-ms.custom: 
+title: Mithilfe von Visual C++ zum Hinzufügen neuer Elemente Vorlagen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Verwenden von Vorlagen zum Hinzufügen neuer Elemente in Visual C++
 Sie können problemlos hinzufügen, Elemente, die mit Visual C++-Projekten gemein sind die **neues Element hinzufügen** Befehl. Bei Verwendung der **neues Element hinzufügen** Befehl, der `Add New Item` Dialogfeld wird angezeigt, mit einer Liste von Elementvorlagen, die die entsprechenden Dateien zum Projekt hinzufügen.  
@@ -43,7 +43,7 @@ Sie können problemlos hinzufügen, Elemente, die mit Visual C++-Projekten gemei
 |Die Konfigurationsdatei (app.config)|Erstellt eine leere Konfigurationsdatei an.|  
 |Komponentenklasse|Fügt eine Komponentenklasse mit CLR-Funktionen.|  
 |Cursor-Datei (.cur)|Erstellt eine Win32-Cursordatei.|  
-|Statische (DISCO) Discovery-Datei|Erstellt eine statische Discovery-Datei, also ein XML-Dokument, die ermöglicht den programmgesteuerten Ermittlung eines XML-Webdiensts enthält Links zu weiteren Ressourcen, die den XML-Webdienst beschreiben.|  
+|Discovery File, Static (.disco)|Erstellt eine statische Discovery-Datei, also ein XML-Dokument, die ermöglicht den programmgesteuerten Ermittlung eines XML-Webdiensts enthält Links zu weiteren Ressourcen, die den XML-Webdienst beschreiben.|  
 |Frameset (HTML)|Fügt eine HTML-Datei, die mehrere HTML-Seiten hostet.|  
 |Headerdatei (. h)|Erstellt eine C++-Headerdatei.|  
 |HTML-Seite (.htm)|Erstellt eine leere HTML-Datei an.|  
@@ -58,12 +58,12 @@ Sie können problemlos hinzufügen, Elemente, die mit Visual C++-Projekten gemei
 |Ressourcenvorlagendatei (.rct)|Erstellt eine Ressourcenvorlagendatei.|  
 |Menüband (.mfcribbon-ms)|Erstellt eine Menübanddatei.|  
 |Datei (.srf)|Erstellt eine Server-Antwort-Datei, die mit ATL-Server verwendet wird.|  
-|SQL-Skriptdatei (. SQL)|Erstellt eine SQL-Skriptdatei an. **Hinweis:** dieser Vorlage ist keine Funktion Professional Edition.|  
+|SQL Script File (.sql)|Erstellt eine SQL-Skriptdatei an. **Hinweis:** dieser Vorlage ist keine Funktion Professional Edition.|  
 |Stylesheet (CSS)|Fügt ein cascading Stylesheet für umfangreiche HTML-Formaten.|  
 |Textdatei (.txt)|Fügt eine leere Textdatei an.|  
 |Benutzersteuerelement|Fügt ein Benutzersteuerelement mithilfe der CLR-Funktionen.|  
 |Windows Forms|Fügt ein Windows Form, die mit CLR-Funktionen.|  
-|XML-Datei (XML)|Fügt eine leere XML-Datei hinzu.|  
+|XML File (.xml)|Fügt eine leere XML-Datei hinzu.|  
 |XML-Schemadatei (.xsd)|Erstellt eine Datei, die zum Definieren eines Schemas für XML-Dokumenten verwendet wird.|  
 |XSLT-Datei (XSLT)|Erstellt eine Datei, die zum Transformieren von XML-Dokumenten verwendet.|  
   

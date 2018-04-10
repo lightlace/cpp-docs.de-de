@@ -1,12 +1,12 @@
 ---
 title: Globale Funktionen zusammengesetztes Steuerelement | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +27,17 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen von zusammengesetzten Steuerelementen
 Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern und zum Erstellen, hosten und Lizenzieren von ActiveX-Steuerelementen.  
@@ -47,7 +47,7 @@ Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern und 
   
 |||  
 |-|-|  
-|[AtlAxCreateDialog](#atlaxdialogbox)|Erstellt ein modales Dialogfeld aus einer vom Benutzer angegebenen Dialogfeldvorlage. Im daraufhin angezeigten Dialogfeld kann ActiveX-Steuerelemente enthalten.|  
+|[AtlAxDialogBox](#atlaxdialogbox)|Erstellt ein modales Dialogfeld aus einer vom Benutzer angegebenen Dialogfeldvorlage. Im daraufhin angezeigten Dialogfeld kann ActiveX-Steuerelemente enthalten.|  
 |[AtlAxCreateDialog](#atlaxcreatedialog)|Erstellt ein nicht modales Dialogfeld aus einer vom Benutzer angegebenen Dialogfeldvorlage. Im daraufhin angezeigten Dialogfeld kann ActiveX-Steuerelemente enthalten.|  
 |[AtlAxCreateControl](#atlaxcreatecontrol)|Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.|  
 |[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Erstellt ein ActiveX-Steuerelement, initialisiert es im angegebenen Fenster gehostet und ruft einen Schnittstellenzeiger (oder Zeiger) aus dem Steuerelement ab.|  
@@ -64,7 +64,7 @@ Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern und 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>AtlAxCreateDialog  
+##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog  
  Erstellt ein modales Dialogfeld aus einer vom Benutzer angegebenen Dialogfeldvorlage.  
    
 ```
@@ -107,7 +107,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
   
  Weitere Informationen zu den Dialogfeldern im Allgemeinen, finden Sie unter [Dialogfeld](http://msdn.microsoft.com/library/windows/desktop/ms645452) und [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) im Windows SDK.  
   
-##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Erstellt ein nicht modales Dialogfeld aus einer vom Benutzer angegebenen Dialogfeldvorlage.  
   
 ```
@@ -143,7 +143,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  Finden Sie unter [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) und [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) im Windows SDK.  
   
-##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
   
 
@@ -189,7 +189,7 @@ ATLAPI AtlAxCreateControl(
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
-##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster. Weiterhin können ein Schnittstellenzeiger und eine Ereignissenke für das neue Steuerelement erstellt werden.  
   
 ```
@@ -242,11 +242,11 @@ ATLAPI AtlAxCreateControlEx(
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- `AtlAxCreateControlEx`ähnelt dem [AtlAxCreateControl](#atlaxcreatecontrol) aber auch können Sie erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement und eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
+ `AtlAxCreateControlEx` ähnelt dem [AtlAxCreateControl](#atlaxcreatecontrol) aber auch können Sie erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement und eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
-##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
 
 ```
@@ -293,7 +293,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ein Beispiel zum Verwenden von `AtlAxCreateControlLic`.  
   
-##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster. Weiterhin können ein Schnittstellenzeiger und eine Ereignissenke für das neue Steuerelement erstellt werden.  
   
 ```
@@ -350,12 +350,12 @@ ATLAPI AtlAxCreateControlLicEx(
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- `AtlAxCreateControlLicEx`ähnelt dem [AtlAxCreateControlLic](#atlaxcreatecontrollic) aber auch können Sie erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement und eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
+ `AtlAxCreateControlLicEx` ähnelt dem [AtlAxCreateControlLic](#atlaxcreatecontrollic) aber auch können Sie erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement und eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
   
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ein Beispiel zum Verwenden von `AtlAxCreateControlLicEx`.  
   
-##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  Fügt ein bereits erstelltes Steuerelement an das angegebene Fenster an.  
   
 ```
@@ -384,7 +384,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  Das Steuerelementobjekt anzufügende muss ordnungsgemäß initialisiert werden, vor dem Aufruf `AtlAxAttachControl`.  
   
-##  <a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  Ruft anhand eines bestimmten Fensters einen direkten Schnittstellenzeiger zu dem Container für das Fenster (sofern vorhanden) ab.  
   
 ```
@@ -401,7 +401,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Rückgabewert  
  Einer der standardmäßigen HRESULT-Werte.  
   
-##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl  
  Ruft anhand des Handles eines angegebenen Fensters einen direkten Schnittstellenzeiger zu dem Steuerelement ab, das in dem Fenster enthalten ist.  
   
 ```
@@ -418,7 +418,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Rückgabewert  
  Einer der standardmäßigen HRESULT-Werte.  
   
-##  <a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
  Mit dieser Funktion können Sie die Website eines untergeordneten Objekts zum Festlegen der **IUnknown** des übergeordneten Objekts.  
   
 ```
@@ -435,7 +435,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard HRESULT-Wert.  
   
-##  <a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>  AtlAxWinInit  
  Diese Funktion initialisiert den ATL Steuerelements durch Registrierung der **"AtlAxWin80"** und **"AtlAxWinLic80"** Fensterklassen sowie einer Reihe von benutzerdefinierten fenstermeldungen.  
   
 ```
@@ -448,7 +448,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion muss aufgerufen werden, bevor Sie das ATL-Steuerelement, das hosting-API verwenden. Nach einem Aufruf dieser Funktion können die **"AtlAxWin"** Fensterklasse kann verwendet werden, in Aufrufen an [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) oder [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)gemäß der Beschreibung im Windows SDK.  
 
-##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Diese Funktion hebt die Initialisierung ATLs-Steuerelements durch Aufheben der Registrierung der **"AtlAxWin80"** und **"AtlAxWinLic80"** Fensterklassen.  
   
 ```
@@ -463,7 +463,7 @@ inline BOOL AtlAxWinTerm();
   
  Mit dieser Funktion wird zum Bereinigen, nachdem alle vorhandenen Hostfenster zerstört wurden, wenn Sie aufgerufen [AtlAxWinInit](#atlaxwininit) und Sie nicht mehr benötigen, Host erstellen. Wenn Sie diese Funktion nicht aufrufen, werden die Fensterklasse aufgehoben automatisch beim Beenden des Prozesses.  
   
-##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  Mit dieser Funktion werden Informationen über die Standardquellschnittstelle eines Objekts abgerufen.  
   
 ```
@@ -495,13 +495,13 @@ ATLAPI AtlGetObjectSourceInterface(
  Ein standard HRESULT-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- `AtlGetObjectSourceInterface`können Sie mit der Schnittstellen-ID des Standard-Quellschnittstelle, zusammen mit den LIBID und Haupt- und Nebenversionsnummern der Typbibliothek, die diese Schnittstelle beschreibt bereitstellen.  
+ `AtlGetObjectSourceInterface` können Sie mit der Schnittstellen-ID des Standard-Quellschnittstelle, zusammen mit den LIBID und Haupt- und Nebenversionsnummern der Typbibliothek, die diese Schnittstelle beschreibt bereitstellen.  
   
 > [!NOTE]
 >  Für diese Funktion, um die angeforderten Informationen erfolgreich abzurufen, das Objekt dargestellte `punkObj` implementieren müssen `IDispatch` (und Zurückgeben von Informationen über **IDispatch:: GetTypeInfo**) plus muss auch Implementieren Sie entweder `IProvideClassInfo2` oder `IPersist`. Die Typinformationen für die Quellschnittstelle muss in der gleichen Typbibliothek als die Typinformationen für `IDispatch`.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie eine Ereignisklasse Senke definieren möglicherweise `CEasySink`, die reduziert der Anzahl der Argumente, die Sie übergeben können `IDispEventImpl` zu bare Essentials. `EasyAdvise`und `EasyUnadvise` verwenden `AtlGetObjectSourceInterface` zum Initialisieren der [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) Elemente vor dem Aufruf [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) oder [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
+ Das folgende Beispiel zeigt, wie Sie eine Ereignisklasse Senke definieren möglicherweise `CEasySink`, die reduziert der Anzahl der Argumente, die Sie übergeben können `IDispEventImpl` zu bare Essentials. `EasyAdvise` und `EasyUnadvise` verwenden `AtlGetObjectSourceInterface` zum Initialisieren der [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) Elemente vor dem Aufruf [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) oder [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   

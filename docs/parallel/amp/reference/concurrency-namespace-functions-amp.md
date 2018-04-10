@@ -1,10 +1,10 @@
 ---
 title: Concurrency-Namespace-Funktionen (AMP) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,25 +20,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency-Namespace-Funktionen (AMP)
 ||||  
 |-|-|-|  
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|  
-|[atomic_exchange Function (C++ AMP)](#atomic_exchange)|[Atomic_fetch_add-Funktion (C++-AMP)](#atomic_fetch_add)|[atomic_fetch_and Function (C++ AMP)](#atomic_fetch_and)|  
+|[Atomic_exchange-Funktion (C++-AMP)](#atomic_exchange)|[Atomic_fetch_add-Funktion (C++-AMP)](#atomic_fetch_add)|[Atomic_fetch_and-Funktion (C++-AMP)](#atomic_fetch_and)|  
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|  
-|[atomic_fetch_min](#atomic_fetch_min)|[Atomic_fetch_or-Funktion (C++-AMP)](#atomic_fetch_or)|[atomic_fetch_sub Function (C++ AMP)](#atomic_fetch_sub)|  
+|[atomic_fetch_min](#atomic_fetch_min)|[Atomic_fetch_or-Funktion (C++-AMP)](#atomic_fetch_or)|[Atomic_fetch_sub-Funktion (C++-AMP)](#atomic_fetch_sub)|  
 |[Atomic_fetch_xor-Funktion (C++-AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|  
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|  
 |[global_memory_fence](#global_memory_fence)|[Parallel_for_each-Funktion (C++-AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
@@ -126,7 +126,7 @@ inline float atomic_exchange(
  Der ursprüngliche Wert des Zielspeicherorts.  
   
 
-##  <a name="atomic_fetch_add">Atomic_fetch_add-Funktion (C++-AMP)</a>  
+##  <a name="atomic_fetch_add"></a>  Atomic_fetch_add-Funktion (C++-AMP)  
  Fügen Sie einen Wert atomisch auf den Wert eines Speicherbereichs.  
   
 ```  
@@ -265,7 +265,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>Rückgabewert  
  Der ursprüngliche Wert wird an der angegebenen Position gespeichert.  
   
-##  <a name="atomic_fetch_or">Atomic_fetch_or-Funktion (C++-AMP)</a>  
+##  <a name="atomic_fetch_or"></a>  Atomic_fetch_or-Funktion (C++-AMP)  
  Atomar führt eine bitweise OR-Operation mit einem Wert und den Wert eines Speicherbereichs.  
   
 ```  
@@ -317,7 +317,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>Rückgabewert  
  Der ursprüngliche Wert des Speicherbereichs.  
   
-##  <a name="atomic_fetch_xor">Atomic_fetch_xor-Funktion (C++-AMP)</a>  
+##  <a name="atomic_fetch_xor"></a>  Atomic_fetch_xor-Funktion (C++-AMP)  
  Atomar führt eine bitweise XOR-Vorgang einen Wert und eine Speicheradresse.  
   
 ```  
@@ -586,7 +586,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Ein tile_barrier-Objekt  
   
-##  <a name="parallel_for_each">Parallel_for_each-Funktion (C++-AMP)</a>  
+##  <a name="parallel_for_each"></a>  Parallel_for_each-Funktion (C++-AMP)  
  Führt eine Funktion übergreifend über die "compute"-Domäne aus. Weitere Informationen finden Sie unter [Übersicht über C++ AMP](../../../parallel/amp/cpp-amp-overview.md).  
   
 ```  

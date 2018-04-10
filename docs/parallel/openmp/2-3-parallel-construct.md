@@ -1,27 +1,27 @@
 ---
 title: 2.3 parallel-Konstrukt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel-Konstrukt
 Die folgende Direktive definiert ein paralleles Bereichs, das einer Region des Programms ist, die durch mehrere Threads parallel ausgeführt werden soll. Dies ist das grundlegende Konstrukt, das mit der parallelen Ausführung beginnt.  
@@ -32,21 +32,21 @@ Die folgende Direktive definiert ein paralleles Bereichs, das einer Region des P
   
  Die *Klausel* ist eines der folgenden:  
   
- **Wenn (** *Ausdruck für skalare* **)**  
+ **if(** *scalar-expression* **)**  
   
- **Private (** *Variablenliste* **)**  
+ **private(** *variable-list* **)**  
   
- **Firstprivate (** *Variablenliste* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **Standard (freigegebenen & #124; none)**  
+ **default(shared &#124; none)**  
   
- **Freigegebene (** *Variablenliste* **)**  
+ **shared(** *variable-list* **)**  
   
- **Copyin (** *Variablenliste* **)**  
+ **copyin(** *variable-list* **)**  
   
- **Verringerung (** *Operator* **:***Variablenliste* **)  **  
+ **Verringerung (** *Operator* **:***Variablenliste* **)**   
   
- **Num_threads (** *Ganzzahlausdruck* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Wenn ein Thread ein paralleles Konstrukts auftritt, wird ein Team von Threads erstellt, wenn eine der folgenden Fälle zutrifft:  
   

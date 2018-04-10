@@ -1,12 +1,12 @@
 ---
 title: CPageSetupDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,17 +39,17 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog-Klasse
 Kapselt die Dienste, die durch das allgemeine Windows-OLE-Dialogfeld "Seiteneinrichtung" bereitgestellt werden, zusammen mit zusätzlicher Unterstützung für das Festlegen und Ändern von Druckrändern.  
@@ -94,7 +94,7 @@ class CPageSetupDialog : public CCommonDialog
   
  Verwenden einer `CPageSetupDialog` Objekt, erstellen Sie zunächst das Objekt mit dem `CPageSetupDialog` Konstruktor. Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der `m_psd` Datenmember der Werte von Steuerelementen für das Dialogfeld zu initialisieren. Die [M_psd](#m_psd) Struktur ist vom Typ **PAGESETUPDLG**.  
   
- Rufen Sie nach dem Initialisieren der Dialogfeld-Steuerelemente, die `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen und die Benutzer Druckoptionen auszuwählen. `DoModal`Gibt zurück, ob der Benutzer die OK ausgewählt ( **IDOK**) oder "Abbrechen" ( **IDCANCEL**) Schaltfläche.  
+ Rufen Sie nach dem Initialisieren der Dialogfeld-Steuerelemente, die `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen und die Benutzer Druckoptionen auszuwählen. `DoModal` Gibt zurück, ob der Benutzer die OK ausgewählt ( **IDOK**) oder "Abbrechen" ( **IDCANCEL**) Schaltfläche.  
   
  Wenn `DoModal` gibt **IDOK**, können Sie einige der `CPageSetupDialog`des Memberfunktionen oder den Zugriff der `m_psd` Datenmember Eingabe von Informationen vom Benutzer abgerufen.  
   
@@ -117,7 +117,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
  Mit dieser Funktion wird zum Erstellen einer `CPageSetupDialog` Objekt.  
   
 ```  
@@ -175,7 +175,7 @@ CPageSetupDialog(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
  Erstellt einen Drucker-Gerätekontext aus der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
   
 ```  
@@ -185,7 +185,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>Rückgabewert  
  Handle für den neu erstellten Drucker-Gerätekontext (DC).  
   
-##  <a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>  CPageSetupDialog::DoModal  
  Mit dieser Funktion wird für die Anzeige von OLE-Seiteneinrichtung-Standarddialogfeld Windows und die Benutzer verschiedene drucken Setupoptionen wie Druckränder, Größe und Ausrichtung der Papier und Zieldrucker auszuwählen.  
   
 ```  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
  Mit dieser Funktion werden nach `DoModal` den Namen des aktuell ausgewählten Druckers abzurufenden.  
   
 ```  
@@ -219,7 +219,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Name des Laufwerks verwendet werden, indem Sie die **CPageSetupDialog** Objekt.  
   
-##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Mit dieser Funktion wird nach dem Aufruf `DoModal` zum Abrufen von Informationen zu den Druckergerätekontext von der `CPageSetupDialog` Objekt.  
   
 ```  
@@ -229,7 +229,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Datenstruktur, die Informationen über die Initialisierung für Grafikgeräte und ein Druckertreiber-Umgebung enthält. Sie müssen den Arbeitsspeicher, bis diese Struktur mit dem Windows Entsperren [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) -Funktion, die im Windows SDK beschrieben wird.  
   
-##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Mit dieser Funktion wird nach dem Aufruf [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) zum Abrufen des Namens des Gerätetreibers systemdefinierte Drucker.  
   
 ```  
@@ -242,7 +242,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie einen Zeiger auf die `CString` zurückgegebenes Objekt `GetDriverName` als Wert des `lpszDriverName` in einem Aufruf von [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
  Mit dieser Funktion wird nach einem Aufruf von `DoModal` die Ränder des Druckertreibers Gerät abrufen.  
   
 ```  
@@ -258,7 +258,7 @@ void GetMargins(
  *lpRectMinMargins*  
  Zeiger auf eine `RECT` Struktur oder `CRect` Objekt, das (in 1/1000 Zoll oder 1/100 mm) die minimalen Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie **NULL** für diesen Parameter, wenn Sie nicht in dieses Rechteck interessiert sind.  
   
-##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize  
  Mit dieser Funktion wird zum Abrufen der Größe der in diesem Dokument für den Druck ausgewählt.  
   
 ```  
@@ -268,7 +268,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die Größe des Papiers (in 1/1000 Zoll oder 1/100 mm) für den Druck ausgewählt.  
   
-##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>  CPageSetupDialog::GetPortName  
  Mit dieser Funktion wird nach dem Aufruf `DoModal` , den Namen des aktuell ausgewählten Drucker Ports abzurufen.  
   
 ```  
@@ -278,7 +278,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Name des aktuell ausgewählten Drucker Ports.  
   
-##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>  CPageSetupDialog::m_psd  
  Eine Struktur des Typs **PAGESETUPDLG**, zu speichern, deren Mitglieder die Merkmale des Dialog-Objekts.  
   
 ```  
@@ -294,7 +294,7 @@ PAGESETUPDLG m_psd;
   
  Siehe das Beispiel für [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage  
  Wird aufgerufen, durch das Framework eine Bildschirmaufnahme einer gedruckten Seite gezeichnet werden soll.  
   
 ```  
@@ -338,7 +338,7 @@ virtual UINT OnDrawPage(
   
  Beachten Sie, dass Sie nicht benötigen, behandeln jede Groß-/Kleinschreibung `nMessage`. Sie können auswählen, um eine Komponente des Bilds, mehrere Komponenten des Bilds oder den gesamten Bereich zu behandeln.  
   
-##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Vom Framework aufgerufen, bevor das Bild der gedruckten Seite zeichnen.  
   
 ```  

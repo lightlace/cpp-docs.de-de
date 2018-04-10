@@ -1,29 +1,29 @@
 ---
 title: String-Datenverwaltung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="string-data-management"></a>Zeichenfolgendatenverwaltung
 Visual C++ bietet verschiedene Methoden zum Verwalten von Zeichenfolgendaten an:  
@@ -34,7 +34,7 @@ Visual C++ bietet verschiedene Methoden zum Verwalten von Zeichenfolgendaten an:
   
 -   MFC Klasse [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md), flexible und in der Größe veränderbaren Zeichenfolgenobjekten stellt  
   
--   Klasse [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md), bietet eine MFC-unabhängigen String-Objekt mit die gleiche Funktionalität wie`CString`  
+-   Klasse [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md), bietet eine MFC-unabhängigen String-Objekt mit die gleiche Funktionalität wie `CString`  
   
  Fast alle Programme mehr mit Zeichenfolgendaten. MFC `CString` Klasse ist häufig die beste Lösung für die flexible Zeichenfolgenbehandlung. Ab Version 7.0, `CString` in MFC oder unabhängig von MFC-Programmen verwendet werden können. Der Laufzeit-Bibliothek und `CString` Zeichenfolgen mit multibyte () Breitzeichen, wie in Unicode oder MBCS-Programmierung zu unterstützen.  
   
@@ -48,11 +48,11 @@ Visual C++ bietet verschiedene Methoden zum Verwalten von Zeichenfolgendaten an:
   
  Die [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) -Klasse bietet Unterstützung für das Bearbeiten von Zeichenfolgen. Es dient zum Ersetzen und erweitern die Funktionalität, die normalerweise von der C-Laufzeitbibliothek Zeichenfolge-Paket bereitgestellt. Die `CString` Klasse bereitstellt, Member-Funktionen und Operatoren für ähnliche Benutzeroberflächenfeatures Basic vereinfachte Zeichenfolge behandeln. Die Klasse bietet auch Konstruktoren und Operatoren erstellen, zuweisen und Vergleichen von **CString** und standard C++ Zeichenfolgen-Datentypen. Da `CString` stammt nicht aus `CObject`, können Sie `CString` Objekte unabhängig von den meisten der Microsoft Foundation Class-Bibliothek (MFC).  
   
- `CString`Führen Sie die Objekte "Wertsemantik". Ein `CString` -Objekt stellt einen eindeutigen Wert dar. Denken Sie an einer `CString` als eine tatsächliche Zeichenfolge und nicht als ein Zeiger auf eine Zeichenfolge.  
+ `CString` Führen Sie die Objekte "Wertsemantik". Ein `CString` -Objekt stellt einen eindeutigen Wert dar. Denken Sie an einer `CString` als eine tatsächliche Zeichenfolge und nicht als ein Zeiger auf eine Zeichenfolge.  
   
- Ein `CString` -Objekt stellt eine Sequenz von eine Variable Anzahl von Zeichen dar. `CString`Objekte können als Arrays von Zeichen betrachtet werden.  
+ Ein `CString` -Objekt stellt eine Sequenz von eine Variable Anzahl von Zeichen dar. `CString` Objekte können als Arrays von Zeichen betrachtet werden.  
   
-##  <a name="_core_unicode_and_mbcs_provide_portability"></a>Unicode und MBCS bieten Portabilität  
+##  <a name="_core_unicode_and_mbcs_provide_portability"></a> Unicode und MBCS bieten Portabilität  
  Mit MFC-Version 3.0 und höher, MFC, einschließlich `CString`, für Unicode- und multibyte-Zeichensätzen (MBCS) aktiviert ist. Diese Unterstützung erleichtert es Ihnen das Schreiben von portablen Anwendungen, entweder Unicode oder ANSI-Zeichen zu erstellen. So aktivieren Sie diese Portabilität jedes Zeichen in einem `CString` Objekt ist vom Typ **TCHAR**, die als definiert ist `wchar_t` , wenn Sie das Symbol definieren **_UNICODE** beim Erstellen der Anwendung oder als `char` Wenn dies nicht. Ein `wchar_t` Zeichen ist 16 Bit breit. MBCS ist aktiviert, wenn Sie mit dem Symbol erstellen **_MBCS** definiert. MFC selbst basiert entweder mit der **_MBCS** Symbol (für die NAFX-Bibliotheken) oder die **_UNICODE** Symbol (für die UAFX-Bibliotheken) definiert.  
   
 > [!NOTE]
@@ -70,7 +70,7 @@ Visual C++ bietet verschiedene Methoden zum Verwalten von Zeichenfolgendaten an:
   
  Ein `CString` Objekt kann bis zu speichern, **INT_MAX** (2.147.483.647) Zeichen. Die **TCHAR** -Datentyp dient zum Abrufen oder Festlegen der einzelne Zeichen innerhalb einer `CString` Objekt. Im Gegensatz zu Zeichenarrays die `CString` -Klasse verfügt über eine integrierte Speicher Allocation-Funktion. Auf diese Weise können `CString` Objekte bei Bedarf automatisch erweitert (d. h., Sie müssen nicht kümmern, wächst eine `CString` Objekt um längere Zeichenfolgen passen).  
   
-##  <a name="_core_cstrings_and_const_char_pointers"></a>CString-Objekte und const Char-Zeiger  
+##  <a name="_core_cstrings_and_const_char_pointers"></a> CString-Objekte und const Char-Zeiger  
  Ein `CString` Objekt kann auch wie eine C-Stil Literalzeichenfolge fungieren (ein `PCXSTR`, also identisch **const Char\***  If nicht unter Unicode). Die [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) Konvertierungsoperator ermöglicht `CString` Objekte frei für Zeiger auf Zeichen in Funktionsaufrufen ersetzt werden. Die **CString (LPCWSTR** `pszSrc` **)** Konstruktor können Zeichenzeigern, ersetzen sollen `CString` Objekte.  
   
  Wird nicht versucht, fold `CString` Objekte. Wenn Sie zwei vornehmen `CString` Objekte mit `Chicago`, z. B. die Zeichen in `Chicago` an zwei Orten gespeichert sind. (Dies möglicherweise nicht "true" für zukünftige Versionen von MFC, daher sollten Sie nicht davon abhängen.)  
@@ -86,7 +86,7 @@ Visual C++ bietet verschiedene Methoden zum Verwalten von Zeichenfolgendaten an:
   
  Die `CString` Klasse wird nicht jedoch als eine Auflistungsklasse Microsoft Foundation Class-Bibliothek implementiert `CString` Objekte als Elemente in Auflistungen sicher gespeichert werden können.  
   
-##  <a name="_core_cstring_reference_counting"></a>CString-Verweiszählung  
+##  <a name="_core_cstring_reference_counting"></a> CString-Verweiszählung  
  Ab MFC 4.0 Wenn [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) Objekte kopiert werden, Kopieren der Daten, statt einen Verweiszähler erhöht. Dadurch wird die Übergabe von Parametern und die Rückgabe von `CString` Objekte nach Wert effizienter. Diese Vorgänge dazu führen, dass den Kopierkonstruktor, mitunter sogar mehr als einmal aufgerufen werden. Einen Verweiszähler erhöht Verwaltungsaufwand für diese allgemeine Vorgänge reduziert und lässt sich mit `CString` eine attraktiver-Option.  
   
  Da jede Kopie zerstört wird, wird der Verweiszähler im ursprünglichen Objekt verringert. Die ursprüngliche `CString` Objekt wird nicht zerstört, bis der entsprechende Verweiszähler auf 0 (null) reduziert wird.  

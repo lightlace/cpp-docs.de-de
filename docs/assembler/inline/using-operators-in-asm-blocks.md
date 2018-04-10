@@ -1,12 +1,12 @@
 ---
-title: "Verwenden von Operatoren in __asm-Blöcken | Microsoft Docs"
-ms.custom: 
+title: Verwenden von Operatoren in __asm-Blöcken | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ca8ac739793c81ef18f8657cbf53c9cb018b3e38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-operators-in-asm-blocks"></a>Verwenden von Operatoren in __asm-Blöcken
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Ein `__asm` Block können keine C- oder C++-spezifische Operatoren, wie z. B. die  **<<**  Operator. Allerdings Operatoren gemeinsame von C und MASM, z. B. die \* Operator als Assemblersprache Operatoren interpretiert werden. Beispielsweise außerhalb einer `__asm` blockieren, eckige Klammern (**[]**) wie der einschließende Arrayfeldindizes, C automatisch auf die Größe eines Elements im Array skaliert interpretiert werden. Innerhalb einer `__asm` Block, sind sie als den MASM-Index-Operator, der ergibt einen nicht skalierten Byte-Offset von einem Datenobjekt oder Bezeichnung (nicht nur ein Array) sichtbar. Der folgende Code veranschaulicht den Unterschied:  
+ Ein `__asm` Block können keine C- oder C++-spezifische Operatoren, wie z. B. die **<<** Operator. Allerdings Operatoren gemeinsame von C und MASM, z. B. die \* Operator als Assemblersprache Operatoren interpretiert werden. Beispielsweise außerhalb einer `__asm` blockieren, eckige Klammern (**[]**) wie der einschließende Arrayfeldindizes, C automatisch auf die Größe eines Elements im Array skaliert interpretiert werden. Innerhalb einer `__asm` Block, sind sie als den MASM-Index-Operator, der ergibt einen nicht skalierten Byte-Offset von einem Datenobjekt oder Bezeichnung (nicht nur ein Array) sichtbar. Der folgende Code veranschaulicht den Unterschied:  
   
 ```  
 int array[10];  

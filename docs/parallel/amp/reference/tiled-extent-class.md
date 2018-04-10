@@ -1,12 +1,12 @@
 ---
 title: Tiled_extent-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent-Klasse
 Ein `tiled_extent`-Objekt ist ein `extent`-Objekt einer bis drei Dimensionen, das den "extent"-Bereich in ein-, zwei- oder dreidimensionale Kacheln unterteilt.  
@@ -97,9 +97,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[tile_dim0 Constant](#tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
-|[tile_dim1 Constant](#tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
-|[tile_dim2 Constant](#tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
+|[tile_dim0-Konstante](#tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
+|[tile_dim1-Konstante](#tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
+|[tile_dim2-Konstante](#tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
 
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
@@ -118,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Namespace:** Parallelität  
 
-## <a name="ctor">Tiled_extent-Konstruktor</a>  
+## <a name="ctor"> </a>  Tiled_extent-Konstruktor  
 Initialisiert eine neue Instanz der `tiled_extent`-Klasse.  
   
 ### <a name="syntax"></a>Syntax  

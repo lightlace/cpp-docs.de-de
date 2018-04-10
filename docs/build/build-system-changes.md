@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Buildsystemänderungen
 Das MSBuild-System wird verwendet, um Visual C++-Projekte zu erstellen. In Visual Studio 2008 und früheren Versionen wurde jedoch die VCBuild-System verwendet. Bestimmte Dateitypen und Konzepte, die von VCBuild abhängig sind nicht vorhanden, oder im aktuellen System anders dargestellt. Dieses Dokument beschreibt die Unterschiede im aktuellen Buildsystem.  
@@ -59,7 +59,7 @@ Das MSBuild-System wird verwendet, um Visual C++-Projekte zu erstellen. In Visua
   
  In der aktuellen Version wird Vererbung unterstützt, durch den Wert einer Eigenschaft als Verkettung der ein oder mehrere Literalwerte und Eigenschaftenmakros angeben. Die **$(Inherit)** und **$(NoInherit)** Makros werden nicht unterstützt.  
   
- Im folgenden Beispiel wird eine Eigenschaft auf einer Eigenschaftenseite eine durch Semikolons getrennte Liste zugewiesen. Die Liste enthält die Verkettung von der  *\<Wert >* Literal und der Wert des der `MyProperty` -Eigenschaft, die mithilfe der Schreibweise Makro erfolgt, **$(**  *MyProperty***)**.  
+ Im folgenden Beispiel wird eine Eigenschaft auf einer Eigenschaftenseite eine durch Semikolons getrennte Liste zugewiesen. Die Liste enthält die Verkettung von der  *\<Wert >* Literal und der Wert des der `MyProperty` -Eigenschaft, die mithilfe der Schreibweise Makro erfolgt, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
