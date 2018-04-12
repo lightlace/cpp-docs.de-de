@@ -90,7 +90,7 @@ class complex
   
  **Namespace:** std  
   
-##  <a name="complex">complex::complex</a>  
+##  <a name="complex"></a>  complex::complex  
  Erstellt eine komplexe Zahl aus den angegebenen reellen und imaginären Teilen oder eine Kopie einer anderen komplexen Zahl.  
   
 ```  

@@ -35,7 +35,7 @@ Algorithmen sind grundlegender Bestandteil der C++-Standardbibliothek. Algorithm
 ## <a name="remarks"></a>Hinweise  
  Die Beschreibungen der Algorithmusvorlagenfunktionen verwenden einige Kurznotationsausdrücke:  
   
--   Der Ausdruck „im Bereich (*A*, *B*)“ bezeichnet eine Sequenz von 0 oder mehreren diskreten Werten beginnend mit *A* bis, jedoch nicht einschließlich, *B*. Ein Bereich ist nur gültig, wenn *B* von *A* aus erreichbar ist. Sie können *A* in einem Objekt *N* (*N* = *A*) speichern, das Objekt null oder mehrmals erhöhen (++*N*) und das Objekt nach einer endlichen Anzahl von Erhöhungsschritten (N == B*) gleich *B* entsprechen lassen.*  
+-   Der Ausdruck „im Bereich (*A*, *B*)“ bezeichnet eine Sequenz von 0 oder mehreren diskreten Werten beginnend mit *A* bis, jedoch nicht einschließlich, *B*. Ein Bereich ist nur gültig, wenn *B* von *A* aus erreichbar ist. Sie können *A* in einem Objekt *N* (*N* = *A*) speichern, das Objekt null oder mehrmals erhöhen (++*N*) und das Objekt nach einer endlichen Anzahl von Erhöhungsschritten gleich *B* entsprechen lassen (N == B*).*  
   
 -   Der Ausdruck „jedes *N* im Bereich (*A*, *B*)“ bedeutet, dass *N* mit dem Wert *A* beginnt und null oder mehrmals erhöht wird, bis es gleich dem Wert *B* ist. Der Fall *N* == *B* ist nicht im Bereich.  
   
