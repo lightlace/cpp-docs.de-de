@@ -1,12 +1,12 @@
 ---
 title: veraltet (C/C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5df80fffb5b9cdeabfe19d5a5de6eb771d35d3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 Die **veraltet** Pragma ermöglicht es Ihnen anzugeben, dass eine Funktion, Typ oder ein anderer Bezeichner in der Zukunft nicht mehr unterstützt werden möglicherweise freigegeben oder nicht mehr verwendet werden soll.  
 > [!NOTE]
-> Informationen zu den C ++ 14 `[[deprecated]]` Attribut und Hinweise dazu, wann verwendet Vs Attribut, das Microsoft-Declspec oder Pragma, finden Sie unter [Standard C++-Attribute](../cpp/attributes2.md) Attribut.
+> Informationen zu den C ++ 14 `[[deprecated]]` Attribut und Hinweise dazu, wann verwendet Vs Attribut, das Microsoft-Declspec oder Pragma, finden Sie unter [Standard C++-Attribute](../cpp/attributes.md) Attribut.
   
 ## <a name="syntax"></a>Syntax  
   

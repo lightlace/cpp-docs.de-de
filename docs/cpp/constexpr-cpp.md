@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ Mindestens ein Parameter müssen ein literal sein und müssen selbst sein ein ko
 
 ## <a name="return-value"></a>Rückgabewert
 
+
  Eine Constexpr-Variable oder Funktion zurückgeben muss eine [Literaltyp](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>constexpr-Variablen
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>constexpr-Funktionen
+## <a name="constexpr_functions"></a> Constexpr-Funktionen
 
 Ein **Constexpr** Funktion ist eine, deren Rückgabewert zur Kompilierzeit berechnet werden, kann Wenn verwendenden Code erforderlich ist.  Wenn Argumente sind **Constexpr** Werte und verwendete Code den Rückgabewert zum Zeitpunkt der Kompilierung, z. B. zum Initialisieren benötigt eine **Constexpr** Variablen, oder geben Sie ein Nichttyp-Vorlagenargument, es wird eine Kompilierzeitkonstante erzeugt. Bei einem Aufruf mit nicht-**Constexpr** Argumente, oder wenn dessen Wert nicht zum Zeitpunkt der Kompilierung erforderlich ist, erzeugt er einen Wert zur Laufzeit wie eine reguläre Funktion.  (Dieses duale Verhalten erspart Ihnen von schreiben **Constexpr** und nicht-**Constexpr** Versionen der gleichen Funktion.)
 
@@ -113,7 +114,7 @@ constexpr float exp(float x, int n)
 > [!TIP]
 > Hinweis: In Visual Studio-Debugger beim Debuggen einer nicht optimierten Debugbuild, Sie können feststellen, ob eine **Constexpr** Funktion wird zur Kompilierzeit ausgewertet werden, indem Sie einen Haltepunkt einfügen. Wenn der Haltepunkt erreicht wird, wurde die Funktion zur Laufzeit aufgerufen.  Wenn dies nicht der Fall ist, wurde die Funktion zum Zeitpunkt der Kompilierung aufgerufen.
 
-## <a name="extern-constexpr"></a>extern constexpr
+## <a name="extern-constexpr"></a>"extern" constexpr
 
 Die [/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) -Compileroption bewirkt, dass den Compiler anzuwendende [externe Verknüpfung]() Variablen deklariert, indem **"extern" Constexpr**. In früheren Versionen von Visual Studio, und standardmäßig oder wenn **/Zc:externConstexpr-** angegeben ist, wird Visual Studio wendet interne Verknüpfung zu **Constexpr** Variablen erstellen, selbst wenn die **"extern"** Schlüsselwort verwendet wird. Die **/Zc:externConstexpr** Option ist verfügbar in Visual Studio 2017 Update 15,6 ab. und ist standardmäßig deaktiviert. Die /permissive-option aktiviert /Zc:externConstexpr nicht.
 

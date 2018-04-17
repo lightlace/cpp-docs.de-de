@@ -1,12 +1,12 @@
 ---
 title: Compilerwarnung (Stufe 3) C4996 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilerwarnung (Stufe 3) C4996
 
@@ -37,13 +37,13 @@ Dies sind einige allgemeine C4996 Nachrichten, die von C-Laufzeitbibliothek und 
 
 - [Diese Funktion oder Variable möglicherweise unsicher. Erwägen Sie *sichere_version* stattdessen. Verwenden Sie zum Deaktivieren der veraltungswarnung \_CRT\_SECURE\_keine\_WARNUNGEN.  Details finden Sie in der Onlinehilfe.](#unsafe-crt-library-functions)
 
-- ["std::*Function_name*::\_deaktiviert\_Iteratoren::\_Deprecate" aufrufen, um std::*Function_name*mit Parametern, die ggf. unsicher - Aufruf basiert auf dem Aufrufer, überprüfen Sie, dass die übergebenen Werte richtig sind. Sie können diese Warnung mit D_SCL_SECURE_NO_WARNINGS deaktivieren. Dokumentation zum Verwenden von Visual C++ "Überprüfte Iteratoren" finden Sie unter](#unsafe-standard-library-functions)
+- ["std::*Function_name*::\_deaktiviert\_Iteratoren::\_Deprecate" aufrufen, um std::*Function_name*mit Parametern, die ggf. unsicher - Aufruf abhängig. der Aufrufer sicherstellen, dass die übergebenen Werte richtig sind. Sie können diese Warnung mit D_SCL_SECURE_NO_WARNINGS deaktivieren. Dokumentation zum Verwenden von Visual C++ "Überprüfte Iteratoren" finden Sie unter](#unsafe-standard-library-functions)
 
 - [Diese Funktion oder Variable wurde durch neuere Bibliothek oder einem Betriebssystem-Funktionalität ersetzt. Erwägen Sie *neues_element* stattdessen. Details finden Sie in der Onlinehilfe.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Ursache
 
-C4996 tritt auf, wenn der Compiler erkennt, eine Funktion oder Variable mit der Kennzeichnung [veraltet](../../cpp/deprecated-cpp.md) mithilfe einer `__declspec(deprecated)` Modifizierer, oder wenn Sie versuchen, Zugriff auf eine Funktion, die Klassenmember oder Typedef, die die C ++ 14 hat [ \[ \[veraltet\] \] ](../../cpp/attributes2.md) Attribut. Sie können die `__declspec(deprecated)` Modifizierer oder `[[deprecated]]` -Attribut selbst in den Bibliotheken oder Headerdateien, die Ihre Clients zu als veraltet markierte Funktionen, Variablen, Mitglieder oder Typdefinitionen warnt.
+C4996 tritt auf, wenn der Compiler erkennt, eine Funktion oder Variable mit der Kennzeichnung [veraltet](../../cpp/deprecated-cpp.md) mithilfe einer `__declspec(deprecated)` Modifizierer, oder wenn Sie versuchen, Zugriff auf eine Funktion, die Klassenmember oder Typedef, die die C ++ 14 hat [ \[ \[veraltet\] \] ](../../cpp/attributes.md) Attribut. Sie können die `__declspec(deprecated)` Modifizierer oder `[[deprecated]]` -Attribut selbst in den Bibliotheken oder Headerdateien, die Ihre Clients zu als veraltet markierte Funktionen, Variablen, Mitglieder oder Typdefinitionen warnt.
 
 ## <a name="remarks"></a>Hinweise
 

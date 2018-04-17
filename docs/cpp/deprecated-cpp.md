@@ -1,12 +1,12 @@
 ---
 title: veraltet (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-In diesem Thema geht es um die Microsoft-spezifische Declspec Deklaration veraltet. Informationen zu den C ++ 14 `[[deprecated]]` -Attribut, und eine Anleitung für dieses Attribut im Vergleich zu den Microsoft-spezifische Declspec oder Pragma verwenden finden Sie unter [Standard C++-Attribute](attributes2.md).
+In diesem Thema geht es um die Microsoft-spezifische Declspec Deklaration veraltet. Informationen zu den C ++ 14 `[[deprecated]]` -Attribut, und eine Anleitung für dieses Attribut im Vergleich zu den Microsoft-spezifische Declspec oder Pragma verwenden finden Sie unter [Standard C++-Attribute](attributes.md).
 
  Mit den nachfolgenden Ausnahmen der **veraltet** Deklaration bietet die gleiche Funktionalität wie die [veraltet](../preprocessor/deprecated-c-cpp.md) Pragma:  
   
@@ -39,7 +39,7 @@ In diesem Thema geht es um die Microsoft-spezifische Declspec Deklaration veralt
   
 -   Makros können nur als mit veraltet gekennzeichnet werden die **veraltet** Pragma.  
   
- Findet der Compiler die Verwendung der einen veralteten Bezeichner oder Standard [ `[[deprecated]]` ](attributes2.md) -Attribut, eine [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) Warnung wird ausgelöst.  
+ Findet der Compiler die Verwendung der einen veralteten Bezeichner oder Standard [ `[[deprecated]]` ](attributes.md) -Attribut, eine [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) Warnung wird ausgelöst.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Funktionen als veraltet gekennzeichnet werden und wie eine Meldung angegeben wird, die bei Verwendung einer veralteten Funktion zur Kompilierzeit angezeigt wird.  

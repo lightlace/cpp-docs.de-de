@@ -1,37 +1,35 @@
 ---
 title: Zuweisungsoperatoren | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Zuweisungsoperatoren
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Zuweisungsoperatoren speichern einen Wert in dem Objekt, das durch den linken Operanden festgelegt ist. Es gibt zwei Arten von Zuweisungsvorgängen: die einfache Zuweisung, in der der Wert des zweiten Operanden in dem Objekt gespeichert wird, das durch den ersten Operanden angegeben ist, und die Verbundzuweisung, in der ein arithmetischer Vorgang, ein Schiebevorgang oder ein bitweiser Vorgang vor dem Speichern des Ergebnisses ausgeführt wird. Alle Zuweisungsoperatoren in der folgenden Tabelle (außer der =-Operator) sind Verbundzuweisungsoperatoren.  
+ Zuweisungsoperatoren speichern einen Wert in dem Objekt, das durch den linken Operanden festgelegt ist. Es gibt drei Arten von Zuweisungsvorgängen: 
+
+1. einfache Zuweisung, in dem der Wert des zweiten Operanden in dem durch den ersten Operanden angegebenen Objekt gespeichert ist. 1. verbundzuweisung, in dem ein Arithmetik-, UMSCHALT oder bitweise Operation erfolgt vor dem Speichern des Ergebnisses.
+1. Verschieben Sie Zuweisung (für Klassentypen), in welchen Ressourcen, ohne zu kopieren übertragen werden.
+
+
+Alle Zuweisungsoperatoren in der folgenden Tabelle außer der = und & & = Operatoren sind Verbundzuweisungsoperatoren.  
   
 ### <a name="assignment-operators"></a>Zuweisungsoperatoren  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Verschieben Sie den Wert des ersten Operanden rechts der Anzahl von Bits, die durch den Wert des zweiten Operanden angegeben werden. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|  
 |**&=**|Rufen Sie den bitweisen AND-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|  
 |`^=`|Rufen Sie den bitweisen exklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|  
-|`&#124;=`|Rufen Sie den bitweisen inklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|  
+|`&#124;=`|Rufen Sie den bitweisen inklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|
+|**&&=**| Bewegungszuweisungsoperator (für nur Klassentypen). Wenn der zweite Operand ein Rvalue ist, verschieben Sie die Ressourcen auf den ersten Operanden (ohne sie zu kopieren). Finden Sie unter [Bewegungskonstruktoren und bewegungszuweisungsoperatoren](move-constructors-and-move-assignment-operators-cpp.md) für Weitere Informationen.|
   
  **Operatorschlüsselwörter**  
   

@@ -1,12 +1,12 @@
 ---
 title: 'Wie: Marshallen von Strukturen mit PInvoke | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7f08d42946eec22d616e6d964feda78e1358228
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Gewusst wie: Marshallen von Strukturen mit PInvoke
-Dieses Dokument wird erläutert, wie systemeigene Funktionen, die Zeichenfolgen im C-Stil können aufgerufen werden, von verwalteten Funktionen, die eine Instanz von bereitstellen akzeptieren <xref:System.String> mithilfe von P/Invoke. Obwohl wir empfehlen die Verwendung von C++-Interop-Features anstelle von können P/Invoke da P/Invoke wenig Kompilierzeitfehler reporting, bietet nicht typsicher, und einfacher zu implementieren, wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht, P/Invoke verfügbar ist, ist die einzige Option. Andernfalls finden Sie unter den folgenden Dokumenten:  
+Dieses Dokument wird erläutert, wie systemeigene Funktionen, die Strukturen im C-Format von von verwalteten Funktionen aufgerufen werden können, mit P/Invoke akzeptieren. Obwohl wir empfehlen die Verwendung von C++-Interop-Features anstelle von können P/Invoke da P/Invoke wenig Kompilierzeitfehler reporting, bietet nicht typsicher, und einfacher zu implementieren, wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht, P/Invoke verfügbar ist, ist die einzige Option. Andernfalls finden Sie unter den folgenden Dokumenten:  
   
--   [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
--   [Vorgehensweise: Marshallen von Strukturen mit PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [Vorgehensweise: Marshallen von Zeichenfolgen mit PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
  Standardmäßig werden systemeigene und verwaltete Strukturen unterschiedlich im Arbeitsspeicher angeordnet erfolgreich übergeben von Strukturen Apartmentgrenze verwalteten und unverwalteten zusätzliche Schritte, um die Datenintegrität beizubehalten erfordert.  
   

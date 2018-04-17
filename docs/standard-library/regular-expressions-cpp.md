@@ -1,12 +1,12 @@
 ---
-title: "Reguläre Ausdrücke (C++) | Microsoft-Dokumentation"
-ms.custom: 
+title: Reguläre Ausdrücke (C++) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
 Die C++-Standardbibliothek unterstützt mehrere Grammatiken für reguläre Ausdrücke. Dieses Thema erläutert die Grammatik Variationen verfügbar bei Verwendung von regulären Ausdrücken.  
@@ -93,7 +93,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  In `ECMAScript` kann ein Element auch Folgendes sein:  
   
--   Eine *Nichterfassungsgruppe* im Format "(: *Teilausdruck* )". Entspricht der Folge von Zeichen in der Zielsequenz, die anhand des Musters zwischen den Trennzeichen verglichen wird.  
+-   Ein *nichterfassungsgruppe* im Format "(?: *Teilausdruck* )". Entspricht der Folge von Zeichen in der Zielsequenz, die anhand des Musters zwischen den Trennzeichen verglichen wird.  
   
 -   Ein eingeschränktes *Dateiformat-Escapezeichen* im Format "\f", "\n", "\r", "\t" oder "\v". Diese Zeichen entsprechen einem Seitenvorschub, einem Zeilenumbruch, einem Wagenrücklauf, einem horizontalen bzw. einem vertikalen Tabulator in der Zielsequenz.  
   
@@ -158,11 +158,11 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  Beispiele:  
   
--   "a?" entspricht der Zielsequenz "" und der Zielsequenz "a", aber nicht der Zielsequenz "aa".  
+-   "a"? entspricht der Zielsequenz "" und der Zielsequenz "a", aber nicht der Zielsequenz "aa".  
   
 -   "a+" entspricht der Zielsequenz "a", der Zielsequenz "aa" usw., jedoch nicht der Zielsequenz "".  
   
- In `ECMAScript` können alle Formate für die Wiederholungsanzahl vom Zeichen '' gefolgt werden, das *nicht gierige Wiederholung* angibt.  
+ In `ECMAScript`, können alle Formate für die Wiederholungsanzahl gefolgt werden, von dem Zeichen "?", kennzeichnet die eine *nicht gierige Wiederholung*.  
   
 ### <a name="concatenation"></a>Verkettung  
  Elemente des regulären Ausdrucks mit oder ohne *Wiederholungsanzahl* können verkettet werden, um längere reguläre Ausdrücke zu bilden. Der resultierende Ausdruck entspricht einer Zielsequenz, die eine Verkettung der Sequenzen ist, der die einzelnen Elemente entsprechen. Beispiel: "a{2,3}b" entspricht der Zielsequenz "aab" und der Zielsequenz "aaab", jedoch nicht der Zielsequenz "ab" oder der Zielsequenz "aaaab".  
@@ -365,7 +365,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
  Eine negative Wortgrenzenassertion stimmt überein, wenn die aktuelle Position in der Zielzeichenfolge nicht unmittelbar hinter einer *Wortgrenze* liegt.  
   
 ### <a name="non-capture-group"></a>Nichterfassungsgruppe  
- Eine Nichterfassungsgruppe markiert ihren Inhalt als einzelne Einheit in der Grammatik für reguläre Ausdrücke, versieht den Zieltext jedoch nicht mit einer Bezeichnung. Z. B. "(a)(:b)\*(c)" entspricht dem Zieltext "Abbc" und ordnet die Erfassungsgruppe 1 der Untersequenz "ein"und die Erfassungsgruppe 2 der Untersequenz "c".  
+ Eine Nichterfassungsgruppe markiert ihren Inhalt als einzelne Einheit in der Grammatik für reguläre Ausdrücke, versieht den Zieltext jedoch nicht mit einer Bezeichnung. Z. B. "(a)(?:b)\*(c)" entspricht dem Zieltext "Abbc" und ordnet die Erfassungsgruppe 1 der Untersequenz "ein"und die Erfassungsgruppe 2 der Untersequenz "c".  
   
 ### <a name="non-greedy-repetition"></a>Nicht gierige Wiederholung  
  Eine nicht gierige Wiederholung nutzt die kürzeste Untersequenz der Zielsequenz, die dem Muster entspricht. Eine gierige Wiederholung verwendet die längste Untersequenz. Beispielsweise "(a+) (eine\*b)" entspricht der Zielsequenz "Aaab". Wenn eine nicht gierige Wiederholung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "a" am Anfang der Zielsequenz und die Erfassungsgruppe 2 der Untersequenz "aab" am Ende der Zielsequenz zugeordnet. Wenn eine gierige Übereinstimmung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "aaa" und die Erfassungsgruppe 2 der Untersequenz "b" zugeordnet.  

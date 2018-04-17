@@ -1,13 +1,13 @@
 ---
 title: -Quelle-Zeichensatz (Quellzeichensatz Satz) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - source-charset
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa81ba41587a183aca921177a62a45229810f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba414318f9954df331dd05d0f3e2cc2b85c8ad11
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-charset-set-source-character-set"></a>/Source-CharSet (Festlegen der Quell-Zeichensatz)
 Ermöglicht die Angabe den quellzeichensatz für die ausführbare Datei.  
@@ -48,7 +48,7 @@ Ermöglicht die Angabe den quellzeichensatz für die ausführbare Datei.
 ## <a name="remarks"></a>Hinweise  
  Sie können die **/source-charset** Option zur Angabe einer erweiterten quellzeichensatz verwenden, wenn Ihre Quelldateien enthalten Zeichen, die nicht dargestellt werden, in der einfachen quellzeichensatzes. Der quellzeichensatz ist die Codierung für den Quelltext des Programms in die interne Darstellung verwendet als Eingabe für den vorverarbeitungsphasen vor der Kompilierung zu interpretieren. Die interne Darstellung wird dann in die ausführungszeichengruppe zum Speichern von Zeichenfolgen und Werte in die ausführbare Datei konvertiert. Können Sie entweder die IANA Name des Zeichensatzes ISO oder ein Punkt (.) gefolgt von einer 3 bis 5 Ziffern decimal Codepage-Bezeichner der zu verwendenden Zeichensatz angeben. Eine Liste der unterstützten Codepage-IDs und Namen von Zeichen festlegen, finden Sie unter [Codepage-IDs](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
   
- Standardmäßig erkennt Visual Studio eine Bytereihenfolge-Marke, um festzustellen, ob die Quelldatei in eine codierte Unicode-Format, z. B. UTF-16 bzw. UTF-8 ist. Wenn keine Bytereihenfolge-Marke gefunden wird, es geht davon aus die Quelldatei wird codiert mithilfe der aktuelle Benutzer-Codepage, außer Sie einen Zeichensatz Namen oder die Codepage geben mithilfe der **/source-charset** Option. Visual Studio können Sie C++-Quellcode mithilfe einer von mehreren zeichencodierungen zu speichern. Weitere Informationen zu Quell- und ausführungszeichensätze, finden Sie unter [Zeichensätze](../../cpp/character-sets2.md) in der sprachdokumentation.  
+ Standardmäßig erkennt Visual Studio eine Bytereihenfolge-Marke, um festzustellen, ob die Quelldatei in eine codierte Unicode-Format, z. B. UTF-16 bzw. UTF-8 ist. Wenn keine Bytereihenfolge-Marke gefunden wird, es geht davon aus die Quelldatei wird codiert mithilfe der aktuelle Benutzer-Codepage, außer Sie einen Zeichensatz Namen oder die Codepage geben mithilfe der **/source-charset** Option. Visual Studio können Sie C++-Quellcode mithilfe einer von mehreren zeichencodierungen zu speichern. Weitere Informationen zu Quell- und ausführungszeichensätze, finden Sie unter [Zeichensätze](../../cpp/character-sets.md) in der sprachdokumentation.  
   
  Der quellzeichensatz, das Sie angeben muss die 7-Bit-ASCII-Zeichen, die dieselben Codepunkte in Ihre Zeichensatz zuordnen, oder viele Kompilierungsfehler enthält sind befolgen. Der quellzeichensatz muss auch sämtliche in den erweiterten Unicode-Zeichensatz Sicherheitsrichtlinienverwendung von UTF-8. Zeichen, die nicht in UTF-8 Sicherheitsrichtlinienverwendung sind, werden durch eine implementierungsspezifische Substitute dargestellt. Der Microsoft-Compiler verwendet ein Fragezeichen ersetzt diese Zeichen.  
   
@@ -69,4 +69,4 @@ Ermöglicht die Angabe den quellzeichensatz für die ausführbare Datei.
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
  [/Execution-CharSet (Festlegen der Ausführung-Zeichensatz)](../../build/reference/execution-charset-set-execution-character-set.md)   
  [/UTF-8 (Quelle festlegen und ausführbare Datei Zeichensätze in UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
- [/Validate-CharSet (Validate für kompatible Zeichen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+ [/validate-charset (Auf kompatible Zeichen überprüfen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
