@@ -1,12 +1,12 @@
 ---
-title: "Zeichenfolgen für Länder und Regionen | Microsoft-Dokumentation"
-ms.custom: 
+title: Zeichenfolgen für Länder und Regionen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.strings
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -38,9 +38,9 @@ Zeichenfolgen für Länder und Regionen können mit einer Sprachenzeichenfolge k
 |britain|GBR|en-GB|  
 |china|CHN|zh-CN|  
 |czech|CZE|cs-CZ|  
-|england|GBR|en-GB|  
+|Großbritannien|GBR|en-GB|  
 |great britain|GBR|en-GB|  
-|holland|NLD|nl-NL|  
+|Niederlande|NLD|nl-NL|  
 |hong-kong|HKG|zh-HK|  
 |new-zealand|NZL|en-NZ|  
 |nz|NZL|en-NZ|  
