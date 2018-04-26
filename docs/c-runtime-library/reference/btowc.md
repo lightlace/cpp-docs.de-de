@@ -1,12 +1,12 @@
 ---
 title: btowc | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - btowc
@@ -30,43 +30,47 @@ dev_langs:
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec89bd89edb8fa178ec83d6a2e57fe1ba86da5d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f6605184408b3a1548eeb8af469fc7df1a6407c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="btowc"></a>btowc
-Bestimmt, ob eine ganze Zahl ein gültiges Einzelbytezeichen im ersten Umschaltzustand darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-wint_t btowc(  
-   int c  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt die Breitzeichendarstellung des Zeichens zurück, wenn die ganze Zahl ein gültiges Einzelbytezeichen im ersten Umschaltzustand darstellt. Gibt WEOF zurück, wenn die ganze Zahl ein EOF oder kein gültiges Einzelbytezeichen im ersten Umschaltzustand ist. Die Ausgabe dieser Funktion wird durch das aktuelle `LC_TYPE`-Gebietsschema beeinflusst.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`btowc`|\<stdio.h> oder \<wchar.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)
+
+Bestimmt, ob eine ganze Zahl ein gültiges Einzelbytezeichen im ersten Umschaltzustand darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```C
+wint_t btowc(
+   int character
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*character*<br/>
+Zu testende ganze Zahl.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt die Breitzeichendarstellung des Zeichens zurück, wenn die ganze Zahl ein gültiges Einzelbytezeichen im ersten Umschaltzustand darstellt. Gibt WEOF zurück, wenn die ganze Zahl ein EOF oder kein gültiges Einzelbytezeichen im ersten Umschaltzustand ist. Die Ausgabe dieser Funktion wird von der aktuellen beeinflusst **LC_TYPE** Gebietsschema.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**btowc**|\<stdio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

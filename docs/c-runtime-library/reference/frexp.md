@@ -1,12 +1,12 @@
 ---
-title: frexp | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Frexp, Frexpf, Frexpl | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - frexp
@@ -36,87 +36,100 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02eab6e7912a69a6189568d9a5530ace88d8430b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ed4f3096b52834b59250226d7857ed0069982749
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="frexp"></a>frexp
-Ruft die Mantisse und den Exponenten einer Gleitkommazahl ab  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double frexp(  
-   double x,  
-   int *expptr   
-);  
-float frexp(  
-   float x,  
-   int * expptr  
-);  // C++ only  
-long double frexp(  
-   long double x,  
-   int * expptr  
-);  // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`  
- Gleitkommawert.  
-  
- `expptr`  
- Zeiger auf gespeicherten Integer-Exponenten  
-  
-## <a name="return-value"></a>Rückgabewert  
- `frexp` gibt die Mantisse zurück. Wenn `x` 0 ist, gibt die Funktion 0 für die Mantisse und den Exponenten zurück. Wenn `expptr` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, setzt diese Funktion `errno` auf `EINVAL` und gibt "0" zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `frexp` -Funktion gliedert den Gleitkommawert (`x`) in einer Mantisse (`m`) und einen Exponenten (`n`), sodass der Absolute Wert des `m` ist größer als oder gleich 0,5 und kleiner als 1,0 und `x`  =  `m`* 2<sup>n</sup>. Der Integer-Exponent `n` wird an dem Speicherort gespeichert, auf den `expptr` zeigt.  
-  
- Da C++ ein Überladen zulässt, können Sie Überladungen von `frexp` aufrufen. In einem C-Programm verwendet `frexp` immer einen double- und einen Integer-Wert und gibt einen double zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`frexp`|\<math.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_frexp.c  
-// This program calculates frexp( 16.4, &n )  
-// then displays y and n.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x, y;  
-   int n;  
-  
-   x = 16.4;  
-   y = frexp( x, &n );  
-   printf( "frexp( %f, &n ) = %f, n = %d\n", x, y, n );  
-}  
-```  
-  
-```Output  
-frexp( 16.400000, &n ) = 0.512500, n = 5  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [ldexp](../../c-runtime-library/reference/ldexp.md)   
- [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+# <a name="frexp-frexpf-frexpl"></a>Frexp, Frexpf, frexpl
+
+Ruft die Mantisse und den Exponenten einer Gleitkommazahl ab
+
+## <a name="syntax"></a>Syntax
+
+```C
+double frexp(
+   double x,
+   int *expptr
+);
+float frexpf(
+   float x,
+   int * expptr
+);
+long double frexpl(
+   long double x,
+   int * expptr
+);
+float frexp(
+   float x,
+   int * expptr
+);  // C++ only
+long double frexp(
+   long double x,
+   int * expptr
+);  // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Gleitkommawert.
+
+*expptr*<br/>
+Zeiger auf gespeicherten Integer-Exponenten
+
+## <a name="return-value"></a>Rückgabewert
+
+**Frexp** gibt die Mantisse. Wenn *x* gleich 0 ist, die Funktion gibt 0 für die Mantisse und dem Exponenten zurück. Wenn *Expptr* ist **NULL**, den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt 0 zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Frexp** -Funktion gliedert den Gleitkommawert (*x*) in einer Mantisse (*m*) und einen Exponenten (*n*), sodass der Absolute Wert des *m* ist größer als oder gleich 0,5 und kleiner als 1,0 und *x* = *m* * 2<sup>*n*</sup>. Die ganzzahlexponent *n* an der Speicherstelle gespeichert *Expptr*.
+
+C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Frexp**. In einem C-Programm **Frexp** immer ein **doppelte** und ein **Int** Zeiger und gibt eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**Frexp**, **Frexpf**, **Frexpl**|\<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_frexp.c
+// This program calculates frexp( 16.4, &n )
+// then displays y and n.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x, y;
+   int n;
+
+   x = 16.4;
+   y = frexp( x, &n );
+   printf( "frexp( %f, &n ) = %f, n = %d\n", x, y, n );
+}
+```
+
+```Output
+frexp( 16.400000, &n ) = 0.512500, n = 5
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[ldexp](ldexp.md)<br/>
+[modf, modff, modfl](modf-modff-modfl.md)<br/>

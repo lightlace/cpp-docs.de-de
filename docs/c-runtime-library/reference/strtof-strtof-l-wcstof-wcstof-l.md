@@ -1,12 +1,12 @@
 ---
 title: strtof, _strtof_l, wcstof, _wcstof_l | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _strtof_l
@@ -47,132 +47,137 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ee9dd81cb2509e161846870d23b7a995ac5807
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9e084140b3b220df04859f4ac1bdfe3c1e34ddfc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
-Konvertiert eine Zeichenfolge in einen Gleitkommawert mit einfacher Genauigkeit.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-float strtof(  
-   const char *nptr,  
-   char **endptr   
-);  
-float _strtof_l(  
-   const char *nptr,  
-   char **endptr,  
-   _locale_t locale  
-);  
-float wcstof(  
-   const wchar_t *nptr,  
-   wchar_t **endptr   
-);  
-float wcstof_l(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   _locale_t locale  
-);  
-```  
-  
-## <a name="parameters"></a>Parameter  
- `nptr`  
- Zu konvertierende mit NULL endende Zeichenfolge.  
-  
- `endptr`  
- Zeiger auf das Zeichen, das die Überprüfung stoppt.  
-  
- `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `strtof` Gibt den Wert der Gleitkommazahl, außer wenn die Darstellung einen Überlauf verursachen würde in dem Fall wird die Funktion zurückgegeben werden +/-`HUGE_VALF`. Das Zeichen von `HUGE_VALF` entspricht dem Zeichen des Werts, der nicht angezeigt werden kann. `strtof` gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.  
-  
- `wcstof` gibt Werte analog zu `strtof` zurück. `errno` wird für beide Funktionen auf `ERANGE` gesetzt, wenn ein Überlauf oder ein Unterlauf auftritt, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.  
-  
- Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Jede Funktion wandelt die Eingabezeichenfolge `nptr` in einen `float`-Wert um. Die `strtof`-Funktion konvertiert `nptr` in einen Wert mit einfacher Genauigkeit. `strtof` stoppt das Lesen der `nptr`-Zeichenfolge beim ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Dies ist möglicherweise das beendende NULL-Zeichen. `wcstof` ist eine Breitzeichenversion von `strtof`. Das dazugehörige `nptr`-Argument ist eine Breitzeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcstof`|`strtof`|`strtof`|`wcstof`|  
-|`_tcstof_l`|`_strtof_l`|`_strtof_l`|`_wcstof_l`|  
-  
- Die `LC_NUMERIC`-Kategorieeinstellung des aktuellen Gebietsschemas bestimmt die Erkennung des Basiszeichens in `nptr`. Weitere Informationen finden Sie unter [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Funktionen ohne `_l`-Suffix verwenden das aktuelle Gebietsschema; diejenigen ohne das Suffix sind beinahe identisch, verwenden jedoch stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Wenn `endptr` nicht `NULL` ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Ort gespeichert, der auf `endptr` zeigt. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von `nptr` an dem Speicherort gespeichert, auf den von `endptr` gezeigt wird.  
-  
- `strtof` erwartet, dass `nptr` auf eine Zeichenfolge der folgenden Form zeigt:  
-  
- [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E`}[`sign`]`digits`]  
-  
- `whitespace` besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; `sign` ist entweder Pluszeichen (`+`) oder Minuszeichen (`-`); und `digits` sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Auf die Dezimalstellen kann ein Exponent folgen, der aus einem einführenden Buchstaben (`e` oder `E`) und einer Zahl mit optionalem Vorzeichen besteht. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.  
- 
- Die UCRT-Versionen der Funktionen unterstützen nicht die Konvertierung von Buchstaben in Exponenten, wie dies in Fortran möglich ist (`d` oder `D`). Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code.
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strtof`, `_strtof_l`|C: \<stdlib.h> C++: &lt;cstdlib> oder \<stdlib.h>|  
-|`wcstof`, `_wcstof_l`|C: \<stdlib.h> oder \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```C  
-// crt_strtof.c  
-// This program uses strtof to convert a  
-// string to a single-precision value.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char *string;  
-   char *stopstring;  
-   float x;  
-  
-   string = "3.14159This stopped it";  
-   x = strtof(string, &stopstring);  
-   printf("string = %s\n", string);  
-   printf("   strtof = %f\n", x);  
-   printf("   Stopped scan at: %s\n\n", stopstring);  
-}  
-```  
-  
-```Output  
-string = 3.14159This stopped it  
-   strtof = 3.141590  
-   Stopped scan at: This stopped it  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../../c-runtime-library/reference/free-locale.md)
+
+Konvertiert eine Zeichenfolge in einen Gleitkommawert mit einfacher Genauigkeit.
+
+## <a name="syntax"></a>Syntax
+
+```C
+float strtof(
+   const char *strSource,
+   char **endptr
+);
+float _strtof_l(
+   const char *strSource,
+   char **endptr,
+   _locale_t locale
+);
+float wcstof(
+   const wchar_t *strSource,
+   wchar_t **endptr
+);
+float wcstof_l(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   _locale_t locale
+);
+```
+
+## <a name="parameters"></a>Parameter
+
+*strSource*<br/>
+Zu konvertierende mit NULL endende Zeichenfolge.
+
+*endptr*<br/>
+Zeiger auf das Zeichen, das die Überprüfung stoppt.
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+**Strtof** gibt den Wert der Gleitkommazahl, außer wenn die Darstellung einen Überlauf verursachen würde in dem Fall wird die Funktion zurückgegeben werden +/-**HUGE_VALF**. Das Vorzeichen des **HUGE_VALF** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtof** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+
+**Wcstof** gibt Werte analog zu **Strtof**. Für beide Funktionen **Errno** festgelegt ist, um **ERANGE** Wenn Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+
+Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **"float"**. Die **Strtof** -Funktion konvertiert *StrSource* auf einen Wert mit einfacher Genauigkeit. **Strtof** stoppt das Lesen der Zeichenfolge *StrSource* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. **Wcstof** ist eine Breitzeichen-Version von **Strtof**; die *StrSource* -Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcstof**|**strtof**|**strtof**|**wcstof**|
+|**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
+
+Die **LC_NUMERIC** -kategorieneinstellung des aktuellen Gebietsschemas bestimmt erkennen des Basiszeichens in *StrSource*; Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema; diejenigen mit dem Suffix sind beinahe identisch, außer dass sie das Gebietsschema verwenden das übergebene ist. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf den durch *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *StrSource* wird an dem Speicherort gespeichert, auf den durch *Endptr*.
+
+**Strtof** erwartet *StrSource* , zeigen Sie auf eine Zeichenfolge der folgenden Form:
+
+[*Leerzeichen*] [*Anmeldung*] [*Ziffern*] [__.__ *Ziffern*] [{**e** &#124; **E**} [*Anmeldung*] *Ziffern*]
+
+Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Anmeldung* handelt es sich um plus (**+**) oder Minuszeichen (**-**); und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Die Dezimalstellen können ein Exponent, besteht aus einem einführenden Buchstaben folgen (**e** oder **E**) und einer optional Zahl mit Vorzeichen. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
+
+Die UCRT Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Format (**d** oder **D**) Exponent Buchstaben. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**Strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> oder \<stdlib.h>|
+|**Wcstof**, **_wcstof_l**|C: \<stdlib.h> oder \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_strtof.c
+// This program uses strtof to convert a
+// string to a single-precision value.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char *string;
+   char *stopstring;
+   float x;
+
+   string = "3.14159This stopped it";
+   x = strtof(string, &stopstring);
+   printf("string = %s\n", string);
+   printf("   strtof = %f\n", x);
+   printf("   Stopped scan at: %s\n\n", stopstring);
+}
+```
+
+```Output
+string = 3.14159This stopped it
+   strtof = 3.141590
+   Stopped scan at: This stopped it
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
+[strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
+[_free_locale](free-locale.md)<br/>

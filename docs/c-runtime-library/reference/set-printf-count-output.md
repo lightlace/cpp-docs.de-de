@@ -1,12 +1,12 @@
 ---
 title: _set_printf_count_output | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_printf_count_output
@@ -33,73 +33,77 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279b14f0387348d322bbe09428af24daa5fd2f69
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 505d87a98ed212a4be7e23a05127686b370c9176
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
-Aktivieren oder Deaktivieren der Unterstützung des `%n`-Formats in den Funktionen der [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)-Familie.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _set_printf_count_output(  
-   int enable  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `enable`  
- Ein Wert ungleich null zum Aktivieren der `%n`-Unterstützung, 0 zum Deaktivieren der `%n`-Unterstützung.  
-  
-## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Der Status der `%n`-Unterstützung vor dem Aufrufen dieser Funktion: ungleich null, wenn die `%n`-Unterstützung aktiviert wurde, 0, wenn sie deaktiviert wurde.  
-  
-## <a name="remarks"></a>Hinweise  
- Aus Sicherheitsgründen ist die Unterstützung für den `%n`-Formatbezeichner standardmäßig in `printf` und dessen Varianten deaktiviert. Wenn `%n` in einer `printf`-Formatzeichenfolge festgestellt wird, wird gemäß Standardverhalten der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Aufrufen `_set_printf_count_output` mit einem Argument ungleich 0 führt dazu, dass `printf`-Produktfamilie Funktionen zum Interpretieren `%n` wie beschrieben in [Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_set_printf_count_output`|\<stdio.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```C  
-// crt_set_printf_count_output.c  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int e;  
-   int i;  
-   e = _set_printf_count_output( 1 );  
-   printf( "%%n support was %sabled.\n",  
-        e ? "en" : "dis" );  
-   printf( "%%n support is now %sabled.\n",  
-        _get_printf_count_output() ? "en" : "dis" );  
-   printf( "12345%n6789\n", &i ); // %n format should set i to 5  
-   printf( "i = %d\n", i );  
-}  
-```  
-  
-```Output  
-%n support was disabled.  
-%n support is now enabled.  
-123456789  
-i = 5  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)
+
+Aktivieren oder Deaktivieren der Unterstützung für die **%n** in formatieren [Printf, _printf_l, Wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Familie Funktionen.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _set_printf_count_output(
+   int enable
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Aktivieren Sie* einen Wert ungleich 0 (null), aktivieren Sie **%n** zu unterstützen, 0 zum Deaktivieren der **%n** unterstützen.
+
+## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
+
+Der Status der **%n** vor dem Aufrufen dieser Funktion zu unterstützen: If ungleich NULL **%n** Unterstützung wurde aktiviert, 0, wenn er deaktiviert wurde.
+
+## <a name="remarks"></a>Hinweise
+
+Aus Gründen der Sicherheit unterstützt, für die **%n** Formatbezeichner ist standardmäßig deaktiviert, in **Printf** und alle seine Varianten. Wenn **%n** festgestellt wird, einem **Printf** Formatangabe ist das Standardverhalten wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Aufrufen von **_set_printf_count_output** mit einem Argument ungleich 0 führt dazu, dass **Printf**-Produktfamilie Funktionen interpretieren **%n** wie beschrieben in [Format Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_set_printf_count_output**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_set_printf_count_output.c
+#include <stdio.h>
+
+int main()
+{
+   int e;
+   int i;
+   e = _set_printf_count_output( 1 );
+   printf( "%%n support was %sabled.\n",
+        e ? "en" : "dis" );
+   printf( "%%n support is now %sabled.\n",
+        _get_printf_count_output() ? "en" : "dis" );
+   printf( "12345%n6789\n", &i ); // %n format should set i to 5
+   printf( "i = %d\n", i );
+}
+```
+
+```Output
+%n support was disabled.
+%n support is now enabled.
+123456789
+i = 5
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[_get_printf_count_output](get-printf-count-output.md)<br/>

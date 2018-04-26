@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
-Konvertiert eine ganze Zahl in eine Zeichenfolge. Dies sind Versionen von der [_itoa _itow Funktionen](../../c-runtime-library/reference/itoa-itow.md) mit sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konvertiert eine ganze Zahl in eine Zeichenfolge. Dies sind Versionen von der [_itoa _itow Funktionen](itoa-itow.md) mit sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -161,22 +161,22 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Wenn eine der 
 
 |Wert|buffer|size|radix|Zurück|
 |-----------|------------|----------------------|-----------|------------|
-|alle|`NULL`|alle|alle|`EINVAL`|
-|alle|alle|<=0|alle|`EINVAL`|
-|alle|alle|<= Länge der erforderlichen Ergebniszeichenfolge|alle|`EINVAL`|
-|alle|alle|alle|*Basis* < 2 oder *Basis* > 36|`EINVAL`|
+|alle|**NULL**|alle|alle|**EINVAL**|
+|alle|alle|<=0|alle|**EINVAL**|
+|alle|alle|<= Länge der erforderlichen Ergebniszeichenfolge|alle|**EINVAL**|
+|alle|alle|alle|*Basis* < 2 oder *Basis* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Sicherheitsprobleme
 
-Mit diesen Funktionen können eine zugriffsverletzung generiert, wenn *Puffer* zeigt nicht auf gültige Speicher und ist nicht `NULL`, oder wenn die Länge des Puffers nicht lang genug, um die Ergebniszeichenfolge enthalten ist.
+Mit diesen Funktionen können eine zugriffsverletzung generiert, wenn *Puffer* zeigt nicht auf gültige Speicher und ist nicht **NULL**, oder wenn die Länge des Puffers nicht lang genug, um die Ergebniszeichenfolge enthalten ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Mit Ausnahme der Parameter und Rückgabewert der `_itoa_s` und `_itow_s` Funktion Familien weisen das gleiche Verhalten wie die entsprechende unsicherer `_itoa` und `_itow` Versionen.
+Mit Ausnahme der Parameter und Rückgabewert der **_itoa_s** und **_itow_s** Funktion Familien weisen das gleiche Verhalten wie die entsprechende unsicherer **_itoa** und **_itow** Versionen.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Die Bibliothek Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD". Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Die Bibliothek Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD". Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 Die CRT umfasst praktische Makros zum Definieren der Größe des Puffers erforderlich, um den längsten möglichen Wert der jeden ganzzahligen Typs, einschließlich null-Abschlusszeichen konvertiert, und melden Sie Zeichen, für verschiedene allgemeine Basen. Informationen finden Sie unter [maximale Anzahl konvertierungsmakros](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +184,18 @@ Die CRT umfasst praktische Makros zum Definieren der Größe des Puffers erforde
 
 |Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Anforderungen
 
 |Routine|Erforderlicher Header|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h> oder \<wchar.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> oder \<wchar.h>|
 
 Diese Funktionen sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Siehe auch
 
 [Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa _itow-Funktionen](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[_itoa _itow-Funktionen](itoa-itow.md)<br/>

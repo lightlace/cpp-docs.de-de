@@ -1,12 +1,9 @@
 ---
 title: modf, modff, modfl | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - modff
@@ -40,101 +37,88 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9744b82cd14d29234fabf1edbe379c2c5d14ac85
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 32effd51bf1d6d72819a6ca6c66d4aa2f2e6492d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
-Teilt einen Gleitkommawert in Nachkommastellen und ganze Zahlen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double modf(  
-   double x,  
-   double * intptr   
-);  
-float modf(  
-   float x,  
-   float * intptr  
-);  // C++ only  
-long double modf(  
-   long double x,  
-   long double * intptr  
-);  // C++ only  
-float modff(  
-   float x,  
-   float * intptr   
-);  
-long double modfl(  
-   long double x,  
-   long double * intptr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *w*  
- Gleitkommawert.  
-  
- `intptr`  
- Zeiger auf gespeicherten Ganzzahlbereich.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Diese Funktion gibt den Bruchteil von *x* mit Vorzeichen zurück. Es gibt keine Fehlerrückgabe.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktionen `modf` teilen den Gleitkommawert `x` in Nachkommastellen und ganze Zahlen, die alle die gleichen Vorzeichen wie `x` haben. Der Bruchteil von `x` mit Vorzeichen wird zurückgegeben. Der Ganzzahlbereich wird als Gleitkommawert unter `intptr.` gespeichert.  
-  
- `modf` ist eine Implementierung, die SIMD-Streamingerweiterungen 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
-  
- Da C++ das Überladen zulässt, können Sie Überladungen von `modf` aufrufen, die Parameter für `float` oder `long double` verwenden und zurückgeben. In einem C-Programm verwendet `modf` immer zwei double-Werte und gibt einen double-Wert zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`modf`, `modff`, `modfl`|C: \<math.h><br /><br /> C++: , \<cmath> oder \<math.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_modf.c  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x, y, n;  
-  
-   x = -14.87654321;      /* Divide x into its fractional */  
-   y = modf( x, &n );     /* and integer parts            */  
-  
-   printf( "For %f, the fraction is %f and the integer is %.f\n",   
-           x, y, n );  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-For -14.876543, the fraction is -0.876543 and the integer is -14  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [frexp](../../c-runtime-library/reference/frexp.md)   
- [ldexp](../../c-runtime-library/reference/ldexp.md)
+
+Teilt einen Gleitkommawert in Nachkommastellen und ganze Zahlen.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double modf( double x, double * intptr );
+float modff( float x, float * intptr );
+long double modfl( long double x, long double * intptr );
+```
+
+```cpp
+float modf( float x, float * intptr );  // C++ only
+long double modf( long double x, long double * intptr );  // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Gleitkommawert.
+
+*IntPtr*<br/>
+Zeiger auf gespeicherten Ganzzahlbereich.
+
+## <a name="return-value"></a>Rückgabewert
+
+Diese Funktion gibt den Bruchteil von *x* mit Vorzeichen zurück. Es gibt keine Fehlerrückgabe.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Modf** Funktionen unterteilen der Gleitkommawert *x* in Nachkommastellen und ganze Zahlen, von denen jede die gleichen Vorzeichen wie hat *x*. Der Bruchteil mit Vorzeichen von *x* zurückgegeben wird. Der ganzzahlige Teil wird gespeichert, als Gleitkommawert an *Intptr*.
+
+**Modf** ist eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+
+C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Modf** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Parameter. In einem C-Programm **Modf** immer zwei double-Werte und gibt einen double-Wert zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**Modf**, **Modff**, **Modfl**|C: \<math.h><br /><br /> C++: , \<cmath> oder \<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_modf.c
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x, y, n;
+
+   x = -14.87654321;      /* Divide x into its fractional */
+   y = modf( x, &n );     /* and integer parts            */
+
+   printf( "For %f, the fraction is %f and the integer is %.f\n",
+           x, y, n );
+}
+```
+
+```Output
+For -14.876543, the fraction is -0.876543 and the integer is -14
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[frexp](frexp.md)<br/>
+[ldexp](ldexp.md)<br/>

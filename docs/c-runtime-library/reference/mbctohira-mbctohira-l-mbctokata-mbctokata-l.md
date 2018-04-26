@@ -1,12 +1,12 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctohira
@@ -47,78 +47,83 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 761aebe19fea4cced51a7b49372b4c3c9d6bbecb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 80f82098a033f7a3dec8cdb475476644381bed8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
-Konvertiert zwischen Hiragana- und Katakana-Zeichen.  
-  
+
+Konvertiert zwischen Hiragana- und Katakana-Zeichen.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned int _mbctohira(  
-   unsigned int c   
-);  
-unsigned int _mbctohira_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-unsigned int _mbctokata(  
-   unsigned int c   
-);  
-unsigned int _mbctokata_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu konvertierendes Multibytezeichen.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt das konvertierte Zeichen `c` zurück, sofern dies möglich ist. Andernfalls wird das Zeichen `c` unverändert zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_mbctohira`- und `_mbctokata`-Funktionen testen ein Zeichen `c` und geben, falls möglich, eine der folgenden Konvertierungen zurück.  
-  
-|Routinen|Konvertiert|  
-|--------------|--------------|  
-|`_mbctohira,_mbctohira_l`|Multibyte-Katakana in Multibyte-Hiragana.|  
-|`_mbctokata,_mbctokata_l`|Multibyte-Hiragana in Multibyte-Katakana.|  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne das `_l`-Suffix für dieses Gebietsschema-abhängige Verhalten das aktuelle Gebietsschema verwenden, und diejenigen mit `_l`-Suffix den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- In früheren Versionen hieß `_mbctohira` `jtohira` und `_mbctokata` `jtokata`. Verwenden Sie bei neuem Code die neuen Namen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_mbctohira`|\<mbstring.h>|  
-|`_mbctohira_l`|\<mbstring.h>|  
-|`_mbctokata`|\<mbstring.h>|  
-|`_mbctokata_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)   
- [_mbctombb, _mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+unsigned int _mbctohira(
+   unsigned int c
+);
+unsigned int _mbctohira_l(
+   unsigned int c,
+   _locale_t locale
+);
+unsigned int _mbctokata(
+   unsigned int c
+);
+unsigned int _mbctokata_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu konvertierendes Multibytezeichen.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt das konvertierte Zeichen *c*, sofern dies möglich. Andernfalls wird das Zeichen zurückgegeben *c* unverändert.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_mbctohira** und **_mbctokata** Funktionen testen ein Zeichen *c* und, falls möglich, eine der folgenden Konvertierungen zurück.
+
+|Routinen|Konvertiert|
+|--------------|--------------|
+|**_mbctohira**, **_mbctohira_l**|Multibyte-Katakana in Multibyte-Hiragana.|
+|**_mbctokata**, **_mbctokata_l**|Multibyte-Hiragana in Multibyte-Katakana.|
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und die diejenigen mit den **_l** stattdessen suffix Verwenden Sie den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+In früheren Versionen **_mbctohira** hieß **Jtohira** und **_mbctokata** hieß **Jtokata**. Verwenden Sie bei neuem Code die neuen Namen.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_mbctohira**|\<mbstring.h>|
+|**_mbctohira_l**|\<mbstring.h>|
+|**_mbctokata**|\<mbstring.h>|
+|**_mbctokata_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>
+[_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)<br/>
+[_mbctombb, _mbctombb_l](mbctombb-mbctombb-l.md)<br/>

@@ -40,103 +40,111 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: efd4e458fa71fd6dcd93d47350c998a4a410cc65
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
-Ruft eine Zeile aus dem `stdin` -Stream ab. Diese Versionen von [gets, _getws](../../c-runtime-library/gets-getws.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-char *gets_s(   
-   char *buffer,  
-   size_t sizeInCharacters  
-);  
-wchar_t *_getws_s(   
-   wchar_t *buffer,  
-   size_t sizeInCharacters  
-);  
-template <size_t size>  
-char *gets_s(   
-   char (&buffer)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_getws_s(   
-   wchar_t (&buffer)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `buffer`  
- Speicherort für die Eingabezeichenfolge.  
-  
- [in] `sizeInCharacters`  
- Die Größe des Puffers.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt bei Erfolg `buffer` zurück. Ein `NULL` -Zeiger weist auf einen Fehler oder eine Dateiendebedingung hin. Verwenden Sie [ferror](../../c-runtime-library/reference/ferror.md) oder [feof](../../c-runtime-library/reference/feof.md), um festzulegen, welcher Fehler aufgetreten ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `gets_s`-Funktion liest eine Zeile aus dem Standardeingabestream `stdin` und speichert sie in `buffer`. Die Zeile enthält alle Zeichen einschließlich des ersten Zeilenumbruchzeichens ('\n'). `gets_s` ersetzt dann das Zeilenumbruchzeichen durch ein NULL-Zeichen ('\0'), ehe die Zeile zurückgegeben wird. Im Gegensatz dazu behält die `fgets_s`-Funktion das Zeilenumbruchzeichen bei.  
-  
- Wenn das erste gelesene Zeichen das Dateiendezeichen ist, wird ein NULL-Zeichen am `buffer`-Anfang gespeichert und `NULL` zurückgegeben.  
-  
- `_getws_s` ist eine Breitzeichenversion von `gets_s`. Das Argument und der Rückgabewert sind Breitzeichen-Zeichenfolgen.  
-  
- Wenn `buffer` `NULL` ist oder wenn `sizeInCharacters` kleiner oder gleich null, oder wenn der Puffer zu klein für die Eingabezeile und das abschließende NULL-Zeichen ist, rufen diese Funktionen einen ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `NULL` zurück und setzen "errno" auf `ERANGE`.  
-  
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Routine|Erforderlicher Header|  
-|-------------|---------------------|  
-|`gets_s`|\<stdio.h>|  
-|`_getws_s`|\<stdio.h> oder \<wchar.h>|  
-  
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind `stdin`, `stdout`, und `stderr`, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_gets_s.c  
-// This program retrieves a string from the stdin and   
-// prints the same string to the console.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char line[21]; // room for 20 chars + '\0'  
-   gets_s( line, 20 );  
-   printf( "The line entered was: %s\n", line );  
-}  
-```  
-  
-```Output  
-  
-Hello there!The line entered was: Hello there!  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [gets, _getws](../../c-runtime-library/gets-getws.md)   
- [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)   
- [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [puts, _putws](../../c-runtime-library/reference/puts-putws.md)
+
+Ruft eine Zeile aus der **Stdin** Stream. Diese Versionen von [gets, _getws](../../c-runtime-library/gets-getws.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
+
+## <a name="syntax"></a>Syntax
+
+```C
+char *gets_s(
+   char *buffer,
+   size_t sizeInCharacters
+);
+wchar_t *_getws_s(
+   wchar_t *buffer,
+   size_t sizeInCharacters
+);
+```
+
+```cpp
+template <size_t size>
+char *gets_s( char (&buffer)[size] ); // C++ only
+
+template <size_t size>
+wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*buffer*<br/>
+Speicherort für die Eingabezeichenfolge.
+
+*sizeInCharacters*<br/>
+Die Größe des Puffers.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt *Puffer* bei Erfolg. Ein **NULL** Zeiger gibt eine Fehler- oder End-of-File-Bedingung an. Verwenden Sie [ferror](ferror.md) oder [feof](feof.md), um festzulegen, was aufgetreten ist.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Gets_s** Funktion liest eine Zeile aus dem Standardeingabestream **Stdin** und speichert ihn in *Puffer*. Die Zeile enthält alle Zeichen einschließlich des ersten Zeilenumbruchzeichens ('\n'). **Gets_s** ersetzt dann das neue Zeilenumbruchzeichen mit einem Nullzeichen ('\0'), ehe die Zeile zurückgegeben. Im Gegensatz dazu die **Fgets_s** Funktion behält das neue Zeilenumbruchzeichen.
+
+Wenn das erste gelesene Zeichen das EOF-Zeichen ist, wird ein Null-Zeichen am Anfang des gespeichert *Puffer* und **NULL** zurückgegeben wird.
+
+**_getws_s** ist eine Breitzeichen-Version von **Gets_s**; das Argument und der Rückgabewert sind Breitzeichen Zeichenfolgen.
+
+Wenn *Puffer* ist **NULL** oder *SizeInCharacters* ist kleiner oder gleich 0 (null), oder wenn der Puffer zu klein, um die Eingabezeile und der null-Terminator enthalten ist, rufen diese Funktionen ein Handler für ungültige Parameter, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **NULL** und setzen "Errno" auf **ERANGE**.
+
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**gets_s**|\<stdio.h>|
+|**_getws_s**|\<stdio.h> oder \<wchar.h>|
+
+Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_gets_s.c
+// This program retrieves a string from the stdin and
+// prints the same string to the console.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char line[21]; // room for 20 chars + '\0'
+   gets_s( line, 20 );
+   printf( "The line entered was: %s\n", line );
+}
+```
+
+```Input
+Hello there!
+```
+
+```Output
+The line entered was: Hello there!
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[fgets, fgetws](fgets-fgetws.md)<br/>
+[fputs, fputws](fputs-fputws.md)<br/>
+[puts, _putws](puts-putws.md)<br/>

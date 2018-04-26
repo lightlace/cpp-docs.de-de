@@ -1,12 +1,12 @@
 ---
 title: _mbsbtype, _mbsbtype_ | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsbtype_l
@@ -37,75 +37,80 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25372291d4069e2fda5130a7166b1b4da8eb525
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a8108372cd40aba6770136908b177dc82a9ff25e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
-Gibt den Bytetyp in einer Zeichenfolge zurück.  
-  
+
+Gibt den Bytetyp in einer Zeichenfolge zurück.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _mbsbtype(  
-   const unsigned char *mbstr,  
-   size_t count   
-);  
-int _mbsbtype_l(  
-   const unsigned char *mbstr,  
-   size_t count,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `mbstr`  
- Adresse einer Sequenz von Multibytezeichen.  
-  
- `count`  
- Byte-Offset vom Anfang der Zeichenfolge.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_mbsbtype` und `_mbsbtype_l` gibt einen ganzzahligen Wert, der angibt, des Ergebnis des Tests auf dem angegebenen Byte. Die Manifestkonstanten in der folgenden Tabelle sind in Mbctype.h definiert.  
-  
-|Rückgabewert|Bytetyp|  
-|------------------|---------------|  
-|`_MBC_SINGLE` (0)|Einzelbytezeichen. Beispielsweise ist in Codepage 932 `_mbsbtype` gibt 0 zurück, wenn das angegebene Byte im Bereich 0 x 20 – 0x7E oder 0xA1 - 0xDF liegt.|  
-|`_MBC_LEAD` (1)|Führendes Byte des Multibytezeichens. Beispielsweise ist in Codepage 932 `_mbsbtype` gibt 1 zurück, wenn das angegebene Byte im Bereich 0 x 81-0x9F oder 0xE0 - 0xFC liegt.|  
-|`_MBC_TRAIL` (2)|Nachfolgendes Byte des Multibytezeichens. Beispielsweise ist in Codepage 932 `_mbsbtype` gibt 2 zurück, wenn das angegebene Byte im Bereich 0 x 40-0x7E oder 0 x 80 - 0xFC liegt.|  
-|`_MBC_ILLEGAL` (-1)|`NULL`-Zeichenfolge, ungültiges Zeichen oder `NULL`-Byte, gefunden vor dem Byte am Offset `count` in `mbstr`.|  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_mbsbtype`-Funktion bestimmt den Typ eines Bytes in einer Multibyte-Zeichenfolge. Die Funktion überprüft nur das Byte am Offset `count` in `mbstr` und ignoriert ungültige Zeichen vor dem angegebenen Byte.  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Version dieser Funktion ohne das `_l`-Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Wenn die Eingabezeichenfolge `NULL` ist, wird der ungültige Parameterhandler wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `_MBC_ILLEGAL` zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------|---------------------|  
-|`_mbsbtype`|\<mbstring.h>|\<mbctype.h>*|  
-|`_mbsbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
-  
- \* Für Manifestkonstanten, die als Rückgabewerte verwendet werden.  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Byteklassifizierung](../../c-runtime-library/byte-classification.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _mbsbtype(
+   const unsigned char *mbstr,
+   size_t count
+);
+int _mbsbtype_l(
+   const unsigned char *mbstr,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*mbstr*<br/>
+Adresse einer Sequenz von Multibytezeichen.
+
+*count*<br/>
+Byte-Offset vom Anfang der Zeichenfolge.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_mbsbtype** und **_mbsbtype_l** gibt einen ganzzahligen Wert, der angibt, des Ergebnis des Tests auf dem angegebenen Byte. Die Manifestkonstanten in der folgenden Tabelle sind in Mbctype.h definiert.
+
+|Rückgabewert|Bytetyp|
+|------------------|---------------|
+|**_MBC_SINGLE** (0)|Einzelbytezeichen. Beispielsweise ist in Codepage 932 **_mbsbtype** gibt 0 zurück, wenn das angegebene Byte im Bereich 0 x 20 – 0x7E oder 0xA1 - 0xDF liegt.|
+|**_MBC_LEAD** (1)|Führendes Byte des Multibytezeichens. Beispielsweise ist in Codepage 932 **_mbsbtype** gibt 1 zurück, wenn das angegebene Byte im Bereich 0 x 81-0x9F oder 0xE0 - 0xFC liegt.|
+|**_MBC_TRAIL** (2)|Nachfolgendes Byte des Multibytezeichens. Beispielsweise ist in Codepage 932 **_mbsbtype** gibt 2 zurück, wenn das angegebene Byte im Bereich 0 x 40-0x7E oder 0 x 80 - 0xFC liegt.|
+|**_MBC_ILLEGAL** (-1)|**NULL** Zeichenfolge, ungültiges Zeichen oder **NULL** Byte, gefunden vor dem Byte am Offset *Anzahl* in *Mbstr*.|
+
+## <a name="remarks"></a>Hinweise
+
+Die **_mbsbtype** -Funktion bestimmt den Typ eines Bytes in einem Multibyte-Zeichenfolge. Die Funktion überprüft nur das Byte am Offset *Anzahl* in *Mbstr*, ignoriert ungültige Zeichen vor dem angegebenen Byte.
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, verwendet jedoch den Ihnen übergebenen Gebietsschemaparameter in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Wenn die Eingabezeichenfolge **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **_MBC_ILLEGAL**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|Optionaler Header|
+|-------------|---------------------|---------------------|
+|**_mbsbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbsbtype_l**|\<mbstring.h>|\<mbctype.h>*|
+
+\* Für Manifestkonstanten, die als Rückgabewerte verwendet werden.
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Byteklassifizierung](../../c-runtime-library/byte-classification.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _fflush_nolock | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fflush_nolock
@@ -34,49 +34,54 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091a32f7e5c16876378a147084a9ecdd06354243
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 125c20a53b605089a9b8b5eb83816b82bbf69f2c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
-Leert einen Stream, ohne den Thread zu sperren  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _fflush_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `stream`  
- Zeiger auf die `FILE`-Struktur.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Weitere Informationen finden Sie unter [fflush](../../c-runtime-library/reference/fflush.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktion ist eine nicht sperrende Version von `fflush`. Sie ist mit `fflush` identisch, abgesehen davon, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_fflush_nolock`|\<stdio.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+
+Leert einen Stream, ohne den Thread zu sperren
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _fflush_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Stream*<br/>
+Zeiger auf die **FILE**-Struktur.
+
+## <a name="return-value"></a>Rückgabewert
+
+Weitere Informationen finden Sie unter [fflush](fflush.md).
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktion ist eine nicht sperrende Version von **Fflush**. Sie ist identisch mit **Fflush** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_fflush_nolock**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_flushall](flushall.md)<br/>
+[setvbuf](setvbuf.md)<br/>

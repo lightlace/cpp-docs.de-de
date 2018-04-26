@@ -1,13 +1,13 @@
 ---
 title: conj, conjf, conjl | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - conj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b994d8c6afe416cd399c04d91fae422b217cf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01feb4b30305f915a91d104d9134018c3d5b24e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
-Gibt die konjugiert komplexe Zahl einer komplexen Zahl zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-_Dcomplex conj(   
-   _Dcomplex z   
-);  
-_Fcomplex conj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex conj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex conjf(   
-   _Fcomplex z   
-);  
-_Lcomplex conjl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `z`  
- Eine komplexe Zahl.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die konjugierte komplexe Zahl von `z`.  Das Ergebnis hat den gleichen Real- und Imaginärteil wie `z`, jedoch mit umgekehrtem Vorzeichen.  
-  
-## <a name="remarks"></a>Hinweise  
- Da C++ das Überladen zulässt, können Sie Überladungen von `conj` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `conj` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|C-Header|C++-Header|  
-|-------------|--------------|------------------|  
-|`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Gibt die konjugiert komplexe Zahl einer komplexen Zahl zurück.
+
+## <a name="syntax"></a>Syntax
+
+```C
+_Dcomplex conj(
+   _Dcomplex z
+);
+_Fcomplex conj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex conj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex conjf(
+   _Fcomplex z
+);
+_Lcomplex conjl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*z*<br/>
+Eine komplexe Zahl.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die konjugierte *z*.  Das Ergebnis hat den gleichen reellen und imaginären Teil als *z*, jedoch mit umgekehrtem Vorzeichen.
+
+## <a name="remarks"></a>Hinweise
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Conj** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Conj** immer Double und gibt eine **_Dcomplex** Wert.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|C-Header|C++-Header|
+|-------------|--------------|------------------|
+|**Conj**, **Conjf**, **Conjl**|\<complex.h>|\<ccomplex>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

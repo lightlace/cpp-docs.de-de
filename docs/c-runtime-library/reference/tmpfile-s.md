@@ -1,12 +1,12 @@
 ---
 title: tmpfile_s | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tmpfile_s
@@ -32,102 +32,107 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9ac079ce833f65a4a2add57bbc0be93c97902e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 57c230dedd3415a272e168b586a16ccb03f5d29a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tmpfiles"></a>tmpfile_s
-Erstellt eine temporäre Datei. Dies ist eine Version von [tmpfile](../../c-runtime-library/reference/tmpfile.md) mit Sicherheitserweiterungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t tmpfile_s(  
-   FILE** pFilePtr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `pFilePtr`  
- Die Adresse eines Zeigers, um die Adresse des generierten Zeigers in einen Stream zu speichern.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.  
-  
-### <a name="error-conditions"></a>Fehlerbedingungen  
-  
-|`pFilePtr`|**Rückgabewert**|**Inhalte von** `pFilePtr`|  
-|----------------|----------------------|---------------------------------|  
-|`NULL`|`EINVAL`|nicht geändert|  
-  
- Wenn der obengenannte Parametervalidierungsfehler auftritt, wird der ungültige Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` zu `EINVAL`, und der Rückgabewert ist `EINVAL`.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion `tmpfile_s` erstellt eine temporäre Datei und versieht diesen Stream im Argument `pFilePtr` mit einem Zeiger. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md) oder [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
-  
- Wenn die Datei nicht geöffnet werden kann, schreibt `tmpfile_s` `NULL` in den Parameter `pFilePtr`. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei geschlossen wird, wenn das Programm normal beendet wird oder wenn `_rmtmp` aufgerufen wird, vorausgesetzt, dass sich das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird im (binären Lese-/Schreib-) Modus `w+b` geöffnet.  
-  
- Ein Fehler kann auftreten, wenn Sie mehr als `TMP_MAX_S` (siehe STDIO.H) Aufrufe mit `tmpfile_s.` versuchen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`tmpfile_s`|\<stdio.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
+
+Erstellt eine temporäre Datei. Dies ist eine Version von [tmpfile](tmpfile.md) mit Sicherheitserweiterungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t tmpfile_s(
+   FILE** pFilePtr
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*pFilePtr*<br/>
+Die Adresse eines Zeigers, um die Adresse des generierten Zeigers in einen Stream zu speichern.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.
+
+### <a name="error-conditions"></a>Fehlerbedingungen
+
+|*pFilePtr*|**Rückgabewert**|**Inhalt der***pFilePtr* |
+|----------------|----------------------|---------------------------------|
+|**NULL**|**EINVAL**|nicht geändert|
+
+Wenn der obengenannte Parametervalidierungsfehler auftritt, wird der ungültige Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und der Rückgabewert ist **EINVAL**.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Tmpfile_s** Funktion erstellt eine temporäre Datei und fügt einen Zeiger zu diesem Datenstrom in die *pFilePtr* Argument. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam_s](tmpnam-s-wtmpnam-s.md) oder [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](fopen-wfopen.md).
+
+Wenn die Datei kann nicht geöffnet werden, **Tmpfile_s** schreibt **NULL** auf die *pFilePtr* Parameter. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei, beim Beenden des Programms normal oder wenn geschlossen ist **_rmtmp** aufgerufen wird, vorausgesetzt, dass das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird geöffnet, **w + b** (Lese-/Schreibzugriff binären) Modus.
+
+Fehler kann auftreten, wenn Sie versuchen, mehr als **TMP_MAX_S** (Siehe STDIO. H) Aufrufe mit **Tmpfile_s**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**tmpfile_s**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
 > [!NOTE]
->  Für dieses Beispiel benötigen Sie Administratorrechte, um es unter Windows Vista auszuführen.  
-  
-```  
-// crt_tmpfile_s.c  
-// This program uses tmpfile_s to create a  
-// temporary file, then deletes this file with _rmtmp.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char tempstring[] = "String to be written";  
-   int  i;  
-   errno_t err;  
-  
-   // Create temporary files.  
-   for( i = 1; i <= 3; i++ )  
-   {  
-      err = tmpfile_s(&stream);  
-      if( err )  
-         perror( "Could not open new temporary file\n" );  
-      else  
-         printf( "Temporary file %d was created\n", i );  
-   }  
-  
-   // Remove temporary files.  
-   printf( "%d temporary files deleted\n", _rmtmp() );  
-}  
-```  
-  
-```Output  
-Temporary file 1 was created  
-Temporary file 2 was created  
-Temporary file 3 was created  
-3 temporary files deleted  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+> In diesem Beispiel wird möglicherweise Administratorrechte verfügen, um unter Windows ausgeführt werden.
+
+```C
+// crt_tmpfile_s.c
+// This program uses tmpfile_s to create a
+// temporary file, then deletes this file with _rmtmp.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char tempstring[] = "String to be written";
+   int  i;
+   errno_t err;
+
+   // Create temporary files.
+   for( i = 1; i <= 3; i++ )
+   {
+      err = tmpfile_s(&stream);
+      if( err )
+         perror( "Could not open new temporary file\n" );
+      else
+         printf( "Temporary file %d was created\n", i );
+   }
+
+   // Remove temporary files.
+   printf( "%d temporary files deleted\n", _rmtmp() );
+}
+```
+
+```Output
+Temporary file 1 was created
+Temporary file 2 was created
+Temporary file 3 was created
+3 temporary files deleted
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[_rmtmp](rmtmp.md)<br/>
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

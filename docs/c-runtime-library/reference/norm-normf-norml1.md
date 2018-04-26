@@ -1,7 +1,7 @@
 ---
 title: Norm, Normf, Norml | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 04/05/2018
 ms.technology:
 - cpp
 - devlang-cpp
@@ -42,11 +42,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28c8e05dfc2cc9e42584324a78ba14f37a9b951d
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: e485c609054021fbdb8563ded539aa8f19cc868e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -76,22 +76,22 @@ Quadriert Maßeinheit *z*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen `norm` nehmen **_Fcomplex** oder **_Lcomplex** Werte, und der Rückgabewert **"float"** oder **lang doppelte** Werte. In einem C-Programm `norm` immer ein **_Dcomplex** Wert und gibt eine **doppelte** Wert.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Norm** nehmen **_Fcomplex** oder **_Lcomplex** Werte, und der Rückgabewert **"float"** oder **long double** Werte. In einem C-Programm **Norm** immer ein **_Dcomplex** Wert und gibt eine **doppelte** Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
 |Routine|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|`norm`, `normf`, `norml`|\<complex.h>|\<ccomplex>|
+|**Norm**, **Normf**, **Norml**|\<complex.h>|\<complex.h>|
 
 Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische-Entsprechungen der implementierten native C99 Typen **_Complex float** , **doppelte _Complex**, und **long double _Complex**zugeordnet.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

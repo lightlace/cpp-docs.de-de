@@ -1,12 +1,12 @@
 ---
 title: _kbhit | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _kbhit
@@ -39,79 +39,84 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643a02b8c3617689900eb4114d19fad6f46ad280
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3440227be02fbfda2d4431d91b1286d965e8bc79
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="kbhit"></a>_kbhit
-Überprüft die Konsole auf Tastatureingaben.  
-  
+
+Überprüft die Konsole auf Tastatureingaben.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-int _kbhit( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_kbhit` gibt einen Wert ungleich 0 (null) zurück, wenn eine Taste gedrückt wurde. Andernfalls wird 0 (null) zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_kbhit`-Funktion überprüft die Konsole auf eine neue Tastatureingabe. Wenn die Funktion einen Wert ungleich 0 (null) zurückgibt, befindet sich eine Tastatureingabe im Puffer. Das Programm kann dann `_getch` oder `_getche` aufrufen, um die Tastatureingabe zu erhalten.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_kbhit`|\<conio.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_kbhit.c  
-// compile with: /c  
-/* This program loops until the user  
- * presses a key. If _kbhit returns nonzero, a  
- * keystroke is waiting in the buffer. The program  
- * can call _getch or _getche to get the keystroke.  
- */  
-  
-#include <conio.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   /* Display message until key is pressed. */  
-   while( !_kbhit() )  
-      _cputs( "Hit me!! " );  
-  
-   /* Use _getch to throw key away. */  
-   printf( "\nKey struck was '%c'\n", _getch() );  
-}  
-```  
-  
-## <a name="sample-output"></a>Beispielausgabe  
-  
-```  
-Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!  
-Key struck was 'q'   
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+
+int _kbhit( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**_kbhit** gibt einen Wert ungleich NULL zurück, wenn eine Taste gedrückt wurde. Andernfalls wird 0 (null) zurückgegeben.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_kbhit** Funktion überprüft die Konsole auf eine neue Tastatureingabe. Wenn die Funktion einen Wert ungleich 0 (null) zurückgibt, befindet sich eine Tastatureingabe im Puffer. Die Anwendung kann dann aufrufen **_getch** oder **_getche** auf die Tastatureingabe zu erhalten.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_kbhit**|\<conio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_kbhit.c
+// compile with: /c
+/* This program loops until the user
+* presses a key. If _kbhit returns nonzero, a
+* keystroke is waiting in the buffer. The program
+* can call _getch or _getche to get the keystroke.
+*/
+
+#include <conio.h>
+#include <stdio.h>
+
+int main( void )
+{
+   /* Display message until key is pressed. */
+   while( !_kbhit() )
+      _cputs( "Hit me!! " );
+
+   /* Use _getch to throw key away. */
+   printf( "\nKey struck was '%c'\n", _getch() );
+}
+```
+
+### <a name="sample-output"></a>Beispielausgabe
+
+```Output
+Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
+Key struck was 'q'
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)<br/>

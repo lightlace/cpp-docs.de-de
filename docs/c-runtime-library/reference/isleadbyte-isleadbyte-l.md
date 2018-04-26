@@ -1,12 +1,12 @@
 ---
 title: isleadbyte, _isleadbyte_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isleadbyte_l
@@ -37,65 +37,66 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dacf22d33f166527e7c464e0632366d2e39315f8
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
-Bestimmt, ob ein Zeichen das führende Byte eines Multibytezeichens ist.  
-  
+
+Bestimmt, ob ein Zeichen das führende Byte eines Multibytezeichens ist.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int isleadbyte(  
-   int c   
-);  
-int _isleadbyte_l(  
-   int c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `isleadbyte` gibt einen Wert ungleich 0 zurück, wenn das Argument die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Im Gebietsschema "C" und in Einzelbyte-Zeichensatz(SBCS)-Gebietsschemas, gibt `isleadbyte` immer 0 zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Das Makro `isleadbyte` gibt einen Wert ungleich 0 (null) zurück, wenn dessen Argument das erste Byte eines Multibytezeichens ist. `isleadbyte` erzeugt ein aussagekräftiges Ergebnis für ein Ganzzahlargument von – 1 (`EOF`) zu `UCHAR_MAX` (0xFF) inklusive.  
-  
- Der erwartete Argumenttyp von `isleadbyte` ist `int`. Ein mit Vorzeichen übergebenes Zeichen wird vom Compiler möglicherweise durch Vorzeichenerweiterung in eine ganze Zahl konvertiert, was zu unvorhersehbaren Ergebnissen führt.  
-  
- Die Version dieser Funktion mit dem `_l` -Suffix ist beinahe identisch, verwendet jedoch das an sie übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istleadbyte`|Gibt immer "false" zurück|**_** `isleadbyte`|Gibt immer "false" zurück|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`isleadbyte`|\<ctype.h>|  
-|`_isleadbyte_l`|\<ctype.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Byteklassifizierung](../../c-runtime-library/byte-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int isleadbyte( int c );
+int _isleadbyte_l( int c );
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl.
+
+## <a name="return-value"></a>Rückgabewert
+
+**Isleadbyte** gibt einen Wert ungleich NULL zurück, wenn das Argument die testbedingung erfüllt, bzw. 0 erfüllt, wenn dies nicht der Fall. In der "C"-Gebietsschema und Einzelbyte-Zeichensatz (SBCS) Gebietsschemas **Isleadbyte** gibt immer 0 zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Isleadbyte** Makro gibt einen Wert ungleich NULL zurück, wenn dessen Argument das erste Byte eines multibytezeichens ist. **Isleadbyte** erzeugt ein aussagekräftiges Ergebnis für ein Ganzzahlargument von – 1 (**EOF**) zu **UCHAR_MAX** (0xFF) inklusive.
+
+Der erwartete Argumenttyp von **Isleadbyte** ist **Int**; Wenn ein mit Vorzeichen übergebenes Zeichen wird, vom Compiler möglicherweise konvertiert in eine ganze Zahl durch vorzeichenerweiterung, zu unvorhersehbaren Ergebnissen führt.
+
+Die Version dieser Funktion mit dem **_l** -Suffix ist beinahe identisch, außer dass er das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwendet.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istleadbyte**|Gibt immer "false" zurück|**_isleadbyte**|Gibt immer "false" zurück|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**isleadbyte**|\<ctype.h>|
+|**_isleadbyte_l**|\<ctype.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Byteklassifizierung](../../c-runtime-library/byte-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)<br/>

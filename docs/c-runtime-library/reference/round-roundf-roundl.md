@@ -1,12 +1,12 @@
 ---
 title: round, roundf, roundl | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - round
@@ -36,105 +36,110 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b90deedf85fac78fcf4cd9e4b08b4c595ef9da26
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3051cc928bb77ac6abf17fdb309480a246864a74
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
-Rundet einen Gleitkommawert auf die nächste Ganzzahl.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double round(   
-   double x   
-);  
-float round(  
-   float x  
-);  // C++ only  
-long double round(  
-   long double x  
-);  // C++ only  
-float roundf(  
-   float x  
-);  
-long double roundl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`  
- Der zu rundende Gleitkommawert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die `round`-Funktionen geben einen Gleitkommawert zurück, der die nächste ganze Zahl zu `x` darstellt. Halbe Werte werden kaufmännisch gerundet, unabhängig von der Einstellung des Gleitkomma-Rundungsmodus. Es gibt keine Fehlerrückgabe.  
-  
-|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
-|-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|Keine|`_DOMAIN`|  
-  
-## <a name="remarks"></a>Hinweise  
- Da C++ das Überladen zulässt, können Sie Überladungen von `round` aufrufen, die `float`- und `long double`-Werte verwenden und zurückgeben. In einem C-Programm verwendet `round` immer `double` und gibt diesen Wert zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`round`, `roundf`, `roundl`|\<math.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_round.c  
-// Build with: cl /W3 /Tc crt_round.c  
-// This example displays the rounded results of  
-// the floating-point values 2.499999, -2.499999,   
-// 2.8, -2.8, 2.5 and -2.5.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 2.499999;  
-   float y = 2.8f;  
-   long double z = 2.5;  
-  
-   printf("round(%f) is %.0f\n", x, round(x));  
-   printf("round(%f) is %.0f\n", -x, round(-x));  
-   printf("roundf(%f) is %.0f\n", y, roundf(y));  
-   printf("roundf(%f) is %.0f\n", -y, roundf(-y));  
-   printf("roundl(%Lf) is %.0Lf\n", z, roundl(z));  
-   printf("roundl(%Lf) is %.0Lf\n", -z, roundl(-z));  
-}  
-```  
-  
-```Output  
-round(2.499999) is 2  
-round(-2.499999) is -2  
-roundf(2.800000) is 3  
-roundf(-2.800000) is -3  
-roundl(2.500000) is 3  
-roundl(-2.500000) is -3  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)   
- [lround, lroundf, lroundl, llround, llroundf, llroundl](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)   
- [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)   
- [rint, rintf, rintl](../../c-runtime-library/reference/rint-rintf-rintl.md)
+
+Rundet einen Gleitkommawert auf die nächste Ganzzahl.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double round(
+   double x
+);
+float round(
+   float x
+);  // C++ only
+long double round(
+   long double x
+);  // C++ only
+float roundf(
+   float x
+);
+long double roundl(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Der zu rundende Gleitkommawert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die **runden** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl zu darstellt zurück *x*. Halbe Werte werden kaufmännisch gerundet, unabhängig von der Einstellung des Gleitkomma-Rundungsmodus. Es gibt keine Fehlerrückgabe.
+
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|Keine|**_DOMAIN**|
+
+## <a name="remarks"></a>Hinweise
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **runden** verwenden und zurückgeben **"float"** und **lange** **doppelte** Werte. In einem C-Programm **runden** immer Double und gibt eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**runden**, **Roundf**, **Roundl**|\<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_round.c
+// Build with: cl /W3 /Tc crt_round.c
+// This example displays the rounded results of
+// the floating-point values 2.499999, -2.499999,
+// 2.8, -2.8, 2.5 and -2.5.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 2.499999;
+   float y = 2.8f;
+   long double z = 2.5;
+
+   printf("round(%f) is %.0f\n", x, round(x));
+   printf("round(%f) is %.0f\n", -x, round(-x));
+   printf("roundf(%f) is %.0f\n", y, roundf(y));
+   printf("roundf(%f) is %.0f\n", -y, roundf(-y));
+   printf("roundl(%Lf) is %.0Lf\n", z, roundl(z));
+   printf("roundl(%Lf) is %.0Lf\n", -z, roundl(-z));
+}
+```
+
+```Output
+round(2.499999) is 2
+round(-2.499999) is -2
+roundf(2.800000) is 3
+roundf(-2.800000) is -3
+roundl(2.500000) is 3
+roundl(-2.500000) is -3
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
+[lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
+[lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
+[rint, rintf, rintl](rint-rintf-rintl.md)<br/>

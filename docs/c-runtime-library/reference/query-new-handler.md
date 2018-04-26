@@ -1,12 +1,12 @@
 ---
 title: _query_new_handler | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _query_new_handler
@@ -34,46 +34,51 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ace3b5d57515ee10fbb58992f708a465064980
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c59b12c57af4d8a3d40b1ced2ffdc2a2cb00bc1f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="querynewhandler"></a>_query_new_handler
-Gibt die Adresse der aktuellen neuen Handlerroutine zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-_PNH _query_new_handler(  
-   void   
-);  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt die Adresse der aktuellen neuen Handlerroutine zurück, wie in `_set_new_handler` festgelegt.  
-  
-## <a name="remarks"></a>Hinweise  
- Die C++ `_query_new_handler`-Funktion gibt die Adresse der aktuellen Ausnahmebehandlungsfunktion zurück, die von der [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)-C++-Funktion festgelegt wurde. `_set_new_handler` wird verwendet, um eine Funktion für die Ausnahmebehandlung anzugeben, die die Steuerung übernehmen wird, wenn der **new**-Operator keinen Arbeitsspeicher zuordnen kann. Weitere Informationen finden Sie unter der Erläuterung [new and delete operators (Operatoren new und delete)](../../cpp/new-and-delete-operators.md) in der C++-Sprachreferenz.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_query_new_handler`|\<new.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   
- [free](../../c-runtime-library/reference/free.md)
+
+Gibt die Adresse der aktuellen neuen Handlerroutine zurück.
+
+## <a name="syntax"></a>Syntax
+
+```C
+_PNH _query_new_handler(
+   void
+);
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt die Adresse des aktuellen neuen Handlerroutine Isolationstransaktionen gemäß **_set_new_handler**.
+
+## <a name="remarks"></a>Hinweise
+
+Die C++ **_query_new_handler** Funktion gibt die Adresse für die aktuelle festlegen, indem die C++-Ausnahmebehandlung-Funktion [_set_new_handler](set-new-handler.md) Funktion. **_set_new_handler** wird verwendet, um eine Funktion für die Ausnahmebehandlung anzugeben, wenn die Steuerung übernehmen die **neue** -Operator keine speicherbelegung vornehmen kann. Weitere Informationen finden Sie unter der Erläuterung [new and delete operators (Operatoren new und delete)](../../cpp/new-and-delete-operators.md) in der C++-Sprachreferenz.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_query_new_handler**|\<new.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Speicherreservierung](../../c-runtime-library/memory-allocation.md)<br/>
+[free](free.md)<br/>

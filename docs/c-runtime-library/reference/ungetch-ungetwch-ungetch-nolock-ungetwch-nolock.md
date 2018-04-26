@@ -1,12 +1,12 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ungetch_nolock
@@ -53,112 +53,117 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e47415af123b592e55b0f01f5556bc19bcfb3a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3478f451ee4c1200074bf066a9de6bcb026c5036
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-Schiebt das zuletzt aus der Konsole gelesene Zeichen zurück.  
-  
+
+Schiebt das zuletzt aus der Konsole gelesene Zeichen zurück.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _ungetch(  
-   int c   
-);  
-wint_t _ungetwch(  
-   wint_t c   
-);  
-int _ungetch_nolock(  
-   int c   
-);  
-wint_t _ungetwch_nolock(  
-   wint_t c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu verschiebendes Zeichen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Beide Funktionen geben bei Erfolg das Zeichen `c` zurück. Wenn ein Fehler vorliegt `_ungetch` gibt einen Wert von `EOF` und `_ungetwch` gibt `WEOF`.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktionen mithilfe von Push übertragen das Zeichen `c` zurück an die Konsole, verursacht `c` auf das nächste Zeichen gelesen werden `_getch` oder `_getche` (oder `_getwch` oder `_getwche`). `_ungetch` und `_ungetwch` schlagen fehl, wenn sie vor dem nächsten Lesevorgang mehrmals aufgerufen werden. Das `c`-Argument darf nicht `EOF` (oder `WEOF`) sein.  
-  
- Die Versionen mit dem `_nolock`-Suffix sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ungettch`|`_ungetch`|`_ungetch`|`_ungetwch`|  
-|`_ungettch_nolock`|`_ungetch_nolock`|`_ungetch_nolock`|`_ungetwch_nolock`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_ungetch`, `_ungetch_nolock`|\<conio.h>|  
-|`_ungetwch`, `_ungetwch_nolock`|\<conio.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_ungetch.c  
-// compile with: /c  
-// In this program, a white-space delimited   
-// token is read from the keyboard. When the program   
-// encounters a delimiter, it uses _ungetch to replace   
-// the character in the keyboard buffer.  
-//  
-  
-#include <conio.h>  
-#include <ctype.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char buffer[100];  
-   int count = 0;  
-   int ch;  
-  
-   ch = _getche();  
-   while( isspace( ch ) )      // Skip preceding white space.  
-      ch = _getche();  
-   while( count < 99 )         // Gather token.  
-   {  
-      if( isspace( ch ) )      // End of token.  
-         break;  
-      buffer[count++] = (char)ch;  
-      ch = _getche();  
-   }  
-   _ungetch( ch );            // Put back delimiter.  
-   buffer[count] = '\0';      // Null terminate the token.  
-   printf( "\ntoken = %s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-Whitetoken = White  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)   
- [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _ungetch(
+   int c
+);
+wint_t _ungetwch(
+   wint_t c
+);
+int _ungetch_nolock(
+   int c
+);
+wint_t _ungetwch_nolock(
+   wint_t c
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu verschiebendes Zeichen.
+
+## <a name="return-value"></a>Rückgabewert
+
+Beide Funktionen geben das Zeichen *c* bei Erfolg. Wenn ein Fehler vorliegt **_ungetch** gibt einen Wert von **EOF** und **_ungetwch** gibt **WEOF**.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktionen mithilfe von Push übertragen das Zeichen *c* zurück an die Konsole, verursacht *c* auf das nächste Zeichen gelesen werden **_getch** oder **_getche** (oder **_getwch** oder **_getwche**). **_ungetch** und **_ungetwch** fehl, wenn sie vor dem nächsten Lesevorgang mehrmals aufgerufen werden. Die *c* Argument möglicherweise nicht **EOF** (oder **WEOF**).
+
+Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
+|**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_ungetch.c
+// compile with: /c
+// In this program, a white-space delimited
+// token is read from the keyboard. When the program
+// encounters a delimiter, it uses _ungetch to replace
+// the character in the keyboard buffer.
+//
+
+#include <conio.h>
+#include <ctype.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char buffer[100];
+   int count = 0;
+   int ch;
+
+   ch = _getche();
+   while( isspace( ch ) )      // Skip preceding white space.
+      ch = _getche();
+   while( count < 99 )         // Gather token.
+   {
+      if( isspace( ch ) )      // End of token.
+         break;
+      buffer[count++] = (char)ch;
+      ch = _getche();
+   }
+   _ungetch( ch );            // Put back delimiter.
+   buffer[count] = '\0';      // Null terminate the token.
+   printf( "\ntoken = %s\n", buffer );
+}
+```
+
+```Output
+
+Whitetoken = White
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
+[_getch, _getwch](getch-getwch.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: strcpy, wcscpy, _mbscpy | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strcpy
@@ -46,134 +46,139 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae532f4be2e7b77b9d14c8c6a97374dcd7968415
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 761cb15f0045741b8397c559600f6a21b150fa4d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
-Kopiert eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
-  
+
+Kopiert eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+
 > [!IMPORTANT]
->  `_mbscpy` kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-char *strcpy(  
-   char *strDestination,  
-   const char *strSource   
-);  
-wchar_t *wcscpy(  
-   wchar_t *strDestination,  
-   const wchar_t *strSource   
-);  
-unsigned char *_mbscpy(  
-   unsigned char *strDestination,  
-   const unsigned char *strSource   
-);  
-template <size_t size>  
-char *strcpy(  
-   char (&strDestination)[size],  
-   const char *strSource   
-); // C++ only  
-template <size_t size>  
-wchar_t *wcscpy(  
-   wchar_t (&strDestination)[size],  
-   const wchar_t *strSource   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbscpy(  
-   unsigned char (&strDestination)[size],  
-   const unsigned char *strSource   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `strDestination`  
- Zielzeichenfolge.  
-  
- `strSource`  
- Mit NULL endende Quellzeichenfolge.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt die Zielzeichenfolge zurück. Kein Rückgabewert ist zur Fehleranzeige reserviert.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `strcpy`-Funktion kopiert `strSource` einschließlich des abschließenden NULL-Zeichens an den Speicherort, der von `strDestination` angegeben wird. Wenn sich Quell- und Zielzeichenfolgen überlappen, ist das Verhalten von `strcpy` undefiniert.  
-  
+> **_mbscpy** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+char *strcpy(
+   char *strDestination,
+   const char *strSource
+);
+wchar_t *wcscpy(
+   wchar_t *strDestination,
+   const wchar_t *strSource
+);
+unsigned char *_mbscpy(
+   unsigned char *strDestination,
+   const unsigned char *strSource
+);
+template <size_t size>
+char *strcpy(
+   char (&strDestination)[size],
+   const char *strSource
+); // C++ only
+template <size_t size>
+wchar_t *wcscpy(
+   wchar_t (&strDestination)[size],
+   const wchar_t *strSource
+); // C++ only
+template <size_t size>
+unsigned char *_mbscpy(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*strDestination*<br/>
+Zielzeichenfolge.
+
+*strSource*<br/>
+Mit NULL endende Quellzeichenfolge.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt die Zielzeichenfolge zurück. Kein Rückgabewert ist zur Fehleranzeige reserviert.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Strcpy** -Funktion kopiert *StrSource*, einschließlich des abschließenden Null-Zeichens zu dem Speicherort, der von angegeben wird *StrDestination*. Das Verhalten des **Strcpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+
 > [!IMPORTANT]
->  Da `strcpy` vor dem Kopieren von `strDestination``strSource` nicht auf genügend Speicherplatz überprüft, kann es so zu Pufferüberläufen kommen. Deshalb wird empfohlen, stattdessen [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) zu verwenden.  
-  
- `wcscpy` und `_mbscpy` sind Breitzeichen- bzw. Multibytezeichenversionen von `strcpy`. Die Argumente und der Rückgabewert von `wcscpy` sind Breitzeichen-Zeichenfolgen; die von `_mbscpy` sind Mehrbyte-Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.  
-  
- In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscpy`|`strcpy`|`_mbscpy`|`wcscpy`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strcpy`|\<string.h>|  
-|`wcscpy`|\<string.h> oder \<wchar.h>|  
-|`_mbscpy`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_strcpy.c  
-// compile with: /W3  
-// This program uses strcpy  
-// and strcat to build a phrase.  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[80];  
-  
-   // If you change the previous line to  
-   //   char string[20];  
-   // strcpy and strcat will happily overrun the string  
-   // buffer.  See the examples for strncpy and strncat  
-   // for safer string handling.  
-  
-   strcpy( string, "Hello world from " ); // C4996  
-   // Note: strcpy is deprecated; use strcpy_s instead  
-   strcat( string, "strcpy " );           // C4996  
-   // Note: strcat is deprecated; use strcat_s instead  
-   strcat( string, "and " );              // C4996  
-   strcat( string, "strcat!" );           // C4996  
-   printf( "String = %s\n", string );  
-}  
-```  
-  
-```Output  
-String = Hello world from strcpy and strcat!  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> Da **Strcpy** überprüft nicht auf genügend Speicherplatz *StrDestination* bevor kopiert *StrSource*, es wird eine mögliche Ursache von Pufferüberläufen. Deshalb wird empfohlen, stattdessen [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) zu verwenden.
+
+**Wcscpy** und **_mbscpy** sind jeweils Breitzeichen- und multibytezeichenversionen von **Strcpy**. Die Argumente und der Rückgabewert von **Wcscpy** sind Breitzeichen-Zeichenfolgen, die von **_mbscpy** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+
+In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcscpy**|**strcpy**|**_mbscpy**|**wcscpy**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**strcpy**|\<string.h>|
+|**wcscpy**|\<string.h> oder \<wchar.h>|
+|**_mbscpy**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_strcpy.c
+// compile with: /W3
+// This program uses strcpy
+// and strcat to build a phrase.
+
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[80];
+
+   // If you change the previous line to
+   //   char string[20];
+   // strcpy and strcat will happily overrun the string
+   // buffer.  See the examples for strncpy and strncat
+   // for safer string handling.
+
+   strcpy( string, "Hello world from " ); // C4996
+   // Note: strcpy is deprecated; use strcpy_s instead
+   strcat( string, "strcpy " );           // C4996
+   // Note: strcat is deprecated; use strcat_s instead
+   strcat( string, "and " );              // C4996
+   strcat( string, "strcat!" );           // C4996
+   printf( "String = %s\n", string );
+}
+```
+
+```Output
+String = Hello world from strcpy and strcat!
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

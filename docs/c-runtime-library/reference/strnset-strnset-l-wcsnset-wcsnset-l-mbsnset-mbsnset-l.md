@@ -1,12 +1,12 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnset
@@ -74,135 +74,140 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-caps.latest.revision: 
+caps.latest.revision: 31
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dc658ef152eb6065f9b0a310468a6880d87ead5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f20d65398e477685d7a0834ebe9425aac8e97b9d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-Initialisiert Zeichen einer Zeichenfolge auf ein angegebenes Zeichen. Sicherere Versionen dieser Funktionen sind vorhanden. Weitere Informationen finden Sie unter [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).  
-  
+
+Initialisiert Zeichen einer Zeichenfolge auf ein angegebenes Zeichen. Sicherere Versionen dieser Funktionen sind vorhanden. Weitere Informationen finden Sie unter [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
+
 > [!IMPORTANT]
->  `_mbsnset` und `_mbsnset_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-char *_strnset(  
-   char *str,  
-   int c,  
-   size_t count   
-);  
-char *_strnset_l(  
-   char *str,  
-   int c,  
-   size_t count,  
-   locale_t locale  
-);  
-wchar_t *_wcsnset(  
-   wchar_t *str,  
-   wchar_t c,  
-   size_t count   
-);  
-wchar_t *_wcsnset_l(  
-   wchar_t *str,  
-   wchar_t c,  
-   size_t count,  
-   _locale_t locale  
-);  
-unsigned char *_mbsnset(  
-   unsigned char *str,  
-   unsigned int c,  
-   size_t count   
-);  
-unsigned char *_mbsnset_l(  
-   unsigned char *str,  
-   unsigned int c,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `str`  
- Zu ändernde Zeichenfolge.  
-  
- `c`  
- Zeicheneinstellung.  
-  
- `count`  
- Zahl der festzulegenden Zeichen.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger zur geänderten Zeichenfolge zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_strnset`-Funktion legt höchstens die ersten `count`-Zeichen von `str` auf `c` fest (konvertiert nach `char`). Wenn `count` größer als die Länge von `str` ist, wird die Länge von `str` anstelle von `count` verwendet.  
-  
- `_wcsnset` und `_mbsnset` sind Breitzeichen- und Multibytezeichenversionen von `_strnset`. Die Zeichenfolgenargumente und der Rückgabewert von `_wcsnset` sind Zeichenfolgen mit Breitzeichen; die von `_mbsnset` sind Multibyte-Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.  
-  
- `_mbsnset` überprüft die eigenen Parameter. Wenn `str` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt `_mbsnset` NULL zurück und setzt `errno` auf `EINVAL`. `_strnset` und `_wcsnset` überprüfen ihre Parameter nicht.  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsnset`|`_strnset`|`_mbsnbset`|`_wcsnset`|  
-|`_tcsnset_l`|`_strnset_l`|`_mbsnbset_l`|`_wcsnset_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_strnset`|\<string.h>|  
-|`_strnset_l`|\<tchar.h>|  
-|`_wcsnset`|\<string.h> oder \<wchar.h>|  
-|`_wcsnset_l`|\<tchar.h>|  
-|`_mbsnset`, `_mbsnset_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_strnset.c  
-// compile with: /W3  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[15] = "This is a test";  
-   /* Set not more than 4 characters of string to be *'s */  
-   printf( "Before: %s\n", string );  
-   _strnset( string, '*', 4 ); // C4996  
-   // Note: _strnset is deprecated; consider using _strnset_s  
-   printf( "After:  %s\n", string );  
-}  
-```  
-  
-```Output  
-Before: This is a test  
-After:  **** is a test  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+> **_mbsnset** und **_mbsnset_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+char *_strnset(
+   char *str,
+   int c,
+   size_t count
+);
+char *_strnset_l(
+   char *str,
+   int c,
+   size_t count,
+   locale_t locale
+);
+wchar_t *_wcsnset(
+   wchar_t *str,
+   wchar_t c,
+   size_t count
+);
+wchar_t *_wcsnset_l(
+   wchar_t *str,
+   wchar_t c,
+   size_t count,
+   _locale_t locale
+);
+unsigned char *_mbsnset(
+   unsigned char *str,
+   unsigned int c,
+   size_t count
+);
+unsigned char *_mbsnset_l(
+   unsigned char *str,
+   unsigned int c,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*str*<br/>
+Zu ändernde Zeichenfolge.
+
+*c*<br/>
+Zeicheneinstellung.
+
+*count*<br/>
+Zahl der festzulegenden Zeichen.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt einen Zeiger zur geänderten Zeichenfolge zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_strnset** -Funktion legt höchstens die ersten *Anzahl* Zeichen des *str* auf *c* (konvertiert **Char**). Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle von *Anzahl*.
+
+**_wcsnset** und **_mbsnset** sind Breitzeichen- und multibytezeichenversionen von **_strnset**. Die Zeichenfolgenargumente und der Rückgabewert von **_wcsnset** sind Breitzeichen-Zeichenfolgen, die von **_mbsnset** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+
+**_mbsnset** überprüft seine Parameter angegeben werden, wenn *str* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsnset** NULL zurück und setzt **Errno** auf **EINVAL**. **_strnset** und **_wcsnset** überprüfen ihre Parameter nicht.
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
+|**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_strnset**|\<string.h>|
+|**_strnset_l**|\<tchar.h>|
+|**_wcsnset**|\<string.h> oder \<wchar.h>|
+|**_wcsnset_l**|\<tchar.h>|
+|**_mbsnset**, **_mbsnset_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_strnset.c
+// compile with: /W3
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[15] = "This is a test";
+   /* Set not more than 4 characters of string to be *'s */
+   printf( "Before: %s\n", string );
+   _strnset( string, '*', 4 ); // C4996
+   // Note: _strnset is deprecated; consider using _strnset_s
+   printf( "After:  %s\n", string );
+}
+```
+
+```Output
+Before: This is a test
+After:  **** is a test
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

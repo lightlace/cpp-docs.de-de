@@ -1,12 +1,12 @@
 ---
 title: _CrtSetDumpClient | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetDumpClient
@@ -31,66 +31,69 @@ helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8a62dc903b7bb0684d3fffcde8a677200d665d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6682c74ca81628efd17a654cc6d810e516e807b2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
-Installiert eine anwendungsdefinierte Funktion, zum Ausgeben von `_CLIENT_BLOCK`-Typspeicherblöcken (nur Debugversion).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      _CRT_DUMP_CLIENT _CrtSetDumpClient(   
-   _CRT_DUMP_CLIENT dumpClient   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `dumpClient`  
- Die neue clientdefinierte Speicherabbildfunktion, die mit dem Debug-Speicherabbildprozess der C-Laufzeit verknüpft werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt die zuvor definierte Client-Blockdumpfunktion zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_CrtSetDumpClient`-Funktion ermöglicht es der Anwendung, eine eigene Funktion für Dumpobjekte, die in `_CLIENT_BLOCK`-Speicherblöcken gespeichert sind, mit dem Debug-Speicherabbildprozess der C-Laufzeit zu verknüpfen. Wenn eine Debugdumpfunktion wie [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) oder [_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md) einen `_CLIENT_BLOCK`-Speicherblock ausgibt, wird die Dumpfunktion der Anwendung ebenfalls aufgerufen. `_CrtSetDumpClient` stellt für eine Anwendung eine einfache Methode zum Erkennen von Speicherverlusten und zum Überprüfen oder Übermitteln des Inhalts der Daten bereit, die in `_CLIENT_BLOCK`-Blöcken gespeichert sind. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtSetDumpClient` während der Vorverarbeitung entfernt.  
-  
- Die `_CrtSetDumpClient`-Funktion installiert die neue anwendungsdefinierte Dumpfunktion, die in `dumpClient` angegeben ist, und gibt die zuvor definierte Dumpfunktion zurück. Beispiel einer Client-Blockdumpfunktion:  
-  
-```  
-void DumpClientFunction( void *userPortion, size_t blockSize );  
-```  
-  
- Das `userPortion`-Argument ist ein Zeiger auf den Anfang des Benutzerdatenteils des Speicherblocks, und `blockSize` gibt die Größe des belegten Speicherblocks in Bytes an. Die Client-Blockdumpfunktion muss `void` zurückgeben. Der Zeiger zur Clientdumpfunktion, der an `_CrtSetDumpClient` übergeben wird, ist vom Typ `_CRT_DUMP_CLIENT`, wie in "Crtdbg.h" definiert:  
-  
-```  
-typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );  
-```  
-  
- Weitere Informationen zu Funktionen, die `_CLIENT_BLOCK`-Typspeicherblöcke verarbeiten, finden Sie unter [Hookfunktionen für Clientblöcke](/visualstudio/debugger/client-block-hook-functions). Die [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)-Funktion kann zum Zurückgeben von Informationen zu Blocktypen und -untertypen verwendet werden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_CrtSetDumpClient`|\<crtdbg.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Nur Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Debugroutinen](../../c-runtime-library/debug-routines.md)   
- [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)   
- [_CrtGetDumpClient](../../c-runtime-library/reference/crtgetdumpclient.md)
+
+Installiert eine anwendungsdefinierte Funktion zum Sichern **_CLIENT_BLOCK** -typspeicherblöcken (nur Debugversion).
+
+## <a name="syntax"></a>Syntax
+
+```C
+_CRT_DUMP_CLIENT _CrtSetDumpClient( _CRT_DUMP_CLIENT dumpClient );
+```
+
+### <a name="parameters"></a>Parameter
+
+*dumpClient*<br/>
+Die neue clientdefinierte Speicherabbildfunktion, die mit dem Debug-Speicherabbildprozess der C-Laufzeit verknüpft werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt die zuvor definierte Client-Blockdumpfunktion zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_CrtSetDumpClient** -Funktion ermöglicht der Anwendung zu verbinden, eine eigene Funktion für dumpobjekte in gespeicherten **_CLIENT_BLOCK** Speicherblöcke in der C-Laufzeit debug-speicherabbildprozess. Deshalb jedes Mal eine Debug blockdumpfunktion wie z. B. [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) oder [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) sichert eine **_CLIENT_BLOCK** Speicherblock, der Anwendungsverzeichnis dumpfunktion wird ebenfalls aufgerufen. **_CrtSetDumpClient** bietet eine einfache Methode zum Erkennen von Speicherverlusten und validieren, oder Übermitteln des Inhalts der Daten in einer Anwendung **_CLIENT_BLOCK** blockiert. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtSetDumpClient** während der vorverarbeitung entfernt.
+
+Die **_CrtSetDumpClient** -Funktion installiert die neue anwendungsdefinierte dumpfunktion im angegebenen *DumpClient* und gibt die zuvor definierte dumpfunktion zurück. Beispiel einer Client-Blockdumpfunktion:
+
+```C
+void DumpClientFunction( void *userPortion, size_t blockSize );
+```
+
+Die *UserPortion* Argument ist ein Zeiger auf den Anfang des benutzerdatenteils des Speicherblocks und *BlockSize* gibt die Größe des belegten Speicherblocks in Bytes. Die Client-blockdumpfunktion muss zurückgeben **"void"**. Der Zeiger auf clientdumpfunktion, der an übergebene **_CrtSetDumpClient** ist vom Typ **_CRT_DUMP_CLIENT**, wie in "CRTDBG.h" definiert:
+
+```C
+typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
+```
+
+Weitere Informationen zu Funktionen, die Vorgänge an **_CLIENT_BLOCK** -typspeicherblöcken, finden Sie unter [Hookfunktionen für Client-Block](/visualstudio/debugger/client-block-hook-functions). Die [_CrtReportBlockType](crtreportblocktype.md)-Funktion kann zum Zurückgeben von Informationen zu Blocktypen und -untertypen verwendet werden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_CrtSetDumpClient**|\<crtdbg.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Nur Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Debugroutinen](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtReportBlockType](crtreportblocktype.md)<br/>
+[_CrtGetDumpClient](crtgetdumpclient.md)<br/>

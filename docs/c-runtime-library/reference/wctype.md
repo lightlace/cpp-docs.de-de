@@ -1,12 +1,12 @@
 ---
 title: wctype | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wctype
@@ -30,61 +30,66 @@ helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17006f31e02e7aed60a20e088502fe969059084c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bbad04d3c56015ddea10a058ae8b262d7f94d40f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctype"></a>wctype
-Bestimmt eine Klassifizierungsregel für Breitzeichencodes.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-wctype_t wctype(  
-   const char * property   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `property`  
- Eigenschaftszeichenfolge  
-  
-## <a name="return-value"></a>Rückgabewert  
- Wenn die Kategorie `LC_CTYPE` des aktuellen Gebietsschemas keine Klassifizierungsregel definiert, deren Name der Eigenschaftszeichenfolge `property` entspricht, gibt die Funktion 0 zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](../../c-runtime-library/reference/towctrans.md) geeignet ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion bestimmt eine Klassifizierungsregel für Breitzeichencodes. Die folgenden Paare von Aufrufen weisen in allen Gebietsschemas das gleiche Verhalten auf (durch eine Implementierung können jedoch sogar im Gebietsschema „C“ zusätzliche Klassifizierungsregeln definiert werden):  
-  
-|Funktion|Identisch mit|  
-|--------------|-------------|  
-|`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
-|`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
-|`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
-|`iswdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "digit" ) )`|  
-|`iswgraph(`  `c`  `)`|`iswctype(`  `c` `, wctype( "graph" ) )`|  
-|`iswlower(`  `c`  `)`|`iswctype(`  `c` `, wctype( "lower" ) )`|  
-|`iswprint(`  `c`  `)`|`iswctype(`  `c` `, wctype( "print" ) )`|  
-|`iswpunct(`  `c`  `)`|`iswctype(`  `c` `, wctype( "punct" ) )`|  
-|`iswspace(`  `c`  `)`|`iswctype(`  `c` `, wctype( "space" ) )`|  
-|`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
-|`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`wctype`|\<wctype.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Bestimmt eine Klassifizierungsregel für Breitzeichencodes.
+
+## <a name="syntax"></a>Syntax
+
+```C
+wctype_t wctype(
+   const char * property
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Eigenschaft*<br/>
+Eigenschaftszeichenfolge
+
+## <a name="return-value"></a>Rückgabewert
+
+Wenn die **LC_CTYPE** Kategorie des aktuellen Gebietsschemas definiert eine Klassifizierungsregel, deren Name mit der Eigenschaftszeichenfolge für die keine *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
+
+## <a name="remarks"></a>Hinweise
+
+Die Funktion bestimmt eine Klassifizierungsregel für Breitzeichencodes. Die folgenden Paare von Aufrufen weisen in allen Gebietsschemas das gleiche Verhalten auf (durch eine Implementierung können jedoch sogar im Gebietsschema „C“ zusätzliche Klassifizierungsregeln definiert werden):
+
+|Funktion|Identisch mit|
+|--------------|-------------|
+|iswalnum(c)|Iswctype (C, Wctype ("" alnum ""))|
+|iswalpha(c)|Iswctype (C, Wctype ("Alpha"))|
+|iswcntrl(c)|Iswctype (C, Wctype ("Strg"))|
+|iswdigit(c)|Iswctype (C, Wctype ("Digit"))|
+|iswgraph(c)|Iswctype (C, Wctype ("Diagramm"))|
+|iswlower(c)|Iswctype (C, Wctype ("niedriger"))|
+|iswprint(c)|Iswctype (C, Wctype ("Print"))|
+|iswpunct(c)|Iswctype (C, Wctype ("Interpunktion"))|
+|iswspace(c)|Iswctype (C, Wctype ("Space"))|
+|iswupper(c)|Iswctype (C, Wctype ("Upper"))|
+|iswxdigit(c)|Iswctype (C, Wctype ("Xdigit"))|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**wctype**|\<wctype.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

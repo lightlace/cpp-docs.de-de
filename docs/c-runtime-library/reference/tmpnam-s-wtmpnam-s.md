@@ -45,116 +45,121 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 844da11b981b99d5fe69861c3198d0508857a1a5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3817dc47703fa278de0a06bc411d5edbd81e6c45
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
-Generiert Namen, die Sie verwenden können, um temporäre Dateien zu erstellen. Dabei handelt es sich um Versionen von [tmpnam und _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t tmpnam_s(  
-   char * str,  
-   size_t sizeInChars   
-);  
-errno_t _wtmpnam_s(  
-   wchar_t *str,  
-   size_t sizeInChars   
-);  
-template <size_t size>  
-errno_t tmpnam_s(  
-   char (&str)[size]  
-); // C++ only  
-template <size_t size>  
-errno_t _wtmpnam_s(  
-   wchar_t (&str)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `str`  
- Zeiger, der den generierten Namen enthalten wird.  
-  
- [in] `sizeInChars`  
- Größe des Puffers in Zeichen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Beide Funktionen geben bei Erfolg 0 zurück und bei einem Fehler eine Fehlernummer zurück.  
-  
-### <a name="error-conditions"></a>Fehlerbedingungen  
-  
-|||||  
-|-|-|-|-|  
-|`str`|`sizeInChars`|**Rückgabewert**|**Inhalt** `str`|  
-|`NULL`|any|`EINVAL`|nicht geändert|  
-|nicht `NULL` (verweist auf gültigen Speicher)|zu kurz|`ERANGE`|nicht geändert|  
-  
- Wenn `str` `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. `tmpnam_s` gibt einen Namen zurück, der im aktuellen Arbeitsverzeichnis nur einmal vorkommt. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.  
-  
- Für `tmpnam_s` können Sie diesen generierten Dateinamen in `str` speichern. Die maximale Länge einer Zeichenfolge, die von `tmpnam_s` zurückgegeben wird, ist `L_tmpnam_s`, definiert in STDIO.H. Wenn `str` `NULL` ist, dann hinterlässt `tmpnam_s` das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der von `tmpnam_s` generierte Name besteht aus einem vom Programm generierten Dateinamen und nach dem ersten Aufruf von `tmpnam_s` aus einer Dateierweiterung aus aufeinanderfolgenden Zahlen mit Basis 32 (.1-.1vvvvvu wenn `TMP_MAX_S` in STDIO.H INT_MAX ist).  
-  
- `tmpnam_s` behandelt Multibyte-Zeichenfolgenargumente automatisch als richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der Codepage des OEM aus dem Betriebssystem. `_wtmpnam_s` ist eine Breitzeichenversion von `tmpnam_s`. Das Argument und der Rückgabewert von `_wtmpnam_s` sind Zeichenfolgen mit Breitzeichen. `_wtmpnam_s` und `tmpnam_s` verhalten sich identisch, mit dem Unterschied, dass `_wtmpnam_s` keine Multibyte-Zeichenfolgen verarbeitet.  
-  
- Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ttmpnam_s`|`tmpnam_s`|`tmpnam_s`|`_wtmpnam_s`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`tmpnam_s`|\<stdio.h>|  
-|`_wtmpnam_s`|\<stdio.h> oder \<wchar.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_tmpnam_s.c  
-// This program uses tmpnam_s to create a unique filename in the  
-// current working directory.   
-//  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{     
-   char name1[L_tmpnam_s];  
-   errno_t err;  
-   int i;  
-  
-   for (i = 0; i < 15; i++)  
-   {  
-      err = tmpnam_s( name1, L_tmpnam_s );  
-      if (err)  
-      {  
-         printf("Error occurred creating unique filename.\n");  
-         exit(1);  
-      }  
-      else  
-      {  
-         printf( "%s is safe to use as a temporary file.\n", name1 );  
-      }  
-   }    
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)
+
+Generiert Namen, die Sie verwenden können, um temporäre Dateien zu erstellen. Dabei handelt es sich um Versionen von [tmpnam und _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t tmpnam_s(
+   char * str,
+   size_t sizeInChars
+);
+errno_t _wtmpnam_s(
+   wchar_t *str,
+   size_t sizeInChars
+);
+template <size_t size>
+errno_t tmpnam_s(
+   char (&str)[size]
+); // C++ only
+template <size_t size>
+errno_t _wtmpnam_s(
+   wchar_t (&str)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*str*<br/>
+Zeiger, der den generierten Namen enthalten wird.
+
+*sizeInChars*<br/>
+Größe des Puffers in Zeichen.
+
+## <a name="return-value"></a>Rückgabewert
+
+Beide Funktionen geben bei Erfolg 0 zurück und bei einem Fehler eine Fehlernummer zurück.
+
+### <a name="error-conditions"></a>Fehlerbedingungen
+
+|||||
+|-|-|-|-|
+|*str*|*sizeInChars*|**Rückgabewert**|**Inhalt der***str* |
+|**NULL**|alle|**EINVAL**|nicht geändert|
+|Nicht **NULL** (verweist auf gültige Speicher)|zu kurz|**ERANGE**|nicht geändert|
+
+Wenn *str* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EINVAL**.
+
+## <a name="remarks"></a>Hinweise
+
+Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **Tmpnam_s** gibt einen Namen in das aktuelle Arbeitsverzeichnis eindeutig. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.
+
+Für **Tmpnam_s**, können Sie im generierten Dateinamen speichern *str*. Die maximale Länge einer Zeichenfolge zurückgegebenes **Tmpnam_s** ist **L_tmpnam_s**, die in STDIO definiert. H. Wenn *str* ist **NULL**, klicken Sie dann **Tmpnam_s** bewirkt, dass das Ergebnis in einer statischen internen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der Name von generierten **Tmpnam_s** besteht aus einem Programm generierten Dateinamen und nach dem ersten Aufruf von **Tmpnam_s**, einer Erweiterung von aufeinander folgenden Nummern Basis 32 (.1-.1vvvvvu When **TMP _MAX_S** in STDIO. H **INT_MAX**).
+
+**Tmpnam_s** behandelt Multibyte-Zeichenfolgen Zeichenfolgenargumente, wobei Multibyte-Zeichensequenzen entsprechend der OEM-Codepage erkannt automatisch abgerufen, von dem Betriebssystem. **_wtmpnam_s** ist eine Breitzeichen-Version von **Tmpnam_s**; der Wert Argument- und Rückgabetypen der **_wtmpnam_s** sind Zeichenfolgen mit Breitzeichen. **_wtmpnam_s** und **Tmpnam_s** Verhalten sich identisch, außer dass **_wtmpnam_s** verarbeitet keine Multibyte-Zeichenfolgen.
+
+Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**tmpnam_s**|\<stdio.h>|
+|**_wtmpnam_s**|\<stdio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_tmpnam_s.c
+// This program uses tmpnam_s to create a unique filename in the
+// current working directory.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char name1[L_tmpnam_s];
+   errno_t err;
+   int i;
+
+   for (i = 0; i < 15; i++)
+   {
+      err = tmpnam_s( name1, L_tmpnam_s );
+      if (err)
+      {
+         printf("Error occurred creating unique filename.\n");
+         exit(1);
+      }
+      else
+      {
+         printf( "%s is safe to use as a temporary file.\n", name1 );
+      }
+   }
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[malloc](malloc.md)<br/>
+[_setmbcp](setmbcp.md)<br/>
+[tmpfile_s](tmpfile-s.md)<br/>

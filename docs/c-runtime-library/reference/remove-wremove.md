@@ -1,12 +1,12 @@
 ---
 title: remove, _wremove | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wremove
@@ -39,92 +39,97 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bfccec10c08563f647b10fd9ad9dff70930668b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 97c258d79af8247af993732405d2c792a0822075
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="remove-wremove"></a>remove, _wremove
-Löschen einer Datei.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      int remove(  
-   const char *path   
-);  
-int _wremove(  
-   const wchar_t *path   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *path*  
- Pfad der zu löschenden Datei.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt 0 zurück, wenn die Datei erfolgreich gelöscht wird. Andernfalls wird –1 zurückgegeben und `errno` entweder auf `EACCES` festgelegt, um anzuzeigen, dass der Pfad eine schreibgeschützte Datei angibt oder die Datei geöffnet ist, oder auf **ENOENT** festgelegt, um zu zeigen, dass Dateiname oder Pfad nicht gefunden wurden oder der Pfad ein Verzeichnis angibt.  
-  
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Die **remove**-Funktion löscht die von *path* angegebene Datei. `_wremove` ist eine Breitzeichenversion von **_remove**. Das *path*-Argument für `_wremove` ist eine Breitzeichenfolge. `_wremove` und **_remove** verhalten sich andernfalls identisch. Alle Handles zu einer Datei müssen geschlossen werden, bevor sie gelöscht werden kann.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tremove`|**remove**|**remove**|`_wremove`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|**remove**|\<stdio.h> oder \<io.h>|  
-|`_wremove`|\<stdio.h> oder \<wchar.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_remove.c  
-/* This program uses remove to delete crt_remove.txt */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   if( remove( "crt_remove.txt" ) == -1 )  
-      perror( "Could not delete 'CRT_REMOVE.TXT'" );  
-   else  
-      printf( "Deleted 'CRT_REMOVE.TXT'\n" );  
-}  
-```  
-  
-## <a name="input-crtremovetxt"></a>Eingabe: crt_remove.txt  
-  
-```  
-This file will be deleted.  
-```  
-  
-## <a name="sample-output"></a>Beispielausgabe  
-  
-```  
-Deleted 'CRT_REMOVE.TXT'  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Löschen einer Datei.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int remove(
+   const char *path
+);
+int _wremove(
+   const wchar_t *path
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*path*<br/>
+Pfad der zu löschenden Datei.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt 0 zurück, wenn die Datei erfolgreich gelöscht wird. Hingegen gibt-1 zurück und legt sie fest **Errno** entweder **EACCES** um anzugeben, dass der Pfad eine schreibgeschützte Datei gibt oder die Datei geöffnet ist, oder auf **ENOENT** gibt an, dass die Dateiname oder Pfad nicht gefunden wurde oder, dass der Pfad ein Verzeichnis angegeben.
+
+Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Die **remove**-Funktion löscht die von *path* angegebene Datei. **_wremove** ist eine Breitzeichen-Version von **ent_fernen**; das *Pfad* Argument **_wremove** ist eine Breitzeichen-Zeichenfolge. **_wremove** und **ent_fernen** Verhalten sich andernfalls identisch. Alle Handles zu einer Datei müssen geschlossen werden, bevor sie gelöscht werden kann.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tremove**|**remove**|**remove**|**_wremove**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**remove**|\<stdio.h> oder \<io.h>|
+|**_wremove**|\<stdio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_remove.c
+/* This program uses remove to delete crt_remove.txt */
+
+#include <stdio.h>
+
+int main( void )
+{
+   if( remove( "crt_remove.txt" ) == -1 )
+      perror( "Could not delete 'CRT_REMOVE.TXT'" );
+   else
+      printf( "Deleted 'CRT_REMOVE.TXT'\n" );
+}
+```
+
+### <a name="input-crtremovetxt"></a>Eingabe: crt_remove.txt
+
+```Input
+This file will be deleted.
+```
+
+### <a name="sample-output"></a>Beispielausgabe
+
+```Output
+Deleted 'CRT_REMOVE.TXT'
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Dateibehandlung](../../c-runtime-library/file-handling.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

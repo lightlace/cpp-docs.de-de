@@ -1,12 +1,12 @@
 ---
 title: _findclose | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _findclose
@@ -32,44 +32,48 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1f79ea7e5c39c4de7ba25699729864688ababf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 89c1f515bb072c649a93b77e49b500ea4636e423
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="findclose"></a>_findclose
-Schließt das angegebene Suchhandle und gibt zugeordnete Ressourcen frei.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _findclose(   
-   intptr_t handle   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `handle`  
- Das Suchhandle, das von einem vorherigen Aufruf von `_findfirst` zurückgegeben wird.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_findclose` gibt bei Erfolg 0 zurück. Hingegen gibt-1 zurück und legt `errno` zu `ENOENT`, gibt an, dass keine übereinstimmenden Dateien gefunden werden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_findclose`|\<io.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Systemaufrufe](../../c-runtime-library/system-calls.md)   
- [Dateinamen-Suchfunktionen](../../c-runtime-library/filename-search-functions.md)
+
+Schließt das angegebene Suchhandle und gibt zugeordnete Ressourcen frei.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _findclose(
+   intptr_t handle
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Handle*<br/>
+Von einem vorherigen Aufruf zurückgegebene Suchhandle **_findfirst**.
+
+## <a name="return-value"></a>Rückgabewert
+
+Im Erfolgsfall **_findclose** gibt 0 zurück. Hingegen gibt-1 zurück und legt **Errno** auf **ENOENT**, gibt an, dass keine übereinstimmenden Dateien gefunden werden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_findclose**|\<io.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Systemaufrufe](../../c-runtime-library/system-calls.md)<br/>
+[Dateinamen-Suchfunktionen](../../c-runtime-library/filename-search-functions.md)<br/>

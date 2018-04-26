@@ -1,12 +1,12 @@
 ---
 title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcsset_s
@@ -66,135 +66,140 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882fef9e6a1cb8e0b0c411efdf10e3d04c0921dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ece29da9880967beb78a785d257dfbd431c50ded
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
-Legt Zeichen einer Zeichenfolge auf ein Zeichen fest. Diese Versionen von [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
-  
+
+Legt Zeichen einer Zeichenfolge auf ein Zeichen fest. Diese Versionen von [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+
 > [!IMPORTANT]
->  `_mbsset_s` und `_mbsset_s_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t _strset_s(  
-   char *str,  
-   size_t numberOfElements,  
-   int c   
-);  
-errno_t _strset_s_l(  
-   char *str,  
-   size_t numberOfElements,  
-   int c,  
-   locale_t locale  
-);  
-errno_t _wcsset_s(  
-   wchar_t *str,  
-   size_t numberOfElements,  
-   wchar_t c   
-);  
-errno_t *_wcsset_s_l(  
-   wchar_t *str,  
-   size_t numberOfElements,  
-   wchar_t c,  
-   locale_t locale  
-);  
-errno_t _mbsset_s(  
-   unsigned char *str,  
-   size_t numberOfElements,  
-   unsigned int c   
-);  
-errno_t _mbsset_s_l(  
-   unsigned char *str,  
-   size_t numberOfElements,  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `str`  
- Festzulegende mit NULL endende Zeichenfolge.  
-  
- `numberOfElements`  
- Die Größe des `str`-Puffers.  
-  
- `c`  
- Zeicheneinstellung.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Null, wenn erfolgreich, andernfalls ein Fehlercode.  
-  
- Diese Funktionen überprüfen ihre Argumente. Wenn `str` ein NULL-Zeiger ist oder das `numberOfElements`-Argument kleiner oder gleich 0 ist oder der Block, der übergeben wird, nicht auf NULL endet, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EINVAL` zurück und stellen `errno` auf `EINVAL` ein.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_strset_s`-Funktion legt alle Zeichen von `str` auf `c` fest (in `char` konvertiert), mit Ausnahme des auf NULL endenden Zeichens. `_wcsset_s` und `_mbsset_s` sind Breitzeichen- und Multibytezeichenversionen von `_strset_s`. Die Datentypen der Argumente und Rückgabewerte unterscheiden sich entsprechend. Anderenfalls verhalten sich diese Funktionen identisch.  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsset_s`|`_strset_s`|`_mbsset_s`|`_wcsset_s`|  
-|`_tcsset_s_l`|`_strset_s_l`|`_mbsset_s_l`|`_wcsset_s_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_strset_s`|\<string.h>|  
-|`_strset_s_l`|\<tchar.h>|  
-|`_wcsset_s`|\<string.h> oder \<wchar.h>|  
-|`_wcsset_s_l`|\<tchar.h>|  
-|`_mbsset_s`, `_mbsset_s_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_strset_s.c  
-#include <string.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char string[] = "Fill the string with something.";  
-   printf( "Before: %s\n", string );  
-   _strset_s( string, _countof(string), '*' );  
-   printf( "After:  %s\n", string );  
-}  
-```  
-  
-```Output  
-Before: Fill the string with something.  
-After:  *******************************  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
+> **_mbsset_s** und **_mbsset_s_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t _strset_s(
+   char *str,
+   size_t numberOfElements,
+   int c
+);
+errno_t _strset_s_l(
+   char *str,
+   size_t numberOfElements,
+   int c,
+   locale_t locale
+);
+errno_t _wcsset_s(
+   wchar_t *str,
+   size_t numberOfElements,
+   wchar_t c
+);
+errno_t *_wcsset_s_l(
+   wchar_t *str,
+   size_t numberOfElements,
+   wchar_t c,
+   locale_t locale
+);
+errno_t _mbsset_s(
+   unsigned char *str,
+   size_t numberOfElements,
+   unsigned int c
+);
+errno_t _mbsset_s_l(
+   unsigned char *str,
+   size_t numberOfElements,
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*str*<br/>
+Festzulegende mit NULL endende Zeichenfolge.
+
+*numberOfElements*<br/>
+Die Größe der *str* Puffer.
+
+*c*<br/>
+Zeicheneinstellung.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Null, wenn erfolgreich, andernfalls ein Fehlercode.
+
+Diese Funktionen überprüfen ihre Argumente. Wenn *str* ein null-Zeiger ist oder die *NumberOfElements* Arguments ist kleiner oder gleich 0 (null) oder der Block übergeben nicht Null-terminierte, wird der Handler für ungültige Parameter aufgerufen, wie beschrieben in [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** auf **EINVAL**.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_strset_s** Funktion setzt alle Zeichen aus *str* auf *c* (konvertiert **Char**), außer das abschließende Nullzeichen. **_wcsset_s** und **_mbsset_s** sind Breitzeichen- und multibytezeichenversionen von **_strset_s**. Die Datentypen der Argumente und Rückgabewerte unterscheiden sich entsprechend. Anderenfalls verhalten sich diese Funktionen identisch.
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsset_s**|**_strset_s**|**_mbsset_s**|**_wcsset_s**|
+|**_tcsset_s_l**|**_strset_s_l**|**_mbsset_s_l**|**_wcsset_s_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_strset_s**|\<string.h>|
+|**_strset_s_l**|\<tchar.h>|
+|**_wcsset_s**|\<string.h> oder \<wchar.h>|
+|**_wcsset_s_l**|\<tchar.h>|
+|**_mbsset_s**, **_mbsset_s_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_strset_s.c
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char string[] = "Fill the string with something.";
+   printf( "Before: %s\n", string );
+   _strset_s( string, _countof(string), '*' );
+   printf( "After:  %s\n", string );
+}
+```
+
+```Output
+Before: Fill the string with something.
+After:  *******************************
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>

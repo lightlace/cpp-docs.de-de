@@ -1,12 +1,12 @@
 ---
 title: ceil, ceilf, ceill | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ceilf
@@ -38,70 +38,76 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcc33dd5fc9c00b537345d613cd47452a425a00e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9fb24817dd4f23e1dac44f49fcf7dbec34a358c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
-Berechnet die nächstliegende nicht größere ganze Zahl eines Werts.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double ceil(   
-   double x   
-);  
-float ceil(  
-   float x  
-);  // C++ only  
-long double ceil(  
-   long double x  
-);  // C++ only  
-float ceilf(  
-   float x  
-);  
-long double ceill(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`  
- Gleitkommawert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die `ceil`-Funktionen geben einen Gleitkommawert zurück, der die kleinste ganze Zahl darstellt, die größer oder gleich `x` ist. Es gibt keine Fehlerrückgabe.  
-  
-|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
-|-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|Keine|`_DOMAIN`|  
-  
- `ceil` ist eine Implementierung, die SIMD-Streamingerweiterungen 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Da C++ ein Überladen zulässt, können Sie Überladungen von `ceil` aufrufen. In einem C-Programm verwendet `ceil` immer double und gibt auch double zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`ceil`, `ceilf`, `ceill`|\<math.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
- Beachten Sie das Beispiel für [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)
+
+Berechnet die nächstliegende nicht größere ganze Zahl eines Werts.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double ceil(
+   double x
+);
+float ceil(
+   float x
+);  // C++ only
+long double ceil(
+   long double x
+);  // C++ only
+float ceilf(
+   float x
+);
+long double ceill(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Gleitkommawert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die **ceil** Funktionen geben einen Gleitkommawert, der die kleinste ganze Zahl darstellt, die größer als oder gleich ist zurück *x*. Es gibt keine Fehlerrückgabe.
+
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|Keine|**_DOMAIN**|
+
+**ceil** ist eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+
+## <a name="remarks"></a>Hinweise
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **ceil** nehmen **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **ceil** immer Double und gibt eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**ceil**, **Ceilf**, **ceil**|\<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Beachten Sie das Beispiel für [floor](floor-floorf-floorl.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
+[round, roundf, roundl](round-roundf-roundl.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: wctob | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wctob
@@ -32,88 +32,94 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2534eb98c39be91ed753fdc0ff286a9a5c5ce707
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6bb45aec4b337a7b0aed1a51c50903ad76d2f916
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctob"></a>wctob
-Bestimmt, ob ein Breitzeichen einem Multibytezeichen entspricht und gibt dessen Multibytezeichen-Darstellung zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int wctob(  
-   wint_t wchar  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `wchar`  
- Zu übersetzender Wert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Wenn `wctob` ein Breitzeichen erfolgreich konvertiert, wird dessen Multibytezeichen-Darstellung nur dann zurückgegeben, wenn das Multibytezeichen genau ein Byte lang ist. Wenn `wctob` entdeckt ein Breitzeichen, es kann nicht in einem multibyte-Zeichen oder multibyte-Zeichen konvertiert, ist nicht genau ein Byte lang ist, wird-1 zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion `wctob` konvertiert ein in `wchar` enthaltenes Breitzeichen in das entsprechende Multibytezeichen, das vom Rückgabewert `int` übergeben wird, wenn das Multibytezeichen genau ein Byte lang ist.  
-  
- Wenn `wctob` nicht erfolgreich war und kein entsprechendes Multibytezeichen erkannt wurde, legt die Funktion `errno` auf `EILSEQ` fest und gibt -1 zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`wctob`|\<wchar.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Dieses Programm stellt das Verhalten der Funktion `wcstombs` dar.  
-  
-```  
-// crt_wctob.c  
-#include <stdio.h>  
-#include <wchar.h>  
-  
-int main( void )  
-{  
-    int     bChar = 0;  
-    wint_t  wChar = 0;  
-  
-    // Set the corresponding wide character to exactly one byte.  
-    wChar = (wint_t)'A';  
-  
-    bChar = wctob( wChar );  
-    if (bChar == WEOF)  
-    {  
-        printf( "No corresponding multibyte character was found.\n");  
-    }  
-    else  
-    {  
-        printf( "Determined the corresponding multibyte character to"  
-                " be \"%c\".\n", bChar);  
-    }  
-}  
-  
-```  
-  
-```Output  
-Determined the corresponding multibyte character to be "A".  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+Bestimmt, ob ein Breitzeichen einem Multibytezeichen entspricht und gibt dessen Multibytezeichen-Darstellung zurück.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int wctob(
+   wint_t wchar
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*wchar*<br/>
+Zu übersetzender Wert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Wenn **Wctob** erfolgreich konvertiert ein Breitzeichen, gibt es die multibytezeichendarstellung nur, wenn das Multibytezeichen genau ein Byte lang ist. Wenn **Wctob** entdeckt ein Breitzeichen, es kann nicht in einem multibyte-Zeichen oder multibyte-Zeichen konvertiert, ist nicht genau ein Byte lang ist, wird-1 zurückgegeben.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Wctob** -Funktion konvertiert ein Breitzeichen in enthaltenen *Wchar* in das entsprechende multibyte-Zeichen, die durch den Rückgabetyp übergeben **Int** Wert, wenn die Multibyte Zeichen ist genau ein Byte lang sein.
+
+Wenn **Wctob** war nicht erfolgreich und ohne entsprechendes Multibytezeichen gefunden wurde, wird die Funktion legt **Errno** auf **EILSEQ** und gibt-1 zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**wctob**|\<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Dieses Programm veranschaulicht das Verhalten von der **Wcstombs** Funktion.
+
+```C
+// crt_wctob.c
+#include <stdio.h>
+#include <wchar.h>
+
+int main( void )
+{
+    int     bChar = 0;
+    wint_t  wChar = 0;
+
+    // Set the corresponding wide character to exactly one byte.
+    wChar = (wint_t)'A';
+
+    bChar = wctob( wChar );
+    if (bChar == WEOF)
+    {
+        printf( "No corresponding multibyte character was found.\n");
+    }
+    else
+    {
+        printf( "Determined the corresponding multibyte character to"
+                " be \"%c\".\n", bChar);
+    }
+}
+
+```
+
+```Output
+Determined the corresponding multibyte character to be "A".
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

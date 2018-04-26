@@ -1,12 +1,12 @@
 ---
 title: Standardkonvertierungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen über Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normalerweise dieselben Ergebnisse. Allerdings können sie zu unterschiedlichen Ergebnissen führen, wenn das erweiterte Objekt eines der folgenden ist:  
   
--   Ein Operand vom  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , oder **>=**  
+-   Ein Operand vom **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, oder **>=**  
   
      Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Daher ergeben wert- und vorzeichenneutrale Erweiterungen andere Ergebnisse, wenn sie auf diese Operanden angewendet werden.  
   
--   Der linke Operand des  **>>**  oder **>>=**  
+-   Der linke Operand des **>>** oder **>>=**  
   
      Diese Operatoren behandeln Mengen mit Vorzeichen und Mengen ohne Vorzeichen unterschiedlich, wenn eine Verschiebeoperation ausgeführt wird. Für Mengen mit Vorzeichen wird das Vorzeichenbit beim Verschieben einer Menge nach rechts in die frei werdenden Bitpositionen übertragen. Bei Mengen ohne Vorzeichen werden die frei werdenden Bitpositionen mit Nullen gefüllt.  
   
@@ -120,8 +120,7 @@ int main()
   
  Objekte aus Ganzzahltypen ohne Vorzeichen können in entsprechende Typen mit Vorzeichen konvertiert werden. Allerdings kann eine solche Konvertierung zur Fehlinterpretation von Daten führen, wenn der Wert des vorzeichenlosen Objekts außerhalb des Bereichs liegt, der vom Typ mit Vorzeichen darstellbar ist, wie im folgenden Beispiel veranschaulicht:  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Ein Objekt vom Gleitkommatyp kann auch in einen weniger genauer Typ konvertiert werden, wenn es in einem Bereich ist, der von diesem Typ darstellbar ist. (Siehe [Grenzwerte für Gleitkommakonstanten](../cpp/floating-limits.md) für die Bereiche von Gleitkommatypen.) Wenn der ursprüngliche Wert nicht exakt darstellbar ist, kann er in den nächsten höheren oder niedrigeren darstellbaren Wert konvertiert werden. Wenn kein solcher Wert vorhanden ist, ist das Ergebnis nicht definiert. Betrachten Sie das folgende Beispiel:  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- Der maximale Wert vom Typ darstellbar **"float"** ist 3.402823466E38 – eine Zahl wesentlich kleiner als 1E300. Daher wird die Zahl in unendlich konvertiert, und das Ergebnis ist 1.#INF.  
+ Der maximale Wert vom Typ darstellbar **"float"** ist 3.402823466E38 – eine Zahl wesentlich kleiner als 1E300. Aus diesem Grund ist die Zahl in unendlich konvertiert, und das Ergebnis ist "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Konvertierungen zwischen ganzzahligem Typ und Gleitkommatyp  
  Bestimmte Ausdrücke können bewirken, dass Objekte vom Typ "float" in Ganzzahltypen konvertiert werden oder umgekehrt. Wenn ein Objekt eines ganzzahligen Typs in einen Gleitkommatyp konvertiert wird und der ursprüngliche Wert nicht exakt dargestellt werden kann, ist das Ergebnis der nächsthöhere oder nächstniedrigere darstellbare Wert.  

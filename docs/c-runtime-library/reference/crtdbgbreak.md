@@ -1,12 +1,12 @@
 ---
 title: _CrtDbgBreak | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtDbgBreak
@@ -31,44 +31,49 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f49870ace2b23983d7eb121cd18ea3d755250e51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d63795ec929fe1333bfc0d55acc307b52d559faf
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
-Legt einen Haltepunkt in einer bestimmten Zeile des Codes (Nur im Debugmodus aktiviert)  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void _CrtDbgBreak( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Es ist kein Rückgabewert vorhanden.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_CrtDbgBreak`-Funktion legt einen Debughaltepunkt auf eine bestimmte Codezeile fest, in der sich die Funktion befindet. Diese Funktion wird nur im Debugmodus verwendet und ist abhängig von `_DEBUG`, was zuvor definiert wurde.  
-  
- Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Writing Your Own Debug Hook Functions (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_CrtDbgBreak`|\<CRTDBG.h>|  
-  
-## <a name="libraries"></a>Bibliotheken  
- Nur Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Debugroutinen](../../c-runtime-library/debug-routines.md)   
- [__debugbreak](../../intrinsics/debugbreak.md)
+
+Legt einen Haltepunkt in einer bestimmten Zeile des Codes (Nur im Debugmodus aktiviert)
+
+## <a name="syntax"></a>Syntax
+
+```C
+void _CrtDbgBreak( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Es ist kein Rückgabewert vorhanden.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_CrtDbgBreak** Funktion legt einen Haltepunkt auf bestimmten Zeile des Codes befindet, in dem die Funktion. Diese Funktion wird nur im Debugmodus verwendet und ist abhängig von **_DEBUG** zuvor definiert wird.
+
+Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Writing Your Own Debug Hook Functions (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_CrtDbgBreak**|\<CRTDBG.h>|
+
+## <a name="libraries"></a>Bibliotheken
+
+Nur Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Debugroutinen](../../c-runtime-library/debug-routines.md)<br/>
+[__debugbreak](../../intrinsics/debugbreak.md)<br/>

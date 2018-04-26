@@ -1,12 +1,12 @@
 ---
 title: _splitpath_s, _wsplitpath_s | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wsplitpath_s
@@ -39,155 +39,161 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baa71ca1a3d624c08df8ff1cbd14a9386e1b83d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7b04dec6f1f8129283815c2dcb6211f93139800f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
-Unterteilen eines Pfadnamens in Komponenten Dies sind Versionen von [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t _splitpath_s(  
-   const char * path,  
-   char * drive,  
-   size_t driveNumberOfElements,  
-   char * dir,  
-   size_t dirNumberOfElements,  
-   char * fname,  
-   size_t nameNumberOfElements,  
-   char * ext,   
-   size_t extNumberOfElements  
-);  
-errno_t _wsplitpath_s(  
-   const wchar_t * path,  
-   wchar_t * drive,  
-   size_t driveNumberOfElements,  
-   wchar_t *dir,  
-   size_t dirNumberOfElements,  
-   wchar_t * fname,  
-   size_t nameNumberOfElements,  
-   wchar_t * ext,  
-   size_t extNumberOfElements  
-);  
-template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
-errno_t _splitpath_s(  
-   const char *path,  
-   char (&drive)[drivesize],  
-   char (&dir)[dirsize],  
-   char (&fname)[fnamesize],  
-   char (&ext)[extsize]  
-); // C++ only  
-template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
-errno_t _wsplitpath_s(  
-   const wchar_t *path,  
-   wchar_t (&drive)[drivesize],  
-   wchar_t (&dir)[dirsize],  
-   wchar_t (&fname)[fnamesize],  
-   wchar_t (&ext)[extsize]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `path`  
- Vollständiger Pfad  
-  
- [out] `drive`  
- Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (`:`). Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Laufwerksbuchstaben nicht benötigen.  
-  
- [in] `driveNumberOfElements`  
- Die Größe des `drive`-Puffers in Einzelbytezeichen oder Breitzeichen. Wenn `drive` `NULL` ist, muss der Wert 0 sein.  
-  
- [out] `dir`  
- Verzeichnispfad, einschl. nachstehender Schrägstrich. Führende Schrägstriche ( `/` ), umgekehrte Schrägstriche ( `\` ) oder beide können verwendet werden. Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Verzeichnispfad nicht benötigen.  
-  
- [in] `dirNumberOfElements`  
- Die Größe des `dir`-Puffers in Einzelbytezeichen oder Breitzeichen. Wenn `dir` `NULL` ist, muss der Wert 0 sein.  
-  
- [out] `fname`  
- Basisdateiname (ohne Erweiterung). Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Dateinamen nicht benötigen.  
-  
- [in] `nameNumberOfElements`  
- Die Größe des `fname`-Puffers in Einzelbytezeichen oder Breitzeichen. Wenn `fname` `NULL` ist, muss der Wert 0 sein.  
-  
- [out] `ext`  
- Dateierweiterung mit führendem Punkt (**.**). Sie können `NULL` für diesen Parameter übergeben, wenn Sie die Dateierweiterung nicht benötigen.  
-  
- [in] `extNumberOfElements`  
- Die Größe des `ext`-Puffers in Einzelbytezeichen oder Breitzeichen. Wenn `ext` `NULL` ist, muss der Wert 0 sein.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.  
-  
-### <a name="error-conditions"></a>Fehlerbedingungen  
-  
-|Bedingung|Rückgabewert|  
-|---------------|------------------|  
-|`path` ist gleich `NULL`.|`EINVAL`|  
-|`drive` ist gleich `NULL`, `driveNumberOfElements` ist ungleich null|`EINVAL`|  
-|`drive` ist ungleich `NULL`, `driveNumberOfElements` ist null|`EINVAL`|  
-|`dir` ist gleich `NULL`, `dirNumberOfElements` ist ungleich null|`EINVAL`|  
-|`dir` ist ungleich `NULL`, `dirNumberOfElements` ist null|`EINVAL`|  
-|`fname` ist gleich `NULL`, `nameNumberOfElements` ist ungleich null|`EINVAL`|  
-|`fname` ist ungleich `NULL`, `nameNumberOfElements` ist null|`EINVAL`|  
-|`ext` ist gleich `NULL`, `extNumberOfElements` ist ungleich null|`EINVAL`|  
-|`ext` ist ungleich `NULL`, `extNumberOfElements` ist null|`EINVAL`|  
-  
- Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.  
-  
- Wenn einer der Puffer zu kurz ist, um das Ergebnis aufzunehmen, löschen diese Funktionen alle Puffer in leere Zeichenfolgen, setzen `errno` auf `ERANGE` und geben `ERANGE` zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_splitpath_s`-Funktion teilt einen Pfad in seine vier Komponenten auf. `_splitpath_s` verarbeitet Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichensequenzen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wsplitpath_s` ist eine Breitzeichenversion von `_splitpath_s`. Die Argumente für `_wsplitpath_s` sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich diese Funktionen identisch  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tsplitpath_s`|`_splitpath_s`|`_splitpath_s`|`_wsplitpath_s`|  
-  
- Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. Die Manifestkonstanten `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` und `_MAX_EXT` (in STDLIB.H definiert) geben die maximal zulässige Größe für jede Dateikomponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.  
-  
- In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.  
-  
-|name|Wert|  
-|----------|-----------|  
-|_MAX_DRIVE|3|  
-|_MAX_DIR|256|  
-|_MAX_FNAME|256|  
-|_MAX_EXT|256|  
-  
- Wenn der vollständige Pfad keine Komponente (z.B. Dateiname) enthält, weist `_splitpath_s` dem entsprechenden Puffer eine leere Zeichenfolge zu.  
-  
- Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_splitpath_s`|\<stdlib.h>|  
-|`_wsplitpath_s`|\<stdlib.h> oder \<wchar.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [_makepath_s _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+
+Unterteilen eines Pfadnamens in Komponenten Dies sind Versionen von [_splitpath, _wsplitpath](splitpath-wsplitpath.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t _splitpath_s(
+   const char * path,
+   char * drive,
+   size_t driveNumberOfElements,
+   char * dir,
+   size_t dirNumberOfElements,
+   char * fname,
+   size_t nameNumberOfElements,
+   char * ext,
+   size_t extNumberOfElements
+);
+errno_t _wsplitpath_s(
+   const wchar_t * path,
+   wchar_t * drive,
+   size_t driveNumberOfElements,
+   wchar_t *dir,
+   size_t dirNumberOfElements,
+   wchar_t * fname,
+   size_t nameNumberOfElements,
+   wchar_t * ext,
+   size_t extNumberOfElements
+);
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>
+errno_t _splitpath_s(
+   const char *path,
+   char (&drive)[drivesize],
+   char (&dir)[dirsize],
+   char (&fname)[fnamesize],
+   char (&ext)[extsize]
+); // C++ only
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>
+errno_t _wsplitpath_s(
+   const wchar_t *path,
+   wchar_t (&drive)[drivesize],
+   wchar_t (&dir)[dirsize],
+   wchar_t (&fname)[fnamesize],
+   wchar_t (&ext)[extsize]
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*path*<br/>
+Vollständiger Pfad
+
+*Laufwerk*<br/>
+Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht den Buchstaben des Laufwerks erforderlich ist.
+
+*driveNumberOfElements*<br/>
+Die Größe der *Laufwerk* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Laufwerk* ist **NULL**, dieser Wert muss 0 sein.
+
+*dir*<br/>
+Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrten Schrägstrichen ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie keinen Pfad für das Verzeichnis benötigen.
+
+*dirNumberOfElements*<br/>
+Die Größe der *Dir* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Dir* ist **NULL**, dieser Wert muss 0 sein.
+
+*fname*<br/>
+Basisdateiname (ohne Erweiterung). Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht benötigen.
+
+*nameNumberOfElements*<br/>
+Die Größe der *Fname* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Fname* ist **NULL**, dieser Wert muss 0 sein.
+
+*ext*<br/>
+Erweiterung, einschließlich führender Zeitraum (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht mit die Erweiterung benötigen.
+
+*extNumberOfElements*<br/>
+Die Größe des *Ext* Puffers in Einzelbyte-oder Breitzeichen. Wenn *Ext* ist **NULL**, dieser Wert muss 0 sein.
+
+## <a name="return-value"></a>Rückgabewert
+
+Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
+
+### <a name="error-conditions"></a>Fehlerbedingungen
+
+|Bedingung|Rückgabewert|
+|---------------|------------------|
+|*Pfad* ist **NULL**|**EINVAL**|
+|*Laufwerk* ist **NULL**, *DriveNumberOfElements* ungleich NULL ist|**EINVAL**|
+|*Laufwerk* nicht**NULL**, *DriveNumberOfElements* 0 (null)|**EINVAL**|
+|*Dir* ist **NULL**, *DirNumberOfElements* ungleich NULL ist|**EINVAL**|
+|*Dir* nicht**NULL**, *DirNumberOfElements* 0 (null)|**EINVAL**|
+|*Fname* ist **NULL**, *NameNumberOfElements* ungleich NULL ist|**EINVAL**|
+|*Fname* nicht**NULL**, *NameNumberOfElements* 0 (null)|**EINVAL**|
+|*Ext* ist **NULL**, *ExtNumberOfElements* ungleich NULL ist|**EINVAL**|
+|*Ext* nicht**NULL**, *ExtNumberOfElements* 0 (null)|**EINVAL**|
+
+Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EINVAL**.
+
+Eine der Puffer ist zu kurz, um das Ergebnis aufzunehmen, diese Funktionen deaktivieren, wenn alle Puffer leere Zeichenfolgen, legen Sie **Errno** auf **ERANGE**, inventurüberprüfung **ERANGE**.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_splitpath_s** Funktion teilt einen Pfad in vier Komponenten. **_splitpath_s** automatisch behandelt Multibyte-Zeichenfolgenargumente nach Bedarf, erkennen Multibyte-Zeichensequenzen entsprechend der multibyte-Codepage aktuell in Verwendung. **_wsplitpath_s** ist eine Breitzeichen-Version von **_splitpath_s**; die Argumente für **_wsplitpath_s** sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich diese Funktionen identisch
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
+
+Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. die Manifestkonstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, und **_MAX_EXT** (definiert in STDLIB. H) Geben Sie die maximale zulässige Größe für die einzelnen Komponenten der Datei ein. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
+
+In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
+
+|name|Wert|
+|----------|-----------|
+|_MAX_DRIVE|3|
+|_MAX_DIR|256|
+|_MAX_FNAME|256|
+|_MAX_EXT|256|
+
+Wenn der vollständige Pfad eine Komponente (z. B. ein Dateiname), keinen enthält **_splitpath_s** weist eine leere Zeichenfolge in den entsprechenden Puffer.
+
+Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_splitpath_s**|\<stdlib.h>|
+|**_wsplitpath_s**|\<stdlib.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [_makepath_s _wmakepath_s](makepath-s-wmakepath-s.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Dateibehandlung](../../c-runtime-library/file-handling.md)<br/>
+[_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_makepath, _wmakepath](makepath-wmakepath.md)<br/>
+[_setmbcp](setmbcp.md)<br/>

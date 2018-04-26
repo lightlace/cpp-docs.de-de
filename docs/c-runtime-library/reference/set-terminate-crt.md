@@ -1,12 +1,12 @@
 ---
 title: set_terminate (CRT) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - set_terminate
@@ -32,67 +32,71 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba062bd1b791f055b2ae1c74c2a0107a4039d23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 02c38d8c832c4b84725dc15c280c8b3f3fd27841
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
-Installiert Ihre Beendigungsroutine, die von `terminate` aufgerufen werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-terminate_function set_terminate(  
-   terminate_function termFunction  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `termFunction`  
- Zeiger auf eine Funktion zum Beenden, die Sie schreiben.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf die vorherige Funktion zurück, die von `set_terminate` registriert wurde, sodass die vorherige Funktion später wiederhergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen. Dieser Wert kann NULL sein.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `set_terminate`-Funktion installiert `termFunction` als Funktion, die von `terminate` aufgerufen wird. `set_terminate` wird mit C++-Ausnahmebehandlung verwendet und kann an einer beliebigen Stelle im Programm aufgerufen werden, bevor die Ausnahme ausgelöst wird. `terminate` ruft standardmäßig `abort` auf. Sie können dieses Standardverhalten ändern, indem Sie eine benutzerdefinierte Beendigungsfunktion schreiben und `set_terminate` mit dem Namen Ihrer Funktion als Argument aufrufen. `terminate` ruft die letzte Funktion auf, die für `set_terminate` als Argument angegeben wurde. Nach der Ausführung aller gewünschten Bereinigungsaufgaben sollte `termFunction` das Programm beenden. Andernfalls (bei Rückgabe an den Aufrufer) wird `abort` aufgerufen.  
-  
- In einer Multithreadumgebung werden die Beendigungsfunktionen für jeden Thread separat verwaltet. Jeder neue Thread muss eine eigene Beendigungsfunktion installieren. Daher ist jeder Thread für die eigene Beendigungsbehandlung verantwortlich.  
-  
- Der `terminate_function`-Typ ist in EH.H als Zeiger auf eine benutzerdefinierte Beendigungsfunktion definiert, `termFunction`, die `void` zurückgibt. Ihre benutzerdefinierte Funktion `termFunction` kann keine Argumente annehmen und sollte nicht an den Aufrufer zurückgeben. Ist dies der Fall, wird `abort` aufgerufen. Eine Ausnahme kann nicht aus `termFunction` heraus ausgelöst werden.  
-  
-```  
-typedef void ( *terminate_function )( );  
-```  
-  
+
+Installiert eine eigene Abbruchroutine aufgerufen werden, indem Sie **beenden**.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+terminate_function set_terminate( terminate_function termFunction );
+```
+
+### <a name="parameters"></a>Parameter
+
+*termFunction*<br/>
+Zeiger auf eine Funktion zum Beenden, die Sie schreiben.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt einen Zeiger auf die vorherige Funktion registriert, indem Sie **Set_terminate** , damit die vorherige Funktion später wiederhergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen. Dieser Wert kann NULL sein.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Set_terminate** -Funktion installiert *TermFunction* wie die Funktion wird aufgerufen, indem **beenden**. **Set_terminate** mit C++-Ausnahmebehandlung verwendet wird und an einem beliebigen Punkt im Programm aufgerufen werden kann, bevor die Ausnahme ausgelöst wird. **Beenden** Aufrufe [abort](abort.md) standardmäßig. Sie können diese Standardeinstellung ändern, indem Sie eine eigene Beendigungsfunktion schreiben und Aufrufen **Set_terminate** mit dem Namen Ihrer Funktion als Argument. **Beenden** Ruft die letzte Funktion als Argument an **Set_terminate**. Nach dem Ausführen einer Bereinigungsaufgaben gewünscht *TermFunction* sollte das Programm zu beenden. Wenn er nicht beendet wird (wenn es an den Aufrufer zurückgibt), [abort](abort.md) aufgerufen wird.
+
+In einer Multithreadumgebung werden die Beendigungsfunktionen für jeden Thread separat verwaltet. Jeder neue Thread muss eine eigene Beendigungsfunktion installieren. Daher ist jeder Thread für die eigene Beendigungsbehandlung verantwortlich.
+
+Die **Terminate_function** Typ in der EH definiert ist. H als Zeiger auf eine benutzerdefinierte Beendigungsfunktion *TermFunction* zurückgibt **"void"**. Die benutzerdefinierte Funktion *TermFunction* können akzeptieren keine Argumente und sollte nicht an den Aufrufer zurückgeben. Wenn dies der Fall, [abort](abort.md) aufgerufen wird. Eine Ausnahme kann nicht innerhalb von *TermFunction*.
+
+```cpp
+typedef void ( *terminate_function )( );
+```
+
 > [!NOTE]
->  Die `set_terminate`-Funktion kann nur außerhalb des Debuggers verwendet werden.  
-  
- Es gibt einen einzigen `set_terminate`-Handler für alle dynamisch verknüpften DLLs oder EXEs. Auch wenn Sie `set_terminate` aufrufen, wird Ihr Handler möglicherweise durch einen anderen ersetzt, oder Sie ersetzen einen Handler, der von einer anderen DLL oder EXE wurde.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`set_terminate`|\<eh.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Eine Abbildung finden Sie im Beispiel für [terminate](../../c-runtime-library/reference/terminate-crt.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausnahmebehandlungsroutinen](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_get_terminate](../../c-runtime-library/reference/get-terminate.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+> Die **Set_terminate** Funktion funktioniert nur außerhalb des Debuggers.
+
+Es gibt einen einzigen **Set_terminate** Handler für alle dynamisch verknüpften DLLs oder EXE-Dateien, selbst wenn Sie aufrufen **Set_terminate** Ihr Handler möglicherweise durch eine andere ersetzt werden, oder Sie ersetzen einen Handler, die durch eine andere festlegen DLL oder EXE-Datei.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**set_terminate**|\<eh.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Eine Abbildung finden Sie im Beispiel für [terminate](terminate-crt.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausnahmebehandlungsroutinen](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_get_terminate](get-terminate.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _swab | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _swab
@@ -35,81 +35,85 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01f23047436b7ff8cee16b42cc6ae0d8c2a9fd78
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1ab841400bd002595508806797a9a204415b5f15
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="swab"></a>_swab
-Tauscht Bytes.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void _swab(  
-   char *src,  
-   char *dest,  
-   int n   
-);  
-```  
-  
-## <a name="parameters"></a>Parameter  
- `src`  
- Zu kopierende und tauschende Daten.  
-  
- `dest`  
- Speicherort für getauschte Daten.  
-  
- `n`  
- Anzahl der zu kopierenden und tauschender Bytes.  
-  
+
+Tauscht Bytes.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void _swab(
+   char *src,
+   char *dest,
+   int n
+);
+```
+
+## <a name="parameters"></a>Parameter
+
+*Src* Daten kopiert und ausgetauscht werden.
+
+*Dest* Speicherort für Daten ausgetauscht.
+
+*n* Anzahl von Bytes, die kopiert und ausgetauscht werden.
+
 ## <a name="return-value"></a>Rückgabewert
- Die Funktion `swab` gibt keinen Wert zurück. Die Funktion legt `errno` auf `EINVAL` fest, wenn entweder der `src`- oder der `dest`-Zeiger NULL oder `n` kleiner als null ist, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.  
-  
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
- 
-## <a name="remarks"></a>Hinweise  
- Wenn `n` gerade ist, kopiert die `_swab`-Funktion `n` Bytes von `src`, tauscht jedes Paar von benachbarten Bytes und speichert das Ergebnis in `dest`. Wenn `n` ungerade ist, kopiert und tauscht `_swab` die ersten `n-1` Bytes von `src`, und das letzte Byte wird nicht kopiert. Die Funktion `_swab` wird normalerweise verwendet, um Binärdaten auf die Übertragung auf einen Computer vorzubereiten, der eine andere Bytereihenfolge verwendet.  
-  
-## <a name="requirements"></a>Anforderungen  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_swab`|C: \<stdlib.h> C++: \<cstdlib> oder \<stdlib.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-```C 
-// crt_swab.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "...........................";  
-  
-int main()  
-{  
-    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
-    _swab(from, to, sizeof(from));  
-    printf("After:  %s\n        %s\n\n", from, to);  
-}  
-```  
-  
-```Output  
-Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
-        ...........................  
-  
-After:  BADCFEHGJILKNMPORQTSVUXWZY  
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Pufferbearbeitung](../../c-runtime-library/buffer-manipulation.md)
+
+Die **Swab** -Funktion gibt keinen Wert zurück. Die Funktion legt **Errno** auf **EINVAL** Wenn entweder die *Src* oder *Dest* Zeiger null ist oder *n* kleiner als 0 (null), und mit dem ungültigen Parameter Handler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+
+Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Wenn *n* geraden Wert hat, ist die **_swap** -Funktion kopiert *n* Bytes vom *Src*jedes Paar von benachbarten Bytes vertauscht und speichert das Ergebnis an *Dest*. Wenn *n* ungerade ist, **_swap** kopiert und die erste vertauscht *n*-1 Byte der *Src*, und das letzte Byte wird nicht kopiert. Die **_swap** Funktion ist in der Regel verwendet, um binäre Daten für die Übertragung an einen Computer vorzubereiten, die einen anderen Bytereihenfolge verwendet.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_swab**|C: \<stdlib.h> C++: \<cstdlib> oder \<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_swab.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";
+char to[] =   "...........................";
+
+int main()
+{
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);
+    _swab(from, to, sizeof(from));
+    printf("After:  %s\n        %s\n\n", from, to);
+}
+```
+
+```Output
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes
+        ...........................
+
+After:  BADCFEHGJILKNMPORQTSVUXWZY
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Pufferbearbeitung](../../c-runtime-library/buffer-manipulation.md)<br/>

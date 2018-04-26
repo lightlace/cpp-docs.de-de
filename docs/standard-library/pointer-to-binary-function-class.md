@@ -1,12 +1,12 @@
 ---
 title: pointer_to_binary_function-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xfunctional/std::pointer_to_binary
@@ -16,24 +16,25 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c449d66dfe1889e403cd288361bb5cc20e7f884d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e43c5f906aa68480120df504b95152bbd346348
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function-Klasse
-Konvertiert einen binären Funktionszeiger in eine anwendbare binäre Funktion.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```
+
+Konvertiert einen binären Funktionszeiger in eine anwendbare binäre Funktion.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 template <class Arg1, class Arg2, class Result>
 class pointer_to_binary_function
     : public binary_function <Arg1, Arg2, Result>
@@ -43,34 +44,34 @@ public:
         Result(*pfunc)(Arg1, Arg2));
     Result operator()(Arg1 left, Arg2 right) const;
 };
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `pfunc`  
- Die binäre Funktion, die konvertiert werden soll.  
-  
- `left`  
- Das linke Objekt, auf dem *\*pfunc* aufgerufen wird.  
-  
- `right`  
- Das rechte Objekt, auf dem *\*pfunc* aufgerufen wird.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Vorlagenklasse speichert eine Kopie von **pfunc**. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (\* **pfunc**)(_ *Left*, \_ *Right*).  
-  
-## <a name="remarks"></a>Hinweise  
- Ein binärer Funktionszeiger ist ein Funktionsobjekt und kann an alle C++-Standardbibliotheksalgorithmen übergeben werden, die eine binäre Funktion als Parameter erwarten, aber er kann nicht angepasst werden. Für die Verwendung mit einem Adapter, z.B. um einen Wert zuzuordnen oder ihn mit einer Negator zu verwenden, müssen die geschachtelten Typen **first_argument_type**, **second_argument_type** und **result_type** angegeben werden, die eine solche Anpassung möglich machen. Die Konvertierung durch `pointer_to_binary_function` ermöglicht den Funktionsadaptern mit binären Funktionszeigern zusammenzuarbeiten.  
-  
-## <a name="example"></a>Beispiel  
- Der Konstruktor von `pointer_to_binary_function` wird nur selten direkt verwendet. Suchen Sie unter der Hilfsfunktion [ptr_fun](../standard-library/functional-functions.md#ptr_fun) nach einem Beispiel für das Deklarieren und Verwenden des `pointer_to_binary_function`-Adapterprädikats.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<functional>  
-  
- **Namespace:** std  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+```
 
+### <a name="parameters"></a>Parameter
 
+`pfunc` Der binären Funktion konvertiert werden.
 
+`left` Das linke Objekt, mit der  *\*Pfunc* für aufgerufen wird.
+
+`right` Das rechte Objekt, mit der  *\*Pfunc* für aufgerufen wird.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Vorlagenklasse speichert eine Kopie von **pfunc**. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (\* **pfunc**)(_ *Left*, \_ *Right*).
+
+## <a name="remarks"></a>Hinweise
+
+Ein binärer Funktionszeiger ist ein Funktionsobjekt und kann an alle C++-Standardbibliotheksalgorithmen übergeben werden, die eine binäre Funktion als Parameter erwarten, aber er kann nicht angepasst werden. Für die Verwendung mit einem Adapter, z.B. um einen Wert zuzuordnen oder ihn mit einer Negator zu verwenden, müssen die geschachtelten Typen **first_argument_type**, **second_argument_type** und **result_type** angegeben werden, die eine solche Anpassung möglich machen. Die Konvertierung durch `pointer_to_binary_function` ermöglicht den Funktionsadaptern mit binären Funktionszeigern zusammenzuarbeiten.
+
+## <a name="example"></a>Beispiel
+
+Der Konstruktor von `pointer_to_binary_function` wird nur selten direkt verwendet. Suchen Sie unter der Hilfsfunktion [ptr_fun](../standard-library/functional-functions.md#ptr_fun) nach einem Beispiel für das Deklarieren und Verwenden des `pointer_to_binary_function`-Adapterprädikats.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<functional>
+
+**Namespace:** std
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

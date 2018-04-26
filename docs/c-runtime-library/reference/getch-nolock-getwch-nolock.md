@@ -1,12 +1,12 @@
 ---
 title: _getch_nolock, _getwch_nolock | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getwch_nolock
@@ -43,91 +43,95 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20d886bfc16c09526b681a302934a9d1e7655c37
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5441e061341d5af34bc840d14d86024b92b7c735
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
-Ruft ein Zeichen aus der Konsole ohne Echo ab und ohne den Thread zu sperren.  
-  
+
+Ruft ein Zeichen aus der Konsole ohne Echo ab und ohne den Thread zu sperren.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _getch_nolock( void );  
-wint_t _getwch_nolock( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt das gelesene Zeichen zurück. Es gibt keine Fehlerrückgabe.  
-  
-## <a name="remarks"></a>Hinweise  
- `_getch_nolock` und `_getwch_nolock` sind mit `_getch` und`_getchw` nahezu identisch; allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_gettch_nolock`|`_getch_nolock`|`_getch_nolock`|`_getwch_nolock`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_getch_nolock`|\<conio.h>|  
-|`_getwch_nolock`|\<conio.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_getch_nolock.c  
-// compile with: /c  
-// This program reads characters from  
-// the keyboard until it receives a 'Y' or 'y'.  
-  
-#include <conio.h>  
-#include <ctype.h>  
-  
-int main( void )  
-{  
-   int ch;  
-  
-   _cputs( "Type 'Y' when finished typing keys: " );  
-   do  
-   {  
-      ch = _getch_nolock();  
-      ch = toupper( ch );  
-   } while( ch != 'Y' );  
-  
-   _putch_nolock( ch );  
-   _putch_nolock( '\r' );    // Carriage return  
-   _putch_nolock( '\n' );    // Line feed  
-}  
-```  
-  
-```Input  
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _getch_nolock( void );
+wint_t _getwch_nolock( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt das gelesene Zeichen zurück. Es gibt keine Fehlerrückgabe.
+
+## <a name="remarks"></a>Hinweise
+
+**_getch_nolock** und **_getwch_nolock** sind identisch mit **_getch** und **_getchw** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_gettch_nolock**|**_getch_nolock**|**_getch_nolock**|**_getwch_nolock**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_getch_nolock**|\<conio.h>|
+|**_getwch_nolock**|\<conio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_getch_nolock.c
+// compile with: /c
+// This program reads characters from
+// the keyboard until it receives a 'Y' or 'y'.
+
+#include <conio.h>
+#include <ctype.h>
+
+int main( void )
+{
+   int ch;
+
+   _cputs( "Type 'Y' when finished typing keys: " );
+   do
+   {
+      ch = _getch_nolock();
+      ch = toupper( ch );
+   } while( ch != 'Y' );
+
+   _putch_nolock( ch );
+   _putch_nolock( '\r' );    // Carriage return
+   _putch_nolock( '\n' );    // Line feed
+}
+```
+
+```Input
 abcdefy
 ```
-  
-```Output  
-Type 'Y' when finished typing keys: Y  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Konsolen- und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)   
- [_getche, _getwche](../../c-runtime-library/reference/getche-getwche.md)   
- [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+
+```Output
+Type 'Y' when finished typing keys: Y
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_getche, _getwche](getche-getwche.md)<br/>
+[_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>
+[_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

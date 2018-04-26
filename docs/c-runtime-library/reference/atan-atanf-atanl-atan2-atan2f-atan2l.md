@@ -1,12 +1,12 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - atan2f
@@ -47,125 +47,110 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da2b1bcc38c1b41a35de30e589f9660f19f78da
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b1c17693a5f73ed7e755c69b5b2157d5de792c76
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
-Berechnet den Arkustangens von `x` (`atan`, `atanf` und `atanl`) oder den Arkustangens von `y`/`x` (`atan2`, `atan2f` und `atan2l`).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double atan(   
-   double x   
-);  
-float atan(  
-   float x   
-);  // C++ only  
-long double atan(  
-   long double x  
-);  // C++ only  
-double atan2(   
-   double y,   
-   double x   
-);  
-float atan2(  
-   float y,  
-   float x  
-);  // C++ only  
-long double atan2(  
-   long double y,  
-   long double x  
-);  // C++ only  
-float atanf(   
-   float x   
-);  
-long double atanl(  
-   long double x  
-);  
-float atan2f(  
-   float y,  
-   float x  
-);  
-long double atan2l(  
-   long double y,  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`, `y`  
- Alle Zahlen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `atan` Gibt den Arkustangens von `x` in den Bereich - π/2 bis π/2 zurück. `atan2` Gibt den Arkustangens von `y/x` in den Bereich - π bis π zurück. Wenn `x` gleich 0 ist, gibt `atan` 0 zurück. Wenn beide Parameter von `atan2` 0 sind, gibt die Funktion 0 zurück. Alle Ergebnisse sind in Bogenmaß.  
-  
- `atan2` verwendet die Zeichen beider Parameter, um den Quadranten des Rückgabewerts zu bestimmen.  
-  
-|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
-|-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|Keine|`_DOMAIN`|  
-  
-## <a name="remarks"></a>Hinweise  
- Die `atan`-Funktion berechnet den Arkustangens (die umgekehrte Tangensfunktion) von `x`. `atan2` berechnet den Arkustangens von `y`/`x` (wenn `x` gleich 0 ist, gibt `atan2` π/2 zurück, wenn `y` positiv ist, –π/2, wenn `y` negativ ist, oder 0, wenn `y` 0 ist.)  
-  
- `atan` ist eine Implementierung, die SIMD-Streamingerweiterungen 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
-  
- Da C++ ein Überladen zulässt, können Sie Überladungen von `atan` und `atan2` aufrufen. In einem C-Programm verwenden `atan` und `atan2` immer Doppelwerte und geben diese auch zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_atan.c  
-// arguments: 5 0.5  
-#include <math.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main( int ac, char* av[] )   
-{  
-   double x, y, theta;  
-   if( ac != 3 ){  
-      fprintf( stderr, "Usage: %s <x> <y>\n", av[0] );  
-      return 1;  
-   }  
-   x = atof( av[1] );  
-   theta = atan( x );  
-   printf( "Arctangent of %f: %f\n", x, theta );  
-   y = atof( av[2] );  
-   theta = atan2( y, x );  
-   printf( "Arctangent of %f / %f: %f\n", y, x, theta );   
-   return 0;  
-}  
-```  
-  
-```Output  
-Arctangent of 5.000000: 1.373401  
-Arctangent of 0.500000 / 5.000000: 0.099669  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
- [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [_CIatan](../../c-runtime-library/ciatan.md)   
- [_CIatan2](../../c-runtime-library/ciatan2.md)
+
+Berechnet den Arkustangens von **x** (**Atan**, **Atanf**, und **Atanl**) oder den Arkustangens von **y** / **x** (**atan2**, **atan2f**, und **atan2l**).
+
+## <a name="syntax"></a>Syntax
+
+```C
+double atan( double x );
+float atanf( float x );
+long double atanl( long double x );
+
+double atan2( double y, double x );
+float atan2f( float y, float x );
+long double atan2l( long double y, long double x );
+```
+
+```cpp
+float atan( float x );  // C++ only
+long double atan( long double x );  // C++ only
+
+float atan2( float y, float x );  // C++ only
+long double atan2( long double y, long double x );  // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*X*, *y*<br/>
+Alle Zahlen.
+
+## <a name="return-value"></a>Rückgabewert
+
+**ATAN** gibt den Arkustangens von *x* in den Bereich - π/2 bis π/2 zurück. **atan2** gibt den Arkustangens von *y*/*x* in den Bereich - π bis π zurück. Wenn *x* ist 0, **Atan** gibt 0 zurück. Wenn beide Parameter von **atan2** sind 0, gibt die Funktion 0 zurück. Alle Ergebnisse sind in Bogenmaß.
+
+**atan2** die Zeichen beider Parameter verwendet, um den Quadranten des Rückgabewerts zu bestimmen.
+
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|Keine|**_DOMAIN**|
+
+## <a name="remarks"></a>Hinweise
+
+Die **Atan** -Funktion berechnet den Arkustangens (die umgekehrte Tangensfunktion) von *x*. **atan2** berechnet den Arkustangens von *y*/*x* (Wenn *x* gleich 0 ist, **atan2** π/2 zurück, wenn *y* positiv ist, - π/2, wenn *y* ist negativ oder 0, wenn *y* ist 0.)
+
+**ATAN** ist eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Atan** und **atan2** nehmen **"float"** oder **lange** **double**  Argumente. In einem C-Programm **Atan** und **atan2** immer im Voraus erstellen **doppelte** Argumente und der Rückgabewert eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-------------|---------------------|-|
+|**ATAN**, **atan2**, **Atanf**, **atan2f**, **Atanl**, **atan2l**|\<math.h>|\<cmath> oder \<math.h>|
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_atan.c
+// arguments: 5 0.5
+#include <math.h>
+#include <stdio.h>
+#include <errno.h>
+
+int main( int ac, char* av[] )
+{
+   double x, y, theta;
+   if( ac != 3 ){
+      fprintf( stderr, "Usage: %s <x> <y>\n", av[0] );
+      return 1;
+   }
+   x = atof( av[1] );
+   theta = atan( x );
+   printf( "Arctangent of %f: %f\n", x, theta );
+   y = atof( av[2] );
+   theta = atan2( y, x );
+   printf( "Arctangent of %f / %f: %f\n", y, x, theta );
+   return 0;
+}
+```
+
+```Output
+Arctangent of 5.000000: 1.373401
+Arctangent of 0.500000 / 5.000000: 0.099669
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[acos, acosf, acosl](acos-acosf-acosl.md)<br/>
+[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
+[_matherr](matherr.md)<br/>
+[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
+[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[_CIatan](../../c-runtime-library/ciatan.md)<br/>
+[_CIatan2](../../c-runtime-library/ciatan2.md)<br/>

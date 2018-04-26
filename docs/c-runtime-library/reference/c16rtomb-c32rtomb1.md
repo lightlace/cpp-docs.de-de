@@ -1,13 +1,13 @@
 ---
 title: c16rtomb, c32rtomb1 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - c16rtomb
@@ -36,68 +36,73 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2deca697a3dcb338ae9e9ea9e071c73979695ad8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e051fe8fdb0bfaad4d34ce50e91bf7611a47ee81
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
-Konvertiert ein UTF-16- oder UTF-32-Breitzeichen in ein Multibytezeichen im aktuellen Gebietsschema.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-size_t c16rtomb(  
-    char *mbchar,   
-    char16_t wchar,  
-    mbstate_t *state  
-);  
-size_t c32rtomb(  
-    char *mbchar,   
-    char32_t wchar,  
-    mbstate_t *state  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `mbchar`  
- Zeiger auf ein Array zum Speichern des in Multibyte konvertierten Zeichens.  
-  
- [in] `wchar`  
- Ein zu konvertierendes Breitzeichen.  
-  
- [in, out] `state`  
- Ein Zeiger auf ein `mbstate_t` -Objekt.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Anzahl der im Arrayobjekt `mbchar`gespeicherten Bytes, einschließlich eventueller UMSCHALT-Sequenzen. Wenn `wchar` kein gültiges Breitzeichen ist, wird der Wert (`size_t`)(-1) zurückgegeben, `errno` wird auf `EILSEQ`festgelegt und der Wert von `state` ist nicht angegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `c16rtomb` -Funktion konvertiert das UTF-16-Zeichen `wchar` in die äquivalente Multibytesequenz aus halbbreiten Zeichen im aktuellen Gebietsschema. Wenn `mbchar` kein Nullzeiger ist, speichert die Funktion die konvertierte Sequenz im Arrayobjekt, auf das `mbchar`verweist. Bis zu `MB_CUR_MAX` Bytes werden in `mbchar`gespeichert, und `state` wird auf den resultierenden Multibyte-UMSCHALT-Status festgelegt.    Wenn `wchar` ein breites NULL-Zeichen ist, wird eine Sequenz gespeichert, die zum Wiederherstellen des ursprünglichen UMSCHALT-Status erforderlich ist, ggf. gefolgt vom NULL-Zeichen, und `state` wird auf den ursprünglichen Konvertierungsstatus festgelegt. Die `c32rtomb` -Funktion ist identisch, konvertiert aber ein UTF-32-Zeichen.  
-  
- Wenn `mbchar` ein Nullzeiger ist, ist das Verhalten gleichbedeutend mit einem Aufruf der Funktion, die `mbchar` durch einen internen Puffer und `wchar`durch ein breites NULL-Zeichen ersetzt.  
-  
- Das `state` -Konvertierungsstatusobjekt ermöglicht Ihnen, aufeinander folgende Aufrufe dieser Funktion und anderer erneut startbarer Funktionen vorzunehmen, bei denen der UMSCHALT-Status der Multibyteausgabezeichen erhalten bleibt. Wenn Sie erneut startbare und nicht erneut startbare Funktionen gemischt verwenden oder zwischen zwei Aufrufen von neu startbaren Funktionen ein Aufruf von `setlocale` erfolgt, sind die Ergebnisse undefiniert.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`c16rtomb`, `c32rtomb`|C, C++: \<uchar.h>|  
-  
- Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbrtoc16, mbrtoc32](../../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)   
- [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)
+
+Konvertiert ein UTF-16- oder UTF-32-Breitzeichen in ein Multibytezeichen im aktuellen Gebietsschema.
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t c16rtomb(
+    char *mbchar,
+    char16_t wchar,
+    mbstate_t *state
+);
+size_t c32rtomb(
+    char *mbchar,
+    char32_t wchar,
+    mbstate_t *state
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*mbchar*<br/>
+Zeiger auf ein Array zum Speichern des in Multibyte konvertierten Zeichens.
+
+*wchar*<br/>
+Ein zu konvertierendes Breitzeichen.
+
+*state*<br/>
+Ein Zeiger auf ein **Mbstate_t** Objekt.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Anzahl der Bytes im Arrayobjekt gespeicherten *Mbchar*, einschließlich eventueller umschaltsequenzen. Wenn *Wchar* ist kein gültiges Breitzeichen ist, den Wert (**Size_t**)(-1) zurückgegeben, **Errno** festgelegt ist, um **EILSEQ**, und der Wert des *Zustand* ist nicht angegeben.
+
+## <a name="remarks"></a>Hinweise
+
+Die **c16rtomb** -Funktion konvertiert das UTF-16-Zeichen *Wchar* der Sequenz äquivalente multibytesequenz aus halbbreiten Zeichen im aktuellen Gebietsschema. Wenn *Mbchar* ist kein Nullzeiger ist, speichert die Funktion, die die konvertierte Sequenz im Arrayobjekt verweist *Mbchar*. Bis zu **MB_CUR_MAX** Bytes werden in gespeicherten *Mbchar*, und *Status* auf den resultierenden multibyte-UMSCHALT-Status festgelegt ist.    Wenn *Wchar* ist ein null-Breitzeichen, eine Sequenz, die erforderlich, um die UMSCHALT-Status gespeichert wird, wird bei Bedarf wiederherstellen gefolgt von Null-Zeichen und *Status* auf den ursprünglichen konvertierungszustand festgelegt ist. Die **c32rtomb** -Funktion ist identisch, aber ein UTF-32-Zeichen konvertiert.
+
+Wenn *Mbchar* ein null-Zeiger ist das Verhalten ist gleichbedeutend mit einem Aufruf an die Funktion, die einen internen Puffer ersetzt *Mbchar* und ein Null-Breitzeichen für *Wchar*.
+
+Die *Status* -konvertierungsstatusobjekt ermöglicht Ihnen, aufeinander folgende Aufrufe dieser Funktion und anderer erneut startbarer Funktionen, die die UMSCHALT-Status der multibyteausgabezeichen verwalten vorzunehmen. Wenn Sie erneut startbare und nicht startbare Funktionen gemischt oder wenn ein Aufruf von sind die Ergebnisse undefiniert **Setlocale** erfolgt zwischen zwei aufrufen.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h>|
+
+Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)<br/>
+[wcrtomb](wcrtomb.md)<br/>
+[wcrtomb_s](wcrtomb-s.md)<br/>

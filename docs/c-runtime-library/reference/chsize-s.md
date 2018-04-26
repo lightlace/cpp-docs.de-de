@@ -1,12 +1,12 @@
 ---
 title: _chsize_s | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _chsize_s
@@ -33,60 +33,65 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ed8eb6511c9ba7126506e84e815616af78f84f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8867761f644e1367c3ab1101a9a5860b9cfc9c33
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chsizes"></a>_chsize_s
-Ändert die Größe einer Datei. Dies ist eine sicherere Version von [_chsize](../../c-runtime-library/reference/chsize.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t _chsize_s(   
-   int fd,  
-   __int64 size   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `fd`  
- Dateideskriptor, der auf eine geöffnete Datei verweist.  
-  
- `size`  
- Neue Länge der Datei in Bytes.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_chsize_s` gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Rückgabewert ungleich null zeigt einen Fehler an: Der Rückgabewert ist `EACCES`, wenn die angegebene Datei für den Zugriff gesperrt ist, `EBADF`, wenn die angegebene Datei schreibgeschützt oder der Deskriptor ungültig ist, `ENOSPC`, wenn kein Speicherplatz mehr auf dem Gerät vorhanden ist, oder `EINVAL`, wenn die Größe kleiner als 0 (null) ist. `errno` wird auf denselben Wert festgelegt.  
-  
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_chsize_s`-Funktion erweitert oder verkürzt die mit `fd` verknüpfte Datei auf die von `size` angegebene Länge. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.  
-  
- `_chsize_s` verwendet einen 64-Bit-Integer als Dateigröße und kann daher Dateien handhaben, die größer als 4 GB sind. `_chsize` ist auf 32-Bit-Dateien beschränkt.  
-  
- Diese Funktion überprüft ihre Parameter. Wenn `fd` kein gültiger Dateideskriptor ist oder die Größe kleiner als null ist, wird – wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben – der Handler für ungültige Parameter aufgerufen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------|---------------------|  
-|`_chsize_s`|\<io.h>|\<errno.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_schließen](../../c-runtime-library/reference/close.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)
+
+Ändert die Größe einer Datei. Dies ist eine sicherere Version von [_chsize](chsize.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t _chsize_s(
+   int fd,
+   __int64 size
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*fd*<br/>
+Dateideskriptor, der auf eine geöffnete Datei verweist.
+
+*size*<br/>
+Neue Länge der Datei in Bytes.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_chsize_s** gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Wert ungleich Null zeigt einen Fehler: der Rückgabewert ist **EACCES** Wenn für den Zugriff auf die angegebene Datei gesperrt ist **EBADF** , wenn die angegebene Datei schreibgeschützt ist oder die Beschreibung ungültig ist, **ENOSPC** Wenn kein auf dem Gerät Speicherplatz oder **EINVAL** Wenn Größe ist kleiner als 0 (null). **Errno** auf denselben Wert festgelegt ist.
+
+Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Die **_chsize_s** Funktion erweitert oder verkürzt die zugeordnete Datei *fd* auf die Länge, angegeben durch *Größe*. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
+
+**_chsize_s** ist eine 64-Bit-Ganzzahl als die Dateigröße, und daher Dateigrößen, die größer als 4 GB verarbeiten kann. **_chsize** ist auf 32-Bit-Dateigrößen beschränkt.
+
+Diese Funktion überprüft ihre Parameter. Wenn *fd* ist eine gültige Dateideskriptor oder Größe ist kleiner als 0 (null), wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|Optionaler Header|
+|-------------|---------------------|---------------------|
+|**_chsize_s**|\<io.h>|\<errno.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Dateibehandlung](../../c-runtime-library/file-handling.md)<br/>
+[_chsize](chsize.md)<br/>
+[_close](close.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

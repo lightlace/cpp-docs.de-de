@@ -1,12 +1,12 @@
 ---
 title: _callnewh | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _callnewh
@@ -30,52 +30,57 @@ dev_langs:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5754a22af15f8eca1d7352e3d172d141447a2ca4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cd835a404233d90193cb999b7c64bf9fb52134eb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="callnewh"></a>_callnewh
-Ruft den aktuell installierten *neuen Handler* auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-int _callnewh(  
-   size_t size  
-   )  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `size`  
- Der Speicherplatz, den der [neue Operator](../../cpp/new-operator-cpp.md) zu belegen versucht hat.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-|Wert|Beschreibung|  
-|-----------|-----------------|  
-|0|Fehler: Entweder wurde kein neuer Handler installiert oder der neue Handler ist nicht aktiv.|  
-|1|Erfolg: Der neue Handler wurde installiert und ist aktiv. Die Speicherbelegung kann wiederholt werden.|  
-  
-## <a name="exceptions"></a>Ausnahmen  
- Diese Funktion löst [bad_alloc](../../standard-library/bad-alloc-class.md) aus, wenn der *neue Handler* nicht gefunden werden kann.  
-  
-## <a name="remarks"></a>Hinweise  
- Der *neue Handler* wird aufgerufen, wenn der [neue Operator](../../cpp/new-operator-cpp.md) die Speicherbelegung nicht erfolgreich durchführen kann. Der neue Handler initialisiert dann möglicherweise einige entsprechende Aktionen, z. B. die Freigabe des Speichers, sodass nachfolgende Belegungen erfolgreich sind.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|_callnewh|internal.h|  
-  
-## <a name="see-also"></a>Siehe auch  
- [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)   
- [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md)
+
+Ruft den aktuell installierten *neuen Handler* auf.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+int _callnewh(
+   size_t size
+   )
+```
+
+### <a name="parameters"></a>Parameter
+
+*size*<br/>
+Der Speicherplatz, den der [neue Operator](../../cpp/new-operator-cpp.md) zu belegen versucht hat.
+
+## <a name="return-value"></a>Rückgabewert
+
+|Wert|Beschreibung|
+|-----------|-----------------|
+|0|Fehler: Entweder wurde kein neuer Handler installiert oder der neue Handler ist nicht aktiv.|
+|1|Erfolg: Der neue Handler wurde installiert und ist aktiv. Die Speicherbelegung kann wiederholt werden.|
+
+## <a name="exceptions"></a>Ausnahmen
+
+Diese Funktion löst [bad_alloc](../../standard-library/bad-alloc-class.md) aus, wenn der *neue Handler* nicht gefunden werden kann.
+
+## <a name="remarks"></a>Hinweise
+
+Der *neue Handler* wird aufgerufen, wenn der [neue Operator](../../cpp/new-operator-cpp.md) die Speicherbelegung nicht erfolgreich durchführen kann. Der neue Handler initialisiert dann möglicherweise einige entsprechende Aktionen, z. B. die Freigabe des Speichers, sodass nachfolgende Belegungen erfolgreich sind.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|_callnewh|internal.h|
+
+## <a name="see-also"></a>Siehe auch
+
+[_set_new_handler](set-new-handler.md)<br/>
+[_set_new_mode](set-new-mode.md)<br/>

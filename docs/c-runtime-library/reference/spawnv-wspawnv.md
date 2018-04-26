@@ -1,12 +1,12 @@
 ---
 title: _spawnv, _wspawnv | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wspawnv
@@ -39,95 +39,94 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fd29395d5dc2fb913c7d7abb443ab00e646d78f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 30e55677395f528b15de90ba2045bb7e0785ca9a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
-Erstellt einen neuen Prozess und führt ihn aus.  
-  
+
+Erstellt einen neuen Prozess und führt ihn aus.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-intptr_t _spawnv(  
-   int mode,  
-   const char *cmdname,  
-   const char *const *argv   
-);  
-intptr_t _wspawnv(  
-   int mode,  
-   const wchar_t *cmdname,  
-   const wchar_t *const *argv   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `mode`  
- Ausführungsmodus für den aufrufenden Prozess.  
-  
- `cmdname`  
- Pfad der auszuführenden Datei.  
-  
- `argv`  
- Array von Zeigern zu Argumenten. Das `argv`[0]-Argument ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und `argv`[1] bis `argv`[`n`] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument `argv`[`n` +1] muss ein `NULL` -Zeiger sein, um das Ende der Argumentliste zu markieren.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert eines synchronen `_spawnv` oder `_wspawnv` (`_P_WAIT` angegeben für `mode`) ist der Beendigungsstatus des neuen Prozesses. Der Rückgabewert eines asynchronen `_spawnv` oder `_wspawnv` (`_P_NOWAIT` oder `_P_NOWAITO` angegeben für `mode`) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich 0 einstellen, wenn der gestartete Prozess speziell die `exit` -Routine mit einem Argument ungleich 0 aufruft. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung mit einem Abbruch oder einer Unterbrechung hin. Ein Rückgabewert "-1" gibt einen Fehler (der neue Prozess wird nicht gestartet) an. In diesem Fall wird `errno` auf einen der folgenden Werte festgelegt.  
-  
- `E2BIG`  
- Argumentliste umfasst mehr als 1024 Byte.  
-  
- `EINVAL`  
- `mode`-Argument ist ungültig.  
-  
- `ENOENT`  
- Datei oder Pfad nicht gefunden.  
-  
- `ENOEXEC`  
- Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei.  
-  
- `ENOMEM`  
- Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen.  
-  
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Jede dieser Funktionen erstellt einen neuen Prozess, führt ihn aus und übergibt ein Array von Zeigern auf Befehlszeilenargumente.  
-  
- Diese Funktionen überprüfen ihre Parameter. Wenn `cmdname` oder `argv` ein NULL-Zeiger ist oder wenn `argv` auf einen NULL-Zeiger zeigt oder wenn `argv[0]` eine leere Zeichenfolge ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)ausgeführt werden. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL`ein und geben – 1 zurück. Es wird kein neuer Prozess erzeugt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_spawnv`|\<stdio.h> oder \<process.h>|  
-|`_wspawnv`|\<stdio.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
- [_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+intptr_t _spawnv(
+   int mode,
+   const char *cmdname,
+   const char *const *argv
+);
+intptr_t _wspawnv(
+   int mode,
+   const wchar_t *cmdname,
+   const wchar_t *const *argv
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*mode*<br/>
+Ausführungsmodus für den aufrufenden Prozess.
+
+*CmdName*<br/>
+Pfad der auszuführenden Datei.
+
+*argv*<br/>
+Array von Zeigern zu Argumenten. Das Argument *Argv*[0] ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und *Argv*[1] bis *Argv*[**n**] sind Zeiger auf Zeichenfolgen, die neue Argumentliste bilden. Das Argument *Argv*[**n** + 1] muss ein **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der Rückgabewert eines synchronen **_spawnv** oder **_wspawnv** (**_P_WAIT** angegeben für *Modus*) ist der Beendigungsstatus des neuen Prozesses. Der Rückgabewert eines asynchronen **_spawnv** oder **_wspawnv** (**_P_NOWAIT** oder **_P_NOWAITO** für angegebene *Modus* ) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich Null festlegen, wenn der gestartete Prozess speziell Ruft die **beenden** -Routine mit einem Argument ungleich. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung mit einem Abbruch oder einer Unterbrechung hin. Ein Rückgabewert "-1" gibt einen Fehler (der neue Prozess wird nicht gestartet) an. In diesem Fall **Errno** auf einen der folgenden Werte festgelegt.
+
+|||
+|-|-|
+**E2BIG**|Argumentliste umfasst mehr als 1024 Byte.
+**EINVAL**|*Modus* Argument ist ungültig.
+**ENOENT**|Datei oder Pfad nicht gefunden.
+**ENOEXEC**|Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei.
+**ENOMEM**|Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen.
+
+Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Jede dieser Funktionen erstellt einen neuen Prozess, führt ihn aus und übergibt ein Array von Zeigern auf Befehlszeilenargumente.
+
+Diese Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *Argv* ein null-Zeiger ist oder wenn *Argv* null-Zeiger zeigt oder *Argv*[0] ist eine leere Zeichenfolge, die ungültige parameterhandler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL**, und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_spawnv**|\<stdio.h> oder \<process.h>|
+|**_wspawnv**|\<stdio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_flushall](flushall.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_setmbcp](setmbcp.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

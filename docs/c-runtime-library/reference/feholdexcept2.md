@@ -1,13 +1,13 @@
 ---
-title: feholdexcept2 | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Feholdexcept | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - feholdexcept
@@ -32,53 +32,58 @@ dev_langs:
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbfef5db5871740744e370d7e1ac86cf7abac8ac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9080358c5d929307dbc68ce0e9669fae7a046022
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="feholdexcept"></a>feholdexcept
-Speichert die aktuelle Gleitkommaumgebung im angegebenen Objekt, löscht die Gleitkomma-Statusflags und setzt die Gleitkommaumgebung wenn möglich in den ununterbrochenen Modus.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int feholdexcept(  
-   fenv_t *penv  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `penv`  
- Zeiger auf ein `fenv_t`-Objekt, der eine Kopie der Gleitkommaumgebung enthalten soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt 0 (null) zurück, wenn die Funktion erfolgreich unterbrechungsfreier Gleitkommaausnahmen behandeln aktivieren kann.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `feholdexcept`-Funktion wird verwendet, um den Status der aktuellen Gleitkommaumgebung in das `fenv_t`-Objekt zu speichern, auf das von `penv` gezeigt wird, und um einzustellen, dass die Ausführung von Gleitkommaausnahmen nicht von der Umgebung unterbrochen wird. Dies wird als ununterbrochener Modus bezeichnet.  Dieser Modus wird fortgesetzt, bis die Umgebung mithilfe von [fesetenv](fesetenv1.md) oder [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) wiederhergestellt wird.  
-  
- Sie können diese Funktion am Anfang einer Unterroutine verwenden, die eine oder mehrere Gleitkommaausnahmen vor dem Aufrufer verbergen muss. Um eine Ausnahme zu melden, löschen Sie einfach die unerwünschten Ausnahmen mithilfe von [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md), und beenden Sie dann den ununterbrochenen Modus durch Aufruf von `feupdateenv`.  
-  
- Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|C-Header|C++-Header|  
-|--------------|--------------|------------------|  
-|`feholdexcept`|\<fenv.h>|\<cfenv>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](fesetenv1.md)   
- [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)
+
+Speichert die aktuelle Gleitkommaumgebung im angegebenen Objekt, löscht die Gleitkomma-Statusflags und setzt die Gleitkommaumgebung wenn möglich in den ununterbrochenen Modus.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int feholdexcept(
+   fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*penv*<br/>
+Zeiger auf eine **Fenv_t** Objekt, das eine Kopie der Gleitkomma-Umgebung enthalten.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt 0 (null) zurück, wenn die Funktion erfolgreich unterbrechungsfreier Gleitkommaausnahmen behandeln aktivieren kann.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Feholdexcept** Funktion dient zum Speichern des Zustands der aktuellen floating Point-Umgebung in der **Fenv_t** Objekt verweist *Penv*, und klicken Sie auf die Umgebung festgelegt werden soll Unterbrechen Sie nicht die Ausführung auf Gleitkommaausnahmen. Dies wird als ununterbrochener Modus bezeichnet.  Dieser Modus wird fortgesetzt, bis die Umgebung mithilfe von [fesetenv](fesetenv1.md) oder [feupdateenv](feupdateenv.md) wiederhergestellt wird.
+
+Sie können diese Funktion am Anfang einer Unterroutine verwenden, die eine oder mehrere Gleitkommaausnahmen vor dem Aufrufer verbergen muss. Um eine Ausnahme zu melden, können Sie einfach das unbeabsichtigten Ausnahmen löschen, indem [Feclearexcept,](feclearexcept1.md) und beenden Sie den Modus "nicht beenden" mit einem Aufruf von **Feupdateenv**.
+
+Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|C-Header|C++-Header|
+|--------------|--------------|------------------|
+|**feholdexcept**|\<fenv.h>|\<cfenv>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
+[feclearexcept](feclearexcept1.md)<br/>
+[fesetenv](fesetenv1.md)<br/>
+[feupdateenv](feupdateenv.md)<br/>

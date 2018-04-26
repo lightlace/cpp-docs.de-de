@@ -75,109 +75,114 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37ce547f56ce635d7abb2577b1c8278783ba360d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4e5c2b6bc5fb17a8f74e86d5392151c59b560e0a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
-Vergleicht Zeichenfolgen mithilfe gebietsschemaspezifischen Informationen.  
-  
+
+Vergleicht Zeichenfolgen mithilfe gebietsschemaspezifischen Informationen.
+
 > [!IMPORTANT]
->  `_mbsnicoll` und `_mbsnicoll_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _strnicoll(  
-   const char *string1,  
-   const char *string2,  
-   size_t count   
-);  
-int _wcsnicoll(  
-   const wchar_t *string1,  
-   const wchar_t *string2 ,  
-   size_t count   
-);  
-int _mbsnicoll(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-int _strnicoll_l(  
-   const char *string1,  
-   const char *string2,  
-   size_t count,  
-   _locale_t locale  
-);  
-int _wcsnicoll_l(  
-   const wchar_t *string1,  
-   const wchar_t *string2 ,  
-   size_t count,  
-   _locale_t locale  
-);  
-int _mbsnicoll_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `string1, string2`  
- Zu vergleichende mit NULL endende Zeichenfolgen  
-  
- `count`  
- Anzahl der zu vergleichenden Zeichen  
-  
- `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung der Teilzeichenfolgen von `string1` und `string2`wie folgt.  
-  
-|Rückgabewert|Verhältnis von string1 zu string2|  
-|------------------|----------------------------------------|  
-|< 0|`string1` kleiner als `string2`|  
-|0|`string1` identisch mit `string2`|  
-|> 0|`string1` größer als `string2`|  
-  
- Jede dieser Funktion gibt `_NLSCMPERROR` zurück. Um `_NLSCMPERROR` zu verwenden, fügen Sie entweder STRING.H oder MBSTRING.H. ein. `_wcsnicoll` kann fehlschlagen, wenn `string1` oder `string2` NULL ist oder Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, legt `_wcsnicoll``errno` möglicherweise auf `EINVAL` fest. Um einen Aufruf von `_wcsnicoll` auf einen Fehler zu überprüfen, legen Sie `errno` auf 0 fest, und überprüfen Sie dann `errno`, nachdem Sie `_wcsnicoll` **aufgerufen haben.**  
-  
-## <a name="remarks"></a>Hinweise  
- Entsprechend der Codepage vergleicht jede dieser Funktionen ohne Berücksichtigung der Groß- und Kleinschreibung die ersten `count`-Zeichen in `string1` und `string2`. Diese Funktionen sollten nur verwendet werden, wenn es in der Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema und die aktuelle Codepage. Die Versionen mit dem `_l` -Suffix sind beinahe identisch, außer dass verwenden allerdings das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder `string1` oder `string2` ein NULL-Zeiger ist oder wenn der Zähler größer als `INT_MAX` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `_NLSCMPERROR` zurück und stellen `errno` auf `EINVAL` **ein.**  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsncicoll`|`_strnicoll`|`_mbsnbicoll`|`_wcsnicoll`|  
-|`_tcsnicoll`|`_strnicoll`|[_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
-|`_tcsnicoll_l`|`_strnicoll_l`|`_mbsnbicoll_l`|`_wcsnicoll_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_strnicoll`, `_strnicoll_l`|\<string.h>|  
-|`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h> oder \<string.h>|  
-|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+> **_mbsnicoll** und **_mbsnicoll_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _strnicoll(
+   const char *string1,
+   const char *string2,
+   size_t count
+);
+int _wcsnicoll(
+   const wchar_t *string1,
+   const wchar_t *string2 ,
+   size_t count
+);
+int _mbsnicoll(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+int _strnicoll_l(
+   const char *string1,
+   const char *string2,
+   size_t count,
+   _locale_t locale
+);
+int _wcsnicoll_l(
+   const wchar_t *string1,
+   const wchar_t *string2 ,
+   size_t count,
+   _locale_t locale
+);
+int _mbsnicoll_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*String1*, *Zeichenfolge2*<br/>
+Zu vergleichende mit NULL endende Zeichenfolgen
+
+*count*<br/>
+Anzahl der zu vergleichenden Zeichen
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung der Teilzeichenfolgen von *string1* und *Zeichenfolge2*wie folgt.
+
+|Rückgabewert|Verhältnis von string1 zu string2|
+|------------------|----------------------------------------|
+|< 0|*String1* kleiner als *Zeichenfolge2*|
+|0|*String1* identisch mit *Zeichenfolge2*|
+|> 0|*String1* größer als *Zeichenfolge2*|
+
+Jede dieser Funktionen gibt **_NLSCMPERROR**. Mit **_NLSCMPERROR**, entweder Zeichenfolge enthalten. H oder MBSTRING. H. **_wcsnicoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **_wcsnicoll** möglicherweise festgelegt **Errno** auf **EINVAL**. Überprüfen Sie bei einem Fehler bei einem Aufruf von **_wcsnicoll**legen **Errno** auf 0 und überprüfen Sie dann **Errno** nach dem Aufruf **_wcsnicoll**.
+
+## <a name="remarks"></a>Hinweise
+
+Jede dieser Funktionen vergleicht Groß-/Kleinschreibung des ersten *Anzahl* Zeichen in *string1* und *Zeichenfolge2* entsprechend der Codepage. Diese Funktionen sollten nur verwendet werden, wenn es in der Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema- und Codepage-Seite. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass verwenden allerdings das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* ein null-Zeiger ist oder wenn die Anzahl übersteigt **INT_MAX**, Handler für ungültige Parameter aufgerufen, wie in beschrieben [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** auf **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsncicoll**|**_strnicoll**|**_mbsnbicoll**|**_wcsnicoll**|
+|**_tcsnicoll**|**_strnicoll**|[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
+|**_tcsnicoll_l**|**_strnicoll_l**|**_mbsnbicoll_l**|**_wcsnicoll_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_strnicoll**, **_strnicoll_l**|\<string.h>|
+|**_wcsnicoll**, **_wcsnicoll_l**|\<wchar.h> oder \<string.h>|
+|**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

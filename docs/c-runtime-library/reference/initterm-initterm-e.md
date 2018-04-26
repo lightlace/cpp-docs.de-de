@@ -1,12 +1,12 @@
 ---
 title: _initterm, _initterm_e | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _initterm_e
@@ -37,44 +37,48 @@ helpviewer_keywords:
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27e165131b44181f1ee12f11477892fc144c267
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 968e354662deb065aa373d3044f638dc6cf077c4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
-Interne Methoden, die eine Tabelle von Funktionszeigern durchlaufen und sie initialisieren.  
-  
- Der erste Zeiger ist die Anfangsposition in der Tabelle, und der zweite Zeiger ist die Endposition.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __cdecl _initterm(  
-   PVFV *,  
-   PVFV *  
-);  
-  
-int __cdecl _initterm_e(  
-   PVFV *,  
-   PVFV *  
-);  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Fehlercode ungleich null, wenn eine Initialisierung fehlschlägt und einen Fehler auslöst; 0, wenn kein Fehler auftritt.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methoden werden während der Initialisierung eines C++-Programms nur intern aufgerufen. Rufen Sie diese Methoden nicht in einem Programm auf.  
-  
- Wenn diese Methoden eine Tabelle mit Funktionseinträgen durchlaufen, überspringen sie `NULL`-Einträge und fahren fort.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Interne Methoden, die eine Tabelle von Funktionszeigern durchlaufen und sie initialisieren.
+
+Der erste Zeiger ist die Anfangsposition in der Tabelle, und der zweite Zeiger ist die Endposition.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void __cdecl _initterm(
+   PVFV *,
+   PVFV *
+);
+
+int __cdecl _initterm_e(
+   PVFV *,
+   PVFV *
+);
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Fehlercode ungleich null, wenn eine Initialisierung fehlschlägt und einen Fehler auslöst; 0, wenn kein Fehler auftritt.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methoden werden während der Initialisierung eines C++-Programms nur intern aufgerufen. Rufen Sie diese Methoden nicht in einem Programm auf.
+
+Wenn diese Methoden auf eine Tabelle mit der Funktion Einträge abzuarbeiten, überspringen sie **NULL** Einträge und den Vorgang fortzusetzen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>

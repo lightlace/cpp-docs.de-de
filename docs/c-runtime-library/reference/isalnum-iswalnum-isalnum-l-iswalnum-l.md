@@ -1,12 +1,12 @@
 ---
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswalnum_l
@@ -45,73 +45,67 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f71ab6a960dbc92c4e6d8399e833f2ddf0e2ac1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f78a3d946ad5c19107ba22278209e08cef82b212
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
-Bestimmt, ob eine ganze Zahl ein alphanumerisches Zeichen darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int isalnum(   
-   int c   
-);  
-int iswalnum(   
-   wint_t c   
-);  
-int _isalnum_l(   
-   int c,  
-   _locale_t locale  
-);  
-int _iswalnum_l(   
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
- `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich Null zurück, wenn `c` eine bestimmte Darstellung eines alphanumerischen Zeichens ist. `isalnum` Gibt einen Wert ungleich NULL zurück, falls `isalpha` oder `isdigit` ungleich NULL ist für `c`, d. h. wenn `c` ist in den Bereichen A – Z, a - Z oder 0 - 9. `iswalnum` gibt einen Wert ungleich Null zurück, wenn entweder `iswalpha` oder `iswdigit` für `c` nicht Null ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
-  
- Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Das Verhalten von `isalnum` und `_isalnum_l` ist nicht definiert, wenn `c` nicht EOF ist oder nicht im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und `c` keinem dieser Werte entspricht, lösen die Funktionen eine Assertion aus.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istalnum`|`isalnum`|[_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
-|`_istalnum_l`|`_isalnum_l`|`_ismbcalnum_l`|`_iswalnum_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`isalnum`|\<ctype.h>|  
-|`iswalnum`|\<ctype.h> oder \<wchar.h>|  
-|`_isalnum_l`|\<ctype.h>|  
-|`_iswalnum_l`|\<ctype.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)
+
+Bestimmt, ob eine ganze Zahl ein alphanumerisches Zeichen darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int isalnum( int c );
+int iswalnum( wint_t c );
+int _isalnum_l( int c,  _locale_t locale );
+int _iswalnum_l( wint_t c, _locale_t locale );
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl.
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines alphanumerischen Zeichens ist. **Isalnum** gibt einen Wert ungleich NULL zurück, falls **Isalpha** oder **Isdigit** ungleich NULL ist für *c*, d. h. wenn *c* liegt innerhalb der Bereiche A - Z, a - Z oder 0 - 9. **Iswalnum** gibt einen Wert ungleich NULL zurück, falls **iswalpha_l** oder **Iswdigit** ungleich NULL ist für *c*. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+
+Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Das Verhalten des **Isalnum** und **_isalnum_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
+|**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**isalnum**|\<ctype.h>|
+|**iswalnum**|\<ctype.h> oder \<wchar.h>|
+|**_isalnum_l**|\<ctype.h>|
+|**_iswalnum_l**|\<ctype.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>

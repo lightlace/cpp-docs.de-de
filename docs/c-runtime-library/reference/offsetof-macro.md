@@ -1,12 +1,12 @@
 ---
 title: offsetof-Makro | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -28,57 +28,62 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a70bb2823f29caf3f76224bfb91c3c9642bbdcf1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 686de81ecfd4216f3011c93d3bf9be1bfdc55365
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="offsetof-macro"></a>offsetof-Makro
-Ruft den Offset eines Elements vom Anfang seiner übergeordneten Struktur ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      size_t offsetof(  
-   structName,  
-   memberName   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *structName*  
- Der Name der übergeordneten Datenstruktur.  
-  
- `memberName`  
- Der Name des Elements in der übergeordneten Datenstruktur, für das der Offset bestimmt werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `offsetof` gibt den Offset des angegebenen Elements vom Anfang seiner übergeordneten Datenstruktur in Bytes zurück. Ist für Bitfelder nicht definiert.  
-  
-## <a name="remarks"></a>Hinweise  
- Das `offsetof`-Makro gibt den Offset von `memberName` vom Strukturanfang, der von *structName* als ein Wert vom Typ `size_t` festgelegt ist, in Bytes zurück. Sie können Typen mit dem `struct`-Schlüsselwort angeben.  
-  
+
+Ruft den Offset eines Elements vom Anfang seiner übergeordneten Struktur ab.
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t offsetof(
+   structName,
+   memberName
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*structName*<br/>
+Der Name der übergeordneten Datenstruktur.
+
+*MemberName*<br/>
+Der Name des Elements in der übergeordneten Datenstruktur, für das der Offset bestimmt werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+**Offsetof** gibt den Offset in Bytes des angegebenen Elements vom Anfang seiner übergeordneten Datenstruktur zurück. Ist für Bitfelder nicht definiert.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Offsetof** Makro gibt den Offset in Bytes des *MemberName* vom Anfang der Struktur, die durch *StructName* als ein Wert vom Typ **Size_ t**. Sie können angeben, dass Typen, mit der **Struktur** Schlüsselwort.
+
 > [!NOTE]
->  `offsetof` ist keine Funktion und kann nicht mit einem C-Prototyp beschrieben werden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`offsetof`|\<stddef.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Speicherbelegung](../../c-runtime-library/memory-allocation.md)
+> **Offsetof** ist keine Funktion und kann nicht mit einem C-Prototyp beschrieben werden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**offsetof**|\<stddef.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Speicherreservierung](../../c-runtime-library/memory-allocation.md)<br/>

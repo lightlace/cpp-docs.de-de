@@ -1,12 +1,12 @@
 ---
 title: _ecvt | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ecvt
@@ -33,101 +33,106 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee37eb3623f27f4fb6883b2d16fc4c21c2a960c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8383abd1b45d1e13e4e42a334baa7f08c4bf10f2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ecvt"></a>_ecvt
-Konvertiert eine `double`-Zahl in eine Zeichenfolge. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-char *_ecvt(   
-   double value,  
-   int count,  
-   int *dec,  
-   int *sign   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `value`  
- Zu konvertierende Zahl.  
-  
- `count`  
- Anzahl der gespeicherten Ziffern.  
-  
- `dec`  
- Gespeicherte Position der Dezimalstelle.  
-  
- `sign`  
- Vorzeichen der konvertierten Zahl.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_ecvt` gibt einen Zeiger auf die Ziffernfolge zurück; NULL, wenn ein Fehler aufgetreten ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Mit der `_ecvt`-Funktion werden Gleitkommazahlen in Zeichenfolgen konvertiert. Der Parameter `value` ist die zu konvertierende Gleitkommazahl. Mit dieser Funktion werden bis zu `count` Ziffern von `value` als Zeichenfolge gespeichert und das Zeichen NULL ('\0') angefügt. Wenn in `value` mehr als `count` Zeichen vorhanden sind, wird die untere Ziffer gerundet. Wenn weniger als `count` Ziffern vorhanden sind, wird die Zeichenfolge mit Nullen aufgefüllt.  
-  
- Die Gesamtanzahl der von `_ecvt` zurückgegebenen Ziffern ist nicht größer als `_CVTBUFSIZE`.  
-  
- In der Zeichenfolge werden nur Ziffern gespeichert. Die Position der Dezimalstelle und das Vorzeichen von `value` können nach dem Aufruf aus `dec` und `sign` abgerufen werden. Der Parameter `dec` zeigt auf einen Integer-Wert, der die Position der Dezimalstelle im Verhältnis zum Zeichenfolgenanfang angibt. Der Wert 0 oder ein negativer Integer-Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Der Parameter `sign` zeigt auf einn Integer-Wert, der das Vorzeichen der konvertierten Zahl angibt. Wenn der Integer-Wert 0 ist, ist die Zahl positiv. Andernfalls ist die Zahl negativ.  
-  
- `_ecvt` und `_fcvt` unterscheiden sich hinsichtlich der Interpretation des Parameters `count`. Von `_ecvt` wird `count` als die Gesamtanzahl der Ziffern in der Ausgabezeichenfolge interpretiert, während `count` von `_fcvt` als die Anzahl der Ziffern nach der Dezimalstelle interpretiert wird.  
-  
- Für die Konvertierung wird von `_ecvt` und `_fcvt` ein einzelner, statisch zugewiesener Puffer verwendet. Bei jedem Aufruf dieser Routinen wird das Ergebnis des vorherigen Aufrufs zerstört.  
-  
- Diese Funktion überprüft ihre Parameter. Wenn `dec` oder `sign` NULL oder `count` 0 ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` festgelegt, und NULL zurückgegeben.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_ecvt`|\<stdlib.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_ecvt.c  
-// compile with: /W3  
-// This program uses _ecvt to convert a  
-// floating-point number to a character string.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int     decimal,   sign;  
-   char    *buffer;  
-   int     precision = 10;  
-   double  source = 3.1415926535;  
-  
-   buffer = _ecvt( source, precision, &decimal, &sign ); // C4996  
-   // Note: _ecvt is deprecated; consider using _ecvt_s instead  
-   printf( "source: %2.10f   buffer: '%s'  decimal: %d  sign: %d\n",  
-           source, buffer, decimal, sign );  
-}  
-```  
-  
-```Output  
-source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt](../../c-runtime-library/reference/gcvt.md)
+
+Konvertiert eine **doppelte** -Zahl in eine Zeichenfolge. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [_ecvt_s](ecvt-s.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+char *_ecvt(
+   double value,
+   int count,
+   int *dec,
+   int *sign
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Wert*<br/>
+Zu konvertierende Zahl.
+
+*count*<br/>
+Anzahl der gespeicherten Ziffern.
+
+*dec*<br/>
+Gespeicherte Position der Dezimalstelle.
+
+*sign*<br/>
+Vorzeichen der konvertierten Zahl.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_ecvt** gibt einen Zeiger auf die Zeichenfolge von Ziffern; NULL, wenn ein Fehler aufgetreten.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_ecvt** -Funktion konvertiert eine Gleitkommazahl in eine Zeichenfolge. Die *Wert* Parameter ist die Gleitkommazahl konvertiert werden. Diese Funktion speichert bis zu *Anzahl* Ziffern *Wert* als Zeichenfolge und fügt ein Null-Zeichen ('\0'). Wenn die Anzahl der Ziffern in *Wert* überschreitet *Anzahl*, die niedrige Ziffer gerundet wird. Wenn weniger als *Anzahl* Ziffern, die Zeichenfolge wird mit Nullen aufgefüllt.
+
+Die Gesamtanzahl der Ziffern zurückgegebenes **_ecvt** nicht überschritten **_CVTBUFSIZE**.
+
+In der Zeichenfolge werden nur Ziffern gespeichert. Die Position des Dezimaltrennzeichen und das Vorzeichen des *Wert* abgerufen werden kann, aus *Dec* und *Anmeldung* nach dem Aufruf. Die *Dec* Parameter verweist auf einen ganzzahligen Wert, wodurch die Position neben dem Dezimalzeichen in Bezug auf den Anfang der Zeichenfolge. Der Wert 0 oder ein negativer Integer-Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Die *Anmeldung* Parameter verweist auf eine ganze Zahl, die das Vorzeichen der konvertierte Zahl angibt. Wenn der Integer-Wert 0 ist, ist die Zahl positiv. Andernfalls ist die Zahl negativ.
+
+Der Unterschied zwischen **_ecvt** und **_fcvt** befindet sich in der Interpretation der *Anzahl* Parameter. **_ecvt** interpretiert *Anzahl* als die Gesamtzahl der Ziffern in der Ausgabezeichenfolge während **_fcvt** interpretiert *Anzahl* als die Anzahl der Ziffern nach dem Dezimaltrennzeichen.
+
+**_ecvt** und **_fcvt** verwenden Sie einen einzelnen statisch zugeordneten Puffer für die Konvertierung. Bei jedem Aufruf dieser Routinen wird das Ergebnis des vorherigen Aufrufs zerstört.
+
+Diese Funktion überprüft ihre Parameter. Wenn *Dec* oder *Anmeldung* NULL ist, oder *Anzahl* gleich 0 ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und NULL zurückgegeben.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_ecvt**|\<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_ecvt.c
+// compile with: /W3
+// This program uses _ecvt to convert a
+// floating-point number to a character string.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int     decimal,   sign;
+   char    *buffer;
+   int     precision = 10;
+   double  source = 3.1415926535;
+
+   buffer = _ecvt( source, precision, &decimal, &sign ); // C4996
+   // Note: _ecvt is deprecated; consider using _ecvt_s instead
+   printf( "source: %2.10f   buffer: '%s'  decimal: %d  sign: %d\n",
+           source, buffer, decimal, sign );
+}
+```
+
+```Output
+source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[_fcvt](fcvt.md)<br/>
+[_gcvt](gcvt.md)<br/>

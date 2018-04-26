@@ -1,12 +1,12 @@
 ---
 title: time_get_byname-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xloctime/std::time_get_byname
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da50c2079fe7345d2ac70855f0fb57c8eeecce7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 004c35e3c09f8acc55980024e4752ab26a26afa1
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="timegetbyname-class"></a>time_get_byname-Klasse
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet vom Typ `time_get`\<CharType, InputIterator> dienen kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```
+
+Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet vom Typ `time_get`\<CharType, InputIterator> dienen kann.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 template <class Elem, class InputIterator =
     istreambuf_iterator<CharType, char_traits<CharType>>>
 class time_get_byname : public time_get<CharType, InputIterator>
@@ -49,25 +50,24 @@ public:
 protected:
     virtual ~time_get_byname()
 };
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `_Locname`  
- Ein benanntes Gebietsschema.  
-  
- `_Refs`  
- Eine initiale Verweisanzahl.  
-  
-## <a name="requirements"></a>Anforderungen  
- Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<locale>  
-  
- **Namespace:** std  
-  
-## <a name="see-also"></a>Siehe auch  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+### <a name="parameters"></a>Parameter
 
+`_Locname` Eine benannte Gebietsschema.
 
+`_Refs` Ein Verweiszähler.
+
+## <a name="requirements"></a>Anforderungen
+
+Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<locale>
+
+**Namespace:** std
+
+## <a name="see-also"></a>Siehe auch
+
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

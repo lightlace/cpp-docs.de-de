@@ -41,11 +41,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d5a2a5f40266f490cc0d18614c63715192b0707
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 555cd1d9d8f22801b1d3f3341be9041b1dde548c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -64,7 +64,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 Der reelle Teil der komplexen Zahl zu erstellen.
 
-*imaginary*<br/>
+*imaginären*<br/>
 Der imaginäre Teil der komplexen Zahl zu erstellen.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -73,25 +73,25 @@ Ein **_Dcomplex**, **_Fcomplex**, oder **_Lcomplex** -Struktur, die komplexe Zah
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_Cbuild**, **_FCbuild**, und **_LCbuild** Funktionen vereinfachen die Erstellung komplexer Typen. Verwenden der [Creal, Crealf, Creall](../../c-runtime-library/reference/creal-crealf-creall.md) und [Cimag, Cimagf, Cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md) Funktionen zum Abrufen der reellen und imaginären Teile der komplexen Zahlen dargestellt.
+Die **_Cbuild**, **_FCbuild**, und **_LCbuild** Funktionen vereinfachen die Erstellung komplexer Typen. Verwenden der [Creal, Crealf, Creall](creal-crealf-creall.md) und [Cimag, Cimagf, Cimagl](cimag-cimagf-cimagl.md) Funktionen zum Abrufen der reellen und imaginären Teile der komplexen Zahlen dargestellt.
 
 ## <a name="requirements"></a>Anforderungen
 
 |Routine|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|`_Cbuild`,`_FCbuild`, `_LCbuild`|\<complex.h>|\<ccomplex>|
+|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
 Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische Entsprechungen zu den nicht implementierten C99 systemeigenen Typen **doppelte _Complex** , **float _Complex**, und **long double _Complex**zugeordnet. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[_Cmulcc, _FCmulcc, _LCmulcc](../../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)<br/>
-[_Cmulcr, _FCmulcr, _LCmulcr](../../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)<br/>
-[norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
+[_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
+[_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

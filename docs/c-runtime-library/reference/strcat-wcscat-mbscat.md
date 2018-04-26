@@ -1,12 +1,12 @@
 ---
 title: strcat, wcscat, _mbscat | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbscat
@@ -48,100 +48,106 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2abb7326735cb84ffc8905d1ed30e030c88559
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7998ae70985558550c3fed35709112897fca2a18
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
-Fügt eine Zeichenfolge an. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
-  
+
+Fügt eine Zeichenfolge an. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
+
 > [!IMPORTANT]
->  `_mbscat_s` kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-char *strcat(  
-   char *strDestination,  
-   const char *strSource   
-);  
-wchar_t *wcscat(  
-   wchar_t *strDestination,  
-   const wchar_t *strSource   
-);  
-unsigned char *_mbscat(  
-   unsigned char *strDestination,  
-   const unsigned char *strSource   
-);  
-template <size_t size>  
-char *strcat(  
-   char (&strDestination)[size],  
-   const char *strSource   
-); // C++ only  
-template <size_t size>  
-wchar_t *wcscat(  
-   wchar_t (&strDestination)[size],  
-   const wchar_t *strSource   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbscat(  
-   unsigned char (&strDestination)[size],  
-   const unsigned char *strSource   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `strDestination`  
- Auf NULL endende Zielzeichenfolge.  
-  
- `strSource`  
- Mit NULL endende Quellzeichenfolge.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt die Zielzeichenfolge zurück (`strDestination`). Kein Rückgabewert ist zur Fehleranzeige reserviert.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `strcat`-Funktion fügt `strSource` an `strDestination` an und beendet die Ergebniszeichenfolge mit einem Nullzeichen. Das erste Zeichen von `strSource` überschreibt das abschließende Nullzeichen von `strDestination`. Wenn sich Quell- und Zielzeichenfolgen überlappen, ist das Verhalten von `strcat` undefiniert.  
-  
+> **_mbscat_s** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+char *strcat(
+   char *strDestination,
+   const char *strSource
+);
+wchar_t *wcscat(
+   wchar_t *strDestination,
+   const wchar_t *strSource
+);
+unsigned char *_mbscat(
+   unsigned char *strDestination,
+   const unsigned char *strSource
+);
+template <size_t size>
+char *strcat(
+   char (&strDestination)[size],
+   const char *strSource
+); // C++ only
+template <size_t size>
+wchar_t *wcscat(
+   wchar_t (&strDestination)[size],
+   const wchar_t *strSource
+); // C++ only
+template <size_t size>
+unsigned char *_mbscat(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*strDestination*<br/>
+Auf NULL endende Zielzeichenfolge.
+
+*strSource*<br/>
+Mit NULL endende Quellzeichenfolge.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt die Zielzeichenfolge zurück (*StrDestination*). Kein Rückgabewert ist zur Fehleranzeige reserviert.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Strcat** -Funktion fügt *StrSource* auf *StrDestination* und beendet die Ergebniszeichenfolge mit einem Null-Zeichen. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDestination*. Das Verhalten des **Strcat** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+
 > [!IMPORTANT]
->  Da `strcat` vor dem Anfügen von `strDestination``strSource` nicht auf genügend Speicherplatz überprüft, kann es so zu Pufferüberläufen kommen. Verwenden Sie stattdessen [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).  
-  
- `wcscat` und `_mbscat` sind Breitzeichen- und Multibytezeichenversionen von `strcat`. Die Argumente und der Rückgabewert von `wcscat` sind Breitzeichen-Zeichenfolgen; die von `_mbscat` sind Mehrbyte-Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.  
-  
- In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscat`|`strcat`|`_mbscat`|`wcscat`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strcat`|\<string.h>|  
-|`wcscat`|\<string.h> oder \<wchar.h>|  
-|`_mbscat`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel hierfür finden Sie unter [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> Da **Strcat** überprüft nicht auf genügend Speicherplatz *StrDestination* vor dem Anfügen *StrSource*, es wird eine mögliche Ursache von Pufferüberläufen. Verwenden Sie stattdessen [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+
+**Wcscat** und **_mbscat** sind Breitzeichen- und multibytezeichenversionen von **Strcat**. Die Argumente und der Rückgabewert von **Wcscat** sind Breitzeichen-Zeichenfolgen, die von **_mbscat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+
+In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**strcat**|\<string.h>|
+|**wcscat**|\<string.h> oder \<wchar.h>|
+|**_mbscat**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel hierfür finden Sie unter [strcpy](strcpy-wcscpy-mbscpy.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

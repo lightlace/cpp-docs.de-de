@@ -1,12 +1,12 @@
 ---
 title: _fpieee_flt | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fpieee_flt
@@ -34,134 +34,139 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88d05d4d8c7f403cc2702c5a0ec3b2af840bd320
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da55d2940f38a90dfa5c69d71d394e865bb3b4c0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
-Ruft einen benutzerdefinierten Traphandler für IEEE-Gleitkommaausnahmen auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _fpieee_flt(   
-   unsigned long excCode,  
-   struct _EXCEPTION_POINTERS *excInfo,  
-   int handler(_FPIEEE_RECORD *)   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `excCode`  
- Ausnahmecode.  
-  
- `excInfo`  
- Zeiger zur Windows NT-Ausnahmeinformationsstruktur  
-  
- `handler`  
- Zeiger zur IEEE-Traphandlerroutine des Benutzers.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert von `_fpieee_flt` ist der Wert, der von `handler` zurückgegeben wird. Daher wird die IEEE-Filterroutine möglicherweise in der except-Klausel eines strukturierten Ausnahmebehandlungsmechanismus (SEH) verwendet.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_fpieee_flt`-Funktion ruft einen benutzerdefinierten Traphandler für IEEE-Gleitkommaausnahmen auf und stellt ihn mit allen relevanten Informationen bereit. Diese Routine dient als Ausnahmefilter im SEH-Mechanismus, der bei Bedarf einen eigenen IEEE-Ausnahmehandler aufruft.  
-  
- Die in Fpieee.h definierte `_FPIEEE_RECORD`-Struktur enthält Informationen zu einer IEEE-Gleitkommaausnahme. Diese Struktur wird von `_fpieee_flt` an den benutzerdefinierten Traphandler übergeben.  
-  
-|_FPIEEE_RECORD-Feld|Beschreibung|  
-|----------------------------|-----------------|  
-|`unsigned int RoundingMode`, `unsigned int Precision`|Diese Felder enthalten Informationen zur Gleitkommaumgebung zu dem Zeitpunkt, als die Ausnahme auftrat.|  
-|`unsigned int Operation`|Gibt den Typ des Vorgangs an, der das Trap verursacht hat. Wenn der Typ ein Vergleich (`_FpCodeCompare`) ist, können Sie einen der speziellen `_FPIEEE_COMPARE_RESULT`-Werte (wie in Fpieee.h definiert) im `Result.Value`-Feld angeben. Der Konvertierungstyp (`_FpCodeConvert`) gibt an, dass das Trap während einer Gleitkommakonvertierung aufgetreten ist. Mithilfe der Typen `Operand1` und `Result` können Sie den Typ der versuchten Konvertierung bestimmen.|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Diese Strukturen geben die Typen und Werte des vorgeschlagenen Ergebnisses und der Operanden an:<br /><br /> `OperandValid` Flag, das angibt, ob der Reaktionswert gültig ist.<br /><br /> `Format` Datentyp des entsprechenden Werts. Der Formattyp kann zurückgegeben werden, wenn der entsprechende Wert ungültig ist.<br /><br /> `Value` Ergebnis- oder Operandendatenwert|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS enthält ein Bitfeld pro Typ der Gleitkommaausnahme.<br /><br /> Es gibt eine Entsprechung zwischen diesen Feldern und den Argumenten, die verwendet werden, um die für [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) bereitgestellten Ausnahmen zu maskieren.<br /><br /> Die genaue Bedeutung der einzelnen Bits hängt vom Kontext ab:<br /><br /> `Cause` Jedes festgelegte Bit gibt die bestimmte Ausnahme an, die ausgelöst wurde.<br /><br /> `Enable` Jedes festgelegte Bit gibt an, dass die bestimmte Ausnahme zurzeit nicht maskiert ist.<br /><br /> `Status` Jedes festgelegte Bit gibt an, dass die bestimmte Ausnahme zurzeit aussteht. Dies schließt Ausnahmen ein, die nicht ausgelöst wurden, da sie von `_controlfp` maskiert wurden.|  
-  
- Ausstehende, deaktivierte Ausnahmen werden bei Aktivierung ausgelöst. Dies kann zu einem nicht definierten Verhalten führen, wenn `_fpieee_flt` als Ausnahmefilter verwendet wird. Rufen Sie vor der Aktivierung von Gleitkommaausnahmen immer [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) auf.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_fpieee_flt`|\<fpieee.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_fpieee.c  
-// This program demonstrates the implementation of  
-// a user-defined floating-point exception handler using the  
-// _fpieee_flt function.  
-  
-#include <fpieee.h>  
-#include <excpt.h>  
-#include <float.h>  
-#include <stddef.h>  
-  
-int fpieee_handler( _FPIEEE_RECORD * );  
-  
-int fpieee_handler( _FPIEEE_RECORD *pieee )  
-{  
-   // user-defined ieee trap handler routine:  
-   // there is one handler for all   
-   // IEEE exceptions  
-  
-   // Assume the user wants all invalid   
-   // operations to return 0.  
-  
-   if ((pieee->Cause.InvalidOperation) &&   
-       (pieee->Result.Format == _FpFormatFp32))   
-   {  
-        pieee->Result.Value.Fp32Value = 0.0F;  
-  
-        return EXCEPTION_CONTINUE_EXECUTION;  
-   }  
-   else  
-      return EXCEPTION_EXECUTE_HANDLER;  
-}  
-  
-#define _EXC_MASK    \  
-    _EM_UNDERFLOW  + \  
-    _EM_OVERFLOW   + \  
-    _EM_ZERODIVIDE + \  
-    _EM_INEXACT  
-  
-int main( void )  
-{  
-   // ...  
-  
-   __try {  
-      // unmask invalid operation exception  
-      _controlfp_s(NULL, _EXC_MASK, _MCW_EM);   
-  
-      // code that may generate   
-      // fp exceptions goes here  
-   }  
-   __except ( _fpieee_flt( GetExceptionCode(),  
-                GetExceptionInformation(),  
-                fpieee_handler ) ){  
-  
-      // code that gets control   
-  
-      // if fpieee_handler returns  
-      // EXCEPTION_EXECUTE_HANDLER goes here  
-  
-   }  
-  
-   // ...  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
- [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)
+
+Ruft einen benutzerdefinierten Traphandler für IEEE-Gleitkommaausnahmen auf.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _fpieee_flt(
+   unsigned long excCode,
+   struct _EXCEPTION_POINTERS *excInfo,
+   int handler(_FPIEEE_RECORD *)
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*excCode*<br/>
+Ausnahmecode.
+
+*excInfo*<br/>
+Zeiger zur Windows NT-Ausnahmeinformationsstruktur
+
+*Ereignishandler*<br/>
+Zeiger zur IEEE-Traphandlerroutine des Benutzers.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der Rückgabewert der **_fpieee_flt** ist der zurückgegebene Wert *Handler*. Daher wird die IEEE-Filterroutine möglicherweise in der except-Klausel eines strukturierten Ausnahmebehandlungsmechanismus (SEH) verwendet.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_fpieee_flt** Funktion ruft einen benutzerdefinierten traphandler für IEEE-Gleitkommaausnahmen und mit allen relevanten Informationen bereitgestellt. Diese Routine dient als Ausnahmefilter im SEH-Mechanismus, der bei Bedarf einen eigenen IEEE-Ausnahmehandler aufruft.
+
+Die **_FPIEEE_RECORD** in Fpieee.h definierte Struktur enthält Informationen zu einer IEEE-Gleitkommaausnahme. Diese Struktur wird übergeben, um den benutzerdefinierten traphandler durch **_fpieee_flt**.
+
+|_FPIEEE_RECORD-Feld|Beschreibung|
+|----------------------------|-----------------|
+|**RoundingMode**<br/>**Genauigkeit**|Diese **ohne Vorzeichen** **Int** Felder enthalten Informationen zur gleitkommaumgebung zu dem Zeitpunkt der Ausnahme.|
+|**Vorgang**|Dies **ohne Vorzeichen** **Int** Feld gibt den Typ des Vorgangs, der das Trap verursacht hat. Wenn der Typ einen Vergleich (**_FpCodeCompare**), geben Sie einen der speziellen **_FPIEEE_COMPARE_RESULT** Werte (wie in Fpieee.h definiert) in der **Result.Value** Feld. Der Konvertierungstyp (**_FpCodeConvert**) gibt an, dass das Trap während einer gleitkommakonvertierung aufgetreten sind. Sie können sehen Sie sich die **Operand1** und **Ergebnis** Typen, die den Typ der versuchten Konvertierung zu bestimmen.|
+|**Operand1**<br/>**operand2**<br/>**Ergebnis**|Diese **_FPIEEE_VALUE** Strukturen geben die Typen und Werte des vorgeschlagenen Ergebnisses und der Operanden. Jede Struktur enthält folgende Felder:<br /><br /> **OperandValid** - Flag, das angibt, ob der reaktionswert gültig ist.<br />**Format** -Datentyp des entsprechenden Werts. Der Formattyp kann zurückgegeben werden, wenn der entsprechende Wert ungültig ist.<br />**Wert** -Ergebnis oder operandendatenwert.|
+|**Ursache**<br/>**Aktivieren**<br/>**Status**|**_FPIEEE_EXCEPTION_FLAGS** enthält ein Bitfeld pro Typ von floating Point-Ausnahme. Es gibt eine Entsprechung zwischen diesen Feldern und den Argumenten, die verwendet werden, um die für [_controlfp](control87-controlfp-control87-2.md) bereitgestellten Ausnahmen zu maskieren. Die genaue Bedeutung der einzelnen Bits hängt vom Kontext ab:<br /><br /> **Ursache** -jedes festgelegte Bit gibt an, die bestimmte Ausnahme, die ausgelöst wurde.<br />**Aktivieren Sie** -jedes festgelegte Bit gibt an, dass die bestimmte Ausnahme zurzeit nicht maskiert ist.<br />**Status** -jedes festgelegte Bit gibt an, dass die bestimmte Ausnahme zurzeit aussteht. Dies schließt Ausnahmen, die nicht ausgelöst wurden, da sie von maskiert wurden **_controlfp**.|
+
+Ausstehende, deaktivierte Ausnahmen werden bei Aktivierung ausgelöst. Dies kann zu nicht definiertem Verhalten bei Verwendung **_fpieee_flt** als Ausnahmefilter. Rufen Sie vor der Aktivierung von Gleitkommaausnahmen immer [_clearfp](clear87-clearfp.md) auf.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_fpieee_flt**|\<fpieee.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_fpieee.c
+// This program demonstrates the implementation of
+// a user-defined floating-point exception handler using the
+// _fpieee_flt function.
+
+#include <fpieee.h>
+#include <excpt.h>
+#include <float.h>
+#include <stddef.h>
+
+int fpieee_handler( _FPIEEE_RECORD * );
+
+int fpieee_handler( _FPIEEE_RECORD *pieee )
+{
+   // user-defined ieee trap handler routine:
+   // there is one handler for all
+   // IEEE exceptions
+
+   // Assume the user wants all invalid
+   // operations to return 0.
+
+   if ((pieee->Cause.InvalidOperation) &&
+       (pieee->Result.Format == _FpFormatFp32))
+   {
+        pieee->Result.Value.Fp32Value = 0.0F;
+
+        return EXCEPTION_CONTINUE_EXECUTION;
+   }
+   else
+      return EXCEPTION_EXECUTE_HANDLER;
+}
+
+#define _EXC_MASK    \
+    _EM_UNDERFLOW  + \
+    _EM_OVERFLOW   + \
+    _EM_ZERODIVIDE + \
+    _EM_INEXACT
+
+int main( void )
+{
+   // ...
+
+   __try {
+      // unmask invalid operation exception
+      _controlfp_s(NULL, _EXC_MASK, _MCW_EM);
+
+      // code that may generate
+      // fp exceptions goes here
+   }
+   __except ( _fpieee_flt( GetExceptionCode(),
+                GetExceptionInformation(),
+                fpieee_handler ) ){
+
+      // code that gets control
+
+      // if fpieee_handler returns
+      // EXCEPTION_EXECUTE_HANDLER goes here
+
+   }
+
+   // ...
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_controlfp_s](controlfp-s.md)<br/>

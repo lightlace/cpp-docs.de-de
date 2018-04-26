@@ -1,12 +1,12 @@
 ---
 title: '&lt;hash_map&gt; | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -52,7 +52,7 @@ Definiert die Containervorlagenklassen „hash_map“ und „hash_multimap“ un
 
 ### <a name="classes"></a>Klassen
 
-|||
+|Klasse|Beschreibung|
 |-|-|
 |[hash_compare-Klasse](hash-compare-class.md)|Beschreibt ein Objekt, das von jedem hashassoziativen Container – hash_map, hash_multimap, hash_set oder hash_multiset – als standardmäßiges **Traits** -Parameterobjekt verwendet werden kann, um die darin enthaltenen Elemente zu sortieren und zu hashen.|
 |[value_compare-Klasse](value-compare-class.md)|Stellt ein Funktionsobjekt bereit, das die Elemente einer hash_map vergleichen kann, indem die Werte ihrer Schlüssel verglichen werden, um deren relative Reihenfolge in der hash_map zu bestimmen.|
@@ -67,6 +67,6 @@ Definiert die Containervorlagenklassen „hash_map“ und „hash_multimap“ un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](cpp-standard-library-header-files.md)  
-[Threadsicherheit in der C++-Standardbibliothek](thread-safety-in-the-cpp-standard-library.md)  
-[C++-Standardbibliotheksreferenz](cpp-standard-library-reference.md)  
+[Headerdateien der Verweis](cpp-standard-library-header-files.md)
+[Threadsicherheit in der C++-Standardbibliothek](thread-safety-in-the-cpp-standard-library.md)
+[C++-Standardbibliotheksreferenz](cpp-standard-library-reference.md)

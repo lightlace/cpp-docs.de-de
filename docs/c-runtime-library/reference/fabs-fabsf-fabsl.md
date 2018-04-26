@@ -1,12 +1,12 @@
 ---
 title: fabs, fabsf, fabsl | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fabsf
@@ -41,67 +41,73 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 707e75f1036421d5392d2e7ecb2273760088e22c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 95f34d81045aef90832a1d05090c548c1bf27dec
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
-Berechnet den absoluten Wert des Gleitkommaarguments.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double fabs(   
-   double x   
-);  
-float fabs(  
-   float x   
-); // C++ only  
-long double fabs(  
-   long double x  
-); // C++ only  
-float fabsf(   
-   float x   
-);  
-long double fabsl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`  
- Gleitkommawert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die `fabs`-Funktionen geben den absoluten Wert des Arguments `x` zurück. Es gibt keine Fehlerrückgabe.  
-  
-|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|Keine|_DOMAIN|  
-  
-## <a name="remarks"></a>Hinweise  
- Da C++ das Überladen zulässt, können Sie Überladungen von `fabs` aufrufen, wenn Sie den header \<cmath> einschließen. In einem C-Programm verwendet `fabs` immer double und gibt auch double zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher C-Header|Erforderlicher C++-Header|  
-|--------------|-----------------------|---------------------------|  
-|`fabs`, `fabsf`, `fabsl`|\<math.h>|\<cmath> oder \<math.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel hierfür finden Sie unter [abs](../../c-runtime-library/reference/abs-labs-llabs-abs64.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [_cabs](../../c-runtime-library/reference/cabs.md)   
+
+Berechnet den absoluten Wert des Gleitkommaarguments.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double fabs(
+   double x
+);
+float fabs(
+   float x
+); // C++ only
+long double fabs(
+   long double x
+); // C++ only
+float fabsf(
+   float x
+);
+long double fabsl(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Gleitkommawert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die **Fabs** Funktionen geben den absoluten Wert des Arguments zurück *x*. Es gibt keine Fehlerrückgabe.
+
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
+|-----------|-------------------|-----------------------|
+|± QNAN,IND|Keine|_DOMAIN|
+
+## <a name="remarks"></a>Hinweise
+
+C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Fabs** Wenn Sie enthalten die \<Cmath > Header. In einem C-Programm **Fabs** immer Double und gibt eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher C-Header|Erforderlicher C++-Header|
+|--------------|-----------------------|---------------------------|
+|**Fabs**, **Fabsf**, **Fabsl**|\<math.h>|\<cmath> oder \<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel hierfür finden Sie unter [abs](abs-labs-llabs-abs64.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
+[_cabs](cabs.md)<br/>

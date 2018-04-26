@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof-Makro
 
@@ -58,15 +58,15 @@ Die Anzahl der Elemente im Array, ausgedrückt als eine **Size_t**.
 
 ## <a name="remarks"></a>Hinweise
 
-`_countof` wird als ein Präprozessormakro funktionsähnliche implementiert. Die C++-Version verfügt über zusätzliche Vorlage-Maschinen, die zur Kompilierzeit zu erkennen, wenn ein Zeiger anstelle eines Arrays statisch deklarierte übergeben wird.
+**_countof** wird als ein Präprozessormakro funktionsähnliche implementiert. Die C++-Version verfügt über zusätzliche Vorlage-Maschinen, die zur Kompilierzeit zu erkennen, wenn ein Zeiger anstelle eines Arrays statisch deklarierte übergeben wird.
 
-Sicherstellen, dass *Array* ist tatsächlich ein Array, kein Zeiger. In C `_countof` fehlerhafte Ergebnisse erzeugt, wenn *Array* ist ein Zeiger. In C++ `_countof` schlägt fehl, wenn die Kompilierung *Array* ist ein Zeiger.  Ein Array als Parameter an eine Funktion übergeben *unumgänglich in einen Zeiger*, was bedeutet, dass innerhalb der Funktion Verwendung nicht möglich `_countof` um den Umfang des Arrays ermitteln.
+Sicherstellen, dass *Array* ist tatsächlich ein Array, kein Zeiger. In C **_countof** fehlerhafte Ergebnisse erzeugt, wenn *Array* ist ein Zeiger. In C++ **_countof** schlägt fehl, wenn die Kompilierung *Array* ist ein Zeiger.  Ein Array als Parameter an eine Funktion übergeben *unumgänglich in einen Zeiger*, was bedeutet, dass innerhalb der Funktion Verwendung nicht möglich **_countof** um den Umfang des Arrays ermitteln.
 
 ## <a name="requirements"></a>Anforderungen
 
 |Makro|Erforderlicher Header|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Beispiel
 

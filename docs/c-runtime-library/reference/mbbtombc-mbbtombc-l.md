@@ -1,12 +1,12 @@
 ---
 title: _mbbtombc, _mbbtombc_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbbtombc_l
@@ -37,62 +37,67 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0cfa6c4162eee1422def2343f38745183e1b4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7fe46b278a93f1c6dedde28f74a270244ebc6ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
-Konvertiert ein Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen.  
-  
+
+Konvertiert ein Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned int _mbbtombc(  
-   unsigned int c   
-);  
-unsigned int _mbbtombc_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu konvertierendes Einzelbytezeichen.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Wenn `c` erfolgreich von `_mbbtombc` konvertiert wird, wird ein Multibytezeichen zurückgegeben, andernfalls wird `c` zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_mbbtombc`-Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen muss innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 - 0xDF konvertiert werden.  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktion sind identisch, außer, dass diese `_mbbtombc`-Version das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten verwendet und die `_mbbtombc_l`-Version stattdessen den ihr übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- In früheren Versionen hieß `_mbbtombc`  `hantozen`. Verwenden Sie bei neuem Code `_mbbtombc`.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_mbbtombc`|\<mbstring.h>|  
-|`_mbbtombc_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [_mbctombb, _mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+unsigned int _mbbtombc(
+   unsigned int c
+);
+unsigned int _mbbtombc_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu konvertierendes Einzelbytezeichen.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Wenn **_mbbtombc** erfolgreich konvertiert *c*, wird ein Multibytezeichen zurückgegeben; andernfalls wird zurückgegeben *c*.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_mbbtombc** Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen muss innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 - 0xDF konvertiert werden.
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktion sind identisch, außer dass **_mbbtombc** verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und **_mbbtombc_l** verwendet stattdessen den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+In früheren Versionen **_mbbtombc** hieß **Hantozen**. Verwenden Sie bei neuem Code **_mbbtombc**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_mbbtombc**|\<mbstring.h>|
+|**_mbbtombc_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[_mbctombb, _mbctombb_l](mbctombb-mbctombb-l.md)<br/>

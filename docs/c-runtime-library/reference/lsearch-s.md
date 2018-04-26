@@ -1,12 +1,12 @@
 ---
 title: _lsearch_s | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _lsearch_s
@@ -37,84 +37,89 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a680c990ec91edf225057ea729fd3343a57610d4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 21d2aface59c4c2fd4247d299af26c63cdf46d45
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lsearchs"></a>_lsearch_s
-Führt eine lineare Suche für einen Wert aus. Eine Version von [_lsearch](../../c-runtime-library/reference/lsearch.md) mit Sicherheitserweiterungen, so wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void *_lsearch_s(  
-   const void *key,  
-   void *base,  
-   unsigned int *num,  
-   size_t size,  
-   int (__cdecl *compare)(void *, const void *, const void *),  
-   void * context  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `key`  
- Das Objekt, nach dem gesucht werden soll.  
-  
- `base`  
- Zeiger auf der Basis des zu durchsuchenden Arrays.  
-  
- `num`  
- Anzahl der Elemente.  
-  
- `size`  
- Die Größe jedes Array-Elements in Bytes.  
-  
- `compare`  
- Ein Zeiger auf die Vergleichsroutine. Der zweite Parameter ist ein Zeiger auf den Schlüssel für die Suche. Der dritte Parameter ist ein Zeiger auf das Arrayelement, das mit dem Schlüssel verglichen werden soll.  
-  
- `context`  
- Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion möglicherweise zugegriffen werden kann.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Wenn `key` gefunden wird, gibt `_lsearch_s` einen Zeiger auf das Element des Arrays bei `base` zurück, das `key` entspricht. Wenn `key` nicht gefunden wird, gibt `_lsearch_s` einen Zeiger auf das neu hinzugefügte Element am Ende des Arrays zurück.  
-  
- Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-### <a name="error-conditions"></a>Fehlerbedingungen  
-  
-|`key`|`base`|`compare`|`num`|`size`|`errno`|  
-|-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|!= 0|any|`EINVAL`|  
-|any|any|any|any|Null|`EINVAL`|  
-|any|any|`NULL`|ein|alle|`EINVAL`|  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_lsearch_s`-Funktion führt eine lineare Suche nach dem Wert `key` in einem Array aus `num`-Elementen durch, die jeweils aus `width`-Bytes bestehen. Im Gegensatz zu `bsearch_s` muss bei `_lsearch_s` kein Array sortiert werden. Wenn `key` nicht gefunden wird, dann fügt `_lsearch_s` es am Ende des Arrays hinzu und inkrementiert `num`.  
-  
- Die `compare`-Funktion ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und einen Wert zurückgibt, der die Beziehung angibt. Die `compare`-Funktion übernimmt auch den Zeiger auf den Kontext als erstes Argument. `_lsearch_s` ruft `compare` einmal oder mehrere Male während der Suche auf, wodurch bei jedem Aufruf Zeiger auf zwei Array-Elemente übergeben werden. `compare` muss die Elemente vergleichen und entweder ungleich null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.  
-  
- Der `context`-Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die `compare`-Funktion auf Member des Objekts zugreifen muss. Beispielsweise kann Code in der `compare`-Funktion den void-Zeiger in den passenden Objekttyp umwandeln und auf Member des Objekts zugreifen. Die Hinzufügung des `context`-Zeigers macht `_lsearch_s` sicherer, da weiterer Kontext verwendet werden kann, um Fehler beim erneuten Eintreten zu vermeiden, die mit der Verwendung statischer Variablen zur Bereitstellung von Daten für die `compare`-Funktion einhergehen können.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_lsearch_s`|\<search.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
- [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)
+
+Führt eine lineare Suche für einen Wert aus. Eine Version von [_lsearch](lsearch.md) mit Sicherheitserweiterungen, so wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void *_lsearch_s(
+   const void *key,
+   void *base,
+   unsigned int *num,
+   size_t size,
+   int (__cdecl *compare)(void *, const void *, const void *),
+   void * context
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*key*<br/>
+Das Objekt, nach dem gesucht werden soll.
+
+*base*<br/>
+Zeiger auf der Basis des zu durchsuchenden Arrays.
+
+*Anzahl*<br/>
+Anzahl der Elemente.
+
+*size*<br/>
+Die Größe jedes Array-Elements in Bytes.
+
+*compare*<br/>
+Ein Zeiger auf die Vergleichsroutine. Der zweite Parameter ist ein Zeiger auf den Schlüssel für die Suche. Der dritte Parameter ist ein Zeiger auf das Arrayelement, das mit dem Schlüssel verglichen werden soll.
+
+*context*<br/>
+Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden kann.
+
+## <a name="return-value"></a>Rückgabewert
+
+Wenn *Schlüssel* gefunden wird, **_lsearch_s** gibt einen Zeiger auf das Element des Arrays bei *Basis* entspricht *Schlüssel*. Wenn *Schlüssel* wurde nicht gefunden, **_lsearch_s** gibt einen Zeiger auf das neu hinzugefügte Element am Ende des Arrays.
+
+Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, klicken Sie dann **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+### <a name="error-conditions"></a>Fehlerbedingungen
+
+|*key*|*base*|*compare*|*Anzahl*|*size*|**errno**|
+|-----------|------------|---------------|-----------|------------|-------------|
+|**NULL**|alle|alle|alle|alle|**EINVAL**|
+|alle|**NULL**|alle|!= 0|alle|**EINVAL**|
+|alle|alle|alle|alle|Null|**EINVAL**|
+|alle|alle|**NULL**|ein|alle|**EINVAL**|
+
+## <a name="remarks"></a>Hinweise
+
+Die **_lsearch_s** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, von denen jedes *Breite* Bytes. Im Gegensatz zu **Bsearch_s**, **_lsearch_s** erfordert nicht das Array, das sortiert werden. Wenn *Schlüssel* nicht gefunden wird, klicken Sie dann **_lsearch_s** fügt es am Ende des Arrays und Schritten *Anzahl*.
+
+Die *vergleichen* Funktion ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die zwei Arrayelemente vergleicht und einen Wert, der Angabe ihrer Beziehung zurückgibt. Die *vergleichen* Funktion nimmt auch den Zeiger auf den Kontext als erstes Argument. **_lsearch_s** Aufrufe *vergleichen* ein- oder mehrmals während der Suche, die Übergabe von Zeigern auf zwei Arrayelemente bei jedem Aufruf. *Vergleichen Sie* vergleichen Sie die Elemente und dann zurückgeben muss ungleich Null (d. h., die Elemente sind unterschiedlich) oder 0 (d. h., die Elemente sind identisch).
+
+Die *Kontext* Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *vergleichen* Funktion benötigt, um auf Member des Objekts zuzugreifen. Code wird beispielsweise der *vergleichen* Funktion kann den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* Zeiger macht **_lsearch_s** sicherer, da weiterer Kontext verwendet werden kann, um Reentranz-Fehlern, die mit der Verwendung von statischer Variablen Daten zur Verfügung stellen zu vermeiden der *vergleichen* Funktion.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_lsearch_s**|\<search.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)<br/>
+[bsearch_s](bsearch-s.md)<br/>
+[_lfind_s](lfind-s.md)<br/>
+[_lsearch](lsearch.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: isupper, _isupper_l, iswupper, _iswupper_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - isupper
@@ -42,73 +42,77 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 333e772c2716b87b43cb71ac1797e714af709b3e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc4a55b0bd796e7f494533c6d31e1cb5a28e17e1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
-Bestimmt, ob eine ganze Zahl einen Großbuchstaben darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int isupper(  
-   int c   
-);  
-int _isupper_l (  
-   int c,  
-   _locale_t locale  
-);  
-int iswupper(  
-   wint_t c   
-);  
-int _iwsupper_l(  
-   wint_t c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Großbuchstabens ist. `isupper` Gibt einen Wert ungleich NULL zurück, wenn `c` ein Großbuchstabe (A bis Z) ist. `iswupper` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Großbuchstaben entspricht, oder wenn `c` ein von der Implementierung abhängiger Breitzeichensatz ist, in dem weder `iswcntrl`, `iswdigit`, `iswpunct` noch `iswspace` ungleich 0 (null) ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
-  
- Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Das Verhalten von `isupper` und `_isupper_l` ist nicht definiert, wenn `c` nicht EOF ist oder nicht im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und `c` keinem dieser Werte entspricht, lösen die Funktionen eine Assertion aus.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istupper`|`isupper`|[_ismbcupper](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
-|`_istupper_l`|`_isupper_l`|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`isupper`|\<ctype.h>|  
-|`_isupper_l`|\<ctype.h>|  
-|`iswupper`|\<ctype.h> oder \<wchar.h>|  
-|`_iswupper_l`|\<ctype.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)
+
+Bestimmt, ob eine ganze Zahl einen Großbuchstaben darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int isupper(
+   int c
+);
+int _isupper_l (
+   int c,
+   _locale_t locale
+);
+int iswupper(
+   wint_t c
+);
+int _iwsupper_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Großbuchstabens ist. **IsUpper** gibt einen Wert ungleich NULL zurück, wenn *c* ein Großbuchstabe (A bis Z) ist. **Iswupper** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen, das einem Großbuchstaben entspricht, oder wenn *c* ist ein von der Implementierung definierten breitzeichensatz für den **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+
+Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Das Verhalten des **Isupper** und **_isupper_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istupper**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper**|
+|**_istupper_l**|**_isupper_l**|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**isupper**|\<ctype.h>|
+|**_isupper_l**|\<ctype.h>|
+|**iswupper**|\<ctype.h> oder \<wchar.h>|
+|**_iswupper_l**|\<ctype.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>

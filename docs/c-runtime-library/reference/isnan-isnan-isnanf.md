@@ -1,12 +1,12 @@
 ---
 title: isnan, _isnan, _isnanf | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isnan
@@ -41,68 +41,73 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d0997b1a6b304634c612f0f1615a059fd812b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6b8552f59bc0d49ebae0d4a534225af5d9f5facb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
-Testet, ob ein Gleitkommawert keine Zahl ist (NAN).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int isnan(  
-   /* floating-point */ x   
-); /* C-only macro */  
-  
-int _isnan(  
-   double x   
-);  
-  
-int _isnanf(  
-   float x  
-); /* x64 only */  
-  
-template <class T>  
-bool isnan(  
-   T x  
-) throw(); /* C++ only */  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *w*  
- Der zu testende Gleitkommawert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- In C geben das `isnan`-Makro und die `_isnan` und `_isnanf`- Funktionen einen Wert ungleich null zurück, wenn das Argument `x` ein NAN ist; andernfalls geben sie 0 zurück.  
-  
- In C++ geben die `isnan`-Vorlagenfunktionen `true` zurück, wenn das Argument `x` ein NAN ist; andernfalls geben sie `false` zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Das C-Makro `isnan` und die `_isnan`- und `_isnanf`-Funktionen testen den Gleitkommawert *x*, der einen Wert ungleich null zurückgibt, wenn *x* kein Zahlenwert (NAN) ist. Ein NAN-Wert wird generiert, wenn das Ergebnis einer Gleitkommaoperation nicht im IEEE-754 Gleitkommaformat für den angegebenen Typ dargestellt werden kann. Informationen darüber, wie ein NAN für die Ausgabe dargestellt wird, erhalten Sie unter [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
- Wenn als C++ kompiliert, ist das `isnan`-Makro nicht definiert und stattdessen eine `isnan`-Vorlagenfunktion. Sie gibt einen Wert vom Typ `bool` anstelle einer Ganzzahl zurück.  
-  
- Die Funktionen `_isnan` und `_isnanf` sind Microsoft-spezifisch. Die `_isnanf`-Funktion ist nur verfügbar, wenn für x64 kompiliert.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|  
-|-------------|---------------------------|-------------------------------|  
-|`isnan`, `_isnanf`|\<math.h>|\<math.h> oder \<cmath>|  
-|`_isnan`|\<float.h>|\<float.h> oder \<cfloat>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)
+
+Testet, ob ein Gleitkommawert keine Zahl ist (NAN).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int isnan(
+   /* floating-point */ x
+); /* C-only macro */
+
+int _isnan(
+   double x
+);
+
+int _isnanf(
+   float x
+); /* x64 only */
+
+template <class T>
+bool isnan(
+   T x
+) throw(); /* C++ only */
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Der zu testende Gleitkommawert.
+
+## <a name="return-value"></a>Rückgabewert
+
+In C die **Isnan** Makros und die **_isnan** und **_isnanf** Funktionen geben einen Wert ungleich NULL zurück, wenn das Argument *x* ist ein NAN ist andernfalls sie Geben Sie 0 zurück.
+
+In C++ wird die **Isnan** Vorlagenfunktionen Return **"true"** Wenn das Argument *x* ist ein NAN; andernfalls geben sie zurück **"false"**.
+
+## <a name="remarks"></a>Hinweise
+
+Das C **Isnan** Makros und die **_isnan** und **_isnanf** Funktionen testen Gleitkommawert *x*, einen Wert ungleich NULL zurückgeben, wenn *x* ist keine Zahl (NAN)-Wert. Ein NAN-Wert wird generiert, wenn das Ergebnis einer Gleitkommaoperation nicht im IEEE-754 Gleitkommaformat für den angegebenen Typ dargestellt werden kann. Informationen darüber, wie ein NAN für die Ausgabe dargestellt wird, erhalten Sie unter [printf](printf-printf-l-wprintf-wprintf-l.md).
+
+Beim Kompilieren als C++, die **Isnan** Makro ist nicht definiert, und ein **Isnan** Vorlagenfunktion wird stattdessen definiert. Es gibt einen Wert vom Typ **Bool** kein ganze Zahl.
+
+Die **_isnan** und **_isnanf** Funktionen sind Microsoft-spezifisch. Die **_isnanf** Funktion ist nur verfügbar, wenn für X64 kompiliert.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-------------|---------------------------|-------------------------------|
+|**IsNaN**, **_isnanf**|\<math.h>|\<math.h> oder \<cmath>|
+|**_isnan**|\<float.h>|\<float.h> oder \<cfloat>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[_finite, _finitef](finite-finitef.md)<br/>
+[_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

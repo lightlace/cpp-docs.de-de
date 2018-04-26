@@ -1,12 +1,12 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbalpha
@@ -37,60 +37,63 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df6ee4ab843d9adf6723936856519894b732958
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3e1a5984333def50c31ed6395265afb424fd7e6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
-Bestimmt, ob ein angegebenes Multibytezeichen ein Alpha ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _ismbbalpha(  
-   unsigned int c   
-);  
-int _ismbbalpha_l(  
-   unsigned int c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Die zu testende ganze Zahl.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_ismbbalpha` gibt einen Wert ungleich 0 (null) zurück, wenn diese Bedingung zutrifft. Der Ausdruck:  
-  
-```  
-isalpha || _ismbbkalnum  
-```  
-  
- ist für `c` ungleich 0, bzw. andernfalls 0. `_ismbbalpha` verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige Zeicheneinstellungen. `_ismbbalpha_l` ist nahezu identisch, verwendet jedoch stattdessen das übergebene Gebietsschema.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_ismbbalpha`|\<mbctype.h>|  
-|`_ismbbalpha_l`|\<mbctype.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Byteklassifizierung](../../c-runtime-library/byte-classification.md)   
- [_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)
+
+Bestimmt, ob ein angegebenes Multibytezeichen ein Alpha ist.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _ismbbalpha(
+   unsigned int c
+);
+int _ismbbalpha_l(
+   unsigned int c
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Die zu testende ganze Zahl.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_ismbbalpha** gibt einen Wert ungleich NULL zurück, wenn der Ausdruck:
+
+`isalpha(c) || _ismbbkalnum(c)`
+
+ist ungleich NULL für *c*, oder 0, wenn er nicht ist. **_ismbbalpha** verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige zeicheneinstellungen. **_ismbbalpha_l** ist nahezu identisch, das übergebene Gebietsschema verwendet.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_ismbbalpha**|\<mbctype.h>|
+|**_ismbbalpha_l**|\<mbctype.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Byteklassifizierung](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)<br/>

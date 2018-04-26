@@ -1,12 +1,12 @@
 ---
 title: _fwrite_nolock | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fwrite_nolock
@@ -33,63 +33,69 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e698c6957177720bd171429144518a683be9b08
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e04dd884b4b96f64a4d4ece5b61fe5aeafb3a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
-Schreibt ein Zeichen in einen Stream, ohne den Thread zu sperren.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-size_t _fwrite_nolock(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `buffer`  
- Zeiger auf die zu schreibenden Daten.  
-  
- `size`  
- Elementgröße in Bytes.  
-  
- `count`  
- Maximale Anzahl zu schreibender Elemente.  
-  
- `stream`  
- Zeiger auf die `FILE`-Struktur.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Identisch mit [fwrite](../../c-runtime-library/reference/fwrite.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktion ist eine nicht sperrende Version von `fwrite`. Sie ist mit `fwrite` identisch, abgesehen davon, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_fwrite_nolock`|\<stdio.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel hierfür finden Sie unter [fread](../../c-runtime-library/reference/fread.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Schreibt ein Zeichen in einen Stream, ohne den Thread zu sperren.
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t _fwrite_nolock(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*buffer*<br/>
+Zeiger auf die zu schreibenden Daten.
+
+*size*<br/>
+Elementgröße in Bytes
+
+*count*<br/>
+Maximale Anzahl zu schreibender Elemente.
+
+*Stream*<br/>
+Zeiger auf die **FILE**-Struktur.
+
+## <a name="return-value"></a>Rückgabewert
+
+Identisch mit [fwrite](fwrite.md).
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktion ist eine nicht sperrende Version von **Fwrite**. Sie ist identisch mit **Fwrite** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_fwrite_nolock**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel hierfür finden Sie unter [fread](fread.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[fread](fread.md)<br/>
+[_write](write.md)<br/>

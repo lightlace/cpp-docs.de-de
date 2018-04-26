@@ -1,12 +1,12 @@
 ---
 title: _set_SSE2_enable | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_SSE2_enable
@@ -33,92 +33,97 @@ helpviewer_keywords:
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1d96390925a81935f9d6d07c7ff5b8ce61a3bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bf9983eb830efb53bafa2e67b6bbcea645145819
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
-Aktiviert oder deaktiviert die Verwendung von Streaming SIMD Extensions 2 (SSE2)-Anweisungen in der CRT mathematischen Routinen. (Diese Funktion ist nicht auf x64-Architekturen verfügbar, da SSE2 standardmäßig aktiviert ist.)  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _set_SSE2_enable(  
-   int flag  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `flag`  
- 1, um die SSE2-Implementierung zu aktivieren; 0, um die SSE2-Implementierung zu deaktivieren. Standardmäßig ist die SSE2-Implementierung auf Prozessoren aktiviert, die sie unterstützen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Wert ungleich null, wenn die SSE2-Implementierung aktiviert ist; 0, wenn die SSE2-Implementierung deaktiviert ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Die folgenden Funktionen haben SSE2-Implementierungen, die mithilfe von `_set_SSE2_enable` aktiviert werden können:  
-  
--   [atan](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
-  
--   [ceil](../../c-runtime-library/reference/ceil-ceilf-ceill.md)  
-  
--   [exp](../../c-runtime-library/reference/exp-expf.md)  
-  
--   [floor](../../c-runtime-library/reference/floor-floorf-floorl.md)  
-  
--   [log](../../c-runtime-library/reference/log-logf-log10-log10f.md)  
-  
--   [log10](../../c-runtime-library/reference/log-logf-log10-log10f.md)  
-  
--   [modf](../../c-runtime-library/reference/modf-modff-modfl.md)  
-  
--   [pow](../../c-runtime-library/reference/pow-powf-powl.md)  
-  
- Die SSE2-Implementierung dieser Funktionen unterscheiden sich möglicherweise geringfügig von den Standardimplementierungen, da SSE2-Zwischenwerte 64-Bit-Gleitkommamengen sind, aber die Zwischenwerte der Standardimplementierung 80-Bit-Gleitkommamengen sind.  
-  
+
+Aktiviert oder deaktiviert die Verwendung von Streaming SIMD Extensions 2 (SSE2)-Anweisungen in der CRT mathematischen Routinen. (Diese Funktion ist nicht auf x64-Architekturen verfügbar, da SSE2 standardmäßig aktiviert ist.)
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _set_SSE2_enable(
+   int flag
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Kennzeichen*<br/>
+1, um die SSE2-Implementierung zu aktivieren; 0, um die SSE2-Implementierung zu deaktivieren. Standardmäßig ist die SSE2-Implementierung auf Prozessoren aktiviert, die sie unterstützen.
+
+## <a name="return-value"></a>Rückgabewert
+
+Wert ungleich null, wenn die SSE2-Implementierung aktiviert ist; 0, wenn die SSE2-Implementierung deaktiviert ist.
+
+## <a name="remarks"></a>Hinweise
+
+Die folgenden Funktionen haben SSE2-Implementierungen, die mit aktiviert werden können **_set_SSE2_enable**:
+
+- [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+
+- [ceil](ceil-ceilf-ceill.md)
+
+- [exp](exp-expf.md)
+
+- [floor](floor-floorf-floorl.md)
+
+- [log](log-logf-log10-log10f.md)
+
+- [log10](log-logf-log10-log10f.md)
+
+- [modf](modf-modff-modfl.md)
+
+- [pow](pow-powf-powl.md)
+
+Die SSE2-Implementierung dieser Funktionen unterscheiden sich möglicherweise geringfügig von den Standardimplementierungen, da SSE2-Zwischenwerte 64-Bit-Gleitkommamengen sind, aber die Zwischenwerte der Standardimplementierung 80-Bit-Gleitkommamengen sind.
+
 > [!NOTE]
->  Wenn Sie die Compileroption [/Oi (Systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md) verwenden, um das Projekt zu kompilieren, scheint `_set_SSE2_enable` möglicherweise keine Auswirkung zu haben. Die Compileroption `/Oi` gibt der Compiler die Berechtigung zum Verwenden von systeminternen Funktionen, um CRT-Aufrufe zu ersetzen; dieses Verhalten überschreibt die Auswirkung von `_set_SSE2_enable`. Wenn Sie sicherzustellen möchten, dass `/Oi` `_set_SSE2_enable` nicht außer Kraft setzt, kompilieren Sie Ihr Projekt mit `/Oi-`. Dies kann auch dann sinnvoll sein, wenn Sie andere Compilerswitches verwenden, die `/Oi` beinhalten.  
-  
- Die SSE2-Implementierung wird nur verwendet, wenn alle Ausnahmen maskiert werden. Verwenden Sie [_control87, _controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) zum Maskieren von Ausnahmen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_set_SSE2_enable`|\<math.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_set_SSE2_enable.c  
-// processor: x86  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int i = _set_SSE2_enable(1);  
-  
-   if (i)  
-      printf("SSE2 enabled.\n");  
-   else  
-      printf("SSE2 not enabled; processor does not support SSE2.\n");  
-}  
-```  
-  
- **Ausgabe**  
-  
- `SSE2 enabled.`  
-  
-## <a name="see-also"></a>Siehe auch  
- [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)
+> Bei Verwendung der [/Oi (systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md) Compileroption, um das Projekt zu kompilieren entsteht möglicherweise der Eindruck, die **_set_SSE2_enable** hat keine Auswirkungen. Die **/Oi** Compileroption gibt der Compiler die Autorität für die systeminternen Funktionen mit der CRT-Aufrufe ersetzen; dieses Verhalten überschreibt die Auswirkung der **_set_SSE2_enable**. Sollten Sie gewährleisten, dass **/Oi** überschreibt nicht **_set_SSE2_enable**, verwenden Sie **Oi-** das Projekt kompilieren. Dies könnte auch ratsam sein, wenn Sie andere Compilerschalter verwenden, die die implizieren **/Oi**.
+
+Die SSE2-Implementierung wird nur verwendet, wenn alle Ausnahmen maskiert werden. Verwenden Sie [_control87, _controlfp](control87-controlfp-control87-2.md) zum Maskieren von Ausnahmen.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_set_SSE2_enable**|\<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_set_SSE2_enable.c
+// processor: x86
+#include <math.h>
+#include <stdio.h>
+
+int main()
+{
+   int i = _set_SSE2_enable(1);
+
+   if (i)
+      printf("SSE2 enabled.\n");
+   else
+      printf("SSE2 not enabled; processor does not support SSE2.\n");
+}
+```
+
+```Output
+SSE2 enabled.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: random_device-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::random_device
@@ -23,131 +23,141 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb39aa4158f69b1c6e168742e6c7a2b3dcdc97
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cfd0f33d3191f2524df8dc106fb99e80beede7ec
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="randomdevice-class"></a>random_device-Klasse
-Generiert eine zufällige Sequenz von einem externen Gerät.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```
-class random_device {  
-public:  
-   typedef unsigned int result_type;  
-   
-   // constructor 
+
+Generiert eine zufällige Sequenz von einem externen Gerät.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+class random_device {
+public:
+   typedef unsigned int result_type;
+
+   // constructor
    explicit random_device(const std::string& token = "");
-   
-   // properties 
+
+   // properties
    static result_type min();
    static result_type max();
    double entropy() const;
-   
-   // generate 
+
+   // generate
    result_type operator()();
 
-   // no-copy functions 
-   random_device(const random_device&) = delete;  
-   void operator=(const random_device&) = delete;  
-   };  
-```  
+   // no-copy functions
+   random_device(const random_device&) = delete;
+   void operator=(const random_device&) = delete;
+   };
+```
 
-## <a name="members"></a>Member  
-  
-|||  
-|-|-|  
-|[random_device](#random_device)|[entropy](#entropy)|  
-|[random_device::operator()](#op_call)||  
-  
-## <a name="remarks"></a>Hinweise  
-Die Klasse beschreibt eine Quelle von Zufallszahlen und darf - aber muss nicht - nach dem ISO C++-Standard nicht-deterministisch oder kryptografisch sicher sein. In der Visual Studio-Implementierung sind die produzierten Werte nicht-deterministisch und kryptografisch sicher, aber sie läuft langsamer als aus Modulen und Moduladaptern erstellte Generatoren (wie [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), das hochwertige und schnelle Modul für die meisten Anwendungen).  
-  
-`random_device`-Ergebnisse sind gleichförmig im geschlossenen Bereich [`0, 2`<sup>32</sup>) verteilt.  
-  
-Es ist nicht garantiert, dass `random_device` zu einem nicht blockierenden Aufruf führt.  
-  
-Im Allgemeinen wird `random_device` verwendet, um andere mithilfe von Modulen oder Moduladaptern erstellte Generatoren mit Startwerten auszustatten. Weitere Informationen finden Sie unter[\<random>](../standard-library/random.md).  
-  
-## <a name="example"></a>Beispiel  
-Mit dem folgenden Code werden die grundlegende Funktion dieser Klasse und Beispielergebnisse veranschaulicht. Aufgrund der nicht-deterministischen Struktur von `random_device` entsprechen die im Abschnitt **Output** gezeigten Zufallswerte nicht Ihren Ergebnissen. Dies ist normal und zu erwarten.  
-  
-```cpp  
-// random_device_engine.cpp   
-// cl.exe /W4 /nologo /EHsc /MTd   
-#include <random>   
-#include <iostream>   
-using namespace std;  
-  
-int main()   
-{   
-    random_device gen;   
-  
-    cout << "entropy == " << gen.entropy() << endl;   
-    cout << "min == " << gen.min() << endl;   
-    cout << "max == " << gen.max() << endl;   
-  
-    cout << "a random value == " << gen() << endl;   
-    cout << "a random value == " << gen() << endl;   
-    cout << "a random value == " << gen() << endl;   
-}  
-```  
-  
-```Output  
+## <a name="members"></a>Member
+
+|||
+|-|-|
+|[random_device](#random_device)|[entropy](#entropy)|
+|[random_device::operator()](#op_call)||
+
+## <a name="remarks"></a>Hinweise
+
+Die Klasse beschreibt eine Quelle von Zufallszahlen und darf - aber muss nicht - nach dem ISO C++-Standard nicht-deterministisch oder kryptografisch sicher sein. In der Visual Studio-Implementierung sind die produzierten Werte nicht-deterministisch und kryptografisch sicher, aber sie läuft langsamer als aus Modulen und Moduladaptern erstellte Generatoren (wie [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), das hochwertige und schnelle Modul für die meisten Anwendungen).
+
+`random_device`-Ergebnisse sind gleichförmig im geschlossenen Bereich [`0, 2`<sup>32</sup>) verteilt.
+
+Es ist nicht garantiert, dass `random_device` zu einem nicht blockierenden Aufruf führt.
+
+Im Allgemeinen wird `random_device` verwendet, um andere mithilfe von Modulen oder Moduladaptern erstellte Generatoren mit Startwerten auszustatten. Weitere Informationen finden Sie unter[\<random>](../standard-library/random.md).
+
+## <a name="example"></a>Beispiel
+
+Mit dem folgenden Code werden die grundlegende Funktion dieser Klasse und Beispielergebnisse veranschaulicht. Aufgrund der nicht-deterministischen Struktur von `random_device` entsprechen die im Abschnitt **Output** gezeigten Zufallswerte nicht Ihren Ergebnissen. Dies ist normal und zu erwarten.
+
+```cpp
+// random_device_engine.cpp
+// cl.exe /W4 /nologo /EHsc /MTd
+#include <random>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    random_device gen;
+
+    cout << "entropy == " << gen.entropy() << endl;
+    cout << "min == " << gen.min() << endl;
+    cout << "max == " << gen.max() << endl;
+
+    cout << "a random value == " << gen() << endl;
+    cout << "a random value == " << gen() << endl;
+    cout << "a random value == " << gen() << endl;
+}
+```
+
+```Output
 entropy == 32
 min == 0
 max == 4294967295
 a random value == 2378414971
 a random value == 3633694716
 a random value == 213725214
-```  
-  
-Dieses Beispiel ist vereinfacht und nicht repräsentativ für den generellen Verwendungsfall dieses Generators. Ein repräsentativeres Codebeispiel finden Sie unter [\<random>](../standard-library/random.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<random>  
-  
- **Namespace:** std  
-  
-##  <a name="random_device"></a> random_device::random_device  
-Konstruiert den Generator.  
-  
-```  
-random_device(const std::string& = "");
-```  
-  
-### <a name="remarks"></a>Hinweise  
-Der Konstruktor initiiert bei Bedarf den Generator und ignoriert dabei den Zeichenfolgenparameter. Löst einen Wert eines durch die Implementierung definierten Typen aus, der aus [Ausnahme](../standard-library/exception-class.md) abgeleitet wird, wenn `random_device` nicht initialisiert werden konnte.  
-  
-##  <a name="entropy"></a> random_device::entropy  
-Schätzt den Zufallscharakter der Quelle ab.  
-  
-```  
-double entropy() const noexcept;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
-Die Memberfunktion gibt eine, wie in Bits gemessene, Schätzung des Zufallscharakters der Quelle zurück.  
-  
-##  <a name="op_call"></a> random_device::operator()  
-Gibt einen zufälligen Wert zurück.  
-  
-```  
-result_type operator()();
-```  
-  
-### <a name="remarks"></a>Hinweise  
-Gibt Werte zurück, die im geschlossenen Intervall [`min, max`] gleichförmig verteilt sind, wie durch die Memberfunktionen `min()` und `max()` festgelegt. Löst einen Wert eines durch die Implementierung definierten Typs aus, der aus [Auswahl](../standard-library/exception-class.md) abgeleitet wird, wenn keine Zufallszahl abgerufen werden konnte.  
-  
-## <a name="see-also"></a>Siehe auch  
-[\<random>](../standard-library/random.md)
+```
 
+Dieses Beispiel ist vereinfacht und nicht repräsentativ für den generellen Verwendungsfall dieses Generators. Ein repräsentativeres Codebeispiel finden Sie unter [\<random>](../standard-library/random.md).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<random>
+
+**Namespace:** std
+
+## <a name="random_device"></a> random_device::random_device
+
+Konstruiert den Generator.
+
+```cpp
+random_device(const std::string& = "");
+```
+
+### <a name="remarks"></a>Hinweise
+
+Der Konstruktor initiiert bei Bedarf den Generator und ignoriert dabei den Zeichenfolgenparameter. Löst einen Wert eines durch die Implementierung definierten Typen aus, der aus [Ausnahme](../standard-library/exception-class.md) abgeleitet wird, wenn `random_device` nicht initialisiert werden konnte.
+
+## <a name="entropy"></a> random_device::entropy
+
+Schätzt den Zufallscharakter der Quelle ab.
+
+```cpp
+double entropy() const noexcept;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Die Memberfunktion gibt eine, wie in Bits gemessene, Schätzung des Zufallscharakters der Quelle zurück.
+
+## <a name="op_call"></a> random_device::operator()
+
+Gibt einen zufälligen Wert zurück.
+
+```cpp
+result_type operator()();
+```
+
+### <a name="remarks"></a>Hinweise
+
+Gibt Werte zurück, die im geschlossenen Intervall [`min, max`] gleichförmig verteilt sind, wie durch die Memberfunktionen `min()` und `max()` festgelegt. Löst einen Wert eines durch die Implementierung definierten Typs aus, der aus [Auswahl](../standard-library/exception-class.md) abgeleitet wird, wenn keine Zufallszahl abgerufen werden konnte.
+
+## <a name="see-also"></a>Siehe auch
+
+[\<random>](../standard-library/random.md)<br/>

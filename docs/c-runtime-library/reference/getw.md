@@ -1,12 +1,12 @@
 ---
 title: _getw | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getw
@@ -32,95 +32,100 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfba71c98b347cec3ef56143cce34b1550e4149
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2079672548a7f25106e7540580b60ac9fead8a36
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getw"></a>_getw
-Ruft eine Ganzzahl aus einem Stream ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _getw(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `stream`  
- Zeiger auf die `FILE`-Struktur.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_getw` gibt den gelesenen Wert in Form einer ganzen Zahl zurück. Ein Rückgabewert von `EOF` gibt einen Fehler oder ein Dateiende an. Da der `EOF`-Wert jedoch auch ein legitimer Wert einer Ganzzahl ist, verwenden Sie `feof` oder `ferror`, um eine Dateiendebedingung oder eine Fehlerbedingung zu prüfen. Wenn `stream` `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EOF` zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_getw`-Funktion liest den nächsten Binärwert des Typs `int` aus der Datei, die `stream` zugeordnet ist, und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zum nächsten ungelesenen Zeichen zu zeigen. `_getw` geht nicht von allen speziellen Elementausrichtungen im Stream aus. Probleme beim Portieren können mit `_getw` auftreten, da die Größe des `int`-Typs und die Anordnung der Bytes im `int`-Typ über Systeme hinweg unterschiedlich sind.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_getw`|\<stdio.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_getw.c  
-// This program uses _getw to read a word  
-// from a stream, then performs an error check.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   int i;  
-  
-   if( fopen_s( &stream, "crt_getw.txt", "rb" ) )  
-      printf( "Couldn't open file\n" );  
-   else  
-   {  
-      // Read a word from the stream:  
-      i = _getw( stream );  
-  
-      // If there is an error...  
-      if( ferror( stream ) )  
-      {  
-         printf( "_getw failed\n" );  
-         clearerr_s( stream );  
-      }  
-      else  
-         printf( "First data word in file: 0x%.4x\n", i );  
-      fclose( stream );  
-   }  
-}  
-```  
-  
-## <a name="input-crtgetwtxt"></a>Eingabe: crt_getw.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Ausgabe  
-  
-```  
-First data word in file: 0x656e694c  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [_putw](../../c-runtime-library/reference/putw.md)
+
+Ruft eine Ganzzahl aus einem Stream ab.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _getw(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Stream*<br/>
+Zeiger auf die **FILE**-Struktur.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_getw** gibt den ganzzahligen Wert zu lesen. Ein Rückgabewert von **EOF** entweder eine Fehler- oder Ende der Datei angibt. Jedoch, da die **EOF** Wert ist auch eine gültige ganze Zahl, verwenden Sie **Feof** oder **Ferror** ein Ende der Datei oder eine fehlerbedingung zu überprüfen. Wenn *Stream* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EOF**.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_getw** Funktion liest den nächsten binären Wert vom Typ **Int** aus der Datei zugeordneten *Stream* und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zu zeigen auf das nächste ungelesenen Zeichen. **_getw** nicht davon, dass besondere Ausrichtung der Elemente in den Stream. Probleme beim Portieren ist möglich, mit **_getw** da die Größe des der **Int** Typ und die Reihenfolge der Bytes in der **Int** Typ über Systeme hinweg zu unterscheiden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_getw**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_getw.c
+// This program uses _getw to read a word
+// from a stream, then performs an error check.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   int i;
+
+   if( fopen_s( &stream, "crt_getw.txt", "rb" ) )
+      printf( "Couldn't open file\n" );
+   else
+   {
+      // Read a word from the stream:
+      i = _getw( stream );
+
+      // If there is an error...
+      if( ferror( stream ) )
+      {
+         printf( "_getw failed\n" );
+         clearerr_s( stream );
+      }
+      else
+         printf( "First data word in file: 0x%.4x\n", i );
+      fclose( stream );
+   }
+}
+```
+
+### <a name="input-crtgetwtxt"></a>Eingabe: crt_getw.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Ausgabe
+
+```Output
+First data word in file: 0x656e694c
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[_putw](putw.md)<br/>

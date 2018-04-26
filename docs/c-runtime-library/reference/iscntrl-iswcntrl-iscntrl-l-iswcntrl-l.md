@@ -1,12 +1,12 @@
 ---
 title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iscntrl
@@ -44,73 +44,77 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7c0eecee5d33bd9e250e88021556625101202082
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
-Bestimmt, ob eine ganze Zahl ein Steuerzeichen darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int iscntrl(   
-   int c   
-);  
-int iswcntrl(   
-   wint_t c   
-);  
-int _iscntrl_l(   
-   int c,  
-   _locale_t locale  
-);  
-int _iswcntrl_l(   
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl  
-  
- `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Steuerzeichens ist. `iscntrl` Gibt einen Wert ungleich NULL zurück, wenn `c` ein Steuerzeichen ist (0 x 00 – 0x1F oder 0x7F). `iswcntrl` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Steuerbreitzeichen ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
-  
- Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Das Verhalten von `iscntrl` und `_iscntrl_l` ist nicht definiert, wenn `c` nicht EOF ist oder nicht im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und `c` keinem dieser Werte entspricht, lösen die Funktionen eine Assertion aus.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|  
-|`_istcntrl_l`|`_iscntrl_l`|`_iscntrl_l`|`_iswcntrl_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`iscntrl`|\<ctype.h>|  
-|`iswcntrl`|\<ctype.h> oder \<wchar.h>|  
-|`_iscntrl_l`|\<ctype.h>|  
-|`_iswcntrl_l`|\<ctype.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)
+
+Bestimmt, ob eine ganze Zahl ein Steuerzeichen darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int iscntrl(
+   int c
+);
+int iswcntrl(
+   wint_t c
+);
+int _iscntrl_l(
+   int c,
+   _locale_t locale
+);
+int _iswcntrl_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Steuerzeichens ist. **Iscntrl** gibt einen Wert ungleich NULL zurück, wenn *c* ein Steuerzeichen ist (0 x 00 – 0x1F oder 0x7F). **Iswcntrl** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Steuerelement Breitzeichen. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+
+Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Das Verhalten des **Iscntrl** und **_iscntrl_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istcntrl**|**iscntrl**|**iscntrl**|**iswcntrl**|
+|**_istcntrl_l**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**iscntrl**|\<ctype.h>|
+|**iswcntrl**|\<ctype.h> oder \<wchar.h>|
+|**_iscntrl_l**|\<ctype.h>|
+|**_iswcntrl_l**|\<ctype.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>

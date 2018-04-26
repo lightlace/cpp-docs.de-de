@@ -1,12 +1,12 @@
 ---
 title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - isblank
@@ -36,73 +36,77 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3dff4f409fe57c67e00afe24f10cbb69c6f83b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dbf3c55f6a9665d8d6ad046dba653b362d46cd2a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
-Bestimmt, ob eine ganze Zahl ein Leerzeichen darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int isblank(  
-   int c   
-);  
-int iswblank(  
-   wint_t c   
-);  
-int _isblank_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswblank_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines Leerzeichens oder eines horizontalen Tabstoppzeichens ist oder wenn es ein gebietsschemaspezifischer Zeichensatz ist, der zum Trennen von Wörtern in einer Textzeile verwendet wird. `isblank` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Leerzeichen (0x20) oder horizontales Tabstoppzeichen (0x09) ist. Das Ergebnis der Testbedingung für die `isblank`-Funktionen hängt von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas ab. Weitere Informationen finden Sie unter [setlocale,_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen, die das `_l`-Suffix nicht verwenden, verwenden das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- `iswblank` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Standardleerzeichen oder einem horizontalen Tabstoppzeichen entspricht.  
-  
- Das Verhalten von `isblank` und `_isblank_l` ist nicht definiert, wenn `c` nicht EOF ist oder nicht im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und `c` keinem dieser Werte entspricht, lösen die Funktionen eine Assertion aus.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istblank`|`isblank`|[_ismbcblank](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswblank`|  
-|`_istblank_l`|`_isblank_l`|[_ismbcblank_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswblank_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`isblank`|\<ctype.h>|  
-|`iswblank`|\<ctype.h> oder \<wchar.h>|  
-|`_isblank_l`|\<ctype.h>|  
-|`_iswblank_l`|\<ctype.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)
+
+Bestimmt, ob eine ganze Zahl ein Leerzeichen darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int isblank(
+   int c
+);
+int iswblank(
+   wint_t c
+);
+int _isblank_l(
+   int c,
+   _locale_t locale
+);
+int _iswblank_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Leerzeichens oder horizontaler Tabulator oder zu einem gebietsschemaspezifischen Satz von Zeichen, die zum Trennen von Wörtern in einer Zeile des Texts verwendet werden. **Isblank** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Leerzeichen (0 x 20) oder horizontales Tabstoppzeichen (0 x 09). Das Ergebnis der testbedingung für die **Isblank** Funktionen hängt die **LC_CTYPE** Kategorie des Gebietsschemas für Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen, die nicht die **_l** -Suffix verwenden das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschema, das übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+**Iswblank** gibt einen Wert ungleich NULL zurück, wenn *c* ist eine Breitzeichen, das einem standardleerzeichen entspricht oder horizontales Tabstoppzeichen.
+
+Das Verhalten des **Isblank** und **_isblank_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**isblank**|\<ctype.h>|
+|**iswblank**|\<ctype.h> oder \<wchar.h>|
+|**_isblank_l**|\<ctype.h>|
+|**_iswblank_l**|\<ctype.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>

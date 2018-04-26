@@ -1,12 +1,12 @@
 ---
 title: perror _wperror | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wperror
@@ -39,118 +39,119 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3929d35ac258823a70bf063f2e90e3ce8f1dfb4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3f6be77354f4efa1485f32ed178dc68b594b4f75
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="perror-wperror"></a>perror, _wperror
-Druckt eine Fehlermeldung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      void perror(  
-   const char *string   
-);  
-void _wperror(  
-   const wchar_t *string   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `string`  
- Zu druckende Zeichenfolgennachricht.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `perror`-Funktion druckt eine Fehlermeldung für `stderr`. `_wperror` ist eine Breitzeichenversion von **_perror**. Das `string`-Argument für `_wperror` ist eine Breitzeichenfolge. Andernfalls verhalten sich `_wperror` und **_perror** identisch.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tperror`|`perror`|`perror`|`_wperror`|  
-  
- `string` wird zuerst gedruckt, gefolgt von einem Doppelpunkt und dann von einer Systemfehlermeldung für den letzten Bibliotheksaufruf, der den Fehler verursacht hat, und schließlich von einem Zeilenumbruchzeichen. Wenn `string` ein NULL-Zeiger oder ein Zeiger auf eine NULL-Zeichenfolge ist, druckt `perror` nur die System-Fehlermeldung.  
-  
- Die Fehlernummer wird in der Variablen [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (in ERRNO.H definiert) gespeichert. Über die Variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) wird auf die Systemfehlermeldungen zugegriffen, die als Array von Meldungen nach Fehlernummern geordnet sind. `perror` druckt die entsprechende Fehlermeldung, indem der `errno`-Wert als Index zu `_sys_errlist` verwendet wird. Der Wert der Variablen [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) wird als maximale Anzahl an Elementen im `_sys_errlist`-Array definiert.  
-  
- Um vollständige Ergebnisse zu erzeugen, rufen Sie umgehend `perror` auf, nachdem eine Bibliotheksroutine einen Fehler zurückgibt. Andernfalls können nachfolgende Aufrufe den `errno`-Wert überschreiben.  
-  
- Im Windows-Betriebssystem werden einige `errno`-Werte, die in ERRNO.H aufgelistet sind, nicht verwendet. Diese Werte sind für die Verwendung des UNIX-Betriebssystems reserviert. Siehe [_doserrno, errno, _sys_errlist, und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) für eine Liste der `errno`-Werte, die vom Windows-Betriebssystem verwendet werden. `perror` druckt eine leere Zeichenfolge für jeden `errno`-Wert, der nicht von diesen Plattformen verwendet wird.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`perror`|\<stdio.h > oder \<stdlib.h >|  
-|`_wperror`|\<stdio.h> oder \<wchar.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_perror.c  
-// compile with: /W3  
-/* This program attempts to open a file named  
- * NOSUCHF.ILE. Because this file probably doesn't exist,  
- * an error message is displayed. The same message is  
- * created using perror, strerror, and _strerror.  
- */  
-  
-#include <fcntl.h>  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <io.h>  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <string.h>  
-#include <share.h>  
-  
-int main( void )  
-{  
-   int  fh;  
-  
-   if( _sopen_s( &fh, "NOSUCHF.ILE", _O_RDONLY, _SH_DENYNO, 0 ) != 0 )  
-   {  
-      /* Three ways to create error message: */  
-      perror( "perror says open failed" );  
-      printf( "strerror says open failed: %s\n",  
-         strerror( errno ) ); // C4996  
-      printf( _strerror( "_strerror says open failed" ) ); // C4996  
-      // Note: strerror and _strerror are deprecated; consider  
-      // using strerror_s and _strerror_s instead.  
-   }  
-   else  
-   {  
-      printf( "open succeeded on input file\n" );  
-      _close( fh );  
-   }  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-perror says open failed: No such file or directory  
-strerror says open failed: No such file or directory  
-_strerror says open failed: No such file or directory  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [ferror](../../c-runtime-library/reference/ferror.md)   
- [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)
+
+Druckt eine Fehlermeldung.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void perror(
+   const char *message
+);
+void _wperror(
+   const wchar_t *message
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Nachricht* Zeichenfolgennachricht zu drucken.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Perror** -Funktion gibt eine Fehlermeldung an **"stderr"**. **_wperror** ist eine Breitzeichen-Version von **_perror**; das *Nachricht* Argument **_wperror** ist eine Breitzeichen-Zeichenfolge. **_wperror** und **_perror** Verhalten sich andernfalls identisch.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tperror**|**perror**|**perror**|**_wperror**|
+
+*Nachricht* gedruckt wird zuerst, gefolgt von einem Doppelpunkt, die Systemfehlermeldung zu dem letzten Bibliotheksaufruf, die den Fehler verursacht hat, und schließlich ein neue-Zeile-Zeichen. Wenn *Nachricht* ist ein null-Zeiger oder ein Zeiger auf eine null-Zeichenfolge **Perror** druckt nur die Systemfehlermeldung.
+
+Die Fehlernummer wird in der Variablen [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (in ERRNO.H definiert) gespeichert. Über die Variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) wird auf die Systemfehlermeldungen zugegriffen, die als Array von Meldungen nach Fehlernummern geordnet sind. **pError** druckt die entsprechende Fehlermeldung mit der **Errno** Wert als Index für **_sys_errlist**. Der Wert der Variablen [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ist definiert als die maximale Anzahl von Elementen in der **_sys_errlist** Array.
+
+Rufen Sie für die genauesten Ergebnisse, **Perror** sofort, nachdem eine Bibliotheksroutine einen Fehler zurückgibt. Andernfalls können nachfolgende Aufrufe überschreiben die **Errno** Wert.
+
+Im Windows-Betriebssystem, einige **Errno** Werte in ERRNO aufgeführt. H werden nicht verwendet. Diese Werte sind für die Verwendung des UNIX-Betriebssystems reserviert. Finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) eine Liste der **Errno** Werte, die von Windows-Betriebssystems verwendet. **pError** druckt eine leere Zeichenfolge für eine beliebige **Errno** Wert nicht von diesen Plattformen verwendet wird.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**perror**|\<stdio.h > oder \<stdlib.h >|
+|**_wperror**|\<stdio.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_perror.c
+// compile with: /W3
+/* This program attempts to open a file named
+* NOSUCHF.ILE. Because this file probably doesn't exist,
+* an error message is displayed. The same message is
+* created using perror, strerror, and _strerror.
+*/
+
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <io.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <share.h>
+
+int main( void )
+{
+   int  fh;
+
+   if( _sopen_s( &fh, "NOSUCHF.ILE", _O_RDONLY, _SH_DENYNO, 0 ) != 0 )
+   {
+      /* Three ways to create error message: */
+      perror( "perror says open failed" );
+      printf( "strerror says open failed: %s\n",
+         strerror( errno ) ); // C4996
+      printf( _strerror( "_strerror says open failed" ) ); // C4996
+      // Note: strerror and _strerror are deprecated; consider
+      // using strerror_s and _strerror_s instead.
+   }
+   else
+   {
+      printf( "open succeeded on input file\n" );
+      _close( fh );
+   }
+}
+```
+
+```Output
+perror says open failed: No such file or directory
+strerror says open failed: No such file or directory
+_strerror says open failed: No such file or directory
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
+[clearerr](clearerr.md)<br/>
+[ferror](ferror.md)<br/>
+[strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

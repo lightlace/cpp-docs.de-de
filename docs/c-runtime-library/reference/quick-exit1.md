@@ -1,13 +1,13 @@
 ---
 title: quick_exit1 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - quick_exit
@@ -33,57 +33,62 @@ dev_langs:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30c8ae3290ac4b15247b88b0b2201634e42b560b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fde06fc83b27b8bba43e3fa929cc8b97bb68dd06
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="quickexit"></a>quick_exit
-Bewirkt eine normale Programmbeendigung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__declspec(noreturn) void quick_exit(  
-    int status  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- Status  
- Der an die Hostumgebung zurückzugebende Statuscode.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die `quick_exit` -Funktion kann nichts an den Aufrufer zurückgeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `quick_exit` -Funktion bewirkt eine normale Programmbeendigung. Sie ruft keine von `atexit`oder `_onexit` registrierten Funktionen oder durch die `signal` -Funktion registrierten Signalhandler auf. Das Verhalten ist undefiniert, wenn `quick_exit` mehrfach aufgerufen wird oder wenn die Funktion `exit` ebenfalls aufgerufen wird.  
-  
- Die Funktion `quick_exit` ruft die von `at_quick_exit`registrierten Funktionen in LIFO-Reihenfolge (Last-In, First-Out) auf, abgesehen von den beim Registrieren der Funktion bereits aufgerufenen Funktionen.  Da Verhalten ist undefiniert, wenn ein [longjmp](../../c-runtime-library/reference/longjmp.md) -Aufruf während des Aufrufs einer registrierten Funktion erfolgt, die den Aufruf der Funktion beenden würde.  
-  
- Nachdem die registrierten Funktionen aufgerufen wurden, ruft `quick_exit` `_Exit` auf und verwendet dazu den `status` -Wert, um die Steuerung an die Hostumgebung zurückzugeben.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`quick_exit`|\<process.h> oder\<stdlib.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_spawn, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Bewirkt eine normale Programmbeendigung.
+
+## <a name="syntax"></a>Syntax
+
+```C
+__declspec(noreturn) void quick_exit(
+    int status
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*status*<br/>
+Der an die Hostumgebung zurückzugebende Statuscode.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die **Quick_exit** -Funktion kann nicht an den Aufrufer zurückgeben.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Quick_exit** Funktion bewirkt eine normale programmbeendigung. Sie ruft keine registriert, indem Sie Funktionen **Atexit**, **_onexit** oder vom registrierten Signalhandler der **Signal** Funktion. Verhalten ist undefiniert, wenn **Quick_exit** aufgerufen wird, mehr als nach, und wenn die **beenden** Funktion wird auch aufgerufen.
+
+Die **Quick_exit** Funktionsaufrufe in Last in, First Out (LIFO)-Auftrag, die von registrierten Funktionen **At_quick_exit**, abgesehen von den für diese Funktionen bereits wird aufgerufen, wenn die Funktion registriert wurde.  Das Verhalten ist undefiniert, wenn ein [longjmp](longjmp.md)-Aufruf während des Aufrufs einer registrierten Funktion erfolgt, die den Aufruf der Funktion beenden würde.
+
+Nachdem die registrierten Funktionen aufgerufen wurden, **Quick_exit** ruft **_Exit** mithilfe der *Status* Wert, um die Steuerung an die hostumgebung zurückzugeben.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**quick_exit**|\<process.h> oder\<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

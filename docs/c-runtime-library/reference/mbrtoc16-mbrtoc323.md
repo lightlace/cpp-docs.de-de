@@ -1,13 +1,13 @@
 ---
 title: mbrtoc16, mbrtoc323 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbrtoc16
@@ -36,84 +36,89 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e686a39266587fdc214ddbb0757672a57b94314
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 842950535dd71ba678e00a3203df17625ab50a4d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
-Übersetzt das erste Multibytezeichen in einer schmalen Zeichenfolge in das entsprechende UTF-16- oder UTF-32-Zeichen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-size_t mbrtoc16(   
-   char16_t* destination,   
-   const char* source,   
-   size_t max_bytes,   
-   mbstate_t* state   
-);  
-  
-size_t mbrtoc32(  
-   char32_t* destination,   
-   const char* source,   
-   size_t max_bytes,   
-   mbstate_t* state   
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `destination`  
- Zeiger auf die `char16_t` - oder `char32_t` -Entsprechung des zu konvertierenden Multibytezeichens. Wenn der Wert NULL ist, speichert die Funktion keinen Wert.  
-  
- `source`  
- Zeiger auf die zu konvertierende Multibyte-Zeichenfolge.  
-  
- `max_bytes`  
- Die maximale Anzahl Bytes in `source` , die für ein zu konvertierendes Zeichen untersucht werden sollen. Dabei sollte es sich um einen Wert zwischen 1 und der Anzahl Bytes handeln, die in `source`verbleiben, einschließlich eines eventuellen Nullterminators.  
-  
- `state`  
- Zeiger auf ein `mbstate_t` -Konvertierungsstatusobjekt, das verwendet wird, um die Multibyte-Zeichenfolge in Form von einem oder mehreren Ausgabezeichen zu interpretieren.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall wird der Wert der ersten erfüllten Bedingung zurückgegeben, auf der Grundlage des aktuellen `state` -Werts:  
-  
-|Wert|Bedingung|  
-|-----------|---------------|  
-|0|Die nächsten `max_bytes` oder weniger Zeichen, die aus `source` konvertiert werden, entsprechen dem breiten Nullzeichen, das den gespeicherten Wert darstellt, wenn `destination` nicht NULL ist.<br /><br /> `state` enthält den UMSCHALT-Status zu Anfang.|  
-|Zwischen 1 und `max_bytes`einschließlich|Der zurückgegebene Wert ist die Anzahl Bytes von `source` , die ein gültiges Multibytezeichen bilden. Das konvertierte Breitzeichen wird gespeichert, wenn `destination` nicht NULL ist.|  
-|-3|Das nächste Breitzeichen, das sich aus einem vorhergehenden Aufruf der Funktion ergab, wurde in `destination` gespeichert, falls `destination` nicht NULL ist. Keine Bytes von `source` werden von diesem Aufruf der Funktion verbraucht.<br /><br /> Wenn  `source` auf ein Multibytezeichen verweist, für dessen Darstellung mehr als ein Breitzeichen erforderlich ist (z. B. ein Ersatzzeichenpaar), wird der `state` -Wert aktualisiert, sodass der nächste Funktionsaufruf das zusätzliche Zeichen ausgibt.|  
-|-2|Die nächsten `max_bytes` -Bytes stellen ein unvollständiges, aber möglicherweise gültiges Multibytezeichen dar. Es wird kein Wert in `destination`gespeichert. Dieses Ergebnis kann auftreten, wenn `max_bytes` 0 (null) ist.|  
-|-1|Es ist ein Codierungsfehler aufgetreten. Die nächsten `max_bytes` oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei. Es wird kein Wert in `destination`gespeichert.<br /><br /> `EILSEQ` ist in `errno` gespeichert, und der Konvertierungsstatus `state` ist nicht angegeben.|  
-  
-## <a name="remarks"></a>Hinweise  
- Die `mbrtoc16` -Funktion liest bis zu `max_bytes` Bytes aus `source` , um das erste vollständige gültige Multibytezeichen zu finden, und speichert dann das entsprechende UTF-16-Zeichen in `destination`. Die Quellbytes werden gemäß dem Multibyte-Gebietsschema des aktuellen Threads interpretiert. Wenn für das Multibytezeichen mehr als ein UTF-16-Ausgabezeichen erforderlich ist, wie etwa bei einem Ersatzzeichenpaar, wird der `state` -Wert so festgelegt, dass beim nächsten Aufruf von `destination` das nächste UTF-16-Zeichen in `mbrtoc16`gespeichert wird. Die `mbrtoc32` -Funktion ist identisch, jedoch wird die Ausgabe als UTF-32-Zeichen gespeichert.  
-  
- Wenn `source` NULL ist, geben diese Funktionen das Äquivalent eines Aufrufs mit den Argumenten `NULL` für `destination`, `""` für `source`und `1` für `max_bytes`zurück. Die übergebenen Werte von `destination` und `max_bytes` werden ignoriert.  
-  
- Wenn `source` nicht NULL ist, beginnt die Funktion am Anfang der Zeichenfolge und untersucht bis zu `max_bytes` Bytes, um die erforderliche Anzahl Bytes zum Abschließen des nächsten Multibytezeichens zu bestimmen, einschließlich eventueller Umschaltsequenzen. Wenn die untersuchten Bytes ein gültiges und vollständiges Multibytezeichen enthalten, konvertiert die Funktion das Zeichen in das bzw. die entsprechende(n) 16 Bit oder 32 Bit breite(n) Zeichen. Wenn `destination` nicht NULL ist, speichert die Funktion das erste (und möglicherweise einzige) Ergebniszeichen im Ziel. Wenn weitere Ausgabezeichen erforderlich sind, wird ein Wert in `state`festgelegt, damit nachfolgende Aufrufe der Funktion die zusätzlichen Zeichen ausgeben und den Wert -3 zurückgeben. Wenn keine weiteren Ausgabezeichen erforderlich sind, wird `state` auf den ursprünglichen Umschaltzustand zurückgesetzt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|C-Header|C++-Header|  
-|--------------|--------------|------------------|  
-|`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
- [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
- [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md)   
- [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)
+
+Übersetzt das erste Multibytezeichen in einer schmalen Zeichenfolge in das entsprechende UTF-16- oder UTF-32-Zeichen.
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t mbrtoc16(
+   char16_t* destination,
+   const char* source,
+   size_t max_bytes,
+   mbstate_t* state
+);
+
+size_t mbrtoc32(
+   char32_t* destination,
+   const char* source,
+   size_t max_bytes,
+   mbstate_t* state
+);
+
+```
+
+### <a name="parameters"></a>Parameter
+
+*Ziel*<br/>
+Zeiger auf die **char16_t** oder **char32_t** entspricht, der das zu konvertierende multibyte-Zeichen. Wenn der Wert NULL ist, speichert die Funktion keinen Wert.
+
+*Datenquelle*<br/>
+Zeiger auf die zu konvertierende Multibyte-Zeichenfolge.
+
+*max_bytes*<br/>
+Die maximale Anzahl von Bytes in *Quelle* auf ein zu konvertierendes Zeichen untersucht. Dies muss ein Wert zwischen 1 und die Anzahl der Bytes, einschließlich eines eventuellen nullterminators, die im verbleibenden *Quelle*.
+
+*state*<br/>
+Zeiger auf eine **Mbstate_t** konvertierungszustandsobjekt verwendet, um die multibyte-Zeichenfolge auf einem oder mehreren Ausgabezeichen zu interpretieren.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei Erfolg gibt den Wert des ersten erfüllten Bedingung, bestimmten aktuellen *Zustand* Wert:
+
+|Wert|Bedingung|
+|-----------|---------------|
+|0|Das nächste *Max_bytes* oder weniger Zeichen aus konvertiert *Quelle* entsprechen dem breiten Nullzeichen, das den Wert gespeichert werden, wenn *Ziel* ist ungleich null.<br /><br /> *Status* enthält den ursprünglichen Umschaltzustand zurückgesetzt.|
+|Zwischen 1 und *Max_bytes*(einschließlich)|Der zurückgegebene Wert ist die Anzahl der Bytes der *Quelle* , ein gültiges Multibytezeichen abgeschlossen. Das konvertierte Breitzeichen wird gespeichert, wenn *Ziel* ist ungleich null.|
+|-3|Der nächste Breitzeichen, das aus einem vorherigen Aufruf der Funktion stammenden in gespeichert wurde *Ziel* Wenn *Ziel* ist ungleich null. Keine Bytes von *Quelle* durch diesen Aufruf an die Funktion verwendet werden.<br /><br /> Wenn *Quelle* verweist auf ein Multibytezeichen, die mehr als ein Breitzeichen (z. B. ein Ersatzzeichenpaar) darstellen, erfordert die *Zustand* Wert wird aktualisiert, sodass der nächste Funktionsaufruf schreibt  das zusätzliche Zeichen.|
+|-2|Das nächste *Max_bytes* Bytes stellen ein unvollständiges, aber möglicherweise ungültig, multibyte-Zeichen dar. Kein Wert befindet sich in *Ziel*. Dieses Ergebnis kann auftreten, wenn *Max_bytes* 0 (null).|
+|-1|Es ist ein Codierungsfehler aufgetreten. Das nächste *Max_bytes* oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei. Kein Wert befindet sich in *Ziel*.<br /><br /> **EILSEQ** befindet sich in **Errno** und der Konvertierungsstatus *Zustand* ist nicht angegeben.|
+
+## <a name="remarks"></a>Hinweise
+
+Die **mbrtoc16** Funktion liest bis zum *Max_bytes* Bytes vom *Quelle* die erste vollständige gültige Multibytezeichen, und speichert dann die entsprechende UTF-16 gefunden Zeichen in *Ziel*. Die Quellbytes werden gemäß dem Multibyte-Gebietsschema des aktuellen Threads interpretiert. Wenn das Multibytezeichen mehr als ein UTF-16-Ausgabezeichen, z. B. ein Ersatzzeichenpaar erfordert die *Status* festgelegt ist, speichern das nächste UTF-16-Zeichen in *Ziel* beim nächsten Aufruf von **mbrtoc16**. Die **mbrtoc32** -Funktion ist identisch, aber die Ausgabe wird als UTF-32-Zeichen gespeichert.
+
+Wenn *Quelle* Null ist, diese return Funktionen das Äquivalent eines Aufrufs mit den Argumenten **NULL** für *Ziel*, **""** für *Quelle*, und 1 für *Max_bytes*. Die übergebenen Werte von *Ziel* und *Max_bytes* werden ignoriert.
+
+Wenn *Quelle* ist ungleich null, die Funktion beginnt am Anfang der Zeichenfolge und untersucht bis zu *Max_bytes* Bytes bestimmen die Anzahl der Bytes, die zum Abschließen des nächsten multibytezeichens erforderlich einschließlich eventueller umschaltsequenzen. Wenn die untersuchten Bytes ein gültiges und vollständiges Multibytezeichen enthalten, konvertiert die Funktion das Zeichen in das bzw. die entsprechende(n) 16 Bit oder 32 Bit breite(n) Zeichen. Wenn *Ziel* nicht NULL ist, speichert die Funktion, die die erste (und möglicherweise einzige) ergebniszeichen im Ziel. Wenn weitere Ausgabezeichen erforderlich sind, wird ein Wert festgelegt, *Status*, sodass nachfolgende Aufrufe an die Funktion die zusätzlichen Zeichen ausgeben und den Wert-3 zurückgeben. Wenn keine weiteren Ausgabezeichen erforderlich sind, werden *Zustand* festgelegt ist, um den ursprünglichen Umschaltzustand zurückgesetzt.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|C-Header|C++-Header|
+|--------------|--------------|------------------|
+|**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[c16rtomb, c32rtomb](c16rtomb-c32rtomb1.md)<br/>
+[mbrtowc](mbrtowc.md)<br/>
+[mbsrtowcs](mbsrtowcs.md)<br/>
+[mbsrtowcs_s](mbsrtowcs-s.md)<br/>

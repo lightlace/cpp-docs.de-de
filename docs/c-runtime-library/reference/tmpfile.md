@@ -1,12 +1,12 @@
 ---
 title: tmpfile | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tmpfile
@@ -32,85 +32,89 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8a08b627ce29093f104614fb802dd1156bb2ac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d808b26341ea862965dc33c4c3b3b00ff06f2c6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tmpfile"></a>tmpfile
-Erstellt eine temporäre Datei. Diese Funktion ist veraltet, da eine sicherere Version verfügbar ist. Sie finden sie unter [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-FILE *tmpfile( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall gibt `tmpfile` einen Streamzeiger zurück. Andernfalls wird ein `NULL`-Zeiger zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion `tmpfile` erstellt eine temporäre Datei und gibt diesem Stream einen Zeiger zurück. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) oder [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
-  
- Wenn die Datei nicht geöffnet werden kann, gibt `tmpfile` einen `NULL`-Zeiger zurück. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei geschlossen wird, wenn das Programm normal beendet wird oder wenn `_rmtmp` aufgerufen wird, vorausgesetzt, dass sich das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird im (binären Lese-/Schreib-) Modus `w+b` geöffnet.  
-  
- Ein Fehler kann auftreten, wenn Sie mehr als TMP_MAX (siehe STDIO.H) Aufrufe mit `tmpfile` versuchen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`tmpfile`|\<stdio.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
+
+Erstellt eine temporäre Datei. Diese Funktion ist veraltet, da eine sicherere Version verfügbar ist. Sie finden sie unter [tmpfile_s](tmpfile-s.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+FILE *tmpfile( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Im Erfolgsfall **Tmpfile** gibt einen streamzeiger zurück. Andernfalls gibt es eine **NULL** Zeiger.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Tmpfile** Funktion erstellt eine temporäre Datei und gibt einen Zeiger auf diesen Datenstrom. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) oder [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](fopen-wfopen.md).
+
+Wenn die Datei kann nicht geöffnet werden, **Tmpfile** gibt eine **NULL** Zeiger. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei, beim Beenden des Programms normal oder wenn geschlossen ist **_rmtmp** aufgerufen wird, vorausgesetzt, dass das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird geöffnet, **w + b** (Lese-/Schreibzugriff binären) Modus.
+
+Fehler kann auftreten, wenn Sie, mehr als TMP_MAX versuchen (Siehe STDIO. H) Aufrufe mit **Tmpfile**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**tmpfile**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
 > [!NOTE]
->  Für dieses Beispiel benötigen Sie Administratorrechte, um es unter Windows Vista auszuführen.  
-  
-```  
-// crt_tmpfile.c  
-// compile with: /W3  
-// This program uses tmpfile to create a  
-// temporary file, then deletes this file with _rmtmp.  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   int  i;  
-  
-   // Create temporary files.  
-   for( i = 1; i <= 3; i++ )  
-   {  
-      if( (stream = tmpfile()) == NULL ) // C4996  
-      // Note: tmpfile is deprecated; consider using tmpfile_s instead  
-         perror( "Could not open new temporary file\n" );  
-      else  
-         printf( "Temporary file %d was created\n", i );  
-   }  
-  
-   // Remove temporary files.  
-   printf( "%d temporary files deleted\n", _rmtmp() );  
-}  
-```  
-  
-```Output  
-Temporary file 1 was created  
-Temporary file 2 was created  
-Temporary file 3 was created  
-3 temporary files deleted  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+> Für dieses Beispiel benötigen Sie Administratorrechte, um es unter Windows Vista auszuführen.
+
+```C
+// crt_tmpfile.c
+// compile with: /W3
+// This program uses tmpfile to create a
+// temporary file, then deletes this file with _rmtmp.
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   int  i;
+
+   // Create temporary files.
+   for( i = 1; i <= 3; i++ )
+   {
+      if( (stream = tmpfile()) == NULL ) // C4996
+      // Note: tmpfile is deprecated; consider using tmpfile_s instead
+         perror( "Could not open new temporary file\n" );
+      else
+         printf( "Temporary file %d was created\n", i );
+   }
+
+   // Remove temporary files.
+   printf( "%d temporary files deleted\n", _rmtmp() );
+}
+```
+
+```Output
+Temporary file 1 was created
+Temporary file 2 was created
+Temporary file 3 was created
+3 temporary files deleted
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[_rmtmp](rmtmp.md)<br/>
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _aligned_offset_recalloc_dbg | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_offset_recalloc_dbg
@@ -31,74 +31,79 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a492ec61090d20bb54fd0d90751cc41a1e7e2fb7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b4d371b5317db508b9669aba7304ee15c528cb3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
-Ändert die Größe eines Speicherblocks, der mit [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) oder [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) belegt ist und den Speicher auf 0 initialisiert (nur Debugversion).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void * _aligned_offset_recalloc_dbg(  
-   void *memblock,   
-   size_t num,   
-   size_t size,   
-   size_t alignment,  
-   size_t offset,  
-   const char *filename,  
-   int linenumber  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `memblock`  
- Der Zeiger auf den aktuellen Speicherblock.  
-  
- [in] `num`  
- Anzahl der Elemente.  
-  
- [in] `size`  
- Länge jedes Elements in Bytes.  
-  
- [in] `alignment`  
- Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.  
-  
- [in] `offset`  
- Der Offset in der Speicherbelegung zum Erzwingen der Ausrichtung.  
-  
- [in] `filename`  
- Zeiger zum Namen der Quelldatei, der den `realloc`-Vorgang angefordert hat, oder NULL.  
-  
- [in] `linenumber`  
- Zeilennummer in der Quelldatei, in der der `realloc`-Vorgang angefordert wurde, oder NULL.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_aligned_offset_recalloc_dbg` gibt einen leeren Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück. Der Rückgabewert ist `NULL`, wenn die Größe 0 ist und das Pufferargument nicht `NULL` ist oder wenn nicht genügend Speicherplatz vorhanden ist, um den Block auf die vorgegebene Größe auszudehnen. Im ersten Fall wird der ursprüngliche Block freigegeben. Im zweiten Fall wird der ursprüngliche Block nicht geändert. Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als den leeren zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
-  
-## <a name="remarks"></a>Hinweise  
- `_aligned_offset_realloc_dbg` ist eine Debugversion der [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder `_aligned_offset_recalloc_dbg`-Aufruf zu einem `_aligned_offset_recalloc`-Aufruf reduziert. Sowohl `_aligned_offset_recalloc` als auch `_aligned_offset_recalloc_dbg` belegen einen Speicherblock im Basisheap neu, jedoch verfügt `_aligned_offset_recalloc_dbg` über mehrere Debugfunktionen: Puffer auf beiden Seiten des Benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen Blocktypparameter zum Nachverfolgen bestimmter Belegungstypen und `filename`/`linenumber`-Informationen zum Ermitteln des Ursprungs von Belegungsanforderungen.  
-  
- `_aligned_offset_realloc_dbg` belegt den angegebenen Speicherblock neu mit etwas mehr Speicherplatz als der angeforderten `newSize`. `newSize` kann größer oder kleiner sein als die Größe des ursprünglich belegten Speicherblocks. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Durch die Neubelegung wird der ursprüngliche Speicherblock möglicherweise an einen anderen Speicherort im Heap verschoben und auch die Größe des Speicherblocks geändert. Wenn der Speicherblock verschoben wird, wird der Inhalt des ursprünglichen Blocks überschrieben.  
-  
- Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe(`num` * `size`) größer als `_HEAP_MAXREQ` war. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus überprüft `_aligned_offset_recalloc_dbg` auch die eigenen Parameter. Wenn `alignment` keine Potenz von 2 ist oder `offset` größer als oder gleich der angeforderten Größe und ungleich 0 ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
-  
- Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details (CRT Debug Heap-Details)](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und ihrer Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapbelegungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_aligned_offset_recalloc_dbg`|\<malloc.h>|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenausrichtung](../../c-runtime-library/data-alignment.md)
+
+Ändert die Größe eines Speicherblocks, der mit [_aligned_malloc](aligned-malloc.md) oder [_aligned_offset_malloc](aligned-offset-malloc.md) belegt ist und den Speicher auf 0 initialisiert (nur Debugversion).
+
+## <a name="syntax"></a>Syntax
+
+```C
+void * _aligned_offset_recalloc_dbg(
+   void *memblock,
+   size_t num,
+   size_t size,
+   size_t alignment,
+   size_t offset,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*memblock*<br/>
+Der Zeiger auf den aktuellen Speicherblock.
+
+*Anzahl*<br/>
+Anzahl der Elemente.
+
+*size*<br/>
+Länge jedes Elements in Bytes.
+
+*Ausrichtung*<br/>
+Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
+
+*offset*<br/>
+Der Offset in der Speicherbelegung zum Erzwingen der Ausrichtung.
+
+*filename*<br/>
+Ein Zeiger auf den Namen der Quelldatei, die die Realloc oder NULL angefordert hat.
+
+*linenumber*<br/>
+Zeilennummer in der Quelldatei, in der Realloc angefordert wurde, oder NULL.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_aligned_offset_recalloc_dbg** gibt einen void-Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück. Der Rückgabewert ist **NULL** Wenn die Größe 0 (null beträgt) und das pufferargument nicht **NULL**, oder es ist nicht genügend Arbeitsspeicher verfügbar, um den Block auf die vorgegebene Größe auszudehnen. Im ersten Fall wird der ursprüngliche Block freigegeben. Im zweiten Fall wird der ursprüngliche Block nicht geändert. Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als den leeren zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.
+
+## <a name="remarks"></a>Hinweise
+
+**_aligned_offset_realloc_dbg** ist eine Debugversion der [_aligned_offset_recalloc](aligned-offset-recalloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, bei jedem Aufruf **_aligned_offset_recalloc_dbg** wird zu einem Aufruf von reduziert **_aligned_offset_recalloc**. Beide **_aligned_offset_recalloc** und **_aligned_offset_recalloc_dbg** weisen einen Speicherblock im Basisheap, jedoch **_aligned_offset_recalloc_dbg** verfügt mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen von bestimmten belegungstypen und *Filename*/*Linenumber*  Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+
+**_aligned_offset_realloc_dbg** belegt den angegebenen Speicherblock mit etwas mehr Speicherplatz als der angeforderten neu *NewSize*. *NewSize* möglicherweise größer oder kleiner als die Größe des ursprünglich belegten Speicherblocks. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Durch die Neubelegung wird der ursprüngliche Speicherblock möglicherweise an einen anderen Speicherort im Heap verschoben und auch die Größe des Speicherblocks geändert. Wenn der Speicherblock verschoben wird, wird der Inhalt des ursprünglichen Blocks überschrieben.
+
+Diese Funktion legt **Errno** auf **ENOMEM** , wenn die speicherbelegung fehlgeschlagen ist oder wenn die angeforderte Größe (*Anzahl* * *Größe* ) war größer als **_HEAP_MAXREQ**. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus **_aligned_offset_recalloc_dbg** überprüft die eigenen Parameter. Wenn *Ausrichtung* Potenz von 2 ist oder wenn *Offset* ist größer als oder gleich der angeforderten Größe und ungleich NULL ist, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und legt **Errno** auf **EINVAL**.
+
+Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und ihrer Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapbelegungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_aligned_offset_recalloc_dbg**|\<malloc.h>|
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenausrichtung](../../c-runtime-library/data-alignment.md)<br/>

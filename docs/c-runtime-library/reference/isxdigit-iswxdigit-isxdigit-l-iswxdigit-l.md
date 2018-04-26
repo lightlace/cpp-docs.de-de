@@ -1,12 +1,12 @@
 ---
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswxdigit_l
@@ -43,74 +43,78 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5849caeddac4b52c80a29b5f4a6e85e2fe3e47b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7ee95f058056464ec0b9ea4b7b35154a15a7439e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
-Bestimmt, ob eine ganze Zahl ein Zeichen darstellt, das eine Hexadezimalziffer ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int isxdigit(  
-   int c   
-);  
-int iswxdigit(  
-   wint_t c   
-);  
-int _isxdigit_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswxdigit_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung einer Hexadezimalziffer ist. `isxdigit` Gibt einen Wert ungleich NULL zurück, wenn `c` eine Hexadezimalziffer (A - F, a - f oder 0 - 9). `iswxdigit` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Breitzeichen ist, das einem Hexadezimalziffernzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
-  
- Für das Gebietsschema "C " unterstützt die `iswxdigit`-Funktion keine Unicode-Hexadezimalzeichen voller Breite.  
-  
- Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Das Verhalten von `isxdigit` und `_isxdigit_l` ist nicht definiert, wenn `c` nicht EOF ist oder nicht im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und `c` keinem dieser Werte entspricht, lösen die Funktionen eine Assertion aus.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istxdigit`|`isxdigit`|`isxdigit`|`iswxdigit`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`isxdigit`|\<ctype.h>|  
-|`iswxdigit`|\<ctype.h> oder \<wchar.h>|  
-|`_isxdigit_l`|\<ctype.h>|  
-|`_iswxdigit_l`|\<ctype.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)
+
+Bestimmt, ob eine ganze Zahl ein Zeichen darstellt, das eine Hexadezimalziffer ist.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int isxdigit(
+   int c
+);
+int iswxdigit(
+   wint_t c
+);
+int _isxdigit_l(
+   int c,
+   _locale_t locale
+);
+int _iswxdigit_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung einer Hexadezimalziffer ist. **Isxdigit** gibt einen Wert ungleich NULL zurück, wenn *c* eine Hexadezimalziffer (A - F, a - f oder 0 - 9). **Iswxdigit** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen, das einem hexadezimalziffernzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+
+Für das Gebietsschema "C" die **Iswxdigit** hexadezimale Unicode-Zeichen mit voller Breite-Funktion nicht unterstützt.
+
+Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Das Verhalten des **Isxdigit** und **_isxdigit_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**isxdigit**|\<ctype.h>|
+|**iswxdigit**|\<ctype.h> oder \<wchar.h>|
+|**_isxdigit_l**|\<ctype.h>|
+|**_iswxdigit_l**|\<ctype.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>

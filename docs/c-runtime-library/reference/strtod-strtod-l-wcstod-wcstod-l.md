@@ -1,12 +1,12 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcstod
@@ -51,17 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2b1e9971b4e4287b9a7578cf1295ed3c6f5cca1e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -71,20 +71,20 @@ Konvertieren von Zeichenfolgen in einen Wert mit doppelter Genauigkeit
 
 ```C
 double strtod(
-   const char *nptr,
+   const char *strSource,
    char **endptr
 );
 double _strtod_l(
-   const char *nptr,
+   const char *strSource,
    char **endptr,
    _locale_t locale
 );
 double wcstod(
-   const wchar_t *nptr,
+   const wchar_t *strSource,
    wchar_t **endptr
 );
 double wcstod_l(
-   const wchar_t *nptr,
+   const wchar_t *strSource,
    wchar_t **endptr,
    _locale_t locale
 );
@@ -92,53 +92,50 @@ double wcstod_l(
 
 ### <a name="parameters"></a>Parameter
 
-*nptr*  
+*strSource*<br/>
 Zu konvertierende mit NULL endende Zeichenfolge.
 
-*endptr*  
+*endptr*<br/>
 Zeiger auf ein Zeichen, mit dem die Überprüfung beendet wird.
 
-*locale*  
+*locale*<br/>
 Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-`strtod` Gibt den Wert der Gleitkommazahl, außer wenn die Darstellung einen Überlauf verursachen würde in dem Fall wird die Funktion zurückgegeben werden +/-`HUGE_VAL`. Das Zeichen von `HUGE_VAL` entspricht dem Zeichen des Werts, der nicht angezeigt werden kann. `strtod` gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+**Strtod** gibt den Wert der Gleitkommazahl, außer wenn die Darstellung einen Überlauf verursachen würde in dem Fall wird die Funktion zurückgegeben werden +/-**HUGE_VAL**. Das Vorzeichen des **HUGE_VAL** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtod** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
 
-`wcstod` gibt Werte analog zu `strtod` zurück. `errno` wird für beide Funktionen auf `ERANGE` gesetzt, wenn ein Überlauf oder ein Unterlauf auftritt, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**Wcstod** gibt Werte analog zu **Strtod**. Für beide Funktionen **Errno** festgelegt ist, um **ERANGE** Wenn Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Funktion wandelt die Eingabezeichenfolge *Nptr* zu einem `double`. Die `strtod` -Funktion konvertiert *Nptr* auf einen Wert mit doppelter Genauigkeit. `strtod` Stoppt das Lesen der Zeichenfolge *Nptr* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. `wcstod` ist eine Breitzeichen-Version von `strtod`; die *Nptr* -Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **doppelte**. Die **Strtod** -Funktion konvertiert *StrSource* auf einen Wert mit doppelter Genauigkeit. **Strtod** stoppt das Lesen der Zeichenfolge *StrSource* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. **Wcstod** ist eine Breitzeichen-Version von **Strtod**; die *StrSource* -Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
 |TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|`_tcstod`|`strtod`|`strtod`|`wcstod`|
-|`_tcstod_l`|`_strtod_l`|`_strtod_l`|`_wcstod_l`|
+|**_tcstod**|**strtod**|**strtod**|**wcstod**|
+|**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-Die `LC_NUMERIC` -kategorieneinstellung des aktuellen Gebietsschemas bestimmt erkennen des Basiszeichens in Punkt *Nptr*. Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Funktionen ohne das `_l` -Suffix verwenden das aktuelle Gebietsschema. `_strtod_l` ist identisch mit `_strtod_l` , verwenden jedoch den *Gebietsschema* übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **LC_NUMERIC** -kategorieneinstellung des aktuellen Gebietsschemas bestimmt erkennen des Basiszeichens in Punkt *StrSource*. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtod_l** ist identisch mit **_strtod_l** , verwenden jedoch den *Gebietsschema* übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht `NULL`, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Speicherstelle *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *Nptr* an der Speicherstelle gespeichert *Endptr*.
+Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Speicherstelle *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *StrSource* an der Speicherstelle gespeichert *Endptr*.
 
-`strtod` erwartet *Nptr* , zeigen Sie auf eine Zeichenfolge mit einem der folgenden Formate:
+**Strtod** erwartet *StrSource* , zeigen Sie auf eine Zeichenfolge mit einem der folgenden Formate:
 
-[*Leerzeichen*] [*Anmeldung*] {*Ziffern* [*Basis* *Ziffern*] &#124; *Basis* *Ziffern*} [{**e** &#124; **E**} [*Anmeldung*] *Ziffern*]  
-[*Leerzeichen*] [*Anmeldung*] {**0 X** &#124; **0 X**} {*Hexdigits* [*Basis* *Hexdigits*] &#124; *Basis* *Hexdigits*} [{**p** &#124; **P**} [*Anmeldung*] *Hexdigits*]  
-[*Leerzeichen*] [*Anmeldung*] {**INF** &#124; **UNENDLICH**}  
-[*whitespace*] [*sign*] **NAN** [*sequence*]
+[*Leerzeichen*] [*Anmeldung*] {*Ziffern* [*Basis* *Ziffern*] &#124;  *Basis* *Ziffern*} [{**e** &#124; **E**} [*Anmeldung*] *Ziffern*] [*Leerzeichen*] [*Anmeldung*] {**0 X** &#124; **0 X**} {*Hexdigits* [ *Basis* *Hexdigits*] &#124; *Basis* *Hexdigits*} [{**p** &#124; **P**} [*Anmeldung*] *Hexdigits*] [*Leerzeichen*] [*Anmeldung*] {} **INF** &#124; **UNENDLICH**} [*Leerzeichen*] [*Anmeldung*]  **"NaN"** [*Sequenz*]
 
 Das optionale führende *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Anmeldung* ist entweder Pluszeichen (+) oder Minuszeichen (-) *Ziffern* sind mindestens eine Dezimalstelle; *Hexdigits* sind eine oder mehrere hexadezimale Ziffern; *Basis* ist der Punkt Basiszeichens, entweder einen Punkt (.) im Gebietsschema "C" "Standard" oder die Gebietsschema-spezifische Wert, wenn das aktuelle Gebietsschema unterschiedlich ist, oder wenn *Gebietsschema* angegeben ist; ein *Sequenz* ist eine Sequenz von alphanumerischen Zeichen oder Unterstriche enthalten. In dezimaler und hexadezimaler bildet Wenn keine Ziffern vor dem Basiszeichen Punkt stehen muss mindestens eine nach dem Punkt Basiszeichen stehen. Das Dezimalformat Dezimalstellen können werden ein Exponent folgen, besteht aus einem einführenden Buchstaben (**e** oder **E**) und einer optional Zahl mit Vorzeichen. In im hexadezimalen Format die Hexadezimalzeichen können werden ein Exponent folgen, besteht aus einem einführenden Buchstaben (**p** oder **P**) und optional mit Vorzeichen ganze Hexadezimalzahl darstellt, die die der Exponent als Potenz von 2. In einer der Formen Wenn weder ein exponententeil noch ein Punkt Basiszeichen angezeigt wird, wird ein Punkt Basiszeichen angenommen, dass die letzte Ziffer in der Zeichenfolge folgt. Groß-/Kleinschreibung wird ignoriert, sowohl die **INF** und **"NaN"** Forms. Das erste Zeichen, das nicht mit einer der folgenden Formen passt beendet die Überprüfung.
 
-Die UCRT Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Format (**d** oder **D**) Exponent Buchstaben. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code. Die UCRT Versionen unterstützen Hexadezimalzeichenfolgen und Round-Tripping "INF" und "NaN"-Werte, die in früheren Versionen nicht unterstützt wurden. Dies kann auch wichtige Änderungen im Code verursachen. Beispielsweise würde die Zeichenfolge "0x1a" interpretiert werden, durch `strtod` als 0,0 in früheren Versionen, sondern als 26.0 in der UCRT-Version.
+Die UCRT Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Format (**d** oder **D**) Exponent Buchstaben. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code. Die UCRT Versionen unterstützen Hexadezimalzeichenfolgen und Round-Tripping "INF" und "NaN"-Werte, die in früheren Versionen nicht unterstützt wurden. Dies kann auch wichtige Änderungen im Code verursachen. Beispielsweise würde die Zeichenfolge "0x1a" interpretiert werden, durch **Strtod** als 0,0 in früheren Versionen, sondern als 26.0 in der UCRT-Version.
 
 ## <a name="requirements"></a>Anforderungen
 
-|-Routine zurückgegebener Wert|Erforderlicher Header|
+|Routine|Erforderlicher Header|
 |-------------|---------------------|
-|`strtod`, `_strtod_l`|C: &lt;stdlib.h> C++: &lt;cstdlib> oder &lt;stdlib.h> |
-|`wcstod`, `_wcstod_l`|C: &lt;stdlib.h> oder &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> oder &lt;wchar.h> |
+|**Strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> oder &lt;stdlib.h> |
+|**Wcstod**, **_wcstod_l**|C: &lt;stdlib.h> oder &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> oder &lt;wchar.h> |
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
@@ -209,14 +206,14 @@ string = 10110134932
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
-[Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
-[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
-[Gebietsschema](../../c-runtime-library/locale.md)   
-[Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte](../../c-runtime-library/string-to-numeric-value-functions.md)   
-[strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
-[strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
-[atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
-[localeconv](../../c-runtime-library/reference/localeconv.md)   
-[_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
-[_free_locale](../../c-runtime-library/reference/free-locale.md)
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
+[_free_locale](free-locale.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _unlock_file | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlock_file
@@ -34,46 +34,49 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 503087d84e65e556fa610efbf0054c66ee774d48
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
-Hebt die Sperre einer Datei auf, sodass andere Prozesse auf die Datei zugreifen können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void _unlock_file(  
-   FILE* file  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `file`  
- Dateihandle.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_unlock_file`-Funktion hebt die Sperre der von `file` angegebenen Datei auf. Das Entsperren einer Datei ermöglicht anderen Prozessen den Zugriff auf die Datei. Diese Funktion sollte nur aufgerufen werden, wenn zuvor `_lock_file` auf dem `file`-Zeiger aufgerufen wurde. Das Aufrufen von `_unlock_file` auf einer Datei, die nicht gesperrt ist, kann zu einem Deadlock führen. Ein Beispiel finden Sie unter [_lock_file](../../c-runtime-library/reference/lock-file.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_unlock_file`|\<stdio.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_lock_file](../../c-runtime-library/reference/lock-file.md)
+
+Hebt die Sperre einer Datei auf, sodass andere Prozesse auf die Datei zugreifen können.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void _unlock_file(
+   FILE* file
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Datei* Dateihandle.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_unlock_file** Funktion entsperrt angegebene Datei *Datei*. Das Entsperren einer Datei ermöglicht anderen Prozessen den Zugriff auf die Datei. Diese Funktion darf nicht aufgerufen werden, es sei denn, **_lock_file** hieß früher auf den *Datei* Zeiger. Aufrufen von **_unlock_file** auf eine Datei, die nicht gesperrt ist, kann zu einem Deadlock führen. Ein Beispiel finden Sie unter [_lock_file](lock-file.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_unlock_file**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Dateibehandlung](../../c-runtime-library/file-handling.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_lock_file](lock-file.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _close | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _close
@@ -32,58 +32,64 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e49906a1ea0bf66400a6ac753c5d4041bc47217c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="close"></a>_close
-Schließt eine Datei.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _close(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `fd`  
- Dateideskriptor, der auf die geöffnete Datei verweist.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_close` gibt 0 zurück, wenn die Datei erfolgreich geschlossen wurde. Ein Rückgabewert von – 1 zeigt einen Fehler.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_close`-Funktion schließt die mit `fd` verknüpfte Datei.  
-  
- Der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle werden geschlossen. Daher ist es nicht notwendig, `CloseHandle` aufzurufen, wenn die Datei ursprünglich mithilfe der Win32-Funktion `CreateFile` geöffnet und mit `_open_osfhandle` in einen Dateideskriptor umgewandelt wurde.  
-  
- Diese Funktion überprüft ihre Parameter. Wenn `fd` ein fehlerhafter Dateideskriptor ist, wird – wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben – der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion -1 zurück, und `errno` wird auf `EBADF` gesetzt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------|---------------------|  
-|`_close`|\<io.h>|\<errno.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [_open](../../c-runtime-library/reference/open-wopen.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Schließt eine Datei.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _close(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*fd*<br/>
+Dateideskriptor, der auf die geöffnete Datei verweist.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_close** gibt 0 zurück, wenn die Datei wurde erfolgreich geschlossen. Ein Rückgabewert von – 1 zeigt einen Fehler.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_close** -Funktion schließt die zugeordnete Datei *fd*.
+
+Der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle werden geschlossen. Es ist daher nicht notwendig, **CloseHandle** , wenn die Datei ursprünglich geöffnet wurde mit der Win32-Funktion **CreateFile** und konvertiert Sie in eine Datei Deskriptor **_open_osfhandle**.
+
+Diese Funktion überprüft ihre Parameter. Wenn *fd* ein fehlerhaften Dateideskriptor wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen gibt-1 zurück und **Errno** festgelegt ist, um **EBADF**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|Optionaler Header|
+|-------------|---------------------|---------------------|
+|**_close**|\<io.h>|\<errno.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [_open](open-wopen.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chsize](chsize.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

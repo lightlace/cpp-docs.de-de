@@ -1,12 +1,12 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbicmp_l
@@ -49,83 +49,89 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16f4125727177b4bb32730aabe2ec0798ca1b622
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07d298a77a5b1f5c20c2fdd004af35da61abdbfc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
-Vergleicht `n` Bytes von zwei Multibyte-Zeichenfolgen und ignoriert die Groß- und Kleinschreibung.  
-  
+
+Vergleicht **n** Bytes von zwei Multibyte-Zeichenfolgen und die Groß-/Kleinschreibung ignoriert.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _mbsnbicmp(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `string1, string2`  
- Zu vergleichende mit NULL endende Zeichenfolgen.  
-  
- `count`  
- Anzahl der zu vergleichenden Bytes.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert gibt die Beziehung zwischen den untergeordneten Zeichenfolgen an.  
-  
-|Rückgabewert|Beschreibung|  
-|------------------|-----------------|  
-|< 0|Die untergeordnete Zeichenfolge `string1` ist kleiner als die untergeordnete Zeichenfolge `string2`.|  
-|0|Die untergeordnete Zeichenfolge `string1` ist mit der untergeordneten Zeichenfolge `string2` identisch.|  
-|> 0|Die untergeordnete Zeichenfolge `string1` ist größer als die untergeordnete Zeichenfolge `string2`.|  
-  
- Bei einem Fehler gibt `_mbsnbcmp` `_NLSCMPERROR` zurück (definiert in String.h und Mbstring.h).  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_mbsnbicmp`-Funktion führt einen Ordinalvergleich von höchstens der ersten `count` Bytes von `string1` und `string2` durch. Der Vergleich wird ausgeführt, indem jedes Zeichen in Kleinbuchstaben konvertiert wird; `_mbsnbcmp` ist eine Version von `_mbsnbicmp`, bei der die Groß-/Kleinschreibung beachtet wird. Der Vergleich endet, wenn in jeder Zeichenfolge beendende NULL-Zeichen erreicht wird, bevor `count` Zeichen verglichen wurden. Wenn beim Erreichen des beendenden NULL-Zeichens die Zeichenfolgen gleich sind, bevor `count` Zeichen verglichen wurden, ist die kürzere Zeichenfolge kleiner.  
-  
- `_mbsnbicmp` ähnelt `_mbsnicmp`, mit dem Unterschied, dass die Zeichenfolgen nicht nach Zeichen, sondern nach `count`-Bytes verglichen werden.  
-  
- Abhängig von der Großschreibung ist der Vergleich von zwei Zeichenfolgen mit Zeichen zwischen „Z“ und „a“ in der ASCII-Tabelle ('[', '\\', ']', '^', '_' und '\`') unterschiedlich. Beispielsweise werden die beiden Zeichenfolgen "`ABCDE`" und "`ABCD^`" in eine Richtung verglichen, wenn Kleinschreibung vorliegt ("`abcde`" > "`abcd^`") und in die andere Richtung, wenn Großschreibung vorliegt ("`ABCDE`" < "`ABCD^`").  
-  
- `_mbsnbicmp` erkennt Multibyte-Zeichenfolgen gemäß der aktuellen [Multibyte-Codepage](../../c-runtime-library/code-pages.md). Die aktuelle Gebietsschemaeinstellung nimmt dabei keinen Einfluss.  
-  
- Wenn `string1` oder `string2` ein NULL-Zeiger ist, ruft `_mbsnbicmp` den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `_NLSCMPERROR` zurück und setzt `errno` auf `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsnicmp`|`_strnicmp`|`_mbsnbicmp`|`_wcsnicmp`|  
-|`_tcsnicmp_l`|`_strnicmp_l`|`_mbsnbicmp_l`|`_wcsnicmp_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_mbsnbicmp`|<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
- Weitere Informationen finden Sie im Beispiel [_mbsnbcmp _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _mbsnbicmp(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*String1*, *Zeichenfolge2*<br/>
+Zu vergleichende mit NULL endende Zeichenfolgen.
+
+*count*<br/>
+Anzahl der zu vergleichenden Bytes.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der Rückgabewert gibt die Beziehung zwischen den untergeordneten Zeichenfolgen an.
+
+|Rückgabewert|Beschreibung|
+|------------------|-----------------|
+|< 0|*String1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge.|
+|0|*String1* Teilzeichenfolge, die identisch mit *Zeichenfolge2* Teilzeichenfolge.|
+|> 0|*String1* Teilzeichenfolge, die größer als *Zeichenfolge2* Teilzeichenfolge.|
+
+Bei einem Fehler **_mbsnbicmp** gibt **_NLSCMPERROR**, die in String.h und Mbstring.h definiert ist.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_mbsnbicmp** -Funktion führt einen Ordinalvergleich von höchstens der ersten *Anzahl* Bytes *string1* und *Zeichenfolge2*. Der Vergleich wird ausgeführt, indem jedes Zeichen in Kleinbuchstaben konvertiert werden; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) ist eine Groß-/Kleinschreibung Version von **_mbsnbicmp**. Der Vergleich endet, wenn ein abschließendes Nullzeichen, in jeder Zeichenfolge vor dem erreicht wird *Anzahl* Zeichen verglichen wurden. Wenn die Zeichenfolgen gleich sind. wenn ein abschließendes Nullzeichen erreicht ist in jeder Zeichenfolge vor dem *Anzahl* Zeichen verglichen wurden, ist die kürzere Zeichenfolge kleiner.
+
+**_mbsnbicmp** ähnelt [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), außer dass es bis zu Zeichenfolgen vergleicht *Anzahl* Bytes anstelle von Zeichen.
+
+Abhängig von der Großschreibung ist der Vergleich von zwei Zeichenfolgen mit Zeichen zwischen „Z“ und „a“ in der ASCII-Tabelle ('[', '\\', ']', '^', '_' und '\`') unterschiedlich. Z. B. die beiden Zeichenfolgen "ABCDE" und "ABCD ^" eine Richtung verglichen, wenn Kleinschreibung vorliegt ("Abcde" > "Abcd ^") und eine andere Möglichkeit ("ABCDE" < "ABCD ^"), wenn Großschreibung vorliegt.
+
+**_mbsnbicmp** erkennt Multibyte-Zeichenfolgen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell in Verwendung. Die aktuelle Gebietsschemaeinstellung nimmt dabei keinen Einfluss.
+
+Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger **_mbsnbicmp** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** und legt **Errno** auf **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
+|**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_mbsnbicmp**|<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Weitere Informationen finden Sie im Beispiel [_mbsnbcmp _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>

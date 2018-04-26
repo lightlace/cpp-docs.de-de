@@ -1,12 +1,12 @@
 ---
 title: wcstombs, _wcstombs_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcstombs
@@ -38,134 +38,140 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-caps.latest.revision: 
+caps.latest.revision: 30
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7d0a5fa1fd7eb869602d8428a7cc087174739a1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 45286f9b7b344292318eaf46500c9a24e0b8488d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
-Konvertiert eine Breitzeichensequenz in eine entsprechende Multibyte-Zeichensequenz. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-size_t wcstombs(  
-   char *mbstr,  
-   const wchar_t *wcstr,  
-   size_t count   
-);  
-size_t _wcstombs_l(  
-   char *mbstr,  
-   const wchar_t *wcstr,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-size_t wcstombs(  
-   char (&mbstr)[size],  
-   const wchar_t *wcstr,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-size_t _wcstombs_l(  
-   char (&mbstr)[size],  
-   const wchar_t *wcstr,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `mbstr`  
- Die Adresse einer Multibyte-Zeichensequenz.  
-  
- `wcstr`  
- Die Adresse einer Breitzeichensequenz.  
-  
- `count`  
- Die maximale Anzahl von Bytes, die in der Multibyte-Ausgabezeichenfolge gespeichert werden können.  
-  
- `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Wenn `wcstombs` die Multibyte-Zeichenfolge erfolgreich konvertiert, wird die Anzahl der Bytes zurückgegeben, die in die Multibyte-Ausgabezeichenfolge geschrieben werden, mit Ausnahme des abschließenden Zeichens `NULL` (falls vorhanden). Wenn das `mbstr`-Argument `NULL` ist, gibt `wcstombs` die erforderliche Größe der Zielzeichenfolge in Bytes zurück. Wenn `wcstombs` findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert, es gibt-1 zurück, die in den Typ umgewandelt, `size_t` und legt `errno` auf `EILSEQ`.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion `wcstombs` konvertiert die Breitzeichenfolge, auf die von `wcstr` gezeigt wird, in die entsprechenden Multibytezeichen und speichert die Ergebnisse im `mbstr`-Array. Der Parameter `count` zeigt die maximale Anzahl von Bytes an, die in der Multibyte-Ausgabezeichenfolge gespeichert werden können (d.h. die Größe von `mbstr`). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn für jedes Breitzeichen in der Eingabezeichenfolge (einschließlich des Breitzeichens `NULL`) zwei Bytes in der Multibyte-Ausgabezeichenfolge vorhanden sind, ist das Ergebnis garantiert passend.  
-  
- Wenn `wcstombs` das Breitzeichen NULL (L'\0') erkennt, entweder vor oder bei `count`, wird es in ein 8-Bit-0-Zeichen konvertiert und beendet. Folglich endet die Multibyte-Zeichenfolge bei `mbstr` nur dann auf NULL, wenn `wcstombs` während der Konvertierung ein Breitzeichen NULL findet. Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten von `wcstombs` nicht definiert.  
-  
- Wenn das `mbstr`-Argument `NULL` ist, gibt `wcstombs` die erforderliche Größe der Zielzeichenfolge in Bytes zurück.  
-  
- `wcstombs` überprüft die eigenen Parameter. Wenn `wcstr` ist `NULL`, oder wenn `count` ist größer als `INT_MAX`, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, legt die Funktion `errno` auf `EINVAL` fest und gibt -1 zurück.  
-  
- `wcstombs` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_wcstombs_l` ist identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`wcstombs`|\<stdlib.h>|  
-|`_wcstombs_l`|\<stdlib.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Dieses Programm stellt das Verhalten der Funktion `wcstombs` dar.  
-  
-```  
-// crt_wcstombs.c  
-// compile with: /W3  
-// This example demonstrates the use  
-// of wcstombs, which converts a string  
-// of wide characters to a string of   
-// multibyte characters.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-#define BUFFER_SIZE 100  
-  
-int main( void )  
-{  
-    size_t  count;  
-    char    *pMBBuffer = (char *)malloc( BUFFER_SIZE );  
-    wchar_t *pWCBuffer = L"Hello, world.";  
-  
-    printf("Convert wide-character string:\n" );  
-  
-    count = wcstombs(pMBBuffer, pWCBuffer, BUFFER_SIZE ); // C4996  
-    // Note: wcstombs is deprecated; consider using wcstombs_s instead  
-    printf("   Characters converted: %u\n",  
-            count );  
-    printf("    Multibyte character: %s\n\n",  
-           pMBBuffer );  
-  
-    free(pMBBuffer);  
-}  
-```  
-  
-```Output  
-Convert wide-character string:  
-   Characters converted: 13  
-    Multibyte character: Hello, world.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+Konvertiert eine Breitzeichensequenz in eine entsprechende Multibyte-Zeichensequenz. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t wcstombs(
+   char *mbstr,
+   const wchar_t *wcstr,
+   size_t count
+);
+size_t _wcstombs_l(
+   char *mbstr,
+   const wchar_t *wcstr,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+size_t wcstombs(
+   char (&mbstr)[size],
+   const wchar_t *wcstr,
+   size_t count
+); // C++ only
+template <size_t size>
+size_t _wcstombs_l(
+   char (&mbstr)[size],
+   const wchar_t *wcstr,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*mbstr*<br/>
+Die Adresse einer Multibyte-Zeichensequenz.
+
+*wcstr*<br/>
+Die Adresse einer Breitzeichensequenz.
+
+*count*<br/>
+Die maximale Anzahl von Bytes, die in der Multibyte-Ausgabezeichenfolge gespeichert werden können.
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Wenn **Wcstombs** erfolgreich konvertiert die multibyte-Zeichenfolge gibt die Anzahl der Bytes, die geschrieben werden, in die multibyte-Ausgabezeichenfolge, ausschließen, die beendet **NULL** (sofern vorhanden). Wenn die *Mbstr* Argument ist **NULL**, **Wcstombs** gibt die erforderliche Größe in Bytes, der die Zielzeichenfolge zurück. Wenn **Wcstombs** findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert, es gibt-1 zurück, die in den Typ umgewandelt, **Size_t** und legt **Errno** auf **EILSEQ** .
+
+## <a name="remarks"></a>Hinweise
+
+Die **Wcstombs** -Funktion konvertiert die Breitzeichen-Zeichenfolge verweist *Wcstr* auf die entsprechende Multibyte-Zeichen und speichert die Ergebnisse in die *Mbstr* Array. Die *Anzahl* Parameter gibt die maximale Anzahl von Bytes, die in der multibyte-Ausgabezeichenfolge gespeichert werden können (d. h. die Größe des *Mbstr*). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn zwei Bytes in der multibyte-Ausgabezeichenfolge für jedes Breitzeichen in der Eingabezeichenfolge vorhanden sind (einschließlich der Breitzeichen **NULL**), wird sichergestellt, dass das Ergebnis passen.
+
+Wenn **Wcstombs** das Nullzeichen Breitzeichen (L '\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in eine 8-Bit 0 und wird beendet. Daher die Multibyte-Zeichenfolge am *Mbstr* ist Null-terminierte nur, wenn **Wcstombs** trifft eine Breitzeichen-Null-Zeichen bei der Konvertierung. Wenn die Sequenzen auf verweist *Wcstr* und *Mbstr* überlappen, ist das Verhalten des **Wcstombs** ist nicht definiert.
+
+Wenn die *Mbstr* Argument ist **NULL**, **Wcstombs** gibt die erforderliche Größe in Bytes, der die Zielzeichenfolge zurück.
+
+**Wcstombs** überprüft die eigenen Parameter. Wenn *Wcstr* ist **NULL**, oder wenn *Anzahl* ist größer als **INT_MAX**, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben. [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt der Funktion **Errno** auf **EINVAL** und gibt-1 zurück.
+
+**Wcstombs** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wcstombs_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**wcstombs**|\<stdlib.h>|
+|**_wcstombs_l**|\<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Dieses Programm veranschaulicht das Verhalten von der **Wcstombs** Funktion.
+
+```C
+// crt_wcstombs.c
+// compile with: /W3
+// This example demonstrates the use
+// of wcstombs, which converts a string
+// of wide characters to a string of
+// multibyte characters.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+#define BUFFER_SIZE 100
+
+int main( void )
+{
+    size_t  count;
+    char    *pMBBuffer = (char *)malloc( BUFFER_SIZE );
+    wchar_t *pWCBuffer = L"Hello, world.";
+
+    printf("Convert wide-character string:\n" );
+
+    count = wcstombs(pMBBuffer, pWCBuffer, BUFFER_SIZE ); // C4996
+    // Note: wcstombs is deprecated; consider using wcstombs_s instead
+    printf("   Characters converted: %u\n",
+            count );
+    printf("    Multibyte character: %s\n\n",
+           pMBBuffer );
+
+    free(pMBBuffer);
+}
+```
+
+```Output
+Convert wide-character string:
+   Characters converted: 13
+    Multibyte character: Hello, world.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

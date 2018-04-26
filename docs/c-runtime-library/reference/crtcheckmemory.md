@@ -1,12 +1,12 @@
 ---
 title: _CrtCheckMemory | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtCheckMemory
@@ -31,59 +31,65 @@ helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36ae2b6e4edc1190859d39b658dedf9a5c0c3acd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 18d1a51012a0950af2fe77cba4d8ecd0b1c89f90
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
-Bestätigt die Integrität der Speicherblöcke, die im Debugheap zugeordnet werden (nur Debugversion).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-int _CrtCheckMemory( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg gibt `_CrtCheckMemory` den Wert TRUE zurück. Andernfalls gibt die Funktion FALSE zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_CrtCheckMemory`-Funktion überprüft den vom Debugheapmanager belegten Speicher, indem der zugrunde liegende Basisheap überprüft und jeder Speicherblock untersucht wird. Wenn im zugrunde liegenden Basisheap, in den Debugheaderinformationen oder den Überschreibungspuffern Fehler oder Speicherinkonsistenzen auftreten, generiert `_CrtCheckMemory` einen Debugbericht mit Informationen, die die Fehlerbedingung beschreiben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtCheckMemory` während der Vorverarbeitung entfernt.  
-  
- Das Verhalten von `_CrtCheckMemory` kann gesteuert werden, indem die Bitfelder des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)-Flags mithilfe der [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)-Funktion festgelegt werden. Durch Aktivieren des**_CRTDBG_CHECK_ALWAYS_DF**-Bitfelds wird `_CrtCheckMemory` immer aufgerufen, wenn ein Speicherbelegungsvorgang angefordert wird. Obwohl diese Methode die Ausführung verlangsamt, ist sie nützlich, um Fehler schell zu erfassen. Durch Deaktivieren des **_CRTDBG_ALLOC_MEM_DF**-Bitfelds wird bewirkt, dass `_CrtCheckMemory` den Heap nicht überprüft und unverzüglich den Wert **TRUE** zurückgibt.  
-  
- Da diese Funktion **TRUE** oder **FALSE** zurückgibt, kann sie an eine der [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)-Makros übergeben werden, um einen einfachen Debug-Fehlerbehandlungsmechanismus zu erstellen. Im folgenden Beispiel wird ein Assertionsfehler ausgelöst, wenn eine Beschädigung im Heap erkannt wird:  
-  
-```  
-_ASSERTE( _CrtCheckMemory( ) );  
-```  
-  
- Weitere Informationen dazu, wie `_CrtCheckMemory` mit anderen Debugfunktionen verwendet werden kann, finden Sie unter [Heap State Reporting Functions (Berichtsfunktionen für den Heapzustand)](/visualstudio/debugger/crt-debug-heap-details). Eine Übersicht der Speicherverwaltung und des Debugheaps finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_CrtCheckMemory`|\<crtdbg.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel für die Verwendung von `_CrtCheckMemory` finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Debugroutinen](../../c-runtime-library/debug-routines.md)   
- [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
- [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)
+
+Bestätigt die Integrität der Speicherblöcke, die im Debugheap zugeordnet werden (nur Debugversion).
+
+## <a name="syntax"></a>Syntax
+
+```C
+
+int _CrtCheckMemory( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Im Erfolgsfall **_CrtCheckMemory** gibt "true" ist, andernfalls "false" zurückgegeben.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_CrtCheckMemory** Funktion überprüft der zugrunde liegende Basisheap überprüft und jeder Speicherblock untersucht vom debugheapmanager belegten Speicher. Wenn ein Fehler oder Inkonsistenzen in der zugrunde liegenden Basisheap, die debugheaderinformationen oder den überschreibungspuffern kommt **_CrtCheckMemory** erzeugt einen Debugbericht mit Informationen, die den Fehlerzustand beschreibt. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtCheckMemory** während der vorverarbeitung entfernt.
+
+Das Verhalten des **_CrtCheckMemory** kann gesteuert werden, indem die Bitfelder des Festlegen der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flags mithilfe der [_CrtSetDbgFlag](crtsetdbgflag.md) Funktion. Das Aktivieren der **_CRTDBG_CHECK_ALWAYS_DF** -Bitfelds in **_CrtCheckMemory** aufgerufen wird, jedes Mal, wenn ein speicherbelegungsvorgang angefordert wird. Obwohl diese Methode die Ausführung verlangsamt, ist sie nützlich, um Fehler schell zu erfassen. Das Aktivieren der **_CRTDBG_ALLOC_MEM_DF** -bit-Feld OFF Ursachen **_CrtCheckMemory** nicht überprüfen den Heap und Rückgaben unverzüglich **"true"**.
+
+Da diese Funktion **TRUE** oder **FALSE** zurückgibt, kann sie an eine der [_ASSERT](assert-asserte-assert-expr-macros.md)-Makros übergeben werden, um einen einfachen Debug-Fehlerbehandlungsmechanismus zu erstellen. Im folgenden Beispiel wird ein Assertionsfehler ausgelöst, wenn eine Beschädigung im Heap erkannt wird:
+
+```C
+_ASSERTE( _CrtCheckMemory( ) );
+```
+
+Weitere Informationen dazu, wie **_CrtCheckMemory** kann mit anderen Debugfunktionen verwendet werden, finden Sie unter [den Heapzustand](/visualstudio/debugger/crt-debug-heap-details). Eine Übersicht der Speicherverwaltung und des Debugheaps finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_CrtCheckMemory**|\<crtdbg.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel zum Verwenden von **_CrtCheckMemory**, finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+
+## <a name="see-also"></a>Siehe auch
+
+[Debugroutinen](../../c-runtime-library/debug-routines.md)<br/>
+[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)<br/>
+[_CrtSetDbgFlag](crtsetdbgflag.md)<br/>

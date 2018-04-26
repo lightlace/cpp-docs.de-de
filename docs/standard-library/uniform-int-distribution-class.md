@@ -1,12 +1,12 @@
 ---
 title: uniform_int_distribution-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::uniform_int_distribution
@@ -35,131 +35,135 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f44926c91b0e0ee9d576d62870b5118d1f34e70
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b186efb9227da1ef4f6cd0503aa34afccf3f6d8c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution-Klasse
-Generiert eine einheitliche (jeder Wert ist gleichermaßen wahrscheinlich) Ganzzahlverteilung innerhalb eines Ausgabebereiches, der inklusive-inklusive ist.  
-  
-## <a name="syntax"></a>Syntax  
-```  
+
+Generiert eine einheitliche (jeder Wert ist gleichermaßen wahrscheinlich) Ganzzahlverteilung innerhalb eines Ausgabebereiches, der inklusive-inklusive ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 template<class IntType = int>
    class uniform_int_distribution {
-public:    
-   // types 
-   typedef IntType result_type;    
-   struct param_type;    
-   
-   // constructors and reset functions 
+public:
+   // types
+   typedef IntType result_type;
+   struct param_type;
+
+   // constructors and reset functions
    explicit uniform_int_distribution(
       result_type a = 0, result_type b = numeric_limits<result_type>::max());
    explicit uniform_int_distribution(const param_type& parm);
    void reset();
 
-   // generating functions 
-   template <class URNG>  
+   // generating functions
+   template <class URNG>
       result_type operator()(URNG& gen);
-   template <class URNG>  
+   template <class URNG>
       result_type operator()(URNG& gen, const param_type& parm);
 
-   // property functions 
+   // property functions
    result_type a() const;
    result_type b() const;
    param_type param() const;
    void param(const param_type& parm);
    result_type min() const;
    result_type max() const;
-};  
-```  
-### <a name="parameters"></a>Parameter  
-*IntType*  
-Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
-  
-## <a name="remarks"></a>Hinweise  
-Die Vorlagenklasse beschreibt eine inklusive-inklusive Verteilung, die Werte eines vom Benutzer angegebenen Ganzzahltyps mit einer Verteilung erzeugt, damit jeder Wert gleichermaßen wahrscheinlich ist. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
-  
-||||  
-|-|-|-|  
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
-  
-Das Eigenschaftsmember `a()` gibt die aktuell gespeicherte Untergrenze der Verteilung zurück, während `b()` die aktuell gespeicherte Obergrenze zurückgibt. Für diese Verteilungsklasse sind diese Mindest- und Höchstwerte dieselben wie die von den allgemeinen Eigenschaftsfunktionen `min()` und `max()` zurückgegebenen.  
-  
-Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.  
+};
+```
 
-Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.  
-  
-Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.  
-  
+### <a name="parameters"></a>Parameter
+
+*IntType* der Integer-Ergebnistyp standardmäßig `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+
+## <a name="remarks"></a>Hinweise
+
+Die Vorlagenklasse beschreibt eine inklusive-inklusive Verteilung, die Werte eines vom Benutzer angegebenen Ganzzahltyps mit einer Verteilung erzeugt, damit jeder Wert gleichermaßen wahrscheinlich ist. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+
+||||
+|-|-|-|
+|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+
+Das Eigenschaftsmember `a()` gibt die aktuell gespeicherte Untergrenze der Verteilung zurück, während `b()` die aktuell gespeicherte Obergrenze zurückgibt. Für diese Verteilungsklasse sind diese Mindest- und Höchstwerte dieselben wie die von den allgemeinen Eigenschaftsfunktionen `min()` und `max()` zurückgegebenen.
+
+Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
+
+Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.
+
+Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.
+
 Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf dem URNG-Modul basiert.
-  
-Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// compile with: /EHsc /W4  
-#include <random>   
-#include <iostream>  
-#include <iomanip>  
-#include <string>  
-#include <map>  
-  
-void test(const int a, const int b, const int s) {  
-  
-    // uncomment to use a non-deterministic seed  
-    //    std::random_device rd;  
-    //    std::mt19937 gen(rd());  
-    std::mt19937 gen(1729);  
-  
-    std::uniform_int_distribution<> distr(a, b);  
-  
-    std::cout << "lower bound == " << distr.a() << std::endl;  
-    std::cout << "upper bound == " << distr.b() << std::endl;  
-  
-    // generate the distribution as a histogram  
-    std::map<int, int> histogram;  
-    for (int i = 0; i < s; ++i) {  
-        ++histogram[distr(gen)];  
-    }  
-  
-    // print results  
-    std::cout << "Distribution for " << s << " samples:" << std::endl;  
-    for (const auto& elem : histogram) {  
-        std::cout << std::setw(5) << elem.first << ' ' << std::string(elem.second, ':') << std::endl;  
-    }  
-    std::cout << std::endl;  
-}  
-  
-int main()  
-{  
-    int a_dist = 1;  
-    int b_dist = 10;  
-  
-    int samples = 100;  
-  
-    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;  
-    std::cout << "Enter an integer value for the lower bound of the distribution: ";  
-    std::cin >> a_dist;  
-    std::cout << "Enter an integer value for the upper bound of the distribution: ";  
-    std::cin >> b_dist;  
-    std::cout << "Enter an integer value for the sample count: ";  
-    std::cin >> samples;  
-  
-    test(a_dist, b_dist, samples);  
-}  
-```  
-  
-```Output  
+
+Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// compile with: /EHsc /W4
+#include <random>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <map>
+
+void test(const int a, const int b, const int s) {
+
+    // uncomment to use a non-deterministic seed
+    //    std::random_device rd;
+    //    std::mt19937 gen(rd());
+    std::mt19937 gen(1729);
+
+    std::uniform_int_distribution<> distr(a, b);
+
+    std::cout << "lower bound == " << distr.a() << std::endl;
+    std::cout << "upper bound == " << distr.b() << std::endl;
+
+    // generate the distribution as a histogram
+    std::map<int, int> histogram;
+    for (int i = 0; i < s; ++i) {
+        ++histogram[distr(gen)];
+    }
+
+    // print results
+    std::cout << "Distribution for " << s << " samples:" << std::endl;
+    for (const auto& elem : histogram) {
+        std::cout << std::setw(5) << elem.first << ' ' << std::string(elem.second, ':') << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+int main()
+{
+    int a_dist = 1;
+    int b_dist = 10;
+
+    int samples = 100;
+
+    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;
+    std::cout << "Enter an integer value for the lower bound of the distribution: ";
+    std::cin >> a_dist;
+    std::cout << "Enter an integer value for the upper bound of the distribution: ";
+    std::cin >> b_dist;
+    std::cout << "Enter an integer value for the sample count: ";
+    std::cin >> samples;
+
+    test(a_dist, b_dist, samples);
+}
+```
+
+```Output
 Use CTRL-Z to bypass data entry and run using default values.
 Enter an integer value for the lower bound of the distribution: 0
 Enter an integer value for the upper bound of the distribution: 12
@@ -180,44 +184,47 @@ Distribution for 200 samples:
    10 ::::::::::::::::::::::
    11 :::::::::::::
    12 :::::::::::::::::
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<random>  
-  
- **Namespace:** std  
-  
-##  <a name="uniform_int_distribution"></a> uniform_int_distribution::uniform_int_distribution  
-Erstellt die Verteilung.  
-  
-```  
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<random>
+
+**Namespace:** std
+
+## <a name="uniform_int_distribution"></a> uniform_int_distribution::uniform_int_distribution
+
+Erstellt die Verteilung.
+
+```cpp
 explicit uniform_int_distribution(
    result_type a = 0, result_type b = std::numeric_limits<result_type>::max());
 explicit uniform_int_distribution(const param_type& parm);
-```  
-  
-### <a name="parameters"></a>Parameter  
-*a*  
-Die Untergrenze (einschließend) für Zufallswerte.  
-  
-*b*  
-Die Obergrenze (ausschließend) für Zufallswerte.  
-  
-*parm*  
-Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.  
-  
-### <a name="remarks"></a>Hinweise  
-**Vorbedingung:** `a ≤ b`  
-  
-Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b* enthält.  
-  
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
-  
-##  <a name="param_type"></a> uniform_int_distribution::param_type  
- Speichert die Parameter der Verteilung.  
-```cpp  
-struct param_type {  
-   typedef uniform_int_distribution<result_type> distribution_type;  
+```
+
+### <a name="parameters"></a>Parameter
+
+*eine* die untere Grenze für den zufälligen Werten (einschließlich).
+
+*b* die obere Grenze für den zufälligen Werten (einschließlich).
+
+*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+
+### <a name="remarks"></a>Hinweise
+
+**Vorbedingung:** `a ≤ b`
+
+Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b* enthält.
+
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.
+
+## <a name="param_type"></a> uniform_int_distribution::param_type
+
+Speichert die Parameter der Verteilung.
+
+```cpp
+struct param_type {
+   typedef uniform_int_distribution<result_type> distribution_type;
    param_type(
       result_type a = 0, result_type b = std::numeric_limits<result_type>::max());
    result_type a() const;
@@ -225,26 +232,23 @@ struct param_type {
 
    bool operator==(const param_type& right) const;
    bool operator!=(const param_type& right) const;
-   };  
-```  
+   };
+```
 
-### <a name="parameters"></a>Parameter  
-*a*  
-Die Untergrenze (einschließend) für Zufallswerte.  
-  
-*b*  
-Die Obergrenze (ausschließend) für Zufallswerte.  
-  
-*right*  
-Das mit diesem `param_type`-Objekt zu vergleichende Objekt.  
-  
-### <a name="remarks"></a>Hinweise  
-**Vorbedingung:** `a ≤ b`  
-  
-Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [\<random>](../standard-library/random.md)
+### <a name="parameters"></a>Parameter
 
+*eine* die untere Grenze für den zufälligen Werten (einschließlich).
 
+*b* die obere Grenze für den zufälligen Werten (einschließlich).
 
+*Rechte* der `param_type` zu vergleichende Objekt.
+
+### <a name="remarks"></a>Hinweise
+
+**Vorbedingung:** `a ≤ b`
+
+Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[\<random>](../standard-library/random.md)<br/>

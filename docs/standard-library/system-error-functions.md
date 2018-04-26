@@ -1,10 +1,10 @@
 ---
 title: '&lt;system_error&gt;-Funktionen | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - system_error/std::generic_category
@@ -12,83 +12,90 @@ f1_keywords:
 - system_error/std::make_error_condition
 - system_error/std::system_category
 ms.assetid: 57d6f15f-f0b7-4e2f-80fe-31d3c320ee33
-caps.latest.revision: 
+caps.latest.revision: 11
 manager: ghogen
 helpviewer_keywords:
 - std::generic_category
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 78e39c11d58fddc6bc15d6c18257b43aa427b892
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 988c3580d1cd9a66e1b396fc83bd20fd3f4a115e
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;System_error&gt;-Funktionen
-||||  
-|-|-|-|  
-|[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|  
-|[system_category](#system_category)|  
-  
-##  <a name="generic_category"></a> generic_category  
- Stellt die Kategorie für allgemeine Fehler dar.  
-  
-```
+
+||||
+|-|-|-|
+|[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
+|[system_category](#system_category)|
+
+## <a name="generic_category"></a> generic_category
+
+Stellt die Kategorie für allgemeine Fehler dar.
+
+```cpp
 extern const error_category& generic_category();
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Die `generic_category` Objekt ist eine Implementierung von [Error_category](../standard-library/error-category-class.md).  
-  
-##  <a name="make_error_code"></a> make_error_code  
- Erstellt ein Fehlercodeobjekt.  
-  
 ```
+
+### <a name="remarks"></a>Hinweise
+
+Die `generic_category` Objekt ist eine Implementierung von [Error_category](../standard-library/error-category-class.md).
+
+## <a name="make_error_code"></a> make_error_code
+
+Erstellt ein Fehlercodeobjekt.
+
+```cpp
 error_code make_error_code(generic_errno _Errno);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|Parameter|Beschreibung|  
-|---------------|-----------------|  
-|`_Errno`|Der im Fehlercodeobjekt zu speichernde Enumeration-Wert.|  
-  
-### <a name="return-value"></a>Rückgabewert  
- Das Fehlercodeobjekt.  
-  
-### <a name="remarks"></a>Hinweise  
-  
-##  <a name="make_error_condition"></a> make_error_condition  
- Erstellt ein Fehlerzustandobjekt.  
-  
 ```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|---------------|-----------------|
+|`_Errno`|Der im Fehlercodeobjekt zu speichernde Enumeration-Wert.|
+
+### <a name="return-value"></a>Rückgabewert
+
+Das Fehlercodeobjekt.
+
+### <a name="remarks"></a>Hinweise
+
+## <a name="make_error_condition"></a> make_error_condition
+
+Erstellt ein Fehlerzustandobjekt.
+
+```cpp
 error_condition make_error_condition(generic_errno _Errno);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|Parameter|Beschreibung|  
-|---------------|-----------------|  
-|`_Errno`|Der im Fehlerzustandobjekt zu speichernde Enumeration-Wert.|  
-  
-### <a name="return-value"></a>Rückgabewert  
- Das Fehlerzustandobjekt.  
-  
-### <a name="remarks"></a>Hinweise  
-  
-##  <a name="system_category"></a> system_category  
- Stellt die Kategorie für Fehler dar, die von Low-Level-Systemüberläufen verursacht wurden.  
-  
 ```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|---------------|-----------------|
+|`_Errno`|Der im Fehlerzustandobjekt zu speichernde Enumeration-Wert.|
+
+### <a name="return-value"></a>Rückgabewert
+
+Das Fehlerzustandobjekt.
+
+### <a name="remarks"></a>Hinweise
+
+## <a name="system_category"></a> system_category
+
+Stellt die Kategorie für Fehler dar, die von Low-Level-Systemüberläufen verursacht wurden.
+
+```cpp
 extern const error_category& system_category();
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Die `system_category` Objekt ist eine Implementierung von [Error_category](../standard-library/error-category-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [<system_error>](../standard-library/system-error.md)
+```
 
+### <a name="remarks"></a>Hinweise
 
+Die `system_category` Objekt ist eine Implementierung von [Error_category](../standard-library/error-category-class.md).
 
+## <a name="see-also"></a>Siehe auch
+
+[<system_error>](../standard-library/system-error.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isctype_l
@@ -47,81 +47,86 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe43830894be3c004fb21598b0324b864fe5b9b0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 25df7ddaaea8c1f4df0907ebd92827f2a4865007
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
-Testet `c` auf die Eigenschaft, die durch das `desc`-Argument angegeben wird. Für jeden gültigen Wert von `desc` gibt es eine entsprechende Breitzeichen-Klassifizierungsroutine.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _isctype(  
-   int c,  
-   _ctype_t desc  
-);  
-int _isctype_l(  
-   int c,  
-   _ctype_t desc,  
-   _locale_t locale  
-);  
-int iswctype(  
-   wint_t c,  
-   wctype_t desc   
-);  
-int _iswctype_l(  
-   wint_t c,  
-   wctype_t desc,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende ganze Zahl.  
-  
- `desc`  
- Eigenschaft, für die der Test durchgeführt werden soll. Diese wird normalerweise mithilfe von ctype oder [wctype](../../c-runtime-library/reference/wctype.md) abgerufen.  
-  
- `locale`  
- Das für alle gebietsschemaabhängigen Tests zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_isctype` und `iswctype` geben einen Wert ungleich 0 (null) zurück, wenn `c` die Eigenschaft aufweist, die von `desc` im aktuellen Gebietsschema angegeben wird, wenn nicht, wird 0 (null) zurückgegeben. Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch das ihnen übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Das Verhalten von `_isctype` und `_isctype_l` ist nicht definiert, wenn `c` nicht EOF ist oder nicht im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und `c` keinem dieser Werte entspricht, lösen die Funktionen eine Assertion aus.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`n/a`|`_isctype`|`n/a`|`_iswctype`|  
-|`n/a`|`_isctype_l`|`n/a`|`_iswctype_l`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_isctype`|\<ctype.h>|  
-|`iswctype`|\<ctype.h> oder \<wchar.h>|  
-|`_isctype_l`|\<ctype.h>|  
-|`_iswctype_l`|\<ctype.h> oder \<wchar.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)
+
+Tests *c* für die Ctype-Eigenschaft, die gemäß der *"DESC"* Argument. Für jeden gültigen Wert des *"DESC"*, es wird eine entsprechende breitzeichenklassifizierungs-Routine.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _isctype(
+   int c,
+   _ctype_t desc
+);
+int _isctype_l(
+   int c,
+   _ctype_t desc,
+   _locale_t locale
+);
+int iswctype(
+   wint_t c,
+   wctype_t desc
+);
+int _iswctype_l(
+   wint_t c,
+   wctype_t desc,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende ganze Zahl.
+
+*"DESC"*<br/>
+Eigenschaft, für die der Test durchgeführt werden soll. Diese wird normalerweise mithilfe von ctype oder [wctype](wctype.md) abgerufen.
+
+*locale*<br/>
+Das für alle gebietsschemaabhängigen Tests zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_isctype** und **Iswctype** einen Wert ungleich NULL zurück, wenn *c* wurde durch die angegebene Eigenschaft *"DESC"* in das aktuelle Gebietsschema oder 0, wenn dies nicht der Fall. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Das Verhalten des **_isctype** und **_isctype_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|n/v|**_isctype**|n/v|**_iswctype**|
+|n/v|**_isctype_l**|n/v|**_iswctype_l**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_isctype**|\<ctype.h>|
+|**iswctype**|\<ctype.h> oder \<wchar.h>|
+|**_isctype_l**|\<ctype.h>|
+|**_iswctype_l**|\<ctype.h> oder \<wchar.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>

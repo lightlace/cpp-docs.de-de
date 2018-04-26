@@ -1,12 +1,12 @@
 ---
 title: _futime, _futime32, _futime64 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _futime64
@@ -41,126 +41,131 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8caa47cd82f61c46ee10f03987bac9735ce506cc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d87d00a255901a1c21d1723a1850dfc4797c90cb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
-Legt das Änderungsdatum einer offenen Datei fest  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _futime(   
-   int fd,  
-   struct _utimbuf *filetime   
-);  
-int _futime32(   
-   int fd,  
-   struct __utimbuf32 *filetime   
-);  
-int _futime64(   
-   int fd,  
-   struct __utimbuf64 *filetime   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `fd`  
- Dateideskriptor der geöffneten Datei  
-  
- `filetime`  
- Zeiger auf die Struktur, die das neue Änderungsdatum enthält  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt bei Erfolg 0 zurück. Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, so wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und `errno` festgelegt ist, um `EBADF`, der angibt, eines Ungültiger Dateideskriptor oder `EINVAL`, der angibt, eines ungültigen Parameters.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_futime` Routine legt das Änderungsdatum und die Uhrzeit des Zugriffs auf die geöffnete Datei zugeordneten `fd`. `_futime` ist nahezu identisch mit [, allerdings ist das zugehörige ](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)-Argument der Dateideskriptor einer geöffneten Datei ist, und keinen Dateipfad oder -namen darstellt. Die `_utimbuf`-Struktur enthält Felder für das neue Änderungsdatum und den neuen Zugriffszeitpunkt. Beide Felder müssen gültige Werte enthalten. `_utimbuf32`und `_utimbuf64` sind nahezu identisch mit `_utimbuf`, allerdings verwenden beide 32-Bit- und 64-Bit-Uhrzeittypen. `_futime` und `_utimbuf` verwenden einen 64-Bit-Uhrzeittyp, und `_futime` verhält sich genauso wie `_futime64`. Wenn Sie das alte Verhalten erzwingen möchten, definieren Sie `_USE_32BIT_TIME_T`. Dadurch wird das Verhalten von `_futime` und `_futime32` identisch und die `_utimbuf`-Struktur, den 32-Bit-Uhrzeittyp zu verwenden, sodass er `__utimbuf32` entspricht.  
-  
- `_futime64` verwendet die `__utimbuf64` Struktur und kann Datumsangaben bis 23:59:59 am 31. Dezember 3000 (UTC) lesen und ändern. Ein Aufruf von `_futime32` schlägt jedoch fehl, wenn das Datum für die Datei weiter als 23:59:59 am 18. Januar 2038 UTC in der Zukunft liegt. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für diese Funktionen.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|Optionaler Header|  
-|--------------|---------------------|---------------------|  
-|`_futime`|\<sys/utime.h>|\<errno.h>|  
-|`_futime32`|\<sys/utime.h>|\<errno.h>|  
-|`_futime64`|\<sys/utime.h>|\<errno.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_futime.c  
-// This program uses _futime to set the  
-// file-modification time to the current time.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <fcntl.h>  
-#include <io.h>  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <sys/utime.h>  
-#include <share.h>  
-  
-int main( void )  
-{  
-   int hFile;  
-  
-   // Show file time before and after.   
-   system( "dir crt_futime.c_input" );  
-  
-   _sopen_s( &hFile, "crt_futime.c_input", _O_RDWR, _SH_DENYNO, 0 );  
-  
-   if( _futime( hFile, NULL ) == -1 )  
-      perror( "_futime failed\n" );  
-   else  
-      printf( "File time modified\n" );  
-  
-   _close (hFile);  
-  
-   system( "dir crt_futime.c_input" );  
-}  
-```  
-  
-## <a name="input-crtfutimecinput"></a>Eingabe: crt_futime.c_input  
-  
-```  
-Arbitrary file contents.  
-```  
-  
-### <a name="sample-output"></a>Beispielausgabe  
-  
-```  
-Volume in drive Z has no label.  
- Volume Serial Number is 5C68-57C1  
-  
- Directory of Z:\crt  
-  
-03/25/2004  10:40 AM                24 crt_futime.c_input  
-               1 File(s)             24 bytes  
-               0 Dir(s)  24,268,476,416 bytes free  
- Volume in drive Z has no label.  
- Volume Serial Number is 5C68-57C1  
-  
- Directory of Z:\crt  
-  
-03/25/2004  10:41 AM                24 crt_futime.c_input  
-               1 File(s)             24 bytes  
-               0 Dir(s)  24,268,476,416 bytes free  
-File time modified  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)
+
+Legt das Änderungsdatum einer offenen Datei fest
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _futime(
+   int fd,
+   struct _utimbuf *filetime
+);
+int _futime32(
+   int fd,
+   struct __utimbuf32 *filetime
+);
+int _futime64(
+   int fd,
+   struct __utimbuf64 *filetime
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*fd*<br/>
+Dateideskriptor der geöffneten Datei
+
+*FILETIME-Element*<br/>
+Zeiger auf die Struktur, die das neue Änderungsdatum enthält
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt bei Erfolg 0 zurück. Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, so wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und **Errno** festgelegt ist, um **EBADF**, der angibt, eines Ungültiger Dateideskriptor oder **EINVAL**, der angibt, ein ungültiges Parameter.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_futime** Routine legt das Änderungsdatum und die Uhrzeit des Zugriffs auf die geöffnete Datei zugeordneten *fd*. **_futime** ist identisch mit [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), außer dass das Argument der Dateideskriptor einer geöffneten Datei, anstatt den Namen einer Datei oder ein Pfad zu einer Datei. Die **_utimbuf** -Struktur enthält Felder für die neue Änderungsdatum und den Zugriff auf. Beide Felder müssen gültige Werte enthalten. **_utimbuf32** und **_utimbuf64** sind identisch mit **_utimbuf** bzw. für die Verwendung der 32-Bit und 64-Bit-Typen, mit Ausnahme. **_futime** und **_utimbuf** verwenden eine 64-Bit-Uhrzeittyp und **_futime** ist identisch Verhalten **_futime64**. Wenn Sie das alte Verhalten zu erzwingen müssen, definieren Sie **_USE_32BIT_TIME_T**. Dies bewirkt, dass dadurch **_futime** identisch Verhalten **_futime32** und bewirkt, dass die **_utimbuf** Struktur den 32-Bit-Uhrzeittyp, somit entspricht verwendet **__utimbuf32**.
+
+**_futime64**, verwendet der **__utimbuf64** -Struktur, können gelesen und Datei Datumsangaben bis 23:59:59, 31. Dezember 3000, UTC; ändern, während ein Aufruf von **_futime32** schlägt fehl, wenn das Datum für die Datei ist später als 23:59:59 am 18. Januar 2038 UTC. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für diese Funktionen.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|Optionaler Header|
+|--------------|---------------------|---------------------|
+|**_futime**|\<sys/utime.h>|\<errno.h>|
+|**_futime32**|\<sys/utime.h>|\<errno.h>|
+|**_futime64**|\<sys/utime.h>|\<errno.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_futime.c
+// This program uses _futime to set the
+// file-modification time to the current time.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <io.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/utime.h>
+#include <share.h>
+
+int main( void )
+{
+   int hFile;
+
+   // Show file time before and after.
+   system( "dir crt_futime.c_input" );
+
+   _sopen_s( &hFile, "crt_futime.c_input", _O_RDWR, _SH_DENYNO, 0 );
+
+   if( _futime( hFile, NULL ) == -1 )
+      perror( "_futime failed\n" );
+   else
+      printf( "File time modified\n" );
+
+   _close (hFile);
+
+   system( "dir crt_futime.c_input" );
+}
+```
+
+### <a name="input-crtfutimecinput"></a>Eingabe: crt_futime.c_input
+
+```Input
+Arbitrary file contents.
+```
+
+### <a name="sample-output"></a>Beispielausgabe
+
+```Output
+ Volume in drive Z has no label.
+ Volume Serial Number is 5C68-57C1
+
+ Directory of Z:\crt
+
+ 03/25/2004  10:40 AM                24 crt_futime.c_input
+               1 File(s)             24 bytes
+               0 Dir(s)  24,268,476,416 bytes free
+ Volume in drive Z has no label.
+ Volume Serial Number is 5C68-57C1
+
+ Directory of Z:\crt
+
+ 03/25/2004  10:41 AM                24 crt_futime.c_input
+               1 File(s)             24 bytes
+               0 Dir(s)  24,268,476,416 bytes free
+File time modified
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Uhrzeitverwaltung](../../c-runtime-library/time-management.md)<br/>

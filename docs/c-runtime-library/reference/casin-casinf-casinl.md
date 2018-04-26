@@ -1,13 +1,13 @@
 ---
 title: casin, casinf, casinl | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - casin
@@ -40,70 +40,75 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f0b0131db3ce020d4f840cc7374c8d55b01a5ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ee3c7a6fcc054aef3f442006c14b8f6d04c6602e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
-Ruft den Arkussinus einer komplexen Zahl, mit Branch Schnitte außerhalb des Intervalls [-1, + 1] auf der tatsächlichen Achse ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-_Dcomplex casin(   
-   _Dcomplex z   
-);  
-_Fcomplex casin(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex casin(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex casinf(   
-   _Fcomplex z   
-);  
-_Lcomplex casinl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `z`  
- Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Arkussinus von `z` als Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie im Intervall [-π/2 + π/2] der echte Achse.  
-  
-## <a name="remarks"></a>Hinweise  
- Da C++ das Überladen zulässt, können Sie Überladungen von `casin` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `casin` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|C-Header|C++-Header|  
-|-------------|--------------|------------------|  
-|`casin`,               `casinf`, `casinl`|\<complex.h>|\<ccomplex>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Ruft den Arkussinus einer komplexen Zahl, mit Branch Schnitte außerhalb des Intervalls [-1, + 1] auf der tatsächlichen Achse ab.
+
+## <a name="syntax"></a>Syntax
+
+```C
+_Dcomplex casin(
+   _Dcomplex z
+);
+_Fcomplex casin(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex casin(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex casinf(
+   _Fcomplex z
+);
+_Lcomplex casinl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*z*<br/>
+Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
+
+## <a name="return-value"></a>Rückgabewert
+
+Den Arkussinus des *z*, im Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie im Intervall [-π/2 + π/2] der echte Achse.
+
+## <a name="remarks"></a>Hinweise
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Casin** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Casin** immer Double und gibt eine **_Dcomplex** Wert.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|C-Header|C++-Header|
+|-------------|--------------|------------------|
+|**Casin**, **Casinf**, **Casinl**|\<complex.h>|\<ccomplex>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

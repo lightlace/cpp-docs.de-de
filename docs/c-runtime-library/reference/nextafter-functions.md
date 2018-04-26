@@ -1,12 +1,12 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - nextafterf
@@ -57,111 +57,75 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4fe078e00b28f09284f3b91ad93ee1393bea108
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 678e135c3cb1e3c8d0064f21081e4b68a7eac329
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-Gibt den nächsten darstellbaren Gleitkommawert zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double nextafter(  
-   double x,  
-   double y   
-);  
-  
-float nextafter(  
-   float x,  
-   float y   
-); /* C++ only, requires <cmath> */  
-  
-long double nextafter(  
-   long double x,  
-   long double y   
-); /* C++ only, requires <cmath> */  
-  
-float nextafterf(  
-   float x,  
-   float y   
-);   
-  
-long double nextafterl(  
-   long double x,  
-   long double y   
-);  
-  
-double _nextafter(  
-   double x,  
-   double y   
-);  
-  
-float _nextafterf(  
-   float x,  
-   float y   
-); /* x64 only */  
-  
-double nexttoward(  
-   double x,  
-   long double y   
-);  
-  
-float nexttoward(  
-   float x,  
-   long double y   
-); /* C++ only, requires <cmath> */  
-  
-long double nexttoward(  
-   long double x,  
-   long double y   
-); /* C++ only, requires <cmath> */  
-  
-float nexttowardf(  
-   float x,  
-   long double y   
-);   
-  
-long double nexttowardl(  
-   long double x,  
-   long double y   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`  
- Der Gleitkommawert, der den Startpunkt markiert.  
-  
- `y`  
- Der Gleitkommawert, der den Zielpunkt markiert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt den nächsten darstellbaren Gleitkommawert des Rückgabetyps nach `x` in Richtung `y` an. Wenn `x`=`y`, gibt die Funktion den in den Rückgabetyp konvertierten Wert `y` zurück, ohne eine Ausnahme auszulösen. Wenn `x` ungleich `y` und das Ergebnis eine subnormale Zahl oder 0 (null) ist, werden die Gleitkomma-Ausnahmezustände FE_UNDERFLOW und FE_INEXACT festgelegt, und das richtige Ergebnis wird zurückgegeben. Wenn `x` oder `y` eine NaN ist, dann entspricht der Rückgabewert einer der Eingabe-NaN. Wenn `x` begrenzt und das Ergebnis unendlich oder nicht als der jeweilige Typ darstellbar ist, wird eine Unendlichkeit oder NaN mit den richtigen Vorzeichen zurückgegeben. Des Weiteren werden die Gleitkomma-Ausnahmezustände FE_UNDERFLOW und FE_INEXACT festgelegt, und für `errno` wird ERANGE festgelegt.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `nextafter` und `nexttoward`-Funktionsfamilien sind mit Ausnahme des Parametertyps von `y` gleichwertig. Wenn `x` und `y` identisch sind, ist der zurückgegebene Wert `y`. Dieser wird in den Rückgabetyp konvertiert.  
-  
- Da C++ das Überladen zulässt, können Sie \<cmath> verwenden und so Überladungen von `nextafter` und `nexttoward` aufrufen, die die Typen `float` und `long double` zurückgeben. In einem C-Programm geben `nextafter` und `nexttoward` immer `double` zurück.  
-  
- Die Funktionen `_nextafter` und `_nextafterf` sind Microsoft-spezifisch. Die `_nextafterf`-Funktion ist nur verfügbar, wenn für x64 kompiliert wird.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|  
-|-------------|---------------------------|-------------------------------|  
-|`nextafter`, `nextafterf`, `nextafterl`, `_nextafterf`, `nexttoward`, `nexttowardf`, `nexttowardl`|\<math.h>|\<math.h> oder \<cmath>|  
-|`_nextafter`|\<float.h>|\<float.h> oder \<cfloat>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+
+Gibt den nächsten darstellbaren Gleitkommawert zurück.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double nextafter( double x, double y );
+float nextafterf( float x, float y );
+long double nextafterl( long double x, long double y );
+
+double _nextafter( double x, double y );
+float _nextafterf( float x, float y ); /* x64 only */
+
+double nexttoward( double x, long double y );
+float nexttowardf( float x, long double y );
+long double nexttowardl( long double x, long double y );
+```
+
+```cpp
+float nextafter( float x, float y ); /* C++ only, requires <cmath> */
+long double nextafter( long double x, long double y ); /* C++ only, requires <cmath> */
+
+float nexttoward( float x, long double y ); /* C++ only, requires <cmath> */
+long double nexttoward( long double x, long double y ); /* C++ only, requires <cmath> */
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Der Gleitkommawert, der den Startpunkt markiert.
+
+*y*<br/>
+Der Gleitkommawert, der den Zielpunkt markiert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt den nächsten darstellbaren Gleitkomma-Wert des Rückgabetyps nach *x* in Richtung der *y*. Wenn *x* und *y* gleich sind, gibt die Funktion *y*, umgewandelt in den Rückgabetyp mit keine Ausnahme ausgelöst. Wenn *x* stimmt nicht mit *y*, und das Ergebnis ist eine Denormal oder 0 (null), die **FE_UNDERFLOW** und **FE_INEXACT** Gleitkommaausnahme Zustände festgelegt sind, und das richtige Ergebnis zurückgegeben wird. Wenn entweder *x* oder *y* eine NAN ist, dann ist der Rückgabewert eine Eingabe NANs. Wenn *x* ist endlich, und das Ergebnis unendlich oder nicht im Typ darstellbar ist, eine ordnungsgemäß signierten unendlich oder "NaN" zurückgegeben, die **FE_OVERFLOW** und **FE_INEXACT** Gleitkommaausnahmen Status festgelegt sind, und **Errno** festgelegt ist, um **ERANGE**.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Nextafter** und **Nexttoward** Familien Funktion sind gleichwertig, mit Ausnahme der Parametertyp der *y*. Wenn *x* und *y* gleich sind, ist der zurückgegebene Wert *y* zu diesem Rückgabetyp konvertiert.
+
+Da C++ das Überladen zulässt, wenn Sie aufnehmen \<Cmath > können Sie Überladungen von Aufrufen **Nextafter** und **Nexttoward** zurückgegebene **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Nextafter** und **Nexttoward** stets **doppelte**.
+
+Die **_nextafter** und **_nextafterf** Funktionen sind Microsoft-spezifisch. Die **_nextafterf** Funktion ist nur verfügbar, wenn für X64 kompilieren.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-------------|---------------------------|-------------------------------|
+|**Nextafter**, **Nextafterf**, **Nextafterl**, **_nextafterf**, **Nexttoward**, **Nexttowardf** , **Nexttowardl**|\<math.h>|\<math.h> oder \<cmath>|
+|**_nextafter**|\<float.h>|\<float.h> oder \<cfloat>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

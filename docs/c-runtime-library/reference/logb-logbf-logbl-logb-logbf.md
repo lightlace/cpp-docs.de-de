@@ -1,12 +1,12 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - logb
@@ -47,76 +47,82 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2c1ad71f5f81b7e21e788e8cdbeb9edce60944
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f279d2b31ba9a40dd3d5c0e5d3c50e5a9a4b170
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
-Extrahiert den Exponentenwert eines Gleitkommaarguments.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double logb(  
-   double x   
-);  
-float logb(  
-   float x   
-); // C++ only  
-long double logb(  
-   long double x   
-); // C++ only   
-float logbf(  
-   float x   
-);  
-long double logbl(  
-   long double x   
-);  
-double _logb(  
-   double x   
-);  
-float _logbf(  
-   float x   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- w  
- Ein Gleitkommawert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `logb` gibt den zufälligen Exponentenwert von `x` als ganze Zahl mit Vorzeichen zurück, dargestellt als Gleitkommawert.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `logb`-Funktionen extrahieren den Exponentialwert des Gleitkommaarguments `x` so, als dass `x` mit unbegrenztem Bereich dargestellt würde. Ein denormalisiertes Argument `x` wird wie ein normalisiertes behandelt.  
-  
- Da C++ das Überladen zulässt, können Sie Überladungen von `logb` aufrufen, die `float` oder `long double`-Werte verwenden und zurückgeben. In einem C-Programm verwendet `logb` immer `double` und gibt diesen Wert zurück.  
-  
-|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|Keiner|_DOMAIN|  
-|± 0|ZERODIVIDE|_SING|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_logb`|\<float.h>|  
-|`logb`, `logbf`, `logbl`, `_logbf`|\<math.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [frexp](../../c-runtime-library/reference/frexp.md)
+
+Extrahiert den Exponentenwert eines Gleitkommaarguments.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double logb(
+   double x
+);
+float logb(
+   float x
+); // C++ only
+long double logb(
+   long double x
+); // C++ only
+float logbf(
+   float x
+);
+long double logbl(
+   long double x
+);
+double _logb(
+   double x
+);
+float _logbf(
+   float x
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Ein Gleitkommawert.
+
+## <a name="return-value"></a>Rückgabewert
+
+**Logb** gibt den zufälligen Exponentenwert von *x* als eine Ganzzahl mit Vorzeichen, die als Gleitkommawert dargestellt.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Logb** -Funktionen extrahieren den Exponentialwert des gleitkommaarguments *x*, als dass *x* mit unbegrenztem Bereich dargestellt würde. Wenn das Argument *x* ist normalisiertes sie behandelt, als wäre er normalisiert wurden.
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Logb** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Logb** immer Double und gibt eine **doppelte**.
+
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
+|-----------|-------------------|-----------------------|
+|± QNAN,IND|Keiner|_DOMAIN|
+|± 0|ZERODIVIDE|_SING|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_logb**|\<float.h>|
+|**Logb**, **Logbf**, **Logbl**, **_logbf**|\<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[frexp](frexp.md)<br/>

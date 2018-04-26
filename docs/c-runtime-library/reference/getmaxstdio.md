@@ -1,12 +1,12 @@
 ---
 title: _getmaxstdio | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getmaxstdio
@@ -34,65 +34,69 @@ helpviewer_keywords:
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a7e989406e5726d0ad5a2a42eaa2198dee6b72
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7958c0363ac83d947b3df075b3ab0b0f4019a7f9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getmaxstdio"></a>_getmaxstdio
-Gibt die Anzahl der Dateien an, die auf der E/A-Ebene des Streams gleichzeitig geöffnet sein können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _getmaxstdio( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt eine Zahl zurück, die die Anzahl der Dateien darstellt, die derzeit gleichzeitig auf der Ebene des `stdio` geöffnet sein können.  
-  
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie [_setmaxstdio](../../c-runtime-library/reference/setmaxstdio.md), um die Anzahl der Dateien zu konfigurieren, die auf der Ebene von `stdio` gleichzeitig geöffnet sein können.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_getmaxstdio`|\<stdio.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_setmaxstdio.c  
-// The program retrieves the maximum number  
-// of open files and prints the results  
-// to the console.  
-  
-#include <stdio.h>  
-  
-int main()  
-{  
-   printf( "%d\n", _getmaxstdio());  
-  
-   _setmaxstdio(2048);  
-  
-   printf( "%d\n", _getmaxstdio());  
-}  
-```  
-  
-```Output  
-512  
-2048  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)
+
+Gibt die Anzahl der Dateien an, die auf der E/A-Ebene des Streams gleichzeitig geöffnet sein können.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _getmaxstdio( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt eine Zahl, die Anzahl der gleichzeitig geöffneten Dateien, die derzeit zulässig steht, die **Stdio** Ebene.
+
+## <a name="remarks"></a>Hinweise
+
+Verwendung [_setmaxstdio](setmaxstdio.md) so konfigurieren Sie die Anzahl der gleichzeitig geöffneten Dateien an, die auf die **Stdio** Ebene.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_getmaxstdio**|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_setmaxstdio.c
+// The program retrieves the maximum number
+// of open files and prints the results
+// to the console.
+
+#include <stdio.h>
+
+int main()
+{
+   printf( "%d\n", _getmaxstdio());
+
+   _setmaxstdio(2048);
+
+   printf( "%d\n", _getmaxstdio());
+}
+```
+
+```Output
+512
+2048
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _mbclen, mblen, _mblen_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbclen
@@ -45,124 +45,127 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 460de51d8f969f275ed392d293f90f517c168971
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4f0478d5d6337d185d30a7fee8d012104bdff13d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
-Ruft die Länge ab und bestimmt die Gültigkeit eines Multibytezeichens.  
-  
+
+Ruft die Länge ab und bestimmt die Gültigkeit eines Multibytezeichens.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-size_t _mbclen(  
-   const unsigned char *c   
-);  
-int mblen(  
-   const char *mbstr,  
-   size_t count   
-);  
-int _mblen_l(  
-   const char *mbstr,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Multibytezeichen.  
-  
- `mbstr`  
- Adresse einer Multibytezeichen-Bytesequenz.  
-  
- `count`  
- Anzahl zu überprüfender Bytes.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_mbclen` gibt 1 oder 2 zurück, je nachdem, ob das Multibytezeichen `c` 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für `_mbclen`. Wenn `mbstr` nicht `NULL` ist, gibt `mblen` die Länge des Multibytezeichens in Byte zurück. Wenn `mbstr` gleich `NULL` ist oder auf das NULL-Breitzeichen zeigt, gibt `mblen` 0 zurück. Wenn das Objekt, das `mbstr` verweist auf bilden kein gültiges Multibytezeichen innerhalb der ersten `count` Zeichen, d. h. `mblen` gibt-1 zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_mbclen`-Funktion gibt die Länge des Multibytezeichens `c` in Byte zurück. Wenn `c` nicht auf das führende Byte eines Multibytezeichens zeigt, wie durch einen impliziten Aufruf von `_ismbblead` bestimmt wird, ist das Ergebnis von `_mbclen` unvorhersehbar.  
-  
- `mblen` gibt die Länge von `mbstr` in Byte zurück, wenn es sich um ein gültiges Multibytezeichen handelt und die Multibytezeichengültigkeit, die der Codepage zugeordnet ist, bestimmt wird. `mblen` untersucht `count` oder weniger Byte, die in `mbstr` enthalten sind, jedoch nicht mehr als `MB_CUR_MAX` Byte.  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tclen`|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|`_mbclen`|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_mbclen`|\<mbstring.h>|  
-|`mblen`|\<stdlib.h>|  
-|`_mblen_l`|\<stdlib.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_mblen.c  
-/* illustrates the behavior of the mblen function  
- */  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-    int      i;  
-    char    *pmbc = (char *)malloc( sizeof( char ) );  
-    wchar_t  wc   = L'a';  
-  
-    printf( "Convert wide character to multibyte character:\n" );  
-    wctomb_s( &i, pmbc, sizeof(char), wc );  
-    printf( "  Characters converted: %u\n", i );  
-    printf( "  Multibyte character: %x\n\n", *pmbc );  
-  
-    i = mblen( pmbc, MB_CUR_MAX );  
-    printf( "Length in bytes of multibyte character %x: %u\n", *pmbc, i );  
-  
-    pmbc = NULL;  
-    i = mblen( pmbc, MB_CUR_MAX );  
-    printf( "Length in bytes of NULL multibyte character %x: %u\n", pmbc, i );  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-Convert wide character to multibyte character:  
-  Characters converted: 1  
-  Multibyte character: 61  
-  
-Length in bytes of multibyte character 61: 1  
-Length in bytes of NULL multibyte character 0: 0  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbccpy, _mbccpy_l](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
- [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t _mbclen(
+   const unsigned char *c
+);
+int mblen(
+   const char *mbstr,
+   size_t count
+);
+int _mblen_l(
+   const char *mbstr,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Multibytezeichen.
+
+*mbstr*<br/>
+Adresse einer Multibytezeichen-Bytesequenz.
+
+*count*<br/>
+Anzahl zu überprüfender Bytes.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+**_mbclen** gibt 1 oder 2, je nachdem, ob das Multibytezeichen *c* 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für **_mbclen**. Wenn *Mbstr* nicht **NULL**, **Mblen** gibt die Länge in Byte des multibytezeichens zurück. Wenn *Mbstr* ist **NULL** oder das Objekt zeigt auf das Nullzeichen Breitzeichen **Mblen** gibt 0 zurück. Wenn das Objekt, *Mbstr* verweist auf bilden kein gültiges Multibytezeichen innerhalb der ersten *Anzahl* Zeichen, d. h. **Mblen** gibt-1 zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_mbclen** Funktion gibt die Länge in Byte des multibytezeichens *c*. Wenn *c* verweist nicht auf das führende Byte eines multibytezeichens von einen impliziten Aufruf bestimmt **_ismbblead**, das Ergebnis des **_mbclen** kann nicht berechnet werden.
+
+**Mblen** gibt die Länge in Bytes der *Mbstr* Wenn sie ein gültiges Multibytezeichen ist und bestimmt die Gültigkeit von Multibytezeichen Codepage zugeordnet. **Mblen** untersucht *Anzahl* oder weniger Bytes, die in enthaltenen *Mbstr*, aber nicht länger als **MB_CUR_MAX** Bytes.
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tclen**|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|**_mbclen**|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_mbclen**|\<mbstring.h>|
+|**mblen**|\<stdlib.h>|
+|**_mblen_l**|\<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_mblen.c
+/* illustrates the behavior of the mblen function
+*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+    int      i;
+    char    *pmbc = (char *)malloc( sizeof( char ) );
+    wchar_t  wc   = L'a';
+
+    printf( "Convert wide character to multibyte character:\n" );
+    wctomb_s( &i, pmbc, sizeof(char), wc );
+    printf( "   Characters converted: %u\n", i );
+    printf( "   Multibyte character: %x\n\n", *pmbc );
+
+    i = mblen( pmbc, MB_CUR_MAX );
+    printf( "Length in bytes of multibyte character %x: %u\n", *pmbc, i );
+
+    pmbc = NULL;
+    i = mblen( pmbc, MB_CUR_MAX );
+    printf( "Length in bytes of NULL multibyte character %x: %u\n", pmbc, i );
+}
+```
+
+```Output
+Convert wide character to multibyte character:
+   Characters converted: 1
+   Multibyte character: 61
+
+Length in bytes of multibyte character 61: 1
+Length in bytes of NULL multibyte character 0: 0
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)<br/>
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>

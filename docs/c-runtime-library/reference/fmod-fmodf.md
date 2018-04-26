@@ -1,16 +1,17 @@
 ---
-title: fmod, fmodf | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Fmod, Fmodf, Fmodl | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmod
 - fmodf
+- fmodl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -33,90 +34,100 @@ dev_langs:
 helpviewer_keywords:
 - calculating floating-point remainders
 - fmodf function
+- fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042bf7fec2d8e05628f09297f4af92011237fc5f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c31ec67e3b5c75c334a985461365c7b139758427
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="fmod-fmodf"></a>fmod, fmodf
-Berechnet den Gleitkommarest.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double fmod(   
-   double x,  
-   double y   
-);  
-float fmod(  
-   float x,  
-   float y   
-);  // C++ only  
-long double fmod(  
-   long double x,  
-   long double y  
-);  // C++ only  
-float fmodf(   
-   float x,  
-   float y   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`, `y`  
- Gleitkommawerte.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `fmod` gibt den Gleitkommarest von `x` / `y` zurück. Wenn der Wert von `y` 0,0 ist, gibt `fmod` ein stilles NaN zurück. Informationen über die Darstellung eines stillen NaN durch die `printf`-Familie finden Sie unter [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion `fmod` berechnet den Gleitkommarest `f` von `x` / `y` so, dass `x` = `i` `*` `y` + `f`, wobei `i` eine ganze Zahl ist, `f` das gleiche Zeichen wie `x` hat und der absolute Wert von `f` kleiner ist als der absolute Wert von `y`.  
-  
- Da C++ ein Überladen zulässt, können Sie Überladungen von `fmod` aufrufen. In einem C-Programm verwendet `fmod` immer zwei Double und gibt einen Double zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`fmod`, `fmodf`|\<math.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_fmod.c  
-// This program displays a floating-point remainder.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double w = -10.0, x = 3.0, z;  
-  
-   z = fmod( w, x );  
-   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );  
-}  
-```  
-  
-```Output  
-The remainder of -10.00 / 3.00 is -1.000000  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [_CIfmod](../../c-runtime-library/cifmod.md)
+# <a name="fmod-fmodf-fmodl"></a>Fmod, Fmodf, fmodl
+
+Berechnet den Gleitkommarest.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double fmod(
+   double x,
+   double y
+);
+float fmod(
+   float x,
+   float y
+);  // C++ only
+long double fmod(
+   long double x,
+   long double y
+);  // C++ only
+float fmodf(
+   float x,
+   float y
+);
+long double fmodl(
+   long double x,
+   long double y
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*X*, *y*<br/>
+Gleitkommawerte.
+
+## <a name="return-value"></a>Rückgabewert
+
+**Fmod** gibt den Gleitkommarest von *x* / *y*. Wenn der Wert der *y* ist "0,0", " **Fmod** gibt ein stilles NaN zurück. Informationen zur Darstellung einer stillen NaN durch die **Printf** Familie finden Sie unter [Printf](printf-printf-l-wprintf-wprintf-l.md).
+
+## <a name="remarks"></a>Hinweise
+
+Die **Fmod** -Funktion berechnet den Gleitkommarest *f* von *x* / *y* so, dass *x*  =  *ich* * *y* + *f*, wobei *ich* ist eine ganze Zahl *f* hat die gleichen Vorzeichen wie *x*, und den absoluten Wert des *f* ist kleiner als der Absolute Wert des *y*.
+
+C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Fmod** verwenden und zurückgeben **"float"** und **lange** **doppelte** Werte. In einem C-Programm **Fmod** immer zwei **doppelte** Argumente und gibt eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**Fmod**, **Fmodf**, **Fmodl**|\<math.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_fmod.c
+// This program displays a floating-point remainder.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double w = -10.0, x = 3.0, z;
+
+   z = fmod( w, x );
+   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );
+}
+```
+
+```Output
+The remainder of -10.00 / 3.00 is -1.000000
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[_CIfmod](../../c-runtime-library/cifmod.md)<br/>

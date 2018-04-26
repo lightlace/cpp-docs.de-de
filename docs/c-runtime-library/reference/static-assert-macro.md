@@ -1,12 +1,12 @@
 ---
 title: _STATIC_ASSERT-Makro | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -27,63 +27,67 @@ dev_langs:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62f2f2f5a0d78a0b77cb21d869be209d9293bd0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3076e2e2a27c4f13222ce5dba8bf66cc46ce20c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT-Makro
-Auswerten eines Ausdrucks zur Kompilierzeit und Generieren eines Fehlers, wenn das Ergebnis `FALSE` ist  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-_STATIC_ASSERT(  
-    booleanExpression  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `booleanExpression`  
- Ausdruck (einschließlich Zeiger) der zu ungleich null (`TRUE`) oder 0 (`FALSE`) ausgewertet wird.  
-  
-## <a name="remarks"></a>Hinweise  
- Dieses Makro ähnelt den [_ASSERT- und _ASSERTE-Makros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), außer dass `booleanExpression` zur Kompilierzeit und nicht zur Laufzeit ausgewertet wird. Wenn `booleanExpression` `FALSE` (0) ergibt, wird [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) generiert.  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird überprüft, ob das `sizeof` eines `int` größer als oder gleich 2 Bytes und das `sizeof` eines `long` 1 Byte ist. Das Programm wird nicht kompiliert und generiert [Compiler-Fehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md), da ein `long` größer als 1 Byte ist.  
-  
-```  
-// crt__static_assert.c  
-  
-#include <crtdbg.h>  
-#include <stdio.h>  
-  
-_STATIC_ASSERT(sizeof(int) >= 2);  
-_STATIC_ASSERT(sizeof(long) == 1);  // C2466  
-  
-int main()  
-{  
-    printf("I am sure that sizeof(int) will be >= 2: %d\n",  
-        sizeof(int));  
-    printf("I am not so sure that sizeof(long) == 1: %d\n",  
-        sizeof(long));  
-}  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Makro|Erforderlicher Header|  
-|-----------|---------------------|  
-|`_STATIC_ASSERT`|\<crtdbg.h>|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_ASSERT-, _ASSERTE-, _ASSERT_EXPR-Makros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)
+
+Auswerten eines Ausdrucks zum Zeitpunkt der Kompilierung und ein Fehler generiert, wenn das Ergebnis ist **"false"**.
+
+## <a name="syntax"></a>Syntax
+
+```C
+_STATIC_ASSERT(
+    booleanExpression
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*boolescher Ausdruck* Ausdruck (einschließlich Zeiger), der zu ungleich null ergibt (**"true"**) oder 0 (**"false"**).
+
+## <a name="remarks"></a>Hinweise
+
+Dieses Makro ähnelt der [_ASSERT- und _ASSERTE-Makros](assert-asserte-assert-expr-macros.md), außer dass *boolescher* wird zur Kompilierzeit statt zur Laufzeit ausgewertet. Wenn *boolescher* ergibt **"false"** (0), [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) wird generiert.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel überprüfen wir, ob die ["sizeof"](../../c-language/sizeof-operator-c.md) ein **Int** ist größer als oder gleich 2 Byte und gibt an, ob die ["sizeof"](../../c-language/sizeof-operator-c.md) eine **lange** 1 Byte. Das Programm nicht kompiliert, und es wird generiert, [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) da eine **lange** ist größer als 1 Byte.
+
+```C
+// crt__static_assert.c
+
+#include <crtdbg.h>
+#include <stdio.h>
+
+_STATIC_ASSERT(sizeof(int) >= 2);
+_STATIC_ASSERT(sizeof(long) == 1);  // C2466
+
+int main()
+{
+    printf("I am sure that sizeof(int) will be >= 2: %d\n",
+        sizeof(int));
+    printf("I am not so sure that sizeof(long) == 1: %d\n",
+        sizeof(long));
+}
+```
+
+## <a name="requirements"></a>Anforderungen
+
+|Makro|Erforderlicher Header|
+|-----------|---------------------|
+|**_STATIC_ASSERT**|\<crtdbg.h>|
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](crt-alphabetical-function-reference.md)<br/>
+[_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](assert-asserte-assert-expr-macros.md)<br/>

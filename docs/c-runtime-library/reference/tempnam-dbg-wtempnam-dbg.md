@@ -1,12 +1,12 @@
 ---
 title: _tempnam_dbg, _wtempnam_dbg | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wtempnam_dbg
@@ -39,82 +39,87 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef1427937ce4f263c81c55100045b30d24a3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 28b917ce2f50d9b766fd305f3320664d11e93da2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
-Funktionsversionen von [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md), die die Debugversion von `malloc, _malloc_dbg` verwenden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-char *_tempnam_dbg(  
-   const char *dir,  
-   const char *prefix,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wtempnam_dbg(  
-   const wchar_t *dir,  
-   const wchar_t *prefix,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `dir`  
- Der im Dateinamen verwendete Pfad, wenn es keine TMP-Umgebungsvariable gibt oder wenn TMP kein gültiges Verzeichnis ist.  
-  
- `prefix`  
- Die Zeichenfolge, die den von `_tempnam` zurückgegebenen Namen vorangestellt wird.  
-  
- `blockType`  
- Angeforderter Typ des Speicherblocks: `_CLIENT_BLOCK` oder `_NORMAL_BLOCK`.  
-  
- `filename`  
- Zeiger auf den Namen der Quelldatei, die die Zuordnung angefordert hat, oder `NULL`.  
-  
- `linenumber`  
- Zeilennummer in der Quelldatei, in der die Belegung angefordert wurde, oder `NULL`.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede Funktion gibt einen Zeiger auf den erzeugten Namen zurück oder `NULL`, falls ein Fehler vorliegt. Störungen können auftreten, wenn in der TMP-Umgebungsvariable und im `dir`-Parameter ein ungültiger Verzeichnisname angegeben wurde.  
-  
+
+Funktionsversionen von [_tempnam _wtempnam, Tmpnam _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) , verwenden die Debugversion des **"malloc"**, **_malloc_dbg**.
+
+## <a name="syntax"></a>Syntax
+
+```C
+char *_tempnam_dbg(
+   const char *dir,
+   const char *prefix,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wtempnam_dbg(
+   const wchar_t *dir,
+   const wchar_t *prefix,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*dir*<br/>
+Der im Dateinamen verwendete Pfad, wenn es keine TMP-Umgebungsvariable gibt oder wenn TMP kein gültiges Verzeichnis ist.
+
+*prefix*<br/>
+Die Zeichenfolge, die von zurückgegebenen Namen vorangestellt werden **_tempnam**.
+
+*blockType*<br/>
+Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
+
+*filename*<br/>
+Zeiger zum Namen der Quelldatei, die Belegung angefordert oder **NULL**.
+
+*linenumber*<br/>
+Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede Funktion gibt einen Zeiger auf den Namen generiert oder **NULL** , wenn ein Fehler auftritt. Fehler kann auftreten, wenn ein Ungültiger Verzeichnisname angegeben, in der TMP-Umgebungsvariable und die *Dir* Parameter.
+
 > [!NOTE]
->  `free` (oder `free_dbg`) muss für von `_tempnam_dbg` und `_wtempnam_dbg` belegte Zeiger nicht aufgerufen werden.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_tempnam_dbg` und `_wtempnam_dbg` -Funktionen sind identisch mit `_tempnam` und `_wtempnam` mit dem Unterschied, dass, wenn `_DEBUG` wird definiert, verwenden Sie diese Funktionen die Debugversion des `malloc` und `_malloc_dbg`, um Speicher zuzuordnen `NULL` als erster Parameter übergeben wird. Weitere Informationen finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`-Flag definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_tempnam` und `_wtempnam` zu `_tempnam_dbg` bzw. `_wtempnam_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ttempnam_dbg`|`_tempnam_dbg`|`_tempnam_dbg`|`_wtempnam_dbg`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
- [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
- [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+> **Kostenlose** (oder **Free_dbg**) muss aufgerufen werden, damit von belegte Zeiger **_tempnam_dbg** und **_wtempnam_dbg**.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_tempnam_dbg** und **_wtempnam_dbg** -Funktionen sind identisch mit **_tempnam** und **_wtempnam** mit dem Unterschied, dass, wenn **_DEBUG** wird definiert, verwenden Sie diese Funktionen die Debugversion des **"malloc"** und **_malloc_dbg**, um Speicher zuzuordnen **NULL** ist als erster Parameter übergeben. Weitere Informationen finden Sie unter [_malloc_dbg](malloc-dbg.md).
+
+In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie definieren Sie das Flag **_CRTDBG_MAP_ALLOC**. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_tempnam** und **_wtempnam** neu zu **_tempnam_dbg** und **_ Wtempnam_dbg**nahezu mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Daher, Sie müssen nicht auf diese Funktionen explizit aufrufen, wenn Sie die Heapblöcke als markieren möchten **_CLIENT_BLOCK**. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ttempnam_dbg**|**_tempnam_dbg**|**_tempnam_dbg**|**_wtempnam_dbg**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_tempnam_dbg**, **_wtempnam_dbg**|\<crtdbg.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

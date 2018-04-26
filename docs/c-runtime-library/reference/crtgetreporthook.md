@@ -1,12 +1,12 @@
 ---
 title: _CrtGetReportHook | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtGetReportHook
@@ -31,49 +31,55 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07902a92fea767a4f57f44dbb9bb6692d12611c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4b1e499b1663cbde3bcaa0a01a26e96d544ca390
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
-Ruft die clientdefinierte Berichtsfunktion ab, um sie mit der C-Laufzeit für den Debug-Berichterstellungsprozess zu verknüpfen (nur Debugversion).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-_CRT_REPORT_HOOK _CrtGetReportHook( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt die aktuelle clientdefinierte Berichtsfunktion zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- `_CrtGetReportHook` ermöglicht es einer Anwendung, die aktuelle Berichtsfunktion für den Debugbibliothek-Berichterstellungsprozess der C-Laufzeit abzurufen.  
-  
- Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Debug Hook Function Writing (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_CrtGetReportHook`|\<crtdbg.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="libraries"></a>Bibliotheken  
- Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel für die Verwendung von `_CrtSetReportHook` finden Sie unter [report](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Debugroutinen](../../c-runtime-library/debug-routines.md)   
- [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)
+
+Ruft die clientdefinierte Berichtsfunktion ab, um sie mit der C-Laufzeit für den Debug-Berichterstellungsprozess zu verknüpfen (nur Debugversion).
+
+## <a name="syntax"></a>Syntax
+
+```C
+_CRT_REPORT_HOOK _CrtGetReportHook( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt die aktuelle clientdefinierte Berichtsfunktion zurück.
+
+## <a name="remarks"></a>Hinweise
+
+**_CrtGetReportHook** ermöglicht einer Anwendung, die die aktuelle Berichtsfunktion für die C-Laufzeit-Bibliothek Berichterstellungsprozess abzurufen.
+
+Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Debug Hook Function Writing (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_CrtGetReportHook**|\<crtdbg.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel zum Verwenden von **_CrtSetReportHook**, finden Sie unter [Bericht](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+
+## <a name="see-also"></a>Siehe auch
+
+[Debugroutinen](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtSetReportHook](crtsetreporthook.md)<br/>

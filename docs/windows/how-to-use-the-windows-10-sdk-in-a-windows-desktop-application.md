@@ -1,28 +1,28 @@
 ---
 title: 'Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/19/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung
 Beim Erstellen einer klassischen Windows-Desktopprojekt in Visual Studio 2017 ist es sich standardmäßig einrichten, erstellen Sie mit der Version des Windows 10-SDKS, die installiert wurde, wenn die C++-Desktop-arbeitsauslastung installiert oder zuletzt aktualisiert wurde. Diese Version des Windows SDK ist mit alle neueren Windows-Versionen kompatibel. Wenn Sie eine frühere Version des SDK abzielen möchten, können Sie Projekt öffnen | Eigenschaften, und wählen Sie die anderen SDK-Versionen in der Dropdownliste für das Windows SDK-Version verfügbar.  
@@ -31,7 +31,8 @@ Beim Erstellen einer klassischen Windows-Desktopprojekt in Visual Studio 2017 is
   
 ### <a name="to-target-the-windows-10-sdk"></a>Ausrichten auf das Windows 10-SDK  
   
-1.  Stellen Sie sicher, dass das Windows 10-SDK installiert ist. Das Windows 10-SDK installiert ist, als Teil der [Tools für Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
+1.  Stellen Sie sicher, dass das Windows 10-SDK installiert ist. Das Windows 10-SDK installiert ist, als Teil der **Desktopentwicklung mit C++** arbeitsauslastung. Eine eigenständige Version finden Sie unter [heruntergeladen und tools für Windows 10](https://developer.microsoft.com/windows/downloads).
+
   
 2.  Öffnen Sie das Kontextmenü für den Projektknoten, und wählen Sie **SDK-Version neu zuweisen**aus.  
   

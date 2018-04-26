@@ -1,12 +1,12 @@
 ---
 title: regex_constants-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
@@ -91,43 +91,47 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239dbe69d32a5d9a463e33d9d3c1076aa0e79f50
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexconstants-class"></a>regex_constants-Klasse
-Namespace für Flags für reguläre Ausdrücke.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-namespace regex_constants {  
-    enum syntax_option_type;  
-    enum match_flag_type;  
-    enum error_type;  
- }  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Der Namespace `regex_constants` kapselt mehrere Flagtypen und ihre zugeordneten Flagwerte.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<regex >  
-  
- **Namespace:** std  
-  
-##  <a name="error_type"></a> regex_constants::error_type  
- Flags für die Berichterstellung bei Syntaxfehlern für reguläre Ausdrücke.  
-  
-```  
+
+Namespace für Flags für reguläre Ausdrücke.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+namespace regex_constants {
+    enum syntax_option_type;
+    enum match_flag_type;
+    enum error_type;
+ }
+```
+
+## <a name="remarks"></a>Hinweise
+
+Der Namespace `regex_constants` kapselt mehrere Flagtypen und ihre zugeordneten Flagwerte.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<regex >
+
+**Namespace:** std
+
+## <a name="error_type"></a> regex_constants::error_type
+
+Flags für die Berichterstellung bei Syntaxfehlern für reguläre Ausdrücke.
+
+```cpp
 enum error_type
     {    // identify error
     error_collate,
@@ -145,49 +149,51 @@ enum error_type
     error_stack,
     error_parse,
     error_syntax
-    };  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein enumerierter Typ, der ein Objekt beschreibt, das Fehlerflags aufnehmen kann. Die unterschiedlichen Flagwerte sind:  
-  
- `error_backref`: Der Ausdruck enthielt einen ungültigen Rückverweis.  
-  
- `error_badbrace`: Der Ausdruck enthielt eine ungültige Anzahl in einem {}-Ausdruck.  
-  
- `error_badrepeat`: Einem Wiederholungsausdruck (in den meisten Kontexten einer von „*“, „“, „+“, „{“) wurde kein Ausdruck vorangestellt.  
-  
- `error_brace`: Der Ausdruck enthielt eine nicht übereinstimmende Anzahl von „{' or '}“.  
-  
- `error_brack`: Der Ausdruck enthielt eine nicht übereinstimmende Anzahl von „[' or ']“.  
-  
- `error_collate`: Der Ausdruck enthielt einen ungültigen Sortierungselementnamen.  
-  
- `error_complexity`: Bei einem versuchten Vergleich ist ein Fehler aufgetreten, da dieser zu komplex war.  
-  
- `error_ctype`: Der Ausdruck enthielt einen ungültigen Zeichenklassennamen.  
-  
- `error_escape`: Der Ausdruck enthielt eine ungültige Escapesequenz.  
-  
- `error_paren`: Der Ausdruck enthielt eine nicht übereinstimmende Anzahl von „(' or ')“.  
-  
- `error_parse`: Der Ausdruck konnte nicht analysiert werden.  
-  
- `error_range`: Der Ausdruck enthielt einen ungültigen Zeichenbereichsbezeichner.  
-  
- `error_space`: Beim Analysieren eines regulären Ausdrucks ist ein Fehler aufgetreten, da nicht ausreichend Ressourcen verfügbar waren.  
-  
- `error_stack`: Bei einem versuchten Vergleich ist ein Fehler aufgetreten, da nicht ausreichend Arbeitsspeicher verfügbar war.  
-  
- `error_syntax`: Beim Analysieren eines Syntaxfehler ist ein Fehler aufgetreten.  
-  
- `error_backref`: Der Ausdruck enthielt einen ungültigen Rückverweis.  
-  
-##  <a name="match_flag_type"></a> regex_constants::match_flag_type  
- Flags für Optionen zum Vergleichen regulärer Ausdrücke.  
-  
-```  
-enum match_flag_type 
+    };
+```
+
+### <a name="remarks"></a>Hinweise
+
+Der Typ ist ein enumerierter Typ, der ein Objekt beschreibt, das Fehlerflags aufnehmen kann. Die unterschiedlichen Flagwerte sind:
+
+`error_backref`: Der Ausdruck enthielt einen ungültigen Rückverweis.
+
+`error_badbrace`: Der Ausdruck enthielt eine ungültige Anzahl in einem {}-Ausdruck.
+
+`error_badrepeat`: Einem Wiederholungsausdruck (in den meisten Kontexten einer von „*“, „“, „+“, „{“) wurde kein Ausdruck vorangestellt.
+
+`error_brace`: Der Ausdruck enthielt eine nicht übereinstimmende Anzahl von „{' or '}“.
+
+`error_brack`: Der Ausdruck enthielt eine nicht übereinstimmende Anzahl von „[' or ']“.
+
+`error_collate`: Der Ausdruck enthielt einen ungültigen Sortierungselementnamen.
+
+`error_complexity`: Bei einem versuchten Vergleich ist ein Fehler aufgetreten, da dieser zu komplex war.
+
+`error_ctype`: Der Ausdruck enthielt einen ungültigen Zeichenklassennamen.
+
+`error_escape`: Der Ausdruck enthielt eine ungültige Escapesequenz.
+
+`error_paren`: Der Ausdruck enthielt eine nicht übereinstimmende Anzahl von „(' or ')“.
+
+`error_parse`: Der Ausdruck konnte nicht analysiert werden.
+
+`error_range`: Der Ausdruck enthielt einen ungültigen Zeichenbereichsbezeichner.
+
+`error_space`: Beim Analysieren eines regulären Ausdrucks ist ein Fehler aufgetreten, da nicht ausreichend Ressourcen verfügbar waren.
+
+`error_stack`: Bei einem versuchten Vergleich ist ein Fehler aufgetreten, da nicht ausreichend Arbeitsspeicher verfügbar war.
+
+`error_syntax`: Beim Analysieren eines Syntaxfehler ist ein Fehler aufgetreten.
+
+`error_backref`: Der Ausdruck enthielt einen ungültigen Rückverweis.
+
+## <a name="match_flag_type"></a> regex_constants::match_flag_type
+
+Flags für Optionen zum Vergleichen regulärer Ausdrücke.
+
+```cpp
+enum match_flag_type
     {    // specify matching and formatting rules
     match_default = 0x0000,
     match_not_bol = 0x0001,
@@ -203,46 +209,48 @@ enum match_flag_type
     format_no_copy = 0x0800,
     format_first_only = 0x1000,
     _Match_not_null = 0x2000
-    };  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Der Typ ist eine „Bitmaske“, die Optionen für den Vergleich einer Textsequenz mit einem regulären Ausdruck und Formatflags beschreibt, die beim Ersetzen von Text verwendet werden. Optionen können mit `|`kombiniert werden.  
-  
- Vergleichsoptionen:  
-  
- `match_default`  
-  
- `match_not_bol`: Die erste Position in der Zielsequenz nicht als Zeilenanfang behandeln.  
-  
- `match_not_eol`: Die „past-the-end“-Position in der Zielsequenz nicht als Zeilenende behandeln.  
-  
- `match_not_bow`: Die erste Position in der Zielsequenz nicht als Wortanfang behandeln.  
-  
- `match_not_eow`: Die „past-the-end“-Position in der Zielsequenz nicht als Wortende behandeln.  
-  
- `match_any`: Wenn mehr als eine Übereinstimmung möglich ist, kann jede Übereinstimmung akzeptiert werden.  
-  
- `match_not_null`: Eine leere Untersequenz nicht als Übereinstimmung behandeln.  
-  
- `match_continuous`: Nur am Anfang der Zielsequenz nach Übereinstimmungen suchen.  
-  
- `match_prev_avail` -- `--first` ist ein gültiger Iterator. Ignorieren Sie `match_not_bol` und `match_not_bow`, falls diese festgelegt sind.  
-  
- Formatflags:  
-  
- `format_default`: ECMAScript-Formatierungsregeln verwenden  
-  
- `format_sed`: „sed“-Formatierungsregeln verwenden  
-  
- `format_no_copy`: keinen Text kopieren, der nicht mit dem regulären Ausdruck übereinstimmt  
-  
- `format_first_only`: nach der ersten Übereinstimmung nicht nach weiteren Übereinstimmungen suchen  
-  
-##  <a name="syntax_option_type"></a> regex_constants::syntax_option_type  
- Flags zum Auswählen von Syntaxoptionen.  
-  
-```  
+    };
+```
+
+### <a name="remarks"></a>Hinweise
+
+Der Typ ist eine „Bitmaske“, die Optionen für den Vergleich einer Textsequenz mit einem regulären Ausdruck und Formatflags beschreibt, die beim Ersetzen von Text verwendet werden. Optionen können mit `|`kombiniert werden.
+
+Vergleichsoptionen:
+
+`match_default`
+
+`match_not_bol`: Die erste Position in der Zielsequenz nicht als Zeilenanfang behandeln.
+
+`match_not_eol`: Die „past-the-end“-Position in der Zielsequenz nicht als Zeilenende behandeln.
+
+`match_not_bow`: Die erste Position in der Zielsequenz nicht als Wortanfang behandeln.
+
+`match_not_eow`: Die „past-the-end“-Position in der Zielsequenz nicht als Wortende behandeln.
+
+`match_any`: Wenn mehr als eine Übereinstimmung möglich ist, kann jede Übereinstimmung akzeptiert werden.
+
+`match_not_null`: Eine leere Untersequenz nicht als Übereinstimmung behandeln.
+
+`match_continuous`: Nur am Anfang der Zielsequenz nach Übereinstimmungen suchen.
+
+`match_prev_avail` -- `--first` ist ein gültiger Iterator. Ignorieren Sie `match_not_bol` und `match_not_bow`, falls diese festgelegt sind.
+
+Formatflags:
+
+`format_default`: ECMAScript-Formatierungsregeln verwenden
+
+`format_sed`: „sed“-Formatierungsregeln verwenden
+
+`format_no_copy`: keinen Text kopieren, der nicht mit dem regulären Ausdruck übereinstimmt
+
+`format_first_only`: nach der ersten Übereinstimmung nicht nach weiteren Übereinstimmungen suchen
+
+## <a name="syntax_option_type"></a> regex_constants::syntax_option_type
+
+Flags zum Auswählen von Syntaxoptionen.
+
+```cpp
 enum syntax_option_type
     {    // specify RE syntax rules
     ECMAScript = 0x01,
@@ -257,42 +265,44 @@ enum syntax_option_type
     nosubs = 0x0200,
     optimize = 0x0400,
     collate = 0x0800
-    };  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Bitmaskentyp, der Sprachenspezifizierer und Syntaxmodifikatoren beschreibt, die beim Kompilieren eines regulären Ausdrucks verwendet werden sollen. Optionen können mit `|`kombiniert werden. Es darf immer nur jeweils ein Sprachenspezifizierer verwendet werden.  
-  
- Es gibt folgende Sprachenspezifizierer:  
-  
- `ECMAScript`: als ECMAScript kompilieren  
-  
- `basic`: als BRE kompilieren  
-  
- `extended`: als ERE kompilieren  
-  
- `awk`: als awk kompilieren  
-  
- `grep`: als grep kompilieren  
-  
- `egrep`: als egrep kompilieren  
-  
- Es gibt folgende Syntaxmodifikatoren:  
-  
- `icase`: Beachtung der Groß-/Kleinschreibung für Übereinstimmungen aufheben  
-  
- `nosubs`: die Implementierung muss die Inhalte von Erfassungsgruppen nicht nachverfolgen  
-  
- `optimize`:die Implementierung muss mehr Wert auf die Geschwindigkeit der Übereinstimmung anstatt die Geschwindigkeit der Kompilierung regulärer Ausdrücke legen  
-  
- `collate`: für Übereinstimmungen soll Gebietsschema beachtet werden  
-  
-## <a name="see-also"></a>Siehe auch  
-[\<regex>](../standard-library/regex.md)  
-[regex_error-Klasse](../standard-library/regex-error-class.md)  
-[\<regex>-Funktionen](../standard-library/regex-functions.md)  
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)  
-[\<regex>-Operatoren](../standard-library/regex-operators.md)  
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)  
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)  
-[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)  
+    };
+```
+
+### <a name="remarks"></a>Hinweise
+
+Der Typ ist ein Bitmaskentyp, der Sprachenspezifizierer und Syntaxmodifikatoren beschreibt, die beim Kompilieren eines regulären Ausdrucks verwendet werden sollen. Optionen können mit `|`kombiniert werden. Es darf immer nur jeweils ein Sprachenspezifizierer verwendet werden.
+
+Es gibt folgende Sprachenspezifizierer:
+
+`ECMAScript`: als ECMAScript kompilieren
+
+`basic`: als BRE kompilieren
+
+`extended`: als ERE kompilieren
+
+`awk`: als awk kompilieren
+
+`grep`: als grep kompilieren
+
+`egrep`: als egrep kompilieren
+
+Es gibt folgende Syntaxmodifikatoren:
+
+`icase`: Beachtung der Groß-/Kleinschreibung für Übereinstimmungen aufheben
+
+`nosubs`: die Implementierung muss die Inhalte von Erfassungsgruppen nicht nachverfolgen
+
+`optimize`:die Implementierung muss mehr Wert auf die Geschwindigkeit der Übereinstimmung anstatt die Geschwindigkeit der Kompilierung regulärer Ausdrücke legen
+
+`collate`: für Übereinstimmungen soll Gebietsschema beachtet werden
+
+## <a name="see-also"></a>Siehe auch
+
+[\<regex>](../standard-library/regex.md)<br/>
+[regex_error-Klasse](../standard-library/regex-error-class.md)<br/>
+[\<regex>-Funktionen](../standard-library/regex-functions.md)<br/>
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)<br/>
+[\<regex>-Operatoren](../standard-library/regex-operators.md)<br/>
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)<br/>
+[regex_traits-Klasse](../standard-library/regex-traits-class.md)<br/>
+[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)<br/>

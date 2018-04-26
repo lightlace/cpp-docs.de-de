@@ -1,12 +1,12 @@
 ---
 title: rand | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand
@@ -39,15 +39,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fecd9079de1ae846d83847eb299890d62c29d17
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b5d60cdedf69d03871be4c408241660ea726b5c5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rand"></a>rand
 
-Generiert eine pseudozufällige Zahl mithilfe eines Algorithmus bekannten und vollständig reproduziert werden kann. Eine weitere programmgesteuert sichere Version dieser Funktion ist verfügbar. finden Sie unter [Rand_s](../../c-runtime-library/reference/rand-s.md). Zahlen generiert, indem `rand` sind nicht kryptografisch sicher. Verwenden Sie kryptografisch zufallszahlengenerierung ist sicherer, `rand_s` oder die Funktionen deklariert werden, in der C++-Standardbibliothek in [ \<random >](../../standard-library/random.md).
+Generiert eine pseudozufällige Zahl mithilfe eines Algorithmus bekannten und vollständig reproduziert werden kann. Eine weitere programmgesteuert sichere Version dieser Funktion ist verfügbar. finden Sie unter [Rand_s](rand-s.md). Zahlen generiert, indem **Rand** sind nicht kryptografisch sicher. Verwenden Sie kryptografisch zufallszahlengenerierung ist sicherer, [Rand_s](rand-s.md) oder die Funktionen deklariert werden, in der C++-Standardbibliothek in [ \<random >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,21 +57,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-`rand` gibt eine Pseudozufallszahl zurück, wie oben beschrieben. Es gibt keine Fehlerrückgabe.
+**Rand** gibt eine Pseudozufallszahl wie oben beschrieben. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `rand`-Funktion gibt eine pseudozufällige Ganzzahl im Bereich von 0 bis `RAND_MAX` (32767) zurück. Verwenden Sie die [srand](../../c-runtime-library/reference/srand.md)-Funktion, um den Startwert für die Pseudozufallszahl vor dem Aufruf von `rand` zu erstellen.
+Die **Rand** Funktion gibt pseudozufällige eine ganze Zahl zwischen 0 und **RAND_MAX** (32767). Verwenden der [Srand](srand.md) Funktion für den Pseudozufallszahl Generator vor dem Aufruf **Rand**.
 
-Die `rand` -Funktion generiert eine bekannte Folge und ist nicht geeignet für die Verwendung als einer kryptografischen Funktion. Verwenden Sie kryptografisch zufallszahlengenerierung ist sicherer, `rand_s` oder die Funktionen deklariert werden, in der C++-Standardbibliothek in [ \<random >](../../standard-library/random.md). Informationen über die Nachteile von `rand()` und die Behebung dieser Schwachpunkte durch `<random>` erhalten Sie in [diesem Video](http://go.microsoft.com/fwlink/?LinkId=397615).
+Die **Rand** Funktion generiert eine bekannte Folge und ist nicht geeignet für die Verwendung als einer kryptografischen Funktion. Verwenden Sie kryptografisch zufallszahlengenerierung ist sicherer, [Rand_s](rand-s.md) oder die Funktionen deklariert werden, in der C++-Standardbibliothek in [ \<random >](../../standard-library/random.md). Informationen zu durch Schwachpunkte **Rand** und wie \<random > Nachteile finden Sie unter [dieses Video](http://go.microsoft.com/fwlink/?LinkId=397615).
 
 ## <a name="requirements"></a>Anforderungen
 
-|-Routine zurückgegebener Wert|Erforderlicher Header|
+|Routine|Erforderlicher Header|
 |-------------|---------------------|
-|`rand`|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
-Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -125,7 +125,7 @@ int main( void )
 11651
 27464
 18093
- 3284
+3284
 11785
 14686
 11447
@@ -145,6 +145,6 @@ int main( void )
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
-[rand_s](../../c-runtime-library/reference/rand-s.md)  
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[srand](srand.md)<br/>
+[rand_s](rand-s.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: is_pod-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::is_pod
@@ -16,102 +16,103 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4311e319593da7f893c8f8bff635e34972c3dca3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c6aeccf783ecd3914e69af8542ec3ef07bb9f084
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ispod-class"></a>is_pod-Klasse
-Testet, ob der Typ POD ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```
+
+Testet, ob der Typ POD ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 template <class T>
 struct is_pod;
-```  
-  
-#### <a name="parameters"></a>Parameter  
-*T*  
-Der abzufragende Typ.  
-  
-## <a name="remarks"></a>Hinweise  
-`is_pod<T>::value` ist `true`, wenn der Typ *T* Plain Old Data (POD) ist. Andernfalls ist der Wert `false`.  
-  
-Arithmetische Typen, Enumerationstypen, Zeigertypen und Zeiger auf Membertypen sind POD.  
-  
-Eine cv-qualifizierte Version eines POD-Typs ist selbst ein POD-Typ.  
-  
-Ein Array von POD ist selbst POD.  
-  
-Eine Struktur oder Union, all deren nicht statische Datenmember POD sind, ist selbst POD, wenn sie Folgendes aufweist:  
-  
--   Keine benutzerdeklarierten Konstruktoren  
-  
--   Keine privaten oder geschützten nicht statischen Datenmember  
-  
--   Keine Basisklassen  
-  
--   Keine virtuellen Funktionen  
-  
--   Keine nicht statischen Datenmember des Verweistyps  
-  
--   Keinen benutzerdefinierten Kopierzuweisungsoperator  
-  
--   Keinen benutzerdefinierten Destruktor  
-  
-Aus diesem Grund können Sie rekursiv POD-Strukturen und -Arrays erstellen, die POD-Strukturen und -Arrays enthalten.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// std__type_traits__is_pod.cpp   
-// compile with: /EHsc   
-#include <type_traits>   
-#include <iostream>   
-  
-struct trivial {   
-    int val;   
-};   
-  
-struct throws {   
+```
+
+### <a name="parameters"></a>Parameter
+
+*T* der abzufragende Typ.
+
+## <a name="remarks"></a>Hinweise
+
+`is_pod<T>::value` ist `true`, wenn der Typ *T* Plain Old Data (POD) ist. Andernfalls ist der Wert `false`.
+
+Arithmetische Typen, Enumerationstypen, Zeigertypen und Zeiger auf Membertypen sind POD.
+
+Eine cv-qualifizierte Version eines POD-Typs ist selbst ein POD-Typ.
+
+Ein Array von POD ist selbst POD.
+
+Eine Struktur oder Union, all deren nicht statische Datenmember POD sind, ist selbst POD, wenn sie Folgendes aufweist:
+
+- Keine benutzerdeklarierten Konstruktoren
+
+- Keine privaten oder geschützten nicht statischen Datenmember
+
+- Keine Basisklassen
+
+- Keine virtuellen Funktionen
+
+- Keine nicht statischen Datenmember des Verweistyps
+
+- Keinen benutzerdefinierten Kopierzuweisungsoperator
+
+- Keinen benutzerdefinierten Destruktor
+
+Aus diesem Grund können Sie rekursiv POD-Strukturen und -Arrays erstellen, die POD-Strukturen und -Arrays enthalten.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// std__type_traits__is_pod.cpp
+// compile with: /EHsc
+#include <type_traits>
+#include <iostream>
+
+struct trivial {
+    int val;
+};
+
+struct throws {
     throws() {}  // User-declared ctor, so not POD
-  
-    int val;   
-};   
-  
-int main() {   
-    std::cout << "is_pod<trivial> == " << std::boolalpha   
-        << std::is_pod<trivial>::value << std::endl;   
-    std::cout << "is_pod<int> == " << std::boolalpha   
-        << std::is_pod<int>::value << std::endl;   
-    std::cout << "is_pod<throws> == " << std::boolalpha   
-        << std::is_pod<throws>::value << std::endl;   
-  
-    return (0);   
-}  
-```  
-  
-```Output  
-is_pod<trivial> == true  
-is_pod<int> == true  
-is_pod<throws> == false  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-**Header:** \<type_traits>  
-  
-**Namespace:** std  
-  
-## <a name="see-also"></a>Siehe auch  
-[<type_traits>](../standard-library/type-traits.md)
 
+    int val;
+};
 
+int main() {
+    std::cout << "is_pod<trivial> == " << std::boolalpha
+        << std::is_pod<trivial>::value << std::endl;
+    std::cout << "is_pod<int> == " << std::boolalpha
+        << std::is_pod<int>::value << std::endl;
+    std::cout << "is_pod<throws> == " << std::boolalpha
+        << std::is_pod<throws>::value << std::endl;
 
+    return (0);
+}
+```
+
+```Output
+is_pod<trivial> == true
+is_pod<int> == true
+is_pod<throws> == false
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<type_traits>
+
+**Namespace:** std
+
+## <a name="see-also"></a>Siehe auch
+
+[<type_traits>](../standard-library/type-traits.md)<br/>

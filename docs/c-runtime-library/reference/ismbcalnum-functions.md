@@ -1,12 +1,12 @@
 ---
 title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbcalpha
@@ -55,89 +55,94 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02214850013233c616d2bd23970b8921f0ff5e86
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9ad7235ecfce6b9345764c6a8804f2981c0555cc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
-Überprüft, ob ein Multibytezeichen ein alphanumerisches Zeichen ist oder aus einem Buchstaben oder einer Ziffer besteht.  
-  
+
+Überprüft, ob ein Multibytezeichen ein alphanumerisches Zeichen ist oder aus einem Buchstaben oder einer Ziffer besteht.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _ismbcalnum  
-(  
-   unsigned int c   
-);  
-int _ismbcalnum_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcalpha  
-(  
-   unsigned int c   
-);  
-int _ismbcalpha_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcdigit  
-(  
-   unsigned int c   
-);  
-int _ismbcdigit_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `c`  
- Zu testende Zeichen.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn `c`<= 255 ist und es eine entsprechende `_ismbb`-Routine gibt (beispielsweise `_ismbcalnum` entspricht `_ismbbalnum`), ist das Ergebnis der Rückgabewert der entsprechenden `_ismbb`-Routine.  
-  
-## <a name="remarks"></a>Hinweise  
- Jede dieser Routinen testet ein angegebenes Multibytezeichen auf eine angegebene Bedingung.  
-  
- Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch das ihnen übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
-|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|  
-|-------------|--------------------|---------------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|Alphanumerisches Zeichen|Gibt nur dann einen Wert ungleich Null zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Buchstabens ist: siehe Beispiele für `_ismbcdigit` und `_ismbcalpha`.|  
-|`_ismbcalpha,_ismbcalpha_l`|Alphabetisch|Gibt nur dann einen Wert ungleich null zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Buchstabens ist: 0x41<=`c`<=0x5A oder 0x61<=`c`<=0x7A, oder ein Katakana-Buchstabe: 0xA6<=`c`<=0xDF.|  
-|`_ismbcdigit,_ismbcdigit`|Ziffer|Gibt nur dann einen Wert ungleich null zurück, wenn `c` eine Einzelbytedarstellung einer ASCII-Ziffer ist: 0x30=<`c`<=0x39.|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h>|  
-|`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  
-|`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [_ismbc-Routinen](../../c-runtime-library/ismbc-routines.md)   
- [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _ismbcalnum
+(
+   unsigned int c
+);
+int _ismbcalnum_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcalpha
+(
+   unsigned int c
+);
+int _ismbcalpha_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcdigit
+(
+   unsigned int c
+);
+int _ismbcdigit_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*c*<br/>
+Zu testende Zeichen.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255, und es wird ein entsprechendes **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+
+## <a name="remarks"></a>Hinweise
+
+Jede dieser Routinen testet ein angegebenes Multibytezeichen auf eine angegebene Bedingung.
+
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+|Routine|Testbedingung|Beispiel für Codepage 932|
+|-------------|--------------------|---------------------------|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumerisches Zeichen|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung von einem ASCII-Buchstaben: Siehe Beispiele für **_ismbcdigit** und **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung von einem ASCII-Buchstaben: 0 x 41 nach < =*c*< = 0x5A oder 0 x 61 < =*c*< = 0x7A; oder ein Katakana-Buchstabe: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Ziffer|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung einer ASCII-Ziffern: 0 x 30 < =*c*< = 0 x 39.|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[ismbc-Routinen](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbb-Routinen](../../c-runtime-library/ismbb-routines.md)<br/>

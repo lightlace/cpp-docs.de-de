@@ -1,12 +1,12 @@
 ---
 title: acos, acosf, acosl | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - acosf
@@ -40,119 +40,118 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cccaa6369f6d858a63991c561e0c0984eba1aba
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2acce9216d113616cfb053e6e9cd6fe74705e806
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
-Berechnet den Arkuskosinus.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-double acos(   
-   double x   
-);  
-float acos(  
-   float x   
-);   // C++ only  
-long double acos(  
-   long double x  
-);   // C++ only  
-float acosf(  
-   float x   
-);  
-long double acosl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `x`  
- Der Wert zwischen-1 und 1 für die den Arkuskosinus (der umgekehrte Kosinus) berechnet werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die `acos`-Funktion gibt den Arkuskosinus von `x` im Bogenmaß im Bereich 0 bis π zurück.  
-  
- In der Standardeinstellung Wenn `x` ist kleiner als-1 oder größer als 1 ist, `acos` einen unbestimmten Wert zurück.  
-  
-|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
-|-----------|-------------------|-----------------------|  
-|± ∞|`INVALID`|`_DOMAIN`|  
-|± QNAN,IND|Keine|`_DOMAIN`|  
-|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
-  
-## <a name="remarks"></a>Hinweise  
- Da C++ das Überladen zulässt, können Sie Überladungen von `acos` aufrufen, die `float` und `long double`-Typen verwenden und zurückgeben. In einem C-Programm verwendet `acos` immer `double` und gibt diesen Wert zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|  
-|-------------|---------------------|----------------------|  
-|`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
-  
-## <a name="example"></a>Beispiel  
- Dieses Programm fordert zur Eingabe eines Werts im – 1 bis 1 auf. Eingabewerte außerhalb dieses Bereichs erzeugen `_DOMAIN`-Fehlermeldungen. Wenn ein gültiger Wert eingegeben wird, gibt das Programm den Arkussinus und den Arkuskosinus dieses Werts aus.  
-  
-```  
-// crt_asincos.c  
-// arguments: 0  
-  
-#include <math.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main( int ac, char* av[] )  
-{  
-    double  x,  
-            y;  
-    errno_t err;   
-  
-    // argument checking  
-    if (ac != 2)  
-    {  
-        fprintf_s( stderr, "Usage: %s <number between -1 and 1>\n",  
-                   av[0]);  
-        return 1;  
-    }  
-  
-    // Convert argument into a double value  
-    if ((err = sscanf_s( av[1], "%lf", &x )) != 1)  
-    {  
-        fprintf_s( stderr, "Error converting argument into ",  
-                   "double value.\n");  
-        return 1;  
-    }  
-  
-    // Arcsine of X  
-    y = asin( x );  
-    printf_s( "Arcsine of %f = %f\n", x, y );  
-  
-    // Arccosine of X  
-    y = acos( x );  
-    printf_s( "Arccosine of %f = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-Arcsine of 0.000000 = 0.000000  
-Arccosine of 0.000000 = 1.570796  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
- [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Berechnet den Arkuskosinus.
+
+## <a name="syntax"></a>Syntax
+
+```C
+double acos( double x );
+float acosf( float x );
+long double acosl( long double x );
+```
+
+```cpp
+float acos( float x );   // C++ only
+long double acos( long double x );   // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*w*<br/>
+Der Wert zwischen-1 und 1 für die den Arkuskosinus (der umgekehrte Kosinus) berechnet werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die **Acos** Funktion gibt den Arkuskosinus von *x* im Bereich von 0 bis π zurück.
+
+In der Standardeinstellung Wenn *x* ist kleiner als-1 oder größer als 1 ist, **Acos** einen unbestimmten Wert zurück.
+
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
+|-----------|-------------------|-----------------------|
+|± ∞|**UNGÜLTIG**|**_DOMAIN**|
+|± QNAN,IND|Keine|**_DOMAIN**|
+|&#124;x&#124;>1|**UNGÜLTIG**|**_DOMAIN**|
+
+## <a name="remarks"></a>Hinweise
+
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Acos** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Acos** immer Double und gibt eine **doppelte**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|Optionale Header|
+|-------------|---------------------|----------------------|
+|**ACOS**, **Acosf**, **Acosl**|\<math.h>|\<errno.h>|
+
+## <a name="example"></a>Beispiel
+
+Dieses Programm fordert zur Eingabe eines Werts im – 1 bis 1 auf. Eingabewerte außerhalb dieses Bereichs erzeugen **_DOMAIN** Fehlermeldungen. Wenn ein gültiger Wert eingegeben wird, gibt das Programm den Arkussinus und den Arkuskosinus dieses Werts aus.
+
+```C
+// crt_asincos.c
+// arguments: 0
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main( int ac, char* av[] )
+{
+    double  x,
+            y;
+    errno_t err;
+
+    // argument checking
+    if (ac != 2)
+    {
+        fprintf_s( stderr, "Usage: %s <number between -1 and 1>\n",
+                   av[0]);
+        return 1;
+    }
+
+    // Convert argument into a double value
+    if ((err = sscanf_s( av[1], "%lf", &x )) != 1)
+    {
+        fprintf_s( stderr, "Error converting argument into ",
+                   "double value.\n");
+        return 1;
+    }
+
+    // Arcsine of X
+    y = asin( x );
+    printf_s( "Arcsine of %f = %f\n", x, y );
+
+    // Arccosine of X
+    y = acos( x );
+    printf_s( "Arccosine of %f = %f\n", x, y );
+}
+```
+
+```Output
+Arcsine of 0.000000 = 0.000000
+Arccosine of 0.000000 = 1.570796
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
+[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
+[_matherr](matherr.md)<br/>
+[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
+[tan, tanf, tanl](tan-tanf-tanl.md)<br/>

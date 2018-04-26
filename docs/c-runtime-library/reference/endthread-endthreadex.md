@@ -1,12 +1,12 @@
 ---
 title: _endthread, _endthreadex | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _endthread
@@ -39,62 +39,67 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 794dc5c4bbaf9653c5b6bbb08ea3e0a60ca438c4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ea85337ad22675a9cd7726fa5880d4d565ed9f14
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
-Beendet einen Thread. `_endthread` beendet einen von `_beginthread` erstellten Thread, und  `_endthreadex` beendet einen von `_beginthreadex`erstellten Thread.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void _endthread( void );  
-void _endthreadex(   
-   unsigned retval   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `retval`  
- Threadexitcode.  
-  
-## <a name="remarks"></a>Hinweise  
- Sie können `_endthread` oder `_endthreadex` explizit aufrufen, um einen Thread zu beenden. Allerdings wird `_endthread` oder `_endthreadex` automatisch aufgerufen, wenn der Thread aus der als Parameter an `_beginthread` oder `_beginthreadex`übergebenen Routine zurückgegeben wird. Das Beenden eines Threads durch Aufruf von `endthread` oder `_endthreadex` stellt die ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.  
-  
+
+Beendet einen Thread; **_endthread** beendet einen Thread durch die erstellte **_beginthread** und **_endthreadex** beendet einen Thread durch die erstellte **_beginthreadex**.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void _endthread( void );
+void _endthreadex(
+   unsigned retval
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Retval* threadbeendigungscode.
+
+## <a name="remarks"></a>Hinweise
+
+Sie erreichen **_endthread** oder **_endthreadex** ausdrücklich auf einen Thread zu beenden jedoch **_endthread** oder **_endthreadex** wird aufgerufen automatisch, wenn der Thread aus der Routine zurückgegeben als Parameter an übergeben **_beginthread** oder **_beginthreadex**. Das Beenden eines Threads durch Aufruf von **Endthread** oder **_endthreadex** stellt die ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.
+
 > [!NOTE]
->  Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. `_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread`auf.  
-  
- `_endthread` schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich von dem der `ExitThread`-Win32-API.) Wenn Sie also `_beginthread` und `_endthread` verwenden, schließen Sie das Threadhandle nicht explizit mit dem Aufruf der [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx)-Win32-API.  
-  
- Wie die `ExitThread` -Win32-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex` verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle`-Win32-API schließen.  
-  
+> Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. **_endthread** und **_endthreadex** zugeordnete Threadressourcen und rufen dann **ExitThread**.
+
+**_endthread** schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich von der Win32 **ExitThread** API.) Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, nicht explizit schließen Sie das Threadhandle durch Aufrufen von Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+
+Wie die Win32 **ExitThread** -API, **_endthreadex** wird nicht das Threadhandle geschlossen. Aus diesem Grund bei Verwendung von **_beginthreadex** und **_endthreadex**, schließen Sie das Threadhandle durch Aufrufen von Win32 **CloseHandle** API.
+
 > [!NOTE]
->  `_endthread` und `_endthreadex` führen dazu, dass im Thread ausstehende C++-Destruktoren nicht aufgerufen werden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_endthread`|\<process.h>|  
-|`_endthreadex`|\<process.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliotheken  
- Nur Multithread-Versionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Beispiel  
- Weitere Informationen finden Sie im Beispiel für [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
- [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)
+> **_endthread** und **_endthreadex** dazu führen, dass ausstehende C++-Destruktoren im Thread nicht aufgerufen werden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_endthread**|\<process.h>|
+|**_endthreadex**|\<process.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotheken
+
+Nur Multithread-Versionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Beispiel
+
+Weitere Informationen finden Sie im Beispiel für [_beginthread](beginthread-beginthreadex.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>

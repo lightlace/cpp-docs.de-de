@@ -1,12 +1,12 @@
 ---
 title: _set_abort_behavior | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Gibt die Aktion an, die ausgeführt werden soll, wenn ein Programm nicht normal beendet wird.
 
 > [!NOTE]
-> Verwenden Sie nicht die `abort` Funktion, um eine Microsoft Store-app mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=865936). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Verwenden Sie nicht die [abort](abort.md) Funktion, um eine Microsoft Store-app mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=865936). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parameter
 
-[in] _flags_  
-Neuer Wert der `abort`-Flags.
+*flags*<br/>
+Der neue Wert der [abort](abort.md) Flags.
 
-[in] _Maske_  
-Maske für die festzulegenden Bits der `abort`-Flags.
+*Maske*<br/>
+Maske für die [abort](abort.md) kennzeichnet festzulegenden Bits.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -73,13 +73,13 @@ Der alte Wert der Flags.
 
 ## <a name="remarks"></a>Hinweise
 
-Es gibt zwei `abort`-Flags: `_WRITE_ABORT_MSG` und `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` bestimmt, ob eine informative Textmeldung gedruckt werden soll, wenn ein Programm nicht normal beendet wird. Die Meldung sagt aus, dass die Anwendung die `abort`-Funktion aufgerufen hat. Beim Standardverhalten wird die Meldung ausgeben. Wenn `_CALL_REPORTFAULT`festgelegt ist, wird ein Watson-Absturzabbild generiert und beim Aufruf von `abort` ausgegeben. Standardmäßig ist die Absturzabbildberichterstellung in den Nichtdebugversionen aktiviert.
+Es gibt zwei [abort](abort.md) Flags: **_WRITE_ABORT_MSG** und **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** bestimmt, ob eine informative textmeldung gedruckt wird, wenn ein Programm nicht normal beendet wird. Die Meldung besagt, dass die Anwendung aufgerufen hat die [abort](abort.md) Funktion. Beim Standardverhalten wird die Meldung ausgeben. **_CALL_REPORTFAULT**, sofern festgelegt, gibt an, dass ein Watson-Absturzabbild generiert und, wenn gemeldet [abort](abort.md) aufgerufen wird. Standardmäßig ist die Absturzabbildberichterstellung in den Nichtdebugversionen aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|-Routine zurückgegebener Wert|Erforderlicher Header|
+|Routine|Erforderlicher Header|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Siehe auch
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

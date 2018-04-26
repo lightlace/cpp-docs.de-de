@@ -1,12 +1,12 @@
 ---
 title: iterator-Struktur | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xutility/std::iterator
@@ -16,23 +16,25 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 274d472e3f3768a67a49ed6ca074f3a126bfd0fd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6bf766bdcb63ae4d50006f4a2d7722238663c610
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="iterator-struct"></a>iterator-Struktur
-Eine leere Basisstruktur wird verwendet, um sicherzustellen, dass eine benutzerdefinierte Iteratorklasse ordnungsgemäß mit **iterator_trait**s funktioniert.  
-  
-## <a name="syntax"></a>Syntax  
-```    
+
+Eine leere Basisstruktur wird verwendet, um sicherzustellen, dass eine benutzerdefinierte Iteratorklasse ordnungsgemäß mit **iterator_trait**s funktioniert.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 struct iterator {
    typedef Category iterator_category;
    typedef Type value_type;
@@ -40,37 +42,39 @@ struct iterator {
    typedef Distance distance_type;
    typedef Pointer pointer;
    typedef Reference reference;
-   };  
-```    
-## <a name="remarks"></a>Hinweise  
- Die Vorlagenstruktur wird als Basistyp für alle Iteratoren verwendet. Definiert den Membertypen  
-  
-- `iterator_category` (ein Synonym für den Vorlagenparameter `Category`).  
-  
-- `value_type` ( ein Synonym für den Vorlagenparameter **Type**).  
-  
-- `difference_type` (ein Synonym für den Vorlagenparameter `Distance`).  
-  
-- `distance_type` (ein Synonym für den Vorlagenparameter `Distance`).  
-  
-- `pointer` (ein Synonym für den Vorlagenparameter `Pointer`).  
-  
-- `reference` (ein Synonym für den Vorlagenparameter `Reference`).  
-  
- Beachten Sie, dass `value_type` kein konstanter Typ sein darf, auch wenn der **Zeiger** auf ein Objekt vom const-**Type** verweist und der Verweis ein Objekt vom const-**Type** kennzeichnet.  
-  
-## <a name="example"></a>Beispiel  
- Unter [iterator_traits](../standard-library/iterator-traits-struct.md) finden Sie ein Beispiel für das Deklarieren und Verwenden von Typen in der Iterator-Basisklasse.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<iterator>  
-  
- **Namespace:** std  
-  
-## <a name="see-also"></a>Siehe auch  
- [\<iterator>](../standard-library/iterator.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+   };
+```
 
+## <a name="remarks"></a>Hinweise
 
+Die Vorlagenstruktur wird als Basistyp für alle Iteratoren verwendet. Definiert den Membertypen
 
+- `iterator_category` (ein Synonym für den Vorlagenparameter `Category`).
+
+- `value_type` ( ein Synonym für den Vorlagenparameter **Type**).
+
+- `difference_type` (ein Synonym für den Vorlagenparameter `Distance`).
+
+- `distance_type` (ein Synonym für den Vorlagenparameter `Distance`).
+
+- `pointer` (ein Synonym für den Vorlagenparameter `Pointer`).
+
+- `reference` (ein Synonym für den Vorlagenparameter `Reference`).
+
+Beachten Sie, dass `value_type` kein konstanter Typ sein darf, auch wenn der **Zeiger** auf ein Objekt vom const-**Type** verweist und der Verweis ein Objekt vom const-**Type** kennzeichnet.
+
+## <a name="example"></a>Beispiel
+
+Unter [iterator_traits](../standard-library/iterator-traits-struct.md) finden Sie ein Beispiel für das Deklarieren und Verwenden von Typen in der Iterator-Basisklasse.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<iterator>
+
+**Namespace:** std
+
+## <a name="see-also"></a>Siehe auch
+
+[\<iterator>](../standard-library/iterator.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

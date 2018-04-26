@@ -1,10 +1,10 @@
 ---
 title: '&lt;allocators&gt;-Makros | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
@@ -13,7 +13,7 @@ f1_keywords:
 - allocators/std::CACHE_SUBALLOC
 - allocators/std::SYNC_DEFAULT
 ms.assetid: 9cb5ee07-1ff9-4594-ae32-3c8c6efb511a
-caps.latest.revision: 
+caps.latest.revision: 12
 manager: ghogen
 helpviewer_keywords:
 - std::ALLOCATOR_DECL [C++]
@@ -21,38 +21,43 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 7bd292ee2c19c2db90f126d6082854141c3e71fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b06ede32746c13244db622788e7e9c6f7cbe4cc9
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt;-Makros
-||||  
-|-|-|-|  
-|[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|  
-|[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|  
-  
-##  <a name="allocator_decl"></a> ALLOCATOR_DECL  
- Gibt eine Allocatorvorlagenklasse aus.  
-  
-```
+
+||||
+|-|-|-|
+|[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
+|[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
+
+## <a name="allocator_decl"></a> ALLOCATOR_DECL
+
+Gibt eine Allocatorvorlagenklasse aus.
+
+```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Das Makro gibt eine Vorlagendefinition `template <class Type> class name {.....}` und eine Spezialisierung `template <> class name<void> {.....}` aus, die zusammen eine Allocatorvorlagenklasse definieren, die den Synchonisierungsfilter `sync` und einen Cache des Typs `cache` verwendet.  
-  
- Für Compiler, die Neubindungen kompilieren können, sieht die resultierende Vorlagendefinition wie folgt aus:  
-```  
+```
+
+### <a name="remarks"></a>Hinweise
+
+Das Makro gibt eine Vorlagendefinition `template <class Type> class name {.....}` und eine Spezialisierung `template <> class name<void> {.....}` aus, die zusammen eine Allocatorvorlagenklasse definieren, die den Synchonisierungsfilter `sync` und einen Cache des Typs `cache` verwendet.
+
+Für Compiler, die Neubindungen kompilieren können, sieht die resultierende Vorlagendefinition wie folgt aus:
+
+```cpp
 struct rebind
    {    /* convert a name<Type> to a name<Other> */
    typedef name<Other> other;
-   };  
- ```  
- Für Compiler, die Neubindungen nicht kompilieren können, sieht die resultierende Vorlagendefinition wie folgt aus:  
-  
+   };
 ```
+
+Für Compiler, die Neubindungen nicht kompilieren können, sieht die resultierende Vorlagendefinition wie folgt aus:
+
+```cpp
 template <class Type<class name
     : public stdext::allocators::allocator_base<Type,
     sync<stdext::allocators::rts_alloc<cache>>>
@@ -67,48 +72,50 @@ public:
         return *this;
     }
 };
-```  
-  
-##  <a name="cache_chunklist"></a> CACHE_CHUNKLIST  
- Gibt `stdext::allocators::cache_chunklist<sizeof(Type)>` aus.  
-  
 ```
+
+## <a name="cache_chunklist"></a> CACHE_CHUNKLIST
+
+Gibt `stdext::allocators::cache_chunklist<sizeof(Type)>` aus.
+
+```cpp
 #define CACHE_CHUNKLIST <cache_class>
-```  
-  
-### <a name="remarks"></a>Hinweise  
-  
-##  <a name="cache_freelist"></a> CACHE_FREELIST  
- Gibt `stdext::allocators::cache_freelist<sizeof(Type), max>` aus.  
-  
 ```
+
+### <a name="remarks"></a>Hinweise
+
+## <a name="cache_freelist"></a> CACHE_FREELIST
+
+Gibt `stdext::allocators::cache_freelist<sizeof(Type), max>` aus.
+
+```cpp
 #define CACHE_FREELIST(max) <cache_class>
-```  
-  
-### <a name="remarks"></a>Hinweise  
-  
-##  <a name="cache_suballoc"></a> CACHE_SUBALLOC  
- Gibt `stdext::allocators::cache_suballoc<sizeof(Type)>` aus.  
-  
 ```
+
+### <a name="remarks"></a>Hinweise
+
+## <a name="cache_suballoc"></a> CACHE_SUBALLOC
+
+Gibt `stdext::allocators::cache_suballoc<sizeof(Type)>` aus.
+
+```cpp
 #define CACHE_SUBALLOC <cache_class>
-```  
-  
-### <a name="remarks"></a>Hinweise  
-  
-##  <a name="sync_default"></a> SYNC_DEFAULT  
- Gibt einen Synchronisierungsfilter aus.  
-  
 ```
+
+### <a name="remarks"></a>Hinweise
+
+## <a name="sync_default"></a> SYNC_DEFAULT
+
+Gibt einen Synchronisierungsfilter aus.
+
+```cpp
 #define SYNC_DEFAULT <sync_template>
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Wenn ein Compiler das Kompilieren sowohl von Singlethread- als auch von Multithread-Anwendungen unterstützt, gibt das Makro für die Singlethread-Anwendung `stdext::allocators::sync_none` aus; andernfalls gibt es `stdext::allocators::sync_shared` aus.  
-  
-## <a name="see-also"></a>Siehe auch  
- [\<allocators>](../standard-library/allocators-header.md)
+```
 
+### <a name="remarks"></a>Hinweise
 
+Wenn ein Compiler das Kompilieren sowohl von Singlethread- als auch von Multithread-Anwendungen unterstützt, gibt das Makro für die Singlethread-Anwendung `stdext::allocators::sync_none` aus; andernfalls gibt es `stdext::allocators::sync_shared` aus.
 
+## <a name="see-also"></a>Siehe auch
 
+[\<allocators>](../standard-library/allocators-header.md)<br/>

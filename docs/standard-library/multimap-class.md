@@ -1,12 +1,12 @@
 ---
 title: multimap-Klasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - map/std::multimap
@@ -95,1462 +95,1533 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8b7a4f41a4667dc3a8c14a3c1a1765f9a6b5ad68
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="multimap-class"></a>multimap-Klasse
-Die Mehrfachzuordnungsklasse der C++-Standardbibliothek wird zum Speichern und Abrufen von Daten aus Auflistungen verwendet, in denen es sich bei jedem Element um ein Paar mit einem Datenwert und einem Sortierschlüssel handelt. Der Wert der Schlüssel muss nicht eindeutig sein und wird verwendet, um die Daten automatisch zu sortieren. Der Wert eines Elements in einer Mehrfachzuordnung, aber nicht der zugehörige Schlüsselwert, wird möglicherweise direkt geändert. Stattdessen müssen die Schlüsselwerte, die alten Elementen zugeordnet sind, gelöscht, und stattdessen neuen Schlüsselwerten für neue Elemente zugeordnet werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template <class Key,   
-    class Type,   
-    class Traits=less <Key>,   
-    class Allocator=allocator <pair  <const Key, Type>>>  
-class multimap;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `Key`  
- Der in der Mehrfachzuordnung zu speichernde Schlüsseldatentyp.  
-  
- `Type`  
- Der in der Mehrfachzuordnung zu speichernde Elementdatentyp.  
-  
- `Traits`  
- Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Mehrfachzuordnung zu bestimmen. Das binäre Prädikat `less<Key>` ist der Standardwert.  
-  
- In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)  
-  
- `Allocator`  
- Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type> >`.  
-  
-## <a name="remarks"></a>Hinweise  
- Auf die Mehrfachzuordnungsklasse der C++-Standardbibliothek treffen die folgenden Punkte zu:  
-  
--   Ein assoziativer Container, der ein Container variabler Größe ist, der den effizienten Abruf von Elementwerten auf Grundlage eines zugeordneten Schlüsselwert unterstützt.  
-  
--   Umkehrbar, da bidirektionale Iteratoren für den Zugriff auf die Elemente bereitgestellt werden.  
-  
--   Sortiert, da die Elemente anhand von Schlüsselwerten innerhalb des Containers mit einer angegebenen Vergleichsfunktion sortiert werden.  
-  
--   Mehrfach, da die Elemente keine eindeutige Schlüssel aufweisen müssen, damit ein Schlüsselwert über viele zugeordnete Elementdatenwerte verfügen kann.  
-  
--   Ein Paar assoziativer Container, da sich die Elementdatenwerte von den Schlüsselwerten unterscheiden.  
-  
--   Eine Vorlagenklasse, da die bereitgestellten Funktionen generisch ist und daher unabhängig vom angegebenen Datentyp, der als Elemente oder Schlüssel enthalten ist. Die für Elemente und Schlüssel zu verwendenden Datentypen werden stattdessen in der Klassenvorlage zusammen mit der Vergleichsfunktion und der Zuweisung als Parameter angegeben.  
-  
- Der von der Zuordnungsklasse bereitgestellte Iterator ist bidirektional. Die Klassenmemberfunktionen [insert](#insert) und [multimap](#multimap) weisen jedoch Versionen auf, die einen abgeschwächten Eingabeiterator als Vorlagenparameter akzeptieren. Die Funktionalitätsanforderungen dieses Eingabeiterators sind weniger umfangreich als die Anforderungen, die von der Klasse bidirektionaler Iteratoren gewährleistet werden. Die verschiedenen Iteratorkonzepte bilden eine Family, die durch Verfeinerungen in ihrer Funktionen verknüpft ist. Jedes Iteratorkonzept weist einen eigenen Satz von Anforderungen auf, und die damit funktionierenden Algorithmen müssen die Annahmen hinsichtlich der von diesem Iteratortyp bereitgestellten Anforderungen begrenzen. Es kann davon ausgegangen werden, dass ein Eingabeiterator möglicherweise so dereferenziert wird, dass er auf ein Objekt verweist und dieses möglicherweise zum folgenden Iterator in der Sequenz erhöht. Das ist ein minimaler Funktionssatz, allerdings genügt er, um sinnvoll über einen Bereich von `[First, Last)`-Iteratoren im Kontext der Klassenmemberfunktionen zu sprechen.  
-  
- Die Auswahl des Containertyps sollte im Allgemeinen auf Grundlage des für die Anwendung erforderlichen Suchen und Einfügetyps erfolgen. Assoziative Container sind für Such-, Einfüge- und Entfernvorgänge optimiert. Die Memberfunktionen, die diese Vorgänge explizit unterstützen, sind effizient und führen sie in einer Zeit aus, die zum Logarithmus der Elementanzahl im Container im Durchschnitt proportional ist. Das Einfügen von Elementen führt nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen von Elementen werden nur solche Iteratoren ungültig, die speziell auf die entfernten Elemente gezeigt haben.  
-  
- Die Mehrfachzuordnung sollte der ausgewählte assoziative Container sein, wenn die Bedingungen, mit denen die Werte von der Anwendung den Schlüsseln zugeordnet werden, erfüllt werden. Ein Modell für diesen Strukturtyp ist eine sortierte Liste von Schlüsselwörtern mit zugeordneten Zeichenfolgewerten, die, sagen wir, Definitionen bereitstellen, in denen die Wörter nicht immer eindeutig definiert wurden. Wenn die Schlüsselwörter stattdessen eindeutig definiert werden, damit die Schlüssel eindeutig sind, ist eine Zuordnung der gewählte Container. Wenn hingegen nur die Wortliste gespeichert wurde, ist ein Satz der richtige Container. Wenn mehrfaches Vorkommen der Wörter zugelassen wird, ist eine Multimenge die geeignete Containerstruktur.  
-  
- Die Mehrfachzuordnung sortiert die von ihr gesteuerten Elemente, indem ein gespeichertes Funktionsobjekt des Typs [key_compare](#key_compare) aufgerufen wird. Bei diesem gespeicherten Objekt handelt es sich um eine Vergleichsfunktion, auf die zugegriffen werden kann, indem die [key_comp](#key_comp)-Memberfunktion aufgerufen wird. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären `f(x,y)`-Prädikat handelt es sich um ein Funktionsobjekt, das die zwei Argumentobjekte `x` und `y` aufweist sowie einen Rückgabewert von "true" oder "false". Eine Sortierung, die bei einem Satz erzeugt wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch und transitiv ist, und wenn die Äquivalenz transitiv ist; wobei zwei Objekte `x` und `y` so definiert werden, dass sie äquivalent sind, wenn sowohl `f(x,y)` als auch `f(y,x)` "false" ist. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.  
-  
- In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers).  
-  
-## <a name="members"></a>Member  
-  
-### <a name="constructors"></a>Konstruktoren  
-  
-|||  
-|-|-|  
-|[multimap](#multimap)|Erstellt ein `multimap`-Element, das leer oder die Kopie eines ganzen anderen `multimap`-Elements oder eines Teils davon ist.|  
-  
-### <a name="typedefs"></a>Typedefs  
-  
-|||  
-|-|-|  
-|[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `multimap`-Objekt darstellt.|  
-|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element ein `multimap`-Element lesen kann.|  
-|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einem `multimap`-Element bereitstellt.|  
-|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein `const`-Element bereitstellt, das in einem `multimap`-Element zum Lesen und Ausführen von `const`-Vorgängen gespeichert ist.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element jedes `multimap`-Element lesen kann.|  
-|[difference_type](#difference_type)|Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen eines `multimap`-Elements in einen Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.|  
-|[Iterator](#iterator)|Ein Typ, der den Unterschied zwischen zwei Iteratoren, die auf Elemente innerhalb derselben `multimap` verweisen, bereitstellt.|  
-|[key_compare](#key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `multimap`-Element zu bestimmen.|  
-|[key_type](#key_type)|Ein Typ, mit dem das Sortierschlüsselobjekt beschrieben wird, das jedes Element von `multimap` bildet.|  
-|[mapped_type](#mapped_type)|Ein Typ, der den in einer `multimap` gespeicherten Datentyp darstellt.|  
-|[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einem `multimap`-Element bereitstellt.|  
-|[Verweis](#reference)|Ein Typ, der einen Verweis auf ein in einer `multimap` gespeichertes Element bereitstellt.|  
-|[reverse_iterator](#reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einem umgekehrten `multimap`-Element gelesen oder geändert werden kann.|  
-|[size_type](#size_type)|Ein ganze Zahl ohne Vorzeichen, die einen Zeiger auf ein `const`-Element in einer `multimap` bereitstellt.|  
-|[value_type](#value_type)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Elemente als Sortierschlüssel vergleichen kann, um die relative Position im `multimap`-Element zu bestimmen.|  
-  
-### <a name="member-functions"></a>Memberfunktionen  
-  
-|||  
-|-|-|  
-|[begin](#begin)|Gibt ein Iterator zurück, der das erste Element im `multimap`-Element adressiert.|  
-|[cbegin](#cbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im `multimap`-Element adressiert.|  
-|[cend](#cend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines `multimap`-Elements nachfolgt.|  
-|[clear](#clear)|Löscht alle Elemente einer `multimap` auf.|  
-|[count](#count)|Gibt die Anzahl von Elementen in einem `multimap`-Element zurück, dessen Schlüssel dem von einem Parameter angegebenen Schlüssel entspricht.|  
-|[crbegin](#crbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im umgekehrten `multimap`-Element adressiert.|  
-|[crend](#crend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `multimap`-Elements nachfolgt.|  
-|[emplace](#emplace)|Fügt ein Element ein, das vor Ort in ein `multimap`-Element erstellt wird.|  
-|[emplace_hint](#emplace_hint)|Fügt ein Element ein, das vor Ort mit einem Platzierungshinweis in ein `multimap`-Element erstellt wird.|  
-|[empty](#empty)|Testet, ob ein `multimap`-Element leer ist.|  
-|[end](#end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `multimap`-Element nachfolgt.|  
-|[equal_range](#equal_range)|Sucht den Bereich von Elementen, in dem der Schlüssel des Elements einem angegebenen Wert entspricht.|  
-|[erase](#erase)|Es wird ein Element oder ein Bereich von Elementen in einem `multimap` von angegebenen Speicherorten entfernt, oder es werden die einem angegebenen Schlüssel entsprechenden Elemente entfernt.|  
-|[find](#find)|Gibt einen Iterator zurück, der die erste Position eines Elements in einem `multimap`-Element adressiert, das einen Schlüssel aufweist, der einem angegebenen Schlüssel entspricht.|  
-|[get_allocator](#get_allocator)|Gibt eine Kopie des zum Erstellen von `allocator` verwendeten `multimap`-Objekts zurück.|  
-|[insert](#insert)|Fügt ein Element oder einen Elementbereich in ein `multimap`-Element ein.|  
-|[key_comp](#key_comp)|Ruft eine Kopie des Vergleichsobjekts ab, das zum Sortieren der Schlüssel in `multimap` verwendet wird.|  
-|[lower_bound](#lower_bound)|Gibt einen Iterator zum ersten Element in einem `multimap`-Element mit einem Schlüssel zurück, der gleich oder größer ist als ein angegebener Schlüssel.|  
-|[max_size](#max_size)|Gibt die Maximallänge der `multimap` zurück.|  
-|[rbegin](#rbegin)|Gibt einen Iterator zurück, der das erste Element in einem umgekehrten `multimap`-Element adressiert.|  
-|[rend](#rend)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `multimap`-Elements nachfolgt.|  
-|[size](#size)|Gibt die Anzahl von Elementen in der `multimap` zurück.|  
-|[swap](#swap)|Tauscht die Elemente zweier `multimap`n.|  
-|[upper_bound](#upper_bound)|Gibt einen Iterator zum ersten Element in einem `multimap`-Element mit einem Schlüssel zurück, der größer ist als ein angegebener Schlüssel.|  
-|[value_comp](#value_comp)|Die Memberfunktion gibt ein Funktionsobjekt zurück, das die Reihenfolge der Elemente in einer `multimap` bestimmt, indem ihre Schlüsselwerte verglichen werden.|  
-  
-### <a name="operators"></a>Operatoren  
-  
-|||  
-|-|-|  
-|[operator=](#op_eq)|Ersetzt die Elemente eines `multimap`-Elements durch eine Kopie eines anderen `multimap`-Elements.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<map>  
-  
- **Namespace:** std  
-  
- Die Paare ( **key**, **value**) werden in einer Mehrfachzuordnung als Objekte des Typs `pair` gespeichert. Die Paarklasse erfordert den Header \<utility>, der durch \<map> automatisch enthalten ist.  
-  
-##  <a name="allocator_type"></a> multimap::allocator_type  
- Ein Typ, der die Zuweisungsklasse für das multimap-Objekt darstellt.  
-  
-```  
-typedef Allocator allocator_type;  
-```  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [get_allocator](#get_allocator) finden Sie ein Beispiel mit `allocator_type`.  
-  
-##  <a name="begin"></a> multimap::begin  
- Gibt einen Iterator zurück, der das erste Element in der Mehrfachzuordnung adressiert.  
-  
-```  
+
+Die Mehrfachzuordnungsklasse der C++-Standardbibliothek wird zum Speichern und Abrufen von Daten aus Auflistungen verwendet, in denen es sich bei jedem Element um ein Paar mit einem Datenwert und einem Sortierschlüssel handelt. Der Wert der Schlüssel muss nicht eindeutig sein und wird verwendet, um die Daten automatisch zu sortieren. Der Wert eines Elements in einer Mehrfachzuordnung, aber nicht der zugehörige Schlüsselwert, wird möglicherweise direkt geändert. Stattdessen müssen die Schlüsselwerte, die alten Elementen zugeordnet sind, gelöscht, und stattdessen neuen Schlüsselwerten für neue Elemente zugeordnet werden.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template <class Key,
+    class Type,
+    class Traits=less <Key>,
+    class Allocator=allocator <pair  <const Key, Type>>>
+class multimap;
+```
+
+### <a name="parameters"></a>Parameter
+
+`Key` Der Key-Datentyp um in der mehrfachzuordnung zu speichernde Elementdatentyp.
+
+`Type` Der in der mehrfachzuordnung zu speichernde Elementdatentyp.
+
+`Traits` Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in der mehrfachzuordnung zu bestimmen, vergleichen können. Das binäre Prädikat `less<Key>` ist der Standardwert.
+
+In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)
+
+`Allocator` Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type> >`.
+
+## <a name="remarks"></a>Hinweise
+
+Auf die Mehrfachzuordnungsklasse der C++-Standardbibliothek treffen die folgenden Punkte zu:
+
+- Ein assoziativer Container, der ein Container variabler Größe ist, der den effizienten Abruf von Elementwerten auf Grundlage eines zugeordneten Schlüsselwert unterstützt.
+
+- Umkehrbar, da bidirektionale Iteratoren für den Zugriff auf die Elemente bereitgestellt werden.
+
+- Sortiert, da die Elemente anhand von Schlüsselwerten innerhalb des Containers mit einer angegebenen Vergleichsfunktion sortiert werden.
+
+- Mehrfach, da die Elemente keine eindeutige Schlüssel aufweisen müssen, damit ein Schlüsselwert über viele zugeordnete Elementdatenwerte verfügen kann.
+
+- Ein Paar assoziativer Container, da sich die Elementdatenwerte von den Schlüsselwerten unterscheiden.
+
+- Eine Vorlagenklasse, da die bereitgestellten Funktionen generisch ist und daher unabhängig vom angegebenen Datentyp, der als Elemente oder Schlüssel enthalten ist. Die für Elemente und Schlüssel zu verwendenden Datentypen werden stattdessen in der Klassenvorlage zusammen mit der Vergleichsfunktion und der Zuweisung als Parameter angegeben.
+
+Der von der Zuordnungsklasse bereitgestellte Iterator ist bidirektional. Die Klassenmemberfunktionen [insert](#insert) und [multimap](#multimap) weisen jedoch Versionen auf, die einen abgeschwächten Eingabeiterator als Vorlagenparameter akzeptieren. Die Funktionalitätsanforderungen dieses Eingabeiterators sind weniger umfangreich als die Anforderungen, die von der Klasse bidirektionaler Iteratoren gewährleistet werden. Die verschiedenen Iteratorkonzepte bilden eine Family, die durch Verfeinerungen in ihrer Funktionen verknüpft ist. Jedes Iteratorkonzept weist einen eigenen Satz von Anforderungen auf, und die damit funktionierenden Algorithmen müssen die Annahmen hinsichtlich der von diesem Iteratortyp bereitgestellten Anforderungen begrenzen. Es kann davon ausgegangen werden, dass ein Eingabeiterator möglicherweise so dereferenziert wird, dass er auf ein Objekt verweist und dieses möglicherweise zum folgenden Iterator in der Sequenz erhöht. Das ist ein minimaler Funktionssatz, allerdings genügt er, um sinnvoll über einen Bereich von `[First, Last)`-Iteratoren im Kontext der Klassenmemberfunktionen zu sprechen.
+
+Die Auswahl des Containertyps sollte im Allgemeinen auf Grundlage des für die Anwendung erforderlichen Suchen und Einfügetyps erfolgen. Assoziative Container sind für Such-, Einfüge- und Entfernvorgänge optimiert. Die Memberfunktionen, die diese Vorgänge explizit unterstützen, sind effizient und führen sie in einer Zeit aus, die zum Logarithmus der Elementanzahl im Container im Durchschnitt proportional ist. Das Einfügen von Elementen führt nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen von Elementen werden nur solche Iteratoren ungültig, die speziell auf die entfernten Elemente gezeigt haben.
+
+Die Mehrfachzuordnung sollte der ausgewählte assoziative Container sein, wenn die Bedingungen, mit denen die Werte von der Anwendung den Schlüsseln zugeordnet werden, erfüllt werden. Ein Modell für diesen Strukturtyp ist eine sortierte Liste von Schlüsselwörtern mit zugeordneten Zeichenfolgewerten, die, sagen wir, Definitionen bereitstellen, in denen die Wörter nicht immer eindeutig definiert wurden. Wenn die Schlüsselwörter stattdessen eindeutig definiert werden, damit die Schlüssel eindeutig sind, ist eine Zuordnung der gewählte Container. Wenn hingegen nur die Wortliste gespeichert wurde, ist ein Satz der richtige Container. Wenn mehrfaches Vorkommen der Wörter zugelassen wird, ist eine Multimenge die geeignete Containerstruktur.
+
+Die Mehrfachzuordnung sortiert die von ihr gesteuerten Elemente, indem ein gespeichertes Funktionsobjekt des Typs [key_compare](#key_compare) aufgerufen wird. Bei diesem gespeicherten Objekt handelt es sich um eine Vergleichsfunktion, auf die zugegriffen werden kann, indem die [key_comp](#key_comp)-Memberfunktion aufgerufen wird. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären `f(x,y)`-Prädikat handelt es sich um ein Funktionsobjekt, das die zwei Argumentobjekte `x` und `y` aufweist sowie einen Rückgabewert von "true" oder "false". Eine Sortierung, die bei einem Satz erzeugt wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch und transitiv ist, und wenn die Äquivalenz transitiv ist; wobei zwei Objekte `x` und `y` so definiert werden, dass sie äquivalent sind, wenn sowohl `f(x,y)` als auch `f(y,x)` "false" ist. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
+
+In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers).
+
+## <a name="members"></a>Member
+
+### <a name="constructors"></a>Konstruktoren
+
+|Konstruktor|Beschreibung|
+|-|-|
+|[multimap](#multimap)|Erstellt ein `multimap`-Element, das leer oder die Kopie eines ganzen anderen `multimap`-Elements oder eines Teils davon ist.|
+
+### <a name="typedefs"></a>Typedefs
+
+|Typname|Beschreibung|
+|-|-|
+|[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `multimap`-Objekt darstellt.|
+|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element ein `multimap`-Element lesen kann.|
+|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einem `multimap`-Element bereitstellt.|
+|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein `const`-Element bereitstellt, das in einem `multimap`-Element zum Lesen und Ausführen von `const`-Vorgängen gespeichert ist.|
+|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element jedes `multimap`-Element lesen kann.|
+|[difference_type](#difference_type)|Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen eines `multimap`-Elements in einen Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.|
+|[Iterator](#iterator)|Ein Typ, der den Unterschied zwischen zwei Iteratoren, die auf Elemente innerhalb derselben `multimap` verweisen, bereitstellt.|
+|[key_compare](#key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `multimap`-Element zu bestimmen.|
+|[key_type](#key_type)|Ein Typ, mit dem das Sortierschlüsselobjekt beschrieben wird, das jedes Element von `multimap` bildet.|
+|[mapped_type](#mapped_type)|Ein Typ, der den in einer `multimap` gespeicherten Datentyp darstellt.|
+|[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einem `multimap`-Element bereitstellt.|
+|[Verweis](#reference)|Ein Typ, der einen Verweis auf ein in einer `multimap` gespeichertes Element bereitstellt.|
+|[reverse_iterator](#reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einem umgekehrten `multimap`-Element gelesen oder geändert werden kann.|
+|[size_type](#size_type)|Ein ganze Zahl ohne Vorzeichen, die einen Zeiger auf ein `const`-Element in einer `multimap` bereitstellt.|
+|[value_type](#value_type)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Elemente als Sortierschlüssel vergleichen kann, um die relative Position im `multimap`-Element zu bestimmen.|
+
+### <a name="member-functions"></a>Memberfunktionen
+
+|Member-Funktion|Beschreibung|
+|-|-|
+|[begin](#begin)|Gibt ein Iterator zurück, der das erste Element im `multimap`-Element adressiert.|
+|[cbegin](#cbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im `multimap`-Element adressiert.|
+|[cend](#cend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines `multimap`-Elements nachfolgt.|
+|[clear](#clear)|Löscht alle Elemente einer `multimap` auf.|
+|[count](#count)|Gibt die Anzahl von Elementen in einem `multimap`-Element zurück, dessen Schlüssel dem von einem Parameter angegebenen Schlüssel entspricht.|
+|[crbegin](#crbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im umgekehrten `multimap`-Element adressiert.|
+|[crend](#crend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `multimap`-Elements nachfolgt.|
+|[emplace](#emplace)|Fügt ein Element ein, das vor Ort in ein `multimap`-Element erstellt wird.|
+|[emplace_hint](#emplace_hint)|Fügt ein Element ein, das vor Ort mit einem Platzierungshinweis in ein `multimap`-Element erstellt wird.|
+|[empty](#empty)|Testet, ob ein `multimap`-Element leer ist.|
+|[end](#end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `multimap`-Element nachfolgt.|
+|[equal_range](#equal_range)|Sucht den Bereich von Elementen, in dem der Schlüssel des Elements einem angegebenen Wert entspricht.|
+|[erase](#erase)|Es wird ein Element oder ein Bereich von Elementen in einem `multimap` von angegebenen Speicherorten entfernt, oder es werden die einem angegebenen Schlüssel entsprechenden Elemente entfernt.|
+|[find](#find)|Gibt einen Iterator zurück, der die erste Position eines Elements in einem `multimap`-Element adressiert, das einen Schlüssel aufweist, der einem angegebenen Schlüssel entspricht.|
+|[get_allocator](#get_allocator)|Gibt eine Kopie des zum Erstellen von `allocator` verwendeten `multimap`-Objekts zurück.|
+|[insert](#insert)|Fügt ein Element oder einen Elementbereich in ein `multimap`-Element ein.|
+|[key_comp](#key_comp)|Ruft eine Kopie des Vergleichsobjekts ab, das zum Sortieren der Schlüssel in `multimap` verwendet wird.|
+|[lower_bound](#lower_bound)|Gibt einen Iterator zum ersten Element in einem `multimap`-Element mit einem Schlüssel zurück, der gleich oder größer ist als ein angegebener Schlüssel.|
+|[max_size](#max_size)|Gibt die Maximallänge der `multimap` zurück.|
+|[rbegin](#rbegin)|Gibt einen Iterator zurück, der das erste Element in einem umgekehrten `multimap`-Element adressiert.|
+|[rend](#rend)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `multimap`-Elements nachfolgt.|
+|[size](#size)|Gibt die Anzahl von Elementen in der `multimap` zurück.|
+|[swap](#swap)|Tauscht die Elemente zweier `multimap`n.|
+|[upper_bound](#upper_bound)|Gibt einen Iterator zum ersten Element in einem `multimap`-Element mit einem Schlüssel zurück, der größer ist als ein angegebener Schlüssel.|
+|[value_comp](#value_comp)|Die Memberfunktion gibt ein Funktionsobjekt zurück, das die Reihenfolge der Elemente in einer `multimap` bestimmt, indem ihre Schlüsselwerte verglichen werden.|
+
+### <a name="operators"></a>Operatoren
+
+|Operator|Beschreibung|
+|-|-|
+|[operator=](#op_eq)|Ersetzt die Elemente eines `multimap`-Elements durch eine Kopie eines anderen `multimap`-Elements.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<map>
+
+**Namespace:** std
+
+Die Paare ( **key**, **value**) werden in einer Mehrfachzuordnung als Objekte des Typs `pair` gespeichert. Die Paarklasse erfordert den Header \<utility>, der durch \<map> automatisch enthalten ist.
+
+## <a name="allocator_type"></a> multimap::allocator_type
+
+Ein Typ, der die Zuweisungsklasse für das multimap-Objekt darstellt.
+
+```cpp
+typedef Allocator allocator_type;
+```
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [get_allocator](#get_allocator) finden Sie ein Beispiel mit `allocator_type`.
+
+## <a name="begin"></a> multimap::begin
+
+Gibt einen Iterator zurück, der das erste Element in der Mehrfachzuordnung adressiert.
+
+```cpp
 const_iterator begin() const;
 
 iterator begin();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein bidirektionaler Iterator, der das erste Element in der Mehrfachzuordnung oder den auf eine leere Mehrfachzuordnung folgenden Speicherort adressiert.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_begin.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;     
-   multimap <int, int> m1;  
-  
-   multimap <int, int> :: iterator m1_Iter;  
-   multimap <int, int> :: const_iterator m1_cIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 0, 0 ) );  
-   m1.insert ( Int_Pair ( 1, 1 ) );  
-   m1.insert ( Int_Pair ( 2, 4 ) );  
-  
-   m1_cIter = m1.begin ( );  
-   cout << "The first element of m1 is " << m1_cIter -> first << endl;  
-  
-   m1_Iter = m1.begin ( );  
-   m1.erase ( m1_Iter );  
-  
-   // The following 2 lines would err as the iterator is const  
-   // m1_cIter = m1.begin ( );  
-   // m1.erase ( m1_cIter );  
-  
-   m1_cIter = m1.begin( );  
-   cout << "First element of m1 is now " << m1_cIter -> first << endl;  
-}  
-```  
-  
-```Output  
-The first element of m1 is 0  
-First element of m1 is now 1  
-```  
-  
-##  <a name="cbegin"></a> multimap::cbegin  
- Gibt einen `const`-Iterator zurück, mit dem das erste Element im Bereich behandelt wird.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein bidirektionaler Iterator, der das erste Element in der Mehrfachzuordnung oder den auf eine leere Mehrfachzuordnung folgenden Speicherort adressiert.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_begin.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+
+   multimap <int, int> :: iterator m1_Iter;
+   multimap <int, int> :: const_iterator m1_cIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 0, 0 ) );
+   m1.insert ( Int_Pair ( 1, 1 ) );
+   m1.insert ( Int_Pair ( 2, 4 ) );
+
+   m1_cIter = m1.begin ( );
+   cout << "The first element of m1 is " << m1_cIter -> first << endl;
+
+   m1_Iter = m1.begin ( );
+   m1.erase ( m1_Iter );
+
+   // The following 2 lines would err as the iterator is const
+   // m1_cIter = m1.begin ( );
+   // m1.erase ( m1_cIter );
+
+   m1_cIter = m1.begin( );
+   cout << "First element of m1 is now " << m1_cIter -> first << endl;
+}
+```
+
+```Output
+The first element of m1 is 0
+First element of m1 is now 1
+```
+
+## <a name="cbegin"></a> multimap::cbegin
+
+Gibt einen `const`-Iterator zurück, mit dem das erste Element im Bereich behandelt wird.
+
+```cpp
 const_iterator cbegin() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein bidirektionaler `const`-Access-Iterator, der auf das erste Element des Bereichs zeigt oder auf die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).  
-  
-### <a name="remarks"></a>Hinweise  
- Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.  
-  
- Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `begin()` und `cbegin()` unterstützt.  
-  
-```cpp  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein bidirektionaler `const`-Access-Iterator, der auf das erste Element des Bereichs zeigt oder auf die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+
+### <a name="remarks"></a>Hinweise
+
+Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
+
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `begin()` und `cbegin()` unterstützt.
+
+```cpp
 auto i1 = Container.begin();
-// i1 is Container<T>::iterator   
+// i1 is Container<T>::iterator
 auto i2 = Container.cbegin();
 
-// i2 is Container<T>::const_iterator  
-```  
-  
-##  <a name="cend"></a> multimap::cend  
- Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.  
-  
-```  
+// i2 is Container<T>::const_iterator
+```
+
+## <a name="cend"></a> multimap::cend
+
+Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.
+
+```cpp
 const_iterator cend() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein bidirektionaler `const`-Access-Iterator, der auf eine Position unmittelbar nach dem Ende des Bereichs verweist.  
-  
-### <a name="remarks"></a>Hinweise  
- `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.  
-  
- Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `end()` und `cend()` unterstützt.  
-  
-```cpp  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein bidirektionaler `const`-Access-Iterator, der auf eine Position unmittelbar nach dem Ende des Bereichs verweist.
+
+### <a name="remarks"></a>Hinweise
+
+`cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
+
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `end()` und `cend()` unterstützt.
+
+```cpp
 auto i1 = Container.end();
-// i1 is Container<T>::iterator   
+// i1 is Container<T>::iterator
 auto i2 = Container.cend();
 
-// i2 is Container<T>::const_iterator  
-```  
-  
- Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden.  
-  
-##  <a name="clear"></a> multimap::clear  
- Löscht alle Elemente einer Mehrfachzuordnung.  
-  
-```  
+// i2 is Container<T>::const_iterator
+```
+
+Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden.
+
+## <a name="clear"></a> multimap::clear
+
+Löscht alle Elemente einer Mehrfachzuordnung.
+
+```cpp
 void clear();
-```  
-  
-### <a name="example"></a>Beispiel  
-  Im folgenden Beispiel wird die Verwendung der multimap::clear-Elementfunktion gezeigt.  
-  
-```  
-// multimap_clear.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap<int, int> m1;  
-   multimap<int, int>::size_type i;  
-   typedef pair<int, int> Int_Pair;  
-  
-   m1.insert(Int_Pair(1, 1));  
-   m1.insert(Int_Pair(2, 4));  
-  
-   i = m1.size();  
-   cout << "The size of the multimap is initially "  
-        << i << "." << endl;  
-  
-   m1.clear();  
-   i = m1.size();  
-   cout << "The size of the multimap after clearing is "  
-        << i << "." << endl;  
-}  
-```  
-  
-```Output  
-The size of the multimap is initially 2.  
-The size of the multimap after clearing is 0.  
-```  
-  
-##  <a name="const_iterator"></a> multimap::const_iterator  
- Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein **const**-Element in der Mehrfachzuordnung gelesen werden kann.  
-  
-```  
-typedef implementation-defined const_iterator;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.  
-  
- Die `const_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
-  
- Dereferenziert einen `const_iterator` `cIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die  **->**  Operator.  
-  
- Verwenden Sie `cIter` -> **first**, das (\* `cIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `cIter` -> **second**, das (\* `cIter`). **second**.  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [begin](#begin) finden Sie ein Beispiel, das `const_iterator` verwendet.  
-  
-##  <a name="const_pointer"></a> multimap::const_pointer  
- Ein Typ, der einen Zeiger auf ein **const**-Element in einer Mehrfachzuordnung bereitstellt.  
-  
-```  
-typedef typename allocator_type::const_pointer const_pointer;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Ein `const_pointer`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.  
-  
- In den meisten Fällen sollte ein [iterator](#iterator)-Typ für den Zugriff auf Elemente in einem multimap-Objekt verwendet werden.  
-  
-##  <a name="const_reference"></a> multimap::const_reference  
- Ein Typ, der einen Verweis auf ein **const**-Element bereitstellt, das in einer Mehrfachzuordnung zum Lesen und Ausführen von **const**-Operationen gespeichert ist.  
-  
-```  
-typedef typename allocator_type::const_reference const_reference;  
-```  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_const_ref.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-  
-   // Declare and initialize a const_reference &Ref1   
-   // to the key of the first element  
-   const int &Ref1 = ( m1.begin( ) -> first );  
-  
-   // The following line would cause an error because the   
-   // non-const_reference cannot be used to access the key  
-   // int &Ref1 = ( m1.begin( ) -> first );  
-  
-   cout << "The key of the first element in the multimap is "  
-        << Ref1 << "." << endl;  
-  
-   // Declare and initialize a reference &Ref2   
-   // to the data value of the first element  
-   int &Ref2 = ( m1.begin( ) -> second );  
-  
-   cout << "The data value of the first element in the multimap is "  
-        << Ref2 << "." << endl;  
-}  
-```  
-  
-```Output  
-The key of the first element in the multimap is 1.  
-The data value of the first element in the multimap is 10.  
-```  
-  
-##  <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator  
- Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes **const**-Element in einer Mehrfachzuordnung gelesen werden kann.  
-  
-```  
-typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern. Er wird verwendet, um die Mehrfachzuordnung in umgekehrter Reihenfolge zu durchlaufen.  
-  
- Die `const_reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
-  
- Dereferenziert einen `const_reverse_iterator` `crIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die  **->**  Operator.  
-  
- Verwenden Sie `crIter` -> **first**, das (\* `crIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `crIter` -> **second**, das (\* `crIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [rend](#rend) wird verdeutlicht, wie ein `const_reverse_iterator` deklariert und verwendet wird.  
-  
-##  <a name="count"></a> multimap::count  
- Gibt die Anzahl der Elemente in einer Mehrfachzuordnung zurück, deren Schlüssel mit einem über einen Parameter angegebenen Schlüssel übereinstimmen.  
-  
-```  
+```
+
+### <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird die Verwendung der multimap::clear-Elementfunktion gezeigt.
+
+```cpp
+// multimap_clear.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap<int, int> m1;
+   multimap<int, int>::size_type i;
+   typedef pair<int, int> Int_Pair;
+
+   m1.insert(Int_Pair(1, 1));
+   m1.insert(Int_Pair(2, 4));
+
+   i = m1.size();
+   cout << "The size of the multimap is initially "
+        << i << "." << endl;
+
+   m1.clear();
+   i = m1.size();
+   cout << "The size of the multimap after clearing is "
+        << i << "." << endl;
+}
+```
+
+```Output
+The size of the multimap is initially 2.
+The size of the multimap after clearing is 0.
+```
+
+## <a name="const_iterator"></a> multimap::const_iterator
+
+Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein **const**-Element in der Mehrfachzuordnung gelesen werden kann.
+
+```cpp
+typedef implementation-defined const_iterator;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
+
+Die `const_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+
+Dereferenziert einen `const_iterator` `cIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die **->** Operator.
+
+Verwenden Sie `cIter` -> **first**, das (\* `cIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `cIter` -> **second**, das (\* `cIter`). **second**.
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [begin](#begin) finden Sie ein Beispiel, das `const_iterator` verwendet.
+
+## <a name="const_pointer"></a> multimap::const_pointer
+
+Ein Typ, der einen Zeiger auf ein **const**-Element in einer Mehrfachzuordnung bereitstellt.
+
+```cpp
+typedef typename allocator_type::const_pointer const_pointer;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Ein `const_pointer`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
+
+In den meisten Fällen sollte ein [iterator](#iterator)-Typ für den Zugriff auf Elemente in einem multimap-Objekt verwendet werden.
+
+## <a name="const_reference"></a> multimap::const_reference
+
+Ein Typ, der einen Verweis auf ein **const**-Element bereitstellt, das in einer Mehrfachzuordnung zum Lesen und Ausführen von **const**-Operationen gespeichert ist.
+
+```cpp
+typedef typename allocator_type::const_reference const_reference;
+```
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_const_ref.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+
+   // Declare and initialize a const_reference &Ref1
+   // to the key of the first element
+   const int &Ref1 = ( m1.begin( ) -> first );
+
+   // The following line would cause an error because the
+   // non-const_reference cannot be used to access the key
+   // int &Ref1 = ( m1.begin( ) -> first );
+
+   cout << "The key of the first element in the multimap is "
+        << Ref1 << "." << endl;
+
+   // Declare and initialize a reference &Ref2
+   // to the data value of the first element
+   int &Ref2 = ( m1.begin( ) -> second );
+
+   cout << "The data value of the first element in the multimap is "
+        << Ref2 << "." << endl;
+}
+```
+
+```Output
+The key of the first element in the multimap is 1.
+The data value of the first element in the multimap is 10.
+```
+
+## <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator
+
+Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes **const**-Element in einer Mehrfachzuordnung gelesen werden kann.
+
+```cpp
+typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern. Er wird verwendet, um die Mehrfachzuordnung in umgekehrter Reihenfolge zu durchlaufen.
+
+Die `const_reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+
+Dereferenziert einen `const_reverse_iterator` `crIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die **->** Operator.
+
+Verwenden Sie `crIter` -> **first**, das (\* `crIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `crIter` -> **second**, das (\* `crIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [rend](#rend) wird verdeutlicht, wie ein `const_reverse_iterator` deklariert und verwendet wird.
+
+## <a name="count"></a> multimap::count
+
+Gibt die Anzahl der Elemente in einer Mehrfachzuordnung zurück, deren Schlüssel mit einem über einen Parameter angegebenen Schlüssel übereinstimmen.
+
+```cpp
 size_type count(const Key& key) const;
-```  
-  
-### <a name="parameters"></a>Parameter  
- `key`  
- Der Schlüssel der Elemente, die aus der Mehrfachzuordnung abgeglichen werden.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Elemente, deren Sortierschlüssel mit dem Parameterschlüssel übereinstimmen; 0, wenn keine Mehrfachzuordnung ein Element mit einem übereinstimmenden Schlüssel enthält.  
-  
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Anzahl der Elemente im Bereich zurück.  
-  
- [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )  
-  
- mit einem Schlüsselwert `key`.  
-  
-### <a name="example"></a>Beispiel  
-  Im folgenden Beispiel wird die Verwendung der Memberfunktion „hash_multimap::count“ gezeigt.  
-  
-```  
-// multimap_count.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-    using namespace std;  
-    multimap<int, int> m1;  
-    multimap<int, int>::size_type i;  
-    typedef pair<int, int> Int_Pair;  
-  
-    m1.insert(Int_Pair(1, 1));  
-    m1.insert(Int_Pair(2, 1));  
-    m1.insert(Int_Pair(1, 4));  
-    m1.insert(Int_Pair(2, 1));  
-  
-    // Elements do not need to have unique keys in multimap,  
-    // so duplicates are allowed and counted  
-    i = m1.count(1);  
-    cout << "The number of elements in m1 with a sort key of 1 is: "  
-         << i << "." << endl;  
-  
-    i = m1.count(2);  
-    cout << "The number of elements in m1 with a sort key of 2 is: "  
-         << i << "." << endl;  
-  
-    i = m1.count(3);  
-    cout << "The number of elements in m1 with a sort key of 3 is: "  
-         << i << "." << endl;  
-}  
-```  
-  
-```Output  
-The number of elements in m1 with a sort key of 1 is: 2.  
-The number of elements in m1 with a sort key of 2 is: 2.  
-The number of elements in m1 with a sort key of 3 is: 0.  
-```  
-  
-##  <a name="crbegin"></a> multimap::crbegin  
- Gibt einen const-Iterator zurück, der das erste Element in einer umgekehrten Mehrfachzuordnung adressiert.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+`key` Der Schlüssel der Elemente, die aus der mehrfachzuordnung abgeglichen werden.
+
+### <a name="return-value"></a>Rückgabewert
+
+Die Anzahl der Elemente, deren Sortierschlüssel mit dem Parameterschlüssel übereinstimmen; 0, wenn keine Mehrfachzuordnung ein Element mit einem übereinstimmenden Schlüssel enthält.
+
+### <a name="remarks"></a>Hinweise
+
+Die Memberfunktion gibt die Anzahl der Elemente im Bereich zurück.
+
+[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )
+
+mit einem Schlüsselwert `key`.
+
+### <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird die Verwendung der Memberfunktion „hash_multimap::count“ gezeigt.
+
+```cpp
+// multimap_count.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+    using namespace std;
+    multimap<int, int> m1;
+    multimap<int, int>::size_type i;
+    typedef pair<int, int> Int_Pair;
+
+    m1.insert(Int_Pair(1, 1));
+    m1.insert(Int_Pair(2, 1));
+    m1.insert(Int_Pair(1, 4));
+    m1.insert(Int_Pair(2, 1));
+
+    // Elements do not need to have unique keys in multimap,
+    // so duplicates are allowed and counted
+    i = m1.count(1);
+    cout << "The number of elements in m1 with a sort key of 1 is: "
+         << i << "." << endl;
+
+    i = m1.count(2);
+    cout << "The number of elements in m1 with a sort key of 2 is: "
+         << i << "." << endl;
+
+    i = m1.count(3);
+    cout << "The number of elements in m1 with a sort key of 3 is: "
+         << i << "." << endl;
+}
+```
+
+```Output
+The number of elements in m1 with a sort key of 1 is: 2.
+The number of elements in m1 with a sort key of 2 is: 2.
+The number of elements in m1 with a sort key of 3 is: 0.
+```
+
+## <a name="crbegin"></a> multimap::crbegin
+
+Gibt einen const-Iterator zurück, der das erste Element in einer umgekehrten Mehrfachzuordnung adressiert.
+
+```cpp
 const_reverse_iterator crbegin() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein umgekehrter bidirektionaler const-Iterator, der das erste Element in einer umgekehrten [Mehrfachzuordnung](../standard-library/multimap-class.md) bzw. das ehemals letzte Element in der nicht umgekehrten `multimap` adressiert.  
-  
-### <a name="remarks"></a>Hinweise  
- `crbegin` wird bei einer umgekehrten `multimap` auf dieselbe Weise wie [begin](#begin) bei einer `multimap` verwendet.  
-  
- Bei dem Rückgabewert von `crbegin` kann das `multimap`-Objekt nicht geändert werden.  
-  
- Mit `crbegin` lässt sich eine `multimap` rückwärts durchlaufen.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_crbegin.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-  
-   multimap <int, int> :: const_reverse_iterator m1_crIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-  
-   m1_crIter = m1.crbegin( );  
-   cout << "The first element of the reversed multimap m1 is "  
-        << m1_crIter -> first << "." << endl;  
-}  
-```  
-  
-```Output  
-The first element of the reversed multimap m1 is 3.  
-```  
-  
-##  <a name="crend"></a> multimap::crend  
- Gibt einen const-Iterator zurück, der den Speicherort adressiert, der dem letzten Element einer umgekehrten Mehrfachzuordnung folgt.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein umgekehrter bidirektionaler const-Iterator, der das erste Element in einer umgekehrten [Mehrfachzuordnung](../standard-library/multimap-class.md) bzw. das ehemals letzte Element in der nicht umgekehrten `multimap` adressiert.
+
+### <a name="remarks"></a>Hinweise
+
+`crbegin` wird bei einer umgekehrten `multimap` auf dieselbe Weise wie [begin](#begin) bei einer `multimap` verwendet.
+
+Bei dem Rückgabewert von `crbegin` kann das `multimap`-Objekt nicht geändert werden.
+
+Mit `crbegin` lässt sich eine `multimap` rückwärts durchlaufen.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_crbegin.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+
+   multimap <int, int> :: const_reverse_iterator m1_crIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+
+   m1_crIter = m1.crbegin( );
+   cout << "The first element of the reversed multimap m1 is "
+        << m1_crIter -> first << "." << endl;
+}
+```
+
+```Output
+The first element of the reversed multimap m1 is 3.
+```
+
+## <a name="crend"></a> multimap::crend
+
+Gibt einen const-Iterator zurück, der den Speicherort adressiert, der dem letzten Element einer umgekehrten Mehrfachzuordnung folgt.
+
+```cpp
 const_reverse_iterator crend() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein bidirektionaler const_reverse-Iterator, der den Speicherort adressiert, der dem letzten Element in einer umgekehrten [Mehrfachzuordnung](../standard-library/multimap-class.md) folgt (d.h. den Speicherort, der dem ersten Element in der nicht umgekehrten `multimap` vorangegangen war).  
-  
-### <a name="remarks"></a>Hinweise  
- `crend` wird bei einer umgekehrten `multimap` auf dieselbe Weise wie [multimap::end](#end) bei einer `multimap` verwendet.  
-  
- Bei dem Rückgabewert von `crend` kann das `multimap`-Objekt nicht geändert werden.  
-  
- `crend` kann verwendet werden, um zu testen, ob das Ende der `multimap` von einem umgekehrten Iterator erreicht wurde.  
-  
- Der von `crend` zurückgegebene Wert darf nicht dereferenziert werden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_crend.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-  
-   multimap <int, int> :: const_reverse_iterator m1_crIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-  
-   m1_crIter = m1.crend( );  
-   m1_crIter--;  
-   cout << "The last element of the reversed multimap m1 is "  
-        << m1_crIter -> first << "." << endl;  
-}  
-```  
-  
-```Output  
-The last element of the reversed multimap m1 is 1.  
-```  
-  
-##  <a name="difference_type"></a> multimap::difference_type  
- Ein Ganzzahltyp mit Vorzeichen, mit dem sich die Anzahl von Elementen einer Mehrfachzuordnung in einem Bereich zwischen Elementen darstellen lässt, auf die Iteratoren zeigen.  
-  
-```  
-typedef typename allocator_type::difference_type difference_type;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- `difference_type` ist der Typ, der beim Subtrahieren oder Inkrementieren über Iteratoren des Containers zurückgegeben wird. Die `difference_type` dient normalerweise zum Darstellen der Anzahl der Elemente im Bereich [*erste*, *letzten*) zwischen den Iteratoren zurück `first` und `last`, enthält das Element gezeigt wird durch `first` des Bereichs von Elementen bis zur, aber nicht einschließlich, das Element verweist `last`.  
-  
- Bitte beachten Sie, dass die Substraktion zwischen Iteratoren nur von Iteratoren mit zufälligem Zugriff, die über einen Container mit zufälligem Zugriff bereitgestellt werden, beispielsweise „vector“, unterstützt wird, obwohl `difference_type` für alle Iteratoren verfügbar ist, die die Anforderungen für einen Eingabeiterator erfüllen, wozu auch die Klasse bidirektionaler Iteratoren gehört, die von umkehrbaren Containern wie Satz unterstützt wird.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_diff_type.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <map>  
-#include <algorithm>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 3, 20 ) );  
-  
-   // The following will insert as multimap keys are not unique  
-   m1.insert ( Int_Pair ( 2, 30 ) );     
-  
-   multimap <int, int>::iterator m1_Iter, m1_bIter, m1_eIter;     
-   m1_bIter = m1.begin( );  
-   m1_eIter = m1.end( );  
-  
-   // Count the number of elements in a multimap  
-   multimap <int, int>::difference_type  df_count = 0;  
-   m1_Iter = m1.begin( );  
-   while ( m1_Iter != m1_eIter )  
-   {  
-      df_count++;  
-      m1_Iter++;  
-   }  
-  
-   cout << "The number of elements in the multimap m1 is: "   
-        << df_count << "." << endl;  
-}  
-```  
-  
-```Output  
-The number of elements in the multimap m1 is: 4.  
-```  
-  
-##  <a name="emplace"></a> multimap::emplace  
- Es wird ein Element eingefügt, das vor Ort konstruiert wird (keine Kopieren- oder Verschiebevorgänge werden ausgeführt).  
-  
-```  
-template <class... Args>  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein bidirektionaler const_reverse-Iterator, der den Speicherort adressiert, der dem letzten Element in einer umgekehrten [Mehrfachzuordnung](../standard-library/multimap-class.md) folgt (d.h. den Speicherort, der dem ersten Element in der nicht umgekehrten `multimap` vorangegangen war).
+
+### <a name="remarks"></a>Hinweise
+
+`crend` wird bei einer umgekehrten `multimap` auf dieselbe Weise wie [multimap::end](#end) bei einer `multimap` verwendet.
+
+Bei dem Rückgabewert von `crend` kann das `multimap`-Objekt nicht geändert werden.
+
+`crend` kann verwendet werden, um zu testen, ob das Ende der `multimap` von einem umgekehrten Iterator erreicht wurde.
+
+Der von `crend` zurückgegebene Wert darf nicht dereferenziert werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_crend.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+
+   multimap <int, int> :: const_reverse_iterator m1_crIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+
+   m1_crIter = m1.crend( );
+   m1_crIter--;
+   cout << "The last element of the reversed multimap m1 is "
+        << m1_crIter -> first << "." << endl;
+}
+```
+
+```Output
+The last element of the reversed multimap m1 is 1.
+```
+
+## <a name="difference_type"></a> multimap::difference_type
+
+Ein Ganzzahltyp mit Vorzeichen, mit dem sich die Anzahl von Elementen einer Mehrfachzuordnung in einem Bereich zwischen Elementen darstellen lässt, auf die Iteratoren zeigen.
+
+```cpp
+typedef typename allocator_type::difference_type difference_type;
+```
+
+### <a name="remarks"></a>Hinweise
+
+`difference_type` ist der Typ, der beim Subtrahieren oder Inkrementieren über Iteratoren des Containers zurückgegeben wird. Die `difference_type` dient normalerweise zum Darstellen der Anzahl der Elemente im Bereich [*erste*, *letzten*) zwischen den Iteratoren zurück `first` und `last`, enthält das Element gezeigt wird durch `first` des Bereichs von Elementen bis zur, aber nicht einschließlich, das Element verweist `last`.
+
+Bitte beachten Sie, dass die Substraktion zwischen Iteratoren nur von Iteratoren mit zufälligem Zugriff, die über einen Container mit zufälligem Zugriff bereitgestellt werden, beispielsweise „vector“, unterstützt wird, obwohl `difference_type` für alle Iteratoren verfügbar ist, die die Anforderungen für einen Eingabeiterator erfüllen, wozu auch die Klasse bidirektionaler Iteratoren gehört, die von umkehrbaren Containern wie Satz unterstützt wird.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_diff_type.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <map>
+#include <algorithm>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 3, 20 ) );
+
+   // The following will insert as multimap keys are not unique
+   m1.insert ( Int_Pair ( 2, 30 ) );
+
+   multimap <int, int>::iterator m1_Iter, m1_bIter, m1_eIter;
+   m1_bIter = m1.begin( );
+   m1_eIter = m1.end( );
+
+   // Count the number of elements in a multimap
+   multimap <int, int>::difference_type  df_count = 0;
+   m1_Iter = m1.begin( );
+   while ( m1_Iter != m1_eIter )
+   {
+      df_count++;
+      m1_Iter++;
+   }
+
+   cout << "The number of elements in the multimap m1 is: "
+        << df_count << "." << endl;
+}
+```
+
+```Output
+The number of elements in the multimap m1 is: 4.
+```
+
+## <a name="emplace"></a> multimap::emplace
+
+Es wird ein Element eingefügt, das vor Ort konstruiert wird (keine Kopieren- oder Verschiebevorgänge werden ausgeführt).
+
+```cpp
+template <class... Args>
 iterator emplace(Args&&... args);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|||  
-|-|-|  
-|Parameter|Beschreibung|  
-|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, das in die Mehrfachzuordnung eingefügt werden soll.|  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Iterator zum neu eingefügten Element.  
-  
-### <a name="remarks"></a>Hinweise  
- Von dieser Funktion werden keine Verweise auf Containerelemente für ungültig erklärt, aber möglicherweise werden alle Iteratoren für den Containers für ungültig erklärt.  
-  
- Wenn während des Einfügens eine Ausnahme ausgelöst wird, bleibt der Container unverändert, und die Ausnahme wird erneut ausgelöst.  
-  
- Der [value_type](../standard-library/map-class.md#value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_emplace.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <string>  
-#include <iostream>  
-  
-using namespace std;  
-  
-template <typename M> void print(const M& m) {  
-    cout << m.size() << " elements: " << endl;  
-  
-    for (const auto& p : m) {  
-        cout << "(" << p.first <<  "," << p.second << ") ";  
-    }  
-  
-    cout << endl;  
-}  
-  
-int main()  
-{  
-    multimap<string, string> m1;  
-  
-    m1.emplace("Anna", "Accounting");  
-    m1.emplace("Bob", "Accounting");  
-    m1.emplace("Carmine", "Engineering");  
-  
-    cout << "multimap modified, now contains ";  
-    print(m1);  
-    cout << endl;  
-  
-    m1.emplace("Bob", "Engineering");  
-  
-    cout << "multimap modified, now contains ";  
-    print(m1);  
-    cout << endl;  
-}  
-  
-```  
-  
-##  <a name="emplace_hint"></a> multimap::emplace_hint  
- Fügt ein Element mit einem Platzierungshinweis ein, das vor Ort erstellt wird (Es werden keine Kopier- oder Verschiebevorgänge ausgeführt).  
-  
-```  
-template <class... Args>  
+```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|-|-|
+|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, das in die Mehrfachzuordnung eingefügt werden soll.|
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Iterator zum neu eingefügten Element.
+
+### <a name="remarks"></a>Hinweise
+
+Von dieser Funktion werden keine Verweise auf Containerelemente für ungültig erklärt, aber möglicherweise werden alle Iteratoren für den Containers für ungültig erklärt.
+
+Wenn während des Einfügens eine Ausnahme ausgelöst wird, bleibt der Container unverändert, und die Ausnahme wird erneut ausgelöst.
+
+Der [value_type](../standard-library/map-class.md#value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_emplace.cpp
+// compile with: /EHsc
+#include <map>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+template <typename M> void print(const M& m) {
+    cout << m.size() << " elements: " << endl;
+
+    for (const auto& p : m) {
+        cout << "(" << p.first <<  "," << p.second << ") ";
+    }
+
+    cout << endl;
+}
+
+int main()
+{
+    multimap<string, string> m1;
+
+    m1.emplace("Anna", "Accounting");
+    m1.emplace("Bob", "Accounting");
+    m1.emplace("Carmine", "Engineering");
+
+    cout << "multimap modified, now contains ";
+    print(m1);
+    cout << endl;
+
+    m1.emplace("Bob", "Engineering");
+
+    cout << "multimap modified, now contains ";
+    print(m1);
+    cout << endl;
+}
+
+```
+
+## <a name="emplace_hint"></a> multimap::emplace_hint
+
+Fügt ein Element mit einem Platzierungshinweis ein, das vor Ort erstellt wird (Es werden keine Kopier- oder Verschiebevorgänge ausgeführt).
+
+```cpp
+template <class... Args>
 iterator emplace_hint(
-    const_iterator where,  
+    const_iterator where,
     Args&&... args);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|||  
-|-|-|  
-|Parameter|Beschreibung|  
-|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, das in die Mehrfachzuordnung eingefügt werden soll.|  
-|`where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn dieser Punkt `where` direkt vorausgeht, kann die Einfügung in amortisierter konstanter Zeit anstelle von logarithmischer Zeit eintreten.)|  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Iterator zum neu eingefügten Element.  
-  
-### <a name="remarks"></a>Hinweise  
- Von dieser Funktion werden keine Verweise auf Containerelemente für ungültig erklärt, aber möglicherweise werden alle Iteratoren für den Containers für ungültig erklärt.  
-  
- Wird während des Einbaus eine Ausnahme ausgelöst, wird der Zustand des Containers nicht geändert.  
-  
- Der [value_type](../standard-library/map-class.md#value_type) eines Elements wird paarweise angegeben, damit der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente und der Schlüsselwert sowie die zweite Komponente und der Datenwert des Elements jeweils identisch sind.  
-  
- Ein Codebeispiel finden Sie unter [map::emplace_hint](../standard-library/map-class.md#emplace_hint).  
-  
-##  <a name="empty"></a> multimap::empty  
- Überprüft, ob eine Mehrfachzuordnung leer ist.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|-|-|
+|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, das in die Mehrfachzuordnung eingefügt werden soll.|
+|`where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn dieser Punkt `where` direkt vorausgeht, kann die Einfügung in amortisierter konstanter Zeit anstelle von logarithmischer Zeit eintreten.)|
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Iterator zum neu eingefügten Element.
+
+### <a name="remarks"></a>Hinweise
+
+Von dieser Funktion werden keine Verweise auf Containerelemente für ungültig erklärt, aber möglicherweise werden alle Iteratoren für den Containers für ungültig erklärt.
+
+Wird während des Einbaus eine Ausnahme ausgelöst, wird der Zustand des Containers nicht geändert.
+
+Der [value_type](../standard-library/map-class.md#value_type) eines Elements wird paarweise angegeben, damit der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente und der Schlüsselwert sowie die zweite Komponente und der Datenwert des Elements jeweils identisch sind.
+
+Ein Codebeispiel finden Sie unter [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
+
+## <a name="empty"></a> multimap::empty
+
+Überprüft, ob eine Mehrfachzuordnung leer ist.
+
+```cpp
 bool empty() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn die Mehrfachzuordnung leer ist, und **FALSE**, wenn sie nicht leer ist.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_empty.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1, m2;  
-  
-   typedef pair <int, int> Int_Pair;  
-   m1.insert ( Int_Pair ( 1, 1 ) );  
-  
-   if ( m1.empty( ) )  
-      cout << "The multimap m1 is empty." << endl;  
-   else  
-      cout << "The multimap m1 is not empty." << endl;  
-  
-   if ( m2.empty( ) )  
-      cout << "The multimap m2 is empty." << endl;  
-   else  
-      cout << "The multimap m2 is not empty." << endl;  
-}  
-```  
-  
-```Output  
-The multimap m1 is not empty.  
-The multimap m2 is empty.  
-```  
-  
-##  <a name="end"></a> multimap::end  
- Gibt den "past-the-end"-Iterator zurück.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+**TRUE**, wenn die Mehrfachzuordnung leer ist, und **FALSE**, wenn sie nicht leer ist.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_empty.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1, m2;
+
+   typedef pair <int, int> Int_Pair;
+   m1.insert ( Int_Pair ( 1, 1 ) );
+
+   if ( m1.empty( ) )
+      cout << "The multimap m1 is empty." << endl;
+   else
+      cout << "The multimap m1 is not empty." << endl;
+
+   if ( m2.empty( ) )
+      cout << "The multimap m2 is empty." << endl;
+   else
+      cout << "The multimap m2 is not empty." << endl;
+}
+```
+
+```Output
+The multimap m1 is not empty.
+The multimap m2 is empty.
+```
+
+## <a name="end"></a> multimap::end
+
+Gibt den "past-the-end"-Iterator zurück.
+
+```cpp
 const_iterator end() const;
 
- 
- 
+
 iterator end();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der "past-the-end"-Iterator. Wenn die Mehrfachzuordnung leer ist, dann gilt `multimap::end() == multimap::begin()`.  
-  
-### <a name="remarks"></a>Hinweise  
- **end** wird verwendet, um zu überprüfen, ob ein Iterator das Ende seiner Mehrfachzuordnung übergeben hat.  
-  
- Der von **end** zurückgegebene Wert darf nicht dereferenziert werden.  
-  
- Ein Codebeispiel finden Sie unter [multimap::find](#find).  
-  
-##  <a name="equal_range"></a> multimap::equal_range  
- Sucht den Bereich von Elementen, in dem der Schlüssel des Elements einem angegebenen Wert entspricht.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Der "past-the-end"-Iterator. Wenn die Mehrfachzuordnung leer ist, dann gilt `multimap::end() == multimap::begin()`.
+
+### <a name="remarks"></a>Hinweise
+
+**end** wird verwendet, um zu überprüfen, ob ein Iterator das Ende seiner Mehrfachzuordnung übergeben hat.
+
+Der von **end** zurückgegebene Wert darf nicht dereferenziert werden.
+
+Ein Codebeispiel finden Sie unter [multimap::find](#find).
+
+## <a name="equal_range"></a> multimap::equal_range
+
+Sucht den Bereich von Elementen, in dem der Schlüssel des Elements einem angegebenen Wert entspricht.
+
+```cpp
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 
 pair <iterator, iterator> equal_range (const Key& key);
-```  
-  
-### <a name="parameters"></a>Parameter  
- `key`  
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Iteratorenpaar, bei dem der erste Iterator der [lower_bound](#lower_bound) des Schlüssels und der zweite Iterator der [upper_bound](#upper_bound) des Schlüssels ist.  
-  
- Sie können auf den ersten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **first** verwenden, und Sie können einen lower_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **first**) verwenden. Sie können auf den zweiten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **second** verwenden, und Sie können einen upper_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **second**) verwenden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_equal_range.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   typedef multimap <int, int, less<int> > IntMMap;  
-   IntMMap m1;  
-   multimap <int, int> :: const_iterator m1_RcIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-  
-   pair <IntMMap::const_iterator, IntMMap::const_iterator> p1, p2;  
-   p1 = m1.equal_range( 2 );  
-  
-   cout << "The lower bound of the element with "  
-        << "a key of 2 in the multimap m1 is: "  
-        << p1.first -> second << "." << endl;  
-  
-   cout << "The upper bound of the element with "  
-        << "a key of 2 in the multimap m1 is: "  
-        << p1.second -> second << "." << endl;  
-  
-   // Compare the upper_bound called directly   
-   m1_RcIter = m1.upper_bound( 2 );  
-  
-   cout << "A direct call of upper_bound( 2 ) gives "  
-        << m1_RcIter -> second << "," << endl  
-        << " matching the 2nd element of the pair"  
-        << " returned by equal_range( 2 )." << endl;  
-  
-   p2 = m1.equal_range( 4 );  
-  
-   // If no match is found for the key,  
-   // both elements of the pair return end( )  
-   if ( ( p2.first == m1.end( ) ) && ( p2.second == m1.end( ) ) )  
-      cout << "The multimap m1 doesn't have an element "  
-           << "with a key less than 4." << endl;  
-   else  
-      cout << "The element of multimap m1 with a key >= 40 is: "  
-           << p1.first -> first << "." << endl;  
-}  
-```  
-  
-```Output  
-The lower bound of the element with a key of 2 in the multimap m1 is: 20.  
-The upper bound of the element with a key of 2 in the multimap m1 is: 30.  
-A direct call of upper_bound( 2 ) gives 30,  
- matching the 2nd element of the pair returned by equal_range( 2 ).  
-The multimap m1 doesn't have an element with a key less than 4.  
-```  
-  
-##  <a name="erase"></a> multimap::erase  
- Es wird ein Element oder ein Bereich von Elementen in einer Mehrfachzuordnung von angegebenen Speicherorten entfernt oder es werden die einem angegebenen Schlüssel entsprechenden Elemente entfernt.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+`key` Der Argumentschlüssel mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung verglichen werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Iteratorenpaar, bei dem der erste Iterator der [lower_bound](#lower_bound) des Schlüssels und der zweite Iterator der [upper_bound](#upper_bound) des Schlüssels ist.
+
+Sie können auf den ersten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **first** verwenden, und Sie können einen lower_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **first**) verwenden. Sie können auf den zweiten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **second** verwenden, und Sie können einen upper_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **second**) verwenden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_equal_range.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   typedef multimap <int, int, less<int> > IntMMap;
+   IntMMap m1;
+   multimap <int, int> :: const_iterator m1_RcIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+
+   pair <IntMMap::const_iterator, IntMMap::const_iterator> p1, p2;
+   p1 = m1.equal_range( 2 );
+
+   cout << "The lower bound of the element with "
+        << "a key of 2 in the multimap m1 is: "
+        << p1.first -> second << "." << endl;
+
+   cout << "The upper bound of the element with "
+        << "a key of 2 in the multimap m1 is: "
+        << p1.second -> second << "." << endl;
+
+   // Compare the upper_bound called directly
+   m1_RcIter = m1.upper_bound( 2 );
+
+   cout << "A direct call of upper_bound( 2 ) gives "
+        << m1_RcIter -> second << "," << endl
+        << " matching the 2nd element of the pair"
+        << " returned by equal_range( 2 )." << endl;
+
+   p2 = m1.equal_range( 4 );
+
+   // If no match is found for the key,
+   // both elements of the pair return end( )
+   if ( ( p2.first == m1.end( ) ) && ( p2.second == m1.end( ) ) )
+      cout << "The multimap m1 doesn't have an element "
+           << "with a key less than 4." << endl;
+   else
+      cout << "The element of multimap m1 with a key >= 40 is: "
+           << p1.first -> first << "." << endl;
+}
+```
+
+```Output
+The lower bound of the element with a key of 2 in the multimap m1 is: 20.
+The upper bound of the element with a key of 2 in the multimap m1 is: 30.
+A direct call of upper_bound( 2 ) gives 30,
+ matching the 2nd element of the pair returned by equal_range( 2 ).
+The multimap m1 doesn't have an element with a key less than 4.
+```
+
+## <a name="erase"></a> multimap::erase
+
+Es wird ein Element oder ein Bereich von Elementen in einer Mehrfachzuordnung von angegebenen Speicherorten entfernt oder es werden die einem angegebenen Schlüssel entsprechenden Elemente entfernt.
+
+```cpp
 iterator erase(
     const_iterator Where);
 
 iterator erase(
-    const_iterator First,  
+    const_iterator First,
     const_iterator Last);
 
 size_type erase(
     const key_type& Key);
-```  
-  
-### <a name="parameters"></a>Parameter  
- `Where`  
- Die Position des zu entfernenden Elements.  
-  
- `First`  
- Die Position des ersten zu entfernenden Elements.  
-  
- `Last`  
- Die Position direkt hinter dem letzten zu entfernenden Element.  
-  
- `Key`  
- Der Schlüssel der zu entfernenden Elemente.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Bei den ersten beiden Memberfunktionen ist es ein bidirektionaler Iterator, der das erste über die entfernten Elemente hinaus verbliebe Element festlegt, oder ein Element, das das Ende der Zuordnung darstellt, wenn kein solches Element vorhanden ist.  
-  
- Für die dritte Memberfunktion wird die Anzahl der von der Mehrfachzuordnung entfernten Elemente zurück gegeben.  
-  
-### <a name="remarks"></a>Hinweise  
- Ein Codebeispiel finden Sie unter [map::erase](../standard-library/map-class.md#erase).  
-  
-##  <a name="find"></a> multimap::find  
- Gibt einen Iterator zurück, der auf den ersten Speicherort eines Elements in einer Mehrfachzuordnung verweist, der einen Schlüssel gleich einem angegebenen Schlüssel aufweist.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+`Where` Die Position des zu entfernenden Elements.
+
+`First` Die Position des ersten Elements entfernt werden soll.
+
+`Last` Die Position direkt hinter dem letzten Element entfernt werden soll.
+
+`Key` Der Schlüssel des zu entfernenden Elemente.
+
+### <a name="return-value"></a>Rückgabewert
+
+Bei den ersten beiden Memberfunktionen ist es ein bidirektionaler Iterator, der das erste über die entfernten Elemente hinaus verbliebe Element festlegt, oder ein Element, das das Ende der Zuordnung darstellt, wenn kein solches Element vorhanden ist.
+
+Für die dritte Memberfunktion wird die Anzahl der von der Mehrfachzuordnung entfernten Elemente zurück gegeben.
+
+### <a name="remarks"></a>Hinweise
+
+Ein Codebeispiel finden Sie unter [map::erase](../standard-library/map-class.md#erase).
+
+## <a name="find"></a> multimap::find
+
+Gibt einen Iterator zurück, der auf den ersten Speicherort eines Elements in einer Mehrfachzuordnung verweist, der einen Schlüssel gleich einem angegebenen Schlüssel aufweist.
+
+```cpp
 iterator find(const Key& key);
 
- 
+
 const_iterator find(const Key& key) const;
-```  
-  
-### <a name="parameters"></a>Parameter  
- `key`  
- Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung übereinstimmt.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der entweder auf den Speicherort eines Elements mit einem benutzerdefinierten Schlüssel oder, wenn für den Schlüssel keine Übereinstimmung gefunden wird, auf den Speicherort verweist, der dem letzten Element in der Mehrfachzuordnung ( `multimap::end()`) folgt.  
-  
-### <a name="remarks"></a>Hinweise  
- Die Member-Funktion gibt einen Iterator zurück, der auf ein Element in der Mehrfachzuordnung verweist, dessen Sortierschlüssel dem Argumentschlüssel unter einem binären Prädikat entspricht, das eine Reihenfolge basierend auf der Beziehung „Less than comparability“ auslöst.  
-  
- Wird einem **const_iterator** der Rückgabewert von **find** zugewiesen, kann das Objekt für die Mehrfachzuordnung nicht geändert werden. Wird einem **iterator** der Rückgabewert von **find** zugewiesen, kann das Objekt für die Mehrfachzuordnung geändert werden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// compile with: /EHsc /W4 /MTd  
-#include <map>  
-#include <iostream>  
-#include <vector>  
-#include <string>  
-#include <utility>  // make_pair()  
-  
-using namespace std;  
-  
-template <typename A, typename B> void print_elem(const pair<A, B>& p) {  
-    cout << "(" << p.first << ", " << p.second << ") ";  
-}  
-  
-template <typename T> void print_collection(const T& t) {  
-    cout << t.size() << " elements: ";  
-  
-    for (const auto& p : t) {  
-        print_elem(p);  
-    }  
-    cout << endl;  
-}  
-  
-template <typename C, class T> void findit(const C& c, T val) {  
-    cout << "Trying find() on value " << val << endl;  
-    auto result = c.find(val);  
-    if (result != c.end()) {  
-        cout << "Element found: "; print_elem(*result); cout << endl;  
-    } else {  
-        cout << "Element not found." << endl;  
-    }  
-}  
-  
-int main()  
-{  
-    multimap<int, string> m1({ { 40, "Zr" }, { 45, "Rh" } });  
-    cout << "The starting multimap m1 is (key, value):" << endl;  
-    print_collection(m1);  
-  
-    vector<pair<int, string>> v;  
-    v.push_back(make_pair(43, "Tc"));  
-    v.push_back(make_pair(41, "Nb"));  
-    v.push_back(make_pair(46, "Pd"));  
-    v.push_back(make_pair(42, "Mo"));  
-    v.push_back(make_pair(44, "Ru"));  
-    v.push_back(make_pair(44, "Ru")); // attempt a duplicate  
-  
-    cout << "Inserting the following vector data into m1:" << endl;  
-    print_collection(v);  
-  
-    m1.insert(v.begin(), v.end());  
-  
-    cout << "The modified multimap m1 is (key, value):" << endl;  
-    print_collection(m1);  
-    cout << endl;  
-    findit(m1, 45);  
-    findit(m1, 6);  
-}  
-  
-```  
-  
-##  <a name="get_allocator"></a> multimap::get_allocator  
- Gibt eine Kopie des Zuweisungsobjekts zurück, das zum Erstellen einer Mehrfachzuordnung verwendet wird.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+`key` Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung übereinstimmt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Iterator, der entweder auf den Speicherort eines Elements mit einem benutzerdefinierten Schlüssel oder, wenn für den Schlüssel keine Übereinstimmung gefunden wird, auf den Speicherort verweist, der dem letzten Element in der Mehrfachzuordnung ( `multimap::end()`) folgt.
+
+### <a name="remarks"></a>Hinweise
+
+Die Member-Funktion gibt einen Iterator zurück, der auf ein Element in der Mehrfachzuordnung verweist, dessen Sortierschlüssel dem Argumentschlüssel unter einem binären Prädikat entspricht, das eine Reihenfolge basierend auf der Beziehung „Less than comparability“ auslöst.
+
+Wird einem **const_iterator** der Rückgabewert von **find** zugewiesen, kann das Objekt für die Mehrfachzuordnung nicht geändert werden. Wird einem **iterator** der Rückgabewert von **find** zugewiesen, kann das Objekt für die Mehrfachzuordnung geändert werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// compile with: /EHsc /W4 /MTd
+#include <map>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <utility>  // make_pair()
+
+using namespace std;
+
+template <typename A, typename B> void print_elem(const pair<A, B>& p) {
+    cout << "(" << p.first << ", " << p.second << ") ";
+}
+
+template <typename T> void print_collection(const T& t) {
+    cout << t.size() << " elements: ";
+
+    for (const auto& p : t) {
+        print_elem(p);
+    }
+    cout << endl;
+}
+
+template <typename C, class T> void findit(const C& c, T val) {
+    cout << "Trying find() on value " << val << endl;
+    auto result = c.find(val);
+    if (result != c.end()) {
+        cout << "Element found: "; print_elem(*result); cout << endl;
+    } else {
+        cout << "Element not found." << endl;
+    }
+}
+
+int main()
+{
+    multimap<int, string> m1({ { 40, "Zr" }, { 45, "Rh" } });
+    cout << "The starting multimap m1 is (key, value):" << endl;
+    print_collection(m1);
+
+    vector<pair<int, string>> v;
+    v.push_back(make_pair(43, "Tc"));
+    v.push_back(make_pair(41, "Nb"));
+    v.push_back(make_pair(46, "Pd"));
+    v.push_back(make_pair(42, "Mo"));
+    v.push_back(make_pair(44, "Ru"));
+    v.push_back(make_pair(44, "Ru")); // attempt a duplicate
+
+    cout << "Inserting the following vector data into m1:" << endl;
+    print_collection(v);
+
+    m1.insert(v.begin(), v.end());
+
+    cout << "The modified multimap m1 is (key, value):" << endl;
+    print_collection(m1);
+    cout << endl;
+    findit(m1, 45);
+    findit(m1, 6);
+}
+
+```
+
+## <a name="get_allocator"></a> multimap::get_allocator
+
+Gibt eine Kopie des Zuweisungsobjekts zurück, das zum Erstellen einer Mehrfachzuordnung verwendet wird.
+
+```cpp
 allocator_type get_allocator() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die von der Mehrfachzuordnung verwendete Zuweisung.  
-  
-### <a name="remarks"></a>Hinweise  
- Zuweisungen für die Mehrfachzuordnungsklasse geben an, wie die Klasse Speicherplatz verwaltet. Für die meisten Programmieranforderungen genügen die standardmäßigen Zuweisungen mit Containerklassen der C++-Standardbibliothek. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_get_allocator.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int>::allocator_type m1_Alloc;  
-   multimap <int, int>::allocator_type m2_Alloc;  
-   multimap <int, double>::allocator_type m3_Alloc;  
-   multimap <int, int>::allocator_type m4_Alloc;  
-  
-   // The following lines declare objects  
-   // that use the default allocator.  
-   multimap <int, int> m1;  
-   multimap <int, int, allocator<int> > m2;  
-   multimap <int, double, allocator<double> > m3;  
-  
-   m1_Alloc = m1.get_allocator( );  
-   m2_Alloc = m2.get_allocator( );  
-   m3_Alloc = m3.get_allocator( );  
-  
-   cout << "The number of integers that can be allocated"  
-        << endl << "before free memory is exhausted: "  
-        << m2.max_size( ) << ".\n" << endl;  
-  
-   cout << "The number of doubles that can be allocated"  
-        << endl << "before free memory is exhausted: "  
-        << m3.max_size( ) <<  ".\n" << endl;  
-  
-   // The following line creates a multimap m4  
-   // with the allocator of multimap m1.  
-   map <int, int> m4( less<int>( ), m1_Alloc );  
-  
-   m4_Alloc = m4.get_allocator( );  
-  
-   // Two allocators are interchangeable if  
-   // storage allocated from each can be  
-   // deallocated via the other  
-   if( m1_Alloc == m4_Alloc )  
-   {  
-      cout << "The allocators are interchangeable."  
-           << endl;  
-   }  
-   else     
-   {  
-      cout << "The allocators are not interchangeable."  
-           << endl;  
-   }  
-}  
-```  
-  
-##  <a name="insert"></a> multimap::insert  
- Fügt ein Element oder einen Elementbereich in eine Mehrfachzuordnung ein.  
-  
-```  
-// (1) single element  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Die von der Mehrfachzuordnung verwendete Zuweisung.
+
+### <a name="remarks"></a>Hinweise
+
+Zuweisungen für die Mehrfachzuordnungsklasse geben an, wie die Klasse Speicherplatz verwaltet. Für die meisten Programmieranforderungen genügen die standardmäßigen Zuweisungen mit Containerklassen der C++-Standardbibliothek. Schreiben und Verwenden Ihrer eigener Zuweisungsklasse ist ein C++ -Thema für Fortgeschrittene.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_get_allocator.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int>::allocator_type m1_Alloc;
+   multimap <int, int>::allocator_type m2_Alloc;
+   multimap <int, double>::allocator_type m3_Alloc;
+   multimap <int, int>::allocator_type m4_Alloc;
+
+   // The following lines declare objects
+   // that use the default allocator.
+   multimap <int, int> m1;
+   multimap <int, int, allocator<int> > m2;
+   multimap <int, double, allocator<double> > m3;
+
+   m1_Alloc = m1.get_allocator( );
+   m2_Alloc = m2.get_allocator( );
+   m3_Alloc = m3.get_allocator( );
+
+   cout << "The number of integers that can be allocated"
+        << endl << "before free memory is exhausted: "
+        << m2.max_size( ) << ".\n" << endl;
+
+   cout << "The number of doubles that can be allocated"
+        << endl << "before free memory is exhausted: "
+        << m3.max_size( ) <<  ".\n" << endl;
+
+   // The following line creates a multimap m4
+   // with the allocator of multimap m1.
+   map <int, int> m4( less<int>( ), m1_Alloc );
+
+   m4_Alloc = m4.get_allocator( );
+
+   // Two allocators are interchangeable if
+   // storage allocated from each can be
+   // deallocated via the other
+   if( m1_Alloc == m4_Alloc )
+   {
+      cout << "The allocators are interchangeable."
+           << endl;
+   }
+   else
+   {
+      cout << "The allocators are not interchangeable."
+           << endl;
+   }
+}
+```
+
+## <a name="insert"></a> multimap::insert
+
+Fügt ein Element oder einen Elementbereich in eine Mehrfachzuordnung ein.
+
+```cpp
+// (1) single element
 pair<iterator, bool> insert(
     const value_type& Val);
 
- 
-// (2) single element, perfect forwarded  
-template <class ValTy>  
-pair<iterator, bool>  
+
+// (2) single element, perfect forwarded
+template <class ValTy>
+pair<iterator, bool>
 insert(
     ValTy&& Val);
 
- 
-// (3) single element with hint  
+
+// (3) single element with hint
 iterator insert(
-    const_iterator Where,  
+    const_iterator Where,
     const value_type& Val);
 
- 
-// (4) single element, perfect forwarded, with hint  
-template <class ValTy>  
+
+// (4) single element, perfect forwarded, with hint
+template <class ValTy>
 iterator insert(
-    const_iterator Where,  
+    const_iterator Where,
     ValTy&& Val);
 
- 
-// (5) range   
-template <class InputIterator>   
+
+// (5) range
+template <class InputIterator>
 void insert(
-    InputIterator First,  
+    InputIterator First,
     InputIterator Last);
 
- 
-// (6) initializer list  
+
+// (6) initializer list
 void insert(
-    initializer_list<value_type>  
+    initializer_list<value_type>
 IList);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|||  
-|-|-|  
-|Parameter|Beschreibung|  
-|`Val`|Der Wert eines in die Mehrfachzuordnung einzufügenden Elements.|  
-|`Where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn dieser Punkt `Where` direkt vorausgeht, kann die Einfügung in amortisierter konstanter Zeit anstelle von logarithmischer Zeit eintreten.)|  
-|`ValTy`|Der Vorlagenparameter, mit dem der Argumenttyp angegeben wird, der von der Zuordnung verwendet werden kann, um ein [value_type](../standard-library/map-class.md#value_type)-Element zu erstellen und `Val` perfekt als Argument weiterzuleiten.|  
-|`First`|Die Position des ersten zu kopierenden Elements.|  
-|`Last`|Die Position direkt über den letzten zu kopierenden Elements.|  
-|`InputIterator`|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|  
-|`IList`|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die Einzelelement-Memberfunktionen (1) und (2) geben einen Iterator an die Position zurück, an der das neue Element in die Multimap eingefügt wurde.  
-  
- Die Einzelelement-Memberfunktionen (3) und (4), geben einen Iterator zurück, der auf die Position zeigt, an der das neue Element in die Multimap eingefügt wurde.  
-  
-### <a name="remarks"></a>Hinweise  
- Von dieser Funktion werden keine Zeiger oder Verweise für ungültig erklärt, aber möglicherweise werden alle Iteratoren für den Containers für ungültig erklärt.  
-  
- Wird beim Einfügen von nur einem Element eine Ausnahme ausgelöst, wird der Zustand des Containers nicht geändert. Wird beim Einfügen mehrerer Elementen eine Ausnahme ausgelöst, wird der Container in einem nicht angegebenen doch gültigen Zustand belassen.  
-  
- Das [value_type](../standard-library/map-class.md#value_type)-Element eines Containers ist eine Typedef, die dem Container angehört. Bei einer Zuordnung ist `multimap<K, V>::value_type` `pair<const K, V>`. Der Wert eines Elements ist ein sortiertes Paar, in dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
-  
- Die Bereichsmemberfunktion (5) fügt die Sequenz von Elementwerten in eine Multimap ein, die jedem Element entspricht, das von einem Iterator im Bereich `[First, Last)` adressiert wird. Daher wird `Last` nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.  
-  
- Die Memberfunktion (6) der Initialisiererliste verwendet ein [initializer_list](../standard-library/initializer-list.md)-Element, um Elemente in die Zuordnung zu kopieren.  
-  
- Informationen zum Einfügen eines lokal erstellten Elements (d.h. wenn keine Kopier- oder Verschiebevorgänge ausgeführt werden) finden Sie unter [multimap::emplace](#emplace) und [multimap::emplace_hint](#emplace_hint).  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_insert.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-#include <string>  
-#include <vector>  
-#include <utility>  // make_pair()  
-  
-using namespace std;  
-  
-template <typename M> void print(const M& m) {  
-    cout << m.size() << " elements: ";  
-  
-    for (const auto& p : m) {  
-        cout << "(" << p.first << ", " << p.second << ") ";  
-    }  
-  
-    cout << endl;  
-}  
-  
-int main()  
-{  
-  
-    // insert single values   
-    multimap<int, int> m1;  
-    // call insert(const value_type&) version  
-    m1.insert({ 1, 10 });  
-    // call insert(ValTy&&) version   
-    m1.insert(make_pair(2, 20));  
-  
-    cout << "The original key and mapped values of m1 are:" << endl;  
-    print(m1);  
-  
-    // intentionally attempt a duplicate, single element  
-    m1.insert(make_pair(1, 111));  
-  
-    cout << "The modified key and mapped values of m1 are:" << endl;  
-    print(m1);  
-  
-    // single element, with hint  
-    m1.insert(m1.end(), make_pair(3, 30));  
-    cout << "The modified key and mapped values of m1 are:" << endl;  
-    print(m1);  
-    cout << endl;  
-  
-    // The templatized version inserting a jumbled range  
-    multimap<int, int> m2;  
-    vector<pair<int, int>> v;  
-    v.push_back(make_pair(43, 294));  
-    v.push_back(make_pair(41, 262));  
-    v.push_back(make_pair(45, 330));  
-    v.push_back(make_pair(42, 277));  
-    v.push_back(make_pair(44, 311));  
-  
-    cout << "Inserting the following vector data into m2:" << endl;  
-    print(v);  
-  
-    m2.insert(v.begin(), v.end());  
-  
-    cout << "The modified key and mapped values of m2 are:" << endl;  
-    print(m2);  
-    cout << endl;  
-  
-    // The templatized versions move-constructing elements  
-    multimap<int, string>  m3;  
-    pair<int, string> ip1(475, "blue"), ip2(510, "green");  
-  
-    // single element  
-    m3.insert(move(ip1));  
-    cout << "After the first move insertion, m3 contains:" << endl;  
-    print(m3);  
-  
-    // single element with hint  
-    m3.insert(m3.end(), move(ip2));  
-    cout << "After the second move insertion, m3 contains:" << endl;  
-    print(m3);  
-    cout << endl;  
-  
-    multimap<int, int> m4;  
-    // Insert the elements from an initializer_list  
-    m4.insert({ { 4, 44 }, { 2, 22 }, { 3, 33 }, { 1, 11 }, { 5, 55 } });  
-    cout << "After initializer_list insertion, m4 contains:" << endl;  
-    print(m4);  
-    cout << endl;  
-}  
-  
-```  
-  
-##  <a name="iterator"></a> multimap::iterator  
- Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer Mehrfachzuordnung gelesen oder geändert werden kann.  
-  
-```  
-typedef implementation-defined iterator;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Die **Iterator** durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
-  
- Verwenden Sie den Operator **->**, um einen **iterator**`Iter`-Typ zu dereferenzieren, der auf ein Element in einer Mehrfachzuordnung zeigt.  
-  
- Verwenden Sie `Iter` -> **first**, das (\* `Iter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `Iter` -> **second**, das (\* `Iter`). **second** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.  
-  
- Ein **iterator**-Typ kann zum Ändern des Werts eines Elements verwendet werden.  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [begin](#begin) wird verdeutlicht, wie ein **iterator**-Typ deklariert und verwendet wird.  
-  
-##  <a name="key_comp"></a> multimap::key_comp  
- Ruft eine Kopie des Vergleichsobjekts ab, das zum Sortieren der Schlüssel in einer Mehrfachzuordnung verwendet wird.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|-|-|
+|`Val`|Der Wert eines in die Mehrfachzuordnung einzufügenden Elements.|
+|`Where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn dieser Punkt `Where` direkt vorausgeht, kann die Einfügung in amortisierter konstanter Zeit anstelle von logarithmischer Zeit eintreten.)|
+|`ValTy`|Der Vorlagenparameter, mit dem der Argumenttyp angegeben wird, der von der Zuordnung verwendet werden kann, um ein [value_type](../standard-library/map-class.md#value_type)-Element zu erstellen und `Val` perfekt als Argument weiterzuleiten.|
+|`First`|Die Position des ersten zu kopierenden Elements.|
+|`Last`|Die Position direkt über den letzten zu kopierenden Elements.|
+|`InputIterator`|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|
+|`IList`|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|
+
+### <a name="return-value"></a>Rückgabewert
+
+Die Einzelelement-Memberfunktionen (1) und (2) geben einen Iterator an die Position zurück, an der das neue Element in die Multimap eingefügt wurde.
+
+Die Einzelelement-Memberfunktionen (3) und (4), geben einen Iterator zurück, der auf die Position zeigt, an der das neue Element in die Multimap eingefügt wurde.
+
+### <a name="remarks"></a>Hinweise
+
+Von dieser Funktion werden keine Zeiger oder Verweise für ungültig erklärt, aber möglicherweise werden alle Iteratoren für den Containers für ungültig erklärt.
+
+Wird beim Einfügen von nur einem Element eine Ausnahme ausgelöst, wird der Zustand des Containers nicht geändert. Wird beim Einfügen mehrerer Elementen eine Ausnahme ausgelöst, wird der Container in einem nicht angegebenen doch gültigen Zustand belassen.
+
+Das [value_type](../standard-library/map-class.md#value_type)-Element eines Containers ist eine Typedef, die dem Container angehört. Bei einer Zuordnung ist `multimap<K, V>::value_type` `pair<const K, V>`. Der Wert eines Elements ist ein sortiertes Paar, in dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.
+
+Die Bereichsmemberfunktion (5) fügt die Sequenz von Elementwerten in eine Multimap ein, die jedem Element entspricht, das von einem Iterator im Bereich `[First, Last)` adressiert wird. Daher wird `Last` nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.
+
+Die Memberfunktion (6) der Initialisiererliste verwendet ein [initializer_list](../standard-library/initializer-list.md)-Element, um Elemente in die Zuordnung zu kopieren.
+
+Informationen zum Einfügen eines lokal erstellten Elements (d.h. wenn keine Kopier- oder Verschiebevorgänge ausgeführt werden) finden Sie unter [multimap::emplace](#emplace) und [multimap::emplace_hint](#emplace_hint).
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_insert.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>  // make_pair()
+
+using namespace std;
+
+template <typename M> void print(const M& m) {
+    cout << m.size() << " elements: ";
+
+    for (const auto& p : m) {
+        cout << "(" << p.first << ", " << p.second << ") ";
+    }
+
+    cout << endl;
+}
+
+int main()
+{
+
+    // insert single values
+    multimap<int, int> m1;
+    // call insert(const value_type&) version
+    m1.insert({ 1, 10 });
+    // call insert(ValTy&&) version
+    m1.insert(make_pair(2, 20));
+
+    cout << "The original key and mapped values of m1 are:" << endl;
+    print(m1);
+
+    // intentionally attempt a duplicate, single element
+    m1.insert(make_pair(1, 111));
+
+    cout << "The modified key and mapped values of m1 are:" << endl;
+    print(m1);
+
+    // single element, with hint
+    m1.insert(m1.end(), make_pair(3, 30));
+    cout << "The modified key and mapped values of m1 are:" << endl;
+    print(m1);
+    cout << endl;
+
+    // The templatized version inserting a jumbled range
+    multimap<int, int> m2;
+    vector<pair<int, int>> v;
+    v.push_back(make_pair(43, 294));
+    v.push_back(make_pair(41, 262));
+    v.push_back(make_pair(45, 330));
+    v.push_back(make_pair(42, 277));
+    v.push_back(make_pair(44, 311));
+
+    cout << "Inserting the following vector data into m2:" << endl;
+    print(v);
+
+    m2.insert(v.begin(), v.end());
+
+    cout << "The modified key and mapped values of m2 are:" << endl;
+    print(m2);
+    cout << endl;
+
+    // The templatized versions move-constructing elements
+    multimap<int, string>  m3;
+    pair<int, string> ip1(475, "blue"), ip2(510, "green");
+
+    // single element
+    m3.insert(move(ip1));
+    cout << "After the first move insertion, m3 contains:" << endl;
+    print(m3);
+
+    // single element with hint
+    m3.insert(m3.end(), move(ip2));
+    cout << "After the second move insertion, m3 contains:" << endl;
+    print(m3);
+    cout << endl;
+
+    multimap<int, int> m4;
+    // Insert the elements from an initializer_list
+    m4.insert({ { 4, 44 }, { 2, 22 }, { 3, 33 }, { 1, 11 }, { 5, 55 } });
+    cout << "After initializer_list insertion, m4 contains:" << endl;
+    print(m4);
+    cout << endl;
+}
+
+```
+
+## <a name="iterator"></a> multimap::iterator
+
+Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer Mehrfachzuordnung gelesen oder geändert werden kann.
+
+```cpp
+typedef implementation-defined iterator;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Die **Iterator** durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+
+Verwenden Sie den Operator **->**, um einen **iterator**`Iter`-Typ zu dereferenzieren, der auf ein Element in einer Mehrfachzuordnung zeigt.
+
+Verwenden Sie `Iter` -> **first**, das (\* `Iter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `Iter` -> **second**, das (\* `Iter`). **second** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+
+Ein **iterator**-Typ kann zum Ändern des Werts eines Elements verwendet werden.
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [begin](#begin) wird verdeutlicht, wie ein **iterator**-Typ deklariert und verwendet wird.
+
+## <a name="key_comp"></a> multimap::key_comp
+
+Ruft eine Kopie des Vergleichsobjekts ab, das zum Sortieren der Schlüssel in einer Mehrfachzuordnung verwendet wird.
+
+```cpp
 key_compare key_comp() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt das Funktionsobjekt zurück, das eine Mehrfachzuordnung zum Sortieren der jeweiligen Elemente verwendet.  
-  
-### <a name="remarks"></a>Hinweise  
- Das gespeicherte Objekt definiert die Memberfunktion  
-  
- **bool operator**( **const Key&** *x*, **const Key&** *y*);  
-  
- Sie gibt nur dann TRUE zurück, wenn *x* in der Sortierreihenfolge *y* vorausgeht.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_key_comp.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-  
-   multimap <int, int, less<int> > m1;  
-   multimap <int, int, less<int> >::key_compare kc1 = m1.key_comp( ) ;  
-   bool result1 = kc1( 2, 3 ) ;  
-   if( result1 == true )     
-   {  
-      cout << "kc1( 2,3 ) returns value of true, "  
-           << "where kc1 is the function object of m1."  
-           << endl;  
-   }  
-   else     
-   {  
-      cout << "kc1( 2,3 ) returns value of false "  
-           << "where kc1 is the function object of m1."  
-           << endl;  
-   }  
-  
-   multimap <int, int, greater<int> > m2;  
-   multimap <int, int, greater<int> >::key_compare kc2 = m2.key_comp( );  
-   bool result2 = kc2( 2, 3 ) ;  
-   if( result2 == true )     
-   {  
-      cout << "kc2( 2,3 ) returns value of true, "  
-           << "where kc2 is the function object of m2."  
-           << endl;  
-   }  
-   else     
-   {  
-      cout << "kc2( 2,3 ) returns value of false, "  
-           << "where kc2 is the function object of m2."  
-           << endl;  
-   }  
-}  
-```  
-  
-```Output  
-kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.  
-kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.  
-```  
-  
-##  <a name="key_compare"></a> multimap::key_compare  
- Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Reihenfolge zweier Elemente in der Mehrfachzuordnung zu bestimmen.  
-  
-```  
-typedef Traits key_compare;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- **key_compare** ist ein Synonym für den Vorlagenparameter `Traits`.  
-  
- Weitere Informationen zu `Traits` finden Sie unter [multimap-Klasse](../standard-library/multimap-class.md).  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie `key_compare` deklariert und verwendet wird.  
-  
-##  <a name="key_type"></a> multimap::key_type  
- Ein Typ, mit dem das Sortierschlüsselobjekt beschrieben wird, aus dem die einzelnen Elemente der Mehrfachzuordnung bestehen.  
-  
-```  
-typedef Key key_type;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- **key_type** ist ein Synonym für den Vorlagenparameter `Key`.  
-  
- Weitere Informationen zu `Key` finden Sie im Abschnitt „Hinweise“ unter [multimap-Klasse](../standard-library/multimap-class.md).  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [value_type](#value_type) wird verdeutlicht, wie `key_type` deklariert und verwendet wird.  
-  
-##  <a name="lower_bound"></a> multimap::lower_bound  
- Gibt einen Iterator zum ersten Element in einer Mehrfachzuordnung mit einem Schlüssel zurück, der mindestens so groß ist wie ein benutzerdefinierter Schlüssel.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt das Funktionsobjekt zurück, das eine Mehrfachzuordnung zum Sortieren der jeweiligen Elemente verwendet.
+
+### <a name="remarks"></a>Hinweise
+
+Das gespeicherte Objekt definiert die Memberfunktion
+
+**bool operator**( **const Key&** *x*, **const Key&** *y*);
+
+Sie gibt nur dann TRUE zurück, wenn *x* in der Sortierreihenfolge *y* vorausgeht.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_key_comp.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+
+   multimap <int, int, less<int> > m1;
+   multimap <int, int, less<int> >::key_compare kc1 = m1.key_comp( ) ;
+   bool result1 = kc1( 2, 3 ) ;
+   if( result1 == true )
+   {
+      cout << "kc1( 2,3 ) returns value of true, "
+           << "where kc1 is the function object of m1."
+           << endl;
+   }
+   else
+   {
+      cout << "kc1( 2,3 ) returns value of false "
+           << "where kc1 is the function object of m1."
+           << endl;
+   }
+
+   multimap <int, int, greater<int> > m2;
+   multimap <int, int, greater<int> >::key_compare kc2 = m2.key_comp( );
+   bool result2 = kc2( 2, 3 ) ;
+   if( result2 == true )
+   {
+      cout << "kc2( 2,3 ) returns value of true, "
+           << "where kc2 is the function object of m2."
+           << endl;
+   }
+   else
+   {
+      cout << "kc2( 2,3 ) returns value of false, "
+           << "where kc2 is the function object of m2."
+           << endl;
+   }
+}
+```
+
+```Output
+kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
+kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
+```
+
+## <a name="key_compare"></a> multimap::key_compare
+
+Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Reihenfolge zweier Elemente in der Mehrfachzuordnung zu bestimmen.
+
+```cpp
+typedef Traits key_compare;
+```
+
+### <a name="remarks"></a>Hinweise
+
+**key_compare** ist ein Synonym für den Vorlagenparameter `Traits`.
+
+Weitere Informationen zu `Traits` finden Sie unter [multimap-Klasse](../standard-library/multimap-class.md).
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie `key_compare` deklariert und verwendet wird.
+
+## <a name="key_type"></a> multimap::key_type
+
+Ein Typ, mit dem das Sortierschlüsselobjekt beschrieben wird, aus dem die einzelnen Elemente der Mehrfachzuordnung bestehen.
+
+```cpp
+typedef Key key_type;
+```
+
+### <a name="remarks"></a>Hinweise
+
+**key_type** ist ein Synonym für den Vorlagenparameter `Key`.
+
+Weitere Informationen zu `Key` finden Sie im Abschnitt „Hinweise“ unter [multimap-Klasse](../standard-library/multimap-class.md).
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [value_type](#value_type) wird verdeutlicht, wie `key_type` deklariert und verwendet wird.
+
+## <a name="lower_bound"></a> multimap::lower_bound
+
+Gibt einen Iterator zum ersten Element in einer Mehrfachzuordnung mit einem Schlüssel zurück, der mindestens so groß ist wie ein benutzerdefinierter Schlüssel.
+
+```cpp
 iterator lower_bound(const Key& key);
 
 const_iterator lower_bound(const Key& key) const;
-```  
-  
-### <a name="parameters"></a>Parameter  
- `key`  
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Iteratoren oder `const_iterator`-Elemente, die entweder den Speicherort eines Elements in einer Mehrfachzuordnung mit einem Schlüssel adressieren, der mindestens so groß ist wie der Argumentschlüssel, oder die, wenn für den Schlüssel keine Übereinstimmung gefunden wird, den Speicherort adressieren, der dem letzten Element in der Mehrfachzuordnung folgt.  
-  
- Wird einem `const_iterator` der Rückgabewert von `lower_bound` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wird einem **Iterator** der Rückgabewert von `lower_bound` zugewiesen wird, kann das multimap-Objekt geändert werden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_lower_bound.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-   multimap <int, int> :: const_iterator m1_AcIter, m1_RcIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-  
-   m1_RcIter = m1.lower_bound( 2 );  
-   cout << "The element of multimap m1 with a key of 2 is: "  
-        << m1_RcIter -> second << "." << endl;  
-  
-   m1_RcIter = m1.lower_bound( 3 );  
-   cout << "The first element of multimap m1 with a key of 3 is: "  
-        << m1_RcIter -> second << "." << endl;  
-  
-   // If no match is found for the key, end( ) is returned  
-   m1_RcIter = m1.lower_bound( 4 );  
-  
-   if ( m1_RcIter == m1.end( ) )  
-      cout << "The multimap m1 doesn't have an element "  
-              << "with a key of 4." << endl;  
-   else  
-      cout << "The element of multimap m1 with a key of 4 is: "  
-                << m1_RcIter -> second << "." << endl;  
-  
-   // The element at a specific location in the multimap can be  
-   // found using a dereferenced iterator addressing the location  
-   m1_AcIter = m1.end( );  
-   m1_AcIter--;  
-   m1_RcIter = m1.lower_bound( m1_AcIter -> first );  
-   cout << "The first element of m1 with a key matching\n"  
-        << "that of the last element is: "  
-        << m1_RcIter -> second << "." << endl;  
-  
-   // Note that the first element with a key equal to  
-   // the key of the last element is not the last element  
-   if ( m1_RcIter == --m1.end( ) )  
-      cout << "This is the last element of multimap m1."  
-           << endl;  
-   else  
-      cout << "This is not the last element of multimap m1."  
-           << endl;  
-}  
-```  
-  
-```Output  
-The element of multimap m1 with a key of 2 is: 20.  
-The first element of multimap m1 with a key of 3 is: 20.  
-The multimap m1 doesn't have an element with a key of 4.  
-The first element of m1 with a key matching  
-that of the last element is: 20.  
-This is not the last element of multimap m1.  
-```  
-  
-##  <a name="mapped_type"></a> multimap::mapped_type  
- Ein Typ, der den in einer Mehrfachzuordnung gespeicherten Datentyp darstellt.  
-  
-```  
-typedef Type mapped_type;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- `mapped_type` ist ein Synonym für den Vorlagenparameter `Type`.  
-  
- Weitere Informationen zu `Type` finden Sie unter [multimap-Klasse](../standard-library/multimap-class.md).  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [value_type](#value_type) wird verdeutlicht, wie `key_type` deklariert und verwendet wird.  
-  
-##  <a name="max_size"></a> multimap::max_size  
- Gibt die Maximallänge der Mehrfachzuordnung zurück.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+`key` Der Argumentschlüssel mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung verglichen werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Iteratoren oder `const_iterator`-Elemente, die entweder den Speicherort eines Elements in einer Mehrfachzuordnung mit einem Schlüssel adressieren, der mindestens so groß ist wie der Argumentschlüssel, oder die, wenn für den Schlüssel keine Übereinstimmung gefunden wird, den Speicherort adressieren, der dem letzten Element in der Mehrfachzuordnung folgt.
+
+Wird einem `const_iterator` der Rückgabewert von `lower_bound` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wird einem **Iterator** der Rückgabewert von `lower_bound` zugewiesen wird, kann das multimap-Objekt geändert werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_lower_bound.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+   multimap <int, int> :: const_iterator m1_AcIter, m1_RcIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+
+   m1_RcIter = m1.lower_bound( 2 );
+   cout << "The element of multimap m1 with a key of 2 is: "
+        << m1_RcIter -> second << "." << endl;
+
+   m1_RcIter = m1.lower_bound( 3 );
+   cout << "The first element of multimap m1 with a key of 3 is: "
+        << m1_RcIter -> second << "." << endl;
+
+   // If no match is found for the key, end( ) is returned
+   m1_RcIter = m1.lower_bound( 4 );
+
+   if ( m1_RcIter == m1.end( ) )
+      cout << "The multimap m1 doesn't have an element "
+              << "with a key of 4." << endl;
+   else
+      cout << "The element of multimap m1 with a key of 4 is: "
+                << m1_RcIter -> second << "." << endl;
+
+   // The element at a specific location in the multimap can be
+   // found using a dereferenced iterator addressing the location
+   m1_AcIter = m1.end( );
+   m1_AcIter--;
+   m1_RcIter = m1.lower_bound( m1_AcIter -> first );
+   cout << "The first element of m1 with a key matching\n"
+        << "that of the last element is: "
+        << m1_RcIter -> second << "." << endl;
+
+   // Note that the first element with a key equal to
+   // the key of the last element is not the last element
+   if ( m1_RcIter == --m1.end( ) )
+      cout << "This is the last element of multimap m1."
+           << endl;
+   else
+      cout << "This is not the last element of multimap m1."
+           << endl;
+}
+```
+
+```Output
+The element of multimap m1 with a key of 2 is: 20.
+The first element of multimap m1 with a key of 3 is: 20.
+The multimap m1 doesn't have an element with a key of 4.
+The first element of m1 with a key matching
+that of the last element is: 20.
+This is not the last element of multimap m1.
+```
+
+## <a name="mapped_type"></a> multimap::mapped_type
+
+Ein Typ, der den in einer Mehrfachzuordnung gespeicherten Datentyp darstellt.
+
+```cpp
+typedef Type mapped_type;
+```
+
+### <a name="remarks"></a>Hinweise
+
+`mapped_type` ist ein Synonym für den Vorlagenparameter `Type`.
+
+Weitere Informationen zu `Type` finden Sie unter [multimap-Klasse](../standard-library/multimap-class.md).
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [value_type](#value_type) wird verdeutlicht, wie `key_type` deklariert und verwendet wird.
+
+## <a name="max_size"></a> multimap::max_size
+
+Gibt die Maximallänge der Mehrfachzuordnung zurück.
+
+```cpp
 size_type max_size() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die maximal mögliche Länge der Mehrfachzuordnung.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_max_size.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-   multimap <int, int> :: size_type i;  
-  
-   i = m1.max_size( );  
-   cout << "The maximum possible length "  
-        << "of the multimap is " << i << "." << endl;  
-}  
-```  
-  
-##  <a name="multimap"></a> multimap::multimap  
- Erstellt eine Mehrfachzuordnung, die leer oder die Kopie einer ganzen anderen Mehrfachzuordnung oder eines Teils davon ist.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Die maximal mögliche Länge der Mehrfachzuordnung.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_max_size.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+   multimap <int, int> :: size_type i;
+
+   i = m1.max_size( );
+   cout << "The maximum possible length "
+        << "of the multimap is " << i << "." << endl;
+}
+```
+
+## <a name="multimap"></a> multimap::multimap
+
+Erstellt eine Mehrfachzuordnung, die leer oder die Kopie einer ganzen anderen Mehrfachzuordnung oder eines Teils davon ist.
+
+```cpp
 multimap();
 
 explicit multimap(
     const Traits& Comp);
 
 multimap(
-    const Traits& Comp,  
+    const Traits& Comp,
     const Allocator& Al);
 
 map(
@@ -1563,796 +1634,822 @@ multimap(
     initializer_list<value_type> IList);
 
 multimap(
-    initializer_list<value_type> IList,  
+    initializer_list<value_type> IList,
     const Compare& Comp);
 
 multimap(
-    initializer_list<value_type> IList,  
-    const Compare& Comp,   
+    initializer_list<value_type> IList,
+    const Compare& Comp,
     const Allocator& Al);
 
-template <class InputIterator>  
+template <class InputIterator>
 multimap(
- InputIterator First,  
+ InputIterator First,
     InputIterator Last);
 
-template <class InputIterator>  
+template <class InputIterator>
 multimap(
- InputIterator First,  
-    InputIterator Last,  
+ InputIterator First,
+    InputIterator Last,
     const Traits& Comp);
 
-template <class InputIterator>  
+template <class InputIterator>
 multimap(
- InputIterator First,  
-    InputIterator Last,  
-    const Traits& Comp,  
+ InputIterator First,
+    InputIterator Last,
+    const Traits& Comp,
     const Allocator& Al);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|||  
-|-|-|  
-|Parameter|Beschreibung|  
-|`Al`|Die für dieses multimap-Objekt zu verwendende Speicherreservierungsklasse, dessen Standard "Allocator" ist.|  
-|`Comp`|Die Vergleichsfunktion des Typs **constTraits**, die zum Sortieren der Elemente in der Zuordnung verwendet wird und deren Standard **Traits** ist.|  
-|`Right`|Die Zuordnung, deren Kopie der erstellte Satz sein soll.|  
-|`First`|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|  
-|`Last`|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|  
-|`IList`|Das initializer_list-Element, aus dem die Elemente kopiert werden sollen.|  
-  
-### <a name="remarks"></a>Hinweise  
- Alle Konstruktoren speichern ein Zuweisungsobjekt eines bestimmten Typs, das Arbeitsspeicher für die Mehrfachzuordnung verwaltet und später zurückgegeben werden kann, indem [get_allocator](#get_allocator) aufgerufen wird. Der Zuweisungsparameter wird häufig aus den Klassendeklarationen und den Vorverarbeitungsmakros weggelassen, die zum Ersetzen alternativer Zuweisungen verwendet werden.  
-  
- Alle Konstruktoren initialisieren ihre Mehrfachzuordnung.  
-  
- Alle Konstruktoren speichern ein Funktionsobjekt des Typs `Traits`, mit dem sich die Schlüssel der Mehrfachzuordnung sortieren lassen und das später zurückgegeben werden kann, indem [key_comp](#key_comp) aufgerufen wird.  
-  
- Die ersten drei Konstruktoren geben eine leere ursprüngliche Mehrfachzuordnung an. Der zweite Konstruktor gibt den Typ der Vergleichsfunktion ( `Comp`) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte Konstruktor gibt explizit den zu verwendenden Zuweisungstyp ( `Al`) an. Mit dem Schlüsselwort `explicit` werden bestimmte Arten automatischer Typumwandlung unterdrückt.  
-  
- Der vierte Konstruktor gibt eine Kopie der Mehrfachzuordnung `Right` an.  
-  
- Der fünfte Konstruktor gibt eine Kopie der Mehrfachzuordnung an, indem `Right` verschoben wird.  
-  
- Der sechste, siebte und achte Konstruktor kopiert die Member eines initializer_list-Elements.  
-  
- Die nächsten drei Konstruktoren kopieren den Bereich `[First, Last)` einer Zuordnung, wobei sich die Explizitheit bei der Angabe des Vergleichsfunktiontyps der Zuweisung und der Klasse **Traits** erhöht.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_ctor.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main()  
-{  
-    using namespace std;  
-    typedef pair <int, int> Int_Pair;  
-  
-    // Create an empty multimap m0 of key type integer  
-    multimap <int, int> m0;  
-  
-    // Create an empty multimap m1 with the key comparison  
-    // function of less than, then insert 4 elements  
-    multimap <int, int, less<int> > m1;  
-    m1.insert(Int_Pair(1, 10));  
-    m1.insert(Int_Pair(2, 20));  
-    m1.insert(Int_Pair(3, 30));  
-    m1.insert(Int_Pair(4, 40));  
-  
-    // Create an empty multimap m2 with the key comparison  
-    // function of geater than, then insert 2 elements  
-    multimap <int, int, less<int> > m2;  
-    m2.insert(Int_Pair(1, 10));  
-    m2.insert(Int_Pair(2, 20));  
-  
-    // Create a multimap m3 with the   
-    // allocator of multimap m1  
-    multimap <int, int>::allocator_type m1_Alloc;  
-    m1_Alloc = m1.get_allocator();  
-    multimap <int, int> m3(less<int>(), m1_Alloc);  
-    m3.insert(Int_Pair(3, 30));  
-  
-    // Create a copy, multimap m4, of multimap m1  
-    multimap <int, int> m4(m1);  
-  
-    // Create a multimap m5 by copying the range m1[ first,  last)  
-    multimap <int, int>::const_iterator m1_bcIter, m1_ecIter;  
-    m1_bcIter = m1.begin();  
-    m1_ecIter = m1.begin();  
-    m1_ecIter++;  
-    m1_ecIter++;  
-    multimap <int, int> m5(m1_bcIter, m1_ecIter);  
-  
-    // Create a multimap m6 by copying the range m4[ first,  last)  
-    // and with the allocator of multimap m2  
-    multimap <int, int>::allocator_type m2_Alloc;  
-    m2_Alloc = m2.get_allocator();  
-    multimap <int, int> m6(m4.begin(), ++m4.begin(), less<int>(), m2_Alloc);  
-  
-    cout << "m1 =";  
-    for (auto i : m1)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    cout << "m2 =";  
-    for (auto i : m2)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    cout << "m3 =";  
-    for (auto i : m3)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    cout << "m4 =";  
-    for (auto i : m4)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    cout << "m5 =";  
-    for (auto i : m5)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    cout << "m6 =";  
-    for (auto i : m6)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    // Create a multimap m8 by copying in an initializer_list  
-    multimap<int, int> m8{ { { 1, 1 }, { 2, 2 }, { 3, 3 }, { 4, 4 } } };  
-    cout << "m8: = ";  
-    for (auto i : m8)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    // Create a multimap m9 with an initializer_list and a comparator  
-    multimap<int, int> m9({ { 5, 5 }, { 6, 6 }, { 7, 7 }, { 8, 8 } }, less<int>());  
-    cout << "m9: = ";  
-    for (auto i : m9)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-    // Create a multimap m10 with an initializer_list, a comparator, and an allocator  
-    multimap<int, int> m10({ { 9, 9 }, { 10, 10 }, { 11, 11 }, { 12, 12 } }, less<int>(), m9.get_allocator());  
-    cout << "m10: = ";  
-    for (auto i : m10)  
-        cout << i.first << " " << i.second << ", ";  
-    cout << endl;  
-  
-}  
-  
-```  
-  
-##  <a name="op_eq"></a> multimap::operator=  
- Ersetzt die Elemente einer Mehrfachzuordnung durch eine Kopie einer anderen Mehrfachzuordnung.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|-|-|
+|`Al`|Die für dieses multimap-Objekt zu verwendende Speicherreservierungsklasse, dessen Standard "Allocator" ist.|
+|`Comp`|Die Vergleichsfunktion des Typs **constTraits**, die zum Sortieren der Elemente in der Zuordnung verwendet wird und deren Standard **Traits** ist.|
+|`Right`|Die Zuordnung, deren Kopie der erstellte Satz sein soll.|
+|`First`|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
+|`Last`|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
+|`IList`|Das initializer_list-Element, aus dem die Elemente kopiert werden sollen.|
+
+### <a name="remarks"></a>Hinweise
+
+Alle Konstruktoren speichern ein Zuweisungsobjekt eines bestimmten Typs, das Arbeitsspeicher für die Mehrfachzuordnung verwaltet und später zurückgegeben werden kann, indem [get_allocator](#get_allocator) aufgerufen wird. Der Zuweisungsparameter wird häufig aus den Klassendeklarationen und den Vorverarbeitungsmakros weggelassen, die zum Ersetzen alternativer Zuweisungen verwendet werden.
+
+Alle Konstruktoren initialisieren ihre Mehrfachzuordnung.
+
+Alle Konstruktoren speichern ein Funktionsobjekt des Typs `Traits`, mit dem sich die Schlüssel der Mehrfachzuordnung sortieren lassen und das später zurückgegeben werden kann, indem [key_comp](#key_comp) aufgerufen wird.
+
+Die ersten drei Konstruktoren geben eine leere ursprüngliche Mehrfachzuordnung an. Der zweite Konstruktor gibt den Typ der Vergleichsfunktion ( `Comp`) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte Konstruktor gibt explizit den zu verwendenden Zuweisungstyp ( `Al`) an. Mit dem Schlüsselwort `explicit` werden bestimmte Arten automatischer Typumwandlung unterdrückt.
+
+Der vierte Konstruktor gibt eine Kopie der Mehrfachzuordnung `Right` an.
+
+Der fünfte Konstruktor gibt eine Kopie der Mehrfachzuordnung an, indem `Right` verschoben wird.
+
+Der sechste, siebte und achte Konstruktor kopiert die Member eines initializer_list-Elements.
+
+Die nächsten drei Konstruktoren kopieren den Bereich `[First, Last)` einer Zuordnung, wobei sich die Explizitheit bei der Angabe des Vergleichsfunktiontyps der Zuweisung und der Klasse **Traits** erhöht.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_ctor.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+    typedef pair <int, int> Int_Pair;
+
+    // Create an empty multimap m0 of key type integer
+    multimap <int, int> m0;
+
+    // Create an empty multimap m1 with the key comparison
+    // function of less than, then insert 4 elements
+    multimap <int, int, less<int> > m1;
+    m1.insert(Int_Pair(1, 10));
+    m1.insert(Int_Pair(2, 20));
+    m1.insert(Int_Pair(3, 30));
+    m1.insert(Int_Pair(4, 40));
+
+    // Create an empty multimap m2 with the key comparison
+    // function of geater than, then insert 2 elements
+    multimap <int, int, less<int> > m2;
+    m2.insert(Int_Pair(1, 10));
+    m2.insert(Int_Pair(2, 20));
+
+    // Create a multimap m3 with the
+    // allocator of multimap m1
+    multimap <int, int>::allocator_type m1_Alloc;
+    m1_Alloc = m1.get_allocator();
+    multimap <int, int> m3(less<int>(), m1_Alloc);
+    m3.insert(Int_Pair(3, 30));
+
+    // Create a copy, multimap m4, of multimap m1
+    multimap <int, int> m4(m1);
+
+    // Create a multimap m5 by copying the range m1[ first,  last)
+    multimap <int, int>::const_iterator m1_bcIter, m1_ecIter;
+    m1_bcIter = m1.begin();
+    m1_ecIter = m1.begin();
+    m1_ecIter++;
+    m1_ecIter++;
+    multimap <int, int> m5(m1_bcIter, m1_ecIter);
+
+    // Create a multimap m6 by copying the range m4[ first,  last)
+    // and with the allocator of multimap m2
+    multimap <int, int>::allocator_type m2_Alloc;
+    m2_Alloc = m2.get_allocator();
+    multimap <int, int> m6(m4.begin(), ++m4.begin(), less<int>(), m2_Alloc);
+
+    cout << "m1 =";
+    for (auto i : m1)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    cout << "m2 =";
+    for (auto i : m2)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    cout << "m3 =";
+    for (auto i : m3)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    cout << "m4 =";
+    for (auto i : m4)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    cout << "m5 =";
+    for (auto i : m5)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    cout << "m6 =";
+    for (auto i : m6)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    // Create a multimap m8 by copying in an initializer_list
+    multimap<int, int> m8{ { { 1, 1 }, { 2, 2 }, { 3, 3 }, { 4, 4 } } };
+    cout << "m8: = ";
+    for (auto i : m8)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    // Create a multimap m9 with an initializer_list and a comparator
+    multimap<int, int> m9({ { 5, 5 }, { 6, 6 }, { 7, 7 }, { 8, 8 } }, less<int>());
+    cout << "m9: = ";
+    for (auto i : m9)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+    // Create a multimap m10 with an initializer_list, a comparator, and an allocator
+    multimap<int, int> m10({ { 9, 9 }, { 10, 10 }, { 11, 11 }, { 12, 12 } }, less<int>(), m9.get_allocator());
+    cout << "m10: = ";
+    for (auto i : m10)
+        cout << i.first << " " << i.second << ", ";
+    cout << endl;
+
+}
+
+```
+
+## <a name="op_eq"></a> multimap::operator=
+
+Ersetzt die Elemente einer Mehrfachzuordnung durch eine Kopie einer anderen Mehrfachzuordnung.
+
+```cpp
 multimap& operator=(const multimap& right);
 
 multimap& operator=(multimap&& right);
-```  
-  
-### <a name="parameters"></a>Parameter  
-  
-|||  
-|-|-|  
-|Parameter|Beschreibung|  
-|`right`|Die [Mehrfachzuordnung](../standard-library/multimap-class.md), die in `multimap` kopiert wird.|  
-  
-### <a name="remarks"></a>Hinweise  
- Nachdem ein vorhandenes Element in einem `multimap` gelöscht wurde, kopiert oder verschiebt `operator=` den Inhalt von `right` in den `multimap`.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_operator_as.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-   {  
-   using namespace std;  
-   multimap<int, int> v1, v2, v3;  
-   multimap<int, int>::iterator iter;  
-  
-   v1.insert(pair<int, int>(1, 10));  
-  
-   cout << "v1 = " ;  
-   for (iter = v1.begin(); iter != v1.end(); iter++)  
-      cout << iter->second << " ";  
-   cout << endl;  
-  
-   v2 = v1;  
-   cout << "v2 = ";  
-   for (iter = v2.begin(); iter != v2.end(); iter++)  
-      cout << iter->second << " ";  
-   cout << endl;  
-  
-// move v1 into v2  
-   v2.clear();  
-   v2 = move(v1);  
-   cout << "v2 = ";  
-   for (iter = v2.begin(); iter != v2.end(); iter++)  
-      cout << iter->second << " ";  
-   cout << endl;  
-   }  
-```  
-  
-##  <a name="pointer"></a> multimap::pointer  
- Ein Typ, der einen Zeiger auf ein Element in einer Mehrfachzuordnung bereitstellt.  
-  
-```  
-typedef typename allocator_type::pointer pointer;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Ein **pointer**-Typ kann zum Ändern des Werts eines Elements verwendet werden.  
-  
- In den meisten Fällen sollte ein [iterator](#iterator)-Typ für den Zugriff auf Elemente in einem multimap-Objekt verwendet werden.  
-  
-##  <a name="rbegin"></a> multimap::rbegin  
- Gibt einen Iterator zurück, der das erste Element in einer umgekehrten Mehrfachzuordnung adressiert.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+|Parameter|Beschreibung|
+|-|-|
+|`right`|Die [Mehrfachzuordnung](../standard-library/multimap-class.md), die in `multimap` kopiert wird.|
+
+### <a name="remarks"></a>Hinweise
+
+Nachdem ein vorhandenes Element in einem `multimap` gelöscht wurde, kopiert oder verschiebt `operator=` den Inhalt von `right` in den `multimap`.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_operator_as.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+   {
+   using namespace std;
+   multimap<int, int> v1, v2, v3;
+   multimap<int, int>::iterator iter;
+
+   v1.insert(pair<int, int>(1, 10));
+
+   cout << "v1 = " ;
+   for (iter = v1.begin(); iter != v1.end(); iter++)
+      cout << iter->second << " ";
+   cout << endl;
+
+   v2 = v1;
+   cout << "v2 = ";
+   for (iter = v2.begin(); iter != v2.end(); iter++)
+      cout << iter->second << " ";
+   cout << endl;
+
+// move v1 into v2
+   v2.clear();
+   v2 = move(v1);
+   cout << "v2 = ";
+   for (iter = v2.begin(); iter != v2.end(); iter++)
+      cout << iter->second << " ";
+   cout << endl;
+   }
+```
+
+## <a name="pointer"></a> multimap::pointer
+
+Ein Typ, der einen Zeiger auf ein Element in einer Mehrfachzuordnung bereitstellt.
+
+```cpp
+typedef typename allocator_type::pointer pointer;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Ein **pointer**-Typ kann zum Ändern des Werts eines Elements verwendet werden.
+
+In den meisten Fällen sollte ein [iterator](#iterator)-Typ für den Zugriff auf Elemente in einem multimap-Objekt verwendet werden.
+
+## <a name="rbegin"></a> multimap::rbegin
+
+Gibt einen Iterator zurück, der das erste Element in einer umgekehrten Mehrfachzuordnung adressiert.
+
+```cpp
 const_reverse_iterator rbegin() const;
 
 reverse_iterator rbegin();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein umgekehrter bidirektionaler Iterator, der das erste Element in einer umgekehrten Mehrfachzuordnung oder das ehemals letzte Element in der nicht umgekehrten Mehrfachzuordnung adressiert.  
-  
-### <a name="remarks"></a>Hinweise  
- `rbegin` wird bei einer umgekehrten Mehrfachzuordnung auf dieselbe Weise wie [begin](#begin) bei einer Mehrfachzuordnung verwendet.  
-  
- Wenn einem `const_reverse_iterator` der Rückgabewert von `rbegin` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wenn einem `reverse_iterator` der Rückgabewert von `rbegin` zugewiesen wird, kann das multimap-Objekt geändert werden.  
-  
- Mit `rbegin` lässt sich eine Mehrfachzuordnung rückwärts durchlaufen.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_rbegin.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-  
-   multimap <int, int> :: iterator m1_Iter;  
-   multimap <int, int> :: reverse_iterator m1_rIter;  
-   multimap <int, int> :: const_reverse_iterator m1_crIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-  
-   m1_rIter = m1.rbegin( );  
-   cout << "The first element of the reversed multimap m1 is "  
-        << m1_rIter -> first << "." << endl;  
-  
-   // begin can be used to start an iteration   
-   // throught a multimap in a forward order  
-   cout << "The multimap is: ";  
-   for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)  
-      cout << m1_Iter -> first << " ";  
-      cout << "." << endl;  
-  
-   // rbegin can be used to start an iteration   
-   // throught a multimap in a reverse order  
-   cout << "The reversed multimap is: ";  
-   for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)  
-      cout << m1_rIter -> first << " ";  
-      cout << "." << endl;  
-  
-   // A multimap element can be erased by dereferencing its key   
-   m1_rIter = m1.rbegin( );  
-   m1.erase ( m1_rIter -> first );  
-  
-   m1_rIter = m1.rbegin( );  
-   cout << "After the erasure, the first element "  
-        << "in the reversed multimap is "  
-        << m1_rIter -> first << "." << endl;  
-}  
-```  
-  
-```Output  
-The first element of the reversed multimap m1 is 3.  
-The multimap is: 1 2 3 .  
-The reversed multimap is: 3 2 1 .  
-After the erasure, the first element in the reversed multimap is 2.  
-```  
-  
-##  <a name="reference"></a> multimap::reference  
- Ein Typ, der auf ein in einer Mehrfachzuordnung gespeichertes Element verweist.  
-  
-```  
-typedef typename allocator_type::reference reference;  
-```  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_ref.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-  
-   // Declare and initialize a const_reference &Ref1   
-   // to the key of the first element  
-   const int &Ref1 = ( m1.begin( ) -> first );  
-  
-   // The following line would cause an error because the   
-   // non-const_reference cannot be used to access the key  
-   // int &Ref1 = ( m1.begin( ) -> first );  
-  
-   cout << "The key of first element in the multimap is "  
-        << Ref1 << "." << endl;  
-  
-   // Declare and initialize a reference &Ref2   
-   // to the data value of the first element  
-   int &Ref2 = ( m1.begin( ) -> second );  
-  
-   cout << "The data value of first element in the multimap is "  
-        << Ref2 << "." << endl;  
-  
-   // The non-const_reference can be used to modify the   
-   // data value of the first element  
-   Ref2 = Ref2 + 5;  
-   cout << "The modified data value of first element is "  
-        << Ref2 << "." << endl;  
-}  
-```  
-  
-```Output  
-The key of first element in the multimap is 1.  
-The data value of first element in the multimap is 10.  
-The modified data value of first element is 15.  
-```  
-  
-##  <a name="rend"></a> multimap::rend  
- Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element in einer umgekehrten Mehrfachzuordnung folgt.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein umgekehrter bidirektionaler Iterator, der das erste Element in einer umgekehrten Mehrfachzuordnung oder das ehemals letzte Element in der nicht umgekehrten Mehrfachzuordnung adressiert.
+
+### <a name="remarks"></a>Hinweise
+
+`rbegin` wird bei einer umgekehrten Mehrfachzuordnung auf dieselbe Weise wie [begin](#begin) bei einer Mehrfachzuordnung verwendet.
+
+Wenn einem `const_reverse_iterator` der Rückgabewert von `rbegin` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wenn einem `reverse_iterator` der Rückgabewert von `rbegin` zugewiesen wird, kann das multimap-Objekt geändert werden.
+
+Mit `rbegin` lässt sich eine Mehrfachzuordnung rückwärts durchlaufen.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_rbegin.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+
+   multimap <int, int> :: iterator m1_Iter;
+   multimap <int, int> :: reverse_iterator m1_rIter;
+   multimap <int, int> :: const_reverse_iterator m1_crIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+
+   m1_rIter = m1.rbegin( );
+   cout << "The first element of the reversed multimap m1 is "
+        << m1_rIter -> first << "." << endl;
+
+   // begin can be used to start an iteration
+   // throught a multimap in a forward order
+   cout << "The multimap is: ";
+   for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)
+      cout << m1_Iter -> first << " ";
+      cout << "." << endl;
+
+   // rbegin can be used to start an iteration
+   // throught a multimap in a reverse order
+   cout << "The reversed multimap is: ";
+   for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)
+      cout << m1_rIter -> first << " ";
+      cout << "." << endl;
+
+   // A multimap element can be erased by dereferencing its key
+   m1_rIter = m1.rbegin( );
+   m1.erase ( m1_rIter -> first );
+
+   m1_rIter = m1.rbegin( );
+   cout << "After the erasure, the first element "
+        << "in the reversed multimap is "
+        << m1_rIter -> first << "." << endl;
+}
+```
+
+```Output
+The first element of the reversed multimap m1 is 3.
+The multimap is: 1 2 3 .
+The reversed multimap is: 3 2 1 .
+After the erasure, the first element in the reversed multimap is 2.
+```
+
+## <a name="reference"></a> multimap::reference
+
+Ein Typ, der auf ein in einer Mehrfachzuordnung gespeichertes Element verweist.
+
+```cpp
+typedef typename allocator_type::reference reference;
+```
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_ref.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+
+   // Declare and initialize a const_reference &Ref1
+   // to the key of the first element
+   const int &Ref1 = ( m1.begin( ) -> first );
+
+   // The following line would cause an error because the
+   // non-const_reference cannot be used to access the key
+   // int &Ref1 = ( m1.begin( ) -> first );
+
+   cout << "The key of first element in the multimap is "
+        << Ref1 << "." << endl;
+
+   // Declare and initialize a reference &Ref2
+   // to the data value of the first element
+   int &Ref2 = ( m1.begin( ) -> second );
+
+   cout << "The data value of first element in the multimap is "
+        << Ref2 << "." << endl;
+
+   // The non-const_reference can be used to modify the
+   // data value of the first element
+   Ref2 = Ref2 + 5;
+   cout << "The modified data value of first element is "
+        << Ref2 << "." << endl;
+}
+```
+
+```Output
+The key of first element in the multimap is 1.
+The data value of first element in the multimap is 10.
+The modified data value of first element is 15.
+```
+
+## <a name="rend"></a> multimap::rend
+
+Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element in einer umgekehrten Mehrfachzuordnung folgt.
+
+```cpp
 const_reverse_iterator rend() const;
 
 reverse_iterator rend();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein umgekehrter bidirektionaler Iterator, der den Speicherort adressiert, der dem letzten Element in einer umgekehrten Mehrfachzuordnung folgt (d.h. den Speicherort, der dem ersten Element in der nicht umgekehrten Mehrfachzuordnung vorangegangen war).  
-  
-### <a name="remarks"></a>Hinweise  
- `rend` wird bei einer umgekehrten Mehrfachzuordnung auf dieselbe Weise wie [end](../standard-library/map-class.md#end) bei einer Mehrfachzuordnung verwendet.  
-  
- Wenn einem `const_reverse_iterator` der Rückgabewert von `rend` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wenn einem `reverse_iterator` der Rückgabewert von `rend` zugewiesen wird, kann das multimap-Objekt geändert werden.  
-  
- Mit `rend` lässt sich überprüfen, ob ein umgekehrter Iterator das Ende seiner Mehrfachzuordnung erreicht hat.  
-  
- Der von `rend` zurückgegebene Wert darf nicht dereferenziert werden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_rend.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-  
-   multimap <int, int> :: iterator m1_Iter;  
-   multimap <int, int> :: reverse_iterator m1_rIter;  
-   multimap <int, int> :: const_reverse_iterator m1_crIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-  
-   m1_rIter = m1.rend( );  
-   m1_rIter--;  
-   cout << "The last element of the reversed multimap m1 is "  
-        << m1_rIter -> first << "." << endl;  
-  
-   // begin can be used to start an iteration   
-   // throught a multimap in a forward order  
-   cout << "The multimap is: ";  
-   for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)  
-      cout << m1_Iter -> first << " ";  
-      cout << "." << endl;  
-  
-   // rbegin can be used to start an iteration   
-   // throught a multimap in a reverse order  
-   cout << "The reversed multimap is: ";  
-   for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)  
-      cout << m1_rIter -> first << " ";  
-      cout << "." << endl;  
-  
-   // A multimap element can be erased by dereferencing to its key   
-   m1_rIter = --m1.rend( );  
-   m1.erase ( m1_rIter -> first );  
-  
-   m1_rIter = m1.rend( );  
-   m1_rIter--;  
-   cout << "After the erasure, the last element "  
-        << "in the reversed multimap is "  
-        << m1_rIter -> first << "." << endl;  
-}  
-```  
-  
-```Output  
-The last element of the reversed multimap m1 is 1.  
-The multimap is: 1 2 3 .  
-The reversed multimap is: 3 2 1 .  
-After the erasure, the last element in the reversed multimap is 2.  
-```  
-  
-##  <a name="reverse_iterator"></a> multimap::reverse_iterator  
- Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einer umgekehrten Mehrfachzuordnung gelesen oder geändert werden kann.  
-  
-```  
-typedef std::reverse_iterator<iterator> reverse_iterator;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Mit einem `reverse_iterator`-Typ lässt sich die Mehrfachzuordnung in umgekehrter Reihenfolge durchlaufen.  
-  
- Die `reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.  
-  
- Dereferenziert eine `reverse_iterator` `rIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die Operator ->.  
-  
- Verwenden Sie `rIter` -> **first**, das (\* `rIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `rIter` -> **second**, das (\* `rIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie `reverse_iterator` deklariert und verwendet wird.  
-  
-##  <a name="size"></a> multimap::size  
- Gibt die Anzahl von Elementen in der Mehrfachzuordnung zurück.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein umgekehrter bidirektionaler Iterator, der den Speicherort adressiert, der dem letzten Element in einer umgekehrten Mehrfachzuordnung folgt (d.h. den Speicherort, der dem ersten Element in der nicht umgekehrten Mehrfachzuordnung vorangegangen war).
+
+### <a name="remarks"></a>Hinweise
+
+`rend` wird bei einer umgekehrten Mehrfachzuordnung auf dieselbe Weise wie [end](../standard-library/map-class.md#end) bei einer Mehrfachzuordnung verwendet.
+
+Wenn einem `const_reverse_iterator` der Rückgabewert von `rend` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wenn einem `reverse_iterator` der Rückgabewert von `rend` zugewiesen wird, kann das multimap-Objekt geändert werden.
+
+Mit `rend` lässt sich überprüfen, ob ein umgekehrter Iterator das Ende seiner Mehrfachzuordnung erreicht hat.
+
+Der von `rend` zurückgegebene Wert darf nicht dereferenziert werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_rend.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+
+   multimap <int, int> :: iterator m1_Iter;
+   multimap <int, int> :: reverse_iterator m1_rIter;
+   multimap <int, int> :: const_reverse_iterator m1_crIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+
+   m1_rIter = m1.rend( );
+   m1_rIter--;
+   cout << "The last element of the reversed multimap m1 is "
+        << m1_rIter -> first << "." << endl;
+
+   // begin can be used to start an iteration
+   // throught a multimap in a forward order
+   cout << "The multimap is: ";
+   for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)
+      cout << m1_Iter -> first << " ";
+      cout << "." << endl;
+
+   // rbegin can be used to start an iteration
+   // throught a multimap in a reverse order
+   cout << "The reversed multimap is: ";
+   for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)
+      cout << m1_rIter -> first << " ";
+      cout << "." << endl;
+
+   // A multimap element can be erased by dereferencing to its key
+   m1_rIter = --m1.rend( );
+   m1.erase ( m1_rIter -> first );
+
+   m1_rIter = m1.rend( );
+   m1_rIter--;
+   cout << "After the erasure, the last element "
+        << "in the reversed multimap is "
+        << m1_rIter -> first << "." << endl;
+}
+```
+
+```Output
+The last element of the reversed multimap m1 is 1.
+The multimap is: 1 2 3 .
+The reversed multimap is: 3 2 1 .
+After the erasure, the last element in the reversed multimap is 2.
+```
+
+## <a name="reverse_iterator"></a> multimap::reverse_iterator
+
+Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einer umgekehrten Mehrfachzuordnung gelesen oder geändert werden kann.
+
+```cpp
+typedef std::reverse_iterator<iterator> reverse_iterator;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Mit einem `reverse_iterator`-Typ lässt sich die Mehrfachzuordnung in umgekehrter Reihenfolge durchlaufen.
+
+Die `reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), vom Typ `pair` * \< * **const Schlüssel**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+
+Dereferenziert eine `reverse_iterator` `rIter` verweist auf ein Element in einer mehrfachzuordnung, verwenden Sie die Operator ->.
+
+Verwenden Sie `rIter` -> **first**, das (\* `rIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `rIter` -> **second**, das (\* `rIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie `reverse_iterator` deklariert und verwendet wird.
+
+## <a name="size"></a> multimap::size
+
+Gibt die Anzahl von Elementen in der Mehrfachzuordnung zurück.
+
+```cpp
 size_type size() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die aktuelle Länge der Mehrfachzuordnung.  
-  
-### <a name="example"></a>Beispiel  
-  Im folgenden Beispiel wird die Verwendung dermultimap::size-Memberfunktion gezeigt.  
-  
-```  
-// multimap_size.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main()  
-{  
-    using namespace std;  
-    multimap<int, int> m1, m2;  
-    multimap<int, int>::size_type i;  
-    typedef pair<int, int> Int_Pair;  
-  
-    m1.insert(Int_Pair(1, 1));  
-    i = m1.size();  
-    cout << "The multimap length is " << i << "." << endl;  
-  
-    m1.insert(Int_Pair(2, 4));  
-    i = m1.size();  
-    cout << "The multimap length is now " << i << "." << endl;  
-}  
-```  
-  
-```Output  
-The multimap length is 1.  
-The multimap length is now 2.  
-```  
-  
-##  <a name="size_type"></a> multimap::size_type  
- Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einer Mehrfachzuordnung zählt.  
-  
-```  
-typedef typename allocator_type::size_type size_type;  
-```  
-  
-### <a name="example"></a>Beispiel  
-  Im Beispiel für [size](#size) wird verdeutlicht, wie `size_type` deklariert und verwendet wird.  
-  
-##  <a name="swap"></a> multimap::swap  
- Tauscht die Elemente zweier Mehrfachzuordnungen aus.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Die aktuelle Länge der Mehrfachzuordnung.
+
+### <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird die Verwendung dermultimap::size-Memberfunktion gezeigt.
+
+```cpp
+// multimap_size.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+    multimap<int, int> m1, m2;
+    multimap<int, int>::size_type i;
+    typedef pair<int, int> Int_Pair;
+
+    m1.insert(Int_Pair(1, 1));
+    i = m1.size();
+    cout << "The multimap length is " << i << "." << endl;
+
+    m1.insert(Int_Pair(2, 4));
+    i = m1.size();
+    cout << "The multimap length is now " << i << "." << endl;
+}
+```
+
+```Output
+The multimap length is 1.
+The multimap length is now 2.
+```
+
+## <a name="size_type"></a> multimap::size_type
+
+Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einer Mehrfachzuordnung zählt.
+
+```cpp
+typedef typename allocator_type::size_type size_type;
+```
+
+### <a name="example"></a>Beispiel
+
+Im Beispiel für [size](#size) wird verdeutlicht, wie `size_type` deklariert und verwendet wird.
+
+## <a name="swap"></a> multimap::swap
+
+Tauscht die Elemente zweier Mehrfachzuordnungen aus.
+
+```cpp
 void swap(
     multimap<Key, Type, Traits, Allocator>& right);
-```  
-  
-### <a name="parameters"></a>Parameter  
- `right`  
- Die Mehrfachzuordnung, in der die auszutauschenden Elemente bereitgestellt werden, oder die Mehrfachzuordnung, deren Elemente mit denen der Mehrfachzuordnung `left` ausgetauscht werden sollen.  
-  
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in zwei Mehrfachzuordnungen bezeichnen, deren Elemente ausgetauscht werden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_swap.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1, m2, m3;  
-   multimap <int, int>::iterator m1_Iter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-   m2.insert ( Int_Pair ( 10, 100 ) );  
-   m2.insert ( Int_Pair ( 20, 200 ) );  
-   m3.insert ( Int_Pair ( 30, 300 ) );  
-  
-   cout << "The original multimap m1 is:";  
-   for ( m1_Iter = m1.begin( ); m1_Iter != m1.end( ); m1_Iter++ )  
-      cout << " " << m1_Iter -> second;  
-   cout   << "." << endl;  
-  
-   // This is the member function version of swap  
-   m1.swap( m2 );  
-  
-   cout << "After swapping with m2, multimap m1 is:";  
-   for ( m1_Iter = m1.begin( ); m1_Iter != m1.end( ); m1_Iter++ )  
-      cout << " " << m1_Iter -> second;  
-   cout  << "." << endl;  
-  
-   // This is the specialized template version of swap  
-   swap( m1, m3 );  
-  
-   cout << "After swapping with m3, multimap m1 is:";  
-   for ( m1_Iter = m1.begin( ); m1_Iter != m1.end( ); m1_Iter++ )  
-      cout << " " << m1_Iter -> second;  
-   cout   << "." << endl;  
-}  
-```  
-  
-```Output  
-The original multimap m1 is: 10 20 30.  
-After swapping with m2, multimap m1 is: 100 200.  
-After swapping with m3, multimap m1 is: 300.  
-```  
-  
-##  <a name="upper_bound"></a> multimap::upper_bound  
- Gibt dem ersten Element in einer Mehrfachzuordnung einen Iterator mit einem Schlüssel zurück, der größer ist als ein benutzerdefinierter Schlüssel.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+`right` Der mehrfachzuordnung Elemente ausgetauscht werden sollen, oder der mehrfachzuordnung zurück, dessen Elemente sind mit denen der mehrfachzuordnung ausgetauscht werden sollen `left`.
+
+### <a name="remarks"></a>Hinweise
+
+Die Memberfunktion macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in zwei Mehrfachzuordnungen bezeichnen, deren Elemente ausgetauscht werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_swap.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1, m2, m3;
+   multimap <int, int>::iterator m1_Iter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+   m2.insert ( Int_Pair ( 10, 100 ) );
+   m2.insert ( Int_Pair ( 20, 200 ) );
+   m3.insert ( Int_Pair ( 30, 300 ) );
+
+   cout << "The original multimap m1 is:";
+   for ( m1_Iter = m1.begin( ); m1_Iter != m1.end( ); m1_Iter++ )
+      cout << " " << m1_Iter -> second;
+   cout   << "." << endl;
+
+   // This is the member function version of swap
+   m1.swap( m2 );
+
+   cout << "After swapping with m2, multimap m1 is:";
+   for ( m1_Iter = m1.begin( ); m1_Iter != m1.end( ); m1_Iter++ )
+      cout << " " << m1_Iter -> second;
+   cout  << "." << endl;
+
+   // This is the specialized template version of swap
+   swap( m1, m3 );
+
+   cout << "After swapping with m3, multimap m1 is:";
+   for ( m1_Iter = m1.begin( ); m1_Iter != m1.end( ); m1_Iter++ )
+      cout << " " << m1_Iter -> second;
+   cout   << "." << endl;
+}
+```
+
+```Output
+The original multimap m1 is: 10 20 30.
+After swapping with m2, multimap m1 is: 100 200.
+After swapping with m3, multimap m1 is: 300.
+```
+
+## <a name="upper_bound"></a> multimap::upper_bound
+
+Gibt dem ersten Element in einer Mehrfachzuordnung einen Iterator mit einem Schlüssel zurück, der größer ist als ein benutzerdefinierter Schlüssel.
+
+```cpp
 iterator upper_bound(const Key& key);
 
 const_iterator upper_bound(const Key& key) const;
-```  
-  
-### <a name="parameters"></a>Parameter  
- `key`  
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Iterator oder ein `const_iterator`, der den Speicherort eines Elements in einer Mehrfachzuordnung mit einem Schlüssel adressiert, der größer ist als der Argumentschlüssel, oder der den Speicherort adressiert, der dem letzten Element in der Mehrfachzuordnung folgt, wenn für den Schlüssel keine Übereinstimmung gefunden wird.  
-  
- Wenn der Rückgabewert einem `const_iterator` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wenn der Rückgabewert einem **iterator**-Typ zugewiesen wird, kann das multimap-Objekt geändert werden.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_upper_bound.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   multimap <int, int> m1;  
-   multimap <int, int> :: const_iterator m1_AcIter, m1_RcIter;  
-   typedef pair <int, int> Int_Pair;  
-  
-   m1.insert ( Int_Pair ( 1, 10 ) );  
-   m1.insert ( Int_Pair ( 2, 20 ) );  
-   m1.insert ( Int_Pair ( 3, 30 ) );  
-   m1.insert ( Int_Pair ( 3, 40 ) );  
-  
-   m1_RcIter = m1.upper_bound( 1 );  
-   cout << "The 1st element of multimap m1 with "  
-        << "a key greater than 1 is: "  
-        << m1_RcIter -> second << "." << endl;  
-  
-   m1_RcIter = m1.upper_bound( 2 );  
-   cout << "The first element of multimap m1 with a key "  
-        << " greater than 2 is: "  
-        << m1_RcIter -> second << "." << endl;  
-  
-   // If no match is found for the key, end( ) is returned  
-   m1_RcIter = m1.lower_bound( 4 );  
-  
-   if ( m1_RcIter == m1.end( ) )  
-      cout << "The multimap m1 doesn't have an element "  
-           << "with a key of 4." << endl;  
-   else  
-      cout << "The element of multimap m1 with a key of 4 is: "  
-           << m1_RcIter -> second << "." << endl;  
-  
-   // The element at a specific location in the multimap can be  
-   // found using a derefenced iterator addressing the location  
-   m1_AcIter = m1.begin( );  
-   m1_RcIter = m1.upper_bound( m1_AcIter -> first );  
-   cout << "The first element of m1 with a key greater than\n"  
-        << "that of the initial element of m1 is: "  
-        << m1_RcIter -> second << "." << endl;  
-}  
-```  
-  
-```Output  
-The 1st element of multimap m1 with a key greater than 1 is: 20.  
-The first element of multimap m1 with a key  greater than 2 is: 30.  
-The multimap m1 doesn't have an element with a key of 4.  
-The first element of m1 with a key greater than  
-that of the initial element of m1 is: 20.  
-```  
-  
-##  <a name="value_comp"></a> multimap::value_comp  
- Die Memberfunktion gibt ein Funktionsobjekt zurück, das die Reihenfolge der Elemente in einer Mehrfachzuordnung bestimmt, indem die jeweiligen Schlüsselwerte verglichen werden.  
-  
-```  
-value_compare value_comp() const;
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt das Vergleichsfunktionsobjekt zurück, das eine Mehrfachzuordnung zum Sortieren der jeweiligen Elemente verwendet.  
-  
-### <a name="remarks"></a>Hinweise  
- Wenn zwei Elemente *e*1( *k*1, *d*1) und *e*2( *k*2, `d`2) mit *k*1 und *k*2 als ihre Schlüssel des Typs `key_type` sowie `d`1 und `d`2 als ihre Daten des Typs `mapped_type` in einer Mehrfachzuordnung *m* Objekte des Typs `value_type` sind, dann sind *m.*`value_comp`( *e*1, *e*2) und *m.*`key_comp`( *k*1, *k*2) gleichwertig.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_value_comp.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-  
-   multimap <int, int, less<int> > m1;  
-   multimap <int, int, less<int> >::value_compare vc1 = m1.value_comp( );  
-   multimap<int,int>::iterator Iter1, Iter2;  
-  
-   Iter1= m1.insert ( multimap <int, int> :: value_type ( 1, 10 ) );  
-   Iter2= m1.insert ( multimap <int, int> :: value_type ( 2, 5 ) );  
-  
-   if( vc1( *Iter1, *Iter2 ) == true )     
-   {  
-      cout << "The element ( 1,10 ) precedes the element ( 2,5 )."  
-           << endl;  
-   }  
-   else     
-   {  
-      cout << "The element ( 1,10 ) does "  
-           << "not precede the element ( 2,5 )."  
-           << endl;  
-   }  
-  
-   if( vc1( *Iter2, *Iter1 ) == true )     
-   {  
-      cout << "The element ( 2,5 ) precedes the element ( 1,10 )."  
-           << endl;  
-   }  
-   else     
-   {  
-      cout << "The element ( 2,5 ) does "  
-           << "not precede the element ( 1,10 )."  
-           << endl;  
-   }  
-}  
-```  
-  
-```Output  
-The element ( 1,10 ) precedes the element ( 2,5 ).  
-The element ( 2,5 ) does not precede the element ( 1,10 ).  
-```  
-  
-##  <a name="value_type"></a> multimap::value_type  
- Ein Typ, der dem als Element in einer Zuordnung gespeicherten Objekttyp entspricht.  
-  
-```  
-typedef pair<const Key, Type> value_type;  
-```  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// multimap_value_type.cpp  
-// compile with: /EHsc  
-#include <map>  
-#include <iostream>  
-  
-int main( )  
-{  
-   using namespace std;  
-   typedef pair <const int, int> cInt2Int;  
-   multimap <int, int> m1;  
-   multimap <int, int> :: key_type key1;  
-   multimap <int, int> :: mapped_type mapped1;  
-   multimap <int, int> :: value_type value1;  
-   multimap <int, int> :: iterator pIter;  
-  
-   // value_type can be used to pass the correct type  
-   // explicitely to avoid implicit type conversion  
-   m1.insert ( multimap <int, int> :: value_type ( 1, 10 ) );  
-  
-   // Compare another way to insert objects into a hash_multimap  
-   m1.insert ( cInt2Int ( 2, 20 ) );  
-  
-   // Initializing key1 and mapped1  
-   key1 = ( m1.begin( ) -> first );  
-   mapped1 = ( m1.begin( ) -> second );  
-  
-   cout << "The key of first element in the multimap is "  
-        << key1 << "." << endl;  
-  
-   cout << "The data value of first element in the multimap is "  
-        << mapped1 << "." << endl;  
-  
-   // The following line would cause an error because  
-   // the value_type is not assignable  
-   // value1 = cInt2Int ( 4, 40 );  
-  
-   cout  << "The keys of the mapped elements are:";  
-   for ( pIter = m1.begin( ) ; pIter != m1.end( ) ; pIter++ )  
-      cout << " " << pIter -> first;  
-   cout << "." << endl;  
-  
-   cout  << "The values of the mapped elements are:";  
-   for ( pIter = m1.begin( ) ; pIter != m1.end( ) ; pIter++ )  
-      cout << " " << pIter -> second;  
-   cout << "." << endl;  
-}  
-```  
-  
-```Output  
-The key of first element in the multimap is 1.  
-The data value of first element in the multimap is 10.  
-The keys of the mapped elements are: 1 2.  
-The values of the mapped elements are: 10 20.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [\<map> Members](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
- [Container](../cpp/containers-modern-cpp.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+```
 
+### <a name="parameters"></a>Parameter
+
+`key` Der Argumentschlüssel mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung verglichen werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Iterator oder ein `const_iterator`, der den Speicherort eines Elements in einer Mehrfachzuordnung mit einem Schlüssel adressiert, der größer ist als der Argumentschlüssel, oder der den Speicherort adressiert, der dem letzten Element in der Mehrfachzuordnung folgt, wenn für den Schlüssel keine Übereinstimmung gefunden wird.
+
+Wenn der Rückgabewert einem `const_iterator` zugewiesen wird, kann das multimap-Objekt nicht geändert werden. Wenn der Rückgabewert einem **iterator**-Typ zugewiesen wird, kann das multimap-Objekt geändert werden.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_upper_bound.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   multimap <int, int> m1;
+   multimap <int, int> :: const_iterator m1_AcIter, m1_RcIter;
+   typedef pair <int, int> Int_Pair;
+
+   m1.insert ( Int_Pair ( 1, 10 ) );
+   m1.insert ( Int_Pair ( 2, 20 ) );
+   m1.insert ( Int_Pair ( 3, 30 ) );
+   m1.insert ( Int_Pair ( 3, 40 ) );
+
+   m1_RcIter = m1.upper_bound( 1 );
+   cout << "The 1st element of multimap m1 with "
+        << "a key greater than 1 is: "
+        << m1_RcIter -> second << "." << endl;
+
+   m1_RcIter = m1.upper_bound( 2 );
+   cout << "The first element of multimap m1 with a key "
+        << " greater than 2 is: "
+        << m1_RcIter -> second << "." << endl;
+
+   // If no match is found for the key, end( ) is returned
+   m1_RcIter = m1.lower_bound( 4 );
+
+   if ( m1_RcIter == m1.end( ) )
+      cout << "The multimap m1 doesn't have an element "
+           << "with a key of 4." << endl;
+   else
+      cout << "The element of multimap m1 with a key of 4 is: "
+           << m1_RcIter -> second << "." << endl;
+
+   // The element at a specific location in the multimap can be
+   // found using a derefenced iterator addressing the location
+   m1_AcIter = m1.begin( );
+   m1_RcIter = m1.upper_bound( m1_AcIter -> first );
+   cout << "The first element of m1 with a key greater than\n"
+        << "that of the initial element of m1 is: "
+        << m1_RcIter -> second << "." << endl;
+}
+```
+
+```Output
+The 1st element of multimap m1 with a key greater than 1 is: 20.
+The first element of multimap m1 with a key  greater than 2 is: 30.
+The multimap m1 doesn't have an element with a key of 4.
+The first element of m1 with a key greater than
+that of the initial element of m1 is: 20.
+```
+
+## <a name="value_comp"></a> multimap::value_comp
+
+Die Memberfunktion gibt ein Funktionsobjekt zurück, das die Reihenfolge der Elemente in einer Mehrfachzuordnung bestimmt, indem die jeweiligen Schlüsselwerte verglichen werden.
+
+```cpp
+value_compare value_comp() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt das Vergleichsfunktionsobjekt zurück, das eine Mehrfachzuordnung zum Sortieren der jeweiligen Elemente verwendet.
+
+### <a name="remarks"></a>Hinweise
+
+Wenn zwei Elemente *e*1( *k*1, *d*1) und *e*2( *k*2, `d`2) mit *k*1 und *k*2 als ihre Schlüssel des Typs `key_type` sowie `d`1 und `d`2 als ihre Daten des Typs `mapped_type` in einer Mehrfachzuordnung *m* Objekte des Typs `value_type` sind, dann sind *m.*`value_comp`( *e*1, *e*2) und *m.*`key_comp`( *k*1, *k*2) gleichwertig.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_value_comp.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+
+   multimap <int, int, less<int> > m1;
+   multimap <int, int, less<int> >::value_compare vc1 = m1.value_comp( );
+   multimap<int,int>::iterator Iter1, Iter2;
+
+   Iter1= m1.insert ( multimap <int, int> :: value_type ( 1, 10 ) );
+   Iter2= m1.insert ( multimap <int, int> :: value_type ( 2, 5 ) );
+
+   if( vc1( *Iter1, *Iter2 ) == true )
+   {
+      cout << "The element ( 1,10 ) precedes the element ( 2,5 )."
+           << endl;
+   }
+   else
+   {
+      cout << "The element ( 1,10 ) does "
+           << "not precede the element ( 2,5 )."
+           << endl;
+   }
+
+   if( vc1( *Iter2, *Iter1 ) == true )
+   {
+      cout << "The element ( 2,5 ) precedes the element ( 1,10 )."
+           << endl;
+   }
+   else
+   {
+      cout << "The element ( 2,5 ) does "
+           << "not precede the element ( 1,10 )."
+           << endl;
+   }
+}
+```
+
+```Output
+The element ( 1,10 ) precedes the element ( 2,5 ).
+The element ( 2,5 ) does not precede the element ( 1,10 ).
+```
+
+## <a name="value_type"></a> multimap::value_type
+
+Ein Typ, der dem als Element in einer Zuordnung gespeicherten Objekttyp entspricht.
+
+```cpp
+typedef pair<const Key, Type> value_type;
+```
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// multimap_value_type.cpp
+// compile with: /EHsc
+#include <map>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   typedef pair <const int, int> cInt2Int;
+   multimap <int, int> m1;
+   multimap <int, int> :: key_type key1;
+   multimap <int, int> :: mapped_type mapped1;
+   multimap <int, int> :: value_type value1;
+   multimap <int, int> :: iterator pIter;
+
+   // value_type can be used to pass the correct type
+   // explicitely to avoid implicit type conversion
+   m1.insert ( multimap <int, int> :: value_type ( 1, 10 ) );
+
+   // Compare another way to insert objects into a hash_multimap
+   m1.insert ( cInt2Int ( 2, 20 ) );
+
+   // Initializing key1 and mapped1
+   key1 = ( m1.begin( ) -> first );
+   mapped1 = ( m1.begin( ) -> second );
+
+   cout << "The key of first element in the multimap is "
+        << key1 << "." << endl;
+
+   cout << "The data value of first element in the multimap is "
+        << mapped1 << "." << endl;
+
+   // The following line would cause an error because
+   // the value_type is not assignable
+   // value1 = cInt2Int ( 4, 40 );
+
+   cout  << "The keys of the mapped elements are:";
+   for ( pIter = m1.begin( ) ; pIter != m1.end( ) ; pIter++ )
+      cout << " " << pIter -> first;
+   cout << "." << endl;
+
+   cout  << "The values of the mapped elements are:";
+   for ( pIter = m1.begin( ) ; pIter != m1.end( ) ; pIter++ )
+      cout << " " << pIter -> second;
+   cout << "." << endl;
+}
+```
+
+```Output
+The key of first element in the multimap is 1.
+The data value of first element in the multimap is 10.
+The keys of the mapped elements are: 1 2.
+The values of the mapped elements are: 10 20.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[\<Zuordnung > Elemente](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[Container](../cpp/containers-modern-cpp.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

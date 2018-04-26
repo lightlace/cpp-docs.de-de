@@ -1,12 +1,12 @@
 ---
 title: _execle, _wexecle | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _execle
@@ -36,91 +36,97 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d463530f7c7248ffa07d95f6a5b409699245473a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 66314ddc4f995513a7fa6e565a35953025848e4d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execle-wexecle"></a>_execle, _wexecle
-Lädt neue untergeordnete Prozesse und führt sie aus.  
-  
+
+Lädt neue untergeordnete Prozesse und führt sie aus.
+
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-intptr_t _execle(   
-   const char *cmdname,  
-   const char *arg0,  
-   ... const char *argn,  
-   NULL,  
-   const char *const *envp   
-);  
-intptr_t _wexecle(   
-   const wchar_t *cmdname,  
-   const wchar_t *arg0,  
-   ... const wchar_t *argn,  
-   NULL,  
-   const char *const *envp   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `cmdname`  
- Pfad der auszuführenden Datei.  
-  
- `arg0, ... argn`  
- Liste von Zeigern zu Parametern.  
-  
- `envp`  
- Array von Zeigern zu Umgebungseinstellungen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall die `errno` (globale Variable) festgelegt ist.  
-  
-|`errno`-Wert|Beschreibung|  
-|-------------------|-----------------|  
-|`E2BIG`|Für die Argumente und die Umgebungseinstellungen werden mehr als 32 KB Speicherplatz benötigt.|  
-|`EACCES`|Für die angegebene Datei ist eine Sperr- oder Freigabeverletzung aufgetreten.|  
-|`EINVAL`|Ungültiger Parameter.|  
-|`EMFILE`|Zu viele Dateien sind geöffnet. (Die angegebene Datei muss geöffnet werden, damit festgestellt werden kann, ob sie ausführbar ist.)|  
-|`ENOENT`|Die Datei oder der Pfad wurde nicht gefunden.|  
-|`ENOEXEC`|Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei.|  
-|`ENOMEM`|Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen; der verfügbare Arbeitsspeicher ist beschädigt; oder es ist ein ungültiger Block vorhanden, was darauf hinweist, dass der aufrufende Prozess nicht ordnungsgemäß zugeordnet wurde.|  
-  
- Weitere Informationen zu diesen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Jede dieser Funktionen lädt einen neuen Prozess und führt diesen aus, übergibt jedes Befehlszeilenargument als separaten Parameter und übergibt außerdem ein Array von Zeigern auf die Umgebungseinstellungen.  
-  
- Die `_execle`-Funktionen überprüfen ihre Parameter. Wenn `cmdname` oder `arg0` ein NULL-Zeiger oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück. Es wird kein neuer Prozess gestartet.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|Optionaler Header|  
-|--------------|---------------------|---------------------|  
-|`_execle`|\<process.h>|\<errno.h>|  
-|`_wexecle`|\<process.h> oder \<wchar.h>|\<errno.h>|  
-  
- Weitere Informationen finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel in [_exec-, _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
- [_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_spawn, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+> Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+intptr_t _execle(
+   const char *cmdname,
+   const char *arg0,
+   ... const char *argn,
+   NULL,
+   const char *const *envp
+);
+intptr_t _wexecle(
+   const wchar_t *cmdname,
+   const wchar_t *arg0,
+   ... const wchar_t *argn,
+   NULL,
+   const char *const *envp
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*CmdName*<br/>
+Pfad der auszuführenden Datei.
+
+*arg0*,... *Argn*<br/>
+Liste von Zeigern zu Parametern.
+
+*envp*<br/>
+Array von Zeigern zu Umgebungseinstellungen.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall die **Errno** (globale Variable) festgelegt ist.
+
+|**Errno** Wert|Beschreibung|
+|-------------------|-----------------|
+|**E2BIG**|Für die Argumente und die Umgebungseinstellungen werden mehr als 32 KB Speicherplatz benötigt.|
+|**EACCES**|Für die angegebene Datei ist eine Sperr- oder Freigabeverletzung aufgetreten.|
+|**EINVAL**|Ungültiger Parameter.|
+|**EMFILE**|Zu viele Dateien sind geöffnet. (Die angegebene Datei muss geöffnet werden, damit festgestellt werden kann, ob sie ausführbar ist.)|
+|**ENOENT**|Die Datei oder der Pfad wurde nicht gefunden.|
+|**ENOEXEC**|Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei.|
+|**ENOMEM**|Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen; der verfügbare Arbeitsspeicher ist beschädigt; oder es ist ein ungültiger Block vorhanden, was darauf hinweist, dass der aufrufende Prozess nicht ordnungsgemäß zugeordnet wurde.|
+
+Weitere Informationen zu diesen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Jede dieser Funktionen lädt einen neuen Prozess und führt diesen aus, übergibt jedes Befehlszeilenargument als separaten Parameter und übergibt außerdem ein Array von Zeigern auf die Umgebungseinstellungen.
+
+Die **_execle** Funktionen überprüfen ihre Parameter. Wenn *Cmdname* oder *arg0* ist ein null-Zeiger oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess gestartet.
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|Optionaler Header|
+|--------------|---------------------|---------------------|
+|**_execle**|\<process.h>|\<errno.h>|
+|**_wexecle**|\<process.h> oder \<wchar.h>|\<errno.h>|
+
+Weitere Informationen finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel in [_exec-, _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _chdir, _wchdir | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wchdir
@@ -41,126 +41,131 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cb327b13fafafdb357a6a53f624c494ee317b6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 61744ec875b057ae7d1b32703fb7ce5f813b5ff4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
-Ändert das aktuelle Arbeitsverzeichnis.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _chdir(   
-   const char *dirname   
-);  
-int _wchdir(   
-   const wchar_t *dirname   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `dirname`  
- Pfad des neuen Arbeitsverzeichnisses.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Diese Funktionen geben bei Erfolg den Wert 0 zurück. Ein Rückgabewert "-1" gibt einen Fehler. Wenn der angegebene Pfad nicht gefunden werden kann, wird `errno` auf `ENOENT`festgelegt. Wenn `dirname` NULL ist, wird der ungültige Parameterhandler wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)festgelegt. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt – 1 zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `_chdir` -Funktion ändert das aktuelle Arbeitsverzeichnis und wählt das Verzeichnis aus, das durch `dirname`angegeben ist. Der `dirname` -Parameter muss auf ein vorhandenes Verzeichnis verweisen. Diese Funktion kann das aktuelle Arbeitsverzeichnis auf jedem beliebigen Laufwerk ändern. Wenn ein neuer Laufwerkbuchstabe in `dirname`angegeben wird, wird der Standardlaufwerkbuchstabe ebenfalls geändert. Wenn z. B. A der Standardlaufwerkbuchstabe und \BIN das aktuelle Arbeitsverzeichnis ist, ändert der folgende Aufruf das aktuelle Arbeitsverzeichnis in C und legt C als neues Standardlaufwerk fest:  
-  
-```  
-_chdir("c:\\temp");  
-```  
-  
- Wenn Sie den optionalen umgekehrten Schrägstrich (`\`) in Pfadangaben verwenden, müssen Sie in einem C-Zeichenfolgenliteral zwei umgekehrte Schrägstriche (`\\`) platzieren, um einen einzelnen umgekehrten Schrägstrich (`\`) darzustellen.  
-  
- `_wchdir` ist eine Breitzeichenversion von `_chdir`. Das `dirname` -Argument für `_wchdir` ist eine Zeichenfolge mit Breitzeichen`. _wchdir` und `_chdir` verhalten sich andernfalls identisch.  
-  
-### <a name="generic-text-routine-mapping"></a>Zuordnung generischer Textroutinen:  
-  
-|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------|---------------------|  
-|`_chdir`|\<direct.h>|\<errno.h>|  
-|`_wchdir`|\<direct.h> oder \<wchar.h>|\<errno.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_chdir.c  
-// arguments: C:\WINDOWS  
-  
-/* This program uses the _chdir function to verify  
-   that a given directory exists. */  
-  
-#include <direct.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main( int argc, char *argv[] )  
-{  
-  
-   if(_chdir( argv[1] ) )  
-   {  
-      switch (errno)  
-      {  
-      case ENOENT:  
-         printf( "Unable to locate the directory: %s\n", argv[1] );  
-         break;  
-      case EINVAL:  
-         printf( "Invalid buffer.\n");  
-         break;  
-      default:  
-         printf( "Unknown error.\n");  
-      }  
-   }  
-   else  
-      system( "dir *.exe");  
-}  
-```  
-  
-```Output  
-Volume in drive C has no label.  
- Volume Serial Number is 2018-08A1  
-  
- Directory of c:\windows  
-  
-08/29/2002  04:00 AM         1,004,032 explorer.exe  
-12/17/2002  04:43 PM            10,752 hh.exe  
-03/03/2003  09:24 AM            33,792 ieuninst.exe  
-10/29/1998  04:45 PM           306,688 IsUninst.exe  
-08/29/2002  04:00 AM            66,048 NOTEPAD.EXE  
-03/03/2003  09:24 AM            33,792 Q330994.exe  
-08/29/2002  04:00 AM           134,144 regedit.exe  
-02/28/2003  06:26 PM            46,352 setdebug.exe  
-08/29/2002  04:00 AM            15,360 TASKMAN.EXE  
-08/29/2002  04:00 AM            49,680 twunk_16.exe  
-08/29/2002  04:00 AM            25,600 twunk_32.exe  
-08/29/2002  04:00 AM           256,192 winhelp.exe  
-08/29/2002  04:00 AM           266,752 winhlp32.exe  
-              13 File(s)      2,249,184 bytes  
-               0 Dir(s)  67,326,029,824 bytes free  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Directory Control (Verzeichnissteuerung)](../../c-runtime-library/directory-control.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Ändert das aktuelle Arbeitsverzeichnis.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _chdir(
+   const char *dirname
+);
+int _wchdir(
+   const wchar_t *dirname
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Verwendung*<br/>
+Pfad des neuen Arbeitsverzeichnisses.
+
+## <a name="return-value"></a>Rückgabewert
+
+Diese Funktionen geben bei Erfolg den Wert 0 zurück. Ein Rückgabewert "-1" gibt einen Fehler. Wenn der angegebene Pfad nicht gefunden werden kann, **Errno** festgelegt ist, um **ENOENT**. Wenn *Dirname* NULL ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt-1 zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_chdir** -Funktion ändert das aktuelle Arbeitsverzeichnis auf das Verzeichnis, das vom angegebenen *Dirname*. Die *Dirname* -Parameter muss auf ein vorhandenes Verzeichnis verweisen. Diese Funktion kann das aktuelle Arbeitsverzeichnis auf jedem beliebigen Laufwerk ändern. Wenn ein neuer Laufwerkbuchstabe in angegebenen *Dirname*, wird der Standardlaufwerkbuchstabe ebenfalls geändert. Wenn z. B. A der Standardlaufwerkbuchstabe und \BIN das aktuelle Arbeitsverzeichnis ist, ändert der folgende Aufruf das aktuelle Arbeitsverzeichnis in C und legt C als neues Standardlaufwerk fest:
+
+```C
+_chdir("c:\temp");
+```
+
+Bei Verwendung von den optionalen umgekehrten Schrägstrich (**&#92;**) in Pfadangaben verwenden, müssen Sie zwei umgekehrte Schrägstriche platzieren (**&#92;&#92;**) in einem C-Zeichenfolgenliteral dargestellt einen einzelnen umgekehrten Schrägstrich ( **&#92;**).
+
+**_wchdir** ist eine Breitzeichen-Version von **_chdir**; das *Dirname* Argument **_wchdir** ist eine Breitzeichen-Zeichenfolge. **_wchdir** und **_chdir** Verhalten sich andernfalls identisch.
+
+### <a name="generic-text-routine-mapping"></a>Zuordnung generischer Textroutinen:
+
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tchdir**|**_chdir**|**_chdir**|**_wchdir**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|Optionaler Header|
+|-------------|---------------------|---------------------|
+|**_chdir**|\<direct.h>|\<errno.h>|
+|**_wchdir**|\<direct.h> oder \<wchar.h>|\<errno.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_chdir.c
+// arguments: C:\WINDOWS
+
+/* This program uses the _chdir function to verify
+   that a given directory exists. */
+
+#include <direct.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main( int argc, char *argv[] )
+{
+
+   if(_chdir( argv[1] ) )
+   {
+      switch (errno)
+      {
+      case ENOENT:
+         printf( "Unable to locate the directory: %s\n", argv[1] );
+         break;
+      case EINVAL:
+         printf( "Invalid buffer.\n");
+         break;
+      default:
+         printf( "Unknown error.\n");
+      }
+   }
+   else
+      system( "dir *.exe");
+}
+```
+
+```Output
+ Volume in drive C has no label.
+ Volume Serial Number is 2018-08A1
+
+ Directory of c:\windows
+
+08/29/2002  04:00 AM         1,004,032 explorer.exe
+12/17/2002  04:43 PM            10,752 hh.exe
+03/03/2003  09:24 AM            33,792 ieuninst.exe
+10/29/1998  04:45 PM           306,688 IsUninst.exe
+08/29/2002  04:00 AM            66,048 NOTEPAD.EXE
+03/03/2003  09:24 AM            33,792 Q330994.exe
+08/29/2002  04:00 AM           134,144 regedit.exe
+02/28/2003  06:26 PM            46,352 setdebug.exe
+08/29/2002  04:00 AM            15,360 TASKMAN.EXE
+08/29/2002  04:00 AM            49,680 twunk_16.exe
+08/29/2002  04:00 AM            25,600 twunk_32.exe
+08/29/2002  04:00 AM           256,192 winhelp.exe
+08/29/2002  04:00 AM           266,752 winhlp32.exe
+              13 File(s)      2,249,184 bytes
+               0 Dir(s)  67,326,029,824 bytes free
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Verzeichnissteuerung](../../c-runtime-library/directory-control.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
+[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

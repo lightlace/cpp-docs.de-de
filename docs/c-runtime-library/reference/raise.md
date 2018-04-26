@@ -1,12 +1,12 @@
 ---
 title: raise | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>Parameter
 
-*sig*  
+*sig*<br/>
 Auszulösendes Signal.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -73,18 +73,18 @@ Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorhe
 
 |Signal|Bedeutung|Standard|
 |------------|-------------|-------------|
-|`SIGABRT`|Nicht ordnungsgemäße Beendigung|Beendet das aufrufende Programm mit Exitcode 3|
-|`SIGFPE`|Gleitkommafehler|Beendet das aufrufende Programm|
-|`SIGILL`|Ungültige Anweisung|Beendet das aufrufende Programm|
-|`SIGINT`|STRG+C-Unterbrechung|Beendet das aufrufende Programm|
-|`SIGSEGV`|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|
-|`SIGTERM`|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|
+|**SIGABRT**|Nicht ordnungsgemäße Beendigung|Beendet das aufrufende Programm mit Exitcode 3|
+|**SIGFPE**|Gleitkommafehler|Beendet das aufrufende Programm|
+|**SIGILL**|Ungültige Anweisung|Beendet das aufrufende Programm|
+|**SIGINT**|STRG+C-Unterbrechung|Beendet das aufrufende Programm|
+|**SIGSEGV**|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|
+|**SIGTERM**|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|
 
-Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Falls keine Behandlung erfolgt, legt die Funktion `errno` auf `EINVAL` fest und gibt einen Wert ungleich 0 (null) zurück.
+Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Die Funktion legt fest, wenn nicht behandelt, **Errno** auf **EINVAL** und gibt einen Wert ungleich NULL zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|-Routine zurückgegebener Wert|Erforderlicher Header|
+|Routine|Erforderlicher Header|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 
@@ -92,6 +92,6 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="see-also"></a>Siehe auch
 
-[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

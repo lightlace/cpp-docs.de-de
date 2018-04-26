@@ -1,12 +1,12 @@
 ---
 title: _freea | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _freea
@@ -32,66 +32,72 @@ helpviewer_keywords:
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2a64de046f904d4652809f35598f2b4db2b3007f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freea"></a>_freea
-Hebt die Zuweisung eines Speicherblocks auf oder gibt diesen frei.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void _freea(   
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `memblock`  
- Zuvor zugewiesener Speicherblock, der freigegeben werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Keine.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Funktion `_freea` gibt einen Speicherblock frei (`memblock`), der zuvor durch einen Aufruf von [_malloca](../../c-runtime-library/reference/malloca.md) belegt wurde. `_freea` überprüft, ob der Speicher auf dem Heap oder Stapel belegt wurde. Wenn Speicher auf dem Stapel belegt wurde, führt `_freea` keine Aktion aus. Wenn Speicher auf dem Heap belegt wurde, entspricht die Anzahl der freigegebenen Bytes der Anzahl der Bytes, die angefordert wurden, als der Block belegt wurde. Wenn `memblock` `NULL` ist, wird der Zeiger ignoriert und `_freea` wird sofort zurückgegeben. Der Versuch, einen ungültigen Zeiger freizugeben (einen Zeiger auf einen Speicherblock, der nicht von `_malloca` belegt wurde), kann nachfolgende Zuordnungsanforderungen beeinflussen und Fehler verursachen.  
-  
- `_freea` Aufrufe `free` intern verwendet werden, wenn er feststellt, dass der Arbeitsspeicher auf dem Heap zugeordnet wird. Ein Marker bestimmt im Speicher an der Adresse, die dem zugewiesenen Speicher unmittelbar vorausgeht, ob der Speicher auf dem Heap oder dem Stapel belegt wird.  
-  
- Wenn bei der Freigabe des Speichers ein Fehler auftritt, wird `errno` mit Informationen des Betriebssystems über die Art des Fehlers angegeben. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- Nachdem ein Speicherblock freigegeben wurde, minimiert [_heapmin](../../c-runtime-library/reference/heapmin.md) die Menge des freien Speicherplatzes auf dem Heap, indem die nicht verwendeten Bereiche zusammengefügt und wieder an das Betriebssystem freigegeben werden. Freigegebener Speicher, der nicht an das Betriebssystem freigegeben wird, wird im freien Pool wiederhergestellt und ist wieder für eine Zuordnung verfügbar.  
-  
- Alle Aufrufe von `_malloca` müssen von einem Aufruf von `_freea` begleitet werden. Es ist auch ein Fehler, `_freea` zweimal im gleichen Speicher aufzurufen. Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist, vor allem mit [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)-Funktionen, die durch die Definition von `_CRTDBG_MAP_ALLOC` aktiviert werden, ist es einfacher, fehlende oder duplizierte Aufrufe von `_freea` zu finden. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
-  
- `_freea` ist als `__declspec(noalias)` gekennzeichnet, d.h., die Funktion ändert auf keinen Fall globale Variablen. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_freea`|\<stdlib.h> und \<malloc.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [_malloca](../../c-runtime-library/reference/malloca.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   
- [_malloca](../../c-runtime-library/reference/malloca.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)
+
+Hebt die Zuweisung eines Speicherblocks auf oder gibt diesen frei.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void _freea(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*memblock*<br/>
+Zuvor zugewiesener Speicherblock, der freigegeben werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+Keine.
+
+## <a name="remarks"></a>Hinweise
+
+Die **_freea** Funktion hebt die Zuordnung eines Speicherblocks (*Memblock*), die zuvor durch einen Aufruf von belegt wurde [_malloca](malloca.md). **_freea** prüft, ob der Speicher auf dem Heap oder Stapel belegt wurde. Wenn es auf dem Stapel belegt wurde **_freea** wird keine Aktion ausgeführt. Wenn Speicher auf dem Heap belegt wurde, entspricht die Anzahl der freigegebenen Bytes der Anzahl der Bytes, die angefordert wurden, als der Block belegt wurde. Wenn *Memblock* ist **NULL**, der Zeiger wird ignoriert und **_freea** wird sofort zurückgegeben. Bei dem Versuch, einen ungültigen Zeiger frei (ein Zeiger auf einen Speicherblock, der nicht durch belegt wurde **_malloca**) möglicherweise Auswirkungen auf nachfolgende belegungsanforderungen und Fehler verursachen.
+
+**_freea** Aufrufe **freien** intern verwendet werden, wenn er feststellt, dass der Arbeitsspeicher auf dem Heap zugeordnet wird. Ein Marker bestimmt im Speicher an der Adresse, die dem zugewiesenen Speicher unmittelbar vorausgeht, ob der Speicher auf dem Heap oder dem Stapel belegt wird.
+
+Wenn ein Fehler auftritt, bei der Freigabe des Arbeitsspeichers und **Errno** mit Informationen des Betriebssystems über die Art des Fehlers festgelegt ist. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+Nachdem ein Speicherblock freigegeben wurde, minimiert [_heapmin](heapmin.md) die Menge des freien Speicherplatzes auf dem Heap, indem die nicht verwendeten Bereiche zusammengefügt und wieder an das Betriebssystem freigegeben werden. Freigegebener Speicher, der nicht an das Betriebssystem freigegeben wird, wird im freien Pool wiederhergestellt und ist wieder für eine Zuordnung verfügbar.
+
+Ein Aufruf von **_freea** müssen alle Aufrufe an begleiten **_malloca**. Es ist auch ein Fehler auf, rufen Sie **_freea** zweimal auf den gleichen Arbeitsspeicher. Wenn die Anwendung vor allem mit mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist [_malloc_dbg](malloc-dbg.md) definieren aktivierte Funktionen **_CRTDBG_MAP_ALLOC**, es ist einfacher, fehlen oder Aufrufe von dupliziert **_freea**. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+
+**_freea** RuntimeCompatibility `__declspec(noalias)`, was bedeutet, dass die Funktion gewährleistet ist, nicht um die globalen Variablen zu ändern. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_freea**|\<stdlib.h> und \<malloc.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [_malloca](malloca.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Speicherreservierung](../../c-runtime-library/memory-allocation.md)<br/>
+[_malloca](malloca.md)<br/>
+[calloc](calloc.md)<br/>
+[malloc](malloc.md)<br/>
+[_malloc_dbg](malloc-dbg.md)<br/>
+[realloc](realloc.md)<br/>
+[_free_dbg](free-dbg.md)<br/>
+[_heapmin](heapmin.md)<br/>

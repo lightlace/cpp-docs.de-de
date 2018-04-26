@@ -1,12 +1,12 @@
 ---
 title: _get_osfhandle | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_osfhandle
@@ -34,55 +34,55 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffc65e12c4a9023d0ef649bbf2cb5e8f7e76808
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ef9481cb0ad962de96b710b31ac1460b9703ae6e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
-Holt das Betriebssystem-Dateihandle, das dem angegebenen Dateideskriptor zugeordnet ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-intptr_t _get_osfhandle(   
-   int fd   
-);  
-```  
-  
+Holt das Betriebssystem-Dateihandle, das dem angegebenen Dateideskriptor zugeordnet ist.
+
+## <a name="syntax"></a>Syntax
+
+```C
+intptr_t _get_osfhandle(
+   int fd
+);
+```
+
 ### <a name="parameters"></a>Parameter
 
-*fd*  
-Eine vorhandener Dateideskriptor.  
-  
+*fd*<br/>
+Eine vorhandener Dateideskriptor.
+
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Betriebssystem Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, `INVALID_HANDLE_VALUE` (-1) und legt `errno` zu `EBADF`, der angibt, eines ungültiges Dateihandle.  
-  
+Gibt einen Betriebssystem Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **INVALID_HANDLE_VALUE** (-1) und legt **Errno** auf **EBADF**, der angibt, eines ungültiges Dateihandle.
+
 ## <a name="remarks"></a>Hinweise
 
-Um eine Datei zu schließen, deren Dateihandle des Betriebssystems (BS) erhalten, indem Sie `_get_osfhandle`, rufen Sie [ \_schließen](../../c-runtime-library/reference/close.md) auf den Dateideskriptor *fd*. Rufen Sie nicht `CloseHandle` für den Rückgabewert dieser Funktion. Das zugrunde liegende Betriebssystem-Dateihandle ist im Besitz der *fd* Dateideskriptor und wird geschlossen, wenn `_close` heißt auf *fd*. Wenn der Dateideskriptor Besitz ist ein `FILE *` Stream und anschließend durch Aufrufen [Fclose](../../c-runtime-library/reference/fclose-fcloseall.md) darauf `FILE *` Stream geschlossen wird, den Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle. Rufen Sie in diesem Fall nicht `_close` auf den Dateideskriptor.
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_get_osfhandle`|\<io.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
+Um eine Datei zu schließen, deren Dateihandle des Betriebssystems (BS) erhalten, indem Sie **_get_osfhandle**, rufen Sie [_close](close.md) auf den Dateideskriptor *fd*. Rufen Sie nicht **CloseHandle** für den Rückgabewert dieser Funktion. Das zugrunde liegende Betriebssystem-Dateihandle ist im Besitz der *fd* Dateideskriptor und wird geschlossen, wenn [_close](close.md) heißt auf *fd*. Wenn der Dateideskriptor Besitz ist ein **Datei \***  Stream und anschließend durch Aufrufen [Fclose](fclose-fcloseall.md) darauf **Datei \***  Stream schließt sowohl den Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle. Rufen Sie in diesem Fall nicht [_close](close.md) auf den Dateideskriptor.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**_get_osfhandle**|\<io.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-[File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
-[_schließen](../../c-runtime-library/reference/close.md)   
-[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
-[_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)
+[Dateibehandlung](../../c-runtime-library/file-handling.md)<br/>
+[_close](close.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

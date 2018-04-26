@@ -1,12 +1,12 @@
 ---
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcscoll
@@ -52,108 +52,113 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db4e70e4bdb7642c5df0c94c007eacdfd33ea9d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: eaddf52459ccc9af2009d04e95416d2613a5d77b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
-Vergleicht Zeichenfolgen mithilfe des aktuellen Gebietsschemas oder einer angegebenen LC_COLLATE-Konvertierungszustandskategorie.  
-  
+
+Vergleicht Zeichenfolgen mithilfe des aktuellen Gebietsschemas oder einer angegebenen LC_COLLATE-Konvertierungszustandskategorie.
+
 > [!IMPORTANT]
->  `_mbscoll` und `_mbscoll_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int strcoll(  
-   const char *string1,  
-   const char *string2   
-);  
-int wcscoll(  
-   const wchar_t *string1,  
-   const wchar_t *string2   
-);  
-int _mbscoll(  
-   const unsigned char *string1,  
-   const unsigned char *string2   
-);  
-int _strcoll_l(  
-   const char *string1,  
-   const char *string2,  
-   _locale_t locale   
-);  
-int wcscoll_l(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   _locale_t locale   
-);  
-int _mbscoll_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `string1`, `string2`  
- Zu vergleichende mit NULL endende Zeichenfolgen.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung der `string1` auf `string2`wie folgt.  
-  
-|Rückgabewert|Verhältnis von string1 zu string2|  
-|------------------|----------------------------------------|  
-|< 0|`string1` kleiner als `string2`|  
-|0|`string1` identisch mit `string2`|  
-|> 0|`string1` größer als `string2`|  
-  
- Jede dieser Funktionen gibt bei einem Fehler `_NLSCMPERROR` zurück. Um `_NLSCMPERROR` zu verwenden, fügen Sie entweder STRING.H oder MBSTRING.H. ein. `wcscoll` kann fehlschlagen, wenn `string1` oder `string2` NULL ist oder Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, legt `wcscoll``errno` möglicherweise auf `EINVAL` fest. Um einen Aufruf von `wcscoll` auf einen Fehler zu überprüfen, legen Sie `errno` auf 0 fest, und überprüfen Sie dann `errno`, nachdem Sie `wcscoll` aufgerufen haben.  
-  
-## <a name="remarks"></a>Hinweise  
- Jede dieser Funktionen vergleicht `string1` und `string2` unter Beachtung der Groß-/Kleinschreibung entsprechend der derzeit verwendeten Codepage. Diese Funktionen sollten nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.  
-  
- Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder `string1` oder `string2` ein NULL-Zeiger ist oder wenn `count` größer als `INT_MAX` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `_NLSCMPERROR` zurück und stellen `errno` auf `EINVAL` ein.  
-  
- Der Vergleich der beiden Zeichenfolgen ist ein gebietsschemaabhängiger Vorgang, da jedes Gebietsschema andere Regeln für die Sortierung von Zeichen besitzt. Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden für dieses gebietsschemaabhängige Verhalten das aktuelle Gebietsschema des Threads. Die Versionen mit dem `_l`-Suffix sind mit der entsprechenden Funktion ohne Suffix identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscoll`|`strcoll`|`_mbscoll`|`wcscoll`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strcoll`|\<string.h>|  
-|`wcscoll`|\<wchar.h>, \<string.h>|  
-|`_mbscoll`, `_mbscoll_l`|\<mbstring.h>|  
-|`_strcoll_l`|\<string.h>|  
-|`_wcscoll_l`|\<wchar.h>, \<string.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+> **_mbscoll** und **_mbscoll_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int strcoll(
+   const char *string1,
+   const char *string2
+);
+int wcscoll(
+   const wchar_t *string1,
+   const wchar_t *string2
+);
+int _mbscoll(
+   const unsigned char *string1,
+   const unsigned char *string2
+);
+int _strcoll_l(
+   const char *string1,
+   const char *string2,
+   _locale_t locale
+);
+int wcscoll_l(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   _locale_t locale
+);
+int _mbscoll_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*String1*, *Zeichenfolge2*<br/>
+Zu vergleichende mit NULL endende Zeichenfolgen.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung der *string1* auf *Zeichenfolge2*wie folgt.
+
+|Rückgabewert|Verhältnis von string1 zu string2|
+|------------------|----------------------------------------|
+|< 0|*String1* kleiner als *Zeichenfolge2*|
+|0|*String1* identisch mit *Zeichenfolge2*|
+|> 0|*String1* größer als *Zeichenfolge2*|
+
+Jede dieser Funktionen gibt **_NLSCMPERROR** bei einem Fehler. Mit **_NLSCMPERROR**, entweder Zeichenfolge enthalten. H oder MBSTRING. H. **Wcscoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* NULL ist oder Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **Wcscoll** möglicherweise festgelegt **Errno** auf **EINVAL**. Überprüfen Sie bei einem Fehler bei einem Aufruf von **Wcscoll**legen **Errno** auf 0 und überprüfen Sie dann **Errno** nach dem Aufruf **Wcscoll**.
+
+## <a name="remarks"></a>Hinweise
+
+Jede dieser Funktionen vergleicht Groß-/Kleinschreibung *string1* und *Zeichenfolge2* entsprechend der derzeit verwendeten Codepage. Diese Funktionen sollten nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
+
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger oder, wenn *Anzahl* ist größer als **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen. , wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** auf **EINVAL**.
+
+Der Vergleich der beiden Zeichenfolgen ist ein gebietsschemaabhängiger Vorgang, da jedes Gebietsschema andere Regeln für die Sortierung von Zeichen besitzt. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das Gebietsschema des aktuellen Threads für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l** -Suffix sind beinahe identisch, die entsprechende Funktion ohne das Suffix, außer dass verwenden sie das Gebietsschema als Parameter anstelle des aktuellen Gebietsschemas übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcscoll**|**strcoll**|**_mbscoll**|**wcscoll**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**strcoll**|\<string.h>|
+|**wcscoll**|\<wchar.h>, \<string.h>|
+|**_mbscoll**, **_mbscoll_l**|\<mbstring.h>|
+|**_strcoll_l**|\<string.h>|
+|**_wcscoll_l**|\<wchar.h>, \<string.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strncmp
@@ -57,161 +57,166 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-caps.latest.revision: 
+caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ec6c3c6a28258ffc953fc9c7f5a344e1f3d0f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 924c3c2bd6517d5a8a8996a6e5983ed7d143dbcf
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
-Vergleicht die angegebene Anzahl von Zeichen zweier Zeichenfolgen.  
-  
+
+Vergleicht die angegebene Anzahl von Zeichen zweier Zeichenfolgen.
+
 > [!IMPORTANT]
->  `_mbsncmp` und `_mbsncmp_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int strncmp(  
-   const char *string1,  
-   const char *string2,  
-   size_t count   
-);  
-int wcsncmp(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   size_t count   
-);  
-int _mbsncmp(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-int _mbsncmp_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count,   
-   _locale_t locale  
-);int _mbsnbcmp(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `string1, string2`  
- Zu vergleichende Zeichenfolgen.  
-  
- `count`  
- Anzahl der zu vergleichenden Zeichen.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert zeigt der Beziehung der untergeordneten Zeichenfolgen von `string1` und `string2` wie folgt an.  
-  
-|Rückgabewert|Beschreibung|  
-|------------------|-----------------|  
-|< 0|Die untergeordnete Zeichenfolge `string1` ist kleiner als die untergeordnete Zeichenfolge `string2`.|  
-|0|Die untergeordnete Zeichenfolge `string1` ist mit der untergeordneten Zeichenfolge `string2` identisch.|  
-|> 0|Die untergeordnete Zeichenfolge `string1` ist größer als die untergeordnete Zeichenfolge `string2`.|  
-  
- Bei einem Parameterüberprüfungsfehler geben `_mbsncmp` und `_mbsncmp_l` `_NLSCMPERROR` zurück (definiert in \<string.h> und \<mbstring.h>).  
-  
-## <a name="remarks"></a>Hinweise  
- Die `strncmp`-Funktion führt einen Ordinalvergleich der (höchstens) ersten `count`-Zeichen in `string1` und `string2` und gibt einen Wert zurück, der die Beziehung zwischen den untergeordneten Zeichenfolgen angibt. `strncmp` ist eine Version von `_strnicmp`, bei der die Groß-/Kleinschreibung zu beachten ist. `wcsncmp`und `_mbsncmp` sind Versionen von `_wcsnicmp` und `_mbsnicmp`, bei denen ebenfalls die Groß-/Kleinschreibung zu beachten ist.  
-  
- `wcsncmp` und `_mbsncmp` sind Breitzeichen- und Multibytezeichenversionen von `strncmp`. Die Argumente von `wcsncmp` sind Breitzeichen-Zeichenfolgen, die von `_mbsncmp` sind Multibyte-Zeichenfolgen. `_mbsncmp` erkennt Multibyte-Zeichenfolge entsprechend einer Multibyte-Codepage und gibt im Falle eines Fehlers `_NLSCMPERROR` zurück.  
-  
- Darüber hinaus überprüfen `_mbsncmp` `_mbsncmp_l` auch Parameter. Wenn `string1` oder `string2` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben `_mbsncmp` und `_mbsncmp_l` den Wert `_NLSCMPERROR` zurück und setzen `errno` auf `EINVAL`. `strncmp` und `wcsncmp` überprüfen ihre Parameter nicht. Anderenfalls verhalten sich diese Funktionen identisch.  
-  
- Das Vergleichsverhalten von `_mbsncmp` und `_mbsncmp_l` wird durch die Einstellung der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas beeinflusst. Hierdurch wird die Erkennung von vorangestellten und nachfolgenden Bytes von Multibytezeichen gesteuert. Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die `_mbsncmp`-Funktion verwendet das aktuelle Gebietsschema für dieses gebietsschemaabhängige Verhalten. Die `_mbsncmp_l`-Funktion ist identisch, abgesehen davon, dass sie stattdessen den `locale`-Parameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md). Wenn das Gebietsschema ein Einzelbyte-Gebietsschema ist, ist das Verhalten dieser Funktionen identisch mit `strncmp`.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsnccmp`|`strncmp`|`_mbsncmp`|`wcsncmp`|  
-|`_tcsncmp`|`strncmp`|`_mbsnbcmp`|`wcsncmp`|  
-|`_tccmp`|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|`_mbsncmp`|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|  
-|**Nicht zutreffend**|**Nicht zutreffend**|`_mbsncmp_l`|**Nicht zutreffend**|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strncmp`|\<string.h>|  
-|`wcsncmp`|\<string.h> oder \<wchar.h>|  
-|`_mbsncmp`, `_mbsncmp_l`|\<mbstring.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_strncmp.c  
-#include <string.h>  
-#include <stdio.h>  
-  
-char string1[] = "The quick brown dog jumps over the lazy fox";  
-char string2[] = "The QUICK brown fox jumps over the lazy dog";  
-  
-int main( void )  
-{  
-   char tmp[20];  
-   int result;  
-   printf( "Compare strings:\n      %s\n      %s\n\n",  
-           string1, string2 );  
-   printf( "Function:   strncmp (first 10 characters only)\n" );  
-   result = strncmp( string1, string2 , 10 );  
-   if( result > 0 )  
-      strcpy_s( tmp, sizeof(tmp), "greater than" );  
-   else if( result < 0 )  
-      strcpy_s( tmp, sizeof(tmp), "less than" );  
-   else  
-      strcpy_s( tmp, sizeof(tmp), "equal to" );  
-   printf( "Result:      String 1 is %s string 2\n\n", tmp );  
-   printf( "Function:   strnicmp _strnicmp (first 10 characters only)\n" );  
-   result = _strnicmp( string1, string2, 10 );  
-   if( result > 0 )  
-      strcpy_s( tmp, sizeof(tmp), "greater than" );  
-   else if( result < 0 )  
-      strcpy_s( tmp, sizeof(tmp), "less than" );  
-   else  
-      strcpy_s( tmp, sizeof(tmp), "equal to" );  
-   printf( "Result:      String 1 is %s string 2\n", tmp );  
-}  
-```  
-  
-```Output  
-Compare strings:  
-      The quick brown dog jumps over the lazy fox  
-      The QUICK brown fox jumps over the lazy dog  
-  
-Function:   strncmp (first 10 characters only)  
-Result:      String 1 is greater than string 2  
-  
-Function:   strnicmp _strnicmp (first 10 characters only)  
-Result:      String 1 is equal to string 2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbsncmp** und **_mbsncmp_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+int strncmp(
+   const char *string1,
+   const char *string2,
+   size_t count
+);
+int wcsncmp(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   size_t count
+);
+int _mbsncmp(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+int _mbsncmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count,
+   _locale_t locale
+);int _mbsnbcmp(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*String1*, *Zeichenfolge2*<br/>
+Zu vergleichende Zeichenfolgen.
+
+*count*<br/>
+Anzahl der zu vergleichenden Zeichen.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der Rückgabewert gibt an, die Beziehung der Teilzeichenfolgen von *string1* und *Zeichenfolge2* wie folgt.
+
+|Rückgabewert|Beschreibung|
+|------------------|-----------------|
+|< 0|*String1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge|
+|0|*String1* Teilzeichenfolge, die identisch mit *Zeichenfolge2* Teilzeichenfolge|
+|> 0|*String1* Teilzeichenfolge, die größer als *Zeichenfolge2* Teilzeichenfolge|
+
+Bei einem parametervalidierungsfehler **_mbsncmp** und **_mbsncmp_l** zurückgeben **_NLSCMPERROR**, definiert \<string.h > und \< MBSTRING.h >.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Strncmp** -Funktion führt einen Ordinalvergleich von höchstens der ersten *Anzahl* Zeichen in *string1* und *Zeichenfolge2* und Gibt einen Wert, der angibt, der Beziehung zwischen den untergeordneten Zeichenfolgen. **Strncmp** ist eine Groß-/Kleinschreibung Version von **_strnicmp**. **Wcsncmp** und **_mbsncmp** sind Groß-/Kleinschreibung von **_wcsnicmp** und **_mbsnicmp**.
+
+**Wcsncmp** und **_mbsncmp** sind Breitzeichen- und multibytezeichenversionen von **Strncmp**. Die Argumente der **Wcsncmp** sind Breitzeichen-Zeichenfolgen, die von **_mbsncmp** sind Multibyte Zeichenfolgen. **_mbsncmp** erkennt Multibyte-Zeichenfolgen entsprechend einer multibyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler.
+
+Darüber hinaus **_mbsncmp** und **_mbsncmp_l** Parameter überprüft. Wenn *string1* oder *Zeichenfolge2* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsncmp** und **_mbsncmp_l** zurückgeben **_NLSCMPERROR** und **Errno** auf  **EINVAL**. **Strncmp** und **Wcsncmp** überprüfen ihre Parameter nicht. Anderenfalls verhalten sich diese Funktionen identisch.
+
+Das Vergleichsverhalten von **_mbsncmp** und **_mbsncmp_l** wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas. Hierdurch wird die Erkennung von vorangestellten und nachfolgenden Bytes von Multibytezeichen gesteuert. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsncmp** Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten. Die **_mbsncmp_l** -Funktion ist identisch, außer dass mithilfe der *Gebietsschema* Parameter stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md). Wenn das Gebietsschema ein Einzelbyte-Gebietsschema ist, ist das Verhalten dieser Funktionen mit **Strncmp**.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
+|**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
+|**_tccmp**|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|**_mbsncmp**|Führt eine Zuordnung zum Makro oder zur Inlinefunktion aus|
+|**Nicht zutreffend**|**Nicht zutreffend**|**_mbsncmp_l**|**Nicht zutreffend**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**strncmp**|\<string.h>|
+|**wcsncmp**|\<string.h> oder \<wchar.h>|
+|**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_strncmp.c
+#include <string.h>
+#include <stdio.h>
+
+char string1[] = "The quick brown dog jumps over the lazy fox";
+char string2[] = "The QUICK brown fox jumps over the lazy dog";
+
+int main( void )
+{
+   char tmp[20];
+   int result;
+   printf( "Compare strings:\n      %s\n      %s\n\n",
+           string1, string2 );
+   printf( "Function:   strncmp (first 10 characters only)\n" );
+   result = strncmp( string1, string2 , 10 );
+   if( result > 0 )
+      strcpy_s( tmp, sizeof(tmp), "greater than" );
+   else if( result < 0 )
+      strcpy_s( tmp, sizeof(tmp), "less than" );
+   else
+      strcpy_s( tmp, sizeof(tmp), "equal to" );
+   printf( "Result:      String 1 is %s string 2\n\n", tmp );
+   printf( "Function:   strnicmp _strnicmp (first 10 characters only)\n" );
+   result = _strnicmp( string1, string2, 10 );
+   if( result > 0 )
+      strcpy_s( tmp, sizeof(tmp), "greater than" );
+   else if( result < 0 )
+      strcpy_s( tmp, sizeof(tmp), "less than" );
+   else
+      strcpy_s( tmp, sizeof(tmp), "equal to" );
+   printf( "Result:      String 1 is %s string 2\n", tmp );
+}
+```
+
+```Output
+Compare strings:
+      The quick brown dog jumps over the lazy fox
+      The QUICK brown fox jumps over the lazy dog
+
+Function:   strncmp (first 10 characters only)
+Result:      String 1 is greater than string 2
+
+Function:   strnicmp _strnicmp (first 10 characters only)
+Result:      String 1 is equal to string 2
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

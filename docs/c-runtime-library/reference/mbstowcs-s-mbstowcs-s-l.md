@@ -1,12 +1,12 @@
 ---
 title: mbstowcs_s, _mbstowcs_s_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbstowcs_s_l
@@ -34,128 +34,133 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f038c1529c2f7fb7bbc28127ee5b528474e0f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1af00649bf6aca91877c55d5df1d27eb0579275e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
-Konvertiert eine Multibyte-Zeichensequenz in eine entsprechende Breitzeichensequenz. Versionen von [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-errno_t mbstowcs_s(  
-   size_t *pReturnValue,  
-   wchar_t *wcstr,  
-   size_t sizeInWords,  
-   const char *mbstr,  
-   size_t count   
-);  
-errno_t _mbstowcs_s_l(  
-   size_t *pReturnValue,  
-   wchar_t *wcstr,  
-   size_t sizeInWords,  
-   const char *mbstr,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-errno_t mbstowcs_s(  
-   size_t *pReturnValue,  
-   wchar_t (&wcstr)[size],  
-   const char *mbstr,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-errno_t _mbstowcs_s_l(  
-   size_t *pReturnValue,  
-   wchar_t (&wcstr)[size],  
-   const char *mbstr,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `pReturnValue`  
- Die Anzahl von konvertierten Zeichen.  
-  
- [out] `wcstr`  
- Pufferadresse zum Speichern der resultierenden konvertierten Breitzeichenfolge.  
-  
- [in] `sizeInWords`  
- Größe des Puffers `wcstr` in Worten.  
-  
- [in]`mbstr`  
- Adresse einer Multibyte-Zeichensequenz.  
-  
- [in] `count`  
- Die maximale Anzahl von Breitzeichen, die im `wcstr`-Puffer gespeichert werden können, wobei das abschließende NULL-Zeichen nicht eingeschlossen ist, oder [_TRUNCATE](../../c-runtime-library/truncate.md).  
-  
- [in] `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Null, wenn erfolgreich, Fehlercode bei Fehler.  
-  
-|Fehlerbedingung|Rückgabewert und `errno`|  
-|---------------------|------------------------------|  
-|`wcstr` ist gleich `NULL` und `sizeInWords` > 0|`EINVAL`|  
-|`mbstr` ist gleich `NULL`.|`EINVAL`|  
-|Der Zielpuffer ist für die konvertierte Zeichenfolge zu klein (es sei denn, `count` ist gleich `_TRUNCATE`; siehe Abschnitt „Hinweise“)|`ERANGE`|  
-|`wcstr` ist ungleich `NULL` und `sizeInWords` == 0|`EINVAL`|  
-  
- Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die Ausführung fortgesetzt werden kann, gibt die Funktion einen Fehlercode zurück und legt `errno` wie in der Tabelle angegeben fest.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `mbstowcs_s`-Funktion konvertiert eine Zeichenfolge mit Multibytezeichen, auf die von `mbstr` verwiesen wird, in im Puffer gespeicherte Breitzeichen, auf die von `wcstr` verwiesen wird. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:  
-  
--   Ein Multibyte-Nullzeichen wird erkannt.  
-  
--   Ein ungültiges Multibytezeichen wird erkannt.  
-  
--   Die Anzahl der Breitzeichen, die im `wcstr`-Puffer gespeichert sind, ist gleich `count`.  
-  
- Die Zielzeichenfolge endet immer mit NULL, selbst bei einem Fehler.  
-  
- Wenn `count` der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md) ist, konvertiert `mbstowcs_s` einen so großen Teil der Zeichenfolge wie in den Zielpuffer passt, während weiterhin Platz für einen NULL-Terminator bleibt.  
-  
- Wenn `mbstowcs_s` die Quellzeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in Breitzeichen und der NULL-Terminator in `*pReturnValue` geschrieben, vorausgesetzt, `pReturnValue` ist ungleich `NULL`. Dieser Fehler tritt auch dann auf, wenn das `wcstr`-Argument `NULL` ist und es eine Methode zur Bestimmung der erforderlichen Puffergröße bietet. Bitte beachten Sie, dass `count` ignoriert wird, wenn `wcstr` gleich `NULL` ist und `sizeInWords` 0 sein muss.  
-  
- Wenn `mbstowcs_s` ein ungültiges Multibytezeichen erkennt, schreibt es 0 in `*pReturnValue`, legt den Zielpuffer auf eine leere Zeichenfolge fest, legt `errno` auf `EILSEQ` fest und gibt dann `EILSEQ` zurück.  
-  
- Wenn die Sequenzen, auf die von `mbstr` und `wcstr` verwiesen wird, überlappen, ist das Verhalten von `mbstowcs_s` nicht definiert.  
-  
+
+Konvertiert eine Multibyte-Zeichensequenz in eine entsprechende Breitzeichensequenz. Versionen von [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+
+## <a name="syntax"></a>Syntax
+
+```C
+errno_t mbstowcs_s(
+   size_t *pReturnValue,
+   wchar_t *wcstr,
+   size_t sizeInWords,
+   const char *mbstr,
+   size_t count
+);
+errno_t _mbstowcs_s_l(
+   size_t *pReturnValue,
+   wchar_t *wcstr,
+   size_t sizeInWords,
+   const char *mbstr,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+errno_t mbstowcs_s(
+   size_t *pReturnValue,
+   wchar_t (&wcstr)[size],
+   const char *mbstr,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _mbstowcs_s_l(
+   size_t *pReturnValue,
+   wchar_t (&wcstr)[size],
+   const char *mbstr,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parameter
+
+*pReturnValue*<br/>
+Die Anzahl von konvertierten Zeichen.
+
+*wcstr*<br/>
+Pufferadresse zum Speichern der resultierenden konvertierten Breitzeichenfolge.
+
+*sizeInWords*<br/>
+Die Größe der *Wcstr* Puffer in Wörter.
+
+*mbstr*<br/>
+Adresse einer Multibyte-Zeichensequenz.
+
+*count*<br/>
+Die maximale Anzahl der Breitzeichen, die zum Speichern in der *Wcstr* Puffer, ohne das abschließende Nullzeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Null, wenn erfolgreich, Fehlercode bei Fehler.
+
+|Fehlerbedingung|Rückgabewert und **Errno**|
+|---------------------|------------------------------|
+|*Wcstr* ist **NULL** und *SizeInWords* > 0|**EINVAL**|
+|*Mbstr* ist **NULL**|**EINVAL**|
+|Der Zielpuffer ist zu klein, um die konvertierte Zeichenfolge enthalten (es sei denn, *Anzahl* ist **_TRUNCATE**; finden Sie unter "Hinweise" weiter unten)|**ERANGE**|
+|*Wcstr* nicht **NULL** und *SizeInWords* == 0|**EINVAL**|
+
+Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **Errno** wie in der Tabelle ersichtlich.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Mbstowcs_s** -Funktion konvertiert eine Zeichenfolge mit Multibytezeichen verweist *Mbstr* im verweist Puffer gespeicherte Breitzeichen *Wcstr*. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
+
+- Ein Multibyte-Nullzeichen wird erkannt.
+
+- Ein ungültiges Multibytezeichen wird erkannt.
+
+- Die Anzahl der gespeicherten Breitzeichen der *Wcstr* Puffer ist gleich *Anzahl*.
+
+Die Zielzeichenfolge endet immer mit NULL, selbst bei einem Fehler.
+
+Wenn *Anzahl* der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md), klicken Sie dann **Mbstowcs_s** konvertiert größtmöglicher Teil der Zeichenfolge wie in den Zielpuffer passt, während weiterhin Platz für ein NULL-Wert bleibt Abschlusszeichen.
+
+Wenn **Mbstowcs_s** die Quellzeichenfolge erfolgreich konvertiert legt er die Größe in Breitzeichen der konvertierten Zeichenfolge, einschließlich der null-Terminator in  *&#42;pReturnValue* (bereitgestellt von *pReturnValue* nicht **NULL**). Dies tritt auf, auch wenn die *Wcstr* Argument ist **NULL** und bietet eine Möglichkeit, die erforderliche Puffergröße bestimmen. Beachten Sie, dass bei *Wcstr* ist **NULL**, *Anzahl* wird ignoriert, und *SizeInWords* muss 0 sein.
+
+Wenn **Mbstowcs_s** ein ungültiges Multibytezeichen erkennt-Zielpuffer 0 in  *&#42;pReturnValue*, Zielpuffers auf eine leere Zeichenfolge festgelegt wird, wird dadurch **Errno** auf  **EILSEQ**, und gibt **EILSEQ**.
+
+Wenn die Sequenzen auf verweist *Mbstr* und *Wcstr* überlappen, ist das Verhalten des **Mbstowcs_s** ist nicht definiert.
+
 > [!IMPORTANT]
->  Stellen Sie sicher, dass `wcstr` und `mbstr` nicht überlappen und dass `count` die Anzahl zu konvertierenderMultibytezeichen korrekt darstellt.  
-  
- `mbstowcs_s` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_mbstowcs_s_l` ist identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`mbstowcs_s`|\<stdlib.h>|  
-|`_mbstowcs_s_l`|\<stdlib.h>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+> Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl zu konvertierendermultibytezeichen korrekt darstellt.
+
+**Mbstowcs_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_mbstowcs_s_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**mbstowcs_s**|\<stdlib.h>|
+|**_mbstowcs_s_l**|\<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _fgetchar, _fgetwchar | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fgetchar
@@ -41,92 +41,96 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b6f6933d8483e3fee792829b0efde8e35ad91a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
-Liest ein Zeichen aus `stdin`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _fgetchar( void );  
-wint_t _fgetwchar( void );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- `_fgetchar` gibt das gelesene Zeichen als `int` zurück oder gibt `EOF` zurück, um einen Fehler oder ein Dateiende anzugeben. **_**`fgetwchar` gibt das dem gelesenen Zeichen entsprechende Breitzeichen [wint_t](../../c-runtime-library/standard-types.md) oder `WEOF` zurück, um einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen `feof` oder `ferror`, um zwischen einem Fehler und einer Dateiendebedingung zu unterscheiden.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktionen lesen ein einzelnes Zeichen aus `stdin`. Die Funktion erhöht dann den zugeordneten Dateizeiger (sofern definiert), um auf das nächste Zeichen zu zeigen. Wenn der Stream am Dateiende ist, wird der Dateiende-Indikator für den Stream festgelegt.  
-  
- `_fgetchar` entspricht `fgetc( stdin )`. Entspricht ebenfalls `getchar`, wird jedoch anstelle einer Funktion und eines Makros nur als Funktion implementiert. `_fgetwchar` ist die Breitzeichenversion von `_fgetchar`.  
-  
- Diese Funktionen sind nicht dem ANSI-Standard kompatibel.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fgettchar`|`_fgetchar`|`_fgetchar`|`_fgetwchar`|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Funktion|Erforderlicher Header|  
-|--------------|---------------------|  
-|`_fgetchar`|\<stdio.h>|  
-|`_fgetwchar`|\<stdio.h> oder \<wchar.h>|  
-  
- Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind –`stdin`, `stdout`, und `stderr`– umgeleitet werden müssen, damit C-Laufzeitfunktionen in verwendet werden können [! INCLUDEUWP-apps. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_fgetchar.c  
-// This program uses _fgetchar to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-//  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Read in first 80 characters and place them in "buffer":  
-   ch = _fgetchar();  
-   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = _fgetchar();  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-      Line one.  
-Line two.Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [E/A-Stream](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Liest ein Zeichen aus **Stdin**.
+
+## <a name="syntax"></a>Syntax
+
+```C
+int _fgetchar( void );
+wint_t _fgetwchar( void );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**_fgetchar** gibt das gelesene Zeichen als ein **Int** oder zurückgeben **EOF** um einen Fehler oder ein Dateiende anzugeben. **_ *** Fgetwchar** zurückgegeben wird, als ein [Wint_t](../../c-runtime-library/standard-types.md), der Breitzeichen, das das gelesene Zeichen entspricht, oder gibt **WEOF** um einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen **Feof** oder **Ferror** ein Fehler auftritt und eine End-of-File-Bedingung unterscheiden.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktionen lesen ein einzelnes Zeichen aus **Stdin**. Die Funktion erhöht dann den zugeordneten Dateizeiger (sofern definiert), um auf das nächste Zeichen zu zeigen. Wenn der Stream am Dateiende ist, wird der Dateiende-Indikator für den Stream festgelegt.
+
+**_fgetchar** entspricht `fgetc( stdin )`. Dies entspricht auch **Getchar**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert. **_fgetwchar** ist die Breitzeichen-Version des **_fgetchar**.
+
+Diese Funktionen sind nicht dem ANSI-Standard kompatibel.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fgettchar**|**_fgetchar**|**_fgetchar**|**_fgetwchar**|
+
+## <a name="requirements"></a>Anforderungen
+
+|Funktion|Erforderlicher Header|
+|--------------|---------------------|
+|**_fgetchar**|\<stdio.h>|
+|**_fgetwchar**|\<stdio.h> oder \<wchar.h>|
+
+Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind –**Stdin**, **"stdout"**, und **"stderr"**– umgeleitet werden müssen, damit C-Laufzeitfunktionen in uwp-apps verwendet werden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_fgetchar.c
+// This program uses _fgetchar to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char buffer[81];
+   int  i, ch;
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = _fgetchar();
+   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = _fgetchar();
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+}
+```
+
+```Output
+
+      Line one.
+Line two.Line one.
+Line two.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Code zur Verknüpfungszeit generieren)
 
@@ -51,7 +51,7 @@ Gibt an, dass der Linker nur ganzen Programms Optimierungs- oder Link-Time-codeg
 Gibt an, ob der Linker eine Statusanzeige, die anzeigt ausgibt, welcher Prozentsatz des Linkvorgangs abgeschlossen ist. Standardmäßig wird diese Statusinformationen nicht angezeigt.
 
 **DEAKTIVIERT** (optional)<br/>
-Deaktiviert die Link-zeitcodegenerierung. Dieses Verhalten ist identisch mit Wenn/LTCG in der Befehlszeile nicht angegeben wird.
+Deaktiviert die Link-zeitcodegenerierung. Dieses Verhalten entspricht dem Verhalten wie beim **/LTCG** nicht in der Befehlszeile angegeben.
 
 **PGINSTRUMENT** (optional)<br/>
 Diese Option ist in Visual Studio 2015 ab veraltet. Verwenden Sie stattdessen **/LTCG** und [/genprofile oder/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) um einen instrumentierten Build für die profilgesteuerte Optimierung zu generieren. Die gesammelten Daten werden von den instrumentierten Ausführungen dient zum Erstellen eines optimierten Images. Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](profile-guided-optimizations.md). Die Kurzform dieser Option lautet **/LTCG: PGI**.
@@ -156,7 +156,7 @@ Mit [/GL](../../build/reference/gl-whole-program-optimization.md) und [/clr](../
 
 Sie können auch anwenden **/LTCG** auf bestimmte Builds durch Auswahl **erstellen** > **Profilgesteuerte Optimierung** in der Menüleiste oder Auswählen eines Profils Profilgesteuerte Optimierungsoptionen im Kontextmenü für das Projekt.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
 - Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

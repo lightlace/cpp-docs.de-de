@@ -1,12 +1,12 @@
 ---
 title: regex_error-Klasse | Microsoft-Dokumente
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_error
@@ -16,147 +16,155 @@ dev_langs:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc2861da5e133754459d6721c3ce528eaab5897
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: edcba7e378fc6b7f6bf9028778aa2911fa140dd6
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexerror-class"></a>regex_error-Klasse
-Meldet ein ungültiges basic_regex-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class regex_error  
- : public std::runtime_error {  
-public:  
+
+Meldet ein ungültiges basic_regex-Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+class regex_error
+ : public std::runtime_error {
+public:
     explicit regex_error(regex_constants::error_code error);
 
     regex_constants::error_code code() const;
 
- 
- };  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Klasse beschreibt ein Ausnahmeobjekt, das ausgelöst wurde, um einen Fehler bei der Erstellung oder Verwendung eines `basic_regex` -Objekts zu melden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<regex >  
-  
- **Namespace:** std  
-  
-##  <a name="code"></a> regex_error::code  
- Gibt den Fehlercode zurück.  
-  
-```  
+
+};
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Klasse beschreibt ein Ausnahmeobjekt, das ausgelöst wurde, um einen Fehler bei der Erstellung oder Verwendung eines `basic_regex` -Objekts zu melden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<regex >
+
+**Namespace:** std
+
+## <a name="code"></a> regex_error::code
+
+Gibt den Fehlercode zurück.
+
+```cpp
 regex_constants::error_code code() const;
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt den Wert zurück, der an den Konstruktor des Objekts übergeben wurde.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// std__regex__regex_error_code.cpp   
-// compile with: /EHsc   
-#include <regex>   
-#include <iostream>   
-  
-int main()   
-    {   
-    std::regex_error paren(std::regex_constants::error_paren);   
-  
-    try   
-        {   
-        std::regex rx("(a");   
-        }   
-    catch (const std::regex_error& rerr)   
-        {   
-        std::cout << "regex error: "   
-            << (rerr.code() == paren.code()   
-                 "unbalanced parentheses" : "")   
-            << std::endl;   
-        }   
-    catch (...)   
-        {   
-        std::cout << "unknown exception" << std::endl;   
-        }   
-  
-    return (0);   
-    }  
-  
-```  
-  
-```Output  
-regex error: unbalanced parentheses  
-```  
-  
-##  <a name="regex_error"></a> regex_error::regex_error  
- Erstellt das Objekt.  
-  
-```  
+```
+
+### <a name="remarks"></a>Hinweise
+
+Die Memberfunktion gibt den Wert zurück, der an den Konstruktor des Objekts übergeben wurde.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// std__regex__regex_error_code.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+int main()
+    {
+    std::regex_error paren(std::regex_constants::error_paren);
+
+    try
+        {
+        std::regex rx("(a");
+        }
+    catch (const std::regex_error& rerr)
+        {
+        std::cout << "regex error: "
+            << (rerr.code() == paren.code()
+                 "unbalanced parentheses" : "")
+            << std::endl;
+        }
+    catch (...)
+        {
+        std::cout << "unknown exception" << std::endl;
+        }
+
+    return (0);
+    }
+
+```
+
+```Output
+regex error: unbalanced parentheses
+```
+
+## <a name="regex_error"></a> regex_error::regex_error
+
+Erstellt das Objekt.
+
+```cpp
 regex_error(regex_constants::error_code error);
-```  
-  
-### <a name="parameters"></a>Parameter  
- `error`  
- Der Fehlercode.  
-  
-### <a name="remarks"></a>Hinweise  
- Der Konstruktor erstellt ein Objekt, das den Wert `error`enthält.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// std__regex__regex_error_construct.cpp   
-// compile with: /EHsc   
-#include <regex>   
-#include <iostream>   
-  
-int main()   
-    {   
-    std::regex_error paren(std::regex_constants::error_paren);   
-  
-    try   
-        {   
-        std::regex rx("(a");   
-        }   
-    catch (const std::regex_error& rerr)   
-        {   
-        std::cout << "regex error: "   
-            << (rerr.code() == paren.code()   
-                 "unbalanced parentheses" : "")   
-            << std::endl;   
-        }   
-    catch (...)   
-        {   
-        std::cout << "unknown exception" << std::endl;   
-        }   
-  
-    return (0);   
-    }  
-  
-```  
-  
-```Output  
-regex error: unbalanced parentheses  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
-[\<regex>](../standard-library/regex.md)  
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)  
-[\<regex>-Funktionen](../standard-library/regex-functions.md)  
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)  
-[\<regex>-Operatoren](../standard-library/regex-operators.md)  
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)  
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)  
-[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)  
+```
+
+### <a name="parameters"></a>Parameter
+
+`error` Der Fehlercode.
+
+### <a name="remarks"></a>Hinweise
+
+Der Konstruktor erstellt ein Objekt, das den Wert `error`enthält.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// std__regex__regex_error_construct.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+int main()
+    {
+    std::regex_error paren(std::regex_constants::error_paren);
+
+    try
+        {
+        std::regex rx("(a");
+        }
+    catch (const std::regex_error& rerr)
+        {
+        std::cout << "regex error: "
+            << (rerr.code() == paren.code()
+                 "unbalanced parentheses" : "")
+            << std::endl;
+        }
+    catch (...)
+        {
+        std::cout << "unknown exception" << std::endl;
+        }
+
+    return (0);
+    }
+
+```
+
+```Output
+regex error: unbalanced parentheses
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[\<regex>](../standard-library/regex.md)<br/>
+[regex_constants-Klasse](../standard-library/regex-constants-class.md)<br/>
+[\<regex>-Funktionen](../standard-library/regex-functions.md)<br/>
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)<br/>
+[\<regex>-Operatoren](../standard-library/regex-operators.md)<br/>
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)<br/>
+[regex_traits-Klasse](../standard-library/regex-traits-class.md)<br/>
+[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)<br/>

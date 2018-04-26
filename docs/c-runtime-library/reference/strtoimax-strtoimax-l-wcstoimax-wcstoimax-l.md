@@ -1,12 +1,12 @@
 ---
 title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcstoimax
@@ -42,106 +42,111 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4125ebf922ed3525d5efd6a92b1273ca18d0fd7d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 60ab59992dc36502fff3d25cf6b0c7e2551e2564
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
-Konvertiert eine Zeichenfolge in einen ganzzahligen Wert des größten unterstützten ganzzahligen Typs mit Vorzeichen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-intmax_t strtoimax(  
-   const char *nptr,  
-   char **endptr,  
-   int base   
-);  
-intmax_t wcstoimax(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   int base   
-);  
-intmax_t _strtoimax_l(  
-   const char *nptr,  
-   char **endptr,  
-   int base,  
-   _locale_t locale  
-);  
-intmax_t _wcstoimax_l(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   int base,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `nptr`  
- Zu konvertierende mit NULL endende Zeichenfolge.  
-  
- `endptr`  
- Zeiger auf das Zeichen, das die Überprüfung stoppt.  
-  
- `base`  
- Zu verwendende Zahlenbasis.  
-  
- `locale`  
- Das zu verwendende Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `strtoimax` gibt den Wert zurück, der in der Zeichenfolge `nptr` dargestellt wird, es sei denn, die Darstellung erzeugt einen Überlauf. In diesem Fall wird `INTMAX_MAX` oder `INTMAX_MIN` zurückgegeben und `errno` auf `ERANGE` festgelegt. Die Funktion gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. `wcstoimax` gibt Werte analog zu `strtoimax` zurück.  
-  
- `INTMAX_MAX` und `INTMAX_MIN` werden in stdint.h definiert.  
-  
- Wenn `nptr``NULL` ist, oder `base` nicht NULL und entweder weniger als 2 oder größer als 36 ist, wird `errno` auf `EINVAL` festgelegt.  
-  
- Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Die `strtoimax`-Funktion konvertiert `nptr` in `intmax_t`. Die Breitzeichenversion von `strtoimax` ist `wcstoimax`. Das dazugehörige `nptr`-Argument ist eine Breitzeichenfolge. Ansonsten verhalten sich diese Funktionen identisch. Beide Funktionen beenden das Lesen der `nptr`-Zeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Dies ist möglicherweise das abschließende NULL-Zeichen, kann aber auch das erste numerische Zeichen sein, das größer oder gleich `base` ist.  
-  
- Die `LC_NUMERIC`-Kategorieeinstellung des Gebietsschemas bestimmt die Erkennung des Basiszeichens in `nptr`. Weitere Informationen finden Sie unter [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema. `_strtoimax_l` und `_wcstoimax_l` sind mit den entsprechenden Funktionen ohne das `_l`-Suffix nahezu identisch haben, verwenden jedoch stattdessen das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
- Wenn `endptr` nicht `NULL` ist, wird ein Zeiger auf das Zeichen, das die Überprüfung beendet hat, an dem Ort gespeichert, der auf `endptr` zeigt. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben), wird der Wert von `nptr` an dem Speicherort gespeichert, auf den von `endptr` gezeigt wird.  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcstoimax`|`strtoimax`|`strtoimax`|`wcstoimax`|  
-|`_tcstoimax_l`|`strtoimax_l`|`_strtoimax_l`|`_wcstoimax_l`|  
-  
- `strtoimax` erwartet, dass `nptr` auf eine Zeichenfolge der folgenden Form zeigt:  
-  
- [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
-  
- `whitespace` besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; `digits` sind mindestens eine Dezimalstelle; `letters` sind mindestens ein Buchstabe von "a" bis "z" (oder "A" bis "Z "). Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn `base` zwischen 2 und 36 liegt, wird dieser Wert als Basis der Zahl verwendet. Wenn `base` 0 ist, werden die ersten Zeichen der Zeichenfolge, auf die durch `nptr` gezeigt wird, zur Bestimmung der Basis verwendet. Wenn das erste Zeichen "0 " und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als oktale ganze Zahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Die Buchstaben "a" bis "z" (bzw. "A" bis "Z") werden den Werten 10 bis 35 zugewiesen. Nur Buchstaben, deren zugewiesene Werte kleiner als `base` sind, sind zulässig. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Wenn beispielsweise `base` 0 und das erste überprüfte Zeichen "0" ist, wird eine ganze Oktalzahl angenommen und ein "8"- oder "9"-Zeichen beendet die Überprüfung.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l](../../c-runtime-library/reference/strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+
+Konvertiert eine Zeichenfolge in einen ganzzahligen Wert des größten unterstützten ganzzahligen Typs mit Vorzeichen.
+
+## <a name="syntax"></a>Syntax
+
+```C
+intmax_t strtoimax(
+   const char *strSource,
+   char **endptr,
+   int base
+);
+intmax_t wcstoimax(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   int base
+);
+intmax_t _strtoimax_l(
+   const char *strSource,
+   char **endptr,
+   int base,
+   _locale_t locale
+);
+intmax_t _wcstoimax_l(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   int base,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*strSource*<br/>
+Zu konvertierende mit NULL endende Zeichenfolge.
+
+*endptr*<br/>
+Zeiger auf das Zeichen, das die Überprüfung stoppt.
+
+*base*<br/>
+Zu verwendende Zahlenbasis.
+
+*locale*<br/>
+Das zu verwendende Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+**Strtoimax** gibt den Wert, der dargestellt wird, in der Zeichenfolge *StrSource*, außer wenn die Darstellung würde einen Überlauf verursachen – in diesem Fall gibt es **INTMAX_MAX** oder **INTMAX_MIN**, und **Errno** festgelegt ist, um **ERANGE**. Die Funktion gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. **Wcstoimax** gibt Werte analog zu **Strtoimax**.
+
+**INTMAX_MAX** und **INTMAX_MIN** werden in stdint.h definiert.
+
+Wenn *StrSource* ist **NULL** oder *Basis* ungleich NULL ist und entweder weniger als 2 oder größer als 36 **Errno** festgelegt ist, um **EINVAL** .
+
+Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Die **Strtoimax** -Funktion konvertiert *StrSource* auf eine **Intmax_t**. Der Breitzeichen Version von **Strtoimax** ist **Wcstoimax**; die *StrSource* -Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch. Beide Funktionen beenden das Lesen einer Zeichenfolge *StrSource* am ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das abschließende Nullzeichen oder das erste numerische Zeichen, die größer als oder gleich ist möglicherweise *Basis*.
+
+Des Gebietsschemas **LC_NUMERIC** -kategorieneinstellung bestimmt erkennen des Basiszeichens in *StrSource*; Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtoimax_l** und **_wcstoimax_l** sind identisch mit den entsprechenden Funktionen ohne das **_l** suffix verwenden jedoch stattdessen das Gebietsschema, die übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf den durch *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *StrSource* wird an dem Speicherort gespeichert, auf den durch *Endptr*.
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
+|**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
+
+**Strtoimax** erwartet *StrSource* , zeigen Sie auf eine Zeichenfolge der folgenden Form:
+
+> [*Leerzeichen*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*Ziffern* &#124; *Buchstaben*]  
+
+Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Ziffern* sind mindestens eine Dezimalstelle; *Buchstaben* sind eine oder mehrere der Buchstaben "a" bis "Z" (oder "A" bis "Z"). Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn *Basis* ist zwischen 2 und 36 liegt, wird dieser Wert als Basis der Zahl verwendet wird. Wenn *Basis* ist 0, die ersten Zeichen der Zeichenfolge verweist *StrSource* werden zur Bestimmung der Basis verwendet. Wenn das erste Zeichen "0 " und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als oktale ganze Zahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Z. B. wenn *Basis* ist 0 und das erste überprüfte Zeichen "0", eine ganze Oktalzahl angenommen und ein "8" oder "9"-Zeichen beendet die Überprüfung.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**Strtoimax**, **_strtoimax_l**, **Wcstoimax**, **_wcstoimax_l**|\<inttypes.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[localeconv](localeconv.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
+[strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
+[strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

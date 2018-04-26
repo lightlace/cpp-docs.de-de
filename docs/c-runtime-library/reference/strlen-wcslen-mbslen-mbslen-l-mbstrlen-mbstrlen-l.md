@@ -1,12 +1,12 @@
 ---
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbslen
@@ -57,159 +57,164 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: 
+caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40f3689c11eea367a2c8bf268713c0fad6e434c8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2830c3bfc343d3f4912d3f2d67cdba4d45f3ee57
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
-Ruft die Länge einer Zeichenfolge mithilfe des aktuellen Gebietsschemas oder einem angegebenen Gebietsschema ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](../../c-runtime-library/reference/strnlen-strnlen-s.md)  
-  
+
+Ruft die Länge einer Zeichenfolge mithilfe des aktuellen Gebietsschemas oder einem angegebenen Gebietsschema ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
+
 > [!IMPORTANT]
->  `_mbslen`, `_mbslen_l`, `_mbstrlen` und `_mbstrlen_l` können nicht in Anwendungen eingesetzt werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-size_t strlen(  
-   const char *str  
-);  
-size_t wcslen(  
-   const wchar_t *str   
-);  
-size_t _mbslen(  
-   const unsigned char *str   
-);  
-size_t _mbslen_l(  
-   const unsigned char *str,  
-   _locale_t locale  
-);  
-size_t _mbstrlen(  
-   const char *str  
-);  
-size_t _mbstrlen_l(  
-   const char *str,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `str`  
- Mit NULL endende Zeichenfolge.  
-  
- `locale`  
- Zu verwendendes Gebietsschema.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt die Anzahl der Zeichen in `str` zurück, ohne das abschließende `NULL`-Zeichen. Es ist kein Rückgabewert zur Fehleranzeige reserviert, mit Ausnahme von `_mbstrlen` und `_mbstrlen_l`, die `((size_t)(-1))` zurückgeben, wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.  
-  
-## <a name="remarks"></a>Hinweise  
- `strlen` interpretiert die Zeichenfolge als Einzelbytezeichenfolge, sodass der Rückgabewert immer der Anzahl von Bytes entspricht, selbst wenn die Zeichenfolge Multibytezeichen enthält. `wcslen` ist eine Breitzeichenversion von `strlen`. Das Argument von `wcslen` ist eine Zeichenfolge mit Breitzeichen, und die Anzahl von Zeichen wird in (2-Byte-)Breitzeichen angegeben. `wcslen` und `strlen` verhalten sich andernfalls identisch.  
-  
- **Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
-  
-|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcslen`|`strlen`|`strlen`|`wcslen`|  
-|`_tcsclen`|`strlen`|`_mbslen`|`wcslen`|  
-|`_tcsclen_l`|`strlen`|`_mbslen_l`|`wcslen`|  
-  
- `_mbslen` und `_mbslen_l` geben die Anzahl von Multibytezeichen in einer Multibyte-Zeichenfolge zurück, überprüfen jedoch nicht die Gültigkeit der Multibytezeichen. `_mbstrlen` und `_mbstrlen_l` überprüfen die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichenfolgen. Wenn die an `_mbstrlen` oder `_mbstrlen_l` übergebene Zeichenfolge ein ungültiges Multibytezeichen für die Codepage enthält, gibt sie "– 1" zurück und legt `errno` auf `EILSEQ` fest.  
-  
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`strlen`|\<string.h>|  
-|`wcslen`|\<string.h> oder \<wchar.h>|  
-|`_mbslen`, `_mbslen_l`|\<mbstring.h>|  
-|`_mbstrlen`, `_mbstrlen_l`|\<stdlib.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_strlen.c  
-// Determine the length of a string. For the multi-byte character  
-// example to work correctly, the Japanese language support for  
-// non-Unicode programs must be enabled by the operating system.  
-  
-#include <string.h>  
-#include <locale.h>  
-  
-int main()  
-{  
-   char* str1 = "Count.";  
-   wchar_t* wstr1 = L"Count.";  
-   char * mbstr1;  
-   char * locale_string;  
-  
-   // strlen gives the length of single-byte character string  
-   printf("Length of '%s' : %d\n", str1, strlen(str1) );  
-  
-   // wstrlen gives the length of a wide character string  
-   wprintf(L"Length of '%s' : %d\n", wstr1, wcslen(wstr1) );  
-  
-   // A multibyte string: [A] [B] [C] [katakana A] [D] [\0]  
-   // in Code Page 932. For this example to work correctly,  
-   // the Japanese language support must be enabled by the  
-   // operating system.  
-   mbstr1 = "ABC" "\x83\x40" "D";  
-  
-   locale_string = setlocale(LC_CTYPE, "Japanese_Japan");  
-  
-   if (locale_string == NULL)  
-   {  
-      printf("Japanese locale not enabled. Exiting.\n");  
-      exit(1);  
-   }  
-   else  
-   {  
-      printf("Locale set to %s\n", locale_string);  
-   }  
-  
-   // _mbslen will recognize the Japanese multibyte character if the  
-   // current locale used by the operating system is Japanese  
-   printf("Length of '%s' : %d\n", mbstr1, _mbslen(mbstr1) );  
-  
-   // _mbstrlen will recognize the Japanese multibyte character  
-   // since the CRT locale is set to Japanese even if the OS locale  
-   // isnot.   
-   printf("Length of '%s' : %d\n", mbstr1, _mbstrlen(mbstr1) );  
-   printf("Bytes in '%s' : %d\n", mbstr1, strlen(mbstr1) );     
-  
-}  
-```  
-  
-```Output  
-Length of 'Count.' : 6  
-Length of 'Count.' : 6  
-Length of 'ABCァD' : 5  
-Length of 'ABCァD' : 5  
-Bytes in 'ABCァD' : 6  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Gebietsschema](../../c-runtime-library/locale.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**, und **_mbstrlen_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+size_t strlen(
+   const char *str
+);
+size_t wcslen(
+   const wchar_t *str
+);
+size_t _mbslen(
+   const unsigned char *str
+);
+size_t _mbslen_l(
+   const unsigned char *str,
+   _locale_t locale
+);
+size_t _mbstrlen(
+   const char *str
+);
+size_t _mbstrlen_l(
+   const char *str,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*str*<br/>
+Mit NULL endende Zeichenfolge.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
+
+## <a name="return-value"></a>Rückgabewert
+
+Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, ohne das abschließende **NULL**. Kein Rückgabewert ist zur Anzeige ein Fehlers, mit Ausnahme von reserviert **_mbstrlen** und **_mbstrlen_l**, welche Return `((size_t)(-1))` , wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
+
+## <a name="remarks"></a>Hinweise
+
+**Strlen** interpretiert die Zeichenfolge als Einzelbyte-Zeichenfolge, also der Rückgabewert immer gleich der Anzahl von Bytes, auch wenn die Zeichenfolge Multibytezeichen enthält. **Wcslen** ist eine Breitzeichen-Version von **Strlen**; das Argument der **Wcslen** ist eine Breitzeichen-Zeichenfolge und die Anzahl von Zeichen in Breitzeichen (zwei Byte) ist. **Wcslen** und **Strlen** Verhalten sich andernfalls identisch.
+
+**Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
+
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcslen**|**strlen**|**strlen**|**wcslen**|
+|**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
+|**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
+
+**_mbslen** und **_mbslen_l** Geben Sie die Anzahl von Multibytezeichen in einer Multibyte Zeichenfolge zurück, jedoch nicht für die Gültigkeit von Multibytezeichen testen. **_mbstrlen** und **_mbstrlen_l** test für die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichenfolgen. Wenn die Zeichenfolge übergeben **_mbstrlen** oder **_mbstrlen_l** enthält ein ungültiges Multibytezeichen für die Codepage, die Funktion gibt-1 zurück und stellt **Errno** auf **EILSEQ**.
+
+Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**strlen**|\<string.h>|
+|**wcslen**|\<string.h> oder \<wchar.h>|
+|**_mbslen**, **_mbslen_l**|\<mbstring.h>|
+|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_strlen.c
+// Determine the length of a string. For the multi-byte character
+// example to work correctly, the Japanese language support for
+// non-Unicode programs must be enabled by the operating system.
+
+#include <string.h>
+#include <locale.h>
+
+int main()
+{
+   char* str1 = "Count.";
+   wchar_t* wstr1 = L"Count.";
+   char * mbstr1;
+   char * locale_string;
+
+   // strlen gives the length of single-byte character string
+   printf("Length of '%s' : %d\n", str1, strlen(str1) );
+
+   // wstrlen gives the length of a wide character string
+   wprintf(L"Length of '%s' : %d\n", wstr1, wcslen(wstr1) );
+
+   // A multibyte string: [A] [B] [C] [katakana A] [D] [\0]
+   // in Code Page 932. For this example to work correctly,
+   // the Japanese language support must be enabled by the
+   // operating system.
+   mbstr1 = "ABC" "\x83\x40" "D";
+
+   locale_string = setlocale(LC_CTYPE, "Japanese_Japan");
+
+   if (locale_string == NULL)
+   {
+      printf("Japanese locale not enabled. Exiting.\n");
+      exit(1);
+   }
+   else
+   {
+      printf("Locale set to %s\n", locale_string);
+   }
+
+   // _mbslen will recognize the Japanese multibyte character if the
+   // current locale used by the operating system is Japanese
+   printf("Length of '%s' : %d\n", mbstr1, _mbslen(mbstr1) );
+
+   // _mbstrlen will recognize the Japanese multibyte character
+   // since the CRT locale is set to Japanese even if the OS locale
+   // isnot.
+   printf("Length of '%s' : %d\n", mbstr1, _mbstrlen(mbstr1) );
+   printf("Bytes in '%s' : %d\n", mbstr1, strlen(mbstr1) );
+
+}
+```
+
+```Output
+Length of 'Count.' : 6
+Length of 'Count.' : 6
+Length of 'ABCァD' : 5
+Length of 'ABCァD' : 5
+Bytes in 'ABCァD' : 6
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: pointer_traits-Struktur | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
@@ -23,31 +23,34 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e419d8789e9dd6f3ed98e36a05a96d2e5f985082
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e6e6f6ca6c62e0dcb1d44d5f86a19e8a339a6b1
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pointertraits-struct"></a>pointer_traits-Struktur
-Stellt Informationen bereit, die für ein Objekt der Vorlagenklasse `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Stellt Informationen bereit, die für ein Objekt der Vorlagenklasse `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 template <class Ptr>
 struct pointer_traits;
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Ptr kann ein unformatierter Zeiger vom Typ `Ty *` oder eine Klasse mit den folgenden Eigenschaften sein.  
-```  
+```
+
+## <a name="remarks"></a>Hinweise
+
+Ptr kann ein unformatierter Zeiger vom Typ `Ty *` oder eine Klasse mit den folgenden Eigenschaften sein.
+
+```cpp
 struct Ptr
    { // describes a pointer type usable by allocators
    typedef Ptr pointer;
@@ -57,41 +60,44 @@ struct Ptr
    using rebind = typename Ptr<Other, Rest...>; // optional
    static pointer pointer_to(element_type& obj);
    // optional
-   };  
+   };
 ```
-### <a name="typedefs"></a>Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`typedef T2 difference_type`|Der Typ `T2` ist `Ptr::difference_type`, wenn dieser Typ vorhanden ist, andernfalls ist er `ptrdiff_t`. Wenn `Ptr` ein unformatierter Zeiger ist, ist der Typ `ptrdiff_t`.|  
-|`typedef T1 element_type`|Der Typ `T1` ist `Ptr::element_type`, wenn dieser Typ vorhanden ist, andernfalls ist er `Ty`. Wenn `Ptr` ein unformatierter Zeiger ist, ist der Typ `Ty`.|  
-|`typedef Ptr pointer`|Der Typ lautet `Ptr`.|  
-  
-### <a name="structs"></a>Strukturen  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|`pointer_traits::rebind`|Versucht, den zugrunde liegenden Zeigertyp in einen angegebenen Typ zu konvertieren.|  
-  
-### <a name="methods"></a>Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[pointer_to](#pointer_to)|Konvertiert einen beliebigen Verweis auf ein Objekt der Klasse `Ptr`.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<memory>  
-  
- **Namespace:** std  
-  
-##  <a name="pointer_to"></a> pointer_to  
- Statische Methode, die `Ptr::pointer_to(obj)` zurückgibt, wenn diese Funktion vorhanden ist. Andernfalls ist es nicht möglich einen beliebigen Verweis auf ein Objekt der Klasse `Ptr` zu konvertieren. Wenn `Ptr` ein unformatierter Zeiger ist, gibt diese Methode `addressof(obj)` zurück.  
-  
-```cpp  
-static pointer pointer_to(element_type& obj);
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [\<memory>](../standard-library/memory.md)   
- [allocator_traits-Klasse](../standard-library/allocator-traits-class.md)
 
+### <a name="typedefs"></a>Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`typedef T2 difference_type`|Der Typ `T2` ist `Ptr::difference_type`, wenn dieser Typ vorhanden ist, andernfalls ist er `ptrdiff_t`. Wenn `Ptr` ein unformatierter Zeiger ist, ist der Typ `ptrdiff_t`.|
+|`typedef T1 element_type`|Der Typ `T1` ist `Ptr::element_type`, wenn dieser Typ vorhanden ist, andernfalls ist er `Ty`. Wenn `Ptr` ein unformatierter Zeiger ist, ist der Typ `Ty`.|
+|`typedef Ptr pointer`|Der Typ lautet `Ptr`.|
+
+### <a name="structs"></a>Strukturen
+
+|name|Beschreibung|
+|----------|-----------------|
+|`pointer_traits::rebind`|Versucht, den zugrunde liegenden Zeigertyp in einen angegebenen Typ zu konvertieren.|
+
+### <a name="methods"></a>Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[pointer_to](#pointer_to)|Konvertiert einen beliebigen Verweis auf ein Objekt der Klasse `Ptr`.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<memory>
+
+**Namespace:** std
+
+## <a name="pointer_to"></a> pointer_to
+
+Statische Methode, die `Ptr::pointer_to(obj)` zurückgibt, wenn diese Funktion vorhanden ist. Andernfalls ist es nicht möglich einen beliebigen Verweis auf ein Objekt der Klasse `Ptr` zu konvertieren. Wenn `Ptr` ein unformatierter Zeiger ist, gibt diese Methode `addressof(obj)` zurück.
+
+```cpp
+static pointer pointer_to(element_type& obj);
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[\<memory>](../standard-library/memory.md)<br/>
+[allocator_traits-Klasse](../standard-library/allocator-traits-class.md)<br/>

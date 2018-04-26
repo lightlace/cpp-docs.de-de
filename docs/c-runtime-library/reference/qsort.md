@@ -1,12 +1,12 @@
 ---
 title: qsort | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - qsort
@@ -34,119 +34,119 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a39f6edf9dfdf2130bfe9d00cc2a9453f48ad9f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8d6aea0d0857d26237716464ea4eda778d1e0f85
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="qsort"></a>qsort
-Führt eine schnelle Sortierung aus. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void qsort(  
-   void *base,  
-   size_t num,  
-   size_t width,  
-   int (__cdecl *compare )(const void *, const void *)   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `base`  
- Start des Zielarrays.  
-  
- `num`  
- Arraygröße in Elementen.  
-  
- `width`  
- Elementgröße in Bytes.  
-  
- `compare`  
- Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und einen Wert zurückgibt, der ihre Beziehung angibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `qsort`-Funktion implementiert einen Schnellsortierungsalgorithmus, um ein Array von `num`-Elementen zu sortieren, die jeweils aus `width`-Bytes bestehen. Das `base`-Argument ist ein Zeiger auf die Basis des Arrays, das sortiert werden soll. `qsort` überschreibt dieses Array mit den sortierten Elementen.  
-  
- `qsort` ruft die `compare`-Routine einmal oder mehrere Male während der Sortierung auf, wodurch bei jedem Aufruf Zeiger auf zwei Arrayelemente übergeben werden.  
-  
-```  
-compare( (void *) & elem1, (void *) & elem2 );  
-```  
-  
- Die Routine vergleicht die Elemente und gibt einen der folgenden Werte zurück.  
-  
-|Vergleich des Rückgabewerts der Funktion|Beschreibung|  
-|-----------------------------------|-----------------|  
-|< 0|`elem1` kleiner als `elem2`|  
-|0|`elem1` gleich `elem2`|  
-|> 0|`elem1` größer als `elem2`|  
-  
- Das Array wird in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert. Kehren Sie den Sinn der „größer als“ und „kleiner als“ in der Vergleichsfunktion um, um ein Array in absteigender Reihenfolge zu sortieren.  
-  
- Diese Funktion überprüft ihre Parameter. Wenn `compare` oder `num` `NULL`, oder wenn `base` `NULL` und *`num` ungleich NULL ist, oder wenn `width` weniger als NULL ist, wird der ungültige Parametertyphandler aufgerufen, so wie in der [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird die Funktion zurückgegeben und `errno` auf `EINVAL` festgesetzt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`qsort`|\<stdlib.h> und \<search.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_qsort.c  
-// arguments: every good boy deserves favor  
-  
-/* This program reads the command-line  
- * parameters and uses qsort to sort them. It  
- * then displays the sorted arguments.  
- */  
-  
-#include <stdlib.h>  
-#include <string.h>  
-#include <stdio.h>  
-  
-int compare( const void *arg1, const void *arg2 );  
-  
-int main( int argc, char **argv )  
-{  
-   int i;  
-   /* Eliminate argv[0] from sort: */  
-   argv++;  
-   argc--;  
-  
-   /* Sort remaining args using Quicksort algorithm: */  
-   qsort( (void *)argv, (size_t)argc, sizeof( char * ), compare );  
-  
-   /* Output sorted list: */  
-   for( i = 0; i < argc; ++i )  
-      printf( " %s", argv[i] );  
-   printf( "\n" );  
-}  
-  
-int compare( const void *arg1, const void *arg2 )  
-{  
-   /* Compare all of both strings: */  
-   return _stricmp( * ( char** ) arg1, * ( char** ) arg2 );  
-}  
-```  
-  
-```Output  
-boy deserves every favor good  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)
+
+Führt eine schnelle Sortierung aus. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [qsort_s](qsort-s.md).
+
+## <a name="syntax"></a>Syntax
+
+```C
+void qsort(
+   void *base,
+   size_t num,
+   size_t width,
+   int (__cdecl *compare )(const void *, const void *)
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Basis* Anfang des Zielarrays.
+
+*Anzahl* Array-Größe von Elementen führen.
+
+*Breite* Elementgröße in Bytes.
+
+*Vergleichen Sie* Zeiger auf eine vom Benutzer bereitgestellte Routine, die vergleicht zwei Elemente des Arrays und gibt einen Wert, der ihre Beziehung angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Qsort** -Funktion implementiert einen Schnellsortierungsalgorithmus um ein Array von sortieren *Anzahl* Elementen, von denen jedes *Breite* Bytes. Das Argument *Basis* ist ein Zeiger auf der Basis des Arrays sortiert werden. **Qsort** überschreibt dieses Array mit den sortierten Elementen.
+
+**Qsort** Aufrufe der *vergleichen* Routine eine oder mehrere Zeiten während der Sortierung und Zeiger auf zwei Arrayelemente bei jedem Aufruf übergibt.
+
+```C
+compare( (void *) & elem1, (void *) & elem2 );
+```
+
+Die Routine vergleicht die Elemente und gibt einen der folgenden Werte zurück.
+
+|Vergleich des Rückgabewerts der Funktion|Beschreibung|
+|-----------------------------------|-----------------|
+|< 0|**elem1** kleiner als **elem2**|
+|0|**elem1** entspricht **elem2**|
+|> 0|**elem1** größer als **elem2**|
+
+Das Array wird in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert. Kehren Sie den Sinn der „größer als“ und „kleiner als“ in der Vergleichsfunktion um, um ein Array in absteigender Reihenfolge zu sortieren.
+
+Diese Funktion überprüft ihre Parameter. Wenn *vergleichen* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL** und **Anzahl* ungleich NULL ist oder wenn *Breite* ist kleiner als 0 (null), die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion und **Errno** festgelegt ist, um **EINVAL**.
+
+## <a name="requirements"></a>Anforderungen
+
+|Routine|Erforderlicher Header|
+|-------------|---------------------|
+|**qsort**|\<stdlib.h> und \<search.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_qsort.c
+// arguments: every good boy deserves favor
+
+/* This program reads the command-line
+* parameters and uses qsort to sort them. It
+* then displays the sorted arguments.
+*/
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+int compare( const void *arg1, const void *arg2 );
+
+int main( int argc, char **argv )
+{
+   int i;
+   /* Eliminate argv[0] from sort: */
+   argv++;
+   argc--;
+
+   /* Sort remaining args using Quicksort algorithm: */
+   qsort( (void *)argv, (size_t)argc, sizeof( char * ), compare );
+
+   /* Output sorted list: */
+   for( i = 0; i < argc; ++i )
+      printf( " %s", argv[i] );
+   printf( "\n" );
+}
+
+int compare( const void *arg1, const void *arg2 )
+{
+   /* Compare all of both strings: */
+   return _stricmp( * ( char** ) arg1, * ( char** ) arg2 );
+}
+```
+
+```Output
+boy deserves every favor good
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)<br/>
+[bsearch](bsearch.md)<br/>
+[_lsearch](lsearch.md)<br/>
