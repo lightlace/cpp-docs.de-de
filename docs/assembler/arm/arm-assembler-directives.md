@@ -1,33 +1,28 @@
 ---
 title: ARM-Assemblydirektiven | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
 Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in Kapitel 7 dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102). Allerdings unterscheiden sich die Microsoft-Implementierungen von einigen Assemblydirektiven aus ARM-Assemblydirektiven ein. In diesem Artikel werden die Unterschiede erläutert.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft-Implementierungen von ARM-Assemblydirektiven  
- AREA  
+ BEREICH  
  Der Microsoft-ARM-Assembler unterstützt diese strukturbereichattribute: AUSZURICHTEN, CODE CODEALIGN Daten NOINIT READONLY Lese-/SCHREIBMODUS ZIEHPUNKT, ARM.  
   
  Alle außer DAUMEN und ARM funktioniert wie beschrieben in der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102).  
@@ -46,7 +41,7 @@ Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in 
  DCDO  
  Wird nicht unterstützt.  
   
- DN, QN, SN  
+ DN QN, "SN".  
  Die Spezifikation eines Typs oder einer Klasse auf die Register-Alias wird nicht unterstützt.  
   
  EINTRAG  
@@ -101,7 +96,7 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  PRESERVE8  
  Wird nicht unterstützt.  
   
- RELOC  
+ UMSETZUNG  
  `RELOC n` kann nur eine Anweisung oder ein Daten-Definition-Direktive folgen. Es gibt keine "Anonym"Symbol", die verschoben werden kann.  
   
  ERFORDERN  

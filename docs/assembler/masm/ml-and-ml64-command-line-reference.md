@@ -1,12 +1,9 @@
 ---
 title: ML- und ML64-Befehlszeilenreferenz | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML- und ML64-Befehlszeilenreferenz
 Assembliert und Quelldateien für eine oder mehrere Assemblersprache verknüpft. Die Befehlszeilenoptionen werden Groß-/Kleinschreibung beachtet.  
@@ -100,11 +95,11 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/c**|Nur assembliert. Enthält keine Links.|  
 |**/coff**|Allgemeine Datei-Format (COFF) Objekttyp des Objektmodul wird generiert. Im Allgemeinen erforderlich für die Win32-Assemblysprache Entwicklung.<br /><br /> In ml64.exe nicht verfügbar.|  
 |**/Cp**|Behält Groß-/Kleinschreibung aller Benutzer-IDs an.|  
-|**/Cu**|Ordnet alle Bezeichner in Großbuchstaben (Standard).<br /><br /> In ml64.exe nicht verfügbar.|  
+|**/ Cu**|Ordnet alle Bezeichner in Großbuchstaben (Standard).<br /><br /> In ml64.exe nicht verfügbar.|  
 |**/Cx**|Groß-/Kleinschreibung, in öffentlichen und "extern" Symbole beibehalten.|  
 |**/D** `symbol`[[=`value`]]|Definiert ein Textmakro mit dem angegebenen Namen. Wenn `value` ist nicht vorhanden ist, ist es leer. Mehrere durch Leerzeichen getrennte Token müssen in Anführungszeichen eingeschlossen werden.|  
-|**/EP**|Generiert eine vorverarbeitete Quelle auflisten (gesendet an "stdout"). Finden Sie unter **/SF**.|  
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|Wenn ml.exe oder ml64.exe zur Laufzeit fehlschlägt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.<br /><br /> Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
+|**/ EP**|Generiert eine vorverarbeitete Quelle auflisten (gesendet an "stdout"). Finden Sie unter **/SF**.|  
+|**/ ERRORREPORT** [ **NONE** &AMP;#124; **PROMPT** &AMP;#124; **WARTESCHLANGE** &AMP;#124; **SENDEN** ]|Wenn ml.exe oder ml64.exe zur Laufzeit fehlschlägt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.<br /><br /> Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
 |**/F** `hexnum`|Legt die Stapelgröße zum `hexnum` Bytes (Dies ist identisch mit **/Link/Stapel**:`number`). Der Wert muss in hexadezimaler Schreibweise ausgedrückt werden. Es muss ein Leerzeichen zwischen **/f** und `hexnum`.|  
 |**/Fe** `filename`|Benennt die ausführbare Datei an.|  
 |**/Fl**[[`filename`]]|Generiert eine assemblierte Codeliste. Finden Sie unter **/SF**.|  
@@ -152,7 +147,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 ## <a name="remarks"></a>Hinweise  
  Einige Befehlszeilenoptionen ml- und ML64 Groß-/Kleinschreibung beachtet Platzierung. Z. B. weil ml- und ML64 mehrere akzeptieren kann **/c** Optionen, die alle entsprechenden **/Fo** Optionen müssen angegeben werden, bevor Sie **/c**. Das folgende Befehlszeilenbeispiel wird ein Objekt Dateispezifikation für jede Assembly Dateispezifikation veranschaulicht:  
   
- **ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**  
+ **ml.exe/Fo a1.obj/c a.asm/Fo b1.obj/c b.asm**  
   
 ## <a name="environment-variables"></a>Umgebungsvariablen  
   

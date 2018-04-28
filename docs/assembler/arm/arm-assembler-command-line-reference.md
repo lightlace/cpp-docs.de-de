@@ -1,27 +1,22 @@
 ---
 title: Befehlszeilenreferenz des ARM-Assembler | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f196b4aad76c72233c179249386dbb42960b31a6
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Befehlszeilenreferenz des ARM-Assemblers
 Dieser Artikel enthält Befehlszeilen Informationen zu den Microsoft-ARM-Assembler *Armasm*, die kompiliert ARMv7 Thumb-Assemblysprache in die Microsoft-Implementierung des Common Object File Format (COFF). Der Linker kann COFF-Code mit Objektcode verknüpfen, das erzeugt wird, indem der ARM-Assembler oder der C-Compiler, zusammen mit der Objektbibliotheken, die durch den Bibliothekar erstellt werden.  
@@ -64,7 +59,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  ARMv7-Stil generieren IT-Blöcken.  Standardmäßig ARMv8-kompatiblen IT-Blöcke werden generiert.  
   
- -via `filename`  
+ -über `filename`  
  Lesen zusätzliche Befehlszeilenargumente aus `filename`.  
   
  -16  
@@ -76,7 +71,7 @@ armasm [[options]] -o objectfile sourcefile
  -g  
  Debuginformationen zu generieren.  
   
- -errorReport: `option`  
+ -ErrorReport: `option`  
  Geben Sie an, wie interne Assembler Fehler an Microsoft gemeldet werden.  Mögliche Werte für `option` sind:   
 **keine**– keine Berichte senden.   
 **Eingabeaufforderung**– der Benutzer aufgefordert, die Berichte sofort übertragen.   

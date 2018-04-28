@@ -2,11 +2,8 @@
 title: Referenz zu MASM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67659cd17d95135e2697cd8707142ce1b5c94ef1
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: d00391f7ceaf95038c5c52db396e60cbec234099
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="masm-operators-reference"></a>Referenz zu MASM
 
@@ -72,7 +67,7 @@ ms.lasthandoff: 04/10/2018
   
 |||  
 |-|-|  
-|[MASK](../../assembler/masm/operator-mask.md)|[BREITE](../../assembler/masm/operator-width.md)|  
+|[MASKE](../../assembler/masm/operator-mask.md)|[BREITE](../../assembler/masm/operator-width.md)|  
   
 ## <a name="relational"></a>Relational  
   
@@ -93,7 +88,7 @@ ms.lasthandoff: 04/10/2018
   
 ||||  
 |-|-|-|  
-|[HIGH](../../assembler/masm/operator-high.md)|[HIGH32](../../assembler/masm/operator-high32.md)|[HIGHWORD](../../assembler/masm/operator-highword.md)|  
+|[HOHE](../../assembler/masm/operator-high.md)|[HIGH32](../../assembler/masm/operator-high32.md)|[HIGHWORD](../../assembler/masm/operator-highword.md)|  
 |[LÄNGE](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[NIEDRIG](../../assembler/masm/operator-low.md)|  
 |[LOW32](../../assembler/masm/operator-low32.md)|[LOWWORD](../../assembler/masm/operator-lowword.md)|[OPATTR](../../assembler/masm/operator-opattr.md)|  
 |[PTR](../../assembler/masm/operator-ptr.md)|[SHORT](../../assembler/masm/operator-short.md)|[SIZE](../../assembler/masm/operator-size.md)|  
