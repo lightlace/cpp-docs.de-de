@@ -109,15 +109,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a471e0df86dbfd5e8c267c463684a088b400863
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 34069bd8866e38faa2cade18e44e16eda4154a40
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
+# <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>Itoa, _itoa, Ltoa, _ltoa, Ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow _i64tow, _ui64tow
 
-Konvertiert eine ganze Zahl in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. finden Sie unter [_itoa_s _itow_s Funktionen](../../c-runtime-library/reference/itoa-s-itow-s.md).
+Konvertiert eine ganze Zahl in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. finden Sie unter [_itoa_s _itow_s Funktionen](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -192,12 +192,12 @@ Jede dieser Funktionen gibt einen Zeiger auf *Puffer*. Es gibt keine Fehlerrück
 
 ## <a name="remarks"></a>Hinweise
 
-Die `_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, und `_ui64toa` Funktionen konvertieren die Ziffern von der angegebenen *Wert* Argument auf einen Null-terminierte Zeichenfolge und speichern das Ergebnis (bis zu 33 Zeichen für `_itoa`, `_ltoa`, und `_ultoa`, und 65 für `_i64toa` und `_ui64toa`) in *Puffer*. Wenn *Basis* gleich 10 und *Wert* ist negativ ist, wird das erste Zeichen von der gespeicherten Zeichenfolge das Minuszeichen (**-**). Die `_itow`, `_ltow`, `_ultow`, `_i64tow`, und `_ui64tow` Funktionen sind Breitzeichenversionen von `_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, und `_ui64toa`zugeordnet.
+Die **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, und **_ui64toa** Funktionen konvertieren die Ziffern des Der angegebene *Wert* Argument auf einen Null-terminierte Zeichenfolge und speichern das Ergebnis (bis zu 33 Zeichen für **_itoa**, **_ltoa**, und  **_ultoa**, und 65 für **_i64toa** und **_ui64toa**) in *Puffer*. Wenn *Basis* gleich 10 und *Wert* ist negativ ist, wird das erste Zeichen von der gespeicherten Zeichenfolge das Minuszeichen (**-**). Die **_itow**, **_ltow**, **_ultow**, **_i64tow**, und **_ui64tow** Funktionen sind Breitzeichen- Versionen von **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, und **_ui64toa**, bzw.
 
 > [!IMPORTANT]
 > Diese Funktionen können nach dem Ende eines Puffers schreiben, die zu klein ist. Um Pufferüberläufe zu verhindern, sicher, dass *Puffer* ist groß genug für die konvertierten Ziffern, das abschließende Null-Zeichen sowie ein Zeichen sein. Missbrauch dieser Funktionen kann schwerwiegende Sicherheitsprobleme in Ihrem Code führen.
 
-Aufgrund ihrer potenzielle Sicherheitsprobleme standardmäßig führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **diese Funktion oder Variable unsicher sein. Erwägen Sie** *Safe_function* **stattdessen. Zum Deaktivieren der veraltungswarnung verwenden Sie "_crt_secure_no_warnings".** Es wird empfohlen, Sie ändern den Quellcode mithilfe der *Safe_function* vorgeschlagene Warnmeldung angezeigt wird. Die sichereren Funktionen schreiben nicht mehr Zeichen als die angegebene Puffergröße. Weitere Informationen finden Sie unter [_itoa_s _itow_s Funktionen](../../c-runtime-library/reference/itoa-s-itow-s.md).
+Aufgrund ihrer potenzielle Sicherheitsprobleme standardmäßig führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **diese Funktion oder Variable unsicher sein. Erwägen Sie** *Safe_function* **stattdessen. Zum Deaktivieren der veraltungswarnung verwenden Sie "_crt_secure_no_warnings".** Es wird empfohlen, Sie ändern den Quellcode mithilfe der *Safe_function* vorgeschlagene Warnmeldung angezeigt wird. Die sichereren Funktionen schreiben nicht mehr Zeichen als die angegebene Puffergröße. Weitere Informationen finden Sie unter [_itoa_s _itow_s Funktionen](itoa-s-itow-s.md).
 
 Für die Verwendung dieser Funktionen ohne die veraltungswarnung definieren die **"_crt_secure_no_warnings"** Präprozessormakro vor dem Einfügen von CRT-Header. Hierzu können Sie in der Befehlszeile an einer Eingabeaufforderung für Entwickler durch Hinzufügen der **/D_CRT_SECURE_NO_WARNINGS** Compileroption, um die **cl** Befehl. Definieren Sie andernfalls das Makro in den Quellcodedateien. Bei Verwendung von vorkompilierten Headern definiert das Makro am oberen Rand des vorkompilierten Headers include-Datei, in der Regel "stdafx.h". Verwenden Sie zum Definieren von Makros in Ihrem Quellcode einer **#define** Richtlinie, bevor Sie alle CRT-Header, wie im folgenden Beispiel einfügen:
 
@@ -208,7 +208,7 @@ Für die Verwendung dieser Funktionen ohne die veraltungswarnung definieren die 
 
 In C++ haben diese Funktionen vorlagenüberladungen, mit die ihre sichereren Entsprechungen aufgerufen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Die Posix-Namen `itoa`, `ltoa`, und `ultoa` vorhanden sind, als Aliase für die `_itoa`, `_ltoa`, und `_ultoa` Funktionen. Die Posix-Namen sind veraltet, da sie nicht die Implementierung-spezifische Funktion Dateinamenskonventionen von ISO C. folgen Standardmäßig verursachen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **der POSIX-Namen für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO C- und C++-konformen Namen:** *New_name*. Es wird empfohlen, Sie ändern den Quellcode Verwendung sichereren Versionen dieser Funktionen `_itoa_s`, `_ltoa_s`, oder `_ultoa_s`. Weitere Informationen finden Sie unter [_itoa_s _itow_s Funktionen](../../c-runtime-library/reference/itoa-s-itow-s.md).
+Die Posix-Namen **Itoa**, **Ltoa**, und **Ultoa** vorhanden sind, als Aliase für die **_itoa**, **_ltoa**, und **_ultoa** Funktionen. Die Posix-Namen sind veraltet, da sie nicht die Implementierung-spezifische Funktion Dateinamenskonventionen von ISO C. folgen Standardmäßig verursachen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **der POSIX-Namen für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO C- und C++-konformen Namen:** *New_name*. Es wird empfohlen, Sie ändern den Quellcode Verwendung sichereren Versionen dieser Funktionen **_itoa_s**, **_ltoa_s**, oder **_ultoa_s**. Weitere Informationen finden Sie unter [_itoa_s _itow_s Funktionen](itoa-s-itow-s.md).
 
 Für die Quelle Codeportabilität empfiehlt es sich die Posix-Namen im Code beibehalten werden sollen. Für die Verwendung dieser Funktionen ohne das veraltungswarnung definieren sowohl die **_CRT_NONSTDC_NO_WARNINGS** und **"_crt_secure_no_warnings"** Präprozessormakros vor dem Einfügen von CRT-Header. Hierzu können Sie in der Befehlszeile an einer Eingabeaufforderung für Entwickler durch Hinzufügen der **/D_CRT_SECURE_NO_WARNINGS** und **/D_CRT_NONSTDC_NO_WARNINGS** Optionen für Compiler, die **cl**Befehl. Definieren Sie andernfalls die Makros in den Quellcodedateien. Wenn Sie vorkompilierte Header verwenden, definieren die Makros am oberen Rand des vorkompilierten Headers include-Datei, in der Regel "stdafx.h". Verwenden Sie zum Definieren von Makros in Ihrem Quellcode **#define** Direktiven, bevor Sie alle CRT-Header, wie im folgenden Beispiel einfügen:
 
@@ -227,11 +227,11 @@ Um eine der folgenden Makros in eine Zeichenfolgenkonvertierungsfunktion verwend
 ||||
 |-|-|-|
 |Funktionen|radix|Makros|
-|`_itoa`, `_itow`|16<br/>10<br/>8<br/>2|`_MAX_ITOSTR_BASE16_COUNT`<br/>`_MAX_ITOSTR_BASE10_COUNT`<br/>`_MAX_ITOSTR_BASE8_COUNT`<br/>`_MAX_ITOSTR_BASE2_COUNT`|
-|`_ltoa`, `_ltow`|16<br/>10<br/>8<br/>2|`_MAX_LTOSTR_BASE16_COUNT`<br/>`_MAX_LTOSTR_BASE10_COUNT`<br/>`_MAX_LTOSTR_BASE8_COUNT`<br/>`_MAX_LTOSTR_BASE2_COUNT`|
-|`_ultoa`, `_ultow`|16<br/>10<br/>8<br/>2|`_MAX_ULTOSTR_BASE16_COUNT`<br/>`_MAX_ULTOSTR_BASE10_COUNT`<br/>`_MAX_ULTOSTR_BASE8_COUNT`<br/>`_MAX_ULTOSTR_BASE2_COUNT`|
-|`_i64toa`, `_i64tow`|16<br/>10<br/>8<br/>2|`_MAX_I64TOSTR_BASE16_COUNT`<br/>`_MAX_I64TOSTR_BASE10_COUNT`<br/>`_MAX_I64TOSTR_BASE8_COUNT`<br/>`_MAX_I64TOSTR_BASE2_COUNT`|
-|`_ui64toa`, `_ui64tow`|16<br/>10<br/>8<br/>2|`_MAX_U64TOSTR_BASE16_COUNT`<br/>`_MAX_U64TOSTR_BASE10_COUNT`<br/>`_MAX_U64TOSTR_BASE8_COUNT`<br/>`_MAX_U64TOSTR_BASE2_COUNT`|
+|**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
+|**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
+|**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
+|**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
 In diesem Beispiel verwendet eine Konvertierung Count-Makro definieren Sie einen Puffer groß genug für eine **unsigned long long** im Basis-2:
 
@@ -249,19 +249,19 @@ int main()
 
 |Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot`|`_itoa`|`_itoa`|`_itow`|
-|`_ltot`|`_ltoa`|`_ltoa`|`_ltow`|
-|`_ultot`|`_ultoa`|`_ultoa`|`_ultow`|
-|`_i64tot`|`_i64toa`|`_i64toa`|`_i64tow`|
-|`_ui64tot`|`_ui64toa`|`_ui64toa`|`_ui64tow`|
+|**_itot**|**_itoa**|**_itoa**|**_itow**|
+|**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
+|**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
 ## <a name="requirements"></a>Anforderungen
 
 |Routine|Erforderlicher Header|
 |-------------|---------------------|
-|`itoa`, `ltoa`, `ultoa`|\<stdlib.h>|
-|`_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, `_ui64toa`|\<stdlib.h>|
-|`_itow`, `_ltow`, `_ultow`, `_i64tow`, `_ui64tow`|\<stdlib.h> oder \<wchar.h>|
+|**Itoa**, **Ltoa**, **Ultoa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> oder \<wchar.h>|
 
 Diese Funktionen und Makros sind Microsoft-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
@@ -345,4 +345,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Siehe auch
 
 [Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s, _itow_s functions](../../c-runtime-library/reference/itoa-s-itow-s.md)<br/>
+[_itoa_s _itow_s-Funktionen](itoa-s-itow-s.md)<br/>
