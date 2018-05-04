@@ -1,12 +1,9 @@
 ---
 title: Vorlagen (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Vorlagen (C++)
 Vorlagen sind die Grundlage für die generische Programmierung in C++. Als stark typisierte Sprache erfordert C++ alle Variablen, die einen bestimmten Typ, entweder explizit durch den Programmierer deklariert oder vom Compiler abgeleitet wurden. Allerdings sehen viele Datenstrukturen und Algorithmen identisch, unabhängig davon, welche Art, die sie für ausgeführt werden. Vorlagen ermöglichen Ihnen die Vorgänge einer Klasse oder Funktion zu definieren, und ermöglichen das Angeben von welche konkret diese Vorgänge Typen sollten am arbeiten.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Der Code oben wird beschrieben, eine Vorlage für eine generische Funktion einen einzelnen Typparameter `T`, deren Rückgabewert, und rufen Sie Parameter (Lhs und Rhs) sind "all" dieses Typs. Sie können einen Typparameter einen beliebigen Namen geben Sie z. B., sondern auch von einzelnen Großbuchstaben Konvention am häufigsten verwendet werden. `T`ist ein Template-Parameter. die `typename` Schlüsselwort besagt, dass dieser Parameter als Platzhalter für einen Typ ist. Wenn die Funktion aufgerufen wird, ersetzt der Compiler jede Instanz des `T` mit dem konkreten Typ-Argument, das vom Benutzer angegebenen oder vom Compiler abgeleitet ist. Der Prozess, in denen der Compiler generiert eine Klasse oder Funktion aus einer Vorlage wird als bezeichnet *Vorlageninstanziierung*;   `minimum<int>` ist eine Instanziierung der Vorlage `minimum<T>`.  
+ Der Code oben wird beschrieben, eine Vorlage für eine generische Funktion einen einzelnen Typparameter `T`, deren Rückgabewert, und rufen Sie Parameter (Lhs und Rhs) sind "all" dieses Typs. Sie können einen Typparameter einen beliebigen Namen geben Sie z. B., sondern auch von einzelnen Großbuchstaben Konvention am häufigsten verwendet werden. `T` ist ein Template-Parameter. die `typename` Schlüsselwort besagt, dass dieser Parameter als Platzhalter für einen Typ ist. Wenn die Funktion aufgerufen wird, ersetzt der Compiler jede Instanz des `T` mit dem konkreten Typ-Argument, das vom Benutzer angegebenen oder vom Compiler abgeleitet ist. Der Prozess, in denen der Compiler generiert eine Klasse oder Funktion aus einer Vorlage wird als bezeichnet *Vorlageninstanziierung*;   `minimum<int>` ist eine Instanziierung der Vorlage `minimum<T>`.  
   
  Benutzer kann in anderen Kontexten eine Instanz der Vorlage deklarieren, die für "int". spezialisiert ist Angenommen Sie, get_a() und get_b() Funktionen handelt, die einen "Int" zurück:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  Die Regeln für wie führt der Compiler die typableitung in den Funktionsvorlagen basieren auf den Regeln für normale Funktionen. Weitere Informationen finden Sie unter [überladen Auflösung von Funktionsvorlagenaufrufen](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Typparameter  
+## <a id="type_parameters"></a> Typparameter  
  In der `minimum` Vorlage oben, beachten Sie, dass der Typparameter `T` sind nicht in keiner Weise gekennzeichnet, bis er in die Funktionsparameter Aufruf verwendet wird, wo die Const und Qualifizierer Verweis hinzugefügt.  
   
  Es gibt keine praktische Begrenzung für die Anzahl von Typparametern. Trennen Sie mehrere Parameter, durch Trennzeichen getrennt:  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Andere Arten von einschließlich Zeiger und Verweise auf Werte können als Nichttyp-Parameter übergeben werden. Sie können z. B. in einen Zeiger an eine Funktion oder ein Funktionsobjekt, das Sie zum Anpassen eines Vorgangs innerhalb der Vorlagencode übergeben.  
   
-## <a id="template_parameters"></a>Vorlagen als Vorlagenparameter  
+## <a id="template_parameters"></a> Vorlagen als Vorlagenparameter  
  Eine Vorlage kann es sich um eine Template-Parameter sein. In diesem Beispiel MyClass2 zwei Vorlagenparameter hat: eine Typnamenparameter `T` und einem Vorlagenparameter `Arr`:  
   
 ```cpp  

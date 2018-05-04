@@ -2,11 +2,8 @@
 title: CAxDialogImpl Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3e1b7d4f88428060f4aa4d01180bce1e970b650
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl-Klasse
 Diese Klasse implementiert ein Dialogfeld (gebunden oder ungebunden), der als Host-ActiveX-Steuerelemente.  
@@ -80,9 +75,9 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 |[CAxDialogImpl::m_bModal](#m_bmodal)|Eine Variable, die nur im Debugbuild vorhanden erstellt und auf das Dialogfeld modal ist "true" festgelegt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CAxDialogImpl`können Sie ein Dialogfeld mit oder ohne Modus zu erstellen. `CAxDialogImpl`Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
+ `CAxDialogImpl` können Sie ein Dialogfeld mit oder ohne Modus zu erstellen. `CAxDialogImpl` Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
   
- `CAxDialogImpl`leitet sich von `CDialogImplBaseT`, der wiederum abgeleitet aus *TBase* (standardmäßig `CWindow`) und `CMessageMap`.  
+ `CAxDialogImpl` leitet sich von `CDialogImplBaseT`, der wiederum abgeleitet aus *TBase* (standardmäßig `CWindow`) und `CMessageMap`.  
   
  Die Klasse muss eine LEISTE-Element definieren, der angibt, das Dialogfeld Vorlage Ressourcen-ID Z. B. Hinzufügen eines Objekts mit ATL-Dialogfeld die **Klasse hinzufügen** Dialogfeld fügt automatisch die folgende Zeile auf die Klasse:  
   
@@ -110,7 +105,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap  
  Rufen Sie diese Methode senkereigniszuordnung oder alle Einträge in das Objekt Senke Zuordnung Ereignis zuordnen.  
   
 ```
@@ -124,7 +119,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>  CAxDialogImpl::Create  
  Rufen Sie diese Methode, um ein nicht modales Dialogfeld erstellen.  
   
 ```
@@ -139,7 +134,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
  `dwInitParam`  
  [in] Gibt den Wert zu übergeben, um das Dialogfeld in der `lParam` Parameter von der **WM_INITDIALOG** Nachricht.  
   
- **RECT &**  
+ **RECT &AMP;**  
  Dieser Parameter wird nicht verwendet. Dieser Parameter wird durch übergeben `CComControl`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -150,7 +145,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  Die zweite Außerkraftsetzung wird angegeben, nur verwendet werden, damit Dialogfelder mit verwendet werden können [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow  
  Rufen Sie diese Methode, um ein nicht modales Dialogfeld zu zerstören.  
   
 ```
@@ -163,7 +158,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie nicht `DestroyWindow` zerstört ein modales Dialogfeld. Rufen Sie ["EndDialog"](#enddialog) stattdessen.  
   
-##  <a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>  CAxDialogImpl::DoModal  
  Rufen Sie diese Methode, um ein modales Dialogfeld erstellen.  
   
 ```
@@ -187,7 +182,7 @@ INT_PTR DoModal(
   
  Rufen Sie zum Erstellen eines nicht modalen Dialogfelds [erstellen](#create).  
   
-##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog  
  Rufen Sie diese Methode, um ein modales Dialogfeld zu zerstören.  
   
 ```
@@ -202,12 +197,12 @@ BOOL EndDialog(int nRetCode);
  True, wenn das Dialogfeld zerstört wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- `EndDialog`muss über die für Standarddialogfelder aufgerufen werden. Nachdem Sie das Dialogfeld zerstört wird, verwendet Windows den Wert der `nRetCode` als Rückgabewert für `DoModal`, der das Dialogfeld erstellt.  
+ `EndDialog` muss über die für Standarddialogfelder aufgerufen werden. Nachdem Sie das Dialogfeld zerstört wird, verwendet Windows den Wert der `nRetCode` als Rückgabewert für `DoModal`, der das Dialogfeld erstellt.  
   
 > [!NOTE]
 >  Rufen Sie nicht `EndDialog` , ein nicht modales Dialogfeld zu zerstören. Rufen Sie [DestroyWindow](#destroywindow) stattdessen.  
   
-##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc  
  Rufen Sie diese Methode zum Abrufen eines Zeigers auf die `DialogProc` Rückruffunktion.  
   
 ```
@@ -220,7 +215,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Hinweise  
  Die `DialogProc` Funktion ist eine anwendungsdefinierte Rückruffunktion.  
   
-##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>  CAxDialogImpl::GetIDD  
  Rufen Sie diese Methode, um das Dialogfeld Vorlage Ressourcen-ID abrufen  
   
 ```
@@ -230,7 +225,7 @@ int GetIDD();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt das Dialogfeld Vorlage Ressourcen-ID.  
   
-##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage  
  Rufen Sie diese Methode, um zu bestimmen, ob eine Nachricht zu diesem Dialogfeld vorgesehen ist, und wenn dies der Fall, verarbeiten Sie die Nachricht.  
   
 ```
@@ -247,7 +242,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode dient eine Nachrichtenschleife aus aufgerufen werden.  
   
-##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal  
  Eine Variable, die nur im Debugbuild vorhanden erstellt und auf das Dialogfeld modal ist "true" festgelegt ist.  
   
 ```

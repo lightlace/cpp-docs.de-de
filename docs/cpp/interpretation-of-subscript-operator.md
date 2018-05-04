@@ -1,12 +1,9 @@
 ---
 title: Interpretation des Subscript-Operators | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - interpreting subscript operators [C++]
 - operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9bba312c6969acf95be8899f58f65e31c75386c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretation des Subscript-Operators
 Wie andere Operatoren kann der Indexoperator (**[]**) können vom Benutzer neu definiert werden. Das Standardverhalten des Indexoperators, wenn er nicht überladen ist, besteht darin, den Arraynamen und den Index unter Verwendung der folgenden Methode zu kombinieren:  
@@ -39,7 +34,7 @@ Wie andere Operatoren kann der Indexoperator (**[]**) können vom Benutzer neu d
   
  **((**   
  ***Array-Name* ) + ()**   
- ***Tiefgestellt* 1***max*2  *\* max*3*.. .max*n)  **+**  *Feldindex*2  *\* max*3*.. .max*n). sein. sein. *+**Feldindex*n))  
+ ***Tiefgestellt* 1***max*2  *\* max*3 *.. .max*n) **+** *Feldindex*2  *\* max*3 *.. .max*n).   sein. sein. *+* *Tiefgestellt*n))  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arrays](../cpp/arrays-cpp.md)

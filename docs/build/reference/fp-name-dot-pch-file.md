@@ -1,13 +1,10 @@
 ---
 title: -Fp (Name. PCH-Datei) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Name der PCH-Datei)
 Stellt einen Pfadnamen für einen vorkompilierten Header statt mit dem Standardnamen für den Pfad an.  
@@ -44,7 +39,7 @@ Stellt einen Pfadnamen für einen vorkompilierten Header statt mit dem Standardn
 > **/ Fp**_Pfadnamen_  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Option mit [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md) oder [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md) einen Pfadnamen für einen vorkompilierten Header statt mit dem Standardnamen für den Pfad angeben. Sie können auch **/fp** mit **"/ Yc"** die Verwendung einer vorkompilierten Headerdatei an, die nicht die **"/ Yc"***Filename* Argument und aus der Basisname der Quelldatei.  
+ Verwenden Sie diese Option mit [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md) oder [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md) einen Pfadnamen für einen vorkompilierten Header statt mit dem Standardnamen für den Pfad angeben. Sie können auch **/fp** mit **"/ Yc"** die Verwendung einer vorkompilierten Headerdatei an, die nicht die **"/ Yc" *** Filename* Argument und aus der Basisname der Quelldatei.  
   
  Wenn Sie eine Erweiterung nicht als Teil des Pfadnamens angeben, wird davon ausgegangen, dass eine Erweiterung PCH. Wenn Sie ein Verzeichnis ohne einen Dateinamen angeben, wird der Standarddateiname VC*x*0.pch, wobei *x* die Hauptversion von Visual C++ verwendet wird.  
   

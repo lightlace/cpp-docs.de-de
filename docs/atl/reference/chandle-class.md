@@ -1,12 +1,9 @@
 ---
 title: CHandle Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHandle
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd58ba8ce15bb26b4e5b768baedbf8ddfe829f2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b57aab927380f8801c3b9cab258a695c7d8a59d0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chandle-class"></a>CHandle-Klasse
 Diese Klasse stellt Methoden zum Erstellen und verwenden ein Handleobjekt.  
@@ -76,12 +71,12 @@ class CHandle
  Ein `CHandle` Objekt kann verwendet werden, wenn ein Handle erforderlich ist: Der Hauptunterschied besteht darin, die die `CHandle` Objekt automatisch gelöscht werden.  
   
 > [!NOTE]
->  Einige API-Funktionen verwenden die NULL als ein Handle leer oder ungültig, während andere INVALID_HANDLE_VALUE verwenden. `CHandle`verwendet NULL und wird nur behandeln INVALID_HANDLE_VALUE als echte Handle. Wenn Sie eine API der INVALID_HANDLE_VALUE zurückgegeben werden können aufrufen, sollten Sie überprüfen, für diesen Wert vor dem Aufruf [CHandle::Attach](#attach) oder Übergabe an die `CHandle` -Konstruktor, und stattdessen übergeben Sie NULL.  
+>  Einige API-Funktionen verwenden die NULL als ein Handle leer oder ungültig, während andere INVALID_HANDLE_VALUE verwenden. `CHandle` verwendet NULL und wird nur behandeln INVALID_HANDLE_VALUE als echte Handle. Wenn Sie eine API der INVALID_HANDLE_VALUE zurückgegeben werden können aufrufen, sollten Sie überprüfen, für diesen Wert vor dem Aufruf [CHandle::Attach](#attach) oder Übergabe an die `CHandle` -Konstruktor, und stattdessen übergeben Sie NULL.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>  CHandle::Attach  
  Rufen Sie diese Methode zum Anfügen der `CHandle` Objekt für eine vorhandene Handle.  
   
 ```
@@ -90,12 +85,12 @@ void Attach(HANDLE h) throw();
   
 ### <a name="parameters"></a>Parameter  
  `h`  
- `CHandle`wird das Handle Besitz `h`.  
+ `CHandle` wird das Handle Besitz `h`.  
   
 ### <a name="remarks"></a>Hinweise  
  Weist die `CHandle` -Objekt an die `h` behandeln. Bei Builds den Debugger, werden ein ATLASSERT ausgegeben, wenn `h` ist NULL. Es erfolgt keine weitere Überprüfung hinsichtlich der Gültigkeit des Handles.  
   
-##  <a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>  CHandle::CHandle  
  Der Konstruktor.  
   
 ```
@@ -111,7 +106,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Hinweise  
  Erstellt ein neues `CHandle` -Objekt optional mithilfe eines vorhandenen Handles oder `CHandle` Objekt.  
   
-##  <a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>  CHandle:: ~ CHandle  
  Der Destruktor.  
   
 ```
@@ -121,7 +116,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt die `CHandle` Objekt durch Aufrufen von [CHandle::Close](#close).  
   
-##  <a name="close"></a>CHandle::Close  
+##  <a name="close"></a>  CHandle::Close  
  Rufen Sie diese Methode zum Schließen einer `CHandle` Objekt.  
   
 ```
@@ -131,7 +126,7 @@ void Close() throw();
 ### <a name="remarks"></a>Hinweise  
  Schließt ein Objekthandle öffnen. Wenn das Handle NULL, ist dies der Fall, wenn **schließen** wurde bereits aufgerufen wird, eine ATLASSERT ausgelöst in Debugbuilds.  
   
-##  <a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>  CHandle::Detach  
  Rufen Sie diese Methode, um ein Handle von trennen eine `CHandle` Objekt.  
   
 ```
@@ -144,14 +139,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt den Besitz des Handles frei.  
   
-##  <a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>  CHandle::m_h  
  Die Membervariable, die das Handle speichert.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>  CHandle::operator =  
  Der Zuweisungsoperator.  
   
 ```
@@ -160,7 +155,7 @@ CHandle& operator=(CHandle& h) throw();
   
 ### <a name="parameters"></a>Parameter  
  `h`  
- `CHandle`wird das Handle Besitz `h`.  
+ `CHandle` wird das Handle Besitz `h`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf das neue `CHandle` Objekt.  
@@ -168,7 +163,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn die `CHandle` Objekt zurzeit ein Handle enthält, wird geschlossen. Die `CHandle` -Objekt übergebene wird über dessen Handle-Verweis, der auf NULL festgelegt. Dadurch wird sichergestellt, dass zwei `CHandle` Objekte nie active dasselbe Handle enthält.  
   
-##  <a name="operator_handle"></a>CHandle::operator HANDLE  
+##  <a name="operator_handle"></a>  CHandle::operator HANDLE  
  Gibt den Wert des gespeicherten Handles.  
   
 ```  

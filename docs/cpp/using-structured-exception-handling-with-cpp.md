@@ -1,12 +1,9 @@
 ---
 title: Verwendung von strukturierter Ausnahmebehandlung in C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - C++ exception handling, mixed with SEH
 - structured exception handling [C++], with C++ exception handling
 ms.assetid: ec34b528-8c26-4429-b24a-6a68553aaa91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5d067a391512d56a2d01ce3052ac3fab061f28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71ce64a067ed75c29d83913adababe2d97dba6f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Verwendung von strukturierter Ausnahmebehandlung in C++
 Die in diesen Artikeln beschriebene strukturierte Ausnahmebehandlung funktioniert sowohl mit C- als auch mit C++-Quelldateien. Sie wurde jedoch nicht speziell für C++ entwickelt und wird daher nicht empfohlen. Sie können sicherstellen, dass der Code portabler ist, indem Sie die C++-Ausnahmebehandlung verwenden. Der C++-Ausnahmebehandlungsmechanismus ist außerdem flexibler, da er Ausnahmen eines beliebigen Typs behandeln kann.  

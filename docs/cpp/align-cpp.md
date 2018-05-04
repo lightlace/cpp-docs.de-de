@@ -1,12 +1,9 @@
 ---
 title: align (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -38,13 +33,13 @@ Verwenden Sie `__declspec(align(#))`, um die Ausrichtung von benutzerdefinierten
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec( align(** *#* **) )** *declarator*  
+> **__declspec (align (** *#* **))** *Deklarator*  
 
 ## <a name="remarks"></a>Hinweise
 
 Das Schreiben von Anwendungen, die die neuesten Prozessoranweisungen verwenden, bringt mehrere neue Einschränkungen und Probleme mit sich. Insbesondere machen viele neue Anweisungen die Ausrichtung von Daten an 16-Byte-Grenzen erforderlich. Darüber hinaus verbessern Sie durch die Ausrichtung häufig verwendeter Daten an der Cachezeilengröße eines bestimmten Prozessors die Cacheleistung. Wenn Sie beispielsweise eine Struktur definieren, deren Größe kleiner ist als 32 Bytes, sollten Sie sie an 32 Bytes ausrichten, um sicherzustellen, dass Objekte dieses Strukturtyps effizient zwischengespeichert werden.
 
-\#ist der Ausrichtungswert. Gültige Einträge sind ganzzahlige Potenzen von zwei von 1 bis 8192 (Bytes), z. B. 2, 4, 8, 16, 32 oder 64. `declarator` sind die Daten, die Sie als ausgerichtet deklarieren.
+\# ist der Ausrichtungswert. Gültige Einträge sind ganzzahlige Potenzen von zwei von 1 bis 8192 (Bytes), z. B. 2, 4, 8, 16, 32 oder 64. `declarator` sind die Daten, die Sie als ausgerichtet deklarieren.
 
 Informationen dazu, wie einen Wert vom Typ zurückgegeben `size_t` , die die ausrichtungsanforderung des Typs ist, finden Sie unter [__alignof](../cpp/alignof-operator.md). Weitere Informationen dazu, wie nicht ausgerichtete Zeiger deklariert, wenn Sie 64-Bit-Prozessoren zu verwenden, finden Sie unter [__unaligned](../cpp/unaligned.md).
 
@@ -94,7 +89,7 @@ Weitere Informationen finden Sie unter:
 
 - [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) (X64 bestimmte)
 
-##  <a name="vclrfalignexamples"></a>ausrichtungsbeispiele
+##  <a name="vclrfalignexamples"></a> ausrichtungsbeispiele
 
 Die folgenden Beispiele zeigen, wie sich `__declspec(align(#))` auf die Größe und die Ausrichtung der Datenstrukturen auswirkt. Die Beispiele gehen von folgenden Definitionen aus:
 
@@ -185,7 +180,7 @@ void fn() {
 
 Wenn der Speicher für Heaps zugewiesen wird, hängt die Ausrichtung davon ab, welche Speicherbelegungsfunktion aufgerufen wird.  Wenn Sie beispielsweise `malloc` verwenden, hängt das Ergebnis von der Größe des Operanden ab. Wenn *Arg* > = 8, der zurückgegebene Arbeitsspeicher mit 8-Byte-ausgerichtet ist. Wenn *Arg* < 8, der die Ausrichtung des zurückgegebenen Arbeitsspeichers ist die erste Potenz von 2 weniger als *Arg*. Wenn Sie beispielsweise "malloc(7)" verwenden, ist die Ausrichtung 4 Bytes.
 
-##  <a name="vclrf_declspecaligntypedef"></a>Definieren neuer Typen mit __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Definieren neuer Typen mit __declspec(align(#))
 
 Sie können einen Typ mit einem Ausrichtungsmerkmal definieren.
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Jetzt `aType` und `bType` werden dem dieselbe Größe (8 Byte), aber Variablen vom Typ `bType` 32 Bytes ausgerichtet sind.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>Ausrichten von Daten im threadlokalen Speicher
+##  <a name="vclrfthreadlocalstorageallocation"></a> Ausrichten von Daten im threadlokalen Speicher
 
 Statische lokale Threadspeicher (TLS), die mit dem `__declspec(thread)`-Attribut erstellt und im TLS-Abschnitt des Images platziert wurden, verhalten sich bei der Ausrichtung wie normale statische Daten. Zum Erstellen von TLS-Daten ordnet das Betriebssystem die Größe des TLS-Abschnitts zu und berücksichtigt das Ausrichtungsattribut für TLS-Abschnitte.
 
@@ -221,7 +216,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Funktionsweise der Ausrichtung mit der Verpackung von Daten
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Funktionsweise der Ausrichtung mit der Verpackung von Daten
 
 Die **/Zp** Compileroption und das `pack` Pragma wirken sich auf der Verpackung von Daten für Struktur-und Unionmember. Dieses Beispiel zeigt, wie **/Zp** und `__declspec(align(#))` arbeiten zusammen:
 

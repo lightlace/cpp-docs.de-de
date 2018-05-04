@@ -1,12 +1,9 @@
 ---
 title: IObjectWithSiteImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl-Klasse
 Diese Klasse stellt Methoden und ein Objekt mit dem Standort kommunizieren.  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>Hinweise  
  Die ["IObjectWithSite"](http://msdn.microsoft.com/library/windows/desktop/ms693765) Schnittstelle ermöglicht es, ein Objekt mit dem Standort kommunizieren. Klasse `IObjectWithSiteImpl` stellt eine Standardimplementierung dieser Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
   
- `IObjectWithSiteImpl`gibt zwei Methoden. Der erste Client ruft `SetSite`, übergeben des Standorts **IUnknown** Zeiger. This-Zeiger wird innerhalb des Objekts gespeichert und können später abgerufen werden, durch einen Aufruf von `GetSite`.  
+ `IObjectWithSiteImpl` gibt zwei Methoden. Der erste Client ruft `SetSite`, übergeben des Standorts **IUnknown** Zeiger. This-Zeiger wird innerhalb des Objekts gespeichert und können später abgerufen werden, durch einen Aufruf von `GetSite`.  
   
  In der Regel, leiten Sie eine Klasse von `IObjectWithSiteImpl` ein Objekt, das für die Erstellung eines Steuerelements ist. Für Steuerelemente, leiten Sie eine Klasse von [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), stellt auch einen Website-Zeiger. Leiten Sie eine Klasse nicht sowohl `IObjectWithSiteImpl` und `IOleObjectImpl`.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  Fragt den Standort für einen Zeiger auf die Schnittstelle identifizierten `riid`.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  Finden Sie unter [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) im Windows SDK.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Verwaltet den Standort **IUnknown** Zeiger.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `m_spUnkSite`anfänglich empfängt this-Zeiger durch einen Aufruf von [SetSite](#setsite).  
+ `m_spUnkSite` anfänglich empfängt this-Zeiger durch einen Aufruf von [SetSite](#setsite).  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  Stellt das Objekt bereit, mit des Standorts **IUnknown** Zeiger.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK`zurück.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  Stellt das Objekt bereit, mit des Standorts **IUnknown** Zeiger.  
   
 ```

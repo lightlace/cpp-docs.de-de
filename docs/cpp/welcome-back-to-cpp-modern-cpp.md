@@ -1,27 +1,22 @@
 ---
-title: "Willkommen zurück bei C++ (Modern C++) | Microsoft Docs"
-ms.custom: 
+title: Willkommen zurück bei C++ (Modern C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut geschriebene C++-Programme sind schnell und effizient. Die Sprache ist flexibler als andere Sprachen, da sie verwendet werden kann, um eine breite Palette von Apps zu erstellen: lustige und aufregende Spiele, leistungsstarke wissenschaftliche Software, Gerätetreiber, eingebettete Programme und Windows-Clientapps. Seit mehr als 20 Jahren wird C++ zum Lösen von Problemen wie dieser und vieler anderer. Ihnen ist möglicherweise nicht bekannt, dass eine zunehmende Anzahl von C++-Programmierern sich von der uneleganten Programmierung im C-Stil von einst abgewandt haben, hin zu einem modernen C++.  
@@ -36,7 +31,7 @@ C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut ge
   
 -   Intelligente Zeiger anstelle von unformatierten Zeigern.  
   
--   `std::string`und `std::wstring` Typen (siehe [ \<Zeichenfolge >](../standard-library/string.md)) anstelle von unformatierten `char[]` Arrays.  
+-   `std::string` und `std::wstring` Typen (siehe [ \<Zeichenfolge >](../standard-library/string.md)) anstelle von unformatierten `char[]` Arrays.  
   
 -   [C++-Standardbibliothek](../standard-library/cpp-standard-library-header-files.md) -Container wie `vector`, `list`, und `map` anstelle von unformatierten Arrays oder benutzerdefinierten Containern. Finden Sie unter [ \<Vektor >](../standard-library/vector.md), [ \<Liste >](../standard-library/list.md), und [ \<Zuordnung >](../standard-library/map.md).  
   

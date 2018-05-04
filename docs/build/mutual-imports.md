@@ -1,13 +1,10 @@
 ---
 title: Gegenseitige Importe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Gegenseitige Importe
 Exportieren oder Importieren in eine andere ausführbare Datei birgt Komplikationen, wenn die Importe gegenseitig (oder zirkulär) sind. Zwei DLLs gibt z. B. importieren Symbole wechselseitig rekursive Funktionen ähnlich wie voneinander.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- Wenn a.dll wird er basiert `/D A_IMPL` und wenn B.dll erstellt wird, wird es anhand erstellt `/D B_IMPL`. Durch die Verwendung separater Symbole für jede DLL-Datei `CExampleB` wird exportiert und `CExampleA` wird beim Erstellen von B.dll importiert. `CExampleA`Beim Erstellen von A.dll exportiert und importiert, wenn von B.dll (oder einem anderen Client) verwendet wird.  
+ Wenn a.dll wird er basiert `/D A_IMPL` und wenn B.dll erstellt wird, wird es anhand erstellt `/D B_IMPL`. Durch die Verwendung separater Symbole für jede DLL-Datei `CExampleB` wird exportiert und `CExampleA` wird beim Erstellen von B.dll importiert. `CExampleA` Beim Erstellen von A.dll exportiert und importiert, wenn von B.dll (oder einem anderen Client) verwendet wird.  
   
  Diese Art der Schichtung kann nicht durchgeführt werden, bei Verwendung die integrierten **AFX_EXT_CLASS** und `_AFXEXT` Präprozessorsymbole. Die oben beschriebene Technik löst dieses Problem in einer Weise, die nicht im Gegensatz zum, die Mechanismus MFC selbst verwendet werden soll, wenn seine Active-Technologien, die Datenbank und die Netzwerk-MFC-Erweiterungs-DLLs zu erstellen.  
   

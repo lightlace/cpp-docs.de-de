@@ -2,11 +2,8 @@
 title: CAtlTransactionManager Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager-Klasse
 CAtlTransactionManager-Klasse stellt einen Wrapper für die Funktionen des Kerneltransaktions-Manager (KTM) bereit.  
@@ -92,7 +87,7 @@ class CAtlTransactionManager;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`Wenn das Fallback unterstützt wird. `FALSE` andernfalls.|  
+|[m_bFallback](#m_bfallback)|`TRUE` Wenn das Fallback unterstützt wird. `FALSE` andernfalls.|  
 |[m_hTransaction](#m_htransaction)|Das Transaktionshandle.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  CAtlTransactionManager-Destruktor.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Hinweise  
  Bei der normalen Verarbeitung wird die Transaktion automatisch ein Commit und geschlossen. Wenn bei einer Ausnahme Entladung der Destruktor aufgerufen wird, wird die Transaktion zurückgesetzt und geschlossen.  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  CAtlTransactionManager-Konstruktor.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Parameter  
  `bFallback`  
- `TRUE`Gibt Unterstützung Fallback an. Wenn transaktive Funktion fehlerhaft ist, ruft die Klasse automatisch die Funktion "nicht transaktiven". `FALSE`gibt keine "fallback" Aufrufe an.  
+ `TRUE` Gibt Unterstützung Fallback an. Wenn transaktive Funktion fehlerhaft ist, ruft die Klasse automatisch die Funktion "nicht transaktiven". `FALSE` gibt keine "fallback" Aufrufe an.  
   
  `bAutoCreateTransaction`  
- `TRUE`Gibt an, dass der Handler für die Transaktion automatisch im Konstruktor erstellt wird. `FALSE`Gibt an, dass es nicht.  
+ `TRUE` Gibt an, dass der Handler für die Transaktion automatisch im Konstruktor erstellt wird. `FALSE` Gibt an, dass es nicht.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="close"></a>Schließen Sie  
+##  <a name="close"></a>  Schließen Sie  
  Schließt das Transaktionshandle.  
   
 ```
@@ -142,7 +137,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `CloseHandle` Funktion. Die Methode wird in der Destruktor automatisch aufgerufen.  
   
-##  <a name="commit"></a>Commit  
+##  <a name="commit"></a>  Commit  
  Fordert an, dass die Transaktion ein Commit ausgeführt werden.  
   
 ```
@@ -155,7 +150,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `CommitTransaction` Funktion. Die Methode wird in der Destruktor automatisch aufgerufen.  
   
-##  <a name="create"></a>Erstellen  
+##  <a name="create"></a>  Erstellen  
  Erstellt das Transaktionshandle.  
   
 ```
@@ -168,7 +163,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `CreateTransaction` Funktion. Überprüfen Sie diesen  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  Erstellt oder öffnet eine Datei, eine Dateidatenstrom oder ein Verzeichnis als ein Transaktiver Vorgang.  
   
 ```
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `CreateFileTransacted` Funktion.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  Löscht eine vorhandene Datei als ein Transaktiver Vorgang an.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `DeleteFileTransacted` Funktion.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  Sucht in einem Verzeichnis für eine Datei oder ein Unterverzeichnis als ein Transaktiver Vorgang.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `FindFirstFileTransacted` Funktion.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  Ruft die Attribute des Dateisystems für eine angegebene Datei oder ein Verzeichnis als ein Transaktiver Vorgang ab.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `GetFileAttributesTransacted` Funktion.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  Ruft die Attribute des Dateisystems für eine angegebene Datei oder ein Verzeichnis als ein Transaktiver Vorgang ab.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `GetFileAttributesTransacted` Funktion.  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  Gibt das Transaktionshandle zurück.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  Bestimmt, ob das fallback-Aufrufe aktiviert sind.  
   
 ```
@@ -307,8 +302,8 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`Wenn das Fallback unterstützt wird. `FALSE` andernfalls.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` Wenn das Fallback unterstützt wird. `FALSE` andernfalls.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  Das Transaktionshandle.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  Verschiebt eine vorhandene Datei oder ein Verzeichnis ist, einschließlich seiner untergeordneten Elemente als ein Transaktiver Vorgang.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `MoveFileTransacted` Funktion.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  Erstellt den angegebenen Registrierungsschlüssel, und ordnet sie einer Transaktion. Wenn der Schlüssel bereits vorhanden ist, wird Sie von die Funktion geöffnet.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `RegCreateKeyTransacted` Funktion.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  Löscht einen Unterschlüssel und ihre Werte aus der angegebenen Clientplattform-spezifische Ansicht der Registrierung als ein Transaktiver Vorgang.  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `RegDeleteKeyTransacted` Funktion.  
   
-##  <a name="regopenkeyex"></a>Fehler bei RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  Fehler bei RegOpenKeyEx  
  Öffnet den angegebenen Registrierungsschlüssel, und ordnet sie einer Transaktion.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `RegOpenKeyTransacted` Funktion.  
   
-##  <a name="rollback"></a>Rollback  
+##  <a name="rollback"></a>  Rollback  
  Anforderungen, die die Transaktion ein Rollback ausgeführt werden.  
   
 ```
@@ -459,7 +454,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>Hinweise  
  Dieser Wrapper Ruft die `RollbackTransaction` Funktion.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  Legt die Attribute für eine Datei oder ein Verzeichnis als ein Transaktiver Vorgang fest.  
   
 ```

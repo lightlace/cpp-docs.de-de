@@ -1,12 +1,9 @@
 ---
 title: Zusammenfassung der Bereichsregeln | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-scope-rules"></a>Zusammenfassung der Bereichsregeln
 Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu dem Punkt, an dem das Überladen bestimmt wird). Wenn der Name eine Funktion kennzeichnet, muss die Funktion im Hinblick auf Anzahl und Typ der Parameter eindeutig sein. Wenn der Name eindeutig bleibt [Memberzugriff](../cpp/member-access-control-cpp.md) Regeln angewendet werden.  
@@ -47,7 +42,7 @@ Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu 
 ## <a name="qualified-names"></a>Qualifizierte Namen  
  Namen, die mit dem binären Bereichsauflösungsoperator (`::`) verwendet werden, werden als "qualifizierte Namen" bezeichnet. Der Name, der nach dem binären Bereichsauflösungsoperator angegeben wird, muss einem Member der Klasse entsprechen, der auf der linken Seite des Operators angegeben oder ein Member der Basisklasse(n) ist.  
   
- Namen angegeben, nach dem Memberauswahloperator (**.** oder  **->** ) müssen Mitglieder des Klassentyps des Objekts, auf der linken Seite des Operators oder Member der Basisklasse(n) angegeben sein. Auf der rechten Seite des Operators Memberauswahl festgelegten Namen (**->**) kann auch Objekte eines anderen Klassentyps sein bereitgestellt, die auf die linke Seite des  **->**  ein Klassenobjekt ist und die Klasse einen überladenen Memberauswahloperator definiert (**->**), die in einen Zeiger auf einen anderen Klassentyp ausgewertet wird. (Diese Bereitstellung wird ausführlicher im [Klassenmemberzugriff](../cpp/member-access.md).)  
+ Namen angegeben, nach dem Memberauswahloperator (**.** oder **->**) müssen Mitglieder des Klassentyps des Objekts, auf der linken Seite des Operators oder Member der Basisklasse(n) angegeben sein. Auf der rechten Seite des Operators Memberauswahl festgelegten Namen (**->**) kann auch Objekte eines anderen Klassentyps sein bereitgestellt, die auf die linke Seite des **->** ein Klassenobjekt ist und die Klasse einen überladenen Memberauswahloperator definiert (**->**), die in einen Zeiger auf einen anderen Klassentyp ausgewertet wird. (Diese Bereitstellung wird ausführlicher im [Klassenmemberzugriff](../cpp/member-access.md).)  
   
  Der Compiler sucht nach Namen in der folgenden Reihenfolge und hört auf, wenn der Name gefunden wird:  
   

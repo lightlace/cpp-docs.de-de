@@ -1,13 +1,10 @@
 ---
 title: -Vmm - Vms, - Vmv (allgemeine Darstellung) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Immer allgemeiner Zweck)
 Wird verwendet, wenn [/vmb, / vmg (Darstellungsmethode)](../../build/reference/vmb-vmg-representation-method.md) ausgewählt ist, als die [Darstellungsmethode](../../build/reference/vmb-vmg-representation-method.md). Diese Optionen geben an, das Vererbungsmodell der Definition der Klasse noch nicht gefunden werden.  
@@ -56,8 +51,8 @@ Wird verwendet, wenn [/vmb, / vmg (Darstellungsmethode)](../../build/reference/v
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ VMM**|Gibt die allgemeinste Darstellung eines Zeigers auf einen Member einer Klasse zu, die mehrfache Vererbung verwendet.<br /><br /> Das entsprechende [Vererbungsschlüsselwort](../../cpp/inheritance-keywords.md) und das Argument zu [#pragma Pointers_to_members](../../preprocessor/pointers-to-members.md) ist **Multiple_inheritance**.<br /><br /> Diese Darstellung ist größer als die, die für einfache Vererbung erforderlich.<br /><br /> Wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert wird, virtuell ist, generiert der Compiler einen Fehler aus.|  
-|**/ VMs**|Gibt die allgemeinste Darstellung eines Zeigers auf einen Member einer Klasse zu, die keine Vererbung oder die einfache Vererbung verwendet.<br /><br /> Das entsprechende [Vererbungsschlüsselwort](../../cpp/inheritance-keywords.md) und das Argument zu [#pragma Pointers_to_members](../../preprocessor/pointers-to-members.md) ist **Single_inheritance**.<br /><br /> Dies ist die kleinstmögliche Darstellung eines Zeigers auf einen Member einer Klasse.<br /><br /> Wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert ist, mehrfach vorhanden ist oder virtuell ist, generiert der Compiler einen Fehler.|  
+|**/vmm**|Gibt die allgemeinste Darstellung eines Zeigers auf einen Member einer Klasse zu, die mehrfache Vererbung verwendet.<br /><br /> Das entsprechende [Vererbungsschlüsselwort](../../cpp/inheritance-keywords.md) und das Argument zu [#pragma Pointers_to_members](../../preprocessor/pointers-to-members.md) ist **Multiple_inheritance**.<br /><br /> Diese Darstellung ist größer als die, die für einfache Vererbung erforderlich.<br /><br /> Wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert wird, virtuell ist, generiert der Compiler einen Fehler aus.|  
+|**/vms**|Gibt die allgemeinste Darstellung eines Zeigers auf einen Member einer Klasse zu, die keine Vererbung oder die einfache Vererbung verwendet.<br /><br /> Das entsprechende [Vererbungsschlüsselwort](../../cpp/inheritance-keywords.md) und das Argument zu [#pragma Pointers_to_members](../../preprocessor/pointers-to-members.md) ist **Single_inheritance**.<br /><br /> Dies ist die kleinstmögliche Darstellung eines Zeigers auf einen Member einer Klasse.<br /><br /> Wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert ist, mehrfach vorhanden ist oder virtuell ist, generiert der Compiler einen Fehler.|  
 |**/vmv**|Gibt die allgemeinste Darstellung eines Zeigers auf einen Member einer Klasse zu, die virtuellen Vererbung verwendet. Er nie verursacht einen Fehler, und ist die Standardeinstellung.<br /><br /> Das entsprechende [Vererbungsschlüsselwort](../../cpp/inheritance-keywords.md) und das Argument zu [#pragma Pointers_to_members](../../preprocessor/pointers-to-members.md) ist **virtuelle Vererbung**.<br /><br /> Diese Option erfordert einen größeren Zeiger und zusätzlichen Code zum Interpretieren des Zeigers als die anderen Optionen.|  
   
  Wenn Sie eine der folgenden Vererbungsmodell Optionen angeben, wird das Modell für alle Zeiger auf Klassenmember, unabhängig von deren Vererbungstyp oder gibt an, ob der Zeiger deklariert ist vor oder nach der Klasse verwendet. Aus diesem Grund, wenn Sie immer mit einfacher Vererbung von Klassen verwenden, können Sie Codegröße verringern durch die Kompilierung mit **/VMs**, aber wenn Sie den allgemeinsten Fall (auf Kosten der größten datendarstellung) verwenden möchten, kompilieren Sie mit **/vmv**.  

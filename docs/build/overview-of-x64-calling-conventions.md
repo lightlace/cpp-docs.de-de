@@ -1,34 +1,29 @@
 ---
-title: "Übersicht über die X64 Aufrufkonventionen | Microsoft Docs"
-ms.custom: 
+title: Übersicht über die X64 Aufrufkonventionen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Übersicht über x64-Aufrufkonventionen
 Zwei wichtige Unterschiede zwischen X86 und [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] werden die 64-Bit-Adressierung-Funktion und eine flache Reihe von 16 64-Bit-registriert wird, zur allgemeinen Verwendung. Registrieren Sie aufgrund des erweiterten Menge [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] verwendet die [__fastcall](../cpp/fastcall.md) Aufrufkonvention und ein Ausnahmebehandlungsmodell RISC-basierten. Die `__fastcall` Konvention verwendet Register für die ersten vier Argumente und den Stapelrahmen, um zusätzliche Argumente zu übergeben.  
   
  Die folgende Compileroption können Sie die Optimierung der Anwendung für [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/ favor (optimieren für Besonderheiten der Architektur)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (Für Architektureigenschaften optimieren)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>Aufrufkonvention  
  Die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Anwendung binären Schnittstelle (ABI) eine Aufrufkonvention für die vier Register Fast-Aufruf wird standardmäßig verwendet. Speicherplatz wird in der Aufrufliste als Schatten Speicher für den aufgerufenen diese Register speichern zugeordnet. Es ist eine strenge 1: 1-Entsprechung zwischen den Argumenten zu einem Funktionsaufruf und die für diese Argumente zu verwendenden Register. Ein der Argumente, das 8 Bytes passt nicht oder ist nicht 1, 2, 4 oder 8 Bytes festgelegt, muss als Verweis übergeben werden. Es gibt keinen Versuch, ein einzelnes Argument auf mehrere Register zu verteilen. Die X87 Registerstapel wird nicht verwendet. Von der aufgerufenen Instanz verwendet werden kann, aber muss bei Funktionsaufrufen volatile berücksichtigt werden. Alle Gleitkommazahlen Vorgänge erfolgen mithilfe der 16 XMM-Register. Ganzzahlige Argumente werden in Registern RCX, RDX, R8 oder R9 übergeben. Gleitkommaoptionen XMM0L, XMM1L XMM2L und XMM3L Argumente übergeben werden. 16-Byte-Argumente werden als Verweis übergeben. Übergeben von Parametern wird ausführlich beschrieben unter [Parameterübergabe](../build/parameter-passing.md). Zusätzlich zu diesen Registern RAX, R10, R11, XMM4 und XMM5 flüchtig gelten. Alle anderen Register sind, nicht flüchtigem. Registernutzung wird ausführlich dokumentiert [registrieren Sie Verbrauch](../build/register-usage.md) und [Aufrufer-/Aufgerufener gespeichert registriert](../build/caller-callee-saved-registers.md).  

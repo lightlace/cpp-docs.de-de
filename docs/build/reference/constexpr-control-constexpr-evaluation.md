@@ -1,13 +1,10 @@
 ---
 title: -Constexpr (Steuerelement Constexpr evaluieren) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /constexpr
 - -constexpr
@@ -20,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e594eb697c8972d28b513a3638d3eb704258b5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Steuerelement Constexpr evaluieren)  
   
@@ -41,13 +37,13 @@ Verwenden der **/constexpr** Compileroptionen in Steuerelementparameter für `co
   
 ## <a name="arguments"></a>Argumente  
   
-**Tiefe***N*  
+**Tiefe *** N*  
 Begrenzen der Tiefe von rekursiven `constexpr` Funktionsaufruf auf *N* Ebenen. Der Standardwert ist 512.  
   
-**Backtrace***N*  
+**Backtrace *** N*  
 Anzeigen von bis zu *N* `constexpr` auswertungen in der Diagnose. Der Standard ist 10.  
   
-**Schritte***N*  
+**Schritte *** N*  
 Beenden `constexpr` Auswertung nach *N* Schritte. Der Standardwert ist 100.000.  
   
 ## <a name="remarks"></a>Hinweise  

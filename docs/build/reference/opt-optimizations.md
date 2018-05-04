@@ -2,12 +2,9 @@
 title: -OPT (Optimierungen) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimierungen)
 Steuert die Optimierungen, die während eines Builds von LINK ausgeführt werden.  
@@ -63,7 +58,7 @@ Steuert die Optimierungen, die während eines Builds von LINK ausgeführt werden
   
  Angeben von **/OPT: ICF** ermöglicht keine der **/OPT: REF** Option.  
   
- **WINDOWS-FIREWALL [=** `iterations` **] &AMP;#124; NOICF**   
+ **WINDOWS-FIREWALL [=** `iterations` **] &AMP;#124; NOICF**  
  Verwendung **/OPT: ICF [=**`iterations`**]** auf identische COMDAT-Faltung durchzuführen. Redundante COMDATs können aus der Linkerausgabe entfernt werden. Der optionale `iterations`-Parameter gibt die Häufigkeit für das Durchlaufen der Symbole für Duplikate an. Die Anzahl von Iterationen beträgt standardmäßig 2. Zusätzliche Iterationen können mehr Duplikate auffinden, die bei der Faltung in vorherigen Iterationen unentdeckt blieben.  
   
  Der Linker verhält sich anders bei **/OPT: REF** angegeben wird – und **ICF** ist wirksam standardmäßig – als mit der beim **/OPT: REF, ICF** explizit angegeben wird. Die Form des **ICF** , aktiviert **/OPT: REF** allein nicht schreibgeschützten Daten gefaltet – Dies schließt .rdata, .pdata und .xdata. Dies führt zu einer geringeren Funktionsfaltung, wenn Images für [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] erstellt werden, denn die Funktionen in diesen Modulen weisen eine größere Abhängigkeit von schreibgeschützten Daten, wie beispielsweise .pdata und .xdata, auf. Für ein vollständiges **ICF** -faltungsverhalten, explizit angeben **/OPT: ICF**.  

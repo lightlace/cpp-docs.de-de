@@ -1,12 +1,9 @@
 ---
 title: __declspec | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -33,20 +29,20 @@ Die erweiterte Attributsyntax für die Angabe von Speicher speicherklasseninform
 
 ## <a name="grammar"></a>Grammatik
 
-*decl-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
+*Decl-Specifiers*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-Decl-Modifier-Seq***)** 
 
 *extended-decl-modifier-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-Decl-Modifier*<sub>abonnieren</sub>  
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-Decl-Modifier* *extended-Decl-Modifier-Seq*
 
 *extended-decl-modifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**align (** *#* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**zuordnen ("** *Segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**als veraltet markiert**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Code_seg ("** *Segname* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Als veraltet markiert**  
+&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**  
@@ -55,14 +51,14 @@ Die erweiterte Attributsyntax für die Angabe von Speicher speicherklasseninform
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**process**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Prozess**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Eigenschaft (** { **get =**_Get_func_name_ &#124; **, put =**_Put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Einschränken**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**  
-&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Thread**  
+&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**  
 
 Die Deklarationsmodifizierersequenz ist durch Leerzeichen getrennt. Beispiele finden Sie in späteren Abschnitten.
 
@@ -88,7 +84,7 @@ In diesem Fall wird das Attribut auf `X` angewendet.
 
 Die allgemeine Richtlinie für die Verwendung der **__declspec** -Attributs für einfache Deklarationen lautet wie folgt:
 
-*decl-specifier-seq* *init-declarator-list*;
+*Decl-Specifier-Seq* *Init-Declarator-List*;
 
 Die *Decl-Specifier-Seq* enthalten soll, unter anderem einen Basistyp (z. B. **Int**, **"float"**, eine **Typedef**, oder einen Klassennamen), Speicherklasse (z. B. **statische**, **"extern"**), oder die **__declspec** Erweiterung. Die *Init-Declarator-List* enthalten soll, unter anderem den Zeiger Teil Deklarationen. Zum Beispiel:
 

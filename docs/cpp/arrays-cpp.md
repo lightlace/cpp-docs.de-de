@@ -1,12 +1,9 @@
 ---
 title: Arrays (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines Arrays ist ein Vektor, der mit der folgenden Sequenz deklariert werden kann:  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Ein optionaler Initialisierer.  Finden Sie unter [Initialisierer](../cpp/initializers.md).  
   
- Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. Element und das letzte Element ist das (*n*-1) Element, in dem  *n*  ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist gültig, nur, wenn das Array das letzte Feld in ist eine `struct` oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
+ Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. Element und das letzte Element ist das (*n*-1) Element, in dem *n* ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist gültig, nur, wenn das Array das letzte Feld in ist eine `struct` oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
   
  Die folgenden Beispiele zeigen, wie ein Array zur Laufzeit definiert wird:  
   
@@ -92,7 +87,7 @@ int i2[5][7];
   
  Sie gibt ein Array vom Typ `int` an, das konzeptionell in einer zweidimensionalen Matrix von fünf Zeilen und sieben Spalten angeordnet ist, wie in der folgenden Abbildung gezeigt:  
   
- ![Konzeptionelles Layout eines mehrere &#45;-dimensionales Array](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Konzeptionelles Layout eines mehrere&#45;-dimensionales Array](../cpp/media/vc38rc1.gif "vc38RC1")  
 Konzeptionelles Layout eines mehrdimensionalen Arrays  
   
  In Deklarationen mehrdimensionaler Arrays mit einer Initialisiererliste (wie in beschrieben [Initialisierer](../cpp/initializers.md)), der Konstante Ausdruck, der angibt, das die Begrenzung für die erste Dimension kann ausgelassen werden. Zum Beispiel:  

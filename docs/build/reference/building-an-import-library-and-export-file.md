@@ -1,13 +1,10 @@
 ---
 title: Erstellen einer Importbibliothek und einer Exportdatei | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>Erstellen einer Importbibliothek und einer Exportdatei
 Verwenden Sie zum Erstellen einer Importbibliothek und exportieren die Datei, die folgende Syntax:  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  Eine Angabe von/Export:*Namen* in der LIB-Befehlszeile  
   
-3.  Eine Definition in einer **EXPORTE** -Anweisung in einem`deffile`  
+3.  Eine Definition in einer **EXPORTE** -Anweisung in einem `deffile`  
   
  Dies sind die gleichen Methoden, die Sie zum Festlegen von Exporten beim Verknüpfen von einem ausführenden Programm verwenden. Ein Programm kann mehr als eine Methode verwendet werden. Sie können Teile der LIB-Befehl angeben (z. B. mehrere *Objektdateien* oder/Export-Spezifikationen) können Sie in eine Befehlsdatei in der LIB-Befehl, wie Sie in einem LINK-Befehl.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  Die *Eintragsname* ist der Name der Funktion oder Daten, der vom aufrufenden Programm verwendet werden. Optional können Sie angeben der *Internalname* wie die Funktion bezeichnet, in der definierenden Programm; standardmäßig *Internalname* ist identisch mit *Eintragsname*. Die `ordinal` gibt einen Index in der Exporttabelle im Bereich von 1 bis 65.535 sein, wenn Sie keinen angeben `ordinal`, LIB weist ein. Die **NONAME** Schlüsselwort exportiert die Funktion nur als Ordnungszahl, ohne eine *Eintragsname*. Die **Daten** Schlüsselwort wird verwendet, um Daten nur Objekte exportieren.  
   
- / INCLUDE:`symbol`  
+ / INCLUDE: `symbol`  
  Fügt das angegebene Symbol zur Symboltabelle. Diese Option ist nützlich für das Erzwingen der Verwendung eines Objekts Bibliothek, die sonst nicht enthalten.  
   
  Beachten Sie, dass wenn Sie die Importbibliothek in einem vorherigen Schritt erstellen, bevor Sie die DLL-Datei erstellen, den gleichen Satz von Objektdateien müssen beim Erstellen der DLL übergeben werden wie bei der Erstellung der Importbibliothek her.  

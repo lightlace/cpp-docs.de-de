@@ -2,12 +2,9 @@
 title: -D (Präprozessordefinitionen) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Präprozessordefinitionen)
 Definiert ein Vorverarbeitungssymbol für eine Quelldatei.  
@@ -50,7 +45,7 @@ Definiert ein Vorverarbeitungssymbol für eine Quelldatei.
   
  Standardmäßig wird einem Symbol der Wert 1 zugeordnet. Beispielsweise **/d** `name` entspricht **/d**`name`**= 1**. Im Beispiel am Ende dieses Artikels, die Definition der **TEST** wird angezeigt, die Drucken `1`.  
   
- Eine Kompilierung mit **/d** `name`  **=**  wird dem Symbol kein Wert zugeordnet. Obwohl das Symbol trotzdem zur bedingten Codekompilierung verwendet werden kann, ergibt das Symbol keinen Wert. Im Beispiel, wenn Sie bei der Kompilierung **/DTEST =**, ein Fehler auftritt. Dieses Verhalten ähnelt der Verwendung von `#define` mit oder ohne Wert.  
+ Eine Kompilierung mit **/d** `name` **=** wird dem Symbol kein Wert zugeordnet. Obwohl das Symbol trotzdem zur bedingten Codekompilierung verwendet werden kann, ergibt das Symbol keinen Wert. Im Beispiel, wenn Sie bei der Kompilierung **/DTEST =**, ein Fehler auftritt. Dieses Verhalten ähnelt der Verwendung von `#define` mit oder ohne Wert.  
   
  Dieser Befehl definiert das DEBUG-Symbol in TEST.C:  
   

@@ -1,12 +1,9 @@
 ---
 title: _U_MENUorID Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID-Klasse
 Diese Klasse stellt den Wrapper für **CreateWindow** und **CreateWindowEx**.  
@@ -57,7 +52,7 @@ class _U_MENUorID
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Ein Handle für ein Menü.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Argument-Adapterklasse ermöglicht entweder IDs ( **"uint"**s) oder im Menü Handles ( `HMENU`s) an eine Funktion übergeben werden, ohne eine explizite Umwandlung auf dem Teil des Aufrufers.  
+ Dieses Argument-Adapterklasse ermöglicht entweder IDs ( **"uint"** s) oder im Menü Handles ( `HMENU`s) an eine Funktion übergeben werden, ohne eine explizite Umwandlung auf dem Teil des Aufrufers.  
   
  Diese Klasse zum Implementieren der Windows-API-Wrapper dient vor allem die [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktionen, die beide akzeptieren ein `HMENU` Argument, das möglicherweise ein untergeordnetes Element Fenster Bezeichner ( **"uint"**) anstatt ein Menü-Handle. Sie können diese Klasse verwendet z. B. sehen, als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).  
 
@@ -67,14 +62,14 @@ class _U_MENUorID
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
  Die Klasse enthält den Wert, der entweder seiner Konstruktoren übergeben, als öffentliche `HMENU` -Datenmember.  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
  Die **"uint"** Argument nur umgewandelt wird ein `HMENU` im Konstruktor und das Ergebnis in die Klasse der einzelnen Datenmember, gespeicherten [M_hMenu](#_u_menuorid__m_hmenu).  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  Wenn Sie keinen Kopierkonstruktor deklarieren, generiert der Compiler einen memberweisen Kopierkonstruktor für Sie.  Wenn Sie keinen Kopierkonstruktoroperator deklarieren, generiert der Compiler einen memberweisen Kopierkonstruktoroperator für Sie. Das Deklarieren eines Kopierkonstruktors unterdrückt nicht den vom Compiler generierten Kopierzuweisungsoperator (und umgekehrt). Wenn Sie einen implementieren, sollten Sie auch den anderen implementieren, damit die Codebedeutung eindeutig ist.  
    
- Der Kopierkonstruktor nutzt ein Argument des Typs *Klassenname***&**, wobei *Klassenname* ist der Name der Klasse für die der Konstruktor definiert ist. Zum Beispiel:  
+ Der Kopierkonstruktor nutzt ein Argument des Typs * Klasse-Namen ***&**, wobei *Klassenname* ist der Name der Klasse für die der Konstruktor definiert ist. Zum Beispiel:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Stellen Sie den Kopierkonstruktor den Argumenttyp *const Klassenname*  **&**  wann immer möglich. Dadurch wird verhindert, dass der Kopierkonstruktor fälschlicherweise das Objekt ändert, aus dem er kopiert. Ermöglicht auch über Kopiervorgang **const** Objekte.  
+>  Stellen Sie den Kopierkonstruktor den Argumenttyp *Klasse const-Namen *** &** wann immer möglich. Dadurch wird verhindert, dass der Kopierkonstruktor fälschlicherweise das Objekt ändert, aus dem er kopiert. Ermöglicht auch über Kopiervorgang **const** Objekte.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Vom Compiler generierte Kopierkonstruktoren  
- Vom Compiler generierte Kopierkonstruktoren, wie benutzerdefinierte Kopierkonstruktoren, verfügen über ein einzelnes Argument vom Typ "Verweis auf *Klassenname*." Eine Ausnahme ist, wenn alle Basisklassen und Memberklassen Kopierkonstruktoren so deklariert, dass Sie ein einzelnes Argument vom Typ erwartet haben **const** *Klassenname***&**. In einem solchen Fall ist die vom Compiler generierte Argument eines Kopierkonstruktors auch **const**.  
+ Vom Compiler generierte Kopierkonstruktoren, wie benutzerdefinierte Kopierkonstruktoren, verfügen über ein einzelnes Argument vom Typ "Verweis auf *Klassenname*." Eine Ausnahme ist, wenn alle Basisklassen und Memberklassen Kopierkonstruktoren so deklariert, dass Sie ein einzelnes Argument vom Typ erwartet haben **const** * Klasse-Namen ***&**. In einem solchen Fall ist die vom Compiler generierte Argument eines Kopierkonstruktors auch **const**.  
   
  Wenn der Argumenttyp für den Kopierkonstruktor ist nicht **const**, Initialisierung durch Kopieren einer **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht: Wenn das Argument ist **const**, können Sie ein Objekt kopieren, nicht initialisieren **const**.  
   
- Vom Compiler generierte Zuweisungsoperatoren folgen dem gleichen Muster bezüglich **const.** Nehmen sie ein einzelnes Argument vom Typ *Klassenname*  **&**  es sei denn, die Zuweisungsoperatoren in allen Basis- und Memberklassen Argumente vom Typ akzeptieren **const** *Klassenname &.* In diesem Fall die Klasse des akzeptiert generierte Zuweisungsoperator ein **const** Argument.  
+ Vom Compiler generierte Zuweisungsoperatoren folgen dem gleichen Muster bezüglich **const.** Nehmen sie ein einzelnes Argument vom Typ *Klasse-Namen *** &**, wenn die Zuweisungsoperatoren in allen Basis- und Memberklassen Argumente vom Typ akzeptieren **const** *Klassenname &.* In diesem Fall die Klasse des akzeptiert generierte Zuweisungsoperator ein **const** Argument.  
   
 > [!NOTE]
 >  Wenn virtuelle Basisklassen von Kopierkonstruktoren – vom Compiler generiert oder benutzerdefiniert – initialisiert werden, werden sie nur einmal initialisiert: bei der Erstellung.  

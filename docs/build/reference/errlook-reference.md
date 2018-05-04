@@ -1,30 +1,25 @@
 ---
 title: ERRLOOK-Referenz | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ab70e590c0dd4db67f97f170f4e6ead05318704
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errlook-reference"></a>ERRLOOK-Referenz
 ERRLOOK-Dienstprogramm im Menü "Extras" als **Fehlersuche**, ruft eine System- oder Modulfehlermeldung auf des Werts eingegeben haben Grundlage. ERRLOOK Ruft den Fehlermeldungstext automatisch ab, wenn Sie Drag & einen hexadezimalen oder dezimalen Wert aus dem Visual Studio-Debugger in Drop der **Wert** edit-Steuerelement. Sie können auch einen Wert eingeben entweder durch Eingabe in die **Wert** edit-Steuerelement oder durch Einfügen aus der Zwischenablage und auf **Nachschlagen**.  

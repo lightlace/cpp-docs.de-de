@@ -1,25 +1,23 @@
 ---
 title: Compileroptionen in alphabetischer Reihenfolge | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
@@ -30,8 +28,8 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[@](at-specify-a-compiler-response-file.md)|Legt eine Antwortdatei fest.|
 |[/?](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[/AI](ai-specify-metadata-directories.md)|Gibt das zu durchsuchende Verzeichnis an, um Dateiverweise aufzulösen, die an die [#using](../../preprocessor/hash-using-directive-cpp.md) -Direktive übergeben wurden.|
-|[/analyze](analyze-code-analysis.md)|Aktiviert die Codeanalyse.|
-|[/arch](arch-minimum-cpu-architecture.md)|Gibt die Architektur für die Codegenerierung an.|
+|[/ analyze](analyze-code-analysis.md)|Aktiviert die Codeanalyse.|
+|[/ Arch](arch-minimum-cpu-architecture.md)|Gibt die Architektur für die Codegenerierung an.|
 |[/await](await-enable-coroutine-support.md)|Aktivieren Sie Erweiterungen für Coroutinen (fortsetzbare Funktionen).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Erhöht die Anzahl von adressierbaren Abschnitten in einer OBJ-Datei.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Behält Kommentare beim Präprozessorlauf bei|
@@ -40,15 +38,15 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/clr](clr-common-language-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf der Common Language Runtime ausgeführt werden kann.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Constexpr-Auswertung zum Zeitpunkt der Kompilierung zu steuern.|
 |[/D](d-preprocessor-definitions.md)|Definiert Konstanten und Makros.|
-|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format der diagnosemeldungen an.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format der diagnosemeldungen an.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|
 |[/E](e-preprocess-to-stdout.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
 |[/EH](eh-exception-handling-model.md)|Gibt das Modell der Ausnahmebehandlung an.|
-|[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
+|[/ EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|Ermöglicht Ihnen, Informationen über interne Compilerfehler direkt an das Visual C++-Team zu senden.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Der ausführungszeichensatz festlegen.|
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
-|[/favor](favor-optimize-for-architecture-specifics.md)|Erzeugt optimierten Code für eine bestimmte [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] -Architektur oder für spezifische Merkmale der Mikroarchitekturen von AMD64- und Extended Memory 64 Technology (EM64T)-Architekturen.|
+|[/ favor](favor-optimize-for-architecture-specifics.md)|Erzeugt optimierten Code für eine bestimmte [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] -Architektur oder für spezifische Merkmale der Mikroarchitekturen von AMD64- und Extended Memory 64 Technology (EM64T)-Architekturen.|
 |[/FA](fa-fa-listing-file.md)|Erstellt eine Listendatei.|
 |[/Fa](fa-fa-listing-file.md)|Legt den Namen der Listendatei fest.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Anzeige des vollständigen Pfads der Quellcodedateien im Diagnosetext in "cl.exe".|
@@ -66,7 +64,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Fx](fx-merge-injected-code.md)|Führt eingefügten Code mit der Quelldatei zusammen.|
 |[/GA](ga-optimize-for-windows-application.md)|Codeoptimierung für Windows-Anwendung.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__cdecl` -Aufrufkonvention (nur x86).|
-|[/Ge](ge-enable-stack-probes.md)|Veraltet. Aktiviert Stapelüberprüfungen.|
+|[/ Ge](ge-enable-stack-probes.md)|Veraltet. Aktiviert Stapelüberprüfungen.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Aktiviert Stringpooling.|
 |[/GH](gh-enable-pexit-hook-function.md)|Ruft die Hookfunktion `_pexit`auf.|
 |[/Gh](gh-enable-penter-hook-function.md)|Ruft die Hookfunktion `_penter`auf.|
@@ -85,7 +83,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Veraltet. Identisch mit [/RTC1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__stdcall` -Aufrufkonvention (nur x86).|
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
-|[/HELP](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
+|[/ HELP](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden. Diese Compileroption gilt nur für die [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] -Compiler (systemeigene und Cross-Compiler).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Erstellt ein Hotpatch-fähiges Abbild.|
 |[/I](i-additional-include-directories.md)|Sucht in einem Verzeichnis nach Includedateien.|
@@ -103,15 +101,15 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Unterdrückt die Anzeige von Startinformationen.|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Erstellt kompakten Code.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Erstellt schnellen Code.|
-|[/Ob](ob-inline-function-expansion.md)|Steuert Inline-Erweiterung.|
+|[Tatsächlich](ob-inline-function-expansion.md)|Steuert Inline-Erweiterung.|
 |[/Od](od-disable-debug.md)|Deaktiviert Optimierung.|
 |[/Og](og-global-optimizations.md)|Veraltet. Verwendet globale Optimierung.|
-|[/Oi](oi-generate-intrinsic-functions.md)|Erstellt systeminterne Funktionen.|
+|[/ Oi](oi-generate-intrinsic-functions.md)|Erstellt systeminterne Funktionen.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Ermöglicht [#pragma omp](../../preprocessor/omp.md) im Quellcode.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt kompakten Code.|
-|[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt schnellen Code.|
-|[/Ox](ox-full-optimization.md)|Verwendet maximale Optimierung (/Ob2gity /Gs).|
-|[/Oy](oy-frame-pointer-omission.md)|Unterdrückt Framezeiger (nur x86).|
+|[/ Ot](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt schnellen Code.|
+|[/ Ox](ox-full-optimization.md)|Verwendet maximale Optimierung (/Ob2gity /Gs).|
+|[/ Oy](oy-frame-pointer-omission.md)|Unterdrückt Framezeiger (nur x86).|
 |[/P](p-preprocess-to-a-file.md)|Schreibt Präprozessorausgaben in eine Datei.|
 |[/permissive-](permissive-standards-conformance.md)|Festlegen Sie Standard-Konformität Modus.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generiert schnelle Transzendente.|
@@ -140,13 +138,13 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Deklariert mehrfache Vererbung.|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Deklariert einfache Vererbung.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Deklariert virtuelle Vererbung.|
-|[/volatile](volatile-volatile-keyword-interpretation.md)|Wählt aus, wie das volatile-Schlüsselwort interpretiert wird.|
+|[/ volatile](volatile-volatile-keyword-interpretation.md)|Wählt aus, wie das volatile-Schlüsselwort interpretiert wird.|
 |[/w](compiler-option-warning-level.md)|Deaktiviert alle Warnungen.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Legt die auszugebende Warnstufe fest.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Legt die Warnstufe für die angegebene Warnung fest.|
 |[/Wall](compiler-option-warning-level.md)|Aktiviert alle Warnungen, einschließlich standardmäßig deaktivierter Warnmeldungen.|
 |[/wd](compiler-option-warning-level.md)|Deaktiviert die angegebene Warnung.|
-|[/we](compiler-option-warning-level.md)|Behandelt die angegebene Warnung als einen Fehler.|
+|[/ We](compiler-option-warning-level.md)|Behandelt die angegebene Warnung als einen Fehler.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Aktiviert einzeilige Diagnose für Fehler- und Warnmeldungen beim Kompilieren von C++-Quellcode aus der Befehlszeile.|
 |[/wo](compiler-option-warning-level.md)|Zeigt die angegebene Warnung nur einmal an.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Veraltet. Erkennt 64-Bit-Portabilitätsprobleme.|
@@ -156,8 +154,8 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignoriert alle anderen Optionen für vorkompilierte Header im aktuellen Erstellungsprozess.|
 |[/Yc](yc-create-precompiled-header-file.md)|Erstellt eine vorkompilierte Headerdatei.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Veraltet. Legt vollständige Debuginformationen in allen Objektdateien ab. Verwendung [/Zi](z7-zi-zi-debug-information-format.md) stattdessen.|
-|[/Yl](yl-inject-pch-reference-for-debug-library.md)|Fügt beim Erstellen einer Debugbibliothek einen PCH-Verweis ein|
-|[/Yu](yu-use-precompiled-header-file.md)|Verwendet eine vorkompilierte Headerdatei beim Erstellungsvorgang.|
+|[/ Yl](yl-inject-pch-reference-for-debug-library.md)|Fügt beim Erstellen einer Debugbibliothek einen PCH-Verweis ein|
+|["/ Yu"](yu-use-precompiled-header-file.md)|Verwendet eine vorkompilierte Headerdatei beim Erstellungsvorgang.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Generiert C 7.0-kompatible Debuginformationen.|
 |[/Za](za-ze-disable-language-extensions.md)|Deaktiviert Spracherweiterungen.|
 |[/Zc](zc-conformance.md)|Legt Standardverhalten unter ["/ Ze"](za-ze-disable-language-extensions.md).[ / Za, / Ze (Spracherweiterungen deaktivieren)](za-ze-disable-language-extensions.md)|

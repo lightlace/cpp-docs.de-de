@@ -1,13 +1,10 @@
 ---
-title: "Schlüsselwörter (C++) | Microsoft Docs"
-ms.custom: 
+title: Schlüsselwörter (C++) | Microsoft Docs
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keywords-c"></a>Schlüsselwörter (C++)
 Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können in einem Programm nicht als Bezeichner verwendet werden. Die folgenden Schlüsselwörter sind für Microsoft C++ reserviert. Namen mit vorangestellten Unterstrichen sind Microsoft-Erweiterungen.  
@@ -54,7 +49,7 @@ Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bede
 |[array](../windows/arrays-cpp-component-extensions.md)|[auto](../cpp/auto-keyword.md)|[bool](../cpp/bool-cpp.md)|  
 |[break](../cpp/break-statement-cpp.md)|[case](../cpp/switch-statement-cpp.md)|[catch](../cpp/try-throw-and-catch-statements-cpp.md)|  
 |[char](../cpp/fundamental-types-cpp.md)|[class](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
-|[const_cast-Operator](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|["decltype"](../cpp/decltype-cpp.md)|  
+|[const_cast-Operator](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|[decltype](../cpp/decltype-cpp.md)|  
 |[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
 |[als veraltet markiert](../cpp/deprecated-cpp.md) <sup>1</sup>|[Dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[DllImport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
 |[do](../cpp/do-while-statement-cpp.md)|[double](../cpp/fundamental-types-cpp.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|  
@@ -62,11 +57,11 @@ Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bede
 |[Enum-Struktur](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
 |[extern](../cpp/using-extern-to-specify-linkage.md)|[false](../cpp/false-cpp.md)|[finally](../dotnet/finally.md)|  
 |[float](../cpp/fundamental-types-cpp.md)|[for](../cpp/for-statement-cpp.md)|[for each in](../dotnet/for-each-in.md)|  
-|["Friend"](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|[generische](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
+|[friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|[Generische](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
 |[initonly](../dotnet/initonly-cpp-cli.md)|[Inline](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
 |[Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md)|[Schnittstellenstruktur](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|  
-|[Zeichenfolgenliterale](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[änderbare](../cpp/mutable-data-members-cpp.md)|  
+|[Zeichenfolgenliterale](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[Änderbare](../cpp/mutable-data-members-cpp.md)|  
 |[naked](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |[new](../cpp/new-operator-cpp.md)|[Noinline](../cpp/noinline.md) <sup>1</sup>|[Noreturn](../cpp/noreturn.md) <sup>1</sup>|  
 |[Nothrow](../cpp/nothrow-cpp.md) <sup>1</sup>|[Novtable](../cpp/novtable.md) <sup>1</sup>|[nullptr](../cpp/nullptr.md)|  

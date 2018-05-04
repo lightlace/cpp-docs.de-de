@@ -1,12 +1,9 @@
 ---
 title: __clrcall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02af89a99b78ba17e6c5a7463073d314ee8d2a03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrcall"></a>__clrcall
 **Microsoft-spezifisch**  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [/ CLR (common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) impliziert, dass alle Funktionen Funktionszeiger und `__clrcall` und der Compiler nicht gestattet, eine Funktion innerhalb der Kompiliereinheit alles außer gekennzeichnet werden `__clrcall`. Wenn **/CLR: pure** verwendet wird, `__clrcall` kann nur für Funktionszeiger und externe Deklarationen angegeben werden.  
   
- Sie können direkt aufrufen `__clrcall` Funktionen von vorhandenem C++-Code, der kompiliert wurde **"/ CLR"** solange diese Funktion eine MSIL-Implementierung verfügt. `__clrcall`Funktionen können nicht direkt über Funktionen, die Inline-Asm haben, und rufen Sie die CPU-spezifische Intrinisics, z. B. aufgerufen werden, auch wenn diese Funktionen mit kompiliert werden, **"/ CLR"**.  
+ Sie können direkt aufrufen `__clrcall` Funktionen von vorhandenem C++-Code, der kompiliert wurde **"/ CLR"** solange diese Funktion eine MSIL-Implementierung verfügt. `__clrcall` Funktionen können nicht direkt über Funktionen, die Inline-Asm haben, und rufen Sie die CPU-spezifische Intrinisics, z. B. aufgerufen werden, auch wenn diese Funktionen mit kompiliert werden, **"/ CLR"**.  
   
  `__clrcall`-Funktionszeiger sollen nur in der Anwendungsdomäne verwendet werden, in der sie erstellt wurden.  Anstatt `__clrcall`-Funktionszeiger über Anwendungsdomänen hinweg zu übergeben, verwenden Sie <xref:System.CrossAppDomainDelegate>. Weitere Informationen finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md).  
   

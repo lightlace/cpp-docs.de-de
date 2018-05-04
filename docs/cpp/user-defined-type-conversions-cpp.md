@@ -1,12 +1,9 @@
 ---
 title: Benutzerdefinierte Typkonvertierungen (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>Benutzerdefinierte Typkonvertierungen (C++)
 Ein *Konvertierung* produziert einen neuen Wert eines bestimmten Typs aus einem Wert eines anderen Typs. *Standardkonvertierungen* sind in der C++-Sprache und Unterstützung, die integrierten Typen, und Sie können erstellen, integriert *benutzerdefinierte Konvertierungen* zum Durchführen von Konvertierungen zu, von oder zwischen benutzerdefinierten Typen.  
@@ -83,7 +78,7 @@ Ein *Konvertierung* produziert einen neuen Wert eines bestimmten Typs aus einem 
   
  Das Schlüsselwort `explicit` kann seit C++98 für Konvertierungskonstruktoren und seit C++11 für Konvertierungsfunktionen verwendet werden. Die folgenden Abschnitte enthalten weitere Informationen zur Verwendung des Schlüsselworts `explicit`.  
   
-##  <a name="ConvCTOR"></a>Konvertierungskonstruktoren  
+##  <a name="ConvCTOR"></a> Konvertierungskonstruktoren  
  Konvertierungskonstruktoren definieren Konvertierungen von benutzerdefinierten oder integrierten Typen zu einem benutzerdefinierten Typ. Das folgende Beispiel zeigt einen Konvertierungskonstruktor, der vom integrierten Typ `double` zum benutzerdefinierten Typ `Money` konvertiert.  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  Obwohl die Vorzüge impliziter Konvertierungen verlockend sind, können diese zu schwer auffindbaren Bugs führen. Als Standardregel sollten alle Konvertierungskonstruktoren explizit sein, es sei denn, Sie möchten eine bestimmte Konvertierung implizit erlauben.  
   
-##  <a name="ConvFunc"></a>Konvertierungsfunktionen  
+##  <a name="ConvFunc"></a> Konvertierungsfunktionen  
  Konvertierungsfunktionen definieren Konvertierungen von einem benutzerdefinierten Typ zu anderen Typen. Diese Funktionen werden manchmal auch als "Umwandlungsoperatoren" bezeichnet, da sie zusammen mit Konvertierungskonstruktoren aufgerufen werden, wenn ein Wert zu einem anderen Typ umgewandelt wird. Das folgende Beispiel zeigt eine Konvertierungsfunktion, die vom benutzerdefinierten Typ `Money` zum integrierten Typ `double` konvertiert:  
   
 ```  

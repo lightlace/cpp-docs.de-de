@@ -1,12 +1,9 @@
 ---
 title: _variant_t-extraktoren | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>_variant_t-Extraktoren
 **Microsoft-spezifisch**  
@@ -119,9 +114,9 @@ operator unsigned __int64() const;
   
 -   **Operator _bstr_t ()** extrahiert eine Zeichenfolge, die in einem gekapselt ist ein `_bstr_t` Objekt.  
   
--   **Operator IDispatch\*()** extrahiert einen Disp-Schnittstellenzeiger aus einem gekapselten **VARIANT**. `AddRef`wird auf dem resultierenden Zeiger aufgerufen, also entscheiden, ob Sie rufen **Version** um ihn freizugeben.  
+-   **Operator IDispatch\*()** extrahiert einen Disp-Schnittstellenzeiger aus einem gekapselten **VARIANT**. `AddRef` wird auf dem resultierenden Zeiger aufgerufen, also entscheiden, ob Sie rufen **Version** um ihn freizugeben.  
   
--   **Operator IUnknown\*()** extrahiert einen COM-Schnittstellenzeiger aus einem gekapselten **VARIANT**. `AddRef`wird auf dem resultierenden Zeiger aufgerufen, also entscheiden, ob Sie rufen **Version** um ihn freizugeben.  
+-   **Operator IUnknown\*()** extrahiert einen COM-Schnittstellenzeiger aus einem gekapselten **VARIANT**. `AddRef` wird auf dem resultierenden Zeiger aufgerufen, also entscheiden, ob Sie rufen **Version** um ihn freizugeben.  
   
  **Ende Microsoft-spezifisch**  
   

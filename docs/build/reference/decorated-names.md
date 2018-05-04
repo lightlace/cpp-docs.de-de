@@ -1,13 +1,10 @@
 ---
-title: "Ergänzte Namen | Microsoft Docs"
-ms.custom: 
+title: Ergänzte Namen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 794e7583158379f84c5ee20408fb784aca213669
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decorated-names"></a>Ergänzte Namen
 Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre ergänzten Namen dargestellt. Ein *ergänzten Namens* ist eine codierte Zeichenfolge, die vom Compiler während der Kompilierung eines Objekts, Daten oder Funktionsdefinition erstellt. Er zeichnet Aufrufkonventionen, Typen, Funktionsparameter und sonstige Informationen zusammen mit dem Namen auf. Diese namensergänzung, auch bekannt als *namenszerlegung*, hilft den Linker suchen die richtigen Funktionen und-Objekte beim Verknüpfen einer ausführbaren Datei.  
@@ -44,14 +39,14 @@ Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre 
   
 -   [Anzeigen von undekorierten Namen](#Undecorated)  
   
-##  <a name="Using"></a>Verwenden von ergänzten Namen  
+##  <a name="Using"></a> Verwenden von ergänzten Namen  
  In der Regel müssen Sie den ergänzten Namen nicht kennen, um Code schreiben zu können, der erfolgreich kompiliert werden kann und richtige Verknüpfungen aufweist. Ergänzte Namen sind ein internes Implementierungsdetail des Compilers und Linkers. Die Tools können den Name in der Regel auch in seiner nicht ergänzten Form behandeln. Ein ergänzter Name ist jedoch manchmal erforderlich, wenn Sie einen Funktionsnamen zum Linker oder anderen Tools angeben. Um zum Beispiel überladene C++-Funktionen, Member von Namespaces, Klassenkonstruktoren, Destruktoren und spezielle Memberfunktionen angeben zu können, müssen Sie den ergänzten Namen verwenden. Weitere Informationen zu den Optionskennzeichnungen und anderen Situationen, in denen ergänzte Namen erforderlich sind, finden Sie in der Dokumentation zu den von Ihnen verwendeten Tools und Optionen.  
   
  Wenn Sie den Funktionsnamen, die Klasse, die Aufrufkonvention, den Rückgabetyp oder einen Parameter ändern, ändert sich auch der ergänzte Name. In diesem Fall müssen Sie den neuen ergänzten Namen abrufen und ihn überall dort verwenden, wo der ergänzte Name angegeben ist.  
   
  Die Namensergänzung ist auch dann wichtig, wenn eine Verknüpfen mit Code erfolgt, der in einer anderen Programmiersprache geschrieben wurde oder andere Compiler verwendet. Verschiedene Compilern verwenden unterschiedliche Konventionen für die Namensergänzung. Wenn Ihre ausführbare Datei eine Verknüpfung zu Code enthält, der in einer anderen Sprache geschrieben wurde, müssen Sie insbesondere darauf achten, dass die exportierten und importierten Namen und Aufrufkonventionen übereinstimmen. Der Assemblersprachcode muss die Aufrufkonventionen und die ergänzten Namen von Visual C++ verwenden, um eine Verknüpfung mit Quellcode zu gewährleisten, der mit Visual C++ geschrieben wurde.  
   
-##  <a name="Format"></a>Format eines C++ ergänzten Namen  
+##  <a name="Format"></a> Format eines C++ ergänzten Namen  
  Ein ergänzter Name für eine C++-Funktion enthält die folgenden Informationen:  
   
 -   Der Funktionsname.  
@@ -73,7 +68,7 @@ Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre 
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|  
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|  
   
-##  <a name="FormatC"></a>Ergänzten Namens in C-Format  
+##  <a name="FormatC"></a> Ergänzten Namens in C-Format  
  Das Format einer Ergänzung für eine C-Funktion hängt von der Aufrufkonvention ab, die in der Deklaration verwendet wird. Dies isst in der folgenden Tabelle dargestellt. Dies ist auch das Ergänzungsformat, das verwendet wird, wenn C++-Code mit einer `extern "C"` Verknüpfung deklariert wird. Die Standardaufrufkonvention ist `__cdecl`. Beachten Sie, dass Funktion in einer 64-Bit-Umgebung nicht ergänzt werden.  
   
 |Aufrufkonvention|Dekoration|  
@@ -83,7 +78,7 @@ Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre 
 |`__fastcall`|Führende und nachfolgende @-Zeichen gefolgt von einer Dezimalzahl, die die Anzahl der Bytes in der Parameterliste darstellt|  
 |`__vectorcall`|Zwei nachfolgende @-Zeichen (@@) gefolgt von einer Bytes-Dezimalzahl in der Parameterliste|  
   
-##  <a name="Viewing"></a>Anzeigen von ergänzten Namen  
+##  <a name="Viewing"></a> Anzeigen von ergänzten Namen  
  Sie erhalten das ergänzte Format eines Symbolnamens, wenn Sie die Quelldatei mit den Daten, dem Objekt oder der Funktionsdefinition bzw. dem Prototypen kompiliert haben. Um ergänzte Namen im Programm zu untersuchen, können Sie eine der folgenden Methoden verwenden:  
   
 -   #### <a name="to-use-a-listing-to-view-decorated-names"></a>Verwenden einer Auflistung zum Anzeigen ergänzter Namen  
@@ -98,9 +93,9 @@ Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre 
   
     1.  Um die exportierten Symbolen in eine OBJ- oder LIB-Datei anzuzeigen, geben Sie `dumpbin /symbols` `objfile` an einer Developer-Eingabeaufforderung.  
   
-    2.  Um das ergänzte Format eines Symbols zu finden, suchen Sie nach dem nicht ergänzten Namen in Klammern. Der ergänzte Name ist nach einer Pipe (&#124;) in der gleichen Zeile Zeichen und vor dem nicht ergänzten Namen.  
+    2.  Um das ergänzte Format eines Symbols zu finden, suchen Sie nach dem nicht ergänzten Namen in Klammern. Der ergänzte Name befindet sich in der gleichen Zeile nach einer Pipe (&#124;)-Zeichen und vor dem nicht ergänzten Namen.  
   
-##  <a name="Undecorated"></a>Anzeigen von undekorierten Namen  
+##  <a name="Undecorated"></a> Anzeigen von undekorierten Namen  
  Mit „undname.exe“ können Sie einen ergänzten Namen in das nicht ergänzte Format konvertieren. Dieses Beispiel zeigt, wie dies funktioniert:  
   
 ```  

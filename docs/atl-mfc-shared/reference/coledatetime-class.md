@@ -1,12 +1,9 @@
 ---
 title: COleDateTime Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDateTime
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ac939714eff9473397cbe50075f3082f38cdf23
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coledatetime-class"></a>COleDateTime-Klasse
 Kapselt die `DATE` -Datentyp, der in der OLE-Automatisierung verwendet wird.  
@@ -114,7 +109,7 @@ class COleDateTime
 |[COleDateTime::m_status](#m_status)|Enthält den Status dieses `COleDateTime` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `COleDateTime`eine Basisklasse verfügt nicht über.  
+ `COleDateTime` eine Basisklasse verfügt nicht über.  
   
  Dies ist eine der möglichen Typen für die [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) -Datentyp der OLE-Automatisierung. Ein `COleDateTime` Wert darstellt, absolute Datums- und Uhrzeitwert.  
   
@@ -125,13 +120,13 @@ class COleDateTime
 |Mitternacht 29. Dezember 1899,|-1.0|  
 |29. Dezember 1899, 6-Uhr|-1.25|  
 |Mitternacht am 30. Dezember 1899|0.0|  
-|Mitternacht am 31. Dezember 1899|1,0|  
+|Mitternacht am 31. Dezember 1899|1.0|  
 |1. Januar 1900, 6 Uhr|2.25|  
   
 > [!CAUTION]
 >  Beachten Sie in der Tabelle oben, obwohl Tageswerte vor Mitternacht am 30. Dezember 1899 negativ Zeit des Tages Werte nicht ausführen. 6:00 Uhr wird beispielsweise immer durch ein Dezimalstellenwert 0,25 unabhängig davon, ob die ganze Zahl, die den Tag darstellt (nach dem 30. Dezember 1899 wieder) positiv oder negativ (vor dem 30. Dezember 1899 wieder) dargestellt. Dies bedeutet, dass ein einfacher floating Point-Vergleich fälschlicherweise sortieren würde eine `COleDateTime` für 6:00 am 12/29/1899 als **später** , die als eine 7:00 Uhr am selben Tag darstellt.  
   
- Die `COleDateTime` -Klasse behandelt Datumsangaben ab dem 1. Januar 100 bis zum 31. Dezember 9999. Die `COleDateTime` Klasse verwendet den gregorianischen Kalender; julianischen wird nicht unterstützt. `COleDateTime`ignoriert die Sommerzeit. (Siehe [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).)  
+ Die `COleDateTime` -Klasse behandelt Datumsangaben ab dem 1. Januar 100 bis zum 31. Dezember 9999. Die `COleDateTime` Klasse verwendet den gregorianischen Kalender; julianischen wird nicht unterstützt. `COleDateTime` ignoriert die Sommerzeit. (Siehe [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).)  
   
 > [!NOTE]
 >  Sie können die `%y` Format, um eine zweistellige Jahresangabe nur für Datumsangaben, die beginnend am 1900 abzurufen. Bei Verwendung der `%y` Format auf ein Datum vor 1900, den Code wird einen Assertionsfehler generiert.  
@@ -144,14 +139,14 @@ class COleDateTime
   
  [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]  
   
- Grundlegende arithmetische Operationen für die `COleDateTime` Werte verwenden Sie die begleitende Klasse [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan`ein Zeitintervall definieren. Die Beziehung zwischen diesen Klassen ist mit dem Umwandlungsoperator zwischen [CTime](../../atl-mfc-shared/reference/ctime-class.md) und [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).  
+ Grundlegende arithmetische Operationen für die `COleDateTime` Werte verwenden Sie die begleitende Klasse [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan` ein Zeitintervall definieren. Die Beziehung zwischen diesen Klassen ist mit dem Umwandlungsoperator zwischen [CTime](../../atl-mfc-shared/reference/ctime-class.md) und [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).  
   
  Weitere Informationen zu den `COleDateTime` und `COleDateTimeSpan` Klassen finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ATLComTime.h  
   
-##  <a name="coledatetime_relational_operators"></a>COleDateTime relationale Operatoren  
+##  <a name="coledatetime_relational_operators"></a>  COleDateTime relationale Operatoren  
  Vergleichsoperatoren.  
   
 ```
@@ -176,11 +171,11 @@ bool operator>=(const COleDateTime& date) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#13](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_2.cpp)]  
   
 ### <a name="example"></a>Beispiel  
- Die Operatoren  **>=** ,  **\< =** ,  **>** , und  **<** , Wenn implementiert die `COleDateTime` Objektsatz ist auf Null.  
+ Die Operatoren **>=**, **\< =**, **>**, und **<**, Wenn implementiert die `COleDateTime` Objektsatz ist auf Null.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]  
   
-##  <a name="coledatetime"></a>COleDateTime::COleDateTime  
+##  <a name="coledatetime"></a>  COleDateTime::COleDateTime  
  Erstellt ein `COleDateTime`-Objekt.  
   
 ```
@@ -248,23 +243,23 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  Es folgt eine kurze Beschreibung jeder Konstruktor:  
   
-- `COleDateTime(`**)** Erstellt eine `COleDateTime` Objekt mit 0 (Mitternacht am 30. Dezember 1899) initialisiert.  
+- `COleDateTime(` **)** Erstellt eine `COleDateTime` Objekt mit 0 (Mitternacht am 30. Dezember 1899) initialisiert.  
   
-- `COleDateTime(``dateSrc` **)** Erstellt eine `COleDateTime` Objekt aus einer vorhandenen `COleDateTime` Objekt.  
+- `COleDateTime(` `dateSrc` **)** Erstellt eine `COleDateTime` Objekt aus einer vorhandenen `COleDateTime` Objekt.  
   
-- `COleDateTime(`*VarSrc* **)** erstellt eine `COleDateTime` Objekt. Versucht, Konvertieren einer `VARIANT` Struktur oder [COleVariant](../../mfc/reference/colevariant-class.md) Objekt um einen Datums-/Uhrzeitwert ( `VT_DATE`) Wert. Wenn die Konvertierung erfolgreich ist, wird der konvertierte Wert kopiert, in das neue `COleDateTime` Objekt. Ist dies nicht der Fall, den Wert, der die `COleDateTime` -Objekts auf 0 (Mitternacht am 30. Dezember 1899) und ihren Status auf ungültig festgelegt wird.  
+- `COleDateTime(` *VarSrc* **)** erstellt eine `COleDateTime` Objekt. Versucht, Konvertieren einer `VARIANT` Struktur oder [COleVariant](../../mfc/reference/colevariant-class.md) Objekt um einen Datums-/Uhrzeitwert ( `VT_DATE`) Wert. Wenn die Konvertierung erfolgreich ist, wird der konvertierte Wert kopiert, in das neue `COleDateTime` Objekt. Ist dies nicht der Fall, den Wert, der die `COleDateTime` -Objekts auf 0 (Mitternacht am 30. Dezember 1899) und ihren Status auf ungültig festgelegt wird.  
   
-- `COleDateTime(``dtSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem **Datum** Wert.  
+- `COleDateTime(` `dtSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem **Datum** Wert.  
   
-- `COleDateTime(``timeSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem `time_t` Wert.  
+- `COleDateTime(` `timeSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem `time_t` Wert.  
   
-- `COleDateTime(`*SystimeSrc* **)** erstellt eine `COleDateTime` -Objekt aus einem `SYSTEMTIME` Wert.  
+- `COleDateTime(` *SystimeSrc* **)** erstellt eine `COleDateTime` -Objekt aus einem `SYSTEMTIME` Wert.  
   
-- `COleDateTime(``filetimeSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem `FILETIME` Wert. sein. Beachten Sie, dass `FILETIME` verwendet Universal Coordinated Time (UTC), damit Sie in der Struktur eine Ortszeit übergeben, die Ergebnisse werden falsche werden. Finden Sie unter [Dateizeiten](http://msdn.microsoft.com/library/windows/desktop/ms724290) in das Windows SDK für Weitere Informationen.  
+- `COleDateTime(` `filetimeSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem `FILETIME` Wert. sein. Beachten Sie, dass `FILETIME` verwendet Universal Coordinated Time (UTC), damit Sie in der Struktur eine Ortszeit übergeben, die Ergebnisse werden falsche werden. Finden Sie unter [Dateizeiten](http://msdn.microsoft.com/library/windows/desktop/ms724290) in das Windows SDK für Weitere Informationen.  
   
-- `COleDateTime(``nYear`, `nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Erstellt eine `COleDateTime` Objekt aus den angegebenen numerischen Werten.  
+- `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Erstellt eine `COleDateTime` Objekt aus den angegebenen numerischen Werten.  
   
-- `COleDateTime(``wDosDate`, `wDosTime` **)** Erstellt eine `COleDateTime` Objekt aus der angegebenen MS-DOS-Datum und Uhrzeit-Werte.  
+- `COleDateTime(` `wDosDate``wDosTime` **)** Erstellt eine `COleDateTime` Objekt aus der angegebenen MS-DOS-Datum und Uhrzeit-Werte.  
   
  Weitere Informationen zu den `time_t` -Datentyp, finden Sie unter der [Zeit](../../c-runtime-library/reference/time-time32-time64.md) -Funktion in der *Run-Time Library Reference*.  
   
@@ -278,7 +273,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#2](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]  
   
-##  <a name="format"></a>COleDateTime::Format  
+##  <a name="format"></a>  COleDateTime::Format  
  Erstellt eine formatierte Darstellung von Datums-/Uhrzeitwert.  
   
 ```
@@ -291,11 +286,11 @@ CString Format(UINT nFormatID) const;
  `dwFlags`  
  Gibt einen der folgenden Gebietsschemas Flags:  
   
-- `LOCALE_NOUSEROVERRIDE`Verwenden Sie anstelle von benutzerdefinierten Einstellungen Standardeinstellungen Gebietsschema des Systems.  
+- `LOCALE_NOUSEROVERRIDE` Verwenden Sie anstelle von benutzerdefinierten Einstellungen Standardeinstellungen Gebietsschema des Systems.  
   
-- `VAR_TIMEVALUEONLY`Ignorieren Sie den Datumsteil während der Analyse aus.  
+- `VAR_TIMEVALUEONLY` Ignorieren Sie den Datumsteil während der Analyse aus.  
   
-- `VAR_DATEVALUEONLY`Ignorieren Sie den Zeitbereich während der Analyse aus.  
+- `VAR_DATEVALUEONLY` Ignorieren Sie den Zeitbereich während der Analyse aus.  
   
  `lcid`  
  Gibt die Gebietsschema-ID für die Konvertierung an. Weitere Informationen zu Sprachen-IDs finden Sie unter [Sprachbezeichner](http://msdn.microsoft.com/library/windows/desktop/dd318691).  
@@ -303,13 +298,13 @@ CString Format(UINT nFormatID) const;
  `lpszFormat`  
  Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Jede Formatierung von Code, Prozentsatz vorangestellt ( `%`) anmelden, wird mit den entsprechenden ersetzt `COleDateTime` Komponente. Andere Zeichen in der Formatzeichenfolge werden in der zurückgegebenen Zeichenfolge unverändert kopiert. Finden Sie die Laufzeitfunktion [Strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für Weitere Informationen. Der Wert und die Bedeutung von Formatierungscodes für `Format` sind:  
   
-- `%H`Stunden den heutigen Tag  
+- `%H` Stunden den heutigen Tag  
   
-- `%M`In der aktuellen Stunde Minuten  
+- `%M` In der aktuellen Stunde Minuten  
   
-- `%S`Sekunden in der aktuellen minute  
+- `%S` Sekunden in der aktuellen minute  
   
-- `%%`Prozentzeichen  
+- `%%` Prozentzeichen  
   
  `nFormatID`  
  Die Ressourcen-ID für die formatsteuerzeichenfolge.  
@@ -334,7 +329,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#3](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_5.cpp)]  
   
-##  <a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>  COleDateTime::GetAsDBTIMESTAMP  
  Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` -Objekt als eine **DBTIMESTAMP** Datenstruktur.  
   
 ```
@@ -354,7 +349,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#4](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_6.cpp)]  
   
-##  <a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>  COleDateTime::GetAsSystemTime  
  Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` -Objekt als eine `SYSTEMTIME` Datenstruktur.  
   
 ```
@@ -369,11 +364,11 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
  Gibt **"true"** bei Erfolg; **"false"** , wenn die Konvertierung schlägt fehl, oder wenn die `COleDateTime` Objekt **NULL** oder ist ungültig.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetAsSystemTime`Speichert die resultierende Uhrzeit in der referenzierten *SysTime* Objekt. Die `SYSTEMTIME` Datenstruktur, die von dieser Funktion initialisiert hat seine **wMilliseconds** Member auf 0 festgelegt.  
+ `GetAsSystemTime` Speichert die resultierende Uhrzeit in der referenzierten *SysTime* Objekt. Die `SYSTEMTIME` Datenstruktur, die von dieser Funktion initialisiert hat seine **wMilliseconds** Member auf 0 festgelegt.  
   
  Finden Sie unter [GetStatus](#getstatus) für Weitere Informationen auf den Statusinformationen im gehalten ein `COleDateTime` Objekt.  
   
-##  <a name="getasudate"></a>COleDateTime::GetAsUDATE  
+##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE  
  Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` -Objekt als eine **Update** Datenstruktur.  
   
 ```
@@ -390,7 +385,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 ### <a name="remarks"></a>Hinweise  
  Ein **Update** Struktur eine "entpackt" Datum darstellt.  
   
-##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>  COleDateTime::GetCurrentTime  
  Rufen Sie diese statische Memberfunktion, um die aktuellen Datums-/Uhrzeitwert zurück.  
   
 ```
@@ -400,7 +395,7 @@ static COleDateTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#5](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_7.cpp)]  
   
-##  <a name="getday"></a>COleDateTime::GetDay  
+##  <a name="getday"></a>  COleDateTime::GetDay  
  Ruft den Tag des Monats, von diesem Datum/Uhrzeit-Wert dargestellt.  
   
 ```
@@ -432,7 +427,7 @@ int GetDay() const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#6](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_8.cpp)]  
   
-##  <a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>  COleDateTime::GetDayOfWeek  
  Ruft den Tag des Monats, von diesem Datum/Uhrzeit-Wert dargestellt.  
   
 ```
@@ -464,7 +459,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#7](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_9.cpp)]  
   
-##  <a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
+##  <a name="getdayofyear"></a>  COleDateTime::GetDayOfYear  
  Ruft den Tag des Jahres dargestellt, die von diesem Datum/Uhrzeit-Wert ab.  
   
 ```
@@ -496,7 +491,7 @@ int GetDayOfYear() const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#8](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_10.cpp)]  
   
-##  <a name="gethour"></a>COleDateTime::GetHour  
+##  <a name="gethour"></a>  COleDateTime::GetHour  
  Ruft ab, der durch diesen Wert für Datum/Uhrzeit dargestellte Stunde angezeigt.  
   
 ```
@@ -528,7 +523,7 @@ int GetHour() const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#9](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_11.cpp)]  
   
-##  <a name="getminute"></a>COleDateTime::GetMinute  
+##  <a name="getminute"></a>  COleDateTime::GetMinute  
  Ruft ab, der Minute, der von diesem Datum/Uhrzeit-Wert dargestellt.  
   
 ```
@@ -560,7 +555,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [GetHour](#gethour).  
   
-##  <a name="getmonth"></a>COleDateTime::GetMonth  
+##  <a name="getmonth"></a>  COleDateTime::GetMonth  
  Ruft den Monat, die von diesem Datum/Uhrzeit-Wert dargestellt.  
   
 ```
@@ -592,7 +587,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [GetDay](#getday).  
   
-##  <a name="getsecond"></a>COleDateTime::GetSecond  
+##  <a name="getsecond"></a>  COleDateTime::GetSecond  
  Ruft das zweite, die von diesem Datum/Uhrzeit-Wert dargestellt.  
   
 ```
@@ -629,7 +624,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [GetHour](#gethour).  
   
-##  <a name="getstatus"></a>COleDateTime::GetStatus  
+##  <a name="getstatus"></a>  COleDateTime::GetStatus  
  Ruft den Status (Gültigkeit) ab einem bestimmten `COleDateTime` Objekt.  
   
 ```
@@ -654,7 +649,7 @@ enum DateTimeStatus
   
  Eine kurze Beschreibung von diesen Statuswerten verwenden finden Sie in der folgenden Liste:  
   
-- `COleDateTime::error`Gibt an, dass beim Versuch, die Teil der Datum/Uhrzeit-Wert abzurufen, ist ein Fehler aufgetreten.  
+- `COleDateTime::error` Gibt an, dass beim Versuch, die Teil der Datum/Uhrzeit-Wert abzurufen, ist ein Fehler aufgetreten.  
   
 - **COleDateTime::valid** gibt an, dass diese `COleDateTime` -Objekt gültig ist.  
   
@@ -691,7 +686,7 @@ enum DateTimeStatus
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#10](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_12.cpp)]  
   
-##  <a name="getyear"></a>COleDateTime::GetYear  
+##  <a name="getyear"></a>  COleDateTime::GetYear  
  Ruft das Jahr, die von diesem Datum/Uhrzeit-Wert dargestellt.  
   
 ```
@@ -725,7 +720,7 @@ int GetYear() const throw();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [GetDay](#getday).  
   
-##  <a name="m_dt"></a>COleDateTime::m_dt  
+##  <a name="m_dt"></a>  COleDateTime::m_dt  
  Die zugrunde liegende **Datum** Struktur für dieses `COleDateTime` Objekt.  
   
 ```
@@ -739,7 +734,7 @@ DATE m_dt;
   
  Weitere Informationen zur Implementierung von der **Datum** Objekt, finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="m_status"></a>COleDateTime::m_status  
+##  <a name="m_status"></a>  COleDateTime::m_status  
  Enthält den Status dieses `COleDateTime` Objekt.  
   
 ```
@@ -752,7 +747,7 @@ DateTimeStatus m_status;
 > [!CAUTION]
 >  Dieses Datenelement ist für Situationen, Erweiterte Programmierung. Sie sollten die Inline-Memberfunktionen verwenden [GetStatus](#getstatus) und [SetStatus](#setstatus). Finden Sie unter `SetStatus` weiteren Warnhinweise bezüglich dieses Datenelement explizit festlegen.  
   
-##  <a name="operator_eq"></a>COleDateTime:: Operator =  
+##  <a name="operator_eq"></a>  COleDateTime:: Operator =  
  Kopiert ein `COleDateTime` Wert.  
   
 ```
@@ -780,7 +775,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
 - **Operator = (** `udate` **)** der **Update** Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status dieses Objekts auf ungültig festgelegt. Wenn dies nicht gelingt, festgelegt wird, ungültig. Ein **Update** Struktur eine "entpackt" Datum darstellt. Finden Sie im Funktion [VarDateFromUdate](http://msdn.microsoft.com/en-us/1c924ac5-b896-49e1-9ccf-825ac7a030c8) Weitere Details.  
   
-- **Operator = (** `filetimeSrc` **)** der [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status dieses Objekts auf ungültig festgelegt. Andernfalls wird festgelegt, ungültig. `FILETIME`Universal Coordinated Time (UTC) verwendet, wenn Sie eine UTC-Zeit in der Struktur übergeben, die Ergebnisse aus UTC-Zeit in die Ortszeit konvertiert und als variant-Zeit gespeichert werden. Dieses Verhalten ist in Visual C++ 6.0- und Visual C++ .NET 2003 SP2 identisch. Finden Sie unter [Dateizeiten](http://msdn.microsoft.com/library/windows/desktop/ms724290) in das Windows SDK für Weitere Informationen.  
+- **Operator = (** `filetimeSrc` **)** der [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status dieses Objekts auf ungültig festgelegt. Andernfalls wird festgelegt, ungültig. `FILETIME` Universal Coordinated Time (UTC) verwendet, wenn Sie eine UTC-Zeit in der Struktur übergeben, die Ergebnisse aus UTC-Zeit in die Ortszeit konvertiert und als variant-Zeit gespeichert werden. Dieses Verhalten ist in Visual C++ 6.0- und Visual C++ .NET 2003 SP2 identisch. Finden Sie unter [Dateizeiten](http://msdn.microsoft.com/library/windows/desktop/ms724290) in das Windows SDK für Weitere Informationen.  
   
  Weitere Informationen finden Sie unter der [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) Eintrag im Windows SDK.  
   
@@ -790,7 +785,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
  Weitere Informationen über die Grenzen für `COleDateTime` Werte finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="operator_add_-"></a>COleDateTime:: Operator +, -  
+##  <a name="operator_add_-"></a>  COleDateTime:: Operator +, -  
  Addition und Subtraktion **ColeDateTime** Werte.  
   
 ```
@@ -800,7 +795,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `COleDateTime`-Objekte stellen die absolute Zeiten dar. [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) -Objekte stellen die relative Häufigkeit dar. Die ersten beiden Operatoren können Sie von Addition und Subtraktion ein `COleDateTimeSpan` Wert aus einem `COleDateTime` Wert. Der dritte Operator können Sie eine subtrahieren `COleDateTime` Wert aus einer anderen ergeben eine `COleDateTimeSpan` Wert.  
+ `COleDateTime` -Objekte stellen die absolute Zeiten dar. [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) -Objekte stellen die relative Häufigkeit dar. Die ersten beiden Operatoren können Sie von Addition und Subtraktion ein `COleDateTimeSpan` Wert aus einem `COleDateTime` Wert. Der dritte Operator können Sie eine subtrahieren `COleDateTime` Wert aus einer anderen ergeben eine `COleDateTimeSpan` Wert.  
   
  Wenn einer der Operanden null ist, ist den Status des resultierenden `COleDateTime` Wert ist null.  
   
@@ -808,7 +803,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
   
  Wenn entweder der Operanden ist ungültig, und der andere nicht null ist Operand, den Status des resultierenden `COleDateTime` Wert ist ungültig.  
   
- Die  **+**  und  **-**  Operatoren implementiert, wenn die `COleDateTime` Objektsatz ist auf Null. Finden Sie unter [COleDateTime relationale Operatoren](#coledatetime_relational_operators) ein Beispiel.  
+ Die **+** und **-** Operatoren implementiert, wenn die `COleDateTime` Objektsatz ist auf Null. Finden Sie unter [COleDateTime relationale Operatoren](#coledatetime_relational_operators) ein Beispiel.  
   
  Weitere Informationen auf den Status gültig, ungültig und null-Werten finden Sie unter der [M_status](#m_status) Membervariablen gespeichert.  
   
@@ -817,7 +812,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#12](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>COleDateTime:: Operator +=, =  
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTime:: Operator +=, =  
  Addition und Subtraktion ein **ColeDateTime** Wert aus diesem `COleDateTime` Objekt.  
   
 ```
@@ -834,11 +829,11 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  Weitere Informationen auf den Status gültig, ungültig und null-Werten finden Sie unter der [M_status](#m_status) Membervariablen gespeichert.  
   
- Die  **+=**  und  **-=**  Operatoren implementiert, wenn die `COleDateTime` Objektsatz ist auf Null. Finden Sie unter [COleDateTime relationale Operatoren](#coledatetime_relational_operators) ein Beispiel.  
+ Die **+=** und **-=** Operatoren implementiert, wenn die `COleDateTime` Objektsatz ist auf Null. Finden Sie unter [COleDateTime relationale Operatoren](#coledatetime_relational_operators) ein Beispiel.  
   
  Weitere Informationen über die Grenzen für `COleDateTime` Werte finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="operator_date"></a>COleDateTime:: Operator Datum  
+##  <a name="operator_date"></a>  COleDateTime:: Operator Datum  
  Konvertiert eine **ColeDateTime** -Wert in einen **Datum**.  
   
 ```
@@ -850,7 +845,7 @@ operator DATE() const throw();
   
  Die **Datum** Operator implementiert, wenn die `COleDateTime` Objektsatz ist auf Null. Finden Sie unter [COleDateTime relationale Operatoren](#coledatetime_relational_operators) ein Beispiel.  
   
-##  <a name="parsedatetime"></a>COleDateTime::ParseDateTime  
+##  <a name="parsedatetime"></a>  COleDateTime::ParseDateTime  
  Analysiert eine Zeichenfolge, um einen Datums-/Uhrzeitwert zu lesen.  
   
 ```
@@ -907,7 +902,7 @@ bool ParseDateTime(
   
  Weitere Informationen zu den Grenzen und die Implementierung für `COleDateTime` Werte finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="setdate"></a>COleDateTime::SetDate  
+##  <a name="setdate"></a>  COleDateTime::SetDate  
  Legt das Datum dieser `COleDateTime` Objekt.  
   
 ```
@@ -973,7 +968,7 @@ int SetDate(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#11](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_14.cpp)]  
   
-##  <a name="setdatetime"></a>COleDateTime::SetDateTime  
+##  <a name="setdatetime"></a>  COleDateTime::SetDateTime  
  Legt das Datum und Uhrzeit dieser `COleDateTime` Objekt.  
   
 ```
@@ -1052,7 +1047,7 @@ int SetDateTime(
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [GetStatus](#getstatus).  
   
-##  <a name="setstatus"></a>COleDateTime::SetStatus  
+##  <a name="setstatus"></a>  COleDateTime::SetStatus  
  Legt den Status dieses `COleDateTime` Objekt.  
   
 ```
@@ -1072,7 +1067,7 @@ void SetStatus(DateTimeStatus status) throw();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [GetStatus](#getstatus).  
   
-##  <a name="settime"></a>COleDateTime::SetTime  
+##  <a name="settime"></a>  COleDateTime::SetTime  
  Festlegen der Zeit dieses `COleDateTime` Objekt.  
   
 ```

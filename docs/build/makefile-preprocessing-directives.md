@@ -1,13 +1,10 @@
 ---
-title: "Makefile-Präprozessordirektiven | Microsoft Docs"
-ms.custom: 
+title: Makefile-Präprozessordirektiven | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -48,23 +45,21 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bc73a86b0772b13731aaf7ac4e2ef0760caa8a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-directives"></a>Anweisungen für den Präprozessorlauf eines Makefiles
 Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Das Ausrufungszeichen (!) muss am Anfang der Zeile angezeigt werden. 0 (null) oder mehrere Leerzeichen bzw. Tabstopps können nach dem Ausrufezeichen, für den Einzug angezeigt werden.  
   
  **! CMDSWITCHES**  
- {**+**&#124;  **-** }*Option*... Aktiviert die einzelnen *Option* aufgeführt, aktivieren oder deaktivieren. Leerzeichen oder Tabstopps müssen angezeigt werden, bevor Sie das + oder - Operator ist; keine können zwischen dem Operator angezeigt und die [option Buchstaben](../build/nmake-options.md). Buchstaben werden die Groß-/ Kleinschreibung nicht und ohne ein Schrägstrich (/) angegeben werden. Um usw. einige Optionen auf off zu aktivieren, verwenden Sie separate Spezifikationen von **! CMDSWITCHES**.  
+ {**+** &#124; **-**}*Option*... Aktiviert die einzelnen *Option* aufgeführt, aktivieren oder deaktivieren. Leerzeichen oder Tabstopps müssen angezeigt werden, bevor Sie das + oder - Operator ist; keine können zwischen dem Operator angezeigt und die [option Buchstaben](../build/nmake-options.md). Buchstaben werden die Groß-/ Kleinschreibung nicht und ohne ein Schrägstrich (/) angegeben werden. Um usw. einige Optionen auf off zu aktivieren, verwenden Sie separate Spezifikationen von **! CMDSWITCHES**.  
   
  Nur/d / I, / n und/s in einem Makefile verwendet werden können. In der Datei Tools.ini dürfen sich alle Optionen außer/f "," / Help "," / nologo, / X, und /?. Änderungen, die in einem Beschreibungsblock angegeben werden nicht bis zum nächsten Beschreibung Blocks wirksam. Diese Direktive aktualisiert **MAKEFLAGS**; Änderungen werden während der Rekursion geerbt, wenn **MAKEFLAGS** angegeben ist.  
   
@@ -74,7 +69,7 @@ Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Da
  **! Nachricht***Text*   
  Zeigt *Text* an die Standardausgabe. Leerzeichen oder Tabstopps vor *Text* werden ignoriert.  
   
- **! UMFASSEN**[  **\<** ] *Filename*[  **>** ]  
+ **! UMFASSEN**[ **\<**] *Filename*[ **>**]  
  Liest *Filename* als Makefile, fährt mit dem aktuellen Makefile. NMAKE sucht *Filename* zuerst im Verzeichnis angegebenen oder aktuellen dann rekursiv in Verzeichnissen aller an die übergeordnete Makefiles, klicken Sie dann, wenn *Filename* in spitzen Klammern eingeschlossen wird (\<>), in den Verzeichnissen, die gemäß der **INCLUDE** -Makro, das anfänglich auf die INCLUDE-Umgebungsvariable festgelegt ist. Wird zum Übergeben von **. SUFFIXE** Einstellungen **. WERTVOLLE**, und auf rekursive Makefiles Rückschlussregeln.  
   
  **! IF**  `constantexpression`  
@@ -86,7 +81,7 @@ Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Da
  **! IFNDEF***Macroname*   
  Anweisungen zwischen verarbeitet **! IFNDEF** und dem nächsten **! ELSE** oder `!ENDIF` Wenn *Macroname* ist nicht definiert.  
   
- **! ELSE**[**IF** *KonstanterAusdruck* &#124; **IFDEF** *Macroname*&#124; **IFNDEF** *Macroname*]  
+ **! ELSE**[**IF** *KonstanterAusdruck* &#124; **IFDEF** *Macroname* &#124; **IFNDEF**  *Macroname*]  
  Anweisungen zwischen verarbeitet **! ELSE** und dem nächsten `!ENDIF` Wenn die vorherige **! IF**, `!IFDEF`, oder **! IFNDEF** Anweisung nach 0 (null) ausgewertet. Die optionalen Schlüsselwörter bieten eine weitere Steuerung der vorverarbeitung.  
   
  **! ELSEIF**  

@@ -1,12 +1,9 @@
 ---
 title: CComControl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControl
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrol-class"></a>CComControl-Klasse
 Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::MessageBox](#messagebox)|Rufen Sie diese Methode zum Erstellen, anzeigen und ein Meldungsfeld arbeiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComControl`ist eine Reihe von nützlichen Steuerelemente Hilfsfunktionen und wichtige Datenelemente für ATL-Steuerelementen. Wenn Sie ein standard-Steuerelement oder ein DHTML-Steuerelement mit der ATL-Steuerelement-Assistenten erstellen, leiten der Assistent automatisch eine Klasse von `CComControl`. `CComControl`leitet die meisten Methoden aus [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+ `CComControl` ist eine Reihe von nützlichen Steuerelemente Hilfsfunktionen und wichtige Datenelemente für ATL-Steuerelementen. Wenn Sie ein standard-Steuerelement oder ein DHTML-Steuerelement mit der ATL-Steuerelement-Assistenten erstellen, leiten der Assistent automatisch eine Klasse von `CComControl`. `CComControl` leitet die meisten Methoden aus [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
   
  Weitere Informationen zum Erstellen eines Steuerelements finden Sie unter der [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md). Weitere Informationen über ATL-Projektassistenten finden Sie im Artikel [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md).  
   
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>  CComControl::CComControl  
  Der Konstruktor.  
   
 ```
@@ -106,7 +101,7 @@ CComControl();
 ### <a name="remarks"></a>Hinweise  
  Ruft die [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) -Konstruktors und übergibt die `m_hWnd` Datenmember über vererbt [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
-##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -126,7 +121,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
  Standardmäßig erstellt ein Fenster für das Steuerelement durch Aufrufen von `CWindowImpl::Create`.  
   
 ```
@@ -146,7 +141,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
  Benachrichtigt den Container-Ereignissenke, die eine Steuerelementeigenschaft geändert wurde.  
   
 ```
@@ -168,7 +163,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
  Benachrichtigt Senke für den Container, eine Steuerelementeigenschaft geändert wird, sodass das Objekt der Senke zum Fortsetzen des Vorgangs aufgefordert werden.  
   
 ```
@@ -191,7 +186,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>  CComControl::MessageBox  
  Rufen Sie diese Methode zum Erstellen, anzeigen und ein Meldungsfeld arbeiten.  
   
 ```
@@ -215,7 +210,7 @@ int MessageBox(
  Gibt einen ganzzahligen Wert angeben, einen der aufgeführten Menüelement Werte [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) in das Windows SDK-Dokumentation.  
   
 ### <a name="remarks"></a>Hinweise  
- `MessageBox`eignet sich sowohl während der Entwicklung als auch eine einfache Möglichkeit, eine Warnung oder Fehlermeldung für den Benutzer anzuzeigen.  
+ `MessageBox` eignet sich sowohl während der Entwicklung als auch eine einfache Möglichkeit, eine Warnung oder Fehlermeldung für den Benutzer anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)   

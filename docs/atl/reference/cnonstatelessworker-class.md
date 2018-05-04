@@ -1,12 +1,9 @@
 ---
 title: CNonStatelessWorker Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CNonStatelessWorker
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 565324b4853880f8dcfafd83f9ba03439b4a7efa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de03ded4bc0021a8884f608d10368e3d09c11cf8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker-Klasse
 Empfang von Anforderungen von einem Threadpool und übergibt sie bei jeder Anforderung an einen Worker-Objekt, das erstellt und zerstört wird.  
@@ -68,12 +63,12 @@ class CNonStatelessWorker
 ## <a name="remarks"></a>Hinweise  
  Diese Klasse ist für die Verwendung mit einem einfachen Arbeitsthread [CThreadPool](../../atl/reference/cthreadpool-class.md). Diese Klasse stellt keine anforderungsverarbeitung Funktionen, die eigene bereit. Stattdessen instanziiert eine Instanz des *Worker* pro Anforderung und übergibt die Implementierung der Methoden für diese Instanz.  
   
- Der Vorteil dieser Klasse ist, dass es sich um eine praktische Möglichkeit so ändern Sie das Zustandsmodell für vorhandene Klassen von Worker-Threads darstellt. `CThreadPool`Erstellen einen einzelnen Worker für die Lebensdauer des Threads, damit, wenn die Workerklasse den Zustand enthält, es in mehreren Anforderungen aufnehmen kann. Indem einfach dieser Klasse in der `CNonStatelessWorker` Vorlage vor der Verwendung mit `CThreadPool`, die Lebensdauer des Arbeitsthreads und der Status ist beschränkt auf eine einzelne Anforderung enthält.  
+ Der Vorteil dieser Klasse ist, dass es sich um eine praktische Möglichkeit so ändern Sie das Zustandsmodell für vorhandene Klassen von Worker-Threads darstellt. `CThreadPool` Erstellen einen einzelnen Worker für die Lebensdauer des Threads, damit, wenn die Workerklasse den Zustand enthält, es in mehreren Anforderungen aufnehmen kann. Indem einfach dieser Klasse in der `CNonStatelessWorker` Vorlage vor der Verwendung mit `CThreadPool`, die Lebensdauer des Arbeitsthreads und der Status ist beschränkt auf eine einzelne Anforderung enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-##  <a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>  CNonStatelessWorker::Execute  
  Implementierung von [WorkerArchetype::Execute](worker-archetype.md#execute).  
 
   
@@ -88,7 +83,7 @@ void Execute(
  Diese Methode erstellt eine Instanz von der *Worker* Klasse auf dem Stapel und die Aufrufe [initialisieren](worker-archetype.md#initialize) für dieses Objekt. Wenn die Initialisierung erfolgreich ist, ruft diese Methode auch [Execute](worker-archetype.md#execute) und [terminieren](worker-archetype.md#terminate) auf dasselbe Objekt.  
 
   
-##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>  CNonStatelessWorker::Initialize  
  Implementierung von [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
   
 ```
@@ -101,7 +96,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Klasse führt keine Initialisierungen `Initialize`.  
   
-##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType  
  Implementierung von [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
   
 ```
@@ -111,7 +106,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>Hinweise  
  Diese Klasse behandelt denselben Typ von Arbeitsaufgabe wie die Klasse für die die *Worker* Template-Parameter. Finden Sie unter [CNonStatelessWorker Übersicht](../../atl/reference/cnonstatelessworker-class.md) für Details.  
   
-##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>  CNonStatelessWorker::Terminate  
  Implementierung von [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
   
 ```
