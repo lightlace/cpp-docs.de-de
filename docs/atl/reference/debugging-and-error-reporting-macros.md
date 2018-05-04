@@ -1,12 +1,9 @@
 ---
 title: Debuggen und die Fehlerberichterstattung Makros | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und die Fehlerberichterstattung-Makros
 Diese Makros stellen nützlich, Debuggen und Ablaufverfolgung Funktionen bereit.  
@@ -45,7 +40,7 @@ Diese Makros stellen nützlich, Debuggen und Ablaufverfolgung Funktionen bereit.
 |[ATLTRACE](#alttrace)|Gibt Warnungen, um ein Ausgabegerät, z. B. das Debuggerfenster, entsprechend der angegebenen Flags und Ebenen. Aus Gründen der Abwärtskompatibilität.|  
 |[ATLTRACE2](#atltrace2)|Gibt Warnungen, um ein Ausgabegerät, z. B. das Debuggerfenster, entsprechend der angegebenen Flags und Ebenen.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  Dieses Makro zu definieren, bevor Sie alle ATL-Headerdateien, um alle Ablaufverfolgungsinformationen einschließlich `AddRef` und **Version** auf Ihre Komponenten Schnittstellen, um das Fenster "Ausgabe" aufruft.  
   
 ```
@@ -72,9 +67,9 @@ Diese Makros stellen nützlich, Debuggen und Ablaufverfolgung Funktionen bereit.
  Hier bereitgestellten Zuordnungen direkt mit den Angaben in der vorherigen ablaufverfolgungsanweisungen Informationen, damit Sie prüfen können, den Verweiszähler während der gesamten Lebensdauer einer Schnittstelle Thunk. Darüber hinaus erhalten Sie einen Überblick über die Anzahl der maximal zulässige Verweisdaten auf diese Schnittstelle Thunk.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`kann in Verkaufsversionen verwendet werden.  
+> `_ATL_DEBUG_INTERFACES` kann in Verkaufsversionen verwendet werden.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  Schreibt alle Aufrufe an `QueryInterface` im Ausgabefenster.  
   
 ```
@@ -86,7 +81,7 @@ Diese Makros stellen nützlich, Debuggen und Ablaufverfolgung Funktionen bereit.
   
  *Schnittstellenname* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  Die `ATLASSERT` Makro führt die gleiche Funktionalität wie die [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) Makro wurde in der C-Laufzeitbibliothek gefunden.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  Dieses Makro wird verwendet, um an eine Funktion übergebenen Parameter zu überprüfen.  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  In Debugbuilds von ATL, sendet die Zeichenfolge " `funcname` ist nicht implementiert" auf das Sicherungsmedium und gibt **E_NOTIMPL**.  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  Gibt Warnungen, um ein Ausgabegerät, z. B. das Debuggerfenster, entsprechend der angegebenen Flags und Ebenen. Aus Gründen der Abwärtskompatibilität.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [ATLTRACE2](#atltrace2) eine Beschreibung der **ATLTRACE**. **ATLTRACE** und `ATLTRACE2` weisen das gleiche Verhalten **ATLTRACE** wird aus Gründen der Abwärtskompatibilität.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  Gibt Warnungen, um ein Ausgabegerät, z. B. das Debuggerfenster, entsprechend der angegebenen Flags und Ebenen.  
   
 ```
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  In Releasebuilds `ATLTRACE2` kompiliert `(void) 0`.  
   
- `ATLTRACE2`Schränkt den Inhalt der Zeichenfolge, die an das Gerät Dump nicht mehr als 1023 Zeichen nach der Formatierung gesendet werden.  
+ `ATLTRACE2` Schränkt den Inhalt der Zeichenfolge, die an das Gerät Dump nicht mehr als 1023 Zeichen nach der Formatierung gesendet werden.  
   
  **ATLTRACE** und `ATLTRACE2` weisen das gleiche Verhalten **ATLTRACE** wird aus Gründen der Abwärtskompatibilität.  
   

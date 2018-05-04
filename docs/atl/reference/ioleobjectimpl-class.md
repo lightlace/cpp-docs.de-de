@@ -2,11 +2,8 @@
 title: IOleObjectImpl Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleObjectImpl
@@ -58,17 +55,15 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f710953a32ccb32c63742ab28e84818f3a330336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a98d3e0ad75d2eaa0325699369bfe4473182049
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl-Klasse
 Diese Klasse implementiert **IUnknown** und ist die principal Schnittstelle, über die ein Container, die mit einem Steuerelement kommuniziert.  
@@ -147,7 +142,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="advise"></a>IOleObjectImpl::Advise  
+##  <a name="advise"></a>  IOleObjectImpl::Advise  
  Richtet eine Advise-Verbindung mit dem Steuerelement.  
   
 ```
@@ -159,7 +154,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) im Windows SDK.  
   
-##  <a name="close"></a>IOleObjectImpl::Close  
+##  <a name="close"></a>  IOleObjectImpl::Close  
  Ändert sich der Zustand des Steuerelements von ausgeführt geladen.  
   
 ```
@@ -173,7 +168,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Finden Sie unter [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) im Windows SDK.  
   
-##  <a name="doverb"></a>IOleObjectImpl::DoVerb  
+##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Weist das Steuerelement an eine der aufgelisteten Aktionen ausführen.  
   
 ```
@@ -202,7 +197,7 @@ STDMETHOD(DoVerb)(
   
  Finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) im Windows SDK.  
   
-##  <a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo  
+##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Weist das Steuerelement in einem beliebigen Zustand rückgängig zu verwerfen, den sie verwalten.  
   
 ```
@@ -219,7 +214,7 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK`zurück.  
   
-##  <a name="doverbhide"></a>IOleObjectImpl::DoVerbHide  
+##  <a name="doverbhide"></a>  IOleObjectImpl::DoVerbHide  
  Deaktiviert und das Steuerelement-Benutzeroberfläche entfernt, und blendet das Steuerelement.  
   
 ```
@@ -236,7 +231,7 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK`zurück.  
   
-##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate  
+##  <a name="doverbinplaceactivate"></a>  IOleObjectImpl::DoVerbInPlaceActivate  
  Führt das Steuerelement und das Fenster installiert, aber das Steuerelement-Benutzeroberfläche wird nicht installiert.  
   
 ```
@@ -256,7 +251,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="remarks"></a>Hinweise  
  Aktiviert das Steuerelement an, durch den Aufruf [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Wenn der Steuerelementklasse Datenmember `m_bWindowOnly` ist **"true"**, `DoVerbInPlaceActivate` zuerst versucht, das Steuerelement als fensterloses Steuerelement zu aktivieren (möglich nur, wenn der Container unterstützt [IOleInPlaceSiteWindowless ](http://msdn.microsoft.com/library/windows/desktop/ms682300)). Wenn dies fehlschlägt, versucht die Funktion zum Aktivieren des Steuerelements mit erweiterten Funktionen (möglich nur, wenn der Container unterstützt [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). Wenn dies fehlschlägt, versucht die Funktion zum Aktivieren des Steuerelements mit keine erweiterten Funktionen (möglich nur, wenn der Container unterstützt [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Wenn die Aktivierung erfolgreich ist, benachrichtigt die Funktion dem Container das Steuerelement aktiviert wurde.  
   
-##  <a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
+##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Bewirkt, dass das Steuerelement bearbeitet werden, öffnen Sie in einem separaten Fenster angezeigt werden.  
   
 ```
@@ -273,7 +268,7 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK`zurück.  
   
-##  <a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary  
+##  <a name="doverbprimary"></a>  IOleObjectImpl::DoVerbPrimary  
  Definiert die Aktion ausgeführt, wenn der Benutzer das Steuerelement doppelklickt.  
   
 ```
@@ -293,7 +288,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig festgelegt, um die Eigenschaftenseiten angezeigt. Sie können dies in der Steuerelementklasse aufzurufenden auf Doppelklicken Sie auf ein anderes Verhalten überschreiben. z. B. spielen Sie ein Video ab, oder wechseln Sie in-Place aktiv.  
   
-##  <a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
+##  <a name="doverbshow"></a>  IOleObjectImpl::DoVerbShow  
  Weist den Container, um das Steuerelement sichtbar zu machen.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Rückgabewert  
  Zu den standardmäßigen `HRESULT` Werte.  
   
-##  <a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate  
+##  <a name="doverbuiactivate"></a>  IOleObjectImpl::DoVerbUIActivate  
  Aktiviert das Steuerelement-Benutzeroberfläche und benachrichtigt dem Container, seine Menüs von zusammengesetzten Menüs ersetzt werden.  
   
 ```
@@ -327,7 +322,7 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Rückgabewert  
  Zu den standardmäßigen `HRESULT` Werte.  
   
-##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise  
+##  <a name="enumadvise"></a>  IOleObjectImpl::EnumAdvise  
  Stellt eine Enumeration von registrierten Advise-Verbindungen für das genannte Steuerelement bereit.  
   
 ```
@@ -337,7 +332,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) im Windows SDK.  
   
-##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
+##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Stellt eine Enumeration von registrierten Aktionen (Verben) für das genannte Steuerelement durch Aufrufen von **OleRegEnumVerbs**.  
   
 ```
@@ -349,7 +344,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
   
  Finden Sie unter [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) im Windows SDK.  
   
-##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite  
+##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Setzt den Zeiger in der Steuerelement-Klassendatenmember [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) in *PpClientSite* und inkrementiert den Verweiszähler für den Zeiger.  
   
 ```
@@ -359,7 +354,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) im Windows SDK.  
   
-##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
+##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Ruft Daten aus der Zwischenablage ab.  
   
 ```
@@ -374,7 +369,7 @@ STDMETHOD(GetClipboardData)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) im Windows SDK.  
   
-##  <a name="getextent"></a>IOleObjectImpl::GetExtent  
+##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Ruft eine ausgeführte Steuerelement Anzeigegröße in HIMETRIC-Einheiten (0,01 Millimeter pro Einheit) ab.  
   
 ```
@@ -388,7 +383,7 @@ STDMETHOD(GetExtent)(
   
  Finden Sie unter [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) im Windows SDK.  
   
-##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus  
+##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Gibt einen Zeiger auf registrierten Statusinformationen für das Steuerelement zurück, durch den Aufruf **OleRegGetMiscStatus**.  
   
 ```
@@ -402,7 +397,7 @@ STDMETHOD(GetMiscStatus)(
   
  Finden Sie unter [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) im Windows SDK.  
   
-##  <a name="getmoniker"></a>IOleObjectImpl::GetMoniker  
+##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Ruft das Steuerelement-Moniker ab.  
   
 ```
@@ -418,7 +413,7 @@ STDMETHOD(GetMoniker)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) im Windows SDK.  
   
-##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
+##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Gibt das Steuerelement-Klassen-ID zurück.  
   
 ```
@@ -428,7 +423,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) im Windows SDK.  
   
-##  <a name="getusertype"></a>IOleObjectImpl::GetUserType  
+##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Gibt das Steuerelement Benutzertypnamens durch Aufrufen von **OleRegGetUserType**.  
   
 ```
@@ -442,7 +437,7 @@ STDMETHOD(GetUserType)(
   
  Finden Sie unter [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) im Windows SDK.  
   
-##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData  
+##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Initialisiert das Steuerelement aus der ausgewählten Daten.  
   
 ```
@@ -458,7 +453,7 @@ STDMETHOD(InitFromData)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) im Windows SDK.  
   
-##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
+##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Überprüft, ob das Steuerelement auf dem neuesten Stand ist.  
   
 ```
@@ -471,7 +466,7 @@ STDMETHOD(IsUpToDate)(void);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) im Windows SDK.  
   
-##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
+##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Wird aufgerufen, indem [DoVerbDiscardUndo](#doverbdiscardundo) nach, dass Sie wieder rückgängig zu machen verworfen wird.  
   
 ```
@@ -484,7 +479,7 @@ HRESULT OnPostVerbDiscardUndo();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode mit den gewünschten Code ausgeführt, nachdem die rückgängig-Zustand verworfen wird.  
   
-##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
+##  <a name="onpostverbhide"></a>  IOleObjectImpl::OnPostVerbHide  
  Wird aufgerufen, indem [DoVerbHide](#doverbhide) nachdem das Steuerelement ausgeblendet ist.  
   
 ```
@@ -497,7 +492,7 @@ HRESULT OnPostVerbHide();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode mit den gewünschten Code ausgeführt, nachdem das Steuerelement ausgeblendet ist.  
   
-##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
+##  <a name="onpostverbinplaceactivate"></a>  IOleObjectImpl::OnPostVerbInPlaceActivate  
  Wird aufgerufen, indem [DoVerbInPlaceActivate](#doverbinplaceactivate) nachdem das Steuerelement direkt aktiviert ist.  
   
 ```
@@ -510,7 +505,7 @@ HRESULT OnPostVerbInPlaceActivate();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode mit den gewünschten Code ausgeführt, nachdem das Steuerelement direkt aktiviert ist.  
   
-##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
+##  <a name="onpostverbopen"></a>  IOleObjectImpl::OnPostVerbOpen  
  Wird aufgerufen, indem [DoVerbOpen](#doverbopen) nachdem das Steuerelement zur Bearbeitung in einem separaten Fenster geöffnet wurde.  
   
 ```
@@ -523,7 +518,7 @@ HRESULT OnPostVerbOpen();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode mit zu bearbeitenden ausgeführt, nachdem das Steuerelement zur Bearbeitung in einem separaten Fenster geöffnet wurde.  
   
-##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
+##  <a name="onpostverbshow"></a>  IOleObjectImpl::OnPostVerbShow  
  Wird aufgerufen, indem [DoVerbShow](#doverbshow) nachdem das Steuerelement sichtbar gemacht wurde.  
   
 ```
@@ -536,7 +531,7 @@ HRESULT OnPostVerbShow();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode mit dem Code an ausgeführt, nachdem das Steuerelement ist sichtbar gemacht werden sollen.  
   
-##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
+##  <a name="onpostverbuiactivate"></a>  IOleObjectImpl::OnPostVerbUIActivate  
  Wird aufgerufen, indem [DoVerbUIActivate](#doverbuiactivate) nach der Aktivierung der Benutzeroberfläche des Steuerelements.  
   
 ```
@@ -549,7 +544,7 @@ HRESULT OnPostVerbUIActivate();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode mit Code, der nach der Aktivierung der Benutzeroberfläche für das Steuerelement ausgeführt werden sollen.  
   
-##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
+##  <a name="onpreverbdiscardundo"></a>  IOleObjectImpl::OnPreVerbDiscardUndo  
  Wird aufgerufen, indem [DoVerbDiscardUndo](#doverbdiscardundo) vor der Rückgängig Status verworfen wird.  
   
 ```
@@ -562,7 +557,7 @@ HRESULT OnPreVerbDiscardUndo();
 ### <a name="remarks"></a>Hinweise  
  Um zu verhindern, dass die rückgängig-Zustand verworfen werden, überschreiben Sie diese Methode, um einen HRESULT-Fehler zurück.  
   
-##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
+##  <a name="onpreverbhide"></a>  IOleObjectImpl::OnPreVerbHide  
  Wird aufgerufen, indem [DoVerbHide](#doverbhide) , bevor das Steuerelement ausgeblendet ist.  
   
 ```
@@ -575,7 +570,7 @@ HRESULT OnPreVerbHide();
 ### <a name="remarks"></a>Hinweise  
  Um zu verhindern, dass das Steuerelement ausgeblendet wird, überschreiben Sie diese Methode, um einen HRESULT-Fehler zurück.  
   
-##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
+##  <a name="onpreverbinplaceactivate"></a>  IOleObjectImpl::OnPreVerbInPlaceActivate  
  Wird aufgerufen, indem [DoVerbInPlaceActivate](#doverbinplaceactivate) , bevor das Steuerelement direkt aktiviert ist.  
   
 ```
@@ -588,7 +583,7 @@ HRESULT OnPreVerbInPlaceActivate();
 ### <a name="remarks"></a>Hinweise  
  Um zu verhindern, dass das Steuerelement festliegen aktiviert wird, überschreiben Sie diese Methode, um einen HRESULT-Fehler zurück.  
   
-##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
+##  <a name="onpreverbopen"></a>  IOleObjectImpl::OnPreVerbOpen  
  Wird aufgerufen, indem [DoVerbOpen](#doverbopen) , bevor das Steuerelement zur Bearbeitung in einem separaten Fenster geöffnet wurde.  
   
 ```
@@ -601,7 +596,7 @@ HRESULT OnPreVerbOpen();
 ### <a name="remarks"></a>Hinweise  
  Um zu verhindern, dass das Steuerelement zur Bearbeitung in einem separaten Fenster geöffnet wird, überschreiben Sie diese Methode, um einen HRESULT-Fehler zurück.  
   
-##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
+##  <a name="onpreverbshow"></a>  IOleObjectImpl::OnPreVerbShow  
  Wird aufgerufen, indem [DoVerbShow](#doverbshow) , bevor das Steuerelement sichtbar gemacht wurde.  
   
 ```
@@ -614,7 +609,7 @@ HRESULT OnPreVerbShow();
 ### <a name="remarks"></a>Hinweise  
  Um zu verhindern, dass das Steuerelement sichtbar gemacht wird, überschreiben Sie diese Methode, um einen HRESULT-Fehler zurück.  
   
-##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
+##  <a name="onpreverbuiactivate"></a>  IOleObjectImpl::OnPreVerbUIActivate  
  Wird aufgerufen, indem [DoVerbUIActivate](#doverbuiactivate) vor der Benutzeroberfläche für das Steuerelement aktiviert wurde.  
   
 ```
@@ -627,7 +622,7 @@ HRESULT OnPreVerbUIActivate();
 ### <a name="remarks"></a>Hinweise  
  Um zu verhindern, dass das Steuerelement-Benutzeroberfläche aktiviert wird, überschreiben Sie diese Methode, um einen HRESULT-Fehler zurück.  
   
-##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
+##  <a name="setclientsite"></a>  IOleObjectImpl::SetClientSite  
  Weist das Steuerelement über die Client-Website im Container.  
   
 ```
@@ -639,7 +634,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
   
  Finden Sie unter [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) im Windows SDK.  
   
-##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme  
+##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Empfiehlt ein Farbschema an das Steuerelement-Anwendung, sofern vorhanden.  
   
 ```
@@ -652,7 +647,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) im Windows SDK.  
   
-##  <a name="setextent"></a>IOleObjectImpl::SetExtent  
+##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Legt den Umfang der Anzeigebereich des Steuerelements fest.  
   
 ```
@@ -670,7 +665,7 @@ STDMETHOD(SetExtent)(
   
  Finden Sie unter [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) im Windows SDK.  
   
-##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames  
+##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Weist dem Steuerelement den Namen der containeranwendung und Containerdokument an.  
   
 ```
@@ -683,7 +678,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) im Windows SDK.  
   
-##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
+##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Weist das Steuerelement was seinen Moniker ist.  
   
 ```
@@ -698,7 +693,7 @@ STDMETHOD(SetMoniker)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) im Windows SDK.  
   
-##  <a name="unadvise"></a>IOleObjectImpl::Unadvise  
+##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Löscht die Advise-Verbindung in der Steuerelementklasse gespeicherten `m_spOleAdviseHolder` -Datenmember.  
   
 ```
@@ -708,7 +703,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) im Windows SDK.  
   
-##  <a name="update"></a>IOleObjectImpl::Update  
+##  <a name="update"></a>  IOleObjectImpl::Update  
  Aktualisiert das Steuerelement an.  
   
 ```

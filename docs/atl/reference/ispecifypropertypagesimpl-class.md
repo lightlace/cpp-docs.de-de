@@ -1,12 +1,9 @@
 ---
 title: ISpecifyPropertyPagesImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ISpecifyPropertyPagesImpl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 716e3ba5d48d39cd189da8d92cca694f09508e42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl-Klasse
 Diese Klasse implementiert **IUnknown** und stellt eine Standardimplementierung von der [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) Schnittstelle.  
@@ -73,7 +68,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
  Füllt das Array der [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) Struktur mit den CLSIDs für Eigenschaftenseiten, die im Eigenschaftenblatt des Objekts angezeigt werden können.  
   
 ```

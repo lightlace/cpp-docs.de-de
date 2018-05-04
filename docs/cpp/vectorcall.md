@@ -2,31 +2,26 @@
 title: __vectorcall | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Microsoft-spezifisch**  
   
- Die `__vectorcall`-Aufrufkonvention gibt an, dass Argumente für Funktionen in Registern zu übergeben sind, sofern dies möglich ist. `__vectorcall`verwendet mehr Register für Argumente als [__fastcall](../cpp/fastcall.md) oder den Standardwert [X64 Aufrufkonvention](../build/overview-of-x64-calling-conventions.md) verwenden. Die Aufrufkonvention `__vectorcall` wird nur in systemeigenem Code auf x86- und x64-Prozessoren unterstützt, die zusätzlich SIMD-Streamingerweiterungen 2 (SSE2) und höher einschließen. Verwenden Sie `__vectorcall`, um Funktionen zu beschleunigen, die mehrere Gleitkommawert- oder SIMD-Vektorargumente übergeben und Vorgänge ausführen, die die Argumente nutzen, die in Registern geladen werden. Die folgende Liste enthält die Funktionen, die den x86- und x64-Implementierungen von `__vectorcall` gemeinsam sind. Die Unterschiede werden später in diesem Artikel erklärt.  
+ Die `__vectorcall`-Aufrufkonvention gibt an, dass Argumente für Funktionen in Registern zu übergeben sind, sofern dies möglich ist. `__vectorcall` verwendet mehr Register für Argumente als [__fastcall](../cpp/fastcall.md) oder den Standardwert [X64 Aufrufkonvention](../build/overview-of-x64-calling-conventions.md) verwenden. Die Aufrufkonvention `__vectorcall` wird nur in systemeigenem Code auf x86- und x64-Prozessoren unterstützt, die zusätzlich SIMD-Streamingerweiterungen 2 (SSE2) und höher einschließen. Verwenden Sie `__vectorcall`, um Funktionen zu beschleunigen, die mehrere Gleitkommawert- oder SIMD-Vektorargumente übergeben und Vorgänge ausführen, die die Argumente nutzen, die in Registern geladen werden. Die folgende Liste enthält die Funktionen, die den x86- und x64-Implementierungen von `__vectorcall` gemeinsam sind. Die Unterschiede werden später in diesem Artikel erklärt.  
   
 |Element|Implementierung|  
 |-------------|--------------------|  

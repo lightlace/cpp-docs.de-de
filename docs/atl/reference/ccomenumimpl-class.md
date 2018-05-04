@@ -1,12 +1,9 @@
 ---
 title: CComEnumImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumImpl
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14c7b1e72db3337b786a0e524ae3d8da964f6bbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl-Klasse
 Diese Klasse stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden.  
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|Die **IUnknown** Zeiger, der das Objekt, das Angeben der Auflistung aufgezählt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComEnumImpl`Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden. Diese Klasse ist analog zu den `IEnumOnSTLImpl` -Klasse, die eine Implementierung einer Schnittstelle Enumerator bereitstellt, basierend auf einen Container für die C++-Standardbibliothek.  
+ `CComEnumImpl` Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden. Diese Klasse ist analog zu den `IEnumOnSTLImpl` -Klasse, die eine Implementierung einer Schnittstelle Enumerator bereitstellt, basierend auf einen Container für die C++-Standardbibliothek.  
   
 > [!NOTE]
 >  Weitere Informationen zu weiteren Unterschieden zwischen `CComEnumImpl` und `IEnumOnSTLImpl`, finden Sie unter [CComEnumImpl::Init](#init).  
@@ -112,21 +107,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
  Der Konstruktor.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl  
  Der Destruktor.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>  CComEnumImpl::Init  
  Sie müssen diese Methode aufrufen, bevor die Übergabe eines Zeigers auf die Enumeratorschnittstelle an alle Clients.  
   
 ```
@@ -158,7 +153,7 @@ HRESULT Init(
   
  Wenn Sie Elemente in einem Array in ein anderes Objekt gespeicherten Zeiger übergeben (und nicht, Sie den Enumerator bitten auf die Daten zu kopieren), können Sie mithilfe der *pUnk* Parameter, um sicherzustellen, dass das Objekt und das Array er enthält so lange als den Enumerator verfügbar sind benötigt. Der Enumerator ist einfach einen COM-Verweis auf das Objekt, das am Leben zu erhalten. Der COM-Verweis wird automatisch freigegeben, wenn der Enumerator zerstört wird.  
   
- Die `flags` Parameter können Sie angeben, wie der Enumerator die Array-Elemente, die an sie übergebenen behandeln soll. `flags`akzeptiert einen der Werte aus den **CComEnumFlags** Enumeration unten angezeigt:  
+ Die `flags` Parameter können Sie angeben, wie der Enumerator die Array-Elemente, die an sie übergebenen behandeln soll. `flags` akzeptiert einen der Werte aus den **CComEnumFlags** Enumeration unten angezeigt:  
   
 ```  
 enum CComEnumFlags  
@@ -178,7 +173,7 @@ enum CComEnumFlags
 > [!NOTE]
 >  Der Prototyp dieser Methode gibt die Elemente des Arrays als Typ **T**, wobei **T** als Vorlagenparameter für die Klasse definiert wurde. Dies ist der gleichen Typ, der über die Schnittstellenmethode COM verfügbar gemacht wird [CComEnumImpl::Next](#next). Die Implikation hiervon ist, dass im Gegensatz zu [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), diese Klasse unterstützt keine anderen Speicher und verfügbar gemacht werden Datentypen. Der Datentyp der Elemente im Array muss identisch mit dem Datentyp, der mittels der COM-Schnittstelle verfügbar gemacht werden.  
   
-##  <a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>  CComEnumImpl::Clone  
  Diese Methode stellt die Implementierung des der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode durch das Erstellen eines Objekts vom Typ `CComEnum`, initialisieren es mit dem gleichen Array und Iterator vom aktuellen Objekt verwendet, und Zurückgeben der Benutzeroberfläche für die neu erstellte Objekt.  
   
 ```
@@ -195,42 +190,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die geklonte Enumeratoren eigene nehmen Sie niemals kopieren (oder Take Ownership) der Daten vom ursprünglichen Enumerator verwendet. Bei Bedarf werden geklonte Enumeratoren den ursprünglichen Enumerator (mit einem COM-Verweis) aufrechtzuerhalten um sicherzustellen, dass die Daten für verfügbar sind, wie sie ihn benötigen.  
   
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk  
  Diese intelligente Zeiger behält einen Verweis auf das übergebene Objekt [CComEnumImpl::Init](#init), um sicherzustellen, dass es während der Lebensdauer des Enumerators aktiv bleibt.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>  CComEnumImpl::m_begin  
  Ein Zeiger auf die Position direkt hinter dem letzten Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>  CComEnumImpl::m_end  
  Ein Zeiger auf das erste Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>  CComEnumImpl::m_iter  
  Ein Zeiger auf das aktuelle Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags  
  Die Flags an übergeben [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>  CComEnumImpl::Next  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Methode.  
   
 ```
@@ -250,7 +245,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>  CComEnumImpl::Reset  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) Methode.  
   
 ```
@@ -260,7 +255,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="skip"></a>CComEnumImpl:: Skip  
+##  <a name="skip"></a>  CComEnumImpl:: Skip  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) Methode.  
   
 ```

@@ -2,26 +2,21 @@
 title: Explizit vorgegebene und gelöschte Funktionen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explizit vorgegebene und gelöschte Funktionen
 In C++11 erhalten Sie durch Defaulted- und Deleted-Funktionen explizite Kontrolle darüber, ob die speziellen Memberfunktionen automatisch generiert werden. Deleted-Funktionen stellen außerdem eine einfache Sprache zur Verfügung, um zu verhindern, dass problematische Typerweiterungen in Argumenten zu Funktionen aller Typen (spezielle Memberfunktionen sowie normale Memberfunktionen und nicht-Memberfunktionen) auftreten, die andernfalls einen unerwünschten Funktionsaufruf auslösen könnten.  

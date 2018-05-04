@@ -1,29 +1,24 @@
 ---
-title: "Schaltfläche \"Module\" | Microsoft Docs"
-ms.custom: 
+title: Schaltfläche "Module" | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8c95775eb8db2256d35715cc117a9bb0fab22e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab09578b5d26d262784bcee49033538a45a4b0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modules-button"></a>Module (Schaltfläche)
 Klicken Sie auf die **Module** Schaltfläche, um die **zusätzliche Module zur Fehlersuche** Dialogfeld. Geben Sie den Namen der gewünschten exe- oder DLL in das Eingabefeld ein, und klicken Sie auf **hinzufügen** die Module in der Suche nach Fehlermeldungen eingeschlossen. Ein Modul aus der Liste entfernen, indem Sie ihn markieren und auf die **entfernen** Schaltfläche.  

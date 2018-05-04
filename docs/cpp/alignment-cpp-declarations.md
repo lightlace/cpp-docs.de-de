@@ -2,26 +2,21 @@
 title: (Ausrichtung (c++ Deklarationen) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>Ausrichtung (C++-Deklarationen)
 Eine der Funktionen von C++ auf niedriger Ebene ist die Möglichkeit zum Angeben der präzisen Ausrichtung von Objekten im Speiche, um eine bestimmte Hardwarearchitektur optimal zu nutzen. Standardmäßig richtet der Compiler Klassen- und Strukturmember auf ihren Größenwert aus: bool und char werden an Ein-Byte-Grenzen ausgerichtet, short an Zwei-Byte-, int an Vier-Byte-, long long, double und long double an Acht-Byte-Grenzen. In den meisten Szenarien müssen Sie sich nie mit der Ausrichtung befassen, da die Standardausrichtung bereits optimal ist. In einigen Fällen jedoch erzielen Sie bedeutende Leistungsverbesserungen oder Speicherplatzeinsparungen, indem Sie eine benutzerdefinierte Ausrichtung für Ihre Datenstrukturen angeben. Vor Visual Studio 2015 konnten Sie die Microsoft-spezifischen Schlüsselwörter __alignof und declspec(alignas) verwenden, um eine Ausrichtung anzugeben, die größer als der Standardwert ist. Starten Sie in Visual Studio 2015 zu verwendende der C ++ 11-Standardschlüsselwörter [Alignof und Alignas](../cpp/alignof-and-alignas-cpp.md) für maximale Codeportabilität. Die neuen Schlüsselwörter verhalten sich wie die Microsoft-spezifischen Erweiterungen, und die Dokumentation für diese Erweiterungen gilt auch für die neuen Schlüsselwörter. Finden Sie unter [__alignof-Operator](../cpp/alignof-operator.md) und [ausrichten](../cpp/align-cpp.md) für Weitere Informationen. Der C++-Standard kein Packverhalten für die Ausrichtung an Grenzen, die kleiner als der Compilerstandardwert für die Zielplattform, sodass trotzdem mithilfe des Microsoft #pragma [Pack](../preprocessor/pack.md) in diesem Fall.  

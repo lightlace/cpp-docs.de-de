@@ -1,30 +1,25 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen und verwenden Sie eine eigene Dynamic Link Library (C++) | Microsoft Docs'
-ms.custom: 
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie eine eigene Dynamic Link Library (C++)
 
@@ -89,7 +84,7 @@ In diesem Satz von Aufgaben erstellen Sie ein Projekt für die DLL, fügen Sie C
 >
 >1. Wählen Sie in der Menüleiste **Projekt** und **Eigenschaften** aus.
 >
->1. Im linken Bereich des der **Eigenschaftenseiten** wählen Sie im Dialogfeld **Präprozessor** unter **Konfigurationseigenschaften**, **C/C++-**. Überprüfen Sie den Inhalt von der **Präprozessordefinitionen** Eigenschaft.<br/><br/>![Überprüfen Sie die Eigenschaft Präprozessordefinitionen](media/mathlibrary-153bug-preprocessor-definitions-check.png "überprüfen Sie die Präprozessordefinitionen-Eigenschaft")<br/><br/>Wenn dort **MATHLIBRARY &#95; EXPORTE** in der **Präprozessordefinitionen** aufzulisten, müssen Sie nicht ändert nichts. Wenn dort **MathLibrary &#95; EXPORTE** stattdessen, fahren Sie die folgenden Schritte ausführen.
+>1. Im linken Bereich des der **Eigenschaftenseiten** wählen Sie im Dialogfeld **Präprozessor** unter **Konfigurationseigenschaften**, **C/C++-**. Überprüfen Sie den Inhalt von der **Präprozessordefinitionen** Eigenschaft.<br/><br/>![Überprüfen Sie die Eigenschaft Präprozessordefinitionen](media/mathlibrary-153bug-preprocessor-definitions-check.png "überprüfen Sie die Präprozessordefinitionen-Eigenschaft")<br/><br/>Wenn dort **MATHLIBRARY&#95;EXPORTE** in der **Präprozessordefinitionen** aufzulisten, müssen Sie nicht ändert nichts. Wenn dort **MathLibrary&#95;EXPORTE** stattdessen, fahren Sie die folgenden Schritte ausführen.
 >
 >1. Am oberen Rand der **Eigenschaftenseiten** ändern Sie im Dialogfeld die **Konfiguration** Dropdownelement **alle Konfigurationen**.
 >
@@ -101,7 +96,7 @@ In diesem Satz von Aufgaben erstellen Sie ein Projekt für die DLL, fügen Sie C
 
 ### <a name="to-create-a-dll-project-in-older-versions-of-visual-studio"></a>So erstellen ein DLL-Projekt in früheren Versionen von Visual Studio
 
-1. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.
+1. Wählen Sie in der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
 1. Im linken Bereich des der **neues Projekt** Dialogfeld erweitern Sie **installiert**, **Vorlagen**, und wählen Sie **Visual C++**, und klicken Sie dann in der Mitte Klicken Sie im Bereich **Win32-Konsolenanwendung**. Geben Sie `MathLibrary` in der **Namen** Eingabefeld zur Angabe eines Benutzernamens für das Projekt.
 
@@ -176,9 +171,9 @@ Rechts jetzt diese DLL kaum erfolgt jedoch nicht. Als Nächstes erstellen Sie ei
 
 Diese Headerdatei deklariert einige Funktionen, um eine generalisierte Fibonacci-Sequenz angegebenen zwei Anfangswerte zu erzeugen. Ein Aufruf von `fibonacci_init(1, 1)` generiert die Sequenz vertraut Fibonacci-Zahl.
 
-Beachten Sie das Präprozessor-Anweisungen am Anfang der Datei ein. Standardmäßig fügt die neue Projektvorlage für eine DLL  ***Projektname*&#95; EXPORTE** auf der definierten Präprozessormakros für die DLL-Projekt. In diesem Beispiel Visual Studio definiert **MATHLIBRARY &#95; EXPORTE** Wenn Ihr MathLibrary DLL-Projekt erstellt wird. (Der Assistenten in Visual Studio 2017 Version 15.3 erzwingt keine Symboldefinition in Großbuchstaben. Wenn Sie das Projekt "MathLibrary" name ist das Symbol definiert MathLibrary &#95; EXPORTE statt MATHLIBRARY &#95; EXPORTIERT. That's Warum gibt es zusätzliche Schritte aus, um dieses Symbol hinzuzufügen.)
+Beachten Sie das Präprozessor-Anweisungen am Anfang der Datei ein. Standardmäßig fügt die neue Projektvorlage für eine DLL ***Projektname *&#95;EXPORTE** auf der definierten Präprozessormakros für die DLL-Projekt. In diesem Beispiel Visual Studio definiert **MATHLIBRARY&#95;EXPORTE** Wenn Ihr MathLibrary DLL-Projekt erstellt wird. (Der Assistenten in Visual Studio 2017 Version 15.3 erzwingt keine Symboldefinition in Großbuchstaben. Wenn Sie Namen für das Projekt "MathLibrary", und klicken Sie dann das Symbol definiert, MathLibrary ist&#95;EXPORTE statt MATHLIBRARY&#95;EXPORTIERT. That's Warum gibt es zusätzliche Schritte aus, um dieses Symbol hinzuzufügen.)
 
-Wenn die **MATHLIBRARY &#95; EXPORTE** -Makro wird definiert, die **MATHLIBRARY &#95; API** Makro legt die `__declspec(dllexport)` Modifizierer in der Funktionsdeklarationen. Dieser Modifizierer weist den Compiler und Linker an, eine Funktion oder Variable aus der DLL zu exportieren, sodass sie von einer anderen Anwendung verwendet werden kann. Wenn **MATHLIBRARY &#95; EXPORTE** ist nicht definiert ist, z. B. wenn die Header-Datei, von einer Clientanwendung enthalten ist **MATHLIBRARY &#95; API** gilt die `__declspec(dllimport)` Modifizierer, um die Deklarationen. Dieser Modifizierer optimiert den Import der Funktion oder Variable in einer Anwendung. Weitere Informationen finden Sie unter [Dllexport, Dllimport](../cpp/dllexport-dllimport.md).
+Wenn die **MATHLIBRARY&#95;EXPORTE** -Makro wird definiert, die **MATHLIBRARY&#95;API** Makro legt die `__declspec(dllexport)` Modifizierer in der Funktionsdeklarationen. Dieser Modifizierer weist den Compiler und Linker an, eine Funktion oder Variable aus der DLL zu exportieren, sodass sie von einer anderen Anwendung verwendet werden kann. Wenn **MATHLIBRARY&#95;EXPORTE** ist nicht definiert ist, z. B. wenn die Header-Datei, von einer Clientanwendung enthalten ist **MATHLIBRARY&#95;API** gilt die `__declspec(dllimport)` Modifizierer, um die Deklarationen. Dieser Modifizierer optimiert den Import der Funktion oder Variable in einer Anwendung. Weitere Informationen finden Sie unter [Dllexport, Dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Eine Implementierung für die DLL hinzufügen.
 

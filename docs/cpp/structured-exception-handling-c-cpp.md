@@ -2,11 +2,8 @@
 title: Strukturierte Ausnahmebehandlung (C/C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Obwohl bei Windows und Visual C++ die strukturierte Ausnahmebehandlung (SEH) unterstützt wird, ist die Verwendung der ISO-Standard-C++-Ausnahmebehandlung empfehlenswert, da Code damit besser portierbar und flexibler ist. Trotzdem ist die Verwendung von SEH in vorhandenem Code oder für bestimmte Arten von Programmen möglicherweise erforderlich.  
@@ -38,9 +33,9 @@ Obwohl bei Windows und Visual C++ die strukturierte Ausnahmebehandlung (SEH) unt
 ## <a name="grammar"></a>Grammatik  
  *Try-except-Anweisung* :  
   
- `__try`*Compound-Statement*  
+ `__try` *Compound-statement*  
   
- `__except`( `expression` ) *Compound-Statement*  
+ `__except` ( `expression` ) *Compound-Statement*  
   
 ## <a name="remarks"></a>Hinweise  
  Mit SEH kann sichergestellt werden, dass Ressourcen wie Speicherblöcke und Dateien bei einer unerwarteten Beendigung der Ausführung ordnungsgemäß funktionieren. Sie können bestimmte Probleme, z. B. unzureichender Arbeitsspeicher, mithilfe von kurzem strukturiertem Code behandeln, in dem keine `goto`-Anweisungen oder ausführliche Tests von Rückgabecodes verwendet werden.  

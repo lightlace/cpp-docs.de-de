@@ -2,11 +2,8 @@
 title: CSnapInItemImpl Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl-Klasse
 Diese Klasse stellt Methoden zum Implementieren einer Snap-in-Knotenobjekt.  
@@ -103,7 +98,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Die Windows **SCOPEDATAITEM** Struktur verwendet werden, indem die `CSnapInItemImpl` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CSnapInItemImpl`Stellt eine grundlegende Implementierung einer-Snap-in-Node-Objekts, z. B. Hinzufügen von Menüelementen und Symbolleisten und Befehle für den Knoten-Snap-in an die entsprechenden Handler-Funktion weiterleiten. Diese Features werden mit mehrere Schnittstellen implementiert, und ordnen Sie Typen. Die standardmäßige Implementierung behandelt Benachrichtigungen an das Knotenobjekt durch Ermitteln der richtigen Instanz der abgeleiteten Klasse, und klicken Sie dann die Nachricht an die richtige Instanz weitergeleitet.  
+ `CSnapInItemImpl` Stellt eine grundlegende Implementierung einer-Snap-in-Node-Objekts, z. B. Hinzufügen von Menüelementen und Symbolleisten und Befehle für den Knoten-Snap-in an die entsprechenden Handler-Funktion weiterleiten. Diese Features werden mit mehrere Schnittstellen implementiert, und ordnen Sie Typen. Die standardmäßige Implementierung behandelt Benachrichtigungen an das Knotenobjekt durch Ermitteln der richtigen Instanz der abgeleiteten Klasse, und klicken Sie dann die Nachricht an die richtige Instanz weitergeleitet.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Erstellt ein `CSnapInItemImpl`-Objekt.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  Diese Funktion wird aufgerufen, um Informationen über das Element abzurufen.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Hinweise  
  Um diese Funktion ordnungsgemäß zu implementieren, kopieren Sie die richtige Informationen in den Datenstrom ( `pStream`), je nachdem, auf das Format der Zwischenablage erkennbar `cf`.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  Mit dieser Funktion wird zum Abrufen von der Art der Ansicht für den Ergebnisbereich des Objekts-Snap-in.  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 ermöglicht die Standardoptionen für die Sicht.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  Mit dieser Funktion wird zum Abrufen der **SCOPEDATAITEM** Struktur das Snap-in.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Ein Zeiger auf die **SCOPEDATAITEM** Struktur der `CSnapInItemImpl` Objekt.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  Mit dieser Funktion wird zum Abrufen der **RESULTDATAITEM** Struktur das Snap-in.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Ein Zeiger auf die **RESULTDATAITEM** Struktur der `CSnapInItemImpl` Objekt.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  Enthält die Zeichenfolge, die für das Knotenelement angezeigt.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  Die `SCOPEDATAITEM` Objektstruktur-Snap-in-Daten.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  Die [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) Objektstruktur-Snap-in-Daten.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  Wird aufgerufen, wenn das Snap-in-Objekt auf vom Benutzer ausgeführt wird.  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  Wird aufgerufen, um festzustellen, ob der Snap-In-Knoten Eigenschaftenseiten unterstützt.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  Mit dieser Funktion können Sie im Menü Einfügen, angegebenen Flags durch Ändern `pInsertionAllowed`, für das Snap-in-Objekt.  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  Sie sollten nicht versuchen, legen Sie die Bits in `pInsertionAllowed` , wurden ursprünglich gelöscht. Zukünftige Versionen von MMC können Bits, die derzeit nicht definiert wurden, sodass Sie Bits nicht ändern sollten, die derzeit nicht definiert werden.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  Mit dieser Funktion können Sie alle Formatvorlagen für Symbolleistenschaltflächen, des Objekts-Snap-in ändern, bevor die Symbolleiste erstellt wird.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] Die Statusflags der Schaltfläche. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
-- `TBSTATE_CHECKED`Die Schaltfläche "" hat die **TBSTYLE_CHECKED** formatieren und gedrückt wird.  
+- `TBSTATE_CHECKED` Die Schaltfläche "" hat die **TBSTYLE_CHECKED** formatieren und gedrückt wird.  
   
-- `TBSTATE_ENABLED`Die Schaltfläche mit der akzeptiert Benutzereingaben. Eine Schaltfläche, die diesen Status nicht akzeptiert keine Benutzereingaben und abgeblendet.  
+- `TBSTATE_ENABLED` Die Schaltfläche mit der akzeptiert Benutzereingaben. Eine Schaltfläche, die diesen Status nicht akzeptiert keine Benutzereingaben und abgeblendet.  
   
-- `TBSTATE_HIDDEN`Die Schaltfläche ist nicht sichtbar und kann keine Benutzereingabe empfangen.  
+- `TBSTATE_HIDDEN` Die Schaltfläche ist nicht sichtbar und kann keine Benutzereingabe empfangen.  
   
-- `TBSTATE_INDETERMINATE`Die Schaltfläche ist abgeblendet.  
+- `TBSTATE_INDETERMINATE` Die Schaltfläche ist abgeblendet.  
   
-- `TBSTATE_PRESSED`Die Schaltfläche wird gedrückt wird.  
+- `TBSTATE_PRESSED` Die Schaltfläche wird gedrückt wird.  
   
-- `TBSTATE_WRAP`Ein Zeilenumbruch folgt auf die Schaltfläche "". Die Schaltfläche "" müssen die `TBSTATE_ENABLED`.  
+- `TBSTATE_WRAP` Ein Zeilenumbruch folgt auf die Schaltfläche "". Die Schaltfläche "" müssen die `TBSTATE_ENABLED`.  
   
  *fsType*  
  [in] Die Statusflags der Schaltfläche. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
-- `TBSTYLE_BUTTON`Erstellt eine Standardschaltflächen.  
+- `TBSTYLE_BUTTON` Erstellt eine Standardschaltflächen.  
   
-- `TBSTYLE_CHECK`Erstellt eine Schaltfläche, die zwischen der gedrückten und nicht gedrückt Zustand jedes Mal wechselt der Benutzer darauf klickt. Die Schaltfläche "" hat eine andere Hintergrundfarbe, wenn es in den Zustand "gedrückt" ist.  
+- `TBSTYLE_CHECK` Erstellt eine Schaltfläche, die zwischen der gedrückten und nicht gedrückt Zustand jedes Mal wechselt der Benutzer darauf klickt. Die Schaltfläche "" hat eine andere Hintergrundfarbe, wenn es in den Zustand "gedrückt" ist.  
   
-- `TBSTYLE_CHECKGROUP`Erstellt eine Kontrollkästchen-Schaltfläche, die gedrückt bleibt, bis eine andere Schaltfläche in der Gruppe aufgerufen werden.  
+- `TBSTYLE_CHECKGROUP` Erstellt eine Kontrollkästchen-Schaltfläche, die gedrückt bleibt, bis eine andere Schaltfläche in der Gruppe aufgerufen werden.  
   
-- `TBSTYLE_GROUP`Erstellt eine Schaltfläche, die gedrückt bleibt, bis eine andere Schaltfläche in der Gruppe aufgerufen werden.  
+- `TBSTYLE_GROUP` Erstellt eine Schaltfläche, die gedrückt bleibt, bis eine andere Schaltfläche in der Gruppe aufgerufen werden.  
   
-- `TBSTYLE_SEP`Erstellt ein Trennzeichen, die eine kleine zeitliche Lücke zwischen Schaltflächengruppen bereitstellen. Eine Schaltfläche mit diesem Format empfängt keine Benutzereingaben.  
+- `TBSTYLE_SEP` Erstellt ein Trennzeichen, die eine kleine zeitliche Lücke zwischen Schaltflächengruppen bereitstellen. Eine Schaltfläche mit diesem Format empfängt keine Benutzereingaben.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  Rufen Sie diese Funktion, um ein Menüelement zu ändern, bevor es in das Kontextmenü des Snap-in-Objekts eingefügt wird.  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED** das Menüelement deaktiviert, damit nicht ausgewählt werden, aber das Flag ist nicht grau.  
   
-- `MF_ENABLED`Das Menüelement aktiviert, es ausgewählt werden kann vom grau Zustand wiederhergestellt.  
+- `MF_ENABLED` Das Menüelement aktiviert, es ausgewählt werden kann vom grau Zustand wiederhergestellt.  
   
 - **MF_GRAYED** deaktiviert das Menüelement, das es abblendet, damit es nicht ausgewählt werden kann.  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** und **MF_UNCHECKED**.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  Mit dieser Funktion können Sie eine Symbolleisten-Schaltfläche des Objekts-Snap-in ändern, bevor er angezeigt wird.  
   
 ```

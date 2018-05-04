@@ -1,12 +1,9 @@
 ---
 title: 'Additive Operatoren: + und - | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Additive Operatoren: + und -
 ## <a name="syntax"></a>Syntax  
@@ -58,21 +53,21 @@ expression - expression
   
 |Typ|Bedeutung|  
 |----------|-------------|  
-|*arithmetic*|Ganzzahlige und nicht verankerte Typen werden kollektiv als "arithmetische" Typen bezeichnet.|  
+|*Arithmetische Operationen*|Ganzzahlige und nicht verankerte Typen werden kollektiv als "arithmetische" Typen bezeichnet.|  
 |*integral*|Die Typen "char" und "int" in sämtlichen Größen ("long", "short") und Enumerationen sind ganzzahlige Typen.|  
-|*scalar*|Skalare Operanden sind entweder arithmetische oder Zeiger-Operanden.|  
+|*skalare*|Skalare Operanden sind entweder arithmetische oder Zeiger-Operanden.|  
   
  Die gültigen Kombinationen für diese Operatoren sind:  
   
- *arithmetic* + *arithmetic*  
+ *arithmetische* + *arithmetische*  
   
- *scalar* + *integral*  
+ *Skalare* + *ganzzahligen*  
   
- *integral* + *scalar*  
+ *ganzzahlige* + *skalare*  
   
- *arithmetic* - *arithmetic*  
+ *arithmetische* - *arithmetische*  
   
- *scalar* - *scalar*  
+ *Skalare* - *skalare*  
   
  Beachten Sie, dass Addition und Subtraktion keine äquivalenten Vorgänge sind.  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Zeigersubtraktion  
  Wenn beide Operanden Zeiger sind, ist das Ergebnis der Subtraktion die Differenz (in Arrayelementen) zwischen den Operanden. Der subtraktionsausdruck gibt ein ganzzahliges-Ergebnis mit Vorzeichen vom Typ Ptrdiff_t (definiert in der standardincludedatei \<stddef.h >).  
   
- Einer der Operanden kann vom ganzzahligen Typ sein, solange er der zweite Operand ist. Das Ergebnis der Subtraktion ist vom selben Datentyp wie der ursprüngliche Zeiger. Der Wert der Subtraktion ist ein Zeiger auf die (*n* - *ich*) te Arrayelement, wobei  *n*  das Element verweist der ursprüngliche Zeiger und *ich* ist der ganzzahlige Wert des zweiten Operanden.  
+ Einer der Operanden kann vom ganzzahligen Typ sein, solange er der zweite Operand ist. Das Ergebnis der Subtraktion ist vom selben Datentyp wie der ursprüngliche Zeiger. Der Wert der Subtraktion ist ein Zeiger auf die (*n* - *ich*) te Arrayelement, auf dem *n* das Element verweist der ursprüngliche Zeiger und *ich* ist der ganzzahlige Wert des zweiten Operanden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit binären Operatoren](../cpp/expressions-with-binary-operators.md)   

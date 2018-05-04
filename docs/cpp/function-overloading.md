@@ -1,12 +1,9 @@
 ---
-title: "Funktionsüberladung | Microsoft Docs"
-ms.custom: 
+title: Funktionsüberladung | Microsoft Docs
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und Anzahl von Argumenten. 
@@ -261,26 +256,26 @@ volatile Over&
   
 |Konvertieren von Typ|Konvertiert in Typ|  
 |-----------------------|---------------------|  
-|*type-name*|*type-name* **&**|  
-|*type-name* **&**|*type-name*|  
-|*type-name* **[ ]**|*type-name\**|  
+|*Typname*|*Typname* **&**|  
+|*Typname* **&**|*Typname*|  
+|*Typname* **]**|*Typname\**|  
 |*Typname* **(** *Argumentliste* **)**|**(**  *\*Typname* **) (** *Argumentliste* **)**|  
-|*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *Typname*|  
-|*type-name\**|**const** *type-name\**|  
-|*type-name\**|`volatile` *Typname\**|  
+|*Typname*|**const** *Typname*|  
+|*Typname*|`volatile` *Typname*|  
+|*Typname\**|**const** *Typname\**|  
+|*Typname\**|`volatile` *Typname\**|  
   
  Die Reihenfolge für Konvertierungen lautet wie folgt:  
   
 1.  Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:  
   
-    -   Von Zeiger in Zeiger auf **const** (`type`  **\***  auf **const** `type`  **\***  ).  
+    -   Von Zeiger in Zeiger auf **const** (`type` **\*** auf **const** `type` **\*** ).  
   
-    -   Von Zeiger in Zeiger auf `volatile` (`type`  **\***  auf `volatile` `type`  **\*** ).  
+    -   Von Zeiger in Zeiger auf `volatile` (`type` **\*** auf `volatile` `type` **\***).  
   
-    -   Von Verweis in Verweis auf **const** (`type`  **&**  auf **const** `type`  **&** ).  
+    -   Von Verweis in Verweis auf **const** (`type` **&** auf **const** `type` **&**).  
   
-    -   Von Verweis in Verweis auf `volatile` (`type`  **&**  auf `volatile` `type`  **&** ).  
+    -   Von Verweis in Verweis auf `volatile` (`type` **&** auf `volatile` `type` **&**).  
   
 2.  Übereinstimmung mithilfe von Erweiterungen. Jede beliebige Sequenz nicht als genaue Übereinstimmung, die nur ganzzahlige Erweiterungen, Konvertierungen von enthält klassifiziert **"float"** auf **doppelte**, und triviale Konvertierungen wird als Übereinstimmung mithilfe von Erweiterungen klassifiziert. Obwohl eine Übereinstimmung mit Erweiterungen besser ist als eine Übereinstimmung, die Standardkonvertierungen verwendet, ist sie nicht so gut wie eine genaue Übereinstimmung.  
   

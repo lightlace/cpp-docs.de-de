@@ -1,12 +1,9 @@
 ---
 title: CComClassFactory Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a144f4ff9902a633933ae556df872a9d55a5409
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory-Klasse
 Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle.  
@@ -51,7 +46,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|Sperrt die Klassenfactory im Arbeitsspeicher.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComClassFactory`implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) -Schnittstelle, die enthält Methoden zum Erstellen eines Objekts von einem bestimmten CLSID sowie das Sperren der Klassenfactory im Arbeitsspeicher, damit neue Objekte schneller erstellt werden können. **IClassFactory** muss für jede Klasse, die Sie in der Registrierung und Zuweisen von dem Sie CLSID registrieren implementiert werden.  
+ `CComClassFactory` implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) -Schnittstelle, die enthält Methoden zum Erstellen eines Objekts von einem bestimmten CLSID sowie das Sperren der Klassenfactory im Arbeitsspeicher, damit neue Objekte schneller erstellt werden können. **IClassFactory** muss für jede Klasse, die Sie in der Registrierung und Zuweisen von dem Sie CLSID registrieren implementiert werden.  
   
  ATL-Objekte abrufen eine Klassenfactory normalerweise durch Ableiten von [CComCoClass](../../atl/reference/ccomcoclass-class.md). Diese Klasse enthält das Makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), die deklariert wird, `CComClassFactory` als der standardfactory-Klasse. Um diese Standardeinstellung zu überschreiben, geben Sie einen von der `DECLARE_CLASSFACTORY` *XXX* Makros in der Klasse. Z. B. die [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) Makro verwendet die angegebene Klasse für die Klassenfactory:  
   
@@ -70,7 +65,7 @@ class CComClassFactory
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory::CreateInstance  
  Erstellt ein Objekt der angegebenen CLSID und ruft einen Schnittstellenzeiger für dieses Objekt ab.  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory::LockServer  
  Erhöht und verringert die Sperrenanzahl Modul durch Aufrufen von **_Module::Lock** und **_Module::Unlock**zugeordnet.  
   
 ```
@@ -99,7 +94,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
 ### <a name="parameters"></a>Parameter  
  `fLock`  
- [in] Wenn **"true"**die Anzahl der Sperren andernfalls erhöht, wird die Anzahl der Sperren wird verringert.  
+ [in] Wenn **"true"** die Anzahl der Sperren andernfalls erhöht, wird die Anzahl der Sperren wird verringert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  

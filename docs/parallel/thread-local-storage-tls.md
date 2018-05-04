@@ -1,12 +1,12 @@
 ---
 title: Lokaler Threadspeicher (TLS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage-tls"></a>Threadlokaler Speicher (TLS)
 Durch den threadlokalen Speicher (Thread Local Storage, TLS) kann jeder Thread in einem bestimmten Multithreadprozess Speicherplätze für threadspezifische Daten zuordnen. Dynamisch gebundene (Laufzeit) threadspezifische Daten über die TLS-API unterstützt werden ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), und [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Weitere Informationen zur Implementierung von threadlokalen Speicher unter Windows finden Sie unter [threadlokaler Speicher (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Von Win32 und dem Visual C++-Compiler werden nun neben der bestehenden API-Implementierung statisch gebundene, auf einzelne Threads bezogene (Ladezeit-) Daten unterstützt.  
   
-##  <a name="_core_compiler_implementation_for_tls"></a>Compilerimplementierung für TLS  
+##  <a name="_core_compiler_implementation_for_tls"></a> Compilerimplementierung für TLS  
  **C ++ 11:** der `thread_local` -Speicherklassenspezifizierer ist die empfohlene Methode zum Angeben von lokalem Threadspeicher für Objekte und Klassenmember. Weitere Informationen finden Sie unter [Speicherklassen (C++)](../cpp/storage-classes-cpp.md).  
   
  Visual C++ bietet auch eine Microsoft-spezifisches Attribut [Thread](../cpp/thread.md), als erweiterten Speicherklassenmodifizierer. Verwenden der `__declspec` -Schlüsselwort zu deklarieren, ein **Thread** Variable. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:  
@@ -117,9 +117,9 @@ __declspec( thread ) int tls_i = 1;
   
      Beachten Sie, dass ein `sizeof`-Ausdruck, der das Objekt enthält, das derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und sowohl in C als auch in C++ gültig ist.  
   
-     In C++ ist diese Art der dynamischen Initialisierung von Threaddaten aufgrund möglicher zukünftiger Verbesserungen der lokalen Threadspeicherfunktion nicht zulässig.  
+     In C++ ist diese Art der dynamischen Initialisierung von Threaddaten aufgrund möglicher zukünftiger Verbesserungen der threadlokalen Speicherfunktion nicht zulässig.  
   
--   Unter Windows-Betriebssystemen vor [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], weist `__declspec` (Thread) einige Einschränkungen auf. Wenn durch eine DLL beliebige Daten oder Objekte als `__declspec` (Thread) deklariert werden, kann beim dynamischen Ladevorgang eine allgemeine Schutzverletzung auftreten. Nach dem Laden der DLL mit [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), dabei Systemfehler, wenn der Code verweist auf die `__declspec`(Thread)-Daten. Da der globale Variablenspeicher für einen Thread zur Laufzeit reserviert wird, basiert die Größe dieses Speichers auf der Berechnung der Anforderungen der jeweiligen Anwendung sowie der Anforderungen aller DLLs, die statisch gebunden sind. Bei der Verwendung von `LoadLibrary` können Sie diesen Speicher nicht für die lokalen Threadvariablen erweitern, die mit `__declspec` (Thread) deklariert wurden. Verwenden Sie die TLS-APIs, wie z. B. [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), in der DLL TLS zuweisen, wenn die DLL geladen werden kann, mit `LoadLibrary`.  
+-   Unter Windows-Betriebssystemen vor Windows Vista `__declspec`(Thread) weist einige Einschränkungen. Wenn durch eine DLL beliebige Daten oder Objekte als `__declspec` (Thread) deklariert werden, kann beim dynamischen Ladevorgang eine allgemeine Schutzverletzung auftreten. Nach dem Laden der DLL mit [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), dabei Systemfehler, wenn der Code verweist auf die `__declspec`(Thread)-Daten. Da der globale Variablenspeicher für einen Thread zur Laufzeit reserviert wird, basiert die Größe dieses Speichers auf der Berechnung der Anforderungen der jeweiligen Anwendung sowie der Anforderungen aller DLLs, die statisch gebunden sind. Bei der Verwendung von `LoadLibrary` können Sie diesen Speicher nicht für die lokalen Threadvariablen erweitern, die mit `__declspec` (Thread) deklariert wurden. Verwenden Sie die TLS-APIs, wie z. B. [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), in der DLL TLS zuweisen, wenn die DLL geladen werden kann, mit `LoadLibrary`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)   

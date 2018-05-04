@@ -1,27 +1,22 @@
 ---
 title: Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2) | Microsoft Docs
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2)
 In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es und testen es auf einer Webseite.  
@@ -48,9 +43,9 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
 |-----------|--------------|  
 |**Kurzname**|Der Name, den Sie für das Steuerelement eingegeben haben.|  
 |**Klasse**|Der C++-Klassenname, der erstellt wurde, um das Steuerelement zu implementieren.|  
-|**.h file**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
-|**.cpp file**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
-|**CoClass**|Der Name der Komponentenklasse für dieses Steuerelement.|  
+|**.h-Datei**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
+|**CPP-Datei**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
+|**Co-Klasse**|Der Name der Komponentenklasse für dieses Steuerelement.|  
 |**Interface**|Der Name der Schnittstelle, auf der das Steuerelement die benutzerdefinierten Methoden und Eigenschaften implementiert.|  
 |**Type**|Eine Beschreibung für das Steuerelement.|  
 |**ProgID**|Der lesbare Name, der verwendet werden kann, um die CLSID des Steuerelements zu suchen.|  
@@ -116,5 +111,5 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
  [Zurück zu Schritt 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [weiter zu Schritt 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorial](../atl/active-template-library-atl-tutorial.md)
+ [Lernprogramm](../atl/active-template-library-atl-tutorial.md)
 

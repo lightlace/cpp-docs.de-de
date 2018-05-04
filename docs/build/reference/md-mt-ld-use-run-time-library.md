@@ -2,12 +2,9 @@
 title: -MD -MT, -LD (Laufzeitbibliothek verwenden) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Laufzeitbibliothek verwenden)
 Zeigt an, ob es sich bei einem Multithread-Modul um eine DLL handelt, und gibt Veröffentlichungs- oder Debugversionen der Laufzeitbibliothek an.  
@@ -75,8 +70,8 @@ Zeigt an, ob es sich bei einem Multithread-Modul um eine DLL handelt, und gibt V
 |**/MDd**|Definiert `_DEBUG`, `_MT` und `_DLL` und veranlasst, dass die Anwendung die DLL-spezifische und Multithreaded-Version der Laufzeitbibliothek verwendet. Außerdem wird verursacht, dass der Compiler den Bibliotheksnamen "MSVCRTD.lib" in der .obj-Datei positioniert.|  
 |**/MT**|Bewirkt, dass die Anwendung die statische Multithreaded-Version der Laufzeitbibliothek verwendet. Definiert `_MT` und bewirkt, dass der Compiler den Bibliotheksnamen "LIBCMT.LIB" in der OBJ-Datei ablegt, sodass diese Bibliothek vom Linker zum Auflösen externer Symbole verwendet wird.|  
 |**/MTd**|Definiert `_DEBUG` und `_MT`. Diese Option führt auch dazu, dass der Compiler den Bibliotheksnamen "LIBCMTD.lib" in der .obj-Datei positioniert, sodass der Linker "LIBCMTD.lib" für das Auflösen externer Symbole verwendet.|  
-|**/ LD**|Erstellt eine DLL.<br /><br /> Übergibt die **/DLL** Option an den Linker. Der Linker sucht nach einer `DllMain`-Funktion, die jedoch nicht unbedingt erforderlich ist. Wenn Sie keine `DllMain`-Funktion schreiben, fügt der Linker eine `DllMain`-Funktion ein, die TRUE zurückgibt.<br /><br /> Verknüpft den DLL-Startcode.<br /><br /> Erstellt eine Importbibliothek (LIB), wenn in der Befehlszeile keine Exportdatei (EXP) angegeben wurde. Sie verknüpfen die Importbibliothek mit Anwendungen, die die DLL aufrufen.<br /><br /> Interpretiert [/FE (Name der EXE-Datei)](../../build/reference/fe-name-exe-file.md) als Benennung, statt eine .exe-Datei eine DLL. Standardmäßig wird der Name des Programms *Basename*DLL anstelle von *Basename*.exe.<br /><br /> Impliziert **/MT** ohne explizite Angabe **/MD**.|  
-|**/ LDd**|Erstellt eine Debug-DLL. Definiert `_MT` und `_DEBUG`.|  
+|**/LD**|Erstellt eine DLL.<br /><br /> Übergibt die **/DLL** Option an den Linker. Der Linker sucht nach einer `DllMain`-Funktion, die jedoch nicht unbedingt erforderlich ist. Wenn Sie keine `DllMain`-Funktion schreiben, fügt der Linker eine `DllMain`-Funktion ein, die TRUE zurückgibt.<br /><br /> Verknüpft den DLL-Startcode.<br /><br /> Erstellt eine Importbibliothek (LIB), wenn in der Befehlszeile keine Exportdatei (EXP) angegeben wurde. Sie verknüpfen die Importbibliothek mit Anwendungen, die die DLL aufrufen.<br /><br /> Interpretiert [/FE (Name der EXE-Datei)](../../build/reference/fe-name-exe-file.md) als Benennung, statt eine .exe-Datei eine DLL. Standardmäßig wird der Name des Programms *Basename*DLL anstelle von *Basename*.exe.<br /><br /> Impliziert **/MT** ohne explizite Angabe **/MD**.|  
+|**/LDd**|Erstellt eine Debug-DLL. Definiert `_MT` und `_DEBUG`.|  
   
  Weitere Informationen zu C-Laufzeitbibliotheken und welche Bibliotheken verwendet werden, bei der Kompilierung [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md), finden Sie unter [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
   

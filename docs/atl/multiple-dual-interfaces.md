@@ -1,12 +1,9 @@
 ---
 title: Mehrere duale Schnittstellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d87164439a4128ff6205ea6bc3ee3d9cc5573a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-dual-interfaces"></a>Mehrere duale Schnittstellen
 Möglicherweise möchten Sie die Vorteile, die eine duale Schnittstelle (d. h. die Flexibilität der Vtable und späte Bindung, daher und die Klasse für Skriptsprachen als auch für C++ zur Verfügung) kombinieren mit den Techniken der mehrfachvererbung.  

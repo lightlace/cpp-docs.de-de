@@ -2,11 +2,8 @@
 title: Standardargumente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c341abab34595da58d435be28f50e86cb47403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-arguments"></a>Standardargumente
 In vielen Fällen haben Funktionen Argumente, die so selten verwendet werden, dass ein Standardwert genügt. Für dieses Szenario ermöglicht die Standardargumentfunktion, nur die Argumente für eine Funktion anzugeben, die für einen bestimmten Aufruf von Bedeutung sind. Um dieses Konzept zu veranschaulichen, betrachten Sie das Beispiel [Funktionsüberladung](../cpp/function-overloading.md).  

@@ -1,13 +1,10 @@
 ---
-title: "-ENTRY (Symbol für Einstiegspunkt) | Microsoft Docs"
-ms.custom: 
+title: -ENTRY (Symbol für Einstiegspunkt) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbol für Einstiegspunkt)
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |Funktionsname|Standard für|  
 |-------------------|-----------------|  
 |**MainCRTStartup** (oder **WmainCRTStartup**)|Eine Anwendung, die/Subsystem: Console verwendet; Aufrufe `main` (oder `wmain`)|  
-|**WinMainCRTStartup** (oder **wWinMainCRTStartup**)|Eine Anwendung, die/Subsystem verwendet:**WINDOWS**; Aufrufe `WinMain` (oder `wWinMain`), die muss definiert werden, verwenden`__stdcall`|  
-|**_DllMainCRTStartup**|EINE DLL; IGNORIERT Aufrufe `DllMain` , wenn er vorhanden ist, muss die Verwendung definiert`__stdcall`|  
+|**WinMainCRTStartup** (oder **wWinMainCRTStartup**)|Eine Anwendung, die/Subsystem verwendet:**WINDOWS**; Aufrufe `WinMain` (oder `wWinMain`), die muss definiert werden, verwenden `__stdcall`|  
+|**_DllMainCRTStartup**|EINE DLL; IGNORIERT Aufrufe `DllMain` , wenn er vorhanden ist, muss die Verwendung definiert `__stdcall`|  
   
  Wenn die [/DLL](../../build/reference/dll-build-a-dll.md) oder [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) Option nicht angegeben wird, wählt des Linkers ein Subsystem und Eintrag je nachdem, ob `main` oder `WinMain` definiert ist.  
   

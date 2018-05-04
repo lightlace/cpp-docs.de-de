@@ -1,29 +1,24 @@
 ---
 title: Implementieren einer C++-Standard Library-basierte Auflistung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a09f54598b525346a65b56a335711f114878cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementieren einer C++-Standard-Library-basierte-Auflistung
 ATL stellt die `ICollectionOnSTLImpl` Schnittstelle, um C++-Standardbibliothek basierende Auflistungsschnittstellen schnell auf Ihre Objekte implementieren können. Um zu verstehen, wie diese Klasse funktioniert, arbeiten Sie über ein einfaches Beispiel (siehe unten), die diese Klasse verwendet, um eine schreibgeschützte Auflistung, die Automatisierungsclients Vorbeugung zu implementieren.  
@@ -46,10 +41,10 @@ ATL stellt die `ICollectionOnSTLImpl` Schnittstelle, um C++-Standardbibliothek b
   
 -   [Fügen Sie Code zum Auffüllen der Auflistung](#vcconpopulate_the_collection).  
   
-##  <a name="vccongenerating_an_object"></a>Generieren ein neues einfaches Objekt  
+##  <a name="vccongenerating_an_object"></a> Generieren ein neues einfaches Objekt  
  Erstellen Sie ein neues Projekt, um sicherzustellen, dass das Feld "Attribute" unter "Einstellungen" Anwendung deaktiviert ist. Mithilfe des Dialogfelds ATL-Klasse hinzufügen, und fügen Assistent für einfache Objekte zum Generieren eines einfachen Objekts aufgerufen `Words`. Stellen Sie sicher, dass eine duale Schnittstelle aufgerufen `IWords` generiert wird. Objekte der generierten Klasse werden zum Darstellen einer Auflistung von Wörtern (d. h. Zeichenfolgen) verwendet werden.  
   
-##  <a name="vcconedit_the_idl"></a>Bearbeiten die IDL-Datei  
+##  <a name="vcconedit_the_idl"></a> Bearbeiten die IDL-Datei  
  Öffnen Sie jetzt die IDL-Datei und fügen Sie die drei Eigenschaften, die zum Aktivieren `IWords` in eine schreibgeschützte Auflistung-Schnittstelle, wie unten dargestellt:  
   
  [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]  
@@ -68,7 +63,7 @@ ATL stellt die `ICollectionOnSTLImpl` Schnittstelle, um C++-Standardbibliothek b
   
 6.  Der Wert für die DISPID eines der **Anzahl** Eigenschaft ist willkürlich. Es ist keine standard DISPID für diese Eigenschaft.  
   
-##  <a name="vcconstorage_and_exposure_typedefs"></a>Erstellen von Typdefinitionen für die Speicherung und Offenlegung  
+##  <a name="vcconstorage_and_exposure_typedefs"></a> Erstellen von Typdefinitionen für die Speicherung und Offenlegung  
  Nachdem die Auflistungsschnittstelle definiert ist, müssen Sie entscheiden, wie die Daten gespeichert werden sollen und wie die Daten über den Enumerator verfügbar gemacht werden.  
   
  Die Antworten auf diese Fragen können in Form einer Reihe von Typdefinitionen, bereitgestellt werden, den Sie am oberen Rand der Headerdatei für die neu erstellte Klasse hinzufügen können:  
@@ -79,26 +74,26 @@ ATL stellt die `ICollectionOnSTLImpl` Schnittstelle, um C++-Standardbibliothek b
   
  Da Visual Basic-Unterstützung für den Erfolg dieser Schnittstelle wichtiger ist, der Enumerator zurückgegebenes der `_NewEnum` Eigenschaft unterstützen muss die **IEnumVARIANT** Schnittstelle. Dies ist die einzige Enumeratorschnittstelle, die vom Visual Basic.  
   
-##  <a name="vcconcopy_classes"></a>Erstellen von Typdefinitionen für Kopierrichtlinienklassen  
+##  <a name="vcconcopy_classes"></a> Erstellen von Typdefinitionen für Kopierrichtlinienklassen  
  Die Typdefinitionen Ihnen bisher erstellte Geben Sie alle Informationen, die Sie benötigen weitere Typdefinitionen für die Kopierklassen erstellen, die vom Enumerator und der Auflistung verwendet werden:  
   
  [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]  
   
  In diesem Beispiel können Sie die benutzerdefinierte `GenericCopy` in VCUE_Copy.h und VCUE_CopyString.h aus Klasse definiert die [ATLCollections](../visual-cpp-samples.md) Beispiel. Verwenden Sie diese Klasse in einem anderen Code, jedoch müssen Sie möglicherweise genauer definieren, die spezialisierungen von `GenericCopy` zur Unterstützung von Datentypen in Eigene Sammlungen verwendet. Weitere Informationen finden Sie unter [ATL Kopierrichtlinienklassen](../atl/atl-copy-policy-classes.md).  
   
-##  <a name="vcconenumeration_and_collection"></a>Erstellen von Typdefinitionen für Enumeration und Auflistung  
+##  <a name="vcconenumeration_and_collection"></a> Erstellen von Typdefinitionen für Enumeration und Auflistung  
  Jetzt alle Vorlagenparameter zum spezialisieren der `CComEnumOnSTL` und `ICollectionOnSTLImpl` Klassen in dieser Situation in Form von Typdefinitionen zur Verfügung. Um die Verwendung von die spezialisierungen zu vereinfachen, erstellen Sie zwei weitere Typdefinitionen, wie unten dargestellt:  
   
  [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]  
   
  Jetzt `CollectionType` ist ein Synonym für eine Spezialisierung der `ICollectionOnSTLImpl` , implementiert die `IWords` Schnittstelle zuvor definierten und stellt einen Enumerator bereit, unterstützt **IEnumVARIANT**.  
   
-##  <a name="vcconedit_the_generated_code"></a>Bearbeiten den vom Assistenten generierter Code  
+##  <a name="vcconedit_the_generated_code"></a> Bearbeiten den vom Assistenten generierter Code  
  Nachdem Sie ableiten müssen `CWords` aus der Implementierung durch dargestellt der `CollectionType` Typedef statt `IWords`, wie unten dargestellt:  
   
  [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]  
   
-##  <a name="vcconpopulate_the_collection"></a>Hinzufügen von Code zum Auffüllen der-Auflistung  
+##  <a name="vcconpopulate_the_collection"></a> Hinzufügen von Code zum Auffüllen der-Auflistung  
  Das einzige, die verbleibt, wird den Vektor mit Daten aufgefüllt. In diesem einfachen Beispiel können Sie einige Wörter auf die Auflistung im Konstruktor für die Klasse hinzufügen:  
   
  [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]  

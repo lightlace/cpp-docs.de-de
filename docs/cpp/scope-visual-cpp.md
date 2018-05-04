@@ -1,12 +1,9 @@
 ---
 title: Bereich (Visual C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Bereich (Visual C++)
 C++-Namen können nur in bestimmten Bereichen eines Programms verwendet werden. Dieser Bereich wird als Gültigkeitsbereich des Namens bezeichnet. Der Gültigkeitsbereich bestimmt die Lebensdauer eines Namens, der kein statisches Objekt angibt. Der Gültigkeitsbereich bestimmt außerdem die Sichtbarkeit eines Namens, wenn Klassenkonstruktoren und -destruktoren aufgerufen werden, und wenn lokale Gültigkeitsbereichsvariablen initialisiert werden. (Weitere Informationen finden Sie unter [Konstruktoren](../cpp/constructors-cpp.md) und [Destruktoren](../cpp/destructors-cpp.md).) Es gibt fünf Arten von Gültigkeitsbereichen:  
@@ -50,7 +45,7 @@ C++-Namen können nur in bestimmten Bereichen eines Programms verwendet werden. 
   
      In C++ ist der Dateigültigkeitsbereich auch als Namespacegültigkeitsbereich bekannt.  
   
--   **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich. Klassenmemberfunktionen können nur mithilfe der memberauswahloperatoren zugegriffen werden (**.** oder  **->** ) oder Pointer-to-Member-Operatoren (**.\***  oder  **-> \*** ) auf ein Objekt oder Zeiger auf ein Objekt dieser Klasse; nicht statische Klassenmemberdaten lokal für das Objekt dieser Klasse betrachtet werden. Betrachten Sie die folgende Klassendeklaration:  
+-   **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich. Klassenmemberfunktionen können nur mithilfe der memberauswahloperatoren zugegriffen werden (**.** oder **->**) oder Pointer-to-Member-Operatoren (**.\***  oder **-> \***) auf ein Objekt oder Zeiger auf ein Objekt dieser Klasse; nicht statische Klassenmemberdaten lokal für das Objekt dieser Klasse betrachtet werden. Betrachten Sie die folgende Klassendeklaration:  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ C++-Namen können nur in bestimmten Bereichen eines Programms verwendet werden. 
 ## <a name="hiding-names"></a>Ausblenden von Namen  
  Sie können einen Namen verbergen, indem Sie ihn in einem eingeschlossenen Block deklarieren. In der folgenden Abbildung wird `i` innerhalb des inneren Blocks neu deklariert. Dadurch wird die Variable ausgeblendet, die `i` im äußeren Blockbereich zugeordnet ist.  
   
- ![Bereich Name ausblenden Block &#45;](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Block&#45;Bereich Namen](../cpp/media/vc38sf1.png "vc38SF1")  
 Blockbereich und Ausblenden von Namen  
   
  Die in der Abbildung dargestellte Ausgabe des Programms lautet wie folgt:  

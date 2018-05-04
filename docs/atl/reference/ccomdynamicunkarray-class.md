@@ -1,12 +1,9 @@
 ---
 title: CComDynamicUnkArray Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray-Klasse
 Diese Klasse speichert ein Array von **IUnknown** Zeiger.  
@@ -79,12 +74,12 @@ class CComDynamicUnkArray
  Finden Sie unter [Hinzufügen von Verbindungspunkten zu einem Objekt](../../atl/adding-connection-points-to-an-object.md) zeigen Sie ausführliche Informationen zum Automatisieren der Erstellung der Verbindung Proxys.  
   
 > [!NOTE]
-> **Hinweis** Klasse **CComDynamicUnkArray** dient der **Klasse hinzufügen** Assistenten beim Erstellen eines Steuerelements Verbindungspunkte besitzt. Wenn Sie die Anzahl von Verbindungspunkten manuell angeben möchten, ändern Sie den Verweis aus **CComDynamicUnkArray** auf `CComUnkArray<`  *n*  `>`, wobei  *n*  ist die Anzahl der Verbindungspunkte erforderlich.  
+> **Hinweis** Klasse **CComDynamicUnkArray** dient der **Klasse hinzufügen** Assistenten beim Erstellen eines Steuerelements Verbindungspunkte besitzt. Wenn Sie die Anzahl von Verbindungspunkten manuell angeben möchten, ändern Sie den Verweis aus **CComDynamicUnkArray** auf `CComUnkArray<` *n* `>`, wobei *n*ist die Anzahl der Verbindungspunkte erforderlich.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>  CComDynamicUnkArray::Add  
  Rufen Sie diese Methode zum Hinzufügen einer **IUnknown** Zeiger auf das Array.  
   
 ```
@@ -98,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt das Cookie, das den neu hinzugefügten Zeiger zugeordnet.  
   
-##  <a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>  CComDynamicUnkArray::begin  
  Gibt einen Zeiger auf den Anfang der Auflistung der **IUnknown** Schnittstellenzeigern.  
   
 ```
@@ -114,14 +109,14 @@ IUnknown**
   
  Vor der Verwendung der **IUnknown** -Schnittstelle, sollten Sie überprüfen, dass es nicht **NULL**.  
   
-##  <a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Leert das Array an.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray  
  Der Konstruktor.  
   
 ```
@@ -131,7 +126,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Hinweise  
  Legt die Größe der Auflistung auf 0 (null) fest und initialisiert die Werte, die **NULL**. Der Destruktor gibt die Auflistung bei Bedarf frei.  
   
-##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  Der Destruktor.  
   
 ```
@@ -141,7 +136,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Hinweise  
  Gibt die vom Konstruktor Klasse reservierten Ressourcen frei.  
   
-##  <a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>  CComDynamicUnkArray::end  
  Gibt einen Zeiger auf eine Position hinter dem letzten **IUnknown** Zeiger in der Auflistung.  
   
 ```
@@ -152,7 +147,7 @@ IUnknown**
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein **IUnknown** Schnittstellenzeiger auf.  
   
-##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  Ruft das Element am angegebenen Index ab.  
   
 ```
@@ -166,7 +161,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstelle.  
   
-##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Cookies einer bestimmten **IUnknown** Zeiger.  
   
 ```
@@ -183,7 +178,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Hinweise  
  Wenn mehr als eine des gleichen Instanz **IUnknown** -Zeiger ist, gibt diese Funktion das Cookie auf das erste Verzeichnis zurück.  
   
-##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Gibt die Länge eines Arrays zurück.  
   
 ```
@@ -193,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Länge des Arrays.  
   
-##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
  Rufen Sie diese Methode zum Abrufen der **IUnknown** Zeiger mit einem bestimmten Cookie verknüpft sind.  
   
 ```
@@ -207,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die **IUnknown** Zeiger oder NULL, wenn keine übereinstimmenden Cookie gefunden wird.  
   
-##  <a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
  Rufen Sie diese Methode zum Entfernen einer **IUnknown** Zeiger aus dem Array.  
   
 ```

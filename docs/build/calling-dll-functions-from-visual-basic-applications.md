@@ -2,12 +2,9 @@
 title: Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus
 Damit Visual Basic-Anwendungen (oder Anwendungen in anderen Sprachen wie Pascal oder Fortran) Funktionen in einer C-/C++-DLL aufrufen können, müssen die Funktionen mit der richtigen Aufrufkonvention exportiert werden, ohne dass der Compiler Namensergänzungen vornimmt.  

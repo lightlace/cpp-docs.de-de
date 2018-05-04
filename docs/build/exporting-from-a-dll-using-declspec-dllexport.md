@@ -1,13 +1,10 @@
 ---
 title: Exportieren aus einer DLL mithilfe von __declspec(dllexport) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportieren aus einer DLL mithilfe von "__declspec(dllexport)"
 Microsoft eingeführt **__export** in 16-Bit-Compilerversion von Visual C++, damit der Compiler die Exportnamen automatisch generieren, und legen diese in einer LIB-Datei. Diese LIB-Datei kann dann wie eine statische LIB-Datei zur Verknüpfung mit einer DLL verwendet werden.  

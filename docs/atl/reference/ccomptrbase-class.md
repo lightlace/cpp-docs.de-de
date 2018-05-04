@@ -1,12 +1,9 @@
 ---
 title: CComPtrBase Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComPtrBase
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0d9b4d49a7568df905a595e2cf6494b2b98706d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea90c1394da9b6a202b121a0e521f99acaba8264
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase-Klasse
 Diese Klasse bietet eine Grundlage für intelligente zeigerklassen Routinen COM-basierten Speicher verwenden.  
@@ -98,7 +93,7 @@ class CComPtrBase
 ## <a name="requirements"></a>Anforderungen  
  **Header:** "atlcomcli.h"  
   
-##  <a name="advise"></a>CComPtrBase:: Advise  
+##  <a name="advise"></a>  CComPtrBase:: Advise  
  Rufen Sie diese Methode zum Erstellen einer Verbindung zwischen dem `CComPtrBase`des Connection Point verwendet und der Senke eines Clients.  
   
 ```
@@ -124,7 +119,7 @@ HRESULT Advise(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [AtlAdvise](connection-point-global-functions.md#atladvise) für Weitere Informationen.  
   
-##  <a name="attach"></a>CComPtrBase::Attach  
+##  <a name="attach"></a>  CComPtrBase::Attach  
  Rufen Sie diese Methode, um einem vorhandenen Zeiger Besitz zu nehmen.  
   
 ```
@@ -138,7 +133,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>Hinweise  
  **Fügen Sie** Aufrufe [CComPtrBase::Release](#release) auf dem vorhandenen [CComPtrBase::p](#p) Membervariablen gespeichert, und klicken Sie dann weist `p2` auf `CComPtrBase::p`. Wenn eine `CComPtrBase` Objekt übernimmt den Besitz des einen Zeiger, er ruft automatisch `Release` auf dem Zeiger hierbei den Zeiger und alle gelöscht zugeordnet Daten, wenn der Verweiszähler für das Objekt auf 0 geht.  
   
-##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
+##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase  
  Der Destruktor.  
   
 ```
@@ -148,7 +143,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt die Schnittstelle frei, die durch `CComPtrBase`.  
   
-##  <a name="cocreateinstance"></a>CComPtrBase:: CoCreateInstance  
+##  <a name="cocreateinstance"></a>  CComPtrBase:: CoCreateInstance  
  Rufen Sie diese Methode, um ein Objekt der Klasse mit einer angegebenen Klasse oder Programm-ID, zu erstellen.  
   
 ```
@@ -184,7 +179,7 @@ HRESULT CoCreateInstance(
   
  Debug-Builds wird ein Assertionsfehler auftreten, wenn [CComPtrBase::p](#p) ist nicht gleich NULL.  
   
-##  <a name="copyto"></a>CComPtrBase::CopyTo  
+##  <a name="copyto"></a>  CComPtrBase::CopyTo  
  Rufen Sie diese Methode zum Kopieren der `CComPtrBase` Zeiger auf einen anderen Zeigervariablen.  
   
 ```
@@ -203,7 +198,7 @@ HRESULT CopyTo(T** ppT) throw();
   
  Fehler-HRESULT zurückgegeben wird, wenn *ppT* gleich NULL. Debug-Builds wird ein Assertionsfehler auftreten, wenn *ppT* gleich NULL.  
   
-##  <a name="detach"></a>CComPtrBase::Detach  
+##  <a name="detach"></a>  CComPtrBase::Detach  
  Rufen Sie diese Methode, um den Besitz eines Zeigers freigibt.  
   
 ```
@@ -216,7 +211,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt den Besitz eines Zeigers frei wird, wird dadurch die [CComPtrBase::p](#p) Data-Member-Variable auf NULL, und gibt eine Kopie des Zeigers zurück.  
   
-##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
+##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject  
  Rufen Sie diese Methode beim Überprüfen der angegebenen **IUnknown** verweist auf das gleiche Objekt zugeordneten der `CComPtrBase` Objekt.  
   
 ```
@@ -230,7 +225,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Objekte identisch, andernfalls false sind.  
   
-##  <a name="operator_not"></a>CComPtrBase::operator!  
+##  <a name="operator_not"></a>  CComPtrBase::operator!  
  Der NOT-Operator.  
   
 ```
@@ -240,7 +235,7 @@ bool operator!() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die `CComHeapPtr` Zeiger gleich NULL, "false" andernfalls.  
   
-##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;  
  Der &-Operator.  
   
 ```
@@ -250,7 +245,7 @@ T** operator&() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Adresse des Objekts verweist, zu der `CComPtrBase` Objekt.  
   
-##  <a name="operator_star"></a>CComPtrBase::operator *  
+##  <a name="operator_star"></a>  CComPtrBase::operator *  
  Der *-Operator.  
   
 ```
@@ -262,7 +257,7 @@ T& operator*() const throw();
   
  Wenn Debug erstellt wird, wird ein Assertionsfehler auftreten, wenn [CComPtrBase::p](#p) ist nicht gleich NULL.  
   
-##  <a name="operator_eq_eq"></a>CComPtrBase::operator ==  
+##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==  
  Den Gleichheitsoperator.  
   
 ```
@@ -276,7 +271,7 @@ bool operator== (T* pT) const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn `CComPtrBase` und *pT* zeigen Sie auf das gleiche Objekt "false" andernfalls.  
   
-##  <a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;  
 
  Der Pointer-to-Member-Operator.  
   
@@ -290,7 +285,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diesen Operator zum Aufrufen einer Methode in einer Klasse, die durch die `CComPtrBase` Objekt. Debug-Builds wird ein Assertionsfehler auftreten, wenn die `CComPtrBase` -Datenmember auf NULL verweist.  
   
-##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
+##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;  
  Kleiner-als-Operator.  
   
 ```
@@ -304,7 +299,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn der Zeiger vom aktuellen Objekt verwaltet ist kleiner als der Zeiger mit dem verglichen wird.  
   
-##  <a name="operator_t_star"></a>CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
  Der Cast-Operator.  
   
 ```  
@@ -314,7 +309,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt einen Zeiger auf den Object-Datentyp in der Klassenvorlage definiert.  
   
-##  <a name="p"></a>CComPtrBase::p  
+##  <a name="p"></a>  CComPtrBase::p  
  Die Zeiger-Membervariable.  
   
 ```
@@ -324,7 +319,7 @@ T* p;
 ### <a name="remarks"></a>Hinweise  
  Diese Membervariable enthält die Zeigerinformationen zur.  
   
-##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
+##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface  
  Rufen Sie diese Methode, um einen Zeiger auf eine angegebene Schnittstelle zurückgibt.  
   
 ```
@@ -347,7 +342,7 @@ template <class Q> HRESULT QueryInterface(Q
   
  Debug-Builds wird ein Assertionsfehler auftreten, wenn *pp* ist nicht gleich NULL.  
   
-##  <a name="release"></a>CComPtrBase::Release  
+##  <a name="release"></a>  CComPtrBase::Release  
  Rufen Sie diese Methode, um die Benutzeroberfläche freigeben.  
   
 ```
@@ -357,7 +352,7 @@ void Release() throw();
 ### <a name="remarks"></a>Hinweise  
  Die Schnittstelle wird freigegeben und [CComPtrBase::p](#p) auf NULL festgelegt ist.  
   
-##  <a name="setsite"></a>CComPtrBase::SetSite  
+##  <a name="setsite"></a>  CComPtrBase::SetSite  
  Rufen Sie diese Methode zum Festlegen der Website von der `CComPtrBase` -Objekt an die **IUnknown** des übergeordneten Objekts.  
   
 ```

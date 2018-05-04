@@ -2,28 +2,23 @@
 title: ATL-Operatoren | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcbe04fb057ffc8077f422cd784b5d31691df1e3
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 75c9ffb8c918cce70ad1e150dd80cb07ebdd7b34
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-operators"></a>ATL-Operatoren
 Dieser Abschnitt enthält die Referenzthemen für die globalen ATL-Operatoren.  
@@ -31,7 +26,7 @@ Dieser Abschnitt enthält die Referenzthemen für die globalen ATL-Operatoren.
 |Operator|Beschreibung|  
 |--------------|-----------------|  
 |[operator ==](#operator_eq_eq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Gleichheit.|  
-|[operator !=](#operator_neq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Ungleichheit.|  
+|[Operator! =](#operator_neq)|Vergleicht zwei `CSid` Objekte oder `SID` Strukturen auf Ungleichheit.|  
 |[Operator <](#operator_lt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als das `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
 |[operator >](#operator_gt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als die `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  
 |[operator <=](#operator_lt__eq)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (C++-Standardbibliothek Kompatibilitätsgründen).|  

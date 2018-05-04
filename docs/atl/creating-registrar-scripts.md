@@ -1,13 +1,10 @@
 ---
-title: "Erstellen von Skripts für ATL-Registrierung | Microsoft Docs"
-ms.custom: 
+title: Erstellen von Skripts für ATL-Registrierung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e140e66ee24d8333d25c0c2942924c7a9db4965b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 Ein Skript für die Registrierungsstelle stellt eines datengesteuerten, anstatt API-driven, Zugriff auf die Registrierung bereit. Datengesteuerte Zugriff ist in der Regel effizienter, da nur ein oder zwei Zeilen in einem Skript dauert, einen Schlüssel zur Registrierung hinzuzufügen.  

@@ -2,11 +2,8 @@
 title: CComAutoThreadModule Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAutoThreadModule
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094d10069b854d122e835f7d12f9ef095775db2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b00b9966ed4d9833e885a03e4b5f380ac307f08
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule-Klasse
 Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
@@ -83,7 +78,7 @@ class CComAutoThreadModule : public CComModule
 > [!NOTE]
 >  Diese Klasse ist veraltet, ersetzt, durch die [CComModule](../../atl/reference/catlautothreadmodule-class.md) und [von CAtlModule](../../atl/reference/catlmodule-class.md) abgeleitete Klassen. Die folgenden Informationen wird für die Verwendung mit älteren Versionen von ATL  
   
- `CComAutoThreadModule`leitet sich von [CComModule](../../atl/reference/ccommodule-class.md) einen Thread Pool, Apartmentmodell COM-Server für die EXE-Dateien und Windows-Dienste implementiert. `CComAutoThreadModule`verwendet [CComApartment](../../atl/reference/ccomapartment-class.md) einem Apartment für jeden Thread im Modul zu verwalten.  
+ `CComAutoThreadModule` leitet sich von [CComModule](../../atl/reference/ccommodule-class.md) einen Thread Pool, Apartmentmodell COM-Server für die EXE-Dateien und Windows-Dienste implementiert. `CComAutoThreadModule` verwendet [CComApartment](../../atl/reference/ccomapartment-class.md) einem Apartment für jeden Thread im Modul zu verwalten.  
   
  Leiten Sie das Modul aus `CComAutoThreadModule` beim Erstellen von Objekten in mehreren Apartments werden sollen. Sie umfasst auch die [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) Makro in die Objektklassendefinition an [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) als ClassFactory.  
   
@@ -94,7 +89,7 @@ class CComAutoThreadModule : public CComModule
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
   
- [Von CAtlModule](../../atl/reference/catlmodule-class.md)  
+ [CAtlModule](../../atl/reference/catlmodule-class.md)  
   
  `IAtlAutoThreadModule`  
   
@@ -109,7 +104,7 @@ class CComAutoThreadModule : public CComModule
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
+##  <a name="createinstance"></a>  CComAutoThreadModule::CreateInstance  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -135,7 +130,7 @@ HRESULT CreateInstance(
 ### <a name="remarks"></a>Hinweise  
  Wählt einen Thread, und klicken Sie dann im zugehörigen Apartment erstellt ein Objekt.  
   
-##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
+##  <a name="dwthreadid"></a>  CComAutoThreadModule::dwThreadID  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -145,7 +140,7 @@ DWORD dwThreadID;
 ### <a name="remarks"></a>Hinweise  
  Enthält den Bezeichner des aktuellen Threads.  
   
-##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>  CComAutoThreadModule::GetDefaultThreads  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -158,7 +153,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>Hinweise  
  Diese statische Funktion berechnet dynamisch die maximale Anzahl von Threads für die EXE-Modul, basierend auf der Anzahl der Prozessoren. Dieser Rückgabewert wird standardmäßig zum Übergeben der [Init](#init) Methode, um Threads zu erstellen.  
   
-##  <a name="init"></a>CComAutoThreadModule::Init  
+##  <a name="init"></a>  CComAutoThreadModule::Init  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -185,7 +180,7 @@ HRESULT Init(
 ### <a name="remarks"></a>Hinweise  
  Datenmember initialisiert und erstellt die Anzahl der Threads, die vom angegebenen `nThreads`.  
   
-##  <a name="lock"></a>CComAutoThreadModule::Lock  
+##  <a name="lock"></a>  CComAutoThreadModule::Lock  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -196,9 +191,9 @@ LONG Lock();
  Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.  
   
 ### <a name="remarks"></a>Hinweise  
- Führt atomic erhöht die Anzahl der Sperren für das Modul und für den aktuellen Thread. `CComAutoThreadModule`verwendet die Anzahl der Module Sperre um zu bestimmen, ob alle Clients auf das Modul zugreifen. Die Anzahl der Sperren für den aktuellen Thread wird für statistische Zwecke verwendet.  
+ Führt atomic erhöht die Anzahl der Sperren für das Modul und für den aktuellen Thread. `CComAutoThreadModule` verwendet die Anzahl der Module Sperre um zu bestimmen, ob alle Clients auf das Modul zugreifen. Die Anzahl der Sperren für den aktuellen Thread wird für statistische Zwecke verwendet.  
   
-##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
+##  <a name="m_allocator"></a>  CComAutoThreadModule::m_Allocator  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -208,7 +203,7 @@ ThreadAllocator  m_Allocator;
 ### <a name="remarks"></a>Hinweise  
  Das Objekt, das Verwalten von Threads Auswahl. Wird standardmäßig die `ThreadAllocator` Klassenvorlagenparameter ist [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
-##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
+##  <a name="m_nthreads"></a>  CComAutoThreadModule::m_nThreads  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -218,7 +213,7 @@ int m_nThreads;
 ### <a name="remarks"></a>Hinweise  
  Enthält die Anzahl der Threads im Modul exe-Datei an. Wenn [Init](#init) aufgerufen wird, `m_nThreads` festgelegt ist, um die `nThreads` Parameterwert. Zugeordnete Apartment des Threads wird von verwaltet eine [CComApartment](../../atl/reference/ccomapartment-class.md) Objekt.  
   
-##  <a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
+##  <a name="m_papartments"></a>  CComAutoThreadModule::m_pApartments  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -228,7 +223,7 @@ CComApartment* m_pApartments;
 ### <a name="remarks"></a>Hinweise  
  Verweist auf ein Array von [CComApartment](../../atl/reference/ccomapartment-class.md) Objekte, von denen jeder einem Apartment im Modul verwaltet. Die Anzahl der Elemente im Array basiert auf der [M_nThreads](#m_nthreads) Member.  
   
-##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
+##  <a name="unlock"></a>  CComAutoThreadModule::Unlock  
  Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -239,7 +234,7 @@ LONG Unlock();
  Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.  
   
 ### <a name="remarks"></a>Hinweise  
- Führt einen atomarischen Dekrement auf die Anzahl der Sperren für das Modul und für den aktuellen Thread. `CComAutoThreadModule`verwendet die Anzahl der Module Sperre um zu bestimmen, ob alle Clients auf das Modul zugreifen. Die Anzahl der Sperren für den aktuellen Thread wird für statistische Zwecke verwendet.  
+ Führt einen atomarischen Dekrement auf die Anzahl der Sperren für das Modul und für den aktuellen Thread. `CComAutoThreadModule` verwendet die Anzahl der Module Sperre um zu bestimmen, ob alle Clients auf das Modul zugreifen. Die Anzahl der Sperren für den aktuellen Thread wird für statistische Zwecke verwendet.  
   
  Wenn die Anzahl der Sperren Modul 0 (null) erreicht, kann das Modul entladen werden.  
   

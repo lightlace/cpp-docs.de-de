@@ -1,10 +1,7 @@
 ---
 title: ATL-Textcodierung Funktionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>ATL-Textcodierung-Funktionen
 Diese Funktionen unterstützen Text codieren und decodieren.
@@ -69,7 +65,7 @@ Diese Funktionen unterstützen Text codieren und decodieren.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 Mit dieser Funktion wird der numerische Wert einer Hexadezimalziffer abgerufen.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Der numerische Wert, der das eingegebene Zeichen, die als eine hexadezimale Ziffer interpretiert werden soll. Z. B. eine Eingabe von "0" gibt einen Wert von 0 zurück, und eine Eingabe von "A" gibt einen Wert von 10 zurück. Wenn das eingegebene Zeichen nicht um eine hexadezimale Ziffer ist, gibt diese Funktion-1 zurück.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 Mit dieser Funktion wird zum Abrufen der Version der ATL-Bibliothek, die Sie verwenden.  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 Decodiert eine Zeichenfolge, die als hexadezimaler Text z. B. durch einen vorherigen Aufruf codiert wurde [AtlHexEncode](#atlhexencode).  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 Mit dieser Funktion können Sie die Größe eines Puffers in Bytes abrufen, der die Daten enthalten kann, die aus einer hexadezimal codierten Zeichenfolge der angegebenen Länge decodiert wurden.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Bytes, die für einen Puffer, der eine decodierte Zeichenfolge enthalten könnte erforderlichen `nSrcLen` Zeichen.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 Mit dieser Funktion werden einige Daten als Zeichenfolge mit hexadezimalem Text codiert.  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>Hinweise  
  Jedes Byte von Quelldaten ist als 2 hexadezimalen Zeichen codiert.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Zeichen, die für einen Puffer, der codierte Daten enthalten, konnte erforderliche `nSrcLen` Bytes.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 Mit dieser Funktion wird der numerische Wert einer Hexadezimalziffer abgerufen.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Der numerische Wert, der das eingegebene Zeichen, die als eine hexadezimale Ziffer interpretiert werden soll. Z. B. eine Eingabe von "0" gibt einen Wert von 0 zurück, und eine Eingabe von "A" gibt einen Wert von 10 zurück. Wenn das eingegebene Zeichen nicht um eine hexadezimale Ziffer ist, gibt diese Funktion-1 zurück.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Mit dieser Funktion können Sie eine Unicode-Zeichenfolge in UTF-8 konvertieren.  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>Hinweise  
  Um zu bestimmen, die Größe des Puffers für die konvertierte Zeichenfolge erforderlich sind, rufen Sie diese Funktion übergeben 0 für `szDest` und `nDest`.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 Mit dieser Funktion werden einige Daten mit "B"-Codierung konvertiert.  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>Hinweise  
  Das Codierungsschema "B" ist in RFC 2047 beschriebenen ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Hinweise  
  Das Codierungsschema "B" ist in RFC 2047 beschriebenen ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 Mit dieser Funktion werden für die Verwendung in XML unsichere Zeichen in sichere Zeichen konvertiert.  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  ATL_ESC-Flags, die beschreiben, wie die Konvertierung erfolgt, ausgeführt werden. 
 
-- `ATL_ESC_FLAG_NONE`Das Standardverhalten. Anführungszeichen sind oder als Apostrophe nicht konvertiert.
-- `ATL_ESC_FLAG_ATTR`Anführungszeichen eingeschlossen und Apostrophe in konvertiert `&quot;` und `&apos;` bzw..
+- `ATL_ESC_FLAG_NONE` Das Standardverhalten. Anführungszeichen sind oder als Apostrophe nicht konvertiert.
+- `ATL_ESC_FLAG_ATTR` Anführungszeichen eingeschlossen und Apostrophe in konvertiert `&quot;` und `&apos;` bzw.
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 Mit dieser Funktion können Sie die Anzahl von Sonderzeichen in einer Zeichenfolge abrufen.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl von Sonderzeichen, die innerhalb der Zeichenfolge gemäß gefunden [IsExtendedChar](#isextendedchar).  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 Mit dieser Funktion können Sie herausfinden, ob ein angegebenes Zeichen ein Sonderzeichen ist (kleiner als 32, größer als 126 und kein Tabstopp-, Zeilenvorschub- oder Wagenrücklaufzeichen)  
   
 ```  
@@ -360,13 +356,13 @@ inline int IsExtendedChar(char ch) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *CH*  
+ *ch*  
  Das zu testende Zeichen  
   
 ### <a name="return-value"></a>Rückgabewert  
  **"True"** Wenn das Zeichen erweitert wird, **"false"** andernfalls.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 Mit dieser Funktion werden einige Daten mit "Q"-Codierung konvertiert.  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>Hinweise  
  Das Codierungsschema "Q" wird in RFC 2047 beschrieben ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Hinweise  
  Das Codierungsschema "Q" wird in RFC 2047 beschrieben ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 Decodiert eine Zeichenfolge, die im quoted-printable-Format wie z. B. durch einen vorherigen Aufruf codiert wurde [QPEncode](#qpencode).  
   
 ```  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>Hinweise  
  Die quoted-printable-Codierungsschema wird beschrieben, in RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 Mit dieser Funktion können Sie die Größe eines Puffers in Bytes abrufen, der die Daten enthalten kann, die aus einer Zeichenfolge der angegebenen Länge in einem druckbaren Format mit Anführungszeichen decodiert wurden.  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>Hinweise  
  Die quoted-printable-Codierungsschema wird beschrieben, in RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 Mit dieser Funktion können Sie Daten in ein druckbares Format mit Anführungszeichen codieren.  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  ATLSMTP_QPENCODE-Flags, die beschreiben, wie die Konvertierung erfolgt, ausgeführt werden. 
-- `ATLSMTP_QPENCODE_DOT`Wenn Sie ein Punkt am Anfang einer Zeile angezeigt wird, ist es der Ausgabe hinzugefügt sowie codiert.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`Fügt `=\r\n` auf die codierte Zeichenfolge.
+- `ATLSMTP_QPENCODE_DOT` Wenn Sie ein Punkt am Anfang einer Zeile angezeigt wird, ist es der Ausgabe hinzugefügt sowie codiert.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` Fügt `=\r\n` auf die codierte Zeichenfolge.
 
 Die quoted-printable-Codierungsschema wird beschrieben, [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
   
@@ -513,7 +509,7 @@ Die quoted-printable-Codierungsschema wird beschrieben, [RFC 2045](http://www.ie
 ### <a name="remarks"></a>Hinweise  
  Die quoted-printable-Codierungsschema wird beschrieben, in RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Hinweise  
  Die quoted-printable-Codierungsschema wird beschrieben, in RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 Decodiert eine Zeichenfolge, die Uuencoded z. B. durch einen vorherigen Aufruf wurde [UUEncode](#uuencode).  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>Hinweise  
  Diese Implementierung Binärstreams in UUENCODE folgt der POSIX P1003.2b/D11-Spezifikation.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 Mit dieser Funktion können Sie die Größe eines Puffers in Bytes abrufen, der die Daten enthalten kann, die aus einer UUEncoded-Zeichenfolge der angegebenen Länge decodiert wurden.  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Hinweise  
  Diese Implementierung Binärstreams in UUENCODE folgt der POSIX P1003.2b/D11-Spezifikation.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 Mit dieser Funktion können Sie Daten in UUEncoded-Daten codieren.  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  Flags, die Steuerung des Verhaltens dieser Funktion. 
-- `ATLSMTP_UUENCODE_HEADE`Der Header wird codiert werden.
-- `ATLSMTP_UUENCODE_END`Am Ende wird codiert werden.
-- `ATLSMTP_UUENCODE_DOT`Daten Füllung wird ausgeführt.  
+- `ATLSMTP_UUENCODE_HEADE` Der Header wird codiert werden.
+- `ATLSMTP_UUENCODE_END` Am Ende wird codiert werden.
+- `ATLSMTP_UUENCODE_DOT` Daten Füllung wird ausgeführt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>Hinweise  
  Diese Implementierung Binärstreams in UUENCODE folgt der POSIX P1003.2b/D11-Spezifikation.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.  
   
 ```  

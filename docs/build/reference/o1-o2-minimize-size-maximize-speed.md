@@ -2,12 +2,9 @@
 title: -O1, -O2 (Größe minimieren, Geschwindigkeit maximieren) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /o2
 - /o1
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f880b3cb806efa63299bf6cfa4aab4c72df23817
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6bbe16cb3f33e048c08d36cb9cd3d5016d7987c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Größe minimieren, Geschwindigkeit maximieren)
 
@@ -75,7 +70,7 @@ Die **/O1** und **/O2** Compileroptionen sind eine schnelle Möglichkeit, mehrer
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)  
+[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)  
 [Compileroptionen](../../build/reference/compiler-options.md)  
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)  
-[/ EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md)
+[/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md)

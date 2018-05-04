@@ -1,10 +1,10 @@
 ---
-title: /GENPROFILE, /FASTGENPROFILE (Generate Profiling Instrumented Build) | Microsoft Docs
+title: / GENPROFILE, / fastgenprofile (Profilerstellung instrumentierenden Build generieren) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Profilerstellung instrumentierenden Build generieren)
 
@@ -31,14 +30,14 @@ Gibt die Generierung einer PGD-Datei durch den Linker an, um die profilgesteuert
 
 ## <a name="syntax"></a>Syntax
 
-> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]<br/>
-> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]
+> **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Pfad**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_Filename_}]<br/>
+> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Pfad**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_Filename_}]
 
 ### <a name="arguments"></a>Argumente
 
 Eines der folgenden Argumente angegeben werden kann, um **/genprofile** oder **/fastgenprofile**. Argumente, die hier aufgeführten getrennt durch einen senkrechten Strich (**|**) Zeichen schließen sich gegenseitig. Verwenden Sie ein Komma (**,**) Zeichen zum Trennen von Optionen.
 
-**COUNTER32** &#124; **COUNTER64**<br/>
+**COUNTER32** &AMP;#124; **COUNTER64**<br/>
 Verwenden Sie **COUNTER32** an die Verwendung von 32-Bit-Prüfpunkt-Leistungsindikatoren und **COUNTER64** 64-Bit-Prüfpunkt-Leistungsindikatoren an. Geben Sie bei **/genprofile**, der Standardwert ist **COUNTER64**. Geben Sie bei **/fastgenprofile**, der Standardwert ist **COUNTER32**.
 
 **EXACT** &#124; **NOEXACT**<br/>

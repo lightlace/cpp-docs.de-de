@@ -1,12 +1,9 @@
 ---
 title: _bstr_t-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t-Klasse
 **Microsoft-spezifisch**  
@@ -57,10 +52,10 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |[operator =](../cpp/bstr-t-operator-equal.md)|Weist einem vorhandenen `_bstr_t`-Objekt einen neuen Wert zu.|  
-|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|Fügt Zeichen an das Ende des `_bstr_t`-Objekts an.|  
+|[Operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|Fügt Zeichen an das Ende des `_bstr_t`-Objekts an.|  
 |[Operator +](../cpp/bstr-t-operator-add-equal-plus.md)|Verkettet zwei Zeichenfolgen.|  
 |[Operator !](../cpp/bstr-t-operator-logical-not.md)|Überprüft, ob das gekapselte `BSTR` ist ein **NULL** Zeichenfolge.|  
-|[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|Vergleicht zwei `_bstr_t`-Objekte.|  
+|[Operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Vergleicht zwei `_bstr_t`-Objekte.|  
 |[Operator Wchar_t * &#124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahiert die Zeiger auf das gekapselten Unicode- oder Mehrbyte-`BSTR`-Objekt.|  
   
 **Ende Microsoft-spezifisch**  

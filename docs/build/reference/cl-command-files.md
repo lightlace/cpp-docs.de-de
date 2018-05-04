@@ -1,13 +1,10 @@
 ---
 title: CL-Befehlsdateien | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-command-files"></a>CL-Befehlsdateien
 Eine Befehlsdatei ist eine Textdatei, die Optionen und Dateinamen, geben Sie andernfalls auf, enthält die [Befehlszeile](../../build/reference/compiler-command-line-syntax.md) , oder geben Sie mithilfe der [CL-Umgebungsvariablen](../../build/reference/cl-environment-variables.md). CL akzeptiert eine Compiler-Befehlsdatei als Argument in der CL-Umgebungsvariablen oder in der Befehlszeile angegeben. Anders als in der Befehlszeile oder in der CL-Umgebungsvariablen können Sie in einer Befehlsdatei mehrzeilige Optionen und Dateinamen verwenden.  

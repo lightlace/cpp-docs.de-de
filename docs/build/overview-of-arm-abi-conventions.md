@@ -1,27 +1,22 @@
 ---
-title: "Übersicht über die ARM-ABI-Konventionen | Microsoft Docs"
-ms.custom: 
+title: Übersicht über die ARM-ABI-Konventionen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Übersicht über ARM-ABI-Konventionen
 Die Binärschnittstelle (ABI, Application Binary Interface) für den für Windows on ARM-Prozessoren kompilierten Code basiert auf der standardmäßigen ARM EABI. Dieser Artikel zeigt die wichtigsten Unterschiede zwischen Windows on ARM und dem Standard. Weitere Informationen über die standardmäßige ARM EABI finden Sie unter [Anwendung binären Schnittstelle (ABI) für die ARM-Architektur](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  
@@ -197,7 +192,7 @@ Die Binärschnittstelle (ABI, Application Binary Interface) für den für Window
 ## <a name="cc-specifics"></a>Eigenschaften von C/C++  
  Enumerationen sind 32-Bit-Ganzzahl-Typen, es sei denn mindestens ein Wert in der Enumeration erfordert einen 64-Bit-Doppelwort-Speicher. In diesem Fall wird die Enumeration auf einen 64-Bit-Ganzzahl-Typ heraufgestuft.  
   
- `wchar_t`wird definiert, um entsprechen, die `unsigned short`, um die Kompatibilität mit anderen Plattformen beizubehalten.  
+ `wchar_t` wird definiert, um entsprechen, die `unsigned short`, um die Kompatibilität mit anderen Plattformen beizubehalten.  
   
 ## <a name="stack-walking"></a>Stackwalk  
  Windows-Code wird kompiliert mit Frame-Pointer aktiviert ([Oy (Framezeiger)](../build/reference/oy-frame-pointer-omission.md)) schnell Stackwalk aktivieren. Im Allgemeinen verweist das r11-Register auf den nächsten Link in der Kette, bei dem es sich um ein {r11, lr}-Paar handelt, das den Pointer zum vorherigen Frame im Stack und die Rückgabeadresse spezifiziert. Für eine verbesserte Profilerstellung und Ablaufverfolgung empfehlen wir, dass Ihr Code auch Frame-Pointer aktiviert.  

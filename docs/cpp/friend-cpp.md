@@ -1,12 +1,9 @@
 ---
 title: Friend (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - friend_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="friend-c"></a>Friend (C++)
 In einigen Fällen ist es einfacher auf Memberebene Zugriff auf Funktionen, die nicht Member einer Klasse sind, oder auf alle Elemente in einer separaten Klasse gewähren. Nur der Klassenimplementierer kann seine „Friends“ deklarieren. Eine Funkion oder Klasse kann sich nicht selbst als „Friend“ einer Klasse deklarieren. Verwenden Sie in einer Klassendefinition das `friend` -Schlüsselwort und den Namen der eine Memberfunktion oder einer anderen Klasse Zugriff auf die privaten und geschützten Member einer Klasse gewähren.         In der Vorlagendefinition eines kann ein Typparameter als einen "Friend" deklariert werden.  

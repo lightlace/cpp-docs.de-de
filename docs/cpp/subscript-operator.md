@@ -1,12 +1,9 @@
 ---
 title: 'Tiefgestellt-Operator: | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '[]'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscript-operator"></a>Tiefgestellt-Operator:
 ## <a name="syntax"></a>Syntax  
@@ -53,7 +48,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  Im vorherigen Beispiel ist der Ausdruck `nArray[2]` identisch mit dem Ausdruck `2[nArray]`. Der Grund dafür ist, die das Ergebnis eines Indexausdrucks *e1 *** [** *e2* **]** wird:  
   
- **\*( (** *e2* **)** *+* **(***e1***) )**  
+ **\*((** *e2* **)** *+* **(***e1***))**  
   
  Die Adresse, die durch den Ausdruck ergab ist *e2* Byte der Absenderadresse *e1*. Stattdessen wird die Adresse skaliert, um das nächste Objekt im Array yield *e2*. Zum Beispiel:  
   
@@ -67,7 +62,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- indexierte Ausdrücke sind von links nach rechts angeordnet. Die äußerste linke Indexierte Ausdruck * expression1***[***expression2 ***]**, wird zuerst ausgewertet. Die Adresse, die sich aus dem Hinzufügen von *expression1* und *expression2* ergibt, bildet einen Zeigerausdruck. Dann wird *expression3* zu diesem Zeigerausdruck hinzugefügt, um einen neuen Zeigerausdruck zu bilden. Dies geht so lange weiter, bis der letzte Subscriptausdruck hinzugefügt wurde. Der Dereferenzierungsoperator (**\***) wird angewendet, nachdem der letzte Indexierte Ausdruck ausgewertet wird, es sei denn, der letzte Zeigerwert einen Arraytyp spricht.  
+ indexierte Ausdrücke sind von links nach rechts angeordnet. Die äußerste linke Indexierte Ausdruck * expression1 ***[*** expression2 ***]**, wird zuerst ausgewertet. Die Adresse, die sich aus dem Hinzufügen von *expression1* und *expression2* ergibt, bildet einen Zeigerausdruck. Dann wird *expression3* zu diesem Zeigerausdruck hinzugefügt, um einen neuen Zeigerausdruck zu bilden. Dies geht so lange weiter, bis der letzte Subscriptausdruck hinzugefügt wurde. Der Dereferenzierungsoperator (**\***) wird angewendet, nachdem der letzte Indexierte Ausdruck ausgewertet wird, es sei denn, der letzte Zeigerwert einen Arraytyp spricht.  
   
  Ausdrücke mit mehreren Indizes verweisen auf Elemente aus mehrdimensionalen Arrays. Ein mehrdimensionales Array ist ein Array, dessen Elemente Arrays sind. Beispielsweise ist das erste Element eines dreidimensionalen Arrays ein Array mit zwei Dimensionen. Im folgenden Beispiel wird ein einfaches, zweidimensionales Array aus Zeichen deklariert und initialisiert:  
   

@@ -1,12 +1,9 @@
 ---
 title: IDataObjectImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3ffcdd8cc8320b2534d928171fe75619062b300
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl-Klasse
 Diese Klasse stellt Methoden für die Unterstützung, Uniform Data Transfer und Verwalten von Verbindungen bereit.  
@@ -76,9 +71,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|Überträgt Daten vom Client auf das Datenobjekt. Gibt die ATL-Implementierung **E_NOTIMPL**.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die ["IDataObject"](http://msdn.microsoft.com/library/windows/desktop/ms688421) Schnittstelle stellt Methoden zur Unterstützung von Uniform Data Transfer. `IDataObject`verwendet die Strukturen Standardformat [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) und [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) abrufen und Speichern von Daten.  
+ Die ["IDataObject"](http://msdn.microsoft.com/library/windows/desktop/ms688421) Schnittstelle stellt Methoden zur Unterstützung von Uniform Data Transfer. `IDataObject` verwendet die Strukturen Standardformat [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) und [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) abrufen und Speichern von Daten.  
   
- `IDataObject`Außerdem verwaltet Verbindungen, um die advise-senken, änderungsbenachrichtigungen für Daten zu behandeln. Der Client muss in der Reihenfolge für den Client zum Empfangen von änderungsbenachrichtigungen für Daten aus dem Datenobjekt, implementieren die [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) Schnittstelle in einem Objekt eine Advise-Senke aufgerufen. Wenn dann ruft der Client **IDataObject::DAdvise**, eine Verbindung zwischen dem Datenobjekt und die Advise-Senke hergestellt wird.  
+ `IDataObject` Außerdem verwaltet Verbindungen, um die advise-senken, änderungsbenachrichtigungen für Daten zu behandeln. Der Client muss in der Reihenfolge für den Client zum Empfangen von änderungsbenachrichtigungen für Daten aus dem Datenobjekt, implementieren die [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) Schnittstelle in einem Objekt eine Advise-Senke aufgerufen. Wenn dann ruft der Client **IDataObject::DAdvise**, eine Verbindung zwischen dem Datenobjekt und die Advise-Senke hergestellt wird.  
   
  Klasse `IDataObjectImpl` stellt eine Standardimplementierung von `IDataObject` und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
   
@@ -92,7 +87,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise  
  Herstellen einer Verbindung zwischen dem Datenobjekt und einer Advise-Senke.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT DAdvise(
   
  Finden Sie unter [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) im Windows SDK.  
   
-##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  Beendet eine Verbindung zuvor über [DAdvise](#dadvise).  
   
 ```
@@ -120,7 +115,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) im Windows SDK.  
   
-##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  Erstellt einen Enumerator zum Durchlaufen der aktuellen Advise-Verbindungen.  
   
 ```
@@ -134,7 +129,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) im Windows SDK.  
   
-##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  Erstellt einen Enumerator zum Durchlaufen der **FORMATETC** Strukturen, die durch das Datenobjekt unterstützt.  
   
 ```
@@ -149,7 +144,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **E_NOTIMPL**.  
   
-##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange  
  Sendet eine Benachrichtigung an jeden Advise-Senke, die zurzeit verwaltet wird.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc  
  Ruft ab einen logisch equivalent **FORMATETC** Struktur, die komplexer ist.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) im Windows SDK.  
   
-##  <a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  Werden Daten aus dem Datenobjekt an den Client übertragen.  
   
 ```
@@ -186,7 +181,7 @@ HRESULT GetData(
   
  Finden Sie unter [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) im Windows SDK.  
   
-##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  Ähnlich wie `GetData`, abgesehen von der Client zuordnen, muss der **STGMEDIUM** Struktur.  
   
 ```
@@ -201,7 +196,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) im Windows SDK.  
   
-##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  Bestimmt, ob das Datenobjekt mit eine bestimmten unterstützt **FORMATETC** Struktur zum Übertragen von Daten.  
   
 ```
@@ -214,7 +209,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) im Windows SDK.  
   
-##  <a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  Überträgt Daten vom Client auf das Datenobjekt.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: Virtuelle Funktionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1a6fd82a042ab29ad9216746dcabce9e9ed15f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="virtual-functions"></a>Virtuelle Funktionen
 Eine virtuelle Funktion ist eine Memberfunktion, von der Sie erwarten, dass sie in abgeleiteten Klassen neu definiert wird. Wenn Sie mit einem Zeiger oder einem Verweis auf die Basisklasse auf ein abgeleitetes Klassenobjekt verweisen, können Sie eine virtuelle Funktion für dieses Objekt aufrufen und die Version der abgeleiteten Klasse für die Funktion ausführen.  

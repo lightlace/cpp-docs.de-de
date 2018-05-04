@@ -1,12 +1,9 @@
 ---
 title: CThreadPool Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CThreadPool
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6739e179843864c952a5e864de1389b466d7ca7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64a165bdffa9f37241991af919d60de2e0dc7a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cthreadpool-class"></a>CThreadPool-Klasse
 Diese Klasse stellt einen Pool von Arbeitsthreads, die eine Warteschlange von Arbeitsaufgaben zu verarbeiten.  
@@ -105,7 +100,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-##  <a name="addref"></a>CThreadPool::AddRef  
+##  <a name="addref"></a>  CThreadPool::AddRef  
  Implementierung von `IUnknown::AddRef`.  
   
 ```
@@ -118,7 +113,7 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Klasse implementiert nicht die Lebensdauer-Steuerelement mit dem verweiszählung.  
   
-##  <a name="cthreadpool"></a>CThreadPool::CThreadPool  
+##  <a name="cthreadpool"></a>  CThreadPool::CThreadPool  
  Der Konstruktor für den Threadpool.  
   
 ```
@@ -128,7 +123,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert den Timeoutwert zu `ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT`. Die Standardzeit beträgt 36 Sekunden. Bei Bedarf können Sie eigene positiven ganzzahligen Wert für dieses Symbol vor dem Einfügen von atlutil.h definieren.  
   
-##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool  
+##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool  
  Der Destruktor für den Threadpool.  
   
 ```
@@ -138,7 +133,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [CThreadPool::Shutdown](#shutdown).  
   
-##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads  
+##  <a name="getnumthreads"></a>  CThreadPool::GetNumThreads  
  Rufen Sie diese Methode, um die Anzahl der Threads im Pool zu erhalten.  
   
 ```
@@ -148,7 +143,7 @@ int GetNumThreads() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der Threads im Pool zurück.  
   
-##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
+##  <a name="getqueuehandle"></a>  CThreadPool::GetQueueHandle  
  Rufen Sie diese Methode, um das Handle von der e/a-Abschlussport verwendet, um Arbeitsaufgaben in die Warteschlange zu erhalten.  
   
 ```
@@ -158,7 +153,7 @@ HANDLE GetQueueHandle() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der Threadpool wurde nicht initialisiert die Warteschlangenhandle oder NULL zurückgegeben werden soll.  
   
-##  <a name="getsize"></a>:: GetSize  
+##  <a name="getsize"></a>  :: GetSize  
  Rufen Sie diese Methode, um die Anzahl der Threads im Pool zu erhalten.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="gettimeout"></a>CThreadPool::GetTimeout  
+##  <a name="gettimeout"></a>  CThreadPool::GetTimeout  
  Rufen Sie diese Methode, um die maximale Zeit in Millisekunden abzurufen, die der Threadpool darauf gewartet, dass ein Thread beendet wird.  
   
 ```
@@ -189,7 +184,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="remarks"></a>Hinweise  
  Dieser Timeoutwert wird verwendet, indem [CThreadPool::Shutdown](#shutdown) Wenn kein anderer Wert für diese Methode angegeben wird.  
   
-##  <a name="initialize"></a>CThreadPool::Initialize  
+##  <a name="initialize"></a>  CThreadPool::Initialize  
  Rufen Sie diese Methode, um die Threadpools zu initialisieren.  
   
 ```
@@ -220,7 +215,7 @@ HRESULT Initialize(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="queryinterface"></a>CThreadPool::QueryInterface  
+##  <a name="queryinterface"></a>  CThreadPool::QueryInterface  
  Implementierung von **IUnknown:: QueryInterface**.  
   
 ```
@@ -230,7 +225,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 ### <a name="remarks"></a>Hinweise  
  Objekte dieser Klasse können erfolgreich abgefragt werden, für die **IUnknown** und [IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) Schnittstellen.  
   
-##  <a name="queuerequest"></a>CThreadPool::QueueRequest  
+##  <a name="queuerequest"></a>  CThreadPool::QueueRequest  
  Rufen Sie diese Methode, um eine Arbeitsaufgabe von einem Thread im Pool behandelt werden in die Warteschlange ein.  
   
 ```
@@ -247,7 +242,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt eine Arbeitsaufgabe in die Warteschlange. Die Threads im Pool wählen Sie Elemente aus der Warteschlange in der Reihenfolge, in der sie empfangen werden.  
   
-##  <a name="release"></a>CThreadPool::Release  
+##  <a name="release"></a>  CThreadPool::Release  
  Implementierung von `IUnknown::Release`.  
   
 ```
@@ -260,7 +255,7 @@ ULONG STDMETHODCALLTYPE Release() throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Klasse implementiert nicht die Lebensdauer-Steuerelement mit dem verweiszählung.  
   
-##  <a name="setsize"></a>Wurde  
+##  <a name="setsize"></a>  Wurde  
  Rufen Sie diese Methode, um die Anzahl der Threads im Pool festgelegt.  
   
 ```
@@ -281,7 +276,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn die Anzahl der angegebenen Threads kleiner als die Anzahl der Threads im Pool aktuell ist, stellt das Objekt eine Nachricht über das Herunterfahren in die Warteschlange, indem Sie einen wartenden Thread abgerufen zu werden. Wenn Sie ein wartenden Thread die Nachricht aus der Warteschlange abruft, benachrichtigt den Threadpool und die Threadprozedur beendet. Dieser Prozess wird wiederholt, bis die Anzahl der Threads im Pool für die angegebene Anzahl erreicht oder keine Threads innerhalb des Zeitraums gemäß beinhalten [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout). In diesem Fall gibt die Methode zurück, ein HRESULT entspricht **WAIT_TIMEOUT** und die Nachricht über das ausstehende Herunterfahren abgebrochen wird.  
   
-##  <a name="settimeout"></a>CThreadPool::SetTimeout  
+##  <a name="settimeout"></a>  CThreadPool::SetTimeout  
  Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool darauf gewartet, dass ein Thread beendet wird.  
   
 ```
@@ -300,7 +295,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
   
  Beachten Sie, dass `dwMaxWait` ist die Zeit, die einen einzelnen Thread zum Herunterfahren der Pool gewartet wird. Die maximale Zeit, die ausgeführt werden konnte, um mehrere Threads aus dem Pool entfernt möglicherweise etwas weniger als `dwMaxWait` multipliziert die Anzahl der Threads.  
   
-##  <a name="shutdown"></a>CThreadPool::Shutdown  
+##  <a name="shutdown"></a>  CThreadPool::Shutdown  
  Rufen Sie diese Methode, um den Threadpool zu schließen.  
   
 ```

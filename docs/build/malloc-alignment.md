@@ -1,27 +1,22 @@
 ---
 title: Malloc-Ausrichtung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="malloc-alignment"></a>malloc-Ausrichtung
 ["malloc"](../c-runtime-library/reference/malloc.md) wird sichergestellt, dass Arbeitsspeicher zurückgeben, die zeigt, passend ausgerichtet ist, für das Speichern jedes Objekt, das eine grundlegende Ausrichtung und die hat hinsichtlich der Menge an Arbeitsspeicher passt konnte, der zugeordnet ist. Ein *grundlegende Ausrichtung* ist eine Ausrichtung, die kleiner oder gleich der größten Ausrichtung, die von der Implementierung ohne Ausrichtungsspezifikation unterstützt wird. (In Visual C++ ist dies die Ausrichtung, die für einen `double` oder 8 Bytes erforderlich ist. In einem Code, der auf 64-Bit-Plattformen ausgerichtet ist, sind es 16 Bytes.) Beispielsweise kann eine Vier-Byte-Speicherbelegung an einer Begrenzung ausgerichtet werden, die ein Objekt unterstützt, das maximal vier Byte groß ist.  

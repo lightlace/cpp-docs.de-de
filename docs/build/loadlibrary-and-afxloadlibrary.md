@@ -1,13 +1,10 @@
 ---
 title: "\"LoadLibrary\" und \"AfxLoadLibrary\" | Microsoft Docs"
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - LoadLibrary
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: bc4e211259e6c0a483f73094c442c034cd649616
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>"LoadLibrary" und "AfxLoadLibrary"
 Verarbeitet Aufruf [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (oder ["AfxLoadLibrary"](../mfc/reference/application-information-and-management.md#afxloadlibrary)) zum expliziten Verknüpfen einer DLL. Wenn der Aufruf erfolgreich ist, ordnet die Funktion die angegebene DLL im Adressbereich des aufrufenden Prozesses zu und gibt ein Handle für die DLL zurück. Dieses Handle kann zusammen mit anderen Funktionen, beispielsweise `GetProcAddress` und `FreeLibrary`, für die explizite Verknüpfung verwendet werden.  

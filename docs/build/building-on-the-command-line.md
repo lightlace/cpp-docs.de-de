@@ -1,10 +1,10 @@
 ---
 title: C/C++-Code in der Befehlszeile erstellen | Microsoft Docs
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Erstellen von C/C++-Code in der Befehlszeile
 
@@ -91,12 +90,12 @@ Die einfachste Möglichkeit, geben Sie eine bestimmten Build-Architektur in eine
 
 ### <a name="vcvarsall-syntax"></a>Vcvarsall-syntax
 
-> **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
+> **"vcvarsall.bat"** [*Architektur*] [*Platform_type*] [*Winsdk_version*] [**-Vcvars_ver =** _Vcversion_]
 
-*architecture*<br/>
+*Architektur*<br/>
 Dieses optionale Argument gibt den Host und Ziel-Architektur verwendet. Wenn *Architektur* nicht angegeben ist, wird die Standard-Buildumgebung verwendet. Diese Argumente werden unterstützt:
 
-|*architecture*|Compiler|Architektur des Host-Computers|Buildausgabearchitektur (Ziel)|
+|*Architektur*|Compiler|Architektur des Host-Computers|Buildausgabearchitektur (Ziel)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86-32-Bit systemeigen|x86, x64|x86|
 |**X86\_amd64** oder **X86\_X64**|Plattformübergreifende X64 auf x86|x86, x64|x64|

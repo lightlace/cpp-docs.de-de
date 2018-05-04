@@ -1,13 +1,10 @@
 ---
 title: . LIB-Dateien als Linkereingabe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalDependencies
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8382e43398c4b6e5241542e6b41fdee8e2f70eff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lib-files-as-linker-input"></a>.LIB-Dateien als Linkereingabe
 LINK akzeptiert COFF-Standardbibliotheken und COFF-Bibliotheken, die in der Regel die Erweiterung haben. Lib. Standardbibliotheken Objekte enthalten und werden durch die LIB-Tool erstellt. Importbibliotheken enthalten Informationen über Exporte in andere Programme, und es werden entweder durch LINK erstellt, wenn sie ein Programm erstellt, das Exporte enthält, oder durch die LIB-Tool. Informationen zur Verwendung von LIB standard erstellen oder importieren Bibliotheken finden Sie unter [LIB-Referenz](../../build/reference/lib-reference.md). Weitere Informationen zur Verwendung von LINK eine Importbibliothek zu erstellen, finden Sie unter der [/DLL](../../build/reference/dll-build-a-dll.md) Option.  

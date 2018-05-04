@@ -1,12 +1,9 @@
 ---
 title: CComCompositeControl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl-Klasse
 Diese Klasse stellt die Methoden zur Implementierung eines zusammengesetzten Steuerelements erforderlich sind.  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>Hinweise  
  Abgeleitete Klassen von Klasse `CComCompositeControl` erben die Funktionalität eines zusammengesetzten ActiveX-Steuerelements. ActiveX-Steuerelemente abgeleitet `CComCompositeControl` von ein Standarddialogfeld gehostet werden. Diese Steuerelemente werden zusammengesetzte Steuerelemente bezeichnet, da sie andere Steuerelemente (systemeigene Windows-Steuerelemente und ActiveX-Steuerelemente) hosten können.  
   
- `CComCompositeControl`identifiziert die Dialogressource beim Erstellen der zusammengesetzten Steuerelements anhand der für einen enumerierten Datenmember in der untergeordneten Klasse an. Der Member dieser Klasse für die untergeordnete LEISTE wird auf die Ressourcen-ID der Dialogfeldressource festgelegt, die als das Fenster des Steuerelements verwendet werden. Im folgenden ist ein Beispiel für den Datenmember, die abgeleitete Klasse von `CComCompositeControl` zum Identifizieren der Dialogfeldressource für das Fenster des Steuerelements verwendet werden dürfen:  
+ `CComCompositeControl` identifiziert die Dialogressource beim Erstellen der zusammengesetzten Steuerelements anhand der für einen enumerierten Datenmember in der untergeordneten Klasse an. Der Member dieser Klasse für die untergeordnete LEISTE wird auf die Ressourcen-ID der Dialogfeldressource festgelegt, die als das Fenster des Steuerelements verwendet werden. Im folgenden ist ein Beispiel für den Datenmember, die abgeleitete Klasse von `CComCompositeControl` zum Identifizieren der Dialogfeldressource für das Fenster des Steuerelements verwendet werden dürfen:  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -110,7 +105,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="advisesinkmap"></a>:: AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  :: AdviseSinkMap  
  Rufen Sie diese Methode senkereigniszuordnung oder alle Steuerelemente, die von zusammengesetzten Steuerelementen gehostet wird.  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Hinweise  
  Die grundlegende Implementierung dieser Methode durchsucht die Einträge in der ereignismeldung Sink-Zuordnung. Anschließend Member- oder unadvises die Verbindungspunkte an der COM-Objekte, die durch das Ereignis Sink-Zuordnung Senke Einträge beschrieben. Dieser Member-Methode stützt sich auch auf die Tatsache, dass die von einer Instanz die abgeleitete Klasse erbt `IDispEventImpl` für jedes Steuerelement in der Senke-Zuordnung, die empfohlen oder unadvised sein.  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  Rufen Sie diese Methode zum Berechnen der Größe in **HIMETRIC** Einheiten des Dialog-Ressource, die zum Hosten von zusammengesetzten Steuerelementen verwendet.  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Hinweise  
  Die Größe wird zurückgegeben, der `size` Parameter.  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  Diese Methode wird aufgerufen, um das Fenster des Steuerelements für die zusammengesetztes Steuerelement zu erstellen.  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird in der Regel während der direkten Aktivierung des Steuerelements aufgerufen.  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  Der Konstruktor.  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die [CComCompositeControl::m_hbrBackground](#m_hbrbackground) und [CComCompositeControl::m_hWndFocus](#m_hwndfocus) Datenmember auf NULL.  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  Der Destruktor.  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Hinweise  
  Löscht das Hintergrundobjekt im aus, falls vorhanden.  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  Rufen Sie diese Methode, um das Fenster des Steuerelements zu erstellen und alle gehosteten Steuerelemente empfehlen.  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft [CComCompositeControl::Create](#create) und [:: AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  Der Hintergrundpinsel.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  Das Handle des Fensters, das gerade den Fokus besitzt.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  Rufen Sie diese Methode, um die Farbe des Hintergrunds des zusammengesetzten Steuerelements mit Background-Farbe für den Container festlegen.  
   
 ```

@@ -1,13 +1,10 @@
 ---
 title: ATL-Kopierrichtlinienklassen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-copy-policy-classes"></a>ATL-kopieren-Policy-Klassen
 Kopie Richtlinienkopierklassen sind [hilfsprogrammklassen](../atl/utility-classes.md) zum Initialisieren verwendet, kopieren und Löschen von Daten. Kopierrichtlinienklassen können Sie die Semantik zum Kopieren für jeden Datentyp definieren und Konvertierungen zwischen verschiedenen Datentypen zu definieren.  
@@ -75,14 +70,14 @@ Kopie Richtlinienkopierklassen sind [hilfsprogrammklassen](../atl/utility-classe
  In der Regel müssen Sie eine eigene Kopierrichtlinienklassen für heterogene kopieren (d. h. die Konvertierung zwischen Datentypen) definieren. Betrachten Sie einige Beispiele für benutzerdefinierte Richtlinienkopierklassen, die Dateien VCUE_Copy.h und VCUE_CopyString.h in der [ATLCollections](../visual-cpp-samples.md) Beispiel. Diese Dateien enthalten zwei Kopie Richtlinie Vorlagenklassen, `GenericCopy` und `MapCopy`, sowie eine Anzahl von spezialisierungen `GenericCopy` für verschiedene Datentypen.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy`ermöglicht Ihnen das Festlegen der *SourceType* und `DestinationType` als Vorlagenargumente. Hier ist die allgemeinste Form der `GenericCopy` Klasse von VCUE_Copy.h:  
+ `GenericCopy` ermöglicht Ihnen das Festlegen der *SourceType* und `DestinationType` als Vorlagenargumente. Hier ist die allgemeinste Form der `GenericCopy` Klasse von VCUE_Copy.h:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
  VCUE_Copy.h enthält außerdem die folgenden spezialisierungen dieser Klasse: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h enthält spezialisierungen für das Kopieren von **Std:: String**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, und `GenericCopy<BSTR, std::string>`. Sie verbessern können `GenericCopy` durch die Bereitstellung Weitere spezialisierungen Ihrer Wahl.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy`wird davon ausgegangen, dass die kopierten Daten in eine Zuordnung im C++-Standard-Bibliothek-Format gespeichert werden, so können Sie den Typ der Karte angeben, in dem die Daten gespeichert, und geben Sie das Ziel. Die Implementierung der Klasse verwendet nur bereitgestellt werden, indem Sie die *MapType* Klasse, um den Typ der Quelldaten zu bestimmen und den entsprechenden Aufrufen `GenericCopy` Klasse. Es werden keine spezialisierungen dieser Klasse benötigt.  
+ `MapCopy` wird davon ausgegangen, dass die kopierten Daten in eine Zuordnung im C++-Standard-Bibliothek-Format gespeichert werden, so können Sie den Typ der Karte angeben, in dem die Daten gespeichert, und geben Sie das Ziel. Die Implementierung der Klasse verwendet nur bereitgestellt werden, indem Sie die *MapType* Klasse, um den Typ der Quelldaten zu bestimmen und den entsprechenden Aufrufen `GenericCopy` Klasse. Es werden keine spezialisierungen dieser Klasse benötigt.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   

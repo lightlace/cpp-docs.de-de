@@ -2,12 +2,9 @@
 title: Häufig auftretende Probleme beim Erstellen eines Releasebuilds | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b5528a2d6bedaaaa7ddce582f58042e084b3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8860783a2cf9fb88b28e24e0bc16eb16c0dd5d77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Häufig auftretende Probleme beim Erstellen eines Releasebuilds
 Während der Entwicklung können Sie in der Regel erstellen und Testen mit einem Debugbuild des Projekts. Wenn Sie dann die Anwendung für einen Releasebuild erstellen, erhalten Sie möglicherweise eine zugriffsverletzung.  
@@ -54,22 +49,22 @@ Während der Entwicklung können Sie in der Regel erstellen und Testen mit einem
   
  Finden Sie unter der [/GZ (Catch Releasebuildfehlern in der Debugversion)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) Compileroption Informationen zum Abfangen von Version Buildfehler in Debugbuilds.  
   
-##  <a name="_core_heap_layout"></a>Heap-Layout  
+##  <a name="_core_heap_layout"></a> Heap-Layout  
  Heap Layout werden die Fehlerursache zu über 90 Prozent der offensichtlichen Probleme, wenn eine Anwendung debuggen, jedoch nicht Version funktioniert.  
   
  Wenn Sie Ihr Projekt für das Debuggen erstellen, verwenden Sie das Debug-Speicherreservierungsfunktion. Dies bedeutet, dass alle speicherbelegungen Guard Bytes darum platziert haben. Diese Guard Bytes erkennen eine Speicher-Überschreibung. Da der Heap Layout zwischen Release- und Debugkonfigurationen unterscheidet Versionen Überschreiben einer Arbeitsspeicher möglicherweise keine Probleme in einem Debugbuild erstellt, aber möglicherweise schwerwiegende Auswirkungen in ein Releasebuild erstellt werden.  
   
  Weitere Informationen finden Sie unter [prüfen, ob Arbeitsspeicher überschreiben](../../build/reference/checking-for-memory-overwrites.md) und [verwenden das Debuggen erstellen, überprüfen Sie, für Arbeitsspeicher überschreiben](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
   
-##  <a name="_core_compilation"></a>Kompilierung  
+##  <a name="_core_compilation"></a> Kompilierung  
  Viele der MFC-Makros sowie der Großteil der MFC-implementierungsänderungen beim Erstellen eines Version. Insbesondere wird die ASSERT-Makro zu "nothing" in einem Releasebuild kann ausgewertet, damit keine der Code, der in ASSERTs ausgeführt wird. Weitere Informationen finden Sie unter [ASSERT-Anweisungen untersuchen](../../build/reference/using-verify-instead-of-assert.md).  
   
  Einige Funktionen sind für höhere Geschwindigkeit im Releasebuild Inline. Optimierungen sind in der Regel in einem Releasebuild aktiviert. Außerdem wird eine andere Speicherbelegungsfunktion verwendet.  
   
-##  <a name="_core_pointer_support"></a>Zeiger-Unterstützung  
+##  <a name="_core_pointer_support"></a> Zeiger-Unterstützung  
  Das fehlen Debuginformationen entfernt die Auffüllung von Ihrer Anwendung. In einem Releasebuild haben verirrte Zeiger erhöht die Wahrscheinlichkeit auf nicht initialisierter Speicher, sondern zeigt Informationen zu debuggen.  
   
-##  <a name="_core_optimizations"></a>Optimierungen  
+##  <a name="_core_optimizations"></a> Optimierungen  
  Je nach Art der bestimmte Codesegmente möglicherweise die Optimierungscompiler unerwarteten Code generieren. Dies ist die am wenigsten wahrscheinlichen Ursache von Problemen mit dem Releasebuild, aber es in manchen Fällen auftreten. Eine Lösung finden Sie unter [des Codes optimieren](../../build/reference/optimizing-your-code.md).  
   
 ## <a name="see-also"></a>Siehe auch  

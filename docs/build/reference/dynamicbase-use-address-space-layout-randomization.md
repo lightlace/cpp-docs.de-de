@@ -1,13 +1,10 @@
 ---
 title: -DYNAMICBASE (Verwendung Adresse Space Layout Randomization) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.RandomizedBaseAddress
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1458070f85678d30c716622bf57740d90feb65d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85af66c4ce05057eff63292061b66202aeebe160
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Address Space Layout Randomization verwenden)
 Gibt an, ob ein ausführbares Image generiert werden, die nach dem Zufallsprinzip zur Ladezeit ein REBASE werden können Address Space Layout Randomization (ASLR)-Funktion von [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
@@ -41,7 +36,7 @@ Gibt an, ob ein ausführbares Image generiert werden, die nach dem Zufallsprinzi
 ## <a name="remarks"></a>Hinweise  
  Standardmäßig ist "/ DynamicBase" auf.  
   
- Diese Option ändert den Header einer ausführbaren Datei, um anzugeben, ob die Anwendung nach dem Zufallsprinzip zur Ladezeit zurückgesetzt werden soll.  
+ Diese Option ändert den Header einer ausführbaren Datei, um anzugeben, ob für die Anwendung nach dem Zufallsprinzip zur Ladezeit ein Rebase ausgeführt werden soll.  
   
  Adresse Space Layout Randomization wird unterstützt, auf [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
   

@@ -2,10 +2,7 @@
 title: -std (Language-Standardversion angeben) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /std
 - -std
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb248f4c7ce1d9520bc328ed59b75ff081659996
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fed80f0f9763b7e988c40a9d9f38f4e0f18eeb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="std-specify-language-standard-version"></a>/Std (Language-Standardversion angeben)
 
@@ -51,7 +46,7 @@ Die Standardeinstellung **/std:c ++ 14** Option ermöglicht es, den Satz von C +
 
 Zusätzliche Informationen für die C ++ 14 und C ++ 17-Funktionen aktiviert sind, wenn **/std:c ++ 14** ist angegeben, siehe die Hinweise im [Konformität von Visual C++ Language](../../visual-cpp-language-conformance.md).
   
-Die **/std:c ++ 17** Option ermöglicht den vollständigen Satz von C ++ 17-Funktionen von Visual C++-Compiler implementiert. Diese Option deaktiviert Standardbibliothek-Unterstützung für Funktionen, die geändert werden oder neue Versionen der Updates Arbeitsentwurf und Austragen von der C++-Standard und Compiler nach der C ++ 17.  
+Die **/std:c ++ 17** Option ermöglicht den vollständigen Satz von C ++ 17-Funktionen von Visual C++-Compiler implementiert. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden.  
   
 Die **/std:c ++ neueste** Option ermöglicht es den Satz von C++-Sprache und Bibliothek-Features von Visual C++ die meisten verfolgen implementiert neueste C ++ 20 Arbeitsentwurf und austragen Updates des C++-Standards, die nicht in C ++ 17 enthalten sind. Verwenden Sie diese Option zum Abrufen der Post-von C ++ 17-Sprachfunktionen, die durch den Compiler und die Standardbibliothek unterstützt. Eine Liste der unterstützten Sprachen und Bibliotheksfunktionen, finden Sie unter [Neues bei Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Die **/std:c ++ neueste** Option ermöglicht keine Funktionen, die geschützt werden, indem Sie die **/ experimentelle** wechseln.  
   

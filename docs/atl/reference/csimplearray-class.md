@@ -1,12 +1,9 @@
 ---
 title: CSimpleArray Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleArray
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplearray-class"></a>CSimpleArray-Klasse
 Diese Klasse stellt Methoden zum Verwalten von einem einfachen Array an.  
@@ -85,7 +80,7 @@ class CSimpleArray
 
   
 ## <a name="remarks"></a>Hinweise  
- `CSimpleArray`Stellt Methoden zum Erstellen und Verwalten von einem einfachen Array, eines angegebenen Typs `T`.  
+ `CSimpleArray` Stellt Methoden zum Erstellen und Verwalten von einem einfachen Array, eines angegebenen Typs `T`.  
   
  Der Parameter `TEqual` bietet eine Möglichkeit zum Definieren einer Gleichheitsfunktion für zwei Elemente des Typs `T`. Durch Erstellen einer Klasse ähnelt [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), es ist möglich, die das Verhalten des Tests auf Gleichheit für alle angegebenen Arrays zu ändern. Z. B. beim Umgang mit der ein Array von Zeigern es möglicherweise nützlich, um die Gleichheit als abhängig von den Werten zu definieren, die die Zeiger verweisen. Nutzt die standardmäßige Implementierung **operator=()**.  
   
@@ -97,7 +92,7 @@ class CSimpleArray
 ## <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>  CSimpleArray::Add  
  Fügt ein neues Element in das Array an.  
   
 ```
@@ -114,7 +109,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
  Der Konstruktor für das Arrayobjekt.  
   
 ```
@@ -129,7 +124,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die Datenmember, erstellen ein neues leeres `CSimpleArray` Objekt oder eine Kopie einer vorhandenen `CSimpleArray` Objekt.  
   
-##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  Der Destruktor.  
   
 ```
@@ -139,7 +134,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>  CSimpleArray::Find  
  Sucht ein Element im Array an.  
   
 ```
@@ -156,7 +151,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>  CSimpleArray::GetData  
  Gibt einen Zeiger auf die Daten im Array gespeichert.  
   
 ```
@@ -166,7 +161,7 @@ T* GetData() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die Daten im Array zurück.  
   
-##  <a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>  CSimpleArray::GetSize  
  Gibt die Anzahl der Elemente im Array gespeicherten zurück.  
   
 ```
@@ -176,7 +171,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der Elemente im Array gespeicherten zurück.  
   
-##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  Ruft ein Element aus dem Array ab.  
   
 ```
@@ -193,7 +188,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>  CSimpleArray::operator =  
  Zuweisungsoperator.  
   
 ```
@@ -215,7 +210,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>  CSimpleArray::Remove  
  Entfernt ein angegebenes Element aus dem Array.  
   
 ```
@@ -232,7 +227,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Element entfernt wird, werden die übrigen Elemente im Array neu nummeriert, um Lücken zu füllen.  
   
-##  <a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
  Entfernt alle Elemente aus dem Array.  
   
 ```
@@ -242,7 +237,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Hinweise  
  Entfernt alle Elemente, die derzeit im Array gespeichert.  
   
-##  <a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>  CSimpleArray::RemoveAt  
  Entfernt das angegebene Element aus dem Array.  
   
 ```
@@ -259,7 +254,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Element entfernt wird, werden die übrigen Elemente im Array neu nummeriert, um Lücken zu füllen.  
   
-##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  Legen Sie das angegebene Element im Array an.  
   
 ```

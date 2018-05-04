@@ -1,29 +1,24 @@
 ---
-title: "Grundlegendes zu Manifestgenerierung für C/c ++ ‑Programme | Microsoft Docs"
-ms.custom: 
+title: Grundlegendes zu Manifestgenerierung für C/c ++ ‑Programme | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848b4b449fa2c9c8930a616b70a5b61cb28d8fbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb6a65c718b88e4072c0ddad19411bb8ea4ddcff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Manifestgenerierung für C/C++-Programme
 Ein [manifest](http://msdn.microsoft.com/library/aa375365) ist ein XML-Dokument, das eine externe XML-Datei oder eine Ressource sein kann, die in einer Anwendung oder Assembly eingebettet. Das Manifest einer [isolierte Anwendung](http://msdn.microsoft.com/library/aa375190) dient zum Verwalten der Namen und Versionen freigegebener Seite-an-Seite-Assemblys, die an die die Anwendung zur Laufzeit gebunden werden soll. Das Manifest einer Seite-an-Seite-Assembly gibt seine Abhängigkeiten auf den Namen, Versionen, Ressourcen und andere Assemblys an.  

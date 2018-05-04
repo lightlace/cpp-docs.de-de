@@ -2,11 +2,8 @@
 title: CAtlModuleT Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModuleT
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f1ba8d59e85a480af38e5b9778fee0c714a0db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29088c56d7020b38febb96be7512771a258e25fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT-Klasse
 Diese Klasse implementiert eine ATL-Modul.  
@@ -71,20 +66,20 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="remarks"></a>Hinweise  
  `CAtlModuleT`, abgeleitet [von CAtlModule](../../atl/reference/catlmodule-class.md), eine ausführbare Datei (EXE) oder ein Dienst (EXE) ATL-Modul implementiert. Ein ausführbares Modul ist eine lokale, Out-of-Process-Server, während eine Dienstmodul einer Windows-Anwendung ist, die im Hintergrund ausgeführt, beim Starten von Windows wird.  
   
- `CAtlModuleT`bietet Unterstützung für die Initialisierung, registrieren und Aufheben der Registrierung des Moduls.  
+ `CAtlModuleT` bietet Unterstützung für die Initialisierung, registrieren und Aufheben der Registrierung des Moduls.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
 
   
- [Von CAtlModule](../../atl/reference/catlmodule-class.md)  
+ [CAtlModule](../../atl/reference/catlmodule-class.md)  
   
  `CAtlModuleT`  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT  
  Der Konstruktor.  
   
 ```
@@ -94,7 +89,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [CAtlModuleT::InitLibId](#initlibid).  
   
-##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>  CAtlModuleT::InitLibId  
  Initialisiert den Datenmember, enthält die GUID des aktuellen Moduls.  
   
 ```
@@ -104,7 +99,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>Hinweise  
  Wird aufgerufen, die vom Konstruktor [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
-##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
  Die EXE-Datei hinzugefügt zur Registrierung.  
   
 ```
@@ -114,7 +109,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
  Den Dienst hinzugefügt zur Registrierung.  
   
 ```
@@ -133,7 +128,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
  Entfernt die EXE-Datei aus der Registrierung.  
   
 ```
@@ -143,7 +138,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
  Entfernt den Dienst aus der Registrierung.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
  Aktualisiert die EXE-Informationen in der Registrierung.  
   
 ```

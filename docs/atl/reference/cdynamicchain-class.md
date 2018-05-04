@@ -2,11 +2,8 @@
 title: CDynamicChain Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain-Klasse
 Diese Klasse stellt die Methoden, die Unterstützung der dynamischen Verkettung von meldungszuordnungen bereit.  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain:: SetChainEntry](#setchainentry)|Fügt der Auflistung einen Nachrichtenzuordnungseintrag hinzu oder ändert einen vorhandenen Eintrag.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CDynamicChain`verwaltet eine Auflistung von meldungszuordnungen, aktivieren eine Windows-Meldung, die zur Laufzeit, um ein anderes Objekt meldungszuordnung umgeleitet werden.  
+ `CDynamicChain` verwaltet eine Auflistung von meldungszuordnungen, aktivieren eine Windows-Meldung, die zur Laufzeit, um ein anderes Objekt meldungszuordnung umgeleitet werden.  
   
  Um Unterstützung für das dynamische Verketten von meldungszuordnungen hinzuzufügen, führen Sie folgende Schritte aus:  
   
 -   Leiten Sie eine Klasse von `CDynamicChain`. Geben Sie in der meldungszuordnung, die [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) Makro, das mit einem anderen Objekt Standard-meldungszuordnung verkettet.  
   
--   Leiten Sie jede Klasse, die für von verkettet werden sollen [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`ermöglicht es einem Objekt, dessen meldungszuordnungen zu anderen Objekten verfügbar zu machen.  
+-   Leiten Sie jede Klasse, die für von verkettet werden sollen [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` ermöglicht es einem Objekt, dessen meldungszuordnungen zu anderen Objekten verfügbar zu machen.  
   
 -   Rufen Sie `CDynamicChain::SetChainEntry` identifizieren Sie die Kette zu Objekt und die Nachricht zuordnen, Sie möchten.  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  Leitet die Windows-Meldung an ein anderes Objekt meldungszuordnung.  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>Hinweise  
  Für die Fensterprozedur aufzurufenden `CallChain`, geben Sie die [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) Makro in Ihrer nachrichtenzuordnung. Ein Beispiel finden Sie die [CDynamicChain](../../atl/reference/cdynamicchain-class.md) (Übersicht).  
   
- `CallChain`erfordert einen vorherigen Aufruf von [SetChainEntry](#setchainentry) zum Zuordnen der `dwChainID` Wert mit einem Objekt und seine meldungszuordnung.  
+ `CallChain` erfordert einen vorherigen Aufruf von [SetChainEntry](#setchainentry) zum Zuordnen der `dwChainID` Wert mit einem Objekt und seine meldungszuordnung.  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Der Konstruktor.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  Der Destruktor.  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  Entfernt die Zuordnung für die angegebene Nachricht aus der Auflistung.  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>Rückgabewert  
  **"True"** , wenn die meldungszuordnung erfolgreich aus der Auflistung entfernt wird. Andernfalls **"false"**.  
   
-##  <a name="setchainentry"></a>CDynamicChain:: SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain:: SetChainEntry  
  Die Zuordnung der angegebenen Meldung und der Auflistung hinzugefügt.  
   
 ```

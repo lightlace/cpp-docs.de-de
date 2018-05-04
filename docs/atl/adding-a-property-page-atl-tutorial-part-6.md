@@ -1,27 +1,22 @@
 ---
 title: Hinzufügen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6) | Microsoft Docs
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Hinzufügen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)
 Eigenschaftenseiten werden als separate COM-Objekte implementiert, die wodurch die ihnen ermöglichen, auf gemeinsam genutzt werden, falls erforderlich. Führen Sie in diesem Schritt zum Hinzufügen einer Eigenschaftenseite für das Steuerelement die folgenden Aufgaben:  
@@ -104,7 +99,7 @@ Eigenschaftenseiten werden als separate COM-Objekte implementiert, die wodurch d
   
  Der Code überprüft nun, dass durch Festlegen der `Sides` -Eigenschaft funktioniert hat. Falls dies fehlschlägt, wird der Code zeigt ein Meldungsfeld mit Fehlerdetails aus der **IErrorInfo** Schnittstelle. In der Regel fragt ein Container ein Objekt für die **ISupportErrorInfo** -Schnittstelle und ruft `InterfaceSupportsErrorInfo` ersten, um festzustellen, ob das Objekt den Fehler Einstellungsinformationen unterstützt. Sie können diese Aufgabe überspringen.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) hilft Ihnen durch die automatisch Behandlung der verweiszählung, daher Sie nicht aufrufen müssen `Release` auf der Schnittstelle. `CComBSTR`hilft Ihnen mit `BSTR` verarbeiten, müssen Sie nicht zum Ausführen der endgültige `SysFreeString` aufrufen. Außerdem verwenden Sie eine der die verschiedenen Klassen für die zeichenfolgenkonvertierung, damit konvertiert werden kann die `BSTR` bei Bedarf (deswegen der `USES_CONVERSION` -Makro ist zu Beginn der Funktion).  
+ [CComPtr](../atl/reference/ccomptr-class.md) hilft Ihnen durch die automatisch Behandlung der verweiszählung, daher Sie nicht aufrufen müssen `Release` auf der Schnittstelle. `CComBSTR` hilft Ihnen mit `BSTR` verarbeiten, müssen Sie nicht zum Ausführen der endgültige `SysFreeString` aufrufen. Außerdem verwenden Sie eine der die verschiedenen Klassen für die zeichenfolgenkonvertierung, damit konvertiert werden kann die `BSTR` bei Bedarf (deswegen der `USES_CONVERSION` -Makro ist zu Beginn der Funktion).  
   
  Sie müssen auch die Eigenschaftenseite modifizierte Flag gibt an, dass Festlegen der **übernehmen** Schaltfläche aktiviert werden soll. Dies tritt auf, wenn der Benutzer den Wert in ändert die **Seiten** Eingabefeld.  
   
@@ -126,7 +121,7 @@ Eigenschaftenseiten werden als separate COM-Objekte implementiert, die wodurch d
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`wird aufgerufen, wenn eine **WM_COMMAND** Nachricht wird gesendet, mit der **EN_CHANGE** Benachrichtigung für den `IDC_SIDES` Steuerelement. `OnEnChangeSides`Ruft dann `SetDirty` und übergibt `TRUE` an, dass die Eigenschaft nun Seite fehlerhaft ist und die **übernehmen** Schaltfläche aktiviert werden soll.  
+ `OnEnChangeSides` wird aufgerufen, wenn eine **WM_COMMAND** Nachricht wird gesendet, mit der **EN_CHANGE** Benachrichtigung für den `IDC_SIDES` Steuerelement. `OnEnChangeSides` Ruft dann `SetDirty` und übergibt `TRUE` an, dass die Eigenschaft nun Seite fehlerhaft ist und die **übernehmen** Schaltfläche aktiviert werden soll.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Hinzufügen der Eigenschaftenseite für das Steuerelement  
  ATL-Assistent zum Hinzufügen-Klasse und die ATL-Eigenschaftenseiten-Assistent fügen die Eigenschaftsseite "an das Steuerelement für Sie automatisch und Sie keine da es möglicherweise mehrere Steuerelemente, die in Ihrem Projekt. Sie müssen einen Eintrag zur Eigenschaft-steuerelementzuordnung hinzufügen.  
@@ -152,7 +147,7 @@ Eigenschaftenseiten werden als separate COM-Objekte implementiert, die wodurch d
   
  Sie werden als nächstes Steuerelement auf einer Webseite einfügen.  
   
- [Zurück zu Schritt 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Mit Schritt 7 fort](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Zurück zu Schritt 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [mit Schritt 7 fort](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lernprogramm](../atl/active-template-library-atl-tutorial.md)

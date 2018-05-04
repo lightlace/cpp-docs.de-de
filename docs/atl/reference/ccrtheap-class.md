@@ -1,12 +1,9 @@
 ---
 title: CCRTHeap-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CCRTHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9864ce3522cf33927a3f6d3572e9d2e12187f5d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83655bddfb56bdd0e532b520b2389278e3fbd762
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccrtheap-class"></a>CCRTHeap-Klasse
 Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) CRT-Heapfunktionen verwenden.  
@@ -53,7 +48,7 @@ class CCRTHeap : public IAtlMemMgr
 |[Ccrtheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CCRTHeap`Zuordnungsfunktionen mithilfe der CRT-heap Funktionen, einschließlich der Speicher implementiert ["malloc"](../../c-runtime-library/reference/malloc.md), [freien](../../c-runtime-library/reference/free.md), [Realloc](../../c-runtime-library/reference/realloc.md), und [_msize](../../c-runtime-library/reference/msize.md).  
+ `CCRTHeap` Zuordnungsfunktionen mithilfe der CRT-heap Funktionen, einschließlich der Speicher implementiert ["malloc"](../../c-runtime-library/reference/malloc.md), [freien](../../c-runtime-library/reference/free.md), [Realloc](../../c-runtime-library/reference/realloc.md), und [_msize](../../c-runtime-library/reference/msize.md).  
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -66,7 +61,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlmem.h  
   
-##  <a name="allocate"></a>Ccrtheap:: Allocate  
+##  <a name="allocate"></a>  Ccrtheap:: Allocate  
  Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.  
   
 ```
@@ -85,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementiert mit ["malloc"](../../c-runtime-library/reference/malloc.md).  
   
-##  <a name="free"></a>Ccrtheap:: Free  
+##  <a name="free"></a>  Ccrtheap:: Free  
  Rufen Sie diese Methode, um einen Speicherblock, der von diesem Speicher-Manager frei.  
   
 ```
@@ -99,7 +94,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [freien](../../c-runtime-library/reference/free.md).  
   
-##  <a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>  CCRTHeap::GetSize  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.  
   
 ```
@@ -116,7 +111,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [_msize](../../c-runtime-library/reference/msize.md).  
   
-##  <a name="reallocate"></a>Ccrtheap:: ReAllocate  
+##  <a name="reallocate"></a>  Ccrtheap:: ReAllocate  
  Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
   
 ```

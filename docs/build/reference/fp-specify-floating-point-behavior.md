@@ -1,13 +1,10 @@
 ---
 title: -fp (Festlegen des Gleitkommaverhaltens) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Festlegen des Gleitkommaverhaltens)
 Gibt das Gleitkommaverhalten in einer Quellcodedatei an.  
@@ -42,7 +37,7 @@ Gibt das Gleitkommaverhalten in einer Quellcodedatei an.
 ```  
   
 ## <a name="flags"></a>Flags  
- **präzise**  
+ **Präzise**  
  Der Standardwert.  
   
  Verbessert die Konsistenz von Gleitkommatests auf Gleichheit und Ungleichheit durch Deaktivierung von Optimierungen, die die Genauigkeit von Gleitkommaberechnungen beeinflussen können. (Für die strikte ANSI-Konformität ist eine bestimmte Genauigkeit erforderlich.) Standardmäßig verwendet der Compiler im Code von x86-Architekturen die 80-Bit-Register des Coprozessors, um Zwischenergebnisse von Gleitkommaberechnungen zu speichern. Damit wird die Geschwindigkeit des Programms erhöht und die Größe verringert. Da allerdings die Berechnung mit Gleitkomma-Datentypen durchgeführt wird, die im Speicher mit weniger als 80 Bit dargestellt werden, kann die Verwendung der zusätzlichen Bits für die Genauigkeit (80 Bit minus der Anzahl von Bits in einem kleineren Gleitkommatyp) in längeren Berechnungen jedoch zu inkonsistenten Ergebnissen führen.  

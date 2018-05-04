@@ -2,11 +2,8 @@
 title: Verweistyp Funktionsargumente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b94f6b89ec00cc044cbaa93a4f0f914860db71e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-type-function-arguments"></a>Verweistyp-Funktionsargumente
 Häufig ist es effizienter, Verweise anstelle großer Objekte an Funktionen zu übergeben. Dies ermöglicht es dem Compiler, die Adresse des Objekts zu übergeben, während die Syntax beibehalten wird, die verwendet worden wäre, um auf das Objekt zuzugreifen. Betrachten Sie das folgende Beispiel, in dem die `Date`-Struktur verwendet wird:  
@@ -81,7 +76,7 @@ long JulianFromGregorian( const Date& GDate );
   
  Der Prototyp garantiert, dass die Funktion `JulianFromGregorian` das Argument nicht ändert.  
   
- Jeder Prototyp einen Verweistyp Funktion kann ein Objekt vom selben Typ in seiner Stelle akzeptieren, da es eine standardkonvertierung von ist *Typename* auf *Typename*  **&** .  
+ Jeder Prototyp einen Verweistyp Funktion kann ein Objekt vom selben Typ in seiner Stelle akzeptieren, da es eine standardkonvertierung von ist *Typename* auf * Typename ***&**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verweise](../cpp/references-cpp.md)

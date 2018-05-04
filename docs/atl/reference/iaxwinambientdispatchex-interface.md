@@ -1,12 +1,9 @@
 ---
 title: IAxWinAmbientDispatchEx Schnittstelle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd212417a00335bfc02699cf5e38eeacc6451ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22815ddf3131b9d262d68a3202f4f500b7edf807
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx-Schnittstelle
 Diese Schnittstelle implementiert, zusätzliche Umgebungseigenschaften für einen gehosteten Steuerelement.  
@@ -69,7 +64,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 |Typbibliothek|ATL.dll|  
 |C++|konnte IRegistrar (auch in ATLBase.h enthalten)|  
   
-##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch  
  Diese Methode wird aufgerufen, um die ambient-Eigenschaft Standardschnittstelle mit einer benutzerdefinierten Benutzeroberfläche zu ergänzen.  
   
 ```

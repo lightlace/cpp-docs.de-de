@@ -2,11 +2,8 @@
 title: Try-finally-Anweisung | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 **Microsoft-spezifisch**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Grammatik  
  *try-finally-statement*:  
- `__try`*Compound-Statement*  
+ `__try` *Compound-statement*  
   
- `__finally`*Compound-Statement*  
+ `__finally` *Compound-statement*  
   
  Die `try-finally`-Anweisung ist eine Microsoft-Erweiterung für die Programmiersprachen C und C++, die es Zielanwendungen ermöglicht, Bereinigungscode auszuführen, wenn die Ausführung eines Codeblocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die `try-finally`-Anweisung ist besonders nützlich für Routinen, in denen an mehreren Stellen eine Fehlerüberprüfung durchgeführt wird, die eine vorzeitige Rückgabe von der Routine verursachen könnte.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in Funktion D ausgelöst und in A behandelt wird, werden die Beendigungshandler in folgender Reihenfolge aufgerufen, während das System den Stapel abwickelt: D, C, B.  
   
- ![Reihenfolge der Beendigung &#45; Handler Ausführung](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Reihenfolge der Beendigung&#45;Handler Ausführung](../cpp/media/vc38cx1.gif "vc38CX1")  
 Reihenfolge für das Beenden bei Handlerausführung  
   
 > [!NOTE]

@@ -1,12 +1,9 @@
 ---
 title: CAxWindow Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxWindow
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8848e8ecf85b073032561e2db52a0db1889911e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052e7ad2bfa8cc03c4eadd4926dbd84c4fd60223
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxwindow-class"></a>CAxWindow-Klasse
 Diese Klasse stellt Methoden zum Bearbeiten eines Fensters, das hosting von ActiveX-Steuerelement.  
@@ -69,7 +64,7 @@ class CAxWindow : public CWindow
   
 |||  
 |-|-|  
-|[Operator =](#operator_eq)|Weist ein **HWND** zu einem vorhandenen **CAxWindow** Objekt.|  
+|[operator =](#operator_eq)|Weist ein **HWND** zu einem vorhandenen **CAxWindow** Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Klasse stellt Methoden zum Bearbeiten eines Fensters, hostet ein ActiveX-Steuerelement. Der Hostprozess gebotenen " **AtlAxWin80"**, die umschlossen `CAxWindow`.  
@@ -83,7 +78,7 @@ class CAxWindow : public CWindow
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
+##  <a name="attachcontrol"></a>  CAxWindow::AttachControl  
  Erstellt ein neues Hostobjekt an, nicht bereits vorhanden ist und fügt das angegebene Steuerelement an den Host.  
   
 ```
@@ -105,7 +100,7 @@ HRESULT AttachControl(
 ### <a name="remarks"></a>Hinweise  
  Das Steuerelementobjekt anzufügende muss ordnungsgemäß initialisiert werden, vor dem Aufruf `AttachControl`.  
   
-##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
+##  <a name="caxwindow"></a>  CAxWindow::CAxWindow  
  Erstellt eine `CAxWindow` -Objekt mit einem vorhandenen Objekt Fensterhandle.  
   
 ```
@@ -116,7 +111,7 @@ CAxWindow(HWND hWnd = NULL);
  `hWnd`  
  Ein Handle für ein vorhandenes Fensterobjekt.  
   
-##  <a name="createcontrol"></a>CAxWindow::CreateControl  
+##  <a name="createcontrol"></a>  CAxWindow::CreateControl  
  Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT CreateControl(
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) für ein Beispiel, verwendet `CreateControl`.  
   
-##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx  
  Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
   
 ```
@@ -239,7 +234,7 @@ HRESULT CreateControlEx(
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) für ein Beispiel, verwendet `CreateControlEx`.  
   
-##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
+##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName  
  Ruft den Namen der Fensterklasse ab.  
   
 ```
@@ -249,7 +244,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Fensterklasse, die Lizenzpaketdatei ActiveX-Steuerelemente hosten können.  
   
-##  <a name="operator_eq"></a>CAxWindow::operator =  
+##  <a name="operator_eq"></a>  CAxWindow::operator =  
  Weist ein `HWND` zu einem vorhandenen `CAxWindow` Objekt.  
   
 ```
@@ -263,7 +258,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf das aktuelle `CAxWindow`-Objekt zurück.  
   
-##  <a name="querycontrol"></a>CAxWindow::QueryControl  
+##  <a name="querycontrol"></a>  CAxWindow::QueryControl  
  Ruft die angegebene Schnittstelle des gehosteten Steuerelements ab.  
   
 ```
@@ -285,7 +280,7 @@ HRESULT QueryControl(Q** ppUnk);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="queryhost"></a>CAxWindow:: QueryHost  
+##  <a name="queryhost"></a>  CAxWindow:: QueryHost  
  Gibt die angegebene Schnittstelle des Hosts zurück.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT QueryHost(Q** ppUnk);
 ### <a name="remarks"></a>Hinweise  
  Die Schnittstelle des Hosts ermöglicht den Zugriff auf die zugrunde liegenden Funktionalität Fenster hosting-Code, durch implementiert **AxWin**.  
   
-##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch  
  Legt die externen Dispatchschnittstelle für die `CAxWindow` Objekt.  
   
 ```
@@ -324,7 +319,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  CAxWindow::SetExternalUIHandler  
  Legt den externen [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) eine Schnittstelle für die `CAxWindow` Objekt.  
   
 ```

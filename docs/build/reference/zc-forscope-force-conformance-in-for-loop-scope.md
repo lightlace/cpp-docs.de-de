@@ -1,10 +1,10 @@
 ---
-title: "/ Zc: forScope (Übereinstimmung in for-Schleifenbereich erzwingen) | Microsoft Docs"
-ms.custom: 
+title: '/ Zc: forScope (Übereinstimmung in for-Schleifenbereich erzwingen) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
 - VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47cdc45b63e5e5c7b48627b13040e95fc64c8a2d
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Übereinstimmung in for-Schleifenbereich erzwingen)
 
@@ -61,7 +60,7 @@ int main() {
 }
 ```
 
-Wenn Sie **/Zc:forScope-**verwenden, wird die Warnmeldung C4288 (standardmäßig deaktiviert) generiert, wenn sich eine Variable aufgrund einer Deklaration, die in einem früheren Gültigkeitsbereich erfolgt ist, im Gültigkeitsbereich befindet. Um dies zu veranschaulichen, entfernen Sie die Zeichen `//` im Beispiel, um `int i`zu deklarieren.
+Wenn Sie **/Zc:forScope-** verwenden, wird die Warnmeldung C4288 (standardmäßig deaktiviert) generiert, wenn sich eine Variable aufgrund einer Deklaration, die in einem früheren Gültigkeitsbereich erfolgt ist, im Gültigkeitsbereich befindet. Um dies zu veranschaulichen, entfernen Sie die Zeichen `//` im Beispiel, um `int i`zu deklarieren.
 
 Sie können das Laufzeitverhalten von **/Zc:forScope** ändern, indem Sie das [conform](../../preprocessor/conform.md) -Pragma verwenden.
 

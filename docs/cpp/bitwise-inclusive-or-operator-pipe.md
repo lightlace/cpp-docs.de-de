@@ -2,11 +2,8 @@
 title: 'Bitweise inklusive OR -Operator: || Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaef650cc747cdb9e628ae3b786bc1c1e21b5bdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc43460bc2c20262156bfdc6bd7f69a693c222f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Bitweiser inklusiver OR-Operator: |
 ## <a name="syntax"></a>Syntax  
@@ -47,7 +42,7 @@ expression
   
  Beide Operanden im bitweisen inklusiven OR-Operator müssen vom Ganzzahltyp sein. Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) auf die Operanden angewendet werden.  
   
-## <a name="operator-keyword-for-124"></a>Operator-Schlüsselwort für &#124;  
+## <a name="operator-keyword-for-124"></a>Operator-Schlüsselwort für&#124;  
  Die `bitor` Operator ist die textentsprechung von **&#124;**. Es gibt zwei Möglichkeiten, den Zugriff auf die `bitor` -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
 ## <a name="example"></a>Beispiel  

@@ -2,12 +2,9 @@
 title: Tipps zum Verbessern von zeitkritischem Code | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ca6fc8c18a7f2f2013ffdeabd70a7eb9fb0057
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Tipps zum Verbessern von zeitkritischem Code
 Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung und der Interaktion mit dem System verstehen. In den folgenden Themen finden Sie Alternativen zu einigen der offensichtlicheren Codierungstechniken, damit Sie sicherstellen können, dass die zeitkritischen Teile Ihres Codes eine zufriedenstellende Leistung erbringen.  
@@ -82,7 +77,7 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
   
 -   [Kleines Workingset](#_core_small_working_set)  
   
-##  <a name="_core_cache_hits_and_page_faults"></a>Cachefehler und Seitenfehler  
+##  <a name="_core_cache_hits_and_page_faults"></a> Cachefehler und Seitenfehler  
  Fehler bei Cachetreffern, sowohl im internen als auch im externen Cache, und Seitenfehler (das Zugreifen auf sekundären Speicher für Programmanweisungen und Daten) verlangsamen die Leistung eines Programms.  
   
  Ein CPU-Cachetreffer kann Ihr Programm 10 bis 20 Uhrzyklen Kosten. Ein externer Cachetreffer kann 20 bis 40 Uhrzyklen Kosten. Ein Seitenfehler kann eine Million Uhrzyklen kosten (ausgehend von einem Prozessor, der 500 Millionen Anweisungen/Sekunde verarbeitet und eine Zeit von 2 Millisekunden für einen Seitenfehler braucht). Daher ist es im besten Interesse der Programmausführung, Code zu schreiben, der die Anzahl von Fehlern bei Cachetreffern und Seitenfehlern verringert.  
@@ -93,7 +88,7 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
   
 -   Hashtabellen, die dynamisch zugewiesene verknüpfte Listen verwenden, können die Leistung verschlechtern. Durch Erweiterung können Hashtabellen, die dynamisch zugeordnete verknüpftet Listen zum Speichern ihrer Inhalte verwenden, eine wesentlichere schlechtere Leistung zeigen. Tatsächlich ist in der letztendlichen Analyse eine einfache lineare Suche durch ein Array tatsächlich möglicherweise schneller (je nach Umständen). Arraybasierte Hashtabellen (das sogenannte „geschlossene Hashing“) ist eine oft übersehene Implementierung, die oft eine erstklassige Leistung zeigt.  
   
-##  <a name="_core_sorting_and_searching"></a>Sortieren und Durchsuchen  
+##  <a name="_core_sorting_and_searching"></a> Sortieren und Durchsuchen  
  Das Sortieren ist im Vergleich zu vielen typischen Vorgängen an sich zeitaufwendig. Die beste Methode, um eine unnötige Verlangsamung zu vermeiden, besteht darin, das Sortieren in kritischen Zeiten zu vermeiden. Möglicherweise können Sie Folgendes tun:  
   
 -   Verzögern der Sortierung bis zu einem Zeitpunkt Leistung nicht kritisch.  
@@ -114,27 +109,27 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
   
  Es gibt weniger Alternativen für Suchen als für die Sortierung. Wenn die Suche zeitkritisch ist, ist eine binäre oder Hashtabellensuche nahezu immer am besten, aber wie bei der Sortierung müssen Sie die Positionierung im Hinterkopf behalten. Eine lineare Suche durch ein kleines Array kann schneller sein als eine binäre Suche durch eine Datenstruktur mit vielen Zeigern, die zu Seitenfehlern oder Cachefehlern führen kann.  
   
-##  <a name="_core_mfc_and_class_libraries"></a>MFC- und Klassenbibliotheken  
+##  <a name="_core_mfc_and_class_libraries"></a> MFC- und Klassenbibliotheken  
  Die Microsoft Foundation Classes (MFC) können das Schreiben von Code erheblich vereinfachen. Wenn Sie zeitkritischen Code schreiben, sollte Ihnen der einigen der Klassen innewohnende Mehraufwand bewusst sein. Untersuchen Sie den MFC-Code, den Ihr zeitkritischer Code verwendet, um zu sehen, ob er Ihren Leistungsanforderungen entspricht. In der folgenden Liste sind die MFC-Klassen und -Funktionen aufgeführt, die Ihnen bewusst sein sollten:  
   
--   `CString`MFC Ruf die C-Laufzeitbibliothek auf, um Speicher für eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) dynamisch. Allgemein gesagt ist `CString` ebenso effizient wie jede andere dynamisch zugeordnete Zeichenfolge. Wie bei jeder dynamisch zugewiesenen Zeichenfolge besteht der Mehraufwand der dynamischen Zuordnung und Freigabe. Oft, dient ein einfaches `char`-Array im Stapel demselben Zweck und ist schneller. Verwenden Sie nicht `CString`, um eine konstante Zeichenfolge zu speichern. Verwenden Sie stattdessen `const char *`. Jeder Vorgang, den Sie mit einem `CString`-Objekt durchführen, hat irgendeinen Mehraufwand. Verwenden die Laufzeitbibliothek [Zeichenfolgenfunktionen](../../c-runtime-library/string-manipulation-crt.md) möglicherweise schneller.  
+-   `CString` MFC Ruf die C-Laufzeitbibliothek auf, um Speicher für eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) dynamisch. Allgemein gesagt ist `CString` ebenso effizient wie jede andere dynamisch zugeordnete Zeichenfolge. Wie bei jeder dynamisch zugewiesenen Zeichenfolge besteht der Mehraufwand der dynamischen Zuordnung und Freigabe. Oft, dient ein einfaches `char`-Array im Stapel demselben Zweck und ist schneller. Verwenden Sie nicht `CString`, um eine konstante Zeichenfolge zu speichern. Verwenden Sie stattdessen `const char *`. Jeder Vorgang, den Sie mit einem `CString`-Objekt durchführen, hat irgendeinen Mehraufwand. Verwenden die Laufzeitbibliothek [Zeichenfolgenfunktionen](../../c-runtime-library/string-manipulation-crt.md) möglicherweise schneller.  
   
--   `CArray`Ein [CArray](../../mfc/reference/carray-class.md) bietet Flexibilität, dass ein reguläres Array nicht bietet, aber Ihr Programm diese möglicherweise nicht benötigt. Wenn Sie bestimmte Grenzen für das Array kennen, können Sie stattdessen ein globales festes Array verwenden. Wenn Sie `CArray` benutzen, verwenden Sie `CArray::SetSize`, um die Größe festzulegen und die Anzahl der Elemente anzugeben, um die es wachsen kann, wenn eine Neuzuordnung erforderlich ist. Andernfalls kann das Hinzufügen von Elementen dazu führen, dass Ihr Array häufig neu zugeordnet und kopiert wird, was ineffizient ist und den Arbeitsspeicher fragmentieren kann. Ihnen sollte auch bewusst sein, dass beim Einfügen eines Elements in ein Array `CArray` nachfolgende Elemente im Arbeitsspeicher verschiebt und möglicherweise das Array vergrößern muss. Diese Aktionen können zu Cachefehlern und Seitenfehlern führen. Wenn Sie den Code durchsehen, den die MFC verwenden, sehen Sie möglicherweise, dass Sie etwas Spezifischeres für Ihr Szenario schreiben können, um die Leistung zu verbessern. Da `CArray` eine Vorlage ist, können Sie beispielsweise `CArray`-Spezialisierungen für bestimmte Typen bereitstellen.  
+-   `CArray` Ein [CArray](../../mfc/reference/carray-class.md) bietet Flexibilität, dass ein reguläres Array nicht bietet, aber Ihr Programm diese möglicherweise nicht benötigt. Wenn Sie bestimmte Grenzen für das Array kennen, können Sie stattdessen ein globales festes Array verwenden. Wenn Sie `CArray` benutzen, verwenden Sie `CArray::SetSize`, um die Größe festzulegen und die Anzahl der Elemente anzugeben, um die es wachsen kann, wenn eine Neuzuordnung erforderlich ist. Andernfalls kann das Hinzufügen von Elementen dazu führen, dass Ihr Array häufig neu zugeordnet und kopiert wird, was ineffizient ist und den Arbeitsspeicher fragmentieren kann. Ihnen sollte auch bewusst sein, dass beim Einfügen eines Elements in ein Array `CArray` nachfolgende Elemente im Arbeitsspeicher verschiebt und möglicherweise das Array vergrößern muss. Diese Aktionen können zu Cachefehlern und Seitenfehlern führen. Wenn Sie den Code durchsehen, den die MFC verwenden, sehen Sie möglicherweise, dass Sie etwas Spezifischeres für Ihr Szenario schreiben können, um die Leistung zu verbessern. Da `CArray` eine Vorlage ist, können Sie beispielsweise `CArray`-Spezialisierungen für bestimmte Typen bereitstellen.  
   
--   `CList`[CList](../../mfc/reference/clist-class.md) ist eine doppelt verknüpfte Liste elementeinfügung fast am Anfang, am Ende und an einer bekannten Position (`POSITION`) in der Liste. Für die Suche nach einem Element nach Wert oder Index ist jedoch eine sequenzielle Suche erforderlich, die langsam sein kann, wenn die Liste lang ist. Wenn für Ihren Code keine doppelt verknüpfte Liste erforderlich ist, sollten Sie die Verwendung von `CList` in Betracht ziehen. Die Verwendung einer einfach verknüpften Liste spart den Mehraufwand der Aktualisierung eines zusätzlichen Zeigers für alle Vorgänge sowie den Arbeitsspeicher für diesen Zeiger. Der zusätzliche Arbeitsspeicher ist nicht hervorragend, aber eine weitere Gelegenheit für Cachefehler oder Seitenfehler.  
+-   `CList` [CList](../../mfc/reference/clist-class.md) ist eine doppelt verknüpfte Liste elementeinfügung fast am Anfang, am Ende und an einer bekannten Position (`POSITION`) in der Liste. Für die Suche nach einem Element nach Wert oder Index ist jedoch eine sequenzielle Suche erforderlich, die langsam sein kann, wenn die Liste lang ist. Wenn für Ihren Code keine doppelt verknüpfte Liste erforderlich ist, sollten Sie die Verwendung von `CList` in Betracht ziehen. Die Verwendung einer einfach verknüpften Liste spart den Mehraufwand der Aktualisierung eines zusätzlichen Zeigers für alle Vorgänge sowie den Arbeitsspeicher für diesen Zeiger. Der zusätzliche Arbeitsspeicher ist nicht hervorragend, aber eine weitere Gelegenheit für Cachefehler oder Seitenfehler.  
   
--   `IsKindOf`Diese Funktion kann mehrere Aufrufe generieren und Zugriff auf die viel Arbeitsspeicher in verschiedenen Datenbereichen, was zu einer schlechten Positionierung von verweisen. Sie ist nützlich für einen Debugbuild (zum Beispiel in einem ASSERT-Aufruf), Sie sollten aber vermeiden, sie in einem Releasebuild zu verwenden.  
+-   `IsKindOf` Diese Funktion kann mehrere Aufrufe generieren und Zugriff auf die viel Arbeitsspeicher in verschiedenen Datenbereichen, was zu einer schlechten Positionierung von verweisen. Sie ist nützlich für einen Debugbuild (zum Beispiel in einem ASSERT-Aufruf), Sie sollten aber vermeiden, sie in einem Releasebuild zu verwenden.  
   
--   `PreTranslateMessage`Verwendung `PreTranslateMessage` , wenn eine bestimmte Fensterstruktur tastaturbeschleuniger benötigt oder Sie Meldungsbehandlung in die Meldungsverteilschleife einfügen müssen. `PreTranslateMessage` ändert MFC-Dispatchmeldungen. Wenn Sie `PreTranslateMessage` überschreiben, tun Sie das nur auf der erforderlichen Ebene. Es ist beispielsweise nicht erforderlich, `CMainFrame::PreTranslateMessage` zu überschreiben, wenn Sie nur an Meldungen interessiert sind, die an untergeordnete Elemente einer bestimmten Ansicht gehen. Überschreiben Sie stattdessen `PreTranslateMessage` für die Ansichtsklasse.  
+-   `PreTranslateMessage` Verwendung `PreTranslateMessage` , wenn eine bestimmte Fensterstruktur tastaturbeschleuniger benötigt oder Sie Meldungsbehandlung in die Meldungsverteilschleife einfügen müssen. `PreTranslateMessage` ändert MFC-Dispatchmeldungen. Wenn Sie `PreTranslateMessage` überschreiben, tun Sie das nur auf der erforderlichen Ebene. Es ist beispielsweise nicht erforderlich, `CMainFrame::PreTranslateMessage` zu überschreiben, wenn Sie nur an Meldungen interessiert sind, die an untergeordnete Elemente einer bestimmten Ansicht gehen. Überschreiben Sie stattdessen `PreTranslateMessage` für die Ansichtsklasse.  
   
      Umgehen Sie nicht den normalen Dispatchpfad, indem Sie `PreTranslateMessage` verwenden, um Meldungen zu verarbeiten, die an ein beliebiges Fenster gesendet werden. Verwendung [Fensterprozeduren](../../mfc/registering-window-classes.md) und MFC-meldungszuordnungen zu diesem Zweck.  
   
--   `OnIdle`Ereignisse im Leerlauf können zu unerwarteten Zeiten Sie nicht erwarten, z. B. zwischen `WM_KEYDOWN` und `WM_KEYUP` Ereignisse. Timer können eine effizientere Methode zum Auslösen Ihres Codes sein. Erzwingen Sie nicht, dass `OnIdle` wiederholt aufgerufen wird, indem falsche Meldungen generiert werden oder immer `TRUE` von einer Überschreibung von `OnIdle` zurückgegeben wird, wodurch Ihr Thread niemals in den Ruhezustand kommen würde. Auch hier kann ein Timer oder ein separater Thread angemessener sein.  
+-   `OnIdle` Ereignisse im Leerlauf können zu unerwarteten Zeiten Sie nicht erwarten, z. B. zwischen `WM_KEYDOWN` und `WM_KEYUP` Ereignisse. Timer können eine effizientere Methode zum Auslösen Ihres Codes sein. Erzwingen Sie nicht, dass `OnIdle` wiederholt aufgerufen wird, indem falsche Meldungen generiert werden oder immer `TRUE` von einer Überschreibung von `OnIdle` zurückgegeben wird, wodurch Ihr Thread niemals in den Ruhezustand kommen würde. Auch hier kann ein Timer oder ein separater Thread angemessener sein.  
   
-##  <a name="vcovrsharedlibraries"></a>Freigegebene Bibliotheken  
+##  <a name="vcovrsharedlibraries"></a> Freigegebene Bibliotheken  
  Eine Wiederverwendung von Code ist wünschenswert. Wenn Sie jedoch den Code einer anderen Person verwenden, sollten Sie sicherstellen, dass Sie genau wissen, was dieser an den Stellen bewirkt, an denen Leistung für Sie wichtig ist. Diese beste Möglichkeit, um dies zu verstehen, besteht darin, den Quellcode Schritt für Schritt durchzugehen oder mit Tools wie PView oder dem Leistungsmonitor zu messen.  
   
-##  <a name="_core_heaps"></a>Heaps  
+##  <a name="_core_heaps"></a> Heaps  
  Verwenden Sie mehrere Heaps mit Vorsicht. Mit zusätzlichen mit `HeapCreate` und `HeapAlloc` erstellen Heaps können Sie einen relevanten Satz von Zuordnungen verwalten und dann verwerfen. Sichern Sie nicht zu viel Arbeitsspeicher zu. Wenn Sie mehrere Heaps verwenden, achten Sie besonders auf die Menge des Arbeitsspeichers, der anfangs zugesichert wird.  
   
  Anstelle von mehreren Heaps können Sie Hilfsfunktionen verwenden, um eine Schnittstelle zwischen Ihrem Code und dem Standardheap bereitzustellen. Hilfsfunktionen vereinfachen benutzerdefinierte Zuordnungsstrategien, die die Leistung Ihrer Anwendung verbessern können. Wenn Sie beispielsweise oft kleine Zuordnungen durchführen, sollten Sie diese Zuordnungen möglicherweise auf einen Teil des Standardheaps lokalisieren. Sie können einen großen Speicherblock zuordnen und dann eine Hilfsfunktion verwenden, um untergeordnete Zuordnungen von diesem Block durchzuführen. Dann haben Sie keine zusätzlichen Heaps mit ungenutztem Speicher, da die Zuordnung aus dem Standardheap kommt.  
@@ -154,7 +149,7 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
   
  Weitere Informationen finden Sie unter [Leerlaufschleifenverarbeitung](../../mfc/idle-loop-processing.md) und [Multithreading](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
-##  <a name="_core_small_working_set"></a>Kleines Workingset  
+##  <a name="_core_small_working_set"></a> Kleines Workingset  
  Kleinere Workingsets bedeuten eine bessere Positionierung von Verweisen, weniger Seitenfehler und mehr Cachetreffer. Die Verarbeitung von Workingsets ist die engste Metrik, die das Betriebssystem direkt für das Messen der Positionierung von Verweisen bereitstellt.  
   
 -   Verwenden Sie zum Festlegen der oberen und unteren Grenzen des Workingsets [SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx).  

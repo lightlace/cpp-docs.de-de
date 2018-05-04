@@ -2,26 +2,21 @@
 title: Benutzerdefinierte Literale (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-literals--c"></a>Benutzerdefinierte Literale (C++)
 Es gibt fünf Hauptkategorien von Literalen: Integer, Zeichendaten, Gleitkommazahlen, Zeichenfolge, boolescher Wert und Zeiger.  Ab C++ 11 können Sie eigene Literale basierend auf diesen Kategorien definieren, um syntaktische Verknüpfungen für allgemeine Idiome und eine höhere Typsicherheit bereitzustellen. Beispielsweise angenommen, Sie verfügen über eine Distanz-Klasse. Sie könnten ein Literal für Kilometer und ein anderes für Meilen definieren und den Benutzern empfehlen, die Maßeinheiten explizit anzugeben: Auto d = 42.0_km oder Auto d = 42.0_mi. Es gibt keine Leistungsvorteile oder Nachteile durch benutzerdefinierte Literale. Sie werden in erster Linie zur Vereinfachung oder für die Typableitung bei der Kompilierung genutzt. Die Standardbibliothek hat benutzerdefinierte Literale für Std: String, Std:: Complex und Einheiten in der Zeit und Dauer von Vorgängen in der \<Chrono >-Header:  

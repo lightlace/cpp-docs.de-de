@@ -1,12 +1,9 @@
 ---
 title: CPathT Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CPathT
@@ -58,17 +55,15 @@ dev_langs:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37f669ddc7912f45222d52f10311ff70110e170f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cpatht-class"></a>CPathT-Klasse
 Diese Klasse stellt einen Pfad an.  
@@ -172,7 +167,7 @@ class CPathT
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlpath.h  
   
-##  <a name="addbackslash"></a>CPathT::AddBackslash  
+##  <a name="addbackslash"></a>  CPathT::AddBackslash  
  Rufen Sie diese Methode zum Hinzufügen von eines umgekehrten Schrägstrich am Ende einer Zeichenfolge auf die richtige Syntax für einen Pfad zu erstellen. Wenn der Pfad bereits abschließenden umgekehrten Schrägstrich enthält, wird kein umgekehrter Schrägstrich hinzugefügt werden.  
   
 ```
@@ -182,7 +177,7 @@ void AddBackslash();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
-##  <a name="addextension"></a>CPathT::AddExtension  
+##  <a name="addextension"></a>  CPathT::AddExtension  
  Rufen Sie diese Methode, um ein Pfad eine Dateierweiterung hinzugefügt werden.  
   
 ```
@@ -199,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
-##  <a name="append"></a>CPathT::Append  
+##  <a name="append"></a>  CPathT::Append  
  Rufen Sie diese Methode, um eine Zeichenfolge an den aktuellen Pfad angefügt werden soll.  
   
 ```
@@ -216,7 +211,7 @@ BOOL Append(PCXSTR pszMore);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
-##  <a name="buildroot"></a>CPathT::BuildRoot  
+##  <a name="buildroot"></a>  CPathT::BuildRoot  
  Rufen Sie diese Methode, um einen Stammpfad einer bestimmten Laufwerknummer zu erstellen.  
   
 ```
@@ -230,7 +225,7 @@ void BuildRoot(int iDrive);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
-##  <a name="canonicalize"></a>CPathT::Canonicalize  
+##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  Rufen Sie diese Methode zum Konvertieren des Pfads in kanonische Form.  
   
 ```
@@ -240,7 +235,7 @@ void Canonicalize();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
-##  <a name="combine"></a>CPathT::Combine  
+##  <a name="combine"></a>  CPathT::Combine  
  Rufen Sie diese Methode zum Verketten einer Zeichenfolge, die einen Verzeichnisnamen darstellt und eine Zeichenfolge, die einen Dateinamen für den Pfad zu einem Pfad darstellt.  
   
 ```
@@ -257,7 +252,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
   
-##  <a name="commonprefix"></a>CPathT::CommonPrefix  
+##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  Rufen Sie diese Methode, um zu bestimmen, ob der angegebene Pfad ein gemeinsames Präfix und den aktuellen Pfad gemeinsam verwendet wird.  
   
 ```
@@ -274,7 +269,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 ### <a name="remarks"></a>Hinweise  
  Ein Präfix ist einem der folgenden Typen: "" c: "\\\\",".","..",".. \\\\". Weitere Informationen finden Sie unter [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
-##  <a name="compactpath"></a>CPathT::CompactPath  
+##  <a name="compactpath"></a>  CPathT::CompactPath  
  Rufen Sie diese Methode, um einen Dateipfad an einen bestimmten Pixelbreite angepasst durch Ersetzen von Pfadkomponenten mit Auslassungspunkten abgeschnitten.  
   
 ```
@@ -294,7 +289,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
-##  <a name="compactpathex"></a>CPathT::CompactPathEx  
+##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  Rufen Sie diese Methode, um einen Dateipfad an innerhalb einer bestimmten Anzahl von Zeichen ersetzen Pfadkomponenten mit Auslassungspunkten abgeschnitten.  
   
 ```
@@ -314,7 +309,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
   
-##  <a name="cpatht"></a>CPathT::CPathT  
+##  <a name="cpatht"></a>  CPathT::CPathT  
  Der Konstruktor.  
   
 ```
@@ -330,7 +325,7 @@ CPathT() throw();
  *path*  
  Die Pfadzeichenfolge.  
   
-##  <a name="fileexists"></a>CPathT::FileExists  
+##  <a name="fileexists"></a>  CPathT::FileExists  
  Rufen Sie diese Methode, um zu überprüfen, ob die Datei unter diesem Pfadnamen vorhanden ist.  
   
 ```
@@ -343,7 +338,7 @@ BOOL FileExists() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
-##  <a name="findextension"></a>CPathT::FindExtension  
+##  <a name="findextension"></a>  CPathT::FindExtension  
  Rufen Sie diese Methode, um die Position von der Erweiterung in diesem Pfad suchen.  
   
 ```
@@ -356,7 +351,7 @@ int FindExtension() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
-##  <a name="findfilename"></a>CPathT::FindFileName  
+##  <a name="findfilename"></a>  CPathT::FindFileName  
  Rufen Sie diese Methode, um die Position des Dateinamens im Pfad gefunden.  
   
 ```
@@ -369,7 +364,7 @@ int FindFileName() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
-##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
+##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  Rufen Sie diese Methode, um die Suche des Pfads für einen Laufwerkbuchstaben innerhalb des Bereichs von "A" bis "Z", und geben Sie die entsprechenden Laufwerknummer zurück.  
   
 ```
@@ -382,7 +377,7 @@ int GetDriveNumber() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
-##  <a name="getextension"></a>CPathT::GetExtension  
+##  <a name="getextension"></a>  CPathT::GetExtension  
  Rufen Sie diese Methode, um die Erweiterung aus dem Pfad zu erhalten.  
   
 ```
@@ -392,7 +387,7 @@ StringType GetExtension() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Dateierweiterung an.  
   
-##  <a name="isdirectory"></a>CPathT::IsDirectory  
+##  <a name="isdirectory"></a>  CPathT::IsDirectory  
  Rufen Sie diese Methode, um zu überprüfen, ob der Pfad ein gültiges Verzeichnis ist.  
   
 ```
@@ -405,7 +400,7 @@ BOOL IsDirectory() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
   
-##  <a name="isfilespec"></a>CPathT::IsFileSpec  
+##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  Rufen Sie diese Methode, um einen Pfad für alle Zeichen zur Einschränkung der Pfad zu suchen (z. B. ":" oder "\\"). Wenn keine Zeichen begrenzen von Pfad vorhanden sind, gilt der Pfad einer Dateispezifikation-Pfad sein.  
   
 ```
@@ -418,7 +413,7 @@ BOOL IsFileSpec() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
   
-##  <a name="isprefix"></a>CPathT::IsPrefix  
+##  <a name="isprefix"></a>  CPathT::IsPrefix  
  Rufen Sie diese Methode, um zu bestimmen, ob ein Pfad ein gültiges Präfix des Typs übergebenes enthält `pszPrefix`.  
   
 ```
@@ -435,7 +430,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
-##  <a name="isrelative"></a>CPathT::IsRelative  
+##  <a name="isrelative"></a>  CPathT::IsRelative  
  Rufen Sie diese Methode, um zu bestimmen, ob der Pfad relativ ist.  
   
 ```
@@ -448,7 +443,7 @@ BOOL IsRelative() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
-##  <a name="isroot"></a>CPathT::IsRoot  
+##  <a name="isroot"></a>  CPathT::IsRoot  
  Rufen Sie diese Methode, um zu bestimmen, ob der Pfad ein Stammverzeichnis ist.  
   
 ```
@@ -461,7 +456,7 @@ BOOL IsRoot() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
-##  <a name="issameroot"></a>CPathT::IsSameRoot  
+##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  Rufen Sie diese Methode, um zu bestimmen, ob ein anderer Pfad eine allgemeine Stammkomponente mit den aktuellen Pfad hat.  
   
 ```
@@ -478,7 +473,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
-##  <a name="isunc"></a>CPathT::IsUNC  
+##  <a name="isunc"></a>  CPathT::IsUNC  
  Rufen Sie diese Methode, um zu bestimmen, ob der Pfad einen gültigen UNC (universal naming Convention)-Pfad für einen Server und freigeben.  
   
 ```
@@ -491,7 +486,7 @@ BOOL IsUNC() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
-##  <a name="isuncserver"></a>CPathT::IsUNCServer  
+##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  Rufen Sie diese Methode, um zu bestimmen, ob der Pfad für einen Server nur einen gültigen UNC (universal naming Convention)-Pfad ist.  
   
 ```
@@ -504,7 +499,7 @@ BOOL IsUNCServer() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
-##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
+##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  Rufen Sie diese Methode, um zu bestimmen, ob der Pfad einen gültigen Freigabepfad UNC (universal naming Convention) ist \\ \  *Server*\ *freigeben*.  
   
 ```
@@ -517,7 +512,7 @@ BOOL IsUNCServerShare() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
   
-##  <a name="m_strpath"></a>CPathT::m_strPath  
+##  <a name="m_strpath"></a>  CPathT::m_strPath  
  Der Pfad.  
   
 ```
@@ -525,9 +520,9 @@ StringType m_strPath;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `StringType`der Vorlagenparameter ist `CPathT`.  
+ `StringType` der Vorlagenparameter ist `CPathT`.  
   
-##  <a name="makepretty"></a>CPathT::MakePretty  
+##  <a name="makepretty"></a>  CPathT::MakePretty  
  Rufen Sie diese Methode, um einen Pfad, um dem Pfad ein einheitliches Erscheinungsbild verleihen alle Kleinbuchstaben konvertieren.  
   
 ```
@@ -540,7 +535,7 @@ BOOL MakePretty();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
-##  <a name="matchspec"></a>CPathT::MatchSpec  
+##  <a name="matchspec"></a>  CPathT::MatchSpec  
  Rufen Sie diese Methode, um den Pfad für eine Zeichenfolge mit einem Platzhalter-Übereinstimmungstyp zu suchen.  
   
 ```
@@ -557,7 +552,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
-##  <a name="operator_add_eq"></a>CPathT::operator +=  
+##  <a name="operator_add_eq"></a>  CPathT::operator +=  
  Dieser Operator Fügt eine Zeichenfolge in den Pfad an.  
   
 ```
@@ -571,7 +566,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den aktualisierten Pfad zurück.  
   
-##  <a name="operator_const_stringtype_amp"></a>Const StringType CPathT::operator&amp;  
+##  <a name="operator_const_stringtype_amp"></a>  Const StringType CPathT::operator &amp;  
  Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.  
   
 ```
@@ -581,7 +576,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine Zeichenfolge, die den aktuellen Pfad von diesem Objekt verwaltet darstellt.  
   
-##  <a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR  
+##  <a name="operator_cpatht__pcxstr"></a>  CPathT::operator CPathT::PCXSTR  
  Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.  
   
 ```
@@ -591,7 +586,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine Zeichenfolge, die den aktuellen Pfad von diesem Objekt verwaltet darstellt.  
   
-##  <a name="operator_stringtype__amp"></a>CPathT::operator StringType&amp;  
+##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;  
  Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.  
   
 ```
@@ -601,7 +596,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine Zeichenfolge, die den aktuellen Pfad von diesem Objekt verwaltet darstellt.  
   
-##  <a name="pcxstr"></a>CPathT::PCXSTR  
+##  <a name="pcxstr"></a>  CPathT::PCXSTR  
  Eine Konstante Zeichenfolge-Typ.  
   
 ```
@@ -609,9 +604,9 @@ typedef StringType::PCXSTR PCXSTR;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `StringType`der Vorlagenparameter ist `CPathT`.  
+ `StringType` der Vorlagenparameter ist `CPathT`.  
   
-##  <a name="pxstr"></a>CPathT::PXSTR  
+##  <a name="pxstr"></a>  CPathT::PXSTR  
  Ein String-Datentyp.  
   
 ```
@@ -619,9 +614,9 @@ typedef StringType::PXSTR PXSTR;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `StringType`der Vorlagenparameter ist `CPathT`.  
+ `StringType` der Vorlagenparameter ist `CPathT`.  
   
-##  <a name="quotespaces"></a>CPathT::QuoteSpaces  
+##  <a name="quotespaces"></a>  CPathT::QuoteSpaces  
  Rufen Sie diese Methode, um den Pfad in Anführungszeichen gesetzt werden, wenn er keine Leerzeichen enthält.  
   
 ```
@@ -631,7 +626,7 @@ void QuoteSpaces();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
   
-##  <a name="relativepathto"></a>CPathT::RelativePathTo  
+##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  Rufen Sie diese Methode, um einen relativen Pfad in eine andere aus einer Datei oder einen Ordner zu erstellen.  
   
 ```
@@ -661,7 +656,7 @@ BOOL RelativePathTo(
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
   
-##  <a name="removeargs"></a>CPathT::RemoveArgs  
+##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  Rufen Sie diese Methode, um Befehlszeilenargumente aus dem Pfad zu entfernen.  
   
 ```
@@ -671,7 +666,7 @@ void RemoveArgs();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
   
-##  <a name="removebackslash"></a>CPathT::RemoveBackslash  
+##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  Rufen Sie diese Methode, um den nachgestellten umgekehrten Schrägstrich aus dem Pfad zu entfernen.  
   
 ```
@@ -681,7 +676,7 @@ void RemoveBackslash();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
   
-##  <a name="removeblanks"></a>CPathT::RemoveBlanks  
+##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  Rufen Sie diese Methode, um alle führende und nachfolgende Leerzeichen aus dem Pfad zu entfernen.  
   
 ```
@@ -691,7 +686,7 @@ void RemoveBlanks();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
-##  <a name="removeextension"></a>CPathT::RemoveExtension  
+##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  Rufen Sie diese Methode, um die Dateierweiterung des Pfads zu entfernen, sofern vorhanden.  
   
 ```
@@ -701,7 +696,7 @@ void RemoveExtension();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
-##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
+##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  Rufen Sie diese Methode, um den Pfad, den nachgestellten Dateinamen und einen umgekehrten Schrägstrich aufheben, wenn sie diese verfügt.  
   
 ```
@@ -714,7 +709,7 @@ BOOL RemoveFileSpec();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
-##  <a name="renameextension"></a>CPathT::RenameExtension  
+##  <a name="renameextension"></a>  CPathT::RenameExtension  
  Rufen Sie diese Methode, um die Erweiterung im Pfad durch eine neue Erweiterung zu ersetzen. Wenn Sie der Dateinamen keine Erweiterung enthält, wird die Erweiterung bis zum Ende des Pfads angefügt werden.  
   
 ```
@@ -731,7 +726,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
-##  <a name="skiproot"></a>CPathT::SkipRoot  
+##  <a name="skiproot"></a>  CPathT::SkipRoot  
  Rufen Sie diese Methode, um einen Pfad, ignoriert der Laufwerkbuchstabe oder UNC (universal naming Convention)-Server-Freigabe Pfad Teile zu analysieren.  
   
 ```
@@ -744,7 +739,7 @@ int SkipRoot() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
   
-##  <a name="strippath"></a>CPathT::StripPath  
+##  <a name="strippath"></a>  CPathT::StripPath  
  Rufen Sie diese Methode zum Entfernen des Pfadteil des einen vollqualifizierten Pfad und Dateinamen ein.  
   
 ```
@@ -754,7 +749,7 @@ void StripPath();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
   
-##  <a name="striptoroot"></a>CPathT::StripToRoot  
+##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  Rufen Sie diese Methode, um alle Teile des Pfads außer Stammverzeichnisinformationen zu den entfernen.  
   
 ```
@@ -767,7 +762,7 @@ BOOL StripToRoot();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
-##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  
+##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  Rufen Sie diese Methode, um das Anführungszeichen am Anfang und Ende eines Pfads zu entfernen.  
   
 ```
@@ -777,7 +772,7 @@ void UnquoteSpaces();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
-##  <a name="xchar"></a>CPathT::XCHAR  
+##  <a name="xchar"></a>  CPathT::XCHAR  
  Ein Zeichentyp.  
   
 ```
@@ -785,7 +780,7 @@ typedef StringType::XCHAR XCHAR;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `StringType`der Vorlagenparameter ist `CPathT`.  
+ `StringType` der Vorlagenparameter ist `CPathT`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../atl/reference/atl-classes.md)   

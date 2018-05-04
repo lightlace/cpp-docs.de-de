@@ -1,13 +1,10 @@
 ---
 title: / FA, / FA (Listendatei) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Listendatei)
 Erstellt eine Listendatei Assemblercode enthält.  
@@ -60,7 +55,7 @@ Dies ist optional. Enthält Computercode in der Auflistung.
 `s`  
 Dies ist optional. Enthält Quellcode in der Auflistung.  
   
-`u`Dies ist optional. Die Listendatei in UTF-8-Format codiert und enthält ein Byte-sortierungsmarkierung. Standardmäßig wird die Datei als ANSI codiert. Verwendung `u` eine Listendatei erstellen, ordnungsgemäß auf allen Systemen anzeigt, oder wenn Sie Unicode verwenden Quellcodedateien als Eingabe für den Compiler.  
+`u` Dies ist optional. Die Listendatei in UTF-8-Format codiert und enthält ein Byte-sortierungsmarkierung. Standardmäßig wird die Datei als ANSI codiert. Verwendung `u` eine Listendatei erstellen, ordnungsgemäß auf allen Systemen anzeigt, oder wenn Sie Unicode verwenden Quellcodedateien als Eingabe für den Compiler.  
   
 Wenn beide `s` und `u` angegeben wurden, und wenn eine Quellcodedatei verwendet eine Unicode-Codierung als UTF-8, und klicken Sie dann auf die Codezeilen, in der Datei ASM eventuell nicht korrekt angezeigt.  
   

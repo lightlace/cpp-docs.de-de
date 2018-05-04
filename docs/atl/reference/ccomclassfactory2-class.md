@@ -1,12 +1,9 @@
 ---
 title: CComClassFactory2 Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2-Klasse
 Diese Klasse implementiert die [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) Schnittstelle.  
@@ -68,7 +63,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Erstellt und gibt einen Lizenzschlüssel.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComClassFactory2`implementiert die [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) -Schnittstelle, die eine Erweiterung der [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** Steuerelemente Objekt erstellen, die über eine Lizenz. Eine Klasse Factory ausführen auf eine lizenzierte Computer kann einen Laufzeit-Lizenzschlüssel bereitstellen. Diese Lizenzschlüssel ermöglicht eine Anwendung, um Objekte zu instanziieren, wenn eine Lizenz für die vollständige Computer nicht vorhanden ist.  
+ `CComClassFactory2` implementiert die [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) -Schnittstelle, die eine Erweiterung der [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** Steuerelemente Objekt erstellen, die über eine Lizenz. Eine Klasse Factory ausführen auf eine lizenzierte Computer kann einen Laufzeit-Lizenzschlüssel bereitstellen. Diese Lizenzschlüssel ermöglicht eine Anwendung, um Objekte zu instanziieren, wenn eine Lizenz für die vollständige Computer nicht vorhanden ist.  
   
  ATL-Objekte abrufen eine Klassenfactory normalerweise durch Ableiten von [CComCoClass](../../atl/reference/ccomcoclass-class.md). Diese Klasse enthält das Makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), die deklariert wird, [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) als der standardfactory-Klasse. Mit `CComClassFactory2`, geben Sie die [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Makro in die Definition der Klasse des Objekts. Zum Beispiel:  
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`leitet sich von sowohl **CComClassFactory2Base** und *Lizenz*. **CComClassFactory2Base**, leitet sich wiederum von **IClassFactory2** und **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` leitet sich von sowohl **CComClassFactory2Base** und *Lizenz*. **CComClassFactory2Base**, leitet sich wiederum von **IClassFactory2** und **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CComObjectRootBase`  
@@ -94,7 +89,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  Erstellt ein Objekt der angegebenen CLSID und ruft einen Schnittstellenzeiger für dieses Objekt ab.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>Hinweise  
  Erfordert, dass der Computer vollständig lizenziert werden. Wenn eine Lizenz für die vollständige Computer nicht vorhanden ist, rufen Sie [CreateInstanceLic](#createinstancelic).  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  Ähnlich wie [CreateInstance](#createinstance), außer dass `CreateInstanceLic` erfordert einen Lizenzschlüssel.  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>Hinweise  
  Sie erhalten einen Lizenz mit [RequestLicKey](#requestlickey). Um ein Objekt auf eine nicht lizenzierte Computer zu erstellen, rufen Sie `CreateInstanceLic`.  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  Füllt eine [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) Struktur mit Informationen, die die Klassenfactory beschreiben die Funktionen Lizenzierung.  
   
 ```
@@ -169,7 +164,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>Hinweise  
  Die `fRuntimeKeyAvail` Mitglied dieser Struktur überprüfen, ob, erhält einen Lizenzschlüssel, die Klassenfactory Objekte auf eine nicht lizenzierte Computer erstellt werden kann. Die *fLicVerified* Element gibt an, ob eine vollständige Computer Lizenz vorhanden ist.  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
  Erhöht und verringert die Sperrenanzahl Modul durch Aufrufen von **_Module::Lock** und **_Module::Unlock**zugeordnet.  
   
 ```
@@ -178,7 +173,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
 ### <a name="parameters"></a>Parameter  
  `fLock`  
- [in] Wenn **"true"**die Anzahl der Sperren andernfalls erhöht, wird die Anzahl der Sperren wird verringert.  
+ [in] Wenn **"true"** die Anzahl der Sperren andernfalls erhöht, wird die Anzahl der Sperren wird verringert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  Aufrufen von `LockServer` ermöglicht einem Client zu einer Klassenfactory festzuhalten, sodass mehrere Objekte schnell erstellt werden können.  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  Erstellt und gibt einen Lizenzschlüssel bereitgestellt, die die `fRuntimeKeyAvail` Mitglied der [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) Struktur ist **"true"**.  
   
 ```

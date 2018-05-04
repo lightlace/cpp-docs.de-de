@@ -1,30 +1,25 @@
 ---
 title: Die ATL-Klassen zu ActiveX-Steuerelementcontainern vereinfachen? | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - hosting controls using ATL
 - ActiveX control containers [C++], ATL control hosting
 ms.assetid: 803a4605-7f4c-4139-8638-49d8783d31b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c7bd52476614a4356690aff2fda286e9f3aef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f024e9929e916e15b110bfc32bc704c4aef755a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Die ATL-Klassen zu ActiveX-Steuerelementcontainern vereinfachen?
 Hosten von Steuerelementen von ATL-Code erfordern nicht Ihnen die Verwendung von ATL-Klassen; Sie können einfach erstellen eine **"AtlAxWin80"** Fenster und verwenden Sie die Steuerelement-hosting-API bei Bedarf (Weitere Informationen finden Sie unter **was ATL-Steuerelement-Hosting-API ist**. Allerdings erleichtern die folgenden Klassen die Containment-Funktionen zu verwenden.  

@@ -2,28 +2,23 @@
 title: Kommentare in einem Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd8e3dda4014048a4f39191b555b1eff1d97288
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e404f3fffd0176e63a2df89d4d879bfba07f7093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comments-in-a-makefile"></a>Kommentare in einem Makefile
 Stellen Sie einen Kommentar mit einem Nummernzeichen voran (##). NMAKE ignoriert Text aus dem Nummernzeichen auf das nächste neue Zeilenumbruchzeichen. Beispiele:  

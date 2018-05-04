@@ -1,29 +1,24 @@
 ---
 title: ATL-Ereignisbehandlung Zusammenfassung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-event-handling-summary"></a>ATL-Behandlung Ereigniszusammenfassung
 Im Allgemeinen ist die Behandlung von COM-Ereignissen ein relativ einfacher Vorgang. Es gibt drei Hauptschritte:  
@@ -44,7 +39,7 @@ Im Allgemeinen ist die Behandlung von COM-Ereignissen ein relativ einfacher Vorg
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Disp-Schnittstelle|Nein|Ja|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Disp-Schnittstelle|Nein|Nein|  
   
- \*Wenn Sie ATL-Unterstützungsklassen verwenden zu können, müssen Sie nie implementieren die **IUnknown** oder `IDispatch` Methoden manuell.  
+ \* Wenn Sie ATL-Unterstützungsklassen verwenden zu können, müssen Sie nie implementieren die **IUnknown** oder `IDispatch` Methoden manuell.  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>Anmelden und Abmelden von der Ereignisquelle  
  Es gibt drei verschiedene Arten von anmelden und Abmelden von einer Ereignisquelle mit ATL  
@@ -52,7 +47,7 @@ Im Allgemeinen ist die Behandlung von COM-Ereignissen ein relativ einfacher Vorg
 |Advise-Funktion|Senkereigniszuordnung-Funktion|Am besten geeigneten für die Verwendung mit|Erfordert, dass Sie zum Nachverfolgen ein Cookies|Kommentare|  
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
 
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable oder duale Schnittstellen | Ja | `AtlAdvise` ist eine globale ATL-Funktion. `CComPtrBase::Advise`Dient der [CComPtr](../atl/reference/ccomptr-class.md) und [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable oder duale Schnittstellen | Ja | `AtlAdvise` ist eine globale ATL-Funktion. `CComPtrBase::Advise` Dient der [CComPtr](../atl/reference/ccomptr-class.md) und [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
 
 |[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) oder [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Nicht | Weniger Parameter als `AtlAdvise` , da die Basisklasse weitere Arbeit ausführt. |  
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| ActiveX-Steuerelementen in zusammengesetzten Steuerelementen | Nicht | `CComCompositeControl::AdviseSinkMap` Member-alle Einträge in der ereignismeldung sink Zuordnung. Die gleiche Funktion werden die Einträge abgemeldet. Diese Methode aufgerufen wird, automatisch von der `CComCompositeControl` Klasse. |  

@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: Einbetten eines Manifests in einer C/C++-Anwendung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung
 Es wird empfohlen, dass eine C/C++-Anwendung (oder eine Bibliothek) ist das Manifest in die endgültige Binärdatei eingebettet werden, da so gewährleistet ist richtig Laufzeitverhalten in den meisten Szenarien. Standardmäßig [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] versucht, die das Manifest einbetten, wenn sie ein Projekt aus Quelldateien erstellt; finden Sie unter [Manifesten in Visual Studio](../build/manifest-generation-in-visual-studio.md) für Weitere Informationen. Wenn eine Anwendung mithilfe von Nmake erstellt wird, sind jedoch einige Änderungen an vorhandenen Makefile erforderlich. Dieser Abschnitt veranschaulicht das Ändern von vorhandenen Makefiles um automatisch das Manifest in die endgültige Binärdatei eingebettet.  

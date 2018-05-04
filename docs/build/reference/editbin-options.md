@@ -1,13 +1,10 @@
 ---
 title: EDITBIN-Optionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>EDITBIN-Optionen
 EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLLs) zu ändern. Optionen zum Angeben der Änderungen, die EDITBIN vornimmt.  
@@ -46,11 +41,11 @@ EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Librari
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Gibt an, ob die DLL oder ausführbaren Images mit hoher Entropie (64-Bit) Adresse Space Layout Randomization (ASLR) unterstützt.|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Gibt an, ob die digitale Signatur zur Ladezeit überprüft werden soll.|  
 |[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als 2 GB sind.|  
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|  
+|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|  
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Gibt an, ob das ausführbare Image mit Datenausführungsverhinderung kompatibel ist.|  
 |[/REBASE](../../build/reference/rebase.md)|Legt die Basisadressen für die angegebenen Objekte.|  
 |[/RELEASE](../../build/reference/release.md)|Legt die Prüfsumme im Header fest.|  
-|[/SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|  
+|[/ SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|  
 |[/STACK](../../build/reference/stack.md)|Legt das ausführbare Image Stapelgröße in Bytes fest.|  
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|Gibt die ausführungsumgebung bereitstellt.|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|Gibt an, dass das ausführbare Image muss in die Auslagerungsdatei kopiert, und führen Sie von dort aus.|  

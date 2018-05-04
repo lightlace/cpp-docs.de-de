@@ -1,13 +1,10 @@
 ---
-title: "Verknüpfen mit der CRT in ATL-Projekt | Microsoft Docs"
-ms.custom: 
+title: Verknüpfen mit der CRT in ATL-Projekt | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - DllMainCRTStartup
 - wWinMainCRTStartup
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 631426fece3960303d67d8929e99c404beaab998
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0d93f8770ebbd893491c0e8b8eed239396e00a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Verknüpfen mit der CRT in ATL-Projekt
 Die [C-Laufzeitbibliotheken](../c-runtime-library/crt-library-features.md) (CRT) bieten zahlreiche nützliche Funktionen, die während der Entwicklung von ATL-Programmierung wesentlich einfacher vornehmen können. Alle ATL-Projekte, die mit der CRT-Bibliothek verknüpft werden. Sehen Sie die vor- und Nachteile der Methode in verknüpfen [vor- und Nachteile von der Methode verwendet, um die Verknüpfung mit der CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  

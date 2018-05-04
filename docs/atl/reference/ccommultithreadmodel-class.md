@@ -1,12 +1,9 @@
 ---
 title: CComMultiThreadModel Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModel
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89af8507150ee708ad381be2d47201c9266f763
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel-Klasse
-`CComMultiThreadModel`Stellt Thread-sichere Methoden zum Inkrementieren und Dekrementieren-den Wert einer Variablen bereit.  
+`CComMultiThreadModel` Stellt Thread-sichere Methoden zum Inkrementieren und Dekrementieren-den Wert einer Variablen bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,14 +64,14 @@ class CComMultiThreadModel
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
- `CComMultiThreadModel`selbst definiert drei `typedef` Namen. `AutoCriticalSection`und `CriticalSection` verweisen auf Klassen, Methoden zu ermöglichen, zum Abrufen und Freigeben des Besitzes eines kritischen Abschnitts. `ThreadModelNoCS`Verweise-Klasse [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
+ `CComMultiThreadModel` selbst definiert drei `typedef` Namen. `AutoCriticalSection` und `CriticalSection` verweisen auf Klassen, Methoden zu ermöglichen, zum Abrufen und Freigeben des Besitzes eines kritischen Abschnitts. `ThreadModelNoCS` Verweise-Klasse [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection  
  Bei Verwendung `CComMultiThreadModel`, `typedef` Namen `AutoCriticalSection` verweist auf die Klasse [CComAutoCriticalSection](ccomautocriticalsection-class.md), stellt Methoden zum Abrufen und Freigeben des Besitzes von einem kritischen Abschnittsobjekt.  
   
 ```
@@ -140,7 +135,7 @@ private:
 |`InternalAddRef`|Das Inkrement ist nicht threadsicher.|Das Inkrement ist threadsicher.|  
 |`Lock`|Wird keine Aktion ausgeführt werden soll; Es gibt keine kritischen Abschnitt sperren.|Wird keine Aktion ausgeführt werden soll; Es gibt keine kritischen Abschnitt sperren.|  
   
-##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModel::CriticalSection  
  Bei Verwendung `CComMultiThreadModel`, `typedef` Namen `CriticalSection` verweist auf die Klasse ["CComCriticalSection"](ccomcriticalsection-class.md), stellt Methoden zum Abrufen und Freigeben des Besitzes von einem kritischen Abschnittsobjekt.  
   
 ```
@@ -161,7 +156,7 @@ typedef CComCriticalSection CriticalSection;
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
-##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
  Diese statische Funktion ruft die Win32-Funktion [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), welche dekrementiert der Wert der Variablen verweist `p`.  
   
 ```
@@ -178,7 +173,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 ### <a name="remarks"></a>Hinweise  
  **InterlockedDecrement** verhindert, dass mehrere Threads gleichzeitig mit dieser Variable.  
   
-##  <a name="increment"></a>CComMultiThreadModel::Increment  
+##  <a name="increment"></a>  CComMultiThreadModel::Increment  
  Diese statische Funktion ruft die Win32-Funktion [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), der inkrementiert des Wert der Variablen, die durch `p`.  
   
 ```
@@ -195,7 +190,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 ### <a name="remarks"></a>Hinweise  
  **InterlockedIncrement** verhindert, dass mehrere Threads gleichzeitig mit dieser Variable.  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS  
  Bei Verwendung `CComMultiThreadModel`, `typedef` Namen `ThreadModelNoCS` verweist auf die Klasse [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).  
   
 ```
@@ -203,7 +198,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `CComMultiThreadModelNoCS`Stellt Thread-sichere-Methoden zum Inkrementieren und Dekrementieren eine Variable bereit; Er bietet jedoch kein kritischen Abschnitts.  
+ `CComMultiThreadModelNoCS` Stellt Thread-sichere-Methoden zum Inkrementieren und Dekrementieren eine Variable bereit; Er bietet jedoch kein kritischen Abschnitts.  
   
  [CComSingleThreadModel](ccomsinglethreadmodel-class.md) und `CComMultiThreadModelNoCS` enthalten auch die Definitionen für `ThreadModelNoCS`. Die folgende Tabelle zeigt die Beziehung zwischen der threading Modellklasse und Klasse verweist, auf `ThreadModelNoCS`:  
   

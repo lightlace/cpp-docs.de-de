@@ -1,12 +1,9 @@
 ---
 title: CComCoClass Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCoClass
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 738d7e937acf2d3299be97b4f091c698582911d5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass-Klasse
 Diese Klasse stellt Methoden zum Erstellen von Instanzen einer Klasse und ihre Eigenschaften abrufen.  
@@ -62,9 +57,9 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statisch) Außer Kraft setzen Sie, um die Beschreibung des Objekts zurückzugeben.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComCoClass`Stellt Methoden zum Abrufen von CLSID für ein Objekt, das Fehlerinformationen festlegen und das Erstellen von Instanzen der Klasse bereit. Jede Klasse registriert wird, der [objektzuordnung](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) abgeleitet werden sollte `CComCoClass`.  
+ `CComCoClass` Stellt Methoden zum Abrufen von CLSID für ein Objekt, das Fehlerinformationen festlegen und das Erstellen von Instanzen der Klasse bereit. Jede Klasse registriert wird, der [objektzuordnung](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) abgeleitet werden sollte `CComCoClass`.  
   
- `CComCoClass`definiert auch die Klasse Factory und Aggregation Standardmodell für Ihr Objekt. `CComCoClass`verwendet die folgenden beiden Makros:  
+ `CComCoClass` definiert auch die Klasse Factory und Aggregation Standardmodell für Ihr Objekt. `CComCoClass` verwendet die folgenden beiden Makros:  
   
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) deklariert die Klassenfactory sein [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).  
   
@@ -77,7 +72,7 @@ class CComCoClass
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance  
  Verwenden Sie diese `CreateInstance` Funktionen zum Erstellen einer Instanz einer COM-Objekt und einen Schnittstellenzeiger abzurufen, ohne Verwendung der COM-API.  
   
 ```
@@ -111,11 +106,11 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Beachten Sie, dass die Schnittstelle `Q` benötigen eine IID zugeordnet, die mit abgerufen werden kann die [__uuidof](../../cpp/uuidof-operator.md) Operator.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel `CDocument` ist eine vom Assistenten generierten ATL abgeleitete Klasse `CComCoClass` , implementiert die **IDocument** Schnittstelle. Die Klasse wird in der objektzuordnung mit registriert die `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` Makros, damit Instanzen des Dokuments mithilfe von Clients erstellt werden können [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication`ist eine Co-Klasse, die eine Methode auf einem eigenen COM-Schnittstellen zum Erstellen von Instanzen der Dokumentklasse bereitstellt. Der folgende Code zeigt, wie einfach es zum Erstellen von Instanzen der Klasse für das Dokument mit der `CreateInstance` Element geerbt wird, von der `CComCoClass` Basisklasse.  
+ Im folgenden Beispiel `CDocument` ist eine vom Assistenten generierten ATL abgeleitete Klasse `CComCoClass` , implementiert die **IDocument** Schnittstelle. Die Klasse wird in der objektzuordnung mit registriert die `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` Makros, damit Instanzen des Dokuments mithilfe von Clients erstellt werden können [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` ist eine Co-Klasse, die eine Methode auf einem eigenen COM-Schnittstellen zum Erstellen von Instanzen der Dokumentklasse bereitstellt. Der folgende Code zeigt, wie einfach es zum Erstellen von Instanzen der Klasse für das Dokument mit der `CreateInstance` Element geerbt wird, von der `CComCoClass` Basisklasse.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>  CComCoClass::Error  
  Diese statische Funktion richtet die `IErrorInfo` Schnittstelle, um Informationen an den Client zu senden.  
   
 ```
@@ -188,7 +183,7 @@ static HRESULT Error(
   
  Wenn die `hRes` -Parameter ist ungleich NULL ist, klicken Sie dann `Error` gibt den Wert der `hRes`. Wenn `hRes` ist 0 (null), und klicken Sie dann auf die ersten vier Versionen des `Error` zurückgeben `DISP_E_EXCEPTION`. Die letzten beiden Versionen zurück, das Ergebnis des Makros **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
   
-##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>  CComCoClass::GetObjectCLSID  
  Bietet eine einheitliche Methode zum Abrufen von CLSID des Objekts an.  
   
 ```
@@ -198,7 +193,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>Rückgabewert  
  Klassen-ID des Objekts.  
   
-##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>  CComCoClass::GetObjectDescription  
  Diese statische Funktion ruft die textbeschreibung für Ihr Klassenobjekt ab.  
   
 ```
@@ -213,7 +208,7 @@ static LPCTSTR WINAPI GetObjectDescription();
   
  [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
- `GetObjectDescription`wird aufgerufen, indem **IComponentRegistrar::GetComponents**. **IComponentRegistrar** ist eine Automatisierungsschnittstelle, mit der Sie beim Registrieren und Aufheben der einzelne Komponenten in einer DLL. Wenn Sie eine Komponente Registrierungsstelle-Objekt mit dem ATL-Projekt-Assistenten erstellen, wird der Assistent automatisch implementieren die **IComponentRegistrar** Schnittstelle. **IComponentRegistrar** wird meist von Microsoft Transaction Server verwendet.  
+ `GetObjectDescription` wird aufgerufen, indem **IComponentRegistrar::GetComponents**. **IComponentRegistrar** ist eine Automatisierungsschnittstelle, mit der Sie beim Registrieren und Aufheben der einzelne Komponenten in einer DLL. Wenn Sie eine Komponente Registrierungsstelle-Objekt mit dem ATL-Projekt-Assistenten erstellen, wird der Assistent automatisch implementieren die **IComponentRegistrar** Schnittstelle. **IComponentRegistrar** wird meist von Microsoft Transaction Server verwendet.  
   
  Weitere Informationen über ATL-Projektassistenten finden Sie im Artikel [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md).  
   

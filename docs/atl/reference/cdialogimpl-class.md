@@ -1,12 +1,9 @@
 ---
 title: CDialogImpl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d4119daf89820de0a835bfbc572cdfbf38c99e8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 Diese Klasse stellt Methoden zum Erstellen eines Dialogfelds mit oder ohne Modus.  
@@ -88,11 +83,11 @@ template <class T,
 |[StartDialogProc](#startdialogproc)|Wird aufgerufen, wenn die erste Nachricht empfangen wird, um Nachrichten gesendet, um das Dialogfeld zu verarbeiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Mit `CDialogImpl` können Sie ein Dialogfeld mit oder ohne Modus erstellen. `CDialogImpl`Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
+ Mit `CDialogImpl` können Sie ein Dialogfeld mit oder ohne Modus erstellen. `CDialogImpl` Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
   
  Basisklassendestruktor **~ CWindowImplRoot** wird sichergestellt, dass das Fenster verlassen wird, vor dem Löschen des Objekts.  
   
- `CDialogImpl`leitet sich von **CDialogImplBaseT**, der wiederum abgeleitet aus **CWindowImplRoot**.  
+ `CDialogImpl` leitet sich von **CDialogImplBaseT**, der wiederum abgeleitet aus **CWindowImplRoot**.  
   
 > [!NOTE]
 >  Muss Ihre Klasse definiert ein **LEISTE** Member, der angibt, das Dialogfeld Vorlage Ressourcen-ID. ATL-Projekt-Assistent fügt z. B. automatisch die folgende Zeile auf die Klasse:  
@@ -111,7 +106,7 @@ template <class T,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>  CDialogImpl::Create  
  Erstellt ein nicht modales Dialogfeld an.  
   
 ```  
@@ -129,7 +124,7 @@ HWND Create(
  `hWndParent`  
  [in] Das Handle an das Besitzerfenster.  
   
- **RECT &**`rect`  
+ **RECT &AMP;** `rect`  
  [in] Ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die Größe und Position im Dialogfelds angibt.  
   
  `dwInitParam`  
@@ -141,7 +136,7 @@ HWND Create(
 ### <a name="remarks"></a>Hinweise  
  Dieses Dialogfeld wird automatisch angefügt, um die `CDialogImpl` Objekt. Rufen Sie zum Erstellen eines modales Dialogfelds [DoModal](#domodal). Die zweite Außerkraftsetzung wird verwendet, nur mit [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow  
  Zerstört ein nicht modales Dialogfeld an.  
   
 ```  
@@ -157,7 +152,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Hinweise  
  Gibt **"true"** , wenn das Dialogfeld erfolgreich getrennt wurde; andernfalls wurde **"false"**.  
   
-##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>  CDialogImpl::DialogProc  
  Diese statische Funktion implementiert, die für Standarddialogfelder.  
   
 ```  
@@ -188,11 +183,11 @@ static LRESULT CALLBACK DialogProc(
  **"True"** ist die Nachricht verarbeitet wird; andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- `DialogProc`verwendet die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler.  
+ `DialogProc` verwendet die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler.  
   
  Sie können außer Kraft setzen `DialogProc` angeben ein anderen Mechanismus zum Verarbeiten von Nachrichten.  
   
-##  <a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>  CDialogImpl::DoModal  
  Erstellt ein modales Dialogfeld an.  
   
 ```   
@@ -216,7 +211,7 @@ INT_PTR DoModal(
   
  Rufen Sie zum Erstellen eines nicht modalen Dialogfelds [erstellen](#create).  
   
-##  <a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CDialogImpl::EndDialog  
  Zerstört ein modales Dialogfeld an.  
   
 ```   
@@ -231,12 +226,12 @@ BOOL EndDialog(int nRetCode);
  **"True"** ist das Dialogfeld getrennt ist, andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- `EndDialog`muss über die Dialogfeldprozedur aufgerufen werden. Nachdem Sie das Dialogfeld zerstört wird, verwendet Windows den Wert der `nRetCode` als Rückgabewert für `DoModal`, der das Dialogfeld erstellt.  
+ `EndDialog` muss über die Dialogfeldprozedur aufgerufen werden. Nachdem Sie das Dialogfeld zerstört wird, verwendet Windows den Wert der `nRetCode` als Rückgabewert für `DoModal`, der das Dialogfeld erstellt.  
   
 > [!NOTE]
 >  Rufen Sie nicht `EndDialog` , ein nicht modales Dialogfeld zu zerstören. Rufen Sie [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) stattdessen.  
   
-##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CDialogImpl::GetDialogProc  
  Gibt `DialogProc`, die aktuellen für Standarddialogfelder.  
   
 ```   
@@ -249,7 +244,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um das Dialogfeld Verfahren durch eigene ersetzen.  
   
-##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CDialogImpl::MapDialogRect  
  Konvertiert (Maps) die Einheiten im Dialogfeld des angegebenen Rechtecks Bildschirm Einheiten (in Pixel).  
   
 ```   
@@ -266,7 +261,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>Hinweise  
  Die Funktion ersetzt die Koordinaten im angegebenen `RECT` Struktur mit den Koordinaten konvertierte, sodass die Struktur, die zum Erstellen eines Dialogfelds oder positionieren ein Steuerelement in einem Dialogfeld verwendet werden.  
   
-##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>  CDialogImpl::OnFinalMessage  
  Nach dem Empfang der letzten Nachricht aufgerufen (in der Regel `WM_NCDESTROY`).  
   
 ```   
@@ -280,7 +275,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass wenn Ihr Objekt auf die fensterzerstörung automatisch gelöscht werden sollen, Sie aufrufen können `delete this;` hier.  
   
-##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>  CDialogImpl::StartDialogProc  
  Wenn die erste Nachricht, zum Verarbeiten von Nachrichten gesendet, um das Dialogfeld empfangen wird, nur einmal aufgerufen.  
   
 ```   

@@ -1,6 +1,6 @@
 ---
 title: -Z7, - Zi - ZI (Debuginformationsformat) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -31,14 +31,13 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
-ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
+ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Debuginformationsformat)
 
@@ -71,7 +70,7 @@ Die **/Zi** Option erzeugt eine separaten PDB-Datei, die alle den symbolischen D
 Verwenden von **/Zi** hat keinen Einfluss auf Optimierungen. Allerdings **/Zi** impliziert **/debug**; finden Sie unter [/Debug (Debuginfo generieren)](../../build/reference/debug-generate-debug-info.md) für Weitere Informationen.
 
 
-Wenn Sie beide angeben **/Zi** und **"/ CLR"**die <xref:System.Diagnostics.DebuggableAttribute> Attribut nicht in den Metadaten der Assembly platziert wird. Wenn Sie es möchten, müssen Sie es im Quellcode angeben. Dieses Attribut kann Auswirkungen auf die Laufzeitleistung der Anwendung haben. Weitere Informationen darüber, wie die **Debuggable** Attribut wirkt sich auf Leistung und wie Sie die Auswirkungen auf die Leistung ändern können, finden Sie unter [erleichtern des Debugmodus für ein Abbild](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
+Wenn Sie beide angeben **/Zi** und **"/ CLR"** die <xref:System.Diagnostics.DebuggableAttribute> Attribut nicht in den Metadaten der Assembly platziert wird. Wenn Sie es möchten, müssen Sie es im Quellcode angeben. Dieses Attribut kann Auswirkungen auf die Laufzeitleistung der Anwendung haben. Weitere Informationen darüber, wie die **Debuggable** Attribut wirkt sich auf Leistung und wie Sie die Auswirkungen auf die Leistung ändern können, finden Sie unter [erleichtern des Debugmodus für ein Abbild](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
 Der Compiler die PDB-Datei benannt *Projekt*PDB-Datei. Wenn Sie eine Datei außerhalb eines Projekts zu kompilieren, erstellt der Compiler eine PDB-Datei mit dem Namen VC*x*PDB-Datei, in denen *x* besteht aus einer Verkettung der Haupt-und Nebenversionsnummern Anzahl von der Compilerversion verwendet. Der Compiler bettet den Namen der PDB-Datei und einer identifizierende Zeitstempelserver Signatur in jeder Objektdatei erstellt haben, verwenden diese Option, die den Debugger auf den Speicherort der Zeilennummer und symbolischen Informationen verweist. Die Namen und derselben Signatur in der PDB-Datei müssen die ausführbare Datei für die Symbole in den Debugger geladen werden sollen übereinstimmen. WinDBG-Debugger kann nicht übereinstimmende Symbole laden, indem Sie mit der `.symopt+0x40` Befehl. Visual Studio muss sich nicht auf eine ähnliche Option aus, um nicht übereinstimmende Symbole laden aus.
 
@@ -79,7 +78,7 @@ Wenn Sie eine Bibliothek von Objekten erstellen, die kompiliert wurden mit **/Zi
 
 ### <a name="zi"></a>/ZI
 
-Die **/Zi** Option ist vergleichbar mit **/Zi**, aber es erzeugt eine PDB-Datei in ein Format, unterstützt die [bearbeiten und Fortfahren](/visualstudio/debugger/edit-and-continue-visual-cpp) Funktion. Zum Bearbeiten und fortfahren, Debuggen von Features verwenden zu können, müssen Sie diese Option verwenden. Die Funktion bearbeiten und Fortfahren eignet sich für die Produktivität der Entwickler, jedoch Probleme im Code-Größe, Leistung und Compiler Conformance verursacht werden kann. Da die meisten Optimierungen nicht mit bearbeiten und Fortfahren kompatibel sind, verwenden **/Zi** deaktiviert jede `#pragma optimize` Anweisungen in Ihrem Code. Die **/Zi** Option ist auch nicht kompatibel mit der [&#95; &#95; LINE #95; &#95; Das vordefinierte Makro](../../preprocessor/predefined-macros.md); Code kompiliert mit **/Zi** können keine **&#95; &#95; LINE #95; &#95;**  als Nichttyp-Vorlagenargument, obwohl **&#95; &#95; LINE #95; &#95;**  in makroerweiterungen verwendet werden kann.
+Die **/Zi** Option ist vergleichbar mit **/Zi**, aber es erzeugt eine PDB-Datei in ein Format, unterstützt die [bearbeiten und Fortfahren](/visualstudio/debugger/edit-and-continue-visual-cpp) Funktion. Zum Bearbeiten und fortfahren, Debuggen von Features verwenden zu können, müssen Sie diese Option verwenden. Die Funktion bearbeiten und Fortfahren eignet sich für die Produktivität der Entwickler, jedoch Probleme im Code-Größe, Leistung und Compiler Conformance verursacht werden kann. Da die meisten Optimierungen nicht mit bearbeiten und Fortfahren kompatibel sind, verwenden **/Zi** deaktiviert jede `#pragma optimize` Anweisungen in Ihrem Code. Die **/Zi** Option ist auch nicht kompatibel mit der [ &#95; &#95;Zeile&#95; &#95; vordefiniertes Makro](../../preprocessor/predefined-macros.md); Code kompiliert wird, mit **/Zi** kannnichtverwendetwerden.**&#95; &#95;Zeile&#95; &#95;** als Nichttyp-Vorlagenargument, obwohl **&#95; &#95;Zeile&#95; &#95;** in makroerweiterungen verwendet werden kann.
 
 Die **/Zi** Option erzwingt, dass sowohl die [/Gy (Funktionslevel Linking aktivieren)](../../build/reference/gy-enable-function-level-linking.md) und [/FC (vollständiger Pfad der Quellcodedatei in Diagnostics)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) Optionen, die bei der Kompilierung verwendet werden.
 

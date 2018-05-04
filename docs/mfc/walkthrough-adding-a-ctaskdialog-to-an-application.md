@@ -1,12 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Hinzufügen ein CTaskDialog zu einer Anwendung | Microsoft Docs"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Hinzufügen ein CTaskDialog zu einer Anwendung | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Exemplarische Vorgehensweise: Hinzufügen eines CTaskDialog zu einer Anwendung
 In dieser exemplarische Vorgehensweise wird [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) vorgestellt, und Sie erfahren, wie Sie eine Ihrer Anwendung hinzufügen können.  
   
- Der `CTaskDialog` ist ein Aufgabendialogfeld, das das Windows-Meldungsfeld in [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]ersetzt. Der `CTaskDialog` verbessert das ursprüngliche Meldungsfeld und fügt Funktionen hinzu. Das Windows-Meldungsfeld wird in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]weiterhin unterstützt.  
+ Die `CTaskDialog` ist ein Aufgabendialogfeld, das die Windows-Meldungsfeld in Windows Vista und höheren Versionen ersetzt. Der `CTaskDialog` verbessert das ursprüngliche Meldungsfeld und fügt Funktionen hinzu. Das Windows-Meldungsfeld wird weiterhin in Visual Studio unterstützt.  
   
 > [!NOTE]
->  Windows-Versionen vor [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] bieten keine Unterstützung für den `CTaskDialog`. Sie müssen eine alternative Dialogfeldoption programmieren, wenn Sie einem Benutzer eine Meldung anzeigen möchten, der Ihre Anwendung unter einer früheren Version von Windows ausführt. Sie können die statische Methode [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) verwenden, um zur Laufzeit zu bestimmen, ob der Computer eines Benutzers ein `CTaskDialog`ersetzt. Darüber hinaus ist der `CTaskDialog` nur verfügbar, wenn Ihre Anwendung mit der Unicode-Bibliothek erstellt wird.  
+> Windows-Versionen vor Windows Vista unterstützen nicht die `CTaskDialog`. Sie müssen eine alternative Dialogfeldoption programmieren, wenn Sie einem Benutzer eine Meldung anzeigen möchten, der Ihre Anwendung unter einer früheren Version von Windows ausführt. Sie können die statische Methode [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) verwenden, um zur Laufzeit zu bestimmen, ob der Computer eines Benutzers ein `CTaskDialog`ersetzt. Darüber hinaus ist der `CTaskDialog` nur verfügbar, wenn Ihre Anwendung mit der Unicode-Bibliothek erstellt wird.  
   
  Der `CTaskDialog` unterstützt mehrere optionale Elemente zum Sammeln und Anzeigen von Informationen. Ein `CTaskDialog` kann beispielsweise Befehlslinks, benutzerdefinierte Schaltflächen, benutzerdefinierte Symbole und eine Fußzeile anzeigen. Der `CTaskDialog` verfügt auch über mehrere Methoden, mit denen Sie den Status des Aufgabendialogfelds abfragen können, um festzustellen, welche optionalen Elemente der Benutzer ausgewählt hat.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 oder höher  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista oder höher  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Ersetzen eines Windows-Meldungsfeld mit einem CTaskDialog  
  Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDialog`, sprich die Ersetzung des Windows-Meldungsfelds. In diesem Beispiel wird auch das Symbol geändert, das dem Aufgabendialogfeld zugeordnet ist. Durch Ändern des Symbols wird das Erscheinungsbild des `CTaskDialog` mit dem des Windows-Meldungsfelds identisch.  

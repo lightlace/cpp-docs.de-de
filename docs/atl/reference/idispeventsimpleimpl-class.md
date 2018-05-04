@@ -1,12 +1,9 @@
 ---
 title: IDispEventSimpleImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a5b3098961af4f3f9262cdc4c99dbe80b4ac7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89f565c1e32f1208fbb039321d26b9175596d57e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl-Klasse
 Diese Klasse stellt Implementierungen von der `IDispatch` Methoden ohne das Abrufen von Informationen aus einer Typbibliothek.  
@@ -75,9 +70,9 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|Trennt die Verbindung mit der Standard-Ereignisquelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IDispEventSimpleImpl`bietet eine Möglichkeit, eine ereignisanzeigeschnittstelle implementieren, ohne dass Sie Implementierungscode für jede Methode/Event an dieser Schnittstelle bereitstellen. `IDispEventSimpleImpl`bietet Implementierungen von der `IDispatch` Methoden. Sie müssen nur die Implementierungen für die Ereignisse angeben, dass Sie Behandlung interessiert sind.  
+ `IDispEventSimpleImpl` bietet eine Möglichkeit, eine ereignisanzeigeschnittstelle implementieren, ohne dass Sie Implementierungscode für jede Methode/Event an dieser Schnittstelle bereitstellen. `IDispEventSimpleImpl` bietet Implementierungen von der `IDispatch` Methoden. Sie müssen nur die Implementierungen für die Ereignisse angeben, dass Sie Behandlung interessiert sind.  
   
- `IDispEventSimpleImpl`funktioniert in Verbindung mit der Ereignis-Sink-Zuordnung in die Klasse, um Ereignisse weiterzuleiten, an die entsprechenden Handler-Funktion. Diese Klasse verwenden zu können:  
+ `IDispEventSimpleImpl` funktioniert in Verbindung mit der Ereignis-Sink-Zuordnung in die Klasse, um Ereignisse weiterzuleiten, an die entsprechenden Handler-Funktion. Diese Klasse verwenden zu können:  
   
 -   Hinzufügen einer [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) Makro, das die Senke ereigniszuordnung für jedes Ereignis für jedes Objekt, das Sie behandeln möchten.  
   
@@ -92,7 +87,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **IDispEventSimplImpl** bietet die gleiche Funktionalität wie [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), außer dass Typinformationen über die Schnittstelle aus einer Typbibliothek nicht abgerufen werden wird. Die Assistenten Generieren von Code, die nur auf Grundlage `IDispEventImpl`, Sie können jedoch `IDispEventSimpleImpl` durch Hinzufügen des Codes per hand katalogisiert wird. Verwendung `IDispEventSimpleImpl` Wenn Sie keine Typbibliothek, die Ereignisschnittstelle beschreibt oder den Mehrbedarf in Verbindung mit der Verwendung der Typbibliothek vermeiden möchten.  
   
 > [!NOTE]
-> `IDispEventImpl`und `IDispEventSimpleImpl` Geben Sie eine eigene Implementierung von **IUnknown:: QueryInterface** aktivieren jeweils `IDispEventImpl` oder `IDispEventSimpleImpl` -Basisklasse als separate COM-Identität fungieren, während nach wie vor direkten Zugriff auf Klassenmember in der wichtigsten COM-Objekt.  
+> `IDispEventImpl` und `IDispEventSimpleImpl` Geben Sie eine eigene Implementierung von **IUnknown:: QueryInterface** aktivieren jedes `IDispEventImpl` oder `IDispEventSimpleImpl` -Basisklasse als separate COM-Identität fungieren, während nach wie vor direkten Zugriff auf Klassenmember in die wichtigsten COM-Objekt.  
   
  CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
   
@@ -108,7 +103,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>  IDispEventSimpleImpl::Advise  
  Rufen Sie diese Methode zum Herstellen einer Verbindung mit der Ereignisquelle dargestellte *pUnk*.  
   
 ```
@@ -120,7 +115,7 @@ HRESULT Advise(IUnknown* pUnk);
  [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Quellobjekts Ereignis.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `S_OK`oder jeder Fehler `HRESULT` Wert.  
+ `S_OK` oder jeder Fehler `HRESULT` Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Nachdem die Verbindung hergestellt ist, werden Ereignisse aus ausgelöst *pUnk* wird an Handler in der Klasse über die Senke ereigniszuordnung weitergeleitet werden.  
@@ -128,9 +123,9 @@ HRESULT Advise(IUnknown* pUnk);
 > [!NOTE]
 >  Wenn Ihre Klasse abgeleitet, aus mehreren ist `IDispEventSimpleImpl` Klassen, müssen Sie eindeutig zu machen Aufrufe dieser Methode durch Bereichsauswahl den Aufruf mit einer bestimmten Basisklasse, die Sie von Interesse sind.  
   
- `Advise`Stellt eine Verbindung mit der Standard-Ereignisquelle, ruft es die IID der Ereignisquelle Standardwert des Objekts gemäß [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
+ `Advise` Stellt eine Verbindung mit der Standard-Ereignisquelle, ruft es die IID der Ereignisquelle Standardwert des Objekts gemäß [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
   
-##  <a name="dispeventadvise"></a>IDispEventSimpleImpl:: DispEventAdvise  
+##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl:: DispEventAdvise  
  Rufen Sie diese Methode zum Herstellen einer Verbindung mit der Ereignisquelle dargestellte *pUnk*.  
   
 ```
@@ -145,7 +140,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
  Ein Zeiger auf die IID des Quellobjekts Ereignis.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `S_OK`oder jeder Fehler `HRESULT` Wert.  
+ `S_OK` oder jeder Fehler `HRESULT` Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Anschließend Ereignisse ausgelöst von *pUnk* wird an Handler in der Klasse über die Senke ereigniszuordnung weitergeleitet werden.  
@@ -153,9 +148,9 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  Wenn Ihre Klasse abgeleitet, aus mehreren ist `IDispEventSimpleImpl` Klassen, müssen Sie eindeutig zu machen Aufrufe dieser Methode durch Bereichsauswahl den Aufruf mit einer bestimmten Basisklasse, die Sie von Interesse sind.  
   
- `DispEventAdvise`Stellt eine Verbindung mit der Ereignisquelle, die im angegebenen `pdiid`.  
+ `DispEventAdvise` Stellt eine Verbindung mit der Ereignisquelle, die im angegebenen `pdiid`.  
   
-##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl::DispEventUnadvise  
  Trennt die Verbindung mit der Ereignisquelle dargestellte *pUnk*.  
   
 ```
@@ -170,7 +165,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
  Ein Zeiger auf die IID des Quellobjekts Ereignis.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `S_OK`oder jeder Fehler `HRESULT` Wert.  
+ `S_OK` oder jeder Fehler `HRESULT` Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Sobald die Verbindung unterbrochen wird, werden Ereignisse nicht mehr an Handlerfunktionen in der Senke ereigniszuordnung weitergeleitet werden.  
@@ -178,9 +173,9 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  Wenn Ihre Klasse abgeleitet, aus mehreren ist `IDispEventSimpleImpl` Klassen, müssen Sie eindeutig zu machen Aufrufe dieser Methode durch Bereichsauswahl den Aufruf mit einer bestimmten Basisklasse, die Sie von Interesse sind.  
   
- `DispEventAdvise`eine Verbindung mit der Ereignisquelle, die im angegebenen aufgebaut wurde unterbrochen `pdiid`.  
+ `DispEventAdvise` eine Verbindung mit der Ereignisquelle, die im angegebenen aufgebaut wurde unterbrochen `pdiid`.  
   
-##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispEventSimpleImpl::GetIDsOfNames  
  Diese Implementierung der **GetIDsOfNames** gibt **E_NOTIMPL**.  
   
 ```
@@ -195,7 +190,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) im Windows SDK.  
   
-##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  Diese Implementierung der **IDispatch:: GetTypeInfo** gibt **E_NOTIMPL**.  
   
 ```
@@ -208,7 +203,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) im Windows SDK.  
   
-##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  Diese Implementierung der **IDispatch:: GetTypeInfoCount** gibt **E_NOTIMPL**.  
   
 ```
@@ -218,7 +213,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) im Windows SDK.  
   
-##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  Diese Implementierung der **IDispatch:: Invoke** Aufrufe, die die Ereignishandler aufgeführten im Ereignistext Sink-Zuordnung.  
   
 ```
@@ -236,7 +231,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
-##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  Trennt die Verbindung mit der Ereignisquelle dargestellte *pUnk*.  
   
 ```
@@ -248,7 +243,7 @@ HRESULT Unadvise(IUnknown* pUnk);
  [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Quellobjekts Ereignis.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `S_OK`oder jeder Fehler `HRESULT` Wert.  
+ `S_OK` oder jeder Fehler `HRESULT` Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Sobald die Verbindung unterbrochen wird, werden Ereignisse nicht mehr an Handlerfunktionen in der Senke ereigniszuordnung weitergeleitet werden.  
@@ -256,7 +251,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 > [!NOTE]
 >  Wenn Ihre Klasse abgeleitet, aus mehreren ist `IDispEventSimpleImpl` Klassen, müssen Sie eindeutig zu machen Aufrufe dieser Methode durch Bereichsauswahl den Aufruf mit einer bestimmten Basisklasse, die Sie von Interesse sind.  
   
- `Unadvise`eine Verbindung mit der Standard-Ereignisquelle, die im angegebenen aufgebaut wurde unterbrochen `pdiid`.  
+ `Unadvise` eine Verbindung mit der Standard-Ereignisquelle, die im angegebenen aufgebaut wurde unterbrochen `pdiid`.  
   
  **Unavise** hält eine Verbindung mit der Standard-Ereignisquelle, ruft die IID der Ereignisquelle des Objekts gemäß Standardeinstellung ab [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
   

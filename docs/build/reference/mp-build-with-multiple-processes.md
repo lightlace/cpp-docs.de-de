@@ -1,6 +1,6 @@
 ---
 title: / MP (erstellen mit mehreren Prozessen) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Erstellen mit mehreren Prozessen)
 
@@ -123,7 +122,7 @@ Der Compiler unterstützt nicht die Verwendung der [#import](../../preprocessor/
 
 #### <a name="the-msbuildexe-tool"></a>Das Tool „MSBUILD.exe“
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] verwendet die [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) Tool zum Erstellen von Projektmappen und Projekten. Die **maxcpucount:**_Anzahl_ (oder **/m:**_Anzahl_) Befehlszeilenoption für das Tool "MSBuild.exe" kann mehrere Projekte zur Erstellen der gleichzeitig. Die Compileroption **/MP** kann mehrere Kompilierungseinheiten gleichzeitig erstellen. Wenn es für die Anwendung geeignet ist, verbessern Sie die Buildzeit Ihrer Projektmappe, indem Sie **/MP** oder/und **/maxcpucount**verwenden.
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] verwendet das [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) Tool, um Projektmappen und Projekte zu erstellen. Die **maxcpucount:**_Anzahl_ (oder **/m:**_Anzahl_) Befehlszeilenoption für das Tool "MSBuild.exe" kann mehrere Projekte zur Erstellen der gleichzeitig. Die Compileroption **/MP** kann mehrere Kompilierungseinheiten gleichzeitig erstellen. Wenn es für die Anwendung geeignet ist, verbessern Sie die Buildzeit Ihrer Projektmappe, indem Sie **/MP** oder/und **/maxcpucount**verwenden.
 
 Die Buildzeit der Projektmappe hängt teilweise von der Anzahl der Prozesse ab, die den Build ausführen. Die *Anzahl* Argument der [maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild-Option gibt die maximale Anzahl von Projekten zur gleichen Zeit zu erstellen. Auf ähnliche Weise die *ProcessMax* Argument der **/MP** (Compileroption) gibt die maximale Anzahl der Kompilierungseinheiten gleichzeitig zu erstellen. Wenn die **maxcpucount** Option gibt an, *P* Projekte und die **/MP** Option gibt an, *C* verarbeitet wird, maximal *P*  x *C* Prozesse zur gleichen Zeit ausführen.
 
@@ -143,4 +142,4 @@ Standardmäßig aktiviert ein Projektbuild die Compileroption **/Gm** (inkrement
 
 [#import-Direktive](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ ZF (schneller PDB Generation)](zf.md)<br/>
+[/Zf (Schnellere PDB-Generierung)](zf.md)<br/>

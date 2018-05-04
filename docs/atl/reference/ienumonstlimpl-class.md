@@ -1,12 +1,9 @@
 ---
 title: IEnumOnSTLImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl-Klasse
 Diese Klasse definiert eine Enumeratorschnittstelle, die auf Grundlage einer C++-Standardbibliothek-Auflistung.  
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|Die **IUnknown** Zeiger, der das Objekt die Auflistung bereitstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IEnumOnSTLImpl`Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem C++-Standard-Bibliothek-kompatiblen Container gespeichert werden. Diese Klasse ist analog zu den [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) Klasse, die eine Implementierung für eine Enumeratorschnittstelle bereitstellt, basierend auf einem Array.  
+ `IEnumOnSTLImpl` Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem C++-Standard-Bibliothek-kompatiblen Container gespeichert werden. Diese Klasse ist analog zu den [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) Klasse, die eine Implementierung für eine Enumeratorschnittstelle bereitstellt, basierend auf einem Array.  
   
 > [!NOTE]
 >  Finden Sie unter [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) Weitere Informationen zu weiteren Unterschieden zwischen `CComEnumImpl` und `IEnumOnSTLImpl`.  
@@ -101,7 +96,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>  IEnumOnSTLImpl::Init  
  Initialisiert den Enumerator.  
   
 ```
@@ -125,7 +120,7 @@ HRESULT Init(
   
  Sie müssen diese Methode aufrufen, bevor die Übergabe eines Zeigers auf die Enumeratorschnittstelle an alle Clients.  
   
-##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
  Diese Methode stellt die Implementierung des der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode durch das Erstellen eines Objekts vom Typ `CComEnumOnSTL`, initialisieren es mit dem gleichen Auflistung und Iterator vom aktuellen Objekt verwendet, und Zurückgeben der Benutzeroberfläche für das neu erstellte Objekt.  
   
 ```
@@ -139,7 +134,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
  Die **IUnknown** Zeiger, der das Objekt die Auflistung bereitstellen.  
   
 ```
@@ -149,7 +144,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Hinweise  
  Diese intelligente Zeiger behält einen Verweis auf das übergebene Objekt [IEnumOnSTLImpl::Init](#init), um sicherzustellen, dass es während der Lebensdauer des Enumerators aktiv bleibt.  
   
-##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
  Bei diesem Member verweist auf die Auflistung, die die Daten, die die Implementierung der Enumeratorschnittstelle driving bereitstellt.  
   
 ```
@@ -159,14 +154,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Hinweise  
  Bei diesem Member wird durch einen Aufruf von initialisiert [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
  Bei diesem Member enthält den Iterator zum Markieren der aktuellen Position innerhalb der Auflistung, und navigieren zu nachfolgenden Elemente.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>  IEnumOnSTLImpl::Next  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Methode.  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) Methode.  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) Methode.  
   
 ```

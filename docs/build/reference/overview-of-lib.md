@@ -2,12 +2,9 @@
 title: Übersicht über LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>Übersicht über LIB
 LIB erstellt Standardbibliotheken, Importbibliotheken und Exportdateien können Sie mit [LINK](../../build/reference/linker-options.md) beim Erstellen eines Programms. LIB, die über eine Eingabeaufforderung ausgeführt wird.  
@@ -48,12 +43,12 @@ LIB erstellt Standardbibliotheken, Importbibliotheken und Exportdateien können 
   
  Weitere Informationen finden Sie unter [Erstellen einer Importbibliothek und einer Exportdatei](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **/ ERRORREPORT**  
+ **/ERRORREPORT**  
  Informationen zu internen Fehlern mit lib.exe an Microsoft zu senden.  
   
  Weitere Informationen finden Sie unter [Ausführen von LIB](../../build/reference/running-lib.md).  
   
- **/ EXPORT**  
+ **/EXPORT**  
  Exportiert eine Funktion aus Ihrem Programm an.  
   
  Weitere Informationen finden Sie unter [Erstellen einer Importbibliothek und einer Exportdatei](../../build/reference/building-an-import-library-and-export-file.md).  
@@ -78,7 +73,7 @@ LIB erstellt Standardbibliotheken, Importbibliotheken und Exportdateien können 
   
  Weitere Informationen finden Sie unter [Verwalten einer Bibliothek](../../build/reference/managing-a-library.md).  
   
- **/ LTCG**  
+ **/LTCG**  
  Bewirkt, dass die Bibliothek mit Link-zeitcodegenerierung erstellt werden sollen.  
   
  Weitere Informationen finden Sie unter [Ausführen von LIB](../../build/reference/running-lib.md).  
@@ -113,7 +108,7 @@ LIB erstellt Standardbibliotheken, Importbibliotheken und Exportdateien können 
   
  Weitere Informationen finden Sie unter [Verwalten einer Bibliothek](../../build/reference/managing-a-library.md).  
   
- **/ SUBSYSTEM**  
+ **/SUBSYSTEM**  
  Teilt dem Betriebssystem wie Ausführen eines Programms durch Verknüpfen mit der Ausgabebibliothek erstellt.  
   
  Weitere Informationen finden Sie unter [Verwalten einer Bibliothek](../../build/reference/managing-a-library.md).  
@@ -123,7 +118,7 @@ LIB erstellt Standardbibliotheken, Importbibliotheken und Exportdateien können 
   
  Weitere Informationen finden Sie unter [Ausführen von LIB](../../build/reference/running-lib.md).  
   
- **/ WX**  
+ **/WX**  
  Behandeln Sie Warnungen als Fehler.  
   
  Weitere Informationen finden Sie unter [Ausführen von LIB](../../build/reference/running-lib.md).  

@@ -1,12 +1,9 @@
 ---
 title: _U_STRINGorID Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID-Klasse
-Dieses Argument-Adapterklasse ermöglicht entweder Ressourcennamen ( `LPCTSTR`s) oder Ressourcen-IDs ( **"uint"**s) an eine Funktion übergeben werden, ohne dass des Aufrufers in eine Zeichenfolge mit der ID konvertieren die **MAKEINTRESOURCE** Makro.  
+Dieses Argument-Adapterklasse ermöglicht entweder Ressourcennamen ( `LPCTSTR`s) oder Ressourcen-IDs ( **"uint"** s) an eine Funktion übergeben werden, ohne dass des Aufrufers in eine Zeichenfolge mit der ID konvertieren die **MAKEINTRESOURCE** Makro.  
   
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
@@ -64,14 +59,14 @@ class _U_STRINGorID
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
  Die Klasse enthält den Wert, der entweder seiner Konstruktoren übergeben, als öffentliche `LPCTSTR` -Datenmember.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
-##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
  Die **"uint"** Konstruktor konvertiert das Argument in einen Ressourcentyp kompatibel mit Windows-Ressource-Management-Funktionen mithilfe der **MAKEINTRESOURCE** -Makro und das Ergebnis wird in der Klasse einzelnen gespeichert Datenmember, [M_lpstr](#_u_stringorid__m_lpstr).  
   
 ```

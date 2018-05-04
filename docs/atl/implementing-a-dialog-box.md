@@ -1,13 +1,10 @@
 ---
 title: Implementieren eines Dialogfelds | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Implementieren eines Dialogfelds
 Es gibt zwei Möglichkeiten, um ein Dialogfeld dem ATL-Projekt hinzuzufügen: mithilfe des ATL-Dialogfeld-Assistenten oder manuell hinzufügen.  
@@ -45,7 +40,7 @@ Es gibt zwei Möglichkeiten, um ein Dialogfeld dem ATL-Projekt hinzuzufügen: mi
 > [!NOTE]
 >  Wenn Sie ein Dialogfeld mit dem ATL-Dialogfeld-Assistenten erstellen, fügt der Assistent automatisch die `IDD` Element als ein `enum` Typ.  
   
- `CDialogImpl`bietet die Möglichkeit zum Implementieren eines modalen oder ein nicht modales Dialogfeld an, das Windows-Steuerelemente hostet. `CAxDialogImpl`bietet die Möglichkeit zum Implementieren eines modalen oder ein nicht modales Dialogfeld an, das ActiveX- und Windows-Steuerelemente hostet.  
+ `CDialogImpl` bietet die Möglichkeit zum Implementieren eines modalen oder ein nicht modales Dialogfeld an, das Windows-Steuerelemente hostet. `CAxDialogImpl` bietet die Möglichkeit zum Implementieren eines modalen oder ein nicht modales Dialogfeld an, das ActiveX- und Windows-Steuerelemente hostet.  
   
  Um ein modales Dialogfeld erstellen möchten, erstellen Sie eine Instanz von Ihr `CDialogImpl`-abgeleitet (oder `CAxDialogImpl`-abgeleitet) Klasse, und rufen Sie anschließend die [DoModal](../atl/reference/cdialogimpl-class.md#domodal) Methode. Um ein modales Dialogfeld zu schließen, rufen Sie die ["EndDialog"](../atl/reference/cdialogimpl-class.md#enddialog) Methode von einem Message-Handler. Um ein nicht modales Dialogfeld erstellen möchten, rufen die [erstellen](../atl/reference/cdialogimpl-class.md#create) Methode anstelle von `DoModal`. Aufrufen, um ein nicht modales Dialogfeld zu zerstören, [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

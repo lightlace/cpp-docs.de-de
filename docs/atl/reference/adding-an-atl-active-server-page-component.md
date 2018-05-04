@@ -1,12 +1,9 @@
 ---
-title: "Hinzufügen einer ATL Active Server Page-Komponenten | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen einer ATL Active Server Page-Komponenten | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd79d4bc3370caf153e29a3305dc6dad1d8b97de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Hinzufügen einer ATL Active Server Page-Komponenten
 Um ein Objekt für die Active Template Library (ATL) zu Ihrem Projekt hinzuzufügen, dass das Projekt als ATL COM-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Können Sie die [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md) um eine ATL-Anwendung erstellen, wählen Sie **ATL-Unterstützung zu MFC hinzufügen** aus der [Klasse Dialogfeld hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), oder Sie können [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  

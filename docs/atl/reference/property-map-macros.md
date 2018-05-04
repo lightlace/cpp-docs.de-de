@@ -2,11 +2,8 @@
 title: Eigenschaft Zuordnungsmakros | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Eigenschaft Ereigniszuordnungs-Makros
 Diese Makros definieren eigenschaftenzuordnungen und Einträge.  
@@ -47,7 +42,7 @@ Diese Makros definieren eigenschaftenzuordnungen und Einträge.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Markiert den Beginn der objektzuordnung-Eigenschaft.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  Wenn Sie ein Objekt mit dem ATL-Projekt-Assistenten erstellen, erstellt der Assistent eine Zuordnung für die Eigenschaft "empty" auf, durch Angeben von `BEGIN_PROP_MAP` gefolgt von [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`werden nicht aus dem Wertebereich (d. h. der Dimensionen), eine eigenschaftenzuordnung gespeichert werden, da ein Objekt mithilfe einer eigenschaftenzuordnung nicht Benutzeroberfläche, möglicherweise, daher müssen keine Block würden. Wenn das Objekt ein ActiveX-Steuerelement mit einer Benutzeroberfläche ist, muss es sich um ein Block. In diesem Fall müssen Sie angeben [PROP_DATA_ENTRY](#prop_data_entry) in Ihrer eigenschaftenzuordnung den Wertebereich angeben.  
+ `BEGIN_PROP_MAP` werden nicht aus dem Wertebereich (d. h. der Dimensionen), eine eigenschaftenzuordnung gespeichert werden, da ein Objekt mithilfe einer eigenschaftenzuordnung nicht Benutzeroberfläche, möglicherweise, daher müssen keine Block würden. Wenn das Objekt ein ActiveX-Steuerelement mit einer Benutzeroberfläche ist, muss es sich um ein Block. In diesem Fall müssen Sie angeben [PROP_DATA_ENTRY](#prop_data_entry) in Ihrer eigenschaftenzuordnung den Wertebereich angeben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Gibt den Block oder Dimensionen, der ein ActiveX-Steuerelement.  
   
 ```
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Verwenden Sie dieses Makro, um eine Beschreibung, die DISPID-Eigenschaft und die Eigenschaft Eigenschaftenseite CLSID in der objektzuordnung Eigenschaft einzugeben.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
  Ähnlich wie [PROP_ENTRY_TYPE](#prop_entry_type), jedoch können Sie eine bestimmte IID angeben, wenn das Objekt mehrere duale Schnittstellen unterstützt.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Verwenden Sie dieses Makro, um eine Eigenschaftsseite CLSID in der objektzuordnung Eigenschaft einzugeben.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in] Die CLSID einer Eigenschaftenseite.  
   
 ### <a name="remarks"></a>Hinweise  
- `PROP_PAGE`ähnelt dem [PROP_ENTRY_TYPE](#prop_entry_type), aber eine Beschreibung der Eigenschaft oder die DISPID ist nicht erforderlich.  
+ `PROP_PAGE` ähnelt dem [PROP_ENTRY_TYPE](#prop_entry_type), aber eine Beschreibung der Eigenschaft oder die DISPID ist nicht erforderlich.  
   
 > [!NOTE]
 >  Wenn Sie bereits mit CLSID `PROP_ENTRY_TYPE` oder [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), müssen Sie keine zusätzlichen Eintrag mit `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Markiert das Ende der objektzuordnung-Eigenschaft.  
   
 ```

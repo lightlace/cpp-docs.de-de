@@ -1,29 +1,24 @@
 ---
 title: CStringT mit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, using
 ms.assetid: 3a9fffb1-6f90-482a-ab69-4003e6084cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f5ca02ef578d4dc01ce701b239d1aa279d05fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ca6046035d14dfb8efff51e7a9aa445a318b8ee
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cstringt"></a>CStringT verwenden
 Die Themen in diesem Abschnitt beschreiben die Programmierung mit der Vorlagenklasse [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -35,7 +30,7 @@ Die Themen in diesem Abschnitt beschreiben die Programmierung mit der Vorlagenkl
  [Exportieren von Zeichenfolgenklassen mit CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
  Erläutert, wie eine eigene Zeichenfolgenklasse aus einer DLL mithilfe von CStringT <> Vorlagenklasse zu exportieren.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md).  
  Enthält Referenzinformationen zu den freigegebenen `CStringT` Klasse.  
   

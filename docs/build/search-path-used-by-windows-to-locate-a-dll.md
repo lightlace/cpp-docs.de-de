@@ -2,12 +2,9 @@
 title: Zum Auffinden einer DLL von Windows verwendeter Suchpfad | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - finding DLLs
 - search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 166b5fccf6dd231029f79fede837909a49e7fc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-path-used-by-windows-to-locate-a-dll"></a>Von Windows verwendeter Suchpfad zum Auffinden einer DLL
 Sowohl bei der impliziten als auch bei der expliziten Verknüpfung, sucht Windows zuerst nach "bekannten DLLs", z. B. Kernel32.dll und User32.dll. Danach werden die DLLs von Windows in der folgenden Reihenfolge gesucht:  

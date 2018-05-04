@@ -1,12 +1,9 @@
 ---
-title: "Globale Funktionen für Server-Registrierung | Microsoft Docs"
-ms.custom: 
+title: Globale Funktionen für Server-Registrierung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>Server-Registrierung globale Funktionen
 Diese Funktionen bieten Unterstützung für das Registrieren und Aufheben der Registrierung Serverobjekte in der objektzuordnung.  
@@ -46,7 +41,7 @@ Diese Funktionen bieten Unterstützung für das Registrieren und Aufheben der Re
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  Diese Funktion wird aufgerufen, um alle Objekte in der Objektzuordnung zu registrieren.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- `AtlComModuleRegisterServer`führt der objektzuordnung für ATL automatisch generiert und registriert jedes Objekt in der Zuordnung. Wenn `pCLSID` ist nicht NULL, dann nur das Objekt verweist auf `pCLSID` registriert ist; andernfalls werden alle Objekte registriert.  
+ `AtlComModuleRegisterServer` führt der objektzuordnung für ATL automatisch generiert und registriert jedes Objekt in der Zuordnung. Wenn `pCLSID` ist nicht NULL, dann nur das Objekt verweist auf `pCLSID` registriert ist; andernfalls werden alle Objekte registriert.  
   
  Diese Funktion wird aufgerufen, indem [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  Diese Funktion wird aufgerufen, um die Registrierung aller Objekte in der Objektzuordnung aufzuheben.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- `AtlComModuleUnregisterServer`führt die Zuordnung der ATL-Objekt, und hebt die Registrierung jedes Objekt in der Zuordnung. Wenn `pCLSID` ist nicht NULL, dann nur das Objekt verweist auf `pCLSID` aufgehoben ist andernfalls alle Objekte, deren Registrierung aufgehoben werden.  
+ `AtlComModuleUnregisterServer` führt die Zuordnung der ATL-Objekt, und hebt die Registrierung jedes Objekt in der Zuordnung. Wenn `pCLSID` ist nicht NULL, dann nur das Objekt verweist auf `pCLSID` aufgehoben ist andernfalls alle Objekte, deren Registrierung aufgehoben werden.  
   
  Diese Funktion wird aufgerufen, indem [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  Diese Funktion wird aufgerufen, um Klassenobjekte zu registrieren.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Hinweise  
  Diese Hilfsfunktion verwendet, indem [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (veraltete Elemente in ATL 7.0) und [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  Diese Funktion wird aufgerufen, um eine oder mehrere Klassenfactorys aus der ROT (Running Object Table) zu entfernen.  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Hinweise  
  Diese Hilfsfunktion verwendet, indem [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (veraltete Elemente in ATL 7.0) und [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  Diese Funktion wird aufgerufen, um die Klassenfactory zurückzugeben.  
   
 ```

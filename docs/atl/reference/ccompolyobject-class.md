@@ -2,11 +2,8 @@
 title: CComPolyObject Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComPolyObject
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 383a83a2e2b09c9652e7185592a5891179416e0f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject-Klasse
 Diese Klasse implementiert **IUnknown** für ein Objekt aggregierte oder aggregiert.  
@@ -67,7 +62,7 @@ class CComPolyObject : public IUnknown,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Inkrementiert Verweiszählerwert des Objekts an.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Statisch) Bietet die Möglichkeit zum Erstellen eines neuen **CComPolyObject <** `contained`  **>**  Objekt ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Statisch) Bietet die Möglichkeit zum Erstellen eines neuen **CComPolyObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Führt die endgültige Initialisierung der `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Führt die endgültigen Löschung von `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|  
@@ -80,15 +75,15 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|Delegaten **IUnknown** an die äußere unbekannte aufgerufen wird, wenn das Objekt aggregiert wird oder auf die **IUnknown** des Objekts, wenn das Objekt nicht aggregiert werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComPolyObject`implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für ein Objekt aggregierte oder aggregiert.  
+ `CComPolyObject` implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für ein Objekt aggregierte oder aggregiert.  
   
  Wenn eine Instanz von `CComPolyObject` erstellt wird, wird den Wert des äußeren unbekannt aktiviert ist. Ist er **NULL**, **IUnknown** für eine aggregierte Objekt implementiert wird. Wenn die äußere unbekannte nicht **NULL**, **IUnknown** für ein zusammengesetztes Objekt implementiert wird.  
   
  Der Vorteil der Verwendung `CComPolyObject` ist, dass Sie vermeiden, dass beide [CComAggObject](../../atl/reference/ccomaggobject-class.md) und [CComObject](../../atl/reference/ccomobject-class.md) innerhalb des Moduls, die zusammengefasste und aggregierte Fälle zu behandeln. Ein einzelnes `CComPolyObject` Objekt verarbeitet die beiden Fällen. Dies bedeutet, dass nur eine Kopie der Vtable und eine Kopie der Funktionen, die innerhalb des Moduls vorhanden sind. Wenn Ihre Vtable groß ist, kann dies die Modulgröße erheblich verringern. Jedoch verwenden, wenn die Vtable klein ist, `CComPolyObject` kann dazu führen, etwas Modul größer, da sie nicht für ein Objekt aggregierten oder aggregierte optimiert ist wie `CComAggObject` und `CComObject`.  
   
- Wenn die `DECLARE_POLY_AGGREGATABLE` Makro wird in der Klassendefinition des Objekts angegeben `CComPolyObject` verwendet werden, um das Objekt zu erstellen. `DECLARE_POLY_AGGREGATABLE`wird automatisch deklariert werden, wenn Sie ATL-Projekt-Assistent zum Erstellen einer Vollzugriff oder Internet Explorer-Steuerelements verwenden.  
+ Wenn die `DECLARE_POLY_AGGREGATABLE` Makro wird in der Klassendefinition des Objekts angegeben `CComPolyObject` verwendet werden, um das Objekt zu erstellen. `DECLARE_POLY_AGGREGATABLE` wird automatisch deklariert werden, wenn Sie ATL-Projekt-Assistent zum Erstellen einer Vollzugriff oder Internet Explorer-Steuerelements verwenden.  
   
- Wenn nicht aggregiert, die `CComPolyObject` Objekt verfügt über eine eigene **IUnknown**, des äußeren Objekts als **IUnknown**, und verwaltet seine eigenen Verweiszähler dieser Planergruppe. `CComPolyObject`verwendet [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) an die äußere unbekannte delegieren.  
+ Wenn nicht aggregiert, die `CComPolyObject` Objekt verfügt über eine eigene **IUnknown**, des äußeren Objekts als **IUnknown**, und verwaltet seine eigenen Verweiszähler dieser Planergruppe. `CComPolyObject` verwendet [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) an die äußere unbekannte delegieren.  
   
  Weitere Informationen über die Aggregation finden Sie im Artikel [Grundlagen von ATL-COM-Objekte](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -104,7 +99,7 @@ class CComPolyObject : public IUnknown,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="addref"></a>CComPolyObject::AddRef  
+##  <a name="addref"></a>  CComPolyObject::AddRef  
  Inkrementiert den Verweiszähler für das Objekt an.  
   
 ```
@@ -114,7 +109,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.  
   
-##  <a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
+##  <a name="ccompolyobject"></a>  CComPolyObject::CComPolyObject  
  Der Konstruktor.  
   
 ```
@@ -130,7 +125,7 @@ CComPolyObject(void* pv);
   
  Der Destruktor verringert das Modul Sperrenanzahl.  
   
-##  <a name="dtor"></a>CComPolyObject:: ~ CComPolyObject  
+##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject  
  Der Destruktor.  
   
 ```
@@ -140,8 +135,8 @@ CComPolyObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](#finalrelease), und verringert die Modul Sperrenanzahl.  
   
-##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- Bietet die Möglichkeit zum Erstellen eines neuen **CComPolyObject <** `contained`  **>**  Objekt ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
+ Bietet die Möglichkeit zum Erstellen eines neuen **CComPolyObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -151,7 +146,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parameter  
  `pp`  
- [out] Ein Zeiger auf eine **CComPolyObject <** `contained`  **>**  Zeiger. Wenn `CreateInstance` ist fehlgeschlagen, `pp` festgelegt ist, um **NULL**.  
+ [out] Ein Zeiger auf eine **CComPolyObject <** `contained` **>** Zeiger. Wenn `CreateInstance` ist fehlgeschlagen, `pp` festgelegt ist, um **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
@@ -161,7 +156,7 @@ static HRESULT WINAPI CreateInstance(
   
  Wenn Sie nicht Zugriff auf das Objekt direkter benötigen, aber trotzdem zum Erstellen eines neuen Objekts ohne den Aufwand für `CoCreateInstance`, verwenden Sie [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) stattdessen.  
   
-##  <a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComPolyObject::FinalConstruct  
  Wird aufgerufen, während die letzten Phasen des Objektkonstruktion, führt diese Methode endgültige Initialisierung auf dem [M_contained](#m_contained) -Datenmember.  
   
 ```
@@ -171,14 +166,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="finalrelease"></a>CComPolyObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComPolyObject::FinalRelease  
  Diese Methode wird aufgerufen, während die Zerstörung, freigegeben werden. die [M_contained](#m_contained) -Datenmember.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComPolyObject::m_contained  
+##  <a name="m_contained"></a>  CComPolyObject::m_contained  
  Ein [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) abgeleitetes Objekt aus der Klasse.  
   
 ```
@@ -192,7 +187,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>Hinweise  
  **IUnknown** ruft über `m_contained` an die äußere unbekannte delegiert werden, wenn das Objekt aggregiert wird, oder auf die **IUnknown** dieses Objekts, wenn das Objekt nicht aggregiert werden.  
   
-##  <a name="queryinterface"></a>CComPolyObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComPolyObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -220,7 +215,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="remarks"></a>Hinweise  
  Für ein zusammengesetztes Objekt, wenn die angeforderte Schnittstelle wird **IUnknown**, `QueryInterface` gibt einen Zeiger auf die aggregierten Objekts **IUnknown** und inkrementiert den Verweiszähler dieser Planergruppe. Andernfalls, fragt diese Methode für die Schnittstelle über den `CComContainedObject` Datenmember, [M_contained](#m_contained).  
   
-##  <a name="release"></a>CComPolyObject::Release  
+##  <a name="release"></a>  CComPolyObject::Release  
  Dekrementiert den Verweiszähler für das Objekt.  
   
 ```

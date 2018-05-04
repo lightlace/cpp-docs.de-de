@@ -1,13 +1,10 @@
 ---
 title: GetProcAddress | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Prozesse, die explizit auf einen Anruf DLL verknüpfen [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) zum Abrufen der Adresse einer exportierten Funktion in der DLL. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** als Parameter akzeptiert, die DLL-Modulhandle (entweder zurückgegebenes **LoadLibrary**, `AfxLoadLibrary`, oder **GetModuleHandle**) und entweder den Namen der Funktion nimmt Sie zum Aufruf oder die Funktion exportieren möchten Sie ordinal.  
+Prozesse, die explizit auf einen Anruf DLL verknüpfen [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) zum Abrufen der Adresse einer exportierten Funktion in der DLL. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** als Parameter akzeptiert, die DLL-Modulhandle (entweder zurückgegebenes **LoadLibrary**, `AfxLoadLibrary`, oder **GetModuleHandle**) und entweder den Namen der gewünschten Funktion akzeptiert zum Aufruf oder die Funktion Exportordinalzahl.  
   
  Da Sie die DLL-Funktion über einen Zeiger aufrufen und zur Kompilierzeit keine Typüberprüfung erfolgt, sollten Sie sicherstellen, dass die Parameter für die Funktion korrekt sind, damit Sie nicht den auf dem Stapel belegten Speicherbereich überschreiten und eine Zugriffsverletzung verursachen. Eine Möglichkeit die Typsicherheit zu gewährleisten besteht darin, sich die Funktionsprototypen der exportierten Funktionen anzusehen und entsprechende Typdefinitionen für die Funktionszeiger zu erstellen. Zum Beispiel:  
   

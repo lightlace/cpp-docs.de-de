@@ -1,12 +1,9 @@
 ---
 title: CStringElementTraits Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraits
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025c9aa66a8647fd5d8ca9803aedb50b27ed3be1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits-Klasse
 Diese Klasse enthält statische Funktionen, die durch das Speichern von Auflistungsklassen verwendet `CString` Objekte.  
@@ -76,7 +71,7 @@ class CStringElementTraits
 ## <a name="requirements"></a>Anforderungen  
  **Header:** cstringt.h  
   
-##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraits::CompareElements  
  Rufen Sie diese statischen Funktion um zwei Zeichenfolgenelementen auf Gleichheit verglichen werden soll.  
   
 ```
@@ -93,7 +88,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Elemente gleich "false", andernfalls sind.  
   
-##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered  
  Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen.  
   
 ```
@@ -111,7 +106,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn `str1` ist kleiner als `str2`, oder 0 > Wenn `str1` ist größer als `str2`. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Qualität der Vergleiche ausführen.  
 
   
-##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
+##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
  Rufen Sie diese statische Funktion zum Kopieren `CString` ein Klassenobjekt Auflistung gespeicherten Elemente.  
   
 ```
@@ -134,7 +129,7 @@ static void CopyElements(
 ### <a name="remarks"></a>Hinweise  
  Die Quell- und Zielschemas Elemente sollten sich nicht überschneiden.  
   
-##  <a name="hash"></a>CStringElementTraits::Hash  
+##  <a name="hash"></a>  CStringElementTraits::Hash  
  Rufen Sie diese statischen Funktion um einen Hashwert für das Element der angegebenen Zeichenfolge zu berechnen.  
   
 ```
@@ -148,21 +143,21 @@ static ULONG Hash(INARGTYPE str);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Hashwert berechnet wird, verwenden den Inhalt der Zeichenfolge zurück.  
   
-##  <a name="inargtype"></a>CStringElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
  Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE  
  Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
+##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements  
  Rufen Sie diese statische Funktion verschieben `CString` ein Klassenobjekt Auflistung gespeicherten Elemente.  
   
 ```

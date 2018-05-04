@@ -1,12 +1,9 @@
 ---
 title: CSimpleDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog-Klasse
 Diese Klasse implementiert grundlegende modales Dialogfeld an.  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Erstellt ein modales Dialogfeld an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein modales Dialogfeld implementiert mit grundlegenden Funktionen. `CSimpleDialog`bietet Unterstützung für Windows-Standardsteuerelemente nur. Erstellen und ein modales Dialogfeld anzeigen, erstellen Sie eine Instanz dieser Klasse, die den Namen einer vorhandenen Vorlage für die Ressource für das Dialogfeld bereitstellen. Die Dialogfeldobjekt schließt klickt der Benutzer jedes Steuerelement mit vordefinierten Werten (z. B. IDOK oder IDCANCEL).  
+ Ein modales Dialogfeld implementiert mit grundlegenden Funktionen. `CSimpleDialog` bietet Unterstützung für Windows-Standardsteuerelemente nur. Erstellen und ein modales Dialogfeld anzeigen, erstellen Sie eine Instanz dieser Klasse, die den Namen einer vorhandenen Vorlage für die Ressource für das Dialogfeld bereitstellen. Die Dialogfeldobjekt schließt klickt der Benutzer jedes Steuerelement mit vordefinierten Werten (z. B. IDOK oder IDCANCEL).  
   
- `CSimpleDialog`können Sie nur modale Dialogfelder zu erstellen. `CSimpleDialog`Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
+ `CSimpleDialog` können Sie nur modale Dialogfelder zu erstellen. `CSimpleDialog` Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
   
  Finden Sie unter [Implementieren eines Dialogfelds](../../atl/implementing-a-dialog-box.md) für Weitere Informationen.  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  Ruft ein modales Dialogfeld auf und gibt das Ergebnis im Dialogfeld nach Abschluss zurück.  
   
 ```

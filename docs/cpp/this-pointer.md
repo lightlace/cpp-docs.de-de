@@ -1,12 +1,9 @@
 ---
 title: this-Zeiger | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - this_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6a1df3bb262a814c641f5bfbcee070ec5de344
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-pointer"></a>this-Zeiger
 Die **dies** ist ein Zeiger zugegriffen werden kann, nur in nicht statischen Memberfunktionen von einer **Klasse**, `struct`, oder **Union** Typ. Er zeigt auf das Objekt, für das die Memberfunktion aufgerufen wird. Statische Member-Funktionen verfügen nicht über eine **dies** Zeiger.  
@@ -183,7 +178,7 @@ int main()
   
  Der Typ des **dies** eines Mitglieds-Funktion wird durch die folgende Syntax beschrieben, in denen *cv-Qualifier-List* wird vom Deklarator Funktionen Element bestimmt und kann **Const**oder **volatile** (oder beides), und *Klassentyp* ist der Name der Klasse:  
   
- *[cv-Qualifier-List] Klassentyp*  **\* const dies**   
+ *[cv-Qualifier-List] Klassentyp* **\* const dies**  
   
  Das heißt, **dies** ist immer ein konstanter Zeiger, kann nicht zugewiesen werden.  Die **const** oder `volatile` Qualifizierer, die in der memberfunktionsdeklaration verwendet anwenden, um die Klasseninstanz verweist **dies** im Rahmen dieser Funktion.  
   

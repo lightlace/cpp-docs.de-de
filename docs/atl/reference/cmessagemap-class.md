@@ -1,12 +1,9 @@
 ---
 title: CMessageMap Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CMessageMap
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmessagemap-class"></a>CMessageMap-Klasse
 Diese Klasse ermöglicht es, dass ein Objekt meldungszuordnungen, um den Zugriff durch ein anderes Objekt sein.  
@@ -52,7 +47,7 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Greift auf eine meldungszuordnung in der `CMessageMap`-Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CMessageMap`ist eine abstrakte Basisklasse, die ein Objekt Nachricht ermöglicht Zuordnungen enthalten, die von einem anderen Objekt zugegriffen werden. Damit kann für ein Objekt, dessen meldungszuordnungen verfügbar zu machen, muss von die Klasse abgeleitet `CMessageMap`.  
+ `CMessageMap` ist eine abstrakte Basisklasse, die ein Objekt Nachricht ermöglicht Zuordnungen enthalten, die von einem anderen Objekt zugegriffen werden. Damit kann für ein Objekt, dessen meldungszuordnungen verfügbar zu machen, muss von die Klasse abgeleitet `CMessageMap`.  
   
  ATL verwendet `CMessageMap` eigenständiger Windows und dynamische Nachricht Zuordnung verketten. Z. B. eine Klasse mit einem [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) Objekt leiten von `CMessageMap`. Der folgende Code stammt aus dem [SUBEDIT](../../visual-cpp-samples.md) Beispiel. Über [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` Klasse automatisch abgeleitet `CMessageMap`.  
   
@@ -65,7 +60,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
-##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
  Greift auf die identifizierte meldungszuordnung `dwMsgMapID` in eine `CMessageMap`-Klasse.  
   
 ```

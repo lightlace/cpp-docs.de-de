@@ -1,12 +1,9 @@
 ---
 title: CSacl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSacl
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csacl-class"></a>CSacl-Klasse
 Diese Klasse ist ein Wrapper für eine Struktur SACL (System Access Control List).  
@@ -86,7 +81,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  Wird ein Eintrag für Audit-Zugriffssteuerung (ACE) in der `CSacl` Objekt.  
   
 ```
@@ -137,7 +132,7 @@ bool AddAuditAce(
   
  Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) eine Beschreibung der verschiedenen Flags, die festgelegt werden kann, in der `AceFlags` Parameter.  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  Der Konstruktor.  
   
 ```
@@ -152,7 +147,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die `CSacl` -Objekt kann optional mithilfe eines vorhandenen erstellt werden **ACL** Struktur. Stellen Sie sicher, dass dieser Parameter eine System Access Control List (SACL) und keiner Liste von Zugriffssteuerungsliste (DACL) ist. Debug-Builds, wenn eine DACL angegeben, wird eine Assertion erfolgt. In Releasebuilds werden alle Einträge aus einer DACL ignoriert.  
   
-##  <a name="dtor"></a>  CSacl::~CSacl  
+##  <a name="dtor"></a>  CSacl:: ~ CSacl  
  Der Destruktor.  
   
 ```
@@ -162,7 +157,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor gibt alle Ressourcen, die von dem Objekt, einschließlich der Access-Control-Einträge (ACEs) abgerufen.  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  Gibt die Anzahl der Access-Zugriffssteuerungseinträge (ACEs) in der `CSacl` Objekt.  
   
 ```
@@ -172,7 +167,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der ACEs im enthalten die `CSacl` Objekt.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  Zuweisungsoperator.  
   
 ```

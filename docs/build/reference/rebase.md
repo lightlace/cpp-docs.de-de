@@ -1,13 +1,10 @@
 ---
 title: -REBASE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rebase
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |Modifizierer|Aktion|  
 |--------------|------------|  
-|BASE**=***Adresse*|Enthält eine Startadresse für erneutes Zuweisen von Basisadressen auf die Dateien an. Geben Sie *Adresse* Decimal oder C-Notation. Wenn BASE nicht angegeben wird, ist das Standardthema zum Starten der Basisadresse 0 x 400000. Wenn verwendet wird, sind BASE ist muss angegeben werden, und *Adresse* legt das Ende des Bereichs von Basisadressen.|  
+|BASE **= *** Adresse*|Enthält eine Startadresse für erneutes Zuweisen von Basisadressen auf die Dateien an. Geben Sie *Adresse* Decimal oder C-Notation. Wenn BASE nicht angegeben wird, ist das Standardthema zum Starten der Basisadresse 0 x 400000. Wenn verwendet wird, sind BASE ist muss angegeben werden, und *Adresse* legt das Ende des Bereichs von Basisadressen.|  
 |BASEFILE|Erstellt eine Datei mit dem Namen COFFBASE. TXT, die ist eine Textdatei, in das Format des Links/Option basieren.|  
 |NACH-UNTEN|Weist EDITBIN Basisadressen von Endadresse neu zuweisen. Die Dateien werden in der Reihenfolge angegeben werden, wobei die erste Datei befindet sich in der höchstmöglichen Adresse nach Ende der Adressbereich zugewiesen. BASE muss mit unten verwendet werden, um sicherzustellen, dass genügend Adressraum für Basisadressen. Zum Bestimmen des Adressraums, der durch die angegebenen Dateien benötigt EDITBIN mit REBASE ausführen, auf die Dateien und die angezeigten Gesamtgröße 64 KB hinzugefügt.|  
   

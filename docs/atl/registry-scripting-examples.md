@@ -1,13 +1,10 @@
 ---
 title: Registrierung Skriptbeispielen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Beispiele für die Registrierung Scripting
 Skripts in diesem Thema wird erklärt, wie fügen Sie einen Schlüssel in der systemregistrierung, registrieren Sie den Registrierungsstelle COM-Server und mehrere Analyse Strukturen angeben.  
@@ -59,7 +54,7 @@ HKCU
   
  Das Skript fügt nun einen Unterschlüssel `HasASubkey`in `MyVeryOwnKey`. Unterschlüssel, fügt er sowohl die `PrettyCool` Unterschlüssel (hat den Standardwert `DWORD` Wert von 55) und die `ANameValue` benannten Wert (mit einem Zeichenfolgenwert von `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Registrieren Sie den Registrierungsstelle COM-Server  
+##  <a name="_atl_register_the_registrar_com_server"></a> Registrieren Sie den Registrierungsstelle COM-Server  
  Das folgende Skript registriert die Registrierungsstelle COM-Server selbst.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Fügt `ATL Registrar Class` als den Standardwert für `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- Fügt die Analysestruktur nun zwei neue Unterschlüssel `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Der erste Schlüssel `ProgID`, ruft einen Standard-Zeichenfolgenwert, der die ProgID-Wert. Der zweite Schlüssel `InprocServer32`, ruft einen Standard-Zeichenfolgenwert `%MODULE%`, d. h. ein Präprozessor Wert erläutert wird, klicken Sie im Abschnitt [mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), dieses Artikels. `InprocServer32`Ruft auch einen benannten Wert `ThreadingModel`, mit einem Zeichenfolgenwert von `Apartment`.  
+ Fügt die Analysestruktur nun zwei neue Unterschlüssel `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Der erste Schlüssel `ProgID`, ruft einen Standard-Zeichenfolgenwert, der die ProgID-Wert. Der zweite Schlüssel `InprocServer32`, ruft einen Standard-Zeichenfolgenwert `%MODULE%`, d. h. ein Präprozessor Wert erläutert wird, klicken Sie im Abschnitt [mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), dieses Artikels. `InprocServer32` Ruft auch einen benannten Wert `ThreadingModel`, mit einem Zeichenfolgenwert von `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Geben Sie mehrere Parserstrukturen  
  Um mehr als eine Analysestruktur in ein Skript angeben, müssen platzieren Sie eine Struktur einfach am Ende eines anderen. Das folgende Skript fügt z. B. den Schlüssel `MyVeryOwnKey`, um die Analyse Strukturen für beide `HKEY_CLASSES_ROOT` und `HKEY_CURRENT_USER`:  

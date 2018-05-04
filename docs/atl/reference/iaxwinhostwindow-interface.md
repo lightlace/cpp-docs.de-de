@@ -1,12 +1,9 @@
 ---
 title: IAxWinHostWindow Schnittstelle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1d0d41439748cd0ddbc981ecb1d74194d5fbd59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow-Schnittstelle
 Diese Schnittstelle bietet Methoden zum Bearbeiten von einem Steuerelement und seine Hostobjekt.  
@@ -70,7 +65,7 @@ interface IAxWinHostWindow : IUnknown
 |IDL|ATLIFace.idl|  
 |C++|Konnte IRegistrar (auch in ATLBase.h enthalten)|  
   
-##  <a name="attachcontrol"></a>IAxWinHostWindow:: AttachControl  
+##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl  
  Fügt eine vorhandene (und zuvor initialisierten)-Steuerelement an das Hostobjekt, das im Fenster "" identifizierte `hWnd`.  
   
 ```
@@ -87,7 +82,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl  
  Erstellt ein Steuerelement, initialisiert es und hostet es im Fenster identifizierten `hWnd`.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateControl)(
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx  
  Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
@@ -157,7 +152,7 @@ STDMETHOD(CreateControlEx)(
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl  
  Gibt den angegebenen Schnittstellenzeiger vom gehosteten Steuerelement bereitgestellte zurück.  
   
 ```
@@ -176,7 +171,7 @@ STDMETHOD(QueryControl)(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch  
  Legt die externen Disp-Schnittstelle, die darin enthaltenen Steuerelemente bis hin zur Verfügung steht die [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) Methode.  
   
 ```
@@ -190,7 +185,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler  
  Mit dieser Funktion wird zum Festlegen von externen [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) eine Schnittstelle für die `CAxWindow` Objekt.  
   
 ```

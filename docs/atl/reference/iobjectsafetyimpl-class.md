@@ -2,11 +2,8 @@
 title: Fügen Sie IObjectSafetyImpl Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectsafetyimpl-class"></a>Fügen Sie IObjectSafetyImpl-Klasse
 Diese Klasse stellt eine Standardimplementierung von der `IObjectSafety` Schnittstelle, damit einen Client zum Abrufen und Festlegen eines Objekts Sicherheitsstufen kann.  
@@ -88,7 +83,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
  Ruft ab, die vom Objekt unterstützten Sicherheitsoptionen als auch die Safety-Optionen, die derzeit für das Objekt festgelegt.  
   
 ```
@@ -106,14 +101,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  Finden Sie unter [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) im Windows SDK.  
   
-##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
  Speichert aktuelle Sicherheitsstufe des Objekts an.  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
  Wird das Objekt sicher für die Initialisierung oder Skripts durch Festlegen der [M_dwCurrentSafety](#m_dwcurrentsafety) Element auf den entsprechenden Wert.  
   
 ```

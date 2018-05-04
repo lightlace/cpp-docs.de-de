@@ -1,12 +1,9 @@
 ---
 title: Registrierung Makros | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eada9ed75bd69122523350536d0757e98b31358d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9b172217f1ca7ada7d8752151126b53055df37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-macros"></a>Registrierung-Makros
 Diese Makros definieren nützlicher Bibliothek und die Registrierung Einrichtungen.  
@@ -50,7 +45,7 @@ Diese Makros definieren nützlicher Bibliothek und die Registrierung Einrichtung
  **Header:** atlcom.h  
   
     
-##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY  
  Ein Symbol, der angibt, dass die Registrierungscode für das Objekt in das Objekt, das eine Abhängigkeit zu ATL vermieden werden soll DLL.  
   
 ```
@@ -62,7 +57,7 @@ Diese Makros definieren nützlicher Bibliothek und die Registrierung Einrichtung
   
  [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>  DECLARE_LIBID  
  Bietet eine Möglichkeit für ATL zum Abrufen der *Libid* der Typbibliothek.  
   
 ```
@@ -79,14 +74,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>Beispiel  
  Vom Assistenten generierten ATL-Projekte nicht attributiert werden ein Beispiel zur Verwendung dieses Makro haben.  
   
-##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY  
  Verwendung `DECLARE_NO_REGISTRY` gegebenenfalls alle Standard-ATL-Registrierung für die Klasse zu vermeiden, in denen dieses Makro wird angezeigt.  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>  DECLARE_REGISTRY  
  Die standardmäßige Klasse-Registrierung in der systemregistrierung eingibt, oder aus der Registrierung entfernt.  
   
 ```
@@ -117,9 +112,9 @@ DECLARE_REGISTRY(
 ### <a name="remarks"></a>Hinweise  
  Die standard-Registrierung besteht aus der CLSID, Programm-ID, versionsunabhängige Programm-ID, Beschreibung und Threadmodell.  
   
- Wenn Sie ein Objekt erstellen oder ein Steuerelement mit dem ATL-Klassen-Assistenten, der Assistent automatisch implementiert die Unterstützung der Registrierung basierende und fügt die [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) Makro auf Ihre Dateien. Wenn Sie nicht skriptbasierten Registrierung Unterstützung wünschen, müssen Sie dieses Makro mit ersetzen `DECLARE_REGISTRY`. `DECLARE_REGISTRY`Fügt nur die fünf grundlegenden Schlüssel, der oben beschriebenen, in der Registrierung. Sie müssen Code zum Einfügen der andere Schlüssel in der Registrierung manuell schreiben.  
+ Wenn Sie ein Objekt erstellen oder ein Steuerelement mit dem ATL-Klassen-Assistenten, der Assistent automatisch implementiert die Unterstützung der Registrierung basierende und fügt die [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) Makro auf Ihre Dateien. Wenn Sie nicht skriptbasierten Registrierung Unterstützung wünschen, müssen Sie dieses Makro mit ersetzen `DECLARE_REGISTRY`. `DECLARE_REGISTRY` Fügt nur die fünf grundlegenden Schlüssel, der oben beschriebenen, in der Registrierung. Sie müssen Code zum Einfügen der andere Schlüssel in der Registrierung manuell schreiben.  
   
-##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>  DECLARE_REGISTRY_APPID_RESOURCEID  
  Gibt an, die Informationen erforderlich, um die automatische Registrierung der *Appid*.  
   
 ```
@@ -141,7 +136,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>Beispiel  
  Klassen, die hinzugefügt, ATL-Projekte mit der Klasse hinzufügen-Code-Assistenten werden ein Beispiel zur Verwendung dieses Makro haben.  
   
-##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE  
  Ruft die benannte Ressource, die die Registrierungsdatei enthält, und führt das Skript aus, um Objekte in der systemregistrierung eingeben oder aus der Registrierung zu entfernen.  
   
 ```
@@ -164,7 +159,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  Weitere Informationen zu ersetzbare Parameter und scripting finden Sie im Artikel [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).  
   
-##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID  
  Identisch mit [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) identisch, jedoch eine vom Assistenten generierten verwendet **"uint"** ein Zeichenfolgenname, anstatt die Ressource identifiziert.  
   
 ```

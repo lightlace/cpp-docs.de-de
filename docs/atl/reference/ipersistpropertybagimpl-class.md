@@ -1,12 +1,9 @@
 ---
 title: IPersistPropertyBagImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistPropertyBagImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl-Klasse
 Diese Klasse implementiert **IUnknown** und einem Objekt Gelegenheit zu seiner Eigenschaften auf einem Client bereitgestellte Eigenschaftensammlung zu speichern.  
@@ -75,7 +70,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID  
  Ruft die CLSID des Objekts ab.  
   
 ```
@@ -85,7 +80,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) im Windows SDK.  
   
-##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
  Initialisiert ein neu erstelltes Objekt.  
   
 ```
@@ -98,7 +93,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) im Windows SDK.  
   
-##  <a name="load"></a>IPersistPropertyBagImpl::Load  
+##  <a name="load"></a>  IPersistPropertyBagImpl::Load  
  Lädt die Eigenschaften des Objekts aus einem Client bereitgestellte Eigenschaftenbehälter.  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
   
  Finden Sie unter [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) im Windows SDK.  
   
-##  <a name="save"></a>IPersistPropertyBagImpl::Save  
+##  <a name="save"></a>  IPersistPropertyBagImpl::Save  
  Die Eigenschaften des Objekts in einem Client bereitgestellte Eigenschaftenbehälter gespeichert.  
   
 ```

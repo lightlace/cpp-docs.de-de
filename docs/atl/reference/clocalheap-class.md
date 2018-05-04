@@ -2,11 +2,8 @@
 title: Clocalheap – Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CLocalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5307e0e6e8925bcbbfa7a03d0140c3a5a08baff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 299c672d65d7568539473dfc284833c2583a2220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clocalheap-class"></a>Clocalheap – Klasse
 Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der lokalen Heap Win32-Funktionen.  
@@ -56,7 +51,7 @@ class CLocalHeap : public IAtlMemMgr
 |[Clocalheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CLocalHeap`implementiert die Speicherverwaltungsfunktionen, die mit der lokalen Heap Win32-Funktionen.  
+ `CLocalHeap` implementiert die Speicherverwaltungsfunktionen, die mit der lokalen Heap Win32-Funktionen.  
   
 > [!NOTE]
 >  Die lokalen Heap-Funktionen sind langsamer als die anderen Speicherverwaltungsfunktionen und bieten keine so viele Funktionen. Neue Anwendungen sollten daher verwenden die [heap Funktionen](http://msdn.microsoft.com/library/windows/desktop/aa366711). Diese Seiten sind verfügbar, in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) Klasse.  
@@ -72,7 +67,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlmem.h  
   
-##  <a name="allocate"></a>Clocalheap:: Allocate  
+##  <a name="allocate"></a>  Clocalheap:: Allocate  
  Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementiert mit [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) mit einem Flag-Parameter der **LMEM_FIXED**.  
   
-##  <a name="free"></a>Clocalheap:: Free  
+##  <a name="free"></a>  Clocalheap:: Free  
  Rufen Sie diese Methode, um einen Speicherblock, der von diesem Speicher-Manager frei.  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
-##  <a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>  CLocalHeap::GetSize  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
-##  <a name="reallocate"></a>Clocalheap:: ReAllocate  
+##  <a name="reallocate"></a>  Clocalheap:: ReAllocate  
  Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
   
 ```

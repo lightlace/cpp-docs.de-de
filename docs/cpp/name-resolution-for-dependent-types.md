@@ -1,27 +1,22 @@
 ---
-title: "Die namensauflösung für abhängige Typen | Microsoft Docs"
-ms.custom: 
+title: Die namensauflösung für abhängige Typen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8978e38745f088884bbf28ffb0ab98cfb87895
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-resolution-for-dependent-types"></a>Namensauflösung für abhängige Typen
 Verwendung **Typename** für qualifizierte Namen in Vorlagendefinitionen, um dem Compiler mitzuteilen, dass es sich bei der angegebene qualifizierte Namen ein Typs bezeichnet. Weitere Informationen finden Sie unter [Typename](../cpp/typename.md).  
@@ -102,7 +97,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Vorlagenmehrdeutigkeit  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] erzwingt die Standardregeln für C++98/03/11 für Mehrdeutigkeit mit dem "template"-Schlüsselwort. Im folgenden Beispiel würde Visual C++ 2010 nicht konformen Zeilen und die konformen Zeilen akzeptieren.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]akzeptiert nur die konformen Zeilen.  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] erzwingt die Standardregeln für C++98/03/11 für Mehrdeutigkeit mit dem "template"-Schlüsselwort. Im folgenden Beispiel würde Visual C++ 2010 nicht konformen Zeilen und die konformen Zeilen akzeptieren.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] akzeptiert nur die konformen Zeilen.  
   
 ```cpp  
 #include <iostream>  

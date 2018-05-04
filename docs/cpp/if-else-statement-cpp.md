@@ -1,12 +1,9 @@
 ---
 title: If-else-Anweisung (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
 Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich 0 (oder `true`). Wenn der Wert der *Ausdruck* ungleich NULL ist *statement1* und allen anderen Anweisungen im Block ausgeführt werden und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert der *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ausgewertet ungleich NULL sind.
@@ -176,7 +171,7 @@ int main()
  Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** Anweisung im gleichen Bereich, die eine entsprechende keinen **else** -Anweisung.   
 
 ## <a name="constexpr-if-statements"></a>Constexpr Wenn Anweisungen
-**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): In den Funktionsvorlagen, können Sie eine **Constexpr Wenn** -Anweisung zum Zeitpunkt der Kompilierung Verzweigen Entscheidungen treffen ohne mehrere funktionsüberladungen verwenden. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung von NULL-Parameter ist erforderlich): 
+**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): In den Funktionsvorlagen, können Sie eine **Constexpr Wenn** -Anweisung zum Zeitpunkt der Kompilierung Verzweigen Entscheidungen ohne müssen mehrere funktionsüberladungen verwenden. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung von NULL-Parameter ist erforderlich): 
 
 ```cpp
 template <class T, class... Rest>

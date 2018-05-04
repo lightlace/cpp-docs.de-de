@@ -1,12 +1,9 @@
 ---
 title: CComHeap-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomheap-class"></a>CComHeap-Klasse
 Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mit COM-Speicherverwaltungsfunktionen.  
@@ -56,7 +51,7 @@ class CComHeap : public IAtlMemMgr
 |[Ccomheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComHeap`implementiert die Speicherverwaltungsfunktionen, die mit der COM-Zuordnungsfunktionen, einschließlich [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), und [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Die Höchstmenge an Arbeitsspeicher an, die zugeordnet werden kann, ist gleich **INT_MAX** (2.147.483.647) Bytes.  
+ `CComHeap` implementiert die Speicherverwaltungsfunktionen, die mit der COM-Zuordnungsfunktionen, einschließlich [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), und [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Die Höchstmenge an Arbeitsspeicher an, die zugeordnet werden kann, ist gleich **INT_MAX** (2.147.483.647) Bytes.  
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -69,7 +64,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ATLComMem.h  
   
-##  <a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>  CComHeap::Allocate  
  Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.  
   
 ```
@@ -88,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementiert mit [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
-##  <a name="free"></a>Ccomheap:: Free  
+##  <a name="free"></a>  Ccomheap:: Free  
  Rufen Sie diese Methode, um einen Speicherblock, der von diesem Speicher-Manager frei.  
   
 ```
@@ -102,7 +97,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
-##  <a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>  CComHeap::GetSize  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.  
   
 ```
@@ -119,7 +114,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
-##  <a name="reallocate"></a>Ccomheap:: ReAllocate  
+##  <a name="reallocate"></a>  Ccomheap:: ReAllocate  
  Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
   
 ```

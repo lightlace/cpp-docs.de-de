@@ -1,12 +1,9 @@
 ---
 title: CComModule-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComModule
@@ -40,17 +37,15 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05b4ec763f6ee719e96627be3dc81a1e9b56c2c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommodule-class"></a>CComModule-Klasse
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
@@ -102,9 +97,9 @@ class CComModule : public _ATL_MODULE
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Klasse ist veraltet, und die ATL-Code schemagenerierungs-Assistenten jetzt verwenden die [CComModule](../../atl/reference/catlautothreadmodule-class.md) und [von CAtlModule](../../atl/reference/catlmodule-class.md) abgeleitete Klassen. Finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) für Weitere Informationen. Die folgenden Informationen ist für die Verwendung mit Anwendungen, die mit älteren Versionen von ATL erstellt `CComModule`ist immer noch Teil der ATL für Abwärtskompatibilität Funktion.  
+>  Diese Klasse ist veraltet, und die ATL-Code schemagenerierungs-Assistenten jetzt verwenden die [CComModule](../../atl/reference/catlautothreadmodule-class.md) und [von CAtlModule](../../atl/reference/catlmodule-class.md) abgeleitete Klassen. Finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) für Weitere Informationen. Die folgenden Informationen ist für die Verwendung mit Anwendungen, die mit älteren Versionen von ATL erstellt `CComModule` ist immer noch Teil der ATL für Abwärtskompatibilität Funktion.  
   
- `CComModule`implementiert eine COM-Server-Modul ermöglicht einen Client den Zugriff auf das Modul Komponenten an. `CComModule`unterstützt (in-Process)-DLL und EXE-Datei (local) Module.  
+ `CComModule` implementiert eine COM-Server-Modul ermöglicht einen Client den Zugriff auf das Modul Komponenten an. `CComModule` unterstützt (in-Process)-DLL und EXE-Datei (local) Module.  
   
  Ein `CComModule` Instanz eine objektzuordnung verwendet, um einen Satz von Objektdefinitionen Klasse verwalten. Diese objektzuordnung wird als ein Array von implementiert `_ATL_OBJMAP_ENTRY` Strukturen, und enthält Informationen zu:  
   
@@ -123,7 +118,7 @@ class CComModule : public _ATL_MODULE
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
   
- [Von CAtlModule](../../atl/reference/catlmodule-class.md)  
+ [CAtlModule](../../atl/reference/catlmodule-class.md)  
   
  [CAtlModuleT](../../atl/reference/catlmodulet-class.md)  
   
@@ -132,7 +127,7 @@ class CComModule : public _ATL_MODULE
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="getclassobject"></a>CComModule::GetClassObject  
+##  <a name="getclassobject"></a>  CComModule::GetClassObject  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -158,9 +153,9 @@ HRESULT GetClassObject(
 ### <a name="remarks"></a>Hinweise  
  Erstellt ein Objekt der angegebenen CLSID und ruft einen Schnittstellenzeiger für dieses Objekt ab.  
   
- `GetClassObject`ist nur auf DLLs verfügbar.  
+ `GetClassObject` ist nur auf DLLs verfügbar.  
   
-##  <a name="getmoduleinstance"></a>CComModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>  CComModule::GetModuleInstance  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -173,7 +168,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt die [M_hInst](#m_hinst) -Datenmember.  
   
-##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>  CComModule::GetResourceInstance  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -186,7 +181,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt die [M_hInstResource](#m_hinstresource) -Datenmember.  
   
-##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
+##  <a name="gettypelibinstance"></a>  CComModule::GetTypeLibInstance  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -199,7 +194,7 @@ HINSTANCE GetTypeLibInstance() const throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt die [M_hInstTypeLib](#m_hinsttypelib) -Datenmember.  
   
-##  <a name="init"></a>CComModule  
+##  <a name="init"></a>  CComModule  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -225,7 +220,7 @@ HRESULT Init(
 ### <a name="remarks"></a>Hinweise  
  Alle Datenmember initialisiert.  
   
-##  <a name="m_csobjmap"></a>CComModule::m_csObjMap  
+##  <a name="m_csobjmap"></a>  CComModule::m_csObjMap  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -235,7 +230,7 @@ CRITICAL_SECTION m_csObjMap;
 ### <a name="remarks"></a>Hinweise  
  Wird sichergestellt, dass synchronisierten Zugriff auf der objektzuordnung.  
   
-##  <a name="m_cstypeinfoholder"></a>CComModule::m_csTypeInfoHolder  
+##  <a name="m_cstypeinfoholder"></a>  CComModule::m_csTypeInfoHolder  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -245,7 +240,7 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 ### <a name="remarks"></a>Hinweise  
  Es wird sichergestellt, dass synchronisierten Zugriff auf die Typbibliothek.  
   
-##  <a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
+##  <a name="m_cswindowcreate"></a>  CComModule::m_csWindowCreate  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -255,7 +250,7 @@ CRITICAL_SECTION m_csWindowCreate;
 ### <a name="remarks"></a>Hinweise  
  Wird sichergestellt, dass synchronisierten Zugriff auf fensterklasseninformationen und statische Daten, die während der fenstererstellung verwendet.  
   
-##  <a name="m_hinst"></a>CComModule::m_hInst  
+##  <a name="m_hinst"></a>  CComModule::m_hInst  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -267,7 +262,7 @@ HINSTANCE m_hInst;
   
  Die [Init](#init) -Methode legt `m_hInst` an das Handle übergeben **DLLMain** oder `WinMain`.  
   
-##  <a name="m_hinstresource"></a>CComModule::m_hInstResource  
+##  <a name="m_hinstresource"></a>  CComModule::m_hInstResource  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -281,7 +276,7 @@ HINSTANCE m_hInstResource;
   
  Die [GetResourceInstance](#getresourceinstance) Methodenrückgabe das Handle in gespeicherten `m_hInstResource`.  
   
-##  <a name="m_hinsttypelib"></a>CComModule::m_hInstTypeLib  
+##  <a name="m_hinsttypelib"></a>  CComModule::m_hInstTypeLib  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -295,7 +290,7 @@ HINSTANCE m_hInstTypeLib;
   
  Die [GetTypeLibInstance](#gettypelibinstance) Methodenrückgabe das Handle in gespeicherten `m_hInstTypeLib`.  
   
-##  <a name="m_pobjmap"></a>CComModule::m_pObjMap  
+##  <a name="m_pobjmap"></a>  CComModule::m_pObjMap  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -305,7 +300,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 ### <a name="remarks"></a>Hinweise  
  Zeigt auf der objektzuordnung, die von der Modulinstanz verwaltet.  
   
-##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
+##  <a name="registerclasshelper"></a>  CComModule::RegisterClassHelper  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -341,7 +336,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
   
  Die [UpdateRegistryClass](#updateregistryclass) Methodenaufrufe `RegisterClassHelper`.  
   
-##  <a name="registerclassobjects"></a>CComModule::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>  CComModule::RegisterClassObjects  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -361,7 +356,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="remarks"></a>Hinweise  
  Eine EXE-Klassenobjekt registriert mit OLE, damit andere Anwendungen hergestellt werden können. Diese Methode ist nur für EXE-Dateien verfügbar.  
   
-##  <a name="registerserver"></a>CComModule::RegisterServer  
+##  <a name="registerserver"></a>  CComModule::RegisterServer  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -387,9 +382,9 @@ HRESULT RegisterServer(
   
  Finden Sie unter [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) Informationen zum Hinzufügen eines Eintrags zur objektzuordnung.  
   
- `RegisterServer`aufgerufen wird, automatisch vom **DLLRegisterServer** für eine DLL oder durch `WinMain` für eine EXE-Datei an, führen Sie mit der **/RegServer** -Befehlszeilenoption.  
+ `RegisterServer` aufgerufen wird, automatisch vom **DLLRegisterServer** für eine DLL oder durch `WinMain` für eine EXE-Datei an, führen Sie mit der **/RegServer** -Befehlszeilenoption.  
   
-##  <a name="registertypelib"></a>CComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CComModule::RegisterTypeLib  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -409,7 +404,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
   
  Wenn die Modulinstanz mehrere Typbibliotheken enthält, verwenden Sie die zweite Version dieser Methode, um anzugeben, welche Typbibliothek verwendet werden soll.  
   
-##  <a name="revokeclassobjects"></a>CComModule::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>  CComModule::RevokeClassObjects  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -422,7 +417,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="remarks"></a>Hinweise  
  Entfernt das Klassenobjekt. Diese Methode ist nur für EXE-Dateien verfügbar.  
   
-##  <a name="term"></a>CComModule:: Term.  
+##  <a name="term"></a>  CComModule:: Term.  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -432,7 +427,7 @@ void Term() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle Datenmember frei.  
   
-##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
+##  <a name="unregisterclasshelper"></a>  CComModule::UnregisterClassHelper  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -460,7 +455,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
   
  Die [UpdateRegistryClass](#updateregistryclass) Methodenaufrufe `UnregisterClassHelper`.  
   
-##  <a name="unregisterserver"></a>CComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CComModule::UnregisterServer  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -481,11 +476,11 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 ### <a name="remarks"></a>Hinweise  
  Je nach den `pCLSID` Parameter, hebt die Registrierung eines Klassenobjekts für einzelne oder alle Objekte in der objektzuordnung auf.  
   
- `UnregisterServer`aufgerufen wird, automatisch vom **DLLUnregisterServer** für eine DLL oder durch `WinMain` für eine EXE-Datei an, führen Sie mit der **/Unregserver** -Befehlszeilenoption.  
+ `UnregisterServer` aufgerufen wird, automatisch vom **DLLUnregisterServer** für eine DLL oder durch `WinMain` für eine EXE-Datei an, führen Sie mit der **/Unregserver** -Befehlszeilenoption.  
   
  Finden Sie unter [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) Informationen zum Hinzufügen eines Eintrags zur objektzuordnung.  
   
-##  <a name="updateregistryclass"></a>CComModule::UpdateRegistryClass  
+##  <a name="updateregistryclass"></a>  CComModule::UpdateRegistryClass  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -540,7 +535,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
   
  Durch Angabe der [DECLARE_REGISTRY](registry-macros.md#declare_registry) Makro `UpdateRegistryClass` wird automatisch aufgerufen, wenn Ihre objektzuordnung verarbeitet wird.  
   
-##  <a name="updateregistryfromresourced"></a>CComModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CComModule::UpdateRegistryFromResourceD  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -586,7 +581,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
   
  Weitere Informationen zu ersetzbare Parameter und scripting finden Sie im Artikel [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).  
   
-##  <a name="updateregistryfromresources"></a>CComModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CComModule::UpdateRegistryFromResourceS  
  Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
 ```
@@ -620,7 +615,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
 ### <a name="remarks"></a>Hinweise  
  Ähnlich wie [UpdateRegistryFromResourceD](#updateregistryfromresourced) außer `UpdateRegistryFromResourceS` erstellt eine statische Verknüpfung zu ATL-Registrierungskomponente (Registrar).  
   
- `UpdateRegistryFromResourceS`wird aufgerufen, die automatisch bei der Verarbeitung der objektzuordnung, sofern Sie hinzufügen `#define _ATL_STATIC_REGISTRY` auf Ihre "stdafx.h".  
+ `UpdateRegistryFromResourceS` wird aufgerufen, die automatisch bei der Verarbeitung der objektzuordnung, sofern Sie hinzufügen `#define _ATL_STATIC_REGISTRY` auf Ihre "stdafx.h".  
   
 > [!NOTE]
 >  Um Ersatzwerte zur Laufzeit zu ersetzen, geben Sie keine der [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) oder [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) Makro. Erstellen Sie stattdessen ein Array von **_ATL_REGMAP_ENTRIES** Strukturen, wobei jeder Eintrag einen Variablen Platzhalter enthält gekoppelt mit einem Wert zur Laufzeit den Platzhalter ersetzen. Rufen Sie anschließend `UpdateRegistryFromResourceS`, übergeben Sie das Array für die `pMapEntries` Parameter. Dadurch wird die Ersatzwerte in der **_ATL_REGMAP_ENTRIES** Strukturen, die die Registrierungsstelle Ersatz-Zuordnung.  

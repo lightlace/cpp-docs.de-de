@@ -1,13 +1,10 @@
 ---
 title: Importieren in eine Anwendung mithilfe von "__declspec(dllimport)" "| Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __declspec
 - dllimport
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82974ec688fbe688c98188c2e99a54462da81165
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importieren in eine Anwendung mithilfe von "__declspec(dllimport)"
 Wenn ein Programm öffentliche, durch eine DLL definierte Symbole verwendet, wird dieser Vorgang als Importieren bezeichnet. Beim Erstellen von Headerdateien für Anwendungen, die Erstellungsvorgang Ihre DLLs verwenden, verwenden **von "__declspec(dllimport)" "** für die Deklarationen der öffentlichen Symbole. Das Schlüsselwort **von "__declspec(dllimport)" "** funktioniert, ob Sie mit der DEF-Dateien oder Exportieren der **__declspec(dllexport)** Schlüsselwort.  

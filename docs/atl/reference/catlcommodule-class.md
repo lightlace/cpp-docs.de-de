@@ -1,12 +1,9 @@
 ---
 title: CAtlComModule Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlComModule
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47e85f3aab75f8fafb76977847ce36d37808af60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule-Klasse
 Diese Klasse implementiert eine COM-Server-Modul.  
@@ -61,7 +56,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Rufen Sie diese Methode, um die Registrierung einer Typbibliothek aufzuheben.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CAtlComModule`implementiert eine COM-Server-Modul ermöglicht einen Client den Zugriff auf das Modul Komponenten an.  
+ `CAtlComModule` implementiert eine COM-Server-Modul ermöglicht einen Client den Zugriff auf das Modul Komponenten an.  
   
  Diese Klasse ersetzt die veraltete [CComModule](../../atl/reference/ccommodule-class.md) Klasse zur Verwendung in früheren Versionen von ATL Finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
   
@@ -73,7 +68,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule  
  Der Konstruktor.  
   
 ```
@@ -83,7 +78,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert das Modul an.  
   
-##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
+##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule  
  Der Destruktor.  
   
 ```
@@ -93,7 +88,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle Klassenfactorys frei.  
   
-##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>  CAtlComModule::RegisterServer  
  Rufen Sie diese Methode, um die Registrierung für jedes Objekt in der objektzuordnung zu aktualisieren.  
   
 ```
@@ -113,7 +108,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>Hinweise  
  Ruft die globale Funktion [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
   
-##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib  
  Rufen Sie diese Methode, um eine Typbibliothek zu registrieren.  
   
 ```
@@ -131,7 +126,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>Hinweise  
  Fügt Informationen zu einer Typbibliothek in der systemregistrierung. Wenn die Modulinstanz mehrere Typbibliotheken enthält, verwenden Sie die erste Version dieser Methode, um anzugeben, welche Typbibliothek verwendet werden soll.  
   
-##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer  
  Rufen Sie diese Methode, um die Registrierung jedes Objekt in der objektzuordnung aufzuheben.  
   
 ```
@@ -153,7 +148,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>Hinweise  
  Ruft die globale Funktion [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
   
-##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib  
  Rufen Sie diese Methode, um die Registrierung einer Typbibliothek aufzuheben.  
   
 ```

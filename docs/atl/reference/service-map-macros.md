@@ -2,11 +2,8 @@
 title: Ereigniszuordnungs-Makros Service | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>Dienst-Zuordnungsmakros
 Diese Makros definieren dienstzuordnungen und Einträge.  
@@ -41,7 +36,7 @@ Diese Makros definieren dienstzuordnungen und Einträge.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  Markiert den Beginn der dienstzuordnung.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  Markiert das Ende der dienstzuordnung.  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  Gibt an, dass das Objekt die Dienst-Id, die vom angegebenen unterstützt *SID*.  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  Weist [IServiceProviderImpl:: QueryService](#queryservice) zu verketten, auf das Objekt vom angegebenen `punk`.  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="queryservice"></a>IServiceProviderImpl:: QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl:: QueryService  
  Erstellt oder greift auf den angegebenen Dienst aus, und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [IN]`guidService`  
+ [IN] `guidService`  
  Ein Zeiger auf eine Dienst-ID (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Der Bezeichner der Schnittstelle, auf die der Aufrufer Zugriff zu erhalten.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Indirekter Zeiger auf die angeforderte Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|Die angeforderte Schnittstelle ist nicht Teil des Diensts oder der Dienst ist unbekannt.|  
   
 ### <a name="remarks"></a>Hinweise  
- `QueryService`Gibt einen indirekten Zeiger auf die angeforderte Schnittstelle in den angegebenen Dienst. Der Aufrufer ist verantwortlich für die Freigabe dieser Zeiger, wenn er nicht mehr benötigt wird.  
+ `QueryService` Gibt einen indirekten Zeiger auf die angeforderte Schnittstelle in den angegebenen Dienst. Der Aufrufer ist verantwortlich für die Freigabe dieser Zeiger, wenn er nicht mehr benötigt wird.  
   
  Beim Aufruf `QueryService`, übergeben Sie einen Service-Bezeichner ( `guidService`) und einen Schnittstellenbezeichner ( `riid`). Die `guidService` gibt den Dienst zugreifen, werden sollen und die `riid` identifiziert eine Schnittstelle, die Teil des Diensts ist. Im Gegenzug erhalten Sie einen indirekten Zeiger auf die Schnittstelle an.  
   

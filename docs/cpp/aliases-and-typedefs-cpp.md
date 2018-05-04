@@ -1,29 +1,24 @@
 ---
 title: Aliase und Typedefs (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
 dev_langs:
 - C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliase und Typedefs (C++)
 Sie können eine *Aliasdeklaration* , deklarieren einen Namen, die als ein Synonym für einen zuvor deklarierten Typ verwendet. (Dieser Mechanismus wird auch informell als bezeichnet eine *Typalias*). Sie können diesen Mechanismus auch verwenden, zum Erstellen einer *aliasvorlage*, die für benutzerdefinierte Zuweisungen besonders nützlich sein können.  

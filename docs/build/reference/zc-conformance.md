@@ -1,10 +1,10 @@
 ---
-title: "/ Zc (Übereinstimmung) | Microsoft Docs"
-ms.custom: 
+title: / Zc (Übereinstimmung) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Übereinstimmung)
 
@@ -32,7 +31,7 @@ Sie können die **/Zc** Compileroptionen in standard oder Microsoft-spezifisches
 
 ## <a name="syntax"></a>Syntax
 
-> **/Zc:**_option_{,_option_}
+> **/ Zc:**_Option_{,_Option_}
 
 ## <a name="remarks"></a>Hinweise
 
@@ -53,7 +52,7 @@ Dies sind die `/Zc` Compileroptionen:
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|C++-Standardbibliothek explizite typkonvertierungsregeln erzwingen (standardmäßig deaktiviert).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|C ++ 14-Größeninformationen globale-Funktionen zu aktivieren (in der Standardeinstellung).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Disable Zeichenfolgenliteral zu `char*` oder `wchar_t*` Konvertierung (standardmäßig deaktiviert).|
-|[ternary\[-\]](zc-ternary.md)|Bedingter Operator Regeln auf Operandentypen erzwingen (standardmäßig deaktiviert).|
+|[ternäre\[-\]](zc-ternary.md)|Bedingter Operator Regeln auf Operandentypen erzwingen (standardmäßig deaktiviert).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Aktivieren von lokalen statischen Initialisierung threadsichere (auf der Standardeinstellung).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Angenommen `operator new` löst bei einem Fehler (standardmäßig deaktiviert).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Trigraphen (veraltet, deaktiviert standardmäßig) zu aktivieren.|

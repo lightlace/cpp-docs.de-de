@@ -1,12 +1,9 @@
 ---
 title: IConnectionPointImpl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 444dea401fa711b40e4d8229b26c9cdbf6d1fcbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl-Klasse
 Diese Klasse implementiert einen Verbindungspunkt.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |[IConnectionPointImpl::m_vec](#m_vec)|Verwaltet die Verbindungen des Verbindungspunkts an.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IConnectionPointImpl`implementiert einen Verbindungspunkt, der ein Objekt, das eine Ausgangsschnittstelle an den Client verfügbar machen kann. Der Client implementiert diese Schnittstelle für ein Objekt, das als Sink bezeichnet wird.  
+ `IConnectionPointImpl` implementiert einen Verbindungspunkt, der ein Objekt, das eine Ausgangsschnittstelle an den Client verfügbar machen kann. Der Client implementiert diese Schnittstelle für ein Objekt, das als Sink bezeichnet wird.  
   
  ATL verwendet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) das verbindungsfähige Objekt zu implementieren. Jeder Verbindungspunkt in das verbindungsfähige Objekt stellt eine Ausgangsschnittstelle identifizierten `piid`. Klasse *CDV* verwaltet die Verbindungen zwischen dem Verbindungspunkt und Senke. Jede Verbindung wird durch ein "Cookie" eindeutig identifiziert.  
   
@@ -88,7 +83,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>  IConnectionPointImpl::Advise  
  Herstellen einer Verbindung zwischen dem Verbindungspunkt und Senke.  
   
 ```
@@ -102,7 +97,7 @@ STDMETHOD(Advise)(
   
  Finden Sie unter [IConnectionPoint:: Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) im Windows SDK.  
   
-##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Erstellt einen Enumerator zum Durchlaufen der Verbindungen für den Verbindungspunkt.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IConnectionPoint:: EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) im Windows SDK.  
   
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Ruft die IID der Schnittstelle dargestellt, die durch den Verbindungspunkt ab.  
   
 ```
@@ -122,7 +117,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IConnectionPoint:: GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) im Windows SDK.  
   
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Ruft einen Schnittstellenzeiger auf das verbindungsfähige Objekt ab.  
   
 ```
@@ -132,7 +127,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IConnectionPoint:: GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) im Windows SDK.  
   
-##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Verwaltet die Verbindungen zwischen dem Verbindungspunktobjekt und Senke.  
   
 ```
@@ -142,7 +137,7 @@ CDV m_vec;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig `m_vec` ist vom Typ [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).  
   
-##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise  
  Beendet eine Verbindung zuvor über [Advise](#advise).  
   
 ```

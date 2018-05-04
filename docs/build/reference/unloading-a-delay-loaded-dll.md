@@ -1,30 +1,25 @@
 ---
-title: "Entladen einer verzögert geladenen DLL | Microsoft Docs"
-ms.custom: 
+title: Entladen einer verzögert geladenen DLL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724ee2ac3987c855f5e2102dee35d12785726641
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Entladen einer verzögert geladenen DLL
 Das Hilfsobjekt standardmäßig bereitgestellten verzögerte Laden überprüft, ob die Deskriptoren für verzögertes Laden ein Zeiger und eine Kopie der ursprünglichen Importadresstabelle (IAT) im Feld "Name" aufweisen. Wenn dies der Fall ist, speichert es einen Zeiger in einer Liste auf den Import Verzögerungsdeskriptor. Dadurch wird die Hilfsfunktion, die anhand des Namens zur Unterstützung dieser DLL explizit Entladen der DLL zu suchen.  

@@ -1,13 +1,10 @@
 ---
 title: -Ox (die meisten Geschwindigkeit Optimierungen aktivieren) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/ Ox (die meisten Geschwindigkeit Optimierungen aktivieren)
 
@@ -47,9 +42,9 @@ Die **/Ox** Compileroption ist identisch mit den folgenden Optionen zusammen:
 
 - [/ Ob (Inlinefunktionserweiterung)](../../build/reference/ob-inline-function-expansion.md), wobei der Optionsparameter 2 ist (**/Ob2**)
 
-- [/ Og (globale Optimierungen)](../../build/reference/og-global-optimizations.md)
+- [/Og (Globale Optimierungen)](../../build/reference/og-global-optimizations.md)
 
-- [/ Oi (systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (Intrinsische Funktionen generieren)](../../build/reference/oi-generate-intrinsic-functions.md)
 
 - [/ Ot (schnellen Code bevorzugen)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
@@ -61,7 +56,7 @@ Die **/Ox** Compileroption ist identisch mit den folgenden Optionen zusammen:
 
 - [/ O2 (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/ Od (deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)
+- [/Od (Deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)
 
 Können Sie die Verschiebung in Richtung der Geschwindigkeit des Abbrechen der **/Ox** Compileroption bei Angabe von **/Oxs**, kombiniert die **/Ox** Compileroption mit  [ /OS (kompakten klein Code)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Die Kombination beider Optionen Codegröße kleinere.
 
@@ -81,6 +76,6 @@ Um alle verfügbaren auf Dateiebene Optimierungen für Releasebuilds anzuwenden,
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)  
+[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)  
 [Compileroptionen](../../build/reference/compiler-options.md)  
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

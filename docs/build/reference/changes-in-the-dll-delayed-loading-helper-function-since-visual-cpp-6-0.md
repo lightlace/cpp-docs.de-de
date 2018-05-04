@@ -1,13 +1,10 @@
 ---
-title: "Änderungen an der das verzögerte Laden von Hilfsfunktion seit Visual C++ 6.0 | Microsoft Docs"
-ms.custom: 
+title: Änderungen an der das verzögerte Laden von Hilfsfunktion seit Visual C++ 6.0 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3123a722e0e95119a4b04f5c060bd947b987cdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af68e5ba92a96502e295e75520cd182b4633dae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0
 Wenn Sie mehrere Versionen von Visual C++ auf Ihrem Computer haben oder wenn Sie eine eigene Hilfsfunktion definiert haben, es möglicherweise von kommt verzögert Änderungen an der DLL laden Hilfsfunktion. Zum Beispiel:  

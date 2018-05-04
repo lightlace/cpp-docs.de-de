@@ -1,12 +1,9 @@
 ---
 title: CDacl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDacl
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2724eebd218cea2795d483351ef91b34c9f1bf39
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdacl-class"></a>CDacl-Klasse
 Diese Klasse ist ein Wrapper für eine Struktur DACL (discretionary Access Control List).  
@@ -88,7 +83,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
  Fügt einen zulässigen ACE (Access Control Entry) auf die `CDacl` Objekt.  
   
 ```
@@ -129,7 +124,7 @@ bool AddAllowedAce(
   
  Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) eine Beschreibung der verschiedenen Flags, die festgelegt werden kann, in der `AceFlags` Parameter.  
   
-##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Fügt einen verweigerten ACE (Access Control Entry) auf die `CDacl` Objekt.  
   
 ```
@@ -170,7 +165,7 @@ bool AddDeniedAce(
   
  Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) eine Beschreibung der verschiedenen Flags, die festgelegt werden kann, in der `AceFlags` Parameter.  
   
-##  <a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>  CDacl::CDacl  
  Der Konstruktor.  
   
 ```
@@ -185,7 +180,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Hinweise  
  Die `CDacl` -Objekt kann optional mithilfe eines vorhandenen erstellt werden **ACL** Struktur. Es ist wichtig zu beachten, dass nur eine DACL (discretionary Access Control List), und keine SACL (System Access Control List), sollten als diesen Parameter übergeben werden. Debug-Builds bewirkt und übergeben einer SACL ASSERT. In Releasebuilds übergeben einer SACL wird dazu führen, dass die Zugriffssteuerungseinträge (Access Control-Einträge) in der ACL, ignoriert werden sollen, und tritt kein Fehler auf.  
   
-##  <a name="dtor"></a>  CDacl::~CDacl  
+##  <a name="dtor"></a>  CDacl:: ~ CDacl  
  Der Destruktor.  
   
 ```
@@ -195,7 +190,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor gibt alle Ressourcen abgerufen, von dem Objekt, einschließlich aller ACEs (Access Control-Einträge), die mit frei [CDacl::RemoveAllAces](#removeallaces).  
   
-##  <a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>  CDacl::GetAceCount  
  Gibt die Anzahl der ACEs (Access Control-Einträge) in der `CDacl` Objekt.  
   
 ```
@@ -205,7 +200,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der ACEs im enthalten die `CDacl` Objekt.  
   
-##  <a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>  CDacl::operator =  
  Zuweisungsoperator.  
   
 ```
@@ -222,7 +217,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Sie sollten sicherstellen, dass Sie nur eine DACL (discretionary Access Control List) für diese Funktion übergeben. Übergeben einer SACL (System Access Control List) für diese Funktion verursacht eine ASSERTION in Debugbuilds jedoch verursacht keine Fehler in Releasebuilds.  
   
-##  <a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>  CDacl::RemoveAce  
  Entfernt einen bestimmten ACE (Access Control Entry) aus der `CDacl` Objekt.  
   
 ```

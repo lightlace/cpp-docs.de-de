@@ -1,13 +1,10 @@
 ---
 title: -vd (Konstruktionsverschiebungen deaktivieren) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Konstruktionsverschiebungen deaktivieren)
 ## <a name="syntax"></a>Syntax  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Hinweise  
  Diese Optionen gelten nur für C++-Code, der virtuelle Basen verwendet.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]implementiert die Unterstützung von C++ zur Erstellung Verschiebung in Situationen, in denen virtueller Vererbung verwendet wird. Konstruktionsverschiebungen lösen des Problems erstellt, wenn eine virtuelle Funktion, die in eine virtuelle Basisklasse deklariert und in einer abgeleiteten Klasse überschrieben, während der Erstellung einer weiteren abgeleiteten Klasse von einem Konstruktor aufgerufen.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementiert die Unterstützung von C++ zur Erstellung Verschiebung in Situationen, in denen virtueller Vererbung verwendet wird. Konstruktionsverschiebungen lösen des Problems erstellt, wenn eine virtuelle Funktion, die in eine virtuelle Basisklasse deklariert und in einer abgeleiteten Klasse überschrieben, während der Erstellung einer weiteren abgeleiteten Klasse von einem Konstruktor aufgerufen.  
   
  Das Problem besteht darin, dass die virtuelle Funktion eine falsche weitergeleitet werden möglicherweise `this` daher Zeiger von Diskrepanzen zwischen der Verschiebungen mit der virtuellen Basen, einer Klasse und die Verschiebungen abgeleiteten Klassen. Die Lösung bietet eine einzelne Konstruktion Verschiebung Anpassung, die ein Vtordisp-Feld für jede virtuelle Basis einer Klasse aufgerufen.  
   

@@ -1,13 +1,10 @@
 ---
 title: -EH (Ausnahmebehandlungsmodell) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Ausnahmebehandlungsmodell)
 Gibt die Art der Ausnahmebehandlung an, die vom Compiler verwendet werden soll, gibt an, ob Ausnahmeprüfungen wegoptimiert werden sollen, und gibt an, ob C++-Objekte zerstört werden sollen, die sich aufgrund einer Ausnahme nicht mehr im Gültigkeitsbereich befinden. Wenn **/EH** nicht angegeben ist, fängt der Compiler sowohl asynchrone strukturierte Ausnahmen als auch C++-Ausnahmen ab. C++-Objekte, die wegen einer asynchronen Ausnahme außerhalb des Gültigkeitsbereichs liegen, werden jedoch nicht zerstört.  
@@ -105,9 +100,9 @@ int main() {
   
  Weitere Informationen über Beschränkungen für die Ausnahmebehandlung unter **/clr**finden Sie unter [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md).  
   
- Die Option kann mit dem Symbol **-**deaktiviert werden. So wird **/EHsc-** beispielsweise als **/EHs /EHc-** interpretiert und entspricht **/EHs**.  
+ Die Option kann mit dem Symbol **-** deaktiviert werden. So wird **/EHsc-** beispielsweise als **/EHs /EHc-** interpretiert und entspricht **/EHs**.  
   
- Die Compileroption **/EHr** -Compileroption erzwingt Laufzeitbeendigungsprüfungen in allen Funktionen, die ein `noexcept` -Attribut haben. Standardmäßig können Laufzeitprüfungen wegoptimiert werden, wenn das Compiler-Back-End feststellt, dass eine Funktion nur *nicht auslösende* Funktionen aufruft. Nicht auslösende Funktionen sind alle Funktionen, die ein Attribut haben, das angibt, dass keine Ausnahmen ausgelöst werden können. Hierzu gehören Funktionen, die mit `noexcept`, `throw()`, `__declspec(nothrow)`markiert sind, sowie **/EHc** -Funktionen, wenn `extern "C"` -Funktionen zu generieren. Zu den nicht auslösenden Funktionen gehört auch jede Funktion, für die der Compiler durch Prüfung ermittelt hat, dass sie nicht auslösend ist. Sie können die Standardeinstellung explizit mit **/EHr-**festlegen.  
+ Die Compileroption **/EHr** -Compileroption erzwingt Laufzeitbeendigungsprüfungen in allen Funktionen, die ein `noexcept` -Attribut haben. Standardmäßig können Laufzeitprüfungen wegoptimiert werden, wenn das Compiler-Back-End feststellt, dass eine Funktion nur *nicht auslösende* Funktionen aufruft. Nicht auslösende Funktionen sind alle Funktionen, die ein Attribut haben, das angibt, dass keine Ausnahmen ausgelöst werden können. Hierzu gehören Funktionen, die mit `noexcept`, `throw()`, `__declspec(nothrow)`markiert sind, sowie **/EHc** -Funktionen, wenn `extern "C"` -Funktionen zu generieren. Zu den nicht auslösenden Funktionen gehört auch jede Funktion, für die der Compiler durch Prüfung ermittelt hat, dass sie nicht auslösend ist. Sie können die Standardeinstellung explizit mit **/EHr-** festlegen.  
   
  Das Attribut für nicht auslösend bedingt jedoch keine Garantie, dass von einer Funktion keine Ausnahmen ausgelöst werden können. Im Unterschied zum Verhalten einer `noexcept` -Funktion sieht der Visual C++-Compiler eine Ausnahme, die durch eine Funktion ausgelöst wurde, die mit `throw()`, `__declspec(nothrow)`oder `extern "C"` deklariert ist, als nicht definiertes Verhalten an. Funktionen, für die diese drei Deklarationsattribute verwendet werden, erzwingen keine Laufzeitbeendigungsprüfungen für Ausnahmen. Sie können die **/EHr** -Option verwenden, um dieses undefinierte Verhalten ermitteln zu können, indem der Compiler gezwungen wird, Laufzeitprüfungen für nicht behandelte Ausnahmen zu generieren, die eine `noexcept` -Funktion umgehen.  
   

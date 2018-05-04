@@ -2,11 +2,8 @@
 title: CComObjectGlobal Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d5264a2ab8e1bbc4c3f4eac4d83d096d91e8846
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3614962d3bebada0c63b7fe804b52efaa965c6a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal-Klasse
 Diese Klasse verwaltet einen Verweiszähler für das Modul mit Ihrem `Base` Objekt.  
@@ -71,7 +66,7 @@ class CComObjectGlobal : public Base
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Enthält die **HRESULT** während der Erstellung der zurückgegebenen der `CComObjectGlobal` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComObjectGlobal`verwaltet einen Verweiszähler für das Modul mit Ihrem `Base` Objekt. `CComObjectGlobal`Stellt sicher, dass das Objekt wird nicht gelöscht werden, solange das Modul nicht freigegeben wird. Das Objekt wird nur entfernt werden, wenn der Verweiszähler für das gesamte Modul auf Null geht.  
+ `CComObjectGlobal` verwaltet einen Verweiszähler für das Modul mit Ihrem `Base` Objekt. `CComObjectGlobal` Stellt sicher, dass das Objekt wird nicht gelöscht werden, solange das Modul nicht freigegeben wird. Das Objekt wird nur entfernt werden, wenn der Verweiszähler für das gesamte Modul auf Null geht.  
   
  Beispiel für die Verwendung `CComObjectGlobal`, eine Klassenfactory aufnehmen kann ein allgemeine globales Objekt, das von allen Clients gemeinsam verwendet wird.  
   
@@ -83,7 +78,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>  CComObjectGlobal::AddRef  
  Inkrementiert den Verweiszähler des Objekts um 1.  
   
 ```
@@ -96,7 +91,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig `AddRef` Aufrufe **_Module::Lock**, wobei **_Module** wird die globale Instanz von [CComModule](../../atl/reference/ccommodule-class.md) oder eine Klasse abgeleitet.  
   
-##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal  
  Der Konstruktor. Aufrufe `FinalConstruct` und legt dann [M_hResFinalConstruct](#m_hresfinalconstruct) auf die `HRESULT` zurückgegebenes `FinalConstruct`.  
   
 ```
@@ -106,7 +101,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie nicht die Basisklasse aus abgeleiteten [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), geben Sie an Ihre eigenen `FinalConstruct` Methode. Der Destruktor ruft `FinalRelease` auf.  
   
-##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal  
  Der Destruktor.  
   
 ```
@@ -116,14 +111,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordneten Ressourcen und ruft [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct  
  Enthält die `HRESULT` aufrufenden `FinalConstruct` während der Erstellung von der `CComObjectGlobal` Objekt.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface  
  Ruft einen Zeiger auf den angeforderten Schnittstellenzeiger ab.  
   
 ```
@@ -141,9 +136,9 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- `QueryInterface`nur behandelt Schnittstellen in der COM-Zuordnungstabelle.  
+ `QueryInterface` Nur behandelt Schnittstellen in der COM-Zuordnungstabelle.  
   
-##  <a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>  CComObjectGlobal::Release  
  Dekrementiert den Verweiszähler des Objekts um 1.  
   
 ```

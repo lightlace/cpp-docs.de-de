@@ -2,12 +2,9 @@
 title: BSCMAKE-Optionen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>BSCMAKE-Optionen
 In diesem Abschnitt werden die Optionen beschrieben, die zur Steuerung von BSCMAKE zur Verfügung stehen. Der Inhalt der Browserinformationsdatei lässt sich durch Ausschließen oder Einschließen bestimmter Informationen mithilfe verschiedener Optionen steuern. Die Ausschlussoptionen ermöglichen eine schnellere Ausführung von BSCMAKE und können eine kleinere BSC-Datei zur Folge haben. Optionsnamen Groß-/Kleinschreibung unterschieden (mit Ausnahme von **/HELP** und **/nologo**).  
@@ -70,7 +65,7 @@ In diesem Abschnitt werden die Optionen beschrieben, die zur Steuerung von BSCMA
  /Es  
  Schließt die Includedateien, die mit einem absoluten Pfad angegeben oder in einem absoluten Pfad gefunden werden, der in der INCLUDE-Umgebungsvariablen angegeben ist, aus der Browserinformationsdatei aus. (Gewöhnlich sind dies die Includedateien des Systems, die viele Informationen enthalten, die in der Browserinformationsdatei möglicherweise nicht benötigt werden.) Diese Option schließt keine Dateien aus, die ohne Pfad oder mit einem relativen Pfad angegeben sind oder in einem relativen Pfad in INCLUDE gefunden werden. Sie können die **Ei** zusammen mit option **/es einsetzen** einsetzen, um Dateien, die **/es einsetzen** nicht ausgeschlossen. Wenn Sie nur einige der Dateien ausschließen möchten, **/es einsetzen** ausschließt, verwenden Sie **Ei** anstelle von **/es einsetzen** und listet die Dateien, die Sie ausschließen möchten.  
   
- / errorreport: [none &#124; Eingabeaufforderung &#124; Warteschlange &#124; senden]  
+ / errorreport: [keine &#124; Eingabeaufforderung &#124; Warteschlange &#124; senden]  
  Ermöglicht das Senden von Informationen in Bezug auf interne Fehler in bscmake.exe an Microsoft.  
   
  Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
@@ -82,7 +77,7 @@ In diesem Abschnitt werden die Optionen beschrieben, die zur Steuerung von BSCMA
  Schließt Symbole ein, auf die nicht verwiesen wird. Standardmäßig zeichnet BSCMAKE keine Symbole auf, die zwar definiert sind, auf die aber nicht verwiesen wird. Wenn eine SBR-Datei komprimiert wurde, hat diese Option für diese Eingabedatei keine Auswirkungen, da der Compiler bereits die Symbole entfernt hat, auf die nicht verwiesen wird.  
   
  /n  
- Erzwingt ein nicht inkrementelles Erstellen. Verwendung  **/n**  einen vollständigen Build der Browserinformationsdatei erzwungen, und zwar unabhängig davon, ob eine BSC-Datei vorhanden ist, und um zu verhindern, dass SBR-Dateien abgeschnitten wird. Finden Sie unter [wie BSCMAKE eine BSC-Datei erstellt](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
+ Erzwingt ein nicht inkrementelles Erstellen. Verwendung **/n** einen vollständigen Build der Browserinformationsdatei erzwungen, und zwar unabhängig davon, ob eine BSC-Datei vorhanden ist, und um zu verhindern, dass SBR-Dateien abgeschnitten wird. Finden Sie unter [wie BSCMAKE eine BSC-Datei erstellt](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
   
  /NOLOGO  
  Unterdrückt die Copyrightmeldung von BSCMAKE.  

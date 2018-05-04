@@ -1,12 +1,9 @@
 ---
 title: CComClassFactorySingleton Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactorySingleton
@@ -18,15 +15,13 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: 165bc85a0b00ac8186e5a145a75c4478335b5e0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 754a3abd02a4a09df3e36aa9aea75c400ef00761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton-Klasse
 Diese Klasse leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) So erstellen Sie ein einzelnes Objekt.  
@@ -45,7 +40,7 @@ class CComClassFactorySingleton : public CComClassFactory
  `T`  
  Die Klasse.  
   
- `CComClassFactorySingleton`leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) So erstellen Sie ein einzelnes Objekt. Bei jedem Aufruf der `CreateInstance` Methode fragt einfach dieses Objekts für einen Schnittstellenzeiger auf.  
+ `CComClassFactorySingleton` leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) So erstellen Sie ein einzelnes Objekt. Bei jedem Aufruf der `CreateInstance` Methode fragt einfach dieses Objekts für einen Schnittstellenzeiger auf.  
   
 ## <a name="members"></a>Member  
   
@@ -80,7 +75,7 @@ class CComClassFactorySingleton : public CComClassFactory
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance  
  Aufrufe `QueryInterface` über [M_spObj](#m_spobj) um einen Schnittstellenzeiger abzurufen.  
   
 ```
@@ -100,7 +95,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
+##  <a name="m_spobj"></a>  CComClassFactorySingleton::m_spObj  
  Die [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) Objekt erstellt, indem `CComClassFactorySingleton`.  
   
 ```

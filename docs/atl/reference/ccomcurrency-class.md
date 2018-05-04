@@ -1,12 +1,9 @@
 ---
 title: CComCurrency Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCurrency
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ef0cdc45d4f3b84c738e5eec24d76a1f9b7fe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847cbe230e14975e883c42f52538ba3863d505c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency-Klasse
 `CComCurrency` verfügt über Methoden und Operatoren zum Erstellen und Verwalten eines CURRENCY-Objekts.  
@@ -92,7 +87,7 @@ class CComCurrency
 |[CComCurrency::m_currency](#m_currency)|Die `CURRENCY`-Variable, die von der Klasseninstanz erstellt wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComCurrency`ist ein Wrapper für die **Währung** -Datentyp. **Währung** als ein skaliert mit 10.000 zweier-Komplement-8-Byte-Integer-Wert implementiert wird. Dies ermöglicht eine Festkommazahl mit 15 Stellen links vom Dezimaltrennzeichen und 4 Ziffern rechts. Die **Währung** Datentyp ist äußerst nützlich für finanzberechnungen oder für festkommaberechnungen, in denen Genauigkeit wichtig ist.  
+ `CComCurrency` ist ein Wrapper für die **Währung** -Datentyp. **Währung** als ein skaliert mit 10.000 zweier-Komplement-8-Byte-Integer-Wert implementiert wird. Dies ermöglicht eine Festkommazahl mit 15 Stellen links vom Dezimaltrennzeichen und 4 Ziffern rechts. Die **Währung** Datentyp ist äußerst nützlich für finanzberechnungen oder für festkommaberechnungen, in denen Genauigkeit wichtig ist.  
   
  Die **CComCurrency** Wrapper implementiert arithmetische, zuweisungs- und Vergleichsausdrücke Vorgänge für diesen festkommatyp. Die unterstützten Anwendungen wurden ausgewählt, um die Rundungsfehler zu steuern, die während der Festkommaberechnungen auftreten können.  
   
@@ -110,7 +105,7 @@ class CComCurrency
 ## <a name="requirements"></a>Anforderungen  
  **Header:** "atlcur.h"  
   
-##  <a name="ccomcurrency"></a>CComCurrency::CComCurrency  
+##  <a name="ccomcurrency"></a>  CComCurrency::CComCurrency  
  Der Konstruktor.  
   
 ```
@@ -165,7 +160,7 @@ explicit CComCurrency(LPCSTR szSrc);
   
  Wenn Gleitkomma "oder" double-Werte verwenden, um einen Wert zuzuweisen, beachten Sie, dass **CComCurrency(10.50)** entspricht **CComCurrency(10,5000)** und nicht **CComCurrency(10,50)**.  
   
-##  <a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr  
+##  <a name="getcurrencyptr"></a>  CComCurrency::GetCurrencyPtr  
  Gibt die Adresse eines `m_currency`-Datenmembers zurück.  
   
 ```
@@ -175,7 +170,7 @@ CURRENCY* GetCurrencyPtr() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Adresse des ein `m_currency` -Datenmember  
   
-##  <a name="getfraction"></a>CComCurrency:: Getfraction  
+##  <a name="getfraction"></a>  CComCurrency:: Getfraction  
  Rufen Sie diese Methode zum Zurückgeben des Nachkommawert von der `CComCurrency` Objekt.  
   
 ```
@@ -186,12 +181,12 @@ SHORT GetFraction() const;
  Gibt zurück, den Nachkommawert von der `m_currency` -Datenmember.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Nachkommawert wird ein 4 Ziffern Integerwert zwischen-9999 ( **CY_MIN_FRACTION**) und + 9999 ( **CY_MAX_FRACTION**). `GetFraction`Gibt diesen Wert, der um 10000 skalierten zurück ( **CY_SCALE**). Die Werte der **CY_MIN_FRACTION**, **CY_MAX_FRACTION**, und **CY_SCALE** in "atlcur.h" definiert sind.  
+ Der Nachkommawert wird ein 4 Ziffern Integerwert zwischen-9999 ( **CY_MIN_FRACTION**) und + 9999 ( **CY_MAX_FRACTION**). `GetFraction` Gibt diesen Wert, der um 10000 skalierten zurück ( **CY_SCALE**). Die Werte der **CY_MIN_FRACTION**, **CY_MAX_FRACTION**, und **CY_SCALE** in "atlcur.h" definiert sind.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#50](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]  
   
-##  <a name="getinteger"></a>CComCurrency::GetInteger  
+##  <a name="getinteger"></a>  CComCurrency::GetInteger  
  Rufen Sie diese Methode zum Abrufen der ganzzahligen Komponente von einem `CComCurrency` Objekt.  
   
 ```
@@ -204,7 +199,7 @@ LONGLONG GetInteger() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#51](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]  
   
-##  <a name="m_currency"></a>CComCurrency::m_currency  
+##  <a name="m_currency"></a>  CComCurrency::m_currency  
  Die **Währung** -Datenmember.  
   
 ```
@@ -214,7 +209,7 @@ CURRENCY m_currency;
 ### <a name="remarks"></a>Hinweise  
  Bei diesem Member enthält, die Währung zugegriffen und von den Methoden dieser Klasse bearbeitet wird.  
   
-##  <a name="operator_-"></a>CComCurrency::operator-  
+##  <a name="operator_-"></a>  CComCurrency::operator-  
  Dieser Operator wird verwendet, um Subtraktion für ein `CComCurrency`-Objekt auszuführen.  
   
 ```
@@ -232,7 +227,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]  
   
-##  <a name="operator_neq"></a>CComCurrency::operator! =  
+##  <a name="operator_neq"></a>  CComCurrency::operator! =  
  Dieser Operator vergleicht zwei Objekte auf Ungleichheit.  
   
 ```
@@ -249,7 +244,7 @@ bool operator!= (const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#56](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]  
   
-##  <a name="operator_star"></a>CComCurrency::operator *  
+##  <a name="operator_star"></a>  CComCurrency::operator *  
  Dieser Operator wird verwendet, um Multiplikation für ein `CComCurrency`-Objekt auszuführen.  
   
 ```
@@ -270,7 +265,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]  
   
-##  <a name="operator_star_eq"></a>CComCurrency::operator * =  
+##  <a name="operator_star_eq"></a>  CComCurrency::operator * =  
  Dieser Operator wird verwendet, um Multiplikation für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.  
   
 ```
@@ -291,7 +286,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]  
   
-##  <a name="operator_div"></a>CComCurrency::operator /  
+##  <a name="operator_div"></a>  CComCurrency::operator /  
  Dieser Operator wird verwendet, um Division für ein `CComCurrency`-Objekt auszuführen.  
   
 ```
@@ -308,7 +303,7 @@ CComCurrency operator/(long nOperand) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]  
   
-##  <a name="operator_div_eq"></a>CComCurrency::operator / =  
+##  <a name="operator_div_eq"></a>  CComCurrency::operator / =  
  Dieser Operator wird verwendet, um Division für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.  
   
 ```
@@ -325,7 +320,7 @@ const CComCurrency& operator/= (long nOperand);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#60](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]  
   
-##  <a name="operator_add"></a>CComCurrency::operator +  
+##  <a name="operator_add"></a>  CComCurrency::operator +  
  Dieser Operator wird verwendet, um Addition für ein `CComCurrency`-Objekt auszuführen.  
   
 ```
@@ -342,7 +337,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]  
   
-##  <a name="operator_add_eq"></a>CComCurrency::operator +=  
+##  <a name="operator_add_eq"></a>  CComCurrency::operator +=  
  Dieser Operator wird verwendet, um Addition für ein `CComCurrency`-Objekt auszuführen und das Ergebnis dem aktuellen Objekt zuzuweisen.  
   
 ```
@@ -359,7 +354,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#62](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]  
   
-##  <a name="operator_lt"></a>CComCurrency::operator&lt;  
+##  <a name="operator_lt"></a>  CComCurrency::operator &lt;  
  Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um das kleinere zu bestimmen.  
   
 ```
@@ -376,7 +371,7 @@ bool operator<(const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#63](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]  
   
-##  <a name="operator_lt_eq"></a>CComCurrency::operator&lt;=  
+##  <a name="operator_lt_eq"></a>  CComCurrency::operator &lt;=  
  Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um zu bestimmen, ob sie gleich sind oder welches kleiner ist.  
   
 ```
@@ -393,7 +388,7 @@ bool operator<= (const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#64](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]  
   
-##  <a name="operator_eq"></a>CComCurrency::operator =  
+##  <a name="operator_eq"></a>  CComCurrency::operator =  
  Dieser Operator weist dem `CComCurrency`-Objekt einen neuen Wert zu.  
   
 ```
@@ -417,7 +412,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
  `cySrc`  
  Eine Variable vom Typ **Währung**.  
   
- *sSrc*, `fSrc`, `lSrc`, *bSrc*, *UsSrc*, `dSrc`, *cSrc*, *UlSrc*,`dSrc`  
+ *sSrc*, `fSrc`, `lSrc`, *bSrc*, *UsSrc*, `dSrc`, *cSrc*, *UlSrc*, `dSrc`  
  Der numerische Wert, der zum Zuweisen der `CComCurrency` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -426,7 +421,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]  
   
-##  <a name="operator_-_eq"></a>CComCurrency::operator =  
+##  <a name="operator_-_eq"></a>  CComCurrency::operator =  
  Dieser Operator wird verwendet, um Subtraktion für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.  
   
 ```
@@ -443,7 +438,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CComCurrency::operator ==  
+##  <a name="operator_eq_eq"></a>  CComCurrency::operator ==  
  Dieser Operator überprüft zwei `CComCurrency`-Objekte auf Gleichheit.  
   
 ```
@@ -460,7 +455,7 @@ bool operator== (const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#67](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]  
   
-##  <a name="operator_gt"></a>CComCurrency::operator&gt;  
+##  <a name="operator_gt"></a>  CComCurrency::operator &gt;  
  Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um das größere zu bestimmen.  
   
 ```
@@ -477,7 +472,7 @@ bool operator>(const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#68](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]  
   
-##  <a name="operator_gt_eq"></a>CComCurrency::operator&gt;=  
+##  <a name="operator_gt_eq"></a>  CComCurrency::operator &gt;=  
  Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um zu bestimmen, ob sie gleich sind oder welches größer ist.  
   
 ```
@@ -494,7 +489,7 @@ bool operator>= (const CComCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]  
   
-##  <a name="operator_currency"></a>CComCurrency::operator Währung  
+##  <a name="operator_currency"></a>  CComCurrency::operator Währung  
  Diese Operatoren werden verwendet, um die Umwandlung einer `CComCurrency` -Objekt an eine **Währung** -Datentyp.  
   
 ```  
@@ -508,7 +503,7 @@ operator const CURRENCY&() const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#70](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]  
   
-##  <a name="round"></a>CComCurrency::Round  
+##  <a name="round"></a>  CComCurrency::Round  
  Rufen Sie diese Methode, um die Währung auf eine angegebene Anzahl von Dezimalstellen gerundet.  
   
 ```
@@ -525,7 +520,7 @@ HRESULT Roundint nDecimals);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#52](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]  
   
-##  <a name="setfraction"></a>CComCurrency::SetFraction  
+##  <a name="setfraction"></a>  CComCurrency::SetFraction  
  Rufen Sie diese Methode auf, um den Nachkommawert eines `CComCurrency`-Objekts festzulegen.  
   
 ```
@@ -542,7 +537,7 @@ HRESULT SetFraction(SHORT nFraction);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#53](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]  
   
-##  <a name="setinteger"></a>CComCurrency::SetInteger  
+##  <a name="setinteger"></a>  CComCurrency::SetInteger  
  Rufen Sie diese Methode auf, um den ganzzahligen Wert eines `CComCurrency`-Objekts festzulegen.  
   
 ```
@@ -553,7 +548,7 @@ HRESULT SetInteger(LONGLONG nInteger);
  `nInteger`  
  Der Wert, den ganzzahligen zuzuweisenden das `m_currency` -Datenmember. Die Vorzeichen der ganzzahligen Komponente müssen die Vorzeichen des vorhandenen Nachkommawert übereinstimmen.  
   
- `nInteger`muss im Bereich **CY_MIN_INTEGER** auf **CY_MAX_INTEGER** inklusive. Diese Werte werden in "atlcur.h" definiert.  
+ `nInteger` muss im Bereich **CY_MIN_INTEGER** auf **CY_MAX_INTEGER** inklusive. Diese Werte werden in "atlcur.h" definiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  

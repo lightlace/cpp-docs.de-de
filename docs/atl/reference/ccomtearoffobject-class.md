@@ -1,12 +1,9 @@
 ---
 title: CComTearOffObject Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80be7d80af5a6c8fa2c47bc0e853020663f2ceae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject-Klasse
 Diese Klasse implementiert eine Schnittstelle abtrennbare.  
@@ -82,9 +77,9 @@ class CComTearOffObject : public Base
 |[m_pOwner](#m_powner)|Ein Zeiger auf eine `CComObject` Besitzer-Klasse abgeleitet.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComTearOffObject`implementiert eine Schnittstelle abtrennbare als separates Objekt, das instanziiert wird, nur, wenn für diese Schnittstelle abgefragt wird. Die abtrennbare wird gelöscht, wenn der Verweiszähler auf 0 (null) wird. In der Regel erstellen Sie eine Schnittstelle abtrennbare für eine Schnittstelle, die nur selten verwendet wird, da einen Vtable Zeiger mit einem abtrennbare in allen Instanzen von Ihrem Hauptobjekt speichert,.  
+ `CComTearOffObject` implementiert eine Schnittstelle abtrennbare als separates Objekt, das instanziiert wird, nur, wenn für diese Schnittstelle abgefragt wird. Die abtrennbare wird gelöscht, wenn der Verweiszähler auf 0 (null) wird. In der Regel erstellen Sie eine Schnittstelle abtrennbare für eine Schnittstelle, die nur selten verwendet wird, da einen Vtable Zeiger mit einem abtrennbare in allen Instanzen von Ihrem Hauptobjekt speichert,.  
   
- Sollten Sie die Klasse zur Implementierung der abtrennbare aus ableiten `CComTearOffObjectBase` und unabhängig davon, welche Schnittstellen die abtrennbare Objekt unterstützt werden sollen. `CComTearOffObjectBase`ist für den Besitzerklasse und das Threadmodell vorlagenbasiert. Die Besitzerklasse ist die Klasse des Objekts, für die eine abtrennbare implementiert wird. Wenn Sie ein Threadmodell nicht angeben, wird das Standardmodell des Threads verwendet.  
+ Sollten Sie die Klasse zur Implementierung der abtrennbare aus ableiten `CComTearOffObjectBase` und unabhängig davon, welche Schnittstellen die abtrennbare Objekt unterstützt werden sollen. `CComTearOffObjectBase` ist für den Besitzerklasse und das Threadmodell vorlagenbasiert. Die Besitzerklasse ist die Klasse des Objekts, für die eine abtrennbare implementiert wird. Wenn Sie ein Threadmodell nicht angeben, wird das Standardmodell des Threads verwendet.  
   
  Erstellen Sie eine COM-Zuordnung für die abtrennbare-Klasse. Wenn ATL die abtrennbare instanziiert, erstellt jedoch **CComTearOffObject\<CYourTearOffClass >** oder **CComCachedTearOffObject\<CYourTearOffClass >**.  
   
@@ -100,7 +95,7 @@ class CComTearOffObject : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
   
-##  <a name="addref"></a>CComTearOffObject::AddRef  
+##  <a name="addref"></a>  CComTearOffObject::AddRef  
  Inkrementiert den Verweiszähler des dem `CComTearOffObject` von einem Objekt.  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der möglicherweise nützlich für die Diagnose und testen.  
   
-##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject  
  Der Konstruktor.  
   
 ```
@@ -124,7 +119,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Der Besitzer Verweiszähler inkrementiert um eins.  
   
-##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject  
  Der Destruktor.  
   
 ```
@@ -134,7 +129,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Alle zugeordnete Ressourcen freigegeben werden, werden Aufrufe von FinalRelease und verringert das Modul Anzahl zu sperren.  
   
-##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  Der Konstruktor.  
   
 ```
@@ -144,7 +139,7 @@ CComTearOffObjectBase();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die [M_pOwner](#m_powner) Element **NULL**.  
   
-##  <a name="m_powner"></a>CComTearOffObject::m_pOwner  
+##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
  Ein Zeiger auf eine [CComObject](../../atl/reference/ccomobject-class.md) abgeleitetes Objekt aus *Besitzer*.  
   
 ```
@@ -158,7 +153,7 @@ CComObject<Owner>* m_pOwner;
 ### <a name="remarks"></a>Hinweise  
  Der Zeiger wird mit initialisiert **NULL** während der Erstellung.  
   
-##  <a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -178,7 +173,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Hinweise  
  Fragt zuerst nach für Ihre Klasse abtrennbare Schnittstellen ab. Wenn die Schnittstelle nicht vorhanden ist, Abfragen für die Schnittstelle für das Besitzerobjekt ist. Wenn die angeforderte Schnittstelle wird **IUnknown**, gibt die **IUnknown** des Besitzers.  
   
-##  <a name="release"></a>CComTearOffObject::Release  
+##  <a name="release"></a>  CComTearOffObject::Release  
  Dekrementiert den Verweiszähler um eins und, wenn der Verweiszähler auf 0 (null) ist, löscht die `CComTearOffObject`.  
   
 ```

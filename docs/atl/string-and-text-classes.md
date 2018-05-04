@@ -1,12 +1,9 @@
 ---
 title: ATL-Zeichenfolge und Textklassen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - string conversion, ATL
 - string classes [ATL]
 ms.assetid: aa0cdc41-c953-4b17-82b6-59b908545571
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33d78f8ed42724a0fe4af404f1e65a67fb604bc3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-text-classes"></a>Zeichenfolgen- und Textklassen
 Diese Klassen bieten Unterstützung für Zeichenfolgen und Text-zeichenfolgenkonvertierungen.  
@@ -43,7 +38,7 @@ Diese Klassen bieten Unterstützung für Zeichenfolgen und Text-zeichenfolgenkon
   
 -   [CComBSTR](../atl/reference/ccombstr-class.md) diese Klasse ist ein Wrapper für `BSTR`s.  
   
--   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) dieses Argument-Adapterklasse ermöglicht entweder Ressourcennamen (`LPCTSTR`s) oder Ressourcen-IDs (**"uint"**s) an eine Funktion übergeben werden, ohne dass des Aufrufers die-ID mithilfe der ineineZeichenfolgezukonvertieren **MAKEINTRESOURCE** Makro.  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) dieses Argument-Adapterklasse ermöglicht entweder Ressourcennamen (`LPCTSTR`s) oder Ressourcen-IDs (**"uint"** s) an eine Funktion übergeben werden, ohne dass des Aufrufers die-ID mithilfe der ineineZeichenfolgezukonvertieren **MAKEINTRESOURCE** Makro.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../atl/atl-class-overview.md)   

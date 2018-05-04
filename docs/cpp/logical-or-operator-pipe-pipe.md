@@ -1,12 +1,9 @@
 ---
 title: 'Logischer OR -Operator: || | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '||'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-or-operator-"></a>Logischer OR-Operator: ||
 ## <a name="syntax"></a>Syntax  
@@ -56,7 +51,7 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  Im Beispiel oben, wenn `x` entweder gleich `w`, `y` oder `z` ist, wird das zweite Argument für die `printf`-Funktion mit "true" ausgewertet, und der Wert 1 wird ausgegeben. Andernfalls wird dies mit "false" ausgewertet, und der Wert 0 (null) wird ausgegeben. Sobald eine der Bedingungen mit dem Ergebnis "true" ausgewertet wird, wird die Auswertung beendet.  
   
-## <a name="operator-keyword-for-124124"></a>Operator-Schlüsselwort für &#124; &#124;  
+## <a name="operator-keyword-for-124124"></a>Operator-Schlüsselwort für&#124;&#124;  
  Die **oder** Operator ist die textentsprechung von `||`. Es gibt zwei Möglichkeiten, den Zugriff auf die **oder** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
 ## <a name="example"></a>Beispiel  

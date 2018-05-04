@@ -2,12 +2,9 @@
 title: -Yc (vorkompilierte Headerdatei erstellen) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
 - /yc
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f26121c80378f4317d02f51582ad67033972765
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (vorkompilierten Headerdatei erstellen)
 Weist den Compiler an, eine vorkompilierte Headerdatei (.pch) zu erstellen, die den Zustand der Kompilierung zu einem bestimmten Zeitpunkt darstellt.  
@@ -42,7 +37,7 @@ Weist den Compiler an, eine vorkompilierte Headerdatei (.pch) zu erstellen, die 
 ## <a name="syntax"></a>Syntax  
   
 > __"/ Yc"__
-> __"/ Yc"__*Dateiname*  
+>  __"/ Yc"__*Dateiname*  
   
   
 ## <a name="arguments"></a>Argumente  
@@ -60,7 +55,7 @@ Weist den Compiler an, eine vorkompilierte Headerdatei (.pch) zu erstellen, die 
   
  Weitere Informationen zu vorkompilierten Headern finden Sie unter:  
   
--   [/ Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)  
   

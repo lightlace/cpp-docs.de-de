@@ -1,30 +1,25 @@
 ---
-title: "-Kernel (Kernel erstellen Modus binär) | Microsoft Docs"
-ms.custom: 
+title: -Kernel (Kernel erstellen Modus binär) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Binary für den Kernelmodus erstellen)
 Erstellt eine Binärdatei, die im Kernel von Windows ausgeführt werden kann.  
@@ -36,7 +31,7 @@ Erstellt eine Binärdatei, die im Kernel von Windows ausgeführt werden kann.
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **/ Kernel für den**  
+ **/kernel**  
  Der Code im aktuellen Projekt wird kompiliert und verknüpft werden anhand eines Satzes von Regeln der C++-Sprache, die auf Code beziehen, die im Kernel-Modus ausgeführt wird.  
   
  **/Kernel-**  
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  Einige der folgenden Kombinationen von der Zielarchitektur und **/arch** Option löst einen Fehler aus, wenn bei Verwendung **/Kernel für den**:  
   
--   **/ arch: {SSE &#124; SSE2 &#124; AVX}** X86 werden nicht unterstützt. Nur **/arch:IA32** wird unterstützt, wobei **/Kernel für den** auf X86.  
+-   **/ arch: {SSE&#124;SSE2&#124;AVX}** X86 werden nicht unterstützt. Nur **/arch:IA32** wird unterstützt, wobei **/Kernel für den** auf X86.  
   
 -   **/ arch: AVX** wird nicht unterstützt, mit **/Kernel für den** auf X64.  
   

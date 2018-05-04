@@ -1,12 +1,9 @@
 ---
-title: "Optionen, ATL-Assistent für Active Server Page-Komponenten | Microsoft Docs"
-ms.custom: 
+title: Optionen, ATL-Assistent für Active Server Page-Komponenten | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 31549c812b4f523cb8026a0d0b15ae60e31cd1f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Optionen, ATL-Assistent für Active Server Page-Komponenten
 Verwenden Sie diese Seite des ATL-Assistenten für Active Server Page-Komponente, um Effizienz und Fehler-Unterstützung für das Objekt zu entwerfen.  
@@ -41,7 +36,7 @@ Verwenden Sie diese Seite des ATL-Assistenten für Active Server Page-Komponente
 |------------|-----------------|  
 |`Single`|Gibt an, dass das Objekt der einzelne Threadingmodell verwendet. In den einzelnen Threadingmodell wird ein Objekt immer im primären COM-Thread ausgeführt. Finden Sie unter [Singlethreaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) und [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) für Weitere Informationen.|  
 |**Apartment**|Gibt an, dass das Objekt das Apartmentthreadingmodell verwendet. Entspricht dem Threadapartment. Jedes Objekt ein Singlethread-Apartment-Komponente ist ein Apartment für den Thread, für die Lebensdauer des Objekts zugewiesen. Allerdings können mehrere Threads für mehrere Objekte verwendet werden. Jedes Apartment für einen bestimmten Thread gebunden ist, und es wurde ein Nachrichtensystem für Windows (Standard).<br /><br /> Finden Sie unter [Singlethreaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) für Weitere Informationen.|  
-|**Both**|Gibt an, dass das Objekt Apartment oder Freethreadings, kann je nachdem, welche Art von einem Thread erstellt werden wird.|  
+|**Beide**|Gibt an, dass das Objekt Apartment oder Freethreadings, kann je nachdem, welche Art von einem Thread erstellt werden wird.|  
 |**Frei**|Gibt an, dass das Objekt Freethreadings verwendet. Freethreadings ist gleichbedeutend mit einem multithread Apartmentmodell. Finden Sie unter [Multithread-Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693421) für Weitere Informationen.|  
 |**Neutral**|Gibt an, dass das Objekt die Richtlinien für Multithread-Apartments folgt, aber sie können für jede Art von Thread ausgeführt.|  
   

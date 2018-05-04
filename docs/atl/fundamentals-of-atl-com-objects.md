@@ -2,12 +2,9 @@
 title: Grundlagen von ATL-COM-Objekten | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Grundlagen von ATL-COM-Objekten
 Die folgende Abbildung zeigt die Beziehung zwischen Klassen und Schnittstellen, die zum Definieren eines ATL-COM-Objekts verwendet werden.  
@@ -36,7 +31,7 @@ Die folgende Abbildung zeigt die Beziehung zwischen Klassen und Schnittstellen, 
 > [!NOTE]
 >  Dieses Diagramm zeigt, dass `CComObject` stammt aus `CYourClass` während `CComAggObject` und `CComPolyObject` enthalten `CYourClass` als einer Membervariablen gespeichert.  
   
- Es gibt drei Möglichkeiten zum Definieren eines ATL-COM-Objekts. Die standard-Option ist die Verwendung der `CComObject` Klasse abgeleitet ist `CYourClass`. Die zweite Möglichkeit besteht, erstellen Sie ein zusammengesetztes Objekt mithilfe der `CComAggObject` Klasse. Die dritte Option ist die Verwendung der `CComPolyObject` Klasse. `CComPolyObject`fungiert als eine hybride: ordnungsgemäß als eine `CComObject` Klasse oder als eine `CComAggObject` -Klasse, je nachdem, wie es zuerst erstellt wird. Weitere Informationen zur Verwendung der `CComPolyObject` Klasse, finden Sie unter [CComPolyObject Klasse](../atl/reference/ccompolyobject-class.md).  
+ Es gibt drei Möglichkeiten zum Definieren eines ATL-COM-Objekts. Die standard-Option ist die Verwendung der `CComObject` Klasse abgeleitet ist `CYourClass`. Die zweite Möglichkeit besteht, erstellen Sie ein zusammengesetztes Objekt mithilfe der `CComAggObject` Klasse. Die dritte Option ist die Verwendung der `CComPolyObject` Klasse. `CComPolyObject` fungiert als eine hybride: ordnungsgemäß als eine `CComObject` Klasse oder als eine `CComAggObject` -Klasse, je nachdem, wie es zuerst erstellt wird. Weitere Informationen zur Verwendung der `CComPolyObject` Klasse, finden Sie unter [CComPolyObject Klasse](../atl/reference/ccompolyobject-class.md).  
   
  Bei Verwendung von standard ATL-COM-verwenden Sie zwei Objekte: eine äußere Objekt und eine innere Objekt. Externe Clients auf die Funktionalität des inneren Objekts zugreifen, durch die Wrapperfunktionen, die in das äußere Objekt definiert sind. Das äußere Objekt ist vom Typ `CComObject`.  
   

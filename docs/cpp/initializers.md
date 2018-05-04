@@ -1,12 +1,9 @@
 ---
 title: Initialisierer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>Initialisierer
 Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variablen in diesen Kontexten initialisieren:  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>Standardinitialisierung  
+### <a name="default_initialization"></a> Standardinitialisierung  
  Die Standardinitialisierung für Klassen, Strukturen und Unions ist die Initialisierung mit einem Standardkonstruktor. Der Standardkonstruktor kann aufgerufen werden, indem kein Initialisierungsausdruck verwendet wird oder mithilfe des `new`-Schlüsselworts:  
   
 ```cpp  
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>Aggregatinitialisierung  
+### <a name="agginit"></a> Aggregatinitialisierung  
  Die Aggregatinitialisierung ist eine Form der Listeninitialisierung für Arrays oder Klassentypen (häufig Strukturen oder Unions), die Folgendes aufweisen:  
   
 -   Keine private- oder protected-Member  
@@ -531,7 +526,7 @@ int main()
  ![Entscheidungsdiagramm zur Initialisierung von Verweistypen](../cpp/media/vc38s71.gif "vc38S71")  
 Entscheidungsdiagramm zur Initialisierung von Verweistypen  
   
- Verweise auf `volatile` Typen (deklariert als `volatile` *Typename*  **&**  *Bezeichner*) initialisiert werden kann, mit `volatile` Objekte des gleichen Typs oder mit Objekten, die nicht als deklariert worden sein `volatile`. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename*  **&**  *Bezeichner* ) initialisiert werden kann, mit **const** Objekte desselben Typs (oder, das eine Konvertierung in diesen Typ oder mit Objekten, die nicht als deklariert worden sein **const**). Sie können jedoch nicht mit `volatile`-Objekten dieses Typs initialisiert werden.  
+ Verweise auf `volatile` Typen (deklariert als `volatile` *Typename *** &** *Bezeichner*) initialisiert werden kann, mit `volatile` Objekte desselben Typs oder mit Objekte, die nicht als deklariert worden sein `volatile`. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename *** &** *Bezeichner*) werden können Initialisiert mit **const** Objekte desselben Typs (oder, das eine Konvertierung in diesen Typ oder mit Objekten, die nicht als deklariert worden sein **const**). Sie können jedoch nicht mit `volatile`-Objekten dieses Typs initialisiert werden.  
   
  Verweise, die entweder mit nicht qualifiziert sind die **const** oder `volatile` Schlüsselwort kann nur mit Objekten, die als weder deklariert initialisiert werden **const** noch `volatile`.  
   

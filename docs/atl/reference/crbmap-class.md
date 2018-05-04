@@ -1,12 +1,9 @@
 ---
 title: CRBMap Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32b21c8785bb5e28058c51f2345c5ffcb6de1f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmap-class"></a>CRBMultiMap-Klasse
 Diese Klasse stellt eine Zuordnungsstruktur mithilfe einer Binärstruktur Rot Schwarz.  
@@ -76,13 +71,13 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMap::SetAt](#setat)|Rufen Sie diese Methode zum Einfügen von einer Element-Paar in der Zuordnung.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CRBMap`bietet Unterstützung für ein Mapping-Array eines angegebenen Typs, verwalten ein geordnetes Array von Schlüsselelemente und die zugehörigen Werte. Jeder Schlüssel kann nur einen zugeordneten Wert aufweisen. Elemente (bestehend aus einem Schlüssel und Wert) werden in einer binären Struktur gespeichert-Struktur unter Verwendung der [CRBMap::SetAt](#setat) Methode. Elemente können entfernt werden, mithilfe der [CRBMap::RemoveKey](#removekey) -Methode, die löscht das Element mit dem angegebenen Schlüsselwert.  
+ `CRBMap` bietet Unterstützung für ein Mapping-Array eines angegebenen Typs, verwalten ein geordnetes Array von Schlüsselelemente und die zugehörigen Werte. Jeder Schlüssel kann nur einen zugeordneten Wert aufweisen. Elemente (bestehend aus einem Schlüssel und Wert) werden in einer binären Struktur gespeichert-Struktur unter Verwendung der [CRBMap::SetAt](#setat) Methode. Elemente können entfernt werden, mithilfe der [CRBMap::RemoveKey](#removekey) -Methode, die löscht das Element mit dem angegebenen Schlüsselwert.  
   
  Die Aufgabenstruktur erfolgt möglich mit Methoden wie z. B. [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), und [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue).  
   
  Die `KTraits` und `VTraits` Parameter sind Traits-Klassen, die keinen zusätzlichen Code erforderlich, um die Elemente kopiert oder verschoben enthalten.  
   
- `CRBMap`stammt aus [CRBTree](../../atl/reference/crbtree-class.md), die eine Binärstruktur mit dem roten Schwarz-Algorithmus implementiert. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) ist eine Variante, die mehrere Werte für jeden Schlüssel zulässt. Es zu abgeleitet wird `CRBTree`, und gibt so viele Funktionen mit frei `CRBMap`.  
+ `CRBMap` stammt aus [CRBTree](../../atl/reference/crbtree-class.md), die eine Binärstruktur mit dem roten Schwarz-Algorithmus implementiert. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) ist eine Variante, die mehrere Werte für jeden Schlüssel zulässt. Es zu abgeleitet wird `CRBTree`, und gibt so viele Funktionen mit frei `CRBMap`.  
   
  Eine Alternative für beide `CRBMap` und `CRBMultiMap` angeboten wird, durch die [CAtlMap](../../atl/reference/catlmap-class.md) Klasse. Wenn nur eine kleine Anzahl von Elementen gespeichert werden muss, können Sie verwenden die [CSimpleMap](../../atl/reference/csimplemap-class.md) stattdessen.  
   
@@ -96,7 +91,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-##  <a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>  CRBMap::CRBMap  
  Der Konstruktor.  
   
 ```
@@ -115,7 +110,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>  CRBMap:: ~ CRBMap  
  Der Destruktor.  
   
 ```
@@ -127,7 +122,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  Finden Sie in der Dokumentation für die Basisklasse [CRBTree](../../atl/reference/crbtree-class.md) Informationen zu anderen Methoden zur Verfügung.  
   
-##  <a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>  CRBMap::Lookup  
  Rufen Sie diese Methode zum Nachschlagen der Schlüssel oder Werte in der `CRBMap` Objekt.  
   
 ```
@@ -152,7 +147,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMap::RemoveKey  
  Rufen Sie diese Methode zum Entfernen eines Elements aus der `CRBMap` Objekt anhand des angegebenen Schlüssels.  
   
 ```
@@ -172,7 +167,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>  CRBMap::SetAt  
  Rufen Sie diese Methode zum Einfügen von einer Element-Paar in der Zuordnung.  
   
 ```
@@ -192,7 +187,7 @@ POSITION SetAt(
  Gibt die Position des Schlüssel/Wert-Element-Paar in der `CRBMap` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- `SetAt`ersetzt ein vorhandenes Element, wenn ein übereinstimmender Schlüssel gefunden wird. Wenn der Schlüssel nicht gefunden wird, wird ein neues Schlüssel/Wert-Paar erstellt.  
+ `SetAt` ersetzt ein vorhandenes Element, wenn ein übereinstimmender Schlüssel gefunden wird. Wenn der Schlüssel nicht gefunden wird, wird ein neues Schlüssel/Wert-Paar erstellt.  
   
  Finden Sie in der Dokumentation für die Basisklasse [CRBTree](../../atl/reference/crbtree-class.md) Informationen zu anderen Methoden zur Verfügung.  
   

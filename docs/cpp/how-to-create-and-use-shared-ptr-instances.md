@@ -1,27 +1,22 @@
 ---
 title: 'Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen | Microsoft Docs'
-ms.custom: 
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdabfad3d1b4ae6ee07a8d9e660ab31cbdc1df03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Gewusst wie: Erstellen und Verwenden von shared_ptr-Instanzen
 Der Typ `shared_ptr` ist ein intelligenter Zeiger in der C++-Standardbibliothek für Szenarien, in denen möglicherweise mehrere Besitzer die Lebensdauer des Objekts im Arbeitsspeicher verwalten müssen. Nachdem Sie einen `shared_ptr` initialisiert haben, können Sie ihn kopieren, als Wert an Funktionsargumente übergeben oder anderen `shared_ptr`-Instanzen zuweisen. Alle Instanzen zeigen auf dasselbe Objekt und greifen gemeinsam auf einen "Kontrollblock" zu, der den Verweiszähler erhöht bzw. verringert, wenn ein neuer `shared_ptr` hinzugefügt wird, den Gültigkeitsbereich verlässt oder zurückgesetzt wird. Wenn der Verweiszähler Null erreicht, löscht der Kontrollblock die Speicherressource und sich selbst.  
@@ -41,7 +36,7 @@ Der Typ `shared_ptr` ist ein intelligenter Zeiger in der C++-Standardbibliothek 
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
 ## <a name="example"></a>Beispiel  
- `shared_ptr`Dieser ist ist auch in C++-Standardbibliothek Containern hilfreich, wenn Sie die Algorithmen verwenden, die Elemente kopiert. Sie können Elemente in einem `shared_ptr` umschließen und sie dann in andere Container kopieren. Voraussetzung ist, dass der zugrunde liegende Arbeitsspeicher solange gültig ist, wie Sie ihn benötigen, und nicht länger. Im folgenden Beispiel wird die Verwendung des `replace_copy_if`-Algorithmus für `shared_ptr`-Instanzen in einem Vektor dargestellt.  
+ `shared_ptr` Dieser ist ist auch in C++-Standardbibliothek Containern hilfreich, wenn Sie die Algorithmen verwenden, die Elemente kopiert. Sie können Elemente in einem `shared_ptr` umschließen und sie dann in andere Container kopieren. Voraussetzung ist, dass der zugrunde liegende Arbeitsspeicher solange gültig ist, wie Sie ihn benötigen, und nicht länger. Im folgenden Beispiel wird die Verwendung des `replace_copy_if`-Algorithmus für `shared_ptr`-Instanzen in einem Vektor dargestellt.  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   

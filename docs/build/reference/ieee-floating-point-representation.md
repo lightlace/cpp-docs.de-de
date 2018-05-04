@@ -1,13 +1,10 @@
 ---
 title: IEEE-Gleitkommadarstellung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d209d1c2a7429515383f8ebe80c621d6f2b15890
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE-Gleitkommadarstellung
 Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt drei interne Varianten von reelle Zahlen ein. Echte\*4 und real\*8 in Visual C++ verwendet werden. Echte\*4 wird mit dem Wort deklariert **"float"**. Echte\*8 wird mit dem Wort deklariert **doppelte**. In der Windows-32-Bit-Programmierung die `long double` Datentyp zugeordnet **doppelte**. Es gibt allerdings Assemblysprache-Unterstützung für Berechnungen mit echten * 10-Datentyp.  
@@ -39,8 +34,8 @@ Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt 
   
 |Wert|Gespeichert als|  
 |-----------|---------------|  
-|real*4|Vorzeichenbit, 8-Bit-Exponenten, 23-Bit-Mantisse|  
-|real*8|Vorzeichenbit, 11-Bit-Exponenten, 52-Bit-Mantisse|  
+|Real * 4|Vorzeichenbit, 8-Bit-Exponenten, 23-Bit-Mantisse|  
+|Real * 8|Vorzeichenbit, 11-Bit-Exponenten, 52-Bit-Mantisse|  
 |Real * 10|Vorzeichenbit, 15-Bit-Exponenten, 64-Bit-Mantisse|  
   
  Real * 4 und real\*8 Formate, es wird eine führende 1 in der Mantisse, die nicht im Arbeitsspeicher gespeichert, sodass die Mantissen eigentlich 24 bzw. 53 Bits lang sind, obwohl nur 23 oder 52 Bits gespeichert werden. Die tatsächlichen\*10 Format Bits gespeichert.  
@@ -61,10 +56,10 @@ Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt 
   
  Das Format hat, für die verschiedenen Größen wie folgt:  
   
-|Format|BYTE 1|BYTE 2|BYTE 3|BYTE 4|...|BYTE-n|  
+|Format|1-BYTE|2-BYTE|BYTE 3|4-BYTE|...|BYTE-n|  
 |------------|------------|------------|------------|------------|---------|------------|  
-|real*4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|Real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
+|Real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |Real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
  `S` Stellt das Vorzeichenbit der `X`des sind die Exponent Bits und die `M`des Mantissen-Bits sind. Beachten Sie, dass das höchstwertige Bit in Echtzeit voraussetzt, dass * 4 und real\*8 formatiert, aber als "1" in BYTE 3 des wahren vorhanden ist\*10 Format.  

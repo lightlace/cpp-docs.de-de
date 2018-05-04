@@ -1,12 +1,9 @@
 ---
 title: 'Dereferenzierungsoperator: * | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-operator-"></a>Dereferenzierungsoperator: *
 ## <a name="syntax"></a>Syntax  
@@ -37,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. konvertiert einen Zeigerwert in einen l-Wert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der  **\***  -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator Multiplikation ist.  
+ Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. konvertiert einen Zeigerwert in einen l-Wert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der **\*** -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator Multiplikation ist.  
   
  Wenn der Operand auf eine Funktion verweist, ist das Ergebnis ein Funktionsbezeichner. Wenn an einen Speicherort verwiesen wird, ist das Ergebnis ein l-Wert, der den Speicherort festlegt.  
   
