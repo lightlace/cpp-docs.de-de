@@ -1,5 +1,5 @@
 ---
-title: Laufzeitroutinen nach Kategorie | Microsoft-Dokumentation
+title: Universelle C-Laufzeitroutinen nach Kategorie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>Laufzeitroutinen nach Kategorie
+# <a name="universal-c-runtime-routines-by-category"></a>Universelle C-Laufzeitroutinen nach Kategorie
 
-In diesem Abschnitt werden die Microsoft-Laufzeitbibliotheksroutinen nach Kategorie aufgelistet und beschrieben. Einige Routinen sind in mehr als einer Kategorie aufgeführt, damit sie leichter gefunden werden können. Routinen für Multibyte-Zeichensätze und Breitzeichenroutinen sind mit Einzelbyte-Zeichensatzentsprechungen gruppiert, falls diese vorhanden sind.
+In diesem Abschnitt werden die universellen C-Laufzeitbibliotheksroutinen (UCRT) nach Kategorie aufgelistet und beschrieben. Einige Routinen sind in mehr als einer Kategorie aufgeführt, damit sie leichter gefunden werden können. Routinen für Multibyte-Zeichensätze und Breitzeichenroutinen sind mit Einzelbyte-Zeichensatzentsprechungen gruppiert, falls diese vorhanden sind.
 
-## <a name="routine-categories"></a>Kategorien der Routinen
+## <a name="ucrt-library-routine-categories"></a>Kategorien der UCRT-Bibliotheksroutinen
+
+Die Hauptkategorien der UCRT-Bibliotheksroutinen sind:
 
 |||
 |-|-|

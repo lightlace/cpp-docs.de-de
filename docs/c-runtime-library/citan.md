@@ -1,13 +1,10 @@
 ---
 title: _CItan | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/11/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CItan
 apilocation:
@@ -28,35 +25,38 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42bf2d2f7d38779dbed78414fcd94dc33ab82480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f67c7303bd20b4b9b6088b9107e1a60ffd19f2b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="citan"></a>_CItan
-Berechnet den Tangens des obersten Werts im Stapel.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __cdecl _CItan();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Version der `tan`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Die Funktion beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.  
-  
- Der resultierende Wert wird oben auf dem Stapel abgelegt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattform:** x86  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Berechnet den Tangens des obersten Werts im Gleitkommastapel.
+
+## <a name="syntax"></a>Syntax
+
+```C
+void __cdecl _CItan();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Version der [tan](../c-runtime-library/reference/tan-tanf-tanl.md)-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Die Funktion beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
+
+Der resultierende Wert wird oben auf dem Gleitkommastapel abgelegt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Plattform:** x86
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

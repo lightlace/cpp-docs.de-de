@@ -1,27 +1,27 @@
 ---
 title: UWP-Apps, Windows-Runtime und die C-Laufzeit | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9e6053cdcd7797319379e1e5e7290bcff373b6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP-Apps, Windows-Runtime und die C-Laufzeit
 
@@ -31,7 +31,7 @@ Die folgenden CRT-Funktionen werden durch die Windows-Runtime nicht unterstützt
 
 - Die meisten CRT-Funktionen, die mit nicht unterstützten Funktionen in Zusammenhang stehen.
 
-   Beispielsweise kann eine UWP-App mithilfe der `exec`- und `spawn`-Serie von Routinen keinen Prozess erstellen.
+   Beispielsweise kann eine UWP-App mithilfe der **exec**- und **spawn**-Serie von Routinen keinen Prozess erstellen.
 
    Wenn eine CRT-Funktion in einer UWP-App nicht unterstützt wird, ist dies im zugehörigen Referenzartikel vermerkt.
 
@@ -58,4 +58,7 @@ Die folgenden CRT-Funktionen werden durch die Windows-Runtime nicht unterstützt
 Eine vollständige Liste der CRT-Funktionen, die in einer UWP-App nicht verfügbar sind, und Vorschläge für alternative Funktionen finden Sie unter [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Kompatibilität](../c-runtime-library/compatibility.md) [CRT-Funktionen, die nicht von Windows-Runtime unterstützt werden](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)
+
+[Kompatibilität](../c-runtime-library/compatibility.md)<br/>
+[CRT-Funktionen, die nicht von Windows-Runtime unterstützt werden](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

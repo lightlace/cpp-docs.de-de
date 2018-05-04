@@ -1,12 +1,12 @@
 ---
 title: Ausnahmebehandlungsroutinen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.exceptions
@@ -15,30 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95ecbc69dd9cbd86bd7891c79f115442f659ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af35bc623b2646e370c9b72ab39fce6e6413081
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="exception-handling-routines"></a>Ausnahmebehandlungsroutinen
-Verwenden Sie die C++-Ausnahmebehandlungsfunktionen, um nach unerwarteten Ereignissen während der Programmausführung eine Wiederherstellung durchzuführen.  
-  
-### <a name="exception-handling-functions"></a>Ausnahmebehandlungsfunktionen  
-  
-|Funktion|Mit|  
-|--------------|---------|  
-|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Behandelt Win32-Ausnahmen (C-strukturierte Ausnahmen) als C++-typisierte Ausnahmen.|  
-|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Installiert Ihre eigene Beendigungsroutine, die von `terminate` aufgerufen werden soll.|  
-|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Installiert Ihre eigene Beendigungsfunktion, die von `unexpected` aufgerufen werden soll.|  
-|[terminate](../c-runtime-library/reference/terminate-crt.md)|Wird nach dem Auslösen einer Ausnahme unter bestimmten Umständen automatisch aufgerufen. Die Funktion `terminate` ruft `abort` oder eine Funktion auf, die Sie mit `set_terminate` angeben.|  
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Ruft `terminate` oder eine Funktion auf, die Sie mit `set_unexpected` angeben. Die Funktion `unexpected` wird in der aktuellen Microsoft C++-Ausnahmebehandlungsimplementierung nicht verwendet.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)
+
+Verwenden Sie die C++-Ausnahmebehandlungsfunktionen, um nach unerwarteten Ereignissen während der Programmausführung eine Wiederherstellung durchzuführen.
+
+## <a name="exception-handling-functions"></a>Ausnahmebehandlungsfunktionen
+
+|Funktion|Mit|
+|--------------|---------|
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Behandelt Win32-Ausnahmen (C-strukturierte Ausnahmen) als C++-typisierte Ausnahmen.|
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Installiert Ihre eigene Beendigungsroutine, die von **terminate** aufgerufen werden soll|
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Installiert Ihre eigene Beendigungsfunktion, die von **unexpected** aufgerufen werden soll|
+|[terminate](../c-runtime-library/reference/terminate-crt.md)|Wird nach dem Auslösen einer Ausnahme unter bestimmten Umständen automatisch aufgerufen. Die **terminate**-Funktion ruft **abort** oder eine Funktion auf, die Sie mithilfe von **set_terminate** festlegen können.|
+|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Ruft **terminate** oder eine Funktion auf, die Sie mithilfe von **set_unexpected** festlegen können. Die Funktion **unexpected** wird in der aktuellen Microsoft C++-Ausnahmebehandlungsimplementierung nicht verwendet.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
