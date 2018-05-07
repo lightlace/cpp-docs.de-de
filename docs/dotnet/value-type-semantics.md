@@ -1,13 +1,10 @@
 ---
 title: Wert Typsemantik | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Werttypsemantik
 Werttypsemantik haben sich von Managed Extensions für C++ in Visual C++ geändert.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Geerbte virtuelle Methoden aufrufen  
- `Form (1)`ist die kanonische, und es ist ausreichend gut verstanden, außer wenn jemand versucht, auf eine geerbte virtuelle Methode aufrufen, wie z. B. `ToString()`. Zum Beispiel:  
+ `Form (1)` ist die kanonische, und es ist ausreichend gut verstanden, außer wenn jemand versucht, auf eine geerbte virtuelle Methode aufrufen, wie z. B. `ToString()`. Zum Beispiel:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Wir möchten gerne umschließen eine kleine systemeigene Klasse ein Werttyp, statt ein Verweistyp eine doppelte Heapzuweisung zu vermeiden: systemeigenen Heap, die den systemeigenen Typ und dem CLR-Heap auf den verwalteten Wrapper. Umschließen einer systemeigenen Klasse innerhalb eines Werttyps ermöglicht Ihnen, zu den verwalteten Heap zu vermeiden, bietet jedoch keine Möglichkeit, die Freigabe von Speicher auf dem systemeigenen Heap zu automatisieren. Verweistypen sind die einzigen verwalteten Typen, in dem nicht triviale systemeigene Klassen zu umschließen.  
   
 ## <a name="interior-pointers"></a>Inneren Zeigern  
- `Form (2)`und `Form (3)` höher können beheben nahezu alles in dieser Welt oder bei der nächsten (d. h. alles, was verwaltetem oder systemeigenem). Deshalb sind z. B. Folgendes in Managed Extensions zulässig:  
+ `Form (2)` und `Form (3)` höher können beheben nahezu alles in dieser Welt oder bei der nächsten (d. h. alles, was verwaltetem oder systemeigenem). Deshalb sind z. B. Folgendes in Managed Extensions zulässig:  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`und `Form (3)` Zuordnen von Managed Extensions `interior_ptr<V>`. `Form (4)`ist ein Trackinghandle. Behandelt das gesamte Objekt, das auf dem verwalteten Heap mittels Boxing konvertiert wurde. Er wird in der neuen Syntax in übersetzt eine `V^`,  
+ `Form (2)` und `Form (3)` Zuordnen von Managed Extensions `interior_ptr<V>`. `Form (4)` ist ein Trackinghandle. Behandelt das gesamte Objekt, das auf dem verwalteten Heap mittels Boxing konvertiert wurde. Er wird in der neuen Syntax in übersetzt eine `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

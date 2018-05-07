@@ -1,13 +1,10 @@
 ---
 title: 'Datensatzfeldaustausch: Arbeiten mit Assistenten-Code | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Datensatzfeldaustausch: Arbeiten mit Assistenten-Code
 In diesem Thema wird erläutert, den Code, der MFC-Anwendung-Assistent und **Klasse hinzufügen** (wie in beschrieben [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zur Unterstützung von RFX und wie Sie möchten möglicherweise ändern, Code zu schreiben.  
@@ -47,11 +42,11 @@ In diesem Thema wird erläutert, den Code, der MFC-Anwendung-Assistent und **Kla
   
 -   Deklarationen von der Recordset-Felddatenmember der Recordset-Klasse  
   
--   Eine Überschreibung der`CRecordset::DoFieldExchange`  
+-   Eine Überschreibung der `CRecordset::DoFieldExchange`  
   
 -   Initialisierung der Recordset-Felddatenmember im Konstruktor Recordset-Klasse  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Feld Datenmemberdeklarationen  
+##  <a name="_core_the_field_data_member_declarations"></a> Feld Datenmemberdeklarationen  
  Die Assistenten schreiben eine Klassendeklaration Recordset in einem .h-Datei, die folgender Klasse ähnelt `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Beachten Sie, die der Assistent überschreibt die `DoFieldExchange` Memberfunktion der Klasse `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange-Überschreibung  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange-Überschreibung  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) bildet das Kernstück von RFX. Das Framework ruft `DoFieldExchange` jederzeit Daten aus der Datenquelle zum Recordset transferiert werden muss. `DoFieldExchange`Außerdem unterstützt das Abrufen von Informationen über Felddatenmember durch die [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) und [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) Memberfunktionen.  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) bildet das Kernstück von RFX. Das Framework ruft `DoFieldExchange` jederzeit Daten aus der Datenquelle zum Recordset transferiert werden muss. `DoFieldExchange` Außerdem unterstützt das Abrufen von Informationen über Felddatenmember durch die [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) und [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) Memberfunktionen.  
   
  Die folgenden `DoFieldExchange` Außerkraftsetzung ist für die `CSections` Klasse. Der Assistent schreibt die Funktion in der CPP-Datei für die Recordsetklasse.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   Die `pFX` Zeiger auf eine [CDBException](../../mfc/reference/cfieldexchange-class.md) -Objekt, das das Framework beim Aufruf übergeben wird `DoFieldExchange`. Die `CFieldExchange` Objekt gibt an, den Vorgang, `DoFieldExchange` ausführen, der die Richtung der Übertragung und andere Kontextinformationen ist.  
   
-##  <a name="_core_the_recordset_constructor"></a>Recordset-Konstruktor  
+##  <a name="_core_the_recordset_constructor"></a> Recordset-Konstruktor  
  Der recordsetkonstruktor, den die Assistenten schreiben enthält zwei Dinge, die im Zusammenhang mit RFX:  
   
 -   Eine Initialisierung für jedes felddatenelement  

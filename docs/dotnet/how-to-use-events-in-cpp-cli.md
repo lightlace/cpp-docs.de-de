@@ -1,30 +1,25 @@
 ---
 title: 'Vorgehensweise: Verwenden von Ereignissen in C + c++ / CLI | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d55adef749f66038b16d0e327e687e64227a5e93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 079f5fccfbefea98b44f49fb06bee8199436a1b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-events-in-ccli"></a>Gewusst wie: Verwenden von Ereignissen in C++/CLI
 In diesem Artikel wird gezeigt, wie eine Schnittstelle, die ein Ereignis und die Funktion zum Aufrufen dieses Ereignis deklariert, und die Klasse und dem angegebenen Ereignishandler, die die Schnittstelle implementieren.  

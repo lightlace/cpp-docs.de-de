@@ -1,30 +1,25 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften | Microsoft Docs"
-ms.custom: 
+title: 'MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften
 Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benutzerdefinierte Eigenschaften von noch nicht implementiert werden, die `COleControl` Klasse. Eine benutzerdefinierte Eigenschaft wird verwendet, um einen bestimmten Zustand oder die Darstellung eines ActiveX-Steuerelements an ein Programmierer, die mithilfe des Steuerelements verfügbar zu machen.  
@@ -53,7 +48,7 @@ Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benu
   
      Parametrisierte Implementierung wird von den Assistenten zum Hinzufügen einer Eigenschaft unterstützt. Eine parametrisierte Eigenschaft (manchmal eine Array-Eigenschaft genannt) kann verwendet werden, um einen Satz von Werten über eine einzelne Eigenschaft des Steuerelements zugreifen. Die Dispatch-Zuordnungsmakros Eintrag für diese Implementierung ist `DISP_PROPERTY_PARAM`. Weitere Informationen zum Implementieren dieses Typs finden Sie unter [Implementieren einer parametrisierten Eigenschaft](../mfc/mfc-activex-controls-advanced-topics.md) Artikel ActiveX-Steuerelemente: Weiterführende Themen.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>Mithilfe der Eigenschaft Assistenten zum Hinzufügen zum Hinzufügen einer benutzerdefinierten Eigenschaft  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Mithilfe der Eigenschaft Assistenten zum Hinzufügen zum Hinzufügen einer benutzerdefinierten Eigenschaft  
  Das folgende Verfahren veranschaulicht das Hinzufügen einer benutzerdefinierten Eigenschaft, CircleOffset, die die Implementierung der Get/Set-Methoden verwendet. Die benutzerdefinierte CircleOffset-Eigenschaft kann Benutzer für den Kreis vom Mittelpunkt des umschließenden Rechtecks des Steuerelements den offset des Steuerelements. Das Verfahren zum Hinzufügen von benutzerdefinierten Eigenschaften mit einer Implementierung als Get/Set-Methoden ist sehr ähnlich.  
   
  Dasselbe Verfahren kann auch verwendet werden, andere benutzerdefinierten Eigenschaften hinzufügen, die Sie möchten. Verwenden Sie den benutzerdefinierten Eigenschaft-Namen für die CircleOffset Eigenschaftennamen und die Parameter an.  
@@ -80,7 +75,7 @@ Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benu
   
 9. Klicken Sie auf **Fertig stellen**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>Eigenschaftenänderungen-Assistenten für benutzerdefinierte Eigenschaften hinzufügen  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Eigenschaftenänderungen-Assistenten für benutzerdefinierte Eigenschaften hinzufügen  
  Wenn Sie die benutzerdefinierte CircleOffset-Eigenschaft hinzufügen, den Assistenten zum Hinzufügen einer Eigenschaft ändert den Header (. H) und die Implementierung (. CPP) Dateien von der Control-Klasse.  
   
  Die folgenden Zeilen werden hinzugefügt, um die. H-Datei, um zwei aufgerufenen Funktionen deklarieren `GetCircleOffset` und `SetCircleOffset`:  

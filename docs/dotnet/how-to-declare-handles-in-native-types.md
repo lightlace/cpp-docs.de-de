@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: Deklarieren von Handles in systemeigenen Typen | Microsoft Docs'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 f1_keywords:
 - gcroot
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4573aac37eedecceab861eb41a70fc858b409fec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Gewusst wie: Deklarieren von Handles in systemeigenen Typen
 Einen Handletyp in einen systemeigenen Typ nicht deklariert werden. Vcclr.h stellt die Wrappervorlage als typsicherer `gcroot` zum Verweisen auf ein CLR-Objekt aus dem Heap. Dieser Vorlage können Sie ein virtuelles Handle in einen systemeigenen Typ einbetten und es zu behandeln, als handele es sich um den zugrunde liegenden Typ. In den meisten Fällen können Sie die `gcroot` Objekt als eingebetteten Typ ohne Umwandlung. Allerdings bei [für jedes in](../dotnet/for-each-in.md), müssen Sie `static_cast` um den zugrunde liegenden verwalteten Verweis abzurufen.  

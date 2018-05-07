@@ -1,13 +1,10 @@
 ---
 title: Dialogfelder | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8de283d81aa9d260b891f285f06555dc67895f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes"></a>Dialogfelder
 Anwendungen für Windows an, die häufig mit dem Benutzer in Dialogfeldern kommuniziert. Klasse [CDialog](../mfc/reference/cdialog-class.md) stellt eine Schnittstelle bereit, Verwalten von Dialogfeldern, die Visual C++-Dialog-Editor vereinfacht Dialogfelder entwerfen und erstellen ihre Dialogfeld-Vorlagenressourcen und Code-Assistenten vereinfachen den Prozess zu initialisieren und Überprüfen die Steuerelemente in einem Dialogfeld und die vom Benutzer eingegebenen Werte zu sammeln.  

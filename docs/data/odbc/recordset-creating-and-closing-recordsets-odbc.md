@@ -1,13 +1,10 @@
 ---
-title: "Recordset: Erstellen und Schließen von Recordsets (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Recordset: Erstellen und Schließen von Recordsets (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: Erstellen und Schließen von Recordsets (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -44,7 +39,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   [Wann und wie Sie einem Recordset-Objekt schließen](#_core_closing_a_recordset).  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>Erstellen von Recordsets zur Laufzeit  
+##  <a name="_core_creating_recordsets_at_run_time"></a> Erstellen von Recordsets zur Laufzeit  
  Bevor Sie in Ihrem Programm Recordset-Objekte erstellen können, Schreiben Sie in der Regel anwendungsspezifische Recordset-Klassen. Weitere Informationen über dieses vorausgehenden Schritts finden Sie unter [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  Öffnen Sie ein Dynaset oder Snapshot-Objekt, wenn Sie zum Auswählen von Datensätzen aus einer Datenquelle benötigen. Hängt von der Typ des zu erstellenden Objekts Sie müssen mit den Daten in der Anwendung und auf welche die ODBC-Treiber unterstützt. Weitere Informationen finden Sie unter [Dynaset](../../data/odbc/dynaset.md) und [Momentaufnahme](../../data/odbc/snapshot.md).  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  Die Verbindungszeichenfolge, die Sie während der Entwicklung verwenden möglicherweise nicht die gleiche Verbindungszeichenfolge, die Ihre endgültigen Benutzer benötigen. Ideen zu verallgemeinern Ihre Anwendung in dieser Hinsicht, finden Sie unter [Datenquelle: Verwalten von Verbindungen (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
   
-##  <a name="_core_setting_recordset_options"></a>Festlegen von Optionen für Recordsets  
+##  <a name="_core_setting_recordset_options"></a> Festlegen von Optionen für Recordsets  
  Wenn Sie das Recordset-Objekt erstellt haben, aber vor dem Aufruf **öffnen** zum Auswählen von Datensätzen, sollten Sie einige Optionen steuern das Verhalten des Recordsets. Für alle Recordsets können Sie folgende Aktionen ausführen:  
   
 -   Geben Sie einen [Filter](../../data/odbc/recordset-filtering-records-odbc.md) Datensatzauswahl.  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  Um das Datensatzauswahl auswirken können, müssen Sie diese Optionen festlegen, vor dem Aufrufen der **öffnen** Memberfunktion.  
   
-##  <a name="_core_closing_a_recordset"></a>Schließen ein Recordset  
+##  <a name="_core_closing_a_recordset"></a> Schließen ein Recordset  
  Wenn Sie das Recordset abgeschlossen haben, müssen Sie davon dispose und dafür belegten Speicher.  
   
 #### <a name="to-close-a-recordset"></a>Zum Schließen eines Recordsets  

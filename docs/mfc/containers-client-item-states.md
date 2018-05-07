@@ -1,13 +1,10 @@
 ---
-title: "Container: Client-Element-Zustände | Microsoft Docs"
-ms.custom: 
+title: 'Container: Client-Element-Zustände | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-client-item-states"></a>Container: Client-Element-Zustände
 Dieser Artikel beschreibt die verschiedenen Zustände, die ein Clientelement während seiner Lebensdauer durchläuft.  
@@ -45,7 +40,7 @@ Dieser Artikel beschreibt die verschiedenen Zustände, die ein Clientelement wä
   
  In den Zustand "leer" ist ein Clientelement noch nicht vollständig ein Element. Arbeitsspeicher dafür zugeordnet wurde, aber es wurde noch nicht initialisiert wurde mit Daten für das OLE-Element. Dies ist der Status einer Client-Element befindet sich in, wenn er durch einen Aufruf von erstellt wurde **neue** aber noch nicht im zweiten Schritt der Erstellung der Regel in zwei Schritten durchlaufen hat.  
   
- Im zweiten Schritt ausgeführt, die durch einen Aufruf von `COleClientItem::CreateFromFile` oder ein anderes **Aktivierungsmodus***Xxxx* -Funktion, das Element vollständig erstellt. OLE-Daten (aus einer Datei oder einer anderen Quelle, z. B. der Zwischenablage) zugeordneten der `COleClientItem`-abgeleitetes Objekt. Jetzt ist das Element in den geladenen Zustand.  
+ Im zweiten Schritt ausgeführt, die durch einen Aufruf von `COleClientItem::CreateFromFile` oder ein anderes **Aktivierungsmodus *** Xxxx* -Funktion, das Element vollständig erstellt. OLE-Daten (aus einer Datei oder einer anderen Quelle, z. B. der Zwischenablage) zugeordneten der `COleClientItem`-abgeleitetes Objekt. Jetzt ist das Element in den geladenen Zustand.  
   
  Wenn ein Element wurde wurde in der Server-Fenster geöffnet, anstatt direkt in den Container Dokument geöffnet, ist es im Zustand geöffnet (oder vollständig geöffnet). In diesem Status wird in der Regel eine Schraffur gezeichnet, über die Darstellung des Elements im Fenster "des Containers", um anzugeben, dass das Element an anderer Stelle aktiv ist.  
   

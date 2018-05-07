@@ -2,12 +2,9 @@
 title: 'Datensatzfeldaustausch: Funktionsweise von RFX | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5eac97bb87103bd72dfd721515baf58324fc851f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48cece77101a14efb827e48b53be2f5852df83ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Datensatzfeldaustausch: Funktionsweise von RFX
 In diesem Thema wird der RFX-Prozess beschrieben. Dies ist eine erweiterte abdeckenden Thema:  
@@ -42,7 +37,7 @@ In diesem Thema wird der RFX-Prozess beschrieben. Dies ist eine erweiterte abdec
 > [!NOTE]
 >  Dieses Thema bezieht sich auf von abgeleiteten Klassen `CRecordset` in denen der gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie gesammelte verwenden, wird der Massen-Datensatzfeldaustausch (Bulk-RFX) implementiert. Bulk RFX ähnelt RFX. Um die Unterschiede zu verstehen, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_rfx_and_the_recordset"></a>RFX und Recordsets  
+##  <a name="_core_rfx_and_the_recordset"></a> RFX und Recordsets  
  Das Recordset-Objekt Felddatenmember, gemeinsam bilden Bearbeitungspuffer, der die ausgewählten Spalten eines Datensatzes enthält. Wenn das Recordset zuerst geöffnet wird und zum Lesen des ersten Datensatzes, RFX bindet (verknüpft) ausgewählte jede Spalte an die Adresse des Datenmembers entsprechende Feld. Wenn das Recordset einen Datensatz aktualisiert, ruft RFX ODBC-API-Funktionen, um eine SQL send- **UPDATE** oder **einfügen** Anweisung an den Treiber. RFX verwendet Beleg für den Felddatenmembern an die Spalten zu schreiben.  
   
  Das Framework sichert den Bearbeitungspuffer in bestimmten Phasen, sodass er seinen Inhalt bei Bedarf wiederhergestellt werden kann. RFX sichert den Bearbeitungspuffer, vor dem Hinzufügen eines neuen Datensatzes und bevor Sie einen vorhandenen Datensatz bearbeiten. Bearbeitungspuffer in einigen Fällen, z. B. wiederhergestellt, nachdem ein **Update** Aufruf Folgendes `AddNew`. Der Bearbeitungspuffer wird nicht wiederhergestellt werden, wenn Sie eine neu geänderten Bearbeitungspuffer verwerfen, indem Sie z. B. verschieben zu einem anderen Datensatz vor dem Aufruf **Update**.  
@@ -51,10 +46,10 @@ In diesem Thema wird der RFX-Prozess beschrieben. Dies ist eine erweiterte abdec
   
  Das Außerkraftsetzen des Recordset-Klasse der `DoFieldExchange` wird die gesamte Arbeit, Verschieben von Daten in beide Richtungen. Wie Dialogdatenaustausch (DDX) benötigt RFX Informationen über die Datenmember der Klasse. Der Assistent bietet die erforderlichen Informationen, indem Sie schreiben eine Recordset-spezifische Implementierung der `DoFieldExchange` , basierend auf die Felddaten Member-Namen und Datentypen Sie, mit dem Assistenten angeben.  
   
-##  <a name="_core_the_record_field_exchange_process"></a>RFX-Prozess  
+##  <a name="_core_the_record_field_exchange_process"></a> RFX-Prozess  
  In diesem Abschnitt wird die Abfolge der RFX-Ereignisse beschrieben, wie einem Recordset-Objekt geöffnet ist und wie Sie hinzugefügt haben, aktualisieren und Löschen von Datensätzen. Die Tabelle [Sequenz der RFX-Operationen beim Öffnen eines Recordset](#_core_sequence_of_rfx_operations_during_recordset_open) und die Tabelle [Sequenz der RFX-Operationen beim Scrollen](#_core_sequence_of_rfx_operations_during_scrolling) in diesem Thema zeigen den Prozess RFX Prozesse eine **verschieben**Befehl im Recordset und ein Update verwaltet. Bei diesen Prozessen [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) wird aufgerufen, um viele andere Vorgänge ausführen. Die **M_nOperation** Datenmember der [CDBException](../../mfc/reference/cfieldexchange-class.md) Objekt bestimmt, welcher Vorgang angefordert wird. Sie finden es vielleicht hilfreich, lesen Sie [Recordset: wie Recordsets auswählen von Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) und [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) vor dem Lesen diese Materialien beziehen.  
   
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a>RFX: Binden von Spalten und Parametern  
+###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Binden von Spalten und Parametern  
  Die folgenden RFX-Aktivitäten auftreten, in der Reihenfolge angezeigt, wenn Sie einem Recordset-Objekt aufrufen [öffnen](../../mfc/reference/crecordset-class.md#open) Memberfunktion:  
   
 -   Wenn das Recordset Parameterdatenmember verfügt, das Framework ruft `DoFieldExchange` Parameter Parameterplatzhalter in die Zeichenfolge des Recordsets SQL-Anweisung zu binden. Typabhängige Darstellung des Werts des Parameters, für jeden Platzhalter verwendet wird Daten gefunden, der **wählen** Anweisung. Dies tritt auf, nachdem die SQL-Anweisung vorbereitet ist, aber bevor er ausgeführt wird. Informationen zur Vorbereitung der Anweisung finden Sie unter der **:: SQLPrepare** -Funktion in der ODBC *Programmer's Reference*.  
@@ -65,7 +60,7 @@ In diesem Thema wird der RFX-Prozess beschrieben. Dies ist eine erweiterte abdec
   
  In der folgenden Tabelle veranschaulicht die Abfolge der RFX-Operationen beim Öffnen eines Recordsets.  
   
-### <a name="_core_sequence_of_rfx_operations_during_recordset_open"></a>Reihenfolge der RFX-Operationen beim Öffnen eines Recordsets  
+### <a name="_core_sequence_of_rfx_operations_during_recordset_open"></a> Reihenfolge der RFX-Operationen beim Öffnen eines Recordsets  
   
 |Der Vorgang zum|DoFieldExchange-Vorgang|Datenbank-SQL-Vorgang|  
 |--------------------|-------------------------------|-----------------------------|  
@@ -79,12 +74,12 @@ In diesem Thema wird der RFX-Prozess beschrieben. Dies ist eine erweiterte abdec
   
  Recordsets verwenden ODBCs vorbereitete Ausführung, um zu ermöglichen, schnelle erneutes Abfragen mit der gleichen SQL-Anweisung. Weitere Informationen über die vorbereitete Ausführung finden Sie im ODBC-SDK *Programmer's Reference* in der MSDN Library.  
   
-###  <a name="_mfc_rfx.3a_.scrolling"></a>RFX: Durchführen eines Bildlaufs  
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Durchführen eines Bildlaufs  
  Wenn Sie einen Datensatz zu einem anderen scrollen, um das Framework ruft `DoFieldExchange` zuvor in den Felddatenmembern Werte für den neuen Eintrag gespeicherten Werte zu ersetzen.  
   
  In der folgenden Tabelle veranschaulicht die Abfolge der RFX-Vorgänge, wenn der Benutzer von Datensatz zu Datensatz bewegt.  
   
-### <a name="_core_sequence_of_rfx_operations_during_scrolling"></a>Sequenz der RFX-Vorgänge während des Bildlaufs  
+### <a name="_core_sequence_of_rfx_operations_during_scrolling"></a> Sequenz der RFX-Vorgänge während des Bildlaufs  
   
 |Der Vorgang zum|DoFieldExchange-Vorgang|Datenbank-SQL-Vorgang|  
 |--------------------|-------------------------------|-----------------------------|  
@@ -92,12 +87,12 @@ In diesem Thema wird der RFX-Prozess beschrieben. Dies ist eine erweiterte abdec
 |||2. ODBC ist das Verschieben und in den Daten füllt.|  
 ||3. Beheben Sie die Daten für C++.||  
   
-###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a>RFX: Neue Datensätze hinzufügen und Bearbeiten vorhandener Einträge  
+###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Neue Datensätze hinzufügen und Bearbeiten vorhandener Einträge  
  Wenn Sie einen neuen Datensatz hinzufügen, fungiert das Recordset als Bearbeitungspuffer, um den Inhalt des neuen Datensatzes zu erstellen. Wie beim Hinzufügen von Datensätzen, umfasst das Bearbeiten von Datensätzen ändern der Werte der Felddatenmember der Recordset. Aus der RFX-Perspektive ist die Sequenz wie folgt:  
   
 1.  Rufen Sie des Recordsets [AddNew](../../mfc/reference/crecordset-class.md#addnew) oder [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Memberfunktion führt dazu, dass RFX, den aktuellen Bearbeitungspuffer zu speichern, damit sie später wiederhergestellt werden kann.  
   
-2.  `AddNew`oder **bearbeiten** bereitet die Felder im Bearbeitungspuffer vor, sodass RFX geänderten Felddatenmember erkennen kann.  
+2.  `AddNew` oder **bearbeiten** bereitet die Felder im Bearbeitungspuffer vor, sodass RFX geänderten Felddatenmember erkennen kann.  
   
      Da ein neuer Datensatz keine alten Werte mit neue Werten verglichen wurde `AddNew` legt den Wert für jedes felddatenelement auf eine **PSEUDO_NULL** Wert. Wenn Sie rufen später **Update**, RFX vergleicht jedes Datenelement-Wert mit der **PSEUDO_NULL** Wert. Wenn es ein Unterschied, wurde das Datenelement festgelegt. (**PSEUDO_NULL** entspricht nicht dem als Datensatzspalte mit einem Null-Wert "true" noch eine dieser Optionen ist identisch mit C++ **NULL**.)  
   

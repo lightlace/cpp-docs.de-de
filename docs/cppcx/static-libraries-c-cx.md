@@ -1,24 +1,19 @@
 ---
 title: Statische Bibliotheken (C + c++ / CX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: ffa905cbe0fd49489bd3634cb927cce57ea4ddbc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-libraries-ccx"></a>Statische Bibliotheken (C++/CX)
 Eine statische Bibliothek, die in einer app für die universelle Windows-Plattform (UWP) verwendet wird, kann ISO-Standard C++-Code, einschließlich der STL-Typen und außerdem Aufrufe für Win32-APIs, die nicht von der Windows-Runtime-app-Plattform ausgeschlossen sind enthalten. Eine statische Bibliothek nutzt Windows-Runtime-Komponenten und kann Windows-Runtime-Komponenten mit bestimmten Einschränkungen erstellen.  
@@ -27,7 +22,7 @@ Eine statische Bibliothek, die in einer app für die universelle Windows-Plattfo
   
 #### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>So erstellen Sie eine statische Bibliothek zur Verwendung in einer uwp-app  
   
-1.  Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**. Under **Visual C++** > **Windows Universal** choose **Static Library (Universal Windows)**.  
+1.  Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**. Klicken Sie unter **Visual C++** > **universellen Windows-** auswählen **statische Bibliothek (Uwp)**.  
   
 2.  Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus. In der **Eigenschaften** Dialogfeld auf die **Konfigurationseigenschaften** > **C/C++-** Seite **Windows Runtime-Erweiterung nutzen** auf **Ja (/ Zw)**.  
   

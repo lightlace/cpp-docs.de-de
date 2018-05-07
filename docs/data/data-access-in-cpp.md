@@ -1,13 +1,10 @@
 ---
 title: Datenzugriff in Visual C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-in-visual-c"></a>Datenzugriff in Visual C++
 
@@ -57,7 +52,7 @@ Seit 2011 hat Microsoft ODBC als Standard für native Anwendungen zur Verbindung
 
 [Gewusst wie: Verwenden von Blob-Speicher von C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) Azure Blob-Speicher ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte-Blobs gespeichert. Blob Storage kann beliebige Typen von Text oder Binärdaten speichern, z.B. Dokumente, Mediendateien oder Installationsprogramme für Anwendungen. Blob Storage wird auch als Objektspeicher bezeichnet.
 
-[ODBC Programmer's Reference](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) dient der ODBC-Schnittstelle für die Verwendung mit der Programmiersprache C. Die Verwendung der ODBC-Schnittstelle umfasst drei Bereiche: SQL-Anweisungen, ODBC-Funktionsaufrufe und C-Programmierung.
+[ ODBC Programmer's Reference](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) dient der ODBC-Schnittstelle für die Verwendung mit der Programmiersprache C. Die Verwendung der ODBC-Schnittstelle umfasst drei Bereiche: SQL-Anweisungen, ODBC-Funktionsaufrufe und C-Programmierung.
 
 ## <a name="see-also"></a>Siehe auch
 [Visual C++](../visual-cpp-in-visual-studio.md)

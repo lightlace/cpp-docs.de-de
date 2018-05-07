@@ -1,13 +1,10 @@
 ---
 title: 'Eigenschaftenseiten "MIDL": Erweiterte | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCMidlTool.ErrorCheckBounds
 - VC.Project.VCMidlTool.ErrorCheckStubData
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: d1c92e01-f403-4ed6-ab45-4043a3c9c6bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e7dde047c3311c6fd694a91c7a63fcfbcc95d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="midl-property-pages-advanced"></a>Eigenschaftenseiten "MIDL": "Erweitert"
 Die **erweitert** Eigenschaftenseite in der **"MIDL"** Ordner angibt, die folgenden Compileroptionen in "MIDL":  
@@ -62,7 +57,7 @@ Die **erweitert** Eigenschaftenseite in der **"MIDL"** Ordner angibt, die folgen
   
 -   Präprozessordefinitionen ([/u](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \*/ robust ist nur für die Verwendung beim Erstellen für Windows 2000 oder höher zur Verfügung. Wenn Sie eine ATL-Projekt erstellen und, verwenden Sie möchten / stabile, ändern Sie diese Zeile in der Datei dlldatax.c:  
+ \* / robust ist nur für die Verwendung beim Erstellen für Windows 2000 oder höher zur Verfügung. Wenn Sie eine ATL-Projekt erstellen und, verwenden Sie möchten / stabile, ändern Sie diese Zeile in der Datei dlldatax.c:  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  

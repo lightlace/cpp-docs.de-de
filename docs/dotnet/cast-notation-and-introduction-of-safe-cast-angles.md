@@ -1,13 +1,10 @@
 ---
-title: "Umwandlungsnotation und Einführung in Safe_cast&lt; &gt; | Microsoft Docs"
-ms.custom: 
+title: Umwandlungsnotation und Einführung in Safe_cast&lt; &gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Umwandlungsnotation und Einführung von "safe_cast"&lt;&gt;
 Die Umwandlungsnotation hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  Damit Vorschlag wieder für weitere Überlegung verfügten, und mehrere alternative Notationen berücksichtigt wurden und die zurück an den Ausschuss geschaltet des Formulars war (`?type`), dem angegebenen unbestimmt -, also der dynamischen Natur. Dies führte zu dem Benutzer die Möglichkeit zum Umschalten zwischen den beiden Formaten - statische oder dynamische - aber niemand zu zufrieden wurde. Damit sie wieder zum Zeichnen Board war. Die dritte und erfolgreiche Notation ist jetzt standard `dynamic_cast<type>`, die auf einen Satz von vier neue Formatvorlage Umwandlungsnotationen generalisiert wurde.  
   
- In ISO-C++- `dynamic_cast` gibt `0` Wenn auf einen falschen Zeigertyp angewendet, und löst eine `std::bad_cast` Ausnahme bei Anwendung auf einen Referenztyp darstellt. In Managed Extensions for C++ Anwenden von `dynamic_cast` in eine verwaltete Verweise (aufgrund der Darstellung als Zeiger) immer zurückgegebenen Typ `0`. `__try_cast<type>`Analog eingeführt wurde, auf die Ausnahme auslösen Variante des der `dynamic_cast`, außer dass es löst `System::InvalidCastException` schlägt die Umwandlung fehl.  
+ In ISO-C++- `dynamic_cast` gibt `0` Wenn auf einen falschen Zeigertyp angewendet, und löst eine `std::bad_cast` Ausnahme bei Anwendung auf einen Referenztyp darstellt. In Managed Extensions for C++ Anwenden von `dynamic_cast` in eine verwaltete Verweise (aufgrund der Darstellung als Zeiger) immer zurückgegebenen Typ `0`. `__try_cast<type>` Analog eingeführt wurde, auf die Ausnahme auslösen Variante des der `dynamic_cast`, außer dass es löst `System::InvalidCastException` schlägt die Umwandlung fehl.  
   
 ```  
 public __gc class ItemVerb;  

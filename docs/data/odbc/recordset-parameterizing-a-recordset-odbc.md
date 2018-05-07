@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Parametrisieren eines Recordsets (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: Parametrisieren eines Recordsets (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -44,7 +39,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   [Gewusst wie: Übergeben von Parameterinformationen zu einem Recordset-Objekt zur Laufzeit](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Parametrisierte Recordsets  
+##  <a name="_core_parameterized_recordsets"></a> Parametrisierte Recordsets  
  Ein parametrisierte Recordset können Sie die Parameterinformationen zur Laufzeit übergeben. Dies hat zwei wichtige Auswirkungen:  
   
 -   Es kann eine bessere ausführungsgeschwindigkeit führen.  
@@ -53,7 +48,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Beim Aufruf **öffnen** zum Ausführen der Abfrage verwendet das Recordset die Parameterinformationen zum Abschließen der **SQL SELECT-Anweisung** Anweisung. Sie können jedes beliebige Recordset parametrisieren.  
   
-##  <a name="_core_when_to_use_parameters"></a>Verwenden von Parametern  
+##  <a name="_core_when_to_use_parameters"></a> Verwenden von Parametern  
  Typische Verwendungsmöglichkeiten für Parameter aufgeführt:  
   
 -   Übergeben von Argumenten an eine vordefinierte Abfrage zur Laufzeit.  
@@ -97,7 +92,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Weitere Informationen zu Filtern finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Parametrisieren von Recordset-Klasse  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrisieren von Recordset-Klasse  
   
 > [!NOTE]
 >  Dieser Abschnitt gilt für Objekte, die von abgeleiteten `CRecordset` in denen der gesammelte Abrufen von Zeilen nicht implementiert wurde. Bei Verwendung von gesammelte Abrufen von Zeilen, die Implementierung von Parametern ist ein ähnlichen Prozess. Weitere Informationen finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
 >  Die wahrscheinlichste Zeichenfolge zur Bearbeitung ist die Zeichenfolge, die Sie angeben (sofern vorhanden) für der Klasse [M_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) Datenmember, aber einige ODBC-Treiber können Parameter in anderen SQL-Klauseln.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Übergeben von Parameterwerten zur Laufzeit  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Übergeben von Parameterwerten zur Laufzeit  
  Sie müssen die Parameterwerte angeben, vor dem Aufruf **öffnen** (für ein neues Recordset-Objekt) oder **Requery** (für ein bereits vorhandenes).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Übergeben von Parameterwerten zu einem Recordset-Objekt zur Laufzeit  

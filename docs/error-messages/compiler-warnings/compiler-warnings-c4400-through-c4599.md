@@ -1,8 +1,8 @@
 ---
-title: "Compilerfehler Warnungen C4400 über C4599 | Microsoft Docs"
+title: Compilerfehler Warnungen C4400 über C4599 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compilerfehler Warnungen C4400 über C4599
 
@@ -183,9 +182,9 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung C4413|"classname::member": Verweismember wird an einen temporären, die nicht beibehalten, nach dem Beenden des Konstruktors initialisiert.|
 |[Compilerwarnung (Ebene 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|"*Funktion*": kurze Sprung-Funktion konvertiert in near|
 |Compilerwarnung (Stufe 1) C4415|duplicate __declspec(code_seg('*name*'))|
-|Compilerwarnung (Stufe 1) C4416|__declspec(code_seg(...)) contains empty string: ignored|
+|Compilerwarnung (Stufe 1) C4416|__declspec(code_seg(...)) leere Zeichenfolge enthält: ignoriert|
 |Compilerwarnung (Stufe 1) C4417|eine explizite Vorlageninstanziierung sind keine __declspec(code_seg(...)): ignoriert|
-|Compilerwarnung (Stufe 1) C4418|__declspec(code_seg(...)) ignored on an enum|
+|Compilerwarnung (Stufe 1) C4418|__declspec(code_seg(...)) für Enum ignoriert|
 |Compilerwarnung (Stufe 3) C4419|"*Symbol*"wirkt sich nicht bei Anwendung auf private Verweisklasse"*Klasse*".|
 |[Compilerwarnung (Ebene 1) C4420](../../error-messages/compiler-warnings/compiler-warning-level-1-c4420.md)|"*Checked_operator*': Operator nicht verfügbar ist, mithilfe von"*Operator*"stattdessen; laufzeitüberprüfung beeinträchtigt werden|
 |Compilerwarnung (Stufe 3) C4421|"*Parameter*": ein Verweisparameter, in einer Funktion fortsetzbar ist potenziell unsicher|
@@ -199,8 +198,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: default-int wird von C++ nicht unterstützt|
 |[Compilerwarnung (Ebene 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|ein statischer Konstruktor muss private zugriffsmöglichkeiten aufweisen; in privaten Zugriff geändert|
 |[Compilerwarnung (Ebene 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*Derived_class*': das Objektlayout unter/vd2 ändert sich aufgrund der virtuellen Basis '*basis_klasse*"|
-|[Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamic\_cast from virtual base '*base_class*' to '*derived_class*' in constructor or destructor could fail with partially-constructed object|
-|[Compilerwarnung (Ebene 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamic\_cast from virtual base '*base_class*' to '*derived_class*' could fail in some contexts|
+|[Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamische\_Umwandeln einer virtuellen Basisklasse '*basis_klasse*'to'*Derived_class*"im Konstruktor oder Destruktor fehlschlagen mit teilweise erstelltes Objekt|
+|[Compilerwarnung (Ebene 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamische\_Umwandeln einer virtuellen Basisklasse '*basis_klasse*'to'*Derived_class*' konnte in einigen Kontexten fehl|
 |Compilerwarnung C4438|"*Funktion*": kann nicht problemlos aufgerufen werden, / "await": Clrcompat-Modus. Wenn "*Funktion*" Aufrufe in die CLR es möglicherweise CLR Head Beschädigung|
 |[Compilerwarnung C4439 (Fehler)](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|"*Funktion*': Definition der Funktion mit einem verwalteten Typ in der Signatur benötigen eine __clrcall-Aufrufkonvention|
 |[Compilerwarnung (Ebene 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|Neudefinition der Aufrufkonvention von "*calling_convention1*'to'*calling_convenction2*" ignoriert|
@@ -223,7 +222,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 4) C4457](compiler-warning-level-4-c4457.md)|Deklaration von "*Bezeichner*" Blendet Parameter-Funktion|
 |[Compilerwarnung (Ebene 4) C4458](compiler-warning-level-4-c4458.md)|Deklaration von "*Bezeichner*" Blendet den Klassenmember|
 |[Compilerwarnung (Stufe 4) C4459](compiler-warning-level-4-c4459.md)|Deklaration von "*Bezeichner*" Blendet globale Deklaration|
-|[Compilerwarnung (Ebene 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;managed' operator '*operator*', has parameter passed by reference. "WinRT&#124;verwaltet" Operator "*Operator*"hat eine andere Semantik als C++-Operator"*Cpp_operator*", wollten Sie als Wert übergeben?|
+|[Compilerwarnung (Ebene 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT&#124;verwaltet" Operator "*Operator*", Parameter als Verweis übergeben. "WinRT&#124;verwaltet" Operator "*Operator*"hat eine andere Semantik als C++-Operator"*Cpp_operator*", wollten Sie als Wert übergeben?|
 |[Compilerwarnung (Ebene 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*Classname*": Diese Klasse verfügt über einen Finalizer '! *Finalizer*", jedoch keinen Destruktor ' ~*Dtor*"|
 |[Compilerwarnung (Stufe 1, Fehler) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*Typ*": die GUID des Typs kann nicht bestimmt werden. Das Programm kann zur Laufzeit fehlschlagen.|
 |[Compilerwarnung (Stufe 4) C4463](compiler-warning-level-4-c4463.md)|Überlauf; Zuweisen von "*Wert*'to Bitfeld, das nur Werte aus enthalten kann"*Min_value*'to'*Max_value*"|
@@ -255,7 +254,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung C4495|nicht dem Standard entsprechende Erweiterung "__super": explizite Basisklassennamen ersetzt|
 |Compilerwarnung C4496|nicht dem Standard entsprechende Erweiterung 'for each"verwendet: Ersetzen Sie durch wie Serveradresse-for-Anweisung|
 |Compilerwarnung C4497|"sealed" verwendeten, nicht dem Standard entsprechende Erweiterung: 'letzte' ersetzt|
-|Compilerwarnung C4498|nonstandard extension used: '*extension*'|
+|Compilerwarnung C4498|nicht dem Standard entsprechende Erweiterung: '*Erweiterung*"|
 |Compilerwarnung (Stufe 4) C4499|"*Funktion*': eine explizite Spezialisierung sind keine Speicherklasse (ignoriert)"|
 |[Compilerwarnung (Ebene 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|"*Verknüpfungsspezifikation*" erfordert die Verwendung des Schlüsselworts "Extern" und müssen vor allen anderen Spezifizierern stehen|
 |[Compilerwarnung (Ebene 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|"*Bezeichner*": ergänzter Name zu lang, Name wurde abgeschnitten.|
@@ -282,7 +281,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|"continue": Herausspringen aus "__finally/finally"-Block wurde ein nicht definiertes Verhalten während der Abbruchbehandlung|
 |[Compilerwarnung (Ebene 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Initialisierung von "*Variable*"wird übersprungen, indem Sie"*Goto-Bezeichnung*"|
 |[Compilerwarnung (Ebene 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|"*Konstruktor*'können nicht auf ein Standardkonstruktor für 'Klasse/Struktur' '*Bezeichner*" aufgrund der Standardargument|
-|[Compilerwarnung (Ebene 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
+|[Compilerwarnung (Ebene 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|aufrufende _set_se_translator() erfordert/EHa|
 |[Compilerwarnung (Ebene 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"*Typename*': Typ größer als das Metadatenlimit von '*Character_limit*' Zeichen|
 |[Compilerwarnung (Ebene 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|"*Objekt*': '.' auf nicht-UDT-Typ angewendet wird|
 |[Compilerwarnung (Ebene 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|"*Typ*": Const/Volatile-Qualifizierer für diesen Typ werden nicht unterstützt.|

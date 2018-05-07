@@ -2,12 +2,9 @@
 title: 'Recordset: Lesezeichen und Absolute Positionen (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset: Lesezeichen und absolute Positionen (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -54,7 +49,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   [Zum Festlegen des aktuellen Datensatzes mit absolute Positionen](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>Lesezeichen in MFC-ODBC  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> Lesezeichen in MFC-ODBC  
  Ein Lesezeichen identifiziert einen Datensatz eindeutig. Wenn Sie über ein Recordset navigieren, können nicht Sie immer auf die absolute Position eines Datensatzes basieren, da Datensätze aus dem Recordset gelöscht werden können. Die zuverlässige Möglichkeit zum Nachverfolgen die Position eines Datensatzes ist die Verwendung des Lesezeichens. Klasse `CRecordset` stellt Memberfunktionen zur:  
   
 -   Das Lesezeichen des aktuellen Datensatzes abrufen, damit Sie es in einer Variablen speichern können ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  Je nach ODBC-Treiber und Recordsettyp werden Lesezeichen möglicherweise nicht unterstützt. Sie können problemlos feststellen, ob Lesezeichen, durch den Aufruf unterstützt werden [CRecordset:: CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Darüber hinaus Lesezeichen unterstützt, Sie müssen explizit auswählen, implementieren Sie diese durch Angabe der **CRecordset:: useBookmarks** -Option in der [CRecordset](../../mfc/reference/crecordset-class.md#open) Memberfunktion. Sie sollten auch die Beibehaltung von Lesezeichen nach bestimmten Vorgängen Recordset überprüfen. Beispielsweise, wenn Sie **Requery** ein Recordset Lesezeichen möglicherweise nicht mehr gültig sein. Rufen Sie [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zu überprüfen, ob Sie sicher aufrufen können `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>Absolute Positionen in MFC-ODBC  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Absolute Positionen in MFC-ODBC  
  Neben Lesezeichen-Klasse `CRecordset` können Sie den aktuellen Datensatz festgelegt wird, indem Sie eine Ordnungsposition. Dies wird als absolute Positionierung bezeichnet.  
   
 > [!NOTE]

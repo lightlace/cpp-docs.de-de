@@ -1,13 +1,10 @@
 ---
 title: Aktive Dokumente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Aktive Dokumente
 Aktive Dokumente erweitern die Verbunddokument-Technologie von OLE. Diese Erweiterungen werden in Form von zusätzlichen Schnittstellen bereitgestellt, die Ansichten zu verwalten, damit Objekte in Containern funktionieren und noch behalten die Kontrolle über ihre anzeigen und Drucken Funktionen können. Dieser Prozess ermöglicht die Dokumente in fremden Frames (z. B. die Microsoft Office Binder oder Microsoft Internet Explorer) und in systemeigene Rahmen (z. B. das Anzeigen der Ports des Produkts) anzuzeigen.  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Ein aktiven Dokuments kann eine oder mehrere Arten von erstellen [Ansichten](#requirements_for_view_objects) seiner Daten (z. B. normaler Schrift, gliedern, Seitenlayouts usw.). Ansichten fungiert als Filter, die über die die Daten angezeigt werden. Auch wenn das Dokument nur eine Art von Ansicht hat, weiterhin empfiehlt mehrerer Ansichten zu unterstützen, als Mittel zur Unterstützung neuer Fenster-Funktionen (z. B. die **neues Fenster** Element auf der **Fenster** Menü in Office Anwendungen).  
   
-##  <a name="requirements_for_active_documents"></a>Anforderungen für aktive Dokumente  
+##  <a name="requirements_for_active_documents"></a> Anforderungen für aktive Dokumente  
  Ein aktiven Dokuments, das in einer active Document-Container angezeigt werden muss:  
   
 -   Verwenden des OLE-Verbunddateien als Speichermechanismus durch die Implementierung `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  Wissen, wann und wie Sie die Container-Seite-Schnittstellen verwenden, wird in diese Anforderungen impliziert.  
   
-##  <a name="requirements_for_view_objects"></a>Anforderungen für die Objekte anzeigen  
+##  <a name="requirements_for_view_objects"></a> Anforderungen für die Objekte anzeigen  
  Ein aktiven Dokuments kann eine oder mehrere Ansichten für seine Daten erstellen. Funktionell sind diese Sichten wie Ports für eine bestimmte Methode zum Anzeigen der Daten. Wenn ein aktiven Dokuments nur eine einzige Ansicht unterstützt, können das aktive Dokument und die einzelne Ansicht mit einer einzelnen Klasse implementiert werden. **IOleDocument:: CreateView** gibt des gleichen Objekts `IOleDocumentView` Schnittstellenzeiger auf.  
   
  Um in einer active Document-Container dargestellt werden, muss eine Ansichtskomponente unterstützen **IOleInPlaceObject** und **IOleInPlaceActiveObject** zusätzlich zu `IOleDocumentView`:  

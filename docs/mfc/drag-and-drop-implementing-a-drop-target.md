@@ -1,13 +1,10 @@
 ---
 title: 'Drag & Drop: Implementieren eines Drop-Ziels | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Drag & Drop: Implementieren eines Drag & Drop-Ziels
 Dieser Artikel beschreibt, wie die Anwendung ein Ablageziel machen. Implementieren die Drop-Ziel etwas mehr als implementieren eine Drop-Quelle arbeiten belegt, aber es ist immer noch relativ einfach. Diese Techniken gelten auch für nicht-OLE-Anwendungen.  
@@ -34,7 +29,7 @@ Dieser Artikel beschreibt, wie die Anwendung ein Ablageziel machen. Implementier
   
 1.  Fügen Sie eine Membervariable zu den einzelnen Sichten in der Anwendung, die auf ein Ablageziel sein sollen. Diese Membervariable muss vom Typ `COleDropTarget` oder eine Klasse abgeleitet.  
   
-2.  Aus Ihrer Ansichtsklasse-Funktion, behandelt der `WM_CREATE` Nachricht (in der Regel `OnCreate`), rufen Sie der neue Membervariable `Register` Memberfunktion. `Revoke`wird automatisch für Sie aufgerufen werden, wenn die Ansicht zerstört wird.  
+2.  Aus Ihrer Ansichtsklasse-Funktion, behandelt der `WM_CREATE` Nachricht (in der Regel `OnCreate`), rufen Sie der neue Membervariable `Register` Memberfunktion. `Revoke` wird automatisch für Sie aufgerufen werden, wenn die Ansicht zerstört wird.  
   
 3.  Überschreiben Sie die folgenden Funktionen. Wenn Sie das gleiche Verhalten in der gesamten Anwendung möchten, überschreiben Sie diese Funktionen in Ihrer Ansichtsklasse. Gegebenenfalls Verhalten in isolierten Fällen ändern oder Löschen der nicht aktivieren möchten`CView` Windows, überschreiben Sie diese Funktionen in Ihrer `COleDropTarget`-Klasse abgeleitet.  
   

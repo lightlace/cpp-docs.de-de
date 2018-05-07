@@ -1,13 +1,10 @@
 ---
-title: Anpassen der Headerelement &#39; s Darstellung | Microsoft Docs
-ms.custom: 
+title: Das Headerelement anpassen&#39;s Darstellung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,17 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Anpassen der Headerelement &#39; s Darstellung
+# <a name="customizing-the-header-item39s-appearance"></a>Das Headerelement anpassen&#39;s Darstellung
 Durch Festlegen der *DwStyle* Parameter bei der Erstellung von einem Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#create)) definieren Sie die Darstellung und Verhalten des Headers Elemente oder des Headersteuerelements selbst.  
   
  Hier wird eine Stichprobe die Formatvorlagen, die Sie festlegen können, und ihren Zweck:  

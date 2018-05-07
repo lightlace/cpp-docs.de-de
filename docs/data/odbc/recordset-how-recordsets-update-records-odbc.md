@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Datensatzaktualisierung durch Recordsets (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: Datensatzaktualisierung durch Recordsets (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -51,7 +46,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  [Recordset: Weitere Informationen zu Aktualisierungen (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) Abschluss Recordset Update Story erläutert Auswirkungen von Transaktionen auf Aktualisierungen und Auswirkungen ein Recordsets schließen oder einen Bildlauf Updates werden ausgeführt wie Ihre Updates mit den Updates von anderen interagieren Benutzer.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>Der Rolle im Recordset aktualisieren  
+##  <a name="_core_your_role_in_recordset_updating"></a> Der Rolle im Recordset aktualisieren  
  Die folgende Tabelle zeigt die Rolle anhand einer Recordsets hinzufügen, bearbeiten oder Löschen von Datensätzen, zusammen mit, was das Framework für Sie erledigt.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Aktualisieren eines Recordsets: Sie und das Framework  
@@ -66,7 +61,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Weitere Informationen über Transaktionen finden Sie unter [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>Der Bearbeitungspuffer  
+##  <a name="_core_the_edit_buffer"></a> Der Bearbeitungspuffer  
  Gesamtheit, die Felddatenmembern eines Recordset-Objekts dienen als Bearbeitungspuffer, die einen Datensatz enthält, den aktuellen Datensatz. Update-Vorgänge verwenden diesen Puffer für den aktuellen Datensatz ausgeführt werden.  
   
 -   Wenn Sie einen Datensatz hinzufügen, wird der Bearbeitungspuffer verwendet, um einen neuen Datensatz zu erstellen. Wenn Sie fertig sind, den Datensatz hinzufügen, wird der Datensatz, der zuvor war erneut aktuelle.  
@@ -78,7 +73,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 > [!NOTE]
 >  Der Bearbeitungspuffer spielt keine Rolle Löschen eines Datensatzes. Wenn Sie den aktuellen Datensatz löschen, wird der Datensatz als gelöscht markiert, und das Recordset ist "nicht in einem Datensatz", bis Sie einen zu einem anderen Datensatz Bildlauf.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Dynasets und Momentaufnahmen  
+##  <a name="_core_dynasets_and_snapshots"></a> Dynasets und Momentaufnahmen  
  [Dynasets](../../data/odbc/dynaset.md) aktualisieren den Inhalt eines Datensatzes, wie Sie einen zu dem Datensatz Bildlauf. [Momentaufnahmen](../../data/odbc/snapshot.md) sind statische Repräsentation der Datensätze, damit der Inhalt eines Datensatzes nicht aktualisiert werden, es sei denn, Sie rufen [Requery](../../mfc/reference/crecordset-class.md#requery). Um die volle Funktionalität des Dynasets verwenden zu können, müssen Sie mit einem ODBC-Treiber arbeiten, die das richtige Maß an ODBC API-Unterstützung entspricht. Weitere Informationen finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [Dynaset](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,30 +1,25 @@
 ---
 title: ActiveX-Steuerelementcontainer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers"></a>ActiveX-Steuerelementcontainer
 Ein ActiveX-Steuerelementcontainer ist ein Container, der vollständig ActiveX-Steuerelemente unterstützt und kann in einem eigenen Fenster und Dialogfelder integrieren. Ein ActiveX-Steuerelement ist eine wiederverwendbare Softwarekomponente, die Sie in vielen Entwicklungsprojekte verwenden können. Steuerelemente können Ihre Anwendung Benutzer Zugriff auf Datenbanken, überwacht werden, und stellen verschiedene Auswahlen in Ihre Anwendungen. Weitere Informationen zu ActiveX-Steuerelemente, finden Sie im Artikel [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md).  

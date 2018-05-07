@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: Zugreifen auf Zeichen in einem System:: String | Microsoft Docs'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Gewusst wie: Zugriff auf Zeichen in einem System::String
 Sie erreichen die Zeichen einer <xref:System.String> Objekt für hohe Leistung Aufrufe nicht verwalteten Funktionen, `wchar_t*` Zeichenfolgen. Die Methode wird ein innerer Zeiger auf das erste Zeichen von der <xref:System.String> Objekt. This-Zeiger kann direkt bearbeitet oder fixiert und übergeben werden an eine Funktion erwartet eine gewöhnliche `wchar_t` Zeichenfolge.  
   
 ## <a name="example"></a>Beispiel  
- `PtrToStringChars`Gibt eine <xref:System.Char>, also ein innerer Zeiger (auch bekannt als ein `byref`). Daher ist es Garbage collection. Sie haben keine this-Zeiger anheften, es sei denn, sie an eine systemeigene Funktion übergeben werden sollen.  
+ `PtrToStringChars` Gibt eine <xref:System.Char>, also ein innerer Zeiger (auch bekannt als ein `byref`). Daher ist es Garbage collection. Sie haben keine this-Zeiger anheften, es sei denn, sie an eine systemeigene Funktion übergeben werden sollen.  
   
  Betrachten Sie folgenden Code.  Anheften ist nicht erforderlich, da `ppchar` ein innerer Zeiger, und wenn der Garbage Collector die Zeichenfolge das Objekt zeigt verschiebt auf, aktualisiert es auch `ppchar`. Ohne eine [Pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md), funktioniert der Code und nicht die potenzielle Leistungseinbußen verursacht sein anheften.  
   

@@ -1,24 +1,19 @@
 ---
 title: Namespaces und Typsichtbarkeit (C + c++ / CX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces und Typsichtbarkeit (C++/CX)
 Ein Namespace ist ein Standard-C++-Konstrukt zum Gruppieren von Typen mit ähnlichen Funktionen und zum Verhindern von Namenskonflikten in Bibliotheken. Das Windows-Runtime-Typsystem erfordert, dass alle öffentliche Windows-Runtime-Typen, einschließlich der in Ihrem eigenen Code in einem Namespace im Namespacebereich deklariert werden müssen. Öffentliche Typen, die im globalen Gültigkeitsbereich deklariert oder innerhalb einer anderen Klasse geschachtelt werden, verursachen einen Kompilierungsfehler.  

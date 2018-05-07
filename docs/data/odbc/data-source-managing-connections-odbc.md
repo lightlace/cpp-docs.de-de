@@ -1,13 +1,10 @@
 ---
 title: 'Datenquelle: Verwalten von Verbindungen (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b83093496d355fdba8b5d714875d08040ae28ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 100c06773a8f0ffa79631339384bd4ec42fa4b52
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-managing-connections-odbc"></a>Datenquelle: Verwalten von Verbindungen (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -61,7 +56,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Sie können die Verbindung mit jeder beliebigen Datenquelle herstellen, für die Sie einen ODBC-Treiber besitzen. Die Benutzer der Anwendung müssen für ihre Datenquelle denselben ODBC-Treiber verwenden. Weitere Informationen über die Weitergabe von ODBC-Treibern finden Sie unter [Weitervertrieb von ODBC-Komponenten an Kunden](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
   
-##  <a name="_core_configuring_a_data_source"></a>Konfigurieren einer Datenquelle  
+##  <a name="_core_configuring_a_data_source"></a> Konfigurieren einer Datenquelle  
  Datenquellen werden mit dem ODBC-Administrator konfiguriert. Sie können mit dem ODBC-Administrator nach der Installation Datenquellen hinzufügen oder entfernen. Beim Erstellen von Anwendungen können Sie entweder Benutzer anleiten, wie Sie mit dem ODBC-Administrator Datenquellen hinzufügen, oder Sie können diese Funktionalität in die Anwendung integrieren, indem Sie direkte ODBC-Installationsaufrufe durchführen. Weitere Informationen finden Sie unter [ODBC-Administrator](../../data/odbc/odbc-administrator.md).  
   
  Sie können eine Excel-Datei als Datenquelle verwenden und müssen Sie die Datei so konfigurieren, dass er registriert ist, und wird in der **Auswählen einer Datenquelle** (Dialogfeld).  
@@ -83,10 +78,10 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 2.  In der **ODBC Microsoft Excel Setup** Dialogfeld wählen die Datenbankversion und die Arbeitsmappe.  
   
-##  <a name="_core_working_in_a_multiuser_environment"></a>Arbeiten in einer Mehrbenutzerumgebung  
+##  <a name="_core_working_in_a_multiuser_environment"></a> Arbeiten in einer Mehrbenutzerumgebung  
  Falls mehrere Benutzer mit derselben Datenquelle verbunden sind, können sie Daten verändern, während Sie dieselben Daten in Ihren Recordsets bearbeiten. Ebenso könnten die von Ihnen durchgeführten Änderungen die Recordsets anderer Benutzer betreffen. Weitere Informationen finden Sie unter [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) und [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_generalizing_the_connection_string"></a>Verallgemeinern der Verbindungszeichenfolge  
+##  <a name="_core_generalizing_the_connection_string"></a> Verallgemeinern der Verbindungszeichenfolge  
  Die Assistenten verwenden für den Verbindungsaufbau mit einer Datenquelle eine Standard-Verbindungszeichenfolge. Mit dieser Verbindung werden während der Entwicklung einer Anwendung Tabellen und Spalten angezeigt. Diese Standard-Verbindungszeichenfolge eignet sich jedoch möglicherweise nicht für die Verbindungen, die Benutzer über die Anwendung mit der Datenquelle aufbauen. Beispielsweise könnten sich die Datenquelle und der Pfad zum Speicherort dieser Datenquelle von denen unterscheiden, die Sie beim Entwickeln der Anwendung verwendet hatten. In diesem Fall sollten Sie implementieren die [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) Member in einer allgemeineren Weise funktionieren und die assistentenimplementierung verwerfen. Sie können z. B. eine der folgenden Lösungsmöglichkeiten verwenden:  
   
 -   Registrieren und verwalten Sie die Verbindungszeichenfolgen mithilfe des ODBC-Administrators.  
@@ -115,7 +110,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";  
     ```  
   
-##  <a name="_core_connecting_to_a_specific_data_source"></a>Herstellen einer Verbindung mit einer bestimmten Datenquelle  
+##  <a name="_core_connecting_to_a_specific_data_source"></a> Herstellen einer Verbindung mit einer bestimmten Datenquelle  
  Zur Verbindung mit einer bestimmten Datenquelle Ihre Datenquelle muss bereits konfiguriert sein [ODBC-Administrator](../../data/odbc/odbc-administrator.md).  
   
 #### <a name="to-connect-to-a-specific-data-source"></a>So bauen Sie die Verbindung zu einer bestimmten Datenquelle auf  
@@ -126,7 +121,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Weitere Informationen dazu, wie Sie die Datenquelle angeben, wenn es etwas anderes als das ist mit einem Assistenten angegebene finden Sie unter [CDatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) oder [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) in die *MFC Verweis*.  
   
-##  <a name="_core_disconnecting_from_a_data_source"></a>Trennen von einer Datenquelle  
+##  <a name="_core_disconnecting_from_a_data_source"></a> Trennen von einer Datenquelle  
  Müssen Sie alle geöffneten Recordsets vor dem Aufruf schließen die **schließen** Memberfunktion von `CDatabase`. In Recordsets zugeordneten der `CDatabase` Objekt Sie schließen möchten, alle ausstehenden `AddNew` oder **bearbeiten** -Anweisungen abgebrochen und alle anstehenden Transaktionen zurückgesetzt.  
   
 #### <a name="to-disconnect-from-a-data-source"></a>So trennen Sie die Verbindung mit einer Datenquelle  
@@ -135,7 +130,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 2.  Zerstören Sie das Objekt, sofern Sie es nicht wiederverwenden möchten.  
   
-##  <a name="_core_reusing_a_cdatabase_object"></a>Wiederverwenden von ein CDatabase-Objekt  
+##  <a name="_core_reusing_a_cdatabase_object"></a> Wiederverwenden von ein CDatabase-Objekt  
  Nachdem Sie die Verbindung zu einem `CDatabase`-Objekt getrennt haben, können Sie dieses wiederverwenden. Hierbei kann entweder eine neue Verbindung zu derselben oder zu einer anderen Datenquelle aufgebaut werden.  
   
 #### <a name="to-reuse-a-cdatabase-object"></a>So verwenden Sie ein CDatabase-Objekt wieder  

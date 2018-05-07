@@ -1,16 +1,12 @@
 ---
 title: Compilerfehler C2400 bis C2499 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Compilerfehler C2400 bis C2499
 
@@ -88,7 +81,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C2426](compiler-error-c2426.md)|"*token*': Unzulässiger Operator in"*Kontext*"|
 |[Compilerfehler C2427](compiler-error-c2427.md)|"*Klasse*': in diesem Bereich kann die Klasse nicht definiert|
 |[Compilerfehler C2428](compiler-error-c2428.md)|"*Vorgang*': für Operanden des Typs"Bool"nicht zulässig.|
-|Compilerfehler Fehler C2429|*Kontext* "*Kontext*"erfordert compilerkennzeichen"*Option*"|
+|[Compilerfehler Fehler C2429](compiler-error-c2429.md)|"*Sprachfunktion*"erfordert compilerkennzeichen"*Compileroption*"|
 |[Compilerfehler C2430](compiler-error-c2430.md)|mehr als ein Indexregister in "*Kontext*"|
 |[Compilerfehler C2431](compiler-error-c2431.md)|Ungültige Indexregister in "*Kontext*"|
 |[Compilerfehler C2432](compiler-error-c2432.md)|illegaler Verweis auf 16-Bit-Daten in "*Kontext*"|
@@ -149,7 +142,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C2491](compiler-error-c2491.md)|"*Bezeichner*': Definition von Dllimport *Funktion* nicht zulässig|
 |[Compilerfehler C2492](compiler-error-c2492.md)|"*Variable*": Daten mit Speicherdauer Thread können keine Dll-Schnittstelle|
 |[Compilerfehler C2493](compiler-error-c2493.md)|Unzulässige Form von __based|
-|[Compilerfehler C2494](compiler-error-c2494.md)|"*Schlüsselwort*" kann nicht innerhalb eines Filterausdrucks aufgerufen werden oder &#95; &#95; schließlich/finally-block|
+|[Compilerfehler C2494](compiler-error-c2494.md)|"*Schlüsselwort*" kann nicht innerhalb eines Filterausdrucks aufgerufen werden oder &#95; &#95;schließlich/finally-block|
 |[Compilerfehler C2495](compiler-error-c2495.md)|"*Bezeichner*": "__declspec(noexcept)" kann nur auf Funktionsdeklarationen oder-Definitionen angewendet werden|
 |[Compilerfehler C2496](compiler-error-c2496.md)|"*Bezeichner*': 'Selectany' kann nur für Datenelemente mit externer Bindung angewendet werden|
 |Compilerfehler Fehler C2497|"*Bezeichner*': 'Implementation_key' kann nur auf Funktionsdeklarationen angewendet werden|

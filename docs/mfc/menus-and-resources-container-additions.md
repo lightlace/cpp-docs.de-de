@@ -1,13 +1,10 @@
 ---
-title: "Menüs und Ressourcen: Containererweiterungen | Microsoft Docs"
-ms.custom: 
+title: 'Menüs und Ressourcen: Containererweiterungen | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>Menüs und Ressourcen: Containererweiterungen
 Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressourcen in eine visuelle Bearbeitung Steuerelementcontainer-Anwendung vorgenommen werden müssen.  
@@ -52,7 +47,7 @@ Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressou
   
 -   [Zeichenfolge Tabelle hinzufügen](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>Container-Menüerweiterungen  
+##  <a name="_core_container_menu_additions"></a> Container-Menüerweiterungen  
  Sie müssen die folgenden Elemente im Menü Bearbeiten hinzufügen:  
   
 |Element|Zweck|  
@@ -66,7 +61,7 @@ Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressou
   
  Wenn Sie direkte Aktivierung der enthaltenen Elemente unterstützen möchten, müssen Sie ein neues Menü für Ihre containeranwendung erstellen. Dieses Menü besteht aus dem gleichen Dateimenü und Fenster Popupmenüs verwendet, wenn Dateien geöffnet sind, verfügt aber über zwei Trennzeichen dazwischen eingefügt. Diese Trennzeichen werden verwendet, um anzugeben, auf dem Server (Komponente)-Element (Anwendung) Menüs bei direkt aktiviert ablegen soll. Weitere Informationen zu dieser Technik das Zusammenführen von Menüs finden Sie unter [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>Anwendung Accelerator Tabelle Containererweiterungen  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Anwendung Accelerator Tabelle Containererweiterungen  
  Kleine Änderungen an eine Steuerelementcontainer-Anwendung Accelerator tabellenressourcen sind erforderlich, wenn Sie die direkte Aktivierung unterstützen möchten. Die erste Änderung kann der Benutzer zum Drücken der Taste ESC (ESC), um den direkten Bearbeitungsmodus "Abbrechen". Fügen Sie den folgenden Eintrag, um die wichtigsten Zugriffstastentabelle:  
   
 |Id|Key|Typ|  
@@ -85,7 +80,7 @@ Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressou
 |**ID_PREV_PANE**|UMSCHALT + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|"VK_ESCAPE" BEZEICHNET|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>Zeichenfolge Tabelle Ergänzungen für Containeranwendungen  
+##  <a name="_core_string_table_additions_for_container_applications"></a> Zeichenfolge Tabelle Ergänzungen für Containeranwendungen  
  Die meisten der Änderungen zu Zeichenfolgentabellen für containeranwendungen entsprechen die zusätzliche Menüelemente im erwähnten [Container Menüerweiterungen](#_core_container_menu_additions). Sie geben den Text in der Statusleiste angezeigt, wenn jedes Menüelement im angezeigt wird. Beispielsweise werden hier die Zeichenfolgentabelle Einträge, die bei die der Anwendungs-Assistent generiert:  
   
 |Id|Zeichenfolge|  

@@ -1,31 +1,26 @@
 ---
 title: Abrufen von Zeigern auf Datenpuffer (C + c++ / CX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e04a1adabab004ef64ed308d1222400192f235
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Abrufen von Zeigern auf Datenpuffer (C++/CX)
 In Windows Runtime bietet die [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) -Schnittstelle ein sprachneutrale, streambasierte Möglichkeit zum Zugriff auf Datenpuffer. In C++ können Sie einen Rohdatenzeiger auf das zugrunde liegende Bytearray abrufen, indem Sie die IBufferByteAccess-Schnittstelle der Windows Runtime-Bibliothek verwenden, die in robuffer.h definiert ist. Wenn Sie diesen Ansatz verwenden, können Sie das Bytearray lokal ändern, ohne dass unnötige Kopien der Daten erstellt werden müssen.  
   
  Im folgenden Diagramm ist ein XAML-Imageelement dargestellt, dessen Quelle eine [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)ist. Eine Client-App, die in einer beliebigen Sprache geschrieben ist, kann einen Verweis auf `WriteableBitmap` an den C++-Code übergeben. Dann kann C++ mit diesem Verweis zum zugrunde liegenden Puffer gelangen. In einer universellen Windows-Plattform-app, die in C++ geschrieben ist, können Sie die Funktion im folgenden Beispiel direkt im Quellcode verwenden, ohne das Verpacken in einer Windows-Runtime-Komponente.  
   
- ![C# 43; &#43; Code, der direkt auf Pixeldaten zugreift](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
+ ![C&#43; &#43; Code direkt auf Pixeldaten zugreift](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
  Die folgende Methode akzeptiert einen [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) und gibt einen Rohdatenzeiger auf den zugrunde liegenden Bytearray zurück. Um die Funktion aufzurufen, übergeben Sie in eine [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) -Eigenschaft.  

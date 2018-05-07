@@ -2,12 +2,9 @@
 title: Vermeiden von Ausnahmen, die von erstellte COM-Objekte mit Clr-| Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - interoperability [C++], CLR shutdown exceptions
 - CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 287c9831f8c604272b37ac85528d66fe640de557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Vermeiden von Ausnahmen beim Herunterfahren der CLR, wenn mit /clr erstellte COM-Objekte verwendet werden
 Sobald die common Language Runtime (CLR) heruntergefahren Modus wechselt, systemeigene Funktionen Zugriff auf CLR-Dienste eingeschränkt. Beim Versuch, rufen Sie Release auf ein COM-Objekt mit kompiliert **"/ CLR"**, geht die CLR in systemeigenen Code und wechselt anschließend zurück in verwaltetem Code Verarbeiten von der IUnknown:: Release-Aufruf (die in verwaltetem Code definiert ist). Die CLR wird verhindert, dass den Aufruf an verwalteten Code, da es sich im Modus für das Herunterfahren befindet.  

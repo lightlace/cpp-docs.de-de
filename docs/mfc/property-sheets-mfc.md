@@ -1,13 +1,10 @@
 ---
-title: "Eigenschaftenblätter (MFC) | Microsoft Docs"
-ms.custom: 
+title: Eigenschaftenblätter (MFC) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44403cc22e061a5a492c4177d5ba385c17da0e12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08252ed31ddcfc6a5ba7b785dad9787349caee71
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-mfc"></a>Eigenschaftenblätter (MFC)
 Diese Artikelreihe erläutert die Unterstützung für Eigenschaftenseiten in MFC-Anwendungen implementieren. Ein Eigenschaftenblatt, auch bekannt als eine Registerkarte (Dialogfeld), bietet eine Möglichkeit zum Verwalten einer großen Anzahl von Steuerelementen in einem Dialogfeld. Das Eigenschaftenblatt enthält Eigenschaftenseiten, jeweils basierend auf einer separaten Dialogfeldvorlagen-Ressource. Sie können das Dialogfeld-Steuerelemente in logische Gruppen unterteilt, und fügen jeder Gruppe in ihre eigene Eigenschaftenseite.  

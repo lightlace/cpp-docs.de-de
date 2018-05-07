@@ -1,13 +1,10 @@
 ---
 title: Meldungsbehandlung und Befehlsziele | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ec1f2a1f419715a3e8e9fbac2fcba3c7584a9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-command-targets"></a>Meldungsbehandlung und Befehlsziele
 Die Dispatch-Befehlsschnittstelle `IOleCommandTarget` definiert einen einfachen und erweiterbaren Mechanismus zum Abfragen und Befehle ausführen. Dieser Mechanismus ist einfacher als das Automation `IDispatch` daran, dass es einen Standardsatz von Befehlen; vollständig benötigt Befehle sind selten, Argumente und keine Typinformationen beteiligt ist (typsicherheit wird für die Befehlsargumente ebenfalls verringert).  
   
  In den Entwurf der Befehl Dispatch-Schnittstelle, jeden Befehl gehört zu einer "Befehlsgruppe" die selbst, deren ermittelt wird eine **GUID**. Jeder kann daher, definieren Sie eine neue Gruppe und alle Befehle innerhalb dieser Gruppe, ohne die Notwendigkeit zur Koordinierung mit Microsoft oder einem anderen Hersteller zu definieren. (Dies ist im Wesentlichen die gleichen bedeutet, dass der Definition als eine **Dispinterface** plus **DispIDs** in Automation. Besteht überlappen, obwohl dieser Befehl Weiterleitungsmechanismus nur für Befehlsrouting und nicht für scripting/Programmierbarkeit in großem Umfang als Automation Handles ist.)  
   
- `IOleCommandTarget`behandelt die folgenden Szenarien:  
+ `IOleCommandTarget` behandelt die folgenden Szenarien:  
   
 -   Wenn ein Objekt ist direktes aktiviert, nur das Objekt Symbolleisten in der Regel angezeigt sind und das Objekt Symbolleisten möglicherweise Schaltflächen für einige der containerbefehle wie **Drucken**, **Seitenansicht**,  **Speichern Sie**, `New`, **Zoom**, und andere. (Direkte Aktivierung Standards wird empfohlen, die Objekte entfernen deaktivieren Sie solche Schaltflächen aus ihren Symbolleisten oder auf mindestens diese. Dieser Entwurf ermöglicht dieser Befehle zu aktiviert und noch an den richtigen Handler weitergeleitet werden.) Es gibt derzeit keinen Mechanismus für das Objekt, das diese Befehle auf den Container zu verteilen.  
   

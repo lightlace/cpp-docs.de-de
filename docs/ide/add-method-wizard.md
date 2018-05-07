@@ -1,13 +1,10 @@
 ---
-title: "Assistent zum Hinzufügen | Microsoft Docs"
-ms.custom: 
+title: Assistent zum Hinzufügen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Assistent zum Hinzufügen von Methoden
 Verwenden Sie diesen Assistenten, einer Schnittstelle eine Methode hinzu. Je nach Projekttyp oder Schnittstellentyp, der Sie eine Methode hinzufügen, zeigt der Assistent unterschiedliche Optionen an.  
   
 ## <a name="names"></a>Namen  
  **Rückgabetyp**  
- Der Datentyp, der von der Methode zurückgegeben wird. `HRESULT`wird für alle Schnittstellentypen empfohlen werden, da es ein gängiges Verfahren zur Rückgabe von Fehlern bietet.  
+ Der Datentyp, der von der Methode zurückgegeben wird. `HRESULT` wird für alle Schnittstellentypen empfohlen werden, da es ein gängiges Verfahren zur Rückgabe von Fehlern bietet.  
   
 |Schnittstellentyp|Beschreibung|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ Verwenden Sie diesen Assistenten, einer Schnittstelle eine Methode hinzu. Je nac
 |-------------------------|-----------------|--------------------------|  
 |**In**|Gibt an, dass die Parameter an die aufgerufene Prozedur aus der aufrufenden Prozedur übergeben wird.|**in** nur<br /><br /> **in** und **out**|  
 |**Out**|Gibt an, dass der Zeigerparameter von der aufgerufenen Prozedur an die aufrufende Prozedur (vom Server an den Client) zurückgegeben wird.|**out** nur<br /><br /> **in** und **out**<br /><br /> **out** und **Retval**|  
-|**Retval**|Gibt an, dass der Parameter den Rückgabewert des Members empfängt.|**Retval** und Out|  
+|**retval**|Gibt an, dass der Parameter den Rückgabewert des Members empfängt.|**Retval** und Out|  
   
  **Parametertyp**  
  Legt den Datentyp des Parameters fest. Wählen Sie den Typ aus der Liste aus.  

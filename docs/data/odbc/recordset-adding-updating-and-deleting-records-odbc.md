@@ -1,13 +1,10 @@
 ---
-title: "Recordset: Hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Recordset: Hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -71,7 +66,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 |Nur erweiterbar|J|N|N|J|  
 |Ohne Einschränkungen aktualisierbar|J|J|J|J|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>Bestimmen, ob das Recordset ist aktualisierbar  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Bestimmen, ob das Recordset ist aktualisierbar  
  Ein Recordset-Objekt ist aktualisierbar, wenn die Datenquelle aktualisierbar ist und Sie das Recordset als aktualisierbar geöffnet haben. Außerdem hängt die Aktualisierbarkeit von der verwendeten SQL-Anweisung ab, von den Fähigkeiten des ODBC-Treibers und davon, ob die ODBC-Cursorbibliothek geladen ist. Sie können ein schreibgeschütztes Recordset oder eine schreibgeschützte Datenquelle nicht aktualisieren.  
   
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>So stellen Sie fest, ob das Recordset aktualisierbar ist  
@@ -97,7 +92,7 @@ if( !rsStudentSet.CanUpdate( ) )
 > [!CAUTION]
 >  Vorbereitung für die Aktualisierung eines Recordsets durch Aufrufen von **aktualisieren**, achten Sie darauf, dass das Recordset alle Spalten, aus denen der Primärschlüssel der Tabelle (oder alle Spalten eines eindeutigen Index für die Tabelle) umfasst. In einigen Fällen kann das Framework zur Identifizierung des Datensatzes, der in der Tabelle aktualisiert werden soll, nur die Spalten verwenden, die im Recordset ausgewählt sind. Wenn nicht sämtliche benötigten Spalten zur Verfügung stehen, werden möglicherweise mehrere Datensätze in der Tabelle aktualisiert. Hierdurch kann die referenzielle Integrität der Tabelle beschädigt werden. In diesem Fall löst das Framework Ausnahmen aus, wenn Sie aufrufen **Update**.  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a>Hinzufügen eines Datensatzes zu einem Recordset  
+##  <a name="_core_adding_a_record_to_a_recordset"></a> Hinzufügen eines Datensatzes zu einem Recordset  
  Sie können neue Datensätze zu einem Recordset hinzufügen, wenn seine [CanAppend](../../mfc/reference/crecordset-class.md#canappend) Memberfunktion gibt einen Wert ungleich NULL zurück.  
   
 #### <a name="to-add-a-new-record-to-a-recordset"></a>So fügen Sie einem Recordset einen neuen Datensatz hinzu  
@@ -139,7 +134,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  Auf "Abbrechen" ein `AddNew` oder **bearbeiten** aufzurufen, rufen zum `AddNew` oder **bearbeiten** , oder rufen Sie **verschieben** mit der **AFX_MOVE_REFRESH**  Parameter. Datenmember werden auf ihren vorherigen Wert zurückgesetzt, und Sie befinden sich noch im **bearbeiten** oder **hinzufügen** Modus.  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a>Editieren eines Datensatzes in einem Recordset  
+##  <a name="_core_editing_a_record_in_a_recordset"></a> Editieren eines Datensatzes in einem Recordset  
  Sie können vorhandene Datensätze bearbeiten, wenn des Recordsets [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) Memberfunktion gibt einen Wert ungleich NULL zurück.  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>So bearbeiten Sie einen vorhandenen Datensatz in einem Recordset  
@@ -180,7 +175,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  Auf "Abbrechen" ein `AddNew` oder **bearbeiten** aufzurufen, rufen zum `AddNew` oder **bearbeiten** , oder rufen Sie **verschieben** mit der **AFX_MOVE_REFRESH**  Parameter. Datenmember werden auf ihren vorherigen Wert zurückgesetzt, und Sie befinden sich noch im **bearbeiten** oder **hinzufügen** Modus.  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a>Löschen eines Datensatzes aus einem Recordset  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> Löschen eines Datensatzes aus einem Recordset  
  Sie können Datensätze löschen, wenn des Recordsets [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) Memberfunktion gibt einen Wert ungleich NULL zurück.  
   
 #### <a name="to-delete-a-record"></a>So löschen Sie einen Datensatz  

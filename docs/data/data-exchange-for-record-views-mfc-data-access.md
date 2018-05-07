@@ -2,12 +2,9 @@
 title: Datenaustausch für Datensatzansichten (MFC-Datenzugriff) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1db5adaab66fec2b587f7a15005caa3a9374ff12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58bda2d9a712e38951b8201c08e5bbbe369537eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Datenaustausch für Datensatzansichten (MFC-Datenzugriff)
 Bei Verwendung von [Klasse hinzufügen](../mfc/reference/adding-an-mfc-odbc-consumer.md) um die Steuerelemente im Dialogfeldvorlagen-Ressource einer Datensatzansicht den Feldern eines Recordsets zuzuordnen, verwaltet das Framework den Datenaustausch in beide Richtungen – vom Recordset zu den Steuerelementen und umgekehrt. Wenn Sie den DDX-Mechanismus verwenden, müssen Sie den Code zur Datenübertragung nicht selbst schreiben.  
@@ -37,7 +32,7 @@ Bei Verwendung von [Klasse hinzufügen](../mfc/reference/adding-an-mfc-odbc-cons
   
  Die folgende Abbildung zeigt die Beziehung zwischen DDX und RFX für Datensatzansichten.  
   
- ![Dialogfeld &#45;Datenaustausch und Datensatz &#45; Datensatzfeldern](../data/media/vc37xt1.gif "vc37xt1")  
+ ![Dialogfeld&#45;Datenaustausch und Datensatz&#45;Feld Exchange](../data/media/vc37xt1.gif "vc37xt1")  
 Dialogdatenaustausch und Datensatzfeldaustausch  
   
  Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und-Validierung](../mfc/dialog-data-exchange-and-validation.md). Weitere Informationen über RFX finden Sie unter [Datensatzfeldaustausch (RFX)](../data/odbc/record-field-exchange-rfx.md).  

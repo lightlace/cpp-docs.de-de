@@ -1,13 +1,10 @@
 ---
 title: Erstellen und Verwalten von Visual C++-Projekten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vcprojects
 - creatingmanagingVC
@@ -20,32 +17,30 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c38f4c75a41de8b2f2b494941c6a52b1ff46fa4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Erstellen und Verwalten von MSBuild-basierte Visual C++-Projekten
 MSBuild ist das native Buildsystem für Visual C++ und im Allgemeinen, dass die beste Buildsystem für uwp-apps als auch Desktop-Anwendungen, die MFC oder ATL-Bibliotheken verwenden. MSBuild ist eng mit dem Visual Studio-IDE und Projektsystem integriert, aber Sie können Sie auch über die Befehlszeile verwenden. Ab Visual Studio 2017 können Visual C++ unterstützt [CMake und anderen Systemen nicht MSBuild über das Feature Open Folder](non-msbuild-projects.md).
 
 Ein MSBuild-basiertes Projekt enthält eine Projektdatei im XML-Format (.vcxproj), der angibt, die Dateien und Ressourcen benötigt zum Kompilieren des Programms sowie andere Konfigurationseinstellungen, z. B. die Zielplattform (x 86, X64 oder ARM) und gibt an, ob Sie erstellen eine Release-Version oder Debugversion des Programms. Ein Projekt bzw. mehrere Projekte befinden sich in einer *Projektmappe*. Eine Projektmappe kann zum Beispiel mehrere Win32-DLL-Projekte und eine einzelne Win32-Konsolenanwendung enthalten, die diese DLLs verwendet. Wenn Sie das Projekt erstellen, verarbeitet das MSBuild-Modul die Projektdatei und erstellt die ausführbare Datei und/oder jede weitere benutzerdefinierte Ausgabe, die Sie angegeben haben.
 
-Sie können Visual C++-Projekte erstellen, indem Sie auswählen **Datei &#124; Neue &#124; Projekt**, sicherstellen, dass Visual C++ im linken Bereich ausgewählt ist, und klicken Sie dann aus der Liste der Projektvorlagen im mittleren Bereich auswählen. Wenn Sie in einer Vorlage klicken, wird in vielen Fällen ein Assistent angezeigt, mit dem Sie verschiedene Projekteigenschaften festlegen, bevor das Projekt erstellt wird. Sie können Eigenschaften anzeigen und ändern diese später mithilfe der Eigenschaftenseiten des Projekts (**Projekt &#124; Eigenschaften**).  
+Sie können Visual C++-Projekte erstellen, indem Sie auswählen **Datei &#124; neu &#124; Projekt**, sicherstellen, dass Visual C++ im linken Bereich ausgewählt ist, und klicken Sie dann aus der Liste der Projektvorlagen im mittleren Bereich auswählen. Wenn Sie in einer Vorlage klicken, wird in vielen Fällen ein Assistent angezeigt, mit dem Sie verschiedene Projekteigenschaften festlegen, bevor das Projekt erstellt wird. Sie können Eigenschaften anzeigen und ändern diese später mithilfe der Eigenschaftenseiten des Projekts (**Projekt &#124; Eigenschaften**).  
   
  Sie können auch neue Projekte erstellen:  
   
--   Auswählen von **Datei &#124; Neue &#124; Projekt aus vorhandenem Code** und den Anweisungen zum Hinzufügen von vorhandenen Quellcodedateien folgen. Diese Option ist am besten für relativ kleine und einfache Projekte geeignet, etwa 25 Quellcodedateien mit wenigen oder ohne komplexe Abhängigkeiten.  
+-   Auswählen von **Datei &#124; neu &#124; Projekt aus vorhandenem Code** und den Anweisungen zum Hinzufügen von vorhandenen Quellcodedateien folgen. Diese Option ist am besten für relativ kleine und einfache Projekte geeignet, etwa 25 Quellcodedateien mit wenigen oder ohne komplexe Abhängigkeiten.  
   
 -   Wählen Sie die Makefile-Projektvorlage auf der Registerkarte „Allgemein“.  
   
--   Erstellen ein leeres Projekt (unter der **allgemeine** Registerkarte ") und fügen Sie manuell Quellcodedateien, indem Sie mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer und **hinzufügen &#124; Vorhandenes Element**.  
+-   Erstellen ein leeres Projekt (unter der **allgemeine** Registerkarte ") und fügen Sie manuell Quellcodedateien, indem Sie mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer und **hinzufügen &#124; vorhandenes Element**.  
   
 -   using the [Win32 Application Wizard](../windows/win32-application-wizard.md)  
   

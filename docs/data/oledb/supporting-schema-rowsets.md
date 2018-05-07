@@ -1,12 +1,9 @@
 ---
-title: "Unterstützen von Schemarowsets | Microsoft Docs"
-ms.custom: 
+title: Unterstützen von Schemarowsets | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
 Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher abrufen, ohne die zugrunde liegende Struktur bzw. das Schema. Beispielsweise ggf. ein Datenspeicher Tabellen in einer benutzerdefinierten Hierarchie organisiert, damit gäbe es keine Möglichkeit, die Kenntnis des Schemas mit Ausnahme von sichergestellt werden, lesen. (Ein weiteres Beispiel beachten Sie, dass die Visual C++-Assistenten-Schemarowsets verwenden, um die Zugriffsmethoden für den Consumer zu generieren.) Damit wird den Consumer dazu, macht der Anbieter-Sitzungsobjekt Methoden auf die [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) Schnittstelle. In Visual C++-Anwendungen verwenden Sie die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren **IDBSchemaRowset**.  
@@ -57,9 +52,9 @@ Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher ab
   
 -   **C** *ShortName* **SessionTRSchemaRowset** verarbeitet Anforderungen für den Tabelleninformationen (die `DBSCHEMA_TABLES` -Schemarowsets).  
   
--   **C** *ShortName* **SessionColSchemaRowset** handles requests for column information (the **DBSCHEMA_COLUMNS** schema rowset). Der Assistent stellt die Beispiel-Implementierungen für diese Klassen, die Schemainformationen für einen DOS-Anbieter zurück.  
+-   **C** *ShortName* **SessionColSchemaRowset** verarbeitet Anforderungen für die Spalteninformationen (die **DBSCHEMA_COLUMNS** -Schemarowsets). Der Assistent stellt die Beispiel-Implementierungen für diese Klassen, die Schemainformationen für einen DOS-Anbieter zurück.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** handles requests for schema information about the provider type (the **DBSCHEMA_PROVIDER_TYPES** schema rowset). Gibt die standardmäßige Implementierung, die vom Assistenten bereitgestellte `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** verarbeitet Anforderungen, die Informationen zu den Anbietertyp-Schema (die **DBSCHEMA_PROVIDER_TYPES** Schema Rowset). Gibt die standardmäßige Implementierung, die vom Assistenten bereitgestellte `S_OK`.  
   
  Sie können diese Klassen zum Behandeln von Schemainformationen für den Anbieter geeignete anpassen:  
   

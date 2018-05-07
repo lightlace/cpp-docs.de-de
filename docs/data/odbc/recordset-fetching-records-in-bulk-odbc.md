@@ -1,13 +1,10 @@
 ---
-title: "Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -49,7 +44,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   [Gewusst wie: Implementieren der Massen-Datensatzfeldaustausch](#_core_how_to_implement_bulk_record_field_exchange).  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Wie CRecordset das gesammelte Abrufen von Zeilen unterstützt  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Wie CRecordset das gesammelte Abrufen von Zeilen unterstützt  
  Sie können vor dem Öffnen des Recordsetobjekts mit eine Rowsetgröße definieren die `SetRowsetSize` Memberfunktion. Die Größe des Rowsets gibt an, wie viele Datensätze während einer einzigen Abfrage abgerufen werden soll. Wenn gesammelte implementiert ist, ist die Standardgröße des Rowsets 25. Wenn Abrufens von Zeilen nicht implementiert wird, bleibt die Rowsetgröße auf 1 fest.  
   
  Nachdem Sie die Größe des Rowsets initialisiert haben, rufen die [öffnen](../../mfc/reference/crecordset-class.md#open) Memberfunktion. Hier müssen Sie die `CRecordset::useMultiRowFetch` -Option von der **OpenEx** Parameter gesammelte implementieren. Sie können außerdem festlegen, die **CRecordset:: userAllocMultiRowBuffers** Option. Der Mechanismus Bulk Record Field Exchange verwendet Arrays zum Speichern von der mehrere Zeilen mit Daten, die bei einem Abrufvorgang abgerufen. Diese Speicherpuffer automatisch vom Framework zugeordnet werden können, oder Sie können diese manuell zuordnen. Angeben der **CRecordset:: userAllocMultiRowBuffers** Option bedeutet, dass Sie die Zuweisung erfolgt.  
@@ -67,7 +62,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Verschiebt den Cursor an einer bestimmten Zeile innerhalb eines Rowsets.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Virtuelle Funktion, die die Einstellung für die Rowsetgröße auf den angegebenen Wert ändert.|  
   
-##  <a name="_core_special_considerations"></a>Besonderheiten  
+##  <a name="_core_special_considerations"></a> Besonderheiten  
  Obwohl gesammelte einer Leistungssteigerung ist, arbeiten bestimmte Funktionen anders. Bevor Sie entscheiden, gesammelte implementieren, beachten Sie Folgendes:  
   
 -   Ruft das Framework automatisch die `DoBulkFieldExchange` Memberfunktion zum Übertragen von Daten aus der Datenquelle auf das Recordsetobjekt. Allerdings werden Daten nicht aus dem Recordset zurück an die Datenquelle übertragen. Aufrufen der `AddNew`, **bearbeiten**, **löschen**, oder **Update** Ergebnissen der Member-Funktionen in einer fehlgeschlagenen Assertion. Obwohl `CRecordset` bieten derzeit keinen Mechanismus zum Aktualisieren von Datenzeilen, können Sie Ihre eigenen Funktionen schreiben, mit der ODBC-API-Funktion **SQLSetPos**. Weitere Informationen zu **SQLSetPos**, finden Sie unter der *ODBC SDK Programmer's Reference* in der MSDN-Dokumentation.  
@@ -78,7 +73,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   Im Gegensatz zu Datensatzfeldaustausch unterstützen die Assistenten Massen-Datensatzfeldaustausch. Dies bedeutet, dass müssen Sie manuell die Felddatenmember deklarieren und manuell überschreiben `DoBulkFieldExchange` durch Aufrufe der Bulk-RFX-Funktionen zu schreiben. Weitere Informationen finden Sie unter [Funktionen für den Datensatzfeldaustausch](../../mfc/reference/record-field-exchange-functions.md) in der *Klassenbibliotheksreferenz*.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>Gewusst wie: Implementieren der Massen-Datensatzfeldaustausch  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Gewusst wie: Implementieren der Massen-Datensatzfeldaustausch  
  Massen-Datensatzfeldaustausch überträgt ein Rowset von Daten aus der Datenquelle an das Recordsetobjekt. Die Bulk-RFX-Funktionen verwenden Arrays zum Speichern dieser Daten als auch Arrays, die die Länge jedes Elements Daten im Rowset zu speichern. In der Klasse müssen Sie die Felddatenmember als Zeiger auf die Arrays von Daten definieren. Darüber hinaus müssen Sie einen Satz von Zeigern auf Arrays der Längen definieren. Parameterdatenmember sollten nicht als Zeiger deklariert werden. Parameterdatenmember deklarieren, bei Verwendung der Massen-Datensatzfeldaustausch ist identisch mit der sie bei Verwendung von Datensatzfeldaustausch deklarieren. Der folgende Code zeigt ein einfaches Beispiel:  
   
 ```  

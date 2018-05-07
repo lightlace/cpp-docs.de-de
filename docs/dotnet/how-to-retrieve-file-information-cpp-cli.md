@@ -2,30 +2,25 @@
 title: 'Vorgehensweise: Abrufen von Dateiinformationen (C + c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - files [C++], retrieving information about
 - FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0536366e445995d6c4e77d58eb0a48e08207f263
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3c103aaed184039267792c4df4544c382ef7aee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>Gewusst wie: Abrufen von Dateiinformationen (C++/CLI)
 Im folgenden Codebeispiel wird die <xref:System.IO.FileInfo>-Klasse erläutert. Wenn der Name einer Datei bekannt ist, können Sie diese Klasse verwenden, um Informationen über die Datei abzurufen, z. B. Dateigröße, Verzeichnis, vollständiger Name, Datum und Uhrzeit der Erstellung sowie der letzten Änderung.  

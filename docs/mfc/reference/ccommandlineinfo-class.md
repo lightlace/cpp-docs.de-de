@@ -1,12 +1,9 @@
 ---
 title: CCommandLineInfo Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f24ccf18f39ef231f19aa5b837914104b57c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo-Klasse
 Unterstützt die Analyse der Befehlszeile beim Anwendungsstart.  
@@ -97,11 +92,11 @@ class CCommandLineInfo : public CObject
 |*App* Dateiname|Um die Datei zu öffnen.|  
 |*App* `/p` Dateiname|Drucken Sie Datei auf dem Standarddrucker.|  
 |*App* `/pt` Filename-Druckeranschluss-Treiber|Datei mit dem angegebenen Drucker zu drucken.|  
-|*App*`/dde`|Starten und "await" DDE-Befehl.|  
-|*App*`/Automation`|Als OLE-Automatisierungsserver starten.|  
-|*App*`/Embedding`|Starten Sie zum Bearbeiten von eines eingebetteten OLE-Elements.|  
-|*App*`/Register`<br /><br /> *App*`/Regserver`|Informiert die Anwendung Registrierungsaufgaben ausführen.|  
-|*App*`/Unregister`<br /><br /> *App*`/Unregserver`|Informiert die Anwendung alle Aufgaben für die Aufhebung der Registrierung ausgeführt.|  
+|*App* `/dde`|Starten und "await" DDE-Befehl.|  
+|*App* `/Automation`|Als OLE-Automatisierungsserver starten.|  
+|*App* `/Embedding`|Starten Sie zum Bearbeiten von eines eingebetteten OLE-Elements.|  
+|*App* `/Register`<br /><br /> *App* `/Regserver`|Informiert die Anwendung Registrierungsaufgaben ausführen.|  
+|*App* `/Unregister`<br /><br /> *App* `/Unregserver`|Informiert die Anwendung alle Aufgaben für die Aufhebung der Registrierung ausgeführt.|  
   
  Leiten Sie eine neue Klasse von `CCommandLineInfo` anderen Flags und Parameterwerte zu behandeln. Überschreiben Sie [ParseParam](#parseparam) , die neuen Flags zu behandeln.  
   
@@ -113,7 +108,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
  Dieser Konstruktor erstellt ein `CCommandLineInfo` Objekt mit Standardwerten.  
   
 ```  
@@ -128,7 +123,7 @@ CCommandLineInfo();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
  Gibt an, dass die `/Automation` Flag wurde in der Befehlszeile gefunden.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, dies bedeutet, dass Sie als OLE-Automatisierungsserver gestartet.  
   
-##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
  Gibt an, dass die `/Embedding` Flag wurde in der Befehlszeile gefunden.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, dies bedeutet, dass für die Bearbeitung von eines eingebetteten OLE-Elements gestartet.  
   
-##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
  Gibt an, dass der Begrüßungsbildschirm angezeigt werden soll.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, dies bedeutet, dass den Begrüßungsbildschirm für diese Anwendung beim Start angezeigt werden soll. Die standardmäßige Implementierung des [ParseParam](#parseparam) wird dieses Datenelement auf `TRUE` Wenn [M_nShellCommand](#m_nshellcommand) gleich `CCommandLineInfo::FileNew`.  
   
-##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
  Gibt die Shellbefehl für diese Instanz der Anwendung an.  
   
 ```  
@@ -184,28 +179,28 @@ enum {
   
  Eine kurze Beschreibung der folgenden Werte sind finden Sie in der folgenden Liste.  
   
-- `CCommandLineInfo::FileNew`Gibt an, dass kein Dateiname in der Befehlszeile gefunden wurde.  
+- `CCommandLineInfo::FileNew` Gibt an, dass kein Dateiname in der Befehlszeile gefunden wurde.  
   
-- `CCommandLineInfo::FileOpen`Gibt an, dass ein Dateiname in der Befehlszeile gefunden wurde und dass keines der folgenden Flags in der Befehlszeile gefunden wurden: `/p`, `/pt`, `/dde`.  
+- `CCommandLineInfo::FileOpen` Gibt an, dass ein Dateiname in der Befehlszeile gefunden wurde und dass keines der folgenden Flags in der Befehlszeile gefunden wurden: `/p`, `/pt`, `/dde`.  
   
-- `CCommandLineInfo::FilePrint`Gibt an, dass die `/p` Flag wurde in der Befehlszeile gefunden.  
+- `CCommandLineInfo::FilePrint` Gibt an, dass die `/p` Flag wurde in der Befehlszeile gefunden.  
   
-- `CCommandLineInfo::FilePrintTo`Gibt an, dass die `/pt` Flag wurde in der Befehlszeile gefunden.  
+- `CCommandLineInfo::FilePrintTo` Gibt an, dass die `/pt` Flag wurde in der Befehlszeile gefunden.  
   
-- `CCommandLineInfo::FileDDE`Gibt an, dass die `/dde` Flag wurde in der Befehlszeile gefunden.  
+- `CCommandLineInfo::FileDDE` Gibt an, dass die `/dde` Flag wurde in der Befehlszeile gefunden.  
   
-- `CCommandLineInfo::AppRegister`Gibt an, dass die `/Register` oder `/Regserver` Flag wurde gefunden, in der Befehlszeile und die Anwendung wurde aufgefordert, zu registrieren.  
+- `CCommandLineInfo::AppRegister` Gibt an, dass die `/Register` oder `/Regserver` Flag wurde gefunden, in der Befehlszeile und die Anwendung wurde aufgefordert, zu registrieren.  
   
-- `CCommandLineInfo::AppUnregister`Gibt an, dass die `/Unregister` oder `/Unregserver` Anwendung wurde beim Aufheben der Registrierung aufgefordert.  
+- `CCommandLineInfo::AppUnregister` Gibt an, dass die `/Unregister` oder `/Unregserver` Anwendung wurde beim Aufheben der Registrierung aufgefordert.  
   
-- `CCommandLineInfo::RestartByRestartManager`Gibt an, dass die Anwendung vom Neustart-Manager neu gestartet wurde.  
+- `CCommandLineInfo::RestartByRestartManager` Gibt an, dass die Anwendung vom Neustart-Manager neu gestartet wurde.  
   
-- `CCommandLineInfo::FileNothing`Deaktiviert die Anzeige einer neuen untergeordneten MDI-Fensters auf Start. Programmbedingt anzeigen Anwendungs-Assistenten generierte MDI-Anwendungen ein neues untergeordnetes Fenster beim Start. Um dieses Feature deaktivieren, können Sie eine Anwendung `CCommandLineInfo::FileNothing` wie beim Aufrufen der Shellbefehl [ProcessShellCommand ein](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand`wird aufgerufen, indem Sie die `InitInstance( )` aller `CWinApp` abgeleitete Klassen.  
+- `CCommandLineInfo::FileNothing` Deaktiviert die Anzeige einer neuen untergeordneten MDI-Fensters auf Start. Programmbedingt anzeigen Anwendungs-Assistenten generierte MDI-Anwendungen ein neues untergeordnetes Fenster beim Start. Um dieses Feature deaktivieren, können Sie eine Anwendung `CCommandLineInfo::FileNothing` wie beim Aufrufen der Shellbefehl [ProcessShellCommand ein](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand` wird aufgerufen, indem Sie die `InitInstance( )` aller `CWinApp` abgeleitete Klassen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
  Speichert den Wert des dritten Parameters der nicht-Flag in der Befehlszeile an.  
   
 ```  
@@ -215,7 +210,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel der Name des Druckertreibers für einen Druckserver auf Shell-Befehl. Die standardmäßige Implementierung des [ParseParam](#parseparam) legt diesen Datenmember nur, wenn die `/pt` Flag wurde in der Befehlszeile gefunden.  
   
-##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
  Speichert den Wert des ersten Parameters nicht-Flag in der Befehlszeile an.  
   
 ```  
@@ -225,7 +220,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel der Name der Datei zu öffnen.  
   
-##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
  Speichert den Wert des vierten Parameters der nicht-Flag in der Befehlszeile an.  
   
 ```  
@@ -235,7 +230,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel den Namen des Druckeranschlusses für einen Druckserver auf Shell-Befehl. Die standardmäßige Implementierung des [ParseParam](#parseparam) legt diesen Datenmember nur, wenn die `/pt` Flag wurde in der Befehlszeile gefunden.  
   
-##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
  Speichert den Wert des zweiten Parameters nicht-Flag in der Befehlszeile an.  
   
 ```  
@@ -245,7 +240,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel der Name des Druckers für einen Druckserver auf Shell-Befehl. Die standardmäßige Implementierung des [ParseParam](#parseparam) legt diesen Datenmember nur, wenn die `/pt` Flag wurde in der Befehlszeile gefunden.  
   
-##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
  Der eindeutige Neustart Bezeichner in der Befehlszeile angegeben.  
   
 ```  
@@ -257,7 +252,7 @@ CString m_strRestartIdentifier;
   
  Wenn der Neustart-Manager die Anwendung beendet und um den Neustart konfiguriert wird, führt der Neustart-Manager die Anwendung über die Befehlszeile mit dem Neustart-Bezeichner als optionalen Parameter an. Wenn der Neustart-Manager den Neustart-Bezeichner verwendet wird, kann die Anwendung zuvor geöffneten Dokumente öffnen und Wiederherstellen automatisch gespeicherte Dateien.  
   
-##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam  
  Das Framework ruft diese Funktion, um die Analyse/einzelner Parameter über die Befehlszeile zu interpretieren. Die zweite Version unterscheidet sich von der ersten nur in Unicode-Projekten.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void ParseParam(
  Gibt an, ob dies der letzte Parameter oder -Flag in der Befehlszeile angegeben ist.  
   
 ### <a name="remarks"></a>Hinweise  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) Aufrufe `ParseParam` einmal für jeden Parameter oder ein Flag in der Befehlszeile, um als Argument übergeben `pszParam`. Wenn das erste Zeichen des Parameters ist eine "  **-** "oder"  **/** ", wird es entfernt wird und *bFlag* auf festgelegt ist `TRUE`. Beim Analysieren des letzten Parameters, `bLast` festgelegt ist, um `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) Aufrufe `ParseParam` einmal für jeden Parameter oder ein Flag in der Befehlszeile, um als Argument übergeben `pszParam`. Wenn das erste Zeichen des Parameters ist eine " **-**"oder" **/**", wird es entfernt wird und *bFlag* auf festgelegt ist `TRUE`. Beim Analysieren des letzten Parameters, `bLast` festgelegt ist, um `TRUE`.  
   
  Die standardmäßige Implementierung dieser Funktion erkennt die folgenden Flags: `/p`, `/pt`, `/dde`, `/Automation`, und `/Embedding`, wie in der folgenden Tabelle dargestellt:  
   
@@ -294,13 +289,13 @@ virtual void ParseParam(
 |*App* Dateiname|Um die Datei zu öffnen.|  
 |*App* `/p` Dateiname|Drucken Sie Datei auf dem Standarddrucker.|  
 |*App* `/pt` Filename-Druckeranschluss-Treiber|Datei mit dem angegebenen Drucker zu drucken.|  
-|*App*`/dde`|Starten und "await" DDE-Befehl.|  
-|*App*`/Automation`|Als OLE-Automatisierungsserver starten.|  
-|*App*`/Embedding`|Starten Sie zum Bearbeiten von eines eingebetteten OLE-Elements.|  
-|*App*`/Register`<br /><br /> *App*`/Regserver`|Informiert die Anwendung Registrierungsaufgaben ausführen.|  
-|*App*`/Unregister`<br /><br /> *App*`/Unregserver`|Informiert die Anwendung alle Aufgaben für die Aufhebung der Registrierung ausgeführt.|  
+|*App* `/dde`|Starten und "await" DDE-Befehl.|  
+|*App* `/Automation`|Als OLE-Automatisierungsserver starten.|  
+|*App* `/Embedding`|Starten Sie zum Bearbeiten von eines eingebetteten OLE-Elements.|  
+|*App* `/Register`<br /><br /> *App* `/Regserver`|Informiert die Anwendung Registrierungsaufgaben ausführen.|  
+|*App* `/Unregister`<br /><br /> *App* `/Unregserver`|Informiert die Anwendung alle Aufgaben für die Aufhebung der Registrierung ausgeführt.|  
   
- Diese Informationen werden gespeichert, [M_bRunAutomated](#m_brunautomated), [M_bRunEmbedded](#m_brunembedded), und [M_nShellCommand](#m_nshellcommand). Flags werden entweder durch einen Schrägstrich markiert "  **/** 'oder Bindestrich'  **-** ".  
+ Diese Informationen werden gespeichert, [M_bRunAutomated](#m_brunautomated), [M_bRunEmbedded](#m_brunembedded), und [M_nShellCommand](#m_nshellcommand). Flags werden entweder durch einen Schrägstrich markiert " **/**'oder Bindestrich' **-**".  
   
  Die standardmäßige Implementierung setzt den ersten nicht-Flag-Parameter in [M_strFileName](#m_strfilename). Im Fall von der `/pt` Flag die standardmäßige Implementierung setzt den zweiten, dritten und vierten nicht Flag-Parameter in [M_strPrinterName](#m_strprintername), [M_strDriverName](#m_strdrivername), und [M_ StrPortName](#m_strportname)zugeordnet.  
   

@@ -1,13 +1,10 @@
 ---
 title: Dialogfeld-Datenaustausch | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange"></a>Dialogdatenaustausch
 Wenn Sie den DDX-Mechanismus verwenden, Sie legen die Anfangswerte fest des Dialogs objektspezifischen Membervariablen in der Regel in Ihre `OnInitDialog` Ereignishandler oder der Dialogfeldkonstruktor. Sofort das Framework DDX-Mechanismus, bevor das Dialogfeld angezeigt wird, die Werte der Membervariablen an die Steuerelemente im Dialogfeld übertragen, wo sie angezeigt werden, wenn das Dialogfeld angezeigt wird als Antwort auf `DoModal` oder **erstellen** . Die standardmäßige Implementierung des `OnInitDialog` in `CDialog` Aufrufe der `UpdateData` Memberfunktion der Klasse `CWnd` , die Steuerelemente im Dialogfeld zu initialisieren.  
@@ -50,7 +45,7 @@ Wenn Sie den DDX-Mechanismus verwenden, Sie legen die Anfangswerte fest des Dial
  ![Dialogfeld-Datenaustausch](../mfc/media/vc379d1.gif "vc379d1")  
 Dialogdatenaustausch  
   
- `UpdateData`funktioniert in beide Richtungen weisenden Pfeilen, entsprechend den Angaben von der **BOOL** Parameter übergeben. Zum Ausführen der Exchange `UpdateData` richtet eine `CDataExchange` Objekt und Aufrufe eigener Dialogfeldklassen-Überschreibung `CDialog`des `DoDataExchange` Memberfunktion. `DoDataExchange`akzeptiert ein Argument des Typs `CDataExchange`. Die `CDataExchange` an übergebene Objekt `UpdateData` stellt den Kontext des Austausches, definieren solche Informationen wie die Richtung des Austausches dar.  
+ `UpdateData` funktioniert in beide Richtungen weisenden Pfeilen, entsprechend den Angaben von der **BOOL** Parameter übergeben. Zum Ausführen der Exchange `UpdateData` richtet eine `CDataExchange` Objekt und Aufrufe eigener Dialogfeldklassen-Überschreibung `CDialog`des `DoDataExchange` Memberfunktion. `DoDataExchange` akzeptiert ein Argument des Typs `CDataExchange`. Die `CDataExchange` an übergebene Objekt `UpdateData` stellt den Kontext des Austausches, definieren solche Informationen wie die Richtung des Austausches dar.  
   
  Wenn Sie (oder einem Code-Assistenten) außer Kraft setzen `DoDataExchange`, geben Sie einen Aufruf einer DDX-Funktion pro Datenmember (Steuerelement). Jede DDX-Funktion weiß, wie für den Datenaustausch in beide Richtungen auf Grundlage des Kontexts vom implementiert die `CDataExchange` Argument zu übergeben, um Ihre `DoDataExchange` von `UpdateData`.  
   

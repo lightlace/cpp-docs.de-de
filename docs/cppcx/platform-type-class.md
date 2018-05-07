@@ -1,11 +1,8 @@
 ---
 title: 'Platform:: Type-Klasse | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type-Klasse
 Enthält Laufzeitinformationen über einen Typ, insbesondere einen Zeichenfolgennamen und einen Typecode. Durch den Aufruf von [GetType](../cppcx/platform-object-class.md#gettype) für ein Objekt oder oder über die [Typeid](../windows/typeid-cpp-component-extensions.md) Operator auf eine Klassen- oder Strukturnamen.  
@@ -53,7 +48,7 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type::FullName](#fullname)|Gibt eine [Platform::String-Klasse](../cppcx/platform-string-class.md)^ zurück, die den vollqualifizierten Namen des Typs darstellt, und verwendet . (Punkt) als Trennzeichen, nicht:: (Doppelpunkte) – z. B. `MyNamespace.MyClass`.|  
+|[Type:: FullName](#fullname)|Gibt eine [Platform::String-Klasse](../cppcx/platform-string-class.md)^ zurück, die den vollqualifizierten Namen des Typs darstellt, und verwendet . (Punkt) als Trennzeichen, nicht:: (Doppelpunkte) – z. B. `MyNamespace.MyClass`.|  
   
 ## <a name="conversion-operators"></a>Konvertierungsoperatoren  
   
@@ -114,7 +109,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>Hinweise  
  Das Äquivalent der GetTypeCode()-Membermethode ist die `typeid` Eigenschaft.
 
-## <a name="tostring">Type::ToString-Methode</a>
+## <a name="tostring"></a> Type::ToString-Methode
 Ruft ein den Namen des Typs.  
   
 ### <a name="syntax"></a>Syntax  

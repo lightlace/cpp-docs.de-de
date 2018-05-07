@@ -1,11 +1,8 @@
 ---
 title: ':: Collections:: Vector-Klasse | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector-Klasse
 
@@ -83,21 +78,21 @@ Wenn Sie versuchen, verwenden Sie eine **Vektor** Typ in einem öffentlichen Rü
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Vector::Vector](#ctor)|Initialisiert eine neue Instanz der Vector-Klasse.|
+|[Vector:: Vector](#ctor)|Initialisiert eine neue Instanz der Vector-Klasse.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
 |[Vector:: Append](#append)|Fügt das angegebene Element nach dem letzten Element im aktuellen Vektor ein.|
-|[Vector::Clear](#clear)|Löscht alle Elemente im aktuellen Vector.|
+|[Vector:: Clear](#clear)|Löscht alle Elemente im aktuellen Vector.|
 |[Vector:: First](#first)|Gibt einen Iterator zurück, der das erste Element im Vektor angibt.|
-|[Vector::GetAt](#getat)|Ruft das Element des aktuellen Vector ab, das durch den angegebenen Index bezeichnet wird.|
-|[Vector::GetMany](#getmany)|Ruft eine Sequenz von Elementen vom aktuellen Vektor ab, die am angegebenen Index beginnt.|
+|[Vector:: GetAt](#getat)|Ruft das Element des aktuellen Vector ab, das durch den angegebenen Index bezeichnet wird.|
+|[Vector:: getmany](#getmany)|Ruft eine Sequenz von Elementen vom aktuellen Vektor ab, die am angegebenen Index beginnt.|
 |[Vector::GetView](#getview)|Gibt eine schreibgeschützte Ansicht eines Vektors zurück; also [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector::IndexOf](#indexof)|Sucht das angegebene Element im aktuellen Vector und gibt, wenn es gefunden wurde, den Index des Elements zurück.|
 |[Vector::InsertAt](#insertat)|Fügt das angegebene Element in den aktuellen Vector nach dem Element ein, das durch den angegebenen Index identifiziert wird.|
-|[Vector::ReplaceAll](#replaceall)|Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem angegebenen Array ein.|
+|[Vector:: ReplaceAll](#replaceall)|Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem angegebenen Array ein.|
 |[Vector::RemoveAt](#removeat)|Löscht das Element, das durch den angegebenen Index von dem aktuellen Vektor identifiziert wird.|
 |[Vector::RemoveAtEnd](#removeatend)|Löscht das Element am Ende des aktuellen Vektors.|
 |[Vector:: SetAt](#setat)|Weist den angegebenen Wert dem Element im aktuellen Vektor zu, der vom angegebenen Index identifiziert wird.|
@@ -396,7 +391,7 @@ Ein [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem [St
 *ptr*  
 Zeiger zu `std::vector`, der verwendet wird, um den aktuellen Vector zu initialisieren.
 
-*first*  
+*erste*  
 Das erste Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ des *erste* übergeben wird, anhand der *eine perfekte Weiterleitung*. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *last*  

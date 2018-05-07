@@ -2,36 +2,31 @@
 title: Verwenden überprüfbarer Assemblys mit SQLServer (C + c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
 Erweiterte gespeicherte Prozeduren, die als Dynamic Link Libraries (DLLs), verpackt bieten eine Möglichkeit zum Erweitern der Funktionalität von SQL Server über Funktionen, die mit Visual C++ entwickelt wurde. Erweiterte gespeicherte Prozeduren werden als Funktionen in DLLs implementiert. Zusätzlich zu den Funktionen, erweiterte gespeicherte Prozeduren können auch definieren [von benutzerdefinierten Typen](../cpp/classes-and-structs-cpp.md) und [Aggregatfunktionen](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (z. B. SUM oder AVG).  
   
  Wenn ein Client eine erweiterte gespeicherte Prozedur ausgeführt wird, sucht SQL Server für die DLL der erweiterten gespeicherten Prozedur zugeordnet, und lädt diese DLL. SQL Server die angeforderte erweiterte gespeicherte Prozedur aufruft und in einem angegebenen Sicherheitskontext ausgeführt. Die erweiterte gespeicherte Prozedur, und klicken Sie dann übergibt Resultsets und Parameter an den Server zurückgegeben.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]Stellt Erweiterungen in Transact-SQL (T-SQL), die überprüfbare Assemblys in SQL Server installieren können. Der SQL Server-Berechtigungssatz gibt den Sicherheitskontext an, mit der Sicherheit die folgenden Ebenen:  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] Stellt Erweiterungen in Transact-SQL (T-SQL), die überprüfbare Assemblys in SQL Server installieren können. Der SQL Server-Berechtigungssatz gibt den Sicherheitskontext an, mit der Sicherheit die folgenden Ebenen:  
   
 -   Uneingeschränkt: Ausführen von Code auf eigenes Risiko; Code muss nicht überprüfbar typsicher sein.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Hinzufügen von Verweisen in Visual C++-Projekten | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen von Verweisen in Visual C++-Projekten | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Hinzufügen von Verweisen in Visual C++-Projekten
 Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. DLL-Dateien, Windows-Runtime-Komponenten, SDK-Erweiterungen, COM-Komponenten und .NET-Assemblys) APIs aufgerufen werden. Die Methode, mit der Ihr Programm diese anderen Binärdateien findet, hängt sowohl vom Projekttyp als auch vom Typ der Binärdatei ab.  
@@ -37,7 +32,7 @@ Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. D
   
  In einem systemeigenen C++-Projekt (ATL) gilt das Konzept der *Verweise* nur für andere Projekte in der Projektmappe, einschließlich freigegebener Projekte, daher ist dies alles, was im **Verweis-Manager**angezeigt wird:  
   
- ![Visual C# 43; &#43; Verweis-Manager &#40; ATL-Projekte &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++-Verweis-Manager (ATL-Projekte)")  
+ ![Visual C#&#43; &#43; Verweis-Manager &#40;ATL-Projekte&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++-Verweis-Manager (ATL-Projekte)")  
   
  In einem C++/CLI- oder UWP-Projekt (universelle Windows-Plattform) gilt das Konzept der Verweise zusätzlich zu anderen Projekten in der Projektmappe für verschiedene Arten von Binärdateien.  Diese werden alle im **Verweis-Manager**zu öffnen.
   

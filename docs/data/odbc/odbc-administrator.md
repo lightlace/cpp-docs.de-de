@@ -1,13 +1,10 @@
 ---
 title: ODBC-Administrator | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - ODBC Administrator [C++]
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a7d60f11457e509ae67da83aa6bc589af1ce43a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b214ba3513f95533e3892fb93ad9298c44415d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-administrator"></a>ODBC-Administrator
 ODBC-Administrator registriert und konfiguriert die [Datenquellen](../../data/odbc/data-source-odbc.md) für Sie verfügbaren entweder lokal oder über ein Netzwerk. Die Assistenten erstellen mithilfe der vom ODBC-Administrator bereitgestellten Informationen Code in Anwendungen, der Verbindungen zu Datenquellen für den Benutzer aufbaut.  

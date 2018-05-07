@@ -1,12 +1,9 @@
 ---
 title: CDataSource-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDataSource
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDataSource class
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 508bbfc7551383fe1d4517d274031faef590fdb9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7835cd7401c13ab167a9236db4f7e2fc98f3e175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasource-class"></a>CDataSource-Klasse
 Entspricht einer OLE DB-Datenquellenobjekt, das über einen Anbieter eine Verbindung mit einer Datenquelle darstellt.  
@@ -47,8 +42,8 @@ class CDataSource
 |-|-|  
 |[Schließen](../../data/oledb/cdatasource-close.md)|Schließt die Verbindung.|  
 |[GetInitializationString](../../data/oledb/cdatasource-getinitializationstring.md)|Ruft die Initialisierungszeichenfolge der Datenquelle, die derzeit geöffnet ist.|  
-|[GetProperties](../../data/oledb/cdatasource-getproperties.md)|Ruft die Werte der Eigenschaften, die derzeit für die verbundene Datenquelle festgelegt.|  
-|[GetProperty](../../data/oledb/cdatasource-getproperty.md)|Ruft den Wert einer einzelnen Eigenschaft, die derzeit für die verbundene Datenquelle festgelegt.|  
+|[getProperties](../../data/oledb/cdatasource-getproperties.md)|Ruft die Werte der Eigenschaften, die derzeit für die verbundene Datenquelle festgelegt.|  
+|[getProperty](../../data/oledb/cdatasource-getproperty.md)|Ruft den Wert einer einzelnen Eigenschaft, die derzeit für die verbundene Datenquelle festgelegt.|  
 |[Öffnen](../../data/oledb/cdatasource-open.md)|Erstellt eine Verbindung zu einem Anbieter (Datenquelle) entweder eine **CLSID**, **ProgID**, oder ein `CEnumerator` Moniker, die vom Aufrufer bereitgestellt.|  
 |[OpenFromFileName](../../data/oledb/cdatasource-openfromfilename.md)|Öffnet eine Datenquelle aus einer Datei, die durch den vom Benutzer bereitgestellten Dateinamen angegeben wird.|  
 |[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)|Öffnet die Datenquelle, die von einer Initialisierungszeichenfolge angegeben.|  

@@ -2,12 +2,9 @@
 title: Von MFC verwendete Rückruffunktionen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
 Drei Fehlerrückruf-Funktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. Diese Rückruffunktionen übergeben werden, um [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), und [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc). Beachten Sie, dass alle Rückruffunktionen MFC-Ausnahmen abfangen müssen, vor der Rückgabe an Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht aus. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
@@ -42,7 +37,7 @@ Drei Fehlerrückruf-Funktionen werden in der Microsoft Foundation Class-Biblioth
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h 
 
-## <a name="enum_objects"></a>Rückruffunktion für CDC:: EnumObjects
+## <a name="enum_objects"></a> Rückruffunktion für CDC:: EnumObjects
 Die *ObjectFunc* Name ist ein Platzhalter für den Namen der Anwendung bereitgestellte Funktion.  
   
 ### <a name="syntax"></a>Syntax  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Hinweise  
  Der tatsächliche Name muss exportiert werden.  
   
-## <a name="graystring"></a>Rückruffunktion für CDC:: graystring
+## <a name="graystring"></a>  Rückruffunktion für CDC:: graystring
 *OutputFunc* ist ein Platzhalter für den Namen der Anwendung bereitgestellten Rückruffunktion.  
   
 ### <a name="syntax"></a>Syntax  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Hinweise  
  Die Rückruffunktion (*OutputFunc*) muss ein Bild im Verhältnis die Koordinaten (0,0) zeichnen statt (*x*, *y*).  
 
-## <a name="setabortproc"></a>Rückruffunktion für CDC:: setabortproc
+## <a name="setabortproc"></a>  Rückruffunktion für CDC:: setabortproc
 Der Name *AbortFunc* ist ein Platzhalter für den Namen der Anwendung bereitgestellte Funktion.  
   
 ### <a name="syntax"></a>Syntax  

@@ -1,26 +1,21 @@
 ---
 title: Platform::Collections::UnorderedMap Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap-Klasse
 
@@ -79,9 +74,9 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 |Name|Beschreibung|
 |----------|-----------------|
 |[UnorderedMap::Clear](#clear)|Entfernt alle Schlüssel-Wert-Paare aus dem derzeitigen Map-Objekt.|
-|[UnorderedMap::First](#first)|Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt.|
+|[Unorderedmap:: First](#first)|Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt.|
 |[UnorderedMap::GetView](#getview)|Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück; das heißt, eine Platform::Collections::UnorderedMapView-Klasse.|
-|[UnorderedMap::HasKey](#haskey)|Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.|
+|[Unorderedmap:: Haskey](#haskey)|Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.|
 |[UnorderedMap::Insert](#insert)|Fügt das angegebene Schlüssel-Wert-Paar dem aktuellen Map-Objekt hinzu.|
 |[UnorderedMap::Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen Map-Objekt ab.|
 |[UnorderedMap::Remove](#remove)|Löscht das angegebene Schlüssel-Wert-Paar vom aktuellen Map-Objekt.|
@@ -364,7 +359,7 @@ Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 *IL* ein [Std:: initializer_list](../standard-library/initializer-list-class.md) von [Std:: Pair](../standard-library/pair-structure.md) Objekte, die verwendet wird, um die Zuordnung zu initialisieren.
 
-*first*  
+*erste*  
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle UnorderedMap zu initialisieren.
 
 *last*  

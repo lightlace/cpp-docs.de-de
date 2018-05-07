@@ -2,11 +2,8 @@
 title: 'Ressourcencompiler: Fehler RW2002 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2002
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db322791c3804f387c452b3839260826585a2e30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2002"></a>Ressourcencompiler: Fehler RW2002
 Fehler beim Analysieren  
@@ -80,7 +75,7 @@ Fehler beim Analysieren
   
      Der Ressourcencompiler erfordert ein Komma zwischen dem Feld `event` und dem Feld *idvalue* in der **ACCELERATORS** -Anweisung.  
   
-13. **Erwartete Steuerelementname-Klasse**  
+13. **erwartete Steuerelementname-Klasse**  
   
      Die `class` Feld eine **Steuerelement** -Anweisung in der **Dialogfeld** -Anweisung muss einen der folgenden Typen sein: Schaltfläche, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC "," oder eine benutzerdefinierte. Stellen Sie sicher, dass die Klasse richtig geschrieben ist.  
   
@@ -108,7 +103,7 @@ Fehler beim Analysieren
   
      Das Feld *pointsize* der Option FONT in der Anweisung **DIALOG** muss ein ganzzahliger Punktgrößenwert sein.  
   
-20. **Numerische Dialogfeldkonstante erwartet**  
+20. **numerische Dialogfeldkonstante erwartet**  
   
      Ein **Dialogfeld** Anweisung erfordert ganzzahlige Werte für die *X, y, Breite*, und *Höhe* Felder. Stellen Sie sicher, dass diese Werte nach enthalten die **Dialogfeld** -Schlüsselwort und nicht negativ sind.  
   
@@ -148,7 +143,7 @@ Fehler beim Analysieren
   
      Das `type` -Feld der **ACCELERATORS** -Anweisung muss entweder den ASCII- oder den VIRTKEY-Wert enthalten.  
   
-30. **Ungültige Steuerzeichen**  
+30. **ungültige Steuerzeichen**  
   
      Ein Steuerzeichen in der **ACCELERATORS** -Anweisung ist ungültig. Gültige Steuerzeichen besteht aus einem Buchstaben (nur) folgt ein Caretzeichen (^).  
   

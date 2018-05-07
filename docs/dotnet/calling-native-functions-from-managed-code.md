@@ -1,13 +1,10 @@
 ---
 title: Aufrufen systemeigener Funktionen aus verwaltetem Code | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Aufrufen systemeigener Funktionen aus verwaltetem Code
 Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW („It Just Works“)-Mechanismus.  
@@ -40,7 +35,7 @@ Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, z
   
 -   [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Eine genauere Betrachtung von Plattformaufrufen](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [Genauere Betrachtung von Plattformaufrufen](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  In den Beispielen dieses Abschnitts wird veranschaulicht, wie `PInvoke` verwendet werden kann. `PInvoke` kann angepasstes Datenmarshalling vereinfachen, da Sie die Marshallinginformationen deklarativ in Attributen bereitstellen, anstatt prozeduralen Marshallingcode zu schreiben.  
   

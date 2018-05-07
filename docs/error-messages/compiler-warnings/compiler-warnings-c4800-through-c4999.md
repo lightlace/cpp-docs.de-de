@@ -1,8 +1,8 @@
 ---
-title: "Compilerfehler Warnungen C4800 über C5999 | Microsoft Docs"
+title: Compilerfehler Warnungen C4800 über C5999 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4806
@@ -104,14 +104,13 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerfehler Warnungen C4800 über C5999
 
@@ -161,10 +160,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C4881|des Konstruktors und/oder des Destruktors wird nicht aufgerufen werden, für die "tile_static" Variable "*Variable*"|
 |Compilerwarnung (Stufe 1) C4882|übergeben Funktionselemente mit Operatoren nicht Const-Aufruf an Concurrency:: parallel_for_each ist veraltet.|
 |Compilerwarnung C4900|Konflikt zwischen "*tool1*"Version"*version1*'und'*tool2*"Version"*version2*"|
-|[Compilerwarnung (Ebene 1) C4905](compiler-warning-level-1-c4905.md)|
-          Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
-|[Compilerwarnung (Ebene 1) C4906](compiler-warning-level-1-c4906.md)|
-          Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
+|[Compilerwarnung (Ebene 1) C4905](compiler-warning-level-1-c4905.md)|Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
+|[Compilerwarnung (Ebene 1) C4906](compiler-warning-level-1-c4906.md)|Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
 |Compilerwarnung (Stufe 1) C4910|"\<Bezeichner >:"__declspec(dllexport)"und"Extern"sind bei einer expliziten Instanziierung nicht kompatibel|
 |Compilerwarnung (Stufe 1) C4912|"*Attribut*": Attribut weist ein nicht definiertes Verhalten für ein geschachteltes UDT|
 |Compilerwarnung (Stufe 4) C4913|Benutzerdefinierter binärer Operator "," ist vorhanden, die Überladung konnte aber alle Operanden nicht konvertieren. Es wurde der standardmäßig enthaltene binäre Operator "," verwendet.|
@@ -189,7 +186,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung C4939|#pragma vtordisp ist veraltet und wird in einem der nächsten Releases von Visual C++ entfernt.|
 |Compilerwarnung (Stufe 1) C4944|"*Symbol*": Symbol aus kann nicht importiert "*assembly1*': als*Symbol*" ist bereits im aktuellen Bereich vorhanden.|
 |[Compilerwarnung (Ebene 1) C4945](compiler-warning-level-1-c4945.md)|"*Symbol*": kann nicht importiert Symbol aus "*assembly1*': als*Symbol*'wurde bereits importiert aus einer anderen Assembly'*assembly2* '|
-|[Compilerwarnung (Ebene 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast used between related classes: '*class1*' and '*class2*'|
+|[Compilerwarnung (Ebene 1) C4946](compiler-warning-level-1-c4946.md)|Reinterpret_cast wird zwischen verknüpften Klassen verwendet: "*class1*'und'*Klasse2*"|
 |Compilerwarnung (Stufe 1) C4947|"*Type_or_member*': als veraltet markiert|
 |[Compilerwarnung (Ebene 2) C4948](compiler-warning-level-2-c4948.md)|Rückgabetyp "*Accessor*" entspricht nicht den letzten Parametertyp der entsprechenden Setter-Methode|
 |[Compilerwarnung (Ebene 1 und Ebene 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|Pragmas "managed" und "nicht verwaltet" sind sinnvoll, nur beim Kompilieren mit "/ Clr [: Option]"|

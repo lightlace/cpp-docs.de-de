@@ -2,12 +2,9 @@
 title: 'Recordset: Erneutes Abfragen eines Recordsets (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: Erneutes Abfragen eines Recordsets (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -41,16 +36,16 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   Aktualisieren Sie das Recordset basierend auf Parameterwerte zu ändern.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Aktualisieren des Recordsets bis Datum  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Aktualisieren des Recordsets bis Datum  
  In vielen Fällen möchten Sie das Recordset-Objekt, um ihn zu schalten requery auf dem neuesten Stand. In einer Umgebung Mehrbenutzer-Datenbank können anderen Benutzern während der Lebensdauer des Recordsets Änderungen an den Daten vornehmen. Weitere Informationen zu Wenn Recordset von anderen Benutzern vorgenommene Änderungen wiedergibt, und wenn Recordsets anderer Benutzer die Änderung zu reflektieren, finden Sie unter [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) und [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Erneutes Abfragen basierend auf neuen Parametern  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Erneutes Abfragen basierend auf neuen Parametern  
  Eine andere häufige – und ebenso wichtig – verwenden der [Requery](../../mfc/reference/crecordset-class.md#requery) entspricht, wählen Sie einen neuen Satz von Datensätzen auf Grundlage der Parameterwerte zu ändern.  
   
 > [!TIP]
 >  Geschwindigkeit der Abfrage ist wahrscheinlich wesentlich schneller, wenn Sie aufrufen **Requery** veränderlichen Parameterwerte als, wenn Sie aufrufen **öffnen** erneut aus.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Erneutes Abfragen Dynasets Vs aus. Momentaufnahmen  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Erneutes Abfragen Dynasets Vs aus. Momentaufnahmen  
  Da Dynasets vorgesehen sind, um eine Gruppe von Datensätzen mit dynamischen auf dem neuesten Stand Daten darzustellen, möchten Sie Dynasets requery häufig, wenn andere Benutzer den Ergänzungen widerspiegeln werden sollen. Momentaufnahmen sind hingegen, hilfreich, da Sie problemlos auf ihren statischen Inhalten verlassen können, während Sie Berichte vorbereiten, Berechnen von Summen und so weiter. Weiterhin, sollten Sie in einigen Fällen auch eine Momentaufnahme erneut abgefragt. In einer mehrbenutzerumgebung können momentaufnahmedaten Synchronisierung mit der Datenquelle verloren gehen als anderer Benutzer die Datenbank zu ändern.  
   
 #### <a name="to-requery-a-recordset-object"></a>Um einem Recordset-Objekt zu aktualisieren.  

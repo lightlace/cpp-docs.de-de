@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: Migrieren zu Clr-| Microsoft Docs'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 Dieses Thema behandelt Probleme, die beim Kompilieren von systemeigenem Code mit auftreten **"/ CLR"** (siehe [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen). **"/ CLR"** Visual C++-Module aufgerufen und gleichzeitig die Kompatibilität mit nicht verwalteten Modulen beibehalten von .NET-Assemblys aus aufgerufen werden können. Finden Sie unter [gemischte (systemeigene und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [einheitlichen als auch .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  Systemeigene Typen sind standardmäßig privat. Das kann dazu führen, dass ein systemeigener Typ außerhalb der DLL nicht sichtbar ist. Beheben Sie diesen Fehler, indem Sie zu diesen Typen `public` hinzufügen.  
   
 ### <a name="floating-point-and-alignment-issues"></a>Gleitkomma- und Ausrichtungsprobleme  
- `__controlfp`wird auf die common Language Runtime nicht unterstützt (siehe [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) für Weitere Informationen). Der CLR wird auch nicht berücksichtigt. [ausrichten](../cpp/align-cpp.md).  
+ `__controlfp` wird auf die common Language Runtime nicht unterstützt (siehe [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) für Weitere Informationen). Der CLR wird auch nicht berücksichtigt. [ausrichten](../cpp/align-cpp.md).  
   
 ### <a name="com-initialization"></a>COM-Initialisierung  
  Die Common Language Runtime initialisiert COM automatisch beim Initialisieren eines Moduls. Bei automatischer Initialisierung wird COM als MTA initialisiert. Folglich führt explizites Initialisieren von COM zu Rückgabecodes, die angeben, dass COM bereits initialisiert ist. Wenn Sie versuchen, COM mit einem bestimmten Threadingmodell zu initialisieren, obwohl die CLR COM bereits mit einem anderen Threadingmodell initialisiert hat, kann die Anwendung möglicherweise nicht ausgeführt werden.  

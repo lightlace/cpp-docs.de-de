@@ -1,12 +1,9 @@
 ---
 title: Linkertoolfehler Lnk1104 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>Linkertoolfehler LNK1104
 
@@ -101,4 +96,4 @@ Dieser Fehler kann auftreten, haben Zugriff auf Unzureichende Dateiberechtigunge
 
 Der Fehler kann auftreten, wenn Sie nicht über genügend Speicherplatz verfügen. Der Linker verwendet im verschiedenen Fällen temporäre Dateien. Auch wenn Sie über ausreichend Speicherplatz verfügen, kann eine sehr umfangreiche Verknüpfung ausschöpfen oder fragmentieren den verfügbare Speicherplatz. Erwägen Sie die [/OPT (Optimierungen)](../../build/reference/opt-optimizations.md) Option; auf diese Weise transitive COMDAT-Eliminierung liest alle Objektdateien mehrfach.
 
-Wenn die *Filename* heißt LNK*nnn*, Hierbei handelt es sich um einen vom Linker für eine temporäre Datei generierten Dateinamen, die in der TMP-Umgebungsvariablen angegebene Verzeichnis möglicherweise nicht vorhanden, oder nicht mehr als eine Verzeichnis kann für die TMP-Umgebungsvariable angegeben werden. Nur ein Verzeichnispfad sollte für die TMP-Umgebungsvariable angegeben werden.
+Wenn die *Filename* heißt LNK *"nnn"*, also einen vom Linker für eine temporäre Datei generierten Dateinamen, in der TMP-Umgebungsvariablen angegebene Verzeichnis ist möglicherweise nicht vorhanden oder ist möglicherweise mehr als ein Verzeichnis an. für die TMP-Umgebungsvariable angegeben. Nur ein Verzeichnispfad sollte für die TMP-Umgebungsvariable angegeben werden.

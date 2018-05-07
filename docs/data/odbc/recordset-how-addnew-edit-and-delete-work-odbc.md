@@ -2,12 +2,9 @@
 title: 'Recordset: AddNew, Edit und Delete Funktionsweise (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: Funktionsweise von AddNew, Edit und Delete (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -57,7 +52,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Als Ergänzung, möchten Sie möglicherweise lesen [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), das die entsprechende Rolle von RFX in Aktualisierungsvorgängen beschreibt.  
   
-##  <a name="_core_adding_a_record"></a>Hinzufügen eines Datensatzes  
+##  <a name="_core_adding_a_record"></a> Hinzufügen eines Datensatzes  
 
  Hinzufügen eines neuen Datensatzes zu einem Recordset beinhaltet den Aufruf des Recordsets [AddNew](../../mfc/reference/crecordset-class.md#addnew) Memberfunktion, die Werte der Felddatenmember des neuen Datensatzes festzulegen und das Aufrufen der [Update](../../mfc/reference/crecordset-class.md#update) Memberfunktion schreiben der Datensatz mit der Datenquelle.  
   
@@ -93,9 +88,9 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
     >  Für die vollständige Steuerung eines neuen Datensatzes, nehmen Sie die folgende Weise: Legen Sie die Werte der Felder, die Werte aufweisen, und legen Sie dann explizit alle Felder, die durch den Aufruf Null bleibt, werden `SetFieldNull` mit einem Zeiger auf das Feld und der Parameter **"true"**  (Standard). Stellen Sie sicher, dass ein Feld mit der Datenquelle Aufruf nicht geschrieben werden sollen `SetFieldDirty` mit einem Zeiger auf das Feld und der Parameter **"false"**, und ändern Sie den Wert des Felds. Um zu bestimmen, ob ein Feld NULL zulässig ist, rufen Sie `IsFieldNullable`.  
   
     > [!TIP]
-    >  Zum Erkennen von Recordset geändert verwendet MFC eine **PSEUDO_NULL** Wert für jeden Datentyp, der in einem Recordset gespeichert werden können. Wenn Sie ein Feld explizit, um festlegen müssen die **PSEUDO_NULL** Wert und das Feld erfolgt bereits Null gekennzeichnet sein müssen Sie auch aufrufen `SetFieldNull`, übergeben die Adresse des Felds in den ersten Parameter und **"false"**im zweiten Parameter.  
+    >  Zum Erkennen von Recordset geändert verwendet MFC eine **PSEUDO_NULL** Wert für jeden Datentyp, der in einem Recordset gespeichert werden können. Wenn Sie ein Feld explizit, um festlegen müssen die **PSEUDO_NULL** Wert und das Feld erfolgt bereits Null gekennzeichnet sein müssen Sie auch aufrufen `SetFieldNull`, übergeben die Adresse des Felds in den ersten Parameter und **"false"** im zweiten Parameter.  
   
-##  <a name="_core_visibility_of_added_records"></a>Sichtbarkeit der hinzugefügte Datensätze  
+##  <a name="_core_visibility_of_added_records"></a> Sichtbarkeit der hinzugefügte Datensätze  
  Wenn ein hinzugefügter Datensatz für das Recordset sichtbar ist? Hinzugefügte Datensätze manchmal angezeigt und in einigen Fällen sind nicht sichtbar ist, je nach zwei Dinge:  
   
 -   Welche des Treibers ist.  
@@ -104,7 +99,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Wenn der ODBC-Treiber unterstützt die **:: SQLSetPos** MFC-ODBC-API-Funktion verwendet die Funktion zum Hinzufügen von Einträgen. Mit **:: SQLSetPos**, werden hinzugefügte Datensätze für jedes aktualisierbare MFC-Recordset sichtbar. Hinzugefügt, ohne dass die Unterstützung für die Funktion, Datensätze sind nicht sichtbar, und rufen Sie **Requery** um sie anzuzeigen. Mit **:: SQLSetPos** darüber hinaus ist effizienter.  
   
-##  <a name="_core_editing_an_existing_record"></a>Einen vorhandenen Datensatz bearbeiten  
+##  <a name="_core_editing_an_existing_record"></a> Einen vorhandenen Datensatz bearbeiten  
  Bearbeiten einen vorhandenen Datensatz in einem Recordset, scrollen Sie zum Datensatz, rufen des Recordsets [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Memberfunktion, die Werte der Felddatenmember des neuen Datensatzes festzulegen und das Aufrufen der [aktualisieren](../../mfc/reference/crecordset-class.md#update)Memberfunktion versucht, den geänderten Datensatz in der Datenquelle zu schreiben.  
   
  Als Voraussetzung für den Aufruf von **bearbeiten**, muss das Recordset aktualisierbar und auf einen Datensatz. Die `CanUpdate` und `IsDeleted` Memberfunktionen können Sie diese Bedingungen zu bestimmen. Außerdem muss der aktuelle Datensatz nicht gelöscht wurde, und es muss Datensätze im Recordset (beide `IsBOF` und `IsEOF` geben 0 zurück).  
@@ -140,7 +135,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
     > [!TIP]
     >  Beim Aufrufen `AddNew` oder **bearbeiten** nach müssen entweder die Funktion aufgerufen, zuvor jedoch vor dem Aufruf **Update**, Bearbeitungspuffer wird aktualisiert, mit dem gespeicherten Datensatz, und Ersetzen Sie dabei den neuen oder bearbeiteten Datensatz in Fortschritt. Dieses Verhalten bietet Ihnen eine Möglichkeit zum Abbrechen einer `AddNew` oder **bearbeiten** und neu zu beginnen: Wenn Sie feststellen, dass der Datensatz in Bearbeitung fehlerhaft ist, rufen Sie einfach **bearbeiten** oder `AddNew` erneut aus.  
   
-##  <a name="_core_deleting_a_record"></a>Löschen eines Datensatzes  
+##  <a name="_core_deleting_a_record"></a> Löschen eines Datensatzes  
  Löschen eines Datensatzes aus einem Recordset umfasst, scrollen Sie zu dem Datensatz und rufen des Recordsets [löschen](../../mfc/reference/crecordset-class.md#delete) Memberfunktion. Im Gegensatz zu `AddNew` und **bearbeiten**, **löschen** erfordert keinen übereinstimmenden Aufruf von **Update**.  
   
  Als Voraussetzung für den Aufruf von **löschen**, muss das Recordset aktualisierbar sein und muss es sich um einen Datensatz handeln. Die `CanUpdate`, `IsBOF`, `IsEOF`, und `IsDeleted` Memberfunktionen können Sie diese Bedingungen zu bestimmen.  

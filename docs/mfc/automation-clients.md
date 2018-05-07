@@ -1,13 +1,10 @@
 ---
 title: Automatisierungsclients | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients"></a>Automatisierungsclients
 Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsclient ist eine Anwendung, die verfügbar gemachten Objekten gehören zu einer anderen Anwendung bearbeitet werden kann. Die Anwendung, die die Objekte verfügbar macht, wird den Automation-Server aufgerufen. Der Client bearbeitet die Serveranwendung Objekte durch den Zugriff auf diese Objekte Eigenschaften und Funktionen.  
@@ -47,7 +42,7 @@ Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung im
  Geben Sie dann die Typbibliothek-Datei, die die Eigenschaften und Funktionen des Objekts die Serveranwendung beschrieben. Das Element hinzufügen-Dialogfeld liest diese Datei und erstellt die `COleDispatchDriver`-abgeleitete Klasse, mit Memberfunktionen, die Ihre Anwendung aufrufen kann, um die Serveranwendung-Objekten in C++ in einer typsicheren Weise zugreifen. Zusätzliche Funktionen von geerbten `COleDispatchDriver` vereinfacht den Prozess den richtigen Automatisierungsserver aufrufen.  
   
 ### <a name="handling-events-in-automation-clients"></a>Behandlung von Ereignissen in Benutzeroberflächenautomatisierungs-Clients  
- Wenn Sie Ereignisse in Ihren Automatisierungsclient behandeln möchten, müssen Sie eine Senkenschnittstelle hinzufügen. MFC bietet assistentenunterstützung senkenschnittstellen für ActiveX-Steuerelemente hinzufügen, jedoch für andere COM_Server nicht unterstützt. Informationen zum Hinzufügen einer Senkenschnittstelle in einem MFC-Client für die Schnittstellen beschrieben, die von COM-Servern finden Sie unter So wird's gemacht: Erstellen Sie eine Senke-Schnittstelle in MFC-basierte COM-Client (KB 181845) am [Http://support.microsoft.com/default.aspxscid=kb;en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
+ Wenn Sie Ereignisse in Ihren Automatisierungsclient behandeln möchten, müssen Sie eine Senkenschnittstelle hinzufügen. MFC bietet assistentenunterstützung senkenschnittstellen für ActiveX-Steuerelemente hinzufügen, jedoch für andere COM_Server nicht unterstützt. Informationen zum Hinzufügen einer Senkenschnittstelle in einem MFC-Client für die Schnittstellen beschrieben, die von COM-Servern finden Sie unter So wird's gemacht: Erstellen Sie eine Senke-Schnittstelle in MFC-basierte COM-Client (KB 181845) am [ http://support.microsoft.com/default.aspxscid=kb; En-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Automatisierungsclients: Verwenden von Typbibliotheken](../mfc/automation-clients-using-type-libraries.md)   

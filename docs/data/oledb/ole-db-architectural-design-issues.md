@@ -1,30 +1,25 @@
 ---
 title: OLE DB-Architekturdesign | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cfb6b8ff4941aff1271662c27dddd509b023c55
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75d996416e92ded920f45d3352c6478dd8c67a86
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>Fragen zum OLE DB-Architekturdesign
 Vor dem Starten der OLE DB-Anwendung sollten Sie Folgendes berücksichtigen:  
@@ -47,9 +42,9 @@ Vor dem Starten der OLE DB-Anwendung sollten Sie Folgendes berücksichtigen:
   
 -   [Microsoft Data Access – technische Artikel (Übersicht)](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Visual Studio Solution Center](http://go.microsoft.com/fwlink/p/?linkid=148215)  
+-   [Visual Studio-Lösungscenter](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
--   [Search Microsoft.com](http://search.microsoft.com/)  
+-   [Suchen Sie "Microsoft.com"](http://search.microsoft.com/)  
   
  Wenn Sie eine Suche ausführen, geben Sie eine Kombination von Schlüsselwörtern, die Ihr Szenario am besten geeignet ist. zum Beispiel: Wenn Sie ADO-Objekten mit einem OLE DB-Anbieter verwendet haben, versuchen Sie eine boolesche Suche mit **ADO und "OLE DB"**. Wenn Sie ältere DAO-Code zu ODBC zu migrieren möchten, wählen Sie "alle Wörter", und geben Sie z. B. Zeichenfolgen **Migrieren von DAO**.  
   

@@ -1,12 +1,9 @@
 ---
 title: Legen Sie (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `set` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann.  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Solche ein Delegatobjekt muss eine strikte schwache Sortierung anwenden auf Schlüssel vom Typ [Set:: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Bedeutet, dass für zwei beliebige Tasten `X` und `Y`:  
   
- `key_comp()(X, Y)`Gibt der gleiche booleschen führen bei jedem Aufruf.  
+ `key_comp()(X, Y)` Gibt der gleiche booleschen führen bei jedem Aufruf.  
   
  Wenn `key_comp()(X, Y)` ist "true", klicken Sie dann `key_comp()(Y, X)` muss "false" sein.  
   
@@ -158,6 +153,6 @@ template<typename Key>
  [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
- [Festlegen](../dotnet/set-stl-clr.md)   
- [Festlegen](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
  [Referenz zur STL/CLR-Bibliothek](../dotnet/stl-clr-library-reference.md)

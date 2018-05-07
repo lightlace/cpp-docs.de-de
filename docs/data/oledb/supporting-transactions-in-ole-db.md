@@ -1,12 +1,9 @@
 ---
-title: "Unterstützen von Transaktionen in OLE DB | Microsoft Docs"
-ms.custom: 
+title: Unterstützen von Transaktionen in OLE DB | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Unterstützen von Transaktionen in OLE DB
 Ein [Transaktion](../../data/transactions-mfc-data-access.md) lässt sich eine Gruppe oder ein batch, eine Reihe von Updates mit einer Datenquelle so, dass entweder alle erfolgreich ausgeführt werden und gleichzeitig ein Commit ausgeführt werden, oder (Wenn eine von Ihnen ein Fehler auftritt) sind keine ein Commit ausgeführt wurde und die gesamte Transaktion zurückgesetzt wird. Dieser Prozess wird sichergestellt, dass die Integrität des Ergebnisses in der Datenquelle.  

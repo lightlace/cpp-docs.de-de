@@ -1,13 +1,10 @@
 ---
 title: Hosten eines Windows Form Benutzersteuerelements als MFC-Dialogfeld | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosten eines Windows Form-Benutzersteuerelements als MFC-Dialogfeld
-MFC stellt die Vorlagenklasse [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , damit Sie ein Windows Forms-Benutzersteuerelement hosten können (<xref:System.Windows.Forms.UserControl>) in einem MFC-Dialogfeld mit oder ohne Modus. `CWinFormsDialog`die MFC-Klasse abgeleitet ist [CDialog](../mfc/reference/cdialog-class.md), sodass das Dialogfeld mit oder ohne Modus gestartet werden kann.  
+MFC stellt die Vorlagenklasse [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , damit Sie ein Windows Forms-Benutzersteuerelement hosten können (<xref:System.Windows.Forms.UserControl>) in einem MFC-Dialogfeld mit oder ohne Modus. `CWinFormsDialog` die MFC-Klasse abgeleitet ist [CDialog](../mfc/reference/cdialog-class.md), sodass das Dialogfeld mit oder ohne Modus gestartet werden kann.  
   
  Der Prozess, `CWinFormsDialog` zum Hosten des Benutzersteuerelements verwendet wird, ähnelt die, die in beschriebenen [Hosten eines Windows Form-Benutzersteuerelements in MFC-Dialogfeld](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). `CWinFormsDialog` verwaltet jedoch die Initialisierung und das Hosten des Benutzersteuerelements, sodass es nicht manuell programmiert werden muss.  
   

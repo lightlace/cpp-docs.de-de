@@ -1,13 +1,10 @@
 ---
-title: "Übersicht über die Klassenbibliothek | Microsoft Docs"
-ms.custom: 
+title: Übersicht über die Klassenbibliothek | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f144ce4dd6ed9cd29adca27aaff51a79af0abec1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-library-overview"></a>Übersicht über die Klassenbibliothek
 Diese Übersicht kategorisiert und beschreibt die Klassen in Version 9.0 der Microsoft Foundation Class-Bibliothek (MFC). Die Klassen in MFC bilden zusammen ein Anwendungsframework – das Framework einer Anwendung, die für die Windows-API geschrieben wurde. Ihre Aufgabe als Programmierer besteht darin, den speziellen Code für Ihre Anwendung einzufügen.  

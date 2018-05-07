@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>Linkeroptionen
 
@@ -116,6 +116,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Verwendet einen alternativen Speicherort zum Speichern einer PDB-Datei.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Erstellt eine Programmdatenbankdatei (PDB-Datei) ohne eigene Symbole.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Gibt die PGD-Datei für profilgesteuerte Optimierungen an.|
+|[/ POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Veraltete** erstellt einen Thread-sichere instrumentiert PGO-Build.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Erstellt eine Ausgabedatei, die mit dem Leistungstoolprofiler verwendet werden kann.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Legt die Prüfsumme im Header der EXE-Datei fest.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Legt fest, dass das Image eine Tabelle mit sicheren Ausnahmehandlern enthält.|
@@ -127,6 +128,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Gibt Ressourcen-ID der vom Linker generierten Typbibliothek an.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Legt den Namen der TLB-Datei und anderer MIDL-Ausgabedateien fest.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Erstellt eine Anwendung, die auf dem Terminalserver ausgeführt werden soll.|
+|[/ USEPROFILE](../../build/reference/useprofile.md)|Verwendet, die profilgesteuerte Optimierung Trainingsdaten, um ein optimiertes Image zu erstellen.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Druckt Linkerstatusmeldungen aus.|
 |[/VERSION](../../build/reference/version-version-information.md)|Weist eine Versionsnummer zu.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Schließt alle Objektdatei aus der angegebenen statischen Bibliotheken.|

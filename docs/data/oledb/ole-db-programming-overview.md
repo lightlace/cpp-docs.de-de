@@ -1,12 +1,9 @@
 ---
-title: "Übersicht über die OLE DB-Programmierung | Microsoft Docs"
-ms.custom: 
+title: Übersicht über die OLE DB-Programmierung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-programming-overview"></a>Übersicht über die OLE DB-Programmierung
 OLE DB ist eine leistungsstarke, COM-basierte datenbanktechnologie. Er bietet eine allgemeine Möglichkeit für den Datenzugriff unabhängig von der Art, in dem es gespeichert ist. In einer typischen Unternehmenssituation wird eine große Menge an Informationen außerhalb der Unternehmensdatenbanken gespeichert. Diese Informationen befinden sich in Dateisystemen (z. B. FAT oder NTFS), indizierten sequenziellen Dateien, persönlichen Datenbanken (z. B. in Access), Arbeitsblättern (z. B. in Excel), Anwendungen zur Projektplanung (z. B. Project) sowie in E-Mail-Nachrichten (z. B. in Outlook). OLE DB-ermöglicht es Ihnen, jede Art von Datenspeicher auf die gleiche Weise den Zugriff auf als der Datenspeicher einen OLE DB-Anbieter verfügt.

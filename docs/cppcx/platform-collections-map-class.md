@@ -1,11 +1,8 @@
 ---
 title: Platform::Collections::Map Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -93,7 +88,7 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 |Name|Beschreibung|
 |----------|-----------------|
 |[Map::Clear](#clear)|Entfernt alle Schlüssel-Wert-Paare aus dem derzeitigen Map-Objekt.|
-|[Map::First](#first)|Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt.|
+|[Map:: First](#first)|Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt.|
 |[Map::GetView](#getview)|Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück; das heißt, eine [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.|
 |[Map::Insert](#insert)|Fügt das angegebene Schlüssel-Wert-Paar dem aktuellen Map-Objekt hinzu.|
@@ -106,7 +101,7 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 |||
 |-|-|
 |name|Beschreibung|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Tritt auf, wenn sich die Map ändert.|
+|[Map:: mapchanged](#mapchanged-event.md) `event`|Tritt auf, wenn sich die Map ändert.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -253,7 +248,7 @@ Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortier
 *m*  
 Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` wird verwendet, um die aktuelle Map zu initialisieren.
 
-*first*  
+*erste*  
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
 
 *last*  

@@ -1,29 +1,24 @@
 ---
-title: "Namen, Eigenschaft Assistent zum Hinzufügen | Microsoft Docs"
-ms.custom: 
+title: Namen, Eigenschaft Assistent zum Hinzufügen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>Namen, Assistent zum Hinzufügen von Eigenschaften
 Verwenden Sie diesen Assistenten, um eine Schnittstelle eine Eigenschaft hinzugefügt.  
@@ -40,7 +35,7 @@ Verwenden Sie diesen Assistenten, um eine Schnittstelle eine Eigenschaft hinzuge
 |MFC-Dispinterface, MFC-ActiveX-Steuerelement Disp-Schnittstelle|Geben Sie einen Eigenschaftennamen ein, oder wählen Sie aus der Liste eine Systemeigenschaft. Wenn Sie eine Eigenschaft aus der Liste auswählen, der entsprechende Wert angezeigt wird, der **Eigenschaftentyp** Feld. Sie können dieses Typs ändern, abhängig von Ihrer Auswahl unter **Implementierungstyp**.|  
   
  **Rückgabetyp**  
- Nur ATL-Schnittstellen. Legt den Rückgabetyp für die Eigenschaft fest. Für duale Schnittstellen `HRESULT` ist immer der Rückgabetyp ein, und dieses Feld ist nicht verfügbar. Für benutzerdefinierte Schnittstellen können Sie einen Rückgabetyp aus der Liste auswählen. `HRESULT`wird weiterhin empfohlen, da es sich um ein gängiges Verfahren zum Fehler bereitstellt.  
+ Nur ATL-Schnittstellen. Legt den Rückgabetyp für die Eigenschaft fest. Für duale Schnittstellen `HRESULT` ist immer der Rückgabetyp ein, und dieses Feld ist nicht verfügbar. Für benutzerdefinierte Schnittstellen können Sie einen Rückgabetyp aus der Liste auswählen. `HRESULT` wird weiterhin empfohlen, da es sich um ein gängiges Verfahren zum Fehler bereitstellt.  
   
  **Variablenname**  
  MFC nur Disp-Schnittstellen. Nur verfügbar, wenn Sie angeben, **Membervariable** unter **Implementierungstyp**. Legt den Namen der Membervariable, die Eigenschaft zugeordnet ist. Standardmäßig wird der Variablenname m_ festgelegt*PropertyName*. Sie können diesen Namen bearbeiten.  

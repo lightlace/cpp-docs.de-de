@@ -1,13 +1,10 @@
 ---
-title: "Hinzufügen einer Membervariablen (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen einer Membervariablen (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.member.variable
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Hinzufügen einer Membervariablen (Visual C++)
 Sie können eine Membervariable zu einer Klasse mit der Klassenansicht hinzufügen. Membervariablen kann entweder für [Datenaustausch und datenvalidierung](../mfc/dialog-data-exchange-and-validation.md), oder sie können generisch sein. Der Assistent Variablen Member ist speziell für nehmen die relevante Informationen und zum Einfügen von Elementen in den Quelldateien an den entsprechenden Stellen verwenden. Sie können eine Membervariable vom Hinzufügen der [Dialog-Editor](../windows/dialog-editor.md) in [Ressourcenansicht](../windows/resource-view-window.md), oder von [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  

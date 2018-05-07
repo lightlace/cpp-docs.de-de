@@ -1,13 +1,10 @@
 ---
 title: 'Automatisierungsserver: Probleme mit der Objektlebensdauer | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9fab7af74dee482c5e8dffb327da9c037796fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e27812c20a64f5472c29a66298bcdec30bf4ef2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automatisierungsserver: Probleme mit der Objektlebensdauer
 Wenn ein Automatisierungsclient erstellt oder ein OLE-Element aktiviert, übergibt der Server, der diesem Objekt einen Zeiger an dem Client. Der Client stellt einen Verweis auf das Objekt durch einen Aufruf an die OLE-Funktion her [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Dieser Verweis gültig ist, bis der Client ruft [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Clientanwendungen, die geschrieben werden, mit der Microsoft Foundation Class Library-OLE-Klassen müssen diese Aufrufe nicht; das Framework ermöglicht dies.) Das OLE-System und der Server selbst möglicherweise Verweise auf das Objekt festlegen. Ein Server sollte kein Objekt zu zerstören als externe Verweise auf das Objekt gültig bleiben.  

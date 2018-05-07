@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Datensatzauswahl durch Recordsets (ODBC) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: Datensatzauswahl durch Recordsets (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -44,7 +39,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Recordsets werden Datensätze aus einer Datenquelle über einen ODBC-Treiber auszuwählen, durch Senden von SQL-Anweisungen an den Treiber. SQL gesendet hängt davon ab, wie Sie entwerfen, und Öffnen des Recordset-Klasse.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>Die Optionen bei der Auswahl von Datensätzen  
+##  <a name="_core_your_options_in_selecting_records"></a> Die Optionen bei der Auswahl von Datensätzen  
  Die folgende Tabelle zeigt, welche Optionen bei der Auswahl von Datensätzen.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Wie und wann ein Recordset auswirken können  
@@ -59,7 +54,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
 | Rufen Sie **Requery** auf das Recordset mit den aktuellen Werten in der Datenquelle aktualisieren | Geben Sie neue Parameter, filtern oder sortieren. Finden Sie unter [Recordset: Erneutes Abfragen eines Recordsets (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Wie die SQL-Anweisung erstellt ein Recordset  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Wie die SQL-Anweisung erstellt ein Recordset  
  Beim Aufrufen des Recordset-Objekts [öffnen](../../mfc/reference/crecordset-class.md#open) Memberfunktion **öffnen** erstellt eine SQL-Anweisung mit einigen oder allen der folgenden Bestandteile:  
   
 -   Die **LpszSQL** Parameter übergeben wird, um **öffnen**. Wenn dies nicht der **NULL**, dieser Parameter gibt an, eine benutzerdefinierte SQL-Zeichenfolge oder einen Teil einer. Das Framework analysiert die Zeichenfolge an. Wenn die Zeichenfolge eine SQL **wählen** -Anweisung oder eine ODBC- **Aufrufen** die Framework-Anweisung verwendet die Zeichenfolge als SQL-Anweisung eines Recordsets. Wenn die Zeichenfolge nicht mit "SELECT" oder "{CALL" beginnt, wird das Framework verwendet, was bereitgestellt wird, die zum Erstellen einer SQL **FROM** Klausel.  
@@ -85,7 +80,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
  Sie können eine Kombination dieser Techniken verwenden, öffnen [Tabellen](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) und erstellen eine Abfrage auf Grundlage einer [Join](../../data/odbc/recordset-performing-a-join-odbc.md) von mehreren Tabellen. Mit zusätzlichen Anpassung, rufen Sie [vordefinierte Abfragen](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (gespeicherte Prozeduren), wählen Sie Tabellenspalten zur Entwurfszeit nicht bekannt und [binden](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) diese Recordsetfelder, oder Sie können die meisten anderen ausführen Datenzugriffsaufgaben. Aufgaben, die durch das Anpassen von Recordsets kann nicht ausgeführt können weiterhin ausgeführt werden, indem [ODBC API-Funktionen aufrufen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) oder Ausführen von SQL-Anweisungen direkt [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
-##  <a name="_core_customizing_the_selection"></a>Anpassen der Auswahl  
+##  <a name="_core_customizing_the_selection"></a> Anpassen der Auswahl  
  Außer der Angabe eines Filters, eine Sortierreihenfolge oder Parametern, können Sie die folgenden Aktionen zum Anpassen der Auswahl des Recordsets ausführen:  
   
 -   Übergeben Sie eine benutzerdefinierte SQL-Zeichenfolge in **LpszSQL** beim Aufruf [öffnen](../../mfc/reference/crecordset-class.md#open) für das Recordset. Nichts übergebenen **LpsqSQL** hat Vorrang vor was die [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) Memberfunktion gibt.  

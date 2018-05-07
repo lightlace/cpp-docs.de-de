@@ -1,12 +1,9 @@
 ---
 title: IRowsetInfoImpl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetInfoImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a451302920fa94d8bc1224df4c9ad432ed9dc896
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9b784dbb13ff39be21ccd353d514dd244d5ae41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl-Klasse
 Stellt eine Implementierung für die [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) Schnittstelle.  
@@ -55,7 +50,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|Gibt die aktuellen Einstellungen aller Eigenschaften, die vom Rowset unterstützt wird.|  
+|[getProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|Gibt die aktuellen Einstellungen aller Eigenschaften, die vom Rowset unterstützt wird.|  
 |[GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|Gibt einen Schnittstellenzeiger auf das Rowset ein Lesezeichen gilt zurück.|  
 |[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|Gibt einen Schnittstellenzeiger auf das Objekt (Befehl oder Sitzung), die dieses Rowset erstellt.|  
   

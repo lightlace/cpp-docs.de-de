@@ -1,12 +1,9 @@
 ---
 title: Lock::lock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 Erstellt eine `lock` -Objekt, optional darauf warten, die Sperre für eine bestimmte Zeitspanne oder überhaupt nicht immer erhalten.  
@@ -67,7 +62,7 @@ template<class T> lock(
 ## <a name="remarks"></a>Hinweise  
  Die ersten drei Formulare des Konstruktors versuchen zu Sperren auf `_object` innerhalb des angegebenen Zeitlimits (oder <xref:System.Threading.Timeout.Infinite> Falls keiner angegeben ist).  
   
- Das vierte Formular des Konstruktors erwirbt eine Sperre auf `_object`. `lock_later`ist ein Mitglied der [Lock_when-Enumeration](../dotnet/lock-when-enum.md). Verwendung [lock::acquire](../dotnet/lock-acquire.md) oder [lock::try_acquire](../dotnet/lock-try-acquire.md) , in diesem Fall die Sperre abzurufen.  
+ Das vierte Formular des Konstruktors erwirbt eine Sperre auf `_object`. `lock_later` ist ein Mitglied der [Lock_when-Enumeration](../dotnet/lock-when-enum.md). Verwendung [lock::acquire](../dotnet/lock-acquire.md) oder [lock::try_acquire](../dotnet/lock-try-acquire.md) , in diesem Fall die Sperre abzurufen.  
   
  Die Sperre wird automatisch freigegeben werden, wenn der Destruktor aufgerufen wird.  
   

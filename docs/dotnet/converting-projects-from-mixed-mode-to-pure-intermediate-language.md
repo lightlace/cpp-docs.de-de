@@ -1,13 +1,10 @@
 ---
 title: Konvertieren von Projekten aus gemischten Modus in reine Intermediate Language | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konvertieren von Projekten im gemischten Modus in reine Intermediate Language
 Alle Visual C++-CLR-Projekte werden standardmäßig auf die C-Laufzeitbibliotheken verknüpfen. Daher werden diese Projekte als Anwendungen im gemischten Modus, klassifiziert, da sie nativen Code mit Code kombinieren, die die common Language Runtime (verwalteter Code) ausgerichtet ist. Wenn sie kompiliert werden, werden sie in intermediate Language (IL), auch bekannt als Microsoft intermediate Language (MSIL) kompiliert.  
@@ -104,4 +99,4 @@ Alle Visual C++-CLR-Projekte werden standardmäßig auf die C-Laufzeitbibliothek
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Stellt eine vorzeichenlose 32-Bit-Ganzzahl dar.|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Stellt eine vorzeichenlose 64-Bit-Ganzzahl dar.|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|  
-        |["Void"](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Zeigt eine Methode, die keinen Wert zurückgibt. d. h. verfügt über die Methode der void-Rückgabetyp.|
+        |["void"](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Zeigt eine Methode, die keinen Wert zurückgibt. d. h. verfügt über die Methode der void-Rückgabetyp.|

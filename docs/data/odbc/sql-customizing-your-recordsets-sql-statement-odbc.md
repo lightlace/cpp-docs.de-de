@@ -2,12 +2,9 @@
 title: 'SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)
 In diesem Thema wird Folgendes erläutert:  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  Wenn Sie Literalzeichenfolgen in Filtern (oder in anderen Teilen der SQL-Anweisung) verwenden, müssen Sie möglicherweise "Angebot" (Begrenzungszeichen einschließen) diese Zeichenfolgen mit einer DBMS-spezifische Literalpräfix suffix Zeichen (oder Zeichen).  
   
- Je nach Ihrer DBMS können Sie auch besondere syntaktische Anforderungen für Vorgänge wie das äußere Joins auftreten. Verwenden Sie ODBC-Funktionen, um diese Informationen aus der Treiber für das DBMS zu erhalten. Rufen Sie z. B. **:: SQLGetTypeInfo** für einen bestimmten Datentyp z. B. **SQL_VARCHAR**auf und fordert die **LITERAL_PREFIX-Zeichen** und **LITERAL_SUFFIX** Zeichen. Wenn Sie Datenbank-unabhängigen Code schreiben, finden Sie im Anhang C die *ODBC SDK**Programmer's Reference* auf der MSDN Library-CD für ausführliche Informationen zur Syntax.  
+ Je nach Ihrer DBMS können Sie auch besondere syntaktische Anforderungen für Vorgänge wie das äußere Joins auftreten. Verwenden Sie ODBC-Funktionen, um diese Informationen aus der Treiber für das DBMS zu erhalten. Rufen Sie z. B. **:: SQLGetTypeInfo** für einen bestimmten Datentyp z. B. **SQL_VARCHAR**auf und fordert die **LITERAL_PREFIX-Zeichen** und **LITERAL_SUFFIX** Zeichen. Wenn Sie Datenbank-unabhängigen Code schreiben, finden Sie im Anhang C die *ODBC SDK ** Programmer's Reference* auf der MSDN Library-CD für ausführliche Informationen zur Syntax.  
   
  Einem Recordset-Objekt erstellt, die SQL-Anweisung, die zum Auswählen von Datensätzen, es sei denn, Sie eine benutzerdefinierte SQL­Anweisung übergeben verwendet wird. Vorgehensweise hängt hauptsächlich den übergebenen Wert die `lpszSQL` Parameter von der **öffnen** Memberfunktion.  
   
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Case|Was Sie LpszSQL übergeben|Die resultierenden SELECT-Anweisung|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**Wählen Sie** *Rfx Feldliste* **FROM** *Tabellenname*<br /><br /> `CRecordset::Open`Aufrufe `GetDefaultSQL` zum Abrufen des Namens der Tabelle. Die resultierende Zeichenfolge ist ein Fall 2 bis 5, je nachdem, was `GetDefaultSQL` zurückgibt.|  
+|1|**NULL**|**Wählen Sie** *Rfx Feldliste* **FROM** *Tabellenname*<br /><br /> `CRecordset::Open` Aufrufe `GetDefaultSQL` zum Abrufen des Namens der Tabelle. Die resultierende Zeichenfolge ist ein Fall 2 bis 5, je nachdem, was `GetDefaultSQL` zurückgibt.|  
 |2|Ein Tabellenname|**Wählen Sie** *Rfx Feldliste* **FROM** *Tabellenname*<br /><br /> Die Feldliste stammt aus der RFX-Anweisungen in `DoFieldExchange`. Wenn **M_strFilter** und `m_strSort` nicht leer sind, fügt die **, in denen** und/oder **ORDER BY** Klauseln.|  
 |3 *|Eine vollständige **wählen** Anweisung aber ohne eine **, in denen** oder **ORDER BY** Klausel|Als erfolgreich. Wenn **M_strFilter** und `m_strSort` nicht leer sind, fügt die **, in denen** und/oder **ORDER BY** Klauseln.|  
 |4 *|Eine vollständige **wählen** -Anweisung mit einem **, in denen** und/oder **ORDER BY** Klausel|Als erfolgreich. **M_strFilter** und/oder `m_strSort` muss leer oder zwei Filter bleiben und/oder Sortierung-Anweisungen erstellt werden.|  
 |5 *|Ein Aufruf einer gespeicherten Prozedur|Als erfolgreich.|  
   
- \*`m_nFields` muss kleiner oder gleich der Anzahl der Spalten in der **wählen** Anweisung. Der Datentyp jeder Spalte im angegebenen der **wählen** -Anweisung muss der Datentyp der entsprechenden Spalte der RFX-Ausgabe identisch sein.  
+ \* `m_nFields` muss kleiner oder gleich der Anzahl der Spalten in der **wählen** Anweisung. Der Datentyp jeder Spalte im angegebenen der **wählen** -Anweisung muss der Datentyp der entsprechenden Spalte der RFX-Ausgabe identisch sein.  
   
 ### <a name="case-1---lpszsql--null"></a>Fall 1 LpszSQL = NULL  
  Die Auswahl des Recordsets hängt von was `GetDefaultSQL` gibt zurück, wenn `CRecordset::Open` wird aufgerufen. Fällen 2 bis 5 werden die möglichen Zeichenfolgen beschrieben.  

@@ -1,12 +1,9 @@
 ---
 title: PTR::Detach | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 Aufgibt den Besitz des COM-Objekts, die einen Zeiger auf das Objekt zurückgeben.  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  Intern `QueryInterface` aufgerufen wird, auf das im Besitz befindlichen COM-Objekt und alle Fehler `HRESULT` wird konvertiert, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Hinweise  
- `Detach`zuerst Fügt einen Verweis auf das COM-Objekt im Namen des Aufrufers, und klicken Sie dann frei alle Verweise, die im Besitz der `com::ptr`.  Der Aufrufer muss das zurückgegebene Objekt, um es zu zerstören letztlich freigeben.  
+ `Detach` zuerst Fügt einen Verweis auf das COM-Objekt im Namen des Aufrufers, und klicken Sie dann frei alle Verweise, die im Besitz der `com::ptr`.  Der Aufrufer muss das zurückgegebene Objekt, um es zu zerstören letztlich freigeben.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt.  Die `DetachDocument` Memberfunktion ruft `Detach` kapitulierten den Besitz des COM-Objekts, und geben Sie einen Zeiger an den Aufrufer zurück.  

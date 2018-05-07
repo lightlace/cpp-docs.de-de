@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: Objektverweis in nicht verwalteten Speicher | Microsoft Docs'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: adff91c4cbceb61a7b6d8996b6f90e7350ae637d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Gewusst wie: Objektverweis in nicht verwaltetem Arbeitsspeicher
 Sie können gcroot.h verwenden, das umschließt <xref:System.Runtime.InteropServices.GCHandle>zur Aufnahme eines CLR-Objektverweis in nicht verwalteten Speicher. Alternativ können Sie `GCHandle` direkt.  
@@ -69,7 +64,7 @@ StringWrapper::x == ManagedString
 ```  
   
 ## <a name="example"></a>Beispiel  
- `GCHandle`bietet Ihnen eine Möglichkeit zum Verweis auf ein verwaltetes Objekt im nicht verwalteten Speicher zu behalten.  Verwenden Sie die <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> Methode, um ein nicht transparentes Handle zu einem verwalteten Objekt zu erstellen und <xref:System.Runtime.InteropServices.GCHandle.Free%2A> , diese freizugeben. Darüber hinaus die <xref:System.Runtime.InteropServices.GCHandle.Target%2A> Methode können Sie den Objektverweis wieder aus dem Handle in verwaltetem Code zu erhalten.  
+ `GCHandle` bietet Ihnen eine Möglichkeit zum Verweis auf ein verwaltetes Objekt im nicht verwalteten Speicher zu behalten.  Verwenden Sie die <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> Methode, um ein nicht transparentes Handle zu einem verwalteten Objekt zu erstellen und <xref:System.Runtime.InteropServices.GCHandle.Free%2A> , diese freizugeben. Darüber hinaus die <xref:System.Runtime.InteropServices.GCHandle.Target%2A> Methode können Sie den Objektverweis wieder aus dem Handle in verwaltetem Code zu erhalten.  
   
 ```  
 // hold_object_reference_2.cpp  

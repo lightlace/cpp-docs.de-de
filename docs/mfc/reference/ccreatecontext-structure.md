@@ -1,12 +1,9 @@
 ---
 title: Angegeben ist und Struktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Angegeben ist und-Struktur
 Das Framework verwendet die `CCreateContext` Struktur beim Erstellen der Rahmenfenster und Ansichten, die mit einem Dokument verknüpft sind.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- `CCreateContext`ist eine Struktur, und verfügt nicht über eine Basisklasse.  
+ `CCreateContext` ist eine Struktur, und verfügt nicht über eine Basisklasse.  
   
  Wenn Sie ein Fenster erstellen, geben Sie die Werte in dieser Struktur der Informationen verwendet, um die Komponenten eines Dokuments zur Ansicht ihrer Daten zu verbinden. Sie müssen nur verwenden `CCreateContext` Wenn Teile des Erstellungsprozesses außer Kraft gesetzt werden.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Member|Typ|Worum handelt es sich, für|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`der neue Sicht erstellen.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` der neue Sicht erstellen.|  
 |`m_pCurrentDoc`|`CDocument*`|Zum vorhandenen Dokument an die neue Sicht zugeordnet werden soll.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|Die Dokumentvorlage, die die Erstellung einer neuen MDI-Rahmenfenster zugeordnet.|  
 |`m_pLastView`|`CView*`|Die ursprüngliche Ansicht auf die zusätzliche Ansichten, wie bei der Erstellung der Splitter Fensteransichten oder die Erstellung einer zweiten Ansicht eines Dokuments modelliert werden.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Alle Zeiger in `CCreateContext` sind optional und kann `NULL` Wenn nicht angegeben oder unbekannt.  
   
- `CCreateContext`wird verwendet, durch die Memberfunktionen aufgeführt, die unter "Siehe auch." Finden Sie in der Beschreibung dieser Funktionen finden Sie spezifische Informationen, wenn Sie planen, um sie zu überschreiben.  
+ `CCreateContext` wird verwendet, durch die Memberfunktionen aufgeführt, die unter "Siehe auch." Finden Sie in der Beschreibung dieser Funktionen finden Sie spezifische Informationen, wenn Sie planen, um sie zu überschreiben.  
   
  Es folgen einige allgemeine Richtlinien:  
   
@@ -80,5 +75,5 @@ struct CCreateContext
  [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   
  [Splitterfenstern](../../mfc/reference/csplitterwnd-class.md#create)   
  [CSplitterWnd:: CreateView-Funktion](../../mfc/reference/csplitterwnd-class.md#createview)   
- [CWnd:: Create](../../mfc/reference/cwnd-class.md#create)
+ [CWnd::Create](../../mfc/reference/cwnd-class.md#create)
 

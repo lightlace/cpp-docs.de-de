@@ -1,12 +1,9 @@
 ---
 title: Compilerwarnung (Stufe 1 und 3) C4793 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Compilerwarnung (Stufe 1 und 3) C4793
 'Funktion': Funktion wird als systemeigener Code kompiliert: 'Grund'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |Grund Nachricht|Hinweise|  
 |--------------------|-------------|  
 |Ausgerichtete Datentypen werden in verwaltetem Code nicht unterstützt.|Die CLR Lage sein, Daten bei Bedarf zu reservieren der unter Umständen nicht möglich, wenn die Daten mit Deklarationen, z. B. ausgerichtet ist [__m128](../../cpp/m128.md) oder [ausrichten](../../cpp/align-cpp.md).|  
-|Funktionen, die verwenden "__ImageBase" werden in verwaltetem Code nicht unterstützt.|`__ImageBase`ist eine spezielle Linkersymbol, das in der Regel nur von systemeigenem Code auf niedriger Ebene verwendet wird, eine DLL geladen.|  
+|Funktionen, die verwenden "__ImageBase" werden in verwaltetem Code nicht unterstützt.|`__ImageBase` ist eine spezielle Linkersymbol, das in der Regel nur von systemeigenem Code auf niedriger Ebene verwendet wird, eine DLL geladen.|  
 |VarArgs werden nicht unterstützt, indem Sie die "/ Clr" (Compileroption)|Systemeigene Funktionen können nicht verwaltete Funktionen aufzurufen, die über [Argumentlisten variabler Länge](../../cpp/functions-with-variable-argument-lists-cpp.md) (Varargs) Schreibberechtigung Funktionen anderen Stapel Layout Anforderungen. Allerdings bei der Angabe der `/clr:pure` Compileroption, mit Variablen Argumentlisten, die Listen werden unterstützt, da die Assembly nur verwaltete Funktionen enthalten kann. Weitere Informationen finden Sie unter [reiner und überprüfbarer Code (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
 |Die 64-Bit-CLR unterstützt keine Daten, die mit dem __ptr32-Modifizierer deklariert werden.|Ein Zeiger muss die gleiche Größe wie einen systemeigenen Zeiger auf die aktuelle Plattform. Weitere Informationen finden Sie unter [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
 |Die 32-Bit-CLR unterstützt keine Daten, die mit dem __ptr64-Modifizierer deklariert werden.|Ein Zeiger muss die gleiche Größe wie einen systemeigenen Zeiger auf die aktuelle Plattform. Weitere Informationen finden Sie unter [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  

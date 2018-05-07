@@ -1,13 +1,10 @@
 ---
 title: Automatisierungsserver | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>Automatisierungsserver
 Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsserver ist eine Anwendung, die programmierbare Objekte (Automatisierungsobjekte genannt) für andere Anwendungen verfügbar macht (aufgerufen [Automatisierungsclients](../mfc/automation-clients.md)). Automatisierungsserver werden manchmal als Automatisierungskomponenten bezeichnet.  
@@ -40,7 +35,7 @@ Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung im
   
  Durch Verfügbarmachen von Anwendungsfunktionen über eine gemeinsame, klar definierte Schnittstelle, kann Automatisierung zum Erstellen von Anwendungen in einer einzelnen allgemeinen Programmiersprache wie Microsoft Visual Basic statt in verschiedenen, anwendungsspezifische-Makro Sprachen.  
   
-##  <a name="_core_support_for_automation_servers"></a>Unterstützung für Automatisierungsserver  
+##  <a name="_core_support_for_automation_servers"></a> Unterstützung für Automatisierungsserver  
  Visual C++ und MFC-Frameworks bieten umfassende Unterstützung für Automatisierungsserver. Sie behandeln Großteil der Aufwand beim Erstellen eines Automatisierungsservers Sie Ihre bemühungen auf die Funktionalität der Anwendung konzentrieren können.  
   
  Das Framework principal Mechanismus für die Unterstützung der Automatisierung ist die Dispatchzuordnung, einen Satz von Makros, die in die Deklarationen und Aufrufe erforderlich, um Methoden und Eigenschaften für OLE verfügbar machen erweitert wird. Eine typische Dispatchzuordnung sieht wie folgt:  

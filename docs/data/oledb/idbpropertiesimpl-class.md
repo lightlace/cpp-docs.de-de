@@ -1,12 +1,9 @@
 ---
 title: IDBPropertiesImpl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1b1486d5eff73b4f868f5990ceb628cfb7dd20a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3685e6a77e4293ef65b5ee98a0aa326500cfdb2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl-Klasse
 Stellt eine Implementierung für die `IDBProperties` Schnittstelle.  
@@ -53,7 +48,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Gibt die Werte der Eigenschaften in der Datenquelle, von Datenquelleninformationen und Initialisierung Eigenschaftengruppen, die momentan festgelegt sind, auf das Datenquellenobjekt oder die Werte der Eigenschaften in der Gruppe der Initialisierungseigenschaften, die derzeit für festgelegt werden die Enumerator.|  
+|[getProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Gibt die Werte der Eigenschaften in der Datenquelle, von Datenquelleninformationen und Initialisierung Eigenschaftengruppen, die momentan festgelegt sind, auf das Datenquellenobjekt oder die Werte der Eigenschaften in der Gruppe der Initialisierungseigenschaften, die derzeit für festgelegt werden die Enumerator.|  
 |[GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)|Gibt Informationen zu allen Eigenschaften, die vom Anbieter unterstützt werden.|  
 |[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|Legt Eigenschaften für Datenquellenobjekte, die Eigenschaftengruppen Datenquelle und Initialisierung oder der Gruppe der Initialisierungseigenschaften, Enumeratoren fest.|  
   

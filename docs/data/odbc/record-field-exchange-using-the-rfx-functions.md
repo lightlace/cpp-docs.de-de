@@ -1,13 +1,10 @@
 ---
 title: 'Datensatzfeldaustausch: Verwenden der RFX-Funktionen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f834f9f52c8d01dbd7eb3ff54b794afc11630ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Datensatzfeldaustausch: Verwenden der RFX-Funktionen
 In diesem Thema wird erläutert, wie die RFX-Funktionsaufrufe verwenden, die den Text der Ihre `DoFieldExchange` außer Kraft setzen.  
@@ -40,7 +35,7 @@ In diesem Thema wird erläutert, wie die RFX-Funktionsaufrufe verwenden, die den
   
  Die globalen RFX-Funktionen Austausch von Daten zwischen den Spalten in der Datenquelle und Felddatenmembern im Recordset. Sie schreiben die RFX-Funktionsaufrufe in des Recordsets [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Memberfunktion. In diesem Thema werden die Funktionen kurz beschrieben und zeigt die Datentypen für die RFX-Funktionen zur Verfügung stehen. [Technische Hinweis 43](../../mfc/tn043-rfx-routines.md) beschreibt, wie Sie Ihre eigenen RFX-Funktionen für zusätzliche Datentypen zu schreiben.  
   
-##  <a name="_core_rfx_function_syntax"></a>Die Syntax der RFX-Funktion  
+##  <a name="_core_rfx_function_syntax"></a> Die Syntax der RFX-Funktion  
  Jede RFX-Funktion akzeptiert drei Parameter (und einige nehmen eines optionalen vierten oder fünften Parameters):  
   
 -   Ein Zeiger auf eine [CDBException](../../mfc/reference/cfieldexchange-class.md) Objekt. Sie übergeben einfach die `pFX` Zeiger übergeben wird, um `DoFieldExchange`.  
@@ -55,7 +50,7 @@ In diesem Thema wird erläutert, wie die RFX-Funktionsaufrufe verwenden, die den
   
  Weitere Informationen finden Sie unter der RFX-Funktionen unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in der *Klassenbibliotheksreferenz*. Wenn Sie spezielle treffen möglicherweise ein Beispiel für die Parameter, finden Sie unter [Recordset: Abrufen von Summen und anderen Aggregatergebnissen (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a>RFX-Datentypen  
+##  <a name="_core_rfx_data_types"></a> RFX-Datentypen  
  Die Klassenbibliothek stellt RFX-Funktionen für die Übertragung vieler verschiedener Datentypen zwischen der Datenquelle und Ihre Recordsets. Die folgende Liste fasst die RFX-Funktionen durch-Datentyp. Wählen Sie in Fällen, in denen Sie eigene RFX-Funktionsaufrufe schreiben müssen aus dieser Funktionen durch-Datentyp.  
   
 |Funktion|Datentyp|  

@@ -1,12 +1,9 @@
 ---
 title: 'CDataSource:: Open | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b21add1180343070fb85da113309e0a31f86aeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3196aa89426e895dd6b73b28ce197e8f271a0262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Öffnet eine Verbindung mit einer Datenquelle mit einem **CLSID**, **ProgID**, oder `CEnumerator` Moniker oder zeigt dem Benutzer ein locatordialogfeld.  
@@ -114,7 +109,7 @@ HRESULT Open(LPCSTR szProgID,
  Ein Standard `HRESULT`-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Methodenüberladung, die den `hWnd`-Parameter verwendet, öffnet ein Datenquellenobjekt mit den Dienstkomponenten im oledb32.dll; Diese DLL enthält die Implementierung von Dienstkomponentenfeatures wie z. B. Ressourcenpooling, automatische Transaktionseintragung usw. Weitere Informationen finden Sie unter "OLE DB-Dienste" in der OLE DB Programmer's Reference am [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Die Methodenüberladung, die den `hWnd`-Parameter verwendet, öffnet ein Datenquellenobjekt mit den Dienstkomponenten im oledb32.dll; Diese DLL enthält die Implementierung von Dienstkomponentenfeatures wie z. B. Ressourcenpooling, automatische Transaktionseintragung usw. Weitere Informationen finden Sie unter "OLE DB-Dienste" in der OLE DB Programmer's Reference am [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Die Methodenüberladungen, die den `hWnd`-Parameter nicht verwenden, öffnen ein Datenquellenobjekt ohne die Dienstkomponenten in oledb32.dll. Ein [CDataSource](../../data/oledb/cdatasource-class.md) mit diesen funktionsüberladungen geöffnet wird in der Lage, die Funktionalität von Dienstkomponenten zu nutzen.  
   

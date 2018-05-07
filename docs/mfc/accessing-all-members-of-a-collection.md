@@ -1,13 +1,10 @@
 ---
 title: Zugreifen auf alle Elemente einer Auflistung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Zugreifen auf alle Elemente einer Auflistung
 Die MFC-Arrayauflistungsklassen – sowohl die vorlagenbasierten als auch die nicht vorlagenbasierten – verwenden Indizes, um auf ihre Elemente zuzugreifen. Die MFC-Listen- und Zuordnungsauflistungsklassen – sowohl die vorlagenbasierten als auch die nicht vorlagenbasierten – verwenden einen Indikator vom Typ **POSITION** zum Beschreiben einer bestimmten Position in der Auflistung. Für den Zugriff auf einen oder mehrere Member dieser Auflistungen zunächst initialisieren Sie zunächst den Positionsindikator und übergeben dann diese Position wiederholt an die Auflistung und fordert Sie auf das nächste Element zurückzugeben. Die Auflistung ist nicht verantwortlich für die Verwaltung von Statusinformationen hinsichtlich des Fortschritts der Iteration. Diese Informationen werden im Positionsindikator gespeichert. Bei einer bestimmten Position ist die Auflistung jedoch dafür verantwortlich, das nächste Element zurückzugeben.  

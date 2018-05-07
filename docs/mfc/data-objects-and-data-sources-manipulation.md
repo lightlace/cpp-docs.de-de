@@ -1,13 +1,10 @@
 ---
 title: 'Datenobjekte und Datenquellen: Bearbeitung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datenobjekte und Datenquellen: Bearbeitung
 Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse häufig verwendeter Vorgänge auf die Daten, z. B. das Einfügen und Entfernen von Daten, die beim Aufzählen der Formate, denen die Daten in enthalten ist, und vieles mehr. Dieser Artikel beschreibt die Techniken zum Durchführen der am häufigsten verwendeten Vorgänge erforderlich sind. Folgende Themen werden behandelt:  
@@ -42,7 +37,7 @@ Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse 
   
 -   [Abrufen von Daten aus einem Datenobjekt](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Einfügen von Daten in einer Datenquelle  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Einfügen von Daten in einer Datenquelle  
  Wie die Daten in einer Datenquelle eingefügt werden, hängt gibt an, ob die Daten sofort bereitgestellt werden, oder bei Bedarf, und klicken Sie in das Medium wird bereitgestellt. Mögliche Werte sind wie folgt.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Bereitstellen der Daten sofort (unmittelbares Rendern)  
@@ -62,7 +57,7 @@ Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse 
   
 -   Bei Verwendung einer `CFile` die Daten zu verwendendes Objekt aufrufen `COleDataSource::DelayRenderFileData` anstelle von `COleDataSource::DelayRenderData` in der vorherigen Option. Wenn die Daten angefordert werden, ruft das Framework `COleDataSource::OnRenderFileData`, die Sie überschreiben müssen.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Bestimmen die in einem Datenobjekt verfügbaren Formate  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Bestimmen die in einem Datenobjekt verfügbaren Formate  
  Bevor eine Anwendung den Benutzer aus, um Daten in sie einzufügen zulässt, muss sie wissen, ob es Formate in der Zwischenablage, die er verarbeiten kann. Zu diesem Zweck sollten Ihre Anwendung die folgenden Schritte ausführen:  
   
 1.  Erstellen einer `COleDataObject` Objekt und ein **FORMATETC** Struktur.  
@@ -79,7 +74,7 @@ Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse 
   
  Bei Verwendung von `ON_UPDATE_COMMAND_UI`, Sie können jetzt das Einfügen und möglicherweise Inhalte einfügen Elemente im Menü Bearbeiten. Rufen Sie hierzu entweder `CMenu::EnableMenuItem` oder `CCmdUI::Enable`. Weitere Informationen zu welchem Container Anwendungen sollten mit Menüelementen wann sehen und [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Abrufen von Daten aus einem Datenobjekt  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Abrufen von Daten aus einem Datenobjekt  
  Nachdem Sie ein Datenformat entschieden haben, übrig bleibt zum Abrufen der Daten aus dem Datenobjekt. Zu diesem Zweck der Benutzer entscheidet, die Daten eingefügt werden soll, und die Anwendung aufruft, die entsprechende Funktion. Die Daten in einem der folgenden Medien zur Verfügung:  
   
 |Mittel|Funktion aufgerufen werden soll|  

@@ -1,13 +1,10 @@
 ---
-title: "Löschen aller Objekte in einer CObject-Sammlung | Microsoft Docs"
-ms.custom: 
+title: Löschen aller Objekte in einer CObject-Sammlung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Löschen aller Objekte in einer CObject-Sammlung
 In diesem Artikel wird erläutert, wie alle Objekte in einer Sammlung gelöscht (ohne das Auflistungsobjekt selbst zu löschen).  
@@ -47,7 +42,7 @@ In diesem Artikel wird erläutert, wie alle Objekte in einer Sammlung gelöscht 
   
 -   [Eine Zuordnung](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>So löschen Sie alle Objekte in einer Liste von Zeigern auf CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  So löschen Sie alle Objekte in einer Liste von Zeigern auf CObject  
   
 1.  Verwendung `GetHeadPosition` und `GetNext` zum Durchlaufen der Liste.  
   
@@ -63,7 +58,7 @@ In diesem Artikel wird erläutert, wie alle Objekte in einer Sammlung gelöscht 
   
  Beachten Sie den Unterschied zwischen dem Objekt ein Element löschen, und entfernen das Element selbst. Entfernen eines Elements aus der Liste lediglich entfernt die Liste der Verweis auf das Objekt. Das Objekt ist weiterhin im Arbeitsspeicher vorhanden. Wenn Sie ein Objekt löschen, nicht mehr vorhanden, und der Arbeitsspeicher wieder freigegeben wird. Daher ist es wichtig, um ein Element zu entfernen, sofort, nachdem das Element Objekt gelöscht wurde, damit die Liste nicht versucht, den Zugriff auf Objekte, die nicht mehr vorhanden sind.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>So löschen Sie alle Elemente in einem array  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  So löschen Sie alle Elemente in einem array  
   
 1.  Verwendung `GetSize` und Ganzzahlwerte für Index zum Durchlaufen des Arrays.  
   
@@ -77,7 +72,7 @@ In diesem Artikel wird erläutert, wie alle Objekte in einer Sammlung gelöscht 
   
  Wie Sie mit der obigen Liste-Beispiel, das Sie aufrufen können `RemoveAll` So entfernen Sie alle Elemente in einem Array oder `RemoveAt` um ein einzelnes Element zu entfernen.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>So löschen Sie alle Elemente in einer Zuordnung  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> So löschen Sie alle Elemente in einer Zuordnung  
   
 1.  Verwendung `GetStartPosition` und `GetNextAssoc` zum Durchlaufen des Arrays.  
   

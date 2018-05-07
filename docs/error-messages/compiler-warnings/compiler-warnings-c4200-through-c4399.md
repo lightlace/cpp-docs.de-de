@@ -1,12 +1,9 @@
 ---
 title: Compilerwarnungs C4200 Through C4399 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Compilerwarnungs C4200 Through C4399
 
@@ -82,7 +77,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|nicht dem Standard entsprechende Erweiterung: long float|
 |[Compilerwarnung (Ebene 1) C4218](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|nicht dem Standard entsprechende Erweiterung: müssen mindestens eine Speicherklasse oder einen Typ angeben|
 |[Compilerwarnung (Ebene 4) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|Varargs entspricht der verbleibende Parameter|
-|[Compilerwarnung (Ebene 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|nonstandard extension used: '*identifier*': cannot be initialized using address of automatic variable '*variable*'|
+|[Compilerwarnung (Ebene 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|nicht dem Standard entsprechende Erweiterung: '*Bezeichner*": kann nicht initialisiert werden, mit der Adresse der automatischen Variablen"*Variable*"|
 |[Compilerwarnung (Ebenen 1 und 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|nicht dem Standard entsprechende Erweiterung: l-Array in Zeiger konvertiert.|
 |[Compilerwarnung (Ebene 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|nicht dem Standard entsprechende Erweiterung: formaler Parameter "*Bezeichner*' wurde zuvor als Typ definiert|
 |[Compilerwarnung (Stufe 1, Fehler) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|nicht dem Standard entsprechende Erweiterung: '*Schlüsselwort*' ist ein veraltetes Schlüsselwort|
@@ -90,7 +85,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|nicht dem Standard entsprechende Erweiterung: Qualifizierer nach dem Komma in Deklaratorliste werden ignoriert.|
 |[Compilerwarnung (Ebene 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|Anachronismus verwendet: Modifizierer für die Daten werden ignoriert.|
 |[Compilerwarnung (Ebene 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|Anachronismus verwendet: Modifizierer/Qualifizierer-kombiniert; Qualifizierer wird ignoriert|
-|[Compilerwarnung (Ebene 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|nonstandard extension used: '*identifier*': address of dllimport '*dllimport*' is not static, identity not guaranteed|
+|[Compilerwarnung (Ebene 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|nicht dem Standard entsprechende Erweiterung: '*Bezeichner*': Adresse von Dllimport '*Dllimport*"ist nicht statisch, Identität nicht garantiert.|
 |[Compilerwarnung (Stufe 4, Fehler) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|nicht dem Standard entsprechende Erweiterung: '*Schlüsselwort*' Schlüsselwort nur in C++ unterstützt und nicht in C|
 |[Compilerwarnung (Stufe 4, Fehler) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|nicht dem Standard entsprechende Erweiterung: '*Schlüsselwort*' Schlüsselwort für zukünftige Verwendung reserviert|
 |[Compilerwarnung (Stufe 4, Fehler) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|nicht dem Standard entsprechende Erweiterung: '*Schlüsselwort*' Schlüsselwort wird für diese Architektur nicht unterstützt.|
@@ -104,7 +99,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebenen 3 und 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|"*Conversion_type*': Konvertierung von '*Typ1*'to'*Typ2*', möglicher Datenverlust|
 |[Compilerwarnung (Ebene 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|"*Conversion_type*': Konvertierung von '*Typ1*'to'*Typ2*', Konflikt mit/ohne Vorzeichen|
 |[Compilerwarnung (Ebene 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|"*Classname*': erbt '*Base_classname*::*Member*" über Dominanz|
-|[Compilerwarnung (Ebene 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|'*identifier*': '*object_type1*' '*identifier1*' needs to have dll-interface to be used by clients of '*object_type*' '*identfier2*'|
+|[Compilerwarnung (Ebene 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|"*Bezeichner*": "*object_type1*" "*Bezeichner1*"Dll-Schnittstelle, die von Clients verwendet werden muss"*Object_type*' '*identfier2*"|
 |[Compilerwarnung (Ebene 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|"*Operator*': Konvertierung von '*Typ1*:*Field_bits*'to'*Typ2*:*Field_bits*", möglicher Datenverlust|
 |[Compilerwarnung (Ebene 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|"*Funktion*': Kein Funktionsprototyp angegeben: '()', '(void)' konvertieren|
 |[Compilerwarnung (Ebene 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|"*Funktion*': Konstruktor für die Klasse mit virtuellen Basen besitzt"..."; Aufrufe möglicherweise nicht kompatibel mit früheren Versionen von Visual C++|
@@ -167,7 +162,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|Rückgabetyp "*Funktion*'muss'*Typ1*"anstelle von"*Typ2*"|
 |Compilerwarnung C4327|"*Zuweisung*': Dereferenzierungsausrichtung von LHS ("*alignment1*") ist größer als RHS ("*alignment2*")|
 |Compilerwarnung C4328|"*Funktion*': Dereferenzierungsausrichtung des formalen Parameters *Parameter_number* (*Parameter_alignment*) ist größer als die tatsächliche Argument Ausrichtung (*Argument_alignment*)|
-|[Compilerwarnung (Ebene 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) is ignored on enum|
+|[Compilerwarnung (Ebene 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) wird für Enum ignoriert.|
 |Compilerwarnung (Stufe 1) C4330|Attribut "*Attribut*"für den Abschnitt"*Abschnitt*" ignoriert|
 |[Compilerwarnung (Ebene 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|"*Shift_operator*": von zu viel, Verlust von Daten nach rechts verschieben|
 |[Compilerwarnung (Ebene 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|"*Shift_operator*": Ergebnis der 32-Bit-Verschiebung implizit zu 64 Bit konvertiert (war ein 64-Bit-Verschiebung vorgesehen?)|
@@ -175,7 +170,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importieren der übergreifenden Typbibliothek "*Bibliothek1*"vor dem Import"*Bibliothek2*"|
 |[Compilerwarnung (Ebene 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|übergreifenden Typbibliothek "*Bibliothek1*'in'*Bibliothek2*" wird automatisch importiert|
 |Compilerwarnung (Stufe 4) C4338|#pragma *Richtlinie*: Standardabschnitt "*Abschnitt*" verwendet wird|
-|[Compilerwarnung (Ebene 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*Typ*": Verwenden eines undefinierten Typs im erkannt "WinRT &#124; CLR "- Metadaten verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme|
+|[Compilerwarnung (Ebene 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*Typ*": Verwenden eines undefinierten Typs im erkannt "WinRT&#124;CLR" - Metadaten verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme|
 |[Compilerwarnung (Ebene 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"*Wert*': Wert umschlossen von positiv negativer Wert|
 |[Compilerwarnung (Ebene 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|verhaltensänderung: '*Funktion*"aufgerufen wird, jedoch ein Memberoperator aufgerufen wurde, in früheren Versionen|
 |Compilerwarnung (Stufe 4) C4343|„#pragma optimize("g",off)“ überschreibt Option „/Og“.|

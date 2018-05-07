@@ -1,13 +1,10 @@
 ---
 title: Active Document-Container | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>Active Document-Container
 Active Document-Container ist eine Technologie, die einen einzelnen Frame, in dem Sie arbeiten mit Dokumenten, anstatt Sie zu erstellen und verwenden mehrere Frames der Anwendung für jeden Dokumenttyp zwingen bereitstellt. Es unterscheidet sich vom einfachen OLE-Technologie, OLE mit eingebettete Objekte in ein Verbunddokument funktioniert nur ein einzelnes Stück des Inhalts aktiv sein kann. Mit active Document-Container aktivieren Sie ein ganzes Dokument (d. h. einer vollständigen Anwendung, einschließlich der zugehörigen Menüs, Symbolleisten und So weiter) innerhalb des Kontexts eines einzelnen Frames an.  

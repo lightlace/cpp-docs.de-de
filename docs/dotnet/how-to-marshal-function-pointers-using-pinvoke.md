@@ -1,13 +1,10 @@
 ---
 title: 'Wie: Marshallen von Funktionszeigern mit PInvoke | Microsoft Docs'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1aa8da5e5b6931fb46ff283a5be15da5b2c7325d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Gewusst wie: Marshallen von Funktionszeigern mit PInvoke
 In diesem Thema wird erläutert, wie verwaltete Delegaten anstelle von Funktionszeigern verwendet werden können, bei der Interoperation mit Funktionen, die mit .NET Framework P/Invoke-Funktionen nicht verwaltetem. Visual C++-Programmierer sind jedoch empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da P/Invoke bietet nur wenig Kompilierzeitfehler reporting, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API wird als DLL verpackt, und der Quellcode nicht verfügbar ist, ist P/Invoke die einzige Option. Andernfalls finden Sie unter den folgenden Themen:  

@@ -1,11 +1,8 @@
 ---
 title: 'Platform:: String-Klasse | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 Stellt eine sequenzielle Auflistung von Unicode-Zeichen dar, die zum Darstellen von Text verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Zeichenfolgen](../cppcx/strings-c-cx.md).  
@@ -76,12 +71,12 @@ public ref class String sealed : Object,
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[String::Begin](#begin)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
+|[String:: begin](#begin)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
 |[String::CompareOrdinal](#compareordinal)|Vergleicht zwei `String` -Objekte durch Auswertung der numerischen Werte der entsprechenden Zeichen in den beiden Zeichenfolgenwerten, die durch die Objekte dargestellt werden.|  
 |[String::Concat](#concat)|Verkettet die Werte von zwei Zeichenfolgenobjekten.|  
-|[String::Data](#data)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
+|[String:: Data](#data)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|  
 |[String:: Dispose](#dispose)|Gibt Ressourcen frei.|  
-|[String::End](#end)|Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.|  
+|[String:: End](#end)|Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.|  
 |[String::Equals](#equals)|Gibt an, ob das angegebene Objekt gleich dem aktuellen Objekt ist.|  
 |[String::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
 |[String::IsEmpty](#isempty)|Gibt an, ob das aktuelle String-Objekt leer ist.|  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator erstellt ein `String^`-Objekt mit den Daten aus den zwei Operanden. Verwenden Sie es zur Vereinfachung, wenn nicht unbedingt extreme Leistung gefordert ist. Einige Aufrufe von "`+`" in einer Funktion werden sich wahrscheinlich nicht bemerkbar machen. Wenn Sie jedoch große Objekte oder Textdaten in einer kurzen Schleife bearbeiten, sollten Sie die standardmäßigen C++-Mechanismen und -typen verwenden.  
   
-##  <a name="operator-equality">String:: Operator ==-Operator</a>
+##  <a name="operator-equality"></a> String:: Operator ==-Operator
 Gibt an, ob zwei angegebene Zeichenfolgenobjekte denselben Textwert haben.  
   
 ### <a name="syntax"></a>Syntax  
@@ -390,7 +385,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String:: Operator&gt;= 
 Gibt an, ob der Wert eines String-Objekts größer oder gleich dem Wert eines zweiten String-Objekts ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -431,7 +426,7 @@ bool String::operator!=( String^ str1, String^ str2)
  `true`, wenn `str1` und `str2` ungleich sind, andernfalls `false`.   
 
 
-## <a name="operator-less-than"></a> String::operator&lt; 
+## <a name="operator-less-than"></a> String:: Operator&lt; 
 Gibt an, ob der Wert eines Zeichenfolgenobjekts kleiner als der Wert eines zweiten Zeichenfolgenobjekts ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -476,7 +471,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a> String::ToString
+## <a name="tostring"></a> String:: ToString
 Gibt ein neues Zeichenfolgenobjekt zurück, dessen Wert mit der aktuellen Zeichenfolge identisch ist.  
   
 ### <a name="syntax"></a>Syntax  
