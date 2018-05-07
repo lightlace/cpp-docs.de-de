@@ -1,13 +1,10 @@
 ---
 title: 'Tn022: Implementieren von Standard-Befehle Implementierung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementieren von Standardbefehlen
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Sie müssen diese Option, um eine Verbindung Ihrer `CWinApp`-abgeleitete Klasse-meldungszuordnung, um diese Funktion zu aktivieren.  
   
-     `CWinApp::OnFileNew`mit diesem Befehl anders entsprechend der Anzahl von Dokumentvorlagen implementiert in der Anwendung. Wenn es Gib nur ein `CDocTemplate`, `CWinApp::OnFileNew` erstellt ein neues Dokument dieses Typs als auch die richtigen Frame und Ansicht-Klasse.  
+     `CWinApp::OnFileNew` mit diesem Befehl anders entsprechend der Anzahl von Dokumentvorlagen implementiert in der Anwendung. Wenn es Gib nur ein `CDocTemplate`, `CWinApp::OnFileNew` erstellt ein neues Dokument dieses Typs als auch die richtigen Frame und Ansicht-Klasse.  
   
      Wenn es mehr als eine `CDocTemplate`, `CWinApp::OnFileNew` fordert den Benutzer ein Dialogfeld (**AFX_IDD_NEWTYPEDLG**) birgt dies der richtige Dokumenttyp verwenden ausgewählt. Das ausgewählte `CDocTemplate` wird verwendet, um das Dokument zu erstellen.  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Sie müssen diese Option, um eine Verbindung Ihrer `CWinApp`-abgeleitete Klasse-meldungszuordnung, um diese Funktion zu aktivieren.  
   
-     `CWinApp::OnFileOpen`verfügt über eine sehr einfache Implementierung eines Aufrufs **CWinApp::DoPromptFileName** gefolgt von `CWinApp::OpenDocumentFile` mit dem Namen Datei oder Pfad der Datei zu öffnen. Die `CWinApp` Implementierung Routine **DoPromptFileName** wird das standardmäßige FileOpen-Dialogfeld geöffnet und füllt sie mit den Dateierweiterungen von der aktuellen Dokumentvorlagen abgerufen.  
+     `CWinApp::OnFileOpen` verfügt über eine sehr einfache Implementierung eines Aufrufs **CWinApp::DoPromptFileName** gefolgt von `CWinApp::OpenDocumentFile` mit dem Namen Datei oder Pfad der Datei zu öffnen. Die `CWinApp` Implementierung Routine **DoPromptFileName** wird das standardmäßige FileOpen-Dialogfeld geöffnet und füllt sie mit den Dateierweiterungen von der aktuellen Dokumentvorlagen abgerufen.  
   
      Eine allgemeine Anpassung von `ID_FILE_OPEN` besteht darin, das Dialogfeld "FileOpen" anpassen oder zusätzliche Filter hinzufügen. Die empfohlene Methode zum Anpassen dieser ist, ersetzen Sie die standardmäßige Implementierung mit Ihren eigenen FileOpen-Dialogfeld, und rufen `CWinApp::OpenDocumentFile` mit dem Namen des Dokuments Datei oder Pfad. Es ist nicht erforderlich, der Basisklasse aufgerufen.  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      Dieser Befehl ruft die standard-drucken-Setupdialogfeld, das ermöglicht es dem Benutzer zum Anpassen des Druckers, und Drucken Einstellungen für mindestens dieses Dokuments oder höchstens alle Dokumente in dieser Anwendung. Sie müssen die Systemsteuerung verwenden, um die standarddruckereinstellungen für das gesamte System ändern.  
   
-     `CWinApp::OnFilePrintSetup`verfügt über eine sehr einfache Implementierung erstellen eine `CPrintDialog` Objekt und der Aufruf der **CWinApp::DoPrintDialog** Implementierung-Funktion. Dadurch wird das Standard-Drucker Anwendungssetup festgelegt.  
+     `CWinApp::OnFilePrintSetup` verfügt über eine sehr einfache Implementierung erstellen eine `CPrintDialog` Objekt und der Aufruf der **CWinApp::DoPrintDialog** Implementierung-Funktion. Dadurch wird das Standard-Drucker Anwendungssetup festgelegt.  
   
      Die allgemeine Notwendigkeit zum Anpassen von mit diesem Befehl werden für pro-Dokument Druckereinstellungen, zuzulassen, die mit dem Dokument beim Speichern gespeichert werden sollen. Zu diesem Zweck sollten Sie eine meldungszuordnung Ereignishandler in Hinzufügen Ihrer **CDocument** -Klasse, die erstellt eine `CPrintDialog` Objekt, mit der entsprechenden Drucker Attribute initialisiert (normalerweise **hDevMode-Feld** und **hDevNames**), rufen Sie die **CPrintDialog::DoModal,** und speichern Sie die geänderten Druckereinstellungen fest. Für eine stabile Implementierung Hauptprotokoll Sie die Implementierung der **CWinApp::DoPrintDialog** zum Erkennen von Fehlern und **CWinApp::UpdatePrinterSelection** für den Umgang mit sensibler Standardwerte und Nachverfolgen von Änderungen für eine systemweite Drucker.  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung der Verwendung dieses Befehls `CEdit::Clear`. Der Befehl ist deaktiviert, wenn keine aktuelle Auswahl vorhanden ist.  
+     `CEditView` Stellt eine Implementierung der Verwendung dieses Befehls `CEdit::Clear`. Der Befehl ist deaktiviert, wenn keine aktuelle Auswahl vorhanden ist.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung von diesem Befehl, der den derzeitig markierten Text als HIERSVR mit in die Zwischenablage kopiert `CEdit::Copy`. Der Befehl ist deaktiviert, wenn keine aktuelle Auswahl vorhanden ist.  
+     `CEditView` Stellt eine Implementierung von diesem Befehl, der den derzeitig markierten Text als HIERSVR mit in die Zwischenablage kopiert `CEdit::Copy`. Der Befehl ist deaktiviert, wenn keine aktuelle Auswahl vorhanden ist.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung von diesem Befehl, der den derzeitig markierten Text in die Zwischenablage, wie die Verwendung von HIERSVR schneidet `CEdit::Cut`. Der Befehl ist deaktiviert, wenn keine aktuelle Auswahl vorhanden ist.  
+     `CEditView` Stellt eine Implementierung von diesem Befehl, der den derzeitig markierten Text in die Zwischenablage, wie die Verwendung von HIERSVR schneidet `CEdit::Cut`. Der Befehl ist deaktiviert, wenn keine aktuelle Auswahl vorhanden ist.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung von diesem Befehl, der die Implementierung Hilfsfunktion ruft **OnEditFindReplace** verwenden und die vorherigen Suchen/Ersetzen-Einstellungen in private implementierungsvariablen speichern. Die `CFindReplaceDialog` Klasse dient zum Verwalten der nicht modalen Dialogfeld für den Benutzer aufzufordern.  
+     `CEditView` Stellt eine Implementierung von diesem Befehl, der die Implementierung Hilfsfunktion ruft **OnEditFindReplace** verwenden und die vorherigen Suchen/Ersetzen-Einstellungen in private implementierungsvariablen speichern. Die `CFindReplaceDialog` Klasse dient zum Verwalten der nicht modalen Dialogfeld für den Benutzer aufzufordern.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung von diesem Befehl, der aktuellen Daten aus der Zwischenablage und Ersetzen Sie dabei mit den ausgewählten Text kopiert `CEdit::Paste`. Der Befehl ist deaktiviert, wenn keine **HIERSVR** in die Zwischenablage.  
+     `CEditView` Stellt eine Implementierung von diesem Befehl, der aktuellen Daten aus der Zwischenablage und Ersetzen Sie dabei mit den ausgewählten Text kopiert `CEdit::Paste`. Der Befehl ist deaktiviert, wenn keine **HIERSVR** in die Zwischenablage.  
   
      **COleClientDoc** bietet nur einen Update-Befehlshandler Benutzeroberfläche für diesen Befehl. Wenn die Zwischenablage nicht eingebettet werden OLE-Element/Objekt enthält, wird der Befehl deaktiviert. Sie sind verantwortlich für das Schreiben des Handlers für den tatsächlichen-Befehl das eigentliche einfügen möchten. Wenn die OLE-Anwendung auch andere Formate einfügen kann, sollten Sie Ihre eigenen Update-Befehlshandler UI in Ihrer Ansicht oder des Dokuments bereitstellen (d. h. an einer beliebigen Stelle vor dem **COleClientDoc** in das Ziel Befehlsrouting).  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `COleDocument`mit diesem Befehl bereit nur einen Update-Befehlshandler Benutzeroberfläche. Wenn die Zwischenablage nicht verknüpfbares OLE-Element/Objekt enthält, wird der Befehl deaktiviert. Sie sind verantwortlich für das Schreiben des Handlers für den tatsächlichen-Befehl das eigentliche einfügen möchten. Wenn die OLE-Anwendung auch andere Formate einfügen kann, sollten Sie Ihre eigenen Update-Befehlshandler UI in Ihrer Ansicht oder des Dokuments bereitstellen (d. h. an einer beliebigen Stelle vor dem `COleDocument` in das Ziel Befehlsrouting).  
+     `COleDocument` mit diesem Befehl bereit nur einen Update-Befehlshandler Benutzeroberfläche. Wenn die Zwischenablage nicht verknüpfbares OLE-Element/Objekt enthält, wird der Befehl deaktiviert. Sie sind verantwortlich für das Schreiben des Handlers für den tatsächlichen-Befehl das eigentliche einfügen möchten. Wenn die OLE-Anwendung auch andere Formate einfügen kann, sollten Sie Ihre eigenen Update-Befehlshandler UI in Ihrer Ansicht oder des Dokuments bereitstellen (d. h. an einer beliebigen Stelle vor dem `COleDocument` in das Ziel Befehlsrouting).  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung dieses Befehls in der letzten Suchvorgang wiederholen. Die private implementierungsvariablen für die letzten suchen dienen. Der Befehl ist deaktiviert, wenn eine Suche kann nicht durchgeführt werden.  
+     `CEditView` Stellt eine Implementierung dieses Befehls in der letzten Suchvorgang wiederholen. Die private implementierungsvariablen für die letzten suchen dienen. Der Befehl ist deaktiviert, wenn eine Suche kann nicht durchgeführt werden.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung von diesem Befehl, der die Implementierung Hilfsfunktion ruft **OnEditFindReplace** verwenden und die vorherigen Suchen/Ersetzen-Einstellungen in private implementierungsvariablen speichern. Die `CFindReplaceDialog` Klasse dient zum Verwalten von nicht modalen Dialogfeld, die der Benutzer aufgefordert wird.  
+     `CEditView` Stellt eine Implementierung von diesem Befehl, der die Implementierung Hilfsfunktion ruft **OnEditFindReplace** verwenden und die vorherigen Suchen/Ersetzen-Einstellungen in private implementierungsvariablen speichern. Die `CFindReplaceDialog` Klasse dient zum Verwalten von nicht modalen Dialogfeld, die der Benutzer aufgefordert wird.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung von diesem Befehl, der gesamten Text im Dokument ausgewählt. Der Befehl ist deaktiviert, wenn es kein Text ist auswählen.  
+     `CEditView` Stellt eine Implementierung von diesem Befehl, der gesamten Text im Dokument ausgewählt. Der Befehl ist deaktiviert, wenn es kein Text ist auswählen.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      Derzeit ist keine Standardimplementierung für diesen Befehl. Sie müssen dies für die einzelnen implementieren `CView`-Klasse.  
   
-     `CEditView`Stellt eine Implementierung dieses Befehls mit `CEdit::Undo`. Der Befehl ist deaktiviert, wenn `CEdit::CanUndo` gibt "false" zurück.  
+     `CEditView` Stellt eine Implementierung dieses Befehls mit `CEdit::Undo`. Der Befehl ist deaktiviert, wenn `CEdit::CanUndo` gibt "false" zurück.  
   
      Wenn Sie mit diesem Befehl implementieren möchten, empfehlen wir dieses Befehls-ID verwendet wird.  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_ARRANGE Ordnet Symbole im unteren Bereich des MDI-Fensters.  
   
-     `CMDIFrameWnd`Dieser standard MDI-Befehl in eine Hilfsfunktion Implementierung implementiert **OnMDIWindowCmd**. Dieses Hilfsprogramm MDI-Fenster Nachrichten Befehls-IDs zugeordnet und kann daher viel Code austauschen.  
+     `CMDIFrameWnd` Dieser standard MDI-Befehl in eine Hilfsfunktion Implementierung implementiert **OnMDIWindowCmd**. Dieses Hilfsprogramm MDI-Fenster Nachrichten Befehls-IDs zugeordnet und kann daher viel Code austauschen.  
   
      Wie die meisten Befehle für MDI-Fenster im Menü ist der Befehl deaktiviert, wenn keine aktives untergeordnete MDI-Fenster vorhanden ist.  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_CASCADE überlappend Fenster überlappend.  
   
-     `CMDIFrameWnd`Dieser standard MDI-Befehl in eine Hilfsfunktion Implementierung implementiert **OnMDIWindowCmd**. Dieses Hilfsprogramm MDI-Fenster Nachrichten Befehls-IDs zugeordnet und kann daher viel Code austauschen.  
+     `CMDIFrameWnd` Dieser standard MDI-Befehl in eine Hilfsfunktion Implementierung implementiert **OnMDIWindowCmd**. Dieses Hilfsprogramm MDI-Fenster Nachrichten Befehls-IDs zugeordnet und kann daher viel Code austauschen.  
   
      Wie die meisten Befehle für MDI-Fenster im Menü ist der Befehl deaktiviert, wenn keine aktives untergeordnete MDI-Fenster vorhanden ist.  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_SPLIT Tastaturschnittstelle mit Splitter.  
   
-     `CView`behandelt diesen Befehl für die `CSplitterWnd` Implementierung. Wenn die Sicht ein unterteiltes Fenster gehört, wird mit diesem Befehl an die Funktion für die Implementierung delegieren `CSplitterWnd::DoKeyboardSplit`. Dies abzulegen des Splitters in einem Modus, die Benutzern teilen oder einem Splitterfenster Aufteilung Tastatur zulässt.  
+     `CView` behandelt diesen Befehl für die `CSplitterWnd` Implementierung. Wenn die Sicht ein unterteiltes Fenster gehört, wird mit diesem Befehl an die Funktion für die Implementierung delegieren `CSplitterWnd::DoKeyboardSplit`. Dies abzulegen des Splitters in einem Modus, die Benutzern teilen oder einem Splitterfenster Aufteilung Tastatur zulässt.  
   
      Dieser Befehl ist deaktiviert, wenn die Sicht nicht in eine Aufteilung ist.  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Sie müssen diese Option, um eine Verbindung Ihrer `CWinApp`-abgeleitete Klasse-meldungszuordnung, um diese Funktion zu aktivieren.  
   
-     `CWinApp::OnHelpIndex`mit diesem Befehl behandelt, durch den Aufruf Trivial `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpIndex` mit diesem Befehl behandelt, durch den Aufruf Trivial `CWinApp::WinHelp`.  
   
      Anpassung von diesem Befehlshandler wird nicht empfohlen.  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Sie müssen diese Option, um eine Verbindung Ihrer `CWinApp`-abgeleitete Klasse-meldungszuordnung, um diese Funktion zu aktivieren.  
   
-     `CWinApp::OnHelpUsing`mit diesem Befehl behandelt, durch den Aufruf Trivial `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpUsing` mit diesem Befehl behandelt, durch den Aufruf Trivial `CWinApp::WinHelp`.  
   
      Anpassung von diesem Befehlshandler wird nicht empfohlen.  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Sie müssen diese Option, um eine Verbindung Ihrer `CWinApp`-abgeleitete Klasse-meldungszuordnung, um diese Funktion zu aktivieren.  
   
-     `CWinApp::OnContextHelp`Der Hilfecursor Modus festlegen, eine modale Größenanpassungsschleife eingeben und warten, bis des Benutzers zur Auswahl eines Fensters, um Hilfe zu erhalten, auf, um mit diesem Befehl verarbeitet. Finden Sie unter [technischer Hinweis 28](../mfc/tn028-context-sensitive-help-support.md) detaillierte Informationen auf die Hilfe von MFC-Implementierung.  
+     `CWinApp::OnContextHelp` Der Hilfecursor Modus festlegen, eine modale Größenanpassungsschleife eingeben und warten, bis des Benutzers zur Auswahl eines Fensters, um Hilfe zu erhalten, auf, um mit diesem Befehl verarbeitet. Finden Sie unter [technischer Hinweis 28](../mfc/tn028-context-sensitive-help-support.md) detaillierte Informationen auf die Hilfe von MFC-Implementierung.  
   
      Anpassung von diesem Befehlshandler wird nicht empfohlen.  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Sie müssen diese Option, um eine Verbindung Ihrer `CWinApp`-abgeleitete Klasse-meldungszuordnung, um diese Funktion zu aktivieren.  
   
-     `CWinApp::OnHelp`verarbeitet mit diesem Befehl die richtige Hilfe-Kontext für den aktuellen Anwendungskontext abrufen. Einfache F1-Hilfe verarbeitet, die in den Meldungsfeldern und so weiter. Finden Sie unter [technischer Hinweis 28](../mfc/tn028-context-sensitive-help-support.md) für weitere Details auf die MFC-Bibliothek bei der Implementierung.  
+     `CWinApp::OnHelp` verarbeitet mit diesem Befehl die richtige Hilfe-Kontext für den aktuellen Anwendungskontext abrufen. Einfache F1-Hilfe verarbeitet, die in den Meldungsfeldern und so weiter. Finden Sie unter [technischer Hinweis 28](../mfc/tn028-context-sensitive-help-support.md) für weitere Details auf die MFC-Bibliothek bei der Implementierung.  
   
      Anpassung von diesem Befehlshandler wird nicht empfohlen.  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE wechselt zum nächsten Bereich  
   
-     `CView`behandelt diesen Befehl für die `CSplitterWnd` Implementierung. Wenn die Sicht ein unterteiltes Fenster gehört, wird mit diesem Befehl an die Funktion für die Implementierung delegieren **CSplitterWnd::OnNextPaneCmd**. Dadurch wird die aktive Ansicht zum nächsten Bereich in der Splitter verschoben.  
+     `CView` behandelt diesen Befehl für die `CSplitterWnd` Implementierung. Wenn die Sicht ein unterteiltes Fenster gehört, wird mit diesem Befehl an die Funktion für die Implementierung delegieren **CSplitterWnd::OnNextPaneCmd**. Dadurch wird die aktive Ansicht zum nächsten Bereich in der Splitter verschoben.  
   
      Dieser Befehl ist deaktiviert, wenn die Sicht nicht in eine Aufteilung kann oder es keine nächsten Bereich ist zu wechseln.  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE wechselt zum vorherigen Bereich  
   
-     `CView`behandelt diesen Befehl für die `CSplitterWnd` Implementierung. Wenn die Sicht ein unterteiltes Fenster gehört, wird mit diesem Befehl an die Funktion für die Implementierung delegieren **CSplitterWnd::OnNextPaneCmd**. Dadurch wird die aktive Ansicht zum vorherigen Bereich in der Splitter verschoben.  
+     `CView` behandelt diesen Befehl für die `CSplitterWnd` Implementierung. Wenn die Sicht ein unterteiltes Fenster gehört, wird mit diesem Befehl an die Funktion für die Implementierung delegieren **CSplitterWnd::OnNextPaneCmd**. Dadurch wird die aktive Ansicht zum vorherigen Bereich in der Splitter verschoben.  
   
      Dieser Befehl ist deaktiviert, wenn die Sicht nicht in eine Aufteilung kann oder es keine vorherigen Bereich ist zu wechseln.  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS bearbeitet OLE-links  
   
-     `COleDocument`verarbeitet mit diesem Befehl unter Verwendung der bereitgestellten MFC-Implementierung des Dialogfelds "standard OLE-Links. Die Implementierung dieser Dialog erfolgt über die `COleLinksDialog` Klasse. Wenn das aktuelle Dokument keine Links enthält, wird der Befehl deaktiviert.  
+     `COleDocument` verarbeitet mit diesem Befehl unter Verwendung der bereitgestellten MFC-Implementierung des Dialogfelds "standard OLE-Links. Die Implementierung dieser Dialog erfolgt über die `COleLinksDialog` Klasse. Wenn das aktuelle Dokument keine Links enthält, wird der Befehl deaktiviert.  
   
      Anpassung von diesem Befehlshandler wird nicht empfohlen.  
   
 -   ID_OLE_VERB_FIRST... LETZTE eine ID-Bereich für OLE-Verben  
   
-     `COleDocument`Mithilfe dieses Befehls-ID-Bereich für die Verben, die von der aktuell ausgewählten OLE-Element/Objekt unterstützt. Dies muss ein Bereich sein, da ein angegebener OLE-Element/Objekttyp NULL oder mehr benutzerdefinierte Verben unterstützen kann. In der Anwendung im Menü haben Sie die ein Menüelement mit der ID **ID_OLE_VERB_FIRST**. Wenn das Programm ausgeführt wird, wird das Menü mit der entsprechenden Verb menübeschreibung (oder ein Popupmenü mit vielen Verben) aktualisiert werden. Die Verwaltung des OLE-Menüs erfolgt durch `AfxOleSetEditMenu`, in der Update-Befehlshandler Benutzeroberfläche für diesen Befehl "Fertig" ändert.  
+     `COleDocument` Mithilfe dieses Befehls-ID-Bereich für die Verben, die von der aktuell ausgewählten OLE-Element/Objekt unterstützt. Dies muss ein Bereich sein, da ein angegebener OLE-Element/Objekttyp NULL oder mehr benutzerdefinierte Verben unterstützen kann. In der Anwendung im Menü haben Sie die ein Menüelement mit der ID **ID_OLE_VERB_FIRST**. Wenn das Programm ausgeführt wird, wird das Menü mit der entsprechenden Verb menübeschreibung (oder ein Popupmenü mit vielen Verben) aktualisiert werden. Die Verwaltung des OLE-Menüs erfolgt durch `AfxOleSetEditMenu`, in der Update-Befehlshandler Benutzeroberfläche für diesen Befehl "Fertig" ändert.  
   
      Es gibt keine explizite Befehlshandler für die Verarbeitung jedes Befehls-ID in diesem Bereich aus. **COleDocument::OnCmdMsg** überschrieben wird, um alle Befehls-IDs in diesem Bereich abfangen, in nullbasierte Verb Zahlen zu aktivieren und starten Sie den Server für das jeweilige Verb (mit `COleClientItem::DoVerb`).  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_VIEW_TOOLBAR Schaltet die Symbolleiste ein- oder ausschalten  
   
-     `CFrameWnd`verarbeitet mit diesem Befehl und die Update-Befehlshandler UI, um den sichtbaren Zustand der Symbolleiste zu wechseln. Die Symbolleiste muss ein untergeordnetes Fenster des Frames mit der untergeordneten Fenster ID `AFX_IDW_TOOLBAR`. Der Befehlshandler schaltet tatsächlich die Sichtbarkeit des Fensters Symbolleiste. `CFrameWnd::RecalcLayout`wird verwendet, das Rahmenfenster über die Symbolleiste im neuen Zustand neu zeichnet. Die UI-Update-Befehlshandler überprüft das Menüelement aus, wenn die Symbolleiste angezeigt wird.  
+     `CFrameWnd` verarbeitet mit diesem Befehl und die Update-Befehlshandler UI, um den sichtbaren Zustand der Symbolleiste zu wechseln. Die Symbolleiste muss ein untergeordnetes Fenster des Frames mit der untergeordneten Fenster ID `AFX_IDW_TOOLBAR`. Der Befehlshandler schaltet tatsächlich die Sichtbarkeit des Fensters Symbolleiste. `CFrameWnd::RecalcLayout` wird verwendet, das Rahmenfenster über die Symbolleiste im neuen Zustand neu zeichnet. Die UI-Update-Befehlshandler überprüft das Menüelement aus, wenn die Symbolleiste angezeigt wird.  
   
      Anpassung von diesem Befehlshandler wird nicht empfohlen. Wenn Sie die zusätzliche Symbolleisten hinzufügen möchten, sollten Sie zum Klonen und Ändern der Befehlshandler und Update-Benutzeroberfläche Befehlshandler für diesen Befehl.  
   

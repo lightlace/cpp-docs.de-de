@@ -2,12 +2,9 @@
 title: 'CWinApp: Die Anwendungsklasse | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CWinApp
 dev_langs:
@@ -23,27 +20,25 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f146df2dd4f97affdaf1c3107d1b00bfd86876
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c3641441554d73e0c7657dd220be86f0c0cab0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: Die Anwendungsklasse
 Die Hauptassembly der Anwendung-Klasse in MFC kapselt die Initialisierung, Ausführung und Beendigung einer Anwendung für Windows-Betriebssystems. Eine Anwendung, die auf das Framework benötigen eine und nur ein Objekt einer Klasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Dieses Objekt wird erstellt, bevor Windows erstellt werden.  
   
- `CWinApp`stammt aus `CWinThread`, der den Hauptthread der Ausführung Ihrer Anwendung, die möglicherweise einen oder mehrere Threads darstellt. In den neuesten Versionen der MFC die `InitInstance`, **ausführen**, `ExitInstance`, und `OnIdle` Memberfunktionen befinden sich nämlich in Klasse `CWinThread`. Diese Funktionen werden hier erläutert, als wären sie `CWinApp` Mitglieder stattdessen, da die Diskussion des Objekts Rolle als Application-Objekt und nicht als primären Thread bezieht.  
+ `CWinApp` stammt aus `CWinThread`, der den Hauptthread der Ausführung Ihrer Anwendung, die möglicherweise einen oder mehrere Threads darstellt. In den neuesten Versionen der MFC die `InitInstance`, **ausführen**, `ExitInstance`, und `OnIdle` Memberfunktionen befinden sich nämlich in Klasse `CWinThread`. Diese Funktionen werden hier erläutert, als wären sie `CWinApp` Mitglieder stattdessen, da die Diskussion des Objekts Rolle als Application-Objekt und nicht als primären Thread bezieht.  
   
 > [!NOTE]
 >  Die Anwendungsklasse bildet die Anwendung primären Thread der Ausführung. Mithilfe von Win32-API-Funktionen können Sie auch sekundäre Ausführungsthreads erstellen. Diese Threads können die MFC-Bibliothek. Weitere Informationen finden Sie unter [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- Genau wie jedes Programm für Windows-Betriebssystems, die Framework-Anwendung verfügt eine `WinMain` Funktion. In einer Framework-Anwendung jedoch nicht schreiben Sie `WinMain`. Es wird von der Klassenbibliothek bereitgestellt und wird aufgerufen, wenn die Anwendung wird gestartet. `WinMain`führt die Standarddienste z. B. das Registrieren von Fensterklassen. Er ruft Sie Memberfunktionen des Anwendungsobjekts zu initialisieren, und führen Sie die Anwendung. (Sie können anpassen, `WinMain` durch Überschreiben der `CWinApp` Memberfunktionen, die `WinMain` aufrufen.)  
+ Genau wie jedes Programm für Windows-Betriebssystems, die Framework-Anwendung verfügt eine `WinMain` Funktion. In einer Framework-Anwendung jedoch nicht schreiben Sie `WinMain`. Es wird von der Klassenbibliothek bereitgestellt und wird aufgerufen, wenn die Anwendung wird gestartet. `WinMain` führt die Standarddienste z. B. das Registrieren von Fensterklassen. Er ruft Sie Memberfunktionen des Anwendungsobjekts zu initialisieren, und führen Sie die Anwendung. (Sie können anpassen, `WinMain` durch Überschreiben der `CWinApp` Memberfunktionen, die `WinMain` aufrufen.)  
   
  Zum Initialisieren der Anwendung `WinMain` ruft des Anwendungsobjekts `InitApplication` und `InitInstance` Memberfunktionen. Zum Ausführen der Nachrichtenschleife für die Anwendung, `WinMain` Aufrufe der **ausführen** Memberfunktion. Beim Beenden `WinMain` ruft des Anwendungsobjekts `ExitInstance` Memberfunktion.  
   

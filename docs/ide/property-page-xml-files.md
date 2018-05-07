@@ -1,29 +1,24 @@
 ---
 title: Eigenschaftendateien Page XML-Regel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>Eigenschaftendateien Page XML-Regel
 Die Projekteigenschaftenseiten in der IDE werden vom XML-Dateien im Ordner "VCTargets" konfiguriert. Der genaue Pfad hängt davon ab, welche Versionen von Visual Studio installiert sind und die Produkt-Programmiersprache. Für Visual Studio 2017 Enterprise Edition, auf Englisch, der Pfad ist `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Die XML-Dateien beschrieben, die Namen der Regeln, die Kategorien und die einzelnen Eigenschaften, deren Datentyp, Standardwerte und Verwandtschaft angezeigt werden. Wenn Sie eine Eigenschaft in der IDE festlegen, wird der neue Wert in der Projektdatei gespeichert.
@@ -114,13 +109,13 @@ Der folgende Abschnitt beschreibt jede Hauptelemente und einige der Metadaten, d
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`Zeigt das Projektsystem, das alle Eigenschaften für die Regel auf die Projektdatei geschrieben werden sollen, oder der Eigenschaftenblattdatei (je nachdem, welche Knoten verwendet wurde beim Erzeugen der Eigenschaftenseiten). Der andere Wert ist "Benutzerlistendatei befindet sich eine" dem Wert in der User-Datei schreiben kann.
+   - `Persistence="ProjectFile` Zeigt das Projektsystem, das alle Eigenschaften für die Regel auf die Projektdatei geschrieben werden sollen, oder der Eigenschaftenblattdatei (je nachdem, welche Knoten verwendet wurde beim Erzeugen der Eigenschaftenseiten). Der andere Wert ist "Benutzerlistendatei befindet sich eine" dem Wert in der User-Datei schreiben kann.
 
-   - `ItemType="ClCompile"`besagt, dass die Eigenschaften gespeichert werden soll, als ItemDefinition oder Elementmetadaten (Bei letzterem Betriebssystem nur, wenn Sie die Eigenschaftenseiten von einem Dateiknoten im Projektmappen-Explorer erzeugt wurden) für diesen Elementtyp. Wenn dieses Feld nicht festgelegt ist, wird die Eigenschaft als eine allgemeine Eigenschaft in einer PropertyGroup geschrieben.
+   - `ItemType="ClCompile"` besagt, dass die Eigenschaften gespeichert werden soll, als ItemDefinition oder Elementmetadaten (Bei letzterem Betriebssystem nur, wenn Sie die Eigenschaftenseiten von einem Dateiknoten im Projektmappen-Explorer erzeugt wurden) für diesen Elementtyp. Wenn dieses Feld nicht festgelegt ist, wird die Eigenschaft als eine allgemeine Eigenschaft in einer PropertyGroup geschrieben.
 
-   - `Label=""`Gibt an, dass, wenn die Eigenschaften, als geschrieben werden `ItemDefinition` Metadaten, die Beschriftung des übergeordneten Elements ItemDefinitionGroup wird leer sein (jedes MSBuild-Element kann eine Bezeichnung haben). Visual Studio-2017 verwendet bezeichnete Gruppen die VCXPROJ-Projektdatei zu navigieren. Beachten Sie, dass die Gruppen, die meisten Eigenschaften für Abfrageregel enthalten eine leere Zeichenfolge als eine Bezeichnung verfügen.
+   - `Label=""` Gibt an, dass, wenn die Eigenschaften, als geschrieben werden `ItemDefinition` Metadaten, die Beschriftung des übergeordneten Elements ItemDefinitionGroup wird leer sein (jedes MSBuild-Element kann eine Bezeichnung haben). Visual Studio-2017 verwendet bezeichnete Gruppen die VCXPROJ-Projektdatei zu navigieren. Beachten Sie, dass die Gruppen, die meisten Eigenschaften für Abfrageregel enthalten eine leere Zeichenfolge als eine Bezeichnung verfügen.
 
-   - `HasConfigurationCondition="true"`weist das Projektsystem, eine Konfiguration Bedingung mit dem Wert anzubringen, damit sie wirksam nur für die aktuelle Konfiguration des Projekts wird (die Bedingung konnte auf der übergeordneten Gruppe oder den Wert selbst angebracht werden.). Z. B. Öffnen Sie die Eigenschaftenseiten deaktiviert den Projektknoten, und legen Sie den Wert der Eigenschaft **Warnungen als Fehler behandeln** unter **Konfigurationseigenschaften > C/C++-Allgemein** auf "Yes". Der folgende Wert wird in der Projektdatei geschrieben. Beachten Sie, dass die Bedingung für die Konfiguration, die an das übergeordnete Element ItemDefinitionGroup angefügt werden.
+   - `HasConfigurationCondition="true"` weist das Projektsystem, eine Konfiguration Bedingung mit dem Wert anzubringen, damit sie wirksam nur für die aktuelle Konfiguration des Projekts wird (die Bedingung konnte auf der übergeordneten Gruppe oder den Wert selbst angebracht werden.). Z. B. Öffnen Sie die Eigenschaftenseiten deaktiviert den Projektknoten, und legen Sie den Wert der Eigenschaft **Warnungen als Fehler behandeln** unter **Konfigurationseigenschaften > C/C++-Allgemein** auf "Yes". Der folgende Wert wird in der Projektdatei geschrieben. Beachten Sie, dass die Bedingung für die Konfiguration, die an das übergeordnete Element ItemDefinitionGroup angefügt werden.
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">

@@ -1,13 +1,10 @@
 ---
 title: 'Ausnahmen: Umwandeln von MFC-Ausnahmemakros | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Ausnahmen: Umwandeln von MFC-Ausnahmemakros
 Dies ist ein-Thema für fortgeschrittene.  
@@ -44,7 +39,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
 -   [Konvertieren von Code mit von Ausnahmemakros mit C++-Ausnahmen](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>Vorteile der Konvertierung  
+##  <a name="_core_advantages_of_converting"></a> Vorteile der Konvertierung  
  Eher führen Sie nicht notwendig zum Konvertieren von vorhandenem Code, obwohl Sie Unterschiede zwischen der Implementierung in früheren Versionen und die Makro-Implementierungen in MFC-Version 3.0 bewusst sein sollten. Diese Unterschiede und die nachfolgenden Änderungen im Code Verhalten werden in erläutert [Ausnahmen: Änderungen an Ausnahmemakros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
  Die Hauptvorteile von konvertiert werden:  
@@ -67,7 +62,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
      Die Ausnahmedeklaration für die **catch** -Schlüsselwort verwendet diese Syntax:  
   
-     **catch (** *Exception_type* *Exception_name***)**  
+     **catch (** *Exception_type* *Exception_name ***)**  
   
      Diese Ausnahme deklarationsanweisung gibt den Typ der Ausnahme im Catch-Block behandelt.  
   
@@ -81,7 +76,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
      Verwenden Sie die Makros `THROW_LAST` die aktuelle Ausnahme erneut ausgelöst. Die `throw` -Schlüsselwort, ohne Argument hat dieselbe Wirkung.  
   
-##  <a name="_core_doing_the_conversion"></a>Die Konvertierung  
+##  <a name="_core_doing_the_conversion"></a> Die Konvertierung  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>So konvertieren Sie Code mithilfe von Makros zur Verwendung der C++-Ausnahmebehandlung-Schlüsselwörter  
   
@@ -93,13 +88,13 @@ Dies ist ein-Thema für fortgeschrittene.
   
      **ABFANGEN** (ersetzen Sie diesen **catch**)  
   
-     `AND_CATCH`(Ersetzen Sie diesen **catch**)  
+     `AND_CATCH` (Ersetzen Sie diesen **catch**)  
   
-     `END_CATCH`(Löschen)  
+     `END_CATCH` (Löschen)  
   
      **LÖST** (ersetzen Sie diesen `throw`)  
   
-     `THROW_LAST`(Ersetzen Sie diesen `throw`)  
+     `THROW_LAST` (Ersetzen Sie diesen `throw`)  
   
 3.  Ändern Sie das Makroargumente, sodass diese Ausnahmedeklarationen ungültig bilden.  
   

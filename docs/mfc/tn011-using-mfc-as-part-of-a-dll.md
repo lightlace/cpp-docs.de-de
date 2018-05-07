@@ -1,13 +1,10 @@
 ---
 title: 'TN011: Verwenden von MFC als Teil einer DLL | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d0ac05e314f3f8354ba289695afa672b1e28881
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Verwenden von MFC als Teil einer DLL
 In diesem Hinweis werden reguläre MFC-DLLs, die Ihnen ermöglichen, die MFC-Bibliothek als Teil einer Windows-Dynamic Link Library (DLL) zu verwenden. Es wird davon ausgegangen, dass Sie mit Windows-DLLs sowie von ihnen vertraut sind. Informationen über MFC-Erweiterungs-DLLs, mit denen Sie erstellen können Erweiterungen für die MFC-Bibliothek finden Sie unter [DLL-Version von MFC](../mfc/tn033-dll-version-of-mfc.md).  
@@ -45,7 +40,7 @@ In diesem Hinweis werden reguläre MFC-DLLs, die Ihnen ermöglichen, die MFC-Bib
   
 -   Mit regulären MFC-DLLs, die statisch mit MFC verknüpft sind, hängt von der Größe der DLL nur die MFC- und C-Laufzeitroutinen, die verwendet und verknüpft werden.  
   
--   Mit regulären MFC-DLLs, die dynamisch mit MFC verknüpfen, können die einsparungen im Arbeitsspeicher von der Verwendung der gemeinsam genutzten MFC-Version sehr deutlich sein. Sie müssen jedoch die gemeinsam genutzten DLLs, Mfc verteilen*\<Version >*DLL- und Msvvcrt*\<Version >*.dll, zusammen mit der DLL.  
+-   Mit regulären MFC-DLLs, die dynamisch mit MFC verknüpfen, können die einsparungen im Arbeitsspeicher von der Verwendung der gemeinsam genutzten MFC-Version sehr deutlich sein. Sie müssen jedoch die gemeinsam genutzten DLLs, Mfc verteilen*\<Version >* DLL- und Msvvcrt*\<Version >*.dll, zusammen mit der DLL.  
   
 -   Die DLL-Entwurf ist unabhängig von der Implementierung von Klassen. Entwurfs DLL exportiert nur für die APIs werden sollen. Wenn die Implementierung geändert wird, werden folglich reguläre MFC-DLLs noch gültig.  
   

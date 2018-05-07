@@ -1,30 +1,25 @@
 ---
 title: Neuverteilen von Visual C++ ActiveX-Steuerelementen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Neuverteilen von Visual C++ ActiveX-Steuerelementen
 Visual C++ 6.0 liefert ActiveX-Steuerelemente, die Sie in Anwendungen verwenden können, die Sie dann erneut verteilen. Diese Steuerelemente sind nicht mehr in Visual C++ enthalten. Pro die Lizenzverträge für Visual C++ 6.0 können Sie diese Steuerelemente mit Anwendungen, die in Visual C++ entwickelt verteilt.  
@@ -46,7 +41,7 @@ Visual C++ 6.0 liefert ActiveX-Steuerelemente, die Sie in Anwendungen verwenden 
   
 -   Stdole2.tlb  
   
- Wenn diese DLLs nicht auf dem Zielsystem verfügbar sind, müssen Sie diese mithilfe des vorgeschriebenen Mechanismus für das entsprechende Betriebssystem aktualisieren aktualisiert werden. Sie können die neuesten Servicepacks für Windows-Betriebssysteme aus herunterladen [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
+ Wenn diese DLLs nicht auf dem Zielsystem verfügbar sind, müssen Sie diese mithilfe des vorgeschriebenen Mechanismus für das entsprechende Betriebssystem aktualisieren aktualisiert werden. Sie können die neuesten Servicepacks für Windows-Betriebssysteme aus herunterladen [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
   
  Wenn Ihre Anwendung einen ActiveX-Steuerelemente, die einer Datenbank herstellt verwendet, müssen Sie die auf dem Zielsystem installiert Microsoft Data Access Components (MDAC) verfügen. Weitere Informationen finden Sie unter [Neuverteilen von Datenbankunterstützungsdateien](../ide/redistributing-database-support-files.md).  
   

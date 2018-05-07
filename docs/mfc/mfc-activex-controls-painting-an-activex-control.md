@@ -1,30 +1,25 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements
 Dieser Artikel beschreibt die ActiveX-Steuerelement-Zeichenprozess und wie Sie ändern können, Paint-Code, um den Prozess zu optimieren. (Finden Sie unter [optimieren Steuerelement zeichnen](../mfc/optimizing-control-drawing.md) für Techniken zum Zeichnen zu optimieren, indem Sie einzeln Steuerelemente ohne zuvor ausgewählten GDI-Objekte wiederhergestellt werden. Nachdem alle Steuerelemente gezeichnet wurden, kann die Container automatisch die ursprünglichen Objekte wiederherstellen.)  
@@ -39,7 +34,7 @@ Dieser Artikel beschreibt die ActiveX-Steuerelement-Zeichenprozess und wie Sie �
   
 -   [Gewusst wie: Zeichnen Sie das Steuerelement über Metadateien](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>Der Zeichenprozess eines ActiveX-Steuerelements  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> Der Zeichenprozess eines ActiveX-Steuerelements  
  Wenn ActiveX-Steuerelemente zunächst angezeigt werden oder neu gezeichnet werden, sie entsprechen einem Zeichenprozess ähnlich für andere Anwendungen entwickelt wurde, mithilfe von MFC, mit einem wichtigen Unterschied: ActiveX-Steuerelemente in einer aktiven oder inaktiven Status werden können.  
   
  Ein aktives Steuerelement wird in einem ActiveX-Steuerelementcontainer durch ein untergeordnetes Fenster dargestellt. Wie andere Windows ist zuständig für das Zeichnen, selbst wenn eine `WM_PAINT` Nachricht empfangen wird. Basisklasse für das Steuerelement, [COleControl](../mfc/reference/colecontrol-class.md), verarbeitet diese Nachricht in seiner `OnPaint` Funktion. Diese Standardimplementierung Ruft die `OnDraw` -Funktion des Steuerelements.  
@@ -62,14 +57,14 @@ Dieser Artikel beschreibt die ActiveX-Steuerelement-Zeichenprozess und wie Sie �
 > [!NOTE]
 >  Beim Zeichnen eines Steuerelements, sollten Sie keine Annahmen über den Zustand des Gerätekontexts, die als übergeben vornehmen der *Pdc* Parameter an die `OnDraw` Funktion. Gelegentlich der Gerätekontext wird von der containeranwendung bereitgestellt und werden nicht unbedingt auf den Standardstatus initialisiert werden. Insbesondere wählen Sie explizit aus, die Stifte, Pinsel, Farben, Schriftarten und andere Ressourcen, denen Ihre Zeichencode abhängt.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>Optimieren des Zeichencodes  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimieren des Zeichencodes  
  Nachdem das Steuerelement selbst erfolgreich gezeichnet wird, ist der nächste Schritt zur Optimierung der `OnDraw` Funktion.  
   
  Die standardmäßige Implementierung des ActiveX-Steuerelement zeichnen Zeichnet das gesamte Steuerelement-Bereich. Dies ist ausreichend für einfache Steuerelemente, aber in vielen Fällen Neuzeichnen des Steuerelements wäre schneller, wenn nur der Teil, der Aktualisierung benötigt, anstatt das gesamte Steuerelement gezeichnet wurde.  
   
  Die `OnDraw` -Funktion bietet eine einfache Methode, mit der Optimierung durch Übergabe `rcInvalid`, den rechteckigen Bereich des Steuerelements, das durch das Neuzeichnen erhalten benötigt. Verwenden Sie diesen Bereich, in der Regel kleiner als der gesamte Steuerelementbereich, den Zeichenprozess zu beschleunigen.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>Zeichnen des Steuerelements mit Metadateien  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Zeichnen des Steuerelements mit Metadateien  
  In den meisten Fällen die `pdc` Parameter an die `OnDraw` Funktion verweist, zu einem Bildschirm Gerätekontext (DC). Allerdings ist der Domänencontroller für das Rendering empfangen beim Drucken von Bildern des Steuerelements oder während einer Sitzung für die Seitenansicht eine Sonderform "Metadatei DC" aufgerufen. Im Gegensatz zu einem Bildschirm Domänencontroller, der an sie gesendete Anforderungen sofort verarbeitet, speichert eine Metadatei DC Anforderungen zu einem späteren Zeitpunkt wiedergegeben werden. Einige containeranwendungen können auch mit einem Metadatei-DC im Entwurfsmodus das Steuerelementbild rendert.  
   
  Metadatei zeichnen Anforderungen kann vom Container über zwei Funktionen der Benutzeroberfläche vorgenommen werden: **IViewObject::Draw** (diese Funktion kann auch für nicht-Metadatei zeichnen aufgerufen werden) und **IDataObject:: GetData**. Wenn eine Metadatei DC als einer der Parameter übergeben wird, macht das MFC-Framework einen Aufruf von [OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Da dies eine virtuelle Memberfunktion ist, überschreiben Sie diese Funktion in der Control-Klasse, um spezielle Verarbeitungsschritte ausführen. Das Standardverhalten ruft `COleControl::OnDraw`.  
@@ -80,7 +75,7 @@ Dieser Artikel beschreibt die ActiveX-Steuerelement-Zeichenprozess und wie Sie �
   
 |Bogen|BibBlt|Die Sehne|  
 |---------|------------|-----------|  
-|**Ellipse**|**Escapezeichen**|`ExcludeClipRect`|  
+|**Ellipse**|**ESC**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  

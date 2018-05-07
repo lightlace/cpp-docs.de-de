@@ -2,11 +2,8 @@
 title: Compilerfehler Warnungen C4000 über C4199 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +95,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 62f99b7be82ccd786bf2b2a5d18ed24a3e3211ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Compilerfehler Warnungen C4000 über C4199
 
@@ -159,7 +154,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4051|Typkonvertierung; möglicher Datenverlust|
 |Compilerwarnung (Stufe 4) C4052|Unterschiedliche Funktionsdeklarationen; eine enthält variable Argumente|
 |Compilerwarnung (Stufe 4) C4053|Ein void-Operand für "?:"|
-|[Compilerwarnung (Stufe 1) C4055](compiler-warning-level-1-c4055.md)|"Konvertierung': von Datenzeiger '*Typ1*'zu Funktionszeiger'*Typ2*"|
+|[Compilerwarnung (Ebene 1) C4055](compiler-warning-level-1-c4055.md)|"Konvertierung': von Datenzeiger '*Typ1*'zu Funktionszeiger'*Typ2*"|
 |[Compilerwarnung (Ebene 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|Überlauf in Gleitkommazahlen-Konstante|
 |Compilerwarnung (Stufe 4) C4057|"Operator": "Bezeichner1" unterscheidet Dereferenzierung in leicht unterschiedliche Basistypen von 'Bezeichner2'|
 |Warnung C4060|Switch-Anweisung enthält keine 'Case' oder 'Default'-Beschriftungen|

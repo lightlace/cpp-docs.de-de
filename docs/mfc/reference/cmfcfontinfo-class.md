@@ -1,12 +1,9 @@
 ---
 title: CMFCFontInfo Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontInfo
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ea0572667ef45264fd52934cd2d4ee750a6d4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo-Klasse
 Die `CMFCFontInfo` Klasse beschreibt den Namen und andere Attribute einer Schriftart.  
@@ -83,7 +78,7 @@ class CMFCFontInfo : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
+##  <a name="cmfcfontinfo"></a>  CMFCFontInfo::CMFCFontInfo  
  Erstellt ein `CMFCFontInfo`-Objekt.  
   
 ```  
@@ -121,7 +116,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="remarks"></a>Hinweise  
  In dieser Dokumentation werden die Begriffe verwendet *Zeichensatz* und *Skript* austauschbar. Ein *Skript*, das Schriftsystem, auch bekannt als ist, ist eine Auflistung von Zeichen und Regeln für das Schreiben von Zeichen in eine oder mehrere Sprachen. Die Auflistung von Zeichen enthält, das Alphabet und dieselben Satzzeichen im Skript verwendet. Lateinischer Schrift wird z. B. für Englisch verwendet, wie es in den Vereinigten Staaten gesprochen wird, und seine Alphabet die Zeichen von A bis Z umfasst. Die `lfCharSet` Mitglied der [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur gibt einen Zeichensatz. Beispielsweise den Wert `ANSI_CHARSET` gibt die [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] Zeichensatz des lateinischen Alphabets enthält.  
   
-##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
+##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Ruft die verketteten Namen einer Schriftart und das Zeichen festgelegt (Skript).  
   
 ```  
@@ -134,7 +129,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um den vollständigen Namen der Schriftart zu erhalten. Z. B. den Namen der Schriftart ist `Arial` Schriftart besteht `Cyrillic`, gibt diese Methode "Arial (Kyrillisch)" zurück.  
   
-##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
+##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet  
  Ein Wert, der angibt, den Zeichensatz (Skript), Schriftart zugeordnet.  
   
 ```  
@@ -144,7 +139,7 @@ const BYTE m_nCharSet;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der `nCharSet` Parameter von der [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) Konstruktor.  
   
-##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
+##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Ein Wert, der die Tonhöhe (Größe) und die Familie (z. B. "Serif", "sans-Serif" und "Monospace") der Schriftart angibt.  
   
 ```  
@@ -154,7 +149,7 @@ const BYTE m_nPitchAndFamily;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der `nPitchAndFamily` Parameter von der [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) Konstruktor.  
   
-##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
+##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Ein Wert, der den Typ der Schriftart angibt.  
   
 ```  
@@ -164,7 +159,7 @@ const int m_nType;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der `nType` Parameter von der [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) Konstruktor.  
   
-##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
+##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  Der Name der Schriftart: z. B. **Arial**.  
   
 ```  
@@ -174,7 +169,7 @@ const CString m_strName;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der `lpszName` Parameter von der [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) Konstruktor.  
   
-##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
+##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  Der Name eines Zeichensatzes (Skript), Schriftart zugeordnet werden soll.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Lokalisieren eines ActiveX-Steuerelements | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lokalisieren eines ActiveX-Steuerelements
 Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-Schnittstellen.  
@@ -52,7 +47,7 @@ Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-S
   
  Im weiteren Verlauf dieses Artikels werden zwei Lokalisierung von Strategien beschrieben. Die erste Strategie [zur Lokalisierung der Steuerelement-Programmierschnittstelle](#_core_localizing_your_control.92.s_programmability_interface) (Namen von Eigenschaften, Methoden und Ereignisse). Die zweite Strategie [zur Lokalisierung der Benutzeroberfläche des Steuerelements](#_core_localizing_the_control.92.s_user_interface), mithilfe des Containers Umgebungseigenschaft LocaleID-Wert. Ein Demo-Lokalisierung von Steuerelementen finden Sie in dem Beispiel für die MFC-ActiveX-Steuerelemente [LOCALIZE](../visual-cpp-samples.md).  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>Lokalisieren von Programmierschnittstelle des Steuerelements  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalisieren von Programmierschnittstelle des Steuerelements  
  Beim Lokalisieren von der Control-Programmierschnittstelle (die Schnittstelle, die Programmierer, die Schreiben von Anwendungen, die das Steuerelement zu verwenden), müssen Sie eine geänderte Version des Steuerelements erstellen. IDL-Datei (ein Skript zum Erstellen von Steuerelement-Typbibliothek) für jede Sprache, die Sie unterstützen möchten. Dies ist der einzige Ort, Sie die Steuerelement-Eigenschaftennamen zu lokalisieren müssen.  
   
  Wenn Sie einen lokalisierten-Steuerelement entwickeln, schließen Sie die Gebietsschema-ID als ein Attribut auf Typebene-Bibliothek. Wenn Sie eine Typbibliothek mit französischen Eigenschaftennamen bereitstellen möchten, stellen Sie beispielsweise eine Kopie Ihrer Beispiel. IDL-Datei, und nennen Sie es SAMPLEFR. IDL. Fügen Sie eine Gebietsschema-ID-Attribut in der Datei (die Gebietsschema-ID für Französisch ist 0x040c), ähnlich der folgenden:  
@@ -89,7 +84,7 @@ Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-S
   
  Wenn das Steuerelement registriert wird, die `AfxOleRegisterTypeLib` Funktion sucht automatisch nach dem angegebenen. TLB-Datei im gleichen Verzeichnis wie das Steuerelement und registriert ihn in der Datenbank der Windows-Registrierung. Wenn die. TLB-Datei nicht gefunden wird, die Funktion hat keine Auswirkungen.  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>Lokalisieren die Steuerelement-Benutzeroberfläche  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Lokalisieren die Steuerelement-Benutzeroberfläche  
  Um ein Steuerelement-Benutzeroberfläche zu lokalisieren, platzieren Sie alle Benutzer sichtbare des Steuerelements-Ressourcen (z. B. Eigenschaftenseiten und Fehlermeldungen) in sprachspezifischen Ressourcen-DLLs aus. Der Container Umgebungseigenschaft LocaleID-Wert können dann wählen Sie die entsprechende DLL für das Gebietsschema des Benutzers.  
   
  Das folgende Codebeispiel veranschaulicht eine Möglichkeit zum Suchen und laden die Ressourcen-DLL für ein bestimmtes Gebietsschema. Diese Memberfunktion aufgerufen `GetLocalizedResourceHandle` in diesem Beispiel kann eine Memberfunktion der ActiveX-Steuerelementklasse sein:  

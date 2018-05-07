@@ -1,12 +1,9 @@
 ---
 title: CList-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d96a9c1a1b91d7738f768387bf0c24abd01ba22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clist-class"></a>CList-Klasse
 Unterstützt sortierte Listen mit Objekten, die nicht eindeutig sein müssen, und auf die sequenziell oder über den Wert zugegriffen werden kann.  
@@ -123,7 +118,7 @@ class CList : public CObject
  Der Typ verwendet, um in der Liste gespeicherten Objekte zu verweisen. Ein Verweis kann sein.  
   
 ## <a name="remarks"></a>Hinweise  
- `CList`Listen Verhalten sich wie doppelt verknüpfte Listen.  
+ `CList` Listen Verhalten sich wie doppelt verknüpfte Listen.  
   
  Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste. Sie können eine **POSITION** Variable als ein Iterator um eine Liste sequenziell zu durchlaufen und einer Textmarke an einen Ort speichern. Eine Position ist identisch mit einem Index jedoch nicht.  
   
@@ -146,7 +141,7 @@ class CList : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CList::AddHead  
+##  <a name="addhead"></a>  CList::AddHead  
  Fügt ein neues Element oder die Liste der Elemente an den Anfang der Liste an.  
   
 ```  
@@ -173,7 +168,7 @@ void AddHead(CList* pNewList);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CList::AddTail  
+##  <a name="addtail"></a>  CList::AddTail  
  Fügt ein neues Element oder die Liste der Elemente an das Ende dieser Liste.  
   
 ```  
@@ -200,7 +195,7 @@ void AddTail(CList* pNewList);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
-##  <a name="clist"></a>CList::CList  
+##  <a name="clist"></a>  CList::CList  
  Erstellt eine leere sortierte Liste.  
   
 ```  
@@ -217,7 +212,7 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
-##  <a name="find"></a>CList::Find  
+##  <a name="find"></a>  CList::Find  
  Sucht die Liste sequenziell nach dem ersten Element mit dem angegebenen `searchValue`.  
   
 ```  
@@ -242,7 +237,7 @@ POSITION Find(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CList::FindIndex  
+##  <a name="findindex"></a>  CList::FindIndex  
  Verwendet den Wert der `nIndex` als Index in der Liste.  
   
 ```  
@@ -257,12 +252,12 @@ POSITION FindIndex(INT_PTR nIndex) const;
  Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** Wenn `nIndex` ist negativ oder zu groß.  
   
 ### <a name="remarks"></a>Hinweise  
- Er startet einen sequenziellen Scan am Anfang der Liste, und beenden Sie alle in der  *n* th-Element.  
+ Er startet einen sequenziellen Scan am Anfang der Liste, und beenden Sie alle in der *n*th-Element.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
-##  <a name="getat"></a>CList::GetAt  
+##  <a name="getat"></a>  CList::GetAt  
  Ruft das Listenelement an einer angegebenen Position ab.  
   
 ```  
@@ -271,7 +266,7 @@ const TYPE& GetAt(POSITION position) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Template-Parameter, die den Typ des Objekts in der Liste angeben.  
   
  *Position*  
@@ -281,14 +276,14 @@ const TYPE& GetAt(POSITION position) const;
  Siehe die Beschreibung der Rückgabewert für `GetHead`.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetAt`Gibt das Element (oder einen Verweis auf das Element) mit einer bestimmten Position zugeordnet. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
+ `GetAt` Gibt das Element (oder einen Verweis auf das Element) mit einer bestimmten Position zugeordnet. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
   
  Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CList::GetHeadPosition](#getheadposition).  
   
-##  <a name="getcount"></a>CList::GetCount  
+##  <a name="getcount"></a>  CList::GetCount  
  Ruft die Anzahl der Elemente in dieser Liste.  
   
 ```  
@@ -304,7 +299,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CList::RemoveHead](#removehead).  
   
-##  <a name="gethead"></a>CList::GetHead  
+##  <a name="gethead"></a>  CList::GetHead  
  Ruft das Head-Element (oder einen Verweis auf das Anfangselement) dieser Liste ab.  
   
 ```  
@@ -314,7 +309,7 @@ TYPE& GetHead();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Template-Parameter, die den Typ des Objekts in der Liste angeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -328,7 +323,7 @@ TYPE& GetHead();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
-##  <a name="getheadposition"></a>CList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CList::GetHeadPosition  
  Ruft die Position der das Anfangselement dieser Liste ab.  
   
 ```  
@@ -341,7 +336,7 @@ POSITION GetHeadPosition() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
-##  <a name="getnext"></a>CList::GetNext  
+##  <a name="getnext"></a>  CList::GetNext  
  Ruft das Listenelement identifizierten `rPosition`, legt dann `rPosition` auf die **POSITION** Wert, der den nächsten Eintrag in der Liste.  
   
 ```  
@@ -350,7 +345,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter, der Typ der Elemente in der Liste angibt.  
   
  `rPosition`  
@@ -371,7 +366,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
-##  <a name="getprev"></a>CList::GetPrev  
+##  <a name="getprev"></a>  CList::GetPrev  
  Ruft das Listenelement identifizierten `rPosition`, dann legt `rPosition` auf die **POSITION** Wert des vorherigen Eintrags in der Liste.  
   
 ```  
@@ -380,7 +375,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter, der Typ der Elemente in der Liste angibt.  
   
  `rPosition`  
@@ -401,7 +396,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
-##  <a name="getsize"></a>CList::GetSize  
+##  <a name="getsize"></a>  CList::GetSize  
  Gibt die Anzahl der Listenelemente an.  
   
 ```  
@@ -417,7 +412,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
-##  <a name="gettail"></a>CList::GetTail  
+##  <a name="gettail"></a>  CList::GetTail  
  Ruft die `CObject` Zeiger, der das Element Ende dieser Liste darstellt.  
   
 ```  
@@ -426,7 +421,7 @@ const TYPE& GetTail() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter, den Typ der Elemente in der Liste angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -438,7 +433,7 @@ const TYPE& GetTail() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
-##  <a name="gettailposition"></a>CList::GetTailPosition  
+##  <a name="gettailposition"></a>  CList::GetTailPosition  
  Ruft die Position des Elements Ende dieser Liste. **NULL** , wenn die Liste leer ist.  
   
 ```  
@@ -451,7 +446,7 @@ POSITION GetTailPosition() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
-##  <a name="insertafter"></a>CList::InsertAfter  
+##  <a name="insertafter"></a>  CList::InsertAfter  
  Fügt ein Element zu dieser Liste nach dem Element an der angegebenen Position.  
   
 ```  
@@ -474,7 +469,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
-##  <a name="insertbefore"></a>CList::InsertBefore  
+##  <a name="insertbefore"></a>  CList::InsertBefore  
  Fügt dieser Liste ein Element vor dem Element an der angegebenen Position hinzu.  
   
 ```  
@@ -500,7 +495,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
-##  <a name="isempty"></a>CList::IsEmpty  
+##  <a name="isempty"></a>  CList::IsEmpty  
  Gibt an, ob dieser Liste keine Elemente enthält.  
   
 ```  
@@ -513,7 +508,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
-##  <a name="removeall"></a>CList::RemoveAll  
+##  <a name="removeall"></a>  CList::RemoveAll  
  Entfernt alle Elemente aus dieser Liste aus, und gibt den zugeordneten Arbeitsspeicher frei.  
   
 ```  
@@ -526,7 +521,7 @@ void RemoveAll();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CList::RemoveAt  
+##  <a name="removeat"></a>  CList::RemoveAt  
  Entfernt das angegebene Element aus dieser Liste.  
   
 ```  
@@ -543,7 +538,7 @@ void RemoveAt(POSITION position);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
-##  <a name="removehead"></a>CList::RemoveHead  
+##  <a name="removehead"></a>  CList::RemoveHead  
  Entfernt das Element am Anfang der Liste aus, und gibt einen Zeiger darauf zurück.  
   
 ```  
@@ -551,7 +546,7 @@ TYPE RemoveHead();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter, den Typ der Elemente in der Liste angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -563,7 +558,7 @@ TYPE RemoveHead();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CList::RemoveTail  
+##  <a name="removetail"></a>  CList::RemoveTail  
  Entfernt das Element, das Ende der Liste aus, und gibt einen Zeiger darauf zurück.  
   
 ```  
@@ -571,7 +566,7 @@ TYPE RemoveTail();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter, den Typ der Elemente in der Liste angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -583,7 +578,7 @@ TYPE RemoveTail();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
-##  <a name="setat"></a>CList::SetAt  
+##  <a name="setat"></a>  CList::SetAt  
  Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
   
 ```  
@@ -601,7 +596,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
  Das Element der Liste hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `SetAt`Schreibt das Element an der angegebenen Position in der Liste an.  
+ Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `SetAt` Schreibt das Element an der angegebenen Position in der Liste an.  
   
  Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   

@@ -1,13 +1,10 @@
 ---
 title: 'TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|Steuerelement hat Eingabefokus verloren.|  
 |**NM_OUTOFMEMORY**|Steuerelement konnte einen Vorgang nicht abgeschlossen, da nicht genügend Arbeitsspeicher verfügbar war|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: Behandlung von WM_NOTIFY-Meldungen in MFC-Anwendungen  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Behandlung von WM_NOTIFY-Meldungen in MFC-Anwendungen  
  Die Funktion `CWnd::OnNotify` benachrichtigungsmeldungen behandelt. Die standardmäßige Implementierung überprüft die meldungszuordnung für Benachrichtigungshandler aufrufen. Im Allgemeinen nicht überschreiben `OnNotify`. Stattdessen geben Sie eine Handlerfunktion und die meldungszuordnung Ihres Besitzerfensters Klasse eine Meldungszuordnungseintrags für diesen Handler hinzuzufügen.  
   
  Klassen-Assistent, über dem Eigenschaftenblatt ClassWizard kann erstellen, die `ON_NOTIFY` Meldungszuordnungseintrags und bieten Ihnen eine Skeleton-Funktion. Weitere Informationen zur Verwendung von ClassWizard um dies zu vereinfachen, finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md).  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  Beachten Sie, dass Klassen-Assistent automatisch einen Zeiger des erforderlichen Typs bereitstellt. Sie können auf die Benachrichtigungsstruktur zugreifen, entweder durch `pNMHDR` oder `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  Wenn Sie denselben Prozess pro müssen **WM_NOTIFY** Nachricht für einen Satz von Steuerelementen, können Sie **ON_NOTIFY_RANGE** statt `ON_NOTIFY`. Beispielsweise kann eine Reihe von Schaltflächen stehen Ihnen für die Sie die gleiche Aktion für eine bestimmte Meldung ausführen möchten.  
   
  Bei Verwendung von **ON_NOTIFY_RANGE**, geben Sie einen zusammenhängenden Bereich von untergeordneten Bezeichner für das die benachrichtigungsmeldung behandelt, durch Angeben der Anfangs- und Beenden der untergeordneten Bezeichner des Bereichs.  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *Ergebnis*  
  Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
  Ggf. mehr als ein Objekt in der Benachrichtigung routing an eine Nachricht verarbeiten, können Sie **ON_NOTIFY_EX** (oder **ON_NOTIFY_EX_RANGE**) statt `ON_NOTIFY` (oder **ON_NOTIFY_RANGE** ). Der einzige Unterschied zwischen der **EX** und die regulären Version ist, dass für die Memberfunktion aufgerufen der **EX** Version gibt ein **BOOL** , der angibt, und zwar unabhängig davon, ob Verarbeitung von Nachrichten sollte fortgesetzt werden. Zurückgeben von **"false"** von dieser Funktion können Sie die gleiche Nachricht in mehr als ein Objekt zu verarbeiten.  
   
  ClassWizard verarbeitet keine **ON_NOTIFY_EX** oder **ON_NOTIFY_EX_RANGE**; Wenn Sie eine davon ist, verwenden möchten, müssen Sie die nachrichtenzuordnung selbst bearbeiten.  

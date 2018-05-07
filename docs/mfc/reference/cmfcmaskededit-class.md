@@ -1,12 +1,9 @@
 ---
 title: CMFCMaskedEdit Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMaskedEdit
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ada987b3226d901c3bf01236c2a593c2e36f51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit-Klasse
 Die `CMFCMaskedEdit` Klasse unterstützt ein maskiertes Bearbeitungssteuerelement, das Benutzereingaben anhand einer Maske überprüft und zeigt die überprüften Ergebnisse einer Vorlage entsprechend.  
@@ -118,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxmaskededit.h  
   
-##  <a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
+##  <a name="disablemask"></a>  CMFCMaskedEdit::DisableMask  
  Deaktiviert das Validieren von Benutzereingaben.  
   
 ```  
@@ -128,7 +123,7 @@ void DisableMask();
 ### <a name="remarks"></a>Hinweise  
  Wenn die Validierung von Benutzereingaben deaktiviert ist, verhält sich MaskedEdit-Steuerelement, z. B. der Standard-edit-Steuerelement.  
   
-##  <a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
+##  <a name="enablegetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableGetMaskedCharsOnly  
  Gibt an, ob die `GetWindowText` Methode ruft nur maskierte Zeichen ab.  
   
 ```  
@@ -137,12 +132,12 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`um anzugeben, dass die [CMFCMaskedEdit::GetWindowText](#getwindowtext) Methode abrufen maskiert nur Zeichen; `FALSE` um anzugeben, dass die Methode den gesamten Text abrufen. Der Standardwert ist `TRUE`.  
+ `TRUE` um anzugeben, dass die [CMFCMaskedEdit::GetWindowText](#getwindowtext) Methode abrufen maskiert nur Zeichen; `FALSE` um anzugeben, dass die Methode den gesamten Text abrufen. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um aktivieren maskierte Zeichen abgerufen werden sollen. Dann erstellen Sie ein maskiertes Bearbeitungssteuerelement, das die Telefonnummer, z. B. (425) 555-0187 entspricht. Beim Aufrufen der `GetWindowText` -Methode, wird die "4255550187" zurückgegeben. Wenn Sie deaktivieren maskierte Zeichen abgerufen werden sollen die `GetWindowText` Methodenrückgabe den Text, der in das Bearbeitungssteuerelement, z. B. "(425) 555-0187" angezeigt wird.  
   
-##  <a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
+##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
  Der maskierten initialisiert edit-Steuerelement.  
   
 ```  
@@ -164,7 +159,7 @@ void EnableMask(
  Ein Standardzeichen, die das Framework für jedes ungültige Zeichen in der Benutzereingabe ersetzt. Der Standardwert dieses Parameters ist Unterstrich ("_").  
   
  [in] `lpszValid`  
- Eine Zeichenfolge, die einen Satz von gültigen Zeichen enthält. `NULL`Gibt an, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist `NULL`.  
+ Eine Zeichenfolge, die einen Satz von gültigen Zeichen enthält. `NULL` Gibt an, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Maske für das MaskedEdit-Steuerelement zu erstellen. Leiten Sie eine Klasse aus der `CMFCMaskedEdit` Klasse, und überschreiben die [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) Methode, um Ihren eigenen Code für die benutzerdefinierte Maske Verarbeitung verwenden.  
@@ -182,7 +177,7 @@ void EnableMask(
 |eine|Alphanumerisches Zeichen oder Leerzeichen.|  
 |*|Ein anderes druckbares Zeichen.|  
   
-##  <a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
+##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
  Gibt an, ob die MaskedEdit-Steuerelement den Benutzer auf bestimmte für ausgewählte Benutzergruppen Eingabe- oder alle Eingaben zulässt.  
   
 ```  
@@ -191,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`nur Gruppen auswählen; `FALSE` um den gesamten Text auszuwählen. Der Standardwert ist `TRUE`.  
+ `TRUE` nur Gruppen auswählen; `FALSE` um den gesamten Text auszuwählen. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um anzugeben, ob MaskedEdit-Steuerelement ausgewählt Gruppe oder den gesamten Text ermöglicht.  
@@ -214,7 +209,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  Auswahl von Gruppe aktiviert ist, kann der Benutzer nur "425", "555" oder "0187" Zeichenfolge-Gruppen abgerufen werden. Wenn Gruppenauswahl deaktiviert, wird der Benutzer kann den gesamten Text der Telefonnummer abrufen: "(425) 555-0187".  
   
-##  <a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
+##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
  Gibt an, ob der Text für die nur die maskierten Zeichen oder für die gesamte Maske überprüft wird.  
   
 ```  
@@ -223,9 +218,9 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So überprüfen Sie den Benutzer maskiert Eingabe anhand von nur Zeichen; `FALSE` die gesamte Maske überprüft. Der Standardwert ist `TRUE`.  
+ `TRUE` So überprüfen Sie den Benutzer maskiert Eingabe anhand von nur Zeichen; `FALSE` die gesamte Maske überprüft. Der Standardwert ist `TRUE`.  
   
-##  <a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
+##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Ruft überprüft Text aus dem MaskedEdit-Steuerelement.  
   
 ```  
@@ -254,7 +249,7 @@ void GetWindowText(CString& rstrString) const;
   
  Diese Methode definiert [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
-##  <a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
+##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
  Wird aufgerufen, durch das Framework das angegebene Zeichen für das entsprechende Maskenzeichen überprüft.  
   
 ```  
@@ -271,12 +266,12 @@ virtual BOOL IsMaskedChar(
  Das entsprechende Zeichen aus der Maskenzeichenfolge.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die `chChar` Parameter weist den Typ der Höchstzahl von Zeichen der `chMaskChar` Parameter ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die `chChar` Parameter weist den Typ der Höchstzahl von Zeichen der `chMaskChar` Parameter ist, andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Eingabezeichen selbst zu validieren. Weitere Informationen zu Formatzeichen, finden Sie unter der [CMFCMaskedEdit::EnableMask](#enablemask) Methode.  
   
-##  <a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
+##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  Gibt eine Zeichenfolge von Zeichen, die der Benutzer eingeben kann.  
   
 ```  
@@ -285,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
 ### <a name="parameters"></a>Parameter  
  [in] `lpszValid`  
- Eine Zeichenfolge, die den Satz von gültigen Eingabezeichen enthält. `NULL`bedeutet, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist `NULL`.  
+ Eine Zeichenfolge, die den Satz von gültigen Eingabezeichen enthält. `NULL` bedeutet, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Liste der gültigen Zeichen zu definieren. Wenn eine Eingabezeichen nicht in dieser Liste enthalten ist, wird Sie MaskedEdit-Steuerelement nicht akzeptiert.  
@@ -294,7 +289,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
-##  <a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
+##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  Eine Aufforderung in MaskedEdit-Steuerelement angezeigt.  
   
 ```  

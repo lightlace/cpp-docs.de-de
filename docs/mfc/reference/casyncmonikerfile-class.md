@@ -1,12 +1,9 @@
 ---
 title: CAsyncMonikerFile Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile-Klasse
 Stellt Funktionalität für die Verwendung von asynchronen Monikern in ActiveX-Steuerelementen (früher OLE-Steuerelemente) bereit.  
@@ -117,7 +112,7 @@ class CAsyncMonikerFile : public CMonikerFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
  Erstellt ein `CAsyncMonikerFile`-Objekt.  
   
 ```  
@@ -125,11 +120,11 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Werden keine erstellt die `IBindHost` Schnittstelle. `IBindHost`wird verwendet, nur dann, wenn Sie ihn im Angeben der **öffnen** Memberfunktion.  
+ Werden keine erstellt die `IBindHost` Schnittstelle. `IBindHost` wird verwendet, nur dann, wenn Sie ihn im Angeben der **öffnen** Memberfunktion.  
   
  Eine Beschreibung der `IBindHost` -Schnittstelle, finden Sie im Windows SDK.  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
  Mit dieser Funktion wird zum Schließen und alle Ressourcen freizugeben.  
   
 ```  
@@ -139,7 +134,7 @@ virtual void Close();
 ### <a name="remarks"></a>Hinweise  
  Kann auf geöffnete oder bereits geschlossen Dateien aufgerufen werden.  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
  Erstellt ein COM-Objekt, das implementiert `IBindStatusCallback`.  
   
 ```  
@@ -154,7 +149,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
  Wenn `pUnkControlling` nicht **NULL**, die Funktion gibt einen Zeiger auf die innere **IUnknown** auf eine neue COM-Unterstützung `IBindStatusCallback`. Wenn `pUnkControlling` ist **NULL**, die Funktion gibt einen Zeiger auf eine **IUnknown** auf eine neue COM-Unterstützung `IBindStatusCallback`.  
   
 ### <a name="remarks"></a>Hinweise  
- `CAsyncMonikerFile`erfordert ein COM-Objekt, das implementiert `IBindStatusCallback`. MFC implementiert ein solches Objekt, und es aggregiert wird. Sie können außer Kraft setzen `CreateBindStatusCallback` eigene COM-Objekt zurückgegeben. Das COM-Objekt kann MFC Implementierung aggregieren, durch den Aufruf `CreateBindStatusCallback` mit der controlling Unknown COM-Objekts. COM-Objekte implementiert, mit der `CCmdTarget` COM-Unterstützung kann rufen Sie die steuernde unbekannte mithilfe **CCmdTarget::GetControllingUnknown**.  
+ `CAsyncMonikerFile` erfordert ein COM-Objekt, das implementiert `IBindStatusCallback`. MFC implementiert ein solches Objekt, und es aggregiert wird. Sie können außer Kraft setzen `CreateBindStatusCallback` eigene COM-Objekt zurückgegeben. Das COM-Objekt kann MFC Implementierung aggregieren, durch den Aufruf `CreateBindStatusCallback` mit der controlling Unknown COM-Objekts. COM-Objekte implementiert, mit der `CCmdTarget` COM-Unterstützung kann rufen Sie die steuernde unbekannte mithilfe **CCmdTarget::GetControllingUnknown**.  
   
  Klicken Sie alternativ das COM-Objekt durch Aufrufen von MFC Implementierung delegieren kann **CreateBindStatusCallback (NULL)**.  
   
@@ -162,7 +157,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  Weitere Informationen zu asynchronen Monikern und asynchrone Bindung finden Sie unter der [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) Schnittstelle und [wie asynchrone Bindung "und" Speicher-Arbeit](http://msdn.microsoft.com/library/windows/desktop/aa379152). Eine Erläuterung der Aggregation, finden Sie unter [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558). Alle drei Themen sind im Windows SDK.  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  Vom Client an eine asynchrone Moniker asynchrone Moniker mitteilen, wie sie binden möchte aufgerufen.  
   
 ```  
@@ -177,7 +172,7 @@ virtual DWORD GetBindInfo() const;
   
  Ein Grund dafür wäre mithilfe des Daten-Pull-Modells anstelle des datenpush Modells zu binden. In einem Modell Daten Pull-Client Laufwerke die Bind-Operation, und der Moniker bietet Daten nur an den Client, wenn sie gelesen werden kann. In einem Modell datenpush-der Moniker der asynchronen Bindungsvorgangs Laufwerke und kontinuierlich den Client benachrichtigt, sobald neue Daten verfügbar ist.  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
  Rufen Sie diese Funktion, um einen Zeiger auf die asynchrone Übertragung binden abzurufen.  
   
 ```  
@@ -192,7 +187,7 @@ IBinding* GetBinding() const;
   
  Eine Beschreibung der `IBinding` -Schnittstelle, finden Sie im Windows SDK.  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
  Mit dieser Funktion wird zum Abrufen von des Formats der Daten in den Stream.  
   
 ```  
@@ -202,7 +197,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Windows-Struktur [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) für den aktuell geöffneten Stream. Gibt **NULL** , wenn der Moniker nicht gebunden wurde, wenn es nicht asynchron ist, oder wenn der asynchrone Vorgang nicht begonnen wurde.  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  Vom Client an eine asynchrone Moniker wird aufgerufen, wenn die Bindung Prozessstart empfangen Sie die Priorität an den Thread des Bindungsvorgangs.  
   
 ```  
@@ -213,9 +208,9 @@ virtual LONG GetPriority() const;
  Die Priorität, an der der asynchrone Übertragung stattfindet. Eines der standardmäßigen Thread Priorität Flags: **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**,  **THREAD_PRIORITY_IDLE**, **Rangfolge von THREAD_PRIORITY_LOWEST**, **THREAD_PRIORITY_NORMAL**, und **THREAD_PRIORITY_TIME_CRITICAL**. Finden Sie im Windows-Funktion [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) eine Beschreibung dieser Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetPriority`sollte nicht direkt aufgerufen werden. **THREAD_PRIORITY_NORMAL** von die standardmäßige Implementierung zurückgegeben wird.  
+ `GetPriority` Sollte nicht direkt aufgerufen werden. **THREAD_PRIORITY_NORMAL** von die standardmäßige Implementierung zurückgegeben wird.  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  Ruft eine asynchrone Moniker `OnDataAvailable` binden Sie um die Daten an den Client bereitstellen, sobald sie verfügbar sind, während der asynchronen Vorgänge.  
   
 ```  
@@ -241,7 +236,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
  Wird von der Moniker aufgerufen, wenn nicht genügend Ressourcen verfügbar sind.  
   
 ```  
@@ -251,7 +246,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung ruft `GetBinding( )-> Abort( )`.  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
  Wird aufgerufen, durch den Moniker wiederholt, um den aktuellen Status dieses Vorgangs Bindung in der Regel in angemessenen Abständen während eines längeren Vorgangs anzugeben.  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  Eine Instanz des Objekts an wird nur erstellt werden. Die `szStatusText` bietet die CLSID des neuen Objekts im Zeichenfolgenformat, sodass die Möglichkeit, die den Bindungsvorgang "Abbrechen" bei Bedarf.  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  Überschreiben Sie diese Funktion in Ihren abgeleiteten Klassen aus, um Aktionen durchzuführen, wenn die Bindung neu gestartet wird.  
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird vom Moniker wieder aufgerufen werden. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
  Wird von der Moniker am Ende der Bind-Operation aufgerufen.  
   
 ```  
@@ -334,7 +329,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  Eine Beschreibung der `IBinding` -Schnittstelle, finden Sie im Windows SDK.  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
  Rufen Sie diese Memberfunktion, um eine Datei asynchron zu öffnen.  
   
 ```  

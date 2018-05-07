@@ -1,12 +1,9 @@
 ---
 title: CBitmapButton Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton-Klasse
 Erstellt Pushbutton-Steuerelemente, die mit Bitmapbildern statt mit Text bezeichnet sind.  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|Die Größe der Schaltfläche, um das Bitmuster zu berücksichtigen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CBitmapButton`Objekte enthalten, bis zu vier Bitmaps, die Bilder für die verschiedenen Zustände enthalten eine Schaltfläche angenommen: Stand (oder normal) nach unten (oder ausgewählten) mit Fokus, und deaktiviert. Nur die ersten Bitmap ist erforderlich. die anderen sind optional.  
+ `CBitmapButton` Objekte enthalten, bis zu vier Bitmaps, die Bilder für die verschiedenen Zustände enthalten eine Schaltfläche angenommen: Stand (oder normal) nach unten (oder ausgewählten) mit Fokus, und deaktiviert. Nur die ersten Bitmap ist erforderlich. die anderen sind optional.  
   
  Bitmap-Schaltfläche-Images enthalten die Rahmen um das Bild als auch das Bild selbst. Das Rahmendesign spielt in der Regel in den Status der Schaltfläche an. Beispielsweise ist der Bitmap für den Status der Fokus in der Regel wie die für den Status der Stand jedoch mit einer gestrichelten Rechteck Inset aus den Rahmen oder eine starke durchgezogene Linie an der Grenze. Die Bitmap ähnelt für die deaktivierten, in der Regel Status der für gedrückten Zustand, jedoch niedriger Kontrast (z. B. eine Auswahl Menü abgeblendet oder grau dargestellt enthält).  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton:: AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton:: AutoLoad  
  Ordnet eine Schaltfläche in einem Dialogfeld ein Objekt von der `CBitmapButton` -Klasse, lädt die Bitmap(s) anhand des Namens und die Schaltfläche, um die Bitmap passt die Größe.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  Erstellt ein `CBitmapButton`-Objekt.  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  Verwenden Sie diese Funktion beim Laden von Bitmapbildern identifiziert ihre Ressourcennamen oder ID-Nummern, oder wenn Sie nicht verwenden können sollen die `AutoLoad` ausgeführt, da z. B. erstellen eine Bitmapschaltfläche, die nicht Teil eines Dialogfelds ist.  
   
 ```  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  Mit dieser Funktion wird zum Ändern der Größe einer Bitmapschaltfläche, um die Größe der Bitmap.  
   
 ```  

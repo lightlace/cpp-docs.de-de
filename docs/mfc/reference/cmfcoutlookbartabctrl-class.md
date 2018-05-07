@@ -1,12 +1,9 @@
 ---
 title: CMFCOutlookBarTabCtrl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarTabCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d38cfd03c9d4fe192b8c1ee7e235140dba382ddb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Ein Registerkarten-Steuerelement mit dem Aussehen des **Navigationsbereichs** in Microsoft Outlook verfügt.  
@@ -139,7 +134,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxoutlookbartabctrl.h  
   
-##  <a name="addcontrol"></a>CMFCOutlookBarTabCtrl::AddControl  
+##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  
  Fügt ein Windows-Steuerelement als neue Registerkarte in der Outlook-Leiste hinzu.  
   
 ```  
@@ -179,7 +174,7 @@ void AddControl(
   
  [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]  
   
-##  <a name="canshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
+##  <a name="canshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
  Vom Framework aufgerufen, während der größenänderungsvorgänge, um festzustellen, ob weniger Outlook-Leiste Registerkartenschaltflächen angezeigt werden können, als derzeit sichtbar sind.  
   
 ```  
@@ -187,12 +182,12 @@ virtual BOOL CanShowFewerPageButtons() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn mehr als eine Schaltfläche vorhanden ist; andernfalls `FALSE`.  
+ `TRUE` Wenn mehr als eine Schaltfläche vorhanden ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Outlook-Leiste Registerkarten-Steuerelement wird dynamisch hinzugefügt oder entfernt Registerkarten aus der Anzeige, je nachdem, wie viel Platz verfügbar ist. Diese Methode wird vom Framework verwendet, um diesen Prozess zu unterstützen.  
   
-##  <a name="canshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
+##  <a name="canshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
  Vom Framework aufgerufen, während der größenänderungsvorgänge, um festzustellen, ob weitere Outlook-Leiste Registerkartenschaltflächen angezeigt werden können, als derzeit sichtbar sind.  
   
 ```  
@@ -200,12 +195,12 @@ virtual BOOL CanShowMorePageButtons() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn es befinden sich Schaltflächen, die zurzeit nicht sichtbar sind; andernfalls `FALSE`.  
+ `TRUE` Wenn es befinden sich Schaltflächen, die zurzeit nicht sichtbar sind; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Outlook-Leiste Registerkarten-Steuerelement wird dynamisch hinzugefügt oder entfernt Registerkarten aus der Anzeige, je nachdem, wie viel Platz verfügbar ist. Diese Methode wird vom Framework verwendet, um diesen Prozess zu unterstützen.  
   
-##  <a name="create"></a>CMFCOutlookBarTabCtrl::Create  
+##  <a name="create"></a>  CMFCOutlookBarTabCtrl::Create  
  Erstellt das Outlook-Leiste Registerkarten-Steuerelement.  
   
 ```  
@@ -231,7 +226,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  In der Regel Outlook-Leiste Registerkarten-Steuerelemente werden erstellt, wenn [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md) Steuerelemente der `WM_CREATE` Nachricht des Prozesses.  
   
-##  <a name="enableanimation"></a>CMFCOutlookBarTabCtrl::EnableAnimation  
+##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Gibt an, ob die Animation, die während der Wechsel zwischen Registerkarten active auftritt aktiviert ist.  
   
 ```  
@@ -247,7 +242,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
   
  Die Standardeinstellung ist die Animation aktiviert.  
   
-##  <a name="enableinplaceedit"></a>CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>  CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
  Gibt an, ob ein Benutzer die Bezeichnungen auf der Registerkartenschaltflächen von der Outlook-Leiste ändern kann.  
   
 ```  
@@ -261,7 +256,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird zum Aktivieren oder deaktivieren die direkte Bearbeitung von Bezeichnungen auf der Registerkartenschaltflächen. Die direkte Bearbeitung ist standardmäßig deaktiviert.  
   
-##  <a name="enablescrollbuttons"></a>CMFCOutlookBarTabCtrl::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>  CMFCOutlookBarTabCtrl::EnableScrollButtons  
  Wird aufgerufen, durch das Framework Scroll-Handles zu aktivieren, die den Benutzer einen Bildlauf durch die Schaltflächen in der Outlook-Leistenbereich zu ermöglichen.  
   
 ```  
@@ -284,7 +279,7 @@ void EnableScrollButtons(
 ### <a name="remarks"></a>Hinweise  
  Ermöglicht die Anzeige der Bildlaufschaltflächen. Diese Methode wird vom Framework aufgerufen, wenn die aktive Registerkarte ändert die Bildlaufschaltflächen wiederherstellen.  
   
-##  <a name="getbordersize"></a>CMFCOutlookBarTabCtrl::GetBorderSize  
+##  <a name="getbordersize"></a>  CMFCOutlookBarTabCtrl::GetBorderSize  
  Gibt die Rahmengröße des Outlook-Registerkarten-Steuerelements zurück.  
   
 ```  
@@ -294,7 +289,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Rahmens in Pixel.  
   
-##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
+##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
 
   
 ```  
@@ -305,7 +300,7 @@ int GetVisiblePageButtons() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isanimation"></a>CMFCOutlookBarTabCtrl::IsAnimation  
+##  <a name="isanimation"></a>  CMFCOutlookBarTabCtrl::IsAnimation  
  Gibt an, ob die Animation, die während der Wechsel zwischen Registerkarten active auftritt aktiviert ist.  
   
 ```  
@@ -318,7 +313,7 @@ static BOOL IsAnimation();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie die [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation) Funktion aktivieren oder Deaktivieren der Animation.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBarTabCtrl::IsMode2003  
+##  <a name="ismode2003"></a>  CMFCOutlookBarTabCtrl::IsMode2003  
  Bestimmt, ob das Registerkarten-Steuerelement von Outlook-Leiste in einem Modus, die Microsoft Outlook 2003 emuliert.  
   
 ```  
@@ -326,12 +321,12 @@ BOOL IsMode2003() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Outlook-Leiste Registerkarten-Steuerelement in Outlook 2003-Modus ist. andernfalls `FALSE`;  
+ `TRUE` Wenn der Outlook-Leiste Registerkarten-Steuerelement in Outlook 2003-Modus ist. andernfalls `FALSE`;  
   
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert wird festgelegt, indem [CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003).  
   
-##  <a name="onshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
+##  <a name="onshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
  Wird aufgerufen, durch das Framework senken die Anzahl von Schaltflächen der Registerkarte "-Seite, die sichtbar sind.  
   
 ```  
@@ -341,7 +336,7 @@ virtual void OnShowFewerPageButtons();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode passt die Anzahl der sichtbaren Seite Registerkartenschaltflächen beim Ändern der Größe des Steuerelements an.  
   
-##  <a name="onshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
+##  <a name="onshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
  Wird aufgerufen, durch das Framework zum Erhöhen der Anzahl der Registerkartenschaltflächen, die sichtbar sind.  
   
 ```  
@@ -351,7 +346,7 @@ virtual void OnShowMorePageButtons();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode passen Sie die Anzahl der Registerkartenschaltflächen, die angezeigt werden, wenn das Steuerelement angepasst wird.  
   
-##  <a name="onshowoptions"></a>CMFCOutlookBarTabCtrl::OnShowOptions  
+##  <a name="onshowoptions"></a>  CMFCOutlookBarTabCtrl::OnShowOptions  
  Zeigt die **Navigationsbereichsoptionen** (Dialogfeld).  
   
 ```  
@@ -363,7 +358,7 @@ virtual void OnShowOptions();
   
  Diese Methode wird vom Framework aufgerufen, wenn der Benutzer wählt die **Navigationsbereichsoptionen** Menüelement aus dem Steuerelementmenü Anpassung.  
   
-##  <a name="setactivetab"></a>CMFCOutlookBarTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>  CMFCOutlookBarTabCtrl::SetActiveTab  
  Legt die aktive Registerkarte fest. Die aktive Registerkarte ist dasjenige, das geöffnet, mit dessen Inhalt sichtbar ist.  
   
 ```  
@@ -380,7 +375,7 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="remarks"></a>Hinweise  
  Die visuelle Auswirkung der Einstellung der aktiven Registerkarte hängt davon ab, ob Sie die Animation aktiviert haben. Weitere Informationen finden Sie unter [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation).  
   
-##  <a name="setbordersize"></a>CMFCOutlookBarTabCtrl::SetBorderSize  
+##  <a name="setbordersize"></a>  CMFCOutlookBarTabCtrl::SetBorderSize  
  Legt die Rahmengröße des Outlook-Registerkarten-Steuerelements.  
   
 ```  
@@ -394,7 +389,7 @@ void SetBorderSize(int nBorderSize);
 ### <a name="remarks"></a>Hinweise  
  Legt die neue Rahmengröße, und das Outlook-Fensterlayout berechnet.  
   
-##  <a name="setpagebuttontextalign"></a>CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
+##  <a name="setpagebuttontextalign"></a>  CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
  Legt die Ausrichtung der Beschriftungen für die Schaltflächen der Outlook-Leiste auf der Registerkarte fest.  
   
 ```  
@@ -413,7 +408,7 @@ void SetPageButtonTextAlign(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um die Ausrichtung des Texts für Schaltflächen zu ändern.  
   
- `uiAlign`die folgenden Werte sind möglich:  
+ `uiAlign` Die folgenden Werte sind möglich:  
   
 |Konstante|Bedeutung|  
 |--------------|-------------|  
@@ -423,7 +418,7 @@ void SetPageButtonTextAlign(
   
  Der Standardwert ist TA_CENTER.  
   
-##  <a name="settoolbarimagelist"></a>CMFCOutlookBarTabCtrl::SetToolbarImageList  
+##  <a name="settoolbarimagelist"></a>  CMFCOutlookBarTabCtrl::SetToolbarImageList  
  Legt die Bitmap, die die Symbole enthält, die am unteren Rand der Outlook-Leiste in Outlook 2003-Modus angezeigt werden.  
   
 ```  
@@ -451,7 +446,7 @@ BOOL SetToolbarImageList(
   
  Diese Methode sollte nicht im Microsoft Office 2003-Modus nicht aufgerufen werden. Weitere Informationen finden Sie unter [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
+##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
 
   
 ```  

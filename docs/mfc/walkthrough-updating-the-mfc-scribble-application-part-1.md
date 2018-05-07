@@ -1,13 +1,10 @@
 ---
 title: 'Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhandene MFC-Anwendung so ändern, dass die Menüband-Benutzeroberfläche verwendet wird. Visual Studio unterstützt sowohl das Menüband von Office 2007 als auch das "Scenic Ribbon" von Windows 7. Weitere Informationen zur Menüband-Benutzeroberfläche finden Sie unter [Menübänder](http://go.microsoft.com/fwlink/p/?linkid=129233) auf der MSDN-Website.  
@@ -55,7 +50,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
 - [Festlegen der Darstellung der Anwendung](#setlook)  
   
-##  <a name="replaceclass"></a>Ersetzen der Basisklassen  
+##  <a name="replaceclass"></a> Ersetzen der Basisklassen  
  Zum Konvertieren einer Anwendung, die ein Menü unterstützt, in eine Anwendung, die ein Menüband unterstützt, müssen Sie die Anwendung, das Rahmenfenster und die Symbolleistenklassen von den aktualisierten Basisklassen ableiten. (Es wird empfohlen, das ursprüngliche Scribble-Beispiel nicht zu ändern. Bereinigen Sie stattdessen das Scribble-Projekt, kopieren Sie es in ein anderes Verzeichnis, und ändern Sie dann die Kopie.)  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>So ersetzen Sie die Basisklassen in der Scribble-Anwendung  
@@ -130,7 +125,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
  [[Abschnitte](#top)]  
   
-##  <a name="addbitmap"></a>Hinzufügen von Bitmaps zum Projekt  
+##  <a name="addbitmap"></a> Hinzufügen von Bitmaps zum Projekt  
  Für die nächsten vier Schritte dieser exemplarischen Vorgehensweise sind Bitmapressourcen erforderlich. Sie erhalten die entsprechenden Bitmaps auf verschiedene Arten:  
   
 -   Verwenden der [Ressourcen-Editoren](../windows/resource-editors.md) auf Ihren eigenen Bitmaps auswählen. Oder verwenden Sie die Ressourcen-Editoren, um Bitmaps aus PNG-Bildern (Portable Network Graphics) zusammenzufügen, die in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] enthalten sind. Diese Bilder befinden sich der `VS2008ImageLibrary` Verzeichnis.  
@@ -175,7 +170,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
  [[Abschnitte](#top)]  
   
-##  <a name="addribbon"></a>Hinzufügen einer Menübandressource zum Projekt  
+##  <a name="addribbon"></a> Hinzufügen einer Menübandressource zum Projekt  
  Wenn Sie eine Anwendung, die Menüs verwendet, in eine Anwendung konvertieren, die ein Menüband verwendet, müssen Sie die vorhandenen Menüs nicht entfernen oder deaktivieren. Stattdessen erstellen Sie eine Menübandressource, fügen Menübandschaltflächen hinzu, und weisen die neuen Schaltflächen dann den vorhandenen Menüelementen zu. Obwohl die Menüs nicht mehr sichtbar sind, werden Meldungen von der Menübandleiste über die Menüs weitergeleitet. Darüber hinaus funktionieren Tastenkombinationen für Menüs weiterhin.  
   
  Ein Menüband besteht aus der Anwendungsschaltfläche, bei der es sich um die große Schaltfläche auf der oberen linken Seite des Menübands handelt, und mindestens einer Kategorienregisterkarte. Jede Kategorienregisterkarte enthält einen oder mehrere Bereiche, die als Container für Menübandschaltflächen und Steuerelemente dienen. Das folgende Verfahren veranschaulicht, wie eine Menübandressource erstellt und anschließend die Anwendungsschaltfläche angepasst wird.  
@@ -226,7 +221,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
  [[Abschnitte](#top)]  
   
-##  <a name="createinstance"></a>Erstellen einer Instanz der Menübandleiste  
+##  <a name="createinstance"></a> Erstellen einer Instanz der Menübandleiste  
  Die folgenden Schritte zeigen, wie beim Starten Ihrer Anwendung eine Instanz der Menübandleiste erstellt wird. Um eine Menübandleiste zu einer Anwendung hinzuzufügen, deklarieren Sie die Menübandleiste in der Datei "mainfrm.h". Schreiben Sie dann in der Datei "mainfrm.cpp" Code zum Laden der Menübandressource.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>So erstellen Sie eine Instanz der Menübandleiste  
@@ -250,7 +245,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
  [[Abschnitte](#top)]  
   
-##  <a name="addcategory"></a>Anpassen der Menübandressource  
+##  <a name="addcategory"></a> Anpassen der Menübandressource  
  Nachdem Sie die Anwendungsschaltfläche erstellt haben, können Sie Elemente zum Menüband hinzufügen.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
  [[Abschnitte](#top)]  
   
-##  <a name="setlook"></a>Festlegen der Darstellung der Anwendung  
+##  <a name="setlook"></a> Festlegen der Darstellung der Anwendung  
  Ein *visuellen Manager* ist ein globales Objekt, das alle Zeichnungen für eine Anwendung steuert. Da die ursprüngliche Scribble-Anwendung die Benutzeroberfläche im Office 2000-Stil nutzt, sieht die Anwendung möglicherweise altmodisch aus. Sie können die Anwendung zurücksetzen, um den visuellen Manager "Office 2007" zu verwenden, sodass sie einer Office 2007-Anwendung ähnelt.  
   
 #### <a name="to-set-the-look-of-the-application"></a>So legen Sie die Darstellung der Anwendung fest  

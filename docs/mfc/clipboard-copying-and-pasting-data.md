@@ -1,37 +1,32 @@
 ---
-title: "Zwischenablage: Daten kopieren und einfügen | Microsoft Docs"
-ms.custom: 
+title: 'Zwischenablage: Daten kopieren und einfügen | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Zwischenablage: Daten kopieren und einfügen
 Dieses Thema beschreibt die Arbeitsschritte, die mindestens erforderlich, kopieren und Einfügen aus der Zwischenablage in der OLE-Anwendung zu implementieren. Es wird empfohlen, Sie lesen die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Themen, bevor Sie fortfahren.  
   
  Bevor Sie implementieren können, kopieren oder einfügen, müssen Sie zuerst Funktionen zum Kopieren, Ausschneiden und Einfügen-Optionen im Menü Bearbeiten behandeln bereitstellen.  
   
-##  <a name="_core_copying_or_cutting_data"></a>Kopieren oder Ausschneiden von Daten  
+##  <a name="_core_copying_or_cutting_data"></a> Kopieren oder Ausschneiden von Daten  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Um Daten in die Zwischenablage kopieren  
   
@@ -47,7 +42,7 @@ Dieses Thema beschreibt die Arbeitsschritte, die mindestens erforderlich, kopier
   
  Ein Beispiel für diese Sequenz finden Sie unter der **OnEditCut** und **OnEditCopy** Funktionen in der MFC-OLE-Beispielprogramme [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md). Beachten Sie, dass diese Beispiele verwaltet einen Zeiger auf die Daten aktuell ausgewählten Schritt 1 bereits abgeschlossen ist.  
   
-##  <a name="_core_pasting_data"></a>Einfügen von Daten  
+##  <a name="_core_pasting_data"></a> Einfügen von Daten  
  Einfügen von Daten ist komplizierter als das Kopieren, da das Format in das Einfügen von Daten in Ihrer Anwendung verwenden auswählen müssen.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Daten aus der Zwischenablage einfügen  

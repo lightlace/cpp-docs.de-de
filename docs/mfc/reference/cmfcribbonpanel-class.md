@@ -1,12 +1,9 @@
 ---
 title: CMFCRibbonPanel Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonPanel
@@ -123,17 +120,15 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8c91cdd7b793195e0afb05acfe3fc33694fdb60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7a1af8887a1c07aefd3fc3593b0aae6222e51a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel-Klasse
 Implementiert einen Bereich, der eine Anzahl von Menübandelementen enthält. Wenn der Bereich gezeichnet wird, werden darin so viele Elemente wie möglich angezeigt.  
@@ -231,7 +226,7 @@ class CMFCRibbonPanel : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonPanel.h  
   
-##  <a name="add"></a>Cmfcribbonpanel:: Add  
+##  <a name="add"></a>  Cmfcribbonpanel:: Add  
  Fügt das angegebene Menübandelement in das Array von Menübandelementen, das in der Menübandbereich enthalten ist.  
   
 ```  
@@ -244,7 +239,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="addseparator"></a>CMFCRibbonPanel::AddSeparator  
+##  <a name="addseparator"></a>  CMFCRibbonPanel::AddSeparator  
  Fügt ein Trennzeichen zum Menübandbereich an.  
   
 ```  
@@ -254,7 +249,7 @@ virtual void AddSeparator();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um ein Trennzeichen zum Menübandbereich hinzufügen. Das Trennzeichen wird neben der Menübandelement, das durch den vorhergehenden Aufruf von hinzugefügt wurde hinzugefügt [cmfcribbonpanel:: Add](#add). Rufen Sie zum Einfügen von Trennzeichen an einer bestimmten Position [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
   
-##  <a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar  
+##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar  
  Der Menübandbereich hinzugefügt eine Symbolleiste.  
   
 ```  
@@ -284,7 +279,7 @@ UINT uiDisabledResID = 0);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen über Symbolleisten, hervorgehobenen Bilder, kalte Bilder und deaktivierte Bilder finden Sie unter [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md).  
   
-##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel  
+##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel  
  Erstellt und initialisiert ein [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) Objekt.  
   
 ```  
@@ -305,7 +300,7 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
  [in] `pPaletteButton`  
  Zeiger auf einem Menübandkatalog für die Menübandbereich.  
   
-##  <a name="findbydata"></a>CMFCRibbonPanel::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Ruft das Menübandelement, das die angegebenen Daten zugeordnet ist.  
   
 ```  
@@ -321,7 +316,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="findbyid"></a>CMFCRibbonPanel::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonPanel::FindByID  
  Ruft das Menübandelement, das von der angegebenen Befehls-ID identifiziert wird  
   
 ```  
@@ -335,7 +330,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ### <a name="return-value"></a>Rückgabewert  
  Das Menübandelement, das durch die angegebene Befehls-ID gekennzeichnet ist; andernfalls `NULL` Wenn keine Menübandelement mit der angegebenen Befehls-ID identifiziert wird  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight  
  Ruft die Höhe der Beschriftung für den Menübandbereich ab.  
   
 ```  
@@ -347,7 +342,7 @@ int GetCaptionHeight() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcount"></a>CMFCRibbonPanel::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonPanel::GetCount  
  Ruft die Anzahl von Menübandelementen, die in der Menübandbereich enthalten sind.  
   
 ```  
@@ -357,7 +352,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl von Menübandelementen, die in der Menübandbereich enthalten sind.  
   
-##  <a name="getdata"></a>CMFCRibbonPanel::GetData  
+##  <a name="getdata"></a>  CMFCRibbonPanel::GetData  
  Gibt die benutzerdefinierten Daten, die im Bereich zugeordnet.  
   
 ```  
@@ -367,7 +362,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die benutzerdefinierten Daten im Bereich zugeordnet.  
   
-##  <a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton  
+##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton  
  Ruft die Standardschaltfläche für das Menübandbereich ab.  
   
 ```  
@@ -380,7 +375,7 @@ CMFCRibbonButton& GetDefaultButton();
 ### <a name="remarks"></a>Hinweise  
  Die Standardschaltfläche ist angezeigt, wenn ein Menübandbereich nicht genügend Speicherplatz für die Menübandelemente anzeigen verfügt.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown  
  Ruft einen Zeiger auf ein Menübandelement ab, wenn der Popup-Menü nach unten gelöscht wird.  
   
 ```  
@@ -393,7 +388,7 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 ### <a name="remarks"></a>Hinweise  
  Nur Menübandelemente, die in der Menübandbereich enthalten sind, werden getestet.  
   
-##  <a name="getelement"></a>CMFCRibbonPanel::GetElement  
+##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement  
  Gibt die Menübandelement am angegebenen Index zurück.  
   
 ```  
@@ -407,7 +402,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein gültiger Zeiger auf der Basis Menübandelement befindet sich an Position `nIndex` in der Menübandbereich oder `NULL` , wenn kein Element am angegebenen Index vorhanden ist.  
   
-##  <a name="getelements"></a>CMFCRibbonPanel::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
  Ruft alle Menübandelemente, die in der Menübandbereich enthalten sind.  
   
 ```  
@@ -420,7 +415,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonPanel::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID  
  Fügt Multifunktionsleisten-Elemente, die über die angegebene Befehls-ID in das angegebene Array.  
   
 ```  
@@ -439,7 +434,7 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ### <a name="remarks"></a>Hinweise  
  Nur Menübandelemente, die in der Menübandbereich enthalten sind, werden getestet.  
   
-##  <a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted  
  Ruft das Menübandelement, das im Menübandbereich hervorgehoben ist.  
   
 ```  
@@ -451,7 +446,7 @@ CMFCRibbonBaseElement* GetHighlighted() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getindex"></a>CMFCRibbonPanel::GetIndex  
+##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex  
  Ruft den nullbasierten Index des angegebenen Menübandelements aus dem Array von Menübandelementen, die in der Menübandbereich enthalten sind.  
   
 ```  
@@ -467,7 +462,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList  
  Ruft die Befehls-IDs für alle Menübandelemente im Menübandbereich ab.  
   
 ```  
@@ -480,7 +475,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getname"></a>CMFCRibbonPanel::GetName  
+##  <a name="getname"></a>  CMFCRibbonPanel::GetName  
  Ruft den Namen der Menübandbereich ab.  
   
 ```  
@@ -492,7 +487,7 @@ LPCTSTR GetName() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton  
 
   
 ```  
@@ -503,7 +498,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory  
+##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory  
  Gibt die übergeordnete Kategorie der Menübandbereich zurück.  
   
 ```  
@@ -513,7 +508,7 @@ CMFCRibbonCategory* GetParentCategory() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Menübandkategorie, die diese Menübandbereich enthält.  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar  
 
   
 ```  
@@ -524,7 +519,7 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation  
+##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation  
  Ruft den Anzeigestil Rechteck für das Menü das Popupmenü Menübandbereich ab.  
   
 ```  
@@ -541,7 +536,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gibt immer `FALSE` zurück. Überschreiben Sie diese Methode, um das bevorzugte Anzeigerechteck für das Menü das Popupmenü Menübandbereich abzurufen.  
   
-##  <a name="getpressed"></a>CMFCRibbonPanel::GetPressed  
+##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed  
  Ruft einen Zeiger auf ein Menübandelement im Menübandbereich ab, wenn der Benutzer derzeit drückt.  
   
 ```  
@@ -553,7 +548,7 @@ CMFCRibbonBaseElement* GetPressed() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getrect"></a>CMFCRibbonPanel::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonPanel::GetRect  
  Ruft das Anzeigerechteck für die Menübandbereich ab.  
   
 ```  
@@ -565,7 +560,7 @@ const CRect& GetRect() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="haselement"></a>CMFCRibbonPanel::HasElement  
+##  <a name="haselement"></a>  CMFCRibbonPanel::HasElement  
  Gibt an, ob die Menübandbereich angegebenen Menübandelements enthält.  
   
 ```  
@@ -577,11 +572,11 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
  Ein Zeiger auf ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Menübandbereich angegebenen Menübandelements enthält. andernfalls `FALSE`.  
+ `TRUE` Wenn der Menübandbereich angegebenen Menübandelements enthält. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="highlight"></a>CMFCRibbonPanel::Highlight  
+##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight  
  Legt die Hervorhebungsfarbe für die ausgewählte Menübandbereich und für das Menübandelement vom Punkt angegeben.  
   
 ```  
@@ -592,14 +587,14 @@ CPoint point);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bHighlight`  
- `TRUE`auf der Menübandbereich zu markieren. `FALSE` zum Menübandbereich unhighlight.  
+ `TRUE` auf der Menübandbereich zu markieren. `FALSE` zum Menübandbereich unhighlight.  
   
  [in] `point`  
  Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="hittest"></a>CMFCRibbonPanel::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonPanel::HitTest  
  Ruft ein Menübandelement ab, wenn der angegebene Punkt darin befindet.  
   
 ```  
@@ -613,7 +608,7 @@ BOOL bCheckPanelCaption = FALSE);
  Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`So testen Sie die Beschriftung der Menüband-Bereich; andernfalls `FALSE`.  
+ `TRUE` So testen Sie die Beschriftung der Menüband-Bereich; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn der angegebene Punkt darin befindet. andernfalls `NULL`.  
@@ -621,7 +616,7 @@ BOOL bCheckPanelCaption = FALSE);
 ### <a name="remarks"></a>Hinweise  
  Nur Menübandelemente, die in der Menübandbereich enthalten sind, werden getestet.  
   
-##  <a name="hittestex"></a>CMFCRibbonPanel::HitTestEx  
+##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx  
  Ruft den nullbasierten Index des Menübandelements, die den angegebenen Punkt befindet sich im es hat.  
   
 ```  
@@ -638,7 +633,7 @@ virtual int HitTestEx(CPoint point) const;
 ### <a name="remarks"></a>Hinweise  
  Nur Menübandelemente, die in der Menübandbereich enthalten sind, werden getestet.  
   
-##  <a name="insert"></a>CMFCRibbonPanel::Insert  
+##  <a name="insert"></a>  CMFCRibbonPanel::Insert  
  Fügt das angegebene Menübandelement an der angegebenen Position im Array von Menübandelementen, die in der Menübandbereich enthalten ist.  
   
 ```  
@@ -655,12 +650,12 @@ int nIndex);
  Nullbasierter Wert von-1 bis hin zu der Anzahl von Menübandelementen, die im Array enthalten sind.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement erfolgreich eingefügt wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement erfolgreich eingefügt wurde; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der Wert der `nIndex` ist-1, oder wenn `nIndex` entspricht der Anzahl von Menübandelementen im Array, das angegebene Menübandelement wird bis zum Ende des Arrays hinzugefügt. Wenn der Wert des `nIndex` ist außerhalb des gültigen Bereichs, der die Methode schlägt fehl.  
   
-##  <a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator  
+##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
  Fügt ein Trennzeichen an der angegebenen Position ein.  
   
 ```  
@@ -672,12 +667,12 @@ virtual BOOL InsertSeparator(int nIndex);
  Gibt den nullbasierten Index, in dem das Trennzeichen eingefügt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Trennzeichen erfolgreich eingefügt wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn das Trennzeichen erfolgreich eingefügt wurde; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um an der Position angegeben, die durch ein Trennzeichen einfügen `nIndex`. Rufen Sie zum Einfügen von Trennzeichen neben das zuletzt hinzugefügte Menübandelement [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
-##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert  
+##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
  Gibt an, ob die vertikale Position von Menübandelementen innerhalb ihrer Anzeigerechteck zentriert werden.  
   
 ```  
@@ -685,9 +680,9 @@ BOOL IsCenterColumnVert() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der vertikal positioniert sind Menübandelemente in ihre Anzeigerechteck zentriert; andernfalls `FALSE`.  
+ `TRUE` Wenn der vertikal positioniert sind Menübandelemente in ihre Anzeigerechteck zentriert; andernfalls `FALSE`.  
   
-##  <a name="iscollapsed"></a>CMFCRibbonPanel::IsCollapsed  
+##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed  
  Gibt an, ob die Anzeigegröße der Menübandbereich in horizontaler Richtung minimiert wird.  
   
 ```  
@@ -695,12 +690,12 @@ BOOL IsCollapsed() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anzeigegröße der Menübandbereich in horizontaler Richtung; minimiert ist andernfalls `FALSE`.  
+ `TRUE` Wenn die Anzeigegröße der Menübandbereich in horizontaler Richtung; minimiert ist andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Menübandbereich reduziert wird, zeigt nur die Standardschaltfläche, den Namen und eine Dropdown-Pfeil.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonPanel::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted  
  Gibt an, ob die Anzeige der Menübandbereich hervorgehoben ist.  
   
 ```  
@@ -708,12 +703,12 @@ BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anzeige der Menübandbereich hervorgehoben ist. andernfalls `FALSE`.  
+ `TRUE` Wenn die Anzeige der Menübandbereich hervorgehoben ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Anzeige von einem Menübandbereich wird hervorgehoben, wenn der Mauszeiger darüber befindet.  
   
-##  <a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyColumns  
+##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns  
  Gibt an, ob der Anzeigegröße Menübandelemente, die in der gleichen Spalte in der Menübandbereich sind auf die gleiche Breite festgelegt werden.  
   
 ```  
@@ -721,9 +716,9 @@ BOOL IsJustifyColumns() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Anzeigegröße Menübandelemente, die in der gleichen Spalte in der Menübandbereich sind auf die gleiche Breite festgelegt werden andernfalls `FALSE`.  
+ `TRUE` Wenn der Anzeigegröße Menübandelemente, die in der gleichen Spalte in der Menübandbereich sind auf die gleiche Breite festgelegt werden andernfalls `FALSE`.  
   
-##  <a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel  
+##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel  
  Gibt an, ob die Menübandbereich der wichtigsten Menübandbereich ist.  
   
 ```  
@@ -738,7 +733,7 @@ virtual BOOL IsMainPanel() const;
   
  Die wichtigsten Menübandbereich wird angezeigt, wenn der Benutzer die Schaltfläche auswählt.  
   
-##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
+##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode  
 
   
 ```  
@@ -749,7 +744,7 @@ BOOL IsMenuMode() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey  
 
   
 ```  
@@ -763,7 +758,7 @@ virtual BOOL OnKey(UINT nChar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths  
+##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths  
  Berechnet die Breite der Anzeige Layout Konfigurationen für die Menübandbereich neu.  
   
 ```  
@@ -782,7 +777,7 @@ int nHeight);
 ### <a name="remarks"></a>Hinweise  
  Einem Menübandbereich ändert seine Layout-Konfiguration, die verfügbare Breite ändert.  
   
-##  <a name="remove"></a>CMFCRibbonPanel::Remove  
+##  <a name="remove"></a>  CMFCRibbonPanel::Remove  
  Entfernt, und löscht optional ein Element am angegebenen Index.  
   
 ```  
@@ -796,15 +791,15 @@ BOOL bDelete = TRUE);
  Gibt den nullbasierten Index des Elements, das aus der Menübandbereich entfernt wird.  
   
  [in] `bDelete`  
- `TRUE`So löschen Sie das Element entfernt wird; andernfalls `FALSE`.  
+ `TRUE` So löschen Sie das Element entfernt wird; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Element entfernt und gelöscht wurde (Wenn `bDelete` ist `TRUE`); `FALSE` , wenn das Element nicht entfernt wurde oder es ist keine Menübandelement controllerarbeitsverzeichnis `nIndex`.  
+ `TRUE` Wenn das Element entfernt und gelöscht wurde (Wenn `bDelete` ist `TRUE`); `FALSE` , wenn das Element nicht entfernt wurde oder es ist keine Menübandelement controllerarbeitsverzeichnis `nIndex`.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um ein Element aus der Menübandbereich zu entfernen.  
   
-##  <a name="removeall"></a>CMFCRibbonPanel::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll  
  Löscht alle Menübandelemente aus dem Menübandbereich an.  
   
 ```  
@@ -814,7 +809,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Hinweise  
  Alle Menübandelemente aus dem Menübandbereich gelöscht und zerstört.  
   
-##  <a name="replace"></a>CMFCRibbonPanel::Replace  
+##  <a name="replace"></a>  CMFCRibbonPanel::Replace  
  Ersetzt ein Element mit einem anderen basierend auf deren Indexwert.  
   
 ```  
@@ -827,16 +822,16 @@ CMFCRibbonBaseElement* pElem);
  [in] `nIndex`  
  Gibt den nullbasierten Index des zu ersetzenden Elements.  
   
- [in] [out]`pElem`  
+ [in] [out] `pElem`  
  Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das ursprüngliche Menübandelement erfolgreich durch das neue Menübandelement ersetzt wurde; `FALSE` Wenn das Menübandelement nicht ersetzt wurde oder kein Element am angegebenen Index vorhanden ist.  
+ `TRUE` Wenn das ursprüngliche Menübandelement erfolgreich durch das neue Menübandelement ersetzt wurde; `FALSE` Wenn das Menübandelement nicht ersetzt wurde oder kein Element am angegebenen Index vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Aufrufen, um ein Menübandelement von Befehls-ID zu ersetzen, [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
   
-##  <a name="replacebyid"></a>CMFCRibbonPanel::ReplaceByID  
+##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID  
  Ersetzt ein Element mit einem anderen basierend auf einer angegebenen Befehls-ID.  
   
 ```  
@@ -849,16 +844,16 @@ CMFCRibbonBaseElement* pElem);
  [in] `uiCmdID`  
  Gibt die Befehls-ID des Elements ersetzt.  
   
- [in] [out]`pElem`  
+ [in] [out] `pElem`  
  Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das ursprüngliche Menübandelement erfolgreich durch das neue Menübandelement ersetzt wurde; `FALSE` Wenn das Menübandelement nicht ersetzt wurde oder kein Element mit der angegebenen Befehls-ID tatsächlich vorhanden ist.  
+ `TRUE` Wenn das ursprüngliche Menübandelement erfolgreich durch das neue Menübandelement ersetzt wurde; `FALSE` Wenn das Menübandelement nicht ersetzt wurde oder kein Element mit der angegebenen Befehls-ID tatsächlich vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Aufrufen, um ein Menübandelement auf Grundlage der Position zu ersetzen, [CMFCRibbonPanel::Replace](#replace).  
   
-##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert  
+##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert  
  Aktiviert oder deaktiviert die Zentrieren der vertikalen Positionen von Menübandelementen innerhalb ihrer Anzeigerechteck.  
   
 ```  
@@ -867,11 +862,11 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bSet`  
- `TRUE`um die vertikale Position von Menübandelemente innerhalb ihrer Anzeigerechteck zentrieren; `FALSE` wird diese Funktion deaktiviert.  
+ `TRUE` um die vertikale Position von Menübandelemente innerhalb ihrer Anzeigerechteck zentrieren; `FALSE` wird diese Funktion deaktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setdata"></a>CMFCRibbonPanel::SetData  
+##  <a name="setdata"></a>  CMFCRibbonPanel::SetData  
  Ordnet eine benutzerdefinierte Daten mit dem Menübandbereich.  
   
 ```  
@@ -885,7 +880,7 @@ void SetData(DWORD_PTR dwData);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um benutzerdefinierte Daten im Menübandbereich zuordnen.  
   
-##  <a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu  
+##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu  
  Weist ein Popup-Menü auf das Element mit der angegebenen Befehls-ID.  
   
 ```  
@@ -911,21 +906,21 @@ BOOL bRightAlign = FALSE);
  Gibt das Handle für das Windows-Menü zum Menübandbereich hinzufügen.  
   
  [in] `bIsDefautCommand`  
- `TRUE`um anzugeben, dass das Menübandelement zugeordnete Befehl ausgeführt werden soll, wenn das Menübandelement geklickt wird. In diesem Fall wird das Menü nur geöffnet, klickt der Benutzer auf den Pfeil neben das Menübandelement. `FALSE`um anzugeben, dass das Menübandelement zugeordnete Befehl nicht ausgeführt werden soll, wenn das Menübandelement geklickt wird. In diesem Fall wird das Popupmenü angezeigt, unabhängig davon, wo der Benutzer auf das Element klickt.  
+ `TRUE` um anzugeben, dass das Menübandelement zugeordnete Befehl ausgeführt werden soll, wenn das Menübandelement geklickt wird. In diesem Fall wird das Menü nur geöffnet, klickt der Benutzer auf den Pfeil neben das Menübandelement. `FALSE` um anzugeben, dass das Menübandelement zugeordnete Befehl nicht ausgeführt werden soll, wenn das Menübandelement geklickt wird. In diesem Fall wird das Popupmenü angezeigt, unabhängig davon, wo der Benutzer auf das Element klickt.  
   
  [in] `bRightAlign`  
- `TRUE`um anzugeben, dass das Popupmenü rechts ausgerichtet wird; andernfalls `FALSE`.  
+ `TRUE` um anzugeben, dass das Popupmenü rechts ausgerichtet wird; andernfalls `FALSE`.  
   
  [in] `uiMenuResID`  
  Gibt die Ressourcen-ID des Menüs zum Menübandbereich hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Sie im Menü auf das Menübandelement zugewiesen wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn Sie im Menü auf das Menübandelement zugewiesen wurde; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um das Menübandelement ein Popupmenü zuweisen, die die angegebenen Befehls-ID.  
   
-##  <a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC  
+##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC  
  Fügt das Menübandelement, das durch die bereitgestellten laufzeitklasseninformationen zum Menübandbereich angegeben wird.  
   
 ```  
@@ -938,7 +933,7 @@ CRuntimeClass* pRTC);
  [in] `nIndex`  
  Gibt den nullbasierten Index des hinzuzufügenden Menübandelements an.  
   
- [in] [out]`pRTC`  
+ [in] [out] `pRTC`  
  Ein Zeiger auf die laufzeitklasseninformationen für das Menübandelement, das zum Menübandbereich hinzugefügt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -947,7 +942,7 @@ CRuntimeClass* pRTC);
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie ein benutzerdefiniertes Element (z. B. eine farbenschaltfläche ") zum Menübandbereich hinzufügen möchten, müssen Sie das benutzerdefinierte Element Laufzeit-Klasseninformationen angeben. Das Menüband speichert diese Informationen, erstellt das benutzerdefinierte Element und ersetzt ein vorhandene Element, das sich befindet (identifiziert durch) die angegebenen Befehls-ID. Das Menüband gibt einen Zeiger auf das neu erstellte Element zurück.  
   
-##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID  
+##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID  
  Fügt ein Menübandelement, das durch die bereitgestellten laufzeitklasseninformationen zum Menübandbereich angegeben wird.  
   
 ```  
@@ -960,7 +955,7 @@ CRuntimeClass* pRTC);
  [in] `uiCmdID`  
  Gibt die Befehls-ID des Menübandelements hinzufügen.  
   
- [in] [out]`pRTC`  
+ [in] [out] `pRTC`  
  Ein Zeiger auf die laufzeitklasseninformationen zugeordneten das Menübandelement, das zum Menübandbereich hinzugefügt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -995,7 +990,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));  
 ```  
   
-##  <a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyColumns  
+##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns  
  Aktiviert oder deaktiviert die Anpassung der Breite des Menübandelemente in der gleichen Spalte.  
   
 ```  
@@ -1004,12 +999,12 @@ void SetJustifyColumns(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bSet`  
- `TRUE`die Breite des Menübandelemente in der gleichen Spalte auf die Breite des größten Menübandelements in der Spalte anpassen; `FALSE` diese Anpassung Breite zu deaktivieren.  
+ `TRUE` die Breite des Menübandelemente in der gleichen Spalte auf die Breite des größten Menübandelements in der Spalte anpassen; `FALSE` diese Anpassung Breite zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn diese Funktion in einem Menübandbereich aktiviert ist, werden die Breiten der Menübandelemente in der gleichen Spalte, die Breite des größten Menübandelements in der gleichen Spalte angepasst.  
   
-##  <a name="setkeys"></a>CMFCRibbonPanel::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys  
  Legt die ZugriffstastenInfo für die Standardschaltfläche im Menüband-Bereich.  
   
 ```  
@@ -1023,7 +1018,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ### <a name="remarks"></a>Hinweise  
  Die Standardschaltfläche ist angezeigt, wenn ein Menübandbereich nicht genügend Speicherplatz für die Menübandelemente anzeigen verfügt.  
   
-##  <a name="showpopup"></a>CMFCRibbonPanel::ShowPopup  
+##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup  
  Erstellt und für die Menübandbereich ein Popupmenü anzeigt.  
   
 ```  
@@ -1040,7 +1035,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ### <a name="remarks"></a>Hinweise  
  Im Popupmenü des Menüband-Panels ist nur verfügbar, wenn die Anzeige der Menübandbereich reduziert wird.  
   
-##  <a name="setfocused"></a>CMFCRibbonPanel::SetFocused  
+##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused  
  Legt den Fokus auf das angegebene Menübandelement.  
   
 ```  
@@ -1053,7 +1048,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible  
+##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible  
  Scrollt den Katalog für den angegebenen Menübandelement sichtbar zu machen.  
   
 ```  
@@ -1066,7 +1061,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look  
  Gibt an, ob der übergeordnete Menüband verfügt über ein Windows 7 (kleine rechteckige Anwendungsschaltfläche) zu suchen.  
   
 ```  
@@ -1074,11 +1069,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menüband übergeordneten Windows 7, suchen Sie enthält. andernfalls `FALSE`.  
+ `TRUE` Wenn das Menüband übergeordneten Windows 7, suchen Sie enthält. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements  
+##  <a name="getvisibleelements"></a>  CMFCRibbonPanel::GetVisibleElements  
  Ruft ein Array von sichtbaren Elemente ab.  
   
 ```  
@@ -1093,7 +1088,7 @@ CMFCRibbonBaseElement*>& arElements);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect  
+##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect  
  Gibt ein umschließendes Rechteck für ein Katalogelement zurück.  
   
 ```  
@@ -1105,7 +1100,7 @@ CRect GetGalleryRect();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getfocused"></a>CMFCRibbonPanel::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonPanel::GetFocused  
  Gibt ein Fokuselement zurück.  
   
 ```  

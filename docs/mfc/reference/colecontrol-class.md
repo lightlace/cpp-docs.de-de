@@ -1,12 +1,9 @@
 ---
 title: COleControl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 Eine leistungsstarke Basisklasse zum Entwickeln von OLE-Steuerelementen.  
@@ -633,7 +628,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="remarks"></a>Hinweise  
  Die Ambiente-ForeColor-Eigenschaft ist für alle Steuerelemente verfügbar und wird durch den Container definiert. Beachten Sie, dass der Container nicht erforderlich ist, um diese Eigenschaft unterstützen.  
   
-##  <a name="ambientlocaleid"></a>  COleControl::AmbientLocaleID  
+##  <a name="ambientlocaleid"></a>  COleControl:: AmbientLocaleID  
  Gibt den Container Gebietsschema-ID zurück.  
   
 ```  
@@ -886,7 +881,7 @@ void DoClick();
   
  Diese Funktion wird unterstützt, indem Sie die `COleControl` -Basisklasse als vordefinierte Methode DoClick aufgerufen. Weitere Informationen finden Sie im Artikel [ActiveX-Steuerelemente: Methoden](../../mfc/mfc-activex-controls-methods.md).  
   
-##  <a name="dopropexchange"></a>  COleControl::DoPropExchange  
+##  <a name="dopropexchange"></a>  COleControl:: DoPropExchange  
  Wird aufgerufen, durch das Framework beim Laden oder Speichern eines Steuerelements aus einer permanenten Speicher-Darstellung, wie z. B. einen Stream oder eine Eigenschaft festlegen.  
   
 ```  
@@ -999,7 +994,7 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird normalerweise aufgerufen, indem Sie die standardmäßige Implementierung des `COleControl::DoPropExchange`.  
   
-##  <a name="exchangeversion"></a>  COleControl::ExchangeVersion  
+##  <a name="exchangeversion"></a>  COleControl:: ExchangeVersion  
  Serialisiert oder den Status der Versionsinformationen eines Steuerelements initialisiert.  
   
 ```  
@@ -1107,7 +1102,7 @@ void AFX_CDECL FireEvent(
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_FONT**|**IFontDisp\***|  
 |**VTS_HANDLE**|`HWND`|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
+|**VTS_PICTURE**|**Lpicturedisp\***|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE\***|  
 |**VTS_TRISTATE**|**OLE_TRISTATE**|  
 |**VTS_XPOS_HIMETRIC**|**OLE_XPOS_HIMETRIC**|  
@@ -1346,7 +1341,7 @@ void FireReadyStateChange();
   
  [InternalSetReadyState beispielsweise](#internalsetreadystate) ändert den Status "bereit" mit dem angegebenen Wert und ruft dann `FireReadyStateChange`.  
   
-##  <a name="getactivationpolicy"></a>  COleControl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>  COleControl:: GetActivationPolicy  
  Ändert das Standardverhalten für die Aktivierung eines Steuerelements, das unterstützt die `IPointerInactive` Schnittstelle.  
   
 ```  
@@ -1388,7 +1383,7 @@ virtual DWORD GetActivationPolicy();
   
  [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]  
   
-##  <a name="getambientproperty"></a>  COleControl::GetAmbientProperty  
+##  <a name="getambientproperty"></a>  COleControl:: GetAmbientProperty  
  Ruft den Wert der ambient-Eigenschaft des Containers ab.  
   
 ```  
@@ -1412,10 +1407,10 @@ BOOL GetAmbientProperty(
 |------------|--------------------|  
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
-|`VT_I2`|**short\***|  
+|`VT_I2`|**kurze\***|  
 |`VT_I4`|**long\***|  
 |`VT_R4`|**float\***|  
-|`VT_R8`|**double\***|  
+|`VT_R8`|**Double\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
 |**VT_DISPATCH**|**LPDISPATCH\***|  
@@ -1532,7 +1527,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="remarks"></a>Hinweise  
  Der zurückgegebene Zeiger verweist auf eine Instanz von `IOleClientSite`. Die `IOleClientSite` Schnittstelle, die von Containern implementiert wird das Objekt Überblick über seinen Kontext: an, wo es im Dokument, in dem er seinen Speicher, Benutzeroberfläche und andere Ressourcen ruft verankert ist.  
   
-##  <a name="getcontrolflags"></a>  COleControl::GetControlFlags  
+##  <a name="getcontrolflags"></a>  COleControl:: GetControlFlags  
  Ruft die Steuerelement-Flageinstellungen ab.  
   
 ```  
@@ -1823,7 +1818,7 @@ BSTR GetText();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, die der Aufrufer diese Funktion aufrufen muss `SysFreeString` auf die Zeichenfolge zurückgegeben, um freien die Ressource. Verwenden Sie in der Implementierung des Steuerelements, `InternalGetText` Zugriff auf vordefinierte oder Beschriftungstitel-Eigenschaft des Steuerelements.  
   
-##  <a name="getwindowlessdroptarget"></a>  COleControl::GetWindowlessDropTarget  
+##  <a name="getwindowlessdroptarget"></a>  COleControl:: GetWindowlessDropTarget  
  Überschreiben Sie `GetWindowlessDropTarget` soll ein fensterloses Steuerelement an das Ziel ein OLE Drag & drop-Vorgangs.  
   
 ```  
@@ -2030,7 +2025,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *strNewPath*  
  Ein Zeiger auf eine Zeichenfolge, die mit dem Pfad, der den absoluten Speicherort, der die Eigenschaft "asynchrone" verweist.  
   
- *prop*  
+ *Prop*  
  Ein [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) Objekt, das eine asynchrone Steuerelementeigenschaft implementiert.  
   
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive  
@@ -2190,7 +2185,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Hinweise  
  `OnDraw` wird in der Regel aufgerufen, für die Bildschirmanzeige, übergeben einen Bildschirm Gerätekontext als `pDC`. Die `rcBounds` Parameter identifiziert das Rechteck in der Ziel-Gerätekontext (in Bezug auf seine aktuellen Zuordnungsmodus). Die `rcInvalid` Parameter ist das tatsächliche Rechteck, das ungültig ist. In einigen Fällen wird dies einen kleineren Bereich als `rcBounds`.  
   
-##  <a name="ondrawmetafile"></a>  COleControl::OnDrawMetafile  
+##  <a name="ondrawmetafile"></a>  OnDrawMetafile  
  Wird aufgerufen, durch das Framework der OLE-Steuerelements im angegebenen umschließenden Rechteck mit den angegebenen Metadatei-Gerätekontext gezeichnet werden soll.  
   
 ```  
@@ -2951,7 +2946,7 @@ virtual BOOL OnRenderGlobalData(
   
  Weitere Informationen finden Sie unter der **FORMATETC** Struktur im Windows SDK.  
   
-##  <a name="onresetstate"></a>  COleControl::OnResetState  
+##  <a name="onresetstate"></a>  COleControl:: OnResetState ein  
  Vom Framework aufgerufen, wenn die Eigenschaften des Steuerelements auf ihre Standardwerte festgelegt werden soll.  
   
 ```  
@@ -2963,7 +2958,7 @@ virtual void OnResetState();
   
  Die Steuerelement-Writer kann Initialisierungscode für das OLE-Steuerelement einfügen, in diesem überschrieben. Diese Funktion wird aufgerufen, wenn [IPersistStream:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680568) oder [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms680557) ein Fehler auftritt, oder [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms690234) oder [IPersistStorage: : InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) aufgerufen wird, ohne den ersten Aufruf eines **IPersistStream:: Load** oder **IPersistStorage**.  
   
-##  <a name="onsetclientsite"></a>  COleControl::OnSetClientSite  
+##  <a name="onsetclientsite"></a>  COleControl:: OnSetClientSite  
  Vom Framework aufgerufen, wenn der Container des Steuerelements aufgerufen hat **IOleControl::SetClientSite** Funktion.  
   
 ```  
@@ -3643,7 +3638,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die Basiseigenschaften Titel und Text sowohl auf den gleichen Wert zugeordnet werden. Dies bedeutet, dass alle Änderungen an einer Eigenschaft beide Eigenschaften automatisch geändert werden. Im Allgemeinen sollte ein Steuerelement Aktie Beschriftung oder Text-Eigenschaft, aber nicht beides unterstützt.  
   
-##  <a name="throwerror"></a>  COleControl::ThrowError  
+##  <a name="throwerror"></a>  ThrowError  
  Signalisiert das Vorkommen eines Fehlers in das Steuerelement.  
   
 ```  
@@ -3706,7 +3701,7 @@ void TransformCoords(
 ### <a name="remarks"></a>Hinweise  
  Die ersten beiden Flags **XFORMCOORDS_POSITION** und **XFORMCOORDS_SIZE**, gibt an, ob die Koordinaten als eine Position oder eine Größe behandelt werden sollen. Die verbleibenden zwei Flags geben an, die Richtung der Transformation wird.  
   
-##  <a name="translatecolor"></a>  COleControl::TranslateColor  
+##  <a name="translatecolor"></a>  Memberfunktion COleControl:: TranslateColor  
  Konvertiert einen Farbwert aus der **OLE_COLOR** Datentyp, der [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Datentyp.  
   
 ```  

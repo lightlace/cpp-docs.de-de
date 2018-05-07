@@ -1,12 +1,9 @@
 ---
 title: CUserTool Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUserTool
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38600b2e6eac6ad181baf1263d9e4d10295732b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld) ( [CMFCToolBarsCustomizeDialog Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ermöglicht es dem Benutzer, Benutzertools hinzuzufügen und um anzugeben, der Name, den Befehl, die Argumente, und ursprüngliche Verzeichnis für jedes benutzertool.  
@@ -105,7 +100,7 @@ class CUserTool : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxusertool.h  
   
-##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon  
  Zeichnet das Symbol "Benutzer-Tool" in der Mitte eines angegebenen Rechtecks.  
   
 ```  
@@ -132,7 +127,7 @@ void DrawToolIcon(
  [in] `rectImage`  
  Gibt an, die Koordinaten des Bereichs, um das Symbol anzuzeigen.  
   
-##  <a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Gibt eine Zeichenfolge mit dem Text des Befehls mit dem Benutzer zugeordnet.  
   
 ```  
@@ -142,7 +137,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf `CString` Objekt mit dem Text des Befehls mit dem Benutzer zugeordnet.  
   
-##  <a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
  Gibt die Befehls-ID des Benutzers Tools zurück.  
   
 ```  
@@ -152,7 +147,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Befehls-ID dieses Benutzers-Tools.  
   
-##  <a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>  CUserTool::Invoke  
  Führt den Befehl mit dem Benutzer zugeordnet.  
   
 ```  
@@ -165,7 +160,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) zum Ausführen eines Befehls mit dem Benutzer zugeordnet. Die Funktion fehlschlägt, wenn der Befehl leer ist oder wenn [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ein Fehler auftritt.  
   
-##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Lädt das Standardsymbol für ein Tool.  
   
 ```  
@@ -180,7 +175,7 @@ virtual HICON LoadDefaultIcon();
   
  Überschreiben Sie diese Methode, um eine eigene Standardsymbol für das Tool angeben.  
   
-##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
  Die Befehlszeilenargumente für das benutzertool.  
   
 ```  
@@ -190,7 +185,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>Hinweise  
  Diese Zeichenfolge wird an das Tool übergeben, wenn Sie aufrufen [CUserTool::Invoke](#invoke) oder wenn ein Benutzer mit diesem Tool zugeordneten Befehl klickt.  
   
-##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
  Gibt das Ausgangsverzeichnis für das benutzertool an.  
   
 ```  
@@ -200,14 +195,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>Hinweise  
  Diese Variable gibt das Ausgangsverzeichnis, die in das Tool ausgeführt, beim Aufrufen von wird [CUserTool::Invoke](#invoke) oder wenn ein Benutzer mit diesem Tool zugeordneten Befehl klickt.  
   
-##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
  Die Bezeichnung, die in dem Menüelement, das für das Tool angezeigt wird.  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>  CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -219,7 +214,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>  CUserTool::SetCommand  
  Legt die Anwendung, die die benutzertool ausgeführt wird.  
   
 ```  
@@ -233,7 +228,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um eine neue Anwendung festgelegt werden, die die benutzertool ausgeführt wird. Die Methode zerstört das alte Symbol und ein Symbol "Neues" aus der angegebenen Anwendung lädt. Wenn es ein Symbol aus der Anwendung geladen werden kann, lädt er das Standardsymbol für ein Tool durch Aufrufen von [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
-##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  Lädt das Symbol für das Tool, das von der Anwendung, die vom Tool verwendet wird.  
   
 ```  

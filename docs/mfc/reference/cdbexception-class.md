@@ -1,12 +1,9 @@
 ---
 title: CDBException Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>CDBException-Klasse
 Stellt eine Ausnahmebedingung dar, die von Datenbankklassen ausgelöst wird.  
@@ -53,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Enthält eine Zeichenfolge, die Beschreibung des Fehlers im Hinblick auf die Fehlercodes, die von ODBC zurückgegeben.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Klasse enthält zwei öffentliche Datenmember, die Ursache der Ausnahme zu ermitteln oder eine Textnachricht Beschreibung der Ausnahme anzeigen verwendet werden können. `CDBException`Objekte werden erstellt und von Memberfunktionen von Datenbankklassen ausgelöst.  
+ Die Klasse enthält zwei öffentliche Datenmember, die Ursache der Ausnahme zu ermitteln oder eine Textnachricht Beschreibung der Ausnahme anzeigen verwendet werden können. `CDBException` Objekte werden erstellt und von Memberfunktionen von Datenbankklassen ausgelöst.  
   
 > [!NOTE]
 >  Diese Klasse ist eine der Klassen von MFC Open Database Connectivity (ODBC). Wenn Sie stattdessen die neueren Datenzugriffsobjekte (DAO) Klassen verwenden, verwenden Sie [CDaoException](../../mfc/reference/cdaoexception-class.md) stattdessen. Alle DAO-Klassennamen haben "CDao" als Präfix an. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
@@ -74,7 +69,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  Enthält einen ODBC-Fehlercode des Typs **RETCODE** von einer ODBC-Anwendung Programmierung (Interface, API)-Funktion zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  Die breitzeichenliteral mit dem SQL-Codes werden vom ODBC definiert. Die Codes AFX mit dem Präfix sind in AFXDB definiert. H in MFC\INCLUDE gefunden.  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  Enthält eine Zeichenfolge, die Beschreibung des Fehlers, der die Ausnahme verursacht hat.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Zeichenfolge den Fehler beschreibt, alphanumerische ausgedrückt wird. Weitere Informationen und ein Beispiel finden Sie unter **M_strStateNativeOrigin**.  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  Enthält eine Zeichenfolge, die Beschreibung des Fehlers, der die Ausnahme verursacht hat.  
   
 ### <a name="remarks"></a>Hinweise  

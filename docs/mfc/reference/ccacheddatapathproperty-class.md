@@ -1,12 +1,9 @@
 ---
 title: CCachedDataPathProperty Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb62a905d092a347103ea98fcd323e3778ed458
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty-Klasse
 Implementiert eine asynchron übertragene und in einer Arbeitsspeicherdatei zwischengespeicherte OLE-Steuerelementeigenschaft.  
@@ -52,7 +47,7 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`Objekt in der zum Zwischenspeichern von Daten.|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` Objekt in der zum Zwischenspeichern von Daten.|  
   
 ## <a name="remarks"></a>Hinweise  
  Eine Arbeitsspeicherdatei wird im Arbeitsspeicher und nicht auf dem Datenträger gespeichert und eignet sich für schnelle temporäre Übertragungen.  
@@ -85,7 +80,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
  Erstellt ein `CCachedDataPathProperty`-Objekt.  
   
 ```  
@@ -102,12 +97,12 @@ CCachedDataPathProperty(
  Ein Zeiger auf das ActiveX-Steuerelementobjekt mit diesem verbunden sein, `CCachedDataPathProperty` Objekt.  
   
  `lpszPath`  
- Der Pfad absolut oder relativ sein kann, verwendet, um eine asynchrone Moniker zu erstellen, die die eigentliche absolute Position der Eigenschaft verweist. `CCachedDataPathProperty`URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CCachedDataPathProperty` -Objekt für eine Datei, file:// auf den Pfad voranstellen.  
+ Der Pfad absolut oder relativ sein kann, verwendet, um eine asynchrone Moniker zu erstellen, die die eigentliche absolute Position der Eigenschaft verweist. `CCachedDataPathProperty` URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CCachedDataPathProperty` -Objekt für eine Datei, file:// auf den Pfad voranstellen.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `COleControl` Objekt verweist `pControl` dient der [öffnen](../../mfc/reference/cdatapathproperty-class.md#open) und abgeleitete Klassen abgerufen. Wenn `pControl` ist **NULL**, das Steuerelement mit verwendet **öffnen** sollte festgelegt werden, mit [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Wenn `lpszPath` ist **NULL**, können Sie den Pfad durch übergeben **öffnen** oder legen Sie sie mit [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Enthält den Klassennamen die Arbeitsspeicher-Datei in die Daten zwischengespeichert werden.  
   
 ```  

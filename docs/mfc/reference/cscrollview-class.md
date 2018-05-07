@@ -1,12 +1,9 @@
 ---
 title: CScrollView Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>CScrollView-Klasse
 Ein [CView](../../mfc/reference/cview-class.md) mit Bildlauffunktionen.  
@@ -130,7 +125,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  Rufen Sie diese Memberfunktion, um festzustellen, ob die Scroll-Sicht horizontale und vertikale Balken enthält.  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Gibt an, dass die Anwendung eine vertikale Bildlaufleiste verfügt.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  Erstellt ein `CScrollView`-Objekt.  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen entweder Aufrufen `SetScrollSizes` oder `SetScaleToFitSize` vor den Bildlauf Sicht kann verwendet werden.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  Rufen Sie `FillOutsideRect` um den Bereich der Ansicht zu füllen, die außerhalb des Bereichs Durchführen eines Bildlaufs angezeigt wird.  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  Rufen Sie `GetDeviceScrollPosition` Wenn Sie die aktuelle horizontalen und vertikalen Position der Bildlaufleiste Felder in die Bildlaufleisten benötigen.  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Koordinatenpaar entspricht der Speicherort des Dokuments, der die linke obere Ecke der Sicht Bildlauf ausgeführt wurde. Dies ist hilfreich für das Mausgerät Positionen, Scroll-View-Gerät Positionen versetzen.  
   
- `GetDeviceScrollPosition`Gibt Werte in Geräteeinheiten zurück. Wenn Sie logische Einheiten möchten, verwenden `GetScrollPosition` stattdessen.  
+ `GetDeviceScrollPosition` Gibt Werte in Geräteeinheiten zurück. Wenn Sie logische Einheiten möchten, verwenden `GetScrollPosition` stattdessen.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`Ruft den aktuellen Zuordnungsmodus, die Gesamtgröße und die Zeilen- und Größen der bildlauffähige Ansicht ab.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` Ruft den aktuellen Zuordnungsmodus, die Gesamtgröße und die Zeilen- und Größen der bildlauffähige Ansicht ab.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Hinweise  
  Größen sind im Geräteeinheiten. Diese Memberfunktion wird selten aufgerufen.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  Rufen Sie `GetScrollPosition` Wenn Sie die aktuelle horizontalen und vertikalen Position der Bildlaufleiste Felder in die Bildlaufleisten benötigen.  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Koordinatenpaar entspricht der Speicherort des Dokuments, der die linke obere Ecke der Sicht Bildlauf ausgeführt wurde.  
   
- `GetScrollPosition`Gibt Werte in logischen Einheiten zurück. Verwenden Sie gegebenenfalls Geräteeinheiten `GetDeviceScrollPosition` stattdessen.  
+ `GetScrollPosition` Gibt Werte in logischen Einheiten zurück. Verwenden Sie gegebenenfalls Geräteeinheiten `GetDeviceScrollPosition` stattdessen.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  Rufen Sie `GetTotalSize` zum Abrufen der aktuellen horizontalen und vertikalen Größen der Bildlaufleiste angezeigt.  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Gesamtgröße der Bildlaufansicht einen in logischen Einheiten. Die horizontale Größe wird in der **Cx** Mitglied der `CSize` Rückgabewert. Die vertikale Größe wird in der **cy** Member.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  Rufen Sie `ResizeParentToFit` , lassen die Größe der Ansicht bestimmen die Größe des zugehörigen Rahmenfenster.  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Dies ist nur für Ansichten im Rahmen des untergeordneten MDI-Fenstern empfohlen. Verwendung `ResizeParentToFit` in der `OnInitialUpdate` Handlerfunktion von Ihr abgeleiteten `CScrollView` Klasse. Ein Beispiel für diese Memberfunktion auf, finden Sie unter [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`wird davon ausgegangen, dass die Größe des Ansichtsfensters festgelegt wurde. Wenn die Fenstergröße Ansicht nicht beim festgelegt wurde `ResizeParentToFit` wird aufgerufen, erhalten Sie eine Assertion. Um sicherzustellen, dass dies nicht geschieht, stellen Sie vor dem Aufruf den folgenden Aufruf `ResizeParentToFit`:  
+ `ResizeParentToFit` wird davon ausgegangen, dass die Größe des Ansichtsfensters festgelegt wurde. Wenn die Fenstergröße Ansicht nicht beim festgelegt wurde `ResizeParentToFit` wird aufgerufen, erhalten Sie eine Assertion. Um sicherzustellen, dass dies nicht geschieht, stellen Sie vor dem Aufruf den folgenden Aufruf `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  Rufen Sie `ScrollToPosition` , führen Sie einen Bildlauf zu einem bestimmten Zeitpunkt in der Ansicht.  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Hinweise  
  Die Ansicht wird Bildlauf durchgeführt werden, damit dieser Punkt auf der linken oberen Ecke des Fensters ist. Diese Memberfunktion darf nicht aufgerufen werden, wenn die Ansicht skaliert wird.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  Rufen Sie `SetScaleToFitSize` sollen die Viewportgröße auf die aktuelle Fenstergröße automatisch zu skalieren.  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  Sie müssen in der Regel setzen Sie den Aufruf von `SetScaleToFitSize` in Ihre Überschreibung der Ansicht `OnInitialUpdate` Memberfunktion. Wenn Sie nicht wünschen, automatische Skalierung, rufen Sie die `SetScrollSizes` Memberfunktion stattdessen.  
   
- `SetScaleToFitSize`kann verwendet werden, um einen Vorgang "Zoom anpassen" implementieren. Verwendung `SetScrollSizes` zum Durchführen eines Bildlaufs erneut zu initialisieren.  
+ `SetScaleToFitSize` kann verwendet werden, um einen Vorgang "Zoom anpassen" implementieren. Verwendung `SetScrollSizes` zum Durchführen eines Bildlaufs erneut zu initialisieren.  
   
- `SetScaleToFitSize`wird davon ausgegangen, dass die Größe des Ansichtsfensters festgelegt wurde. Wenn die Fenstergröße Ansicht nicht beim festgelegt wurde `SetScaleToFitSize` wird aufgerufen, erhalten Sie eine Assertion. Um sicherzustellen, dass dies nicht geschieht, stellen Sie vor dem Aufruf den folgenden Aufruf `SetScaleToFitSize`:  
+ `SetScaleToFitSize` wird davon ausgegangen, dass die Größe des Ansichtsfensters festgelegt wurde. Wenn die Fenstergröße Ansicht nicht beim festgelegt wurde `SetScaleToFitSize` wird aufgerufen, erhalten Sie eine Assertion. Um sicherzustellen, dass dies nicht geschieht, stellen Sie vor dem Aufruf den folgenden Aufruf `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  Rufen Sie `SetScrollSizes` Wenn die Ansicht ist dabei, die aktualisiert werden.  
   
 ```  

@@ -2,11 +2,8 @@
 title: CWnd-Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 Stellt die Basisfunktionalität aller Fensterklassen der Microsoft Foundation Class-Bibliothek bereit.  
@@ -2308,13 +2303,13 @@ int DlgDirList(
   
 - **DDL_READONLY** schreibgeschützten Dateien.  
   
-- **DDL_HIDDEN** Hidden files.  
+- **DDL_HIDDEN** versteckte Dateien.  
   
 - **DDL_SYSTEM** Systemdateien.  
   
 - **DDL_DIRECTORY** Verzeichnisse.  
   
-- **DDL_ARCHIVE** Archives.  
+- **DDL_ARCHIVE** Archive.  
   
 - **DDL_POSTMSGS LB_DIR** Flag. Wenn die **LB_DIR** Flag festgelegt ist, wird Windows platziert, die Nachrichten, die von generierten `DlgDirList` in der Anwendungswarteschlange; anderenfalls gesendet direkt mit dem Verfahren im Dialogfeld.  
   
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- In diesem Beispiel `drive` ist ein Laufwerkbuchstabe `directory` ist ein gültigen Verzeichnisnamen und *Filename* ist ein gültiger Dateiname, die über mindestens ein Platzhalterzeichen enthalten muss. Die Platzhalter sind ein Fragezeichen (*), d. h. alle Zeichen und ein Sternchen entsprechen (  **\*** ), d. h., eine beliebige Anzahl von Zeichen übereinstimmen.  
+ In diesem Beispiel `drive` ist ein Laufwerkbuchstabe `directory` ist ein gültigen Verzeichnisnamen und *Filename* ist ein gültiger Dateiname, die über mindestens ein Platzhalterzeichen enthalten muss. Die Platzhalter sind ein Fragezeichen (*), d. h. alle Zeichen und ein Sternchen entsprechen ( **\***), d. h., eine beliebige Anzahl von Zeichen übereinstimmen.  
   
  Wenn Sie angeben, dass eine Zeichenfolge der Länge 0 für `lpPathSpec`, oder wenn Sie nur einen Verzeichnisnamen angeben, aber Sie keine Dateispezifikation schließen, wird die Zeichenfolge geändert in "*.\*".  
   
@@ -2371,13 +2366,13 @@ int DlgDirListComboBox(
   
 - **DDL_READONLY** schreibgeschützten Dateien.  
   
-- **DDL_HIDDEN** Hidden files.  
+- **DDL_HIDDEN** versteckte Dateien.  
   
 - **DDL_SYSTEM** Systemdateien.  
   
 - **DDL_DIRECTORY** Verzeichnisse.  
   
-- **DDL_ARCHIVE** Archives.  
+- **DDL_ARCHIVE** Archive.  
   
 - **DDL_POSTMSGS CB_DIR** Flag. Wenn die **CB_DIR** Flag festgelegt ist, wird Windows platziert, die Nachrichten, die von generierten `DlgDirListComboBox` in der Anwendungswarteschlange; anderenfalls gesendet direkt mit dem Verfahren im Dialogfeld.  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- In diesem Beispiel `drive` ist ein Laufwerkbuchstabe `directory` ist ein gültigen Verzeichnisnamen und *Filename* ist ein gültiger Dateiname, die über mindestens ein Platzhalterzeichen enthalten muss. Die Platzhalter sind ein Fragezeichen (*), d. h. alle Zeichen und ein Sternchen entsprechen (  **\*** ), d. h. entsprechen, eine beliebige Anzahl von Zeichen.  
+ In diesem Beispiel `drive` ist ein Laufwerkbuchstabe `directory` ist ein gültigen Verzeichnisnamen und *Filename* ist ein gültiger Dateiname, die über mindestens ein Platzhalterzeichen enthalten muss. Die Platzhalter sind ein Fragezeichen (*), d. h. alle Zeichen und ein Sternchen entsprechen ( **\***), d. h. entsprechen, eine beliebige Anzahl von Zeichen.  
   
  Wenn Sie angeben, dass eine Zeichenfolge der Länge 0 (null) für `lpPathSpec`, das aktuelle Verzeichnis verwendet werden und `lpPathSpec` werden nicht geändert. Wenn Sie nur einen Verzeichnisnamen angeben, aber Sie keine Dateispezifikation schließen, wird die Zeichenfolge geändert in "*".  
   
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![Beenden &#40; X &#41; Symbol "](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, und **MB_ICONERROR**|  
-|![Hilfe &#40; &#41; Symbol "](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![Wichtige &#40; &#33; &#41; Symbol "](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION** und **MB_ICONWARNING**|  
-|![Informationen &#40; i &#41; Symbol "](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** und **MB_ICONINFORMATION**|  
+|![Beenden Sie &#40;x&#41; Symbol](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, und **MB_ICONERROR**|  
+|![Hilfe &#40; &#41; Symbol](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
+|![Wichtige &#40; &#33; &#41; Symbol](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION** und **MB_ICONWARNING**|  
+|![Informationen &#40;ich&#41; Symbol](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** und **MB_ICONINFORMATION**|  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5139,7 +5134,7 @@ BOOL ModifyStyle(
  Wert ungleich NULL, wenn Style erfolgreich geändert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Stile hinzugefügt oder entfernt werden soll, können mit den bitweisen OR-Operator (&#124;) kombiniert werden Operator. Finden Sie unter den Themen [Fensterstile](http://msdn.microsoft.com/library/windows/desktop/ms632600) und [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in das Windows SDK für Informationen zu den verfügbaren Fensterstile.  
+ Stile hinzugefügt oder entfernt werden soll, können mit den bitweisen OR-Operator kombiniert werden (&#124;) Operator. Finden Sie unter den Themen [Fensterstile](http://msdn.microsoft.com/library/windows/desktop/ms632600) und [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in das Windows SDK für Informationen zu den verfügbaren Fensterstile.  
   
  Wenn `nFlags` ungleich NULL ist `ModifyStyle` Ruft die Windows-API-Funktion [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) und zeichnet das Fenster kombinierten `nFlags` mit den folgenden vier vordefinierten Flags:  
   
@@ -5183,7 +5178,7 @@ BOOL ModifyStyleEx(
  Wert ungleich NULL, wenn Style erfolgreich geändert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Stile hinzugefügt oder entfernt werden soll, können mit den bitweisen OR-Operator (&#124;) kombiniert werden Operator. Finden Sie unter den Themen [erweiterten Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) in diesem Buch und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in das Windows SDK für Informationen zu den verfügbaren erweiterten Stile  
+ Stile hinzugefügt oder entfernt werden soll, können mit den bitweisen OR-Operator kombiniert werden (&#124;) Operator. Finden Sie unter den Themen [erweiterten Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) in diesem Buch und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in das Windows SDK für Informationen zu den verfügbaren erweiterten Stile  
   
  Wenn `nFlags` ungleich NULL ist `ModifyStyleEx` Ruft die Windows-API-Funktion [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) und zeichnet das Fenster kombinierten `nFlags` mit den folgenden vier vordefinierten Flags:  
   
@@ -5293,7 +5288,7 @@ afx_msg void OnActivate(
  *bMinimized*  
  Gibt den minimierten Zustand der `CWnd` aktiviert bzw. deaktiviert. Der Wert **"true"** gibt an, das Fenster wird minimiert.  
   
- Wenn **"true"**die `CWnd` aktiviert wird; andernfalls deaktiviert.  
+ Wenn **"true"** die `CWnd` aktiviert wird; andernfalls deaktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die `CWnd` Objekt mit einem Mausklick aktiviert ist, erhalten Sie auch eine [OnMouseActivate](#onmouseactivate) memberfunktionsaufruf.  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **("Uint") hWndChild** Handle für ein untergeordnetes Fenster  
   
-- `uFlags` &#124; = **TTF_IDISHWND** Handle des Tools  
+- `uFlags` &#124;= **TTF_IDISHWND** Handle des Tools  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK** Zeiger auf die Zeichenfolge, die im angegebenen Fenster angezeigt werden soll  
   

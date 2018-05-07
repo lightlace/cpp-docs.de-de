@@ -1,12 +1,9 @@
 ---
 title: CMFCFontComboBox Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox-Klasse
 Die `CMFCFontComboBox` Klasse erstellt ein Kombinationsfeld-Steuerelement, das eine Liste von Schriftarten enthält.  
@@ -90,7 +85,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Erstellt ein `CMFCFontComboBox`-Objekt.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Ruft Informationen zu den aktuell ausgewählten Schriftart ab.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Zeigt das Framework der Schriftart zu verwenden, um den Elementnamen in das aktuelle schriftartkombinationsfeld zeichnen.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` , leiten das Framework Schriftart zu verwenden, um jedes Element Bezeichnung gezeichnet werden soll. Legen Sie dieses Element auf `FALSE` , leiten das Framework jedem Elementnamen mit der Schriftart gezeichnet werden soll, deren Name identisch mit der Bezeichnung ist. Der Standardwert dieses Elements ist `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Wählt die Schriftart, die aus der schriftartkombinationsfeld für den angegebenen Kriterien entspricht.  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  Gibt einen Zeichensatz. Der Standardwert ist DEFAULT_CHARSET. Weitere Informationen finden Sie unter der `lfCharSet` Mitglied der [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn ein Element in das schriftartkombinationsfeld für die angegebene Schriftart-Beschreibungsobjekt oder Schriftartname und Charset entspricht. andernfalls `FALSE`.  
+ `TRUE` Wenn ein Element in das schriftartkombinationsfeld für die angegebene Schriftart-Beschreibungsobjekt oder Schriftartname und Charset entspricht. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um auszuwählen, und führen Sie einen Bildlauf zum Element in das schriftartkombinationsfeld, das die angegebene Schriftart entspricht.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Initialisiert die Liste der Elemente im Kombinationsfeld Schriftart an.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  Gibt die Schriftbreite der Schriftart und Familie. Der Standardwert ist DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das schriftartkombinationsfeld erfolgreich initialisiert wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn das schriftartkombinationsfeld erfolgreich initialisiert wurde. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode initialisiert das schriftartkombinationsfeld beim Aufzählen der installierten Schriftarten, die mit die angegebenen Parametern übereinstimmen, und diese Schriftartnamen in das schriftartkombinationsfeld einfügen.  

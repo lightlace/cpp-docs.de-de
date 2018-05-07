@@ -1,13 +1,10 @@
 ---
 title: 'TN071: MFC-IOleCommandTarget-Implementierung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f97774036c42fa0f681a65e0a335f944daf09c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21745762fb6f6eb1eb324013db12207c4b3b81d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC-IOleCommandTarget-Implementierung
 > [!NOTE]
@@ -34,11 +29,11 @@ ms.lasthandoff: 12/21/2017
   
  Die `IOleCommandTarget` Schnittstelle ermöglicht, Objekte und deren Container, Befehle aus, um miteinander zu versenden. Z. B. ein Objekt Symbolleisten möglicherweise enthalten Sie Schaltflächen für Befehle wie z. B. **Drucken**, **Seitenansicht**, **speichern**, `New`, und **Zoom**. Wenn ein solches Objekt in einem Container, die unterstützt eingebettet wurden `IOleCommandTarget`, das Objekt konnte aktivieren Sie die Schaltflächen und Weiterleiten der Befehle auf den Container für die Verarbeitung, wenn der Benutzer, die sie geklickt haben. Wenn ein Container das eingebettete Objekt selbst drucken möchten, konnte erleichtern diese Anforderung durch Senden eines Befehls über die `IOleCommandTarget` Schnittstelle des eingebetteten Objekts.  
   
- `IOleCommandTarget`eine Automation-ähnliche Schnittstelle ist, da er von einem Client zum Aufrufen von Methoden auf einem Server verwendet wird. Allerdings `IOleCommandTarget` spart den Mehraufwand der Aufrufe über Automatisierungsschnittstellen, da Programmierer nicht verwenden, die in der Regel aufwändige `Invoke` Methode `IDispatch`.  
+ `IOleCommandTarget` eine Automation-ähnliche Schnittstelle ist, da er von einem Client zum Aufrufen von Methoden auf einem Server verwendet wird. Allerdings `IOleCommandTarget` spart den Mehraufwand der Aufrufe über Automatisierungsschnittstellen, da Programmierer nicht verwenden, die in der Regel aufwändige `Invoke` Methode `IDispatch`.  
   
  In MFC können die `IOleCommandTarget` Schnittstelle wird von Server für aktive Dokumente verwendet, um Active Document-Container auf dispatch-Befehle an den Server zu ermöglichen. Das aktive Dokument Serverklasse `CDocObjectServerItem`, verwendet MFC-schnittstellenzuordnungen (finden Sie unter [tn038 Implementieren von: MFC/OLE-IUnknown-Implementierung](../mfc/tn038-mfc-ole-iunknown-implementation.md)) zum Implementieren der `IOleCommandTarget` Schnittstelle.  
   
- `IOleCommandTarget`ist ebenfalls implementiert, der **COleFrameHook** Klasse. **COleFrameHook** ist eine nicht dokumentierte MFC-Klasse, die die Frame-Fenster-Funktionalität des direkten implementiert Bearbeiten von Containern. **COleFrameHook** verwendet auch die MFC-schnittstellenzuordnungen zum Implementieren der `IOleCommandTarget` Schnittstelle. **COleFrameHook**der Implementierung von `IOleCommandTarget` leitet der OLE-Befehle zum `COleDocObjectItem`-abgeleitete Active Document-Container. Dadurch werden alle MFC Active Document-Container zum Empfangen von Nachrichten von enthaltene Active Document-Servern.  
+ `IOleCommandTarget` ist ebenfalls implementiert, der **COleFrameHook** Klasse. **COleFrameHook** ist eine nicht dokumentierte MFC-Klasse, die die Frame-Fenster-Funktionalität des direkten implementiert Bearbeiten von Containern. **COleFrameHook** verwendet auch die MFC-schnittstellenzuordnungen zum Implementieren der `IOleCommandTarget` Schnittstelle. **COleFrameHook**der Implementierung von `IOleCommandTarget` leitet der OLE-Befehle zum `COleDocObjectItem`-abgeleitete Active Document-Container. Dadurch werden alle MFC Active Document-Container zum Empfangen von Nachrichten von enthaltene Active Document-Servern.  
   
 ## <a name="mfc-ole-command-maps"></a>MFC-OLE-Befehl Zuordnungen  
  MFC-Entwickler nutzen `IOleCommandTarget` mit MFC OLE Befehl zugeordnet. OLE-Befehl-Karten sind wie meldungszuordnungen, da sie verwendet werden können, um OLE-Befehle Memberfunktionen der Klasse zuordnen, die Zuordnung der Befehl enthält. Damit dies funktioniert, platzieren Sie Makros in der Zuordnung Befehl, geben Sie die OLE-Befehl-Gruppe des Befehls, die Sie behandeln möchten, die OLE-Befehl und die Befehls-ID des dem [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Meldung, die gesendet wird, wenn der OLE-Befehl empfangen wird. MFC enthält außerdem eine Reihe von vordefinierten Makros für OLE-Standardbefehle. Eine Liste der standard OLE-Befehle, die zur ursprünglich entwickelt wurden mit Microsoft Office-Anwendungen verwenden, finden Sie unter der OLECMDID-Enumeration, die in docobj.h definiert ist.  

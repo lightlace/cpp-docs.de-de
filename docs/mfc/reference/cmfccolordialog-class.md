@@ -1,12 +1,9 @@
 ---
 title: CMFCColorDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog-Klasse
 Die `CMFCColorDialog` Klasse stellt ein Farbauswahl-Dialogfeld.  
@@ -78,8 +73,8 @@ class CMFCColorDialog : public CDialogEx
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`Wenn das Dialogfeld zur Farbauswahl eigene Farben-Palette verwendet oder `FALSE` Wenn im Dialogfeld eine Palette, die im angegebenen verwendet der `CMFCColorDialog` Konstruktor.|  
-|`m_bPickerMode`|`TRUE`während der Benutzer eine Farbe aus dem Auswahldialogfeld auswählt; andernfalls `FALSE`.|  
+|`m_bIsMyPalette`|`TRUE` Wenn das Dialogfeld zur Farbauswahl eigene Farben-Palette verwendet oder `FALSE` Wenn im Dialogfeld eine Palette, die im angegebenen verwendet der `CMFCColorDialog` Konstruktor.|  
+|`m_bPickerMode`|`TRUE` während der Benutzer eine Farbe aus dem Auswahldialogfeld auswählt; andernfalls `FALSE`.|  
 |`m_btnColorSelect`|Schaltfläche für die Farbe, die der Benutzer ausgewählt hat.|  
 |`m_CurrentColor`|Die zurzeit ausgewählte Farbe.|  
 |`m_hcurPicker`|Der Cursor, der verwendet wird, um eine Farbe auswählen.|  
@@ -117,7 +112,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  Erstellt ein `CMFCColorDialog`-Objekt.  
   
 ```  
@@ -145,7 +140,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  Ruft die Farbe, die der Benutzer über das Dialogfeld "Farbe" auswählt.  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird nach dem Aufruf der `DoModal` Methode.  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  Ruft die Farbpalette, die im aktuellen Dialogfeld "Farbe" verfügbar ist.  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>Hinweise  
  Die Farbpalette gibt die Farben, die der Benutzer auswählen können.  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  Leitet eine Palette aus der Systempalette an.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  Legt die aktuelle Farbe des Dialogfelds fest.  
   
 ```  
@@ -191,7 +186,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  Legt die aktuelle Farbe der Farbe in der aktuellen Palette, die am ähnlichsten ist.  
   
 ```  
@@ -204,7 +199,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  Explizit gibt die roten, grünen und blauen Komponenten einer ausgewählten Farbe auf der ersten Eigenschaftenseite ein Dialogfeld "Farbe" ein.  
   
 ```  
@@ -226,7 +221,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  Gibt explizit den Rot-, Grün- und blauen-Komponenten einer ausgewählten Farbe, auf der zweiten Eigenschaftenseite ein Dialogfeld "Farbe".  
   
 ```  

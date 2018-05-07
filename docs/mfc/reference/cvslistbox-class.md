@@ -1,12 +1,9 @@
 ---
 title: CVSListBox-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CVSListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cvslistbox-class"></a>CVSListBox-Klasse
 Die `CVSListBox` Klasse unterstützt ein bearbeitbares Listensteuerelement.  
@@ -117,7 +112,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>  CVSListBox::AddItem  
  Fügt eine Zeichenfolge um ein Listenfeld-Steuerelement.  
   
 ```  
@@ -143,7 +138,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CVSListBox::GetItemData](#getitemdata) Methode zum Abrufen des Werts, der von angegeben wird die `dwData` Parameter. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Erstellt ein `CVSListBox`-Objekt.  
   
 ```  
@@ -154,7 +149,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
  Startet einen Bearbeitungsvorgang an der Text eines Listenelement-Steuerelement.  
   
 ```  
@@ -166,12 +161,12 @@ virtual BOOL EditItem(int iIndex);
  Nullbasierten Index eines Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Bearbeitungsoperation wurde erfolgreich gestartet wird; andernfalls `FALSE`.  
+ `TRUE` Wenn die Bearbeitungsoperation wurde erfolgreich gestartet wird; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Benutzer startet einen Bearbeitungsvorgang an, entweder durch Doppelklicken auf die Bezeichnung eines Elements oder durch Drücken der **F2** oder **LEERTASTE** Schlüssel, wenn ein Element den Fokus besitzt.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
  Ruft die Anzahl von Zeichenfolgen in ein bearbeitbares Listensteuerelement ab.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die Anzahl die eins größer als der Indexwert des letzten Elements ist, da der Index nullbasiert ist.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
  Ruft ab eine anwendungsspezifische 32-Bit-Wert, der ein bearbeitbares Listenelement-Steuerelement zugeordnet ist.  
   
 ```  
@@ -201,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CVSListBox::SetItemData](#setitemdata) oder [CVSListBox::AddItem](#additem) Methode, um die 32-Bit-Wert mit dem Listenelement-Steuerelement zuzuordnen. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
  Ruft den Text ein bearbeitbares Listenelement-Steuerelement.  
   
 ```  
@@ -217,7 +212,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  Gibt das Handle zum aktuellen eingebettete Listenansicht-Steuerelement zurück.  
   
 ```  
@@ -230,7 +225,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um ein Handle für das eingebettete Listenansicht-Steuerelement abzurufen, die unterstützt die `CVSListBox` Klasse.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
  Ruft den nullbasierten Index des derzeit ausgewählten Elements in ein bearbeitbares Listensteuerelement ab.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  Entfernt ein Element aus der ein bearbeitbares Listensteuerelement.  
   
 ```  
@@ -254,11 +249,11 @@ virtual BOOL RemoveItem(int iIndex);
  Der nullbasierte Index des ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das angegebene Element entfernt wird; andernfalls `FALSE`.  
+ `TRUE` Wenn das angegebene Element entfernt wird; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  Wählt eine Liste Steuerzeichenfolge an.  
   
 ```  
@@ -270,12 +265,12 @@ virtual BOOL SelectItem(int iItem);
  Der nullbasierte Index des ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wählt das angegebene Element aus, und bei Bedarf, verschiebt das Element in der Ansicht.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
  Ordnet einen anwendungsspezifische 32-Bit-Wert ein bearbeitbares Listenelement-Steuerelement.  
   
 ```  

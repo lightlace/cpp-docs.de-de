@@ -1,13 +1,10 @@
 ---
 title: Programmgesteuertes Drucken | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>Programmgesteuertes Drucken
 OLE bereitgestellt, die Mittel zur eindeutigen Identifizierung der persistente Dokumente (**GetClassFile**) und Laden Sie diese in den zugehörigen Code (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile:: Load**, und **IPersistStorage**). Zum Drucken von Dokumenten weiter zu aktivieren, wird active Document-Container (über einen vorhandenen OLE-Entwurf, die ursprünglich nicht mit OLE 2.0 geliefert) eine Basis-Standard-drucken-Schnittstelle eingeführt, mit denen `IPrint`, die in der Regel über jedes Objekt, das geladen wird, kann die persistenten Status des Dokumenttyps. Jede Ansicht eines aktiven Dokuments kann optional unterstützen die **IPrint** Schnittstelle, um diese Funktionen bereitzustellen.  
@@ -61,7 +56,7 @@ interface IPrint : IUnknown
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint`wird in der Regel implementiert, auf das gleiche Objekt, das entweder unterstützt `IPersistFile` oder `IPersistStorage`. Aufrufer Beachten Sie die Möglichkeit, persistenten Status einer Klasse programmgesteuert zu drucken, indem Sie in der Registrierung für den Schlüssel "Printable" suchen. Derzeit "Druckbaren" gibt die Unterstützung für mindestens `IPrint`; andere Schnittstellen möglicherweise definiert in der Zukunft der wäre dann erhältlich `QueryInterface` , in denen **IPrint** einfach stellt die Basis Maß an Unterstützung.  
+ `IPrint` wird in der Regel implementiert, auf das gleiche Objekt, das entweder unterstützt `IPersistFile` oder `IPersistStorage`. Aufrufer Beachten Sie die Möglichkeit, persistenten Status einer Klasse programmgesteuert zu drucken, indem Sie in der Registrierung für den Schlüssel "Printable" suchen. Derzeit "Druckbaren" gibt die Unterstützung für mindestens `IPrint`; andere Schnittstellen möglicherweise definiert in der Zukunft der wäre dann erhältlich `QueryInterface` , in denen **IPrint** einfach stellt die Basis Maß an Unterstützung.  
   
  Während eines Drucken sollten Sie den Client oder den Container, die initiiert das Drucken, um zu steuern, ob das Drucken fortgesetzt werden soll. Der Container kann z. B. einen Befehl "Beenden" Print "unterstützen, der den Druckauftrag so bald wie möglich beendet werden soll. Zur Unterstützung dieser Funktion kann der Client über ein anderes druckbares Objekt implementieren eine kleine Benachrichtigungsobjekt des Senke mit der Schnittstelle `IContinueCallback`:  
   

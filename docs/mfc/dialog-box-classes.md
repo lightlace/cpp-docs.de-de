@@ -1,13 +1,10 @@
 ---
 title: Dialogfeldklassen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Dialogfeldklassen
 Klasse `CDialog` und die abgeleiteten Klassen kapseln Dialogfeld-Funktionalität. Da ein Dialogfeld eine besondere Art von Fenster ist `CDialog` stammt aus `CWnd`. Leiten Sie Ihre Dialogfeldklassen aus `CDialog` oder verwenden Sie eines der allgemeine Dialogfeldklassen für Dialogfelder "standard", z. B. Öffnen oder Speichern einer Datei, drucken, Auswählen einer Schriftart oder die Farbe, initiiert einen Vorgang suchen und ersetzen oder Durchführen von verschiedenen OLE-bezogene DDL-Vorgänge.  
@@ -71,7 +66,7 @@ Klasse `CDialog` und die abgeleiteten Klassen kapseln Dialogfeld-Funktionalität
  OLE hinzugefügt Windows einige häufig verwendete Dialogfelder. Diese Klassen kapseln, die häufig verwendete OLE-Dialogfelder.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Vom Framework verwendet, um häufige Anwendungsbereiche für alle OLE-Dialogfelder enthalten. Alle in der Benutzeroberfläche Kategorie Dialogfeldklassen werden von dieser Basisklasse abgeleitet. `COleDialog`kann nicht direkt verwendet werden.  
+ Vom Framework verwendet, um häufige Anwendungsbereiche für alle OLE-Dialogfelder enthalten. Alle in der Benutzeroberfläche Kategorie Dialogfeldklassen werden von dieser Basisklasse abgeleitet. `COleDialog` kann nicht direkt verwendet werden.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Objekt einfügen zeigt das Dialogfeld an, die Standardbenutzeroberfläche für das Einfügen von neuen OLE Verknüpfte oder eingebettete Elemente.  

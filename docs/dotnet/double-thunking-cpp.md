@@ -1,13 +1,10 @@
 ---
 title: Doppeltes Thunking (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>Doppeltes Thunking (C++)
 Doppeltes thunking bezieht sich auf einen Datenverlust auf der Leistung, die auftreten können, wenn ein Funktionsaufruf in einen verwalteten Kontext aufrufen, die eine Visual C++-Funktion verwaltet und, in dem programmausführung systemeigener Einstiegspunkt der Funktion aufruft, um die verwaltete Funktion aufzurufen. In diesem Thema wird erläutert, wo doppeltes thunking auftritt und wie Sie es zur Verbesserung der Leistung vermeiden können.  
@@ -40,12 +35,12 @@ Doppeltes thunking bezieht sich auf einen Datenverlust auf der Leistung, die auf
   
  Auf ähnliche Weise, wenn Sie exportieren ([Dllexport, Dllimport](../cpp/dllexport-dllimport.md)) eine verwaltete Funktion, ein systemeigener Einstiegspunkt wird generiert, und alle Funktionen, die importiert und ruft diese Funktion wird über den systemeigenen Einstiegspunkt aufgerufen. Um doppeltes thunking in dieser Situation zu vermeiden, verwenden Sie keine systemeigene mittels Export/Import-Semantik. verweisen Sie einfach die Metadaten über `#using` (siehe [#using-Direktive](../preprocessor/hash-using-directive-cpp.md)).  
   
- Der Compiler wurde aktualisiert, um unnötige doppeltes thunking zu reduzieren. Beispielsweise jede Funktion mit einem verwalteten Typ in der Signatur (einschließlich Rückgabetyp) werden implizit als markiert `__clrcall`. Weitere Informationen zu doppeltes Thunk für Eliminierung von Duplikaten, finden Sie unter [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ Der Compiler wurde aktualisiert, um unnötige doppeltes thunking zu reduzieren. Beispielsweise jede Funktion mit einem verwalteten Typ in der Signatur (einschließlich Rückgabetyp) werden implizit als markiert `__clrcall`. Weitere Informationen zu doppeltes Thunk für Eliminierung von Duplikaten, finden Sie unter [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Im folgende Beispiel wird veranschaulicht, doppeltes thunking. Bei der systemeigenen Kompilierung (ohne **"/ CLR"**), der Aufruf der virtuellen Funktion in `main` generiert einen Aufruf von `T`Konstruktor und einem Aufruf des Destruktors kopieren. Ein ähnliches Verhalten wird erreicht, wenn die virtuelle Funktion deklariert wird, mit **"/ CLR"** und `__clrcall`. Allerdings bei der Kompilierung nur mit **"/ CLR"**Funktionsaufruf generiert einen Aufruf für den Kopierkonstruktor, aber es gibt einen weiteren Aufruf für den Kopierkonstruktor aufgrund der Thunk systemeigen verwaltet.  
+ Im folgende Beispiel wird veranschaulicht, doppeltes thunking. Bei der systemeigenen Kompilierung (ohne **"/ CLR"**), der Aufruf der virtuellen Funktion in `main` generiert einen Aufruf von `T`Konstruktor und einem Aufruf des Destruktors kopieren. Ein ähnliches Verhalten wird erreicht, wenn die virtuelle Funktion deklariert wird, mit **"/ CLR"** und `__clrcall`. Allerdings bei der Kompilierung nur mit **"/ CLR"** Funktionsaufruf generiert einen Aufruf für den Kopierkonstruktor, aber es gibt einen weiteren Aufruf für den Kopierkonstruktor aufgrund der Thunk systemeigen verwaltet.  
   
 ### <a name="code"></a>Code  
   

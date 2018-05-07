@@ -1,13 +1,10 @@
 ---
 title: Spezielle CWinApp-Dienste | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
@@ -39,27 +36,25 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-cwinapp-services"></a>Spezielle CWinApp-Dienste
 Neben die Nachrichtenschleife ausführen und und Sie haben die Gelegenheit, die Anwendung zu initialisieren und bereinigen, [CWinApp](../mfc/reference/cwinapp-class.md) mehrere andere Dienste bereitstellt.  
   
-##  <a name="_core_shell_registration"></a>Shell-Registrierung  
+##  <a name="_core_shell_registration"></a> Shell-Registrierung  
  Standardmäßig ermöglicht der Anwendung MFC-Assistent für den Benutzer zum Öffnen von Datendateien, die Ihre Anwendung durch Doppelklicken in der Datei-Explorer oder Datei-Manager erstellt wurden. Wenn die Anwendung eine MDI-Anwendung ist, und geben Sie eine Erweiterung für die Dateien die Anwendung erstellt, fügt der MFC-Anwendung-Assistent Aufrufe an die [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) und [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)Memberfunktionen der [CWinApp](../mfc/reference/cwinapp-class.md) auf die `InitInstance` überschreiben, die für Sie geschrieben.  
   
- `RegisterShellFileTypes`registriert die Anwendung Dokumenttypen mit Datei-Explorer oder Datei-Manager. Die Funktion hinzugefügt der Registration-Datenbank, die zur Verwaltung von Windows Einträge. Die Einträge registrieren jeden Dokumenttyp, der Dateityp Erweiterung zuordnen, geben Sie eine Befehlszeile, um die Anwendung zu öffnen und geben Sie einen Befehl für dynamischen Datenaustausch (DDE), ein Dokument dieses Typs öffnen.  
+ `RegisterShellFileTypes` registriert die Anwendung Dokumenttypen mit Datei-Explorer oder Datei-Manager. Die Funktion hinzugefügt der Registration-Datenbank, die zur Verwaltung von Windows Einträge. Die Einträge registrieren jeden Dokumenttyp, der Dateityp Erweiterung zuordnen, geben Sie eine Befehlszeile, um die Anwendung zu öffnen und geben Sie einen Befehl für dynamischen Datenaustausch (DDE), ein Dokument dieses Typs öffnen.  
   
- `EnableShellOpen`Schließt den Prozess Ihrer Anwendung DDE-Befehle aus dem Datei-Explorer oder Datei-Manager zum Öffnen der Datei, die vom Benutzer ausgewählten empfangen können.  
+ `EnableShellOpen` Schließt den Prozess Ihrer Anwendung DDE-Befehle aus dem Datei-Explorer oder Datei-Manager zum Öffnen der Datei, die vom Benutzer ausgewählten empfangen können.  
   
  Diese Unterstützung für die automatische Registrierung in `CWinApp` entfällt die Notwendigkeit eine REG-Datei mit Ihrer Anwendung zu senden oder zu besondere Installationsarbeit zu erledigen.  
   
@@ -71,7 +66,7 @@ Neben die Nachrichtenschleife ausführen und und Sie haben die Gelegenheit, die 
   
  Wenn Sie den Hintergrund GDI +-Thread nicht unterdrücken, können DDE-Befehle an die Anwendung vorzeitig ausgestellt werden, bevor das Hauptfenster erstellt wurde. Die DDE-Befehle, die von der Shell können Fehlermeldungen resultierende vorzeitig abgebrochen werden.  
   
-##  <a name="_core_file_manager_drag_and_drop"></a>Manager für Dateiserver Drag & Drop  
+##  <a name="_core_file_manager_drag_and_drop"></a> Manager für Dateiserver Drag & Drop  
  Dateien können in einem Fenster in der Anwendung aus dem Dateiansichtsfenster im Datei-Manager oder Datei-Explorer gezogen werden. Sie können z. B. eine oder mehrere Dateien auf eine MDI-Anwendung Hauptfenster gezogen werden, in dem die Anwendung die Dateinamen abrufen konnte, und öffnen Sie untergeordnete MDI-Fenster für diese Dateien aktivieren.  
   
  Zum Aktivieren Datei Drag und drop in Ihrer Anwendung, schreibt der MFC-Anwendung-Assistent einen Aufruf der [CWnd](../mfc/reference/cwnd-class.md) Memberfunktion [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) für das Hauptrahmenfenster in Ihre `InitInstance`. Sie können diesen Aufruf entfernen, wenn Sie nicht, um den Drag & Drop-Funktion zu implementieren möchten.  
@@ -79,7 +74,7 @@ Neben die Nachrichtenschleife ausführen und und Sie haben die Gelegenheit, die 
 > [!NOTE]
 >  Sie können auch weitere allgemeine Drag-and-Drop-Funktionen implementieren – Ziehen von Daten zwischen oder innerhalb von Dokumenten – mit OLE. Informationen finden Sie im Artikel [Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Nachverfolgen der am meisten zuletzt verwendete Dokumente  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Nachverfolgen der am meisten zuletzt verwendete Dokumente  
  Der Benutzer öffnet und schließt Dateien, der nachverfolgt das Anwendungsobjekt die vier zuletzt verwendeten Dateien. Die Namen dieser Dateien sind im Menü Datei hinzugefügt und aktualisiert, wenn sich diese ändern. Das Framework speichert diese Dateinamen in der Registrierung oder in der INI-Datei mit dem gleichen Namen wie das Projekt und aus der Datei gelesen, wenn die Anwendung wird gestartet. Die `InitInstance` außer Kraft gesetzt, die MFC-Anwendungs-Assistent erstellt, Sie enthält einen Aufruf von der [CWinApp](../mfc/reference/cwinapp-class.md) Memberfunktion [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), lädt die Informationen aus der Registrierung oder der INI- Datei, einschließlich der zuletzt verwendeten Dateinamen.  
   
  Diese Einträge werden wie folgt gespeichert:  

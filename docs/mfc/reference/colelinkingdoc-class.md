@@ -1,12 +1,9 @@
 ---
 title: COleLinkingDoc Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc-Klasse
 Die Basisklasse für OLE-Containerdokumente, die das Verknüpfen mit den enthaltenen eingebetteten Elementen unterstützt.  
@@ -105,7 +100,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
  Erstellt eine `COleLinkingDoc` Objekt ohne Kommunikation mit dem OLE-System-DLLs ab.  
   
 ```  
@@ -115,7 +110,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie die `Register` Memberfunktion OLE informiert, dass das Dokument geöffnet ist.  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
  Wird aufgerufen, durch das Framework, um zu bestimmen, ob das Dokument mit eine eingebettete OLE-Element mit dem angegebenen Namen enthält.  
   
 ```  
@@ -132,7 +127,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung sucht die Liste der eingebetteten Elemente für ein Element mit dem angegebenen Namen (der Namensvergleich wird die Groß-/Kleinschreibung unterschieden). Überschreiben Sie diese Funktion, wenn Sie eine eigene Methode zum Speichern von oder benennen eingebettete OLE-Elemente haben.  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
  Vom Framework aufgerufen wird, überprüfen Sie, ob das Dokument ein Verbindungsserver-Element mit dem angegebenen Namen enthält.  
   
 ```  
@@ -149,7 +144,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Hinweise  
  Die Standardeinstellung `COleLinkingDoc` Implementierung gibt immer **NULL**. Diese Funktion ist in der abgeleiteten Klasse überschrieben `COleServerDoc` , die Liste der OLE-Server-Elemente für ein verknüpftes Element mit dem angegebenen Namen gesucht werden soll (der Namensvergleich wird die Groß-/Kleinschreibung unterschieden). Überschreiben Sie diese Funktion, wenn Sie eine eigene Methode zum Speichern von oder Abrufen von Elementen der Verbindungsserver implementiert haben.  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>  COleLinkingDoc::Register  
  Informiert der OLE-System-DLLs, dass das Dokument geöffnet ist.  
   
 ```  
@@ -173,7 +168,7 @@ BOOL Register(
   
  Bei Verwendung von `COleTemplateServer` in Ihrer Anwendung `Register` wird aufgerufen, für Sie von `COleLinkingDoc`der Implementierung von `OnNewDocument`, `OnOpenDocument`, und `OnSaveDocument`.  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
  Informiert der OLE-System-DLLs, dass das Dokument nicht mehr geöffnet ist.  
   
 ```  
@@ -183,7 +178,7 @@ void Revoke();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um das Dokument die Registrierung mit OLE-System-DLLs zu widerrufen.  
   
- Sie sollten diese Funktion beim Schließen einer benannten Datei aufrufen, aber Sie in der Regel müssen nicht direkt aufgerufen. `Revoke`wird aufgerufen, für Sie von `COleLinkingDoc`der Implementierung von `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, und `OnSaveDocument`.  
+ Sie sollten diese Funktion beim Schließen einer benannten Datei aufrufen, aber Sie in der Regel müssen nicht direkt aufgerufen. `Revoke` wird aufgerufen, für Sie von `COleLinkingDoc`der Implementierung von `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, und `OnSaveDocument`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel OCLIENT](../../visual-cpp-samples.md)   

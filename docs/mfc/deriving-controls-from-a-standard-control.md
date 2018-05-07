@@ -1,13 +1,10 @@
 ---
 title: Ableiten von Steuerelementen von einem Standardsteuerelement | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Ableiten von Steuerelementen von einem Standardsteuerelement
 Wie jede [CWnd](../mfc/reference/cwnd-class.md)-abgeleitete Klasse, Sie können Verhalten eines Steuerelements ändern, indem das Ableiten einer neuen Klasse aus einer vorhandenen Steuerelementklasse.  
@@ -49,7 +44,7 @@ Wie jede [CWnd](../mfc/reference/cwnd-class.md)-abgeleitete Klasse, Sie können 
   
 2.  Überschreiben der `OnInitDialog` Memberfunktion in eigener Dialogfeldklassen zum Aufrufen der `SubclassDlgItem` Memberfunktion für die abgeleitete Steuerelement.  
   
- `SubclassDlgItem`"dynamisch Unterklassen" erstellt ein Steuerelement aus einer Dialogfeldvorlage. Wenn ein Steuerelement dynamisch als Unterklasse definiert ist, Sie verknüpfen in Windows, einige Nachrichten innerhalb Ihrer eigenen Anwendung verarbeitet werden und dann die verbleibenden Nachrichten an Windows übergeben. Weitere Informationen finden Sie unter der [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) Memberfunktion der Klasse `CWnd` in der *MFC-Referenz*. Das folgende Beispiel zeigt, wie Sie eine Überschreibung der schreiben `OnInitDialog` Aufrufen `SubclassDlgItem`:  
+ `SubclassDlgItem` "dynamisch Unterklassen" erstellt ein Steuerelement aus einer Dialogfeldvorlage. Wenn ein Steuerelement dynamisch als Unterklasse definiert ist, Sie verknüpfen in Windows, einige Nachrichten innerhalb Ihrer eigenen Anwendung verarbeitet werden und dann die verbleibenden Nachrichten an Windows übergeben. Weitere Informationen finden Sie unter der [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) Memberfunktion der Klasse `CWnd` in der *MFC-Referenz*. Das folgende Beispiel zeigt, wie Sie eine Überschreibung der schreiben `OnInitDialog` Aufrufen `SubclassDlgItem`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   

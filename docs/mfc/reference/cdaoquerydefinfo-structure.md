@@ -1,13 +1,10 @@
 ---
 title: CDaoQueryDefInfo-Struktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo-Struktur
 Die `CDaoQueryDefInfo` Struktur enthält Informationen zu einem Querydef-Objekt, das für Datenzugriffsobjekte (DAO) definiert.  
@@ -89,7 +84,7 @@ struct CDaoQueryDefInfo
  Datum und Uhrzeit der letzten Änderung der Querydef. Rufen Sie direkt das Datum der letzten die Tabelle Aktualisierung Aufrufen der [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) Memberfunktion der Querydef. Weitere Informationen finden Sie in der Kommentare unten. Und finden Sie im Thema "DateCreated LastUpdated-Eigenschaften" in der DAO-Hilfe.  
   
  `m_bUpdatable`  
- Gibt an, ob ein Querydef-Objekt geändert werden kann. Wenn diese Eigenschaft ist **"true"**Querydef andernfalls aktualisierbaren, nicht. Aktualisierbar bedeutet, dass der Querydef Objektdefinition Abfrage geändert werden kann. Die aktualisierbare Eigenschaft eines Querydef-Objekts wird festgelegt, um **"true"** Wenn die Abfragedefinition aktualisiert werden kann, selbst wenn das resultierende Recordset nicht aktualisierbar ist. Um diese Eigenschaft direkt abzurufen, rufen Sie der Querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) Memberfunktion. Weitere Informationen finden Sie im Thema "Aktualisierbare Property" in der DAO-Hilfe.  
+ Gibt an, ob ein Querydef-Objekt geändert werden kann. Wenn diese Eigenschaft ist **"true"** Querydef andernfalls aktualisierbaren, nicht. Aktualisierbar bedeutet, dass der Querydef Objektdefinition Abfrage geändert werden kann. Die aktualisierbare Eigenschaft eines Querydef-Objekts wird festgelegt, um **"true"** Wenn die Abfragedefinition aktualisiert werden kann, selbst wenn das resultierende Recordset nicht aktualisierbar ist. Um diese Eigenschaft direkt abzurufen, rufen Sie der Querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) Memberfunktion. Weitere Informationen finden Sie im Thema "Aktualisierbare Property" in der DAO-Hilfe.  
   
  *m_bReturnsRecords*  
  Gibt an, ob eine SQL-Pass-Through-Abfrage einer externen Datenbank Datensätze zurückgibt. Wenn diese Eigenschaft ist **"true"**, die Abfrage gibt die Datensätze zurück. Um diese Eigenschaft direkt abzurufen, rufen Sie [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Nicht alle Pass-Through-SQL-Abfragen für externe Datenbanken werden Datensätze zurückgegeben. Z. B. eine SQL **UPDATE** Anweisung Datensätze aktualisiert, ohne Datensätze zurückzugeben, während eine SQL **wählen** Anweisung gibt Datensätze zurück. Weitere Informationen finden Sie im Thema "ReturnsRecords-Eigenschaft" DAO-Hilfe.  
@@ -106,7 +101,7 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>Hinweise  
  Die Querydef ist ein Objekt der Klasse [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Die Verweise auf die primäre, sekundäre Datenbank und alle oben anzugeben, wie die Informationen zurückgegeben werden, durch die [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) Memberfunktion in Klasse `CDaoDatabase`.  
   
- Informationen, die abgerufen, indem die [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) Memberfunktion befindet sich in einer `CDaoQueryDefInfo` Struktur. Rufen Sie `GetQueryDefInfo` für das Datenbankobjekt im Element, dessen QueryDefs-Auflistung der Querydef Objekt gespeichert ist. `CDaoQueryDefInfo`definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoQueryDefInfo` Objekt. Klasse `CDaoDatabase` auch stellt Memberfunktionen zur direkten Zugriff auf alle Eigenschaften zurückgegeben, die einem `CDaoQueryDefInfo` Objekt, sodass Sie wahrscheinlich nur selten aufrufen, müssen `GetQueryDefInfo`.  
+ Informationen, die abgerufen, indem die [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) Memberfunktion befindet sich in einer `CDaoQueryDefInfo` Struktur. Rufen Sie `GetQueryDefInfo` für das Datenbankobjekt im Element, dessen QueryDefs-Auflistung der Querydef Objekt gespeichert ist. `CDaoQueryDefInfo` definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoQueryDefInfo` Objekt. Klasse `CDaoDatabase` auch stellt Memberfunktionen zur direkten Zugriff auf alle Eigenschaften zurückgegeben, die einem `CDaoQueryDefInfo` Objekt, sodass Sie wahrscheinlich nur selten aufrufen, müssen `GetQueryDefInfo`.  
   
  Wenn Sie ein neues Feld oder Parameter-Objekt an die Felder oder Parameter-Auflistung eines Objekts Querydef anfügen, wird eine Ausnahme ausgelöst, wenn die zugrunde liegenden Datenbank für das neue Objekt angegebenen Datentyp nicht unterstützt.  
   

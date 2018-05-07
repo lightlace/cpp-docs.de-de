@@ -1,13 +1,10 @@
 ---
 title: 'TN041: MFC-OLE1-Migration zu MFC-OLE 2 | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/OLE1-Migration zu MFC/OLE 2
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>Hinzufügen von "Visuelle Bearbeitung"  
  Eine der interessantesten Funktionen von OLE ist die direkte Aktivierung (oder "Visuelle Bearbeitung"). Diese Funktion ermöglicht die Serveranwendung Teile der Benutzeroberfläche des Containers übernehmen eine nahtlosere Bearbeitung Schnittstelle für den Benutzer zur Verfügung gestellt. Um OCLIENT direkte Aktivierung implementieren zu können, müssen einige speziellen Ressourcen sowie zusätzlicher Code hinzugefügt werden. Diese Ressourcen und der Code werden normalerweise von AppWizard bereitgestellt – großer Anteil des Codes Hier wurde in der Tat geliehener direkt aus einer frischen AppWizard-Anwendung mit Unterstützung für "Container".  
   
- Erstens ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element der in-Place aktiv ist. Sie können diese zusätzlichen Menüressource in Visual C++ erstellen, durch Kopieren die Ressource IDR_OCLITYPE und entfernt alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster Popups an, dass die Trennung zwischen Gruppen eingefügt (er sollte wie folgt aussehen: Datei &#124; &#124; Fenster "). Was bedeuten, dass diese Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden weitere Informationen finden Sie unter "Menüs und Ressourcen: Menüs schachteln" in *OLE 2 Klassen*.  
+ Erstens ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element der in-Place aktiv ist. Sie können diese zusätzlichen Menüressource in Visual C++ erstellen, durch Kopieren die Ressource IDR_OCLITYPE und entfernt alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster Popups an, dass die Trennung zwischen Gruppen eingefügt (er sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Was bedeuten, dass diese Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden weitere Informationen finden Sie unter "Menüs und Ressourcen: Menüs schachteln" in *OLE 2 Klassen*.  
   
  Nachdem Sie mithilfe dieser Menüs erstellt haben, müssen Sie das Framework erfahren können. Dies erfolgt durch Aufrufen von `CDocTemplate::SetContainerInfo` für Dokumentvorlage, bevor Sie ihn der Liste der Dokument-Vorlage in die InitInstance hinzufügen. Der neue Code zum Registrieren der Dokumentvorlage sieht folgendermaßen aus:  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`unterstützt nicht mehr das Flag "bIncludeNative" ein. Die systemeigenen Daten (die Daten geschrieben, indem die Serverelement Serialize-Funktion) ist immer kopiert, damit Sie den ersten Parameter entfernen. Darüber hinaus `CopyToClipboard` wird eine Ausnahme ausgelöst, wenn ein Fehler tritt auf, anstatt Sie "false". Ändern Sie den Code für CServerView::OnEditCopy wie folgt:  
+ `COleServerItem::CopyToClipboard` unterstützt nicht mehr das Flag "bIncludeNative" ein. Die systemeigenen Daten (die Daten geschrieben, indem die Serverelement Serialize-Funktion) ist immer kopiert, damit Sie den ersten Parameter entfernen. Darüber hinaus `CopyToClipboard` wird eine Ausnahme ausgelöst, wenn ein Fehler tritt auf, anstatt Sie "false". Ändern Sie den Code für CServerView::OnEditCopy wie folgt:  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -750,7 +745,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   Durchführen eines Bildlaufs Containerfenster als Auswahl geändert wird.  
   
- Das HIERSVR-Beispiel in MFC 3.0 verwendet auch einen etwas anderen Entwurf für den Server-Elementen. Dadurch wird Speicherplatz gespart und Ihre Verknüpfungen flexibler. Mit der Version 2.0 HIERSVR jeden Knoten in der Struktur *ist eine* `COleServerItem`. `COleServerItem`führt ein wenig mehr Aufwand als unbedingt erforderlich für jeden dieser Knoten ist jedoch ein `COleServerItem` für jeden aktiven Link ist erforderlich. Jedoch größtenteils, gibt es nur sehr wenige aktive Links zu einem beliebigen Zeitpunkt. Um dies effizienter zu gestalten, trennt der HIERSVR in dieser Version von MFC den Knoten aus der `COleServerItem`. Es weist sowohl ein CServerNode und ein **CServerItem** Klasse. Die **CServerItem** (abgeleitet von `COleServerItem`) wird nur bei Bedarf erstellt. Nachdem den (oder die Container) diesen bestimmten Link zu diesem bestimmten Knoten verwenden beenden, ist das CServerItem-Objekt, das die CServerNode zugeordneten gelöscht. Dieser Entwurf wird effizienter und flexibler. Seine Flexibilität ist beim Umgang mit mehreren Auswahl Links. Keiner dieser beiden Versionen von HIERSVR Mehrfachauswahl unterstützt, aber wäre es viel einfacher, hinzufügen (und Links zu solchen Auswahl unterstützen) mit der MFC 3.0-Version von HIERSVR, da die `COleServerItem` von systemeigenen Daten getrennt ist.  
+ Das HIERSVR-Beispiel in MFC 3.0 verwendet auch einen etwas anderen Entwurf für den Server-Elementen. Dadurch wird Speicherplatz gespart und Ihre Verknüpfungen flexibler. Mit der Version 2.0 HIERSVR jeden Knoten in der Struktur *ist eine* `COleServerItem`. `COleServerItem` führt ein wenig mehr Aufwand als unbedingt erforderlich für jeden dieser Knoten ist jedoch ein `COleServerItem` für jeden aktiven Link ist erforderlich. Jedoch größtenteils, gibt es nur sehr wenige aktive Links zu einem beliebigen Zeitpunkt. Um dies effizienter zu gestalten, trennt der HIERSVR in dieser Version von MFC den Knoten aus der `COleServerItem`. Es weist sowohl ein CServerNode und ein **CServerItem** Klasse. Die **CServerItem** (abgeleitet von `COleServerItem`) wird nur bei Bedarf erstellt. Nachdem den (oder die Container) diesen bestimmten Link zu diesem bestimmten Knoten verwenden beenden, ist das CServerItem-Objekt, das die CServerNode zugeordneten gelöscht. Dieser Entwurf wird effizienter und flexibler. Seine Flexibilität ist beim Umgang mit mehreren Auswahl Links. Keiner dieser beiden Versionen von HIERSVR Mehrfachauswahl unterstützt, aber wäre es viel einfacher, hinzufügen (und Links zu solchen Auswahl unterstützen) mit der MFC 3.0-Version von HIERSVR, da die `COleServerItem` von systemeigenen Daten getrennt ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   

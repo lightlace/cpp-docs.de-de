@@ -1,13 +1,10 @@
 ---
 title: ODBC-Klassen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes"></a>ODBC-Klassen
 Diese Klassen können mit der anderen Anwendung Framework-Klassen einfachen Zugriff auf eine Vielzahl von Datenbanken gewähren für die Open Database Connectivity (ODBC)-Treiber zur Verfügung stehen.  
@@ -50,10 +45,10 @@ Diese Klassen können mit der anderen Anwendung Framework-Klassen einfachen Zugr
   
 ## <a name="related-classes"></a>Verwandte Klassen  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Kapselt ein Handle für den Speicher für ein binary large Object (BLOB), z. B. eine Bitmap an. `CLongBinary`Objekte werden verwendet, um große Datenmengen-Objekte, die in Datenbanktabellen gespeichert zu verwalten.  
+ Kapselt ein Handle für den Speicher für ein binary large Object (BLOB), z. B. eine Bitmap an. `CLongBinary` Objekte werden verwendet, um große Datenmengen-Objekte, die in Datenbanktabellen gespeichert zu verwalten.  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- Können Sie einen Wert zu speichern, ohne befürchten Datentyp des Werts. `CDBVariant`verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.  
+ Können Sie einen Wert zu speichern, ohne befürchten Datentyp des Werts. `CDBVariant` verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../mfc/class-library-overview.md)

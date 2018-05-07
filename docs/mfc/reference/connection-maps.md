@@ -1,13 +1,10 @@
 ---
 title: Verbindungszuordnungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>Verbindungszuordnungen
 OLE-Steuerelemente sind in der Lage, Schnittstellen für andere Anwendungen verfügbar zu machen. Diese Schnittstellen können nur den Zugriff auf einen Container, in das entsprechende Steuerelement. Wenn ein OLE-Steuerelements externe Schnittstellen von anderen OLE-Objekte zugreifen möchte, muss ein Verbindungspunkt eingerichtet werden. Diese Verbindungspunkt kann ein Steuerelement ausgehenden Zugriff auf externe Dispatchzuordnungen, z. B. ereigniszuordnungen oder Benachrichtigungsfunktionen.  
@@ -55,7 +50,7 @@ OLE-Steuerelemente sind in der Lage, Schnittstellen für andere Anwendungen verf
 |[AfxConnectionAdvise](#afxconnectionadvise)|Herstellen einer Verbindung zwischen einer Quelle und Senke.|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Wird eine Verbindung zwischen einer Quelle und Senke unterbrochen.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  Verwenden der `BEGIN_CONNECTION_PART` Makro, um die Definition der zusätzliche Verbindungspunkte hinter der Benachrichtigung-Verbindungspunkte Ereignis und eine Eigenschaft zu beginnen.  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  Die Deklaration der Verbindungspunkt wird beendet.  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  Verwenden Sie zwischen den `BEGIN_CONNECTION_PART` und `END_CONNECTION_PART` Makros definieren eine Schnittstellen-ID für einen Verbindungspunkt von OLE-Steuerelements unterstützt.  
   
 ```   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten eine Zuordnung Verbindung, um zusätzliche Verbindungspunkte anzugeben, die das Steuerelement unterstützt.  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten eine Zuordnung der Verbindung um Verbindungspunkte anzugeben, die das Steuerelement unterstützt.  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  Die Definition der Zuordnung Verbindung wird beendet.  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  Ordnet einen Verbindungspunkt für die OLE-Steuerelements zu einer bestimmten Schnittstelle-ID  
   
 ```   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  Mit dieser Funktion werden zum Herstellen einer Verbindung zwischen einer Quelle, angegeben durch `pUnkSrc`, und eine Ereignissenke, gemäß `pUnkSink`.  
   
 ```   
@@ -217,7 +212,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  Mit dieser Funktion können Sie eine Verbindung zwischen einer Quelle, angegeben durch Trennen `pUnkSrc`, und eine Ereignissenke, gemäß `pUnkSink`.  
   
 ```   

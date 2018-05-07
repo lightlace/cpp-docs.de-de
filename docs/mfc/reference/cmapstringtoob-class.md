@@ -2,11 +2,8 @@
 title: CMapStringToOb-Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a840677819710247e73aa8e3bcb904be756f852
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb Class
 Eine Wörterbuchauflistungsklasse, die eindeutige `CString` -Objekte und `CObject` -Zeiger einander zuordnet.  
@@ -94,7 +89,7 @@ class CMapStringToOb : public CObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMapStringToOb::operator [ ]](#operator_at)|Fügt ein Element in der Zuordnung – Operator Ersatz für `SetAt`.|  
+|[CMapStringToOb::operator]](#operator_at)|Fügt ein Element in der Zuordnung – Operator Ersatz für `SetAt`.|  
   
 ## <a name="remarks"></a>Hinweise  
  Nachdem Sie eingefügt haben eine `CString` -  `CObject*` Paar (Element) in der Zuordnung können Sie effizient abrufen oder löschen das Paar, das mit einer Zeichenfolge oder ein `CString` Wert als Schlüssel. Sie können auch alle Elemente in der Zuordnung durchlaufen.  
@@ -140,7 +135,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**CMapStringToPtr( INT_PTR** `nBlockSize` **= 10 );**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CMapStringToString( INT_PTR** `nBlockSize` **= 10 );**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CMapWordToOb( INT_PTR** `nBlockSize` **= 10 );**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr (INT_PTR** `nBlockSize` **= 10);**|  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#63](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]  
@@ -189,12 +184,12 @@ UINT GetHashTableSize() const;
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT GetHashTableSize( ) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT GetHashTableSize( ) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT GetHashTableSize( ) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT GetHashTableSize( ) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT GetHashTableSize( ) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize( ) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**"Uint" GetHashTableSize () const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**"Uint" GetHashTableSize () const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**"Uint" GetHashTableSize () const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**"Uint" GetHashTableSize () const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**"Uint" GetHashTableSize () const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**"Uint" GetHashTableSize () const;**|  
   
 ##  <a name="getnextassoc"></a>  CMapStringToOb::GetNextAssoc  
  Ruft das kartenelement auf *rNextPosition*, aktualisiert dann *rNextPosition* zum Verweisen auf das nächste Element in der Zuordnung.  
@@ -356,12 +351,12 @@ void InitHashTable(
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**"void" InitHashTable ("uint"** `hashSize` **, BOOL** `bAllocNow` **= "true");**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**"void" InitHashTable ("uint"** `hashSize` **, BOOL** `bAllocNow` **= "true");**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**"void" InitHashTable ("uint"** `hashSize` **, BOOL** `bAllocNow` **= "true");**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**"void" InitHashTable ("uint"** `hashSize` **, BOOL** `bAllocNow` **= "true");**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**"void" InitHashTable ("uint"** `hashSize` **, BOOL** `bAllocNow` **= "true");**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**"void" InitHashTable ("uint"** `hashSize` **, BOOL** `bAllocNow` **= "true");**|  
   
 ##  <a name="isempty"></a>  CMapStringToOb::IsEmpty  
  Bestimmt, ob die Zuordnung leer ist.  
@@ -474,9 +469,9 @@ CObject*& operator[ ](lpctstr key);
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void\*& operator[](void\*** `key` **\);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**"void"\*& []-Operator ("void"\***  `key`  **\);**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD & -Operator [] ("void"\***  `key`  **\);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& operator[](lpctstr** `key` **\);**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**"void"\*& []-Operator (Lpctstr** `key`  **\);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & -Operator [] (Lpctstr** `key`  **\);**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& []-Operator (Word** `key`  **\);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**"void"\*& []-Operator (Word** `key`  **\);**|  
@@ -589,11 +584,11 @@ void SetAt(
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt( void\*** `key` **, void\*** `newValue` **);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt( void\*** `key` **, WORD** `newValue` **);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**"void" SetAt ("void"\***  `key` **, WORD** `newValue` **);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt( LPCTSTR** `key` **, void\*** `newValue` **);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**"void" SetAt (WORD** `key` **, CObject\***  `newValue` **);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt( WORD** `key` **, void\*** `newValue` **);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**"void" SetAt (WORD** `key` **, "void"\***  `newValue` **);**|  
   
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  

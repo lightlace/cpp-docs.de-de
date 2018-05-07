@@ -1,12 +1,9 @@
 ---
 title: CMFCPropertyGridCtrl Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
@@ -159,17 +156,15 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a07b8049f01d10556bded754ec2aae55581b7cb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Klasse
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -326,7 +321,7 @@ class CMFCPropertyGridCtrl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxpropertygridctrl.h  
   
-##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect  
 
   
 ```  
@@ -343,7 +338,7 @@ virtual HRESULT accSelect(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+##  <a name="addproperty"></a>  CMFCPropertyGridCtrl::AddProperty  
  Fügt eine neue Eigenschaft zu einem Eigenschaftenraster-Steuerelement.  
   
 ```  
@@ -358,10 +353,10 @@ int AddProperty(
  Ein Zeiger auf eine Eigenschaft.  
   
  [in] `bRedraw`  
- `TRUE`die Eigenschaft sofort neu zeichnet; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` die Eigenschaft sofort neu zeichnet; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
  [in] `bAdjustLayout`  
- `TRUE`neu berechnen, wie zeichnen Sie den Text und den Wert der Eigenschaft, und klicken Sie dann die Eigenschaft; `FALSE` zu vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist `TRUE`.  
+ `TRUE` neu berechnen, wie zeichnen Sie den Text und den Wert der Eigenschaft, und klicken Sie dann die Eigenschaft; `FALSE` zu vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn diese Methode, den nullbasierten Index der Position in das Eigenschaftenraster-Steuerelement erfolgreich ist, in dem die Eigenschaft hinzugefügt wird. andernfalls -1.  
@@ -369,7 +364,7 @@ int AddProperty(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt einen Zeiger auf die angegebene Eigenschaft bis zum Ende der Liste der Eigenschaften in das Eigenschaftenraster-Steuerelement. Löschen Sie die Eigenschaften nicht, und ermöglicht es ihnen, die außerhalb des Gültigkeitsbereichs liegen vor das Rastersteuerelement zerstört wird. Wenn Sie das Eigenschaftenraster-Steuerelement abgeschlossen haben, rufen [CMFCPropertyGridCtrl::RemoveAll](#removeall) So löschen Sie alle zusätzlichen Eigenschaften. AddProperty-Methode schlägt fehl, wenn die angegebene Eigenschaft bereits zur Liste hinzugefügt wurde.  
   
-##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+##  <a name="adjustlayout"></a>  CMFCPropertyGridCtrl::AdjustLayout  
  Zeichnet das Eigenschaftenraster-Steuerelement und seine Eigenschaften.  
   
 ```  
@@ -379,7 +374,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode berechnet wie die gesamte Eigenschaftenraster-Steuerelement und seine Eigenschaften, z. B. Bilder, Schriftarten und Steuerelemente gezeichnet werden soll.  
   
-##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
 
   
 ```  
@@ -391,7 +386,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+##  <a name="closecolorpopup"></a>  CMFCPropertyGridCtrl::CloseColorPopup  
  Schließt das Dialogfeld zur Farbauswahl.  
   
 ```  
@@ -401,7 +396,7 @@ virtual void CloseColorPopup();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen über das Dialogfeld zur Farbauswahl finden Sie unter [CMFCPropertyGridColorProperty Klasse](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).  
   
-##  <a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+##  <a name="cmfcpropertygridctrl"></a>  CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
  Erstellt ein `CMFCPropertyGridCtrl`-Objekt.  
   
 ```  
@@ -412,7 +407,7 @@ CMFCPropertyGridCtrl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+##  <a name="compareprops"></a>  CMFCPropertyGridCtrl::CompareProps  
  Wird aufgerufen, durch das Eigenschaftenraster-Steuerelement um Eigenschaften zu sortieren.  
   
 ```  
@@ -439,7 +434,7 @@ virtual int CompareProps(
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig verwendet diese Methode die [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode zum Vergleichen der `CMFCPropertyGridProperty::m_strName` Mitglieder der angegebenen Parameter.  
   
-##  <a name="create"></a>CMFCPropertyGridCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridCtrl::Create  
  Erstellt eine Eigenschaftenraster-Steuerelement, und fügt ihn Eigenschaft Raster Steuerelementobjekts.  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL Create(
  Die ID des untergeordneten Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Fenster erfolgreich erstellt wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn das Fenster erfolgreich erstellt wurde. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Erstellung eines Eigenschaftenraster-Steuerelement, das beim ersten Aufruf [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) So erstellen Sie ein Raster Eigenschaftenobjekt. Rufen Sie anschließend `CMFCPropertyGridCtrl::Create`.  
@@ -474,7 +469,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
   
-##  <a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+##  <a name="deleteproperty"></a>  CMFCPropertyGridCtrl::DeleteProperty  
  Löscht die angegebene Eigenschaft aus dem Eigenschaftenraster-Steuerelement.  
   
 ```  
@@ -489,18 +484,18 @@ BOOL DeleteProperty(
  Ein Zeiger auf eine Eigenschaft.  
   
  [in] `bRedraw`  
- `TRUE`um das Eigenschaftenraster-Steuerelement neu gezeichnet werden; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` um das Eigenschaftenraster-Steuerelement neu gezeichnet werden; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
  [in] `bAdjustLayout`  
- `TRUE`neu berechnen, wie zeichnen den Text, Bilder und Elemente in das Eigenschaftenraster-Steuerelement, und zeichnen Sie dann auf das Steuerelement; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` neu berechnen, wie zeichnen den Text, Bilder und Elemente in das Eigenschaftenraster-Steuerelement, und zeichnen Sie dann auf das Steuerelement; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Eigenschaft, und alle zugehörigen untergeordneten Elemente aus dem Eigenschaftenraster-Steuerelement zu löschen.  
   
-##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors  
 
   
 ```  
@@ -511,7 +506,7 @@ BOOL DrawControlBarColors() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+##  <a name="edititem"></a>  CMFCPropertyGridCtrl::EditItem  
  Vom Framework aufgerufen, wenn der Benutzer beginnt, eine Eigenschaft zu ändern.  
   
 ```  
@@ -528,11 +523,11 @@ virtual BOOL EditItem(
  Der Punkt in der Eigenschaftenraster-Steuerelement, das der Benutzer geklickt hat, um die Bearbeitung zu beginnen. Der Punkt ist in der Clientkoordinaten des Steuerelements. Der Standardwert ist `NULL`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn die Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+##  <a name="enabledescriptionarea"></a>  CMFCPropertyGridCtrl::EnableDescriptionArea  
  Aktiviert oder deaktiviert den Bereich der Beschreibung, der unterhalb der Liste der Eigenschaften in das Eigenschaftenraster-Steuerelement angezeigt wird.  
   
 ```  
@@ -541,12 +536,12 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie den Bereich der Beschreibung; `FALSE` Bereich der Beschreibung zu deaktivieren. Der Standardwert ist `TRUE`.  
+ `TRUE` So aktivieren Sie den Bereich der Beschreibung; `FALSE` Bereich der Beschreibung zu deaktivieren. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Beschreibungsbereich wird am unteren Rand der Eigenschaftenraster-Steuerelement angezeigt. Standardmäßig ist der Beschreibungsbereich deaktiviert und nicht sichtbar.  
   
-##  <a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+##  <a name="enableheaderctrl"></a>  CMFCPropertyGridCtrl::EnableHeaderCtrl  
  Aktiviert oder deaktiviert das Header-Steuerelement am oberen Rand der Eigenschaftenraster-Steuerelement.  
   
 ```  
@@ -558,7 +553,7 @@ void EnableHeaderCtrl(
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie das Headersteuerelement; `FALSE` Headersteuerelement deaktivieren. Der Standardwert ist `TRUE`.  
+ `TRUE` So aktivieren Sie das Headersteuerelement; `FALSE` Headersteuerelement deaktivieren. Der Standardwert ist `TRUE`.  
   
  [in] `lpszLeftColumn`  
  Der Titel der linken Spalte des Headersteuerelements. Der Standardwert ist **Eigenschaft**.  
@@ -566,7 +561,7 @@ void EnableHeaderCtrl(
  [in] `lpszRightColumn`  
  Der Titel der rechten Spalte des Headersteuerelements. Der Standardwert ist **Wert**.  
   
-##  <a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  Vom Framework aufgerufen, wenn der Benutzer hat eine Eigenschaft ändern.  
   
 ```  
@@ -575,14 +570,14 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bUpdateData`  
- `TRUE`um anzugeben, dass die Eigenschaft "Änderung" Daten überprüft werden müssen, wenn die Bearbeitungsoperation abgeschlossen ist; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` um anzugeben, dass die Eigenschaft "Änderung" Daten überprüft werden müssen, wenn die Bearbeitungsoperation abgeschlossen ist; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Bearbeitungsoperation erfolgreich beendet `FALSE` Wenn die Eigenschaft "Änderung" Daten ungültig sind oder die Bearbeitung Vorgang fortgesetzt werden soll.  
+ `TRUE` Wenn die Bearbeitungsoperation erfolgreich beendet `FALSE` Wenn die Eigenschaft "Änderung" Daten ungültig sind oder die Bearbeitung Vorgang fortgesetzt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CMFCPropertyGridCtrl::EnsureVisible  
  Verschiebt eine Eigenschaftenraster-Steuerelement und Eigenschaftenelemente erweitert, bis die angegebene Eigenschaft sichtbar ist.  
   
 ```  
@@ -596,11 +591,11 @@ void EnsureVisible(
  Ein Zeiger auf eine Eigenschaft.  
   
  [in] `bExpandParents`  
- `TRUE`Erweitern Sie übergeordneten Elemente, um die angegebene Eigenschaft sichtbar zu machen; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
+ `TRUE` Erweitern Sie übergeordneten Elemente, um die angegebene Eigenschaft sichtbar zu machen; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+##  <a name="expandall"></a>  CMFCPropertyGridCtrl::ExpandAll  
  Erweitert oder reduziert Eigenschaftsknoten "alle" (Grid-Steuerelement.  
   
 ```  
@@ -609,11 +604,11 @@ void ExpandAll(BOOL bExpand=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bExpand`  
- `TRUE`Um alle Knoten zu erweitern; `FALSE` auf alle Knoten zu reduzieren. Der Standardwert ist `TRUE`.  
+ `TRUE` Um alle Knoten zu erweitern; `FALSE` auf alle Knoten zu reduzieren. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+##  <a name="finditembydata"></a>  CMFCPropertyGridCtrl::FindItemByData  
  Ruft die Eigenschaft, die eine benutzerdefinierte gehörige `DWORD` Wert.  
   
 ```  
@@ -627,7 +622,7 @@ CMFCPropertyGridProperty* FindItemByData(
  Ein `DWORD`-Wert.  
   
  [in] `bSearchSubItems`  
- `TRUE`Unterelemente Eigenschaft gesucht werden soll. andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` Unterelemente Eigenschaft gesucht werden soll. andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Objekt zugeordnete Eigenschaft, wenn diese Methode erfolgreich ist; andernfalls `NULL`.  
@@ -635,7 +630,7 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) Konstruktor oder [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) Methode, um das Zuordnen einer `DWORD` mit der Eigenschaft.  
   
-##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount  
 
   
 ```  
@@ -649,7 +644,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus  
 
   
 ```  
@@ -663,7 +658,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp  
 
   
 ```  
@@ -680,7 +675,7 @@ virtual HRESULT get_accHelp(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic  
 
   
 ```  
@@ -699,7 +694,7 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut  
 
   
 ```  
@@ -716,7 +711,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection  
 
   
 ```  
@@ -730,7 +725,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CMFCPropertyGridCtrl::GetBkColor  
  Ruft die Hintergrundfarbe des die aktuelle Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -743,7 +738,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die Farbe, die das Framework verwendet, um das Zeichnen des Hintergrunds für die aktuelle Eigenschaftenraster-Steuerelement ab. Die [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) Methode ruft die Vordergrundfarbe ab.  
   
-##  <a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+##  <a name="getboldfont"></a>  CMFCPropertyGridCtrl::GetBoldFont  
  Ruft ab, die Windows-Schriftart, die zum Zeichnen des Texts in der aktuellen Eigenschaftenraster-Steuerelement in fett verwendet wird.  
   
 ```  
@@ -753,7 +748,7 @@ CFont& GetBoldFont();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf eine [CFont](../../mfc/reference/cfont-class.md) -Objekt, das die Eigenschaften des fett formatierter Schrift beschreibt.  
   
-##  <a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+##  <a name="getcursel"></a>  CMFCPropertyGridCtrl::GetCurSel  
  Ruft die aktuell ausgewählte Eigenschaft ab.  
   
 ```  
@@ -765,7 +760,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+##  <a name="getcustomcolors"></a>  CMFCPropertyGridCtrl::GetCustomColors  
  Ruft die benutzerdefinierten Farben, die aktuell für Eigenschaftenelemente Grid-Steuerelement definiert sind.  
   
 ```  
@@ -804,7 +799,7 @@ void GetCustomColors(
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) Methode, um benutzerdefinierte Farben.  
   
-##  <a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+##  <a name="getdescriptionheight"></a>  CMFCPropertyGridCtrl::GetDescriptionHeight  
  Ruft die Höhe der Bereich der Beschreibung, das sich am unteren Rand der Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -819,7 +814,7 @@ int GetDescriptionHeight() const;
   
  Verwenden der [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) Methode zum Anzeigen oder Ausblenden der Bereich der Beschreibung. Verwenden der [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) Methode, um zu bestimmen, ob der Bereich der Beschreibung angezeigt oder ausgeblendet wird.  
   
-##  <a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+##  <a name="getdescriptionrows"></a>  CMFCPropertyGridCtrl::GetDescriptionRows  
  Ruft die Anzahl der Zeilen im Bereich der Beschreibung der aktuellen Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -832,7 +827,7 @@ int GetDescriptionRows() const;
 ### <a name="remarks"></a>Hinweise  
  Die [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) Konstruktor initialisiert den Beschreibungsbereich auf 3 Zeilen.  
   
-##  <a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCPropertyGridCtrl::GetHeaderCtrl  
  Ruft das interne [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) Objekt, das Framework verwendet, um die aktuellen Eigenschaftenraster-Steuerelement anzuzeigen.  
   
 ```  
@@ -842,7 +837,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf ein `CMFCHeaderCtrl`-Objekt.  
   
-##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+##  <a name="getheaderheight"></a>  CMFCPropertyGridCtrl::GetHeaderHeight  
  Ruft die Höhe des Headers einer Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -854,7 +849,7 @@ int GetHeaderHeight() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+##  <a name="getleftcolumnwidth"></a>  CMFCPropertyGridCtrl::GetLeftColumnWidth  
  Ruft ab, der die Breite der linken Spalte mit der aktuellen Eigenschaftenraster-Steuerelement, das den Namen jeder Eigenschaft enthält.  
   
 ```  
@@ -867,7 +862,7 @@ int GetLeftColumnWidth() const;
 ### <a name="remarks"></a>Hinweise  
  Die rechte Spalte von einem Eigenschaftenraster-Steuerelement enthält den Wert der einzelnen Eigenschaften.  
   
-##  <a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+##  <a name="getlistrect"></a>  CMFCPropertyGridCtrl::GetListRect  
  Ruft das umschließende Rechteck der Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -879,7 +874,7 @@ CRect GetListRect() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+##  <a name="getproperty"></a>  CMFCPropertyGridCtrl::GetProperty  
  Ruft einen Zeiger auf das Property-Objekt, das den angegebenen Index eines Elements in einem Eigenschaftenraster-Steuerelement entspricht.  
   
 ```  
@@ -897,7 +892,7 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+##  <a name="getpropertycolumnwidth"></a>  CMFCPropertyGridCtrl::GetPropertyColumnWidth  
  Ruft die aktuelle Breite der Spalte, die Eigenschaftswerte enthält.  
   
 ```  
@@ -910,7 +905,7 @@ int GetPropertyColumnWidth() const;
 ### <a name="remarks"></a>Hinweise  
  Die Spalte auf der rechten Seite in das Eigenschaftenraster-Steuerelement enthält die Eigenschaftswerte. Ein Kunde kann das Teilen von dem Eigenschaftenraster-Steuerelement verwenden, um die Breite der Wertespalte zu ändern.  
   
-##  <a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+##  <a name="getpropertycount"></a>  CMFCPropertyGridCtrl::GetPropertyCount  
  Ruft die Anzahl der Eigenschaften in einem Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -922,7 +917,7 @@ int GetPropertyCount() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCPropertyGridCtrl::GetRowHeight  
  Ruft die Höhe einer Zeile in das Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -935,7 +930,7 @@ int GetRowHeight() const;
 ### <a name="remarks"></a>Hinweise  
  Die Höhe einer Zeile ist gleich der aktuellen Schriftarthöhe sowie 4 Pixel.  
   
-##  <a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCPropertyGridCtrl::GetScrollBarCtrl  
  Ruft einen Zeiger auf das Bildlaufleisten-Steuerelement in das Eigenschaftenraster-Steuerelement ab.  
   
 ```  
@@ -952,7 +947,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um direkten Zugriff auf das vertikale Bildlaufleisten-Steuerelement.  
   
-##  <a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>  CMFCPropertyGridCtrl::GetTextColor  
  Ruft die Farbe, die zum Zeichnen des Texts Eigenschaftselemente in der aktuellen Eigenschaftenraster-Steuerelement verwendet wird.  
   
 ```  
@@ -965,7 +960,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die Farbe, die das Framework zum Zeichnen des Vordergrunds des die aktuelle Eigenschaftenraster-Steuerelement verwendet ab. Die [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) Methode ruft die Farbe des Hintergrunds ab.  
   
-##  <a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+##  <a name="hittest"></a>  CMFCPropertyGridCtrl::HitTest  
  Ruft einen Zeiger auf die Eigenschaftenobjekt, das eine Eigenschaft Grid-Steuerelement ein Element entspricht, ist von ein bestimmten Punkt im Element ab. Diese Methode gibt auch den Bereich in das Eigenschaftenraster-Steuerelement, das den Punkt enthält.  
   
 ```  
@@ -983,7 +978,7 @@ CMFCPropertyGridProperty* HitTest(
  Ein Zeiger auf eine `ClickArea` Variable. Wenn diese Methode zurückgibt, gibt die Variable an die *Eigenschaft Bereich* , die den angegebenen Punkt enthält. Weitere Informationen zu einem Eigenschaft-Bereich finden Sie unter "Hinweise".  
   
  [in] `bPropsOnly`  
- `TRUE`So testen Sie nur die Eigenschaft Bereich; `FALSE` zum Testen der *Beschreibungsbereich* , wenn der angegebene Punkt nicht im Bereich "Eigenschaft" ist. Der Standardwert ist `FALSE`. Weitere Informationen zu den Beschreibungsbereich finden Sie unter "Hinweise".  
+ `TRUE` So testen Sie nur die Eigenschaft Bereich; `FALSE` zum Testen der *Beschreibungsbereich* , wenn der angegebene Punkt nicht im Bereich "Eigenschaft" ist. Der Standardwert ist `FALSE`. Weitere Informationen zu den Beschreibungsbereich finden Sie unter "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die `bPropsOnly` Parameter ist `TRUE` und der angegebene Punkt in einem Eigenschaft-Bereich, der Rückgabewert ist ein Zeiger auf das entsprechende Eigenschaftenobjekt. Darüber hinaus die `pnArea` Parameter festgelegt ist, die bestimmten Bereich, der den angegebenen Punkt enthält. Der Rückgabewert hingegen ist `NULL` und die `pnArea` Parameter wird nicht geändert.  
@@ -1002,7 +997,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickValue`|Der Eigenschaftswert.|  
 |`CMFCPropertyGridProperty::ClickDescription`|Eigenschaft Raster Beschreibung Steuerelementbereich.|  
   
-##  <a name="init"></a>CMFCPropertyGridCtrl::Init  
+##  <a name="init"></a>  CMFCPropertyGridCtrl::Init  
  Wird aufgerufen, durch das Framework eine Eigenschaftenraster-Steuerelement zu initialisieren.  
   
 ```  
@@ -1011,14 +1006,14 @@ virtual void Init();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+##  <a name="initheader"></a>  CMFCPropertyGridCtrl::InitHeader  
  Initialisiert die internen [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) Objekt, das Framework verwendet, um die aktuellen Eigenschaftenraster-Steuerelement anzuzeigen.  
   
 ```  
 virtual void InitHeader();
 ```  
   
-##  <a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+##  <a name="isalphabeticmode"></a>  CMFCPropertyGridCtrl::IsAlphabeticMode  
  Gibt an, ob ein Eigenschaftenraster-Steuerelement im alphabetischen Modus befindet.  
   
 ```  
@@ -1026,14 +1021,14 @@ BOOL IsAlphabeticMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Eigenschaftenraster-Steuerelement in der alphabetischen Modus ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Eigenschaftenraster-Steuerelement in der alphabetischen Modus ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Eigenschaftenraster-Steuerelement im alphabetischen Modus befindet, werden alle Eigenschaften durch ihre Namen alphabetisch sortiert. Andernfalls werden Eigenschaften unter ihre übergeordneten Knoten gruppiert.  
   
  Verwenden der [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) Methode zum Aktivieren oder Deaktivieren von alphabetischen Modus.  
   
-##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
 
   
 ```  
@@ -1044,7 +1039,7 @@ BOOL IsAlwaysShowUserToolTip() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+##  <a name="isdescriptionarea"></a>  CMFCPropertyGridCtrl::IsDescriptionArea  
  Gibt an, ob der Bereich der Beschreibung des dem Eigenschaftenraster-Steuerelement angezeigt wird.  
   
 ```  
@@ -1052,12 +1047,12 @@ BOOL IsDescriptionArea() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Bereich der Beschreibung angezeigt wird. andernfalls `FALSE`.  
+ `TRUE` Wenn der Bereich der Beschreibung angezeigt wird. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) Methode, um den Bereich der Beschreibung anzeigen oder ausblenden.  
   
-##  <a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+##  <a name="isgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::IsGroupNameFullWidth  
  Gibt an, ob jeder Eigenschaftsname für die Gruppe über die Breite des die aktuelle Eigenschaftenraster-Steuerelement angezeigt wird.  
   
 ```  
@@ -1065,12 +1060,12 @@ BOOL IsGroupNameFullWidth() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Gruppennamen über die Breite des Eigenschaftenraster-Steuerelement angezeigt werden. `FALSE` wenn Gruppennamen, nach der Spalte rechts (Wert) des Steuerelements abgeschnitten werden.  
+ `TRUE` Wenn Gruppennamen über die Breite des Eigenschaftenraster-Steuerelement angezeigt werden. `FALSE` wenn Gruppennamen, nach der Spalte rechts (Wert) des Steuerelements abgeschnitten werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein *Gruppe* ist eine Auflistung von zugehörigen Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* wird als Kategorietitel in der Zeile über der Gruppe angezeigt.  
   
-##  <a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+##  <a name="isheaderctrl"></a>  CMFCPropertyGridCtrl::IsHeaderCtrl  
  Gibt an, ob das Headersteuerelement angezeigt wird.  
   
 ```  
@@ -1078,12 +1073,12 @@ BOOL IsHeaderCtrl() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Header-Steuerelement angezeigt wird; andernfalls `FALSE`.  
+ `TRUE` Wenn der Header-Steuerelement angezeigt wird; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl) Methode, um das Headersteuerelement anzeigen oder ausblenden.  
   
-##  <a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+##  <a name="ismarkmodifiedproperties"></a>  CMFCPropertyGridCtrl::IsMarkModifiedProperties  
  Gibt an, wie das Eigenschaftenraster-Steuerelement geänderte Eigenschaften anzeigt.  
   
 ```  
@@ -1091,11 +1086,11 @@ BOOL IsMarkModifiedProperties() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn fett verwendet wird, um die Anzeige geänderte Eigenschaften; `FALSE` regulären Format zur Anzeige von Eigenschaften geändert.  
+ `TRUE` Wenn fett verwendet wird, um die Anzeige geänderte Eigenschaften; `FALSE` regulären Format zur Anzeige von Eigenschaften geändert.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+##  <a name="isshowdragcontext"></a>  CMFCPropertyGridCtrl::IsShowDragContext  
  Gibt an, ob das Framework zeichnet die Spalten Name und Wert der aktuellen Eigenschaftenraster-Steuerelement aus, wenn ein Benutzer die Größe der Spalten ändert.  
   
 ```  
@@ -1103,12 +1098,12 @@ BOOL IsShowDragContext() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Framework während eines Vorgangs zum Ändern der Größe; zeichnet die Spalten Name und Wert neu `FALSE` Wenn das Framework die Spalten neu zeichnet, nach Abschluss des Ziehvorgangs.  
+ `TRUE` Wenn das Framework während eines Vorgangs zum Ändern der Größe; zeichnet die Spalten Name und Wert neu `FALSE` Wenn das Framework die Spalten neu zeichnet, nach Abschluss des Ziehvorgangs.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Benutzer kann die Spalten Name und der Wert von einem Eigenschaftenraster-Steuerelement durch Ziehen der Leiste für geteilte, die zwischen den Spalten ändern. Wenn ziehen Kontext angezeigt wird, werden die Spalten Name und Wert geändert, solange der Benutzer die Leiste für geteilte zieht. Andernfalls Leiste für geteilte verschiebt, sondern die Spalten werden nicht bis zum Abschluss des Ziehvorgangs neu gezeichnet.  
   
-##  <a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+##  <a name="isvsdotnetlook"></a>  CMFCPropertyGridCtrl::IsVSDotNetLook  
  Gibt an, ob die Darstellung des Eigenschaftenraster-Steuerelement im Stil von Visual Studio .NET ist.  
   
 ```  
@@ -1116,12 +1111,12 @@ BOOL IsVSDotNetLook() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Eigenschaftenraster-Steuerelement im Stil von Visual Studio .NET ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Eigenschaftenraster-Steuerelement im Stil von Visual Studio .NET ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) Methode, um den Stil von Visual Studio .NET das Eigenschaftenraster-Steuerelement fest.  
   
-##  <a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+##  <a name="markmodifiedproperties"></a>  CMFCPropertyGridCtrl::MarkModifiedProperties  
  Gibt an, wie geänderte Eigenschaften anzuzeigen.  
   
 ```  
@@ -1132,14 +1127,14 @@ void MarkModifiedProperties(
   
 ### <a name="parameters"></a>Parameter  
  [in] `bMark`  
- `TRUE`anzuzeigende Änderung in fett; `FALSE` geänderte Eigenschaften im regulären Format angezeigt. Der Standardwert ist `TRUE`.  
+ `TRUE` anzuzeigende Änderung in fett; `FALSE` geänderte Eigenschaften im regulären Format angezeigt. Der Standardwert ist `TRUE`.  
   
  [in] `bRedraw`  
- `TRUE`um sofort Neuzeichnen der Eigenschaftenraster-Steuerelement andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` um sofort Neuzeichnen der Eigenschaftenraster-Steuerelement andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+##  <a name="onchangeselection"></a>  CMFCPropertyGridCtrl::OnChangeSelection  
  Vom Framework aufgerufen, wenn die aktuelle Auswahl geändert wird.  
   
 ```  
@@ -1158,7 +1153,7 @@ virtual void OnChangeSelection(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode wird keine Aktion ausgeführt.  
   
-##  <a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCPropertyGridCtrl::OnClickButton  
  Vom Framework aufgerufen, wenn eine Eigenschaft geklickt wird.  
   
 ```  
@@ -1172,7 +1167,7 @@ virtual void OnClickButton(CPoint point);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig aktualisiert diese Methode den aktuellen Eigenschaftenwert.  
   
-##  <a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCPropertyGridCtrl::OnDrawBorder  
  Wird aufgerufen, durch das Framework einen Rahmen um eine Eigenschaftenraster-Steuerelement gezeichnet werden soll.  
   
 ```  
@@ -1185,7 +1180,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCPropertyGridCtrl::OnDrawDescription  
  Wird aufgerufen, durch das Framework Bereich der Beschreibung zu zeichnen und die Description-Text anzuzeigen.  
   
 ```  
@@ -1204,7 +1199,7 @@ virtual void OnDrawDescription(
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) Methode, um den Beschreibungsbereich anzuzeigen.  
   
-##  <a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+##  <a name="ondrawlist"></a>  CMFCPropertyGridCtrl::OnDrawList  
  Wird aufgerufen, durch das Framework, um die Liste der Eigenschaften in das Eigenschaftenraster-Steuerelement anzuzeigen.  
   
 ```  
@@ -1217,7 +1212,7 @@ virtual void OnDrawList(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+##  <a name="ondrawproperty"></a>  CMFCPropertyGridCtrl::OnDrawProperty  
  Wird aufgerufen, durch das Framework eine Eigenschaft an.  
   
 ```  
@@ -1234,11 +1229,11 @@ virtual int OnDrawProperty(
  Ein Zeiger auf ein Eigenschaftenobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+##  <a name="onpropertychanged"></a>  CMFCPropertyGridCtrl::OnPropertyChanged  
  Vom Framework aufgerufen, wenn der Wert einer Eigenschaft geändert wird.  
   
 ```  
@@ -1252,7 +1247,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig sendet diese Methode die [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) Nachricht an den Besitzer des Eigenschaftenraster-Steuerelement.  
   
-##  <a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+##  <a name="onselectcombo"></a>  CMFCPropertyGridCtrl::OnSelectCombo  
  Vom Framework aufgerufen, wenn eine Eigenschaft, die ein Kombinationsfeld-Steuerelement ausgewählt ist.  
   
 ```  
@@ -1261,7 +1256,7 @@ void OnSelectCombo();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+##  <a name="removeall"></a>  CMFCPropertyGridCtrl::RemoveAll  
  Entfernt alle Property-Objekte aus einem Eigenschaftenraster-Steuerelement.  
   
 ```  
@@ -1270,7 +1265,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+##  <a name="resetoriginalvalues"></a>  CMFCPropertyGridCtrl::ResetOriginalValues  
  Stellt die ursprünglichen Werte aller Eigenschaften an.  
   
 ```  
@@ -1279,11 +1274,11 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bRedraw`  
- `TRUE`zum Neuzeichnen der Eigenschaftenliste andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` zum Neuzeichnen der Eigenschaftenliste andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+##  <a name="setalphabeticmode"></a>  CMFCPropertyGridCtrl::SetAlphabeticMode  
  Legt fest oder setzt alphabetischen Modus zurück.  
   
 ```  
@@ -1292,12 +1287,12 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bSet`  
- `TRUE`zum Festlegen der Standardeinstellungen alphabetischen Modus; `FALSE` alphabetischen Zurücksetzmodus. Der Standardwert ist `TRUE`.  
+ `TRUE` zum Festlegen der Standardeinstellungen alphabetischen Modus; `FALSE` alphabetischen Zurücksetzmodus. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Eigenschaftenraster-Steuerelement im alphabetischen Modus befindet, sortiert das Steuerelement die Eigenschaften, die sie den Namen ihrer Eigenschaft enthält.  
   
-##  <a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+##  <a name="setboollabels"></a>  CMFCPropertyGridCtrl::SetBoolLabels  
  Gibt den Text der booleschen Bezeichnungen.  
   
 ```  
@@ -1315,7 +1310,7 @@ void SetBoolLabels(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+##  <a name="setcursel"></a>  CMFCPropertyGridCtrl::SetCurSel  
  Wählt eine Eigenschaft in einem Eigenschaftenraster-Steuerelement aus.  
   
 ```  
@@ -1329,12 +1324,12 @@ void SetCurSel(
  Ein Zeiger auf ein Eigenschaftenobjekt.  
   
  [in] `bRedraw`  
- `TRUE`um sofort Neuzeichnen der Eigenschaftenraster-Steuerelement andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` um sofort Neuzeichnen der Eigenschaftenraster-Steuerelement andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Aufheben der Auswahl des aktuellen Elements in dem Eigenschaftenraster-Steuerelement, und wählen Sie dann das Element, das der angegebenen Eigenschaft entspricht.  
   
-##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+##  <a name="setcustomcolors"></a>  CMFCPropertyGridCtrl::SetCustomColors  
  Gibt benutzerdefinierte Farben für die verschiedenen Elemente von dem Eigenschaftenraster-Steuerelement an.  
   
 ```  
@@ -1375,7 +1370,7 @@ void SetCustomColors(
   
  Um die Darstellung einer bestimmten Eigenschaft anzupassen, leiten Sie eine Klasse von der [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) Klasse, und klicken Sie dann überschreiben die [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [ Cmfcpropertygridproperty:: Ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox), und [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) Methoden.  
   
-##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows  
  Gibt die Anzahl der Zeilen im Beschreibungsabschnitt des die aktuelle Eigenschaftenraster-Steuerelement angezeigt.  
   
 ```  
@@ -1386,7 +1381,7 @@ void SetDescriptionRows(int nDescRows);
  [in] `nDescRows`  
  Die Anzahl der Zeilen in der Beschreibung der Eigenschaft angezeigt.  
   
-##  <a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  Gibt an, ob die gesamte Breite des den Kategorienamen für eine Gruppe von Eigenschaften in der aktuellen Eigenschaftenraster-Steuerelement angezeigt werden soll.  
   
 ```  
@@ -1397,17 +1392,17 @@ void SetGroupNameFullWidth(
   
 ### <a name="parameters"></a>Parameter  
  [in] `bGroupNameFullWidth`  
- `TRUE`um die vollständige Breite neben dem Kategorienamen unabhängig von der Breite der Spalte Name Eigenschaft anzuzeigen. `FALSE`um die Breite der Namen der Kategorie, der die Breite der Eigenschaft Name-Spalte zu beschränken. Der Standardwert ist `TRUE`.  
+ `TRUE` um die vollständige Breite neben dem Kategorienamen unabhängig von der Breite der Spalte Name Eigenschaft anzuzeigen. `FALSE` um die Breite der Namen der Kategorie, der die Breite der Eigenschaft Name-Spalte zu beschränken. Der Standardwert ist `TRUE`.  
   
  [in] `bRedraw`  
- `TRUE`um das Eigenschaftenraster-Steuerelement sofort zu aktualisieren; `FALSE` das Steuerelement zu aktualisieren, wenn das nächste Neuzeichnen Ereignis auftritt. Der Standardwert ist `TRUE`.  
+ `TRUE` um das Eigenschaftenraster-Steuerelement sofort zu aktualisieren; `FALSE` das Steuerelement zu aktualisieren, wenn das nächste Neuzeichnen Ereignis auftritt. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Eigenschaftenraster-Steuerelement besteht aus einem in der Größe veränderbaren *Eigenschaftsname* Spalte und eine *Eigenschaftswert* Spalte. Das Ende der Namensspalte ist auch am Anfang der Value-Spalte. Ziehen Sie zum Ändern der Größe der Spalten den Rand zwischen den Spalten.  
   
  Die Begriffe *Gruppenname* und *Kategorienamen* werden in dieser Methode synonym verwendet. Den Namen der Kategorie wird in einer Zeile angezeigt, die eine Reihe von verwandten Eigenschaften und Werte Achtung. Diese Methode gibt an, ob die Breite der Spalte Name Eigenschaft auch die Breite des Kategorienamens angezeigt gibt.  
   
-##  <a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+##  <a name="setlistdelimiter"></a>  CMFCPropertyGridCtrl::SetListDelimiter  
  Definiert ein Zeichen, das als Trennzeichen in einer Liste von Eigenschaftswerten verwendet wird.  
   
 ```  
@@ -1423,7 +1418,7 @@ void SetListDelimiter(TCHAR c);
   
  Wird standardmäßig die [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) Konstruktor legt die Trennzeichen, Komma (',').  
   
-##  <a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+##  <a name="setshowdragcontext"></a>  CMFCPropertyGridCtrl::SetShowDragContext  
  Gibt an, ob das Framework zeichnet die Spalten Name und Wert der aktuellen Eigenschaftenraster-Steuerelement aus, wenn ein Benutzer die Größe der Spalten ändert.  
   
 ```  
@@ -1432,12 +1427,12 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bShowDragContext`  
- `TRUE`die Spalten Name und Wert während eines Vorgangs zum Ändern der Größe neu zeichnet; `FALSE` Spalten neu zeichnet, nach Abschluss des Ziehvorgangs. Der Standardwert ist `TRUE`.  
+ `TRUE` die Spalten Name und Wert während eines Vorgangs zum Ändern der Größe neu zeichnet; `FALSE` Spalten neu zeichnet, nach Abschluss des Ziehvorgangs. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Benutzer kann die Spalten Name und der Wert von einem Eigenschaftenraster-Steuerelement durch Ziehen der Leiste für geteilte, die zwischen den Spalten ändern. Wenn ziehen Kontext angezeigt wird, werden die Spalten Name und Wert geändert, solange der Benutzer die Leiste für geteilte zieht. Andernfalls Leiste für geteilte verschiebt, sondern die Spalten werden nicht bis zum Abschluss des Ziehvorgangs neu gezeichnet.  
   
-##  <a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+##  <a name="setvsdotnetlook"></a>  CMFCPropertyGridCtrl::SetVSDotNetLook  
  Legt die Darstellung des Eigenschaftenraster-Steuerelement auf das Format, das in Visual Studio .NET verwendet wird.  
   
 ```  
@@ -1446,11 +1441,11 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bSet`  
- `TRUE`um das Eigenschaftenraster-Steuerelement das Format fest, die in Visual Studio .NET verwendet wird; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ `TRUE` um das Eigenschaftenraster-Steuerelement das Format fest, die in Visual Studio .NET verwendet wird; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+##  <a name="updatecolor"></a>  CMFCPropertyGridCtrl::UpdateColor  
  Legt den Farbwert der Eigenschaft zurzeit ausgewählte Farbe an.  
   
 ```  
@@ -1464,7 +1459,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode bestätigt im Debugmodus, wenn die aktuell ausgewählte Eigenschaft neben dem Rastersteuerelement für die Eigenschaft keine Farbeigenschaft ist.  
   
-##  <a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+##  <a name="validateitemdata"></a>  CMFCPropertyGridCtrl::ValidateItemData  
  Vom Framework aufgerufen wird, überprüfen Sie die Eigenschaftendaten.  
   
 ```  

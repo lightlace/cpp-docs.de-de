@@ -1,13 +1,10 @@
 ---
-title: "TN053: Benutzereigene DFX-Routinen für DAO-Klassen-Datenbank | Microsoft Docs"
-ms.custom: 
+title: 'TN053: Benutzereigene DFX-Routinen für DAO-Klassen-Datenbank | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Benutzereigene DFX-Routinen für DAO-Datenbankklassen
 > [!NOTE]
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  DFX und dynamische Bindung sind nicht gegenseitig aus, damit eine hybride statische und dynamische Bindung verwendet werden können.  
   
-## <a name="_mfcnotes_tn053_examples"></a>Beispiel 1: Verwendung von DAO-Datensatzfeldaustausch nur  
+## <a name="_mfcnotes_tn053_examples"></a> Beispiel 1: Verwendung von DAO-Datensatzfeldaustausch nur  
   
  (geht davon aus `CDaoRecordset` – abgeleitete Klasse `CMySet` bereits geöffnet)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>Funktionsweise von DFX  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> Funktionsweise von DFX  
   
  Der DFX-Mechanismus funktioniert in ähnlicher Weise wie Datensatzfeldaustausch (RFX) Austauschmechanismus von den MFC-ODBC-Klassen verwendet. Die Prinzipien des DFX und RFX sind identisch, aber es gibt zahlreiche interne Unterschiede. Das Design der DFX-Funktionen war, nahezu alle Code von den einzelnen DFX-Routinen gemeinsam verwendet wird. Führt Sie auf der höchsten Ebene DFX nur wenige Aufgaben aus.  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO wird auch "in der Aufrufer für Spalten variabler Länge Rückruf" damit den Aufrufer belegt werden kann. Diese zweite Funktion hat den Vorteil der Minimierung der Anzahl von Kopien der Daten als auch ermöglicht direkte Speicherung von Daten in die Member einer Klasse (die `CDaoRecordset` abgeleitete Klasse). Diese zweite Mechanismus besteht die Methode MFC verwendet-Datenmember in binden `CDaoRecordset` abgeleitete Klassen.  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>Was bewirkt, dass Ihre benutzerdefinierte DFX-Routine  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> Was bewirkt, dass Ihre benutzerdefinierte DFX-Routine  
  Ist es offensichtlich, aus dieser Diskussion, die der wichtigste Vorgang, der in jeder DFX-Funktion implementiert die Möglichkeit, die gegebenenfalls Datenstrukturen einzurichten, erfolgreich aufgerufen werden muss, `GetRows`. Es gibt diverse andere Vorgänge, die eine DFX-Funktion sowie unterstützen muss, jedoch keine als wichtige oder komplex wie ordnungsgemäß Vorbereiten für die `GetRows` aufrufen.  
   
  Die Verwendung von DFX wird in der Onlinedokumentation beschrieben. Es gibt im Wesentlichen zwei Anforderungen. Zunächst müssen Elemente hinzugefügt werden, um die `CDaoRecordset` abgeleiteten Klasse jedes gebundenen Feld und die Parameter. Befolgen Sie diese `CDaoRecordset::DoFieldExchange` sollte außer Kraft gesetzt werden. Beachten Sie, dass der Datentyp des Elements wichtig ist. Sie sollten die Daten aus dem Feld in der Datenbank übereinstimmen oder mindestens auf diesen Typ konvertiert werden. Z. B. ein numerisches Feld in der Datenbank, z. B. eine lange ganze Zahl kann immer in Text umgewandelt und an gebunden eine `CString` Member, aber ein Textfeld in einer Datenbank kann nicht unbedingt in eine numerische Darstellung, wie z. B. long integer-Wert konvertiert und an eine lange Integ gebunden er Mitglied. DAO und das Microsoft Jet-Datenbankmodul sind verantwortlich für die Konvertierung (anstelle von MFC-).  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>Details der DFX_Text  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Details der DFX_Text  
  Wie bereits erwähnt, ist die beste Möglichkeit zur Erläuterung der Funktionsweise von DFX über ein Beispiel zu arbeiten. Zu diesem Zweck im Rahmen der durchlaufen `DFX_Text` sollte sehr gut funktionieren, so mindestens ein grundlegendes Verständnis der DFX bereitzustellen.  
   
  **AddToParameterList**  

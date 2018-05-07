@@ -1,13 +1,10 @@
 ---
 title: 'Server: Implementieren von Serverdokumenten | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>Server: Implementieren von Serverdokumenten
 Dieser Artikel beschreibt die Schritte, die Sie ausführen müssen, um erfolgreich Serverdokument implementieren, wenn Sie nicht die OLE-Serveroption im Anwendungs-Assistenten angegeben haben.  
@@ -39,7 +34,7 @@ Dieser Artikel beschreibt die Schritte, die Sie ausführen müssen, um erfolgrei
   
 3.  Implementieren der `OnGetEmbeddedItem` Memberfunktion der Klasse Dokument Server.  
   
-     `OnGetEmbeddedItem`wird aufgerufen, wenn der Benutzer eine Steuerelementcontainer-Anwendung erstellt oder ein eingebettetes Element bearbeitet. Es sollte ein Element, das das gesamte Dokument darstellt, zurückgegeben. Dies muss ein Objekt des Ihrer `COleServerItem`-Klasse.  
+     `OnGetEmbeddedItem` wird aufgerufen, wenn der Benutzer eine Steuerelementcontainer-Anwendung erstellt oder ein eingebettetes Element bearbeitet. Es sollte ein Element, das das gesamte Dokument darstellt, zurückgegeben. Dies muss ein Objekt des Ihrer `COleServerItem`-Klasse.  
   
 4.  Überschreiben der `Serialize` Memberfunktion, um den Inhalt des Dokuments zu serialisieren. Sie müssen nicht die Liste der Elemente des Servers zu serialisieren, es sei denn, Sie sie verwenden die systemeigenen Daten in Ihrem Dokument darstellen. Weitere Informationen finden Sie unter *Serverelement implementieren* im Artikel [Server: Serverelemente](../mfc/servers-server-items.md).  
   

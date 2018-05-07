@@ -1,12 +1,9 @@
 ---
 title: CMFCPreviewCtrlImpl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8def8a8085bebdd09ce58cb6d9abd026fe713fe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl-Klasse
 Diese Klasse implementiert ein Fenster, das in einem von der Shell for Rich Preview bereitgestellten Hostfenster platziert wird.  
@@ -116,13 +111,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 Erstellt ein Objekt der Preview-Steuerelement.
 
 ### <a name="syntax"></a>Syntax
 CMFCPreviewCtrlImpl();  
 
-## <a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a> CMFCPreviewCtrlImpl::Create
 Überladen. Wird aufgerufen, von einem Rich Preview-Handler, um das Windows-Fenster zu erstellen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -150,9 +145,9 @@ virtual BOOL Create(
  Ein Zeiger auf einen Kontext für die Erstellung.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Bei erfolgreicher Erstellung andernfalls `FALSE`.  
+ `TRUE` Bei erfolgreicher Erstellung andernfalls `FALSE`.  
   
-## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
 Wird von einem Rich Preview-Handler aufgerufen, wenn es zerstört das Steuerelement muss.  
   
 ### <a name="syntax"></a>Syntax  
@@ -161,7 +156,7 @@ Wird von einem Rich Preview-Handler aufgerufen, wenn es zerstört das Steuerelem
 virtual void Destroy();  
 ```  
   
-## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint  
 Vom Framework aufgerufen, die Vorschau zu rendern.  
   
 ### <a name="syntax"></a>Syntax  
@@ -177,7 +172,7 @@ virtual void DoPaint(
  Ein Zeiger auf einen Gerätekontext für das Paint-Ereignisse.  
 
 
-## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
 Setzt den Eingabefokus auf dieses Steuerelement.  
   
 ### <a name="syntax"></a>Syntax  
@@ -185,7 +180,7 @@ Setzt den Eingabefokus auf dieses Steuerelement.
 ```  
 virtual void Focus();  
 ```  
-## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 Gibt ein Dokument mit dieser Vorschausteuerelement verbunden.  
   
 ### <a name="syntax"></a>Syntax  
@@ -197,7 +192,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Dokument, das im Steuerelement zurück, deren Inhalt in der Vorschau angezeigt.
 
-## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
 Hintergrundfarbe des Vorschaufensters.  
   
 ### <a name="syntax"></a>Syntax  
@@ -206,7 +201,7 @@ Hintergrundfarbe des Vorschaufensters.
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
 Die Textfarbe des Vorschaufensters.  
   
 ### <a name="syntax"></a>Syntax  
@@ -214,14 +209,14 @@ Die Textfarbe des Vorschaufensters.
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a>CMFCPreviewCtrlImpl::m_font-Schriftart für Text in einem Vorschaufenster angezeigt.  
+## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font-Schriftart für Text in einem Vorschaufenster angezeigt.  
   
 ### <a name="syntax"></a>Syntax  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument  
 Ein Zeiger auf ein Dokument, das im Steuerelement zurück, deren Inhalt in der Vorschau angezeigt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -230,7 +225,7 @@ Ein Zeiger auf ein Dokument, das im Steuerelement zurück, deren Inhalt in der V
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw  
 Weist das Steuerelement zum Neuzeichnen an.  
   
 ### <a name="syntax"></a>Syntax  
@@ -238,7 +233,7 @@ Weist das Steuerelement zum Neuzeichnen an.
 ```  
 virtual void Redraw();  
 ```  
-## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
 Wird aufgerufen, von der Preview-Handler, der eine Beziehung zwischen der Implementierung des Dokuments und der Preview-Steuerelement zu erstellen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -253,7 +248,7 @@ void SetDocument(
  `pDocument`  
  Ein Zeiger auf die Implementierung des Dokuments.  
 
-## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
 Legt einen neuen übergeordneten für dieses Steuerelement fest.  
   
 ### <a name="syntax"></a>Syntax  
@@ -268,7 +263,7 @@ virtual void SetHost(
  `hWndParent`  
  Ein Handle für das neue übergeordnete Fenster.  
 
-## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
 Wird aufgerufen, von einem Rich Preview Handler Wenn visuelle Elemente von rich Preview festgelegt werden muss Inhalt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -291,7 +286,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  Zum Anzeigen von Text im Vorschaufenster verwendete Schriftart. 
 
-##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
 Legt einen neuen umschließenden Rechtecks für dieses Steuerelement fest.  
   
 ### <a name="syntax"></a>Syntax  
@@ -313,7 +308,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>Hinweise  
  In der Regel wird ein neues umfassende Rechteck festgelegt, wenn die Hoststeuerelements angepasst wird.  
 
-## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 Destructs ein Vorschau-Control-Objekt.  
   
 ### <a name="syntax"></a>Syntax  

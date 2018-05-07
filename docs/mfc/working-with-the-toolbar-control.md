@@ -1,13 +1,10 @@
 ---
 title: Arbeiten mit dem Toolbar-Steuerelement | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>Arbeiten mit dem ToolBar-Steuerelement
 In diesem Artikel wird erläutert, wie Sie zugreifen können die [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt zugrunde liegenden eine [CToolBar](../mfc/reference/ctoolbar-class.md) für größere Kontrolle über Ihre Symbolleisten. Dies ist ein-Thema für fortgeschrittene.  
@@ -37,7 +32,7 @@ In diesem Artikel wird erläutert, wie Sie zugreifen können die [CToolBarCtrl](
   
 1.  Rufen Sie [GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl`Gibt einen Verweis auf eine [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt. Sie können den Verweis zum Aufrufen von Memberfunktionen der Steuerelementklasse Symbolleiste verwenden.  
+ `GetToolBarCtrl` Gibt einen Verweis auf eine [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt. Sie können den Verweis zum Aufrufen von Memberfunktionen der Steuerelementklasse Symbolleiste verwenden.  
   
 > [!CAUTION]
 >  Beim Aufrufen `CToolBarCtrl` **abrufen** Funktionen sicher ist, seien Sie beim Aufrufen der **festgelegt** Funktionen. Dies ist ein-Thema für fortgeschrittene. Normalerweise müssen Sie darf nicht das zugrunde liegende Symbolleisten-Steuerelement zugreifen.  

@@ -1,13 +1,10 @@
 ---
 title: 'Ausnahmen: Datenbank-Ausnahmen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Ausnahmen: Datenbankausnahmen
 In diesem Artikel wird erläutert, wie Datenbankausnahmen behandelt. Die meisten der Materialien, die in diesem Artikel angewendet wird, ob Sie mit der MFC-Klassen für Open Database Connectivity (ODBC) oder die MFC-Klassen für Datenzugriffsobjekte (DAO) arbeiten. Materialien, die spezifisch für eine oder das andere Modell wird explizit markiert. Folgende Themen werden behandelt:  
@@ -39,7 +34,7 @@ In diesem Artikel wird erläutert, wie Datenbankausnahmen behandelt. Die meisten
   
 -   [Ein Beispiel für die Datenbank für die Ausnahmebehandlung](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Ansätze zur Behandlung von Ausnahmen  
+##  <a name="_core_approaches_to_exception_handling"></a> Ansätze zur Behandlung von Ausnahmen  
  Der Ansatz entspricht dem, ob es sich bei der Arbeit mit DAO oder ODBC.  
   
  Sie sollten immer Ausnahmehandler um Ausnahmesituationen schreiben.  
@@ -62,7 +57,7 @@ In diesem Artikel wird erläutert, wie Datenbankausnahmen behandelt. Die meisten
   
  Zusätzliche Informationen über DAO-Fehler, der Objekttyp des DAO-Fehler und DAO Errors-Auflistung finden Sie unter Klasse [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>Ein Beispiel für die Datenbank für die Ausnahmebehandlung  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> Ein Beispiel für die Datenbank für die Ausnahmebehandlung  
  Im folgenden Beispiel wird versucht, erstellen eine [CRecordset](../mfc/reference/crecordset-class.md)-abgeleitetes Objekt auf dem Heap mit der **neue** -Operator, und öffnen Sie dann das Recordset (für eine ODBC-Datenquelle). Ein ähnliches Beispiel für den DAO-Klassen Siehe "DAO Ausnahme" unten aufgeführte Beispiel.  
   
 ### <a name="odbc-exception-example"></a>Beispiel für ODBC-Ausnahmen  

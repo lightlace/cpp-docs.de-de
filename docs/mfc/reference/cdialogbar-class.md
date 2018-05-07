@@ -1,12 +1,9 @@
 ---
 title: CDialogBar-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar-Klasse
 Stellt die Funktionalität eines nicht modalen Windows-Dialogfelds in einer Steuerleiste bereit.  
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  Erstellt ein `CDialogBar`-Objekt.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  Lädt die im Dialogfeld Ressourcenvorlage gemäß `lpszTemplateName` oder `nIDTemplate`, erstellt die Dialogleiste Fenster, legt den Stil und ordnet sie der `CDialogBar` Objekt.  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  Das Toolbar-Stil. Zusätzliche Toolbar-Stile unterstützt werden:  
   
-- `CBRS_TOP`Steuerleiste wird am oberen Rand des Fensters Frame.  
+- `CBRS_TOP` Steuerleiste wird am oberen Rand des Fensters Frame.  
   
-- `CBRS_BOTTOM`Steuerleiste wird am unteren Rand der Frame-Fensters.  
+- `CBRS_BOTTOM` Steuerleiste wird am unteren Rand der Frame-Fensters.  
   
-- `CBRS_NOALIGN`Steuerleiste ist nicht neu angeordnet, wenn die übergeordnetem Element geändert wird.  
+- `CBRS_NOALIGN` Steuerleiste ist nicht neu angeordnet, wenn die übergeordnetem Element geändert wird.  
   
-- `CBRS_TOOLTIPS`Steuerleiste zeigt QuickInfos an.  
+- `CBRS_TOOLTIPS` Steuerleiste zeigt QuickInfos an.  
   
 - **CBRS_SIZE_DYNAMIC** Steuerleiste ist dynamisch.  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** Steuerleiste unverankert ist.  
   
-- `CBRS_FLYBY`Statusleiste zeigt Informationen über die Schaltfläche an.  
+- `CBRS_FLYBY` Statusleiste zeigt Informationen über die Schaltfläche an.  
   
 - **CBRS_HIDE_INPLACE** Steuerleiste ist nicht für den Benutzer angezeigt.  
   

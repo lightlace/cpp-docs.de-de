@@ -1,13 +1,10 @@
 ---
 title: 'TN032: MFC-Ausnahmemechanismus | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.exceptions
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - CException class [MFC], using
 ms.assetid: 0271f0aa-82cb-47a2-b7ea-e88126fc7e43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82d4b158cedd2d8f6916dfb01d26db6c62d83b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5256f787534ab408920f7154122ae0c5934019c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032: MFC-Ausnahmemechanismus
 Standard C++-Ausnahmemechanismus wurde von frühere Versionen von Visual C++ nicht unterstützt und MFC bereitgestellten Makros **TRY/CATCH/THROW** stattdessen verwendet wurden. C++-Ausnahmen werden von dieser Version von Visual C++ vollständig unterstützt. Dieser Hinweis behandelt einige der erweiterten Implementierungsdetails der vorherigen Makros auch das automatisch Cleanup Stapel basierte Objekte. Da C++-Ausnahmen stapelentladung standardmäßig unterstützen, ist dieser technischen Hinweis nicht mehr erforderlich.  

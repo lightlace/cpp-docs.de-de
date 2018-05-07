@@ -1,11 +1,8 @@
 ---
 title: 'Platform:: Exception-Klasse | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception-Klasse
 Stellt Fehler dar, die beim Ausführen einer Anwendung auftreten. Benutzerdefinierte Ausnahmeklassen können nicht von `Platform::Exception`abgeleitet werden. Wenn Sie eine benutzerdefinierte Ausnahme benötigen, können Sie `Platform::COMException` verwenden und ein app-spezifisches HRESULT angeben.  
@@ -47,7 +42,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[Exception::Exception](#ctor)|Initialisiert eine neue Instanz der `Exception`-Klasse.|  
+|[Exception:: Exception](#ctor)|Initialisiert eine neue Instanz der `Exception`-Klasse.|  
   
 ### <a name="methods"></a>Methoden  
  Die `Exception` -Klasse erbt die Methoden `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`und `ToString()` von [Platform::Object Class](../cppcx/platform-object-class.md)abgeleitet werden. Die `Exception` -Klasse verfügt auch über die folgende Methode.  
@@ -61,7 +56,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[Exception::HResult](#hresult)|Das HRESULT, das der Ausnahme entspricht.|  
+|[Exception:: HRESULT](#hresult)|Das HRESULT, das der Ausnahme entspricht.|  
 |[Exception::Message](#message)|Eine Meldung, in der die Ausnahme beschrieben wird. Dieser Wert ist schreibgeschützt und kann nicht geändert werden, nachdem `Exception` erstellt wurde.|  
   
 ### <a name="requirements"></a>Anforderungen  

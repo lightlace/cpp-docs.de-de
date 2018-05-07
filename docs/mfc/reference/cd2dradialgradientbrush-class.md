@@ -1,12 +1,9 @@
 ---
 title: CD2DRadialGradientBrush-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRadialGradientBrush
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdac3e2d2df31840ae90b79755b68d916033990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush-Klasse
 Ein Wrapper für ID2D1RadialGradientBrush.  
@@ -122,14 +117,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
+##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
  Der Destruktor. Wird aufgerufen, wenn ein D2D Radialer Farbverlauf Objekt zerstört wird.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="attach"></a>CD2DRadialGradientBrush::Attach  
+##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach  
  Hängt die vorhandene Ressourcenschnittstelle, um das Objekt  
   
 ```  
@@ -140,7 +135,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
  `pResource`  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
-##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
  Erstellt ein CD2DLinearGradientBrush-Objekt.  
   
 ```  
@@ -180,7 +175,7 @@ CD2DRadialGradientBrush(
  `bAutoDestroy`  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
-##  <a name="create"></a>CD2DRadialGradientBrush::Create  
+##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
  Erstellt einen CD2DRadialGradientBrush.  
   
 ```  
@@ -194,14 +189,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
+##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy  
  Zerstört ein CD2DRadialGradientBrush-Objekt.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DRadialGradientBrush::Detach  
+##  <a name="detach"></a>  CD2DRadialGradientBrush::Detach  
  Trennt Ressourcenschnittstelle aus dem Objekt  
   
 ```  
@@ -211,7 +206,7 @@ ID2D1RadialGradientBrush* Detach();
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf getrennten Ressourcenschnittstelle.  
   
-##  <a name="get"></a>CD2DRadialGradientBrush::Get  
+##  <a name="get"></a>  CD2DRadialGradientBrush::Get  
  Gibt die ID2D1RadialGradientBrush-Schnittstelle  
   
 ```  
@@ -221,7 +216,7 @@ ID2D1RadialGradientBrush* Get();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine ID2D1RadialGradientBrush-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
+##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter  
  Ruft den Mittelpunkt der Farbverlauf ellipse  
   
 ```  
@@ -231,7 +226,7 @@ CD2DPointF GetCenter() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Mitte der Farbverlauf Ellipse. Dieser Wert wird in den Pinsel Koordinatenbereich angegeben.  
   
-##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
+##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset  
  Ruft den Offset des Farbverlaufs Ursprungs relativ zu den Farbverlauf Ellipse center  
   
 ```  
@@ -241,7 +236,7 @@ CD2DPointF GetGradientOriginOffset() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Offset des Ursprungs Farbverlauf vom Mittelpunkt der Farbverlauf Ellipse. Dieser Wert wird in den Pinsel Koordinatenbereich angegeben.  
   
-##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
+##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX  
  Ruft den X-Radius der Ellipse Farbverlauf  
   
 ```  
@@ -251,7 +246,7 @@ FLOAT GetRadiusX() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der X-Radius der Ellipse Farbverlauf. Dieser Wert wird in den Pinsel Koordinatenbereich angegeben.  
   
-##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
+##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY  
  Ruft den y-Radius der Ellipse Farbverlauf  
   
 ```  
@@ -261,21 +256,21 @@ FLOAT GetRadiusY() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die y-Radius der Ellipse Farbverlauf. Dieser Wert wird in den Pinsel Koordinatenbereich angegeben.  
   
-##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
+##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush  
  Ein Zeiger auf eine ID2D1RadialGradientBrush.  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
  Das Center, Farbverlauf Ursprung Offset und X-Radius und y-Radius des Pinsels Farbverlauf des.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *  
  Gibt die ID2D1RadialGradientBrush-Schnittstelle  
   
 ```  
@@ -285,7 +280,7 @@ operator ID2D1RadialGradientBrush*();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine ID2D1RadialGradientBrush-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
+##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter  
  Gibt von der Mitte der Farbverlauf Ellipse in Koordinatenbereich des Pinsels  
   
 ```  
@@ -296,7 +291,7 @@ void SetCenter(CD2DPointF point);
  `point`  
  Das Zentrum des Farbverlaufs Ellipse in Koordinatenbereich des Pinsels  
   
-##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
+##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
  Gibt den Offset des Farbverlaufs Ursprungs relativ zu den Farbverlauf Ellipse center  
   
 ```  
@@ -307,7 +302,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
  `gradientOriginOffset`  
  Der Offset des Ursprungs Farbverlauf vom Mittelpunkt der Farbverlauf ellipse  
   
-##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
+##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
  Gibt den X-Radius der Ellipse Farbverlauf in Koordinatenbereich des Pinsels  
   
 ```  
@@ -318,7 +313,7 @@ void SetRadiusX(FLOAT radiusX);
  `radiusX`  
  Der X-Radius der Ellipse Farbverlauf. Dieser Wert wird in den Pinsel Koordinatenbereich  
   
-##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
+##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
  Gibt den y-Radius der Ellipse Farbverlauf in Koordinatenbereich des Pinsels  
   
 ```  

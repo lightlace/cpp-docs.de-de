@@ -1,12 +1,9 @@
 ---
 title: CEdit-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Stellt die Funktionalität eines Windows-Bearbeitungssteuerelements bereit.  
@@ -193,13 +188,13 @@ class CEdit : public CWnd
   
  Jede Meldungszuordnungseintrags weist folgende Form auf:  
   
- **ON_**Benachrichtigung **(** *-Id, MemberFxn ***)**  
+ **ON_** Benachrichtigung **(** *-Id, MemberFxn ***)**  
   
  wobei `id` gibt die untergeordneten Fenster-ID des Bearbeitungssteuerelements Senden der Benachrichtigung und `memberFxn` ist der Name der übergeordneten-Memberfunktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.  
   
  Das übergeordnete Funktionsprototyp lautet wie folgt:  
   
- **afx_msg** void memberFxn **( );**  
+ **Afx_msg** "void" MemberFxn **();**  
   
  Es folgt eine Liste der möglichen Meldungszuordnungseinträge und eine Beschreibung der Fälle, in denen sie zum übergeordneten Element gesendet werden:  
   
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Wenn die `SetPasswordChar` Memberfunktion aufgerufen wird, `CEdit` wird neu gezeichnet werden alle sichtbar, mit dem durch angegebene Zeichen *ch*.  
   
- Wenn das Bearbeitungssteuerelement erstellt wird, mit der [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) Format, das standardmäßige Kennwortzeichen auf ein Sternchen festgelegt ist (  **\*** ). Dieses Format wird entfernt, wenn `SetPasswordChar` aufgerufen wird und *ch* auf 0 festgelegt.  
+ Wenn das Bearbeitungssteuerelement erstellt wird, mit der [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) Format, das standardmäßige Kennwortzeichen auf ein Sternchen festgelegt ist ( **\***). Dieses Format wird entfernt, wenn `SetPasswordChar` aufgerufen wird und *ch* auf 0 festgelegt.  
   
  Weitere Informationen finden Sie unter [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) im Windows SDK.  
   

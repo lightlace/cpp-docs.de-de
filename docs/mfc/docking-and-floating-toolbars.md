@@ -1,13 +1,10 @@
 ---
 title: Andockbare und unverankerte Symbolleisten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>Andockbare und unverankerte Symbolleisten
 Die Microsoft Foundation Class-Bibliothek unterstützt die andockbare Symbolleisten. Eine andockbare Symbolleiste angefügt oder angedockt sind, klicken Sie auf jeder Seite des übergeordneten Fensters, oder es kann getrennt sein, in einem eigenen Minirahmenfenster umfließt. In diesem Artikel erläutert die andockbare Symbolleisten in Ihren Anwendungen verwenden.  
@@ -65,27 +60,27 @@ Die Microsoft Foundation Class-Bibliothek unterstützt die andockbare Symbolleis
   
  Finden Sie im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) Beispiele.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>Aktivieren des Andockens in einem Rahmenfenster  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Aktivieren des Andockens in einem Rahmenfenster  
  Symbolleisten an ein Framefenster andocken möchten, muss die Rahmenfenster (oder das Ziel) aktiviert sein, um Andocken zu ermöglichen. Dies erfolgt mithilfe der [EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) -Funktion, die eine Überladung `DWORD` bits-Parameter, der einen Satz von Stil ist, der angibt, welcher Seite des Rahmenfensters Andocken akzeptiert. Wenn eine Symbolleiste ist angedockt werden und es sind mehrere Seiten, die es angedockt werden kann, die Seiten in der an übergebene Parameter `EnableDocking` dienen in der folgenden Reihenfolge: oben, unten, links, rechts. Wenn Sie in der Lage sein soll, Steuerelement angedockt Steuerleisten überall, übergeben Sie `CBRS_ALIGN_ANY` auf `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>Aktivieren des Andockens für eine Symbolleiste  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Aktivieren des Andockens für eine Symbolleiste  
  Nachdem Sie das Ziel zum Andocken vorbereitet haben, müssen Sie die Symbolleiste (oder die Quelle) in ähnlicher Weise vorbereiten. Rufen Sie [CControlBar:: EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) Angabe des Ziels Seiten für jede Symbolleiste, das Sie andocken möchten, die die Symbolleiste angedockt werden soll. Wenn keines der Seiten, die im Aufruf angegeben `CControlBar::EnableDocking` entsprechen der Seiten, die zum Rahmenfenster Andocken aktiviert, die Symbolleiste kann nicht angedockt – es wird float. Sobald er umfließt wurde hat, bleibt er unverankerte Symbolleiste, kann die Frame-Fensters angedockt.  
   
  Wenn Sie der gewünschten Effekt dauerhaft unverankerte Symbolleiste ist, rufen Sie `EnableDocking` mit einem Parameter 0. Rufen Sie anschließend [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). Die Symbolleiste bleibt unverankert, dauerhaft kann nicht an einer beliebigen Stelle andocken.  
   
-##  <a name="_core_docking_the_toolbar"></a>Andocken der Symbolleiste  
+##  <a name="_core_docking_the_toolbar"></a> Andocken der Symbolleiste  
  Das Framework ruft [CFrameWnd:: DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) Wenn der Benutzer versucht, auf die Symbolleiste auf einer Seite des Rahmenfensters zu löschen, die andocken können.  
   
  Darüber hinaus können Sie diese Funktion zu einem beliebigen Zeitpunkt das Rahmenfenster Steuerleisten angedockt aufrufen. Dies erfolgt normalerweise während der Initialisierung. Mehr als eine Symbolleiste kann an eine bestimmte Seite des Rahmenfensters angedockt werden.  
   
-##  <a name="_core_floating_the_toolbar"></a>Lösen der Symbolleiste  
+##  <a name="_core_floating_the_toolbar"></a> Lösen der Symbolleiste  
  Trennen eine andockbare Symbolleiste vom Rahmenfenster wird aufgerufen, lösen der Symbolleiste. Rufen Sie [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) dazu. Geben Sie der Symbolleiste, um umfließt sein, den Punkt, wo es platziert werden soll, und eine Ausrichtung-Formatvorlage, die bestimmt, ob die unverankerte Symbolleiste horizontal oder vertikal ist.  
   
  Das Framework ruft diese Funktion auf, wenn ein Benutzer eine Symbolleiste deaktiviert an die Andockposition zieht und löscht ihn an einem Speicherort, in dem Andocken nicht aktiviert ist. Dies kann an einer beliebigen Stelle innerhalb oder außerhalb des Rahmenfensters sein. Wie bei `DockControlBar`, Sie können diese Funktion auch aufrufen, während der Initialisierung.  
   
  Die MFC-Implementierung von andockbare Symbolleisten bietet keine einige erweiterte Funktionen, die in einigen Anwendungen, die andockbare Symbolleisten unterstützen. Funktionen, z. B. anpassbaren Symbolleisten werden nicht bereitgestellt.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>Dynamisches Ändern der Größe der Symbolleiste  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dynamisches Ändern der Größe der Symbolleiste  
  Ab Visual C++, Version 4.0 können Sie für Benutzer der Anwendung dynamisch unverankerte Symbolleisten Größe ermöglichen. Normalerweise weist eine Symbolleiste eine Form lange, lineare, die horizontal angezeigt. Sie können jedoch ändern der Symbolleiste auf die Ausrichtung und die Form. Wenn der Benutzer eine Symbolleiste für eine der vertikalen Seiten des Rahmenfensters angedockt, ändert die Form z. B. einem vertikalen Layout. Es ist auch möglich, in ein Rechteck mit mehreren Zeilen von Schaltflächen die Symbolleiste zu strukturieren.  
   
  Sie haben folgende Möglichkeiten:  
@@ -106,7 +101,7 @@ Die Microsoft Foundation Class-Bibliothek unterstützt die andockbare Symbolleis
   
  Sie können auch [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) ein Zustand und den Stil für Schaltflächen auf der Symbolleisten zurückgeben. Eine Schaltfläche Stil bestimmt wie die Schaltfläche angezeigt wird und wie er auf Benutzereingaben reagiert. der Status gibt, ob die Schaltfläche in einem umbrochenen Zustand befindet.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>Einstellung Wrap Positionen für eine Symbolleiste-Stil  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Einstellung Wrap Positionen für eine Symbolleiste-Stil  
  Für eine Symbolleiste mit festem Format zugeordnete Symbolleiste Schaltfläche Indizes, die an denen die Symbolleiste umschlossen werden soll. Der folgende Code zeigt die Vorgehensweise hierfür in Ihrem Hauptrahmenfenster `OnCreate` außer Kraft setzen:  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  

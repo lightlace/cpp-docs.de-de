@@ -1,12 +1,9 @@
 ---
 title: CScrollBar Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollBar
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollbar-class"></a>CScrollBar-Klasse
 Stellt die Funktionalität eines Windows-Bildlaufleisten-Steuerelements bereit.  
@@ -109,7 +104,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>  CScrollBar::Create  
  Erstellt die Windows-Bildlaufleiste und fügt es der `CScrollBar` Objekt.  
   
 ```  
@@ -152,7 +147,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
  Erstellt ein `CScrollBar`-Objekt.  
   
 ```  
@@ -165,7 +160,7 @@ CScrollBar();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
  Aktiviert oder deaktiviert einen oder beide Pfeile auf einer Scrollleiste.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
  Ruft die Informationen ab, die die **SCROLLBARINFO** Struktur über eine scrollleiste verwaltet.  
   
 ```  
@@ -207,7 +202,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) Nachricht, wie im Windows SDK beschrieben.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Ruft die Informationen ab, die von der `SCROLLINFO`-Struktur über eine Scrollleiste verwaltet werden.  
   
 ```  
@@ -227,16 +222,16 @@ BOOL GetScrollInfo(
  Wenn die Nachricht keine Werte abgerufen werden, ist die Rückgabe **"true"**. Andernfalls ist **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetScrollInfo`ermöglicht es Anwendungen, 32-Bit-Bildlaufpositionen.  
+ `GetScrollInfo` ermöglicht es Anwendungen, 32-Bit-Bildlaufpositionen.  
   
  Die [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur enthält Informationen über eine Bildlaufleiste, einschließlich die Mindest- und Höchstwerte Durchführen eines Bildlaufs Positionen, die Seitengröße und die Position des Bildlauffelds (Ziehpunkt). Finden Sie unter der `SCROLLINFO` Struktur Thema in das Windows SDK für Weitere Informationen zum Ändern der Struktur Standardwerte.  
   
- Die MFC-Windows-Meldung Handler, die an der Position Bildlaufleiste, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) und [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), nur 16 Bits der Positionsdaten bereitstellen. `GetScrollInfo`und `SetScrollInfo` 32 Bits der Bildlaufleiste an Positionsdaten bereitstellen. Daher kann eine Anwendung aufrufen `GetScrollInfo` bei der Verarbeitung entweder `CWnd::OnHScroll` oder `CWnd::OnVScroll` um 32-Bit-Scroll-Leiste Positionsdaten abzurufen.  
+ Die MFC-Windows-Meldung Handler, die an der Position Bildlaufleiste, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) und [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), nur 16 Bits der Positionsdaten bereitstellen. `GetScrollInfo` und `SetScrollInfo` 32 Bits der Bildlaufleiste an Positionsdaten bereitstellen. Daher kann eine Anwendung aufrufen `GetScrollInfo` bei der Verarbeitung entweder `CWnd::OnHScroll` oder `CWnd::OnVScroll` um 32-Bit-Scroll-Leiste Positionsdaten abzurufen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
  Ruft die maximale Bildlauf Position der Bildlaufleiste ab.  
   
 ```  
@@ -249,7 +244,7 @@ int GetScrollLimit();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
  Ruft die aktuelle Position eines Scrollfelds ab.  
   
 ```  
@@ -265,7 +260,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
  Kopiert die aktuellen minimalen und maximalen Bildlaufleisten-Positionen für die angegebene scrollleiste an den Speicherorten von angegebenen `lpMinPos` und `lpMaxPos`.  
   
 ```  
@@ -287,7 +282,7 @@ void GetScrollRange(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
  Legt der Informationen, die die `SCROLLINFO` Struktur über eine scrollleiste verwaltet.  
   
 ```  
@@ -314,7 +309,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
  Legt die aktuelle Position eines scrollfelds auf, die durch `nPos` und, falls angegeben, zeichnet die Bildlaufleiste, um die neue Position zu berücksichtigen.  
   
 ```  
@@ -339,7 +334,7 @@ int SetScrollPos(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
  Legt die minimalen und maximalen Positionswerte für die angegebene Scrollleiste fest.  
   
 ```  
@@ -371,7 +366,7 @@ void SetScrollRange(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
  Anzeigen oder ausblenden eine Bildlaufleiste.  
   
 ```  

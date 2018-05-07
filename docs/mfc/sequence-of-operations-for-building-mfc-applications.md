@@ -1,29 +1,24 @@
 ---
 title: Reihenfolge der Operationen zur Erstellung von MFC-Anwendungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Reihenfolge der Operationen zur Erstellung von MFC-Anwendungen
 Die folgende Tabelle erläutert die allgemeine Sequenz, die Sie in der Regel bei der Entwicklung die MFC-Anwendung ausführen können.  
@@ -50,7 +45,7 @@ Die folgende Tabelle erläutert die allgemeine Sequenz, die Sie in der Regel bei
 |Bildlauf hinzufügen.|Wenn Sie einen Bildlauf unterstützen müssen, leiten Sie Ihre Ansichtsklasse oder Klassen von [CScrollView](../mfc/reference/cscrollview-class.md).|Die Ansicht fügt automatisch Bildlaufleisten hinzu, wenn das Ansichtsfenster zu klein wird.|  
 |Formularansichten zu erstellen.|Wenn Ihre Ansichten auf Dialogfeld-Vorlagenressourcen basieren soll, leiten Sie Ihre Ansichtsklasse oder Klassen von [CFormView](../mfc/reference/cformview-class.md).|Die Sicht mithilfe der Dialogfeldvorlagen-Ressource Steuerelemente angezeigt. Der Benutzer kann vom Steuerelement um zu steuern, in der Ansicht auf der Registerkarte.|  
 |Erstellen Sie Datenbankformulare.|Wenn Sie eine formularbasierte Datenzugriff-Anwendung soll, leiten Sie eine Ansichtsklasse von [CRecordView](../mfc/reference/crecordview-class.md) (für ODBC-Programmierung).|Die Ansicht funktioniert wie eine Formularansicht, aber seine Steuerelemente verbunden sind, auf die Felder einer [CRecordset](../mfc/reference/crecordset-class.md) Objekt, das eine Datenbanktabelle darstellt. MFC verschiebt Daten zwischen den Steuerelementen und das Recordset für Sie.|  
-|Erstellen Sie einen einfachen Text-Editor.|Wenn Sie die Ansicht mit einem einfachen Text-Editor werden soll, leiten Sie Ihre Ansichtsklasse oder Klassen von [CEditView](../mfc/reference/ceditview-class.md) oder [CRichEditView](../mfc/reference/cricheditview-class.md).|Die Ansicht enthält Funktionen, die Unterstützung der Zwischenablage und e/a-Datei bearbeiten. `CRichEditView`bietet formatierten Text an.|  
+|Erstellen Sie einen einfachen Text-Editor.|Wenn Sie die Ansicht mit einem einfachen Text-Editor werden soll, leiten Sie Ihre Ansichtsklasse oder Klassen von [CEditView](../mfc/reference/ceditview-class.md) oder [CRichEditView](../mfc/reference/cricheditview-class.md).|Die Ansicht enthält Funktionen, die Unterstützung der Zwischenablage und e/a-Datei bearbeiten. `CRichEditView` bietet formatierten Text an.|  
 |Fügen Sie Splitterfenster hinzu.|Wenn Sie die Fenster teilen unterstützen möchten, fügen Sie eine [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) -Objekt an Ihren SDI-Rahmenfensters oder ein untergeordnetes MDI-Fenster, und verknüpfen sie Sie in des Fensters [VIEWEX](../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion.|Das Framework Splitter Listenfeldsteuerelemente neben den Scrollleisten befindet bereitstellt und verwaltet, teilen der Ansicht in mehrere Bereiche. Wenn der Benutzer ein Fenster aufgeteilt ist, wird das Framework erstellt und fügt zusätzliche Sichtobjekte in das Dokument.|  
 |Erstellen, testen und Debuggen der Anwendung.|Verwenden Sie die Funktionen von Visual C++ zum Erstellen, testen und Debuggen der Anwendung an.|Visual C++ können Sie kompilieren, Link und andere Optionen anpassen. Außerdem können Sie die Quelle und die Klassenstruktur durchsuchen.|  
   

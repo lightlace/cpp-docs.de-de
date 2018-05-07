@@ -1,13 +1,10 @@
 ---
 title: Diagnosedienste | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
 Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das Debuggen von Programmen erleichtern. Zu diesen Diagnosediensten zählen Makros und globale Funktionen, die Ihnen das Nachverfolgen der Speicherzuweisungen von Programmen, das Sichern des Inhalts von Objekten zur Laufzeit und das Ausgeben von Debugmeldungen zur Laufzeit ermöglichen. Die Makros und globalen Funktionen für Diagnosedienste sind in folgende Kategorien gruppiert:  
@@ -106,7 +101,7 @@ Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das 
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Unterdrückt die Compiler-Warnungen für die Verwendung von MFC-Funktionen, die als veraltet markierte.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 Unterdrückt die Compiler-Warnungen für die Verwendung von MFC-Funktionen, die als veraltet markierte.  
    
 ### <a name="syntax"></a>Syntax   
@@ -128,7 +123,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>AfxDebugBreak
+## <a name="afxdebugbreak"></a> AfxDebugBreak
 Mit dieser Funktion können dazu führen, dass eine Unterbrechung (an der Position des Aufrufs von `AfxDebugBreak`) bei der Ausführung der Debugversion des MFC-Anwendung.  
 
 ### <a name="syntax"></a>Syntax    
@@ -137,7 +132,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>Hinweise  
- `AfxDebugBreak`wirkt sich nicht in Releaseversionen von MFC-Anwendung, und sollte entfernt werden. Diese Funktion sollte nur in MFC-Anwendungen verwendet werden. Verwenden Sie die Win32-API-Version **"DebugBreak"**, um eine Unterbrechung in MFC-fremden Anwendungen verursachen.  
+ `AfxDebugBreak` wirkt sich nicht in Releaseversionen von MFC-Anwendung, und sollte entfernt werden. Diese Funktion sollte nur in MFC-Anwendungen verwendet werden. Verwenden Sie die Win32-API-Version **"DebugBreak"**, um eine Unterbrechung in MFC-fremden Anwendungen verursachen.  
    
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxver_.h   
@@ -216,7 +211,7 @@ ASSERT_VALID(pObject)
  Gibt ein Objekt einer Klasse abgeleitet `CObject` , die hat eine überschreibenden Version der `AssertValid` Memberfunktion.  
   
 ### <a name="remarks"></a>Hinweise  
- `ASSERT_VALID`Ruft die `AssertValid` -Memberfunktion des Objekts als Argument übergeben.  
+ `ASSERT_VALID` Ruft die `AssertValid` -Memberfunktion des Objekts als Argument übergeben.  
   
  In der endgültigen Produktversion von MFC `ASSERT_VALID` wird keine Aktion ausgeführt. In der Debugversion überprüft den Zeiger, überprüft **NULL**, und ruft die eigenen `AssertValid` Memberfunktionen. Wenn eines dieser tests fehlschlägt, wird eine Warnmeldung angezeigt, auf die gleiche Weise wie [ASSERT](#assert).  
   
@@ -273,7 +268,7 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h
 
- ### <a name="ensure"></a>Stellen Sie sicher und ENSURE_VALID
+ ### <a name="ensure"></a>  Stellen Sie sicher und ENSURE_VALID
 So überprüfen Sie die Richtigkeit der Daten verwenden.  
    
 ### <a name="syntax"></a>Syntax    
@@ -303,7 +298,7 @@ ENSURE_VALID( booleanExpression  )
  [VERGEWISSERN SIE SICH](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a> THIS_FILE
 Wird erweitert, um den Namen der Datei, die kompiliert wird.  
    
 ### <a name="syntax"></a>Syntax    
@@ -380,7 +375,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>AfxDump (CDumpContext in MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>  AfxDump (CDumpContext in MFC)  
  Stellt grundlegende Objektdumps Funktion in Ihrer Anwendung bereit.  
   
 ```   
@@ -388,7 +383,7 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `afxDump`ein vordefiniertes [CDumpContext](../../mfc/reference/cdumpcontext-class.md) -Objekt, das Sie senden kann `CDumpContext` Informationen in das Ausgabefenster des Debuggers oder an einem debugterminal. Geben Sie in der Regel `afxDump` als Parameter an `CObject::Dump`.  
+ `afxDump` ein vordefiniertes [CDumpContext](../../mfc/reference/cdumpcontext-class.md) -Objekt, das Sie senden kann `CDumpContext` Informationen in das Ausgabefenster des Debuggers oder an einem debugterminal. Geben Sie in der Regel `afxDump` als Parameter an `CObject::Dump`.  
   
  Unter Windows NT und allen Versionen von Windows `afxDump` Ausgabe wird an das Ausgabe-Debug-Fenster von Visual C++ gesendet, wenn die Anwendung zu debuggen.  
   
@@ -401,7 +396,7 @@ CDumpContext  afxDump;
  **Header:** afx.h
 
 
-## <a name="afxdump"></a>AfxDump (intern)
+## <a name="afxdump"></a> AfxDump (intern)
 Interne Funktion, den MFC verwendet, um den Status eines Objekts während des Debuggens zu speichern.  
 
 ### <a name="syntax"></a>Syntax    
@@ -433,7 +428,7 @@ int  afxMemDF;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `afxMemDF`können die folgenden Werte entsprechend den Angaben von der Aufzählung `afxMemDF`:  
+ `afxMemDF` können die folgenden Werte entsprechend den Angaben von der Aufzählung `afxMemDF`:  
   
 - **AllocMemDF** aktiviert die debugging-Zuweisung (in der Debugbibliothek Standardeinstellung).  
   
@@ -502,7 +497,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
  
-##  <a name="afxdump"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>  AfxDump (MFC)  
  Mit dieser Funktion wird im Debugger, um den Status eines Objekts während des Debuggens zu speichern.  
   
 ```   
@@ -605,7 +600,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 |`void AfxDumpStack(unsigned long)`|Der Funktionsprototyp aufgerufen.|  
 |`+ 181 bytes`|Der Offset in Bytes, die von der Adresse der Funktionsprototypen (in diesem Fall `void AfxDumpStack(unsigned long)`) an die Rücksendeadresse (in diesem Fall `00427D55`).|  
   
- `AfxDumpStack`ist im Debug- und aufgeführt Versionen der MFC-Bibliotheken verfügbar. Allerdings ist die Funktion immer statisch, verknüpft, auch wenn die ausführbare Datei in eine freigegebene DLL MFC verwendet. Die Funktion ist in gemeinsam genutzte Bibliothek Implementierungen in der MFCS42 gefunden. LIB-Bibliothek (und seine Varianten).  
+ `AfxDumpStack` ist im Debug- und aufgeführt Versionen der MFC-Bibliotheken verfügbar. Allerdings ist die Funktion immer statisch, verknüpft, auch wenn die ausführbare Datei in eine freigegebene DLL MFC verwendet. Die Funktion ist in gemeinsam genutzte Bibliothek Implementierungen in der MFCS42 gefunden. LIB-Bibliothek (und seine Varianten).  
   
  Diese Funktion wurde erfolgreich zu verwenden:  
   
@@ -615,7 +610,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
  Aktiviert und deaktiviert im Destruktor `AFX_DEBUG_STATE` die Ausgabe von Speicherverlusten.  
   
 ```  

@@ -1,29 +1,24 @@
 ---
-title: "Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei | Microsoft Docs"
-ms.custom: 
+title: Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 344f413eb2325156996700b6975826600ab997f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
 Um einen Computer zum Testen der Debugversion einer Anwendung vorzubereiten, die in Visual C++ erstellt wurde, müssen Sie Debugversionen der Visual C++-Bibliothek-DLLs bereitstellen, die für die Anwendung erforderlich sind. Um zu ermitteln, die DLLs bereitgestellt werden müssen, führen Sie die Schritte im [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Die Namen der Debugversionen der DLLs für Visual C++-Bibliotheken enden in der Regel auf "d". Beispielsweise hat die Debugversion der "msvcr100.dll" den Namen "msvcr100d.dll".  

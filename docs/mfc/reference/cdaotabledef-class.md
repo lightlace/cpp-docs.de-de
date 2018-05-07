@@ -1,12 +1,9 @@
 ---
 title: CDaoTableDef Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoTableDef
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef-Klasse
 Stellt die gespeicherte Definition einer Basistabelle oder einer angefügten Tabelle dar.  
@@ -199,7 +194,7 @@ class CDaoTableDef : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-##  <a name="append"></a>CDaoTableDef::  
+##  <a name="append"></a>  CDaoTableDef::  
  Rufen Sie diese Memberfunktion auf, nach dem Aufruf [erstellen](#create) zum Erstellen eines neuen Tabledef-Objekts, um die Tabledef in der Datenbank zu speichern.  
   
 ```  
@@ -214,7 +209,7 @@ virtual void Append();
   
  Verwandte Informationen finden Sie im Thema "Append-Methode" DAO-Hilfe.  
   
-##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
+##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate  
  Rufen Sie diese Memberfunktion, um zu bestimmen, ob die Definition der zugrunde liegenden Tabelle eine `CDaoTableDef` Objekt geändert werden kann.  
   
 ```  
@@ -229,7 +224,7 @@ BOOL CanUpdate();
   
  Verwandte Informationen finden Sie im Thema "Aktualisierbare Property" in der DAO-Hilfe.  
   
-##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
+##  <a name="cdaotabledef"></a>  CDaoTableDef::CDaoTableDef  
  Erstellt eine **CDaoTableDef** Objekt.  
   
 ```  
@@ -243,7 +238,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="remarks"></a>Hinweise  
  Nach dem Erstellen des Objekts, rufen Sie die [erstellen](#create) oder [öffnen](#open) Memberfunktion. Wenn Sie mit dem Objekt abgeschlossen haben, müssen Sie Aufrufen seiner [schließen](#close) Member-Funktion und zu zerstören der `CDaoTableDef` Objekt.  
   
-##  <a name="close"></a>CDaoTableDef::Close  
+##  <a name="close"></a>  CDaoTableDef::Close  
  Rufen Sie diese Memberfunktion zum Schließen und das Objekt Tabledef freizugeben.  
   
 ```  
@@ -257,7 +252,7 @@ virtual void Close();
   
  Verwandte Informationen finden Sie im Thema "Close-Methode" DAO-Hilfe.  
   
-##  <a name="create"></a>CDaoTableDef::Create  
+##  <a name="create"></a>  CDaoTableDef::Create  
  Rufen Sie diese Memberfunktion zum Erstellen einer neuen gespeicherten Tabellenstatus.  
   
 ```  
@@ -293,7 +288,7 @@ virtual void Create(
   
  Verwandte Informationen finden Sie im Thema "CreateTableDef Method" DAO-Hilfe.  
   
-##  <a name="createfield"></a>CDaoTableDef::CreateField  
+##  <a name="createfield"></a>  CDaoTableDef::CreateField  
  Rufen Sie diese Memberfunktion zum Hinzufügen eines Felds in die Tabelle ein.  
   
 ```  
@@ -363,7 +358,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
  Verwandte Informationen finden Sie im Thema "CreateField Method" DAO-Hilfe.  
   
-##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
+##  <a name="createindex"></a>  CDaoTableDef::CreateIndex  
  Rufen Sie diese Funktion, um einen Index zu einer Tabelle hinzuzufügen.  
   
 ```  
@@ -383,13 +378,13 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **M_strName** ein Name muss angegeben werden.  
   
-- `m_pFieldInfos`Zeigen Sie mit der muss auf ein Array von `CDaoIndexFieldInfo` Strukturen.  
+- `m_pFieldInfos` Zeigen Sie mit der muss auf ein Array von `CDaoIndexFieldInfo` Strukturen.  
   
-- `m_nFields`Muss, geben Sie die Anzahl der Felder im Array der `CDaoFieldInfo` Strukturen.  
+- `m_nFields` Muss, geben Sie die Anzahl der Felder im Array der `CDaoFieldInfo` Strukturen.  
   
  Die verbleibenden Elemente wird ignoriert, wenn auf festgelegt **"false"**. Darüber hinaus die **M_lDistinctCount** Element wird ignoriert, während der Erstellung des Indexes.  
   
-##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
+##  <a name="deletefield"></a>  CDaoTableDef::DeleteField  
  Rufen Sie diese Memberfunktion zum Entfernen von Feldern, und stellen es kann nicht zugegriffen werden.  
   
 ```  
@@ -409,7 +404,7 @@ void DeleteField(int nIndex);
   
  Verwandte Informationen finden Sie im Thema "Methode Delete", DAO-Hilfe.  
   
-##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
+##  <a name="deleteindex"></a>  CDaoTableDef::DeleteIndex  
  Rufen Sie diese Memberfunktion zum Löschen eines Indexes in einer zugrunde liegenden Tabelle.  
   
 ```  
@@ -429,7 +424,7 @@ void DeleteIndex(int nIndex);
   
  Verwandte Informationen finden Sie im Thema "Methode Delete", DAO-Hilfe.  
   
-##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
+##  <a name="getattributes"></a>  CDaoTableDef::GetAttributes  
  Für eine `CDaoTableDef` -Objekt, der Rückgabewert gibt die Eigenschaften der Tabelle, dargestellt durch die `CDaoTableDef` Objekt und kann eine Summe der folgenden Konstanten:  
   
 ```  
@@ -456,7 +451,7 @@ long GetAttributes();
   
  Verwandte Informationen finden Sie im Thema "Attribute Property" in der DAO-Hilfe.  
   
-##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
+##  <a name="getconnect"></a>  CDaoTableDef::GetConnect  
  Rufen Sie diese Memberfunktion zum Abrufen der Verbindungszeichenfolge für eine Datenquelle an.  
   
 ```  
@@ -479,7 +474,7 @@ CString GetConnect();
   
  Verwandte Informationen finden Sie im Thema "Verbinden der Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoTableDef::GetDateCreated  
  Mit dieser Funktion wird zum Ermitteln von Datum und Uhrzeit der zugrunde liegende Tabelle die `CDaoTableDef` Objekt erstellt wurde.  
   
 ```  
@@ -494,7 +489,7 @@ COleDateTime GetDateCreated();
   
  Weitere Informationen finden Sie im Thema "DateCreated LastUpdated-Eigenschaften" in der Hilfe von DAO ein.  
   
-##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
  Mit dieser Funktion wird zum Ermitteln von Datum und Uhrzeit der zugrunde liegende Tabelle die **CDaoTableDef** Objekt zuletzt aktualisiert wurde.  
   
 ```  
@@ -509,7 +504,7 @@ COleDateTime GetDateLastUpdated();
   
  Weitere Informationen finden Sie im Thema "DateCreated LastUpdated-Eigenschaften" in der Hilfe von DAO ein.  
   
-##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoTableDef::GetFieldCount  
  Rufen Sie diese Memberfunktion zum Abrufen der Anzahl von Feldern, die in der Tabelle definiert.  
   
 ```  
@@ -524,7 +519,7 @@ short GetFieldCount();
   
  Verwandte Informationen finden Sie im Thema "Count-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoTableDef::GetFieldInfo  
  Rufen Sie diese Memberfunktion zum Abrufen von verschiedenen Arten von Informationen zu einem Feld in der Tabledef definiert.  
   
 ```  
@@ -550,11 +545,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  Optionen, die angeben, welche Informationen das Feld abgerufen. Die verfügbaren Optionen sind hier aufgeführt, zusammen mit der sie die Funktion zurückgibt verursachen:  
   
-- `AFX_DAO_PRIMARY_INFO`(Standard) Name, Typ, Größe und der Attribute. Verwenden Sie diese Option für die höchste Geschwindigkeit.  
+- `AFX_DAO_PRIMARY_INFO` (Standard) Name, Typ, Größe und der Attribute. Verwenden Sie diese Option für die höchste Geschwindigkeit.  
   
-- `AFX_DAO_SECONDARY_INFO`Primäre Informationen plus: Ordnungszahl Position ist erforderlich, können 0 (null) Länge Reihenfolge sortieren ausländischen Name, Quellfeld Quelltabelle  
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Ordnungszahl Position ist erforderlich, können 0 (null) Länge Reihenfolge sortieren ausländischen Name, Quellfeld Quelltabelle  
   
-- `AFX_DAO_ALL_INFO`Informationen zu primären und sekundären plus: Validierungsregel, Text zu, Standardwert  
+- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären plus: Validierungsregel, Text zu, Standardwert  
   
  `lpszName`  
  Ein Zeiger auf den Namen der Field-Objekt, für die Suche nach Namen. Der Name ist eine Zeichenfolge mit bis zu 64 Zeichen, die das Feld eindeutig bezeichnet.  
@@ -566,7 +561,7 @@ void GetFieldInfo(
   
  Verwandte Informationen finden Sie im Thema "Attribute Property" in der DAO-Hilfe.  
   
-##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoTableDef::GetIndexCount  
  Rufen Sie diese Memberfunktion, um die Anzahl der Indizes für eine Tabelle zu erhalten.  
   
 ```  
@@ -581,7 +576,7 @@ short GetIndexCount();
   
  Verwandte Informationen finden Sie im Thema "Count-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoTableDef::GetIndexInfo  
  Rufen Sie diese Memberfunktion zum Abrufen von verschiedenen Arten von Informationen zu einem Index in der Tabledef definiert.  
   
 ```  
@@ -607,11 +602,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  Optionen, die angeben, welche Informationen über den Index abgerufen. Die verfügbaren Optionen sind hier aufgeführt, zusammen mit der sie die Funktion zurückgibt verursachen:  
   
-- `AFX_DAO_PRIMARY_INFO`Name, Feldinformationen, Felder. Verwenden Sie diese Option für die höchste Geschwindigkeit.  
+- `AFX_DAO_PRIMARY_INFO` Name, Feldinformationen, Felder. Verwenden Sie diese Option für die höchste Geschwindigkeit.  
   
-- `AFX_DAO_SECONDARY_INFO`Primäre Informationen plus: primäre, UNIQUE-, Clustered, ignorieren NULL-Werte erforderlich, Fremdschlüssel  
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: primäre, UNIQUE-, Clustered, ignorieren NULL-Werte erforderlich, Fremdschlüssel  
   
-- `AFX_DAO_ALL_INFO`Informationen zu primären und sekundären plus: Distinct Count  
+- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären plus: Distinct Count  
   
  `lpszName`  
  Ein Zeiger auf den Namen des Index-Objekts, für die Suche nach Namen.  
@@ -623,7 +618,7 @@ void GetIndexInfo(
   
  Verwandte Informationen finden Sie im Thema "Attribute Property" in der DAO-Hilfe.  
   
-##  <a name="getname"></a>CDaoTableDef::GetName  
+##  <a name="getname"></a>  CDaoTableDef::GetName  
  Rufen Sie diese Memberfunktion um den benutzerdefinierten Namen der zugrunde liegenden Tabelle zu erhalten.  
   
 ```  
@@ -638,7 +633,7 @@ CString GetName();
   
  Verwandte Informationen finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoTableDef::GetRecordCount  
  Rufen Sie diese Memberfunktion, um herauszufinden, wie viele Datensätze im sind ein `CDaoTableDef` Objekt.  
   
 ```  
@@ -653,7 +648,7 @@ long GetRecordCount();
   
  Verwandte Informationen finden Sie im Thema "RecordCount-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
+##  <a name="getsourcetablename"></a>  CDaoTableDef::GetSourceTableName  
  Rufen Sie diese Memberfunktion um den Namen einer angefügten Tabelle in einer Quelldatenbank abzurufen.  
   
 ```  
@@ -668,7 +663,7 @@ CString GetSourceTableName();
   
  Verwandte Informationen finden Sie im Thema "SourceTableName-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoTableDef::GetValidationRule  
  Rufen Sie diese Memberfunktion, um die Validierungsregel für eine Tabledef abzurufen.  
   
 ```  
@@ -683,7 +678,7 @@ CString GetValidationRule();
   
  Verwandte Informationen finden Sie im Thema "ValidationRule-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoTableDef::GetValidationText  
  Mit dieser Funktion wird zum Abrufen der Zeichenfolge angezeigt, wenn ein Benutzer Daten eingibt, die die Validierungsregel nicht übereinstimmen.  
   
 ```  
@@ -698,7 +693,7 @@ CString GetValidationText();
   
  Verwandte Informationen finden Sie im Thema "ValidationText-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="isopen"></a>CDaoTableDef::IsOpen  
+##  <a name="isopen"></a>  CDaoTableDef::IsOpen  
  Rufen Sie diese Memberfunktion, um zu bestimmen, ob die `CDaoTableDef` Objekt ist derzeit geöffnet.  
   
 ```  
@@ -710,18 +705,18 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoTableDef::m_pDatabase  
  Enthält einen Zeiger auf die [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) Objekt für diese Tabelle.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
+##  <a name="m_pdaotabledef"></a>  CDaoTableDef::m_pDAOTableDef  
  Enthält einen Zeiger auf die OLE-Schnittstelle für den DAO Tabledef-Objekt zugrunde liegenden der `CDaoTableDef` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie this-Zeiger, wenn Sie die DAO-Schnittstelle direkt zugreifen müssen.  
   
-##  <a name="open"></a>CDaoTableDef::Open  
+##  <a name="open"></a>  CDaoTableDef::Open  
  Diese Memberfunktion zum Öffnen einer Tabledef zuvor in der Datenbank gespeicherten Aufruf der TableDefs Auflistung werden.  
   
 ```  
@@ -734,7 +729,7 @@ virtual void Open(LPCTSTR lpszName);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
+##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink  
  Rufen Sie diese Memberfunktion, um die Verbindungsinformationen für eine verknüpfte Tabelle zu aktualisieren.  
   
 ```  
@@ -748,7 +743,7 @@ void RefreshLink();
   
  Verwandte Informationen finden Sie im Thema "RefreshLink Method" DAO-Hilfe.  
   
-##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
+##  <a name="setattributes"></a>  CDaoTableDef::SetAttributes  
  Legt einen Wert an eine oder mehrere Merkmale einer `CDaoTableDef` Objekt.  
   
 ```  
@@ -769,13 +764,13 @@ void SetAttributes(long lAttributes);
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie mehrere Attribute festlegen möchten, können Sie diese kombinieren, indem er die entsprechenden Konstanten, die mit dem bitweisen OR-Operator hat. Festlegen von **DbAttachExclusive** für eine Tabelle Laufzeitstruktur erzeugt eine Ausnahme. Kombinieren die folgenden Werte auch eine Ausnahme generieren:  
   
-- **DbAttachExclusive &#124; dbAttachedODBC**  
+- **DbAttachExclusive &#124; DbAttachedODBC**  
   
-- **DbAttachSavePWD &#124; dbAttachedTable**  
+- **DbAttachSavePWD &#124; DbAttachedTable**  
   
  Verwandte Informationen finden Sie im Thema "Attribute Property" in der DAO-Hilfe.  
   
-##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
+##  <a name="setconnect"></a>  CDaoTableDef::SetConnect  
  Für eine `CDaoTableDef` Objekt, das eine angefügte Tabelle, die String-Objekt darstellt besteht aus einem oder zwei Teilen (einem Datenbank-Typspezifizierer und einen Pfad zu der Datenbank).  
   
 ```  
@@ -811,7 +806,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |Der HTML-Export|"HTML"Export";|" `drive`:\\\ *Pfad*"|  
 |Text|"Text;"|"Laufwerk:\\\path"|  
 |ODBC|"ODBC; Datenbank = `database`; UID = *Benutzer*; PWD = *Kennwort*; DSN = *%DataSourceName;* LOGINTIMEOUT = *Sekunden;*" (Dies möglicherweise keine vollständige Verbindungszeichenfolge für alle Server; es ist nur ein Beispiel. Es ist sehr wichtig, nicht auf Leerzeichen zwischen den Parametern enthalten.)|Keiner|  
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *Folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1}]<br /><br /> [Profil = *Profil*;]<br /><br /> [PWD = *Kennwort*;]<br /><br /> [DATABASE = `database`;] "|*"Laufwerk*:\\\ *Pfad*\\\ *Filename*. MDB"|  
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *Folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Profil = *Profil*;]<br /><br /> [PWD = *Kennwort*;]<br /><br /> [DATABASE = `database`;] "|*"Laufwerk*:\\\ *Pfad*\\\ *Filename*. MDB"|  
   
 > [!NOTE]
 >  Btrieve ab DAO 3.5 nicht mehr unterstützt.  
@@ -824,7 +819,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Verwandte Informationen finden Sie im Thema "Verbinden der Eigenschaft" DAO-Hilfe.  
   
-##  <a name="setname"></a>CDaoTableDef::SetName  
+##  <a name="setname"></a>  CDaoTableDef::SetName  
  Rufen Sie diese Memberfunktion, um einen benutzerdefinierten Namen für eine Tabelle festzulegen.  
   
 ```  
@@ -840,7 +835,7 @@ void SetName(LPCTSTR lpszName);
   
  Verwandte Informationen finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
+##  <a name="setsourcetablename"></a>  CDaoTableDef::SetSourceTableName  
  Rufen Sie diese Memberfunktion um den Namen einer angefügten Tabelle oder der Name der Basistabelle auf dem Angeben der `CDaoTableDef` Objekt basieren, wie er in die ursprüngliche Quelle der Daten ist.  
   
 ```  
@@ -856,7 +851,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
   
  Verwandte Informationen finden Sie im Thema "SourceTableName-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
+##  <a name="setvalidationrule"></a>  CDaoTableDef::SetValidationRule  
  Rufen Sie diese Memberfunktion, um eine Validierungsregel für eine Tabledef festzulegen.  
   
 ```  
@@ -878,7 +873,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  Verwandte Informationen finden Sie im Thema "ValidationRule-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
+##  <a name="setvalidationtext"></a>  CDaoTableDef::SetValidationText  
  Rufen Sie diese Memberfunktion zum Festlegen der Text der Ausnahme einer Validierungsregel für eine `CDaoTableDef` Objekt mit einer zugrunde liegenden Basistabelle, die vom Microsoft Jet-Datenbankmodul unterstützt.  
   
 ```  

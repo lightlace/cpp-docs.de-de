@@ -1,13 +1,10 @@
 ---
-title: "Dialogdatenaustausch Funktionen für OLE-Steuerelemente | Microsoft Docs"
-ms.custom: 
+title: Dialogdatenaustausch Funktionen für OLE-Steuerelemente | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
 Dieses Thema listet die DDX_OC-Funktionen, die zum Austausch von Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, Formularansicht oder steuerungsansichtsobjekts und einen Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
@@ -59,7 +54,7 @@ Dieses Thema listet die DDX_OC-Funktionen, die zum Austausch von Daten zwischen 
 |[DDX_OCText](#ddx_octext)|Verwaltet die Übertragung von **CString** Daten zwischen einer Eigenschaft eines OLE-Steuerelements und ein **CString** -Datenmember.|  
 |[DDX_OCTextRO](#ddx_octextro)|Verwaltet die Übertragung von **CString** Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements und ein **CString** -Datenmember.|  
   
-##  <a name="ddx_ocbool"></a>DDX_OCBool  
+##  <a name="ddx_ocbool"></a>  DDX_OCBool  
  Die `DDX_OCBool` -Funktion verwaltet die Übertragung von **BOOL** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **BOOL** Datenmember im Dialogfeld die Formularansicht, oder Anzeigen des Steuerelementobjekts.  
   
 ```   
@@ -89,7 +84,7 @@ void AFXAPI DDX_OCBool(
 ### <a name="requirements"></a>Anforderungen  
   **Header:** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
  Die `DDX_OCBoolRO` -Funktion verwaltet die Übertragung von **BOOL** Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **BOOL** Datenmember im Dialogfeld Formularansichts- oder steuerungsansichtsobjekts.  
   
 ```   
@@ -119,7 +114,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>DDX_OCColor  
+##  <a name="ddx_occolor"></a>  DDX_OCColor  
  Die `DDX_OCColor` -Funktion verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **OLE_COLOR** Datenmember im Dialogfeld Formularansichts- oder steuerungsansichtsobjekts.  
   
 ```   
@@ -149,7 +144,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
  Die `DDX_OCColorRO` -Funktion verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **OLE_COLOR** Datenmember der Das Dialogfeld, Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
@@ -179,7 +174,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
  Die `DDX_OCFloat` -Funktion verwaltet die Übertragung von **"float"** (oder **doppelte**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **"float"** (oder **doppelte**)-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
@@ -215,7 +210,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
  Die `DDX_OCFloatRO` -Funktion verwaltet die Übertragung von **"float"** (oder **doppelte**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem  **"float"** (oder **doppelte**)-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
@@ -251,7 +246,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>DDX_OCInt  
+##  <a name="ddx_ocint"></a>  DDX_OCInt  
  Die `DDX_OCInt` -Funktion verwaltet die Übertragung von `int` (oder **lange**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem `int` (oder **lang**)-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
@@ -287,7 +282,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
  Die `DDX_OCIntRO` -Funktion verwaltet die Übertragung von `int` (oder **lange**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem `int` (oder **lang** )-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
@@ -323,7 +318,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>DDX_OCShort  
+##  <a name="ddx_ocshort"></a>  DDX_OCShort  
  Die `DDX_OCShort` -Funktion verwaltet die Übertragung von kurzen Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld Formularansicht oder steuerungsansichtsobjekts und einen kurzen Datenmember im Dialogfeld Formularansicht oder Ansichtsobjekt steuern.  
   
 ```   
@@ -353,7 +348,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
  Die `DDX_OCShortRO` -Funktion verwaltet die Übertragung von kurzen Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld Formularansicht oder steuerungsansichtsobjekts und einen kurzen Datenmember im Dialogfeld Formularansicht oder Ansichtsobjekt steuern.  
   
 ```   
@@ -383,7 +378,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_octext"></a>DDX_OCText  
+##  <a name="ddx_octext"></a>  DDX_OCText  
  Die **DDX_OCText** -Funktion verwaltet die Übertragung von **CString** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **CString** Daten Member des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
@@ -413,7 +408,7 @@ void AFXAPI DDX_OCText(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>DDX_OCTextRO  
+##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
  Die `DDX_OCTextRO` -Funktion verwaltet die Übertragung von `CString` -Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder Steuerungsansichtsobjekts und einem `CString` -Datenelement des Dialogfelds, des Formularansichts- oder Steuerungsansichtsobjekts.  
   
 ```  

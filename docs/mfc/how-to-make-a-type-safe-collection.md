@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: erstellen eine typsicheren Auflistung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Gewusst wie: Erstellen einer typsicheren Auflistung
 In diesem Artikel erläutert die typsichere Auflistungen für Ihre eigenen Datentypen zu stellen. Folgende Themen werden behandelt:  
@@ -42,7 +37,7 @@ In diesem Artikel erläutert die typsichere Auflistungen für Ihre eigenen Daten
   
  Die Microsoft Foundation Class-Bibliothek bietet vordefinierte typsichere Auflistungen basierend auf C++-Vorlagen. Da diese Vorlagen sind, tragen zu dieser Klassen typsicherheit und einfache Verwendung ohne die Typumwandlung und andere zusätzliche Arbeit, die in einer nicht auf Vorlagen basierende Klasse zu diesem Zweck verwenden. Das MFC-Beispiel [sammeln](../visual-cpp-samples.md) veranschaulicht die Verwendung von vorlagenbasierte Auflistungsklassen in einer MFC_Anwendung. Verwenden Sie diese Klassen im Allgemeinen wird jedes Mal, wenn Sie neue Sammlungen Code schreiben.  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a>Mithilfe von Template-basierten Klassen typsicherheit  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Mithilfe von Template-basierten Klassen typsicherheit  
   
 #### <a name="to-use-template-based-classes"></a>Vorlagenbasierte Klassen  
   
@@ -58,10 +53,10 @@ In diesem Artikel erläutert die typsichere Auflistungen für Ihre eigenen Daten
   
  Dieses Beispiel zeigt die Deklaration einer Liste von ganzen Zahlen. Der erste Parameter in Schritt 1 ist der Typ der Daten, die als Elemente der Liste gespeichert. Der zweite Parameter gibt an, wie die Daten zu übergeben und von Memberfunktionen der Auflistungsklasse, z. B. **hinzufügen** und `GetAt`.  
   
-##  <a name="_core_implementing_helper_functions"></a>Implementieren Hilfsfunktionen  
+##  <a name="_core_implementing_helper_functions"></a> Implementieren Hilfsfunktionen  
  Die vorlagenbasierte Auflistungsklassen `CArray`, `CList`, und `CMap` verwenden fünf globale Hilfsfunktionen, die Sie für Ihre abgeleiteten Auflistungsklasse nach Bedarf anpassen können. Informationen zu diesen Hilfsfunktionen finden Sie unter [Auflistungsklasse](../mfc/reference/collection-class-helpers.md) in der *MFC-Referenz*. Implementierung der Serialisierungsfunktion ist für die meisten Verwendungen von die vorlagenbasierte Auflistungsklassen erforderlich.  
   
-###  <a name="_core_serializing_elements"></a>Serialisieren von Elementen  
+###  <a name="_core_serializing_elements"></a> Serialisieren von Elementen  
  Die `CArray`, `CList`, und `CMap` Klassen Aufruf `SerializeElements` Elemente der Auflistung zu speichern oder aus einem Archiv zu lesen.  
   
  Die standardmäßige Implementierung des der `SerializeElements` Hilfsfunktion wird eine bitweise Schreiben von Objekten in das Archiv oder eine bitweise aus dem Archiv gelesen werden, um die Objekte, abhängig davon, ob die Objekte in gespeichert werden oder aus dem Archiv abgerufen. Überschreiben Sie `SerializeElements` Wenn diese Aktion nicht geeignet ist.  
@@ -72,7 +67,7 @@ In diesem Artikel erläutert die typsichere Auflistungen für Ihre eigenen Daten
   
  Die überladenen Einfügeoperatoren für `CArchive` Aufrufen `CObject::Serialize` (oder eine Überschreibung dieser Funktion) für die einzelnen **CPerson** Objekt.  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a>Verwenden von Auflistungsklassen  
+##  <a name="_core_using_nontemplate_collection_classes"></a> Verwenden von Auflistungsklassen  
  MFC unterstützt auch die Auflistungsklassen, die mit MFC, Version 1.0 eingeführt wurden. Diese Klassen basieren nicht auf Vorlagen. Sie können verwendet werden, um die unterstützten Datentypen enthalten `CObject*`, **"uint"**, `DWORD`, und `CString`. Sie können diese vordefinierten Sammlungen (z. B. `CObList`) zum Speichern von Sammlungen von Objekten von abgeleiteten `CObject`. MFC bietet auch andere vordefinierten Sammlungen um primitive Typen enthalten, wie z. B. **"uint"** und void-Zeiger (`void`*). Im Allgemeinen ist es jedoch oft hilfreich, um eine eigene typsichere Auflistungen zum Speichern von Objekten der einen spezifischeren Klasse und die Ableitung zu definieren. Beachten Sie, dass auf diese Weise mit der Auflistungsklassen nicht auf Basis der Vorlagen mehr als die Template-basierten Klassen verwenden arbeiten.  
   
  Es gibt zwei Möglichkeiten, typsichere Auflistungen nicht auf Vorlagen basierende Sammlungen zu erstellen:  

@@ -1,12 +1,9 @@
 ---
 title: CMFCMenuButton-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton-Klasse
 Eine Schaltfläche, die ein Popupmenü anzeigt und die vom Benutzer gewählte Menüoption meldet.  
@@ -80,7 +75,7 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="remarks"></a>Hinweise  
  Die `CMFCMenuButton` von abgeleitete Klasse die [CMFCButton Klasse](../../mfc/reference/cmfcbutton-class.md) die wiederum von abgeleitet ist, die [CButton Klasse](../../mfc/reference/cbutton-class.md). Aus diesem Grund können Sie `CMFCMenuButton` im Code die gleiche Weise Sie verwenden `CButton`.  
   
- Beim Erstellen einer `CMFCMenuButton`, müssen Sie ein Handle auf das zugeordnete Popupmenü übergeben. Rufen Sie die Funktion als Nächstes `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent`überprüft, ob die Größe der Schaltfläche ist ausreichend, um einen Pfeil enthalten, der auf den Speicherort zeigt, wo das Popupfenster angezeigt – nämlich, unterhalb oder rechts neben der Schaltfläche wird.  
+ Beim Erstellen einer `CMFCMenuButton`, müssen Sie ein Handle auf das zugeordnete Popupmenü übergeben. Rufen Sie die Funktion als Nächstes `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` überprüft, ob die Größe der Schaltfläche ist ausreichend, um einen Pfeil enthalten, der auf den Speicherort zeigt, wo das Popupfenster angezeigt – nämlich, unterhalb oder rechts neben der Schaltfläche wird.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie das Handle des Menüs auf die Schaltfläche "" angefügt, Größe der Schaltfläche der Größe von Text- und Bilddateien entsprechend anzupassen, und Festlegen der Popup-Menüs, das durch das Framework angezeigt wird. Dieser Codeausschnitt ist Teil der [neues Steuerelement-Beispiel](../../visual-cpp-samples.md).  
@@ -104,14 +99,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxmenubutton.h  
   
-##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
  Erstellt ein neues [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) Objekt.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
  Ein booleschen Member-Variable, welche Popupmenüs angibt, zeigt das Framework.  
   
 ```  
@@ -121,7 +116,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Hinweise  
  Wenn `m_bOSMenu` ist `TRUE`, das Framework Ruft die geerbte `TrackPopupMenu` -Standardmethode für dieses Objekt. Andernfalls das Framework ruft [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
  Eine boolesche Membervariable, die den Speicherort des Popupmenüs angibt.  
   
 ```  
@@ -131,7 +126,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Benutzer die Schaltfläche drückt, zeigt die Anwendung ein Popupmenü an. Das Framework wird das Popup-Menü unter der Schaltfläche oder rechts neben der Schaltfläche angezeigt. Die Schaltfläche verfügt auch über einen kleinen Pfeil, der angibt, wo das Menü das Popupmenü angezeigt wird. Wenn `m_bRightArrow` ist `TRUE`, vom Framework das Menü das Popupmenü rechts neben der Schaltfläche angezeigt. Andernfalls wird unter der Schaltfläche im Popupmenü angezeigt.  
   
-##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
  Eine boolesche Membervariable, die angibt, ob die Menüschaltfläche angezeigt wird gedrückt, während der Benutzer eine Auswahl aus dem Popupmenü vornimmt.  
   
 ```  
@@ -143,7 +138,7 @@ BOOL m_bStayPressed;
   
  Wenn die `m_bStayPressed` angehört `TRUE`, die Menüschaltfläche wird gedrückt, wenn der Benutzer die Schaltfläche klickt. Nachdem der Benutzer das Menü das Popupmenü, entweder durch eine Auswahl treffen oder das Abbrechen der schließt bleibt bis gedrückten.  
   
-##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
  Das Handle für das angefügte Menü.  
   
 ```  
@@ -153,7 +148,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Hinweise  
  Das Framework zeigt das Menü, das durch diese Membervariable angegeben wird, wenn der Benutzer die Schaltfläche klickt.  
   
-##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
  Eine ganze Zahl, die gibt an, welches Element wählt der Benutzer aus dem Popupmenü.  
   
 ```  
@@ -163,7 +158,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Hinweise  
  Der Wert dieser Variablen Member ist 0 (null), wenn der Benutzer über das Menü abbricht, ohne eine Auswahl getroffen, oder wenn ein Fehler auftritt.  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
  Wird aufgerufen, durch das Framework um fenstermeldungen zu übersetzen, bevor sie verteilt wurden.  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent  
  Ändert die Größe der Schaltfläche entsprechend die Textgröße und Bildgröße.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: COleDataSource-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataSource
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledatasource-class"></a>COleDataSource-Klasse
 Dient als Cache, in den eine Anwendung die Daten für Datenübertragungsoperationen ablegt, beispielsweise bei Zwischenablage- oder Drag & Drop-Operationen.  
@@ -110,7 +105,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="cachedata"></a>CacheData  
+##  <a name="cachedata"></a>  CacheData  
  Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
@@ -143,7 +138,7 @@ void CacheData(
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) im Windows SDK.  
   
-##  <a name="cacheglobaldata"></a>COleDataSource:: CacheGlobalData  
+##  <a name="cacheglobaldata"></a>  COleDataSource:: CacheGlobalData  
  Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
@@ -172,14 +167,14 @@ void CacheGlobalData(
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) im Windows SDK.  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Erstellt ein `COleDataSource`-Objekt.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>:: DelayRenderData  
+##  <a name="delayrenderdata"></a>  :: DelayRenderData  
  Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
@@ -206,7 +201,7 @@ void DelayRenderData(
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) im Windows SDK.  
   
-##  <a name="delayrenderfiledata"></a>DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>  DelayRenderFileData  
  Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
@@ -233,7 +228,7 @@ void DelayRenderFileData(
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) im Windows SDK.  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  Mit dieser Funktion können Sie ändern den Inhalt der Datenquelle unterstützt.  
   
 ```  
@@ -250,13 +245,13 @@ void DelaySetData(
  Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten ersetzt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- [OnSetData](#onsetdata) wird vom Framework aufgerufen, wenn dies geschieht. Dies wird nur verwendet, wenn das Framework gibt die Datenquelle aus [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Wenn `DelaySetData` nicht aufgerufen wird, Ihre `OnSetData` Funktion wird nie aufgerufen werden. `DelaySetData`sollte für jede Zwischenablage aufgerufen werden oder **FORMATETC** Format, die Sie unterstützen.  
+ [OnSetData](#onsetdata) wird vom Framework aufgerufen, wenn dies geschieht. Dies wird nur verwendet, wenn das Framework gibt die Datenquelle aus [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Wenn `DelaySetData` nicht aufgerufen wird, Ihre `OnSetData` Funktion wird nie aufgerufen werden. `DelaySetData` sollte für jede Zwischenablage aufgerufen werden oder **FORMATETC** Format, die Sie unterstützen.  
   
  Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur im Windows SDK.  
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) im Windows SDK.  
   
-##  <a name="dodragdrop"></a>Oledatasource  
+##  <a name="dodragdrop"></a>  Oledatasource  
  Rufen Sie die `DoDragDrop` Memberfunktion versucht, in der Regel führen Sie einen Drag-and-Drop-Vorgang für diese Datenquelle in eine [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) Handler.  
   
 ```  
@@ -270,13 +265,13 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  Drag & Drop-Vorgänge, die zulässig sind für diese Datenquelle. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
-- `DROPEFFECT_COPY`Ein Vorgang zum Kopieren konnte ausgeführt werden.  
+- `DROPEFFECT_COPY` Ein Vorgang zum Kopieren konnte ausgeführt werden.  
   
-- `DROPEFFECT_MOVE`Es konnte ein Verschiebevorgang ausgeführt werden.  
+- `DROPEFFECT_MOVE` Es konnte ein Verschiebevorgang ausgeführt werden.  
   
-- `DROPEFFECT_LINK`Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten konnte hergestellt werden.  
+- `DROPEFFECT_LINK` Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten konnte hergestellt werden.  
   
-- `DROPEFFECT_SCROLL`Gibt an, dass es sich bei Auftreten ein Ziehvorgangs ein Bildlauf.  
+- `DROPEFFECT_SCROLL` Gibt an, dass es sich bei Auftreten ein Ziehvorgangs ein Bildlauf.  
   
  `lpRectStartDrag`  
  Ein Zeiger auf das Rechteck, das definiert, in dem der Ziehvorgang beginnt. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".  
@@ -302,7 +297,7 @@ DROPEFFECT DoDragDrop(
   
  Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren einer Drag & Drop Quelle](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>  COleDataSource::Empty  
  Rufen Sie diese Funktion einen leeren der `COleDataSource` Objekt der Daten.  
   
 ```  
@@ -314,7 +309,7 @@ void Empty();
   
  Weitere Informationen finden Sie unter [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) im Windows SDK.  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  Rendert die Daten, die in die Zwischenablage, und dann können Sie die Daten aus der Zwischenablage einfügen, nachdem die Anwendung beendet wird.  
   
 ```  
@@ -324,7 +319,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>Hinweise  
  Verwendung [SetClipboard](#setclipboard) , die Daten in die Zwischenablage zu speichern.  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
  Bestimmt, ob die Daten in der Zwischenablage, seit geändert hat [SetClipboard](#setclipboard) zuletzt aufgerufen wurde, und wenn dies der Fall ist, identifiziert den aktuellen Besitzer.  
   
 ```  
@@ -334,7 +329,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>Rückgabewert  
  Die Datenquelle derzeit in der Zwischenablage oder **NULL** Wenn nichts in die Zwischenablage, oder wenn die Zwischenablage nicht von der aufrufenden Anwendung gehört.  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
  Wird aufgerufen, durch das Framework zum Abrufen von Daten im angegebenen Format.  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL OnRenderData(
   
  Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen, die [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Enumerationstyp und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) im Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  Wird aufgerufen, durch das Framework zum Abrufen von Daten im angegebenen Format, wenn das Speichermedium für die angegebene Datei ist.  
   
 ```  
@@ -388,7 +383,7 @@ virtual BOOL OnRenderFileData(
   
  Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) im Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  Wird aufgerufen, durch das Framework zum Abrufen von Daten im angegebenen Format, wenn das angegebene Speichermedium globaler Speicher ist.  
   
 ```  
@@ -416,7 +411,7 @@ virtual BOOL OnRenderGlobalData(
   
  Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) im Windows SDK.  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  Wird aufgerufen, durch das Framework festlegen oder Ersetzen Sie die Daten in der `COleDataSource` Objekt im angegebenen Format.  
   
 ```  
@@ -446,7 +441,7 @@ virtual BOOL OnSetData(
   
  Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen und die [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) Funktionen im Windows SDK.  
   
-##  <a name="setclipboard"></a>COleDataSource  
+##  <a name="setclipboard"></a>  COleDataSource  
  Legt die Daten in der `COleDataSource` Objekt in der Zwischenablage nach dem Aufrufen einer der folgenden Funktionen: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), oder [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  

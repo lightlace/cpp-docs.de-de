@@ -1,13 +1,10 @@
 ---
-title: "Hinzufügen von Klassen aus ActiveX-Steuerelement-Assistent | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen von Klassen aus ActiveX-Steuerelement-Assistent | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Hinzufügen einer Klasse mit dem ActiveX-Steuerelement-Assistenten
 Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren ActiveX-Steuerelement hinzufügen. Der Assistent erstellt eine Klasse für jede Schnittstelle, die Sie aus dem ausgewählten ActiveX-Steuerelement hinzufügen.  
@@ -44,7 +39,7 @@ Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren Acti
   
  Wenn Sie auf **Datei** unter **Klasse hinzufügen von**, dieses Feld ist für die Änderung nicht verfügbar.  
   
- **Speicherort**  
+ **Position**  
  Gibt den Speicherort des ActiveX-Steuerelements. Wenn Sie auf **Datei** unter **Klasse hinzufügen von**, können Sie den Speicherort der Datei mit der Typbibliothek angeben. Um auf den Speicherort der Datei zu suchen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten.  
   
  Wenn Sie auf **Registrierung** unter **Klasse hinzufügen von**, dieses Feld ist für die Änderung nicht verfügbar.  
@@ -60,9 +55,9 @@ Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren Acti
 |**<\<**|Entfernt alle Klassen in der **generierte Klassen** Liste. Nicht verfügbar If der **generierte Klassen** Liste ist leer.|  
   
  **Generierte Klassen**  
- Gibt die Klassennamen zu generierenden über die Schnittstellen hinzugefügt, mit der  **>**  oder  **>>**  Schaltfläche. Sie können dieses Kontrollkästchen, um eine Klasse auszuwählen, und klicken Sie dann mithilfe der nach-oben oder nach-unten-Taste in der Liste einen Bildlauf Klicken anzeigen jedes Klassennamen in der `Class` Feld und der Dateiname in der **.h-Datei** Feld, das der Assistent generiert, wenn Sie auf das  **Fertig stellen**. Sie können nur eine Klasse zu einem Zeitpunkt in diesem Feld auswählen.  
+ Gibt die Klassennamen zu generierenden über die Schnittstellen hinzugefügt, mit der **>** oder **>>** Schaltfläche. Sie können dieses Kontrollkästchen, um eine Klasse auszuwählen, und klicken Sie dann mithilfe der nach-oben oder nach-unten-Taste in der Liste einen Bildlauf Klicken anzeigen jedes Klassennamen in der `Class` Feld und der Dateiname in der **.h-Datei** Feld, das der Assistent generiert, wenn Sie auf das  **Fertig stellen**. Sie können nur eine Klasse zu einem Zeitpunkt in diesem Feld auswählen.  
   
- Sie können eine Klasse entfernen, indem Sie es in dieser Liste auswählen und auf  **<** . Sie müssen nicht auf eine Klasse in der **generierte Klassen** Feld, um alle Klassen zu entfernen; klicken  **<<** , entfernen Sie alle Klassen in der **generierte Klassen** Box.  
+ Sie können eine Klasse entfernen, indem Sie es in dieser Liste auswählen und auf **<**. Sie müssen nicht auf eine Klasse in der **generierte Klassen** Feld, um alle Klassen zu entfernen; klicken **<<**, entfernen Sie alle Klassen in der **generierte Klassen** Box.  
   
  `Class`  
  Gibt den Namen der Klasse, die im ausgewählten der **generierte Klassen** Feld, das vom Assistenten hinzugefügt, wenn Sie auf das **Fertig stellen**. Sie können den Namen im Bearbeiten der `Class` Feld.  

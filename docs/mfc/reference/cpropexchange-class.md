@@ -1,12 +1,9 @@
 ---
 title: CPropExchange Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>CPropExchange-Klasse
 Unterstützt die Implementierung der Dauerhaftigkeit für die OLE-Steuerelemente.  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|Gibt an, ob die Eigenschaften werden in das Steuerelement geladen oder daraus gespeichert.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CPropExchange`eine Basisklasse verfügt nicht über.  
+ `CPropExchange` eine Basisklasse verfügt nicht über.  
   
  Legt den Kontext und die Richtung der Austausch einer Eigenschaft an.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  Das Framework übergibt einen Zeiger auf diese `CPropExchange` -Objekt, des Steuerelements `DoPropExchange` Funktion. Wenn Sie einen Assistenten verwendet haben, erstellen Sie die Ausgangsdateien für des Steuerelements, das Steuerelement des `DoPropExchange` Funktionsaufrufe `COleControl::DoPropExchange`. Die Basisklassenversion tauscht vordefinierten Eigenschaften des Steuerelements; Sie ändern die abgeleitete Klasse-Version, um Eigenschaften von Exchange, dass Sie dem Steuerelement hinzugefügt haben.  
   
- `CPropExchange`kann zum Serialisieren von Eigenschaften des Steuerelements oder Initialisieren der Eigenschaften eines Steuerelements nach dem Laden oder Erstellen eines Steuerelements verwendet werden. Die `ExchangeProp` und `ExchangeFontProp` Memberfunktionen der `CPropExchange` können Eigenschaften zu speichern und von einem anderen Medium zu laden.  
+ `CPropExchange` kann zum Serialisieren von Eigenschaften des Steuerelements oder Initialisieren der Eigenschaften eines Steuerelements nach dem Laden oder Erstellen eines Steuerelements verwendet werden. Die `ExchangeProp` und `ExchangeFontProp` Memberfunktionen der `CPropExchange` können Eigenschaften zu speichern und von einem anderen Medium zu laden.  
   
  Weitere Informationen zur Verwendung von `CPropExchange`, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Eigenschaftenseiten](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  Serialisiert eine Eigenschaft, die binary large Object (BLOB)-Daten gespeichert.  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  Die Funktionen **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, und **CPropsetPropExchange::ExchangeBlobProp** außer Kraft setzen Diese rein virtuelle Funktion.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  Tauscht eine Schriftarteigenschaft zwischen einem Speichermedium und das Steuerelement an.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  Die Funktionen **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, und **CPropsetPropExchange::ExchangeFontProp** außer Kraft setzen Diese rein virtuelle Funktion.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  Tauscht eine Eigenschaft zwischen dem Steuerelement und einer Datei an.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  Die Funktionen **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, und **CPropsetPropExchange::ExchangePersistentProp** überschreiben diese rein virtuelle Funktion.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  Tauscht eine Eigenschaft zwischen einem Speichermedium und das Steuerelement an.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  Die Funktionen **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, und **CPropsetPropExchange::ExchangeProp** diesem reinen Außerkraftsetzung virtuelle Funktion.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  Vom Framework aufgerufen, Persistenz von eine Versionsnummer zu behandeln.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Funktion erfolgreich ausgeführt wurde; andernfalls 0.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  Mit dieser Funktion wird zum Abrufen der Anzahl der Version des Steuerelements.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Rückgabewert  
  Die Versionsnummer des Steuerelements.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  Bestimmt, ob die Eigenschaft Nachrichtenaustausch asynchron ausgeführt werden.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true", wenn Eigenschaften sind ausgetauscht asynchron ausgeführt wird, andernfalls "false".  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  Mit dieser Funktion können Sie bestimmen, ob die Eigenschaften werden geladen, um das Steuerelement oder von ihm gespeichert.  
   
 ```  
@@ -277,7 +272,7 @@ BOOL IsLoading();
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [COleControl:: DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
+ [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 
 
 

@@ -1,13 +1,10 @@
 ---
 title: Behandeln von Kommentaren in einem Dokument | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - command handling [MFC], commands in documents
 - documents [MFC], handling messages in
 ms.assetid: c7375584-27af-4275-b2fd-afea476785d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d27698d573e1dee539f93ab88015285648fa77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c20ff02b2d72f1dfa6afab5a0d547b46aa55b18c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-commands-in-the-document"></a>Behandeln von Kommentaren in einem Dokument
 Ihre Dokumentklasse kann auch bestimmte Befehle, die durch die Menüelemente, Symbolleisten-Schaltflächen und Zugriffstasten generiert gehalten werden. Standardmäßig **CDocument** behandelt speichern, und speichern unter Befehle im Menü Datei mithilfe der Serialisierung. Andere Befehle, die Daten auswirken, können auch von Memberfunktionen des Dokuments behandelt werden. In das Scribble-Programm, z. B. Klasse `CScribDoc` stellt einen Handler für den Befehl Alle löschen bearbeiten, dadurch werden alle derzeit im Dokument gespeicherten Daten gelöscht. Dokumente können meldungszuordnungen, aber im Gegensatz zu Ansichten, Dokumente können nicht standardmäßige Windows-Meldungen verarbeiten – nur **WM_COMMAND** Nachrichten oder "Befehle".  

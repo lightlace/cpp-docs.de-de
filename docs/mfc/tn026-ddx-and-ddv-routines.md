@@ -1,13 +1,10 @@
 ---
 title: 'TN026: DDX- und DDV-Routinen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX- und DDV-Routinen
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  Anfangswerte Datenmengen werden festgelegt, in der standardmäßigen C++-Konstruktor in der Regel in einem Block mit `//{{AFX_DATA_INIT` und `//}}AFX_DATA_INIT` Kommentare.  
   
- `CWnd::UpdateData`ist der Vorgang, der die Initialisierung als auch die Fehlerbehandlung rund um den Aufruf durchführt `DoDataExchange`.  
+ `CWnd::UpdateData` ist der Vorgang, der die Initialisierung als auch die Fehlerbehandlung rund um den Aufruf durchführt `DoDataExchange`.  
   
  Sie können Aufrufen `CWnd::UpdateData` zu einem beliebigen Zeitpunkt zum Datenaustausch und die Validierung ausführen. Standardmäßig `UpdateData`("true") wird aufgerufen, in der standardmäßigen `CDialog::OnOK` Handler und `UpdateData`("false") wird aufgerufen, in der standardmäßigen `CDialog::OnInitDialog`.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: Das Fenster (normalerweise ein Dialogfeld "), das die Steuerelemente enthält. Dadurch wird verhindert, dass Aufrufer DDX_ und DDV_ globalen Funktionen "this" übergeben müssen jede DDX-/DDV-Routine.  
   
-- `PrepareCtrl`, und `PrepareEditCtrl`: bereitet ein dialogsteuerelement für den Datenaustausch. Speichert dieses Steuerelement Handle zum Festlegen des Fokus, wenn es sich bei einem Überprüfungsfehler fehlschlägt. `PrepareCtrl`wird für Steuerelemente Nonedit verwendet und `PrepareEditCtrl` für Bearbeitungssteuerelemente verwendet wird.  
+- `PrepareCtrl`, und `PrepareEditCtrl`: bereitet ein dialogsteuerelement für den Datenaustausch. Speichert dieses Steuerelement Handle zum Festlegen des Fokus, wenn es sich bei einem Überprüfungsfehler fehlschlägt. `PrepareCtrl` wird für Steuerelemente Nonedit verwendet und `PrepareEditCtrl` für Bearbeitungssteuerelemente verwendet wird.  
   
 - **Fehler**: aufgerufen, nachdem ein Meldungsfeld mit den Benutzer die Eingabefehler Warnungen zu schalten. Diese Routine wird den Fokus auf das letzte Steuerelement wiederherstellen (dem letzten Aufruf von `PrepareCtrl` / `PrepareEditCtrl`) und löst eine Ausnahme. Diese Memberfunktion kann von DDX_ und DDV_ Routinen aufgerufen werden.  
   

@@ -1,12 +1,9 @@
 ---
 title: CFileFind Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFileFind
@@ -65,17 +62,15 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfilefind-class"></a>CFileFind-Klasse
 Führt lokale Dateisuchen aus und ist die Basisklasse für [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) und [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), dem internetdateisuchen.  
@@ -230,7 +225,7 @@ virtual BOOL FindFile(
   
 - [GetLastWriteTime](#getlastwritetime)  
   
-- [GetLength](#getlength)  
+- [getLength](#getlength)  
   
 - [GetRoot](#getroot)  
   
@@ -284,7 +279,7 @@ virtual BOOL FindNextFile();
   
 - [GetLastWriteTime](#getlastwritetime)  
   
-- [GetLength](#getlength)  
+- [getLength](#getlength)  
   
 - [GetRoot](#getroot)  
   
@@ -672,7 +667,7 @@ BOOL IsSystem() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- A system file is marked with FILE_ATTRIBUTE_SYSTEM, , a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Eine Systemdatei ist Bestandteil des oder ausschließlich vom Betriebssystem verwendet wird.  
+ Eine Systemdatei mit FILE_ATTRIBUTE_SYSTEM gekennzeichnet ist, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine Systemdatei ist Bestandteil des oder ausschließlich vom Betriebssystem verwendet wird.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsSystem`.  
   
@@ -729,7 +724,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
   
 -   FILE_ATTRIBUTE_NORMAL die Datei verfügt über keine anderen Attribute festgelegt. Dieses Attribut ist nur gültig, wenn isoliert verwendet. Alle anderen Dateiattribute Überschreiben dieses Attribut.  
   
--   FILE_ATTRIBUTE_HIDDEN   The file is hidden. Es ist nicht in einer normalen Verzeichnisliste enthalten sein.  
+-   FILE_ATTRIBUTE_HIDDEN die Datei wird ausgeblendet. Es ist nicht in einer normalen Verzeichnisliste enthalten sein.  
   
 -   FILE_ATTRIBUTE_READONLY die Datei ist schreibgeschützt. Anwendungen können sie lesen Sie die Datei aber kann nicht in ihn schreiben oder löschen.  
   

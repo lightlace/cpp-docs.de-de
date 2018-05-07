@@ -1,13 +1,10 @@
 ---
-title: "ActiveX-Steuerelemente für das Internet | Microsoft Docs"
-ms.custom: 
+title: ActiveX-Steuerelemente für das Internet | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>ActiveX-Steuerelemente für das Internet
 ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spezifikation. Steuerelemente sind eine primäre Architektur für die Entwicklung von programmierbaren Softwarekomponenten, die in einer Vielzahl von unterschiedlichen Containern, einschließlich COM+-fähigen Webbrowser auf das Internet verwendet werden können. Jedes ActiveX-Steuerelement kann ein Internet-Steuerelement sein und können die Funktionalität eines aktiven Dokuments hinzufügen oder Teil einer Webseite. Steuerelemente auf einer Webseite können mithilfe von Skripts miteinander kommunizieren.  
@@ -165,9 +160,9 @@ ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spez
   
  Implementieren Sie [asynchronen Monikern](../mfc/asynchronous-monikers-on-the-internet.md) mithilfe der `CAsyncMonikerFile` Klasse. ActiveX-Steuerelemente können jedoch die `CDataPathProperty` -Klasse, die abgeleitet ist `CAsyncMonikerFile`, damit die asynchrone Steuerelementeigenschaften zu implementieren.  
   
- Die ASYNDOWN-Beispiel veranschaulicht das Einrichten einer asynchronen Schleife Zeitgeber verwenden, um die Daten zu lesen. ASYNDOWN wird ausführlich beschrieben unter "So wird's gemacht: AsyncDown veranschaulicht asynchrone Herunterladen von Daten" (Q177244) Knowledge Base-Artikel und für den Download im Microsoft Download Center verfügbar ist. (Weitere Informationen zum Herunterladen von Dateien aus dem Microsoft Download Center, finden Sie in der Artikel "How to erhalten Microsoft Support-Dateien aus Online Services" (Q119591) in der Microsoft Knowledge Base). Sie finden Knowledge Base-Artikel unter [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ Die ASYNDOWN-Beispiel veranschaulicht das Einrichten einer asynchronen Schleife Zeitgeber verwenden, um die Daten zu lesen. ASYNDOWN wird ausführlich beschrieben unter "So wird's gemacht: AsyncDown veranschaulicht asynchrone Herunterladen von Daten" (Q177244) Knowledge Base-Artikel und für den Download im Microsoft Download Center verfügbar ist. (Weitere Informationen zum Herunterladen von Dateien aus dem Microsoft Download Center, finden Sie in der Artikel "How to erhalten Microsoft Support-Dateien aus Online Services" (Q119591) in der Microsoft Knowledge Base). Sie finden Knowledge Base-Artikel unter [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- Die grundlegende Methode in ASYNDOWN wird einen Zeitgeber festgelegt **CDataPathProperty** , um anzugeben, wenn Daten verfügbar sind. Wenn das Timer-Nachricht empfangen wird, wird die Anwendung in Blöcken von 128 Byte der Daten liest und ein Bearbeitungssteuerelement füllt. Wenn Daten nicht verfügbar ist, wenn die Timer-Nachricht verarbeitet wird, wird der Timer deaktiviert. `OnDataAvailable`aktiviert den Zeitgeber, wenn später weitere Daten empfangen.  
+ Die grundlegende Methode in ASYNDOWN wird einen Zeitgeber festgelegt **CDataPathProperty** , um anzugeben, wenn Daten verfügbar sind. Wenn das Timer-Nachricht empfangen wird, wird die Anwendung in Blöcken von 128 Byte der Daten liest und ein Bearbeitungssteuerelement füllt. Wenn Daten nicht verfügbar ist, wenn die Timer-Nachricht verarbeitet wird, wird der Timer deaktiviert. `OnDataAvailable` aktiviert den Zeitgeber, wenn später weitere Daten empfangen.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Anzeigen eines Steuerelements auf einer Webseite  
  Hier ist ein Beispiel für ein Objekttag und Attribute für das Einfügen eines Steuerelements auf einer Webseite.  

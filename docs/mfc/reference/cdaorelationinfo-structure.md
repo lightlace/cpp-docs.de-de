@@ -2,12 +2,9 @@
 title: CDaoRelationInfo-Struktur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoRelationInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 047b81ebaa903d2b9bdddcf6c606d1e9fe649482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo-Struktur
 Die `CDaoRelationInfo` Struktur enthält Informationen über eine Beziehung zwischen zwei Tabellen in Feldern definiert eine [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) Objekt.  
@@ -85,7 +80,7 @@ struct CDaoRelationInfo
   
  Relation-Objekte werden nicht von einer MFC-Klasse dargestellt. Stattdessen, die DAO-Objekt, das zugrunde liegende ein MFC-Objekt von der `CDaoDatabase` -Klasse verwaltet eine Auflistung von Objekten Beziehung: `CDaoDatabase` stellt Memberfunktionen einige einzelne Elemente Beziehung Informationen, oder wenn Sie Zugriff auf Sie zugreifen können alle auf einmal mit einem `CDaoRelationInfo` Objekt durch Aufrufen der `GetRelationInfo` Memberfunktion Rand des enthaltenden Datenbankobjekts.  
   
- Informationen, die abgerufen, indem die [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) Memberfunktion befindet sich in einer `CDaoRelationInfo` Struktur. `CDaoRelationInfo`definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoRelationInfo` Objekt.  
+ Informationen, die abgerufen, indem die [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) Memberfunktion befindet sich in einer `CDaoRelationInfo` Struktur. `CDaoRelationInfo` definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoRelationInfo` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
