@@ -1,12 +1,9 @@
 ---
 title: COleBusyDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog-Klasse
 Wird für die OLE-Dialogfelder "Server antwortet nicht" oder "Server ausgelastet" verwendet.  
@@ -93,7 +88,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  Diese Funktion nur bildet eine `COleBusyDialog` Objekt.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  Weitere Informationen finden Sie unter der [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Mit dieser Funktion wird zum Anzeigen des Dialogfelds OLE-Server ausgelastet "oder" Server antwortet nicht.  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder der Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  Mit dieser Funktion wird zum Abrufen des Auswahltyps, der vom Benutzer im Dialogfeld "Server ausgelastet" ausgewählt wurde.  
   
 ```  
@@ -178,7 +173,7 @@ enum Selection {
   
 - **COleBusyDialog::callUnblocked** Aufruf zum Aktivieren des Servers ist jetzt entsperrt.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  Struktur des Typs **OLEUIBUSY** zum Steuern des Verhaltens im Dialogfeld "Server ausgelastet" verwendet.  
   
 ```  

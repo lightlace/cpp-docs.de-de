@@ -1,12 +1,9 @@
 ---
 title: CEvent Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent-Klasse
 Stellt ein Ereignis dar-ein Synchronisierungsobjekt, die es einem Thread ermöglicht anderen darüber zu benachrichtigen, die ein Ereignis aufgetreten ist.  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>Hinweise  
  Ereignisse sind nützlich, wenn ein Thread seine Aufgabe ausführt wann muss. Beispielsweise muss ein Thread, der Daten an ein Datenarchiv kopiert darüber informiert werden, wenn neue Daten verfügbar sind. Mithilfe einer `CEvent` Objekt, das die Kopie-Thread zu benachrichtigen, wenn neue Daten verfügbar ist, werden der Thread seine Aufgabe so bald wie möglich ausführen kann.  
   
- `CEvent`Objekte verfügen über zwei Arten: Manuelles und automatisches.  
+ `CEvent` Objekte verfügen über zwei Arten: Manuelles und automatisches.  
   
  Eine automatische `CEvent` Objekt wird automatisch in einen nicht signalisierten (nicht verfügbar) Zustand zurückkehrt, mindestens einen Thread freigegeben ist. Wird standardmäßig ein `CEvent` Objekt erfolgt automatisch, es sei denn, Sie übergeben `TRUE` für die `bManualReset` Parameter während der Erstellung.  
   
@@ -95,7 +90,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  Erstellt einen benannten oder unbenannten `CEvent` Objekt.  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  Nach dem Erstellen der `CEvent` -Objekts [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um sicherzustellen, dass das Mutex bereits noch nicht gab. Wenn das Mutex unerwartet vorhanden war, kann dies bedeuten, ein Rogue-Prozess ist squatting und möglicherweise beabsichtigten Mutex in böswilliger Absicht verwendet werden. In diesem Fall ist die empfohlene Vorgehensweise für die-Lösung auf das Handle geschlossen und fortgesetzt, als wäre es ein Fehler wurde beim Erstellen des Objekts.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Legt den Zustand des Ereignisses auf die Signalisierung (verfügbar), alle wartenden Threads frei und setzt sie auf "nicht signalisiert" (nicht verfügbar) automatisch zurück.  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  Wenn keine Threads warten, oder keine Threads sofort freigegeben werden können `PulseEvent` legt den Zustand des Ereignisses auf "nicht signalisiert" fest und gibt zurück.  
   
- `PulseEvent`verwendet die zugrunde liegenden Win32 `PulseEvent` -Funktion, die von einem asynchronen Prozeduraufruf Kernel-Modus von den Wartezustand vorübergehend entfernt werden kann. Aus diesem Grund `PulseEvent` nicht zuverlässig ist und nicht durch neue Anwendungen verwendet werden. Weitere Informationen finden Sie unter der [PulseEvent Funktion](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` verwendet die zugrunde liegenden Win32 `PulseEvent` -Funktion, die von einem asynchronen Prozeduraufruf Kernel-Modus von den Wartezustand vorübergehend entfernt werden kann. Aus diesem Grund `PulseEvent` nicht zuverlässig ist und nicht durch neue Anwendungen verwendet werden. Weitere Informationen finden Sie unter der [PulseEvent Funktion](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Legt den Zustand des Ereignisses auf "nicht signalisiert", bis explizit festlegen von signalisiert der [SetEvent](#setevent) Memberfunktion.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  Diese Memberfunktion wird durch automatische Ereignisse nicht verwendet.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  Legt fest, dass der Zustand des Ereignisses, das signalisiert, alle wartenden Threads freigegeben.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Hinweise  
  Wenn das Ereignis auf manuell eingestellt ist, wird das Ereignis signalisiert, bis bleiben [ResetEvent](#resetevent) aufgerufen wird. Mehrere Threads kann in diesem Fall aufgehoben werden. Wenn das Ereignis automatisch erfolgt, bleibt das Ereignis signalisiert, bis ein einziger Thread freigegeben wird. Das System wird der Zustand des Ereignisses auf "nicht signalisiert" festgelegt. Wenn keine Threads warten, bleibt der Zustand signalisiert, bis ein Thread freigegeben wird.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  Gibt das Ereignisobjekt frei.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: CD2DResource-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DResource
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc6b80803cbddcbd05655a8f9620c102aef3e9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dresource-class"></a>CD2DResource-Klasse
 Eine abstrakte Klasse, die eine Schnittstelle zum Erstellen und Verwalten von D2D-Ressourcen, z. B. Pinsel, Ebenen und Texte bereitstellt.  
@@ -91,14 +86,14 @@ class CD2DResource : public CObject;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
+##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource  
  Der Destruktor. Wird aufgerufen, wenn ein Ressourcenobjekt D2D zerstört wird.  
   
 ```  
 virtual ~CD2DResource();
 ```  
   
-##  <a name="cd2dresource"></a>CD2DResource::CD2DResource  
+##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource  
  Erstellt ein CD2DResource-Objekt.  
   
 ```  
@@ -114,7 +109,7 @@ CD2DResource(
  `bAutoDestroy`  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
-##  <a name="create"></a>CD2DResource:: Create  
+##  <a name="create"></a>  CD2DResource:: Create  
  Erstellt eine CD2DResource an.  
   
 ```  
@@ -128,14 +123,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="destroy"></a>CD2DResource:: Destroy  
+##  <a name="destroy"></a>  CD2DResource:: Destroy  
  Zerstört ein CD2DResource-Objekt.  
   
 ```  
 virtual void Destroy() = 0;  
 ```  
   
-##  <a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
+##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy  
  Kontrollkästchen automatisch zerstört Flag.  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Objekt von seinem Besitzer zerstört wird. andernfalls "false".  
   
-##  <a name="isvalid"></a>CD2DResource::IsValid  
+##  <a name="isvalid"></a>  CD2DResource::IsValid  
  Die Ressource Gültigkeit überprüft  
   
 ```  
@@ -155,21 +150,21 @@ virtual BOOL IsValid() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Ressource gültig ist. andernfalls "false".  
   
-##  <a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
+##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy  
  Ressource wird Destoyed vom Besitzer (CRenderTarget) sein.  
   
 ```  
 BOOL m_bIsAutoDestroy;  
 ```  
   
-##  <a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
+##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget  
  Zeiger auf den übergeordneten CRenderTarget)  
   
 ```  
 CRenderTarget* m_pParentTarget;  
 ```  
   
-##  <a name="recreate"></a>CD2DResource::ReCreate  
+##  <a name="recreate"></a>  CD2DResource::ReCreate  
  Erstellt eine CD2DResource.  
   
 ```  

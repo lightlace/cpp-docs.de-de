@@ -1,13 +1,10 @@
 ---
-title: "Öffnen Sie Ordner Projekte in Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Öffnen Sie Ordner Projekte in Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Öffnen Sie Ordner Projekte in Visual C++
 Visual Studio-2017 führt die Funktion "Ordner geöffnet" ermöglicht es Ihnen, öffnen Sie einen Ordner für Quelldateien und sofort Codieren mit Unterstützung für IntelliSense, durchsuchen, Umgestaltung, Debuggen, beginnen und so weiter. Keine sln oder vcxproj-Dateien werden geladen. bei Bedarf können Sie benutzerdefinierte Tasks angeben sowie erstellen und starten Sie die Parameter durch einfache JSON-Dateien. Unterstützt von Ordner öffnen, kann Visual C++ jetzt nicht nur lose Sammlungen von Dateien, sondern auch nahezu alle Buildsystem, darunter CMake, Ninja, QMake (für unbedingt Projekte), Gyp, SCons, Gradle, Buck, stellen und vieles mehr unterstützen. 
 
-Wählen Sie zum Ordner öffnen zu verwenden, über das Hauptmenü *Datei | Open | Ordner* oder drücken Sie *Strg + Umschalt + Alt + O*. Projektmappen-Explorer zeigt sofort alle Dateien im Ordner "". Sie können auf eine beliebige Datei aus, um mit der Bearbeitung anfangen klicken. Im Hintergrund startet Visual Studio, indizieren Sie die Dateien, um IntelliSense, Navigation und Umgestaltung Funktionen zu aktivieren. Wie bearbeiten, erstellen, verschieben oder Löschen von Dateien wird von Visual Studio die Änderungen automatisch nachverfolgt und kontinuierlich aktualisiert seinen IntelliSense-Index. 
+Wählen Sie zum Ordner öffnen zu verwenden, über das Hauptmenü *Datei | Open | Ordner* oder drücken Sie *Strg + Umschalt + Alt + O*. Projektmappen-Explorer zeigt sofort alle Dateien im Ordner "". Sie können auf eine beliebige Datei klicken, um mit der Bearbeitung zu beginnen. Visual Studio beginnt im Hintergrund damit, die Dateien zu indizieren, um IntelliSense, Navigation und Refactoringfunktionen zu ermöglichen. Während Sie Dateien bearbeiten, erstellen, verschieben und löschen, verfolgt Visual Studio die Änderungen automatisch nach und aktualisiert den IntelliSense-Index kontinuierlich. 
   
 ## <a name="cmake-projects"></a>CMake-Projekte
 CMake ist in der Visual Studio-IDE als CMake-Tools für Visual C++ ist eine Komponente von der C++-desktop-arbeitsauslastung integriert. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](cmake-tools-for-visual-cpp.md).
@@ -43,8 +39,8 @@ Sie können über drei JSON-Dateien einen Ordner öffnen-Projekt anpassen:
 |||
 |-|-|
 |CppProperties.json|Geben Sie für das Durchsuchen von benutzerdefinierten Konfigurationsinformationen. Erstellen Sie diese Datei, die ggf. im Stammordner des Projekts.|
-|launch.vs.json|Geben Sie die Befehlszeilenargumente. Über die **Projektmappen-Explorer** Kontextmenüelement **Debug- und Starteinstellungen**.|
-|tasks.vs.json|Geben Sie benutzerdefinierte Buildbefehle und Compilerschalter. Über die **Projektmappen-Explorer** Kontextmenüelement **Tasks konfigurieren**.|
+|launch.vs.json|Geben Sie die Befehlszeilenargumente. Der Zugriff erfolgt über das Kontextmenüelement **Einstellungen für Debuggen und Starten** im **Projektmappen-Explorer**.|
+|tasks.vs.json|Geben Sie benutzerdefinierte Buildbefehle und Compilerschalter. Der Zugriff erfolgt über das Kontextmenüelement **Tasks konfigurieren** im **Projektmappen-Explorer**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Konfigurieren von IntelliSense mit CppProperties.json
 IntelliSense und Durchsuchen das Verhalten teilweise hängt von der aktiven Buildkonfiguration, die definiert #include Bereichspfade, Compilerschalter sowie anderen Parametern. Visual Studio bietet standardmäßig Debug- und Releasekonfigurationen. Bei einigen Projekten müssen Sie zum Erstellen einer benutzerdefinierten Konfigurations in der Reihenfolge von IntelliSense und Suchfunktionen zu Ihrem Code vollständig zu verstehen. Um eine neue Konfiguration zu definieren, erstellen Sie eine Datei namens CppProperties.json im Stammordner. Im Folgenden ein Beispiel:
@@ -75,12 +71,12 @@ Eine Konfiguration kann die folgenden Eigenschaften aufweisen:
 |`forcedInclude`|Header, automatisch in jeder Kompilierungseinheit eingeschlossen werden sollen (ordnet/Fi für MSVC oder - umfassen für Clang)|
 |`undefines`|die Liste der Makros undefiniert (ergibt/u für MSVC) sein|
 |`intelliSenseMode`|das IntelliSense-Modul verwendet werden. Sie können die Architektur spezifischen Varianten für MSVC, die erforderlichen gcc- und Clang angeben:
-- msvc-x86 (default)
+- MSVC-X86 (Standard)
 - msvc-x64
 - msvc-arm
-- windows-clang-x86
-- windows-clang-x64
-- windows-clang-arm
+- Windows-Clang-x86
+- Windows-Clang-x64
+- Windows-Clang-arm
 - Linux-x64
 - Linux-x86
 - Linux-arm
@@ -248,12 +244,12 @@ Sie können eine beliebige Anzahl von Konfigurationen in CppProperties.json erst
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Definieren Sie Aufgaben im Zusammenhang mit tasks.vs.json
-Sie können automatisieren Buildskripts oder andere externe Vorgänge auf die Dateien, die Sie in Ihrem aktuellen Arbeitsbereich verfügen, indem Sie sie als direkt in der IDE Aufgaben ausführen. Sie können einen neuen Task konfigurieren, indem Sie mit der rechten Maustaste auf eine Datei oder einen Ordner, und wählen **Tasks konfigurieren**. 
+### <a name="define-tasks-with-tasksvsjson"></a>Definieren von Tasks mit „tasks.vs.json“
+Sie können Buildskripts oder andere externe Vorgänge in den Dateien automatisieren, die sich in Ihrem aktuellen Arbeitsbereich befinden, indem Sie sie direkt in der IDE als Tasks ausführen. Sie können einen neuen Task konfigurieren, indem Sie mit der rechten Maustaste auf eine Datei oder einen Ordner klicken und **Tasks konfigurieren** auswählen. 
 
 ![Tasks für Ordner öffnen konfigurieren](media/open-folder-config-tasks.png)
 
-Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visual Studio im Stammordner des Projekts erstellt. Sie können jede beliebige Aufgabe in dieser Datei zu definieren und dann aus der **Projektmappen-Explorer** Kontextmenü. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die eine einzelne Aufgabe definiert. `taskName`definiert den angezeigten Namen im Kontextmenü an. `appliesTo`definiert, welche Dateien für der Befehl ausgeführt werden kann. Die `command` Eigenschaft bezieht sich auf die PATHEXT für die Umgebung, die den Pfad für die Konsole (cmd.exe unter Windows) identifiziert. Sie können auch Umgebungsvariablen verweisen, die in CppProperties.json oder CMakeSettings.json deklariert werden. Die `args` Eigenschaft gibt die Befehlszeile aufgerufen werden. Die `${file}` Makro ruft die ausgewählte Datei in **Projektmappen-Explorer**. Im folgende Beispiel wird der Dateiname der aktuell ausgewählten cpp-Datei angezeigt.
+Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visual Studio im Stammordner des Projekts erstellt. Sie können jede beliebige Aufgabe in dieser Datei zu definieren und dann aus der **Projektmappen-Explorer** Kontextmenü. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die eine einzelne Aufgabe definiert. `taskName` definiert den angezeigten Namen im Kontextmenü an. `appliesTo` definiert, welche Dateien für der Befehl ausgeführt werden kann. Die `command` Eigenschaft bezieht sich auf die PATHEXT für die Umgebung, die den Pfad für die Konsole (cmd.exe unter Windows) identifiziert. Sie können auch Umgebungsvariablen verweisen, die in CppProperties.json oder CMakeSettings.json deklariert werden. Die `args` Eigenschaft gibt die Befehlszeile aufgerufen werden. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgende Beispiel wird der Dateiname der aktuell ausgewählten cpp-Datei angezeigt.
 
 ```json
 {
@@ -274,16 +270,16 @@ Nach dem Speichern tasks.vs.json, können Sie mit der rechten Maustaste alle cpp
 
 
 #### <a name="appliesto"></a>appliesTo
-Sie können Aufgaben für alle Dateien oder Ordner erstellen, indem Sie ihren Namen in der `appliesTo` Feld, z. B. `"appliesTo" : "hello.cpp"`. Die folgenden Dateimasken können als Werte verwendet werden:
+Sie können Tasks für jede Datei und jeden Ordner erstellen, indem Sie den Namen der Datei bzw. des Ordners im Feld `appliesTo` angeben. Beispiel: `"appliesTo" : "hello.cpp"`. Die folgenden Dateimasken können als Werte verwendet werden:
 |||
 |-|-|
-|`"*"`| Task ist für alle Dateien und Ordner im Arbeitsbereich verfügbar|
-|`"*/"`| Task ist für alle Ordner im Arbeitsbereich verfügbar|
+|`"*"`| Der Task ist für alle Dateien und Ordner im Arbeitsbereich verfügbar.|
+|`"*/"`| Der Task ist für alle Ordner im Arbeitsbereich verfügbar.|
 |`"*.cpp"`| Task ist für alle Dateien mit der Erweiterung .cpp im Arbeitsbereich verfügbar|
 |`"/*.cpp"`| Aufgabe ist verfügbar, um alle Dateien mit der Erweiterung .cpp im Stammverzeichnis des Arbeitsbereichs|
-|`"src/*/"`| Aufgabe ist verfügbar, um alle Unterordner des Ordners "Src"|
-|`"makefile"`| Task ist für alle Makefile-Dateien im Arbeitsbereich verfügbar|
-|`"/makefile"`| Aufgabe steht nur für die Makefile im Stammverzeichnis des Arbeitsbereichs|
+|`"src/*/"`| Der Task ist für alle Unterordner des Ordners „src“ verfügbar.|
+|`"makefile"`| Der Task ist für alle makefile-Dateien im Arbeitsbereich verfügbar.|
+|`"/makefile"`| Der Task ist nur für die makefile-Datei im Stammverzeichnis des Arbeitsbereichs verfügbar.|
 
 #### <a name="output"></a>Ausgabe
 Verwenden der `output` Eigenschaft, um die ausführbare Datei anzugeben, die gestartet wird, wenn Sie drücken **F5**. Zum Beispiel:
@@ -292,7 +288,7 @@ Verwenden der `output` Eigenschaft, um die ausführbare Datei anzugeben, die ges
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>Makros für die tasks.vs.json
+#### <a name="macros-for-tasksvsjson"></a>Makros für „tasks.vs.json“
 
 |||
 |-|-|

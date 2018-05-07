@@ -1,12 +1,9 @@
 ---
 title: CMFCBaseVisualManager Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
@@ -37,22 +34,20 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb579cff639da9965c7214c2dd8abce8459d254
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager-Klasse
 Eine Softwareebene zwischen abgeleiteten visuelle Manager und der Windows-Design-API.  
   
- `CMFCBaseVisualManager`Lädt UxTheme.dll, falls verfügbar, und verwaltet den Zugriff auf Windows-Design-API-Methoden.  
+ `CMFCBaseVisualManager` Lädt UxTheme.dll, falls verfügbar, und verwaltet den Zugriff auf Windows-Design-API-Methoden.  
   
  Diese Klasse ist nur zur internen Verwendung.  
   
@@ -107,7 +102,7 @@ class CMFCBaseVisualManager: public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxvisualmanager.h  
   
-##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
+##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes  
  Aufrufe `CloseThemeData` für alle Handles in abgerufenen `UpdateSystemColors`.  
   
 ```  
@@ -117,14 +112,14 @@ void CleanUpThemes();
 ### <a name="remarks"></a>Hinweise  
  Nur für interne Verwendung.  
   
-##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
+##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager  
  Erstellt und initialisiert ein `CMFCBaseVisualManager`-Objekt.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
+##  <a name="drawcheckbox"></a>  CMFCBaseVisualManager::DrawCheckBox  
  Zeichnet ein Kontrollkästchen-Steuerelement mit dem aktuellen Windows-Design an.  
   
 ```  
@@ -161,7 +156,7 @@ virtual BOOL DrawCheckBox(
  Gibt an, ob das Kontrollkästchen gedrückt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Werte der `nState` die folgenden Kontrollkästchen-Stile entsprechen.  
@@ -172,7 +167,7 @@ virtual BOOL DrawCheckBox(
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
+##  <a name="drawcomboborder"></a>  CMFCBaseVisualManager::DrawComboBorder  
  Zeichnet den Rahmen des Kombinationsfelds mit dem aktuellen Windows-Design an.  
   
 ```  
@@ -201,9 +196,9 @@ virtual BOOL DrawComboBorder(
  Gibt an, ob der Rahmen des Kombinationsfelds markiert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
+##  <a name="drawcombodropbutton"></a>  CMFCBaseVisualManager::DrawComboDropButton  
  Zeichnet eine Dropdown-kombinationsfeldschaltfläche mit dem aktuellen Windows-Design an.  
   
 ```  
@@ -226,9 +221,9 @@ virtual BOOL DrawComboDropButton(
 |[in] `bIsHighlighted`|Gibt an, ob die Dropdownschaltfläche des Kombinationsfelds markiert ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
+##  <a name="drawpushbutton"></a>  CMFCBaseVisualManager::DrawPushButton  
  Zeichnet eine Schaltfläche mit dem aktuellen Windows-Design an.  
   
 ```  
@@ -253,9 +248,9 @@ virtual BOOL DrawPushButton(
  Ignoriert. Der Status entnommen `pButton`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
+##  <a name="drawradiobutton"></a>  CMFCBaseVisualManager::DrawRadioButton  
  Zeichnet ein Optionsfeld-Steuerelement mit dem aktuellen Windows-Design an.  
   
 ```  
@@ -288,9 +283,9 @@ virtual BOOL DrawRadioButton(
  Gibt an, ob das Optionsfeld gedrückt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
+##  <a name="drawstatusbarprogress"></a>  CMFCBaseVisualManager::DrawStatusBarProgress  
  Zeichnet Statusanzeige auf StatusBar-Steuerelement ( [CMFCStatusBar-Klasse](../../mfc/reference/cmfcstatusbar-class.md)) mit dem aktuellen Windows-Design.  
   
 ```  
@@ -323,21 +318,21 @@ virtual BOOL DrawStatusBarProgress(
  Der aktuelle Statuswert.  
   
  [in] `clrBar`  
- Die Startfarbe. `CMFCBaseVisualManager`ignoriert. Abgeleitete Klassen können sie für Farbverläufe.  
+ Die Startfarbe. `CMFCBaseVisualManager` ignoriert. Abgeleitete Klassen können sie für Farbverläufe.  
   
  [in] `clrProgressBarDest`  
- Die Endfarbe. `CMFCBaseVisualManager`ignoriert. Abgeleitete Klassen können sie für Farbverläufe.  
+ Die Endfarbe. `CMFCBaseVisualManager` ignoriert. Abgeleitete Klassen können sie für Farbverläufe.  
   
  [in] `clrProgressText`  
- Textfarbe ausgeführt. `CMFCBaseVisualManager`ignoriert. Die Textfarbe wird definiert, indem `afxGlobalData.clrBtnText`.  
+ Textfarbe ausgeführt. `CMFCBaseVisualManager` ignoriert. Die Textfarbe wird definiert, indem `afxGlobalData.clrBtnText`.  
   
  [in] `bProgressText`  
  Gibt an, ob der Text angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
+##  <a name="fillrebarpane"></a>  CMFCBaseVisualManager::FillReBarPane  
  Füllt den Hintergrund des Grundleisten-Steuerelement mit dem aktuellen Windows-Design an.  
   
 ```  
@@ -358,9 +353,9 @@ virtual void FillReBarPane(
  Das umschließende Rechteck des Bereichs gefüllt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
+##  <a name="getstandardwindowstheme"></a>  CMFCBaseVisualManager::GetStandardWindowsTheme  
  Ruft das aktuelle Windows-Design ab.  
   
 ```  
@@ -370,17 +365,17 @@ virtual WinXpTheme GetStandardWindowsTheme();
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuell ausgewählte Windows-Design-Farbe. Die folgenden Enumerationswerte sind möglich:  
   
-- `WinXpTheme_None`-Es ist kein Design aktiviert.  
+- `WinXpTheme_None` -Es ist kein Design aktiviert.  
   
-- `WinXpTheme_NonStandard`-Design "nicht dem standard" aktiviert ist (d. h., ein Design ausgewählt ist, aber keine aus der Liste unten).  
+- `WinXpTheme_NonStandard` -Design "nicht dem standard" aktiviert ist (d. h., ein Design ausgewählt ist, aber keine aus der Liste unten).  
   
-- `WinXpTheme_Blue`-Design "Blau" (Luna).  
+- `WinXpTheme_Blue` -Design "Blau" (Luna).  
   
-- `WinXpTheme_Olive`-Olivenöl Design.  
+- `WinXpTheme_Olive` -Olivenöl Design.  
   
-- `WinXpTheme_Silver`-Design "Silber".  
+- `WinXpTheme_Silver` -Design "Silber".  
   
-##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
+##  <a name="updatesystemcolors"></a>  CMFCBaseVisualManager::UpdateSystemColors  
  Aufrufe `OpenThemeData` zum Abrufen des Handles für das Zeichnen von verschiedenen Steuerelementen: Windows, Symbolleisten, Schaltflächen und So weiter.  
   
 ```  

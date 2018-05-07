@@ -1,12 +1,9 @@
 ---
 title: CMiniFrameWnd Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd-Klasse
 Stellt ein Rahmenfenster mit halber Höhe dar, das in der Regel um unverankerte Symbolleisten sichtbar ist.  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Erstellt eine `CMiniFrameWnd` -Objekt, aber das Fenster nicht erstellt.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie zum Erstellen des Fensters [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Erstellt die Windows-Minirahmenfenster und fügt es der `CMiniFrameWnd` Objekt.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** deaktiviert den Zugriff auf das Systemmenü und dem Steuerelementmenü und konvertiert diese in Teil der Beschriftung (Titelleiste).  
   
- Finden Sie unter [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) eine Beschreibung der möglichen Fensterstilwerte. Ist die typische Kombination Minirahmenfenster zum **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**.  
+ Finden Sie unter [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) eine Beschreibung der möglichen Fensterstilwerte. Ist die typische Kombination Minirahmenfenster zum **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
  Ein `RECT` Struktur, die die gewünschten Dimensionen des Fensters angibt.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  **Erstellen Sie** Klassennamen und entweder ist der Name des Fensters initialisiert und Standardwerte für die Rahmenart und die übergeordnete registriert.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Erstellt ein `CMiniFrameWnd`-Objekt.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Gibt "true" bei Erfolg, bei einem Fehler FALSE.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CreateEx` Parameter geben die **WNDCLASS**, Stil des Fensters, und (optional) ursprüngliche Position und Größe des Fensters. `CreateEx`gibt auch an des Fensters übergeordnete (sofern vorhanden) und -ID.  
+ Die `CreateEx` Parameter geben die **WNDCLASS**, Stil des Fensters, und (optional) ursprüngliche Position und Größe des Fensters. `CreateEx` gibt auch an des Fensters übergeordnete (sofern vorhanden) und -ID.  
   
  Wenn `CreateEx` ausgeführt wird, sendet Windows die [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), und [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) Meldungen an das Fenster.  
   
  Um die Standard-Meldungsbehandlung zu erweitern, leiten Sie eine Klasse von `CMiniFrameWnd`, eine meldungszuordnung an die neue Klasse hinzufügen und Memberfunktionen für die oben genannten Nachrichten bereitstellen. Überschreiben Sie `OnCreate`, z. B. für die erforderliche Initialisierung für eine neue Klasse.  
   
- Überschreiben Sie weitere **auf***Nachricht* message-Handler können Sie weitere Funktionen in der abgeleiteten Klasse hinzufügen.  
+ Weitere überschreiben **auf *** Nachricht* message-Handler können Sie weitere Funktionen in der abgeleiteten Klasse hinzufügen.  
   
  Wenn die **WS_VISIBLE** Stil angegeben ist, sendet Windows die Fenster alle Nachrichten, die für die Aktivierung und die Fenster anzeigen. Der Fensterstil eine Titelleiste an, der Fenstertitel verweist, zu der `lpszWindowName` Parameter in der Titelleiste angezeigt wird.  
   

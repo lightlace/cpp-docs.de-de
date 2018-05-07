@@ -1,13 +1,10 @@
 ---
 title: Verwenden von Eigenschaftenseiten in Ihrer Anwendung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>Verwenden von Eigenschaftenseiten in einer Anwendung
 Um ein Eigenschaftenblatt in Ihrer Anwendung verwenden zu können, müssen führen Sie die folgenden Schritte aus:  
@@ -63,7 +58,7 @@ Um ein Eigenschaftenblatt in Ihrer Anwendung verwenden zu können, müssen führ
   
     -   Rufen Sie [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) für jede Seite.  
   
-     In der Regel auf das Objekt, erstellt der `CPropertySheet` erstellt außerdem die `CPropertyPage` Objekte in diesem Schritt. Allerdings bei Implementierung eine `CPropertySheet`-abgeleitete Klasse, können Sie einbetten der `CPropertyPage` Objekte in der `CPropertySheet` Objekt, und rufen `AddPage` für jede Seite aus der `CPropertySheet`-abgeleiteten Klassenkonstruktor. `AddPage`Fügt der `CPropertyPage` Objekt auf dem Eigenschaftenblatt Liste von Seiten, jedoch das Fenster für diese Seite nicht tatsächlich erstellt. Aus diesem Grund ist es nicht notwendig, warten, bis die Erstellung des Eigenschaftenfensters Blatt aufrufen `AddPage`; Sie können Aufrufen `AddPage` aus dem Eigenschaftenblatt-Konstruktor.  
+     In der Regel auf das Objekt, erstellt der `CPropertySheet` erstellt außerdem die `CPropertyPage` Objekte in diesem Schritt. Allerdings bei Implementierung eine `CPropertySheet`-abgeleitete Klasse, können Sie einbetten der `CPropertyPage` Objekte in der `CPropertySheet` Objekt, und rufen `AddPage` für jede Seite aus der `CPropertySheet`-abgeleiteten Klassenkonstruktor. `AddPage` Fügt der `CPropertyPage` Objekt auf dem Eigenschaftenblatt Liste von Seiten, jedoch das Fenster für diese Seite nicht tatsächlich erstellt. Aus diesem Grund ist es nicht notwendig, warten, bis die Erstellung des Eigenschaftenfensters Blatt aufrufen `AddPage`; Sie können Aufrufen `AddPage` aus dem Eigenschaftenblatt-Konstruktor.  
   
      Verfügt ein Eigenschaftenblatt weitere Registerkarten als in eine einzelne Zeile mit dem Eigenschaftenblatt passt, werden standardmäßig die Registerkarten in mehreren Zeilen Stapeln. Rufen Sie zum Deaktivieren von Stapeln [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) mit den Parametersatz hinzu **"false"**. Rufen Sie `EnableStackedTabs` beim Erstellen der Eigenschaftenseite.  
   

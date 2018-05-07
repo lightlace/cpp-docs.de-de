@@ -1,12 +1,9 @@
 ---
 title: CSplitButton Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac4241bb19c6abc0fbbf489bf4efb43f56ede72e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitbutton-class"></a>CSplitButton-Klasse
 Die `CSplitButton` Klasse stellt einen SplitButton-Steuerelement dar. Das Steuerelement mit einer unterteilten Schaltfläche führt ein Standardverhalten aus, wenn ein Benutzer auf den Hauptteil der Schaltfläche klickt, und zeigt ein Dropdownmenü an, wenn ein Benutzer auf den Dropdownpfeil der Schaltfläche klickt.  
@@ -90,7 +85,7 @@ class CSplitButton : public CButton
   
  Zusätzliche Anforderungen für diese Klasse in beschriebenen [erstellen Anforderungen für Windows Vista-Standardsteuerelementen](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>  CSplitButton::Create  
  Erstellt einen SplitButton-Steuerelement mit der angegebenen Formate und fügt ihn der aktuellen `CSplitButton` Objekt.  
   
 ```  
@@ -111,9 +106,9 @@ virtual BOOL Create(
 |[in] `nID`|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
  Erstellt ein `CSplitButton`-Objekt. Geben Sie die Parameter des Konstruktors ein Untermenü, das angezeigt wird, wenn ein Benutzer auf die Dropdown-Pfeil, der das SplitButton-Steuerelement klickt.  
   
 ```  
@@ -137,7 +132,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CSplitButton::Create](#create) -Methode erstellen einen SplitButton-Steuerelement und fügen Sie es auf die `CSplitButton` Objekt.  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
  Behandelt die `BCN_DROPDOWN` Benachrichtigung, die das System sendet, wenn ein Benutzer auf die Dropdown-Pfeil, der das aktuelle SplitButton-Steuerelement klickt.  
   
 ```  
@@ -167,7 +162,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
  Legt die Dropdown-Menü, das angezeigt wird, wenn ein Benutzer auf die Dropdown-Pfeil, der das aktuelle SplitButton-Steuerelement klickt.  
   
 ```  

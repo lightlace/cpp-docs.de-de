@@ -1,13 +1,10 @@
 ---
 title: WinInet-Grundlagen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c9502c720b0f443ace3cfe637fb4826281ecf4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38506d0b25918bbc9d70ec1801971b070d620bf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wininet-basics"></a>WinInet-Grundlagen
 WinInet können Sie FTP-Unterstützung zum Herunterladen und Hochladen von Dateien von innerhalb der Anwendung hinzufügen. Sie können außer Kraft setzen [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) und Verwenden der `dwContext` Parameter zum Bereitstellen von Statusinformationen für Benutzer, wie Sie suchen und Herunterladen von Dateien.  
@@ -46,16 +41,16 @@ WinInet können Sie FTP-Unterstützung zum Herunterladen und Hochladen von Datei
   
  Weitere Informationen über WinInet, finden Sie unter [Win32-Interneterweiterungen (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
   
-##  <a name="_core_create_a_very_simple_browser"></a>Erstellen Sie einen sehr einfachen Browser  
+##  <a name="_core_create_a_very_simple_browser"></a> Erstellen Sie einen sehr einfachen Browser  
  [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]  
   
-##  <a name="_core_download_a_web_page"></a>Herunterladen einer Webseite  
+##  <a name="_core_download_a_web_page"></a> Herunterladen einer Webseite  
  [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]  
   
-##  <a name="_core_ftp_a_file"></a>Eine Datei mit FTP  
+##  <a name="_core_ftp_a_file"></a> Eine Datei mit FTP  
  [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]  
   
-##  <a name="_core_retrieve_a_gopher_directory"></a>Gopher-Verzeichnis abrufen  
+##  <a name="_core_retrieve_a_gopher_directory"></a> Gopher-Verzeichnis abrufen  
  [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]  
   
 ## <a name="use-onstatuscallback"></a>OnStatusCallback verwenden  
@@ -65,9 +60,9 @@ WinInet können Sie FTP-Unterstützung zum Herunterladen und Hochladen von Datei
   
  Der Kontext auf ein bestimmtes Internetobjekt zugewiesen dient nur zur Identifizierung der Aktivitäts, führt dazu, das Objekt in dass, der `OnStatusCallback` Mitglied der `CInternetSession` Objekt. Der Aufruf von `OnStatusCallback` empfängt mehrere Parameter; diese Parameter arbeiten zusammen, um Ihre Anwendung informieren, welche Bearbeitung für die Transaktion und die Verbindung hergestellt wurde.  
   
- Beim Erstellen einer `CInternetSession` -Objekt können Sie angeben einer `dwContext` Parameter an den Konstruktor übergibt. `CInternetSession`selbst verwenden nicht die Kontext-ID. Stattdessen wird die Kontext-ID an alle **InternetConnection**-abgeleitete Objekte, die nicht explizit eine Kontext-ID, Ihren eigenen erhalten. Im Gegenzug wird die `CInternetConnection` Objekte übergibt die Kontext-ID zusammen, `CInternetFile` Objekte, sofern Sie nicht explizit eine anderen Kontext-ID angeben Wenn andererseits, Sie angeben, dass eine bestimmte Kontext-ID Ihrer Wahl, das Objekt und jede Arbeit, die dies der Fall ist dieser Kontext-ID zugeordnet werden soll Können Sie identifizieren, welche Statusinformationen Ihnen in angegeben wird, wird den Kontext-IDs Ihrer `OnStatusCallback` Funktion.  
+ Beim Erstellen einer `CInternetSession` -Objekt können Sie angeben einer `dwContext` Parameter an den Konstruktor übergibt. `CInternetSession` selbst verwenden nicht die Kontext-ID. Stattdessen wird die Kontext-ID an alle **InternetConnection**-abgeleitete Objekte, die nicht explizit eine Kontext-ID, Ihren eigenen erhalten. Im Gegenzug wird die `CInternetConnection` Objekte übergibt die Kontext-ID zusammen, `CInternetFile` Objekte, sofern Sie nicht explizit eine anderen Kontext-ID angeben Wenn andererseits, Sie angeben, dass eine bestimmte Kontext-ID Ihrer Wahl, das Objekt und jede Arbeit, die dies der Fall ist dieser Kontext-ID zugeordnet werden soll Können Sie identifizieren, welche Statusinformationen Ihnen in angegeben wird, wird den Kontext-IDs Ihrer `OnStatusCallback` Funktion.  
   
-##  <a name="_core_display_progress_information_while_transferring_files"></a>Anzeigen von Statusinformationen bei der Übertragung von Dateien  
+##  <a name="_core_display_progress_information_while_transferring_files"></a> Anzeigen von Statusinformationen bei der Übertragung von Dateien  
  Beispielsweise, wenn Sie eine Anwendung, die eine Verbindung mit einem FTP-Server zum Lesen einer Datei erstellt und auch eine Verbindung mit einem HTTP-Server Schreiben auf eine Webseite zu erhalten, stehen Ihnen eine `CInternetSession` -Objekt, das zwei `CInternetConnection` Objekte (eine wäre eine **einerseits** und der andere würde eine **CHttpSession**), und zwei `CInternetFile` Objekte (eine für jede Verbindung). Bei Verwendung der Standardwerte für die `dwContext` Parameter, Sie wären nicht unterscheiden, zwischen den `OnStatusCallback` Aufrufe, die angeben, für die FTP-Verbindung und die Aufrufe, die angeben, den Fortschritt der HTTP-Verbindung ausgeführt. Bei Angabe einer `dwContext` -ID, die Sie später in testen `OnStatusCallback`, wissen Sie, welcher Vorgang den Rückruf generiert.  
   
 ## <a name="see-also"></a>Siehe auch  

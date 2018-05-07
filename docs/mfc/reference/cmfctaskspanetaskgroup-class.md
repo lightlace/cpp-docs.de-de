@@ -1,12 +1,9 @@
 ---
 title: CMFCTasksPaneTaskGroup-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bd53dec328ebf94e8bb9eb6f72aae1e8a90bc4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup-Klasse
 Die `CMFCTasksPaneTaskGroup` Klasse ist eine Hilfsklasse, die verwendet werden, indem Sie die [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Steuerelement. Objekte des Typs `CMFCTasksPaneTaskGroup` stellen eine *Aufgabengruppe*dar. Die Aufgabengruppe ist eine Liste von Elementen, die vom Framework in einem separaten Feld angezeigt wird, das eine Schaltfläche zum Reduzieren enthält. Das Feld kann über eine optionale Beschriftung (Gruppennamen) verfügen. Wenn eine Gruppe reduziert ist, ist die Liste der Aufgaben nicht sichtbar.  
@@ -106,7 +101,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  Erstellt ein `CMFCTasksPaneTaskGroup`-Objekt.  
   
 ```  
@@ -140,7 +135,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
  Bestimmt, ob die Aufgabengruppe, die an das Ende der Aufgabenbereich-Steuerelement ausgerichtet wird.  
   
 ```  
@@ -150,7 +145,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>Hinweise  
  Am Ende der Aufgabenbereich-Steuerelement kann nur eine Gruppe ausgerichtet werden. Diese Aufgabengruppe muss zuletzt hinzugefügt werden. Weitere Informationen finden Sie unter [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Bestimmt, ob die Aufgabengruppe reduziert ist.  
   
 ```  
@@ -160,7 +155,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>Hinweise  
  Sie aktivieren oder deaktivieren Sie die Möglichkeit, Gruppen des Aufgabenbereichs durch den Aufruf reduzieren [cmfctaskspane:: Enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
  Bestimmt, ob die Aufgabengruppe ist *spezielle* und gibt an, ob die Beschriftung für eine spezielle Aufgabengruppe durch eine andere Farbe identifiziert werden sollen.  
   
 ```  
@@ -170,7 +165,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>Hinweise  
  Wenn die Anwendung Parallelität mit den visuellen Windows XP-Design und `m_bIsSpecial` ist `FALSE`, das Framework ruft `DrawThemeBackground` mit der `EBP_NORMALGROUPBACKGROUND` Flag. Wenn `m_bIsSpecial` ist `TRUE`, das Framework ruft `DrawThemeBackground` mit der `EBP_SPECIALGROUPBACKGROUND` Flag.  
   
-##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
  Enthält die interne Liste der Aufgaben.  
   
 ```  
@@ -180,7 +175,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>Hinweise  
  Aufrufen, um diese Liste zu füllen, [cmfctaskspane:: Addtask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
  Gibt das umschließende Rechteck der gruppenbeschriftung an.  
   
 ```  
@@ -190,7 +185,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert wird vom Framework automatisch berechnet.  
   
-##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
  Gibt das umschließende Rechteck der Gruppe an.  
   
 ```  
@@ -200,7 +195,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert wird vom Framework automatisch berechnet.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
  Gibt den Namen der Gruppe an.  
   
 ```  
@@ -210,7 +205,7 @@ CString m_strName;
 ### <a name="remarks"></a>Hinweise  
  Wenn dieser Wert leer ist, die gruppenbeschriftung nicht angezeigt, und die Gruppe nicht reduziert werden kann.  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
  Bestimmt die barrierefreiheitsdaten für die aktuelle Aufgabengruppe.  
   
 ```  
@@ -227,7 +222,7 @@ virtual BOOL SetACCData(
  Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Aufgabengruppe aufgefüllt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die `data` Parameter wurde erfolgreich mit den Zugriff auf Daten der aktuellen Aufgabengruppe aufgefüllt ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die `data` Parameter wurde erfolgreich mit den Zugriff auf Daten der aktuellen Aufgabengruppe aufgefüllt ist, andernfalls `FALSE`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

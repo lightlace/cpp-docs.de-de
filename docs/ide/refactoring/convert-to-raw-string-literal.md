@@ -1,22 +1,20 @@
 ---
 title: Konvertieren in unformatiertes Zeichenfolgenliteral | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 12aa512270ecce4564561634f99be9cbf155448a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="convert-to-raw-string-literal"></a>Zu Rohzeichenfolgenliteral konvertieren
 **Was:** können Sie eine beliebige Zeichenfolge in eine C++-rohzeichenfolge literal zu aktivieren.
@@ -25,15 +23,15 @@ ms.lasthandoff: 12/21/2017
 
 **Grund:** könnten Sie Double-Escape-Zeichen, aber diesem häufig führt zu einem verwirrend und kann nicht gelesen Zeichenfolgen.  Unformatierte Zeichenfolgenliterale mit kann Zeichenfolgen viel einfacher zu lesen.
 
-**Vorgehensweise:**
+**Vorgehensweise**:
 
 1. Platzieren Sie Text oder Mauscursor über die mit Escapezeichen versehene Zeichenfolge zu konvertieren.
 
-   ![Hervorgehobene code](images/stringliteral_highlight.png)
+   ![Markierter Code](images/stringliteral_highlight.png)
 
-1. Als Nächstes führen Sie eine der folgenden:
+1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG +.** Trigger die **Schnellaktionen und Refactorings** Menü **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.
+     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.
    * **Maus**
      * Mit der rechten Maustaste in des Codes, wählen Sie die **Schnellaktionen und Refactorings** Menü **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.
      * Klicken Sie auf die ![Lightbulb](images/bulb.png) im linken Rand, und wählen erscheint das Symbol für **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.

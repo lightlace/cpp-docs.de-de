@@ -1,13 +1,10 @@
 ---
-title: "Vorgehensweise: Aktivieren von IntelliSense für Makefile-Projekte | Microsoft Docs"
-ms.custom: 
+title: 'Vorgehensweise: Aktivieren von IntelliSense für Makefile-Projekte | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCNMakeTool.IntelliSense
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Makefile projects, IntelliSense
 - IntelliSense, Makefile projects
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Gewusst wie: Aktivieren von IntelliSense für Makefile-Projekte
 IntelliSense kann nicht in der IDE für Visual C++-Makefile-Projekte funktionieren, wenn Sie bestimmte Einstellungen oder der Compileroptionen, Projekt werden nicht ordnungsgemäß eingerichtet. Verwenden Sie dieses Verfahren zum Konfigurieren von Visual C++-Makefile-Projekte, so, dass IntelliSense funktioniert, wenn Makefile-Projekte in der Entwicklungsumgebung von Visual Studio geöffnet sind.  

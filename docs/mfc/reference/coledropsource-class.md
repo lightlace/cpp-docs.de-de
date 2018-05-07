@@ -1,12 +1,9 @@
 ---
 title: COleDropSource Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>COleDropSource-Klasse
 Können Daten auf ein Ablageziel gezogen werden.  
@@ -79,14 +74,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Erstellt ein `COleDropSource`-Objekt.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Vom Framework aufgerufen wird, nach dem Aufruf [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) oder [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  Den Effekt, der dem Benutzer angezeigt werden sollen, in der Regel, der angibt, was passiert, wenn ein solches Löschen an diesem Punkt mit den ausgewählten Daten aufgetreten ist. Dies ist in der Regel vom letzten Aufruf zurückgegebene Wert [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) oder [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Es kann eine oder mehrere der folgenden sein:  
   
-- `DROPEFFECT_NONE`Ein solches löschen, ist nicht zulässig.  
+- `DROPEFFECT_NONE` Ein solches löschen, ist nicht zulässig.  
   
-- `DROPEFFECT_COPY`Ein Kopiervorgang würde ausgeführt werden.  
+- `DROPEFFECT_COPY` Ein Kopiervorgang würde ausgeführt werden.  
   
-- `DROPEFFECT_MOVE`Ein Verschiebevorgang würde ausgeführt werden.  
+- `DROPEFFECT_MOVE` Ein Verschiebevorgang würde ausgeführt werden.  
   
-- `DROPEFFECT_LINK`Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten würde hergestellt werden.  
+- `DROPEFFECT_LINK` Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten würde hergestellt werden.  
   
-- `DROPEFFECT_SCROLL`Ein Ziehvorgangs ein Bildlauf durchgeführt wird oder im Ziel auftritt.  
+- `DROPEFFECT_SCROLL` Ein Ziehvorgangs ein Bildlauf durchgeführt wird oder im Ziel auftritt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **DRAGDROP_S_USEDEFAULTCURSORS** Wenn ziehen ausgeführt wird, wird **NOERROR** wird jedoch nicht.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Weitere Informationen finden Sie unter [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget:: DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), und [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) im Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Wird aufgerufen, durch das Framework beim Eintreten eines Ereignisses ein Ziehvorgangs, z. B. die linke Maustaste drückt beginnen konnte.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion ggf. ändern, wenn das Ziehen Prozess gestartet wird. Die standardmäßige Implementierung erfasst die Maus und bleibt im Ziehmodus, bis der Benutzer klickt auf die linke oder rechte Maustaste gedrückt oder Treffer ESC, woraufhin sie die Maustaste loslässt.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  Nach dem Ziehen begonnen hat, wird diese Funktion vom Framework wiederholt aufgerufen, bis der Ziehvorgang abgebrochen oder beendet wird.  
   
 ```  

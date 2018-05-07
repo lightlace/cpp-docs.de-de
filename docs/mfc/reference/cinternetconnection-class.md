@@ -1,12 +1,9 @@
 ---
 title: CInternetConnection Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection-Klasse
 Verwaltet die Verbindung mit einem Internetserver.  
@@ -81,7 +76,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
  Diese Memberfunktion wird aufgerufen, wenn ein `CInternetConnection` Objekt erstellt wird.  
   
 ```  
@@ -116,7 +111,7 @@ CInternetConnection(
   
  Der Standardwert für `dwContext` wird gesendet, von MFC ermöglicht, die `CInternetConnection`-abgeleitetes Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die **InternetConnection**-abgeleitetes Objekt. Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie explizit eine bestimmten Kontext-ID im Zuweisen der [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) Konstruktor für die Verbindung. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Rufen Sie diese Memberfunktion, um die Kontext-ID für diese Sitzung zu erhalten.  
   
 ```  
@@ -131,7 +126,7 @@ DWORD_PTR GetContext() const;
   
  Weitere Informationen dazu, wie **GetContext** funktioniert mit anderen WinInet-Klassen so erteilen Sie die Benutzerinformationen zum clientinstallationsstatus finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontext Der Bezeichner.  
   
-##  <a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens des Servers, der dieser Internet-Verbindung zugeordnet.  
   
 ```  
@@ -141,7 +136,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Name des Servers ist mit dieser Verbindungsobjekt arbeiten.  
   
-##  <a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>  CInternetConnection::GetSession  
  Rufen Sie diese Memberfunktion zum Abrufen eines Zeigers auf die `CInternetSession` -Objekt, das dieser Verbindung zugeordnet ist.  
   
 ```  
@@ -151,7 +146,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt, das mit diesem Internet Connection-Objekt zugeordnet.  
   
-##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET  
  Verwenden Sie diesen Operator, um das Handle für die API-Ebene für die aktuelle Sitzung mit Internet abzurufen.  
   
 ```  

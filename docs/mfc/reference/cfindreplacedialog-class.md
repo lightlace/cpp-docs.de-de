@@ -1,12 +1,9 @@
 ---
 title: CFindReplaceDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFindReplaceDialog
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1d0b5658da375c2202729e6888fa078063beb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog-Klasse
 Ermöglicht die Standardzeichenfolge in Dateien suchen/ersetzen-Dialogfelder in der Anwendung zu implementieren.  
@@ -105,7 +100,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Sie können bestimmen, ob der Benutzer dazu entschieden hat, beenden Sie das Dialogfeld mit den `IsTerminating` Memberfunktion.  
   
- `CFindReplaceDialog`basiert auf der COMMDLG. DLL-Datei, die mit Windows-Versionen 3.1 und höher ausgeliefert wird.  
+ `CFindReplaceDialog` basiert auf der COMMDLG. DLL-Datei, die mit Windows-Versionen 3.1 und höher ausgeliefert wird.  
   
  Um das Dialogfeld anzupassen, leiten Sie eine Klasse von `CFindReplaceDialog`, geben Sie eine benutzerdefinierte Dialogfeldvorlage und hinzufügen eine meldungszuordnung, um die benachrichtigungsmeldungen aus den erweiterten Steuerelemente zu verarbeiten. Alle nicht verarbeiteten Nachrichten sollten mit der Basisklasse übergeben werden.  
   
@@ -129,7 +124,7 @@ class CFindReplaceDialog : public CCommonDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
+##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
  Erstellt ein `CFindReplaceDialog`-Objekt.  
   
 ```  
@@ -146,7 +141,7 @@ CFindReplaceDialog();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="create"></a>CFindReplaceDialog::Create  
+##  <a name="create"></a>  CFindReplaceDialog::Create  
  Erstellt und zeigt suchen oder in Dateien suchen/ersetzen Dialogfeldobjekt, abhängig vom Wert des `bFindDialogOnly`.  
   
 ```  
@@ -191,7 +186,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
+##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
  Mit dieser Funktion wird von Ihrer Callback-Funktion, um festzustellen, ob der Benutzer möchte das nächste Vorkommen der Suchzeichenfolge suchen.  
   
 ```  
@@ -201,7 +196,7 @@ BOOL FindNext() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Benutzer möchte das nächste Vorkommen der Suchzeichenfolge suchen; andernfalls 0.  
   
-##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
+##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString  
  Mit dieser Funktion wird von Ihrer Callback-Funktion, um die Standardeinstellung, die zu suchende Zeichenfolge abzurufen.  
   
 ```  
@@ -214,7 +209,7 @@ CString GetFindString() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
+##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
  Rufen Sie diese Funktion, um einen Zeiger auf das aktuelle Dialogfeld Suchen und Ersetzen abzurufen.  
   
 ```  
@@ -236,7 +231,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
   
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
+##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString  
  Mit dieser Funktion wird zum Abrufen der aktuellen Ersetzungszeichenfolge.  
   
 ```  
@@ -249,7 +244,7 @@ CString GetReplaceString() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
+##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
  Mit dieser Funktion wird in Ihrer Callback-Funktion, um zu bestimmen, ob der Benutzer dazu entschieden hat, um das Dialogfeld zu beenden.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsTerminating() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
+##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
  Zum Anpassen einer `CFindReplaceDialog` Objekt.  
   
 ```  
@@ -273,14 +268,14 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `m_fr`ist eine Struktur vom Typ [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Membern speichern Sie die Eigenschaften des Objekts im Dialogfeld. Nach dem Erstellen einer `CFindReplaceDialog` -Objekt können Sie `m_fr` Sie verschiedene Werte im Dialogfeld ändern.  
+ `m_fr` ist eine Struktur vom Typ [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Membern speichern Sie die Eigenschaften des Objekts im Dialogfeld. Nach dem Erstellen einer `CFindReplaceDialog` -Objekt können Sie `m_fr` Sie verschiedene Werte im Dialogfeld ändern.  
   
  Weitere Informationen zu dieser Struktur finden Sie unter der **FINDREPLACE** Struktur im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
+##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  
  Rufen Sie diese Funktion, um zu bestimmen, ob der Benutzer möchte die Groß-/Kleinschreibung Find angegebene Zeichenfolge genau übereinstimmen.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL MatchCase() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Benutzer möchte Vorkommen der Suchzeichenfolge zu suchen, die genau die Groß-/Kleinschreibung der Suchzeichenfolge übereinstimmen; andernfalls 0.  
   
-##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
+##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord  
  Rufen Sie diese Funktion, um zu bestimmen, ob der Benutzer möchte nach ganzen Wörtern an.  
   
 ```  
@@ -300,7 +295,7 @@ BOOL MatchWholeWord() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Benutzer möchte nur die Wörter der Suchzeichenfolge übereinstimmen; andernfalls 0.  
   
-##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
+##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll  
  Rufen Sie diese Funktion, um zu bestimmen, ob der Benutzer möchte, dass alle Vorkommen der Zeichenfolge ausgetauscht werden.  
   
 ```  
@@ -310,7 +305,7 @@ BOOL ReplaceAll() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Benutzer angefordert hat, dass alle Zeichenfolgen, die übereinstimmende Ersetzungszeichenfolge ersetzt werden; andernfalls 0.  
   
-##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
+##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent  
  Rufen Sie diese Funktion, um zu bestimmen, ob der Benutzer möchte, dass das aktuelle Wort ersetzt werden.  
   
 ```  
@@ -320,7 +315,7 @@ BOOL ReplaceCurrent() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Benutzer angefordert hat, dass die aktuell ausgewählte Zeichenfolge durch die Ersetzungszeichenfolge ersetzt werden; andernfalls 0.  
   
-##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
+##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown  
  Rufen Sie diese Funktion, um zu bestimmen, ob der Benutzer möchte, dass die Suche nach unten zu fortfahren.  
   
 ```  

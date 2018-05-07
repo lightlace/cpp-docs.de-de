@@ -1,24 +1,19 @@
 ---
 title: Kurzreferenz (C + c++ / CX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quick-reference-ccx"></a>Kurzreferenz (C++/CX)
 Windows-Runtime unterstützt apps für universelle Windows-Plattform (UWP), die nur in einer vertrauenswürdigen betriebssystemumgebung ausgeführt und verwenden autorisierte Funktionen, Datentypen und Geräte über Microsoft Store verteilt werden. Die C + c++ / CX vereinfachen die Verfassung von apps für Windows-Runtime. Dieser Artikel ist eine Kurzübersicht; umfassendere Dokumentation finden Sie unter [Typsystem](../cppcx/type-system-c-cx.md) und [Komponentenerweiterungen für Laufzeitplattformen](http://go.microsoft.com/fwlink/p/?linkid=228720).  
@@ -51,10 +46,10 @@ Windows-Runtime unterstützt apps für universelle Windows-Plattform (UWP), die 
 |Strukturdeklaration|`struct` *identifier* `{}`<br /><br /> (d. h. eine POD-Struktur (Plain Old Data))|`value class` *identifier* `{}`<br /><br /> `value struct` *identifier* `{}`|Deklariert eine POD-Struktur mit privater Standardbarrierefreiheit.<br /><br /> Eine Wertklasse kann in Windows-Metadaten dargestellt werden, eine Standard-C++-Klasse hingegen nicht.<br /><br /> Deklariert eine POD-Struktur mit öffentlicher Standardbarrierefreiheit.<br /><br /> Eine Wertstruktur kann in Windows-Metadaten dargestellt werden, eine Standard-C++-Struktur hingegen nicht.|  
 |Schnittstellendeklaration|Abstrakte Klasse, die nur rein virtuelle Funktionen enthält.|`interface class` *identifier* `{}`<br /><br /> `interface struct` *identifier* `{}`|Deklariert eine Schnittstelle mit privater Standardbarrierefreiheit.<br /><br /> Deklariert eine Schnittstelle mit öffentlicher Standardbarrierefreiheit.|  
 |delegate|`std::function`|`public delegate` *Rückgabetyp* *delegate-type-identifier* `(` *[Parameter]* `);`|Deklariert ein Objekt, das wie ein Funktionsaufruf aufgerufen werden kann.|  
-|event|(Trifft nicht zu)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, Parameter]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> - oder - <br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> - oder - <br /><br /> `auto` *token-identifier* = *obj*. *event-identifier*`::add(`*delegate-identifier*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> - oder - <br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Deklariert ein Ereignisobjekt, das eine Ereignishandlerauflistung (Delegaten) speichert, die beim Auftreten eines Ereignisses aufgerufen wird.<br /><br /> Erstellt einen Ereignishandler.<br /><br /> Fügt einen Ereignishandler hinzu.<br /><br /> Wenn ein Ereignishandler hinzugefügt wird, wird ein Ereignistoken (*token-identifier*) zurückgegeben. Falls Sie den Ereignishandler explizit entfernen möchten, müssen Sie das Ereignistoken für die spätere Verwendung speichern.<br /><br /> Entfernt einen Ereignishandler.<br /><br /> Um einen Ereignishandler zu entfernen, müssen Sie das Ereignistoken angeben, das Sie beim Hinzufügen des Ereignishandlers gespeichert haben.|  
+|event|(Trifft nicht zu)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, Parameter]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> - oder - <br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> - oder - <br /><br /> `auto` *Token-Identifier* = *Obj*. *Ereignisbezeichner*`::add(`*Delegaten-Bezeichner*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> - oder - <br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Deklariert ein Ereignisobjekt, das eine Ereignishandlerauflistung (Delegaten) speichert, die beim Auftreten eines Ereignisses aufgerufen wird.<br /><br /> Erstellt einen Ereignishandler.<br /><br /> Fügt einen Ereignishandler hinzu.<br /><br /> Wenn ein Ereignishandler hinzugefügt wird, wird ein Ereignistoken (*token-identifier*) zurückgegeben. Falls Sie den Ereignishandler explizit entfernen möchten, müssen Sie das Ereignistoken für die spätere Verwendung speichern.<br /><br /> Entfernt einen Ereignishandler.<br /><br /> Um einen Ereignishandler zu entfernen, müssen Sie das Ereignistoken angeben, das Sie beim Hinzufügen des Ereignishandlers gespeichert haben.|  
 |property|(Trifft nicht zu)|`property` *T* *identifier*;<br /><br /> `property` *T* *identifier* `[` *Index* `];`<br /><br /> `property` *T* `default[` *Index* `];`|Deklariert, dass auf eine Klassen- oder eine Objektmemberfunktion mit derselben Syntax zugegriffen wird, die für den Zugriff auf einen Datenmember oder ein indiziertes Arrayelement verwendet wurde.<br /><br /> Deklariert eine Eigenschaft in einer Klassen- oder Objektmemberfunktion.<br /><br /> Deklariert eine indizierte Eigenschaft in einer Objektmemberfunktion.<br /><br /> Deklariert eine indizierte Eigenschaft in einer Klassenmemberfunktion.|  
 |Parametrisierte Typen|Vorlagen|`generic <typename` *T* `> interface class` *identifier* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[Rückgabetyp]* *delegate-identifier* `() {}`|Deklariert eine parametrisierte Schnittstellenklasse.<br /><br /> Deklariert einen parametrisierten Delegaten.|  
-|Auf NULL festlegbare Werttypen|`boost::optional<T>`|[Platform::IBox \<T>](../cppcx/platform-ibox-interface.md)|Ermöglicht, dass Variablen von skalaren Typen und Wertstrukturen einen Wert von `nullptr`aufweisen.|  
+|Auf NULL festlegbare Werttypen|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|Ermöglicht, dass Variablen von skalaren Typen und Wertstrukturen einen Wert von `nullptr`aufweisen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)
