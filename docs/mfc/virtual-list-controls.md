@@ -1,13 +1,10 @@
 ---
 title: Virtuelle Listensteuerelemente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>Virtuelle Listensteuerelemente
 Ein virtuelles Listensteuerelement ist ein Listenansicht-Steuerelement, das verfügt die **LVS_OWNERDATA** Stil. Dieser Stil aktiviert das Steuerelement eine Elementanzahl bis zu unterstützen eine `DWORD` (standardelementanzahl nur erstreckt sich auch auf eine `int`). Der größte Vorteil von diesem Format bereitgestellt ist jedoch die Möglichkeit, nur eine Teilmenge der Daten im Arbeitsspeicher gleichzeitig. Dadurch können virtuelle Listenansicht-Steuerelement, für die Verwendung mit großen Datenbanken Informationstypen, verleiten bestimmte Methoden zum Zugreifen auf Daten, auf dem bereits vorhanden sind.  
@@ -43,15 +38,15 @@ Ein virtuelles Listensteuerelement ist ein Listenansicht-Steuerelement, das verf
   
  Im Handler für das **LVN_GETDISPINFO** Benachrichtigung, die Sie überprüfen müssen, um festzustellen, welche Art von Informationen angefordert werden. Mögliche Werte sind:  
   
--   `LVIF_TEXT`Der `pszText` Member muss ausgefüllt werden.  
+-   `LVIF_TEXT` Der `pszText` Member muss ausgefüllt werden.  
   
--   `LVIF_IMAGE`Der `iImage` Member muss ausgefüllt werden.  
+-   `LVIF_IMAGE` Der `iImage` Member muss ausgefüllt werden.  
   
 -   **LVIF_INDENT** der *iIndent* Member muss ausgefüllt werden.  
   
--   `LVIF_PARAM`Die *lParam* Member muss ausgefüllt werden. (Nicht für untergeordnete Elemente vorhanden Sie.)  
+-   `LVIF_PARAM` Die *lParam* Member muss ausgefüllt werden. (Nicht für untergeordnete Elemente vorhanden Sie.)  
   
--   `LVIF_STATE`Die *Zustand* Member muss ausgefüllt werden.  
+-   `LVIF_STATE` Die *Zustand* Member muss ausgefüllt werden.  
   
  Sie sollten dann angeben, an das Framework Restinformationen angefordert wird.  
   

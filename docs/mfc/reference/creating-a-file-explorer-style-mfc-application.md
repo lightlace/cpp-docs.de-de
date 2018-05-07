@@ -1,13 +1,10 @@
 ---
-title: "Erstellen die MFC-Anwendung eine Datei-Explorer-ähnliche | Microsoft Docs"
-ms.custom: 
+title: Erstellen die MFC-Anwendung eine Datei-Explorer-ähnliche | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Erstellen einer MFC-Anwendung im Stil des Datei-Explorers
 Viele Windows-systemanwendungen verwenden die Benutzeroberfläche (UI) für Datei-Explorer. Wenn Sie die Datei-Explorer starten, sehen Sie z. B. eine Anwendung mit einem vertikalen Teilerleiste, das den Clientbereich. Der linken Seite des Clientbereichs bereitstellt Navigation und Suchfunktionen und der rechten Seite des Clientbereichs zeigt Details im linken Bereich für die Auswahl relevant sind. Klickt ein Benutzer ein Element im linken Bereich, füllt die Anwendung im rechten Bereich aus. Sie können Befehle in einer MDI-Anwendung verwenden, auf die **Ansicht** Menü so ändern Sie die Anzahl der Details im rechten Bereich angezeigt. (In einer SDI- oder Anwendung für mehrere Dokumente der höchsten Ebene können Sie die Details, die mithilfe der Symbolleisten-Schaltflächen ändern.)  

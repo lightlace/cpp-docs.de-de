@@ -1,12 +1,9 @@
 ---
 title: CNetAddressCtrl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CNetAddressCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a433d723e15d910674c129b1e62ca82c1de4bb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl-Klasse
 Die Klasse `CNetAddressCtrl` stellt das Netzwerkadressen-Steuerelement dar, das verwendet werden kann, um IPv4-, IPv6- und benannte DNS-Adressen einzugeben und ihr Format zu überprüfen.  
@@ -106,7 +101,7 @@ class CNetAddressCtrl : public CEdit
   
  Zusätzliche Anforderungen für diese Klasse in beschriebenen [erstellen Anforderungen für Windows Vista-Standardsteuerelementen](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl  
  Erstellt ein `CNetAddressCtrl`-Objekt.  
   
 ```  
@@ -116,7 +111,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CNetAddressCtrl::Create](#create) oder [CNetAddressCtrl::CreateEx](#createex) Methode, um ein Netzwerk-Steuerelement erstellen, und fügen Sie es auf die `CNetAddressCtrl` Objekt.  
   
-##  <a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>  CNetAddressCtrl::Create  
  Erstellt eine Netzwerkadressen-Steuerelement mit der angegebenen Formate und fügt ihn der aktuellen `CNetAddressCtrl` Objekt.  
   
 ```  
@@ -137,9 +132,9 @@ virtual BOOL Create(
 |[in] `nID`|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CNetAddressCtrl::CreateEx  
  Erstellt eine Netzwerkadressen-Steuerelement mit dem angegebenen erweiterten Stile und fügt ihn der aktuellen `CNetAddressCtrl` Objekt.  
   
 ```  
@@ -162,9 +157,9 @@ virtual BOOL CreateEx(
 |[in] `nID`|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip  
  Zeigt eine Fehlermeldung in der SprechblasenInfo angezeigt, die die aktuellen Netzwerkadressen-Steuerelement zugeordnet ist.  
   
 ```  
@@ -179,7 +174,7 @@ HRESULT DisplayErrorTip();
   
  Diese Nachricht Ruft die [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die `NCM_DISPLAYERRORTIP` Nachricht.  
   
-##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
  Ruft ab eine überprüfte und analysierte Darstellung der Netzwerkadresse, die die aktuellen Netzwerkadressen-Steuerelement zugeordnet ist.  
   
 ```  
@@ -202,7 +197,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  Diese Methode ruft die [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die `NCM_GETADDRESS` Nachricht.  
   
-##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  Ruft den Typ der Netzwerkadresse, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden.  
   
 ```  
@@ -215,7 +210,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Nachricht Ruft die [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die `NCM_GETALLOWTYPE` Nachricht.  
   
-##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Legt den Typ der Netzwerkadresse, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden.  
   
 ```  
@@ -229,7 +224,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 |[in] `dwAddrMask`|Eine bitweise Kombination (OR) von Flags, die die Typen von Adressen gibt, kann das Netzwerkadressen-Steuerelement unterstützen. Weitere Informationen finden Sie unter [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `S_OK`Wenn diese Methode erfolgreich ist; andernfalls ein COM-Fehlercode.  
+ `S_OK` Wenn diese Methode erfolgreich ist; andernfalls ein COM-Fehlercode.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CNetAddressCtrl::SetAllowType](#setallowtype) Methode, um die Typen von Adressen anzugeben, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden. Verwenden der [CNetAddressCtrl::GetAddress](#getaddress) Methode, um zu überprüfen und analysieren die Netzwerkadresse, die der Benutzer eingibt. Verwenden der [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) Methode einen Fehler Nachricht Infotipp anzuzeigen, wenn die [CNetAddressCtrl::GetAddress](#getaddress) Methode ist nicht erfolgreich.  

@@ -1,12 +1,9 @@
 ---
 title: CD2DTextLayout-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DTextLayout
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc216014fb88ac7995b9283ab59d0c011f3184f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout-Klasse
 Ein Wrapper für IDWriteTextLayout.  
@@ -103,14 +98,14 @@ class CD2DTextLayout : public CD2DResource;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextlayout"></a>CD2DTextLayout:: ~ CD2DTextLayout  
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout  
  Der Destruktor. Wird aufgerufen, wenn ein D2D TextLayout-Objekt zerstört wird.  
   
 ```  
 virtual ~CD2DTextLayout();
 ```  
   
-##  <a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
+##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout  
  Erstellt ein CD2DTextLayout-Objekt.  
   
 ```  
@@ -138,7 +133,7 @@ CD2DTextLayout(
  `bAutoDestroy`  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
-##  <a name="create"></a>CD2DTextLayout::Create  
+##  <a name="create"></a>  CD2DTextLayout::Create  
  Erstellt ein CD2DTextLayout an.  
   
 ```  
@@ -148,14 +143,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="destroy"></a>CD2DTextLayout::Destroy  
+##  <a name="destroy"></a>  CD2DTextLayout::Destroy  
  Zerstört ein CD2DTextLayout-Objekt.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextLayout::Get  
+##  <a name="get"></a>  CD2DTextLayout::Get  
  Gibt die IDWriteTextLayout-Schnittstelle  
   
 ```  
@@ -165,7 +160,7 @@ IDWriteTextLayout* Get();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine IDWriteTextLayout-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName  
  Kopiert den Namen der Schriftfamilie des Texts an der angegebenen Position.  
   
 ```  
@@ -184,7 +179,7 @@ CString GetFontFamilyName(
 ### <a name="return-value"></a>Rückgabewert  
  CString-Objekt, das den aktuellen Namen der Schriftfamilie enthält.  
   
-##  <a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
+##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName  
  Ruft den Namen des Gebietsschemas des Texts an der angegebenen Position ab.  
   
 ```  
@@ -203,7 +198,7 @@ CString GetLocaleName(
 ### <a name="return-value"></a>Rückgabewert  
  CString-Objekt, das den aktuellen Gebietsschemanamen enthält.  
   
-##  <a name="isvalid"></a>CD2DTextLayout::IsValid  
+##  <a name="isvalid"></a>  CD2DTextLayout::IsValid  
  Die Ressource Gültigkeit überprüft  
   
 ```  
@@ -213,14 +208,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Ressource gültig ist. andernfalls "false".  
   
-##  <a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
+##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout  
  Ein Zeiger auf ein IDWriteTextLayout.  
   
 ```  
 IDWriteTextLayout* m_pTextLayout;  
 ```  
   
-##  <a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::Operator IDWriteTextLayout *  
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::Operator IDWriteTextLayout *  
  Gibt die IDWriteTextLayout-Schnittstelle  
   
 ```  
@@ -230,7 +225,7 @@ operator IDWriteTextLayout*();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine IDWriteTextLayout-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="recreate"></a>CD2DTextLayout::ReCreate  
+##  <a name="recreate"></a>  CD2DTextLayout::ReCreate  
  Erstellt einen CD2DTextLayout.  
   
 ```  
@@ -240,7 +235,7 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
+##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName  
  Namen der Schriftfamilie Null-terminierte für Text in einem bestimmten Textbereich Mengen  
   
 ```  
@@ -259,7 +254,7 @@ BOOL SetFontFamilyName(
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben  
   
-##  <a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
+##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName  
  Legt den Namen des Gebietsschemas für den Text innerhalb eines angegebenen Text-Bereichs  
   
 ```  

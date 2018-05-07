@@ -1,12 +1,9 @@
 ---
 title: COleStreamFile Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile-Klasse
 Stellt einen Datenstream ( `IStream`) in einer Verbunddatei als Teil des OLE Structured Storage.  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>Hinweise  
  Ein `IStorage` Objekt muss vorhanden sein, bevor der Stream geöffnet oder erstellt, wenn es sich um einen Speicherstream ist werden kann.  
   
- `COleStreamFile`Objekte bearbeitet werden, genau so wie [CFile](../../mfc/reference/cfile-class.md) Objekte.  
+ `COleStreamFile` Objekte bearbeitet werden, genau so wie [CFile](../../mfc/reference/cfile-class.md) Objekte.  
   
  Weitere Informationen zum Bearbeiten von Datenströmen und speichern können, finden Sie im Artikel [Container: Verbunddateien](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  Ordnet die angegebene OLE-Stream mit der `COleStreamFile` Objekt.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) im Windows SDK.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Erstellt ein `COleStreamFile`-Objekt.  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) im Windows SDK.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  Sicher erstellt einen neuen Stream nicht genügend globale, freigegebenen Arbeitsspeicher, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Weitere Informationen finden Sie unter [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) im Windows SDK.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Sicher erstellt einen neuen Stream in dem bereitgestellten Speicher-Objekt, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  Weitere Informationen finden Sie unter [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) im Windows SDK.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  Hebt die Zuordnung des Streams, aus dem Objekt ohne das Schließen des Streams.  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) im Windows SDK.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Rufen Sie diese Funktion, um einen Zeiger auf den aktuellen Stream zurückzugeben.  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den aktuellen Stream-Schnittstelle ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Öffnet einen vorhandenen Datenstrom.  
   
 ```  

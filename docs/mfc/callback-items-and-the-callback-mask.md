@@ -1,30 +1,25 @@
 ---
-title: "Rückrufelemente und Rückrufmaske | Microsoft Docs"
-ms.custom: 
+title: Rückrufelemente und Rückrufmaske | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Rückrufelemente und die Rückrufmaske
 Für die einzelnen Elemente einem Listenansicht-Steuerelement in der Regel speichert den Bezeichnungstext, den Bildindex Liste von Symbolen für das Element, und ein Satz von Bit flags für der Zustand des Elements. Sie können einzelne Elemente als Rückrufelemente definieren, die sind nützlich, wenn die Anwendung bereits einige der Informationen für ein Element gespeichert.  
@@ -33,13 +28,13 @@ Für die einzelnen Elemente einem Listenansicht-Steuerelement in der Regel speic
   
  Zusätzlich zum Definieren von Rückrufelemente, können Sie auch das Steuerelement Rückrufmaske ändern. Diese Maske ist ein Satz von Bitflags, die die Element-Zustände angeben, für die das Steuerelement, statt die Anwendung die aktuellen Daten speichert. Die Rückrufmaske gilt für alle Elemente des Steuerelements im Gegensatz zu Rückrufelement, die für ein bestimmtes Element angewendet wird. Die Rückrufmaske ist 0 (null), wird standardmäßig, was bedeutet, dass das Steuerelement alle-Element-Zustände verfolgt. Um dieses Standardverhalten zu ändern, initialisieren Sie die Maske, die eine beliebige Kombination der folgenden Werte:  
   
--   `LVIS_CUT`Das Element ist für einen Ausschneide- und Einfügevorgang markiert.  
+-   `LVIS_CUT` Das Element ist für einen Ausschneide- und Einfügevorgang markiert.  
   
--   `LVIS_DROPHILITED`Das Element wird als Drag-and-Drop-Ziel hervorgehoben.  
+-   `LVIS_DROPHILITED` Das Element wird als Drag-and-Drop-Ziel hervorgehoben.  
   
--   `LVIS_FOCUSED`Das Element besitzt den Fokus.  
+-   `LVIS_FOCUSED` Das Element besitzt den Fokus.  
   
--   `LVIS_SELECTED`Das Element ausgewählt ist.  
+-   `LVIS_SELECTED` Das Element ausgewählt ist.  
   
 -   **LVIS_OVERLAYMASK** die Anwendung speichert die Liste Abbildindex des aktuellen Overlay-Images für jedes Element.  
   

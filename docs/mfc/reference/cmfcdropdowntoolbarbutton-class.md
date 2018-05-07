@@ -2,11 +2,8 @@
 title: CMFCDropDownToolbarButton Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolbarButton
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-caps.latest.revision: 31
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton-Klasse
 Ein Symbolleisten-Schaltflächentyp, der sich wie eine normale Schaltfläche verhält, wenn darauf geklickt wird. Allerdings eine Dropdown-Symbolleiste Eröffnung ( [CMFCDropDownToolBar Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md) Wenn der Benutzer die Symbolleisten-Schaltfläche gedrückt hält.  
@@ -128,7 +123,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdropdowntoolbar.h  
   
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
  Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche auf die Schaltfläche mit den aktuellen.  
   
 ```  
@@ -140,9 +135,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  Ein Verweis auf die Schaltfläche "Quelle" aus dem kopiert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche. `src`muss vom Typ `CMFCDropDownToolbarButton`.  
+ Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche. `src` muss vom Typ `CMFCDropDownToolbarButton`.  
   
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  Erstellt ein `CMFCDropDownToolbarButton`-Objekt.  
   
 ```  
@@ -171,7 +166,7 @@ CMFCDropDownToolbarButton(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
+##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar  
  Öffnet eine Dropdown-Symbolleiste.  
   
 ```  
@@ -192,7 +187,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  Diese Methode schlägt fehl, wenn `pWnd` ist `NULL` und die Dropdown-Symbolleisten-Schaltfläche verfügt nicht über ein übergeordnetes Fenster.  
   
-##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  Kopiert den Text aus der Symbolleiste auf die Schaltfläche zu einem Menü.  
   
 ```  
@@ -211,7 +206,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  Diese Methode schlägt fehl, wenn der übergeordneten Symbolleiste `m_pToolBar`, ist `NULL` oder Implementierung der Basisklasse gibt `FALSE`.  
   
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
+##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
  Ruft ab den Dropdown-Symbolleiste, die die Schaltfläche zugeordnet ist.  
   
 ```  
@@ -224,7 +219,7 @@ CMFCToolBar* GetDropDownToolBar() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gibt die `m_pToolBar` -Datenmember.  
   
-##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
+##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
  Bestimmt, ob die Dropdown-Symbolleiste derzeit geöffnet ist.  
   
 ```  
@@ -237,7 +232,7 @@ BOOL IsDropDown() const;
 ### <a name="remarks"></a>Hinweise  
  Das Framework öffnet die Dropdown-Symbolleiste mithilfe der [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) Methode. Das Framework schließt die Dropdown-Symbolleiste aus, wenn der Benutzer die linke Maustaste drückt, die in den nicht-Clientbereich der Dropdown-Symbolleiste.  
   
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
+##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
  Bestimmt, ob die Schaltfläche mit einem erweiterten Rahmen angezeigt werden kann.  
   
 ```  
@@ -250,7 +245,7 @@ virtual BOOL IsExtraSize() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu erweiterten Rahmen, finden Sie unter [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
+##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
  Gibt die Zeitdauer, die ein Benutzer die Maustaste gedrückt halten muss, bevor die Dropdown-Symbolleiste angezeigt wird.  
   
 ```  
@@ -260,7 +255,7 @@ static UINT m_uiShowBarDelay;
 ### <a name="remarks"></a>Hinweise  
  Die Verzögerung wird in Millisekunden gemessen. Der Standardwert ist 500. Sie können einen anderen Verzögerung durch Ändern des Werts dieses Elements freigegebene festlegen.  
   
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
  Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und andockzustand berechnet.  
   
 ```  
@@ -286,7 +281,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) durch die Breite des den Dropdown Pfeil auf die horizontale Abmessung die Größe der Schaltfläche hinzufügen.  
   
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
  Vom Framework aufgerufen, wenn die Schaltfläche "" in eine neue Symbolleiste eingefügt wird.  
   
 ```  
@@ -300,7 +295,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt die basisklassenimplementierung ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) durch Deaktivieren der Beschriftung ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) verwendet wird und die [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) und [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) Datenmember zu `FALSE`.  
   
-##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
+##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
  Wird vom Framework aufgerufen, klickt der Benutzer die Maustaste los.  
   
 ```  
@@ -314,7 +309,7 @@ virtual BOOL OnClick(
  Das übergeordnete Fenster des Symbolleisten-Schaltfläche.  
   
  [in] `bDelay`  
- `TRUE`Wenn die Nachricht mit einer Verzögerung behandelt werden soll.  
+ `TRUE` Wenn die Nachricht mit einer Verzögerung behandelt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Schaltfläche, die auf-Nachricht verarbeitet; andernfalls 0.  
@@ -324,7 +319,7 @@ virtual BOOL OnClick(
   
  Wenn ein Benutzer die Symbolleisten-Schaltfläche klickt, wird diese Methode erstellt einen Zeitgeber, der die Länge des angegebenen Zeitintervalls wartet der [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) -Datenmember aus und klicken Sie dann öffnet der Dropdown-Symbolleiste mit der [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) Methode. Diese Methode schließt den Dropdown-Symbolleiste das zweite Mal mit der Benutzer die Symbolleisten-Schaltfläche klickt.  
   
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
+##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
  Vom Framework aufgerufen, wenn der Benutzer die Maustaste loslässt.  
   
 ```  
@@ -341,7 +336,7 @@ virtual BOOL OnClickUp();
   
  Weitere Informationen über die Dropdown-Symbolleiste und der Timer Dropdown-Symbolleiste finden Sie unter [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
  Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine `WM_HELPHITTEST` Nachricht.  
   
 ```  
@@ -360,7 +355,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  Weitere Informationen zu den `WM_HELPHITTEST message, see` [TN028: kontextbezogene Hilfe Support](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
  Das angegebene Menü ändert, wenn die Anwendung auf der übergeordneten Symbolleiste ein Kontextmenü angezeigt.  
   
 ```  
@@ -389,7 +384,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
  Überschreiben Sie diese Methode, um das Kontextmenü zu ändern, das vom Framework in Anpassungsmodus angezeigt.  
   
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
  Wird aufgerufen, durch das Framework der Schaltfläche gezeichnet werden soll, mithilfe des angegebenen Stile und Optionen.  
   
 ```  
@@ -432,7 +427,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode zum Anpassen von Symbolleisten-Schaltfläche zeichnen.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
  Wird aufgerufen, durch das Framework der Schaltfläche gezeichnet werden soll, der **Befehle** im Bereich der **anpassen** (Dialogfeld).  
   
 ```  
@@ -460,7 +455,7 @@ virtual int OnDrawOnCustomizeList(
   
  Erweitert die basisklassenimplementierung dieser Methode ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) durch die Beschriftung der Schaltfläche auf den Namen der Schaltfläche ändern (d. h. auf den Wert des der `lpszName` Parameter, die Sie übergeben an den Konstruktor).  
   
-##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
+##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
  Dieses Objekt aus einem Archiv liest oder schreibt sie in ein Archiv.  
   
 ```  
@@ -474,7 +469,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) durch die Ressourcen-ID der übergeordneten Symbolleiste serialisieren. Beim Laden von das Archiv ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) gibt einen Wert ungleich null), mit dieser Methode wird die `m_pToolBar` -Datenmember auf der Symbolleiste, die die serialisierten Ressourcen-ID enthält.  
   
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
  Legt den Standardbefehl, den das Framework verwendet, wenn ein Benutzer die Schaltfläche klickt.  
   
 ```  

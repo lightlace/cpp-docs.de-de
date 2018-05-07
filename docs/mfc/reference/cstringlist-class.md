@@ -1,12 +1,9 @@
 ---
 title: CStringList Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e22677bd88fe9e39b8c36734a9e5f3596c1a1224
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstringlist-class"></a>CStringList-Klasse
 Unterstützt Listen von `CString` -Objekten.  
@@ -132,7 +127,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Hinweise  
  Alle Vergleiche werden ausgeführt, mit dem Wert, d. h., dass die Zeichen in der Zeichenfolge statt die Adressen der Zeichenfolgen verglichen werden.  
   
- `CStringList`enthält die `IMPLEMENT_SERIAL` -Makro für die Unterstützung von Serialisierung laufzeittypenzugriff und zum Sichern der Elemente. Wenn eine Liste der `CString` Objekte befindet sich in ein Archiv, das entweder mit einem überladenen Operator zum Einfügen oder mit der `Serialize` Member-Funktion, `CString` Element der Reihe nach serialisiert.  
+ `CStringList` enthält die `IMPLEMENT_SERIAL` -Makro für die Unterstützung von Serialisierung laufzeittypenzugriff und zum Sichern der Elemente. Wenn eine Liste der `CString` Objekte befindet sich in ein Archiv, das entweder mit einem überladenen Operator zum Einfügen oder mit der `Serialize` Member-Funktion, `CString` Element der Reihe nach serialisiert.  
   
  Wenn Sie eine Sicherung einzelner benötigen `CString` Elemente, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.  
   

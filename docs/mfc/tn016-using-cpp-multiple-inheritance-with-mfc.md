@@ -1,13 +1,10 @@
 ---
 title: 'TN016: Verwenden von C++-Mehrfachvererbung mit MFC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.inheritance
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b276e316ffc8ce04577532ac3b15400ee28f9f33
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Verwenden von C++-Mehrfachvererbung mit MFC
 Dieser Hinweis wird beschrieben, wie mehrfache Vererbung (MI) mit der Microsoft Foundation Classes verwendet wird. Die Verwendung von MI ist nicht mit MFC erforderlich. MI wird von MFC-Klassen nicht verwendet und ist nicht erforderlich, die eine Klassenbibliothek schreiben.  
@@ -46,7 +41,7 @@ Dieser Hinweis wird beschrieben, wie mehrfache Vererbung (MI) mit der Microsoft 
  Eine Alternative ist die Verwendung der `dynamic_cast` Operator. Umwandlung eines Objekts mit MI auf eine der zugehörigen Basisklassen zwingt den Compiler an, die Funktionen in die angegebene Basisklasse verwenden. Weitere Informationen finden Sie unter [Dynamic_cast Operator](../cpp/dynamic-cast-operator.md).  
   
 ## <a name="cobject---the-root-of-all-classes"></a>CObject - Stamm aller Klassen  
- Alle signifikante Klassen ableiten direkt oder indirekt von Klasse `CObject`. `CObject`ist keine Sie beliebige Memberdaten, aber sie verfügt über einige Standardfunktionen. Bei Verwendung von MI Sie in der Regel erbt von mindestens zwei `CObject`-abgeleitete Klassen. Im folgende Beispiel wird veranschaulicht, wie eine Klasse erben kann eine [CFrameWnd](../mfc/reference/cframewnd-class.md) und ein [CObList](../mfc/reference/coblist-class.md):  
+ Alle signifikante Klassen ableiten direkt oder indirekt von Klasse `CObject`. `CObject` ist keine Sie beliebige Memberdaten, aber sie verfügt über einige Standardfunktionen. Bei Verwendung von MI Sie in der Regel erbt von mindestens zwei `CObject`-abgeleitete Klassen. Im folgende Beispiel wird veranschaulicht, wie eine Klasse erben kann eine [CFrameWnd](../mfc/reference/cframewnd-class.md) und ein [CObList](../mfc/reference/coblist-class.md):  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  

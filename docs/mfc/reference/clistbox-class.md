@@ -1,12 +1,9 @@
 ---
 title: CListBox-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListBox
@@ -111,17 +108,15 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecf574deed95fca6a96e8e5a5c1d1e0bebed1854
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1101e4115efa3c5c822d0d64b767cdee379a0e0b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
 Stellt die Funktionalität eines Windows-Listenfelds bereit.  
@@ -249,7 +244,7 @@ class CListBox : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="addstring"></a>CListBox::AddString  
+##  <a name="addstring"></a>  CListBox::AddString  
  Fügt eine Zeichenfolge an ein Listenfeld an.  
   
 ```  
@@ -271,7 +266,7 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
-##  <a name="chartoitem"></a>CListBox::CharToItem  
+##  <a name="chartoitem"></a>  CListBox::CharToItem  
  Vom Framework aufgerufen, wenn das Listenfeld übergeordneten Fenster empfängt eine `WM_CHARTOITEM` Nachricht aus dem Listenfeld aus.  
   
 ```  
@@ -308,7 +303,7 @@ virtual int CharToItem(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
   
-##  <a name="clistbox"></a>CListBox::CListBox  
+##  <a name="clistbox"></a>  CListBox::CListBox  
  Erstellt ein `CListBox`-Objekt.  
   
 ```  
@@ -321,7 +316,7 @@ CListBox();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CListBox::CompareItem  
+##  <a name="compareitem"></a>  CListBox::CompareItem  
  Wird aufgerufen, durch das Framework, um die relative Position eines neuen Elements in einem sortierten Besitzer gezeichnetes Listenfeld zu ermitteln.  
   
 ```  
@@ -349,7 +344,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
   
-##  <a name="create"></a>CListBox::Create  
+##  <a name="create"></a>  CListBox::Create  
  Erstellt die Windows-Listenfelds und fügt es der `CListBox` Objekt.  
   
 ```  
@@ -402,7 +397,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
-##  <a name="deleteitem"></a>CListBox::DeleteItem  
+##  <a name="deleteitem"></a>  CListBox::DeleteItem  
  Vom Framework aufgerufen, wenn der Benutzer ein Element aus einem Besitzer gezeichneten löscht `CListBox` -Objekt oder im Listenfeld zerstört.  
   
 ```  
@@ -421,7 +416,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
-##  <a name="deletestring"></a>CListBox::DeleteString  
+##  <a name="deletestring"></a>  CListBox::DeleteString  
  Löscht das Element an Position `nIndex` aus dem Listenfeld aus.  
   
 ```  
@@ -441,7 +436,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
-##  <a name="dir"></a>CListBox::Dir  
+##  <a name="dir"></a>  CListBox::Dir  
  Fügt eine Liste der Dateinamen, Laufwerke oder beides an ein Listenfeld an.  
   
 ```  
@@ -457,9 +452,9 @@ int Dir(
 |Wert|Bedeutung|  
 |-----------|-------------|  
 |0x0000|Datei kann aus gelesen oder geschrieben werden.|  
-|0 x 0001|Datei auslesen, jedoch nicht geschrieben werden kann.|  
-|0 x 0002|Datei ausgeblendet, und nicht in einer Verzeichnisliste angezeigt.|  
-|0 x 0004|Datei ist eine Systemdatei.|  
+|0x0001|Datei auslesen, jedoch nicht geschrieben werden kann.|  
+|0x0002|Datei ausgeblendet, und nicht in einer Verzeichnisliste angezeigt.|  
+|0x0004|Datei ist eine Systemdatei.|  
 |0x0010|Indem der angegebene Name `lpszWildCard` gibt das Verzeichnis an.|  
 |0x0020|Datei wurde archiviert.|  
 |0 x 4000|Schließen Sie alle Laufwerke, die die vom angegebenen Namen entsprechen `lpszWildCard`.|  
@@ -474,7 +469,7 @@ int Dir(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
   
-##  <a name="drawitem"></a>CListBox::DrawItem  
+##  <a name="drawitem"></a>  CListBox::DrawItem  
  Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Liste im Feld ändert.  
   
 ```  
@@ -495,7 +490,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="findstring"></a>CListBox:: FindString  
+##  <a name="findstring"></a>  CListBox:: FindString  
  Sucht die erste Zeichenfolge in einem Listenfeld, das das angegebene Präfix enthält, ohne die Auswahl im Listenfeld zu ändern.  
   
 ```  
@@ -520,7 +515,7 @@ int FindString(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
-##  <a name="findstringexact"></a>CListBox::FindStringExact  
+##  <a name="findstringexact"></a>  CListBox::FindStringExact  
  Sucht nach der ersten Listenfeld-Zeichenfolge, die die angegebene Zeichenfolge entspricht `lpszFind`.  
   
 ```  
@@ -545,7 +540,7 @@ int FindStringExact(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
-##  <a name="getanchorindex"></a>CListBox::GetAnchorIndex  
+##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex  
  Ruft den nullbasierten Index des aktuellen Elements im Listenfeld Anker ab.  
   
 ```  
@@ -561,7 +556,7 @@ int GetAnchorIndex() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListBox::SetAnchorIndex](#setanchorindex).  
   
-##  <a name="getcaretindex"></a>CListBox::GetCaretIndex  
+##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex  
  Bestimmt den Index des Elements, das in einem Listenfeld Mehrfachauswahl Fokusrechtecks verfügt.  
   
 ```  
@@ -577,7 +572,7 @@ int GetCaretIndex() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListBox::SetCaretIndex](#setcaretindex).  
   
-##  <a name="getcount"></a>CListBox::GetCount  
+##  <a name="getcount"></a>  CListBox::GetCount  
  Ruft die Anzahl der Elemente in einem Listenfeld ab.  
   
 ```  
@@ -593,7 +588,7 @@ int GetCount() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
-##  <a name="getcursel"></a>CListBox::GetCurSel  
+##  <a name="getcursel"></a>  CListBox::GetCurSel  
  Ruft den nullbasierten Index des derzeit ausgewählten Elements ab, ggf. in einem Listenfeld mit einfacher Auswahl.  
   
 ```  
@@ -611,7 +606,7 @@ int GetCurSel() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>  CListBox::GetHorizontalExtent  
  Ruft die Breite in Pixel, die mit denen sie horizontal gescrollt werden kann, aus dem Listenfeld ab.  
   
 ```  
@@ -627,7 +622,7 @@ int GetHorizontalExtent() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
-##  <a name="getitemdata"></a>CListBox::GetItemData  
+##  <a name="getitemdata"></a>  CListBox::GetItemData  
  Ruft den von der Anwendung bereitgestellten Doppelwort-Wert, der dem angegebenen Listenfeld-Element zugeordnet.  
   
 ```  
@@ -647,7 +642,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
-##  <a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
  Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Listenfeld-Element als ein Zeiger ( **"void"\***).  
   
 ```  
@@ -664,7 +659,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
-##  <a name="getitemheight"></a>CListBox::GetItemHeight  
+##  <a name="getitemheight"></a>  CListBox::GetItemHeight  
  Bestimmt die Höhe der Elemente in einem Listenfeld.  
   
 ```  
@@ -681,7 +676,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
-##  <a name="getitemrect"></a>CListBox::GetItemRect  
+##  <a name="getitemrect"></a>  CListBox::GetItemRect  
  Ruft die Abmessungen des Rechtecks, Grenzen ein Listenfeld-Element ab, wie er derzeit im Fenster im Listenfeld angezeigt wird.  
   
 ```  
@@ -703,7 +698,7 @@ int GetItemRect(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
-##  <a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
+##  <a name="getlistboxinfo"></a>  CListBox::GetListBoxInfo  
  Ruft die Anzahl von Elementen pro Spalte ab.  
   
 ```  
@@ -716,7 +711,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) Nachricht, wie im Windows SDK beschrieben.  
   
-##  <a name="getlocale"></a>CListBox::GetLocale  
+##  <a name="getlocale"></a>  CListBox::GetLocale  
  Ruft das von dem Listenfeld verwendete Gebietsschema ab.  
   
 ```  
@@ -732,7 +727,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListBox::SetLocale](#setlocale).  
   
-##  <a name="getsel"></a>CListBox::GetSel  
+##  <a name="getsel"></a>  CListBox::GetSel  
  Ruft den Auswahlzustand eines Elements ab.  
   
 ```  
@@ -754,7 +749,7 @@ int GetSel(int nIndex) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
-##  <a name="getselcount"></a>CListBox::GetSelCount  
+##  <a name="getselcount"></a>  CListBox::GetSelCount  
  Ruft die Gesamtanzahl der ausgewählten Elemente in einem Listenfeld Mehrfachauswahl ab.  
   
 ```  
@@ -767,7 +762,7 @@ int GetSelCount() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListBox::GetSelItems](#getselitems).  
   
-##  <a name="getselitems"></a>CListBox::GetSelItems  
+##  <a name="getselitems"></a>  CListBox::GetSelItems  
  Füllt einen Puffer mit einem Array von ganzen Zahlen, der die Artikelnummern ausgewählter Elemente in einem Listenfeld Mehrfachauswahl angibt.  
   
 ```  
@@ -789,7 +784,7 @@ int GetSelItems(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
   
-##  <a name="gettext"></a>CListBox::GetText  
+##  <a name="gettext"></a>  CListBox::GetText  
  Ruft eine Zeichenfolge aus einem Listenfeld ab.  
   
 ```  
@@ -821,7 +816,7 @@ void GetText(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
-##  <a name="gettextlen"></a>CListBox::GetTextLen  
+##  <a name="gettextlen"></a>  CListBox::GetTextLen  
  Ruft die Länge einer Zeichenfolge in ein Element im Listenfeld ab.  
   
 ```  
@@ -838,7 +833,7 @@ int GetTextLen(int nIndex) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListBox::GetText](#gettext).  
   
-##  <a name="gettopindex"></a>CListBox::GetTopIndex  
+##  <a name="gettopindex"></a>  CListBox::GetTopIndex  
  Ruft den nullbasierten Index des ersten sichtbaren Elements in einem Listenfeld ab.  
   
 ```  
@@ -854,7 +849,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
-##  <a name="initstorage"></a>CListBox::InitStorage  
+##  <a name="initstorage"></a>  CListBox::InitStorage  
  Belegt Speicher für das Speichern von Listenfeld Elemente.  
   
 ```  
@@ -883,7 +878,7 @@ int InitStorage(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
   
-##  <a name="insertstring"></a>CListBox::InsertString  
+##  <a name="insertstring"></a>  CListBox::InsertString  
  Fügt eine Zeichenfolge in das Listenfeld ein.  
   
 ```  
@@ -908,7 +903,7 @@ int InsertString(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
-##  <a name="itemfrompoint"></a>CListBox::ItemFromPoint  
+##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
  Bestimmt das Element im Listenfeld am nächsten liegt der Punkt im angegebenen `pt`.  
   
 ```  
@@ -933,7 +928,7 @@ UINT ItemFromPoint(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListBox::SetAnchorIndex](#setanchorindex).  
   
-##  <a name="measureitem"></a>CListBox::MeasureItem  
+##  <a name="measureitem"></a>  CListBox::MeasureItem  
  Vom Framework aufgerufen, wenn ein Listenfeld mit einem Ownerdrawn-Stil erstellt wird.  
   
 ```  
@@ -954,7 +949,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
   
-##  <a name="resetcontent"></a>CListBox::ResetContent  
+##  <a name="resetcontent"></a>  CListBox::ResetContent  
  Entfernt alle Elemente aus einem Listenfeld.  
   
 ```  
@@ -964,7 +959,7 @@ void ResetContent();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
-##  <a name="selectstring"></a>CListBox::SelectString  
+##  <a name="selectstring"></a>  CListBox::SelectString  
  Suchvorgänge für ein Element im Listenfeld, die mit die angegebene Zeichenfolge übereinstimmt, und wenn ein übereinstimmendes Element gefunden wird, wird das Element ausgewählt.  
   
 ```  
@@ -995,7 +990,7 @@ int SelectString(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
-##  <a name="selitemrange"></a>CListBox::SelItemRange  
+##  <a name="selitemrange"></a>  CListBox::SelItemRange  
  Wählt mehrere aufeinander folgende Elemente in einer Mehrfachauswahl-Listenfeld aus.  
   
 ```  
@@ -1024,7 +1019,7 @@ int SelItemRange(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
-##  <a name="setanchorindex"></a>CListBox::SetAnchorIndex  
+##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex  
  Legt fest, die Verankerung in einem Mehrfachauswahl-Listenfeld, um eine erweiterte Auswahl zu beginnen.  
   
 ```  
@@ -1041,7 +1036,7 @@ void SetAnchorIndex(int nIndex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
-##  <a name="setcaretindex"></a>CListBox::SetCaretIndex  
+##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex  
  Legt Fokusrechtecks auf das Element am angegebenen Index in einem Listenfeld Mehrfachauswahl fest.  
   
 ```  
@@ -1066,7 +1061,7 @@ int SetCaretIndex(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
-##  <a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>  CListBox::SetColumnWidth  
  Legt die Breite in Pixel aller Spalten in einem mehrspaltigen Listenfeld (erstellt mit dem [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) Stil).  
   
 ```  
@@ -1080,7 +1075,7 @@ void SetColumnWidth(int cxWidth);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#31](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]  
   
-##  <a name="setcursel"></a>CListBox::SetCurSel  
+##  <a name="setcursel"></a>  CListBox::SetCurSel  
  Wählt eine Zeichenfolge, und verschiebt es in der Ansicht bei Bedarf.  
   
 ```  
@@ -1092,7 +1087,7 @@ int SetCurSel(int nSelect);
  Gibt den nullbasierten Index der Zeichenfolge, die ausgewählt werden. Wenn `nSelect` ist-1, keine Auswahl im Listenfeld festgelegt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `LB_ERR`Wenn ein Fehler auftritt.  
+ `LB_ERR` Wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die neue Zeichenfolge aktiviert ist, die Hervorhebung von im Listenfeld aus der zuvor ausgewählten Zeichenfolge entfernt.  
@@ -1104,7 +1099,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
   
-##  <a name="sethorizontalextent"></a>CListBox:: SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>  CListBox:: SetHorizontalExtent  
  Legt die Breite in Pixel, ein Listenfeld horizontal gescrollt werden kann.  
   
 ```  
@@ -1125,7 +1120,7 @@ void SetHorizontalExtent(int cxExtent);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
-##  <a name="setitemdata"></a>CListBox::SetItemData  
+##  <a name="setitemdata"></a>  CListBox::SetItemData  
  Legt einen 32-Bit-Wert, der das angegebene Element in einem Listenfeld zugeordnet.  
   
 ```  
@@ -1147,7 +1142,7 @@ int SetItemData(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
-##  <a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
  Legt den 32-Bit-Wert, der das angegebene Element in einem Listenfeld des angegebenen Zeigers sein zugeordnet ( **"void"\***).  
   
 ```  
@@ -1172,7 +1167,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
-##  <a name="setitemheight"></a>CListBox::SetItemHeight  
+##  <a name="setitemheight"></a>  CListBox::SetItemHeight  
  Legt die Höhe der Elemente in einem Listenfeld fest.  
   
 ```  
@@ -1197,7 +1192,7 @@ int SetItemHeight(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
   
-##  <a name="setlocale"></a>CListBox::SetLocale  
+##  <a name="setlocale"></a>  CListBox::SetLocale  
  Legt den Gebietsschemabezeichner für dieses Listenfelds an.  
   
 ```  
@@ -1217,7 +1212,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
-##  <a name="setsel"></a>CListBox::SetSel  
+##  <a name="setsel"></a>  CListBox::SetSel  
  Wählt eine Zeichenfolge in einem Mehrfachauswahl-Listenfeld aus.  
   
 ```  
@@ -1234,7 +1229,7 @@ int SetSel(
  Gibt an, wie die Auswahl. Wenn `bSelect` ist `TRUE`, ausgewählt und hervorgehoben, wenn die Zeichenfolge `FALSE`, wird die Hervorhebung entfernt, und die Zeichenfolge nicht mehr ausgewählt ist. Die angegebene Zeichenfolge ausgewählt ist, und standardmäßig markiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `LB_ERR`Wenn ein Fehler auftritt.  
+ `LB_ERR` Wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Memberfunktion auf, nur mit Mehrfachauswahl-Listenfelder.  
@@ -1244,7 +1239,7 @@ int SetSel(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
-##  <a name="settabstops"></a>CListBox::SetTabStops  
+##  <a name="settabstops"></a>  CListBox::SetTabStops  
  Legt die Tabstopp Positionen in einem Listenfeld an.  
   
 ```  
@@ -1280,7 +1275,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
   
-##  <a name="settopindex"></a>CListBox::SetTopIndex  
+##  <a name="settopindex"></a>  CListBox::SetTopIndex  
  Stellt sicher, dass ein bestimmtes Listenfeld Element sichtbar ist.  
   
 ```  
@@ -1300,7 +1295,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
-##  <a name="vkeytoitem"></a>CListBox::VKeyToItem  
+##  <a name="vkeytoitem"></a>  CListBox::VKeyToItem  
  Vom Framework aufgerufen, wenn das Listenfeld übergeordneten Fenster empfängt eine `WM_VKEYTOITEM` Nachricht aus dem Listenfeld aus.  
   
 ```  

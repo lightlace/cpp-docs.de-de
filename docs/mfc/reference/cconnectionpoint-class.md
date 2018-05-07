@@ -1,12 +1,9 @@
 ---
 title: CConnectionPoint Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a9e9fafc2bbee9959a939815a92c9bc63a650f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint-Klasse
 Definiert einen besonderen Schnittstellentyp, "Verbindungspunkt" genannt, der verwendet wird, um mit anderen OLE-Objekten zu kommunizieren.  
@@ -112,14 +107,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
   
-##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
  Erstellt ein `CConnectionPoint`-Objekt.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="getconnections"></a>CConnectionPoint:: GetConnections  
+##  <a name="getconnections"></a>  CConnectionPoint:: GetConnections  
  Mit dieser Funktion wird zum Abrufen aller aktiven Verbindungen für einen Verbindungspunkt.  
   
 ```  
@@ -129,7 +124,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Array der aktiven Verbindungen (senken). Einige der Zeiger für das im Array kann NULL sein. Jeder nicht-NULL-Zeiger in dieses Array kann gefahrlos in einen Zeiger auf die Schnittstelle mit einem Umwandlungsoperator konvertiert werden.  
   
-##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
  Wird aufgerufen, durch das Framework zum Abrufen der **IConnectionPointContainer** für den Verbindungspunkt.  
   
 ```  
@@ -142,7 +137,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist in der Regel implementiert, indem die `BEGIN_CONNECTION_PART` Makro.  
   
-##  <a name="getiid"></a>CConnectionPoint:: GetIID  
+##  <a name="getiid"></a>  CConnectionPoint:: GetIID  
  Wird aufgerufen, durch das Framework die Schnittstellen-ID eines Verbindungspunktes abgerufen.  
   
 ```  
@@ -155,7 +150,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion zum Zurückgeben der Schnittstellen-ID für diese Verbindung an.  
   
-##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
  Wird aufgerufen, durch das Framework, um die maximale Anzahl von Verbindungen, die von dem Verbindungspunkt unterstützt abzurufen.  
   
 ```  
@@ -170,7 +165,7 @@ virtual int GetMaxConnections();
   
  Überschreiben Sie diese Funktion, wenn Sie die Anzahl der senken, die dem Steuerelement eine Verbindung herstellen können, einschränken möchten.  
   
-##  <a name="getnextconnection"></a>CConnectionPoint:: GetNextConnection  
+##  <a name="getnextconnection"></a>  CConnectionPoint:: GetNextConnection  
  Ruft einen Zeiger auf das Verbindungselement auf `pos`.  
   
 ```  
@@ -190,7 +185,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
  Startet eine Iteration Zuordnung wird durch Zurückgeben einer **POSITION** -Wert, der übergeben werden kann ein [GetNextConnection](#getnextconnection) aufrufen.  
   
 ```  
@@ -206,7 +201,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CConnectionPoint:: GetNextConnection](#getnextconnection).  
   
-##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
  Wird aufgerufen, durch das Framework beim Herstellen einer Verbindung wird hergestellt oder unterbrochen wird.  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  Überschreiben Sie diese Funktion, wenn senken anschließen oder trennen Sie Ihre Verbindungspunkt Benachrichtigung werden soll.  
   
-##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```  

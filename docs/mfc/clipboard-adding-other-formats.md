@@ -1,13 +1,10 @@
 ---
-title: "Zwischenablage: Hinzufügen anderer Formate | Microsoft Docs"
-ms.custom: 
+title: 'Zwischenablage: Hinzufügen anderer Formate | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>Zwischenablage: Hinzufügen anderer Formate
 In diesem Thema wird erläutert, wie Sie die Liste der unterstützten Formate, insbesondere für OLE-Unterstützung zu erweitern. Das Thema [Zwischenablage: Daten kopieren und Einfügen](../mfc/clipboard-copying-and-pasting-data.md) beschreibt die minimale Implementierung, die erforderlich ist, kopieren und Einfügen aus der Zwischenablage zu unterstützen. Ist dies alle Sie implementieren, sind die einzigen Formate, die in der Zwischenablage platziert `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, und möglicherweise `CF_LINKSOURCE`. Die meisten Anwendungen benötigen mehr Formate in der Zwischenablage als dieser drei.  
   
-##  <a name="_core_registering_custom_formats"></a>Registrieren benutzerdefinierter Datenformate  
+##  <a name="_core_registering_custom_formats"></a> Registrieren benutzerdefinierter Datenformate  
  Um eine eigene benutzerdefinierte Formate zu erstellen, halten Sie die gleiche Prozedur, die Sie verwenden, wenn alle benutzerdefiniertes Format der Zwischenablage zu registrieren: übergeben Sie den Namen des Formats, das die **RegisterClipboardFormat** Funktion, und verwenden Sie den Rückgabewert als Format-ID.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>Platzieren von Formaten in die Zwischenablage  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Platzieren von Formaten in die Zwischenablage  
  Um weitere Formate, die in der Zwischenablage platziert hinzuzufügen, müssen Sie überschreiben die `OnGetClipboardData` Funktion in der Sie von einer abgeleiteten Klasse `COleClientItem` oder `COleServerItem` (je nachdem, ob die Daten kopiert werden systemeigene). In dieser Funktion sollten Sie das folgende Verfahren verwenden.  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>Platzieren von Formaten in die Zwischenablage  

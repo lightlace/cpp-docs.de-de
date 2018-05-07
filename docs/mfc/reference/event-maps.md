@@ -1,13 +1,10 @@
 ---
 title: Ereigniszuordnungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 Wenn möchte, dass ein Steuerelement des Containers zu informieren, die eine Aktion, die (vom Steuerelemententwickler bestimmt). (z. B. eine Tastenkombination, klicken mit der Maus oder eine Änderung an der Zustand des Steuerelements erfolgt ist) wird eine Auslösen von Ereignissen Funktion aufgerufen. Diese Funktion teilt den Steuerelementcontainer, den einige wichtige Aktion aufgetreten ist, durch das zugehörige Ereignis auslösen.  
@@ -62,7 +57,7 @@ Wenn möchte, dass ein Steuerelement des Containers zu informieren, die eine Akt
 |[ON_OLEVERB](#on_oleverb)|Gibt ein eigenes Verb behandelt, indem die OLE-Steuerelements an.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Überschreibt eine Standardverb Zuordnung des OLE-Steuerelements an.|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
  Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten eine Ereignis-Karte, um die Ereignisse anzugeben, das Steuerelement ausgelöst wird.  
   
 ```   
@@ -77,7 +72,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
  Die Definition der ereigniszuordnung beginnt.  
   
 ```   
@@ -99,7 +94,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
  Verwenden der `END_EVENT_MAP` Makro zum Beenden der Definition der ereigniszuordnung.  
   
 ```   
@@ -109,7 +104,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
  Definiert einen Eintrag für die Ereignis-Zuordnung für ein benutzerdefiniertes Ereignis.  
   
 ```   
@@ -171,7 +166,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
  Definiert eine Funktion für ein benutzerdefiniertes Ereignis zu angegebene Dispatch-ID gehören Auslösen des Ereignisses `dispid`.  
   
 ```   
@@ -208,7 +203,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
  Dieses Makro definiert einen Nachrichtenzuordnungseintrag, der eine bestimmte Memberfunktion des Steuerelements ein eigenes Verb zuordnet.  
   
 ```   
@@ -237,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxole.h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
  Verwenden Sie dieses Makro, um das Standardverhalten aus einem Standardverb überschreiben.  
   
 ```   

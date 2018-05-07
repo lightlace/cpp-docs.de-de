@@ -1,12 +1,9 @@
 ---
 title: COleVariant-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleVariant
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3c9d961c69616df05975f2d484d0bbfd43f514
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colevariant-class"></a>COleVariant-Klasse
 Kapselt den Datentyp [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) .  
@@ -77,7 +72,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Konvertiert eine `COleVariant` -Objekt in ein `LPVARIANT`.|  
 |[COleVariant::operator =](#operator_eq)|Kopiert ein `COleVariant` Wert.|  
 |[COleVariant::operator ==](#operator_eq_eq)|Vergleicht zwei `COleVariant` Werte.|  
-|[COleVariant::operator &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|Ausgaben einen `COleVariant` Wert `CArchive` oder `CDumpContext` und Eingaben ein `COleVariant` -Sitzungsobjekts `CArchive`.|  
+|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Ausgaben einen `COleVariant` Wert `CArchive` oder `CDumpContext` und Eingaben ein `COleVariant` -Sitzungsobjekts `CArchive`.|  
   
 ## <a name="remarks"></a>Hinweise  
  Dieser Datentyp wird in der OLE-Automatisierung verwendet. Insbesondere die [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b) Struktur enthält einen Zeiger auf ein Array von **VARIANT** Strukturen. Ein **DISPPARAMS** Struktur wird verwendet, um zum Übergeben von Parametern [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
@@ -99,7 +94,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
   
-##  <a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>  COleVariant::Attach  
  Mit dieser Funktion werden zum Anfügen der angegebenen [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) Objekt mit dem aktuellen `COleVariant` Objekt.  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(VARIANT& varSrc);
   
  Weitere Informationen finden Sie unter der [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) und [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) Einträge in das Windows SDK.  
   
-##  <a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Erstellt ein `COleVariant`-Objekt.  
   
 ```  
@@ -213,7 +208,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  Weitere Informationen zu `SCODE`, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
   
-##  <a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>  COleVariant::ChangeType  
  Konvertiert den Typ des variant-Wert in diesem `COleVariant` Objekt.  
   
 ```  
@@ -230,7 +225,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), und [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) Einträge in das Windows SDK.  
   
-##  <a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>  COleVariant::Clear  
  Löscht die **VARIANT**.  
   
 ```  
@@ -242,7 +237,7 @@ void Clear();
   
  Weitere Informationen finden Sie unter der `VARIANT`, `VARTYPE`, und `VariantClear` Einträge in das Windows SDK.  
   
-##  <a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>  COleVariant::Detach  
  Trennt den zugrunde liegenden [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) -Objekt von diesem `COleVariant` Objekt.  
   
 ```  
@@ -257,7 +252,7 @@ VARIANT Detach();
   
  Weitere Informationen finden Sie unter der [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), und [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) Einträge in das Windows SDK.  
   
-##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Ruft ein Bytearray aus einem vorhandenen variant-array  
   
 ```  
@@ -268,7 +263,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  Ein Verweis auf ein vorhandenes [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt.  
   
-##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
  Dieser Umwandlungsoperator gibt eine `VARIANT` -Struktur, deren Wert wird aus dieser kopiert `COleVariant` Objekt.  
   
 ```  
@@ -277,7 +272,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT  
  Rufen Sie diese Typumwandlungsoperator, um Zugriff auf die zugrunde liegenden `VARIANT` Struktur für dieses `COleVariant` Objekt.  
   
 ```  
@@ -289,7 +284,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  Ändern des Werts in der **VARIANT** zugegriffen wird, die von dieser Funktion zurückgegebenen Zeiger Struktur ändert sich den Wert dieses `COleVariant` Objekt.  
   
-##  <a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>  COleVariant::operator =  
  Diese überladenen Zuweisungsoperatoren kopieren den Quellwert in diese `COleVariant` Objekt.  
   
 ```  
@@ -312,7 +307,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 ### <a name="remarks"></a>Hinweise  
  Eine kurze Beschreibung der einzelnen Operatoren lautet folgendermaßen:  
   
-- **Operator = (** *VarSrc***)** kopiert eine vorhandene **VARIANT** oder `COleVariant` -Objekts in dieses Objekt.  
+- **Operator = (** *VarSrc ***)** kopiert eine vorhandene **VARIANT** oder `COleVariant` -Objekts in dieses Objekt.  
   
 - **Operator = (** `pSrc` **)** Kopien der **VARIANT** Objekt zugreift `pSrc` in dieses Objekt.  
   
@@ -338,7 +333,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  Weitere Informationen finden Sie unter der [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) und [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) Einträge in das Windows SDK.  
   
-##  <a name="operator_eq_eq"></a>COleVariant::operator ==  
+##  <a name="operator_eq_eq"></a>  COleVariant::operator ==  
  Dieser Operator vergleicht zwei variant-Werte und gibt einen Wert ungleich NULL, wenn sie gleich sind; andernfalls 0.  
   
 ```  
@@ -346,7 +341,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;  
  Ausgaben einen `COleVariant` Wert `CArchive` oder **CdumpContext** und Eingaben ein `COleVariant` -Sitzungsobjekts `CArchive`.  
   
 ```  
@@ -364,9 +359,9 @@ friend CArchive& AFXAPI operator>>(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die `COleVariant` einfügen (  **< \<** ) Operator unterstützt Diagnose-Dump-Sicherungen und das Speichern in ein Archiv. Die Extrahierung (  **>>** ) Operator unterstützt das Laden aus einem Archiv.  
+ Die `COleVariant` einfügen ( **< \<**) Operator unterstützt Diagnose-Dump-Sicherungen und das Speichern in ein Archiv. Die Extrahierung ( **>>**) Operator unterstützt das Laden aus einem Archiv.  
   
-##  <a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>  COleVariant::SetString  
  Legt die Zeichenfolge in einen bestimmten Typ an.  
   
 ```  
@@ -381,7 +376,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
  Die **VARTYPE** für die neue `COleVariant` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Parameter `vtSrc` muss `VT_BSTR` (UNICODE) oder `VT_BSTRT` (ANSI). `SetString`dient normalerweise zum Festlegen von Zeichenfolgen in ANSI, seit der Standard für die [COleVariant::COleVariant](#colevariant) Konstruktor mit einer Zeichenfolge oder Zeichenfolge Zeigerparameter und keine **VARTYPE** Unicode-Format vorliegt.  
+ Der Parameter `vtSrc` muss `VT_BSTR` (UNICODE) oder `VT_BSTRT` (ANSI). `SetString` dient normalerweise zum Festlegen von Zeichenfolgen in ANSI, seit der Standard für die [COleVariant::COleVariant](#colevariant) Konstruktor mit einer Zeichenfolge oder Zeichenfolge Zeigerparameter und keine **VARTYPE** Unicode-Format vorliegt.  
   
  Ein DAO-Recordset in einem nicht-Unicode-Build erwartet Zeichenfolgen in ANSI sein. Folglich für DAO-Funktionen, bei denen `COleVariant` Objekte, wenn Sie eine Unicode-Recordset nicht erstellen, müssen Sie verwenden die **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  Form der Konstruktor mit `vtSrc` festgelegt `VT_BSTRT` (ANSI), oder verwenden Sie `SetString` mit `vtSrc` festgelegt `VT_BSTRT` zu ANSI-Zeichenfolgen. Z. B. die `CDaoRecordset` Funktionen [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) und [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) verwenden `COleVariant` -Objekte als Parameter. Diese Objekte müssen ANSI sein, wenn DAO-Recordsets nicht um UNICODE handelt.  
   

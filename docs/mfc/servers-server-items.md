@@ -1,13 +1,10 @@
 ---
 title: 'Server: Serverelemente | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-server-items"></a>Server: Serverelemente
 Wenn ein Container einen Server gestartet wird, damit ein Benutzer eine eingebettete oder verknüpfte OLE-Element bearbeiten kann, erstellt die Anwendung für die ein "Serverelement". Das Element für Server, die ein Objekt einer Klasse ist abgeleitet von `COleServerItem`, stellt eine Schnittstelle zwischen dem Serverdokument und die containeranwendung.  
@@ -36,7 +31,7 @@ Wenn ein Container einen Server gestartet wird, damit ein Benutzer eine eingebet
   
  In der [HIERSVR](../visual-cpp-samples.md) aufnehmen möchten, z. B. die Server-Elementklasse **CServerItem**, verfügt über einen Member, die ein Zeiger auf ein Objekt der Klasse ist **CServerNode**. Die **CServerNode** Objekt ist ein Knoten in der Anwendung HIERSVR-Dokument, das eine Struktur ist. Wenn die **CServerNode** Objekt ist der Stammknoten der **CServerItem** Objekt darstellt, das gesamte Dokument. Wenn die **CServerNode** Objekt ist ein untergeordneter Knoten, die **CServerItem** -Objekt stellt einen Teil des Dokuments dar. Finden Sie im MFC-OLE-Beispiel [HIERSVR](../visual-cpp-samples.md) für ein Beispiel für diese Aktivität.  
   
-##  <a name="_core_implementing_server_items"></a>Implementieren von Serverelemente  
+##  <a name="_core_implementing_server_items"></a> Implementieren von Serverelemente  
  Wenn Sie den Assistenten zum verwenden, um "" Startcode für Ihre Anwendung zu erstellen, ist alles, was Sie tun können, um die Serverelemente in der Startcode enthalten haben eine der Serveroptionen wählen Sie die OLE-Optionsseite. Wenn Sie Serverelemente zu einer vorhandenen Anwendung hinzufügen, führen Sie die folgenden Schritte aus:  
   
 #### <a name="to-implement-a-server-item"></a>Um eine Serverelement zu implementieren  
@@ -51,7 +46,7 @@ Wenn ein Container einen Server gestartet wird, damit ein Benutzer eine eingebet
   
 4.  Implementieren Sie der Server-Element-Klasse `OnGetExtent` Memberfunktion. Das Framework ruft diese Funktion, um die Größe des Elements abzurufen. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a>Ein Tipp für Serverelement Architektur  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Ein Tipp für Serverelement Architektur  
  Wie in notiert [Serverelement implementieren](#_core_implementing_server_items), Server-Anwendungen müssen in der Lage, Elemente, die sowohl in der Ansicht des Servers als auch in eine Steuerelementcontainer-Anwendung verwendeten Metadatei zu rendern. In der Microsoft Foundation Class Library Anwendungsarchitektur, Ansichtsklasse des `OnDraw` Memberfunktion rendert das Element aus, wenn er bearbeitet wird (finden Sie unter [CView:: OnDraw](../mfc/reference/cview-class.md#ondraw) in der *Referenz zur Klassenbibliothek* ). Das Serverelement `OnDraw` rendert das Element in einer Metadatei in allen anderen Fällen (siehe [COleServerItem:: OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
  Duplizieren von Code zu vermeiden, Schreiben Hilfsfunktionen in Ihrem Server Dokumentklasse und Aufrufen von der `OnDraw` Funktionen in Ihrer Ansicht und Serverelement Klassen. Das MFC-OLE-Beispiel [HIERSVR](../visual-cpp-samples.md) verwendet diese Strategie: die Funktionen **CServerView:: OnDraw** und **CServerItem:: OnDraw** beide rufen **CServerDoc::DrawTree**  zum Rendern des Elements.  

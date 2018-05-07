@@ -1,13 +1,10 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Eigenschaftenseiten für | Microsoft Docs"
-ms.custom: 
+title: 'MFC-ActiveX-Steuerelemente: Eigenschaftenseiten für | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseite
 Eigenschaftenseiten können Benutzer eines ActiveX-Steuerelements anzeigen und Ändern der Eigenschaften von ActiveX-Steuerelements. Diese Eigenschaften erfolgt durch den Aufruf ein Dialogfeld der Eigenschaftenseiten für eine oder mehrere enthält, die eine benutzerdefinierte grafische Schnittstelle zum Anzeigen und bearbeiten die Eigenschaften des Steuerelements bereitstellen.  
@@ -61,7 +56,7 @@ Eigenschaften (Dialogfeld)
   
  Weitere Informationen zum Verwenden von Eigenschaftenseiten in einer MFC_Anwendung als ein ActiveX-Steuerelement, finden Sie unter [Eigenschaftenblätter](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a>Implementieren die Standard-Eigenschaftenseite  
+##  <a name="_core_implementing_the_default_property_page"></a> Implementieren die Standard-Eigenschaftenseite  
  Wenn Sie den ActiveX-Steuerelement-Assistenten verwenden, auf dem Steuerelementprojekt erstellen, enthält das ActiveX-Steuerelement-Assistent eine Standard-Eigenschaftenklasse von Seite für das Steuerelement abgeleitet [COlePropertyPage Klasse](../mfc/reference/colepropertypage-class.md). Zu Beginn dieser Eigenschaftenseite ist leer, aber Sie können alle Dialogfeld-Steuerelement oder eine Gruppe von Steuerelementen, hinzufügen. Da ActiveX-Steuerelement-Assistent standardmäßig eine zusätzliche Eigenschaft Seitenklassen nur eine Eigenschaft Page-Klasse erstellt (auch abgeleitet `COlePropertyPage`) muss mit der Klassenansicht erstellt werden. Weitere Informationen zu diesem Verfahren finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen von einem anderen benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
  Implementieren eine Eigenschaft Seite (in diesem Fall ist die Standardeinstellung) ist eine dreistufige Prozess:  
@@ -76,7 +71,7 @@ Eigenschaften (Dialogfeld)
   
  Zwecke verwenden, die folgenden Verfahren verwenden Sie beispielsweise ein einfaches Steuerelement (mit dem Namen "Sample"). Beispiel mit dem ActiveX-Steuerelement-Assistenten erstellt wurde, und enthält nur die vordefinierte Caption-Eigenschaft.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a>Hinzufügen von Steuerelementen zu einer Eigenschaftenseite  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Hinzufügen von Steuerelementen zu einer Eigenschaftenseite  
   
 #### <a name="to-add-controls-to-a-property-page"></a>Zum Hinzufügen von Steuerelementen auf einer Eigenschaftenseite  
   
@@ -96,7 +91,7 @@ Eigenschaften (Dialogfeld)
   
  Die Benutzeroberfläche geändert wurde, müssen Sie im Bearbeitungsfeld mit der Caption-Eigenschaft zu verknüpfen. Dies erfolgt im folgenden Abschnitt durch Bearbeiten der `CSamplePropPage::DoDataExchange` Funktion.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a>Anpassen der DoDataExchange-Funktion  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Anpassen der DoDataExchange-Funktion  
  Die Eigenschaftenseite [Ddx_managedcontrol](../mfc/reference/cwnd-class.md#dodataexchange) -Funktion können Sie Eigenschaftswerte über die Seite mit den tatsächlichen Werten der Eigenschaften im Steuerelement zu verknüpfen. Um Verbindungen herzustellen, müssen Sie die entsprechende Seite Eigenschaftenfelder ihre entsprechenden Steuerelementeigenschaften zuordnen.  
   
  Diese Zuordnungen werden mithilfe der Eigenschaftenseite implementiert **DDP_** Funktionen. Die **DDP_** Funktionen funktionieren, wie die **DDX_** Funktionen, die in MFC-Standarddialogfelder mit einer Ausnahme verwendet. Zusätzlich zu den Verweis auf eine Membervariable **DDP_** Funktionen den Namen der Steuerelementeigenschaft annehmen. Im folgenden finden Sie eine typische Eintrag in der `DoDataExchange` -Funktion für eine Eigenschaftenseite.  

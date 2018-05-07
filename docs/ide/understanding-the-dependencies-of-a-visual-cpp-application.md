@@ -1,13 +1,10 @@
 ---
-title: "Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung | Microsoft Docs"
-ms.custom: 
+title: Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung
 Um die Visual C++-Bibliotheken zu ermitteln, eine Anwendung abhängig ist, können Sie die Projekteigenschaften anzeigen. (Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** So öffnen die **Eigenschaftenseiten** (Dialogfeld).) Sie können auch den Dependency Walker (depends.exe) verwenden, der ein umfassenderes Bild der Abhängigkeiten verschafft.  
   
- In der **Eigenschaftenseiten** (Dialogfeld), können Sie verschiedene Seiten unter untersuchen **Konfigurationseigenschaften** , die Abhängigkeiten zu verstehen. Wenn Ihr Projekt verwendet die MFC-Bibliotheken, und wählen Sie z. B. **Verwendung von MFC**, **MFC in einer gemeinsam genutzten DLL verwenden** auf die **Konfigurationseigenschaften**, **Allgemein**  Seite, die Anwendung zur Laufzeit auf die MFC-DLLs abhängt, wie Mfc\<Version > .dll. Wenn Ihre Anwendung MFC nicht verwendet, es möglicherweise richten sich nach der CRT-Bibliothek auf Wunsch eine **-Laufzeitbibliothek** Wert **Multithreaded-Debug-DLL (/ MDd)** oder **Multithreaded-DLL (/ MD)**auf die **Konfigurationseigenschaften**, **C/C++-**, **Codegenerierung** Seite.  
+ In der **Eigenschaftenseiten** (Dialogfeld), können Sie verschiedene Seiten unter untersuchen **Konfigurationseigenschaften** , die Abhängigkeiten zu verstehen. Wenn Ihr Projekt verwendet die MFC-Bibliotheken, und wählen Sie z. B. **Verwendung von MFC**, **MFC in einer gemeinsam genutzten DLL verwenden** auf die **Konfigurationseigenschaften**, **Allgemein**  Seite, die Anwendung zur Laufzeit auf die MFC-DLLs abhängt, wie Mfc\<Version > .dll. Wenn Ihre Anwendung MFC nicht verwendet, es möglicherweise richten sich nach der CRT-Bibliothek auf Wunsch eine **-Laufzeitbibliothek** Wert **Multithreaded-Debug-DLL (/ MDd)** oder **Multithreaded-DLL (/ MD)** auf die **Konfigurationseigenschaften**, **C/C++-**, **Codegenerierung** Seite.  
   
  Sie können umfassender bestimmen, von welchen DLLs eine Anwendung abhängt, indem Sie die Anwendung mit Dependency Walker (depends.exe) öffnen. Sie können das Tool aus dem [Dependency Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640) Website.  
   

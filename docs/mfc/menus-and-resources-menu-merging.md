@@ -1,13 +1,10 @@
 ---
-title: "Menüs und Ressourcen: Menüs schachteln | Microsoft Docs"
-ms.custom: 
+title: 'Menüs und Ressourcen: Menüs schachteln | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menüs und Ressourcen: Menüs schachteln
 In diesem Artikel erläutert die erforderlichen Schritte für OLE-dokumentanwendungen zu behandeln, die visuelle Bearbeitung und direkte Aktivierung ordnungsgemäß. Direkte Aktivierung stellt eine Herausforderung für Container und Server-Anwendungen (Komponente). Der Benutzer in der gleichen Rahmenfenster (im Kontext des Containerdokuments) bleibt jedoch tatsächlich einer anderen Anwendung (Server) ausgeführt wird. Dies erfordert die Koordination zwischen dem Container und Server-Anwendung.  
@@ -40,7 +35,7 @@ In diesem Artikel erläutert die erforderlichen Schritte für OLE-dokumentanwend
   
 - [Symbolleisten und Statusleisten](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>Menülayouts  
+##  <a name="_core_menu_layouts"></a> Menülayouts  
  Der erste Schritt ist zum Koordinieren von Menülayouts. Weitere Informationen finden Sie unter der **Erstellung** im Abschnitt [Menü Programmierung Überlegungen](https://msdn.microsoft.com/library/ms647557.aspx) im Windows SDK.  
   
  Containeranwendungen zu erstellende ein neues Menüs verwendet werden, nur bei eingebettete Elementen direkt aktiviert werden. Dieses Menü sollte mindestens die folgenden, in der aufgeführten Reihenfolge umfassen:  
@@ -113,7 +108,7 @@ END
   
  Wenn ein eingebettetes Element direkt aktiviert ist, lädt das Framework das direkte Menü. Anschließend fragt die Server-Anwendung für Menüs für die direkte Aktivierung und fügt es der, in dem die Trennzeichen sind. Dies ist wie die Menüs zu kombinieren. Rufen Sie Menüs aus dem Container für Vorgänge für die Platzierung von Datei und Fenster und Menüs wird vom Server abrufen, die für den Betrieb auf das Element.  
   
-##  <a name="_core_toolbars_and_status_bars"></a>Symbolleisten und Statusleisten  
+##  <a name="_core_toolbars_and_status_bars"></a> Symbolleisten und Statusleisten  
  Serveranwendungen erstellen eine neue Symbolleiste, und seine Bitmap in einer separaten Datei zu speichern. Die Anwendung vom Assistenten generierten Anwendungen speichern diese Bitmap in einer Datei namens ITOOLBAR. BMP. Die neue Symbolleiste ersetzt die containeranwendung-Symbolleiste aus, wenn Ihres Servers Element aktiviert ist, eingerichtet ist, sollten die gleichen Elemente wie die normale Symbolleiste enthalten verwendet werden kann, jedoch Symbole für Elemente in den Menüs Datei und Fenster entfernen.  
   
  Diese Symbolleiste ist geladen, Ihrem `COleIPFrameWnd`-abgeleitete Klasse, die vom Anwendungs-Assistenten erstellt. Die Statusleiste wird von der Steuerelementcontainer-Anwendung behandelt. Weitere Informationen zur Implementierung von Windows für in-Place-Frame, finden Sie unter [Server: Implementieren eines Servers](../mfc/servers-implementing-a-server.md).  

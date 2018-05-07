@@ -1,12 +1,9 @@
 ---
 title: CUIntArray Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>CUIntArray-Klasse
 Unterstützt Arrays mit Ganzzahlen ohne Vorzeichen.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>Hinweise  
  Eine Ganzzahl ohne Vorzeichen oder **"uint"**, unterscheidet sich von Wörtern und Doppelwort, der physischen Größe einer **"uint"** können, hängen davon ab, das Ziel, das Betriebssystem. Ein **"uint"** ist die gleiche Größe wie ein Doppelwort.  
   
- `CUIntArray`enthält die [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) -Makro Laufzeittyp Unterstützung von laufzeittypenzugriff und eine [CDumpContext](../../mfc/reference/cdumpcontext-class.md) Objekt. Wenn Sie eine Sicherung der einzelnen Ganzzahl ohne Vorzeichen Elemente benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen. Ganze Zahl ohne Vorzeichen Arrays können nicht serialisiert werden.  
+ `CUIntArray` enthält die [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) -Makro Laufzeittyp Unterstützung von laufzeittypenzugriff und eine [CDumpContext](../../mfc/reference/cdumpcontext-class.md) Objekt. Wenn Sie eine Sicherung der einzelnen Ganzzahl ohne Vorzeichen Elemente benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen. Ganze Zahl ohne Vorzeichen Arrays können nicht serialisiert werden.  
   
 > [!NOTE]
 >  Vor dem Verwenden eines Arrays, verwenden Sie `SetSize`, um dessen Größe festzustellen, und weisen dafür Arbeitsspeicher zu. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  

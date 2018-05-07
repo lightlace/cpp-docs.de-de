@@ -1,13 +1,10 @@
 ---
 title: Win32-Interneterweiterungen (WinInet) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - client applications [MFC], Win32 Internet
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3730c7e0ae1dbbae299ddbe6128044effa101a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32e4f236977884924e611eed45136a76c1ad6527
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32-Interneterweiterungen (WinInet)
 Eine Internetclientanwendung ist ein Programm, das Informationen aus einer Netzwerk-Datenquelle (Server) über Internet-Protokolle wie Gopher, FTP oder HTTP-zugreift. Eine Internetclientanwendung kann es sich um einen Server zum Abrufen von Daten, z. B. Weather Maps, Aktienkurse oder "Zeitung" Schlagzeilen, z. B. zugreifen. Der Internet-Client kann den Server über ein externes Netzwerk (Internet) oder eines internen Netzwerks (Intranet bezeichnet) zugreifen.  

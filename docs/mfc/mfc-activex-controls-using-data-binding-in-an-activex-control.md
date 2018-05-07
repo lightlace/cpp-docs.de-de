@@ -1,13 +1,10 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 Einer der leistungsfähigeren von ActiveX-Steuerelementen ist Datenbindung, wodurch eine Eigenschaft des Steuerelements an ein bestimmtes Feld in einer Datenbank gebunden werden soll. Wenn ein Benutzer Daten in dieser gebundenen Eigenschaft ändert, benachrichtigt das Steuerelement an die Datenbank und fordert an, dass der Datensatz das Feld aktualisiert werden. Anschließend benachrichtigt die Datenbank, die Kontrolle über den Erfolg oder Fehler der Anforderung.  
   
  Dieser Artikel behandelt die Steuerelement-Seite der Aufgabe. Implementieren die Daten binden von Interaktionen mit der Datenbank liegt in der Verantwortung des Steuerelementcontainers. Zum Verwalten von Datenbankinteraktionen im Container ist, würde den Rahmen dieser Dokumentation sprengen. Wie Sie das Steuerelement für die Datenbindung vorbereiten werden in den weiteren Verlauf dieses Artikels erläutert.  
   
- ![Konzeptionelle Darstellung von Daten &#45; gebundenes Steuerelement](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Konzeptionelle Darstellung der Daten&#45;gebundenes Steuerelement](../mfc/media/vc374v1.gif "vc374v1")  
 Konzeptionelles Diagramm eines datengebundenen Steuerelements  
   
  Die `COleControl` Klasse bietet zwei Memberfunktionen, die Datenbindung für ein einfacher Vorgang implementiert. Die erste Funktion [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), wird verwendet, um die Berechtigung zum Ändern des Werts der Eigenschaft angefordert werden. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), die zweite Funktion wird aufgerufen, nachdem der Eigenschaftswert erfolgreich geändert wurde.  
@@ -51,7 +46,7 @@ Konzeptionelles Diagramm eines datengebundenen Steuerelements
   
 -   [Erstellen eine bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Erstellen eine bindbare Systemeigenschaft  
+##  <a name="vchowcreatingbindablestockproperty"></a> Erstellen eine bindbare Systemeigenschaft  
  Es ist möglich, eine datengebundene-Systemeigenschaft erstellen, obwohl es wahrscheinlicher ist, Sie sollten eine [bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Konzeptionelles Diagramm eines datengebundenen Steuerelements
   
  Sie können jetzt das Projekt erstellen, das das Steuerelement zu registrieren. Wenn Sie das Steuerelement in einem Dialogfeld Einfügen der **Feld "Daten"** und **Datenquelle** Eigenschaften werden hinzugefügt wurden, und Sie können jetzt auswählen, eine Datenquelle und die im Steuerelement anzuzeigende Feld.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Erstellen eine bindbare Get/Set-Methode  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Erstellen eine bindbare Get/Set-Methode  
  Sie können auch erstellen, zusätzlich zu einem datengebundenen Get/Set-Methode, eine [bindbare Systemeigenschaft](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

@@ -1,12 +1,9 @@
 ---
 title: COccManager Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COccManager
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffa16b7a210bc53f178e3ec437aefb6cede766a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coccmanager-class"></a>COccManager-Klasse
 Verwaltet unterschiedliche benutzerdefinierte ControlSites. Wird von `COleControlContainer` - und `COleControlSite` -Objekten implementiert.  
@@ -90,7 +85,7 @@ class COccManager : public CNoTrackObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxocc.h  
   
-##  <a name="createcontainer"></a>COccManager::CreateContainer  
+##  <a name="createcontainer"></a>  COccManager::CreateContainer  
  Vom Framework aufgerufen wird, einen Steuerelementcontainer zu erstellen.  
   
 ```  
@@ -107,7 +102,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zum Erstellen von benutzerdefinierten Websites finden Sie unter [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
+##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
  Mit dieser Funktion wird zum Erstellen von ActiveX-Steuerelemente, die gemäß der `pOccDialogInfo` Parameter.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL CreateDlgControls(
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Steuerelement erfolgreich erstellt wurde; andernfalls 0 (null).  
   
-##  <a name="createsite"></a>COccManager::CreateSite  
+##  <a name="createsite"></a>  COccManager::CreateSite  
  Wird aufgerufen, durch das Framework zum Erstellen einer Steuerelement-Website, die vom Container verweist gehostet `pCtrlCont`.  
   
 ```  
@@ -158,7 +153,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
  Jedes Steuerelementcontainer kann mehrere Websites hosten. Erstellen Sie zusätzliche Websites mit mehreren Aufrufen an `CreateSite`.  
   
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode  
  Rufen Sie diese Funktion, um zu bestimmen, ob das Steuerelement eine Standardschaltfläche ist.  
   
 ```  
@@ -178,7 +173,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
   
 - **0** -Steuerelement ist nicht mit einer Schaltfläche.  
   
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
  Wird aufgerufen, durch das Framework, um festzustellen, ob eine Nachricht im angegebenen Dialogfeld dient, und wenn dies der Fall, die Nachricht verarbeitet.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL IsDialogMessage(
   
  Überschreiben Sie diese Funktion, um benutzerdefiniertes Verhalten für Nachrichten im Dialog "angegebene" bereitzustellen.  
   
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
+##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
  Rufen Sie diese Funktion, um zu bestimmen, ob das angegebene Steuerelement ein Bezeichnungsfeld-Steuerelement ist.  
   
 ```  
@@ -220,7 +215,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="remarks"></a>Hinweise  
  Ein Bezeichnungsfeld-Steuerelement ist verhält sich wie eine Bezeichnung für den jeweiligen weiter in der Reihenfolge aufweist.  
   
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
+##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
  Rufen Sie diese Funktion, um zu bestimmen, ob das aktuelle mnemonische Zeichen, die vom Steuerelement dargestellt entspricht.  
   
 ```  
@@ -246,7 +241,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onevent"></a>COccManager::OnEvent  
+##  <a name="onevent"></a>  COccManager::OnEvent  
  Vom Framework aufgerufen, das angegebene Ereignis zu behandeln.  
   
 ```  
@@ -276,7 +271,7 @@ virtual BOOL OnEvent(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion zum Anpassen der Standardprozess für die Ereignisbehandlung an.  
   
-##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
+##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
  Wird aufgerufen, durch das Framework eine Dialogfeldvorlage für ActiveX-Steuerelemente vor dem Erstellen des tatsächlichen Dialogfelds zu verarbeiten.  
   
 ```  
@@ -300,7 +295,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
  Überschreiben Sie diese Funktion, um den Prozess der Erstellung ein Dialogfeld, das hosting von ActiveX-Steuerelementen anpassen.  
   
-##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
+##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
  Vom Framework aufgerufen, für die Dialogfeldvorlage belegten Arbeitsspeicher freizugeben.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
  Überschreiben Sie diese Funktion, um den Prozess der alle vom Dialogfeld Box-Objekt verwendeten Ressourcen bereinigen anzupassen.  
   
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton  
  Rufen Sie diese Funktion, um das Steuerelement als Standardschaltfläche festzulegen.  
   
 ```  
@@ -340,7 +335,7 @@ static void AFX_CDECL SetDefaultButton(
 > [!NOTE]
 >  Das Steuerelement benötigen die **OLEMISC_ACTSLIKEBUTTON** Status-Bit festgelegt ist. Weitere Informationen zu **OLEMISC** Flags finden Sie unter der [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Thema im Windows SDK.  
   
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
+##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Wird aufgerufen, durch das Framework die ActiveX-Steuerelemente von Standardsteuerelementen Dialogfeld geteilt.  
   
 ```  

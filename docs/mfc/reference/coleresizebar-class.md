@@ -1,12 +1,9 @@
 ---
 title: COleResizeBar Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar-Klasse
 Ein Steuerleistentyp, die Größenanpassung von direkten OLE-Elementen unterstützt.  
@@ -55,9 +50,9 @@ class COleResizeBar : public CControlBar
 |[COleResizeBar::Create](#create)|Erstellt und initialisiert ein untergeordnetes Fenster von Windows und ordnet es die `COleResizeBar` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `COleResizeBar`Objekte werden als ein [CRectTracker](../../mfc/reference/crecttracker-class.md) mit einem schraffierten Rahmen und äußeren Handles zur Größenänderung.  
+ `COleResizeBar` Objekte werden als ein [CRectTracker](../../mfc/reference/crecttracker-class.md) mit einem schraffierten Rahmen und äußeren Handles zur Größenänderung.  
   
- `COleResizeBar`-Objekte sind in der Regel eingebettete Elemente des Rahmenfensterobjekt abgeleitet wurde. die [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) Klasse.  
+ `COleResizeBar` -Objekte sind in der Regel eingebettete Elemente des Rahmenfensterobjekt abgeleitet wurde. die [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) Klasse.  
   
  Weitere Informationen finden Sie im Artikel [Aktivierung](../../mfc/activation-cpp.md).  
   
@@ -75,7 +70,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar  
  Erstellt ein `COleResizeBar`-Objekt.  
   
 ```  
@@ -85,7 +80,7 @@ COleResizeBar();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie **erstellen** Resize Bar-Objekt zu erstellen.  
   
-##  <a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>  COleResizeBar::Create  
  Erstellt ein untergeordnetes Fenster, und ordnet sie der `COleResizeBar` Objekt.  
   
 ```  

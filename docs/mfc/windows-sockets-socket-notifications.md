@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Socket-Benachrichtigungen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Socketbenachrichtigungen
 Dieser Artikel beschreibt die Benachrichtigungsfunktionen in den Socketklassen. Diese Memberfunktionen sind Rückruffunktionen, die vom Framework aufgerufen, um Ihre Socketobjekt von wichtigen Ereignissen zu benachrichtigen. Die Benachrichtigungsfunktionen sind:  
@@ -45,7 +40,7 @@ Dieser Artikel beschreibt die Benachrichtigungsfunktionen in den Socketklassen. 
   
  Wenn Sie von der Klasse ableiten `CAsyncSocket`, müssen Sie für die Netzwerk-Veranstaltungen für Ihre Anwendung die Benachrichtigungsfunktionen überschreiben. Wenn Sie eine Klasse von der Klasse ableiten `CSocket`, sie haben die Wahl, ob die Benachrichtigungsfunktionen von Interesse sind, überschrieben. Sie können auch `CSocket` selbst in diesem Fall die Benachrichtigung Funktionen standardmäßig nichts zu machen.  
   
- Diese Funktionen sind überschreibbare Rückruffunktionen. `CAsyncSocket`und `CSocket` Konvertieren von Nachrichten an die Benachrichtigungen, aber Sie müssen implementieren, wie die Benachrichtigung reagieren funktioniert, wenn Sie sie verwenden möchten. Die Benachrichtigungsfunktionen heißen zum Zeitpunkt, zu die der Socket eines Ereignisses von Interesse sind, wie etwa der Anwesenheit von zu lesenden Daten benachrichtigt wird.  
+ Diese Funktionen sind überschreibbare Rückruffunktionen. `CAsyncSocket` und `CSocket` Konvertieren von Nachrichten an die Benachrichtigungen, aber Sie müssen implementieren, wie die Benachrichtigung reagieren funktioniert, wenn Sie sie verwenden möchten. Die Benachrichtigungsfunktionen heißen zum Zeitpunkt, zu die der Socket eines Ereignisses von Interesse sind, wie etwa der Anwesenheit von zu lesenden Daten benachrichtigt wird.  
   
  MFC Ruf die Benachrichtigungsfunktionen auf, können Sie die Socket-Verhalten zu dem Zeitpunkt anpassen, die sie darüber benachrichtigt wird. Rufen Sie z. B. möglicherweise **Receive** aus Ihrer `OnReceive` Benachrichtigungsfunktion, d. h. auf wird darüber benachrichtigt, dass die zu lesenden Daten vorhanden ist, rufen Sie **Receive** lesen. Dieser Ansatz ist nicht erforderlich, aber es ist ein gültiges Szenario. Als Alternative können Ihre Benachrichtigungsfunktion zum Nachverfolgen des Verlaufs, Drucken **ABLAUFVERFOLGUNG** Nachrichten und So weiter.  
   

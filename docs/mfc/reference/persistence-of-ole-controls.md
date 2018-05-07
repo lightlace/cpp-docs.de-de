@@ -1,13 +1,10 @@
 ---
 title: Persistenz der OLE-Steuerelemente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenz der OLE-Steuerelemente
 Eine Funktion der OLE-Steuerelemente ist Eigenschaft Persistenz (oder Serialisierung), womit die OLE-Steuerelements zum Lesen oder Schreiben von Eigenschaftswerten in und aus einer Datei oder einem Stream. Eine Steuerelementcontainer-Anwendung kann die Serialisierung verwenden, zum Speichern von Eigenschaftswerten für ein Steuerelement, auch nachdem die Anwendung das Steuerelement zerstört wurde. Die Eigenschaftswerte des OLE-Steuerelements können dann aus der Datei gelesen werden, oder Stream, wenn eine neue Instanz des Steuerelements zu einem späteren Zeitpunkt erstellt wird.  
@@ -54,7 +49,7 @@ Eine Funktion der OLE-Steuerelemente ist Eigenschaft Persistenz (oder Serialisie
   
  Darüber hinaus die `AfxOleTypeMatchGuid` globale Funktion wird bereitgestellt, um nach einer Übereinstimmung zwischen Testen einer `TYPEDESC` und einer angegebenen GUID.  
   
-##  <a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>  PX_Blob  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft, die binary large Object (BLOB)-Daten gespeichert.  
   
 ```  
@@ -99,7 +94,7 @@ hBlobDefault
   
  Beachten Sie, dass `PX_Blob` belegt Arbeitsspeicher mithilfe der Windowsfunktion [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) -API, die beim Laden der BLOB-Typ-Eigenschaften. Sie sind verantwortlich für die Freigabe dieser Arbeitsspeicher. Der Destruktor des Steuerelements sollte daher Aufrufen [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) für alle BLOB-Type-Eigenschaft einrichten Handles für freien Arbeitsspeicher, der dem Steuerelement zugeordnet.  
   
-##  <a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>  PX_Bool  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **BOOL**.  
   
 ```  
@@ -142,7 +137,7 @@ bValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft aus gelesen oder geschrieben werden, auf die Variable verweist werden `bValue`je nach Bedarf. Wenn `bDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>  PX_Color  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **OLE_COLOR**.  
   
 ```  
@@ -184,7 +179,7 @@ clrDefault);
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft aus gelesen oder geschrieben werden, auf die Variable verweist werden `clrValue`je nach Bedarf. Wenn `clrDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>  PX_Currency  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **Währung**.  
   
 ```  
@@ -227,7 +222,7 @@ cyValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft aus gelesen oder geschrieben werden, auf die Variable verweist werden `cyValue`je nach Bedarf. Wenn `cyDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>  PX_DataPath  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder initialisieren eine Datenpfad-Eigenschaft des Typs [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
@@ -263,7 +258,7 @@ pPX,
 ### <a name="remarks"></a>Hinweise  
  Pfad der Dateneigenschaften implementieren asynchrone Steuerelementeigenschaften. Den Wert der Eigenschaft aus gelesen oder geschrieben werden, auf die Variable verweist werden `dataPathProperty`je nach Bedarf.  
   
-##  <a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>  PX_Double  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **doppelte**.  
   
 ```  
@@ -306,7 +301,7 @@ doubleValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `doubleValue`je nach Bedarf. Wenn `doubleDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>  PX_Font  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder eine Eigenschaft des Typs Schriftart zu initialisieren.  
   
 ```  
@@ -352,7 +347,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben `font`ein `CFontHolder` verweisen, wenn erforderlich. Wenn `pFontDesc` und `pFontDispAmbient` angegeben sind, werden sie zum Initialisieren der Eigenschaft Standardwert, bei Bedarf verwendet. Diese Werte werden verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt. Übergeben Sie in der Regel **NULL** für `pFontDesc` und den Ambiente-Rückgabewert durch `COleControl::AmbientFont` für `pFontDispAmbient`. Beachten Sie, die von der Schriftartobjekt zurückgegeben `COleControl::AmbientFont` müssen freigegeben werden, durch einen Aufruf der **IFontDisp::Release** Memberfunktion.  
   
-##  <a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>  PX_Float  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **"float"**.  
   
 ```  
@@ -395,7 +390,7 @@ floatValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `floatValue`je nach Bedarf. Wenn `floatDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>  PX_IUnknown  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` zu serialisierenden bzw. zu initialisieren eine Eigenschaft dargestellt wird, indem ein-Objekt ist, dessen Memberfunktion eine **IUnknown**-Schnittstelle abgeleitet.  
   
 ```  
@@ -437,7 +432,7 @@ pUnkDefault
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *pUnk*je nach Bedarf. Wenn `pUnkDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>  PX_Long  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **lang**.  
   
 ```  
@@ -480,7 +475,7 @@ lValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `lValue`je nach Bedarf. Wenn `lDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>  PX_Picture  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion zu serialisierenden bzw. eine Bildeigenschaft des Steuerelements zu initialisieren.  
   
 ```  
@@ -523,7 +518,7 @@ pict  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `pict`je nach Bedarf. Wenn `pictDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>  PX_Short  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **kurze**.  
   
 ```  
@@ -566,7 +561,7 @@ sValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `sValue`je nach Bedarf. Wenn `sDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>  PX_ULong  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ **ULONG**.  
   
 ```  
@@ -609,7 +604,7 @@ ulValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `ulValue`je nach Bedarf. Wenn `ulDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>  PX_UShort  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die serialisiert oder Initialisieren einer Eigenschaft vom Typ `unsigned` **kurze**.  
   
 ```  
@@ -652,7 +647,7 @@ usValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *UsValue*je nach Bedarf. Wenn *UsDefault* angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>  PXstring  
  Mit dieser Funktion werden innerhalb des Steuerelements **DoPropExchange** Memberfunktion, die serialisiert oder eine Zeichenfolgeneigenschaft Zeichen zu initialisieren.  
   
 ```  
@@ -695,7 +690,7 @@ strValue  ,
 ### <a name="remarks"></a>Hinweise  
  Den Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist `strValue`je nach Bedarf. Wenn `strDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess für das Steuerelement ein Fehler auftritt.  
   
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
  Mit dieser Funktion werden innerhalb des Steuerelements `DoPropExchange` Memberfunktion eine Schriftarteigenschaft, die durch Konvertieren eines Steuerelements VBX Schriftarteigenschaften initialisiert.  
   
 ```  
@@ -718,9 +713,9 @@ pPX  ,
  Wert ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn nicht erfolgreich.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion sollte nur von OLE-Steuerelements verwendet werden, die als direkter Ersatz für ein Steuerelement VBX entwickelt wurde. Wenn die Visual Basic-Entwicklungsumgebung konvertiert werden, ein Formular, das ein VBX-Steuerelement, um die entsprechenden Ersetzung OLE-Steuerelements verwenden, rufen Sie des Steuerelements **IDataObject::SetData** -Funktion übergeben, die in einer Eigenschaft festlegen, die enthält Daten, die VBX-Steuerelement-Eigenschaft. Dieser Vorgang wiederum führt dazu, dass des Steuerelements `DoPropExchange` Funktion, die aufgerufen werden. `DoPropExchange`Aufrufen `PX_VBXFontConvert` VBX-Steuerelement Schriftarteigenschaften konvertieren (z. B. "FontName," "FontSize," usw.) in die entsprechenden Komponenten von Font-Eigenschaft des OLE-Steuerelements.  
+ Diese Funktion sollte nur von OLE-Steuerelements verwendet werden, die als direkter Ersatz für ein Steuerelement VBX entwickelt wurde. Wenn die Visual Basic-Entwicklungsumgebung konvertiert werden, ein Formular, das ein VBX-Steuerelement, um die entsprechenden Ersetzung OLE-Steuerelements verwenden, rufen Sie des Steuerelements **IDataObject::SetData** -Funktion übergeben, die in einer Eigenschaft festlegen, die enthält Daten, die VBX-Steuerelement-Eigenschaft. Dieser Vorgang wiederum führt dazu, dass des Steuerelements `DoPropExchange` Funktion, die aufgerufen werden. `DoPropExchange` Aufrufen `PX_VBXFontConvert` VBX-Steuerelement Schriftarteigenschaften konvertieren (z. B. "FontName," "FontSize," usw.) in die entsprechenden Komponenten von Font-Eigenschaft des OLE-Steuerelements.  
   
- `PX_VBXFontConvert`sollte nur aufgerufen werden, wenn das Steuerelement aus einer Form-Anwendung VBX tatsächlich konvertiert wird. Zum Beispiel:  
+ `PX_VBXFontConvert` sollte nur aufgerufen werden, wenn das Steuerelement aus einer Form-Anwendung VBX tatsächlich konvertiert wird. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  

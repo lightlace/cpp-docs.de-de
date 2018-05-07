@@ -1,13 +1,10 @@
 ---
 title: Variant-Parametertypkonstanten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - VTS_YPOS_HIMETRIC
 - VTS_PICTURE
@@ -44,24 +41,22 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9bd9af96a51697d1800eea1ef2883835375210d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13820ff4fb07c3743f36ba3ebe33ee56a3a79c7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variant-parameter-type-constants"></a>Variant-Parametertypkonstanten
 Dieses Thema enthält neue Konstanten, die angeben, variant Parametertypen für die Verwendung mit der OLE-Steuerelementklassen von den Microsoft Foundation Class-Bibliothek konzipiert.  
   
  Im folgenden finden eine Liste von Klasse-Konstanten:  
   
-##  <a name="_mfc_variant_data_constants"></a>Variant-Datenkonstanten  
+##  <a name="_mfc_variant_data_constants"></a> Variant-Datenkonstanten  
   
 -   **VTS_COLOR** eine 32-Bit-Ganzzahl, die verwendet, um einen RGB-Farbwert darzustellen.  
   

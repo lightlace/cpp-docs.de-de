@@ -1,13 +1,10 @@
 ---
 title: Geben Sie benutzerdefinierte Tools erstellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>Angeben von benutzerdefinierten Buildtools
 
@@ -65,7 +61,7 @@ Allgemeine Informationen zu benutzerdefinierten Buildtools und benutzerdefiniert
 
       Mehrere Eingabe- und Dateien können symbolisch mit MSBuild-Makros angegeben werden. Informationen zum Angeben von den Speicherort der Dateien oder die Namen von Sätzen von Dateien finden Sie unter [allgemeine Makros für Buildbefehle und-Eigenschaften](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Da das Zeichen "%" von MSBuild reserviert ist, wenn Sie angeben, eine Umgebungsvariable ersetzen Sie jeden  **%**  escape-Zeichen mit der **% 25** hexadezimale Escapesequenz. Ersetzen Sie z. B. **"% windir%"** mit **25WINDIR % 25**. MSBuild ersetzt jede **% 25** Sequenz mit dem  **%**  Zeichen, bevor er die Umgebungsvariable zugreift.
+      Da das Zeichen "%" von MSBuild reserviert ist, wenn Sie angeben, eine Umgebungsvariable ersetzen Sie jeden **%** escape-Zeichen mit der **% 25** hexadezimale Escapesequenz. Ersetzen Sie z. B. **"% windir%"** mit **25WINDIR % 25**. MSBuild ersetzt jede **% 25** Sequenz mit dem **%** Zeichen, bevor er die Umgebungsvariable zugreift.
 
    - In **Beschreibung**, geben Sie eine beschreibende Meldung zu diesem benutzerdefinierten Build-Tool. Die Meldung wird ausgegeben, um die **Ausgabe** Fenster, wenn das Buildsystem dieses Tool verarbeitet.
 

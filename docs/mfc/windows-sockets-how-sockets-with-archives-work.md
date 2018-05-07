@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Wie Sockets mit Archiven arbeiten | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Wie Sockets mit Archiven arbeiten
 In diesem Artikel wird erläutert, wie eine [CSocket](../mfc/reference/csocket-class.md) -Objekt, eine [CSocketFile](../mfc/reference/csocketfile-class.md) -Objekt, und ein [CArchive](../mfc/reference/carchive-class.md) Objekt werden kombiniert, um vereinfachen das Senden und Empfangen von Daten über eine Windows Ein Sockettimeout aufgetreten.  
@@ -37,7 +32,7 @@ In diesem Artikel wird erläutert, wie eine [CSocket](../mfc/reference/csocket-c
   
  Ein `CArchive` Objekt verwaltet einen Puffer. Wenn der Puffer eines speichern (senden) Archivs voll ist, ein zugehöriges `CFile` Objekt schreibt, die Inhalte des Puffers. Das Leeren des Puffers eines Archivs, angefügt an ein Socket entspricht dem Senden einer Nachricht zur Verfügung. Wenn der Puffer eines Archivs laden (empfangen) voll ist, ist die `CFile` Objekt beendet das Lesen, bis der Puffer wieder verfügbar ist.  
   
- Klasse `CSocketFile` leitet sich von `CFile`, jedoch nicht unterstützt [CFile](../mfc/reference/cfile-class.md) Memberfunktionen, z. B. die dateipositionierenden Funktionen (`Seek`, `GetLength`, `SetLength`usw.), () funktioniert das Sperren `LockRange`, `UnlockRange`), oder die `GetPosition` Funktion. Alle der [CSocketFile](../mfc/reference/csocketfile-class.md) Objekt erforderlich ist, schreiben oder Lesen von Bytefolgen zu oder von der zugeordneten `CSocket` Objekt. Da eine Datei nicht beteiligt ist, Vorgänge wie `Seek` und `GetPosition` nicht sinnvoll. `CSocketFile`stammt aus `CFile`, sodass sie alle diese Memberfunktionen normalerweise geerbt wird. Um dies zu den nicht unterstützten verhindern `CFile` Memberfunktionen werden außer Kraft gesetzt `CSocketFile` ausgelöst werden soll eine [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
+ Klasse `CSocketFile` leitet sich von `CFile`, jedoch nicht unterstützt [CFile](../mfc/reference/cfile-class.md) Memberfunktionen, z. B. die dateipositionierenden Funktionen (`Seek`, `GetLength`, `SetLength`usw.), () funktioniert das Sperren `LockRange`, `UnlockRange`), oder die `GetPosition` Funktion. Alle der [CSocketFile](../mfc/reference/csocketfile-class.md) Objekt erforderlich ist, schreiben oder Lesen von Bytefolgen zu oder von der zugeordneten `CSocket` Objekt. Da eine Datei nicht beteiligt ist, Vorgänge wie `Seek` und `GetPosition` nicht sinnvoll. `CSocketFile` stammt aus `CFile`, sodass sie alle diese Memberfunktionen normalerweise geerbt wird. Um dies zu den nicht unterstützten verhindern `CFile` Memberfunktionen werden außer Kraft gesetzt `CSocketFile` ausgelöst werden soll eine [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
   
  Die `CSocketFile` Objekt ruft die Memberfunktionen von seiner `CSocket` Objekt zum Senden oder Empfangen von Daten.  
   

@@ -1,12 +1,9 @@
 ---
 title: CMFCToolBarFontSizeComboBox Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba8dde4142cff3606cc2b5ad1861096637f68c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement, die dem Benutzer ermöglicht enthält, wählen Sie eine Schriftgröße.  
@@ -84,14 +79,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  Erstellt ein `CMFCToolBarFontSizeComboBox`-Objekt.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize  
  Ruft den Schriftgrad in Twips aus dem Textfeld eines Kombinationsfelds Schriftart Größe ab.  
   
 ```  
@@ -101,7 +96,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der zurückgegebene Wert positiv ist, ist es den Schriftgrad in Twips. Es ist -1, wenn das Textfeld des Kombinationsfelds leer ist. Es ist-2, wenn ein Fehler auftritt.  
   
-##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  Füllt eine schriftartkombinationsfeld für die Größe mit der alle gültigen Größe der angegebenen Schriftart an.  
   
 ```  
@@ -115,7 +110,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie z. B. zwischen Auswahl im Kombinationsfeld eine Schriftart und eine Größe schriftartkombinationsfeld, synchronisieren möchten, rufen Sie diese Funktion eine [CMFCToolBarFontComboBox Klasse](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
  Rundet die angegebene Größe (in Twips) auf die nächste Größe in Punkt, und dann wird-Größe des ausgewählte im Kombinationsfeld, um diesen Wert.  
   
 ```  

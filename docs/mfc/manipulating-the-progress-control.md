@@ -1,13 +1,10 @@
 ---
 title: Bearbeiten des Statussteuerelements | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>Bearbeiten des Statussteuerelements
 Es gibt drei Möglichkeiten zum Ändern der aktuellen Position des ein Statussteuerelement ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
@@ -45,11 +40,11 @@ Es gibt drei Möglichkeiten zum Ändern der aktuellen Position des ein Statusste
 2.  Verwenden der [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) Memberfunktion versucht, die Position zu erhöhen. Dies bewirkt, dass das Steuerelement selbst neu zeichnet.  
   
     > [!NOTE]
-    >  `StepIt`führt dazu, dass die Position, um zu umschließen. Angenommen, die einen Bereich von 1 -100, einen Schritt 20 und eine Position 90, `StepIt` wird die Position auf 10 festgelegt.  
+    >  `StepIt` führt dazu, dass die Position, um zu umschließen. Angenommen, die einen Bereich von 1 -100, einen Schritt 20 und eine Position 90, `StepIt` wird die Position auf 10 festgelegt.  
   
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>So ändern Sie die Position von einer beliebigen Anzahl  
   
-1.  Verwenden der [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) Member-Funktion, um die Position ändern. `OffsetPos`negative Werte akzeptiert.  
+1.  Verwenden der [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) Member-Funktion, um die Position ändern. `OffsetPos` negative Werte akzeptiert.  
   
     > [!NOTE]
     >  `OffsetPos`, im Gegensatz zu `StepIt`, der die Position wird nicht umbrochen. Die neue Position wird angepasst, um die innerhalb des Bereichs zu gewährleisten.  

@@ -1,13 +1,10 @@
 ---
-title: "Ändern der Stile eines Fensters mit MFC erstellten | Microsoft Docs"
-ms.custom: 
+title: Ändern der Stile eines Fensters mit MFC erstellten | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -30,22 +27,20 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d17f49535078261669841ea502c6af821aa5e29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34ea35bd43e2bf4e96cbc1552ff169789c1068a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Ändern der Stile eines mit MFC erstellten Fensters
 In der Version von den `WinMain` MFC-Funktion mehrere Standardfenster-Klassen für Sie registriert. Da Sie normalerweise die MFC bearbeiten nicht `WinMain`, dass die Funktion keine Möglichkeit bestand, ändern Sie die MFC-Fenster Standardstile werden ermittelt. In diesem Artikel wird erläutert, wie Sie einen der Stile eines solchen einen vorab registrierten Fensterklasse in einer vorhandenen Anwendung ändern können.  
   
-##  <a name="_core_changing_styles_in_a_new_mfc_application"></a>Ändern von Formaten in eine neue MFC-Anwendung  
+##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Ändern von Formaten in eine neue MFC-Anwendung  
  Wenn Sie Visual C++ 2.0 oder höher verwenden, können Sie Fenster Standardstile im Anwendungs-Assistenten ändern, wenn Ihre Anwendung zu erstellen. Dem Anwendungsassistenten Benutzeroberflächen-Features auf der Seite können Sie für Ihre Hauptrahmenfenster und die untergeordneten MDI-Fenster Stile ändern. Für beide Fenster können Sie angeben, dessen Rahmenstärke ("thick" oder "thin") und keines der folgenden:  
   
 -   Gibt an, ob das Fenster minimieren bzw. maximieren-Steuerelemente aufweist.  
@@ -54,10 +49,10 @@ In der Version von den `WinMain` MFC-Funktion mehrere Standardfenster-Klassen f�
   
  Für das Hauptrahmenfenster können Sie auch angeben, ob das Fenster ein Systemmenü verfügt. Für untergeordnete MDI-Fenster können Sie angeben, ob das Fenster Splitter Bereiche unterstützt.  
   
-##  <a name="_core_changing_styles_in_an_existing_application"></a>Ändern von Formaten in einer vorhandenen Anwendung  
+##  <a name="_core_changing_styles_in_an_existing_application"></a> Ändern von Formaten in einer vorhandenen Anwendung  
  Wenn Sie im Fenster Attribute in einer vorhandenen Anwendung ändern möchten, folgen Sie den Anweisungen im weiteren Verlauf dieses Artikels stattdessen.  
   
- Um das Fenster-Standardattribute, die von einer frameworkanwendung erstellt mit Anwendungs-Assistenten verwendet zu ändern, überschreiben Sie des Fensters [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuelle Memberfunktion. `PreCreateWindow`ermöglicht es einer Anwendung der Erstellungsprozess normalerweise intern verwaltet werden, indem Sie den Zugriff auf die [CDocTemplate](../mfc/reference/cdoctemplate-class.md) Klasse. Das Framework ruft `PreCreateWindow` unmittelbar vor dem Erstellen des Fensters. Durch Ändern der [CREATESTRUCT](../mfc/reference/createstruct-structure.md) Struktur übergeben, um `PreCreateWindow`, die Anwendung kann die Attribute, die zum Erstellen des Fensters ändern. Um sicherzustellen, dass ein Fenster eine Beschriftung nicht verwendet wird, verwenden Sie z. B. die folgende bitweise Operation:  
+ Um das Fenster-Standardattribute, die von einer frameworkanwendung erstellt mit Anwendungs-Assistenten verwendet zu ändern, überschreiben Sie des Fensters [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuelle Memberfunktion. `PreCreateWindow` ermöglicht es einer Anwendung der Erstellungsprozess normalerweise intern verwaltet werden, indem Sie den Zugriff auf die [CDocTemplate](../mfc/reference/cdoctemplate-class.md) Klasse. Das Framework ruft `PreCreateWindow` unmittelbar vor dem Erstellen des Fensters. Durch Ändern der [CREATESTRUCT](../mfc/reference/createstruct-structure.md) Struktur übergeben, um `PreCreateWindow`, die Anwendung kann die Attribute, die zum Erstellen des Fensters ändern. Um sicherzustellen, dass ein Fenster eine Beschriftung nicht verwendet wird, verwenden Sie z. B. die folgende bitweise Operation:  
   
  [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]  
   
@@ -65,14 +60,14 @@ In der Version von den `WinMain` MFC-Funktion mehrere Standardfenster-Klassen f�
   
  Die folgende Erläuterung umfasst die SDI Groß-/Kleinschreibung und den [MDI Groß-/Kleinschreibung](#_core_the_mdi_case).  
   
-##  <a name="_core_the_sdi_case"></a>Die SDI Groß-/Kleinschreibung  
+##  <a name="_core_the_sdi_case"></a> Die SDI Groß-/Kleinschreibung  
  In einer einzelnen Dokument Interface (SDI)-Anwendung ist das Standardformat für Fenster im Framework eine Kombination der **WS_OVERLAPPEDWINDOW** und **FWS_ADDTOTITLE** Stile. **FWS_ADDTOTITLE** ist eine MFC-spezifischen-Formatvorlage, die das Framework den Titel des Dokuments auf die Beschriftung des Fensters hinzufügen weist. Überschreiben, um das Fenster Attribute in einer SDI-Anwendung zu ändern, die `PreCreateWindow` Funktion in Ihrer Klasse abgeleitet `CFrameWnd` (die die Namen der Anwendungs-Assistent `CMainFrame`). Zum Beispiel:  
   
  [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]  
   
  Dieser Code erstellt ein Hauptrahmenfenster ohne Schaltflächen "Minimieren und Maximieren" und ohne eine beträchtliche Anzahl an Rahmen. Das Fenster wird anfangs auf dem Bildschirm zentriert.  
   
-##  <a name="_core_the_mdi_case"></a>Die MDI-Groß-/Kleinschreibung  
+##  <a name="_core_the_mdi_case"></a> Die MDI-Groß-/Kleinschreibung  
  So ändern Sie den Fensterstil, der ein untergeordnetes Fenster in einer Anwendung der multiple Document Interface (MDI), ist etwas mehr Arbeit erforderlich. Standardmäßig verwendet eine MDI-Anwendung, die mit der Anwendungs-Assistent erstellt standardmäßig [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) Klasse, die in MFC definiert. Um den Fensterstil, der ein untergeordnetes MDI-Fenster zu ändern, leiten Sie eine neue Klasse von `CMDIChildWnd` , und Ersetzen Sie alle Verweise auf `CMDIChildWnd` in Ihrem Projekt Verweise auf die neue Klasse. Sehr wahrscheinlich lediglich einen Verweis auf `CMDIChildWnd` in der Anwendung befindet sich in der Anwendungsverzeichnis `InitInstance` Memberfunktion.  
   
  Das Fenster-Standardformat, die in einer MDI-Anwendung verwendet, ist eine Kombination der **WS_CHILD**, **WS_OVERLAPPEDWINDOW**, und **FWS_ADDTOTITLE** Stile. Um die Attribute Fenster eine MDI-Anwendung untergeordnetes Fenster zu ändern, überschreiben die [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) Funktion in Ihrer Klasse abgeleitet `CMDIChildWnd`. Zum Beispiel:  

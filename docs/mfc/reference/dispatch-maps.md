@@ -1,13 +1,10 @@
 ---
 title: Dispatchzuordnungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>Dispatchzuordnungen
 OLE-Automatisierung bietet Möglichkeiten zum Aufrufen von Methoden und Eigenschaften für Anwendungen Zugriff auf. Der Mechanismus, durch die Microsoft Foundation Class-Bibliothek für die Verteilung dieser Anforderungen angegeben ist, die "Dispatchzuordnung" die internen und externen Namen des Objektfunktionen und Eigenschaften sowie die Datentypen, die von den Eigenschaften selbst und ausweist Funktionsargumente.  
@@ -46,7 +41,7 @@ OLE-Automatisierung bietet Möglichkeiten zum Aufrufen von Methoden und Eigensch
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Definiert eine Eigenschaft der OLE-Automatisierung, die Namen und Parameter die Get- und Set-Funktionen akzeptiert.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Stellt einer vorhandenen Eigenschaft den Standardwert eines Objekts an.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  Wenn eine `CCmdTarget`-abgeleiteten Klasse in Ihrem Programm unterstützt OLE-Automatisierung, dass die Klasse eine Dispatchzuordnung, um seine Methoden und Eigenschaften verfügbar zu machen bereitgestellt werden muss.  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  Deklariert die Definition der Dispatchzuordnung.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  Beendet die Definition der Dispatchzuordnung.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  Definiert eine Funktion der OLE-Automatisierung in eine Dispatchzuordnung.  
   
 ```   
@@ -170,8 +165,8 @@ DISP_FUNCTION(
 |**VTS_VARIANT**|**const-Variante\***  oder **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_PI2**|**kurze\***|  
-|**VTS_PI4**|**lange\***|  
-|**VTS_PR4**|**"float"\***|  
+|**VTS_PI4**|**long\***|  
+|**VTS_PR4**|**float\***|  
 |**VTS_PR8**|**Double\***|  
 |**VTS_PCY**|**CY\***|  
 |**VTS_PDATE**|**DATUM\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  Definiert ein OLE-Automatisierungseigenschaft in eine Dispatchzuordnung.  
   
 ```   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  Ein OLE-Automatisierungseigenschaft und den Namen definiert der Funktionen abgerufen, und legen Sie den Wert der Eigenschaft in eine Dispatchzuordnung.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  Definiert ein OLE-Automatisierungseigenschaft, mit der Benachrichtigung in eine Dispatchzuordnung.  
   
 ```   
@@ -320,7 +315,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  Definiert eine Eigenschaft, die mit separaten zugegriffen **abrufen** und `Set` Memberfunktionen.  
   
 ```   
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  Stellt einer vorhandenen Eigenschaft den Standardwert eines Objekts an.  
   
 ```   

@@ -1,12 +1,9 @@
 ---
 title: CDragListBox Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDragListBox
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox-Klasse
 Zusätzlich zur Bereitstellung der Funktionalität eines Windows-Listenfelds, die `CDragListBox` Klasse kann der Benutzer Listenfeldelemente, beispielsweise Dateinamen, innerhalb des Listenfelds verschieben.  
@@ -92,7 +87,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
  Wird aufgerufen, durch das Framework beim Eintreten eines Ereignisses ein Ziehvorgangs, z. B. die linke Maustaste drückt beginnen konnte.  
   
 ```  
@@ -109,7 +104,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn Sie steuern möchten, was geschieht, wenn ein Ziehvorgang begonnen. Die standardmäßige Implementierung erfasst die Maus und bleibt im Ziehmodus, bis der Benutzer klickt auf die linke oder rechte Maustaste gedrückt, oder drücken ESC, die zum Zeitpunkt des Ziehvorgangs abgebrochen wird.  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  Vom Framework aufgerufen, wenn ein Ziehvorgang abgebrochen wurde.  
   
 ```  
@@ -123,14 +118,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion für die besondere Verarbeitung für Ihre Listenfeld-Steuerelement.  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  Erstellt ein `CDragListBox`-Objekt.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
  Vom Framework aufgerufen, wenn innerhalb einer Listenfeldelement gezogen wird die `CDragListBox` Objekt.  
   
 ```  
@@ -144,16 +139,16 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="return-value"></a>Rückgabewert  
  Die Ressourcen-ID des Cursors angezeigt werden. Die folgenden Werte sind möglich:  
   
-- `DL_COPYCURSOR`Gibt an, dass das Element kopiert werden sollen.  
+- `DL_COPYCURSOR` Gibt an, dass das Element kopiert werden sollen.  
   
-- `DL_MOVECURSOR`Gibt an, dass das Element verschoben wird.  
+- `DL_MOVECURSOR` Gibt an, dass das Element verschoben wird.  
   
-- `DL_STOPCURSOR`Gibt an, dass die aktuellen Ablageziels nicht zulässig ist.  
+- `DL_STOPCURSOR` Gibt an, dass die aktuellen Ablageziels nicht zulässig ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Gibt das Standardverhalten `DL_MOVECURSOR`. Überschreiben Sie diese Funktion, wenn Sie zusätzliche Funktionen bereitstellen möchten.  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  Wird aufgerufen, durch das Framework die Einfügemarke vor dem Element mit dem angegebenen Index gezeichnet werden soll.  
   
 ```  
@@ -167,7 +162,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Hinweise  
  Ein Wert von – 1 Löscht die Einfügemarke. Überschreiben Sie diese Funktion zum Ändern der Darstellung oder Verhalten von der Einfügemarke.  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
  Vom Framework aufgerufen, wenn ein Element, innerhalb gelöscht wird einer `CDragListBox` Objekt.  
   
 ```  
@@ -186,7 +181,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Hinweise  
  Das Standardverhalten das Listenfeldelement und die Daten an den neuen Speicherort kopiert und löscht dann das ursprüngliche Element. Überschreiben Sie diese Funktion, um das Standardverhalten, z. B. das Aktivieren von Kopien der Listenfeldelemente an anderen Speicherorten in der Liste gezogen wird anpassen.  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  Aufruf dieser Funktion zum Abrufen des nullbasierten Indexes, der das Listenfeldelement controllerarbeitsverzeichnis `pt`.  
   
 ```  

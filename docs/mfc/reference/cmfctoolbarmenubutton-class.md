@@ -1,12 +1,9 @@
 ---
 title: CMFCToolBarMenuButton Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarMenuButton
@@ -101,17 +98,15 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6c752d1b9570ce11e232020393cc6d7982baa80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 515689e4596a3a0336e73b0be7aa008d21e445ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Popupmenü enthält.  
@@ -208,7 +203,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtoolbarmenubutton.h  
   
-##  <a name="cmfctoolbarmenubutton"></a>CMFCToolBarMenuButton::CMFCToolBarMenuButton  
+##  <a name="cmfctoolbarmenubutton"></a>  CMFCToolBarMenuButton::CMFCToolBarMenuButton  
  Erstellt ein `CMFCToolBarMenuButton`-Objekt.  
   
 ```  
@@ -240,7 +235,7 @@ CMFCToolBarMenuButton(
  Der Text der Symbolleisten-Schaltfläche im Menü.  
   
  [in] `bUserButton`  
- `TRUE`Wenn die Schaltfläche zeigt ein benutzerdefiniertes Image an. `FALSE` wird die Schaltfläche ein vordefiniertes Image mit dem Befehl angegeben werden, indem Sie verknüpfte angezeigt `uiID`.  
+ `TRUE` Wenn die Schaltfläche zeigt ein benutzerdefiniertes Image an. `FALSE` wird die Schaltfläche ein vordefiniertes Image mit dem Befehl angegeben werden, indem Sie verknüpfte angezeigt `uiID`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn `uiID` ist eine gültige Befehls-ID, die Schaltfläche "" führt den Befehl aus, wenn der Benutzer darauf klickt. Wenn `hMenu` ist ein Handle gültige im Menü der Schaltfläche bietet ein Dropdown-Menü aus, wenn es in einer Symbolleiste oder ein Untermenü angezeigt wird, wenn es in einem Menü angezeigt wird. Wenn beide `uiID` und `hMenu` sind gültig ist, wird die Schaltfläche wird eine unterteilte Schaltfläche mit einem Teil, der der Befehl ausgeführt wird, wenn der Benutzer darauf klickt und einen Teil mit einem Pfeil nach unten, die ein Menü Dropdownelement wird der Benutzer darauf klickt. Jedoch wenn `hMenu` gültig ist, ein Benutzer wird nicht in der Lage, klicken Sie auf die Schaltfläche, um einen Befehl auszuführen, wenn die Schaltfläche in einem Menü eingefügt wird.  
@@ -250,7 +245,7 @@ CMFCToolBarMenuButton(
   
  [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
   
-##  <a name="comparewith"></a>CMFCToolBarMenuButton::CompareWith  
+##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith  
 
   
 ```  
@@ -264,7 +259,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="copyfrom"></a>Cmfctoolbarmenubutton:: CopyFrom  
+##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton:: CopyFrom  
 
   
 ```  
@@ -276,7 +271,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="createfrommenu"></a>CMFCToolBarMenuButton::CreateFromMenu  
+##  <a name="createfrommenu"></a>  CMFCToolBarMenuButton::CreateFromMenu  
  Initialisiert das workflowsymbolleisten-Menü aus einem Windows-Menü-Handle.  
   
 ```  
@@ -292,7 +287,7 @@ virtual void CreateFromMenu(HMENU hMenu);
   
  Das Framework ruft diese Methode, um die Befehle im Untermenü in einem Menü zu initialisieren.  
   
-##  <a name="createmenu"></a>CMFCToolBarMenuButton::CreateMenu  
+##  <a name="createmenu"></a>  CMFCToolBarMenuButton::CreateMenu  
  Erstellt ein Menü, aus denen die Befehle in der Symbolleistenmenüs besteht. Gibt ein Handle für das Menü zurück.  
   
 ```  
@@ -300,12 +295,12 @@ virtual HMENU CreateMenu() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein handle für klicken Sie im Menü, wenn erfolgreich. `NULL`Wenn die Liste der Befehle, die im Menü Symbolleistenschaltfläche zugeordnet leer ist.  
+ Ein handle für klicken Sie im Menü, wenn erfolgreich. `NULL` Wenn die Liste der Befehle, die im Menü Symbolleistenschaltfläche zugeordnet leer ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie können diese Methode in einer abgeleiteten Klasse die Art und Weise anpassen, die generiert wird, klicken Sie im Menü überschreiben.  
   
-##  <a name="createpopupmenu"></a>Cmfctoolbarmenubutton:: CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  Cmfctoolbarmenubutton:: CreatePopupMenu  
  Erstellt eine `CMFCPopupMenu` -Objekt, das workflowsymbolleisten-Menü anzuzeigen.  
   
 ```  
@@ -320,7 +315,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
   
  Die standardmäßige Implementierung einfach erstellt und gibt eine neue `CMFCPopupMenu` Objekt. Überschreiben Sie diese Methode, wenn einen abgeleiteten Typ von verwenden möchten [CMFCPopupMenu Klasse](cmfcpopupmenu-class.md) oder um eine zusätzliche Initialisierung auszuführen.  
   
-##  <a name="drawdocumenticon"></a>CMFCToolBarMenuButton::DrawDocumentIcon  
+##  <a name="drawdocumenticon"></a>  CMFCToolBarMenuButton::DrawDocumentIcon  
  Zeichnet ein Symbol "Dokument" auf die Schaltfläche.  
   
 ```  
@@ -343,7 +338,7 @@ void DrawDocumentIcon(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode nimmt ein Symbol "Dokument" und zeichnet Sie es auf die Menüschaltfläche, die in den vom angegebenen Bereich zentriert `rectImage`.  
   
-##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize  
+##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize  
 
   
 ```  
@@ -352,7 +347,7 @@ void EnableQuickCustomize();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton  
+##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton  
 
   
 ```  
@@ -363,7 +358,7 @@ virtual BOOL HasButton() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder  
+##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder  
 
   
 ```  
@@ -374,7 +369,7 @@ virtual BOOL HaveHotBorder() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isborder"></a>CMFCToolBarMenuButton::IsBorder  
+##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder  
 
   
 ```  
@@ -385,7 +380,7 @@ virtual BOOL IsBorder() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu  
+##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu  
 
   
 ```  
@@ -396,7 +391,7 @@ BOOL IsClickedOnMenu() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode  
+##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode  
 
   
 ```  
@@ -407,7 +402,7 @@ BOOL IsQuickMode();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcommands"></a>CMFCToolBarMenuButton::GetCommands  
+##  <a name="getcommands"></a>  CMFCToolBarMenuButton::GetCommands  
  Ermöglicht schreibgeschützten Zugriff auf die Liste der Befehle im Symbolleistenmenü.  
   
 ```  
@@ -420,7 +415,7 @@ const CObList& GetCommands() const;
 ### <a name="remarks"></a>Hinweise  
  Eine Symbolleisten-Schaltfläche im Menü kann ein Untermenü angezeigt. Sie können die Liste der Befehle im Untermenü im Konstruktor oder im Bereitstellen [CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu) als ein Handle zu einem Menü ( `HMENU`). Klicken Sie im Menü wird konvertiert, um eine Liste von Objekten, die von der abgeleiteten [CMFCToolBarButton Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) und gespeichert, in der internen `CObList` Objekt. Sie können diese Liste zugreifen, durch Aufruf dieser Methode.  
   
-##  <a name="getimagerect"></a>CMFCToolBarMenuButton::GetImageRect  
+##  <a name="getimagerect"></a>  CMFCToolBarMenuButton::GetImageRect  
  Ruft das umschließende Rechteck für das Schaltflächenbild ab.  
   
 ```  
@@ -431,7 +426,7 @@ void GetImageRect(CRect& rectImage);
  [out] `rectImage`  
  Ein Verweis auf ein `CRect` Objekt, das die Koordinaten des umschließenden Rechtecks Bilds empfängt.  
   
-##  <a name="getpaletterows"></a>CMFCToolBarMenuButton::GetPaletteRows  
+##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Gibt die Anzahl der Zeilen in der Dropdown-Menü zurück, wenn das Menü im Palettenmodus befindet.  
   
 ```  
@@ -444,7 +439,7 @@ int GetPaletteRows() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn die Menüschaltfläche Palette Modus festgelegt ist, werden der Menüelemente in mehreren Spalten mit nur einer begrenzten Anzahl von Zeilen angezeigt. Rufen Sie diese Methode, um die Anzahl der Zeilen zu erhalten. Aktivieren oder deaktivieren Palettenmodus und geben Sie die Anzahl der Zeilen, die mit [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).  
   
-##  <a name="getpopupmenu"></a>CMFCToolBarMenuButton::GetPopupMenu  
+##  <a name="getpopupmenu"></a>  CMFCToolBarMenuButton::GetPopupMenu  
  Gibt einen Zeiger auf die [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt, das Dropdownmenü neben der Schaltfläche darstellt.  
   
 ```  
@@ -457,7 +452,7 @@ CMFCPopupMenu* GetPopupMenu() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Dropdown-Menü eine Menüschaltfläche Symbolleiste angezeigt wird, erstellt die Schaltfläche eine [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt, das Menü darstellen. Rufen Sie diese Methode, um einen Zeiger auf die `CMFCPopupMenu` Objekt. Da es temporär ist und wird ungültig, wenn der Benutzer im Dropdown-Menü geschlossen wird, sollten Sie nicht den zurückgegebenen Zeiger speichern.  
   
-##  <a name="isdroppeddown"></a>CMFCToolBarMenuButton::IsDroppedDown  
+##  <a name="isdroppeddown"></a>  CMFCToolBarMenuButton::IsDroppedDown  
  Gibt an, ob das Menü das Popupmenü derzeit angezeigt wird.  
   
 ```  
@@ -465,9 +460,9 @@ virtual BOOL IsDroppedDown() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Symbolleiste Menüschaltfläche seine Untermenü angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` Wenn die Symbolleiste Menüschaltfläche seine Untermenü angezeigt werden; andernfalls `FALSE`.  
   
-##  <a name="isemptymenuallowed"></a>Cmfctoolbarmenubutton:: Isemptymenuallowed  
+##  <a name="isemptymenuallowed"></a>  Cmfctoolbarmenubutton:: Isemptymenuallowed  
  Gibt an, ob leere Untermenüs Menüelemente angezeigt wird.  
   
 ```  
@@ -475,14 +470,14 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Framework ein Untermenü des aktuell ausgewählten Menüelements, öffnet selbst wenn das Untermenü leer ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Framework ein Untermenü des aktuell ausgewählten Menüelements, öffnet selbst wenn das Untermenü leer ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn ein Benutzer versucht, das Untermenü des aktuell ausgewählten Menüelements zu öffnen. Wenn im Untermenü leer ist und `IsEmptyMenuAllowed` gibt `FALSE`, das Untermenü die Option kann nicht geöffnet werden.  
   
  Die Standardimplementierung gibt `FALSE` zurück. Überschreiben Sie diese Methode, um dieses Verhalten anzupassen.  
   
-##  <a name="isexclusive"></a>CMFCToolBarMenuButton::IsExclusive  
+##  <a name="isexclusive"></a>  CMFCToolBarMenuButton::IsExclusive  
  Gibt an, ob die Schaltfläche mit der im exklusiven Modus befindet.  
   
 ```  
@@ -490,14 +485,14 @@ virtual BOOL IsExclusive() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Schaltfläche im exklusiven Modus verwendet werden kann; andernfalls `FALSE`.  
+ `TRUE` Wenn die Schaltfläche im exklusiven Modus verwendet werden kann; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Benutzer ein Popupmenü für eine Schaltfläche öffnet, und klicken Sie dann den Mauszeiger über einem anderen Symbolleiste oder im Menü-Schaltfläche bewegt, schließt das Popupmenü, wenn die Schaltfläche im exklusiven Modus ist.  
   
  Gibt die standardmäßige Implementierung immer `FALSE`. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie im exklusiven Modus aktivieren möchten.  
   
-##  <a name="ismenupalettemode"></a>CMFCToolBarMenuButton::IsMenuPaletteMode  
+##  <a name="ismenupalettemode"></a>  CMFCToolBarMenuButton::IsMenuPaletteMode  
  Bestimmt, ob der Dropdown-Menü im Palettenmodus befindet.  
   
 ```  
@@ -505,12 +500,12 @@ BOOL IsMenuPaletteMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Palettenmodus, andernfalls aktiviert ist `FALSE`.  
+ `TRUE` Wenn die Palettenmodus, andernfalls aktiviert ist `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die Menüschaltfläche Palette Modus festgelegt ist, werden die Menüelemente in mehreren Spalten mit nur einer begrenzten Anzahl von Zeilen angezeigt. Rufen Sie diese Methode, um die Anzahl der Zeilen zu erhalten. Sie aktivieren oder deaktivieren Sie die Palettenmodus durch Aufrufen [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).  
   
-##  <a name="istearoffmenu"></a>CMFCToolBarMenuButton::IsTearOffMenu  
+##  <a name="istearoffmenu"></a>  CMFCToolBarMenuButton::IsTearOffMenu  
  Gibt an, ob der Dropdown-Menü eine abtrennbarer Leiste verfügt.  
   
 ```  
@@ -518,12 +513,12 @@ virtual BOOL IsTearOffMenu() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Symbolleiste Menüschaltfläche eine abtrennbarer Leiste enthält. andernfalls `FALSE`.  
+ `TRUE` Wenn die Symbolleiste Menüschaltfläche eine abtrennbarer Leiste enthält. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die abtrennbare-Funktion aktivieren und Festlegen der abtrennbare Strich-ID rufen [CMFCToolBarMenuButton::SetTearOff](#settearoff).  
   
-##  <a name="m_balwayscallownerdraw"></a>CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw  
+##  <a name="m_balwayscallownerdraw"></a>  CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw  
  Gibt an, ob das Framework immer ruft [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) bei eine Schaltfläche gezeichnet wird.  
   
 ```  
@@ -533,7 +528,7 @@ static BOOL m_bAlwaysCallOwnerDraw;
 ### <a name="remarks"></a>Hinweise  
  Wenn diese Membervariable auf festgelegt ist `TRUE`, ruft Sie die Schaltfläche immer [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) Methode zur Anzeige des Bilds auf der Schaltfläche. Wenn `m_bAlwaysCallOwnerDraw` ist `FALSE`, die Schaltfläche "selbst" zeichnet das Bild aus, wenn das Bild vordefiniert ist. Andernfalls ruft `OnDrawMenuImage`.  
   
-##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
+##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
 
   
 ```  
@@ -542,7 +537,7 @@ virtual void OnAfterCreatePopupMenu();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag  
+##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag  
 
   
 ```  
@@ -553,7 +548,7 @@ virtual BOOL OnBeforeDrag() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize  
 
   
 ```  
@@ -572,7 +567,7 @@ virtual SIZE OnCalculateSize(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode  
+##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode  
 
   
 ```  
@@ -581,7 +576,7 @@ virtual void OnCancelMode();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd  
 
   
 ```  
@@ -593,7 +588,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onclick"></a>CMFCToolBarMenuButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick  
 
   
 ```  
@@ -610,7 +605,7 @@ virtual BOOL OnClick(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onclickmenuitem"></a>CMFCToolBarMenuButton::OnClickMenuItem  
+##  <a name="onclickmenuitem"></a>  CMFCToolBarMenuButton::OnClickMenuItem  
  Wird vom Framework aufgerufen, wenn der Benutzer ein Element in der Dropdown-Menü auswählt.  
   
 ```  
@@ -618,14 +613,14 @@ virtual BOOL OnClickMenuItem();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `FALSE`Wenn das Framework das Standardmenü Element Verarbeitung fortgesetzt werden soll; andernfalls `TRUE`. Gibt die standardmäßige Implementierung immer `FALSE`.  
+ `FALSE` Wenn das Framework das Standardmenü Element Verarbeitung fortgesetzt werden soll; andernfalls `TRUE`. Gibt die standardmäßige Implementierung immer `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der Benutzer ein Menüelement klickt, führt das Framework einen Befehl, der dieses Element zugeordnet ist.  
   
  Um die Verarbeitung der Arbeitsaufgabe Menü anzupassen, überschreiben `OnClickMenuItem` in einer abgeleiteten Klasse `CMFCToolBarMenuButton` Klasse. Sie müssen auch überschreiben [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) , und Ersetzen Sie die Menüschaltflächen, die mit Instanzen der abgeleiteten Klasse besondere Verarbeitung erforderlich ist.  
   
-##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp  
 
   
 ```  
@@ -639,7 +634,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw  
 
   
 ```  
@@ -666,7 +661,7 @@ virtual void OnDraw(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList  
 
   
 ```  
@@ -685,7 +680,7 @@ virtual int OnDrawOnCustomizeList(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="openpopupmenu"></a>CMFCToolBarMenuButton::OpenPopupMenu  
+##  <a name="openpopupmenu"></a>  CMFCToolBarMenuButton::OpenPopupMenu  
  Wird vom Framework aufgerufen, wenn der Benutzer auf die Dropdown-Menü einer Menüschaltfläche Symbolleiste öffnet.  
   
 ```  
@@ -697,12 +692,12 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
  Gibt an, das Fenster, das die Befehle im Dropdownmenü empfängt. Es kann sein `NULL` nur dann, wenn die Symbolleiste Menüschaltfläche ein übergeordnetes Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn eine [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekt wurde erstellt und geöffnet wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn eine [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekt wurde erstellt und geöffnet wurde; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird vom Framework aufgerufen, wenn der Benutzer ein Dropdown-Menü aus einer Symbolleisten-Schaltfläche im Menü geöffnet wird.  
   
-##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault  
+##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault  
 
   
 ```  
@@ -711,7 +706,7 @@ virtual void ResetImageToDefault();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState  
+##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState  
 
   
 ```  
@@ -721,7 +716,7 @@ virtual void SaveBarState();
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn es eine Symbolleisten-Schaltfläche als Ergebnis eines Drag-and-Drop-Vorgangs erstellt. Diese Methode ruft die [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) Methode von der obersten Ebene im Popupmenü, wodurch die übergeordnete Schaltfläche im Popupmenü Menüs neu zu erstellen.  
   
-##  <a name="serialize"></a>CMFCToolBarMenuButton::Serialize  
+##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize  
 
   
 ```  
@@ -733,7 +728,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setaccdata"></a>CMFCToolBarMenuButton::SetACCData  
+##  <a name="setaccdata"></a>  CMFCToolBarMenuButton::SetACCData  
  Legt die Barrierefreiheitsdaten für das Menübandelement fest.  
   
 ```  
@@ -755,7 +750,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig legt diese Methode die Barrierefreiheitsdaten für das Menübandelement fest und gibt immer `TRUE`zurück. Setzen Sie diese Methode außer Kraft, um die Barrierefreiheitsdaten festzulegen und einen Wert zurückzugeben, der den Erfolg oder einen Fehler angibt.  
   
-##  <a name="setmenuonly"></a>CMFCToolBarMenuButton::SetMenuOnly  
+##  <a name="setmenuonly"></a>  CMFCToolBarMenuButton::SetMenuOnly  
  Gibt an, ob die Schaltfläche "" als einer Menüschaltfläche oder eine unterteilte Schaltfläche gezeichnet wird, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt.  
   
 ```  
@@ -764,12 +759,12 @@ void SetMenuOnly(BOOL bMenuOnly);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bMenuOnly`  
- `TRUE`Diese Schaltfläche als einer Menüschaltfläche angezeigt, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt `FALSE` auf diese Schaltfläche als eine unterteilte Schaltfläche anzeigen, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt.  
+ `TRUE` Diese Schaltfläche als einer Menüschaltfläche angezeigt, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt `FALSE` auf diese Schaltfläche als eine unterteilte Schaltfläche anzeigen, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn eine Symbolleisten-Schaltfläche im Menü ein Untermenü und eine Befehls-ID aufweist, wird das Menü in der Regel eine unterteilte Schaltfläche sein, die eine Hauptschaltfläche und eine angefügte nach-unten-Taste. Wenn Sie diese Methode aufrufen und `bMenuOnly` ist `TRUE`, die Schaltfläche stattdessen zu einer einzelnen Menüschaltfläche mit einem Pfeil in der Schaltfläche angezeigt. Klickt der Benutzer auf den Pfeil in beiden Modi, das Untermenü wird geöffnet, und klickt der Benutzer wird der nicht-Pfeil Teil der Schaltfläche in beiden Modi das Framework der Befehl ausgeführt.  
   
-##  <a name="setmenupalettemode"></a>CMFCToolBarMenuButton::SetMenuPaletteMode  
+##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode  
  Gibt an, ob der Dropdown-Menü im Palettenmodus befindet.  
   
 ```  
@@ -788,7 +783,7 @@ void SetMenuPaletteMode(
 ### <a name="remarks"></a>Hinweise  
  In der Palettenmodus werden alle Menüelemente als einen mehrspaltigen Palette angezeigt. Sie geben die Anzahl der Zeilen mit `nPaletteRows`.  
   
-##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd  
+##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd  
 
   
 ```  
@@ -800,7 +795,7 @@ void SetMessageWnd(CWnd* pWndMessage);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setradio"></a>CMFCToolBarMenuButton::SetRadio  
+##  <a name="setradio"></a>  CMFCToolBarMenuButton::SetRadio  
  Legt die Symbolleistenschaltfläche-Menü auf das Symbol "Bildschaltfläche Stil" ein Optionsfeld angezeigt wird, wenn diese Option aktiviert ist.  
   
 ```  
@@ -812,7 +807,7 @@ virtual void SetRadio();
   
  Wenn Sie diese Methode aufrufen, und die Menüschaltfläche gerade angezeigt wird, werden sie aktualisiert.  
   
-##  <a name="settearoff"></a>CMFCToolBarMenuButton::SetTearOff  
+##  <a name="settearoff"></a>  CMFCToolBarMenuButton::SetTearOff  
  Gibt die ID des Balkens abtrennbare für das Dropdown-Menü.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: CMFCRibbonLabel Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel-Klasse
 Implementiert eine nicht anklickbare Bezeichnung für ein Menüband.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Erstellt und initialisiert ein [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) -Objekt, das die angegebene Textzeichenfolge angezeigt.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  Der Text in der Bezeichnung angezeigt werden.  
   
  [in] `bIsMultiLine`  
- `TRUE`um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung; andernfalls `FALSE`.  
+ `TRUE` um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung; andernfalls `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Bestimmt die barrierefreiheitsdaten für das aktuelle Element der Menüband-Bezeichnung.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Menüband Bezeichnung aufgefüllt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die `data` Parameter wurde erfolgreich mit der aktuellen Menüband Bezeichnung die barrierefreiheitsdaten gefüllt ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die `data` Parameter wurde erfolgreich mit der aktuellen Menüband Bezeichnung die barrierefreiheitsdaten gefüllt ist, andernfalls `FALSE`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

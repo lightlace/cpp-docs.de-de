@@ -1,12 +1,9 @@
 ---
 title: CSettingsStore-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Kapselt Windows-API-Funktionen und stellt eine objektorientierte Schnittstelle für den Zugriff auf die Registrierung bereit.  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  Schließt das Öffnen des Registrierungsschlüssels an.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode aufgerufen, aus der Destruktor von der [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  Öffnet einen Registrierungsschlüssel oder erstellt diese, wenn er nicht vorhanden ist.  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  0, wenn erfolgreich; andernfalls einen Wert ungleich NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- `CreateKey`verwendet `m_hKey` als Stamm der Registrierung Abfragen. Sucht `pszPath` als einen Unterschlüssel des Schlüssels `m_hKey`. Wenn der Schlüssel nicht vorhanden ist, `CreateKey` wird erstellt. Andernfalls wird den Schlüssel geöffnet. `CreateKey`legt dann `m_hKey` auf den Schlüssel geöffnet oder erstellt wurden.  
+ `CreateKey` verwendet `m_hKey` als Stamm der Registrierung Abfragen. Sucht `pszPath` als einen Unterschlüssel des Schlüssels `m_hKey`. Wenn der Schlüssel nicht vorhanden ist, `CreateKey` wird erstellt. Andernfalls wird den Schlüssel geöffnet. `CreateKey` legt dann `m_hKey` auf den Schlüssel geöffnet oder erstellt wurden.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Erstellt ein `CSettngsStore`-Objekt.  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  Der Destruktor für `CSettingsStore` frei `m_hKey` automatisch.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  Löscht einen Schlüssel und aller diesem untergeordneten Elemente aus der Registrierung.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  Wenn der Parameter `bAdmin` ist 0 (null), `DeleteKey` sucht nach den Schlüssel unter Löschen `HKEY_CURRENT_USER`. Wenn `bAdmin` ungleich NULL ist `DeleteKey` sucht nach den Schlüssel unter Löschen `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Löscht einen Wert von `m_hKey`.  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  Öffnet einen Registrierungsschlüssel an.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Hinweise  
  Nach dem Aufruf dieser Methode den angegebenen Schlüssel erfolgreich geöffnet wird, legt `m_hKey` an das Handle dieses Schlüssels.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  Liest einen Wert aus einem Schlüssel in der Registrierung.  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- `Read`überprüft, ob `pszKey` als einen Unterschlüssel des Schlüssels `m_hKey`.  
+ `Read` überprüft, ob `pszKey` als einen Unterschlüssel des Schlüssels `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  Schreibt einen Wert in der Registrierung unter folgendem Schlüssel geöffnet.  
   
 ```  

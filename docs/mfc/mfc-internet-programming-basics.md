@@ -1,13 +1,10 @@
 ---
 title: MFC-Internetprogrammiergrundlagen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c03cdca832dcf0627ad033082085661c3b26847
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>Grundlagen der MFC-Internetprogrammierung
 Microsoft bietet viele APIs zur Programmierung von Client- und serveranwendungen. Viele neue Anwendungen für das Internet geschrieben werden, und als Technologien, Browserfunktionen und Optionen sicherheitsänderung, neue Typen von Anwendungen geschrieben werden. Webbrowsertypen auf Clientcomputern Bereitstellen des Zugriffs auf das World Wide Web und Anzeigen von HTML-Seiten, die Text, Grafiken, ActiveX-Steuerelemente und Dokumente enthalten. Server FTP, HTTP und Gopher-Dienste bereitstellen und Ausführen von CGI-Erweiterung serveranwendungen. Die benutzerdefinierte Anwendung kann Abrufen von Informationen und Daten im Internet angeben.  
@@ -82,14 +77,14 @@ Microsoft bietet viele APIs zur Programmierung von Client- und serveranwendungen
   
 -   [ATL-Unterstützung für DHTML-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a>Websites für Weitere Informationen  
+##  <a name="_core_web_sites_for_more_information"></a> Websites für Weitere Informationen  
  Weitere Informationen über die Microsoft Internet-Technologie finden Sie unter der [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) Website. (Links können ohne vorherige Ankündigung ändern.)  
   
  Diese Website für Entwickler enthält Informationen zum Verwenden von Entwicklungstools von Microsoft und Technologien und Top Storys zum aktuellen und zukünftigen Konferenzen. Auf dieser Seite können Sie zu viele Verwandte Entwicklerwebsites, einschließlich .NET und XML Developer Center wechseln. Sie können auch Beta-SDKs und Beispiele herunterladen.  
   
  Die [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) veröffentlicht Spezifikationen für HTML, HTTP, CGI und anderen World Wide Web-Technologien.  
   
-##  <a name="_core_more_internet_help"></a>Weitere Internethilfe  
+##  <a name="_core_more_internet_help"></a> Weitere Internethilfe  
  OLE-Abschnitt des Windows SDK enthält zusätzliche Informationen zur OLE-Programmierung. Diese Informationen liefern Weitere Informationen zur Verwendung der Win32-WinInet-Funktionen, sondern direkt über die MFC-Klassen. Es enthält auch allgemeine Informationen über das Internet-Technologien.  
   
 ## <a name="see-also"></a>Siehe auch  

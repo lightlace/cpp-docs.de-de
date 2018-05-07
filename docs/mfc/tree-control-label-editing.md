@@ -1,13 +1,10 @@
 ---
 title: Struktursteuerelement-Bezeichnung bearbeiten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fb11c29b51b30b1aaffccbe3e999f1cefc3fbb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd2157755146606b2bdacf8ae5a1da9cd0966b21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-label-editing"></a>Bearbeiten der Struktursteuerelement-Bezeichnung
 Der Benutzer kann direkt bearbeiten der Bezeichnungen von Elementen in einem Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), hat die **TVS_EDITLABELS** Stil. Der Benutzer beginnt, bearbeiten, indem Sie auf die Bezeichnung des Elements, das den Fokus besitzt. Eine Anwendung beginnt mit der Bearbeitung mithilfe der [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) Memberfunktion. Strukturansicht-Steuerelements sendet die Benachrichtigung, wenn Bearbeitung beginnt und wann er abgebrochen oder beendet wird. Wenn die Bearbeitung abgeschlossen ist, sind Sie verantwortlich für das Aktualisieren der Elementnamen, bei Bedarf.  

@@ -1,42 +1,40 @@
 ---
 title: Benennen Sie | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ca06ef5a11d674d35aff7276e14312c456c60e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rename"></a>Umbenennen
-**Was:** können Sie die Bezeichner für die Code-Symbolen, z. B. Felder, lokale Variablen, Methoden, Namespaces, Eigenschaften und Typen umbenennen.
+**Beschreibung**: Hiermit können Sie Bezeichner für Codesymbole (z.B. Felder, lokale Variablen, Methoden, Namespaces, Eigenschaften und Typen) umbenennen.
 
-**Wann:** Sie etwas problemlos ohne Suchen nach allen Instanzen und den neuen Namen kopieren/einfügen umbenennen möchten.  
+**Hintergrund**: Sie möchten ein Element sicher umbenennen, ohne alle Instanzen suchen und den neuen Namen kopieren und einfügen zu müssen.  
 
-**Grund:** kopieren und Einfügen von den neuen Namen für ein Gesamtprojekt würde wahrscheinlich zu Fehlern führen.  Dieses refactoring Tool führt genau umbenennen.
+**Vorteile**: Das Kopieren und Einfügen des neuen Namens in ein ganzes Projekt würde aller Wahrscheinlichkeit nach zu Fehlern führen.  Dieses Refactoringtool führt die Umbenennungsaktion ordnungsgemäß durch.
 
-**Vorgehensweise:**
+**Vorgehensweise**:
 
-1. Markieren Sie, oder platzieren Sie den Textcursor innerhalb des Elements an, der umbenannt werden:
+1. Markieren Sie den Namen des umzubenennenden Elements, oder platzieren Sie den Textcursor in das Element:
 
-   ![Hervorgehobene code](images/rename_highlight.png)
+   ![Markierter Code](images/rename_highlight.png)
 
-1. Als Nächstes führen Sie eine der folgenden:
+1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG + R**, klicken Sie dann **STRG + R**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
+     * Drücken Sie **STRG+R** und dann **STRG+R**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
    * **Maus**
-     * Wählen Sie **Bearbeiten > Umgestalten > Umbenennen**.
-     * Mit der rechten Maustaste in des Codes, und wählen Sie **umbenennen**.
+     * Wählen Sie **Bearbeiten > Umgestalten > Umbenennen** aus.
+     * Klicken Sie mit der rechten Maustaste auf den Code, und wählen Sie **Umbenennen** aus.
 
 1. In der **umbenennen** -Fenster angezeigt wird, geben Sie den neuen Namen für das ausgewählte Element und auf die **Vorschau** Schaltfläche.  Ändern der **Suchbereich** erweitert werden, oder schränken Sie die Umbenennung des Bereichs werden sollen.
 

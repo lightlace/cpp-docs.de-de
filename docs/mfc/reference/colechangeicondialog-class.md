@@ -1,12 +1,9 @@
 ---
 title: COleChangeIconDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog-Klasse
 Wird für das OLE-Dialogfeld "Symbol ändern" verwendet.  
@@ -93,7 +88,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  Diese Funktion nur bildet eine `COleChangeIconDialog` Objekt.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  Weitere Informationen finden Sie unter der [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Mit dieser Funktion können Sie das Symbol für das Element, nach dem im Dialogfeld ausgewählte ändern [DoModal](#domodal) gibt **IDOK**.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Änderung erfolgreich ist; andernfalls 0.  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  Rufen Sie diese Funktion, um das Dialogfeld OLE "Symbol ändern" anzuzeigen.  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder der Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  Mit dieser Funktion können Sie ein Handle für die Metadatei abzurufen, die das Elementsymbol Aspekt des ausgewählten Elements enthält.  
   
 ```  
@@ -173,7 +168,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle der Metadatei, enthält das Elementsymbol Aspekt, der das Symbol "Neu", wenn das Dialogfeld, durch Auswahl geschlossen wurde **OK**ist, andernfalls das Symbol ", wie sie war, bevor das Dialogfeld angezeigt wurde.  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  Struktur des Typs **OLEUICHANGEICON** zum Steuern des Verhaltens im Dialogfeld "Symbol ändern" verwendet.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Erweiterte Eigenschaftenimplementierung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac8b2cb1a9c8de43ecfbd2f4712d19750bb143a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC-ActiveX-Steuerelemente: Weiterführende Eigenschaftenimplementierung
 In diesem Artikel werden Themen zur Implementierung erweiterter Eigenschaften in einem ActiveX-Steuerelement beschrieben:  
@@ -34,7 +29,7 @@ In diesem Artikel werden Themen zur Implementierung erweiterter Eigenschaften in
   
 -   [Zurückgeben von Fehlercodes aus einer Eigenschaft](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a>Schreibgeschützte und lesegeschützte Eigenschaften  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Schreibgeschützte und lesegeschützte Eigenschaften  
  Der Assistent zum Hinzufügen von Eigenschaften bietet eine schnelle und einfache Methode, um nur-Lese oder nur-schreiben Eigenschaften für das Steuerelement zu implementieren.  
   
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>Um eine nur-Lese oder nur-Schreiben Eigenschaft zu implementieren.  
@@ -69,13 +64,13 @@ In diesem Artikel werden Themen zur Implementierung erweiterter Eigenschaften in
   
  In diesem Codebeispiel ruft `SetNotSupported` Wenn die `m_bReadOnlyMode` -Datenmember ist **"true"**. Wenn **"false"**, und klicken Sie dann die Eigenschaft auf den neuen Wert festgelegt ist.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a>Zurückgeben von Fehlercodes aus einer Eigenschaft  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Zurückgeben von Fehlercodes aus einer Eigenschaft  
  Um anzugeben, dass ein Fehler aufgetreten ist, bei dem Versuch, eine Eigenschaft abzurufen oder festzulegen, verwenden Sie die `COleControl::ThrowError` -Funktion, die akzeptiert ein `SCODE` (Statuscode) als Parameter. Sie können eine vordefinierte `SCODE` oder ein eigenes definieren. Eine Liste der vordefinierten `SCODE`s sowie Anweisungen zum Definieren von benutzerdefinierten `SCODE`s, finden Sie unter [Behandeln von Fehlern in ActiveX-Steuerelementen](../mfc/mfc-activex-controls-advanced-topics.md) in Artikel ActiveX-Steuerelemente: Weiterführende Themen.  
   
  Hilfsfunktionen für die am häufigsten verwendeten vordefinierten vorhanden `SCODE`s, z. B. [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), und [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError`sollen nur als Mittel zum Zurückgeben von kein Fehlers aus einer Eigenschaft abzurufen oder festzulegen, verwendet werden-Funktion oder ein Automatisierungsmethode. Dies sind die einzigen Fälle, in denen die passenden Ausnahmehandler werden auf dem Stapel vorhanden.  
+>  `ThrowError` sollen nur als Mittel zum Zurückgeben von kein Fehlers aus einer Eigenschaft abzurufen oder festzulegen, verwendet werden-Funktion oder ein Automatisierungsmethode. Dies sind die einzigen Fälle, in denen die passenden Ausnahmehandler werden auf dem Stapel vorhanden.  
   
  Weitere Informationen zur Meldung von Ausnahmen in anderen Bereichen des Codes finden Sie unter [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror) und im Abschnitt [Behandeln von Fehlern in ActiveX-Steuerelementen](../mfc/mfc-activex-controls-advanced-topics.md) Artikel ActiveX-Steuerelemente: erweitert Themen.  
   

@@ -1,13 +1,10 @@
 ---
 title: 'TN021: Befehls- und Meldungsrouting | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Befehls- und Meldungsrouting
 > [!NOTE]
@@ -200,7 +195,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  Seite betrachtet, es gibt zwei **CWnd** abgeleitete Klassen, in denen die Stile Scroll-Leiste am Erstellungszeit, aufgefangen und nicht an Windows übergeben werden. Bei der Übergabe an eine Routine zum Erstellen von **WS_HSCROLL** und **WS_VSCROLL** können werden unabhängig voneinander festlegen, aber nach Erstellung nicht geändert werden kann. Natürlich sollten Sie nicht direkt testen, und legen Sie die Bits des WS_SCROLL-Stil des Fensters, die sie erstellt.  
   
- Für **CMDIFrameWnd** Scroll Bar Formatvorlagen übergebenen **erstellen** oder **LoadFrame** werden verwendet, um die MDICLIENT zu erstellen. Wenn Sie sicher, dass werden einen bildlauffähigen MDICLIENT Bereich (z. B. Windows Programm-Manager) aufweisen sollen beide Bildlaufleisten-Stile (**WS_HSCROLL** &#124; **WS_VSCROLL**) für das Format, das zum Erstellen der **CMDIFrameWnd**.  
+ Für **CMDIFrameWnd** Scroll Bar Formatvorlagen übergebenen **erstellen** oder **LoadFrame** werden verwendet, um die MDICLIENT zu erstellen. Wenn Sie sicher, dass werden einen bildlauffähigen MDICLIENT Bereich (z. B. Windows Programm-Manager) aufweisen sollen beide Bildlaufleisten-Stile (**WS_HSCROLL** &#124; **WS_VSCROLL**) für das Format verwendet, um die Erstellen**CMDIFrameWnd**.  
   
  Für **CSplitterWnd** Scroll Bar Formatvorlagen gelten, für die spezielle freigegebene Bildlaufleisten für die Regionen Splitter. Für statisches Splitterfenster wird normalerweise nicht entweder Balkenart Scroll festgelegt werden. Für dynamische Splitterfenster, in der Regel müssen die Bildlaufleiste festgelegt für die Richtung, die Sie, d. h. teilen **WS_HSCROLL** , wenn Sie Zeilen teilen können **WS_VSCROLL** Wenn Spalten zu unterteilen.  
   

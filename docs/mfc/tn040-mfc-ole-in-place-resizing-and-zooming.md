@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC-OLE direkte Größenanpassung und Zoomen | Microsoft Docs"
-ms.custom: 
+title: 'TN040: MFC-OLE direkte Größenanpassung und Zoomen | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE direkte Größenanpassung und Zoomen
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Ein Beispiel für vergrößern/verkleinern ordnungsgemäß finden Sie im MFC-OLE-Beispiel [HIERSVR](../visual-cpp-samples.md). Vergrößern HIERSVR wird verkompliziert von der Tatsache, dass er zeigt Text an, und Text, in der Regel keine Skalierung eine lineare Interpolation (Hinweise, typografische Konventionen Entwurf Breiten und Höhen alle erschweren die Angelegenheit). Dennoch HIERSVR ist eine angemessene Referenz zum Vergrößern/Verkleinern ordnungsgemäß implementieren, und ist daher die MFC-Lernprogramm [SCRIBBLE](../visual-cpp-samples.md) (Schritt 7).  
   
- `COleServerDoc::GetZoomFactor`Bestimmt den Zoomfaktor basierend auf einer Reihe von anderen verfügbaren Metriken aus dem Container oder aus der Implementierung Ihrer `COleServerItem` und `COleServerDoc` Klassen. Kurz gesagt, wird der aktuelle Zoomfaktor der folgenden Formel bestimmt:  
+ `COleServerDoc::GetZoomFactor` Bestimmt den Zoomfaktor basierend auf einer Reihe von anderen verfügbaren Metriken aus dem Container oder aus der Implementierung Ihrer `COleServerItem` und `COleServerDoc` Klassen. Kurz gesagt, wird der aktuelle Zoomfaktor der folgenden Formel bestimmt:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  Das AUSMAß der CONTAINER ist etwas komplexer zu berechnen. Wenn der Container aufgerufen hat `COleServerItem::OnSetExtent` (mit einem Aufruf von `COleClientItem::SetExtent`), wird das AUSMAß der CONTAINER diesen Wert in Pixel, die basierend auf der Anzahl der Pixel pro logischem Zoll () konvertiert. Wenn der Container nicht SetExtent (Dies ist normalerweise die Groß-/Kleinschreibung) aufgerufen, die CONTAINER-Block ist die Größe von zurückgegeben `COleServerItem::OnGetExtent`. Deshalb, wenn der Container nicht SetExtent aufgerufen hat, das Framework geht davon aus, wenn dem so wäre die Container er mit 100 % des natürlichen Wertebereichs aufgerufen haben würde (Rückgabewert **COleServerItem::GetExtent**). Anders ausgedrückt, das Framework wird davon ausgegangen, dass der Container 100 % (nicht mehr und nicht kleiner) des Elements anzeigt.  
   
- Es ist wichtig, obwohl beachten, dass `COleServerItem::OnSetExtent` und `COleServerItem::OnGetExtent` Namen ähnlich sind, sie das gleiche Attribut des Elements nicht bearbeiten. `OnSetExtent`wird aufgerufen, um lassen Sie den Server, die wissen, wie viel des Objekts im Container (unabhängig von den Zoomfaktor) angezeigt wird und `OnGetExtent` wird von der Container kann feststellen der idealen Größe des Objekts aufgerufen.  
+ Es ist wichtig, obwohl beachten, dass `COleServerItem::OnSetExtent` und `COleServerItem::OnGetExtent` Namen ähnlich sind, sie das gleiche Attribut des Elements nicht bearbeiten. `OnSetExtent` wird aufgerufen, um lassen Sie den Server, die wissen, wie viel des Objekts im Container (unabhängig von den Zoomfaktor) angezeigt wird und `OnGetExtent` wird von der Container kann feststellen der idealen Größe des Objekts aufgerufen.  
   
  Durch jede der APIs beteiligten ansehen, erhalten Sie ein klareres Bild:  
   

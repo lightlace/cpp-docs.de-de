@@ -1,12 +1,9 @@
 ---
 title: CTypedPtrList-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList-Klasse
 Stellt einen typsicheren Wrapper für Objekte der Klasse `CPtrList`bereit.  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  Diese Memberfunktion ruft `BASE_CLASS` **:: AddHead**.  
   
 ```  
@@ -120,7 +115,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
  `newElement`  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Hinweise  
  Die erste Version fügt vor den Anfang der Liste ein neues Element hinzu. Die zweite Version fügt Elemente vor den Anfang einer anderen Liste.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  Diese Memberfunktion ruft `BASE_CLASS` **:: AddTail**.  
   
 ```  
@@ -147,7 +142,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
  `newElement`  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Hinweise  
  Die erste Version Fügt ein neues Element nach dem Ende der Liste hinzu. Die zweite Version Fügt eine andere Liste von Elementen nach dem Ende der Liste hinzu.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
   
 ```  
@@ -174,7 +169,7 @@ TYPE GetAt(POSITION position) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
  *Position*  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  Wenn die Liste zugegriffen wird, direkt oder über einen Zeiger auf eine `CTypedPtrList`, klicken Sie dann `GetAt` gibt einen Verweis auf einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `GetAt`Ruft die `CObject` Zeiger, die einer bestimmten Position zugeordnet.  
+ Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `GetAt` Ruft die `CObject` Zeiger, die einer bestimmten Position zugeordnet.  
   
  Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
  Diese Inlinefunktion ruft `BASE_CLASS` **:: GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  Ruft den Zeiger, der das Anfangselement dieser Liste darstellt.  
   
 ```  
@@ -201,7 +196,7 @@ TYPE GetHead() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  Ruft das Listenelement identifizierten `rPosition`, legt dann `rPosition` auf die **POSITION** Wert, der den nächsten Eintrag in der Liste.  
   
 ```  
@@ -221,7 +216,7 @@ TYPE GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in dieser Liste enthalten sind.  
   
  `rPosition`  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  Es ist möglich, ein Element innerhalb einer Iteration zu entfernen. Siehe das Beispiel für [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  Ruft das Listenelement identifizierten `rPosition`, dann legt `rPosition` auf die **POSITION** Wert des vorherigen Eintrags in der Liste.  
   
 ```  
@@ -250,7 +245,7 @@ TYPE GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in dieser Liste enthalten sind.  
   
  `rPosition`  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  Wenn das abgerufene Element die erste Aufgabe in der Liste aus, klicken Sie dann der neue Wert des `rPosition` festgelegt ist, um **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Ruft den Zeiger, der das Anfangselement dieser Liste darstellt.  
   
 ```  
@@ -277,7 +272,7 @@ TYPE GetTail() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetTail`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  Entfernt das Element am Anfang der Liste aus, und gibt es zurück.  
   
 ```  
@@ -296,7 +291,7 @@ TYPE RemoveHead();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `RemoveHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  Entfernt das Element, das Ende der Liste aus, und gibt es zurück.  
   
 ```  
@@ -313,7 +308,7 @@ TYPE RemoveTail();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *DATENTYP*  
+ *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `RemoveTail`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  Diese Memberfunktion ruft `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -333,14 +328,14 @@ void SetAt(POSITION pos, TYPE newElement);
  `pos`  
  Die **POSITION** des Elements festgelegt werden.  
   
- *DATENTYP*  
+ *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
  `newElement`  
  Der Zeiger in der Liste geschrieben werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `SetAt`Schreibt die Objektzeiger an der angegebenen Position in der Liste an.  
+ Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `SetAt` Schreibt die Objektzeiger an der angegebenen Position in der Liste an.  
   
  Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   

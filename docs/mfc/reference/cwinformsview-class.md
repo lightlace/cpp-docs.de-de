@@ -1,12 +1,9 @@
 ---
 title: CWinFormsView Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView-Klasse
 Stellt generische Funktionen zum Hosten eines Windows Forms-Steuerelements als MFC-Ansicht bereit.  
@@ -74,7 +69,7 @@ class CWinFormsView : public CView;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h  
   
-##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
  Erstellt ein `CWinFormsView`-Objekt.  
   
 ```  
@@ -86,13 +81,13 @@ CWinFormsView(System::Type^ pManagedViewType);
  Ein Zeiger auf den Datentyp des Windows Forms-Benutzersteuerelements.   
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel die `CUserView` Klasse erbt von `CWinFormsView` und übergibt den Typ des `UserControl1` auf die `CWinFormsView` Konstruktor. `UserControl1`ist ein benutzerspezifisches Steuerelement im ControlLibrary1.dll.  
+ Im folgenden Beispiel die `CUserView` Klasse erbt von `CWinFormsView` und übergibt den Typ des `UserControl1` auf die `CWinFormsView` Konstruktor. `UserControl1` ist ein benutzerspezifisches Steuerelement im ControlLibrary1.dll.  
   
  [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
   
  [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="getcontrol"></a>CWinFormsView::  
+##  <a name="getcontrol"></a>  CWinFormsView::  
  Ruft einen Zeiger auf das Windows Forms-Steuerelement ab.  
   
 ```  
@@ -105,7 +100,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>Hinweise  
  Ein Beispiel zum Verwenden von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_control"></a>CWinFormsView::operator Steuerelement ^  
+##  <a name="operator_control"></a>  CWinFormsView::operator Steuerelement ^  
  Wandelt einen Typ ein Zeiger auf ein Windows Forms-Steuerelement.  
   
 ```  

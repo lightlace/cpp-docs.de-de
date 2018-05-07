@@ -1,13 +1,10 @@
 ---
 title: 'TN058: MFC-Modulzustandsimplementierung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.implementation
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed7bc195c771026ff3e58d53f9e3936791810e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: MFC-Modulzustandsimplementierung
 > [!NOTE]
@@ -55,15 +50,15 @@ ms.lasthandoff: 12/21/2017
   
  Es ist nur in seltenen Fällen die Modulstatus festgelegt und nicht erneut festgelegt werden sollen. In den meisten Fällen zu "Eigene Modul push" Status als aktueller Planer, und klicken Sie dann, wenn Sie fertig sind, "pop" des ursprünglichen Kontexts zurück. Dies erfolgt durch das Makro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) und die Sonderklasse **AFX_MAINTAIN_STATE**.  
   
- `CCmdTarget`verfügt über spezielle Funktionen für die Unterstützung von Modul Status wechseln. Insbesondere eine `CCmdTarget` verwenden, wird die Stammklasse für OLE-Automatisierung und COM-OLE-Einstiegspunkte. Wie alle anderen Einstiegspunkt für das System verfügbar gemacht, müssen diese Einstiegspunkte die richtige Modulstatus festgelegt. Wie wird eine bestimmte `CCmdTarget` wissen, was der "richtige" Modulstatus sollte die Antwort ist, dass "gespeichert" Was "Aktuell"-Modulstatus ist, bei der es erstellt wurde, dass sie festlegen kann der aktuellen Modulstatus mit "gespeichert" Wert, wenn sie später bezeichnet. Daher das Modul hingewiesen, dass eine bestimmte `CCmdTarget` -Objekt zugeordnet ist mit ist der Modulzustand, der beim aktuell das Objekt erstellt wurde. Nehmen Sie ein einfaches Beispiel für ein PROZESSINTERNER Server laden, erstellen ein Objekt und seine Methoden aufrufen.  
+ `CCmdTarget` verfügt über spezielle Funktionen für die Unterstützung von Modul Status wechseln. Insbesondere eine `CCmdTarget` verwenden, wird die Stammklasse für OLE-Automatisierung und COM-OLE-Einstiegspunkte. Wie alle anderen Einstiegspunkt für das System verfügbar gemacht, müssen diese Einstiegspunkte die richtige Modulstatus festgelegt. Wie wird eine bestimmte `CCmdTarget` wissen, was der "richtige" Modulstatus sollte die Antwort ist, dass "gespeichert" Was "Aktuell"-Modulstatus ist, bei der es erstellt wurde, dass sie festlegen kann der aktuellen Modulstatus mit "gespeichert" Wert, wenn sie später bezeichnet. Daher das Modul hingewiesen, dass eine bestimmte `CCmdTarget` -Objekt zugeordnet ist mit ist der Modulzustand, der beim aktuell das Objekt erstellt wurde. Nehmen Sie ein einfaches Beispiel für ein PROZESSINTERNER Server laden, erstellen ein Objekt und seine Methoden aufrufen.  
   
 1.  Die DLL wird geladen, OLE mit **LoadLibrary**.  
   
 2. **RawDllMain** zuerst aufgerufen. Die Modulstatus festgelegt für die DLL auf das bekannte statische Modulstatus. Aus diesem Grund **RawDllMain** statisch mit der DLL verknüpft ist.  
   
-3.  Der Konstruktor für die Klassenfactory unsere Objekt zugeordnet wird aufgerufen. `COleObjectFactory`stammt aus `CCmdTarget` und daher gespeichert in welche Modulstatus es instanziiert wurde. Dies ist wichtig, wenn die Klassenfactory aufgefordert wird, um Objekte zu erstellen, weiß jetzt welche Modulstatus zum aktuellen werden soll.  
+3.  Der Konstruktor für die Klassenfactory unsere Objekt zugeordnet wird aufgerufen. `COleObjectFactory` stammt aus `CCmdTarget` und daher gespeichert in welche Modulstatus es instanziiert wurde. Dies ist wichtig, wenn die Klassenfactory aufgefordert wird, um Objekte zu erstellen, weiß jetzt welche Modulstatus zum aktuellen werden soll.  
   
-4. `DllGetClassObject`wird aufgerufen, um die Klassenfactory zu erhalten. MFC sucht die Factory-Klassenliste, die diesem Modul zugeordnet und gibt ihn zurück.  
+4. `DllGetClassObject` wird aufgerufen, um die Klassenfactory zu erhalten. MFC sucht die Factory-Klassenliste, die diesem Modul zugeordnet und gibt ihn zurück.  
   
 5. **COleObjectFactory::XClassFactory2::CreateInstance** aufgerufen wird. Vor dem Erstellen des Objekts und das zurückgeben, setzt diese Funktion den Zustand auf den Zustand, der in Schritt 3 war (das Projekt, das aktuelle wurde die `COleObjectFactory` instanziiert wurde). Dies geschieht innerhalb des [METHOD_PROLOGUE](com-interface-entry-points.md).  
   
@@ -87,7 +82,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  Probleme mit den Ressourcen-DLLs erfolgt, wenn die `AFX_MODULE_STATE` Makro wird nicht verwendet. Standardmäßig verwendet MFC das Ressourcenhandle von der hauptanwendung, um die Ressourcenvorlage zu laden. Diese Vorlage wird tatsächlich in der DLL gespeichert. Die Ursache ist, dass MFC Modulzustandsinformationen nicht durch gewechselt wurde die `AFX_MODULE_STATE` Makro. Das Ressourcenhandle wird vom MFC Modulstatus wiederhergestellt. Nicht durch einen Wechsel der Modulstatus wird das falsche Ressourcenhandle verwendet werden.  
   
- `AFX_MODULE_STATE`muss nicht in jeder Funktion in der DLL zu versetzen. Beispielsweise `InitInstance` kann aufgerufen werden, durch den MFC-Code in der Anwendung ohne `AFX_MODULE_STATE` Da MFC automatisch den Zustand vor dem verlagert `InitInstance` und dann wieder nach Switches `InitInstance` zurückgibt. Dasselbe gilt für alle Meldungshandler zuordnen. Reguläre MFC-DLLs haben eine spezielle master Fensterprozedur, die den Zustand automatisch wechselt vor dem Weiterleiten einer Nachricht.  
+ `AFX_MODULE_STATE` muss nicht in jeder Funktion in der DLL zu versetzen. Beispielsweise `InitInstance` kann aufgerufen werden, durch den MFC-Code in der Anwendung ohne `AFX_MODULE_STATE` Da MFC automatisch den Zustand vor dem verlagert `InitInstance` und dann wieder nach Switches `InitInstance` zurückgibt. Dasselbe gilt für alle Meldungshandler zuordnen. Reguläre MFC-DLLs haben eine spezielle master Fensterprozedur, die den Zustand automatisch wechselt vor dem Weiterleiten einer Nachricht.  
   
 ## <a name="process-local-data"></a>Verarbeiten von lokalen Daten  
  Verarbeiten von lokale Daten wäre es nicht für die Schwierigkeit des Modells Win32s DLL wurde nicht von solchen großer Wichtigkeit. In Win32s freigeben alle DLLs ihre globale Daten an, selbst wenn von mehreren Anwendungen geladen. Dies unterscheidet sich aus dem "real" Win32-DLL-Datenmodell, wobei jede DLL-Datei eine separate Kopie der Datenbereich in den einzelnen Prozessen abruft, die an die DLL angefügt wird. Um die Komplexität hinzugefügt haben, handelt es sich Daten, die auf dem Heap in einer DLL Win32s zugewiesen bestimmten Prozess (mindestens so weit im Laufe der Besitz). Betrachten Sie die folgenden Daten und den folgenden Code:  
@@ -141,9 +136,9 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
 }  
 ```  
   
- MFC implementiert diese in zwei Schritten. Zunächst wird eine Schicht über Win32 **Tls\***  APIs (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**usw.) die Verwenden Sie nur zwei TLS-Indizes pro Prozess, unabhängig davon, wie viele DLLs, die Sie verfügen. Zweitens stellt die `CProcessLocal` Vorlage wird bereitgestellt, um diese Daten zugreifen. Es überschreibt die Operator -> Dies ist die intuitive Syntax ermöglicht Sie finden Sie weiter oben. Alle Objekte, die von umschlossen werden `CProcessLocal` abgeleitet werden müssen `CNoTrackObject`. `CNoTrackObject`Stellt eine Zuweisung auf niedrigerer Ebene (**LocalAlloc**/**LocalAlloc**) und einen virtuellen Destruktor, dass MFC Wenn der Prozess wird automatisch in die lokale Prozessobjekte beschädigt werden kann beendet. Solche Objekte haben einen benutzerdefinierten Destruktor, wenn zusätzliche Bereinigung erforderlich ist. Im obigen Beispiel nicht erforderlich sind, da der Compiler eine Standarddestruktor generiert, um den eingebetteten zerstören `CString` Objekt.  
+ MFC implementiert diese in zwei Schritten. Zunächst wird eine Schicht über Win32 **Tls\***  APIs (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**usw.) die Verwenden Sie nur zwei TLS-Indizes pro Prozess, unabhängig davon, wie viele DLLs, die Sie verfügen. Zweitens stellt die `CProcessLocal` Vorlage wird bereitgestellt, um diese Daten zugreifen. Es überschreibt die Operator -> Dies ist die intuitive Syntax ermöglicht Sie finden Sie weiter oben. Alle Objekte, die von umschlossen werden `CProcessLocal` abgeleitet werden müssen `CNoTrackObject`. `CNoTrackObject` Stellt eine Zuweisung auf niedrigerer Ebene (**LocalAlloc**/**LocalAlloc**) und einen virtuellen Destruktor, dass MFC automatisch lokalen Prozessobjekte zerstören kann, wenn der Prozess beendet wird. Solche Objekte haben einen benutzerdefinierten Destruktor, wenn zusätzliche Bereinigung erforderlich ist. Im obigen Beispiel nicht erforderlich sind, da der Compiler eine Standarddestruktor generiert, um den eingebetteten zerstören `CString` Objekt.  
   
- Es gibt andere interessante Vorteile dieses Ansatzes. Sind Sie nicht nur alle `CProcessLocal` Objekte automatisch zerstört, sie werden nicht erstellt, bis sie benötigt werden. `CProcessLocal::operator->`das zugeordnete Objekt beim ersten Aufruf und keine früher instanziiert. Im obigen Beispiel Dies bedeutet, dass der "`strGlobal`' Zeichenfolge wird nicht erstellt werden, bis zum ersten Mal **SetGlobalString** oder **GetGlobalString** aufgerufen wird. In einigen Fällen können dadurch verringern Sie die Startzeit für die DLL.  
+ Es gibt andere interessante Vorteile dieses Ansatzes. Sind Sie nicht nur alle `CProcessLocal` Objekte automatisch zerstört, sie werden nicht erstellt, bis sie benötigt werden. `CProcessLocal::operator->` das zugeordnete Objekt beim ersten Aufruf und keine früher instanziiert. Im obigen Beispiel Dies bedeutet, dass der "`strGlobal`' Zeichenfolge wird nicht erstellt werden, bis zum ersten Mal **SetGlobalString** oder **GetGlobalString** aufgerufen wird. In einigen Fällen können dadurch verringern Sie die Startzeit für die DLL.  
   
 ## <a name="thread-local-data"></a>Lokalen Threaddaten  
  Ähnlich wie bei lokale Daten zu verarbeiten, lokalen Threaddaten dient, wenn die Daten für einen bestimmten Thread lokal sein müssen. D. h., benötigen Sie eine separate Instanz der Daten für jeden Thread, der die Daten zugreift. Dies kann mehrere Male anstelle von umfangreichen Synchronisierungsmechanismen verwendet werden. Wenn die Daten nicht von mehreren Threads gemeinsam genutzt werden müssen, können solche Mechanismen teuer und unnötige sein. Angenommen, wir haben eine `CString` Objekt (ähnlich wie im obigen Beispiel). Machen sie die thread-lokalen durch Umschließen mit einem `CThreadLocal` Vorlage:  

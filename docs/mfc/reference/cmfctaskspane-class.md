@@ -1,12 +1,9 @@
 ---
 title: CMFCTasksPane Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPane
@@ -203,17 +200,15 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf35669ba71c900a67f98fb9ee303c723546f94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -383,7 +378,7 @@ class CMFCTasksPane : public CDockablePane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxTasksPane.h  
   
-##  <a name="addgroup"></a>Cmfctaskspane:: addgroup  
+##  <a name="addgroup"></a>  Cmfctaskspane:: addgroup  
  Fügt dem Aufgabenbereich-Steuerelement eine neue Gruppe von Aufgaben hinzu.  
   
 ```  
@@ -410,10 +405,10 @@ int AddGroup(
  Gibt den Gruppennamen.  
   
  [in] `bBottomLocation`  
- `TRUE`So erstellen Sie die Gruppe am unteren Rand der Aufgabenbereich-Steuerelement; andernfalls `FALSE`.  
+ `TRUE` So erstellen Sie die Gruppe am unteren Rand der Aufgabenbereich-Steuerelement; andernfalls `FALSE`.  
   
  [in] `bSpecial`  
- `TRUE`Markieren Sie diese Gruppe als eine *spezielle* Gruppe ist, andernfalls `FALSE`. Weitere Informationen zu speziellen Gruppen, finden Sie im Abschnitt "Hinweise" `CMFCTasksPane`.  
+ `TRUE` Markieren Sie diese Gruppe als eine *spezielle* Gruppe ist, andernfalls `FALSE`. Weitere Informationen zu speziellen Gruppen, finden Sie im Abschnitt "Hinweise" `CMFCTasksPane`.  
   
  [in] `hIcon`  
  Gibt das Symbol in der gruppenbeschriftung angezeigt.  
@@ -426,7 +421,7 @@ int AddGroup(
   
  Das Framework zeigt Aufgabengruppen am oberen Rand der Aufgabenbereich-Steuerelement oder unten an. Das Framework kann nur eine Gruppe im unteren Bereich anzeigen. Diese Gruppe muss zuletzt hinzugefügt werden.  
   
-##  <a name="addlabel"></a>Cmfctaskspane:: AddLabel  
+##  <a name="addlabel"></a>  Cmfctaskspane:: AddLabel  
  Der angegebenen Aufgabengruppe hinzugefügt eine Bezeichnung.  
   
 ```  
@@ -448,7 +443,7 @@ int AddLabel(
  Gibt das Symbol neben der Beschriftung angezeigt. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
   
  [in] `bIsBold`  
- `TRUE`um die Bezeichnung in Fettschrift angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` um die Bezeichnung in Fettschrift angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in dem die Bezeichnung hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
@@ -456,7 +451,7 @@ int AddLabel(
 ### <a name="remarks"></a>Hinweise  
  Das Framework behandelt Aufgaben und Bezeichnungen anders. Klickt ein Benutzer auf eine Aufgabe, führt das Framework einen Befehl an. Klickt ein Benutzer auf eine Bezeichnung, wird kein Befehl ausgeführt. Weitere Informationen finden Sie unter [cmfctaskspane:: Addtask](#addtask).  
   
-##  <a name="addmrufileslist"></a>Cmfctaskspane:: Addmrufileslist  
+##  <a name="addmrufileslist"></a>  Cmfctaskspane:: Addmrufileslist  
  Fügt eine Aufgabe für jede Datei, die in einer Gruppe in einer Dateiliste der zuletzt verwendeten (MRU)-gespeichert.  
   
 ```  
@@ -475,7 +470,7 @@ int AddMRUFilesList(
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in dem Liste der zuletzt verwendeten Dateien hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
   
-##  <a name="addpage"></a>CMFCTasksPane::AddPage  
+##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  Im Aufgabenbereich hinzugefügt eine Seite.  
   
 ```  
@@ -489,7 +484,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der neuen Seite.  
   
-##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
+##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator  
 
   
 ```  
@@ -503,7 +498,7 @@ int AddSeparator(int nGroup);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="addtask"></a>Cmfctaskspane:: Addtask  
+##  <a name="addtask"></a>  Cmfctaskspane:: Addtask  
  Der angegebenen Aufgabengruppe hinzugefügt eine Aufgabe.  
   
 ```  
@@ -534,7 +529,7 @@ int AddTask(
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in dem der Task hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
   
-##  <a name="addwindow"></a>CMFCTasksPane::AddWindow  
+##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  Fügt dem Aufgabenbereich ein untergeordnetes Fenster hinzu.  
   
 ```  
@@ -557,7 +552,7 @@ int AddWindow(
  Gibt die Höhe des Fensters.  
   
  [in] `bAutoDestroyWindow`  
- `TRUE`Das Fenster zerstört beim Entfernen des Tasks; andernfalls `FALSE`.  
+ `TRUE` Das Fenster zerstört beim Entfernen des Tasks; andernfalls `FALSE`.  
   
  [in] `dwUserData`  
  Gibt die benutzerdefinierten Daten, die dem Task zugeordnet.  
@@ -568,14 +563,14 @@ int AddWindow(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um ein Steuerelement zu einem Aufgabenbereich hinzufügen. Beispielsweise können Sie ein Bearbeitungssteuerelement hinzufügen, wie eine Suchleiste.  
   
-##  <a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
+##  <a name="cmfctaskspane"></a>  CMFCTasksPane::CMFCTasksPane  
  Erstellt eine [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Objekt.  
   
 ```  
 CMFCTasksPane();
 ```  
   
-##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
+##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups  
 
   
 ```  
@@ -593,7 +588,7 @@ void CollapseAllGroups(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
+##  <a name="collapsegroup"></a>  CMFCTasksPane::CollapseGroup  
  Reduziert oder erweitert eine Gruppe.  
   
 ```  
@@ -612,18 +607,18 @@ BOOL CollapseGroup(
  Gibt die Gruppe zu reduzieren.  
   
  [in] `bCollapse`  
- `TRUE`So reduzieren Sie die Gruppe; `FALSE` auf die Gruppe erweitern.  
+ `TRUE` So reduzieren Sie die Gruppe; `FALSE` auf die Gruppe erweitern.  
   
  [in] `nGroup`  
  Gibt den nullbasierten Index der Gruppe "in der internen Liste von Gruppen zu reduzieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Gruppe reduziert oder erfolgreich erweitert. andernfalls `FALSE`.  
+ `TRUE` Wenn die Gruppe reduziert oder erfolgreich erweitert. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine reduzierte Gruppe wird nur der gruppenbeschriftung gezeigt: die Liste der Aufgaben ist ausgeblendet.  
   
-##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe  
 
   
 ```  
@@ -637,7 +632,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="createmenu"></a>CMFCTasksPane::CreateMenu  
+##  <a name="createmenu"></a>  CMFCTasksPane::CreateMenu  
  Erstellt ein Menü, das angezeigt wird, wenn ein Benutzer klickt auf die **andere Aufgabenbereiche** Menüschaltfläche.  
   
 ```  
@@ -652,7 +647,7 @@ HMENU CreateMenu() const;
   
  Das Menü das Popupmenü, das diese Methode erstellt enthält die Liste der Seiten, die in den Aufgabenbereich. Ein Häkchen neben der aktiven Seite zeigt das Menü.  
   
-##  <a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
+##  <a name="enableanimation"></a>  CMFCTasksPane::EnableAnimation  
  Aktiviert oder deaktiviert die Animation, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert.  
   
 ```  
@@ -661,12 +656,12 @@ void EnableAnimation(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie die Animation, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert; andernfalls `FALSE`.  
+ `TRUE` So aktivieren Sie die Animation, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Animation, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert ist standardmäßig aktiviert.  
   
-##  <a name="enablegroupcollapse"></a>Cmfctaskspane:: Enablegroupcollapse  
+##  <a name="enablegroupcollapse"></a>  Cmfctaskspane:: Enablegroupcollapse  
  Gibt an, ob ein Benutzer Aufgabengruppen reduziert werden kann.  
   
 ```  
@@ -675,12 +670,12 @@ void EnableGroupCollapse(BOOL bEnable);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`Wenn Benutzer Aufgabengruppen reduziert werden können; andernfalls `FALSE`.  
+ `TRUE` Wenn Benutzer Aufgabengruppen reduziert werden können; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Aufgabengruppe, die reduziert ist, zeigt nur die gruppenbeschriftung; die Liste der Aufgaben ist ausgeblendet.  
   
-##  <a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
+##  <a name="enablehistorymenubuttons"></a>  CMFCTasksPane::EnableHistoryMenuButtons  
  Aktiviert die Dropdown-Menüs auf die **Weiter** und **vorherige** Navigationsschaltflächen.  
   
 ```  
@@ -689,14 +684,14 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie auf die Dropdown-Menüs die **Weiter** und **vorherige** Navigationsschaltflächen ist, andernfalls `FALSE`.  
+ `TRUE` So aktivieren Sie auf die Dropdown-Menüs die **Weiter** und **vorherige** Navigationsschaltflächen ist, andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig werden in der Dropdown-Menüs in der **Weiter** und **zurück** Schaltflächen sind deaktiviert.  
   
  Die Menüs enthalten den Verlauf der Aufgaben-Seiten, die der Benutzer verwendet.  
   
-##  <a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
+##  <a name="enablenavigationtoolbar"></a>  CMFCTasksPane::EnableNavigationToolbar  
  Aktiviert oder deaktiviert die Navigationssymbolleiste.  
   
 ```  
@@ -711,7 +706,7 @@ void EnableNavigationToolbar(
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie die Navigationssymbolleiste; andernfalls `FALSE`.  
+ `TRUE` So aktivieren Sie die Navigationssymbolleiste; andernfalls `FALSE`.  
   
  [in] `uiToolbarBmpRes`  
  Gibt die Ressourcen-ID der Bitmap, die die auf der Symbolleiste anzuzeigenden Bilder enthält.  
@@ -727,7 +722,7 @@ void EnableNavigationToolbar(
   
  Standardmäßig zeigt das Framework keine die Navigationssymbolleiste. Wenn die Navigationssymbolleiste nicht angezeigt wird, befinden sich die Navigationsschaltflächen auf die Beschriftung der andockleiste.  
   
-##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
+##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls  
 
   
 ```  
@@ -739,7 +734,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>  CMFCTasksPane::EnableScrollButtons  
  Ermöglicht das Schaltflächen für Bildlauf statt einer Bildlaufleiste.  
   
 ```  
@@ -748,12 +743,12 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`Bildlaufschaltflächen statt einer Bildlaufleiste im Aufgabenbereich angezeigt; andernfalls `FALSE`.  
+ `TRUE` Bildlaufschaltflächen statt einer Bildlaufleiste im Aufgabenbereich angezeigt; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig zeigt das Framework Bildlaufschaltflächen im Aufgabenbereich an.  
   
-##  <a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
+##  <a name="enablewraplabels"></a>  CMFCTasksPane::EnableWrapLabels  
  Aktiviert oder deaktiviert den Wortumbruch für den Text in Bezeichnungen.  
   
 ```  
@@ -762,12 +757,12 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`um den Text in Bezeichnungen zu umschließen, die im Aufgabenbereich angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` um den Text in Bezeichnungen zu umschließen, die im Aufgabenbereich angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird das Framework nicht den Text in Bezeichnungen umbrochen. Wenn Zeilenumbruch aktiviert ist, kann der Text in Bezeichnungen in mehreren Zeilen angezeigt. Die Bezeichnung kann für einen Zeilenumbruch Marker wie z. B. enthalten `\n` und die Markierung "Unterstreichen" `&`.  
   
-##  <a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
+##  <a name="enablewraptasks"></a>  CMFCTasksPane::EnableWrapTasks  
  Aktiviert oder deaktiviert den Wortumbruch für den Text in den Aufgaben.  
   
 ```  
@@ -776,12 +771,12 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`um Aufgaben in den Aufgabenbereich zu umschließen; andernfalls `FALSE`.  
+ `TRUE` um Aufgaben in den Aufgabenbereich zu umschließen; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wortumbruch für Aufgaben ist standardmäßig deaktiviert.  
   
-##  <a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
+##  <a name="getactivepage"></a>  CMFCTasksPane::GetActivePage  
  Gibt den nullbasierten Index für die aktive Seite zurück.  
   
 ```  
@@ -791,7 +786,7 @@ int GetActivePage() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der aktiven Seite.  
   
-##  <a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
+##  <a name="getgroupcaptionheight"></a>  CMFCTasksPane::GetGroupCaptionHeight  
  Gibt die Höhe der gruppenbeschriftung zurück.  
   
 ```  
@@ -801,7 +796,7 @@ int GetGroupCaptionHeight() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Höhe der gruppenbeschriftung in Pixel.  
   
-##  <a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
+##  <a name="getgroupcaptionhorzoffset"></a>  CMFCTasksPane::GetGroupCaptionHorzOffset  
  Gibt den horizontalen Offset einer gruppenbeschriftung zurück.  
   
 ```  
@@ -811,7 +806,7 @@ int GetGroupCaptionHorzOffset() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der horizontale Offset einer gruppenbeschriftung. Der horizontale Offset ist der Abstand in Pixel vom linken oder rechten Rand des Aufgabenbereichs.  
   
-##  <a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
+##  <a name="getgroupcaptionvertoffset"></a>  CMFCTasksPane::GetGroupCaptionVertOffset  
  Gibt den vertikalen Offset einer gruppenbeschriftung zurück.  
   
 ```  
@@ -824,7 +819,7 @@ int GetGroupCaptionVertOffset() const;
 ### <a name="remarks"></a>Hinweise  
  Der Standardwert für den vertikalen Offset beträgt 7 Pixel.  
   
-##  <a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
+##  <a name="getgroupcount"></a>  CMFCTasksPane::GetGroupCount  
  Ruft die Gesamtanzahl von Gruppen zurück.  
   
 ```  
@@ -834,7 +829,7 @@ int GetGroupCount() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Gesamtanzahl von Gruppen in den Aufgabenbereich.  
   
-##  <a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
+##  <a name="getgrouplocation"></a>  CMFCTasksPane::GetGroupLocation  
  Gibt den internen gruppenindex für die angegebene Gruppe zurück.  
   
 ```  
@@ -851,9 +846,9 @@ BOOL GetGroupLocation(
  Enthält den nullbasierten Index der Aufgabengruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Aufgabengruppe gefunden wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn die Aufgabengruppe gefunden wurde. andernfalls `FALSE`.  
   
-##  <a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
+##  <a name="getgroupvertoffset"></a>  CMFCTasksPane::GetGroupVertOffset  
  Gibt den vertikalen Offset einer Gruppe zurück.  
   
 ```  
@@ -863,7 +858,7 @@ int GetGroupVertOffset() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der vertikale Offset einer Gruppe, in Pixel.  
   
-##  <a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
+##  <a name="gethorzmargin"></a>  CMFCTasksPane::GetHorzMargin  
  Gibt den horizontalen Abstand zwischen einem Aufgabenbereich und den Rand des Clientbereichs zurück.  
   
 ```  
@@ -876,7 +871,7 @@ int GetHorzMargin() const;
 ### <a name="remarks"></a>Hinweise  
  Der Standardabstand zwischen einem Aufgabenbereich und den Rand des Clientbereichs beträgt 12 Pixel.  
   
-##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
+##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages  
 
   
 ```  
@@ -888,7 +883,7 @@ void GetNextPages(CStringList& lstNextPages) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
+##  <a name="getpagebygroup"></a>  CMFCTasksPane::GetPageByGroup  
  Ruft den Seitenindex für eine angegebene Gruppe ab.  
   
 ```  
@@ -905,9 +900,9 @@ BOOL GetPageByGroup(
  Enthält den Seitenindex für die angegebene Gruppe. Wenn die Aufgabengruppe, die nur eine Standardseite enthält, ist der zurückgegebene Wert 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Gruppe `nGroup` vorhanden ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die Gruppe `nGroup` vorhanden ist, andernfalls `FALSE`.  
   
-##  <a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
+##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  Gibt die Anzahl der Seiten zurück.  
   
 ```  
@@ -917,7 +912,7 @@ int GetPagesCount() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Seiten in den Aufgabenbereich.  
   
-##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
+##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages  
 
   
 ```  
@@ -929,7 +924,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl  
 
   
 ```  
@@ -943,7 +938,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gettask"></a>CMFCTasksPane::GetTask  
+##  <a name="gettask"></a>  CMFCTasksPane::GetTask  
  Ruft eine Aufgabe ab.  
   
 ```  
@@ -962,7 +957,7 @@ CMFCTasksPaneTask* GetTask(
 ### <a name="return-value"></a>Rückgabewert  
  Der Task am angegebenen Index.  
   
-##  <a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
+##  <a name="gettaskcount"></a>  CMFCTasksPane::GetTaskCount  
  Gibt die Anzahl der Aufgaben in einer angegebenen Gruppe zurück.  
   
 ```  
@@ -976,7 +971,7 @@ int GetTaskCount(int nGroup) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Aufgaben in der angegebenen Gruppe oder 0, wenn `nGroup` ist ungültig.  
   
-##  <a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
+##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  Gibt eine Aufgabengruppe für einen angegebenen gruppenindex zurück.  
   
 ```  
@@ -990,7 +985,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Aufgabengruppe am angegebenen Index.  
   
-##  <a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
+##  <a name="gettasklocation"></a>  CMFCTasksPane::GetTaskLocation  
  Gibt die Gruppe und den Index für eine angegebene Aufgabe zurück.  
   
 ```  
@@ -1027,12 +1022,12 @@ BOOL GetTaskLocation(
  Gibt die Aufgabe finden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn taskspeicherort gefunden wurde. `FALSE` ist die angegebene Aufgabe ist nicht vorhanden.  
+ `TRUE` Wenn taskspeicherort gefunden wurde. `FALSE` ist die angegebene Aufgabe ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die Gruppe und Taskindex für den angegebenen Vorgang ab. Wenn die-Methode zurückgibt `FALSE`, `nGroup` und `nTask` auf-1 festgelegt sind.  
   
-##  <a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
+##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  Gibt den horizontale Offset von Aufgaben zurück.  
   
 ```  
@@ -1045,7 +1040,7 @@ int GetTasksHorzOffset() const;
 ### <a name="remarks"></a>Hinweise  
  Die Standardeinstellung horizontale Offset von Aufgaben ist 12 Pixel.  
   
-##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
+##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset  
 
   
 ```  
@@ -1056,7 +1051,7 @@ int GetTasksIconHorzOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
+##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset  
 
   
 ```  
@@ -1067,7 +1062,7 @@ int GetTasksIconVertOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
+##  <a name="getvertmargin"></a>  CMFCTasksPane::GetVertMargin  
  Gibt den vertikalen Rand zwischen einem Aufgabenbereich und den Rändern des Clientbereichs zurück.  
   
 ```  
@@ -1080,7 +1075,7 @@ int GetVertMargin() const;
 ### <a name="remarks"></a>Hinweise  
  Der vertikale Rand ist der Abstand zwischen einem Aufgabenbereich und den Rändern des Clientbereichs. Der Standardwert des vertikalen Rands beträgt 12 Pixel.  
   
-##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible  
 
   
 ```  
@@ -1091,7 +1086,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
+##  <a name="isanimationenabled"></a>  CMFCTasksPane::IsAnimationEnabled  
  Gibt an, ob die Animation aktiviert ist.  
   
 ```  
@@ -1099,12 +1094,12 @@ BOOL IsAnimationEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Animation, die auftritt, wenn ein Benutzer erweitert oder eine Gruppe reduziert aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn die Animation, die auftritt, wenn ein Benutzer erweitert oder eine Gruppe reduziert aktiviert ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [CMFCTasksPane::EnableAnimation](#enableanimation) aktivieren oder Deaktivieren der Animation.  
   
-##  <a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
+##  <a name="isbackbuttonenabled"></a>  CMFCTasksPane::IsBackButtonEnabled  
  Gibt an, ob die Zurück-Schaltfläche aktiviert ist.  
   
 ```  
@@ -1112,12 +1107,12 @@ BOOL IsBackButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Schaltfläche "zurück" aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn die Schaltfläche "zurück" aktiviert ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Benutzer die Schaltfläche "zurück" klickt, zeigt das Framework die vorherigen Aufgabenseite.  
   
-##  <a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
+##  <a name="isforwardbuttonenabled"></a>  CMFCTasksPane::IsForwardButtonEnabled  
  Gibt an, ob die Weiter-Schaltfläche aktiviert ist.  
   
 ```  
@@ -1125,12 +1120,12 @@ BOOL IsForwardButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Schaltfläche "Weiterleiten" aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn die Schaltfläche "Weiterleiten" aktiviert ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Schaltfläche "Weiterleiten" aktiviert Vorwärtsnavigation im Verlauf der Aufgabenseiten, die.  
   
-##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
+##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled  
 
   
 ```  
@@ -1141,7 +1136,7 @@ BOOL IsGroupCollapseEnabled() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
+##  <a name="ishistorymenubuttonsenabled"></a>  CMFCTasksPane::IsHistoryMenuButtonsEnabled  
  Gibt an, ob die **Weiter** und **vorherige** Navigationsschaltflächen Dropdown-Menüs besitzen.  
   
 ```  
@@ -1149,9 +1144,9 @@ BOOL IsHistoryMenuButtonsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die **Weiter** und **vorherige** Navigationsschaltflächen Dropdown-Menüs besitzen, andernfalls `FALSE`.  
+ `TRUE` Wenn die **Weiter** und **vorherige** Navigationsschaltflächen Dropdown-Menüs besitzen, andernfalls `FALSE`.  
   
-##  <a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
+##  <a name="isnavigationtoolbarenabled"></a>  CMFCTasksPane::IsNavigationToolbarEnabled  
  Gibt an, ob die Navigationssymbolleiste aktiviert ist.  
   
 ```  
@@ -1159,9 +1154,9 @@ BOOL IsNavigationToolbarEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Navigationssymbolleiste aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn die Navigationssymbolleiste aktiviert ist; andernfalls `FALSE`.  
   
-##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
+##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox  
 
   
 ```  
@@ -1172,7 +1167,7 @@ virtual BOOL IsToolBox() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
+##  <a name="iswraplabelsenabled"></a>  CMFCTasksPane::IsWrapLabelsEnabled  
  Gibt an, ob der Aufgabenbereich Wörter in Bezeichnungen umbricht.  
   
 ```  
@@ -1180,9 +1175,9 @@ BOOL IsWrapLabelsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Wörter in Bezeichnungen umbrochen werden; andernfalls `FALSE`.  
+ `TRUE` Wenn Wörter in Bezeichnungen umbrochen werden; andernfalls `FALSE`.  
   
-##  <a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
+##  <a name="iswraptasksenabled"></a>  CMFCTasksPane::IsWrapTasksEnabled  
  Gibt an, ob das Framework die Aufgabe Zeichenfolge umschließt.  
   
 ```  
@@ -1190,9 +1185,9 @@ BOOL IsWrapTasksEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Zeichenfolge Aufgabe umschlossen wird; andernfalls `FALSE`.  
+ `TRUE` Wenn die Zeichenfolge Aufgabe umschlossen wird; andernfalls `FALSE`.  
   
-##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
+##  <a name="loadstate"></a>  CMFCTasksPane::LoadState  
 
   
 ```  
@@ -1211,7 +1206,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
+##  <a name="onactivatetaskspanepage"></a>  CMFCTasksPane::OnActivateTasksPanePage  
  Vom Framework aufgerufen, wenn er eine Aufgabenbereichsseite active herstellt.  
   
 ```  
@@ -1221,7 +1216,7 @@ virtual void OnActivateTasksPanePage();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung der Aufgabenbereichsseite anpassen.  
   
-##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
+##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel  
 
   
 ```  
@@ -1230,7 +1225,7 @@ virtual void OnCancel();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
+##  <a name="onclicktask"></a>  CMFCTasksPane::OnClickTask  
  Wird vom Framework aufgerufen, wenn der Benutzer auf ein Element im Aufgabenbereich klickt.  
   
 ```  
@@ -1259,7 +1254,7 @@ virtual void OnClickTask(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum benutzerdefinierten Code ausführen, wenn eine Aufgabe geklickt wird.  
   
-##  <a name="onok"></a>CMFCTasksPane::OnOK  
+##  <a name="onok"></a>  CMFCTasksPane::OnOK  
 
   
 ```  
@@ -1268,7 +1263,7 @@ virtual void OnOK();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
+##  <a name="onpressbackbutton"></a>  CMFCTasksPane::OnPressBackButton  
  Wird vom Framework aufgerufen, wenn der Benutzer auf die Zurück-Schaltfläche klickt.  
   
 ```  
@@ -1280,7 +1275,7 @@ virtual void OnPressBackButton();
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum benutzerdefinierten Code ausführen, wenn der Benutzer die Schaltfläche "zurück" klickt.  
   
-##  <a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
+##  <a name="onpressforwardbutton"></a>  CMFCTasksPane::OnPressForwardButton  
  Wird vom Framework aufgerufen, wenn der Benutzer auf die Navigationsschaltfläche Weiter klickt.  
   
 ```  
@@ -1292,7 +1287,7 @@ virtual void OnPressForwardButton();
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Ausführen von benutzerdefinierten Codes, klickt der Benutzer die Schaltfläche "Weiterleiten".  
   
-##  <a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
+##  <a name="onpresshomebutton"></a>  CMFCTasksPane::OnPressHomeButton  
  Vom Framework aufgerufen, wenn der Benutzer auf die Navigationsschaltfläche Startseite klickt.  
   
 ```  
@@ -1304,7 +1299,7 @@ virtual void OnPressHomeButton();
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum benutzerdefinierten Code ausführen, wenn der Benutzer auf die Navigationsschaltfläche Startseite klickt.  
   
-##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
+##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton  
 
   
 ```  
@@ -1319,7 +1314,7 @@ virtual void OnPressOtherButton(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData  
 
   
 ```  
@@ -1333,7 +1328,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI  
 
   
 ```  
@@ -1348,7 +1343,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage  
 
   
 ```  
@@ -1362,7 +1357,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout  
 
   
 ```  
@@ -1374,7 +1369,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
+##  <a name="removeallgroups"></a>  CMFCTasksPane::RemoveAllGroups  
  Entfernt alle Gruppen auf der angegebenen Seite.  
   
 ```  
@@ -1388,14 +1383,14 @@ void RemoveAllGroups(int nPageIdx = 0);
 ### <a name="remarks"></a>Hinweise  
  Entfernt alle Gruppen auf der Seite gemäß `nPageIdx`, oder alle Gruppen, wenn nur eine Standardseite vorhanden ist.  
   
-##  <a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
+##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  Entfernt alle Seiten aus dem Aufgabenbereich mit Ausnahme der Standardseite (erste).  
   
 ```  
 void RemoveAllPages();
 ```  
   
-##  <a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
+##  <a name="removealltasks"></a>  CMFCTasksPane::RemoveAllTasks  
  Entfernt alle Aufgaben aus der angegebenen Gruppe.  
   
 ```  
@@ -1406,7 +1401,7 @@ void RemoveAllTasks(int nGroup);
  [in] `nGroup`  
  Gibt den nullbasierten Index der Gruppe an.  
   
-##  <a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
+##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Entfernt eine Gruppe.  
   
 ```  
@@ -1422,7 +1417,7 @@ void RemoveGroup(int nGroup);
   
  Wenn das Framework eine Gruppe entfernt, werden alle Tasks und Benutzer Windows zugeordnet zerstört.  
   
-##  <a name="removepage"></a>CMFCTasksPane::RemovePage  
+##  <a name="removepage"></a>  CMFCTasksPane::RemovePage  
  Entfernt eine angegebene Seite aus dem Aufgabenbereich.  
   
 ```  
@@ -1433,7 +1428,7 @@ void RemovePage(int nPageIdx);
  [in] `nPageIdx`  
  Gibt den nullbasierten Index des zu entfernenden Seite.  
   
-##  <a name="removetask"></a>CMFCTasksPane::RemoveTask  
+##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Entfernt eine Aufgabe aus einer Aufgabengruppe.  
   
 ```  
@@ -1451,12 +1446,12 @@ BOOL RemoveTask(
  Gibt den nullbasierten Index des den Task zum Entfernen an.  
   
  [in] `bRedraw`  
- `TRUE`zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
+ `TRUE` zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Funktion erfolgreich ist. `FALSE` Wenn `nGroup` oder `nTask` ist ungültig.  
+ `TRUE` Wenn die Funktion erfolgreich ist. `FALSE` Wenn `nGroup` oder `nTask` ist ungültig.  
   
-##  <a name="savestate"></a>CMFCTasksPane::SaveState  
+##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
   
 ```  
@@ -1475,7 +1470,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="serialize"></a>CMFCTasksPane::Serialize  
+##  <a name="serialize"></a>  CMFCTasksPane::Serialize  
 
   
 ```  
@@ -1487,7 +1482,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
+##  <a name="setactivepage"></a>  CMFCTasksPane::SetActivePage  
  Macht die angegebene Seite im Aufgabenbereich.  
   
 ```  
@@ -1501,7 +1496,7 @@ void SetActivePage(int nPageIdx);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überprüft, wenn die `nPageIdx` ist ungültig.  
   
-##  <a name="setcaption"></a>CMFCTasksPane::SetCaption  
+##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  Legt den Beschriftungsnamen eines Aufgabenbereichs fest.  
   
 ```  
@@ -1515,7 +1510,7 @@ void SetCaption(LPCTSTR lpszName);
 ### <a name="remarks"></a>Hinweise  
  Ein Aufgabenbereich hat mehrere Seiten, die Standardseite die Beschriftung, die mit dieser Funktion festgelegt wurde.  
   
-##  <a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
+##  <a name="setgroupcaptionheight"></a>  CMFCTasksPane::SetGroupCaptionHeight  
  Legt die Höhe einer Gruppenbeschriftung fest.  
   
 ```  
@@ -1531,7 +1526,7 @@ void SetGroupCaptionHeight(int n = -1);
   
  Wenn `n` ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Die Überschriftenhöhe Standard ist 25 Pixel.  
   
-##  <a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
+##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  Legt den horizontalen Offset einer Gruppenbeschriftung fest.  
   
 ```  
@@ -1542,7 +1537,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
  [in] `n`  
  Gibt den horizontale Offset von der gruppenbeschriftung an.  
   
-##  <a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
+##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Legt den vertikalen Offset einer Gruppenbeschriftung fest.  
   
 ```  
@@ -1553,7 +1548,7 @@ void SetGroupCaptionVertOffset(int n = -1);
  [in] `n`  
  Gibt den vertikalen Offset in Pixel, der die gruppenbeschriftung an.  
   
-##  <a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
+##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Legt einen Gruppennamen fest.  
   
 ```  
@@ -1570,9 +1565,9 @@ BOOL SetGroupName(
  Gibt den Namen der Gruppe an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Gruppenname festgelegt wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn der Gruppenname festgelegt wurde; andernfalls `FALSE`.  
   
-##  <a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
+##  <a name="setgrouptextcolor"></a>  CMFCTasksPane::SetGroupTextColor  
  Legt die Textfarbe für eine Gruppenbeschriftung fest.  
   
 ```  
@@ -1593,9 +1588,9 @@ BOOL SetGroupTextColor(
  Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, wird die standardmäßige Hervorhebungsfarbe verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Textfarbe für die Gruppe wurde erfolgreich geändert wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn die Textfarbe für die Gruppe wurde erfolgreich geändert wurde. andernfalls `FALSE`.  
   
-##  <a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
+##  <a name="setgroupvertoffset"></a>  CMFCTasksPane::SetGroupVertOffset  
  Legt den vertikalen Offset für eine Gruppe fest.  
   
 ```  
@@ -1611,7 +1606,7 @@ void SetGroupVertOffset(int n = -1);
   
  Rufen Sie diese Methode, um die Ränder der Elemente des Vorgangs anpassen. Wenn `n` ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Der Standardwert beträgt 15 Pixel.  
   
-##  <a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
+##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  Legt den horizontalen Rand an.  
   
 ```  
@@ -1627,7 +1622,7 @@ void SetHorzMargin(int n = -1);
   
  Wenn n-1 ist, und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneHorzMargin`). Die horizontale Standardrand beträgt 12 Pixel.  
   
-##  <a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
+##  <a name="seticonslist"></a>  CMFCTasksPane::SetIconsList  
  Legt die Bildliste fest.  
   
 ```  
@@ -1657,7 +1652,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  Diese Methode ordnet eine Bildliste mit dem Aufgabenbereich-Steuerelement. Das Symbol für eine Aufgabe festgelegt, beim Aufrufen von [cmfctaskspane:: Addtask](#addtask)legen `nTaskIcon` auf den entsprechenden nullbasierten Index in diese Bildliste.  
   
-##  <a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
+##  <a name="setpagecaption"></a>  CMFCTasksPane::SetPageCaption  
  Legt den Beschriftungstext für eine Aufgabenbereichsseite fest.  
   
 ```  
@@ -1676,7 +1671,7 @@ void SetPageCaption(
 ### <a name="remarks"></a>Hinweise  
  Ein Aufgabenbereich hat mehrere Seiten, die Standardseite die Beschriftung, die mit dieser Methode festgelegt wurde.  
   
-##  <a name="settaskname"></a>CMFCTasksPane::SetTaskName  
+##  <a name="settaskname"></a>  CMFCTasksPane::SetTaskName  
  Legt den Namen für eine Aufgabe fest.  
   
 ```  
@@ -1697,9 +1692,9 @@ BOOL SetTaskName(
  Gibt den Aufgabennamen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Taskname festgelegt wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn der Taskname festgelegt wurde; andernfalls `FALSE`.  
   
-##  <a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
+##  <a name="settaskshorzoffset"></a>  CMFCTasksPane::SetTasksHorzOffset  
  Legt den horizontalen Offset für Aufgaben.  
   
 ```  
@@ -1717,7 +1712,7 @@ void SetTasksHorzOffset(int n = -1);
   
  Der horizontalen Offset der Standardwert ist 12 Pixel.  
   
-##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
+##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset  
 
   
 ```  
@@ -1729,7 +1724,7 @@ void SetTasksIconHorzOffset(int n = -1);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
+##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset  
 
   
 ```  
@@ -1741,7 +1736,7 @@ void SetTasksIconVertOffset(int n = -1);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
+##  <a name="settasktextcolor"></a>  CMFCTasksPane::SetTaskTextColor  
  Legt die Textfarbe für eine Aufgabe fest.  
   
 ```  
@@ -1766,9 +1761,9 @@ BOOL SetTaskTextColor(
  Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, verwendet diese Methode die standardmäßige Hervorhebungsfarbe.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Textfarbe für den Task erfolgreich festgelegt wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn die Textfarbe für den Task erfolgreich festgelegt wurde. andernfalls `FALSE`.  
   
-##  <a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
+##  <a name="setvertmargin"></a>  CMFCTasksPane::SetVertMargin  
  Legt den vertikalen Rand an.  
   
 ```  
@@ -1784,7 +1779,7 @@ void SetVertMargin(int n = -1);
   
  Wenn `n` ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneVertMargin`). Der Standardrand beträgt 12 Pixel.  
   
-##  <a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
+##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  Legt die Höhe für ein Window-Steuerelement fest.  
   
 ```  
@@ -1810,12 +1805,12 @@ BOOL SetWindowHeight(
  Gibt die Höhe festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Höhe des Window-Steuerelement festgelegt wurde; `FALSE` Wenn `nGroup` ist ungültig oder, wenn `hwndTask` ist nicht vorhanden.  
+ `TRUE` Wenn die Höhe des Window-Steuerelement festgelegt wurde; `FALSE` Wenn `nGroup` ist ungültig oder, wenn `hwndTask` ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [CMFCTasksPane::AddWindow](#addwindow) Aufgaben im Zusammenhang mit Window-Steuerelemente hinzufügen.  
   
-##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString  
 
   
 ```  
@@ -1827,7 +1822,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="showtask"></a>CMFCTasksPane::ShowTask  
+##  <a name="showtask"></a>  CMFCTasksPane::ShowTask  
  Blendet eine Aufgabe ein oder aus.  
   
 ```  
@@ -1846,18 +1841,18 @@ BOOL ShowTask(
  Gibt den nullbasierten Index des Tasks anzeigen oder ausblenden.  
   
  [in] `bShow`  
- `TRUE`um die Aufgabe anzuzeigen; `FALSE` auf die Aufgabe auszublenden.  
+ `TRUE` um die Aufgabe anzuzeigen; `FALSE` auf die Aufgabe auszublenden.  
   
  [in] `bRedraw`  
- `TRUE`zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
+ `TRUE` zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Aufgabe wurde erfolgreich angezeigt oder ausgeblendet. `FALSE` , wenn die angegebene Gruppe oder der Task nicht vorhanden ist.  
+ `TRUE` Wenn die Aufgabe wurde erfolgreich angezeigt oder ausgeblendet. `FALSE` , wenn die angegebene Gruppe oder der Task nicht vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwendung [CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid) anzeigen oder Ausblenden der eine Aufgabe basierend auf der Befehls-ID.  
   
-##  <a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
+##  <a name="showtaskbycmdid"></a>  CMFCTasksPane::ShowTaskByCmdId  
  Blendet eine Aufgabe basierend auf der Befehls-ID ein oder aus.  
   
 ```  
@@ -1872,18 +1867,18 @@ BOOL ShowTaskByCmdId(
  Gibt die Befehls-ID des Tasks zum ein- oder ausblenden.  
   
  [in] `bShow`  
- `TRUE`um die Aufgabe anzuzeigen; `FALSE` auf die Aufgabe auszublenden.  
+ `TRUE` um die Aufgabe anzuzeigen; `FALSE` auf die Aufgabe auszublenden.  
   
  [in] `bRedraw`  
- `TRUE`zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
+ `TRUE` zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Aufgabe wurde erfolgreich angezeigt oder ausgeblendet. `FALSE` ist eine Aufgabe mit der angegebenen Befehls-ID ist nicht vorhanden.  
+ `TRUE` Wenn die Aufgabe wurde erfolgreich angezeigt oder ausgeblendet. `FALSE` ist eine Aufgabe mit der angegebenen Befehls-ID ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwendung [CMFCTasksPane::ShowTask](#showtask) anzeigen oder Ausblenden der eine Aufgabe basierend auf der Befehls-ID.  
   
-##  <a name="update"></a>CMFCTasksPane::Update  
+##  <a name="update"></a>  CMFCTasksPane::Update  
  Aktualisiert alle Steuerelemente in einem Aufgabenbereich.  
   
 ```  

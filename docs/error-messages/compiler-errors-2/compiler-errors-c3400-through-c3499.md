@@ -1,12 +1,9 @@
 ---
-title: "Compilerfehler Fehler C3400 über C3499 | Microsoft Docs"
-ms.custom: 
+title: Compilerfehler Fehler C3400 über C3499 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Compilerfehler Fehler C3400 über C3499
 
@@ -173,8 +168,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerfehler Fehler C3441|"*Deklaration*": "*Schlüsselwort*" kann nicht angewendet werden, nachdem die Klasse definiert wurde|
 |Compilerfehler Fehler C3442|Initialisieren mehrere Elemente von "Union": "*member1*'und'*member2*"|
 |Compilerfehler Fehler C3443|Der Standard-Memberinitialisierer für "*Klasse*' ist rekursiv|
-|Compilerfehler Fehler C3444|Leere Aggregatklasse*Klasse*' muss mit '{}' initialisiert werden|
-|Compilerfehler Fehler C3445|Copy-Liste-Initialisierung von "*Typ*' können keine expliziten Konstruktor|
+|Compilerfehler Fehler C3444|Leere Aggregatklasse*Klasse*"muss mit initialisiert werden"{}"|
+|[Compilerfehler Fehler C3445](compiler-error-c3445.md)|Copy-Liste-Initialisierung von "*Typ*' können keine expliziten Konstruktor|
 |[Compilerfehler C3446](compiler-error-c3446.md)|"*Klasse*': eine Standard-Memberinitialisierer ist nicht zulässig, für einen Member einer Wertklasse|
 |Compilerfehler Fehler C3447|Veraltet.|
 |Compilerfehler Fehler C3448|Veraltet.|

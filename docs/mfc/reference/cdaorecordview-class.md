@@ -1,12 +1,9 @@
 ---
 title: CDaoRecordView-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fffeed33d5b966faf511f60da740c39f2b91581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView-Klasse
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.  
@@ -64,7 +59,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 |[CDaoRecordView::OnMove](#onmove)|Wenn der aktuelle Datensatz geändert hat, wird für die Datenquelle aktualisiert, und klicken Sie dann wechselt zum angegebenen Datensatz (nächsten, vorherigen, ersten oder letzten).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Ansicht ist eine Formularansicht können Sie eine direkte Verbindung zum ein `CDaoRecordset` Objekt. Die Sicht aus einer Dialogfeldvorlagen-Ressource erstellt wird, und zeigt die Felder der `CDaoRecordset` Objekt in der Dialogfeldvorlage-Steuerelementen. Die `CDaoRecordView` Objekt verwendet Dialogdatenaustausch (DDX) und DAO-Datensatzfeldaustausch (DFX), um die Verschiebung von Daten zwischen den Steuerelementen im Formular und die Felder des Recordsets zu automatisieren. `CDaoRecordView`Außerdem stellt eine Standardimplementierung für das Verschieben von mit dem ersten nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren des Datensatzes in der Ansicht.  
+ Die Ansicht ist eine Formularansicht können Sie eine direkte Verbindung zum ein `CDaoRecordset` Objekt. Die Sicht aus einer Dialogfeldvorlagen-Ressource erstellt wird, und zeigt die Felder der `CDaoRecordset` Objekt in der Dialogfeldvorlage-Steuerelementen. Die `CDaoRecordView` Objekt verwendet Dialogdatenaustausch (DDX) und DAO-Datensatzfeldaustausch (DFX), um die Verschiebung von Daten zwischen den Steuerelementen im Formular und die Felder des Recordsets zu automatisieren. `CDaoRecordView` Außerdem stellt eine Standardimplementierung für das Verschieben von mit dem ersten nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren des Datensatzes in der Ansicht.  
   
 > [!NOTE]
 >  DAO-Datenbankklassen unterscheiden sich von den MFC-Datenbankklassen basierend auf der Open Database Connectivity (ODBC). Alle DAO-Datenbank-Klassennamen haben das Präfix "CDao". Sie können dennoch den Zugriff auf ODBC-Datenquellen mit den DAO-Klassen; DAO-Klassen bieten im Allgemeinen überlegene Funktionen auf, da sie das Microsoft Jet-Datenbankmodul verwenden.  
@@ -77,7 +72,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  Informationen über die standardmäßige Implementierung für das Verschieben von Datensatz zu Datensatz finden Sie unter `IsOnFirstRecord` und `IsOnLastRecord` und im Artikel [Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md), die gelten für beide `CRecordView` und `CDaoRecordView`.  
   
- `CDaoRecordView`behält den Überblick über die Position des Benutzers im Recordset, damit die Datensatzansicht die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an beiden Enden des Recordsets verschoben wird, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – z. B. Menüelemente und Symbolleisten-Schaltflächen – zum Verschieben in die gleiche Richtung weiter.  
+ `CDaoRecordView` behält den Überblick über die Position des Benutzers im Recordset, damit die Datensatzansicht die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an beiden Enden des Recordsets verschoben wird, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – z. B. Menüelemente und Symbolleisten-Schaltflächen – zum Verschieben in die gleiche Richtung weiter.  
   
  Weitere Informationen zu deklarieren und Verwenden der Datensatzansicht und Recordset-Klassen, finden Sie unter "Entwerfen und Erstellen einer Datensatzansicht" im Artikel [Datensatzansichten](../../data/record-views-mfc-data-access.md). Weitere Informationen wie von Datensatzansichten und deren Verwendung finden Sie im Artikel [Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md). Alle Artikel, die oben genannten gelten für beide `CRecordView` und `CDaoRecordView`.  
   
@@ -99,7 +94,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
  Wenn Sie ein Objekt eines Typs erstellen von abgeleiteten `CDaoRecordView`, rufen Sie eine der Formen des Konstruktors initialisieren das Ansichtsobjekt und identifizieren die Dialogressource, auf denen die Sicht basiert.  
   
 ```  
@@ -127,7 +122,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
  Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz des ersten Datensatzes im Recordset-Objekt, das diese Datensatzansicht zugeordnet ist.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL IsOnFirstRecord();
   
  Wenn der Benutzer auf den ersten Eintrag verschoben werden, haben mit der Benutzeroberfläche (z. B. Menüelemente oder Symbolleisten-Schaltflächen)-Objekte Framework deaktiviert für die Umstellung auf das erste oder der vorherige Datensatz.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
  Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz der letzte Datensatz in das Recordset-Objekt, das diese Datensatzansicht zugeordnet ist.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Das Ergebnis dieser Funktion ist zuverlässig, mit dem Unterschied, dass die Ansicht möglicherweise nicht erkennen Sie das Ende des Recordset-Objekts, bis der Benutzer hinaus verschoben wurde. Der Benutzer möglicherweise hinter dem letzten Datensatz zu verschieben, bevor die Datensatzansicht erkennen kann, müssen sie jede Benutzeroberflächenobjekte für das Verschieben in den nächsten oder letzten Datensatz deaktivieren. Wenn der Benutzer wird hinter dem letzten Datensatz verschoben, und klicken Sie dann zurück zum letzten Datensatz wechselt (oder davor), kann die Datensatzansicht Position des Benutzers im Recordset nachverfolgen und Benutzeroberflächenobjekte ordnungsgemäß deaktiviert.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
  Gibt einen Zeiger auf die `CDaoRecordset`-abgeleitetes Objekt der Datensatzansicht zugeordnet.  
   
 ```  
@@ -173,7 +168,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Weitere Informationen und Beispiele finden Sie im Artikel [Datensatzansichten: Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
  Rufen Sie diese Memberfunktion zum Wechseln zu einem anderen Datensatz des Recordsets und ihre Felder in die Steuerelemente der Datensatzansicht angezeigt.  
   
 ```  
@@ -184,13 +179,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Einer der folgenden Werte Standardbefehls-ID:  
   
-- `ID_RECORD_FIRST`Verschieben Sie auf den ersten Eintrag in das Recordset.  
+- `ID_RECORD_FIRST` Verschieben Sie auf den ersten Eintrag in das Recordset.  
   
-- `ID_RECORD_LAST`Wechselt zur letzten Datensatz des Recordsets.  
+- `ID_RECORD_LAST` Wechselt zur letzten Datensatz des Recordsets.  
   
-- `ID_RECORD_NEXT`Verschieben Sie in den nächsten Datensatz in das Recordset.  
+- `ID_RECORD_NEXT` Verschieben Sie in den nächsten Datensatz in das Recordset.  
   
-- `ID_RECORD_PREV`Wechseln Sie zum vorherigen Datensatz im Recordset.  
+- `ID_RECORD_PREV` Wechseln Sie zum vorherigen Datensatz im Recordset.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die Anforderung zum Verschieben von verweigert wurde.  

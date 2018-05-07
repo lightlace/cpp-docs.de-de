@@ -1,12 +1,9 @@
 ---
 title: CDaoWorkspace Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoWorkspace
@@ -71,17 +68,15 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96cc8325ce8084d62f05283b424ead222bc55dd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b249f8069ba12772d21d170b67236a5f013290ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace-Klasse
 Verwaltet eine benannte, kennwortgeschützte Datenbanksitzung eines einzelnen Benutzers von der Anmeldung bis zu Abmeldung.  
@@ -197,7 +192,7 @@ class CDaoWorkspace : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-##  <a name="append"></a>CDaoWorkspace::Append  
+##  <a name="append"></a>  CDaoWorkspace::Append  
  Rufen Sie diese Memberfunktion auf, nach dem Aufruf [erstellen](#create).  
   
 ```  
@@ -211,7 +206,7 @@ virtual void Append();
   
  Verwandte Informationen finden Sie im Thema "Append-Methode" DAO-Hilfe.  
   
-##  <a name="begintrans"></a>CDaoWorkspace::BeginTrans  
+##  <a name="begintrans"></a>  CDaoWorkspace::BeginTrans  
  Rufen Sie diese Memberfunktion zum Initiieren einer Transaktion.  
   
 ```  
@@ -229,7 +224,7 @@ void BeginTrans();
   
  Wenn Sie Transaktionen auf eine ODBC-Datenquelle von Berechtigungen für eine andere ODBC-Datenquelle isolieren möchten, finden Sie unter der [SetIsolateODBCTrans](#setisolateodbctrans) Memberfunktion.  
   
-##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
+##  <a name="cdaoworkspace"></a>  CDaoWorkspace::CDaoWorkspace  
  Erstellt ein `CDaoWorkspace`-Objekt.  
   
 ```  
@@ -247,7 +242,7 @@ CDaoWorkspace();
   
  Um einen Arbeitsbereich und der darin enthaltenen Objekte freizugeben, rufen Sie den des Arbeitsbereichsobjekts [schließen](#close) Memberfunktion.  
   
-##  <a name="close"></a>CDaoWorkspace::Close  
+##  <a name="close"></a>  CDaoWorkspace::Close  
  Rufen Sie diese Memberfunktion, um das Arbeitsbereichsobjekt im schließen.  
   
 ```  
@@ -264,7 +259,7 @@ virtual void Close();
   
  Verwandte Informationen finden Sie im Thema "Close-Methode" DAO-Hilfe.  
   
-##  <a name="committrans"></a>CDaoWorkspace::  
+##  <a name="committrans"></a>  CDaoWorkspace::  
  Rufen Sie diese Memberfunktion zum commit einer Transaktion – eine Gruppe von Änderungen und Updates auf eine oder mehrere Datenbanken in den Arbeitsbereich zu speichern.  
   
 ```  
@@ -282,7 +277,7 @@ void CommitTrans();
 > [!NOTE]
 >  Hierbei handelt es sich nicht um ein Zweiphasen-Commit-Mechanismus. Wenn ein Update nicht übernehmen, führt andere weiterhin commit.  
   
-##  <a name="compactdatabase"></a>CDaoWorkspace:: CompactDatabase  
+##  <a name="compactdatabase"></a>  CDaoWorkspace:: CompactDatabase  
  Rufen Sie diese Memberfunktion zum Komprimieren einer angegebenen Microsoft Jet (. MDB)-Datenbank.  
   
 ```  
@@ -375,7 +370,7 @@ static void PASCAL CompactDatabase(
   
  Weitere Informationen zum Komprimieren von Datenbanken finden Sie im Thema "CompactDatabase Method" DAO-Hilfe.  
   
-##  <a name="create"></a>CDaoWorkspace:: Create  
+##  <a name="create"></a>  CDaoWorkspace:: Create  
  Rufen Sie diese Memberfunktion, um ein neues Objekt des DAO-Arbeitsbereich zu erstellen und verknüpfen Sie sie mit der MFC `CDaoWorkspace` Objekt.  
   
 ```  
@@ -406,7 +401,7 @@ virtual void Create(
   
  Nach der **erstellen** Aufruf der, die Arbeitsbereichsobjekt befindet sich im geöffneten Zustand für die Verwendung bereit. Rufen Sie nicht **öffnen** nach **erstellen**. Rufen Sie nicht **erstellen** , wenn der Arbeitsbereich in der Auflistung der Arbeitsbereiche ist bereits vorhanden. **Erstellen Sie** Datenbankmodul initialisiert, wenn es für Ihre Anwendung nicht bereits initialisiert wurde.  
   
-##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
+##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount  
  Rufen Sie diese Memberfunktion zum Abrufen der Anzahl von DAO-Datenbankobjekten in den Arbeitsbereich datenbankauflistung – die Anzahl der geöffneten Datenbanken im Arbeitsbereich.  
   
 ```  
@@ -417,9 +412,9 @@ short GetDatabaseCount();
  Die Anzahl der geöffneten Datenbanken im Arbeitsbereich.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetDatabaseCount`ist nützlich, wenn alle definierten Datenbanken in den Arbeitsbereich datenbankauflistung durchlaufen werden sollen. Informationen zu einer bestimmten Datenbank in der Auflistung zu erhalten, finden Sie unter [GetDatabaseInfo](#getdatabaseinfo). Typische Verwendung ist, rufen Sie `GetDatabaseCount` für die Anzahl der geöffneten Datenbanken, klicken Sie dann verwenden Sie diese Zahl als Schleifenindex für wiederholte Aufrufe von `GetDatabaseInfo`.  
+ `GetDatabaseCount` ist nützlich, wenn alle definierten Datenbanken in den Arbeitsbereich datenbankauflistung durchlaufen werden sollen. Informationen zu einer bestimmten Datenbank in der Auflistung zu erhalten, finden Sie unter [GetDatabaseInfo](#getdatabaseinfo). Typische Verwendung ist, rufen Sie `GetDatabaseCount` für die Anzahl der geöffneten Datenbanken, klicken Sie dann verwenden Sie diese Zahl als Schleifenindex für wiederholte Aufrufe von `GetDatabaseInfo`.  
   
-##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
+##  <a name="getdatabaseinfo"></a>  CDaoWorkspace::GetDatabaseInfo  
  Rufen Sie diese Memberfunktion, um verschiedene Arten von Informationen über eine Datenbank geöffnet, in dem Arbeitsbereich zu erhalten.  
   
 ```  
@@ -445,11 +440,11 @@ void GetDatabaseInfo(
  `dwInfoOptions`  
  Optionen, die angeben, welche Informationen über die Datenbank abgerufen. Die verfügbaren Optionen sind hier aufgeführt, zusammen mit der sie die Funktion zurückgibt verursachen:  
   
-- `AFX_DAO_PRIMARY_INFO`(Standard) Name, aktualisiert werden kann, Transaktionen  
+- `AFX_DAO_PRIMARY_INFO` (Standard) Name, aktualisiert werden kann, Transaktionen  
   
-- `AFX_DAO_SECONDARY_INFO`Primäre Informationen plus: Abfragetimeout Version Reihenfolge sortieren  
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Abfragetimeout Version Reihenfolge sortieren  
   
-- `AFX_DAO_ALL_INFO`Primäre und sekundäre Informationen plus: Verbinden  
+- `AFX_DAO_ALL_INFO` Primäre und sekundäre Informationen plus: Verbinden  
   
  `lpszName`  
  Der Name des Datenbankobjekts, für die Suche nach Namen. Der Name ist eine Zeichenfolge mit bis zu 14 Zeichen, die das neuen Arbeitsbereich-Objekt eindeutig bezeichnet.  
@@ -459,7 +454,7 @@ void GetDatabaseInfo(
   
  Eine Beschreibung der Informationen zurückgegeben `dbinfo`, finden Sie unter der [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) Struktur. Diese Struktur enthält Member, die die Elemente in der Beschreibung der oben aufgeführten Informationen entsprechen `dwInfoOptions`. Wenn Sie die Informationen auf einer Ebene anfordern, erhalten Sie Informationen für alle vorherigen Ebenen sowie an.  
   
-##  <a name="getinipath"></a>CDaoWorkspace::GetIniPath  
+##  <a name="getinipath"></a>  CDaoWorkspace::GetIniPath  
  Rufen Sie diese Memberfunktion um den Speicherort der Microsoft Jet-Datenbank-Engine Initialisierung Einstellungen in der Windows-Registrierung zu erhalten.  
   
 ```  
@@ -474,7 +469,7 @@ static CString PASCAL GetIniPath();
   
  Weitere Informationen finden Sie unter den Themen "IniPath-Eigenschaft" und "Anpassen von Windows-Registrierung Einstellungen für den Datenzugriff" DAO-Hilfe.  
   
-##  <a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
+##  <a name="getisolateodbctrans"></a>  CDaoWorkspace::GetIsolateODBCTrans  
  Rufen Sie diese Memberfunktion um den aktuellen Wert der Eigenschaft DAO IsolateODBCTrans für den Arbeitsbereich zu erhalten.  
   
 ```  
@@ -491,7 +486,7 @@ BOOL GetIsolateODBCTrans();
   
  Verwandte Informationen finden Sie im Thema "IsolateODBCTrans-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
+##  <a name="getlogintimeout"></a>  CDaoWorkspace::GetLoginTimeout  
  Rufen Sie diese Memberfunktion um den aktuellen Wert der DAO-LoginTimeout-Eigenschaft für den Arbeitsbereich zu erhalten.  
   
 ```  
@@ -508,7 +503,7 @@ static short PASCAL GetLoginTimeout();
   
  Verwandte Informationen finden Sie im Thema "LoginTimeout-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getname"></a>CDaoWorkspace::GetName  
+##  <a name="getname"></a>  CDaoWorkspace::GetName  
  Rufen Sie diese Memberfunktion zum Abrufen des benutzerdefinierten Namens für den DAO-Arbeitsbereich-Objekt zugrunde liegende der `CDaoWorkspace` Objekt.  
   
 ```  
@@ -523,7 +518,7 @@ CString GetName();
   
  Verwandte Informationen finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getusername"></a>CDaoWorkspace::GetUserName  
+##  <a name="getusername"></a>  CDaoWorkspace::GetUserName  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens des Besitzers des Arbeitsbereichs.  
   
 ```  
@@ -538,7 +533,7 @@ CString GetUserName();
   
  Informationen zum Aufrufen von DAO direkt, finden Sie unter [technischen Hinweis 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md). Verwandte Informationen finden Sie im Thema "UserName-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getversion"></a>CDaoWorkspace::GetVersion  
+##  <a name="getversion"></a>  CDaoWorkspace::GetVersion  
  Rufen Sie diese Memberfunktion zum Ermitteln der Version von Microsoft Jet-Datenbankmodul verwendet.  
   
 ```  
@@ -553,7 +548,7 @@ static CString PASCAL GetVersion();
   
  Verwandte Informationen finden Sie im Thema "Version-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
+##  <a name="getworkspacecount"></a>  CDaoWorkspace::GetWorkspaceCount  
  Rufen Sie diese Memberfunktion zum Abrufen der Anzahl von DAO-Arbeitsbereich Objekten in das Datenbankmodul arbeitsbereicheauflistung.  
   
 ```  
@@ -564,9 +559,9 @@ short GetWorkspaceCount();
  Die Anzahl der geöffneten Arbeitsbereiche in der Auflistung der Arbeitsbereiche.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Anzahl umfasst keine geöffneten Arbeitsbereiche nicht auf die Auflistung angefügt. `GetWorkspaceCount`ist nützlich, wenn alle definierten Arbeitsbereiche in der Auflistung der Arbeitsbereiche durchlaufen werden sollen. Informationen zu einem bestimmten Arbeitsbereich in der Auflistung zu erhalten, finden Sie unter [GetWorkspaceInfo](#getworkspaceinfo). Typische Verwendung ist, rufen Sie `GetWorkspaceCount` für die Anzahl der geöffneten Arbeitsbereiche, dann verwenden Sie diese Zahl als Schleifenindex für wiederholte Aufrufe von `GetWorkspaceInfo`.  
+ Diese Anzahl umfasst keine geöffneten Arbeitsbereiche nicht auf die Auflistung angefügt. `GetWorkspaceCount` ist nützlich, wenn alle definierten Arbeitsbereiche in der Auflistung der Arbeitsbereiche durchlaufen werden sollen. Informationen zu einem bestimmten Arbeitsbereich in der Auflistung zu erhalten, finden Sie unter [GetWorkspaceInfo](#getworkspaceinfo). Typische Verwendung ist, rufen Sie `GetWorkspaceCount` für die Anzahl der geöffneten Arbeitsbereiche, dann verwenden Sie diese Zahl als Schleifenindex für wiederholte Aufrufe von `GetWorkspaceInfo`.  
   
-##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
+##  <a name="getworkspaceinfo"></a>  CDaoWorkspace::GetWorkspaceInfo  
  Rufen Sie diese Memberfunktion, um verschiedene Arten von Informationen über einen Arbeitsbereich öffnen, in der Sitzung zu erhalten.  
   
 ```  
@@ -592,11 +587,11 @@ void GetWorkspaceInfo(
  `dwInfoOptions`  
  Optionen, die angeben, welche Informationen über den Arbeitsbereich abrufen. Die verfügbaren Optionen sind hier aufgeführt, zusammen mit der sie die Funktion zurückgibt verursachen:  
   
-- `AFX_DAO_PRIMARY_INFO`(Standard) Name  
+- `AFX_DAO_PRIMARY_INFO` (Standard) Name  
   
-- `AFX_DAO_SECONDARY_INFO`Primäre Informationen plus: Benutzername  
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Benutzername  
   
-- `AFX_DAO_ALL_INFO`Primäre und sekundäre Informationen plus: ODBCTrans isolieren  
+- `AFX_DAO_ALL_INFO` Primäre und sekundäre Informationen plus: ODBCTrans isolieren  
   
  `lpszName`  
  Der Name des Arbeitsbereichsobjekts im für die Suche nach Namen. Der Name ist eine Zeichenfolge mit bis zu 14 Zeichen, die das neuen Arbeitsbereich-Objekt eindeutig bezeichnet.  
@@ -604,7 +599,7 @@ void GetWorkspaceInfo(
 ### <a name="remarks"></a>Hinweise  
  Eine Beschreibung der Informationen zurückgegeben `wkspcinfo`, finden Sie unter der [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) Struktur. Diese Struktur enthält Member, die die Elemente in der Beschreibung der oben aufgeführten Informationen entsprechen `dwInfoOptions`. Wenn Sie die Informationen auf einer Ebene anfordern, erhalten Sie Informationen zu vorherigen Ebenen sowie an.  
   
-##  <a name="idle"></a>CDaoWorkspace::Idle  
+##  <a name="idle"></a>  CDaoWorkspace::Idle  
  Rufen Sie **Leerlauf** bereitzustellen, das Datenbankmodul die Möglichkeit zum Ausführen von Hintergrundaufgaben, die aufgrund von intensiver Datenverarbeitung möglicherweise nicht auf dem neuesten Stand.  
   
 ```  
@@ -627,7 +622,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
   
  Verwandte Informationen finden Sie im Thema "Im Leerlauf Method" DAO-Hilfe.  
   
-##  <a name="isopen"></a>CDaoWorkspace::IsOpen  
+##  <a name="isopen"></a>  CDaoWorkspace::IsOpen  
  Rufen Sie diese Memberfunktion, um zu bestimmen, ob die `CDaoWorkspace` -Objekts geöffnet ist – d. h., ob das MFC-Objekt durch einen Aufruf von initialisiert wurde [öffnen](#open) oder einen Aufruf von [erstellen](#create).  
   
 ```  
@@ -640,7 +635,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Hinweise  
  Sie können keine der Memberfunktionen eines Arbeitsbereichs Funktionen aufrufen, die im geöffneten Zustand ist.  
   
-##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
+##  <a name="m_pdaoworkspace"></a>  CDaoWorkspace::m_pDAOWorkspace  
  Ein Zeiger auf das zugrunde liegende DAO-Arbeitsbereich "-Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -648,7 +643,7 @@ BOOL IsOpen() const;
   
  Informationen zum direkten Zugriff auf DAO-Objekten finden Sie unter [technischen Hinweis 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-##  <a name="open"></a>CDaoWorkspace::Open  
+##  <a name="open"></a>  CDaoWorkspace::Open  
  Öffnet explizit eine Arbeitsbereichsobjekt, das DAO-Standardarbeitsbereich zugeordnet.  
   
 ```  
@@ -676,7 +671,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 |[GetIniPath](#getinipath)|[Im Leerlauf](#idle)|[SetIniPath](#setinipath)|  
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|  
   
-##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
+##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase  
  Rufen Sie diese Memberfunktion auf, wenn Sie versuchen, eine beschädigte Datenbank zu reparieren, die das Microsoft Jet-Datenbankmodul greift auf müssen.  
   
 ```  
@@ -697,7 +692,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
   
  Weitere Informationen zum Reparieren von Datenbanken finden Sie im Thema "RepairDatabase Method" DAO-Hilfe.  
   
-##  <a name="rollback"></a>CDaoWorkspace::Rollback  
+##  <a name="rollback"></a>  CDaoWorkspace::Rollback  
  Rufen Sie diese Memberfunktion, um die aktuelle Transaktion zu beenden und alle Datenbanken in den Arbeitsbereich, deren Bedingung wiederherstellen, bevor die Transaktion gestartet wurde.  
   
 ```  
@@ -714,7 +709,7 @@ void Rollback();
 > [!NOTE]
 >  Wenn Sie eine Transaktion zu beginnen, zeichnet das Datenbankmodul seine Vorgänge in einer Datei, die in das Verzeichnis, angegeben durch die Umgebungsvariable "TEMP" auf der Arbeitsstation gespeichert. Wenn die Transaktionsprotokolldatei den verfügbaren Speicher auf dem TEMPORÄREN Laufwerk ausgeschöpft hat, verursacht das Datenbankmodul MFC ermöglicht, lösen eine `CDaoException` (DAO-Fehler 2004). An diesem Punkt ist beim Aufrufen **CommitTrans**, eine unbestimmte Anzahl von Vorgängen wird ein Commit ausgeführt, aber die verbleibenden unvollständigen Vorgänge verloren, und der Vorgang wurde neu gestartet werden. Aufrufen von **Rollback** frei das Transaktionsprotokoll und ein Rollback für alle Vorgänge aus, in der Transaktion.  
   
-##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
+##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword  
  Rufen Sie diese Memberfunktion, um das Standardkennwort festzulegen, das das Datenbankmodul verwendet, wenn ein Arbeitsbereichsobjekt im ohne ein bestimmtes Kennwort erstellt wird.  
   
 ```  
@@ -740,7 +735,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
   
  Weitere Informationen zur Sicherheit finden Sie im Thema "Berechtigungen Property" in der DAO-Hilfe. Weitere Informationen finden Sie unter den Themen "DefaultPassword-Eigenschaft" und "DefaultUser Property" in der DAO-Hilfe.  
   
-##  <a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
+##  <a name="setdefaultuser"></a>  CDaoWorkspace::SetDefaultUser  
  Rufen Sie diese Memberfunktion um den Standardbenutzernamen festzulegen, den das Datenbankmodul verwendet, wenn ein Arbeitsbereichsobjekt ohne einen bestimmten Benutzernamen erstellt wird.  
   
 ```  
@@ -749,7 +744,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parameter  
  `lpszDefaultUser`  
- Der Standardname für die Benutzer. Ein Benutzername kann 1 bis 20 Zeichen lang sein und Buchstaben, Zeichen mit Akzenten, Zahlen, Leerzeichen und Symbole mit Ausnahme von: "(Anführungszeichen) / (Schrägstrich), \ (umgekehrter Schrägstrich), \[ \] (Klammern): (Doppelpunkt) &#124; (senkrechter Strich), \< (kleiner-als-Zeichen), > (größer-als-Zeichen), + (Pluszeichen) = (Gleichheitszeichen), Semikolon (;), (Komma), (Fragezeichen) * (Sternchen), führende Leerzeichen und Steuerzeichen (ASCII 00 und ASCII-31). Verwandte Informationen finden Sie im Thema "UserName-Eigenschaft" DAO-Hilfe.  
+ Der Standardname für die Benutzer. Ein Benutzername kann 1 bis 20 Zeichen lang sein und Buchstaben, Zeichen mit Akzenten, Zahlen, Leerzeichen und Symbole mit Ausnahme von: "(Anführungszeichen) / (Schrägstrich), \ (umgekehrter Schrägstrich), \[ \] (Klammern): (Doppelpunkt), &#124; () senkrechter Strich) \< (kleiner-als-Zeichen), > (größer-als-Zeichen), + (Pluszeichen) = (Gleichheitszeichen), Semikolon (;), (Komma), (Fragezeichen) * (Sternchen), führende Leerzeichen und Steuerzeichen (ASCII 00 und ASCII-31). Verwandte Informationen finden Sie im Thema "UserName-Eigenschaft" DAO-Hilfe.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Standardname für den Benutzer, die Sie festlegen, gilt für neue Arbeitsbereiche, die Sie nach dem Aufruf erstellen. Wenn Sie nachfolgende Arbeitsbereiche erstellen, müssen Sie keinen Benutzernamen im Angeben der [erstellen](#create) aufrufen.  
@@ -766,7 +761,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
  Weitere Informationen finden Sie unter den Themen "DefaultUser-Eigenschaft" und "DefaultPassword-Eigenschaft" DAO-Hilfe.  
   
-##  <a name="setinipath"></a>CDaoWorkspace::SetIniPath  
+##  <a name="setinipath"></a>  CDaoWorkspace::SetIniPath  
  Rufen Sie diese Memberfunktion zum Angeben des Speicherorts der Windows-registrierungseinstellungen für das Microsoft Jet-Datenbankmodul.  
   
 ```  
@@ -781,11 +776,11 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
  Rufen Sie `SetIniPath` nur, wenn Sie spezielle Einstellungen angeben müssen. Weitere Informationen finden Sie im Thema "IniPath-Eigenschaft" DAO-Hilfe.  
   
 > [!NOTE]
->  Rufen Sie `SetIniPath` während der Anwendungsinstallation, nicht wenn die Anwendung ausgeführt wird. `SetIniPath`muss aufgerufen werden, bevor Sie alle Arbeitsbereiche, Datenbanken oder Recordsets öffnen. Andernfalls löst MFC eine Ausnahme aus.  
+>  Rufen Sie `SetIniPath` während der Anwendungsinstallation, nicht wenn die Anwendung ausgeführt wird. `SetIniPath` muss aufgerufen werden, bevor Sie alle Arbeitsbereiche, Datenbanken oder Recordsets öffnen. Andernfalls löst MFC eine Ausnahme aus.  
   
  Sie können diesen Mechanismus verwenden, so konfigurieren Sie das Datenbankmodul mit vom Benutzer bereitgestellte registrierungseinstellungen. Der Gültigkeitsbereich dieses Attributs ist auf die Anwendung beschränkt und kann nicht geändert werden, ohne Ihre Anwendung neu zu starten.  
   
-##  <a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
+##  <a name="setisolateodbctrans"></a>  CDaoWorkspace::SetIsolateODBCTrans  
  Rufen Sie diese Memberfunktion um den Wert der Eigenschaft für den Arbeitsbereich DAO IsolateODBCTrans festzulegen.  
   
 ```  
@@ -801,7 +796,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
   
  Einige ODBC-Server, z. B. Microsoft SQL Server, gestatten keine gleichzeitige Transaktionen über eine einzelne Verbindung. Wenn Sie mehr als eine Transaktion zu einem Zeitpunkt Ausstehend für eine Datenbank dieser Art verfügen müssen, legen Sie die IsolateODBCTrans-Eigenschaft auf **"true"** für jeden Arbeitsbereich, sobald es zu öffnen. Dies erzwingt eine separate ODBC-Verbindung für jeden Arbeitsbereich.  
   
-##  <a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>  CDaoWorkspace::SetLoginTimeout  
  Rufen Sie diese Memberfunktion um den Wert der DAO-LoginTimeout-Eigenschaft für den Arbeitsbereich festzulegen.  
   
 ```  

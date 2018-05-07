@@ -1,12 +1,9 @@
 ---
 title: CMFCColorPickerCtrl-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorPickerCtrl
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c015df63d3032a8616f7f19614376aa966d89b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl-Klasse
 Die `CMFCColorPickerCtrl` -Klasse bietet eine Funktionalität für ein Steuerelement, das verwendet wird, um Farben auszuwählen.  
@@ -141,7 +136,7 @@ class CMFCColorPickerCtrl : public CButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcolorpickerctrl.h  
   
-##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
+##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl  
  Erstellt ein `CMFCColorPickerCtrl`-Objekt.  
   
 ```  
@@ -152,7 +147,7 @@ CMFCColorPickerCtrl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
+##  <a name="drawcursor"></a>  CMFCColorPickerCtrl::DrawCursor  
  Vom Framework aufgerufen, bevor ein Cursor, der der ausgewählten Farbe angezeigt wird.  
   
 ```  
@@ -171,7 +166,7 @@ virtual void DrawCursor(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie die Form des Cursors zu ändern, die auf die ausgewählte Farbe verweist müssen.  
   
-##  <a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
+##  <a name="getcolor"></a>  CMFCColorPickerCtrl::GetColor  
  Ruft die Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -183,7 +178,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
+##  <a name="gethls"></a>  CMFCColorPickerCtrl::GetHLS  
  Ruft die Werte für Farbton, Intensität und Sättigung der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -205,7 +200,7 @@ void GetHLS(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
+##  <a name="gethue"></a>  CMFCColorPickerCtrl::GetHue  
  Ruft den Farbtonkomponente der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -217,7 +212,7 @@ double GetHue() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
+##  <a name="getluminance"></a>  CMFCColorPickerCtrl::GetLuminance  
  Ruft die Komponente Intensität der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -229,7 +224,7 @@ double GetLuminance() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
+##  <a name="getsaturation"></a>  CMFCColorPickerCtrl::GetSaturation  
  Ruft ab, der Sättigungswert der ausgewählten Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -241,7 +236,7 @@ double GetSaturation() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
+##  <a name="selectcellhexagon"></a>  CMFCColorPickerCtrl::SelectCellHexagon  
  Legt die aktuelle Farbe auf die durch den angegebenen Komponenten der RGB-Farbe oder die angegebene Zelle Sechseck definierte Farbe fest.  
   
 ```  
@@ -280,7 +275,7 @@ BOOL SelectCellHexagon(
   
  Die zweite Überladung dieser Methode legt die aktuelle Farbe auf die Farbe von der Zelle Sechseck, auf das von der angegebenen Cursorposition fest.  
   
-##  <a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
+##  <a name="setcolor"></a>  CMFCColorPickerCtrl::SetColor  
  Legt die aktuelle Farbe auf den angegebenen Wert der RGB-Farbe.  
   
 ```  
@@ -293,7 +288,7 @@ void SetColor(COLORREF Color);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
+##  <a name="sethls"></a>  CMFCColorPickerCtrl::SetHLS  
  Legt die aktuelle Farbe auf den angegebenen HLS-Farbwert fest.  
   
 ```  
@@ -315,11 +310,11 @@ void SetHLS(
  Ein Wert zu einer Überlastung.  
   
  [in] `bInvalidate`  
- `TRUE`Erzwingen Sie das Fenster, um sofort auf die neu ausgewählte Farbe zu aktualisieren; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
+ `TRUE` Erzwingen Sie das Fenster, um sofort auf die neu ausgewählte Farbe zu aktualisieren; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
+##  <a name="sethue"></a>  CMFCColorPickerCtrl::SetHue  
  Ändert den Farbton der zurzeit ausgewählte Farbe an.  
   
 ```  
@@ -332,7 +327,7 @@ void SetHue(double Hue);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
+##  <a name="setluminance"></a>  CMFCColorPickerCtrl::SetLuminance  
  Ändert die Intensität der zurzeit ausgewählte Farbe an.  
   
 ```  
@@ -345,7 +340,7 @@ void SetLuminance(double Luminance);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
+##  <a name="setluminancebarwidth"></a>  CMFCColorPickerCtrl::SetLuminanceBarWidth  
  Legt die Breite des Balkens Intensität in den Farben-Auswahlsteuerelement fest.  
   
 ```  
@@ -359,7 +354,7 @@ void SetLuminanceBarWidth(int w);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Größe von der Intensität-Leiste auf der **benutzerdefinierte** Farben-Auswahlsteuerelement auf der Registerkarte. Die `w` Parameter gibt die neue Breite des Balkens Intensität an. Der Wert der Zeilenbreite wird ignoriert, wenn sie drei Viertel der Breite des Clientbereichs überschreitet.  
   
-##  <a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
+##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Legt die erste ausgewählte Farbe an.  
   
 ```  
@@ -373,7 +368,7 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, wenn die Farben-Auswahlsteuerelement initialisiert wird.  
   
-##  <a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
+##  <a name="setpalette"></a>  CMFCColorPickerCtrl::SetPalette  
  Legt die aktuelle Farbpalette.  
   
 ```  
@@ -387,7 +382,7 @@ void SetPalette(CPalette* pPalette);
 ### <a name="remarks"></a>Hinweise  
  Farben-Palette definiert das Array der Farben, das angezeigt werden in den Farben-Auswahlsteuerelement an.  
   
-##  <a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
+##  <a name="setsaturation"></a>  CMFCColorPickerCtrl::SetSaturation  
  Ändert die Sättigung der zurzeit ausgewählte Farbe an.  
   
 ```  
@@ -400,7 +395,7 @@ void SetSaturation(double Saturation);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="settype"></a>CMFCColorPickerCtrl::SetType  
+##  <a name="settype"></a>  CMFCColorPickerCtrl::SetType  
  Legt den Typ des anzuzeigenden Farben-Auswahlsteuerelement an.  
   
 ```  

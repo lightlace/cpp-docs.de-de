@@ -1,13 +1,10 @@
 ---
 title: Initialisieren von Dokumenten und Ansichten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f80d870f9804454dc652fdda00f34fcdb7a52062
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e46d130f535076c2591101ab57423db1130ef749
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initializing-documents-and-views"></a>Initialisieren von Dokumenten und Ansichten
 Dokumente werden auf zwei unterschiedliche Arten erstellt werden, damit Ihre Dokumentklasse beide Methoden unterstützen. Erstens kann der Benutzer ein neues, leeres Dokument mit dem Befehl neue Datei erstellen. In diesem Fall initialisiert das Dokument in der Ihre Überschreibung der [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) Memberfunktion der Klasse [CDocument](../mfc/reference/cdocument-class.md). Zweitens kann der Benutzer verwenden den Befehl Öffnen im Menü Datei auf ein neues Dokument erstellen, deren Inhalt aus einer Datei gelesen werden. In diesem Fall initialisiert das Dokument in der Ihre Überschreibung der [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) Memberfunktion der Klasse **CDocument**. Wenn beide Initialisierungen identisch sind, können Sie eine allgemeine Memberfunktion aufrufen, aus der beiden Außerkraftsetzungen oder `OnOpenDocument` erreichen `OnNewDocument` so initialisieren ein sauberes Dokument und anschließend den öffnen-Vorgang abzuschließen.  

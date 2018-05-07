@@ -1,13 +1,10 @@
 ---
 title: Erstellen einer MFC-Anwendung im Webbrowserstil | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Erstellen einer MFC-Anwendung im Webbrowserstil
 Eine Web-Anwendung im Webbrowserstil kann Informationen aus dem Internet (z. B. HTML- oder aktive Dokumente) oder einem Intranet als auch Ordner im lokalen Dateisystem und in einem Netzwerk zugreifen. Durch Ableiten von der Anwendung Ansichtsklasse aus [CHtmlView](../../mfc/reference/chtmlview-class.md)effektiv Sie machen der Anwendung einen Webbrowser, indem Sie die Ansicht mit dem WebBrowser-Steuerelement bereitstellen.  
@@ -52,7 +47,7 @@ Eine Web-Anwendung im Webbrowserstil kann Informationen aus dem Internet (z. B. 
   
  Da `CHtmlView` implementiert einfach die Microsoft Web Browsersteuerelement an, die Unterstützung für das Drucken ist nicht wie andere [CView](../../mfc/reference/cview-class.md)-abgeleitete Klassen. Das WebBrowser-Steuerelement implementiert stattdessen die Benutzeroberfläche des Druckers und den Druckvorgang. Folglich `CHtmlView` wird nicht unterstützt, Seitenansicht, und das Framework bietet keine für andere drucken Unterstützungsfunktionen: z. B. [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), und [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), die in anderen MFC-Anwendungen verfügbar sind.  
   
- `CHtmlView`Dient als Wrapper für das Webbrowser-Steuerelement, das Ihre Anwendung in einer Web- oder eine HTML-Seite angezeigt gewährt. Der Assistent erstellt eine Überschreibung der [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) -Funktion in Ansichtsklasse, sodass ein Link auf der Website von Microsoft Visual C++:  
+ `CHtmlView` Dient als Wrapper für das Webbrowser-Steuerelement, das Ihre Anwendung in einer Web- oder eine HTML-Seite angezeigt gewährt. Der Assistent erstellt eine Überschreibung der [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) -Funktion in Ansichtsklasse, sodass ein Link auf der Website von Microsoft Visual C++:  
   
 ```  
 void CWebView::OnInitialUpdate()  

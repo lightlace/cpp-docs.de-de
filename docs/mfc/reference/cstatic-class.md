@@ -1,12 +1,9 @@
 ---
 title: CStatic Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatic
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3319535bdcf3693fcf9427572e3902f96261d33e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d3b1a5dcfc8481727bffd8b80e0bb1b230d56ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatic-class"></a>CStatic-Klasse
 Stellt die Funktionalität eines statischen Windows-Steuerelements bereit.  
@@ -102,7 +97,7 @@ class CStatic : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="create"></a>CStatic::Create  
+##  <a name="create"></a>  CStatic::Create  
  Die statischen Windows-Steuerelements erstellt und fügt es der `CStatic` Objekt.  
   
 ```  
@@ -159,7 +154,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
-##  <a name="cstatic"></a>CStatic::CStatic  
+##  <a name="cstatic"></a>  CStatic::CStatic  
  Erstellt ein `CStatic`-Objekt.  
   
 ```  
@@ -169,7 +164,7 @@ CStatic();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CStatic::DrawItem  
+##  <a name="drawitem"></a>  CStatic::DrawItem  
  Wird aufgerufen, durch das Framework ein vom Besitzer gezeichnetes statisches Steuerelement gezeichnet werden soll.  
   
 ```  
@@ -183,7 +178,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion zum Implementieren der Zeichnung für ein vom Besitzer gezeichnetes **CStatic** Objekt (das Steuerelement hat das Format **SS_OWNERDRAW**).  
   
-##  <a name="getbitmap"></a>CStatic::GetBitmap  
+##  <a name="getbitmap"></a>  CStatic::GetBitmap  
  Ruft das Handle für die Bitmap, die zuvor festgelegten mit [SetBitmap](#setbitmap), d. h. zugeordneten `CStatic`.  
   
 ```  
@@ -196,7 +191,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="getcursor"></a>CStatic::GetCursor  
+##  <a name="getcursor"></a>  CStatic::GetCursor  
  Ruft das Handle des Cursors, der zuvor festgelegten mit [SetCursor](#setcursor), d. h. zugeordneten `CStatic`.  
   
 ```  
@@ -209,7 +204,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
+##  <a name="getenhmetafile"></a>  CStatic::GetEnhMetaFile  
  Ruft das Handle der zuvor festgelegten mit EMF [SetEnhMetafile](#setenhmetafile), d. h. zugeordneten `CStatic`.  
   
 ```  
@@ -222,7 +217,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="geticon"></a>CStatic::GetIcon  
+##  <a name="geticon"></a>  CStatic::GetIcon  
  Ruft das Handle des Symbols, mit bereits festgelegten [SetIcon](#seticon), d. h. zugeordneten `CStatic`.  
   
 ```  
@@ -235,7 +230,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-##  <a name="setbitmap"></a>CStatic::SetBitmap  
+##  <a name="setbitmap"></a>  CStatic::SetBitmap  
  Ordnet die statisches Steuerelement eine neue Bitmapdatei hinzu.  
   
 ```  
@@ -260,7 +255,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
 -   MFC stellt die Klasse `CBitmap`, die Sie verwenden können, wenn Sie mehr mit einem Bitmapbild als rufen einfach die Win32-Funktion keine `LoadBitmap`. `CBitmap`, der einen Art von GDI-Objekt enthält wird häufig in Zusammenarbeit mit `CStatic`, also eine `CWnd` -Klasse, die für das Anzeigen eines Grafikobjekts als ein statisches Steuerelement verwendet wird.  
   
- `CImage`ist eine ATL/MFC-Klasse, die Sie leicht mit dem Gerät unabhängig Bitmaps (DIB) arbeiten kann. Weitere Informationen finden Sie unter [CImage-Klasse](../../atl-mfc-shared/reference/cimage-class.md).  
+ `CImage` ist eine ATL/MFC-Klasse, die Sie leicht mit dem Gerät unabhängig Bitmaps (DIB) arbeiten kann. Weitere Informationen finden Sie unter [CImage-Klasse](../../atl-mfc-shared/reference/cimage-class.md).  
   
 -   Typische Verwendung ist, geben Sie `CStatic::SetBitmap` ein GDI-Objekt, das durch den HBITMAP-Operator, der zurückgegeben wird ein `CBitmap` oder `CImage` Objekt. Der Code dazu ähnelt die folgende Zeile.  
   
@@ -272,7 +267,7 @@ Das folgende Beispiel erstellt zwei `CStatic` Objekte im Heap. Daraufhin lädt e
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="setcursor"></a>CStatic::SetCursor  
+##  <a name="setcursor"></a>  CStatic::SetCursor  
  Ordnet ein neues Image der Cursor mit dem statischen Steuerelement.  
   
 ```  
@@ -298,7 +293,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
+##  <a name="setenhmetafile"></a>  CStatic::SetEnhMetaFile  
  Ordnet dem statischen Steuerelement ein neues EMF-Bild zu.  
   
 ```  
@@ -322,7 +317,7 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="seticon"></a>CStatic::SetIcon  
+##  <a name="seticon"></a>  CStatic::SetIcon  
  Ordnet ein neuen Symbolbild statisches Steuerelement.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: 'Eigenschaftenseiten "HLSL": Allgemein | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.FXCompilerTool.ShaderModel
 - VC.Project.FXCompilerTool.PreprocessorDefinitions
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be548966f6e75afde2c137c8beab38903844667c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77cc9a44076999633fd17b049cbcfad75f65eb7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hlsl-property-pages-general"></a>Eigenschaftenseiten "HLSL": "Allgemein"
 Um die folgenden Eigenschaften des HLSL-Compilers (fxc.exe) zu konfigurieren, verwenden die **allgemeine** Eigenschaftenseite. Informationen über den Zugriff auf die **allgemeine** Eigenschaftenseite im Ordner "HLSL" finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
@@ -48,7 +43,7 @@ Um die folgenden Eigenschaften des HLSL-Compilers (fxc.exe) zu konfigurieren, ve
  **Deaktivieren von Optimierungen**  
  **Ja (/ Od)** um Optimierungen zu deaktivieren, andernfalls **keine**. Standardmäßig ist der Wert **Ja (/ Od)** für **Debuggen** Konfigurationen und **keine** für **Version** Konfigurationen.  
   
- Die **/Od** Befehlszeilenargument für den HLSL-Compiler implizit gilt die **/Gfp** Befehlszeilenargument, aber die Ausgabe möglicherweise nicht identisch mit der Ausgabe, die erstellt wird, indem Sie beide übergeben der   **/od**  und **/Gfp** Befehlszeilenargumente explizit.  
+ Die **/Od** Befehlszeilenargument für den HLSL-Compiler implizit gilt die **/Gfp** Befehlszeilenargument, aber die Ausgabe möglicherweise nicht identisch mit der Ausgabe, die erstellt wird, indem Sie beide übergeben der  **/od** und **/Gfp** Befehlszeilenargumente explizit.  
   
  **Aktivieren Sie die Debuginformationen**  
  **Ja (/ Zi)** Debuginformationen; aktivieren, andernfalls **keine**. Standardmäßig ist der Wert **Ja (/ Zi)** für **Debuggen** Konfigurationen und **keine** für **Version** Konfigurationen.  

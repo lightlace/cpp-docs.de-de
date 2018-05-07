@@ -1,12 +1,9 @@
 ---
 title: CD2DLayer-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DLayer
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94345f4784254addce0deaf8bdb5061dbde6a8cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 197fc5ecb1b9676dd1ff11327c62950992f6f06d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer-Klasse
 Ein Wrapper für ID2D1Layer.  
@@ -97,14 +92,14 @@ class CD2DLayer : public CD2DResource;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer  
  Der Destruktor. Wird aufgerufen, wenn ein D2D-Ebenenobjekt zerstört wird.  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
-##  <a name="attach"></a>CD2DLayer::Attach  
+##  <a name="attach"></a>  CD2DLayer::Attach  
  Hängt die vorhandene Ressourcenschnittstelle, um das Objekt  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(ID2D1Layer* pResource);
  `pResource`  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
-##  <a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
  Erstellt ein CD2DLayer-Objekt.  
   
 ```  
@@ -131,7 +126,7 @@ CD2DLayer(
  `bAutoDestroy`  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
-##  <a name="create"></a>CD2DLayer::Create  
+##  <a name="create"></a>  CD2DLayer::Create  
  Erstellt einen CD2DLayer.  
   
 ```  
@@ -145,14 +140,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="destroy"></a>CD2DLayer::Destroy  
+##  <a name="destroy"></a>  CD2DLayer::Destroy  
  Zerstört ein CD2DLayer-Objekt.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DLayer::Detach  
+##  <a name="detach"></a>  CD2DLayer::Detach  
  Trennt Ressourcenschnittstelle aus dem Objekt  
   
 ```  
@@ -162,7 +157,7 @@ ID2D1Layer* Detach();
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf getrennten Ressourcenschnittstelle.  
   
-##  <a name="get"></a>CD2DLayer::Get  
+##  <a name="get"></a>  CD2DLayer::Get  
  Gibt die ID2D1Layer-Schnittstelle  
   
 ```  
@@ -172,7 +167,7 @@ ID2D1Layer* Get();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine ID2D1Layer-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="getsize"></a>CD2DLayer::GetSize  
+##  <a name="getsize"></a>  CD2DLayer::GetSize  
  Gibt die Größe des Renderingziels in geräteunabhängigen Pixeln  
   
 ```  
@@ -182,7 +177,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle Größe des Renderingziels in geräteunabhängigen Pixeln  
   
-##  <a name="isvalid"></a>CD2DLayer::IsValid  
+##  <a name="isvalid"></a>  CD2DLayer::IsValid  
  Die Ressource Gültigkeit überprüft  
   
 ```  
@@ -192,14 +187,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Ressource gültig ist. andernfalls "false".  
   
-##  <a name="m_player"></a>CD2DLayer::m_pLayer  
+##  <a name="m_player"></a>  CD2DLayer::m_pLayer  
  Speichert einen Zeiger auf ein ID2D1Layer-Objekt.  
   
 ```  
 ID2D1Layer* m_pLayer;  
 ```  
   
-##  <a name="operator_id2d1layer_star"></a>CD2DLayer::Operator ID2D1Layer *  
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::Operator ID2D1Layer *  
  Gibt die ID2D1Layer-Schnittstelle  
   
 ```  

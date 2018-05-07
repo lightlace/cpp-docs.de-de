@@ -1,13 +1,10 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Weiterführende Themen | Microsoft Docs"
-ms.custom: 
+title: 'MFC-ActiveX-Steuerelemente: Weiterführende Themen | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC-ActiveX-Steuerelemente: Weiterführende Themen
 Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von ActiveX-Steuerelemente. Dazu gehören:  
@@ -46,7 +41,7 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
 -   [Beim Zugriff auf Dialogfeld-Steuerelemente, die zur Laufzeit nicht sichtbar sind](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>Verwenden von Datenbankklassen in ActiveX-Steuerelementen  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> Verwenden von Datenbankklassen in ActiveX-Steuerelementen  
  Da die ActiveX-Steuerelementklassen Teil der Klassenbibliothek sind, können Sie anwenden, die gleichen Prozeduren und Regeln für die Verwendung von Datenbankklassen in einer standard-MFC-Anwendung für die Entwicklung von ActiveX-Steuerelemente, die MFC-Datenbankklassen verwendet werden.  
   
  Eine allgemeine Übersicht über den MFC-Datenbankklassen finden Sie unter [MFC-Datenbankklassen (ODBC und DAO)](../data/mfc-database-classes-odbc-and-dao.md). Der Artikel beschreibt die MFC-ODBC-Klassen und der MFC-DAO-Klassen und leitet Sie zu ausführlicheren Details auf.  
@@ -54,7 +49,7 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
 > [!NOTE]
 >  Die Visual C++-Umgebung und den Assistenten unterstützt nicht DAO (obwohl die DAO-Klassen enthalten sind, und Sie weiterhin verwenden können,). Microsoft empfiehlt die Verwendung von [OLE DB-Vorlagen](../data/oledb/ole-db-programming.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte. Sie sollten nur DAO verwenden, in die Verwaltung bereits vorhandener Anwendungen.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>Implementieren einer parametrisierten Eigenschaft  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementieren einer parametrisierten Eigenschaft  
  Eine parametrisierte Eigenschaft (eine Eigenschaftsarray bezeichnet) ist eine Methode zum Verfügbarmachen von eine homogene Auflistung von Werten als eine einzelne Eigenschaft des Steuerelements. Sie können z. B. eine parametrisierte Eigenschaft verwenden, um ein Array oder ein Wörterbuch als Eigenschaft verfügbar zu machen. In Visual Basic wird eine solche Eigenschaft mithilfe der Arraynotation zugegriffen:  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
  Für diese Eigenschaft sind aussagekräftig sind, konnten Sie eine zweidimensionales Array-Membervariable in der Control-Klasse des Typs deklarieren **kurze**, um Werte für die parametrisierte Eigenschaft zu speichern. Sie könnten dann ändern Sie die Get-Funktion, um die in der richtigen Zeile und Spalte gespeicherte Wert zurückzugeben, wie von den Parametern angegeben und ändern Sie die Set-Funktion zum Aktualisieren des Werts, der die Zeilen- und Parameter verweist.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>Behandeln von Fehlern in das ActiveX-Steuerelement  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Behandeln von Fehlern in das ActiveX-Steuerelement  
  Wenn es sich bei Auftreten von Fehlern im Steuerelement auftreten, müssen Sie möglicherweise den Fehler an den Steuerelementcontainer senden. Es gibt zwei Methoden zur Meldung von Fehlern, abhängig von der Situation, in der der Fehler auftritt. Wenn der Fehler auftritt, innerhalb einer Eigenschaft abzurufen, oder Set-Funktion, oder in der Implementierung einer Methode des OLE-Automatisierung, sollte das Steuerelement aufrufen [ThrowError](../mfc/reference/colecontrol-class.md#throwerror), welche Signale für den Benutzer des Steuerelements, das ein Fehler aufgetreten ist. Wenn der Fehler zu einem anderen Zeitpunkt auftritt, sollte das Steuerelement aufrufen [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror), die ein vordefinierten Error-Ereignis auslöst.  
   
  Um die Art des Fehlers anzugeben, der aufgetreten ist, muss das Steuerelement übergeben ein Fehlercodes an `ThrowError` oder `FireError`. Ein Fehlercode ist ein OLE-Statuscode, einen 32-Bit-Wert besitzt. Wenn möglich, wählen Sie einen Fehlercode aus den Standardsatz von Codes, die in der Headerdatei OLECTL ein. H-Headerdatei. In der folgenden Tabelle werden diese Codes zusammengefasst.  
@@ -162,7 +157,7 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
  Wenn Sie ein ActiveX-Steuerelement, um ein vorhandenes VBX-Steuerelement ersetzen erstellen, definieren Sie die ActiveX-steuerelementfehlercodes mit den gleichen numerischen Werten, die das VBX-Steuerelement verwendet, um sicherzustellen, dass die Fehlercodes kompatibel sind.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>Behandlung von Sondertasten im Steuerelement  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Behandlung von Sondertasten im Steuerelement  
  In einigen Fällen möchten Sie möglicherweise bestimmte Tastenkombinationen auf besondere Weise behandelt; Einfügen eine neue Zeile, wenn die EINGABETASTE gedrückt wird, in einem mehrzeiligen Textfeld Steuerelement oder Wechseln zwischen einer Gruppe von z. B. gesteuert wird, wenn eine direktionale gedrückt.  
   
  Wenn die Basisklasse des ActiveX-Steuerelements ist `COleControl`, können Sie überschreiben [CWnd:: PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) Nachrichten zu verarbeiten, bevor der Container diese verarbeitet. Wenn Sie diese Technik verwenden, stets **"true"** , wenn Sie die Nachricht, in der Überschreibung der behandeln `PreTranslateMessage`.  
@@ -173,7 +168,7 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
  Weitere Informationen zur Behandlung von Tastaturschnittstellen für ein ActiveX-Steuerelement finden Sie unter der ActiveX-SDK-Dokumentation.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Beim Zugriff auf Dialogfeld-Steuerelemente, die zur Laufzeit nicht sichtbar sind  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Beim Zugriff auf Dialogfeld-Steuerelemente, die zur Laufzeit nicht sichtbar sind  
  Sie können die Dialogfeld-Steuerelemente erstellen, die keine Benutzeroberfläche und zur Laufzeit nicht sichtbar sind. Wenn Sie einer Dialogfeld und Verwenden einer unsichtbar zur Laufzeit ActiveX-Steuerelement hinzufügen [GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) für den Zugriff auf das Steuerelement, das Steuerelement funktioniert nicht ordnungsgemäß. Stattdessen sollten Sie verwenden eine der folgenden Methoden ein Objekt abgerufen, die das Steuerelement darstellt:  
   
 -   Wählen Sie die Variable Assistenten zum Hinzufügen, mit **Steuerelementvariable** und wählen Sie dann auf das Steuerelement-ID. Geben Sie einen Member Variablennamen ein, und wählen Sie das Steuerelement-Wrapperklasse als die **Steuerelementtyp**.  

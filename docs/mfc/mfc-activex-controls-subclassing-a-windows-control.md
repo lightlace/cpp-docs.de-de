@@ -1,13 +1,10 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Einer Fenstersteuerelement | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - precreatewindow
 - IsSubclassed
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e41eefdf1c1be2d0e91061e0efce5f5408c1848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95d6109bdc6ae28b748ee0be78e14ab62bba10fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC-ActiveX-Steuerelemente: Erstellen einer Fenstersteuerelement-Unterklasse
 Dieser Artikel beschreibt den Prozess für eine allgemeine Fenstersteuerelement um ein ActiveX-Steuerelement zu erstellen. Erstellen von Unterklassen für eine vorhandene Windows ist Steuerelement eine schnelle Möglichkeit, ein ActiveX-Steuerelement entwickeln. Das neue Steuerelement haben die Möglichkeit des untergeordnetes Windows-Steuerelements, wie z. B. Zeichnen und Mausklicks reagiert. Die MFC-ActiveX-Steuerelemente Beispiel [Schaltfläche](../visual-cpp-samples.md) ist ein Beispiel einer Fenstersteuerelement.  
@@ -53,7 +48,7 @@ Dieser Artikel beschreibt den Prozess für eine allgemeine Fenstersteuerelement 
   
  Finden Sie für das Erstellen von Unterklassen für ein Steuerelement in der Knowledge Base-Artikel Q243454 für Weitere Informationen.  
   
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Überschreiben von IsSubclassedControl und PreCreateWindow  
+##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Überschreiben von IsSubclassedControl und PreCreateWindow  
  Überschreiben `PreCreateWindow` und `IsSubclassedControl`, fügen Sie die folgenden Codezeilen die `protected` Teil der Deklaration der Steuerelement-Klasse:  
   
  [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
@@ -70,7 +65,7 @@ Dieser Artikel beschreibt den Prozess für eine allgemeine Fenstersteuerelement 
   
  Dieser Vorgang fügt die **BS_CHECKBOX** formatflag, lassen Sie das standardmäßige Format-Flag (**WS_CHILD**) der Klasse `COleControl` intakt.  
   
-##  <a name="_core_modifying_the_ondraw_member_function"></a>Ändern die OnDraw Member-Funktion  
+##  <a name="_core_modifying_the_ondraw_member_function"></a> Ändern die OnDraw Member-Funktion  
  Gegebenenfalls ein untergeordnete Steuerelement behalten Sie die gleiche Darstellung als das entsprechende Windows-Steuerelement die `OnDraw` Memberfunktion für das Steuerelement dürfen nur einen Aufruf der `DoSuperclassPaint` Memberfunktion ist, wie im folgenden Beispiel:  
   
  [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]  
@@ -80,12 +75,12 @@ Dieser Artikel beschreibt den Prozess für eine allgemeine Fenstersteuerelement 
 > [!NOTE]
 >  Die `DoSuperclassPaint` Memberfunktion funktionieren nur mit Steuerelementtypen, die ermöglichen, einen Gerätekontext als übergeben werden die **wParam** von einer `WM_PAINT` Nachricht. Dies enthält einige der standardmäßigen Windows-Steuerelemente, z. B. **BILDLAUFLEISTE** und **Schaltfläche**, und die Standardsteuerelemente. Sie müssen für Steuerelemente, die dieses Verhalten nicht unterstützen, geben Sie Ihren eigenen Code aus, um ein Inaktives Steuerelement ordnungsgemäß angezeigt.  
   
-##  <a name="_core_handling_reflected_window_messages"></a>Behandeln von reflektierten Fenstermeldungen im  
+##  <a name="_core_handling_reflected_window_messages"></a> Behandeln von reflektierten Fenstermeldungen im  
  Windows-Steuerelemente in der Regel Nachrichten bestimmte Fenster an ihre übergeordnete Fenster. Einige dieser Meldungen, z. B. **WM_COMMAND**, geben Sie die Benachrichtigung über eine Aktion vom Benutzer. Andere, z. B. `WM_CTLCOLOR`, dienen zum Abrufen von Informationen über das übergeordnete Fenster. Ein ActiveX-Steuerelement kommuniziert mit anderen Mitteln in der Regel mit dem übergeordneten Fenster. Benachrichtigungen werden durch das Auslösen von Ereignissen (ereignisbenachrichtigungen senden) übermittelt, und Informationen zu dem Steuerelementcontainer durch Zugreifen auf Umgebungseigenschaften für den Container abgerufen wird. Da diese Kommunikation Techniken vorhanden sind, sind ActiveX-Steuerelementcontainer fenstermeldungen gesendet, die vom Steuerelement verarbeitet nicht erwartet.  
   
  Um zu verhindern, dass den Container den Nachrichtenempfang Fenster gesendet werden, indem Sie ein untergeordnetes Steuerelement von Windows `COleControl` erstellt eine zusätzliche Fenster, die als übergeordnete Element des Steuerelements dient. Diese zusätzliche Fenster, mit der Bezeichnung "Reflector" wird nur für ein ActiveX-Steuerelement erstellt, dass Unterklassen eines Windows steuern und dies die gleiche Größe und Position im Fenster Steuerelements hat. Das Fenster Reflector fängt bestimmte Windows-Meldungen ab und sendet sie zurück an das Steuerelement. Steuerelements in dessen Fensterprozedur auf, können Sie diese reflektierten Meldungen verarbeiten, durch die Aktionen, die für ein ActiveX-Steuerelement (z. B. das Auslösen eines Ereignisses) geeignet. Finden Sie unter [Fenstermeldungs-IDs reflektiert](../mfc/reflected-window-message-ids.md) eine Liste von abgefangenen Windows Nachrichten und ihre entsprechenden reflektierten Meldungen.  
   
- Ein ActiveX-Steuerelementcontainer auszuführenden Meldungsreflektion selbst, wodurch die Notwendigkeit entfällt entworfen werden möglicherweise `COleControl` Fenster Reflector und verringern die Laufzeit-overhead für ein untergeordnetes Steuerelement in Windows zu erstellen. `COleControl`erkennt, ob der Container diese Funktion unterstützt, mit der Überprüfung einer MessageReflect ambient-Eigenschaft mit einem Wert von **"true"**.  
+ Ein ActiveX-Steuerelementcontainer auszuführenden Meldungsreflektion selbst, wodurch die Notwendigkeit entfällt entworfen werden möglicherweise `COleControl` Fenster Reflector und verringern die Laufzeit-overhead für ein untergeordnetes Steuerelement in Windows zu erstellen. `COleControl` erkennt, ob der Container diese Funktion unterstützt, mit der Überprüfung einer MessageReflect ambient-Eigenschaft mit einem Wert von **"true"**.  
   
  Um eine reflektierte Meldung Verarbeiten der Nachricht steuerelementzuordnung einen Eintrag hinzu, und implementieren Sie eine Handlerfunktion. Da reflektierte Meldungen, die nicht Teil der Standardsatz von Nachrichten, die von Windows definiert sind, unterstützt Klassenansicht keine solche Meldungshandler hinzufügen. Allerdings ist es nicht schwer, einen Handler manuell hinzufügen.  
   

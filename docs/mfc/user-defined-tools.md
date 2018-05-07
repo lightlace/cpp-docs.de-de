@@ -1,29 +1,24 @@
 ---
 title: Benutzerdefinierte Tools | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0751a2cb3f78730ec948d737dc99b85c2e735
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-tools"></a>Benutzerdefinierte Tools
 MFC unterstützt benutzerdefinierte Tools. Ein benutzerdefiniertes Tool ist eine spezielle Befehl, der eine externe, benutzerdefinierte Anwendung ausgeführt wird. Anpassungsvorgangs können Sie benutzerdefinierte Tools verwalten. Allerdings können Sie diesen Prozess verwenden, wenn Anwendungsobjekts nicht abgeleitet ist [CWinAppEx Class](../mfc/reference/cwinappex-class.md). Weitere Informationen zur Anpassung finden Sie unter [Anpassung für MFC](../mfc/customization-for-mfc.md).  

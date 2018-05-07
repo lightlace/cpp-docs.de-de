@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Ports und Socketadressen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,29 +16,27 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c7b2e15761815b75ba8001ad4eb5a5c276f5056
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ea9b8a39de8d36ecb621164d98e072a4041211
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Ports und Socketadressen
 Dieser Artikel beschreibt die Begriffe "Port" und "Address" als mit Windows-Sockets verwendet.  
   
-##  <a name="_core_port"></a>Port  
+##  <a name="_core_port"></a> Port  
  Ein Port identifiziert einen eindeutigen Prozess für den ein Dienst bereitgestellt werden kann. Im Kontext vorhanden ist eine Anwendung, die Windows-Sockets unterstützt zugeordnet ein Port. Die Idee ist jede Windows-Sockets-Anwendung eindeutig zu identifizieren, damit Sie mehr als eine Windows Sockets-Anwendung, die gleichzeitig auf einem Computer ausgeführt haben, können.  
   
  Bestimmte Ports sind für gemeinsame Dienste, z. B. FTP reserviert. Vermeiden Sie die Verwendung dieser Ports, wenn Sie diese Art des Diensts bereitstellen. Windows Sockets-Spezifikation sind diese reservierte Ports. Die WINSOCK-Datei. H ebenfalls aufgelistet.  
   
  Damit die Windows-Sockets-DLL einen verwendbaren Port für die Sie auswählen können, übergeben Sie 0 als Wert für den Port ein. MFC wählt einen Portwert, der größer als 1.024 decimal. Sie können die Portwert, der durch Aufrufen von MFC ausgewählten Abrufen der [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) Memberfunktion.  
   
-##  <a name="_core_socket_address"></a>Socketadresse  
+##  <a name="_core_socket_address"></a> Socketadresse  
  Jedes Socketobjekt, das eine Internetprotokoll (IP)-Adresse im Netzwerk zugeordnet ist. In der Regel ist die Adresse, einen Computernamen ein, z. B. "ftp.microsoft.com", oder einer gepunkteten Ziffer, z. B. "128.56.22.8".  
   
  Wenn Sie versuchen, ein Socket erstellen, in der Regel müssen nicht Sie eine eigene Adresse angeben.  

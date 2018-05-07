@@ -1,13 +1,10 @@
 ---
-title: "Vorlage für Arrays, Listen, Klassen und Zuordnungen | Microsoft Docs"
-ms.custom: 
+title: Vorlage für Arrays, Listen, Klassen und Zuordnungen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.template
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - map classes [MFC]
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f92790965ffb8cb96fd59c9333a1a99c9fcfbe5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feeb1b404a765e1ce24e8401ffd1163a18731780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Vorlagenklassen für Arrays, Listen und Zuordnungen
 Diese Auflistungsklassen sind Vorlagen, deren Parameter den Typen der Objekte in die Aggregate gespeichert zu bestimmen. Die `CArray`, `CMap`, und `CList` a-Klassen globale Hilfsfunktionen, die in der Regel angepasst werden müssen. Weitere Informationen zu diesen Hilfsfunktionen, finden Sie unter [Auflistungsklasse](../mfc/reference/collection-class-helpers.md). Die typisierten zeigerklassen sind Wrapper für andere Klassen in der Klassenbibliothek. Mit diesen Wrappern, tragen Sie den Compiler Typprüfung um Fehler zu vermeiden. Weitere Informationen zur Verwendung dieser Klassen finden Sie unter [Sammlungen](../mfc/collections.md).  

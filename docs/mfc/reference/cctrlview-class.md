@@ -1,12 +1,9 @@
 ---
 title: CCtrlView Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCtrlView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484abaf5344400e03b53038d2c137497c202345f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cctrlview-class"></a>CCtrlView-Klasse
 Passt die Dokument-/Ansichtarchitektur den allgemeinen Steuerelemente an, die von Windows 98 und Windows NT-Versionen 3,51 (und höher) unterstützt werden.  
@@ -85,7 +80,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>  CCtrlView::CCtrlView  
  Erstellt ein `CCtrlView`-Objekt.  
   
 ```  
@@ -104,14 +99,14 @@ CCtrlView(
 ### <a name="remarks"></a>Hinweise  
  Das Framework Ruft den Konstruktor auf, wenn ein neues Rahmenfenster erstellt wird, oder Teilen Sie ein Fenster ist. Überschreiben Sie [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) auf die Ansicht zu initialisieren, nachdem das Dokument verbunden ist. Rufen Sie [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) oder [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) zum Erstellen des Windows-Objekts.  
   
-##  <a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
  Enthält den Namen des Windows-Klasse für die Ansichtsklasse.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>  CCtrlView::m_dwDefaultStyle  
  Enthält das Standardformat für die Ansichtsklasse.  
   
 ```  
@@ -121,7 +116,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>Hinweise  
  Dieses Format wird angewendet, wenn ein Fenster erstellt wird.  
   
-##  <a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>  CCtrlView::OnDraw  
  Aufgerufen, um den Inhalt der Zeichnen die `CCtrlView` -Objekt mit den angegebenen Gerätekontext.  
   
 ```  
@@ -133,9 +128,9 @@ virtual void OnDraw(CDC* pDC);
  Ein Zeiger auf den Gerätekontext, in dem das Zeichnen auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- `OnDraw`wird in der Regel aufgerufen, für die Bildschirmanzeige, übergeben einen Bildschirm Gerätekontext gemäß `pDC`.  
+ `OnDraw` wird in der Regel aufgerufen, für die Bildschirmanzeige, übergeben einen Bildschirm Gerätekontext gemäß `pDC`.  
   
-##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Wird vor der Erstellung des an diesem `CWnd`-Objekt angefügten Windows-Fensters aufgerufen.  
   
 ```  

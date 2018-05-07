@@ -1,12 +1,9 @@
 ---
 title: COleChangeSourceDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog-Klasse
 Wird für das OLE-Dialogfeld "Quelle ändern" verwendet.  
@@ -105,7 +100,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
  Diese Funktion erstellt eine `COleChangeSourceDialog` Objekt.  
   
 ```  
@@ -126,7 +121,7 @@ explicit COleChangeSourceDialog(
   
  Weitere Informationen finden Sie unter der [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur und [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) -Funktion in Windows SDK.  
   
-##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Mit dieser Funktion wird zum Anzeigen der Quelle für das OLE-ändern-Dialogfelds.  
   
 ```  
@@ -153,7 +148,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
  Mit dieser Funktion wird zum Abrufen der vollständige Anzeigename für den verknüpften Client-Element.  
   
 ```  
@@ -163,7 +158,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>Rückgabewert  
  Den vollständigen Quellcode-Anzeigenamen (Moniker) für die [COleClientItem](../../mfc/reference/coleclientitem-class.md) im Konstruktor angegeben.  
   
-##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
  Mit dieser Funktion wird zum Abrufen des Datei Moniker Teils des Anzeigenamens für den verknüpften Client-Element.  
   
 ```  
@@ -176,7 +171,7 @@ CString GetFileName();
 ### <a name="remarks"></a>Hinweise  
  Der Moniker Datei zusammen mit der Element-Moniker bietet der vollständige Anzeigename.  
   
-##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  Rufen Sie diese Funktion, um die vorherigen Präfixzeichenfolge für die Quelle zu erhalten.  
   
 ```  
@@ -193,7 +188,7 @@ CString GetFromPrefix();
   
  Weitere Informationen finden Sie unter der [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
   
-##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Mit dieser Funktion wird zum Abrufen des Element-Moniker Teils der Anzeigename für den verknüpften Client-Element.  
   
 ```  
@@ -206,7 +201,7 @@ CString GetItemName();
 ### <a name="remarks"></a>Hinweise  
  Der Moniker Datei zusammen mit der Element-Moniker bietet der vollständige Anzeigename.  
   
-##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  Rufen Sie diese Funktion, um die neue Präfixzeichenfolge für die Quelle zu erhalten.  
   
 ```  
@@ -223,7 +218,7 @@ CString GetToPrefix();
   
  Weitere Informationen finden Sie unter der [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
   
-##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
  Datenmember ist eine Struktur vom Typ [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
   
 ```  
@@ -231,11 +226,11 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `OLEUICHANGESOURCE`Dient zum Steuern des Verhaltens des Dialogfelds Quelle für das OLE-ändern. Mitglieder dieser Struktur können direkt geändert werden.  
+ `OLEUICHANGESOURCE` Dient zum Steuern des Verhaltens des Dialogfelds Quelle für das OLE-ändern. Mitglieder dieser Struktur können direkt geändert werden.  
   
  Weitere Informationen finden Sie unter der [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
   
-##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Rufen Sie diese Funktion, um zu bestimmen, ob die neue Datenquelle gültig ist.  
   
 ```  

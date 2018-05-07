@@ -1,12 +1,9 @@
 ---
 title: CMFCAutoHideButton-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f40b7ab03e79d38d36a1b25a4cd973a5077468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton-Klasse
 Eine Schaltfläche, die [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) anzeigt oder ausblendet (vorausgesetzt, die Klasse ist so konfiguriert, dass sie ausgeblendet werden kann).  
@@ -128,7 +123,7 @@ class CMFCAutoHideButton : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxautohidebutton.h  
   
-##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
 
   
 ```  
@@ -137,7 +132,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>  CMFCAutoHideButton::Create  
  Erstellt und initialisiert eine Schaltfläche zum automatischen ausblenden.  
   
 ```  
@@ -173,7 +168,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  Ruft die Ausrichtung der Schaltfläche zum automatischen Ausblenden ab.  
   
 ```  
@@ -194,7 +189,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  Gibt die [CDockablePane](../../mfc/reference/cdockablepane-class.md) die Schaltfläche zum automatischen Ausblenden zugeordnete Objekt.  
   
 ```  
@@ -207,7 +202,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>Hinweise  
  Zuordnen eine Schaltfläche zum automatischen Ausblenden mit einem `CDockablePane`, übergeben die `CDockablePane` als Parameter an die [CMFCAutoHideButton::Create](#create) Methode.  
   
-##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
   
 ```  
@@ -218,7 +213,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect  
 
   
 ```  
@@ -229,7 +224,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize  
  Legt die Größe der Schaltfläche zum automatischen Ausblenden fest.  
   
 ```  
@@ -242,7 +237,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>Hinweise  
  Die berechnete Größe umfasst die Größe des Rahmens, der die Schaltfläche zum automatischen ausblenden.  
   
-##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
  Gibt die Größe der Textbeschriftung für die Schaltfläche zum automatischen Ausblenden zurück.  
   
 ```  
@@ -252,7 +247,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die Größe des Texts für die Schaltfläche zum automatischen Ausblenden enthält.  
   
-##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  Gibt an, ob die Schaltfläche zum automatischen Ausblenden aktiv ist.  
   
 ```  
@@ -260,12 +255,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Schaltfläche zum automatischen Ausblenden aktiv ist; `FALSE` andernfalls.  
+ `TRUE` Wenn die Schaltfläche zum automatischen Ausblenden aktiv ist; `FALSE` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Schaltfläche zum automatischen Ausblenden ist aktiv, wenn die zugeordnete [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) Fenster wird angezeigt.  
   
-##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  Bestimmt, ob die Schaltfläche zum automatischen Ausblenden horizontal oder vertikal ist.  
   
 ```  
@@ -278,7 +273,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Hinweise  
  Das Framework legt die Ausrichtung des eine [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) Objekt, wenn Sie ihn erstellen.  Sie können die Ausrichtung steuern, indem Sie mit der `dwAlignment` Parameter in der [CMFCAutoHideButton::Create](#create) Methode.  
   
-##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
   
 ```  
@@ -289,7 +284,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
  Gibt an, ob die Schaltfläche zum automatischen Ausblenden sichtbar ist.  
   
 ```  
@@ -297,9 +292,9 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Schaltfläche sichtbar ist; `FALSE` andernfalls.  
+ `TRUE` Wenn die Schaltfläche sichtbar ist; `FALSE` andernfalls.  
   
-##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  Das Framework ruft diese Methode auf, wenn es die Schaltfläche zum automatischen Ausblenden zeichnet.  
   
 ```  
@@ -313,7 +308,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die Darstellung der automatisch ausblendbaren Schaltflächen in der Anwendung anpassen möchten, erstellen Sie eine neue Klasse abgeleitet `CMFCAutoHideButton`. Überschreiben Sie diese Methode in der abgeleiteten Klasse.  
   
-##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  Das Framework ruft diese Methode auf, wenn es den Rahmen einer Schaltfläche zum automatischen Ausblenden zeichnet.  
   
 ```  
@@ -336,7 +331,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie den Rand jeder Schaltfläche zum automatischen Ausblenden in Ihrer Anwendung anpassen möchten, erstellen Sie eine neue Klasse abgeleitet wurde. die `CMFCAutoHideButton`. Überschreiben Sie diese Methode in der abgeleiteten Klasse.  
   
-##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  Das Framework ruft diese Methode auf, wenn es den Hintergrund einer Schaltfläche zum automatischen Ausblenden füllt.  
   
 ```  
@@ -355,7 +350,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie den Hintergrund für automatisch ausblendbaren Schaltflächen in der Anwendung anpassen möchten, erstellen Sie eine neue Klasse abgeleitet wurde. die `CMFCAutoHideButton`. Überschreiben Sie diese Methode in der abgeleiteten Klasse.  
   
-##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
  Blendet die zugeordnete [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -366,7 +361,7 @@ void ShowAttachedWindow(BOOL bShow);
  [in] `bShow`  
  Ein boolescher Wert, der angibt, ob diese Methode den angefügten zeigt `CDockablePane`.  
   
-##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Blendet die Schaltfläche zum automatischen Ausblenden ein oder aus.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void ShowButton(BOOL bShow);
  [in] `bShow`  
  Ein boolescher Wert, der angibt, ob die Schaltfläche zum automatischen Ausblenden anzeigen.  
   
-##  <a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
   
 ```  
@@ -389,7 +384,7 @@ void Move(int nOffset);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane  
 
   
 ```  
@@ -401,7 +396,7 @@ void ReplacePane(CDockablePane* pNewBar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode  
  Deaktiviert den automatischen Ausblendemodus.  
   
 ```  
@@ -414,7 +409,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
  Hebt die Schaltfläche zum automatischen Ausblenden hervor.  
   
 ```  
@@ -423,11 +418,11 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>Parameter  
  `bHighlight`  
- Gibt an, die neue automatisch im Hintergrund Schaltflächenzustand. `TRUE`Gibt an, die Schaltfläche wird hervorgehoben, `FALSE` gibt an, die Schaltfläche measureraster nicht hervorgehoben ist.  
+ Gibt an, die neue automatisch im Hintergrund Schaltflächenzustand. `TRUE` Gibt an, die Schaltfläche wird hervorgehoben, `FALSE` gibt an, die Schaltfläche measureraster nicht hervorgehoben ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
  Gibt die Hervorhebung Zustand der Schaltfläche zum automatischen Ausblenden zurück.  
   
 ```  

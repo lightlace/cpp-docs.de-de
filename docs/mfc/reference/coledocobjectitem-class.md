@@ -1,12 +1,9 @@
 ---
 title: COleDocObjectItem-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem-Klasse
 Implementiert "Active Document Containment".  
@@ -104,7 +99,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  Rufen Sie diese Memberfunktion zum Initialisieren der `COleDocObjectItem` Objekt.  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Ein Zeiger auf die `COleDocument` Objekt fungiert als active Document-Container. Dieser Parameter muss **NULL** aktivieren **IMPLEMENT_SERIALIZE**. Normalerweise werden OLE-Elementen erstellt, mit einem nicht- **NULL** Dokument Zeiger.  
   
-##  <a name="dodefaultprinting"></a>DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  DoDefaultPrinting  
  Vom Framework aufgerufen wird, ein Dokument mit den Standardeinstellungen.  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Ein Zeiger auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Objekt, das den Auftrag zu druckende beschreibt.  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  Rufen Sie diese Memberfunktion zum Ausführen des Befehls, der vom Benutzer angegeben wird.  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Unerwarteter Fehler ist aufgetreten.|  
 |**E_FAIL**|Es ist ein Fehler aufgetreten.|  
 |**E_NOTIMPL**|Gibt an MFC selbst sollten versuchen, übersetzen und verteilen den Befehl.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`ist ungleich **NULL** aber nicht an eine Gruppe Befehl erkannt.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`wird nicht als gültiger Befehl in der Gruppe pGroup erkannt.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` ist ungleich **NULL** aber nicht an eine Gruppe Befehl erkannt.|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` wird nicht als gültiger Befehl in der Gruppe pGroup erkannt.|  
 |**OLECMDERR_DISABLED**|Der Befehl identifizierte `nCmdID` ist deaktiviert und kann nicht ausgeführt werden.|  
 |**OLECMDERR_NOHELP**|Aufrufer aufgefordert Hilfe zum Befehl "identifizierte" `nCmdID` , aber es ist keine Hilfe verfügbar.|  
 |**OLECMDERR_CANCELLED**|Die Ausführung wurde vom Benutzer abgebrochen.|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Hinweise  
  Die `pguidCmdGroup` und `nCmdID` Parameter zusammen eindeutig identifizieren den Befehl zum Aufrufen. Die `nCmdExecOpt` Parameter gibt die genaue zu ergreifende Maßnahme.  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Rufen Sie diese Memberfunktion zum Abrufen eines Zeigers auf die `IOleDocumentView` Schnittstelle, die derzeit aktive Ansicht.  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Hinweise  
  Der Verweiszähler für das zurückgegebene `IOleDocumentView` Zeiger wird nicht erhöht werden, bevor sie von dieser Funktion zurückgegeben werden.  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  Rufen Sie diese Memberfunktion zum Abrufen der Anzahl der Seiten, die im Dokument.  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem:: OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem:: OnPreparePrinting  
  Diese Memberfunktion wird durch das Framework für das Drucken ein Dokuments vorbereiten aufgerufen.  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-##  <a name="onprint"></a>COleDocObjectItem  
+##  <a name="onprint"></a>  COleDocObjectItem  
  Diese Memberfunktion wird vom Framework zum Drucken eines Dokuments aufgerufen.  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  Gibt an, ob das gesamte Dokument gedruckt werden soll.  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  Fragt den Status von Befehlen ab, die von Ereignissen auf der Benutzeroberfläche generiert wurden.  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) -Methode, wie im Windows SDK beschrieben.  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  Die Verbindung mit einer OLE-Element verknüpfte frei, und geschlossen wird, falls er geöffnet ist. Die Client-Element wird nicht zerstört werden.  
   
 ```  

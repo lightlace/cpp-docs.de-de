@@ -1,37 +1,32 @@
 ---
 title: Schreiben und Umgestalten von Code (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68d4190d8e3fc5040879eba4f8888467a07adf5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02a028ddf5cbd4ac33f1ff9b148e7f20e5114c69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-and-refactoring-code-c"></a>Schreiben und Refactoring von Code (C++)
 
-Der Visual C++-Code-Editor und die IDE bieten viele Codierungshilfen. Einige sind nur für C++, und einige sind im Wesentlichen für alle Visual Studio-Sprachen identisch. Weitere Informationen über die freigegebenen Funktionen finden Sie unter [Schreiben von Code im Code- und Text-Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Optionen zum Aktivieren und Konfigurieren von C++-spezifischen Funktionen befinden sich der [Text-Editor C++ erweitert](/visualstudio/ide/reference/options-text-editor-c-cpp-advanced) Dialogfeld (**Tools &#124; Optionen &#124; Text-Editor &#124; C/C++- &#124; Erweiterte** oder geben Sie "C++ Erweitert" **Schnellstart**). Nach dem auswählen, welche Option Sie festlegen möchten, erhalten Sie weitere Hilfe durch Drücken von **F1** Wenn wird das Dialogfeld den Fokus. Geben Sie für allgemeine Codeformatierungsoptionen `Editor C++` in **QuickLaunch**.
+Der Visual C++-Code-Editor und die IDE bieten viele Codierungshilfen. Einige sind nur für C++, und einige sind im Wesentlichen für alle Visual Studio-Sprachen identisch. Weitere Informationen über die freigegebenen Funktionen finden Sie unter [Schreiben von Code im Code- und Text-Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Optionen zum Aktivieren und Konfigurieren von C++-spezifischen Funktionen befinden sich der [Text-Editor C++ erweitert](/visualstudio/ide/reference/options-text-editor-c-cpp-advanced) Dialogfeld (**Tools &#124; Optionen &#124; Texteditor &#124; C/C++- &#124; erweitert** oder geben Sie "C++ Erweitert" **Schnellstart**). Nach dem auswählen, welche Option Sie festlegen möchten, erhalten Sie weitere Hilfe durch Drücken von **F1** Wenn wird das Dialogfeld den Fokus. Geben Sie für allgemeine Codeformatierungsoptionen `Editor C++` in **QuickLaunch**.
 
 Experimentelle Features, die möglicherweise nicht in einer zukünftigen Version von Visual Studio enthalten sein, befinden sich in der [Text-Editor C++ experimentell](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) Dialogfeld. Sie können in Visual Studio 2017 aktivieren **Predictive Intellisense** in diesem Dialogfeld.
 
 ## <a name="adding-new-code"></a>Hinzufügen von neuem Code
 
-Wenn Sie ein Projekt erstellt haben, können Sie mit dem Codieren in den für Sie generierten Dateien beginnen. Klicken Sie zum Hinzufügen neuer Dateien mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer, und wählen Sie **hinzufügen &#124; Neue**.
+Wenn Sie ein Projekt erstellt haben, können Sie mit dem Codieren in den für Sie generierten Dateien beginnen. Klicken Sie zum Hinzufügen neuer Dateien mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer, und wählen Sie **hinzufügen &#124; neu**.
 
 Geben Sie zum Festlegen von Formatierungsoptionen, z. B. Einzüge, geschweifte Klammer und Farbgebung `C++ Formatting` in der **QuickLaunch** Fenster.
 
@@ -39,7 +34,7 @@ Geben Sie zum Festlegen von Formatierungsoptionen, z. B. Einzüge, geschweifte K
 
 IntelliSense ist der Name für eine Gruppe von Funktionen, die Inline-Informationen über Elemente, Typen und Funktionsüberladungen bereitstellen. Die folgende Abbildung zeigt das Memberlisten-Dropdownfeld, das während der Eingabe angezeigt wird. Sie können die TAB-Taste drücken, um den Text des ausgewählten Elements in Ihre Codedatei einzugeben.
 
-![C# 43; &#43; Dropdownliste für Member](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
+![C&#43; &#43; Dropdownliste Memberliste](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
 
 Ausführliche Informationen finden Sie unter [Visual C++ Intellisense](/visualstudio/ide/visual-cpp-intellisense).
 
@@ -47,19 +42,19 @@ Ausführliche Informationen finden Sie unter [Visual C++ Intellisense](/visualst
 
 Ein Ausschnitt ist ein vordefinierter Teil des Quellcodes. Klicken Sie mit der rechten Maustaste auf einen einzelnen Punkt oder auf ausgewählten Text, um einen Ausschnitt einzufügen oder den ausgewählten Text mit dem jeweiligen Ausschnitt zu umschließen. Die folgende Abbildung zeigt die drei Schritte zum Umschließen einer ausgewählten-Anweisung mit einer „for“-Schleife. Die gelben Markierungen im endgültigen Bild sind veränderbare Felder, auf die Sie mit der TAB-Taste zugreifen. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).
 
-![Visual C# 43; &#43; Löschen der Ausschnitt &#45;einfügen; nach-unten-](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![Visual C#&#43; &#43; Löschen der Ausschnitt einfügen&#45;unten](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
 ### <a name="add-class"></a>Klasse hinzufügen
 
 Fügen Sie eine neue Klasse von der **Projekt** Menü mit dem Klassen-Assistenten.
 
-![Hinzufügen einer neuen Klasse in Visual C#, #43; &#43; ] (../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
+![Hinzufügen einer neuen Klasse in Visual C#&#43;&#43;](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
 
 ### <a name="class-wizard"></a>Klassen-Assistent
 
 Ändern oder untersuchen Sie eine vorhandene Klasse, oder fügen Sie eine neue Klasse hinzu, alles mit dem Klassen-Assistenten. Weitere Informationen finden Sie unter [Hinzufügen neuer Funktionen mit Code-Assistenten (C++)](../ide/adding-functionality-with-code-wizards-cpp.md).
 
-![Visual C# 43; &#43; -Klasse Assistenten](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
+![Visual C#&#43; &#43; -Klasse Assistenten](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
 
 ## <a name="refactoring"></a>Umgestaltung
 
@@ -87,13 +82,13 @@ Zeigen Sie auf eine Variable, um die Typinformationen anzuzeigen.
 
 Klicken Sie mit der rechten Maustaste auf den Headernamen in einer `#include`-Richtlinie, und öffnen Sie die Headerdatei.
 
-![Visual C# 43; &#43; Öffnen Sie die Menüoption Dokument](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
+![Visual C#&#43; &#43; geöffneten Dokument Menüoption](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
 
 ### <a name="peek-definition"></a>Peek-Definition
 
 Zeigen Sie auf eine Variablen- oder Funktionsdeklaration, mit der rechten Maustaste, klicken Sie dann wählen Sie **Peek-Definition** um eine Inlineansicht der Definition anzuzeigen. Weitere Informationen finden Sie unter [Peek-Definition (Alt + F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
-![Visual C# 43; &#43; Peek-Definition](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+![Visual C#&#43; &#43; Peek-Definition](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ### <a name="go-to-definition"></a>Gehe zu Definition
 
@@ -103,7 +98,7 @@ Zeigen Sie auf eine Variablen- oder Funktionsdeklaration, mit der rechten Mausta
 
 Klicken Sie mit der rechten Maustaste auf alle Funktionsaufrufe, und zeigen Sie eine Liste aller aufgerufenen Funktionen und aller Funktionen an, die sie aufrufen. Jede Funktion in der Liste kann auf die gleiche Weise erweitert werden. Weitere Informationen finden Sie unter [Aufrufhierarchie](/visualstudio/ide/reference/call-hierarchy).
 
-![Visual C# 43; &#43; Aufrufhierarchie](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Visual C#&#43; &#43; Aufrufhierarchie](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ### <a name="toggle-header--code-file"></a>Header-/Codedatei umschalten
 
@@ -113,19 +108,19 @@ Mit der rechten Maustaste, und wählen Sie **ein-/ausschalten Header / Codedatei
 
 Mit der rechten Maustaste an einer beliebigen Stelle in einer Quellcodedatei, und wählen Sie **Gliedern** reduzieren oder erweitern, Definitionen und/oder benutzerdefinierte Regionen zu vereinfachen das Durchsuchen nur der Teile, die Sie von Interesse sind. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).
 
-![Visual C# 43; &#43; Gliederung](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
+![Visual C#&#43; &#43; Gliederung](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
 
 ### <a name="scroll-bar-map-mode"></a>Bildlaufleisten-Zuordnungsmodus
 
 Mit dem Bildlaufleisten-Zuordnungsmodus können Sie schnell einen Bildlauf durchführen und eine Codedatei durchsuchen, ohne die aktuelle Position zu verlassen. Oder klicken Sie auf eine beliebige Stelle auf der Code Map, um direkt zu dieser Position zu wechseln.
 
-![Codezuordnung in Visual C#, #43; &#43; ] (../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
+![Codezuordnung in Visual C#&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 
 ### <a name="generate-graph-of-include-files"></a>Diagramm für Includedateien generieren
 
 Klicken Sie mit der rechten Maustaste auf eine Codedatei im Projekt, und wählen Sie **Diagramm für Includedateien generieren** um ein Diagramm darüber anzuzeigen, von denen Dateien von anderen Dateien enthalten sind.
 
-![Visual C# 43; &#43; Diagramm für Includedateien](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
+![Visual C#&#43; &#43; Diagramm für Includedateien](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 
 ### <a name="f1-help"></a>F1-Hilfe
 

@@ -1,12 +1,9 @@
 ---
 title: CMFCRibbonStatusBar Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar-Klasse
 Die `CMFCRibbonStatusBar` Klasse implementiert ein Statusleisten-Steuerelement, das Menübandelemente anzeigen kann.  
@@ -145,7 +140,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxribbonstatusbar.h  
   
-##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
+##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement  
  Die Menüband-Statusleiste hinzugefügt ein dynamischen Elements.  
   
 ```  
@@ -159,7 +154,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>Hinweise  
  Im Gegensatz zu regulären Elemente dynamischen Elemente können nicht angepasst werden, und klicken Sie im Menü "anpassen" der Statusleiste nicht angezeigt.  
   
-##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
+##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement  
  Die Menüband-Statusleiste hinzugefügt ein neuen Menübandelements.  
   
 ```  
@@ -177,9 +172,9 @@ void AddElement(
  Eine Beschriftung des Elements.  
   
  [in] `bIsVisible`  
- `TRUE`Wenn Sie das Element als sichtbar ist, hinzufügen möchten `FALSE` ausgeblendet, wenn das Element als hinzugefügt werden soll.  
+ `TRUE` Wenn Sie das Element als sichtbar ist, hinzufügen möchten `FALSE` ausgeblendet, wenn das Element als hinzugefügt werden soll.  
   
-##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
+##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Die erweiterten Bereich des Status-Menübands hinzugefügt ein Menübandelement.  
   
 ```  
@@ -197,12 +192,12 @@ void AddExtendedElement(
  Die Beschriftung des Elements.  
   
  [in] `bIsVisible`  
- `TRUE`Wenn Sie das Element als sichtbar ist, hinzufügen möchten `FALSE` ausgeblendet, wenn das Element als hinzugefügt werden soll.  
+ `TRUE` Wenn Sie das Element als sichtbar ist, hinzufügen möchten `FALSE` ausgeblendet, wenn das Element als hinzugefügt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Der erweiterte Bereich befindet sich rechts vom Statusleisten-Steuerelement.  
   
-##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
+##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator  
  Die Menüband-Statusleiste hinzugefügt Trennzeichen.  
   
 ```  
@@ -212,7 +207,7 @@ void AddSeparator();
 ### <a name="remarks"></a>Hinweise  
  Das Framework Fügt ein Trennzeichen nach der Methode [CMFCRibbonStatusBar::AddElement](#addelement). Fügt das letzte Element.  
   
-##  <a name="create"></a>CMFCRibbonStatusBar::Create  
+##  <a name="create"></a>  CMFCRibbonStatusBar::Create  
  Erstellt eine Menüband-Statusleiste an.  
   
 ```  
@@ -233,9 +228,9 @@ BOOL Create(
  Die Steuerelement-ID der Statusleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Statusleiste erfolgreich erstellt wurde, `FALSE` andernfalls.  
+ `TRUE` Wenn die Statusleiste erfolgreich erstellt wurde, `FALSE` andernfalls.  
   
-##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
+##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx  
  Erstellt eine Menüband-Statusleiste, die einen erweiterten Stil verfügt.  
   
 ```  
@@ -260,9 +255,9 @@ BOOL CreateEx(
  Die Steuerelement-ID der Statusleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Statusleiste erfolgreich erstellt wurde, `FALSE` andernfalls.  
+ `TRUE` Wenn die Statusleiste erfolgreich erstellt wurde, `FALSE` andernfalls.  
   
-##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -277,7 +272,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
+##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement  
  Gibt einen Zeiger auf das Element mit der angegebenen Befehls-ID.  
   
 ```  
@@ -289,9 +284,9 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
  Die ID des Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Element mit der angegebenen Befehls-ID. `NULL`Wenn kein solches Element vorhanden ist.  
+ Ein Zeiger auf das Element mit der angegebenen Befehls-ID. `NULL` Wenn kein solches Element vorhanden ist.  
   
-##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount  
  Gibt die Anzahl der Elemente, die im Hauptbereich des Status-Menübands befinden.  
   
 ```  
@@ -301,7 +296,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente, die im Hauptbereich des Status-Menübands befinden.  
   
-##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
+##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement  
  Gibt einen Zeiger auf das Element, das sich am angegebenen Index befindet.  
   
 ```  
@@ -313,11 +308,11 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
  Gibt einen nullbasierten Index eines Elements, das im Hauptbereich des Statusleisten-Steuerelement befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Element, das sich am angegebenen Index befindet. `NULL`Wenn der Index ist negativ oder überschreitet die Anzahl der Elemente in der Statusleiste.  
+ Ein Zeiger auf das Element, das sich am angegebenen Index befindet. `NULL` Wenn der Index ist negativ oder überschreitet die Anzahl der Elemente in der Statusleiste.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
+##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount  
  Gibt die Anzahl der Elemente, die im erweiterten Bereich des Status-Menübands befinden.  
   
 ```  
@@ -327,7 +322,7 @@ int GetExCount() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente, die im erweiterten Bereich des Status-Menübands befinden.  
   
-##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
+##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement  
  Gibt einen Zeiger auf das Element zurück, das sich an einem angegebenen Index im erweiterten Bereich des Status-Menübands befindet. Der erweiterte Bereich befindet sich rechts vom Statusleisten-Steuerelement.  
   
 ```  
@@ -339,11 +334,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
  Bestimmt den Null-basierten Index eines Elements, das sich im erweiterten Bereich des Statusleisten-Steuerelements befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Element, das sich an einem angegebenen Index im erweiterten Bereich des Status-Menübands befindet. `NULL`Wenn `nIndex` ist ein negativer Wert oder die Anzahl der Elemente im erweiterten Bereich des Status-Menübands überschreitet.  
+ Ein Zeiger auf das Element, das sich an einem angegebenen Index im erweiterten Bereich des Status-Menübands befindet. `NULL` Wenn `nIndex` ist ein negativer Wert oder die Anzahl der Elemente im erweiterten Bereich des Status-Menübands überschreitet.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -357,7 +352,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -368,7 +363,7 @@ int GetSpace() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -379,7 +374,7 @@ BOOL IsBottomFrame() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -393,7 +388,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
+##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode  
  Bestimmt, ob die Informationen im Modus für die Menüband-Statusleiste aktiviert ist.  
   
 ```  
@@ -401,12 +396,12 @@ BOOL IsInformationMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Statusleiste im Informationen Modus arbeiten kann; andernfalls `FALSE`.  
+ `TRUE` Wenn die Statusleiste im Informationen Modus arbeiten kann; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Im Modus Informationen die Statusleiste Blendet alle regulären Bereiche und zeigt eine Meldungszeichenfolge.  
   
-##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
+##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation  
  Zeigt die Zeichenfolge, die angezeigt wird, auf die Menüband-Statusleiste angezeigt, wenn die Informationen im Modus aktiviert ist.  
   
 ```  
@@ -429,7 +424,7 @@ virtual void OnDrawInformation(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung der Informationszeichenfolge auf der Statusleiste anpassen möchten. Verwenden der [CMFCRibbonStatusBar::SetInformation](#setinformation) Methode, um die Statusleiste in Informationen Modus zu versetzen. In diesem Modus wird die Statusleiste Blendet alle Bereiche, und zeigt die Informationszeichenfolge durch angegebene `strInfo`.  
   
-##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -438,14 +433,14 @@ virtual void RecalcLayout();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll  
  Entfernt alle Elemente aus dem Menüband-Statusleiste.  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
+##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement  
  Entfernt das Element, das eine angegebene Befehls-ID aus dem Menüband-Statusleiste verfügt.  
   
 ```  
@@ -457,9 +452,9 @@ BOOL RemoveElement(UINT uiID);
  Die ID des Elements auf der Statusleiste aufheben.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn ein Element mit dem angegebenen `uiID` wird entfernt. Andernfalls `FALSE`.  
+ `TRUE` Wenn ein Element mit dem angegebenen `uiID` wird entfernt. Andernfalls `FALSE`.  
   
-##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
+##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Aktiviert oder deaktiviert die Informationen im Modus für die Menüband-Statusleiste.  
   
 ```  

@@ -2,11 +2,8 @@
 title: CHwndRenderTarget-Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHwndRenderTarget
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f11f7e329b623639fb1441e4d9e18720a6b6b94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d83765309f6df860b190d3ea2114e7e0fd35724
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget-Klasse
 Ein Wrapper für ID2D1HwndRenderTarget.  
@@ -99,7 +94,7 @@ class CHwndRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CHwndRenderTarget::Attach  
+##  <a name="attach"></a>  CHwndRenderTarget::Attach  
  Hängt die vorhandene Ziel-Schnittstelle, um das Objekt zu rendern  
   
 ```  
@@ -110,7 +105,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
  `pTarget`  
  Vorhandene Render-Ziel-Schnittstelle. NULL darf nicht sein  
   
-##  <a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
+##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
  Gibt an, ob diese Renderziel zugeordnete HWND okkludierte ist.  
   
 ```  
@@ -120,7 +115,7 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der angibt, ob das zugeordnete HWND-Renderziel okkludiert wird.  
   
-##  <a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
+##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget  
  Erstellt ein CHwndRenderTarget-Objekt aus der HWND.  
   
 ```  
@@ -131,7 +126,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
  `hwnd`  
  Das zugeordnete HWND-Renderziel  
   
-##  <a name="create"></a>CHwndRenderTarget::Create  
+##  <a name="create"></a>  CHwndRenderTarget::Create  
  Erstellt ein Fenster zugeordneten Renderziel  
   
 ```  
@@ -145,7 +140,7 @@ BOOL Create(HWND hWnd);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben  
   
-##  <a name="detach"></a>CHwndRenderTarget::Detach  
+##  <a name="detach"></a>  CHwndRenderTarget::Detach  
  Trennt die Render-Ziel-Schnittstelle aus dem Objekt  
   
 ```  
@@ -155,7 +150,7 @@ ID2D1HwndRenderTarget* Detach();
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf getrennten Rendern Ziel-Schnittstelle.  
   
-##  <a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
+##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd  
  Gibt das zugeordnete HWND-Renderziel.  
   
 ```  
@@ -165,7 +160,7 @@ HWND GetHwnd() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das zugeordnete HWND-Renderziel.  
   
-##  <a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
+##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget  
  Gibt ID2D1HwndRenderTarget-Schnittstelle.  
   
 ```  
@@ -175,14 +170,14 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine ID2D1HwndRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
+##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget  
  Ein Zeiger auf ein ID2D1HwndRenderTarget-Objekt.  
   
 ```  
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
+##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
  Gibt ID2D1HwndRenderTarget-Schnittstelle.  
   
 ```  
@@ -192,7 +187,7 @@ operator ID2D1HwndRenderTarget*();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine ID2D1HwndRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="recreate"></a>CHwndRenderTarget::ReCreate  
+##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate  
  Ein Renderziel Fenster zugeordneten erstellt neu  
   
 ```  
@@ -206,7 +201,7 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben.  
   
-##  <a name="resize"></a>CHwndRenderTarget::Resize  
+##  <a name="resize"></a>  CHwndRenderTarget::Resize  
  Ändert die Größe des Renderziels auf die angegebene Pixelgröße  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: CTooltipManager Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2adb62f107cb50ade529d552ce1735c57f74b171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager-Klasse
 Verwaltet Laufzeitinformationen über QuickInfos. Die `CTooltipManager` -Klasse wird einmal pro Anwendung instanziiert.  
@@ -69,7 +64,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtooltipmanager.h  
   
-##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
  Erstellt ein QuickInfo-Steuerelement.  
   
 ```  
@@ -113,7 +108,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Eine Symbolleiste.|CMFCToolBar CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Eine Toolbox.|Keine|  
   
-##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  Löscht ein QuickInfo-Steuerelement.  
   
 ```  
@@ -127,7 +122,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode für jede [CToolTipCtrl-Klasse](../../mfc/reference/ctooltipctrl-class.md) erstellte [CTooltipManager::CreateToolTip](#createtooltip). Das übergeordnete Steuerelement sollte rufen diese Methode aus der `OnDestroy` Handler. Dies ist erforderlich, die QuickInfo ordnungsgemäß aus dem Framework zu entfernen. Diese Methode legt `pToolTip` auf `NULL` vor dem zurückgeben.  
   
-##  <a name="settooltipparams"></a>Ctooltipmanager:: Settooltipparams  
+##  <a name="settooltipparams"></a>  Ctooltipmanager:: Settooltipparams  
  Passt die Darstellung der QuickInfo-Steuerelements für die angegebene Windows-Steuerelementtypen an.  
   
 ```  
@@ -152,14 +147,14 @@ void SetTooltipParams(
   
  Wenn Sie diese Methode aufrufen, alle vorhandenen Besitzer der QuickInfo die AFX_WM_UPDATETOOLTIPS Meldung aus, und sie müssen die QuickInfos neu erstellen, mit [CTooltipManager::CreateToolTip](#createtooltip).  
   
- `nTypes`kann eine beliebige Kombination aus gültigen QuickInfo eingibt, [CTooltipManager::CreateToolTip](#createtooltip) verwendet, oder es kann AFX_TOOLTIP_TYPE_ALL sein. Wenn Sie AFX_TOOLTIP_TYPE_ALL übergeben, werden alle QuickInfo Berechtigungstypen beeinflusst.  
+ `nTypes` kann eine beliebige Kombination aus gültigen QuickInfo eingibt, [CTooltipManager::CreateToolTip](#createtooltip) verwendet, oder es kann AFX_TOOLTIP_TYPE_ALL sein. Wenn Sie AFX_TOOLTIP_TYPE_ALL übergeben, werden alle QuickInfo Berechtigungstypen beeinflusst.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `SetTooltipParams` Methode der `CTooltipManager` Klasse. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
  Legt den Text und die Beschreibung für eine QuickInfo an.  
   
 ```  
@@ -190,7 +185,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>Hinweise  
  Der Wert der `nType` muss der gleiche Wert wie die `nType` Parameter [CTooltipManager::CreateToolTip](#createtooltip) beim Erstellen der QuickInfo angezeigt.  
   
-##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

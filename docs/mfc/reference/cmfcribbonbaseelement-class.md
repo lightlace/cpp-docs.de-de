@@ -1,12 +1,9 @@
 ---
 title: CMFCRibbonBaseElement Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
@@ -241,17 +238,15 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93db9b8d8c56a23254972af29c7381e368766381
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement-Klasse
 Die `CMFCRibbonBaseElement` Klasse ist die Basisklasse für alle Elemente, die Sie hinzufügen können eine [menübandleiste](../../mfc/reference/cmfcribbonbar-class.md). Beispiele für Menübandelemente sind Menübandschaltflächen, Menübandkontrollkästchen und Menübandkombinationsfelder.  
@@ -418,7 +413,7 @@ class CMFCRibbonBaseElement : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
+##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
  Ein Array von Zugriffstasteninfos hinzugefügt eine ZugriffstastenInfo für das Menübandelement.  
   
 ```  
@@ -433,7 +428,7 @@ virtual void AddToKeyList(
 ### <a name="remarks"></a>Hinweise  
  Wenn das Menüband Zugriffstasteninfos-Funktion aktiviert ist, zeigt das Framework Menüband Zugriffstasteninfos aus, wenn der Benutzer die ALT-Taste oder F10-TASTE drückt.  
   
-##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
+##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox  
  Im Listenfeld Befehle angegebenen Menüband hinzugefügt ein Menübandelement.  
   
 ```  
@@ -455,7 +450,7 @@ virtual int AddToListBox(
 ### <a name="remarks"></a>Hinweise  
  Das Framework fügt Menübandelemente an ein Listenfeld Befehle, um dem Benutzer ermöglichen, die Benutzeroberfläche anpassen.  
   
-##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
  Gibt an, ob das Menübandelement der schnellen zugriffssymbolleiste hinzugefügt werden kann.  
   
 ```  
@@ -463,11 +458,11 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Element hinzugefügt werden kann. andernfalls `FALSE`.  
+ `TRUE` Wenn das Element hinzugefügt werden kann. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
+##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted  
  Gibt an, ob die Größe des Menübandelements kompakt sein kann.  
   
 ```  
@@ -475,12 +470,12 @@ virtual BOOL CanBeCompacted() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Größe des Menübandelements compact werden kann; andernfalls `FALSE`.  
+ `TRUE` Wenn die Größe des Menübandelements compact werden kann; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Größe des ein Menübandelement kann compact, intermediate oder groß sein.  
   
-##  <a name="canbestretched"></a>Cmfcribbonbaseelement:: Canbestretched  
+##  <a name="canbestretched"></a>  Cmfcribbonbaseelement:: Canbestretched  
  Gibt an, ob die Höhe des Menübandelements vertikal um die Höhe einer Zeile Menüband erhöhen kann.  
   
 ```  
@@ -493,7 +488,7 @@ virtual BOOL CanBeStretched();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `TRUE`. Überschreiben Sie diese Methode, um anzugeben, ob die Höhe des Menübandelements vertikal um die Höhe einer Zeile Menüband erhöhen kann.  
   
-##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally  
  Gibt an, ob die Breite des Menübandelements ändern kann.  
   
 ```  
@@ -506,7 +501,7 @@ virtual BOOL CanBeStretchedHorizontally();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`. Überschreiben Sie diese Methode, um anzugeben, ob die Breite des Menübandelements ändern kann.  
   
-##  <a name="cleanupsizes"></a>Cmfcribbonbaseelement:: Cleanupsizes  
+##  <a name="cleanupsizes"></a>  Cmfcribbonbaseelement:: Cleanupsizes  
  Bereinigt die dimensionseinstellungen für das Menübandelement.  
   
 ```  
@@ -516,7 +511,7 @@ virtual void CleanUpSizes();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode in einer abgeleiteten Klasse die dimensionseinstellungen für das Menübandelement zurücksetzen.  
   
-##  <a name="closepopupmenu"></a>Cmfcribbonbaseelement:: Closepopupmenu  
+##  <a name="closepopupmenu"></a>  Cmfcribbonbaseelement:: Closepopupmenu  
  Schließt das Menü das Popupmenü für das Menübandelement.  
   
 ```  
@@ -525,7 +520,7 @@ virtual void ClosePopupMenu();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom  
  Kopiert den Status des angegebenen [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) auf das aktuelle Objekt.  
   
 ```  
@@ -538,7 +533,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
+##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl  
  Zerstört das Menübandelement.  
   
 ```  
@@ -548,7 +543,7 @@ virtual void DestroyCtrl();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode in einer abgeleiteten Klasse das Menübandelement zu zerstören.  
   
-##  <a name="drawimage"></a>Cmfcribbonbaseelement:: DrawImage  
+##  <a name="drawimage"></a>  Cmfcribbonbaseelement:: DrawImage  
  Zeichnet das Bild für das Menübandelement.  
   
 ```  
@@ -579,7 +574,7 @@ virtual void DrawImage(
  `RibbonImageSmall`  
  Bildgröße für kleine 16 x 16 Pixel.  
   
-##  <a name="find"></a>CMFCRibbonBaseElement::Find  
+##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Gibt den angegebenen Zeiger zurück, wenn mit dem aktuellen Objekt verwiesen wird.  
   
 ```  
@@ -595,7 +590,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData  
  Ruft einen Zeiger auf das Menübandelement ab, wenn sie die angegebenen Daten enthält.  
   
 ```  
@@ -611,7 +606,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID  
  Ruft einen Zeiger auf das Menübandelement ab, wenn dieses Element von der angegebenen Befehls-ID identifiziert wird  
   
 ```  
@@ -627,7 +622,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
+##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal  
  Ruft einen Zeiger auf das aktuelle Menübandelement ab, wenn seine Menübandelements ursprünglichen angegebenen Menübandelements übereinstimmt.  
   
 ```  
@@ -644,7 +639,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>Hinweise  
  Menübandelemente, die in einen anderen Container kopiert wurden, einen Zeiger auf das ursprüngliche Menübandelement behalten.  
   
-##  <a name="getcompactsize"></a>Cmfcribbonbaseelement:: Getcompactsize  
+##  <a name="getcompactsize"></a>  Cmfcribbonbaseelement:: Getcompactsize  
  Gibt die komprimierte Größe des Menübandelements zurück.  
   
 ```  
@@ -661,7 +656,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 > [!NOTE]
 >  Die komprimierte Größe bedeutet, dass das Menübandelement abgeschnitten wird (zeigt ein kleines Bild oder ein Bild ohne Text).  
   
-##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
+##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData  
  Ruft die benutzerdefinierten Daten das Menübandelement zugeordnet.  
   
 ```  
@@ -671,7 +666,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die benutzerdefinierten Daten das Menübandelement zugeordnet.  
   
-##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
+##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription  
  Gibt die Beschreibung des Menübandelements zurück.  
   
 ```  
@@ -681,7 +676,7 @@ virtual CString GetDescription() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Beschreibung des Menüband-Element. Die Beschreibung wird entweder auf der Statusleiste in einer QuickInfo oder unter die Menüschaltfläche angezeigt, wenn das Menübandelement befindet sich auf die [CMFCRibbonMainPanel Klasse](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown  
  Ruft einen Zeiger auf das Menübandelement ab, wenn der Popup-Menü nach unten gelöscht wird.  
   
 ```  
@@ -693,7 +688,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements  
  Fügt der aktuellen Menübandelement in das angegebene Array.  
   
 ```  
@@ -707,7 +702,7 @@ virtual void GetElements(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID  
  Das angegebene Array hinzugefügt des aktuellen Menübandelements, wenn das aktuelle Menübandelement angegebenen Befehls-ID enthält  
   
 ```  
@@ -725,7 +720,7 @@ virtual void GetElementsByID(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted  
  Ruft einen Zeiger auf das Menübandelement ab, wenn er hervorgehoben wird.  
   
 ```  
@@ -737,7 +732,7 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
+##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID  
  Gibt die Befehls-ID des Menübandelements zurück.  
   
 ```  
@@ -747,7 +742,7 @@ UINT GetID() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Befehls-ID des Menübandelements.  
   
-##  <a name="getimagesize"></a>Cmfcribbonbaseelement:: Getimagesize  
+##  <a name="getimagesize"></a>  Cmfcribbonbaseelement:: Getimagesize  
  Gibt die Bildgröße des Menübandelements zurück.  
   
 ```  
@@ -757,7 +752,7 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Bildgröße des Menübandelements.  
   
-##  <a name="getintermediatesize"></a>Cmfcribbonbaseelement:: Getintermediatesize  
+##  <a name="getintermediatesize"></a>  Cmfcribbonbaseelement:: Getintermediatesize  
  Gibt die Größe des Menübandelements im Zwischenstatus zurück.  
   
 ```  
@@ -771,7 +766,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Menübandelements im Zwischenstatus.  
   
-##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
+##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys  
  Gibt die Zugriffstasteninfo das Menübandelement zugeordnet.  
   
 ```  
@@ -781,7 +776,7 @@ LPCTSTR GetKeys() const;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Zugriffstasteninfo das Menübandelement zugeordnet.  
   
-##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
+##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect  
  Ruft das Begrenzungsrechteck ZugriffstastenInfo für das Menübandelement ab.  
   
 ```  
@@ -795,7 +790,7 @@ virtual CRect GetKeyTipRect(
  Zeiger zu einem Gerätekontext.  
   
  [in] `bIsMenu`  
- `TRUE`Wenn das Menübandelement ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer ein Rechteck mit 0-Werte zurück.  
@@ -803,7 +798,7 @@ virtual CRect GetKeyTipRect(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse das Begrenzungsrechteck Zugriffstasteninfo zurückgegeben.  
   
-##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
+##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize  
  Ruft die Größe des Texts Zugriffstasteninfo ab.  
   
 ```  
@@ -819,7 +814,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
+##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup  
  Gibt den Speicherort der Anzeige des Menübandelements in einer Menübandgruppe.  
   
 ```  
@@ -840,7 +835,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="remarks"></a>Hinweise  
  Menübandgruppen-Element sind nur horizontal ausgerichtet werden.  
   
-##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
+##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys  
  Gibt zurück, der im Menü ZugriffstastenInfo für das Menübandelement.  
   
 ```  
@@ -853,7 +848,7 @@ LPCTSTR GetMenuKeys() const;
 ### <a name="remarks"></a>Hinweise  
  Beim Aufrufen, wird ein Menü Zugriffstasteninfo ein Popupmenü anzeigt.  
   
-##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
+##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID  
  Ruft die Benachrichtigung Befehls-ID für das Menübandelement ab.  
   
 ```  
@@ -865,7 +860,7 @@ virtual UINT GetNotifyID();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
+##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal  
  Ruft das ursprüngliche Menübandelement ab.  
   
 ```  
@@ -878,7 +873,7 @@ CMFCRibbonBaseElement* GetOriginal() const;
 ### <a name="remarks"></a>Hinweise  
  Menübandelemente, die in einen anderen Container kopiert wurden, einen Zeiger auf das ursprüngliche Menübandelement behalten.  
   
-##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
+##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory  
  Ruft die Menübandkategorie für das Menübandelement ab.  
   
 ```  
@@ -890,7 +885,7 @@ CMFCRibbonCategory* GetParentCategory() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
+##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel  
  Ruft die Menübandbereich, der das Menübandelement enthält.  
   
 ```  
@@ -902,7 +897,7 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar  
  Ruft die übergeordnete menübandleiste für das Menübandelement ab.  
   
 ```  
@@ -914,7 +909,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
+##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd  
  Ruft das übergeordnete Fenster für das Menübandelement ab.  
   
 ```  
@@ -927,7 +922,7 @@ virtual CWnd* GetParentWnd() const;
 ### <a name="remarks"></a>Hinweise  
  Das übergeordnete Fenster für ein Menübandelement ist ein [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) oder ein [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
-##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
+##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Ruft einen Zeiger auf das Menübandelement ab, wenn der Benutzer derzeit drückt.  
   
 ```  
@@ -939,7 +934,7 @@ virtual CMFCRibbonBaseElement* GetPressed();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID  
  Ruft die Befehls-ID des Menübandelements ab, wenn er in der schnellen zugriffssymbolleiste befindet.  
   
 ```  
@@ -951,7 +946,7 @@ virtual UINT GetQuickAccessToolBarID() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect  
  Gibt das umschließende Rechteck des Menübandelements zurück.  
   
 ```  
@@ -961,7 +956,7 @@ CRect GetRect() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das umschließende Rechteck des Menübandelements. Die Position des Rechtecks ist in die Koordinaten des übergeordneten Elements von Menüband-Steuerelement.  
   
-##  <a name="getregularsize"></a>Cmfcribbonbaseelement:: Getregularsize  
+##  <a name="getregularsize"></a>  Cmfcribbonbaseelement:: Getregularsize  
  Gibt die reguläre Größe des Menübandelements zurück.  
   
 ```  
@@ -980,7 +975,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 > [!NOTE]
 >  Die reguläre Größe beträgt die maximale Größe des Menübandelements.  
   
-##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
+##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize  
  Gibt die aktuelle Größe des Menübandelements zurück.  
   
 ```  
@@ -994,7 +989,7 @@ virtual CSize GetSize(CDC* pDC);
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle Größe des Menübandelements.  
   
-##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
+##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText  
  Gibt den Text, der das Menübandelement zugeordnet.  
   
 ```  
@@ -1004,7 +999,7 @@ LPCTSTR GetText() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Text, der das Menübandelement zugeordnet wird.  
   
-##  <a name="gettooltiptext"></a>Cmfcribbonbaseelement:: GetToolTipText  
+##  <a name="gettooltiptext"></a>  Cmfcribbonbaseelement:: GetToolTipText  
  Gibt den QuickInfo-Text des Menübandelements zurück.  
   
 ```  
@@ -1014,7 +1009,7 @@ virtual CString GetToolTipText() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der QuickInfo-Text des Menübandelements.  
   
-##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+##  <a name="gettoplevelribbonbar"></a>  CMFCRibbonBaseElement::GetTopLevelRibbonBar  
  Ruft die oberste Ebene menübandleiste für das Menübandelement ab.  
   
 ```  
@@ -1026,7 +1021,7 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="hascompactmode"></a>Cmfcribbonbaseelement:: Hascompactmode  
+##  <a name="hascompactmode"></a>  Cmfcribbonbaseelement:: Hascompactmode  
  Gibt an, ob das Menübandelement über einen Komprimierungsmodus verfügt.  
   
 ```  
@@ -1034,14 +1029,14 @@ virtual BOOL HasCompactMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement über einen Komprimierungsmodus verfügt. Andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement über einen Komprimierungsmodus verfügt. Andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 >  In den compact-Modus zeigt ein Element nur ein kleines Bild.  
   
-##  <a name="hasintermediatemode"></a>Cmfcribbonbaseelement:: Hasintermediatemode  
+##  <a name="hasintermediatemode"></a>  Cmfcribbonbaseelement:: Hasintermediatemode  
  Gibt an, ob das Menübandelement über einen Zwischenstatus verfügt  
   
 ```  
@@ -1049,11 +1044,11 @@ virtual BOOL HasIntermediateMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement über einen Zwischenstatus verfügt `FALSE` andernfalls. In den Zwischenstatus zeigt ein Element ein kleines Bild und Text auf der rechten Seite des Bilds an.  
+ `TRUE` Wenn das Menübandelement über einen Zwischenstatus verfügt `FALSE` andernfalls. In den Zwischenstatus zeigt ein Element ein kleines Bild und Text auf der rechten Seite des Bilds an.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="haslargemode"></a>Cmfcribbonbaseelement:: Haslargemode  
+##  <a name="haslargemode"></a>  Cmfcribbonbaseelement:: Haslargemode  
  Legt fest, ob das Menübandelement über einen Großbildmodus verfügt.  
   
 ```  
@@ -1061,12 +1056,12 @@ virtual BOOL HasLargeMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement über einen großbildmodus verfügt. Andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement über einen großbildmodus verfügt. Andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  In den Modus "Groß" dauert ein Element die volle Höhe des übergeordneten Bereichs.  
   
-##  <a name="hasmenu"></a>Cmfcribbonbaseelement:: HasMenu  
+##  <a name="hasmenu"></a>  Cmfcribbonbaseelement:: HasMenu  
  Gibt an, ob das Menübandelement ein Menü verfügt.  
   
 ```  
@@ -1079,7 +1074,7 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um anzugeben, ob das Menübandelement ein Menü verfügt.  
   
-##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest  
  Ruft einen Zeiger auf das Menübandelement ab, wenn der angegebene Punkt darin befindet.  
   
 ```  
@@ -1096,7 +1091,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer einen gültigen Zeiger auf das Menübandelement, wenn er vorhanden ist. Überschreiben Sie diese Methode, um anzugeben, ob der Punkt in der Menübandelement befindet.  
   
-##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
+##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn  
  Gibt an, ob das Menübandelement mit anderen Menübandelemente vertikal ausgerichtet ist.  
   
 ```  
@@ -1109,7 +1104,7 @@ virtual BOOL IsAlignByColumn() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `TRUE`. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um anzugeben, ob das Menübandelement abgeleiteten mit anderen Menübandelemente vertikal ausgerichtet ist.  
   
-##  <a name="isalwayslargeimage"></a>Cmfcribbonbaseelement:: Isalwayslargeimage  
+##  <a name="isalwayslargeimage"></a>  Cmfcribbonbaseelement:: Isalwayslargeimage  
  Gibt an, ob die Bildgröße des Menüband-Element immer groß ist.  
   
 ```  
@@ -1117,12 +1112,12 @@ virtual BOOL IsAlwaysLargeImage() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Bildgröße des Menüband-Element immer groß ist; andernfalls `FALSE`.  
+ `TRUE` Wenn die Bildgröße des Menüband-Element immer groß ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Großes Bildgröße ist 32 x 32 Pixel.  
   
-##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
+##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode  
  Gibt an, ob das Menübandelement im Wiederholungsmodus Auto ist.  
   
 ```  
@@ -1141,7 +1136,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
   
  Im Autocommit das Menübandelement antwortet auf einem festgelegten Intervall, messen Wiederholungsmodus aus, in Millisekunden, durch den dauerhaft eine Benutzereingabe fest.  
   
-##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
+##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked  
  Gibt an, ob das Menübandelement überprüft wird.  
   
 ```  
@@ -1149,9 +1144,9 @@ virtual BOOL IsChecked() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement überprüft wird. andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement überprüft wird. andernfalls `FALSE`.  
   
-##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
+##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode  
  Gibt an, ob das Menübandelement in einen Komprimierungsmodus ist.  
   
 ```  
@@ -1159,9 +1154,9 @@ BOOL IsCompactMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement in einen Komprimierungsmodus ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement in einen Komprimierungsmodus ist. andernfalls `FALSE`.  
   
-##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
+##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook  
  Gibt an, ob das Menübandelement festgelegt ist, als Popup-Befehl angezeigt werden.  
   
 ```  
@@ -1169,11 +1164,11 @@ BOOL IsDefaultMenuLook() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement festgelegt ist, als Popup-Befehl angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement festgelegt ist, als Popup-Befehl angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
+##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled  
  Gibt an, ob das Menübandelement deaktiviert ist.  
   
 ```  
@@ -1181,9 +1176,9 @@ virtual BOOL IsDisabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement deaktiviert ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement deaktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
+##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown  
  Gibt an, ob das Menübandelement ein Popupmenü anzeigt und nach unten gelöscht wird.  
   
 ```  
@@ -1191,9 +1186,9 @@ virtual BOOL IsDroppedDown() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Sie das Menübandelement löschen nach unten, und ein Popupmenü anzeigt; andernfalls `FALSE`.  
+ `TRUE` Wenn Sie das Menübandelement löschen nach unten, und ein Popupmenü anzeigt; andernfalls `FALSE`.  
   
-##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
+##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused  
  Gibt an, ob das Menübandelement den Fokus besitzt.  
   
 ```  
@@ -1201,9 +1196,9 @@ virtual BOOL IsFocused() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Menübandelement den Fokus besitzt; andernfalls `FALSE`.  
+ `TRUE` Wenn die Menübandelement den Fokus besitzt; andernfalls `FALSE`.  
   
-##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
+##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon  
  Gibt an, ob das Menübandelement in einem Menübandkatalog enthalten ist.  
   
 ```  
@@ -1216,7 +1211,7 @@ virtual BOOL IsGalleryIcon() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um anzugeben, ob das Menübandelement in einem Menübandkatalog enthalten ist.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted  
  Gibt an, ob das Menübandelement markiert ist.  
   
 ```  
@@ -1224,11 +1219,11 @@ virtual BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement hervorgehoben ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement hervorgehoben ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
+##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode  
  Gibt an, ob das aktuelle Bild für das Menübandelement intermediate Größe ist.  
   
 ```  
@@ -1236,12 +1231,12 @@ BOOL IsIntermediateMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Bild für das Menübandelement intermediate Größe ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Bild für das Menübandelement intermediate Größe ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Intermediate Bildgröße ist 16 x 16 Pixel.  
   
-##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
+##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode  
  Gibt an, ob das aktuelle Bild für das Menübandelement groß ist.  
   
 ```  
@@ -1249,12 +1244,12 @@ BOOL IsLargeMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Bild für das Menübandelement groß ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Bild für das Menübandelement groß ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Großes Bildgröße ist 32 x 32 Pixel.  
   
-##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
+##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode  
  Gibt an, ob das Menübandelement in einem Menü enthalten ist.  
   
 ```  
@@ -1262,11 +1257,11 @@ BOOL IsMenuMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement in einem Menü enthalten ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement in einem Menü enthalten ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
+##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed  
  Gibt an, ob der Benutzer das Menübandelement geklickt hat.  
   
 ```  
@@ -1274,9 +1269,9 @@ virtual BOOL IsPressed() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Benutzer das Menübandelement geklickt hat; andernfalls `FALSE`.  
+ `TRUE` Wenn der Benutzer das Menübandelement geklickt hat; andernfalls `FALSE`.  
   
-##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
+##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode  
  Gibt an, ob das Menübandelement in der schnellen zugriffssymbolleiste enthalten ist.  
   
 ```  
@@ -1284,11 +1279,11 @@ BOOL IsQATMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement in der schnellen zugriffssymbolleiste enthalten ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement in der schnellen zugriffssymbolleiste enthalten ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
+##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator  
  Gibt an, ob das Menübandelement eine Trennlinie angezeigt wird.  
   
 ```  
@@ -1296,11 +1291,11 @@ virtual BOOL IsSeparator() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement Anzeige Trennzeichen ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement Anzeige Trennzeichen ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder  
  Gibt an, ob das Menübandelement in einer Gruppe enthalten ist, die einen gemeinsamen Rahmen angezeigt.  
   
 ```  
@@ -1308,11 +1303,11 @@ BOOL IsShowGroupBorder() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement in einer Gruppe, die einen gemeinsamen Rahmen anzeigt enthalten ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement in einer Gruppe, die einen gemeinsamen Rahmen anzeigt enthalten ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom  
  Gibt an, ob die QuickInfo unter dem Menübandelement angezeigt wird.  
   
 ```  
@@ -1320,11 +1315,11 @@ virtual BOOL IsShowTooltipOnBottom() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die QuickInfo unter das Menübandelement angezeigt wird. `FALSE` , wenn die QuickInfo neben dem Zeiger angezeigt wird.  
+ `TRUE` Wenn die QuickInfo unter das Menübandelement angezeigt wird. `FALSE` , wenn die QuickInfo neben dem Zeiger angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
+##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop  
  Gibt an, ob das Menübandelement mit der Tastatur ausgewählt werden kann.  
   
 ```  
@@ -1337,7 +1332,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `TRUE`. Überschreiben Sie diese Methode, um anzugeben, ob das Menübandelement mit der Tastatur ausgewählt werden kann.  
   
-##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight  
  Gibt an, ob der Text für das Menübandelement auf der rechten Seite angezeigt wird.  
   
 ```  
@@ -1345,11 +1340,11 @@ BOOL IsTextAlwaysOnRight() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Text für das Menübandelement auf der rechten Seite angezeigt wird; andernfalls `FALSE`.  
+ `TRUE` Wenn der Text für das Menübandelement auf der rechten Seite angezeigt wird; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
+##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible  
  Gibt an, ob das Menübandelement derzeit angezeigt wird.  
   
 ```  
@@ -1357,11 +1352,11 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement derzeit angezeigt wird; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement derzeit angezeigt wird; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
+##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight  
  Gibt an, ob die Anzeigehöhe des Menübandelements identisch mit dem Menübandbereich Höhe angezeigt wird, die es enthält.  
   
 ```  
@@ -1374,7 +1369,7 @@ virtual BOOL IsWholeRowHeight() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`. Überschreiben Sie diese Methode, um anzugeben, ob die Anzeigehöhe des Menübandelements ist identisch mit dem Menübandbereich Höhe angezeigt, die es enthält.  
   
-##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand  
  Sendet eine Befehl-Benachrichtigung an das übergeordnete Fenster des Menübandelements.  
   
 ```  
@@ -1383,14 +1378,14 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bWithDelay`  
- `TRUE`der Befehl-Benachrichtigung an die Nachrichtenwarteschlange des übergeordneten Fensters hinzufügen; `FALSE` zum Senden der Nachricht sofort an das übergeordnete Fenster.  
+ `TRUE` der Befehl-Benachrichtigung an die Nachrichtenwarteschlange des übergeordneten Fensters hinzufügen; `FALSE` zum Senden der Nachricht sofort an das übergeordnete Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Nachricht gesendet wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn die Nachricht gesendet wurde. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
+##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem  
  Das übergeordnete Fenster der menübandleiste werden benachrichtigt, wenn ein Benutzer ein Menübandelement hervorgehoben, die in einer Liste befindet.  
   
 ```  
@@ -1403,7 +1398,7 @@ virtual void NotifyHighlightListItem(int nIndex);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
+##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar  
  Der angegebene schnellen zugriffssymbolleiste hinzugefügt das Menübandelement.  
   
 ```  
@@ -1419,7 +1414,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect  
  Aktualisiert die QuickInfo für das Menübandelement.  
   
 ```  
@@ -1433,7 +1428,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig aktualisiert diese Methode die QuickInfo für das Menübandelement. Überschreiben Sie diese Methode, um das Menübandelement zu aktualisieren, nachdem seine Anzeigerechteck geändert wurde.  
   
-##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
+##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat  
  Aktualisiert das Menübandelement als Antwort auf die nachhaltige Benutzereingaben an.  
   
 ```  
@@ -1446,7 +1441,7 @@ virtual BOOL OnAutoRepeat();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode immer standardmäßig `FALSE`. Überschreiben Sie diese Methode, um die nachhaltige Benutzereingaben zu verarbeiten.  
   
-##  <a name="oncalctextsize"></a>Cmfcribbonbaseelement:: Oncalctextsize  
+##  <a name="oncalctextsize"></a>  Cmfcribbonbaseelement:: Oncalctextsize  
  Berechnet die Größe des Texts für das Menübandelement.  
   
 ```  
@@ -1460,7 +1455,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode, um die Größe des Texts für das Menübandelement zu berechnen.  
   
-##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
+##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight  
  Vom Framework aufgerufen, wenn sich die Hervorhebung für ein Menübandelement ändert, die in einem Menü befindet.  
   
 ```  
@@ -1478,7 +1473,7 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode, um ein Menübandelement zu aktualisieren, die in einem Menü befindet, wenn die Hervorhebung ändert.  
   
-##  <a name="ondraw"></a>Cmfcribbonbaseelement:: OnDraw  
+##  <a name="ondraw"></a>  Cmfcribbonbaseelement:: OnDraw  
  Wird vom Framework aufgerufen, um das Menübandelement zu zeichnen.  
   
 ```  
@@ -1492,7 +1487,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie das Zeichnen von einem bestimmten Menübandelement anpassen möchten.  
   
-##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
+##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip  
  Wird aufgerufen, durch das Framework der ZugriffstastenInfo für das Menübandelement zu zeichnen.  
   
 ```  
@@ -1510,11 +1505,11 @@ virtual void OnDrawKeyTip(
  Das Begrenzungsrechteck für die Zugriffstasteninfo.  
   
  [in] `bIsMenu`  
- `TRUE`Wenn der ZugriffstastenInfo für eine Schaltfläche im Popupmenü ist. andernfalls `FALSE`.  
+ `TRUE` Wenn der ZugriffstastenInfo für eine Schaltfläche im Popupmenü ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawmenuimage"></a>Cmfcribbonbaseelement:: Ondrawmenuimage  
+##  <a name="ondrawmenuimage"></a>  Cmfcribbonbaseelement:: Ondrawmenuimage  
  Wird vom Framework aufgerufen, wenn das Bild für das Menübandelement gezeichnet wird.  
   
 ```  
@@ -1535,7 +1530,7 @@ virtual BOOL OnDrawMenuImage(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList  
  Wird aufgerufen, durch das Framework das Menübandelement in einem Listenfeld Befehle gezeichnet werden soll.  
   
 ```  
@@ -1570,7 +1565,7 @@ virtual void OnDrawOnList(
 ### <a name="remarks"></a>Hinweise  
  Im Listenfeld Befehle zeigt Menübandelemente, um Benutzern das Anpassen der schnellen zugriffssymbolleiste zu aktivieren.  
   
-##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey  
  Wird vom Framework aufgerufen, wenn der Benutzer eine Zugriffstasteninfo drückt und das Menübandelement den Fokus besitzt.  
   
 ```  
@@ -1579,14 +1574,14 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bIsMenuKey`  
- `TRUE`Wenn der Zugriffstasteninfo ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` Wenn der Zugriffstasteninfo ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Ereignis behandelt wurde; andernfalls `FALSE`.  
+ `TRUE` Wenn das Ereignis behandelt wurde; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
+##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey  
  Vom Framework aufgerufen, wenn der Benutzer eine Zugriffstasteninfo im Menü auf der Hauptbereich drückt.  
   
 ```  
@@ -1603,7 +1598,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`. Überschreiben Sie diese Methode, um Antworten, wenn ein Benutzer eine Zugriffstasteninfo im Menü auf der Hauptbereich drückt.  
   
-##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
+##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey  
  Wird vom Framework aufgerufen, wenn der Benutzer eine Taste drückt.  
   
 ```  
@@ -1620,7 +1615,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn das Menübandelement eine Tastenkombination verarbeitet werden soll.  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged  
  Vom Framework aufgerufen, wenn das Layout Richtung ändert.  
   
 ```  
@@ -1634,7 +1629,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode, um das Menübandelement anpassen, wenn das Layout Richtung ändert. Die Standard-layoutausrichtung ist links nach rechts.  
   
-##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
+##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus  
  Vom Framework aufgerufen, wenn ein Menübandelement empfängt oder den Eingabefokus verliert.  
   
 ```  
@@ -1644,7 +1639,7 @@ virtual void OnSetFocus(BOOL B);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie Ihre Anwendung eine Änderung in den Fokus von einem Menübandelement behandeln soll.  
   
-##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
+##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow  
  Wird aufgerufen, durch das Framework anzeigen oder Ausblenden der Menübandelement.  
   
 ```  
@@ -1658,7 +1653,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode zum Anzeigen oder Ausblenden der Menübandelement.  
   
-##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu  
  Vom Framework aufgerufen, bevor das Menübandelement über ein Popupmenü zeigt.  
   
 ```  
@@ -1668,7 +1663,7 @@ virtual void OnShowPopupMenu();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode weist dem übergeordnete Fenster des Menübands, das Menübandelement ein Popupmenü angezeigt werden.  
   
-##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
+##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand  
  Schließt das Menü das Popupmenü für das Menübandelement, und im übergeordneten Menü eine Schließen-Nachricht an.  
   
 ```  
@@ -1682,7 +1677,7 @@ void PostMenuCommand(UINT uiCmdId);
 ### <a name="remarks"></a>Hinweise  
  Die Meldung zum Schließen wird nur gesendet, wenn das Menübandelement sich in einem Popupmenü befindet.  
   
-##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
+##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw  
  Aktualisiert die Anzeige für das Menübandelement.  
   
 ```  
@@ -1692,7 +1687,7 @@ virtual void Redraw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode zeichnet das Anzeigerechteck für das Menübandelement durch Aufrufen von [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) mit der `RDW_INVALIDATE`, `RDW_ERASE`, und `RDW_UPDATENOW` flags festlegen.  
   
-##  <a name="setaccdata"></a>Cmfcribbonbaseelement:: Setaccdata  
+##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata  
  Legt die Barrierefreiheitsdaten für das Menübandelement fest.  
   
 ```  
@@ -1714,7 +1709,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig legt diese Methode die Barrierefreiheitsdaten für das Menübandelement fest und gibt immer `TRUE`zurück. Setzen Sie diese Methode außer Kraft, um die Barrierefreiheitsdaten festzulegen und einen Wert zurückzugeben, der den Erfolg oder einen Fehler angibt.  
   
-##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
+##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode  
  Legt die Größe für das Menübandelement fest.  
   
 ```  
@@ -1723,7 +1718,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bCompactMode`  
- `TRUE`Reduzieren Sie die Größe des Menübandelements; `FALSE` erhöhen die Größe des Menübandelements.  
+ `TRUE` Reduzieren Sie die Größe des Menübandelements; `FALSE` erhöhen die Größe des Menübandelements.  
   
 ### <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle sind die Logik für diese Methode zusammengefasst.  
@@ -1735,7 +1730,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 |`TRUE`|Große|Bei zwischenänderungen Sie festgelegt, wenn es möglich ist.|  
 |`FALSE`|Komprimieren|Zwischendateien, wenn es möglich ist; andernfalls groß.|  
   
-##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
+##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData  
  Ordnet ein Datenelement das Menübandelement.  
   
 ```  
@@ -1746,7 +1741,7 @@ void SetData(DWORD_PTR dwData);
  [in] `dwData`  
  Der Datenwert.  
   
-##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
+##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
  Legt das Menübandelement als Popup-Befehl angezeigt werden.  
   
 ```  
@@ -1755,11 +1750,11 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bIsDefaultMenuLook`  
- `TRUE`festzulegende das Menübandelement als Popup-Befehl angezeigt werden; andernfalls `FALSE`.  
+ `TRUE` festzulegende das Menübandelement als Popup-Befehl angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setdescription"></a>Cmfcribbonbaseelement:: setDescription  
+##  <a name="setdescription"></a>  Cmfcribbonbaseelement:: setDescription  
  Legt die Beschreibung für das Menübandelement fest.  
   
 ```  
@@ -1773,7 +1768,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="remarks"></a>Hinweise  
  Das Framework zeigt die neue Beschreibung an, entweder auf der Statusleiste in der QuickInfo oder unter der Schaltfläche.  
   
-##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
+##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID  
  Legt die Befehls-ID für das Menübandelement fest.  
   
 ```  
@@ -1784,7 +1779,7 @@ virtual void SetID(UINT nID);
  [in] `nID`  
  Die Befehls-ID.  
   
-##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
+##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
  Legt die anfängliche Größe für das Menübandelement fest.  
   
 ```  
@@ -1793,12 +1788,12 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bOneRow`  
- `TRUE`Beschränken Sie die Anzeigegröße für das Menübandelement zu komprimieren oder das bei zwischenänderungen festgelegt; andernfalls `FALSE`.  
+ `TRUE` Beschränken Sie die Anzeigegröße für das Menübandelement zu komprimieren oder das bei zwischenänderungen festgelegt; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Anzeigegröße der Menübandelemente kann compact, intermediate oder groß sein.  
   
-##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys  
  Legt die Zugriffstasteninfos für das Menübandelement fest.  
   
 ```  
@@ -1814,7 +1809,7 @@ virtual void SetKeys(
  [in] `lpszMenuKeys`  
  Der ZugriffstastenInfo für das Menü das Popupmenü des Menübandelements.  
   
-##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
+##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
  Legt den ursprünglichen Menübandelement für das Menübandelement fest.  
   
 ```  
@@ -1828,7 +1823,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>Hinweise  
  Menübandelemente, die in einen anderen Container kopiert wurden, einen Zeiger auf das ursprüngliche Menübandelement behalten.  
   
-##  <a name="setparentcategory"></a>Cmfcribbonbaseelement:: Setparentcategory  
+##  <a name="setparentcategory"></a>  Cmfcribbonbaseelement:: Setparentcategory  
  Legt die übergeordnete Kategorie für das Menübandelement fest.  
   
 ```  
@@ -1842,7 +1837,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="remarks"></a>Hinweise  
  Die Gruppen im Registerkartenformat im Menübandsteuerelemente werden als "Kategorien" bezeichnet.  
   
-##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
+##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu  
  Legt das übergeordnete Element Menücontainer für das Menübandelement fest.  
   
 ```  
@@ -1855,7 +1850,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
+##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar  
  Legt die übergeordnete menübandleiste für das Menübandelement fest.  
   
 ```  
@@ -1868,7 +1863,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
+##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect  
  Legt die Abmessungen des Rechtecks Anzeige für das Menübandelement fest.  
   
 ```  
@@ -1881,7 +1876,7 @@ void SetRect(CRect rect);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="settext"></a>Cmfcribbonbaseelement:: SetText  
+##  <a name="settext"></a>  Cmfcribbonbaseelement:: SetText  
  Legt den Text und ZugriffstastenInfo für das Menübandelement fest.  
   
 ```  
@@ -1906,7 +1901,7 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight  
  Legt den Text für das Menübandelement auf der rechten Seite angezeigt werden sollen.  
   
 ```  
@@ -1915,11 +1910,11 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bSet`  
- `TRUE`um den Text auf der rechten Seite anzuzeigen; andernfalls `FALSE`.  
+ `TRUE` um den Text auf der rechten Seite anzuzeigen; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
+##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText  
  Legt den QuickInfo-Text für das Menübandelement fest.  
   
 ```  
@@ -1930,7 +1925,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
  [in] `lpszText`  
  Der QuickInfo-Text.  
   
-##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
+##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
  Legt die Sichtbarkeit des Menübandelements fest.  
   
 ```  
@@ -1939,11 +1934,11 @@ void SetVisible(BOOL bIsVisible);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bIsVisible`  
- `TRUE`um das Menübandelement anzuzeigen; `FALSE` um das Menübandelement auszublenden.  
+ `TRUE` um das Menübandelement anzuzeigen; `FALSE` um das Menübandelement auszublenden.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
+##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally  
  Die Breite des Menübandelements gestreckt wird.  
   
 ```  
@@ -1953,7 +1948,7 @@ virtual void StretchHorizontally();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode wird ein Assertionsfehler in Debugbuilds generiert und sollte daher nicht aufgerufen werden. Überschreiben Sie diese Methode, um die Breite des Menübandelements zu Strecken.  
   
-##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
+##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow  
  Ändert die Anzeigehöhe des Menübandelements an die Höhe der angegebenen Zeile an.  
   
 ```  
@@ -1970,12 +1965,12 @@ virtual BOOL StretchToWholeRow(
  Die Höhe der Zeile.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anzeigehöhe festgelegt wurde. andernfalls `FALSE`.  
+ `TRUE` Wenn die Anzeigehöhe festgelegt wurde. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um die Anzeigehöhe des Menübandelements in die angegebene Zeilenhöhe zu ändern.  
   
-##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
+##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo  
  Aktualisiert den QuickInfo-Text mithilfe der Ressourcen-Befehl für das Menübandelement.  
   
 ```  
@@ -1984,7 +1979,7 @@ virtual void UpdateTooltipInfo();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
+##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus  
  Gibt an, ob das übergeordnete Element über den Tastaturfokus verfügt.  
   
 ```  
@@ -1992,7 +1987,7 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement den Fokus besitzt; andernfalls `FALSE`.  
+ `TRUE` Wenn das Menübandelement den Fokus besitzt; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   

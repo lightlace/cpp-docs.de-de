@@ -1,13 +1,10 @@
 ---
 title: Mehrere Dokumenttypen, Ansichten und Rahmenfenster | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Mehrere Dokumenttypen, Ansichten und Rahmenfenster
 Die Standardbeziehung zwischen einem Dokument, der zugehörigen Ansicht und dem zugehörigen Rahmenfenster wird in [Document/View Creation](../mfc/document-view-creation.md)(Erstellen von Dokumenten/Ansichten) beschrieben. Viele Anwendungen unterstützen einen einzelnen Dokumenttyp (jedoch möglicherweise mehrere offene Dokumente dieses Typs) mit einer einzelnen Ansicht des Dokuments und nur einem Rahmenfenster pro Dokument. Bei einigen Anwendungen muss jedoch einer oder mehrere dieser Standardwerte geändert werden.  
@@ -75,7 +70,7 @@ Die Standardbeziehung zwischen einem Dokument, der zugehörigen Ansicht und dem 
   
  Die folgende Abbildung für die Dokumente „a“, „b“ und „c“ zeigt die drei Benutzeroberflächenmodelle in der oben genannten Reihenfolge.  
   
- ![Mehrere &#45; Benutzeroberflächen mit Ansichten](../mfc/media/vc37a71.gif "vc37a71")  
+ ![Mehrere&#45;anzuzeigen Benutzeroberflächen](../mfc/media/vc37a71.gif "vc37a71")  
 Benutzeroberflächen mit mehreren Ansichten  
   
  Das Framework ermöglicht diese Modelle durch Implementieren des Befehls „Neues Fenster“ und Bereitstellen der Klasse [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), wie im Abschnitt [Splitterfenster](#_core_splitter_windows)erläutert. Sie können diese Modelle als Ausgangspunkt verwenden und darauf basierend weitere Modelle implementieren. Beispielprogramme für die verschiedenen Konfigurationen von Ansichten, Rahmenfenstern und Aufteilungen finden Sie unter [MFC-Beispiele](../visual-cpp-samples.md).  

@@ -1,13 +1,10 @@
 ---
-title: "Klassen für einfache Datentypen | Microsoft Docs"
-ms.custom: 
+title: Klassen für einfache Datentypen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simple-data-type-classes"></a>Klassen für einfache Datentypen
-Die folgenden Klassen kapseln, zeichnen Koordinaten, Zeichenfolgen und Uhrzeit und Datumsinformationen, sodass die praktische von C++-Syntax verwenden. Diese Objekte werden häufig als Parameter für die Memberfunktionen der Windows-Klassen in der Klassenbibliothek verwendet werden. Da `CPoint`, `CSize`, und `CRect` entsprechen der **Punkt**, **Größe**, und `RECT` um Datenstrukturen handelt, bzw., im Windows SDK können Sie Objekte dieser C++-Klassen, wo Sie diese Strukturen C-Sprachen verwenden können. Die Klassen bieten nützliche Schnittstellen über deren Memberfunktionen. `CStringT`Stellt sehr flexibel, dynamische Zeichenfolgen bereit. `CTime`, `COleDateTime`, `CTimeSpan`, und **COleTimeSpan** Uhrzeit-und Datumswerte darstellen. Weitere Informationen zu diesen Klassen finden Sie im Artikel [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md).  
+Die folgenden Klassen kapseln, zeichnen Koordinaten, Zeichenfolgen und Uhrzeit und Datumsinformationen, sodass die praktische von C++-Syntax verwenden. Diese Objekte werden häufig als Parameter für die Memberfunktionen der Windows-Klassen in der Klassenbibliothek verwendet werden. Da `CPoint`, `CSize`, und `CRect` entsprechen der **Punkt**, **Größe**, und `RECT` um Datenstrukturen handelt, bzw., im Windows SDK können Sie Objekte dieser C++-Klassen, wo Sie diese Strukturen C-Sprachen verwenden können. Die Klassen bieten nützliche Schnittstellen über deren Memberfunktionen. `CStringT` Stellt sehr flexibel, dynamische Zeichenfolgen bereit. `CTime`, `COleDateTime`, `CTimeSpan`, und **COleTimeSpan** Uhrzeit-und Datumswerte darstellen. Weitere Informationen zu diesen Klassen finden Sie im Artikel [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md).  
   
  Die Klassen, die mit "**COle**" Encapsulations Datentypen, die von OLE bereitgestellt werden. Diese Datentypen können verwendet werden, in der Windows-Programme, unabhängig davon, ob andere OLE-Funktionen verwendet werden.  
   

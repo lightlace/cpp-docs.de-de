@@ -1,13 +1,10 @@
 ---
-title: "Erstellen einer Containeranwendung für aktive Dokument | Microsoft Docs"
-ms.custom: 
+title: Erstellen einer Containeranwendung für aktive Dokument | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077d15837ed857ac983c3c9f9d4e7853b45aeee5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-active-document-container-application"></a>Erstellen einer Containeranwendung für aktive Dokumente
 Die einfachste und die empfohlene Methode zum Erstellen einer containeranwendung für aktive Dokument besteht darin, eine MFC-EXE-Container-Anwendung mit dem MFC-Anwendung-Assistenten erstellen, und ändern die Anwendung zur Unterstützung von active Document-Container.  
@@ -60,7 +55,7 @@ Die einfachste und die empfohlene Methode zum Erstellen einer containeranwendung
   
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]  
   
-     `OnPreparePrinting`Drucken unterstützt. Dieser Code ersetzt `DoPreparePrinting`, dies ist der Standard-drucken-Vorbereitung.  
+     `OnPreparePrinting` Drucken unterstützt. Dieser Code ersetzt `DoPreparePrinting`, dies ist der Standard-drucken-Vorbereitung.  
   
      Active Document-Container bietet ein verbessertes Schema für Druckens:  
   

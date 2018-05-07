@@ -1,13 +1,10 @@
 ---
 title: CDaoIndexInfo-Struktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo-Struktur
 Die `CDaoIndexInfo` Struktur enthält Informationen zu einem Indexobjekt, das für Datenzugriffsobjekte (DAO) definiert.  
@@ -110,9 +105,9 @@ struct CDaoIndexInfo {
   
  Index-Objekte werden nicht von einer MFC-Klasse dargestellt. Stattdessen DAO Objekten zugrunde liegenden MFC-Objekte der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) eine Auflistung von indexobjekten, bezeichnet die Auflistung von Indizes enthalten. Diese Klassen geben Memberfunktionen für den Zugriff auf einzelne Elemente von Indexinformationen, oder Sie auf Sie zugreifen können alle gleichzeitig mit einem `CDaoIndexInfo` Objekt durch Aufrufen der `GetIndexInfo` Memberfunktion Rand des enthaltenden Objekts.  
   
- `CDaoIndexInfo`verfügt über einen Konstruktor und einen Destruktor, um ordnungsgemäß zuordnen und Aufheben der Zuordnung der Feldinformationen Index in `m_pFieldInfos`.  
+ `CDaoIndexInfo` verfügt über einen Konstruktor und einen Destruktor, um ordnungsgemäß zuordnen und Aufheben der Zuordnung der Feldinformationen Index in `m_pFieldInfos`.  
   
- Informationen, die abgerufen, indem die `GetIndexInfo` Memberfunktion eines Objekts Tabledef befindet sich in einer `CDaoIndexInfo` Struktur. Rufen Sie die `GetIndexInfo` Memberfunktion Rand des enthaltenden Tabledef-Objekts, das in die Auflistung, deren Indizes das Indexobjekt gespeichert ist. `CDaoIndexInfo`definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoIndexInfo` Objekt.  
+ Informationen, die abgerufen, indem die `GetIndexInfo` Memberfunktion eines Objekts Tabledef befindet sich in einer `CDaoIndexInfo` Struktur. Rufen Sie die `GetIndexInfo` Memberfunktion Rand des enthaltenden Tabledef-Objekts, das in die Auflistung, deren Indizes das Indexobjekt gespeichert ist. `CDaoIndexInfo` definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoIndexInfo` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
