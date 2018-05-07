@@ -1,12 +1,9 @@
 ---
 title: CSocket-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket-Klasse
 Leitet sich von `CAsyncSocket`, erbt die Kapselung von der Windows Sockets-API und stellt ein höheres Maß an Abstraktion als die von einem `CAsyncSocket` Objekt.  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::OnMessagePending](#onmessagepending)|Aufgerufen wird, um ausstehende Nachrichten Prozess beim Warten auf eines blockierenden Aufrufs abgeschlossen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CSocket`kann mit Klassen `CSocketFile` und `CArchive` das Senden und Empfangen von Daten zu verwalten.  
+ `CSocket` kann mit Klassen `CSocketFile` und `CArchive` das Senden und Empfangen von Daten zu verwalten.  
   
  Ein `CSocket` Objekt zudem blockieren, ist wichtig, damit die synchrone Ausführung von `CArchive`. Blockieren von Funktionen, wie z. B. `Receive`, `Send`, `ReceiveFrom`, `SendTo`, und `Accept` (alle geerbten aus `CAsyncSocket`), keine Zurückgeben einer `WSAEWOULDBLOCK` Fehler in `CSocket`. Warten Sie stattdessen diese Funktionen auf, bis der Vorgang abgeschlossen ist. Darüber hinaus wird der ursprüngliche Aufruf mit Fehler beenden `WSAEINTR` Wenn `CancelBlockingCall` aufgerufen wird, während eine dieser Funktionen blockiert wird.  
   
@@ -104,7 +99,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Datei afxsock.h  
   
-##  <a name="attach"></a>CSocket:: Attach  
+##  <a name="attach"></a>  CSocket:: Attach  
  Rufen Sie diese Memberfunktion für die Verbindung der `hSocket` handle für ein `CSocket` Objekt.  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  Rufen Sie diese Memberfunktion, um einen blockierenden Aufruf gleichzeitig in Verarbeitung befindlichen "Abbrechen".  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  Rufen Sie die **erstellen** Memberfunktion nach dem Erstellen einer Socketobjekt, um die Windows Socket erstellt und angefügt.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  Weitere Informationen zu Stream als auch datagrammnachrichten Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md), [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md), und [Windows Sockets: verwenden Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  Erstellt ein `CSocket`-Objekt.  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  Gibt einen Zeiger auf eine `CSocket` Objekt.  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  Rufen Sie diese Memberfunktion, um festzustellen, ob ein sperraufruf ausgeführt wird.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  Überschreiben Sie diese Memberfunktion, um bestimmte Nachrichten von Windows suchen und reagieren Sie darauf in Ihrer Socket.  
   
 ```  

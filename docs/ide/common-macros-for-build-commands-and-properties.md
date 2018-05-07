@@ -1,13 +1,10 @@
 ---
-title: "Allgemeine Makros für Buildbefehle und-Eigenschaften | Microsoft Docs"
-ms.custom: 
+title: Allgemeine Makros für Buildbefehle und-Eigenschaften | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -101,24 +98,22 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Allgemeine Makros für Buildbefehle und-Eigenschaften
 Je nach Ihrer Installationsoptionen kann Visual Studio Hunderte von Makros verfügbar gemacht. Diese entsprechen den MSBuild-Eigenschaften, die standardmäßig oder in den PROPS oder TARGETS-Dateien oder in den projekteinstellungen festgelegt werden. Sie können diese Makros an einer beliebigen Stelle im Dialogfeld **Eigenschaftenseiten** eines Projekts verwenden, an der Zeichenfolgen akzeptiert werden. Bei diesen Makros wird keine Groß-/Kleinschreibung berücksichtigt.  
   
  Um die derzeit verfügbaren Makros in der Spalte rechts neben einem Eigenschaftennamen anzuzeigen, klicken Sie auf den Dropdownpfeil. Wenn **Bearbeiten** verfügbar ist, klicken Sie auf diese Option, und klicken Sie dann im Dialogfeld „Bearbeiten“ auf **Makros**. Weitere Informationen finden Sie unter **Specifying User-Defined Values** im Abschnitt [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md).  
   
- Makros, die als „Veraltet“ markiert sind, wenn nicht länger verwendet oder wurden durch ein entsprechendes [Elementmetadatenmakro](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***Name***)**) ersetzt. Als „Veraltet; Migriert“ markierte Makros sind ebenfalls veraltet. Wenn das Projekt, das das Makro enthält, zudem von Visual Studio 2008 migriert wird, konvertiert Visual Studio das Makro in das entsprechende aktuelle Makro.  
+ Makros, die "Veraltet" markiert sind nicht mehr verwendet oder wurden durch ein entsprechendes ersetzt [elementmetadatenmakro](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***Namen***)**). Als „Veraltet; Migriert“ markierte Makros sind ebenfalls veraltet. Wenn das Projekt, das das Makro enthält, zudem von Visual Studio 2008 migriert wird, konvertiert Visual Studio das Makro in das entsprechende aktuelle Makro.  
   
  Die folgende Tabelle beschreibt eine häufig verwendete Teilmenge der verfügbaren Makros. Diese Liste ist nicht vollständig. Ausführliche Informationen dazu, wie MSBuild Eigenschaftendefinitionen erstellt und als Makros in props und targets .vcxproj-Dateien verwendet werden, finden Sie unter [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties).  
   
@@ -155,7 +150,7 @@ Je nach Ihrer Installationsoptionen kann Visual Studio Hunderte von Makros verf�
 |**$(VSInstallDir)**|Das Verzeichnis, in dem Visual Studio installiert wurde.<br /><br /> Diese Eigenschaft enthält die Version der Visual Studio-Zielversion, die sich möglicherweise vom Visual Studio-Host unterscheidet. Beim Erstellen mit `$(PlatformToolset) = v110`, enthält **$(VSInstallDir)** z. B. den Pfad zur Installation von Visual Studio 2012.|  
 |**$(VCInstallDir)**|Das Verzeichnis, in dem Visual C++ installiert wurde.<br /><br /> Diese Eigenschaft enthält die Version der Visual C++-Zielversion, die sich möglicherweise vom Visual Studio-Host unterscheidet. Beispielsweise wird beim Erstellen mit `$(PlatformToolset) = v140`, **$(VCInstallDir)** enthält den Pfad zur Installation von Visual C++ 2015.|  
 |**$(FrameworkDir)**|Das Verzeichnis, in dem .NET Framework installiert wurde.|  
-|**$(FrameworkVersion)**|Die Version von .NET Framework, die von Visual Studio verwendet wurde. In Kombination mit **$(FrameworkDir)**stellt dies den vollständigen Pfad zu der Version von .NET Framework dar, die von Visual Studio verwendet wurde.|  
+|**$(FrameworkVersion)**|Die Version von .NET Framework, die von Visual Studio verwendet wurde. In Kombination mit **$(FrameworkDir)** stellt dies den vollständigen Pfad zu der Version von .NET Framework dar, die von Visual Studio verwendet wurde.|  
 |**$(FrameworkSDKDir)**|Das Verzeichnis, in dem Sie .NET Framework installiert haben. .NET Framework könnte als Teil von Visual Studio oder separat installiert worden sein.|  
 |**$(WebDeployPath)**|Der relative Pfad vom Stamm der Webbereitstellung zum Speicherort der Projektausgaben. Gibt denselben Wert zurück wie <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|  
 |**$(WebDeployRoot)**|Der absolute Pfad zum Speicherort der  **\<"localhost" >**. Beispiel: „c:\inetpub\wwwroot“.|  

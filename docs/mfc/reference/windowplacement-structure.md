@@ -1,13 +1,10 @@
 ---
 title: WINDOWPLACEMENT-Struktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPLACEMENT
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e73065cdf20d68b1da4ba77d1ad555e2bf95e937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT-Struktur
-Die `WINDOWPLACEMENT` Struktur enthält Informationen über die Platzierung eines Fensters auf dem Bildschirm**.**  
+Die `WINDOWPLACEMENT` Struktur enthält Informationen über die Platzierung eines Fensters auf dem Bildschirm **.**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,12 +40,12 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
   
 #### <a name="parameters"></a>Parameter  
  *length*  
- Gibt die Länge in Bytes, der Struktur**.**  
+ Gibt die Länge in Bytes, der Struktur **.**  
   
  `flags`  
  Gibt Flags an, die steuern die Position eines minimierten Fensters und die Methode mit der Fenster wiederhergestellt wird. Dieser Member kann es sich um eine oder beide der folgenden Flags sein:  
   
-- **WPF_SETMINPOSITION** gibt an, dass die x und y-Positionen des minimierten Fensters angegeben werden können**.** Dieses Flag muss angegeben werden, wenn die Koordinaten, in festgelegt werden der **PtMinPosition** Member.  
+- **WPF_SETMINPOSITION** gibt an, dass die x und y-Positionen des minimierten Fensters angegeben werden können **.** Dieses Flag muss angegeben werden, wenn die Koordinaten, in festgelegt werden der **PtMinPosition** Member.  
   
 - **WPF_RESTORETOMAXIMIZED** gibt an, dass das wiederhergestellte Fenster maximiert werden wird, unabhängig davon, ob dieses maximiert wurde, bevor er minimiert wurde. Diese Einstellung gilt nur das nächste Mal das Fenster wiederhergestellt wird. Es ändert sich nicht auf das Standardverhalten für die Wiederherstellung aus. Dieses Kennzeichen ist nur gültig, wenn die **SW_SHOWMINIMIZED** Wert wird angegeben, für die **ShowCmd** Member.  
   

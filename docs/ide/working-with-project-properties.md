@@ -1,13 +1,10 @@
 ---
 title: Arbeiten mit Projekteigenschaften | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>Arbeiten mit Projekteigenschaften
 In der IDE werden alle Informationen, die zum Erstellen eines Projekts erforderlich ist als verfügbar gemacht *Eigenschaften*. Diese Informationen umfassen den Namen der Anwendung, Erweiterung (z. B. DLL "," LIB "," EXE "), Compileroptionen, Linkeroptionen, Debuggereinstellungen, benutzerdefinierte Buildschritte und viele andere Dinge. Verwenden Sie in der Regel *Eigenschaftenseiten* ( **Projekt &#124; Eigenschaften**) anzeigen und ändern diese Eigenschaften. 
   
  Wenn Sie ein Projekt erstellen, weist das System Werte für verschiedene Eigenschaften aus. Die Standardwerte, unterscheiden sich geringfügig, je nach Art des Projekts und welche Optionen wählen Sie im Anwendungs-Assistenten. Z. B. eine ATL-Projekt verfügt über Eigenschaften, die im Zusammenhang mit der Dateien "MIDL", aber diese relevant sind in eine basiskonsolenanwendung. Die Standardeigenschaften werden im Bereich Allgemein auf den Eigenschaftenseiten angezeigt:  
   
- ![Visual C# 43; &#43; Projekt Standardwerte](../ide/media/visual-c---project-defaults.png "standardmäßig von Visual C++-Projekt")  
+ ![Visual C#&#43; &#43; Projekt Standardwerte](../ide/media/visual-c---project-defaults.png "standardmäßig von Visual C++-Projekt")  
   
  Einige Eigenschaften, z. B. den Anwendungsnamen, gelten für alle Varianten für den Build, unabhängig von der Zielplattform oder gibt an, ob es sich um eine Debug- oder Releasekonfiguration Build handelt. Aber die meisten Eigenschaften hängen von der Konfiguration ab. Dies ist, da der Compiler muss wissen, welche spezifische Plattform, auf den das Programm ausgeführt wird, und welche bestimmten Compileroptionen verwenden, um den richtigen Code zu generieren. Wenn Sie eine Eigenschaft festlegen, ist es daher wichtig, achten Sie darauf, welche Konfiguration und Plattform, die der neue Wert angewendet werden sollen. Sollten sie gelten nur für Debug Win32-Builds oder sollte er gelten auch für ARM Debuggen und Debug X64? Z. B. die **Optimierung** -Eigenschaft, wird standardmäßig festgelegt ist **Geschwindigkeit maximieren (/ O2)** in einer Release-Konfiguration, aber in der Debugkonfiguration automatisch deaktiviert.  
   
  Die Eigenschaftenseiten werden entwickelt, sodass Sie immer sehen, und wenn nötig ändern, welche Konfiguration und Plattform ein Eigenschaftswert für gelten sollte. Die folgende Abbildung zeigt die Eigenschaftenseiten, mit der Konfiguration und Plattforminformationen in den Listenfeldern oben. Wenn die **Optimierung** Eigenschaft hier festgelegt ist, es gelten nur für Win32 Debug-Builds, das sich in diesem Fall werden die aktive Konfiguration, wie durch rote Pfeile angezeigt.  
   
- ![Visual C# 43; &#43; Eigenschaftenseiten, die mit der aktiven Konfiguration](../ide/media/visual-c---property-pages-showing-active-configuration.png "Visual C++-Eigenschaftenseiten zeigt aktive Konfiguration")  
+ ![Visual C#&#43; &#43; Eigenschaftenseiten zeigt aktive Konfiguration](../ide/media/visual-c---property-pages-showing-active-configuration.png "Visual C++-Eigenschaftenseiten zeigt aktive Konfiguration")  
   
  Die folgende Abbildung zeigt die Eigenschaftenseite des gleichen Projekts, aber die Konfiguration wurde in Version geändert. Beachten Sie die anderen Wert für die Eigenschaft für die Optimierung aus. Beachten Sie außerdem, dass die aktive Konfiguration noch Debuggen. Sie können die Eigenschaften für jede Konfiguration hier festlegen. Er hat keine aktiv sein.  
   
- ![Visual C# 43; &#43; Eigenschaftenseiten, die mit Version Config](../ide/media/visual-c---property-pages-showing-release-config.png "Visual C++-Eigenschaftenseiten mit Release-Konfiguration")  
+ ![Visual C#&#43; &#43; Eigenschaftenseiten mit Version Config](../ide/media/visual-c---property-pages-showing-release-config.png "Visual C++-Eigenschaftenseiten mit Release-Konfiguration")  
   
  Das Projektsystem selbst beruht auf MSBuild, die Dateiformate und die Regeln zum Erstellen von Projekten beliebiger Art definiert. MSBuild verwaltet ein Großteil der Komplexität der Erstellung für mehrere Konfigurationen und Plattformen, aber Sie etwas über die Funktionsweise kennen müssen. Dies ist besonders wichtig, wenn Sie benutzerdefinierte Konfigurationen zu definieren, oder erstellen Sie wiederverwendbare Sätze von Eigenschaften, die Freigabe und in mehrere Projekte importieren möchten.  
   
  Projekteigenschaften werden gespeichert, entweder direkt in der Projektdatei (*.vcxproj) oder in andere XML- oder PROPS-Dateien, die den Project-Datei importiert und die Standardwerte angeben. Wie oben beschrieben, kann die gleiche Eigenschaft für die gleiche Konfiguration einen anderen Wert in verschiedenen Dateien zugewiesen werden. Wenn Sie ein Projekt erstellen, wertet das MSBuild-Modul die Projektdatei und die importierten Dateien in einer klar definierten Reihenfolge (siehe unten). Da jede Datei ausgewertet wird, werden alle Eigenschaftswerte, die in dieser Datei definiert die vorhandenen Werte überschrieben. Alle Werte, die nicht angegeben werden, werden von Dateien geerbt, die zuvor ausgewertet wurden. Wenn Sie eine Eigenschaft mit Eigenschaftenseiten festlegen, ist es daher auch wichtig, achten Sie darauf, in dem Sie festlegen. Wenn Sie eine Eigenschaft auf "X" in eine PROPS-Datei festlegen, aber die Eigenschaft "Y" in der Projektdatei festgelegt ist, wird das Projekt mit der Eigenschaft, legen Sie auf "Y" erstellt. Wenn die gleiche Eigenschaft auf "Z", auf ein Projektelement, z. B. eine CPP-Datei festgelegt ist, verwendet das MSBuild-Modul den Wert "Z". Weitere Informationen finden Sie unter [eigenschaftenvererbung](#bkmkPropertyInheritance) weiter unten in diesem Artikel.  
   
 ## <a name="build-configurations"></a>Buildkonfigurationen  
- Eine Konfiguration ist nur eine beliebige Gruppe von Eigenschaften, die ein Name zugewiesen werden. Visual Studio bietet Debug- und Releasekonfigurationen und jede werden verschiedene Eigenschaften für einen Debugbuild oder Releasebuild entsprechend festgelegt. Sie können der **Configuration Manager** , benutzerdefinierte Konfigurationen als eine einfache Möglichkeit, Gruppeneigenschaften für eine bestimmte Art von Build zu definieren. Eigenschaften-Manager für erweiterte arbeiten mit Eigenschaften verwendet, aber wir stellen da mit ihrer Hilfe Eigenschaftenkonfigurationen visualisieren hier vor. Sie greifen über **View &#124;  Eigenschaften-Manager** oder **View &#124; Anderen Windows &#124; Eigenschaften-Manager** je nach Ihren Einstellungen. Es hat die Knoten für jedes Paar Configuration/Plattform im Projekt. Unter jedem dieser Knoten können Sie Knoten für Eigenschaftenblätter (PROPS-Dateien), die einige spezifischen Eigenschaften für diese Konfiguration festgelegt sind.  
+ Eine Konfiguration ist nur eine beliebige Gruppe von Eigenschaften, die ein Name zugewiesen werden. Visual Studio bietet Debug- und Releasekonfigurationen und jede werden verschiedene Eigenschaften für einen Debugbuild oder Releasebuild entsprechend festgelegt. Sie können der **Configuration Manager** , benutzerdefinierte Konfigurationen als eine einfache Möglichkeit, Gruppeneigenschaften für eine bestimmte Art von Build zu definieren. Eigenschaften-Manager für erweiterte arbeiten mit Eigenschaften verwendet, aber wir stellen da mit ihrer Hilfe Eigenschaftenkonfigurationen visualisieren hier vor. Sie greifen über **Ansicht &#124; Eigenschaften-Manager** oder **Ansicht &#124; Weitere Fenster &#124; Eigenschaften-Manager** je nach Ihren Einstellungen. Es hat die Knoten für jedes Paar Configuration/Plattform im Projekt. Unter jedem dieser Knoten können Sie Knoten für Eigenschaftenblätter (PROPS-Dateien), die einige spezifischen Eigenschaften für diese Konfiguration festgelegt sind.  
   
  ![Eigenschaften-Manager](../ide/media/property-manager.png "Eigenschaften-Manager")  
   
@@ -69,7 +64,7 @@ In der IDE werden alle Informationen, die zum Erstellen eines Projekts erforderl
 ## <a name="property-pages"></a>Eigenschaftenseiten  
  Wie bereits erwähnt, basiert auf der Visual C++-Projektsystem [MSBuild](/visualstudio/msbuild/msbuild-properties) und die Werte sind gespeichert in der XML-Projektdatei an Standardeinstellung props und TARGETS-Dateien. Für Visual Studio 2015, befinden sich diese Dateien im **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Für Visual Studio 2017 befinden sich diese Dateien im  **\\Programmdateien (x86)\\Microsoft Visual Studio\\2017\\_Edition_\\Common7\\ IDE\\VC\\VCTargets**, wobei _Edition_ der Visual Studio-Edition installiert ist. Eigenschaften werden auch in eine beliebige benutzerdefinierte PROPS-Dateien gespeichert, die Sie Ihrem Projekt hinzufügen können. Es wird dringend empfohlen, dass Sie nicht die Dateien manuell bearbeiten, und stattdessen die Eigenschaftenseiten in der IDE alle Eigenschaften, insbesondere solche, die ändern, die bei der Vererbung, einbezogen werden, es sei denn, Sie eine sehr gute Kenntnisse von MSBuild haben verwenden.  
   
- Die folgende Abbildung zeigt die Eigenschaftenseiten für ein Visual C++-Projekt. Im linken Bereich der **VC++-Verzeichnisse***Regel* ausgewählt ist, und im rechten Bereich listet die Eigenschaften, die dieser Regel zugeordnet sind. Die `$(...)` Werte heißen leider *Makros*. Hierbei handelt es sich *nicht* C/C++-Makros, aber einfach kompilierungszeitskonstanten. Makros werden in erläutert die [Eigenschaft Seite Makros](#bkmkPropertiesVersusMacros) Abschnitt weiter unten in diesem Artikel.)  
+ Die folgende Abbildung zeigt die Eigenschaftenseiten für ein Visual C++-Projekt. Im linken Bereich die **VC++-Verzeichnisse *** Regel* ausgewählt ist, und im rechten Bereich listet die Eigenschaften, die dieser Regel zugeordnet sind. Die `$(...)` Werte heißen leider *Makros*. Hierbei handelt es sich *nicht* C/C++-Makros, aber einfach kompilierungszeitskonstanten. Makros werden in erläutert die [Eigenschaft Seite Makros](#bkmkPropertiesVersusMacros) Abschnitt weiter unten in diesem Artikel.)  
   
  ![Projekt-Eigenschaftenseiten](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -109,7 +104,7 @@ In der IDE werden alle Informationen, die zum Erstellen eines Projekts erforderl
 -   [Eigenschaftenseite "Tool zum Generieren von XML-Daten"](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>So durchsuchen Sie einfach alle Sucheigenschaften  
- Die **alle Optionen** Eigenschaftenseite (unter der **Konfigurationseigenschaften &#124; C/C++** Knoten in der **Eigenschaftenseiten** Dialogfeld) bietet eine schnelle Möglichkeit zum Durchsuchen, suchen Sie die Eigenschaften, die im aktuellen Kontext verfügbar sind. Über ein spezielles Suchfeld und eine einfache Syntax können Sie Ergebnisse filtern:  
+ Die **alle Optionen** Eigenschaftenseite (unter der **Konfigurationseigenschaften &#124; C/C++-** Knoten in der **Eigenschaftenseiten** Dialogfeld) bietet eine schnelle Möglichkeit zum Suchen und Durchsuchen die Eigenschaften, die im aktuellen Kontext verfügbar sind. Über ein spezielles Suchfeld und eine einfache Syntax können Sie Ergebnisse filtern:  
   
  Kein Präfix:  
  Suche nur in den Eigenschaftennamen (untergeordnete Zeichenfolge ohne Berücksichtigung der Groß-/Kleinschreibung)  
@@ -120,7 +115,7 @@ In der IDE werden alle Informationen, die zum Erstellen eines Projekts erforderl
  v:  
  Suche nur in Werten (untergeordnete Zeichenfolge ohne Berücksichtigung der Groß-/Kleinschreibung)  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>Eigenschaft-Seite-Makros  
+##  <a name="bkmkPropertiesVersusMacros"></a> Eigenschaft-Seite-Makros  
  Ein *Makro* wird eine Kompilierzeitkonstante, die auf einen Wert, der von Visual Studio oder das MSBuild-System definiert ist, oder klicken Sie auf einen benutzerdefinierten Wert verweisen kann. Mit Makros anstelle von hartcodierten Werte wie Verzeichnispfaden können Eigenschafteneinstellungen zwischen Computern und verschiedenen Versionen von Visual Studio einfacher freigegeben werden. Zudem können Sie besser sicherstellen, dass die Projekteinstellungen ordnungsgemäß an der Eigenschaftenvererbung teilnehmen. Sie können den Eigenschaften-Editor verwenden, um die Werte aller verfügbarer Makros anzuzeigen.  
   
 ### <a name="predefined-macros"></a>Vordefinierte Makros  
@@ -146,13 +141,13 @@ In der IDE werden alle Informationen, die zum Erstellen eines Projekts erforderl
 ## <a name="property-editor"></a>Eigenschaften-Editor  
  Mit dem Eigenschaften-Editor können Sie bestimmte Zeichenfolgeneigenschaften ändern und Makros als Werte auswählen. Um auf den Eigenschaften-Editor zuzugreifen, wählen Sie eine Eigenschaft auf einer Eigenschaftenseite aus, und klicken Sie rechts auf die Schaltfläche mit dem Pfeil nach unten. Wenn die Dropdown Liste enthält  **\<Bearbeiten >**, können Sie sie zum Anzeigen der Eigenschaften-Editor für diese Eigenschaft auswählen.  
   
- ![Eigenschaft der &#95; -Editor &#95; Dropdownliste](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![Eigenschaft&#95;Editor&#95;Dropdownliste](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  In den Eigenschaften-Editor können Sie wählen die **Makros** Schaltfläche, um die verfügbaren Makros und deren aktuelle Werte anzuzeigen. Die folgende Abbildung zeigt die Eigenschaften-Editor für den **Zusätzliche Includeverzeichnisse** Eigenschaft nach der **Makros** Schaltfläche ausgewählt wurde. Wenn die **vom übergeordneten oder ein Projekt standardmäßig erben** Kontrollkästchen aktiviert ist und Sie einen neuen Wert hinzufügen, wird dieser angefügt, um alle Werte, die derzeit vererbt werden. Wenn Sie das Kontrollkästchen deaktivieren, ersetzt der neue Wert die vererbten Werte. In den meisten Fällen bleibt das Kontrollkästchen aktiviert.  
   
- ![Eigenschaften-Editor, Visual C#, #43; &#43; ] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![Eigenschaften-Editor, Visual C#&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>Erstellen von wiederverwendbaren Eigenschaftenkonfigurationen  
+##  <a name="bkmkPropertySheets"></a> Erstellen von wiederverwendbaren Eigenschaftenkonfigurationen  
  Sie können zwar "globale" Eigenschaften für einen Benutzer und Computer festlegen, dies wird jedoch nicht mehr empfohlen. Stattdessen empfehlen wir die Verwendung von **Eigenschaften-Manager** zum Erstellen einer *Eigenschaftenblatt* um die Einstellungen für jede Art von Projekt zu speichern, die Sie möglicherweise wiederverwenden oder freigeben möchten. Über Eigenschaftenblätter verringern Sie zudem die Wahrscheinlichkeit, dass Eigenschafteneinstellungen für andere Projekttypen versehentlich geändert werden. Eigenschaftenblätter werden ausführlicher [Erstellen von wiederverwendbaren Eigenschaftenkonfigurationen](#bkmkPropertySheets).  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ In der IDE werden alle Informationen, die zum Erstellen eines Projekts erforderl
   
 3.  In **Eigenschaften-Manager**, öffnen Sie das neue Eigenschaftenblatt, und legen Sie dann die Eigenschaften, die Sie einschließen möchten.  
   
-##  <a name="bkmkPropertyInheritance"></a>Eigenschaftenvererbung  
+##  <a name="bkmkPropertyInheritance"></a> Eigenschaftenvererbung  
  Projekteigenschaften sind in Ebenen angelegt. Jede Ebene erbt die Werte der vorherigen Ebene. Ein geerbter Wert kann jedoch überschrieben werden, indem Sie explizit die Eigenschaft festlegen. So sieht die grundlegende Vererbungsstruktur aus:  
   
 1.  Standardeinstellungen von MSBuild CPP Toolset („..\Programme\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props“, die durch die VCXPROJ-Datei importiert wird)  

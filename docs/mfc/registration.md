@@ -1,13 +1,10 @@
 ---
 title: Registrierung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>Registrierung
 Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet OLE eine Liste der Objekttypen zur Auswahl. OLE ruft diese Liste in die Systemdatenbank für die Registrierung, die durch alle serveranwendungen bereitgestellten Informationen enthält. Wenn ein Server selbst registriert, wird der Einträge, die sie in der Registrierung Systemdatenbank (Registrierung) legt beschreiben jeden Typ von ihm bereitgestellten Objekt, Erweiterungen und den Pfad auf sich selbst neben anderen Informationen die Datei.  
@@ -41,7 +36,7 @@ Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet O
   
  Ausführliche Informationen über die Registrierung Systemdatenbank und das Format der reg-Dateien verwendet, um es zu aktualisieren, finden Sie unter der *OLE Programmer's Reference*.  
   
-##  <a name="_core_server_installation"></a>Server-Installation  
+##  <a name="_core_server_installation"></a> Server-Installation  
  Wenn Sie die Server-Anwendung zum ersten Mal installieren, sollten sie alle Typen von OLE-Elementen registrieren, es unterstützt. Sie können auch veranlassen, dass den Server die Systemdatenbank-Registrierung zu aktualisieren, jedes Mal, wenn sie als eigenständige Anwendung ausgeführt wird. Dadurch wird die Registrierungsdatenbank auf dem neuesten Stand, wenn der ausführbaren Serverdatei verschoben wird.  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet O
   
  RegEdit fügt den Inhalt der .reg-Textdatei in die Registrierungsdatenbank. Um die Datenbank zu überprüfen oder zu reparieren, verwenden Sie den Registrierungs-Editor. Achten Sie zum Löschen von wichtigen OLE-Einträge zu vermeiden.  
   
-##  <a name="_core_server_initialization"></a>Server-Initialisierung  
+##  <a name="_core_server_initialization"></a> Server-Initialisierung  
  Wenn Sie eine Server-Anwendung mit dem Assistenten zum Erstellen, schließt der Assistent alle Initialisierungsaufgaben für Sie automatisch ein. In diesem Abschnitt wird beschrieben, was Sie tun müssen, wenn eine Serveranwendung manuell schreiben.  
   
  Wenn eine Serveranwendung durch eine Steuerelementcontainer-Anwendung gestartet wird, Hinzufügen der OLE-System-DLLs die Option "/ einbetten" auf dem Server über die Befehlszeile. Eine Serveranwendung Verhalten hängt davon ab, gibt an, ob es von einem Container gestartet wurde, als Erstes eine Anwendung tun, wenn die Ausführung begonnen gesucht wird der "/ einbetten" oder "-Embedding" Option in der Befehlszeile angegeben. Wenn diesem Switch vorhanden ist, laden Sie einen anderen Satz von Ressourcen, die der Server als wird entweder in-Place aktiv oder öffnen Sie vollständig zu. Weitere Informationen finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).  

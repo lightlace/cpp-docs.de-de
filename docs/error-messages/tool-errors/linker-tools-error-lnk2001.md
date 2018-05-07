@@ -1,12 +1,9 @@
 ---
 title: Linkertoolfehler Lnk2001 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Linkertoolfehler LNK2001
 nicht aufgelöstes externes Symbol "*Symbol*"  
@@ -76,7 +71,7 @@ Dieser Fehler kann auftreten, wenn Sie mit dem Modus Releasebibliotheken, beim E
   
 Dieser Fehler kann auftreten, wenn Code bezieht sich auf ein Symbol, das von einer Version einer Bibliothek, aber Sie eine andere Version der Bibliothek an den Linker geben. Sie können im Allgemeinen nicht mischen, Objektdateien oder Bibliotheken, die für unterschiedliche Versionen des Compilers erstellt werden. Die Bibliotheken, die in einer neuen Version liefern können es sich um Symbole enthalten, die in den vorherigen Versionen und umgekehrt enthaltenen Bibliotheken nicht gefunden werden kann. Um dieses Problem zu beheben, erstellen Sie alle Objektdateien und Bibliotheken mit der gleichen Version des Compilers vor miteinander verknüpfen.  
   
--  Die Tools &#124; Optionen &#124; Projekte &#124; VC++-Verzeichnisse im Dialogfeld unter Dateiauswahl "Bibliothek" können Sie die Suchreihenfolge der Bibliothek ändern. Der Ordner "Linker" im Dialogfeld Eigenschaftenseiten des Projekts kann auch Pfade enthalten, die veraltet sein könnten.  
+-  Die Tools &#124; Optionen &#124; Projekte &#124; VC++-Verzeichnisse im Dialogfeld unter Dateiauswahl "Bibliothek" können Sie die Suchreihenfolge der Bibliothek zu ändern. Der Ordner "Linker" im Dialogfeld Eigenschaftenseiten des Projekts kann auch Pfade enthalten, die veraltet sein könnten.  
   
 -  Dieses Problem kann auftreten, wenn ein neues SDK (vielleicht um einen anderen Speicherort) installiert ist, und die Suchreihenfolge nicht aktualisiert wird, um auf den neuen Speicherort zu verweisen. Normalerweise, platzieren Sie den Pfad zum neuen SDK enthalten und lib-Verzeichnissen, vor der Standardspeicherort für Visual C++. Darüber hinaus kann ein Projekt mit eingebetteten Pfaden weiterhin auf alte Pfade verweisen, die sind gültig, aber für neue Funktionen hinzugefügt, die von der neuen Version, die an einen anderen Speicherort installiert ist veraltet.  
   

@@ -1,12 +1,9 @@
 ---
 title: CHtmlEditCtrlBase Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrlBase
@@ -229,17 +226,15 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545cf67ff790edeb2303f95365c34ca71e4dc7f6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase-Klasse
 Stellt eine HTML-Bearbeitungskomponente dar.  
@@ -379,7 +374,7 @@ template <class T> class CHtmlEditCtrlBase
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxhtml.h  
   
-##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
+##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
  Fügt einen Eintrag zur Tabelle Glyphe, die angibt, Bilder, die für bestimmte Tags im Entwurfsmodus angezeigt.  
   
 ```  
@@ -427,7 +422,7 @@ HRESULT AddToGlyphTable(
   
  Diese Methode sendet die [IDM_ADDTOGLYPHTABLE-Befehls-ID](https://msdn.microsoft.com/library/aa769891.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
+##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
  Schaltet das fett formatierte des markierten Texts.  
   
 ```  
@@ -440,7 +435,7 @@ HRESULT Bold() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BOLD-Befehls-ID](https://msdn.microsoft.com/library/aa769861.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="button"></a>CHtmlEditCtrlBase::Button  
+##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
  Überschreibt ein Schaltflächen-Steuerelement auf die aktuelle Auswahl an.  
   
 ```  
@@ -457,7 +452,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BUTTON-Befehls-ID](https://msdn.microsoft.com/library/aa769966.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
+##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
  Überschreibt eine Kontrollkästchen-Steuerelement für die aktuelle Auswahl an.  
   
 ```  
@@ -474,7 +469,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_CHECKBOX-Befehls-ID](https://msdn.microsoft.com/library/aa769972.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
+##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
  Löscht die aktuelle Auswahl an.  
   
 ```  
@@ -487,7 +482,7 @@ HRESULT ClearSelection() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_CLEARSELECTION-Befehls-ID](https://msdn.microsoft.com/library/aa770038.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
+##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy  
  Kopiert die aktuelle Auswahl in die Zwischenablage.  
   
 ```  
@@ -500,7 +495,7 @@ HRESULT Copy() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_COPY-Befehls-ID](https://msdn.microsoft.com/library/aa769872.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
+##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut  
  Kopiert die aktuelle Auswahl in die Zwischenablage, und anschließend gelöscht.  
   
 ```  
@@ -513,7 +508,7 @@ HRESULT Cut() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_CUT-Befehls-ID](https://msdn.microsoft.com/library/aa769875.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
+##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete  
  Löscht die aktuelle Auswahl an.  
   
 ```  
@@ -526,7 +521,7 @@ HRESULT Delete() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_DELETE-Befehls-ID](https://msdn.microsoft.com/library/aa769876.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
+##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
  Überschreibt eine Dropdown-Auswahlsteuerelement auf die aktuelle Auswahl an.  
   
 ```  
@@ -543,7 +538,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_DROPDOWNBOX-Befehls-ID](https://msdn.microsoft.com/library/aa769984.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
+##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
  Entfernt alle Einträge aus der Tabelle Glyphe, alle Abbilder, die für RFID-Transponder im Entwurfsmodus angezeigt Blendet.  
   
 ```  
@@ -556,7 +551,7 @@ HRESULT EmptyGlyphTable() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_EMPTYGLYPHTABLE-Befehls-ID](https://msdn.microsoft.com/library/aa769907.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
+##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand  
  Führt einen Befehl aus.  
   
 ```  
@@ -596,7 +591,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode stellt die Funktionalität von [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
-##  <a name="font"></a>CHtmlEditCtrlBase::Font  
+##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
  Öffnet eine Schriftart (Dialogfeld), um dem Benutzer ermöglichen, die Farbe, Schriftart und Schriftgrad des die aktuelle Auswahl zu ändern.  
   
 ```  
@@ -609,7 +604,7 @@ HRESULT Font() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_FONT-Befehls-ID](https://msdn.microsoft.com/library/aa769913.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
  Gibt zurück, ob ein Element Position-Eigenschaft "absolute".  
   
 ```  
@@ -626,7 +621,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_ABSOLUTE_POSITION-Befehls-ID](https://msdn.microsoft.com/library/aa769889.aspx).  
   
-##  <a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
+##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
  Ruft die Hintergrundfarbe der aktuellen Auswahl ab.  
   
 ```  
@@ -643,7 +638,7 @@ HRESULT GetBackColor(int& nColor) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BACKCOLOR-Befehls-ID](https://msdn.microsoft.com/library/aa769858.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
+##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
  Ruft den aktuellen Transponder der Block-Format ab.  
   
 ```  
@@ -660,7 +655,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BLOCKFMT-Befehls-ID](https://msdn.microsoft.com/library/aa769883.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
+##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames  
  Ruft ab, die Zeichenfolgen, die verfügbaren Blockspeicher Format Tags entspricht.  
   
 ```  
@@ -677,7 +672,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_GETBLOCKFMTS Befehls-ID](https://msdn.microsoft.com/library/aa769884.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
+##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
  Ruft den Namen der als Lesezeichen Anker dargestellt.  
   
 ```  
@@ -694,7 +689,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_BOOKMARK-Befehls-ID](https://msdn.microsoft.com/library/aa769873.aspx).  
   
-##  <a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
+##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument  
  Ruft das Document-Objekt ab.  
   
 ```  
@@ -708,7 +703,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
+##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
  Ruft den HTML-Code des aktuellen Dokuments ab.  
   
 ```  
@@ -722,7 +717,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
+##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
  Ruft den Titel des Dokuments ab.  
   
 ```  
@@ -736,7 +731,7 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
+##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
  Ruft einen Schnittstellenzeiger auf das Ereignisobjekt, das an das Ereignis für die letzte relevante Informationen enthält.  
   
 ```  
@@ -750,7 +745,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
+##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
  Ruft das Objekt, das das Ereignis ausgelöst hat.  
   
 ```  
@@ -764,7 +759,7 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
+##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
  Ruft den Schriftartnamen für die aktuelle Auswahl ab.  
   
 ```  
@@ -783,7 +778,7 @@ HRESULT GetFontFace(CString& strFace) const;
   
  Diese Methode sendet die [IDM_FONTNAME-Befehls-ID](https://msdn.microsoft.com/library/aa769880.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
+##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize  
  Ruft den Schriftgrad für die aktuelle Auswahl ab.  
   
 ```  
@@ -800,7 +795,7 @@ HRESULT GetFontSize(short& nSize) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_FONTSIZE-Befehls-ID](https://msdn.microsoft.com/library/aa769881.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
+##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
  Ruft die Vordergrundfarbe (Text) der aktuellen Auswahl ab.  
   
 ```  
@@ -817,7 +812,7 @@ HRESULT GetForeColor(int& nColor);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_FORECOLOR-Befehls-ID](https://msdn.microsoft.com/library/aa769882.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
+##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
  Gibt die Sicherheitszone der aktuellen Seite im Webbrowser zurück.  
   
 ```  
@@ -834,7 +829,7 @@ HRESULT GetFrameZone(short& nZone) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_GETFRAMEZONE-Befehls-ID](https://msdn.microsoft.com/library/aa769916.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
+##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
  Gibt an, ob das HTML-Dokument geändert wurde.  
   
 ```  
@@ -842,9 +837,9 @@ HRESULT GetIsDirty() const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt an, ob das Dokument geändert wurde. `GetIsDirty`Gibt eine `HRESULT` aus [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+ Gibt an, ob das Dokument geändert wurde. `GetIsDirty` Gibt eine `HRESULT` aus [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
-##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
+##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  Gibt zurück, ob ein Symbol für alle Elemente angezeigt wird, die über eine **StyleFloat** Eigenschaft.  
   
 ```  
@@ -861,7 +856,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWALIGNEDSITETAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769947.aspx).  
   
-##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
+##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
  Gibt zurück, ob der WebBrowser Symbole auf den Speicherort der allen Tags in einem Dokument anzeigen angezeigt.  
   
 ```  
@@ -878,7 +873,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWALLTAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769948.aspx).  
   
-##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
+##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
  Ruft ab, ob der WebBrowser zeigt ein Symbol für Bereich Tags an.  
   
 ```  
@@ -895,7 +890,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWAREATAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769949.aspx).  
   
-##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
+##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags  
  Ruft ab, ob der WebBrowser eine Glyphe Br-Tags werden angezeigt.  
   
 ```  
@@ -912,7 +907,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWWBRTAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769956.aspx).  
   
-##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
+##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags  
  Ruft ab, ob der WebBrowser ein Symbol für Kommentar-Tags werden angezeigt.  
   
 ```  
@@ -929,7 +924,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWCOMMENTTAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769950.aspx).  
   
-##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
+##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
  Ruft ab, ob der WebBrowser die Tags, die in Microsoft Internet Explorer 4.0 gezeigt angezeigt.  
   
 ```  
@@ -946,7 +941,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWMISCTAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769952.aspx).  
   
-##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
+##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags  
  Ruft ab, ob der WebBrowser ein Symbol für die Skripttags angezeigt.  
   
 ```  
@@ -963,7 +958,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWSCRIPTTAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769953.aspx).  
   
-##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
+##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags  
  Ruft ab, ob der WebBrowser ein Symbol für die Style-Tags werden angezeigt.  
   
 ```  
@@ -980,7 +975,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWSTYLETAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769954.aspx).  
   
-##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
+##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags  
  Ruft ab, ob der WebBrowser zeigt ein Symbol für alle unbekannten Tags an.  
   
 ```  
@@ -997,7 +992,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [IDM_SHOWUNKNOWNTAGS-Befehls-ID](https://msdn.microsoft.com/library/aa769955.aspx).  
   
-##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
+##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
  Überschreibt eine horizontale Linie auf der aktuellen Auswahl an.  
   
 ```  
@@ -1014,7 +1009,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_HORIZONTALLINE-Befehls-ID](https://msdn.microsoft.com/library/aa769968.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
+##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink  
  Fügt einen Link auf die aktuelle Auswahl ein.  
   
 ```  
@@ -1031,7 +1026,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_HYPERLINK-Befehls-ID](https://msdn.microsoft.com/library/aa769874.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
+##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste  
  Führt einen Einfügevorgang an, der mit Internet Explorer 5 kompatibel ist.  
   
 ```  
@@ -1048,7 +1043,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_IE50_PASTE-Befehls-ID](https://msdn.microsoft.com/library/aa769922.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
+##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
  Wird auf die aktuelle Auswahl einen Inlineframe überschrieben.  
   
 ```  
@@ -1065,7 +1060,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_IFRAME-Befehls-ID](https://msdn.microsoft.com/library/aa769969.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="image"></a>CHtmlEditCtrlBase::Image  
+##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
  Wird ein Bild auf der aktuellen Auswahl überschrieben.  
   
 ```  
@@ -1082,7 +1077,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_IMAGE-Befehls-ID](https://msdn.microsoft.com/library/aa769970.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
+##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
  Erhöht den Einzug des markierten Texts mit einem Einzug Erhöhung.  
   
 ```  
@@ -1095,7 +1090,7 @@ HRESULT Indent() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INDENT-Befehls-ID](https://msdn.microsoft.com/library/aa769963.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
+##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
  Überschreibt eine Box auf die aktuelle Auswahl an.  
   
 ```  
@@ -1112,7 +1107,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSFIELDSET-Befehls-ID](https://msdn.microsoft.com/library/aa769967.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
+##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
  Überschreibt ein Schaltflächen-Steuerelement auf die aktuelle Auswahl an.  
   
 ```  
@@ -1129,7 +1124,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTBUTTON-Befehls-ID](https://msdn.microsoft.com/library/aa769971.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
+##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden  
  Fügt ein ausgeblendetes Steuerelement auf die aktuelle Auswahl ein.  
   
 ```  
@@ -1146,7 +1141,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTHIDDEN-Befehls-ID](https://msdn.microsoft.com/library/aa769974.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
+##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
  Überschreibt eine Image-Steuerelement für die aktuelle Auswahl an.  
   
 ```  
@@ -1163,7 +1158,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTIMAGE-Befehls-ID](https://msdn.microsoft.com/library/aa769975.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
+##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
  Überschreibt eine Kennwortsteuerelement für die aktuelle Auswahl an.  
   
 ```  
@@ -1180,7 +1175,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTPASSWORD-Befehls-ID](https://msdn.microsoft.com/library/aa769976.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
+##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset  
  Überschreibt eine setzt das Steuerelement auf die aktuelle Auswahl an.  
   
 ```  
@@ -1197,7 +1192,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTRESET-Befehls-ID](https://msdn.microsoft.com/library/aa769978.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
+##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
  Überschreibt eine Senden-Steuerelement für die aktuelle Auswahl an.  
   
 ```  
@@ -1214,7 +1209,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTSUBMIT-Befehls-ID](https://msdn.microsoft.com/library/aa769979.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
+##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
  Überschreibt eine Dateiupload-Steuerelement für die aktuelle Auswahl an.  
   
 ```  
@@ -1231,7 +1226,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_INSINPUTUPLOAD-Befehls-ID](https://msdn.microsoft.com/library/aa769973.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
+##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
  Bestimmt, ob ein Element statisch positioniert ist.  
   
 ```  
@@ -1248,7 +1243,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_1D_ELEMENT-Befehls-ID](https://msdn.microsoft.com/library/aa769885.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
+##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
  Bestimmt, ob ein Element absolut positioniert ist.  
   
 ```  
@@ -1265,7 +1260,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_2D_ELEMENT-Befehls-ID](https://msdn.microsoft.com/library/aa769886.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
+##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
  Schaltet die aktuelle Auswahl zwischen kursiv und nicht an.  
   
 ```  
@@ -1278,7 +1273,7 @@ HRESULT Italic() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_ITALIC-Befehls-ID](https://msdn.microsoft.com/library/aa769988.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
+##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
  Zentriert die Format-Block in dem sich die aktuelle Auswahl befindet.  
   
 ```  
@@ -1291,7 +1286,7 @@ HRESULT JustifyCenter() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_JUSTIFYCENTER-Befehls-ID](https://msdn.microsoft.com/library/aa769989.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
+##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
  Richtet den Format-Block in dem sich die aktuelle Auswahl befindet.  
   
 ```  
@@ -1304,7 +1299,7 @@ HRESULT JustifyLeft() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_JUSTIFYLEFT-Befehls-ID](https://msdn.microsoft.com/library/aa770011.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
+##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
  Der Format-Block mit rechtsbündig in dem sich die aktuelle Auswahl befindet.  
   
 ```  
@@ -1317,7 +1312,7 @@ HRESULT JustifyRight() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_JUSTIFYRIGHT-Befehls-ID](https://msdn.microsoft.com/library/aa770013.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
+##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
  Überschreibt eine Auswahl Listenfeldsteuerelement für die aktuelle Auswahl an.  
   
 ```  
@@ -1334,7 +1329,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_LISTBOX-Befehls-ID](https://msdn.microsoft.com/library/aa769985.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
+##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
  Überschreibt eine leere Auswahlrahmen auf der aktuellen Auswahl an.  
   
 ```  
@@ -1351,7 +1346,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_MARQUEE-Befehls-ID](https://msdn.microsoft.com/library/aa769981.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
+##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument  
  Erstellt ein neues Dokument.  
   
 ```  
@@ -1361,7 +1356,7 @@ HRESULT NewDocument() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
+##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
  Schaltet die aktuelle Auswahl zwischen einer geordneten Liste und einem normalen Format-Block.  
   
 ```  
@@ -1378,7 +1373,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_ORDERLIST-Befehls-ID](https://msdn.microsoft.com/library/aa769982.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
+##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
  Um einen Schrittwert den Einzug des Blocks Format verringert in dem sich die aktuelle Auswahl befindet.  
   
 ```  
@@ -1391,7 +1386,7 @@ HRESULT Outdent() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_OUTDENT-Befehls-ID](https://msdn.microsoft.com/library/aa770015.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
+##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph  
  Überschreibt einen Zeilenumbruch in der aktuellen Auswahl an.  
   
 ```  
@@ -1408,7 +1403,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_PARAGRAPH-Befehls-ID](https://msdn.microsoft.com/library/aa769983.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
+##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste  
  Überschreibt den Inhalt der Zwischenablage an der aktuellen Auswahl.  
   
 ```  
@@ -1421,7 +1416,7 @@ HRESULT Paste() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_PASTE-Befehls-ID](https://msdn.microsoft.com/library/aa770017.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
+##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument  
  Das aktuelle Dokument gedruckt.  
   
 ```  
@@ -1443,7 +1438,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_PRINT-Befehls-ID](https://msdn.microsoft.com/library/aa769937.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
+##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
  Öffnet das Fenster "Seitenansicht" für das aktuelle Dokument mithilfe der Standardvorlage für die Seitenansicht oder eine benutzerdefinierte Vorlage.  
   
 ```  
@@ -1461,7 +1456,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_PRINTPREVIEW-Befehls-ID](https://msdn.microsoft.com/library/aa769938.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
+##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus  
  Rufen Sie diese Methode, um den Status der Befehle abzufragen.  
   
 ```  
@@ -1475,7 +1470,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) , der angibt, des Status für `cmdID`, oder 0 bei einem Fehler.  
   
-##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
+##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Wird ein Optionsfeld-Steuerelement auf die aktuelle Auswahl überschrieben.  
   
 ```  
@@ -1492,7 +1487,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_RADIOBUTTON-Befehls-ID](https://msdn.microsoft.com/library/aa769977.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
+##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument  
  Aktualisiert das aktuelle Dokument.  
   
 ```  
@@ -1505,7 +1500,7 @@ HRESULT RefreshDocument() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_REFRESH-Befehls-ID](https://msdn.microsoft.com/library/aa770020.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
+##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
  Entfernt die Formatierung Tags in der aktuellen Auswahl an.  
   
 ```  
@@ -1518,7 +1513,7 @@ HRESULT RemoveFormat() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_REMOVEFORMAT-Befehls-ID](https://msdn.microsoft.com/library/aa770021.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
+##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs  
  Speichert die aktuelle Webseite in einer Datei an.  
   
 ```  
@@ -1535,7 +1530,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_SAVEAS Befehls-ID](https://msdn.microsoft.com/library/aa770024.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
+##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll  
  Wählt das gesamte Dokument aus.  
   
 ```  
@@ -1548,7 +1543,7 @@ HRESULT SelectAll() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_SELECTALL-Befehls-ID](https://msdn.microsoft.com/library/aa770025.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
+##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
  Ermöglicht es absolut positionierte Elemente durch Ziehen verschoben werden soll.  
   
 ```  
@@ -1565,7 +1560,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_2D_POSITION-Befehls-ID](https://msdn.microsoft.com/library/aa769887.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
  Legt ein Element Position-Eigenschaft auf "absolut" oder "statisch".  
   
 ```  
@@ -1582,7 +1577,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_ABSOLUTE_POSITION-Befehls-ID](https://msdn.microsoft.com/library/aa769889.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
+##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection  
  Legen Sie atomic Auswahlmodus.  
   
 ```  
@@ -1599,7 +1594,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_ATOMICSELECTION-Befehls-ID](https://msdn.microsoft.com/library/aa769892.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
+##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode  
  Aktiviert die automatische Erkennung der URL ein- und ausschalten.  
   
 ```  
@@ -1616,7 +1611,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_AUTOURLDETECT_MODE-Befehls-ID](https://msdn.microsoft.com/library/aa769893.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
+##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor  
  Legt die Hintergrundfarbe der aktuellen Auswahl fest.  
   
 ```  
@@ -1637,7 +1632,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BACKCOLOR_-Befehls-ID](https://msdn.microsoft.com/library/aa769858.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
+##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
  Legt den aktuellen Block Format Transponder fest.  
   
 ```  
@@ -1654,7 +1649,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
+##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
  Erstellt einen Anker Lesezeichen für die aktuelle Auswahl "oder" Einfügemarke an.  
   
 ```  
@@ -1671,7 +1666,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_BOOKMARK-Befehls-ID](https://msdn.microsoft.com/library/aa769873.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
+##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
  Die CSS-Ebene (CSS1 oder CSS2) Editor ggf. unterstützt, wird SELECT-Anweisungen.  
   
 ```  
@@ -1688,7 +1683,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_CSSEDITING_LEVEL-Befehls-ID](https://msdn.microsoft.com/library/aa769903.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
+##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
  Der Aufruf dieser Methode zum Festlegen des standardmäßigen verfassen Einstellungen.  
   
 ```  
@@ -1730,7 +1725,7 @@ HRESULT SetDefaultComposeSettings(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_COMPOSESETTINGS Befehls-ID](https://msdn.microsoft.com/library/aa769901.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
+##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode  
  Legen Sie im Entwurfsmodus.  
   
 ```  
@@ -1744,7 +1739,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg, bei einem Fehler FALSE.  
   
-##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
+##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
  Deaktiviert den schraffierten Rahmen und verarbeitet werden, um ein Element, bearbeiten den Fokus besitzt.  
   
 ```  
@@ -1761,7 +1756,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM_DISABLE_EDITFOCUS_UI-Befehls-ID](https://msdn.microsoft.com/library/aa769905.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
+##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML  
  Legt fest, den HTML-Code des aktuellen Dokuments.  
   
 ```  
@@ -1775,7 +1770,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
+##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
  Legt die Schriftart für die aktuelle Auswahl an.  
   
 ```  
@@ -1792,7 +1787,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM FONTNAME-Befehls-ID](https://msdn.microsoft.com/library/aa769880.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
+##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize  
  Legt die Größe der Schriftart für die aktuelle Auswahl.  
   
 ```  
@@ -1809,7 +1804,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM FONTSIZE-Befehls-ID](https://msdn.microsoft.com/library/aa769881.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
+##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
  Legt die Vordergrundfarbe (Text) der aktuellen Auswahl an.  
   
 ```  
@@ -1830,7 +1825,7 @@ HRESULT SetForeColor(int nColor) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM FORECOLOR Befehls-ID](https://msdn.microsoft.com/library/aa769882.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
+##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode  
  Legt den Einfügevorgang für die Kompatibilität mit Microsoft Internet Explorer 5 fest.  
   
 ```  
@@ -1847,7 +1842,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM IE50_PASTE_MODE Befehls-ID](https://msdn.microsoft.com/library/aa769923.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
+##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
  Bewirkt, dass der WebBrowser zum Aktualisieren eines Elements Darstellung kontinuierlich während eines Vorgangs zum Ändern der Größe oder verschieben, anstatt nur auf den Abschluss des Wechsels zu aktualisieren oder dessen Größe ändern.  
   
 ```  
@@ -1864,7 +1859,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM LIVERESIZE Befehls-ID](https://msdn.microsoft.com/library/aa769928.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
+##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect  
  Ermöglicht die Auswahl mehrerer.  
   
 ```  
@@ -1881,7 +1876,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM MULTIPLESELECTION Befehls-ID](https://msdn.microsoft.com/library/aa769929.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
+##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
  Der WebBrowser nie zum Ändern des Mauszeigers-Befehle.  
   
 ```  
@@ -1898,7 +1893,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM OVERRIDE_CURSOR Befehls-ID](https://msdn.microsoft.com/library/aa769932.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
+##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
  Schaltet die Texteingabe Modus zwischen einfügen und überschreiben.  
   
 ```  
@@ -1915,7 +1910,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM ÜBERSCHREIBEN die Befehls-ID](https://msdn.microsoft.com/library/aa770016.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
+##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
  Blendet unsichtbare Elemente in den Entwurfsmodus zu wechseln.  
   
 ```  
@@ -1932,7 +1927,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM RESPECTVISIBILITY_INDESIGN Befehls-ID](https://msdn.microsoft.com/library/aa770023.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
+##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
  Zeigt ein Symbol für alle Elemente, deren eine **StyleFloat** Eigenschaft.  
   
 ```  
@@ -1949,7 +1944,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWALIGNEDSITETAGS Befehls-ID](https://msdn.microsoft.com/library/aa769947.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
+##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
  Zeigt die Symbole, die den Speicherort der allen Tags in einem Dokument anzeigen.  
   
 ```  
@@ -1966,7 +1961,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWALLTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769948.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
+##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
  Zeigt ein Symbol für alle Tags für den Bereich an.  
   
 ```  
@@ -1983,7 +1978,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWAREATAGS Befehls-ID](https://msdn.microsoft.com/library/aa769949.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
+##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
  Zeigt ein Symbol für das Br-Tags.  
   
 ```  
@@ -2000,7 +1995,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWWBRTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769956.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
+##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
  Zeigt ein Symbol für die Kommentartags an.  
   
 ```  
@@ -2017,7 +2012,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWCOMMENTTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769950.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
+##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
  Zeigt alle Tags, die in Microsoft Internet Explorer 4.0 dargestellt.  
   
 ```  
@@ -2034,7 +2029,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWMISCTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769952.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
+##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
  Zeigt ein Symbol für die Skripttags.  
   
 ```  
@@ -2051,7 +2046,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWSCRIPTTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769953.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
+##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
  Zeigt ein Symbol für die Style-Tags.  
   
 ```  
@@ -2068,7 +2063,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWSTYLETAGS Befehls-ID](https://msdn.microsoft.com/library/aa769954.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
+##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
  Zeigt ein Symbol für die unbekannte Tags an.  
   
 ```  
@@ -2085,7 +2080,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM SHOWUNKNOWNTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769955.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
+##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
  Überschreibt eine mehrzeilige Texteingabe-Steuerelements für die aktuelle Auswahl an.  
   
 ```  
@@ -2102,7 +2097,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM TEXTAREA-Befehls-ID](https://msdn.microsoft.com/library/aa769986.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
+##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
  Werden ein Text-Steuerelement für die aktuelle Auswahl überschrieben.  
   
 ```  
@@ -2119,7 +2114,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM TEXTBOX-Befehls-ID](https://msdn.microsoft.com/library/aa769980.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
+##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
  Entfernt alle Lesezeichen in der aktuellen Auswahl an.  
   
 ```  
@@ -2132,7 +2127,7 @@ HRESULT UnBookmark() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [Befehls-ID IDM UNBOOKMARK](https://msdn.microsoft.com/library/aa770034.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
+##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
  Schaltet die aktuelle Auswahl zwischen unterstrichen und nicht unterstrichen.  
   
 ```  
@@ -2145,7 +2140,7 @@ HRESULT Underline() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM UNTERSTREICHEN Befehls-ID](https://msdn.microsoft.com/library/aa770035.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
+##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
  Entfernt alle Links in der aktuellen Auswahl an.  
   
 ```  
@@ -2158,7 +2153,7 @@ HRESULT Unlink() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [IDM Aufheben der Befehls-ID](https://msdn.microsoft.com/library/aa770037.aspx) an das WebBrowser-Steuerelement.  
   
-##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
+##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
  Schaltet die aktuelle Auswahl zwischen einer geordneten Liste und einem normalen Format-Block.  
   
 ```  

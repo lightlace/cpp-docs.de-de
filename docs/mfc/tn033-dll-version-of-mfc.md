@@ -1,13 +1,10 @@
 ---
 title: 'TN033: DLL-Version von MFC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL-Version der MFC
 Dieser Hinweis wird beschrieben, wie können Sie die MFCxx.DLL und MFCxxD.DLL (wobei x für die MFC-Versionsnummer steht) dynamic Link Librarys für MFC-Anwendungen und MFC-Erweiterungs-DLLs freigegeben. Weitere Informationen über reguläre MFC-DLLs finden Sie unter [mithilfe von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -97,7 +92,7 @@ Dieser Hinweis wird beschrieben, wie können Sie die MFCxx.DLL und MFCxxD.DLL (w
   
 -   Verwendet eine Anwendung, die freigegebene Bibliothek verwendet, erfordert, dass Sie die MFCxx.DLL (und andere) ausgeliefert Bibliothek mit Ihrem Programm. MFCxx.DLL frei verteilt, wie viele DLLs ist allerdings weiterhin müssen die DLL im SETUP-Programm installieren können. Darüber hinaus müssen Sie die MSVCRTxx.DLL Versenden der C-Laufzeitbibliothek enthält, die vom Programm und die MFC-DLLs selbst verwendet wird.  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>Gewusst wie: Schreiben eine MFC-Erweiterungs-DLL  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Gewusst wie: Schreiben eine MFC-Erweiterungs-DLL  
  Eine MFC-Erweiterungs-DLL ist eine DLL mit Klassen und Funktionen, die die Funktionalität von der MFC-Klassen ausarbeiten geschrieben. Eine MFC-Erweiterungs-DLL verwendet die gemeinsam genutzte MFC-DLLs in die gleiche Weise wie, die eine Anwendung, die ihn Bedenken verwendet:  
   
 -   Während des Erstellungsprozesses wird mit dem Erstellen einer Anwendung, die gemeinsam genutzte MFC-Bibliotheken mit ein paar zusätzliche Linkeroptionen für Compiler und verwendet, vergleichbar.  
@@ -146,7 +141,7 @@ Dieser Hinweis wird beschrieben, wie können Sie die MFCxx.DLL und MFCxxD.DLL (w
   
  Zu diesem Zweck müssen Sie sicherzustellen, dass jede der Memberfunktionen als importieren oder Exportieren von entsprechend markiert ist. Dies erfordert spezielle Deklarationen: **__declspec(dllexport)** und **von "__declspec(dllimport)" "**. Wenn Ihre Klassen von Clientanwendungen verwendet werden, sollen diese als deklariert werden **von "__declspec(dllimport)" "**. Wenn die MFC-Erweiterungs-DLL selbst erstellt wird, sollten sie als deklariert **__declspec(dllexport)**. Darüber hinaus müssen die Funktionen tatsächlich exportiert werden, damit sie Clientprogramme zur Ladezeit binden.  
   
- Verwenden Sie zum Exportieren der gesamten Klasse **AFX_EXT_CLASS** in der Klassendefinition. Dieses Makro wird definiert durch das Framework als **__declspec(dllexport)** Wenn **_AFXDLL** und `_AFXEXT` wird definiert, jedoch als definiert **von "__declspec(dllimport)" "** beim `_AFXEXT` ist nicht definiert. `_AFXEXT`wie oben beschrieben, wird nur definiert, wenn Sie die MFC-Erweiterungs-DLL zu erstellen. Zum Beispiel:  
+ Verwenden Sie zum Exportieren der gesamten Klasse **AFX_EXT_CLASS** in der Klassendefinition. Dieses Makro wird definiert durch das Framework als **__declspec(dllexport)** Wenn **_AFXDLL** und `_AFXEXT` wird definiert, jedoch als definiert **von "__declspec(dllimport)" "** beim `_AFXEXT` ist nicht definiert. `_AFXEXT` wie oben beschrieben, wird nur definiert, wenn Sie die MFC-Erweiterungs-DLL zu erstellen. Zum Beispiel:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -389,7 +384,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Das Durchlaufen der Liste hat jedoch den Nachteil, dass die Suche etwas langsamer ist und dass die Ressourcen-ID-Bereiche verwaltet werden müssen. Es hat den Vorteil, dass eine Clientanwendung, die mit mehreren MFC-Erweiterungs-DLLs verknüpft jede DLL bereitgestellten Ressource verwenden kann, ohne die DLL-Instanzenhandle angegeben. `AfxFindResourceHandle` ist eine API, die bei der Suche nach einer bestimmten Übereinstimmung die Ressourcenliste durchläuft. Sie verwendet den Ressourcennamen und -typ als Parameter und gibt das zuerst ermittelte Ressourcenhandle (oder NULL) zurück.  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>Schreiben einer Anwendung, die die DLL-Version verwendet.  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Schreiben einer Anwendung, die die DLL-Version verwendet.  
   
 ### <a name="application-requirements"></a>Anwendungsanforderungen  
  Eine Anwendung, die gemeinsam genutzte MFC-Version verwendet, muss einige einfache Regeln ausführen:  
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Das Neuerstellen der MFC-DLLs wird nicht empfohlen.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>Wie wird die MFCxx.DLL implementiert.  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Wie wird die MFCxx.DLL implementiert.  
  Im folgenden Abschnitt wird beschrieben, wie die MFC-DLL (MFCxx.DLL und MFCxxD.DLL) implementiert wird. Grundlegendes zu, dass die entsprechenden Informationen hier auch nicht ist wichtig, wenn alle Sie möchten die MFC-DLL mit der Anwendung verwendet. Die entsprechenden Informationen hier sind nicht wichtig, um zu verstehen, wie Sie eine MFC-Erweiterungs-DLL zu schreiben, aber Grundlegendes zu dieser Implementierung, können Sie Ihre eigene DLL zu schreiben.  
   
 ### <a name="implementation-overview"></a>Übersicht über die Implementierung  

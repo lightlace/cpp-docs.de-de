@@ -1,29 +1,24 @@
 ---
 title: 'Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)
 [Teil 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) Scribble-Anwendung in dieser exemplarischen Vorgehensweise wurde gezeigt, wie das klassische Office Fluent-Menüband hinzugefügt. In diesem Teil werden zum Hinzufügen von menübandbereichen und Steuerelemente, die Benutzer anstelle von Menüs und Befehle verwenden können.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Initialisieren die Stifte, und speichern die Voreinstellungen](#initpensave)  
   
-##  <a name="addnewpanel"></a>Hinzufügen neuer Bereiche zum Menüband  
+##  <a name="addnewpanel"></a> Hinzufügen neuer Bereiche zum Menüband  
  Diese Schritte zeigen, wie hinzufügen eine **Ansicht** Bereich, der zwei Kontrollkästchen enthält, die die Sichtbarkeit der Symbolleiste und die Statusleiste steuern sowie eine **Fenster** Bereich, der eine vertikal ausgerichtet Teilung enthält Schaltfläche ", die die Erstellung und die Anordnung von Multiple Document Interface (MDI) Windows steuert.  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Die menübandleiste Sichtbereich und Fenster-Bereich hinzufügen  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Abschnitte](#top)]  
   
-##  <a name="addhelppanel"></a>Hinzufügen einer Hilfebereich zum Menüband  
+##  <a name="addhelppanel"></a> Hinzufügen einer Hilfebereich zum Menüband  
  Sie können nun zwei Menüelemente, die in der Scribble-Anwendung zu Menübandschaltflächen definiert sind, die mit dem Namen sind zuweisen **Hilfethemen** und **zu Scribble**. Die Schaltflächen werden hinzugefügt, um einen neuen Bereich namens **Hilfe**.  
   
 #### <a name="to-add-a-help-panel"></a>So fügen Sie ein Panel Hilfe hinzu  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Abschnitte](#top)]  
   
-##  <a name="addpenpanel"></a>Hinzufügen einen Stift Bereich zum Menüband  
+##  <a name="addpenpanel"></a> Hinzufügen einen Stift Bereich zum Menüband  
  Fügen Sie nun ein Panel um Schaltflächen anzuzeigen, die die Stärke und die Farbe des Stifts steuern. Dieser Bereich enthält ein Kontrollkästchen, die zwischen thick und thin Stifte umschaltet. Die Funktionalität ähnelt dem von der **starke Linie** Menüelement in der Scribble-Anwendung.  
   
  Die ursprüngliche Scribble-Anwendung ermöglicht dem Benutzer, die Breite des Stifts in einem Dialogfeld auswählen, die angezeigt wird, wenn der Benutzer klickt auf **Stift breiten** auf das Menü. Da die menübandleiste ausreichend Platz für neue Steuerelemente enthält, können Sie das Dialogfeld mit zwei Kombinationsfelder auf dem Menüband ersetzen. Ein Kombinationsfeld passt die Breite des Stifts schlanke und andere Kombinationsfeld passt die Breite des Stifts thick.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Abschnitte](#top)]  
   
-##  <a name="addcolorbutton"></a>Eine Farbenschaltfläche hinzufügen, wenn des Stift-Bereichs  
+##  <a name="addcolorbutton"></a> Eine Farbenschaltfläche hinzufügen, wenn des Stift-Bereichs  
  Als Nächstes fügen Sie eine [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) -Objekt, das dem Benutzer kann Scribble in Farbe.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>So fügen Sie eine farbenschaltfläche, wenn der Stift Bereich hinzu  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Abschnitte](#top)]  
   
-##  <a name="addcolormember"></a>Hinzufügen eines Color-Members der Dokument-Klasse  
- Da die ursprüngliche Scribble-Anwendung keine Farbe Stifte, müssen Sie eine Implementierung dafür schreiben. Um die Stiftfarbe des Dokuments zu speichern, fügen Sie ein neues Element der Dokument-Klasse,`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Hinzufügen eines Color-Members der Dokument-Klasse  
+ Da die ursprüngliche Scribble-Anwendung keine Farbe Stifte, müssen Sie eine Implementierung dafür schreiben. Um die Stiftfarbe des Dokuments zu speichern, fügen Sie ein neues Element der Dokument-Klasse, `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Die Dokumentklasse Color-Member hinzu  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Abschnitte](#top)]  
   
-##  <a name="initpensave"></a>Initialisieren die Stifte, und speichern die Voreinstellungen  
+##  <a name="initpensave"></a> Initialisieren die Stifte, und speichern die Voreinstellungen  
  Als Nächstes initialisieren Sie die Farbe und Breite der Stifte. Schließlich speichern Sie und Laden Sie eine Farbe aus einer Datei zeichnen.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Steuerelemente auf der menübandleiste initialisiert werden.  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Fügen Sie den folgenden Code zum scribdoc.cpp, in der `CScribbleDoc::InitDocument` Methode nach der `m_sizeDoc = CSize(200,200)` Anweisung.  
   
- ```*/ / Zurücksetzen das Menüband-Benutzeroberfläche auf ihre Ausgangswerte CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Zurücksetzen das Menüband-Benutzeroberfläche auf ihre Ausgangswerte CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Set ColorButton auf Schwarz  
     pColorBtn -> SetColor (RGB (0, 0, 0));

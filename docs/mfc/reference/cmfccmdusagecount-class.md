@@ -1,12 +1,9 @@
 ---
 title: CMFCCmdUsageCount Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCmdUsageCount
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db24894777170d2860ba8d1639fd44e3893732a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount-Klasse
 Überwacht die Verwendungsanzahl der Windows-Meldungen, z. B. wenn der Benutzer ein Element aus einem Menü auswählt.  
@@ -84,7 +79,7 @@ class CMFCCmdUsageCount : public CObject
 |`m_nTotalUsage`|Die Anzahl der Befehle alle nachverfolgten.|  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CMFCCmdUsageCount` -Klasse ordnet jede numerische Windows-Nachrichten-ID, einen Indikator für 32-Bit-Ganzzahl ohne Vorzeichen. `CMFCToolBar`Mithilfe dieser Klasse häufig verwendete Symbolleistenelemente angezeigt. Weitere Informationen zu `CMFCToolBar`, finden Sie unter [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md).  
+ Die `CMFCCmdUsageCount` -Klasse ordnet jede numerische Windows-Nachrichten-ID, einen Indikator für 32-Bit-Ganzzahl ohne Vorzeichen. `CMFCToolBar` Mithilfe dieser Klasse häufig verwendete Symbolleistenelemente angezeigt. Weitere Informationen zu `CMFCToolBar`, finden Sie unter [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md).  
   
  Sie können beibehalten `CMFCCmdUsageCount` -Klasse Daten zwischen den Ausführungen des Programms. Verwenden der [CMFCCmdUsageCount::Serialize](#serialize) -Methode zum Serialisieren von Klassenmemberdaten und [CMFCCmdUsageCount::SetOptions](#setoptions) Methode, um freigegebene Elementdaten einzurichten.  
   
@@ -96,7 +91,7 @@ class CMFCCmdUsageCount : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmdusagecount.h  
   
-##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
+##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
  Inkrementiert um eins der Zähler, der den angegebenen Befehl zugeordnet ist.  
   
 ```  
@@ -119,9 +114,9 @@ void AddCmd(UINT uiCmd);
   
 -   Der Befehl bezieht sich auf ein Untermenü oder Menü als Trennzeichen ( `uiCmd` gleich 0 oder -1).  
   
-- `uiCmd`bezieht sich auf einen Standardbefehl (globalen `IsStandardCommand` Funktion gibt einen Wert ungleich NULL zurück).  
+- `uiCmd` bezieht sich auf einen Standardbefehl (globalen `IsStandardCommand` Funktion gibt einen Wert ungleich NULL zurück).  
   
-##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
+##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Ruft die Verwendungsanzahl der, die der angegebenen Befehls-ID zugeordnet ist.  
   
 ```  
@@ -138,7 +133,7 @@ UINT GetCount(UINT uiCmd) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Verwendungsanzahl der, die der angegebenen Befehls-ID zugeordnet ist.  
   
-##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
+##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation  
  Bestimmt, ob dieses Objekt die Mindestmenge an Überwachungsdaten erhalten hat.  
   
 ```  
@@ -153,7 +148,7 @@ BOOL HasEnoughInformation() const;
   
  Diese Methode wird verwendet, indem [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) bestimmt, ob alle im Kontextmenü verfügbaren Befehle angezeigt.  
   
-##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
  Bestimmt, ob der angegebene Befehl häufig verwendet wird.  
   
 ```  
@@ -175,7 +170,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
  [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) verwendet diese Methode, um zu bestimmen, ob ein Befehl nur selten verwendet wird.  
   
-##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
+##  <a name="reset"></a>  CMFCCmdUsageCount::Reset  
  Löscht die Verwendungsanzahl der aller Befehle.  
   
 ```  
@@ -185,7 +180,7 @@ void Reset();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, deaktivieren Sie alle Einträge aus der Struktur Zuordnung Befehl Anzahlen `m_CmdUsage`, und die gesamte Befehlssyntax zurücksetzen `m_nTotalUsage`, Zähler auf 0.  
   
-##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
+##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize  
  Dieses Objekt aus einem Archiv liest oder schreibt sie in ein Archiv.  
   
 ```  
@@ -204,7 +199,7 @@ virtual void Serialize(CArchive& ar);
   
  Beispiele für die Serialisierung finden Sie unter [Serialisierung: Serialisieren eines Objekts](../../mfc/serialization-serializing-an-object.md).  
   
-##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
+##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions  
  Legt die Werte der freigegebenen `CMFCCmdUsageCount` Klassendatenmember.  
   
 ```  
@@ -222,10 +217,10 @@ static BOOL __stdcall SetOptions(
 |[in] `nMinUsagePercentage`|Die neue minimale Auslastung in Prozent.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich ist, `FALSE` Wenn die `nMinUsagePercentage` Parameter ist größer als oder gleich 100.  
+ `TRUE` Wenn die Methode erfolgreich ist, `FALSE` Wenn die `nMinUsagePercentage` Parameter ist größer als oder gleich 100.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Methode wird die freigegebene `CMFCCmdUsageCount` Klassendatenmember `m_nStartCount` und `m_nMinUsagePercentage` auf `nStartCount` und `nMinUsagePercentage`zugeordnet. `m_nStartCount`wird verwendet, durch die [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) Methode, um zu bestimmen, ob dieses Objekt die Mindestmenge an Überwachungsdaten gesammelt hat. `m_nMinUsagePercentage`wird verwendet, durch die [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) Methode, um zu bestimmen, ob ein bestimmter Befehl häufig verwendet wird.  
+ Mit dieser Methode wird die freigegebene `CMFCCmdUsageCount` Klassendatenmember `m_nStartCount` und `m_nMinUsagePercentage` auf `nStartCount` und `nMinUsagePercentage`zugeordnet. `m_nStartCount` wird verwendet, durch die [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) Methode, um zu bestimmen, ob dieses Objekt die Mindestmenge an Überwachungsdaten gesammelt hat. `m_nMinUsagePercentage` wird verwendet, durch die [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) Methode, um zu bestimmen, ob ein bestimmter Befehl häufig verwendet wird.  
   
  In Debugbuilds diese Methode generiert ein Assertionsfehler ausgelöst, wenn die `nMinUsagePercentage` Parameter ist größer als oder gleich 100.  
   

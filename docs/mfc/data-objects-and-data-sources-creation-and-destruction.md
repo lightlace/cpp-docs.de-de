@@ -1,13 +1,10 @@
 ---
-title: "Datenobjekte und Datenquellen: Erstellen und zerstören | Microsoft Docs"
-ms.custom: 
+title: 'Datenobjekte und Datenquellen: Erstellen und zerstören | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datenobjekte und Datenquellen: Erstellen und Zerstören
 Wie im Artikel erläutert [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md), Datenobjekte und Datenquellen darstellen beide Seiten der Datenübertragung. In diesem Artikel wird erläutert, wann diese Objekte und Quellen erstellt und zerstört werden, um die Datenübertragungen ordnungsgemäß durchführen zu können, einschließlich:  
@@ -47,7 +42,7 @@ Wie im Artikel erläutert [Datenobjekte und Datenquellen (OLE)](../mfc/data-obje
   
 -   [Zerstören von Datenquellen](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a>Erstellen von Datenobjekten  
+##  <a name="_core_creating_data_objects"></a> Erstellen von Datenobjekten  
  Datenobjekte werden von der Zielanwendung verwendet, wobei es sich entweder um den Client oder Server handelt. Ein Datenobjekt in der Zielanwendung ist ein Ende der Verbindung zwischen der Quellanwendung und der Zielanwendung. Ein Datenobjekt in der Zielanwendung wird verwendet, um auf die Daten in der Datenquelle zuzugreifen und damit zu interagieren.  
   
  Es gibt zwei häufige Situationen, in denen ein Datenobjekt erforderlich ist. Die erste Situation: Daten werden mithilfe von Drag & Drop in Ihrer Anwendung abgelegt. Die zweite Situation: Im Menü „Bearbeiten“ wird die Option „Einfügen“ oder „Inhalte einfügen“ ausgewählt.  
@@ -56,12 +51,12 @@ Wie im Artikel erläutert [Datenobjekte und Datenquellen (OLE)](../mfc/data-obje
   
  Wenn die Anwendung einen „Einfügen“- oder „Inhalte einfügen“-Vorgang durchführt, sollten Sie ein `COleDataObject`-Objekt erstellen und seine `AttachClipboard`-Memberfunktion aufrufen. Hierdurch wird das Datenobjekt den Daten in der Zwischenablage zugeordnet. Sie können dieses Datenobjekt dann in Ihrer Einfügefunktion verwenden.  
   
-##  <a name="_core_destroying_data_objects"></a>Zerstören von Datenobjekten  
+##  <a name="_core_destroying_data_objects"></a> Zerstören von Datenobjekten  
  Wenn Sie das Schema in der beschriebenen folgen [Erstellen von Datenobjekten](#_core_creating_data_objects), Zerstören von Datenobjekten nur ein trivialer Aspekt der Datenübertragungen ist. Das beim Einfügen erstellte Datenobjekt wird von MFC zerstört, wenn die Einfügefunktion zurückkehrt.  
   
  Wenn Sie eine andere Methode für Einfügeoperationen anwenden, stellen Sie sicher, dass das Datenobjekt nach Abschluss des Einfügevorgangs zerstört wird. Solange das Datenobjekt nicht zerstört ist, kann keine Anwendung Daten in die Zwischenablage kopieren.  
   
-##  <a name="_core_creating_data_sources"></a>Erstellen von Datenquellen  
+##  <a name="_core_creating_data_sources"></a> Erstellen von Datenquellen  
  Datenquellen werden von der Quelle der Datenübertragung verwendet, bei der es sich entweder um die Clientseite oder die Serverseite der Datenübertragung handelt. Eine Datenquelle in der Quellanwendung ist ein Ende der Verbindung zwischen der Quellanwendung und der Zielanwendung. Ein Datenobjekt in der Zielanwendung wird verwendet, um auf die Daten in der Datenquelle zuzugreifen und damit zu interagieren.  
   
  Datenquellen werden erstellt, wenn eine Anwendung Daten in die Zwischenablage kopieren muss. Ein typisches Szenario sieht folgendermaßen aus:  
@@ -82,7 +77,7 @@ Wie im Artikel erläutert [Datenobjekte und Datenquellen (OLE)](../mfc/data-obje
   
  Eine andere Situation, in der Sie möglicherweise ein `COleDataSource`-Objekt erstellen möchten, besteht dann, wenn Sie das Standardverhalten eines Drag-and-Drop-Vorgangs ändern. Weitere Informationen finden Sie unter der [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md) Artikel.  
   
-##  <a name="_core_destroying_data_sources"></a>Zerstören von Datenquellen  
+##  <a name="_core_destroying_data_sources"></a> Zerstören von Datenquellen  
  Datenquellen müssen von der Anwendung zerstört werden, die derzeit für sie verantwortlich ist. In Situationen, in dem Sie die Datenquelle an OLE übergeben, z. B. Aufrufen [Oledatasource](../mfc/reference/coledatasource-class.md#dodragdrop), müssen Sie rufen **pDataSrc -> InternalRelease**. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  

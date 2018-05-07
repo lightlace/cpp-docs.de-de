@@ -1,13 +1,10 @@
 ---
 title: Rahmenfenster | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 515df19bcc11f7a6706985014fc44bc4ff315f36
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-windows"></a>Rahmenfenster
 Wenn eine Anwendung unter Windows ausgeführt wird, interagiert der Benutzer mit Dokumenten im Frame-Fensters angezeigt. Einem Dokumentrahmenfenster besteht aus zwei wesentlichen Komponenten: Frames und den Inhalt, der sie frames. Einem Dokumentrahmenfenster kann eine [Einzeldokumentoberfläche](../mfc/sdi-and-mdi.md) Rahmenfenster (SDI) oder ein [mehrerer dokumentoberflächen](../mfc/sdi-and-mdi.md) (MDI) untergeordnetes Fenster. Windows verwaltet die meisten der Benutzerinteraktion mit dem Rahmenfenster: verschieben und Ändern der Größe des Fensters, schließen und minimieren und maximieren. Sie verwalten den Inhalt innerhalb des Rahmens.  

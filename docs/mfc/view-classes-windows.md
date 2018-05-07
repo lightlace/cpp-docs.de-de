@@ -1,13 +1,10 @@
 ---
 title: Anzeigen von Klassen (Windows) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Ansichtsklassen (Windows)
-`CView`und die abgeleiteten Klassen sind untergeordnete Fenster, die den Clientbereich eines Rahmenfensters darstellen. Ansichten anzeigen von Daten und Eingaben für ein Dokument.  
+`CView` und die abgeleiteten Klassen sind untergeordnete Fenster, die den Clientbereich eines Rahmenfensters darstellen. Ansichten anzeigen von Daten und Eingaben für ein Dokument.  
   
  View-Klasse, die einer Dokumentklasse und einem Rahmenfenster (Klasse) mit einem Dokument Template-Objekt zugeordnet ist.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Eine Sicht, ein Windows-Strukturansicht-Steuerelement enthält (siehe [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ein Strukturansicht-Steuerelement zeigt eine hierarchische Liste der Symbole und Bezeichnungen auf ähnliche Weise im linken Bereich des Datei-Explorers auf bestimmte Weise angeordnet.  
   
 ## <a name="related-classes"></a>Verwandte Klassen  
- `CSplitterWnd`können Sie mehrere Ansichten in einem einzelnen Rahmenfenster haben. `CPrintDialog`und `CPrintInfo` Unterstützung für das Drucken und Druckvorschau Ansichten. `CRichEditDoc`und `CRichEditCntrItem` werden zusammen mit `CRichEditView` OLE-Container-Funktionen zu implementieren.  
+ `CSplitterWnd` können Sie mehrere Ansichten in einem einzelnen Rahmenfenster haben. `CPrintDialog` und `CPrintInfo` Unterstützung für das Drucken und Druckvorschau Ansichten. `CRichEditDoc` und `CRichEditCntrItem` werden zusammen mit `CRichEditView` OLE-Container-Funktionen zu implementieren.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Ein Fenster, das der Benutzer in mehrere Bereiche aufgeteilt werden kann. Diese Bereiche können durch den Benutzer oder eine feste Größe geändert werden.  

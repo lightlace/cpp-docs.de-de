@@ -1,13 +1,10 @@
 ---
 title: XDCMake-Verweis | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - xdcmake
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdcmake-reference"></a>XDCMake-Verweis
 XDCMake.exe ist ein Programm, das XDC-Dateien in eine XML-Datei kompiliert wird. Eine XDC-Datei wird vom Visual C++-Compiler für jede Quelldatei erstellt, beim Kompilieren von Quellcode mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) und wenn die Quellcodedatei enthält Dokumentationskommentare mit XML-Tags markiert.  
@@ -42,7 +37,7 @@ XDCMake.exe ist ein Programm, das XDC-Dateien in eine XML-Datei kompiliert wird.
 >  XDCMake.exe-Optionen in der Befehlszeile unterscheiden sich von den Optionen, wenn xdcmake.exe in der Entwicklungsumgebung (Eigenschaftenseiten) verwendet wird. Informationen zum Verwenden von xdcmake.exe in der Entwicklungsumgebung finden Sie unter [Eigenschaftenseiten für das XML-Dokument-Generator-Tool](../ide/xml-document-generator-tool-property-pages.md).  
   
 ## <a name="syntax"></a>Syntax  
- XDCMake`input_filename options`  
+ XDCMake `input_filename options`  
   
 ## <a name="parameters"></a>Parameter  
  Dabei gilt:  

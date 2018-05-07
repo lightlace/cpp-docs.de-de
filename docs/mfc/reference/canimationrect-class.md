@@ -1,12 +1,9 @@
 ---
 title: CAnimationRect-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationRect
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b1225dbce3f747efeaa7aa1e5384f7931efe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationrect-class"></a>CAnimationRect-Klasse
 Implementiert die Funktion eines Rechtecks, dessen Seiten animiert werden können.  
@@ -131,7 +126,7 @@ class CAnimationRect : public CAnimationBaseObject;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationRect::AddTransition  
+##  <a name="addtransition"></a>  CAnimationRect::AddTransition  
  Fügt Übergänge für den linken, oberen, rechten und unteren Koordinaten an.  
   
 ```  
@@ -158,7 +153,7 @@ void AddTransition(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um die interne Liste der Übergänge, die auf Animationsvariablen für die einzelnen Rechteckseiten angewendet werden die angegebenen Übergänge hinzuzufügen. Wenn Sie Übergänge hinzufügen, werden sie nicht sofort angewendet und in einer internen Liste gespeichert. Übergänge werden angewendet (ein Storyboard für einen bestimmten Wert hinzugefügt) beim CAnimationController:: AnimateGroup aufrufen. Wenn Sie keinen Übergang auf eine der Rechteckseiten anwenden müssen, können Sie NULL übergeben.  
   
-##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
+##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect  
  Erstellt ein CAnimationRect-Objekt.  
   
 ```  
@@ -224,7 +219,7 @@ CAnimationRect(
 ### <a name="remarks"></a>Hinweise  
  Das Objekt wird erstellt, mit Standardwerten für Links, oben, rechts und unten, Objekt-ID und Gruppen-ID, die auf 0 festgelegt werden. Sie können später mithilfe von SetDefaultValue und SetID zur Laufzeit geändert werden.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList  
  Legt die gekapselten Animationsvariablen in einer Liste an.  
   
 ```  
@@ -237,7 +232,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Wenn die Funktion zurückgibt, enthält Zeiger auf vier CAnimationVariable-Objekte, die Koordinaten eines Rechtecks darstellt.  
   
-##  <a name="getbottom"></a>CAnimationRect::GetBottom  
+##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
  Bietet Zugriff auf CAnimationVariable, die untere Koordinate darstellt.  
   
 ```  
@@ -250,7 +245,7 @@ CAnimationVariable& GetBottom();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Abrufen von direkten Zugriffs auf die zugrunde liegende CAnimationVariable, die die untere Koordinate darstellt.  
   
-##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue  
  Gibt die Standardwerte für die Grenzen des Rechtecks.  
   
 ```  
@@ -263,7 +258,7 @@ CRect GetDefaultValue();
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird zum Abrufen von Standardwert, der zuvor vom Konstruktor oder mit SetDefaultValue festgelegt wurde.  
   
-##  <a name="getleft"></a>CAnimationRect::GetLeft  
+##  <a name="getleft"></a>  CAnimationRect::GetLeft  
  Bietet Zugriff auf CAnimationVariable, die linke Koordinate darstellt.  
   
 ```  
@@ -276,7 +271,7 @@ CAnimationVariable& GetLeft();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Abrufen von direkten Zugriffs auf die zugrunde liegende CAnimationVariable, die die linke Koordinate darstellt.  
   
-##  <a name="getright"></a>CAnimationRect::GetRight  
+##  <a name="getright"></a>  CAnimationRect::GetRight  
  Bietet Zugriff auf CAnimationVariable, die rechte Koordinate darstellt.  
   
 ```  
@@ -289,7 +284,7 @@ CAnimationVariable& GetRight();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Abrufen von direkten Zugriffs auf die zugrunde liegende CAnimationVariable, die die rechte Koordinate darstellt.  
   
-##  <a name="gettop"></a>CAnimationRect::GetTop  
+##  <a name="gettop"></a>  CAnimationRect::GetTop  
  Bietet Zugriff auf CAnimationVariable, die obere Koordinate darstellt.  
   
 ```  
@@ -302,7 +297,7 @@ CAnimationVariable& GetTop();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Abrufen von direkten Zugriffs auf die zugrunde liegende CAnimationVariable, die die obere Koordinate darstellt.  
   
-##  <a name="getvalue"></a>CAnimationRect::GetValue  
+##  <a name="getvalue"></a>  CAnimationRect::GetValue  
  Gibt den aktuellen Wert zurück.  
   
 ```  
@@ -319,7 +314,7 @@ BOOL GetValue(CRect& rect);
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird zum Abrufen des aktuellen Wert der Animation Rechteck. Wenn diese Methode fehlschlägt oder die zugrunde liegende COM-Objekte für Left, oberen, rechten und unteren nicht initialisiert wurden, enthält Rect einen Standardwert, der zuvor im Konstruktor oder mit SetDefaultValue festgelegt wurde.  
   
-##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
+##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize  
  Gibt an, ob das Rechteck eine feste Größe hat.  
   
 ```  
@@ -329,42 +324,42 @@ BOOL m_bFixedSize;
 ### <a name="remarks"></a>Hinweise  
  Wenn dieses Elements auf "true" festgelegt ist, wird die Größe des Rechtecks, festen und rechten, und unteren Werte werden jedes Mal, wenn die linke obere Ecke, entsprechend der feste Größe verschoben wird berechnet. Legen Sie diesen Wert auf "true", einfache des Rechtecks auf dem Bildschirm verschieben. In diesem Fall werden angewendet, rechten und unteren Koordinaten Übergänge ignoriert. Die Größe wird intern gespeichert werden, wenn Sie das Objekt zu erstellen und/oder SetDefaultValue aufrufen. Standardmäßig ist dieses Elements auf "false" festgelegt.  
   
-##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
+##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue  
  Gekapselte Animationsvariablen unten stellt dar, die Grenze für Animation Rechteck.  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
+##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue  
  Animation Rechteck Grenze gekapselten Animationsvariablen, das Links darstellt.  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
+##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue  
  Animation Rechteck Grenze gekapselten Animationsvariablen, die rechts darstellt.  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
+##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial  
  Gibt die Anfangsgröße der Animation Rechteck.  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
+##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue  
  Animation Rechteck Grenze gekapselten Animationsvariablen, die nach oben darstellt.  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="operator_rect"></a>CAnimationRect::operator RECT  
+##  <a name="operator_rect"></a>  CAnimationRect::operator RECT  
  Konvertiert einen CAnimationRect in Rect.  
   
 ```  
@@ -377,7 +372,7 @@ operator RECT();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ruft intern GetValue. Wenn GetValue aus irgendeinem Grund fehlschlägt, enthält das zurückgegebene RECT Standardwerte für alle Koordinaten für das Rechteck.  
   
-##  <a name="operator_eq"></a>CAnimationRect::operator =  
+##  <a name="operator_eq"></a>  CAnimationRect::operator =  
  CAnimationRect Rect zugewiesen.  
   
 ```  
@@ -391,7 +386,7 @@ void operator=(const RECT& rect);
 ### <a name="remarks"></a>Hinweise  
  Es wird empfohlen, vor Beginn der Animation, dazu werden sollen, da dieser Operator SetDefaultValue aufruft, die die zugrunde liegenden COM-Objekte für Farbkomponenten neu erstellt, wenn sie erstellt wurden. Wenn Sie dieses Animationsobjekt auf Ereignisse (ValueChanged oder IntegerValueChanged) abonniert haben, müssen Sie diese Ereignisse erneut zu aktivieren.  
   
-##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue  
  Legt den Standardwert fest.  
   
 ```  

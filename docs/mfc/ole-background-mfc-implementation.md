@@ -1,13 +1,10 @@
 ---
 title: 'OLE-Hintergrund: MFC-Implementierung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE-Hintergrund: MFC-Implementierung
 Aufgrund der Größe und Komplexität der unformatierten OLE-API kann das Aufrufen dieser zum Schreiben von OLE-Anwendungen direkt sehr zeitaufwändig sein. Das Ziel der Microsoft Foundation Class Library-Implementierung von OLE ist der verbleibende Arbeitsaufwand zu reduzieren, Sie müssen lediglich mit umfassenden, OLE-fähige Anwendungen schreiben können.  
   
  Dieser Artikel beschreibt die Teile der OLE-API, die nicht innerhalb von MFC implementiert wurden. Die Beschreibung wird auch erläutert, wie was implementiert, wird der OLE-Abschnitt des Windows SDK zugeordnet.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a>Nicht von der Klassenbibliothek implementiert OLE-Teile  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Nicht von der Klassenbibliothek implementiert OLE-Teile  
  Einige Schnittstellen und OLE-Funktionen werden von MFC nicht direkt bereitgestellt. Wenn Sie diese Funktionen nicht verwenden möchten, können Sie die OLE-API direkt aufrufen.  
   
  IMoniker-Schnittstelle  

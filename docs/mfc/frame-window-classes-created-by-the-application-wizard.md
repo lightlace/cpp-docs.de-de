@@ -1,13 +1,10 @@
 ---
 title: Rahmenfensterklassen erstellt vom Anwendungs-Assistenten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CMainFrame
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 497dd21bba3e807349b793e3b37e774c833ccb40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3446de072266fdf7661d2e8d8ca0fc968279646
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Vom Anwendungs-Assistenten erstellte Rahmenfensterklassen
 Bei Verwendung der [Anwendungs-Assistent](../ide/creating-desktop-projects-by-using-application-wizards.md) zum Erstellen einer skelettanwendung zusätzlich zur Anwendung, Dokument und Ansichtsklassen, erstellt der Anwendungs-Assistent für Hauptrahmenfenster für Ihre Anwendung eine abgeleiteten Rahmenfenster-Klasse. Die Klasse heißt `CMainFrame` standardmäßig und die Dateien, die sie enthalten bezeichnet. H und MAINFRM. CPP.  

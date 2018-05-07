@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914b7117da99e69f4c531583be62158bbb693b85
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -49,13 +48,13 @@ void __cpuidex(
 
 ### <a name="parameters"></a>Parameter
 
-[out] *cpuInfo*<br/>
+[out] *CpuInfo*<br/>
 Ein Array aus vier Ganzzahlen, das die Informationen enthält, die in EAX, EBX, ECX and EDX zu unterstützten Funktionen der CPU zurückgegeben werden.
 
-[in] *function_id*<br/>
+[in] *Function_id*<br/>
 Ein Code, der die abzurufenden Informationen angibt und in EAX übergeben wird.
 
-[in] *subfunction_id*<br/>
+[in] *Subfunction_id*<br/>
 Ein zusätzlicher Code, der abzurufende Informationen angibt und in ECX übergeben wird.
 
 ## <a name="requirements"></a>Anforderungen

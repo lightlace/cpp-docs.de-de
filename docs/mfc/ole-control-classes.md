@@ -1,13 +1,10 @@
 ---
 title: OLE-Steuerelementklassen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e61d0ca8ed269557efbd566da1aca160ef669e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dcbda85c33bab37babe5da861067d25cf31e32c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-control-classes"></a>OLE-Steuerelementklassen
 Dies sind die primären Klassen, die Sie beim Schreiben von OLE-Steuerelemente verwenden. Die `COleControlModule` Klasse in einem Modul der OLE-Steuerelements ist vergleichbar mit der [CWinApp](../mfc/reference/cwinapp-class.md) Klassen in einer Anwendung. Jedes Modul implementiert ein oder mehrere OLE-Steuerelemente. Diese Steuerelemente werden durch dargestellt `COleControl` Objekte. Diese Steuerelemente mit ihren Container mit kommunizieren `CConnectionPoint` Objekte.  

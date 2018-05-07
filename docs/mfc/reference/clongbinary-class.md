@@ -1,12 +1,9 @@
 ---
 title: CLongBinary-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLongBinary
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clongbinary-class"></a>CLongBinary-Klasse
 Vereinfacht die Verwendung sehr großen Binärdatenobjekte (oft "BLOBs" oder "Binary Large Objects" genannt) in einer Datenbank.  
@@ -75,14 +70,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdb_.h  
   
-##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>  CLongBinary::CLongBinary  
  Erstellt ein `CLongBinary`-Objekt.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
  Die tatsächliche Größe in Bytes, der gespeicherten Daten speichert die `HGLOBAL` in behandelt `m_hData`.  
   
 ```  
@@ -92,7 +87,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>Hinweise  
  Diese Größe kann kleiner als die Größe des Speicherblocks, der für die Daten zugeordnet werden. Rufen Sie die Win32 [GlobalSize ist](http://msdn.microsoft.com/library/windows/desktop/aa366593) Funktion zum Abrufen der zugeordneten Größe.  
   
-##  <a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Speichert eine Windows `HGLOBAL` handle für die tatsächliche binary large Object-Daten.  
   
 ```  

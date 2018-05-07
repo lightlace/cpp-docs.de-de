@@ -2,11 +2,8 @@
 title: CDC-Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 Definiert eine Klasse von Gerätekontextobjekten.  
@@ -644,7 +639,7 @@ class CDC : public CObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDC::operator HDC](#operator_hdc)|Ruft das Handle für den Gerätekontext ab.|  
+|[CDC::Operator HDC](#operator_hdc)|Ruft das Handle für den Gerätekontext ab.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -673,7 +668,7 @@ class CDC : public CObject
   
  Es gibt Situationen, wenn Sie möglicherweise Text Metrik Informationen sowohl benötigen, die `m_hDC` und `m_hAttribDC` Gerätekontexte. Die folgenden Paare von Funktionen bieten diese Funktion:  
   
-|M_hAttribDC verwendet|Uses m_hDC|  
+|M_hAttribDC verwendet|M_hDC verwendet|  
 |-----------------------|-----------------|  
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|  
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|  
@@ -853,7 +848,7 @@ BOOL AngleArc(
   
  Wenn der mittelpunktswinkel von 360 Grad übersteigt ist der Bogen mehrmals überflüssig. Diese Funktion zeichnet Linien mit den aktuellen Stift. In der Abbildung ist nicht ausgefüllt.  
   
-##  <a name="arc"></a>  CDC::Arc  
+##  <a name="arc"></a>  CDC::ARC  
  Zeichnet einen elliptischen Bogen.  
   
 ```  
@@ -1017,7 +1012,7 @@ BOOL BeginPath();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
-##  <a name="bitblt"></a>  CDC::BitBlt  
+##  <a name="bitblt"></a>  CDC:: BitBlt  
  Kopiert eine Bitmap aus dem Quellgerätekontext für diese aktuelle Gerätekontext.  
   
 ```  
@@ -2852,7 +2847,7 @@ COLORREF GetDCPenColor() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion verwendet die Win32-Funktion [GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875)gemäß der Beschreibung im Windows SDK.  
   
-##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps  
+##  <a name="getdevicecaps"></a>  GetDeviceCaps  
  Ruft eine Vielzahl von Geräte-spezifischer Informationen zu dem Anzeigegerät ab.  
   
 ```  
@@ -3217,7 +3212,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).  
   
-##  <a name="getpath"></a>  CDC::GetPath  
+##  <a name="getpath"></a>  CDC::getPath  
  Ruft die Koordinaten definieren die Endpunkte der Zeilen und die Steuerpunkte der Kurven im Pfad, der den Gerätekontext ausgewählt wurde gefunden.  
   
 ```  
@@ -3258,7 +3253,7 @@ int GetPath(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CDC:: beginpath](#beginpath).  
   
-##  <a name="getpixel"></a>  CDC::GetPixel  
+##  <a name="getpixel"></a>  CDC::getPixel  
  Ruft ab den RGB-Farbwert des Pixels an dem Punkt gemäß *x* und *y*.  
   
 ```  
@@ -3456,7 +3451,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>Hinweise  
  Die Textfarbe wird die Vordergrundfarbe von Zeichen, die mit der Ausgabe von Text Memberfunktionen GDI gezeichnet [TextOut](#textout), [ExtTextOut](#exttextout), und [TabbedTextOut](#tabbedtextout).  
   
-##  <a name="gettextextent"></a>  CDC::GetTextExtent  
+##  <a name="gettextextent"></a>  CDC::getTextExtent  
  Rufen Sie diese Memberfunktion, um die Breite und Höhe einer Textzeile, verwenden die aktuelle Schriftart zur Ermittlung der Dimensionen zu berechnen.  
   
 ```  
@@ -3702,7 +3697,7 @@ BOOL GradientFill(
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter `GradientFill` im Windows SDK.  
   
-##  <a name="graystring"></a>  CDC::GrayString  
+##  <a name="graystring"></a>  CDC:: graystring  
  Zeichnet abgeblendet (grau) Text an der angegebenen Position durch Schreiben von Text in eine Bitmap Arbeitsspeicher Abblenden Bitmap und anschließend kopieren die Bitmap der Anzeige.  
   
 ```  
@@ -4237,7 +4232,7 @@ BOOL PatBlt(
   
  Nicht alle Gerätekontexte unterstützen die `PatBlt` Funktion. Zu bestimmen, ob für ein Gerätekontext unterstützt `PatBlt`, rufen Sie die `GetDeviceCaps` Memberfunktion mit der **RASTERCAPS** index, und überprüfen Sie den Rückgabewert für die **RC_BITBLT** Flag.  
   
-##  <a name="pie"></a>  CDC::Pie  
+##  <a name="pie"></a>  CDC::PIE  
  Zeichnet einen kreisförmigen Keil durch Zeichnen eines elliptischen Bogens, dessen Mitte und zwei Endpunkte durch Linien verbunden sind.  
   
 ```  
@@ -5173,7 +5168,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `CGdiObject` -Objekt, das ersetzt wurde, wenn die Funktion erfolgreich ausgeführt wird. Ist das eigentliche Objekt verweist auf eine [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), oder [CFont](../../mfc/reference/cfont-class.md) Objekt. Wenn der Aufruf nicht erfolgreich ist, ist der Rückgabewert **NULL**.  
   
-##  <a name="setabortproc"></a>  CDC::SetAbortProc  
+##  <a name="setabortproc"></a>  CDC:: setabortproc  
  Installiert die Abort-Prozedur für den Druckauftrag an.  
   
 ```  
@@ -5233,7 +5228,7 @@ int SetArcDirection(int nArcDirection);
   
 |Bogen|Segment|  
 |---------|---------|  
-|`ArcTo`|**Rectangle**|  
+|`ArcTo`|**Rechteck**|  
 |`Chord`|`RoundRect`|  
 |**Ellipse**||  
   
@@ -6237,7 +6232,7 @@ CSize TabbedTextOut(
   
  Standardmäßig wird die aktuelle Position von der Funktion nicht verwendet oder aktualisiert. Wenn eine Anwendung muss die aktuelle Position aktualisieren, wenn sie die Funktion aufruft, kann die Anwendung Aufrufen der [SetTextAlign](#settextalign) Memberfunktion mit `nFlags` festgelegt **TA_UPDATECP**. Wenn dieses Flag festgelegt ist, ignoriert Windows die *x* und *y* -Parameter bei nachfolgenden Aufrufen auf `TabbedTextOut`, verwenden Sie stattdessen die aktuelle Position.  
   
-##  <a name="textout"></a>  CDC::TextOut  
+##  <a name="textout"></a>  TextOut  
  Schreibt mithilfe der aktuell ausgewählten Schriftart eine Zeichenfolge an dem angegebenen Speicherort.  
   
 ```  

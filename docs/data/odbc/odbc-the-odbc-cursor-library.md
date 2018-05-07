@@ -1,13 +1,10 @@
 ---
 title: 'ODBC: Die ODBC-Cursorbibliothek | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: Die ODBC-Cursorbibliothek
 In diesem Thema wird beschrieben, die ODBC-Cursorbibliothek und erläutert, ihn zu verwenden. Weitere Informationen finden Sie unter:  
@@ -49,7 +44,7 @@ In diesem Thema wird beschrieben, die ODBC-Cursorbibliothek und erläutert, ihn 
   
  Der ODBC-Cursorbibliothek ist eine Dynamic Link Library (DLL), die zwischen der ODBC-Treiber-Manager und der Treiber befindet. In ODBC-Begriffen ausgedrückt unterhält der Treiber einen Cursor zum Nachverfolgen seiner Position im Recordset. Der Cursor markiert die Position in das Recordset, Sie haben bereits ein Bildlauf durchgeführt, den aktuellen Datensatz.  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>Cursorbibliothek und Level 1-ODBC-Treiber  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> Cursorbibliothek und Level 1-ODBC-Treiber  
  Der ODBC-Cursorbibliothek bietet Level 1-Treiber die folgenden neuen Funktionen:  
   
 -   Vorwärts und rückwärts scrollen. Ebene-2-Treiber ist nicht die Cursorbibliothek erforderlich, da sie bereits bildlauffähig sind.  
@@ -58,7 +53,7 @@ In diesem Thema wird beschrieben, die ODBC-Cursorbibliothek und erläutert, ihn 
   
  Die Cursorbibliothek bietet Ihnen Momentaufnahmen (statische Cursor), auch wenn sie vom Treiber nicht unterstützt werden. Wenn der Treiber bereits statische Cursor unterstützt, müssen Sie nicht beim Laden der Cursorbibliothek, um Unterstützung zu erhalten. Wenn Sie die Cursorbibliothek verwenden, können Sie nur Momentaufnahmen und Forward-only-Recordsets verwenden. Wenn der Treiber Dynasets (KEYSET_DRIVEN Cursor unterstützt) und verwendet werden sollen, müssen Sie die Cursorbibliothek nicht verwenden. Wenn Sie Momentaufnahmen und Dynasets verwenden möchten, müssen Sie diese auf zwei unterschiedlichen Grundlage `CDatabase` Objekte (zwei unterschiedliche Verbindungen), wenn der Treiber beide unterstützt.  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>Positionierte Update- und Timestamp-Spalten  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> Positionierte Update- und Timestamp-Spalten  
   
 > [!NOTE]
 >  Auf ODBC-Datenquellen können Sie über die MFC-ODBC-Klassen zugreifen, wie in diesem Thema beschrieben, oder über die MFC-Datenzugriffsobjekt-Klassen (DAO-Klassen).  
@@ -75,7 +70,7 @@ In diesem Thema wird beschrieben, die ODBC-Cursorbibliothek und erläutert, ihn 
  Das zweite Problem betrifft die Einschränkungen der Klasse [CTime](../../atl-mfc-shared/reference/ctime-class.md) bei Verwendung mit der `RFX_Date` Funktion Datum und die Daten in oder aus einer Tabelle zu übertragen. Verarbeitung der `CTime` -Objekts erzwingt ein gewisser Aufwand in Form von zusätzlichen intermediate Verarbeitung während der Datenübertragung. Der Datumsbereich `CTime` Objekte möglicherweise für einige Anwendungen auch zu beschränken. Eine neue Version von den `RFX_Date` Funktion nimmt einen ODBC **TIMESTAMP_STRUCT** Parameter anstelle von einer `CTime` Objekt. Weitere Informationen finden Sie unter `RFX_Date` in [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in der *MFC-Referenz*.  
 
   
-##  <a name="_core_using_the_cursor_library"></a>Verwenden die Cursorbibliothek  
+##  <a name="_core_using_the_cursor_library"></a> Verwenden die Cursorbibliothek  
  Wenn Sie mit einer Datenquelle verbinden – durch den Aufruf [CDatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) oder [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) – Sie können angeben, ob die Cursorbibliothek für die Datenquelle verwendet. Wenn Sie Momentaufnahmen von dieser Datenquelle erstellen, geben Sie die **dwOptions** -Option in der `dwOptions` Parameter `OpenEx` , oder geben Sie **"true"** für die  **bUseCursorLib** Parameter **öffnen** (der Standardwert ist **"true"**). Wenn der ODBC-Treiber Dynasets unterstützt und Dynasets für die Datenquelle öffnen möchten, verwenden Sie nicht die Cursorbibliothek (es maskiert einige Funktionalität des Treibers für Dynasets erforderlich). Geben Sie in diesem Fall nicht **dwOptions** in `OpenEx` , oder geben Sie **"false"** für die **bUseCursorLib** im Parameters **Öffnen**.  
   
 ## <a name="see-also"></a>Siehe auch  

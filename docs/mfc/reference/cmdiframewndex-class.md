@@ -1,12 +1,9 @@
 ---
 title: CMDIFrameWndEx-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWndEx
@@ -165,17 +162,15 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d5080f86760c997c2036e766db66a5c4215f1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 943dc2e56b896531b7deeb14a17602c97484926c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 Erweitert die Funktionalität der [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), eines Rahmenfensters Windows Interface (MDI, Multiple Document).  
@@ -301,14 +296,14 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxMDIFrameWndEx.h  
   
-##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout  
+##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout  
  Berechnet das Layout der aktiven Element.  
   
 ```  
 void ActiveItemRecalcLayout();
 ```  
   
-##  <a name="addpane"></a>CMDIFrameWndEx::AddPane  
+##  <a name="addpane"></a>  CMDIFrameWndEx::AddPane  
  Registriert einen Bereich beim Dock-Manager.  
   
 ```  
@@ -330,14 +325,14 @@ BOOL AddPane(
 ### <a name="remarks"></a>Hinweise  
  Jeder Bereich registriert werden muss, mit der [CDockingManager Klasse](../../mfc/reference/cdockingmanager-class.md) bevor zwingend Layout des Docks teilnehmen werden kann. Verwenden Sie diese Methode, um Dock-Manager zu benachrichtigen, dass Sie einen bestimmten Bereich andocken möchten. Sobald dieser Bereich registriert ist, richtet Dock-Manager basierend auf seiner Einstellung für die Ausrichtung und die Position in der Liste der Bereiche, die vom Dock-Manager verwaltet wird.  
   
-##  <a name="adjustclientarea"></a>CMDIFrameWndEx::AdjustClientArea  
+##  <a name="adjustclientarea"></a>  CMDIFrameWndEx::AdjustClientArea  
  Reduziert des Clientbereichs eines Rahmens zu ermöglichen.  
   
 ```  
 virtual void AdjustClientArea();
 ```  
   
-##  <a name="adjustdockinglayout"></a>CMDIFrameWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CMDIFrameWndEx::AdjustDockingLayout  
  Berechnet das Layout der alle angedockten Bereiche.  
   
 ```  
@@ -351,7 +346,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Memberfunktion, um das Layout der alle Bereiche, die an das Rahmenfenster angedockt neu zu berechnen.  
   
-##  <a name="aremditabs"></a>CMDIFrameWndEx::AreMDITabs  
+##  <a name="aremditabs"></a>  CMDIFrameWndEx::AreMDITabs  
  Bestimmt, ob die MDI-Registerkarten-Funktion oder die Funktion der MDI-Gruppen im Registerkartenformat aktiviert ist.  
   
 ```  
@@ -369,16 +364,16 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 -   2: im Registerkartenformat MDI-Gruppen aktiviert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `Returns TRUE`Wenn der MDI-Registerkarten oder MDI-Gruppen im Registerkartenformat aktiviert ist.  
+ `Returns TRUE` Wenn der MDI-Registerkarten oder MDI-Gruppen im Registerkartenformat aktiviert ist.  
   
- `Returns FALSE`Wenn keines der oben genannten Funktionen aktiviert ist.  
+ `Returns FALSE` Wenn keines der oben genannten Funktionen aktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um festzustellen, ob MDI-Registerkarten oder MDI-Gruppen im Registerkartenformat aktiviert ist für das Rahmenfenster. Verwendung [CMDIFrameWndEx::EnableMDITabs](#enablemditabs) aktivieren oder Deaktivieren der MDI-Registerkarten-Funktion.  
   
  Verwendung [CMDIFrameWndEx:: Enablemditabbedgroups](#enablemditabbedgroups) aktivieren oder Deaktivieren der MDI-Gruppen im Registerkartenformat-Funktion.  
   
-##  <a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx::CanCovertControlBarToMDIChild  
+##  <a name="cancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::CanCovertControlBarToMDIChild  
  Aufgerufen, um festzustellen, ob das Rahmenfenster andockbare Bereiche auf Dokumente im Registerformat konvertiert werden kann  
   
 ```  
@@ -391,7 +386,7 @@ virtual BOOL CanCovertControlBarToMDIChild();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode in einer abgeleiteten Klasse überschreiben und zurückgeben `TRUE` So aktivieren Sie die Konvertierung von andockbare Bereiche auf Dokumente im Registerformat. Sie können alternativ festlegen [CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) auf `TRUE`.  
   
-##  <a name="controlbartotabbeddocument"></a>CMDIFrameWndEx::ControlBarToTabbedDocument  
+##  <a name="controlbartotabbeddocument"></a>  CMDIFrameWndEx::ControlBarToTabbedDocument  
  Konvertiert die angegebene andockbaren Bereich, ein Dokument im Registerkartenformat.  
   
 ```  
@@ -408,7 +403,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode konvertiert einen andockbaren Bereich, in ein Dokument im Registerkartenformat. Wenn Sie diese Methode aufrufen, erstellt das Framework eine [CMDIChildWndEx-Klasse](../../mfc/reference/cmdichildwndex-class.md) -Objekt, entfernt die andockbaren Bereich von Dock-Manager, und die neue untergeordnete MDI-Fenster andockbaren Bereich hinzugefügt. Die untergeordneten MDI-Fensters ändert die Größe der andockbaren Bereich, um den gesamten Clientbereich abzudecken.  
   
-##  <a name="createdocumentwindow"></a>CMDIFrameWndEx::CreateDocumentWindow  
+##  <a name="createdocumentwindow"></a>  CMDIFrameWndEx::CreateDocumentWindow  
  Erstellt eine untergeordnete Dokumentfenster angezeigt.  
   
 ```  
@@ -439,7 +434,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="createnewwindow"></a>CMDIFrameWndEx::CreateNewWindow  
+##  <a name="createnewwindow"></a>  CMDIFrameWndEx::CreateNewWindow  
  Wird aufgerufen, durch das Framework beim Erstellen eines neuen Fensters.  
   
 ```  
@@ -458,7 +453,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das neue Fenster.  
   
-##  <a name="dockpane"></a>CMDIFrameWndEx::DockPane  
+##  <a name="dockpane"></a>  CMDIFrameWndEx::DockPane  
  Dockt den angegebenen Bereich an das Rahmenfenster an.  
   
 ```  
@@ -486,7 +481,7 @@ void DockPane(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]  
   
-##  <a name="dockpaneleftof"></a>CMDIFrameWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CMDIFrameWndEx::DockPaneLeftOf  
  Dockt einen Bereich auf der linken Seite eines anderen Bereichs an.  
   
 ```  
@@ -513,7 +508,7 @@ BOOL DockPaneLeftOf(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]  
   
-##  <a name="enableautohidepanes"></a>CMDIFrameWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CMDIFrameWndEx::EnableAutoHidePanes  
  Ermöglicht das automatischen Ausblendemodus für Bereiche, wenn sie sich an den angegebenen Seiten des Hauptrahmenfenster angedockt sind.  
   
 ```  
@@ -542,7 +537,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="enabledocking"></a>CMDIFrameWndEx::EnableDocking  
+##  <a name="enabledocking"></a>  CMDIFrameWndEx::EnableDocking  
  Ermöglicht das Andocken der Bereiche, die zu der MDI-Rahmenfenster gehören.  
   
 ```  
@@ -563,7 +558,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]  
   
-##  <a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx::EnableFullScreenMainMenu  
+##  <a name="enablefullscreenmainmenu"></a>  CMDIFrameWndEx::EnableFullScreenMainMenu  
  Anzeigen oder ausblenden im Hauptmenü in den Vollbildmodus.  
   
 ```  
@@ -572,11 +567,11 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnableMenu`  
- `TRUE`So zeigen Sie im Hauptmenü im Vollbildmodus, an oder `FALSE` um ihn auszublenden.  
+ `TRUE` So zeigen Sie im Hauptmenü im Vollbildmodus, an oder `FALSE` um ihn auszublenden.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx::EnableFullScreenMode  
+##  <a name="enablefullscreenmode"></a>  CMDIFrameWndEx::EnableFullScreenMode  
  Ermöglicht den Vollbildmodus für das Rahmenfenster.  
   
 ```  
@@ -590,7 +585,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ### <a name="remarks"></a>Hinweise  
  Klicken Sie im Vollbildmodus alle andockbarer Steuerleisten, Symbolleisten und Menüs sind ausgeblendet, und die aktive Ansicht wird geändert, um den Vollbildmodus zu belegen. Wenn Sie den Vollbildmodus aktivieren, müssen Sie eine Befehls-ID angeben, die aktiviert oder deaktiviert sie. Sie können Aufrufen `EnableFullScreenMode` aus des Hauptframe `OnCreate` Funktion. Wenn ein Framefenster Vollbild-Modus wechselt, erstellt das Framework eine unverankerte Symbolleiste mit einer Schaltfläche mit der angegebenen Befehls-ID. Wenn Sie im Hauptmenü auf dem Bildschirm angezeigt werden sollen, rufen Sie [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
-##  <a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState  
+##  <a name="enableloaddockstate"></a>  CMDIFrameWndEx::EnableLoadDockState  
  Aktiviert oder deaktiviert das Laden von den andockzustand.  
   
 ```  
@@ -599,11 +594,11 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie das Laden von den andockzustand `FALSE` um das Laden von den andockzustand zu deaktivieren.  
+ `TRUE` So aktivieren Sie das Laden von den andockzustand `FALSE` um das Laden von den andockzustand zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx:: Enablemditabbedgroups  
+##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx:: Enablemditabbedgroups  
  Aktiviert oder deaktiviert die MDI-Gruppen im Registerkartenformat-Funktion für das Rahmenfenster.  
   
 ```  
@@ -643,7 +638,7 @@ void EnableMDITabbedGroups(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]  
   
-##  <a name="enablemditabs"></a>CMDIFrameWndEx::EnableMDITabs  
+##  <a name="enablemditabs"></a>  CMDIFrameWndEx::EnableMDITabs  
  Aktiviert oder deaktiviert die Funktion für MDI-Registerkarten für MDI-Rahmenfenster. Wenn aktiviert, zeigt das Rahmenfenster eine Registerkarte für jeden untergeordneten MDI-Fensters.  
   
 ```  
@@ -691,7 +686,7 @@ void EnableMDITabs(
   
  [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]  
   
-##  <a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
+##  <a name="enablemditabslastactiveactivation"></a>  CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
  Gibt an, ob es sich bei die letzten aktive Registerkarte geöffnet werden soll, wenn der Benutzer als aktuelle Registerkarte geschlossen wird.  
   
 ```  
@@ -713,7 +708,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
   
  Verwendung `EnableMDITabsLastActiveActivation` So aktivieren Sie die zweite Möglichkeit der Registerkarte "-Aktivierung. Es emuliert die Möglichkeit, die Windows untergeordnete MDI-Fenster wird geöffnet.  
   
-##  <a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu  
+##  <a name="enablepanemenu"></a>  CMDIFrameWndEx::EnablePaneMenu  
  Aktiviert oder deaktiviert die automatische Erstellung und Verwaltung des Menüs Popup-Bereich, der eine Liste von Bereichen der Anwendung angezeigt.  
   
 ```  
@@ -753,7 +748,7 @@ void EnablePaneMenu(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]  
   
-##  <a name="enablewindowsdialog"></a>CMDIFrameWndEx::EnableWindowsDialog  
+##  <a name="enablewindowsdialog"></a>  CMDIFrameWndEx::EnableWindowsDialog  
  Fügt ein Menüelement, deren Befehls-ID aufruft einer [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) (Dialogfeld).  
   
 ```  
@@ -792,7 +787,7 @@ void EnableWindowsDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]  
   
-##  <a name="getactivepopup"></a>CMDIFrameWndEx::GetActivePopup  
+##  <a name="getactivepopup"></a>  CMDIFrameWndEx::GetActivePopup  
  Gibt einen Zeiger auf das aktuell angezeigte Popupmenü zurück.  
   
 ```  
@@ -805,7 +800,7 @@ CMFCPopupMenu* GetActivePopup() const;
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion können Sie einen Zeiger auf die [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt, das derzeit angezeigt wird.  
   
-##  <a name="getdefaultresid"></a>CMDIFrameWndEx::GetDefaultResId  
+##  <a name="getdefaultresid"></a>  CMDIFrameWndEx::GetDefaultResId  
  Gibt die ID des freigegebenen Ressourcen des MDI-Rahmenfensters zurück.  
   
 ```  
@@ -818,7 +813,7 @@ UINT GetDefaultResId() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gibt die Ressourcen-ID, die angegeben wurde, beim Laden der MDI-Rahmenfenster von [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).  
   
-##  <a name="getmditabgroups"></a>CMDIFrameWndEx::GetMDITabGroups  
+##  <a name="getmditabgroups"></a>  CMDIFrameWndEx::GetMDITabGroups  
  Gibt eine Liste von MDI Windows im Registerkartenformat zurück.  
   
 ```  
@@ -831,7 +826,7 @@ const CObList& GetMDITabGroups() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Liste von Fenstern im Registerformat zuzugreifen. Es kann hilfreich sein, wenn Sie einige Abfrageparameter von einzelnen Fenstern im Registerkartenformat oder ändern möchten.  
   
-##  <a name="getmditabs"></a>CMDIFrameWndEx::GetMDITabs  
+##  <a name="getmditabs"></a>  CMDIFrameWndEx::GetMDITabs  
  Gibt einen Verweis auf die unterstrichenen Fenster im Registerkartenformat zurück.  
   
 ```  
@@ -841,7 +836,7 @@ CMFCTabCtrl& GetMDITabs();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die unterstrichenen Fenster im Registerkartenformat.  
   
-##  <a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
+##  <a name="getmditabscontextmenualloweditems"></a>  CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
  Gibt eine Kombination von Flags, die bestimmt, welche Vorgänge gültig sind, wenn die Funktion im Registerkartenformat MDI-Gruppen aktiviert ist.  
   
 ```  
@@ -851,13 +846,13 @@ DWORD GetMDITabsContextMenuAllowedItems();
 ### <a name="return-value"></a>Rückgabewert  
  Eine bitweise OR-Kombination der folgenden Flags:  
   
-- `BCGP_MDI_CREATE_VERT_GROUP`-eine vertikale Registerkartengruppe erstellen können.  
+- `BCGP_MDI_CREATE_VERT_GROUP` -eine vertikale Registerkartengruppe erstellen können.  
   
-- `BCGP_MDI_CREATE_HORZ_GROUP`-eine horizontale Registerkartengruppe erstellen können.  
+- `BCGP_MDI_CREATE_HORZ_GROUP` -eine horizontale Registerkartengruppe erstellen können.  
   
-- `BCGP_MDI_CAN_MOVE_PREV`-eine Registerkarte zur der vorherigen Registerkartengruppe wechseln können.  
+- `BCGP_MDI_CAN_MOVE_PREV` -eine Registerkarte zur der vorherigen Registerkartengruppe wechseln können.  
   
-- `BCGP_MDI_CAN_MOVE_NEXT`-können eine Registerkarte zur nächsten Registerkartengruppe wechseln.  
+- `BCGP_MDI_CAN_MOVE_NEXT` -können eine Registerkarte zur nächsten Registerkartengruppe wechseln.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Feature im Registerkartenformat MDI-Gruppen aktiviert ist, müssen Sie wissen, welche Vorgänge auf den Registerkarten eines bestimmten Fensters zulässig sind. Diese Methode analysiert das aktuelle Layout von Fenstern im Registerkartenformat und gibt eine Kombination von Flags, die sein können zum Erstellen, z. B. ein Kontextmenü aufrufen.  
@@ -870,7 +865,7 @@ DWORD GetMDITabsContextMenuAllowedItems();
   
  Sie können eine Registerkarte in die nächste Gruppe verschieben, nur dann, wenn mehrere Registerkarten in einem Fenster im Registerkartenformat vorhanden ist.  
   
-##  <a name="getmenubar"></a>CMDIFrameWndEx::GetMenuBar  
+##  <a name="getmenubar"></a>  CMDIFrameWndEx::GetMenuBar  
  Gibt einen Zeiger auf eine menüleistenobjekt an das Rahmenfenster angefügt.  
   
 ```  
@@ -880,7 +875,7 @@ const CMFCMenuBar* GetMenuBar() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine menüleistenobjekt.  
   
-##  <a name="getpane"></a>CMDIFrameWndEx::GetPane  
+##  <a name="getpane"></a>  CMDIFrameWndEx::GetPane  
  Gibt einen Zeiger auf den Bereich, der das angegebene Steuerelement-ID verfügt.  
   
 ```  
@@ -894,7 +889,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Bereich, der die angegebenen Steuerelement-ID hat, falls vorhanden. Andernfalls `NULL`.  
   
-##  <a name="getribbonbar"></a>CMDIFrameWndEx::GetRibbonBar  
+##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar  
  Ruft das Menübandsteuerelement für den Frame ab.  
   
 ```  
@@ -906,7 +901,7 @@ CMFCRibbonBar* GetRibbonBar();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gettearoffbars"></a>CMDIFrameWndEx::GetTearOffBars  
+##  <a name="gettearoffbars"></a>  CMDIFrameWndEx::GetTearOffBars  
  Gibt eine Liste von abtrennbare Menüs.  
   
 ```  
@@ -917,9 +912,9 @@ const CObList& GetTearOffBars() const;
  Ein Verweis auf eine [CObList Klasse](../../mfc/reference/coblist-class.md) -Objekt, das eine Auflistung von Zeigern auf enthält `CPane`-abgeleitete Objekte, die in einem abtrennbare Zustand befinden.  
   
 ### <a name="remarks"></a>Hinweise  
- `CMDIFrameWndEx`verwaltet eine Auflistung von abtrennbare Menüs. Verwenden Sie diese Methode, um einen Verweis auf diese Liste abzurufen.  
+ `CMDIFrameWndEx` verwaltet eine Auflistung von abtrennbare Menüs. Verwenden Sie diese Methode, um einen Verweis auf diese Liste abzurufen.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIFrameWndEx::GetToolbarButtonToolTipText  
  Vom Framework aufgerufen, wenn die Anwendung zeigt die QuickInfo für eine Symbolleisten-Schaltfläche an.  
   
 ```  
@@ -936,11 +931,11 @@ virtual BOOL GetToolbarButtonToolTipText(
  Der QuickInfo-Text, der für die Schaltfläche angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die QuickInfo angezeigt wurde. Andernfalls `FALSE`.  
+ `TRUE` Wenn die QuickInfo angezeigt wurde. Andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="insertpane"></a>CMDIFrameWndEx::InsertPane  
+##  <a name="insertpane"></a>  CMDIFrameWndEx::InsertPane  
  Registriert den angegebenen Bereich beim Dock-Manager.  
   
 ```  
@@ -961,12 +956,12 @@ BOOL InsertPane(
  Wenn `TRUE`, `pControlBar` eingefügt, nachdem `pTarget`. Wenn `FALSE`, `pControlBar` eingefügt wird, bevor Sie `pTarget`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich Bereich registriert `FALSE` Bereich beim Dock-Manager bereits registriert wurde.  
+ `TRUE` Wenn die Methode erfolgreich Bereich registriert `FALSE` Bereich beim Dock-Manager bereits registriert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Methode können Sie die Dock-Manager über einen Bereich von angegebenen informieren `pControlBar`. Dock-Manager werden in diesem Bereich entsprechend Ausrichtung und die Position in der internen Liste Dock-Manager im Bereichs ausgerichtet.  
   
-##  <a name="isfullscreen"></a>CMDIFrameWndEx::IsFullScreen  
+##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
  Bestimmt, ob das Rahmenfenster in den Vollbildmodus.  
   
 ```  
@@ -974,12 +969,12 @@ BOOL IsFullScreen() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Rahmenfenster im Vollbildmodus ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Rahmenfenster im Vollbildmodus ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie können den Vollbildmodus festlegen, durch Aufrufen der [CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) Methode.  
   
-##  <a name="ismditabbedgroup"></a>CMDIFrameWndEx::IsMDITabbedGroup  
+##  <a name="ismditabbedgroup"></a>  CMDIFrameWndEx::IsMDITabbedGroup  
  Gibt an, ob die im Registerkartenformat MDI-Gruppen-Funktion aktiviert ist.  
   
 ```  
@@ -987,12 +982,12 @@ BOOL IsMDITabbedGroup() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Feature im Registerkartenformat MDI-Gruppen aktiviert ist; andernfalls `FALSE`.  
+ `TRUE` Wenn das Feature im Registerkartenformat MDI-Gruppen aktiviert ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Um zu bestimmen, ob reguläre MDI-Registerkarten oder der Funktion MDI im Registerkartenformat aktiviert ist, verwenden [CMDIFrameWndEx::AreMDITabs](#aremditabs).  
   
-##  <a name="ismemberofmditabgroup"></a>CMDIFrameWndEx::IsMemberOfMDITabGroup  
+##  <a name="ismemberofmditabgroup"></a>  CMDIFrameWndEx::IsMemberOfMDITabGroup  
  Bestimmt, ob das angegebene Fenster im Registerkartenformat in der Liste von Fenstern, die im MDI-Gruppen im Registerkartenformat sind.  
   
 ```  
@@ -1004,9 +999,9 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
  Ein Zeiger auf Fenster im Registerkartenformat.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das angegebene Fenster im Registerkartenformat ist in der Liste von Fenstern im Registerkartenformat, die MDI-Gruppen im Registerkartenformat zu bilden. Andernfalls `FALSE`.  
+ `TRUE` Wenn das angegebene Fenster im Registerkartenformat ist in der Liste von Fenstern im Registerkartenformat, die MDI-Gruppen im Registerkartenformat zu bilden. Andernfalls `FALSE`.  
   
-##  <a name="ismenubaravailable"></a>CMDIFrameWndEx::IsMenuBarAvailable  
+##  <a name="ismenubaravailable"></a>  CMDIFrameWndEx::IsMenuBarAvailable  
  Bestimmt, ob das Rahmenfenster eine Menüleiste.  
   
 ```  
@@ -1014,9 +1009,9 @@ BOOL IsMenuBarAvailable() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Zeiger auf das menüleistenobjekt nicht `NULL`andernfalls `FALSE`.  
+ `TRUE` Wenn der Zeiger auf das menüleistenobjekt nicht `NULL`andernfalls `FALSE`.  
   
-##  <a name="ispointneardocksite"></a>CMDIFrameWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CMDIFrameWndEx::IsPointNearDockSite  
  Bestimmt, ob ein angegebener Punkt in der Nähe der DockPosition ist.  
   
 ```  
@@ -1031,18 +1026,18 @@ BOOL IsPointNearDockSite(
  Der angegebene Punkt in Bildschirmkoordinaten.  
   
  [in] `dwBarAlignment`  
- Gibt an, welche Kante, die in der Nähe der Punkt ist. Mögliche Werte sind `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, und`CBRS_ALIGN_BOTTOM`  
+ Gibt an, welche Kante, die in der Nähe der Punkt ist. Mögliche Werte sind `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, und `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`Wenn der Punkt in der Nähe von den äußeren Rahmen der DockPosition ist; `FALSE` andernfalls.  
+ `TRUE` Wenn der Punkt in der Nähe von den äußeren Rahmen der DockPosition ist; `FALSE` andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Punkt in der Nähe der DockPosition ist; andernfalls `FALSE`.  
+ `TRUE` Wenn der Punkt in der Nähe der DockPosition ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Punkt ist in der Nähe der DockPosition auf, wenn es innerhalb der Vertraulichkeit in Dock-Manager festgelegt ist. Die Vertraulichkeit der Standardwert beträgt 15 Pixel.  
   
-##  <a name="isprintpreview"></a>CMDIFrameWndEx::IsPrintPreview  
+##  <a name="isprintpreview"></a>  CMDIFrameWndEx::IsPrintPreview  
  Bestimmt, ob das Rahmenfenster im Seitenansichtsmodus-ist.  
   
 ```  
@@ -1050,11 +1045,11 @@ BOOL IsPrintPreview();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Rahmenfenster im Seitenansichtsmodus-ist. andernfalls `FALSE`.  
+ `TRUE` Wenn das Rahmenfenster im Seitenansichtsmodus-ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="loadframe"></a>CMDIFrameWndEx::LoadFrame  
+##  <a name="loadframe"></a>  CMDIFrameWndEx::LoadFrame  
  Erstellt ein Framefenster von Ressourceninformationen.  
   
 ```  
@@ -1079,9 +1074,9 @@ virtual BOOL LoadFrame(
  Ein Zeiger auf eine [angegeben ist und Struktur](../../mfc/reference/ccreatecontext-structure.md). Dieser Parameter kann `NULL` sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich, andernfalls ist `FALSE`.  
+ `TRUE` Wenn die Methode erfolgreich, andernfalls ist `FALSE`.  
   
-##  <a name="loadmdistate"></a>CMDIFrameWndEx::LoadMDIState  
+##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState  
  Lädt die angegebene Layout im Registerkartenformat MDI-Gruppen und die Liste der zuvor geöffneten Dokumente.  
   
 ```  
@@ -1093,7 +1088,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
  Gibt den Profilnamen an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Ladevorgang erfolgreich war; `FALSE` Wenn Fehler beim Laden oder es keine Daten sind zu laden.  
+ `TRUE` Wenn der Ladevorgang erfolgreich war; `FALSE` Wenn Fehler beim Laden oder es keine Daten sind zu laden.  
   
 ### <a name="remarks"></a>Hinweise  
  Zum Laden oder speichern Sie den Status des MDI-Registerkarten und Gruppen und die Liste der geöffneten Dokumente, führen Sie folgende Schritte aus:  
@@ -1111,7 +1106,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]  
   
-##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup  
+##  <a name="mditabmovetonextgroup"></a>  CMDIFrameWndEx::MDITabMoveToNextGroup  
  Verschiebt die aktive Registerkarte aus dem derzeit aktiven Fenster im Registerkartenformat zur nächsten oder vorherigen im Registerkartenformat Gruppe.  
   
 ```  
@@ -1122,7 +1117,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
  [in] `bNext`  
  Wenn `TRUE`, verschieben Sie die Registerkarte weiter im Registerkartenformat hinzu. Wenn `FALSE`, verschieben Sie sie an der vorherigen Gruppe im Registerkartenformat.  
   
-##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup  
+##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
  Erstellt eine neue im Registerkartenformat Gruppe, die über ein einziges Fenster verfügt.  
   
 ```  
@@ -1141,7 +1136,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]  
   
-##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
+##  <a name="m_bcancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
  Gibt an, ob das andockbare Bereiche in untergeordneten MDI-Fenster konvertiert werden können.  
   
 ```  
@@ -1158,7 +1153,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw  
+##  <a name="m_bdisablesetredraw"></a>  CMDIFrameWndEx::m_bDisableSetRedraw  
  Aktiviert oder deaktiviert die Neuzeichnen-Optimierung für untergeordnete MDI-Fenster.  
   
 ```  
@@ -1172,7 +1167,7 @@ AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
   
  Dieses Flag kann dazu führen, dass unerwünschte Nebeneffekte auftreten (z. B. Programme im Hintergrund, die sichtbar werden). Aus diesem Grund wird empfohlen, dass Sie nur, wenn Sie auftreten bemerkbar Flimmern während der Aktivierung der MDI-Registerkarte "die Standardeinstellung ändern.  
   
-##  <a name="negotiateborderspace"></a>CMDIFrameWndEx::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>  CMDIFrameWndEx::NegotiateBorderSpace  
  Verhandelt Rahmen Speicherplatz in einem Rahmenfenster während OLE direkte Aktivierung an.  
   
 ```  
@@ -1200,7 +1195,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist eine Implementierung von OLE Rahmen Speicherplatz Aushandlung.  
   
-##  <a name="onclosedockingpane"></a>CMDIFrameWndEx::OnCloseDockingPane  
+##  <a name="onclosedockingpane"></a>  CMDIFrameWndEx::OnCloseDockingPane  
  Vom Framework aufgerufen, wenn der Benutzer klickt auf die **schließen** auf einen andockbaren Bereich auf die Schaltfläche.  
   
 ```  
@@ -1212,14 +1207,14 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
  Ein Zeiger auf den Bereich geschlossen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die andockbare Bereich geschlossen werden kann. Andernfalls `FALSE`.  
+ `TRUE` Wenn die andockbare Bereich geschlossen werden kann. Andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode zum Ausblenden des andockbare Bereiche zu behandeln. Zurückgeben `FALSE` , wenn Sie verhindern möchten, einen andockbaren Bereich ausgeblendet wird.  
   
  Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt `TRUE`.  
   
-##  <a name="oncloseminiframe"></a>CMDIFrameWndEx::OnCloseMiniFrame  
+##  <a name="oncloseminiframe"></a>  CMDIFrameWndEx::OnCloseMiniFrame  
  Vom Framework aufgerufen, wenn der Benutzer klickt auf die **schließen** Schaltfläche auf einem schwebenden Minirahmenfenster.  
   
 ```  
@@ -1231,14 +1226,14 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
  Ein Zeiger auf das Minirahmenfenster geschlossen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Sie das unverankerte Minirahmenfenster geschlossen werden kann. Andernfalls `FALSE`.  
+ `TRUE` Wenn Sie das unverankerte Minirahmenfenster geschlossen werden kann. Andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode zum Ausblenden von Gleitkomma Minirahmenfenster zu behandeln. Zurückgeben `FALSE` Wenn verhindern, dass ein Gleitkomma Minirahmenfenster ausgeblendet werden sollen.  
   
  Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt `TRUE`.  
   
-##  <a name="onclosepopupmenu"></a>CMDIFrameWndEx::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>  CMDIFrameWndEx::OnClosePopupMenu  
  Vom Framework aufgerufen, wenn ein aktives Popupmenü verarbeitet eine `WM_DESTROY` Nachricht.  
   
 ```  
@@ -1252,7 +1247,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie Benachrichtigungen von verarbeiten möchten [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekte, die an das MDI-Rahmenfenster gehören, wenn diese Objekte verarbeiten `WM_DESTROY` Nachrichten.  
   
-##  <a name="oncmdmsg"></a>CMDIFrameWndEx::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CMDIFrameWndEx::OnCmdMsg  
  Vom Framework zum Weiterleiten und Befehl Nachrichten verschicken und zum Aktualisieren von Benutzeroberflächenobjekten Befehl aufgerufen wird.  
   
 ```  
@@ -1279,7 +1274,7 @@ virtual BOOL OnCmdMsg(
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Nachricht verarbeitet wird; andernfalls 0.  
   
-##  <a name="ondrawmenuimage"></a>CMDIFrameWndEx::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMDIFrameWndEx::OnDrawMenuImage  
  Wird vom Framework aufgerufen, wenn das einem Menüelement zugeordnete Bild gezeichnet wird.  
   
 ```  
@@ -1300,12 +1295,12 @@ virtual BOOL OnDrawMenuImage(
  Umschließende Rechteck des Bilds.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode das Bild gezeichnet. Die Standardimplementierung gibt `FALSE` zurück.  
+ `TRUE` Wenn die Methode das Bild gezeichnet. Die Standardimplementierung gibt `FALSE` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Bildrendering für Menüelemente anpassen, die auf der Menüleiste, die im Besitz von gehören sollen die `CMDIFrameWndEx`-abgeleitetes Objekt. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo  
+##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
  Vom Framework aufgerufen, wenn eine [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)Prozesse eine `WM_PAINT` Nachricht.  
   
 ```  
@@ -1318,7 +1313,7 @@ virtual void OnDrawMenuLogo(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um ein Logo im Popupmenü anzuzeigen, die auf der Menüleiste, die im Besitz von gehört die `CMDIFrameWndEx`-abgeleitetes Objekt. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground  
+##  <a name="onerasemdiclientbackground"></a>  CMDIFrameWndEx::OnEraseMDIClientBackground  
  Vom Framework aufgerufen, wenn der frame MDI-Fenster Prozesse eine `WM_ERASEBKGND` Nachricht.  
   
 ```  
@@ -1326,12 +1321,12 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anwendung die Nachricht verarbeitet und den Hintergrund löscht.  
+ `TRUE` Wenn die Anwendung die Nachricht verarbeitet und den Hintergrund löscht.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Memberfunktion auf, wenn Sie verarbeiten möchten die `WM_ERASEBKGND` Nachricht in eine `CMDIFrameWndEx`-Klasse abgeleitet.  
   
-##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest  
+##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
  Vom Framework aufgerufen, wenn eine [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)-Objekt Prozesse eine `WM_NCHITTEST` Nachricht.  
   
 ```  
@@ -1348,12 +1343,12 @@ virtual BOOL OnMenuButtonToolHitTest(
  Zeiger auf eine [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anwendung füllt die `pTI` Parameter. Die Standardimplementierung gibt `FALSE` zurück.  
+ `TRUE` Wenn die Anwendung füllt die `pTI` Parameter. Die Standardimplementierung gibt `FALSE` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie Informationen zu bestimmten Menüelemente zu einer QuickInfo bereitstellen möchten. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onmoveminiframe"></a>CMDIFrameWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CMDIFrameWndEx::OnMoveMiniFrame  
  Wird aufgerufen, durch das Framework ein Minirahmenfenster zu verschieben.  
   
 ```  
@@ -1365,9 +1360,9 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
  Ein Zeiger auf ein Minirahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich, andernfalls ist `FALSE`.  
+ `TRUE` Wenn die Methode erfolgreich, andernfalls ist `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIFrameWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode  
  Legt die Anwendung Hauptframe Fenster Seitenansicht Modus fest.  
   
 ```  
@@ -1386,7 +1381,7 @@ virtual void OnSetPreviewMode(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
   
-##  <a name="onshowcustomizepane"></a>CMDIFrameWndEx::OnShowCustomizePane  
+##  <a name="onshowcustomizepane"></a>  CMDIFrameWndEx::OnShowCustomizePane  
  Vom Framework aufgerufen, wenn ein Bereich zum schnellen anpassen aktiviert wird.  
   
 ```  
@@ -1410,7 +1405,7 @@ virtual BOOL OnShowCustomizePane(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse im Bereich anpassen, schnelle Änderungen vornehmen.  
   
-##  <a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx::OnShowMDITabContextMenu  
+##  <a name="onshowmditabcontextmenu"></a>  CMDIFrameWndEx::OnShowMDITabContextMenu  
  Vom Framework aufgerufen, bevor ein Kontextmenü auf eine der Registerkarten angezeigt wird. Gültig für MDI-Gruppen im Registerkartenformat nur.  
   
 ```  
@@ -1427,18 +1422,18 @@ virtual BOOL OnShowMDITabContextMenu(
  [in] `dwAllowedItems`  
  Eine bitweise OR-Kombination von Flags, die angibt, welche Aktionen für die aktuelle Registerkarte zulässig sind:  
   
-- `BCGP_MDI_CREATE_VERT_GROUP`-eine vertikale Registerkartengruppe erstellen können.  
+- `BCGP_MDI_CREATE_VERT_GROUP` -eine vertikale Registerkartengruppe erstellen können.  
   
-- `BCGP_MDI_CREATE_HORZ_GROUP`-eine horizontale Registerkartengruppe erstellen können.  
+- `BCGP_MDI_CREATE_HORZ_GROUP` -eine horizontale Registerkartengruppe erstellen können.  
   
-- `BCGP_MDI_CAN_MOVE_PREV`-eine Registerkarte zur der vorherigen Registerkartengruppe wechseln können.  
+- `BCGP_MDI_CAN_MOVE_PREV` -eine Registerkarte zur der vorherigen Registerkartengruppe wechseln können.  
   
-- `BCGP_MDI_CAN_MOVE_NEXT`-können eine Registerkarte zur nächsten Registerkartengruppe wechseln.  
+- `BCGP_MDI_CAN_MOVE_NEXT` -können eine Registerkarte zur nächsten Registerkartengruppe wechseln.  
   
-- `BCGP_MDI_CAN_BE_DOCKED`-ein Dokument im Registerkartenformat zu angedockten Zustand (relevant für den nur Dokumente im Registerformat) wechseln.  
+- `BCGP_MDI_CAN_BE_DOCKED` -ein Dokument im Registerkartenformat zu angedockten Zustand (relevant für den nur Dokumente im Registerformat) wechseln.  
   
  [in] `bTabDrop`  
- `TRUE`im Registerkartenformat zum Anzeigen des Menüs als Ergebnis ziehen die Registerkarte auf eine andere Gruppe aus. `FALSE`Klicken Sie im Menü als ein Kontextmenü für die aktuelle aktive Registerkarte angezeigt.  
+ `TRUE` im Registerkartenformat zum Anzeigen des Menüs als Ergebnis ziehen die Registerkarte auf eine andere Gruppe aus. `FALSE` Klicken Sie im Menü als ein Kontextmenü für die aktuelle aktive Registerkarte angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Überschreiben Sie diese Methode in einer [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-Klasse.  
@@ -1451,7 +1446,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]  
   
-##  <a name="onshowpanes"></a>CMDIFrameWndEx::OnShowPanes  
+##  <a name="onshowpanes"></a>  CMDIFrameWndEx::OnShowPanes  
  Vom Framework aufgerufen, ein- oder Ausblenden von Bereichen.  
   
 ```  
@@ -1460,17 +1455,17 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
 ### <a name="parameters"></a>Parameter  
  [in] `bShow`  
- `TRUE`zum Anzeigen der Bereiche, `FALSE` Bereiche ausblenden.  
+ `TRUE` zum Anzeigen der Bereiche, `FALSE` Bereiche ausblenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Status der Bereiche durch Aufrufen dieser Methode ändert `FALSE` , wenn die Bereiche bereits in der vom angegebenen Zustand befinden sich `bShow`. Wenn die Bereiche ausgeblendet sind z. B. und `bShow` ist `FALSE`, ist der Rückgabewert `FALSE`.  
+ `TRUE` Wenn der Status der Bereiche durch Aufrufen dieser Methode ändert `FALSE` , wenn die Bereiche bereits in der vom angegebenen Zustand befinden sich `bShow`. Wenn die Bereiche ausgeblendet sind z. B. und `bShow` ist `FALSE`, ist der Rückgabewert `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung entfernt die Symbolleiste im Fenster Framefenster auf oberster Ebene an.  
   
  Wenn [CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) ist `TRUE` (Standard), werden alle andockbare Bereiche ausgeblendet werden.  
   
-##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>  CMDIFrameWndEx::OnShowPopupMenu  
  Vom Framework aufgerufen, wenn sie ein Popup-Menü geöffnet wird.  
   
 ```  
@@ -1478,14 +1473,14 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn im Popupmenü angezeigt werden. Andernfalls `FALSE`. Die Standardimplementierung gibt `TRUE` zurück.  
+ `TRUE` Wenn im Popupmenü angezeigt werden. Andernfalls `FALSE`. Die Standardimplementierung gibt `TRUE` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie spezielle Verarbeitung nach der Aktivierung von Popupmenüs implementieren möchten. Wenn Sie reguläre Menüelemente in Menüschaltflächen Farbe ändern möchten, z. B. abtrennbare Balken einrichten, und so weiter.  
   
  Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onsizemdiclient"></a>CMDIFrameWndEx::OnSizeMDIClient  
+##  <a name="onsizemdiclient"></a>  CMDIFrameWndEx::OnSizeMDIClient  
  Vom Framework aufgerufen, wenn die Größe des Fensters MDI-Client geändert hat.  
   
 ```  
@@ -1503,7 +1498,7 @@ virtual void OnSizeMDIClient(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="ontearoffmenu"></a>CMDIFrameWndEx::OnTearOffMenu  
+##  <a name="ontearoffmenu"></a>  CMDIFrameWndEx::OnTearOffMenu  
  Wird vom Framework aufgerufen, wenn ein Menü mit abtrennbarer Leiste aktiviert wird.  
   
 ```  
@@ -1520,12 +1515,12 @@ virtual BOOL OnTearOffMenu(
  Ein Zeiger auf die abtrennbarer Leiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Um mit der abtrennbarer Leiste vorgenommen werden, aktivieren Sie im Popupmenü zu ermöglichen; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
+ `TRUE` Um mit der abtrennbarer Leiste vorgenommen werden, aktivieren Sie im Popupmenü zu ermöglichen; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn Sie eine spezielle Einrichtung für die abtrennbarer Leiste implementieren möchten. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onupdateframemenu"></a>CMDIFrameWndEx::OnUpdateFrameMenu  
+##  <a name="onupdateframemenu"></a>  CMDIFrameWndEx::OnUpdateFrameMenu  
  Wird aufgerufen, durch das Framework die Frame-Menü zu aktualisieren.  
   
 ```  
@@ -1536,7 +1531,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
  [in] `hMenuAlt`  
  Ein Handle für ein Menü.  
   
-##  <a name="panefrompoint"></a>CMDIFrameWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
  Gibt die andockbaren Bereich, der den angegebenen Punkt enthält.  
   
 ```  
@@ -1575,7 +1570,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Hinweise  
  Der Aufruf an umgeleitet wird die [CDockingManager Klasse](../../mfc/reference/cdockingmanager-class.md). Finden Sie unter [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) für Weitere Informationen.  
   
-##  <a name="recalclayout"></a>CMDIFrameWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>  CMDIFrameWndEx::RecalcLayout  
  Vom Framework aufgerufen, das Layout des Rahmenfensters neu zu berechnen.  
   
 ```  
@@ -1589,7 +1584,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
   
-##  <a name="removepanefromdockmanager"></a>CMDIFrameWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager  
  Hebt die Registrierung auf einen Bereich, und entfernt sie aus der Dock-Manager.  
   
 ```  
@@ -1606,13 +1601,13 @@ void RemovePaneFromDockManager(
  Ein Zeiger auf einen Bereich entfernt werden soll.  
   
  [in] `bDestroy`  
- `TRUE`Beim Löschen des Bereich entfernten. `FALSE`nicht es zerstört.  
+ `TRUE` Beim Löschen des Bereich entfernten. `FALSE` nicht es zerstört.  
   
  [in] `bAdjustLayout`  
- `TRUE`Layout des Docks unmittelbar anpassen. Wenn `FALSE`, die Anpassung erfolgt nur bei einem Ereignis Neuzeichnen anderen Gründen ausgelöst (der Benutzer die Fenstergröße, zieht die Hauptframe usw.).  
+ `TRUE` Layout des Docks unmittelbar anpassen. Wenn `FALSE`, die Anpassung erfolgt nur bei einem Ereignis Neuzeichnen anderen Gründen ausgelöst (der Benutzer die Fenstergröße, zieht die Hauptframe usw.).  
   
  [in] `bAutoHide`  
- `TRUE`So entfernen Sie den Bereich aus der Liste der Bereiche zum automatischen Ausblenden `FALSE`So entfernen Sie den Bereich aus der Liste der regulären Bereiche  
+ `TRUE` So entfernen Sie den Bereich aus der Liste der Bereiche zum automatischen Ausblenden `FALSE` So entfernen Sie den Bereich aus der Liste der regulären Bereiche  
   
  [in] `pBarReplacement`  
  Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
@@ -1622,7 +1617,7 @@ void RemovePaneFromDockManager(
   
  Verwenden Sie diese Methode, wenn ein Bereich nicht mehr am Layout Docks des Rahmenfensters gehört.  
   
-##  <a name="savemdistate"></a>CMDIFrameWndEx::SaveMDIState  
+##  <a name="savemdistate"></a>  CMDIFrameWndEx::SaveMDIState  
  Speichert das aktuelle Layout im Registerkartenformat MDI-Gruppen und die Liste der zuvor geöffneten Dokumente.  
   
 ```  
@@ -1634,7 +1629,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
  Gibt den Profilnamen an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Speichervorgang erfolgreich war; `FALSE` Wenn Fehler beim Speichern.  
+ `TRUE` Wenn der Speichervorgang erfolgreich war; `FALSE` Wenn Fehler beim Speichern.  
   
 ### <a name="remarks"></a>Hinweise  
  Zum Laden oder speichern Sie den Status des MDI-Registerkarten und Gruppen und die Liste der geöffneten Dokumente, führen Sie folgende Schritte aus:  
@@ -1643,7 +1638,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
   
 -   Rufen Sie [CMDIFrameWndEx::LoadMDIState](#loadmdistate) Wenn Hauptframe erstellt wird. Der empfohlene Speicherort für diesen Aufruf ist, bevor die Hauptframe zum ersten Mal angezeigt wird.  
   
--   Rufen Sie `CWinAppEx::EnableLoadWindowPlacement(FALSE);` vor`pMainFrame->LoadFrame (IDR_MAINFRAME);`  
+-   Rufen Sie `CWinAppEx::EnableLoadWindowPlacement(FALSE);` vor `pMainFrame->LoadFrame (IDR_MAINFRAME);`  
   
 -   Rufen Sie `CWinAppEx::ReloadWindowPlacement(pMainFrame)` nach `LoadMDIState` Hauptframe an der Position angezeigt, die in der Registrierung gespeichert wurde.  
   
@@ -1656,7 +1651,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]  
   
-##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx::SetPrintPreviewFrame  
+##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame  
  Legt das Rahmenfenster Seitenansicht zu blättern.  
   
 ```  
@@ -1669,7 +1664,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx::SetupToolbarMenu  
+##  <a name="setuptoolbarmenu"></a>  CMDIFrameWndEx::SetupToolbarMenu  
  Ändert ein Symbolleistenobjekt durch dummy-Elementen mit benutzerdefinierten Elemente ersetzen.  
   
 ```  
@@ -1689,7 +1684,7 @@ void SetupToolbarMenu(
  [in] `uiViewUserToolbarCmdLast`  
  Gibt den letzten benutzerdefinierte-Befehl.  
   
-##  <a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen  
+##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
  Schaltet den Hauptframe aus den normalen Modus zum Vollbildmodus.  
   
 ```  
@@ -1698,7 +1693,7 @@ void ShowFullScreen();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="showpane"></a>CMDIFrameWndEx::ShowPane  
+##  <a name="showpane"></a>  CMDIFrameWndEx::ShowPane  
  Zeigt an oder blendet Sie aus dem angegebenen Bereich.  
   
 ```  
@@ -1714,13 +1709,13 @@ void ShowPane(
  Ein Zeiger auf den Bereich ein-oder ausgeblendet werden.  
   
  [in] `bShow`  
- `TRUE`um den Bereich anzuzeigen. `FALSE`So blenden Sie den Bereich aus.  
+ `TRUE` um den Bereich anzuzeigen. `FALSE` So blenden Sie den Bereich aus.  
   
  [in] `bDelay`  
- `TRUE`um die neuberechnung der am Layout Docks zu verzögern. `FALSE`Layout des Docks sofort neu zu berechnen.  
+ `TRUE` um die neuberechnung der am Layout Docks zu verzögern. `FALSE` Layout des Docks sofort neu zu berechnen.  
   
  [in] `bActivate`  
- `TRUE`sollten als aktiv, um den Bereich anzuzeigen. `FALSE`der Bereich als inaktiv angezeigt.  
+ `TRUE` sollten als aktiv, um den Bereich anzuzeigen. `FALSE` der Bereich als inaktiv angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um ein- oder Ausblenden des Bereichs. Verwenden Sie keine `ShowWindow` für andockbare Bereiche.  
@@ -1730,7 +1725,7 @@ void ShowPane(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]  
   
-##  <a name="showwindowsdialog"></a>CMDIFrameWndEx::ShowWindowsDialog  
+##  <a name="showwindowsdialog"></a>  CMDIFrameWndEx::ShowWindowsDialog  
  Erstellt eine [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) Feld und öffnet sie.  
   
 ```  
@@ -1742,7 +1737,7 @@ void ShowWindowsDialog();
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]  
   
-##  <a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx::TabbedDocumentToControlBar  
+##  <a name="tabbeddocumenttocontrolbar"></a>  CMDIFrameWndEx::TabbedDocumentToControlBar  
  Konvertiert das angegebene Dokument im Registerkartenformat auf einen andockbaren Bereich an.  
   
 ```  
@@ -1754,7 +1749,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
  Ein Zeiger auf untergeordnete MDI-Fenster, das einen andockbaren Bereich enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich war, `FALSE` bei einem Fehler.  
+ `TRUE` Wenn die Methode erfolgreich war, `FALSE` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um ein Dokument im Registerkartenformat in einen andockbaren Bereich zu konvertieren. Das Dokument im Registerkartenformat muss erstellt worden mit [CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument).  
@@ -1764,7 +1759,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]  
   
-##  <a name="updatecaption"></a>CMDIFrameWndEx::UpdateCaption  
+##  <a name="updatecaption"></a>  CMDIFrameWndEx::UpdateCaption  
  Wird aufgerufen, durch das Framework die framebeschriftung Fenster zu aktualisieren.  
   
 ```  
@@ -1773,14 +1768,14 @@ void UpdateCaption();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
+##  <a name="updatemditabbedbarsicons"></a>  CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
  Legt das Symbol für jede Seite im Registerformat MDI fest.  
   
 ```  
 void UpdateMDITabbedBarsIcons();
 ```  
   
-##  <a name="winhelp"></a>CMDIFrameWndEx::WinHelp  
+##  <a name="winhelp"></a>  CMDIFrameWndEx::WinHelp  
  Wird vom Framework aufgerufen, um die WinHelp-Anwendung oder die Kontexthilfe zu initiieren.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: 'TN055: Migrieren von MFC-ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrieren von MFC ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-Basis)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-Basis)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*Die `RFX_Date` Funktion basiert auf `CTime` und **TIMESTAMP_STRUCT**.  
+ \*    Die `RFX_Date` Funktion basiert auf `CTime` und **TIMESTAMP_STRUCT**.  
   
  Die wichtigsten Änderungen an Funktionen, die möglicherweise Auswirkungen auf Ihre Anwendung und erfordert mehr als einfacher Namensänderungen sind unten aufgeführt.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Exception-Klasse wurde geändert. **CDBExceptions** in die ODBC-Klassen ausgelöst werden und **CDaoExceptions** in den DAO-Klassen.  
   
--   `RFX_Date`verwendet `CTime` und **TIMESTAMP_STRUCT** Objekte beim **DFX_Date** verwendet `COleDateTime`. Die `COleDateTime` ist nahezu identisch mit `CTime`, aber basierend auf einer 8-Byte-OLE **Datum** anstatt ein 4-Byte- `time_t` , sodass er einen viel größeren Bereich der Daten aufnehmen kann.  
+-   `RFX_Date` verwendet `CTime` und **TIMESTAMP_STRUCT** Objekte beim **DFX_Date** verwendet `COleDateTime`. Die `COleDateTime` ist nahezu identisch mit `CTime`, aber basierend auf einer 8-Byte-OLE **Datum** anstatt ein 4-Byte- `time_t` , sodass er einen viel größeren Bereich der Daten aufnehmen kann.  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) Momentaufnahmen sind schreibgeschützt, während ODBC (`CRecordset`) Momentaufnahmen können abhängig von der Treiber und die Verwendung von ODBC-Cursorbibliothek aktualisiert werden. Bei Verwendung die Cursorbibliothek `CRecordset` Momentaufnahmen aktualisierbar sind. Wenn Sie keines der Microsoft-Treiber von Desktop Driver Pack 3.0 ohne die ODBC-Cursorbibliothek verwenden die `CRecordset` Momentaufnahmen sind schreibgeschützt. Wenn Sie einen anderen Treiber verwenden, Überprüfen der Treiber-Dokumentation, um festzustellen, ob Momentaufnahmen (**STATIC_CURSORS**) sind schreibgeschützt.  

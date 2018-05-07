@@ -1,13 +1,10 @@
 ---
 title: Verwenden von CComboBoxEx | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CComboBoxEx
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59732c2315bafca46bdcf99f31beaa528336669b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 755c7b211e9c387a923ac1e2fdfaacf4b8525efb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ccomboboxex"></a>Verwenden von CComboBoxEx
 Die erweiterten Kombinationsfeld-Steuerelement ist eine Erweiterung der standardmäßigen ein Kombinationsfeld-Steuerelement, das systemeigene Unterstützung für Elementbilder bereitstellt. Diese Images können verwendet werden, um den Status der einzelnen Elemente im Kombinationsfeld, z. B. die derzeit ausgewählte und nicht ausgewählte Elemente anzugeben. Damit Elementbilder leicht zugegriffen werden kann, enthält das Steuerelement Bildlisten unterstützt.  

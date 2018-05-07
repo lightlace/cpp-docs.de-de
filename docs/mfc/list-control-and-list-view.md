@@ -1,13 +1,10 @@
 ---
 title: Listensteuerelement und Listenansichtsteuerelement | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c9d559d642b6edf926b9feb49332ef7ec2924a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-control-and-list-view"></a>Listensteuerelement und Listenansichtsteuerelement
 Der Einfachheit halber kapselt MFC das Strukturelement-Steuerelement auf zwei Arten. Sie können den List-Steuerelemente verwenden:  
@@ -36,7 +31,7 @@ Der Einfachheit halber kapselt MFC das Strukturelement-Steuerelement auf zwei Ar
   
 -   Indirekt mithilfe der Klasse [CListView](../mfc/reference/clistview-class.md).  
   
- `CListView`ganz einfach ein Listenfeld-Steuerelement in der MFC-Dokument-/Ansichtarchitektur, das Steuerelement kapseln integrieren ähnlich wie [CEditView](../mfc/reference/ceditview-class.md) kapselt ein Bearbeitungssteuerelement: das Steuerelement füllt die gesamte Oberfläche der MFC-Ansicht. (Die Sicht *ist* im Steuerelement umgewandelt `CListView`.)  
+ `CListView` ganz einfach ein Listenfeld-Steuerelement in der MFC-Dokument-/Ansichtarchitektur, das Steuerelement kapseln integrieren ähnlich wie [CEditView](../mfc/reference/ceditview-class.md) kapselt ein Bearbeitungssteuerelement: das Steuerelement füllt die gesamte Oberfläche der MFC-Ansicht. (Die Sicht *ist* im Steuerelement umgewandelt `CListView`.)  
   
  Ein `CListView` Objekt erbt die [CCtrlView](../mfc/reference/cctrlview-class.md) und Basistext Klassen und fügt eine Memberfunktion, um das zugrunde liegende Listensteuerelement abzurufen. Verwenden Sie Mitglieder anzeigen möchten, um mit der Sicht als Sicht arbeiten. Verwenden der [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) Memberfunktion für den Zugriff auf das Strukturelement-Steuerelement-Memberfunktionen. Verwenden Sie diese Member zu:  
   

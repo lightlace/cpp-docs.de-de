@@ -1,13 +1,10 @@
 ---
 title: Reflektion (C + c++ / CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - data types [C++], reflection
 - reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f5b6e9aa8614248bc0e1215067e495cb4dce702
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-ccli"></a>Reflektion (C++/CLI)
 Die Reflektion ermöglicht die Überprüfung von bekannten Datentypen zur Laufzeit. Sie ermöglicht die Enumeration von Datentypen in einer bestimmten Assembly. Darüber hinaus können Member einer bestimmten Klasse oder eines bestimmten Werttyps erkannt werden. Dies trifft unabhängig davon zu, ob der Typ zur Kompilierungszeit bekannt war bzw. auf ihn verwiesen wurde. Dies macht die Reflektion zu einer nützlichen Funktion für Entwicklungs- und Codeverwaltungstools.  

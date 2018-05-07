@@ -1,13 +1,10 @@
 ---
 title: Darstellen von Bildern aus einer Bildliste | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>Darstellen von Bildern aus einer Bildliste
 Um ein Bild gezeichnet werden soll, verwenden Sie die [Memberfunktion CImageList:: Draw](../mfc/reference/cimagelist-class.md#draw) Memberfunktion. Geben Sie einen Zeiger auf ein Gerätekontextobjekt, den Index des Bilds gezeichnet werden soll, den Speicherort in den Gerätekontext, an dem das Bild gezeichnet werden soll, und eine Gruppe von Flags an, dass das Zeichnungsformat.  
@@ -41,7 +36,7 @@ Um ein Bild gezeichnet werden soll, verwenden Sie die [Memberfunktion CImageList
   
  Nicht maskierten Bildes in den Kontext mit Ziel Gerät kopiert die **SRCCOPY** auszuführenden Vorgangs. Die Farben in der Abbildung werden unabhängig von die Hintergrundfarbe des Gerätekontexts angezeigt. Die im angegebenen zeichnungsarten **zeichnen** auch haben keinen Einfluss auf die Darstellung eines nicht maskierten Bilds.  
   
- Zusätzlich zu den Draw-Memberfunktion einer anderen Funktion [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), reicht die Möglichkeit, ein Bild zu rendern. `DrawIndirect`akzeptiert, die als Parameter ein [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur. Diese Struktur kann verwendet werden, um das Rendering des aktuellen Images, einschließlich der Verwendung von rastervorgangscode (ROP) anzupassen. Weitere Informationen zu ROP Codes finden Sie unter [Rastervorgangscode](http://msdn.microsoft.com/library/windows/desktop/dd162892) und [Bitmaps als Pinsel](http://msdn.microsoft.com/library/windows/desktop/dd183378) im Windows SDK.  
+ Zusätzlich zu den Draw-Memberfunktion einer anderen Funktion [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), reicht die Möglichkeit, ein Bild zu rendern. `DrawIndirect` akzeptiert, die als Parameter ein [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur. Diese Struktur kann verwendet werden, um das Rendering des aktuellen Images, einschließlich der Verwendung von rastervorgangscode (ROP) anzupassen. Weitere Informationen zu ROP Codes finden Sie unter [Rastervorgangscode](http://msdn.microsoft.com/library/windows/desktop/dd162892) und [Bitmaps als Pinsel](http://msdn.microsoft.com/library/windows/desktop/dd183378) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CImageList](../mfc/using-cimagelist.md)   

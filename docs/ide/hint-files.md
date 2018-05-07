@@ -1,13 +1,10 @@
 ---
 title: Hinweis Dateien | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>Hinweisdateien
 Ein *Hinweisdatei* kann Visual Studio integrierten Entwicklungsumgebung (IDE) interpretieren Visual C++-Bezeichnern, z. B. die Namen der Funktionen und Makros. Wenn Sie eine Visual C++-Projekts, der IDE öffnen *Analysesystem* analysiert den Code in jeder Quelldatei im Projekt, und sammelt Informationen zu jeder Bezeichner. Die IDE diese Informationen verwendet, um Funktionen zu unterstützen, wie die **Klassenansicht** Browser und **Navigationsleiste**.  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Syntax|Bedeutung|  
 |------------|-------------|  
-|`#define`*Hinweis-Name* *Ersetzungszeichenfolge*<br /><br /> `#define`*Hinweis-Name* `(` *Parameter*,... `)` *Ersetzungszeichenfolge*|Eine Präprozessordirektive, die einen neuen Hinweis definiert oder einen vorhandenen Hinweis definiert. Nach der Richtlinie ersetzt der Präprozessor jedes Vorkommen von *Hinweis-Name* im Quellcode mit *Ersetzungszeichenfolge*.<br /><br /> Das zweite Syntaxformat definiert einen funktionsähnliche Hinweis. Tritt ein funktionsähnliche Hinweis im Quellcode, ersetzt der Präprozessor zuerst jedes Vorkommen von *Parameter* in *Ersetzungszeichenfolge* mit der entsprechenden Arguments in Quellcode, und klicken Sie dann ersetzt *Hinweis-Name* mit *Ersetzungszeichenfolge*.|  
+|`#define` *Hinweis-Name* *Ersetzungszeichenfolge*<br /><br /> `#define` *Hinweis-Name* `(` *Parameter*,... `)` *Ersetzungszeichenfolge*|Eine Präprozessordirektive, die einen neuen Hinweis definiert oder einen vorhandenen Hinweis definiert. Nach der Richtlinie ersetzt der Präprozessor jedes Vorkommen von *Hinweis-Name* im Quellcode mit *Ersetzungszeichenfolge*.<br /><br /> Das zweite Syntaxformat definiert einen funktionsähnliche Hinweis. Tritt ein funktionsähnliche Hinweis im Quellcode, ersetzt der Präprozessor zuerst jedes Vorkommen von *Parameter* in *Ersetzungszeichenfolge* mit der entsprechenden Arguments in Quellcode, und klicken Sie dann ersetzt *Hinweis-Name* mit *Ersetzungszeichenfolge*.|  
 |`@<`|Eine bestimmte Hinweisdateien *Ersetzungszeichenfolge* , der den Anfang eines Satzes von Zuordnungselementen angibt.|  
 |`@=`|Eine bestimmte Hinweisdateien *Ersetzungszeichenfolge* , der ein intermediate kartenelement angibt. Eine Karte kann mehrere Elemente enthalten.|  
 |`@>`|Eine bestimmte Hinweisdateien *Ersetzungszeichenfolge* , der das Ende eines Satzes von Zuordnungselementen angibt.|  
-|`#undef`*Hinweis-Name*|Die Präprozessordirektive angegeben, durch den einen vorhandenen Hinweis, der gelöscht werden. Der Name des Hinweises wird bereitgestellt, indem die *Hinweis-Name* Bezeichner.|  
-|`//`*Kommentar*|Ein einzeiliger Kommentar.|  
+|`#undef` *Hinweis-name*|Die Präprozessordirektive angegeben, durch den einen vorhandenen Hinweis, der gelöscht werden. Der Name des Hinweises wird bereitgestellt, indem die *Hinweis-Name* Bezeichner.|  
+|`//` *Kommentar*|Ein einzeiliger Kommentar.|  
 |`/*` *comment* `*/`|Keinen mehrzeiligen Kommentar.|  
   
 ## <a name="what-macros-require-a-hint"></a>Was Makros erfordern einen Hinweis?  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  Die folgende Abbildung zeigt einige der physischen Verzeichnisse in einem Visual C++-Projekt. Hinweisdateien befinden sich in der `vcpackages`, `Debug`, `A1`, und `A2` Verzeichnisse.  
   
 ### <a name="hint-file-directories"></a>Hinweisdateiverzeichnisse  
- ![Allgemeine und Projekt &#45; bestimmte Hinweisdateiverzeichnisse. ] (../ide/media/hintfile.png "HintFile")  
+ ![Allgemeine und Projekt&#45;bestimmte Hinweisdateiverzeichnisse. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Verzeichnisse und Hinweisdateiinhalte  
  Die folgende Liste enthält die Verzeichnisse in diesem Projekt, die Hinweisdateien und den Inhalt dieser Hinweis Dateien enthalten. Nur einige der vielen Hinweise in der `vcpackages` Directory Hint-Datei aufgeführt sind.  

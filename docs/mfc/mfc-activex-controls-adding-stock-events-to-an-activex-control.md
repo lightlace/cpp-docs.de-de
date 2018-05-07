@@ -1,13 +1,10 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement | Microsoft Docs"
-ms.custom: 
+title: 'MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement
-Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen, insofern, dass sie automatisch von-Klasse ausgelöst wurden [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`enthält vordefinierte Memberfunktionen, die häufig verwendete Aktionen infolge Ereignisse ausgelöst werden. Einige häufig verwendete Aktionen von implementiert `COleControl` enthalten einzelne - und double - clicks auf das Steuerelement, Tastaturereignisse und Änderungen in den Zustand der Maustasten. Ereignis-Zuordnungseinträge für vordefinierte Ereignisse immer vorangestellt werden die **EVENT_STOCK** Präfix.  
+Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen, insofern, dass sie automatisch von-Klasse ausgelöst wurden [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` enthält vordefinierte Memberfunktionen, die häufig verwendete Aktionen infolge Ereignisse ausgelöst werden. Einige häufig verwendete Aktionen von implementiert `COleControl` enthalten einzelne - und double - clicks auf das Steuerelement, Tastaturereignisse und Änderungen in den Zustand der Maustasten. Ereignis-Zuordnungseinträge für vordefinierte Ereignisse immer vorangestellt werden die **EVENT_STOCK** Präfix.  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>Vordefinierte Ereignisse, die von unterstützt die Ereignis-Assistent zum Hinzufügen von  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> Vordefinierte Ereignisse, die von unterstützt die Ereignis-Assistent zum Hinzufügen von  
  Die `COleControl` Klasse enthält zehn vordefinierte Ereignisse, die in der folgenden Tabelle aufgeführt. Sie können angeben, dass die Ereignisse in Ihrer Steuerelement mit der [Assistenten zum Hinzufügen von Ereignis](../ide/add-event-wizard.md).  
   
 ### <a name="stock-events"></a>Bestandereignissen  
@@ -84,7 +79,7 @@ Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen,
 |MouseUp|**"void" FireMouseUp (kurze** `nButton` **, short** `nShiftState` **, "float"***x* **, "float"** *y***)** |Wird ausgelöst, wenn alle **BUTTONUP** (links, zentriert oder rechts) empfangen wird. Das Erfassen von Mauseingaben wird freigegeben, bevor Sie dieses Ereignis ausgelöst wird.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**"void" FireReadyStateChange)**|Wird ausgelöst, wenn der Übergang eines Steuerelement zum nächsten Zustand "bereit" aufgrund des Umfangs der Daten empfangen wurde.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_READYSTATECHANGE)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>Hinzufügen eines vordefinierten Ereignisses mit der Ereignis-Assistent zum Hinzufügen von  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Hinzufügen eines vordefinierten Ereignisses mit der Ereignis-Assistent zum Hinzufügen von  
  Hinzufügen von vordefinierten Ereignissen erfordert weniger aufwendig als das Hinzufügen von benutzerdefinierten Ereignissen, da das Auslösen des tatsächlichen Ereignisses automatisch von der Basisklasse behandelt wird `COleControl`. Das folgende Verfahren fügt ein vordefiniertes Ereignis an ein Steuerelement, das entwickelt wurde mit [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md). Das Ereignis wird aufgerufen, KeyPress wird ausgelöst, wenn eine Taste gedrückt wird und das Steuerelement aktiv ist. Dieses Verfahren kann auch verwendet werden, andere vordefinierten Ereignisse hinzuzufügen. Ersetzen Sie den Namen der ausgewählten Basisereignis für KeyPress.  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>So fügen Sie die vordefinierten KeyPress-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignis hinzu  
@@ -101,7 +96,7 @@ Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen,
   
 5.  Klicken Sie auf **Fertig stellen**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>Fügen Sie-Assistent ändert für vordefinierte Ereignisse hinzu.  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Fügen Sie-Assistent ändert für vordefinierte Ereignisse hinzu.  
  Da vordefinierte Ereignisse auf das Steuerelement Basisklasse behandelt werden, den Assistenten zum Hinzufügen von Ereignis nicht die Klassendeklaration in keiner Weise geändert. Er fügt das Ereignis zu Ereignis-steuerelementzuordnung hinzu und erstellt einen Eintrag in seiner. IDL-Datei. Die folgende Zeile wird das Steuerelement ereigniszuordnung, befindet sich in der Implementierung des Steuerelements-Klasse hinzugefügt (. CPP)-Datei:  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  

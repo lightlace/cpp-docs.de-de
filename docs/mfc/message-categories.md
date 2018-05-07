@@ -1,13 +1,10 @@
 ---
 title: Nachricht Kategorien | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-categories"></a>Meldungskategorien
 Welche Arten von Nachrichten Sie Handler schreiben, es sind drei Hauptkategorien unterteilt:  
@@ -48,10 +43,10 @@ Welche Arten von Nachrichten Sie Handler schreiben, es sind drei Hauptkategorien
   
      Dies schließt **WM_COMMAND** Benachrichtigungen von Benutzeroberflächenobjekten: Menüs, Symbolleisten-Schaltflächen und Zugriffstasten. Das Framework verarbeitet Befehle anders als andere Meldungen, und können vom von Objekten, für verschiedene Arten behandelt werden, wie in beschrieben [Befehlsziele](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a>Windows-Meldungen und Steuerelemente-Benachrichtigungsmeldungen  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Windows-Meldungen und Steuerelemente-Benachrichtigungsmeldungen  
  Nachrichten in die Kategorien 1 und 2 – Windows-Meldungen und steuerelementbenachrichtigungen – werden von Windows gehandhabt: Objekte der Klassen, die von Klasse abgeleitet `CWnd`. Dies schließt `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, und Ihren eigenen Klassen aus dieser Basisklassen abgeleitet. Solche Objekte kapseln einer `HWND`, ein Handle für ein Windows-Fenster.  
   
-##  <a name="_core_command_messages"></a>Befehlsmeldungen  
+##  <a name="_core_command_messages"></a> Befehlsmeldungen  
  Nachrichten in der Kategorie 3 – Befehle – kann durch eine größere Bandbreite von Objekten behandelt werden: Dokumente, Dokumentvorlagen und der Application-Objekt selbst, zusätzlich zu den Windows- und Ansichten. Wenn Sie ein Befehl direkt auf ein bestimmtes Objekt auswirkt, ist es sinnvoll, dieses Objekt den Befehl behandelt haben. Z. B. der Befehl Öffnen im Menü Datei der Anwendung logisch zugeordnet ist: die Anwendung öffnet ein angegebenes Dokument nach dem Empfang des Befehls. Daher wird der Handler für den Befehl zum Öffnen eine Memberfunktion der Anwendungsklasse. Weitere Informationen zu Befehlen und wie diese Objekte weitergeleitet werden, finden Sie unter [wie das Framework einen Handler aufruft](../mfc/how-the-framework-calls-a-handler.md).  
   
 ## <a name="see-also"></a>Siehe auch  

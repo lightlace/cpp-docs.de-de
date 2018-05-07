@@ -1,13 +1,10 @@
 ---
 title: Bereitstellung von Fensterloser Aktivierung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>Bereitstellung von fensterloser Aktivierung
 Fenster Erstellung Code (d. h. alle beim Aufruf von **CreateWindow**) beeinträchtigen ausführen. Ein Steuerelement, das verwaltet ein Fenster auf dem Bildschirm hat, um Nachrichten für das Fenster zu verwalten. Fensterlose Steuerelemente sind deshalb schneller als Steuerelemente in Windows.  
@@ -47,7 +42,7 @@ Fenster Erstellung Code (d. h. alle beim Aufruf von **CreateWindow**) beeinträc
   
  Wenn fensterloser Aktivierung aktiviert ist, wird der Container eingehende Nachrichten an des Steuerelements Delegieren `IOleInPlaceObjectWindowless` Schnittstelle. `COleControl`die Implementierung dieser Schnittstelle übermittelt die Nachrichten über das Steuerelement meldungszuordnung, nach dem Anpassen der Maus entsprechend koordiniert. Sie können die Nachrichten wie gewöhnliche fenstermeldungen, verarbeiten, durch Hinzufügen der entsprechenden Einträge in die meldungszuordnung. Vermeiden Sie in Ihrer Handler für diese Nachrichten, die Verwendung der `m_hWnd` Membervariablen gespeichert (oder eine Memberfunktion leiten, der verwendet wird) ohne zunächst geprüft wird, die ihr Wert nicht ist **NULL**.  
   
- `COleControl`bietet Memberfunktionen, die Mausauswahl, den Tastaturfokus, Durchführen eines Bildlaufs und andere Fensterdienste aus dem Container nach Bedarf, einschließlich aufrufen:  
+ `COleControl` bietet Memberfunktionen, die Mausauswahl, den Tastaturfokus, Durchführen eines Bildlaufs und andere Fensterdienste aus dem Container nach Bedarf, einschließlich aufrufen:  
   
 -   [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   

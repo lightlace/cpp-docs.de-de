@@ -1,13 +1,10 @@
 ---
-title: "Hinzufügen mehrerer Ansichten zu einem einzelnen Dokument | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen mehrerer Ansichten zu einem einzelnen Dokument | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b30ac7b4c8910e92d14274f1224c25e7f74d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Hinzufügen mehrerer Ansichten zu einem Dokument
 In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation Class (MFC)-Bibliothek erstellt ist eine einzelne Ansichtstyp zugeordnet jeder Dokumenttyp. In einigen Fällen ist es wünschenswert sein, Sie haben die Möglichkeit, die aktuelle Ansicht eines Dokuments mit einer neuen Ansicht wechseln.  
@@ -52,9 +47,9 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
 -   Der Name des der `CWinApp`-abgeleitete Objekt `CMyWinApp`, und `CMyWinApp` deklariert und in MYWINAPP definiert ist. H und MYWINAPP. CPP.  
   
--   `CNewView`Der Name der neuen `CView`-abgeleitetes Objekt, und `CNewView` deklariert und in NEWVIEW definiert ist. H und NEWVIEW. CPP.  
+-   `CNewView` Der Name der neuen `CView`-abgeleitetes Objekt, und `CNewView` deklariert und in NEWVIEW definiert ist. H und NEWVIEW. CPP.  
   
-##  <a name="vcconmodifyexistingapplicationa1"></a>Ändern Sie die vorhandene Anwendungsklasse  
+##  <a name="vcconmodifyexistingapplicationa1"></a> Ändern Sie die vorhandene Anwendungsklasse  
  Für die Anwendung zwischen Ansichten wechseln müssen Sie die Anwendungsklasse durch Hinzufügen von Membervariablen zum Speichern von Ansichten und eine Methode zum Wechseln zu ändern.  
   
  Fügen Sie den folgenden Code zur Deklaration von `CMyWinApp` in MYWINAPP. H  
@@ -71,7 +66,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Die Änderungen zu speichern und mit dem nächsten Schritt fortfahren.  
   
-##  <a name="vcconnewviewclassa2"></a>Erstellen Sie und ändern Sie die neue Ansichtsklasse  
+##  <a name="vcconnewviewclassa2"></a> Erstellen Sie und ändern Sie die neue Ansichtsklasse  
  Erstellen neue Ansichtsklasse erfolgt einfach mithilfe der **neue Klasse** Befehl in der Klassenansicht. Die einzige Anforderung für diese Klasse ist, dass es abgeleitet `CView`. Fügen Sie diese neue Art der Anwendung. Spezifische Informationen über das Projekt eine neue Klasse hinzufügen, finden Sie unter [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md).  
   
  Nachdem Sie die Klasse dem Projekt hinzugefügt haben, müssen Sie den Zugriff auf einige Klassenmember Ansicht ändern.  
@@ -80,7 +75,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Die Änderungen zu speichern und mit dem nächsten Schritt fortfahren.  
   
-##  <a name="vcconattachnewviewa3"></a>Erstellen und Anfügen der neuen Ansicht  
+##  <a name="vcconattachnewviewa3"></a> Erstellen und Anfügen der neuen Ansicht  
  Zum Erstellen, und fügen Sie die neue Sicht, müssen Sie ändern die `InitInstance` Funktion Ihrer Anwendung-Klasse. Die Änderung fügt neue Code, der ein neues Objekt, und klicken Sie dann initialisiert beide erstellt `m_pOldView` und `m_pNewView` mit den zwei vorhandene Ansicht-Objekten.  
   
  Da die neue Ansicht, innerhalb erstellt wird der `InitInstance` -Funktion, die neuen und vorhandenen Ansichten gelten, für die Lebensdauer der Anwendung. Allerdings kann die Anwendung die neue Ansicht genauso einfach dynamisch erstellen.  
@@ -91,7 +86,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Die Änderungen zu speichern und mit dem nächsten Schritt fortfahren.  
   
-##  <a name="vcconswitchingfunctiona4"></a>Implementieren der Funktion zum Wechseln  
+##  <a name="vcconswitchingfunctiona4"></a> Implementieren der Funktion zum Wechseln  
  Im vorherigen Schritt haben Sie Code, der erstellt und initialisiert ein neues Ansichtsobjekt hinzugefügt. Die letzte Aufgabe wird zur Implementierung der switching Methode `SwitchView`.  
   
  Am Ende der Implementierungsdatei für die Anwendungsklasse (MYWINAPP. CPP), fügen Sie die folgende Methodendefinition hinzu:  
@@ -100,7 +95,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Die Änderungen zu speichern und mit dem nächsten Schritt fortfahren.  
   
-##  <a name="vcconswitchingtheviewa5"></a>Fügen Sie Unterstützung für das Wechseln der Ansicht hinzu  
+##  <a name="vcconswitchingtheviewa5"></a> Fügen Sie Unterstützung für das Wechseln der Ansicht hinzu  
  Der letzte Schritt umfasst das Hinzufügen von Code, der Aufrufe der `SwitchView` Methode, wenn die Anwendung zwischen Ansichten wechseln muss. Dies kann auf unterschiedliche Weise ausgeführt werden: durch Hinzufügen eines neuen Menüelements für die Benutzer auswählen oder intern die Ansicht wechseln, wenn bestimmte Bedingungen erfüllt sind.  
   
  Weitere Informationen zum Hinzufügen von neuen Menüelemente und befehlshandlerfunktionen finden Sie unter [Handler für Befehle und Steuerelementbenachrichtigungen](../mfc/handlers-for-commands-and-control-notifications.md).  

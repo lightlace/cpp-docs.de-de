@@ -1,13 +1,10 @@
 ---
-title: "Hinzufügen von Klassen aus der Typbibliothek-Assistenten | Microsoft Docs"
-ms.custom: 
+title: Hinzufügen von Klassen aus der Typbibliothek-Assistenten | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistent zum Hinzufügen von Klassen aus der Typbibliothek
 Verwenden Sie diesen Assistenten zum Hinzufügen einer MFC-Klasse aus einer Typbibliothek verfügbar. Der Assistent erstellt eine Klasse für jede Schnittstelle, die Sie aus der ausgewählten Typbibliothek hinzufügen.  
@@ -44,7 +39,7 @@ Verwenden Sie diesen Assistenten zum Hinzufügen einer MFC-Klasse aus einer Typb
   
  Finden Sie unter "In Distributed COM: Type-Bibliotheken und Language Integration" in der MSDN Library für Weitere Informationen zum Registrieren von Typbibliotheken.  
   
- **Speicherort**  
+ **Position**  
  Gibt den Speicherort der Typbibliothek. Wenn Sie auf **Datei** unter **Klasse hinzufügen von**, können Sie den Speicherort der Datei mit der Typbibliothek angeben. Um auf den Speicherort der Datei zu suchen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten.  
   
  **Schnittstellen**  
@@ -58,9 +53,9 @@ Verwenden Sie diesen Assistenten zum Hinzufügen einer MFC-Klasse aus einer Typb
 |**<\<**|Entfernt alle Klassen in der **generierte Klassen** Liste. Abgeblendete If der **generierte Klassen** Liste ist leer.|  
   
  **Generierte Klassen**  
- Gibt die Klassennamen zu generierenden über die Schnittstellen hinzugefügt, mit der  **>**  oder  **>>**  Schaltfläche. Sie können dieses Kontrollkästchen, um eine Klasse auszuwählen, und klicken Sie dann mithilfe der nach-oben oder nach-unten-Taste in der Liste einen Bildlauf Klicken anzeigen jedes Klassennamen in der `Class` Feld und der Dateiname in der **Datei** Feld, das der Assistent generiert, wenn Sie auf das  **Fertig stellen**. Sie können nur eine Klasse zu einem Zeitpunkt in diesem Feld auswählen.  
+ Gibt die Klassennamen zu generierenden über die Schnittstellen hinzugefügt, mit der **>** oder **>>** Schaltfläche. Sie können dieses Kontrollkästchen, um eine Klasse auszuwählen, und klicken Sie dann mithilfe der nach-oben oder nach-unten-Taste in der Liste einen Bildlauf Klicken anzeigen jedes Klassennamen in der `Class` Feld und der Dateiname in der **Datei** Feld, das der Assistent generiert, wenn Sie auf das  **Fertig stellen**. Sie können nur eine Klasse zu einem Zeitpunkt in diesem Feld auswählen.  
   
- Sie können eine Klasse entfernen, indem Sie es in dieser Liste auswählen und auf  **<** . Sie müssen nicht im Feld generierte Klassen So entfernen Sie alle Klassen eine Klasse auswählen. durch Klicken auf  **<<** , entfernen Sie alle Klassen in der **generierte Klassen** Feld.  
+ Sie können eine Klasse entfernen, indem Sie es in dieser Liste auswählen und auf **<**. Sie müssen nicht im Feld generierte Klassen So entfernen Sie alle Klassen eine Klasse auswählen. durch Klicken auf **<<**, entfernen Sie alle Klassen in der **generierte Klassen** Feld.  
   
  `Class`  
  Gibt den Namen der Klasse, die im ausgewählten der **generierte Klassen** Feld, das vom Assistenten hinzugefügt, wenn Sie auf das **Fertig stellen**. Sie können den Namen im Bearbeiten der `Class` Feld.  

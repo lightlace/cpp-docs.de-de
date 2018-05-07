@@ -1,13 +1,10 @@
 ---
 title: Aktive Dokumentserver | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc207541bda3084db6bc8ab3896f46761587169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-servers"></a>Server für aktive Dokumente
 Aktive Dokumentserver wie z. B. Word-, Excel- oder PowerPoint-Host-Dokumente von anderen Anwendungstypen genannten active Documents. Im Gegensatz zu OLE eingebettete Objekte (die einfach in die Seite von einem anderen Dokument angezeigt werden), aktive Dokumente bieten die vollständige Benutzeroberfläche und die vollständige systemeigene Funktionalität der Server-Anwendung, die sie erstellt. Benutzer können Dokumente erstellen, verwenden die volle Leistung von ihren bevorzugten Anwendungen (Wenn sie aktive Dokument aktiviert sind), noch können behandeln das daraus resultierende Projekt als eine Einheit.  
@@ -36,7 +31,7 @@ Aktive Dokumentserver wie z. B. Word-, Excel- oder PowerPoint-Host-Dokumente von
   
  MFC unterstützt aktive Dokumente mit den [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) von abgeleitete Klasse [CCmdTarget](../mfc/reference/ccmdtarget-class.md), und [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), abgeleitet von [ COleServerItem](../mfc/reference/coleserveritem-class.md). MFC unterstützt active Document-Container mit dem [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) von abgeleitete Klasse [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer`Ordnet die active Document-Schnittstellen und initialisiert, und ein aktiven Dokuments aktiviert. MFC enthält außerdem Makros um Befehlsrouting in aktive Dokumente zu verarbeiten. Um die aktive Dokumente in Ihrer Anwendung verwenden, Sie AfxDocOb.h in der Datei "stdafx.h".  
+ `CDocObjectServer` Ordnet die active Document-Schnittstellen und initialisiert, und ein aktiven Dokuments aktiviert. MFC enthält außerdem Makros um Befehlsrouting in aktive Dokumente zu verarbeiten. Um die aktive Dokumente in Ihrer Anwendung verwenden, Sie AfxDocOb.h in der Datei "stdafx.h".  
   
  Ein normaler MFC-Server nimmt eine eigene `COleServerItem`-Klasse. Die MFC-Anwendungs-Assistent diese Klasse für Sie erstellt, bei Auswahl der **Miniserver** oder **Vollserver** Kontrollkästchen, um Ihre Anwendung Unterstützung für Verbunddokumente einzuräumen. Wenn Sie auch auswählen, die **Active Document-Server** Kontrollkästchen, die MFC-Anwendungs-Assistent erstellt eine Klasse abgeleitet wurde. `CDocObjectServerItem` stattdessen.  
   

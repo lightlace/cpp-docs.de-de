@@ -1,13 +1,10 @@
 ---
 title: 'TN024: MFC-definierte Meldungen und Ressourcen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC-definierte Meldungen und Ressourcen
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- Diese Nachricht wird gesendet, indem `COleResizeBar` an seine Besitzerfenster (über `GetOwner`) Wenn der Benutzer die Größenanpassungsleiste zum Ändern der mit der Ziehpunkte ändert. `COleIPFrameWnd`reagiert auf diese Meldung wird versucht, das Rahmenfenster neu positionieren, da der Benutzer angefordert hat.  
+ Diese Nachricht wird gesendet, indem `COleResizeBar` an seine Besitzerfenster (über `GetOwner`) Wenn der Benutzer die Größenanpassungsleiste zum Ändern der mit der Ziehpunkte ändert. `COleIPFrameWnd` reagiert auf diese Meldung wird versucht, das Rahmenfenster neu positionieren, da der Benutzer angefordert hat.  
   
  Das neue Rechteck, in Clientkoordinaten relativ zum Rahmenfenster enthält die Größenanpassungsleiste zum Ändern der angegeben wird, auf lParam zeigt.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|Ist eine der folgenden Werte:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|Nicht verwendet (0)|  
   
- Der Rückgabewert muss ungleich NULL Wenn **FS_SYNCACTIVE** festgelegt ist und das Fenster synchronisiert die Aktivierung über den übergeordneten Frame. `CMiniFrameWnd`ungleich NULL zurück, wenn das Format, um festgelegt wird **MFS_SYNCACTIVE.**  
+ Der Rückgabewert muss ungleich NULL Wenn **FS_SYNCACTIVE** festgelegt ist und das Fenster synchronisiert die Aktivierung über den übergeordneten Frame. `CMiniFrameWnd` ungleich NULL zurück, wenn das Format, um festgelegt wird **MFS_SYNCACTIVE.**  
   
  Weitere Informationen finden Sie auf die Implementierung von `CMiniFrameWnd`.  
   

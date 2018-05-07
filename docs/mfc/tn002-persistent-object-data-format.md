@@ -1,13 +1,10 @@
 ---
 title: 'TN002: Persistentes Objektdatenformat | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Persistentes Objektdatenformat
 In diesem Hinweis werden die MFC-Routinen, die persistente C++-Objekte und das Format der Daten des Objekts unterstützen, wenn es in einer Datei gespeichert wird. Dies gilt nur für Klassen mit den [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) und [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) Makros.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Wenn das Objekt noch nicht gespeichert wurde, es gibt zwei Möglichkeiten zum berücksichtigen: das Objekt und der genaue Typ (d. h.-Klasse) des Objekts sind neu in diesem Archivkontext oder das Objekt weist einen genauen Typ bereits angezeigt. Um zu bestimmen, ob der Typ angezeigt wurde, Code Abfragen der `m_pStoreMap` für eine [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) -Objekt, entspricht die `CRuntimeClass` Objekt zugewiesen ist, mit dem Objekt gespeichert wird. Wenn eine Übereinstimmung besteht, `WriteObject` Fügt ein Tag, das die bitweise `OR` von `wOldClassTag` und diesen Index. Wenn die `CRuntimeClass` ist neu in diesem Archivkontext `WriteObject` weist eine neue PID für diese Klasse und fügt es in das Archiv, vorangestellt der `wNewClassTag` Wert.  
   
- Der Deskriptor für diese Klasse wird dann in das Archiv mit eingefügt die `CRuntimeClass::Store` Methode. `CRuntimeClass::Store`die Anzahl von Schema für die Klasse (siehe unten) und der ASCII-Text-Name der Klasse eingefügt. Beachten Sie, dass die Verwendung von ASCII-Text-Name die Eindeutigkeit des Archivs anwendungsübergreifend nicht garantiert. Aus diesem Grund sollten Sie die Datendateien Wiederherstellungpunkte mit beschädigten markieren. Nach der Einfügung die Klasseninformationen versetzt das Archiv das Objekt in der `m_pStoreMap` und ruft dann die `Serialize` Methode zum Einfügen von Klasse-spezifische Daten. Platzieren das Objekt in der `m_pStoreMap` vor dem Aufruf `Serialize` verhindert, dass mehrere Kopien des Objekts im Speicher gespeichert.  
+ Der Deskriptor für diese Klasse wird dann in das Archiv mit eingefügt die `CRuntimeClass::Store` Methode. `CRuntimeClass::Store` die Anzahl von Schema für die Klasse (siehe unten) und der ASCII-Text-Name der Klasse eingefügt. Beachten Sie, dass die Verwendung von ASCII-Text-Name die Eindeutigkeit des Archivs anwendungsübergreifend nicht garantiert. Aus diesem Grund sollten Sie die Datendateien Wiederherstellungpunkte mit beschädigten markieren. Nach der Einfügung die Klasseninformationen versetzt das Archiv das Objekt in der `m_pStoreMap` und ruft dann die `Serialize` Methode zum Einfügen von Klasse-spezifische Daten. Platzieren das Objekt in der `m_pStoreMap` vor dem Aufruf `Serialize` verhindert, dass mehrere Kopien des Objekts im Speicher gespeichert.  
   
  Bei der Rückgabe an den ursprünglichen Aufrufer (in der Regel vom Stamm des Netzwerks von Objekten), müssen Sie aufrufen [CArchive::Close](../mfc/reference/carchive-class.md#close). Wenn Sie beabsichtigen, andere [CFile](../mfc/reference/cfile-class.md)Vorgänge, die Sie aufrufen müssen die `CArchive` Methode [leeren](../mfc/reference/carchive-class.md#flush) auf eine Beschädigung des Archivs verhindert werden.  
   

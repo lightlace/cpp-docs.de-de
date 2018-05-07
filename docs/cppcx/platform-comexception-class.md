@@ -1,11 +1,8 @@
 ---
 title: 'Platform:: COMException-Klasse | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException-Klasse
 Stellt COM-Fehler dar, die beim Ausführen einer Anwendung auftreten. COMException ist die Basisklasse für einen Satz vordefinierter Standardausnahmen.  
@@ -58,7 +53,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[Exception::HResult](#hresult)|Das HRESULT, das der Ausnahme entspricht.|  
+|[Exception:: HRESULT](#hresult)|Das HRESULT, das der Ausnahme entspricht.|  
 |[Exception::Message](#message)|Meldung, in der die Ausnahme beschrieben wird.|  
   
 ## <a name="derived-exceptions"></a>Abgeleitete Ausnahmen  
