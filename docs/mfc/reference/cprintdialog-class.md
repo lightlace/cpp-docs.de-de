@@ -1,12 +1,9 @@
 ---
 title: CPrintDialog Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog-Klasse
 Kapselt die Dienste, die vom allgemeinen Windows-Dialogfeld für das Drucken bereitgestellt werden.  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Wenn Sie keine eigene Handles im angeben `m_pd` für die **hDevMode-Feld** und **hDevNames** Mitglieder, achten Sie darauf, dass Sie die Windows-Funktion aufrufen **GlobalFree** für diese Handles Wenn Sie das Dialogfeld fertig sind. Bei Verwendung der Implementierung des Frameworks Drucker Einrichten von bereitgestellten `CWinApp::OnFilePrintSetup`, Sie müssen nicht mit diesen Handles freizugeben. Die Handles werden vom verwaltet `CWinApp` und freigegeben werden `CWinApp`den Destruktor. Es ist nur erforderlich, diese Handles freizugeben, wenn mit `CPrintDialog` eigenständigen.  
   
- Rufen Sie nach dem Initialisieren der Dialogfeld-Steuerelemente, die `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen und die Benutzer Druckoptionen auszuwählen. `DoModal`Gibt zurück, ob der Benutzer die OK ausgewählt ( **IDOK**) oder "Abbrechen" ( **IDCANCEL**) Schaltfläche.  
+ Rufen Sie nach dem Initialisieren der Dialogfeld-Steuerelemente, die `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen und die Benutzer Druckoptionen auszuwählen. `DoModal` Gibt zurück, ob der Benutzer die OK ausgewählt ( **IDOK**) oder "Abbrechen" ( **IDCANCEL**) Schaltfläche.  
   
  Wenn `DoModal` gibt **IDOK**, können Sie eine der `CPrintDialog`des Memberfunktionen zum Abrufen von Informationen vom Benutzer eingegeben.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Sie können die Windows **CommDlgExtendedError** -Funktion zu bestimmen, ob der Fehler während der Initialisierung des Dialogfelds und erfahren Sie mehr über den Fehler. Weitere Informationen zu dieser Funktion finden Sie im Windows-SDK.  
   
- `CPrintDialog`basiert auf der COMMDLG. DLL-Datei, die mit Windows-Versionen 3.1 und höher ausgeliefert wird.  
+ `CPrintDialog` basiert auf der COMMDLG. DLL-Datei, die mit Windows-Versionen 3.1 und höher ausgeliefert wird.  
   
  Um das Dialogfeld anzupassen, leiten Sie eine Klasse von `CPrintDialog`, geben Sie eine benutzerdefinierte Dialogfeldvorlage und hinzufügen eine meldungszuordnung, um die benachrichtigungsmeldungen aus den erweiterten Steuerelemente zu verarbeiten. Alle nicht verarbeiteten Nachrichten sollte auf der Basisklasse übergeben werden. Anpassen von die Hookfunktion ist nicht erforderlich.  
   
@@ -152,7 +147,7 @@ class CPrintDialog : public CCommonDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  
  Erstellt eine Windows-Druckserver oder Drucker einrichten Dialogfeldobjekt.  
   
 ```  
@@ -218,7 +213,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::CreatePrinterDC](#createprinterdc).  
   
-##  <a name="getcopies"></a>CPrintDialog::GetCopies  
+##  <a name="getcopies"></a>  CPrintDialog::GetCopies  
  Ruft die Anzahl der Kopien, die angefordert.  
   
 ```  
@@ -234,7 +229,7 @@ int GetCopies() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdefaults"></a>CPrintDialog::GetDefaults  
+##  <a name="getdefaults"></a>  CPrintDialog::GetDefaults  
  Ruft die Standardeinstellungen für Gerät als Standarddrucker ohne Anzeigen eines Dialogfelds ab.  
   
 ```  
@@ -256,7 +251,7 @@ BOOL GetDefaults();
   
  [!code-cpp[NVC_MFCDocView#107](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
   
-##  <a name="getdevicename"></a>CPrintDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPrintDialog::GetDeviceName  
  Ruft den Namen des aktuell ausgewählten Druckergeräts ab.  
   
 ```  
@@ -274,7 +269,7 @@ CString GetDeviceName() const;
   
  [!code-cpp[NVC_MFCDocView#108](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
   
-##  <a name="getdevmode"></a>CPrintDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPrintDialog::GetDevMode  
  Ruft die `DEVMODE` Struktur.  
   
 ```  
@@ -290,7 +285,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialog::GetDriverName  
  Ruft den Namen des aktuell ausgewählten Druckertreibers ab.  
   
 ```  
@@ -306,7 +301,7 @@ CString GetDriverName() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getfrompage"></a>CPrintDialog::GetFromPage  
+##  <a name="getfrompage"></a>  CPrintDialog::GetFromPage  
  Ruft die Anfangsseite des drucken Bereichs ab.  
   
 ```  
@@ -322,7 +317,7 @@ int GetFromPage() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="getportname"></a>CPrintDialog::GetPortName  
+##  <a name="getportname"></a>  CPrintDialog::GetPortName  
  Ruft den Namen des aktuell ausgewählten Drucker Ports.  
   
 ```  
@@ -338,7 +333,7 @@ CString GetPortName() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialog::GetPrinterDC  
  Ruft ein Handle für den Drucker-Gerätekontext ab.  
   
 ```  
@@ -354,7 +349,7 @@ HDC GetPrinterDC() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
-##  <a name="gettopage"></a>CPrintDialog::GetToPage  
+##  <a name="gettopage"></a>  CPrintDialog::GetToPage  
  Ruft die Endseite des drucken Bereichs ab.  
   
 ```  
@@ -370,7 +365,7 @@ int GetToPage() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>  CPrintDialog::m_pd  
  Eine Struktur, deren Mitglieder die Merkmale der dem Dialogfeldobjekt speichern.  
   
 ```  
@@ -401,7 +396,7 @@ BOOL PrintAll() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="printcollate"></a>CPrintDialog::PrintCollate  
+##  <a name="printcollate"></a>  CPrintDialog::PrintCollate  
  Bestimmt, ob sortierte Kopien angefordert werden.  
   
 ```  
@@ -433,7 +428,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>  CPrintDialog::PrintSelection  
  Bestimmt, ob nur die momentan ausgewählten Elemente zu drucken.  
   
 ```  
