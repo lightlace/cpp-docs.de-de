@@ -1,13 +1,10 @@
 ---
 title: Speicherung und Ausrichtung von Strukturen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>Speicherung und Ausrichtung von Strukturen
 **Microsoft-spezifisch**  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  Benachbarte Bitfelder sind in derselben 1-, 2- oder 4-Byte-Speicherbelegungseinheit gepackt, wenn die Ganzzahltypen die gleiche Größe aufweisen und das folgende Bitfeld in die aktuelle Speicherbelegungseinheit passt, ohne die Grenze zu überschreiten, die durch die allgemeinen Ausrichtungsanforderungen der Bitfelder auferlegt werden.  
   
- Um Speicherplatz zu sparen und vorhandene Datenstrukturen nicht zu überschreiten, können Sie Strukturen relativ kompakt speichern. Die [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*]-Compileroption sowie [#pragma pack](../preprocessor/pack.md) steuern, wie Strukturdaten im Speicher „gepackt“ werden. Wenn Sie die Option „/Zp[*n*]“ verwenden, und *n* gleich 1, 2, 4, 8 oder 16 ist, werden die einzelnen Strukturmember nach dem ersten auf Byte-Begrenzungen gespeichert, die die Ausrichtungsanforderung des Felds oder die Komprimierungsgröße darstellen (*n*), je nachdem, welche kleiner ist. Ausgedrückt als Formel, sind die Bytegrenzen  
+ Um Speicherplatz zu sparen und vorhandene Datenstrukturen nicht zu überschreiten, können Sie Strukturen relativ kompakt speichern. Die [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*]-Compileroption sowie [#pragma pack](../preprocessor/pack.md) steuern, wie Strukturdaten im Speicher gepackt werden. Wenn Sie die Option „/Zp[*n*]“ verwenden, und *n* gleich 1, 2, 4, 8 oder 16 ist, werden die einzelnen Strukturmember nach dem ersten auf Byte-Begrenzungen gespeichert, die die Ausrichtungsanforderung des Felds oder die Komprimierungsgröße darstellen (*n*), je nachdem, welche kleiner ist. Ausgedrückt als Formel, sind die Bytegrenzen  
   
 ```  
 min( n, sizeof( item ) )  

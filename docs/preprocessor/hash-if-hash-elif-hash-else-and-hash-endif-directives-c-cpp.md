@@ -1,12 +1,9 @@
 ---
 title: '#IF, #elif-, #else- und #endif-Direktiven (C/C++) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,50 +27,48 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
 Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die Kompilierung von Teilen einer Quelldatei. Wenn der Ausdruck, den Sie schreiben (nach `#if`), einen Wert ungleich 0 (null) aufweist, wird die Zeilengruppe, die unmittelbar auf die `#if`-Direktive folgt, in der Übersetzungseinheit beibehalten.  
   
 ## <a name="grammar"></a>Grammatik  
- *conditional* :  
+ *bedingte* :  
  *If-Teil Elif-Teile*opt*else-Teil*opt*Endif-Zeile*  
   
  *If-Teil* :  
  *If-Line-text*  
   
- *if-line* :  
+ *If-Line-* :  
  **#if***Konstantenausdruck*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***Bezeichner*   
   
  **#ifndef***Bezeichner*  
   
  *Elif-Teile* :  
- *elif-line text*  
+ *Elif-Line-text*  
   
- *elif-parts elif-line text*  
+ *Elif-Teile Elif-Line-text*  
   
- *elif-line* :  
- **#elif**  *constant-expression*  
+ *Elif-Line-* :  
+ **#elif***Konstantenausdruck*   
   
  *else-Teil* :  
  *Else-Line-text*  
   
- *else-line* :  
+ *Else-Line* :  
  `#else`  
   
- *endif-line* :  
+ *Endif-Line-* :  
  `#endif`  
   
  Jeder `#if`-Direktive in einer Quelldatei muss eine schließende `#endif`-Direktive zugeordnet sein. Eine beliebige Anzahl von `#elif`-Direktiven kann zwischen der `#if`- und der `#endif`-Direktive auftreten, es ist jedoch höchstens eine `#else`-Direktive zulässig. Die `#else`-Direktive muss, falls vorhanden, die letzte Direktive vor `#endif` sein.  
@@ -88,7 +83,7 @@ Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die
   
  Der Präprozessor verarbeitet den ausgewählten *Text* und übergibt sie an den Compiler. Wenn *Text* enthält, werden diese Direktiven vom Präprozessor ausgeführt. Nur Textblöcke, die vom Präprozessor ausgewählt werden, werden kompiliert.  
   
- Der Präprozessor wählt ein einzelnes *Text* Element durch das Auswerten der Konstanten Ausdrucks nach jeder `#if` oder `#elif` Richtlinie, bis einen "true" (ungleich null) Konstanten Ausdruck gefunden wird. Er wählt den gesamten Text (einschließlich anderer Präprozessordirektiven, beginnend mit  **#** ) bis zu seiner zugeordneten `#elif`, `#else`, oder `#endif`.  
+ Der Präprozessor wählt ein einzelnes *Text* Element durch das Auswerten der Konstanten Ausdrucks nach jeder `#if` oder `#elif` Richtlinie, bis einen "true" (ungleich null) Konstanten Ausdruck gefunden wird. Er wählt den gesamten Text (einschließlich anderer Präprozessordirektiven, beginnend mit **#**) bis zu seiner zugeordneten `#elif`, `#else`, oder `#endif`.  
   
  Wenn alle Vorkommen von *Konstantenausdruck* "false" sind oder wenn keine `#elif` -Direktiven vorhanden sind, wählt der Präprozessor den Textblock nach der `#else` Klausel. Wenn die `#else` -Klausel weggelassen, und alle Instanzen des *Konstantenausdruck* in die `#if` -Block "false" sind, kein Textblock ausgewählt ist.  
   

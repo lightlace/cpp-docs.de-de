@@ -1,30 +1,25 @@
 ---
-title: "Typeid (Komponentenerweiterungen für C++) | Microsoft Docs"
-ms.custom: 
+title: Typeid (Komponentenerweiterungen für C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (Komponentenerweiterungen für C++)
 Ruft einen Wert ab, der den Typ eines Objekts angibt.  
@@ -83,7 +78,7 @@ type::typeid
   
  `typeid` muss in der Lage sein, einen Typnamen (type) zur Kompilierungszeit auszuwerten, während GetType den Typ auswertet, der zur Laufzeit zurückgeben wird.  
   
- `typeid`Hierbei kann es sich um einen systemeigenen Typ-Namen oder die common Language Runtime-Alias für den systemeigenen Typ dauern; finden Sie unter [.NET Framework-Entsprechungen in systemeigenen C++-Typen (C + c++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) für Weitere Informationen.  
+ `typeid` Hierbei kann es sich um einen systemeigenen Typ-Namen oder die common Language Runtime-Alias für den systemeigenen Typ dauern; finden Sie unter [.NET Framework-Entsprechungen in systemeigenen C++-Typen (C + c++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) für Weitere Informationen.  
   
  `typeid` funktioniert auch mit systemeigenen Typen, obwohl noch ein System::Type zurückgegeben wird.  Verwenden Sie zum Abrufen einer Struktur Type_info [Typeid-Operator](../cpp/typeid-operator.md).  
   

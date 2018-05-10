@@ -1,5 +1,5 @@
 ---
-title: "Compiler-Warnungen, die standardmäßig deaktiviert sind | Microsoft Docs"
+title: Compiler-Warnungen, die standardmäßig deaktiviert sind | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology:
 - cpp-tools
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen standardmäßig deaktiviert sind
 
@@ -27,16 +26,16 @@ Der Compiler schließt Warnungen ein, die standardmäßig deaktiviert, da die me
 
 Sie können diese Warnungen aktivieren, indem Sie mit einer der folgenden Optionen:
 
-- **#pragma warning(default :** *warning_number* **)**  
+- **#pragma Warning (Standard:** *Warning_number* **)**  
    Die angegebene Warnung (*Warning_number*) auf der Standardebene aktiviert ist. Dokumentation für die Warnung enthält die Standardebene der Warnung.
 
-- **#pragma warning(** *warning_level* **:** *warning_number* **)**  
+- **#pragma Warning (** *Warning_level* **:** *Warning_number* **)**  
    Die angegebene Warnung (*Warning_number*) aktiviert ist, auf der angegebenen Ebene (*Warning_level*).
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)  
    **/ Wall** aktiviert alle Warnungen, die standardmäßig deaktiviert sind. Wenn Sie diese Option verwenden, Sie können einzelne Warnungen über Deaktivieren der [/WD](../build/reference/compiler-option-warning-level.md) Option.
 
-- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+- [/ w*Lnnnn*](../build/reference/compiler-option-warning-level.md)  
    Dadurch können die Warnung *Nnnn* Ebene *l*.
 
 Standardmäßig werden die folgenden Warnungen deaktiviert.
@@ -115,14 +114,12 @@ Standardmäßig werden die folgenden Warnungen deaktiviert.
 |C4841 (Stufe 4)|nicht standardmäßige Erweiterung verwendet: zusammengesetzten Member-Kennzeichner in Offsetof verwendet|
 |C4842 (Stufe 4)|Das Ergebnis des "Offsetof" auf einen Typ mit mehrfacher Vererbung angewendet wird nicht garantiert, Compilerversionen konsistent sein.|
 |[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (Stufe 4)|"_Datei_(*Line_number*)" Compiler kann die Reihenfolge der Auswertung von links nach rechts in der Initialisierungsliste nicht erzwingen|
-|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (Stufe 1)|
-          Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
-|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (Stufe 1)|
-          Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
+|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (Stufe 1)|Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
+|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (Stufe 1)|Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (Stufe 1)|"*Deklarator*': eine GUID kann nur eine Klasse, Schnittstelle oder Namespace zugeordnet werden|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (Stufe 1)|Unzulässige Kopierinitialisierung. Mehrere benutzerdefinierte Konvertierungen wurden implizit übernommen|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (Stufe 4)|Es wird angenommen, dass die Typbibliothek für Anzahl-Bit-Pointer erstellt wurde|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (Stufe 1)|reinterpret_cast used between related classes: '*class1*' and '*class2*'|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (Stufe 1)|Reinterpret_cast wird zwischen verknüpften Klassen verwendet: "*class1*'und'*Klasse2*"|
 |C4962|"*Funktion*': Profilgesteuerte Optimierungen wurden deaktiviert, da Optimierungen Profildaten Profildaten verursacht hat.|
 |[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (Stufe 4)|"*Symbol*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein|
 |C4987 (Stufe 4)|Es wurde eine nicht standardmäßige Erweiterung verwendet: 'throw (...)'|

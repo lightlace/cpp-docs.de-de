@@ -1,13 +1,10 @@
 ---
 title: Funktionsprototypen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>Funktionsprototypen
 Eine Funktionsdeklaration ist der Funktionsdefinition vorangestellt und gibt den Namen, Rückgabetyp, die Speicherklasse und andere Attribute einer Funktion an. Um als Prototyp zu fungieren, muss die Funktionsdeklaration auch Typen und Bezeichner für die Argumente der Funktion festlegen.  
   
 ## <a name="syntax"></a>Syntax  
  `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt **;**  
   
  /\* *attribute-seq* opt ist Microsoft-spezifisch */  
   
@@ -61,7 +56,7 @@ Eine Funktionsdeklaration ist der Funktionsdefinition vorangestellt und gibt den
  *direct-declarator*:/\* Ein Funktionsdeklarator \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)**  /* Neuer Deklarator \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Veralteter Deklarator \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Veralteter Deklarator \*/  
   
  Der Prototyp hat das gleiche Format wie die Funktionsdefinition. Allerdings schließt er mit einem Semikolon unmittelbar nach der schließenden Klammer und hat dementsprechend keinen Text. In jedem Fall muss der Rückgabetyp dem Rückgabetyp entsprechen, der in der Funktionsdefinition angegeben wird.  
   

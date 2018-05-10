@@ -1,12 +1,9 @@
 ---
 title: IUMSThreadProxy-Struktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy-Struktur
 Eine Abstraktion für einen Thread der Ausführung. Wenn dem Planer im Benutzermodus planbare (UMS) Threads gewährt werden sollen, legen Sie den Wert für das Planerrichtlinienelement `SchedulerKind` auf `UmsThreadDefault` fest, und implementieren Sie die `IUMSScheduler`-Schnittstelle. UMS-Threads werden nur unter 64-Bit-Betriebssystemen mit Version Windows 7 und höher unterstützt.  
@@ -48,10 +43,10 @@ struct IUMSThreadProxy : public IThreadProxy;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Wird aufgerufen, um eine kritische überzugehen. In einem kritischen Bereich berücksichtigt das Zeitplanungsmodul nicht asynchronen blockierenden Vorgänge, die während der Region durchgeführt. Dies bedeutet, dass der Planer für Seitenfehler, Thread Eingangsseite, Kernel asynchrone Prozeduraufrufe (APCs) usw., für ein UMS-Thread nicht erneut eingegeben werden wird.|  
+|[IUMSThreadProxy:: EnterCriticalRegion](#entercriticalregion)|Wird aufgerufen, um eine kritische überzugehen. In einem kritischen Bereich berücksichtigt das Zeitplanungsmodul nicht asynchronen blockierenden Vorgänge, die während der Region durchgeführt. Dies bedeutet, dass der Planer für Seitenfehler, Thread Eingangsseite, Kernel asynchrone Prozeduraufrufe (APCs) usw., für ein UMS-Thread nicht erneut eingegeben werden wird.|  
 |[IUMSThreadProxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|Wird aufgerufen, um eine extrem kritischen überzugehen. In einem hyper-wichtigen Bereich berücksichtigt das Zeitplanungsmodul keine blockierenden Vorgänge, die während der Region durchgeführt. Dies bedeutet, dass das Zeitplanungsmodul nicht erneut geöffnet wird für Funktionsaufrufe, Sperre Übernahme Versuche, welcher Block, Seitenfehler, thread Eingangsseite Kernel asynchrone Prozeduraufrufe (APCs), und usw., für ein UMS-Thread, blockiert.|  
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|  
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um eine extrem kritischen Bereich zu verlassen.|  
+|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|  
+|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um eine extrem kritischen Bereich zu verlassen.|  
 |[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Gibt zurück, welche Art von kritischen Bereichs, in der Threadproxy befindet. Da hyper wichtige Bereiche eine Obermenge der kritischen Bereiche sind, wenn der Code eingegeben hat, einen wichtigen Bereich, und klicken Sie dann eine extrem kritischen Bereich `InsideHyperCriticalRegion` zurückgegeben werden.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  

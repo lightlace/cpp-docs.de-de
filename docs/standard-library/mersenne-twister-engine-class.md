@@ -2,11 +2,8 @@
 title: mersenne_twister_engine-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::mersenne_twister_engine
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9d468f60b3e5f4fcf691e7397a5f7c0ce57089
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
 
@@ -70,19 +65,20 @@ class mersenne_twister_engine;
 
 `default_seed` ist eine als `5489u` definierte Memberkonstante, die als Standardparameterwert für `mersenne_twister_engine::seed` und den Einzelwertkonstruktor verwendet wird.
 
-Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).
+Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt ein Zufallszahlenmodul und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Sie extrahiert aus diesem großen Wert `W` Bits auf einmal, und sobald alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und kombiniert werden, sodass ein neuen Satz von Bits entsteht aus dem extrahiert werden kann. Beim Zustand des Moduls handelt es sich um den letzten verwendeten `N` `W`-Bitwert, wenn `operator()` mindestens `N`-mal aufgerufen wurde. Andernfalls sind es die verwendeten `M` `W`-Bitwerte und die letzten `N - M`-Werte des Startwerts.
+Diese Vorlagenklasse beschreibt eine Zufallszahlen-Engine und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Sie extrahiert aus diesem großen Wert `W` Bits auf einmal, und sobald alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und kombiniert werden, sodass ein neuen Satz von Bits entsteht aus dem extrahiert werden kann. Beim Zustand des Moduls handelt es sich um den letzten verwendeten `N` `W`-Bitwert, wenn `operator()` mindestens `N`-mal aufgerufen wurde. Andernfalls sind es die verwendeten `M` `W`-Bitwerte und die letzten `N - M`-Werte des Startwerts.
 
 Der Generator verzerrt den großen Wert, den er enthält, indem er ein verzerrtes generalisiertes Feedback-Schieberegister verwendet, das durch die Verschiebungswerte `N` und `M`, einen Verzerrungswert `R` und eine bedingte XOR-Maske `A` definiert wird. Zusätzlich werden die Bits des Schieberegisters verschlüsselt (getempert). Dies geschieht entsprechend einer Bit-Scrambling-Matrix, die durch die Werte `U`, `D`, `S`, `B`, `T`, `C` und `L` definiert ist.
 
 Das Vorlagenargument `UIntType`muss groß genug sein, um Werte bis zu `2`<sup>W</sup> - `1` zu enthalten. Die Werte der anderen Vorlagenargumente müssen die folgenden Anforderungen erfüllen: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
-Obwohl Sie direkt aus diesem Modul einen Generator konstruieren können, wird empfohlen, eine dieser voreingestellten Typedefs zu verwenden:
+Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, wird empfohlen, eine dieser voreingestellten Typedefs zu verwenden:
 
-`mt19937`: 32-Bit-Mersenne-Twistermodul (Matsumoto und Nishimura, 1998).
+
+  `mt19937`: 32-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -93,7 +89,8 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: 64-Bit-Mersenne-Twistermodul (Matsumoto und Nishimura, 2000).
+
+  `mt19937_64`: 64-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

@@ -1,12 +1,9 @@
 ---
 title: RuntimeClass-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass-Klasse
 Stellt eine WinRT- oder COM-Klasse, die die angegebenen Schnittstellen erbt und die angegebene Windows-Runtime, Klassisches COM und schwachen Verweis Unterstützung bietet.  
@@ -48,7 +43,7 @@ Optionale Parameter. Eine Kombination aus einem oder mehreren [RuntimeClassType]
 Die Liste der Schnittstellen das Objekt implementiert, hinter IUnknown, "iinspectable" oder anderen Schnittstellen von gesteuert [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Es listet möglicherweise auch andere Klassen aus, insbesondere Microsoft::WRL::FtmBase abgeleitet werden, um das agil machen, das Objekt und dazu führen, dass IMarshal implementieren.
   
 ## <a name="members"></a>Member  
-`RuntimeClassInitialize`Eine Funktion, die das Objekt initialisiert werden, wenn die MakeAndInitialize-Vorlagenfunktion verwendet wird, um das Objekt zu erstellen. Es gibt S_OK, wenn das Objekt erfolgreich initialisiert wurde oder eine COM-Fehlercode zurück, wenn Fehler bei der Initialisierung. Die COM-Fehlercode wird als der Rückgabewert der MakeAndInitialize weitergegeben. Beachten Sie, dass die RuntimeClassInitialize-Methode nicht aufgerufen wird, wenn die Vorlagenfunktion Stellen verwendet wird, um das Objekt zu erstellen.
+`RuntimeClassInitialize` Eine Funktion, die das Objekt initialisiert werden, wenn die MakeAndInitialize-Vorlagenfunktion verwendet wird, um das Objekt zu erstellen. Es gibt S_OK, wenn das Objekt erfolgreich initialisiert wurde oder eine COM-Fehlercode zurück, wenn Fehler bei der Initialisierung. Die COM-Fehlercode wird als der Rückgabewert der MakeAndInitialize weitergegeben. Beachten Sie, dass die RuntimeClassInitialize-Methode nicht aufgerufen wird, wenn die Vorlagenfunktion Stellen verwendet wird, um das Objekt zu erstellen.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

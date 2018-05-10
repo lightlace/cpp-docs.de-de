@@ -1,13 +1,10 @@
 ---
 title: Generische Funktionen (C + c++ / CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
 Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern deklariert wird. Beim Aufruf werden die tatsächliche Typen anstelle der Type-Parameter verwendet.  
@@ -66,7 +61,7 @@ return-type identifier<type-parameter identifier(s)>
  Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   
  *Modifizierer* (Optional)  
- Ein Modifizierer für die Funktion, z. B. statische.  `virtual`ist nicht zulässig, da virtuelle Methoden können nicht generisch sein.  
+ Ein Modifizierer für die Funktion, z. B. statische.  `virtual` ist nicht zulässig, da virtuelle Methoden können nicht generisch sein.  
   
  *Rückgabetyp*  
  Der Typ, der von der Methode zurückgegeben wird. Wenn der Rückgabetyp "void" ist, muss keinen Wert zurückgibt.  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **Beispiel**  
   
- Im folgenden Beispiel wird eine generische Funktion Suche nach dem ersten Element in einem Array. Mit ihr wird deklariert `MyClass`, die von der Basisklasse erbt `MyBaseClass`. `MyClass`enthält eine generische Funktion `MyFunction`, die einer anderen generischen Funktion aufruft, `MyBaseClassFunction`, in der Basisklasse. In **main**, die generische Funktion `MyFunction`, wird mit unterschiedlichen Typargumenten aufgerufen.  
+ Im folgenden Beispiel wird eine generische Funktion Suche nach dem ersten Element in einem Array. Mit ihr wird deklariert `MyClass`, die von der Basisklasse erbt `MyBaseClass`. `MyClass` enthält eine generische Funktion `MyFunction`, die einer anderen generischen Funktion aufruft, `MyBaseClassFunction`, in der Basisklasse. In **main**, die generische Funktion `MyFunction`, wird mit unterschiedlichen Typargumenten aufgerufen.  
   
 ```  
 // generics_generic_function_3.cpp  

@@ -2,11 +2,8 @@
 title: shuffle_order_engine-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::shuffle_order_engine
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f5d62394a4955e11b31b4d0b3c134cd0840d3e5
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine-Klasse
 
-Generiert eine zufällige Sequenz durch Neupositionieren der Werte, die von ihrem Basismodul zurückgegeben werden.
+Generiert eine zufällige Sequenz durch Neupositionieren der Werte, die von ihrer Basis-Engine zurückgegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,11 +55,11 @@ class shuffle_order_engine;
 |`shuffle_order_engine::shuffle_order_engine`|`shuffle_order_engine::base`|`shuffle_order_engine::discard`|
 |`shuffle_order_engine::operator()`|`shuffle_order_engine::base_type`|`shuffle_order_engine::seed`|
 
-Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).
+Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt einen *Moduladapter*, der Werte produziert, indem er die von seinem Basismodul zurückgegebenen Werte neu sortiert. Jeder Konstruktor füllt die interne Tabelle mit vom Basismodul zurückgegebenen `K`-Werten. Wenn ein Wert angefordert wird, wird ein Zufallselement aus der Tabelle ausgewählt.
+Diese Vorlagenklasse beschreibt einen *Engine-Adapter*, der Werte produziert, indem er die von seiner Basis-Engine zurückgegebenen Werte neu sortiert. Jeder Konstruktor füllt die interne Tabelle mit von der Basis-Engine zurückgegebenen `K`-Werten. Wenn ein Wert angefordert wird, wird ein Zufallselement aus der Tabelle ausgewählt.
 
 ## <a name="requirements"></a>Anforderungen
 

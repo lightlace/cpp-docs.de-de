@@ -1,13 +1,10 @@
 ---
 title: SafeDivide | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeDivide
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0264fbd8df7f1dec5d20b40a67299cb4502b72aa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safedivide"></a>SafeDivide
 Dividiert zwei Zahlen in einer Weise, die Schutz vor einer Division durch 0 (null).  
@@ -53,7 +48,7 @@ inline bool SafeDivide (
  Der Parameter, in denen `SafeDivide` speichert das Ergebnis.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
+ `true` Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und eignet sich für einen einzelnen Divisionsvorgang ohne Erstellen einer Instanz von der [SafeInt-Klasse](../windows/safeint-class.md).  

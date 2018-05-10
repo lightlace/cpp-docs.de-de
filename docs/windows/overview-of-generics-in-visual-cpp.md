@@ -1,13 +1,10 @@
 ---
-title: "Übersicht über Generika in Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Übersicht über Generika in Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Übersicht über Generika in Visual C++
 Generika sind parametrisierte Typen, die von der common Language Runtime unterstützt. Ein parametrisierter Typ ist ein Typ, der mit einem unbekannten Typparameter definiert ist, die angegeben wird, wenn die generische verwendet wird.  
@@ -77,7 +72,7 @@ Generika sind parametrisierte Typen, die von der common Language Runtime unterst
  Eine Einschränkung ist eine Einschränkung für die Typen, die wie ein Typparameter verwendet werden kann. Eine angegebene generische Klasse könnte z. B. akzeptieren nur Klassen, die von einer bestimmten Klasse erben oder eine angegebene Schnittstelle implementieren. Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="reference-types-and-value-types"></a>Referenztypen und Werttypen  
- Handles und Werttypen können als Typargumente verwendet werden. In der generischen Methodendefinition, in dem beide Typen verwendet werden kann, ist die Syntax, die von Verweistypen. Z. B. die  **->**  Operator wird verwendet, um die Member des Typs des Typparameters zugreifen, und zwar unabhängig davon, ob der Typ, der schließlich verwendet ein Verweistyp oder ein Werttyp ist. Wenn ein Werttyp als Typargument verwendet wird, generiert die Laufzeit Code, der die Werttypen, die direkt ohne boxing von Werttypen verwendet.  
+ Handles und Werttypen können als Typargumente verwendet werden. In der generischen Methodendefinition, in dem beide Typen verwendet werden kann, ist die Syntax, die von Verweistypen. Z. B. die **->** Operator wird verwendet, um die Member des Typs des Typparameters zugreifen, und zwar unabhängig davon, ob der Typ, der schließlich verwendet ein Verweistyp oder ein Werttyp ist. Wenn ein Werttyp als Typargument verwendet wird, generiert die Laufzeit Code, der die Werttypen, die direkt ohne boxing von Werttypen verwendet.  
   
  Wenn einen Verweistyp als generisches Typargument verwendet wird, verwenden Sie die Handle-Syntax. Wenn einen Werttyp als generisches Typargument verwendet wird, verwenden Sie den Namen des Typs direkt.  
   

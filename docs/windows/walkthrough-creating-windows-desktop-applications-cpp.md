@@ -1,12 +1,10 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer herkömmliche Windows-Desktop-Anwendung (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Erstellen einer herkömmliche Windows-Desktop-Anwendung (C++) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)
 
@@ -74,7 +71,7 @@ Führen Sie diese Schritte zum Erstellen Ihrer ersten Windows-Desktopprojekt, un
 
 Das Projekt ist jetzt erstellt und die Quelldatei wird im Editor geöffnet. Um den Vorgang fortzusetzen, fahren Sie fort mit [erstellen Sie den Code](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>So erstellen ein Windows-desktop-Projekt in Visual Studio 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> So erstellen ein Windows-desktop-Projekt in Visual Studio 2017 RTM
 
 1. Wählen Sie im Menü **Datei** die Option **Neu** und anschließend **Projekt** aus.
 
@@ -369,7 +366,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    }
    ```
 
-   `HDC`In diesem Code wird ein Handle für einen Gerätekontext, also eine Datenstruktur, die von Windows verwendet, um die Anwendung für die Kommunikation mit dem Graphics-Subsystem zu aktivieren. Die `BeginPaint` und `EndPaint` Funktionen stellen Sie sicher, dass Ihre Anwendung verhält sich wie eine gute Bürger und nicht den Gerätekontext für mehr als notwendig zu verwenden. Dadurch wird sichergestellt, dass das Graphics-Subsystem für die Verwendung durch andere Anwendungen verfügbar ist.
+   `HDC` In diesem Code wird ein Handle für einen Gerätekontext, also eine Datenstruktur, die von Windows verwendet, um die Anwendung für die Kommunikation mit dem Graphics-Subsystem zu aktivieren. Die `BeginPaint` und `EndPaint` Funktionen stellen Sie sicher, dass Ihre Anwendung verhält sich wie eine gute Bürger und nicht den Gerätekontext für mehr als notwendig zu verwenden. Dadurch wird sichergestellt, dass das Graphics-Subsystem für die Verwendung durch andere Anwendungen verfügbar ist.
 
 1. Eine Anwendung behandelt normalerweise viele andere Meldungen, z. B. [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) , wenn ein Fenster erstellt wird, und [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) , wenn das Fenster geschlossen. Der folgende Code zeigt eine grundlegende, jedoch vollständige `WndProc` -Funktion.
 

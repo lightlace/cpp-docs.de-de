@@ -1,13 +1,10 @@
 ---
 title: Strukturdeklarationen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-declarations"></a>Strukturdeklarationen
 Eine "Strukturdeklaration" benennt einen Typ und gibt eine Sequenz von Variablenwerten an (so genannte "Member" oder "Felder" der Struktur), die unterschiedliche Typen aufweisen können. Ein optionaler Bezeichner, "Tag" genannt, gibt den Namen des Strukturtyps an und kann in nachfolgenden Verweisen für den Strukturtyp verwendet werden. Eine Variable des Strukturtyps enthält die gesamte Sequenz, die durch diesen Typ definiert ist. Strukturen in C ähneln den Typen, die als "Datensätze" in anderen Sprachen bekannt sind.  
   
 ## <a name="syntax"></a>Syntax  
  *struct-or-union-specifier*:  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   

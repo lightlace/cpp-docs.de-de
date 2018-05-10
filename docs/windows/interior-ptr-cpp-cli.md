@@ -1,13 +1,10 @@
 ---
 title: Interior_ptr (C + c++ / CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - stdcli::language::interior_ptr
 - interior_ptr_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Ein *innerer Zeiger* deklariert einen Zeiger auf in einen Verweistyp handelt, aber nicht auf das Objekt selbst. Ein innerer Zeiger kann auf eine Verweis-Handle, der Werttyp, der mittels Boxing gepackter Typhandle, Member eines verwalteten Typs oder auf ein Element eines verwalteten Arrays zeigen.  
@@ -73,7 +68,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
  Da innere Zeigern nur auf dem Stapel vorhanden sind, ergibt die Übernahme der Adresse eines inneren Zeigers einen nicht verwalteten Zeiger.  
   
- `interior_ptr`verfügt über eine implizite Konvertierung in `bool`, die für die Verwendung in bedingten Anweisungen ermöglicht.  
+ `interior_ptr` verfügt über eine implizite Konvertierung in `bool`, die für die Verwendung in bedingten Anweisungen ermöglicht.  
   
  Informationen, wie einen inneren Zeiger deklariert, die in ein Objekt verweist, die auf dem Heap der Garbage Collection verschoben werden kann, finden Sie unter [Pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   

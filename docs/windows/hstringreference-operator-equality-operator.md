@@ -1,30 +1,25 @@
 ---
 title: 'Hstringreference:: Operator ==-Operator | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
 dev_langs:
 - C++
 ms.assetid: cad3d52d-cd67-4194-a270-5239b1121a09
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e9c9c9edcd5c53ee3e26f89ed467140d1509e13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32cb8898cfc26297aaea888f9a382b5901ef8acf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator==-Operator
 Gibt an, ob die zwei Parameter gleich sind.  
@@ -48,13 +43,13 @@ inline bool operator==(
   
 #### <a name="parameters"></a>Parameter  
  `lhs`  
- Der erste Parameter, verglichen werden soll. `lhs`kann ein HStringReference-Objekt oder ein HSTRING-Handle.  
+ Der erste Parameter, verglichen werden soll. `lhs` kann ein HStringReference-Objekt oder ein HSTRING-Handle.  
   
  `rhs`  
- Der zweite Parameter, verglichen werden soll.  `rhs`kann ein HStringReference-Objekt oder ein HSTRING-Handle.  
+ Der zweite Parameter, verglichen werden soll.  `rhs` kann ein HStringReference-Objekt oder ein HSTRING-Handle.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Wenn die `lhs` und `rhs` Parameter gleich sind; andernfalls, `false`.  
+ `true` Wenn die `lhs` und `rhs` Parameter gleich sind; andernfalls, `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

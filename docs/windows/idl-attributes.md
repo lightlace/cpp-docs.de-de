@@ -1,13 +1,10 @@
 ---
 title: IDL-Attribute | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>IDL-Attribute
 Bisher musste eine IDL-Datei verwalten mussten um:  
@@ -84,7 +79,7 @@ Bisher musste eine IDL-Datei verwalten mussten um:
 |[lcid](../windows/lcid.md)|Sie können einen Gebietsschemabezeichner an eine Funktion übergeben.|  
 |[length_is](../windows/length-is.md)|Gibt die Anzahl von Arrayelementen übermittelt werden sollen.|  
 |[licensed](../windows/licensed.md)|Gibt an, dass die Co-Klasse, für die er gilt, lizenziert ist, und muss mit instanziiert werden **IClassFactory2**.|  
-|[lokale](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
+|[local](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
 |[max_is](../windows/max-is.md)|Legt fest, den maximalen Wert für eine gültige Arrayindex.|  
 |[Modul](../windows/module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|  
 |[ms_union](../windows/ms-union.md)|Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.|  
@@ -105,7 +100,7 @@ Bisher musste eine IDL-Datei verwalten mussten um:
 |[propput](../windows/propput.md)|Gibt eine Eigenschaftseinstellungsfunktion an.|  
 |[ptr](../windows/ptr.md)|Kennzeichnet einen Zeiger als vollständige Zeiger.|  
 |[public](../windows/public-cpp-attributes.md)|Stellt sicher, dass eine Typdefinition in der Typbibliothek aufgenommen werden, auch wenn es nicht von innerhalb der IDL-Datei verwiesen wird.|  
-|[Bereich](../windows/range-cpp.md)|Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.|  
+|[range](../windows/range-cpp.md)|Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.|  
 |[readonly](../windows/readonly-cpp.md)|Verhindert die Zuweisung zu einer Variablen.|  
 |[ref](../windows/ref-cpp.md)|Identifiziert einen Verweiszeiger an.|  
 |[requestedit](../windows/requestedit.md)|Gibt an, dass die Eigenschaft unterstützt die **OnRequestEdit** Benachrichtigung.|  
@@ -120,7 +115,7 @@ Bisher musste eine IDL-Datei verwalten mussten um:
 |[uidefault](../windows/uidefault.md)|Gibt an, dass die Typmember Informationen das Standardelement für die Anzeige in der Benutzeroberfläche.|  
 |[unique](../windows/unique-cpp.md)|Gibt einen eindeutigen Zeiger.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Wird dem Aufrufer mitgeteilt, dass wenn ein Fehler aufgetreten ist, wenn diese Funktion aufgerufen wird, klicken Sie dann der Aufrufer aufrufen kann `GetLastError` auf den Fehlercode abzurufen.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
 |[v1_enum](../windows/v1-enum.md)|Weist der angegebene enumerierten Typ als eine 32-Bit-Entität, anstatt die 16-Bit-Standardeinstellung übertragen werden.|  
 |[vararg](../windows/vararg.md)|Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptieren.|  
 |[vi_progid](../windows/vi-progid.md)|Gibt eine versionsunabhängige Form der ProgID an.|  

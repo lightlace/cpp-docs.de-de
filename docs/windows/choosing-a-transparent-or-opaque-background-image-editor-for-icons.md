@@ -1,13 +1,10 @@
 ---
-title: "Auswählen eines transparenten oder deckenden Hintergrundes (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Auswählen eines transparenten oder deckenden Hintergrundes (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,25 +19,23 @@ helpviewer_keywords:
 - transparency, background
 - transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Auswählen eines transparenten oder deckenden Hintergrunds (Bildbearbeitung für Symbole)
 Wenn Sie verschieben oder kopieren eine Auswahl aus einem Image, sind alle Pixel in der Auswahl, die mit die aktuellen Hintergrundfarbe übereinstimmen, standardmäßig transparent; Sie nicht Pixel am Zielspeicherort verdeckt.  
   
  Sie können aus einem transparenten Hintergrund (Standard), ein nicht transparenter Hintergrund wechseln und wieder zurück. Wenn Sie eine Auswahltool verwenden die **transparenten Hintergrund** und **nicht transparenter Hintergrund** Optionen werden in der Optionsauswahl angezeigt, auf die **Grafik-Editor** Symbolleiste (wie unten dargestellt).  
   
- ![Hintergrundoptionen &#45; deckend "oder" transparent](../windows/media/vcimageeditoropaqtranspback.gif "VcImageEditorOpaqTranspBack")  
+ ![Optionen im Hintergrund &#45; undurchsichtig oder transparent](../windows/media/vcimageeditoropaqtranspback.gif "VcImageEditorOpaqTranspBack")  
 Transparente und nicht transparenten Optionen auf der Symbolleiste des Grafik-Editor  
   
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>So wechseln Sie zwischen einem transparent und nicht transparenter Hintergrund  

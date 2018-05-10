@@ -1,13 +1,10 @@
 ---
 title: TypeDef, Enum, Union- und Struct-Attribute | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>typedef-, enum-, union- und struct-Attribute
 Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [Struktur](../cpp/struct-cpp.md), und [Enum](../cpp/enumerations-cpp.md) C++-Schlüsselwörter.  
@@ -38,7 +33,7 @@ Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-u
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|Verwendet die [Switch_type](../windows/switch-type.md) Attribut in einer **Union**.|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[export](../windows/export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei abgelegt werden soll.|  
 |[first_is](../windows/first-is.md)|Gibt den Index des ersten Arrayelements übermittelt werden sollen.|  
 |[helpcontext](../windows/helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|  
@@ -57,16 +52,16 @@ Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-u
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[export](../windows/export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei abgelegt werden soll.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
 |[v1_enum](../windows/v1-enum.md)|Weist der angegebene enumerierten Typ als eine 32-Bit-Entität, anstatt die 16-Bit-Standardeinstellung übertragen werden.|  
   
 ### <a name="union"></a>union  
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[export](../windows/export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei abgelegt werden soll.|  
 |[first_is](../windows/first-is.md)|Gibt den Index des ersten Arrayelements übermittelt werden sollen.|  
 |[last_is](../windows/last-is.md)|Gibt den Index des letzten Arrayelements übermittelt werden sollen.|  
@@ -74,7 +69,7 @@ Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-u
 |[max_is](../windows/max-is.md)|Legt fest, den maximalen Wert für eine gültige Arrayindex.|  
 |[size_is](../windows/size-is.md)|Gibt die Größe des Arbeitsspeichers für Größe Zeiger belegt, Größe von Zeigern auf großen Zeiger und Einzel- oder mehrdimensionale Arrays.|  
 |[unique](../windows/unique-cpp.md)|Gibt einen eindeutigen Zeiger.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
   
 ### <a name="nonencapsulated-union"></a>Nonencapsulated union  
   
@@ -93,7 +88,7 @@ Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-u
 |[coclass](../windows/coclass.md)|Erstellt ein ActiveX-Steuerelement.|  
 |[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle zu einer COM-Zuordnung.|  
 |[Steuerelement](../windows/control.md)|Gibt an, dass der benutzerdefinierte Datentyp eines Steuerelements.|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[db_column](../windows/db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|  
 |[db_command](../windows/db-command.md)|Erstellt einen OLE DB-Befehl.|  
 |[db_param](../windows/db-param.md)|Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter und begrenzt die Variable.|  
@@ -115,7 +110,7 @@ Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-u
 |[Datenquelle](../windows/source-cpp.md)|Für eine Klasse gibt Schnittstellen für Verbindungspunkte der COM-Objekt. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die Quelle von Ereignissen ist.|  
 |[Threading](../windows/threading-cpp.md)|Gibt das Threadingmodell für ein COM-Objekt.|  
 |[unique](../windows/unique-cpp.md)|Gibt einen eindeutigen Zeiger.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
 |[version](../windows/version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.|  
 |[vi_progid](../windows/vi-progid.md)|Gibt eine versionsunabhängige Form der ProgID an.|  
   

@@ -1,13 +1,10 @@
 ---
 title: Compilerwarnungen nach Compilerversion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion
 
@@ -164,7 +160,7 @@ C4494|"*Typ*": __declspec(allocator) wird ignoriert, da der Rückgabetyp für de
 C4495|nicht dem Standard entsprechende Erweiterung "__super": explizite Basisklassennamen ersetzt
 C4496|nicht dem Standard entsprechende Erweiterung 'for each"verwendet: Ersetzen Sie durch wie Serveradresse-for-Anweisung
 C4497|"sealed" verwendeten, nicht dem Standard entsprechende Erweiterung: 'letzte' ersetzt
-C4498|nonstandard extension used: '*extension*'
+C4498|nicht dem Standard entsprechende Erweiterung: '*Erweiterung*"
 C4499|"*Spezialisierung*': eine explizite Spezialisierung sind keine Speicherklasse (ignoriert)
 C4576|ein in Klammern gefolgt von einer Initialisiererliste ist eine nicht standardmäßige expliziten Typ Konvertierung-syntax
 C4577|"Noexcept" verwendet, mit der keine Ausnahmebehandlung angegebenen Modus; Beenden von Ausnahme ist nicht gewährleistet. Geben Sie/EHsc
@@ -235,9 +231,9 @@ Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compiler
 |-|-|
 C4330|Attribut "*Attribut*"für den Abschnitt"*Abschnitt*" ignoriert
 C4415|duplicate __declspec(code_seg('*name*'))
-C4416|__declspec(code_seg(...)) contains empty string: ignored
+C4416|__declspec(code_seg(...)) leere Zeichenfolge enthält: ignoriert
 C4417|eine explizite Vorlageninstanziierung sind keine __declspec(code_seg(...)): ignoriert
-C4418|__declspec(code_seg(...)) ignored on an enum
+C4418|__declspec(code_seg(...)) für Enum ignoriert
 C4419|"*Namen*"wirkt sich nicht bei Anwendung auf private Verweisklasse"*Typ*".
 C4435|"*Typ*': das Objektlayout unter/vd2 ändert sich aufgrund der virtuellen Basis '*Typ*"
 C4436|Dynamic_cast von virtueller Basis '*Typ*'to'*Typ*"im Konstruktor oder Destruktor fehlschlagen mit teilweise erstelltes Objekt
@@ -258,7 +254,7 @@ C4492|"*Typ*": Übereinstimmungen basieren Ref-Klassenmethode "*Typ*", aber nich
 C4493|Delete-Ausdruck hat keine Wirkung, da der Destruktor von "*Typ*" keinen 'öffentlichen' Zugriff
 C4585|"*Typ*": ein WinRT "Öffentliche Verweisklasse" muss entweder versiegelt oder eine Ableitung von einer vorhandenen unversiegelten Klasse
 C4586|"*Typ*": ein öffentlicher Typ kann nicht in einem Namespace der obersten Ebene namens "Windows" deklariert werden
-C4695|#pragma execution_character_set: '*argument*' is not a supported argument: currently only 'UTF-8' is supported
+C4695|#pragma Execution_character_set: "*Argument*' ist kein unterstützter Argument: derzeit wird nur"UTF-8"wird unterstützt.
 C4703|potenziell nicht initialisierten lokalen Zeigervariablen "*Namen*" verwendet
 C4728|/ Yl-Option-ignoriert, weil die PCH-Verweis erforderlich ist.
 C4745|flüchtige Zugriff des "*Namen*" kann nicht berücksichtigt aufgrund ihrer Größe werden
@@ -298,7 +294,7 @@ C4491|"*Beschreibung*": hat ein ungültiges Format der IDL-Version
 C4603|"*Namen*": Makro ist nicht definiert oder die Definition wurde nach Verwendung des vorkompilierten Headers
 C4627|"*Beschreibung*": bei der Suche nach Verwendung des vorkompilierten Headers übersprungen
 C4750|"*Beschreibung*': Funktion mit" _alloca()"" inline in einer Schleife
-C4910|'*type*': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
+C4910|"*Typ*": "__declspec(dllexport)" und "Extern" sind bei einer expliziten Instanziierung nicht kompatibel
 C4985|"*Deklaration*": Attribute in vorheriger Deklaration nicht vorhanden sind.
 
 ## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Warnungen, die in Visual C++ 2005 (Compilerversion 14.00.50727.762) eingeführt
@@ -549,7 +545,7 @@ C4531|C++-Ausnahmebehandlung ist nicht verfügbar für Windows CE. Verwenden Sie
 C4532|"*Beschreibung*":-Anweisungsblock Herausspringen *schließlich* Block verfügt über ein nicht definiertes Verhalten während der Abbruchbehandlung
 C4533|Initialisierung von "*Deklaration*" wird übersprungen, indem Sie "Goto *Deklaration*"
 C4534|"*Deklaration*" können nicht auf ein Standardkonstruktor für *Klasse* "*Typ*" aufgrund der Standardargument
-C4535|calling _set_se_translator() requires /EHa
+C4535|aufrufende _set_se_translator() erfordert/EHa
 C4536|"*Beschreibung*': Typ größer als das Metadatenlimit von '*Anzahl*' Zeichen
 C4537|"*Deklaration*': '.' auf nicht-UDT-Typ angewendet wird
 C4542|Überspringen die Generierung von zusammengeführten eingefügter Text-Datei kann nicht geschrieben werden *Typ* Datei: "*Filename*": *Fehler*
@@ -623,7 +619,7 @@ C4934|"__delegate(multicast)" ist veraltet, verwenden Sie "stattdessen __delegat
 C4935|Assembly-Zugriffsspezifizierer geändert von "*Beschreibung*"
 C4944|"*Namen*": Symbol aus kann nicht importiert "*Quelle*': als*Deklaration*" ist im aktuellen Gültigkeitsbereich bereits vorhanden.
 C4945|"*Namen*": Symbol aus kann nicht importiert "*Quelle*': als*Deklaration*'wurde bereits importiert aus einer anderen Assembly'*Quelle*"
-C4946|reinterpret_cast used between related classes: '*declaration*' and '*declaration*'
+C4946|Reinterpret_cast wird zwischen verknüpften Klassen verwendet: "*Deklaration*'und'*Deklaration*"
 C4995|"*Namen*": Name wurde als veraltet #pragma markiert
 C4996|"*Problem*": *Beschreibung*
 C4997|"*Typ*': Coclass implementiert keine COM- oder Pseudoschnittstelle

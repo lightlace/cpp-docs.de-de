@@ -1,31 +1,26 @@
 ---
-title: "Eigenständige Attribute | Microsoft Docs"
-ms.custom: 
+title: Eigenständige Attribute | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standalone attributes
 - attributes [C++], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="stand-alone-attributes"></a>Eigenständige Attribute
 Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüsselwort jedoch eher wie eine Codezeile ist. Eigenständiges Attribut-Anweisungen erfordern ein Semikolon am Ende der Zeile.  
@@ -33,7 +28,7 @@ Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüss
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |[cpp_quote](../windows/cpp-quote.md)|Gibt die angegebene Zeichenfolge, ohne die Anführungszeichen in der Headerdatei.|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[db_command](../windows/db-command.md)|Erstellt einen OLE DB-Befehl.|  
 |[emitidl](../windows/emitidl.md)|Bestimmt, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten IDL-Datei abgelegt werden.|  
 |[idl_module](../windows/idl-module.md)|Gibt einen Einstiegspunkt in eine DLL-Datei an.|  

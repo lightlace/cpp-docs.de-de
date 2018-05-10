@@ -1,12 +1,9 @@
 ---
 title: Choice-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>choice-Klasse
 Ein `choice`-Meldungsblock ist ein Block mit mehreren Quellen und einem einzelnen Ziel, der eine Kontrollflussinteraktion zwischen mehreren Quellen darstellt. Der Auswahlblock wartet, bis eine von mehreren Quellen eine Meldung erzeugt, und gibt den Index der Quelle, von der die Meldung erzeugt wurde, weiter.  
@@ -69,7 +64,7 @@ class choice: public ISource<size_t>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[choice](#ctor)|Überladen. Erstellt einen `choice` -Meldungsblock.|  
+|[Auswahl](#ctor)|Überladen. Erstellt einen `choice` -Meldungsblock.|  
 |[~ Choice-Destruktor](#dtor)|Zerstört die `choice` Meldungsblock.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -78,7 +73,7 @@ class choice: public ISource<size_t>;
 |----------|-----------------|  
 |[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `choice` -Block übertragen des Besitzes an den Aufrufer.|  
 |[acquire_ref](#acquire_ref)|Ruft eine Verweisanzahl für dieses `choice` Meldungsblock, um den Löschvorgang zu verhindern.|  
-|[consume](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
+|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
 |[has_value](#has_value)|Überprüft, ob dies `choice` -Meldungsblock noch mit einem Wert initialisiert wurde.|  
 |[index](#index)|Gibt einen Index in der `tuple` , die vom ausgewählten Element darstellt, die `choice` Meldungsblock.|  
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `choice` Meldungsblock.|  
@@ -224,7 +219,7 @@ bool has_value() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn der Block einen Wert erhalten hat `false` andernfalls.  
   
-##  <a name="index"></a> index 
+##  <a name="index"></a> Index 
 
  Gibt einen Index in der `tuple` , die vom ausgewählten Element darstellt, die `choice` Meldungsblock.  
   

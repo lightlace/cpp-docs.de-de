@@ -1,13 +1,10 @@
 ---
-title: "Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste | Microsoft Docs"
-ms.custom: 
+title: Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8cac985a4cc723e2e0b5db9812e29b8b9632f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste
 Sie können ein Kombinationsfeld Größe, wenn Sie ihn zum Dialogfeld hinzufügen. Sie können auch die Größe des im Dropdown-Listenfeld angeben.  
@@ -52,7 +47,7 @@ Sie können ein Kombinationsfeld Größe, wenn Sie ihn zum Dialogfeld hinzufüge
   
 2.  Verwenden Sie den unteren Ziehpunkt, um die Anfangsgröße des Bereichs Dropdown-Liste zu ändern.  
   
-     ![Kombinationsfeld &#45; Box-Sizing in einem MFC-Projekt](../mfc/media/vccomboboxsizing.gif "VcComboBoxSizing")  
+     ![Kombinationsfeld&#45;Box-Sizing in einem MFC-Projekt](../mfc/media/vccomboboxsizing.gif "VcComboBoxSizing")  
   
 3.  Klicken Sie auf den Dropdown Pfeil erneut aus, um den Teil der Dropdown-Liste des Kombinationsfelds zu schließen.  
   

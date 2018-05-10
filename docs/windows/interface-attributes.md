@@ -1,31 +1,26 @@
 ---
 title: Schnittstellenattribut | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff84939b3211633e199066e1a38da2e91efb1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-attributes"></a>Schnittstellenattribut
 Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../cpp/interface.md) C++-Schlüsselwort.  
@@ -33,7 +28,7 @@ Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../c
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |[async_uuid](../windows/async-uuid.md)|Gibt an, die synchrone und asynchrone Versionen einer COM-Schnittstelle definiert die MIDL-Compiler anweist, UUID.|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Ermöglicht Ihnen das Definieren eigener Attribute.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Ermöglicht Ihnen das Definieren eigener Attribute.|  
 |[dispinterface](../windows/dispinterface.md)|Fügt eine Schnittstelle in die IDL-Datei als Verteilschnittstelle ein.|  
 |[dual](../windows/dual.md)|Fügt eine Schnittstelle in der IDL-Datei als eine duale Schnittstelle.|  
 |[export](../windows/export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei abgelegt werden soll.|  
@@ -44,7 +39,7 @@ Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../c
 |[helpstringdll](../windows/helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um das Dokument Zeichenfolgensuche (Lokalisierung) ausführen.|  
 |[hidden](../windows/hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem Browser benutzerorientierte angezeigt werden soll.|  
 |[library_block](../windows/library-block.md)|Fügt ein Konstrukt in der IDL-Datei bibliotheksblock vor.|  
-|[lokale](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
+|[local](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
 |[nonextensible](../windows/nonextensible.md)|Gibt an, dass die `IDispatch` Implementierung enthält nur die Eigenschaften und Methoden aufgelistet, die in die schnittstellenbeschreibung und können nicht mit zusätzlichen Elementen zur Laufzeit erweitert werden. Dieses Attribut ist nur gültig für eine [duale](../windows/dual.md) Schnittstelle.|  
 |[odl](../windows/odl.md)|Identifiziert eine Schnittstelle als Schnittstelle Objekt Description Language (ODL).|  
 |[object](../windows/object-cpp.md)|Identifiziert eine benutzerdefinierte Schnittstelle an.|  
@@ -52,7 +47,7 @@ Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../c
 |[pointer_default](../windows/pointer-default.md)|Gibt das Standardattribut für die Zeiger für alle Zeiger mit Ausnahme der obersten Ebene Zeigern, die angezeigt werden in Parameterlisten an.|  
 |[ptr](../windows/ptr.md)|Kennzeichnet einen Zeiger als vollständige Zeiger.|  
 |[restricted](../windows/restricted.md)|Legt fest, welche Member in der Bibliothek nach dem Zufallsprinzip aufgerufen werden können.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Stellt die eindeutige ID für die Bibliothek|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Stellt die eindeutige ID für die Bibliothek|  
   
  Sie müssen diese Regeln zum Definieren einer Schnittstelle beachten:  
   

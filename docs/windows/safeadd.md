@@ -1,13 +1,10 @@
 ---
 title: SafeAdd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeAdd
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeAdd function
 ms.assetid: 3f82b91d-59fe-4ee1-873b-d056182fa8be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8b668f5b164934cff6643d73d9b4b6169a9d4b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeadd"></a>SafeAdd
 Addiert zwei Zahlen in einer Weise, die schützt vor Ganzzahlüberlauf an.  
@@ -53,7 +48,7 @@ inline bool SafeAdd (
  Der Parameter, in denen `SafeAdd` speichert das Ergebnis.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
+ `true` Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und eignet sich für eine einzelne Hinzufügung Vorgang ohne Erstellen einer Instanz von der [SafeInt-Klasse](../windows/safeint-class.md).  

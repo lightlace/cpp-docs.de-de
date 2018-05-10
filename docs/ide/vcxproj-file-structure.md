@@ -1,29 +1,24 @@
 ---
 title: VCXPROJ und props-Dateistruktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>VCXPROJ und PROPS-Datei-Struktur
 
@@ -59,7 +54,7 @@ Bei Auswahl eine .vcxproj-Datei manuell bearbeiten, achten Sie darauf, dass Sie 
 
 Sie können den Inhalt der VCXPROJ-Datei mit einem beliebigen Text oder XML-Editor prüfen. Sie können es in Visual Studio anzeigen, indem Sie mit der rechten Maustaste auf das Projekt im Projektmappen-Explorer auswählen **Projekt entladen** auswählen und dann **Foo.vcxproj bearbeiten**.
 
-Als erstes beachtet wird, dass die Elemente der obersten Ebene in einer bestimmten Reihenfolge angezeigt werden. Beispiel:
+Als erstes beachtet wird, dass die Elemente der obersten Ebene in einer bestimmten Reihenfolge angezeigt werden. Zum Beispiel:
 
 - Die meisten Eigenschaftengruppen und Elementdefinitionsgruppen werden nach dem Import für Microsoft.Cpp.Default.props auftreten.
 - alle Ziele werden am Ende der Datei importiert.
@@ -100,7 +95,7 @@ In den folgenden Abschnitten wird beschrieben, den Zweck jedes dieser Elemente u
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`ist der Stammknoten. Gibt die MSBuild-Version verwendet und auch das Standardziel, der ausgeführt werden, wenn diese Datei an MSBuild.exe übergeben wird.
+`Project` ist der Stammknoten. Gibt die MSBuild-Version verwendet und auch das Standardziel, der ausgeführt werden, wenn diese Datei an MSBuild.exe übergeben wird.
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup-element
 
@@ -108,7 +103,7 @@ In den folgenden Abschnitten wird beschrieben, den Zweck jedes dieser Elemente u
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`enthält die Beschreibung der Projekt-Konfiguration. Beispiele sind Debug | Win32, Version | Win32, Debug | ARM und So weiter. Viele Einstellungen für Projektdateien sind spezifisch für eine bestimmte Konfiguration. Beispielsweise werden Sie wahrscheinlich Optimierung Eigenschaften für ein Releasebuild erstellt werden, aber nicht in einem Debugbuild festlegen möchten.
+`ProjectConfigurations` enthält die Beschreibung der Projekt-Konfiguration. Beispiele sind Debug | Win32, Version | Win32, Debug | ARM und So weiter. Viele Einstellungen für Projektdateien sind spezifisch für eine bestimmte Konfiguration. Beispielsweise werden Sie wahrscheinlich Optimierung Eigenschaften für ein Releasebuild erstellt werden, aber nicht in einem Debugbuild festlegen möchten.
 
 Die `ProjectConfigurations` Elementgruppe dient nicht zur Buildzeit. Der Visual Studio-IDE erfordert es, um das Projekt zu laden. Diese Elementgruppe werden in eine PROPS-Datei verschoben und in der VCXPROJ-Datei importiert. Allerdings in diesem Fall, müssen wenn Sie müssen zum Hinzufügen oder Entfernen von Konfigurationen, Sie manuell PROPS-Datei bearbeiten; Sie können keine die IDE.
 
@@ -132,7 +127,7 @@ Die IDE davon ausgeht, eine Projektkonfiguration für eine beliebige Kombination
 dann muss es auch diese Konfigurationen aufweisen, obwohl "Besondere 32-Bit-Optimierung" ohne Bedeutung für X64 ist:
 
 - Debuggen|x64
-- Retail|x64
+- Retail | X64
 - Spezielle 32-Bit-Optimierung | X64
 
 Sie deaktivieren den Build erstellen und Bereitstellen von Befehle für jede Konfiguration in der **Solution Configuration Manager**.
@@ -143,7 +138,7 @@ Sie deaktivieren den Build erstellen und Bereitstellen von Befehle für jede Kon
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`enthält Einstellungen wie z. B. ProjectGuid RootNamespace und Anwendungstyp für Projekt / "applicationtyperevision". Die letzten zwei definieren häufig Zielbetriebssystem. Ein Projekt kann nur eine einzelne OS abzielen, Verweise und Projektelementen derzeit Bedingungen haben können. Diese Eigenschaften werden in der Regel nicht an anderer Stelle in der Projektdatei überschrieben. Diese Gruppe ist nicht die konfigurationsabhängigen daher in der Regel nur ein Globals vorhanden ist und in der Projektdatei.
+`Globals` enthält Einstellungen wie z. B. ProjectGuid RootNamespace und Anwendungstyp für Projekt / "applicationtyperevision". Die letzten zwei definieren häufig Zielbetriebssystem. Ein Projekt kann nur eine einzelne OS abzielen, Verweise und Projektelementen derzeit Bedingungen haben können. Diese Eigenschaften werden in der Regel nicht an anderer Stelle in der Projektdatei überschrieben. Diese Gruppe ist nicht die konfigurationsabhängigen daher in der Regel nur ein Globals vorhanden ist und in der Projektdatei.
 
 ### <a name="microsoftcppdefaultprops-import-element"></a>Import von Microsoft.Cpp.default.props-element
 
@@ -191,7 +186,7 @@ Die `PropertySheets` Gruppe enthält die Importe für Benutzereigenschaftenblät
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`enthält Eigenschaften, die Sie erstellen, wie Variablen, die zum Anpassen des Buildprozesses verwendet werden. Beispielsweise können Sie ein Benutzermakro für Ihrer benutzerdefinierten Ausgabepfad als $(CustomOutputPath) definieren und verwenden, um andere Variablen definieren, definieren. Diese Eigenschaftengruppe enthält diese Eigenschaften. Beachten Sie, dass in Visual Studio diese Gruppe nicht in der Projektdatei aufgefüllt wird, da Visual C++ Benutzermakros für Konfigurationen nicht unterstützt. Benutzermakros werden in Eigenschaftenblätter unterstützt.
+`UserMacros` enthält Eigenschaften, die Sie erstellen, wie Variablen, die zum Anpassen des Buildprozesses verwendet werden. Beispielsweise können Sie ein Benutzermakro für Ihrer benutzerdefinierten Ausgabepfad als $(CustomOutputPath) definieren und verwenden, um andere Variablen definieren, definieren. Diese Eigenschaftengruppe enthält diese Eigenschaften. Beachten Sie, dass in Visual Studio diese Gruppe nicht in der Projektdatei aufgefüllt wird, da Visual C++ Benutzermakros für Konfigurationen nicht unterstützt. Benutzermakros werden in Eigenschaftenblätter unterstützt.
 
 ### <a name="per-configuration-propertygroup-elements"></a>PropertyGroup-Elementen pro-Konfiguration
 
@@ -219,7 +214,7 @@ Enthält die Elementdefinitionen. Diese müssen es sich um den gleichen Bedingun
 
 Enthält die Elemente im Projekt (Quelldateien usw.). Bedingungen werden nicht unterstützt, für die Projektelemente (d. h. Elementtypen wie Projektelemente durch Regeln Definitionen behandelt werden).
 
-Die Metadaten sollten Configuration-Bedingungen für jede Konfiguration verfügen, auch wenn sie alle identisch sind. Beispiel:
+Die Metadaten sollten Configuration-Bedingungen für jede Konfiguration verfügen, auch wenn sie alle identisch sind. Zum Beispiel:
 
    ```xml
    <ItemGroup>

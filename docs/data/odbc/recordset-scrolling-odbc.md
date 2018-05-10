@@ -2,12 +2,9 @@
 title: 'Recordset: Scrollen (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Recordset: Scrollen (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -44,7 +39,7 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
   
 -   [Unter welche Umständen Durchführen eines Bildlaufs ist, und wird nicht unterstützt](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Durchführen eines Bildlaufs aus einem Datensatz in eine andere  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Durchführen eines Bildlaufs aus einem Datensatz in eine andere  
  Klasse `CRecordset` bietet die **verschieben** Memberfunktionen zum Durchführen eines Bildlaufs in einem Recordset. Diese Funktionen verschieben den aktuellen Datensatz von Rowsets. Wenn Sie implementiert haben, gesammelte, eine **verschieben** Vorgang verschiebt das Recordset, indem Sie die Größe des Rowsets. Nicht implementiert, gesammelte, einen Aufruf einer **verschieben** Funktion verschiebt das Recordset von einem Datensatz jedes Mal. Weitere Informationen über das gesammelte finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`Gibt einen Wert ungleich NULL zurück, wenn das Recordset hinter dem letzten Datensatz positioniert ist. `IsBOF`Gibt einen Wert ungleich NULL zurück, wenn das Recordset, vor dem ersten Datensatz (vor allen Datensätzen positioniert ist). In beiden Fällen ist gibt es kein aktueller Datensatz, das verarbeitet werden. Beim Aufrufen `MovePrev` Wenn `IsBOF` ist bereits **"true"** , oder rufen Sie `MoveNext` Wenn `IsEOF` ist bereits **"true"**, löst das Framework eine `CDBException`. Sie können auch `IsBOF` und `IsEOF` für ein leeres Recordset zu überprüfen.  
+ `IsEOF` Gibt einen Wert ungleich NULL zurück, wenn das Recordset hinter dem letzten Datensatz positioniert ist. `IsBOF` Gibt einen Wert ungleich NULL zurück, wenn das Recordset, vor dem ersten Datensatz (vor allen Datensätzen positioniert ist). In beiden Fällen ist gibt es kein aktueller Datensatz, das verarbeitet werden. Beim Aufrufen `MovePrev` Wenn `IsBOF` ist bereits **"true"** , oder rufen Sie `MoveNext` Wenn `IsEOF` ist bereits **"true"**, löst das Framework eine `CDBException`. Sie können auch `IsBOF` und `IsEOF` für ein leeres Recordset zu überprüfen.  
   
  Weitere Informationen zur Recordsetnavigation finden Sie unter [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Beim Durchführen eines Bildlaufs unterstützt wird  
+##  <a name="_core_when_scrolling_is_supported"></a> Beim Durchführen eines Bildlaufs unterstützt wird  
  Wie ursprünglich vorgesehen SQL bereitgestellten Bildlauf ausschließlich vorwärts ausgeführt, aber ODBC erweitert Durchführen eines Bildlaufs Funktionen. Das verfügbare Maß an Unterstützung für das Durchführen eines Bildlaufs hängt von der ODBC-Treiber, die Ihre Anwendung mit ODBC-API-Konformitätsgrad des Treibers arbeitet, und gibt an, ob die ODBC-Cursorbibliothek in den Arbeitsspeicher geladen wird. Weitere Informationen finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [ODBC: die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

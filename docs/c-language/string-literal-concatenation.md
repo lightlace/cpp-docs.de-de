@@ -1,30 +1,25 @@
 ---
 title: Zeichenfolgenliteralverkettung | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-literal-concatenation"></a>Zeichenfolgenliteral-Verkettung
 Um Zeichenfolgenliterale zu bilden, die mehr als eine Zeile umfassen, können Sie die beiden Zeichenfolgen verketten. Geben Sie dazu einen umgekehrten Schrägstrich ein, und drücken Sie die EINGABETASTE. Der umgekehrte Schrägstrich bewirkt, dass der Compiler das folgende Zeilenumbruchszeichen ignoriert. Beispielweise ist das Zeichenfolgenliteral  
@@ -42,7 +37,7 @@ ken into two or more pieces."
   
  Die Zeichenfolgenverkettung kann überall dort verwendet werden, wo Sie zuvor einen umgekehrten Schrägstrich gefolgt von einer Zeilenendemarke verwendet haben, um Zeichenfolgen einzugeben, die länger als eine Zeile sind.  
   
- Um eine neue Zeile innerhalb eines Zeichenfolgenliterals zu erzwingen, geben Sie die Escapesequenz für den Zeilenumbruch (**\n**) nach dem folgenden Muster in der Zeichenfolge ein, in der der Zeilenumbruch erstellt werden soll:  
+ Um eine neue Zeile innerhalb eines Zeichenfolgenliterals zu erzwingen, geben Sie die Escape-Sequenz für den Zeilenumbruch (**\n**) nach dem folgenden Muster in der Zeichenfolge ein, in der der Zeilenumbruch erstellt werden soll:  
   
 ```  
 "Enter a number between 1 and 100\nOr press Return"  

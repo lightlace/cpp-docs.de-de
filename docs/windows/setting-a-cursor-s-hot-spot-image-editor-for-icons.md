@@ -1,13 +1,10 @@
 ---
-title: "Festlegen einer Cursorposition &#39; s Hot Stelle (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Festlegen eines Cursors&#39;Hotspot "s" (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - cursors, hot spots
 - hot spots
 ms.assetid: a610388a-45c8-43cd-98a2-fd31f29238b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bcfccb7b9252bf28e5b180b1df6b6d36fcbfbd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 527cdeabb6f45601641fcc64d3b82bb36652e002
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Festlegen einer Cursorposition &#39; s Hot Stelle (Bildbearbeitung für Symbole)
+# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Festlegen eines Cursors&#39;Hotspot "s" (Bildbearbeitung für Symbole)
 Den Hotspot von einem [Cursor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) ist der Punkt, auf die Windows verweist, in die Position des Cursors nachzuverfolgen. Standardmäßig wird der Hotspot auf der linken oberen Ecke des Cursors (Koordinaten 0,0) festgelegt. Die Eigenschaft "Hotspot" in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zeigt die Koordinaten des HotSpot.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Festlegen des Hotspots eines Cursors  

@@ -1,30 +1,25 @@
 ---
-title: "Windows-Runtime und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft Docs"
-ms.custom: 
+title: Windows-Runtime und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
 Vorlagen ermöglichen es Ihnen, einen Prototyp eines Windows-Runtime oder der common Language Runtime-Typ definieren und dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.  

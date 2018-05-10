@@ -1,13 +1,10 @@
 ---
-title: "Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3fe626357283dde8d8f283c6d0aa406ec6c1db0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aed35f50e8cb874cea833439150b717034244b95
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole)
 Wenn Sie eine Bitmap erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können jedoch das Bild als GIF- oder JPEG oder in anderen Formaten Grafiken speichern.  

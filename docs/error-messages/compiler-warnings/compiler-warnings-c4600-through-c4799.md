@@ -1,8 +1,8 @@
 ---
-title: "Compilerfehler Warnungen C4600 über C4799 | Microsoft Docs"
+title: Compilerfehler Warnungen C4600 über C4799 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Compilerfehler Warnungen C4600 über C4799
 
@@ -164,7 +163,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung C4687 (Fehler)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'Klasse': eine versiegelte abstrakte Klasse kann nicht implementiert eine Schnittstelle "Schnittstelle"|
 |Compilerwarnung (Stufe 1) C4688|"constraint": Die Einschränkungsliste enthält den privaten Assemblytyp "type".|
 |Compilerwarnung (Stufe 1) C4689|'%c': nicht unterstützte Zeichen in #pragma Detect_mismatch; #pragma ignoriert|
-|Compilerwarnung (Stufe 4) C4690|[ Emitidl( Pop ) ]: mehr POP-als Push-Vorgänge|
+|Compilerwarnung (Stufe 4) C4690|[ Emitidl ( Pop ) ]: mehr POP-als Push-Vorgänge|
 |[Compilerwarnung (Ebene 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'Typ': Typ verwiesen wurde in nicht referenzierte Assembly "File", in der aktuellen Übersetzungseinheit verwendet stattdessen definierten Typ erwartet|
 |[Compilerwarnung (Ebene 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'Funktion': Die Signatur des nicht privaten Members enthält den privaten systemeigenen Assemblytyp 'systemeigener_Typ'|
 |[Compilerwarnung (Stufe 1, Fehler) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'Klasse': eine versiegelte abstrakte Klasse kann nicht einer beliebigen Instanz Instanz Member 'Member' aufweisen|
@@ -204,7 +203,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|"Var" verfügt über andere Ausrichtung in "Datei1" und "Datei2": Anzahl und|
 |[Compilerwarnung (Ebene 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'Typ' hat eine unterschiedliche Größe in "Datei1" und "Datei2": Anzahl und die Anzahl der Bytes|
 |[Compilerwarnung (Ebene 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|"Var" hat einen anderen Typ in "Datei1" und "Datei2": "Typ1" und "Typ2"|
-|[Compilerwarnung C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|flüchtige Zugriff des "*Ausdruck*" / volatile des unterliegt:\<Iso &#124; ms > festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen|
+|[Compilerwarnung C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|flüchtige Zugriff des "*Ausdruck*" / volatile des unterliegt:\<Iso&#124;ms > festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen|
 |[Compilerwarnung (Ebene 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Aufrufen von verwalteten 'Einstiegspunkt': verwalteter Code kann nicht ausgeführt werden, unter der Loadersperre, einschließlich des DLL-Einstiegspunkts und aufrufen, die aus der DLL-Einstiegspunkt wurde erreicht|
 |Compilerwarnung (Stufe 4) C4749|bedingt unterstützt: Offsetof auf non-standard-Layout-Typ angewendet "*Typ*"|
 |Compilerwarnung (Stufe 1) C4750|'Bezeichner': Funktion mit „_alloca()“ „inline“ in einer Schleife|

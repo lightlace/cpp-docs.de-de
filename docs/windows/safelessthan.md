@@ -1,13 +1,10 @@
 ---
 title: SafeLessThan | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThan
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthan"></a>SafeLessThan
 Bestimmt, ob eine Zahl kleiner als ein anderes ist.  
@@ -49,7 +44,7 @@ inline bool SafeLessThan (
  Die zweite Zahl. Dies muss vom Typ u sein.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Wenn `t` ist kleiner als `u`andernfalls `false`.  
+ `true` Wenn `t` ist kleiner als `u`andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird den standard-Vergleichsoperator verbessert, da `SafeLessThan` ermöglicht Ihnen, zwei verschiedene Arten von Zahl zu vergleichen.  

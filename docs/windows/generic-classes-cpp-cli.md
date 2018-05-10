@@ -1,13 +1,10 @@
 ---
 title: Generische Klassen (C + c++ / CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Generische Klassen (C++/CLI)
 Eine generische Klasse wird im folgenden Format deklariert:  
@@ -53,7 +48,7 @@ class-body
  Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   
  *Klassenschlüssel*  
- Entweder `class` oder`typename`  
+ Entweder `class` oder `typename`  
   
  *Type-Parameter-Bezeichner*,  
  Durch Trennzeichen getrennte Liste von Bezeichnern, die die Namen der Typparameter angeben.  
@@ -84,7 +79,7 @@ class-body
  *Deklaratoren*  
  Deklarationen von Variablen dieses Typs. Zum Beispiel: `^` *Bezeichner*[`,` ...]  
   
- Sie können generische Klassen, wie diese deklarieren (Beachten Sie, dass das Schlüsselwort **Klasse** kann verwendet werden, anstelle von **Typename**). In diesem Beispiel `ItemType`, `KeyType` und `ValueType` sind die unbekannte Typen, die an dem Punkt angegeben sind, in denen der Typ. `HashTable<int, int>`wird von ein konstruierter Typ des generischen Typs `HashTable<KeyType, ValueType>`. Eine Anzahl von verschiedenen konstruierte Typen kann aus eines einzelnen generischen Typs erstellt werden. Konstruierte Typen, die von generischen Klassen erstellt werden wie andere Typ des Ref-Klasse behandelt.  
+ Sie können generische Klassen, wie diese deklarieren (Beachten Sie, dass das Schlüsselwort **Klasse** kann verwendet werden, anstelle von **Typename**). In diesem Beispiel `ItemType`, `KeyType` und `ValueType` sind die unbekannte Typen, die an dem Punkt angegeben sind, in denen der Typ. `HashTable<int, int>` wird von ein konstruierter Typ des generischen Typs `HashTable<KeyType, ValueType>`. Eine Anzahl von verschiedenen konstruierte Typen kann aus eines einzelnen generischen Typs erstellt werden. Konstruierte Typen, die von generischen Klassen erstellt werden wie andere Typ des Ref-Klasse behandelt.  
   
 ```  
 // generic_classes_1.cpp  

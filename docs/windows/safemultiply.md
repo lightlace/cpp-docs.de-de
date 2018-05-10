@@ -1,13 +1,10 @@
 ---
 title: SafeMultiply | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeMultiply
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeMultiply function
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37ea091136521fc83fc63a8fb752e0f4f72cb49f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89581544e203249a548b49f0695b28662407229b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemultiply"></a>SafeMultiply
 Multipliziert zwei Zahlen in einer Weise, die schützt vor Ganzzahlüberlauf zusammen.  
@@ -53,7 +48,7 @@ inline bool SafeMultiply (
  Der Parameter, in denen `SafeMultiply` speichert das Ergebnis.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
+ `true` Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und eignet sich für einen einzelnen Multiplikationsvorgang ohne Erstellen einer Instanz von der [SafeInt-Klasse](../windows/safeint-class.md).  

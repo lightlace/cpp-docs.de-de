@@ -1,13 +1,10 @@
 ---
 title: Ressource Ressourcensymbol-Dialogfelds | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Resource Symbols dialog box
 - Change Symbol dialog box
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 486d4c6c89a43c9d91c655911fa7fee8a31ebd32
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-symbols-dialog-box"></a>Ressourcensymbole (Dialogfeld)
 Die **Ressourcensymbole** Dialogfeld können Sie neue Ressourcensymbole hinzufügen, ändern die Symbole, die angezeigt werden, oder fahren Sie mit der Position im Quellcode, in dem ein Symbol verwendet wird.  
@@ -51,7 +46,7 @@ Die **Ressourcensymbole** Dialogfeld können Sie neue Ressourcensymbole hinzufü
  **Neu**  
  Öffnet das Dialogfeld „Neues Symbol“, in dem Sie den Namen festlegen können und, falls erforderlich, einen Wert für einen neuen symbolischen Ressourcenbezeichner. Weitere Informationen finden Sie unter [Erstellen neuer Symbole](../windows/creating-new-symbols.md).  
   
- **Ändern**  
+ **Ändern Sie**  
  Öffnet das Dialogfeld „Symbol ändern“, in dem Sie den Namen oder Wert eines Symbols ändern können. Wenn das Symbol für ein Steuerelement oder eine Ressource in Gebrauch ist, kann das Symbol nur im entsprechenden Ressourcen-Editor geändert werden. Weitere Informationen finden Sie unter [ändern nicht zugewiesener Symbole](../windows/changing-unassigned-symbols.md).  
   
  **Verwendung anzeigen**  

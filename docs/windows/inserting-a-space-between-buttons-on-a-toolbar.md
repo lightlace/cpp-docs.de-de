@@ -1,31 +1,26 @@
 ---
-title: "Einfügen eines Abstands zwischen den Schaltflächen einer Symbolleiste | Microsoft Docs"
-ms.custom: 
+title: Einfügen eines Abstands zwischen den Schaltflächen einer Symbolleiste | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Toolbar editor, spacing toolbar buttons
 - toolbar buttons (in Toolbar editor), space between buttons
 ms.assetid: 4925ea6b-5d3a-4949-a920-bf371a37e529
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f290433989ed56912309f86ce715fb7f2ede7d51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11e5c964092bbd67137ed3b6084da9589b026833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Einfügen eines Abstands zwischen den Schaltflächen einer Symbolleiste
 Im Allgemeinen um ein Leerzeichen zwischen den Schaltflächen einzufügen, einfach ziehen Sie sie von anderen auf der Symbolleiste. Um Speicherplatz zu entfernen, ziehen Sie sie zueinander.  

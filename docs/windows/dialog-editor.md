@@ -1,13 +1,10 @@
 ---
 title: Dialog-Editor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>Dialog-Editor
-Mit dem Dialog-Editor ist die Bearbeitung und Erstellung von Dialogfeldressourcen möglich. Sie öffnen den Dialog-Editor durch Doppelklicken auf ein Dialogfeld RC-Datei in das Fenster "Ressourcenansicht" (**View &#124; Ressourcenansicht**). Beachten Sie, dass die Ressourcenansicht in Express-Editionen nicht verfügbar ist.  
+Mit dem Dialog-Editor ist die Bearbeitung und Erstellung von Dialogfeldressourcen möglich. Sie öffnen den Dialog-Editor durch Doppelklicken auf ein Dialogfeld RC-Datei in das Fenster "Ressourcenansicht" (**Ansicht &#124; Ressourcenansicht**). Beachten Sie, dass die Ressourcenansicht in Express-Editionen nicht verfügbar ist.  
   
  Einer der ersten Schritte beim Erstellen eines neuen Dialogfelds (oder einer Dialogfeldvorlage) ist das Hinzufügen von Steuerelementen zum Dialogfeld. Steuerelemente lassen sich im Dialog-Editor so anordnen, dass sie einer bestimmten Größe, Form oder Ausrichtung entsprechen. Außerdem können sie bei der Arbeit innerhalb des Dialogfelds verschoben werden. Steuerelemente lassen sich darüber hinaus problemlos löschen.  
   

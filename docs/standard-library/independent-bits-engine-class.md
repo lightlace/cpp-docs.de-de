@@ -2,11 +2,8 @@
 title: independent_bits_engine-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::independent_bits_engine
@@ -15,21 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01979567e29796288c124e6e5a55dcf9b44ee6e0
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine-Klasse
 
-Generiert eine zufällige Zahlensequenz mit einer angegebenen Anzahl von Bits, indem Bits aus vom Basismodul zurückgegebenen Werten erneut verpackt werden.
+Generiert eine zufällige Zahlensequenz mit einer angegebenen Anzahl von Bits, indem Bits aus von der Basis-Engine zurückgegebenen Werten erneut verpackt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,11 +48,11 @@ class independent_bits_engine;
 |`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
 |`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
 
-Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).
+Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt einen *Moduladapter*, der Werte produziert, indem er die von seinem Basismodul zurückgegebenen Bits neu verpackt. Dies führt zu `W`-Bit-Werten.
+Diese Vorlagenklasse beschreibt einen *Engine-Adapter*, der Werte produziert, indem er die von seiner Basis-Engine zurückgegebenen Bits neu verpackt. Dies führt zu `W`-Bit-Werten.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,13 +1,10 @@
 ---
-title: "Erstellen eines 256-Farben-Symbols oder Cursors (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Erstellen eines 256-Farben-Symbols oder Cursors (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - colors, cursors
 - icons, color
 ms.assetid: 2738089b-4fd3-4c45-96ae-6a15e4c6b780
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11c25c808ad9d1917413a66044e052e4c49ea584
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52c9aed6e55a11eea8eeb9b4979cbe43b016c26f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Erstellen eines Symbols oder Cursors mit 256 Farben (Bildbearbeitung für Symbole)
 Mit der bildbearbeitung können Symbole und Cursor mit einer 256-Farben-Palette auswählbarer groß (64 × 64) mit angegebener Größe sein. Nach dem Erstellen der Ressource ist ein Gerät Image-Format aktiviert.  

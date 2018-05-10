@@ -1,12 +1,9 @@
 ---
 title: ISource-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>ISource-Klasse
 Die `ISource`-Klasse ist die Schnittstelle für alle Quellblöcke. Quellblöcke geben Meldungen an `ITarget`-Blöcke weiter.  
@@ -71,7 +66,7 @@ class ISource;
 |----------|-----------------|  
 |[accept](#accept)|Ruft beim Überschreiben in einer abgeleiteten Klasse akzeptiert eine Meldung, die von diesem angebotenen wurde `ISource` -Block übertragen des Besitzes an den Aufrufer.|  
 |[acquire_ref](#acquire_ref)|Ruft beim Überschreiben in einer abgeleiteten Klasse eine Verweisanzahl für dieses `ISource` Block, um den Löschvorgang zu verhindern.|  
-|[consume](#consume)|Ruft beim Überschreiben in einer abgeleiteten Klasse verwendet eine Meldung, die zuvor von diesem angebotenen `ISource` blockieren und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
+|[Nutzen](#consume)|Ruft beim Überschreiben in einer abgeleiteten Klasse verwendet eine Meldung, die zuvor von diesem angebotenen `ISource` blockieren und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
 |[link_target](#link_target)|Ruft beim Überschreiben in einer abgeleiteten Klasse einen Zielblock verknüpft, mit diesem `ISource` Block.|  
 |[release](#release)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.|  
 |[release_ref](#release_ref)|Ruft beim Überschreiben in einer abgeleiteten Klasse einen Verweiszähler für dieses frei `ISource` Block.|  
@@ -151,7 +146,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Hinweise  
  Die `consume` Methode ist vergleichbar mit `accept`, aber immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen `true`.  
   
-##  <a name="dtor"></a> ~ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  Zerstört das `ISource`-Objekt.  
   

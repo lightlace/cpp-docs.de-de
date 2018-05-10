@@ -1,13 +1,10 @@
 ---
-title: "Erstellen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Erstellen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Erstellen eines Gerätebilds (Bildbearbeitung für Symbole)
 Wenn Sie eine neue Symbols oder Cursors mit Ressource, das Bild-Editor erstellen erstellt zunächst ein Bild in einem bestimmten Format (32 x 32, 16 Farben für Symbole und 32 x 32, Monochrom für Cursor). Sie können Bilder in verschiedenen Größen und Formate auf das erste Symbol oder Cursor hinzufügen und jede zusätzliche Bild nach Bedarf für die verschiedenen Anzeigegeräte bearbeiten. Sie können ein Bild auch durch Ausschneiden und Einfügen aus einem vorhandenen Image-Typ oder von einer Bitmap in einem Graphics-Programm erstellt bearbeiten.  

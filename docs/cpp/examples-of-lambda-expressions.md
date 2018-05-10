@@ -1,34 +1,29 @@
 ---
-title: "Beispiele für Lambdaausdrücke | Microsoft Docs"
-ms.custom: 
+title: Beispiele für Lambdaausdrücke | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Beispiele für Lambdaausdrücke
 Dieser Artikel zeigt, wie Lambdaausdrücke in Ihren Programmen zu verwenden sind. Einen Überblick über Lambda-Ausdrücken finden Sie unter [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md). Weitere Informationen zur Struktur eines Lambda-Ausdrucks finden Sie unter [Lambda-Ausdruckssyntax](../cpp/lambda-expression-syntax.md).  
   
-##  <a name="declaringLambdaExpressions"></a>Deklarieren von Lambdaausdrücken  
+##  <a name="declaringLambdaExpressions"></a> Deklarieren von Lambdaausdrücken  
   
 ### <a name="example-1"></a>Beispiel 1  
  Da ein Lambda-Ausdruck typisiert ist, können Sie sie zum Zuweisen einer `auto` Variable oder ein [Funktion](../standard-library/function-class.md) -Objekts, wie hier gezeigt:  
@@ -109,7 +104,7 @@ int main()
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>Aufrufen von Lambdaausdrücken  
+##  <a name="callingLambdaExpressions"></a> Aufrufen von Lambdaausdrücken  
  Sie können einen Lambdaausdruck sofort aufrufen, wie im nächsten Codeausschnitt gezeigt wird. Der zweite Ausschnitt zeigt, wie einen Lambda als Argument für C++-Standardbibliothek Algorithmen wie z. B. übergeben `find_if`.  
   
 ### <a name="example-1"></a>Beispiel 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>Schachteln von Lambdaausdrücken  
+##  <a name="nestingLambdaExpressions"></a> Schachteln von Lambdaausdrücken  
   
 ### <a name="example"></a>Beispiel  
  Sie können einen Lambda-Ausdruck innerhalb eines anderen schachteln, wie in diesem Beispiel gezeigt wird. Der innere Lambda-Ausdruck multipliziert sein Argument mit 2 und gibt das Ergebnis zurück. Der äußere Lambda-Ausdruck ruft den inneren Lambda-Ausdruck mit seinem Argument auf und fügt dem Ergebnis 3 hinzu.  
@@ -222,7 +217,7 @@ int main()
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>Höherer Ordnung Lambda-Funktionen  
+##  <a name="higherOrderLambdaExpressions"></a> Höherer Ordnung Lambda-Funktionen  
   
 ### <a name="example"></a>Beispiel  
  Viele Programmiersprachen unterstützen das Konzept einer *Funktion höherer Ordnung.* Eine Funktion höherer Ordnung ist ein Lambda-Ausdruck, der einen anderen Lambda-Ausdruck als Argument akzeptiert oder einen Lambda-Ausdruck zurückgibt. Sie können die [Funktion](../standard-library/function-class.md) -Klasse verwenden, um einen C++-Lambda-Ausdruck Verhalten zu aktivieren, wie eine Funktion höherer Ordnung. Das folgende Beispiel zeigt einen Lambda-Ausdruck, der ein `function`-Objekt zurückgibt, und einen Lambda-Ausdruck, der ein `function`-Objekt als sein Argument akzeptiert.  
@@ -271,7 +266,7 @@ int main()
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>Verwenden eines Lambda-Ausdrucks in einer Funktion  
+##  <a name="methodLambdaExpressions"></a> Verwenden eines Lambda-Ausdrucks in einer Funktion  
   
 ### <a name="example"></a>Beispiel  
  Sie können Lambda-Ausdrücke im Text einer Funktion verwenden. Der Lambda-Ausdruck kann auf alle Funktionen oder Datenmember zugreifen, auf die die einschließende Funktion zugreifen kann. Sie können den `this`-Zeiger explizit oder implizit erfassen, um den Zugriff auf die Funktionen und Datenmember der einschließenden Klasse bereitzustellen.  
@@ -366,7 +361,7 @@ int main()
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>Verwenden von Lambdaausdrücken mit Vorlagen  
+##  <a name="templateLambdaExpressions"></a> Verwenden von Lambdaausdrücken mit Vorlagen  
   
 ### <a name="example"></a>Beispiel  
  Da Lambda-Ausdrücke typisiert sind, können Sie sie mit C++-Vorlagen verwenden. Im folgenden Beispiel werden die Funktionen `negate_all` und `print_all` dargestellt. Die `negate_all`-Funktion wendet den unären `operator-` auf jedes Element im `vector`-Objekt an. Die `print_all`-Funktion gibt jedes Element im `vector`-Objekt auf der Konsole aus.  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>Behandeln von Ausnahmen  
+##  <a name="ehLambdaExpressions"></a> Behandeln von Ausnahmen  
   
 ### <a name="example"></a>Beispiel  
  Der Text eines Lambda-Ausdrucks folgt den Regeln für die strukturierte Ausnahmebehandlung (SEH) und die C++-Ausnahmebehandlung. Sie können eine ausgelöste Ausnahme im Text eines Lambda-Ausdrucks behandeln oder die Ausnahmebehandlung auf den umschließenden Gültigkeitsbereich verzögern. Im folgenden Beispiel wird die `for_each`-Funktion und ein Lambda-Ausdruck verwendet, um ein `vector`-Objekt mit den Werten eines anderen Objekts zu füllen. Er verwendet ein `try` / `catch` Block, um ungültigen Zugriff auf den ersten Vektor zu behandeln.  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>Verwenden von Lambda-Ausdrücken mit verwalteten Typen (C + c++ / CLI)  
+##  <a name="managedLambdaExpressions"></a> Verwenden von Lambda-Ausdrücken mit verwalteten Typen (C + c++ / CLI)  
   
 ### <a name="example"></a>Beispiel  
  Die Erfassungsklausel eines Lambda-Ausdrucks darf keine Variable mit einem verwalteten Typ enthalten. Sie können jedoch ein Argument mit einem verwalteten Typ an die Parameterliste eines Lambda-Ausdrucks übergeben. Das folgende Beispiel enthält einen Lambda-Ausdruck, der die lokale nicht verwaltete `ch`-Variable nach ihrem Wert erfasst und ein <xref:System.String?displayProperty=fullName>-Objekt als Parameter akzeptiert.  

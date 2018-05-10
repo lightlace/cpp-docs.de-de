@@ -1,13 +1,10 @@
 ---
-title: "Bearbeiten von Grafischen Ressourcen (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Bearbeiten von Grafischen Ressourcen (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Bearbeiten von grafischen Ressourcen (Bildbearbeitung für Symbole)
 Grafische Ressourcen sind Bilder, die Sie für Ihre Anwendung definieren. Sie können die Freihand zeichnen oder Formen gezeichnet. Auszuwählender Bestandteilen eines Bilds für die Bearbeitung, spiegeln oder Ändern der Größe oder können Sie einen benutzerdefinierten Pinsel aus einem ausgewählten Teil eines Images erstellen und mit den Pinsel zeichnen. Sie können Bildeigenschaften definieren, speichern Sie die Bilder in verschiedenen Formaten und Konvertieren von Bildern aus einem Format in eine andere.  

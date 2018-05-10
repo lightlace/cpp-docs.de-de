@@ -1,13 +1,10 @@
 ---
 title: C-Funktionsdefinitionen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>C-Funktionsdefinitionen
 Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der Parameter, die sie erwartungsgemäß empfangen wird, und ihren Rückgabetyp an. Eine Funktionsdefinition enthält auch einen Funktionsrumpf mit den Deklarationen ihrer lokalen Variablen und die Anweisungen, die bestimmen, was die Funktion durchführt.  
@@ -72,7 +67,7 @@ Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der
  *direct-declarator*: /\* Ein Funktionsdeklarator \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Neuer Deklarator \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Veralteter Deklarator \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Veralteter Deklarator \*/  
   
  Die Parameterliste in einer Definition verwendet diese Syntax:  
   
@@ -101,7 +96,7 @@ Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der
  Die Syntax für den Funktionsrumpf lautet:  
   
  *compound-statement*: /\* Der Funktionsrumpf \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  Die einzigen Speicherklassenspezifizierer, die eine Funktionsdeklaration ändern können, sind `extern` und **static**. Der Bezeichner `extern` gibt an, dass von anderen Dateien auf die Funktion verwiesen werden kann; das bedeutet, der Funktionsname wird in den Linker exportiert. Der **static**-Bezeichner gibt an, dass auf die Funktion nicht von anderen Dateien verwiesen werden kann, d.h., der Name wird nicht vom Linker exportiert. Wenn keine Speicherklasse in einer Funktionsdefinition steht, wird `extern` angenommen. In jedem Fall ist die Funktion stets vom Definitionspunkt bis an das Ende der Datei sichtbar.  
   

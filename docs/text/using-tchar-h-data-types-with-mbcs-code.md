@@ -1,13 +1,10 @@
 ---
 title: Verwenden von TCHAR. Datentypen mit _MBCS-Code H | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 - TCHAR
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Verwenden von TCHAR.H-Datentypen in _MBCS-Code
 Wenn die manifestkonstante **_MBCS** wird definiert, einen bestimmten generischen Textroutinen ist einem der folgenden Arten von Routinen:  
@@ -48,7 +43,7 @@ Wenn die manifestkonstante **_MBCS** wird definiert, einen bestimmten generische
     char * _tcsrev(char *);  
     ```  
   
-     Im Standardfall den Prototyp für `_tcsrev` ordnet `_mbsrev` über ein Thunk in Libc.lib. Dadurch werden die Typen von der `_mbsrev` eingehende Parameter und ausgehende Rückgabewert aus **_TCHAR \***  (d. h. `char`  **\*** ) zu `unsigned` `char` **\***. Diese Methode wird sichergestellt, dass bei Verwendung von übereinstimmenden Typ **_TCHAR**, aber es ist wegen des Verwaltungsaufwands für Funktion Aufruf relativ langsam.  
+     Im Standardfall den Prototyp für `_tcsrev` ordnet `_mbsrev` über ein Thunk in Libc.lib. Dadurch werden die Typen von der `_mbsrev` eingehende Parameter und ausgehende Rückgabewert aus **_TCHAR \***  (d. h. `char` **\***) zu `unsigned` `char` **\***. Diese Methode wird sichergestellt, dass bei Verwendung von übereinstimmenden Typ **_TCHAR**, aber es ist wegen des Verwaltungsaufwands für Funktion Aufruf relativ langsam.  
   
 -   Verwenden Sie Inlinefunktionen, indem Sie die folgende Präprozessoranweisung in Ihren Code integrieren.  
   
@@ -77,7 +72,7 @@ Wenn die manifestkonstante **_MBCS** wird definiert, einen bestimmten generische
     #define _tcschr _mbschr  
     ```  
   
-     Wenn Sie diesen Ansatz verwenden, müssen Sie darauf achten, die Verwendung der entsprechenden Datentypen für Zeichenfolgenargumente und Rückgabewerte Zeichenfolge stellt sicher sein. Sie können die Typumwandlung verwenden, um sicherzustellen, dass der richtige Datentyp entsprechen oder Sie können die **_TXCHAR** Allgemeintext-Datentyp. **_TXCHAR** Zuordnungen auf den Typ `char` in SBCS-Code jedoch Zuordnungen auf den Typ `unsigned` `char` in MBCS-Code. Weitere Informationen über generische Textfunktion Makros finden Sie unter [Zuordnen von generischem Text](../c-runtime-library/generic-text-mappings.md) in der *Run-Time Library Reference*.  
+     Wenn Sie diesen Ansatz verwenden, müssen Sie darauf achten, die Verwendung der entsprechenden Datentypen für Zeichenfolgenargumente und Rückgabewerte Zeichenfolge stellt sicher sein. Zum Sicherstellen einer ordnungsgemäßen Typübereinstimmung können Sie die Typumwandlung oder generischen Text des Datentyps **_TXCHAR** verwenden. **_TXCHAR** Zuordnungen auf den Typ `char` in SBCS-Code jedoch Zuordnungen auf den Typ `unsigned` `char` in MBCS-Code. Weitere Informationen über generische Textfunktion Makros finden Sie unter [Zuordnen von generischem Text](../c-runtime-library/generic-text-mappings.md) in der *Run-Time Library Reference*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

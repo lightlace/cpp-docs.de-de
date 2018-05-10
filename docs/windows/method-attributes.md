@@ -1,31 +1,26 @@
 ---
 title: Methodenattribute | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>Methodenattribut
 Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder Schnittstelle.  
@@ -34,7 +29,7 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Gibt an, dass die Eigenschaft die Datenbindung unterstützt.|  
 |[call_as](../windows/call-as.md)|Ermöglicht es einer nicht remotefähig-Funktion, um eine remote-Funktion zugeordnet werden.|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[db_column](../windows/db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|  
 |[db_command](../windows/db-command.md)|Erstellt einen OLE DB-Befehl.|  
 |[db_param](../windows/db-param.md)|Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter und begrenzt die Variable.|  
@@ -52,13 +47,13 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |[ID](../windows/id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode in einer Schnittstelle oder Disp-Schnittstelle).|  
 |[immediatebind](../windows/immediatebind.md)|Gibt an, die Datenbank sofort aller Änderungen an eine Eigenschaft eines Objekts von datengebundenen benachrichtigt wird.|  
 |[in](../windows/in-cpp.md)|Gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden.|  
-|[lokale](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
+|[local](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.|  
 |[propget](../windows/propget.md)|Gibt eine Eigenschaft Accessor-Funktion.|  
 |[propput](../windows/propput.md)|Gibt eine Eigenschaften festlegende Funktion an.|  
 |[propputref](../windows/propputref.md)|Gibt eine Eigenschaften festlegende Funktion, die einen Verweis anstelle eines Werts verwendet.|  
 |[ptr](../windows/ptr.md)|Kennzeichnet einen Zeiger als vollständige Zeiger.|  
-|[Bereich](../windows/range-cpp.md)|Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.|  
+|[range](../windows/range-cpp.md)|Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.|  
 |[requestedit](../windows/requestedit.md)|Gibt an, dass die Eigenschaft unterstützt die **OnRequestEdit** Benachrichtigung.|  
 |[restricted](../windows/restricted.md)|Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle kann nicht nach dem Zufallsprinzip aufgerufen werden.|  
 |[satype](../windows/satype.md)|Gibt den Datentyp, der die **SAFEARRAY** Struktur.|  

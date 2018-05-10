@@ -1,13 +1,10 @@
 ---
-title: "Symbolleiste (Bildbearbeitung für Symbole) | Microsoft Docs"
-ms.custom: 
+title: Symbolleiste (Bildbearbeitung für Symbole) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - Properties window
 - Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 800fb1007076902703abd3d3185c398dbf40fdb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3dd53a92168724748940ca2def17a359f1f23e80
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Symbolleiste (Bildbearbeitung für Symbole)
 Die **Bildbearbeitung** Symbolleiste enthält Tools zum Zeichnen, zeichnen Text eingeben, löschen und Bearbeiten von Ansichten. Es enthält auch eine Optionsauswahl, mit der Sie Optionen für die Verwendung der einzelnen Tools auswählen können. Sie können z. B. aus verschiedenen Pinsel Breiten, Vergrößerungsfaktoren und Stile.  
@@ -49,7 +44,7 @@ Symbolleiste des Grafik-Editors
   
  Mit der **Option** Selektor können Sie die Breite des, Pinselstrich usw. anzugeben. Das Symbol auf der **Option** Selektor Schaltfläche ändert sich je nachdem welches Tool Sie ausgewählt haben.  
   
- ![Zeichnung &#45; Form Auswahl auf der Symbolleiste des Grafik-Editor](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector")  
+ ![Zeichnen von&#45;Form Auswahl auf der Symbolleiste des Grafik-Editor](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector")  
 Optionsauswahl auf der Symbolleiste des Grafik-Editor  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
