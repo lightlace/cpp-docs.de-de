@@ -1,12 +1,9 @@
 ---
 title: Extent-Klasse (C++-AMP) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent-Klasse (C++ AMP)
 Stellt einen Vektor eines *N* ganzzahligen Werten, die angeben, das die Begrenzungen des ein *N*-dimensionalen Raum, die den Ursprung 0 aufweist. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert.  
@@ -64,9 +59,9 @@ class extent;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[contains](#contains)|Überprüft, ob das angegebene `extent`-Objekt über den angegebenen Rang verfügt.|  
+|[Enthält](#contains)|Überprüft, ob das angegebene `extent`-Objekt über den angegebenen Rang verfügt.|  
 |[size](#size)|Gibt die lineare Gesamtgröße des Wertebereichs zurück (in der Einheit Elemente).|  
-|[tile](#tile)|Erzeugt ein `tiled_extent`-Objekt mit den Kachelwertebereichen, die durch angegebene Dimensionen festgelegt werden.|  
+|[Kachel](#tile)|Erzeugt ein `tiled_extent`-Objekt mit den Kachelwertebereichen, die durch angegebene Dimensionen festgelegt werden.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -89,7 +84,7 @@ class extent;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[rank Constant](#rank)|Ruft den Rang des `extent`-Objekts ab.|  
+|[Rank-Konstante](#rank)|Ruft den Rang des `extent`-Objekts ab.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `extent`  

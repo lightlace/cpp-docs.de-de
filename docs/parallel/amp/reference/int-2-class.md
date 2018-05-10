@@ -1,12 +1,9 @@
 ---
 title: int_2-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::y
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5abe11c29263817c8530d01fb3e190ba5866326
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int2-class"></a>int_2-Klasse
 Stellt einen kurzen Vektor aus zwei ganzen Zahlen dar.  
@@ -77,37 +72,37 @@ class int_2;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |int_2::get_x||  
-|int_2::get_xy||  
-|int_2::get_y||  
+|int_2:: get_xy||  
+|int_2:: get_Y||  
 |int_2::get_yx||  
 |int_2::ref_g||  
 |int_2::ref_r||  
 |int_2::ref_x||  
 |int_2::ref_y||  
-|int_2::set_x||  
-|int_2::set_xy||  
-|int_2::set_y||  
+|int_2:: set_X||  
+|int_2:: set_xy||  
+|int_2:: set_y||  
 |int_2::set_yx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|int_2::operator-||  
-|int_2::operator--||  
+|int_2::-||  
+|int_2::--||  
 |int_2::operator%=||  
-|int_2::operator&=||  
+|int_2:: & =||  
 |int_2::operator*=||  
 |int_2::operator/=||  
 |int_2::operator^=||  
-|int_2::operator&#124;=||  
-|int_2::operator~||  
-|int_2::operator++||  
-|int_2::operator+=||  
+|int_2::&#124;=||  
+|int_2:: ~||  
+|int_2:: Operator++-||  
+|int_2:: Operator +=||  
 |int_2::operator<\<=||  
 |int_2::operator=||  
-|int_2::operator-=||  
-|int_2::operator>>=||  
+|int_2:: Operator-=||  
+|int_2:: >> =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -124,7 +119,7 @@ class int_2;
 |int_2::r||  
 |int_2::rg||  
 |int_2::x||  
-|int_2::xy||  
+|int_2:: XY||  
 |int_2::y||  
 |int_2::yx||  
   

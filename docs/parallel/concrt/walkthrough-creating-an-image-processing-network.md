@@ -1,30 +1,25 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer Bildverarbeitungsnetzwerks | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks
 Dieses Dokument veranschaulicht, wie zum Erstellen eines Netzwerks asynchroner Nachrichtenblöcke die bildverarbeitung.  
@@ -53,7 +48,7 @@ Dieses Dokument veranschaulicht, wie zum Erstellen eines Netzwerks asynchroner N
   
 -   [Vollständiges Beispiel](#complete)  
   
-##  <a name="functionality"></a>Definieren der Funktionen für die Bildverarbeitung  
+##  <a name="functionality"></a> Definieren der Funktionen für die Bildverarbeitung  
  In diesem Abschnitt wird gezeigt, die Supportfunktionen, die Bildverarbeitungsnetzwerk verwendet wird, zum Arbeiten mit Bildern, die vom Datenträger gelesen werden.  
   
  Die folgenden Funktionen `GetRGB` und `MakeColor`, extrahieren und kombinieren Sie jeweils die einzelnen Komponenten der angegebenen Farbe.  
@@ -80,7 +75,7 @@ Dieses Dokument veranschaulicht, wie zum Erstellen eines Netzwerks asynchroner N
   
  [[Nach oben](#top)]  
   
-##  <a name="network"></a>Bildverarbeitungsnetzwerk erstellen  
+##  <a name="network"></a> Bildverarbeitungsnetzwerk erstellen  
  In diesem Abschnitt wird beschrieben, wie zum Erstellen eines Netzwerks asynchroner Nachrichtenblöcke die bildverarbeitung auf jede [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] (JPG) in einem angegebenen Verzeichnis. Das Netzwerk führt die folgenden bildverarbeitungs-Vorgänge:  
   
 1.  Konvertieren Sie für jedes Bild, das von Tom erstellt wurde in Graustufen.  
@@ -135,7 +130,7 @@ Dieses Dokument veranschaulicht, wie zum Erstellen eines Netzwerks asynchroner N
 |`colormask`|Ein `transformer` -Objekt, das die grünen und blauen Farbkomponenten aus Images entfernt werden, die die Farbe Rot dominiert haben.|  
 |`darken`|Ein `transformer` -Objekt, das Bilder dunkler, die die Farbe Rot dominiert aufweisen.|  
 |`sepiatone`|Ein `transformer` -Objekt, das betrifft Sepia Ton Bilder, die nicht von Tom erstellt werden und sind nicht vorwiegend Rot.|  
-|`save_bitmap`|Ein `transformer` Objekt, das die verarbeiteten speichert `image` auf den Datenträger als Bitmap. `save_bitmap`Ruft den ursprünglichen Dateinamen aus der `map` -Objekt an und ändert die Dateinamenerweiterung, BMP.|  
+|`save_bitmap`|Ein `transformer` Objekt, das die verarbeiteten speichert `image` auf den Datenträger als Bitmap. `save_bitmap` Ruft den ursprünglichen Dateinamen aus der `map` -Objekt an und ändert die Dateinamenerweiterung, BMP.|  
 |`delete_bitmap`|Ein `transformer` -Objekt, das den Speicher für die Bilder freigegeben.|  
 |`decrement`|Ein [Call](../../parallel/concrt/reference/call-class.md) -Objekt, das als Terminalknoten im Netzwerk fungiert. Es verringert den `countdown_event` Objekt, das die Hauptassembly der Anwendung zu signalisieren, dass ein Bild verarbeitet wurde.|  
   
@@ -155,7 +150,7 @@ Dieses Dokument veranschaulicht, wie zum Erstellen eines Netzwerks asynchroner N
   
  [[Nach oben](#top)]  
   
-##  <a name="complete"></a>Vollständiges Beispiel  
+##  <a name="complete"></a> Vollständiges Beispiel  
  Der folgende Code veranschaulicht das vollständige Beispiel. Die `wmain` Funktion verwaltet die [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] -Bibliothek und ruft die `ProcessImages` Prozess-Funktion die [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] Dateien in die `Sample Pictures` Verzeichnis.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Dieses Dokument veranschaulicht, wie zum Erstellen eines Netzwerks asynchroner N
   
  ![Beispielausgabe für das Beispiel](../../parallel/concrt/media/concrt_imageout.png "Concrt_imageout")  
   
- `Lighthouse`wurde von Tom Alphin erstellt, und daher in Graustufen konvertiert. `Chrysanthemum`, `Desert`, `Koala`, und `Tulips` haben Sie die Farbe Rot dominiert die blauen und grünen Farbkomponenten entfernt haben und daher dunkler sind. `Hydrangeas`, `Jellyfish`, und `Penguins` entsprechen die Standardkriterien und sind daher Sepia Farbtönen an.  
+ `Lighthouse` wurde von Tom Alphin erstellt, und daher in Graustufen konvertiert. `Chrysanthemum`, `Desert`, `Koala`, und `Tulips` haben Sie die Farbe Rot dominiert die blauen und grünen Farbkomponenten entfernt haben und daher dunkler sind. `Hydrangeas`, `Jellyfish`, und `Penguins` entsprechen die Standardkriterien und sind daher Sepia Farbtönen an.  
   
  [[Nach oben](#top)]  
   

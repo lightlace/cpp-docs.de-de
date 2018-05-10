@@ -1,27 +1,22 @@
 ---
 title: 2.6.5 flush-Direktive | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush-Anweisung
 Die **leeren** Richtlinie, ob explizit oder implizit, gibt einen "threadübergreifenden" Sequenzpunkt, an dem die Implementierung erforderlich ist, um sicherzustellen, dass alle Threads in einem Team eine konsistente Sicht der bestimmte Objekte (unten) in angegeben haben, Arbeitsspeicher. Dies bedeutet, dass vorherige auswertungen von Ausdrücken, die auf diese Objekte verweisen, abgeschlossen sind, und nachfolgende auswertungen wurden noch nicht gestartet. Z. B. Compiler müssen die Werte der Objekte von Registern wiederherstellen, in den Speicher und Hardware möglicherweise leeren Schreibzugriff Puffer in den Speicher und die Werte der Objekte aus dem Speicher erneut zu laden.  
@@ -40,7 +35,7 @@ Die **leeren** Richtlinie, ob explizit oder implizit, gibt einen "threadübergre
   
 -   Bei Eingang und das Ende von **kritisch**  
   
--   Bei Eingang und das Ende von`ordered`  
+-   Bei Eingang und das Ende von `ordered`  
   
 -   Bei Eingang und das Ende von **parallel**  
   

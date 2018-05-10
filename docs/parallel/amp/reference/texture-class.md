@@ -1,12 +1,9 @@
 ---
 title: Texture-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture
@@ -26,17 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="texture-class"></a>texture-Klasse
 Eine Textur ist ein Datenaggregat in einem `accelerator_view`-Objekt in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert entspricht dem C++ primitivem Typ ( `unsigned int`, `int`, `float`, `double`), ein skalarer Typ ( `norm`, oder `unorm`), oder einem kurzen vektortyp entspricht.  
@@ -69,7 +64,7 @@ class texture;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Texture-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `texture`-Klasse.|  
-|[~texture Destructor](#ctor)|Zerstört das `texture`-Objekt.|  
+|[~ texture-Destruktor](#ctor)|Zerstört das `texture`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -95,7 +90,7 @@ class texture;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[rank Constant](#rank)|Ruft den Rang des `texture`-Objekts ab.|  
+|[Rank-Konstante](#rank)|Ruft den Rang des `texture`-Objekts ab.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -150,7 +145,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  Der Typ der Elemente in der Textur.  
   
-##  <a name="data"></a> data 
+##  <a name="data"></a> Daten 
 
  Gibt einen CPU-Zeiger auf Rohdaten dieser Textur zurück.  
   
@@ -320,7 +315,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a> set 
+##  <a name="set"></a> Festlegen 
 
  Legt den Wert des Elements am angegebenen Index ab.  
   

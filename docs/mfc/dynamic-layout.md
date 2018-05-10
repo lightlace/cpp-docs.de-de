@@ -1,27 +1,22 @@
 ---
 title: Dynamisches Layout | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Dynamisches Layout
 Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutzer ändern kann, und Sie können steuern, wie, die das Layout auf die Änderung der Größe angepasst. Beispielsweise können Sie Schaltflächen am unteren Rand eines Dialogfelds anfügen, sodass sie sich immer am unteren Rand befinden. Sie können auch bestimmte Steuerelemente einrichten, wie z. B. Textfelder, Listenfelder und Bearbeitungsfelder, die erweitert werden, wenn der Benutzer das Dialogfeld erweitert.  
@@ -46,7 +41,7 @@ Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutz
   
      ![Öffnen Sie das Dialogfeld, in dem Ressourcen-Editor. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Wählen Sie ein Steuerelement aus, und legen Sie im Eigenschaftenfenster seine Eigenschaften für das dynamische Layout fest. Die **dynamisches Layout** Abschnitt im Eigenschaftenfenster die Eigenschaften enthält **Verschiebungstyp**, **Größentyp**, und abhängig von den für diese Eigenschaften ausgewählten Werten bestimmte Eigenschaften, die definieren, wie viele Steuerelemente verschieben oder Ändern der Größe. **Verschiebungstyp** bestimmt, wie ein Steuerelement verschoben wird wie die Größe des Dialogfelds geändert wird. **Größentyp** bestimmt, wie die Größe eines Steuerelements geändert wird, wie die Größe des Dialogfelds geändert wird. **Verschiebungstyp** und **Größentyp** möglicherweise **horizontale**, **vertikale**, **beide**, oder **keine** je nach den Dimensionen, die Sie dynamisch ändern möchten. Horizontal ist die X-Dimension. Vertikal ist die Y-Richtung.  
+2.  Wählen Sie ein Steuerelement aus, und legen Sie im Eigenschaftenfenster seine Eigenschaften für das dynamische Layout fest. Die **dynamisches Layout** Abschnitt im Eigenschaftenfenster die Eigenschaften enthält **Verschiebungstyp**, **Größentyp**, und abhängig von den für diese Eigenschaften ausgewählten Werten bestimmte Eigenschaften, die definieren, wie viele Steuerelemente verschieben oder Ändern der Größe. **Verschiebungstyp** bestimmt, wie ein Steuerelement verschoben wird wie die Größe des Dialogfelds geändert wird. **Größentyp** bestimmt, wie die Größe eines Steuerelements geändert wird, wie die Größe des Dialogfelds geändert wird. **Verschiebungstyp** und **Größentyp** möglicherweise **horizontale**, **vertikale**, **beide**, oder **keine**je nach den Dimensionen, die Sie dynamisch ändern möchten. Horizontal ist die X-Dimension. Vertikal ist die Y-Richtung.  
   
 3.  Wenn Sie möchten ein Steuerelement, z. B. eine Schaltfläche an eine feste Größe und Position unten rechts bleibt, ist wie üblich, dass die **OK** oder **"Abbrechen"** legen Sie die Schaltflächen, die **Größentyp** zu  **Keine**, und legen Sie die **Verschiebungstyp** auf **beide**. Für die **Verschiebung X** und **Verschiebung Y** Werte unter **Verschiebungstyp**, legen Sie 100 %, dazu führen, dass das Steuerelement einen festen Abstand zur unteren rechten Ecke beibehält.  
   

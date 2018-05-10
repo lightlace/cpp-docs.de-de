@@ -2,21 +2,19 @@
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Melden eines Problems mit dem Visual C++-Toolset
 
@@ -108,7 +106,7 @@ Bei einer Reproduktion handelt es sich um ein vollständiges, eigenständiges Qu
 
 Eine gute Reproduktion weist folgende Merkmale auf:
 
-- **Minimal.** Die Reproduktionen sollte so klein wie möglich sein und dennoch das aufgetretene Problem exakt veranschaulichen. Reproduktionen müssen nicht komplex oder realistisch sein, sondern nur den Code anzeigen, der dem Standard oder der dokumentierten Compilerimplementierung entspricht. Im Fall einer fehlenden Diagnose muss der Code angezeigt werden, der nicht konform ist. Einfache Reproduktionen, die nur den Code enthalten, der für das Veranschaulichen des Problems relevant ist, sind am besten. Wenn Sie Code entfernen oder den Code vereinfachen können, ohne Konformität einzubüßen oder das Problem zu verändern, ist dies erwünscht. Sie müssen keine Beispiele für funktionierenden Code einfügen. 
+- **Minimal.** Die Reproduktionen sollte so klein wie möglich sein und dennoch das aufgetretene Problem exakt veranschaulichen. Reproduktionen müssen nicht komplex oder realistisch sein, sondern nur den Code anzeigen, der dem Standard oder der dokumentierten Compilerimplementierung entspricht. Im Fall einer fehlenden Diagnose muss der Code angezeigt werden, der nicht konform ist. Einfache Reproduktionen, die nur den Code enthalten, der für das Veranschaulichen des Problems relevant ist, sind am besten. Wenn Sie Code entfernen oder den Code vereinfachen können, ohne Konformität einzubüßen oder das Problem zu verändern, ist dies erwünscht. Sie müssen keine Beispiele für funktionierenden Code einfügen.
 
 - **Unabhängig.** In Reproduktionen sollten unnötige Abhängigkeiten vermieden werden. Wenn Sie das Problem ohne Drittanbieterbibliotheken reproduzieren können, machen Sie dies. Wenn Sie das Problem abgesehen von einfachen Ausgabeanweisungen (`puts("this shouldn't compile");`, `std::cout << value;` und `printf("%d\n", value);` sind beispielsweise zulässig) ohne Bibliothekscode reproduzieren können, ist dies erwünscht. Idealerweise kann das Beispiel in eine einzige Quellcodedatei ohne Verweise auf Benutzerheader komprimiert werden. Für uns ist es enorm hilfreich, wenn Sie die Menge des Codes verringern, den wir als mögliche Ursache des Problems untersuchen müssen.
 
@@ -116,13 +114,13 @@ Eine gute Reproduktion weist folgende Merkmale auf:
 
 - Ein **Vergleich mit anderen Compilern** wurde durchgeführt (falls relevant). Bei Reproduktionen, die portablen C++-Code enthalten, muss das Verhalten mit anderen Compilern, falls möglich, verglichen werden. Der Standard bestimmt letztendlich die Richtigkeit des Programms und kein Compiler ist perfekt. Wenn Clang und GCC Ihren Code jedoch ohne Diagnose akzeptieren, MSVC jedoch nicht, liegt wahrscheinlich ein Fehler im Compiler vor. (Weitere Möglichkeiten bestehen in den unterschiedlichen Verhaltensweisen von Unix und Windows, in verschiedenen Implementierungsebenen der C++-Standards usw.) Wenn Ihr Code andererseits von allen Compilern abgelehnt ist, ist Ihr Code wahrscheinlich fehlerhaft. Die verschiedenen angezeigten Fehlermeldungen können Sie dabei unterstützen, das Problem selbst zu diagnostizieren.
 
-   Eine Liste der Onlinecompiler, mit denen Sie Ihren Code testen können, finden Sie unter [Online C++ compilers (C++-Onlinecompiler)](https://isocpp.org/blog/2013/01/online-c-compilers) auf der ISO C++-Website, oder Sie verwenden diese zusammengestellte [List of Online C++ Compilers (Liste der C++-Onlinecompiler)](https://arnemertz.github.io/online-compilers/) auf GitHub. Zu den Beispielen zählen [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) und [Coliru](http://coliru.stacked-crooked.com/). 
+   Eine Liste der Onlinecompiler, mit denen Sie Ihren Code testen können, finden Sie unter [Online C++ compilers (C++-Onlinecompiler)](https://isocpp.org/blog/2013/01/online-c-compilers) auf der ISO C++-Website, oder Sie verwenden diese zusammengestellte [List of Online C++ Compilers (Liste der C++-Onlinecompiler)](https://arnemertz.github.io/online-compilers/) auf GitHub. Zu den Beispielen zählen [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) und [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Die Websites für Onlinecompiler stehen nicht in Verbindung mit Microsoft. Viele Websites für Onlinecompiler werden als persönliche Projekte geführt. Einige dieser Seiten sind möglicherweise nicht mehr verfügbar, über eine Suche sollten Sie jedoch andere Seiten finden, die Sie verwenden können.
 
 Probleme mit dem Compiler, dem Linker und den Bibliotheken weisen üblicherweise bestimmte Merkmale auf. Die Art des aufgetretenen Problems bestimmt, welche Art von Reproduktion in den Bericht aufgenommen werden soll. Ohne geeignete Reproduktion gibt es nichts, was wir untersuchen könnten. Im Folgenden finden Sie einige Probleme, die bei Ihnen auftreten können, sowie Anweisungen für das Generieren der Reproduktionen, die Sie für das Melden des jeweiligen Problems verwenden sollten.
- 
+
 #### <a name="frontend-parser-crash"></a>Front-End-Absturz (in der Analysephase)
 
 Front-End-Abstürze erfolgen in der Analysephase des Compilers. Der Compiler gibt in der Regel [Schwerwiegender Fehler C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) aus und verweist auf die Quellcodedatei und Zeilennummer, in der der Fehler aufgetreten ist. Häufig wird eine Datei des Typs „msc1.cpp“ erwähnt, die Sie jedoch ignorieren können.

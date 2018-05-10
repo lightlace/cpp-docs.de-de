@@ -1,12 +1,9 @@
 ---
 title: Agent-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent-Klasse
 Diese Klasse ist als Basisklasse für alle unabhängigen Agents vorgesehen. Sie wird verwendet, um den Zustand von anderen Agents auszublenden und mithilfe von Meldungsübergabe zu interagieren.  
@@ -72,7 +67,7 @@ class agent;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[done](#done)|Verschiebt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.|  
+|[Fertig](#done)|Verschiebt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.|  
 |[run](#run)|Stellt die Hauptaufgabe eines Agents dar. `run` in einer abgeleiteten Klasse überschrieben werden soll, und gibt an, welche Aktion der Agent ausführen soll, nachdem es gestartet wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -166,7 +161,7 @@ bool start();
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn der Agent ordnungsgemäß gestartet `false` andernfalls. Ein Agent, der abgebrochen wurde, kann nicht gestartet werden.  
   
-##  <a name="status"></a> status 
+##  <a name="status"></a> Status 
 
  Eine synchrone Informationsquelle Status des Agents.  
   

@@ -1,27 +1,22 @@
 ---
 title: E. Die Implementierung definiertes Verhalten in OpenMP-C-/C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Die Implementierung definiertes Verhalten in OpenMP-C-/C++
 Dieser Anhang enthält eine Zusammenfassung der Verhaltensweisen, die als "implementierungsdefinierte" in dieser API beschrieben werden.  Jedes Verhalten wird Querverweis zurück an seine Beschreibung in der main-Spezifikation.  
@@ -65,14 +60,14 @@ Dieser Anhang enthält eine Zusammenfassung der Verhaltensweisen, die als "imple
   
      In Visual C++ wird die Anzahl der Threads vom Betriebssystem bestimmt.  
   
--   `OMP_SCHEDULE`Umgebungsvariable: der Standardwert für diese Umgebungsvariable ist implementierungsdefiniert (finden Sie unter [Abschnitt 4.1](../../parallel/openmp/4-1-omp-schedule.md) auf Seite 48).  
+-   `OMP_SCHEDULE` Umgebungsvariable: der Standardwert für diese Umgebungsvariable ist implementierungsdefiniert (finden Sie unter [Abschnitt 4.1](../../parallel/openmp/4-1-omp-schedule.md) auf Seite 48).  
   
      In Visual C++ Zeitplantyp ist `static` mit keine Segmentgröße.  
   
--   `OMP_NUM_THREADS`Umgebungsvariable: Wenn kein Wert, für angegeben wird die `OMP_NUM_THREADS` Umgebungsvariable, oder wenn der angegebene Wert eine positive ganze Zahl ist, oder wenn der Wert größer als die maximale Anzahl von Threads das System unterstützen kann ist, die Anzahl von Threads zur Verwendung wird die Implementierung definiertes (finden Sie unter [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48).  
+-   `OMP_NUM_THREADS` Umgebungsvariable: Wenn kein Wert, für angegeben wird die `OMP_NUM_THREADS` Umgebungsvariable, oder wenn der angegebene Wert eine positive ganze Zahl ist, oder wenn der Wert größer als die maximale Anzahl von Threads das System unterstützen kann ist, die Anzahl von Threads zur Verwendung wird die Implementierung definiertes (finden Sie unter [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48).  
   
      In Visual C++ wenn angegebene Wert ist 0 (null) oder weniger, die Anzahl der Threads ist gleich der Anzahl der Prozessoren.  Wenn der Wert größer als 64 ist, ist die Anzahl der Threads 64.  
   
--   `OMP_DYNAMIC`Umgebungsvariable: der Standardwert ist die Implementierung definiertes (finden Sie unter [Abschnitt 4.3](../../parallel/openmp/4-3-omp-dynamic.md) auf Seite "49").  
+-   `OMP_DYNAMIC` Umgebungsvariable: der Standardwert ist die Implementierung definiertes (finden Sie unter [Abschnitt 4.3](../../parallel/openmp/4-3-omp-dynamic.md) auf Seite "49").  
   
      In Visual C++ ist die Standardeinstellung ist `FALSE`.

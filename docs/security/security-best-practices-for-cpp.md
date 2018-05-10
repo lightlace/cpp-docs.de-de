@@ -1,13 +1,10 @@
 ---
-title: "Bewährte Sicherheitsmethoden für C++ | Microsoft Docs"
-ms.custom: 
+title: Bewährte Sicherheitsmethoden für C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>Empfohlene Vorgehensweisen bezüglich der Sicherheit in C++
 Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen. Ihre Verwendung macht eine Anwendung zwar nicht immun gegen Angriffe, aber sie verringert die Wahrscheinlichkeit erfolgreicher Angriffe.  
@@ -35,22 +30,22 @@ Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen
 ## <a name="visual-c-security-features"></a>Visual C++-Sicherheitsfeatures  
  Diese Sicherheitsfunktionen sind in den Visual C++-Compiler und den Visual C++-Linker integriert:  
   
- [/ Guard (Ablaufsteuerungsschutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (Ablaufsteuerungsschutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md)  
  Veranlasst den Compiler, die Ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen.  
   
- [/ GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)  
+ [/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)  
  Der Compiler wird angewiesen, Überlauferkennungscode in Funktionen einzufügen, die Angriffen ausgesetzt sein können. Wenn ein Überlauf erkannt wird, wird die Programmausführung angehalten. Diese Option ist standardmäßig aktiviert.  
   
- [/ SAFESEH (Abbild verfügt über sichere Ausnahmehandler)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (Image weist sichere Ausnahmehandler auf)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  Der Linker wird angewiesen, dem Ausgabeabbild eine Tabelle mit den Adressen aller Ausnahmehandler hinzuzufügen. Zur Laufzeit verwendet das Betriebssystem diese Tabelle, um sicherzustellen, dass nur rechtmäßige Ausnahmehandler ausgeführt werden. Dadurch wird verhindert, dass in böswilligen Angriffen zur Laufzeit eingeschleuste Ausnahmehandler ausgeführt werden. Diese Option ist standardmäßig deaktiviert.  
   
  [/ NXCOMPAT](../build/reference/nxcompat.md),  [ /NXCOMPAT (kompatibel mit Datenausführungsverhinderung)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  Diese Compiler- und Linkeroptionen ermöglichen Kompatibilität mit der Datenausführungsverhinderung. DEP schützt die CPU vor der Ausführung von Seiten, die keine Codepages sind.  
   
- [/ analyze (Codeanalyse)](../build/reference/analyze-code-analysis.md)  
+ [/analyze (Codeanalyse)](../build/reference/analyze-code-analysis.md)  
  Diese Compileroption aktiviert die Codeanalyse, die über potentielle Sicherheitslücken wie Pufferüberlauf, nicht initialisierten Speicher, Dereferenzierung von NULL-Zeigern und Speicherverlusten Bericht erstattet. Diese Option ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Codeanalyse für C/C++-Übersicht](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
- [/ DYNAMICBASE (Verwendung Adresse Space Layout Randomization)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (Address Space Layout Randomization verwenden)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  Diese Linkeroption ermöglicht das Erstellen eines ausführbaren Images, das am Anfang der Ausführung an anderen Orten im Arbeitsspeicher geladen werden kann. Durch diese Option lässt sich die Position des Stapels im Arbeitsspeicher auch schlechter vorhersagen.  
   
 ## <a name="security-enhanced-crt"></a>CRT mit erweiterter Sicherheit  

@@ -1,12 +1,9 @@
 ---
 title: '#using-Anweisung (C + c++ / CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - friend_as_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1c43acde6e4f755c6757fc933c80091ba05927c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-directive-cclr"></a>#using-Anweisung (C + c++ / CLR)
 Importiert Metadaten in einem Programm kompiliert mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -65,7 +60,7 @@ Importiert Metadaten in einem Programm kompiliert mit ["/ CLR"](../build/referen
   
  Damit der Compiler einen Typ in einer Assembly (nicht in einem Modul) erkennen kann, muss die Auflösung des Typs erzwungen werden, beispielsweise durch die Definition einer Instanz des Typs. Der Compiler verfügt über andere Möglichkeiten, Typnamen in einer Assembly aufzulösen. Beispielsweise wird dem Compiler beim Erben von einem Typ in einer Assembly der Typname mitgeteilt.  
   
- Beim Importieren von Metadaten, die aus Quellcode, mit denen erstellt [__declspec(thread)](../cpp/thread.md), die Thread-Semantik nicht in Metadaten beibehalten werden. Angenommen, eine Variable mit **__declspec(thread)**in einem Programm, das Build für die common Language Runtime von .NET Framework und importiert dann über kompilierten `#using`, nicht mehr **__declspec ( Thread)** Semantik für die Variable.  
+ Beim Importieren von Metadaten, die aus Quellcode, mit denen erstellt [__declspec(thread)](../cpp/thread.md), die Thread-Semantik nicht in Metadaten beibehalten werden. Angenommen, eine Variable mit **__declspec(thread)** in einem Programm, das Build für die common Language Runtime von .NET Framework und importiert dann über kompilierten `#using`, nicht mehr **__declspec ( Thread)** Semantik für die Variable.  
   
  Alle importierten Typen (sowohl verwaltete als auch systemeigene) in einer Datei, auf die von `#using` verwiesen wird, sind verfügbar. Der Compiler behandelt systemeigene Typen jedoch als Deklarationen und nicht als Definitionen.  
   

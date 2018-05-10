@@ -1,12 +1,9 @@
 ---
 title: double_3-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13862855b0377efe481cde68c349f1ba3d11e45
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double3-class"></a>double_3-Klasse
 Stellt einen kurzen Vektor aus drei Doubles dar.  
@@ -124,12 +119,12 @@ class double_3;
 |double_3::get_xy||  
 |double_3::get_xyz||  
 |double_3::get_xz||  
-|double_3::get_xzy||  
-|double_3::get_y||  
+|double_3:: get_xzy||  
+|double_3:: get_Y||  
 |double_3::get_yx||  
 |double_3::get_yxz||  
 |double_3::get_yz||  
-|double_3::get_yzx||  
+|double_3:: get_yzx||  
 |double_3::get_z||  
 |double_3::get_zx||  
 |double_3::get_zxy||  
@@ -142,19 +137,19 @@ class double_3;
 |double_3::ref_y||  
 |double_3::ref_z||  
 |double_3::set_x||  
-|double_3::set_xy||  
-|double_3::set_xyz||  
+|double_3:: set_xy||  
+|double_3:: set_xyz||  
 |double_3::set_xz||  
-|double_3::set_xzy||  
-|double_3::set_y||  
+|double_3:: set_xzy||  
+|double_3:: set_y||  
 |double_3::set_yx||  
 |double_3::set_yxz||  
-|double_3::set_yz||  
-|double_3::set_yzx||  
+|double_3:: set_yz||  
+|double_3:: set_yzx||  
 |double_3::set_z||  
 |double_3::set_zx||  
 |double_3::set_zxy||  
-|double_3::set_zy||  
+|double_3:: set_zy||  
 |double_3::set_zyx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
@@ -163,12 +158,12 @@ class double_3;
 |----------|-----------------|  
 |double_3::operator-||  
 |double_3::operator--||  
-|double_3::operator*=||  
+|double_3:: * =||  
 |double_3::operator/=||  
 |double_3::operator++||  
 |double_3::operator+=||  
 |double_3::operator=||  
-|double_3::operator-=||  
+|double_3:: Operator-=||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -195,18 +190,18 @@ class double_3;
 |double_3::rbg||  
 |double_3::rg||  
 |double_3::rgb||  
-|double_3::x||  
+|double_3:: x||  
 |double_3::xy||  
 |double_3::xyz||  
 |double_3::xz||  
-|double_3::xzy||  
+|double_3:: xzy||  
 |double_3::y||  
 |double_3::yx||  
 |double_3::yxz||  
 |double_3::yz||  
 |double_3::yzx||  
 |double_3::z||  
-|double_3::zx||  
+|double_3:: ZX||  
 |double_3::zxy||  
 |double_3::zy||  
 |double_3::zyx||  

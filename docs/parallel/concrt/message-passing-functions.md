@@ -1,29 +1,24 @@
 ---
-title: "Funktionen zum Übergeben von Nachrichten | Microsoft Docs"
-ms.custom: 
+title: Funktionen zum Übergeben von Nachrichten | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>Funktionen zum Übergeben von Meldungen
 Die Asynchronous Agents Library stellt mehrere Funktionen, mit denen Sie Nachrichten zwischen Komponenten übergeben.  
@@ -39,7 +34,7 @@ Die Asynchronous Agents Library stellt mehrere Funktionen, mit denen Sie Nachric
   
 -   [Beispiele](#examples)  
   
-##  <a name="send"></a>Sende- und asend  
+##  <a name="send"></a> Sende- und asend  
 
  Die [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion sendet eine Nachricht synchron an das angegebene Ziel und die [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) -Funktion sendet eine Nachricht asynchron an das angegebene Ziel. Sowohl die `send` und `asend` Funktionen warten, bis das Ziel angibt, wird es schließlich akzeptieren oder ablehnen.  
   
@@ -49,7 +44,7 @@ Die Asynchronous Agents Library stellt mehrere Funktionen, mit denen Sie Nachric
   
  [[Nach oben](#top)]  
   
-##  <a name="receive"></a>empfangen und Try_receive  
+##  <a name="receive"></a> empfangen und Try_receive  
 
  Die [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) und [Concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) Funktionen Lesen von Daten aus einer bestimmten Quelle stammt. Die `receive` Funktion wartet, bis Daten verfügbar sind, während die `try_receive` Funktion wird sofort zurückgegeben.  
   

@@ -1,12 +1,9 @@
 ---
 title: uint_2-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::set_xy
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7b3b494460e0f254f46ed197e09d6d8d485b5e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint2-class"></a>uint_2-Klasse
 Stellt einen kurzen Vektor von zwei ganze Zahlen ohne Vorzeichen dar.  
@@ -70,43 +65,43 @@ class uint_2;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[uint_2 Constructor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
+|[uint_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |uint_2::get_x||  
-|uint_2::get_xy||  
-|uint_2::get_y||  
+|uint_2:: get_xy||  
+|uint_2:: get_Y||  
 |uint_2::get_yx||  
 |uint_2::ref_g_Method||  
 |uint_2::ref_r_Method||  
 |uint_2::ref_x_Method||  
 |uint_2::ref_y_Method||  
-|uint_2::set_x||  
-|uint_2::set_xy||  
-|uint_2::set_y||  
-|uint_2::set_yx||  
+|uint_2:: set_X||  
+|uint_2:: set_xy||  
+|uint_2:: set_y||  
+|uint_2:: set_yx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|uint_2::operator--||  
+|uint_2::--||  
 |uint_2::operator%=||  
-|uint_2::operator&=||  
+|uint_2:: & =||  
 |uint_2::operator*=||  
 |uint_2::operator/=||  
 |uint_2::operator^=||  
-|uint_2::operator&#124;=||  
+|uint_2::&#124;=||  
 |uint_2::operator~||  
-|uint_2::operator++||  
+|uint_2:: Operator++-||  
 |uint_2::operator+=||  
 |uint_2::operator<\<=||  
 |uint_2::operator=||  
-|uint_2::operator-=||  
-|uint_2::operator>>=||  
+|uint_2:: Operator-=||  
+|uint_2:: >> =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -123,7 +118,7 @@ class uint_2;
 |uint_2::r||  
 |uint_2::rg||  
 |uint_2::x||  
-|uint_2::xy||  
+|uint_2:: XY||  
 |uint_2::y||  
 |uint_2::yx||  
   

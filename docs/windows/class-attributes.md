@@ -1,31 +1,26 @@
 ---
 title: -Klasse Attribute | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], class attributes
 - class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a932fdb1ef1d9e2af2acace901feaa95b6216d1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="class-attributes"></a>Klassenattribute
 Die folgenden Attribute gelten für die [Klasse](../cpp/class-cpp.md) C++-Schlüsselwort.  
@@ -39,7 +34,7 @@ Die folgenden Attribute gelten für die [Klasse](../cpp/class-cpp.md) C++-Schlü
 |[coclass](../windows/coclass.md)|Erstellt ein ActiveX-Steuerelement.|  
 |[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle zu einer COM-Zuordnung.|  
 |[Steuerelement](../windows/control.md)|Gibt an, dass der benutzerdefinierte Datentyp eines Steuerelements.|  
-|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[Benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
 |[db_command](../windows/db-command.md)|Erstellt einen OLE DB-Befehl.|  
 |[db_param](../windows/db-param.md)|Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter und begrenzt die Variable.|  
 |[db_source](../windows/db-source.md)|Erstellt eine Verbindung mit einer Datenquelle.|  
@@ -53,7 +48,7 @@ Die folgenden Attribute gelten für die [Klasse](../cpp/class-cpp.md) C++-Schlü
 |[helpstringcontext](../windows/helpstringcontext.md)|Gibt die ID des Hilfethemas in einer HLP oder CHM-Datei an.|  
 |[helpstring](../windows/helpstring.md)|Gibt eine Zeichenfolge, die verwendet wird, um das Element zu beschreiben, auf dem es angewendet.|  
 |[hidden](../windows/hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem Browser benutzerorientierte angezeigt werden soll.|  
-|[implementiert](../windows/implements-cpp.md)|Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwungen werden.|  
+|[Implementiert](../windows/implements-cpp.md)|Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwungen werden.|  
 |[implements_category](../windows/implements-category.md)|Gibt an, für die Klasse implementierten Komponentenkategorien.|  
 |[Modul](../windows/module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|  
 |[noncreatable](../windows/noncreatable.md)|Definiert ein Objekt, das allein nicht instanziiert werden kann.|  
@@ -63,7 +58,7 @@ Die folgenden Attribute gelten für die [Klasse](../cpp/class-cpp.md) C++-Schlü
 |[Datenquelle](../windows/source-cpp.md)|Gibt das Steuerelement-Schnittstellen für Verbindungspunkte für eine Klasse an. Auf eine Eigenschaft oder Methode die **Quelle** Attribut gibt an, dass das Element zurückgibt, ein Objekt oder eine Variante, die Quelle von Ereignissen ist.|  
 |[support_error_info](../windows/support-error-info.md)|Unterstützt die Fehlerberichterstattung für das Zielobjekt.|  
 |[Threading](../windows/threading-cpp.md)|Gibt das Threadingmodell für ein Steuerelement an.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|  
 |[version](../windows/version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.|  
 |[vi_progid](../windows/vi-progid.md)|Gibt eine versionsunabhängige Form der ProgID an.|  
   

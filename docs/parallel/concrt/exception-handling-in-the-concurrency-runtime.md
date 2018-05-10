@@ -1,13 +1,10 @@
 ---
 title: Ausnahmebehandlung in der Concurrency Runtime | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Ausnahmebehandlung in der Concurrency Runtime
 Die Concurrency Runtime übermittelt viele Arten von Fehlern mithilfe der C++-Ausnahmebehandlung. Zu diesen Fehlern zählen die falsche Verwendung der Runtime, Runtime-Fehler wie etwa das Nichtabrufen einer Ressource sowie Fehler, die in Arbeitsfunktionen auftreten, die Sie für Aufgaben und Aufgabengruppen bereitstellen. Wenn eine Aufgabe oder eine Aufgabengruppe eine Ausnahme auslöst, wird diese Ausnahme von der Runtime gespeichert und an den Kontext gemarshallt, der wartet, bis die Aufgabe oder Aufgabengruppe beendet wird. Bei Komponenten wie bei einfachen Aufgaben und Agents verwaltet die Runtime keine Ausnahmen. In diesen Fällen müssen Sie einen eigenen Mechanismus für die Ausnahmenbehandlung implementieren. In diesem Thema wird beschrieben, wie die Runtime Ausnahmen behandelt, die von Aufgaben, Aufgabengruppen, einfachen Aufgaben und asynchronen Agents ausgelöst werden, und wie auf Ausnahmen von den Anwendungen reagiert wird.  
@@ -47,7 +42,7 @@ Die Concurrency Runtime übermittelt viele Arten von Fehlern mithilfe der C++-Au
   
 -   Die Runtime verwaltet keine Ausnahmen für einfache Aufgaben und Agents.  
   
-##  <a name="top"></a>In diesem Dokument  
+##  <a name="top"></a> In diesem Dokument  
   
 - [Aufgaben und Fortsetzungen](#tasks)  
   
@@ -63,7 +58,7 @@ Die Concurrency Runtime übermittelt viele Arten von Fehlern mithilfe der C++-Au
   
 - [Asynchrone Agents](#agents)  
   
-##  <a name="tasks"></a>Aufgaben und Fortsetzungen  
+##  <a name="tasks"></a> Aufgaben und Fortsetzungen  
  In diesem Abschnitt wird beschrieben, wie die Runtime Ausnahmen behandelt, die von ausgelöst werden [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) Objekte und ihre Fortsetzungen. Weitere Informationen über das Modell Aufgaben- und fortsetzungsmodell finden Sie unter [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Wenn Sie eine Ausnahme im Text einer Arbeitsfunktion, die Sie zum Übergeben einer `task` Objekt, die Common Language Runtime speichert diese Ausnahme und marshallt sie an den Kontext, der Aufrufe [Concurrency](reference/task-class.md#get) oder [Concurrency:: Task:: wait](reference/task-class.md#wait). Das Dokument [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md) beschreibt aufgabenbasierte im Vergleich zu wertbasierte Fortsetzungen sein, aber die zusammengefasst werden sollen, eine wertbasierte Fortsetzung akzeptiert einen Parameter vom Typ `T` und eine aufgabenbasierte Fortsetzung akzeptiert einen Parameter vom Typ `task<T>`. Wenn eine Aufgabe, die ausgelöst wird, über eine oder mehrere wertbasierte Fortsetzungen verfügt, wird die Ausführung dieser Fortsetzungen nicht geplant. Dieses Verhalten wird im folgenden Beispiel veranschaulicht:  
@@ -97,7 +92,7 @@ Die Concurrency Runtime übermittelt viele Arten von Fehlern mithilfe der C++-Au
   
  [[Nach oben](#top)]  
   
-##  <a name="task_groups"></a>Aufgabengruppen und parallele Algorithmen  
+##  <a name="task_groups"></a> Aufgabengruppen und parallele Algorithmen  
 
  In diesem Abschnitt wird beschrieben, wie die Runtime Ausnahmen behandelt, die von Aufgabengruppen ausgelöst werden. Dieser Abschnitt gilt auch für parallele Algorithmen, wie z. B. [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), da diese Algorithmen auf Aufgabengruppen aufbauen.  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[Nach oben](#top)]  
   
-##  <a name="runtime"></a>Von der Runtime ausgelöste Ausnahmen  
+##  <a name="runtime"></a> Von der Runtime ausgelöste Ausnahmen  
  Eine Ausnahme kann von einem Aufruf der Runtime ausgelöst werden. Die meisten Ausnahmetypen, außer für [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) und [operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), weisen auf einen Programmierfehler. Diese Fehler sind in der Regel nicht behebbar und dürfen daher durch Anwendungscode weder abgefangen noch behandelt werden. Es wird empfohlen, bei der Diagnose von Programmierfehlern nur nicht behebbare Fehler im Anwendungscode abzufangen oder zu behandeln. Die von der Runtime definierten Ausnahmetypen zu kennen, erleichtert jedoch die Diagnose von Programmierfehlern.  
   
  Der Mechanismus für die Ausnahmenbehandlung ist bei Ausnahmen, die durch die Runtime ausgelöst werden, derselbe wie bei Ausnahmen, der durch Arbeitsfunktionen ausgelöst werden. Z. B. die [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) Funktion löst `operation_timed_out` Wenn es in keine empfängt eine Nachricht im angegebenen Zeitraum angezeigt. Wenn `receive` eine Ausnahme in einer Arbeitsfunktion auslöst, die an eine Aufgabengruppe übergeben wird, wird diese Ausnahme von der Runtime gespeichert und an den Kontext gemarshallt, der `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait` oder `structured_task_group::run_and_wait` aufruft.  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[Nach oben](#top)]  
   
-##  <a name="multiple"></a>Mehrere Ausnahmen  
+##  <a name="multiple"></a> Mehrere Ausnahmen  
  Wenn eine Aufgabe oder paralleler Algorithmus mehrere Ausnahmen empfängt, wird nur eine dieser Ausnahmen von der Runtime an den aufrufenden Kontext gemarshallt. Dabei kann nicht vorhergesagt werden, welche Ausnahme von der Runtime gemarshallt wird.  
   
  Im folgenden Beispiel werden mithilfe des `parallel_for`-Algorithmus Zahlen an der Konsole ausgegeben. Es wird eine Ausnahme ausgegeben, wenn der Eingabewert kleiner als ein Mindestwert oder größer als ein Maximalwert ist. In diesem Beispiel können mehrere Arbeitsfunktionen eine Ausnahme auslösen.  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[Nach oben](#top)]  
   
-##  <a name="cancellation"></a>Abbruch  
+##  <a name="cancellation"></a> Abbruch  
  Nicht alle Ausnahmen geben einen Fehler an. Ein Suchalgorithmus kann beispielsweise mithilfe der Ausnahmenbehandlung die zugehörige Aufgabe beenden, sobald das Ergebnis gefunden ist. Weitere Informationen zum Abbruchmechanismen in Ihrem Code verwenden, finden Sie unter [Abbruch in der PPL](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
  [[Nach oben](#top)]  
   
-##  <a name="lwts"></a>Einfache Aufgaben  
+##  <a name="lwts"></a> Einfache Aufgaben  
  Eine einfache Aufgabe ist eine Aufgabe, die Sie planen, direkt aus einer [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) Objekt. Einfache Aufgaben erfordern einen geringeren Aufwand als gewöhnliche Aufgaben. Die Runtime fängt jedoch keine Ausnahmen ab, die von einfachen Aufgaben ausgelöst werden. Stattdessen wird die Ausnahme vom Handler für nicht behandelte Ausnahmen abgefangen, der den Prozess standardmäßig beendet. Verwenden Sie daher in der Anwendung einen entsprechenden Fehlerbehandlungsmechanismus. Weitere Informationen zu einfachen Aufgaben finden Sie unter [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
  [[Nach oben](#top)]  
   
-##  <a name="agents"></a>Asynchrone Agents  
+##  <a name="agents"></a> Asynchrone Agents  
  Die Runtime verwaltet wie bei einfachen Aufgaben auch keine Ausnahmen, die von asynchronen Agents ausgelöst werden.  
   
  Das folgende Beispiel zeigt eine Möglichkeit zum Behandeln von Ausnahmen in einer Klasse, die abgeleitet [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md). In diesem Beispiel wird die `points_agent`-Klasse definiert. Die `points_agent::run`-Methode liest `point`-Objekte aus dem Nachrichtenpuffer und gibt sie an der Konsole aus. Die `run`-Methode löst beim Empfang eines `NULL`-Zeigers eine Ausnahme aus.  

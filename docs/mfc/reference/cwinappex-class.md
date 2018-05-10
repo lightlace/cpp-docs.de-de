@@ -1,12 +1,9 @@
 ---
 title: CWinAppEx Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinAppEx
@@ -127,20 +124,18 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 941a496d52dbf38401484bd6ddcd857875849dc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63882cd6ae167e78bc5e3cf509650ae3d84fd0ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinappex-class"></a>CWinAppEx-Klasse
-`CWinAppEx`behandelt den Anwendungszustand, speichert den Zustand in der Registrierung, lädt den Zustand aus der Registrierung, initialisiert Anwendungsmanager und stellt Links zu diesen anwendungsmanagern bereit.  
+`CWinAppEx` behandelt den Anwendungszustand, speichert den Zustand in der Registrierung, lädt den Zustand aus der Registrierung, initialisiert Anwendungsmanager und stellt Links zu diesen anwendungsmanagern bereit.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Syntax  
@@ -250,7 +245,7 @@ class CWinAppEx : public CWinApp
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinappex.h  
   
-##  <a name="cleanstate"></a>CWinAppEx::CleanState  
+##  <a name="cleanstate"></a>  CWinAppEx::CleanState  
  Entfernt alle Informationen über die Anwendung aus der Windows-Registrierung.  
   
 ```  
@@ -267,7 +262,7 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode löscht die Anwendungsdaten aus einem bestimmten Abschnitt der Registrierung. Können Sie angeben, zu löschen, indem Sie den Parameter Abschnitt `lpszSectionName`. Wenn `lpszSectionName` ist `NULL`, diese Methode verwendet den Standardpfad-Registrierung gespeichert, der `CWinAppEx` Objekt. Verwenden Sie zum Abrufen des Standardpfad für die Registrierung [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
-##  <a name="cwinappex"></a>CWinAppEx::CWinAppEx  
+##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx  
  Erstellt ein `CWinAppEx`-Objekt.  
   
 ```  
@@ -281,7 +276,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ### <a name="remarks"></a>Hinweise  
  Die `CWinAppEx` Klasse Initialisierungsmethoden aufweist, bietet Funktionen für speichern und Laden von Anwendungsinformationen in der Registrierung und globale Anwendungseinstellungen steuert. Außerdem können Sie globale Manager verwenden, wie z. B. der [CKeyboardManager Klasse](../../mfc/reference/ckeyboardmanager-class.md) und die [CUserToolsManager Klasse](../../mfc/reference/cusertoolsmanager-class.md). Jede Anwendung kann nur eine Instanz haben die `CWinAppEx` Klasse.  
   
-##  <a name="enableloadwindowplacement"></a>CWinAppEx::EnableLoadWindowPlacement  
+##  <a name="enableloadwindowplacement"></a>  CWinAppEx::EnableLoadWindowPlacement  
  Gibt an, ob die Anwendung die anfängliche Größe und Position des Hauptrahmenfenster aus der Registrierung geladen werden.  
   
 ```  
@@ -295,7 +290,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig werden die Größe und Position der Hauptframe, aus der Registrierung zusammen mit anderen Anwendungseinstellungen geladen. Dies geschieht bei [CWinAppEx::LoadState](#loadstate). Wenn Sie nicht die anfängliche fensteranordnung aus der Registrierung laden möchten, rufen Sie diese Methode mit `bEnable` festgelegt `false`.  
   
-##  <a name="enabletearoffmenus"></a>CWinAppEx::EnableTearOffMenus  
+##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus  
  Erstellt und initialisiert ein [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) Objekt.  
   
 ```  
@@ -316,12 +311,12 @@ BOOL EnableTearOffMenus(
  Die letzte abtrennen deaktivieren Sie im Menü-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `True`Wenn die `CMenuTearOffManager` erstellt und initialisiert erfolgreich `false` , wenn ein Fehler auftritt oder wenn die `CMenuTearOffManager` ist bereits vorhanden.  
+ `True` Wenn die `CMenuTearOffManager` erstellt und initialisiert erfolgreich `false` , wenn ein Fehler auftritt oder wenn die `CMenuTearOffManager` ist bereits vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um abtrennbare Menüs in der Anwendung aktivieren. Sie sollten diese Funktion von Aufrufen `InitInstance`.  
   
-##  <a name="enableusertools"></a>CWinAppEx::EnableUserTools  
+##  <a name="enableusertools"></a>  CWinAppEx::EnableUserTools  
  Ermöglicht den Benutzer, benutzerdefinierte Menübefehle erstellen, die Tastatureingaben in Ihrer Anwendung zu reduzieren. Diese Methode erstellt eine [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) Objekt.  
   
 ```  
@@ -354,7 +349,7 @@ BOOL EnableUserTools(
  Die im Menü-ID für das erste Tool-Verzeichnis.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erstellt und initialisiert ein `CUserToolsManager` Objekt. `FALSE` , wenn die Methode fehlschlägt oder wenn ein `CUserToolsManager` Objekt bereits vorhanden ist.  
+ `TRUE` Wenn die Methode erstellt und initialisiert ein `CUserToolsManager` Objekt. `FALSE` , wenn die Methode fehlschlägt oder wenn ein `CUserToolsManager` Objekt bereits vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie benutzerdefinierte Tools aktivieren, unterstützt das Framework automatisch ein dynamisches Menü, das während der Anpassung erweitert werden kann. Das Framework ordnet jedes neues Element eines externen Befehls. Das Framework ruft diese Befehle aus, wenn der Benutzer den entsprechenden Eintrag aus wählt die **Tools** Menü.  
@@ -363,7 +358,7 @@ BOOL EnableUserTools(
   
  Weitere Informationen über Benutzertools und wie Sie diese in Ihrer Anwendung finden Sie unter [benutzerdefinierte Tools](../../mfc/user-defined-tools.md).  
   
-##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
+##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance  
 
   
 ```  
@@ -374,7 +369,7 @@ virtual int ExitInstance();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getbinary"></a>CWinAppEx::GetBinary  
+##  <a name="getbinary"></a>  CWinAppEx::GetBinary  
  Liest Sie Binärdaten aus einem angegebenen Registrierungsschlüssel.  
   
 ```  
@@ -395,14 +390,14 @@ BOOL GetBinary(
  Ein Zeiger auf eine Ganzzahl ohne Vorzeichen, die die Methode verwendet, um die Anzahl der gelesenen Bytes zu schreiben.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `True`Bei Erfolg; `false` andernfalls.  
+ `True` Bei Erfolg; `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode liest die binäre Daten, die in die Registrierung geschrieben. Um Daten in der Registrierung zu schreiben, verwenden Sie die Methoden [CWinAppEx::WriteBinary](#writebinary) und [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getcontextmenumanager"></a>CWinAppEx::GetContextMenuManager  
+##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager  
  Gibt einen Zeiger auf die globale [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) Objekt.  
   
 ```  
@@ -415,7 +410,7 @@ CContextMenuManager* GetContextMenuManager();
 ### <a name="remarks"></a>Hinweise  
  Wenn das Objekt CContextMenuManager nicht initialisiert wurde, wird diese Funktion ruft [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) vor der Rückgabe eines Zeigers.  
   
-##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
+##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion  
 
   
 ```  
@@ -426,7 +421,7 @@ int GetDataVersion() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="getdataversionmajor"></a>CWinAppEx::GetDataVersionMajor  
+##  <a name="getdataversionmajor"></a>  CWinAppEx::GetDataVersionMajor  
  Gibt die Hauptversion der Anwendung, die in der Windows-Registrierung gespeichert ist, beim Aufrufen von [CWinAppEx::SaveState](#savestate).  
   
 ```  
@@ -436,7 +431,7 @@ int GetDataVersionMajor() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Ganzzahlwert, der die Hauptversionsnummer enthält.  
   
-##  <a name="getdataversionminor"></a>CWinAppEx::GetDataVersionMinor  
+##  <a name="getdataversionminor"></a>  CWinAppEx::GetDataVersionMinor  
  Gibt die Nebenversion der Anwendung, die in der Windows-Registrierung gespeichert ist, beim Aufrufen von [CWinAppEx::SaveState](#savestate).  
   
 ```  
@@ -446,7 +441,7 @@ int GetDataVersionMinor() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Ganzzahlwert, der die Nebenversionsnummer enthält.  
   
-##  <a name="getint"></a>CWinAppEx::GetInt  
+##  <a name="getint"></a>  CWinAppEx::GetInt  
  Ein angegebener Registrierungsschlüssel ausliest Ganzzahldaten.  
   
 ```  
@@ -470,7 +465,7 @@ int GetInt(
   
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getkeyboardmanager"></a>CWinAppEx::GetKeyboardManager  
+##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager  
  Gibt einen Zeiger auf die globale [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) Objekt.  
   
 ```  
@@ -483,7 +478,7 @@ CKeyboardManager* GetKeyboardManager();
 ### <a name="remarks"></a>Hinweise  
  Wenn die Tastatur-Manager nicht initialisiert wurde, wird diese Funktion ruft [CWinAppEx::InitKeyboardManager](#initkeyboardmanager) vor der Rückgabe eines Zeigers.  
   
-##  <a name="getmousemanager"></a>CWinAppEx::GetMouseManager  
+##  <a name="getmousemanager"></a>  CWinAppEx::GetMouseManager  
  Gibt einen Zeiger auf die globale [CMouseManager](../../mfc/reference/cmousemanager-class.md) Objekt.  
   
 ```  
@@ -496,7 +491,7 @@ CMouseManager* GetMouseManager();
 ### <a name="remarks"></a>Hinweise  
  Wenn die Maus-Manager nicht initialisiert ist, wird diese Funktion ruft [CWinAppEx::InitMouseManager](#initmousemanager) vor der Rückgabe eines Zeigers.  
   
-##  <a name="getobject"></a>CWinAppEx::GetObject  
+##  <a name="getobject"></a>  CWinAppEx::GetObject  
  Liest [CObject](../../mfc/reference/cobject-class.md)Dervied - Daten aus der Registrierung.  
   
 ```  
@@ -520,7 +515,7 @@ BOOL GetObject(
   
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags, die unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getregistrybase"></a>CWinAppEx::GetRegistryBase  
+##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase  
  Ruft den Standardpfad für die Registrierung für die Anwendung ab.  
   
 ```  
@@ -533,7 +528,7 @@ LPCTSTR GetRegistryBase();
 ### <a name="remarks"></a>Hinweise  
  Alle Methoden der [CWinAppEx Class](../../mfc/reference/cwinappex-class.md) , die Zugriff auf die Registrierung Start an einem Standardspeicherort. Verwenden Sie diese Methode, um einen Pfad für den Standardspeicherort für die Registrierung abzurufen. Verwendung [CWinAppEx::SetRegistryBase](#setregistrybase) so ändern Sie den Standardspeicherort für die Registrierung.  
   
-##  <a name="getregsectionpath"></a>CWinAppEx::GetRegSectionPath  
+##  <a name="getregsectionpath"></a>  CWinAppEx::GetRegSectionPath  
  Erstellt und gibt den absoluten Pfad eines Registrierungsschlüssels.  
   
 ```  
@@ -550,7 +545,7 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ### <a name="remarks"></a>Hinweise  
  Diese Methode definiert der Registrierungsschlüssel absoluten Pfad durch Anhängen des relativen Pfads im `szSectionAdd` am Standardspeicherort für die Registrierung für Ihre Anwendung. Um die Standard-Registrierungsschlüssels abzurufen, verwenden Sie die Methode [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
-##  <a name="getsectionbinary"></a>CWinAppEx::GetSectionBinary  
+##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary  
  Binäre Daten aus der Registrierung gelesen.  
   
 ```  
@@ -582,7 +577,7 @@ BOOL GetSectionBinary(
   
  Die `lpszSubSection` Parameter ist kein absoluter Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getsectionint"></a>CWinAppEx::GetSectionInt  
+##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt  
  Integer-Daten liest aus der Registrierung.  
   
 ```  
@@ -610,7 +605,7 @@ int GetSectionInt(
   
  Die `lpszSubSection` Parameter ist kein absoluter Pfad eines Registrierungseintrags. Es ist ein relativer Pfad, der an das Ende der Standardschlüssel für die Registrierung für Ihre Anwendung hinzugefügt wird. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getsectionobject"></a>CWinAppEx::GetSectionObject  
+##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject  
  Liest [CObject](../../mfc/reference/cobject-class.md) Registrierungsdaten aus der Registrierung.  
   
 ```  
@@ -638,7 +633,7 @@ BOOL GetSectionObject(
   
  Die `lpszSubSection` Parameter ist kein absoluter Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getsectionstring"></a>CWinAppEx::GetSectionString  
+##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString  
  Liest Daten aus der Registrierung eine Zeichenfolge.  
   
 ```  
@@ -666,7 +661,7 @@ CString GetSectionString(
   
  Die `lpszSubSection` Parameter ist kein absoluter Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="getshellmanager"></a>CWinAppEx::GetShellManager  
+##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager  
  Gibt einen Zeiger auf die globale [CShellManager](../../mfc/reference/cshellmanager-class.md) Objekt.  
   
 ```  
@@ -679,7 +674,7 @@ CShellManager* GetShellManager();
 ### <a name="remarks"></a>Hinweise  
  Wenn die `CShellManager` Objekt wurde nicht initialisiert ist, werden Aufrufe dieser Funktion [CWinAppEx::InitShellManager](#initshellmanager) vor der Rückgabe eines Zeigers.  
   
-##  <a name="getstring"></a>CWinAppEx::GetString  
+##  <a name="getstring"></a>  CWinAppEx::GetString  
  Lesevorgänge werden Zeichenfolgendaten ein angegebener Registrierungsschlüssel.  
   
 ```  
@@ -703,7 +698,7 @@ CString GetString(
   
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="gettooltipmanager"></a>CWinAppEx::GetTooltipManager  
+##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager  
  Gibt einen Zeiger auf die globale [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) Objekt.  
   
 ```  
@@ -716,7 +711,7 @@ CTooltipManager* GetTooltipManager();
 ### <a name="remarks"></a>Hinweise  
  Wenn die `CTooltipManager` Objekt wurde nicht initialisiert ist, werden Aufrufe dieser Funktion [CWinAppEx:: Inittooltipmanager](#inittooltipmanager) vor der Rückgabe eines Zeigers.  
   
-##  <a name="getusertoolsmanager"></a>CWinAppEx::GetUserToolsManager  
+##  <a name="getusertoolsmanager"></a>  CWinAppEx::GetUserToolsManager  
  Gibt einen Zeiger auf die globale [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) Objekt.  
   
 ```  
@@ -729,7 +724,7 @@ CUserToolsManager* GetUserToolsManager();
 ### <a name="remarks"></a>Hinweise  
  Vor dem Abrufen von eines Zeigers auf die `CUserToolsManager` -Objekt, müssen Sie den Manager durch Aufrufen von initialisieren [CWinAppEx::EnableUserTools](#enableusertools).  
   
-##  <a name="initcontextmenumanager"></a>CWinAppEx::InitContextMenuManager  
+##  <a name="initcontextmenumanager"></a>  CWinAppEx::InitContextMenuManager  
  Initialisiert die [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) Objekt.  
   
 ```  
@@ -744,7 +739,7 @@ BOOL InitContextMenuManager();
   
  Wenn die Anwendung bereits einen Kontext-Manager im Menü und Sie rufen `InitContextMenuManager`, die Anwendung muss eine [ASSERT](diagnostic-services.md#assert) Fehler. Aus diesem Grund sollten Sie nicht aufrufen `InitContextMenuManager` bei Erstellung einer `CContextMenuManager` -Objekts direkt. Wenn Sie ein benutzerdefiniertes nicht verwenden `CContextMenuManager`, verwenden Sie `GetContextMenuManager` zum Erstellen einer `CContextMenuManager` Objekt.  
   
-##  <a name="initkeyboardmanager"></a>CWinAppEx::InitKeyboardManager  
+##  <a name="initkeyboardmanager"></a>  CWinAppEx::InitKeyboardManager  
  Initialisiert die [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) Objekt.  
   
 ```  
@@ -759,7 +754,7 @@ BOOL InitKeyboardManager();
   
  Wenn die Anwendung bereits, einen Tastatur-Manager verfügt, und Sie rufen `InitKeyboardManager`, die Anwendung muss eine [ASSERT](diagnostic-services.md#assert) Fehler. Aus diesem Grund sollten Sie nicht aufrufen `InitKeyboardManager` bei Erstellung einer `CKeyboardManager` -Objekts direkt. Wenn Sie ein benutzerdefiniertes nicht verwenden `CKeyboardManager`, verwenden Sie `GetKeyboardManager` zum Erstellen einer `CKeyboardManager` Objekt.  
   
-##  <a name="initmousemanager"></a>CWinAppEx::InitMouseManager  
+##  <a name="initmousemanager"></a>  CWinAppEx::InitMouseManager  
  Initialisiert die [CMouseManager](../../mfc/reference/cmousemanager-class.md) Objekt.  
   
 ```  
@@ -774,7 +769,7 @@ BOOL InitMouseManager();
   
  Wenn die Anwendung bereits verfügt über eine Maus-Manager, und Sie rufen `InitMouseManager`, die Anwendung muss eine [ASSERT](diagnostic-services.md#assert) Fehler. Aus diesem Grund sollten Sie nicht aufrufen `InitMouseManager` bei Erstellung einer `CMouseManager` -Objekts direkt. Wenn Sie ein benutzerdefiniertes nicht verwenden `CMouseManager`, verwenden Sie `GetMouseManager` zum Erstellen einer `CMouseManager` Objekt.  
   
-##  <a name="initshellmanager"></a>CWinAppEx::InitShellManager  
+##  <a name="initshellmanager"></a>  CWinAppEx::InitShellManager  
  Initialisiert die [CShellManager](../../mfc/reference/cshellmanager-class.md) Objekt.  
   
 ```  
@@ -789,7 +784,7 @@ BOOL InitShellManager();
   
  Wenn die Anwendung bereits verfügt über einen Shell-Manager, und Sie rufen `InitShellManager`, Ihre Anwendung löst eine [ASSERT](diagnostic-services.md#assert) Fehler. Rufen Sie daher nicht `InitShellManager` bei Erstellung einer `CShellManager` -Objekts direkt. Wenn Sie ein benutzerdefiniertes nicht verwenden `CShellManager`, verwenden Sie `GetShellManager` zum Erstellen einer `CShellManager` Objekt.  
   
-##  <a name="inittooltipmanager"></a>CWinAppEx:: Inittooltipmanager  
+##  <a name="inittooltipmanager"></a>  CWinAppEx:: Inittooltipmanager  
  Initialisiert die [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) Objekt.  
   
 ```  
@@ -804,7 +799,7 @@ BOOL InitTooltipManager();
   
  Wenn die Anwendung bereits einen QuickInfo-Manager und Sie rufen `InitTooltipManager`, die Anwendung muss eine [ASSERT](diagnostic-services.md#assert) Fehler. Aus diesem Grund sollten Sie nicht aufrufen `InitTooltipManager` bei Erstellung einer `CTooltipManager` -Objekts direkt. Wenn Sie ein benutzerdefiniertes nicht verwenden `CTooltipManager`, verwenden Sie `GetTooltipManager` zum Erstellen einer `CTooltipManager` Objekt.  
   
-##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
+##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate  
 
   
 ```  
@@ -815,7 +810,7 @@ BOOL IsResourceSmartUpdate() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="isstateexists"></a>CWinAppEx::IsStateExists  
+##  <a name="isstateexists"></a>  CWinAppEx::IsStateExists  
  Gibt an, ob der angegebene Schlüssel in der Registrierung ist.  
   
 ```  
@@ -829,7 +824,7 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Schlüssel in der Registrierung ist; andernfalls 0.  
   
-##  <a name="loadcustomstate"></a>CWinAppEx::LoadCustomState  
+##  <a name="loadcustomstate"></a>  CWinAppEx::LoadCustomState  
  Das Framework ruft diese Methode auf, nachdem der Status der Anwendung aus der Registrierung geladen.  
   
 ```  
@@ -841,7 +836,7 @@ virtual void LoadCustomState();
   
  Damit benutzerdefinierte Zustandsinformationen aus der Registrierung geladen werden, die Informationen muss zuerst gespeichert werden, mithilfe von [CWinAppEx::SaveCustomState](#savecustomstate).  
   
-##  <a name="loadstate"></a>CWinAppEx::LoadState  
+##  <a name="loadstate"></a>  CWinAppEx::LoadState  
  Liest den Anwendungsstatus aus der Windows-Registrierung.  
   
 ```  
@@ -885,7 +880,7 @@ virtual BOOL LoadState(
   
  Die `lpszSectionName` Parameter ist nicht der absolute Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standardschlüssel für die Registrierung für Ihre Anwendung hinzugefügt wird. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="loadwindowplacement"></a>CWinAppEx::LoadWindowPlacement  
+##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement  
  Vom Framework aufgerufen, wenn die Größe und Position des Hauptrahmenfenster aus der Registrierung geladen.  
   
 ```  
@@ -913,7 +908,7 @@ virtual BOOL LoadWindowPlacement(
   
  Überschreiben Sie diese Methode, wenn Sie zusätzliche Informationen über das Hauptrahmenfenster laden möchten.  
   
-##  <a name="m_bforceimagereset"></a>CWinAppEx::m_bForceImageReset  
+##  <a name="m_bforceimagereset"></a>  CWinAppEx::m_bForceImageReset  
  Gibt an, ob das Framework alle Symbolleistenbilder zurückgesetzt, wenn es das Rahmenfenster erneut geladen, das die Symbolleiste enthält.  
   
 ```  
@@ -923,7 +918,7 @@ BOOL m_bForceImageReset;
 ### <a name="remarks"></a>Hinweise  
  Die `m_bForceImageReset` -Datenmember ist eine geschützte Variable.  
   
-##  <a name="onappcontexthelp"></a>CWinAppEx::OnAppContextHelp  
+##  <a name="onappcontexthelp"></a>  CWinAppEx::OnAppContextHelp  
  Das Framework ruft diese Methode aus, wenn der Benutzer die Kontexthilfe für anfordert der **Anpassung** (Dialogfeld).  
   
 ```  
@@ -942,7 +937,7 @@ virtual void OnAppContextHelp(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird derzeit für die zukünftige Verwendung reserviert. Bei der Standardimplementierung wird keine Aktion ausgeführt, und es wird derzeit nicht vom Framework aufgerufen.  
   
-##  <a name="onclosingmainframe"></a>CWinAppEx::OnClosingMainFrame  
+##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame  
  Das Framework ruft diese Methode, bei der Verarbeitung eines Rahmenfensters `WM_CLOSE`.  
   
 ```  
@@ -956,7 +951,7 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode speichert den Zustand des `pFrameImpl`.  
   
-##  <a name="onviewdoubleclick"></a>CWinAppEx::OnViewDoubleClick  
+##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick  
  Ruft die benutzerdefinierten-Befehl, der einer Ansicht zugeordnet ist, wenn der Benutzer an einer beliebigen Stelle in dieser Ansicht doppelklickt.  
   
 ```  
@@ -973,12 +968,12 @@ virtual BOOL OnViewDoubleClick(
  Die Sicht-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `True`Wenn das Framework einen Befehl sucht. andernfalls "false".  
+ `True` Wenn das Framework einen Befehl sucht. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Um das benutzerdefinierte Verhalten zu unterstützen, müssen Sie diese Funktion aufrufen, bei der Verarbeitung der `WM_LBUTTONDBLCLK` Nachricht. Diese Methode führt die zugeordnete Ansicht-ID, die vom Befehl `iViewId`. Weitere Informationen zu benutzerdefinierten Verhalten, finden Sie unter [Anpassen von Tastatur und Maus](../../mfc/keyboard-and-mouse-customization.md).  
   
-##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
+##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle  
 
   
 ```  
@@ -992,7 +987,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="preloadstate"></a>CWinAppEx::PreLoadState  
+##  <a name="preloadstate"></a>  CWinAppEx::PreLoadState  
  Das Framework ruft diese Methode auf, unmittelbar bevor der Zustand der Anwendung aus der Registrierung geladen.  
   
 ```  
@@ -1002,7 +997,7 @@ virtual void PreLoadState();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn die Verarbeitungsvorgänge ausführen, unmittelbar bevor das Framework Zustand der Anwendung geladen werden sollen.  
   
-##  <a name="presavestate"></a>CWinAppEx::PreSaveState  
+##  <a name="presavestate"></a>  CWinAppEx::PreSaveState  
  Das Framework ruft diese Methode auf, unmittelbar vor dem Ausführen den Anwendungsstatus gespeichert.  
   
 ```  
@@ -1012,7 +1007,7 @@ virtual void PreSaveState();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn die Verarbeitungsvorgänge ausführen, unmittelbar bevor das Framework den Anwendungsstatus gespeichert werden sollen.  
   
-##  <a name="reloadwindowplacement"></a>CWinAppEx::ReloadWindowPlacement  
+##  <a name="reloadwindowplacement"></a>  CWinAppEx::ReloadWindowPlacement  
  Lädt die Größe und Position eines Fensters aus der Registrierung.  
   
 ```  
@@ -1029,7 +1024,7 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie die Funktion [CWinAppEx::StoreWindowPlacement](#storewindowplacement) die Größe und Position eines Fensters in die Registrierung geschrieben.  
   
-##  <a name="savecustomstate"></a>CWinAppEx::SaveCustomState  
+##  <a name="savecustomstate"></a>  CWinAppEx::SaveCustomState  
  Das Framework ruft diese Methode auf, nachdem der Zustand der Anwendung an der Registrierung gespeichert.  
   
 ```  
@@ -1039,7 +1034,7 @@ virtual void SaveCustomState();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn die Verarbeitungsvorgänge ausführen, nachdem die Anwendung den Status in der Registrierung gespeichert werden sollen. Standardmäßig wird diese Methode keine Aktion ausgeführt.  
   
-##  <a name="savestate"></a>CWinAppEx::SaveState  
+##  <a name="savestate"></a>  CWinAppEx::SaveState  
  Zustand der Anwendung in der Windows-Registrierung geschrieben.  
   
 ```  
@@ -1074,14 +1069,14 @@ BOOL SaveState(
  Ein Zeiger auf einen Frame-Fensterobjekt. Dieser Rahmen wird in der Windows-Registrierung gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `True`Bei Erfolg; `false` andernfalls.  
+ `True` Bei Erfolg; `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode speichert den Zustand der Anwendung und alle Zustandsinformationen für die bereitgestellten Rahmenfenster. Wenn Sie kein Rahmenfensters ergeben, speichert die Methode nur den Anwendungsstatus. Anwendungsinformationen umfasst die Statuswerte von der [CMouseManager Klasse](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager Klasse](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager-Klasse](../../mfc/reference/ckeyboardmanager-class.md), und die [ CUserToolsManager Klasse](../../mfc/reference/cusertoolsmanager-class.md).  
   
  Die `lpszSectionName` Parameter ist nicht der absolute Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
-##  <a name="setregistrybase"></a>CWinAppEx::SetRegistryBase  
+##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase  
  Legt den Standardpfad für die Registrierung für die Anwendung fest.  
   
 ```  
@@ -1098,7 +1093,7 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ### <a name="remarks"></a>Hinweise  
  Alle Methoden der [CWinAppEx Class](../../mfc/reference/cwinappex-class.md) , die Zugriff auf die Registrierung Start an einem Standardspeicherort. Verwenden Sie diese Methode, um diese Registrierung Standardspeicherort zu ändern. Verwendung [CWinAppEx::GetRegistryBase](#getregistrybase) den Standardspeicherort für die Registrierung abgerufen.  
   
-##  <a name="showpopupmenu"></a>CWinAppEx::ShowPopupMenu  
+##  <a name="showpopupmenu"></a>  CWinAppEx::ShowPopupMenu  
  Wird ein Popupmenü angezeigt.  
   
 ```  
@@ -1126,7 +1121,7 @@ virtual BOOL ShowPopupMenu(
   
  Unterstützung von Popupmenüs, benötigen Sie ein [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) Objekt. Wenn Sie nicht initialisiert haben die `CContextMenuManager` Objekt `ShowPopupMenu` schlägt fehl.  
   
-##  <a name="storewindowplacement"></a>CWinAppEx::StoreWindowPlacement  
+##  <a name="storewindowplacement"></a>  CWinAppEx::StoreWindowPlacement  
  Vom Framework aufgerufen, die Größe und Position für das Hauptrahmenfenster in die Registrierung geschrieben.  
   
 ```  
@@ -1154,7 +1149,7 @@ virtual BOOL StoreWindowPlacement(
   
  Überschreiben Sie diese Methode, wenn Sie zusätzliche Informationen zu dem Hauptrahmenfenster speichern möchten.  
   
-##  <a name="writebinary"></a>CWinAppEx::WriteBinary  
+##  <a name="writebinary"></a>  CWinAppEx::WriteBinary  
  Schreibt binäre Daten in der Registrierung.  
   
 ```  
@@ -1175,14 +1170,14 @@ BOOL WriteBinary(
  Die Größe des `pData` in Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags, die unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
  Wenn der Schlüssel von angegeben `lpszEntry` ist nicht vorhanden, diese Methode erstellt.  
   
-##  <a name="writeint"></a>CWinAppEx::WriteInt  
+##  <a name="writeint"></a>  CWinAppEx::WriteInt  
  Schreibt numerische Daten in der Registrierung.  
   
 ```  
@@ -1199,14 +1194,14 @@ BOOL WriteInt(
  Die Daten zu speichern.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
  Wenn der Schlüssel von angegeben `lpszEntry` ist nicht vorhanden, diese Methode erstellt.  
   
-##  <a name="writeobject"></a>CWinAppEx::WriteObject  
+##  <a name="writeobject"></a>  CWinAppEx::WriteObject  
  Schreibt Daten, die von der [CObject-Klasse](../../mfc/reference/cobject-class.md) an der Registrierung.  
   
 ```  
@@ -1223,12 +1218,12 @@ BOOL WriteObject(
  Ein Verweis auf `CObject` Daten, die die Methode gespeichert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode schreibt den `obj` Daten auf den angegebenen Wert unter dem Standard-Registrierungsschlüssel. Verwendung [CWinAppEx::GetRegistryBase](#getregistrybase) um den aktuellen Registrierungsschlüssel zu bestimmen.  
   
-##  <a name="writesectionbinary"></a>CWinAppEx::WriteSectionBinary  
+##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary  
  Schreibt binäre Daten auf einen Wert in der Registrierung.  
   
 ```  
@@ -1253,14 +1248,14 @@ BOOL WriteSectionBinary(
  Die Größe des `pData` in Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszSubSection` Parameter ist nicht der absolute Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
  Wenn der Schlüssel von angegeben `lpszEntry` ist nicht vorhanden, diese Methode erstellt.  
   
-##  <a name="writesectionint"></a>CWinAppEx::WriteSectionInt  
+##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt  
  Schreibt numerische Daten in der Registrierung.  
   
 ```  
@@ -1281,14 +1276,14 @@ BOOL WriteSectionInt(
  Die Daten in die Registrierung geschrieben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszSubSection` Parameter ist kein absoluter Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der auf den Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  
   
  Wenn der Schlüssel von angegeben `lpszEntry` ist nicht vorhanden, diese Methode erstellt.  
   
-##  <a name="writesectionobject"></a>CWinAppEx::WriteSectionObject  
+##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject  
  Schreibt Daten, die von der [CObject-Klasse](../../mfc/reference/cobject-class.md) auf einen spezifischen Registrierungszeichenfolgen-Wert.  
   
 ```  
@@ -1309,14 +1304,14 @@ BOOL WriteSectionObject(
  Die Daten zu speichern.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszSubSection` Parameter ist kein absoluter Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase)zugeordnet.  
   
  Wenn der Wert von angegeben `lpszEntry` ist nicht vorhanden, unter dem Registrierungsschlüssel, der gemäß `lpszSubSection`, mit dieser Methode den Wert erstellt wird.  
   
-##  <a name="writesectionstring"></a>CWinAppEx::WriteSectionString  
+##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString  
  Zeichenfolgendaten mit Schreibvorgänge auf einen Wert in der Registrierung.  
   
 ```  
@@ -1337,14 +1332,14 @@ BOOL WriteSectionString(
  Die Zeichenfolgendaten in die Registrierung geschrieben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszSubSection` Parameter ist kein absoluter Pfad für einen Registrierungseintrag. Es ist ein relativer Pfad, der an das Ende der Standard-Registrierungsschlüssel für die Anwendung angefügt ist. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase)zugeordnet.  
   
  Wenn der Wert von angegeben `lpszEntry` ist nicht vorhanden, unter `lpszSubSection`, diese Methode erstellt.  
   
-##  <a name="writestring"></a>CWinAppEx::WriteString  
+##  <a name="writestring"></a>  CWinAppEx::WriteString  
  Schreibvorgänge Zeichenfolgendaten an der Registrierung.  
   
 ```  
@@ -1361,7 +1356,7 @@ BOOL WriteString(
  Die Daten zu speichern.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `lpszEntry` Parameter ist der Name eines Registrierungseintrags unter dem Registrierungsschlüssel "Standard" für die Anwendung befindet. Verwenden Sie zum Abrufen oder Festlegen des Standard-Registrierungsschlüssels, die Methoden [CWinAppEx::GetRegistryBase](#getregistrybase) und [CWinAppEx::SetRegistryBase](#setregistrybase) bzw.  

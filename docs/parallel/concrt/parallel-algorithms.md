@@ -1,29 +1,24 @@
 ---
 title: Parallele Algorithmen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>Parallele Algorithmen
 Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arbeit mit Auflistungen von Daten verwenden. Diese Algorithmen entsprechen den in der C++-Standardbibliothek.  
@@ -54,7 +49,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
     - [Auswählen eines Sortieralgorithmus](#choose_sort)  
   
-##  <a name="parallel_for"></a>Der Parallel_for-Algorithmus  
+##  <a name="parallel_for"></a> Der Parallel_for-Algorithmus  
 
  Die [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) führt der Algorithmus wiederholt die gleiche Aufgabe parallel aus. Jede dieser Aufgaben wird durch eine Iterationswert parametrisiert. Dieser Algorithmus ist nützlich, wenn ein Schleifenkörper vorliegen, die Ressourcen von Iterationen der Schleife nicht gemeinsam verwendet wird.  
   
@@ -96,7 +91,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  [[Nach oben](#top)]  
   
-##  <a name="parallel_for_each"></a>Der Parallel_for_each-Algorithmus  
+##  <a name="parallel_for_each"></a> Der Parallel_for_each-Algorithmus  
 
  Die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus führt Aufgaben für einen iterativen Container, z. B. die von der C++-Standardbibliothek parallel bereitgestellt. Er verwendet die gleiche Partitionierungslogik wie der `parallel_for`-Algorithmus.  
   
@@ -121,7 +116,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  [[Nach oben](#top)]  
   
-##  <a name="parallel_invoke"></a>Der Parallel_invoke-Algorithmus  
+##  <a name="parallel_invoke"></a> Der Parallel_invoke-Algorithmus  
 
  Die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) Algorithmus führt eine Reihe von Aufgaben gleichzeitig aus. Es gibt keinen zurück, bis jede Aufgabe abgeschlossen ist. Dieser Algorithmus ist hilfreich, wenn Sie mehrere unabhängige Aufgaben verfügen, die zur gleichen Zeit ausgeführt werden soll.  
   
@@ -144,14 +139,14 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  [[Nach oben](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Die Parallel_transform- und Parallel_reduce-Algorithmen  
+##  <a name="parallel_transform_reduce"></a> Die Parallel_transform- und Parallel_reduce-Algorithmen  
 
  Die [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) und [Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) Algorithmen sind die parallelen Versionen der C++-Standardbibliothek Algorithmen [reduzierungsvorgänge](../../standard-library/algorithm-functions.md#transform)und [Std:: Accumulate](../../standard-library/numeric-functions.md#accumulate)zugeordnet. Die Concurrency Runtime-Versionen verhalten sich wie die C++-Standardbibliothek Versionen mit dem Unterschied, dass die Reihenfolge der Vorgang nicht bestimmt wird, daran, dass sie parallel ausgeführt. Verwenden Sie diese Algorithmen, wenn Sie mit einem Satz, die groß genug ist arbeiten, um Leistungs- und Skalierbarkeitsvorteile bieten abzurufen, von der parallelen Verarbeitung ist.  
   
 > [!IMPORTANT]
 >  Die `parallel_transform` und `parallel_reduce` Algorithmen unterstützen nur random-Access, bidirektionale und forward-Iteratoren, da diese Iteratoren stabil Speicheradressen erzeugen. Darüber hinaus diese Iteratoren erzeugen müssen nicht-`const` l-Werte.  
   
-###  <a name="parallel_transform"></a>Der Parallel_transform-Algorithmus  
+###  <a name="parallel_transform"></a> Der Parallel_transform-Algorithmus  
  Sie können die `parallel transform` Algorithmus, viele Data Parallelisierung Vorgänge auszuführen. Sie haben unter anderem folgende Möglichkeiten:  
   
 -   Die Helligkeit eines Bilds und andere Vorgänge Image Verarbeitung.  
@@ -174,7 +169,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
 > [!IMPORTANT]
 >  Der Iterator, der für die Ausgabe der angegebenen `parallel_transform` müssen vollständig überlappen der input-Iterator, oder sich nicht überschneiden. Das Verhalten dieses Algorithmus ist nicht angegeben, wenn die Eingabe- und Iteratoren teilweise überschneiden.  
   
-###  <a name="parallel_reduce"></a>Der Parallel_reduce-Algorithmus  
+###  <a name="parallel_reduce"></a> Der Parallel_reduce-Algorithmus  
  Die `parallel_reduce` Algorithmus ist nützlich, bei einer Sequenz von Vorgängen, die die assoziative-Eigenschaft entsprechen. (Dieser Algorithmus ist nicht kommutativ Eigenschaft erforderlich.) Im folgenden sind einige der Vorgänge, die Sie auch `parallel_reduce`:  
   
 -   Multiplizieren Sie Sequenzen von Matrizen bis hin zu eine Matrix zu erzeugen.  
@@ -191,7 +186,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  In vielen Fällen können Sie der Meinung von `parallel_reduce` als Kurzform für die Verwendung der `parallel_for_each` Algorithmus zusammen mit den [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Klasse.  
   
-###  <a name="map_reduce_example"></a>Beispiel: Der Zuordnung und Reduzierung parallel ausführen  
+###  <a name="map_reduce_example"></a> Beispiel: Der Zuordnung und Reduzierung parallel ausführen  
 
  Ein *Zuordnung* wendet eine Funktion auf jeden Wert in einer Sequenz. Ein *reduzieren* kombiniert die Elemente einer Sequenz zu einem einzelnen Wert. Sie können die C++-Standardbibliothek [reduzierungsvorgänge](../../standard-library/algorithm-functions.md#transform) und [Std:: Accumulate](../../standard-library/numeric-functions.md#accumulate) Funktionen zum Ausführen von Zuordnungs- und Operationen verringern. Für viele Probleme, Sie können jedoch die `parallel_transform` -Algorithmus parallel den Zuordnungsvorgang ausgeführt und die `parallel_reduce` Algorithmus den Reduzierungsvorgang parallel ausführen.  
 
@@ -204,7 +199,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  [[Nach oben](#top)]  
   
-##  <a name="partitions"></a>Partitionieren der Arbeit  
+##  <a name="partitions"></a> Partitionieren der Arbeit  
  Um einen Vorgang für eine Datenquelle zu parallelisieren, ist ein wichtiger Schritt zum *Partition* der Quelle in mehrere Abschnitte, die gleichzeitig durch mehrere Threads zugegriffen werden kann. Ein Partitionierer gibt an, wie ein paralleler Algorithmus Bereiche zwischen Threads partitionieren sollten. Wie zuvor in diesem Dokument erläutert wird, verwendet die PPL eine Partitionierung Mechanismus, der eine anfängliche Arbeitslast erstellt und verwendet dann einen Arbeitsübernahme-Algorithmus und Bereich, um diese Partitionen zu verteilen, wenn arbeitsauslastungen nicht ausgeglichen sind zu stehlen. Wenn eine Schleifeniteration einen Bereich von Iterationen abgeschlossen ist, wird die Common Language Runtime z. B. Arbeit von anderen Threads in diesem Thread. Möglicherweise möchten Sie jedoch für einige Szenarien ein anderen Mechanismus für die Partitionierungs angeben, das eine bessere Leistung für Ihr Problem geeignet ist.  
   
  Die `parallel_for`, `parallel_for_each`, und `parallel_transform` Algorithmen bieten überladene Versionen, die einen zusätzlichen Parameter annehmen `_Partitioner`. Dieser Parameter definiert, den Partitionierer-Typ, der Arbeit dividiert wird. Hier sind die Arten von Partitionierer, die die PPL definiert:  
@@ -235,11 +230,11 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
 > [!CAUTION]
 >  Gehen Sie vorsichtig vor, wenn Sie vorhandenen Code, die Kooperative Blockierung Semantik ändern verwenden benötigt `static_partitioner` oder `affinity_partitioner`. Diese Typen Partitionierer verwenden Sie nicht den Lastenausgleich oder Bereich zu stehlen und aus diesem Grund können das Verhalten der Anwendung geändert werden.  
   
- Die beste Möglichkeit, die bestimmt, ob einen Partitionierer in bestimmten Szenarien verwendet, werden von experimentieren und messen, wie lange dauert es unter repräsentative Lade- und Computerkonfigurationen Abschluss von Vorgängen ab. Z. B. statische Partitionierung möglicherweise erhebliche Beschleunigung auf einem Multikern-Computer, der nur wenige Kernen bereit, aber es unter Umständen in verlangsamungen auf Computern, die relativ viele Kerne verfügen.  
+ Die beste Möglichkeit, die bestimmt, ob einen Partitionierer in bestimmten Szenarien verwendet, werden von experimentieren und messen, wie lange dauert es unter repräsentative Lade- und Computerkonfigurationen Abschluss von Vorgängen ab. Die statische Partitionierung könnte z.B. möglicherweise auf einem Mehrkerncomputer mit nur wenigen Kernen für erhebliche Beschleunigung sorgen, doch bei Computern mit relativ vielen Kernen zu Verlangsamungen führen.  
   
  [[Nach oben](#top)]  
   
-##  <a name="parallel_sorting"></a>Parallele Sortierung  
+##  <a name="parallel_sorting"></a> Parallele Sortierung  
 
  Die PPL bietet drei Sortieralgorithmen: [Concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [Concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), und [Concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Diese Sortieralgorithmen sind nützlich, wenn Sie ein Dataset verfügen, die zu sortierenden parallel profitieren können. Parallele Sortierung ist insbesondere nützlich, bei ein großen Dataset haben oder wenn Sie einem rechenintensiv ist Vergleichsvorgang verwenden, um Ihre Daten zu sortieren. Jede der folgenden Algorithmen sortiert Elemente vorhanden.  
 
@@ -287,7 +282,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  Die Hash-Funktion muss einen ganzzahligen Typ zurückgeben ([Std::is_integral::value](../../standard-library/is-integral-class.md) muss `true`). Diese ganzzahlige Typ muss in den Typ `size_t`.  
   
-###  <a name="choose_sort"></a>Auswählen eines Sortieralgorithmus  
+###  <a name="choose_sort"></a> Auswählen eines Sortieralgorithmus  
  In vielen Fällen `parallel_sort` die optimale Ausgewogenheit zwischen Geschwindigkeit und Leistung bietet. Allerdings als Sie erhöhen die Größe des Datasets, die Anzahl der verfügbaren Prozessoren oder die Komplexität der Compare-Funktion `parallel_buffered_sort` oder `parallel_radixsort` bieten eine bessere Leistung. Die beste Möglichkeit, um zu bestimmen, welche Sortieralgorithmus zur Verwendung in einem gegebenen Szenario besteht darin experimentieren und messen, wie lange es dauert, typische Daten unter repräsentativen Computerkonfigurationen sortiert. Bedenken Sie die folgenden Richtlinien bei der Auswahl einer Strategie für die Sortierung.  
   
 -   Die Größe des Datasets. In diesem Dokument ein *kleine* Dataset weniger als 1.000 Elemente enthält, eine *Mittel* Dataset zwischen 10.000 und 100.000 Elemente enthält und eine *große* Dataset enthält mehr als 100.000 Elemente.  
@@ -302,11 +297,11 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
   
  Es ist möglicherweise nicht sinnvoll, um ein kleines Dataset parallel zu sortieren, auch wenn eine große Anzahl von verfügbaren Computerressourcen stehen Ihnen oder Ihrem Compare-Funktion oder ein Hash-Funktion eine relativ große Menge an Arbeit führt. Sie können [Std:: Sort](../../standard-library/algorithm-functions.md#sort) Funktion, um kleine Datasets zu sortieren. (`parallel_sort` und `parallel_buffered_sort` Aufrufen `sort` bei der Angabe einer Blockgröße, die größer ist als das Dataset; allerdings `parallel_buffered_sort` müsste O(N) Speicherplatz zuzuordnen, die zusätzliche Zeit aufgrund von Konflikten oder Arbeitsspeicher sperrenzuordnung einige Zeit dauern können.)  
   
- Verwenden, müssen Sie Speicherplatz sparen, oder Ihre Speicherbelegungsfunktion unterliegt den Konflikt bei Sperre, `parallel_sort` um ein Dataset mit mittlerer Größe zu sortieren. `parallel_sort`ist kein zusätzlichen Speicherplatz erforderlich; die andere Algorithmen O(N) Speicherplatz benötigt wird.  
+ Verwenden, müssen Sie Speicherplatz sparen, oder Ihre Speicherbelegungsfunktion unterliegt den Konflikt bei Sperre, `parallel_sort` um ein Dataset mit mittlerer Größe zu sortieren. `parallel_sort` ist kein zusätzlichen Speicherplatz erforderlich; die andere Algorithmen O(N) Speicherplatz benötigt wird.  
   
- Verwendung `parallel_buffered_sort` sortieren mittelgroße Datasets und wenn Ihre Anwendung die zusätzliche O(N) speicherplatzanforderungen erfüllt. `parallel_buffered_sort`kann besonders hilfreich sein, wenn eine große Anzahl von Verarbeitungsressourcen oder eine teure Compare-Funktion oder eine Hashfunktion vorliegt.  
+ Verwendung `parallel_buffered_sort` sortieren mittelgroße Datasets und wenn Ihre Anwendung die zusätzliche O(N) speicherplatzanforderungen erfüllt. `parallel_buffered_sort` kann besonders hilfreich sein, wenn eine große Anzahl von Verarbeitungsressourcen oder eine teure Compare-Funktion oder eine Hashfunktion vorliegt.  
   
- Verwendung `parallel_radixsort` sortieren großer Datasets erstellt werden und wenn Ihre Anwendung die zusätzliche O(N) speicherplatzanforderungen erfüllt. `parallel_radixsort`kann besonders hilfreich sein, wenn der entsprechende Vergleichsvorgang teurer ist, oder wenn beide Vorgänge teuer sind.  
+ Verwendung `parallel_radixsort` sortieren großer Datasets erstellt werden und wenn Ihre Anwendung die zusätzliche O(N) speicherplatzanforderungen erfüllt. `parallel_radixsort` kann besonders hilfreich sein, wenn der entsprechende Vergleichsvorgang teurer ist, oder wenn beide Vorgänge teuer sind.  
   
 > [!CAUTION]
 >  Implementiert eine gute Hashfunktion müssen Sie wissen, den Dataset-Bereich und wie jedes Element in das Dataset in einen entsprechenden Wert ohne Vorzeichen transformiert wird. Daran, dass die Hash-Operation für Werte ohne Vorzeichen funktioniert, erwägen Sie eine andere Sortierung Strategie, wenn nicht signierte Hashwerte können nicht erstellt werden.  
@@ -332,7 +327,7 @@ Die Parallel Patterns Library (PPL) stellt die Algorithmen, die gleichzeitig Arb
 |[Abbruch in der PPL](cancellation-in-the-ppl.md)|Erläutert die Rolle des Abbruchs in der PPL, wie zum Abbrechen paralleler Aufgaben sowie zum bestimmen, wann eine Aufgabengruppe abgebrochen wird.|  
 |[Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Erläutert die Rolle der Ausnahmebehandlung in der Concurrency Runtime.|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
 
  [Parallel_for-Funktion](reference/concurrency-namespace-functions.md#parallel_for)
   

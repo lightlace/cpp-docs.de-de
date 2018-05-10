@@ -1,13 +1,10 @@
 ---
 title: scanf-Breitenangaben | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>scanf-Breitenangabe
 Diese Informationen gelten für die Interpretation von Formatzeichenfolgen in der `scanf`-Funktionsreihe, einschließlich der sicheren Versionen wie `scanf_s`. Diese Funktionen nehmen in der Regel an, dass der Eingabestream in eine Folge von Token unterteilt ist. Token werden durch Leerzeichen (Leerzeichen, Tabstoppzeichen oder Zeilenumbruch) oder im Fall von numerischen Typen durch das natürliche Ende dieser getrennt, das durch das erste nicht in numerischen Text konvertierbare Zeichen angegeben ist. Mit den Breitenangaben können Sie jedoch festlegen, dass die Analyse der Eingabe vor dem natürlichen Ende eines Tokens beendet wird.  
@@ -94,7 +89,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Beachten Sie, dass **%[a-z]** und **%[z-a]** auf die gleiche Weise wie **%[abcde...z]** interpretiert werden. Dies ist eine häufige `scanf`-Funktionserweiterung, beachten Sie jedoch, dass sie nicht vom ANSI-Standard erfordert wird  
   
 ## <a name="reading-unterminated-strings"></a>Lesen von nicht beendeten Zeichenfolgen  
- Verwenden Sie zum Speichern einer Zeichenfolge ohne ein abschließendes NULL-Zeichen („\0“) die Spezifikation `%`*n***c**, wobei *n* ein dezimaler Integerwert ist. In diesem Fall gibt das **c**-Typzeichen an, dass das Argument ein Zeiger auf ein Zeichenarray ist. Die nächsten *n*-Zeichen werden aus dem Eingabedatenstrom in die angegebene Position gelesen, und es wird kein NULL-Zeichen („\0“) angefügt. Wenn *n* nicht angegeben wird, ist der Standardwert 1.  
+ Verwenden Sie zum Speichern einer Zeichenfolge ohne ein NULL-Abschlusszeichen („\0“) die Spezifikation `%`*n***c**, wobei *n* eine ganze Dezimalzahl ist. In diesem Fall gibt das **c**-Typzeichen an, dass das Argument ein Zeiger auf ein Zeichenarray ist. Die nächsten *n*-Zeichen werden aus dem Eingabestream in die angegebene Position gelesen und es wird kein NULL-Zeichen („\0“) angefügt. Wenn *n* nicht angegeben ist, lautet der Standardwert 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Wenn scanf das Lesen eines Felds beendet  
  Die `scanf`-Funktion überprüft Zeichen für Zeichen jedes Eingabefeld. Aus den folgenden Gründen beendet sie möglicherweise das Lesen eines bestimmten Eingabefelds, bevor ein Leerzeichen auftritt:  

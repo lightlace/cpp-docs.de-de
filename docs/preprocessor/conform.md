@@ -1,12 +1,9 @@
 ---
 title: entsprechen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - conform_CPP
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476228dc1331d005e4886c905256fad23353874c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b145225cfed3131b406d15827b589aed718d16bb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="conform"></a>conform
 **C++-spezifisch**  
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
  **POP** (optional)  
  Legt den Wert des *Namen* auf den Wert am oberen Rand der internen compilerstapel ab und ruft den Stapel dann. Wenn Bezeichner angegeben wird **pop**, der Stapel reduziert, bis er den Datensatz mit findet *Bezeichner*, die ebenfalls entfernt wird; der aktuelle Wert für *Namen* in der nächste Datensatz auf dem Stapel wird der neue Wert für *Namen*. Bei Angabe von Pop mit einer *Bezeichner* , die sich nicht in einem Datensatz im Stapel befindet, die **pop** wird ignoriert.  
   
- *identifier*(optional)  
+ *Bezeichner*(optional)  
  Kann enthalten eine **Push** oder **pop** Befehl. Wenn *Bezeichner* verwendet wird, wird eine **auf** oder **deaktiviert** Spezifizierer kann auch verwendet werden.  
   
 ## <a name="example"></a>Beispiel  

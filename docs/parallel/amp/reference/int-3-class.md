@@ -1,12 +1,9 @@
 ---
 title: int_3-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_x
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66a71701fb0806dbd93490587a9e0d8b3af46fe
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 26add4a57fac2cb2dfed2a5bd32f2fe0a477e938
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int3-class"></a>int_3-Klasse
 Stellt einen kurzen Vektor aus drei ganzen Zahlen dar.  
@@ -121,11 +116,11 @@ class int_3;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |int_3::get_x||  
-|int_3::get_xy||  
-|int_3::get_xyz||  
+|int_3:: get_xy||  
+|int_3:: get_xyz||  
 |int_3::get_xz||  
 |int_3::get_xzy||  
-|int_3::get_y||  
+|int_3:: get_Y||  
 |int_3::get_yx||  
 |int_3::get_yxz||  
 |int_3::get_yz||  
@@ -133,7 +128,7 @@ class int_3;
 |int_3::get_z||  
 |int_3::get_zx||  
 |int_3::get_zxy||  
-|int_3::get_zy||  
+|int_3:: get_zy||  
 |int_3::get_zyx||  
 |int_3::ref_b||  
 |int_3::ref_g||  
@@ -142,40 +137,40 @@ class int_3;
 |int_3::ref_y||  
 |int_3::ref_z||  
 |int_3::set_x||  
-|int_3::set_xy||  
-|int_3::set_xyz||  
+|int_3:: set_xy||  
+|int_3:: set_xyz||  
 |int_3::set_xz||  
-|int_3::set_xzy||  
-|int_3::set_y||  
+|int_3:: set_xzy||  
+|int_3:: set_y||  
 |int_3::set_yx||  
 |int_3::set_yxz||  
-|int_3::set_yz||  
-|int_3::set_yzx||  
+|int_3:: set_yz||  
+|int_3:: set_yzx||  
 |int_3::set_z||  
 |int_3::set_zx||  
 |int_3::set_zxy||  
-|int_3::set_zy||  
+|int_3:: set_zy||  
 |int_3::set_zyx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|int_3::operator-||  
-|int_3::operator--||  
+|int_3::-||  
+|int_3::--||  
 |int_3::operator%=||  
-|int_3::operator&=||  
+|int_3:: & =||  
 |int_3::operator*=||  
 |int_3::operator/=||  
 |int_3::operator^=||  
-|int_3::operator&#124;=||  
-|int_3::operator~||  
-|int_3::operator++||  
+|int_3::&#124;=||  
+|int_3:: ~||  
+|int_3:: Operator++-||  
 |int_3::operator+=||  
 |int_3::operator<\<=||  
 |int_3::operator=||  
-|int_3::operator-=||  
-|int_3::operator>>=||  
+|int_3:: Operator-=||  
+|int_3:: >> =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -204,7 +199,7 @@ class int_3;
 |int_3::rgb||  
 |int_3::x||  
 |int_3::xy||  
-|int_3::xyz||  
+|int_3:: XYZ||  
 |int_3::xz||  
 |int_3:: xzy||  
 |int_3::y||  
@@ -215,7 +210,7 @@ class int_3;
 |int_3::z||  
 |int_3::zx||  
 |int_3::zxy||  
-|int_3::zy||  
+|int_3:: ZY||  
 |int_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  

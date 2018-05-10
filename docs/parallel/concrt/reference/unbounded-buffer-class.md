@@ -1,12 +1,9 @@
 ---
 title: Unbounded_buffer-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 Ein `unbounded_buffer`-Meldungsblock ist ein geordneter `propagator_block` mit mehreren Zielen und mehreren Quellen, der eine unbegrenzte Anzahl von Meldungen speichern kann.  
   
@@ -62,7 +57,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[unbounded_buffer](#ctor)|Überladen. Erstellt eine `unbounded_buffer` Meldungsblock.|  
-|[~unbounded_buffer Destructor](#dtor)|Zerstört die `unbounded_buffer` Meldungsblock.|  
+|[~ Unbounded_buffer-Destruktor](#dtor)|Zerstört die `unbounded_buffer` Meldungsblock.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -153,7 +148,7 @@ _Type dequeue();
 ### <a name="return-value"></a>Rückgabewert  
  Die Nutzlast der Nachricht daraus die `unbounded_buffer`.  
   
-##  <a name="enqueue"></a> enqueue 
+##  <a name="enqueue"></a> In die Warteschlange einreihen 
 
  Fügt ein Element aus, um die `unbounded_buffer` Meldungsblock.  
   

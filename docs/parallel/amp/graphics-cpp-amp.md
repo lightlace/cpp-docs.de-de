@@ -2,26 +2,21 @@
 title: (Grafiken (c++ AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c187ebc4eeb3917ce01e63c6c0769ffa0a570368
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: HT
+ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="graphics-c-amp"></a>Grafiken (C++ AMP)
 C++ AMP enthält einige APIs in der [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) Namespace, die Sie verwenden können, auf die texturunterstützung auf GPUs zugreifen. Es folgen einige gängige Szenarien:  
@@ -148,7 +143,7 @@ void createTextureWithBPC() { // Create the source data.
 |-------------|---------------------|  
 |Textur\<T, 1 >|16384|  
 |Textur\<T, 2 >|16384|  
-|Textur\<T, 2 >|2048|  
+|Textur\<T, 3 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>Lesen in Texturobjekten  
  Erfahren Sie aus einer `texture` -Objekt unter Verwendung der [Texture::\[\]](reference/texture-class.md#operator_at), [Texture::Operator()-Operator](reference/texture-class.md#operator_call), oder [Texture:: Get-Methode](reference/texture-class.md#get). Die zwei Operatoren zurückgibt Wert, keinen Verweis. Daher können Sie nicht mit `texture` in ein `texture::operator\[\]`-Objekt schreiben.  

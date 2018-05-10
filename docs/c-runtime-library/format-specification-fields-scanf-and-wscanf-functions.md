@@ -1,13 +1,10 @@
 ---
 title: 'Formatangabefelder: scanf- und wscanf-Funktionen | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110.dll
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c99b951e0cbbb5d2a295eb336a856bdb6c4cc0e1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Formatangabefelder: scanf- und wscanf-Funktionen
 Die hier aufgeführten Informationen gelten für die gesamte `scanf`-Funktionsfamilie, einschließlich der sicheren Versionen. Sie beschreiben die Symbole, mithilfe derer `scanf`-Funktionen angewiesen werden, wie sie Eingabedatenströme in Werten analysieren, die in Programmvariablen eingefügt werden sollen; so z.B der Eingabestrom `stdin` für `scanf`.  

@@ -1,13 +1,10 @@
 ---
 title: 'Multithreading: Beenden von Threads | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Beenden von Threads
 In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemäß ausgelöst: die Steuerungsfunktion wird beendet, oder der Thread darf nicht vollständig ausgeführt werden. Falls z. B. in einem Textverarbeitungsprogramm ein Thread für den Hintergrunddruck verwendet wird, wird die Steuerungsfunktion normal beendet, sobald der Druckauftrag erfolgreich abgeschlossen ist. Wenn der Benutzer den Druckvorgang jedoch abbrechen möchte, muss der Thread für den Hintergrunddruck vorzeitig beendet werden. In diesem Thema wird beschrieben, wie jede Situation zu implementieren ist und wie der Exitcode des Threads nach seiner Beendigung ermittelt wird.  
@@ -43,17 +38,17 @@ In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemä�
   
 -   [Abfragen des Exitcodes eines Threads](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a>Normale Threadbeendigung  
+##  <a name="_core_normal_thread_termination"></a> Normale Threadbeendigung  
  Von einem Arbeitsthread werden bei der normalen Threadbeendigung folgende einfache Schritte ausgeführt: die Steuerungsfunktion wird beendet und es wird ein Wert zurückgegeben, aus dem der Grund für die Beendung hervorgeht. Verwenden Sie entweder die [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) Funktion oder eine `return` Anweisung. Normalerweise steht 0 für die erfolgreiche Ausführung; dies ist ganz Ihnen überlassen.  
   
  Für einen Benutzeroberflächenthread ist der Vorgang ebenso einfach: aus den Benutzeroberflächenthread aufgerufen [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Der einzige Parameter, **PostQuitMessage** nimmt ist der Exitcode des Threads. Bei Arbeitsthreads steht 0 normalerweise für eine erfolgreiche Ausführung.  
   
-##  <a name="_core_premature_thread_termination"></a>Vorzeitige Threadbeendigung  
+##  <a name="_core_premature_thread_termination"></a> Vorzeitige Threadbeendigung  
  Vorzeitige Beendigung eines Threads ist ähnlich einfach: Rufen Sie [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) von innerhalb des Threads. Übergeben Sie den gewünschten Exitcode als einzigen Parameter. Hierdurch wird die Ausführung des Threads beendet, der Stapel des Threads freigegeben, alle mit dem Thread verbundenen DLLs getrennt und das Threadobjekt aus dem Speicher gelöscht.  
   
  `AfxEndThread` muss von dem zu beendenden Thread aus aufgerufen werden. Wenn Sie einen Thread von einem anderen Thread aus beenden möchten, müssen Sie ein Kommunikationsverfahren zwischen den beiden Threads einrichten.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Abfragen des Exitcodes eines Threads  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Abfragen des Exitcodes eines Threads  
  Um den Exitcode des Arbeits- oder den Benutzeroberflächenthread zu erhalten, rufen die [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) Funktion. Weitere Informationen zu dieser Funktion finden Sie im [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Für diese Funktion sind das Handle für den Thread (im `m_hThread`-Datenmember des `CWinThread`-Objekts gespeichert) und die Adresse eines `DWORD` erforderlich.  
   
  Wenn der Thread weiterhin aktiv ist, wird **GetExitCodeThread** platziert **GetExitCodeThread** im bereitgestellten `DWORD` Adresse; andernfalls wird der Exitcode in dieser Adresse platziert.  

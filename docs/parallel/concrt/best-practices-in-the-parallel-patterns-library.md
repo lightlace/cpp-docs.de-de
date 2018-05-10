@@ -1,13 +1,10 @@
 ---
-title: "Bewährte Methoden in der Parallel Patterns Library | Microsoft Docs"
-ms.custom: 
+title: Bewährte Methoden in der Parallel Patterns Library | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Empfohlene Vorgehensweisen in der Parallel Patterns Library
 Dieses Dokument beschreibt die optimale, effektive Nutzung der Parallel Patterns Library (PPL). Die PPL bietet allgemeine Container, Objekte und Algorithmen zum Ausführen von differenziertem Parallelismus.  
@@ -56,7 +51,7 @@ Dieses Dokument beschreibt die optimale, effektive Nutzung der Parallel Patterns
   
 - [Stellen Sie sicher, dass Variablen während der gesamten Lebensdauer einer Aufgabe gültig sind.](#lifetime)  
   
-##  <a name="small-loops"></a>Kleine Schleifenkörper nicht parallelisieren  
+##  <a name="small-loops"></a> Kleine Schleifenkörper nicht parallelisieren  
  Die Parallelisierung von relativ kleinen Schleifenkörpern kann dazu führen, dass der entsprechende Planungsaufwand die Vorteile der parallelen Verarbeitung zunichte machen. Betrachten Sie das folgende Beispiel, das jedes Elementpaar in zwei Arrays hinzufügt.  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ Dieses Dokument beschreibt die optimale, effektive Nutzung der Parallel Patterns
   
  [[Nach oben](#top)]  
   
-##  <a name="highest"></a>Parallelität auf der höchstmöglichen Ebene Ausdrücken  
+##  <a name="highest"></a> Parallelität auf der höchstmöglichen Ebene Ausdrücken  
  Wenn Sie Code nur auf niedriger Ebene parallelisieren, können Sie ein Fork-Join-Konstrukt einführen, das nicht mit der steigenden Anzahl der Prozessoren skaliert. Ein *Fork-Join* -Konstrukt ist ein Konstrukt, in dem eine Aufgabe seine Arbeit in kleinere parallele Unteraufgaben unterteilt und dieser Unteraufgaben wartet. Jede Unteraufgabe kann sich selbst rekursiv auf weitere Unteraufgaben aufteilen.  
   
  Obwohl das Fork-Join-Modell zur Lösung verschiedener Probleme hilfreich sein kann, gibt es Situationen, in denen der Synchronisierungsaufwand die Skalierbarkeit verringern kann. Betrachten Sie beispielsweise den folgenden seriellen Code, der Bilddaten verarbeitet.  
@@ -92,7 +87,7 @@ Dieses Dokument beschreibt die optimale, effektive Nutzung der Parallel Patterns
   
  [[Nach oben](#top)]  
   
-##  <a name="divide-and-conquer"></a>Parallel_invoke zum Lösen von Divide-and-Conquer-Problemen  
+##  <a name="divide-and-conquer"></a> Parallel_invoke zum Lösen von Divide-and-Conquer-Problemen  
 
  Ein *Divide-and-conquer* -Problem ist eine Form des Fork-Join-Konstrukts, das Rekursion verwendet, um eine Aufgabe in Unteraufgaben zu unterteilen. Zusätzlich zu den [Concurrency:: task_group](reference/task-group-class.md) und [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) Klassen, können Sie auch die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus Divide-and-conquer-Probleme zu lösen. Die `parallel_invoke`-Algorithmus verfügt über eine kompaktere Syntax als Aufgabengruppenobjekte und ist nützlich, wenn Sie eine feste Anzahl paralleler Aufgaben haben.  
   
@@ -106,7 +101,7 @@ Dieses Dokument beschreibt die optimale, effektive Nutzung der Parallel Patterns
   
  [[Nach oben](#top)]  
   
-##  <a name="breaking-loops"></a>Verwenden Sie Abbruch und Ausnahmebehandlung zum Verlassen einer Parallelschleife  
+##  <a name="breaking-loops"></a> Verwenden Sie Abbruch und Ausnahmebehandlung zum Verlassen einer Parallelschleife  
  Die PPL bietet zwei Möglichkeiten, um parallele Arbeitsvorgänge abzubrechen, die von einer Aufgabengruppe oder einem parallelen Algorithmus ausgeführt werden. Eine Möglichkeit ist die Verwendung der Abbruchmechanismus, die von bereitgestellte der [Concurrency:: task_group](reference/task-group-class.md) und [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) Klassen. Eine andere Möglichkeit ist das Auslösen einer Ausnahme im Text einer Arbeitsfunktion einer Aufgabe. Der Abbruchmechanismus ist effizienter als die Ausnahmebehandlung beim Abbrechen einer parallelen Arbeitsstruktur. Ein *parallele Arbeitsstruktur* ist eine Gruppe verwandter Aufgabengruppen, die in der einige Aufgabengruppen andere Aufgabengruppen enthalten. Der Abbruchmechanismus bricht eine Aufgabengruppe und ihre untergeordneten Aufgabengruppen von oben nach unten ab. Bei der Ausnahmebehandlung wird dagegen die umgekehrte Reihenfolge verwendet (Bottom-Up-Ansatz), sodass jede untergeordnete Aufgabengruppe einzeln abgebrochen werden muss.  
   
 
@@ -132,7 +127,7 @@ Dieses Dokument beschreibt die optimale, effektive Nutzung der Parallel Patterns
   
  [[Nach oben](#top)]  
   
-##  <a name="object-destruction"></a>Verstehen, wie Abbruch und Ausnahmebehandlung auf die Zerstörung auswirken  
+##  <a name="object-destruction"></a> Verstehen, wie Abbruch und Ausnahmebehandlung auf die Zerstörung auswirken  
  Eine abgebrochene Aufgabe in einer Struktur paralleler Arbeitsaufgaben kann dazu führen, dass untergeordnete Aufgaben nicht ausgeführt werden. Dies kann Probleme verursachen, wenn eine der untergeordneten Aufgaben einen Vorgang ausführen soll, der für die Anwendung von Bedeutung ist, beispielsweise das Freigeben einer Ressource. Darüber hinaus kann ein Aufgabenabbruch eine Ausnahme über einen Objektdestruktor weitergeben und ein nicht definiertes Verhalten in der Anwendung verursachen.  
   
  Im folgenden Beispiel beschreibt die `Resource`-Klasse eine Ressource und die `Container`-Klasse einen Container, der Ressourcen enthält. Im ihrem Destruktor ruft die `Container`-Klasse die `cleanup`-Methode für zwei ihrer `Resource`-Member parallel auf und ruft dann die `cleanup`-Methode für den dritten `Resource`-Member auf.  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Nach oben](#top)]  
   
-##  <a name="repeated-blocking"></a>In einer parallelen Schleife kein wiederholtes blockieren  
+##  <a name="repeated-blocking"></a> In einer parallelen Schleife kein wiederholtes blockieren  
 
  Eine parallele Schleife wie [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) oder [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) , richtet sich anfällt, durch das Blockieren von Vorgängen können dazu führen, dass die Laufzeit innerhalb einer kurzen Zeitspanne viele Threads erstellt.  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Nach oben](#top)]  
   
-##  <a name="blocking"></a>Führen Sie keine Blockierungsvorgänge beim Abbrechen paralleler Aufgaben  
+##  <a name="blocking"></a> Führen Sie keine Blockierungsvorgänge beim Abbrechen paralleler Aufgaben  
 
  Wenn möglich, nicht führen blockierenden Vorgänge vor dem Aufrufen der [task_group](reference/task-group-class.md#cancel) oder [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) Methode zum Abbrechen paralleler Aufgaben.  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Nach oben](#top)]  
   
-##  <a name="shared-writes"></a>Nicht auf freigegebene Daten in einer parallelen Schleife schreiben  
+##  <a name="shared-writes"></a> Nicht auf freigegebene Daten in einer parallelen Schleife schreiben  
  Die Concurrency Runtime bietet verschiedene Datenstrukturen, z. B. [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), die gleichzeitigen Zugriff auf freigegebene Daten synchronisieren. Diese Datenstrukturen sind in vielen Fällen hilfreich, wenn z. B. mehrere Aufgaben nur selten gemeinsamen Zugriff auf eine Ressource erfordern.  
   
  Betrachten Sie das folgende Beispiel, das verwendet die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus und eine `critical_section` Objekt berechnet die Anzahl von Primzahlen in einem [Std:: Array](../../standard-library/array-class-stl.md) Objekt. Dieses Beispiel skaliert nicht, da jeder Thread warten muss, um auf die freigegebene Variable `prime_sum` zuzugreifen.  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Nach oben](#top)]  
   
-##  <a name="false-sharing"></a>Vermeiden Sie False Sharing nach Möglichkeit  
+##  <a name="false-sharing"></a> Vermeiden Sie False Sharing nach Möglichkeit  
  *False sharing* tritt auf, wenn mehrere gleichzeitige Aufgaben, die auf separaten Prozessoren ausgeführt werden, die auf Variablen, die befinden auf derselben Cachezeile schreiben. Wenn eine Aufgabe in eine der Variablen schreibt, wird die Cachezeile für beide Variablen ungültig. Jeder Prozessor muss die Cachezeile jedes Mal neu laden, wenn die Cachezeile ungültig ist. Daher kann False Sharing zu Leistungseinbußen in der Anwendung führen.  
   
  Das folgende grundlegende Beispiel zwei gleichzeitige Aufgaben, die jeweils eine gemeinsame Zählervariable erhöhen.  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Nach oben](#top)]  
   
-##  <a name="lifetime"></a>Stellen Sie sicher, dass Variablen während der gesamten Lebensdauer einer Aufgabe gültig sind.  
+##  <a name="lifetime"></a> Stellen Sie sicher, dass Variablen während der gesamten Lebensdauer einer Aufgabe gültig sind.  
  Wenn Sie einer Aufgabengruppe oder einem parallelen Algorithmus einen Lambdaausdruck bereitstellen, gibt die Erfassungsklausel an, ob der Text des Lambdaausdrucks auf Variablen im einschließenden Bereich als Wert oder als Verweis zugreift. Wenn Sie Variablen als Verweis an einen Lambdaausdruck übergeben, müssen Sie sicherstellen, dass die Lebensdauer dieser Variablen bis zum Beenden der Aufgabe erhalten bleibt.  
   
  Betrachten Sie das folgende Beispiel, in dem die `object`-Klasse und die `perform_action`-Funktion definiert werden. Die `perform_action`-Funktion erstellt eine `object`-Variable und führt eine Aktion für diese Variable asynchron durch. Da die Aufgabe nicht unbedingt vor der Rückgabe der `perform_action`-Funktion beendet wird, stürzt das Programm ab oder zeigt nicht definiertes Verhalten, wenn die `object`-Variable beim Ausführen der Aufgabe gelöscht wird.  

@@ -1,13 +1,10 @@
 ---
 title: 'Vorgehensweise: Verwenden von Parallel_invoke auf parallele Sortierung Schreiben einer | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren
 Dieses Dokument beschreibt, wie die [Parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) -Algorithmus die Leistung des bitonischen Sortieralgorithmus verbessert werden kann. Der bitonische Sortieralgorithmus unterteilt die Eingabesequenz rekursiv in kleinere sortierte Partitionen. Der bitonische Sortieralgorithmus kann parallel ausgeführt werden, da alle Partitionsvorgänge von allen anderen Vorgängen unabhängig sind.  
@@ -44,14 +39,14 @@ Dieses Dokument beschreibt, wie die [Parallel_invoke](../../parallel/concrt/para
   
 - [Verwenden von Parallel_invoke Bitonische parallele](#parallel)  
   
-##  <a name="serial"></a>Ausführen der Bitonischen Sortierung  
+##  <a name="serial"></a> Ausführen der Bitonischen Sortierung  
  Im folgenden Beispiel wird die serielle Version des bitonischen Sortieralgorithmus dargestellt. Die `bitonic_sort`-Funktion unterteilt die Sequenz in zwei Partitionen, sortiert diese Partitionen in entgegengesetzten Richtungen, und führt dann die Ergebnisse zusammen. Diese Funktion ruft sich selbst zweimal auf, um alle Partitionen rekursiv zu sortieren.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[Nach oben](#top)]  
   
-##  <a name="parallel"></a>Verwenden von Parallel_invoke Bitonische parallele  
+##  <a name="parallel"></a> Verwenden von Parallel_invoke Bitonische parallele  
  In diesem Abschnitt wird beschrieben, wie der bitonischen Sortieralgorithmus mit dem `parallel_invoke`-Algorithmus parallel ausgeführt werden kann.  
   
 ### <a name="procedures"></a>Verfahren  

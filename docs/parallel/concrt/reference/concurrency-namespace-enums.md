@@ -1,10 +1,7 @@
 ---
 title: Concurrency-Namespace Enumerationen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>Concurrency-Namespace-Enumerationen
 ||||  
@@ -60,7 +55,7 @@ enum agent_status;
  Weitere Informationen finden Sie unter [asynchrone Agents](../../../parallel/concrt/asynchronous-agents.md).  
 
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h
+ **Header:** concrt.h hinzu
 
 ##  <a name="agents_eventtype"></a>  Agents_EventType-Enumeration  
  Die Typen von Ereignissen, die mit der von der Agents Library angebotenen Ablaufverfolgungsfunktionalität aufgezeichnet werden können  
@@ -83,7 +78,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_UNLINK`|Ein Ereignistyp, der das Aufheben der Verknüpfung der Meldungsblöcke darstellt|  
 
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h
+ **Header:** concrt.h hinzu
 
 ##  <a name="concrt_eventtype"></a>  ConcRT_EventType-Enumeration  
  Die Typen von Ereignissen, die mit der von der Concurrency Runtime angebotenen Ablaufverfolgungsfunktionalität aufgezeichnet werden können.  
@@ -106,7 +101,7 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_YIELD`|Ein Ereignistyp, der einen Kontext und gibt der Vorgang darstellt.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h **Namespace:** concurrency
+ **Header:** concrt.h hinzu **Namespace:** Parallelität
 
 ##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags-Enumeration  
  Ablaufverfolgungskennzeichen für die Ereignistypen  
@@ -127,7 +122,7 @@ enum Concrt_TraceFlags;
 |`VirtualProcessorEventFlag`||
 
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h
+ **Header:** concrt.h hinzu
 
 ##  <a name="criticalregiontype"></a>  CriticalRegionType-Enumeration  
  Der Typ eines kritischen Bereichs, in dem sich ein Kontext befindet.  
@@ -215,7 +210,7 @@ enum PolicyElementKey;
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
 
 ##  <a name="schedulertype"></a>  SchedulerType-Enumeration  
  Wird von der `SchedulerKind`-Richtlinie verwendet, um den Typ der Threads zu beschreiben, die der Planer für zugrunde liegende Ausführungskontexte verwenden soll. Weitere Informationen über verfügbare Planerrichtlinien finden Sie unter [PolicyElementKey](concurrency-namespace-enums.md).  
@@ -232,7 +227,7 @@ enum SchedulerType;
 |`UmsThreadDefault`|Im Benutzermodus planbare (UMS) Threads werden in der Concurrency Runtime in Visual Studio 2013 nicht unterstützt. Das Verwenden von `UmsThreadDefault` als ein Wert für die `SchedulerType`-Richtlinie führt zu keinem Fehler. Ein Planer, der mit dieser Richtlinie erstellt wurde, wird jedoch standardmäßig Win32-Threads verwenden.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
   
 ##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType-Enumeration  
  Wird von der `SchedulingProtocol`-Richtlinie verwendet, um zu beschreiben, welcher Planungsalgorithmus für den Planer verwendet wird. Weitere Informationen über verfügbare Planerrichtlinien finden Sie unter [PolicyElementKey](concurrency-namespace-enums.md).  
@@ -248,7 +243,7 @@ enum SchedulingProtocolType;
 |`EnhanceScheduleGroupLocality`|Der Planer bevorzugt weiterhin auf Vorgänge innerhalb der aktuellen Planungsgruppe ausgeführt werden soll, vor dem Wechsel in einer anderen Planungsgruppe. Entsperrt Kontexten pro virtueller Prozessor zwischengespeichert werden und in der Regel in einer Weise der Last in First Out (LIFO) geplant sind, durch den virtuellen Prozessor, der Blockierung aufgehoben hat.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
  
 ##  <a name="switchingproxystate"></a>  SwitchingProxyState-Enumeration  
  Wird verwendet, um den Zustand zu bezeichnen, in dem sich ein Threadproxy befindet, wenn er einen kooperativen Kontextwechsel zu einem anderen Threadproxy ausführt.  
@@ -300,7 +295,7 @@ enum WinRTInitializationType;
 |`InitializeWinRTAsMTA`|Wenn die Anwendung unter Windows 8 oder neueren Betriebssystemen ausgeführt wird, initialisiert jeder Thread innerhalb des Planers Windows-Runtime und deklariert, dass er Teil des Multithread-Apartments ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
 
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

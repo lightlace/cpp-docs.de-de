@@ -1,12 +1,9 @@
 ---
 title: double_4-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::get_xw
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1762d985bacb5dc35f7b8e61633bd53c6e08c03a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4d5c776784f78f79fb6d90bde96b199631d08d22
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double4-class"></a>double_4-Klasse
 Dies stellt einen Kurzvektor mit vier Double-Werten dar.  
@@ -322,11 +317,11 @@ class double_4;
 |double_4::get_wxyz||  
 |double_4::get_wxz||  
 |double_4::get_wxzy||  
-|double_4::get_wy||  
+|double_4:: get_wy||  
 |double_4::get_wyx||  
 |double_4::get_wyxz||  
-|double_4::get_wyz||  
-|double_4::get_wyzx||  
+|double_4:: get_wyz||  
+|double_4:: get_wyzx||  
 |double_4::get_wz||  
 |double_4::get_wzx||  
 |double_4::get_wzxy||  
@@ -338,32 +333,32 @@ class double_4;
 |double_4::get_xwyz||  
 |double_4::get_xwz||  
 |double_4::get_xwzy||  
-|double_4::get_xy||  
-|double_4::get_xyw||  
+|double_4:: get_xy||  
+|double_4:: get_xyw||  
 |double_4::get_xywz||  
-|double_4::get_xyz||  
-|double_4::get_xyzw||  
+|double_4:: get_xyz||  
+|double_4:: get_xyzw||  
 |double_4::get_xz||  
 |double_4::get_xzw||  
 |double_4::get_xzwy||  
-|double_4::get_xzy||  
+|double_4:: get_xzy||  
 |double_4::get_xzyw||  
-|double_4::get_y||  
-|double_4::get_yw||  
+|double_4:: get_Y||  
+|double_4:: get_yw||  
 |double_4::get_ywx||  
-|double_4::get_ywxz||  
+|double_4:: get_ywxz||  
 |double_4::get_ywz||  
-|double_4::get_ywzx||  
+|double_4:: get_ywzx||  
 |double_4::get_yx||  
 |double_4::get_yxw||  
 |double_4::get_yxwz||  
 |double_4::get_yxz||  
 |double_4::get_yxzw||  
 |double_4::get_yz||  
-|double_4::get_yzw||  
-|double_4::get_yzwx||  
-|double_4::get_yzx||  
-|double_4::get_yzxw||  
+|double_4:: get_yzw||  
+|double_4:: get_yzwx||  
+|double_4:: get_yzx||  
+|double_4:: get_yzxw||  
 |double_4::get_z||  
 |double_4::get_zw||  
 |double_4::get_zwx||  
@@ -394,11 +389,11 @@ class double_4;
 |double_4::set_wxyz||  
 |double_4::set_wxz||  
 |double_4::set_wxzy||  
-|double_4::set_wy||  
+|double_4:: set_wy||  
 |double_4::set_wyx||  
 |double_4::set_wyxz||  
-|double_4::set_wyz||  
-|double_4::set_wyzx||  
+|double_4:: set_wyz||  
+|double_4:: set_wyzx||  
 |double_4::set_wz||  
 |double_4::set_wzx||  
 |double_4::set_wzxy||  
@@ -410,32 +405,32 @@ class double_4;
 |double_4::set_xwyz||  
 |double_4::set_xwz||  
 |double_4::set_xwzy||  
-|double_4::set_xy||  
-|double_4::set_xyw||  
+|double_4:: set_xy||  
+|double_4:: set_xyw||  
 |double_4::set_xywz||  
-|double_4::set_xyz||  
-|double_4::set_xyzw||  
+|double_4:: set_xyz||  
+|double_4:: set_xyzw||  
 |double_4::set_xz||  
-|double_4::set_xzw||  
+|double_4:: set_xzw||  
 |double_4::set_xzwy||  
-|double_4::set_xzy||  
+|double_4:: set_xzy||  
 |double_4::set_xzyw||  
-|double_4::set_y||  
-|double_4::set_yw||  
-|double_4::set_ywx||  
-|double_4::set_ywxz||  
+|double_4:: set_y||  
+|double_4:: set_yw||  
+|double_4:: set_ywx||  
+|double_4:: set_ywxz||  
 |double_4::set_ywz||  
-|double_4::set_ywzx||  
+|double_4:: set_ywzx||  
 |double_4::set_yx||  
 |double_4::set_yxw||  
 |double_4::set_yxwz||  
 |double_4::set_yxz||  
 |double_4::set_yxzw||  
-|double_4::set_yz||  
-|double_4::set_yzw||  
-|double_4::set_yzwx||  
-|double_4::set_yzx||  
-|double_4::set_yzxw||  
+|double_4:: set_yz||  
+|double_4:: set_yzw||  
+|double_4:: set_yzwx||  
+|double_4:: set_yzx||  
+|double_4:: set_yzxw||  
 |double_4::set_z||  
 |double_4::set_zw||  
 |double_4::set_zwx||  
@@ -447,8 +442,8 @@ class double_4;
 |double_4::set_zxwy||  
 |double_4::set_zxy||  
 |double_4::set_zxyw||  
-|double_4::set_zy||  
-|double_4::set_zyw||  
+|double_4:: set_zy||  
+|double_4:: set_zyw||  
 |double_4::set_zywx||  
 |double_4::set_zyx||  
 |double_4::set_zyxw||  
@@ -459,7 +454,7 @@ class double_4;
 |----------|-----------------|  
 |double_4::operator-||  
 |double_4::operator--||  
-|double_4::operator*=||  
+|double_4 * =||  
 |double_4::operator/=||  
 |double_4::operator++||  
 |double_4::operator+=||  
@@ -500,7 +495,7 @@ class double_4;
 |double_4::barg||  
 |double_4::bg||  
 |double_4::bga||  
-|double_4::bgar||  
+|double_4:: bgar||  
 |double_4::bgr||  
 |double_4::bgra||  
 |double_4::br||  
@@ -513,7 +508,7 @@ class double_4;
 |double_4::gab||  
 |double_4::gabr||  
 |double_4::gar||  
-|double_4::garb||  
+|double_4:: garb||  
 |double_4::gb||  
 |double_4::gba||  
 |double_4::gbar||  
@@ -550,28 +545,28 @@ class double_4;
 |double_4::wyx||  
 |double_4::wyxz||  
 |double_4::wyz||  
-|double_4::wyzx||  
+|double_4:: wyzx||  
 |double_4::wz||  
 |double_4::wzx||  
 |double_4::wzxy||  
 |double_4::wzy||  
 |double_4::wzyx||  
-|double_4::x||  
-|double_4::xw||  
-|double_4::xwy||  
+|double_4:: x||  
+|double_4:: xw||  
+|double_4:: xwy||  
 |double_4::xwyz||  
 |double_4::xwz||  
-|double_4::xwzy||  
+|double_4:: xwzy||  
 |double_4::xy||  
 |double_4::xyw||  
 |double_4::xywz||  
 |double_4::xyz||  
-|double_4::xyzw||  
+|double_4:: xyzw||  
 |double_4::xz||  
-|double_4::xzw||  
+|double_4:: xzw||  
 |double_4::xzwy||  
-|double_4::xzy||  
-|double_4::xzyw||  
+|double_4:: xzy||  
+|double_4:: xzyw||  
 |double_4::y||  
 |double_4::yw||  
 |double_4::ywx||  
@@ -584,9 +579,9 @@ class double_4;
 |double_4::yxz||  
 |double_4::yxzw||  
 |double_4::yz||  
-|double_4::yzw||  
+|double_4:: yzw||  
 |double_4::yzwx||  
-|double_4::yzx||  
+|double_4:: yzx||  
 |double_4::yzxw||  
 |double_4::z||  
 |double_4::zw||  
@@ -594,13 +589,13 @@ class double_4;
 |double_4::zwxy||  
 |double_4::zwy||  
 |double_4::zwyx||  
-|double_4::zx||  
+|double_4:: ZX||  
 |double_4::zxw||  
 |double_4::zxwy||  
 |double_4::zxy||  
 |double_4::zxyw||  
-|double_4::zy||  
-|double_4::zyw||  
+|double_4:: ZY||  
+|double_4:: zyw||  
 |double_4::zywx||  
 |double_4::zyx||  
 |double_4::zyxw||  

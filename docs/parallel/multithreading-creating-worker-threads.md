@@ -1,13 +1,10 @@
 ---
 title: 'Multithreading: Erstellen von Arbeitsthreads | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>Multithreading: Erstellen von Arbeitsthreads
 Ein Arbeitsthread wird normalerweise zur Behandlung von Hintergrundaufgaben verwendet. Auf diese Weise muss der Benutzer nicht auf deren Beendung warten, um mit der Anwendung weiterarbeiten zu können. Aufgaben wie Neuberechnung und Hintergrunddruck sind gute Beispiele für Arbeitsthreads. In diesem Thema werden die notwendigen Schritte zur Erstellung eines Arbeitsthreads ausführlich erläutert. Folgende Themen werden behandelt:  
@@ -42,7 +37,7 @@ Ein Arbeitsthread wird normalerweise zur Behandlung von Hintergrundaufgaben verw
   
  Die Erstellung eines Arbeitsthreads ist eine verhältnismäßig einfache Aufgabe. Zur Aktivierung des Threads sind lediglich zwei Schritte erforderlich: das Implementieren einer Steuerungsfunktion und das Starten des Threads. Es ist nicht erforderlich, leiten Sie eine Klasse von [CWinThread](../mfc/reference/cwinthread-class.md). Sie können eine Klasse ableiten, wenn Sie eine spezielle Version von `CWinThread` benötigen, dies ist jedoch für die meisten einfachen Arbeitsthreads nicht erforderlich. `CWinThread` kann unverändert verwendet werden.  
   
-##  <a name="_core_starting_the_thread"></a>Starten des Threads  
+##  <a name="_core_starting_the_thread"></a> Starten des Threads  
  Es gibt zwei überladene Versionen von `AfxBeginThread`: eine, mit der nur Arbeitsthreads erstellt werden können, und eine, mit der Benutzeroberflächenthreads und Arbeitsthreads erstellt werden können. Um die Ausführung des Arbeitsthreads mithilfe der ersten Überladung zu starten, rufen [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), die folgenden Informationen angeben:  
   
 -   Die Adresse der Steuerungsfunktion  
@@ -59,7 +54,7 @@ Ein Arbeitsthread wird normalerweise zur Behandlung von Hintergrundaufgaben verw
   
  `AfxBeginThread` generiert und initialisiert ein `CWinThread`-Objekt automatisch, startet es und gibt seine Adresse zurück, damit Sie zu einem späteren Zeitpunkt darauf Bezug nehmen können. Während der gesamten Prozedur wird überprüft, ob alle Objekte ordnungsgemäß freigegeben werden, falls ein Teil des Erstellungsprozesses fehlschlagen sollte.  
   
-##  <a name="_core_implementing_the_controlling_function"></a>Implementieren der Steuerungsfunktion  
+##  <a name="_core_implementing_the_controlling_function"></a> Implementieren der Steuerungsfunktion  
  Der Thread wird durch die Steuerungsfunktion definiert. Der Thread beginnt am Anfang dieser Funktion und wird bei Erreichen des Endes dieser Funktion terminiert. Diese Funktion sollte folgenden Prototyp aufweisen:  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  Multithreadprogramme, die mit der MFC-Bibliothek geschrieben wurden, haben einige Einschränkungen. Eine Beschreibung dieser Einschränkungen sowie weitere Tipps zur Verwendung von Threads finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).  
   
-##  <a name="_core_controlling_function_example"></a>Beispiel einer Steuerungsfunktion  
+##  <a name="_core_controlling_function_example"></a> Beispiel einer Steuerungsfunktion  
  Aus dem folgenden Beispiel geht hervor, wie Sie eine Steuerungsfunktion definieren und diese von einem anderen Teil des Programms aus verwenden.  
   
 ```  

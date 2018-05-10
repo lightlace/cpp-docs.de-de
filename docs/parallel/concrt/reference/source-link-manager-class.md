@@ -1,12 +1,9 @@
 ---
 title: Source_link_manager-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager-Klasse
 Das `source_link_manager`-Objekt verwaltet Meldungsblock-Netzwerklinks zu `ISource`-Blöcken.  
@@ -68,7 +63,7 @@ class source_link_manager;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|Erstellt ein `source_link_manager`-Objekt.|  
-|[~source_link_manager Destructor](#dtor)|Zerstört das `source_link_manager`-Objekt.|  
+|[~ Source_link_manager-Destruktor](#dtor)|Zerstört das `source_link_manager`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -76,7 +71,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|Fügt einen Quelllink zu der `source_link_manager` Objekt.|  
 |[begin](#begin)|Gibt einen Iterator zurück, auf das erste Element in der `source_link_manager` Objekt.|  
-|[contains](#contains)|Sucht die `network_link_registry` innerhalb dieser `source_link_manager` Objekt für einen angegebenen Block.|  
+|[Enthält](#contains)|Sucht die `network_link_registry` innerhalb dieser `source_link_manager` Objekt für einen angegebenen Block.|  
 |[count](#count)|Zählt die Anzahl der verknüpften Blöcke in der `source_link_manager` Objekt.|  
 |[Verweis](#reference)|Ruft einen Verweis auf die `source_link_manager` Objekt.|  
 |[register_target_block](#register_target_block)|Registriert den Zielblock, das dies enthält `source_link_manager` Objekt.|  

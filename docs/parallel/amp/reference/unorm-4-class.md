@@ -1,12 +1,9 @@
 ---
 title: unorm_4-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm4-class"></a>unorm_4-Klasse
 Stellt einen kurzen Vektor aus vier normalen Zahlen ohne Vorzeichen dar.  
@@ -310,27 +305,27 @@ class unorm_4;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[unorm_4 Constructor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
+|[unorm_4-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|unorm_4::get_w||  
+|unorm_4:: get_w||  
 |unorm_4::get_wx||  
-|unorm_4::get_wxy||  
-|unorm_4::get_wxyz||  
+|unorm_4:: get_wxy||  
+|unorm_4:: get_wxyz||  
 |unorm_4::get_wxz||  
-|unorm_4::get_wxzy||  
-|unorm_4::get_wy||  
-|unorm_4::get_wyx||  
+|unorm_4:: get_wxzy||  
+|unorm_4:: get_wy||  
+|unorm_4:: get_wyx||  
 |unorm_4::get_wyxz||  
-|unorm_4::get_wyz||  
-|unorm_4::get_wyzx||  
+|unorm_4:: get_wyz||  
+|unorm_4:: get_wyzx||  
 |unorm_4::get_wz||  
 |unorm_4::get_wzx||  
 |unorm_4::get_wzxy||  
-|unorm_4::get_wzy||  
+|unorm_4:: get_wzy||  
 |unorm_4::get_wzyx||  
 |unorm_4::get_x||  
 |unorm_4::get_xw||  
@@ -338,34 +333,34 @@ class unorm_4;
 |unorm_4::get_xwyz||  
 |unorm_4::get_xwz||  
 |unorm_4::get_xwzy||  
-|unorm_4::get_xy||  
-|unorm_4::get_xyw||  
+|unorm_4:: get_xy||  
+|unorm_4:: get_xyw||  
 |unorm_4::get_xywz||  
-|unorm_4::get_xyz||  
-|unorm_4::get_xyzw||  
+|unorm_4:: get_xyz||  
+|unorm_4:: get_xyzw||  
 |unorm_4::get_xz||  
 |unorm_4::get_xzw||  
 |unorm_4::get_xzwy||  
 |unorm_4::get_xzy||  
 |unorm_4::get_xzyw||  
-|unorm_4::get_y||  
-|unorm_4::get_yw||  
-|unorm_4::get_ywx||  
-|unorm_4::get_ywxz||  
+|unorm_4:: get_Y||  
+|unorm_4:: get_yw||  
+|unorm_4:: get_ywx||  
+|unorm_4:: get_ywxz||  
 |unorm_4::get_ywz||  
-|unorm_4::get_ywzx||  
+|unorm_4:: get_ywzx||  
 |unorm_4::get_yx||  
 |unorm_4::get_yxw||  
 |unorm_4::get_yxwz||  
 |unorm_4::get_yxz||  
 |unorm_4::get_yxzw||  
-|unorm_4::get_yz||  
-|unorm_4::get_yzw||  
-|unorm_4::get_yzwx||  
-|unorm_4::get_yzx||  
-|unorm_4::get_yzxw||  
+|unorm_4:: get_yz||  
+|unorm_4:: get_yzw||  
+|unorm_4:: get_yzwx||  
+|unorm_4:: get_yzx||  
+|unorm_4:: get_yzxw||  
 |unorm_4::get_z||  
-|unorm_4::get_zw||  
+|unorm_4:: get_zw||  
 |unorm_4::get_zwx||  
 |unorm_4::get_zwxy||  
 |unorm_4::get_zwy||  
@@ -375,8 +370,8 @@ class unorm_4;
 |unorm_4::get_zxwy||  
 |unorm_4::get_zxy||  
 |unorm_4::get_zxyw||  
-|unorm_4::get_zy||  
-|unorm_4::get_zyw||  
+|unorm_4:: get_zy||  
+|unorm_4:: get_zyw||  
 |unorm_4::get_zywx||  
 |unorm_4::get_zyx||  
 |unorm_4::get_zyxw||  
@@ -388,56 +383,56 @@ class unorm_4;
 |unorm_4::ref_x||  
 |unorm_4::ref_y||  
 |unorm_4::ref_z||  
-|unorm_4::set_w||  
-|unorm_4::set_wx||  
-|unorm_4::set_wxy||  
-|unorm_4::set_wxyz||  
+|unorm_4:: set_w||  
+|unorm_4:: set_wx||  
+|unorm_4:: set_wxy||  
+|unorm_4:: set_wxyz||  
 |unorm_4::set_wxz||  
-|unorm_4::set_wxzy||  
-|unorm_4::set_wy||  
-|unorm_4::set_wyx||  
-|unorm_4::set_wyxz||  
-|unorm_4::set_wyz||  
-|unorm_4::set_wyzx||  
-|unorm_4::set_wz||  
-|unorm_4::set_wzx||  
+|unorm_4:: set_wxzy||  
+|unorm_4:: set_wy||  
+|unorm_4:: set_wyx||  
+|unorm_4:: set_wyxz||  
+|unorm_4:: set_wyz||  
+|unorm_4:: set_wyzx||  
+|unorm_4:: set_wz||  
+|unorm_4:: set_wzx||  
 |unorm_4::set_wzxy||  
-|unorm_4::set_wzy||  
+|unorm_4:: set_wzy||  
 |unorm_4::set_wzyx||  
 |unorm_4::set_x||  
-|unorm_4::set_xw||  
-|unorm_4::set_xwy||  
-|unorm_4::set_xwyz||  
+|unorm_4:: set_xw||  
+|unorm_4:: set_xwy||  
+|unorm_4:: set_xwyz||  
 |unorm_4::set_xwz||  
-|unorm_4::set_xwzy||  
-|unorm_4::set_xy||  
-|unorm_4::set_xyw||  
-|unorm_4::set_xywz||  
-|unorm_4::set_xyz||  
-|unorm_4::set_xyzw||  
+|unorm_4:: set_xwzy||  
+|unorm_4:: set_xy||  
+|unorm_4:: set_xyw||  
+|unorm_4:: set_xywz||  
+|unorm_4:: set_xyz||  
+|unorm_4:: set_xyzw||  
 |unorm_4::set_xz||  
-|unorm_4::set_xzw||  
-|unorm_4::set_xzwy||  
-|unorm_4::set_xzy||  
-|unorm_4::set_xzyw||  
-|unorm_4::set_y||  
-|unorm_4::set_yw||  
-|unorm_4::set_ywx||  
-|unorm_4::set_ywxz||  
-|unorm_4::set_ywz||  
-|unorm_4::set_ywzx||  
+|unorm_4:: set_xzw||  
+|unorm_4:: set_xzwy||  
+|unorm_4:: set_xzy||  
+|unorm_4:: set_xzyw||  
+|unorm_4:: set_y||  
+|unorm_4:: set_yw||  
+|unorm_4:: set_ywx||  
+|unorm_4:: set_ywxz||  
+|unorm_4:: set_ywz||  
+|unorm_4:: set_ywzx||  
 |unorm_4::set_yx||  
-|unorm_4::set_yxw||  
+|unorm_4:: set_yxw||  
 |unorm_4::set_yxwz||  
 |unorm_4::set_yxz||  
-|unorm_4::set_yxzw||  
-|unorm_4::set_yz||  
-|unorm_4::set_yzw||  
-|unorm_4::set_yzwx||  
-|unorm_4::set_yzx||  
-|unorm_4::set_yzxw||  
+|unorm_4:: set_yxzw||  
+|unorm_4:: set_yz||  
+|unorm_4:: set_yzw||  
+|unorm_4:: set_yzwx||  
+|unorm_4:: set_yzx||  
+|unorm_4:: set_yzxw||  
 |unorm_4::set_z||  
-|unorm_4::set_zw||  
+|unorm_4:: set_zw||  
 |unorm_4::set_zwx||  
 |unorm_4::set_zwxy||  
 |unorm_4::set_zwy||  
@@ -447,24 +442,24 @@ class unorm_4;
 |unorm_4::set_zxwy||  
 |unorm_4::set_zxy||  
 |unorm_4::set_zxyw||  
-|unorm_4::set_zy||  
-|unorm_4::set_zyw||  
-|unorm_4::set_zywx||  
-|unorm_4::set_zyx||  
-|unorm_4::set_zyxw||  
+|unorm_4:: set_zy||  
+|unorm_4:: set_zyw||  
+|unorm_4:: set_zywx||  
+|unorm_4:: set_zyx||  
+|unorm_4:: set_zyxw||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|unorm_4::operator-||  
-|unorm_4::operator--||  
-|unorm_4::operator*=||  
+|unorm_4::-||  
+|unorm_4::--||  
+|unorm_4:: * =||  
 |unorm_4::operator/=||  
-|unorm_4::operator++||  
-|unorm_4::operator+=||  
+|unorm_4:: Operator++-||  
+|unorm_4:: Operator +=||  
 |unorm_4::operator=||  
-|unorm_4::operator-=||  
+|unorm_4:: Operator-=||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -482,11 +477,11 @@ class unorm_4;
 |unorm_4::abgr||  
 |unorm_4::abr||  
 |unorm_4::abrg||  
-|unorm_4::ag||  
+|unorm_4:: AG||  
 |unorm_4::agb||  
 |unorm_4::agbr||  
-|unorm_4::agr||  
-|unorm_4::agrb||  
+|unorm_4:: agr||  
+|unorm_4:: agrb||  
 |unorm_4::ar||  
 |unorm_4::arb||  
 |unorm_4::arbg||  
@@ -496,11 +491,11 @@ class unorm_4;
 |unorm_4::ba||  
 |unorm_4::bag||  
 |unorm_4::bagr||  
-|unorm_4::bar||  
-|unorm_4::barg||  
+|unorm_4:: Bar||  
+|unorm_4:: barg||  
 |unorm_4::bg||  
 |unorm_4::bga||  
-|unorm_4::bgar||  
+|unorm_4:: bgar||  
 |unorm_4::bgr||  
 |unorm_4::bgra||  
 |unorm_4::br||  
@@ -513,7 +508,7 @@ class unorm_4;
 |unorm_4::gab||  
 |unorm_4::gabr||  
 |unorm_4::gar||  
-|unorm_4::garb||  
+|unorm_4:: garb||  
 |unorm_4::gb||  
 |unorm_4::gba||  
 |unorm_4::gbar||  
@@ -550,28 +545,28 @@ class unorm_4;
 |unorm_4::wyx||  
 |unorm_4::wyxz||  
 |unorm_4::wyz||  
-|unorm_4::wyzx||  
+|unorm_4:: wyzx||  
 |unorm_4::wz||  
 |unorm_4::wzx||  
 |unorm_4::wzxy||  
 |unorm_4::wzy||  
 |unorm_4::wzyx||  
-|unorm_4::x||  
-|unorm_4::xw||  
-|unorm_4::xwy||  
-|unorm_4::xwyz||  
+|unorm_4:: x||  
+|unorm_4:: xw||  
+|unorm_4:: xwy||  
+|unorm_4:: xwyz||  
 |unorm_4::xwz||  
-|unorm_4::xwzy||  
-|unorm_4::xy||  
-|unorm_4::xyw||  
+|unorm_4:: xwzy||  
+|unorm_4:: XY||  
+|unorm_4:: xyw||  
 |unorm_4::xywz||  
-|unorm_4::xyz||  
-|unorm_4::xyzw||  
+|unorm_4:: XYZ||  
+|unorm_4:: xyzw||  
 |unorm_4::xz||  
-|unorm_4::xzw||  
-|unorm_4::xzwy||  
-|unorm_4::xzy||  
-|unorm_4::xzyw||  
+|unorm_4:: xzw||  
+|unorm_4:: xzwy||  
+|unorm_4:: xzy||  
+|unorm_4:: xzyw||  
 |unorm_4::y||  
 |unorm_4::yw||  
 |unorm_4::ywx||  
@@ -584,8 +579,8 @@ class unorm_4;
 |unorm_4::yxz||  
 |unorm_4::yxzw||  
 |unorm_4::yz||  
-|unorm_4::yzw||  
-|unorm_4::yzwx||  
+|unorm_4:: yzw||  
+|unorm_4:: yzwx||  
 |unorm_4::yzx||  
 |unorm_4::yzxw||  
 |unorm_4::z||  
@@ -595,15 +590,15 @@ class unorm_4;
 |unorm_4::zwy||  
 |unorm_4::zwyx||  
 |unorm_4::zx||  
-|unorm_4::zxw||  
-|unorm_4::zxwy||  
+|unorm_4:: zxw||  
+|unorm_4:: zxwy||  
 |unorm_4::zxy||  
 |unorm_4::zxyw||  
-|unorm_4::zy||  
-|unorm_4::zyw||  
-|unorm_4::zywx||  
+|unorm_4:: ZY||  
+|unorm_4:: zyw||  
+|unorm_4:: zywx||  
 |unorm_4::zyx||  
-|unorm_4::zyxw||  
+|unorm_4:: zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `unorm_4`  

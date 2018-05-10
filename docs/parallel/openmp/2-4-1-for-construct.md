@@ -1,27 +1,22 @@
 ---
 title: 2.4.1 for-Konstrukt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 for-Konstrukt
 Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, das gibt an, dass die zugeordneten Schleifeniterationen parallel ausgeführt werden. Der Iteration die **für** Schleife über Threads, die bereits in das Team das parallele Konstrukt, bindet, ausführen verteilt sind. Die Syntax der **für** Konstrukt ist wie folgt:  
@@ -38,7 +33,7 @@ Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, d
   
  **Lastprivate (** *Variablenliste* **)**  
   
- **Verringerung (** *Operator* **:** *Variablenliste***)**  
+ **Verringerung (** *Operator* **:** *Variable-Liste ***)**  
   
  **sortiert**  
   
@@ -48,7 +43,7 @@ Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, d
   
  Die **für** Richtlinie schränkt ein, auf die Struktur des entsprechenden **für** Schleife. Insbesondere die entsprechende **für** Schleife benötigen kanonische Form:  
   
- **für (** *Init-Expr* **;** *Var logischen Op b*; *Incr-Expr***)**  
+ **für (** *Init-Expr* **;** *Var logischen Op b*; *Incr-Expr ***)**  
   
  *Init-Ausdruck*  
  Eine der folgenden:  
@@ -60,11 +55,11 @@ Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, d
  *Incr-Ausdruck*  
  Eine der folgenden:  
   
- ++*var*  
+ ++*Var*  
   
  *"var"* ++  
   
- -- *var*  
+ -- *Var*  
   
  *"var"* --  
   
@@ -103,9 +98,9 @@ Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, d
   
 |||  
 |-|-|  
-|static|Wenn **Zeitplan (statisch,** *Chunk_size***)** angegeben ist, sind Iterationen in Segmenten mit einer Größe von angegebenen unterteilt *Chunk_size*. Die Blöcke werden Threads im Team eine Roundrobin in der Reihenfolge die Thread-Anzahl statisch zugewiesen. Wenn kein *Chunk_size* angegeben ist, wird der Speicherplatz für die Iteration ist unterteilt in Blöcke unterteilt, die ungefähr im Größe mit einem beschädigten für jeden Thread zugewiesen sind.|  
-|dynamic|Wenn **Zeitplan (dynamische,** *Chunk_size***)** angegeben ist, wird die Iterationen sind in einer Reihe von Segmenten, die jeweils unterteilt *Chunk_size* Iterationen. Jeder Block wird ein Thread zugewiesen, die für eine Zuordnung darauf warten. Der Thread Segments von Iterationen ausführt, und klicken Sie dann für die nächste Zuweisung wartet, bis keine Blöcke weiterhin zugewiesen werden. Beachten Sie, dass das letzte Segment zugewiesen werden soll, eine kleinere Anzahl von Iterationen aufweisen kann. Wenn kein *Chunk_size* angegeben ist, wird standardmäßig auf 1.|  
-|Einführung|Wenn **Zeitplan (geführt,** *Chunk_size***)** angegeben ist, werden Threads in Segmenten mit abnehmenden Größen Iterationen zugewiesen sind. Wenn ein Thread seine zugewiesenen Dateiblock Iterationen abgeschlossen ist, wird er einen anderen Block dynamisch zugewiesen, bis keine mehr übrig sind. Für eine *Chunk_size* 1, wird die Größe jedes Segments ungefähr der Anzahl der nicht zugewiesene Iterationen dividiert durch die Anzahl der Threads. Diese Größen werden ungefähr auf 1 exponentiell verringern. Für eine *Chunk_size* mit dem Wert *k* größer als 1 ist, die Größen verringern ungefähr exponentiell zu *k*, außer dass das letzte Segment weniger möglicherweise  *k* Iterationen. Wenn kein *Chunk_size* angegeben ist, wird standardmäßig auf 1.|  
+|static|Wenn **Zeitplan (statisch,** *Chunk_size ***)** angegeben wird, Iterationen sind in Segmenten mit einer Größe von angegebenen unterteilt *Chunk_size*. Die Blöcke werden Threads im Team eine Roundrobin in der Reihenfolge die Thread-Anzahl statisch zugewiesen. Wenn kein *Chunk_size* angegeben ist, wird der Speicherplatz für die Iteration ist unterteilt in Blöcke unterteilt, die ungefähr im Größe mit einem beschädigten für jeden Thread zugewiesen sind.|  
+|dynamic|Wenn **Zeitplan (dynamische,** *Chunk_size ***)** angegeben ist, wird die Iterationen sind in einer Reihe von Segmenten, die jeweils unterteilt *Chunk_size* Iterationen. Jeder Block wird ein Thread zugewiesen, die für eine Zuordnung darauf warten. Der Thread Segments von Iterationen ausführt, und klicken Sie dann für die nächste Zuweisung wartet, bis keine Blöcke weiterhin zugewiesen werden. Beachten Sie, dass das letzte Segment zugewiesen werden soll, eine kleinere Anzahl von Iterationen aufweisen kann. Wenn kein *Chunk_size* angegeben ist, wird standardmäßig auf 1.|  
+|Einführung|Wenn **Zeitplan (geführt,** *Chunk_size ***)** angegeben ist, werden Threads in Segmenten mit abnehmenden Größen Iterationen zugewiesen sind. Wenn ein Thread seine zugewiesenen Dateiblock Iterationen abgeschlossen ist, wird er einen anderen Block dynamisch zugewiesen, bis keine mehr übrig sind. Für eine *Chunk_size* 1, wird die Größe jedes Segments ungefähr der Anzahl der nicht zugewiesene Iterationen dividiert durch die Anzahl der Threads. Diese Größen werden ungefähr auf 1 exponentiell verringern. Für eine *Chunk_size* mit dem Wert *k* größer als 1 ist, die Größen verringern ungefähr exponentiell zu *k*, außer dass das letzte Segment weniger möglicherweise  *k* Iterationen. Wenn kein *Chunk_size* angegeben ist, wird standardmäßig auf 1.|  
 |Laufzeit|Wenn **schedule(runtime)** angegeben wird, die Entscheidung zur Planung bis zur Laufzeit verzögert wird. Der Zeitplan *Art* und Größe der Segmente zur Laufzeit ausgewählt werden kann, durch Festlegen der Umgebungsvariablen **OMP_SCHEDULE**. Wenn diese Umgebungsvariable nicht festgelegt ist, wird der resultierende Zeitplan Implementierung definiert. Wenn **schedule(runtime)** angegeben wird, *Chunk_size* muss nicht angegeben werden.|  
   
  In Ermangelung einer explizit definierte **Zeitplan** -Klausel, werden die Standardeinstellungen **Zeitplan** ist implementierungsdefiniert.  

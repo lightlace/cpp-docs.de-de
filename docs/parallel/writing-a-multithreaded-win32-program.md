@@ -1,13 +1,10 @@
 ---
 title: Schreiben von Win32-Multithreadprogrammen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Schreiben von Win32-Multithreadprogrammen
 Wenn Sie ein Programm mit mehreren Threads schreiben, müssen Sie ihr Verhalten koordinieren und [Verwendung der Programmressourcen](#_core_sharing_common_resources_between_threads). Sie müssen auch sicherstellen, dass jeder Thread empfängt [einen eigenen Stapel](#_core_thread_stacks).  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>Teilen gemeinsamer Ressourcen zwischen Threads  
+##  <a name="_core_sharing_common_resources_between_threads"></a> Teilen gemeinsamer Ressourcen zwischen Threads  
   
 > [!NOTE]
 >  Ähnliche Informationen aus den MFC-Sicht, finden Sie [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md) und [Multithreading: Wenn der Synchronisierungsklassen](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>Threadstapel  
+##  <a name="_core_thread_stacks"></a> Threadstapel  
  Der gesamte standardmäßige Stapelspeicher einer Anwendung ist für den ersten Ausführungsthread belegt, der als Thread 1 bezeichnet wird. Folglich müssen Sie für jeden von einem Programm zusätzlich benötigten Thread angeben, wie viel mehr Speicherplatz für einen separaten Stapel belegt werden soll. Das Betriebssystem ordnet dem Thread bei Bedarf zusätzlichen Stapelspeicher zu, Sie müssen jedoch einen Standardwert angeben.  
   
  Das erste Argument in der `_beginthread` Aufruf ist ein Zeiger auf die **BounceProc** -Funktion, die die Threads ausführt. Das zweite Argument legt die Standardgröße des Stapel für den Thread fest. Das letzte Argument ist eine ID-Nummer der an übergebene **BounceProc**. **BounceProc** verwendet die ID-Nummer und so die Ausgangswert für des Zufallszahlen-Generators und wählen Sie den Thread Farbattribut und Anzeigezeichen.  

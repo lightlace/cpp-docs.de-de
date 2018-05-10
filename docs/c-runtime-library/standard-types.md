@@ -1,13 +1,10 @@
 ---
 title: Standardtypen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __time64_t
 - _diskfree_t
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-types"></a>Standardtypen
 Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeDefs.  
@@ -211,7 +206,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |`_CrtMemState`-Struktur|Stellt Informationen über den aktuellen Zustand des C-Laufzeit-Debugheaps bereit.|CRTDBG.H|  
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Eine Typendefinition für eine Rückruffunktion, die in [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) aufgerufen wird.<br /><br /> Die Parameter für diese Funktion sind: Berichttyp, Ausgabenachricht und der Rückgabewert der Rückruffunktion.|CRTDBG.H|  
 |`dev_t`, `_dev_t` kurze ganze Zahl oder ganze Zahl ohne Vorzeichen|Stellt Gerätehandles dar.|SYS\TYPES.H|  
-|`_diskfree_t`-Struktur|Enthält Informationen über ein Laufwerk. Wird von [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)verwendet**.**|DOS.H und DIRECT.H|  
+|`_diskfree_t`-Struktur|Enthält Informationen über ein Laufwerk. Wird von [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)verwendet **.**|DOS.H und DIRECT.H|  
 |`div_t`-, `ldiv_t`- und `lldiv_t`-Strukturen|Speichern Werte, die von [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) und [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) zurückgegeben werden.|STDLIB.H|  
 |`errno_t`-Integer|Wird für einen Parameter oder einen Funktionsrückgabetyp verwendet, der Fehlercodes von `errno` behandelt.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |`_exception`-Struktur|Speichert Fehlerinformationen für [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  

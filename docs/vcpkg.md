@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Ein C++-Paket-Manager für Windows
 
@@ -31,7 +30,7 @@ Mit einem einzigen Befehl können Sie Quellen herunterladen und eine Bibliothek 
 
 ## <a name="sources-not-binaries"></a>Quellen statt Binärdateien
 
-Im Fall von Bibliotheken im öffentlichen Katalog lädt vcpkg Quellen anstelle von Binärdateien herunter[1]. Vcpkg kompiliert diese Quellen mithilfe von Visual Studio 2017 bzw. Visual Studio 2015, falls 2017 nicht installiert ist. In C++ ist es sehr wichtig, dass alle Bibliotheken, die Sie verwenden, mit dem gleichen Compiler und der gleichen Compilerversion wie der Anwendungscode kompiliert werden, der damit verknüpft ist. Durch die Verwendung von vcpkg eliminieren Sie das Risiko nicht übereinstimmender Binärdateien und die Probleme, die dadurch entstehen können, oder reduzieren dieses zumindest entscheidend. In Teams, in denen eine bestimmte Version des Visual C++-Compilers verwendet wird, kann ein Teammitglied vcpkg verwenden, um Quellen herunterzuladen und einen Satz von Binärdateien zu kompilieren, und anschließend den Exportbefehl verwenden, um die Binärdateien und Header für andere Teammitglieder zu zippen. Weitere Informationen finden Sie nachstehend unter „Exportieren von kompilierten Binärdateien und Headern“. 
+Im Fall von Bibliotheken im öffentlichen Katalog lädt vcpkg Quellen anstelle von Binärdateien herunter[1]. Vcpkg kompiliert diese Quellen mithilfe von Visual Studio 2017 bzw. Visual Studio 2015, falls 2017 nicht installiert ist. In C++ ist es sehr wichtig, dass alle Bibliotheken, die Sie verwenden, mit dem gleichen Compiler und der gleichen Compilerversion wie der Anwendungscode kompiliert werden, der damit verknüpft ist. Durch die Verwendung von vcpkg eliminieren Sie das Risiko nicht übereinstimmender Binärdateien und die Probleme, die dadurch entstehen können, oder reduzieren dieses zumindest entscheidend. In Teams, in denen eine bestimmte Version des Visual C++-Compilers verwendet wird, kann ein Teammitglied vcpkg verwenden, um Quellen herunterzuladen und einen Satz von Binärdateien zu kompilieren, und anschließend den Exportbefehl verwenden, um die Binärdateien und Header für andere Teammitglieder zu zippen. Weitere Informationen finden Sie nachstehend unter „Exportieren von kompilierten Binärdateien und Headern“.
 
 Bei der Erstellung eines vcpkg-Klons mit privaten Bibliotheken in der Ports-Sammlung können Sie einen Port hinzufügen, der vorab erstellte Binärdateien und Header herunterlädt und eine „portfile.cmake“-Datei schreibt, die diese Dateien einfach in den gewünschten Speicherort kopiert.
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Auflisten der bereits installierten Bibliotheken
+
 Nachdem Sie einige Bibliotheken installiert haben, können Sie **vcpkg list** verwenden, um anzuzeigen, welche Sie bereits haben:
 
 ```cmd
@@ -113,61 +113,63 @@ Nun können Sie auf Header einfach die #include-Anweisung ausführen, indem Sie 
 
 Wenn Sie eine spezifische Version einer Bibliothek verwenden müssen, die sich von der Version in Ihrer aktiven vcpkg-Instanz unterscheidet, führen Sie die folgenden Schritte aus:
 
-1. Erstellen Sie einen neuen Klon von vcpkg 
+1. Erstellen Sie einen neuen Klon von vcpkg
 1. Modifizieren Sie die Portdatei für die Bibliothek, um die Version zu erhalten, die Sie benötigen
 1. Führen Sie **vcpkg install \<library>** aus.
 1. Verwenden Sie **vcpkg integrate project**, um ein NuGet-Paket zu erstellen, das pro Projekt auf diese Bibliothek verweist.
 
 ## <a name="export-compiled-binaries-and-headers"></a>Exportieren von kompilierten Binärdateien und Headern
 
-Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und dann **vcpkg export** verwenden, um eine ZIP-Datei der Binärdateien und Header zu erstellen, die einfach mit anderen Teammitgliedern geteilt werden kann. 
+Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und dann **vcpkg export** verwenden, um eine ZIP-Datei der Binärdateien und Header zu erstellen, die einfach mit anderen Teammitgliedern geteilt werden kann.
 
 ## <a name="updateupgrade-installed-libraries"></a>Update/Upgrade für installierte Bibliotheken
 
 Die öffentliche Katalog wird mit den neuesten Versionen der Bibliotheken auf dem neuesten Stand gehalten. Um zu bestimmen, welche Ihrer lokalen Bibliotheken veraltet sind, verwenden Sie **vcpkg update**. Wenn Sie dazu bereit sind, Ihre Portauflistung auf die aktuelle Version des öffentlichen Katalogs zu aktualisieren, führen Sie den Befehl **vcpkg upgrade** aus, um alle Ihre installierten, veralteten Bibliotheken automatisch herunterzuladen oder neu zu erstellen.
 
-Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die veraltet sind. Er führt kein Upgrade der Bibliotheken durch. Verwenden Sie die Option **--no-dry-run**, um ein Upgrade durchzuführen. 
+Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die veraltet sind. Er führt kein Upgrade der Bibliotheken durch. Verwenden Sie die Option **--no-dry-run**, um ein Upgrade durchzuführen.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Upgradeoptionen
 
-- **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf. 
-- **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt. 
-- **--triplet \<t>**: Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete 
-- **--vcpkg-root \<path>**: Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses 
+- **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf.
+- **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt.
+- **--triplet \<t>**: Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete
+- **--vcpkg-root \<path>**: Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses
 
 ### <a name="upgrade-example"></a>Beispiel für ein Upgrade
 
 ### <a name="per-project"></a>Pro Projekt
+
 Wenn Sie eine spezifische Version einer Bibliothek verwenden müssen, die sich von der Version in Ihrer aktiven vcpkg-Instanz unterscheidet, führen Sie die folgenden Schritte aus:
 
-1. Erstellen Sie einen neuen Klon von vcpkg 
+1. Erstellen Sie einen neuen Klon von vcpkg
 1. Modifizieren Sie die Portdatei für die Bibliothek, um die Version zu erhalten, die Sie benötigen
 1. Führen Sie **vcpkg install \<library>** aus.
 1. Verwenden Sie **vcpkg integrate project**, um ein NuGet-Paket zu erstellen, das pro Projekt auf diese Bibliothek verweist.
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>Exportieren von kompilierten Binärdateien und Headern
-Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und dann **vcpkg export** verwenden, um eine ZIP-Datei der Binärdateien und Header zu erstellen, die einfach mit anderen Teammitgliedern geteilt werden kann. 
+
+Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und dann **vcpkg export** verwenden, um eine ZIP-Datei der Binärdateien und Header zu erstellen, die einfach mit anderen Teammitgliedern geteilt werden kann.
 
 ## <a name="updateupgrade-installed-libraries"></a>Update/Upgrade für installierte Bibliotheken
+
 Die öffentliche Katalog wird mit den neuesten Versionen der Bibliotheken auf dem neuesten Stand gehalten. Um zu bestimmen, welche Ihrer lokalen Bibliotheken veraltet sind, verwenden Sie **vcpkg update**. Wenn Sie dazu bereit sind, Ihre Portauflistung auf die aktuelle Version des öffentlichen Katalogs zu aktualisieren, führen Sie den Befehl **vcpkg upgrade** aus, um alle Ihre installierten, veralteten Bibliotheken automatisch herunterzuladen oder neu zu erstellen.
 
-Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die veraltet sind. Er führt kein Upgrade der Bibliotheken durch. Verwenden Sie die Option **--no-dry-run**, um ein Upgrade durchzuführen. 
+Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die veraltet sind. Er führt kein Upgrade der Bibliotheken durch. Verwenden Sie die Option **--no-dry-run**, um ein Upgrade durchzuführen.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Upgradeoptionen
 
-- **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf. 
-- **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt. 
-- **--triplet \<t>**: Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete 
-- **--vcpkg-root \<path>**: Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses 
+- **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf.
+- **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt.
+- **--triplet \<t>**: Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete
+- **--vcpkg-root \<path>**: Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses
 
 ### <a name="upgrade-example"></a>Beispiel für ein Upgrade
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Beitragen von neuen Bibliotheken
+
 Sie können jede beliebige Bibliothek in Ihre private Ports-Sammlung aufnehmen. Um einen neue Bibliothek für den öffentlichen Katalog vorzuschlagen, öffnen Sie ein Problem auf der [GitHub-Seite zu vcpkg-Problemen](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Entfernen einer Bibliothek
+
 Geben Sie **vcpkg remove** ein, um eine installierte Bibliothek zu entfernen. Wenn alle anderen Bibliotheken von dieser abhängen, werden Sie dazu aufgefordert, den Befehl mit **--recurse** erneut auszuführen, wodurch alle Downstreambibliotheken entfernt werden.
 
 ## <a name="customize-vcpkg"></a>Anpassen von vcpkg
-Sie können Ihren Klon von vcpkg beliebig bearbeiten. Sie können mehrere vcpkg-Klone erstellen und die Portdateien in jedem bearbeiten, um bestimmte Versionen von Bibliotheken oder bestimmte Befehlszeilenparameter zu erhalten. Beispielsweise könnte in einem Unternehmen eine Gruppe von Entwicklern an einer Software arbeiten, die über einen Satz von Abhängigkeiten verfügt, und eine andere Gruppe könnte über einen anderen Satz verfügen. Sie können zwei Klone von vcpkg einrichten und jeden so bearbeiten, dass er die Bibliotheksversionen und die Kompilierungsschalter usw. entsprechend Ihren Bedürfnissen herunterlädt. 
+
+Sie können Ihren Klon von vcpkg beliebig bearbeiten. Sie können mehrere vcpkg-Klone erstellen und die Portdateien in jedem bearbeiten, um bestimmte Versionen von Bibliotheken oder bestimmte Befehlszeilenparameter zu erhalten. Beispielsweise könnte in einem Unternehmen eine Gruppe von Entwicklern an einer Software arbeiten, die über einen Satz von Abhängigkeiten verfügt, und eine andere Gruppe könnte über einen anderen Satz verfügen. Sie können zwei Klone von vcpkg einrichten und jeden so bearbeiten, dass er die Bibliotheksversionen und die Kompilierungsschalter usw. entsprechend Ihren Bedürfnissen herunterlädt.
 
 ## <a name="uninstall-vcpkg"></a>Deinstallieren von vcpkg
-Löschen Sie einfach das Verzeichnis. 
+
+Löschen Sie einfach das Verzeichnis.
 
 ## <a name="send-feedback-about-vcpkg"></a>Senden von Feedback zu vcpkg
+
 Verwenden Sie den Befehl **--survey**, um Microsoft Feedback zu vcpkg zu senden, einschließlich Fehlerberichten und Featurevorschlägen.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Die vcpkg-Ordnerhierarchie
-Alle vcpkg-Funktionen und -Daten sind eigenständig in einer einzigen Verzeichnishierarchie, als „Instanz“ bezeichnet. Es gibt keine Registrierungseinstellungen oder Umgebungsvariablen. Sie können über eine beliebige Anzahl von Instanzen von vcpkg auf einem Computer verfügen, ohne dass diese sich gegenseitig beeinträchtigen. 
 
-Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus: 
+Alle vcpkg-Funktionen und -Daten sind eigenständig in einer einzigen Verzeichnishierarchie, als „Instanz“ bezeichnet. Es gibt keine Registrierungseinstellungen oder Umgebungsvariablen. Sie können über eine beliebige Anzahl von Instanzen von vcpkg auf einem Computer verfügen, ohne dass diese sich gegenseitig beeinträchtigen.
+
+Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 
 - buildtrees: Enthält Unterordner von Quellen, aus denen jede Bibliothek erstellt wird.
 - docs: Dokumentation und Beispiele.
@@ -240,7 +248,8 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 |**vcpkg version**|Anzeigen von Versionsinformationen|
 |**vcpkg contact**|Anzeigen von Kontaktinformationen zum Senden von Feedback|
 
-### <a name="options"></a>Optionen:
+### <a name="options"></a>Optionen
+
 |Option|description|
 |---------|---------|
 |**--triplet \<t>**|Angeben der Dreiergruppe der Zielarchitektur (Standard: `%VCPKG_DEFAULT_TRIPLET%`, siehe auch **vcpkg help triplet**)|

@@ -1,12 +1,9 @@
 ---
-title: "Tokeneinfügender Operator (##) | Microsoft Docs"
-ms.custom: 
+title: Tokeneinfügender Operator (##) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '##'
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3a8c2cef3560a6823314a4edb2cba78994864ce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c6e224c0327a7ba50c3e13ca78d749f41ad4641f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-pasting-operator-"></a>Tokeneinfügender Operator (##)
 Die doppelten Nummernzeichen oder "Token-Pasting"-Operator (**##**), die den "Zusammenführen" Operator bezeichnet wird, wird in objektähnlichen und funktionsähnlichen Makros verwendet. Er ermöglicht die Verknüpfung separater Token zu einem Token und kann daher nicht der erste oder letzte Token in der Makrodefinition sein.  

@@ -1,13 +1,10 @@
 ---
-title: "Übersicht über die Concurrency Runtime | Microsoft Docs"
-ms.custom: 
+title: Übersicht über die Concurrency Runtime | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Übersicht über die Concurrency Runtime
 Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es beschreibt die Vorteile der Concurrency Runtime, wann sie verwendet wird und wie ihre Komponenten miteinander und mit dem Betriebssystem und den Anwendungen interagieren.  
@@ -45,7 +40,7 @@ Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es besch
   
 -   [Anforderungen](#requirements)  
   
-##  <a name="runtime">Warum eine Laufzeit für die Parallelität wichtig ist</a>  
+##  <a name="runtime"></a> Warum eine Laufzeit für die Parallelität wichtig ist  
  Eine Laufzeit für die Parallelität bietet die Einheitlichkeit und Vorhersagbarkeit für Anwendungen und Anwendungskomponenten, die gleichzeitig ausgeführt werden. Zwei Beispiele für die Vorteile der Concurrency Runtime sind *kooperative aufgabenplanung* und *Kooperative Blockierung*.  
   
  Die Concurrency Runtime verwendet einen kooperativen Aufgabenplaner, der einen Arbeitsübernahme-Algorithmus implementiert, um die Arbeit effizient auf die Computerressourcen zu verteilen. Betrachten Sie beispielsweise eine Anwendung mit zwei Threads, die beide von der gleichen Laufzeit verwaltet werden. Wenn ein Thread die geplante Aufgabe abgeschlossen hat, kann dieser die Arbeit des anderen Threads auslagern. Dieser Mechanismus gleicht die gesamte Arbeitsauslastung der Anwendung aus.  
@@ -98,7 +93,7 @@ Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es besch
   
  [[Nach oben](#top)]  
   
-##  <a name="lambda">C++-Lambda-Ausdrücke</a>  
+##  <a name="lambda"></a> C++-Lambda-Ausdrücke  
  Viele der Typen und Algorithmen, die von der Concurrency Runtime definiert werden, werden als C++-Vorlagen implementiert. Einige dieser Typen und Algorithmen nehmen als Parameter eine Routine an, die die Arbeit ausführt. Dieser Parameter kann eine Lambda-Funktion, ein Funktionsobjekt oder ein Funktionszeiger sein. Diese Entitäten werden auch als bezeichnet *Arbeitsfunktionen* oder *Arbeitsroutinen*.  
   
  Die Lambdaausdrücke sind eine wichtige neue Sprachfunktion in Visual C++, da sie eine kompakte Art und Weise zum Definieren von Arbeitsfunktionen für die Parallelverarbeitung bieten. Funktionsobjekte und Funktionszeiger ermöglichen Ihnen die Verwendung der Concurrency Runtime mit dem vorhandenen Code. Microsoft empfiehlt jedoch, Lambdaausdrücke beim Schreiben von neuem Code zu verwenden, da diese bezüglich der Sicherheit und Produktivität viele Vorteile bieten.  

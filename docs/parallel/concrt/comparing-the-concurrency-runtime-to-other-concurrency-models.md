@@ -1,29 +1,24 @@
 ---
-title: "Vergleichen von der Concurrency Runtime zu anderen Parallelitätsmodellen | Microsoft Docs"
-ms.custom: 
+title: Vergleichen von der Concurrency Runtime zu anderen Parallelitätsmodellen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Concurrency Runtime im Vergleich zu anderen Parallelitätsmodellen
 Dieses Dokument beschreibt die Unterschiede zwischen den Funktionen und Programmiermodellen der Concurrency Runtime und anderen Technologien. Wenn Sie verstehen, welche Vorteile die Concurrency Runtime gegenüber anderen Programmiermodellen hat, können Sie die Technologie auswählen, die die Anforderungen der jeweiligen Anwendung am besten erfüllt.  

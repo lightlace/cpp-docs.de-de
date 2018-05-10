@@ -1,12 +1,9 @@
 ---
 title: Tiled_index-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 Stellt einen Index in einer [Tiled_extent](tiled-extent-class.md) Objekt. Diese Klasse verfügt über Eigenschaften, über die auf Elemente relativ zum lokalen Kachelursprung und relativ zum globalen Ursprung zugegriffen werden kann. Weitere Informationen gekachelter Leerzeichen finden Sie unter [mithilfe von Kacheln](../../../parallel/amp/using-tiles.md).  
@@ -100,12 +95,12 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |||  
 |[Globale Konstanten](#tiled_index__global)|Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die globale darstellt Index in einer [Raster](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) Objekt.|  
 |[lokale Konstante](#tiled_index__local)|Speichert ein `index` -Objekt von Rang 1, 2 oder 3, der den relativen Index in der aktuellen Kachel mit einer [Tiled_extent](tiled-extent-class.md) Objekt.|  
-|[rank Constant](#tiled_index__rank)|Speichert den Rang des `tiled_index`-Objekts.|  
+|[Rank-Konstante](#tiled_index__rank)|Speichert den Rang des `tiled_index`-Objekts.|  
 |[anordnungskonstante](#tiled_index__tile)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die Koordinaten der aktuellen Kachel eines `tiled_extent`-Objekts darstellt.|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
-|[tile_dim2 Constant](#tiled_index__tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
-|[tile_origin Constant](#tiled_index__tile_origin)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die globalen Koordinaten des Ursprungs der aktuellen Kachel in einem `tiled_extent`-Objekt darstellt.|  
+|[tile_dim0-Konstante](#tiled_index__tile_dim0)|Speichert die Länge der wichtigsten Dimension.|  
+|[tile_dim1-Konstante](#tiled_index__tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|  
+|[tile_dim2-Konstante](#tiled_index__tile_dim2)|Speichert die Länge der unwichtigsten Dimension.|  
+|[Tile_origin-Konstante](#tiled_index__tile_origin)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die globalen Koordinaten des Ursprungs der aktuellen Kachel in einem `tiled_extent`-Objekt darstellt.|  
 
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  

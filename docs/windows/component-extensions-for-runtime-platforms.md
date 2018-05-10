@@ -1,13 +1,10 @@
 ---
-title: "Komponentenerweiterungen für Laufzeitplattformen | Microsoft Docs"
-ms.custom: 
+title: Komponentenerweiterungen für Laufzeitplattformen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Komponentenerweiterungen für Laufzeitplattformen
 Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit Laufzeitplattformen. Mithilfe von C + c++ / CX, können Sie programmieren, universelle Windows-Plattform-apps und Komponenten, die in systemeigenen Code kompiliert. Obwohl Uwp-apps durch direkten Programmierens mit der Windows-Runtime-COM-Schnittstellen erstellt werden können, mithilfe von C + c++ / CX, Sie können mit Konstruktoren, Ausnahmen und anderen moderner C++-Idiome-Programmierung arbeiten. Um C++-Programmierung in einer verwalteten ausführungsumgebung auf der .NET-Plattform zu aktivieren, können Sie C + c++ / CLI.  
@@ -48,7 +43,7 @@ Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit 
   
  In der folgenden Tabelle sind Schlüsselwörter in der C++-Spracherweiterung aufgeführt.  
   
-|Stichwort|Kontextbezogen|Zweck|Verweis|  
+|Stichwort|Kontextbezogen|Zweck|Referenz|  
 |-------------|-----------------------|-------------|---------------|  
 |`ref class`<br /><br /> `ref struct`|Nein|Deklariert eine Klasse.|[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)|  
 |`value class`<br /><br /> `value struct`|Nein|Deklariert eine Wertklasse.|[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)|  
@@ -61,7 +56,7 @@ Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit 
 ## <a name="override-specifiers"></a>Überschreibungsspezifizierer  
  Sie können die folgenden Schlüsselwörter verwenden, um das Überschreibungsverhalten für Ableitung zu qualifizieren. Obwohl das `new`-Schlüsselwort keine Erweiterung von C++ ist, wird es hier aufgeführt, da es in einem zusätzlichen Kontext verwendet werden kann. Einige Bezeichner sind auch für die systemeigene Programmierung gültig. Weitere Informationen finden Sie unter [wie: Deklarieren Sie Überschreibungsspezifizierer in nativen Kompilierungen (C + c++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
-|Stichwort|Kontextbezogen|Zweck|Verweis|  
+|Stichwort|Kontextbezogen|Zweck|Referenz|  
 |-------------|-----------------------|-------------|---------------|  
 |`abstract`|Ja|Gibt an, dass Funktionen oder Klassen abstrakt sind.|[abstract](../windows/abstract-cpp-component-extensions.md)|  
 |`new`|Nein|Gibt an, dass eine Funktion keine Überschreibung einer Basisklassenversion ist.|[New (neuer Slot in Vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
@@ -79,7 +74,7 @@ Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit 
 ## <a name="miscellaneous-keywords"></a>Sonstige Schlüsselwörter  
  Die folgenden Schlüsselwörter wurden den C++-Erweiterungen hinzugefügt.  
   
-|Stichwort|Kontextbezogen|Zweck|Verweis|  
+|Stichwort|Kontextbezogen|Zweck|Referenz|  
 |-------------|-----------------------|-------------|---------------|  
 |`finally`|Ja|Gibt das Standardausnahmebehandlungsverhalten an.|[Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)|  
 |`for each, in`|Nein|Listet die Elemente einer Auflistung auf.|[for each in](../dotnet/for-each-in.md)|  
@@ -92,7 +87,7 @@ Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit 
 ## <a name="template-constructs"></a>Vorlagenkonstrukte  
  Die folgenden Sprachkonstrukte werden nicht als Schlüsselwörter, sondern als Vorlagen implementiert. Bei Angabe der **/Zw** -Compileroption, die sie definiert sind, der `lang` Namespace. Bei Angabe der **"/ CLR"** -Compileroption, die sie definiert sind, der `cli` Namespace.  
   
-|Stichwort|Zweck|Verweis|  
+|Stichwort|Zweck|Referenz|  
 |-------------|-------------|---------------|  
 |`array`|Deklariert einen Array.|[Arrays](../windows/arrays-cpp-component-extensions.md)|  
 |`interior_ptr`|(Nur CLR:) Zeigt auf Daten in einem Referenztyp.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|  
@@ -103,7 +98,7 @@ Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit 
 ## <a name="declarators"></a>Deklaratoren  
  Die folgenden Typdeklaratoren weisen die Laufzeit an, die Lebensdauer und das Löschen von zugeordneten Objekten automatisch zu verwalten.  
   
-|Operator|Zweck|Verweis|  
+|Operator|Zweck|Referenz|  
 |--------------|-------------|---------------|  
 |`^`|Deklariert ein Handle für ein Objekt an. d. h. ein Zeiger auf ein Windows-Runtime oder CLR-Objekt, das automatisch gelöscht wird, wenn er nicht mehr verwendet werden.|[Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)|  
 |`%`|Deklariert ein Nachverfolgungsverweis; d. h. einen Verweis auf ein Windows-Runtime oder CLR-Objekt, das automatisch gelöscht wird, wenn er nicht mehr verwendet werden.|[Nachverfolgungsverweisoperator](../windows/tracking-reference-operator-cpp-component-extensions.md)|  

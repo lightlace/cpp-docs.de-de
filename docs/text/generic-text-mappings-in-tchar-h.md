@@ -1,13 +1,10 @@
 ---
 title: Zuordnen von generischem Text in Tchar.h | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Zuordnungen für generischen Text in Tchar.h
 Um die Codeübertragung für internationale Anwendungen zu vereinfachen, stellt die [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-Laufzeitbibliothek [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-spezifische Zuordnungen für generischen Text für viele Datentypen, Routinen und andere Objekte zur Verfügung. Mit diesen Zuordnungen, die in Tchar.h definiert sind, können Sie generischen Code schreiben, der für Einzelbyte-, Mehrbyte- oder [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]-Zeichensätze kompiliert werden kann, abhängig von einer eindeutigen Konstante, die Sie mithilfe einer `#define`-Anweisung definieren. Zuordnungen für generischen Text sind [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-Erweiterungen, die nicht [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]-kompatibel sind.  
@@ -67,7 +62,7 @@ Um die Codeübertragung für internationale Anwendungen zu vereinfachen, stellt 
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` oder `_TEXT`|Ohne Auswirkung (wird vom Präprozessor entfernt)|Ohne Auswirkung (wird vom Präprozessor entfernt)|`L`(wandelt das folgende Zeichen oder eine Zeichenfolge, die die [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] Entsprechung)|  
+|`_T` oder `_TEXT`|Ohne Auswirkung (wird vom Präprozessor entfernt)|Ohne Auswirkung (wird vom Präprozessor entfernt)|`L` (wandelt das folgende Zeichen oder eine Zeichenfolge, die die [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] Entsprechung)|  
   
  Eine Liste der Zuordnungen für generischen Text von Routinen, Variablen und andere Objekte, finden Sie unter [Zuordnen von generischem Text](../c-runtime-library/generic-text-mappings.md) in die Run-Time Library Reference.  
   

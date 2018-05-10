@@ -1,30 +1,25 @@
 ---
-title: "Ziele (Komponentenerweiterungen für C++)-Attribut | Microsoft Docs"
-ms.custom: 
+title: Ziele (Komponentenerweiterungen für C++)-Attribut | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Attributziele (Komponentenerweiterungen für C++)
 Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribut wird definiert, um auf bestimmte Sprachelemente zu übernehmen. Beispielsweise könnte ein Attribut definiert werden, um gelten nur für Klassen und Strukturen.  Die folgende Liste enthält die möglichen syntaktischen Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (mithilfe von logischen oder) kann verwendet werden.  
@@ -33,7 +28,7 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
   
  Im folgenden finden eine Liste der gültigen Attributtyp Ziele:  
   
--   `All`(gilt für alle Konstrukte)  
+-   `All` (gilt für alle Konstrukte)  
   
     ```  
   
@@ -45,7 +40,7 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
   
     ```  
   
--   `Assembly`(gilt für eine Assembly als Ganzes)  
+-   `Assembly` (gilt für eine Assembly als Ganzes)  
   
     ```  
   
@@ -57,7 +52,7 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
   
     ```  
   
--   `Module`(gilt für ein Modul als Ganzes)  
+-   `Module` (gilt für ein Modul als Ganzes)  
   
     ```  
   

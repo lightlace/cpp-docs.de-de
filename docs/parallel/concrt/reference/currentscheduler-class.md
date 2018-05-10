@@ -1,12 +1,9 @@
 ---
 title: CurrentScheduler-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler-Klasse
 Stellt eine Abstraktion für den aktuellen Planer dar, der dem aufrufenden Kontext zugeordnet ist.  
@@ -53,7 +48,7 @@ class CurrentScheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Create](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter und fügt ihn an den aufrufenden Kontext. Der neu erstellte Planer werden die aktuellen Planer für den aufrufenden Kontext.|  
+|[Erstellen](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter und fügt ihn an den aufrufenden Kontext. Der neu erstellte Planer werden die aktuellen Planer für den aufrufenden Kontext.|  
 |[CreateScheduleGroup](#createschedulegroup)|Überladen. Erstellt eine neue Planungsgruppe innerhalb des Planers, der dem aufrufenden Kontext zugeordnet. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass die Aufgaben innerhalb der neu erstellte Planungsgruppe auf Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|  
 |[Trennen](#detach)|Trennt den aktuellen Planer aus dem aufrufenden Kontext und den zuvor angefügten Planer als aktuellen Planer wiederhergestellt, sofern vorhanden. Nach dem Beenden dieser Methode wird im aufrufende Kontext dann vom Planer, die an den Kontext mit einer zuvor angefügt worden war verwaltet die `CurrentScheduler::Create` oder `Scheduler::Attach` Methode.|  
 |[Get](#get)|Gibt einen Zeiger auf den Planer, die den aufrufenden Kontext, auch bezeichnet als aktuellen Planer zugeordnet.|  
@@ -71,7 +66,7 @@ class CurrentScheduler;
  `CurrentScheduler`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
   
  **Namespace:** Parallelität  
   
@@ -179,7 +174,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> ID 
 
  Gibt einen eindeutigen Bezeichner für den aktuellen Planer zurück.  
   

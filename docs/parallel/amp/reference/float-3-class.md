@@ -1,12 +1,9 @@
 ---
 title: float_3-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::get_zyx
@@ -83,17 +80,15 @@ dev_langs:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda70c9e19e4b446ac0e3cec8f3358732f4c57f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0579a728210dc74db13faaae7ea4c7161ad4142e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float3-class"></a>float_3-Klasse
 Stellt einen kurzen Vektor aus drei Gleitkommazahlen dar.  
@@ -116,26 +111,26 @@ class float_3;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[float_3 Constructor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
+|[float_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |float_3::get_x||  
-|float_3::get_xy||  
-|float_3::get_xyz||  
+|float_3:: get_xy||  
+|float_3:: get_xyz||  
 |float_3::get_xz||  
-|float_3::get_xzy||  
-|float_3::get_y||  
+|float_3:: get_xzy||  
+|float_3:: get_Y||  
 |float_3::get_yx||  
 |float_3::get_yxz||  
-|float_3::get_yz||  
-|float_3::get_yzx||  
+|float_3:: get_yz||  
+|float_3:: get_yzx||  
 |float_3::get_z||  
 |float_3::get_zx||  
 |float_3::get_zxy||  
-|float_3::get_zy||  
+|float_3:: get_zy||  
 |float_3::get_zyx||  
 |float_3::ref_b||  
 |float_3::ref_g||  
@@ -143,34 +138,34 @@ class float_3;
 |float_3::ref_x||  
 |float_3::ref_y||  
 |float_3::ref_z||  
-|float_3::set_x||  
-|float_3::set_xy||  
-|float_3::set_xyz||  
-|float_3::set_xz||  
-|float_3::set_xzy||  
-|float_3::set_y||  
+|float_3:: set_X||  
+|float_3:: set_xy||  
+|float_3:: set_xyz||  
+|float_3:: set_xz||  
+|float_3:: set_xzy||  
+|float_3:: set_y||  
 |float_3::set_yx||  
 |float_3::set_yxz||  
-|float_3::set_yz||  
-|float_3::set_yzx||  
-|float_3::set_z||  
-|float_3::set_zx||  
+|float_3:: set_yz||  
+|float_3:: set_yzx||  
+|float_3:: set_z||  
+|float_3:: set_zx||  
 |float_3::set_zxy||  
-|float_3::set_zy||  
-|float_3::set_zyx||  
+|float_3:: set_zy||  
+|float_3:: set_zyx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|float_3::operator-||  
-|float_3::operator--||  
+|float_3::-||  
+|float_3::--||  
 |float_3::operator*=||  
 |float_3::operator/=||  
-|float_3::operator++||  
-|float_3::operator+=||  
+|float_3:: Operator++-||  
+|float_3:: Operator +=||  
 |float_3::operator=||  
-|float_3::operator-=||  
+|float_3:: Operator-=||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -182,36 +177,36 @@ class float_3;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|float_3::b||  
+|float_3:: b||  
 |float_3::bg||  
-|float_3::bgr||  
+|float_3:: BGR||  
 |float_3::br||  
-|float_3::brg||  
-|float_3::g||  
+|float_3:: brg||  
+|float_3:: g||  
 |float_3::gb||  
 |float_3::gbr||  
 |float_3::gr||  
 |float_3::grb||  
-|float_3::r||  
+|float_3:: r||  
 |float_3::rb||  
 |float_3::rbg||  
 |float_3::rg||  
 |float_3::rgb||  
-|float_3::x||  
-|float_3::xy||  
-|float_3::xyz||  
-|float_3::xz||  
-|float_3::xzy||  
+|float_3:: x||  
+|float_3:: XY||  
+|float_3:: XYZ||  
+|float_3:: XZ||  
+|float_3:: xzy||  
 |float_3::y||  
 |float_3::yx||  
 |float_3::yxz||  
-|float_3::yz||  
-|float_3::yzx||  
-|float_3::z||  
-|float_3::zx||  
+|float_3:: YZ||  
+|float_3:: yzx||  
+|float_3:: z||  
+|float_3:: ZX||  
 |float_3::zxy||  
-|float_3::zy||  
-|float_3::zyx||  
+|float_3:: ZY||  
+|float_3:: ZYX||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `float_3`  

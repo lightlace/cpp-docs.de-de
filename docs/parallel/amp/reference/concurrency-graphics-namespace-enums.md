@@ -1,10 +1,7 @@
 ---
 title: 'Concurrency:: Graphics-Namespace Enumerationen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
@@ -12,17 +9,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eef1db51fca369cb105fb1b5309c3d07afdac57
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: Graphics-Namespace-Enumerationen
 |||  
@@ -36,14 +31,14 @@ ms.lasthandoff: 02/23/2018
 enum address_mode;  
 ```  
   
-##  <a name="filter_mode">Filter_mode-Enumeration</a>  
+##  <a name="filter_mode"></a>  Filter_mode-Enumeration  
  Enumerationstyp zur Angabe der unterstützten Filtermodi für das Textursampling.  
   
 ```  
 enum filter_mode;  
 ```  
 ## <a name="requirements"></a>Anforderungen
-**Header:** amp_graphics.h **Namespace:** Concurrency::graphics
+**Header:** amp_graphics.h **Namespace:** Concurrency:: Graphics
 
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

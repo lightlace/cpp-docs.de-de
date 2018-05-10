@@ -1,13 +1,10 @@
 ---
 title: Abbruch in der PPL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>Abbruch in der PPL
 In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library (PPL) erläutert und beschrieben, wie Sie die parallele Arbeitsvorgänge abbrechen, und wie Sie erkennen können, ob parallele Arbeitsvorgänge abgebrochen wurden.  
@@ -53,7 +48,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
 
 
   
-##  <a name="top"></a>In diesem Dokument  
+##  <a name="top"></a> In diesem Dokument  
   
 - [Parallele Arbeitsstrukturen](#trees)  
   
@@ -69,7 +64,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
 - [Ungeeignete Fälle Abbruch](#when)  
   
-##  <a name="trees"></a>Parallele Arbeitsstrukturen  
+##  <a name="trees"></a> Parallele Arbeitsstrukturen  
  Differenzierte Aufgaben und Berechnungen werden in der PPL mithilfe von Aufgaben und Aufgabengruppen verwaltet. Sie können Aufgabengruppen Formular schachteln *Strukturen* parallelen Arbeitsstruktur. Die folgende Abbildung zeigt eine parallele Arbeitsstruktur. In dieser Abbildung stellen `tg1` und `tg2` Aufgabengruppen dar; `t1`, `t2`, `t3`, `t4` und `t5` stellen die Arbeitsvorgänge dar, die von den Aufgabengruppen durchgeführt wird.  
   
  ![Eine parallele Arbeitsstruktur](../../parallel/concrt/media/parallelwork_trees.png "Parallelwork_trees")  
@@ -82,14 +77,14 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
  [[Nach oben](#top)]  
   
-##  <a name="tasks"></a>Abbrechen von parallelen Aufgaben  
+##  <a name="tasks"></a> Abbrechen von parallelen Aufgaben  
 
  Es gibt verschiedene Möglichkeiten, parallele Arbeitsvorgänge abzubrechen. Die bevorzugte Methode ist, ein Abbruchtoken zu verwenden. Aufgabengruppen unterstützen auch die [task_group](reference/task-group-class.md#cancel) Methode und die [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) Methode. Eine letzte Möglichkeit ist, im Text einer Arbeitsfunktion einer Aufgabe eine Ausnahme auszulösen. Unabhängig von der gewählten Methode sollten Sie bedenken, dass der Abbruch nicht sofort auftritt. Es werden zwar keine neuen Arbeitsvorgänge gestartet, wenn eine Aufgabe oder eine Aufgabengruppe abgebrochen wird, aktive Arbeitsvorgänge müssen den Abbruch aber überprüfen und auf diesen reagieren.  
 
   
  Weitere Beispiele zum Abbrechen paralleler Aufgaben finden Sie unter [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [wie: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), und [Vorgehensweise: verwenden Ausnahmebehandlung zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
-###  <a name="tokens"></a>Verwenden eines Abbruchtokens zum Abbrechen paralleler Aufgaben  
+###  <a name="tokens"></a> Verwenden eines Abbruchtokens zum Abbrechen paralleler Aufgaben  
  Die Klassen `task`, `task_group` und `structured_task_group` unterstützen Abbruchvorgänge durch die Verwendung von Abbruchtoken. Die PPL definiert die [cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) und [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) Klassen für diesen Zweck. Wenn Sie Arbeit mithilfe eines Abbruchtokens abbrechen, wird von der Runtime keine neue Verarbeitung gestartet, die dieses Token abonniert. Arbeit, die noch aktiv ist können Sie die [Is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) Memberfunktion versucht, das Abbruchtoken, das Überwachen und beenden, wenn dies möglich ist.  
   
 
@@ -154,7 +149,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Abbruchtoken und Aufgabenkomposition  
 
- Die [Concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx" "when_all"](reference/concurrency-namespace-functions.md#when_all) und [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) Funktionen können Sie zusammenstellen mehrere Aufgaben, auf die allgemeine Muster zu implementieren. In diesem Abschnitt wird beschrieben, wie diese Funktionen mit Abbruchtoken verwendet werden können.  
+ Die [Concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" "when_all"](reference/concurrency-namespace-functions.md#when_all) und [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) Funktionen können Sie mehrere Aufgaben zusammenstellen um allgemeine Muster zu implementieren. In diesem Abschnitt wird beschrieben, wie diese Funktionen mit Abbruchtoken verwendet werden können.  
   
  Wenn ein Abbruchtoken an die `when_all`- oder `when_any`-Funktion übergeben wird, wird diese Funktion nur abgebrochen, wenn dieses Abbruchtoken abgebrochen wird, oder wenn eine der beteiligten Aufgaben in einem abgebrochenen Zustand endet oder eine Ausnahme auslöst.  
   
@@ -164,7 +159,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
  [[Nach oben](#top)]  
   
-###  <a name="cancel"></a>Mithilfe der Cancel-Methode zum Abbrechen paralleler Aufgaben  
+###  <a name="cancel"></a> Mithilfe der Cancel-Methode zum Abbrechen paralleler Aufgaben  
 
  Die [task_group](reference/task-group-class.md#cancel) und [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) Methoden Aufgabengruppe zum Zustand "abgebrochen" festgelegt. Nach dem Aufruf der `cancel`-Methode startet die Aufgabengruppe keine neuen Aufgaben mehr. Die `cancel`-Methoden können von mehreren untergeordneten Aufgaben aufgerufen werden. Eine abgebrochene Aufgabe bewirkt, dass die [Concurrency:: task_group::](reference/task-group-class.md#wait) und [structured_task_group](reference/structured-task-group-class.md#wait) Methoden zurückzugebenden [Concurrency:: Canceled](reference/concurrency-namespace-enums.md#task_group_status).  
 
@@ -200,7 +195,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
  [[Nach oben](#top)]  
   
-###  <a name="exceptions"></a>Verwenden von Ausnahmen zum Abbrechen paralleler Aufgaben  
+###  <a name="exceptions"></a> Verwenden von Ausnahmen zum Abbrechen paralleler Aufgaben  
  Die Verwendung von Abbruchtoken und `cancel`-Methode ist effizienter als die Ausnahmebehandlung beim Abbrechen einer parallelen Arbeitsstruktur. Abbruchtoken und die `cancel`-Methode brechen eine Aufgabe und alle untergeordneten Aufgaben von oben nach unten ab (Top-Down-Ansatz). Bei der Ausnahmebehandlung wird dagegen die umgekehrte Reihenfolge verwendet (Bottom-Up-Ansatz), sodass jede untergeordnete Aufgabengruppe einzeln abgebrochen werden muss. Das Thema [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) wird erklärt, wie die Concurrency Runtime Ausnahmen verwendet, um Fehler zu übermitteln. Nicht alle Ausnahmen geben jedoch einen Fehler an. Ein Suchalgorithmus kann z. B. die zugeordnete Aufgabe abbrechen, wenn das Ergebnis gefunden wurde. Wie jedoch bereits erwähnt ist die Ausnahmebehandlung im Vergleich zur `cancel`-Methode die weniger effiziente Möglichkeit zum Abbrechen paralleler Aufgaben.  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
  [[Nach oben](#top)]  
   
-##  <a name="algorithms"></a>Abbrechen von parallelen Algorithmen  
+##  <a name="algorithms"></a> Abbrechen von parallelen Algorithmen  
  Parallele Algorithmen in der PPL, z. B. `parallel_for`, basieren auf Aufgabengruppen. Daher können Sie die meisten Techniken für Aufgabengruppen auch zum Abbrechen paralleler Algorithmen verwenden.  
   
  In den folgenden Beispielen werden mehrere Möglichkeiten zum Abbrechen eines parallelen Algorithmus gezeigt.  
@@ -258,7 +253,7 @@ Caught 50
   
  [[Nach oben](#top)]  
   
-##  <a name="when"></a>Ungeeignete Fälle Abbruch  
+##  <a name="when"></a> Ungeeignete Fälle Abbruch  
  Die Verwendung eines Abbruchs ist sinnvoll, wenn jeder Member einer Gruppe zusammenhängender Aufgaben rechtzeitig beendet werden kann. In einigen Fällen ist ein Abbruch jedoch für die Anwendung nicht sinnvoll. Da der Aufgabenabbruch kooperativ ist, wird die übergeordnete Aufgabengruppe beispielsweise nicht abgebrochen, wenn eine einzelne Aufgabe blockiert wird. Wenn z. B. eine Aufgabe, mit der die Blockierung einer anderen aktiven Aufgabe aufgehoben wird, noch nicht gestartet wurde, wird diese bei Abbruch der Aufgabengruppe nicht gestartet. Dies kann zu einem Deadlock-Fehler in der Anwendung führen. Ein Abbruch ist ebenfalls nicht sinnvoll, wenn eine Aufgabe abgebrochen wird, die untergeordnete Aufgabe jedoch einen wichtigen Vorgang, z. B. das Freigeben einer Ressource, ausführt. Da mit dem Abbruch der übergeordneten Aufgabe der gesamte Satz von Aufgaben abgebrochen wird, wird der Vorgang nicht ausgeführt. Ein Beispiel dieser Punkt veranschaulicht wird, finden Sie unter der [verstehen wie Abbruch und Behandlung von Auswirkungen auf die Zerstörung](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) Abschnitt der empfohlenen Vorgehensweisen in der Parallel Patterns Library-Thema.  
   
  [[Nach oben](#top)]  
@@ -274,7 +269,7 @@ Caught 50
 |[Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)|Beschreibt die parallelen Algorithmen, die Auflistungen von Daten gleichzeitig verarbeiten.|  
 |[Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Eine Übersicht über die Parallel Patterns Library.|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [task-Klasse (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)  
   
  [cancellation_token_source-Klasse](../../parallel/concrt/reference/cancellation-token-source-class.md)  

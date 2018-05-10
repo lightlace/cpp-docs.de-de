@@ -1,30 +1,25 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agent
 In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis eines Datenflusses anstelle eines Kontrollflusses veranschaulicht.  
@@ -51,7 +46,7 @@ In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis e
   
 - [Erstellen eines Nachrichtenprotokollierungs-Agents](#logging)  
   
-##  <a name="control-flow"></a>Erstellen eines einfachen Ablaufsteuerungs-Agents  
+##  <a name="control-flow"></a> Erstellen eines einfachen Ablaufsteuerungs-Agents  
  Betrachten Sie das folgende Beispiel, in dem die `control_flow_agent`-Klasse definiert wird. Die `control_flow_agent`-Klasse wird auf drei Nachrichtenpuffer angewendet: einen Eingabepuffer und zwei Ausgabepuffer. Die `run`-Methode liest in einer Schleife aus dem Quellnachrichtenpuffer und steuert den Fluss der Programmausführung mit einer Bedingungsanweisung. Der Agent erhöht einen Zähler für negative Werte ungleich 0 (null) und einen anderen Zähler für positive Werte ungleich 0 (null). Nachdem der Agent den Sentinelwert 0 (null) empfangen hat, sendet er die Werte der Zähler an die Ausgabenachrichtenpuffer. Die `negatives`-Methode und die `positives`-Methode ermöglichen es der Anwendung, die Anzahl der negativen und positiven Werte aus dem Agent zu lesen.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis e
   
  [[Nach oben](#top)]  
   
-##  <a name="dataflow"></a>Erstellen eines einfachen Datenfluss-Agents  
+##  <a name="dataflow"></a> Erstellen eines einfachen Datenfluss-Agents  
  In diesem Abschnitt wird gezeigt, wie die `control_flow_agent`-Klasse konvertiert wird, um die gleiche Aufgabe mit dem Datenflussmodell auszuführen.  
   
  Der Datenfluss-Agent erstellt ein Netzwerk von Nachrichtenpuffern, die jeweils einem bestimmten Zweck dienen. Bestimmte Nachrichtenblöcke verwenden eine Filterfunktion, um eine Nachricht auf Grundlage ihrer Nutzlast anzunehmen oder abzulehnen. Eine Filterfunktion stellt sicher, dass ein Nachrichtenblock nur bestimmte Werte empfängt.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[Nach oben](#top)]  
   
-##  <a name="logging"></a>Erstellen eines Nachrichtenprotokollierungs-Agents  
+##  <a name="logging"></a> Erstellen eines Nachrichtenprotokollierungs-Agents  
  Im folgenden Beispiel wird die `log_agent`-Klasse veranschaulicht, die der `dataflow_agent`-Klasse ähnelt. Die `log_agent`-Klasse implementiert einen asynchronen Protokollierungs-Agent, der Protokollmeldungen in eine Datei und an die Konsole ausgibt. Mit der `log_agent`-Klasse kann die Anwendung Nachrichten als Informationsmeldung, Warnmeldung oder Fehlermeldung kategorisieren. Sie ermöglicht es der Anwendung außerdem anzugeben, ob die Protokollmeldungen der jeweiligen Kategorie in eine Datei, an die Konsole oder sowohl in eine Datei als auch an die Konsole ausgegeben werden. In diesem Beispiel werden alle Protokollmeldungen in eine Datei und nur Fehlermeldungen an die Konsole ausgegeben.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

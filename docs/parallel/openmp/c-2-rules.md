@@ -1,32 +1,27 @@
 ---
 title: C. 2 Regeln | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Regeln
 Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Grammatik zeigt die Erweiterungen der Basissprache-Grammatik für die OpenMP-C- und C++-Direktiven.  
   
- **/\*in C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* in C++ (ISO/IEC 14882:1998) \*/**  
   
  *Anweisung Seq*:  
   
@@ -38,7 +33,7 @@ Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Gra
   
  *Anweisung Seq-Direktive (OpenMP)*  
   
- **/\*in C90 (ISO/IEC 9899:1990)\*/**  
+ **/\* in C90 (ISO/IEC 9899:1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Gra
   
  *Anweisung-List-Anweisung (OpenMP)*  
   
- **/\*in C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* in C99 (ISO/IEC 9899: 1999) \*/**  
   
  *Block-Element*:  
   
@@ -62,7 +57,7 @@ Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Gra
   
  *Anweisung*:  
   
- **/\*Standard-Anweisungen\*/**  
+ **/\* Standard-Anweisungen \*/**  
   
  *OpenMP-Konstrukt*  
   
@@ -274,7 +269,7 @@ Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Gra
   
  *Deklaration*:  
   
- **/\*Standard-Deklarationen\*/**  
+ **/\* Standard-Deklarationen \*/**  
   
  *Threadprivate-Direktive*  
   
@@ -304,9 +299,9 @@ Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Gra
   
  *Reduction-Operator*:  
   
- *Einer der*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Einer der*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*in C\*/**  
+ **/\* in C \*/**  
   
  *Variablenliste*:  
   
@@ -314,7 +309,7 @@ Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Gra
   
  *Variablenliste* **,** *Bezeichner*  
   
- **/\*in C++\*/**  
+ **/\* in C++ \*/**  
   
  *Variablenliste*:  
   

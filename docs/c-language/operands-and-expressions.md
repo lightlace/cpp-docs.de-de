@@ -1,13 +1,10 @@
 ---
-title: "Operanden und Ausdrücke | Microsoft-Dokumentation"
-ms.custom: 
+title: Operanden und Ausdrücke | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - operands, definition
 - operands
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ff9af4727bc606fcecbf9c79936c980d023865a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operands-and-expressions"></a>Operanden und Ausdrücke
 Ein „Operand“ ist eine Entität, auf die ein Operator angewendet wird. Ein "Ausdruck" ist eine Sequenz von Operatoren und Operanden, die eine beliebige Kombination dieser Aktionen ausführt:  

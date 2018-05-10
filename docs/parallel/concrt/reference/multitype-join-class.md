@@ -1,12 +1,9 @@
 ---
 title: Multitype_join-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join-Klasse
 Ein `multitype_join`-Meldungsblock ist ein Block mit mehreren Quellen und einem einzelnen Ziel, der Meldungen verschiedener Typen aus allen Quellen kombiniert und dem Ziel ein Tupel der kombinierten Meldungen bereitstellt.  
@@ -79,7 +74,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |----------|-----------------|  
 |[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` -Block übertragen des Besitzes an den Aufrufer.|  
 |[acquire_ref](#acquire_ref)|Ruft eine Verweisanzahl für dieses `multitype_join` Meldungsblock, um den Löschvorgang zu verhindern.|  
-|[consume](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
+|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|  
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `multitype_join` Meldungsblock.|  
 |[release](#release)|Gibt die Reservierung einer vorherigen erfolgreichen Meldung frei.|  
 |[release_ref](#release_ref)|Gibt einen Verweiszähler für dieses `multiple_join` Meldungsblock.|  
@@ -211,7 +206,7 @@ multitype_join(
   
  Bewegungskonstruktion wird bei einer aktiven Sperre nicht ausgeführt, d. h., der Benutzer muss sicherstellen, dass zum Zeitpunkt der Bewegung keine einfachen Aufgaben aktiv sind. Andernfalls können zahlreiche Wettläufe auftreten, wodurch Ausnahmen oder inkonsistente Zuständen verursacht werden.  
   
-##  <a name="dtor"></a> ~multitype_join 
+##  <a name="dtor"></a> ~ Multitype_join 
 
  Zerstört die `multitype_join` Meldungsblock.  
   

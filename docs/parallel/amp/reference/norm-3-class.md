@@ -1,12 +1,9 @@
 ---
 title: norm_3-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b697dec751cade2accb262c59b23983ac75d4205
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm3-class"></a>norm_3-Klasse
 Stellt einen kurzen Vektor aus drei normalen Zahlen dar.  
@@ -114,7 +109,7 @@ class norm_3;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[norm_3 Constructor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
+|[norm_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -125,7 +120,7 @@ class norm_3;
 |norm_3::get_xyz||  
 |norm_3::get_xz||  
 |norm_3::get_xzy||  
-|norm_3::get_y||  
+|norm_3:: get_Y||  
 |norm_3::get_yx||  
 |norm_3::get_yxz||  
 |norm_3::get_yz||  
@@ -133,7 +128,7 @@ class norm_3;
 |norm_3::get_z||  
 |norm_3::get_zx||  
 |norm_3::get_zxy||  
-|norm_3::get_zy||  
+|norm_3:: get_zy||  
 |norm_3::get_zyx||  
 |norm_3::ref_b||  
 |norm_3::ref_g||  
@@ -142,33 +137,33 @@ class norm_3;
 |norm_3::ref_y||  
 |norm_3::ref_z||  
 |norm_3::set_x||  
-|norm_3::set_xy||  
-|norm_3::set_xyz||  
+|norm_3:: set_xy||  
+|norm_3:: set_xyz||  
 |norm_3::set_xz||  
-|norm_3::set_xzy||  
-|norm_3::set_y||  
+|norm_3:: set_xzy||  
+|norm_3:: set_y||  
 |norm_3::set_yx||  
 |norm_3::set_yxz||  
-|norm_3::set_yz||  
-|norm_3::set_yzx||  
+|norm_3:: set_yz||  
+|norm_3:: set_yzx||  
 |norm_3::set_z||  
 |norm_3::set_zx||  
 |norm_3::set_zxy||  
-|norm_3::set_zy||  
+|norm_3:: set_zy||  
 |norm_3::set_zyx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|norm_3::operator-||  
-|norm_3::operator--||  
+|norm_3::-||  
+|norm_3::--||  
 |norm_3::operator*=||  
 |norm_3::operator/=||  
-|norm_3::operator++||  
+|norm_3:: Operator++-||  
 |norm_3::operator+=||  
 |norm_3::operator=||  
-|norm_3::operator-=||  
+|norm_3:: Operator-=||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -195,11 +190,11 @@ class norm_3;
 |norm_3::rbg||  
 |norm_3::rg||  
 |norm_3::rgb||  
-|norm_3::x||  
+|norm_3:: x||  
 |norm_3::xy||  
 |norm_3::xyz||  
 |norm_3::xz||  
-|norm_3::xzy||  
+|norm_3:: xzy||  
 |norm_3::y||  
 |norm_3::yx||  
 |norm_3::yxz||  
@@ -208,7 +203,7 @@ class norm_3;
 |norm_3::z||  
 |norm_3::zx||  
 |norm_3::zxy||  
-|norm_3::zy||  
+|norm_3:: ZY||  
 |norm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
@@ -283,7 +278,7 @@ explicit inline norm_3(
  `_Other`  
  Das Objekt, das zum Initialisieren verwendet.  
   
-## <a name="a-namesize-size-constant"></a><a name="size">Size-Konstante
+## <a name="a-namesize-size-constant"></a><a name="size"> Size-Konstante
 ### <a name="syntax"></a>Syntax  
   
 ```  

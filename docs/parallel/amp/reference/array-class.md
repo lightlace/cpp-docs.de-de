@@ -1,12 +1,9 @@
 ---
 title: Array-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0a7d063d5e57d77735a33eac8ec944d41032fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="array-class"></a>array-Klasse
 Stellt einen Datencontainer dar, mit dem Daten auf eine Zugriffstaste verschoben werden.  
@@ -95,7 +90,7 @@ friend class array;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[rank Constant](#rank)|Speichert den Rang des Arrays.|  
+|[Rank-Konstante](#rank)|Speichert den Rang des Arrays.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -482,7 +477,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="data"></a> data 
+##  <a name="data"></a> Daten 
 
  Gibt einen Zeiger auf die Rohdaten des `array`-Objekts zurück.  
   

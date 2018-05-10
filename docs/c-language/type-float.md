@@ -1,13 +1,10 @@
 ---
-title: "Typ „float“ | Microsoft-Dokumentation"
-ms.custom: 
+title: Typ „float“ | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e218f7b5025de10dc06bf20fc759aed93189ec53
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-float"></a>Typ "float"
 Gleitkommazahlen verwenden das IEEE(Institute of Electrical and Electronics Engineers)-Format. Werte mit einfacher Genauigkeit vom Typ "float" umfassen 4 Bytes und bestehen aus einem Vorzeichenbit, einem 8-Bit-Exponenten in Excess-127-Notation und einer 23-Bit-Mantisse. Die Mantisse ist eine Zahl zwischen 1.0 und 2.0. Da das höchstwertige Bit der Mantisse immer 1 ist, wird es nicht in der Zahl gespeichert. Diese Darstellung erlaubt einen Bereich von etwa 3,4E-38 bis 3,4E+38 für den Typ „float“.  

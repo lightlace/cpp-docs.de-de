@@ -1,12 +1,9 @@
 ---
 title: Concurrency-Namespace (C++-AMP) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf datenparalleler Hardware beschleunigen. Weitere Informationen finden Sie unter [Übersicht über C++ AMP](../cpp-amp-overview.md)  
@@ -73,13 +68,13 @@ namespace Concurrency;
 |name|Beschreibung|  
 |----------|-----------------|  
 |[Access_type-Enumeration](concurrency-namespace-enums-amp.md#access_type)|Gibt den Datenzugriffstyp an.|  
-|[queuing_mode Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.|  
+|[Queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |Operator|Beschreibung|  
 |--------------|-----------------|  
-|[operator== Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Bestimmt, ob die angegebenen Datenstrukturen gleich sind.|  
+|[Operator ==-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Bestimmt, ob die angegebenen Datenstrukturen gleich sind.|  
 |[Operator! =-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_neq)|Bestimmt, ob die angegebenen Datenstrukturen ungleich sind.|  
 |[Operator +-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_add)|Berechnet die komponentenbezogene Summe der angegebenen Argumente.|  
 |[Operator-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator-)|Berechnet die Differenz zwischen den angegebenen Argumenten pro Komponente.|  
@@ -117,7 +112,7 @@ namespace Concurrency;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Die maximale Anzahl der von DirectX zugelassenen Puffer.|  
+|[HLSL_MAX_NUM_BUFFERS-Konstante](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Die maximale Anzahl der von DirectX zugelassenen Puffer.|  
 |[MODULENAME_MAX_LENGTH-Konstante](concurrency-namespace-constants-amp.md#modulename_max_length)|Speichert die maximale Länge des Modulnamens. Dieser Wert muss für den Compiler und die Laufzeit identisch sein.|  
   
 ## <a name="requirements"></a>Anforderungen  

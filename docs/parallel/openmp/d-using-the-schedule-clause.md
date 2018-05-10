@@ -1,27 +1,22 @@
 ---
-title: "D. Unter Berücksichtigung des Zeitplans Klausel | Microsoft Docs"
-ms.custom: 
+title: D. Unter Berücksichtigung des Zeitplans Klausel | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Unter Berücksichtigung des Zeitplans-Klausel
 Ein paralleler Bereich verfügt über mindestens eine Grenze, auf das Ende und möglicherweise zusätzliche Barrieren darin. Bei jeder Grenze müssen der letzte Thread auf das Eintreffen der anderen Mitgliedern des Teams warten. Um diese Wartezeit zu minimieren, sollten gemeinsam genutzte verteilt werden, damit alle Threads mit der Barriere auf etwa zur gleichen Zeit ankommen. Wenn ein Teil, freigegeben in Arbeit enthaltenen **für** erstellt, die `schedule` -Klausel kann für diesen Zweck verwendet werden.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Wie **dynamische**, **geführtes** planen Garantien, die kein Thread auf die Grenze, die länger wartet als ein anderer Thread zum Ausführen der letzten Iteration benötigt oder den abschließenden *k* Iterationen, wenn eine Blockgröße von *k* angegeben ist. Für solche Zeitpläne der **geführtes** Zeitplan ist gekennzeichnet durch die Eigenschaft, dass sie die wenigsten Synchronisierungen erfordert. Für Segmentgröße *k*, weist eine typische Implementierung *Q = ceiling(n/p)* Iterationen an, die den ersten verfügbaren Thread festlegen  *n*  der größere der *n-q* und *p\*k*, und wiederholen Sie, bis alle Iterationen zugewiesen sind.  
+ Wie **dynamische**, **geführtes** planen Garantien, die kein Thread auf die Grenze, die länger wartet als ein anderer Thread zum Ausführen der letzten Iteration benötigt oder den abschließenden *k* Iterationen, wenn eine Blockgröße von *k* angegeben ist. Für solche Zeitpläne der **geführtes** Zeitplan ist gekennzeichnet durch die Eigenschaft, dass sie die wenigsten Synchronisierungen erfordert. Für Segmentgröße *k*, weist eine typische Implementierung *Q = ceiling(n/p)* Iterationen an, die den ersten verfügbaren Thread festlegen *n* der größere der *n-q* und *p\*k*, und wiederholen Sie, bis alle Iterationen zugewiesen sind.  
   
  Wenn die Auswahl des optimalen Zeitplans nicht als klar ist, wie es für diese Beispiele ist die **Runtime** Zeitplan eignet sich für unterschiedliche Zeitpläne und Blockgrößen experimentieren, ohne zu ändern und kompilieren Sie das Programm erneut. Es kann auch nützlich sein, wenn des optimalen Zeitplans (in einer vorhersagbaren Weise) für die Eingabedaten abhängt, der die Anwendung angewendet wird.  
   

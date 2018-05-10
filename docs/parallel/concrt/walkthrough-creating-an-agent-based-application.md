@@ -1,30 +1,25 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung
 In diesem Thema wird die Erstellung einer einfachen agentbasierten Anwendung beschrieben. In dieser exemplarischen Vorgehensweise können Sie einen Agent erstellen, der Daten asynchron aus einer Textdatei ausliest. Die Anwendung berechnet die Prüfsumme des Inhalts dieser Datei mithilfe des Adler-32-Prüfsummenalgorithmus.  
@@ -49,7 +44,7 @@ In diesem Thema wird die Erstellung einer einfachen agentbasierten Anwendung bes
   
 - [Verwenden der File_reader-Klasse in der Anwendung](#useagentclass)  
   
-##  <a name="createapplication"></a>Erstellen der Konsolenanwendung  
+##  <a name="createapplication"></a> Erstellen der Konsolenanwendung  
  In diesem Abschnitt wird die Erstellung einer Visual C++-Konsolenanwendung beschrieben, die auf die vom Programm verwendeten Headerdateien verweist.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>So erstellen Sie eine Visual C++-Anwendung mit dem Win32-Anwendungs-Assistenten  
@@ -70,7 +65,7 @@ In diesem Thema wird die Erstellung einer einfachen agentbasierten Anwendung bes
   
  [[Nach oben](#top)]  
   
-##  <a name="createagentclass"></a>Erstellen der File_reader-Klasse  
+##  <a name="createagentclass"></a> Erstellen der File_reader-Klasse  
  In diesem Abschnitt wird die Erstellung der `file_reader`-Klasse beschrieben. Die Runtime plant jeden Agent so, dass er Arbeiten im eigenen Kontext ausführt. Daher können Sie einen Agent erstellen, der Arbeiten synchron ausführt, aber asynchron mit anderen Komponenten interagiert. Die `file_reader`-Klasse liest Daten aus einer angegebenen Eingabedatei aus und sendet Daten aus dieser Datei an eine angegebene Zielkomponente.  
   
 #### <a name="to-create-the-filereader-class"></a>So erstellen Sie die file_reader-Klasse  
@@ -120,7 +115,7 @@ Die `run`-Methode öffnet die Datei und liest Daten aus. Die `run`-Methode erfas
   
  [[Nach oben](#top)]  
   
-##  <a name="useagentclass"></a>Verwenden der File_reader-Klasse in der Anwendung  
+##  <a name="useagentclass"></a> Verwenden der File_reader-Klasse in der Anwendung  
  In diesem Abschnitt wird beschrieben, wie mithilfe der `file_reader`-Klasse der Inhalt einer Textdatei gelesen wird. Außerdem wird gezeigt, wie zum Erstellen einer [Call](../../parallel/concrt/reference/call-class.md) Objekt, das diese Dateidaten empfängt und die Adler-32-Prüfsumme berechnet.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>So verwenden Sie die file_reader-Klasse in der Anwendung  

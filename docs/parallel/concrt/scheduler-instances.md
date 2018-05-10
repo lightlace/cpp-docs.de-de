@@ -1,29 +1,24 @@
 ---
 title: Planerinstanzen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Planerinstanzen
 Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency Runtime sowie zum Verwenden der [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) und [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klassen zum Erstellen und verwalten Scheduler-Instanzen. Planerinstanzen sind nützlich, wenn Sie explizite Planungsrichtlinien bestimmten Arten von Arbeitslasten zuordnen möchten. Beispielsweise können Sie eine Planerinstanz erstellen, um einige Aufgaben mit höherer Threadpriorität auszuführen und andere Aufgaben mit dem Standardplaner mit normaler Threadpriorität auszuführen.  
@@ -43,7 +38,7 @@ Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency 
   
 -   [Beispiel](#example)  
   
-##  <a name="classes"></a>Der Planer und CurrentScheduler-Klasse  
+##  <a name="classes"></a> Der Planer und CurrentScheduler-Klasse  
  Der Taskplaner ermöglicht es Anwendungen, eine oder mehrere *Planerinstanzen* zum Planen der Arbeit. Die [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) Klasse stellt eine Planerinstanz und kapselt die Funktionalität, die im Zusammenhang mit der Planung von Aufgaben ist.  
   
  Ein Thread, der an einen Planer angefügt ist, wird als bezeichnet ein *Ausführungskontext*, oder nur *Kontext*. Ein Planer kann zu einem beliebigen Zeitpunkt im aktuellen Kontext aktiv sein. Der aktive Planer ist auch bekannt als die *aktuellen Planer*. Die Concurrency Runtime verwendet die [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klasse, um den Zugriff auf den aktuellen Planer zu ermöglichen. Die aktuellen Planer für einen Kontext kann sich vom aktuellen Planer für einen anderen Kontext unterscheiden. Die Common Language Runtime stellt eine auf Prozessebene-Darstellung des aktuellen Planers nicht bereit.  
@@ -54,7 +49,7 @@ Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency 
   
  [[Nach oben](#top)]  
   
-##  <a name="creating"></a>Erstellen einer Planerinstanz  
+##  <a name="creating"></a> Erstellen einer Planerinstanz  
  Es sind diese drei Methoden zum Erstellen einer `Scheduler` Objekt:  
   
 -   Wenn kein Zeitplan vorhanden ist, erstellt die Laufzeit einen Standardplaner für Sie aus, wenn Sie Laufzeitfunktionen, z. B. parallele Algorithmen verwenden, Arbeitsvorgänge auszuführen. Der Standardplaner wird dem aktuellen Planer für den Kontext, der die parallelen Arbeitsvorgänge initiiert.  
@@ -69,7 +64,7 @@ Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency 
   
  [[Nach oben](#top)]  
   
-##  <a name="managing"></a>Verwalten der Lebensdauer einer Planerinstanz  
+##  <a name="managing"></a> Verwalten der Lebensdauer einer Planerinstanz  
  Die Common Language Runtime verwendet einen verweiszählung Mechanismus zur Steuerung der Lebensdauer des `Scheduler` Objekte.  
   
 
@@ -98,7 +93,7 @@ Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency 
   
  [[Nach oben](#top)]  
   
-##  <a name="features"></a>Methoden und Funktionen  
+##  <a name="features"></a> Methoden und Funktionen  
  In diesem Abschnitt werden die Hauptmethoden der der `CurrentScheduler` und `Scheduler` Klassen.  
   
  Denken Sie an der `CurrentScheduler` Klasse als ein Hilfsprogramm zum Erstellen eines Planers für die Verwendung auf dem aktuellen Kontext. Die `Scheduler` -Klasse können Sie einen Planer zu steuern, die zu einem anderen Kontext gehört.  

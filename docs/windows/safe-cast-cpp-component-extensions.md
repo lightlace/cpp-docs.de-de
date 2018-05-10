@@ -1,13 +1,10 @@
 ---
-title: "Safe_cast (Komponentenerweiterungen für C++) | Microsoft Docs"
-ms.custom: 
+title: Safe_cast (Komponentenerweiterungen für C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Komponentenerweiterungen für C++)
 Der `safe_cast`-Vorgang gibt im Erfolgsfall den angegebenen Ausdruck als den angegebenen Typ zurück, andernfalls wird `InvalidCastException` ausgegeben.  
@@ -73,7 +68,7 @@ expression
  Ein Ausdruck, der als ein Handle zu einem Verweis oder Werttyp ausgewertet wird, ein Werttyp oder ein Nachverfolgungsverweis auf einen Verweis- oder Werttyp.  
   
 ### <a name="remarks"></a>Hinweise  
- `safe_cast`löst `InvalidCastException` Wenn dies nicht *Ausdruck* in den vom angegebenen Typ *Typ-Id*. Zum Abfangen von `InvalidCastException`, geben Sie die [/EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md) (Compileroption), und verwenden Sie eine Try/Catch-Anweisung.  
+ `safe_cast` löst `InvalidCastException` Wenn dies nicht *Ausdruck* in den vom angegebenen Typ *Typ-Id*. Zum Abfangen von `InvalidCastException`, geben Sie die [/EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md) (Compileroption), und verwenden Sie eine Try/Catch-Anweisung.  
   
 ### <a name="requirements"></a>Anforderungen  
  Compileroption: **/ZW**  
@@ -145,7 +140,7 @@ expression
   
  Weitere Informationen zu Umwandlungen finden Sie unter [Umwandlungsoperatoren](../cpp/casting-operators.md).  
   
- `safe_cast`gilt nicht für eine **Const_cast** (umwandeln **const**).  
+ `safe_cast` gilt nicht für eine **Const_cast** (umwandeln **const**).  
   
  `safe_cast` befindet sich im cli-Namespace.  Finden Sie unter [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) für Weitere Informationen.  
   

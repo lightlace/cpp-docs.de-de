@@ -1,12 +1,9 @@
 ---
 title: CTabView Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabView
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabview-class"></a>CTabView-Klasse
 Die `CTabView` Klasse vereinfacht die Verwendung der Registerkarte "-Steuerelementklasse ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) in Anwendungen, die MFC Dokument-/ Ansichtarchitektur verwenden.  
@@ -73,7 +68,7 @@ class CTabbedView : public CView
 |[CTabView::OnActivateView](#onactivateview)|Vom Framework aufgerufen, wenn die Registerkartenansicht aktiv oder inaktiv erfolgt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse vereinfacht die Ansicht im Registerkartenformat in einer Anwendung für die Dokument-/Ansichtarchitektur zu versetzen. `CTabView`ist eine `CView`-abgeleitete Klasse, die ein eingebettetes enthält `CMFCTabCtrl` Objekt. `CTabView`behandelt alle Nachrichten, die zur Unterstützung der `CMFCTabCtrl` Objekt. Leiten Sie eine Klasse aus einfach `CTabView` stecken Sie es in Ihrer Anwendung, und fügen `CView`-abgeleitete Klassen mithilfe der `AddView` Methode. Das Registerkarten-Steuerelement werden diese Sichten als Registerkarten angezeigt werden.  
+ Diese Klasse vereinfacht die Ansicht im Registerkartenformat in einer Anwendung für die Dokument-/Ansichtarchitektur zu versetzen. `CTabView` ist eine `CView`-abgeleitete Klasse, die ein eingebettetes enthält `CMFCTabCtrl` Objekt. `CTabView` behandelt alle Nachrichten, die zur Unterstützung der `CMFCTabCtrl` Objekt. Leiten Sie eine Klasse aus einfach `CTabView` stecken Sie es in Ihrer Anwendung, und fügen `CView`-abgeleitete Klassen mithilfe der `AddView` Methode. Das Registerkarten-Steuerelement werden diese Sichten als Registerkarten angezeigt werden.  
   
  Angenommen, Sie müssen möglicherweise ein Dokument, das auf verschiedene Weise dargestellt werden kann: als ein Arbeitsblatt, ein Diagramm, ein bearbeitbares Formular usw. Sie können einzelne Ansichten, zeichnen die Daten nach Bedarf erstellen, fügen Sie sie in Ihrem `CTabView`-abgeleitetes Objekt darum zu bitten, ohne eine zusätzliche Codierung im Registerkartenformat.  
   
@@ -87,7 +82,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>  CTabView::AddView  
  Das Registerkarten-Steuerelement hinzugefügt eine Ansicht.  
   
 ```  
@@ -117,7 +112,7 @@ int AddView(
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird eine Ansicht auf das Registerkarten-Steuerelement hinzuzufügen, die in einem Frame eingebettet ist.  
   
-##  <a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>  CTabView::FindTab  
  Gibt den Index der angegebenen Ansicht im Registerkarten-Steuerelement zurück.  
   
 ```  
@@ -134,7 +129,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird zum Abrufen des Index einer Sicht, die ein angegebenen Handle verfügt.  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  Gibt einen Zeiger auf die derzeit aktive Ansicht an.  
   
 ```  
@@ -146,7 +141,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
  Gibt einen Verweis auf das Registerkarten-Steuerelement, das der Ansicht zugeordnet.  
   
 ```  
@@ -156,7 +151,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das Registerkarten-Steuerelement, das der Ansicht zugeordnet.  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
  Vom Framework aufgerufen, beim Erstellen einer Registerkartenansicht bestimmt, ob die Registerkartenansicht eine freigegebene horizontale Bildlaufleiste angezeigt.  
   
 ```  
@@ -164,14 +159,14 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Registerkartenansicht zusammen mit einer freigegebenen Bildlaufleiste erstellt werden soll. Andernfalls `FALSE`.  
+ `TRUE` Wenn die Registerkartenansicht zusammen mit einer freigegebenen Bildlaufleiste erstellt werden soll. Andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode bei einem `CTabView` Objekt erstellt wird.  
   
  Überschreiben der `IsScrollBar` Methode in einer `CTabView`-abgeleitete Klasse und der Rückgabewert `TRUE` Wenn Sie eine Sicht erstellen, die einen gemeinsamen horizontalen Bildlaufleiste möchten.  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Vom Framework aufgerufen, wenn die Registerkartenansicht aktiv oder inaktiv erfolgt.  
   
 ```  
@@ -185,7 +180,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Hinweise  
  Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Methode in einer `CTabView`-abgeleitete Klasse, um diese Benachrichtigung zu verarbeiten.  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>  CTabView::RemoveView  
  Entfernt die Ansicht aus dem Registerkarten-Steuerelement.  
   
 ```  
@@ -201,7 +196,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
  Eine Ansicht wird aktiviert.  
   
 ```  
@@ -213,7 +208,7 @@ BOOL SetActiveView(int iTabNum);
  Der nullbasierte Index der Registerkartenansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die angegebene Ansicht aktiv ist, erfolgte `FALSE` , wenn die Sicht Index ungültig ist.  
+ `TRUE` Wenn die angegebene Ansicht aktiv ist, erfolgte `FALSE` , wenn die Sicht Index ungültig ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

@@ -1,12 +1,9 @@
 ---
 title: unorm_3-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm3-class"></a>unorm_3-Klasse
 Stellt einen kurzen Vektor aus drei normalen Zahlen ohne Vorzeichen dar.  
@@ -114,26 +109,26 @@ class unorm_3;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[unorm_3 Constructor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
+|[unorm_3-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |unorm_3::get_x||  
-|unorm_3::get_xy||  
-|unorm_3::get_xyz||  
+|unorm_3:: get_xy||  
+|unorm_3:: get_xyz||  
 |unorm_3::get_xz||  
 |unorm_3::get_xzy||  
-|unorm_3::get_y||  
+|unorm_3:: get_Y||  
 |unorm_3::get_yx||  
 |unorm_3::get_yxz||  
-|unorm_3::get_yz||  
-|unorm_3::get_yzx||  
+|unorm_3:: get_yz||  
+|unorm_3:: get_yzx||  
 |unorm_3::get_z||  
 |unorm_3::get_zx||  
 |unorm_3::get_zxy||  
-|unorm_3::get_zy||  
+|unorm_3:: get_zy||  
 |unorm_3::get_zyx||  
 |Unorm_3::ref_b||  
 |Unorm_3::ref_g||  
@@ -141,33 +136,33 @@ class unorm_3;
 |Unorm_3::ref_x||  
 |Unorm_3::ref_y||  
 |Unorm_3::ref_z||  
-|unorm_3::set_x||  
-|unorm_3::set_xy||  
-|unorm_3::set_xyz||  
+|unorm_3:: set_X||  
+|unorm_3:: set_xy||  
+|unorm_3:: set_xyz||  
 |unorm_3::set_xz||  
-|unorm_3::set_xzy||  
-|unorm_3::set_y||  
+|unorm_3:: set_xzy||  
+|unorm_3:: set_y||  
 |unorm_3::set_yx||  
-|unorm_3::set_yxz||  
-|unorm_3::set_yz||  
-|unorm_3::set_yzx||  
+|unorm_3:: set_yxz||  
+|unorm_3:: set_yz||  
+|unorm_3:: set_yzx||  
 |unorm_3::set_z||  
-|unorm_3::set_zx||  
+|unorm_3:: set_zx||  
 |unorm_3::set_zxy||  
-|unorm_3::set_zy||  
-|unorm_3::set_zyx||  
+|unorm_3:: set_zy||  
+|unorm_3:: set_zyx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|unorm_3::operator--||  
-|unorm_3::operator*=||  
+|unorm_3::Operator--||  
+|unorm_3::Operator * =||  
 |unorm_3::operator/=||  
-|unorm_3::operator++||  
-|unorm_3::operator+=||  
+|unorm_3::Operator ++||  
+|unorm_3::Operator +=||  
 |unorm_3::operator=||  
-|unorm_3::operator-=||  
+|unorm_3::Operator =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -181,7 +176,7 @@ class unorm_3;
 |----------|-----------------|  
 |unorm_3::b||  
 |unorm_3::bg||  
-|unorm_3::bgr||  
+|unorm_3:: BGR||  
 |unorm_3::br||  
 |unorm_3::brg||  
 |unorm_3::g||  
@@ -194,11 +189,11 @@ class unorm_3;
 |unorm_3::rbg||  
 |unorm_3::rg||  
 |unorm_3::rgb||  
-|unorm_3::x||  
-|unorm_3::xy||  
-|unorm_3::xyz||  
+|unorm_3:: x||  
+|unorm_3:: XY||  
+|unorm_3:: XYZ||  
 |unorm_3::xz||  
-|unorm_3::xzy||  
+|unorm_3:: xzy||  
 |unorm_3::y||  
 |unorm_3::yx||  
 |unorm_3::yxz||  
@@ -207,7 +202,7 @@ class unorm_3;
 |unorm_3::z||  
 |unorm_3::zx||  
 |unorm_3::zxy||  
-|unorm_3::zy||  
+|unorm_3:: ZY||  
 |unorm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  

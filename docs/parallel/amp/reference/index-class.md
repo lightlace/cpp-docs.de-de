@@ -1,12 +1,9 @@
 ---
 title: Index-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/index
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="index-class"></a>index-Klasse
 Definiert eine *N*-dimensionalen Index Pographics-Cpp-amp.md.  
@@ -70,7 +65,7 @@ class index;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[rank Constant](#rank)|Speichert den Rang des `index`-Objekts.|  
+|[Rank-Konstante](#rank)|Speichert den Rang des `index`-Objekts.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `index`  
@@ -84,7 +79,7 @@ class index;
  **Namespace:** Parallelität  
 
 
-## <a name="index_ctor">Index-Konstruktor</a>
+## <a name="index_ctor"></a> Index-Konstruktor
 Initialisiert eine neue Instanz der indexklasse an.
 
 ```  
@@ -118,7 +113,7 @@ explicit index(
 
 _Array  
 Ein eindimensionales Array mit den Rangwerten.  
-_I  
+_ICH  
 Die Indexposition in einem eindimensionalen Index.  
 _I0  
 Die Länge der wichtigsten Dimension.  

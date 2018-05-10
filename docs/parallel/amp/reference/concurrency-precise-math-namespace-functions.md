@@ -1,10 +1,7 @@
 ---
 title: 'Concurrency:: precise_math-Namespace Funktionen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math-Namespace-Funktionen
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parameter  
  `exponent`  
- Der exponentiellen Begriff  *n*  von mathematischen Ausdruck `e` <sup> n </sup>, wobei `e` stellt die Basis des natürlichen Logarithmus.  
+ Der exponentiellen Begriff *n* von mathematischen Ausdruck `e` <sup>n</sup>, wobei `e` stellt die Basis des natürlichen Logarithmus.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-E, die vom Argument exponential ist, minus 1 zurück  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parameter  
  `exponent`  
- Der exponentiellen Begriff  *n*  von mathematischen Ausdruck `e` <sup> n </sup>, wobei `e` stellt die Basis des natürlichen Logarithmus.  
+ Der exponentiellen Begriff *n* von mathematischen Ausdruck `e` <sup>n</sup>, wobei `e` stellt die Basis des natürlichen Logarithmus.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-E, die vom Argument exponential ist, minus 1 zurück  
@@ -802,7 +797,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Exponentialzahl zur Basis e des Arguments  
   
-##  <a name="exp2"></a>  exp2  
+##  <a name="exp2"></a>  Exp2  
  Berechnet die Basis-2, die vom Argument exponential ist  
   
 ```  
@@ -1076,7 +1071,7 @@ inline double fmod(
  Das zweite Gleitkommaargument.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die restliche `_X` geteilt durch `_Y`; also der Wert der `_X`  -  `_Y`  *n* , wobei  *n*  ist ein ganze Zahl, dass die Größe der `_X`  -  `_Y`  *n*  ist kleiner als die Größe der `_Y`.  
+ Im weiteren Verlauf `_X` geteilt durch `_Y`; d. h., der Wert der `_X`  -  `_Y` *n*, wobei *n* ist eine ganze Zahl so, dass als Maßeinheit `_X`  -  `_Y` *n* ist kleiner als die Größe der `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf  
  Berechnet den Rest des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  Das zweite Gleitkommaargument.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die restliche `_X` geteilt durch `_Y`; also der Wert der `_X`  -  `_Y`  *n* , wobei  *n*  ist ein ganze Zahl, dass die Größe der `_X`  -  `_Y`  *n*  ist kleiner als die Größe der `_Y`.  
+ Im weiteren Verlauf `_X` geteilt durch `_Y`; d. h., der Wert der `_X`  -  `_Y` *n*, wobei *n* ist eine ganze Zahl so, dass als Maßeinheit `_X`  -  `_Y` *n* ist kleiner als die Größe der `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  Den Argumentwert klassifiziert, wie "NaN", unendlich, Normal, subnormal, NULL  
@@ -1464,7 +1459,7 @@ inline float log1pf(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-e-Logarithmus von 1 plus das argument  
   
-##  <a name="log2"></a>  log2  
+##  <a name="log2"></a>  Log2  
  Berechnet den Basis-2-Logarithmus des Arguments  
   
 ```  

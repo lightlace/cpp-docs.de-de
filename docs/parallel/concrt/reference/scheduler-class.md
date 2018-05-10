@@ -1,12 +1,9 @@
 ---
 title: Scheduler-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Scheduler-Klasse
 Stellt eine Abstraktion für einen Concurrency Runtime-Planer dar.  
@@ -57,7 +52,7 @@ class Scheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Scheduler](#ctor)|Ein Objekt von der `Scheduler` -Klasse kann nur mit Factorymethoden, erstellt oder implizit.|  
+|[Taskplaner](#ctor)|Ein Objekt von der `Scheduler` -Klasse kann nur mit Factorymethoden, erstellt oder implizit.|  
 |[~ Scheduler-Destruktor](#dtor)|Ein Objekt von der `Scheduler` Klasse wird implizit zerstört, sobald alle externen Verweise darauf nicht mehr vorhanden.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -65,7 +60,7 @@ class Scheduler;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Anfügen](#attach)|Wird den Planer an den aufrufenden Kontext angefügt. Nach dem Beenden dieser Methode der aufrufende Kontext wird vom Planer verwaltet, und das Zeitplanungsmodul wird als aktueller Planer.|  
-|[Create](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter, platziert einen anfänglichen Verweis auf den Planer und gibt einen Zeiger darauf zurück.|  
+|[Erstellen](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` Parameter, platziert einen anfänglichen Verweis auf den Planer und gibt einen Zeiger darauf zurück.|  
 |[CreateScheduleGroup](#createschedulegroup)|Überladen. Erstellt eine neue Planungsgruppe innerhalb des Planers. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass die Aufgaben innerhalb der neu erstellte Planungsgruppe auf Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer zurück.|  
 |[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.|  
@@ -87,7 +82,7 @@ class Scheduler;
  `Scheduler`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
   
  **Namespace:** Parallelität  
   
@@ -174,7 +169,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie der Richtlinie, der der Planer erstellt wurde.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> ID 
 
  Gibt einen eindeutigen Bezeichner für den Planer zurück.  
   

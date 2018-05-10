@@ -1,30 +1,25 @@
 ---
 title: C-Bitfelder | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>C-Bitfelder
 Neben Deklaratoren für Member einer Struktur oder Union kann ein Strukturdeklarator auch eine angegebene Anzahl von Bits sein, die als "Bitfeld" bezeichnet wird. Seine Länge wird vom Deklarator für den Feldnamen durch einen Doppelpunkt abgegrenzt. Ein Bitfeld wird als Ganzzahltyp interpretiert.  
@@ -33,7 +28,7 @@ Neben Deklaratoren für Member einer Struktur oder Union kann ein Strukturdeklar
  *struct-declarator*:  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  *constant-expression* gibt die Breite des Felds in Bits an. *type-specifier* für `declarator` muss `unsigned int`, **signed int** oder `int` sein, und *constant-expression* muss ein nicht negativer Ganzzahlwert sein. Falls der Wert 0 (null) ist, weist die Deklaration keinen `declarator` auf. Arrays aus Bitfeldern, Zeiger auf Bitfelder und Funktionen, die Bitfelder zurückgeben, sind nicht zulässig. Der optionale `declarator` benennt das Bitfeld. Bitfelder können nur als Teil einer Struktur deklariert werden. Der address-of-Operator (**&**) kann nicht auf Bitfeldkomponenten angewendet werden.  
   

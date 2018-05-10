@@ -1,30 +1,25 @@
 ---
-title: "Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread | Microsoft Docs"
-ms.custom: 
+title: 'Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread
 Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um die Arbeit zu verschieben, die von der Benutzeroberfläche (UI)-Thread in einer Anwendung Microsoft Foundation Classes (MFC) zu einem Arbeitsthread ausgeführt wird. Dieses Dokument wird gezeigt, wie die Leistung eines langwierigen Zeichenvorgangs zu verbessern.  
@@ -59,7 +54,7 @@ Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um di
   
 -   [Hinzufügen von Unterstützung für den Abbruch](#cancellation)  
   
-##  <a name="application"></a>Erstellen der Mfc_anwendung  
+##  <a name="application"></a> Erstellen der Mfc_anwendung  
  Dieser Abschnitt beschreibt, wie die grundlegende MFC-Anwendung zu erstellen.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Erstellen eine Visual C++-MFC-Anwendung  
@@ -74,7 +69,7 @@ Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um di
   
      Überprüfen Sie, ob die Anwendung erfolgreich erstellt wurde, indem Sie sie erstellen und ausführen. Um die Anwendung zu erstellen. die **erstellen** Menü klicken Sie auf **Projektmappe**. Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung, indem Sie auf **Debuggen** auf die **Debuggen** Menü.  
   
-##  <a name="serial"></a>Implementieren die serielle Version des Mandelbrot-Anwendung  
+##  <a name="serial"></a> Implementieren die serielle Version des Mandelbrot-Anwendung  
  Dieser Abschnitt beschreibt, wie das Mandelbrot-Fraktal gezeichnet werden soll. Diese Version zeichnet das Mandelbrot-Fraktal zu einem [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [Bitmap](https://msdn.microsoft.com/library/ms534420.aspx) Objekt, und klicken Sie dann auf die Client-Fenster kopiert den Inhalt dieser Bitmap.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Implementieren Sie die serielle Version des Mandelbrot-Anwendung  
@@ -123,7 +118,7 @@ Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um di
   
  [[Nach oben](#top)]  
   
-##  <a name="removing-work"></a>Entfernen von Arbeit aus dem UI-Thread  
+##  <a name="removing-work"></a> Entfernen von Arbeit aus dem UI-Thread  
  In diesem Abschnitt veranschaulicht, wie die Zeichnung Arbeit vom UI-Thread in der Mandelbrot-Anwendung zu entfernen. Zeichnen von UI-Thread in einen Arbeitsthread verschieben, kann die UI-Thread Nachrichten verarbeiten, wie der Arbeitsthread das Bild im Hintergrund generiert.  
   
  Die Concurrency Runtime bietet drei Möglichkeiten zum Ausführen von Aufgaben: [Aufgabengruppen](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [asynchrone Agents](../../parallel/concrt/asynchronous-agents.md), und [einfache Aufgaben](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Obwohl Sie eine der folgenden Mechanismen zum Entfernen von Arbeit von UI-Thread verwenden können, um dieses Beispiel verwendet eine [Concurrency:: task_group](reference/task-group-class.md) Objekt, da Aufgabengruppen Abbrüche unterstützen. Diese exemplarische Vorgehensweise verwendet später Abbruch der verbleibende Arbeitsaufwand zu reduzieren, die ausgeführt wird, wenn der Client Fenstergröße und Cleanup auszuführen, wenn das Fenster zerstört wird.  
@@ -162,7 +157,7 @@ Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um di
   
  [[Nach oben](#top)]  
   
-##  <a name="performance"></a>Zeichnen die Leistung verbessern  
+##  <a name="performance"></a> Zeichnen die Leistung verbessern  
 
  Die Generierung von Mandelbrot-Fraktal ist ein guter Kandidat für die Parallelisierung, da die Berechnung jedes Pixels unabhängig von allen anderen Berechnungen ist. Um das Zeichnen Verfahren zu parallelisieren, konvertieren Sie die äußere `for` wurde eine Schleife in der `CChildView::DrawMandelbrot` Methode zu einem Aufruf von der [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) -Algorithmus wie folgt.  
 
@@ -173,7 +168,7 @@ Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um di
   
  [[Nach oben](#top)]  
   
-##  <a name="cancellation"></a>Hinzufügen von Unterstützung für den Abbruch  
+##  <a name="cancellation"></a> Hinzufügen von Unterstützung für den Abbruch  
  In diesem Abschnitt wird beschrieben, wie Fenstergröße behandelt und wie Sie alle aktiven zeichnen Aufgaben abbrechen, wenn das Fenster zerstört wird.  
   
  Das Dokument [Abbruch in der PPL](cancellation-in-the-ppl.md) wird erläutert, wie Abbrüche in der Laufzeit funktionieren. Abbruch ist kooperativ; aus diesem Grund es nicht unmittelbar. Um eine abgebrochene Aufgabe beenden, löst die Laufzeit eine interne Ausnahme bei einem nachfolgenden Aufruf von der Aufgabe in der Laufzeit. Im vorherigen Abschnitt zeigt, wie die `parallel_for` Algorithmus zum Verbessern der Leistung des Tasks "Zeichnen". Der Aufruf von `parallel_for` kann die Laufzeit den Vorgang zu beenden und Abbrüche zu arbeiten.  

@@ -1,12 +1,9 @@
 ---
 title: Reader_writer_lock-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock-Klasse
 Eine im Writer festgelegte, warteschlangenbasierte Lese-/Schreibsperre mit ausschließlich lokalem Spinning. Die Sperre gewährt "First In, First Out"-Zugriff (FIFO-Zugriff) auf Writer und blockiert Reader unter einer fortlaufenden Last von Writern.  
@@ -78,7 +73,7 @@ class reader_writer_lock;
  `reader_writer_lock`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h  
+ **Header:** concrt.h hinzu  
   
  **Namespace:** Parallelität  
   
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ Reader_writer_lock 
 
  Zerstört das `reader_writer_lock`-Objekt.  
   
@@ -150,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  Die `reader_writer_lock` Objekt, das als Writer abgerufen.  
   
-## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+## <a name="scoped_lock_dtor"></a> Scoped_lock:: ~ Scoped_lock 
 
 Zerstört ein `reader_writer_lock` Objekt, und hebt die Sperre, die in seinem Konstruktor angegeben.   
 

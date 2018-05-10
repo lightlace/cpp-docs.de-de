@@ -1,13 +1,10 @@
 ---
 title: Beziehung zu der Programmiersprache C-API | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26458242ab6afcf69d6e70065ba70e31f0adbe74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d06c4adfa5493929a24c233fa923451c7bf0f95
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationship-to-the-c-language-api"></a>Beziehung zum C-Sprachen-API
 Die einzigen Merkmals, durch die die Microsoft Foundation Class (MFC)-Bibliothek abgesehen von anderen Klassenbibliotheken für Windows festgelegt ist die Zuordnung sehr nahe an die Windows-API, die in der Programmiersprache C geschrieben. Darüber hinaus können Sie in der Regel Aufrufe an die Klassenbibliothek frei mit direkten Aufrufen der Windows-API kombinieren. Ein direkter Zugriff gewährt impliziert, allerdings, dass der Klassen vollständiger Ersatz für diese API sind. Entwickler müssen immer noch gelegentlich, direkte Aufrufe an einige Windows-Funktionen, wie z. B. [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) und [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), z. B. Eine Windows-Funktion wird durch eine Klassenmemberfunktion umschlossen, nur, wenn ein auf diese Weise löschen Vorteil.  

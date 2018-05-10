@@ -1,12 +1,9 @@
 ---
 title: Threadprivate | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - threadprivate
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 3515aaed-6f9d-4d59-85eb-342378bea2d3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a50d2387662fe42c04d61a8e98153aad95c835
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="threadprivate"></a>threadprivate
 Gibt an, dass eine Variable einem Thread zugehörig ist.  
@@ -53,7 +48,7 @@ Gibt an, dass eine Variable einem Thread zugehörig ist.
   
  Sie können `threadprivate` in eine DLL, die beim Prozessstart statisch geladen wird.  
   
- Da `threadprivate` basiert auf **__declspec(thread)**ein `threadprivate` Variable wird in einen beliebigen Thread, die Schritte im Prozess, nicht nur auf diese Threads, die Teil eines Thread-Teams, die vom eines parallelen Bereichs erzeugte sind vorhanden.  Dies ist ein Implementierungsdetail, die Sie kennen sollten, sein, da Sie, z. B. Konstruktoren für möglicherweise bemerken sollten eine `threadprivate` einen benutzerdefinierten Typ aufgerufen häufig wird erwartet.  
+ Da `threadprivate` basiert auf **__declspec(thread)** ein `threadprivate` Variable wird in einen beliebigen Thread, die Schritte im Prozess, nicht nur auf diese Threads, die Teil eines Thread-Teams, die vom eines parallelen Bereichs erzeugte sind vorhanden.  Dies ist ein Implementierungsdetail, die Sie kennen sollten, sein, da Sie, z. B. Konstruktoren für möglicherweise bemerken sollten eine `threadprivate` einen benutzerdefinierten Typ aufgerufen häufig wird erwartet.  
   
  Ein `threadprivate` Variablen eines destructable nicht notwendigerweise sein Destruktor aufgerufen haben.  Zum Beispiel:  
   

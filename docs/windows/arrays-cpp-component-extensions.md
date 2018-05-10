@@ -1,13 +1,10 @@
 ---
-title: "Arrays (Komponentenerweiterungen für C++) | Microsoft Docs"
-ms.custom: 
+title: Arrays (Komponentenerweiterungen für C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>Arrays (Komponentenerweiterungen für C++)
 Die `Platform::Array<T>` Typ in C + c++ / CX, oder die `array` Schlüsselwort in C + c++ / CLI, deklariert ein Array eines angegebenen Typs und der Anfangswert.  
@@ -70,7 +65,7 @@ Die `Platform::Array<T>` Typ in C + c++ / CX, oder die `array` Schlüsselwort in
  `array-type`  
  Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen und systemeigenen Zeigern (`type*`).  
   
- `rank`[optional]  
+ `rank` [optional]  
  Die Anzahl der Dimensionen des Arrays. 1 muss sein.  
   
  `identifier`  
@@ -79,7 +74,7 @@ Die `Platform::Array<T>` Typ in C + c++ / CX, oder die `array` Schlüsselwort in
  `initialization-type`  
  Der Typ der Werte, die das Array initialisiert werden. In der Regel `array-type` und `initialization-type` denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt `initialization-type` auf `array-type`– z. B. wenn `initialization-type` stammt aus `array-type`.  
   
- `initialization-list`[optional]  
+ `initialization-list` [optional]  
  Eine durch Trennzeichen getrennte Liste von Werten in der geschweiften Klammern, die die Elemente des Arrays zu initialisieren. Z. B. wenn `rank-size-list` wurden `(3)`, dem deklariert eines eindimensionalen Arrays von 3 Elemente `initialization list` möglicherweise `{1,2,3}`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Klassen und Strukturen, systemeigene Zeiger (`type*`), und systemeigene POD (plain alte Daten)-Typen.  
   
- `rank`[optional]  
+ `rank` [optional]  
  Die Anzahl der Dimensionen des Arrays. Der Standardwert ist 1. Der Höchstwert beträgt 32. Jede Dimension des Arrays ist selbst ein Array.  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  Eine durch Trennzeichen getrennte Liste der Größe der einzelnen Dimensionen im Array. Auch wenn die `initialization-list` Parameter angegeben wird, kann der Compiler die Größe der einzelnen Dimensionen folgern und `rank-size-list` kann ausgelassen werden. 
   
- `initialization-list`[optional]  
+ `initialization-list` [optional]  
  Eine durch Trennzeichen getrennte Liste von Werten in der geschweiften Klammern, die die Elemente des Arrays zu initialisieren. Eine durch Trennzeichen getrennte Liste der geschachtelte oder *Initialisierungsliste* Elemente, die die Elemente in ein mehrdimensionales Array zu initialisieren.  
   
  Z. B. wenn `rank-size-list` wurden `(3)`, dem deklariert eines eindimensionalen Arrays von 3 Elemente `initialization list` möglicherweise `{1,2,3}`. IF `rank-size-list` wurden `(3,2,4)`, die deklariert wird, eines dreidimensionalen Arrays vom 3 Elemente in der ersten Dimension, 2 in der zweiten und 4 Elemente in der dritten `initialization-list` möglicherweise `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Hinweise  
   
- `array`befindet sich in der [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Namespace.  
+ `array` befindet sich in der [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Namespace.  
   
  Wie Standard-c++ die Indizes eines Arrays sind nullbasiert, und ein Array mit eckigen Klammern ([]) indiziert wird. Im Gegensatz zum standardmäßigen C++ werden die Indizes der ein mehrdimensionales Array in einer Liste von Indizes für jede Dimension statt mit einem Satz von eckigen Klammern ([])-Operatoren für jede Dimension angegeben. Beispielsweise *Bezeichner*[*index1*, *index2*] anstelle von *Bezeichner*[*index1*] [ *index2*].  
   

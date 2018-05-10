@@ -1,13 +1,10 @@
 ---
-title: "-Attribut Programmierung – häufig gestellte Fragen | Microsoft Docs"
-ms.custom: 
+title: -Attribut Programmierung – häufig gestellte Fragen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Fragen und Antworten zur attributierten Programmierung
 In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:  
@@ -49,7 +44,7 @@ In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:
   
 -   [Kann ich verwenden Attribute einer Klasse abgeleitet wurde eine Klasse, die auch Attribute verwendet?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Was ist ein HRESULT?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Was ist ein HRESULT?  
  Ein `HRESULT` wird von ein einfachen Datentyp, der häufig als Rückgabewert von Attributen und ATL im Allgemeinen verwendet wird. Die folgende Tabelle beschreibt die verschiedenen Werte. Weitere Werte sind in der Headerdatei winerror.h enthalten.  
   
 |name|Beschreibung|Wert|  
@@ -66,7 +61,7 @@ In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:
 |E_FAIL|Nicht angegebener Fehler|0 x 80004005|  
 |E_ACCESSDENIED|Allgemeine Zugriffsfehler|0 x 80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Wenn habe ich den Parameternamen für ein Attribut angeben?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Wenn habe ich den Parameternamen für ein Attribut angeben?  
  Wenn das Attribut auf einen einzelnen Parameter verfügt, wird in den meisten Fällen diesen Parameter benannt. Dieser Name ist nicht erforderlich, wenn das Attribut in den Code einfügen. Z. B. die folgende Syntax, der die [aggregierbar](../windows/aggregatable.md) Attribut:  
   
 ```  
@@ -103,7 +98,7 @@ class CMyClass
 |[size_is](../windows/size-is.md)|[Datenquelle](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>Kann ich Kommentare in ein Attributblock verwenden?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Kann ich Kommentare in ein Attributblock verwenden?  
  Sie können einzeiligen und mehrzeiligen Kommentare in ein Attributblock verwenden. Entweder Stil der Kommentar zwischen den Klammern, halten die Parameter an ein Attribut kann nicht jedoch nicht verwendet werden.  
   
  Die folgenden zulässig:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Wie interagieren Attribute mit Vererbung?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Wie interagieren Attribute mit Vererbung?  
  Sie können sowohl attributierte Klassen von anderen Klassen erben, die selbst oder nicht mit Attributen versehen werden kann. Das Ergebnis einer attributierte Klasse abgeleitet ist identisch mit der von dieser Klasse ableiten, nachdem der Attributanbieter des Codes umgewandelt wurde. Attribute werden nicht auf abgeleitete Klassen durch Vererbung von C++ übertragen. Ein Attributanbieter wandelt nur Code in seiner Attribute.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Wie kann ich die Attribute in einem nicht attributierte ATL-Projekt verwenden?  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Wie kann ich die Attribute in einem nicht attributierte ATL-Projekt verwenden?  
  Müssen unter Umständen eine nicht attributierte ATL-Projekt, das eine IDL-Datei verfügt, und Sie möchten nun attributierte Objekte hinzufügen. In diesem Fall verwenden Sie den Assistenten zum Hinzufügen einer Klasse, um den Code bereitzustellen.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Wie kann ich eine IDL-Datei in einem attributierte Projekt verwenden?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Wie kann ich eine IDL-Datei in einem attributierte Projekt verwenden?  
  Sie möglicherweise eine IDL-Datei, die Sie in Ihrem attributierten ATL-Projekt verwenden möchten. In diesem Fall würden Sie verwenden die [Importidl](../windows/importidl.md) -Attribut, kompilieren Sie die IDL-Datei in eine .h-Datei (finden Sie unter der [Eigenschaftenseiten "MIDL"](../ide/midl-property-pages.md) im Dialogfeld Eigenschaftenseiten des Projekts), und schließen Sie dann die .h-Datei in Ihrem Projekt .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>Kann ich Code ändern, die von einem Attribut eingeschleust wird?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Kann ich Code ändern, die von einem Attribut eingeschleust wird?  
  Einige Attribute fügen Code in Ihrem Projekt. Sehen Sie den eingefügten Code mit der [/FX](../build/reference/fx-merge-injected-code.md) -Compileroption. Es ist auch möglich, Code aus der eingefügten Datei kopieren und fügen ihn in Ihren Quellcode. Dadurch können Sie das Verhalten des Attributs zu ändern. Allerdings müssen Sie möglicherweise andere Teile des Codes auch ändern.  
   
  Im folgende Beispiel ist das Ergebnis von eingefügtem Code in einer Quellcodedatei kopieren:  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Wie kann ich eine Schnittstelle mit Attributen vorwärts deklariert?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Wie kann ich eine Schnittstelle mit Attributen vorwärts deklariert?  
  Wenn Sie eine Vorwärtsdeklaration einer Schnittstelle mit Attributen vornehmen möchten, müssen Sie auf der Vorwärtsdeklaration, die Sie für die tatsächliche Schnittstellendeklaration gelten, die dieselben Attribute anwenden. Sie müssen auch anwenden, die [exportieren](../windows/export.md) -Attribut auf die Vorwärtsdeklaration.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Kann ich verwenden Attribute einer Klasse abgeleitet wurde eine Klasse, die auch Attribute verwendet?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Kann ich verwenden Attribute einer Klasse abgeleitet wurde eine Klasse, die auch Attribute verwendet?  
  Nein, wird das Verwenden von Attributen für eine Klasse, die von einer Klasse, die auch Attribute verwendet abgeleitet nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  

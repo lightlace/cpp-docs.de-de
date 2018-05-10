@@ -1,29 +1,24 @@
 ---
 title: Mithilfe von Planerrichtlinien | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Planerrichtlinien
 Dieses Dokument beschreibt die Rolle von Planerrichtlinien in der Concurrency Runtime. Ein *Planerrichtlinie* steuert die Strategie, die der Planer zum Verwalten von Aufgaben verwendet. Betrachten Sie beispielsweise eine Anwendung, müssen einige Aufgaben an auszuführende `THREAD_PRIORITY_NORMAL` und andere Aufgaben an auszuführende `THREAD_PRIORITY_HIGHEST`.  Sie können zwei Planerinstanzen erstellen: einen, der angibt, die `ContextPriority` -Richtlinie mit `THREAD_PRIORITY_NORMAL` und ein anderes, der angibt, die gleiche Richtlinie, um `THREAD_PRIORITY_HIGHEST`.  
@@ -43,12 +38,12 @@ Dieses Dokument beschreibt die Rolle von Planerrichtlinien in der Concurrency Ru
   
 |Richtlinienschlüssel|Beschreibung|Standardwert|  
 |----------------|-----------------|-------------------|  
-|`SchedulerKind`|Ein [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) Wert, der den Typ der Threads Planen von Aufgaben zu verwendende angibt.|`ThreadScheduler`(Verwenden von normalen Threads). Dies ist der einzige gültige Wert für diesen Schlüssel.|  
+|`SchedulerKind`|Ein [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) Wert, der den Typ der Threads Planen von Aufgaben zu verwendende angibt.|`ThreadScheduler` (Verwenden von normalen Threads). Dies ist der einzige gültige Wert für diesen Schlüssel.|  
 |`MaxConcurrency`|Ein `unsigned int` Wert, der die maximale Anzahl von Parallelitätsressourcen angibt, die der Planer verwendet.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|Ein `unsigned int` Wert, der die minimale Anzahl von Parallelitätsressourcen angibt, die der Planer verwendet.|`1`|  
 |`TargetOversubscriptionFactor`|Ein `unsigned int` Wert, der angibt, wie viele threads jeder Verarbeitungsressource zuzuordnen.|`1`|  
 |`LocalContextCacheSize`|Ein `unsigned int` Wert, der die maximale Anzahl von Kontexten, die zwischengespeichert werden, können in der lokalen Warteschlange jedes virtuellen Prozessors angibt.|`8`|  
-|`ContextStackSize`|Ein `unsigned int` Wert, der angibt, die Größe des Stapels in KB, für jeden Kontext reserviert werden soll.|`0`(verwenden Sie die Standardgröße des Stapel)|  
+|`ContextStackSize`|Ein `unsigned int` Wert, der angibt, die Größe des Stapels in KB, für jeden Kontext reserviert werden soll.|`0` (verwenden Sie die Standardgröße des Stapel)|  
 |`ContextPriority`|Ein `int` Wert, der die Threadpriorität unterschiedlichen Kontexten angibt. Dies kann sich auf alle Werte, die Sie übergeben können [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) oder `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| Ein [Concurrency:: SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) Wert, der angibt, die zu verwendenden Planungsalgorithmus. |`EnhanceScheduleGroupLocality`|  

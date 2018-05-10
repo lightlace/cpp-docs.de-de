@@ -1,27 +1,22 @@
 ---
-title: "B. Stubs für Run-Time-Bibliotheksfunktionen | Microsoft Docs"
-ms.custom: 
+title: B. Stubs für Run-Time-Bibliotheksfunktionen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1207f943560fdc6a22c62a9a8deafa213400f172
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs für Run-Time Library-Funktionen
 Dieser Abschnitt enthält die Stubs für die Laufzeit-Bibliothekscode-Funktionen, die in der OpenMP-C- und C++-API definiert. Die Stubs werden bereitgestellt, um die Portabilität auf Plattformen zu aktivieren, die nicht der OpenMP-C- und C++-API unterstützen. Auf diesen Plattformen müssen OpenMP-Programme mit einer Bibliothek, die diese Stubfunktionen enthält verknüpft werden. Die Stubfunktionen wird davon ausgegangen, dass die darin enthaltenen Direktiven der OpenMP-Programm ignoriert werden. Daher emulieren sie serielle Semantik.  

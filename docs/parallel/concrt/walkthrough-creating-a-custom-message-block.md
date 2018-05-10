@@ -1,30 +1,25 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks
 In diesem Dokument wird beschrieben, wie ein benutzerdefinierter Nachrichtenblocktyp erstellt wird, um eingehende Nachrichten nach Priorität zu sortieren.  
@@ -47,7 +42,7 @@ In diesem Dokument wird beschrieben, wie ein benutzerdefinierter Nachrichtenbloc
   
 - [Vollständiges Beispiel](#complete)  
   
-##  <a name="design"></a>Entwerfen eines benutzerdefinierten Nachrichtenblocks  
+##  <a name="design"></a> Entwerfen eines benutzerdefinierten Nachrichtenblocks  
  Nachrichtenblöcke sind am Senden und Empfangen von Nachrichten beteiligt. Ein Nachrichtenblock, der Nachrichten sendet, wird als bezeichnet eine *Quellblock*. Ein Nachrichtenblock, der Nachrichten empfängt, wird als bezeichnet eine *Zielblock*. Ein Nachrichtenblock, der sowohl sendet und Nachrichten empfängt wird als bezeichnet eine *Weitergabeblock*. Die Agents Library verwendet die abstrakte Klasse [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) zum Darstellen von Quellblöcke und der abstrakten Klasse [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) um Zielblöcke darzustellen. Nachrichtenblocktypen, die als Quelle dienen, werden von der `ISource`-Klasse abgeleitet, während Nachrichtenblocktypen, die als Ziel dienen, von der `ITarget`-Klasse abgeleitet werden.  
   
  Der Nachrichtenblocktyp kann prinzipiell unmittelbar von `ISource` und `ITarget` abgeleitet werden. Die Agents Library definiert jedoch drei Basisklassen, deren Funktionalität weitestgehend der aller Nachrichtenblocktypen entspricht. Beispiel: parallelitätssicheres Behandeln von Fehlern und parallelitätssicheres Verbinden von Nachrichtenblöcken. Die [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) Klasse leitet sich von `ISource` und sendet Nachrichten an andere Blöcke. Die [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) Klasse leitet sich von `ITarget` und empfängt Nachrichten von anderen Blöcken. Die [Concurrency:: propagator_block](../../parallel/concrt/reference/propagator-block-class.md) Klasse abgeleitet `ISource` und `ITarget` und sendet Nachrichten an andere Blöcke und empfängt Nachrichten von anderen Blöcken. Es wird empfohlen, Infrastrukturdetails mit diesen drei Basisklassen zu behandeln, sodass Sie sich auf das Verhalten des Nachrichtenblocks konzentrieren können.  
@@ -73,7 +68,7 @@ In diesem Dokument wird beschrieben, wie ein benutzerdefinierter Nachrichtenbloc
   
  [[Nach oben](#top)]  
   
-##  <a name="class"></a>Definieren der Priority_buffer-Klasse  
+##  <a name="class"></a> Definieren der Priority_buffer-Klasse  
  Die `priority_buffer`-Klasse ist ein benutzerdefinierter Nachrichtenblocktyp, der eingehende Meldungen zunächst nach der Priorität und anschließend nach der Reihenfolge ihres Empfangs sortiert. Die `priority_buffer` -Klasse ähnelt der [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Klasse, da sie eine Warteschlange mit Nachrichten enthält und auch daran, dass es als Quelle und als Zielnachrichtenblock fungiert und mehreren Quellen und mehrere aufweisen Ziele. `unbounded_buffer` legt als Kriterium für die Weitergabe von Nachrichten jedoch nur die Reihenfolge ihres Empfangs aus den Quellen zugrunde.  
   
  Die `priority_buffer` -Klasse empfängt Nachrichten vom Typ std::[Tupel](../../standard-library/tuple-class.md) enthalten `PriorityType` und `Type` Elemente. `PriorityType` verweist auf den Typ, der die Priorität einer Nachricht angibt; `Type` verweist auf den Datenteil der Nachricht. Die `priority_buffer`-Klasse sendet Nachrichten vom Typ `Type`. Die `priority_buffer` -Klasse verwaltet auch zwei Nachrichtenwarteschlangen: ein [Std:: priority_queue](../../standard-library/priority-queue-class.md) -Objekt für eingehende Nachrichten und eine std::[Warteschlange](../../standard-library/queue-class.md) Objekt für ausgehende Nachrichten. Das Sortieren von Nachrichten nach der Priorität ist hilfreich, wenn ein `priority_buffer`-Objekt mehrere Nachrichten gleichzeitig oder bevor diese von Consumern gelesen werden empfängt.  
@@ -193,7 +188,7 @@ In diesem Dokument wird beschrieben, wie ein benutzerdefinierter Nachrichtenbloc
   
  [[Nach oben](#top)]  
   
-##  <a name="complete"></a>Vollständiges Beispiel  
+##  <a name="complete"></a> Vollständiges Beispiel  
  Im folgenden Beispiel wird die vollständige Definition der `priority_buffer`-Klasse veranschaulicht.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

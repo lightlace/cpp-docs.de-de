@@ -1,30 +1,25 @@
 ---
 title: Asynchronous Agents Library | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>Asynchronous Agents Library
 Die Asynchronous Agents Library (oder einfach *Agents Library*) bietet ein Programmiermodell, in dem Sie die Stabilität der parallelitätsfähigen Anwendungsentwicklung steigern kann. Die Agents Library ist eine C++-Vorlagenbibliothek, die ein akteurbasiertes Programmiermodell und prozessinterne Nachrichtenübergabe für undifferenzierten Datenfluss und Pipelineaufgaben begünstigt. Die Agents Library baut auf der Planung und den Ressourcenverwaltungskomponenten von der Concurrency Runtime auf.  
@@ -36,7 +31,7 @@ Die Asynchronous Agents Library (oder einfach *Agents Library*) bietet ein Progr
   
  Die Agents Library besteht aus drei Komponenten: *asynchrone Agents*, *asynchrone Meldungsblöcke*, und *Meldungsübergabefunktionen*. Agents behalten den Zustand bei und verwenden Meldungsblöcke und Meldungsübergabefunktionen für die Kommunikation miteinander und mit externen Komponenten. Mit Meldungsübergabefunktionen können Agents Meldungen an die externen Komponenten senden und von diesen erhalten. Asynchrone Meldungsblöcke halten Meldungen und ermöglichen es Agents, auf synchronisierte Weise zu kommunizieren.  
   
- Aus folgender Abbildung geht hervor, wie zwei Agents mithilfe von Meldungsblöcke und Meldungsübergabefunktionen kommunizieren. In dieser Abbildung `agent1` sendet eine Nachricht an `agent2` mithilfe der [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion und eine [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Objekt. `agent2`verwendet die [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) Funktion zum Lesen der Nachrichteninhalts. `agent2` verwendet dieselbe Methode, um eine Meldung an `agent1` zu senden. Gestrichelte Pfeile stellen den Datenstrom zwischen Agents dar. Ausgefüllte Pfeile verbinden die Agents mit den Meldungsblöcken, auf die sie schreiben oder von denen sie lesen.  
+ Aus folgender Abbildung geht hervor, wie zwei Agents mithilfe von Meldungsblöcke und Meldungsübergabefunktionen kommunizieren. In dieser Abbildung `agent1` sendet eine Nachricht an `agent2` mithilfe der [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion und eine [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Objekt. `agent2` verwendet die [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) Funktion zum Lesen der Nachrichteninhalts. `agent2` verwendet dieselbe Methode, um eine Meldung an `agent1` zu senden. Gestrichelte Pfeile stellen den Datenstrom zwischen Agents dar. Ausgefüllte Pfeile verbinden die Agents mit den Meldungsblöcken, auf die sie schreiben oder von denen sie lesen.  
   
  ![Die Komponenten der Agents Library](../../parallel/concrt/media/agent_librarycomp.png "Agent_librarycomp")  
   

@@ -1,27 +1,22 @@
 ---
-title: "1.3 Ausführungsmodell | Microsoft Docs"
-ms.custom: 
+title: 1.3 Ausführungsmodell | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="13-execution-model"></a>1.3 Ausführungsmodell
 OpenMP verwendet der Fork-Join-Modell der parallelen Ausführung. Obwohl diese Fork-Join-Modell zur Lösung verschiedener Probleme hilfreich sein kann, ist es etwas für große Array-basierte Anwendungen angepasst werden. OpenMP ist dazu vorgesehen, Support-Programme, die ordnungsgemäß sowohl als parallele (mehrere Ausführungsthreads und eine vollständige OpenMP-Unterstützungsbibliothek) Programme ausgeführt werden und als sequenzielle Programme (Direktiven ignoriert und eine einfache Klassenbibliothek der OpenMP-Stubs). Es ist jedoch möglich und zulässig, um eine Anwendung entwickeln, die beim sequenziell ausgeführt, nicht ordnungsgemäß verhält. Darüber hinaus können verschiedene Grade der Parallelität aufgrund von Änderungen an der Zuordnung von numerischen Operationen verschiedene numerische Ergebnisse führen. Z. B. möglicherweise eine Reduzierung der seriellen Addition ein anderes Muster von Zuordnungen hinzufügen, als eine parallele Reduzierung. Diese verschiedenen Zuordnungen können es sich um die Ergebnisse der gleitkommaaddition ändern.  

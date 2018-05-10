@@ -1,27 +1,22 @@
 ---
 title: Verwenden von Kacheln | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kacheln unterteilt Threads in gleiche rechteckige Teilmengen bzw. *Kacheln*. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:  
@@ -40,7 +35,7 @@ Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kach
 ## <a name="example-of-global-tile-and-local-indices"></a>Beispiel von globalen, gekachelten und lokalen Indizes  
  Das folgende Diagramm stellt eine 8 x 9-Datenmatrix dar, die in einer 2 x 3-Kachelgruppe angeordnet wird.  
   
- ![8 &#45; durch & #45, 9-Matrix aufgeteilt in 2 &#45; & #45, 3 Kacheln](../../parallel/amp/media/usingtilesmatrix.png "Usingtilesmatrix")  
+ ![8&#45;von&#45;9-Matrix unterteilt in 2&#45;von&#45;3 Kacheln](../../parallel/amp/media/usingtilesmatrix.png "Usingtilesmatrix")  
   
  Im folgenden Beispiel werden globale, unterteilte und lokale Indizes dieser gekachelten Matrix. Zum Erstellen eines `array_view`-Objekts werden Elemente des `Description`-Typs verwendet. Die `Description` enthält die globalen, unterteilten und lokalen Indizes des Elements in der Matrix. Der Code im Aufruf von `parallel_for_each` legt die Werte von globalen, unterteilten und lokalen Indizes für jedes Element fest. Die Ausgabe zeigt die Werte in den `Description`-Strukturen an.  
   

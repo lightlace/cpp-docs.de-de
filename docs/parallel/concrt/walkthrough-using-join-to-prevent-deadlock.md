@@ -1,13 +1,10 @@
 ---
 title: 'Exemplarische Vorgehensweise: Verwenden von Join verhindern von Deadlocks | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Exemplarische Vorgehensweise: Verhindern von Deadlocks mit join
-In diesem Thema verwendet Philosophenproblems veranschaulicht, wie die [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) -Klasse Deadlocks in der Anwendung verhindern. In einer softwareanwendung *Deadlock* tritt auf, wenn mindestens zwei Prozesse jeweils über eine Ressource und warten Sie, sich gegenseitig einem anderen Prozess eine weitere Ressource freigegeben.  
+In diesem Thema verwendet Philosophenproblems veranschaulicht, wie die [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) -Klasse Deadlocks in der Anwendung verhindern. In einer Softwareanwendung kommt es zu einem *Deadlock*, wenn zwei oder mehr Prozesse jeweils eine Ressource halten und gegenseitig darauf warten, dass ein anderer Prozess eine andere Ressource freigibt.  
   
  Das Philosophenproblem ist ein spezifisches Beispiel dafür, welche Probleme allgemein auftreten können, wenn ein Satz von Ressourcen von mehreren gleichzeitig ablaufenden Prozessen gemeinsam verwendet wird.  
   
@@ -55,7 +50,7 @@ In diesem Thema verwendet Philosophenproblems veranschaulicht, wie die [Concurre
   
 - [Verwenden von Join verhindern von Deadlocks](#solution)  
   
-##  <a name="problem"></a>Das Philosophenproblem  
+##  <a name="problem"></a> Das Philosophenproblem  
  Das Philosophenproblem veranschaulicht, wie Deadlocks in einer Anwendung auftreten. Bei diesem Problem sitzen fünf Philosophen an einem runden Tisch. Die einzelnen Philosophen haben Phasen, in denen sie denken, und Phasen, in denen sie essen. Jeder Philosoph muss ein Essstäbchen mit dem Tischnachbarn zu seiner Linken und ein anderes Essstäbchen mit dem Tischnachbarn zu seiner Rechten teilen. Die folgende Abbildung veranschaulicht diese Anordnung.  
   
  ![Das Problem für die Menüoptionen Philosophen](../../parallel/concrt/media/dining_philosophersproblem.png "Dining_philosophersproblem")  
@@ -64,7 +59,7 @@ In diesem Thema verwendet Philosophenproblems veranschaulicht, wie die [Concurre
   
  [[Nach oben](#top)]  
   
-##  <a name="deadlock"></a>Eine naive Implementierung  
+##  <a name="deadlock"></a> Eine naive Implementierung  
  Im folgenden Beispiel wird eine naive Implementierung des Philosophenproblems veranschaulicht. Die `philosopher` -Klasse, abgeleitet von [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), kann jeder Philosoph unabhängig handeln. Im Beispiel wird ein freigegebenes Array von [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) Objekte, damit jedes `philosopher` -Objekt exklusiven Zugriff auf ein Paar Essstäbchen hat.  
   
  Um die Implementierung mit der Abbildung in Verbindung zu bringen, stellt die `philosopher`-Klasse einen Philosophen dar. Jedes Essstäbchen wird durch eine `int`-Variable dargestellt. Die `critical_section`-Objekte dienen als Halter für die Essstäbchen. Die `run`-Methode simuliert das Leben des Philosophen. Die `think`-Methode simuliert das Denken und die `eat`-Methode das Essen.  
@@ -87,7 +82,7 @@ In diesem Thema verwendet Philosophenproblems veranschaulicht, wie die [Concurre
   
  [[Nach oben](#top)]  
   
-##  <a name="solution"></a>Verwenden von Join verhindern von Deadlocks  
+##  <a name="solution"></a> Verwenden von Join verhindern von Deadlocks  
  In diesem Abschnitt wird gezeigt, wie Meldungspuffer und Meldungsübergabefunktionen verwendet werden, um Deadlocks zu vermeiden.  
   
  In diesem Beispiel mit dem früheren Verbinden der `philosopher` Klasse ersetzt jede `critical_section` Objekt mit eine [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Objekt und ein `join` Objekt. Das `join`-Objekt dient als Vermittler, das dem Philosophen die Essstäbchen bereitstellt.  

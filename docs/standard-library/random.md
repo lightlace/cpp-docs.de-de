@@ -2,11 +2,8 @@
 title: '&lt;random&gt; | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/24/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <random>
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-caps.latest.revision: 58
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aadd1e3a17b4035336cee2da39bccae1e79f2b36
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -39,7 +34,7 @@ Definiert Funktionen zum Generieren von Zufallszahlen und erlaubt die Erstellung
 
 ## <a name="summary"></a>Zusammenfassung
 
-Ein *Zufallszahlengenerator* ist ein Objekt, bei dem eine Sequenz von Pseudo-Zufallswerten erzeugt wird. Ein Generator, der Werte produziert, die in einem bestimmten Bereich gleichförmig verteilt sind, ist ein *Uniform Random Number Generator* (URNG, einheitlicher Zufallszahlengenerator). Auf eine Vorlagenklasse, die als URNG funktionieren soll, wird als *Modul* verwiesen, wenn die Klasse bestimmte gemeinsame Merkmale aufweist, die später in diesem Artikel diskutiert werden. Ein URNG kann mit einer *Verteilung* kombiniert werden – was im Normalfall auch geschieht –, indem der URNG als Argument an den `operator()` des Verteilers übergeben wird, um Werte zu produzieren, die in einer von der Verteilung definierten Art und Weise verteilt werden.
+Ein *Zufallszahlengenerator* ist ein Objekt, bei dem eine Sequenz von Pseudo-Zufallswerten erzeugt wird. Ein Generator, der Werte produziert, die in einem bestimmten Bereich gleichförmig verteilt sind, ist ein *Uniform Random Number Generator* (URNG, einheitlicher Zufallszahlengenerator). Auf eine Vorlagenklasse, die als URNG funktionieren soll, wird als *Engine* verwiesen, wenn die Klasse bestimmte gemeinsame Merkmale aufweist, die später in diesem Artikel diskutiert werden. Ein URNG kann mit einer *Verteilung* kombiniert werden – was im Normalfall auch geschieht –, indem der URNG als Argument an den `operator()` des Verteilers übergeben wird, um Werte zu produzieren, die in einer von der Verteilung definierten Art und Weise verteilt werden.
 
 Diese Links führen zu den Hauptabschnitten dieses Artikels:
 
@@ -47,7 +42,8 @@ Diese Links führen zu den Hauptabschnitten dieses Artikels:
 
 - [Kategorisierte Auflistung](#listing)
 
-- [Module und Verteilungen](#engdist)
+- 
+  [Engines und Verteilungen](#engdist)
 
 - [Hinweise](#comments)
 
@@ -59,9 +55,10 @@ Hier sind einige Tipps zu bedenken, wenn mit \<random >:
 
 - Eine einzelne Instanziierung eines URNG oder einer Verteilung kann nicht gleichzeitig sicher aufgerufen werden, da die Ausführung eines URNG oder einer Verteilung ein Änderungsvorgang ist. Weitere Informationen finden Sie unter [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md).
 
-- [Voreingestellte Typdefinitionen](#typedefs) einiger Module sind verfügbar. Dies ist der bevorzugte Weg zur Erstellung eines URNG, wenn ein Modul verwendet wird.
+- 
+  [Voreingestellte Typdefinitionen](#typedefs) einiger Engines sind verfügbar. Dies ist der bevorzugte Weg zur Erstellung eines URNG, wenn eine Engine verwendet wird.
 
-- Die hilfreichste Paarung für die meisten Anwendungen ist das `mt19937`-Modul mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.
+- Die hilfreichste Paarung für die meisten Anwendungen ist die `mt19937`-Engine mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.
 
 Es gibt zahlreiche Möglichkeiten zur Auswahl der \<random > Header und einer von ihnen empfiehlt sich gegenüber der veralteten C-Laufzeitfunktion `rand()`. Informationen zu durch Schwachpunkte `rand()` und wie \<random > Nachteile finden Sie unter [dieses Video](http://go.microsoft.com/fwlink/p/?linkid=397615).
 
@@ -238,17 +235,19 @@ Die folgenden Abschnitte Listen die uniform random Number-Generatoren (URNGs) ge
 
 |||
 |-|-|
-|[random_device-Klasse](../standard-library/random-device-class.md)|Generiert eine nicht-deterministische und kryptografisch sichere Zufallssequenz mithilfe eines externen Geräts. Wird normalerweise zur Ausstattung eines Moduls mit einem Startwert verwendet. Geringe Leistung, sehr hohe Qualität. Weitere Informationen finden Sie in den [Hinweisen](#comments).|
+|[random_device-Klasse](../standard-library/random-device-class.md)|Generiert eine nicht-deterministische und kryptografisch sichere Zufallssequenz mithilfe eines externen Geräts. Wird normalerweise zur Ausstattung einer Engine mit einem Startwert verwendet. Geringe Leistung, sehr hohe Qualität. Weitere Informationen finden Sie in den [Hinweisen](#comments).|
 
 ####  <a name="typedefs"></a> Modultypdefinitionen mit voreingestellten Parametern
 
-Zur Instanzierung von Modulen und Moduladaptern. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).
+Zur Instanzierung von Engines und Engine-Adaptern. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
-- `default_random_engine` Das Standardmodul.
- `typedef mt19937 default_random_engine;`
+- 
+   `default_random_engine` Die Standard-Engine.
+`typedef mt19937 default_random_engine;`
 
-- `knuth_b` Knuth-Modul.
- `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`
+- 
+   `knuth_b` Knuth-Engine.
+`typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`
 
 - `minstd_rand0` Minimal Standard Engine 1988 (Lewis, Goodman und Miller 1969).
  `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`
@@ -256,27 +255,31 @@ Zur Instanzierung von Modulen und Moduladaptern. Weitere Informationen erhalten 
 - `minstd_rand` Aktualisierter Minimal Standard Engine `minstd_rand0` (Park, Miller und Stockmeyer 1993).
  `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`
 
-- `mt19937` 32-Bit-Mersenne-Twistermodul (Matsumoto und Nishimura, 1998).
- `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`
+- 
+   `mt19937` 32-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 1998).
+`typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`
 
-- `mt19937_64` 64-Bit-Mersenne-Twistermodul (Matsumoto und Nishimura, 2000).
- `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
+- 
+   `mt19937_64` 64-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 2000).
+`typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
 
-- `ranlux24` 24-Bit-RANLUX-Modul (Martin Lüscher und Fred James, 1994).
- `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
+- 
+   `ranlux24` 24-Bit-RANLUX-Engine (Martin Lüscher und Fred James, 1994).
+`typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
 
 - `ranlux24_base` wird als Grundlage für `ranlux24` verwendet.
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-- `ranlux48` 48-Bit-RANLUX-Modul (Martin Lüscher und Fred James, 1994).
- `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
+- 
+   `ranlux48` 48-Bit-RANLUX-Engine (Martin Lüscher und Fred James, 1994).
+`typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
 
 - `ranlux48_base` wird als Grundlage für `ranlux48` verwendet.
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 ####  <a name="eng"></a> Modulvorlagen
 
-Modulvorlagen werden als eigenständige URNGs verwendet oder als Basismodule an [Moduladapter](#engadapt) übergeben. Diese werden normalerweise mit einer [vorangestellten Modultypdefinition](#typedefs) instanziert und an eine [Verteilung](#distributions) übergeben. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).
+Engine-Vorlagen werden als eigenständige URNGs verwendet oder als Basis-Engine an [Engine-Adapter](#engadapt) übergeben. Diese werden normalerweise mit einer [vorangestellten Engine-Typdefinition](#typedefs) instanziert und an eine [Verteilung](#distributions) übergeben. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
 |||
 |-|-|
@@ -286,19 +289,19 @@ Modulvorlagen werden als eigenständige URNGs verwendet oder als Basismodule an 
 
 ####  <a name="engadapt"></a>Moduladaptervorlagen
 
-Moduladapter sind Vorlagen, die andere (Basis-)Module anpassen. Diese werden normalerweise mit einer [vorangestellten Modultypdefinition](#typedefs) instanziert und an eine [Verteilung](#distributions) übergeben. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).
+Engine-Adapter sind Vorlagen, die andere (Basis-)Engines anpassen. Diese werden normalerweise mit einer [vorangestellten Engine-Typdefinition](#typedefs) instanziert und an eine [Verteilung](#distributions) übergeben. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
 |||
 |-|-|
-|[discard_block_engine-Klasse](../standard-library/discard-block-engine-class.md)|Generiert eine zufällige Sequenz, indem die vom Basismodul zurückgegebenen Werte verworfen werden.|
-|[independent_bits_engine-Klasse](../standard-library/independent-bits-engine-class.md)|Generiert eine zufällige Sequenz mit einer angegebenen Anzahl von Bits, indem Bits aus vom Basismodul zurückgegebenen Werten erneut verpackt werden.|
-|[shuffle_order_engine-Klasse](../standard-library/shuffle-order-engine-class.md)|Generiert eine zufällige Sequenz durch Neupositionieren der Werte, die von ihrem Basismodul zurückgegeben werden.|
+|[discard_block_engine-Klasse](../standard-library/discard-block-engine-class.md)|Generiert eine zufällige Sequenz, indem die von der Basis-Engine zurückgegebenen Werte verworfen werden.|
+|[independent_bits_engine-Klasse](../standard-library/independent-bits-engine-class.md)|Generiert eine zufällige Sequenz mit einer angegebenen Anzahl von Bits, indem Bits aus von der Basis-Engine zurückgegebenen Werten erneut verpackt werden.|
+|[shuffle_order_engine-Klasse](../standard-library/shuffle-order-engine-class.md)|Generiert eine zufällige Sequenz durch Neupositionieren der Werte, die von ihrer Basis-Engine zurückgegeben werden.|
 
-[[Modulvorlagen](#eng)]
+[[Engine-Vorlagen](#eng)]
 
 ###  <a name="distributions"></a> Zufallszahlverteilungen
 
-Die folgenden Abschnitte Listen die Verteilungen im die \<random > Header. Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).
+Die folgenden Abschnitte Listen die Verteilungen im die \<random > Header. Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
 #### <a name="uniform-distributions"></a>Gleichförmige Verteilungen.
 
@@ -362,7 +365,7 @@ Dieser Abschnitt listet die allgemeinen Hilfsfunktionen, die der \<random > Head
 
 |||
 |-|-|
-|[seed_seq-Klasse](../standard-library/seed-seq-class.md)|Generiert eine nicht-gewichtete verschlüsselte Startwertsequenz. Wird verwendet, um Replikationen von Zufallsvariablenstreams zu vermeiden. Hilfreich, wenn viele URNGs durch Module instanziert werden.|
+|[seed_seq-Klasse](../standard-library/seed-seq-class.md)|Generiert eine nicht-gewichtete verschlüsselte Startwertsequenz. Wird verwendet, um Replikationen von Zufallsvariablenstreams zu vermeiden. Hilfreich, wenn viele URNGs durch Engines instanziert werden.|
 
 ### <a name="operators"></a>Operatoren
 
@@ -370,8 +373,8 @@ Dieser Abschnitt listet die Operatoren der \<random > Header.
 
 |||
 |-|-|
-|`operator==`|Testet, ob der URNG links vom Operator gleich dem Modul rechts vom Operator ist.|
-|`operator!=`|Testet, ob der URNG links vom Operator ungleich dem Modul rechts vom Operator ist.|
+|`operator==`|Testet, ob der URNG links vom Operator gleich der Engine rechts vom Operator ist.|
+|`operator!=`|Testet, ob der URNG links vom Operator ungleich der Engine rechts vom Operator ist.|
 |`operator<<`|Schreibt Zustandsinformationen in einen Stream.|
 |`operator>>`|Extrahiert Zustandsinformationen aus einem Stream.|
 
@@ -385,13 +388,14 @@ Finden Sie in den folgenden Abschnitten Weitere Informationen zu jeder dieser in
 
 - `RealType` zeigt `float`, `double` oder `long double` an.
 
-### <a name="engines"></a>Module
+### <a name="engines"></a>Engines
 
-[Modulvorlagen](#eng) und [Moduladaptervorlagen](#engadapt) sind Vorlagen, mit deren Parametern der erstellte Generator angepasst wird.
 
-Ein *Modul* ist eine Klasse oder Vorlagenklasse, deren Instanzen (Generatoren) als Quelle von Zufallszahlen fungieren, die gleichmäßig zwischen einem Mindest- und einen Höchstwert verteilt werden. Ein *Moduladapter* gibt eine Sequenz von Werten aus, die verschiedene Zufallscharaktereigenschaften haben, indem er von einem anderen Zufallswertemodul produzierte Werte übernimmt und einen bestimmtem Algorithmus für diese Werte anwendet.
+  [Engine-Vorlagen](#eng) und [Engine-Adaptervorlagen](#engadapt) sind Vorlagen, mit deren Parametern der erstellte Generator angepasst wird.
 
-Jedes Modul und jeder Moduladapter haben die folgenden Member:
+Eine *Engine* ist eine Klasse oder Vorlagenklasse, deren Instanzen (Generatoren) als Quelle von Zufallszahlen fungieren, die gleichmäßig zwischen einem Mindest- und einen Höchstwert verteilt werden. Ein *Engine-Adapter* gibt eine Sequenz von Werten aus, die verschiedene Zufallscharaktereigenschaften haben, indem er von einer anderen Zufallswerte-Engine produzierte Werte übernimmt und einen bestimmtem Algorithmus für diese Werte anwendet.
+
+Jede Engine und jeder Engine-Adapter haben die folgenden Member:
 
 - `typedef` `numeric-type` `result_type` ist der vom `operator()` des Generators zurückgegebene Typ. Der `numeric-type` wird als Vorlagenparameter bei der Instanzierung übergeben.
 
@@ -399,9 +403,9 @@ Jedes Modul und jeder Moduladapter haben die folgenden Member:
 
 - `result_type min()` gibt den vom `operator()` des Generators zurückgegeben Mindestwert zurück. Moduladapter verwenden das `min()`-Ergebnis des Basismoduls.
 
-- `result_type max()` gibt den vom `operator()` des Generators zurückgegeben Höchstwert zurück. Wenn `result_type` ein Integraltyp (Ganzzahlwerttyp) ist, ist `max()` der Höchstwert, der tatsächlich zurückgegeben werden kann (inklusiv). Wenn `result_type` ein Gleitkommatyp (Echtwerttyp) ist, ist `max()` der kleinste Wert, der größer als alle Werte ist, die zurückgegeben werden können (nicht-inklusiv). Moduladapter verwenden das `max()`-Ergebnis des Basismoduls.
+- `result_type max()` gibt den vom `operator()` des Generators zurückgegeben Höchstwert zurück. Wenn `result_type` ein Integraltyp (Ganzzahlwerttyp) ist, ist `max()` der Höchstwert, der tatsächlich zurückgegeben werden kann (inklusiv). Wenn `result_type` ein Gleitkommatyp (Echtwerttyp) ist, ist `max()` der kleinste Wert, der größer als alle Werte ist, die zurückgegeben werden können (nicht-inklusiv). Engine-Adapter verwenden das `max()`-Ergebnis der Basis-Engine.
 
-- `void seed(result_type s)` startet den Generator mit dem Startwert `s`. Für Module lautet die Signatur zur Unterstützung von Standardparametern `void seed(result_type s = default_seed)` (Moduladapter definieren einen separaten `void seed()`, siehe nächsten Unterabschnitt).
+- `void seed(result_type s)` startet den Generator mit dem Startwert `s`. Für Engines lautet die Signatur zur Unterstützung von Standardparametern `void seed(result_type s = default_seed)` (Engine-Adapter definieren einen separaten `void seed()`, siehe nächsten Unterabschnitt).
 
 - `template <class Seq> void seed(Seq& q)` startet den Generator mithilfe von [seed_seq](../standard-library/seed-seq-class.md)`Seq`.
 
@@ -411,23 +415,26 @@ Jedes Modul und jeder Moduladapter haben die folgenden Member:
 
 - `void discard(unsigned long long count)` ruft `operator()` effektiv mit der Häufigkeit `count` auf und bewertet jeden Wert.
 
-**Moduladapter** unterstützen zusätzlich diese Member (`Engine` ist der erste Vorlagenparameter eines Moduladapters, der den Typ des Basismoduls bezeichnet):
 
-- Ein Standardkonstruktor zur Initialisierung des Generators genau wie durch den Standardkonstruktor des Basismoduls.
+  **Engine-Adapter** unterstützen zusätzlich diese Member (`Engine` ist der erste Vorlagenparameter eines Engine-Adapters, der den Typ der Basis-Engine bezeichnet):
 
-- Ein expliziter Konstruktor mit dem Argument `const Engine& eng`. Dieser dient zur Unterstützung einer Kopienkonstruktion mithilfe des Basismoduls.
+- Ein Standardkonstruktor zur Initialisierung des Generators genau wie durch den Standardkonstruktor der Basis-Engine.
 
-- Ein expliziter Konstruktor mit dem Argument `Engine&& eng`. Dieser dient zur Unterstützung einer Verschiebungskonstruktion mithilfe des Basismoduls.
+- Ein expliziter Konstruktor mit dem Argument `const Engine& eng`. Dieser dient zur Unterstützung einer Kopienkonstruktion mithilfe der Basis-Engine.
 
-- `void seed()`, der den Generator mit dem Standardstartwert des Basismoduls initialisiert.
+- Ein expliziter Konstruktor mit dem Argument `Engine&& eng`. Dieser dient zur Unterstützung einer Verschiebungskonstruktion mithilfe der Basis-Engine.
 
-- `const Engine& base()`-Eigenschaftsfunktion, die das Basismodul zurückgibt, das zur Konstruktion des Generators verwendet wurde.
+- 
+  `void seed()`, der den Generator mit dem Standardstartwert der Basis-Engine initialisiert.
 
-Jedes Modul besitzt einen *Zustand*, mit dem die Sequenz der Werte bestimmt wird, die durch nachfolgende Aufrufe von `operator()` generiert werden. Die Zustände von zwei Generatoren, die von Modulen desselben Typs instanziert wurden, können mithilfe von `operator==` und `operator!=` verglichen werden. Wenn die beiden Zustände als gleich verglichen werden, generieren Sie dieselbe Sequenz von Werten. Der Zustand eines Objekts kann als Sequenz von 32-Bit-Werten ohne Vorzeichen zu einem Stream gespeichert werden, indem die `operator<<` des Generators verwendet werden. Der Zustand wird durch das Speichern nicht geändert. Ein gespeicherter Zustand kann mithilfe von `operator>>` in den Generator eingelesen werden, der von einem Modul desselben Typs instanziert wurde.
+- 
+  `const Engine& base()`-Eigenschaftsfunktion, die die Basis-Engine zurückgibt, die zur Konstruktion des Generators verwendet wurde.
+
+Jede Engine besitzt einen *Zustand*, mit dem die Sequenz der Werte bestimmt wird, die durch nachfolgende Aufrufe von `operator()` generiert werden. Die Zustände von zwei Generatoren, die von Engines desselben Typs instanziert wurden, können mithilfe von `operator==` und `operator!=` verglichen werden. Wenn die beiden Zustände als gleich verglichen werden, generieren Sie dieselbe Sequenz von Werten. Der Zustand eines Objekts kann als Sequenz von 32-Bit-Werten ohne Vorzeichen zu einem Stream gespeichert werden, indem die `operator<<` des Generators verwendet werden. Der Zustand wird durch das Speichern nicht geändert. Ein gespeicherter Zustand kann mithilfe von `operator>>` in den Generator eingelesen werden, der von einer Engine desselben Typs instanziert wurde.
 
 ### <a name="distributions"></a>Verteilungen
 
-Die [Zufallszahlenverteilung](#distributions) ist eine Klasse oder eine Vorlagenklasse, deren Instanzen einen Stream gleichmäßig verteilter Zufallszahlen transformieren, die aus einem Modul in einen Stream von Zufallszahlen mit einer bestimmten Verteilung bezogen werden. Jede Verteilung verfügt über die folgenden Member:
+Die [Zufallszahlenverteilung](#distributions) ist eine Klasse oder eine Vorlagenklasse, deren Instanzen einen Stream gleichmäßig verteilter Zufallszahlen transformieren, die aus einer Engine in einen Stream von Zufallszahlen mit einer bestimmten Verteilung bezogen werden. Jede Verteilung verfügt über die folgenden Member:
 
 - `typedef` `numeric-type` `result_type` ist der vom `operator()` der Verteilung zurückgegebene Typ. Der `numeric-type` wird als Vorlagenparameter bei der Instanzierung übergeben.
 
@@ -447,7 +454,8 @@ Die [Zufallszahlenverteilung](#distributions) ist eine Klasse oder eine Vorlagen
 
 - `result_type max()` gibt den vom `operator()` der Verteilung zurückgegebenen Höchstwert zurück. Wenn `result_type` ein Integraltyp (Ganzzahlwerttyp) ist, ist `max()` der Höchstwert, der tatsächlich zurückgegeben werden kann (inklusiv). Wenn `result_type` ein Gleitkommatyp (Echtwerttyp) ist, ist `max()` der kleinste Wert, der größer als alle Werte ist, die zurückgegeben werden können (nicht-inklusiv).
 
-- `void reset()` verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.
+- 
+  `void reset()` verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus der Engine bezogen wurden.
 
 Eine Parameterstruktur ist ein Objekt, in dem alle für eine Verteilung erforderlichen Parameter gespeichert werden. Sie enthält folgende Informationen:
 
@@ -474,7 +482,7 @@ Dies sind zwei höchst hilfereiche URNGs in Visual Studio – `mt19937` und `ran
 
 Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [Cryptographically secure pseudorandom number generator (Kryptographisch sicherer Zufallszahlengenerator, in englischer Sprache)](http://go.microsoft.com/fwlink/p/?linkid=398017).) Da der ISO C++-Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Zufallszahlengenerator (kryptografisch nicht sicher) implementieren, der nur als Stammwertequelle für einen anderen Generator geeignet ist. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.
 
-`random_device`-Ergebnisse sind per Definition nicht reproduzierbar, und ein Nebeneffekt ist, dass er eventuell deutlich langsamer läuft als andere URNGs. Die meisten Anwendungen, für die keine kryptografische Sicherheit erforderlich sind, verwenden `mt19937` oder ein ähnliches Modul, obwohl Sie es vielleicht mit einem Aufruf von `random_device` starten möchten, wie im [Codebeispiel](#code) gezeigt.
+`random_device`-Ergebnisse sind per Definition nicht reproduzierbar, und ein Nebeneffekt ist, dass er eventuell deutlich langsamer läuft als andere URNGs. Die meisten Anwendungen, für die keine kryptografische Sicherheit erforderlich sind, verwenden `mt19937` oder eine ähnliche Engine, obwohl Sie sie vielleicht mit einem Aufruf von `random_device` starten möchten, wie im [Codebeispiel](#code) gezeigt.
 
 ## <a name="see-also"></a>Siehe auch
 

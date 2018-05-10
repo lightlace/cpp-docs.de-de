@@ -1,27 +1,22 @@
 ---
 title: 3.1.1 Omp_set_num_threads-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b94cf2b5-8011-4a3b-ba56-676982642857
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2510c2ed49f7b46f2ca3d853c9b78ff3c09cb62a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99c82ff324cbf21612d2459511877d152e2757f5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads-Funktion
 Die `omp_set_num_threads` Funktion legt die Standardanzahl von Threads zur Verwendung für nachfolgende parallele Bereiche, die keinen angeben einer `num_threads` Klausel. Es wird folgendes Format verwendet:  
@@ -39,10 +34,10 @@ void omp_set_num_threads(int num_threads);
   
 ## <a name="cross-references"></a>Referenzen:  
   
--   `omp_set_dynamic`funktionieren, finden Sie unter [Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
+-   `omp_set_dynamic` funktionieren, finden Sie unter [Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
   
--   `omp_get_dynamic`funktionieren, finden Sie unter [Abschnitt 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) auf Seite "40".  
+-   `omp_get_dynamic` funktionieren, finden Sie unter [Abschnitt 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) auf Seite "40".  
   
--   `OMP_NUM_THREADS`Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48 und Abschnitt 2.3 auf Seite "8".  
+-   `OMP_NUM_THREADS` Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48 und Abschnitt 2.3 auf Seite "8".  
   
--   `num_threads`-Klausel finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8
+-   `num_threads` -Klausel finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8

@@ -1,12 +1,9 @@
 ---
 title: Parallele | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - parallel
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9293a70ce0615adf1e40bcb19b1706d9e39d4cca
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel"></a>parallel
 Definiert einen parallelen Bereich, also Code, die durch mehrere Threads parallel ausgeführt wird.  
@@ -62,7 +57,7 @@ Definiert einen parallelen Bereich, also Code, die durch mehrere Threads paralle
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [Freigegebene](../../../parallel/openmp/reference/shared-openmp.md)  
   
  **Parallele** kann auch verwendet werden, mit der [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md) und [für](../../../parallel/openmp/reference/for-openmp.md) Direktiven.  
   

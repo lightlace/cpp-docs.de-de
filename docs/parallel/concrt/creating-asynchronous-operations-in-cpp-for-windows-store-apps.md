@@ -1,30 +1,25 @@
 ---
-title: "Erstellen von asynchronen Vorgängen in C++ für uwp-Apps | Microsoft Docs"
-ms.custom: 
+title: Erstellen von asynchronen Vorgängen in C++ für uwp-Apps | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Erstellen von asynchronen Vorgängen in C++ für uwp-Apps
 Dieses Dokument beschreibt einige der wichtigsten Punkte zu bedenken, wenn Sie die Task-Klasse verwenden, um Windows-ThreadPool-basierte asynchrone Vorgänge in einer app (Universelle Windows Runtime) zu erzeugen.  
@@ -168,7 +163,7 @@ Dieses Dokument beschreibt einige der wichtigsten Punkte zu bedenken, wenn Sie d
 
 >  Rufen Sie nicht [concurrency::task::wait](reference/task-class.md#wait) im Text einer Fortsetzung auf, die im STA ausgeführt wird. Andernfalls löst die Laufzeit [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) aus, da diese Methode den aktuellen Thread blockiert und die App dadurch möglicherweise nicht mehr reagiert. Sie können jedoch die [concurrency::task::get](reference/task-class.md#get) -Methode aufrufen, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.  
   
-##  <a name="example-app">Beispiel: Steuern der Ausführung in einer Windows-Runtime-App mit C++ und XAML</a>  
+##  <a name="example-app"></a> Beispiel: Steuern der Ausführung in einer Windows-Runtime-App mit C++ und XAML  
  Betrachten Sie eine App mit C++ und XAML, die eine Datei auf dem Datenträger liest, die häufigsten Wörter in dieser Datei sucht und die Ergebnisse anschließend auf der Benutzeroberfläche anzeigt. Um diese app zu erstellen, in Visual Studio erstellen zunächst ein **leere App (universelle Windows)** -Projekt und nennen dieses `CommonWords`. Geben Sie im App-Manifest die **Dokumentbibliothek** -Funktion an, damit die App auf den Ordner "Dokumente" zugreifen kann. Fügen Sie im Deklarationsabschnitt des App-Manifests außerdem den Textdateityp (.txt) hinzu. Weitere Informationen zu App-Funktionen und -Deklarationen finden Sie unter [App-Pakete und -Bereitstellung](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aktualisieren Sie in "MainPage.xaml" das `Grid` -Element mit einem `ProgressRing` -Element und einem `TextBlock` -Element. `ProgressRing` gibt an, dass der Vorgang ausgeführt wird, und `TextBlock` zeigt die Ergebnisse der Berechnung an.  

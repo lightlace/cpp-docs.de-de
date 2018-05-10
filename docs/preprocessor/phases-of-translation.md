@@ -1,12 +1,9 @@
 ---
-title: "Phasen der Übersetzung | Microsoft Docs"
-ms.custom: 
+title: Phasen der Übersetzung | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27e8e3a84d425966908bc1be37268c91cbbd34d8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="phases-of-translation"></a>Phasen der Übersetzung
 C- und C++-Programme bestehen aus mindestens einer Quelldatei, von denen jede einen Teil des Texts des Programms enthält. Eine Quelldatei wird zusammen mit ihren Includedateien (Dateien, die mithilfe der Präprozessordirektive `#include` eingeschlossen werden), aber ohne die Codeabschnitte, die von bedingten Kompilierungsdirektiven entfernt werden, wie beispielsweise `#if`, als "Übersetzungseinheit" bezeichnet.  
@@ -55,7 +50,7 @@ C- und C++-Programme bestehen aus mindestens einer Quelldatei, von denen jede ei
  *Zusammenführen von Zeilen*  
  Alle Zeilen in einem umgekehrten Schrägstrich enden (**\\**) und folgt unmittelbar ein Zeilenumbruchzeichen werden Zeichen mit der nächsten Zeile in der Quelldatei, die logische Zeilen aus den physischen Zeilen bilden verknüpft. Falls eine Quelldatei nicht leer ist, muss sie mit einem Zeilenumbruchzeichen enden, dem kein umgekehrter Schrägstrich vorangestellt ist.  
   
- Zerlegung in Token  
+ *Zerlegung in Token*  
  Die Quelldatei wird in Vorverarbeitungstoken und Leerstellenzeichen unterteilt. Kommentare in der Quelldatei werden jeweils durch ein Leerzeichen ersetzt. Zeilenumbruchzeichen werden beibehalten.  
   
  *Vorverarbeiten*  

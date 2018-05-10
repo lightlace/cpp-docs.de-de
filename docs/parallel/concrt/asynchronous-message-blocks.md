@@ -1,13 +1,10 @@
 ---
-title: "Asynchrone Nachrichtenblöcke | Microsoft Docs"
-ms.custom: 
+title: Asynchrone Nachrichtenblöcke | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchrone Nachrichtenblöcke
 
@@ -60,14 +55,14 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
 - [Nachrichtenreservierung](#reservation)  
   
-##  <a name="sources_and_targets"></a>Quellen und Ziele  
+##  <a name="sources_and_targets"></a> Quellen und Ziele  
  Quelle und Ziel sind zwei wichtige Beteiligte bei der Nachrichtenübergabe. Ein *Quelle* bezieht sich auf einen Endpunkt, der Nachrichten sendet. Ein *Ziel* bezieht sich auf einen Endpunkt, der Nachrichten empfängt. Sie können sich eine Quelle als Endpunkt vorstellen, von dem gelesen wird, und ein Ziel als Endpunkt, in den geschrieben wird. Anwendungen verbinden Quellen und Ziele, die zusammen mit Formular *messagingnetzwerke*.  
   
  Die Agents Library verwendet zwei abstrakte Klassen zum Darstellen von Quellen und Ziele: [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) und [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md). Nachrichtenblocktypen, die als Quelle dienen, werden von der `ISource`-Klasse abgeleitet, während Nachrichtenblocktypen, die als Ziel dienen, von der `ITarget`-Klasse abgeleitet werden. Nachrichtenblocktypen, die als Quelle und Ziel dienen, werden von der `ISource`-Klasse und der `ITarget`-Klasse abgeleitet.  
   
  [[Nach oben](#top)]  
   
-##  <a name="propagation"></a>Nachrichtenweitergabe  
+##  <a name="propagation"></a> Nachrichtenweitergabe  
  *Die Weitergabe* ist das Senden einer Nachricht von einer Komponente zu einem anderen. Wenn eine Nachricht für einen Nachrichtenblock bereitgestellt wird, kann er diese Nachricht akzeptieren, ablehnen oder verschieben. Jeder Nachrichtenblocktyp speichert und überträgt Nachrichten auf unterschiedliche Weise. Beispielsweise speichert die `unbounded_buffer`-Klasse eine unendliche Anzahl von Nachrichten, die `overwrite_buffer`-Klasse speichert jeweils nur eine Nachricht, und die Transformatorklasse speichert eine geänderte Version jeder Nachricht. Diese Nachrichtenblocktypen werden im Folgenden ausführlicher beschrieben.  
   
  Wenn ein Nachrichtenblock eine Meldung akzeptiert, können optionale Arbeiten durchgeführt werden, und wenn es sich bei dem Nachrichtenblock um eine Quelle handelt, kann die resultierende Nachricht an einen anderen Member im Netzwerk weitergegeben werden. Mithilfe einer Filterfunktion können Nachrichtenblöcke einzelne Nachrichten ablehnen, die nicht empfangen werden sollen. Filter werden ausführlich weiter unten in diesem Thema im Abschnitt [Nachrichtenfilterung](#filtering). Ein Nachrichtenblock, der eine Meldung verschiebt, kann sie reservieren und später verarbeiten. Nachrichtenreservierung wird weiter unten in diesem Thema im Abschnitt ausführlicher beschrieben [Nachrichtenreservierung](#reservation).  
@@ -79,7 +74,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="overview"></a>Übersicht über Nachrichtenblocktypen  
+##  <a name="overview"></a> Übersicht über Nachrichtenblocktypen  
  In der folgenden Tabelle wird die Rolle der wichtigen Nachrichtenblocktypen kurz beschrieben.  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -91,7 +86,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
  [single_assignment](#single_assignment)  
  Speichert eine Nachricht, die ein Mal geschrieben und gelesen werden kann.  
   
- [Rufen Sie](#call)  
+ [call](#call)  
  Führt beim Empfang einer Nachricht Arbeiten aus.  
   
  [Transformer](#transformer)  
@@ -134,7 +129,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="unbounded_buffer"></a>Unbounded_buffer-Klasse  
+##  <a name="unbounded_buffer"></a> Unbounded_buffer-Klasse  
  Die [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) -Klasse stellt eine allgemeine asynchrone Nachrichtenstruktur dar. Diese Klasse speichert eine FIFO-Nachrichtenwarteschlange (First In, First Out), in die mehrere Quellen Nachrichten schreiben oder aus der mehrere Ziele Nachrichten auslesen können. Wenn ein Ziel eine Nachricht von einem `unbounded_buffer`-Objekt empfängt, wird diese Nachricht aus der Nachrichtenwarteschlange entfernt. Daher können die einzelnen Nachrichten nur von einem Ziel empfangen werden, obwohl ein `unbounded_buffer`-Objekt mehrere Ziele haben kann. Die `unbounded_buffer`-Klasse ist hilfreich, wenn Sie mehrere Nachrichten an eine andere Komponente übergeben möchten und diese Komponente alle Nachrichten empfangen muss.  
   
 ### <a name="example"></a>Beispiel  
@@ -152,7 +147,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="overwrite_buffer"></a>Overwrite_buffer-Klasse  
+##  <a name="overwrite_buffer"></a> Overwrite_buffer-Klasse  
  Die [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) -Klasse ähnelt der `unbounded_buffer` Klasse, außer dass ein `overwrite_buffer` Objekt speichert nur eine Nachricht. Wenn ein Ziel eine Nachricht von einem `overwrite_buffer`-Objekt empfängt, wird diese Nachricht darüber hinaus auch nicht aus dem Puffer entfernt. Daher empfangen mehrere Ziele eine Kopie der Nachricht.  
   
  Die `overwrite_buffer`-Klasse ist hilfreich, wenn Sie mehrere Nachrichten an eine andere Komponente übergeben möchten, diese Komponente jedoch nur den letzten Wert benötigt. Diese Klasse ist darüber hinaus auch hilfreich, wenn Sie eine Nachricht an mehreren Komponenten übertragen möchten.  
@@ -172,7 +167,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="single_assignment"></a>Single_assignment-Klasse  
+##  <a name="single_assignment"></a> Single_assignment-Klasse  
  Die [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) -Klasse ähnelt der `overwrite_buffer` Klasse, außer dass eine `single_assignment` -Objekt nur einmal geschrieben werden kann. Wenn ein Ziel eine Nachricht von einem `overwrite_buffer`-Objekt empfängt, wird diese Nachricht wie bei der `single_assignment`-Klasse nicht aus diesem Objekt entfernt. Daher empfangen mehrere Ziele eine Kopie der Nachricht. Die `single_assignment`-Klasse ist hilfreich, wenn Sie eine Nachricht an mehrere Komponenten übertragen möchten.  
   
 ### <a name="example"></a>Beispiel  
@@ -190,7 +185,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="call"></a>Call-Klasse  
+##  <a name="call"></a> Call-Klasse  
  Die [Call](../../parallel/concrt/reference/call-class.md) Klasse dient als Nachrichtenempfänger, der beim Empfang von Daten eine Arbeitsfunktion ausführt. Bei dieser Arbeitsfunktion kann es sich um einen Lambdaausdruck, ein Funktionsobjekt oder einen Funktionszeiger handeln. Ein `call`-Objekt verhält sich anders als ein gewöhnlicher Funktionsaufruf, da es parallel zu anderen Komponenten agiert, die Nachrichten an das Objekt senden. Wenn ein `call`-Objekt beim Empfang einer Nachricht Arbeiten ausführt, fügt es die empfangene Nachricht einer Warteschlange hinzu. Jedes `call`-Objekt verarbeitet Nachrichten in der Warteschlange in der Reihenfolge, in der sie empfangen werden.  
   
 ### <a name="example"></a>Beispiel  
@@ -208,7 +203,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="transformer"></a>Transformer-Klasse  
+##  <a name="transformer"></a> Transformer-Klasse  
  Die [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) -Klasse dient sowohl als Nachrichtenempfänger als auch als Nachrichtensender. Die `transformer`-Klasse ist gleicht der `call`-Klasse, da sie beim Empfang von Daten eine benutzerdefinierte Arbeitsfunktion ausführt. Die `transformer`-Klasse sendet jedoch auch das Ergebnis der Arbeitsfunktion an Empfängerobjekte. Wie ein `call`-Objekt agiert ein `transformer`-Objekt parallel zu anderen Komponenten, die Nachrichten an das Objekt senden. Wenn ein `transformer`-Objekt beim Empfang einer Nachricht Arbeiten ausführt, fügt es die empfangene Nachricht einer Warteschlange hinzu. Jedes `transformer`-Objekt verarbeitet die eigenen Nachrichten in der Warteschlange in der Reihenfolge, in der sie empfangen werden.  
   
  Die `transformer`-Klasse sendet die eigene Nachricht an ein Ziel. Wenn Sie festlegen, die `_PTarget` Parameter im Konstruktor auf `NULL`, können Sie das Ziel später angeben, durch Aufrufen der [Concurrency:: link_target](reference/source-block-class.md#link_target) Methode.  
@@ -230,7 +225,7 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
  [[Nach oben](#top)]  
   
-##  <a name="choice"></a>Choice-Klasse  
+##  <a name="choice"></a> Choice-Klasse  
  Die [Choice](../../parallel/concrt/reference/choice-class.md) Klasse wählt die erste verfügbare Nachricht aus einer Gruppe von Quellen. Die `choice` Klasse stellt einen Mechanismus zur ablaufsteuerung statt einen Datenfluss-Mechanismus (Thema [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) beschreibt die Unterschiede zwischen den Datenfluss und ablaufsteuerung).  
   
  Der Lesevorgang bei einem choice-Objekt gleicht dem Aufruf der API-Funktion `WaitForMultipleObjects` von Windows, wenn der `bWaitAll`-Parameter auf `FALSE` festgelegt ist. Die `choice`-Klasse bindet Daten jedoch nicht an ein externes Synchronisierungsobjekt, sondern an das Ereignis selbst.  
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[Nach oben](#top)]  
   
-##  <a name="join"></a>Join- und Multitype_join-Klasse  
+##  <a name="join"></a> Join- und Multitype_join-Klasse  
  Die [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) und [multitype_join](../../parallel/concrt/reference/multitype-join-class.md) Klassen können Sie warten, für jedes Mitglied einer Gruppe von Quellen eine Nachricht empfangen. Die `join`-Klasse wird für Quellobjekte verwendet, die einen allgemeinen Nachrichtentyp aufweisen. Die `multitype_join`-Klasse wird für Quellobjekte verwendet, die andere Nachrichtentypen aufweisen können.  
   
  Der Lesevorgang bei einem `join` oder einem `multitype_join`-Objekt ähnelt dem Aufrufen der API-Funktion `WaitForMultipleObjects` von Windows, wenn der `bWaitAll`-Parameter auf `TRUE` festgelegt ist. Ähnlich wie ein `choice`-Objekt verwenden das `join`- und das  `multitype_join`-Objekt einen Ereignismechanismus, der Daten nicht an ein externes Synchronisierungsobjekt, sondern an das Ereignis selbst bindet.  
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[Nach oben](#top)]  
   
-##  <a name="timer"></a>Timer-Klasse  
+##  <a name="timer"></a> Timer-Klasse  
  Die Concurrency::[Timer-Klasse](../../parallel/concrt/reference/timer-class.md) fungiert als Nachrichtenquelle. Ein `timer`-Objekt sendet nach Ablauf einer angegebenen Zeitdauer eine Nachricht an ein Ziel. Die `timer`-Klasse ist hilfreich, wenn der Versand einer Nachricht verzögert werden muss oder wenn eine Nachricht in regelmäßigen Intervallen gesendet werden muss.  
   
 
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[Nach oben](#top)]  
   
-##  <a name="filtering"></a>Nachrichtenfilterung  
+##  <a name="filtering"></a> Nachrichtenfilterung  
  Wenn Sie ein Nachrichtenblockobjekt erstellen, können Sie angeben einer *filter-Funktion* , der bestimmt, ob der Nachrichtenblock Nachricht akzeptiert oder eine abgelehnt. Eine Filterfunktion ist eine hilfreiche Möglichkeit, um sicherzustellen, dass nur bestimmte Werte von einem Nachrichtenblock empfangen werden.  
   
  Im folgenden Beispiel wird veranschaulicht, wie ein `unbounded_buffer`-Objekt erstellt wird, das eine Filterfunktion verwendet, um nur gerade Zahlen zu akzeptieren. Ungerade Zahlen werden vom `unbounded_buffer`-Objekt zurückgewiesen, sodass ungerade Zahlen nicht an die Zielblöcke weitergegeben werden.  
@@ -345,7 +340,7 @@ bool (T const &)
   
  [[Nach oben](#top)]  
   
-##  <a name="reservation"></a>Nachrichtenreservierung  
+##  <a name="reservation"></a> Nachrichtenreservierung  
  *Nachrichtenreservierung* ermöglicht einen Nachrichtenblock eine Nachricht zur späteren Verwendung zu reservieren. In aller Regel wird die Nachrichtenreservierung nicht direkt verwendet. Kenntnisse der Nachrichtenreservierung helfen Ihnen jedoch möglicherweise, das Verhalten vordefinierter Nachrichtenblocktypen besser zu verstehen.  
   
  Beispiel: gierige und nicht gierige Joins. Beide Jointypen verwenden die Nachrichtenreservierung, um Meldungen für die spätere Verwendung zu reservieren. Wie bereits beschrieben, werden Nachrichten bei nicht gierigen Joins in zwei Phasen empfangen. In der ersten Phase wartet ein nicht gieriges `join`-Objekt, bis von den einzelnen Quellen eine Nachricht empfangen wurde. Ein nicht gieriger Join versucht anschließend, jede dieser Nachrichten zu reservieren. Wenn alle Nachrichten reserviert werden können, werden die einzelnen Nachrichten verarbeitet und an das Ziel weitergegeben. Wenn dies nicht der Fall ist, werden die Nachrichtenreservierungen freigegeben oder abgebrochen und es wird gewartet, bis die einzelnen Quellen eine Nachricht empfangen.  

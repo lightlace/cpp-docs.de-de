@@ -1,12 +1,9 @@
 ---
 title: Concurrent_vector-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_vector
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e120e072fb3f56788cbf39fbbc3887f5c816f4ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector-Klasse
 Die `concurrent_vector`-Klasse ist eine Sequenzcontainerklasse, die zufälligen Zugriff auf jedes Element zulässt. Sie aktiviert parallelitätssichere Operationen für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchlauf.  
@@ -97,7 +92,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[concurrent_vector](#ctor)|Überladen. Erstellt einen gleichzeitigen Vektor.|  
-|[~concurrent_vector Destructor](#dtor)|Löscht alle Elemente aus, und zerstört diesen gleichzeitigen Vektor.|  
+|[~ Concurrent_vector-Destruktor](#dtor)|Löscht alle Elemente aus, und zerstört diesen gleichzeitigen Vektor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -353,7 +348,7 @@ concurrent_vector(_InputIterator _Begin,
   
  Der letzte Konstruktor gibt vom Iteratorbereich bereitgestellte Werte [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a> ~concurrent_vector 
+##  <a name="dtor"></a> ~ Concurrent_vector 
 
  Löscht alle Elemente aus, und zerstört diesen gleichzeitigen Vektor.  
   

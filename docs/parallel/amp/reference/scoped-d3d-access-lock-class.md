@@ -1,12 +1,9 @@
 ---
 title: scoped_d3d_access_lock-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0053fa89139ac806a3d8ae0572cd053dd6bec72c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock-Klasse
 RAII-Wrapper für eine D3D-Zugriffssperre auf einem accelerator_view-Objekt.  
@@ -57,7 +52,7 @@ class scoped_d3d_access_lock;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amprt.h  
   
- **Namespace:** concurrency::direct3d  
+ **Namespace:** Concurrency:: Direct3D  
 
 ##  <a name="ctor"></a> scoped_d3d_access_lock 
 

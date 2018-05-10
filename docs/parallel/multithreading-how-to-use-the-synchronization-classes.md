@@ -1,13 +1,10 @@
 ---
 title: 'Multithreading: Verwendungsweise der Synchronisierungsklassen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: Verwendungsweise der Synchronisierungsklassen
 Die Synchronisierung des Zugriffs auf Ressourcen durch Threads ist ein häufiges Problem beim Schreiben von Multithreadanwendungen. Wenn zwei oder mehr Threads gleichzeitig auf dieselben Daten zugreifen, kann dies zu unerwünschten und unvorhersehbaren Ergebnissen führen. Es könnte z. B. vorkommen, dass der eine Thread den Inhalt einer Struktur aktualisiert, während der andere Thread gleichzeitig den Inhalt dieser Struktur liest. Es gibt keine Informationen darüber, welche Daten vom lesenden Thread in einem solchen Fall empfangen werden: die alten Daten, die neu geschriebenen Daten oder möglicherweise eine Kombination aus beidem. MFC enthält eine Reihe von Synchronisierungs- und Synchronisierungszugriffsklassen, die Sie bei der Lösung dieses Problems unterstützen. In diesem Thema werden die verfügbaren Klassen erläutert, und Sie erfahren, wie Sie diese in einer typischen Multithreadanwendung zum Erstellen von threadsicheren Klassen verwenden können.  
@@ -43,7 +38,7 @@ Die Synchronisierung des Zugriffs auf Ressourcen durch Threads ist ein häufiges
   
  In dieser Beispielanwendung kommen alle drei Arten von Synchronisierungsklassen zum Einsatz. Da bis zu drei Konten gleichzeitig untersucht werden können, verwendet er [CSemaphore](../mfc/reference/csemaphore-class.md) Zugriff auf drei Ansichtsobjekte beschränkt. Beim Versuch, ein viertes Konto anzuzeigen, wartet die Anwendung entweder, bis eines der ersten drei Fenster geschlossen wird, oder der Versuch schlägt fehl. Wenn ein Konto aktualisiert wird, verwendet die Anwendung [CCriticalSection](../mfc/reference/ccriticalsection-class.md) um sicherzustellen, dass nur ein Konto zu einem Zeitpunkt aktualisiert wird. Nach erfolgreicher Aktualisierung signalisiert [CEvent](../mfc/reference/cevent-class.md), die einen Thread wartet auf das Ereignis signalisiert werden frei. Dieser Thread sendet die neuen Daten an das Datenarchiv.  
   
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>Entwerfen einer threadsicheren Klasse  
+##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> Entwerfen einer threadsicheren Klasse  
  Um eine Klasse vollständig threadsicher zu gestalten, fügen Sie zunächst den gemeinsam genutzten Klassen die entsprechende Synchronisierungsklasse als Datenmember hinzu. Im vorherigen Beispiel Kontenverwaltung eine **CSemaphore** Datenmember würde die Ansichtsklasse hinzugefügt eine `CCriticalSection` Datenmember würde die Klasse verknüpfte Liste hinzugefügt und ein `CEvent` Datenmember würde auf die Daten hinzugefügt werden Speicherklasse.  
   
  Fügen Sie anschließend allen Memberfunktionen, die die Daten in der Klasse ändern bzw. auf eine gesteuerte Ressource zugreifen, Synchronisierungsaufrufe hinzu. In jeder Funktion erstellen Sie entweder eine [CSingleLock](../mfc/reference/csinglelock-class.md) oder [CMultiLock](../mfc/reference/cmultilock-class.md) Objekt, und rufen Sie dieses Objekts `Lock` Funktion. Wenn das `Unlock`-Objekt den Gültigkeitsbereich verlässt und zerstört wird, wird vom Destruktor des Objekts automatisch  aufgerufen und die Ressource freigegeben. Selbstverständlich können Sie `Unlock` auch direkt aufrufen.  
