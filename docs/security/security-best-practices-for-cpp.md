@@ -1,7 +1,7 @@
 ---
 title: Bewährte Sicherheitsmethoden für C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>Empfohlene Vorgehensweisen bezüglich der Sicherheit in C++
+
 Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen. Ihre Verwendung macht eine Anwendung zwar nicht immun gegen Angriffe, aber sie verringert die Wahrscheinlichkeit erfolgreicher Angriffe.  
   
-## <a name="visual-c-security-features"></a>Visual C++-Sicherheitsfeatures  
+## <a name="visual-c-security-features"></a>Visual C++-Sicherheitsfeatures
+
  Diese Sicherheitsfunktionen sind in den Visual C++-Compiler und den Visual C++-Linker integriert:  
   
  [/guard (Ablaufsteuerungsschutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen
 -   Auf potenzielle durch allgemeine Programmierfehler verursachte Anwendungskompatibilitätsfehler prüfen.  
   
 -   Eine Anwendung auf speicherbezogene Probleme untersuchen.  
-  s
+
 -   Potenzielle Sicherheitsprobleme in einer Anwendung aufdecken.  
   
  Der AppVerifier ist Teil der Anwendungskompatibilitäts-Toolkit, in der [Anwendungskompatibilität](http://go.microsoft.com/fwlink/p/?linkid=91277) auf der TechNet-Website.  
   
 
 ## <a name="windows-user-accounts"></a>Windows-Benutzerkonten  
- Das Verwenden von Windows-Benutzerkonten, die zur Gruppe der Administratoren gehören, setzt Entwickler und – durch entsprechende Erweiterung – auch Kunden Sicherheitsrisiken aus. Weitere Informationen finden Sie unter [Ausführen als Mitglied der Gruppe "Benutzer"](running-as-a-member-of-the-users-group.md) und [wie Benutzerkontensteuerung (UAC) wirkt sich auf Ihre Anwendung](how-user-account-control-uac-affects-your-application.md).  
+ Das Verwenden von Windows-Benutzerkonten, die zur Gruppe der Administratoren gehören, setzt Entwickler und – durch entsprechende Erweiterung – auch Kunden Sicherheitsrisiken aus. Weitere Informationen finden Sie unter [Ausführen als Mitglied der Gruppe "Benutzer"](running-as-a-member-of-the-users-group.md) und [wie Benutzerkontensteuerung (UAC) wirkt sich auf Ihre Anwendung](how-user-account-control-uac-affects-your-application.md).
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>Leitfaden für spekulative Ausführung dienstseitige Kanäle
+
+Informationen zum Identifizieren und zu mindern, gegen spekulative Ausführung clientseitigen Kanal Hardware Schwachstellen in der C++-Software finden Sie unter [C++-Entwicklerleitfaden für Spekulatives Ausführung dienstseitige Kanäle](developer-guidance-speculative-execution.md).
+
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Security>   
