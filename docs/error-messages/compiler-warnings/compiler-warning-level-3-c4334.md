@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
 # <a name="compiler-warning-level-3-c4334"></a>Compilerwarnung (Stufe 3) C4334
 'Operator': Ergebnis der 32-Bit-Verschiebung wurde implizit zu 64 Bit konvertiert (war eine 64-Bit-Verschiebung vorgesehen?)  
   
- Das Ergebnis der 32-Bit-Verschiebung wurde implizit nach 64-Bit konvertiert, und der Compiler vermutet, dass eine 64-Bit-Verschiebung vorgesehen war. Zur Behebung des Problems verwenden Sie eine 64-Bit-Verschiebung oder wandeln Sie explizit das Ergebnis der Verschiebung in 64-Bit um.  
+ Das Ergebnis der 32-Bit-Verschiebung wurde implizit nach 64-Bit konvertiert, und der Compiler vermutet, dass eine 64-Bit-Verschiebung vorgesehen war. Zur Behebung des Problems verwenden Sie eine 64-Bit-Verschiebung, oder wandeln Sie das Ergebnis der Verschiebung explizit in 64-Bit um.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4334 generiert.  
