@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft-spezifisch**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Reihenfolge der Argumentübergabe|Die ersten beiden in der Argumentliste von links nach rechts gefundenen DWORD oder kleineren Argumente werden in ECX- und EDX-Registern übergeben. Alle anderen Argumente werden von rechts nach links an den Stapel übergeben.|  
 |Stapelwartungszuständigkeit|Aufgerufene Funktion ruft die Argumente vom Stapel auf.|  
-|Namensergänzungskonvention|Das @-Zeichen wird Namen vorangestellt. Ein @-Zeichen in der Parameterliste, gefolgt von der Anzahl von Bytes (in Dezimalangabe) wird an den Namen angefügt.|  
+|Namensergänzungskonvention|At-Zeichen (\@)-Namen vorangestellt wird ein at-Zeichen, gefolgt von der Anzahl von Bytes (dezimal) im Parameters Dezimalangabe Namen.|  
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Groß-/Kleinbuchstaben werden nicht umgewandelt.|  
   
 > [!NOTE]
