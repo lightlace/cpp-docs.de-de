@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="worker-archetype"></a>Worker Urtyp
 Klassen, die entsprechen, den *Worker* Urtyp Geben Sie der Code zum Verarbeiten von Arbeitselementen in der Warteschlange eines Threadpools.  
@@ -118,7 +118,6 @@ void Terminate(void* pvParam) throw();
  Einen benutzerdefinierten Parameter verständlich die Workerklasse. Auch an übergeben `WorkerArchetype::Initialize` und `WorkerArchetype::Execute`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Archetypes](../../atl/reference/atl-archetypes.md)   
  [Konzepte](../../atl/active-template-library-atl-concepts.md)   
  [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)
 

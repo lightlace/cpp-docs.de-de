@@ -1,7 +1,7 @@
 ---
 title: Von MFC verwendete Stile | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>Von MFC verwendete Stile  
   
 Verwenden Sie die folgenden Formatflags Fenster- oder Steuerelement aussehen und Verhalten angeben, wenn Sie das entsprechende MFC-Objekt erstellen. In den meisten Fällen sind diese Stile festzulegen, der `dwStyle` Parameter der Klasse `Create` Funktion.  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>Schaltflächenstile  
+## <a name="button-styles"></a> Schaltflächenstile  
   
 Schaltflächenstile gelten für [CButton Klasse](../../mfc/reference/cbutton-class.md) Objekte, z. B. Optionsfelder, Kontrollkästchen und Schaltflächen. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CButton::Create](../../mfc/reference/cbutton-class.md#create). Weitere Informationen auf Schaltflächenstile in Windows finden Sie unter [Schaltflächenstile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
@@ -287,9 +285,7 @@ In der folgenden Tabelle werden zusätzliche Optionen aufgeführt, die Sie mit j
 |`BS_MULTILINE`|Bricht den Schaltflächentext in mehrere Zeilen um, wenn die Zeichenfolge für eine einzelne Zeile im Schaltflächenrechteck zu lang ist.|  
 |`BS_NOTIFY`|Aktiviert eine Schaltfläche, um die Benachrichtigungsmeldungen `BN_DBLCLK`, `BN_KILLFOCUS` und `BN_SETFOCUS` an das übergeordnete Fenster zu senden. Beachten Sie, dass die Schaltflächen die `BN_CLICKED`-Benachrichtigung unabhängig von der Angabe dieses Stil senden.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>Kombinationsfeldstile  
+## <a name="combo-box-styles"></a>  Kombinationsfeldstile  
   
 In MFC sind die folgenden Stile für Kombinationsfelder verfügbar. Weitere Informationen zu kombinationsfeldstile in Windows finden Sie unter [Kombinationsfeld im Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
   
@@ -309,9 +305,7 @@ In MFC sind die folgenden Stile für Kombinationsfelder verfügbar. Weitere Info
 |`CBS_SORT`|Wird Sie in das Listenfeld eingegebene Zeichenfolgen automatisch sortiert.|  
 |`CBS_UPPERCASE`|Wandelt den gesamten Text sowohl im Auswahlfeld als auch der Liste in Großbuchstaben.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>Bearbeiten von Stilen  
+## <a name="edit-styles"></a>  Bearbeiten von Stilen  
   
 Bearbeiten Sie Stile gelten für [CEdit-Klasse](../../mfc/reference/cedit-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CEdit::Create](../../mfc/reference/cedit-class.md#create). Weitere Informationen zum Bearbeiten von Steuerelementtypen in Windows finden Sie unter [bearbeiten-Steuerelementtypen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
@@ -332,9 +326,7 @@ Bearbeiten Sie Stile gelten für [CEdit-Klasse](../../mfc/reference/cedit-class.
 |`ES_UPPERCASE`|Konvertiert alle Zeichen in Großbuchstaben, wie sie in das Bearbeitungssteuerelement eingegeben werden.|  
 |`ES_WANTRETURN`|Gibt an, dass ein Wagenrücklauf eingefügt werden, wenn der Benutzer die EINGABETASTE drückt, während der Eingabe von Text in einem mehrzeiligen Edit-Steuerelement in einem Dialogfeld. Ohne diesen Stil hat das Drücken der EINGABETASTE dieselbe Wirkung wie das Dialogfeld Felder standardmäßige Pushbutton drücken. Dieses Format wirkt sich nicht auf ein einzeiliges Steuerelement zu bearbeiten.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>Rahmenfensterstile  
+## <a name="frame-window-styles-mfc"></a> Rahmenfensterstile  
   
 Rahmenfensterstile gelten für [CFrameWnd-Klasse](../../mfc/reference/cframewnd-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
@@ -342,11 +334,9 @@ Rahmenfensterstile gelten für [CFrameWnd-Klasse](../../mfc/reference/cframewnd-
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|Gibt Informationen zum Anfügen an das Ende einer Frame Window-Titel. Beispiel: "Microsoft zeichnen--Zeichnung in Document1". Sie können die Zeichenfolgen angezeigt, auf der Registerkarte Zeichenfolgen für Dokumentvorlagen im Anwendungs-Assistenten angeben. Wenn Sie diese Option deaktivieren möchten, überschreiben die `CWnd::PreCreateWindow` Memberfunktion.|  
 |`FWS_PREFIXTITLE`|Zeigt den Namen des Dokuments, bevor Sie den Namen der Anwendung in einem Frame Window-Titel. Beispielsweise ist "Document--WordPad". Sie können die Zeichenfolgen angezeigt, auf der Registerkarte Zeichenfolgen für Dokumentvorlagen im Anwendungs-Assistenten angeben. Wenn Sie diese Option deaktivieren möchten, überschreiben die `CWnd::PreCreateWindow` Memberfunktion.|  
-|`FWS_SNAPTOBARS`|Größe der Steuerelemente des Rahmenfensters, das eine Steuerleiste, wenn sie wird in einem schwebenden Fenster anstatt an ein Framefenster angedockt enthält. Dieser Stil Größen das Fenster entsprechend die Steuerleiste.|  
+|`FWS_SNAPTOBARS`|Größe der Steuerelemente des Rahmenfensters, das eine Steuerleiste, wenn sie wird in einem schwebenden Fenster anstatt an ein Framefenster angedockt enthält. Dieser Stil Größen das Fenster entsprechend die Steuerleiste.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>Listenfeldstile  
+## <a name="list-box-styles"></a> Listenfeldstile  
   
 Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Weitere Informationen über die Liste im Feld Stile in Windows finden Sie unter [Liste im Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
   
@@ -369,9 +359,7 @@ Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class
 |`LBS_USETABSTOPS`|Ermöglicht ein Listenfeld zu erkennen und Erweitern von Tabulatorzeichen beim Zeichnen von Zeichenfolgen. Die Registerkarte Standardpositionen sind 32 Dialogeinheiten. (Eine Dialogeinheit ist ein horizontalen oder vertikalen Abstand. Eine horizontale Dialogeinheit ist ein Viertel des die aktuelle Basis Breite Dialogeinheit gleich. Die Basis Dialogeinheiten werden basierend auf die Höhe und Breite der aktuellen Systemschriftart berechnet. Die `GetDialogBaseUnits` -Funktion von Windows dem aktuellen Dialogfeld Basis Einheiten gibt in Pixel zurück.) Dieses Format sollte nicht verwendet werden, mit `LBS_OWNERDRAWFIXED`.|  
 |`LBS_WANTKEYBOARDINPUT`|Der Besitzer des Listenfelds empfängt `WM_VKEYTOITEM` oder `WM_CHARTOITEM` Nachrichten, wenn der Benutzer eine Taste drückt, während Sie im Listenfeld den Eingabefokus besitzt. Dies kann eine Anwendung auf die Tastatureingaben speziellen Verarbeitungsschritte ausgeführt werden.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>Meldungsfeldstile  
+##<a name="message-box-styles"></a>  Meldungsfeldstile  
   
 Meldungsfeldstile gelten für [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) Elemente. Geben Sie eine Kombination der Formate in der `nType` Parameter `AfxMessageBox`. Weitere Informationen zu Message Box Stilen in Windows finden Sie unter [MessageBox-Funktion (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
   
@@ -412,9 +400,7 @@ Die folgenden meldungsfeldstile sind verfügbar.
 |`MB_DEFBUTTON2`|Die zweite Schaltfläche ist die Standardeinstellung.|  
 |`MB_DEFBUTTON3`|Die dritte Schaltfläche ist die Standardeinstellung.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>Stile des Schiebeleisten Steuerelements  
+## <a name="scroll-bar-styles"></a> Stile des Schiebeleisten Steuerelements  
   
 Stile des Schiebeleisten Steuerelements gelten für [CScrollBar Klasse](../../mfc/reference/cscrollbar-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Weitere Informationen zu Bildlaufleiste Steuerelementtypen für die in Windows finden Sie unter [Scroll Bar-Steuerelementtypen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
@@ -431,9 +417,7 @@ Stile des Schiebeleisten Steuerelements gelten für [CScrollBar Klasse](../../mf
 |`SBS_TOPALIGN`|Verwendet die `SBS_HORZ` Stil. Der obere Rand der Bildlaufleiste an den oberen Rand des Rechtecks in angegebenen ausgerichtet ist die `Create` Memberfunktion. Die Bildlaufleiste enthält die Standardhöhe zum System Bildlaufleisten.|  
 |`SBS_VERT`|Kennzeichnet eine vertikale Bildlaufleiste angezeigt. Wenn weder die `SBS_RIGHTALIGN` noch `SBS_LEFTALIGN` Format angegeben, der die Bildlaufleiste enthält, die Höhe, Breite und Position im angegebenen die `Create` Memberfunktion.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>Statische Stile  
+## <a name="static-styles"></a> Statische Stile  
   
 Statische Stile gelten für [CStatic Klasse](../../mfc/reference/cstatic-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Weitere Informationen zu statischen Steuerelementtypen für die in Windows finden Sie unter [Steuerelementtypen für die statische (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
@@ -467,9 +451,7 @@ Statische Stile gelten für [CStatic Klasse](../../mfc/reference/cstatic-class.m
 |`SS_WHITERECT`|Gibt ein Rechteck mit der Farbe verwendet, um das Fenster ausfüllen ausgefüllt. Der Standardwert ist Weiß.|  
 |`SS_WORDELLIPSIS`|Schneidet Text, passt der Inhalt nicht und fügt Ellipsen, ab.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>Fensterstile  
+## <a name="window-styles"></a> Fensterstile  
   
 Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwStyle` Parameter [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) oder [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Weitere Informationen zum Fensterstile in Windows finden Sie unter [Fensterstile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
@@ -503,9 +485,7 @@ Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class.md) Objekt
 |`WS_VISIBLE`|Erstellt ein Fenster, das anfänglich sichtbar ist.|  
 |`WS_VSCROLL`|Erstellt ein Fenster mit einer vertikalen Schiebeleiste.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>Erweiterte Fensterstile  
+## <a name="extended-window-styles"></a> Erweiterte Fensterstile  
   
 Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class.md) Objekte. Geben Sie eine Kombination der Formate in der `dwExStyle` Parameter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Weitere Informationen zu erweiterten Fensterstile in Windows finden Sie unter [erweiterten Fensterstile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
   

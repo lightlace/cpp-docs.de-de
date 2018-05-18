@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc8bf88ce5258dc36a06f32ebaa5e2cdf15092fc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData-Struktur
 Diese Struktur enthält die Klasse Instanzdaten im Windowing Code in ATL  
@@ -52,7 +52,7 @@ Diese Struktur enthält die Klasse Instanzdaten im Windowing Code in ATL
  **Header:** atlbase.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [Strukturen](../../atl/reference/atl-structures.md)
+ [Klassen und Strukturen](../../atl/reference/atl-classes.md)
 
 
 

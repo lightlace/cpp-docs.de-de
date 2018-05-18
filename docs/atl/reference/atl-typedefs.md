@@ -33,11 +33,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb730faae0b70b840b637dc54a9f7b636f1d7a6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 811dbda4360bcb3a618a4ceaa5228e57dab312ae
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-typedefs"></a>ATL-Typdefinitionen
 Der Active Template Library enthält die folgenden typedefs-Elementen.  
@@ -308,6 +308,4 @@ typedef CUrl* LPURL;
  [ATL COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
  [Funktionen](../../atl/reference/atl-functions.md)   
  [Global Variables (Globale Variablen)](../../atl/reference/atl-global-variables.md)   
- [Strukturen](../../atl/reference/atl-structures.md)   
- [Makros](../../atl/reference/atl-macros.md)   
- [Klassen](../../atl/reference/atl-classes.md)
+ [Klassen und Strukturen](../../atl/reference/atl-classes.md) [Makros](../../atl/reference/atl-macros.md)   

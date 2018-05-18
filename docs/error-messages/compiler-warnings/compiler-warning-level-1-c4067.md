@@ -16,42 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eccec985e6a9e652f18c6513542942351ff6efc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-warning-level-1-c4067"></a>Compilerwarnung (Stufe 1) C4067
-Unerwartetes Token nach Präprozessordirektive - Zeilenvorschub erwartet  
-  
- Der Compiler gefunden und zusätzliche Zeichen hinter einer Präprozessordirektive ignoriert. Diese Warnung wird nur ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-```  
-// C4067a.cpp  
-// compile with: /DX /Za /W1  
-#pragma warning(default:4067)  
-#if defined(X)  
-#else  
-#endif v   // C4067  
-int main()  
-{  
-}  
-```  
-  
-### <a name="to-resolve-this-warning-try-the-following"></a>Um diese Warnung zu beheben, versuchen Sie Folgendes:  
-  
-1.  Kompilieren Sie mit **"/ Ze"**.  
-  
-2.  Verwenden Sie Kommentartrennzeichen:  
-  
-```  
-// C4067b.cpp  
-// compile with: /DX /Za /W1  
-#if defined(X)  
-#else  
-#endif  
-int main()  
-{  
-}  
+
+> Unerwartetes Token nach Präprozessordirektive - Zeilenvorschub erwartet
+
+## <a name="remarks"></a>Hinweise
+
+Der Compiler gefunden und zusätzliche Zeichen hinter einer Präprozessordirektive ignoriert. Dies kann durch eine unerwarteten Zeichen verursacht werden, obwohl eine häufige Ursache ein fehlgeleitetes Semikolon nach der Direktive ist. Kommentare führen nicht dazu, dass diese Warnung. Die **"/ Za"** -Compileroption kann diese Warnung für weitere Präprozessordirektiven als die Standardeinstellung.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// C4067a.cpp
+// compile with: cl /EHsc /DX /W1 /Za C4067a.cpp
+#include <iostream>
+#include <string> s     // C4067
+#if defined(X);         // C4067
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif;                 // C4067 only under /Za
+int main()
+{
+    std::cout << s << std::endl;
+}
+```
+
+Zur Behebung des Problems, löschen Sie die einzelnen Zeichen, oder verschieben sie in einem Kommentarblock. Bestimmte C4067 Warnungen werden möglicherweise deaktiviert, durch das Entfernen der **"/ Za"** -Compileroption.
+
+```cpp
+// C4067b.cpp
+// compile with: cl /EHsc /DX /W1 C4067b.cpp
+#include <iostream>
+#include <string>
+#if defined(X)
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif
+int main()
+{
+    std::cout << s << std::endl;
+}
 ```
