@@ -1,7 +1,7 @@
 ---
 title: Bereitstellung in Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Bereitstellung in Visual C++
 
 Installation der Anwendung auf einem anderen Computer als Ihrem Entwicklungscomputer genannt *Bereitstellung*. Wenn Sie eine Visual C++-Anwendung auf einen anderen Computer bereitstellen, müssen Sie installieren die Anwendung und alle Bibliotheksdateien, von denen er abhängt. Visual Studio ermöglicht es drei Möglichkeiten zum Bereistellen der Visual C++-Bibliotheken zusammen mit der Anwendung: *zentrale Bereitstellung*, *lokale Bereitstellung*, und *statische Verknüpfung*. Zentrale Bereitstellung setzt die Bibliotheksdateien unter dem Windows-Verzeichnis, in dem der Windows Update-Dienst diese automatisch aktualisieren kann. Lokale Bereitstellung werden Bibliotheksdateien im selben Verzeichnis wie die Anwendung. Alle lokal bereitgestellten Bibliotheken muss erneut selbst aktualisieren. Statisches verknüpfen bindet des Bibliothekscodes in Ihrer Anwendung. Sie müssen die Neukompilierung und erneute Bereitstellung die Anwendung nutzen alle Updates an den Bibliotheken, wenn Sie statische Verknüpfung verwenden.
+
+In Visual Studio 2015 wurde Microsoft C-Laufzeitbibliothek in lokale Bibliothek versionsspezifische-Komponenten und eine neue universelle C-Laufzeit-Bibliothek, die jetzt Teil von Windows ist umgestaltet. Informationen zur Bereitstellung der Universal CRT finden Sie unter [Universal CRT-Bereitstellung](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Zentrale Bereitstellung
 
@@ -59,4 +61,5 @@ Die Ladereihenfolge von Visual C++-Bibliotheken ist systemabhängig. Verwenden S
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Universal CRT-Bereitstellung](universal-crt-deployment.md)

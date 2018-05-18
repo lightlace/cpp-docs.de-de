@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d50ca37b90251a797f70129e4b8ce1778b4d73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-com-desktop-components"></a>ATL-COM-Desktop-Komponenten
 Der ATL-Verweis dokumentiert der ATL Active Template Library (), einen Satz von Template-basierten C++-Klassen, die die Programmierung von Component Object Model (COM)-Objekten vereinfachen. Um vollständig ATL nutzen, wird eine Kenntnisse COM dringend empfohlen.  
@@ -28,8 +28,8 @@ Der ATL-Verweis dokumentiert der ATL Active Template Library (), einen Satz von 
  [ATL-Klassenübersicht](../atl/atl-class-overview.md)  
  Bietet Links zu und kurze Beschreibungen der ATL-Klassen, die nach Kategorie organisiert.  
   
- [ATL-Klassen](../atl/reference/atl-classes.md)  
- Enthält Referenzmaterial für die Klassen in alphabetischer Reihenfolge angeordnet.  
+ [ATL-Klassen und -Strukturen](../atl/reference/atl-classes.md)  
+ Enthält Referenzmaterial für die Klassen und Strukturen alphabetisch geordnet.  
   
  [ATL-Funktionen](../atl/reference/atl-functions.md)  
  Enthält Referenzmaterial für die globalen Funktionen alphabetisch geordnet. Enthält Themen, die die Funktionen in Kategorien organisiert.  
@@ -40,14 +40,11 @@ Der ATL-Verweis dokumentiert der ATL Active Template Library (), einen Satz von 
  [ATL-Makros](../atl/reference/atl-macros.md)  
  Enthält Referenzmaterial für die Makros in alphabetischer Reihenfolge angeordnet. Enthält Themen, die die Makros in Kategorien organisiert.  
   
- [ATL-Strukturen](../atl/reference/atl-structures.md)  
- Enthält Referenzmaterial für die Strukturen alphabetisch geordnet.  
-  
  [ATL-Typdefinitionen](../atl/reference/atl-typedefs.md)  
  Enthält Referenzmaterial für die Typdefinitionen alphabetisch geordnet  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- Enthält Links zu den ATL-Archetypes, theoretisch Klassen, die eine Auflistung von Methoden, Datenmember, statische Funktionen, Typdefinitionen oder andere Funktionen, die in alphabetischer Reihenfolge aufgeführten angeben.  
+ [Worker Archetype](../atl/reference/worker-archetype.md)  
+ Enthält Links zu den ATL-Worker-Urtyp an.  
   
  [Veraltete ATL-Themen](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
  Enthält Referenzmaterial für die Klassen, Makros und Funktionen, die veraltet sind.  

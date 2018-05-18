@@ -1,7 +1,7 @@
 ---
-title: ATL-Klassen | Microsoft Docs
+title: ATL-Klassen und Strukturen | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL-Klassen
-Die Active Template Library (ATL) umfasst die folgenden Klassen. Zum Suchen nach einer bestimmten Klasse nach Kategorie finden Sie unter der [ATL-Klassenübersicht](../../atl/atl-class-overview.md).  
+# <a name="atl-classes-and-structs"></a>ATL-Klassen und Strukturen
+Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. Zum Suchen nach einer bestimmten Klasse nach Kategorie finden Sie unter der [ATL-Klassenübersicht](../../atl/atl-class-overview.md).  
   
-|Klasse|Beschreibung|Headerdatei|  
+|Klasse / Struktur|Beschreibung|Headerdatei|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Enthält Informationen zum Rendern an verschiedene Ziele, wie Drucker, Metadatei oder ActiveX-Steuerelement verwendet.|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Enthält die Klasse Instanzdaten Windowing Code im ATL|Atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|Von jedem Projekt, die ATL verwendet verwendet|Atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|Verwendung durch COM-bezogenen Code in ATL| Atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|Enthält die Typinformationen verwendet, um eine Methode oder Eigenschaft auf eine Dispinterface beschreiben.|Atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|Enthält Daten, die von jedem ATL-Modul verwendet.|Atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|Verwendet von Windowing Code in ATL|Atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Diese Klasse wird verwendet, indem die Makros zur zeichenfolgenkonvertierung `CA2TEX` und `CT2AEX`, und die Typedef **CA2A**.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Diese Klasse wird verwendet, von Makros zur zeichenfolgenkonvertierung `CA2CTEX` und `CT2CAEX`, und die Typedef **CA2CA**.|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|Diese Klasse wird verwendet, indem die Makros zur zeichenfolgenkonvertierung `CA2TEX`, `CA2CTEX`, `CT2WEX`, und `CT2CWEX`, und die Typedef **CA2W**.|atlconv.h|  
@@ -224,7 +231,6 @@ Die Active Template Library (ATL) umfasst die folgenden Klassen. Zum Suchen nach
  [ATL COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
  [Funktionen](../../atl/reference/atl-functions.md)   
  [Global Variables (Globale Variablen)](../../atl/reference/atl-global-variables.md)   
- [Strukturen](../../atl/reference/atl-structures.md)   
  [Typdefinitionen](../../atl/reference/atl-typedefs.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
 

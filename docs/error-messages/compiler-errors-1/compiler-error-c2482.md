@@ -16,28 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c4725dd357854db504272e5b8b9d88641b143d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3dd23069f389d0a02e10d26edb7ee4fd3c373cb
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-error-c2482"></a>Compilerfehler C2482
 
->"*Bezeichner*": der dynamischen Initialisierung von "Thread" Daten nicht zulässig
+>"*Bezeichner*": der dynamischen Initialisierung von "Thread"-Daten in verwalteten/WinRT-Code nicht zulässig
 
-Diese Fehlermeldung wird in Visual Studio 2015 und höher veraltet. In früheren Versionen Variablen deklariert, indem die `thread` Attribut kann nicht initialisiert werden, mit einem Ausdruck, der zur Laufzeit Auswertung erfordert. Ein statischer Ausdruck ist erforderlich, um initialisieren `thread` Daten.
+## <a name="remarks"></a>Hinweise
+
+Beim verwalteten oder WinRT-code, Variablen, die deklariert, indem die [__declspec(thread)](../../cpp/thread.md) Speicher Modifizierer Klassenattribut oder [Thread_local](../../cpp/storage-classes-cpp.md#thread_local) -Speicherklassenspezifizierer kann nicht mit einem Ausdruck initialisiert werden die muss es sich um zur Laufzeit ausgewertet werden. Ein statischer Ausdruck ist erforderlich, um initialisieren `__declspec(thread)` oder `thread_local` Daten in diese Laufzeitumgebungen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C2482 generiert in Visual Studio 2013 und früheren Versionen generiert:
+Im folgende Beispiel wird C2482 generiert in verwaltet (**"/ CLR"**) und WinRT (**/Zw**) Code:
 
 ```cpp
 // C2482.cpp
-// compile with: /c
+// For managed example, compile with: cl /EHsc /c /clr C2482.cpp
+// For WinRT example, compile with: cl /EHsc /c /ZW C2482.cpp
 #define Thread __declspec( thread )
-Thread int tls_i = tls_i;   // C2482
+Thread int tls_i1 = tls_i1;   // C2482
 
 int j = j;   // OK in C++; C error
-Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
+
+Um dieses Problem zu beheben, Initialisieren von lokalem Threadspeicher mithilfe einer Konstanten **Constexpr**, oder statischer Ausdruck. Initialisierungen threadspezifische separat ausführen.

@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 Stellt die Basisfunktionalität aller Fensterklassen der Microsoft Foundation Class-Bibliothek bereit.  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|Gibt eine Benachrichtigung darüber aus, dass ein angegebenes Fenster aus der Kette entfernt wird.|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|Wird aufgerufen, wenn der Benutzeroberflächenstatus (UI) geändert werden sollte.|  
 |[CWnd::OnChar](#onchar)|Wird aufgerufen, wenn eine Tastatureingabe in ein systemfremdes Zeichen übersetzt wird.|  
-|[CWnd::OnCharToItem](#onchartoitem)|Wird aufgerufen, indem Sie ein untergeordnetes Listenfeld mit den [LBS_WANTKEYBOARDINPUT](list-box-styles.md) Stil als Antwort auf eine [WM_CHAR](#onchar) Nachricht.|  
+|[CWnd::OnCharToItem](#onchartoitem)|Wird aufgerufen, indem Sie ein untergeordnetes Listenfeld mit den [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) Stil als Antwort auf eine [WM_CHAR](#onchar) Nachricht.|  
 |[CWnd::OnChildActivate](#onchildactivate)|Wird für untergeordnete MDI-Fenster (Multiple Document Interface, Schnittstelle für mehrere Dokumente) aufgerufen, sobald sich die Größe oder Position von `CWnd` ändert oder `CWnd` aktiviert wird.|  
 |[CWnd::OnChildNotify](#onchildnotify)|Wird durch ein übergeordnetes Fenster aufgerufen, um einem Benachrichtigungssteuerelement zu ermöglichen, auf eine Steuerelementbenachrichtigung zu antworten.|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Wird aufgerufen, wenn die Inhalte der Zwischenablage geändert wurden.|  
