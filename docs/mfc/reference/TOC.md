@@ -419,6 +419,7 @@
 ## [CSpinButtonCtrl-Klasse](cspinbuttonctrl-class.md)
 ## [CSplitButton-Klasse](csplitbutton-class.md)
 ## [CSplitterWnd-Klasse](csplitterwnd-class.md)
+## [CSplitterWndEx](csplitterwndex-class.md)
 ## [CStatic-Klasse](cstatic-class.md)
 ## [CStatusBar-Klasse](cstatusbar-class.md)
 ## [CStatusBarCtrl-Klasse](cstatusbarctrl-class.md)
@@ -476,7 +477,8 @@
 ## [Dialogdatenaustausch-Funktionen für CRecordView und CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md)
 ## [Dialogdatenaustausch-Funktionen für OLE-Steuerelemente](dialog-data-exchange-functions-for-ole-controls.md)
 ## [Datenbankmakros und globale Variablen](database-macros-and-globals.md)
-## [Initialisieren und Beenden des DAO-Datenbankmoduls](dao-database-engine-initialization-and-termination.md)
+## 
+  [Initialisieren und Beenden der DAO-Datenbank-Engine](dao-database-engine-initialization-and-termination.md)
 ## [OLE-Initialisierung](ole-initialization.md)
 ## [Anwendungssteuerelement](application-control.md)
 ## [Dispatchzuordnungen](dispatch-maps.md)
