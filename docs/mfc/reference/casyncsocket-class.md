@@ -1,12 +1,9 @@
 ---
 title: CAsyncSocket-Klasse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaefa40be2a6cf1d57326c2135d848fa08dbc87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket-Klasse
 Stellt eine Windows Socket dar – ein Endpunkt der Netzwerkkommunikation.  
@@ -187,7 +182,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Datei afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
  Rufen Sie diese Memberfunktion zum Annehmen einer Verbindung auf einem Socket.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL Accept(
   
 - **WSAEMFILE** der Warteschlange beim Eintritt akzeptieren leer ist, und es sind keine Dateideskriptoren verfügbar.  
   
-- `WSAENOBUFS`Es ist kein Pufferplatz verfügbar.  
+- `WSAENOBUFS` Es ist kein Pufferplatz verfügbar.  
   
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
@@ -235,7 +230,7 @@ virtual BOOL Accept(
   
  Das Argument `lpSockAddr` ist ein Ergebnisparameter, der mit der Adresse des verbundenen Sockets ausgefüllt wird, wie die Kommunikation Ebene bekannt. **Akzeptieren Sie** wird verwendet, mit verbindungsorientierten Sockettypen wie z. B. **SOCK_STREAM**.  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  Rufen Sie diese Memberfunktion zum Anfordern der ereignisbenachrichtigung für ein Socket.  
   
 ```  
@@ -270,9 +265,9 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 - **"WSAEINPROGRESS" zurück** ein Blockierungsvorgang Windows Sockets wird ausgeführt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird verwendet, um anzugeben, welche MFC Benachrichtigung Rückruffunktionen für den Socket aufgerufen werden. `AsyncSelect`legt automatisch diesem Socket nicht blockierenden Modus fest. Weitere Informationen finden Sie im Artikel [Windows Sockets: Socketbenachrichtigungen](../../mfc/windows-sockets-socket-notifications.md).  
+ Diese Funktion wird verwendet, um anzugeben, welche MFC Benachrichtigung Rückruffunktionen für den Socket aufgerufen werden. `AsyncSelect` legt automatisch diesem Socket nicht blockierenden Modus fest. Weitere Informationen finden Sie im Artikel [Windows Sockets: Socketbenachrichtigungen](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
  Rufen Sie diese Memberfunktion für die Verbindung der `hSocket` handle für ein `CAsyncSocket` Objekt.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL Attach(
 ### <a name="remarks"></a>Hinweise  
  Die **SOCKET** Handle wird gespeichert, in des Objekts [M_hSocket](#m_hsocket) -Datenmember.  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
  Rufen Sie diese Memberfunktion um den Socket eine lokale Adresse zuzuordnen.  
   
 ```  
@@ -345,18 +340,18 @@ BOOL Bind (
   
 - **"WSAEINPROGRESS" zurück** ein blockierender Aufruf der Windows-Sockets ist in Bearbeitung.  
   
-- **** Der angegebenen Adressfamilie wird von dieser Port nicht unterstützt.  
+- **WSAEAFNOSUPPORT** Der angegebenen Adressfamilie wird von dieser Port nicht unterstützt.  
   
 - **WSAEINVAL** der Socket ist bereits an eine Adresse gebunden.  
   
-- `WSAENOBUFS`Nicht genügend Puffer verfügbar ist, zu viele Verbindungen.  
+- `WSAENOBUFS` Nicht genügend Puffer verfügbar ist, zu viele Verbindungen.  
   
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Routine dient auf einem unverbundenen Datagramm oder einem Streamsocket, vor dem nachfolgenden **verbinden** oder `Listen` aufrufen. Bevor er verbindungsanforderungen annehmen kann, einem Abhörsocket Server muss auswählen eine Portnummer und bekannte für Windows Sockets durch Aufrufen von **binden**. **Binden Sie** richtet die lokale Zuordnung (Host-Adresse/Port-Nummer) des Sockets durch einen unbenannten Socket einen lokalen Namen zuweisen.  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
  Erstellt einen leeren Socketobjekt.  
   
 ```  
@@ -366,7 +361,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>Hinweise  
  Nach dem Erstellen des Objekts, rufen Sie die **erstellen** Memberfunktion zum Erstellen der **SOCKET** Daten strukturieren und seine Adresse binden. (Beim Erstellen der Abhörsocket ein Socket für die Verwendung in einer Windows-Sockets Kommunikation auf dem Server die **Accept** Aufruf, rufen Sie nicht **erstellen** für diese Socket.)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>  CAsyncSocket::Close  
  Schließt den Socket.  
   
 ```  
@@ -378,7 +373,7 @@ virtual void Close();
   
  Für `CAsyncSocket`, jedoch nicht für `CSocket`, die Semantik der **schließen** sind von den Socketoptionen betroffen **SO_LINGER** und **SO_DONTLINGER**. Weitere Informationen finden Sie unter Memberfunktion `GetSockOpt`.  
   
-##  <a name="connect"></a>CAsyncSocket:: Connect  
+##  <a name="connect"></a>  CAsyncSocket:: Connect  
  Rufen Sie diese Memberfunktion zum Herstellen einer Verbindung mit einem unverbundenen Stream oder einen Datagrammsocket.  
   
 ```  
@@ -418,7 +413,7 @@ BOOL Connect(
   
 - **WSAEADDRNOTAVAIL** die angegebene Adresse ist nicht auf dem lokalen Computer verfügbar.  
   
-- **** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
+- **WSAEAFNOSUPPORT** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
   
 - **STARK** Verbindungsversuch wurde zurückgewiesen.  
   
@@ -434,7 +429,7 @@ BOOL Connect(
   
 - **WSAENETUNREACH** im Netzwerk kann nicht zu diesem Zeitpunkt nicht von diesem Host erreicht werden.  
   
-- `WSAENOBUFS`Es ist kein Pufferplatz verfügbar. Der Socket kann nicht verbunden werden.  
+- `WSAENOBUFS` Es ist kein Pufferplatz verfügbar. Der Socket kann nicht verbunden werden.  
   
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
@@ -449,7 +444,7 @@ BOOL Connect(
   
  Für einen Datagrammsocket (Typ **SOCK_DGRAM**), ein Standardziel festgelegt ist, wird in nachfolgenden verwendet werden **senden** und **Receive** aufrufen.  
   
-##  <a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>  CAsyncSocket::Create  
  Rufen Sie die **erstellen** Memberfunktion nach dem Erstellen einer Socketobjekt, um die Windows Socket erstellt und angefügt.  
   
 ```  
@@ -492,13 +487,13 @@ BOOL Create(
   
 - **WSAENETDOWN** der Windows Sockets-Implementierung erkannt, dass das Netzwerksubsystem fehlgeschlagen ist.  
   
-- **** Der angegebenen Adressfamilie wird nicht unterstützt.  
+- **WSAEAFNOSUPPORT** Der angegebenen Adressfamilie wird nicht unterstützt.  
   
 - **"WSAEINPROGRESS" zurück** ein Blockierungsvorgang Windows Sockets wird ausgeführt.  
   
 - **WSAEMFILE** keine weiteren Dateideskriptoren verfügbar sind.  
   
-- `WSAENOBUFS`Es ist kein Pufferplatz verfügbar. Der Socket kann nicht erstellt werden.  
+- `WSAENOBUFS` Es ist kein Pufferplatz verfügbar. Der Socket kann nicht erstellt werden.  
   
 - **WSAEPROTONOSUPPORT** der angegebene Port wird nicht unterstützt.  
   
@@ -521,14 +516,14 @@ BOOL Create(
   
  Weitere Informationen zu Stream als auch datagrammnachrichten Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md) und [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md) und [APIvonWindowsSockets2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
  Rufen Sie diese Memberfunktion zum Trennen der **SOCKET** in behandelt die `m_hSocket` Datenmember aus der `CAsyncSocket` Objekt, und `m_hSocket` auf **NULL**.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
  Gibt einen Zeiger auf eine `CAsyncSocket` Objekt.  
   
 ```  
@@ -545,7 +540,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>Hinweise  
  Wenn eine **SOCKET** zu behandeln, wenn eine `CAsyncSocket` Objekt nicht an das Handle angefügt ist, die Memberfunktion gibt **NULL**.  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
  Rufen Sie diese Memberfunktion um den Fehlerstatus für den letzten Vorgang zu erhalten, die nicht an.  
   
 ```  
@@ -560,7 +555,7 @@ static int PASCAL GetLastError();
   
  Weitere Informationen zu den Fehlercodes finden Sie unter [Windows Sockets-2-API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Rufen Sie diese Memberfunktion erhalten die Adresse des Sockets Peer, mit dem dieser Socket verbunden ist.  
   
 ```  
@@ -605,7 +600,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Behandeln von IPv6-Adressen [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
  Rufen Sie diese Memberfunktion erhalten, die Adresse des Sockets Peer, der diesem Socket verbunden ist (Handles IPv6-Adressen) ist.  
   
 ```  
@@ -639,7 +634,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist identisch mit [CAsyncSocket::GetPeerName](#getpeername) mit dem Unterschied, dass sie behandelt, dass IPv6-Adressen auch als ältere Protokolle.  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
  Rufen Sie diese Memberfunktion um den lokalen Namen eines Sockets zu erhalten.  
   
 ```  
@@ -686,7 +681,7 @@ BOOL GetSockName(
   
  Verwenden Sie zum Behandeln von IPv6-Adressen [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
  Rufen Sie diese Memberfunktion um den lokalen Namen eines Sockets (Handles IPv6-Adressen) zu erhalten.  
   
 ```  
@@ -722,7 +717,7 @@ BOOL GetSockNameEx(
   
  Dieser Aufruf ist besonders nützlich, wenn eine **verbinden** aufgerufen wurde ohne dabei eine **binden** zuerst dieses Aufrufs stellt die einzige Möglichkeit, die durch den lokale Zuordnung, die festgelegt wurde, indem bestimmt werden kann die System.  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
  Rufen Sie diese Memberfunktion zum Abrufen einer Socket-Option.  
   
 ```  
@@ -762,7 +757,7 @@ BOOL GetSockOpt(
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetSockOpt`Ruft den aktuellen Wert für eine Socketoption zugeordneten ein Socket eines beliebigen Typs, in einem beliebigen Zustand, und speichert das Ergebnis in `lpOptionValue`. Die Optionen beeinflussen Socketvorgänge, z. B. das routing der Pakete, die Out-of-Band-Datenübertragung und So weiter.  
+ `GetSockOpt` Ruft den aktuellen Wert für eine Socketoption zugeordneten ein Socket eines beliebigen Typs, in einem beliebigen Zustand, und speichert das Ergebnis in `lpOptionValue`. Die Optionen beeinflussen Socketvorgänge, z. B. das routing der Pakete, die Out-of-Band-Datenübertragung und So weiter.  
   
  Die folgenden Optionen sind für unterstützt `GetSockOpt`. Den Typ identifiziert den Typ der Daten, die vom adressiert `lpOptionValue`. Die **TCP_NODELAY** Option verwendet Ebene **IPPROTO_TCP**; alle anderen Optionen verwenden Ebene **SOL_SOCKET**.  
   
@@ -796,7 +791,7 @@ BOOL GetSockOpt(
   
  Aufrufen von `GetSockOpt` mit einer nicht unterstützten Option führt zu einem Fehlercode von **WSAENOPROTOOPT** zurückgegeben werden aus der `GetLastError`.  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
  Rufen Sie diese Memberfunktion um den Modus eines Sockets zu steuern.  
   
 ```  
@@ -836,7 +831,7 @@ BOOL IOCtl(
   
  Diese Funktion ist eine Teilmenge der **ioctl()** in Berkeley-Sockets verwendet. Insbesondere, es gibt keinen Befehl entspricht **FIOASYNC**, während **SIOCATMARK** ist nur Socketebene-Befehl das unterstützt wird.  
   
-##  <a name="listen"></a>CAsyncSocket:: Listen  
+##  <a name="listen"></a>  CAsyncSocket:: Listen  
  Rufen Sie diese Memberfunktion zum Abhören von eingehenden verbindungsanforderungen.  
   
 ```  
@@ -864,27 +859,27 @@ BOOL Listen(int nConnectionBacklog = 5);
   
 - **WSAEMFILE** keine weiteren Dateideskriptoren verfügbar sind.  
   
-- `WSAENOBUFS`Es ist kein Pufferplatz verfügbar.  
+- `WSAENOBUFS` Es ist kein Pufferplatz verfügbar.  
   
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
 - **WSAEOPNOTSUPP** referenzierte Socket ist nicht vom ein Typ, unterstützt die `Listen` Vorgang.  
   
 ### <a name="remarks"></a>Hinweise  
- Um Verbindungen zu akzeptieren, wird der Socket zuerst mit erstellt **erstellen**, ein Backlog für eingehende Verbindungen mit angegeben wird `Listen`, und klicken Sie dann die Verbindungen akzeptiert werden **Accept**. `Listen`gilt nur für Sockets, die Verbindungen, d. h. unterstützen die eines Typs **SOCK_STREAM**. Diesem Socket ist, wobei eingehende Verbindungen bestätigt und in der Warteschlange ausstehender Annahme durch den Prozess "passive" Modus versetzen.  
+ Um Verbindungen zu akzeptieren, wird der Socket zuerst mit erstellt **erstellen**, ein Backlog für eingehende Verbindungen mit angegeben wird `Listen`, und klicken Sie dann die Verbindungen akzeptiert werden **Accept**. `Listen` gilt nur für Sockets, die Verbindungen, d. h. unterstützen die eines Typs **SOCK_STREAM**. Diesem Socket ist, wobei eingehende Verbindungen bestätigt und in der Warteschlange ausstehender Annahme durch den Prozess "passive" Modus versetzen.  
   
  Diese Funktion wird meist von Servern (oder jede Anwendung, die Verbindungen akzeptieren möchte) verwendet, die möglicherweise mehr als eine verbindungsanforderung zu einem Zeitpunkt: Wenn eine verbindungsanforderung mit der vollständigen Warteschlange eingeht, der Client wird eine Fehlermeldung mit Angabe der  **STARK**.  
   
- `Listen`versucht, die weiterhin Rational funktionsfähig, wenn es keine verfügbaren Ports (Deskriptoren sind). Es werden Verbindungen akzeptieren, bis die Warteschlange geleert wird. Wenn Ports verfügbar eines späteren Aufrufs von `Listen` oder **Accept** möglichst Auffüllen von der Warteschlange des aktuellen oder letzten "Backlog,", und für eingehende Verbindungen Überwachung fort.  
+ `Listen` versucht, die weiterhin Rational funktionsfähig, wenn es keine verfügbaren Ports (Deskriptoren sind). Es werden Verbindungen akzeptieren, bis die Warteschlange geleert wird. Wenn Ports verfügbar eines späteren Aufrufs von `Listen` oder **Accept** möglichst Auffüllen von der Warteschlange des aktuellen oder letzten "Backlog,", und für eingehende Verbindungen Überwachung fort.  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
  Enthält die **SOCKET** -handle für den Socket gekapselt, die von diesem `CAsyncSocket` Objekt.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
  Wird aufgerufen, durch das Framework auf einem Abhörsocket zu informieren, die er ausstehenden verbindungsanforderungen, durch Aufrufen annehmen kann der [Accept](#accept) Memberfunktion.  
   
 ```  
@@ -902,7 +897,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [Windows Sockets: Socketbenachrichtigungen](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
  Wird aufgerufen, durch das Framework um diesem Socket zu benachrichtigen, dass die verbundene Socket von einem Prozess geschlossen wird.  
   
 ```  
@@ -924,7 +919,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [Windows Sockets: Socketbenachrichtigungen](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
  Vom Framework aufgerufen wird, diese Verbindung Socket mitzuteilen, dass der Verbindungsversuch, ob erfolgreich oder Fehler abgeschlossen ist.  
   
 ```  
@@ -941,7 +936,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAEADDRNOTAVAIL** die angegebene Adresse ist nicht auf dem lokalen Computer verfügbar.  
   
-- **** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
+- **WSAEAFNOSUPPORT** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
   
 - **STARK** Verbindungsversuch abgelehnten erzwungen.  
   
@@ -957,7 +952,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAENETUNREACH** im Netzwerk kann nicht zu diesem Zeitpunkt nicht von diesem Host erreicht werden.  
   
-- `WSAENOBUFS`Es ist kein Pufferplatz verfügbar. Der Socket kann nicht verbunden werden.  
+- `WSAENOBUFS` Es ist kein Pufferplatz verfügbar. Der Socket kann nicht verbunden werden.  
   
 - **WSAENOTCONN** der Socket nicht verbunden ist.  
   
@@ -975,7 +970,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
  Wird aufgerufen, durch das Framework auf den empfangenden Socket zu informieren, den der sendende Socket Out-of-Band-Daten, die gesendet wurde.  
   
 ```  
@@ -995,7 +990,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC unterstützt die Out-of-Band-Daten, aber der Benutzer der Klasse `CAsyncSocket` werden aus ihrer Verwendung abgeraten. Einfacher besteht darin, einen zweiten Socket für die Übergabe von Daten zu erstellen. Weitere Informationen über Out-of-Band-Daten finden Sie unter [Windows Sockets: Socketbenachrichtigungen](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
  Wird aufgerufen, durch das Framework um diesem Socket zu benachrichtigen, dass Daten in den Puffer, die durch den Aufruf abgerufen werden kann die **Receive** Memberfunktion.  
   
 ```  
@@ -1016,7 +1011,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
  Wird aufgerufen, durch das Framework dem Socket zu benachrichtigen, dass sie Daten durch den Aufruf jetzt senden kann die **senden** Memberfunktion.  
   
 ```  
@@ -1037,7 +1032,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
  Weist einen neuen Wert zu einem `CAsyncSocket` Objekt.  
   
 ```  
@@ -1051,7 +1046,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion können Sie einen vorhandenen kopieren `CAsyncSocket` Objekt zu einem anderen `CAsyncSocket` Objekt.  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator SOCKET  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET  
  Verwenden Sie diesen Operator zum Abrufen der **SOCKET** Handles aus dem `CAsyncSocket` Objekt.  
   
 ```  
@@ -1064,7 +1059,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>Hinweise  
  Sie können das Handle verwenden, Windows-APIs direkt aufrufen.  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
  Rufen Sie diese Memberfunktion zum Empfangen von Daten aus einem Socket.  
   
 ```  
@@ -1129,7 +1124,7 @@ virtual int Receive(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
  Rufen Sie diese Memberfunktion zum Empfangen eines Datagramms und speichern die Quelladresse in die [SOCKADDR](../../mfc/reference/sockaddr-structure.md) Struktur oder im `rSocketAddress`.  
   
 ```  
@@ -1217,7 +1212,7 @@ int ReceiveFrom(
   
  Wenn der Typ der Socket ist **SOCK_STREAM** und die Remoteseite hat die Verbindung ordnungsgemäß heruntergefahren, eine `ReceiveFrom` sofort abgeschlossen wird, mit 0 empfangenen Bytes.  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
  Rufen Sie diese Memberfunktion zum Empfangen eines Datagramms und speichern die Quelladresse in die [SOCKADDR](../../mfc/reference/sockaddr-structure.md) Struktur oder im `rSocketAddress` (handles IPv6-Adressen).  
   
 ```  
@@ -1291,7 +1286,7 @@ int ReceiveFromEx(
   
  Wenn der Typ der Socket ist **SOCK_STREAM** und die Remoteseite hat die Verbindung ordnungsgemäß heruntergefahren, eine `ReceiveFromEx` sofort abgeschlossen wird, mit 0 empfangenen Bytes.  
   
-##  <a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>  CAsyncSocket::Send  
  Rufen Sie diese Memberfunktion zum Senden von Daten für einen verbundenen Socket.  
   
 ```  
@@ -1330,7 +1325,7 @@ virtual int Send(
   
 - **WSAENETRESET** die Verbindung muss zurückgesetzt werden, da der Windows Sockets-Implementierung, die sie gelöscht.  
   
-- `WSAENOBUFS`Windows Sockets-Implementierung eine Puffer-Deadlocks gemeldet.  
+- `WSAENOBUFS` Windows Sockets-Implementierung eine Puffer-Deadlocks gemeldet.  
   
 - **WSAENOTCONN** der Socket nicht verbunden ist.  
   
@@ -1360,7 +1355,7 @@ virtual int Send(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CAsyncSocket::OnSend](#onsend).  
   
-##  <a name="sendto"></a>Einsatz  
+##  <a name="sendto"></a>  Einsatz  
  Rufen Sie diese Memberfunktion zum Senden von Daten an ein bestimmtes Ziel.  
   
 ```  
@@ -1423,7 +1418,7 @@ int SendTo(
   
 - **WSAENETRESET** die Verbindung muss zurückgesetzt werden, da der Windows Sockets-Implementierung, die sie gelöscht.  
   
-- `WSAENOBUFS`Windows Sockets-Implementierung eine Puffer-Deadlocks gemeldet.  
+- `WSAENOBUFS` Windows Sockets-Implementierung eine Puffer-Deadlocks gemeldet.  
   
 - **WSAENOTCONN** der Socket nicht verbunden ist ( **SOCK_STREAM** nur).  
   
@@ -1443,24 +1438,24 @@ int SendTo(
   
 - **WSAEADDRNOTAVAIL** die angegebene Adresse ist nicht auf dem lokalen Computer verfügbar.  
   
-- **** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
+- **WSAEAFNOSUPPORT** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
   
 - **WSAEDESTADDRREQ** eine Zieladresse ist erforderlich.  
   
 - **WSAENETUNREACH** im Netzwerk kann nicht zu diesem Zeitpunkt nicht von diesem Host erreicht werden.  
   
 ### <a name="remarks"></a>Hinweise  
- `SendTo`auf Datagramm oder den Stream-Sockets verwendet wird, und zum Schreiben der ausgehender Daten auf einem Socket verwendet wird. Für Datagrammsockets, muss darauf geachtet werden, nicht zu überschreiten, die maximale Größe der IP-Paket der zugrunde liegenden Subnetze, das durch vorgegeben der **iMaxUdpDg** Element in der [WSADATA](../../mfc/reference/wsadata-structure.md) Struktur ausgefüllt [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Wenn die Daten für die zugrunde liegenden Protokoll, den Fehler atomar durchlaufen zu lang ist **WSAEMSGSIZE** zurückgegeben wird, und keine Daten übertragen.  
+ `SendTo` auf Datagramm oder den Stream-Sockets verwendet wird, und zum Schreiben der ausgehender Daten auf einem Socket verwendet wird. Für Datagrammsockets, muss darauf geachtet werden, nicht zu überschreiten, die maximale Größe der IP-Paket der zugrunde liegenden Subnetze, das durch vorgegeben der **iMaxUdpDg** Element in der [WSADATA](../../mfc/reference/wsadata-structure.md) Struktur ausgefüllt [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Wenn die Daten für die zugrunde liegenden Protokoll, den Fehler atomar durchlaufen zu lang ist **WSAEMSGSIZE** zurückgegeben wird, und keine Daten übertragen.  
   
  Beachten Sie, dass beim erfolgreichen Abschluss einer `SendTo` nicht, dass die Daten erfolgreich übermittelt wurde.  
   
- `SendTo`wird nur verwendet werden, auf eine **SOCK_DGRAM** Socket zum Senden von ein Datagramm an einen bestimmten Socket identifizierte der `lpSockAddr` Parameter.  
+ `SendTo` wird nur verwendet werden, auf eine **SOCK_DGRAM** Socket zum Senden von ein Datagramm an einen bestimmten Socket identifizierte der `lpSockAddr` Parameter.  
   
  Eine Übertragung senden (auf einer **SOCK_DGRAM** nur), die Adresse in der `lpSockAddr` Parameter sollten erstellt werden, die spezielle IP-Adresse **INADDR_BROADCAST** (definiert in der Windows Sockets-Header WINSOCK-Datei. H) zusammen mit der gewünschten Portnummer. Oder, wenn die `lpszHostAddress` Parameter ist **NULL**, für die Übertragung der Socket konfiguriert ist. Es ist im Allgemeinen empfiehlt für ein broadcast Datagramm die Ordnergröße überschritten, in denen Fragmentierung auftreten kann, was bedeutet, dass der Datenanteil das Datagramm (mit Ausnahme von Headern) 512 Bytes nicht überschreiten darf.  
   
  Verwenden Sie zum Behandeln von IPv6-Adressen [CAsyncSocket::SendToEx](#sendtoex).  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
  Rufen Sie diese Memberfunktion zum Senden von Daten an ein bestimmtes Ziel (Handles IPv6-Adressen).  
   
 ```  
@@ -1509,7 +1504,7 @@ int SendToEx(
   
 - **WSAENETRESET** die Verbindung muss zurückgesetzt werden, da der Windows Sockets-Implementierung, die sie gelöscht.  
   
-- `WSAENOBUFS`Windows Sockets-Implementierung eine Puffer-Deadlocks gemeldet.  
+- `WSAENOBUFS` Windows Sockets-Implementierung eine Puffer-Deadlocks gemeldet.  
   
 - **WSAENOTCONN** der Socket nicht verbunden ist ( **SOCK_STREAM** nur).  
   
@@ -1529,7 +1524,7 @@ int SendToEx(
   
 - **WSAEADDRNOTAVAIL** die angegebene Adresse ist nicht auf dem lokalen Computer verfügbar.  
   
-- **** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
+- **WSAEAFNOSUPPORT** Adressen in der angegebenen Adressfamilie können nicht mit diesem Socket verwendet werden.  
   
 - **WSAEDESTADDRREQ** eine Zieladresse ist erforderlich.  
   
@@ -1538,15 +1533,15 @@ int SendToEx(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist identisch mit [Einsatz](#sendto) mit dem Unterschied, dass sie behandelt, dass IPv6-Adressen auch als ältere Protokolle.  
   
- `SendToEx`auf Datagramm oder den Stream-Sockets verwendet wird, und zum Schreiben der ausgehender Daten auf einem Socket verwendet wird. Für Datagrammsockets, muss darauf geachtet werden, nicht zu überschreiten, die maximale Größe der IP-Paket der zugrunde liegenden Subnetze, das durch vorgegeben der **iMaxUdpDg** Element in der [WSADATA](../../mfc/reference/wsadata-structure.md) Struktur ausgefüllt [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Wenn die Daten für die zugrunde liegenden Protokoll, den Fehler atomar durchlaufen zu lang ist **WSAEMSGSIZE** zurückgegeben wird, und keine Daten übertragen.  
+ `SendToEx` auf Datagramm oder den Stream-Sockets verwendet wird, und zum Schreiben der ausgehender Daten auf einem Socket verwendet wird. Für Datagrammsockets, muss darauf geachtet werden, nicht zu überschreiten, die maximale Größe der IP-Paket der zugrunde liegenden Subnetze, das durch vorgegeben der **iMaxUdpDg** Element in der [WSADATA](../../mfc/reference/wsadata-structure.md) Struktur ausgefüllt [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Wenn die Daten für die zugrunde liegenden Protokoll, den Fehler atomar durchlaufen zu lang ist **WSAEMSGSIZE** zurückgegeben wird, und keine Daten übertragen.  
   
  Beachten Sie, dass beim erfolgreichen Abschluss einer `SendToEx` nicht, dass die Daten erfolgreich übermittelt wurde.  
   
- `SendToEx`wird nur verwendet werden, auf eine **SOCK_DGRAM** Socket zum Senden von ein Datagramm an einen bestimmten Socket identifizierte der `lpSockAddr` Parameter.  
+ `SendToEx` wird nur verwendet werden, auf eine **SOCK_DGRAM** Socket zum Senden von ein Datagramm an einen bestimmten Socket identifizierte der `lpSockAddr` Parameter.  
   
  Eine Übertragung senden (auf einer **SOCK_DGRAM** nur), die Adresse in der `lpSockAddr` Parameter sollten erstellt werden, die spezielle IP-Adresse **INADDR_BROADCAST** (definiert in der Windows Sockets-Header WINSOCK-Datei. H) zusammen mit der gewünschten Portnummer. Oder, wenn die `lpszHostAddress` Parameter ist **NULL**, für die Übertragung der Socket konfiguriert ist. Es ist im Allgemeinen empfiehlt für ein broadcast Datagramm die Ordnergröße überschritten, in denen Fragmentierung auftreten kann, was bedeutet, dass der Datenanteil das Datagramm (mit Ausnahme von Headern) 512 Bytes nicht überschreiten darf.  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
  Rufen Sie diese Memberfunktion zum Festlegen einer Socketoption.  
   
 ```  
@@ -1592,9 +1587,9 @@ BOOL SetSockOpt(
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
 ### <a name="remarks"></a>Hinweise  
- `SetSockOpt`Legt den aktuellen Wert für eine Socketoption ein Socket eines beliebigen Typs, in einem beliebigen Zustand zugeordnet. Obwohl Optionen auf mehreren Protokoll Ebenen vorhanden sein können, definiert dieser Spezifikation nur Optionen, die auf der obersten "Socket" Ebene vorhanden sind. Die Optionen beeinflussen die Socketvorgänge, z. B., ob beschleunigte Daten im normalen Datenstream empfangen werden, ob Broadcastmeldungen für den Socket gesendet werden können und so weiter.  
+ `SetSockOpt` Legt den aktuellen Wert für eine Socketoption ein Socket eines beliebigen Typs, in einem beliebigen Zustand zugeordnet. Obwohl Optionen auf mehreren Protokoll Ebenen vorhanden sein können, definiert dieser Spezifikation nur Optionen, die auf der obersten "Socket" Ebene vorhanden sind. Die Optionen beeinflussen die Socketvorgänge, z. B., ob beschleunigte Daten im normalen Datenstream empfangen werden, ob Broadcastmeldungen für den Socket gesendet werden können und so weiter.  
   
- Es gibt zwei Arten von Socketoptionen: Boolean die aktivieren oder Deaktivieren einer Funktion oder das Verhalten und die Optionen die ein Integer-Wert oder eine Struktur erfordern. So aktivieren Sie eine booleschen Option `lpOptionValue` verweist auf eine ganze Zahl ungleich NULL. So deaktivieren Sie die Option `lpOptionValue` verweist auf eine ganze Zahl ungleich 0 (null). `nOptionLen`sollte gleich sein **sizeof(BOOL)** für boolesche Optionen. Weitere Optionen `lpOptionValue` verweist auf die ganze Zahl oder eine Struktur, die den gewünschten Wert für die Option enthält und `nOptionLen` ist die Länge der ganze Zahl oder Struktur.  
+ Es gibt zwei Arten von Socketoptionen: Boolean die aktivieren oder Deaktivieren einer Funktion oder das Verhalten und die Optionen die ein Integer-Wert oder eine Struktur erfordern. So aktivieren Sie eine booleschen Option `lpOptionValue` verweist auf eine ganze Zahl ungleich NULL. So deaktivieren Sie die Option `lpOptionValue` verweist auf eine ganze Zahl ungleich 0 (null). `nOptionLen` sollte gleich sein **sizeof(BOOL)** für boolesche Optionen. Weitere Optionen `lpOptionValue` verweist auf die ganze Zahl oder eine Struktur, die den gewünschten Wert für die Option enthält und `nOptionLen` ist die Länge der ganze Zahl oder Struktur.  
   
  **SO_LINGER** Steuerelemente, die die Aktion ausgeführt wird, wenn nicht gesendete Daten werden in die Warteschlange für ein Socket und **schließen** Funktion wird aufgerufen, um den Socket schließen.  
   
@@ -1637,7 +1632,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|Der Typ des Sockets.|  
 |**IP_OPTIONS**||SET-Optionen-Feld im IP-Header.|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
  Anruf sendet diese Memberfunktion zu deaktivieren, oder beides für den Socket.  
   
 ```  
@@ -1670,7 +1665,7 @@ BOOL ShutDown(int nHow = sends);
 - **WSAENOTSOCK** Deskriptor ist kein Socket.  
   
 ### <a name="remarks"></a>Hinweise  
- `ShutDown`wird auf allen Arten von Sockets verwendet, um den Empfang oder Übertragung zu deaktivieren. Wenn `nHow` gleich 0 ist, auf die nachfolgenden erhält der Socket wird nicht zugelassen. Dies wirkt sich nicht auf den unteren Protokollebenen aus.  
+ `ShutDown` wird auf allen Arten von Sockets verwendet, um den Empfang oder Übertragung zu deaktivieren. Wenn `nHow` gleich 0 ist, auf die nachfolgenden erhält der Socket wird nicht zugelassen. Dies wirkt sich nicht auf den unteren Protokollebenen aus.  
   
  Transmission Control Protocol (TCP) das TCP-Fenster wird nicht geändert und eingehende Daten werden (jedoch nicht bestätigten) akzeptiert werden, bis das Fenster angezeigt wird. User Datagram Protocol (UDP) werden eingehende Datagramme akzeptiert und in die Warteschlange eingereiht. In keinem Fall wird ein ICMP-Fehler Paket generiert werden. Wenn `nHow` beträgt 1, nachfolgende sendet sind nicht zulässig. Für TCP-Sockets wird eine FIN gesendet werden. Festlegen von `nHow` 2 deaktiviert sowohl sendet und empfängt, wie oben beschrieben.  
   
@@ -1679,7 +1674,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>  CASyncSocket::Socket  
  Reserviert ein Sockethandle.  
   
 ```  
