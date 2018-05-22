@@ -71,6 +71,7 @@
 ## [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [Ermitteln der neu zu verteilenden DLLs](determining-which-dlls-to-redistribute.md)
 ## [Auswählen einer Bereitstellungsmethode](choosing-a-deployment-method.md)
+## [Universelle CRT-Bereitstellung](universal-crt-deployment.md)
 ## [Verteilen von Visual C++-Dateien](redistributing-visual-cpp-files.md)
 ### [Neuverteilen von Komponenten mit Mergemodulen](redistributing-components-by-using-merge-modules.md)
 ### [Neuverteilen von Visual C++ ActiveX-Steuerelementen](redistributing-visual-cpp-activex-controls.md)

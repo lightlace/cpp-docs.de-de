@@ -53,6 +53,7 @@
 #### [/favor (Für Architektureigenschaften optimieren)](favor-optimize-for-architecture-specifics.md)
 #### [/FC (Vollständiger Pfad der Quellcodedatei in der Diagnose)](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp (Gleitkommaverhalten festlegen)](fp-specify-floating-point-behavior.md)
+##### [Microsoft Visual C++-Gleitkommaoptimierung](floating-point-optimization.md)
 #### [/FS (Synchrone PDB-Schreibvorgänge erzwingen)](fs-force-synchronous-pdb-writes.md)
 #### [/GA (Für Windows-Anwendung optimieren)](ga-optimize-for-windows-application.md)
 #### [/Gd, /Gr, /Gv, /Gz (Aufrufkonvention)](gd-gr-gv-gz-calling-convention.md)
