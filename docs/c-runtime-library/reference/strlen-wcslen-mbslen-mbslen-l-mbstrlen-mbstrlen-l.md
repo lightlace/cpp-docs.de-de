@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, ohne das abschließende **NULL**. Kein Rückgabewert ist zur Anzeige ein Fehlers, mit Ausnahme von reserviert **_mbstrlen** und **_mbstrlen_l**, welche Return `((size_t)(-1))` , wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
+Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, mit Ausnahme den Terminaldienste Null. Kein Rückgabewert ist zur Anzeige ein Fehlers, mit Ausnahme von reserviert **_mbstrlen** und **_mbstrlen_l**, welche Return `((size_t)(-1))` , wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -124,7 +124,7 @@ Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, ohne das abschließ
 
 **_mbslen** und **_mbslen_l** Geben Sie die Anzahl von Multibytezeichen in einer Multibyte Zeichenfolge zurück, jedoch nicht für die Gültigkeit von Multibytezeichen testen. **_mbstrlen** und **_mbstrlen_l** test für die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichenfolgen. Wenn die Zeichenfolge übergeben **_mbstrlen** oder **_mbstrlen_l** enthält ein ungültiges Multibytezeichen für die Codepage, die Funktion gibt-1 zurück und stellt **Errno** auf **EILSEQ**.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

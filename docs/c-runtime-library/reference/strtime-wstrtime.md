@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ Gibt einen Zeiger auf die resultierende Zeichenfolge *Timestr*.
 
 Die **_strtime** Funktion kopiert die aktuelle lokale Zeit in den Puffer verweist *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **"hh"** sich um zwei Ziffern, die für die Stunde im 24-Stunden-Notation **mm** sich um zwei Ziffern, die die Minuten der Stunde und darstellt.**ss** sich um zwei Ziffern, die Sekunden darstellt. Z. B. die Zeichenfolge **18:23:44** 23 Minuten und 44 Sekunden nach 6 Uhr darstellt Der Puffer muss mindestens 9 Bytes lang sein.
 
-**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Zeichenfolgen mit Breitzeichen. Diese Funktionen verhalten sich andernfalls identisch. Wenn *Timestr* ist **NULL** Zeiger oder, wenn *Timestr* ist falsch, der ungültig formatiert parameterhandler aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die Ausnahme, zugelassen wird diese Funktionen zurück, ein NULL-Wert und legen **Errno** auf **EINVAL** Wenn *Timestr* wurde ein NULL-Wert, oder legen Sie **Errno**auf **ERANGE** Wenn *Timestr* ist falsch formatiert.
+**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Zeichenfolgen mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch. Wenn *Timestr* ist ein **NULL** Zeiger oder, wenn *Timestr* ist falsch, der ungültig formatiert parameterhandler aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die Ausnahme zulässig ist, um den Vorgang fortzusetzen, geben diese Funktionen zurück eine **NULL** und legen Sie **Errno** auf **EINVAL** Wenn *Timestr* wurde eine **NULL** oder **Errno** auf **ERANGE** Wenn *Timestr* ist falsch formatiert.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

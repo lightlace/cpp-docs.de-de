@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017ea9d96cef9065ff82e7f3428e725b816c9319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -56,7 +56,7 @@ Zeiger auf eine Funktion zum Beenden, die Sie schreiben.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die vorherige Funktion registriert, indem Sie **Set_terminate** , damit die vorherige Funktion später wiederhergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen. Dieser Wert kann NULL sein.
+Gibt einen Zeiger auf die vorherige Funktion registriert, indem Sie **Set_terminate** , damit die vorherige Funktion später wiederhergestellt werden kann. Wenn keine previous-Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherstellen; Dieser Wert möglicherweise **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 

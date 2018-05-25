@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ Zeiger auf **Datei** Struktur
 
 ## <a name="return-value"></a>Rückgabewert
 
-NULL, wenn erfolgreich; **EINVAL** Wenn *Stream* ist NULL.
+NULL, wenn erfolgreich; **EINVAL** Wenn *Stream* ist **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
 Die **Clearerr_s** Funktion setzt den Fehlerindikator und Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; nach des Fehlerindikators für einen angegebenen Stream festlegen weiterhin Vorgänge für diesen Datenstrom zurückgeben ein fehlerhaften Werts bis **Clearerr_s**, **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [zurückspulen](rewind.md) aufgerufen wird.
 
-Wenn *Stream* NULL ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
+Wenn *Stream* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 

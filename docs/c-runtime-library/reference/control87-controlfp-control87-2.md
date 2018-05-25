@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Auf ARM-Plattformen die **_control87** und **_controlfp** Funktionen gelten für das FPSCR-Register. Auf X64-Architekturen ist nur das SSE2-Steuerwort, das gespeichert wird, wird im MXCSR-Register betroffen ist. Auf X86 Plattformen **_control87** und **_controlfp** Auswirkungen auf die steuerworte die X87 und die SSE2, falls vorhanden. Die Funktion **__control87_2** ermöglicht die X87 und SSE2-gleitkommaeinheiten zusammen oder getrennt gesteuert werden. Wenn beide Einheiten gelten soll, übergeben Sie die Adressen von zwei ganzen Zahlen um **x86_cw** und **sse2_cw**. Wenn dies nur für eine Einheit gelten soll, übergeben Sie eine Adresse für diesen Parameter, aber 0 (NULL) für den anderen. Wenn 0 für einen dieser Parameter übergeben wird, hat die Funktion keine Auswirkungen auf diese Gleitkommaeinheit. Diese Funktionalität kann in Situationen nützlich sein, in denen ein Teil des Codes die x87-Gleitkommaeinheit und ein anderer Teil des Codes die SSE2-Gleitkommaeinheit verwendet. Bei Verwendung von **__control87_2** in einem Teil eines Programms verschiedene Werte für die gleitkommasteuerworte festlegen und dann **_control87** oder **_controlfp** zur weiteren Bearbeiten Sie dann das Steuerwort **_control87** und **_controlfp** möglicherweise in der Lage, um den Zustand beider gleitkommaeinheiten darzustellen einzelnes Steuerwort zurückgeben. In diesem Fall legen diese Funktionen die **EM_AMBIGUOUS** Flag im zurückgegebenen ganzzahligen Wert fest, um anzugeben, dass eine Inkonsistenz zwischen den zwei steuerworten besteht. Dies ist eine Warnung, dass das zurückgegebene Steuerwort den Zustand beider Gleitkommasteuerworte möglicherweise nicht genau dargestellt.
+Auf ARM-Plattformen die **_control87** und **_controlfp** Funktionen gelten für das FPSCR-Register. Auf X64-Architekturen ist nur das SSE2-Steuerwort, das gespeichert wird, wird im MXCSR-Register betroffen ist. Auf X86 Plattformen **_control87** und **_controlfp** Auswirkungen auf die steuerworte die X87 und die SSE2, falls vorhanden. Die Funktion **__control87_2** ermöglicht die X87 und SSE2-gleitkommaeinheiten zusammen oder getrennt gesteuert werden. Wenn beide Einheiten gelten soll, übergeben Sie die Adressen von zwei ganzen Zahlen um **x86_cw** und **sse2_cw**. Wenn Sie nur für eine Einheit gelten soll, übergeben Sie eine Adresse für diesen Parameter aber 0 (**NULL**) für die anderen. Wenn 0 für einen dieser Parameter übergeben wird, hat die Funktion keine Auswirkungen auf diese Gleitkommaeinheit. Diese Funktionalität kann in Situationen nützlich sein, in denen ein Teil des Codes die x87-Gleitkommaeinheit und ein anderer Teil des Codes die SSE2-Gleitkommaeinheit verwendet. Bei Verwendung von **__control87_2** in einem Teil eines Programms verschiedene Werte für die gleitkommasteuerworte festlegen und dann **_control87** oder **_controlfp** zur weiteren Bearbeiten Sie dann das Steuerwort **_control87** und **_controlfp** möglicherweise in der Lage, um den Zustand beider gleitkommaeinheiten darzustellen einzelnes Steuerwort zurückgeben. In diesem Fall legen diese Funktionen die **EM_AMBIGUOUS** Flag im zurückgegebenen ganzzahligen Wert fest, um anzugeben, dass eine Inkonsistenz zwischen den zwei steuerworten besteht. Dies ist eine Warnung, dass das zurückgegebene Steuerwort den Zustand beider Gleitkommasteuerworte möglicherweise nicht genau dargestellt.
 
 Auf der ARM- und X64 werden Architekturen, das Ändern des unendlichkeitsmodus oder der Genauigkeit der Gleitkommawerte nicht unterstützt. Bei Verwendung die Genauigkeit Steuerelement Maske auf die X64-Plattform, die Funktion löst eine Assertion aus, und der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 

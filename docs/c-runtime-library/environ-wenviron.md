@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 Die `_environ`-Variable ist ein Zeiger auf ein Array von Zeigern auf Multibyte-Zeichenfolgen, die die Prozessumgebung darstellen. Diese globale Variable ist für die sichereren funktionalen Versionen [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) und [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) veraltet, die anstelle der globalen Variablen verwendet werden sollten. `_environ` wird in Stdlib.h deklariert.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  ist eine Breitzeichenversion von `_environ`. `_wenviron` wird in einem Programm, das die `wmain`-Funktion verwendet, gemäß den Einstellungen aus der Betriebssystemumgebung beim Programmstart initialisiert.  
   
- In einem Programm, das `main` verwendet, ist `_wenviron` dementsprechend `NULL`, da die Umgebung aus Multibyte-Zeichenfolgen besteht. Beim ersten Aufruf von `_wgetenv` oder `_wputenv` wird eine entsprechende Breitzeichenumgebung erstellt, auf die von `_wenviron` gezeigt wird.  
+ In einem Programm, das `main` verwendet, ist `_wenviron` dementsprechend anfangs **NULL**, da die Umgebung aus Multibyte-Zeichenfolgen besteht. Beim ersten Aufruf von `_wgetenv` oder `_wputenv` wird eine entsprechende Breitzeichenumgebung erstellt, auf die von `_wenviron` gezeigt wird.  
   
- In einem Programm, das `wmain` verwendet, ist `_environ` dementsprechend `NULL`, da die Umgebung aus Breitzeichenfolgen besteht. Beim ersten Aufruf von `_getenv` oder `_putenv` wird eine entsprechende Multibytezeichen-Umgebung erstellt, auf die von `_environ` gezeigt wird.  
+ In einem Programm, das `wmain` verwendet, ist `_environ` dementsprechend anfangs **NULL**, da die Umgebung aus Breitzeichenfolgen besteht. Beim ersten Aufruf von `_getenv` oder `_putenv` wird eine entsprechende Multibytezeichen-Umgebung erstellt, auf die von `_environ` gezeigt wird.  
   
  Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt. Beispielsweise erfolgt bei jedem Aufruf von `_putenv` automatisch auch ein Aufruf von `_wputenv`, damit die beiden Umgebungszeichenfolgen übereinstimmen.  
   

@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -103,7 +103,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das nächste Token in gefunden *StrToken*. Diese zurückgeben **NULL** Wenn keine weiteren Token gefunden werden. Jeder Aufruf ändert *StrToken* durch das Ersetzen einer **NULL** Zeichen für Trennzeichen, das nach dem zurückgegebenen Token auftritt.
+Gibt einen Zeiger auf das nächste Token in gefunden *StrToken*. Diese zurückgeben **NULL** Wenn keine weiteren Token gefunden werden. Jeder Aufruf ändert *StrToken* durch das Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -114,7 +114,7 @@ Die **Strtok** -Funktion sucht das nächste Token in *StrToken*. Der Satz von Ze
 
 Beim ersten Aufruf von **Strtok**, die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *StrToken*, beendet das Token mit einem Null-Zeichen. Weitere Token können der Rest des geholt werden *StrToken* durch eine Reihe von Aufrufen an **Strtok**. Jeder Aufruf von **Strtok** ändert *StrToken* durch ein Null-Zeichen nach dem Einfügen der **token** zurückgegebenen. Lesen Sie das nächste Token von *StrToken*, rufen Sie **Strtok** mit einer **NULL** Wert für die *StrToken* Argument. Die **NULL** *StrToken* Argument bewirkt, dass **Strtok** , suchen Sie nach dem nächsten Token im geänderten *StrToken*. Die *StrDelimit* Argument kann jeden beliebigen Wert annehmen zwischen zwei aufrufen zur nächsten, damit der Satz von Trennzeichen variieren kann.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Jede Funktion verwendet eine statische Variable eines lokalen Threads, um die Zeichenfolge in Token zu analysieren. Daher können mehrere Threads diese Funktionen gleichzeitig aufrufen, ohne dass unerwünschte Auswirkungen auftreten. Innerhalb eines einzelnen Threads ist es jedoch wahrscheinlich, dass ein überlappendes Aufrufen von einer dieser Funktionen zu Datenbeschädigung und ungenauen Ergebnissen führt. Beim Analysieren verschiedener Zeichenfolgen sollte zuerst eine Zeichenfolge zu Ende analysiert werden, bevor mit dem Analysieren der nächsten Zeichenfolge begonnen wird. Berücksichtigen Sie auch das mögliche Risiko, wenn Sie eine dieser Funktionen aus einer Schleife heraus aufrufen, in der eine andere Funktion aufgerufen wird. Wenn die andere Funktion eine dieser Funktionen verwendet, kommt es zu einer überlappenden Sequenz von Aufrufen und Datenbeschädigung ist die Folge.

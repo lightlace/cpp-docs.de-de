@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ Angeforderte Größe für den neu belegten Block (Bytes).
 Angeforderter Typ für den neu belegten Block: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die angeforderte der **Realloc** oder NULL.
+Zeiger auf den Namen der Quelldatei, die angeforderte der **Realloc** Vorgang oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in dem die **Realloc** Vorgang angefordert wurde, oder NULL.
+Zeilennummer in der Quelldatei, in dem die **Realloc** angefordert wurde oder **NULL**.
 
 Die *Filename* und *Linenumber* -Parameter sind nur verfügbar, wenn **_realloc_dbg** explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) -Präprozessorkonstante definiert wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss gibt diese Funktion entweder einen Zeiger an den Benutzerteil des neu belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt NULL zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der Funktion [realloc](realloc.md).
+Bei erfolgreichem Abschluss dieser Funktion gibt einen Zeiger an den benutzerteil des neu belegten Speicherblocks zurück, ruft die neue Handlerfunktion oder gibt **NULL**. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der Funktion [realloc](realloc.md).
 
 ## <a name="remarks"></a>Hinweise
 

@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Ruft eine Zeichenfolge aus der Konsole ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  Speicherort für Daten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_cgets` und `_cgetws` geben bei `buffer[2]` einen Zeiger auf den Anfang der Zeichenfolge zurück. Wenn `buffer` `NULL` ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, wird `NULL` zurückgegeben und `errno` auf `EINVAL`festgelegt.  
+ `_cgets` und `_cgetws` geben bei `buffer[2]`einen Zeiger auf den Anfang der Zeichenfolge zurück. Wenn `buffer` **NULL** ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **NULL** zurückgegeben und `errno` auf `EINVAL` festgelegt.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Funktionen lesen eine Zeichenfolge von der Konsole und speichern die Zeichenfolge und ihre Länge im Speicherort, auf den `buffer`zeigt. Der `buffer` -Parameter muss ein Zeiger auf ein Zeichenarray sein. `buffer[0]`, das erste Element des Arrays, muss die maximale Länge (in Zeichen) der zu lesenden Zeichenfolge enthalten. Das Array muss genügend Elemente enthalten, um die Zeichenfolge, ein abschließendes Nullzeichen ('\0') und zwei zusätzliche Bytes einzuschließen. Die Funktion liest die Zeichen bis zu einer Kombination aus Wagenrücklauf und Zeilenvorschub (CR-LF) oder bis die angegebene Anzahl von Zeichen gelesen ist. Die Zeichenfolge wird ab `buffer[2]`gespeichert. Wenn die Funktion ein CR-LF liest, speichert sie das NULL-Zeichen ('\0'). Die Funktion speichert dann im zweiten Arrayelement `buffer[1]`die tatsächliche Länge der Zeichenfolge.  

@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -118,7 +118,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbsnbcnt** und **_mbsnbcnt_l** Zurückgeben der Anzahl der Bytes, die gefunden in der ersten *Anzahl* eines multibytezeichens von *str*. **_mbsnccnt** und **_mbsnccnt_l** Zurückgeben der Anzahl der Zeichen in der ersten *Anzahl* der Bytes der *str*. Wenn ein NULL-Zeichen, bevor die Überprüfung von gefunden wird *str* wurde abgeschlossen, die Anzahl von Bytes oder Zeichen gefunden wird, bevor das NULL-Zeichen zurück. Wenn *str* besteht aus weniger als *Anzahl* sie die Anzahl der Zeichen oder Bytes Zeichen oder Bytes in der Zeichenfolge zurück. Wenn *Anzahl* ist kleiner als 0 (null), geben sie 0 zurück. In früheren Versionen hatten diese Funktionen einen Rückgabewert vom Typ **Int** statt **Size_t**.
+**_mbsnbcnt** und **_mbsnbcnt_l** Zurückgeben der Anzahl der Bytes, die gefunden in der ersten *Anzahl* eines multibytezeichens von *str*. **_mbsnccnt** und **_mbsnccnt_l** Zurückgeben der Anzahl der Zeichen in der ersten *Anzahl* der Bytes der *str*. Wenn ein Null-Zeichen, bevor die Überprüfung von gefunden wird *str* wurde abgeschlossen, die Anzahl von Bytes oder Zeichen gefunden wird, bevor das Null-Zeichen zurück. Wenn *str* besteht aus weniger als *Anzahl* sie die Anzahl der Zeichen oder Bytes Zeichen oder Bytes in der Zeichenfolge zurück. Wenn *Anzahl* ist kleiner als 0 (null), geben sie 0 zurück. In früheren Versionen hatten diese Funktionen einen Rückgabewert vom Typ **Int** statt **Size_t**.
 
 **_strncnt** gibt die Anzahl der Zeichen in der ersten *Anzahl* Bytes der einzelbytezeichenfolge *str*. **_wcsncnt** gibt die Anzahl der Zeichen in der ersten *Anzahl* Breitzeichen der Breitzeichenfolge *str*.
 
@@ -126,11 +126,11 @@ Zu verwendendes Gebietsschema.
 
 **_mbsnbcnt** und **_mbsnbcnt_l** zählen die Anzahl von Bytes, die gefunden in der ersten *Anzahl* eines multibytezeichens von *str*. **_mbsnbcnt** und **_mbsnbcnt_l** ersetzen **Mtob** und sollte verwendet werden, anstelle von **Mtob**.
 
-**_mbsnccnt** und **_mbsnccnt_l** zählen die Anzahl von Zeichen in der ersten *Anzahl* der Bytes der *str*. Wenn **_mbsnccnt** und **_mbsnccnt_l** eine NULL in das zweite Byte Double-Byte-Zeichen, das erste Byte wird auch als NULL betrachtet und ist nicht im zurückgegebenen Zählwert enthalten. **_mbsnccnt** und **_mbsnccnt_l** ersetzen **Btom** und sollte verwendet werden, anstelle von **Btom**.
+**_mbsnccnt** und **_mbsnccnt_l** zählen die Anzahl von Zeichen in der ersten *Anzahl* der Bytes der *str*. Wenn **_mbsnccnt** und **_mbsnccnt_l** auftreten, ein Null-Zeichen in das zweite Byte Double-Byte-Zeichen, das erste Byte wird auch als null sein und nicht im zurückgegebenen Zählwert enthalten ist. **_mbsnccnt** und **_mbsnccnt_l** ersetzen **Btom** und sollte verwendet werden, anstelle von **Btom**.
 
-Wenn *str* ist ein null-Zeiger oder *Anzahl* gleich 0 ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), **Errno** festgelegt ist, um **EINVAL**, und die Funktion gibt 0 zurück.
+Wenn *str* ist ein **NULL** Zeiger oder *Anzahl* gleich 0 ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), **Errno** festgelegt ist, um **EINVAL**, und die Funktion gibt 0 zurück.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

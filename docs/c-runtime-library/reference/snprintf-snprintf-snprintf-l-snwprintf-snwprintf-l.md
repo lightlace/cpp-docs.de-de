@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfaa3b8e7fd8705f23b78b7b4ba4238631cfa4cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Schreibt formatierte Daten in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -174,7 +174,7 @@ Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno,
 Die **Snprintf** Funktion und die **_snprintf** Betriebssystemfamilie formatieren und speichern *Anzahl* oder weniger Zeichen in *Puffer*. Die **Snprintf** -Funktion speichert immer ein abschließendes Nullzeichen, wird die Ausgabe abgeschnitten, falls erforderlich. Die **_snprintf** Funktionsreihe Fügt ein abschließendes Nullzeichen nur, wenn die Länge der formatierten Zeichenfolge streng genommen weniger als *Anzahl* Zeichen. Jede *Argument* (sofern vorhanden) wird konvertiert und ausgegeben entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Da die **_snprintf** Funktionen NULL-Terminierung garantieren – insbesondere, wenn der Rückgabewert ist *Anzahl*– stellen Sie sicher, dass ihnen Code folgt sind, die null-Terminator hinzufügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Da die **_snprintf** Funktionen garantieren nicht null-Terminierung – insbesondere, wenn der Rückgabewert ist *Anzahl*– stellen Sie sicher, dass ihnen Code folgt sind, die null-Terminator hinzufügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Beginnend mit der UCRT in Visual Studio 2015 und Windows 10, **Snprintf** ist nicht mehr identisch mit **_snprintf**. Die **Snprintf** Funktionsverhalten ist jetzt mit dem Standard C99 konform.
 
@@ -234,7 +234,7 @@ int main(void)
 #else
    const double fp = 1.7320534;
 #endif
-   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   /* !subtract one to prevent "squeezing out" the terminal null! */
    const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
    int bufferUsed = 0;
    int bufferLeft = bufferSize - bufferUsed;
@@ -290,8 +290,8 @@ int main(void)
    }
    else
    {
-      /* !store nul because _snprintf doesn't necessarily (if the string
-       * fits without the terminal nul, but not with it)!
+      /* !store null because _snprintf doesn't necessarily (if the string
+       * fits without the terminal null, but not with it)!
        * bufferUsed might be as large as bufferSize, which normally is
        * like going one element beyond a buffer, but in this case
        * subtracted one from bufferSize, so we're ok.

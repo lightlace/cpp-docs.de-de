@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -85,13 +85,13 @@ Zu verwendendes Gebietsschema.
 |**_MBC_SINGLE** (0)|Einzelbytezeichen. Beispielsweise ist in Codepage 932 **_mbsbtype** gibt 0 zurück, wenn das angegebene Byte im Bereich 0 x 20 – 0x7E oder 0xA1 - 0xDF liegt.|
 |**_MBC_LEAD** (1)|Führendes Byte des Multibytezeichens. Beispielsweise ist in Codepage 932 **_mbsbtype** gibt 1 zurück, wenn das angegebene Byte im Bereich 0 x 81-0x9F oder 0xE0 - 0xFC liegt.|
 |**_MBC_TRAIL** (2)|Nachfolgendes Byte des Multibytezeichens. Beispielsweise ist in Codepage 932 **_mbsbtype** gibt 2 zurück, wenn das angegebene Byte im Bereich 0 x 40-0x7E oder 0 x 80 - 0xFC liegt.|
-|**_MBC_ILLEGAL** (-1)|**NULL** Zeichenfolge, ungültiges Zeichen oder **NULL** Byte, gefunden vor dem Byte am Offset *Anzahl* in *Mbstr*.|
+|**_MBC_ILLEGAL** (-1)|**NULL** Zeichenfolge, ungültiges Zeichen oder null Byte, die vor dem Byte am Offset gefunden *Anzahl* in *Mbstr*.|
 
 ## <a name="remarks"></a>Hinweise
 
 Die **_mbsbtype** -Funktion bestimmt den Typ eines Bytes in einem Multibyte-Zeichenfolge. Die Funktion überprüft nur das Byte am Offset *Anzahl* in *Mbstr*, ignoriert ungültige Zeichen vor dem angegebenen Byte.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, verwendet jedoch den Ihnen übergebenen Gebietsschemaparameter in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, verwendet jedoch den Ihnen übergebenen Gebietsschemaparameter in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 Wenn die Eingabezeichenfolge **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **_MBC_ILLEGAL**.
 

@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -70,7 +70,7 @@ Pfad des neuen Arbeitsverzeichnisses.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktionen geben bei Erfolg den Wert 0 zurück. Ein Rückgabewert "-1" gibt einen Fehler. Wenn der angegebene Pfad nicht gefunden werden kann, **Errno** festgelegt ist, um **ENOENT**. Wenn *Dirname* NULL ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt-1 zurück.
+Diese Funktionen geben bei Erfolg den Wert 0 zurück. Ein Rückgabewert "-1" gibt einen Fehler. Wenn der angegebene Pfad nicht gefunden werden kann, **Errno** festgelegt ist, um **ENOENT**. Wenn *Dirname* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt-1 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
