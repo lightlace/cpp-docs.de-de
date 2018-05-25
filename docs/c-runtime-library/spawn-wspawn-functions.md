@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn-, _wspawn-Funktionen
 Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:  
@@ -137,12 +137,12 @@ Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:
   
  Sie können Argumentzeiger als separate Parameter übergeben (in `_spawnl`, `_spawnle`, `_spawnlp` und `_spawnlpe`) oder als ein Array von Zeigern (in `_spawnv`, `_spawnve`, `_spawnvp` und `_spawnvpe`). Sie müssen mindestens ein Argument, `arg0` oder `argv`[0], an den erzeugten Prozess übergeben. Gemäß Konvention ist dieses Argument der Name des Programms so, wie Sie ihn auf der Befehlszeile eingeben würden. Ein anderer Wert erzeugt keinen Fehler.  
   
- Die `_spawnl`-, `_spawnle`-, `_spawnlp`- und `_spawnlpe`-Aufrufe werden normalerweise verwendet, wenn die Anzahl der Argumente im Voraus bekannt ist. Das `arg0`-Argument ist normalerweise ein Zeiger auf `cmdname`. Die Argumente `arg1` bis `argn` sind Zeiger auf Zeichenfolgen, die die Argumentliste neu bilden. Nach `argn` muss ein `NULL`-Zeiger stehen, mit dem das Ende der Argumentliste markiert wird.  
+ Die `_spawnl`-, `_spawnle`-, `_spawnlp`- und `_spawnlpe`-Aufrufe werden normalerweise verwendet, wenn die Anzahl der Argumente im Voraus bekannt ist. Das `arg0`-Argument ist normalerweise ein Zeiger auf `cmdname`. Die Argumente `arg1` bis `argn` sind Zeiger auf Zeichenfolgen, die die Argumentliste neu bilden. Nach `argn` muss ein **NULL**-Zeiger stehen, mit dem das Ende der Argumentliste markiert wird.  
   
- Die `_spawnv`-, `_spawnve`-, `_spawnvp`- und `_spawnvpe`-Aufrufe sind nützlich, wenn die Anzahl der Argumente im neuen Prozess variabel ist. Zeiger auf Argumente werden als Array, `argv`*, übergeben.* Das `argv`[0]-Argument ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und `argv`[1] bis `argv`[`n`] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument `argv`[`n` +1] muss ein `NULL` -Zeiger sein, um das Ende der Argumentliste zu markieren.  
+ Die `_spawnv`-, `_spawnve`-, `_spawnvp`- und `_spawnvpe`-Aufrufe sind nützlich, wenn die Anzahl der Argumente im neuen Prozess variabel ist. Zeiger auf Argumente werden als Array, `argv`*, übergeben.* Das `argv`[0]-Argument ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und `argv`[1] bis `argv`[`n`] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument `argv`[`n` +1] muss ein **NULL**-Zeiger sein, um das Ende der Argumentliste zu markieren.  
   
 ## <a name="environment-of-the-spawned-process"></a>Umgebung des erzeugten Prozesses  
- Dateien, die bei einem `_spawn`-Aufruf geöffnet waren, bleiben im neuen Prozess geöffnet. Bei `_spawnl`-, `_spawnlp`-, `_spawnv`- und `_spawnvp`-Aufrufen erbt der neue Prozess die Umgebung des aufrufenden Prozesses. Sie können mit `_spawnle`-, `_spawnlpe`-, `_spawnve`- und `_spawnvpe`-Aufrufen die Umgebung für den neuen Prozess ändern, indem eine Liste der Umgebungseinstellungen durch das `envp`-Argument übergeben wird. Das Argument `envp` ist ein Array von Zeichenzeigern, von denen jedes Element (außer dem letzten Element) auf eine auf NULL endende Zeichenfolge verweist, die eine Umgebungsvariable definiert. Solch eine Zeichenfolge hat normalerweise die Form `NAME`=`value`, wobei `NAME` der Name einer Umgebungsvariable und `value` der Zeichenfolgenwert ist, für den diese Variable festgelegt wird. (Beachten Sie, dass `value` nicht in doppelte Anführungszeichen gesetzt wird.) Das letzte Element des `envp`-Arrays sollte `NULL` sein. Wenn `envp` selbst `NULL` ist, erbt der neue Prozess die Umgebungseinstellungen des übergeordneten Prozesses.  
+ Dateien, die bei einem `_spawn`-Aufruf geöffnet waren, bleiben im neuen Prozess geöffnet. Bei `_spawnl`-, `_spawnlp`-, `_spawnv`- und `_spawnvp`-Aufrufen erbt der neue Prozess die Umgebung des aufrufenden Prozesses. Sie können mit `_spawnle`-, `_spawnlpe`-, `_spawnve`- und `_spawnvpe`-Aufrufen die Umgebung für den neuen Prozess ändern, indem eine Liste der Umgebungseinstellungen durch das `envp`-Argument übergeben wird. Das Argument `envp` ist ein Array von Zeichenzeigern, von denen jedes Element (außer dem letzten Element) auf eine auf NULL endende Zeichenfolge verweist, die eine Umgebungsvariable definiert. Solch eine Zeichenfolge hat normalerweise die Form `NAME`=`value`, wobei `NAME` der Name einer Umgebungsvariable und `value` der Zeichenfolgenwert ist, für den diese Variable festgelegt wird. (Beachten Sie, dass `value` nicht in doppelte Anführungszeichen gesetzt wird.) Das letzte Element des `envp`-Arrays sollte **NULL** sein. Wenn `envp` selbst **NULL** ist, erbt der generierte Prozess die Umgebungseinstellungen des übergeordneten Prozesses.  
   
  Die `_spawn`-Funktionen können alle Informationen über geöffnete Dateien, auch den Übersetzungsmodus, an den neuen Prozess übergeben. Diese Informationen werden im Echtzeitmodus über den `C_FILE_INFO`-Eintrag in der Umgebung übergeben. Der Startcode verarbeitet normalerweise diesen Eintrag und löscht ihn dann aus der Umgebung. Wenn jedoch eine `_spawn`-Funktion einen anderen als einen C-Prozess erzeugt, verbleibt der Eintrag in der Umgebung. Durch Drucken der Umgebung werden Grafikzeichen in der Definitionszeichenfolge für diesen Eintrag angezeigt, da die Umgebungsinformationen in binärer Form im Echtzeitmodus übergeben werden. Dies sollte keine andere Auswirkung auf den normalen Betrieb haben. Im geschützten Modus werden die Umgebungsinformationen in Textform übergeben und enthalten daher keine Grafikzeichen.  
   

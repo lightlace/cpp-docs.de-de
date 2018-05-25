@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -116,7 +116,7 @@ Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung der *string1* 
 |0|*String1* identisch mit *Zeichenfolge2*|
 |> 0|*String1* größer als *Zeichenfolge2*|
 
-Jede dieser Funktionen gibt **_NLSCMPERROR** bei einem Fehler. Mit **_NLSCMPERROR**, entweder Zeichenfolge enthalten. H oder MBSTRING. H. **Wcscoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* NULL ist oder Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **Wcscoll** möglicherweise festgelegt **Errno** auf **EINVAL**. Überprüfen Sie bei einem Fehler bei einem Aufruf von **Wcscoll**legen **Errno** auf 0 und überprüfen Sie dann **Errno** nach dem Aufruf **Wcscoll**.
+Jede dieser Funktionen gibt **_NLSCMPERROR** bei einem Fehler. Mit **_NLSCMPERROR**, entweder Zeichenfolge enthalten. H oder MBSTRING. H. **Wcscoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* ist **NULL** oder Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **Wcscoll** möglicherweise festgelegt **Errno** auf **EINVAL**. Überprüfen Sie bei einem Fehler bei einem Aufruf von **Wcscoll**legen **Errno** auf 0 und überprüfen Sie dann **Errno** nach dem Aufruf **Wcscoll**.
 
 ## <a name="remarks"></a>Hinweise
 

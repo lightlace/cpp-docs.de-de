@@ -41,11 +41,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e4a4791092b93d04b06432a5294a11200ed879
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -77,10 +77,10 @@ Mit NULL endende Quellzeichenfolge.
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die die Zuordnung angefordert hat, oder NULL.
+Zeiger zum Namen der Quelldatei, die Belegung angefordert oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in der die Belegung angefordert wurde, oder NULL.
+Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
 
 ## <a name="return-value"></a>Rückgabewert
 

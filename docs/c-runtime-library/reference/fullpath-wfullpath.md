@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parameter
 
 *absPath*<br/>
-Zeiger auf einen Puffer, der den absoluten oder vollständigen Pfadnamen oder NULL enthält
+Zeiger auf einen Puffer, der den absoluten oder vollständigen Pfadnamen enthält oder **NULL**.
 
 *relPath*<br/>
 Relativer Pfadname.
@@ -82,7 +82,7 @@ Jede dieser Funktionen gibt einen Zeiger auf einen Puffer, enthält des absolute
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fullpath** Funktion erweitert den relativen Pfadnamen in *RelPath* an ihre voll qualifizierten oder absolute Pfad und speichert diese Namen in *AbsPath*. Wenn *AbsPath* NULL ist, **"malloc"** wird verwendet, um einen Puffer von ausreichend lang ist, um den Pfadnamen halten zuzuordnen. Der Aufrufer muss diesen Puffer freigeben. Dieser relative Pfadname gibt vom aktuellen Speicherort einen Pfad zu einem anderen Speicherort an (z.B. das aktuelle Arbeitsverzeichnis: "."). Ein absoluter Pfadname ist die Erweiterung eines relativen Pfadnamens, der den gesamten Pfad ausdrückt, der dafür erforderlich ist, um die gewünschte Position aus dem Stammverzeichnis des Dateisystems zu erreichen. Im Gegensatz zu **_makepath**, **_fullpath** können verwendet werden, um den absoluten Pfadnamen für relative Pfade zu erhalten (*RelPath*), enthalten ". /"oder".. / "im Namen.
+Die **_fullpath** Funktion erweitert den relativen Pfadnamen in *RelPath* an ihre voll qualifizierten oder absolute Pfad und speichert diese Namen in *AbsPath*. Wenn *AbsPath* ist **NULL**, **"malloc"** wird verwendet, um einen Puffer von ausreichend lang ist, um den Pfadnamen halten zuzuordnen. Der Aufrufer muss diesen Puffer freigeben. Dieser relative Pfadname gibt vom aktuellen Speicherort einen Pfad zu einem anderen Speicherort an (z.B. das aktuelle Arbeitsverzeichnis: "."). Ein absoluter Pfadname ist die Erweiterung eines relativen Pfadnamens, der den gesamten Pfad ausdrückt, der dafür erforderlich ist, um die gewünschte Position aus dem Stammverzeichnis des Dateisystems zu erreichen. Im Gegensatz zu **_makepath**, **_fullpath** können verwendet werden, um den absoluten Pfadnamen für relative Pfade zu erhalten (*RelPath*), enthalten ". /"oder".. / "im Namen.
 
 Um beispielsweise C-Laufzeitroutinen verwenden zu können, muss die Anwendung die Headerdateien enthalten, die die Deklarationen für die Routinen enthalten. Jede Headerdatei enthält Anweisungen, die relativ auf den Speicherort der Datei verweisen (aus dem Arbeitsverzeichnis der Anwendung):
 

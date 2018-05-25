@@ -63,11 +63,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="exec-wexec-functions"></a>_exec- und _wexec-Funktionen
 Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:  
@@ -120,9 +120,9 @@ Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:
   
  Die `_execl`-, `_execle`-, `_execlp`- und `_execlpe`-Aufrufe werden normalerweise verwendet, wenn die Anzahl der Parameter im Voraus bekannt ist. Der `arg0`-Parameter ist normalerweise ein Zeiger auf `cmdname`. Die Parameter von `arg1` bis `argn` weisen auf die Zeichenfolgen hin, aus denen die neue Parameterliste besteht. Ein NULL-Zeiger muss `argn` folgen, um das Ende der Parameterliste zu markieren.  
   
- Die `_execv`-, `_execve`-, `_execvp`- und `_execvpe`-Aufrufe sind nützlich, wenn die Anzahl der Parameter im neuen Prozess variabel ist. Zeiger auf Parameter werden als Array, nämlich `argv`, übergeben. Der `argv`[0]-Parameter ist normalerweise ein Zeiger auf `cmdname`. Die Parameter von `argv`[1] bis `argv`[`n`] weisen auf die Zeichenfolgen hin, aus denen die neue Parameterliste besteht. Der `argv`[`n`+1]-Parameter muss ein `NULL`-Zeiger sein, um das Ende der Parameterliste zu markieren.  
+ Die `_execv`-, `_execve`-, `_execvp`- und `_execvpe`-Aufrufe sind nützlich, wenn die Anzahl der Parameter im neuen Prozess variabel ist. Zeiger auf Parameter werden als Array, nämlich `argv`, übergeben. Der `argv`[0]-Parameter ist normalerweise ein Zeiger auf `cmdname`. Die Parameter von `argv`[1] bis `argv`[`n`] weisen auf die Zeichenfolgen hin, aus denen die neue Parameterliste besteht. Der `argv`[`n`+1]-Parameter muss ein **NULL**-Zeiger sein, um das Ende der Parameterliste zu markieren.  
   
- Dateien, die beim Aufrufen von `_exec` geöffnet waren, bleiben im neuen Prozess geöffnet. Bei `_execl`-, `_execlp`-, `_execv`- und `_execvp`-Aufrufen erbt der neue Prozess die Umgebung des aufrufenden Prozesses. `_execle`-, `_execlpe`-, `_execve`- und `_execvpe`-Aufrufe ändern die Umgebung für den neuen Prozess, indem eine Liste der Umgebungseinstellungen durch den `envp`-Parameter übergeben wird. `envp` ist ein Array von Zeichenzeigern, von denen jedes Element (außer dem letzten Element) auf eine auf NULL endende Zeichenfolge verweist, die eine Umgebungsvariable definiert. Solch eine Zeichenfolge hat normalerweise die Form `NAME`=`value`, wobei `NAME` der Name einer Umgebungsvariable und `value` der Zeichenfolgenwert ist, für den diese Variable festgelegt wird. (Beachten Sie, dass `value` nicht in doppelte Anführungszeichen gesetzt wird.) Das letzte Element des `envp`-Arrays sollte `NULL` sein. Wenn `envp` selbst `NULL` ist, erbt der neue Prozess die Umgebungseinstellungen des aufrufenden Prozesses.  
+ Dateien, die beim Aufrufen von `_exec` geöffnet waren, bleiben im neuen Prozess geöffnet. Bei `_execl`-, `_execlp`-, `_execv`- und `_execvp`-Aufrufen erbt der neue Prozess die Umgebung des aufrufenden Prozesses. `_execle`-, `_execlpe`-, `_execve`- und `_execvpe`-Aufrufe ändern die Umgebung für den neuen Prozess, indem eine Liste der Umgebungseinstellungen durch den `envp`-Parameter übergeben wird. `envp` ist ein Array von Zeichenzeigern, von denen jedes Element (außer dem letzten Element) auf eine auf NULL endende Zeichenfolge verweist, die eine Umgebungsvariable definiert. Solch eine Zeichenfolge hat normalerweise die Form `NAME`=`value`, wobei `NAME` der Name einer Umgebungsvariable und `value` der Zeichenfolgenwert ist, für den diese Variable festgelegt wird. (Beachten Sie, dass `value` nicht in doppelte Anführungszeichen gesetzt wird.) Das letzte Element des `envp`-Arrays sollte **NULL** sein. Wenn `envp` selbst **NULL** ist, erbt der neue Prozess die Umgebungseinstellungen des aufrufenden Prozesses.  
   
  Ein Programm, das mit einer der `_exec`-Funktionen ausgeführt wird, wird immer in den Speicher geladen, als ob das Feld für die maximale Speicherbelegung in der Kopfzeile der EXE-Datei des Programms auf den Standardwert "0xFFFFH" festgelegt wäre.  
   

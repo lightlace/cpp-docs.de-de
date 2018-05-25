@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen,
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-Ein ungültiger NULL-Wert übergeben wird, für der Puffer eine zugriffsverletzung führen wird, wenn die *NumberOfElements* -Parameters ist größer als 9.
+Übergeben eine ungültige nicht-**NULL** Wert für der Puffer eine zugriffsverletzung führen wird, wenn die *NumberOfElements* -Parameters ist größer als 9.
 
 Die Übergabe des Werts für *NumberOfElements* größer als die tatsächliche Größe des Puffers Pufferüberlauf führt.
 

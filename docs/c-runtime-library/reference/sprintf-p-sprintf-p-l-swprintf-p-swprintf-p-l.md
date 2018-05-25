@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ Die Anzahl geschriebener Zeichen oder -1, wenn ein Fehler aufgetreten.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_sprintf_p** -Funktion formatiert und speichert eine Folge von Zeichen und Werte in *Puffer*. Jedes Argument in der *Argument_list* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Die *Format* Argument verwendet den [formatieren Sie die Syntax der Formatangabe für Printf und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ein **NULL** Zeichen nach dem letzten geschriebenen Zeichen angefügt ist. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert. Der Unterschied zwischen **_sprintf_p** und **Sprintf_s** handelt, **_sprintf_p** positionelle Parameter unterstützt, wodurch ermöglicht das Angeben der Reihenfolge, in denen die Argumente sind, in der Formatzeichenfolge verwendet. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Die **_sprintf_p** -Funktion formatiert und speichert eine Folge von Zeichen und Werte in *Puffer*. Jedes Argument in der *Argument_list* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Die *Format* Argument verwendet den [formatieren Sie die Syntax der Formatangabe für Printf und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert. Der Unterschied zwischen **_sprintf_p** und **Sprintf_s** handelt, **_sprintf_p** positionelle Parameter unterstützt, wodurch ermöglicht das Angeben der Reihenfolge, in denen die Argumente sind, in der Formatzeichenfolge verwendet. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_swprintf_p** ist eine Breitzeichen-Version von **_sprintf_p**; die Zeigerargumente zu **_swprintf_p** sind Zeichenfolgen mit Breitzeichen. Erkennung von Codierungsfehlern in **_swprintf_p** unterscheidet sich möglicherweise von der in **_sprintf_p**. **_swprintf_p** und **Fwprintf_p** Verhalten sich identisch, außer dass **_swprintf_p** schreibt die Ausgabe in eine Zeichenfolge anstatt an ein Ziel vom Typ **Datei**, und **_swprintf_p** erfordert die *Anzahl* Parameter, um die maximale Anzahl der zu schreibenden Zeichen anzugeben. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
 
-**_sprintf_p** gibt die Anzahl der Bytes, die in gespeicherten *Puffer*, wird dabei nicht mitgezählt das abschließende **NULL** Zeichen. **_swprintf_p** gibt die Anzahl der Breitzeichen, die in gespeicherten *Puffer*, wird dabei nicht mitgezählt das abschließende **NULL** Breitzeichen. Wenn *Puffer* oder *Format* ein null-Zeiger ist oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung ](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+**_sprintf_p** gibt die Anzahl der Bytes, die in gespeicherten *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **_swprintf_p** gibt die Anzahl der Breitzeichen, die in gespeicherten *Puffer*, das abschließende null-Breitzeichen wird dabei nicht mitgezählt. Wenn *Puffer* oder *Format* ein null-Zeiger ist oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung ](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

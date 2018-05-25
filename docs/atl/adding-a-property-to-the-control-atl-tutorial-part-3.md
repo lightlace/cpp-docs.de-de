@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3)
 `IPolyCtl` ist die Schnittstelle, die das Steuerelement benutzerdefinierte Methoden und Eigenschaften enthält, und fügen Sie eine Eigenschaft zu.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- Die `get_Sides` Methode gibt den aktuellen Wert von der `Sides` Eigenschaft über die `pVal` Zeiger. In der `put_Sides` -Methode, der Code wird sichergestellt, dass der Benutzer wird das Festlegen der `Sides` Eigenschaft auf einen akzeptablen Wert. Der Minimalwert muss 2 sein, und da ein Array von Punkten für jede Seite verwendet werden, ist 100 für einen Höchstwert ein vernünftiges Maß beschränken.  
+ Die `get_Sides` Methode gibt den aktuellen Wert von der `Sides` Eigenschaft über die `pVal` Zeiger. In der `put_Sides` -Methode, der Code wird sichergestellt, dass der Benutzer wird das Festlegen der `Sides` Eigenschaft auf einen akzeptablen Wert. Der Minimalwert muss 3 sein, und da ein Array von Punkten für jede Seite verwendet werden, ist 100 für einen Höchstwert ein vernünftiges Maß beschränken.  
   
  Sie verfügen nun über eine Eigenschaft mit dem Namen `Sides`. Im nächsten Schritt ändern Sie den Code für dessen Verwendung zum Zeichnen.  
   

@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ Zum Programmstart wird die Entsprechung der folgenden Anweisung ausgeführt:
 
 `setlocale( LC_ALL, "C" );`
 
-Die *Gebietsschema* Argument kann einen Gebietsschemanamen, eine Sprachenzeichenfolge, eine Sprachenzeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachenzeichenfolge, Länder-/Regionscode und Codepage zu verwenden. Der Satz verfügbarer Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle diejenigen, die von der Windows NLS API unterstützt werden, ausgenommen Codepages, die mehr als zwei Bytes pro Zeichen benötigen, wie z. B. UTF-7 und UTF-8. Wenn Sie eine Codepage-Wert eines UTF-7 oder UTF-8 bereitstellen **Setlocale** schlägt fehlt, wird NULL zurückgegeben. Die Anzahl von unterstützten Gebietsschemanamen **Setlocale** in beschriebenen [Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Der Satz von Sprache und Land/Region-Zeichenfolgen, die von unterstützt **Setlocale** in aufgelisteten [Sprachenzeichenfolgen](../../c-runtime-library/language-strings.md) und [Länder-/Regionszeichenfolgen](../../c-runtime-library/country-region-strings.md). Wie empfehlen die Gebietsschema-Namensform aus Gründen der Leistung und leichteren Verwaltung von Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind. Es ist weniger wahrscheinlich, dass Gebietsschema-Zeichenfolgen durch eine Betriebssystemaktualisierung geändert werden, als dies bei der Namensform für Sprache und Land/Region der Fall ist.
+Die *Gebietsschema* Argument kann einen Gebietsschemanamen, eine Sprachenzeichenfolge, eine Sprachenzeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachenzeichenfolge, Länder-/Regionscode und Codepage zu verwenden. Der Satz verfügbarer Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle diejenigen, die von der Windows NLS API unterstützt werden, ausgenommen Codepages, die mehr als zwei Bytes pro Zeichen benötigen, wie z. B. UTF-7 und UTF-8. Wenn Sie eine Codepage-Wert eines UTF-7 oder UTF-8 bereitstellen **Setlocale** schlägt fehl, Zurückgeben von **NULL**. Die Anzahl von unterstützten Gebietsschemanamen **Setlocale** in beschriebenen [Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Der Satz von Sprache und Land/Region-Zeichenfolgen, die von unterstützt **Setlocale** in aufgelisteten [Sprachenzeichenfolgen](../../c-runtime-library/language-strings.md) und [Länder-/Regionszeichenfolgen](../../c-runtime-library/country-region-strings.md). Wie empfehlen die Gebietsschema-Namensform aus Gründen der Leistung und leichteren Verwaltung von Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind. Es ist weniger wahrscheinlich, dass Gebietsschema-Zeichenfolgen durch eine Betriebssystemaktualisierung geändert werden, als dies bei der Namensform für Sprache und Land/Region der Fall ist.
 
 Ein null-Zeiger, die als übergeben der *Gebietsschema* -Argument teilt **Setlocale** anstelle von Abfragen, die internationale Umgebung festlegen. Wenn die *Gebietsschema* Argument ist ein null-Zeiger, die aktuelle gebietsschemaeinstellung des Programms wird nicht geändert. Stattdessen **Setlocale** gibt einen Zeiger auf die Zeichenfolge, die mit zugeordnetem der *Kategorie* des aktuellen threadgebietsschemas. Wenn die *Kategorie* Argument ist **LC_ALL**, die Funktion gibt eine Zeichenfolge, die die aktuelle Einstellung der einzelnen Kategorien, die durch Semikolons getrennte angibt. Beispiel: Die Reihenfolge der Aufrufe
 

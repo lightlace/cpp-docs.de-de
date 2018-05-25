@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3309aee316c3b067c9bd0ade4e1064289cb4ddaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a597ad1a72f903d08e848727045e05bf014879b1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gets-getws"></a>gets, _getws
 Ruft eine Zeile aus dem `stdin` -Stream ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -76,7 +76,7 @@ wchar_t *_getws(
  Speicherort für die Eingabezeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt bei Erfolg das Argument zurück. Ein `NULL` -Zeiger weist auf einen Fehler oder eine Dateiendebedingung hin. Verwenden Sie [ferror](../c-runtime-library/reference/ferror.md) oder [feof](../c-runtime-library/reference/feof.md), um festzulegen, was aufgetreten ist. Wenn `buffer` `NULL` ist, rufen diese Funktionen einen ungültigen Parameterhandler auf, wie in [Parametervalidierung](../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `NULL` zurück und setzen "errno" auf `EINVAL`.  
+ Gibt bei Erfolg das Argument zurück. Ein **NULL**-Zeiger weist auf einen Fehler oder eine Dateiendebedingung hin. Verwenden Sie [ferror](../c-runtime-library/reference/ferror.md) oder [feof](../c-runtime-library/reference/feof.md) , um festzulegen, was aufgetreten ist. Wenn `buffer` **NULL** ist, rufen diese Funktionen, wie in [Parametervalidierung](../c-runtime-library/parameter-validation.md) beschrieben, den Handler für ungültige Parameter auf. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen **NULL** zurück und setzen „errno“ auf `EINVAL`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `gets`-Funktion liest eine Zeile aus dem Standardeingabestream `stdin` und speichert sie in `buffer`. Die Zeile enthält alle Zeichen einschließlich des ersten Zeilenumbruchzeichens ('\n'). `gets` ersetzt dann das Zeilenumbruchzeichen durch ein NULL-Zeichen ('\0'), ehe die Zeile zurückgegeben wird. Im Gegensatz dazu behält die `fgets` -Funktion das Zeilenumbruchzeichen bei. `_getws` ist eine Breitzeichenversion von `gets`. Das Argument und der Rückgabewert sind Breitzeichen-Zeichenfolgen.  

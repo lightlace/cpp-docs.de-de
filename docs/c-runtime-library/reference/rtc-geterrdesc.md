@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a176aa258f805a516bf36c982ba63e531a74478
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 
@@ -58,7 +58,7 @@ Eine Zahl zwischen null und eins und kleiner als der von **_RTC_NumErrors** zur�
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Zeichenfolge, die eine kurze Beschreibung eines der vom Laufzeit-Fehlerprüfsystem zurückgegebenen Fehlertypen enthält. Wenn Fehler kleiner als 0 (null) oder größer als oder gleich dem Wert ist von zurückgegebenen [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** gibt NULL zurück.
+Eine Zeichenfolge, die eine kurze Beschreibung eines der vom Laufzeit-Fehlerprüfsystem zurückgegebenen Fehlertypen enthält. Wenn Fehler kleiner als 0 (null) oder größer als oder gleich dem Wert ist von zurückgegebenen [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** gibt **NULL**.
 
 ## <a name="requirements"></a>Anforderungen
 

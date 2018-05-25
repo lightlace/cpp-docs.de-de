@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic-Struktur
 
@@ -63,7 +63,7 @@ struct atomic;
 
 Der Typ *"ty"* muss *belanglos kopierbare*. D. h. [Memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) Kopieren der Bytes muss erzeugen eine gültige *"ty"* -Objekt, das auf das ursprüngliche Objekt übereinstimmt. Die [Compare_exchange_weak](#compare_exchange_weak) und [Compare_exchange_strong](#compare_exchange_strong) Memberfunktionen verwenden [Memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) zu bestimmen, ob zwei *"ty"* Werte gleich sind. Diese Funktionen nicht verwenden eine *"ty"*-definierten **Operator ==**. Die Memberfunktionen von **atomic** verwenden **Memcpy** zum Kopieren von Werten des Typs *"ty"*.
 
-Eine teilweise Spezialisierung ** atomic\<"ty" * > **, für alle Zeigertypen vorhanden ist. Mit der Spezialisierung wird das Hinzufügen eines Offsets zum verwalteten Zeigerwert oder die Wegnahme eines Offsets von dort ermöglicht. Arithmetischen Operationen nehmen ein Argument des Typs **Ptrdiff_t** und angepasst, entsprechend der Größe von *"ty"* mit normaler Adressenarithmetik konsistent.
+Eine teilweise Spezialisierung **atomic\<"ty" \* >** , für alle Zeigertypen vorhanden ist. Mit der Spezialisierung wird das Hinzufügen eines Offsets zum verwalteten Zeigerwert oder die Wegnahme eines Offsets von dort ermöglicht. Arithmetischen Operationen nehmen ein Argument des Typs **Ptrdiff_t** und angepasst, entsprechend der Größe von *"ty"* mit normaler Adressenarithmetik konsistent.
 
 Eine Spezialisierung ist für jeden Integraltypen außer vorhanden **Bool**. Mit jeder Spezialisierung wird ein umfangreicher Satz an Methoden für atomisch arithmetische und logische Vorgänge bereitgestellt.
 

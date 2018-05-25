@@ -62,11 +62,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e394984d742ee565296a452cf553e09f37b0aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -173,7 +173,7 @@ Beide **_vsnprintf** und **_vsnwprintf** Funktionen zurück, die Anzahl von Zeic
 
 Der von allen diesen Funktionen zurückgegebene Wert enthält nicht das abschließende Zeichen NULL, unabhängig davon, ob es geschrieben wurde oder nicht. Wenn *Anzahl* ist 0 (null), der zurückgegebene Wert ist die Anzahl der Zeichen, die die Funktionen, nicht schreiben würden einschließlich eine abschließende Null. Sie können dieses Ergebnis dazu verwenden, ausreichend Pufferspeicher für die Zeichenfolge und dessen abschließendes NULL-Zeichen zuzuordnen, und die Funktion dann erneut aufrufen, um den Puffer zu füllen.
 
-Wenn *Format* ist **NULL**, oder wenn *Puffer* ist NULL und *Anzahl* ist nicht gleich 0 (null), rufen diese Funktionen den Handler für ungültige Parameter wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Format* ist **NULL**, oder wenn *Puffer* ist **NULL** und *Anzahl* ist nicht gleich NULL ist, diese Funktionen den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 

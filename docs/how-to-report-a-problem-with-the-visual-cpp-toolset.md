@@ -1,6 +1,6 @@
 ---
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
-ms.date: 1/11/2018
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Melden eines Problems mit dem Visual C++-Toolset
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
-Wenn Sie Probleme mit dem Microsoft Visual C++-Compiler, -Linker oder anderen Tools und Bibliotheken haben, informieren Sie uns darüber.
+Wenn Sie Probleme mit dem Microsoft Visual C++-Compiler, -Linker oder anderen Tools und Bibliotheken haben, informieren Sie uns darüber. Wenn in unserer Dokumentation ein Fehler vorliegt, möchten wir das natürlich auch wissen.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>So melden Sie einen Fehler in der C++-Dokumentation
+
+Wir verwenden GitHub-Tickets, um Fehler in unserer Dokumentation zu erfassen. Sie können GitHub-Tickets jetzt direkt von einer Inhaltsseite aus erstellen. So können Sie besser mit Autoren und Produktteams kommunizieren. Wenn Ihnen ein Fehler (ein falsches Codebeispiel, eine verwirrende Erklärung, eine schwerwiegende Auslassung oder auch nur ein Tippfehler) in einer Dokumentation auffällt, können Sie uns ganz leicht darüber informieren. Scrollen Sie auf der Seite ganz nach unten, und klicken Sie auf **Sign in to give documentation feedback** (Anmelden und Feedback zur Dokumentation geben). Sie müssen ein GitHub-Konto erstellen, wenn Sie nicht bereits über ein Konto verfügen. Sobald Sie über ein Konto verfügen, können Sie sich alle Tickets zur Dokumentation und deren Status ansehen und Benachrichtigungen erhalten, wenn ein von Ihnen gemeldetes Problem bearbeitet wurde. Weitere Informationen erhalten Sie unter [A New Feedback System Is Coming to docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs) (Neues Feedbacksystem auf docs.microsoft.com).
+
+Wenn Sie ein GitHub-Ticket zur Dokumentation über die Feedbackschaltfläche in der Dokumentation erstellen, wird das Ticket automatisch mit Informationen zur Seite aufgefüllt, für die Sie das Ticket erstellen möchten, damit wir wissen, wo das Problem besteht. Bearbeiten Sie diese Informationen nicht. Fügen Sie nur Angaben zu dem Problem hinzu. Wenn Sie möchten, können Sie auch einen Änderungsvorschlag machen. [Unsere Dokumentation ist Open Source](https://github.com/MicrosoftDocs/cpp-docs/). Wenn Sie also einen Fehler beheben und eine Änderung vorschlagen möchten, können Sie dies selbst tun. Weitere Informationen zum Beitragen zur Dokumentation finden Sie im [Leitfaden für Mitwirkende](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) auf GitHub.
+
+## <a name="how-to-report-a-c-product-issue"></a>So melden Sie ein Problem mit C++
 
 Die beste Möglichkeit, uns über ein Problem zu informieren, ist das Senden eines Berichts. Dieser sollte die Beschreibung des aufgetretenen Problems enthalten sowie Details dazu, wie Sie Ihr Programm entwickeln, und eine *Reproduktion*, die wir als vollständigen Testfall zum Reproduzieren des Problems auf unseren Computern verwenden können. Anhand dieser Informationen können wir schnell überprüfen, ob das Problem in Ihrem Code besteht oder lokal in Ihrer Umgebung vorliegt. Außerdem können wir bestimmen, ob es sich auf andere Versionen des Compilers auswirkt, und wir können die Ursache ermitteln.
 
-In diesem Dokument geht es um Folgendes
-
-- [Vorbereiten des Berichts](#how-to-prepare-your-report) und Merkmale eines guten Berichts.
-
-- [Generieren einer Reproduktion](#how-to-generate-a-repro) und verschiedene Arten von Reproduktionen.
-
-- [Möglichkeiten zum Senden Ihres Berichts](#ways-to-send-your-report) und deren Unterschiede.
-
-Ihre Berichte sind wichtig für uns und andere Entwickler wie Sie. Vielen Dank für Ihren Beitrag zur Verbesserung von Visual C++!
+Weiter unten erfahren Sie, was einen guten Bericht ausmacht, wie Sie das von Ihnen erkannte Problem reproduzieren, und wie Sie Ihren Bericht an das Produktteam senden können. Ihre Berichte sind wichtig für uns und andere Entwickler wie Sie. Vielen Dank für Ihren Beitrag zur Verbesserung von Visual C++!
 
 ## <a name="how-to-prepare-your-report"></a>Vorbereiten des Berichts
 
@@ -291,7 +291,7 @@ Erstellen Sie Ihre Reproduktion als minimales IDE-Projekt, und erstellen Sie dan
 
 ## <a name="ways-to-send-your-report"></a>Möglichkeiten zum Senden Ihres Berichts
 
-Es gibt mehrere Möglichkeiten, uns Ihren Bericht zu übermitteln. Die können das in Visual Studio integrierte [Tool „Problem melden“](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) oder die Seiten der [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) verwenden. Es ist auch möglich, eine E-Mail mit Ihrem Bericht zu senden, jedoch werden die ersten beiden Methoden bevorzugt. Die Wahl hängt davon ab, wie Sie sich mit den Entwicklern austauschen möchten, die Ihren Bericht untersuchen. Ein weiterer Aspekt ist, ob Sie den Status nachverfolgen oder Ihren Bericht mit der Community teilen möchten.
+Es gibt mehrere Möglichkeiten, uns Ihren Bericht zu übermitteln. Die können das in Visual Studio integrierte [Tool „Problem melden“](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) oder die Seiten der [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) verwenden. Sie gelangen direkt zu den Seiten der Developer Community, wenn Sie auf **Produktfeedback** unten auf der Seite klicken. Es ist auch möglich, eine E-Mail mit Ihrem Bericht zu senden, jedoch werden die ersten beiden Methoden bevorzugt. Die Wahl hängt davon ab, wie Sie sich mit den Entwicklern austauschen möchten, die Ihren Bericht untersuchen. Ein weiterer Aspekt ist, ob Sie den Status nachverfolgen oder Ihren Bericht mit der Community teilen möchten.
 
 > [!NOTE]
 > Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie unter [Microsoft Visual Studio-Produktfamilie – Datenschutzbestimmungen](https://www.visualstudio.com/dn948229).
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und ohne Beziehung zum Toolset sind (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das Tool „Problem melden“ eine gute Wahl sein, und zwar aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben. Diese anderen Arten von Fehlern dürfen Sie auf keinen Fall durch Senden einer E-Mail an compilercrash@microsoft.com melden.
+> Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und nicht in Beziehung zum Toolset stehen (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das **Tool „Problem melden“** aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben, eine gute Wahl sein. Diese Probleme können Sie auch in der [Developer Community](https://developercommunity.visualstudio.com/) melden. Diese anderen Arten von Fehlern dürfen Sie auf keinen Fall durch Senden einer E-Mail an compilercrash@microsoft.com melden.

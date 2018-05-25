@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ Die Anzahl der Felder, die erfolgreich konvertiert und zugewiesen wurden. Der R�
 
 Die **_cscanf** -Funktion liest Daten direkt in der Konsole in die Speicherorte, die vom *Argument*. Die Funktion [_getche](getch-getwch.md) wird verwendet, um Zeichen zu lesen. Jeder Optionaler Parameter muss ein Zeiger auf eine Variable mit einem Typ, der einem Typspezifizierer in entspricht *Format*. Das Format steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* -Parameter für die [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) Funktion. Während **_cscanf** normalerweise das Eingabezeichen, es gibt keine war der letzte Aufruf **_ungetch**.
 
-Diese Funktion überprüft ihre Parameter. Wenn das Format NULL ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EOF**.
+Diese Funktion überprüft ihre Parameter. Wenn das Format **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EOF**.
 
 Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
 

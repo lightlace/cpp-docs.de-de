@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ Jede Funktion gibt einen Zeiger auf einen Puffer, enthält des absolute Pfadname
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fullpath_dbg** und **_wfullpath_dbg** -Funktionen sind identisch mit **_fullpath** und **_wfullpath** mit dem Unterschied, dass, wenn **_DEBUG** wird definiert, verwenden Sie diese Funktionen die Debugversion des **"malloc"**, **_malloc_dbg**, Zuweisen von Arbeitsspeicher, wenn NULL als erster Parameter übergeben wird. Informationen zu den Debugfunktionen von **_malloc_dbg**, finden Sie unter [_malloc_dbg](malloc-dbg.md).
+Die **_fullpath_dbg** und **_wfullpath_dbg** -Funktionen sind identisch mit **_fullpath** und **_wfullpath** mit dem Unterschied, dass, wenn **_DEBUG** wird definiert, verwenden Sie diese Funktionen die Debugversion des **"malloc"**, **_malloc_dbg**, um Speicher zuzuordnen **NULL** übergeben wird als erster Parameter. Informationen zu den Debugfunktionen von **_malloc_dbg**, finden Sie unter [_malloc_dbg](malloc-dbg.md).
 
 In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie definieren die **_CRTDBG_MAP_ALLOC** Flag. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_fullpath** und **_wfullpath** neu zu **_fullpath_dbg** und **_wfullpath_dbg**nahezu mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Daher, Sie müssen nicht auf diese Funktionen explizit aufrufen, wenn Sie die Heapblöcke als markieren möchten **_CLIENT_BLOCK**. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 

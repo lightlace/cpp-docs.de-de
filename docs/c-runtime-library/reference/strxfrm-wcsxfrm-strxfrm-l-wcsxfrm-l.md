@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Nach der Transformation, die einen Aufruf von **Strcmp** führt zu Ergebnissen, 
 
 **Wcsxfrm** ist eine Breitzeichen-Version von **Strxfrm**; die Zeichenfolgenargumente von **Wcsxfrm** sind Breitzeichen-Zeiger. Für **Wcsxfrm**nach die Zeichenfolgen-Transformation, die einen Aufruf von **Wcscmp** führt zu Ergebnissen, die identisch mit denen eines Aufrufs mit den transformierten zwei Zeichenfolgen **Wcscoll** angewendet, um die ursprüngliche zwei Zeichenfolgen. **Wcsxfrm** und **Strxfrm** Verhalten sich andernfalls identisch. **Wcsxfrm** verwendet das aktuelle Gebietsschema für die vom Gebietsschema abhängiges Verhalten. **_wcsxfrm_l** verwendet das Gebietsschema übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *StrSource* ist ein null-Zeiger oder *StrDest* ist ein NULL-Zeiger (es sei denn, die Anzahl Null ist), oder wenn *Anzahl* ist größer als **INT_MAX**, Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **INT_MAX**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *StrSource* ist ein null-Zeiger oder *StrDest* ist ein **NULL** Zeiger (es sei denn, die Anzahl Null ist), oder wenn *Anzahl* ist größer als **INT_MAX**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
