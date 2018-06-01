@@ -16,27 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efa8da496c6067381937820db365a5b37a19e843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704029"
 ---
 # <a name="compiler-error-c2393"></a>Compilerfehler C2393
-'Symbol': anwendungsdomänenspezifisches Symbol kann nicht zugeordnet werden, in dem Segment "Segment"  
-  
- Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
-  
- Die Verwendung von [Appdomain](../../cpp/appdomain.md) Variablen impliziert, dass Sie mit Kompilieren **/CLR: pure** oder **/CLR: safe**, und ein safe oder pure-Image darf keine Datensegmente enthalten.  
-  
- Finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2393 generiert.  
-  
-```  
-// C2393.cpp  
-// compile with: /clr:pure /c  
-#pragma data_seg("myseg")  
-int n = 0;   // C2393  
+
+> "*Symbol*": anwendungsdomänenspezifisches Symbol kann nicht zugeordnet werden, in dem Segment "*Segment*"
+
+## <a name="remarks"></a>Hinweise
+
+Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
+
+Die Verwendung von [Appdomain](../../cpp/appdomain.md) Variablen impliziert, dass Sie mit Kompilieren **/CLR: pure** oder **/CLR: safe**, und ein safe oder pure-Image darf keine Datensegmente enthalten.
+
+Finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C2393 generiert. Um dieses Problem zu beheben, erstellen Sie ein Datensegment nicht.
+
+```cpp
+// C2393.cpp
+// compile with: /clr:pure /c
+#pragma data_seg("myseg")
+int n = 0;   // C2393
 ```

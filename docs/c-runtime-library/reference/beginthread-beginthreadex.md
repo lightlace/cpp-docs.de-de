@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704658"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,11 +142,11 @@ Vom Betriebssystem behandelt die speicherbelegung des Stapels beim entweder **_b
 
 Das Gebietsschema des neuen Threads wird initialisiert, mit der pro-Prozess globalen aktuellen Clientgebietsschema-Informationen. Wenn das threadspezifische Gebietsschema aktiviert ist, durch den Aufruf von [_configthreadlocale](configthreadlocale.md) (entweder global oder für neue Threads nur), kann der Thread ändern sein Gebietsschema unabhängig von anderen Threads durch Aufruf **Setlocale** oder **_wsetlocale**. Threads, die die threadspezifische Gebietsschema Kennzeichen festgelegt haben, können die Clientgebietsschema-Informationen in alle anderen Threads, die auch die threadspezifische Gebietsschema Kennzeichen festgelegt haben, sowie alle neu erstellten Threads beeinflussen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Für gemischten und reinen Code **_beginthread** und **_beginthreadex** haben jeweils zwei Überladungen. Eine akzeptiert einen systemeigenen Funktionszeiger für die Aufrufkonvention und die andere akzeptiert einen **__clrcall** -Funktionszeiger. Die erste Überladung ist nicht anwendungsdomänensicher und wird es niemals sein. Wenn Sie gemischten oder reinen Code schreiben, müssen Sie sicherstellen, dass der neue Thread die richtige Anwendungsdomäne angibt, bevor er auf verwaltete Ressourcen zugreift. Hierzu können Sie beispielsweise die [call_in_domain-Funktion](../../dotnet/call-in-appdomain-function.md) verwenden. Die zweite Überladung ist anwendungsdomänensicher. der neu erstellte Thread wird beendet immer in der Anwendungsdomäne des Aufrufers des **_beginthread** oder **_beginthreadex**.
+Für **"/ CLR"** Code **_beginthread** und **_beginthreadex** haben jeweils zwei Überladungen. Eine akzeptiert einen systemeigenen Funktionszeiger für die Aufrufkonvention und die andere akzeptiert einen **__clrcall** -Funktionszeiger. Die erste Überladung ist nicht anwendungsdomänensicher und wird es niemals sein. Wenn Sie schreiben **"/ CLR"** Code Sie sicherstellen müssen, dass der neue Thread die richtige Anwendungsdomäne angibt, bevor er greift auf verwaltete Ressourcen. Hierzu können Sie beispielsweise die [call_in_domain-Funktion](../../dotnet/call-in-appdomain-function.md) verwenden. Die zweite Überladung ist anwendungsdomänensicher. der neu erstellte Thread wird beendet immer in der Anwendungsdomäne des Aufrufers des **_beginthread** oder **_beginthreadex**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>Siehe auch
 
-[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

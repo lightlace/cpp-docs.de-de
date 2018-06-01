@@ -1,6 +1,6 @@
 ---
 title: Compilerfehler Warnungen C4800 über C5999 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704749"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerfehler Warnungen C4800 über C5999
 
@@ -242,10 +243,10 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung C5035|Verwenden der Funktion "*Feature*" bewirkt, dass Funktion *Funktion* als Gast-Code kompiliert werden|
 |Compilerwarnung (Stufe 1) C5036|Beim Kompilieren mit /hybrid:x86arm64-Funktion Varargs zeigerkonvertierung "*Typ1*'to'*Typ2*"|
 |Compilerwarnung (Fehler) C5037|"*Memberfunktion*': eine Out-of-Line-Definition eines Elements einer Klassenvorlage sind keine Standardargumente|
-|[Compilerwarnung C5038](c5038.md)|Datenmember "*member1*"wird so initialisiert, nach der Datenmember"*member2*"|
-|Compilerwarnung C5039|"*Funktion*': Zeiger oder Verweis auf potenziell Auslösen von Funktion" extern "C-Funktion unter - EHc übergeben. Nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst.|
-|Compilerwarnung C5040|Dynamische Ausnahmespezifikationen sind gültig, nur in C ++ 14 und früheren Versionen. zum Behandeln von als noexcept(false)|
-|Compilerwarnung C5041|"*Definition*": Out-of-Line-Definition für Constexpr statischer Datenmember ist nicht erforderlich und veraltetes Feature in C ++ 17|
-|Compilerwarnung C5042|"*Deklaration*": Funktionsdeklarationen im Gültigkeitsbereich der-Block nicht "Inline" angegeben sein, in standardmäßigem C++ – "Inlinespezifizierer" entfernen|
-|Compilerwarnung C5043|"*Spezifikation*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein|
-|Compilerwarnung C5044|Ein Argument an die Befehlszeilenoption *Option* verweist auf einen Pfad "*Pfad*", nicht vorhanden|
+|[Compilerwarnung (Stufe 4) C5038](c5038.md)|Datenmember "*member1*"wird so initialisiert, nach der Datenmember"*member2*"|
+|Compilerwarnung (Stufe 4) C5039|"*Funktion*': Zeiger oder Verweis auf potenziell Auslösen von Funktion" extern "C-Funktion unter - EHc übergeben. Nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst.|
+|Compilerwarnung (Stufe 3) C5040|Dynamische Ausnahmespezifikationen sind gültig, nur in C ++ 14 und früheren Versionen. zum Behandeln von als noexcept(false)|
+|Compilerwarnung (Stufe 1) C5041|"*Definition*": Out-of-Line-Definition für Constexpr statischer Datenmember ist nicht erforderlich und veraltetes Feature in C ++ 17|
+|Compilerwarnung (Stufe 3) C5042|"*Deklaration*": Funktionsdeklarationen im Gültigkeitsbereich der-Block nicht "Inline" angegeben sein, in standardmäßigem C++ – "Inlinespezifizierer" entfernen|
+|Compilerwarnung (Stufe 2) C5043|"*Spezifikation*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein|
+|Compilerwarnung (Stufe 4) C5044|Ein Argument an die Befehlszeilenoption *Option* verweist auf einen Pfad "*Pfad*", nicht vorhanden|
