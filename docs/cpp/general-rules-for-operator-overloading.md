@@ -14,22 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705425"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Allgemeine Regeln für die Überladung von Operatoren
 Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatoren implementiert werden. Aber sie gelten nicht für die [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren, die separat behandelt werden.  
   
--   Sie können keine neuen Operatoren, wie etwa **, definieren.  
+-   Sie können keine neue Operatoren wie z. B. definieren **.**.  
   
 -   Sie können die Bedeutung von Operatoren nicht neu definieren, wenn sie auf integrierte Datentypen angewendet werden.  
   
 -   Überladene Operatoren müssen entweder eine nicht statische Klassenmemberfunktion oder eine globale Funktion sein. Eine globale Funktion, die auf private oder geschützte Klassenmember zugreifen muss, muss als Friend dieser Klasse deklariert sein. Eine globale Funktion muss mindestens ein Argument annehmen, das vom Klassen- oder Aufzählungstyp ist, oder das ein Verweis auf einen Klassen- oder Aufzählungstyp ist. Zum Beispiel:  
   
-    ```  
+    ```cpp  
     // rules_for_operator_overloading.cpp  
     class Point  
     {  
@@ -74,7 +75,7 @@ var++;
  Klassentypen, die Operatoren überladen, können nicht auf dieser Identität basieren. Darüber hinaus sind einige der Anforderungen, die für die Verwendung dieser Operatoren für grundlegende Typen gelten, für überladene Operatoren weniger strikt. Zum Beispiel erfordert der Additions-/Zuweisungsoperator, `+=`, dass der linke Operand ein L-Wert ist, wenn er auf grundlegende Typen angewendet wird. Wenn der Operator überladen wird, gibt es keine solche Anforderung.  
   
 > [!NOTE]
->  Aus Gründen der Konsistenz ist es oft am besten, beim Definieren überladener Operatoren das Modell der integrierten Typen zu befolgen. Wenn sich die Semantik eines überladenen Operators deutlich von seiner Bedeutung in anderen Kontexten unterscheidet, kann das eher verwirrend als nützlich sein.  
+> Aus Gründen der Konsistenz ist es oft am besten, beim Definieren überladener Operatoren das Modell der integrierten Typen zu befolgen. Wenn sich die Semantik eines überladenen Operators deutlich von seiner Bedeutung in anderen Kontexten unterscheidet, kann das eher verwirrend als nützlich sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Operatorüberladung](../cpp/operator-overloading.md)

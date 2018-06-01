@@ -28,22 +28,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 453bb40e94c1d345adbe22f8792b59d1e584499a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704827"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Reiner und überprüfbarer Code (C++/CLI)
-Bei der .NET-Programmierung unterstützt Visual C++ in Visual Studio 2017 die Erstellung von gemischten Assemblys mithilfe der [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption. Die **/CLR: pure** und **CLR: safe** Optionen sind ab Visual Studio 2015 als veraltet markiert und wird in einer zukünftigen Version des Compilers entfernt. Wenn der Code überprüfbar sein muss, empfehlen wir, ihn zu c# portieren.
-  
-## <a name="mixed-clr"></a>Gemischt (/clr)  
- Gemischte Assemblys (kompiliert mit **"/ CLR"**) enthalten sowohl unverwaltete als auch verwaltete Teile, sodass es möglich, dass sie .NET-Funktionen verwenden aber dennoch systemeigenen Code. Dadurch können Anwendungen und Komponenten für die Verwendung von .NET-Funktionen aktualisiert werden, ohne dass das gesamte Projekt neu geschrieben werden muss. Mithilfe von Visual C++ zum Mischen von verwaltetem und systemeigenem Code auf diese Weise wird die C++-Interop aufgerufen. Weitere Informationen finden Sie unter [gemischte (systemeigene und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [einheitlichen als auch .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md).  
-  
-  
-Aufrufe aus verwalteten Assemblys systemeigener DLLs über P/Invoke werden kompiliert, aber möglicherweise ein Fehler zur Laufzeit abhängig von Sicherheitseinstellungen.  
-  
-Es gibt eine Codekonstellation, die kompiliert wird, obwohl dies eine unüberprüfbare Assembly zu Folge hat: Aufruf einer virtuellen Funktion durch eine Objektinstanz mit dem Bereichsauflösungsoperator.  Beispiel: `MyObj -> A::VirtualFunction();`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+# <a name="pure-and-verifiable-code-ccli"></a>Reiner und überprüfbarer Code (C + c++ / CLI)
+
+Bei der .NET-Programmierung unterstützt Visual C++ in Visual Studio 2017 die Erstellung von gemischten Assemblys mithilfe der [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption. Die **/CLR: pure** und **CLR: safe** Optionen sind in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt. Code sicher oder überprüfbar sein muss, sollten Sie dann, ihn zu c# portieren.
+
+## <a name="mixed-clr"></a>Gemischt (/clr)
+
+Gemischte Assemblys (kompiliert mit **"/ CLR"**) enthalten sowohl unverwaltete als auch verwaltete Teile, sodass es möglich, dass sie .NET-Funktionen verwenden aber dennoch systemeigenen Code. Dadurch können Anwendungen und Komponenten für die Verwendung von .NET-Funktionen aktualisiert werden, ohne dass das gesamte Projekt neu geschrieben werden muss. Mithilfe von Visual C++ zum Mischen von verwaltetem und systemeigenem Code auf diese Weise wird die C++-Interop aufgerufen. Weitere Informationen finden Sie unter [gemischte (systemeigene und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [einheitlichen als auch .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md).
+
+Aufrufe aus verwalteten Assemblys systemeigener DLLs über P/Invoke werden kompiliert, aber möglicherweise ein Fehler zur Laufzeit abhängig von Sicherheitseinstellungen.
+
+Es gibt eine Codekonstellation, die kompiliert wird, obwohl dies eine unüberprüfbare Assembly zu Folge hat: Aufruf einer virtuellen Funktion durch eine Objektinstanz mit dem Bereichsauflösungsoperator.  Beispiel: `MyObj -> A::VirtualFunction();`.
+
+## <a name="see-also"></a>Siehe auch
+
+- [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+

@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704840"
 ---
 # <a name="zc-conformance"></a>/Zc (Übereinstimmung)
 
@@ -43,6 +44,7 @@ Dies sind die `/Zc` Compileroptionen:
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|C ++ 17 ausgerichtetes dynamische Zuordnung aktivieren (standardmäßig in C ++ 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|Erzwingen Sie die neue C++-Standardbibliothek Bedeutung für `auto` (in der Standardeinstellung).|
+|[__cplusplus\[-\]](zc-cplusplus.md)|Aktivieren der **__cplusplus** Makro melden den unterstützten Standard (standardmäßig deaktiviert).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Aktivieren Sie die externen Verknüpfung für `constexpr` Variablen (standardmäßig deaktiviert).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Erzwingen der C++-Standardbibliothek `for` Bereichsregeln (auf der Standardeinstellung).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Aktivieren der implizite `noexcept` auf erforderliche Funktionen (auf standardmäßig).|

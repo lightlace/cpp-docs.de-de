@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704671"
 ---
 # <a name="platformarray-class"></a>Platform::Array-Klasse
 Stellt ein änderbares, eindimensionales Array dar, das über die Anwendungsbinärdateischnittstelle (ABI) empfangen und übergeben werden kann.  
@@ -62,7 +63,7 @@ private ref class Array<TArg, 1> :
   
  Das Windows-Runtime-Typsystem unterstützt nicht das Konzept von verzweigten Arrays und aus diesem Grund können Sie ein IVector übergeben < Platform:: Array\<T >> als Rückgabewert oder Methodenparameter. Um ein verzweigtes Array oder eine Sequenz von Sequenzen an die ABI zu übergeben, verwenden Sie `IVector<IVector<T>^>`.  
   
- Diese Klasse wird im Header "vccorlib.h" definiert, der automatisch vom Compiler eingeschlossen wird. Sie ist in IntelliSense, aber nicht im Objektkatalog, sichtbar, da sie kein öffentlicher, in platform.winmd definierter Typ ist.  
+ Diese Klasse wird im Header "vccorlib.h" definiert, der automatisch vom Compiler eingeschlossen wird. Es ist in IntelliSense, aber nicht im Objektkatalog angezeigt, da es sich nicht um einen öffentlichen Typ, der in der Datei platform.winmd definiert ist.  
   
 ### <a name="requirements"></a>Anforderungen  
  Compileroption: **/ZW**  

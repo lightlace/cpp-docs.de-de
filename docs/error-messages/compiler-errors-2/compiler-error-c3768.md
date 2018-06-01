@@ -16,33 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3634ecf3eb1417095cce144706838113b5ad2a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704957"
 ---
 # <a name="compiler-error-c3768"></a>Compilerfehler C3768
-die Adresse einer virtuellen Vararg-Funktion in reinen verwalteten Code nicht akzeptiert werden.  
-  
- Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert ist.  
-  
- Beim Kompilieren mit `/clr:pure`, können Sie nicht die Adresse einer virtuellen erhalten `vararg` Funktion.  
-  
-## <a name="example"></a>Beispiel  
 
- Im folgende Beispiel wird C3768 generiert:  
-  
-```  
-// C3768.cpp  
-// compile with: /clr:pure  
-struct A  
-{  
-   virtual void f(...);  
-};  
-  
-int main()  
-{  
-   &(A::f);   // C3768  
-}  
+> die Adresse einer virtuellen Vararg-Funktion in reinen verwalteten Code nicht akzeptiert werden.
+
+## <a name="remarks"></a>Hinweise
+
+Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+
+Beim Kompilieren mit **/CLR: pure**, können Sie nicht die Adresse einer virtuellen erhalten `vararg` Funktion.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C3768 generiert:
+
+```cpp
+// C3768.cpp
+// compile with: /clr:pure
+struct A
+{
+   virtual void f(...);
+};
+
+int main()
+{
+   &(A::f);   // C3768
+}
 ```
