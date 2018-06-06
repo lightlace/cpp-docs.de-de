@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
+ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755770"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Gewusst wie: Erstellen und Verwenden von unique_ptr-Instanzen
 Ein [Unique_ptr](../standard-library/unique-ptr-class.md) teilt der Zeiger nicht. Es kann nicht in eine andere kopiert werden `unique_ptr`, als Wert an eine Funktion übergeben oder in einen Algorithmus für die C++-Standardbibliothek, die Kopien erfordert verwendet. Ein `unique_ptr`-Objekt kann nur verschoben werden. Dies bedeutet, dass der Besitz der Arbeitsspeicherressource einem anderen `unique_ptr`-Objekt übertragen wird und das ursprüngliche `unique_ptr`-Objekt diese Ressource nicht mehr besitzt. Es empfiehlt sich, ein Objekt auf einen Besitzer zu beschränken, da mehrere Besitzer die Komplexität der Programmlogik erhöhen. Deshalb verwenden, wenn Sie einen intelligenten Zeiger für ein einfaches C++-Objekt benötigen, `unique_ptr`, und bei der Erstellung einer `unique_ptr`, verwenden Sie die [Make_unique](../standard-library/memory-functions.md#make_unique) Hilfsfunktion.  
@@ -25,7 +26,7 @@ Ein [Unique_ptr](../standard-library/unique-ptr-class.md) teilt der Zeiger nicht
   
  ![Verschieben den Besitz von einer eindeutigen&#95;Ptr](../cpp/media/unique_ptr.png "Unique_ptr")  
   
- `unique_ptr` wird definiert, der `<memory>` -Header in der C++-Standardbibliothek. Es ist genau effizient wie einen unformatierten Zeiger und kann in C++-Standardbibliothek Container verwendet werden. Das Hinzufügen von `unique_ptr` -Instanzen, die C++-Standardbibliothek Containern ist effizient, da der bewegungskonstruktor des der `unique_ptr` entfällt die Notwendigkeit für einen Kopiervorgang.  
+ `unique_ptr` wird definiert, der `<memory>` -Header in der C++-Standardbibliothek. Es ist genau so effizient wie einen unformatierten Zeiger und kann in C++-Standardbibliothek Container verwendet werden. Das Hinzufügen von `unique_ptr` -Instanzen, die C++-Standardbibliothek Containern ist effizient, da der bewegungskonstruktor des der `unique_ptr` entfällt die Notwendigkeit für einen Kopiervorgang.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie `unique_ptr`-Instanzen erstellt und zwischen Funktionen übergeben werden.  

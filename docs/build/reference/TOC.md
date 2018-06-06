@@ -204,7 +204,7 @@
 ### [/DELAY (Importeinstellungen zum verzögerten Laden)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (Laden von Import verzögern)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (Assembly teilweise signieren)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (festgelegte Standardwert abhängiges Laden Flags)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (festgelegte Standardwert abhängiges Laden Flags)](dependentloadflag.md)
 ### [/DLL (DLL erstellen)](dll-build-a-dll.md)
 ### [/DRIVER (Windows NT-Kernelmodustreiber)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (Address Space Layout Randomization verwenden)](dynamicbase-use-address-space-layout-randomization.md)
