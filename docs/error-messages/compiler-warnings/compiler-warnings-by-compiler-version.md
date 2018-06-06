@@ -1,7 +1,7 @@
 ---
 title: Compilerwarnungen nach Compilerversion | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2018
+ms.date: 05/30/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e40de8aa08ae12bb0389a113be4d6cbd51196f12
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704736"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion
 
-Der Compiler kann Unterdrücken von Warnungen, die nach der Version eingeführt wurden, Sie mithilfe geben, der [WV](../../build/reference/compiler-option-warning-level.md) -Compileroption. Dies ist nützlich für die Verwaltung des Buildprozesses, wenn Sie eine neue Toolsetversion eingeführt und vorübergehend neue Warnungen unterdrücken möchten. Diese Option unterdrückt keine neue Fehlermeldungen. Es wird nicht empfohlen, Sie alle neue Warnungen unterdrücken dauerhaft! Es wird empfohlen, immer auf der höchsten reguläre Warnebene Kompilieren __/W4__, und Entfernen der __WV__ Option in den Build so bald wie möglich. 
+Der Compiler kann Unterdrücken von Warnungen, die nach der Version eingeführt wurden, Sie mithilfe geben, der [WV](../../build/reference/compiler-option-warning-level.md) -Compileroption. Dies ist nützlich für die Verwaltung des Buildprozesses, wenn Sie eine neue Toolsetversion eingeführt und vorübergehend neue Warnungen unterdrücken möchten. Diese Option unterdrückt keine neue Fehlermeldungen. Es wird nicht empfohlen, Sie alle neue Warnungen unterdrücken dauerhaft! Es wird empfohlen, immer auf der höchsten reguläre Warnebene Kompilieren __/W4__, und Entfernen der __WV__ Option in den Build so bald wie möglich.
 
 Diese Versionen des Compilers wurden neue Warnungen eingeführt:
 
@@ -39,26 +40,36 @@ Diese Versionen des Compilers wurden neue Warnungen eingeführt:
 | Visual C++ 2015 Update 1 | 19.00.23506.0 |
 | Visual C++ 2015 Update 2 | 19.00.23918.0 |
 | Visual C++ 2015 Update 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.24903.0 |
-| Visual C++ 2017 Version 15.1 | 19.10.25017.0 |
+| Visual C++ 2017 RTM | 19.10.25017.0 |
 | Visual C++ 2017 Version 15.3 | 19.11.25506.0 |
-| Visual C++ 2017 Version 15.5 | 19.12.25827.0 |
+| Visual C++ 2017 Version 15.5 | 19.12.25830.0 |
+| Visual C++ 2017 Version 15,6 | 19.13.26128.0 |
+| Visual C++ 2017 Version 15.7 | 19.14.26428.0 |
 
 Sie geben nur die Nummer der Hauptversion, die Nummern für Haupt- und Nebenversionsnummern oder Haupt-oder Nebenversion, und erstellen Sie Zahlen können die __WV__ Option. Der Compiler meldet alle Warnungen, die Versionen stimmen überein, die mit der angegebenen Zahl beginnen und unterdrückt alle Warnungen für Versionen, die größer als die angegebene Anzahl. Beispielsweise __/Wv:17__ meldet alle Warnungen in oder vor einer Version von Visual Studio 2012 eingeführt und unterdrückt alle Warnungen, die von einem Compiler von Visual Studio 2013 (Version 18) oder höher eingeführt. Unterdrückt Warnungen, eingeführt in Visual Studio 2015 update 2 und höher können Sie __/Wv:19.00.23506__. Verwendung __/Wv:19.11__ melden Sie alle Warnungen in einer beliebigen Version von Visual Studio vor Visual Studio 2017 Version 15.5 eingeführt, aber unterdrückt Warnungen, die in Visual Studio 2017 15.5 und höher eingeführt wurden.
 
 Die folgenden Abschnitte Listen die Warnungen eingeführt, die von der jeweiligen Version von Visual C++, die Sie mithilfe von unterdrücken können die __WV__ -Compileroption. Die __WV__ Option keine Unterdrückung von Warnungen, die nicht aufgeführt sind, die schon vor die angegebenen Versionen des Compilers verfügbar waren.
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Warnungen, die in Visual C++ 2017 Version 15.5 (Compilerversion 19.12.25827.0) eingeführt wurden
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Warnungen, die in Visual C++ 2017 Version 15.7 (Compilerversion 19.14.26428.0) eingeführt wurden
 
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.11__.
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.13__.
+
+|||
+|-|-|
+C4642|"*Problem*": konnten nicht importiert werden die Einschränkungen für den generischen Parameter '*Parameter*"
+C5045|Compilerfehler wird Absorptionsspektrum Entschärfung einfügen, Arbeitsspeicherlast angegeben, wenn /Qspectre wechseln
+
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Warnungen, die in Visual C++ 2017 Version 15,6 (Compilerversion 19.13.26128.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.12__.
 
 |||
 |-|-|
 C5044|Ein Argument an die Befehlszeilenoption *Option* verweist auf einen Pfad "*Pfad*", nicht vorhanden
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Warnungen, die in Visual C++ 2017 Version 15.3 (Compilerversion 19.11.25506.0) eingeführt wurden
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Warnungen, die in Visual C++ 2017 Version 15.5 (Compilerversion 19.12.25830.0) eingeführt wurden
 
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10__.
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.11__.
 
 |||
 |-|-|
@@ -70,9 +81,9 @@ C5041|"*Definition*": Out-of-Line-Definition für Constexpr statischer Datenmemb
 C5042|"*Deklaration*": Funktionsdeklarationen im Gültigkeitsbereich der-Block nicht "Inline" angegeben sein, in standardmäßigem C++ – "Inlinespezifizierer" entfernen
 C5043|"*Spezifikation*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein
 
-## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Warnungen, die in Visual C++ 2017 Version 15.1 (Compilerversion 19.10.25017.0) eingeführt wurden
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Warnungen, die in Visual C++ 2017 Version 15.3 (Compilerversion 19.11.25506.0) eingeführt wurden
 
-Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10.24903__.
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.10__.
 
 |||
 |-|-|
@@ -91,7 +102,7 @@ C5036|Beim Kompilieren mit /hybrid:x86arm64-Funktion Varargs zeigerkonvertierung
 C5037|"*Memberfunktion*': eine Out-of-Line-Definition eines Elements einer Klassenvorlage sind keine Standardargumente
 C5038|Datenmember "*member1*"wird so initialisiert, nach der Datenmember"*member2*"
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Warnungen, die in Visual C++ 2017 RTM (Compilerversion 19.10.24903) eingeführt wurden
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Warnungen, die in Visual C++ 2017 RTM (Compilerversion 19.10.25017.0) eingeführt wurden
 
 Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.00__.
 
@@ -164,15 +175,15 @@ C4498|nicht dem Standard entsprechende Erweiterung: '*Erweiterung*"
 C4499|"*Spezialisierung*': eine explizite Spezialisierung sind keine Speicherklasse (ignoriert)
 C4576|ein in Klammern gefolgt von einer Initialisiererliste ist eine nicht standardmäßige expliziten Typ Konvertierung-syntax
 C4577|"Noexcept" verwendet, mit der keine Ausnahmebehandlung angegebenen Modus; Beenden von Ausnahme ist nicht gewährleistet. Geben Sie/EHsc
-C4578|'abs': Konvertierung von "*Typ*'to'*Typ*', möglicher Datenverlust (wollten Sie rufen Sie"*Namen*"oder auf #include <cmath>?)
+C4578|'abs': Konvertierung von "*Typ*'to'*Typ*', möglicher Datenverlust (wollten Sie rufen Sie"*Namen*"oder auf #include \<Cmath >?)
 C4582|"*Typ*': Konstruktor wird nicht implizit aufgerufen.
 C4583|"*Typ*": Destruktor wird nicht implizit aufgerufen.
 C4587|"*Typ*": verhaltensänderung: Konstruktor wird nicht mehr implizit aufgerufen.
 C4588|"*Typ*": verhaltensänderung: Destruktor wird nicht mehr implizit aufgerufen.
 C4589|Konstruktor abstrakten Klasse*Typ*'ignoriert Initialisierer für die virtuelle Basisklasse'*Typ*"
-C4591|"Constexpr" Aufruf Tiefe maximal *Anzahl* überschritten (/ Constexpr:depth<NUMBER>)
+C4591|"Constexpr" Aufruf Tiefe maximal *Anzahl* überschritten (/ Constexpr:depth\<Anzahl >)
 C4592|"*Typ*": Symbol werden dynamisch initialisiert (Implementierung Beschränkung)
-C4593|"*Typ*": "Constexpr" Aufruf Auswertung Schritt kann maximal *Wert* überschritten; verwenden Sie /constexpr:steps<NUMBER> um den Grenzwert zu erhöhen.
+C4593|"*Typ*": "Constexpr" Aufruf Auswertung Schritt kann maximal *Wert* überschritten; verwenden Sie /constexpr:steps\<Anzahl > um den Grenzwert zu erhöhen.
 C4647|Verändertes Programmverhalten: __is_pod (*Typ*) anderen Wert aufweist, in früheren Versionen
 C4648|Standard-Attribut "Carries_dependency" wird ignoriert.
 C4649|Attribute werden in diesem Kontext ignoriert.
@@ -377,10 +388,10 @@ C4633|XML-Dokumentkommentar*Beschreibung*: Fehler: *Beschreibung*
 C4634|XML-Dokumentkommentar*Beschreibung*: kann nicht angewendet werden: *Beschreibung*
 C4635|XML-Dokumentkommentar*Beschreibung*: falsch formatierte XML: *Beschreibung*
 C4636|XML-Dokumentkommentar*Beschreibung*: Tag erfordert ein nicht leeres '*Beschreibung*"Attribut.
-C4637|XML-Dokumentkommentar*Beschreibung*: <include> -Tag wurde verworfen. *Beschreibung*
+C4637|XML-Dokumentkommentar*Beschreibung*: \<enthalten >-Tag wurde verworfen. *Beschreibung*
 C4638|XML-Dokumentkommentar*Beschreibung*: Verweis auf unbekanntes Symbol '*Beschreibung*".
 C4639|MSXML Fehler, XML-Dokumentkommentare werden nicht verarbeitet. *Beschreibung*
-C4641|XML-Dokumentkommentar hat eine mehrdeutige Referenz: 
+C4641|XML-Dokumentkommentar hat eine mehrdeutige Referenz:
 C4678|Basisklasse*Deklaration*"ist weniger zugreifbar als"*Namen*"
 C4679|"*Beschreibung*": Schnittstellenmember konnte nicht importiert
 C4687|"*Typ*': eine versiegelte abstrakte Klasse kann nicht zu eine Schnittstelle implementieren"*Typ*"
@@ -626,6 +637,7 @@ C4997|"*Typ*': Coclass implementiert keine COM- oder Pseudoschnittstelle
 C4998|Erwartung fehlgeschlagen: *Beschreibung*(*Anzahl*)
 
 ## <a name="see-also"></a>Siehe auch
-[Compileroption WV](../../build/reference/compiler-option-warning-level.md)
-[Compilerwarnungen, die standardmäßig deaktiviert sind](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-[Warnung](../../preprocessor/warning.md)
+
+- [WV (Compileroption)](../../build/reference/compiler-option-warning-level.md)
+- [Compiler-Warnungen standardmäßig deaktiviert sind](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+- [warning](../../preprocessor/warning.md)
