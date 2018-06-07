@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569848"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ Eine vorhandener Dateideskriptor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Betriebssystem Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **INVALID_HANDLE_VALUE** (-1) und legt **Errno** auf **EBADF**, der angibt, eines ungültiges Dateihandle.
+Gibt einen Betriebssystem Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **INVALID_HANDLE_VALUE** (-1) und legt **Errno** auf **EBADF**, der angibt, eines ungültiges Dateihandle. Um eine compilerwarnung zu vermeiden, wenn das Ergebnis in Routinen verwendet wird, die ein Win32-Dateihandle zu erwarten, wandeln Sie sie in einem **BEHANDELN** Typ.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -68,7 +69,7 @@ Um eine Datei zu schließen, deren Dateihandle des Betriebssystems (BS) erhalten
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_get_osfhandle**|\<io.h>|
 
