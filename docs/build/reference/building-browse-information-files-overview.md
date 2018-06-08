@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843074"
 ---
 # <a name="building-browse-information-files-overview"></a>Erstellen von Browseinformationsdateien: Übersicht
 Um Browserinformationen für die Symbolsuche zu erstellen, erstellt der Compiler eine SBR-Datei für jede Quelldatei in Ihrem Projekt, klicken Sie dann BSCMAKE an. EXE-Datei wird die SBR-Dateien in einer BSC-Datei.  
@@ -49,7 +50,7 @@ Um Browserinformationen für die Symbolsuche zu erstellen, erstellt der Compiler
   
 1.  Entweder nicht erstellen Sie die BSC-Datei auf Projektebene oder verwenden Sie den Schalter/n, um zu verhindern, dass die SBR-Dateien abgeschnitten wird.  
   
-2.  Nachdem alle Projekte erstellt werden, führen Sie BSCMAKE mit allen SBR-Dateien als Eingabe. Platzhalter sind zulässig. Für die Instanz, wenn Sie Projektverzeichnisse C:\X C:\Y und C:\Z SBR-Dateien, und wollten sie alle in einer BSC-Datei kombinieren Sie hatten, verwenden Sie BSCMAKE C:\X\\*.sbr C:\Y\\\*SBR C:\Z\\\*. SBR/o c:\whatever_directory\combined.bsc zum Erstellen der kombinierten BSC-Datei.  
+2.  Nachdem alle Projekte erstellt werden, führen Sie BSCMAKE mit allen SBR-Dateien als Eingabe. Platzhalter sind zulässig. Für die Instanz, wenn Sie Projektverzeichnisse C:\X C:\Y und C:\Z SBR-Dateien, und wollten sie alle in einer BSC-Datei kombinieren Sie hatten, verwenden Sie BSCMAKE C:\X\\\*SBR C:\Y\\\*SBR C:\Z\\ \*SBR/o c:\whatever_directory\combined.bsc zum Erstellen der kombinierten BSC-Datei.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)   
