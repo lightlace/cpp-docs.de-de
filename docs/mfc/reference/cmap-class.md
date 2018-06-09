@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239423"
 ---
 # <a name="cmap-class"></a>CMap-Klasse
 Eine Wörterbuchauflistungsklasse, die eindeutigen Schlüsseln Werte zuordnet.  
@@ -67,13 +68,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  Die Klasse des Objekts, das als Schlüssel für die Zuordnung verwendet.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  Für verwendeten Datentyp `KEY` Argumente, in der Regel einen Verweis auf `KEY`.  
   
  `VALUE`  
  Die Klasse des Objekts in der Zuordnung gespeichert.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  Für verwendeten Datentyp `VALUE` Argumente, in der Regel einen Verweis auf `VALUE`.  
   
 ## <a name="members"></a>Member  
