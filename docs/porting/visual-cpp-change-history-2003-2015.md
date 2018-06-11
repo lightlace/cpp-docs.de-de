@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705685"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -90,9 +91,9 @@ Wenn Sie auf eine neue Version von Visual Studio upgraden, treten unter Umständ
   
 #### <a name="new-and-newh"></a>\<new> und \<new.h>  
   
--   **Operatoren „new“ und „delete“**In früheren Bibliotheksversionen wurden die in der Implementierung definierten Operatorfunktionen „new“ und „delete“ aus der DLL-Datei der Laufzeitbibliothek (z. B. msvcr120.dll) exportiert. Dieser Operatorfunktionen sind immer statisch mit Ihren Binärdateien verknüpft, selbst wenn DLL-Dateien der Laufzeitbibliothek verwendet werden.  
+-   **Operatoren „new“ und „delete“** In früheren Bibliotheksversionen wurden die in der Implementierung definierten Operatorfunktionen „new“ und „delete“ aus der DLL-Datei der Laufzeitbibliothek (z. B. msvcr120.dll) exportiert. Dieser Operatorfunktionen sind immer statisch mit Ihren Binärdateien verknüpft, selbst wenn DLL-Dateien der Laufzeitbibliothek verwendet werden.  
   
-     Es handelt sich dabei nicht um eine wichtige Änderung für nativen oder gemischten Code (/clr), sondern eher für Code, der als [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, denn diese Änderung kann dann zu einem Fehler beim Kompilieren führen. Wenn Sie Code als !/clr:pure kompilieren, müssen Sie möglicherweise #include \<new> oder #include \<new.h> hinzufügen, um Buildfehler aufgrund dieser Änderung zu umgehen. Beachten Sie, dass „/clr:pure“ in Visual Studio 2015 veraltet ist und in zukünftigen Releases ggf. entfernt wird. Code der „rein“ sein muss, sollte zu C# portiert werden.  
+     Es handelt sich dabei nicht um eine wichtige Änderung für nativen oder gemischten Code (/clr), sondern eher für Code, der als [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, denn diese Änderung kann dann zu einem Fehler beim Kompilieren führen. Wenn Sie Code als !/clr:pure kompilieren, müssen Sie möglicherweise #include \<new> oder #include \<new.h> hinzufügen, um Buildfehler aufgrund dieser Änderung zu umgehen. Beachten Sie, dass „/clr:pure“ in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird. Code der „rein“ sein muss, sollte zu C# portiert werden.  
   
 #### <a name="processh"></a>\<process.h>  
   
