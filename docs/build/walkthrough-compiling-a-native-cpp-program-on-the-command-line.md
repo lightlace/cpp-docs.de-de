@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile | Microsoft Docs'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd65dff0a354ebbed4435b8867271091211279d
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253830"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile
 Visual C++ enthält einen C++-Befehlszeilencompiler, den Sie verwenden können, um alles von grundlegenden konsolenanwendungen für universelle Windows-Plattform-apps, Desktop-apps, Gerätetreiber und .NET-Komponenten zu erstellen.  
@@ -31,13 +32,13 @@ Visual C++ enthält einen C++-Befehlszeilencompiler, den Sie verwenden können, 
  In dieser exemplarischen Vorgehensweise können Sie Ihr eigenes Visual C++-Programm verwenden, statt das gezeigte einzugeben, oder Sie können ein Visual C++-Codebeispiel aus einem anderen Hilfeartikel verwenden.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie entweder Visual Studio und die optionalen Visual C++-Komponenten oder der Microsoft Visual C++-Buildtools installiert haben.  
+ Um diese exemplarische Vorgehensweise abgeschlossen haben, müssen Sie entweder Visual Studio und die optionale Desktopentwicklung mit C++-Arbeitslast oder der erstellen-Befehlszeilentools für Visual Studio installiert haben.  
   
- Visual Studio ist eine leistungsstarke integrierte Entwicklungsumgebung, die einem voll ausgestatteten-Editor, Ressourcen-Manager, Debugger und Compilern für viele Sprachen und Plattformen unterstützt. Informationen zu diesen Funktionen und zum Herunterladen und Installieren von Visual Studio, einschließlich der kostenlosen Visual Studio Community Edition finden Sie unter [VisualStudio.com](https://www.visualstudio.com/).  
+ Visual Studio ist eine leistungsstarke integrierte Entwicklungsumgebung (IDE), die einem voll ausgestatteten-Editor, Ressourcen-Manager, Debugger und Compilern für viele Sprachen und Plattformen unterstützt. Informationen zum Herunterladen und installieren Visual Studio, einschließlich der kostenlosen Visual Studio Community Edition und Unterstützung für C/C++-Entwicklung finden Sie unter [Installieren von C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md).  
   
- Der Visual Studio-Tools erstellen installiert wird, nur den Befehlszeilencompiler, Tools und Bibliotheken, die zum Erstellen von C und C++-Programmen erforderlich. Ist es perfekt für Build Labs oder Schulungsraum ausführt und relativ schnell installiert. Um nur die Befehlszeilentools zu installieren, laden Sie [Visual Studio-Tools zum Erstellen](https://go.microsoft.com/fwlink/p/?linkid=840931) und führen Sie das Installationsprogramm. Weitere Informationen finden Sie unter [Visual C++-Buildtools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Der Build-Tools für Visual Studio installiert nur die Befehlszeilencompiler, Tools und Bibliotheken, die zum Erstellen von C und C++-Programmen erforderlich. Ist es perfekt für Build Labs oder Schulungsraum ausführt und relativ schnell installiert. Um nur die Befehlszeilentools zu installieren, laden Sie [Build-Tools für Visual Studio-2017](https://go.microsoft.com/fwlink/p/?linkid=840931).  
   
- Bevor Sie eine C- oder C++-Programm in der Befehlszeile erstellen können, müssen Sie sicherstellen, dass die Verwaltungstools installiert sind und Sie sie über die Befehlszeile zugreifen können. Visual C++ stellt komplexe Anforderungen an die befehlszeilenumgebung zum Suchen von Tools, Header und Bibliotheken, die verwendet. **Sie können Visual C++ in einem einfachen Eingabeaufforderungsfenster verwenden**. Visual C++ installiert Glücklicherweise Tastenkombinationen für Sie eine Developer-Eingabeaufforderung zu starten, die die Umgebung, die für Befehlszeilenbuilds eingerichtet hat. Leider sind die Namen der Verknüpfungen mit der Developer-Eingabeaufforderung und wo sich diese befinden sich in fast jeder Version von Visual C++ und in verschiedenen Versionen von Windows. Die erste Aufgabe für die exemplarische Vorgehensweise findet das richtige zu verwenden.  
+ Bevor Sie eine C- oder C++-Programm in der Befehlszeile erstellen können, müssen Sie sicherstellen, dass die Verwaltungstools installiert sind und Sie sie über die Befehlszeile zugreifen können. Visual C++ stellt komplexe Anforderungen an die befehlszeilenumgebung zum Suchen von Tools, Header und Bibliotheken, die verwendet. **Sie können Visual C++ in einem einfachen Eingabeaufforderungsfenster verwenden** ohne vorbereiten. Visual C++ installiert Glücklicherweise Tastenkombinationen für Sie eine Developer-Eingabeaufforderung zu starten, die die Umgebung, die für Befehlszeilenbuilds eingerichtet hat. Leider sind die Namen der Verknüpfungen mit der Developer-Eingabeaufforderung und wo sich diese befinden sich in fast jeder Version von Visual C++ und in verschiedenen Versionen von Windows. Die erste Aufgabe für die exemplarische Vorgehensweise findet das richtige zu verwenden.  
   
 > [!NOTE]
 >  Eine Developer-eingabeaufforderungsverknüpfung legt automatisch die richtigen Pfade für den Compiler und Tools, und für alle erforderlichen Header und Bibliotheken. Sie müssen diese Umgebungswerte selbst festlegen bei Verwendung von regulären Eingabeaufforderungsfensters. Weitere Informationen finden Sie unter [Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Es wird empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung verwenden, anstatt eine eigene erstellen.  
