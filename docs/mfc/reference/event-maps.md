@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377887"
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 Wenn möchte, dass ein Steuerelement des Containers zu informieren, die eine Aktion, die (vom Steuerelemententwickler bestimmt). (z. B. eine Tastenkombination, klicken mit der Maus oder eine Änderung an der Zustand des Steuerelements erfolgt ist) wird eine Auslösen von Ereignissen Funktion aufgerufen. Diese Funktion teilt den Steuerelementcontainer, den einige wichtige Aktion aufgetreten ist, durch das zugehörige Ereignis auslösen.  
