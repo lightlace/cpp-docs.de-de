@@ -1,5 +1,5 @@
 ---
-title: Implementieren eines Verbindungspunktes (Visual C++) | Microsoft Docs
+title: Implementieren eines Verbindungspunktes (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b75bf145da401ad9889353a1e65448831c602c9
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328346"
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>Implementieren eines Verbindungspunktes (Visual C++)
-Um einen Verbindungspunkt mit dem Assistenten für zeigen der implementieren Verbindung zu implementieren, müssen Sie erstellt haben ein Projekt als ATL COM-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält. Können Sie die [ATL-Projektassistenten](../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  
+Zum Implementieren eines Verbindungspunkts mithilfe des Assistenten zum Implementieren von Verbindungspunkten müssen Sie ein Projekt als eine ATL COM-Anwendung oder eine MFC-Anwendung, die ATL-Unterstützung umfasst, erstellt haben. Sie können den [ATL-Projekt-Assistenten](../atl/reference/atl-project-wizard.md) zum Erstellen einer ATL-Anwendung verwenden, oder [Ihrer MFC-Anwendung ein ATL-Objekt hinzufügen](../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL-Unterstützung in einer MFC-Anwendung zu implementieren.  
   
 > [!NOTE]
->  Informationen zum Implementieren von Verbindungspunkten für ein MFC-Projekt finden Sie unter [Verbindungspunkte](../mfc/connection-points.md).  
+>  Informationen zum Implementieren von Verbindungspunkten in ein MFC-Projekt finden Sie unter [Connection Points (Verbindungspunkte)](../mfc/connection-points.md).  
   
- Nach des Projekts erstellen, um einen Verbindungspunkt zu implementieren, müssen Sie zuerst ein ATL-Objekt hinzufügen. Finden Sie unter [Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) eine Liste der Assistenten, mit denen Objekte ATL-Projekt hinzu.  
+ Nachdem Sie das Projekt erstellt haben, müssen Sie zum Implementieren eines Verbindungspunkts zunächst ein ATL-Objekt hinzufügen. Eine Liste von Assistenten, die Ihrem ATL-Projekt Objekte hinzufügen, finden Sie unter [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
 > [!NOTE]
->  Der Assistent unterstützt keine ATL-Dialogfelder, XML-Webdienste mit ATL-Server, Leistungsobjekte und Leistungsindikatoren erstellt.  
+>  Der Assistent unterstützt keine ATL-Dialogfelder, mit einem ATL-Server erstellte XML-Webdienste, Leistungsobjekte oder Leistungsindikatoren.  
   
- Ein verbindungsfähiges Objekt (d. h. eine Quelle) kann für jede seiner Ausgangsschnittstellen einen Verbindungspunkt verfügbar machen. Jede Ausgangsschnittstelle kann von einem Client auf ein Objekt (d. h. eine Senke) implementiert werden. Weitere Informationen finden Sie unter [ATL-Verbindungspunkte](../atl/atl-connection-points.md).  
+ Ein verbindungsfähiges Objekt (d.h. eine Quelle) kann einen Verbindungspunkt für seine Ausgangsschnittstellen zur Verfügung stellen. Jede Ausgangsschnittstelle kann von einem Client auf einem Objekt (d.h. eine Senke) implementiert werden. Weitere Informationen finden Sie unter [ATL Connection Points (ATL-Verbindungspunkte)](../atl/atl-connection-points.md).  
   
-### <a name="to-implement-a-connection-point"></a>Um einen Verbindungspunkt zu implementieren.  
+### <a name="to-implement-a-connection-point"></a>So implementieren Sie einen Verbindungspunkt  
   
-1.  In der Klassenansicht mit der rechten Maustaste des Klassennamen für das ATL-Objekt.  
+1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf den Klassennamen für das ATL-Objekt.  
   
-2.  Klicken Sie auf **hinzufügen** aus dem Kontextmenü, und klicken Sie dann auf **Verbindungspunkt hinzufügen** zum Anzeigen der [Assistent zum Implementieren von Verbindungspunkten](../ide/implement-connection-point-wizard.md).  
+2.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Verbindungspunkt hinzufügen**, um den [Assistenten zum Implementieren von Verbindungspunkten](../ide/implement-connection-point-wizard.md) anzuzeigen.  
   
-3.  Wählen Sie aus den entsprechenden Typbibliotheken implementiert, und klicken Sie auf die Verbindungsschnittstellen **Fertig stellen**.  
+3.  Wählen Sie die zu implementierenden Verbindungspunktschnittstellen aus den entsprechenden Typbibliotheken aus, und klicken Sie auf **Fertig stellen**.  
   
-4.  Überprüfen Sie in der Klassenansicht den Webdienstproxy-Klassen, die für jeden Verbindungspunkt erstellt. Die Klassen werden als CProxy*Schnittstellenname*\<T > und abgeleitet sind [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).  
+4.  Überprüfen Sie in der Klassenansicht die Proxyklassen, die für jeden Verbindungspunkt erstellt wurden. Die Klassen werden als CProxy*Schnittstellenname*\<T> angezeigt und werden von [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) abgeleitet.  
   
-5.  Doppelklicken Sie auf Connection Point-Klasse zum Anzeigen der Definition der Verbindungspunkt-Klasse.  
+5.  Doppelklicken Sie auf die Verbindungspunktklasse, um die Definition der Klasse des Verbindungspunkts anzuzeigen.  
   
-    -   Wenn Sie einen Verbindungspunkt für Ihr eigenes Projekt Schnittstelle implementieren, wird die folgende Definition angezeigt.  
+    -   Wenn Sie einen Verbindungspunkt für die Schnittstelle Ihres eigenen Projekts implementieren, wird die folgende Definition angezeigt.  
   
         ```  
         template< class T >  
@@ -57,10 +58,10 @@ Um einen Verbindungspunkt mit dem Assistenten für zeigen der implementieren Ver
         };  
         ```  
   
-         Wenn Sie eine lokale Schnittstelle implementieren, werden in die Klassendefinition der Methoden und Eigenschaften angezeigt.  
+         Wenn Sie eine lokale Schnittstelle implementieren, werden Methoden und Eigenschaften im Klassentext angezeigt.  
   
-    -   Wenn Sie einen Verbindungspunkt für eine andere Schnittstelle implementieren, die Definition enthält die Methoden der Schnittstelle, denen vorangestellt wurde `Fire_`.  
+    -   Wenn Sie einen Verbindungspunkt für eine andere Schnittstelle implementieren, enthält die Definition die Methoden der Schnittstelle, denen jeweils `Fire_` vorangestellt wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Hinzufügen von Verbindungspunkten zu einem Objekt](../atl/adding-connection-points-to-an-object.md)

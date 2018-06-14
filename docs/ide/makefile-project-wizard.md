@@ -1,5 +1,5 @@
 ---
-title: Makefile-Projekt-Assistenten | Microsoft Docs
+title: Makefile-Projekt-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334398"
 ---
 # <a name="makefile-project-wizard"></a>Makefile-Projekt-Assistent
-Verwenden Sie diesen Assistenten zum Erstellen einer Befehlszeile für das Buildmodul ausgeführt. Nachdem Sie das Projekt erstellt haben, können Sie diese anzeigen und bearbeiten Sie die Eigenschaften des Projekts in des Projekts [Eigenschaftenseite](../ide/working-with-project-properties.md).  
+Verwenden Sie diesen Assistenten zum Erstellen einer Befehlszeile zum Ausführen der Build-Engine. Nachdem Sie das Projekt erstellt haben, können Sie die Eigenschaften des Projekts in der [Eigenschaftenseite](../ide/working-with-project-properties.md) anzeigen und bearbeiten.  
   
 ## <a name="overview"></a>Übersicht  
- Diese Seite des Assistenten wird beschrieben, die aktuellen projekteinstellungen für das Projekt, das Sie erstellen. Das Projekt wird sich sowohl Debug-und Releasekonfigurationen von eingerichtet, wird standardmäßig *ProjName*.exe.  
+ Auf dieser Seite des Assistenten werden die aktuellen Projekteinstellungen für das Projekt beschrieben, das Sie erstellen. Standardmäßig ist das Projekt so eingerichtet, dass es die Debug- und Releasekonfigurationen der Datei *ProjName.exe* erstellt.  
   
- Zum Ändern dieser Standardeinstellungen klicken Sie auf die [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) Registerkarte in der linken Spalte des Assistenten, und stellen Sie die gewünschten Änderungen vor.  
+ Klicken Sie zum Ändern dieser Standardeinstellungen auf die Registerkarte [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) in der linken Spalte des Assistenten, und nehmen Sie die gewünschten Änderungen vor.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Makefile-Projekts](../ide/creating-a-makefile-project.md)   
- [NMAKE-Referenz](../build/nmake-reference.md)   
- [Sonderzeichen in einem Makefile](../build/special-characters-in-a-makefile.md)   
+ [Creating a Makefile Project (Erstellen eines Makefile-Projekts)](../ide/creating-a-makefile-project.md)   
+ [NMAKE Reference (NMAKE-Referenz)](../build/nmake-reference.md)   
+ [Special Characters in a Makefile (Sonderzeichen in einem Makefile)](../build/special-characters-in-a-makefile.md)   
  [Inhalt eines Makefiles](../build/contents-of-a-makefile.md)

@@ -1,5 +1,5 @@
 ---
-title: . Verarbeitung von XML-Datei | Microsoft Docs
+title: Verarbeiten der XML-Datei | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340514"
 ---
 # <a name="xml-file-processing"></a>Verarbeiten der XML-Datei
-Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. Weitere Informationen finden Sie unter [Tags Dokumentationskommentare empfohlen](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten können die ID-Zeichenfolge verwenden, um das entsprechende .NET Framework-Metadaten oder Reflektion Element zu identifizieren, die Dokumentation gilt.  
+Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. Weitere Informationen finden Sie unter [Recommended Tags Documentation Comments (Empfohlene Tags für Dokumentationskommentare)](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können mithilfe der ID-Zeichenfolge das entsprechende .NET Framework-Metadaten- oder Reflektionselement identifizieren, für das die Dokumentation gilt.  
   
- Die XML-Datei keine hierarchische Darstellung des Codes ist, wird eine flache Liste mit einer generierten ID für jedes Element.  
+ Die XML-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine flache Liste mit einer generierten ID für jedes Element.  
   
  Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:  
   
--   In der Zeichenfolge wird kein Leerzeichen eingefügt.  
+-   In der Zeichenfolge wird kein Leerraum platziert.  
   
--   Der erste Teil der ID-Zeichenfolge identifiziert die Art des Elements identifiziert wird, mit einem einzelnen Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:  
+-   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:  
   
     |Zeichen|Beschreibung|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> Ein Namespace kann nicht Dokumentationskommentare hinzugefügt haben, Cref-Verweise auf einen Namespace sind möglich.|  
+    |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Allerdings sind cref-Verweise auf einen Namespace möglich.|  
     |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|  
     |D|typedef|  
     |F|Feld|  
     |P|Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften)|  
     |M|Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.)|  
     |E|event|  
-    |!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Der Visual C++-Compiler generiert Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
+    |!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Vom Visual C++-Compiler werden Fehlerinformationen für Links erstellt, die nicht aufgelöst werden können.|  
   
--   Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace-Stammverzeichnis. Der Name des Elements, dessen einschließenden Typ oder Typen und -Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Rautezeichen (#) ersetzt. Es wird vorausgesetzt, dass kein Element ein Nummernzeichen direkt im Namen aufweist. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre "# ctor".  
+-   Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace-Stammverzeichnis. Der Name des Elements, die einschließenden Typen und der Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Rautezeichen (#) ersetzt. Es wird vorausgesetzt, dass kein Element direkt im Namen ein Rautezeichen enthält. Der vollqualifizierte Name des `String`-Konstruktors würde beispielsweise „System.String.#ctor“ lauten.  
   
 -   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer .NET Framework-Signatur:  
   
     -   Basistypen. Reguläre Typen (ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE) werden als vollqualifizierter Name des Typs dargestellt.  
   
-    -   Systeminterne Typen (z.B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF und ELEMENT_TYPE_VOID) werden als der vollqualifizierte Name des entsprechenden vollständigen Typs, z. B. dargestellt **System. Int32** oder **System.TypedReference**.  
+    -   Systeminterne Typen (z.B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF und ELEMENT_TYPE_VOID) werden als vollqualifizierter Name des entsprechenden vollständigen Typs dargestellt, z.B. **System.Int32** oder **System.TypedReference**.  
   
     -   ELEMENT_TYPE_PTR wird als * dargestellt, das auf den geänderten Typ folgt.  
   
@@ -76,20 +77,20 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
     -   ELEMENT_TYPE_SENTINEL  
   
--   Nur Konvertierungsoperatoren, ist der Rückgabewert der Methode als codiert eine ' ~ "gefolgt von den Rückgabetyp, wie zuvor codiert.  
+-   Nur für Konvertierungsoperatoren wird wie zuvor gezeigt der Rückgabewert der Methode als „~“ gefolgt vom Rückgabewert codiert.  
   
--   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Ein auf ein Objekt angewendeter  
+-   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Zum Beispiel  
   
     ```  
     <member name="T:MyClass`2">  
     ```  
   
-     Für einen Typ, der als definierte `public class MyClass<T, U>`.  
+     Für einen Typ, der als `public class MyClass<T, U>` definiert ist.  
   
-     Für Methoden, die generische Typen als Parameter, die generischen Typparameter angegeben werden, als Zahlen mit vorangestelltem Graviszeichen (z. B. \`0 (null) \`1).  Jede Zahl stellt eine bei 0 beginnende Arraynotation für die generischen Parameter des Typs dar.  
+     Bei Methoden, die generische Typen als Parameter verwenden, werden die generischen Parameter des Typs als Zahlen mit vorangestelltem Graviszeichen angegeben (z.B. \`0, \`1).  Jede Zahl stellt eine bei 0 beginnende Arraynotation für die generischen Parameter des Typs dar.  
   
 ## <a name="example"></a>Beispiel  
- Die folgenden Beispiele zeigen, wie die ID-Zeichenfolgen für eine Klasse und ihre Member generiert.  
+ In den folgenden Beispielen wird veranschaulicht, wie die ID-Zeichenfolgen für eine Klasse und ihre Member generiert werden würden.  
   
 ```  
 // xml_id_strings.cpp  

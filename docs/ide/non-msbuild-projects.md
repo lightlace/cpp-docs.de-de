@@ -1,5 +1,5 @@
 ---
-title: Öffnen Sie Ordner Projekte in Visual C++ | Microsoft Docs
+title: Verwenden von „Ordner öffnen“ mit Projekten in Visual C++ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2017
 ms.technology:
@@ -16,34 +16,35 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337284"
 ---
-# <a name="open-folder-projects-in-visual-c"></a>Öffnen Sie Ordner Projekte in Visual C++
-Visual Studio-2017 führt die Funktion "Ordner geöffnet" ermöglicht es Ihnen, öffnen Sie einen Ordner für Quelldateien und sofort Codieren mit Unterstützung für IntelliSense, durchsuchen, Umgestaltung, Debuggen, beginnen und so weiter. Keine sln oder vcxproj-Dateien werden geladen. bei Bedarf können Sie benutzerdefinierte Tasks angeben sowie erstellen und starten Sie die Parameter durch einfache JSON-Dateien. Unterstützt von Ordner öffnen, kann Visual C++ jetzt nicht nur lose Sammlungen von Dateien, sondern auch nahezu alle Buildsystem, darunter CMake, Ninja, QMake (für unbedingt Projekte), Gyp, SCons, Gradle, Buck, stellen und vieles mehr unterstützen. 
+# <a name="open-folder-projects-in-visual-c"></a>Verwenden von „Ordner öffnen“ mit Projekten in Visual C++
+In Visual Studio 2017 wird das Feature „Ordner öffnen“ eingeführt, durch das Sie einen Ordner mit Quelldateien öffnen und sofort mit dem Programmieren beginnen können. Dabei wird unter anderem IntelliSense, das Durchsuchen, Refactoring und Debuggen unterstützt. Es werden keine SLN- oder VCXPROJ-Dateien geladen. Bei Bedarf können Sie benutzerdefinierte Tasks sowie Build- und Startparameter über einfache JSON-Dateien angeben. Durch „Ordner öffnen“ kann Visual C++ nun nicht nur lose Dateisammlungen unterstützen, sondern auch nahezu jedes Buildsystem, z.B. CMake, Ninja, QMake (für Qt-Projekte), gyp, SCons, Gradle und Buck. 
 
-Wählen Sie zum Ordner öffnen zu verwenden, über das Hauptmenü *Datei | Open | Ordner* oder drücken Sie *Strg + Umschalt + Alt + O*. Projektmappen-Explorer zeigt sofort alle Dateien im Ordner "". Sie können auf eine beliebige Datei klicken, um mit der Bearbeitung zu beginnen. Visual Studio beginnt im Hintergrund damit, die Dateien zu indizieren, um IntelliSense, Navigation und Refactoringfunktionen zu ermöglichen. Während Sie Dateien bearbeiten, erstellen, verschieben und löschen, verfolgt Visual Studio die Änderungen automatisch nach und aktualisiert den IntelliSense-Index kontinuierlich. 
+Klicken Sie im Hauptmenü auf *Datei > Öffnen > Ordner*, oder drücken Sie *STRG+UMSCHALT+ALT+O*, um „Ordner öffnen“ zu verwenden. Der Projektmappen-Explorer zeigt sofort alle Dateien im Ordner an. Sie können auf eine beliebige Datei klicken, um mit der Bearbeitung zu beginnen. Visual Studio beginnt im Hintergrund damit, die Dateien zu indizieren, um IntelliSense, Navigation und Refactoringfunktionen zu ermöglichen. Während Sie Dateien bearbeiten, erstellen, verschieben und löschen, verfolgt Visual Studio die Änderungen automatisch nach und aktualisiert den IntelliSense-Index kontinuierlich. 
   
 ## <a name="cmake-projects"></a>CMake-Projekte
-CMake ist in der Visual Studio-IDE als CMake-Tools für Visual C++ ist eine Komponente von der C++-desktop-arbeitsauslastung integriert. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](cmake-tools-for-visual-cpp.md).
+CMake ist in die Visual Studio-IDE als „CMake-Tools für Visual C++“ integriert. Dabei handelt es sich um eine Komponente der Workload für C++-Desktopentwicklung. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](cmake-tools-for-visual-cpp.md).
  
-## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake-Projekten, die unbedingt Framework abzielen
-Können CMake-Tools für Visual C++ Ziel unbedingt zum Erstellen von Projekten unbedingt oder können Sie die unbedingt-Erweiterung für Visual Studio. Hinweis: Ab August 2017 die [unbedingt-Erweiterung für Visual Studio-Unterstützung für Visual Studio-2017](https://download.qt.io/development_releases/vsaddin/) ist als eine Betaversion verfügbar.
+## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake-Projekte für das Qt-Framework
+Sie können CMake-Tools für Visual C++ verwenden, um Qt für das Erstellen von Qt-Projekten anzuzielen. Alternativ können Sie die Qt-Erweiterung für Visual Studio verwenden. Hinweis: Ab August 2017 ist die [Unterstützung für die Qt-Erweiterung für Visual Studio in Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) als Betaversion verfügbar.
 
-## <a name="gyp-cons-scons-buck-etc"></a>Gyp, Nachteile, SCons, Buck usw.
-Sie können alle Buildsystem in Visual C++ verwenden und weiterhin nutzen der Vorteile der Visual C++-IDE und des Debuggers. Wenn Sie den Stammordner des Projekts öffnen, verwendet Visual C++ Heuristik, um die Quelldateien für IntelliSense und das Durchsuchen zu indizieren. Sie können Hinweise zur Struktur des Codes durch Bearbeiten der Datei CppProperties.json bereitstellen. Auf ähnliche Weise können Sie das Build-Programm durch Bearbeiten der Datei launch.vs.json konfigurieren. 
+## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck usw.
+Sie können ein beliebiges Buildsystem in Visual C++ verwenden und trotzdem die Vorteile der Visual C++-IDE und des Visual C++-Debuggers nutzen. Wenn Sie den Stammordner Ihres Projekts öffnen, verwendet Visual C++ Heuristiken, um die Quelldateien für IntelliSense und das Durchsuchen zu indizieren. Sie können Hinweise zur Struktur Ihres Codes einfügen, indem Sie die Datei „CppProperties.json“ bearbeiten. Auf ähnliche Weise können Sie Ihr Buildprogramm konfigurieren, indem Sie die Datei „launch.vs.json“ bearbeiten. 
 
-## <a name="configuring-open-folder-projects"></a>Konfigurieren von Projekten Ordner öffnen
-Sie können über drei JSON-Dateien einen Ordner öffnen-Projekt anpassen:
+## <a name="configuring-open-folder-projects"></a>Konfigurieren von Projekten, bei denen „Ordner öffnen“ verwendet wird
+Sie können ein Projekt, bei dem „Ordner öffnen“ verwendet wird, über drei JSON-Dateien anpassen:
 |||
 |-|-|
-|CppProperties.json|Geben Sie für das Durchsuchen von benutzerdefinierten Konfigurationsinformationen. Erstellen Sie diese Datei, die ggf. im Stammordner des Projekts.|
-|launch.vs.json|Geben Sie die Befehlszeilenargumente. Der Zugriff erfolgt über das Kontextmenüelement **Einstellungen für Debuggen und Starten** im **Projektmappen-Explorer**.|
-|tasks.vs.json|Geben Sie benutzerdefinierte Buildbefehle und Compilerschalter. Der Zugriff erfolgt über das Kontextmenüelement **Tasks konfigurieren** im **Projektmappen-Explorer**.|
+|CppProperties.json|Geben Sie benutzerdefinierte Konfigurationsinformationen für das Durchsuchen an. Erstellen Sie diese Datei bei Bedarf im Stammordner des Projekts.|
+|launch.vs.json|Geben Sie Befehlszeilenargumente an. Der Zugriff erfolgt über das Kontextmenüelement **Einstellungen für Debuggen und Starten** im **Projektmappen-Explorer**.|
+|tasks.vs.json|Geben Sie benutzerdefinierte Buildbefehle und Compileroptionen an. Der Zugriff erfolgt über das Kontextmenüelement **Tasks konfigurieren** im **Projektmappen-Explorer**.|
 
-### <a name="configure-intellisense-with-cpppropertiesjson"></a>Konfigurieren von IntelliSense mit CppProperties.json
-IntelliSense und Durchsuchen das Verhalten teilweise hängt von der aktiven Buildkonfiguration, die definiert #include Bereichspfade, Compilerschalter sowie anderen Parametern. Visual Studio bietet standardmäßig Debug- und Releasekonfigurationen. Bei einigen Projekten müssen Sie zum Erstellen einer benutzerdefinierten Konfigurations in der Reihenfolge von IntelliSense und Suchfunktionen zu Ihrem Code vollständig zu verstehen. Um eine neue Konfiguration zu definieren, erstellen Sie eine Datei namens CppProperties.json im Stammordner. Im Folgenden ein Beispiel:
+### <a name="configure-intellisense-with-cpppropertiesjson"></a>Konfigurieren von IntelliSense mit „CppProperties.json“
+IntelliSense und das Verhalten beim Durchsuchen hängen teilweise von der aktiven Buildkonfiguration ab, die #include-Pfade, Compileroptionen und andere Parameter definiert. Standardmäßig stellt Visual Studio Debug- und Releasekonfigurationen bereit. Bei einigen Projekten müssen Sie möglicherweise benutzerdefinierte Konfigurationen erstellen, damit IntelliSense und die Suchfunktionen Ihren Code vollständig verstehen. Erstellen Sie eine Datei namens „CppProperties.json“ im Stammordner, um eine neue Konfiguration zu definieren. Im Folgenden ein Beispiel:
 
 ```json
 {
@@ -60,51 +61,51 @@ IntelliSense und Durchsuchen das Verhalten teilweise hängt von der aktiven Buil
   ]
 }
 ```
-Eine Konfiguration kann die folgenden Eigenschaften aufweisen:
+Eine Konfiguration kann folgende Eigenschaften aufweisen:
 
 |||  
 |-|-| 
-|`name`|der Konfigurationsname, der in der Dropdownliste der C++-Konfiguration angezeigt wird.|
-|`includePath`|die Liste der Ordner, die im Includepfad (Maps Sie für die meisten Compiler/i) angegeben werden:|
-|`defines`|die Liste der Makros, die sollten definiert (Maps, / d für die meisten Compiler)|
-|`compilerSwitches`|eine oder mehrere zusätzliche Switches, die das Verhalten von IntelliSense beeinflussen können|
-|`forcedInclude`|Header, automatisch in jeder Kompilierungseinheit eingeschlossen werden sollen (ordnet/Fi für MSVC oder - umfassen für Clang)|
-|`undefines`|die Liste der Makros undefiniert (ergibt/u für MSVC) sein|
-|`intelliSenseMode`|das IntelliSense-Modul verwendet werden. Sie können die Architektur spezifischen Varianten für MSVC, die erforderlichen gcc- und Clang angeben:
-- MSVC-X86 (Standard)
+|`name`|den Konfigurationsnamen, der in der Dropdownliste für die C++-Konfiguration angezeigt wird|
+|`includePath`|die Ordnerliste, die im Includepfad (entspricht bei den meisten Compilern /I) angegeben sein sollte|
+|`defines`|die Liste der Makros, die definiert sein sollten (entspricht bei den meisten Compilern /D)|
+|`compilerSwitches`|eine oder mehrere zusätzliche Optionen, die das Verhalten von IntelliSense beeinflussen können|
+|`forcedInclude`|ein Header, der in jeder Kompilierungseinheit automatisch eingefügt wird (entspricht /F bei MSVC oder -include bei Clang)|
+|`undefines`|die Liste der Makros, die nicht definiert sind (entspricht /U bei MSVC)|
+|`intelliSenseMode`|die zu verwendende IntelliSense-Engine. Sie können architekturspezifische Varianten für MSVC, gcc oder Clang angeben:
+- msvc-x86 (Standard)
 - msvc-x64
 - msvc-arm
-- Windows-Clang-x86
-- Windows-Clang-x64
-- Windows-Clang-arm
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
 - Linux-x64
 - Linux-x86
 - Linux-arm
 - gccarm
 
 #### <a name="environment-variables"></a>Umgebungsvariablen
-CppProperties.json unterstützt System umgebungsvariablenerweiterung für gehören Pfade und andere Eigenschaftswerte. Die Syntax lautet `${env.FOODIR}` erweitert eine Umgebungsvariable `%FOODIR%`. Die folgenden vom System definierte Variablen werden ebenfalls unterstützt:
+„CppProperties.json“ unterstützt die Erweiterung von Systemumgebungsvariablen zum Einfügen von Pfaden und anderen Eigenschaftswerten. Die Syntax zum Erweitern einer Umgebungsvariable (`%FOODIR%`) lautet `${env.FOODIR}`. Folgende vom System definierte Variablen werden ebenfalls unterstützt:
 
 |Variablenname|Beschreibung|  
 |-----------|-----------------|
-|vsdev|Der standardmäßige Visual Studio-Umgebung|
-|msvc_x86|Kompilieren für X86 X86 mit Tools|
-|msvc_arm|Kompilieren für ARM X86 mit Tools|
-|msvc_arm64|Kompilieren für ARM64 X86 mit Tools|
-|msvc_x86_x64|Kompilieren für AMD64 X86 mit Tools|
-|msvc_x64_x64|Für AMD64 Kompilieren mithilfe von 64-Bit-tools|
-|msvc_arm_x64|Kompilieren Sie für ARM mit 64-Bit-tools|
-|msvc_arm64_x64|Für ARM64 Kompilieren mithilfe von 64-Bit-tools|
+|vsdev|Die Standardumgebung von Visual Studio|
+|msvc_x86|Kompiliert mithilfe von x86-Tools für x86|
+|msvc_arm|Kompiliert mithilfe von x86-Tools für ARM|
+|msvc_arm64|Kompiliert mithilfe von x86-Tools für ARM64|
+|msvc_x86_x64|Kompiliert mithilfe von x86-Tools für AMD64|
+|msvc_x64_x64|Kompiliert mithilfe von 64-Bit-Tools für AMD64|
+|msvc_arm_x64|Kompiliert mithilfe von 64-Bit-Tools für ARM|
+|msvc_arm64_x64|Kompiliert mithilfe von 64-Bit-Tools für ARM64|
 
-Wenn die arbeitsauslastung Linux installiert ist, sind die folgenden Umgebungen für Remote angesprochen Linux- und WSL verfügbar:
+Wenn die Linux-Workload installiert ist, können folgende Umgebungen verwendet werden, um Linux und WSL remote anzuzielen:
 
 |Variablenname|Beschreibung|  
 |-----------|-----------------|
-|linux_x86|Ziel X86 Linux Remote|
-|linux_x64|Ziel X64 Linux Remote|
-|linux_arm|ARM Linux Remote als Ziel|
+|linux_x86|Hiermit wird x86 Linux als Remotezielversion festgelegt.|
+|linux_x64|Hiermit wird x64 Linux als Remotezielversion festgelegt.|
+|linux_arm|Hiermit wird ARM Linux als Remotezielversion festgelegt.|
 
-Sie können benutzerdefinierte Umgebungsvariablen in definieren CppProperties.json entweder global oder pro-Konfiguration. Im folgende Beispiel wird gezeigt, wie Standard- und benutzerdefinierten Umgebungsvariablen deklariert und verwendet werden können. Die globale **Umgebungen** Eigenschaft deklariert eine Variable namens **INCLUDE** , die durch eine Konfiguration verwendet werden kann:
+Sie können benutzerdefinierte Umgebungsvariablen in „CppProperties.json“ entweder global oder pro Konfiguration definieren. Im folgenden Beispiel wird veranschaulicht, wie Standardumgebungsvariablen und benutzerdefinierte Umgebungsvariablen deklariert und verwendet werden können. Die globale Eigenschaft **environments** deklariert eine Variable namens **INCLUDE**, die von jeder Konfiguration verwendet werden kann:
 
 ```json
 {
@@ -146,7 +147,7 @@ Sie können benutzerdefinierte Umgebungsvariablen in definieren CppProperties.js
   ]
 }
 ```
-Außerdem können Sie definieren eine **Umgebungen** Eigenschaft in einer Konfiguration, damit, dass er nur für die Konfiguration gilt und alle globalen Variablen mit dem gleichen Namen überschreibt. Im folgenden Beispiel die X64 Konfiguration definiert eine lokale **INCLUDE** Variable, die den globalen Wert außer Kraft:
+Sie können eine **environments**-Eigenschaft ebenfalls innerhalb einer Konfiguration definieren, sodass sie nur für diese Konfiguration gilt und alle globalen Variablen mit gleichem Namen überschreibt. Im folgenden Beispiel definiert die x64-Konfiguration eine lokale **INCLUDE**-Variable, die den globalen Wert überschreibt:
 
 ```json
 {
@@ -192,17 +193,17 @@ Außerdem können Sie definieren eine **Umgebungen** Eigenschaft in einer Konfig
 }
 ```
 
-Alle benutzerdefinierten und Standard-Umgebungsvariablen auch im tasks.vs.json und launch.vs.json verfügbar sind.
+Alle Standardumgebungsvariablen und benutzerdefinierten Umgebungsvariablen sind ebenfalls in „tasks.vs.json“ und „launch.vs.json“ verfügbar.
 
 #### <a name="macros"></a>Makros
-Sie haben Zugriff auf die folgenden vordefinierten Makros in CppProperties.json:
+Sie können innerhalb von „CppProperties.json“ auf folgende integrierte Makros zugreifen:
 |||
 |-|-|
-|`${workspaceRoot}`| den vollständigen Pfad zu dem Arbeitsbereichsordner im|
-|`${projectRoot}`| den vollständigen Pfad zu dem Ordner, in dem CppProperties.json platziert wird|
-|`${vsInstallDir}`| den vollständigen Pfad zu dem Ordner, in dem die ausgeführte Instanz von Visual Studio 2017 installiert ist|
+|`${workspaceRoot}`| den vollständigen Pfad zum Arbeitsbereichordner|
+|`${projectRoot}`| den vollständigen Pfad zum Ordner von „CppProperties.json“|
+|`${vsInstallDir}`| den vollständigen Pfad zum Ordner, indem die ausgeführte Instanz von Visual Studio 2017 installiert ist|
 
-Z. B. wenn das Projekt verfügt über einen Ordner einschließen und auch windows.h und andere allgemeine Header aus dem Windows SDK enthält, können Sie Ihre CppProperties.json aktualisieren möchten Konfigurationsdatei mit diesen enthält:
+Wenn in Ihrem Projekt beispielsweise ein Includeordner sowie „windows.h“ und andere allgemeine Header des Windows SDK vorhanden sind, sollten Sie die Konfigurationsdatei „CppProperties.json“ mit folgenden Includeelementen aktualisieren:
 
 ```json
 {
@@ -224,11 +225,11 @@ Z. B. wenn das Projekt verfügt über einen Ordner einschließen und auch window
 }
 ```
 
-**Hinweis:** `%WindowsSdkDir%` und `%VCToolsInstallDir%` sind nicht festgelegt werden, wie die globalen Umgebungsvariablen Achten Sie darauf, Sie starten devenv.exe aus "Developer-Eingabeaufforderung für VS 2017", der diesen Variablen definiert.
+**Hinweis:** `%WindowsSdkDir%` und `%VCToolsInstallDir%` werden nicht als globale Umgebungsvariablen festgelegt, um sicherzustellen, dass „devenv.exe“ über eine Developer-Eingabeaufforderung für Visual Studio 2017 ausgeführt wird, die diese Variablen definiert.
 
-Problembehandlung von IntelliSense Fehler aufgrund fehlender Includepfaden, öffnen Sie die **Fehlerliste** und Filtern Sie seine Ausgabe an "Nur IntelliSense" und Fehlercode E1696 "kann nicht geöffnet werden... Quelldatei". 
+Wenn Sie IntelliSense-Fehler beheben möchten, die von fehlenden Includepfaden verursacht wurden, öffnen Sie die **Fehlerliste**, und filtern Sie deren Ausgabe nach „Nur IntelliSense“ und dem Fehlercode E1696 „Die Datei ‚Dateiname‘ kann nicht geöffnet werden“. 
 
-Sie können eine beliebige Anzahl von Konfigurationen in CppProperties.json erstellen. Jede erscheint in der Dropdownliste für die Konfiguration:
+Sie können eine beliebige Anzahl von Konfigurationen in „CppProperties.json“ erstellen. Jede davon wird in der Dropdownliste für Konfigurationen angezeigt:
 
 ```json
 {
@@ -247,9 +248,9 @@ Sie können eine beliebige Anzahl von Konfigurationen in CppProperties.json erst
 ### <a name="define-tasks-with-tasksvsjson"></a>Definieren von Tasks mit „tasks.vs.json“
 Sie können Buildskripts oder andere externe Vorgänge in den Dateien automatisieren, die sich in Ihrem aktuellen Arbeitsbereich befinden, indem Sie sie direkt in der IDE als Tasks ausführen. Sie können einen neuen Task konfigurieren, indem Sie mit der rechten Maustaste auf eine Datei oder einen Ordner klicken und **Tasks konfigurieren** auswählen. 
 
-![Tasks für Ordner öffnen konfigurieren](media/open-folder-config-tasks.png)
+![Konfigurieren von Tasks für „Ordner öffnen“](media/open-folder-config-tasks.png)
 
-Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visual Studio im Stammordner des Projekts erstellt. Sie können jede beliebige Aufgabe in dieser Datei zu definieren und dann aus der **Projektmappen-Explorer** Kontextmenü. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die eine einzelne Aufgabe definiert. `taskName` definiert den angezeigten Namen im Kontextmenü an. `appliesTo` definiert, welche Dateien für der Befehl ausgeführt werden kann. Die `command` Eigenschaft bezieht sich auf die PATHEXT für die Umgebung, die den Pfad für die Konsole (cmd.exe unter Windows) identifiziert. Sie können auch Umgebungsvariablen verweisen, die in CppProperties.json oder CMakeSettings.json deklariert werden. Die `args` Eigenschaft gibt die Befehlszeile aufgerufen werden. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgende Beispiel wird der Dateiname der aktuell ausgewählten cpp-Datei angezeigt.
+Dadurch wird die `tasks.vs.json`-Datei im Ordner „.vs“ erstellt oder geöffnet, die Visual Studio im Stammordner des Projekts erstellt. Sie können in dieser Datei einen beliebigen Task definieren und diesen dann über das Kontextmenü des **Projektmappen-Explorers** aufrufen. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die einen einzelnen Task definiert. `taskName` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command`-Eigenschaft bezieht sich auf die Umgebungsvariable „COMSPEC“, die den Pfad für die Konsole („cmd.exe“ unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
 
 ```json
 {
@@ -265,7 +266,7 @@ Dies erstellt (oder geöffnet) der `tasks.vs.json` Datei im Ordner "VS" die Visu
   ]
 }
 ```
-Nach dem Speichern tasks.vs.json, können Sie mit der rechten Maustaste alle cpp-Datei im Ordner "", wählen Sie **Echo Filename** aus dem Kontextmenü, und finden Sie unter der Dateinamen im Ausgabefenster angezeigt.
+Wenn Sie „tasks.vs.json“ gespeichert haben, können Sie mit der rechten Maustaste auf eine beliebige CPP-Datei im Ordner klicken und im Kontextmenü **Echo filename** auswählen. Anschließend wird der Dateiname im Ausgabefenster angezeigt.
 
 
 
@@ -275,14 +276,14 @@ Sie können Tasks für jede Datei und jeden Ordner erstellen, indem Sie den Name
 |-|-|
 |`"*"`| Der Task ist für alle Dateien und Ordner im Arbeitsbereich verfügbar.|
 |`"*/"`| Der Task ist für alle Ordner im Arbeitsbereich verfügbar.|
-|`"*.cpp"`| Task ist für alle Dateien mit der Erweiterung .cpp im Arbeitsbereich verfügbar|
-|`"/*.cpp"`| Aufgabe ist verfügbar, um alle Dateien mit der Erweiterung .cpp im Stammverzeichnis des Arbeitsbereichs|
+|`"*.cpp"`| Der Task ist für alle Dateien mit der Erweiterung „.cpp“ im Arbeitsbereich verfügbar.|
+|`"/*.cpp"`| Der Task ist für alle Dateien mit der Erweiterung „.cpp“ im Stammverzeichnis des Arbeitsbereichs verfügbar.|
 |`"src/*/"`| Der Task ist für alle Unterordner des Ordners „src“ verfügbar.|
 |`"makefile"`| Der Task ist für alle makefile-Dateien im Arbeitsbereich verfügbar.|
 |`"/makefile"`| Der Task ist nur für die makefile-Datei im Stammverzeichnis des Arbeitsbereichs verfügbar.|
 
 #### <a name="output"></a>Ausgabe
-Verwenden der `output` Eigenschaft, um die ausführbare Datei anzugeben, die gestartet wird, wenn Sie drücken **F5**. Zum Beispiel:
+Verwenden Sie die `output`-Eigenschaft, um die ausführbare Datei anzugeben, die gestartet wird, wenn Sie **F5** drücken. Zum Beispiel:
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
@@ -292,16 +293,16 @@ Verwenden der `output` Eigenschaft, um die ausführbare Datei anzugeben, die ges
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| Gibt jede Umgebungsvariable (z. B. ${Env. Pfad} ${env.COMSPEC} "und" usw.), die für die Developer-Eingabeaufforderung festgelegt. Weitere Informationen finden Sie unter [Developer-Eingabeaufforderung für Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
-|`${workspaceRoot}`| den vollständigen Pfad zu den Arbeitsbereichsordner (beispielsweise "C:\sources\hello")|
-|`${file}`| der vollständige Pfad der Datei oder Ordner ausgewählt haben, führen Sie diesen Task für (z. B. "C:\sources\hello\src\hello.cpp")|
-|`${relativeFile}`| der relative Pfad der Datei oder Ordner (z. B. "src\hello.cpp")|
-|`${fileBasename}`| der Name der Datei ohne Pfad oder eine Erweiterung (z. B. "Hello")|
-|`${fileDirname}`| der vollständige Pfad zur Datei, mit Ausnahme der Dateiname (z. B. "C:\sources\hello\src")|
-|`${fileExtname}`| die Erweiterung der ausgewählten Datei (z. B. ".cpp")|
+|`${env.<VARIABLE>}`| Gibt jede Umgebungsvariable an (z.B. ${env.PATH}, ${env.COMSPEC} usw.), die für die Developer-Eingabeaufforderung festgelegt ist. Weitere Informationen finden Sie unter [Developer-Eingabeaufforderung für Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${workspaceRoot}`| Der vollständige Pfad zum Arbeitsbereichsordner (z.B. C:\sources\hello).|
+|`${file}`| Der vollständige Pfad zur Datei oder zum Ordner, für die bzw. den dieser Task ausgeführt werden soll (z.B. C:\sources\hello\src\hello.cpp).|
+|`${relativeFile}`| Der relative Pfad zur Datei oder zum Ordner (z.B. src\hello.cpp).|
+|`${fileBasename}`| Der Name der Datei ohne Pfad oder Erweiterung (z.B. „hello“).|
+|`${fileDirname}`| Der vollständige Pfad zur Datei ohne den Dateinamen (z.B. C:\sources\hello\src).|
+|`${fileExtname}`| Die Erweiterung der ausgewählten Datei (z.B. „.cpp“).|
 
 #### <a name="custom-macros"></a>Benutzerdefinierte Makros
-Fügen Sie ein benutzerdefiniertes Makro in tasks.vs.json definieren, eine Name-Wert-Paar vor der Aufgabe blockiert. Das folgende Beispiel definiert ein Makro mit dem Namen `outDir` der belegt wurde der `args` Eigenschaft:
+Fügen Sie ein Name/Wert-Paar zu den Codeblöcken des Tasks hinzu, um ein benutzerdefiniertes Makro in „tasks.vs.json“ zu definieren. Im folgenden Beispiel wird ein Makro namens `outDir` definiert, das in der Eigenschaft `args` verwendet wird:
 
 ```json
 {
@@ -320,10 +321,10 @@ Fügen Sie ein benutzerdefiniertes Makro in tasks.vs.json definieren, eine Name-
   ]
 ```
 
-### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurieren Sie die Parameter von debugging mit launch.vs.json
-Um Befehlszeilenargumente für das Programm anzupassen, mit der Maustaste, auf die ausführbare Datei in **Projektmappen-Explorer** , und wählen Sie **Debug- und Starteinstellungen**. Dies öffnet ein vorhandenes `launch.vs.json` Datei, oder falls keiner vorhanden ist, erstellen Sie eine neue Datei mit den Informationen zum ausgewählten Programm aufgefüllt. 
+### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurieren von Parametern für das Debuggen mithilfe von „launch.vs.json“
+Wenn Sie die Befehlszeilenargumente Ihres Programms anpassen möchten, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debug- und Starteinstellungen** aus. Dadurch wird eine vorhandene `launch.vs.json`-Datei geöffnet. Wenn keine vorhanden ist, wird eine neue Datei erstellt, die mit vorab mit den von Ihnen festgelegten Informationen zum Programm aufgefüllt wird. 
 
-Um zusätzliche Argumente anzugeben, fügen Sie einfach in die `args` JSON-Array, wie im folgenden Beispiel gezeigt:
+Wenn Sie zusätzliche Argumente hinzufügen möchten, fügen Sie diese wie im folgenden Beispiel dargestellt im JSON-Array `args` hinzu:
 
 ```json
 {
@@ -340,7 +341,7 @@ Um zusätzliche Argumente anzugeben, fügen Sie einfach in die `args` JSON-Array
 }
 ```
 
-Wenn Sie diese Datei zu speichern, die neue Konfiguration wird in der Dropdownliste für die Debug-Ziele angezeigt und können Sie auswählen, für den Debugger zu starten. Sie können beliebig viele Konfigurationen wie, für eine beliebige Anzahl von ausführbaren Dateien gewünscht zu debuggen, erstellen. Wenn Sie drücken **F5** nun der Debugger starten und erreicht alle Breakpoints, die Sie möglicherweise bereits festgelegt. Alle vertraut Debuggerfenster und ihre Funktionen sind jetzt verfügbar.
+Wenn Sie diese Datei speichern, wird die neue Konfiguration in der Dropdownliste der Debugziele angezeigt, und Sie können auf diese klicken, um den Debugger zu starten. Sie können beliebig viele Debugkonfigurationen für beliebig viele ausführbare Dateien erstellen. Wenn Sie nun auf **F5** drücken, wird der Debugger gestartet. Dieser hält an jedem Breakpoint an, den Sie bereits festgelegt haben. Die bekannten Debuggerfenster und deren Funktionalitäten sind nun verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 [IDE und Tools für Visual C++-Entwicklung](ide-and-tools-for-visual-cpp-development.md)

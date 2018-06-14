@@ -1,5 +1,5 @@
 ---
-title: VC++-Verzeichnisse Eigenschaftenseite | Microsoft Docs
+title: Eigenschaftenseite „VC++-Verzeichnisse“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/26/2018
 ms.technology:
@@ -25,89 +25,90 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336081"
 ---
-# <a name="vc-directories-property-page-windows"></a>VC++-Verzeichnisse Eigenschaftenseite (Windows)
+# <a name="vc-directories-property-page-windows"></a>Eigenschaftenseite „VC++-Verzeichnisse“ (Windows)
 
-Verwenden Sie diese Eigenschaftenseite Visual Studio mitteilen, welche Verzeichnisse beim Erstellen des Projekts aktuell ausgewählt ist. Verwenden Sie ein benutzerdefiniertes Eigenschaftenfenster zum Festlegen von Verzeichnissen für mehrere Projekte in einer Projektmappe, wie in beschrieben [Erstellen von wiederverwendbaren Eigenschaftenkonfigurationen](working-with-project-properties.md#bkmkPropertySheets).
+Verwenden Sie diese Eigenschaftenseite, um Visual Studio mitzuteilen, welche Verzeichnisse verwendet werden sollen, wenn das derzeit ausgewählte Projekt erstellt wird. Verwenden Sie wie unter [Creating reusable property configurations (Erstellen von wiederverwendbaren Eigenschaftenkonfigurationen)](working-with-project-properties.md#bkmkPropertySheets) beschrieben ein benutzerdefiniertes Eigenschaftenblatt, um Verzeichnisse für mehrere Projekte in einer Projektmappe festzulegen.
 
-Die Linux-Version auf dieser Seite finden Sie unter [VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md).   
+Die Linux-Version dieser Seite finden Sie unter [VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md).   
 
-Für den Zugriff auf die **VC++-Verzeichnisse** Eigenschaftenseite:
+So greifen Sie auf die Eigenschaftenseite **VC++-Verzeichnisse** zu:
 
-1. Wenn die **Projektmappen-Explorer** nicht sichtbar ist, wählen Sie dann im Hauptmenü **Ansicht** > **Projektmappen-Explorer**.
-1. Mit der rechten Maustaste auf einen Projektknoten (nicht der obersten Ebene Projektmappe), und wählen Sie **Eigenschaften**.
-1. Im linken Bereich des der **Eigenschaftenseiten** wählen Sie im Dialogfeld **Konfigurationseigenschaften** > **VC++-Verzeichnisse**.  
+1. Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, klicken Sie im Hauptmenü auf **Ansicht** > **Projektmappen-Explorer**.
+1. Klicken Sie mit der rechten Maustaste auf einen Projektknoten (nicht auf die Projektmappe auf oberster Ebene), und wählen Sie **Eigenschaften** aus.
+1. Klicken Sie im linken Bereich des Dialogfelds **Eigenschaftenseiten** auf **Konfigurationseigenschaften** > **VC++-Verzeichnisse**.  
 
-VC++-Verzeichnisse Eigenschaften gelten für ein Projekt, nicht den Projektmappenknoten auf oberster Ebene. Wenn Sie nicht sehen **VC++-Verzeichnisse** unter **Konfigurationseigenschaften**, wählen Sie den Knoten eines C++-Projekts in der **Projektmappen-Explorer** Fenster: 
+Die Eigenschaften für VC++-Verzeichnisse gelten für ein Projekt, nicht für den Projektmappenknoten auf oberster Ebene. Wenn **VC++-Verzeichnisse** nicht unter **Konfigurationseigenschaften** angezeigt wird, wählen Sie einen C++-Projektknoten im Fenster **Projektmappen-Explorer** aus: 
 
-![Wählen Sie den Projektknoten](media/vcppdir.png "wählen Sie den Projektknoten, um die Eigenschaften der VC++-Verzeichnisse finden Sie unter")
+![Auswählen des Projektknotens](media/vcppdir.png "Auswählen des Projektknotens zum Anzeigen der Eigenschaften von VC++-Verzeichnissen")
 
-Beachten Sie, dass die **VC++-Verzeichnisse** Eigenschaftenseite für plattformübergreifende Projekte sieht anders. Informationen zu Linux-C++-Projekten finden Sie unter [VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md). 
+Beachten Sie, dass die Eigenschaftenseite **VC++-Verzeichnisse** für plattformübergreifende Projekte anders aussieht. Weitere Informationen zu C++-Projekten unter Linux finden Sie unter [VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md). 
  
-Wenn Sie mit nicht vertraut sind *Projekteigenschaften* in Visual Studio Sie finden es vielleicht hilfreich sein, der erste Lesevorgang [arbeiten mit Projekteigenschaften](working-with-project-properties.md). 
+Wenn Sie mit den *Projekteigenschaften* in Visual Studio nicht vertraut sind, sollten Sie zunächst den Artikel [Arbeiten mit Projekteigenschaften](working-with-project-properties.md) lesen. 
  
-Die Standardeinstellungen für **VC++-Verzeichnisse** Eigenschaften auf Grundlage des Projekttyps abhängig sind. Für Desktopprojekte enthalten sie die C++-Tools-Speicherorte für eine bestimmte Plattformtoolset und den Speicherort des Windows SDK. Sie können ändern, die **Plattformtoolset** und **Version des Windows SDK** auf die **Konfigurationseigenschaften** > **allgemeine** Seite ". 
+Die Standardeinstellungen für die Eigenschaften der **VC++-Verzeichnisse** hängen vom Projekttyp ab. Bei Desktopprojekten enthalten diese die Speicherorte der C++-Tools für ein bestimmtes Plattformtoolset sowie den Speicherort des Windows SDK. Sie können das **Plattformtoolset** und die Version des **Windows SDK** auf der Seite **Konfigurationseigenschaften** > **Allgemein** ändern. 
 
-So zeigen Sie die Werte für keines der Verzeichnisse an:
+So zeigen Sie die Werte für Verzeichnisse an:
 
-1. Wählen Sie eine der Eigenschaften in der **VC++-Verzeichnisse** Seite. Wählen Sie z. B. **Bibliotheksverzeichnisse**.
-1. Wählen Sie die nach-unten Schaltfläche am Ende der dem Feld für Eigenschaftswerte aus.
-1. Wählen Sie in der Dropdown-Menü **bearbeiten**.
+1. Wählen Sie eine der Eigenschaften auf der Seite **VC++-Verzeichnisse** aus, z.B. **Bibliotheksverzeichnisse**.
+1. Klicken Sie am Ende des Felds für Eigenschaftswerte auf die Schaltfläche mit dem Pfeil nach unten.
+1. Wählen Sie im Dropdownmenü **Bearbeiten** aus.
 
-![Bearbeiten von Bibliotheksverzeichnisse](media/vcppdir_libdir_edit.png "Dialogfeld Bibliothekspfade bearbeiten")
+![Bearbeiten von Bibliotheksverzeichnissen](media/vcppdir_libdir_edit.png "Dialogfenster für das Bearbeiten von Bibliothekspfaden")
 
-Sie sehen nun ein Dialogfeld folgendermaßen: 
+Folgendes Dialogfeld wird angezeigt: 
 
-![Anzeigen von Bibliotheksverzeichnisse](media/vcppdir_libdir.png "Dialogfeld zum Hinzufügen oder Entfernen von Bibliothekspfade")
+![Anzeigen von Bibliotheksverzeichnissen](media/vcppdir_libdir.png "Dialogfeld für das Hinzufügen oder Entfernen von Bibliothekspfaden")
 
-Verwenden Sie dieses Dialogfeld, um die aktuellen Verzeichnisse anzuzeigen. Wenn Sie ändern oder ein Verzeichnis hinzufügen möchten, ist es jedoch eher die Verwendung **Eigenschaften-Manager** erstellen ein Eigenschaftenblatt oder ändern das Eigenschaftenblatt für Standard-Benutzer. Weitere Informationen finden Sie unter [Erstellen von wiederverwendbaren Eigenschaftenkonfigurationen](working-with-project-properties.md#bkmkPropertySheets).
+Verwenden Sie dieses Dialogfeld, um die aktuellen Verzeichnisse anzuzeigen. Wenn Sie ein Verzeichnis jedoch ändern oder eines hinzufügen möchten, sollten Sie den **Eigenschaften-Manager** verwenden, um ein Eigenschaftenblatt zu erstellen oder das Eigenschaftenblatt für den Standardbenutzer ändern. Weitere Informationen finden Sie unter [Creating reusable property configurations (Erstellen wiederverwendbarer Eigenschaftenkonfigurationen)](working-with-project-properties.md#bkmkPropertySheets).
 
-Wie oben gezeigt, werden viele der geerbten Pfade als Makros angegeben.  Um den aktuellen Wert eines Makros zu untersuchen, wählen Sie die **Makros** Schaltfläche in der unteren rechten Ecke des Dialogfelds. Beachten Sie, dass der Konfigurationstyp viele Makros abhängen. Ein Makro in einem Debugbuild möglicherweise zu einem anderen Pfad als das gleiche Makro in einem Releasebuild ausgewertet werden. 
+Wie Sie oben sehen, werden viele der abgeleiteten Pfade als Makros angegeben.  Klicken Sie auf die Schaltfläche **Makros** in der unteren rechten Ecke des Dialogfelds, um den aktuellen Wert eines Makros zu überprüfen. Beachten Sie, dass viele Makros vom Konfigurationstyp abhängen. Ein Makro in einem Debugbuild kann einen anderen Pfad als das gleiche Makro in einem Releasebuild ergeben. 
 
-Sie können für teilweise oder vollständig Übereinstimmungen in das Bearbeitungsfeld suchen. Die folgende Abbildung zeigt alle Makros, die die Zeichenfolge "WindowsSDK" enthalten, und es zeigt auch den aktuellen Pfad, dem das Makro ergibt:
+Sie können im Bearbeitungsfeld nach teilweisen oder vollständigen Übereinstimmungen suchen. Die folgende Abbildung zeigt alle Makros, die die Zeichenfolge „WindowsSDK“ enthalten, sowie den aktuellen Pfad, den das Makro ergibt:
 
-![Finden Sie unter Makrowerte](media/vcppdir_libdir_macros.png "Dialogfeld zum Bearbeiten von Makros")
+![Anzeigen von Makrowerten](media/vcppdir_libdir_macros.png "Dialogfeld für das Bearbeiten von Makros")
 
-Hinweis: Die Liste wird aufgefüllt, während der Eingabe. Drücken Sie nicht **EINGABETASTE**.
+Hinweis: Diese Liste wird während Ihrer Eingabe aufgefüllt. Drücken Sie nicht auf die **EINGABETASTE**.
 
-Weitere Informationen zu Makros und warum Sie diese anstatt hartcodierte Pfade möglichst verwenden sollten, finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Weitere Informationen zu Makros und warum Sie diese möglichst anstelle von hartcodierten Pfaden verwenden sollten, finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
-Eine Liste der häufig verwendeten Makros, finden Sie unter [allgemeine Makros für Buildbefehle und-Eigenschaften](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Eine Liste der häufig verwendeten Makros finden Sie unter [Gängige Makros für Buildbefehle und -eigenschaften](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
 
-Sie können Ihre eigenen Makros auf zwei Arten definieren:
--   Festlegen von Umgebungsvariablen in einem Developer-Eingabeaufforderung. Alle Umgebungsvariablen werden als MSBuild-Eigenschaften/Makros behandelt.
--   Definieren Sie Benutzermakros in eine PROPS-Datei. Weitere Informationen finden Sie unter [Eigenschaft Seite Makros](working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Sie können eigene Makros auf zwei Arten definieren:
+-   Legen Sie Umgebungsvariablen in einer Developer-Eingabeaufforderung fest. Alle Umgebungsvariablen werden als MSBuild-Eigenschaften oder -Makros behandelt.
+-   Definieren Sie Benutzermakros in einer PROPS-Datei. Weitere Informationen finden Sie unter [Property page macros (Makros für Eigenschaftenseiten)](working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
-Weitere Informationen finden Sie in folgenden Blogbeiträgen: [VC++-Verzeichnisse](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [geerbte Eigenschaften und Eigenschaftenblätter](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), und [Visual Studio 2010 C++-Projekt Upgradehandbuch](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).  
+Weitere Informationen finden Sie in den Blogbeiträgen zu den Themen [VC++ Directories (VC++-Verzeichnisse)](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [Inherited Properties and Property Sheets (Geerbte Eigenschaften und Eigenschaftenblätter)](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx) sowie im [Visual Studio 2010 C++ Project Upgrade Guide (Visual Studio 2010-Handbuch für Upgrades von C++-Projekten)](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).  
   
 ## <a name="directory-types"></a>Verzeichnistypen
 
 Sie können auch andere Verzeichnisse wie folgt angeben.  
   
 **Ausführbare Verzeichnisse**<br/>
-Verzeichnisse, in denen nach ausführbaren Dateien gesucht wird. Entspricht der **Pfad** -Umgebungsvariablen angegeben.
+Verzeichnisse, in denen nach ausführbaren Dateien gesucht wird. Entspricht der Umgebungsvariablen **PATH**.
 
 **Includeverzeichnisse**<br/>
-Verzeichnisse, in denen nach Includedateien gesucht wird, auf die im Quellcode verwiesen wird. Entspricht der **INCLUDE** -Umgebungsvariablen angegeben.
+Verzeichnisse, in denen nach Includedateien gesucht wird, auf die im Quellcode verwiesen wird. Entspricht der Umgebungsvariablen **INCLUDE**.
 
 **Verweisverzeichnisse**<br/>
- Verzeichnisse, in denen für die Suche nach Assembly- und Moduldateien (Metadaten), die in den Quellcode von referenziert werden die [#using](../preprocessor/hash-using-directive-cpp.md) Richtlinie. Entspricht der **LIBPATH** -Umgebungsvariablen angegeben.
+ Verzeichnisse, in denen nach Assembly- und Moduldateien (Metadaten) gesucht wird, auf die im Quellcode über die [#using](../preprocessor/hash-using-directive-cpp.md)-Direktiven verwiesen wird. Entspricht der Umgebungsvariablen **LIBPATH**.
 
 **Bibliotheksverzeichnisse**<br/>
-Verzeichnisse, in denen nach Bibliotheksdateien (.LIB-Dateien) gesucht wird. Dies schließt auch die Laufzeitbibliotheken ein. Entspricht der **LIB** -Umgebungsvariablen angegeben. Diese Einstellung gilt nicht für OBJ-Dateien; für eine Verknüpfung mit einer OBJ-Datei, auf die **Konfigurationseigenschaften** > **Linker** > **allgemeine** Eigenschaftenseite  **Zusätzliche Bibliotheksverzeichnisse** , und geben Sie den relativen Pfad der Datei. Weitere Informationen finden Sie unter [Linker-Eigenschaftenseiten](../ide/linker-property-pages.md).
+Verzeichnisse, in denen nach Bibliotheksdateien (.LIB-Dateien) gesucht wird. Dies schließt auch die Laufzeitbibliotheken ein. Entspricht der Umgebungsvariablen **LIB**. Diese Einstellung gilt nicht für OBJ-Dateien. Für eine Verknüpfung mit einer OBJ-Datei klicken Sie auf der Eigenschaftenseite **Konfigurationseigenschaften** > **Linker** > **Allgemein** auf **Zusätzliche Bibliotheksverweise**, und geben Sie dann den relativen Pfad der Datei an. Weitere Informationen finden Sie unter [Linker property pages (Eigenschaftenseiten für Linker)](../ide/linker-property-pages.md).
 
-**WinRT Bibliotheksverzeichnisse**<br/>
-Verzeichnisse für WinRT-Bibliotheksdateien für die Suche in apps der universellen Windows-Plattform (UWP) verwenden. 
+**WinRT-Bibliotheksverzeichnisse**<br/>
+Verzeichnisse für das Suchen nach WinRT-Bibliotheksdateien für die Verwendung in UWP-Apps (Universelle Windows-Plattform). 
 
 **Quellverzeichnisse**<br/>
 Verzeichnisse, in denen nach Quelldateien gesucht wird, die für IntelliSense verwendet werden sollen.
 
-**Ausschließen von Verzeichnissen**<br/>
-Vor jeder Kompilierung fragt Visual Studio den Zeitstempel für alle Dateien, um festzustellen, ob alle seit der letzten Kompilierung geändert worden sein. Wenn das Projekt große stabile Bibliotheken hat, können Sie potenziell Buildzeiten beschleunigen durch Ausschließen dieser Verzeichnisse gegenüber der Timestamp-Überprüfung.
+**Ausschließbare Verzeichnisse**<br/>
+Vor jeder Kompilierung fragt Visual Studio den Zeitstempel aller Dateien ab, um zu bestimmen, ob seit der letzten Kompilierung Änderungen an diesen vorgenommen wurden. Wenn Ihr Projekt eine große, stabile Bibliothek besitzt, können Sie die Buildzeiten eventuell beschleunigen, indem Sie diese Verzeichnisse aus der Überprüfung der Zeitstempel ausschließen.
 
 ## <a name="sharing-the-settings"></a>Freigeben der Einstellungen
 
-Sie können Projekteigenschaften für andere Benutzer oder Computer freigeben. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).
+Sie können Projekteigenschaften für andere Benutzer oder Computer freigeben. Weitere Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).

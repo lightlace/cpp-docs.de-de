@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten einer COM-Schnittstelle | Microsoft Docs
+title: Bearbeiten einer COM-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,29 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338681"
 ---
 # <a name="editing-a-com-interface"></a>Bearbeiten einer COM-Schnittstelle
-Mithilfe der Befehle im Kontextmenü Klassenansicht können Sie neue Methoden und Eigenschaften für die COM-Schnittstellen in Visual C++-Projekten definieren. Darüber hinaus können Sie Ereignisse für ActiveX-Steuerelemente aus der Toolbox definieren.  
+Mithilfe der Befehle des Kontextmenüs der Klassenansicht können Sie neue Methoden und Eigenschaften für die COM-Schnittstellen in Ihren Visual C++-Projekten definieren. Darüber hinaus können Sie mit der Toolbox Ereignisse für ActiveX-Steuerelemente definieren.  
   
- Für ATL und MFC-basierten COM Objektklassen können Sie die Implementierung der Klasse zur gleichen Zeit bearbeiten, die Schnittstelle zu bearbeiten.  
+ Bei ATL- und MFC-basierten COM-Objektklassen können Sie die Implementierung der Klasse und die Schnittstelle zur gleichen Zeit bearbeiten.  
   
 > [!NOTE]
->  Bei Schnittstellen, die Sie außerhalb von definiert haben die **Klasse hinzufügen** (Dialogfeld), Visual C++ fügt die Methoden oder Eigenschaften der IDL-Datei, und es Stubs hinzufügen, um die Klassen, Methoden zu implementieren, selbst wenn die Schnittstellen manuell hinzugefügt werden.  
+>  Für Schnittstellen, die Sie außerhalb des Dialogfelds **Klasse hinzufügen** definiert haben, fügt Visual C++ die Methoden oder Eigenschaften der IDL-Datei und Stubs den Klassen hinzu, die Methoden implementieren, auch wenn die Schnittstellen manuell hinzugefügt werden.  
   
- Die folgenden drei Assistenten können Sie die vorhandene Schnittstellen anpassen. Sie sind in der Klassenansicht verfügbar:  
+ Die folgenden drei Assistenten unterstützen Sie beim Anpassen vorhandener Schnittstellen. Sie sind in der Klassenansicht verfügbar:  
   
 |Assistent|Projekttyp:|  
 |------------|------------------|  
-|[Fügen Sie der Assistent zum Eigenschaften hinzu](../ide/names-add-property-wizard.md)|ATL- oder MFC-Projekten, die Unterstützung von ATL Klicken Sie auf die Schnittstelle, die Sie die Eigenschaft hinzufügen möchten.<br /><br /> Visual C++ erkennt den Projekttyp und ändert die Optionen des Assistenten zum Hinzufügen einer Eigenschaft entsprechend:<br /><br /> – Für Disp-Schnittstellen in Projekten, die mithilfe von erstellt die [MFC-Anwendung-Assistent](../mfc/reference/mfc-application-wizard.md), den Assistenten zum Hinzufügen einer Eigenschaft aufrufen bietet Optionen, die bestimmten mit MFC.<br />– Für MFC-ActiveX-Steuerelement-Schnittstellen bietet der Assistent zum Hinzufügen von Eigenschaften eine Liste von vordefinierten Methoden und Eigenschaften, die Sie verwenden, wie bereitgestellt oder für das Steuerelement angepasst.<br />– Für alle anderen Schnittstellen bieten die Eigenschaft-Assistenten Optionen, die in den meisten Situationen nützlich.|  
-|[Assistent zum Hinzufügen von Methoden](../ide/add-method-wizard.md)|ATL- oder MFC-Projekten, die Unterstützung von ATL Klicken Sie auf die Schnittstelle, die Sie die Methode hinzufügen möchten.<br /><br /> Visual C++ erkennt den Projekttyp und ändert die Optionen des Assistenten zum Hinzufügen einer Methode entsprechend:<br /><br /> – Für Disp-Schnittstellen in Projekten, die erstellt werden, mithilfe der [MFC-Anwendung-Assistent](../mfc/reference/mfc-application-wizard.md), Aufrufen des Assistenten zum Hinzufügen einer Methode bietet Optionen, die bestimmten mit MFC.<br />– Für MFC-ActiveX-Steuerelement-Schnittstellen enthält den Assistenten zum Hinzufügen einer Methode eine Liste von vordefinierten Methoden und Eigenschaften, die Sie verwenden, wie bereitgestellt oder für das Steuerelement angepasst.<br />– Für alle anderen Schnittstellen der **Methode hinzufügen** Assistenten bieten Optionen, die in den meisten Situationen nützlich.|  
+|[Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md)|ATL- oder MFC-Projekte, die ATL unterstützen. Klicken Sie mit der rechten Maustaste auf die Schnittstelle, der die Eigenschaft hinzugefügt werden soll.<br /><br /> Visual C++ erkennt den Projekttyp und ändert die Optionen im Assistenten zum Hinzufügen von Eigenschaften entsprechend:<br /><br /> – Für Disp-Schnittstellen in Projekten, die mit dem [MFC-Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) erstellt wurden, stellt das Aufrufen des Assistenten zum Hinzufügen von Eigenschaften MFC-spezifische Optionen bereit.<br />– Für ActiveX-Steuerelementschnittstellen stellt der Assistent zum Hinzufügen von Eigenschaften eine Liste vordefinierter Methoden und Eigenschaften bereit, die Sie verwenden oder für Ihr Steuerelement anpassen können.<br />– Für alle anderen Schnittstellen stellt der Assistent zum Hinzufügen von Eigenschaften Optionen bereit, die in den meisten Situationen nützlich sind.|  
+|[Assistent zum Hinzufügen von Methoden](../ide/add-method-wizard.md)|ATL- oder MFC-Projekte, die ATL unterstützen. Klicken Sie mit der rechten Maustaste auf die Schnittstelle, der die Methode hinzugefügt werden soll.<br /><br /> Visual C++ erkennt den Projekttyp und ändert die Optionen im Assistenten zum Hinzufügen von Methoden entsprechend:<br /><br /> – Für Disp-Schnittstellen in Projekten, die mit dem [MFC-Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) erstellt wurden, stellt das Aufrufen des Assistenten zum Hinzufügen von Methoden MFC-spezifische Optionen bereit.<br />– Für ActiveX-Steuerelementschnittstellen stellt der Assistent zum Hinzufügen von Methoden eine Liste vordefinierter Methoden und Eigenschaften bereit, die Sie verwenden oder für Ihr Steuerelement anpassen können.<br />– Für alle anderen Schnittstellen stellt der **Assistent zum Hinzufügen von Methoden** Optionen bereit, die in den meisten Situationen nützlich sind.|  
   
- Darüber hinaus können Sie neue Schnittstellen auch auf das COM-Steuerelement implementieren, indem Steuerelementklasse für das Objekt in der Klassenansicht mit der rechten Maustaste, und klicken Sie auf [Schnittstelle implementieren](../ide/implement-interface-wizard.md).  
+ Darüber hinaus können Sie neue Schnittstellen in Ihrem COM-Steuerelement implementieren, indem Sie in der Klassenansicht mit der rechten Maustaste auf die Steuerelementklasse des Objekts klicken, klicken Sie dann auf [Schnittstelle implementieren](../ide/implement-interface-wizard.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Working with Resource Files (Arbeiten mit Ressourcendateien)](../windows/working-with-resource-files.md)   
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)

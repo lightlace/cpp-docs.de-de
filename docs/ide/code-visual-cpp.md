@@ -1,5 +1,5 @@
 ---
-title: '&lt;Code&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;code&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330118"
 ---
-# <a name="ltcodegt-visual-c"></a>&lt;Code&gt; (Visual C++)
-Die \<Code >-Tag bietet Ihnen eine Möglichkeit, eine oder mehrere Zeilen als Code anzugeben.  
+# <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
+Das Tag \<code> ermöglicht es, mindestens eine Zeile als Code anzugeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +39,7 @@ Die \<Code >-Tag bietet Ihnen eine Möglichkeit, eine oder mehrere Zeilen als Co
  Der Text, der als Code gekennzeichnet werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung [ \<c >](../ide/c-visual-cpp.md) an, dass ein Teil des Texts als Code gekennzeichnet werden soll.  
+ Verwenden Sie [\<c>](../ide/c-visual-cpp.md), um anzugeben, dass ein Teil des Texts als Code gekennzeichnet werden soll.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   

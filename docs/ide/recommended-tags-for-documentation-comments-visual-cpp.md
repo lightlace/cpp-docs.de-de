@@ -1,5 +1,5 @@
 ---
-title: Empfohlene Tags für Dokumentationskommentare (Visual C++) | Microsoft Docs
+title: Empfohlene Tags für Dokumentationskommentare (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,35 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328619"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Empfohlene Tags für Dokumentationskommentare (Visual C++)
-Visual C++-Compiler verarbeitet Dokumentationskommentare im Code und erstellt eine XDC-Datei für jede Kompiliereinheit und xdcmake.exe verarbeitet der XDC-Dateien in eine XML-Datei. Verarbeiten der XML-Datei zum Erstellen von Dokumentation ist ein Detail, die an Ihrem Standort implementiert werden muss.  
+Der Visual C++-Compiler verarbeitet Dokumentationskommentare in Ihrem Code und erstellt für jede Kompiliereinheit eine XDC-Datei, und die „xdcmake.exe“ verarbeitet die XDC-Dateien zu einer XML-Datei. Die Verarbeitung der XML-Datei zum Erstellen der Dokumentation muss an Ihrem Standort implementiert werden.  
   
- Tags werden verarbeitet, auf Konstrukte wie Typen und Typmember.  
+ Tags werden auf der Basis von Konstrukten wie Typen und Typmember verarbeitet.  
   
- Tags müssen Typen oder Member unmittelbar vorangestellt sein.  
+ Tags müssen Typen oder Membern unmittelbar vorangestellt werden.  
   
 > [!NOTE]
->  Dokumentationskommentare können nicht mit einem Namespace oder auf Out abweichenden Definition für Eigenschaften und Ereignisse angewendet werden; Dokumentationskommentare müssen auf die Klassendeklarationen.  
+>  Dokumentationskommentare können nicht für einen Namespace oder außerhalb der Definition für Eigenschaften und Ereignisse angewendet werden. Dokumentationskommentare müssen auf die Klassendeklarationen angewendet werden.  
   
- Der Compiler verarbeitet alle Tags, die gültige XML sind. Die folgenden Tags stellen häufig verwendete Funktionalität in der Dokumentation für die Benutzer bereit:  
+ Der Compiler verarbeitet alle Tags, die gültige XML sind. Die folgenden Tags stellen häufig verwendete Funktionen in der Benutzerdokumentation bereit:  
   
 ||||  
 |-|-|-|  
 |[\<c>](../ide/c-visual-cpp.md)|[\<code>](../ide/code-visual-cpp.md)|[\<example>](../ide/example-visual-cpp.md)|  
-|[\<Ausnahme >](../ide/exception-visual-cpp.md)1|[\<umfassen >](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
-|[\<para>](../ide/para-visual-cpp.md)|[\<Param >](../ide/param-visual-cpp.md)1|[\<Paramref >](../ide/paramref-visual-cpp.md)1|  
-|[\<Berechtigung >](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
-|[\<finden Sie unter >](../ide/see-visual-cpp.md)1|[\<Seealso >](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
+|[\<exception>](../ide/exception-visual-cpp.md)1|[\<include>](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
+|[\<para>](../ide/para-visual-cpp.md)|[\<param>](../ide/param-visual-cpp.md)1|[\<paramref>](../ide/paramref-visual-cpp.md)1|  
+|[\<permission>](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
+|[\<see>](../ide/see-visual-cpp.md)1|[\<seealso>](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
 |[\<value>](../ide/value-visual-cpp.md)|||  
   
- 1. Compilerfehler überprüft die Syntax.  
+ 1. Der Compiler überprüft die Syntax.  
   
- In der aktuellen Version der Visual C++-Compiler unterstützt keine `<paramref>`, ein Tag, das von anderen Visual Studio-Compiler unterstützt wird. Visual C++ unterstützt möglicherweise `<paramref>` in einer zukünftigen Version.  
+ Im aktuellen Release unterstützt der Visual C++-Compiler `<paramref>` nicht. Dies ist ein Tag, das von anderen Visual Studio-Compilern unterstützt wird. Möglicherweise unterstützt Visual C++ `<paramref>` in einem zukünftigen Release.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

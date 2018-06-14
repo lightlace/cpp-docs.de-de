@@ -1,5 +1,5 @@
 ---
-title: Benennen Sie | Microsoft Docs
+title: Umbenennen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,9 +12,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339812"
 ---
 # <a name="rename"></a>Umbenennen
 **Beschreibung**: Hiermit können Sie Bezeichner für Codesymbole (z.B. Felder, lokale Variablen, Methoden, Namespaces, Eigenschaften und Typen) umbenennen.
@@ -36,15 +37,15 @@ ms.lasthandoff: 05/04/2018
      * Wählen Sie **Bearbeiten > Umgestalten > Umbenennen** aus.
      * Klicken Sie mit der rechten Maustaste auf den Code, und wählen Sie **Umbenennen** aus.
 
-1. In der **umbenennen** -Fenster angezeigt wird, geben Sie den neuen Namen für das ausgewählte Element und auf die **Vorschau** Schaltfläche.  Ändern der **Suchbereich** erweitert werden, oder schränken Sie die Umbenennung des Bereichs werden sollen.
+1. Geben Sie den neuen Namen für das ausgewählte Element im angezeigten Fenster **Umbenennen** ein, und klicken Sie auf die Schaltfläche **Vorschau**.  Ändern Sie den **Suchbereich**, wenn Sie den Bereich für das Umbenennen erweitern und einschränken müssen.
 
-   ![Umbenennen von Dialogfeld](images/rename_dialog.png)
+   ![Dialogfeld „Umbenennen“](images/rename_dialog.png)
 
    > [!TIP]
-   > Sie können die Vorschau überspringen, indem Sie die Überprüfung der **Skip Vorschau ändert, wenn Verweise auf alle bestätigt werden** Option.
+   > Sie können die Vorschau überspringen, indem Sie die Option **Vorschau der Änderungen überspringen, wenn alle Verweise bestätigt sind** aktivieren.
 
-1. Wenn die **benennen Sie die Vorschau der Änderungen -** Fenster angezeigt wird, stellen Sie sicher, dass die Änderungen, die Sie anfordern ordnungsgemäß ausgeführt werden.  Verwenden Sie die Kontrollkästchen aktivieren oder deaktivieren das Umbenennen eines Elements in der oberen Hälfte des Fensters.
+1. Wenn das Fenster **Vorschau der Änderungen – Umbenennen** angezeigt wird, stellen Sie sicher, dass Ihre angeforderten Änderungen ordnungsgemäß ausgeführt werden.  Verwenden Sie die Kontrollkästchen in der oberen Hälfte des Fensters, um das Umbenennen von Elementen zu aktivieren oder zu deaktivieren.
 
-   ![Benennen Sie die Vorschau](images/rename_preview.png)
+   ![Vorschau für das Umbenennen](images/rename_preview.png)
 
-1. Wenn alles gut aussieht, klicken Sie auf die **übernehmen** Schaltfläche und das Element werden in Ihrem Quellcode umbenannt werden.
+1. Klicken Sie auf die Schaltfläche **Anwenden**, wenn alles Ihren Erwartungen entspricht, damit das Element in Ihrem Quellcode umbenannt wird.

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Klassen aus ActiveX-Steuerelement-Assistent | Microsoft Docs
+title: Assistent zum Hinzufügen von Klassen aus ActiveX-Steuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,59 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336816"
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Hinzufügen einer Klasse mit dem ActiveX-Steuerelement-Assistenten
-Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren ActiveX-Steuerelement hinzufügen. Der Assistent erstellt eine Klasse für jede Schnittstelle, die Sie aus dem ausgewählten ActiveX-Steuerelement hinzufügen.  
+Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren ActiveX-Steuerelement hinzuzufügen. Der Assistent erstellt eine Klasse für jede Schnittstelle, die Sie aus dem ausgewählten ActiveX-Steuerelement hinzufügen.  
   
- **Fügen Sie Klasse aus**  
- Gibt den Speicherort der Typbibliothek, aus der Klasse erstellt wird.  
+ **Add Class From** (Klasse hinzufügen aus)  
+ Gibt den Speicherort der Typbibliothek an, aus der die Klasse erstellt wird.  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken in aufgelisteten **verfügbare ActiveX-Steuerelemente**.|  
-|**Datei**|Die Typbibliothek ist nicht unbedingt im System registriert, aber in einer Datei enthalten ist. Geben Sie den Dateispeicherort in **Speicherort**.|  
+|**Registrierung**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) aufgeführt.|  
+|**Datei**|Die Typbibliothek ist nicht unbedingt im System registriert, sondern in einer Datei enthalten. Sie müssen den Dateispeicherort unter **Speicherort** angeben.|  
   
  **Verfügbare ActiveX-Steuerelemente**  
- Gibt an, die ActiveX-Steuerelemente, die zurzeit im System registriert. Wählen Sie ein ActiveX-Steuerelement aus dieser Liste anzuzeigende zugehörigen Schnittstellen in den **Schnittstellen** Liste. Finden Sie unter [MFC-ActiveX-Steuerelemente: Weitergabe von ActiveX-Steuerelementen](../mfc/mfc-activex-controls-distributing-activex-controls.md) für Weitere Informationen zum Registrieren von ActiveX-Steuerelemente.  
+ Gibt die ActiveX-Steuerelemente an, die derzeit im System registriert sind. Wählen Sie ein ActiveX-Steuerelement aus dieser Liste aus, um dessen Schnittstellen in der Liste **Schnittstellen** anzuzeigen. Weitere Informationen zur Registrierung von ActiveX-Steuerelementen finden Sie unter [MFC ActiveX Controls: Distributing ActiveX Controls (MFC-ActiveX-Steuerelemente: Weitergabe von ActiveX-Steuerelementen)](../mfc/mfc-activex-controls-distributing-activex-controls.md).  
   
- Wenn Sie auf **Datei** unter **Klasse hinzufügen von**, dieses Feld ist für die Änderung nicht verfügbar.  
+ Wenn Sie unter **Add Class From** (Klasse hinzufügen aus) auf **Datei** klicken, kann dieses Feld nicht geändert werden.  
   
- **Position**  
- Gibt den Speicherort des ActiveX-Steuerelements. Wenn Sie auf **Datei** unter **Klasse hinzufügen von**, können Sie den Speicherort der Datei mit der Typbibliothek angeben. Um auf den Speicherort der Datei zu suchen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten.  
+ **Speicherort**  
+ Gibt den Speicherort des ActiveX-Steuerelements an. Wenn Sie unter **Add Class From** (Klasse hinzufügen aus) auf **Datei** klicken, können Sie den Speicherort der Datei angeben, die die Typbibliothek enthält. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um nach dem Speicherort der Datei zu suchen.  
   
- Wenn Sie auf **Registrierung** unter **Klasse hinzufügen von**, dieses Feld ist für die Änderung nicht verfügbar.  
+ Wenn Sie unter **Add Class From** (Klasse hinzufügen aus) auf **Registrierung** klicken, kann dieses Feld nicht geändert werden.  
   
  **Schnittstellen**  
- Legt die Schnittstellen in der ActiveX-Steuerelement, die derzeit im ausgewählten **verfügbare ActiveX-Steuerelemente** oder in der Typbibliothek in der Datei im angegebenen **Speicherort**.  
+ Gibt die Schnittstellen des ActiveX-Steuerelements an, das derzeit unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) oder in der Typbibliothek in der Datei angegeben ist, die unter **Speicherort** angegeben ist.  
   
-|Übertragen Sie die Schaltfläche|Beschreibung|  
+|Schaltfläche „Übertragen“|Beschreibung|  
 |---------------------|-----------------|  
-|**>**|Die Schnittstelle, die derzeit im ausgewählten fügt die **Schnittstellen** Liste. Nicht verfügbar, wenn keine Schnittstelle ausgewählt ist.|  
-|**>>**|Fügt alle Schnittstellen in der ActiveX-Steuerelement, die derzeit im ausgewählten **verfügbare ActiveX-Steuerelemente** oder in der Typbibliothek in der Datei im angegebenen **Speicherort**.|  
-|**<**|Entfernt die Klasse, die derzeit im ausgewählten der **generierte Klassen** Liste. Nicht verfügbar, wenn keine Klasse derzeit, in ausgewählt ist der **generierte Klassen** Liste.|  
-|**<\<**|Entfernt alle Klassen in der **generierte Klassen** Liste. Nicht verfügbar If der **generierte Klassen** Liste ist leer.|  
+|**>**|Fügt die Schnittstelle hinzu, die derzeit in der Liste **Schnittstellen** ausgewählt ist. Nicht verfügbar, wenn keine Schnittstelle ausgewählt ist.|  
+|**>>**|Fügt alle Schnittstellen des ActiveX-Steuerelements hinzu, das derzeit unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) oder in der Typbibliothek in der Datei angegeben ist, die unter **Speicherort** angegeben ist.|  
+|**<**|Entfernt die Klasse, die derzeit in der Liste **Generierte Klassen** ausgewählt ist. Nicht verfügbar, wenn derzeit keine Klasse in der Liste **Generierte Klassen** ausgewählt ist.|  
+|**<\<**|Entfernt alle Klassen in der Liste **Generierte Klassen**. Nicht verfügbar, wenn die Liste **Generierte Klassen** leer ist.|  
   
  **Generierte Klassen**  
- Gibt die Klassennamen zu generierenden über die Schnittstellen hinzugefügt, mit der **>** oder **>>** Schaltfläche. Sie können dieses Kontrollkästchen, um eine Klasse auszuwählen, und klicken Sie dann mithilfe der nach-oben oder nach-unten-Taste in der Liste einen Bildlauf Klicken anzeigen jedes Klassennamen in der `Class` Feld und der Dateiname in der **.h-Datei** Feld, das der Assistent generiert, wenn Sie auf das  **Fertig stellen**. Sie können nur eine Klasse zu einem Zeitpunkt in diesem Feld auswählen.  
+ Gibt die Klassennamen an, die aus den Schnittstellen generiert werden sollen, die mithilfe der Schaltfläche **>** oder **>>** hinzugefügt wurden. Sie können auf dieses Feld klicken, um eine Klasse auszuwählen und die Pfeiltasten verwenden, um durch die Liste zu scrollen. Dabei wird jeder Klassenname im Feld `Class` und jeder Dateiname im Feld **H-Datei** angezeigt. Diese werden vom Assistenten generiert, wenn Sie auf **Fertig stellen** klicken. Sie können nur eine Klasse in diesem Feld auswählen.  
   
- Sie können eine Klasse entfernen, indem Sie es in dieser Liste auswählen und auf **<**. Sie müssen nicht auf eine Klasse in der **generierte Klassen** Feld, um alle Klassen zu entfernen; klicken **<<**, entfernen Sie alle Klassen in der **generierte Klassen** Box.  
+ Sie können eine Klasse entfernen, indem Sie diese in der Liste auswählen und auf **<** klicken. Sie müssen keine Klasse im Feld **Generierte Klassen** auswählen, um alle Klassen zu entfernen. Sie können alle Klassen im Feld **Generierte Klassen** entfernen, indem Sie auf **<<** klicken.  
   
  `Class`  
- Gibt den Namen der Klasse, die im ausgewählten der **generierte Klassen** Feld, das vom Assistenten hinzugefügt, wenn Sie auf das **Fertig stellen**. Sie können den Namen im Bearbeiten der `Class` Feld.  
+ Gibt den Namen der Klasse an, die im Feld **Generierte Klassen** ausgewählt ist. Dieses wird vom Assistenten hinzugefügt, wenn Sie auf **Fertig stellen** klicken. Sie können den Namen im Feld `Class` bearbeiten.  
   
- **.h-Datei**  
- Legt den Namen der Headerdatei für die neue Klasse des Objekts. Standardmäßig basiert auf den Namen, die Sie, in angeben diesen Namen **generierte Klassen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen an den Speicherort Ihrer Wahl speichern oder die Klassendeklaration an eine vorhandene Datei anfügen. Wenn Sie eine vorhandene Datei auswählen, der Assistent wird nicht zum Speichern an den ausgewählten Speicherort bis auf **Fertig stellen** im Assistenten.  
+ **H-Datei**  
+ Legt den Namen der Headerdatei für die neue Klasse des Objekts fest. Standardmäßig basiert dieser Name auf dem Namen, den Sie unter **Generierte Klassen** angeben. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen. Wenn Sie eine vorhandene Datei auswählen, speichert der Assistent diese nicht am ausgewählten Speicherort, bis Sie im Assistenten auf **Fertig stellen** klicken.  
   
- Der Assistent überschreibt eine Datei nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, wenn Sie auf **Fertig stellen**, werden vom Assistenten aufgefordert, um anzugeben, ob die Klassendeklaration an den Inhalt der Datei angefügt werden sollen. Klicken Sie auf **Ja** anzufügende Datei ein, klicken Sie auf **keine** zum Assistenten zurückzukehren, und geben Sie einen anderen Dateinamen an.  
+ Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassendeklaration an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.  
   
  **CPP-Datei**  
- Legt den Namen der Implementierungsdatei für das neue Objekt-Klasse. Standardmäßig basiert auf den Namen, die Sie, in angeben diesen Namen **generierte Klassen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am Speicherort Ihrer Wahl zu speichern. Die Datei wird nicht an den ausgewählten Speicherort gespeichert, bis Sie auf **Fertig stellen** im Assistenten.  
+ Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts fest. Standardmäßig basiert dieser Name auf dem Namen, den Sie unter **Generierte Klassen** angeben. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie im Assistenten auf **Fertig stellen** klicken.  
   
- Der Assistent überschreibt eine Datei nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, wenn Sie auf **Fertig stellen**, werden vom Assistenten aufgefordert, um anzugeben, ob die Implementierung der Klasse mit dem Inhalt der Datei angefügt werden sollen. Klicken Sie auf **Ja** anzufügende Datei ein, klicken Sie auf **keine** zum Assistenten zurückzukehren, und geben Sie einen anderen Dateinamen an.  
+ Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassenimplementierung an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Klasse aus einem ActiveX-Steuerelement](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   

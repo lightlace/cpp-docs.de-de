@@ -1,5 +1,5 @@
 ---
-title: Implementierung von reinen | Microsoft Docs
+title: Implementieren von rein virtuellen Elementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328025"
 ---
-# <a name="implement-pure-virtuals"></a>Implementierung von reinen
-**Was:** können Sie den Code erforderlich, um alle reinen virtuellen Methoden in einer Klasse implementieren sofort zu generieren. 
+# <a name="implement-pure-virtuals"></a>Implementieren von rein virtuellen Elementen
+**Zweck:**: Sofortiges Generieren des Codes, der zum Implementieren aller rein virtuellen Methoden in einer Klasse erforderlich ist. 
 
-**Wann:** erben von einer Klasse mit reinen virtuellen Funktionen werden sollen.  
+**Anwendung:** Sie möchten von einer Klasse mit rein virtuellen Funktionen erben.  
 
-**Grund:** konnte Sie alle reine virtuelle Funktionen nacheinander, manuell implementieren, aber diese Funktion automatisch alle Methodensignaturen generiert.
+**Grund**: Sie könnten alle rein virtuellen Features nacheinander manuell implementieren, doch bei diesem Feature werden alle Methodensignaturen automatisch generiert.
 
 **Vorgehensweise**:
 
-1. Platzieren Sie den Text oder mit dem Mauszeiger-Cursor über die Klasse, in der Sie die reinen virtuellen Funktionen der Basisklasse implementieren möchten.
+1. Platzieren Sie Ihren Text oder Mauszeiger auf der Klasse, in die die rein virtuellen Funktionen der Basisklasse implementiert werden sollen.
 
    ![Markierter Code](images/virtuals_highlight.png)
 
 1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **implementieren alle rein virtuellen Aufrufe für die Klasse*ClassName*"** im Kontextmenü der, in dem  *Klassenname* ist der Name der ausgewählten Klasse.
+     * Drücken Sie **STRG+.**, um das Menü **Schnellaktionen und Refactorings** zu öffnen, und klicken Sie im Kontextmenü auf **Alle rein virtuellen Aufrufe für Klasse „*ClassName*“ implementieren**. *ClassName* bezieht sich hier auf den Namen der ausgewählten Klasse.
    * **Maus**
-     * Mit der rechten Maustaste, und wählen Sie die **Schnellaktionen und Refactorings** Menü **implementieren alle rein virtuellen Aufrufe für die Klasse*ClassName*"** aus dem Kontextmenü, in dem  *Klassenname* ist der Name der ausgewählten Klasse.
+     * Führen Sie einen Rechtsklick aus, und klicken Sie auf das Menü **Schnellaktionen und Refactorings**. Klicken Sie anschließend im Kontextmenü auf **Alle rein virtuellen Aufrufe für Klasse „*ClassName*“ implementieren**. *ClassName* bezieht sich hier auf den Namen der ausgewählten Klasse.
 
-1. Die rein virtuelle Methodensignaturen werden automatisch erstellt, implementiert werden.
+1. Die rein virtuellen Methodensignaturen werden automatisch erstellt und stehen für die Implementierung zur Verfügung.
 
-   ![Implementieren von reinen Ergebnis](images/virtuals_result.png)
+   ![Ergebnis der Implementierung von rein virtuellen Elementen](images/virtuals_result.png)

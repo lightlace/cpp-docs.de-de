@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Buildschritte und Buildereignisse | Microsoft Docs
+title: Grundlagen benutzerdefinierter Buildschritte und Buildereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,37 +23,38 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338766"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Grundlagen benutzerdefinierter Buildschritte und Buildereignisse
-Von in der Visual C++-Entwicklungsumgebung gibt es drei grundlegende Methoden zum Anpassen des Buildprozesses:  
+Innerhalb der Visual C++-Entwicklungsumgebung gibt es drei grundlegende Möglichkeiten, den Buildprozess anzupassen:  
   
  **Benutzerdefinierte Buildschritte**  
- Ein benutzerdefinierter Buildschritt ist eine Buildregel einem Projekt zugeordnet. Ein benutzerdefinierten Buildschritt kann über die Befehlszeile ausgeführt wird, eine zusätzliche Eingabe oder Ausgabedateien und eine anzuzeigende Meldung angeben. Weitere Informationen finden Sie unter [wie: Hinzufügen einer benutzerdefinierten Buildschritt zu MSBuild-Projekten](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
+ Ein benutzerdefinierter Buildschritt ist eine Buildregel, die einem Projekt zugeordnet ist. Ein benutzerdefinierter Buildschritt kann eine auszuführende Befehlszeile, alle zusätzlichen Eingabe- oder Ausgabedateien und eine anzuzeigende Meldung angeben. Weitere Informationen finden Sie unter [How to: Add a Custom Build Step to MSBuild Projects (Vorgehensweise: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten)](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
   
  **Benutzerdefinierte Buildtools**  
- Ein benutzerdefiniertes Buildtool ist eine Buildregel, die eine oder mehrere Dateien zugeordnet. Ein benutzerdefinierten Buildschritt kann Eingabedateien übergeben, um ein benutzerdefiniertes Buildtool, was in einem führt ein oder mehrere Ausgabedateien. Beispielsweise werden die Hilfedateien in einer MFC_Anwendung mit der ein benutzerdefiniertes Buildtool erstellt. Weitere Informationen finden Sie unter [wie: Hinzufügen benutzerdefinierter Buildtools zu MSBuild-Projekten](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) und [angeben von benutzerdefinierten Buildtools](../ide/specifying-custom-build-tools.md).  
+ Ein benutzerdefiniertes Buildtool ist eine Buildregel, die mindestens einer Datei zugeordnet ist. Ein benutzerdefinierter Buildschritt kann Eingabedateien an ein benutzerdefiniertes Buildtool übergeben, was zu mindestens einer Ausgabedatei führt. Zum Beispiel werden die Hilfedateien in einer MFC-Anwendung mit einem benutzerdefinierten Buildtool erstellt. Weitere Informationen finden Sie unter [How to: Add Custom Build Tools to MSBuild Projects (Vorgehensweise: Hinzufügen von benutzerdefinierten Buildtools zu MSBuild-Projekten)](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) und [Specifying Custom Build Tools (Angeben von benutzerdefinierten Buildtools)](../ide/specifying-custom-build-tools.md).  
   
  **Buildereignisse**  
- Buildereignisse können Sie ein Projekt anpassen. Es gibt drei Buildereignisse: *Präbuild*, *Linkervorstufen*, und *Postbuild*. Ein Buildereignis können Sie eine Aktion aus, um zu einem bestimmten Zeitpunkt während des Buildvorgangs auftreten angeben. Beispielsweise können Sie eine Buildereignis registrieren Sie eine Datei mit **regsvr32.exe** nach Abschluss des Projekts erstellen. Weitere Informationen finden Sie unter [Festlegen von Buildereignissen](../ide/specifying-build-events.md).  
+ Mit Buildereignissen können Sie das Build eines Projekts anpassen. Es gibt drei Buildereignisse: *Präbuild*, *Prälink* und *Postbuild*. Mit einem Buildereignis können Sie festlegen, dass eine Aktion zu einem bestimmten Zeitpunkt des Buildprozesses auftritt. Zum Beispiel können Sie ein Buildereignis dazu verwenden, eine Datei mit **regsvr32.exe** zu registrieren, nachdem das Projekt den Buildprozess abschließt. Weitere Informationen finden Sie unter [Specifying Build Events (Angeben von Buildereignissen)](../ide/specifying-build-events.md).  
   
- [Problembehandlung bei Anpassungen erstellen](../ide/troubleshooting-build-customizations.md) können Sie sicherstellen, dass Ihre benutzerdefinierte Buildschritte und Buildereignisse wie erwartet ausgeführt werden.  
+ Die [Problembehandlung für Buildanpassungen](../ide/troubleshooting-build-customizations.md) können Ihnen dabei helfen, sicherzustellen, dass Ihre benutzerdefinierten Buildschritte und Buildereignisse ordnungsgemäß ausgeführt werden.  
   
  Das Ausgabeformat eines benutzerdefinierten Buildschritts oder Buildereignisses kann auch die Verwendbarkeit des Tools verbessern. Weitere Informationen finden Sie unter [Formatieren der Ausgabe eines benutzerdefinierten Buildschritts oder eines benutzerdefinierten Buildereignisses](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
   
- Buildereignisse und benutzerdefinierte Buildschritte, führen Sie in der folgenden Reihenfolge zusammen mit anderen Buildschritte:  
+ Buildereignisse und benutzerdefinierte Buildschritte werden zusammen mit anderen Buildschritten in der folgenden Reihenfolge ausgeführt:  
   
 1.  Präbuildereignis  
   
-2.  Benutzerdefinierte Buildtools für einzelne Dateien  
+2.  Benutzerdefinierte Buildtools für individuelle Dateien  
   
 3.  MIDL  
   
 4.  Ressourcencompiler  
   
-5.  C/C++-compiler  
+5.  Der C/C++-Compiler  
   
 6.  Prälinkereignis  
   
@@ -67,9 +68,9 @@ Von in der Visual C++-Entwicklungsumgebung gibt es drei grundlegende Methoden zu
   
 11. Postbuildereignis  
   
- Die `custom build step on the project` und ein `post-build event` ausführen, sequenziell nach dem Erstellen aller anderen Prozesse Fertig stellen.  
+ `custom build step on the project` und `post-build event` werden sequenziell nach dem Abschluss aller anderen Buildprozesse ausgeführt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von C++-Projekten in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
- [Allgemeine Makros für Buildbefehle und-Eigenschaften](../ide/common-macros-for-build-commands-and-properties.md)   
- [Dialogfeld "Texttool Build-Reihenfolge"](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Building C++ Projects in Visual Studio (Erstellen von C++-Projekten in Visual Studio)](../ide/building-cpp-projects-in-visual-studio.md)   
+ [Common Macros for Build Commands and Properties (Gängige Makros für Buildbefehle und -eigenschaften)](../ide/common-macros-for-build-commands-and-properties.md)   
+ [Dialogfeld „Toolbuildreihenfolge“](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

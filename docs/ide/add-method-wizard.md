@@ -1,5 +1,5 @@
 ---
-title: Assistent zum Hinzufügen | Microsoft Docs
+title: Assistent zum Hinzufügen von Methoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,80 +19,81 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340345"
 ---
 # <a name="add-method-wizard"></a>Assistent zum Hinzufügen von Methoden
-Verwenden Sie diesen Assistenten, einer Schnittstelle eine Methode hinzu. Je nach Projekttyp oder Schnittstellentyp, der Sie eine Methode hinzufügen, zeigt der Assistent unterschiedliche Optionen an.  
+Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzufügen. Je nachdem, zu welchem Projekttyp oder Schnittstellentyp Sie eine Methode hinzufügen, zeigt der Assistent unterschiedliche Optionen an.  
   
 ## <a name="names"></a>Namen  
  **Rückgabetyp**  
- Der Datentyp, der von der Methode zurückgegeben wird. `HRESULT` wird für alle Schnittstellentypen empfohlen werden, da es ein gängiges Verfahren zur Rückgabe von Fehlern bietet.  
+ Der von der Methode zurückgegebene Datentyp. `HRESULT` wird für alle Schnittstellentypen empfohlen, da dadurch ein gängiges Verfahren zum Zurückgeben von Fehlern bereitgestellt wird.  
   
 |Schnittstellentyp|Beschreibung|  
 |--------------------|-----------------|  
-|Duale Schnittstelle|`HRESULT` Nicht geändert werden.|  
-|Benutzerdefinierte Schnittstelle|`HRESULT` Nicht geändert werden.|  
-|Lokale benutzerdefinierte Schnittstelle|Geben Sie Ihre eigenen Rückgabetyp an, oder wählen Sie aus der Liste aus.|  
-|Disp-Schnittstelle|Geben Sie Ihre eigenen Rückgabetyp an, oder wählen Sie aus der Liste aus.|  
-|MFC-ActiveX-Steuerelement Disp-Schnittstelle|Wenn Sie eine vordefinierte Methode implementieren, wird der Rückgabetyp wird auf den entsprechenden Wert festgelegt und kann nicht geändert werden. Bei Auswahl eine Methode aus der **Methodennamen** aus, und klicken Sie auf **benutzerdefinierte** unter **Methodentyp wählen**, wählen Sie aus der Liste einen Rückgabetyp aufweisen.|  
+|Duale Schnittstelle|`HRESULT` Kann nicht geändert werden.|  
+|Benutzerdefinierte Schnittstelle|`HRESULT` Kann nicht geändert werden.|  
+|Lokale benutzerdefinierte Schnittstelle|Geben Sie einen eigenen Rückgabetyp an, oder wählen Sie einen aus der Liste aus.|  
+|Disp-Schnittstelle|Geben Sie einen eigenen Rückgabetyp an, oder wählen Sie einen aus der Liste aus.|  
+|Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Wenn Sie eine vordefinierte Methode implementieren, wird der Rückgabetyp auf den entsprechenden Wert festgelegt und kann nicht geändert werden. Wenn Sie eine Methode aus der Liste **Methodenname** auswählen und auf **Benutzerdefiniert** klicken, wählen Sie unter **Methodentyp auswählen** einen Rückgabetyp aus der Liste aus.|  
   
  **Methodenname**  
  Legt den Namen für die Methode fest.  
   
 |Schnittstellentyp|Beschreibung|  
 |--------------------|-----------------|  
-|Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle und lokale benutzerdefinierte Schnittstelle|Geben Sie den Methodennamen Ihrer eigenen.|  
-|MFC-Disp-Schnittstelle|Geben Sie einen eigene Methode an, oder wählen Sie einen Namen für die vorgeschlagene Methode aus der Liste aus. Wenn Sie einen Namen aus der Liste auswählen, der entsprechende Wert wird angezeigt, der **Rückgabetyp** Feld, und es kann nicht geändert werden.|  
-|MFC-ActiveX-Steuerelement Disp-Schnittstelle|Geben Sie einen eigenen, oder wählen Sie eine der vordefinierten Methoden [DoClick](../mfc/reference/colecontrol-class.md#doclick) und [aktualisieren](../mfc/reference/colecontrol-class.md#refresh). Finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen der Stock-Methoden](../mfc/mfc-activex-controls-adding-stock-methods.md) für Weitere Informationen.|  
+|Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Geben Sie einen eigenen Methodennamen an.|  
+|MFC-Disp-Schnittstelle|Geben Sie einen eigenen Methodennamen an, oder wählen Sie einen vorgeschlagenen Methodennamen aus der Liste aus. Wenn Sie einen Namen aus der Liste auswählen, wird der entsprechende Wert im Feld **Rückgabetyp** angezeigt und kann nicht geändert werden.|  
+|Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Geben Sie eine eigene an, oder wählen Sie die vordefinierte Methode [DoClick](../mfc/reference/colecontrol-class.md#doclick) oder [Refresh](../mfc/reference/colecontrol-class.md#refresh) aus. Weitere Informationen finden Sie unter [MFC ActiveX Controls: Adding Stock Methods (MFC-ActiveX-Steuerelemente: Hinzufügen vordefinierter Methoden)](../mfc/mfc-activex-controls-adding-stock-methods.md).|  
   
  **Methodentyp**  
- Verfügbar nur für MFC-ActiveX-Steuerelemente. Wenn Sie den Namen einer Methode im Angeben der **Methodennamen** Feld, anstatt eine Methode in der Liste auszuwählen, ist dieses Kontrollkästchen nicht verfügbar.  
+ Nur für MFC-ActiveX-Steuerelemente verfügbar. Wenn Sie einen Methodennamen im Feld **Methodenname** angeben, statt eine Methode aus der Liste auszuwählen, ist dieses Kontrollkästchen deaktiviert.  
   
- Bei Auswahl einer der Methoden in der **Methodennamen** , wählen Sie entweder die vordefinierte Implementierung oder eine benutzerdefinierte Implementierung.  
+ Wenn Sie eine der Methoden aus der Liste **Methodenname** auswählen, wählen Sie die vordefinierte oder eine benutzerdefinierte Implementierung aus.  
   
 |Methodentyp|Beschreibung|  
 |-----------------|-----------------|  
-|**Stock**|Der Standardwert. Fügt die vordefinierte Implementierung der Methode, die Sie, in Auswählen der **Methodennamen** Liste. **Rückgabetyp** kann nicht geändert werden, wenn Sie die Option **Stock**.|  
-|**Benutzerdefiniert**|Fügt die Methode in eine Stubimplementierung der **Methodennamen** Liste. Für benutzerdefinierte Methodentypen, können Sie Ihre eigenen Rückgabetyp angeben, oder wählen Sie einen aus der **Rückgabetyp** Liste.|  
+|**Stock**|Der Standardwert. Fügt die vordefinierte Implementierung der Methode ein, die Sie aus der Liste **Methodenname** ausgewählt haben. **Rückgabetyp** kann nicht geändert werden, wenn Sie **Stock** (Vordefiniert) auswählen.|  
+|**Benutzerdefiniert**|Fügt eine Stub-Implementierung der Methode ein, die Sie aus der Liste **Methodenname** ausgewählt haben. Für benutzerdefinierte Methodentypen können Sie einen eigenen Rückgabetyp angeben oder einen aus der Liste **Rückgabetyp** auswählen.|  
   
- **Interner name**  
- Verfügbar nur für benutzerdefinierte Methoden eine MFC-Dispinterface hinzugefügt werden soll. Legt den Namen in die Dispatchzuordnung der Headerdatei (. h) und der Implementierungsdatei (.cpp) verwendet. Dieser Name wird standardmäßig identisch **Methodennamen**. Sie können den Methodennamen ändern, wenn mit einer MFC-Dispinterface Arbeit oder wenn Sie eine benutzerdefinierte Methode, ein MFC-ActiveX-Steuerelement Dispinterface hinzufügen.  
+ **Interner Name**  
+ Nur für benutzerdefinierte Methoden verfügbar, die zu einer MFC-Disp-Schnittstelle hinzugefügt wurden. Legt den Namen fest, der in der Dispatchzuordnung, der Headerdatei (.h) und in der Implementierungsdatei (.cpp) verwendet wird. Standardmäßig stimmt dieser Name mit dem **Methodennamen** überein. Sie können den Methodennamen ändern, wenn Sie mit einer MFC-Disp-Schnittstelle arbeiten, oder wenn Sie eine benutzerdefinierte Methode zur Disp-Schnittstelle eines MFC-ActiveX-Steuerelements hinzufügen.  
   
 |Schnittstellentyp|Beschreibung|  
 |--------------------|-----------------|  
-|Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle und lokale benutzerdefinierte Schnittstelle|Nicht verfügbar|  
-|MFC-Disp-Schnittstelle|Der Name der Methode standardmäßig festgelegt. Sie können den internen Namen bearbeiten.|  
-|MFC-ActiveX-Steuerelement Disp-Schnittstelle|Sie können den internen Namen für die benutzerdefinierten Methoden festlegen. Stock-Methoden verwenden Sie einen internen Namen.|  
+|Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Nicht verfügbar|  
+|MFC-Disp-Schnittstelle|Wird standardmäßig auf den Methodennamen festgelegt. Sie können den internen Namen bearbeiten.|  
+|Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Sie können den internen Namen nur für benutzerdefinierte Methoden festlegen. Vordefinierte Methoden verwenden keinen internen Namen.|  
   
  **Parameterattribute**  
- Legt alle zusätzlichen Attribute für Parameter, die im angegebenen **Parametername**.  
+ Legt zusätzliche Attribute für den Parameter fest, der unter **Parametername** festgelegt wurde.  
   
 |Parameterattribut|Beschreibung|Zulässige Kombinationen|  
 |-------------------------|-----------------|--------------------------|  
-|**In**|Gibt an, dass die Parameter an die aufgerufene Prozedur aus der aufrufenden Prozedur übergeben wird.|**in** nur<br /><br /> **in** und **out**|  
-|**Out**|Gibt an, dass der Zeigerparameter von der aufgerufenen Prozedur an die aufrufende Prozedur (vom Server an den Client) zurückgegeben wird.|**out** nur<br /><br /> **in** und **out**<br /><br /> **out** und **Retval**|  
-|**retval**|Gibt an, dass der Parameter den Rückgabewert des Members empfängt.|**Retval** und Out|  
+|**In**|Gibt an, dass der Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben wird.|Nur **in**<br /><br /> **in** und **out**|  
+|**Out**|Gibt an, dass der Zeigerparameter an von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben wird (vom Server an den Client).|Nur **out**<br /><br /> **in** und **out**<br /><br /> **out** und **retval**|  
+|**retval**|Gibt an, dass der Parameter den Rückgabewert des Members empfängt.|**retval** und „out“|  
   
  **Parametertyp**  
  Legt den Datentyp des Parameters fest. Wählen Sie den Typ aus der Liste aus.  
   
  **Parametername**  
- Legt den Namen eines Parameters, durch die Methode übergeben. Klicken Sie nach Eingabe des Namens, Sie müssen auf **hinzufügen** die Liste der Parameter hinzuzufügen, die durch die Methode übergeben wird. Wenn Sie einen Parameternamen nicht angeben, ignoriert der Assistent alle Parameterattribute (nur ATL) oder **Parametertyp** Auswahl.  
+ Legt den Namen eines Parameters fest, der durch die Methode übergeben werden soll. Wenn Sie den Namen eingegeben haben, müssen Sie auf **Hinzufügen** klicken, um diesen zur Liste der Parameter hinzuzufügen, die durch die Methode übergeben werden. Wenn Sie keinen Parameternamen angeben, ignoriert der Assistent sämtliche ausgewählte Parameterattribute (nur ATL) oder **Parametertypen**.  
   
- Nach dem Klicken auf **hinzufügen**, der Name des Parameters angezeigt wird, im **Parameterliste**.  
+ Wenn Sie auf **Hinzufügen** klicken, wird der Parametername in der **Parameterliste** angezeigt.  
   
- **Hinweis** Wenn Sie einen Parameternamen angeben, und klicken Sie dann auf **Fertig stellen** klicken Sie erst **hinzufügen**, der Parameter wird nicht an die Methode hinzugefügt. Sie müssen suchen Sie die Methode, und fügen Sie den Parameter manuell.  
+ **Hinweis:** Wenn Sie einen Parameternamen angeben und dann auf **Fertig stellen** klicken, bevor Sie auf **Hinzufügen** klicken, wird der Parameter nicht zur Methode hinzugefügt. Sie müssen die Methode suchen und den Parameter manuell einfügen.  
   
- **Add**  
- Fügt die Parameter, die Sie, in angeben **Parametername**, und die zugehörigen Attribute Typ und Parameter zum **Parameterliste**. Klicken Sie auf **hinzufügen** der Liste einen Parameter hinzu.  
+ **Hinzufügen**  
+ Fügt den Parameter, seinen Typ und seine Parameterattribute der **Parameterliste** hinzu, den Sie in **Parametername** festlegen. Klicken Sie auf **Hinzufügen**, um einen Parameter zur Liste hinzuzufügen.  
   
  **Entfernen**  
- Entfernt den Parameter, die Sie, in auswählen **Parameterliste** aus der Liste.  
+ Entfernt den in der **Parameterliste** ausgewählten Parameter aus der Liste.  
   
  **Parameterliste**  
- Zeigt alle Parameter, den Modifizierern und Typen, die derzeit für die Methode hinzugefügt. Wenn Sie Parameter hinzufügen, wird der Assistent aktualisiert **Parameterliste** jeden Parameter mit dem zugehörigen Modifizierer und Typ angezeigt.  
+ Zeigt alle Parameter, die derzeit zur Methode hinzugefügt werden, sowie deren Modifizierer und Typen an. Während Sie Parameter hinzufügen, aktualisiert der Assistent die **Parameterliste**, um jeden Parameter einschließlich seiner Modifizierer und Typen anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Methode](../ide/adding-a-method-visual-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;finden Sie unter&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;see&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335498"
 ---
-# <a name="ltseegt-visual-c"></a>&lt;finden Sie unter&gt; (Visual C++)
-Mit dem \<see>-Tag kann ein Link im Text angegeben werden. Verwendung [ \<Seealso >](../ide/seealso-visual-cpp.md) um Text anzugeben, die in einem Abschnitt Siehe auch angezeigt werden sollen.  
+# <a name="ltseegt-visual-c"></a>&lt;see&gt; (Visual C++)
+Mit dem \<see>-Tag kann ein Link im Text angegeben werden. Verwenden Sie [\<seealso>](../ide/seealso-visual-cpp.md), um Text anzugeben, der im Abschnitt „Siehe auch“ angezeigt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +38,17 @@ Mit dem \<see>-Tag kann ein Link im Text angegeben werden. Verwendung [ \<Seeals
  `member`  
  Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  
   
- Der Compiler überprüft, dass das angegebene Codeelement vorhanden ist, und löst `member` an den Elementnamen in der XML-Ausgabe.  Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.  
+ Der Compiler überprüft, ob das angegebene Codeelement vorhanden ist, und löst `member` in den Elementnamen in der XML-Ausgabe auf.  Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.  
   
 ## <a name="remarks"></a>Hinweise  
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
- Finden Sie unter [ \<summary >](../ide/summary-visual-cpp.md) ein Beispiel der Verwendung von \<finden Sie unter >.  
+ Ein Beispiel für die Verwendung von \<see> finden Sie unter [\<summary>](../ide/summary-visual-cpp.md).  
   
- Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Finden Sie unter [ \<Seealso >](../ide/seealso-visual-cpp.md) Weitere Informationen.  
+ Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](../ide/seealso-visual-cpp.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie Cref-Verweis für einen generischen Typ erstellen können, sodass der Compiler den Verweis aufgelöst wird.  
+ Im folgenden Beispiel wird gezeigt, wie Sie einen cref-Verweis auf einen generischen Typ erstellen, sodass der Compiler den Verweis auflöst.  
   
 ```  
 // xml_see_cref_example.cpp  

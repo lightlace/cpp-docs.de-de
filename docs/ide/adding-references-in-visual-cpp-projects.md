@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Verweisen in Visual C++-Projekten | Microsoft Docs
+title: Hinzufügen von Verweisen in Visual C++-Projekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336107"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Hinzufügen von Verweisen in Visual C++-Projekten
 Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. DLL-Dateien, Windows-Runtime-Komponenten, SDK-Erweiterungen, COM-Komponenten und .NET-Assemblys) APIs aufgerufen werden. Die Methode, mit der Ihr Programm diese anderen Binärdateien findet, hängt sowohl vom Projekttyp als auch vom Typ der Binärdatei ab.  
   
  In einem systemeigenen C++-Projekt verwenden Sie „LoadLibrary“ oder „CoCreateInstance“, um den Pfad zur Binärdatei anzugeben, wenn Sie eine systemeigene DLL-Datei oder COM-Komponente verwenden, die nicht von einem anderen Projekt in Ihrer Projektmappe erzeugt wird. Andernfalls lassen Sie die Binärdatei vom System aufspüren, indem es an bestimmten klar definierten Speicherorten sucht.  
   
- In anderen Projekttypen, z. B. UWP-Projekten oder C++/CLI-Projekten, oder bei Binärdateien, die von einem anderen Projekt in der Projektmappe erstellt wurden, fügen Sie der Assembly, der Komponente oder dem Projekt einen *Verweis* hinzu.   Ein Verweis besteht im Wesentlichen aus einem Satz von Daten, der es dem Programm ermöglicht, die Binärdatei zu finden und mit ihr zu kommunizieren.       Wenn Sie einen Verweis hinzufügen, kümmert sich Visual Studio um die Low-Level-Details. Festlegen von Verweisen von einem C++-Projekt auf .NET Frameworkassemblies (C + c++ / CLI nur), COM-Komponenten, andere Projekte in der Projektmappe, einschließlich freigegebener Projekte oder verbundene Dienste, mit der rechten Maustaste auf die **Verweise** Knoten **Projektmappen-Explorer** um die **Verweis-Manager**. Die Anzeige im Verweis-Manager variiert in Abhängigkeit vom Projekttyp.  
+ In anderen Projekttypen, z. B. UWP-Projekten oder C++/CLI-Projekten, oder bei Binärdateien, die von einem anderen Projekt in der Projektmappe erstellt wurden, fügen Sie der Assembly, der Komponente oder dem Projekt einen *Verweis* hinzu.   Ein Verweis besteht im Wesentlichen aus einem Satz von Daten, der es dem Programm ermöglicht, die Binärdatei zu finden und mit ihr zu kommunizieren.       Wenn Sie einen Verweis hinzufügen, kümmert sich Visual Studio um die Low-Level-Details. Klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf den Knoten **Verweise**, um den **Verweis-Manager** zu öffnen, mit dem Sie Verweise von einem C++-Projekt auf .NET Framework-Assemblys (nur C++/CLI), COM-Komponenten und andere Projekte in Ihrer Projektmappe, einschließlich freigegebener Projekte oder verbundenen Diensten, festlegen können. Die Anzeige im Verweis-Manager variiert in Abhängigkeit vom Projekttyp.  
   
  In einem systemeigenen C++-Projekt (ATL) gilt das Konzept der *Verweise* nur für andere Projekte in der Projektmappe, einschließlich freigegebener Projekte, daher ist dies alles, was im **Verweis-Manager**angezeigt wird:  
   
- ![Visual C#&#43; &#43; Verweis-Manager &#40;ATL-Projekte&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++-Verweis-Manager (ATL-Projekte)")  
+ ![Visual C&#43;&#43;-Verweis-Manager &#40;ATL-Projekte&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++-Verweis-Manager (ATL-Projekte)")  
   
  In einem C++/CLI- oder UWP-Projekt (universelle Windows-Plattform) gilt das Konzept der Verweise zusätzlich zu anderen Projekten in der Projektmappe für verschiedene Arten von Binärdateien.  Diese werden alle im **Verweis-Manager**zu öffnen.
   
@@ -58,7 +59,7 @@ Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. D
  Zeigt das Tool an, das zum Erstellen der Interop-Assembly aus der COM-Bibliothek oder dem ActiveX-Steuerelement verwendet wird, auf die bzw. das verwiesen wird.  
   
 ### <a name="assembly-reference-properties"></a>Assemblyverweiseigenschaften  
- Assemblyverweiseigenschaften sind nur für Verweise auf .NET Frameworkassemblies in C + c++ / CLI-Projekten. Diese Eigenschaften werden nur angezeigt, wenn ein .NET Frameworkassembly ausgewählt ist die **Verweise** Bereich. Die Eigenschaften können nicht geändert werden.  
+ Assemblyverweiseigenschaften sind nur für Verweise auf .NET Framework-Assemblys in C++/CLI-Projekten verfügbar. Diese Eigenschaften werden nur angezeigt, wenn eine .NET Framework-Assembly im Bereich **Verweise** ausgewählt ist. Die Eigenschaften können nicht geändert werden.  
   
  **Relativer Pfad**  
  Zeigt den relativen Pfad vom Projektverzeichnis zur Assembly an, auf die verwiesen wird.  
@@ -103,7 +104,7 @@ Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. D
  Zeigt den Verzeichnispfad der Assembly an, auf die verwiesen wird.  
   
  **Identity**  
- Für die Frameworkassemblies .NET zeigt den vollständigen Pfad. Zeigt die GUID für COM-Komponenten an.  
+ Für die .NET Framework-Assemblys wird der vollständige Pfad angezeigt. Zeigt die GUID für COM-Komponenten an.  
   
  **Bezeichnung**  
  Zeigt die Bezeichnung des Verweises an.  

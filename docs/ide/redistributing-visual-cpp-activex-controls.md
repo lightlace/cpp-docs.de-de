@@ -1,5 +1,5 @@
 ---
-title: Neuverteilen von Visual C++ ActiveX-Steuerelementen | Microsoft Docs
+title: Verteilen von Visual C++ ActiveX-Steuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,38 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331018"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Neuverteilen von Visual C++ ActiveX-Steuerelementen
-Visual C++ 6.0 liefert ActiveX-Steuerelemente, die Sie in Anwendungen verwenden können, die Sie dann erneut verteilen. Diese Steuerelemente sind nicht mehr in Visual C++ enthalten. Pro die Lizenzverträge für Visual C++ 6.0 können Sie diese Steuerelemente mit Anwendungen, die in Visual C++ entwickelt verteilt.  
+Visual C++ 6.0 stellt ActiveX-Steuerelemente bereit, die Sie in Anwendungen verwenden können, die Sie dann verteilen. Diese Steuerelemente sind nicht mehr in Visual C++ enthalten. Aufgrund der Lizenzvereinbarungen für Visual C++ 6.0 können Sie diese Steuerelemente mit Anwendungen verteilen, die in Visual C++ entwickelt wurden.  
   
 > [!NOTE]
->  Visual C++ 6.0 wird nicht mehr von Microsoft unterstützt.  
+>  Visual C++ 6.0 wird jedoch nicht mehr von Microsoft unterstützt.  
   
- Eine Liste der verteilbaren Visual C++ 6.0-ActiveX-Steuerelemente finden Sie unter Common\Redist\Redist.txt auf CD 1 der Visual C++ 6.0-Produkt-CD.  
+ Eine Liste der verteilbaren Visual C++ 6.0 ActiveX-Steuerelemente finden Sie unter Common\Redist\Redist.txt auf Disk 1 der Visual C++ 6.0-Produkt-CD.  
   
- Bei der Verteilung von Anwendungen, müssen Sie installieren und registrieren die ".ocx" für das ActiveX-Steuerelement (mit Regsvr32.exe). Darüber hinaus sollten Sie sicherstellen, dass der Zielcomputer die aktuelle Versionen der folgenden Systemdateien hat (ein Sternchen gibt an, dass die Datei muss registriert werden):  
+ Wenn Sie Anwendungen verteilen, müssen Sie die OCX-Datei für das ActiveX-Steuerelement mithilfe von „Regsvr32.exe“ installieren und registrieren. Darüber hinaus sollten Sie sicherstellen, dass der Zielcomputer über die aktuellen Versionen der folgenden Systemdateien verfügt (die Sternchen geben Dateien an, die registriert werden müssen):  
   
--   "Asycfilt.dll"  
+-   Asycfilt.dll  
   
 -   Comcat.dll *  
   
 -   Oleaut32.dll *  
   
--   "OLEPRO32.dll" *  
+-   Olepro32.dll *  
   
 -   Stdole2.tlb  
   
- Wenn diese DLLs nicht auf dem Zielsystem verfügbar sind, müssen Sie diese mithilfe des vorgeschriebenen Mechanismus für das entsprechende Betriebssystem aktualisieren aktualisiert werden. Sie können die neuesten Servicepacks für Windows-Betriebssysteme aus herunterladen [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
+ Wenn diese DLLs nicht auf dem Zielsystem verfügbar sind, müssen Sie sie mithilfe des vorgeschriebenen Mechanismus zum Aktualisieren des entsprechenden Betriebssystems aktualisieren. Sie können die neuesten Service Packs für Windows-Betriebssysteme unter [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com) herunterladen.  
   
- Wenn Ihre Anwendung einen ActiveX-Steuerelemente, die einer Datenbank herstellt verwendet, müssen Sie die auf dem Zielsystem installiert Microsoft Data Access Components (MDAC) verfügen. Weitere Informationen finden Sie unter [Neuverteilen von Datenbankunterstützungsdateien](../ide/redistributing-database-support-files.md).  
+ Wenn Ihre Anwendung eines der ActiveX-Steuerelemente verwendet, die eine Verbindung zu einer Datenbank herstellen, müssen die Microsoft Data Access Components (MDAC) auf dem Zielsystem installiert sein. Weitere Informationen finden Sie unter [Redistributing Database Support Files (Verteilen von Datenbankunterstützungsdateien)](../ide/redistributing-database-support-files.md).  
   
- Wenn Sie ein ActiveX-Steuerelement verwenden, die einer Datenbank herstellt, müssen Sie auch den Datenquellennamen auf dem Zielcomputer replizieren. Hierzu können Sie programmgesteuert mit Funktionen wie z. B. `ConfigDSN`.  
+ Wenn Sie ein ActiveX-Steuerelement verwenden, das eine Verbindung zu einer Datenbank herstellt, müssen Sie auch den Namen der Datenquelle auf dem Zielcomputer replizieren. Diesen Vorgang können Sie mit Funktionen wie `ConfigDSN` programmgesteuert durchführen.  
   
- Einige verteilbare ActiveX-Steuerelemente sind zusätzliche abhängig. Für jede OCX-Datei im Ordner "Os\System" auf der Visual C++ 6.0-Produkt-CD gibt es auch eine DEP-Datei. Jede ".ocx"-Datei, die Sie verteilen möchten, finden Sie eine oder mehrere verwendet Einträge in der entsprechenden DEP-Datei. Wenn eine Datei aufgeführt ist, müssen Sie sicherstellen, dass die Datei auf dem Zielcomputer installiert ist. Alle DLLs, die direkte Unterstützung OCX-Datei müssen registriert werden. (Für Regsvr32.exe erfolgreich ausgeführt werden kann, muss der Zielcomputer zunächst alle DLLs, die das Steuerelement statisch lädt enthalten.) Darüber hinaus verfügt eine DLL, die als Abhängigkeit aufgeführt ist auch eine DEP-Datei im Ordner "Os\System" auf der Visual C++ 6.0-CD, müssen Sie auch diese Datei DEP verwendet Einträge überprüfen.  
+ Einige verteilbare ActiveX-Steuerelemente verfügen über zusätzliche Abhängigkeiten. Für jede OCX-Datei im Ordner „Os\System“ auf der Visual C++ 6.0-Produkt-CD gibt es auch eine DEP-Datei. Sehen Sie sich für jede OCX-Datei, die Sie verteilen möchten, mindestens einen der Einträge zur Verwendung in den entsprechenden DEP-Dateien an. Wenn eine Datei aufgeführt wird, müssen Sie sicherstellen, dass die Datei sich auch auf dem Zielcomputer befindet. Alle DLLs, die eine OCX-Datei direkt unterstützen, müssen registriert werden. (Damit „Regsvr32.exe“ erfolgreich ausgeführt wird, muss der Zielcomputer zunächst alle DLLs enthalten, die das Steuerelement statisch lädt.) Wenn eine DLL als Abhängigkeit aufgeführt wird und über eine DEP-Datei im Ordner „Os\System“ auf der Visual C++ 6.0-CD verfügt, müssen Sie auch diese DEP-Datei auf Einträge zur Verwendung überprüfen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md)

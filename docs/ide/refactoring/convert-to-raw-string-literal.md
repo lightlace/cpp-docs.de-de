@@ -1,5 +1,5 @@
 ---
-title: Konvertieren in unformatiertes Zeichenfolgenliteral | Microsoft Docs
+title: Konvertieren in ein Rohzeichenfolgenliteral | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,30 +12,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328408"
 ---
 # <a name="convert-to-raw-string-literal"></a>Zu Rohzeichenfolgenliteral konvertieren
-**Was:** können Sie eine beliebige Zeichenfolge in eine C++-rohzeichenfolge literal zu aktivieren.
+**Zweck:** Umwandeln einer beliebigen Zeichenfolge in ein C++-Rohzeichenfolgenliteral.
 
-**Wann:** stehen Ihnen eine Zeichenfolge mit Escapezeichen darf nicht als Escapezeichen verarbeitet werden.
+**Anwendung:** Wenn Sie über eine Zeichenfolge mit Escapezeichen verfügen, die nicht als Escapezeichen verarbeitet werden sollen.
 
-**Grund:** könnten Sie Double-Escape-Zeichen, aber diesem häufig führt zu einem verwirrend und kann nicht gelesen Zeichenfolgen.  Unformatierte Zeichenfolgenliterale mit kann Zeichenfolgen viel einfacher zu lesen.
+**Grund:** Sie könnten doppelte Escapezeichen verwenden, dies führt jedoch in den meisten Fällen zu verwirrenden und schwer lesbaren Zeichenfolgen.  Mithilfe von Rohzeichenfolgenliteralen sind Zeichenfolgen viel einfacher zu lesen.
 
 **Vorgehensweise**:
 
-1. Platzieren Sie Text oder Mauscursor über die mit Escapezeichen versehene Zeichenfolge zu konvertieren.
+1. Platzieren Sie Ihren Text oder Mauszeiger auf der Escapezeichenfolge, die konvertiert werden soll.
 
    ![Markierter Code](images/stringliteral_highlight.png)
 
 1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.
+     * Drücken Sie **STRG+.**, um das Menü **Schnellaktionen und Refactorings** aufzurufen, und klicken Sie im Kontextmenü auf **Zu Rohzeichenfolgenliteral konvertieren**.
    * **Maus**
-     * Mit der rechten Maustaste in des Codes, wählen Sie die **Schnellaktionen und Refactorings** Menü **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.
-     * Klicken Sie auf die ![Lightbulb](images/bulb.png) im linken Rand, und wählen erscheint das Symbol für **rohzeichenfolgenliteral konvertieren** aus dem Kontextmenü.
+     * Klicken Sie mit der rechten Maustaste auf den Code, und klicken Sie auf das Menü **Schnellaktionen und Refactorings**. Klicken Sie anschließend im Kontextmenü auf **Zu Rohzeichenfolgenliteral konvertieren**.
+     * Klicken Sie auf das ![Glühbirnensymbol](images/bulb.png), das am linken Rand angezeigt wird, und klicken Sie im Kontextmenü auf **Zu Rohzeichenfolgenliteral konvertieren**.
 
-1. Die Zeichenfolge wird sofort in ein unformatiertes Zeichenfolgenliteral konvertiert werden.  
+1. Die Zeichen folge wird sofort in ein Rohzeichenfolgenliteral konvertiert.  
 
-   ![RAW-Zeichenfolgenliteralen Ergebnis](images/stringliteral_result.png)
+   ![Rohzeichenfolgenliteral-Ergebnis](images/stringliteral_result.png)
