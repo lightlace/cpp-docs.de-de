@@ -1,5 +1,5 @@
 ---
-title: ClickOnce-Bereitstellung für Visual C++-Anwendungen | Microsoft Docs
+title: ClickOnce-Bereitstellung für Visual C++-Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,43 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332324"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce-Bereitstellung für Visual C++-Anwendungen
-Visual Studio bietet zwei verschiedene Technologien zum Bereitstellen von Windows-Anwendungen: ClickOnce-Bereitstellung oder [Windows Installer](http://msdn.microsoft.com/library/cc185688) Bereitstellung.  
+Visual Studio verfügt über zwei verschiedene Technologien zum Bereitstellen von Windows-Anwendungen: ClickOnce-Bereitstellung oder [Windows Installer](http://msdn.microsoft.com/library/cc185688)-Bereitstellung.  
   
 ## <a name="clickonce-deployment-in-c"></a>ClickOnce-Bereitstellung in C++  
- Der Entwicklungsumgebung von Visual C++ unterstützt Visual C++-Projekte mit ClickOnce-Bereitstellung nicht direkt, aber die Tools zur Verfügung, ihn zu verwenden.  
+ Die Visual C++-Entwicklungsumgebung bietet keine direkte Unterstützung für das Bereitstellen von Visual C++-Projekten mit ClickOnce, dafür zu verwendende Tools sind jedoch verfügbar.  
   
 > [!NOTE]
->  Visual Studio unterstützt ClickOnce in Visual c# und Visual Basic-entwicklungsumgebungen. Wenn es sich bei Visual C++-Projekt eine Abhängigkeit von einem Visual C#-Projekt ist, können Sie die Anwendung (einschließlich ihrer projektabhängigkeiten) veröffentlichen über ClickOnce-Bereitstellung in der Visual C#-Entwicklungsumgebung.  
+>  Visual Studio unterstützt ClickOnce in den Visual C#- und Visual Basic-Entwicklungsumgebungen. Wenn das Visual C++-Projekt von einem Visual C#-Projekt abhängig ist, können Sie die Anwendung (einschließlich ihrer Projektabhängigkeiten) mit der ClickOnce-Bereitstellung der Visual C#-Entwicklungsumgebung veröffentlichen.  
   
- Um ein Visual C++-Anwendung mithilfe von ClickOnce bereitstellen, müssen Sie zum Erstellen einer [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest) und ein [ClickOnce-Bereitstellungsmanifest](/visualstudio/deployment/clickonce-deployment-manifest) mithilfe der [Mage.exe (Manifest Tool zum Generieren und bearbeiten)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) oder Version der grafischen Benutzeroberfläche (Informationen finden Sie unter [MageUI.exe (Manifest generieren und Bearbeiten von Manifesten, Grafischer Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
+ Sie müssen zunächst ein [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest) und ein [ClickOnce-Bereitstellungsmanifest](/visualstudio/deployment/clickonce-deployment-manifest) mithilfe von [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) oder der GUI-Version des Tools erstellen, um eine Visual C++-Anwendung mit ClickOnce bereitzustellen (Informationen finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, grafischer Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
 
   
  Sie verwenden zunächst Mage.exe, um das Anwendungsmanifest zu erstellen; die so erstellte Datei hat die Erweiterung .manifest. Anschließend verwenden Sie Mage.exe, um das Bereitstellungsmanifest zu erstellen; die erstellte Datei hat die Erweiterung .application. Danach signieren Sie die Manifeste.  
   
- Das Anwendungsmanifest muss der Zielprozessor angeben (**X86**, **X64**, oder **ARM**). Finden Sie unter [Bereitstellung erforderlichen Komponenten für 64-Bit-Anwendungen](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) Informationen zu diesen Optionen.  
+ Im Anwendungsmanifest muss der Zielprozessor (**x86**, **x64** oder **ARM**) angegeben werden. Informationen zu diesen Optionen finden Sie unter [Deploying Prerequisites for 64-bit Applications (Bereitstellen der erforderlichen Komponenten für 64-Bit-Anwendungen)](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications).  
   
  Die Namen des Anwendungs- und des Bereitstellungsmanifests müssen sich vom Namen der C++-Anwendung unterscheiden. Dadurch wird ein Konflikt vermieden zwischen dem durch Mage.exe erstellten Anwendungsmanifest und dem externen Manifest, welches Teil der C++-Anwendung ist.  
   
- Die Bereitstellung müssen alle Visual C++-Bibliotheken installieren, von denen die Anwendung abhängig ist. Zum Bestimmen der Abhängigkeiten einer einzelnen Anwendung können Sie depends.exe oder das Dienstprogramm DUMPBIN mit der Option /DEPENDENTS verwenden. Weitere Informationen zu Abhängigkeiten, finden Sie unter [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Möglicherweise müssen Sie VCRedist.exe ausführen; Dieses Dienstprogramm installiert Visual C++-Bibliotheken auf dem Zielcomputer installiert.  
+ Im Rahmen der Bereitstellung müssen alle Visual C++-Bibliotheken installiert werden, von denen die Anwendung abhängt. Zum Bestimmen der Abhängigkeiten einer einzelnen Anwendung können Sie depends.exe oder das Dienstprogramm DUMPBIN mit der Option /DEPENDENTS verwenden. Weitere Informationen zu Abhängigkeiten finden Sie unter [Understanding the Dependencies of a Visual C++ Application (Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung)](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Möglicherweise müssen Sie „VCRedist.exe“ ausführen. Dieses Hilfsprogramm installiert Visual C++-Bibliotheken auf dem Zielcomputer.  
   
- Möglicherweise müssen Sie auch einen Bootstrapper (Voraussetzungen Installer) für die Anwendung zum Bereitstellen der erforderlicher Komponenten zu erstellen; Informationen zum Bootstrapper finden Sie unter [Bootstrapperpakete erstellen](/visualstudio/deployment/creating-bootstrapper-packages).  
+ Möglicherweise müssen Sie für die Anwendung einen Bootstrapper (Programm zum Installieren erforderlicher Komponenten) erstellen, um die erforderlichen Komponenten bereitzustellen. Informationen zum Bootstrapper finden Sie unter [Creating Bootstrapper Packages (Erstellen von Bootstrapperpaketen)](/visualstudio/deployment/creating-bootstrapper-packages).  
   
- Eine ausführlichere Beschreibung der Technologie finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ein ausführliches Beispiel der ClickOnce-Bereitstellung finden Sie unter [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
+ Eine ausführlichere Beschreibung der Technologie finden Sie unter [ClickOnce Security and Deployment (ClickOnce-Sicherheit und Bereitstellung)](/visualstudio/deployment/clickonce-security-and-deployment). Ein ausführliches Beispiel für die ClickOnce-Bereitstellung finden Sie unter [Walkthrough: Manually Deploying a ClickOnce Application (Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung)](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
   
 ## <a name="see-also"></a>Siehe auch  
  [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [Makecert.exe (Certificate Creation-Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
- [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Bereitstellen von Anwendungen, Diensten und Komponenten](/visualstudio/deployment/deploying-applications-services-and-components)   
+ [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [Deploying Applications, Services, and Components (Bereitstellen von Anwendungen, Diensten und Komponenten)](/visualstudio/deployment/deploying-applications-services-and-components)   
  [Windows Installer-Bereitstellung](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Erstellen von Bootstrapperpaketen](/visualstudio/deployment/creating-bootstrapper-packages)   
- [.NET Programmieren mit C + c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [.NET Programming with C++/CLI (Visual C++) (.NET-Programmierung mit C++/CLI (Visual C++))](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [Interoperabilität von nativem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)

@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseiten für die Befehlszeile | Microsoft Docs
+title: Befehlszeileneigenschaftenseiten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327810"
 ---
 # <a name="command-line-property-pages"></a>Befehlszeilen-Eigenschaftenseiten
-Die meisten Ordner mit Eigenschaftenseiten enthalten eine **Befehlszeile** Eigenschaftenseite. Diese Seite zeigt an, welche Eigenschaften im Ordner "" festgelegt werden. Die **Befehlszeile** Eigenschaftenseite enthält auch eine **Zusatzoptionen** Feld, in dem Sie Eigenschaften festlegen können, die für das Tool gelten jedoch für die im Ordner "" keine Eigenschaft vorhanden ist.  
+Die meisten Ordner mit Eigenschaftenseiten enthalten die **Befehlszeileneigenschaftenseite**. Diese Seite stellt dar, welche Eigenschaften im Ordner festgelegt wurden. Die **Befehlszeilen**-Eigenschaftenseite enthält außerdem das Feld **Zusätzliche Optionen**, in dem Sie Eigenschaften angeben können, die für das Tool gültig sind, für die jedoch keine Eigenschaft im Ordner vorhanden ist.  
   
- Solche Befehle, die Sie in das Bearbeitungsfeld eingeben wird über das Tool für den Ordner übergeben werden. Keine Überprüfung oder der Prüfungen erfolgt bei der Eingabe, noch wird es werden keine Überprüfung der Abhängigkeit.  
+ Jeder Befehl, den Sie in das Bearbeitungsfeld eingeben, wird an das Tool für den Ordner übergeben. Für die Eingabe wird keine Verifizierungen oder Überprüfungen vorgenommen. Abhängigkeiten werden ebenfalls nicht überprüft.  
   
- Informationen zum Zugreifen auf die **Befehlszeile** Eigenschaftenseiten, finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
+ Informationen über das Zugreifen auf die **Befehlszeileneigenschaftenseiten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   

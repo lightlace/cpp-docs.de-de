@@ -1,5 +1,5 @@
 ---
-title: '&lt;Liste&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;list&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323978"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;Liste&gt; (Visual C++)
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 Der \<listheader>-Block wird verwendet, um die Überschriftenzeile einer Tabelle oder einer Definitionsliste zu definieren. Bei der Definition einer Tabelle müssen Sie nur einen Eintrag für „term“ in der Überschrift angeben.  
   
 ## <a name="syntax"></a>Syntax  

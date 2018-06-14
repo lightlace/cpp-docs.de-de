@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Eigenschaft (Visual C++) | Microsoft Docs
+title: Hinzufügen einer Eigenschaft (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327579"
 ---
 # <a name="adding-a-property-visual-c"></a>Hinzufügen einer lokalen Eigenschaft (Visual C++)
-Sie können die [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md) eine Methode einer Schnittstelle in Ihrem Projekt hinzufügen.  
+Sie können den [Assistenten zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md) verwenden, um einer Schnittstelle in Ihrem Projekt eine Eigenschaft hinzuzufügen.  
   
-### <a name="to-add-a-property-to-your-object"></a>So fügen Sie eine Eigenschaft für Ihr Objekt hinzu  
+### <a name="to-add-a-property-to-your-object"></a>So fügen Sie Ihrem Objekt eine Eigenschaft hinzu  
   
-1.  In [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste in des Namens der Schnittstelle, die Sie die Eigenschaft hinzufügen möchten.  
+1.  Klicken Sie in der [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den Namen der Schnittstelle, der die Eigenschaft hinzugefügt werden soll.  
   
     > [!NOTE]
-    >  Sie können Eigenschaften auch Dispatchschnittstellen hinzufügen, es sei denn, das Projekt attributiert ist, den Bibliotheksknoten geschachtelt sind.  
+    >  Sie können Eigenschaften auch zu Disp-Schnittstellen hinzufügen, die im Bibliotheksknoten geschachtelt sind, sofern das Projekt nicht attributiert ist.  
   
-2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Eigenschaft hinzufügen**.  
+2.  Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Eigenschaft hinzufügen**.  
   
-3.  In der [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md), geben Sie die Informationen zum Erstellen der Eigenschaft.  
+3.  Geben Sie im [Assistenten zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md) die Informationen zum Erstellen der Eigenschaft an.  
   
-4.  Geben Sie alle Interface Definition Language (IDL)-Einstellungen für die Eigenschaft in der [IDL-Attribute](../ide/idl-attributes-add-property-wizard.md) Seite des Assistenten.  
+4.  Geben Sie alle Einstellungen der Interface Definiton Language dieser Eigenschaft auf der Seite [IDL-Attribute](../ide/idl-attributes-add-property-wizard.md) des Assistenten an.  
   
-5.  Klicken Sie auf **Fertig stellen** die Eigenschaft hinzufügen.  
+5.  Klicken Sie auf **Fertig stellen**, um die Eigenschaft hinzuzufügen.  
   
- Die **abrufen** und `Put` Methoden der Eigenschaft werden die Schnittstelle, wo er definiert, zwei Symbole in der Klassenansicht angezeigt. Sie können entweder Symbol zum Anzeigen der Eigenschaftendeklaration in der IDL-Datei doppelklicken.  
+ Die Methoden **Get** und `Put` der Eigenschaft werden in der Klassenansicht als zwei Symbole unter der Schnittstelle angezeigt, in der sie definiert sind. Sie können eines der Symbole doppelklicken, um die Eigenschaftsdeklaration in der IDL-Datei anzuzeigen.  
   
--   Für ATL-Schnittstellen die **abrufen** und **Put** Funktionen der CPP-Datei hinzugefügt werden, und Verweise auf diese Funktionen die .h-Datei hinzugefügt werden.  
+-   Bei ATL-Schnittstellen werden die Funktionen **Get** und **Put** der CPP-Datei hinzugefügt, und Verweise auf diese Funktionen werden der H-Datei hinzugefügt.  
   
--   Für MFC-Dispatchschnittstellen, wenn Sie die Option **Membervariable** als den Implementierungstyp eine Methode und eine Variable auf die Klasse, die ihn implementiert hinzugefügt werden. Bei Auswahl des **Get/Set-Methoden** als den Implementierungstyp zwei Methoden hinzugefügt werden, auf die Klasse, die ihn implementiert.  
+-   Wenn Sie bei MFC-Disp-Schnittstellen **Membervariable** als Implementierungstyp auswählen, werden der implementierenden Klasse eine Methode und eine Variable hinzugefügt. Wenn Sie die **Get/Set-Methoden** als Implementierungstyp auswählen, werden der implementierenden Klasse zwei Methoden hinzugefügt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer COM-Schnittstelle](../ide/creating-a-com-interface-visual-cpp.md)   
- [Bearbeiten einer COM-Schnittstelle](../ide/editing-a-com-interface.md)   
- [Das Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Schnittstellenzeiger und Schnittstellen](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [Creating a COM Interface (Erstellen einer COM-Schnittstelle)](../ide/creating-a-com-interface-visual-cpp.md)   
+ [Editing a COM Interface (Bearbeiten einer COM-Schnittstelle)](../ide/editing-a-com-interface.md)   
+ [The Component Object Model (Das Component Object Model)](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
+ [Interface Pointers and Interfaces (Schnittstellenzeiger und Schnittstellen)](http://msdn.microsoft.com/library/windows/desktop/ms688484)

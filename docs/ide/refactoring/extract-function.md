@@ -1,5 +1,5 @@
 ---
-title: Extract-Funktion | Microsoft Docs
+title: Extract-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,16 +12,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333156"
 ---
 # <a name="extract-function"></a>Extract-Funktion
-**Was:** können Sie ein Fragment des Codes in eine eigene Funktion zu aktivieren.
+**Zweck:** Umwandeln eines Codefragments in dessen eigene Funktion.
 
-**Wann:** haben Sie ein Fragment von vorhandenem Code, in eine Funktion, die von einer anderen Funktion aufgerufen werden muss.  
+**Anwendung:** Wenn Sie über ein Fragment von vorhandenem Code in einer Funktion verfügen, das von einer anderen Funktion aufgerufen werden muss.  
 
-**Vorteile**: Sie könnten diesen Code kopieren und einfügen, dies würde jedoch zu einer Duplizierung führen.  Eine bessere Lösung ist dieses Fragment in eine eigene Funktion umgestaltet werden, die kostenlos von jeder anderen Funktion aufgerufen werden kann.
+**Vorteile**: Sie könnten diesen Code kopieren und einfügen, dies würde jedoch zu einer Duplizierung führen.  Eine bessere Lösung besteht darin, dieses Fragment in eine eigene Funktion umzugestalten, die von anderen Funktion beliebig aufgerufen werden kann.
 
 **Vorgehensweise**:
 
@@ -32,16 +33,16 @@ ms.lasthandoff: 05/04/2018
 1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
      * Drücken Sie **STRG+R** und dann **STRG+M**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
-     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **Extract-Funktion (experimentell)** aus dem Kontextmenü.
+     * Drücken Sie **STRG+.**, um das Menü **Schnellaktionen und Refactorings** aufzurufen, und klicken Sie im Kontextmenü auf **Funktion extrahieren (experimentell)**.
    * **Maus**
-     * Wählen Sie **Bearbeiten > Umgestalten > Extract-Funktion (experimentell)**.
-     * Mit der rechten Maustaste in des Codes, wählen Sie die **Schnellaktionen und Refactorings** Menü **Extract-Funktion (experimentell)** aus dem Kontextmenü.
-     * Klicken Sie auf die ![Lightbulb](images/bulb.png) im linken Rand, und wählen erscheint das Symbol für **Extract-Funktion (experimentell)** aus dem Kontextmenü.
+     * Klicken Sie auf **Bearbeiten > Umgestalten > Funktion extrahieren (experimentell)**.
+     * Klicken Sie mit der rechten Maustaste auf den Code, und klicken Sie auf das Menü **Schnellaktionen und Refactorings**. Klicken Sie dann im Kontextmenü auf **Funktion extrahieren (experimentell)**.
+     * Klicken Sie auf das ![Glühbirnensymbol](images/bulb.png), das am linken Rand angezeigt wird, und klicken Sie im Kontextmenü auf **Funktion extrahieren (experimentell)**.
 
-1. In der **Funktion/Methode extrahieren (experimentell)** , geben Sie den neuen Funktionsnamen, auswählen soll den Code platziert werden soll, und klicken Sie auf die **OK** Schaltfläche.  
+1. Geben Sie im Fenster **Funktion/Methode extrahieren (experimentell)** den neuen Funktionsnamen ein, wählen Sie aus, wo der Code platziert werden soll, und klicken Sie auf **OK**.  
 
-   ![Extract-Funktion](images/extractfunction_dialog.png)
+   ![Funktion „Funktion extrahieren“](images/extractfunction_dialog.png)
 
-1. Die neue Funktion erstellt werden, die Sie angegeben haben, einen Funktionsprototyp in die entsprechende Headerdatei und der ursprüngliche Code geändert werden, damit diese Funktion aufrufen.
+1. Die neue Funktion wird am angegebenen Ort erstellt, ein Funktionsprototyp wird in der entsprechenden Headerdatei erstellt und der ursprüngliche Code wird so geändert, dass er die Funktion aufruft.
 
-   ![Extrahieren Sie Funktionsergebnis](images/extractfunction_result.png)
+   ![Ergebnis der Extract-Funktion](images/extractfunction_result.png)

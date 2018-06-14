@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Ereignishandlers (Visual C++) | Microsoft Docs
+title: Hinzufügen eines Ereignishandlers (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,37 +20,38 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 184161b22358f77845b5f7c4b6da0bb42f3ea15f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324914"
 ---
 # <a name="adding-an-event-handler-visual-c"></a>Hinzufügen eines Ereignishandlers (Visual C++)
-Aus dem Ressourcen-Editor können Sie einen neuen Ereignishandler hinzufügen oder bearbeiten Sie einen vorhandenen Ereignishandler für ein Dialogfeld Steuerelement unter Verwendung der [Ereignishandler-Assistent](../ide/event-handler-wizard.md).  
+Sie können einen neuen Ereignishandler über den Ressourcen-Editor hinzufügen oder einen vorhandenen Ereignishandler mithilfe des [Ereignishandler-Assistenten](../ide/event-handler-wizard.md) für ein Dialogfeld-Steuerelement bearbeiten.  
   
- Fügen Sie ein Ereignis, um die Klasse zur Implementierung des Dialogfelds mit den [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Wenn Sie das Ereignis auf einer anderen Klasse als der Dialogfeldklasse hinzufügen möchten, verwenden Sie die Ereignishandler-Assistent.  
+ Sie können der Klasse, die das Dialogfeld implementiert, mithilfe des [Eigenschaftenfensters](/visualstudio/ide/reference/properties-window) ein Ereignis hinzufügen. Wenn Sie das Ereignis einer anderen Klasse hinzufügen möchten, verwenden Sie den Ereignishandler-Assistenten.  
   
-### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>Ein Dialogfeld-Steuerelement einen Ereignishandler hinzu  
+### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>So fügen Sie einem Dialogfeld-Steuerelement einen Ereignishandler hinzu  
   
-1.  Doppelklicken Sie auf die Dialogfeldressource in [Ressourcenansicht](../windows/resource-view-window.md) die Dialogfeldressource öffnen, mit dem Steuerelement in der [Dialog-Editor](../windows/dialog-editor.md).  
+1.  Führen Sie einen Doppelklick auf die Dialogfeldressource in der [Ressourcenansicht](../windows/resource-view-window.md) aus, um die Dialogfeldressource zu öffnen, die das Steuerelement im [Dialog-Editor](../windows/dialog-editor.md) enthält.  
   
-2.  Mit der rechten Maustaste in des Steuerelements das Benachrichtigungsereignis behandelt werden soll.  
+2.  Klicken Sie mit der rechten Maustaste auf das Steuerelement aus, das das Benachrichtigungsereignis verarbeiten soll.  
   
-3.  Klicken Sie im Kontextmenü auf **Ereignishandler hinzufügen** die Ereignishandler-Assistent angezeigt.  
+3.  Klicken Sie im Kontextmenü auf **Ereignishandler hinzufügen**, um den Ereignishandler-Assistenten anzuzeigen.  
   
-4.  Wählen Sie das Ereignis in der **Nachrichtentyp** Feld der Klasse, die im ausgewählten Hinzufügen der **Klassenliste** Feld.  
+4.  Wählen Sie das Ereignis im Feld **Nachrichtentyp** aus, das der im Feld **Klassenliste** ausgewählten Klasse hinzugefügt werden soll.  
   
-5.  Übernehmen Sie den Standardnamen in der **Handler Funktionsnamen** ein, oder geben Sie den Namen Ihrer Wahl.  
+5.  Akzeptieren Sie den Standardnamen im Feld **Handlerfunktionsname**, oder geben Sie einen Namen Ihrer Wahl ein.  
   
-6.  Klicken Sie auf **hinzufügen und bearbeiten** fügen den Ereignishandler für das Projekt, und öffnen Sie den Texteditor an der neuen Funktion zum Hinzufügen des entsprechenden Ereignishandlercode.  
+6.  Klicken Sie auf **Hinzufügen und bearbeiten**, um den Ereignishandler dem Projekt hinzuzufügen und den Text-Editor bei der neuen Funktion zum Hinzufügen des entsprechenden Ereignishandlercodes zu öffnen.  
   
-     Wenn die ausgewählten Nachrichtentyp einen Ereignishandler für die ausgewählte Klasse bereits **hinzufügen und bearbeiten** nicht verfügbar ist, und **Code bearbeiten** verfügbar ist. Klicken Sie auf **Code bearbeiten** Text-Editor an der vorhandenen Funktion zu öffnen.  
+     Wenn der ausgewählte Nachrichtentyp bereits über einen Ereignishandler für die ausgewählte Klasse verfügt, ist die Option **Hinzufügen und bearbeiten** nicht verfügbar, jedoch ist die Option **Code bearbeiten** verfügbar. Klicken Sie auf **Code bearbeiten**, um den Text-Editor bei der vorhandenen Funktion zu öffnen.  
   
- Alternativ können Sie Ereignishandler von Hinzufügen der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Finden Sie unter [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md) für Weitere Informationen.  
+ Alternativ können Sie Ereignishandler über das [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) hinzufügen. Weitere Informationen finden Sie unter [Adding Event Handlers for Dialog Box Controls (Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente)](../windows/adding-event-handlers-for-dialog-box-controls.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class (Hinzufügen einer Klasse)](../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)   
  [Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)   
- [MFC-Meldungshandler](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigieren in der Klassenstruktur](../ide/navigating-the-class-structure-visual-cpp.md)
+ [MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure (Navigieren in der Klassenstruktur)](../ide/navigating-the-class-structure-visual-cpp.md)

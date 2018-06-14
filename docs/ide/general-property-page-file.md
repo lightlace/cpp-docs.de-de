@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseite "Allgemein" (Datei) | Microsoft Docs
+title: Eigenschaftenseite „Allgemein“ (Datei) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324034"
 ---
 # <a name="general-property-page-file"></a>Eigenschaftenseite "Allgemein" (Datei)
 
-Wenn eine Datei aktiviert ist, **Projektmappen-Explorer**, **allgemeine** Eigenschaftenseite unter der **Konfigurationseigenschaften** Knoten enthält die folgenden Eigenschaften:
+Wenn eine Datei im **Projektmappen-Explorer** ausgewählt wird, werden die folgenden Eigenschaften auf der Eigenschaftenseite **Allgemein** unter dem Knoten **Konfigurationseigenschaften** angezeigt:
 
-**Build ausgeschlossen**  
-Gibt an, ob die Datei in den Build für die aktuelle Konfiguration liegen.
+**Aus dem Build ausschließen**  
+Gibt an, ob die Datei im Build für die aktuelle Konfiguration enthalten sein soll.
 
 Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
 **Tool**  
-Das Tool, das verwendet wird, um diese Datei zu erstellen. Finden Sie unter [angeben von benutzerdefinierten Buildtools](../ide/specifying-custom-build-tools.md) für Weitere Informationen.
+Das Tool, das zum Erstellen dieser Datei verwendet wird. Weitere Informationen finden Sie unter [Specifying Custom Build Tools (Angeben von benutzerdefinierten Buildtools)](../ide/specifying-custom-build-tools.md).
 
 Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
-Informationen zum Zugreifen auf die **allgemeine** Eigenschaftenseite unter der **Konfigurationseigenschaften** Knoten finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).
+Informationen über das Zugreifen auf die Eigenschaftenseite **Allgemein** im Knoten **Konfigurationseigenschaften** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
 
-Nicht-Windows-Projekte finden Sie unter [Linux C++-Eigenschaft des Seitenverweises](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+Informationen zu Projekten unter anderen Betriebssystemen als Windows finden Sie unter [Referenz zur Linux C++-Eigenschaftenseite](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="see-also"></a>Siehe auch
 

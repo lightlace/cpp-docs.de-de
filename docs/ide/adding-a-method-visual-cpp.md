@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Methode (Visual C++) | Microsoft Docs
+title: Hinzufügen einer Methode (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324433"
 ---
 # <a name="adding-a-method--visual-c"></a>Hinzufügen einer Methode (Visual C++)
-Können Sie die [Assistenten zum Hinzufügen von Methoden](../ide/add-method-wizard.md) eine Methode einer Schnittstelle in Ihrem Projekt hinzufügen. Wenn das Projekt eine Klasse, die der Schnittstelle zugeordneten enthält, ändert der Assistent die Klasse zu.  
+Sie können den [Assistenten zum Hinzufügen von Methoden](../ide/add-method-wizard.md) verwenden, um einer Schnittstelle in Ihrem Projekt eine Methode hinzuzufügen. Wenn das Projekt eine Klasse enthält, die der Schnittstelle zugeordnet ist, ändert der Assistent auch die Klasse.  
   
-### <a name="to-add-a-method-to-your-object"></a>So fügen Sie eine Methode für Ihr Objekt hinzu  
+### <a name="to-add-a-method-to-your-object"></a>So fügen Sie Ihrem Projekt eine Methode hinzu  
   
-1.  Erweitern Sie in der Klassenansicht den Projektknoten, um die Benutzeroberfläche anzuzeigen, zu dem Sie die Methode hinzufügen möchten.  
+1.  Erweitern Sie den Projektknoten in der Klassenansicht, um das Interface anzuzeigen, dem die Methode hinzugefügt werden soll.  
   
     > [!NOTE]
-    >  Sie können auch Disp-Schnittstellen, Methoden hinzufügen, es sei denn, das Projekt attributiert ist, unter dem Knoten "Library" befinden.  
+    >  Sie können Methoden auch zu Disp-Schnittstellen hinzufügen, die sich unter dem Bibliotheksknoten befinden, sofern das Projekt nicht attributiert ist.  
   
-2.  Klicken Sie auf den Namen der Schnittstelle.  
+2.  Klicken Sie mit der rechten Maustaste auf den Namen der Schnittstelle.  
   
-3.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Methode hinzufügen**.  
+3.  Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Methode hinzufügen**.  
   
-4.  Geben Sie im Assistenten zum Hinzufügen einer Methode die Informationen, um die Methode zu erstellen.  
+4.  Geben Sie im Assistenten zum Hinzufügen von Methoden die Informationen zum Erstellen der Methode an.  
   
-5.  Geben Sie alle Interface Definition Language-Einstellungen für diese Methode in der [IDL-Attribute](../ide/idl-attributes-add-method-wizard.md) Seite des Assistenten.  
+5.  Geben Sie alle Einstellungen der Interface Definiton Language dieser Methode auf der Seite [IDL-Attribute](../ide/idl-attributes-add-method-wizard.md) des Assistenten an.  
   
-6.  Klicken Sie auf **Fertig stellen** die Methode hinzu.  
+6.  Klicken Sie auf **Fertig stellen**, um die Methode hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer COM-Schnittstelle](../ide/creating-a-com-interface-visual-cpp.md)   
+ [Creating a COM Interface (Erstellen einer COM-Schnittstelle)](../ide/creating-a-com-interface-visual-cpp.md)   
  [Bearbeiten einer COM-Schnittstelle](../ide/editing-a-com-interface.md)

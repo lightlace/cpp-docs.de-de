@@ -1,5 +1,5 @@
 ---
-title: '&lt;Beispiel&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;example&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321430"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;Beispiel&gt; (Visual C++)
-Mit dem \<example>-Tag kann ein Beispiel für die Verwendung einer Methode oder eines anderen Bibliothekmembers angegeben werden. Im Allgemeinen wird auch hierbei von der [ \<Code >](../ide/code-visual-cpp.md) Tag.  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+Mit dem \<example>-Tag kann ein Beispiel für die Verwendung einer Methode oder eines anderen Bibliothekmembers angegeben werden. In der Regel wird auch hier das Tag [\<code>](../ide/code-visual-cpp.md) verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   

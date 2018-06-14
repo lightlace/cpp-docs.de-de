@@ -1,5 +1,5 @@
 ---
-title: Projektdateien | Microsoft Docs
+title: Projektdateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327228"
 ---
 # <a name="project-files"></a>Projektdateien
-Eine Visual C++-Projektdatei ist eine XML-Datei, die die Dateinamenerweiterung der VCXPROJ-Datei und enthält Informationen, die erforderlich ist, um ein Visual C++-Projekt zu erstellen.  
+Eine Visual C++-Projektdatei ist eine XML-basierte Datei, die über die Erweiterung „VCXPROJ“ verfügt und Informationen enthält, die zum Erstellen eines Visual C++-Projekts erforderlich sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel VCXPROJ-Datei wurde erstellt, durch Angeben einer **Win32-Konsolenanwendung** in der **neues Projekt** (Dialogfeld). Ein Projekt verarbeiten Datei Tool "msbuild.exe" in der Befehlszeile verwenden oder die **erstellen** -Befehl in der [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Dieses Beispiel kann nicht verarbeitet werden, weil die erforderlichen Quell- und Headerdateien nicht bereitgestellt werden.) Weitere Informationen zu den XML-Elementen in einer Projektdatei finden Sie unter [Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ Die folgende VCXPROJ-Beispieldatei wurde erstellt, indem eine **Win32-Konsolenanwendung** im Dialogfeld **Neues Projekt** angegeben wurde. Verwenden Sie zum Verarbeiten einer Projektdatei entweder das Tool „msbuild.exe“ in der Befehlszeile oder den Befehl **Build** in [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Dieses Beispiel kann nicht verarbeitet werden, da die erforderlichen Quell- und Headerdateien nicht bereitgestellt werden.) Weitere Informationen über die XML-Elemente in einer Projektdatei finden Sie unter [Referenz zum Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,5 +129,5 @@ Eine Visual C++-Projektdatei ist eine XML-Datei, die die Dateinamenerweiterung d
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von C++-Projekten in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
+ [Building C++ Projects in Visual Studio (Erstellen von C++-Projekten in Visual Studio)](../ide/building-cpp-projects-in-visual-studio.md)   
  [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)

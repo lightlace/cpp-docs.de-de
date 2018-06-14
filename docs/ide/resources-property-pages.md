@@ -1,5 +1,5 @@
 ---
-title: Resources-Eigenschaftenseiten | Microsoft Docs
+title: Ressourceneigenschaftenseiten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,16 +23,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322873"
 ---
 # <a name="resources-property-pages"></a>Resources-Eigenschaftenseiten
-Weitere Informationen zur Verwendung des Ressourcencompilers finden Sie unter [Using RC (die RC-Befehlszeile)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Weitere Informationen über die Verwendung des Ressourcencompilers finden Sie unter [Using RC (The RC Command Line) (Verwenden des Ressourcencompilers (die RC-Befehlszeile))](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
   
- Informationen zum Zugreifen auf die **Ressourcen** Eigenschaftenseiten, finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
+ Informationen über das Zugreifen auf die **Ressourceneigenschaftenseiten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   
- Um diese Eigenschaften programmgesteuert zugreifen zu können, finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
+ Informationen zum programmgesteuerten Zugriff auf diese Eigenschaften finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)

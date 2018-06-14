@@ -1,5 +1,5 @@
 ---
-title: '&lt;Para&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;para&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325116"
 ---
-# <a name="ltparagt-visual-c"></a>&lt;Para&gt; (Visual C++)
+# <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) oder [\<returns>](../ide/returns-visual-cpp.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.  
   
 ## <a name="syntax"></a>Syntax  

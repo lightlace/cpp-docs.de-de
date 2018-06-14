@@ -1,5 +1,5 @@
 ---
-title: Implementieren einer Schnittstelle (Visual C++) | Microsoft Docs
+title: Implementieren einer Schnittstelle (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332766"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementieren einer Schnittstelle (Visual C++)
-Um eine Schnittstelle zu implementieren, müssen Sie erstellt haben ein Projekt als ATL COM-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält. Können Sie die [ATL-Projektassistenten](../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  
+Zum Implementieren einer Schnittstelle müssen Sie ein Projekt als ATL COM-Anwendung oder MFC-Anwendung, die ATL-Unterstützung enthält, erstellt haben. Sie können den [ATL-Projekt-Assistenten](../atl/reference/atl-project-wizard.md) zum Erstellen einer ATL-Anwendung verwenden, oder [Ihrer MFC-Anwendung ein ATL-Objekt hinzufügen](../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL-Unterstützung in einer MFC-Anwendung zu implementieren.  
   
- Nach des Projekts erstellen, um eine Schnittstelle zu implementieren, müssen Sie zuerst ein ATL-Objekt hinzufügen. Finden Sie unter [Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) eine Liste der Assistenten, mit denen Objekte ATL-Projekt hinzu.  
+ Nachdem Sie das Projekt erstellt haben, müssen Sie zum Implementieren einer Schnittstelle zunächst ein ATL-Objekt hinzufügen. Eine Liste von Assistenten, die Ihrem ATL-Projekt Objekte hinzufügen, finden Sie unter [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
 > [!NOTE]
 >  Der Assistent unterstützt keine ATL-Dialogfelder, XML-Webdienste mit ATL, Leistungsobjekte oder Leistungsindikatoren.  
   
- Wenn Sie [eine ATL-Steuerelement hinzufügen](../atl/reference/adding-an-atl-control.md), können Sie angeben, ob aufgelisteten Standardschnittstellen implementieren die [Schnittstellen](../atl/reference/interfaces-atl-control-wizard.md) auf der Seite, Assistenten und in atlcom.h definiert.  
+ Wenn Sie [ein ATL-Steuerelement hinzufügen](../atl/reference/adding-an-atl-control.md), können Sie angeben, ob die Standardschnittstellen implementiert werden sollen, die auf der Seite [Schnittstellen](../atl/reference/interfaces-atl-control-wizard.md) des Assistenten aufgelistet und in „atlcom.h“ definiert sind.  
   
- Nachdem Sie das Objekt oder ein Steuerelement hinzugefügt haben, können Sie weitere Schnittstellen in jeder Bibliothek verfügbaren Typ implementieren, mit dem Assistenten zum Implementieren einer Schnittstelle.  
+ Sobald Sie das Objekt oder Steuerelement hinzugefügt haben, können Sie weitere Schnittstellen implementieren, die sich in einer der verfügbaren Typbibliotheken befinden, indem Sie den Assistenten zum Implementieren von Schnittstellen verwenden.  
   
- Wenn Sie eine neue Schnittstelle hinzufügen, müssen Sie es in das Projekt IDL-Datei manuell hinzufügen. Finden Sie unter [Hinzufügen einer neuen Schnittstelle in einem ATL-Projekt](../atl/reference/adding-a-new-interface-in-an-atl-project.md) für Weitere Informationen.  
+ Wenn Sie eine neue Schnittstelle hinzufügen, müssen Sie sie der IDL-Datei des Projekts manuell hinzufügen. Weitere Informationen finden Sie unter [Adding a New Interface in an ATL Project (Hinzufügen einer neuen Schnittstelle zu einem ATL-Projekt)](../atl/reference/adding-a-new-interface-in-an-atl-project.md).  
   
-### <a name="to-implement-an-interface"></a>Eine Schnittstelle implementieren  
+### <a name="to-implement-an-interface"></a>So implementieren Sie eine Schnittstelle  
   
-1.  In der Klassenansicht mit der rechten Maustaste des Klassennamen für das ATL-Objekt.  
+1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf den Klassennamen für das ATL-Objekt.  
   
-2.  Klicken Sie auf **hinzufügen** aus dem Kontextmenü, und klicken Sie dann auf **Schnittstelle implementieren** zum Anzeigen der [Assistent zum Implementieren von Schnittstelle](../ide/implement-interface-wizard.md).  
+2.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Schnittstelle implementieren**, um den [Assistenten zum Implementieren von Schnittstellen](../ide/implement-interface-wizard.md) anzuzeigen.  
   
-3.  Wählen Sie die zu implementierenden Schnittstellen aus den entsprechenden Typbibliotheken und klicken Sie auf **Fertig stellen**.  
+3.  Wählen Sie die zu implementierenden Schnittstellen aus den entsprechenden Typbibliotheken aus, und klicken Sie auf **Fertig stellen**.  
   
-4.  Erweitern Sie in der Klassenansicht das Objekt Basen und Schnittstellen-Knoten, um die Schnittstelle finden Sie unter Sie implementiert haben, und erweitern Sie dann die Schnittstelle-Knoten, um die verfügbaren Eigenschaften, Methoden und Ereignisse anzuzeigen.  
+4.  Erweitern Sie in der Klassenansicht den Knoten „Basen und Schnittstellen“, um die implementierte Schnittstelle anzuzeigen, erweitern Sie dann den Knoten der Schnittstelle, um die verfügbaren Eigenschaften, Methoden und Ereignisse anzuzeigen.  
   
     > [!NOTE]
-    >  Sie können auch die [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) die Member der Schnittstelle.  
+    >  Sie können auch den [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) verwenden, um die Members der Schnittstelle zu überprüfen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer COM-Schnittstelle](../ide/creating-a-com-interface-visual-cpp.md)   
+ [Creating a COM Interface (Erstellen einer COM-Schnittstelle)](../ide/creating-a-com-interface-visual-cpp.md)   
  [Bearbeiten einer COM-Schnittstelle](../ide/editing-a-com-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Ausführen einer C++ - Clr-Anwendung auf einer früheren Laufzeitversion | Microsoft Docs
+title: Ausführen einer C++/CLR-Anwendung unter einer früheren Runtimeversion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323614"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Ausführen einer C++ /clr-Anwendung unter einer früheren Laufzeitversion
-Sofern nicht anders angegeben, ist eine C++ .NET Framework-Anwendung erstellt, um auf die Version der common Language Runtime (CLR) ausgeführt werden, die der Compiler verwendet, um die Anwendung zu erstellen. Es ist jedoch möglich, dass eine .exe-Anwendung, die erstellt wird, für eine Version der Laufzeit auf anderen Versionen ausgeführt wird, die die erforderliche Funktionalität bereitstellt.  
+Sofern nicht anders angegeben, ist eine C++-Anwendung für .NET Framework darauf ausgelegt, auf der CLR-Version (Common Language Runtime) ausgeführt zu werden, die der Compiler zum Erstellen der Anwendung verwendet. Es ist jedoch möglich, dass eine EXE-Anwendung für eine Version der Runtime erstellt wurde, um auf allen anderen Versionen ausgeführt zu werden, die die erforderlichen Funktionen bereitstellen.  
   
- Um dies zu erreichen, geben Sie eine app.config-Datei, die Laufzeitversionsinformationen in enthält die `supportedRuntime` Tag.  
+ Stellen Sie eine App.Config-Datei bereit, die Runtimeversionsinformationen im Tag `supportedRuntime` enthält, um dies zu ermöglichen.  
   
- Zur Laufzeit muss die Datei "App.config" einen Namen im Format aufweisen *FileName*config, wobei *FileName* ist der Name der ausführbaren Datei, die die Anwendung gestartet und es muss sich im gleichen Verzeichnis wie die ausführbare Datei. Wenn Ihre Anwendung TestApp.exe benannt wird, würde die Datei "App.config" z. B. TestApp.exe.config benannt werden.  
+ Zur Laufzeit muss die App.Config-Datei über einen Namen im Format *filename.ext*.config verfügen, wobei *filename.ext* den Namen der ausführbaren Datei beschreibt, die die Anwendung startet, und sie muss sich im gleichen Verzeichnis wie die ausführbare Datei befinden. Wenn Ihre Anwendung beispielsweise „TestApp.exe“ heißt, sollte der Name der App.Config-Datei „TestApp.exe.config“ sein.  
   
- Wenn Sie mehr als eine Laufzeitversion angeben und die Anwendung auf einem Computer mit mehr als einer installierten Laufzeitversion ausgeführt wird, verwendet die Anwendung die erste Version, die in der Datei "App.config" angegeben ist und installiert wird.  
+ Wenn Sie mehr als eine Runtimeversion angeben, und die Anwendung auf einem Computer ausgeführt wird, auf dem mehr als eine Runtimeversion installiert ist, verwendet die Anwendung die erste Version, die in der Konfigurationsdatei angegeben und installiert ist.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren Sie eine Anwendung, um eine .NET Framework-Version als Ziel](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App für die Ausrichtung auf eine .NET Framework-Version](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
- Für die Ausführung auf Version 1.0 oder Version 1.1 der CLR, eine Anwendung, die von der Visual C++ erstellt wird muss mithilfe von Compiler kompiliert werden [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
+ Für die Ausführung auf Version 1.0 oder Version 1.1 der CLR muss eine Anwendung, die mit dem Visual C++-Compiler erstellt wurde, mithilfe von [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)
