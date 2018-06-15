@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a7a1e8fe89f64ad5909e7c1415545e3b3d80196
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337768"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>IDL-Attribute, Assistent zum Hinzufügen von Methoden
@@ -50,7 +50,7 @@ Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Methoden, um IDL-E
  **Zusätzliche Attribute**  
  Nicht für MFC-Disp-Schnittstellen verfügbar.  
   
-|Attribut|Beschreibung|  
+|Attribut|description|  
 |---------------|-----------------|  
 |**hidden**|Gibt an, dass die Methode vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte. Informationen finden Sie in der *MIDL-Referenz* unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861).|  
 |**source**|Gibt an, dass ein Member dieser Methode eine Ereignisquelle ist. Informationen finden Sie in der *MIDL-Referenz* unter [source](http://msdn.microsoft.com/library/windows/desktop/aa367166).|  

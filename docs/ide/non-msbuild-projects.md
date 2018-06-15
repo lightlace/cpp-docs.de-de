@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337284"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Verwenden von „Ordner öffnen“ mit Projekten in Visual C++
@@ -86,7 +86,7 @@ Eine Konfiguration kann folgende Eigenschaften aufweisen:
 #### <a name="environment-variables"></a>Umgebungsvariablen
 „CppProperties.json“ unterstützt die Erweiterung von Systemumgebungsvariablen zum Einfügen von Pfaden und anderen Eigenschaftswerten. Die Syntax zum Erweitern einer Umgebungsvariable (`%FOODIR%`) lautet `${env.FOODIR}`. Folgende vom System definierte Variablen werden ebenfalls unterstützt:
 
-|Variablenname|Beschreibung|  
+|Variablenname|description|  
 |-----------|-----------------|
 |vsdev|Die Standardumgebung von Visual Studio|
 |msvc_x86|Kompiliert mithilfe von x86-Tools für x86|
@@ -99,7 +99,7 @@ Eine Konfiguration kann folgende Eigenschaften aufweisen:
 
 Wenn die Linux-Workload installiert ist, können folgende Umgebungen verwendet werden, um Linux und WSL remote anzuzielen:
 
-|Variablenname|Beschreibung|  
+|Variablenname|description|  
 |-----------|-----------------|
 |linux_x86|Hiermit wird x86 Linux als Remotezielversion festgelegt.|
 |linux_x64|Hiermit wird x64 Linux als Remotezielversion festgelegt.|

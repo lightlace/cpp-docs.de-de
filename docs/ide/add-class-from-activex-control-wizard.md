@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336816"
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Hinzufügen einer Klasse mit dem ActiveX-Steuerelement-Assistenten
@@ -30,9 +30,9 @@ Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren Acti
  **Add Class From** (Klasse hinzufügen aus)  
  Gibt den Speicherort der Typbibliothek an, aus der die Klasse erstellt wird.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
-|**Registrierung**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) aufgeführt.|  
+|**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) aufgeführt.|  
 |**Datei**|Die Typbibliothek ist nicht unbedingt im System registriert, sondern in einer Datei enthalten. Sie müssen den Dateispeicherort unter **Speicherort** angeben.|  
   
  **Verfügbare ActiveX-Steuerelemente**  
@@ -40,7 +40,7 @@ Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren Acti
   
  Wenn Sie unter **Add Class From** (Klasse hinzufügen aus) auf **Datei** klicken, kann dieses Feld nicht geändert werden.  
   
- **Speicherort**  
+ **Position**  
  Gibt den Speicherort des ActiveX-Steuerelements an. Wenn Sie unter **Add Class From** (Klasse hinzufügen aus) auf **Datei** klicken, können Sie den Speicherort der Datei angeben, die die Typbibliothek enthält. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um nach dem Speicherort der Datei zu suchen.  
   
  Wenn Sie unter **Add Class From** (Klasse hinzufügen aus) auf **Registrierung** klicken, kann dieses Feld nicht geändert werden.  
@@ -48,7 +48,7 @@ Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einem verfügbaren Acti
  **Schnittstellen**  
  Gibt die Schnittstellen des ActiveX-Steuerelements an, das derzeit unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) oder in der Typbibliothek in der Datei angegeben ist, die unter **Speicherort** angegeben ist.  
   
-|Schaltfläche „Übertragen“|Beschreibung|  
+|Schaltfläche „Übertragen“|description|  
 |---------------------|-----------------|  
 |**>**|Fügt die Schnittstelle hinzu, die derzeit in der Liste **Schnittstellen** ausgewählt ist. Nicht verfügbar, wenn keine Schnittstelle ausgewählt ist.|  
 |**>>**|Fügt alle Schnittstellen des ActiveX-Steuerelements hinzu, das derzeit unter **Available ActiveX controls** (Verfügbare ActiveX-Steuerelemente) oder in der Typbibliothek in der Datei angegeben ist, die unter **Speicherort** angegeben ist.|  

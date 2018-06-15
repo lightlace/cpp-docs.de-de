@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340540"
 ---
 # <a name="implement-interface-wizard"></a>Assistent zum Implementieren von Schnittstellen
@@ -31,7 +31,7 @@ Dieser Assistent implementiert eine Schnittstelle für ein COM-Projekt. Implemen
  **Implement interface from** (Schnittstelle implementieren aus)  
  Gibt den Speicherort der Typbibliothek an, aus der die Schnittstelle erstellt wird.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**Projekt**|Die Typbibliothek ist ein Teil des Projekts.|  
 |**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Verfügbare Typbibliotheken** aufgeführt.|  
@@ -49,7 +49,7 @@ Dieser Assistent implementiert eine Schnittstelle für ein COM-Projekt. Implemen
 > [!NOTE]
 >  Schnittstellen mit dem gleichen Namen wie die, die bereits vom ausgewählten Objekt implementiert wurden, werden nicht im Feld **Schnittstellen** angezeigt.  
   
-|Schaltfläche „Übertragen“|Beschreibung|  
+|Schaltfläche „Übertragen“|description|  
 |---------------------|-----------------|  
 |**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Schnittstellen implementieren** hinzu.|  
 |**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Schnittstellen implementieren** hinzu.|  

@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336325"
 ---
 # <a name="add-member-variable-wizard"></a>Assistent zum Hinzufügen von Membervariablen
@@ -63,7 +63,7 @@ Dieser Assistent fügt die Deklaration einer Membervariable zur Headerdatei und 
  **Steuerelement-ID**  
  Legt die ID für die Steuerelementvariable fest, die Sie hinzufügen. Wählen Sie die ID für den Typ des Steuerelements, für den Sie die Membervariable hinzufügen, aus der Liste aus. Diese Liste ist nur aktiv, wenn das Kontrollkästchen **Steuerelementvariable** aktiviert und auf die Steuerelement-IDs beschränkt ist, die bereits zum Dialogfeld hinzugefügt wurden. Für die Standardschaltfläche **OK** entspricht die Steuerelement-ID beispielsweise **IDOK**.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**Steuerelement**|Diese Option ist standardmäßig für den Steuerelementtyp festgelegt. Sie verwaltet das Steuerelement, nicht dessen Status oder Inhalte (wie es bei einem Listenfeld, einem Kombinationsfeld oder einem Bearbeitungsfeld möglicherweise gewünscht ist).|  
 |**Wert**|Diese Option ist nur für Steuerelementtypen verfügbar, die einen Wert enthalten können (z.B. ein Bearbeitungsfeld) oder einen Status wiedergeben (z.B. ein Kontrollkästchen), und für die Sie den Bereich, die Inhalte und den Status verwalten möchten. Weitere Informationen finden Sie unter [Dialog Box Controls and Variable Types (Steuerelemente für Dialogfelder und Variablentypen)](../ide/dialog-box-controls-and-variable-types.md).|  

@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33334996"
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
@@ -28,7 +28,7 @@ Ressourcen sind Schnittstellenelemente, die dem Benutzer Informationen bereitste
   
  Weitere Informationen finden Sie unter [Working with Resources (Arbeiten mit Ressourcen)](../windows/working-with-resource-files.md).  
   
-|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|  
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|description|  
 |---------------|------------------------|--------------------------------|-----------------|  
 |*Projname*.rc|*Projname*|Quelldateien|Die Ressourcenskriptdatei für das Projekt. Die Ressourcenskriptdatei enthält abhängig von der Art des Projekts und der ausgewählten Unterstützung für das Projekt (z.B. Symbolleisten, Dialogfelder oder HTML) Folgendes:<br /><br /> – Standardmenüdefinition<br />– Beschleuniger und Zeichenfolgentabellen<br />– Standarddialogfeld **Info**<br />– Weitere Dialogfelder<br />– Symboldatei (res\\*Projname*.ico)<br />– Versionsinformationen<br />– Bitmaps<br />– Symbolleiste<br />– HTML-Dateien<br /><br /> Die Ressourcendatei enthält die Datei „Afxres.rc“ für MFC-Standardressourcen.|  
 |Resource.h|*Projname*|Headerdateien|Die Headerdatei für Ressourcen, die Definitionen für die vom Projekt verwendeten Ressourcen enthält.|  

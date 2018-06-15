@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f92f871f22fb01f3f0f37677c393fcd481c08120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33325194"
 ---
 # <a name="add-event-wizard"></a>Assistent zum Hinzufügen von Ereignissen
@@ -32,7 +32,7 @@ Dieser Assistent fügt einem MFC-ActiveX-Steuerelementprojekt ein Ereignis hinzu
  **Ereignistyp**  
  Gibt den Typ des hinzuzufügenden Ereignisses an. Nur verfügbar, wenn Sie aus der Liste **Ereignisnamen** auswählen.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**Stock**|Gibt an, dass ein vordefiniertes Ereignis, z.B. ein Tastenklick, für diese Klasse implementiert wird. Vordefinierte Ereignisse werden in der MFC-Bibliothek (Microsoft Foundation Classes) definiert.|  
 |**Benutzerdefiniert**|Gibt an, dass Sie Ihre eigene Implementierung des Ereignisses bereitstellen.|  

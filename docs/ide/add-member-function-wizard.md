@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33332396"
 ---
 # <a name="add-member-function-wizard"></a>Assistent zum Hinzufügen von Memberfunktionen
@@ -67,7 +67,7 @@ Dieser Assistent fügt die Funktionsdeklaration eines Members zur Headerdatei un
   
  Überprüfen Sie, ob die neue Memberfunktion „static“ oder „virtual“ ist und ob diese „inline“ oder „pure“ ist. Wenn Sie die Memberfunktion auf „pure“ festlegen, wird das Kontrollkästchen `Virtual` aktiviert, und das Kontrollkästchen **Inline** wird deaktiviert. Standardmäßig sind Memberfunktionen nicht „static“ und nicht „virtual“.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |[Static](../cpp/storage-classes-cpp.md)|Gibt an, dass die Funktion sich wie eine globale Funktion verhält und außerhalb der Klasse aufgerufen werden kann, auch wenn die Klasse nicht instanziiert wird. Die Memberfunktion hat keinen Zugriff auf nicht statische Members. Eine Memberfunktion, die als `Static` angegeben ist, kann nicht „virtual“ sein.|  
 |[Virtual](../cpp/virtual-cpp.md)|Stellt sicher, dass die richtige Memberfunktion für ein Objekt aufgerufen wird, und zwar unabhängig von dem Ausdruck, mit dem der Aufruf der Memberfunktion erfolgt. Eine Memberfunktion, die als `Virtual` angegeben ist, kann nicht „static“ sein.|  

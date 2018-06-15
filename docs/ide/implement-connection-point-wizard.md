@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33323757"
 ---
 # <a name="implement-connection-point-wizard"></a>Assistent zum Implementieren von Verbindungspunkten
@@ -37,7 +37,7 @@ Dieser Assistent implementiert einen Verbindungspunkt für ein COM-Objekt. Ein v
  **Schnittstellen**  
  Zeigt die Schnittstellen an, deren Definitionen in der aktuell im Feld **Verfügbare Typbibliotheken** ausgewählten Typbibliothek enthalten sind.  
   
-|Schaltfläche „Übertragen“|Beschreibung|  
+|Schaltfläche „Übertragen“|description|  
 |---------------------|-----------------|  
 |**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Verbindungspunkte implementieren** hinzu.|  
 |**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Verbindungspunkte implementieren** hinzu.|  

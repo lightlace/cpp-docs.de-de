@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33335433"
 ---
 # <a name="stock-properties"></a>Basiseigenschaften
 Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md) eine Eigenschaft hinzufügen, können Sie auf der [Namen](../ide/names-add-property-wizard.md)-Seite des Assistenten eine Basiseigenschaft aus der Liste **Eigenschaftennamen** auswählen. Dort stehen die folgenden Eigenschaften zur Auswahl:  
   
-|Name der Eigenschaft|Beschreibung|  
+|Name der Eigenschaft|description|  
 |-------------------|-----------------|  
 |**Darstellung**|Ruft einen Wert ab, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest. Die Eigenschaft **Darstellung** des Steuerelements kann dreidimensionale Anzeigeeffekte anzeigen oder ausblenden. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|  
 |`BackColor`|Gibt die Ambient-Eigenschaft `BackColor` des Steuerelements zurück oder legt diese auf eine Palettenfarbe (RGB) oder eine vordefinierte Systemfarbe fest. Der Wert entspricht standardmäßig der Vordergrundfarbe des Containers des Steuerelements. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|  

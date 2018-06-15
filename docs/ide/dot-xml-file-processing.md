@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340514"
 ---
 # <a name="xml-file-processing"></a>Verarbeiten der XML-Datei
@@ -32,7 +32,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
 -   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:  
   
-    |Zeichen|Beschreibung|  
+    |Zeichen|description|  
     |---------------|-----------------|  
     |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Allerdings sind cref-Verweise auf einen Namespace möglich.|  
     |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|  
@@ -79,7 +79,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
 -   Nur für Konvertierungsoperatoren wird wie zuvor gezeigt der Rückgabewert der Methode als „~“ gefolgt vom Rückgabewert codiert.  
   
--   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Zum Beispiel  
+-   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Ein auf ein Objekt angewendeter  
   
     ```  
     <member name="T:MyClass`2">  

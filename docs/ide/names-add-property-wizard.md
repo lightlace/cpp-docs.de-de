@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339565"
 ---
 # <a name="names-add-property-wizard"></a>Namen, Assistent zum Hinzufügen von Eigenschaften
@@ -30,7 +30,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
  **Eigenschaftenname**  
  Legt den Namen der Eigenschaft fest. Für MFC-Disp-Schnittstellen, die ActiveX-Steuerelementen zugeordnet sind, können Sie einen eigenen Namen angeben oder einen vordefinierten Eigenschaftennamen aus der Liste auswählen. Wenn Sie einen eigenen Eigenschaftennamen bereitstellen, ist der Implementierungstyp **Stock** (Vordefiniert) nicht verfügbar. Eine Beschreibung der Eigenschaften in der Liste finden Sie unter [Basiseigenschaften](../ide/stock-properties.md).  
   
-|Schnittstellentyp|Beschreibung|  
+|Schnittstellentyp|description|  
 |--------------------|-----------------|  
 |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Geben Sie einen Eigenschaftennamen an.|  
 |MFC-Disp-Schnittstelle, Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Geben Sie einen Eigenschaftennamen an, oder wählen Sie eine Basiseigenschaft aus der Liste aus. Wenn Sie eine Eigenschaft aus der Liste auswählen, wird der entsprechende Wert im Feld **Eigenschaftentyp** angezeigt. Sie können diesen Typ abhängig von Ihrer Auswahl unter **Implementierungstyp** ändern.|  
@@ -53,9 +53,9 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
  **Implementierungstyp**  
  Nur MFC-Schnittstellen Gibt an, wie die hinzugefügten Eigenschaften implementiert werden sollen.  
   
-|Implementierungstyp|Beschreibung|  
+|Implementierungstyp|description|  
 |-------------------------|-----------------|  
-|**Stock** (Vordefiniert)|Gibt eine vordefinierte Implementierung für die unter **Eigenschaftenname** ausgewählte Eigenschaft an. Der Standardwert. Weitere Informationen finden Sie unter [Basiseigenschaften](../ide/stock-properties.md).<br /><br /> Wenn Sie **Stock** (Vordefiniert) angeben, werden **Eigenschaftentyp**, **Parametertyp** und **Parametername** abgeblendet.|  
+|**Stock**|Gibt eine vordefinierte Implementierung für die unter **Eigenschaftenname** ausgewählte Eigenschaft an. Der Standardwert. Weitere Informationen finden Sie unter [Basiseigenschaften](../ide/stock-properties.md).<br /><br /> Wenn Sie **Stock** (Vordefiniert) angeben, werden **Eigenschaftentyp**, **Parametertyp** und **Parametername** abgeblendet.|  
 |**Membervariable**|Gibt an, dass die Eigenschaft als Membervariable hinzugefügt wird. Sie können benutzerdefinierte Eigenschaften und die meisten Basiseigenschaften als Membervariablen hinzufügen. Sie können **Beschriftungs-**, **hWnd-** und **Texteigenschaften** nicht als **Membervariable** festlegen.<br /><br /> Gibt Standardnamen unter **Variablenname** und **Benachrichtigungsfunktion** an. Sie können diesen Namen bearbeiten.|  
 |**Get/Set-Methoden**|Gibt an, dass die Eigenschaft standardmäßig als Get*PropertyName*- und Set*PropertyName*-Funktion hinzugefügt wird. Diese Namen werden unter **Get-Funktion** und **Set-Funktion** angezeigt.<br /><br /> Sie können den standardmäßig festgelegten **Eigenschaftentyp** ändern, wodurch ein Wert an die Get-Funktion übergeben wird. Sie können Parameter für die **Get**- und `Set`-Funktionen angeben.|  
   
@@ -65,7 +65,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
  **Put-Funktion**  
  Nur ATL-Schnittstellen Legt die Eigenschaft als schreibbar fest. Die `Put`-Methode wird also für das Festlegen bzw. „Einfügen“ dieser Eigenschaft des Objekts erstellt. Sie müssen **Get**, `Put` oder beides auswählen. Wenn Sie diese Option auswählen, können Sie die Methode auf zwei Arten implementieren:  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**PropPut**|Die [PropPut](../windows/propput.md)-Funktion gibt eine Kopie des Objekts zurück. Dies ist die Standardeinstellung und die gängigste Methode, um die Eigenschaft schreibbar zu machen.|  
 |**PropPutRef**|Die [PropPutRef](../windows/propputref.md)-Funktion gibt einen Verweis auf das Objekt statt einer Kopie des Objekts zurück. Diese Option sollten Sie für Objekte (z.B. große Strukturen oder Arrays) verwenden, deren Initialisierung aufwändig sein kann.|  
@@ -73,7 +73,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
  **Parameterattribute**  
  Nur ATL-Schnittstellen Legt fest, ob der Parameter, der durch **Parametername** festgelegt wurde, **in**, **out**, beides oder keines davon ist.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
 |**in**|Gibt an, dass der Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben wird.|  
 |**out**|Gibt an, dass der Zeigerparameter an von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben wird (vom Server an den Client).|  
@@ -97,6 +97,6 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
  Nur MFC-Disp-Schnittstellen Legt diese Eigenschaft als Standard für die Schnittstelle fest. Eine Schnittstelle kann nur eine Standardeigenschaft besitzen. Sobald Sie die Standardeigenschaft angeben, ist dieses Feld für jede weitere Eigenschaft, die Sie zur Schnittstelle hinzufügen, nicht verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Eigenschaft](../ide/adding-a-property-visual-cpp.md)   
+ [Adding a Property (Hinzufügen einer Eigenschaft)](../ide/adding-a-property-visual-cpp.md)   
  [IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)   
  [Implementieren einer Schnittstelle](../ide/implementing-an-interface-visual-cpp.md)

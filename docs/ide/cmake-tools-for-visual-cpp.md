@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337430"
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake-Projekte in Visual C++
@@ -234,7 +234,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Option|Beschreibung|
+|Option|description|
 |--------------|------------|
 | --version  | Ausgabe der Ninja-Version ("1.7.1")|
 |   -C DIR   | Änderung in DIR, bevor andere Aktionen ausgeführt werden|
@@ -259,7 +259,7 @@ Das obige Beispiel entspricht der Ausführung der **Developer-Eingabeaufforderun
 
 Folgende Tabelle führt die Standardwerte und die zugehörigen Befehlszeilen auf:
 
-|Kontextname|Beschreibung|
+|Kontextname|description|
 |-----------|-----------------|
 |vsdev|Die Standardumgebung von Visual Studio|
 |msvc_x86|Kompiliert mithilfe von x86-Tools für x86|

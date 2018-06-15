@@ -21,10 +21,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339981"
 ---
 # <a name="visual-c-project-types"></a>Visual C++-Projekttypen
@@ -42,7 +42,7 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 ### <a name="windows-desktop"></a>Windows-Desktop
 
-|Projektvorlage|Beschreibung|  
+|Projektvorlage|description|  
 |----------------------|-----------------------------| 
 |[Windows-Konsolenanwendung](../windows/creating-a-console-application.md)|Ein Projekt zum Erstellen einer Windows-Konsolenanwendung|
 |[Windows-Desktopanwendung](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Ein Projekt zum Erstellen einer Windows-Desktopanwendung (Win32)|
@@ -52,7 +52,7 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 ### <a name="general"></a>Allgemein
 
-|Projektvorlage|Beschreibung|
+|Projektvorlage|description|
 |----------------------|-----------------------------|
 |Leeres Projekt|Ein leeres Projekt zum Erstellen einer Anwendung, Bibliothek oder DLL. Sie müssen erforderlichen Code oder Ressourcen hinzufügen.|
 |[Makefile-Projekt](../ide/creating-a-makefile-project.md)|Ein Projekt zum Verwenden eines externen Buildsystems|
@@ -60,13 +60,13 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 ### <a name="atl"></a>ATL
 
-|Projektvorlage|Beschreibung|
+|Projektvorlage|description|
 |----------------------|-----------------------------|
 |[ATL-Projekt](../atl/reference/creating-an-atl-project.md)|Ein Projekt, das die Active Template Library (ATL) verwendet|
 
 ### <a name="test"></a>Test
 
-|Projektvorlage|Beschreibung|
+|Projektvorlage|description|
 |----------------------|-----------------------------|
 |[Natives Komponententestprojekt](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Ein Projekt, das native C++-Komponententests enthält|
 
@@ -74,7 +74,7 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 Wenn Sie Ihrer Visual Studio-Installation die Komponente für die MFC- und ATL-Unterstützung hinzufügen, werden die folgenden Projektvorlagen in Visual Studio hinzugefügt.
 
-|Projektvorlage|Beschreibung|
+|Projektvorlage|description|
 |----------------------|-----------------------------|
 |[MFC-Anwendung](../mfc/reference/creating-an-mfc-application.md)|Ein Projekt zum Erstellen einer Anwendung, die die MFC-Bibliothek verwendet.|
 |[MFC-ActiveX-Steuerelement](../mfc/reference/creating-an-mfc-activex-control.md)|Ein Projekt zum Erstellen eines ActiveX-Steuerelements, das die MFC-Bibliothek verwendet.|
@@ -86,7 +86,7 @@ Wenn Sie Ihrer Visual Studio-Installation die Komponente für C++-Tools für die
 
 Einen Überblick über Universelle Windows-Apps in C++ finden Sie unter [Universal Windows Apps (C++) (Universelle Windows-Apps (C++))](../windows/universal-windows-apps-cpp.md).
 
-|Projektvorlage|Beschreibung|
+|Projektvorlage|description|
 |----------------------|-----------------------------|
 |Leere App|Ein Projekt für eine einseitige UWP-App ohne vordefinierte Steuerelemente oder Layouts.|
 |DirectX 11-App|Ein Projekt für eine UWP-App, die DirectX 11 verwendet.|

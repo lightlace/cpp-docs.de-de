@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33321986"
 ---
 # <a name="manifest-tool-property-pages"></a>Eigenschaftenseiten des Manifesttools
@@ -28,11 +28,11 @@ Verwenden Sie die **Manifesttooleigenschaftenseiten**, um Buildoptionen für „
   
  [General, Manifest Tool, Configuration Properties, \<Projectname> Property Pages Dialog Box (Allgemein, Manifesttool, Konfigurationseigenschaften, <Projektname>-Eigenschaftenseiten (Dialogfeld))](../ide/general-manifest-tool-configuration-properties.md)  
   
- [Input and Output, Manifest Tool, Configuration Properties, \<Projectname> Property Pages Dialog Box (Eingabe und Ausgabe, Manifesttool, Konfigurationseigenschaften, <Projektname>-Eigenschaftenseiten (Dialogfeld))](../ide/input-and-output-manifest-tool.md)  
+ [Eingabe und Ausgabe, Manifesttool, Konfigurationseigenschaften, Dialogfeld „\<Projektname>-Eigenschaftenseiten“](../ide/input-and-output-manifest-tool.md)  
   
  [Isolated COM, Manifest Tool, Configuration Properties, \<Projectname> Property Pages Dialog Box (Isolated COM, Manifesttool, Konfigurationseigenschaften, <Projektname>-Eigenschaftenseiten (Dialogfeld))](../ide/isolated-com-manifest-tool.md)  
   
- [Advanced, Manifest Tool, Configuration Properties, \<Projectname> Property Pages Dialog Box (Erweitert, Manifesttool, Konfigurationseigenschaften, <Projektname>-Eigenschaftenseiten (Dialogfeld))](../ide/advanced-manifest-tool.md)  
+ [Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „\<Projektname>-Eigenschaftenseiten“](../ide/advanced-manifest-tool.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)

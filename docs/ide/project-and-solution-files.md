@@ -22,16 +22,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340696"
 ---
 # <a name="project-and-solution-files"></a>Projekt- und Projektmappendateien
 Die folgenden Dateien werden erstellt, wenn Sie ein Projekt in Visual Studio erstellen. Sie werden verwendet, um die Projektdateien in der Projektmappe zu verwalten.  
   
-|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|  
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|description|  
 |--------------|------------------------|--------------------------------|-----------------|  
 |*Solname*.sln|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die *Projektmappendatei*. Es werden alle Elemente eines Projekts oder mehrerer Projekte in einer einzigen Projektmappe organisiert.|  
 |*Projname*.suo|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die Datei mit den *Projektmappenoptionen*. Darin werden die Anpassungen für die Projektmappe gespeichert, damit jedes Mal, wenn Sie ein Projekt oder eine Datei in der Projektmappe öffnen, die gewünschte Darstellung und das gewünschte Verhalten vorhanden ist.|  

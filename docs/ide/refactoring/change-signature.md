@@ -11,10 +11,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33335090"
 ---
 # <a name="change-signature"></a>Signatur ändern
@@ -42,10 +42,10 @@ ms.locfileid: "33335090"
 
    ![Dialogfeld „Signatur ändern“](images/changesignature_dialog.png)
 
-   | Schaltfläche | Beschreibung
+   | Schaltfläche | description
    | ------ | ---
    | **Nach oben/unten**    | Den ausgewählten Parameter in der Liste nach oben oder nach unten verschieben
-   | **Hinzufügen**        | Hinzufügen eines neuen Parameters zur Liste
+   | **Add**        | Hinzufügen eines neuen Parameters zur Liste
    | **Entfernen**     | Den ausgewählten Parameter aus der Liste entfernen
    | **Ändern**     | Ändern Sie den Typ und Namen des ausgewählten Parameters, und geben Sie an, ob er optional ist und was sein eingefügter Wert wäre
    | **Zurücksetzen**     | Den ursprünglichen Zustand des ausgewählten Parameters wiederherstellen
@@ -60,7 +60,7 @@ ms.locfileid: "33335090"
 
    Hier stehen Ihnen folgende Optionen zur Verfügung:
 
-   | Eingabe | Beschreibung
+   | Eingabe | description
    | ----- | ---
    | **Type**               | Der Typ des Parameters (int, double, float usw.)
    | **Name**               | Der Name des Parameters

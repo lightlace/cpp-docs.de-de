@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337349"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>VCXPROJ- und PROPS-Dateistruktur
@@ -127,7 +127,7 @@ Die IDE erwartet, eine Projektkonfiguration für eine beliebige Kombination der 
 
 Das Projekt muss dann ebenfalls diese Konfigurationen enthalten, obwohl „Special 32-bit Optimization“ für x64 nicht von Bedeutung ist:
 
-- Debug|x64
+- Debuggen|x64
 - Retail|x64
 - Special 32-bit Optimization|x64
 

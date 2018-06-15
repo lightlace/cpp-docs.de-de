@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340345"
 ---
 # <a name="add-method-wizard"></a>Assistent zum Hinzufügen von Methoden
@@ -31,7 +31,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
  **Rückgabetyp**  
  Der von der Methode zurückgegebene Datentyp. `HRESULT` wird für alle Schnittstellentypen empfohlen, da dadurch ein gängiges Verfahren zum Zurückgeben von Fehlern bereitgestellt wird.  
   
-|Schnittstellentyp|Beschreibung|  
+|Schnittstellentyp|description|  
 |--------------------|-----------------|  
 |Duale Schnittstelle|`HRESULT` Kann nicht geändert werden.|  
 |Benutzerdefinierte Schnittstelle|`HRESULT` Kann nicht geändert werden.|  
@@ -42,7 +42,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
  **Methodenname**  
  Legt den Namen für die Methode fest.  
   
-|Schnittstellentyp|Beschreibung|  
+|Schnittstellentyp|description|  
 |--------------------|-----------------|  
 |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Geben Sie einen eigenen Methodennamen an.|  
 |MFC-Disp-Schnittstelle|Geben Sie einen eigenen Methodennamen an, oder wählen Sie einen vorgeschlagenen Methodennamen aus der Liste aus. Wenn Sie einen Namen aus der Liste auswählen, wird der entsprechende Wert im Feld **Rückgabetyp** angezeigt und kann nicht geändert werden.|  
@@ -53,7 +53,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
   
  Wenn Sie eine der Methoden aus der Liste **Methodenname** auswählen, wählen Sie die vordefinierte oder eine benutzerdefinierte Implementierung aus.  
   
-|Methodentyp|Beschreibung|  
+|Methodentyp|description|  
 |-----------------|-----------------|  
 |**Stock**|Der Standardwert. Fügt die vordefinierte Implementierung der Methode ein, die Sie aus der Liste **Methodenname** ausgewählt haben. **Rückgabetyp** kann nicht geändert werden, wenn Sie **Stock** (Vordefiniert) auswählen.|  
 |**Benutzerdefiniert**|Fügt eine Stub-Implementierung der Methode ein, die Sie aus der Liste **Methodenname** ausgewählt haben. Für benutzerdefinierte Methodentypen können Sie einen eigenen Rückgabetyp angeben oder einen aus der Liste **Rückgabetyp** auswählen.|  
@@ -61,7 +61,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
  **Interner Name**  
  Nur für benutzerdefinierte Methoden verfügbar, die zu einer MFC-Disp-Schnittstelle hinzugefügt wurden. Legt den Namen fest, der in der Dispatchzuordnung, der Headerdatei (.h) und in der Implementierungsdatei (.cpp) verwendet wird. Standardmäßig stimmt dieser Name mit dem **Methodennamen** überein. Sie können den Methodennamen ändern, wenn Sie mit einer MFC-Disp-Schnittstelle arbeiten, oder wenn Sie eine benutzerdefinierte Methode zur Disp-Schnittstelle eines MFC-ActiveX-Steuerelements hinzufügen.  
   
-|Schnittstellentyp|Beschreibung|  
+|Schnittstellentyp|description|  
 |--------------------|-----------------|  
 |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Nicht verfügbar|  
 |MFC-Disp-Schnittstelle|Wird standardmäßig auf den Methodennamen festgelegt. Sie können den internen Namen bearbeiten.|  
@@ -70,7 +70,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
  **Parameterattribute**  
  Legt zusätzliche Attribute für den Parameter fest, der unter **Parametername** festgelegt wurde.  
   
-|Parameterattribut|Beschreibung|Zulässige Kombinationen|  
+|Parameterattribut|description|Zulässige Kombinationen|  
 |-------------------------|-----------------|--------------------------|  
 |**In**|Gibt an, dass der Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben wird.|Nur **in**<br /><br /> **in** und **out**|  
 |**Out**|Gibt an, dass der Zeigerparameter an von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben wird (vom Server an den Client).|Nur **out**<br /><br /> **in** und **out**<br /><br /> **out** und **retval**|  
@@ -86,7 +86,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
   
  **Hinweis:** Wenn Sie einen Parameternamen angeben und dann auf **Fertig stellen** klicken, bevor Sie auf **Hinzufügen** klicken, wird der Parameter nicht zur Methode hinzugefügt. Sie müssen die Methode suchen und den Parameter manuell einfügen.  
   
- **Hinzufügen**  
+ **Add**  
  Fügt den Parameter, seinen Typ und seine Parameterattribute der **Parameterliste** hinzu, den Sie in **Parametername** festlegen. Klicken Sie auf **Hinzufügen**, um einen Parameter zur Liste hinzuzufügen.  
   
  **Entfernen**  
@@ -96,5 +96,5 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
  Zeigt alle Parameter, die derzeit zur Methode hinzugefügt werden, sowie deren Modifizierer und Typen an. Während Sie Parameter hinzufügen, aktualisiert der Assistent die **Parameterliste**, um jeden Parameter einschließlich seiner Modifizierer und Typen anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Methode](../ide/adding-a-method-visual-cpp.md)   
+ [Adding a Method (Hinzufügen einer Methode)](../ide/adding-a-method-visual-cpp.md)   
  [IDL-Attribute, Assistent zum Hinzufügen von Methoden](../ide/idl-attributes-add-method-wizard.md)

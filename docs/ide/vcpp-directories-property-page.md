@@ -24,10 +24,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336081"
 ---
 # <a name="vc-directories-property-page-windows"></a>Eigenschaftenseite „VC++-Verzeichnisse“ (Windows)
@@ -111,4 +111,4 @@ Vor jeder Kompilierung fragt Visual Studio den Zeitstempel aller Dateien ab, um 
 
 ## <a name="sharing-the-settings"></a>Freigeben der Einstellungen
 
-Sie können Projekteigenschaften für andere Benutzer oder Computer freigeben. Weitere Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).
+Sie können Projekteigenschaften für andere Benutzer oder Computer freigeben. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).

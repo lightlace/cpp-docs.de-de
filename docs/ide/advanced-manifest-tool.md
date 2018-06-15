@@ -19,10 +19,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 47d4dc3ab325a7346d0e787a15d69d646896827d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33326936"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projektname&gt;-Eigenschaftenseiten“
@@ -40,5 +40,5 @@ Verwenden Sie dieses Dialogfeld, um erweiterte Optionen für die Datei [Mt.exe](
 ## <a name="see-also"></a>Siehe auch  
  [\<file>-Element](/visualstudio/deployment/file-element-clickonce-application)   
  [ClickOnce Application Manifest (ClickOnce-Anwendungsmanifest)](/visualstudio/deployment/clickonce-application-manifest)   
- [Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
+ [Manifesttooleigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
  [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   
