@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380432"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Entladedaten für die Ausnahmebehandlung, Debuggerunterstützung
 Dieser Abschnitt beschreibt die Datenstrukturen, die für die Ausnahmebehandlung und debugging-Unterstützung erforderlich sind.  

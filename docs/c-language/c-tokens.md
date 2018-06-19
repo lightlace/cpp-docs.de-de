@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381706"
 ---
 # <a name="c-tokens"></a>C-Tokens
 In einem C-Quellprogramm ist das grundlegende Element, das vom Compiler erkannt wird, das "Token". Ein Token ist Quellprogrammtext, den der Compiler nicht in Komponentenelemente aufgliedert.  

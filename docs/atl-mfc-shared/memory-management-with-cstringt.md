@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354706"
 ---
 # <a name="memory-management-with-cstringt"></a>Speicherverwaltung mit CStringT
 Klasse [CStringT](../atl-mfc-shared/reference/cstringt-class.md) ist eine Vorlagenklasse, die zur Bearbeitung von Zeichenfolgen mit variabler Länge. Der Arbeitsspeicher für diese Zeichenfolgen enthalten reserviert und freigegeben, die über einen String-Manager-Objekt verknüpft sind, wobei jede Instanz von `CStringT`. MFC und ATL bieten standardmäßig Instanziierungen von `CStringT`namens `CString`, `CStringA`, und `CStringW`, das Bearbeiten von Zeichenfolgen, die von verschiedenen Zeichentypen. Diese Zeichentypen sind vom Typ **TCHAR**, `char`, und `wchar_t`zugeordnet. Diese Zeichenfolge Standardtypen verwenden Zeichenfolge, die aus den Prozessheap (in ATL) oder dem CRT-Heap (in MFC) Speicher belegt wird. In vielen Anwendungen reicht diese Speicherbelegungsschema. Verwenden Sie jedoch für Code, der rechenintensiven von Zeichenfolgen (oder Multithreadcode), die die Standard-Speicher-Manager nicht optimal ausgeführt werden können. In diesem Thema wird beschrieben, wie das Standardverhalten für die Verwaltung von Arbeitsspeicher von überschreiben `CStringT`, erstellen Zuweisungen speziell für die jeweilige Aufgabe optimiert.  

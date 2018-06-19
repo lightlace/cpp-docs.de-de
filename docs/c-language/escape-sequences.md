@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388827"
 ---
 # <a name="escape-sequences"></a>Escapesequenzen
 Zeichenkombinationen, die aus einem umgekehrten Schrägstrich (**\\**), gefolgt von einem Buchstaben oder einer Zahlenkombination, bestehen, werden „Escapesequenzen“ genannt. Um ein Zeilenumbruchzeichen, ein einfaches Anführungszeichen oder bestimmte andere Zeichen in einer Zeichenkonstante darzustellen, müssen Sie Escapesequenzen verwenden. Eine Escapesequenz wird als ein einzelnes Zeichen betrachtet und ist daher als Zeichenkonstante gültig.  

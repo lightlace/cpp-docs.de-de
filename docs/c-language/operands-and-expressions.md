@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383448"
 ---
 # <a name="operands-and-expressions"></a>Operanden und Ausdrücke
 Ein „Operand“ ist eine Entität, auf die ein Operator angewendet wird. Ein "Ausdruck" ist eine Sequenz von Operatoren und Operanden, die eine beliebige Kombination dieser Aktionen ausführt:  

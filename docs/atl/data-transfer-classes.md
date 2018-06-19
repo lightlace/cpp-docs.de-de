@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354099"
 ---
 # <a name="data-transfer-classes"></a>Übertragung Datenklassen
 Die folgenden Klassen unterstützen verschiedene Typen der Datenübertragung an:  

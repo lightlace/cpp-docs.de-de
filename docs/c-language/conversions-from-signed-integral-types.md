@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391625"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konvertierungen von ganzzahligen Typen mit Vorzeichen
 Wenn eine ganze Zahl mit Vorzeichen in eine ganze Zahl ohne Vorzeichen mit der gleichen Größe oder länger konvertiert wird und der Wert der ganzen Zahl mit Vorzeichen nicht negativ ist, bleibt der Wert unverändert. Die Konvertierung erfolgt durch Zeichenerweiterung der ganzen Zahl mit Vorzeichen. Eine ganze Zahl mit Vorzeichen wird in eine kürzere Zahl mit Vorzeichen konvertiert, indem die höherwertigen Bits abgeschnitten werden. Das Ergebnis wird als Wert ohne Vorzeichen interpretiert, wie in diesem Beispiel gezeigt wird.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380451"
 ---
 # <a name="special-characters-in-a-makefile"></a>Sonderzeichen in einem Makefile
 Um eine besondere NMAKE-Zeichen als Literalzeichen zu verwenden, platzieren Sie ein Caretzeichen (^) davor. NMAKE ignoriert Caretzeichen, die andere Zeichen sind. Sonderzeichen sind:  

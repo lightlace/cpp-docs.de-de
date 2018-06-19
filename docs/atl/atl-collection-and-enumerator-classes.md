@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354445"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL-Auflistung und Enumerator-Klassen
 ATL stellt die folgenden Klassen zum Auflistungen und-Enumerationen implementieren.  

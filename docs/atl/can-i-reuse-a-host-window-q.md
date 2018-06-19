@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353704"
 ---
 # <a name="can-i-reuse-a-host-window"></a>Kann ich ein Hostfenster wiederverwenden?
 Es wird nicht empfohlen, dass Sie Windows Host wiederverwenden. Um die Stabilität des Codes zu gewährleisten, sollten Sie die Lebensdauer des Hostfensters auf die Lebensdauer eines einzigen Steuerelements binden.  
