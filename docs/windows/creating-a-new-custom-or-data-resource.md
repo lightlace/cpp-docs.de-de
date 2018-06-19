@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871831"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource
 Sie können eine neue benutzerdefinierte oder Datenressource erstellen, indem Sie die Ressource mithilfe der normalen Syntax von Ressourcenskriptdateien (RC) in einer separaten Datei platzieren und dann die Datei einschließen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt und dann im Kontextmenü auf **Ressourcenincludes** klicken.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382501"
 ---
 # <a name="servers-server-items"></a>Server: Serverelemente
 Wenn ein Container einen Server gestartet wird, damit ein Benutzer eine eingebettete oder verknüpfte OLE-Element bearbeiten kann, erstellt die Anwendung für die ein "Serverelement". Das Element für Server, die ein Objekt einer Klasse ist abgeleitet von `COleServerItem`, stellt eine Schnittstelle zwischen dem Serverdokument und die containeranwendung.  

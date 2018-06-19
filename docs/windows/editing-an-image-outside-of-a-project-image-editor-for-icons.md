@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873013"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Bearbeiten eines Bilds außerhalb eines Projekts (Bildbearbeitung für Symbole)
 Sie können geöffnet und bearbeitet Bilder in der Entwicklungsumgebung, genau wie in jeder grafikanwendung. Die Bilder, die Arbeit mit müssen nicht Bestandteil eines Visual Studio-Projekts für unabhängige Bearbeitung sein.  

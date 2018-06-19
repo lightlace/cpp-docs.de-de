@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382036"
 ---
 # <a name="tree-control-styles"></a>Struktursteuerelementstile
 Strukturansicht ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Stile steuern Aspekte der Darstellung eine Struktur des Steuerelements. Bei der Erstellung des Strukturansicht-Steuerelements, legen Sie die anfänglichen Formate. Abrufen und ändern Sie die Stile nach dem Erstellen des Strukturansicht-Steuerelements mithilfe der [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) und [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows-Funktionen, die Angabe **GWL_STYLE** für die `nIndex` Parameter. Eine vollständige Liste der Formate finden Sie unter [Ansicht Fenster Struktursteuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb760013) im Windows SDK.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891424"
 ---
 # <a name="win32-application-wizard"></a>Win32-Anwendungs-Assistent
 Mit dem Win32-Anwendungs-Assistenten von Visual C++ können Sie einen von vier Projekttypen erstellen (siehe die Überschriften in der folgenden Tabelle). Sie können zusätzliche Optionen festlegen, die für den jeweils geöffneten Projekttyp geeignet sind. Der folgenden Tabelle können Sie entnehmen, welche Optionen für die einzelnen Anwendungstypen verfügbar sind.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879671"
 ---
 # <a name="resource-includes-dialog-box"></a>Ressourcenincludes (Dialogfeld)
 Können Sie die **Ressourcenincludes** Dialogfeld so ändern Sie die normale arbeitsanordnung der Umgebung zum Speichern aller Ressourcen in der Projektdatei .rc und alle [Symbole](../windows/symbols-resource-identifiers.md) in Resource.h.  

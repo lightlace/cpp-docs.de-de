@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876422"
 ---
 # <a name="predefined-symbol-ids"></a>Vordefinierte Symbol-IDs
 Wenn Sie ein neues Projekt beginnen sind je nach Projekttyp einige Symbol-IDs für die Verwendung vordefiniert. Diese Symbol-IDs unterstützen verschiedene Bibliotheken und Projekttypen wie MFC. Sie stellen allgemeine Aufgaben dar, die in jeder Anwendung oder Aktionen von Hardwareelementen, wie z. B. Maus oder Drucker, in der Regel enthalten sind.  

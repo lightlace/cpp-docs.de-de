@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892792"
 ---
 # <a name="switchis"></a>switch_is
 Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die den union-Member auswählt.  

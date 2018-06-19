@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882059"
 ---
 # <a name="mfc-predefined-symbols"></a>Vordefinierte MFC-Symbole
 MFC-Projekte enthalten immer mehrere Headerdateien, die von Windows unterstützt. Diese werden über hinzugefügt #include-Anweisungen in der Datei "stdafx.h":  

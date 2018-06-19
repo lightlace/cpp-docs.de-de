@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874862"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Gewusst wie: Überladen von Funktionen mit inneren und systemeigenen Zeigern (C++/CLI)
 Funktionen können überladen werden, je nachdem, ob der Parametertyp ein innerer Zeiger oder einen systemeigenen Zeiger.  

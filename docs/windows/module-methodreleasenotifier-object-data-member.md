@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881535"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_-Datenmember
 Enthält einen Zeiger auf das Objekt, dessen Memberfunktion die Ereignishandler für das aktuelle methodreleasenotifier-Objekt ist.  

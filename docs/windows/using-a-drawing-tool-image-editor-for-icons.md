@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891671"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Verwenden eines Zeichentools (Bildbearbeitung für Symbole)
 Grafik-Editor des Freihandlinie zeichnen und das Löschen von Tools, die auf die gleiche Weise wie die gesamte Arbeit: Wählen Sie das Tool und, falls erforderlich, [auswählen von Vordergrund- und Hintergrundfarben](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) und Größe und Form-Optionen. Sie klicken Sie dann den Mauszeiger auf das Abbild und klicken oder Ziehen zum Zeichnen und löschen.  

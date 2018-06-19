@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871236"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Anpassen oder Ändern von Farben (Bildbearbeitung für Symbole)
 Der bildbearbeitung [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md) werden anfänglich 16 Standardfarben angezeigt. Neben den bereits angezeigten Farben können Sie eigene benutzerdefinierten Farben erstellen. Sie können dann [speichern und Laden Sie eine benutzerdefinierte Farbpalette](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
