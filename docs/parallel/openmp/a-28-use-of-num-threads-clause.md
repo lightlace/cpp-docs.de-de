@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689115"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Verwenden der num_threads-Klausel
 Das folgende Beispiel veranschaulicht die `num_threads` -Klausel ([Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite "8"). Der parallelen Bereichs ist mit einem Maximum von 10 Threads ausgeführt.  

@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377719"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu-Klasse
 Implementiert die Funktionalität eines Windows-Popupmenüs und erweitert sie durch zusätzliche Funktionen wie abtrennbare Menüs und QuickInfos.

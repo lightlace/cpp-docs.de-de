@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384868"
 ---
 # <a name="using-tree-controls"></a>Verwenden von Struktursteuerelementen
 Typische Verwendung des Strukturansicht-Steuerelements ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) entspricht dem folgenden Muster:  

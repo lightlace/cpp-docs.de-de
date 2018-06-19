@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384464"
 ---
 # <a name="windows"></a>Windows
 Diese Artikelreihe werden Windows-Objekte in der MFC-Framework behandelt. Leiten Sie alle MFC-Fenster von Klasse [CWnd](../mfc/reference/cwnd-class.md), einschließlich der Frame-Fensters, Ansichten, Dialogfelder und Steuerelemente.  

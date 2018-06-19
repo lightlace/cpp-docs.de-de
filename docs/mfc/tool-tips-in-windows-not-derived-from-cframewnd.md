@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382085"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind
 Diese Artikelreihe enthält aktiviert QuickInfos für Steuerelemente in einem Fenster, die nicht von abgeleitet ist [CFrameWnd](../mfc/reference/cframewnd-class.md). Der Artikel [Symbolleisten QuickInfos](../mfc/toolbar-tool-tips.md) enthält Informationen über QuickInfos für Steuerelemente in einem `CFrameWnd`.  

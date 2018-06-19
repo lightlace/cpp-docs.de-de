@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689492"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime-Funktion
 Die `omp_get_wtime` Funktion gibt einen Gleitkommawert mit doppelter Genauigkeit in Sekunden seit einigen"in der Vergangenheit" die verstrichene wanduhrzeit gleich.  Die tatsächliche "Zeit in der Vergangenheit" ist ein beliebiger, aber es wird sichergestellt, dass nicht so ändern Sie während der Ausführung der Anwendung. Es wird folgendes Format verwendet:  

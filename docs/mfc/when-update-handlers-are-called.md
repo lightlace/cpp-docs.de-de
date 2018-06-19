@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384133"
 ---
 # <a name="when-update-handlers-are-called"></a>Wann müssen Updatehandler aufgerufen werden?
 Angenommen, das der Benutzer klickt der Maus auf das Menü Datei auf dem generiert eine `WM_INITMENUPOPUP` Nachricht. Das Framework Aktualisierungsmechanismus aktualisiert alle Elemente im Menü Datei zusammen, bevor das Dropdownmenü, damit der Benutzer sie anzeigen kann.  

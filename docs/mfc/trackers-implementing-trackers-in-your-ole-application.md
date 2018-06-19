@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381549"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Tracker: Implementieren von Trackern in einer OLE-Anwendung
 Rahmenstile bieten eine grafische Benutzeroberfläche zum Aktivieren von Benutzern für die Interaktion mit OLE-Clientelemente. Mithilfe der verschiedenen Tracker Stile OLE Client-Elemente mit schraffierten Rahmen angezeigt werden können Größe Handles oder einer Vielzahl anderer visuelle Effekte. Dieser Artikel beschreibt:  

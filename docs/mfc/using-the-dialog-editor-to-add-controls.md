@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381946"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Verwenden des Dialog-Editors zum Hinzufügen von Steuerelementen
 Beim Erstellen der Dialogfeldvorlagen-Ressource mit der [Dialog-Editor](../windows/dialog-editor.md), Sie Steuerelemente aus einer Steuerelementpalette Drag & drop in das Dialogfeld. Dadurch wird die Spezifikationen für diesen Steuerelementtyp der Dialogfeldvorlagen-Ressource hinzugefügt. Bei der Erstellung eine Dialogfeldobjekt und rufen ihre **erstellen** oder `DoModal` Memberfunktion ist, das Framework erstellt ein Windows-Steuerelement und platziert sie in das Dialogfenster auf dem Bildschirm.  

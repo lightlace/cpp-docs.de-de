@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383941"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Datagrammsockets
 Dieser Artikel beschreibt Datagrammsockets, einer der zwei Windows Socket-Typen. (Der andere Typ ist der [Streamsocket](../mfc/windows-sockets-stream-sockets.md).)  

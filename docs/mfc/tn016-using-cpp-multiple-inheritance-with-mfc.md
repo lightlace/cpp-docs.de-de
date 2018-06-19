@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384087"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Verwenden von C++-Mehrfachvererbung mit MFC
 Dieser Hinweis wird beschrieben, wie mehrfache Vererbung (MI) mit der Microsoft Foundation Classes verwendet wird. Die Verwendung von MI ist nicht mit MFC erforderlich. MI wird von MFC-Klassen nicht verwendet und ist nicht erforderlich, die eine Klassenbibliothek schreiben.  

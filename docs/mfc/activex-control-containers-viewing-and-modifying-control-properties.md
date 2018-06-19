@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340293"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX-Steuerelementcontainer: Anzeigen und Ändern von Steuerelementeigenschaften
 Wenn Sie ein ActiveX-Steuerelement in ein Projekt einfügen, ist es hilfreich, anzeigen und Ändern der Eigenschaften, die vom ActiveX-Steuerelement unterstützt wird. In diesem Artikel erläutert, wie den Visual C++-Ressourcen-Editor zu diesem Zweck verwenden.  

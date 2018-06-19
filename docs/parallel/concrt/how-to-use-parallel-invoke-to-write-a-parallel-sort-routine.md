@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689167"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren
 Dieses Dokument beschreibt, wie die [Parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) -Algorithmus die Leistung des bitonischen Sortieralgorithmus verbessert werden kann. Der bitonische Sortieralgorithmus unterteilt die Eingabesequenz rekursiv in kleinere sortierte Partitionen. Der bitonische Sortieralgorithmus kann parallel ausgeführt werden, da alle Partitionsvorgänge von allen anderen Vorgängen unabhängig sind.  

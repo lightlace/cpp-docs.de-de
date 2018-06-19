@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705392"
 ---
 # <a name="norm-class"></a>norm-Klasse
 Darstellen Sie eine Zahl Norm. Jedes Element ist ein Gleitkommatyp Gleitkommazahl im Bereich [-1. 0f, 1. 0f].  

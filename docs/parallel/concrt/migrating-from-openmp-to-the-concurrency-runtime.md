@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690487"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrieren von OpenMP zur Concurrency Runtime
 Concurrency Runtime ermöglicht eine Vielzahl von Programmiermodellen. Diese Modelle überlappen oder ergänzen die Modelle von anderen Bibliotheken. Die Dokumente in diesem Abschnitt vergleichen [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) in die Concurrency Runtime und Beispiele zur Vorgehensweise beim Migrieren von vorhandenem OpenMP-Code, um die Verwendung der Concurrency Runtime.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689973"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Schreiben von Win32-Multithreadprogrammen
 Wenn Sie ein Programm mit mehreren Threads schreiben, müssen Sie ihr Verhalten koordinieren und [Verwendung der Programmressourcen](#_core_sharing_common_resources_between_threads). Sie müssen auch sicherstellen, dass jeder Thread empfängt [einen eigenen Stapel](#_core_thread_stacks).  

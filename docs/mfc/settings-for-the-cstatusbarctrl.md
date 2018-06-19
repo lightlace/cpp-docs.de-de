@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380161"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Einstellungen für CStatusBarCtrl
 Die Standardposition des eine [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) Statusfenster wird am unteren Rand des übergeordneten Fensters, aber Sie können angeben, die `CCS_TOP` Stil, damit diese am oberen Rand der Clientbereich des übergeordneten Fensters angezeigt.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686281"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel-Funktion
 Die **Omp_in_parallel** Funktion gibt einen Wert ungleich NULL zurück, wenn sie in der dynamischen Wertebereich einen parallel ausgeführten parallelen Bereichs aufgerufen wird; andernfalls wird 0 zurückgegeben. Es wird folgendes Format verwendet:  

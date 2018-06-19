@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233855"
 ---
 # <a name="compiler-error-c2757"></a>Compiler-Fehler C2757 generiert
 'Symbol': ein Symbol mit diesem Namen bereits vorhanden ist und aus diesem Grund kann dieser Name als ein Namespacename verwendet werden  

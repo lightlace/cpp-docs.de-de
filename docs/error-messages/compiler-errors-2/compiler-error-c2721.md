@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231923"
 ---
 # <a name="compiler-error-c2721"></a>Compilerfehler Fehler C2721
 "Spezifizierer": Speicherklassenspezifizierer zwischen Operator-Schlüsselwort und der Typ nicht zulässig.  

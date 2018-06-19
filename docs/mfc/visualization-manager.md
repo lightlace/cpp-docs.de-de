@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384214"
 ---
 # <a name="visualization-manager"></a>Visualisierungs-Manager
 Der visuelle Manager ist ein Objekt, das die Darstellung einer gesamten Anwendung steuert. Es dient als eine einzelne Klasse, in dem Sie den Zeichencode für Ihre Anwendung einfügen. Die MFC-Bibliothek enthält mehrere visuelle Manager. Sie können auch eigene visual-Manager erstellen, wenn Sie eine benutzerdefinierte Ansicht für Ihre Anwendung erstellen möchten. Folgende Abbildungen zeigen die gleiche Anwendung, wenn unterschiedliche visuelle Manager aktiviert sind:  

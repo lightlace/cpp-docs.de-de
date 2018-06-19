@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33175968"
 ---
 # <a name="compiler-error-c2173"></a>Compilerfehler C2173
 „function“: übergebener Parameter ist kein Zeiger: Parameter „number1“, Parameterliste „number2“.  

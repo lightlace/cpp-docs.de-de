@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381711"
 ---
 # <a name="tree-control-label-editing"></a>Bearbeiten der Struktursteuerelement-Bezeichnung
 Der Benutzer kann direkt bearbeiten der Bezeichnungen von Elementen in einem Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), hat die **TVS_EDITLABELS** Stil. Der Benutzer beginnt, bearbeiten, indem Sie auf die Bezeichnung des Elements, das den Fokus besitzt. Eine Anwendung beginnt mit der Bearbeitung mithilfe der [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) Memberfunktion. Strukturansicht-Steuerelements sendet die Benachrichtigung, wenn Bearbeitung beginnt und wann er abgebrochen oder beendet wird. Wenn die Bearbeitung abgeschlossen ist, sind Sie verantwortlich für das Aktualisieren der Elementnamen, bei Bedarf.  

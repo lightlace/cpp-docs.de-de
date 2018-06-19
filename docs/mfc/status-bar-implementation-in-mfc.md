@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381087"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementieren der Statusleiste mit MFC
 Ein [CStatusBar](../mfc/reference/cstatusbar-class.md) Objekt ist eine Steuerleiste mit einer Zeile von Textausgabebereichen. Die Ausgabebereiche werden häufig als Nachricht Linien und als Statusindikatoren verwendet. Beispiele sind im Menü Hilfe-Nachricht Zeilen, die den ausgewählten Menübefehl kurz und die Indikatoren, die den Status von Rollen, NUM- und andere Schlüssel anzuzeigen.  

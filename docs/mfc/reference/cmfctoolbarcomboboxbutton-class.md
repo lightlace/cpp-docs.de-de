@@ -79,6 +79,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377365"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement enthält ( [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)).  

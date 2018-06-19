@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384581"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 Dieser Hinweis beschreibt die MFC-Unterstützung für benutzerdefinierte und selbst zeichnen-Steuerelemente. Außerdem wird die dynamische Erstellung von Unterklassen von beschrieben, und beschreibt die Beziehung zwischen [CWnd](../mfc/reference/cwnd-class.md) Objekte und `HWND`s.  

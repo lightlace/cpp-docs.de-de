@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382150"
 ---
 # <a name="tree-control-item-position"></a>Position eines Elements im Struktursteuerelement
 Die Anfangsposition des Elements wird festgelegt, wenn das Element dem Strukturansicht-Steuerelement hinzugefügt wird ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) mithilfe der `InsertItem` Memberfunktion. Der Aufruf der Memberfunktion gibt das Handle für das übergeordnete Element und das Handle des Elements, nach dem das neue Element eingefügt werden soll. Das zweite Handle muss ein untergeordnetes Element des angegebenen übergeordneten Elements identifiziert, oder einen der folgenden Werte: `TVI_FIRST`, `TVI_LAST`, oder `TVI_SORT`.  

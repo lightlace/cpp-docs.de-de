@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380600"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Festlegen der Bilder für ein bestimmtes Element
 Die verschiedenen Typen von Bildern, durch die erweiterten Kombinationsfeldelement werden bestimmt anhand der Werte in der `iImage`, **iSelectedImage**, und **iOverlay** Mitglied der [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) Struktur. Jeder Wert ist der Index eines Bilds in der zugehörigen Bildliste des Steuerelements. Standardmäßig werden diese Member auf 0 festgelegt, verursacht das Steuerelement kein Bild für das Element an. Wenn Sie Bilder für ein bestimmtes Element verwenden möchten, können Sie die Struktur entsprechend beim Einfügen der Kombinationsfeldelement oder durch Ändern einer vorhandenen Kombinationsfeldelement ändern.  

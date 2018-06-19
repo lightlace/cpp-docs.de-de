@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198377"
 ---
 # <a name="compiler-error-c2494"></a>Compilerfehler C2494
 'Schlüsselwort' __finally/finally-block oder kann nicht innerhalb eines Filterausdrucks aufgerufen werden  

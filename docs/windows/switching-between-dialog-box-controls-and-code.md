@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891921"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Umschalten zwischen Dialogfeld-Steuerelementen und Code
 In MFC-Anwendungen Doppelklicken Sie auf Dialogfeld-Steuerelemente Codeprobleme Handler springen soll, oder schnell Stub Handlerfunktionen erstellen.  

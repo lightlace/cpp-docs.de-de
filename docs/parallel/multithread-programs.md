@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686931"
 ---
 # <a name="multithread-programs"></a>Multithreadprogramme
 Ein Thread ist im Grunde einen Ausführungspfad über ein Programm. Es ist auch die kleinste Ausführungseinheit Win32 plant. Ein Thread besteht aus einem Stapel, den Status der CPU-Register und einen Eintrag in der Ausführungsliste des Zeitplanungsmoduls System. Jeder Thread gibt aller Prozesse Ressourcen frei.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385228"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 Diese exemplarische Vorgehensweise zeigt, wie die **MFC-Anwendung-Assistent** zum Erstellen einer Anwendung, die ein Menüband in der Standardeinstellung verfügt. Sie können das Menüband anschließend erweitern, indem Sie Hinzufügen einer **benutzerdefinierte** Menübandkategorie, die verfügt über eine **Favoriten** Bereich, und fügen einige häufig verwendete Befehle in den Bereich des Menübands.  

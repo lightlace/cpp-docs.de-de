@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687893"
 ---
 # <a name="13-execution-model"></a>1.3 Ausführungsmodell
 OpenMP verwendet der Fork-Join-Modell der parallelen Ausführung. Obwohl diese Fork-Join-Modell zur Lösung verschiedener Probleme hilfreich sein kann, ist es etwas für große Array-basierte Anwendungen angepasst werden. OpenMP ist dazu vorgesehen, Support-Programme, die ordnungsgemäß sowohl als parallele (mehrere Ausführungsthreads und eine vollständige OpenMP-Unterstützungsbibliothek) Programme ausgeführt werden und als sequenzielle Programme (Direktiven ignoriert und eine einfache Klassenbibliothek der OpenMP-Stubs). Es ist jedoch möglich und zulässig, um eine Anwendung entwickeln, die beim sequenziell ausgeführt, nicht ordnungsgemäß verhält. Darüber hinaus können verschiedene Grade der Parallelität aufgrund von Änderungen an der Zuordnung von numerischen Operationen verschiedene numerische Ergebnisse führen. Z. B. möglicherweise eine Reduzierung der seriellen Addition ein anderes Muster von Zuordnungen hinzufügen, als eine parallele Reduzierung. Diese verschiedenen Zuordnungen können es sich um die Ergebnisse der gleitkommaaddition ändern.  

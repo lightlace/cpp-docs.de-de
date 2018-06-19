@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382905"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Verwenden einer Dialogleiste mit einem Grundleisten-Steuerelement
 Siehe [Grundleisten-Steuerelemente und Bänder](../mfc/rebar-controls-and-bands.md), jedes Band kann nur ein untergeordnetes Fenster (oder Steuerelement) enthalten. Dies möglicherweise eine Einschränkung, wenn mehr als ein untergeordnetes Fenster pro Band sein sollen. Eine praktische problemumgehung wird zum Erstellen einer Dialogfeldressource-Leiste mit mehreren Steuerelementen und fügen Sie dann ein Grundleisten-Band (mit der Dialogleiste) für das Grundleistensteuerelement.  

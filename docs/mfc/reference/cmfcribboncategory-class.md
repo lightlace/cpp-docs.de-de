@@ -145,6 +145,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377969"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory-Klasse
 Die `CMFCRibbonCategory` Klasse implementiert eine Menübandregisterkarte, die eine Gruppe enthält [Bereiche des Menübands](../../mfc/reference/cmfcribbonpanel-class.md).  

@@ -119,6 +119,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377770"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Die `CMFCTabCtrl` -Klasse bietet eine Funktionalität für ein Registerkarten-Steuerelement. Das Registerkarten-Steuerelement zeigt ein andockbares Fenster an, mit flachen oder dreidimensionalen Registerkarten am oberen oder unteren Rand. Die Registerkarten können Text und ein Bild enthalten und bei Aktivierung die Farbe ändern.  

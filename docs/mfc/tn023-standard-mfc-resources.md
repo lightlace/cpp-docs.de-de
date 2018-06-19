@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383174"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: MFC-Standardressourcen
 In diesem Hinweis werden die standard-Ressourcen mit bereitgestellt und von der MFC-Bibliothek erforderlich.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380708"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Unterstützung für Aktivierungskontexte im MFC-Modulstatus
 MFC erstellt einen Aktivierungskontext mithilfe einer Manifestressource, die vom Benutzermodul bereitgestellt. Weitere Informationen wie Aktivierungskontext erstellt werden finden Sie unter den folgenden Themen:  

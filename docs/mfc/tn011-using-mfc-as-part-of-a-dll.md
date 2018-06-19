@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384709"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Verwenden von MFC als Teil einer DLL
 In diesem Hinweis werden reguläre MFC-DLLs, die Ihnen ermöglichen, die MFC-Bibliothek als Teil einer Windows-Dynamic Link Library (DLL) zu verwenden. Es wird davon ausgegangen, dass Sie mit Windows-DLLs sowie von ihnen vertraut sind. Informationen über MFC-Erweiterungs-DLLs, mit denen Sie erstellen können Erweiterungen für die MFC-Bibliothek finden Sie unter [DLL-Version von MFC](../mfc/tn033-dll-version-of-mfc.md).  

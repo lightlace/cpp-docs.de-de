@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379859"
 ---
 # <a name="variant-parameter-type-constants"></a>Variant-Parametertypkonstanten
 Dieses Thema enthält neue Konstanten, die angeben, variant Parametertypen für die Verwendung mit der OLE-Steuerelementklassen von den Microsoft Foundation Class-Bibliothek konzipiert.  

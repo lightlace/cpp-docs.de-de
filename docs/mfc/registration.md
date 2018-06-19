@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381169"
 ---
 # <a name="registration"></a>Registrierung
 Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet OLE eine Liste der Objekttypen zur Auswahl. OLE ruft diese Liste in die Systemdatenbank für die Registrierung, die durch alle serveranwendungen bereitgestellten Informationen enthält. Wenn ein Server selbst registriert, wird der Einträge, die sie in der Registrierung Systemdatenbank (Registrierung) legt beschreiben jeden Typ von ihm bereitgestellten Objekt, Erweiterungen und den Pfad auf sich selbst neben anderen Informationen die Datei.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382972"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Zuordnen von Fensterhandles zu Objekten
 In diesem Hinweis werden die MFC-Bibliothek Routinen, die Unterstützung für die Zuordnung von Windows-Objekt-Handles zu C++-Objekte.  

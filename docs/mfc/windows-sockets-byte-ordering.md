@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385156"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Bytereihenfolge
 In diesem Artikel sowie zwei Begleit-Artikel wird erläutert, mehrere Probleme bei der Windows Sockets-Programmierung. Dieser Artikel behandelt die Bytereihenfolge. Die anderen Probleme werden in den Artikeln behandelt: [Windows Sockets: blockieren](../mfc/windows-sockets-blocking.md) und [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md).  

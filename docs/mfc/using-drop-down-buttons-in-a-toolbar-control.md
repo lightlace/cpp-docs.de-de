@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383252"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Verwenden von DropDown-Schaltflächen in einem Symbolleisten-Steuerelement
 Zusätzlich zu Standardschaltflächen kann eine Symbolleiste auch Dropdown-Schaltflächen aufweisen. Eine Dropdown-Schaltfläche wird normalerweise durch das Vorhandensein einer angefügten Pfeil nach unten angegeben.  

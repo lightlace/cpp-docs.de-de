@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380431"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serialisieren von Daten in und aus Dateien
 Das Grundkonzept von Persistenz ist, dass ein Objekt seinen aktuellen Status, angegeben durch die Werte ihrer Membervariablen, in den persistenten Speicher geschrieben werden sollten. Später kann das Objekt neu erstellt werden, indem gelesen oder "deserialisiert", den Zustand des Objekts aus dem permanenten Speicher. Ein wichtiger Punkt ist, dass das Objekt selbst für das Lesen und Schreiben von eigenen Status zuständig ist. Daher muss er für eine Klasse beibehalten werden, die einfache Serialisierungsvorgänge implementieren.  

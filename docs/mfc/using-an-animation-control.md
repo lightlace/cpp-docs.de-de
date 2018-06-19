@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382553"
 ---
 # <a name="using-an-animation-control"></a>Verwenden eines Animationssteuerelements
 Typische Verwendung eines Animationssteuerelements entspricht dem folgenden Muster:  

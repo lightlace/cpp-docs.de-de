@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381978"
 ---
 # <a name="slider-notification-messages"></a>Benachrichtigungsmeldungen des Schieberegler-Steuerelements
 Ein Schieberegler-Steuerelement benachrichtigt das übergeordnete Fenster von Benutzeraktionen, indem Sie das übergeordnete Element senden `WM_HSCROLL` oder `WM_VSCROLL` Nachrichten, abhängig von der Ausrichtung des Schieberegler-Steuerelements. Um diese Nachrichten zu behandeln, fügen Sie Ereignishandler für die `WM_HSCROLL` und `WM_VSCROLL` Nachrichten an das übergeordnete Fenster. Die [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) und [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) Memberfunktionen werden übergeben, eine Benachrichtigungscode, der die Position des Schiebereglers und einen Zeiger auf die [CSliderCtrl](../mfc/reference/csliderctrl-class.md) Objekt. Beachten Sie, dass der Zeiger vom Typ **CScrollBar \***  , obwohl er auf verweist ein `CSliderCtrl` Objekt. Sie müssen möglicherweise den this-Zeiger umgewandelt werden, wenn Sie das Schieberegler-Steuerelement bearbeiten müssen.  

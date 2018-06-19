@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882774"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Zeichnen von Linien oder geschlossenen Körpern (Bildbearbeitung für Symbole)
 Grafik-Editor-tools für das Zeichnen von Linien und alle geschlossene Körpern funktionieren auf die gleiche Weise: die Einfügemarke an einer Stelle setzen und in eine andere ziehen. Für Zeilen werden diese Punkte die Endpunkte an. Diese Punkte sind geschlossenen Körpern gegenüberliegenden Ecken eines Rechtecks umgebende in der Abbildung.  

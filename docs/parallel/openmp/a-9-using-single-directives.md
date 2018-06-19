@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690380"
 ---
 # <a name="a9---using-single-directives"></a>A.9   Verwenden einzelner Direktiven
 Das folgende Beispiel veranschaulicht die `single` Richtlinie ([Abschnitt 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) auf Seite "15"). Im Beispiel nur ein Thread (in der Regel der erste Thread, der erkennt die `single` Richtlinie) fortschrittsmeldung druckt. Der Benutzer muss keine Annahmen wie auszuführende Bestimmung des Threads wird die `single` Abschnitt. Alle anderen Threads überspringt die `single` Abschnitt, und beenden Sie die Grenze am Ende der `single` erstellen. Wenn andere Threads fortgesetzt werden können, ohne zu warten, der vom Thread ausgeführten der `single` Abschnitt eine `nowait` -Klausel angegeben werden kann, auf die `single` Richtlinie.  

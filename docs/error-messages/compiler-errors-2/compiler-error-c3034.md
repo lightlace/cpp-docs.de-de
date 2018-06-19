@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247011"
 ---
 # <a name="compiler-error-c3034"></a>Compilerfehler C3034
 Die OpenMP directive1-Direktive von kann nicht direkt in der directive1-Direktive geschachtelt werden.  

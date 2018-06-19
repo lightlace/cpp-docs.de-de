@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379995"
 ---
 # <a name="reflected-window-message-ids"></a>Reflektierte Fenstermeldungs-IDs
 Eine schnelle Möglichkeit zum Erstellen eines ActiveX-Steuerelements oder andere spezielle Steuerelement ist Unterklassen eines Fensters. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente: einer Fenstersteuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  

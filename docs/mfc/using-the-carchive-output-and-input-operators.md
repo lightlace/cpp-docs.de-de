@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383331"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Verwenden der CArchive &lt; &lt; und &gt; &gt; Operatoren
 `CArchive` bietet <\< und >> Operatoren zum Schreiben und Lesen von einfachen Datentypen sowie `CObject`s in und aus einer Datei.  

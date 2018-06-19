@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381123"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Schritte in einer typischen FTP-Clientanwendung
 Erstellt von eine typischen FTP-Clientanwendung eine [CInternetSession](../mfc/reference/cinternetsession-class.md) und ein [CFtpConnection](../mfc/reference/cftpconnection-class.md) Objekt. Beachten Sie, dass diese MFC-WinInet-Klassen nicht tatsächlich der Einstellungen für den Proxy gesteuert. IIS ist.  

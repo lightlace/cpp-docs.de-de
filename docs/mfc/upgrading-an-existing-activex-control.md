@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385306"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 Vorhandenen ActiveX-Steuerelementen (früher OLE-Steuerelemente) im Internet, ohne Änderungen verwendet werden können. Allerdings empfiehlt es sich so ändern Sie Steuerelemente, um ihre Leistung zu verbessern. Wenn das Steuerelement auf einer Webseite verwenden, sind weitere Überlegungen. Die Datei ".ocx" und alle unterstützenden Dateien müssen auf dem Zielcomputer sein oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch Download Zeit einen wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  

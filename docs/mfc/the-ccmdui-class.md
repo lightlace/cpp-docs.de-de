@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379807"
 ---
 # <a name="the-ccmdui-class"></a>Die CCmdUI-Klasse
 Wenn er einen Aktualisierungsbefehl an seinen Handler weitergeleitet wird, das Framework übergibt dem Handler einen Zeiger auf eine `CCmdUI` Objekt (oder auf ein Objekt des eine `CCmdUI`-abgeleitete Klasse). Dieses Objekt darstellt, Menüs oder Symbolleisten-Schaltflächen oder anderen Benutzeroberfläche-Objekt, das der Befehl generiert. Vom updatehandler Ruft die Memberfunktionen von der `CCmdUI` -Struktur durch den Zeiger auf das Objekt für die Benutzeroberfläche zu aktualisieren. Hier ist z. B. ein updatehandler für das Menüelement alle löschen:  

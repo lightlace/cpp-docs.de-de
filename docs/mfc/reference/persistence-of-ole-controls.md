@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378333"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenz der OLE-Steuerelemente
 Eine Funktion der OLE-Steuerelemente ist Eigenschaft Persistenz (oder Serialisierung), womit die OLE-Steuerelements zum Lesen oder Schreiben von Eigenschaftswerten in und aus einer Datei oder einem Stream. Eine Steuerelementcontainer-Anwendung kann die Serialisierung verwenden, zum Speichern von Eigenschaftswerten für ein Steuerelement, auch nachdem die Anwendung das Steuerelement zerstört wurde. Die Eigenschaftswerte des OLE-Steuerelements können dann aus der Datei gelesen werden, oder Stream, wenn eine neue Instanz des Steuerelements zu einem späteren Zeitpunkt erstellt wird.  

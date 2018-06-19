@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383431"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT-Struktur
 Beim Schreiben der [Benachrichtigung QuickInfo-Handler](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), müssen Sie die `TOOLTIPTEXT` Struktur. Die Mitglieder der `TOOLTIPTEXT` Struktur sind:  

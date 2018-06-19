@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880318"
 ---
 # <a name="modifying-the-layout-grid"></a>Ändern des Layoutrasters
 Beim platzieren oder Anordnen von Steuerelementen in einem Dialogfeld, können Sie das Layoutraster für eine genauere positionieren. Wenn das Raster aktiviert ist, werden die Steuerelemente ausgerichtet werden soll "auf die gepunkteten Zeilen des Rasters" einzurasten angezeigt. Sie können Aktivieren dieses Feature "am Raster ausrichten" aus, und deaktivieren und Ändern der Größe der Rasterzellen des Layouts.  

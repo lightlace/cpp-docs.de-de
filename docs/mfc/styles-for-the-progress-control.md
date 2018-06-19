@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380109"
 ---
 # <a name="styles-for-the-progress-control"></a>Stile für das Statussteuerelement
 Beim anfänglichen Erstellen des Statussteuerelements ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md#create)), verwenden Sie die `dwStyle` Parameter, um das gewünschte Fensterstile für Ihre Statussteuerelement anzugeben. In der folgenden Liste sind die entsprechenden Fensterstile. Das Steuerelement ignoriert alle Fensterstil als diejenigen, die hier aufgeführten. Sie sollten immer das Steuerelement als untergeordnetes Fenster, in der Regel von einem Dialogfeld übergeordnetes Element erstellen.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380727"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Speichern und Laden eines CObject per Archiv
 Speichern und Laden von `CObject`s per Archiv muss zusätzliche berücksichtigt werden. In bestimmten Fällen sollten Sie Aufrufen der `Serialize` Funktion des Objekts, in dem die `CArchive` Objekt ist ein Parameter der der `Serialize` Aufruf, im Gegensatz zur Verwendung der **< \<** oder **>>** Operator über die `CArchive`. Wichtig zu bedenken ist, die die `CArchive` **>>** Operator Konstrukte der `CObject` im Arbeitsspeicher, die basierend auf `CRuntimeClass` Informationen, die zuvor durch das Speichern von Archiv in die Datei geschrieben.  

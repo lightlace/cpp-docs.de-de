@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692144"
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 Stellt einen Index in einer [Tiled_extent](tiled-extent-class.md) Objekt. Diese Klasse verfügt über Eigenschaften, über die auf Elemente relativ zum lokalen Kachelursprung und relativ zum globalen Ursprung zugegriffen werden kann. Weitere Informationen gekachelter Leerzeichen finden Sie unter [mithilfe von Kacheln](../../../parallel/amp/using-tiles.md).  

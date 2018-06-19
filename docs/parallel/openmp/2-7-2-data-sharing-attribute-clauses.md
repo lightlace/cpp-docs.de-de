@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691902"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Datenfreigabe-Attributklauseln
 Mehrere Anweisungen akzeptieren Klauseln, die einem Benutzer ermöglichen, die Freigabe Attribute von Variablen für die Dauer des Bereichs zu steuern. Freigeben von Attribut-Klauseln gelten nur für Variablen im lexikalischen Block der Richtlinie auf dem die-Klausel wird angezeigt. Nicht alle der folgenden Klauseln sind für alle Anweisungen zulässig. Die Liste der Klauseln, die für eine bestimmte Richtlinie gültig sind, werden mit der Direktive beschrieben.  

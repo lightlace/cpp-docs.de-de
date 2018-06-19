@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689986"
 ---
 # <a name="multithreading-programming-tips"></a>Multithreading: Tipps für die Programmierung
 In Multithreadanwendungen müssen Sie beim Zugriff auf Daten größere Vorsicht walten lassen als in Singlethreadanwendungen. Da in Multithreadanwendungen mehrere unabhängige Ausführungspfade gleichzeitig verwendet werden, müssen die Algorithmen, die Daten oder beide darüber informiert sein, dass Daten möglicherweise von mehreren Threads gleichzeitig verwendet werden. In diesem Thema werden die Methoden beschrieben, mit denen potenzielle Probleme bei der Programmierung von Multithreadanwendungen mit Microsoft Foundation Class Library (MFC) vermieden werden können.  

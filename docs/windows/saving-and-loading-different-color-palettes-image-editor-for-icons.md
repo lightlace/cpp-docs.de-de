@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892318"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Speichern und Laden von verschiedenen Farbpaletten (Bildbearbeitung für Symbole)
 Sie speichern und Laden Sie eine Farbpalette mit [angepasst Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Standardmäßig wird die zuletzt verwendete Farbpalette beim Start von Visual Studio automatisch geladen.)  

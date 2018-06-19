@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695966"
 ---
 # <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t-Struktur
 Der Tagtyp, mit dem angegeben wird, dass die D3D-Zugriffssperre eher übernommen als abgerufen werden sollte.  

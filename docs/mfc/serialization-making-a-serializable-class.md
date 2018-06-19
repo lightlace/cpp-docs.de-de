@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383415"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serialisierung: Erstellen einer serialisierbaren Klasse
 Fünf wichtige Schritte sind erforderlich, um eine Klasse serialisierbar zu machen. Sie sind unten aufgeführt und in den folgenden Abschnitten erläutert:  

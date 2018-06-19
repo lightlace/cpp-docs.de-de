@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892791"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Festlegen der Breite einer horizontalen Bildlaufleiste
 Wenn Sie ein Dialogfeld mit der MFC-Klassen ein Listenfeld mit einer horizontalen Bildlaufleiste hinzugefügt haben, wird die Bildlaufleiste nicht automatisch in der Anwendung angezeigt.  

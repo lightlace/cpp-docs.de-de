@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384477"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualisieren des Textes in der Statusleiste
 In diesem Artikel wird erläutert, wie zum Ändern des Texts, die in einer MFC-Status-Leistenbereich angezeigt wird. Eine Statusleiste – ein Fensterobjekt der Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) – enthält mehrere "Bereiche". Jeder Bereich ist eine rechteckige Fläche der Statusleiste an, der Sie verwenden können, um Informationen anzuzeigen. Viele Anwendungen werden z. B. den Status der FESTSTELLTASTE, NUM-Taste und andere Schlüssel in der äußersten rechten Bereiche angezeigt. Anwendungen anzeigen häufig informativen Text in der am weitesten links stehende Fensterbereich (0), bezeichnet der "" Nachrichtenbereich. Beispielsweise verwendet die Standard-MFC-Statusleiste Nachrichtenbereich eine Zeichenfolge, die erläutern, der aktuell ausgewählte Element oder auf der Symbolleiste Menüschaltfläche angezeigt. Die Abbildung im [Statusleisten](../mfc/status-bar-implementation-in-mfc.md) zeigt eine Statusleiste aus einer-Anwendungs-Assistent erstellte MFC_Anwendung.  

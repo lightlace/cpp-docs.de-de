@@ -193,6 +193,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377822"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 Implementiert die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface), wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters. Es erweitert die [CFrameWnd](../../mfc/reference/cframewnd-class.md) Klasse.  

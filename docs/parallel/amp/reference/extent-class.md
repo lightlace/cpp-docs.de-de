@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693249"
 ---
 # <a name="extent-class-c-amp"></a>extent-Klasse (C++ AMP)
 Stellt einen Vektor eines *N* ganzzahligen Werten, die angeben, das die Begrenzungen des ein *N*-dimensionalen Raum, die den Ursprung 0 aufweist. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert.  

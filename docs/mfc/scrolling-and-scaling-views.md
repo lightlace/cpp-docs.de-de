@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379267"
 ---
 # <a name="scrolling-and-scaling-views"></a>Bildlauf und Skalierung für Ansichten
 MFC unterstützt, Sichten, die Bildlauf und Ansichten, die automatisch auf die Größe des Rahmenfensters skaliert werden, in dem diese angezeigt wird. Klasse `CScrollView` unterstützt beide Arten von Ansichten.  

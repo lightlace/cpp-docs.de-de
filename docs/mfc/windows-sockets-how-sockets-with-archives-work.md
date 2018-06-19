@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385215"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Wie Sockets mit Archiven arbeiten
 In diesem Artikel wird erläutert, wie eine [CSocket](../mfc/reference/csocket-class.md) -Objekt, eine [CSocketFile](../mfc/reference/csocketfile-class.md) -Objekt, und ein [CArchive](../mfc/reference/carchive-class.md) Objekt werden kombiniert, um vereinfachen das Senden und Empfangen von Daten über eine Windows Ein Sockettimeout aufgetreten.  
