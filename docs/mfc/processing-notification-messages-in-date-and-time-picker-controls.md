@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349173"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Verarbeiten von Benachrichtigungsmeldungen in Steuerelementen für Zeit und Datum
 Benutzer interagieren mit das Datum und Uhrzeit Kontoauswahl-Steuerelement, das Steuerelement (`CDateTimeCtrl`) sendet benachrichtigungsmeldungen an das übergeordnete Fenster, normalerweise ein Ansichts- oder Dialogfeldobjekt-Objekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Beispielsweise, wenn der Benutzer öffnet die Datums- / Zeitauswahl anzuzeigenden das eingebettete Monatskalender-Steuerelement, das **DTN_DROPDOWN** Benachrichtigung wird gesendet.  

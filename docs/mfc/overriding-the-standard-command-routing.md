@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352811"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Überschreiben des Standardbefehlsroutings
 In seltenen Fällen, wenn Sie eine Variante des standardframeworkressourcen routing implementieren müssen können Sie sie überschreiben. Das Konzept ist so ändern Sie das routing in eine oder mehrere Klassen durch Außerkraftsetzen von `OnCmdMsg` in diesen Klassen. Wenn Sie dies tun:  

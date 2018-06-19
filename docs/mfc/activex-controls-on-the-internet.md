@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352309"
 ---
 # <a name="activex-controls-on-the-internet"></a>ActiveX-Steuerelemente für das Internet
 ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spezifikation. Steuerelemente sind eine primäre Architektur für die Entwicklung von programmierbaren Softwarekomponenten, die in einer Vielzahl von unterschiedlichen Containern, einschließlich COM+-fähigen Webbrowser auf das Internet verwendet werden können. Jedes ActiveX-Steuerelement kann ein Internet-Steuerelement sein und können die Funktionalität eines aktiven Dokuments hinzufügen oder Teil einer Webseite. Steuerelemente auf einer Webseite können mithilfe von Skripts miteinander kommunizieren.  

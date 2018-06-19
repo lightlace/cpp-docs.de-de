@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348344"
 ---
 # <a name="containers-compound-files"></a>Container: Verbunddateien
 Dieser Artikel beschreibt die Komponenten und die Implementierung der Verbunddateien sowie die vor- und Nachteile der Verwendung von Verbunddateien in den OLE-Anwendungen.  

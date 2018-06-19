@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373797"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Benutzeroberflächen-Features, MFC-Anwendungs-Assistent
 Dieser Artikel beschreibt die Optionen, die Sie verwenden können, um das Aussehen Ihrer Anwendung anzugeben. Features der Benutzeroberfläche für das Projekt verfügbaren hängt vom Typ der Anwendung, die Sie, in angegeben der [Anwendungstyp, MFC-Anwendungs-Assistent](../../mfc/reference/application-type-mfc-application-wizard.md) Seite des Assistenten für die MFC-Anwendung. Wenn Sie eine SDI-Anwendung erstellen, können nicht Sie z. B. Stile für untergeordnete Rahmen hinzufügen.  

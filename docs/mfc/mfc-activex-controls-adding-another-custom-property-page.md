@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350780"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite
 In einigen Fällen müssen ein ActiveX-Steuerelement mehr Eigenschaften als angemessen auf eine Seite passen. In diesem Fall können Sie die Eigenschaftenseiten für das ActiveX-Steuerelement zum Anzeigen dieser Eigenschaften hinzufügen.  

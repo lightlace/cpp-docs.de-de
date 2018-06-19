@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352788"
 ---
 # <a name="docking-and-floating-toolbars"></a>Andockbare und unverankerte Symbolleisten
 Die Microsoft Foundation Class-Bibliothek unterstützt die andockbare Symbolleisten. Eine andockbare Symbolleiste angefügt oder angedockt sind, klicken Sie auf jeder Seite des übergeordneten Fensters, oder es kann getrennt sein, in einem eigenen Minirahmenfenster umfließt. In diesem Artikel erläutert die andockbare Symbolleisten in Ihren Anwendungen verwenden.  

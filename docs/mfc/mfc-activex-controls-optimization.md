@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355310"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC-ActiveX-Steuerelemente: Optimierung
 Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um die ActiveX-Steuerelemente für eine bessere Leistung zu optimieren.  

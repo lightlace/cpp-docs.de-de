@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349466"
 ---
 # <a name="message-handling-and-command-targets"></a>Meldungsbehandlung und Befehlsziele
 Die Dispatch-Befehlsschnittstelle `IOleCommandTarget` definiert einen einfachen und erweiterbaren Mechanismus zum Abfragen und Befehle ausführen. Dieser Mechanismus ist einfacher als das Automation `IDispatch` daran, dass es einen Standardsatz von Befehlen; vollständig benötigt Befehle sind selten, Argumente und keine Typinformationen beteiligt ist (typsicherheit wird für die Befehlsargumente ebenfalls verringert).  

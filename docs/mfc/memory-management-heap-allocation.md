@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352411"
 ---
 # <a name="memory-management-heap-allocation"></a>Speicherverwaltung: Heapbelegung
 Für die Zuordnung arbeitsspeicheranforderungen des Programms wird im Heap reserviert. Es ist ein Bereich, abgesehen von den Programmcode und den Stapel. Standard-C-Programmen verwenden Sie die Funktionen `malloc` und **freien** zu reservieren und Freigeben von Speicher für den Heap. Die Debugversion von MFC bietet geänderte Versionen von den integrierten C++-Operatoren **neue** und **löschen** reservieren und Freigeben von Objekten im Heap Arbeitsspeicher.  

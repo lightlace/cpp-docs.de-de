@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254332"
 ---
 # <a name="compiler-error-c3018"></a>Compilerfehler C3018
 "var1": Der Test oder das Inkrement in der For-Anweisung von OpenMP muss die Indexvariable "var2" verwenden.  

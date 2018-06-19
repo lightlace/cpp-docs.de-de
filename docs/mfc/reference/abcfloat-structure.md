@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351614"
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT-Struktur
 Die `ABCFLOAT` Struktur enthält die A, B und C breiten Zeichen ein.  

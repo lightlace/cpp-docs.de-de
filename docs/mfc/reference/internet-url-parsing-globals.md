@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374797"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Analysieren von Internet-URLs und -Hilfsprogramme
 Wenn ein Client eine Abfrage an den IIS-Server sendet, können Sie eine der Analyse von Globals URLs zum Extrahieren von Informationen über den Client verwenden. Die Hilfsfunktionen bieten andere Internetfunktionalität.

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860384"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>Ändern eines Symbols&#39;s numerischen Wert
 Mit einer einzelnen Ressource verknüpfte Symbole, Sie können für die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) um den Symbolwert zu ändern. Sie können die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md) so ändern Sie den Wert von Symbolen wird derzeit nicht auf eine Ressource zugewiesen. Weitere Informationen finden Sie unter [ändern nicht zugewiesener Symbole](../windows/changing-unassigned-symbols.md).  

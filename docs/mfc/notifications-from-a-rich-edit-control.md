@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353852"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Benachrichtigungen von einem RichEdit-Steuerelement
 Benachrichtigung Nachrichten Bericht Ereignisse, die Auswirkungen auf ein Rich-edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Sie können durch das übergeordnete Fenster verarbeitet werden oder mithilfe von Reflektion Nachricht vom Rich edit-Steuerelement selbst. Rich-Edit-Steuerelemente unterstützen alle die benachrichtigungsmeldungen mit Bearbeitungssteuerelementen sowie mehrere zusätzliche diejenigen verwendet. Sie können bestimmen, welche benachrichtigungsmeldungen ein rich-Edit-Steuerelement das übergeordnete Fenster sendet durch Festlegen seiner "" Ereignismaske.  

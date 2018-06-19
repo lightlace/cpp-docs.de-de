@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349908"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datenobjekte und Datenquellen: Bearbeitung
 Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse häufig verwendeter Vorgänge auf die Daten, z. B. das Einfügen und Entfernen von Daten, die beim Aufzählen der Formate, denen die Daten in enthalten ist, und vieles mehr. Dieser Artikel beschreibt die Techniken zum Durchführen der am häufigsten verwendeten Vorgänge erforderlich sind. Folgende Themen werden behandelt:  

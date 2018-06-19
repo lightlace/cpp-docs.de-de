@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243028"
 ---
 # <a name="compiler-error-c2990"></a>Compilerfehler C2990
 'Klasse': nicht-Klassentyp wurde bereits als Typ einer Klasse deklariert  

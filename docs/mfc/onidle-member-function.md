@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350366"
 ---
 # <a name="onidle-member-function"></a>OnIdle-Memberfunktion
 Wenn keine Windows-Meldungen verarbeitet werden, das Framework Ruft die [CWinApp](../mfc/reference/cwinapp-class.md) Memberfunktion [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (beschrieben in der Verweis auf die MFC-Bibliothek).  

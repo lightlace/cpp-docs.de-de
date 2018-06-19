@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685839"
 ---
 # <a name="1-introduction"></a>1. Einführung
 Dieses Dokument gibt eine Auflistung von Compiler-Direktiven, Bibliotheksfunktionen und Umgebungsvariablen, die zum Angeben von shared Memory-Parallelität in C und C++-Programmen verwendet werden können. In diesem Dokument beschriebene Funktionalität wird zusammenfassend als bezeichnet den *OpenMP C/C++-Anwendung die API (Anwendungsprogrammierschnittstelle)*. Das Ziel dieser Spezifikation ist, um ein Modell bereitzustellen, zur parallelen Programmierung, die ein Programm über das shared Memory-Architekturen von unterschiedlichen Anbietern portabel sein können. OpenMP-C-/C++-API wird von Compilern von zahlreichen Anbietern unterstützt werden. Weitere Informationen zu OpenMP, einschließlich der *OpenMP Fortran Anwendungsprogrammierschnittstelle*, finden Sie unter der folgenden Website:  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695186"
 ---
 # <a name="concurrency-namespace"></a>concurrency-Namespace
 Der `Concurrency`-Namespace stellt Klassen und Funktionen bereit, die Ihnen den Zugriff auf die Concurrency Runtime ermöglichen, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).  

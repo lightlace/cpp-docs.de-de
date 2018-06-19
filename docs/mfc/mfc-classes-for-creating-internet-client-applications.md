@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348660"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>MFC-Klassen für das Erstellen von Internetclientanwendungen
 MFC stellt die folgenden Klassen und globale Funktionen zum Schreiben von Internetclientanwendungen bereit. Einzug kennzeichnet, dass eine Klasse von der darüber liegenden linksbündigen-Klasse abgeleitet ist. `CGopherFile` und `CHttpFile` abgeleitet `CInternetFile`, z. B. Diese Klassen und globale Funktionen werden im CFILEFIND deklariert. H, mit Ausnahme von `CFileFind`, der in AFX deklariert ist. H.  

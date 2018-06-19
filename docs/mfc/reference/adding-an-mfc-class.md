@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355391"
 ---
 # <a name="adding-an-mfc-class"></a>Hinzufügen einer MFC-Klasse
 Verwenden Sie zum Hinzufügen von Klassen, die Bibliotheksklassen Microsoft Foundation Class (MFC) abgeleitet, dem Projekt die **Klasse hinzufügen** verfügbaren Befehle [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Geben Sie den Namen der neuen Klasse, wählen Sie die Basisklasse aus, und wählen Sie die ID des Dialogfelds, mit denen sie zugeordnet (sofern vorhanden) ist. Der Code-Assistenten eine Headerdatei und eine Implementierungsdatei erstellt und dem Projekt hinzugefügt.  

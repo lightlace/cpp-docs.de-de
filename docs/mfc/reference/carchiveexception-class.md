@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352605"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException-Klasse
 Stellt eine serialisierungsausnahmebedingung dar  

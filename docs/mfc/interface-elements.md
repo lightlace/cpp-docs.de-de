@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352576"
 ---
 # <a name="interface-elements"></a>Schnittstellenelemente
 Dieses Dokument beschreibt die Elemente der Benutzeroberfläche, die in eingeführt wurden [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 sowie eine Beschreibung von Unterschieden mit der früheren Version der Bibliothek.  

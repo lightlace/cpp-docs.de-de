@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349112"
 ---
 # <a name="list-items-and-image-lists"></a>Listenelemente und Bildlisten
 Ein "Element" in einem Listensteuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)) besteht aus einem Symbol, eine Bezeichnung und möglicherweise andere Informationen (in "Unterelementen").  

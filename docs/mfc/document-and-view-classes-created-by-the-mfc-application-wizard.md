@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349921"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Mithilfe des MFC-Anwendungs-Assistenten erstellte Dokument- und Ansichtsklassen
 MFC-Anwendung-Assistent bietet Ihnen einen Vorsprung auf Ihre Programmentwicklung skeletal Dokument- und Ansichtsklassen für Sie erstellen. Sie können dann [ordnen Befehle und Nachrichten diese Klassen](../mfc/reference/mapping-messages-to-functions.md) und verwenden Sie die Visual C++ Quellcode-Editors, um deren Memberfunktionen zu schreiben.  

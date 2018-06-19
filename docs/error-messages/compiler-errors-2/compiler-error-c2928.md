@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241803"
 ---
 # <a name="compiler-error-c2928"></a>Compilerfehler C2928
 Explizite Instanziierung; "Bezeichner" ist keine Funktion oder kein statisches Datenmember der Vorlagenklasse "Klasse"  

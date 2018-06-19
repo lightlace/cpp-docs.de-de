@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371099"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Strukturen, Stile, Rückrufe und Meldungszuordnungen
 In diesem Abschnitt dokumentiert, die Strukturen, Stilen und Fehlerrückruf-Funktionen, die von der Microsoft Foundation Class-Bibliothek verwendet, und die MFC-meldungszuordnungen.  

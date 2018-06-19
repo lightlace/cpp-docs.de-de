@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353904"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection-Klasse
 Stellt einen "kritischen Abschnitt" – ein Synchronisierungsobjekt, das jeweils einem Thread zu einem Zeitpunkt auf eine Ressource oder einen Codeabschnitt ermöglicht.  

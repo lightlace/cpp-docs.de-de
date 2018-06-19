@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357714"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager-Klasse
 Die `CContextMenuManager` Objekt verwaltet Kontextmenüs, auch als Verknüpfungsmenüs bezeichnet.  

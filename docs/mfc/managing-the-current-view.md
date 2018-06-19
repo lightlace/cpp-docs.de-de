@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349590"
 ---
 # <a name="managing-the-current-view"></a>Verwalten der aktuellen Ansicht
 Im Rahmen der Standardimplementierung von Rahmenfenstern der nachverfolgt ein Rahmenfensters eine derzeit aktive Ansicht. Wenn das Rahmenfenster mehr als eine Ansicht, z. B. in einem Splitterfenster enthält ist die aktuelle Ansicht die aktuellste Ansicht verwendet. Die aktive Ansicht ist unabhängig von dem aktiven Fenster in Windows oder den aktuellen Eingabefokus.  

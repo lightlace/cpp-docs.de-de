@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348415"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement
 Erstellen Sie in der übergeordneten Klasse Grundleisten-Steuerelement, ein `OnChildNotify` Handlerfunktion mit einer Switch-Anweisung für jedes Grundleisten-Steuerelement (`CReBarCtrl`) benachrichtigungsmeldungen, die Sie behandeln möchten. Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer Objekte über die Grundleisten-Steuerelement Änderungen das Layout der rebarbereichen, löscht Lieblingsbands zieht, aus dem Grundleistensteuerelement, und so weiter.  

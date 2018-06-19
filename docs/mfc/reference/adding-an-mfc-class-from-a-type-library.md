@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355115"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Hinzufügen einer MFC-Klasse aus einer Typbibliothek
 Verwenden Sie diesen Assistenten zum Erstellen einer MFC-Klasse von einer Schnittstelle in einer Typbibliothek verfügbar. Sie können eine MFC-Klasse zum Hinzufügen ein [MFC-Anwendung](../../mfc/reference/creating-an-mfc-application.md), wird eine [MFC-DLL](../../mfc/reference/creating-an-mfc-dll-project.md), oder ein [MFC-ActiveX-Steuerelement](../../mfc/reference/creating-an-mfc-activex-control.md).  

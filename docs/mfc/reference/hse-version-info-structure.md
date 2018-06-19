@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369885"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO-Struktur
 Diese Struktur verweist die `pVer` Parameter in der `CHttpServer::GetExtensionVersion` Memberfunktion. Er bietet eine ISA-Versionsnummer und eine textbeschreibung der ISA  

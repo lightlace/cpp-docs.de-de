@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376137"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar-Klasse
 Die `CMFCColorBar` -Klasse stellt eine andockbare Symbolleiste, die Farben in einem Dokument oder die Anwendung auswählen können.  

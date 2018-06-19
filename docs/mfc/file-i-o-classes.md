@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356185"
 ---
 # <a name="file-io-classes"></a>Klassen für Datei-E/A
 Diese Klassen bieten eine Schnittstelle zu herkömmlichen Datenträgerdateien, in-Memory-Dateien, aktive Streams und Windows-Sockets. Alle Klassen abgeleitet `CFile` kann verwendet werden, mit einem `CArchive` -Objekt, die Serialisierungen durchführen.  

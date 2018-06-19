@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694068"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Concurrency Runtime im Vergleich zu anderen Parallelitätsmodellen
 Dieses Dokument beschreibt die Unterschiede zwischen den Funktionen und Programmiermodellen der Concurrency Runtime und anderen Technologien. Wenn Sie verstehen, welche Vorteile die Concurrency Runtime gegenüber anderen Programmiermodellen hat, können Sie die Technologie auswählen, die die Anforderungen der jeweiligen Anwendung am besten erfüllt.  

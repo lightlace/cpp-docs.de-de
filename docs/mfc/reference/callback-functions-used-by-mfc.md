@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350884"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
 Drei Fehlerrückruf-Funktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. Diese Rückruffunktionen übergeben werden, um [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), und [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc). Beachten Sie, dass alle Rückruffunktionen MFC-Ausnahmen abfangen müssen, vor der Rückgabe an Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht aus. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  

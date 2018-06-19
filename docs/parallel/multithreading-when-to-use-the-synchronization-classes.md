@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688257"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Multithreading: Verwendungsmöglichkeiten der Synchronisierungsklassen
 Multithreading mit MFC bereitgestellten Klassen können zwei Kategorien zugeordnet: Synchronisierungsobjekte ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), und [CEvent](../mfc/reference/cevent-class.md)) und den Zugriff von Synchronisierungsobjekten ([CMultiLock](../mfc/reference/cmultilock-class.md) und [CSingleLock](../mfc/reference/csinglelock-class.md)).  

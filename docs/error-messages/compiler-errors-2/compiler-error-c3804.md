@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267156"
 ---
 # <a name="compiler-error-c3804"></a>Compilerfehler C3804
 "Property_accessor": die Zugriffsmethoden eine Eigenschaft müssen entweder werden alle statisch oder alle nicht statisch  

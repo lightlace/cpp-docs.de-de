@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691049"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE** gilt nur für **für** und **für parallele** Direktiven, die den Typ "Zeitplan" haben **Runtime**. Die Zeitplan-Typ und Block Größe für alle solchen Schleifen kann zur Laufzeit festgelegt werden, durch diese Umgebungsvariable festlegen, um den Zeitplan erkannten Typen und eine optionale *Chunk_size*.  

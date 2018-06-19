@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374962"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl-Klasse
 Die `CMFCShellListCtrl` Klasse bietet Windows eine Liste und erweitert diese durch die Fähigkeit, eine Liste von shellelementen anzeigen.  

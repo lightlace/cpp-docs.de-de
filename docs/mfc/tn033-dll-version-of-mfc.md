@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385241"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL-Version der MFC
 Dieser Hinweis wird beschrieben, wie können Sie die MFCxx.DLL und MFCxxD.DLL (wobei x für die MFC-Versionsnummer steht) dynamic Link Librarys für MFC-Anwendungen und MFC-Erweiterungs-DLLs freigegeben. Weitere Informationen über reguläre MFC-DLLs finden Sie unter [mithilfe von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  

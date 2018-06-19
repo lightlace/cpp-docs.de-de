@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349310"
 ---
 # <a name="memory-management-frame-allocation"></a>Speicherverwaltung: Rahmenzuordnung
 Zuordnung für den Frame nimmt seinen Namen aus der "Stapelrahmen", die festgelegt wird nach oben, wenn eine Funktion aufgerufen wird. Die Stack-Frame ist ein Bereich des Arbeitsspeichers, der vorübergehend die Argumente der Funktion sowie alle Variablen, die definiert enthält, werden in der Funktion lokal. Framevariablen werden häufig "Automatische" Variablen bezeichnet, da der Compiler automatisch die Speicherplatz für sie reserviert.  

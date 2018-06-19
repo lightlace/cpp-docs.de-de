@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351721"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Handler für Meldungszuordnungsbereiche
 In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine einzelne Nachricht Handler-Funktion (und nicht nur eine bestimmte Funktion eine Nachricht zuordnen) zugeordnet werden.  

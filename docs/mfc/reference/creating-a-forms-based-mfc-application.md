@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372446"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Erstellen einer formularbasierten MFC-Anwendung
 Ein Formular ist ein Dialogfeld mit Steuerelementen, die dem Benutzer den Zugriff auf Daten und u. U. auch das Ändern von Daten ermöglichen. Sie können beispielsweise eine Anwendung entwickeln, in der der Benutzer zwischen einer Reihe von Formularen auswählt. In der Regel eine formularbasierte Anwendung kann der Benutzer Zugriff Formulare durch Klicken **neu** aus der **Datei** Menü. Eine auf Dialogfeldern basierende Anwendung, die dem Benutzer keinen Zugriff auf wird eine **neu** -Option in der **Datei** Menü wird auch eine formularbasierte Anwendung betrachtet.  

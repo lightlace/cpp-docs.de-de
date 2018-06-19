@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863633"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Unterstützung von Mehrbyte-Zeichensätzen (MBCS)
 Mehrbyte-Zeichensätze (MBCS) sind ein älterer Ansatz, mit dem die erforderliche Unterstützung von Zeichensätzen sichergestellt wird, die nicht mit einem Byte pro Zeichen dargestellt werden können, z. B. Japanisch und Chinesisch. Wenn Sie Neuentwicklungen ausführen, sollten Sie Unicode für alle Textzeichenfolgen außer Systemzeichenfolgen verwenden, die nicht für die Endbenutzer sichtbar sind. MBCS ist eine ältere Technologie und wird nicht für Neuentwicklungen empfohlen.  

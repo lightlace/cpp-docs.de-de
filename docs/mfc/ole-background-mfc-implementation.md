@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349998"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE-Hintergrund: MFC-Implementierung
 Aufgrund der Größe und Komplexität der unformatierten OLE-API kann das Aufrufen dieser zum Schreiben von OLE-Anwendungen direkt sehr zeitaufwändig sein. Das Ziel der Microsoft Foundation Class Library-Implementierung von OLE ist der verbleibende Arbeitsaufwand zu reduzieren, Sie müssen lediglich mit umfassenden, OLE-fähige Anwendungen schreiben können.  

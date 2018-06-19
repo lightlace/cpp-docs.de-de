@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348482"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI Macro
 Verwenden der **Eigenschaften** Fenster aus, um ein Objekt für die Benutzeroberfläche ein Befehl / Update-Ereignishandler in einem Befehlszielobjekt verbinden. Es wird automatisch verbinden, die Benutzeroberflächen-Objekt-ID, die `ON_UPDATE_COMMAND_UI` Makro und erstellen Sie einen Ereignishandler, in dem Objekt, das Update behandelt wird. Finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md) für Weitere Informationen.  

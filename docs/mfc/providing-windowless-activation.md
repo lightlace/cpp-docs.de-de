@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351809"
 ---
 # <a name="providing-windowless-activation"></a>Bereitstellung von fensterloser Aktivierung
 Fenster Erstellung Code (d. h. alle beim Aufruf von **CreateWindow**) beeinträchtigen ausführen. Ein Steuerelement, das verwaltet ein Fenster auf dem Bildschirm hat, um Nachrichten für das Fenster zu verwalten. Fensterlose Steuerelemente sind deshalb schneller als Steuerelemente in Windows.  

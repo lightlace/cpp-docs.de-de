@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382014"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: Multithreaded MFC 2.1-Anwendungen
 In diesem technischen Hinweis beschrieben ursprünglich die Einschränkungen von Multithreadprogrammen mit MFC 2.1, stellte ursprünglich mit Visual C++ 1.0 für Windows NT. MFC 3.0 unterstützt das multithreading direkt dokumentiert ist. Finden Sie in dieser Referenz für Weitere Informationen.  

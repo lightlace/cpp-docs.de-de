@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696200"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Gewusst wie: Erhöhen der Effizienz mithilfe von parallelen Containern
 In diesem Thema wird aufgezeigt, wie parallele Container verwendet werden, um Daten effizient zu speichern und parallel auf sie zuzugreifen.  

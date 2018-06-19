@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349046"
 ---
 # <a name="form-views-mfc"></a>Formularansichten (MFC)
 Sie können jede Visual C++-Anwendung, die MFC-Bibliotheken, einschließlich unterstützt, Forms hinzufügen eine [formularbasierte Anwendung](../mfc/reference/creating-a-forms-based-mfc-application.md) (eine, deren View-Klasse abgeleitet ist `CFormView`). Wenn Sie Ihre Anwendung zur Unterstützung Forms anfänglich keine erstellt haben, wird Visual C++ diese Unterstützung für die Sie hinzufügen, wenn Sie ein neues Formular einfügen. In einer SDI- oder MDI-Anwendung, die standardmäßig implementiert [Dokument-/Ansichtsarchitektur](../mfc/document-view-architecture.md), wenn der Benutzer wählt die `New` Befehl (standardmäßig auf die **Datei** Menü), Visual C++ fordert den Benutzer auf Wählen Sie aus den verfügbaren Formen.  

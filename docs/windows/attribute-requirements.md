@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863568"
 ---
 # <a name="attribute-requirements"></a>Attributanforderungen
 Die Anforderungen aufgeführt, die für C++-Attribute beschreiben die Projekttypen, compilereinstellungen und andere Informationen für ein Attribut arbeiten. Die Informationskategorien werden nachfolgend beschrieben.  

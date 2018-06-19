@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264516"
 ---
 # <a name="compiler-error-c3642"></a>Compilerfehler C3642
 ' Return_type/Args': eine Funktion kann nicht aufgerufen werden, mit der __clrcall-Aufrufkonvention von systemeigenem Code  

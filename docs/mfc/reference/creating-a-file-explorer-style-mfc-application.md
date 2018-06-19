@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370154"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Erstellen einer MFC-Anwendung im Stil des Datei-Explorers
 Viele Windows-systemanwendungen verwenden die Benutzeroberfläche (UI) für Datei-Explorer. Wenn Sie die Datei-Explorer starten, sehen Sie z. B. eine Anwendung mit einem vertikalen Teilerleiste, das den Clientbereich. Der linken Seite des Clientbereichs bereitstellt Navigation und Suchfunktionen und der rechten Seite des Clientbereichs zeigt Details im linken Bereich für die Auswahl relevant sind. Klickt ein Benutzer ein Element im linken Bereich, füllt die Anwendung im rechten Bereich aus. Sie können Befehle in einer MDI-Anwendung verwenden, auf die **Ansicht** Menü so ändern Sie die Anzahl der Details im rechten Bereich angezeigt. (In einer SDI- oder Anwendung für mehrere Dokumente der höchsten Ebene können Sie die Details, die mithilfe der Symbolleisten-Schaltflächen ändern.)  

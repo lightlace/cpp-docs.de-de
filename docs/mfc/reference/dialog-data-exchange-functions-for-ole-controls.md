@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375972"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
 Dieses Thema listet die DDX_OC-Funktionen, die zum Austausch von Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, Formularansicht oder steuerungsansichtsobjekts und einen Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249845"
 ---
 # <a name="compiler-error-c3055"></a>Compilerfehler C3055
 'Symbol': Auf das Symbol kann erst verwiesen werden, wenn es in der threadprivate-Direktive verwendet wird.  

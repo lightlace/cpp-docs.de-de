@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352834"
 ---
 # <a name="programmatic-printing"></a>Programmgesteuertes Drucken
 OLE bereitgestellt, die Mittel zur eindeutigen Identifizierung der persistente Dokumente (**GetClassFile**) und Laden Sie diese in den zugehörigen Code (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile:: Load**, und **IPersistStorage**). Zum Drucken von Dokumenten weiter zu aktivieren, wird active Document-Container (über einen vorhandenen OLE-Entwurf, die ursprünglich nicht mit OLE 2.0 geliefert) eine Basis-Standard-drucken-Schnittstelle eingeführt, mit denen `IPrint`, die in der Regel über jedes Objekt, das geladen wird, kann die persistenten Status des Dokumenttyps. Jede Ansicht eines aktiven Dokuments kann optional unterstützen die **IPrint** Schnittstelle, um diese Funktionen bereitzustellen.  

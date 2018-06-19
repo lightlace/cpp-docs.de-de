@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355534"
 ---
 # <a name="help-menu-merging"></a>Verschachteln des Hilfemenüs
 Wenn ein Objekt innerhalb eines Containers aktiv ist, bietet der Zusammenführungsfunktion Protokoll der OLE-Dokumente das Objekt vollständige Kontrolle über die **Hilfe** Menü. Hilfethemen für den Container sind daher nicht verfügbar, es sei denn, der Benutzer das Objekt deaktiviert wird. Die active Document Containment-Architektur wird erweitert, auf die Regeln für die direkte Zusammenführungsfunktion damit Containers und eines aktiven Dokuments, das im Menü freigeben aktiv ist. Die neue Regeln sind einfach zusätzliche Konventionen dafür, welche Komponente welchen Teil des Menüs besitzt und wie der gemeinsame Menü erstellt wird.  

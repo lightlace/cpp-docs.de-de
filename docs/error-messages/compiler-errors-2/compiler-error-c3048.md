@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245531"
 ---
 # <a name="compiler-error-c3048"></a>Compilerfehler C3048
 Der Ausdruck, der auf "#pragma omp atomic" folgt, weist eine ungültige Form auf.  

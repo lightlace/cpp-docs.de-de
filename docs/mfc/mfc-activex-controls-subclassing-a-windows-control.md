@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355436"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC-ActiveX-Steuerelemente: Erstellen einer Fenstersteuerelement-Unterklasse
 Dieser Artikel beschreibt den Prozess für eine allgemeine Fenstersteuerelement um ein ActiveX-Steuerelement zu erstellen. Erstellen von Unterklassen für eine vorhandene Windows ist Steuerelement eine schnelle Möglichkeit, ein ActiveX-Steuerelement entwickeln. Das neue Steuerelement haben die Möglichkeit des untergeordnetes Windows-Steuerelements, wie z. B. Zeichnen und Mausklicks reagiert. Die MFC-ActiveX-Steuerelemente Beispiel [Schaltfläche](../visual-cpp-samples.md) ist ein Beispiel einer Fenstersteuerelement.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354300"
 ---
 # <a name="exceptions-database-exceptions"></a>Ausnahmen: Datenbankausnahmen
 In diesem Artikel wird erläutert, wie Datenbankausnahmen behandelt. Die meisten der Materialien, die in diesem Artikel angewendet wird, ob Sie mit der MFC-Klassen für Open Database Connectivity (ODBC) oder die MFC-Klassen für Datenzugriffsobjekte (DAO) arbeiten. Materialien, die spezifisch für eine oder das andere Modell wird explizit markiert. Folgende Themen werden behandelt:  

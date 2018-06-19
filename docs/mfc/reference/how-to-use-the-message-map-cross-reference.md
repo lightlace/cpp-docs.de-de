@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370095"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>Gewusst wie: Verwenden des Meldungszuordnungs-Querverweises
 In Einträge, die mit der Bezeichnung \<MemberFxn >, Schreiben Sie eine eigene Memberfunktion für eine abgeleitete [CWnd](../../mfc/reference/cwnd-class.md) Klasse. Geben Sie der Funktion einen beliebigen Namen, den Ihnen gefallen. Andere Funktionen wie `OnActivate`, werden die Memberfunktionen der Klasse `CWnd`. Wenn Sie aufgerufen wird, übergeben sie die Nachricht an die `DefWindowProc` Windows-Funktion. Um die Windows-benachrichtigungsmeldungen zu verarbeiten, überschreiben Sie die entsprechende `CWnd` Funktion in der abgeleiteten Klasse. Ihre Funktion sollte außer Kraft gesetzte-Funktion in Ihrer Basisklasse, mit der Basisklasse aufrufen, und Windows auf die Meldung reagieren.  

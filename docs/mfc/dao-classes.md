@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348921"
 ---
 # <a name="dao-classes"></a>DAO-Klassen
 Diese Klassen arbeiten Sie mit der anderen Anwendung Framework-Klassen einfachen Zugriff gewähren möchten (Datenzugriffsobjekt)-Datenbanken, die das gleiche Datenbankmodul als Microsoft Visual Basic und Microsoft Access zu verwenden. DAO-Klassen können auch eine Vielzahl von Datenbanken zugreifen, für die Open Database Connectivity (ODBC)-Treiber zur Verfügung stehen.  

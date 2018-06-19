@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348527"
 ---
 # <a name="message-handling-and-mapping"></a>Meldungsbehandlung und -zuordnung
 Diese Artikelreihe wird beschrieben, wie Meldungen und Befehle durch MFC-Frameworks verarbeitet werden und wie Sie sie mit Ihren jeweiligen Handlerfunktionen zu verbinden.  

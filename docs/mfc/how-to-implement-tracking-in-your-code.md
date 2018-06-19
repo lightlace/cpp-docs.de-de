@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349735"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Gewusst wie: Implementieren der Nachverfolgung im Code
 Um ein OLE-Element nachzuverfolgen, müssen bestimmte Ereignisse im Zusammenhang mit der das Element, z. B. durch Klicken auf das Element, oder aktualisieren die Ansicht des Dokuments behandelt werden. In allen Fällen ist es ausreichend, deklarieren Sie einen temporären [CRectTracker](../mfc/reference/crecttracker-class.md) Objekt, und bearbeiten Sie das Element mithilfe dieses Objekts.  

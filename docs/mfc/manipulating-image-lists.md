@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349157"
 ---
 # <a name="manipulating-image-lists"></a>Bearbeiten von Bildlisten
 Die [ersetzen](../mfc/reference/cimagelist-class.md#replace) Memberfunktion ersetzt ein Bild in einer Bildliste ([CImageList](../mfc/reference/cimagelist-class.md)) durch ein neues Image. Diese Funktion ist auch nützlich, wenn Sie die Anzahl von Bildern in ein Listenobjekt Image dynamisch zu erhöhen. Die [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) Funktion dynamisch ändert die Anzahl von Images, die in der Bildliste gespeichert. Wenn Sie die Bildliste vergrößern, rufen Sie **ersetzen** , um das neue Image Slots Bilder hinzuzufügen. Wenn Sie die Bildliste verkleinern, werden die Bilder über die neue Größe hinaus freigegeben.  

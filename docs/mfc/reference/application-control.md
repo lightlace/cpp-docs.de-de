@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355911"
 ---
 # <a name="application-control"></a>Anwendungssteuerelement
 OLE erfordert erhebliche Kontrolle über die Anwendungen und ihre Objekte. Die OLE-System-DLLs muss vorliegen zum Starten und Anwendungen automatisch freigeben, koordinieren ihre Produktions- und Änderung von Objekten und so weiter. Die Funktionen in diesem Thema werden diese Anforderungen erfüllen. Zusätzlich zu den von der OLE-System-DLLs aufgerufen werden, müssen diese Funktionen in einigen Fällen von Anwendungen sowie aufgerufen werden. 

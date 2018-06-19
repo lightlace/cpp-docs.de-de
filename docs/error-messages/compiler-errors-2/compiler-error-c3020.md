@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245367"
 ---
 # <a name="compiler-error-c3020"></a>Compilerfehler C3020
 "Var": Indexvariable von OpenMP "for-Schleife kann nicht geändert werden, im Schleifenkörper  

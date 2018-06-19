@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349428"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretieren der Benutzereingaben in einer Ansicht
 Andere Memberfunktionen der Ansicht zu behandeln und interpretieren alle Benutzereingaben. Definieren Sie Meldungshandler Memberfunktionen in der Regel in Ihrer Ansichtsklasse verarbeiten:  

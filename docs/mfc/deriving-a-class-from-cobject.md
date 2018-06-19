@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349356"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Ableiten einer Klasse von CObject
 Dieser Artikel beschreibt die erforderlichen Schritte zum Ableiten einer Klasse von [CObject](../mfc/reference/cobject-class.md). Andere `CObject` Klasse Artikel beschreiben die erforderlichen Schritte zum Nutzen von bestimmten `CObject` Funktionen, z. B. Serialisierung und Unterstützung bei der Diagnose Debuggen.  

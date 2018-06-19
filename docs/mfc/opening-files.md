@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352762"
 ---
 # <a name="opening-files"></a>Öffnen von Dateien
 In MFC ist die gängigste Methode zum Öffnen einer Datei ein zweistufiger Prozess.  

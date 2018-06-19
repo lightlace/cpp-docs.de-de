@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369309"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Steuerelementnamen, MFC-ActiveX-Steuerelement-Assistent
 Geben Sie die Namen für die Control-Klasse und die Page-Klasse, die Typnamen, und geben Sie die Bezeichner für das Steuerelement. Mit Ausnahme von **Kurzname**, alle anderen Felder können unabhängig voneinander bearbeitet werden. Wenn Sie den Text für ändern **Kurzname**, in den Namen der alle anderen Felder auf dieser Seite wird die Änderung übernommen. Dieses naming Verhalten wurde entworfen, um alle Namen leicht erkennbaren für Sie bereitzustellen bei der Entwicklung Ihrer Kontrolle.  

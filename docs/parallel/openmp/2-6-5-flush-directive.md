@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692336"
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush-Anweisung
 Die **leeren** Richtlinie, ob explizit oder implizit, gibt einen "threadübergreifenden" Sequenzpunkt, an dem die Implementierung erforderlich ist, um sicherzustellen, dass alle Threads in einem Team eine konsistente Sicht der bestimmte Objekte (unten) in angegeben haben, Arbeitsspeicher. Dies bedeutet, dass vorherige auswertungen von Ausdrücken, die auf diese Objekte verweisen, abgeschlossen sind, und nachfolgende auswertungen wurden noch nicht gestartet. Z. B. Compiler müssen die Werte der Objekte von Registern wiederherstellen, in den Speicher und Hardware möglicherweise leeren Schreibzugriff Puffer in den Speicher und die Werte der Objekte aus dem Speicher erneut zu laden.  

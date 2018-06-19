@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349934"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU-Klasse
 Ein Wrapper für D2D1_SIZE_U.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352530"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen
 Benutzerdefinierte Ereignisse unterscheiden sich von vordefinierten Ereignissen, da sie nicht automatisch von-Klasse ausgelöst wurden `COleControl`. Ein benutzerdefiniertes Ereignis erkennt eine bestimmte Aktion vom Entwickler Steuerelements als Ereignis bestimmt. Der Ereignis-Zuordnungseinträge für benutzerdefinierte Ereignisse werden durch dargestellt die `EVENT_CUSTOM` Makro. Im folgende Abschnitt implementiert ein benutzerdefiniertes Ereignis für ein ActiveX-Steuerelement-Projekt, das mit dem ActiveX-Steuerelement-Assistenten erstellt wurde.  

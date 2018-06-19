@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370772"
 ---
 # <a name="database-macros-and-globals"></a>Datenbankmakros und globale Variablen
 Die Makros und Globals, die unten aufgeführten gelten für ODBC-basierten datenbankanwendungen. Sie werden nicht mit DAO-basierten Anwendungen verwendet.  

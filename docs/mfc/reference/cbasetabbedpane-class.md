@@ -77,6 +77,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355953"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane-Klasse
 Erweitert die Funktionalität von [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) , um die Erstellung von Fenstern im Registerkartenformat zu unterstützen  

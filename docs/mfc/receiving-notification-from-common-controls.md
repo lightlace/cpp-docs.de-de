@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349712"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Empfangen von Benachrichtigungen von Standardsteuerelementen
 Allgemeine Steuerelemente sind untergeordnete Fenster, die benachrichtigungsmeldungen an das übergeordnete Fenster zu senden, wenn Ereignisse, wie Eingaben des Benutzers im Steuerelement auftreten.  

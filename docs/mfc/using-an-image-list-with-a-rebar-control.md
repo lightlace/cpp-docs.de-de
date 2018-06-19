@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381744"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Verwenden einer Bildliste mit einem Grundleisten-Steuerelement
 Jedes Band Grundleisten kann unter anderem ein Bild aus einer Bildliste zugeordneten enthalten. Das folgende Verfahren erläutert die notwendigen Schritte zum Anzeigen eines Bilds in einem Grundleisten-Band.  
