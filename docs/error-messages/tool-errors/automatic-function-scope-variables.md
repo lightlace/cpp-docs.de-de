@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295375"
 ---
 # <a name="automatic-function-scope-variables"></a>Automatische Variablen (mit Funktionsgültigkeitsbereich)
 Eine Variable, die innerhalb einer Funktion deklariert, kann nur innerhalb des Bereichs dieser Funktion verwendet werden.  

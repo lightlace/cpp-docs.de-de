@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378968"
 ---
 # <a name="record-field-exchange-functions"></a>Funktionen für den Datensatzfeldaustausch
 Dieses Thema enthält die Datensatzfeldaustausch (RFX, Bulk-RFX und DFX) Funktionen verwendet, um die Übertragung von Daten zwischen einem Recordset-Objekt und dessen Datenquelle automatisiert und andere Vorgänge auf die Daten ausführen.  

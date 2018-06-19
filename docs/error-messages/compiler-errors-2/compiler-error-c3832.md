@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266554"
 ---
 # <a name="compiler-error-c3832"></a>Compilerfehler C3832
 "Typbibliothek": Typbibliothek aussieht, als ob sie für 32-Bit-Zeiger; erstellt wurde Ändern Sie den Qualifizierer 'Ptrsize'  

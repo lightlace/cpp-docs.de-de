@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354088"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements
 Dieser Artikel beschreibt die ActiveX-Steuerelement-Zeichenprozess und wie Sie ändern können, Paint-Code, um den Prozess zu optimieren. (Finden Sie unter [optimieren Steuerelement zeichnen](../mfc/optimizing-control-drawing.md) für Techniken zum Zeichnen zu optimieren, indem Sie einzeln Steuerelemente ohne zuvor ausgewählten GDI-Objekte wiederhergestellt werden. Nachdem alle Steuerelemente gezeichnet wurden, kann die Container automatisch die ursprünglichen Objekte wiederherstellen.)  

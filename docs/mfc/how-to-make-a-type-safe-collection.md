@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354438"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Gewusst wie: Erstellen einer typsicheren Auflistung
 In diesem Artikel erläutert die typsichere Auflistungen für Ihre eigenen Datentypen zu stellen. Folgende Themen werden behandelt:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348605"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Eigenschaftenblätter und Eigenschaftenseiten in MFC
 Ein Eigenschaftenblatt, auch bekannt als eine Registerkarte (Dialogfeld), wird ein Dialogfeld mit Eigenschaftenseiten. Jede Eigenschaftenseite basiert auf einer Dialogfeldvorlagen-Ressource und Steuerelemente enthält. Es wird auf einer Seite mit einer Registerkarte im Vordergrund eingeschlossen. Die Registerkarte die Seite den Namen und zwecks angibt. Benutzer klicken Sie auf eine Registerkarte im Eigenschaftenblatt zum Auswählen eines Satzes von Steuerelementen.  

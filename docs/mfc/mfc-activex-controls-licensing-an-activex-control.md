@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353925"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements
 Unterstützen der Lizenzierung, können ein optionales Feature von ActiveX-Steuerelemente, Sie steuern, wer verwenden oder verteilen Sie das Steuerelement ist. (Weitere Erläuterung der Lizenzierungsproblemen, finden Sie unter Lizenzierung Probleme in [Upgrading eines vorhandenen ActiveX-Steuerelements](../mfc/upgrading-an-existing-activex-control.md).)  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357558"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften
 Basiseigenschaften unterscheiden sich von benutzerdefinierten Eigenschaften, insofern, dass sie bereits von der Klasse implementiert sind `COleControl`. `COleControl` enthält vordefinierte Memberfunktionen, die allgemeine Eigenschaften für das Steuerelement zu unterstützen. Einige allgemeinen Eigenschaften enthalten die Beschriftung des Steuerelements und die Farben für Vordergrund und Hintergrund. Informationen über weitere vordefinierten Eigenschaften finden Sie unter [Stock Eigenschaften unterstützt, indem Sie den Assistenten zum Hinzufügen einer Eigenschaft](#_core_stock_properties_supported_by_classwizard) weiter unten in diesem Artikel. Die Dispatch-Zuordnungseinträge für vordefinierte Eigenschaften werden immer vorangestellt **DISP_STOCKPROP**.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352424"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften
 Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benutzerdefinierte Eigenschaften von noch nicht implementiert werden, die `COleControl` Klasse. Eine benutzerdefinierte Eigenschaft wird verwendet, um einen bestimmten Zustand oder die Darstellung eines ActiveX-Steuerelements an ein Programmierer, die mithilfe des Steuerelements verfügbar zu machen.  

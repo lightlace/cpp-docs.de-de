@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694094"
 ---
 # <a name="task-class-concurrency-runtime"></a>Aufgabenklasse (Concurrency Runtime)
 Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Er kann auch mit anderen Tasks mithilfe von Fortsetzungen erstellt werden ( `then`), und Join ( `when_all`) und Auswahl ( `when_any`) Muster.  

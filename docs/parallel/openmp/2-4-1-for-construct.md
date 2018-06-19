@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693548"
 ---
 # <a name="241-for-construct"></a>2.4.1 for-Konstrukt
 Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, das gibt an, dass die zugeordneten Schleifeniterationen parallel ausgeführt werden. Der Iteration die **für** Schleife über Threads, die bereits in das Team das parallele Konstrukt, bindet, ausführen verteilt sind. Die Syntax der **für** Konstrukt ist wie folgt:  

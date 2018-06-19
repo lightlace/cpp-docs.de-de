@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348226"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC-ActiveX-Steuerelemente: Zugreifen auf Umgebungseigenschaften
 In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement die Umgebungseigenschaften des Steuerelementcontainers zugreifen kann.  

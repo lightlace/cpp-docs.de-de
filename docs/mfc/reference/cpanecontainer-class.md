@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378167"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer-Klasse
 Die `CPaneContainer` Klasse ist eine grundlegende Komponente des von MFC implementierten andockmodells. Ein Objekt dieser Klasse speichert Zeiger in zwei andockbare Bereiche oder zwei Instanzen von `CPaneContainer.` . Es speichert auch einen Zeiger auf den Unterteiler, der die Bereiche (oder die Container) trennt. Durch das Verschachteln von Containern ineinander kann das Framework eine binären Struktur erstellen, die komplexe Andocklayouts darstellt. Der Stamm der binären Struktur befindet sich in einem [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) Objekt.  

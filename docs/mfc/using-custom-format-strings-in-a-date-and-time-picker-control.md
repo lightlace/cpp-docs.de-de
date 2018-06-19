@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382001"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Verwenden von benutzerdefinierten Formatzeichenfolgen in einem Steuerelement für die Datums- und Zeitauswahl
 Standardmäßig bieten Picker-Steuerelemente für Datum und Uhrzeit an, dass die drei Typen (jedes Format entspricht, um eine eindeutige Format) für die Anzeige die aktuellen Datums- oder Zeitangabe zu formatieren:  

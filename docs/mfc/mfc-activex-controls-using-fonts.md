@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355138"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten
 Wenn das ActiveX-Steuerelement Text angezeigt wird, können Sie die Benutzer des Steuerelements die Textdarstellung zu ändern, indem Sie eine Schriftarteigenschaft. Schriftarteigenschaften werden als Schriftartobjekte implementiert und kann einen von zwei Typen: vordefinierte oder benutzerdefinierte. Basiseigenschaften Schriftart sind bereits Eigenschaften, die Sie hinzufügen können, verwenden den Assistenten zum Hinzufügen einer Eigenschaft an. Benutzerdefinierte Schriftart-Eigenschaften sind nicht vorimplementiert und Steuerelemententwickler bestimmt werden, Verhalten und die Verwendung der Eigenschaft.  

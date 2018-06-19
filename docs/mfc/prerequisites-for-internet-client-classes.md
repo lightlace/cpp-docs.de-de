@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354036"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Voraussetzungen für Internetclientklassen
 Einige Aktionen, die von einem Internetclient (z. B. beim Lesen von einer Datei) verfügen über erforderliche Aktionen (in diesem Fall eine Internetverbindung herstellen). Die folgenden Tabellen enthalten die erforderlichen Komponenten für einige Clientaktionen.  

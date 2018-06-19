@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371861"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Steuerelementeinstellungen, MFC-ActiveX-Steuerelement-Assistent
 Verwenden Sie diese Seite des Assistenten, um anzugeben, wie das Steuerelement Verhalten soll. Sie können z. B. das Steuerelement auf standardmäßige Windows-Steuerelementtypen, optimieren das Verhalten und Aussehen oder anzugeben, dass das Steuerelement als Container für andere Steuerelemente fungieren kann.  

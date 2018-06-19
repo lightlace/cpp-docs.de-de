@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374522"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Erstellen einer MFC-Anwendung im Webbrowserstil
 Eine Web-Anwendung im Webbrowserstil kann Informationen aus dem Internet (z. B. HTML- oder aktive Dokumente) oder einem Intranet als auch Ordner im lokalen Dateisystem und in einem Netzwerk zugreifen. Durch Ableiten von der Anwendung Ansichtsklasse aus [CHtmlView](../../mfc/reference/chtmlview-class.md)effektiv Sie machen der Anwendung einen Webbrowser, indem Sie die Ansicht mit dem WebBrowser-Steuerelement bereitstellen.  

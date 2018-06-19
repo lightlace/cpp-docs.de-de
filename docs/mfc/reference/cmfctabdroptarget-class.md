@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372913"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget-Klasse
 Stellt den Kommunikationsmechanismus zwischen einem Registerkarten-Steuerelement und den OLE-Bibliotheken bereit.  

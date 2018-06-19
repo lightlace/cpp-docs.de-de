@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349255"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE-Struktur
 Die `AFX_EXTENSION_MODULE` wird während der Initialisierung des MFC-Erweiterungs-DLLs verwendet, um den Status des MFC-Erweiterungs-DLL-Modul zu speichern.  

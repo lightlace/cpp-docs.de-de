@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375209"
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH-Struktur
 Die `LOGBRUSH` Struktur definiert die Formatvorlage, die Farbe und die Muster von einem physischen Pinsel. Er wird von Windows verwendet [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) und [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) Funktionen.  

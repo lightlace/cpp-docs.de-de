@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299200"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>Linkertoolwarnung LNK4073
 Zuordnung für ILK-Datei kann nicht erstellt werden; ILK-Datei  

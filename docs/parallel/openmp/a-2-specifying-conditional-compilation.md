@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690594"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2   Angeben der bedingten Kompilierung
 Die folgenden Beispiele veranschaulichen die Verwendung von bedingten Kompilierung mithilfe der OpenMP-Makro `_OPENMP` ([Abschnitt 2.2](../../parallel/openmp/2-2-conditional-compilation.md) auf Seite "8"). Mit der OpenMP-Kompilierung der `_OPENMP` Makro definiert wird.  

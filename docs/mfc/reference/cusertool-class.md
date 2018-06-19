@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374752"
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld) ( [CMFCToolBarsCustomizeDialog Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ermöglicht es dem Benutzer, Benutzertools hinzuzufügen und um anzugeben, der Name, den Befehl, die Argumente, und ursprüngliche Verzeichnis für jedes benutzertool.  

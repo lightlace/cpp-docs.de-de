@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354017"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC-ActiveX-Steuerelemente: Weiterführende Themen
 Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von ActiveX-Steuerelemente. Dazu gehören:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688114"
 ---
 # <a name="3-run-time-library-functions"></a>3. Run-Time Library-Funktionen
 Dieser Abschnitt beschreibt die Funktionen der OpenMP-C- und C++-Laufzeitbibliothek. Der Header  **\<omp.h >** deklariert zwei Typen, die mehrere Funktionen, die verwendet werden können, zum Steuern und Abfragen der Umgebung für die parallele Ausführung und Sperren von Funktionen, die zum Synchronisieren des Zugriffs auf Daten verwendet werden können.  

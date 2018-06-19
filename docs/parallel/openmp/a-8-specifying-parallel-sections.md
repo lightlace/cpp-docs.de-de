@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694055"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8   Angeben von parallelen Abschnitten
 Im folgenden Beispiel (für [Abschnitt 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) auf der Seite "14") Funktionen *Xaxis*, *Yaxis*, und *Zaxis* gleichzeitig ausgeführt werden können. Die erste `section` Richtlinie ist optional.  Beachten Sie, dass alle `section` Richtlinien müssen in der lexikalische Wertebereich angezeigt werden die `parallel sections` erstellen.  

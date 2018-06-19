@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839818"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 Die **veraltet** Pragma ermöglicht es Ihnen anzugeben, dass eine Funktion, Typ oder ein anderer Bezeichner in der Zukunft nicht mehr unterstützt werden möglicherweise freigegeben oder nicht mehr verwendet werden soll.  

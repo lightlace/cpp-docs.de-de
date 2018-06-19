@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373539"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Zeichenfolgen für Dokumentvorlagen, MFC-Anwendungs-Assistent
 Bereitstellen Sie auf dieser Seite des Assistenten für MFC-Anwendung, oder verfeinern Sie die folgenden Optionen zum Dokumentverwaltungsfunktionen und Lokalisierung zu verbessern. Zeichenfolgen für Dokumentvorlagen stehen für Anwendungen mit **Unterstützung der Dokument-/Ansichtarchitektur-Architektur** in der [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md). Sie sind nicht verfügbar für Dialogfelder. Da die meisten Zeichenfolgen für Dokumentvorlagen sichtbar sind und von den Benutzern der Anwendung verwendet werden, sind sie in lokalisiert die **Ressourcensprache** gemäß der **"Anwendung"** Seite des Assistenten.  

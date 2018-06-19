@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366124"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Vom MFC-DLL-Assistenten erstellte Klassen und Funktionen
 Der Code, den den MFC-DLL-Assistenten generiert hängt die Art der DLL, die Sie erstellen und die Optionen, die Sie ausgewählt haben. Die MFC-DLL-Assistenten generiert den gleichen Code für beide Formen des regulären MFC-DLLs.  

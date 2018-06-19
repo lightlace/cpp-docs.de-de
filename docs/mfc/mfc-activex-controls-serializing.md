@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353497"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC-ActiveX-Steuerelemente: Serialisierung
 In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement serialisiert wird. Serialisierung ist der Prozess der lesen oder Schreiben auf einem permanenten Speichermedium, z. B. eine Datenträgerdatei. Die Microsoft Foundation Class (MFC)-Bibliothek bietet integrierte Unterstützung für die Serialisierung in Klasse `CObject`. `COleControl` erweitert diese Unterstützung für ActiveX-Steuerelemente durch die Verwendung einer Eigenschaft Austauschmechanismus.  

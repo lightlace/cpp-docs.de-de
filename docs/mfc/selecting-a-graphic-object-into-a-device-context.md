@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379683"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Auswählen eines Grafikobjekts für einen Gerätekontext
 Dieses Thema gilt für die Verwendung von Grafikobjekten in einem Fenster Gerätekontext. Nachdem Sie [erstellen Sie ein Objekt](../mfc/one-stage-and-two-stage-construction-of-objects.md), müssen Sie es in den Gerätekontext anstelle der Default-Objekt, die dort gespeicherten auswählen:  

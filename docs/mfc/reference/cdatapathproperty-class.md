@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367307"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty-Klasse
 Implementiert eine OLE-Steuerelementeigenschaft, die asynchron geladen werden kann.  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355271"
 ---
 # <a name="multipage-documents"></a>Mehrseitige Dokumente
 In diesem Artikel wird beschrieben, die Windows-Druckprotokoll und erläutert, wie zum Drucken von Dokumenten, die über mehrere Seiten enthalten. Die Artikel werden die folgenden Themen behandelt:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695693"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
 Diese Klausel teilt Variablen in der *Variablenliste* auf allen Threads in einem Team. Alle Threads in einem Team Zugriff auf denselben Speicherbereich für **freigegebenen** Variablen.  

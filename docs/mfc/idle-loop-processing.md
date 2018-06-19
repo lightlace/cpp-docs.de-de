@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354900"
 ---
 # <a name="idle-loop-processing"></a>Leerlaufschleifen-Verarbeitung
 Viele Anwendungen führt langwierige Verarbeitung "in Hintergrund" In einigen Fällen geben Leistungsaspekte vor, die Verwendung von multithreading für derartige Schritte. Threads verursachen zusätzlichen, damit sie für einfache Aufgaben wie z. B. die Zeit im Leerlauf Arbeit nicht, die MFC empfohlen werden in der [OnIdle](../mfc/reference/cwinthread-class.md#onidle) Funktion. Dieser Artikel konzentriert sich auf die leerlaufverarbeitung. Weitere Informationen zu multithreading, finden Sie unter [Themen zu Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

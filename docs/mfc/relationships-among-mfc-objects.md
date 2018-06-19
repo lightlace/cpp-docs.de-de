@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379518"
 ---
 # <a name="relationships-among-mfc-objects"></a>Beziehungen zwischen MFC-Objekten
 Dokument-/Ansichtarchitektur-Erstellungsprozess in Perspektive zu versetzen, beachten Sie, um ein aktives Programm: ein Dokument, das Rahmenfenster verwendet, um die Ansicht enthält und die Ansicht, die dem Dokument zugeordnet.  

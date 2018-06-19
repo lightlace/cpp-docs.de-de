@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353272"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 Einer der leistungsfähigeren von ActiveX-Steuerelementen ist Datenbindung, wodurch eine Eigenschaft des Steuerelements an ein bestimmtes Feld in einer Datenbank gebunden werden soll. Wenn ein Benutzer Daten in dieser gebundenen Eigenschaft ändert, benachrichtigt das Steuerelement an die Datenbank und fordert an, dass der Datensatz das Feld aktualisiert werden. Anschließend benachrichtigt die Datenbank, die Kontrolle über den Erfolg oder Fehler der Anforderung.  

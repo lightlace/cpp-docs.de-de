@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375134"
 ---
 # <a name="dhtml-editing-command-maps"></a>Befehlszuordnungen für DHTML-Bearbeitungsbefehle
 Die folgenden Makros können verwendet werden, um DHTML-Bearbeitungsbefehle in zuordnen [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-abgeleitete Klassen. Ein Beispiel ihrer Verwendung finden Sie unter [HTMLEdit-Beispiel](../../visual-cpp-samples.md).  

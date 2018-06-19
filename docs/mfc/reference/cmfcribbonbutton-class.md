@@ -129,6 +129,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376417"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton-Klasse
 Die `CMFCRibbonButton`-Klasse implementiert Schaltflächen, die auf Menübandleisten-Elementen wie Bereichen, Symbolleisten für den Schnellzugriff und Popupmenüs positioniert werde können.  

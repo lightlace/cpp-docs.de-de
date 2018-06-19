@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349850"
 ---
 # <a name="rebar-controls-and-bands"></a>Grundleisten-Steuerelemente und Bänder
 Der Hauptzweck eines Grundleisten-Steuerelements ist, fungiert als Container für untergeordnete Fenster, allgemeine Dialogfeldsteuerelemente, Menüs, Symbolleisten und So weiter. Diese Beschränkung wird durch das Konzept der "Band." unterstützt. Jedes Band Grundleisten kann eine beliebige Kombination von ziehelements-Leiste, eine Bitmap, einer textbezeichnung und ein untergeordnetes Fenster enthalten.  

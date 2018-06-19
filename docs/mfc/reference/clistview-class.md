@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366342"
 ---
 # <a name="clistview-class"></a>CListView-Klasse
 Vereinfacht die Verwendung des Listensteuerelements und von [CListCtrl](../../mfc/reference/clistctrl-class.md), die Klasse, die Listensteuerelement-Funktionalität, mit der MFC-Dokument-/ Ansichtsarchitektur kapselt.  

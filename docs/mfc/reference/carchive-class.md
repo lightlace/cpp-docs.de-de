@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357536"
 ---
 # <a name="carchive-class"></a>CArchive-Klasse
 Können Sie ein komplexes Netzwerk von Objekten in einer permanenten binären Form (normalerweise in Festplattenspeicher) zu speichern, die erhalten bleibt, nachdem diese Objekte gelöscht wurden.  

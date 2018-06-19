@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349674"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Bereitstellen von Mausinteraktionen in inaktiven Steuerelementen
 Wenn das Steuerelement nicht sofort aktiviert ist, dennoch sollten Sie verarbeitet `WM_SETCURSOR` und `WM_MOUSEMOVE` Nachrichten verwenden, auch wenn das Steuerelement kein eigenes Fenster hat. Dies geschieht durch Aktivieren der `COleControl`des Implementierung der `IPointerInactive` -Schnittstelle, die standardmäßig deaktiviert ist. (Siehe die *ActiveX SDK* eine Beschreibung dieser Schnittstelle.) Einschließen, um es zu ermöglichen, die `pointerInactive` -Flag in der Gruppe von Flags, die zurückgegebene [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

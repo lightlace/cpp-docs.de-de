@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351601"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Anwendungseinstellungen, MFC-ActiveX-Steuerelement-Assistent
 Verwenden Sie diese Seite des MFC-ActiveX-Steuerelement-Assistenten, um grundlegende Features zu entwerfen und zu einem neuen MFC-ActiveX-Projekt hinzuzufügen. Diese Einstellungen gelten für die Anwendung selbst und nicht für ein bestimmtes Feature oder ein Element des Steuerelements.  

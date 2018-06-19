@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692989"
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kacheln unterteilt Threads in gleiche rechteckige Teilmengen bzw. *Kacheln*. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:  
