@@ -58,7 +58,7 @@ Erstellt eine Ereignisquelle.
     ```  
   
  **optimize**  
- Wenn `type` **native**ist, können Sie **optimize=size**angeben, um anzugeben, dass mindestens 4 Bytes Speicherplatz für alle Ereignisse in einer Klasse vorhanden sind, oder **optimize=speed** (Standard), um anzuzeigen, dass für jedes Event 4 Bytes Speicherplatz zur Verfügung stehen.  
+ Wenn `type` **native**ist, können Sie **optimize=size**angeben, um anzugeben, dass mindestens 4 Bytes Speicherplatz für alle Ereignisse in einer Klasse vorhanden sind, oder **optimize=speed** (Standard), um anzuzeigen, dass für jedes Event 4 * Bytes Speicherplatz zur Verfügung stehen.  
   
  **decorate**  
  Wenn `type` **native**ist, können Sie **decorate=false**angeben, um anzugeben, dass der erweiterte Name in der zusammengeführten Datei (.mrg) nicht den Namen der einschließenden Klasse enthalten soll. Mit[/Fx](../build/reference/fx-merge-injected-code.md) können Sie MRG-Dateien generieren. **decorate=false**, ist die Standardeinstellung und führt zu vollqualifizierten Typnamen in der zusammengeführten Datei.  
