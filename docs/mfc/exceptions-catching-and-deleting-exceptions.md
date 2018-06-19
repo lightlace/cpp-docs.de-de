@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345185"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Ausnahmen: Abfangen und Löschen von Ausnahmen
 Die folgenden Anweisungen und Beispiele zeigen, wie auf Ausnahmen abfangen und löschen. Weitere Informationen zu den **versuchen**, **catch**, und `throw` Schlüsselwörter finden Sie unter [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md).  

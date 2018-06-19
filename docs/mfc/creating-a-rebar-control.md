@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342306"
 ---
 # <a name="creating-a-rebar-control"></a>Erstellen eines Grundleisten-Steuerelements
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md) Objekte erstellt werden soll, bevor das übergeordnete Objekt sichtbar ist. Dadurch wird die Möglichkeiten von Darstellungsprobleme minimiert.  

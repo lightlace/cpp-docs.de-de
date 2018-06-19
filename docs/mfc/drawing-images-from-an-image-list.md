@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345208"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Darstellen von Bildern aus einer Bildliste
 Um ein Bild gezeichnet werden soll, verwenden Sie die [Memberfunktion CImageList:: Draw](../mfc/reference/cimagelist-class.md#draw) Memberfunktion. Geben Sie einen Zeiger auf ein Gerätekontextobjekt, den Index des Bilds gezeichnet werden soll, den Speicherort in den Gerätekontext, an dem das Bild gezeichnet werden soll, und eine Gruppe von Flags an, dass das Zeichnungsformat.  

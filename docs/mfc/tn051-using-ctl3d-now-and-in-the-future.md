@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382271"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: Verwenden von CTL3D jetzt und in der Zukunft
 Diese technischen Hinweis, der zuvor CTL3D und MFC erläutert ist mittlerweile veraltet. Die 3D-Effekt für Steuerelemente wird von MFC automatisch implementiert werden.  

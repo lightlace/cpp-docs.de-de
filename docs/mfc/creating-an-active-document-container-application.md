@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341348"
 ---
 # <a name="creating-an-active-document-container-application"></a>Erstellen einer Containeranwendung für aktive Dokumente
 Die einfachste und die empfohlene Methode zum Erstellen einer containeranwendung für aktive Dokument besteht darin, eine MFC-EXE-Container-Anwendung mit dem MFC-Anwendung-Assistenten erstellen, und ändern die Anwendung zur Unterstützung von active Document-Container.  

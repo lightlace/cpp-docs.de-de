@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346375"
 ---
 # <a name="handling-tool-tip-notifications"></a>Behandeln von QuickInfo-Benachrichtigungen
 Geben Sie bei der `TBSTYLE_TOOLTIPS` Stil, die Symbolleiste erstellt und verwaltet ein QuickInfo-Steuerelement. Eine QuickInfo ist ein kleines Popupfenster, das eine Textzeile, beschreibt eine Symbolleisten-Schaltfläche enthält. Die QuickInfo wird ausgeblendet, erscheint nur, wenn der Benutzer fügt den Cursor auf einer Symbolleisten-Schaltfläche und bleibt es zumeist Sekunde. Die QuickInfo wird angezeigt, in der Nähe des Cursors.  

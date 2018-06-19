@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856998"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Ändern des Vergrößerungsfaktors (Bildbearbeitung für Symbole)
 Standardmäßig zeigt der Grafik-Editor die Ansicht im linken Bereich auf die tatsächliche Größe und die Ansicht im rechten Bereich mit der tatsächlichen Größe der 6-Mal. Der Vergrößerungsfaktor (in der Statusleiste am unteren Rand des Arbeitsbereichs) ist das Verhältnis zwischen der tatsächlichen Größe des Abbilds und die angezeigte Größe. Die Standardeinstellung-Stufe ist 6, und der Bereich liegt zwischen 1 und 10.  

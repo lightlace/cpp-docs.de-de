@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347934"
 ---
 # <a name="reading-and-writing-files"></a>Lesen und Schreiben von Dateien
 Wenn Sie die Funktionen der C-Laufzeitbibliothek Dateibehandlung verwendet haben, erscheint MFC Lese- und Schreibvorgänge vertraut. Dieser Artikel beschreibt das direkte Lesen aus und Schreiben von direkt an eine `CFile` Objekt. Sie können auch gepuffert Datei-e/a mit der [CArchive](../mfc/reference/carchive-class.md) Klasse.  

@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343414"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Erstellen neuer Dokumente, Fenster und Ansichten
 Die folgenden Abbildungen erhalten einen Überblick der Erstellungsvorgang für Dokumente, Ansichten und Rahmenfenster. Anderen Artikeln, die für die beteiligten Objekte zu konzentrieren. angeben Weitere Details.  

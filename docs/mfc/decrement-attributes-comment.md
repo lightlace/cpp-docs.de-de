@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342919"
 ---
 # <a name="-attributes-comment"></a>// Attributes-Kommentar
 Die `// Attributes` Teil der Deklaration eines MFC-Klasse enthält den öffentlichen Attributen (oder Eigenschaften) des Objekts. In der Regel sind dies Membervariablen oder Get/Set-Funktionen. Die "Get" und "Set"-Funktion können oder nicht virtuell sein. Die "Get"-Funktionen sind in der Regel **const**, da in den meisten Fällen sie keine Nebeneffekte haben. Diese Elemente sind normalerweise public. geschützte und private Attribute werden in der Regel im Umsetzungsabschnitt gefunden.  

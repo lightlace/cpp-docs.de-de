@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347216"
 ---
 # <a name="html-basics"></a>Grundlagen zu HTML
 Die meisten Browser haben die Möglichkeit die HTML-Quelle der Seiten, die Sie durchsuchen zu untersuchen. Bei der Anzeige der Quelle, sehen Sie eine Anzahl von Tags für HTML (Hypertext Markup Language), umgeben von spitzen Klammern (<>), kombiniert mit Text.  

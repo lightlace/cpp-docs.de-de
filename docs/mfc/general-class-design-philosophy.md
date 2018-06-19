@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344362"
 ---
 # <a name="general-class-design-philosophy"></a>Allgemeine Prinzipien für den Klassenentwurf
 Microsoft Windows wurde entwickelt, lange vor die Programmiersprache C++ beliebten wurde. Da Sie Tausende von Anwendungen die Programmiersprache C-Windows-Anwendungsprogrammierschnittstelle (API) verwenden, wird diese Schnittstelle für absehbare verwaltet werden. Alle C++-Windows-Benutzeroberfläche muss daher auf den prozeduralen C-Sprachen-API erstellt werden. Damit wird sichergestellt, dass C++-Anwendungen mit C-Programme koexistieren können.  

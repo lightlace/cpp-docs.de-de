@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371904"
 ---
 # <a name="point-structure1"></a>Zeigen Sie Structure1
 Die **zeigen** Struktur definiert das "X"*-* und y-Koordinaten eines Punkts.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347106"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC-ActiveX-Steuerelemente: Eigenschaften
 Ein ActiveX-Steuerelement löst Ereignisse für die Kommunikation mit seinem Steuerelementcontainer. Der Container verwendet im Gegenzug Methoden und Eigenschaften für die Kommunikation mit dem Steuerelement. Methoden und Eigenschaften sind ähnlich und Zweck bzw. Memberfunktionen und Membervariablen einer C++-Klasse. Eigenschaften sind Datenmember des ActiveX-Steuerelements, die zu einem beliebigen Container verfügbar gemacht werden. Eigenschaften bieten eine Schnittstelle für Anwendungen, die ActiveX-Steuerelemente, z. B. Automatisierungsclients und ActiveX-Steuerelementcontainer enthalten.  

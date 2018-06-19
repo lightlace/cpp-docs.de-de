@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344148"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Hinzufügen mehrerer Ansichten zu einem Dokument
 In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation Class (MFC)-Bibliothek erstellt ist eine einzelne Ansichtstyp zugeordnet jeder Dokumenttyp. In einigen Fällen ist es wünschenswert sein, Sie haben die Möglichkeit, die aktuelle Ansicht eines Dokuments mit einer neuen Ansicht wechseln.  

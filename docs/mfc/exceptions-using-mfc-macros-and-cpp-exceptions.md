@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346060"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Ausnahmen: Verwenden von MFC-Makros und C++-Ausnahmen
 Dieser Artikel beschreibt Überlegungen zum Schreiben von Code, der die Behandlung von Ausnahmen von MFC-Makros und C++-Ausnahmebehandlung-Schlüsselwörter verwendet.  

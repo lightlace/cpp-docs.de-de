@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345387"
 ---
 # <a name="-overridables-comment"></a>// Overridables-Kommentar
 Die `// Overridables` Abschnitt der Deklaration eines MFC-Klasse enthält virtuelle Funktionen, die Sie in einer abgeleiteten Klasse überschreiben können, wenn Sie das Verhalten der Basisklasse ändern müssen. Sie sind in der Regel mit dem Namen beginnend mit "On", obwohl dies nicht unbedingt erforderlich ist. Hier Funktionen dienen zur außer Kraft gesetzt werden, und häufig zu implementieren oder geben Sie irgendeine der "Callback" oder "verknüpfen". In der Regel sind diese Member geschützt.  

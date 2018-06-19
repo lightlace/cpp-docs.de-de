@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341458"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Reservieren und Freigeben von Fensterspeicher
 Verwenden Sie nicht den C++ **löschen** Operator, um eine Rahmenfenster oder die Sicht zu zerstören. Rufen Sie stattdessen die `CWnd` Memberfunktion `DestroyWindow`. Rahmenfenster, daher sollten zugeordnet werden, auf dem Heap mit dem Operator **neue**. Seien Sie vorsichtig beim Rahmenfenster im Stapelrahmen oder Global zuweisen. Andere Fenster sollte auf den Stapelrahmen nach Möglichkeit zugewiesen werden.  

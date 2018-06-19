@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343524"
 ---
 # <a name="documentview-creation"></a>Erstellen von Dokument/Ansicht
 Das Framework stellt Implementierungen von der `New` und **öffnen** Befehle (u. a.) den **Datei** Menü. Erstellen eines neuen Dokuments zugeordnete Ansicht und der zugehörigen Rahmenfenster ist ein kooperativen Aufwand für das Anwendungsobjekt, eine Dokumentvorlage, das gerade erstellte Dokument und das neu erstellte Rahmenfenster. Die folgende Tabelle fasst zusammen, welche Objekte erstellen, was.  

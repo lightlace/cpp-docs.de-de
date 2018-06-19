@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346645"
 ---
 # <a name="dynamic-object-creation"></a>Dynamische Objekterstellung
 In diesem Artikel wird erläutert, wie ein Objekt zur Laufzeit dynamisch erstellt wird. Die Prozedur zur Laufzeit-Klasseninformationen verwendet, wie im Artikel erläutert [zugreifen auf Laufzeit-Klasseninformationen](../mfc/accessing-run-time-class-information.md).  

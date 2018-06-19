@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345042"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Vom Anwendungs-Assistenten erstellte Rahmenfensterklassen
 Bei Verwendung der [Anwendungs-Assistent](../ide/creating-desktop-projects-by-using-application-wizards.md) zum Erstellen einer skelettanwendung zusätzlich zur Anwendung, Dokument und Ansichtsklassen, erstellt der Anwendungs-Assistent für Hauptrahmenfenster für Ihre Anwendung eine abgeleiteten Rahmenfenster-Klasse. Die Klasse heißt `CMainFrame` standardmäßig und die Dateien, die sie enthalten bezeichnet. H und MAINFRM. CPP.  

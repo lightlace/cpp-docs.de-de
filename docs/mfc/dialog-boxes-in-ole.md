@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347840"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogfelder in OLE
 Während ein Benutzer eine OLE-fähige Anwendung ausgeführt wird, stehen die Zeiten, wenn die Anwendung Informationen vom Benutzer benötigt, um den Vorgang durchzuführen. Die MFC-OLE-Klassen bieten eine Reihe von Dialogfeldern, um die erforderlichen Informationen zu sammeln. Dieses Thema listet die Aufgaben, die von der OLE-Dialogfelder behandelt und den Klassen erforderlich, um diese Dialogfelder angezeigt. Weitere Informationen zu OLE-Dialogfelder und die Strukturen verwendet, um ihr Verhalten anzupassen, finden Sie unter [MFC-Referenz](../mfc/mfc-desktop-applications.md).  

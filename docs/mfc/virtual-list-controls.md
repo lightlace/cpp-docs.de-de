@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384191"
 ---
 # <a name="virtual-list-controls"></a>Virtuelle Listensteuerelemente
 Ein virtuelles Listensteuerelement ist ein Listenansicht-Steuerelement, das verfügt die **LVS_OWNERDATA** Stil. Dieser Stil aktiviert das Steuerelement eine Elementanzahl bis zu unterstützen eine `DWORD` (standardelementanzahl nur erstreckt sich auch auf eine `int`). Der größte Vorteil von diesem Format bereitgestellt ist jedoch die Möglichkeit, nur eine Teilmenge der Daten im Arbeitsspeicher gleichzeitig. Dadurch können virtuelle Listenansicht-Steuerelement, für die Verwendung mit großen Datenbanken Informationstypen, verleiten bestimmte Methoden zum Zugreifen auf Daten, auf dem bereits vorhanden sind.  

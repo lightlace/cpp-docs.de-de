@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348048"
 ---
 # <a name="initializing-documents-and-views"></a>Initialisieren von Dokumenten und Ansichten
 Dokumente werden auf zwei unterschiedliche Arten erstellt werden, damit Ihre Dokumentklasse beide Methoden unterstützen. Erstens kann der Benutzer ein neues, leeres Dokument mit dem Befehl neue Datei erstellen. In diesem Fall initialisiert das Dokument in der Ihre Überschreibung der [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) Memberfunktion der Klasse [CDocument](../mfc/reference/cdocument-class.md). Zweitens kann der Benutzer verwenden den Befehl Öffnen im Menü Datei auf ein neues Dokument erstellen, deren Inhalt aus einer Datei gelesen werden. In diesem Fall initialisiert das Dokument in der Ihre Überschreibung der [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) Memberfunktion der Klasse **CDocument**. Wenn beide Initialisierungen identisch sind, können Sie eine allgemeine Memberfunktion aufrufen, aus der beiden Außerkraftsetzungen oder `OnOpenDocument` erreichen `OnNewDocument` so initialisieren ein sauberes Dokument und anschließend den öffnen-Vorgang abzuschließen.  

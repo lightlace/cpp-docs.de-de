@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339019"
 ---
 # <a name="active-document-containers"></a>Active Document-Container
 Active Document-Container, z. B. Microsoft Office Binder oder Internet Explorer ermöglicht Ihnen, arbeiten mit anderen Anwendungstypen in einem einzelnen Frame (statt Sie zu erstellen und verwenden mehrere Frames der Anwendung für die einzelnen zwingen, mehrere Dokumente Dokumenttyp).  

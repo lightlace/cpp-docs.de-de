@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341909"
 ---
 # <a name="creating-your-dialog-class"></a>Erstellen eigener Dialogfeldklassen
 Für jedes Dialogfeld im Programm Erstellen einer neuen Dialogfeldklasse zur Bearbeitung der Dialogfeldressource.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342428"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Erstellen von modalen Dialogfeldern
 Um ein modales Dialogfeld zu erstellen, rufen Sie entweder die beiden öffentlichen Konstruktoren deklariert [CDialog](../mfc/reference/cdialog-class.md). Rufen Sie als Nächstes des Dialogfeldobjekts [DoModal](../mfc/reference/cdialog-class.md#domodal) Memberfunktion, um das Dialogfeld anzuzeigen und Interaktion mit der Anwendung zu verwalten, bis der Benutzer OK oder "Abbrechen". Diese Verwaltung durch `DoModal` ist, was die modales Dialogfeld. Für modale Dialogfelder `DoModal` lädt die Dialogressource.  

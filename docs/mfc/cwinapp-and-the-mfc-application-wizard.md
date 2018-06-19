@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341260"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp und der MFC-Anwendungs-Assistent
 Bei der Erstellung einer skelettanwendung MFC-Anwendungsassistenten deklariert eine Anwendungsklasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Die MFC-Anwendungs-Assistent erstellt auch eine Implementierungsdatei, die folgenden Elemente enthält:  

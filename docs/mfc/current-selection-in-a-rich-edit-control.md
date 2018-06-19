@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345009"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Die aktuelle Auswahl in einem RichEdit-Steuerelement
 Der Benutzer kann Text in einem rich-Edit-Steuerelement auswählen ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mit der Maus oder Tastatur. Die aktuelle Auswahl ist der Bereich der ausgewählten Zeichen, oder die Position der Einfügemarke, wenn keine Zeichen ausgewählt sind. Eine Anwendung kann Abrufen von Informationen über die aktuelle Auswahl, legen Sie die aktuelle Auswahl, bestimmen, wenn die aktuelle Auswahl ändert und Einblenden / Ausblenden der Auswahl hervorgehoben.  

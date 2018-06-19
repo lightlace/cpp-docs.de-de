@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347232"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Handler für Befehle und Steuerelementbenachrichtigungen
 Es sind keine Standardhandler für Befehle oder Steuerelemente-benachrichtigungsmeldungen aus. Aus diesem Grund werden Sie nur gemäß der Konvention in Benennung der Handler für diese Art von Nachrichten gebunden. Wenn Sie den Befehl oder das Steuerelement-Benachrichtigung an einen Handler zuordnen, die Eigenschaftenfenstern schlägt einen Namen basierend auf der Befehls-ID oder Steuerelement-Benachrichtigung Code. Sie können akzeptieren den vorgeschlagenen Namen, ändern oder Ersetzen Sie ihn.  

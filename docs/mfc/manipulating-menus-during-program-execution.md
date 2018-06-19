@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344281"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Bearbeiten von Menüs während der Programmausführung
 Verwenden Sie die Klasse `CMenu` zum Bearbeiten von Menüs und Menüelemente im Handumdrehen. `CMenu` Kapselt eine Windows `HMENU` behandeln und stellt Memberfunktionen zum Arbeiten mit Menüs.  

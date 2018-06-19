@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691540"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Parallel Patterns Library (PPL)
 Die Parallel Patterns Library (PPL) stellt ein obligatorisches Programmiermodell bereit, das die Skalierbarkeit und Benutzerfreundlichkeit beim Entwickeln gleichzeitiger Anwendungen fördert. Die PPL baut auf den Planungs- und Ressourcenverwaltungskomponenten der Concurrency Runtime auf. Sie stuft die Abstraktionebene zwischen dem Anwendungscode und dem zugrunde liegenden Threadingmechanismus herauf, indem sie generische, typsichere Algorithmen und Container bereitstellt, die Daten parallel verarbeiten. Mit der PPL können Sie auch Anwendungen entwickeln, die durch die Bereitstellung von Alternativen zum freigegebenen Status skalieren.  

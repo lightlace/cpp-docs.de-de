@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347151"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Anordnen von Elementen im Headersteuerelement
 Sobald Sie haben [hinzugefügten Elemente zu einem Headersteuerelement](../mfc/adding-items-to-the-header-control.md), können Sie bearbeiten oder Abrufen von Informationen zu deren Reihenfolge mit den folgenden Funktionen:  

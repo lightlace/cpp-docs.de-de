@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347177"
 ---
 # <a name="message-sending-and-receiving"></a>Senden und Empfangen von Meldungen
 Betrachten Sie den Sendevorgang des Prozesses und wie das Framework reagiert.  

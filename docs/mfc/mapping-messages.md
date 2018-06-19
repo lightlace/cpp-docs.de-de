@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345985"
 ---
 # <a name="mapping-messages"></a>Zuordnen von Meldungen
 Jede Frameworkklasse, die Nachrichten oder Befehle empfangen kann hat ihre eigene "meldungszuordnung". Das Framework verwendet meldungszuordnungen Verbindung von Meldungen und Befehle zu Ihren jeweiligen Handlerfunktionen. Jede Klasse abgeleitete `CCmdTarget` eine meldungszuordnung haben können. Andere Artikel meldungszuordnungen ausführlich erläutert und beschrieben, wie sie verwendet.  

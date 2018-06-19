@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343004"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: Die Anwendungsklasse
 Die Hauptassembly der Anwendung-Klasse in MFC kapselt die Initialisierung, Ausführung und Beendigung einer Anwendung für Windows-Betriebssystems. Eine Anwendung, die auf das Framework benötigen eine und nur ein Objekt einer Klasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Dieses Objekt wird erstellt, bevor Windows erstellt werden.  

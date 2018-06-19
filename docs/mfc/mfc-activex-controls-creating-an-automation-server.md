@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346762"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC-ActiveX-Steuerelemente: Erstellen eines Automatisierungsservers
 Sie können ein MFC-ActiveX-Steuerelement als Automatisierungsserver programmgesteuert Einbetten des Steuerelements in einer anderen Anwendung und das Aufrufen von Methoden im Steuerelement aus der Anwendung entwickeln. Z. B. ein Steuerelement würde in einem ActiveX-Steuerelementcontainer gehostet werden weiterhin zur Verfügung.  

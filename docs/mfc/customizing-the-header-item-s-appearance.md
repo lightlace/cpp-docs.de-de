@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342893"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Das Headerelement anpassen&#39;s Darstellung
 Durch Festlegen der *DwStyle* Parameter bei der Erstellung von einem Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#create)) definieren Sie die Darstellung und Verhalten des Headers Elemente oder des Headersteuerelements selbst.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342474"
 ---
 # <a name="adding-controls-by-hand"></a>Manuelles Hinzufügen von Steuerelementen
 Sie können entweder [Hinzufügen von Steuerelementen zu einem Dialogfeld mit dem Dialog-Editor](../mfc/using-the-dialog-editor-to-add-controls.md) oder fügen Sie sie selbst, mit dem Code.  

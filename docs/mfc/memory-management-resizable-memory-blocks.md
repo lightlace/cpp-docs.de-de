@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345679"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Speicherverwaltung: Größenveränderbare Speicherblöcke
 Die **neue** und **löschen** Operatoren, die im Artikel beschriebenen [Speicherverwaltung: Beispiele für](../mfc/memory-management-examples.md), eignen sich für das zuordnen und Freigeben von Speicherblöcken mit fester Größe und -Objekte. In einigen Fällen kann der Anwendung Größenveränderbare Speicherblöcke erforderlich. Sie müssen die standardmäßigen Funktionen der C-Laufzeitbibliothek verwenden ["malloc"](../c-runtime-library/reference/malloc.md), [Realloc](../c-runtime-library/reference/realloc.md), und [freien](../c-runtime-library/reference/free.md) Größenveränderbare Speicherblöcke im Heap zu verwalten.  

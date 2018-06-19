@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858756"
 ---
 # <a name="adding-or-deleting-a-string"></a>Hinzufügen oder Löschen von Zeichenfolgen
 Sie können schnell neue Einträge in der Zeichenfolgentabelle im Zeichenfolgen-Editor einfügen. Neue Zeichenfolgen befinden sich am Ende der Tabelle und den nächsten verfügbaren Bezeichner angegeben werden. Bearbeiten Sie Sie dann die Eigenschaften-ID, Wert oder Beschriftung in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) nach Bedarf.  

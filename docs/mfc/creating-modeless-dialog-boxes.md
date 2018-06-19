@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340992"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Erstellen von nicht modalen Dialogfeldern
 Für ein nicht modales Dialogfeld müssen Sie Ihren eigenen öffentlichen Konstruktor in eigener Dialogfeldklassen bereitstellen. Um ein nicht modales Dialogfeld erstellen, die public-Konstruktor aufrufen und dann des Dialogfeldobjekts [erstellen](../mfc/reference/cdialog-class.md#create) Memberfunktion versucht, die Ressource zu laden. Sie können Aufrufen **erstellen** während oder nach dem Konstruktoraufruf. Wenn die Ressource die Eigenschaft hat **WS_VISIBLE**, das Dialogfeld wird sofort angezeigt. Wenn nicht, die Sie aufrufen müssen dessen [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) Memberfunktion.  

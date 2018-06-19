@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346099"
 ---
 # <a name="header-control-and-list-control"></a>Headersteuerelement und Listensteuerelement
 In den meisten Fällen verwenden Sie das Headersteuerelement, das in eingebettet ist ein [CListCtrl](../mfc/reference/clistctrl-class.md) oder [CListView](../mfc/reference/clistview-class.md) Objekt. Es gibt jedoch Situationen, in denen ein separates Headerobjekt Steuerelement wünschenswert sein, z. B. das Bearbeiten von Daten, die in Spalten oder Zeilen angeordnet sind, einem [CView](../mfc/reference/cview-class.md)-abgeleitetes Objekt. In diesen Fällen benötigen Sie mehr Kontrolle über die Darstellung und das Standardverhalten des eingebetteten Headersteuerelements.  

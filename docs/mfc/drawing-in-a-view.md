@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346164"
 ---
 # <a name="drawing-in-a-view"></a>Zeichnen in einer Ansicht
 Fast alle Zeichnen in Ihrer Anwendung tritt in der Ansicht `OnDraw` Memberfunktion, die Sie in Ihrer Ansichtsklasse überschreiben müssen. (Die Ausnahme ist die Maus zeichnen, die in beschriebenen [Interpretieren von Benutzereingaben mit einer Benutzeransicht](../mfc/interpreting-user-input-through-a-view.md).) Ihre `OnDraw` außer Kraft setzen:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342185"
 ---
 # <a name="containers"></a>Container
 Eine Steuerelementcontainer-Anwendung ist eine Anwendung, die eingebettete oder verknüpfte Elemente in einem eigenen Dokumente integrieren kann. Die Dokumente, die von einem Steuerelementcontainer-Anwendung verwaltet müssen speichern und Anzeigen von OLE-Verbunddokument-Komponenten sowie Daten, die von der Anwendung selbst erstellt werden. Eine Steuerelementcontainer-Anwendung muss auch Benutzern neue Elemente eingefügt oder Bearbeiten von vorhandenen Elementen.  
