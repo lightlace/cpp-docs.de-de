@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871904"
 ---
 # <a name="handlethandle-data-member"></a>HandleT::handle_ Data-Member
 Enthält das Handle, das vom HandleT-Objekt dargestellt wird.  

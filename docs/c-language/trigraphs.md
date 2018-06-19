@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389955"
 ---
 # <a name="trigraphs"></a>Trigraphen
 Der Quellzeichensatz von C-Quellprogrammen ist im 7-Bit-ASCII-Zeichensatz enthalten, ist aber eine Obermenge des Invariantencodesatzes nach ISO 646-1983. Trigraphsequenzen ermöglichen es, C-Programme ausschließlich mit dem Invariantencodesatz nach ISO(International Standards Organization) zu schreiben. Trigraphen sind Sequenzen von drei Zeichen, die mit zwei aufeinander folgenden Fragezeichen beginnen, und werden vom Compiler durch die entsprechenden Interpunktionszeichen ersetzt. Sie können Trigraphen in C-Quelldateien verwenden, die einen Zeichensatz besitzen, der für einige Interpunktionszeichen keine passenden grafischen Darstellungen enthält.  

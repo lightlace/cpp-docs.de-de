@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879437"
 ---
 # <a name="menu-editor"></a>Menü-Editor
 Menüs ermöglichen Ihnen das Anordnen von Befehlen in einer logischen und leicht verständlichen Weise. Mit dem Menü-Editor können Sie Menüs erstellen und bearbeiten, indem Sie direkt an einer Menüleiste arbeiten, die der in Ihrer fertig gestellten Anwendung sehr ähnlich ist.  

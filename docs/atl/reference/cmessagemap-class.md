@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359018"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap-Klasse
 Diese Klasse ermöglicht es, dass ein Objekt meldungszuordnungen, um den Zugriff durch ein anderes Objekt sein.  

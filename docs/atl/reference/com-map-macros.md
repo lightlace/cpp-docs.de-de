@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358422"
 ---
 # <a name="com-map-macros"></a>COM-Zuordnungsmakros
 Diese Makros definieren Zuordnungen von COM-Schnittstelle.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359548"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Beispiel eines benutzerdefinierten Zeichenfolge-Managers
 ATL-Bibliothek implementiert ein Beispiel für eine benutzerdefinierte Zeichenfolge-Manager, die von Klasse verwendeten [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)namens **CFixedStringMgr**. `CFixedStringT` stammt aus [CStringT](../atl-mfc-shared/reference/cstringt-class.md) und implementiert eine Zeichenfolge, die als Teil seiner Zeichendaten ordnet die `CFixedStringT` Objekt selbst, solange die Zeichenfolge kleiner als die Länge ist der **T_nChars** der Vorlagenparameter `CFixedStringT`. Bei diesem Ansatz ist die Zeichenfolge nicht im Heap überhaupt erforderlich, wenn die Größe des Puffers fester Größe die Länge der Zeichenfolge überschreitet. Da `CFixedStringT` verwendet nicht immer einen Heap Zuweisen der Zeichenfolgendaten, es können keine **CAtlStringMgr** als Zeichenfolgen-Manager. Er verwendet einen benutzerdefinierte Zeichenfolge-Manager (**CFixedStringMgr**), implementieren die [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) Schnittstelle. Diese Schnittstelle wird erläutert, [Implementierung eines benutzerdefinierten Zeichenfolge-Managers (Advanced-Methode)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361947"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Verwendung von IDispEventSimpleImpl
 Bei Verwendung `IDispEventSimpleImpl` um Ereignisse zu behandeln, müssen Sie:  

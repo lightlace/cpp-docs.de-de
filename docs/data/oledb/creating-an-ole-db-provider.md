@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097106"
 ---
 # <a name="creating-an-ole-db-provider"></a>Erstellen eines OLE DB-Anbieters
 Die empfohlene Methode zum Erstellen eines OLE DB-Anbieters ist die Verwendung des Assistenten ein ATL COM-Projekt und einen Anbieter erstellen und ändern dann die Dateien mithilfe der OLE DB-Vorlagen. Wie Sie Ihren Anbieter anpassen, können nicht benötigte Eigenschaften auskommentieren und optionale Schnittstellen hinzufügen.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882088"
 ---
 # <a name="disabling-guides"></a>Deaktivieren von Führungslinien
 Sondertasten können in Verbindung mit der Maus Sie um die ausrichtungsintervall Auswirkungen Handbüchern zu deaktivieren. Verwenden die ALT-Taste deaktiviert das ausrichtungsintervall Auswirkungen des Handbuchs ausgewählt. Verschieben eine Anleitung mit der UMSCHALTTASTE wird verhindert, dass angedockte Steuerelemente mit dem Handbuch verschieben.  

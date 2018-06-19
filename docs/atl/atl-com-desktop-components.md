@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255992"
 ---
 # <a name="atl-com-desktop-components"></a>ATL-COM-Desktop-Komponenten
 Der ATL-Verweis dokumentiert der ATL Active Template Library (), einen Satz von Template-basierten C++-Klassen, die die Programmierung von Component Object Model (COM)-Objekten vereinfachen. Um vollständig ATL nutzen, wird eine Kenntnisse COM dringend empfohlen.  

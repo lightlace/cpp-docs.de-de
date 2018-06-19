@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256079"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70-Struktur
 Verwendet von Windowing Code in ATL  

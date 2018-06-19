@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391912"
 ---
 # <a name="pointer-declarations"></a>Zeigerdeklarationen
 Eine "Zeigerdeklaration" benennt eine Zeigervariable und gibt den Typ des Objekts an, auf das die Variable zeigt. Eine Variable, die als Zeiger deklariert ist, enthält eine Speicheradresse.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357593"
 ---
 # <a name="date-and-time-automation-support"></a>Datum und Uhrzeit:-Unterstützung
 Dieser Artikel beschreibt, wie die Klasse Bibliotheksdienste im Zusammenhang mit der Verwaltung von Datum und Uhrzeit nutzen. Verfahren beschriebenen Schritten:  

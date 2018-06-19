@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359313"
 ---
 # <a name="interfaces-atl"></a>Schnittstellen (ATL)
 Eine Schnittstelle ist die Möglichkeit, in der ein Objekt seine Funktionalität an die Außenwelt verfügbar macht. In COM ist eine Schnittstelle eine Tabelle von Zeigern (z. B. eine C++-Vtable) auf Funktionen, die von dem Objekt implementiert. Die Tabelle stellt die Schnittstelle dar, und die Funktionen, die auf denen er zeigt, sind die Methoden dieser Schnittstelle. Ein Objekt kann beliebig viele Schnittstellen verfügbar machen.  

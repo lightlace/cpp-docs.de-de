@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872064"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Ausgleichen des Abstands zwischen Steuerelementen
 Dialog-Editor können Sie Speicherplatz Steuerelemente gleichmäßig zwischen den äußersten ausgewählten Steuerelemente.  

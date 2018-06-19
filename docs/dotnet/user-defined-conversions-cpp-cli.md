@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170647"
 ---
 # <a name="user-defined-conversions-ccli"></a>Benutzerdefinierte Konvertierungen (C++/CLI)
 Dieser Abschnitt beschreibt die benutzerdefinierten Konvertierungen (UDP), wenn einer der Typen in der Konvertierung ein Verweis oder eine Instanz von einem Werttyp oder Verweistyp ist.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162875"
 ---
 # <a name="regular-expressions-ccli"></a>Reguläre Ausdrücke (C++/CLI)
 Veranschaulicht verschiedene Zeichenfolgenoperationen, die mithilfe von Klassen für reguläre Ausdrücke in .NET Framework.  

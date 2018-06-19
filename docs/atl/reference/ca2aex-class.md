@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358445"
 ---
 # <a name="ca2aex-class"></a>CA2AEX-Klasse
 Diese Klasse wird verwendet, indem die Makros zur zeichenfolgenkonvertierung `CA2TEX` und `CT2AEX`, und die Typedef **CA2A**.  

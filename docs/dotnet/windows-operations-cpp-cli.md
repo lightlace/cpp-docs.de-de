@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169110"
 ---
 # <a name="windows-operations-ccli"></a>Windows-Vorgänge (C++/CLI)
 Veranschaulicht verschiedene Windows-spezifische Aufgaben mit der [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  

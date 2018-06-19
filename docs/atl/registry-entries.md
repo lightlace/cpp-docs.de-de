@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359728"
 ---
 # <a name="registry-entries"></a>Registrierungseinträge
 DCOM eingeführt, das Konzept der Anwendungs-IDs (AppIDs), welcher Gruppe von Konfigurationsoptionen für eine oder mehrere DCOM-Objekte in einem zentralen Ort in der Registrierung. Sie geben eine AppID, der angibt, dessen Werts in der AppID benannten Wert unter der CLSID des Objekts.  

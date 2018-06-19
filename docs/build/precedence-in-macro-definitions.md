@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368612"
 ---
 # <a name="precedence-in-macro-definitions"></a>Vorrang bei Makrodefinitionen
 Wenn ein Makro mehrere Definitionen verfügt, verwendet NMAKE die Definition die höchsten Rangfolge. Die folgende Liste zeigt die Rangfolge, vom höchsten zum niedrigsten:  

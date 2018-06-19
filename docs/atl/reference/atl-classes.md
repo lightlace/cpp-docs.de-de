@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255752"
 ---
 # <a name="atl-classes-and-structs"></a>ATL-Klassen und Strukturen
 Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. Zum Suchen nach einer bestimmten Klasse nach Kategorie finden Sie unter der [ATL-Klassenübersicht](../../atl/atl-class-overview.md).  

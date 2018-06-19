@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358126"
 ---
 # <a name="date-type"></a>DATE-Typ
 Die **Datum** Typ wird mit einer 8-Byte-Gleitkommazahl implementiert. Tage werden durch ganze Zahl erhöht werden beginnend am 30. Dezember 1899 Mitternacht als jeweils auf die nächsthöhere dargestellt. Stundenwerte werden als der Absolute Wert des Bruchteils der Zahl dargestellt. Die folgende Tabelle zeigt verschiedene Datumsangaben zusammen mit ihren **Datum** Typ numerische Entsprechung:  

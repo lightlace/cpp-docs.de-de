@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172443"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die Last in FIFO-Zugriff hat. Sie verwenden die Containeradapter `stack` als Pushdown Stapel einen zugrunde liegenden Container zu verwalten.  

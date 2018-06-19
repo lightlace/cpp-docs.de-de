@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873562"
 ---
 # <a name="finding-binary-data"></a>Suchen von Binärdaten
 Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Angenommen, um "Hello" zu suchen, Sie können entweder die Zeichenfolge "Hello" oder suchen für "48 65 6 c 6 C 6F" (die hexadezimale Entsprechung).  

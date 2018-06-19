@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880178"
 ---
 # <a name="partial--c-component-extensions"></a>Partial (Komponentenerweiterungen für C++)
 Die `partial` Schlüsselwort können Sie verschiedene Teile des gleichen Verweisklasse unabhängig voneinander und in anderen Dateien erstellt werden.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878862"
 ---
 # <a name="menu-command-properties"></a>Menübefehlseigenschaften
 Die folgenden Informationen sind entsprechend den Menüeigenschaften geordnet, die beim Auswählen eines Menübefehls im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) angezeigt werden. Die Eigenschaften sind hier alphabetisch aufgeführt, können im Eigenschaftenfenster jedoch auch nach Kategorie angezeigt werden.  
