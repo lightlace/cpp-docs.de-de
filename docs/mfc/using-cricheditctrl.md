@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382166"
 ---
 # <a name="using-cricheditctrl"></a>Verwenden von CRichEditCtrl
 Ein rich-Edit-Steuerelement ist ein Fenster, in dem der Benutzer eingeben kann, und Bearbeiten von Text. Der Text kann Zeichen- und absatzformatierung zugewiesen werden und kann eingebettete OLE-Objekte enthalten. Das rich-Edit-Steuerelement wird dargestellt, in MFC von der [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) Klasse.  

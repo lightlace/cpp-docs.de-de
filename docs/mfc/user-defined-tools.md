@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384347"
 ---
 # <a name="user-defined-tools"></a>Benutzerdefinierte Tools
 MFC unterstützt benutzerdefinierte Tools. Ein benutzerdefiniertes Tool ist eine spezielle Befehl, der eine externe, benutzerdefinierte Anwendung ausgeführt wird. Anpassungsvorgangs können Sie benutzerdefinierte Tools verwalten. Allerdings können Sie diesen Prozess verwenden, wenn Anwendungsobjekts nicht abgeleitet ist [CWinAppEx Class](../mfc/reference/cwinappex-class.md). Weitere Informationen zur Anpassung finden Sie unter [Anpassung für MFC](../mfc/customization-for-mfc.md).  

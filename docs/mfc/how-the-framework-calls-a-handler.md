@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343611"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Wie das Framework einen Handler aufruft
 In den folgenden Themen zunächst untersuchen, wie das Framework Befehle leitet Sie dann überprüfen, wie andere Nachrichten und steuerelementbenachrichtigungen Windows gesendet werden:  

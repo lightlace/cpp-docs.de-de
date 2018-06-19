@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384370"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Beispiel für Sockets mithilfe der Archive
 In diesem Artikel zeigt ein Beispiel zur Verwendung der Klasse [CSocket](../mfc/reference/csocket-class.md). Das Beispiel setzt `CArchive` Objekte zum Serialisieren von Daten über ein Socket. Beachten Sie, dass dies nicht Dokumentserialisierung zu bzw. aus einer Datei ist.  

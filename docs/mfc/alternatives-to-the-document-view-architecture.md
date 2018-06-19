@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344203"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativen zur Dokument-/Ansichtarchitektur
 MFC-Anwendungen verwenden die Dokument-/Ansichtarchitektur normalerweise Informationen, die Dateiformate und die visuelle Darstellung der Daten für Benutzer zu verwalten. Für die meisten desktopanwendungen ist die Dokument-/Ansichtarchitektur Anwendungsarchitektur mit entsprechenden und effizient. Diese Architektur unterteilt die Daten anzeigen und in den meisten Fällen, die Anwendung vereinfacht und redundanten Code reduziert.  

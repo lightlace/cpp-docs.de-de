@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343644"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Umgehen des Serialisierungsmechanismus
 Wie Sie gesehen haben, bietet das Framework eine Standardmethode zum Lesen und Schreiben von Daten in und aus Dateien. Über ein Archivobjekt serialisieren passt die Anforderungen eine hervorragende vieler Anwendungen. Eine solche Anwendung liest eine Datei vollständig in den Arbeitsspeicher, ermöglicht dem Benutzer die Datei zu aktualisieren und dann die aktualisierte Version erneut auf den Datenträger schreibt.  

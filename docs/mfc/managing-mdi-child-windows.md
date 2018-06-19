@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344934"
 ---
 # <a name="managing-mdi-child-windows"></a>Verwalten von untergeordneten MDI-Fenstern
 MDI-Hauptrahmenfenster (eine pro Anwendung) enthalten ein spezielles untergeordnetes Fenster aufgerufen, die **MDICLIENT** Fenster. Der **MDICLIENT** Fenster verwaltet, das den Clientbereich des Hauptrahmenfenster und selbst untergeordnete Fenster Fehler: das Dokumentfenster abgeleitet `CMDIChildWnd`. Da die Dokumentfenster Rahmenfenstern selbst (untergeordnete MDI-Fenster) sind, können sie außerdem eigene untergeordnete Elemente verfügen. In all diesen Fällen das übergeordnete Fenster zugehöriges untergeordnetes Fenster verwaltet und einige Befehle aus, um diese weiterleitet.  

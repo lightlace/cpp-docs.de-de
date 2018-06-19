@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347080"
 ---
 # <a name="files-in-mfc"></a>Dateien in MFC
 In der Microsoft Foundation Class Library (MFC)-Klasse [CFile](../mfc/reference/cfile-class.md) normale Datei-e/a-Vorgänge abwickelt. Diese Artikelreihe erläutert, wie zu öffnen und schließen Sie Dateien als auch lesen und Schreiben von Daten zu diesen Dateien. Darüber hinaus werden die Status Dateioperationen erläutert. Eine Beschreibung, wie die Serialisierung objektbasierten Funktionen von MFC als eine alternative Möglichkeit zum Lesen und Schreiben von Daten in Dateien zu verwenden, finden Sie im Artikel [Serialisierung](../mfc/serialization-in-mfc.md).  

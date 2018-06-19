@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345044"
 ---
 # <a name="handling-the-apply-button"></a>Verwenden der Schaltfläche „Anwenden“
 Eigenschaftenblätter haben eine Funktion, die keine Dialogfelder "standard": Benutzer können zum Anwenden von Änderungen sie vorgenommen haben, bevor das Eigenschaftenblatt schließen. Dies erfolgt mithilfe der Schaltfläche "anwenden". Dieser Artikel beschreibt die Methoden beschrieben, die Sie verwenden können, um diese Funktion ordnungsgemäß zu implementieren.  

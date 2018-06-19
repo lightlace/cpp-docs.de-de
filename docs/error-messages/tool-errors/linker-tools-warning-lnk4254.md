@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316893"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Linkertoolwarnung LNK4254
 Abschnitt 'Abschnitt1' (Offset), die mit 'Abschnitt2' zusammengeführt (offset), mit verschiedenen Attributen  

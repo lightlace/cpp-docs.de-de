@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343943"
 ---
 # <a name="automation-servers"></a>Automatisierungsserver
 Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsserver ist eine Anwendung, die programmierbare Objekte (Automatisierungsobjekte genannt) für andere Anwendungen verfügbar macht (aufgerufen [Automatisierungsclients](../mfc/automation-clients.md)). Automatisierungsserver werden manchmal als Automatisierungskomponenten bezeichnet.  

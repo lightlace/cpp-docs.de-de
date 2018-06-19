@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382514"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Übergeordnete und untergeordnete Elemente in einem Struktursteuerelement
 Jedes Element in einem Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) können Sie eine Liste von Unterelementen, die mit ihm verknüpften untergeordneten Elemente aufgerufen werden. Ein Element, das eine oder mehrere untergeordnete Elemente verfügt, wird ein übergeordnetes Element aufgerufen. Ein untergeordnetes Element wird unter seinem übergeordneten Element und eingezogen wird, um anzugeben, dass es zum übergeordneten Element untergeordnet ist. Ein Element, das kein übergeordnetes Element besitzt, wird am oberen Rand der Hierarchie und ein Stammelement aufgerufen.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346437"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Bearbeiten des QuickInfo-Steuerelements
 Klasse `CToolTipCtrl` bietet eine Gruppe von Member Funktionen, die die verschiedenen Attribute steuern die `CToolTipCtrl` Objekt und das QuickInfo-Fenster.  

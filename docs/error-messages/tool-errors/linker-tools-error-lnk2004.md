@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314339"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Linkertoolfehler LNK2004
 Gp relativer Fixup-Überlauf zu 'Ziel'; kurzer Abschnitt "Abschnitt" ist zu groß ist oder außerhalb des gültigen Bereichs.  

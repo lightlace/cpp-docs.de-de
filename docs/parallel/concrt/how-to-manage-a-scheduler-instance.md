@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687659"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Gewusst wie: Verwalten einer Planerinstanz
 Mit Planerinstanzen können Sie bestimmte Planungsrichtlinien verschiedenen Arten von Arbeitslasten zuordnen. Dieses Thema enthält zwei grundlegende Beispiele, die zeigen, wie eine Planerinstanz erstellt und verwaltet wird.  

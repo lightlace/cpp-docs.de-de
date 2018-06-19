@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334885"
 ---
 # <a name="active-documents-on-the-internet"></a>Active Documents für das Internet
 Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte. Aktive Dokumente möglicherweise mehrseitigen und werden in den gesamten Clientbereich angezeigt. Sie herkömmliche Menü-Aushandlung und direkte als auch in einem geöffneten Fenster in der Serveranwendung bearbeitet werden können. Anstatt als kleine Rechteck von einem schraffierten Rahmen umgeben sind aktive Dokumente vollständigen Frame und immer direkt aktiv.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383031"
 ---
 # <a name="working-with-a-header-control"></a>Arbeiten mit dem Headersteuerelement
 Die einfache Methode zum Verwenden von einem Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) wird in Verbindung mit einem Listensteuerelement; Siehe [Verwenden von CListCtrl](../mfc/using-clistctrl.md) weiter unten in diesem Thema Familie. Sie können auch ein Headersteuerelement selbst. MFC-Aufrufe **InitCommonControls** für Sie. Die Hauptaufgaben sind wie folgt aus:  

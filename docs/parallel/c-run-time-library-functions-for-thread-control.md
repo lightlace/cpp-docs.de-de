@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685761"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funktionen der C-Laufzeitbibliothek zur Threadsteuerung
 Alle Win32-Programme weisen mindestens einen Thread auf. Jeder Thread kann zusätzliche Threads generieren. Ein Thread kann seine Aufgabe schnell abschließen oder während der gesamten Lebensdauer eines Programms aktiv bleiben.  
