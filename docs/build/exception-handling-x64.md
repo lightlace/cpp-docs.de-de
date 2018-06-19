@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367185"
 ---
 # <a name="exception-handling-x64"></a>Ausnahmebehandlung (x64)
 In diesem Abschnitt wird erläutert, strukturierte Ausnahmebehandlung und C++-Ausnahmebehandlung Verhalten auf die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  

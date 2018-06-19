@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363712"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Implementieren einer Eigenschaftenseite
 In diesem Beispiel wird gezeigt, wie eine Eigenschaftenseite erstellt, die Eigenschaften des anzeigt (und können Sie ändern) die [Dokumentklassen](../mfc/document-classes.md) Schnittstelle.  

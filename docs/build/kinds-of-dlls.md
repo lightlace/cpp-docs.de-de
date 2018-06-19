@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369941"
 ---
 # <a name="kinds-of-dlls"></a>Arten von DLLs
 Anhand der Informationen unter diesem Thema können Sie feststellen, welche Art von DLL erstellt werden sollte.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371852"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0
 Wenn Sie mehrere Versionen von Visual C++ auf Ihrem Computer haben oder wenn Sie eine eigene Hilfsfunktion definiert haben, es möglicherweise von kommt verzögert Änderungen an der DLL laden Hilfsfunktion. Zum Beispiel:  

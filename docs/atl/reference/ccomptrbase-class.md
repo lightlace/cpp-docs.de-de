@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366366"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase-Klasse
 Diese Klasse bietet eine Grundlage für intelligente zeigerklassen Routinen COM-basierten Speicher verwenden.  

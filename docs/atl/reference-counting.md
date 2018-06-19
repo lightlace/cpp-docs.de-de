@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358247"
 ---
 # <a name="reference-counting"></a>Verweiszählung
 COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfernen, wenn er davon ausgeht, dass das Objekt nicht mehr verwendet wird. Stattdessen muss der Programmierer nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einer Verweisanzahl entfernt werden kann.  

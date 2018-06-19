@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368004"
 ---
 # <a name="macros-and-nmake"></a>Makros und NMAKE
 Makros zu eine bestimmte Zeichenfolge im Makefile durch eine andere Zeichenfolge ersetzen. Verwenden von Makros, können Sie die folgenden Schritte ausführen:  

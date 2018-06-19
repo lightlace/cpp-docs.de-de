@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373981"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Bei Verwendung eines Funktionsnamens ohne "()" wird kein Code generiert
 Wenn Sie den Namen einer Funktion deklariert, die in Ihrem Programm ohne Klammern verwendet wird, gibt der Compiler Code nicht zurück. Dies tritt unabhängig davon, ob die Funktion Parameter akzeptiert, da der Compiler die Funktionsadresse berechnet; Da der Funktionsaufrufoperator "()" nicht vorhanden ist, wird kein Aufruf ausgeführt. Das Ergebnis ist ähnlich der folgenden:  

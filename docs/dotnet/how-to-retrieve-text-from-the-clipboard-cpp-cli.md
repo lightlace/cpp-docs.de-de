@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127902"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Gewusst wie: Abrufen von Text aus der Zwischenablage (C++/CLI)
 Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> Memberfunktion zurückzugebenden einen Zeiger auf die <xref:System.Windows.Forms.IDataObject> Schnittstelle. Diese Schnittstelle kann dann für das Format der Daten abgefragt und verwendet, um die eigentlichen Daten abzurufen.  

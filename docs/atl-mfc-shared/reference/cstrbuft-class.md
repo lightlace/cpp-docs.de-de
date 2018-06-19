@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361357"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT-Klasse
 Diese Klasse bietet automatische ressourcenbereinigung für `GetBuffer` und `ReleaseBuffer` aufruft, die auf einer vorhandenen `CStringT` Objekt.  
