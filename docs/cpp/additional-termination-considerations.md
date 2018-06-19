@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408145"
 ---
 # <a name="additional-termination-considerations"></a>Weitere Überlegungen zur Beendigung
 Sie können ein C++-Programm beenden, mit **beenden**, `return`, oder **abort**. Mit der Funktion `atexit` können Sie eine Beendigung der Verarbeitung hinzufügen. Diese Funktionen werden in den folgenden Abschnitten beschrieben.  

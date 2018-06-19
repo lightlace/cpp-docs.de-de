@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055205"
 ---
 # <a name="savereg"></a>.SAVEREG
 Erzeugt entweder eine `UWOP_SAVE_NONVOL` oder eine `UWOP_SAVE_NONVOL_FAR` Einstiegspunkt für das angegebene Register Code Entladen (`reg`) und Offset (`offset`) unter Verwendung der aktuellen Prolog Verschiebung. MASM wird die effizienteste Codierung auswählen.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050866"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 Generiert eine **UWOP_ALLOC_SMALL** oder ein **UWOP_ALLOC_LARGE** mit der angegebenen Größe für den aktuellen Offset im Prolog.  
