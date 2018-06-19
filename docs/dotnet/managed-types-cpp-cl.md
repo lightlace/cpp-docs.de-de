@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135858"
 ---
 # <a name="managed-types-ccl"></a>Verwaltete Typen (C++/CL)
 Die Syntax für die Deklaration von verwalteten Typen und die Erstellung und Verwendung von Objekten dieser Typen wurde erheblich von Managed Extensions für C++ in Visual C++ geändert wurde. Dies erfolgte, um deren Integration in das ISO C++-Typsystem zu erzielen. Diese Änderungen werden in den folgenden Abschnitten ausführlich dargestellt.  

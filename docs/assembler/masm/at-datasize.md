@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049114"
 ---
 # <a name="datasize"></a>@DataSize
 0 für **sehr klein**, **kleine**, **Mittel**, und **Flatfile** modelliert, 1 für **COMPACT** und  **GROßE** Modelle und 2 für **sehr groß** Modell (numerische entsprechen).  

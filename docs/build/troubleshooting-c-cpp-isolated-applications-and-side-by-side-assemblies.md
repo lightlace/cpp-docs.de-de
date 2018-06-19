@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390690"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Problembehandlung bei isolierten Anwendungen und parallelen Assemblys (C/C++)
 Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibliotheken nicht gefunden werden. In diesem Artikel werden einige häufige Ursachen für Fehler beim Laden einer C/C++-Anwendung beschrieben und Schritte zur Lösung des jeweiligen Problems vorgeschlagen.  

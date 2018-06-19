@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391560"
 ---
 # <a name="pctype-pwctype-wctype-mbctype-mbcasemap"></a>_pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 Diese globale Variablen enthalten Informationen, die von den Zeichenklassifizierungsfunktionen verwendet werden. Nur zur internen Verwendung.  

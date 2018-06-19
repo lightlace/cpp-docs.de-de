@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050674"
 ---
 # <a name="dd"></a>DD
 Zum Belegen und optional ein Doppelwort (4 Bytes) des Speichers für die einzelnen initialisiert `initializer`. `DD` ist ein Synonym für [DWORD](../../assembler/masm/dword.md).  

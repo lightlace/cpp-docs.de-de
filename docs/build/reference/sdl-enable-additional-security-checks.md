@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379535"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Aktivieren zusätzlicher Sicherheitsüberprüfungen)
 Fügt empfohlene SDL-Prüfungen (Security Development Lifecycle) hinzu. Diese Prüfungen enthalten zusätzliche sicherheitsrelevante Warnungen als Fehler und zusätzliche sichere Codegenerierungsfunktionen.  

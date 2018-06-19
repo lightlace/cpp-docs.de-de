@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353887"
 ---
 # <a name="date-and-time-database-support"></a>Datum und Uhrzeit: Datenbankunterstützung
 Ab Version 4.0 Datenbank MFC-Programmierung verwendet die [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) und [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) Klassen zur Darstellung von Datums-und Uhrzeitdaten. Diese Klassen, die auch in die Automatisierung verwendet Klasse abgeleitet sind [COleVariant](../mfc/reference/colevariant-class.md). Geben Sie eine bessere Unterstützung für die Verwaltung von Datums-und Uhrzeitdaten als [CTime](../atl-mfc-shared/reference/ctime-class.md) und [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  

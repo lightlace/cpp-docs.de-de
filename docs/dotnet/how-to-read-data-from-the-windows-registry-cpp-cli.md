@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132553"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Gewusst wie: Lesen von Daten aus der Windows-Registrierung (C++/CLI)
 Im folgenden Codebeispiel wird der <xref:Microsoft.Win32.Registry.CurrentUser>-Schlüssel verwendet, um Daten aus der Windows-Registrierung zu lesen. Zunächst werden die Unterschlüssel mit aufgelistet der <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> -Methode, und klicken Sie dann der Identities-Unterschlüssel mit geöffnet ist die <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> Methode. Jeder Unterschlüssel wird wie ein Stammschlüssel durch die <xref:Microsoft.Win32.RegistryKey>-Klasse dargestellt. Schließlich werden mit dem neuen <xref:Microsoft.Win32.RegistryKey>-Objekt die Schlüssel/Wert-Paare aufgelistet.  

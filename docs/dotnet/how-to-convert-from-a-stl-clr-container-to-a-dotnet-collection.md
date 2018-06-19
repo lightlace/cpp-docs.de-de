@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132007"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Gewusst wie: Umwandeln eines STL/CLR-Containers in eine .NET-Auflistung
 In diesem Thema wird gezeigt, wie STL/CLR-Container in ihre entsprechenden Auflistungen von .NET konvertiert werden. Beispielsweise können wir zeigen, wie eine STL/CLR konvertieren [Vektor](../dotnet/vector-stl-clr.md) auf eine .NET <xref:System.Collections.Generic.ICollection%601> und zum Konvertieren einer STL/CLR [Zuordnung](../dotnet/map-stl-clr.md) in ein .NET <xref:System.Collections.Generic.IDictionary%602>, aber die Prozedur ist für alle Auflistungen ähnlich und Container.  

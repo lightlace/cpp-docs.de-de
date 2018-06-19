@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388226"
 ---
 # <a name="exception-handling-constants"></a>Ausnahmebehandlungskonstanten
 Die Konstante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` oder `EXCEPTION_EXECUTE_HANDLER` wird zurückgegeben, wenn während der Ausführung des abgesicherten Abschnitts einer **try-except**-Anweisung eine Ausnahme auftritt. Der Rückgabewert bestimmt, wie die Ausnahme behandelt wird. Weitere Informationen finden Sie unter [try-except Statement](../cpp/try-except-statement.md) (try-except-Anweisung) in der *C++-Sprachreferenz*.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382824"
 ---
 # <a name="execution-character-set"></a>Ausführungszeichensatz
 Dieser Inhalt bezieht sich häufig auf den "Ausführungszeichensatz". Die Ausführungszeichengruppe ist nicht notwendigerweise identisch mit der Quellzeichengruppe, die für das Schreiben in C-Programmen verwendet wird. Die Ausführungszeichengruppe umfasst alle Zeichen in der Quellzeichengruppe sowie das Null-Zeichen, das Zeilenvorschubzeichen, die horizontale Registerkarte, die vertikale Registerkarte, den Wagenrücklauf und die Escapesequenz. Die Quell- und Ausführungszeichensätze gleich eventuell nicht denen in anderen Implementierungen.  

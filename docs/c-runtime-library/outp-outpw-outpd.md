@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391508"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Gibt an einem Port ein Byte (`_outp`), ein Wort (`_outpw`) oder ein Doppelwort (`_outpd`) aus.  

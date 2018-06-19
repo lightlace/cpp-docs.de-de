@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049280"
 ---
 # <a name="instr"></a>@InStr
 Makrofunktion, die das erste Vorkommen des findet *Zeichenfolge2* in *string1*, beginnend bei *Position* in *string1*. Wenn *Position* nicht angezeigt wird, Suche beginnt am Anfang *string1*. Gibt eine Position ganze Zahl oder 0 zurück, wenn *Zeichenfolge2* wurde nicht gefunden.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135026"
 ---
 # <a name="locklock"></a>lock::lock
 Erstellt eine `lock` -Objekt, optional darauf warten, die Sperre für eine bestimmte Zeitspanne oder überhaupt nicht immer erhalten.  

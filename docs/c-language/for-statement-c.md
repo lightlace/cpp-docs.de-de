@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389280"
 ---
 # <a name="for-statement-c"></a>for-Anweisung (C)
 Mit der **for**-Anweisung können Sie eine Anweisung oder eine Verbundanweisung so häufig wie angegeben wiederholen. Der Text einer **for**-Anweisung wird nicht oder mehrmals ausgeführt, bis eine optionale Bedingung falsch ist. Sie können optionale Ausdrücke in der **for**-Anweisung verwenden, um Werte während der Ausführung der **for**-Anweisung zu initialisieren und zu ändern.  

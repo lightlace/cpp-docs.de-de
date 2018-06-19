@@ -19,6 +19,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255977"
 ---
 # <a name="worker-archetype"></a>Worker Urtyp
 Klassen, die entsprechen, den *Worker* Urtyp Geben Sie der Code zum Verarbeiten von Arbeitselementen in der Warteschlange eines Threadpools.  

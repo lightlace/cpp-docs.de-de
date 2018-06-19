@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386263"
 ---
 # <a name="l-value-and-r-value-expressions"></a>L-Wert- und R-Wert-Ausdrücke
 Ausdrücke, die auf Speicheradressen verweisen, werden als "L-Wertausdrücke" bezeichnet. Ein L-Wert stellt einen "Lokatorwert" des Speicherbereichs bzw. einen "linken" Wert dar, der besagt, dass der Wert links neben dem Gleichzeichen (**=**) stehen kann. Häufig sind L-Werte Bezeichner.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379857"
 ---
 # <a name="stack-usage"></a>Verwendung von Stapeln
 Alle Speicher außerhalb der aktuellen Adresse des RSP gilt volatile: das Betriebssystem oder ein Debugger kann diesen Arbeitsspeicher während einer Debugsitzung für Benutzer oder ein nicht maskierbarer Interrupt überschreiben. Daher muss RSP immer festgelegt werden, bevor Sie versuchen, das Lesen und Schreiben von Werten in einen Stapelrahmen.  

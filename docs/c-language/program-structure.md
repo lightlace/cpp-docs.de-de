@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385955"
 ---
 # <a name="program-structure"></a>Programmstruktur
 Dieser Abschnitt enthält eine Übersicht über C-Programme und deren Ausführung. Begriffe und Funktionen, die zum Verständnis von C-Programmen und -Komponenten wichtig sind, werden ebenfalls eingeführt. Behandelte Themen:  

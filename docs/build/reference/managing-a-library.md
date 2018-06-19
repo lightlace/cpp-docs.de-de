@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379639"
 ---
 # <a name="managing-a-library"></a>Verwalten einer Bibliothek
 Der Standardmodus für LIB ist eine Bibliothek mit COFF-Objekte zu erstellen. LIB, die in diesem Modus ausgeführt werden, wenn Sie keinen/Extract (zum Kopieren eines Objekts in eine Datei) oder/DEF (zum Erstellen einer Importbibliothek) angeben.  

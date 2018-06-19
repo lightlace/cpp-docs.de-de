@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450796"
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode: Der Breitzeichensatz
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379275"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Erstellen von C/C++-Code in der Befehlszeile
 

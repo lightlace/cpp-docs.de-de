@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380261"
 ---
 # <a name="targets"></a>Ziele
 Geben Sie in einer Abhängigkeitszeile ein oder mehrere Ziele, die über alle gültigen Dateinamen, Verzeichnisnamen oder [Pseudoziel](../build/pseudotargets.md). Trennen Sie mehrere Ziele durch eine oder mehrere Leerzeichen bzw. Tabstopps ein. Ziele sind nicht in der Groß-/Kleinschreibung beachtet. Pfade sind mit Dateinamen zulässig. Ein Ziel darf 256 Zeichen nicht überschreiten. Wenn das Ziel, die vor dem Doppelpunkt ein einzelnes Zeichen ist, verwenden Sie ein Leerzeichen trennen. NMAKE interpretiert, andernfalls als eine Kombination Buchstaben Doppelpunkt.  

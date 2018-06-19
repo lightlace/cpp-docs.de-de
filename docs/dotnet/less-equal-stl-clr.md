@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133180"
 ---
 # <a name="lessequal-stlclr"></a>less_equal (STL/CLR)
 Die Vorlagenklasse beschreibt ein Funktionselement ist, wenn aufgerufen wird, gibt "true" nur wenn das erste Argument kleiner als oder gleich dem zweiten ist. Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353962"
 ---
 # <a name="aggregation"></a>Aggregation
 Es gibt Situationen, wenn Implementierer eines Objekts einem anderen Objekt vorgefertigten angebotenen Dienste zu nutzen möchten. Darüber hinaus möchte er dieses zweite Objekt als eine natürliche Teil des ersten angezeigt werden. COM erreicht beide Ziele durch Kapselung und Aggregation.  

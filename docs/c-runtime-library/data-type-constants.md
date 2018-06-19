@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392145"
 ---
 # <a name="data-type-constants"></a>Datentypkonstanten
 Datentypkonstanten sind von der Implementierung abhängige Wertbereiche, die für integrale Datentypen zulässig sind. Die unten aufgelisteten Konstanten geben die Bereiche für die integralen Datentypen an und sind in „limits.h“ definiert.  

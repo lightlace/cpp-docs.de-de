@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387631"
 ---
 # <a name="example-program"></a>Beispielprogramm
 Das folgende C-Quellprogramm besteht aus zwei Quelldateien. Es vermittelt eine Übersicht über einige der verschiedenen Deklarationen und Definitionen, die in einem C-Programm möglich sind. In späteren Abschnitten dieses Buchs wird beschrieben, wie diese Deklarationen, Definitionen und Initialisierungen geschrieben und C-Schlüsselwörter wie **static** und `extern` verwendet werden. Die `printf`-Funktion wird in der C-Headerdatei STDIO.H deklariert.  

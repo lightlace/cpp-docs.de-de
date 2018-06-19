@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381732"
 ---
 # <a name="domain-errors"></a>Domänenfehler
 **ANSI 4.5.1** Die Werte, die von den mathematischen Funktionen bei Domänenfehlern zurückgegeben werden  

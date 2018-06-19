@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391258"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen
 Beim Übergeben von CRT-Objekten (C Run Time, C-Laufzeit) wie z.B. Dateihandles, Gebietsschemas und Umgebungsvariablen in eine oder aus einer DLL (Funktionsaufrufe über die DLL-Grenze hinweg), kann ein unerwartetes Verhalten auftreten, wenn die DLL und die Dateien, die die DLL aufrufen, unterschiedliche Kopien der CRT-Bibliotheken verwenden.  

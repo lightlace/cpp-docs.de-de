@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385109"
 ---
 # <a name="terminating-newline-characters"></a>Beenden von Zeilenumbruchzeichen
 **ANSI 4.9.2** Ob die letzte Zeile des Textstreams ein abschließendes Zeilenumbruchzeichen erfordert  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386413"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto und bezeichnete Anweisungen (C)
 Die Anweisung `goto` übertragt die Steuerung an eine Bezeichnung. Die angegebene Bezeichnung muss sich in derselben Funktion befinden und kann nur vor einer Anweisung in derselben Funktion stehen.  

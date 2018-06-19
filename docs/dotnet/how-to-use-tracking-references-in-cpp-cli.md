@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132465"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI
 Dieser Artikel zeigt, wie einen Nachverfolgungsverweis (%) in C + c++ / CLI in common Language Runtime (CLR)-Typen als Verweis übergeben.  

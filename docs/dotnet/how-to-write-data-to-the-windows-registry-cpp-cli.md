@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130801"
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Gewusst wie: Schreiben von Daten in die Windows-Registrierung (C++/CLI)
 Im folgenden Codebeispiel wird mit der <xref:Microsoft.Win32.Registry.CurrentUser> Schlüssel eine schreibbare Instanz der Erstellung der <xref:Microsoft.Win32.RegistryKey> Klasse entspricht der **Software** Schlüssel. Anschließend wird die <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>-Methode verwendet, um einen neuen Schlüssel zu erstellen und Schlüssel/Wert-Paare hinzuzufügen.  
