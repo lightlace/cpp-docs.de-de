@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379093"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Übersicht über ARM-ABI-Konventionen
 Die Binärschnittstelle (ABI, Application Binary Interface) für den für Windows on ARM-Prozessoren kompilierten Code basiert auf der standardmäßigen ARM EABI. Dieser Artikel zeigt die wichtigsten Unterschiede zwischen Windows on ARM und dem Standard. Weitere Informationen über die standardmäßige ARM EABI finden Sie unter [Anwendung binären Schnittstelle (ABI) für die ARM-Architektur](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

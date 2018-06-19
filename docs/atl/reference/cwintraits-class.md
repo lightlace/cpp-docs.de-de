@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362507"
 ---
 # <a name="cwintraits-class"></a>CWinTraits-Klasse
 Diese Klasse stellt eine Methode für die um beim Erstellen eines Fensters Objekts verwendeten Stile zu standardisieren.  

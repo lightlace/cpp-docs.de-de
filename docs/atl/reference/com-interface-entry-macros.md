@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366587"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros  
  Diese Makros Geben Sie die Schnittstellen eines Objekts in die COM-Zuordnung, damit diese von zugegriffen werden kann `QueryInterface`. Die Reihenfolge der Einträge in der COM-Zuordnung wird die Order-Schnittstellen für einen übereinstimmenden überprüft **IID** während `QueryInterface`.  

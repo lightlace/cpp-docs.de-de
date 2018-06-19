@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373552"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Laufzeitfehlerüberprüfung für Stapelrahmen aktivieren)
 Führt die gleichen Vorgänge wie die [/RTC (Run-Time Checks Fehler)](../../build/reference/rtc-run-time-error-checks.md) Option. Veraltet.  

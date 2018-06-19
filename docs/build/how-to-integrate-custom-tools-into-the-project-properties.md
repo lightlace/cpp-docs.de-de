@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368901"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Gewusst wie: Integrieren von benutzerdefinierte Tools in die Projekteigenschaften
 Sie können Optionen für benutzerdefinierte Tools in Visual Studio hinzufügen **Eigenschaftenseiten** Fenster durch das Erstellen einer zugrunde liegenden XML-Schemadatei.  

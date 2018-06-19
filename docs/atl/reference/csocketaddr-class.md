@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363395"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr-Klasse
 Diese Klasse stellt Methoden zum Konvertieren von Hostnamen in Hostadressen, IPv4 und IPV6-Formate unterstützen.  

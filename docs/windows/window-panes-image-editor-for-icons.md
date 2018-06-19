@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892838"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Fensterbereiche (Bildbearbeitung für Symbole)
 Die Grafik-Editor-Fenster zeigt ein Bild in der Regel in zwei Bereiche, die durch eine Trennleiste getrennt. Eine Sicht ist die tatsächliche Größe und der andere wird vergrößert (der Standard-Vergrößerungsfaktor ist 6). Die Ansichten auf diese beiden Bereiche werden automatisch aktualisiert: von Ihnen in einem Bereich vorgenommenen Änderungen werden sofort in den anderen angezeigt. Die beiden Bereiche erleichtern Ihnen, auf eine vergrößerte Ansicht des Bilds, zu arbeiten, in dem Sie können einzelne Pixel unterscheiden und, zur gleichen Zeit, beobachten Sie die Auswirkungen Ihrer Arbeit für die Sicht tatsächliche Größe des Bilds.  

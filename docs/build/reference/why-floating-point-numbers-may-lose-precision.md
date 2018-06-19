@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376136"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Warum Gleitkommazahlen an Genauigkeit verlieren können
 Dezimale Gleitkommawerte müssen die genaue binäre Darstellung in der Regel nicht. Dies ist ein Nebeneffekt der wie die CPU Gleitkommadaten darstellt. Aus diesem Grund kann Genauigkeitsverlust auftreten, und einige Gleitkommaoperationen können zu unerwarteten Ergebnissen führen.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375840"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Intrinsische Funktionen erstellen)
 Eine Funktion mit systeminternen oder sonstige spezielle Formen von der Funktion aufruft, mit denen Ihre Anwendung ersetzt werden schneller ausgeführt.  

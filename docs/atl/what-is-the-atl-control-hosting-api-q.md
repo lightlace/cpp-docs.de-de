@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363245"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>Was ist die ATL-Steuerelement-Hosting-API?
 ATL des Steuerelements hosting-API ist der Satz von Funktionen, die einem beliebigen Fenster fungieren als ActiveX-Steuerelement-Container ermöglicht. Diese Funktionen können statisch oder dynamisch in das Projekt eingebunden werden, da sie als Quellcode verfügbar sind und von ATL90.dll verfügbar gemacht werden. Das Hosten von Steuerelementen Funktionen werden in der folgenden Tabelle aufgeführt.  

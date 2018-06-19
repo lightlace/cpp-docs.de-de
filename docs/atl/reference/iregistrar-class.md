@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363746"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar-Schnittstelle
 Diese Schnittstelle wird konnte IRegistrar definiert und wird intern verwendet von Memberfunktionen von CAtlModule wie z. B. [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   

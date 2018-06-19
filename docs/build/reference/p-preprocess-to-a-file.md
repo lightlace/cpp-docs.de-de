@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377143"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Vorverarbeitung in eine Datei)
 Führt eine vorverarbeitung für C- und C++-Quelldateien, und der vorverarbeiteten Ausgabedatei in eine Datei schreibt.  

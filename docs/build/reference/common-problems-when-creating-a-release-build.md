@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373165"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Häufig auftretende Probleme beim Erstellen eines Releasebuilds
 Während der Entwicklung können Sie in der Regel erstellen und Testen mit einem Debugbuild des Projekts. Wenn Sie dann die Anwendung für einen Releasebuild erstellen, erhalten Sie möglicherweise eine zugriffsverletzung.  

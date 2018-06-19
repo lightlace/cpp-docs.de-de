@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373487"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Erstellen einer BSC-Datei mit BSCMAKE
 BSCMAKE erstellt oder neu erstellt eine BSC-Datei in die effizienteste Methode können. Um potenzielle Probleme zu vermeiden, ist es wichtig zu verstehen, die Build-Prozesses.  

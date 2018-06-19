@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377854"
 ---
 # <a name="bscmake-options"></a>BSCMAKE-Optionen
 In diesem Abschnitt werden die Optionen beschrieben, die zur Steuerung von BSCMAKE zur Verfügung stehen. Der Inhalt der Browserinformationsdatei lässt sich durch Ausschließen oder Einschließen bestimmter Informationen mithilfe verschiedener Optionen steuern. Die Ausschlussoptionen ermöglichen eine schnellere Ausführung von BSCMAKE und können eine kleinere BSC-Datei zur Folge haben. Optionsnamen Groß-/Kleinschreibung unterschieden (mit Ausnahme von **/HELP** und **/nologo**).  

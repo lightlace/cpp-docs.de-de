@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130863"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Gewusst wie: Verwenden von regulären Ausdrücken zum Ändern der Anordnung von Daten (C++/CLI)
 Im folgenden Codebeispiel wird veranschaulicht, wie die reguläre .NET Framework-Unterstützung zum neu anzuordnen, oder Formatieren von Daten verwendet werden kann. Im folgenden Codebeispiel wird mit der <xref:System.Text.RegularExpressions.Regex> und <xref:System.Text.RegularExpressions.Match> Klassen, die vor-und Nachnamen aus einer Zeichenfolge zu extrahieren, und klicken Sie dann in umgekehrter Reihenfolge angezeigt.  

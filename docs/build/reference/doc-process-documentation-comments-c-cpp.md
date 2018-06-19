@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371280"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Verarbeiten von Dokumentationskommentaren) (C/C++)
 Bewirkt, dass der Compiler Dokumentationskommentare in Quellcodedateien und eine XDC-Datei für jede Quelldatei zu erstellen, die Dokumentationskommentare verfügt.  

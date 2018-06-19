@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129683"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Gewusst wie: Definieren und Installieren eines globalen Ausnahmehandlers
 Im folgenden Codebeispiel wird veranschaulicht, wie nicht behandelte Ausnahmen erfasst werden können. Das Beispielformular eine Schaltfläche enthält, wenn gedrückt wird, führt einen null-Verweis, verursacht eine Ausnahme ausgelöst werden. Diese Funktion stellt einen typische Code Fehler dar. Die resultierende Ausnahme wird vom installiert, indem Sie die main-Funktion eine anwendungsweite Ausnahmehandler abgefangen.  

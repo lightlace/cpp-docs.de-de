@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371433"
 ---
 # <a name="improving-compiler-throughput"></a>Erhöhen des Compilerdurchsatzes
 Verwenden Sie vorkompilierten Headerdateien, um das Projekt schneller zu erstellen. Dies ist wichtig, wenn Sie ATL, MFC oder das Windows SDK-Header-Dateien verwenden.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891830"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>typedef-, enum-, union- und struct-Attribute
 Die folgenden Attribute gelten für die [Typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [Struktur](../cpp/struct-cpp.md), und [Enum](../cpp/enumerations-cpp.md) C++-Schlüsselwörter.  

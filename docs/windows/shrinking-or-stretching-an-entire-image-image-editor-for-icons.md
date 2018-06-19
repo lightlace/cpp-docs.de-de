@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889916"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>Verkleinern oder Strecken eines ganzen Bilds (Bildbearbeitung für Symbole)
 ### <a name="to-shrink-or-stretch-an-entire-image"></a>So verkleinern oder Strecken eines ganzen Bildes  

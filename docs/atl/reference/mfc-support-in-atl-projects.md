@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360640"
 ---
 # <a name="mfc-support-in-atl-projects"></a>MFC-Unterstützung in ATL-Projekte
 Bei Auswahl des **MFC unterstützen** im ATL-Projekt-Assistenten Ihrem Projekt die Anwendung als ein MFC-Anwendungsobjekt (Klasse) deklariert. Das Projekt initialisiert die MFC-Bibliothek und instanziiert die Klasse (Klasse *ProjName*), stammt aus [CWinApp](../../mfc/reference/cwinapp-class.md).  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377756"
 ---
 # <a name="mutual-imports"></a>Gegenseitige Importe
 Exportieren oder Importieren in eine andere ausführbare Datei birgt Komplikationen, wenn die Importe gegenseitig (oder zirkulär) sind. Zwei DLLs gibt z. B. importieren Symbole wechselseitig rekursive Funktionen ähnlich wie voneinander.  

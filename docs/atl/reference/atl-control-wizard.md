@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363528"
 ---
 # <a name="atl-control-wizard"></a>ATL-Steuerelement-Assistent
 Fügt eine ATL-Projekt (oder einem MFC-Projekt mit ATL-Unterstützung) ein ATL-Steuerelement. Diesem Assistenten können eine der drei Arten von Steuerelementen einfügen:  

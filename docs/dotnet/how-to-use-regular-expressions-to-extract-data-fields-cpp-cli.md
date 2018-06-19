@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129667"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Gewusst wie: Verwenden von regulären Ausdrücken zum Extrahieren von Datenfeldern (C++/CLI)
 Das folgende Codebeispiel veranschaulicht die Verwendung von regulären Ausdrücken zum Extrahieren von Daten aus einer formatierten Zeichenfolge. Im folgenden Codebeispiel wird mit der <xref:System.Text.RegularExpressions.Regex> Klasse, um ein Muster anzugeben, die eine e-Mail-Adresse entspricht. Diese gehören Feldbezeichner, die verwendet werden kann, um den Benutzer und Hostbereich alle e-Mail-Adressen abzurufen. Die <xref:System.Text.RegularExpressions.Match> Klasse wird verwendet, um die eigentlichen Mustervergleich auszuführen. Wenn die angegebene e-Mail-Adresse gültig ist, den Benutzernamen und den Hostnamen extrahiert und angezeigt.  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365551"
 ---
 # <a name="catlarray-class"></a>CAtlArray-Klasse
 Diese Klasse implementiert ein Arrayobjekt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357068"
 ---
 # <a name="adding-an-atl-property-page"></a>Hinzufügen einer ATL-Eigenschaftenseite
 Um Ihrem Projekt eine Eigenschaftenseite für die Active Template Library (ATL) hinzugefügt haben, dass das Projekt als ATL-Anwendung oder als MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) eine ATL-Anwendung erstellen oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128640"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Gewusst wie: Abrufen des lokalen Computernamens (C++/CLI)
 Das folgende Codebeispiel veranschaulicht das Abrufen der Namen des lokalen Computers (in einem Netzwerk wird der Name des Computers, wie er angezeigt). Sie können dies bewerkstelligen, durch Abrufen der <xref:System.Environment.MachineName%2A> Zeichenfolge, die in definiert ist die <xref:System.Environment> Namespace.  

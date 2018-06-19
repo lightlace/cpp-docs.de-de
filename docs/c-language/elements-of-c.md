@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383081"
 ---
 # <a name="elements-of-c"></a>C-Elemente
 In diesem Abschnitt werden die Elemente der C-Programmiersprache beschrieben, einschließlich der Namen, Zahlen und Zeichen, die verwendet werden, um ein C-Programm zu erstellen. Die ANSI C-Syntax benennt diese Komponententoken.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132020"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Gewusst wie: Analysieren von Zeichenfolgen mithilfe der split-Methode (C++/CLI)
 Im folgenden Codebeispiel wird die Verwendung der <xref:System.String.Split%2A?displayProperty=fullName>-Methode veranschaulicht, um alle Wörter einer Zeichenfolge zu extrahieren. Eine Zeichenfolge mit mehreren Arten von Wortdelineatoren wird generiert und dann durch Aufrufen von <xref:System.String.Split%2A> mit einer Liste der Delineatoren analysiert. Anschließend werden alle Wörter des Satzes getrennt angezeigt.  

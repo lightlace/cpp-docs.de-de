@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364907"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl-Klasse
 Diese Klasse implementiert **IUnknown** und erlaubt einem Client, die Informationen in den Eigenschaftenseiten für ein Objekt zuzugreifen.  

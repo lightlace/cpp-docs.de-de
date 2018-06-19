@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384940"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Zeichenfolgenliterale in primären Ausdrücken
 Ein "Zeichenfolgenliteral" ist ein Zeichen, ein Breitzeichen oder eine Sequenz von angrenzenden Zeichen, die in Anführungszeichen gesetzt werden. Da es keine Variablen sind, können weder Zeichenfolgenliterale noch deren Elemente als linksseitige Operanden in einer Zuweisungsoperation verwendet werden. Der Typ eines Zeichenfolgenliterals ist ein Array von `char` (oder ein Array von `wchar_t` für Breitzeichenliterale). Arrays in Ausdrücken werden in Zeiger konvertiert. Weitere Informationen zu Zeichenfolgen finden Sie unter [Zeichenfolgenliterale](../c-language/c-string-literals.md).  

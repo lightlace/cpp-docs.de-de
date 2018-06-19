@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364704"
 ---
 # <a name="server-registration-global-functions"></a>Server-Registrierung globale Funktionen
 Diese Funktionen bieten Unterstützung für das Registrieren und Aufheben der Registrierung Serverobjekte in der objektzuordnung.  

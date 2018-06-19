@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361524"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Eine ATL-Dialogfeld hinzufügen
 Um dem Projekt eine ATL-Dialogfeld hinzufügen, muss das Projekt eine ATL-Projekt oder ein MFC-Projekt, das ATL-Unterstützung umfasst. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  

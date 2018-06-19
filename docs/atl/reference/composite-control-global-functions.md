@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366600"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen von zusammengesetzten Steuerelementen
 Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern und zum Erstellen, hosten und Lizenzieren von ActiveX-Steuerelementen.  

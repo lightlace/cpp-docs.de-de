@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385711"
 ---
 # <a name="unrepresented-character-constants"></a>Nicht vertretene Zeichenkonstanten
 **ANSI 3.1.3.4** Der Wert einer ganzzahligen Zeichenkonstante mit einem Zeichen oder einer Escapesequenz, das bzw. die nicht im grundlegenden Ausführungszeichensatz oder im erweiterten Zeichensatz für eine Breitzeichenkonstante dargestellt wird  

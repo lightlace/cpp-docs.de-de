@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376558"
 ---
 # <a name="using-verify-instead-of-assert"></a>Verwenden von VERIFY anstelle ASSERT
 Nehmen Sie an, dass beim Ausführen der Debugversion des MFC-Anwendung keine Probleme vorhanden sind. Der endgültigen Produktversion von derselben Anwendung jedoch stürzt ab, gibt falsche Ergebnisse zurück und/oder weist einige andere nicht normales Verhalten auf.  

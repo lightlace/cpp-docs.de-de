@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376649"
 ---
 # <a name="release-builds"></a>Releasebuilds
 Ein Releasebuild dahingehend verwendet Optimierungen. Wenn Sie die Optimierungen verwenden, um einen Releasebuild zu erstellen, erstellt der Compiler keine symbolischen Debuginformationen. Die Abwesenheit symbolischen Debuginformationen, zusammen mit der Tatsache, dass der Code nicht für ABLAUFVERFOLGUNG und ASSERT generiert aufgerufen wird, bedeutet, die dass die Größe der ausführbaren Datei wird reduziert, und daher ist es schneller.  

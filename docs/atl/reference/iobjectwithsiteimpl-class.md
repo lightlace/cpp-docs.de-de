@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362038"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl-Klasse
 Diese Klasse stellt Methoden und ein Objekt mit dem Standort kommunizieren.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472085"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3)
 `IPolyCtl` ist die Schnittstelle, die das Steuerelement benutzerdefinierte Methoden und Eigenschaften enthält, und fügen Sie eine Eigenschaft zu.  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378456"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Laufzeitfehlerüberprüfungen)
 Zum Aktivieren und deaktivieren Sie die Laufzeitfehler-Überprüfungen-Funktion in Verbindung mit der [Runtime_checks](../../preprocessor/runtime-checks.md) Pragma.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111145"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die zufälligen Zugriff hat. Verwenden Sie den Container `deque` um eine Sequenz von Elementen zu verwalten, sieht, die einen zusammenhängenden Block von Speicher, aber die vergrößert oder verkleinert werden, an beiden Enden, ohne die Notwendigkeit, alle verbleibenden Elemente kopieren können. Sie können daher effizient implementieren, eine `double-ended queue`. (Daher den Namen.)  

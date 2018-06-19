@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371163"
 ---
 # <a name="library"></a>LIBRARY
 Gibt LINK zu eine DLL zu erstellen. Zur gleichen Zeit erstellt LINK eine Importbibliothek, es sei denn, eine .exp-Datei in den Build verwendet wird.  

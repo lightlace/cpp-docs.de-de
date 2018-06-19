@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366951"
 ---
 # <a name="chained-unwind-info-structures"></a>Verkettete Entladeinfostrukturen
 Wenn das UNW_FLAG_CHAININFO-Flag festgelegt ist, klicken Sie dann eine Entladung Info-Struktur ist ein sekundärer und Feld für die freigegebenen Ausnahme-Handler/verkettet-Info-Adresse enthält die primären Entladung-Informationen. Der folgende Code Ruft die primäre entladen Informationen, vorausgesetzt, dass `unwindInfo` die Struktur, die das UNW_FLAG_CHAININFO-flag festgelegt ist.  

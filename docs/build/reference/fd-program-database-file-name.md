@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375622"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Programmdatenbank-Dateiname)
 Gibt einen Dateinamen für die von erstellte Programmdatenbankdatei (PDB) ["/ Z7", / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md).  

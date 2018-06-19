@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130034"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>Gewusst wie: Zeichnen von Formen mit .NET Framework
 Im folgenden Codebeispiel wird mit der <xref:System.Drawing.Graphics> Klasse so ändern Sie die <xref:System.Windows.Forms.Form.OnPaint%2A> -Ereignishandler, um einen Zeiger zum Abrufen der <xref:System.Drawing.Graphics> Objekt für das Hauptformular. This-Zeiger wird dann verwendet, um die Hintergrundfarbe des Formulars festgelegt und das Zeichnen einer Linie und ein Bogen mit der <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> und <xref:System.Drawing.Graphics.DrawArc%2A> Methoden.  

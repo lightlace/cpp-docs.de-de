@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390934"
 ---
 # <a name="type-float"></a>Typ "float"
 Gleitkommazahlen verwenden das IEEE(Institute of Electrical and Electronics Engineers)-Format. Werte mit einfacher Genauigkeit vom Typ "float" umfassen 4 Bytes und bestehen aus einem Vorzeichenbit, einem 8-Bit-Exponenten in Excess-127-Notation und einer 23-Bit-Mantisse. Die Mantisse ist eine Zahl zwischen 1.0 und 2.0. Da das höchstwertige Bit der Mantisse immer 1 ist, wird es nicht in der Zahl gespeichert. Diese Darstellung erlaubt einen Bereich von etwa 3,4E-38 bis 3,4E+38 für den Typ „float“.  

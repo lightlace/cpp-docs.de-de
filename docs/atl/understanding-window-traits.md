@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362367"
 ---
 # <a name="understanding-window-traits"></a>Grundlegendes zu Fenster Merkmale
 Fenster Traits-Klassen bieten eine einfache Methode zum für die Erstellung eines ATL-Fenster-Objekts verwendeten Stile zu standardisieren. Fenster Merkmale werden als Vorlagenparameter durch akzeptiert [CWindowImpl](../atl/reference/cwindowimpl-class.md) und anderen ATL-Fensterklassen als Möglichkeit Fensterstile auf Klassenebene bereitzustellen.  

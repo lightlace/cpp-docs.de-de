@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374543"
 ---
 # <a name="lib-files-as-linker-input"></a>.LIB-Dateien als Linkereingabe
 LINK akzeptiert COFF-Standardbibliotheken und COFF-Bibliotheken, die in der Regel die Erweiterung haben. Lib. Standardbibliotheken Objekte enthalten und werden durch die LIB-Tool erstellt. Importbibliotheken enthalten Informationen über Exporte in andere Programme, und es werden entweder durch LINK erstellt, wenn sie ein Programm erstellt, das Exporte enthält, oder durch die LIB-Tool. Informationen zur Verwendung von LIB standard erstellen oder importieren Bibliotheken finden Sie unter [LIB-Referenz](../../build/reference/lib-reference.md). Weitere Informationen zur Verwendung von LINK eine Importbibliothek zu erstellen, finden Sie unter der [/DLL](../../build/reference/dll-build-a-dll.md) Option.  

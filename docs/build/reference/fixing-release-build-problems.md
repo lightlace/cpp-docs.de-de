@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372151"
 ---
 # <a name="fixing-release-build-problems"></a>Beheben von Problemen mit dem Releasebuild
 Code Kompilierungsfehler generiert, wird nach dem Umschalten vom Debugbuilds zur Releasebuild stehen einige Bereiche geprüft werden sollten.  

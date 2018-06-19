@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360919"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator-Klasse
 Diese Klasse verwaltet die Thread-Auswahl für die Klasse `CComAutoThreadModule`.  

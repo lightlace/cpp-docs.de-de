@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356578"
 ---
 # <a name="cstring-semantics"></a>CString-Semantik
 Obwohl [CString](../atl-mfc-shared/reference/cstringt-class.md) Objekte sind dynamische Objekte, die erweitert werden können, sie fungiert als einfache Klassen und integrierten primitiven Typen. Jede `CString` -Objekt stellt einen eindeutigen Wert dar. `CString` Objekte sollten nicht als Zeiger auf Zeichenfolgen, sondern als tatsächlichen Zeichenfolgen betrachtet werden.  

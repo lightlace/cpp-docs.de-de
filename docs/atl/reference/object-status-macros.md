@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360873"
 ---
 # <a name="object-status-macros"></a>Status-Makros
 Dieses Makro legt Flags, die für ActiveX-Steuerelemente gehören.  

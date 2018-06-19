@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378326"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Symboldefinitionen aufheben)
 Die **/u** -Compileroption hebt die Definition der angegebenen-Präprozessorsymbol verwendet. Die **/u** -Compileroption hebt die Definition der Microsoft-spezifische Symbole, die der Compiler definiert.  

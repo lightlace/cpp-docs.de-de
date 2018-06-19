@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375483"
 ---
 # <a name="cc-building-reference"></a>Referenz zur C/C++-Erstellung
 Visual C++ bietet zwei Methoden zum Erstellen eines C/C++-Programms. Die einfachste (und häufigste) besteht darin, [in der Visual C++-Entwicklungsumgebung erstellen](../../ide/building-cpp-projects-in-visual-studio.md). Eine andere Möglichkeit besteht darin [erstellen, die von einer Eingabeaufforderung mithilfe von Befehlszeilentools](../../build/building-on-the-command-line.md). In beiden Fällen können Sie mithilfe des Visual C++-Quellcode-Editors oder einer Drittanbieter-Editor Ihrer Wahl Quelldateien erstellen.  

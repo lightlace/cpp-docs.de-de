@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361813"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString-Vorgänge bei Zeichenfolgen im C-Format
 Ein [CString](../atl-mfc-shared/using-cstring.md) -Objekt enthält Zeichenfolgendaten. `CString` erbt den Berechtigungssatz der [Methoden und Operatoren](../atl-mfc-shared/reference/cstringt-class.md) , die in der Klassenvorlage definiert [CStringT](../atl-mfc-shared/reference/cstringt-class.md) zur Bearbeitung von Zeichenfolgendaten. (`CString` ist eine `typedef`, die `CStringT` spezialisiert, damit sie mit den Zeichendaten genutzt werden kann, die `CString` unterstützt.)  
