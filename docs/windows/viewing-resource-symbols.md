@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891106"
 ---
 # <a name="viewing-resource-symbols"></a>Anzeigen von Ressourcensymbolen
 ### <a name="to-view-resource-symbols"></a>So zeigen Sie Ressourcensymbole an  

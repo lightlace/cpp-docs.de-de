@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359031"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot-Klasse
 Diese Typdefinition des [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) ist für die Standardeinstellung des Servers Threadingmodell vorlagenbasiert.  

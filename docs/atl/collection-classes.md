@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361328"
 ---
 # <a name="collection-classes"></a>Auflistungsklassen
 Die folgenden Klassen bieten Unterstützung für Arrays, Listen, Zuordnungen und auch Traits-Methoden mit Vergleiche und Elementzugriff helfen.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368856"
 ---
 # <a name="importing-using-def-files"></a>Importieren mithilfe von DEF-Dateien
 Wenn Sie verwenden **von "__declspec(dllimport)" "** zusammen mit einer DEF-Datei, sollten Sie die DEF-Datei, um Daten anstelle von KONSTANTEN verwenden, um die Wahrscheinlichkeit zu reduzieren, dass falsche Codierung Probleme entstehen ändern:  

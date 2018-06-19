@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365993"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl-Klasse
 Diese Klasse stellt Implementierungen von der `IDispatch` Methoden ohne das Abrufen von Informationen aus einer Typbibliothek.  

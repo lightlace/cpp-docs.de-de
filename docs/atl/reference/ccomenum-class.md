@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362862"
 ---
 # <a name="ccomenum-class"></a>CComEnum-Klasse
 Diese Klasse definiert ein COM-Enumerator-Objekt basierend auf ein Array.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356718"
 ---
 # <a name="multiple-dual-interfaces"></a>Mehrere duale Schnittstellen
 Möglicherweise möchten Sie die Vorteile, die eine duale Schnittstelle (d. h. die Flexibilität der Vtable und späte Bindung, daher und die Klasse für Skriptsprachen als auch für C++ zur Verfügung) kombinieren mit den Techniken der mehrfachvererbung.  

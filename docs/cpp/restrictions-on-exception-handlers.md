@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420203"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Einschränkungen bei Ereignishandlern
 Die Haupteinschränkung bei der Verwendung von Ausnahmehandlern im Code besteht darin, dass Sie keine `goto`-Anweisung verwenden können, um in einen `__try`-Anweisungsblock zu wechseln. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Sie können aus einem `__try`-Anweisungsblock herausspringen und Ausnahmehandler nach Belieben schachteln.  

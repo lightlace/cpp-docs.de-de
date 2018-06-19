@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422175"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung
 Ein Beendigungshandler wird unabhängig davon ausgeführt, wie der `__try`-Anweisungsblock beendet wird. Zu den Ursachen gehören das Herausspringen aus dem `__try`-Block, eine `longjmp`-Anweisung, die die Steuerung aus dem Block überträgt, und das Entladen des Stapels aufgrund einer Ausnahmebehandlung.  

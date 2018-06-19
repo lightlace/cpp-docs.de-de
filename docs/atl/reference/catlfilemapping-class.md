@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358837"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping-Klasse
 Diese Klasse stellt eine Speicherabbilddatei, die Methoden der Umwandlungsoperatoren hinzugefügt [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  

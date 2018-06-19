@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367484"
 ---
 # <a name="filename-parts-syntax"></a>Syntax für Dateinamenteile
 Syntax für Teile von Dateinamen in Befehlen repräsentiert die Komponenten des ersten abhängigen Dateinamens (die eine implizite abhängige sein kann). Dateinamenkomponenten sind Laufwerk, Pfad, Basisnamen und Erweiterung entsprechend den Angaben, der Datei nicht, wie sie auf dem Datenträger vorhanden ist. Verwendung **%s** zur Darstellung der vollständige Dateiname. Verwendung **%&#124;**[*Teile*]**F** (ein senkrechter Strich hinter das Prozentzeichen) Bestandteile der Dateiname dargestellt, in denen *Teile*0 (null) oder mehrere der folgenden Buchstaben, in beliebiger Reihenfolge.  

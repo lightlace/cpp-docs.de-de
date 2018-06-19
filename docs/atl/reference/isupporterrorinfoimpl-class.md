@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364580"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl-Klasse
 Diese Klasse stellt eine Standardimplementierung von der [ISupportErrorInfo-Schnittstelle](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) und kann verwendet werden, wenn nur eine einzige Schnittstelle Fehler für ein Objekt generiert.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424762"
 ---
 # <a name="keywords-c"></a>Schlüsselwörter (C++)
 Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können in einem Programm nicht als Bezeichner verwendet werden. Die folgenden Schlüsselwörter sind für Microsoft C++ reserviert. Namen mit vorangestellten Unterstrichen sind Microsoft-Erweiterungen.  

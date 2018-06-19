@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356307"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementieren der Schnittstelle für die Ereignisbehandlung
 ATL unterstützt Sie bei allen drei Elementen, die für die Behandlung von Ereignissen erforderlich: Ereignisschnittstelle implementieren, Ereignisquelle anmelden und Abmelden der Ereignisquelle. Die genauen Schritte, die Sie ergreifen müssen, hängen von der Typ der Ereignisschnittstelle und den leistungsanforderungen der Anwendung ab.  

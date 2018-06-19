@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356465"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Hinzufügen einer ATL Active Server Page-Komponenten
 Um ein Objekt für die Active Template Library (ATL) zu Ihrem Projekt hinzuzufügen, dass das Projekt als ATL COM-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Können Sie die [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md) um eine ATL-Anwendung erstellen, wählen Sie **ATL-Unterstützung zu MFC hinzufügen** aus der [Klasse Dialogfeld hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), oder Sie können [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  

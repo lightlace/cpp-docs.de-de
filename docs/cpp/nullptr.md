@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419642"
 ---
 # <a name="nullptr"></a>nullptr
 Legt eine NULL-Zeiger-Konstante vom Typ `std::nullptr_t` fest, der in einen beliebigen unformatierten Zeigertyp konvertiert werden kann.  Sie können das Schlüsselwort `nullptr` zwar ohne Header verwenden, doch wenn der Code den Typ `std::nullptr_t` verwendet, müssen Sie es definieren, indem Sie den Header `<cstddef>` einschließen.  

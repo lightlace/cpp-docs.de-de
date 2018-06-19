@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354993"
 ---
 # <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler-Funktion
 `CAtlServiceModuleT::Handler` ist die Routine, die der dienststeuerungs-Manager (SCM) zum Abrufen des Status des Diensts, und weisen Sie ihm verschiedene Anweisungen (z. B. beenden oder anhalten) aufgerufen. SCM übergibt ein Vorgangscode zu `Handler` , um anzugeben, wie der Dienst vorgegangen. Eine ATL generierte Standarddienst verarbeitet nur die Stop-Anweisung. Wenn die SCM Stop-Anweisung übergibt, weist den Dienst dem SCM, dass das Programm beendet. Der Dienst ruft dann `PostThreadMessage` zum Beenden-Meldung mit sich selbst bereitstellen. Die Nachrichtenschleife wird beendet, und der Dienst wird letztendlich geschlossen.  

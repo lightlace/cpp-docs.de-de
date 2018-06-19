@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355825"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL und der freethreaded Marshaller
 Der ATL-Assistent für einfache Objekte der Seite "Attribute" bietet eine Option, die Ihre Klasse der freethreaded Marshaller (FTM) aggregieren kann.  

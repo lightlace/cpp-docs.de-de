@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356777"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL-Auflistungen und -Enumerationen
 Ein `collection` ist ein COM-Objekt, das eine Schnittstelle bereitstellt, die Zugriff auf eine Gruppe von Datenelementen (unformatierten Daten oder andere Objekte) ermöglicht. Eine Schnittstelle, die den Standards entspricht, für den Zugriff auf eine Gruppe von Objekten als bekannt ist ein *sammlungsschnittstelle*.  

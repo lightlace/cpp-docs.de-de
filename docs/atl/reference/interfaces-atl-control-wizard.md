@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362351"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Schnittstellen, ATL-Steuerelement-Assistent
 Auf dieser Seite des Assistenten identifiziert die Schnittstellen, die das Steuerelement unterstützt. Standardmäßig sind die unterstützten Schnittstellen in der Regel von den meisten Containern verwendet.  

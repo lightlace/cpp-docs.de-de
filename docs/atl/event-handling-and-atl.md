@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354931"
 ---
 # <a name="event-handling-and-atl"></a>Ereignisbehandlung und ATL
 In diesem Abschnitt wird gezeigt, wie zum Auffangen von Ereignissen, die mit ATL Es umfasst die Prinzipien der COM-Ereignisbehandlung und die Einzelheiten der Auffangen von Ereignissen, die mit der Unterstützung von ATL  

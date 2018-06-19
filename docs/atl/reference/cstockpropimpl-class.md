@@ -79,6 +79,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366574"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl-Klasse
 Diese Klasse stellt Methoden für die Unterstützung der Systemeigenschaft Werte bereit.  

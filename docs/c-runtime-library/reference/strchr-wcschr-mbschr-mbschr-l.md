@@ -56,6 +56,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415524"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 Sucht ein Zeichen in einer Zeichenfolge unter Verwendung des aktuellen Gebietsschemas oder einer angegebenen LC_CTYPE-Konvertierungszustandskategorie.

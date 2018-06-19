@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414588"
 ---
 # <a name="expressions-c"></a>Ausdrücke (C++)
 In diesem Abschnitt werden C++-Ausdrücke beschrieben. Ausdrücke sind Sequenzen von Operanden und Operatoren, die für einen oder mehrere dieser Zwecke verwendet werden:  
