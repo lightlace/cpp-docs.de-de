@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127821"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>Gewusst wie: Abrufen des aktuellen Benutzernamens (C++/CLI)
 Das folgende Codebeispiel veranschaulicht das Abrufen des aktuellen Benutzernamens (der Name des Benutzers bei Windows angemeldet ist). Der Name befindet sich in der <xref:System.Environment.UserName%2A> Zeichenfolge, die in definiert ist die <xref:System.Environment> Namespace.  

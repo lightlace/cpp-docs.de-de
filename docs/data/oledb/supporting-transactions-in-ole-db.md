@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110340"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Unterstützen von Transaktionen in OLE DB
 Ein [Transaktion](../../data/transactions-mfc-data-access.md) lässt sich eine Gruppe oder ein batch, eine Reihe von Updates mit einer Datenquelle so, dass entweder alle erfolgreich ausgeführt werden und gleichzeitig ein Commit ausgeführt werden, oder (Wenn eine von Ihnen ein Fehler auftritt) sind keine ein Commit ausgeführt wurde und die gesamte Transaktion zurückgesetzt wird. Dieser Prozess wird sichergestellt, dass die Integrität des Ergebnisses in der Datenquelle.  
