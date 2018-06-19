@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342032"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl-im Vergleich zu CTreeView
 MFC enthält zwei Klassen, die von Tree-Steuerelementen gekapselt: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) und [CTreeView](../mfc/reference/ctreeview-class.md). Jede Klasse ist in anderen Situationen nützlich.  

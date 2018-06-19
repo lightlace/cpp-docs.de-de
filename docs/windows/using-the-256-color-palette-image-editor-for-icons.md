@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890904"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole)
 Um eine Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Farben in den Farben (Palette) Wählen Sie in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880383"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Gewusst wie: Deklarieren von festen Zeigern und Werttypen
 Ein Werttyp kann implizit geschachtelt werden. Sie können dann einen festen Zeiger auf das Wertobjekt für den Typ deklarieren, selbst und Verwenden einer **Pin_ptr** in den Typ des geschachtelten Werts.  

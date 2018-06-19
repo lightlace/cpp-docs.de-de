@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879502"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explizite Überschreibungen (Komponentenerweiterungen für C++)
 In diesem Thema erläutert, wie einen Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Eine benannte (explizite) überschreiben, sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.  

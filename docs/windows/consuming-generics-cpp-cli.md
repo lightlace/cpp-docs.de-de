@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870818"
 ---
 # <a name="consuming-generics-ccli"></a>Verwenden von Generika (C++/CLI)
 Generika in einer .NET-Sprache geschrieben, möglicherweise in anderen .NET-Sprachen verwendet werden. Im Gegensatz zu Vorlagen bleibt eine generische in einer kompilierten Assembly noch generische. Daher kann eine instanziieren, den generischen Typ in einer anderen Assembly und sogar in einer anderen Sprache als die Assembly, in der der generische Typ definiert wurde.  

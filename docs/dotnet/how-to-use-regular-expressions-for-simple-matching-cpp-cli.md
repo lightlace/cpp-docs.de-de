@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128279"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Gewusst wie: Verwenden regulärer Ausdrücke für einfache Gleichheitsprüfung (C++/CLI)
 Das folgende Codebeispiel verwendet reguläre Ausdrücke nach genauen Teilzeichenfolge Übereinstimmungen gesucht werden soll. Die Suche erfolgt von der statischen <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> Methode, die zwei Zeichenfolgen als Eingabe akzeptiert. Die erste ist die Zeichenfolge, die gesucht werden soll, und die zweite ist das Muster, nach dem gesucht werden.  

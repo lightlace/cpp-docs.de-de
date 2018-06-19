@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241957"
 ---
 # <a name="compiler-error-c3015"></a>Compilerfehler C3015
 Die Initialisierung in der For-Anweisung von OpenMP weist eine ungültige Form auf.  

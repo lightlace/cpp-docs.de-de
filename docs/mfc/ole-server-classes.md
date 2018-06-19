@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350428"
 ---
 # <a name="ole-server-classes"></a>OLE-Server-Klassen
 Diese Klassen werden von serveranwendungen verwendet. Serverdokumente abgeleitet sind `COleServerDoc` anstatt von **CDocument**. Beachten Sie, dass, weil `COleServerDoc` stammt aus `COleLinkingDoc`, Serverdokumente können auch sein, Container, die Verknüpfung zu unterstützen.  

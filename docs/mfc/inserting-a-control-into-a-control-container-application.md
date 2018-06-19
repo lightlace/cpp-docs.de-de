@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346336"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX-Steuerelementcontainer: Einfügen eines Steuerelements in eine Steuerelementcontainer-Anwendung
 Bevor Sie ein ActiveX-Steuerelement aus einem ActiveX-Steuerelementcontainer-Anwendung zugreifen können, müssen Sie das ActiveX-Steuerelement hinzufügen, die Container-Anwendung über die [ActiveX-Steuerelement einfügen](../windows/insert-activex-control-dialog-box.md) (Dialogfeld).  

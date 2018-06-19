@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236784"
 ---
 # <a name="compiler-error-c2664"></a>Compilerfehler Fehler C2664
 'function': Kann Argument n nicht von 'type1' zu 'type2' konvertieren  

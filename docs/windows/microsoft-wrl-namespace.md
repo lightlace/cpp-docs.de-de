@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881649"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL-Namespace
 Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.  

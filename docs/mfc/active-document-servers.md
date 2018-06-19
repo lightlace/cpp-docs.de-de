@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340163"
 ---
 # <a name="active-document-servers"></a>Server für aktive Dokumente
 Aktive Dokumentserver wie z. B. Word-, Excel- oder PowerPoint-Host-Dokumente von anderen Anwendungstypen genannten active Documents. Im Gegensatz zu OLE eingebettete Objekte (die einfach in die Seite von einem anderen Dokument angezeigt werden), aktive Dokumente bieten die vollständige Benutzeroberfläche und die vollständige systemeigene Funktionalität der Server-Anwendung, die sie erstellt. Benutzer können Dokumente erstellen, verwenden die volle Leistung von ihren bevorzugten Anwendungen (Wenn sie aktive Dokument aktiviert sind), noch können behandeln das daraus resultierende Projekt als eine Einheit.  

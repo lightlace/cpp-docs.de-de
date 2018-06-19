@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878111"
 ---
 # <a name="generics--c-component-extensions"></a>Generika (Komponentenerweiterungen für C++)
 Generika sind parametrisierte Typen und Methoden. Finden Sie in diesem Abschnitt die generischen Funktionen von Windows-Runtime und die common Language Runtime unterstützt werden, und die von der common Language Runtime unterstützt werden. Außerdem lernen Sie, wie Sie Ihre eigenen generischen Methoden und Typen in Visual C++ zu erstellen und zum Verwenden von generischer Typen in .NET Framework-Sprache in Visual C++ erstellt. Schließlich enthält dieser Abschnitt einen Vergleich der Generika und C++-Vorlagen.  

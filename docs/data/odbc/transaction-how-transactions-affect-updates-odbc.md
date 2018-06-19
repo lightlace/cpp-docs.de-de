@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098003"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transaktion: Auswirkungen von Transaktionen auf Aktualisierungen (ODBC)
 Updates für die [Datenquelle](../../data/odbc/data-source-odbc.md) verwaltet werden, während Transaktionen durch die Verwendung von Bearbeitungspuffer (die gleiche Methode außerhalb von Transaktionen verwendet). Die Felddatenmembern eines Recordset-Objekts dienen zusammen als Bearbeitungspuffer, die den aktuellen Datensatz das Recordset enthält bei vorübergehend sichert eine `AddNew` oder **bearbeiten**. Während einer **löschen** Vorgang, der aktuelle Datensatz nicht innerhalb einer Transaktion gesichert wird. Weitere Informationen zu den Bearbeitungspuffer und dazu, wie Updates für den aktuellen Datensatz speichern, finden Sie unter [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

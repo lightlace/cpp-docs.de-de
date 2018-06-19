@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883341"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Einschränkungen für generische Typparameter (C++/CLI)
 Im generischen Typ oder die Methodendeklarationen können Sie einen Typparameter mit Einschränkungen qualifizieren. Eine Einschränkung ist erforderlich, die Typen als Typargumente verwendet erfüllen müssen. Z. B. möglicherweise eine Einschränkung, dass das Typargument eine bestimmte Schnittstelle implementieren oder von einer bestimmten Klasse erben muss.  

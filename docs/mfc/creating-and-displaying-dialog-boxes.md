@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342461"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Erstellen und Anzeigen von Dialogfeldern
 Erstellen eines Dialogfeldobjekts ist ein zwei-Phasen-Vorgang. Zunächst erstellen Sie das Dialogfeldobjekt, und erstellen Sie im Dialogfenster. Modale und nicht modale Dialogfelder unterscheiden sich in einem gewissen im Prozess zum Erstellen und anzeigen. Die folgende Tabelle enthält wie modale und nicht modale Dialogfeld normalerweise erstellt und angezeigt werden.  

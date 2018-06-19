@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877695"
 ---
 # <a name="odl"></a>odl
 Identifiziert eine Schnittstelle als Schnittstelle Objekt Description Language (ODL). MIDL-Compiler erfordert keine der **Odl** -Attribut; es wird nur für Kompatibilität mit älteren ODL-Dateien erkannt.  

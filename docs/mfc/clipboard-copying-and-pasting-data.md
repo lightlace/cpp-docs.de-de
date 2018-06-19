@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343349"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Zwischenablage: Daten kopieren und einfügen
 Dieses Thema beschreibt die Arbeitsschritte, die mindestens erforderlich, kopieren und Einfügen aus der Zwischenablage in der OLE-Anwendung zu implementieren. Es wird empfohlen, Sie lesen die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Themen, bevor Sie fortfahren.  

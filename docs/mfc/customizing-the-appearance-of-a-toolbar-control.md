@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343693"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Anpassen der Darstellung eines Symbolleisten-Steuerelements
 Klasse `CToolBarCtrl` bietet viele Formate, die die Darstellung (und in einigen Fällen Verhalten) des Symbolleistenobjekts beeinflussen. Ändern Sie die Symbolleistenobjekt durch Festlegen der `dwCtrlStyle` Parameter von der `CToolBarCtrl::Create` (oder `CToolBar::CreateEx`) Memberfunktion, die bei der Erstellung von Toolbar-Steuerelement.  

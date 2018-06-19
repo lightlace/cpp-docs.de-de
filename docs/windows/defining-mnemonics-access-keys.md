@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873692"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definieren von Tastenkombinationen
 In der Regel verschieben Tastaturbenutzer den Eingabefokus von einem Steuerelement in einem Dialogfeld mit der TAB-Taste oder Schlüsseln. Allerdings können Sie eine Zugriffstaste (einen mnemonischen oder leicht zu merkenden Namen) definieren, die Benutzern ermöglicht, ein Steuerelement auswählen, eine einzelne-Taste drücken.  

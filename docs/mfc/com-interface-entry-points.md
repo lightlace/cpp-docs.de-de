@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341410"
 ---
 # <a name="com-interface-entry-points"></a>Einstiegspunkte für COM-Schnittstellen
 Verwenden Sie die Memberfunktionen einer COM-Schnittstelle, die [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) Makro, um den richtigen globalen Status beizubehalten, beim Aufrufen von Methoden einer exportierten Schnittstelle.  

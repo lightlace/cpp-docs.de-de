@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865835"
 ---
 # <a name="mbcs-support-in-visual-c"></a>MBCS-Unterstützung in Visual C++
 Bei der Ausführung unter einer MBCS-aktivierten Version von Windows ist die Visual C++-Entwicklungssystem (einschließlich der integrierten Quellcode-Editors, Debuggers und der über die Befehlszeile mit Tools) MBCS-aktiviert, davon ausgenommen sind die Fenster "Arbeitsspeicher".  

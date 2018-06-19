@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342617"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Ableiten einer Dokumentklasse von CDocument
 Dokumente enthalten und verwalten Ihre Anwendungsdaten verwendet werden. Um den Assistenten für MFC-Anwendung bereitgestellte Dokumentklasse zu verwenden, müssen Sie Folgendes ausführen:  

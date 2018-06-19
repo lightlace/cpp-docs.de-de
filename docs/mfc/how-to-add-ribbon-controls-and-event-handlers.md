@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344418"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Gewusst wie: Hinzufügen von Menüband-Steuerelementen und Ereignishandlern
 Menübandsteuerelemente sind Elemente, z. B. Schaltflächen und Kombinationsfelder, die Bereiche hinzugefügt. Bereiche sind Bereiche der menübandleiste, in denen eine Gruppe von verwandten Steuerelementen angezeigt.  

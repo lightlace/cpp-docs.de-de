@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876591"
 ---
 # <a name="emitidl"></a>emitidl
 Gibt an, ob alle nachfolgenden IDL-Attribute, verarbeitet und in der generierten IDL-Datei abgelegt werden.  

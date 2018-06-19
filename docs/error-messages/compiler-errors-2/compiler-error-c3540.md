@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256043"
 ---
 # <a name="compiler-error-c3540"></a>Compilerfehler C3540
 "Typ": "sizeof" kann nicht angewendet werden, um ein Typ, der "auto" enthält  

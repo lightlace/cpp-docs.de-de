@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883798"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf-Methode
 Gibt die Schnittstelle frei, die diesem ComPtr-Objekt zugeordnet ist, und ruft dann die Adresse des [ptr_](../windows/comptr-ptr-data-member.md) -Datenmembers ab, der einen Zeiger auf die Schnittstelle enthält, die freigegeben wurde.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256720"
 ---
 # <a name="compiler-error-c3468"></a>Compilerfehler C3468
 "Typ": Sie können einen Typ nur an eine Assembly weiterleiten:  

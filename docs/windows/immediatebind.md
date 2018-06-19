@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876263"
 ---
 # <a name="immediatebind"></a>immediatebind
 Gibt an, die Datenbank sofort aller Änderungen an eine Eigenschaft eines Objekts von datengebundenen benachrichtigt wird.  

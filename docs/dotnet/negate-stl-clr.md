@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135436"
 ---
 # <a name="negate-stlclr"></a>negate (STL/CLR)
 Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt den negierten Argument. Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128578"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Gewusst wie: Anzeigen von Bildern mit .NET Framework
 Im folgenden Codebeispiel wird, ändert den OnPaint-Ereignishandler zum Abrufen von eines Zeigers auf die <xref:System.Drawing.Graphics> Objekt für das Hauptformular. Die <xref:System.Windows.Forms.Form.OnPaint%2A> Funktion richtet sich Windows Forms-Anwendung, die wahrscheinlich mit einem Visual Studio-Anwendungs-Assistenten erstellt.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341471"
 ---
 # <a name="command-ids"></a>Befehls-IDs
 Ein Befehl wird durch die Befehls-ID, die allein vollständig beschrieben (codiert, der **WM_COMMAND** Nachricht). Diese ID wird mit dem Benutzeroberflächen-Objekt zugewiesen, die der Befehl generiert. In der Regel sind IDs für die Funktionalität des Benutzeroberflächen-Objekts mit dem Namen, denen ihnen zugewiesen wurden.  

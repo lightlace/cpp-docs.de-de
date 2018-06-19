@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088479"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Optionen für Compiler und Linker (C++/CX)
 Eine Umgebungsvariable C + c++ / CX-Compileroptionen und Linkeroptionen unterstützen die Erstellung von apps für Windows-Runtime.  

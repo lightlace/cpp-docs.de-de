@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341135"
 ---
 # <a name="command-routing-illustration"></a>Befehlsroutingerläuterung
 Um zu veranschaulichen, betrachten Sie eine Befehlsnachricht alle löschen Menüelements in einem MDI-Anwendung bearbeiten im Menü aus. Nehmen Sie an, dass die Handlerfunktion für diesen Befehl erfolgt auf eine Memberfunktion, die von der Anwendung Dokumentklasse sein. So sieht wie dieses Befehls den Handler erreicht, nachdem der Benutzer das Menüelement auswählt:  

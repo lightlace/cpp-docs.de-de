@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889542"
 ---
 # <a name="symbol-value-restrictions"></a>Beschränkungen bei Symbolwerten
 Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in normaler Form für „#define preprocessor“-Anweisungen ausgedrückt wird. Hier sind einige Beispiele für Symbolwerte:  

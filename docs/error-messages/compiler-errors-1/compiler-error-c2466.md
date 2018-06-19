@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224307"
 ---
 # <a name="compiler-error-c2466"></a>Compilerfehler C2466
 ein Array von Konstanten Größe 0 kann nicht zugeordnet werden.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881457"
 ---
 # <a name="key-wrl-apis-by-category"></a>Schlüssel-WRL-APIs nach Kategorie
 Die folgenden Tabellen sind die primären Windows Runtime C++ Template Library-Klassen, Strukturen, Funktionen und Makros. Konstrukte im Hilfsprogramm-Namespaces und-Klassen werden ausgelassen. Diese Listen erweitern die API-Dokumentation nach Namespace sortiert ist.  

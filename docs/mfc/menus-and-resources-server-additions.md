@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351350"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menüs und Ressourcen: Servererweiterungen
 Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressourcen in ein visual bearbeitungsanwendung-Server (Komponente) vorgenommen werden müssen. Eine Serveranwendung muss viele Ergänzungen für die Menüstruktur und andere Ressourcen, da er in einem von drei Modi gestartet werden kann: Standalone, eingebettet sind, oder vorhanden. Wie in beschrieben die [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md) Artikel, es sind maximal vier Sätze von Menüs. Alle vier werden für eine MDI-Vollserver-Anwendung verwendet, während nur drei für ein Miniserver verwendet werden. Der Anwendungs-Assistent wird das Layout im Menü für den Typ des Servers erforderlich erstellt werden sollen. Einige Anpassung kann notwendig sein.  

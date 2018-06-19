@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138994"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Gewusst wie: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)
 In diesem Artikel wird gezeigt, wie zum Definieren und Verarbeiten von benutzerdefinierten Verweistypen und Werttypen in C + c++ / CLI.  

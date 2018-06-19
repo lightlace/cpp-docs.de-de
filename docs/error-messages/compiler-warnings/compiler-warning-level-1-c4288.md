@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276629"
 ---
 # <a name="compiler-warning-level-1-c4288"></a>Compilerwarnung (Stufe 1) C4288
 nicht dem Standard entsprechende Erweiterung: 'Var': Loop-Steuerelementvariable, die in der for-Schleife deklariert wird, außerhalb des for-Schleife; Es steht in Konflikt mit der Deklaration im äußeren Gültigkeitsbereich  

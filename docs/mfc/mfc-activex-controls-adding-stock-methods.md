@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349265"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden
 Eine vordefinierte Methode unterscheidet sich von einer benutzerdefinierten Methode, da er bereits von der Klasse implementiert wird [COleControl](../mfc/reference/colecontrol-class.md). Beispielsweise `COleControl` enthält eine vordefinierte Memberfunktion, die die Aktualisierungsmethode für das Steuerelement unterstützt. Die Dispatch-Eintrag für die Zuordnung für diese vordefinierten Methode ist **DISP_STOCKFUNC_REFRESH**.  

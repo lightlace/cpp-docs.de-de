@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268317"
 ---
 # <a name="compiler-error-c3860"></a>Compilerfehler C3860
 Liste der Typargumente nach Namen des ereignisklassentyps muss die Parameter in der Reihenfolge, in der Typparameterliste verwendet auflisten.  
