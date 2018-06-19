@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371633"
 ---
 # <a name="mapping-messages-to-functions"></a>Zuordnen von Meldungen zu Funktionen
 Im Eigenschaftenfenster können Sie Meldungshandler (Memberfunktionen der MFC-Benutzeroberflächen-Klassen) zu binden, die Nachrichten, die durch die Ressourcen der Anwendung generiert. Verwenden sie [MFC-meldungszuordnungen](../../mfc/messages-and-commands-in-the-framework.md) , die Bindung zu erstellen.  

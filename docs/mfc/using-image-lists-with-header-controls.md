@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382778"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Verwenden von Bildlisten in Headersteuerelementen
 Headerelemente haben die Möglichkeit, ein Bild in einem Headerelement anzuzeigen. Dieses Bild in einer zugeordneten Bildliste gespeicherten beträgt 16 x 16 Pixel und verfügt über dieselben Merkmale wie die Symbolbilder in einem Listenansicht-Steuerelement verwendet. Um dieses Verhalten erfolgreich zu implementieren, müssen Sie zuerst erstellen und initialisieren die Bildliste, ordnen Sie die Liste mit dem Headersteuerelement und ändern Sie die Attribute des Headerelements, das das Bild angezeigt wird.  

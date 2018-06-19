@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379924"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Streamoperationen in RichEdit-Steuerelementen
 Können Sie Streams zum Übertragen von Daten in oder aus einem rich-Edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Ein Datenstrom wird definiert, indem ein [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) -Struktur, die einen Puffer und eine anwendungsdefinierte Rückruffunktion angibt.  

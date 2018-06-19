@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385192"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Typsicherer Zugriff auf Steuerelemente mit Code-Assistenten
 Wenn Sie mit DDX-Funktionen vertraut sind, können Sie die Steuerelementeigenschaft in der [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Typsicherer Zugriff erstellen. Dieser Ansatz ist einfacher als das Erstellen von Steuerelementen ohne Code-Assistenten.  

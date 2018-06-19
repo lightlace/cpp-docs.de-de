@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385270"
 ---
 # <a name="window-objects"></a>Fensterobjekte
 MFC stellt die Klasse [CWnd](../mfc/reference/cwnd-class.md) zum Kapseln der `HWND` Handle eines Fensters. Die `CWnd` Objekt ist ein C++-Fensterobjekt, unterscheidet der `HWND` , die ein Windows darstellt Fenster aber, die sie enthält. Verwenden Sie `CWnd` Klassen zu leiten Sie ein eigene untergeordnete Fenster, oder verwenden Sie eines der vielen MFC-Klassen abgeleitet `CWnd`. Klasse `CWnd` ist die Basisklasse für alle Fenster, einschließlich der Frame-Fensters, Dialogfelder, untergeordnete Fenster, Steuerelemente und Steuerleisten wie Symbolleisten. Ein gutes Verständnis der [die Beziehung zwischen einem C++-Fensterobjekt und einem HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) ist entscheidend für die effektive Programmierung mit MFC.  

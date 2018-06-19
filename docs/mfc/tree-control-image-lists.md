@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382192"
 ---
 # <a name="tree-control-image-lists"></a>Bilderliste für das Struktursteuerelement
 Jedes Element in einem Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) kann ein Paar von Bitmapbildern zugeordnet haben. Die Bilder werden auf der linken Seite der Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ausgewählt ist, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element angezeigt einen Ordner öffnen, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  

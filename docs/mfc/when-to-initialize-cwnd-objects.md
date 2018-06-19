@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382872"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Wann müssen CWnd-Objekte initialisiert werden?
 Erstellen Sie eigene untergeordnete Windows oder rufen Sie alle-API-Windows­API­Funktionen in den Konstruktor der kann keiner `CWnd`-abgeleitetes Objekt. Grund hierfür ist die `HWND` für die `CWnd` Objekt wurde noch nicht erstellt. Die meisten Windows-spezifischen Initialisierung, z. B. das Hinzufügen von untergeordneten Fenster muss erfolgen, eine [OnCreate](../mfc/reference/cwnd-class.md#oncreate) Message-Handler.  

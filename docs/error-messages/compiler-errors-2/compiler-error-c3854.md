@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275511"
 ---
 # <a name="compiler-error-c3854"></a>Compilerfehler C3854
 Ausdruck links von '=' wird als Funktion ausgewertet. Kann nicht an eine Funktion zuweisen (eine Funktion ist kein l-Wert)  

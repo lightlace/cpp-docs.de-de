@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374149"
 ---
 # <a name="logpen-structure"></a>LOGPEN-Struktur
 Die `LOGPEN` Struktur definiert die Art, Breite und Farbe eines Stiftes, ein Objekt zum Zeichnen von Linien und Rahmen. Die [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) Funktion verwendet die `LOGPEN` Struktur.  

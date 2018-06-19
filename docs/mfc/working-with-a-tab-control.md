@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383161"
 ---
 # <a name="working-with-a-tab-control"></a>Arbeiten mit dem Registersteuerelement
 Die einfachste Möglichkeit, ein Registerkarten-Steuerelement zu verwenden ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) ist, indem es eine Dialogfeldvorlagen-Ressource mit dem Dialog-Editor hinzugefügt. Sie können auch ein Registerkarten-Steuerelement selbst. MFC-Aufrufe **InitCommonControls** für Sie. Die Hauptaufgaben sind wie folgt aus:  

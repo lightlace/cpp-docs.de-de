@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385082"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen
 In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschrieben, die ein Windows-Steuerelement für eine Symbolleiste enthält. In MFC, eine Symbolleisten-Schaltfläche muss eine [CMFCToolBarButton Klasse](../mfc/reference/cmfctoolbarbutton-class.md)-abgeleitete Klasse, z. B. [CMFCToolBarComboBoxButton Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton Klasse](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton Klasse](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), oder [CMFCToolBarMenuButton Klasse](../mfc/reference/cmfctoolbarmenubutton-class.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382449"
 ---
 # <a name="using-cheaderctrl"></a>Verwenden von CHeaderCtrl
 Verwenden Sie ein Headersteuerelement von Klasse dargestellt [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), um die Spaltenüberschriften für eine einspaltige Liste anzuzeigen. Beispielsweise wäre ein Headersteuerelement hilfreich bei der Implementierung von Spalte Steuerelemente in einer Tabelle.  

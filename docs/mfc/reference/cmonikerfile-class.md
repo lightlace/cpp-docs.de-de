@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369228"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile-Klasse
 Stellt einen Datenstream ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) benannt, indem ein [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  

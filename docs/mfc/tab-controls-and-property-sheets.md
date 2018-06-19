@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385871"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Registerkarten-Steuerelemente und Eigenschaftenblätter
 Eigenschaftenblätter sind mehrseitige Dialogfelder oder "Registerkarten-Dialogfeldern, die bis zu 24 Ressourcen der Dialogfeldvorlage für den Benutzer angezeigt werden können. Beispiele von Eigenschaftenblättern finden Sie in das Dialogfeld Eigenschaften von Windows-Anzeige oder die folgenden MFC-beispielanwendung:  

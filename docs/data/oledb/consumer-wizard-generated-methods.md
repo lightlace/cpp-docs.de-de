@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098601"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Vom Consumer-Assistenten generierte Methoden
 ATL-OLE DB-Consumer-Assistent und der MFC-Anwendungs-Assistent generiert bestimmte Funktionen, die Sie berücksichtigen sollten. Beachten Sie, dass einige Methoden in attributierten Projekten unterschiedlich implementiert werden, daher gibt es einige Einschränkungen. jeder Fall wird im folgenden erläutert. Informationen zum Anzeigen von injiziertem Code finden Sie unter [Debuggen von injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).  
