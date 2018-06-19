@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862022"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Attributziele (Komponentenerweiterungen für C++)
 Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribut wird definiert, um auf bestimmte Sprachelemente zu übernehmen. Beispielsweise könnte ein Attribut definiert werden, um gelten nur für Klassen und Strukturen.  Die folgende Liste enthält die möglichen syntaktischen Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (mithilfe von logischen oder) kann verwendet werden.  

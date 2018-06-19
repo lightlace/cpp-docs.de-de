@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316292"
 ---
 # <a name="project-build-error-prj0004"></a>Projektbuildfehler PRJ0004
 Befehlszeile für das Tool "Tool" konnte nicht erstellt werden.  

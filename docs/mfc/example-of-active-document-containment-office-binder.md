@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345959"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Beispiel für einen Active Document-Container: Office Binder
 Die Microsoft Office Binder ist ein Beispiel für einen active Document-Container. Ein Office Binder umfasst zwei Hauptbereiche wie Container in der Regel. Der linke Bereich enthält die Symbole, die aktive Dokumente in den Binder entsprechen. Jedes Dokument wird aufgerufen, eine *Abschnitt* innerhalb der Binder. Ein Binder kann z. B. Word-Dokumenten, PowerPoint-Dateien, Excel-Kalkulationstabellen usw. enthalten.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855785"
 ---
 # <a name="adding-multiple-controls"></a>Hinzufügen mehrerer Steuerelemente
 ### <a name="to-add-multiple-controls"></a>So fügen Sie mehrere Steuerelemente hinzu  

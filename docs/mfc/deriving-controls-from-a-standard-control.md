@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344499"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Ableiten von Steuerelementen von einem Standardsteuerelement
 Wie jede [CWnd](../mfc/reference/cwnd-class.md)-abgeleitete Klasse, Sie können Verhalten eines Steuerelements ändern, indem das Ableiten einer neuen Klasse aus einer vorhandenen Steuerelementklasse.  

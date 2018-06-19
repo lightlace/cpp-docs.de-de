@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385897"
 ---
 # <a name="tree-control-item-selection"></a>Wechseln der Auswahl in einem Struktursteuerelement
 Wenn die Auswahl Änderungen von einem Element für ein anderes, ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) und [eine TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) benachrichtigungsmeldungen. Beide Benachrichtigungen enthalten einen Wert, der angibt, ob die Änderung das Ergebnis ein Mausklick oder eine Tastenkombination ist. Die Benachrichtigungen umfassen auch Informationen über das Element, das Zustand wechselt die Auswahl und das Element, das die Auswahl entfernt wird. Diese Informationen können Sie Attribute festgelegt, die von den Auswahlzustand des Elements abhängen. Zurückgeben von **"true"** als Antwort auf **TVN_SELCHANGING** wird verhindert, dass die Auswahl nicht ändern; zurückgeben **"false"** ermöglicht die Änderung.  

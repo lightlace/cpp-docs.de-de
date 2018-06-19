@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329815"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Ein Portrait der Dokument-/Ansichtarchitektur
 Dokumente und Ansichten werden in einer normalen MFC-Anwendung zugeordnet. Daten werden im Dokument gespeichert, aber die Ansicht verfügt über privilegierte Zugriff auf die Daten. Die Trennung des Dokuments aus der Ansicht trennt der Speicherung und Verwaltung von Daten aus der Anzeige.  

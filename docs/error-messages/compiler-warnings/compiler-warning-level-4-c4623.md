@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296340"
 ---
 # <a name="compiler-warning-level-4-c4623"></a>Compilerwarnung (Stufe 4) C4623
 '`derived class`': Der Standardkonstruktor wurde implizit als gelöscht definiert, da ein Basisklassen-Standardkonstruktor nicht zugreifbar ist oder gelöscht wurde.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384061"
 ---
 # <a name="using-views"></a>Verwenden von Ansichten
 Die Ansicht Aufgaben sind Dokumentdaten für den Benutzer grafisch anzuzeigen und zu akzeptieren und Interpretieren der Benutzereingaben als Vorgänge für das Dokument. Die Vorgänge in Ihrer Ansichtsklasse geschrieben werden:  

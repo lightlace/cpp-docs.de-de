@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385579"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Socketbenachrichtigungen
 Dieser Artikel beschreibt die Benachrichtigungsfunktionen in den Socketklassen. Diese Memberfunktionen sind Rückruffunktionen, die vom Framework aufgerufen, um Ihre Socketobjekt von wichtigen Ereignissen zu benachrichtigen. Die Benachrichtigungsfunktionen sind:  

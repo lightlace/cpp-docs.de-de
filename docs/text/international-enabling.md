@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858701"
 ---
 # <a name="international-enabling"></a>Aktivierung der Internationalen Programmierung
 Den meisten herkömmlichen C- und C++-Code Annahmen zu Zeichen und zeichenfolgenbearbeitung, die nicht gut für internationale Anwendungen funktionieren. MFC und die Laufzeitbibliothek Unicode oder MBCS zu unterstützen, besteht noch immer Arbeit für Sie ausführen. Dieser Abschnitt erläutert Sie leitet die Bedeutung von "Aktivierung der internationalen Programmierung" in Visual C++:  

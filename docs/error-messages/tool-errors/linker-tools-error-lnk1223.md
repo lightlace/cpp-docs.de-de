@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298651"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Linkertoolfehler LNK1223
 Ungültige oder beschädigte Datei: Datei enthält unzulässige .pdata-Beiträge  

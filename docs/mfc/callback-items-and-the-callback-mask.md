@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342773"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Rückrufelemente und die Rückrufmaske
 Für die einzelnen Elemente einem Listenansicht-Steuerelement in der Regel speichert den Bezeichnungstext, den Bildindex Liste von Symbolen für das Element, und ein Satz von Bit flags für der Zustand des Elements. Sie können einzelne Elemente als Rückrufelemente definieren, die sind nützlich, wenn die Anwendung bereits einige der Informationen für ein Element gespeichert.  

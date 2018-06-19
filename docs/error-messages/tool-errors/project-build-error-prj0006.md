@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317478"
 ---
 # <a name="project-build-error-prj0006"></a>Projektbuildfehler PRJ0006
 Die temporäre Datei "File" konnte nicht geöffnet werden. Stellen Sie sicher, dass die Datei vorhanden ist, dass das Verzeichnis nicht schreibgeschützt ist.  

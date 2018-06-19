@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384399"
 ---
 # <a name="using-cspinbuttonctrl"></a>Verwenden von CSpinButtonCtrl
 Die *Drehfeld* Control (auch bekannt als ein *nach oben und unten* Steuerelement) stellt einem pfeilepaar zusammenlaufen, die ein Benutzer klicken kann, um einen Wert anzupassen. Dieser Wert wird als bezeichnet den *aktuelle Position*. Die Position, die innerhalb des Bereichs von dem Drehfeld bleibt bestehen. Klickt der Benutzer auf den Pfeil nach oben, verschiebt die Position für die maximale Anzahl; und klickt der Benutzer auf den Pfeil nach unten, verschiebt die Position in Richtung der Mindestwert.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854229"
 ---
 # <a name="support-for-ansi"></a>Unterstützung von ANSI
 Die meisten MFC-Klassen und Methoden unterstützen die ANSI-Zeichensatz auf, jedoch MFC-Frameworks als Ganzes sich allmählich auf die nur die Unicode-Unterstützung Zeichensatz. Da die laufenden Verbesserungen in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] und allgemeine Windows-Steuerelemente, Version 6.1, Unterstützung für mehrere ANSI-Klassen und Methoden ist veraltet.  Weitere Informationen finden Sie unter [ANSI-APIs veraltet](../mfc/deprecated-ansi-apis.md) und [-Unterstützung für Unicode](../text/support-for-unicode.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385143"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Bereitstellen kontextbezogener Hilfe
 In diesem Hinweis werden die Regeln für die Zuweisung von Hilfe Kontexten-IDs sowie zu weiteren Problemen Hilfe in MFC beschrieben. Kontextbezogene Hilfe und Unterstützung erfordert den Hilfecompiler, der in Visual C++ verfügbar ist.  

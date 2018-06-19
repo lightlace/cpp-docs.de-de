@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384302"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: Zerstören von Fensterobjekten
 Dieser Hinweis beschreibt die Verwendung von der [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) Methode. Verwenden Sie diese Methode, wenn Sie benutzerdefinierte Zuordnung von möchten `CWnd`--abgeleitete Objekte. Dieser Hinweis wird auch erläutert, warum der zu verwendende [CWnd:: DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) anstelle von einem C++-Windows-Objekt zu zerstören der `delete` Operator.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333829"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements
 In diesem Artikel wird erläutert, mithilfe des Eigenschaftenfensters Ereignishandlern für ActiveX-Steuerelemente in einem ActiveX-Steuerelementcontainer installieren. Die Ereignishandler dienen zum Empfang von Benachrichtigungen (aus dem Steuerelement) über bestimmte Ereignisse und Ausführen einer Aktion als Antwort. Diese Benachrichtigung wird das Ereignis "Auslösen" aufgerufen.  

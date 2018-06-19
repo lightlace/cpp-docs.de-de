@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857837"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Ausrichten von Steuerelementen an einer Führungslinie
 Die Ziehpunkte des Steuerelemente ausrichten an Führungslinien, wenn die Steuerelemente verschoben werden, und Führungslinien an Steuerelemente ausrichten (wenn es keine Steuerelemente zuvor ausgerichtet). Wenn eine Orientierungshilfe verschoben wird, verschieben sowie Steuerelemente, die darauf ausgerichtet sind. Steuerelemente, die "angedockt", um mehr als eine Anleitung sind angepasst, wenn eine der Führungslinien verschoben wird.  

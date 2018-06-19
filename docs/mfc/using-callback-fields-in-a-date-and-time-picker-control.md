@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383785"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Verwenden von Rückruffeldern in einem Steuerelement für die Datums- und Zeitauswahl
 Zusätzlich zu den standardmäßigen Formatierungszeichen, die Datums- und Zeitauswahl Uhrzeitfelder zu definieren, können Sie Ihre Ausgabe anpassen, indem Sie bestimmte Teile der eine benutzerdefinierte Formatzeichenfolge als Rückruffeldern angeben. Um einen Rückruffeld nicht deklariert werden, enthalten Sie ein oder mehrere "X"-Zeichen (ASCII-Code 88) an einer beliebigen Stelle im Text der Formatzeichenfolge. Z. B. die folgende Zeichenfolge "" ist: 'Yy' / 'MM' / 'Dd' (Tag 'X')'"bewirkt, dass das Datum und Uhrzeit Kontoauswahl-Steuerelement zur Anzeige des aktuellen Werts als Jahr, Monat, Datum und schließlich den Tag des Jahres gefolgt.  

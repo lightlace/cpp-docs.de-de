@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342829"
 ---
 # <a name="containers-implementing-a-container"></a>Container: Implementieren eines Containers
 In diesem Artikel werden die Verfahren zum Implementieren eines Containers zusammengefasst und verweist auf die anderen Artikeln, die ausführlichere erläuterungen zum Implementieren von Containern enthalten. Außerdem werden einige optionale OLE-Funktionen, die Sie implementieren möchten, und die Artikel beschreiben diese Funktionen aufgeführt.  
