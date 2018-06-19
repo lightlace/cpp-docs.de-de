@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375628"
 ---
 # <a name="editing-a-message-handler"></a>Bearbeiten eines Meldungshandlers
 Nachdem Sie einen Meldungshandler definiert haben, gelangen Sie auf die Member-Funktion Definition zum Hinzufügen oder Ändern von Code.  

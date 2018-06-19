@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383308"
 ---
 # <a name="using-crebarctrl"></a>Verwenden von CReBarCtrl
 Einem Grundleisten-Steuerelement fungiert als Container für untergeordnete Fenster. Diese untergeordneten Fenster häufig andere Steuerelemente sind ein Grundleisten-Steuerelementband zugewiesen. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder für jedes Band an, dass eine beliebige Kombination von ziehelements-Leiste, eine Bitmap, einer textbezeichnung und ein untergeordnetes Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.  

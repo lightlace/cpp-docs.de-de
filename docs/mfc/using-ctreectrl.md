@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382218"
 ---
 # <a name="using-ctreectrl"></a>Verwenden von CTreeCtrl
 Ein Strukturansicht-Steuerelement, dargestellt durch die Klasse [CTreeCtrl](../mfc/reference/ctreectrl-class.md), ist ein Fenster, in dem eine hierarchische Liste von Elementen, z. B. die Überschriften in einem Dokument die Einträge in einem Index oder die Dateien und Verzeichnisse auf einem Datenträger angezeigt. Jedes Element besteht aus einer Bezeichnung und einem optionalen als Bitmap verfügbares Bild, und jedes Element kann eine Liste von Unterelementen zugeordnet haben. Der Benutzer kann durch Klicken auf ein Element aus, erweitern und Reduzieren der zugehörigen Unterelemente. Die Verzeichnisstruktur im linken Bereich des Datei-Explorer ist ein Beispiel für ein Strukturansicht-Steuerelement.  

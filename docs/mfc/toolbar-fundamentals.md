@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383973"
 ---
 # <a name="toolbar-fundamentals"></a>Grundlegendes über Symbolleisten
 Dieser Artikel beschreibt die grundlegende MFC-Implementierung, in dem Sie eine Standardsymbolleiste Ihrer Anwendung hinzufügen, indem Sie eine Option im Anwendungs-Assistenten auswählen kann. Zu den behandelten Themen gehören:  

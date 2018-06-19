@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378180"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog-Klasse
 Ein nicht modales Registerkarte-Dialogfeld ( [CPropertySheet-Klasse](../../mfc/reference/cpropertysheet-class.md)) mit der der Benutzer die Symbolleisten, Menüs, Tastenkombinationen, benutzerdefinierte Tools und visuellen Stil in einer Anwendung anpassen. In der Regel greift der Benutzer durch Auswählen von **Anpassen** im Menü **Tools** auf dieses Dialogfeld zu.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371649"
 ---
 # <a name="standard-command-and-window-ids"></a>Standardbefehle und Fenster-IDs
 Die Microsoft Foundation Class Library definiert eine Reihe von Standardbefehle und Fenster-IDs in Afxres.h. Diese IDs sind innerhalb der Ressourcen-Editoren und des Eigenschaftenfensters am häufigsten verwendet, Meldungen Ihre Handlerfunktionen zuordnen. Alle standard-Befehle verfügen über eine **ID_** Präfix. Z. B. Wenn Sie im Menü-Editor verwenden, Sie normalerweise binden die Datei öffnen Menüelement für den Standard `ID_FILE_OPEN` Befehls-ID.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163204"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>Standardumwandlungen und implizites Boxing
 Eine standardkonvertierung wird über eine Konvertierung vom Compiler ausgewählt werden, das Boxing erfordert.  

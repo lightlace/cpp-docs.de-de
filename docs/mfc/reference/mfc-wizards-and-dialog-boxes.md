@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376277"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC-Assistenten und -Dialogfelder
 Die Microsoft Foundation Class (MFC)-Assistenten generieren Standardcode für verschiedene Arten von Komponenten und Objekten. Sie können die Assistenten ausführen, öffnen Sie das Kontextmenü für ein Projekt in **Projektmappen-Explorer** auswählen und **hinzufügen**, **Klasse**.  

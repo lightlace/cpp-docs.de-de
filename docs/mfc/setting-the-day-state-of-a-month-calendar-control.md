@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380798"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Einstellen des Tagesstatus für ein Monatskalender-Steuerelement
 Eines der Attribute für ein Monatskalender-Steuerelement ist die Fähigkeit zum Speichern von Informationen, die für jeden Tag des Monats als tagesstatus des Steuerelements bezeichnet. Diese Informationen werden verwendet, um bestimmte Datumsangaben für den Monat, der aktuell angezeigten hervorzuheben.  

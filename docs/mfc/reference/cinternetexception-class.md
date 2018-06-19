@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366895"
 ---
 # <a name="cinternetexception-class"></a>CInternetException-Klasse
 Stellt eine Ausnahmebedingung dar, die sich auf einen Internetvorgang bezieht.  

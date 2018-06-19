@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372156"
 ---
 # <a name="mfc-dll-wizard"></a>MFC-DLL-Assistent
 Wenn Sie den MFC-DLL-Assistenten verwenden, um ein MFC-DLL-Projekt zu erstellen, erhalten Sie einer funktionierende Starter-Anwendung mit integrierten Funktionen, die beim kompiliert, implementiert die grundlegenden Funktionen von einer [DLL](../../build/dlls-in-visual-cpp.md). Das MFC-Startprogramm enthält C++-Quelldateien (.cpp), Ressourcendateien (.rc) und eine Projektdatei (.vcxproj). In diesen Startdateien generierte Code basiert auf MFC. Ausführlichere Informationen finden Sie die Datei "Readme.txt", die für das Projekt in Visual Studio generiert wird und [Klassen und Funktionen generiert vom MFC-DLL-Assistenten](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

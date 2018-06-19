@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376987"
 ---
 # <a name="exception-processing"></a>Ausnahmeverarbeitung
 Wenn ein Programm ausgeführt wird, kann eine Reihe von nicht ordnungsgemäße Bedingungen und namens "Ausnahmen" Fehler auftreten. Dazu können gehören, des Arbeitsspeichers, die aufgrund von Zuordnungsfehlern der Ressource sowie Fehler beim Suchen von Dateien zur Neige.  

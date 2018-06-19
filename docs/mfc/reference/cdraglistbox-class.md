@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367210"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox-Klasse
 Zusätzlich zur Bereitstellung der Funktionalität eines Windows-Listenfelds, die `CDragListBox` Klasse kann der Benutzer Listenfeldelemente, beispielsweise Dateinamen, innerhalb des Listenfelds verschieben.  

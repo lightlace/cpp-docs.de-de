@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385257"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Reihenfolge der Operationen
 Dieser Artikel veranschaulicht parallel verwendet werden, die Abfolge der Vorgänge für einen Serversocket und ein Clientsocket. Da die Sockets verwenden `CArchive` Objekte sind notwendigerweise [streamen Sockets](../mfc/windows-sockets-stream-sockets.md).  

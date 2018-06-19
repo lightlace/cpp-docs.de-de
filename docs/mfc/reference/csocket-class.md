@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375602"
 ---
 # <a name="csocket-class"></a>CSocket-Klasse
 Leitet sich von `CAsyncSocket`, erbt die Kapselung von der Windows Sockets-API und stellt ein höheres Maß an Abstraktion als die von einem `CAsyncSocket` Objekt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108264"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Arbeiten mit OLE DB-Consumervorlagen
 Die folgenden Themen enthalten einige Beispiele für die Verwendung von OLE DB-Consumervorlagen in gängigen Szenarien:  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355479"
 ---
 # <a name="strings-atlmfc"></a>Zeichenfolgen (ATL/MFC)
 Fast alle Programme mehr mit Zeichenfolgendaten. Visual C++ bietet verschiedene Methoden zum Verwalten von Zeichenfolgendaten.  

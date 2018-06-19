@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381510"
 ---
 # <a name="tree-control-item-labels"></a>Elementbezeichnungen in Struktursteuerelementen
 Den Text der Bezeichnung für ein Element wird in der Regel angeben, wenn Sie das Element des Strukturansicht-Steuerelements hinzufügen ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Die `InsertItem` kann Member-Funktion übergeben, eine [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) Struktur, die die Eigenschaften des Elements, z. B. eine Zeichenfolge, enthält der Text der Bezeichnung definiert. `InsertItem` verfügt über mehrere Überladungen, die mit verschiedenen Kombinationen von Parametern aufgerufen werden kann.  

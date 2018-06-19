@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127304"
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>Gewusst wie: Ermitteln des interaktiven Zustands (C++/CLI)
 Im folgenden Codebeispiel wird veranschaulicht, wie zu bestimmen, ob Code in einem interaktiven Kontext ausgeführt wird. Wenn <xref:System.Environment.UserInteractive%2A> ist "false", und klicken Sie dann der Code als ein Dienstprozess ausgeführt wird oder aus in einer Web-Anwendung, in diesem Fall Sie nicht versuchen sollten, mit dem Benutzer interagieren.  

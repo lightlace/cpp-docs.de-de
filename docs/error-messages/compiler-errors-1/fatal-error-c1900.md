@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228986"
 ---
 # <a name="fatal-error-c1900"></a>Schwerwiegender Fehler C1900
 Konflikt zwischen 'tool1', Version 'Nummer1', und 'tool2', Version 'Nummer2'  

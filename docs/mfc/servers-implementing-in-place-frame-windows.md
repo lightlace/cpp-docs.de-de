@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380863"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: Implementieren eines In-Place-Frame-Fensters
 In diesem Artikel wird erläutert, was Sie tun müssen, um direkte Rahmenfenster in die visuelle Bearbeitung Server-Anwendung zu implementieren, wenn Sie nicht den Assistenten zum Erstellen Sie die Server-Anwendung verwenden. Statt die Schritte in diesem Artikel beschrieben, können Sie eine vorhandenen direkte Rahmenfenster-Klasse von einer Anwendung vom Assistenten generierte Anwendung oder eines Beispiels mit Visual C++ verwenden.  

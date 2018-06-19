@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359337"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement
 Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen, insofern, dass sie automatisch von-Klasse ausgelöst wurden [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` enthält vordefinierte Memberfunktionen, die häufig verwendete Aktionen infolge Ereignisse ausgelöst werden. Einige häufig verwendete Aktionen von implementiert `COleControl` enthalten einzelne - und double - clicks auf das Steuerelement, Tastaturereignisse und Änderungen in den Zustand der Maustasten. Ereignis-Zuordnungseinträge für vordefinierte Ereignisse immer vorangestellt werden die **EVENT_STOCK** Präfix.  

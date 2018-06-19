@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382072"
 ---
 # <a name="window-procedure-entry-points"></a>Einstiegspunkte für Fensterprozeduren
 MFC-Fensterprozeduren, ein Modul statischen Links mit einer speziellen Fenster Prozedur Implementierung zu schützen. Die Verknüpfung erfolgt automatisch, wenn das Modul mit MFC verknüpft wird. Diese Fensterprozedur verwendet die `AFX_MANAGE_STATE` Makros zu den gültigen Modulstatus ordnungsgemäß festgelegt, und er ruft dann **fxWndProc**, die wiederum delegiert an die `WindowProc` Memberfunktion der entsprechenden `CWnd`-abgeleitet -Objekt.  

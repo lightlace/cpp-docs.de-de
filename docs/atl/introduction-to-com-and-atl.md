@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355412"
 ---
 # <a name="introduction-to-com-and-atl"></a>Einführung in COM und ATL
 Dieser Abschnitt enthält eine kurze Einführung in COM und ATL  

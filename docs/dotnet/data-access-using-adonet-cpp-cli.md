@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108279"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Datenzugriff mit ADO.NET (C++/CLI)
 ADO.NET ist die .NET Framework-API für den Datenzugriff und bietet Power und einfache Verwendung von vorherigen Data Access-Lösungen. Dieser Abschnitt beschreibt einige der Probleme im Zusammenhang mit ADO.NET, die für Visual C++-Benutzer, wie z. B. das Marshalling von systemeigenen Typs eindeutig sind.  

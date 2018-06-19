@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104242"
 ---
 # <a name="irowsetupdateimplupdate"></a>IRowsetUpdateImpl::Update
 Überträgt alle Änderungen, die auf die Zeile seit der letzten Fetch oder Update.  

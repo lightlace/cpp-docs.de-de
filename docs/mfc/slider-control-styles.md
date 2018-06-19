@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380545"
 ---
 # <a name="slider-control-styles"></a>Stile der Schieberegler-Steuerelemente
 Schieberegler-Steuerelemente ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) haben eine vertikale oder horizontale Ausrichtung. Teilstriche auf beiden Seiten über verfügen beide Seiten oder keines von beiden. Sie können auch verwendet werden, um einen Bereich aufeinander folgender Werte anzugeben. Mithilfe des Schiebereglers Steuerelementtypen, die Sie angeben, wenn Sie das Schieberegler-Steuerelement erstellen, werden diese Eigenschaften gesteuert.  

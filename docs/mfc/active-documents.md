@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335502"
 ---
 # <a name="active-documents"></a>Aktive Dokumente
 Aktive Dokumente erweitern die Verbunddokument-Technologie von OLE. Diese Erweiterungen werden in Form von zusätzlichen Schnittstellen bereitgestellt, die Ansichten zu verwalten, damit Objekte in Containern funktionieren und noch behalten die Kontrolle über ihre anzeigen und Drucken Funktionen können. Dieser Prozess ermöglicht die Dokumente in fremden Frames (z. B. die Microsoft Office Binder oder Microsoft Internet Explorer) und in systemeigene Rahmen (z. B. das Anzeigen der Ports des Produkts) anzuzeigen.  

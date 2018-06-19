@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372837"
 ---
 # <a name="connection-maps"></a>Verbindungszuordnungen
 OLE-Steuerelemente sind in der Lage, Schnittstellen für andere Anwendungen verfügbar zu machen. Diese Schnittstellen können nur den Zugriff auf einen Container, in das entsprechende Steuerelement. Wenn ein OLE-Steuerelements externe Schnittstellen von anderen OLE-Objekte zugreifen möchte, muss ein Verbindungspunkt eingerichtet werden. Diese Verbindungspunkt kann ein Steuerelement ausgehenden Zugriff auf externe Dispatchzuordnungen, z. B. ereigniszuordnungen oder Benachrichtigungsfunktionen.  

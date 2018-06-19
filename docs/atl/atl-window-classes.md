@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355431"
 ---
 # <a name="atl-window-classes"></a>ATL-Fensterklassen
 ATL umfasst mehrere Klassen, mit denen Sie zur Verwendung und Implementierung von Windows. Diese Klassen, z. B. anderen ATL-Klassen bieten eine effiziente Implementierung, die unterscheiden sich ein Mehraufwand für Ihren Code.  
