@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096999"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Erstellen eines OLE DB-Consumers mit einem Assistenten
 Dieses Verfahren wird veranschaulicht, wie Sie können die ATL-Projekt-Assistent und die ATL-OLE DB-Consumer-Assistenten zum Generieren eines Consumers OLE DB-Vorlagen, und ändern Sie die Hauptcodedatei der Konsolenanwendung zum Abrufen und Anzeigen von Daten aus einer Datenbanktabelle.  

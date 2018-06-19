@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112011"
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>Deklaration eines CLR-Verweisklassenobjekts
 Die Syntax zum Deklarieren und instanziieren Sie ein Objekt eines Verweistyps für die Klasse hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  

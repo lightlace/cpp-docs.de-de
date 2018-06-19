@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105464"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl-Klasse
 Implementiert die OLE DB- [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) -Schnittstelle, Hinzufügen von Datensätzen an und Abrufen von Datensätzen aus einem Datenmember ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) vom Typ **CAtlArray <** `RecordClass`**>**.  

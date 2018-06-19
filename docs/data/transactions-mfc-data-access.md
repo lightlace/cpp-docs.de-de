@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107817"
 ---
 # <a name="transactions--mfc-data-access"></a>Transaktionen (MFC-Datenzugriff)
 Das Konzept der Transaktionen wurde entwickelt, um Fälle zu behandeln, in denen der resultierende Status der Datenbank vom Gesamterfolg einer Reihe von Operationen abhängt. Dieses könnte vorkommen, da aufeinander folgende Operationen die Ergebnisse von vorangegangenen Operationen ändern können. Wenn eine der Operationen fehlschlägt, kann der resultierende Status in solchen Fällen unbestimmt sein.  

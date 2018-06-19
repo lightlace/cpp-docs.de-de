@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088598"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>Entwerfen und Erstellen einer ODBC-Datenbankanwendung
 Diese Themen helfen Ihnen beim Entwerfen und der ODBC-datenbankanwendung einrichten.  

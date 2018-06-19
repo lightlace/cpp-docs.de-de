@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366935"
 ---
 # <a name="dependents"></a>Abhängige Dateien
 Geben Sie in einer Abhängigkeitszeile keinem oder mehreren abhängigen Elemente nach dem Doppelpunkt (:) oder zwei Doppelpunkten (:), verwenden einen gültigen Dateinamen oder [Pseudoziel](../build/pseudotargets.md). Trennen Sie mehrere abhängige durch eine oder mehrere Leerzeichen bzw. Tabstopps ein. Abhängige Dateien sind nicht in der Groß-/Kleinschreibung beachtet. Pfade sind mit Dateinamen zulässig.  

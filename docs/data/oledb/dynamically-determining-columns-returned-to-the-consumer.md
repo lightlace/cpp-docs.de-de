@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107938"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten
 Die-Makros normalerweise behandelt die **IColumnsInfo:: GetColumnsInfo** aufrufen. Da ein Consumer die Möglichkeit hätte, Lesezeichen verwenden, muss der Anbieter können jedoch werden so ändern Sie die Spalten zurückgegeben werden, je nachdem, ob der Consumer ein Lesezeichen anfordert.  

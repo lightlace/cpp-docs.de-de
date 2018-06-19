@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098640"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert werden können (Schreiben) den Datenspeicher. In diesem Thema erläutert, wie aktualisierbare Anbieter mithilfe von OLE DB-Vorlagen zu erstellen.  

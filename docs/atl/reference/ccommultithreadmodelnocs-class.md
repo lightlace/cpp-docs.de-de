@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364192"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS-Klasse
 `CComMultiThreadModelNoCS` Stellt Thread-sichere Methoden zum Inkrementieren und Dekrementieren den Wert einer Variablen ohne kritischen Abschnitt sperren oder Entsperren Funktionalität bereit  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111483"
 ---
 # <a name="hashmultimapmaxloadfactor-stlclr"></a>hash_multimap::max_load_factor (STL/CLR)
 Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.  

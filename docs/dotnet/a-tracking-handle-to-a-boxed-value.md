@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108275"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Ein Trackinghandle für einen geschachtelten Wert
 Die Verwendung von ein Trackinghandle für einen Werttyp-Verweis hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  

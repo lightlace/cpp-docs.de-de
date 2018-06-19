@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092190"
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 Überträgt alle ausstehenden Änderungen, die seit dem letzten Abruf auf alle Zeilen oder **Update** dafür aufrufen.  

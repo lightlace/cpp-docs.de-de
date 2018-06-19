@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112107"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB-Consumervorlagen (C++)
 Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version 2.6. (Die OLE DB-Consumervorlagen werden mit OLE DB 2.6 getestet, unterstützen aber nicht alle Schnittstellen in der Spezifikation.) Die Consumervorlagen minimieren die Menge an Code, den Sie schreiben müssen, um einen OLE DB-Consumer zu implementieren. Die Vorlagen bieten Folgendes:  

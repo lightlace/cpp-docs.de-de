@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091653"
 ---
 # <a name="record-field-exchange-rfx"></a>Datensatzfeldaustausch (RFX)
 Die MFC-ODBC-Datenbankklassen automatisieren, Verschieben von Daten zwischen der Datenquelle und einem [Recordset](../../data/odbc/recordset-odbc.md) Objekt. Beim Ableiten einer Klasse von [CRecordset](../../mfc/reference/crecordset-class.md) und Abrufens von Zeilen nicht verwenden, werden Daten durch die Datensatzfeldaustausch (RFX)-Mechanismus übertragen.  

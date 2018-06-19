@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105204"
 ---
 # <a name="retrieving-a-blob"></a>Abrufen eines BLOBs
 Sie können ein binary large Object (BLOB) auf verschiedene Weise abrufen. Sie können **DBTYPE_BYTES** das BLOB als eine Folge von Bytes abzurufen, oder verwenden eine Schnittstelle wie `ISequentialStream`. Weitere Informationen finden Sie unter [BLOBS und OLE-Objekte](https://msdn.microsoft.com/en-us/library/ms711511.aspx) in der *OLE DB Programmer's Reference*.  

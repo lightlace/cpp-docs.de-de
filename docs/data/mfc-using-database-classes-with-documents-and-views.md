@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091867"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten
 Sie können die MFC-Datenbankklassen mit oder ohne die Dokument-/Ansichtarchitektur. Dieses Thema hebt hervor, arbeiten mit Dokumenten und Ansichten. Es wird Folgendes erläutert:  

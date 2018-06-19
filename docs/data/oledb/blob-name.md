@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094776"
 ---
 # <a name="blobname"></a>BLOB_NAME
 Mit verwendet `BEGIN_COLUMN_MAP` und `END_COLUMN_MAP` binden ein binary large Object ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro anstelle der eine Spaltennummer des Namens einer Spalte verwendet.  

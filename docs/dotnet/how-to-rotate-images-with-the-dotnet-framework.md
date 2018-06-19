@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129033"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>Gewusst wie: Drehen von Bildern mit .NET Framework
 Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Drawing.Image?displayProperty=fullName> Klasse, um ein Bild vom Datenträger zu laden, um 90 Grad drehen und als neue JPG-Datei zu speichern.  

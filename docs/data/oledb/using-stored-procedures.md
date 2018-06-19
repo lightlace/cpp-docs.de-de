@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112237"
 ---
 # <a name="using-stored-procedures"></a>Verwenden von gespeicherten Prozeduren
 Eine gespeicherte Prozedur ist eine in einer Datenbank gespeichertes, ausführbares Objekt. Aufrufen einer gespeicherten Prozedur ist ähnlich wie einen SQL-Befehl aufrufen. Verwenden von gespeicherten Prozeduren für die Datenquelle (anstelle der Ausführung, oder Vorbereiten einer Anweisung in der Clientanwendung) bieten mehrere Vorteile, einschließlich höhere Leistung, weniger netzwerkmehraufwand, verbesserte Konsistenz und Genauigkeit.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102383"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Navigationsunterstützung in einer Datensatzansicht (MFC-Datenzugriff)
 In diesem Thema wird erläutert, wie zur Unterstützung der Verschiebung von Datensatz zu Datensatz in die [CRecordView](../mfc/reference/crecordview-class.md) -Klasse, einschließlich Informationen über:  

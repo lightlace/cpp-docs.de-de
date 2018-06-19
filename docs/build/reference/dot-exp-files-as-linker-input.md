@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371098"
 ---
 # <a name="exp-files-as-linker-input"></a>.EXP-Dateien als Eingabe für den Linker
 Exportdateien (.exp) enthalten Informationen über exportierte Funktionen und Daten enthaltenen Elemente. Beim Erstellen eine Importbibliothek LIB erstellt wird auch eine .exp-Datei erstellt. Wenn Sie ein Programm, die verknüpfen sowohl in exportiert und aus einem anderen Programm importiert wird, entweder direkt oder indirekt, verwenden Sie die Exportdatei an. Wenn Sie eine .exp-Datei verknüpfen, wird LINK keine Importbibliothek erzeugt, da davon ausgegangen wird, dass LIB noch nicht erstellt. Ausführliche Informationen zu .exp-Dateien und Importbibliotheken finden Sie unter [arbeiten mit Importbibliotheken und Exportdateien](../../build/reference/working-with-import-libraries-and-export-files.md).  

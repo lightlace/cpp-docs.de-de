@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111831"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Unterschiede im Ausnahmebehandlungsverhalten unter /CLR
 [Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen](../dotnet/basic-concepts-in-using-managed-exceptions.md) Ausnahmebehandlung in verwalteten Anwendungen erläutert. In diesem Thema werden die Unterschiede zu das Standardverhalten der Ausnahmebehandlung und einige Einschränkungen im Detail erläutert. Weitere Informationen finden Sie unter [_set_se_translator-Funktion](../c-runtime-library/reference/set-se-translator.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093476"
 ---
 # <a name="blobnamelengthstatus"></a>BLOB_NAME_LENGTH_STATUS
 Mit verwendet `BEGIN_COLUMN_MAP` und `END_COLUMN_MAP` binden ein binary large Object ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), mit dem Unterschied, dass dieses Makro auch die Länge und den Status der BLOB-Spalte erhält.  

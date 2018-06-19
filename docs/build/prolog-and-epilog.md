@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372008"
 ---
 # <a name="prolog-and-epilog"></a>Prolog und Epilog
 Jede Funktion, die Stapelspeicher zuweist, in Aufrufe an andere Funktionen, um nicht flüchtigen Register speichert oder mithilfe der Ausnahmebehandlung benötigen einen Prolog, deren Adresse Limits werden in der jeweiligen Funktion Tabelleneintrag zugeordneten Entladedaten beschrieben (siehe [Ausnahmebehandlung (x64)](../build/exception-handling-x64.md)). Prolog speichert Argument Registern in der ihre Privatadressen ggf. schiebt nicht flüchtigen Register auf den Stapel, festen Bestandteil des Stapels für "lokal" und die temporären Dateien, die zuweist und stellt optional ein Frame-Pointer her. Die zugeordnete Entladedaten müssen die Aktion der Prolog beschreiben, und geben Sie müssen die erforderlichen Informationen für die Auswirkung der Prologcode rückgängig zu machen.  

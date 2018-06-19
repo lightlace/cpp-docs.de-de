@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129098"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interoperabilität mit anderen .NET-Sprachen (C++/CLI)
 Die Themen in diesem Abschnitt zeigen, wie zum Erstellen von Assemblys in Visual C++, die aus nutzen oder Funktionalität für Assemblys, die in c# oder Visual Basic geschrieben wird.  

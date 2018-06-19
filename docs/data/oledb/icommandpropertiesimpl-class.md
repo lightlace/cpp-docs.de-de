@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099000"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl-Klasse
 Stellt eine Implementierung von der [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) Schnittstelle.  

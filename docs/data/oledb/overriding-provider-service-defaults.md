@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110079"
 ---
 # <a name="overriding-provider-service-defaults"></a>Überschreiben der Standardwerte für Anbieterdienste
 Der Anbieter-Registrierungswert für **OLEDB_SERVICES** wird zurückgegeben, als der Standardwert für die [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) Initialisierungseigenschaft auf das Datenquellenobjekt.  

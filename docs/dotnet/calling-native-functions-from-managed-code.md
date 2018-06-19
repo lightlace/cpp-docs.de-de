@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112042"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Aufrufen systemeigener Funktionen aus verwaltetem Code
 Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW („It Just Works“)-Mechanismus.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102950"
 ---
 # <a name="traversing-a-simple-rowset"></a>Durchlaufen eines einfachen Rowsets
 Das folgende Beispiel zeigt die eine schnellen und einfachen Zugriff, die keine Befehle beinhaltet. Die folgenden Consumercode in einem ATL-Projekt ruft Datensätze aus einer Tabelle mit dem Namen *Künstler* in einer Microsoft Access-Datenbank mithilfe der Microsoft OLE DB-Anbieter für ODBC. Der Code erstellt ein [CTable](../../data/oledb/ctable-class.md) Table-Objekt mit einem Accessor basierend auf die Benutzerdatensatz-Klasse `CArtists`. Öffnet eine Verbindung, wird eine Sitzung für die Verbindung geöffnet und die Tabelle in der Sitzung geöffnet.  

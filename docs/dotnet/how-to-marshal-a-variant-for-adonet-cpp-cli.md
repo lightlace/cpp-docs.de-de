@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134431"
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Gewusst wie: Marshallen eines VARIANT für ADO.NET (C++/CLI)
 Veranschaulicht das Hinzufügen ein systemeigenen `VARIANT` mit einer Datenbank und das Marshallen einer <xref:System.Object?displayProperty=fullName> aus einer Datenbank in ein natives `VARIANT`.  

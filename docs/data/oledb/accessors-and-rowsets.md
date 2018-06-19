@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094494"
 ---
 # <a name="accessors-and-rowsets"></a>Accessoren und Rowsets
 Zum Festlegen und Abrufen von Daten, OLE DB-Vorlagen verwenden, einen Accessor und ein Rowset über die [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) Klasse. Diese Klasse kann mehrere verschiedene Accessoren behandeln.  

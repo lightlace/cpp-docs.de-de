@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127850"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>Gewusst wie: Abrufen von Dateiinformationen (C++/CLI)
 Im folgenden Codebeispiel wird die <xref:System.IO.FileInfo>-Klasse erläutert. Wenn der Name einer Datei bekannt ist, können Sie diese Klasse verwenden, um Informationen über die Datei abzurufen, z. B. Dateigröße, Verzeichnis, vollständiger Name, Datum und Uhrzeit der Erstellung sowie der letzten Änderung.  
