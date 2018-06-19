@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687542"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading bei C und Win32
 Microsoft Visual C++ bietet Unterstützung für Multithreadanwendungen erstellen. Sie sollten in Betracht ziehen, mehrere Threads verwenden, wenn Ihre Anwendung benötigt, um kostenintensive Vorgänge auszuführen, die die Benutzeroberfläche reagiert führen würde.  

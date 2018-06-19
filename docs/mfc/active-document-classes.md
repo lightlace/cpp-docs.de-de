@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325915"
 ---
 # <a name="active-document-classes"></a>Active Document-Klassen
 Aktive Dokumente können angezeigt werden, in der gesamten Clientfenster eines Webbrowsers, z. B. Internet Explorer 5.5 oder in einem aktiven Container, z. B. die Microsoft Office Binder, die aktive Dokumente unterstützt.  

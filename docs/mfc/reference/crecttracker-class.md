@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375907"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-Klasse
 Ermöglicht es einem Element angezeigt, verschoben und in unterschiedlichen Größen dargestellt werden.  

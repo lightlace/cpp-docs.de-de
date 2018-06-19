@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849144"
 ---
 # <a name="grammar-summary-cc"></a>Grammatikzusammenfassung (C/C++)
 In diesem Abschnitt wird die formale Grammatik des Präprozessors beschrieben. Er behandelt die Syntax von vorverarbeitungsanweisungen und Operatoren erläutert [der Präprozessor](../preprocessor/preprocessor.md) und [pragma-Direktiven](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  

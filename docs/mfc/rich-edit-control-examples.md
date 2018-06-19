@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379280"
 ---
 # <a name="rich-edit-control-examples"></a>Beispiele für RichEdit-Steuerelemente
 Das MFC-OLE-Beispiel [WORDPAD](../visual-cpp-samples.md) verwendet die `CRichEditView`, `CRichEditDoc`, und `CRichEditCntrItem` Klassen. Durch Erweiterung verwendet es die [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Eine kurze Beschreibung dieser drei Klassen, finden Sie unter [Klassen für Rich-Edit-Steuerelemente für](../mfc/classes-related-to-rich-edit-controls.md).  

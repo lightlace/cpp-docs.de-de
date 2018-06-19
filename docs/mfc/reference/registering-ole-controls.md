@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378056"
 ---
 # <a name="registering-ole-controls"></a>Registrieren des OLE-Steuerelements
 OLE-Steuerelemente, wie andere OLE-Server-Objekte können von anderen OLE-fähigen Anwendungen zugegriffen werden. Dies erfolgt durch die Registrierung der Typbibliothek und der Klasse des Steuerelements.  

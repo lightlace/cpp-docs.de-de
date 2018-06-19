@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695641"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Empfohlene Vorgehensweisen im Zusammenhang mit der Concurrency Runtime
 In diesem Abschnitt werden bewährte Methoden zur effizienten Verwendung von Concurrency Runtime beschrieben. Diese bewährten Methoden gelten für die [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) verwenden, die [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md), und die [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  

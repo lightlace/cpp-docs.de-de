@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317644"
 ---
 # <a name="project-build-error-prj0008"></a>Projektbuildfehler PRJ0008
 Die Datei "File" konnte nicht gelöscht werden.  

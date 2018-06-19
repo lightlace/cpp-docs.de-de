@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347694"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Verwalten der Statusdaten von MFC-Modulen
 Dieser Artikel beschreibt die Statusdaten von MFC-Modulen und wie dieser Status aktualisiert wird, wenn Sie der Fluss der Ausführung (im Path-Code findet sich durch eine Anwendung, für die Ausführung) erreicht oder verlässt ein Modul. Modulzustände mit Wechsel der `AFX_MANAGE_STATE` und `METHOD_PROLOGUE` Makros wird ebenfalls erläutert.  

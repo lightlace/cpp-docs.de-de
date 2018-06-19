@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332126"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Zugreifen auf das eingebettete Monatskalender-Steuerelement
 Das eingebettete Monatskalender-Kalender-Steuerelementobjekt möglich, die von der `CDateTimeCtrl` Objekt durch einen Aufruf der [Memberfunktion GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) Memberfunktion.  

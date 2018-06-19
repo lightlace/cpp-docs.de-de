@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692089"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Gewusst wie: Verbessern der Leistung mithilfe von combinable
 Dieses Beispiel zeigt, wie die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Klasse berechnet die Summe der Zahlen in einer [Std:: Array](../../standard-library/array-class-stl.md) Objekt, die Primzahlen sind. Die `combinable`-Klasse steigert die Leistung, indem sie Freigabezustand ausschließt.  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380207"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Abrufen von Daten aus dem Dialogfeldobjekt
 Das Framework bietet eine einfache Möglichkeit, um die Werte von Steuerelementen in einem Dialogfeld zu initialisieren und zum Abrufen der Werte aus den Steuerelementen. Der mehr arbeitsaufwendig manuelle Ansatz ist die Funktionen aufrufen, wie die `SetDlgItemText` und `GetDlgItemText` Memberfunktionen der Klasse `CWnd`, das Steuerelement Windows gelten. Mit diesen Funktionen Sie Zugriff auf jedes Steuerelement einzeln zu festlegen oder Abrufen des Objektwerts, Aufrufen von Funktionen wie z. B. `SetWindowText` und `GetWindowText`. Das Framework Ansatz automatisiert Initialisierung und abrufen.  

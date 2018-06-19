@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302275"
 ---
 # <a name="bscmake-error-bk1514"></a>BSCMAKE-Fehler BK1514
 Alle. SBR-Dateien abgeschnitten, keiner gefunden in Dateiname  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296808"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>Ausdrucksauswertungsfehler CXX0047
 Liste der Typargumente stimmt nicht mit eine Funktion überein.  

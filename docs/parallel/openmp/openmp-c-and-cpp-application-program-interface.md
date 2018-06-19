@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687061"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP - C- und C++-Anwendungsprogrammierschnittstelle
 OpenMP-C- und C++-API erläutert, wie in der 2.0-Versionsspezifikation von Prüfungsgremium der OpenMP-Architektur beschrieben.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347898"
 ---
 # <a name="control-bars"></a>Steuerleisten
 "Steuerleiste" ist der allgemeine Name für Symbolleisten, Statusleisten und Dialogleisten. MFC-Klassen `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, und **CReBar** Klasse ableiten [CControlBar](../mfc/reference/ccontrolbar-class.md), der ihre allgemeine Funktionen implementiert.  
