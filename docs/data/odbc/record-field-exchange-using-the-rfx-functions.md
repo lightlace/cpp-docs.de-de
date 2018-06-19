@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092033"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Datensatzfeldaustausch: Verwenden der RFX-Funktionen
 In diesem Thema wird erläutert, wie die RFX-Funktionsaufrufe verwenden, die den Text der Ihre `DoFieldExchange` außer Kraft setzen.  

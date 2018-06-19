@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367159"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Gleitkommaunterstützung für älteren Code (Visual C++)
 MMX und Gleitkomma-Stack-Register (MM0-MM7/ST0-ST7) werden über Kontextwechsel beibehalten.  Es ist keine explizite Aufrufkonvention für diese Register.  Die Verwendung von diese Register ist streng in Kernelmoduscode nicht zulässig.  

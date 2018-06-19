@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097184"
 ---
 # <a name="creating-the-provider"></a>Erstellen des Anbieters
 #### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>So erstellen Sie einen OLE DB-Anbieter mit der ATL-OLE DB-Anbieter-Assistenten  

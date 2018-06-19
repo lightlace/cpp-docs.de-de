@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089151"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Konfigurieren einer ODBC-Datenquelle
 Verwenden einer [Datenquelle](../../data/odbc/data-source-odbc.md) mit einer Anwendung, die Sie entwickelt haben, müssen Sie ODBC-Administrator verwenden, um ihn zu konfigurieren. ODBC-Administrator der nachverfolgt verfügbaren Datenquellen und die Verbindungsinformationen in der Windows-Registrierung. Verwenden von ODBC-Administrator hinzufügen, ändern und Löschen von Datenquellen in der **Datenquellen** Dialogfeld sowie zum Hinzufügen und Löschen von ODBC-Treiber.  

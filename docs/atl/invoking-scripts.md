@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362270"
 ---
 # <a name="invoking-scripts"></a>Aufrufen von Skripts
 [Mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) Ersatz Maps erläutert und die Registrierungsstelle Methode erwähnt **AddReplacement**. Die Registrierungsstelle ist acht andere spezifische Methoden des Skripts, und alle in der folgenden Tabelle beschrieben sind.  

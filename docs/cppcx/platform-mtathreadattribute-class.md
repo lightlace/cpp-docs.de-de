@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089164"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute-Klasse
 Legt Multithreaded Apartment (MTA) als Threadingmodell für Anwendungen fest.  

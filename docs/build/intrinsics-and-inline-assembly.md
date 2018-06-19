@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367978"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Systeminterne Funktionen und Inlineassemblys
 Eine der Einschränkungen für die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Compiler besteht darin, keine Inline-Assembler-Unterstützung. Das bedeutet, die Funktionen, die kann in C oder C++ geschrieben werden, entweder als Unterroutinen oder als systeminterne Funktionen unterstützt, die vom Compiler geschrieben werden müssen. Bestimmte Funktionen sind Leistung vertrauliche, andere hingegen nicht. Leistungsabhängigen Funktionen sollten als systeminterne Funktionen implementiert werden.  

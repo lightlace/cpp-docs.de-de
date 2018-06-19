@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089258"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType-Schnittstelle
 `Platform::IValueType` ist eine Infrastrukturschnittstelle, die von Wertklassen und Wertstrukturen implementiert wird. Nicht für die explizite Verwendung in Ihrem Code gedacht.  

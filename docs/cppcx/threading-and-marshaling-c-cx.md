@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093118"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading und Marshalling (C++/CX)
 In der Mehrzahl der Fälle können Instanzen von Windows-Runtime-Klassen wie Standard-c++-Objekten, von jedem Thread aus zugegriffen werden. Solche Klassen werden als "agil" bezeichnet. Eine kleine Anzahl von Windows-Runtime-Klassen, die mit Windows ausgelieferten nicht agil und mehr verarbeitet werden muss, wie COM-Objekte als Standard-c++-Objekten. Sie müssen zwar kein COM-Experte sein, um nicht agile Klassen zu verwenden, aber das Threadmodell dieser Klassen sowie ihr Marshallingverhalten beachten. Dieser Artikel ist ein Leitfaden für die seltenen Fälle, in denen Sie die Instanz einer nicht agilen Klasse verarbeiten müssen.  

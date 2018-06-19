@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367358"
 ---
 # <a name="command-macros-and-options-macros"></a>Befehlsmakros und Optionsmakros
 Befehlsmakros sind für Microsoft-Produkte vordefiniert. Optionenmakros stellen die Optionen für diese Produkte dar und sind standardmäßig nicht definiert. Beide werden in vordefinierten Rückschlussregeln verwendet und können in Beschreibungsblöcken oder benutzerdefinierten Rückschlussregeln verwendet werden. Befehlsmakros können neu definiert werden, um über die Befehlszeile, einschließlich Optionen ganz oder teilweise darzustellen. Optionenmakros generieren eine null-Zeichenfolge an, wenn bleiben undefiniert.  

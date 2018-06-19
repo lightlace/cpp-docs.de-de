@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369356"
 ---
 # <a name="parameter-passing"></a>Parameterübergabe
 Die ersten vier Ganzzahlargumente sind in Registern zu übergeben. Ganzzahlige Werte werden (in der Reihenfolge von links nach rechts) in RCX, RDX, R8 oder R9 übergeben. Argumente 5 und höher auf dem Stapel übergeben werden. Sind alle Argumente in Registern rechts ausgerichtet. Dies erfolgt, d. h. der aufgerufene die höherwertigen Bits des Registers Wenn ignorieren werden müssen und nur den Teil der erforderlichen Register zugreifen können.  

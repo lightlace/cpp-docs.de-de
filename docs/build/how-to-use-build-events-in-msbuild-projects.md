@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369772"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten
 Ein Buildereignis ist ein Befehl, [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] führt zu einem bestimmten Zeitpunkt im Buildprozess. Die *Präbuild* Ereignis tritt auf, bevor der Build gestartet wird; die *Linkervorstufen* Ereignis tritt auf, vor dem Starten der Link Schritt; und die *Postbuild* Ereignis tritt auf, nach der Erstellung erfolgreich beendet wurde. Ein Buildereignis tritt nur dann, wenn der zugeordnete Buildschritt auftritt. Z. B. die Prälinkereignis nicht ausgeführt, wenn der Linkschritt nicht ausgeführt werden kann.  
