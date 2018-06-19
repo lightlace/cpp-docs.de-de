@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356340"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementieren von CComObject, CComAggObject und CComPolyObject
 Die Vorlagenklassen [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), und [CComPolyObject](../atl/reference/ccompolyobject-class.md) sind immer die am stärksten abgeleiteten Klassen in der Vererbungskette. Es liegt in ihrer Verantwortung zur Behandlung aller Methoden in **IUnknown**: `QueryInterface`, `AddRef`, und **Version**. Darüber hinaus `CComAggObject` und `CComPolyObject` (Wenn für aggregierte Objekte verwendet wird) bereitstellen, die spezielle verweiszählung und `QueryInterface` Semantik für die innere unbekannte erforderlich sind.  

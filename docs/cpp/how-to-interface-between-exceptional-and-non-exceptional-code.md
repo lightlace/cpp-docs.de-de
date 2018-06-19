@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417274"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen
 In diesem Artikel wird beschrieben, wie die konsistente Ausnahmebehandlung in einem C++-Modul implementiert wird und wie diese Ausnahmen zu und von Fehlercodes an den Ausnahmegrenzen übertragen werden.  

@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418392"
 ---
 # <a name="data-type-ranges"></a>Datentypbereiche
 Von den Visual C++-32-Bit-- und 64-Bit-Compilern werden die Typen in der Tabelle weiter unten in diesem Artikel erkannt.  

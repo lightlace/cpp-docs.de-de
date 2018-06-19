@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423521"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Einheitliche Initialisierung und Delegierung von Konstruktoren
 In modernem C++ können Sie *geschweifter Klammern Initialisierung* für jeden Typ ohne das Gleichheitszeichen. Außerdem können Sie delegierende Konstruktoren verwenden, um den Code zu vereinfachen, wenn mehrere Konstruktoren ähnliche Aufgaben ausführen.  

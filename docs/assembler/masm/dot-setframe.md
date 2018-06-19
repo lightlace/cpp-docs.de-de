@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052585"
 ---
 # <a name="setframe"></a>.SETFRAME
 Füllt das Feld und einem festen Offset in die Entladung-Informationen, die mit dem angegebenen Register registrieren (`reg`) und Offset (`offset`). Der Offset muss ein Vielfaches von 16 sein und kleiner oder gleich 240. Diese Direktive generiert auch eine `UWOP_SET_FPREG` Entladen von Codeeintrag für den angegebenen registriert unter Verwendung der aktuellen Prolog Verschiebung.  

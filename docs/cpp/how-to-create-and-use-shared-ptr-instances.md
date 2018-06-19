@@ -17,13 +17,14 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418366"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Gewusst wie: Erstellen und Verwenden von shared_ptr-Instanzen
 Der Typ `shared_ptr` ist ein intelligenter Zeiger in der C++-Standardbibliothek für Szenarien, in denen möglicherweise mehrere Besitzer die Lebensdauer des Objekts im Arbeitsspeicher verwalten müssen. Nachdem Sie einen `shared_ptr` initialisiert haben, können Sie ihn kopieren, als Wert an Funktionsargumente übergeben oder anderen `shared_ptr`-Instanzen zuweisen. Alle Instanzen zeigen auf dasselbe Objekt und greifen gemeinsam auf einen "Kontrollblock" zu, der den Verweiszähler erhöht bzw. verringert, wenn ein neuer `shared_ptr` hinzugefügt wird, den Gültigkeitsbereich verlässt oder zurückgesetzt wird. Wenn der Verweiszähler Null erreicht, löscht der Kontrollblock die Speicherressource und sich selbst.  
   
  Die folgende Abbildung zeigt mehrere `shared_ptr`-Instanzen, die auf einen Speicherbereich zeigen.  
   
- [![Für den gemeinsamen Zeiger](../cpp/media/shared_ptr.png ""shared_ptr"")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Für den gemeinsamen Zeiger](../cpp/media/shared_ptr.png "\"shared_ptr\"")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
 ## <a name="example"></a>Beispiel  
  Verwenden Sie nach Möglichkeit die [Make_shared](../standard-library/memory-functions.md#make_shared) Funktion zum Erstellen einer `shared_ptr` Wenn die Speicherressource zum ersten Mal erstellt wird. `make_shared` ist ausnahmesicher. Die Funktion verwendet den gleichen Aufruf zum Zuweisen des Arbeitsspeichers für den Kontrollblock und die Ressource und verringert so den Konstruktionsmehraufwand. Wenn Sie `make_shared` nicht verwenden, müssen Sie einen expliziten neuen Ausdruck zum Erstellen des Objekts verwenden, bevor Sie es an den `shared_ptr`-Konstruktor übergeben. Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Deklarieren und Initialisieren eines `shared_ptr` zusammen mit einem neuen Objekt.  

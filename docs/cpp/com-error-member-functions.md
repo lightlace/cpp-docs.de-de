@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410054"
 ---
 # <a name="comerror-member-functions"></a>_com_error-Memberfunktionen
 Informationen zu den **_com_error** Memberfunktionen, finden Sie unter [_com_error-Klasse](../cpp/com-error-class.md).  

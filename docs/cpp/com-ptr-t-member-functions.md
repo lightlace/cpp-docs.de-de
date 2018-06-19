@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408568"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t-Memberfunktionen
 Informationen zu den `_com_ptr_t` Memberfunktionen, finden Sie unter [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md).  

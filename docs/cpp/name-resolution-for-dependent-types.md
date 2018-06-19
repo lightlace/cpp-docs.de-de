@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419910"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Namensauflösung für abhängige Typen
 Verwendung **Typename** für qualifizierte Namen in Vorlagendefinitionen, um dem Compiler mitzuteilen, dass es sich bei der angegebene qualifizierte Namen ein Typs bezeichnet. Weitere Informationen finden Sie unter [Typename](../cpp/typename.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417967"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Gewusst wie: Entwurfsrichtlinien für sichere Ausnahmebehandlung
 Einer der Vorteile des Ausnahmemechanismus ist, dass die Ausführung – zusammen mit Daten zur Ausnahme – direkt von der Anweisung, die die Ausnahme auslöst, zur ersten catch-Anweisung springt, die sie behandelt. Der Handler kann sich in der Aufrufliste auf einer beliebig höheren Ebene befinden. Funktionen, die zwischen der try- und der throw-Anweisung aufgerufen werden, müssen nicht über Informationen über die ausgelöste Ausnahme verfügen.  Sie müssen jedoch so gestaltet werden, dass sie an jedem Punkt, an dem eine Ausnahme von unten nach oben verteilt wird, den Gültigkeitsbereich "unerwartet" verlassen können. Dabei dürfen sie keine teilweise erstellten Objekte, Speicherverluste oder Datenstrukturen, die in unbrauchbarem Zustand sind, hinterlassen.  

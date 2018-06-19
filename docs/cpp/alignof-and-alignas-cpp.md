@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407983"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof und alignas (C++)
 Der `alignas`-Typspezifizierer ist eine portierbare, in C++ standardmäßige Art und Weise, die benutzerdefinierte Ausrichtung von Variablen und benutzerdefinierte Typen anzugeben. Der `alignof`-Operator ist ebenfalls eine standardmäßige, portierbare Art und Weise, die Ausrichtung eines angegebenen Typs oder einer Variable abzurufen.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421041"
 ---
 # <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax
 Dieser Artikel beschreibt Syntax und Strukturelemente von Lambdaausdrücken. Eine Beschreibung der Lambda-Ausdrücke, finden Sie unter [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md).  

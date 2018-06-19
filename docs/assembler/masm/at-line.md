@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32048812"
 ---
 # <a name="line"></a>@Line
 Die Zeilennummer in der aktuellen Datei (numerische entsprechen).  

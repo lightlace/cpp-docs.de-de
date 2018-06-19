@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359781"
 ---
 # <a name="atl-property-page-wizard"></a>ATL-Eigenschaftenseiten-Assistent
 Dieser Assistent [eines ATL-Projekts fügt eine Eigenschaftenseite](../../atl/reference/adding-an-atl-property-page.md) oder zu einem MFC-Projekt mit ATL-Unterstützung. Eine ATL-Eigenschaftenseite bietet eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder die Methoden aufrufen) von einem oder mehreren COM-Objekten.  

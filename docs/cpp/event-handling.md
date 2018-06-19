@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414619"
 ---
 # <a name="event-handling"></a>Ereignisbehandlung
 Ereignisbehandlung wird hauptsächlich für COM-Klassen unterstützt (C++-Klassen, COM-Objekten, die in der Regel mit ATL-Klassen implementieren, oder die [Coclass](../windows/coclass.md) Attribut).  Weitere Informationen finden Sie unter [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md).  

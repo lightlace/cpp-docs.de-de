@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056326"
 ---
 # <a name="operator-short"></a>Operator SHORT
 Legt den Typ des *Bezeichnung* kurzer. Alle springt zu *Bezeichnung* kurz sein muss (im Bereich von-128 bis + 127 Bytes aus der Jump-Anweisung bis *Bezeichnung*).  

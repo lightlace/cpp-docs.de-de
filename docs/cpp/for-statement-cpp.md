@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417183"
 ---
 # <a name="for-statement-c"></a>for-Anweisung (C++)
 Führt eine Anweisung wiederholt aus, bis die Bedingung false ergibt. Informationen auf der bereichsbasierter for-Anweisung finden Sie unter [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md).  

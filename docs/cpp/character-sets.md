@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414782"
 ---
 # <a name="character-sets"></a>Zeichensätze
 Der Text eines C++-Programms wird in Quelldateien gespeichert, die eine bestimmte Zeichencodierung verwenden. Der C++-Standard gibt einen einfachen Quellzeichensatz für Quelldateien und einen einfachen Ausführungszeichensatz für kompilierte Dateien an. Visual C++ ermöglicht die Verwendung eines zusätzlichen Satzes von gebietsschemaspezifischen Zeichen in Quelldateien und kompilierten Dateien.  

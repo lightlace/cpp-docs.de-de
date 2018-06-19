@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356353"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Hinzufügen eines ATL-OLE DB-Consumers
 Verwenden Sie diesen Assistenten zum Hinzufügen eines ATL-OLE DB-Consumers zu einem Projekt ein. Ein ATL-OLE DB-Consumer besteht aus einer OLE DB-Accessor-Klasse und datenbindungen notwendig, eine Datenquelle zugreifen. Das Projekt muss wurde als eine ATL-COM-Anwendung oder als ein MFC- oder Win32-Anwendung mit ATL-Unterstützung (ATL-OLE DB-Consumer-Assistenten automatisch hinzugefügt) erstellt.  
