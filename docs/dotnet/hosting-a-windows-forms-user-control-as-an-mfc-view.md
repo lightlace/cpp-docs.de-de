@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137626"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hosten eines Windows Forms-Benutzersteuerelements als MFC-Ansicht
 MFC verwendet die CWinFormsView-Klasse zum Hosten eines Windows Forms-Benutzersteuerelements in MFC-Ansicht an. MFC-Windows Forms-Ansichten sind ActiveX-Steuerelemente. Das Benutzersteuerelement wird als untergeordnetes Element der Ansicht mit systemeigenen gehostet und belegt den gesamten Clientbereich der einheitlichen Ansicht.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106985"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Speichern von Zeichenfolgen im OLE DB-Anbieter
 In MyProviderRS.h, der ATL-OLE DB-Anbieter-Assistent erstellt einen Standard-Benutzerdatensatz aufgerufen `CWindowsFile`. Um die beiden Zeichenfolgen zu behandeln, ändern Sie entweder `CWindowsFile` oder eigene Benutzerdatensatz hinzufügen, wie im folgenden Code gezeigt:  

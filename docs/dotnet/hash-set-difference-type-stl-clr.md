@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128874"
 ---
 # <a name="hashsetdifferencetype-stlclr"></a>hash_set::difference_type (STL/CLR)
 Die Typen des Abstands mit Vorzeichen zwischen zwei Elementen.  

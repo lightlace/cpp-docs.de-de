@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103511"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Vermeiden von Ausnahmen beim Herunterfahren der CLR, wenn mit /clr erstellte COM-Objekte verwendet werden
 Sobald die common Language Runtime (CLR) heruntergefahren Modus wechselt, systemeigene Funktionen Zugriff auf CLR-Dienste eingeschränkt. Beim Versuch, rufen Sie Release auf ein COM-Objekt mit kompiliert **"/ CLR"**, geht die CLR in systemeigenen Code und wechselt anschließend zurück in verwaltetem Code Verarbeiten von der IUnknown:: Release-Aufruf (die in verwaltetem Code definiert ist). Die CLR wird verhindert, dass den Aufruf an verwalteten Code, da es sich im Modus für das Herunterfahren befindet.  

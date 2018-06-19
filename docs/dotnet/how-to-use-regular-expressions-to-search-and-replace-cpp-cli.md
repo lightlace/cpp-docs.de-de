@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132413"
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Gewusst wie: Verwenden von regulären Ausdrücken zum Suchen und Ersetzen (C++/CLI)
 Im folgenden Codebeispiel wird veranschaulicht, wie die Klasse regulärer Ausdrücke <xref:System.Text.RegularExpressions.Regex> verwendet werden können, suchen und Ersetzen durchgeführt. Dies erfolgt mit der <xref:System.Text.RegularExpressions.Regex.Replace%2A> Methode. Verwendete Version, die zwei Zeichenfolgen als Eingabe akzeptiert: die Zeichenfolge, die geändert werden, und die Zeichenfolge, die anstelle der Abschnitte (sofern vorhanden) eingefügt werden, die dem Muster entsprechen erhält der <xref:System.Text.RegularExpressions.Regex> Objekt.  

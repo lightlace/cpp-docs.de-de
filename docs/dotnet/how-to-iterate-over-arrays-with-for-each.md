@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130502"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Gewusst wie: Durchlaufen von Arrays mit der for-each-Klausel
 In diesem Thema zeigt, wie die [für jedes in](../dotnet/for-each-in.md) -Schlüsselwort in verschiedener Typen von Arrays.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132829"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Gewusst wie: Abrufen der seit dem Start vergangenen Zeit (C++/CLI)
 Im folgenden Codebeispiel wird veranschaulicht, wie die Anzahl der Ticks bestimmen oder Anzahl der Millisekunden, die seit Windows vergangen sind, wurde gestartet. Dieser Wert wird gespeichert, der <xref:System.Environment.TickCount%2A?displayProperty=fullName> Member und, da es sich um einen 32-Bit-Wert handelt, wird auf Null zurückgesetzt ungefähr alle 24,9 Tage.  

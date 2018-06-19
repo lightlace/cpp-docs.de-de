@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111353"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++-Stack-Semantik für Referenztypen
 Vor Visual C++ 2005 eine Instanz eines Verweistyps konnte nur erstellt werden mithilfe der `new` -Operator, der das Objekt, auf die Garbage erstellt Collection Heap. Allerdings können Sie jetzt erstellen eine Instanz eines Verweistyps mit derselben Syntax, mit denen Sie eine Instanz eines systemeigenen Typs auf dem Stapel zu erstellen. Also, Sie müssen nicht mit [Ref neue Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) So erstellen ein Objekt eines Verweistyps. Und wenn das Objekt den Gültigkeitsbereich verlässt, wird der Compiler ruft der Destruktor des Objekts.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129436"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hosten eines Windows Form-Benutzersteuerelements in einem MFC-Dialogfeld
 MFC hostet Windows Forms-Steuerelements als eine spezielle Art von ActiveX-Steuerelement und kommuniziert mit dem Steuerelement mithilfe von ActiveX-Schnittstellen, Eigenschaften und Methoden der <xref:System.Windows.Forms.Control> Klasse. Es wird empfohlen, dass Sie .NET Framework-Eigenschaften und Methoden verwenden, um auf das Steuerelement angewendet werden.  

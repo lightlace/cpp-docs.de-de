@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130113"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Gewusst wie: Lesen von Windows-Leistungsindikatoren (C++/CLI)
 Einige Anwendungen und Windows-Subsysteme verfügbar machen Leistungsdaten über die Windows-Leistung-System. Diese Leistungsindikatoren mit zugegriffen werden können die <xref:System.Diagnostics.PerformanceCounterCategory> und <xref:System.Diagnostics.PerformanceCounter> Klassen, die in befinden sich die <xref:System.Diagnostics?displayProperty=fullName> Namespace.  

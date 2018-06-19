@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134516"
 ---
 # <a name="minus-stlclr"></a>minus (STL/CLR)
 Die Vorlagenklasse beschreibt ein Funktionselement ist, dass beim Aufrufen, gibt das erste Argument minus der zweite. Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134090"
 ---
 # <a name="native-and-net-interoperability"></a>Interoperabilität von systemeigenem Code und .NET
 Visual C++ unterstützt Interoperabilitätsfunktionen, die ein Nebeneinander von verwalteten und nicht verwalteten Konstrukten innerhalb der gleichen Assembly und sogar in der gleichen Datei erlauben. Ein Teil dieser Funktionalität, z. B. P/Invoke, wird zwar auch von anderen .NET-Programmiersprachen unterstützt, der Großteil der von Visual C++ bereitgestellten Interoperabilitätsunterstützung ist jedoch nicht in anderen Programmiersprachen verfügbar.  

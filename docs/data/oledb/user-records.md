@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109806"
 ---
 # <a name="user-records"></a>Benutzerdatensätze
 Um einen statischen Accessor verwenden (d. h. ein Accessor abgeleitet **CAccessor)**, der Consumer muss einen Benutzerdatensatz haben. Der Benutzerdatensatz ist eine C++-Klasse, die Datenelemente Handle Eingabe oder Ausgabe enthält. ATL-OLE DB-Consumer-Assistent generiert einen Benutzerdatensatz für den Consumer. Sie können Methoden Benutzerdatensatzes für optionale Aufgaben wie das Behandeln von Kommentaren hinzufügen.  

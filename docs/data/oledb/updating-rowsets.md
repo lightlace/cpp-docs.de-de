@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112380"
 ---
 # <a name="updating-rowsets"></a>Aktualisieren von Rowsets
 Eine der grundlegenden Datenbankoperationen stellt das Aktualisieren des Datenspeichers bzw. das Schreiben von Daten in den Datenspeicher dar. In OLE DB ist der Aktualisierungsmechanismus einfach: Die Consumeranwendung legt die Werte gebundener Datenmember fest und schreibt diese Werte dann in das Rowset. Anschließend fordert der Consumer den Anbieter auf, den Datenspeicher zu aktualisieren.  

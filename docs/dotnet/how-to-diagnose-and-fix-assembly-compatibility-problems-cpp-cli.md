@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133419"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Gewusst wie: Diagnose und Behebung von Kompatibilitätsproblemen bei Assemblys (C++/CLI)
 In diesem Thema wird erläutert, was passieren kann, wenn die Version einer Assembly verwiesen wird, zum Zeitpunkt der Kompilierung nicht mit der Version der Assembly verwiesen wird, zur Laufzeit übereinstimmt und wie Sie das Problem zu vermeiden.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108276"
 ---
 # <a name="comptr-class"></a>com::ptr-Klasse
 Ein Wrapper für ein COM-Objekt, das als Mitglied einer CLR-Klasse verwendet werden kann.  Der Wrapper automatisiert werden auch die Verwaltung der Lebensdauer der COM-Objekts, die alle im Besitz befindlichen Verweise auf das Objekt freigeben, wenn der Destruktor aufgerufen wird. Analog zu [von CComPtr-Klasse](../atl/reference/ccomptr-class.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112133"
 ---
 # <a name="declaration-of-a-clr-array"></a>Deklaration eines CLR-Arrays
 Die Syntax zum Deklarieren, hat instanziieren und Initialisieren eines verwalteten Arrays von Managed Extensions für C++ in Visual C++ geändert.  

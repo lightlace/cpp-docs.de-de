@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105529"
 ---
 # <a name="collectionadapterbegin-stlclr"></a>collection_adapter::begin (STL/CLR)
 Legt den Anfang der kontrollierten Sequenz fest.  

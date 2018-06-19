@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169448"
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt den logischen nicht von seiner gespeicherte Funktionselement mit nur einem Argument. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf seine gespeicherte Funktionselement.  

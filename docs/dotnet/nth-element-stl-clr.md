@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132894"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Partitioniert einen Bereich von Elementen und ermittelt die `n`th-Element der Sequenz im Bereich sind so, dass alle Elemente davor kleiner oder gleich und alle Elemente, die in der Sequenz folgen, größer als oder gleich.  

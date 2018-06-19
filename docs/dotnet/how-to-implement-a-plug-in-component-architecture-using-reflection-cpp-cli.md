@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135212"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Gewusst wie: Implementieren einer Plug-In-Komponentenarchitektur mit Reflektion (C++/CLI)
 Die folgenden Codebeispiele veranschaulichen die Verwendung von Reflektion, um eine einfache "-Plug-in" Architektur zu implementieren. Das erste Codelisting ist der Anwendung, und die zweite ist das plug-in. Die Anwendung ist ein mehrere Dokumentformular, das sich über alle formularbasierten Klassen finden in der Plug-in-DLL als Befehlszeilenargument füllt.  

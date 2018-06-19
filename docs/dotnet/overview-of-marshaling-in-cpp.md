@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137133"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Übersicht über das Marshalling in C++
 Im gemischten Modus müssen Sie die Daten zwischen nativen und verwalteten Typen manchmal marshallen. Mit [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] wurde die Marshallingbibliothek eingeführt, mit der Sie Daten auf einfache Weise marshallen und konvertieren können.  

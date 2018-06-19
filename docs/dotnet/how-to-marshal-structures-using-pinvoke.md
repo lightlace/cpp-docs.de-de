@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136612"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Gewusst wie: Marshallen von Strukturen mit PInvoke
 Dieses Dokument wird erläutert, wie systemeigene Funktionen, die Strukturen im C-Format von von verwalteten Funktionen aufgerufen werden können, mit P/Invoke akzeptieren. Obwohl wir empfehlen die Verwendung von C++-Interop-Features anstelle von können P/Invoke da P/Invoke wenig Kompilierzeitfehler reporting, bietet nicht typsicher, und einfacher zu implementieren, wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht, P/Invoke verfügbar ist, ist die einzige Option. Andernfalls finden Sie unter den folgenden Dokumenten:  

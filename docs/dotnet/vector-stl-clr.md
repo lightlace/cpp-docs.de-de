@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172637"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die zufälligen Zugriff hat. Verwenden Sie den Container `vector` um eine Sequenz von Elementen als einen zusammenhängenden Block von Speicher zu verwalten. Der Block wird als Array implementiert, die bei Bedarf vergrößert wird.  

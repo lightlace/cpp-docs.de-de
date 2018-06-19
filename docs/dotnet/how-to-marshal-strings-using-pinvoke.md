@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133206"
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke
 In diesem Thema wird erläutert, wie systemeigene Funktionen, die Zeichenfolgen im C-Stil können aufgerufen werden, mithilfe der CLR-Zeichenfolge akzeptieren System:: String mithilfe der Plattformaufruf von .NET Framework-Unterstützung. Visual C++-Programmierern werden empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da P/Invoke bietet nur wenig Kompilierzeitfehler reporting, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API wird als DLL verpackt, und der Quellcode nicht verfügbar ist, klicken Sie dann P/Invoke ist die einzige Option, jedoch andernfalls finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  

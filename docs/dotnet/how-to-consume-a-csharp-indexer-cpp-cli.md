@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127405"
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>Gewusst wie: Verwenden eines C#-Indexers (C++/CLI)
 Visual C++ enthält keine Indexer; Er verfügt über Eigenschaften indiziert. Um eine C#-Indexers zu verarbeiten, Zugriff auf der Indexer, als handele es sich um eine indizierte Eigenschaft.  

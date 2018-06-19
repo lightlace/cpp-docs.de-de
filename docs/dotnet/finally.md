@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111470"
 ---
 # <a name="finally"></a>finally
 Zusätzlich zu `try` und `catch` -Klauseln, CLR-Ausnahmebehandlung unterstützt eine `finally` Klausel. Die Semantik ist identisch mit der `__finally` strukturierte Ausnahmebehandlung (SEH) blockieren. Ein `__finally` -Block folgen kann eine `try` oder `catch` Block.  
