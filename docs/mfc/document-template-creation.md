@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345793"
 ---
 # <a name="document-template-creation"></a>Erstellen von Dokumentvorlagen
 Beim Erstellen eines neuen Dokuments als Antwort auf eine `New` oder **öffnen** Befehl die **Datei** im Menü die Dokumentvorlage auch über die zum Anzeigen des Dokuments ein neues Rahmenfenster erstellt.  

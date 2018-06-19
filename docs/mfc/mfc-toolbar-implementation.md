@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360965"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementieren der MFC-Symbolleiste
 Eine Symbolleiste ist eine [Steuerleiste](../mfc/control-bars.md) , die die Bitmapbilder von Steuerelementen enthält. Diese Bilder können sich wie Druckknöpfe, Kontrollkästchen oder Optionsfelder verhalten. MFC stellt die Klasse [CToolbar](../mfc/reference/ctoolbar-class.md) Symbolleisten zu verwalten.  

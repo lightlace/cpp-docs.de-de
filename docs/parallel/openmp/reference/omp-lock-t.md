@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691264"
 ---
 # <a name="omplockt"></a>omp_lock_t
 Ein Typ, der den Status der eine Sperre, gibt an, ob die Sperre verfügbar wird oder wenn ein Thread im Besitz einer Sperre enthält.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355659"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimieren von Persistenz und Initialisierung
 Standardmäßig Persistenz und Initialisierung in einem Steuerelement vom gehandhabt werden die `DoPropExchange` Memberfunktion. In einem typischen Steuerelement diese Funktion enthält mehrere Aufrufe **PX_** Funktionen (`PX_Color`, `PX_Font`usw.), eine für jede Eigenschaft.  

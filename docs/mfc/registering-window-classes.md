@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379741"
 ---
 # <a name="registering-window-classes"></a>Registrieren von Fensterklassen
 Fenster "Classes" in der herkömmlichen Programmierung für Windows definieren die Merkmale einer "Klasse" (keiner C++-Klasse) aus dem eine beliebige Anzahl von Windows erstellt werden kann. Diese Art der Klasse ist eine Vorlage oder ein Modell zum Erstellen von Windows.  

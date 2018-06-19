@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379241"
 ---
 # <a name="rubber-banding-and-trackers"></a>Gummibandtechnik und Ziehpunkte
 Eine weitere Funktion, die im Lieferumfang von Trackern ist die Auswahl "Kunststoff-Band-", die einem Benutzer ermöglicht, mehrere OLE-Elemente auswählen, durch Ziehen eines Rechtecks anpassen, um die Elemente ausgewählt werden. Wenn der Benutzer die linke Maustaste loslässt, Elemente innerhalb des Bereichs, der vom Benutzer ausgewählten markiert sind, und Sie werden vom Benutzer bearbeitet werden können. Beispielsweise kann der Benutzer die Auswahl in einem anderen Steuerelementcontainer-Anwendung ziehen.  

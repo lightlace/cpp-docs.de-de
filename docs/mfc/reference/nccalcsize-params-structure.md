@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369722"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS-Struktur
 Die `NCCALCSIZE_PARAMS` Struktur enthält Informationen, die eine Anwendung, während der Verarbeitung verwenden kann der `WM_NCCALCSIZE` Nachricht zum Berechnen der Größe, Position und gültiger Inhalt des Clientbereichs eines Fensters.  

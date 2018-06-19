@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693376"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf datenparalleler Hardware beschleunigen. Weitere Informationen finden Sie unter [Übersicht über C++ AMP](../cpp-amp-overview.md)  

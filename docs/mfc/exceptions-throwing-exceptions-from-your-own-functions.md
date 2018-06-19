@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346193"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Ausnahmen: Ausnahmen in eigenen Funktionen auslösen
 Es ist möglich, mit dem MFC-Ausnahmebehandlung Paradigma ausschließlich zum Abfangen von Ausnahmen, die von Funktionen in MFC oder anderen Bibliotheken ausgelöst. Zusätzlich zum Abfangen von Ausnahmen, die ausgelöst wird, von dem Bibliothekscode, können Sie aus Ihrem eigenen Code Ausnahmen auslösen, wenn Sie Funktionen schreiben, die Ausnahmebedingungen auftreten können.  

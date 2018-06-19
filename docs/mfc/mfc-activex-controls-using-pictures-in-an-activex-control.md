@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354916"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden von Bildern in einem ActiveX-Steuerelement
 In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in das ActiveX-Steuerelement beschrieben. Folgende Themen werden behandelt:  

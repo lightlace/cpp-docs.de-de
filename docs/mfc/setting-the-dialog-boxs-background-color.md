@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379982"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Festlegen der Hintergrundfarbe für das Dialogfeld
 Sie können die Farbe des Hintergrunds in den Dialogfeldern durch Behandeln festlegen `WM_CTLCOLOR` Nachrichten für das Dialogfeld. Die Farbe, die Sie festlegen, wird nur die im angegebenen Dialogfeld verwendet.  

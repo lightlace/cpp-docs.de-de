@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369963"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT-Struktur
 Die `COLORADJUSTMENT` Struktur definiert die Anpassung-Farbwerte, die von Windows verwendete `StretchBlt` und **StretchDIBits** Funktionen bei der `StretchBlt` Modus ist **RASTERBILD**.  

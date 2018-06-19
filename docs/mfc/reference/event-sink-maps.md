@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373927"
 ---
 # <a name="event-sink-maps"></a>Ereignissenkenzuordnungen
 Bei einem eingebetteten OLE-Steuerelements ein Ereignis ausgelöst wird, erhält der Container des Steuerelements das Ereignis mit einem Mechanismus, der eine "Senke ereigniszuordnung," von MFC bereitgestellten aufgerufen. Dieses Ereignissenke Zuordnung kennzeichnet Handlerfunktionen für jedes Ereignis als auch Parameter dieser Ereignisse. Weitere Informationen zu ereignissenkenzuordnungen, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  

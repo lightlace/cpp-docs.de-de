@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349661"
 ---
 # <a name="mapi-support-in-mfc"></a>MAPI-Unterstützung in MFC
 MFC bietet Unterstützung für eine Teilmenge von der Microsoft Programm Schnittstelle MAPI (Messaging Application) in Klasse **CDocument**. Insbesondere **CDocument** verfügt über Memberfunktionen, die bestimmen, ob e-Mail-Unterstützung auf dem Computer des Endbenutzers vorhanden ist und wenn dies der Fall ist, einen Befehl "Mail senden, deren standard Befehls-ID ist, aktivieren" **ID_FILE_SEND_MAIL**. Die MFC-Handlerfunktion für diesen Befehl ermöglicht dem Benutzer ein Dokument per e-Mail senden.  

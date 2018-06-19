@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380252"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Vorlagenklassen für Arrays, Listen und Zuordnungen
 Diese Auflistungsklassen sind Vorlagen, deren Parameter den Typen der Objekte in die Aggregate gespeichert zu bestimmen. Die `CArray`, `CMap`, und `CList` a-Klassen globale Hilfsfunktionen, die in der Regel angepasst werden müssen. Weitere Informationen zu diesen Hilfsfunktionen, finden Sie unter [Auflistungsklasse](../mfc/reference/collection-class-helpers.md). Die typisierten zeigerklassen sind Wrapper für andere Klassen in der Klassenbibliothek. Mit diesen Wrappern, tragen Sie den Compiler Typprüfung um Fehler zu vermeiden. Weitere Informationen zur Verwendung dieser Klassen finden Sie unter [Sammlungen](../mfc/collections.md).  

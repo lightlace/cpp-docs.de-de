@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846232"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma-Anweisungen und das __Pragma-Schlüsselwort
 Pragma-Anweisungen geben computer- oder betriebssystemspezifische Compilerfunktionen an. Das `__pragma`-Schlüsselwort, das für den Microsoft-Compiler spezifisch ist, ermöglicht das Codieren von Pragma-Direktiven innerhalb von Makrodefinitionen.  
