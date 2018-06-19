@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409575"
 ---
 # <a name="basic-concepts--c"></a>Grundlegende Konzepte (C++)
 In diesem Abschnitt werden Konzepte erläutert, die für das Verständnis von C++ unerlässlich sind. C-Programmierer sind normalerweise mit vielen dieser Konzepte vertraut, es gibt jedoch einige feine Unterschiede, die zu unerwarteten Programmergebnissen führen können. Es sind folgende Themen enthalten:  

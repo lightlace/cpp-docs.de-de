@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361969"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Angeben von Compileroptimierungen für ATL-Projekt
 Wird standardmäßig die [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md) neue Klassen mit dem Makro ATL_NO_VTABLE folgendermaßen generiert:  

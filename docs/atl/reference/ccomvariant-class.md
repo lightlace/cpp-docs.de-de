@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366015"
 ---
 # <a name="ccomvariant-class"></a>CComVariant-Klasse
 Diese Klasse dient als Wrapper für die `VARIANT` Typ, einen Member, der angibt, der Typ der gespeicherten Daten bereitstellen.  

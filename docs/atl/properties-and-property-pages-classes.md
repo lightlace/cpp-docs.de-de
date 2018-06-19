@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355006"
 ---
 # <a name="properties-and-property-pages-classes"></a>Eigenschaft Seiten-Klassen und Eigenschaften
 Die folgenden Klassen unterstützen Eigenschaften und Eigenschaftenseiten:  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355238"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Ändern des Standard-Klassenfactory und Aggregation Modell
 ATL verwendet [CComCoClass](../atl/reference/ccomcoclass-class.md) der Klasse Factory und Aggregation Standardmodell für Ihr Objekt definieren. `CComCoClass` Gibt die folgenden beiden Makros:  

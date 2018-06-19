@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422780"
 ---
 # <a name="statements-c"></a>Anweisungen (C++)
 C++-Anweisungen sind die Programmelemente, die steuern, wie und in welcher Reihenfolge Objekte bearbeitet werden. Dieser Abschnitt umfasst Folgendes:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355045"
 ---
 # <a name="dual-interfaces-and-atl"></a>Duale Schnittstellen und ATL
 Eine duale Schnittstelle ermöglicht den zugehörigen Methoden als Disp-Schnittstellenmethoden oder Vtable Methoden zugegriffen werden. In diesem Abschnitt werden einige der Funktionen von duale Schnittstellen aus Sicht der ATL-behandelt.  

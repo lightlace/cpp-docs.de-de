@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361264"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Hinzufügen eines Ereignisses (ATL-Lernprogramm, Teil 5)
 In diesem Schritt fügen Sie eine `ClickIn` und ein `ClickOut` Ereignis, um das ATL-Steuerelement. Sie immer dann ausgelöst, die `ClickIn` -Ereignis, wenn der Benutzer innerhalb des Polygons und Feuer klickt `ClickOut` außerhalb der Benutzer klickt. Die Aufgaben, auf ein Ereignis hinzufügen werden wie folgt:  

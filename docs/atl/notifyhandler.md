@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356452"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 Der Name der Funktion identifiziert durch den dritten Parameter von der `NOTIFY_HANDLER` Makro in Ihrer nachrichtenzuordnung.  

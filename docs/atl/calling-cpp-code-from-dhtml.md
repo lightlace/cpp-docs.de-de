@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355460"
 ---
 # <a name="calling-c-code-from-dhtml"></a>Aufrufen von C++-Code aus DHTML
 DHTML-Steuerelemente kann in einem Container, z. B. Testcontainer oder Internet Explorer gehostet werden. Finden Sie unter [Testen von Eigenschaften und Ereignisse mit Test Container](../mfc/testing-properties-and-events-with-test-container.md) Informationen zum Testcontainer zugreifen.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421070"
 ---
 # <a name="static-members-c"></a>Statische Member (C++)
 Klassen können statische Memberdaten und Memberfunktionen enthalten. Wenn ein Datenmember deklariert wird, als **statische**, nur eine Kopie der Daten wird für alle Objekte der Klasse beibehalten.

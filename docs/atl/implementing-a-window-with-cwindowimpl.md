@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356546"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementieren ein Fenster mit CWindowImpl
 Um ein Fenster zu implementieren, leiten Sie eine Klasse von `CWindowImpl`. Deklarieren Sie in der abgeleiteten Klasse eine meldungszuordnung und die Meldungshandlerfunktionen aus. Sie können nun Ihre Klasse auf drei verschiedene Arten verwenden:  

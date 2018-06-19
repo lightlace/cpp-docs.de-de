@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355632"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible-Attribut
 Wenn eine duale Schnittstelle zur Laufzeit nicht erweitert wird (d. h. Sie wird nicht bereitstellen, Methoden oder Eigenschaften über **IDispatch:: Invoke** , die nicht über die Vtable verfügbar sind), sollten Sie übernehmen die **nonextensible** -Attribut auf die Schnittstellendefinition. Dieses Attribut stellt die Informationen zu Clientsprachen (z. B. Visual Basic), die zum Aktivieren der codeüberprüfung der vollständige zum Zeitpunkt der Kompilierung verwendet werden kann. Wenn dieses Attribut nicht angegeben wird, können Fehler im Clientcode bleiben bis zur Laufzeit ausgeblendet.  

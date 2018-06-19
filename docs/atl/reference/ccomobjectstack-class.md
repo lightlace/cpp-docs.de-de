@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360742"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack-Klasse
 Diese Klasse wird ein temporäres COM-Objekt erstellt und bietet es eine skeletal Implementierung der **IUnknown**.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355124"
 ---
 # <a name="catlservicemoduletrun-function"></a>CServiceModule:: Run-Funktion
 **Führen Sie** enthält Aufrufe `PreMessageLoop`, `RunMessageLoop`, und `PostMessageLoop`. Nach dem aufgerufenen, `PreMessageLoop` zuerst speichert der Dienst-Thread-ID. Der Dienst wird diese ID verwenden, selbst per schließen eine **WM_QUIT** Nachricht mit der Win32-API-Funktion [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  

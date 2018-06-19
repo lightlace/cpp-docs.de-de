@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357920"
 ---
 # <a name="using-contained-windows"></a>Eigenständige Windows verwenden
 ATL implementiert enthaltene Windows mit [CContainedWindow](../atl/reference/ccontainedwindowt-class.md). Ein enthaltenes Fenster stellt ein Fenster, das ihrer Nachrichten in ein Container-Objekt nicht in eine eigene Klasse delegiert.  

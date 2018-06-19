@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355363"
 ---
 # <a name="composite-controls-classes"></a>Zusammengesetzte Steuerelemente-Klassen
 Die folgende Klasse bietet Unterstützung für das Erstellen von zusammengesetzten Steuerelementen  

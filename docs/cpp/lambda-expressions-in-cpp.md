@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424048"
 ---
 # <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
 In C ++ 11 und höher, ein Lambda-Ausdruck – wird häufig aufgerufen, eine *Lambda*– bequem ein anonymes Funktionsobjekt definiert ist (eine *Closure*) direkt an der Position, wo es aufgerufen oder als Argument übergeben, Um eine Funktion. Lambda-Ausdrücke werden in der Regel verwendet, um ein paar Codezeilen zu kapseln, die an Algorithmen oder asynchrone Methoden übergeben werden. Dieser Artikel definiert, was Lambdas sind, vergleicht sie mit anderen Programmierverfahren, beschreibt ihre Vorteile und bietet ein grundlegendes Beispiel.  

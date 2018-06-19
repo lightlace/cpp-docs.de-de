@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360285"
 ---
 # <a name="ui-support-classes"></a>Benutzeroberflächenklassen-Unterstützung
 Die folgenden Klassen bieten allgemeine Benutzeroberflächenautomatisierungs-Unterstützung:  

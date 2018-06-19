@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356960"
 ---
 # <a name="queryinterface"></a>QueryInterface
 Es gibt, zwar Mechanismen, die mit dem express ein Objekt kann die Funktionalität bietet statisch (vor er instanziiert wird) der grundlegende Mechanismus von COM ist die Verwendung der **IUnknown** Methode mit dem Namen [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

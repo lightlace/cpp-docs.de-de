@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357843"
 ---
 # <a name="using-a-template-library"></a>Verwenden einer Vorlagenbibliothek
 Eine Vorlage ähnelt einem Makro. Wie bei einem Makro, bewirkt, dass eine Vorlage aufrufen (mit entsprechenden Vorlagenparameter) erweitern in dem von Ihnen geschriebenen Code. Geht jedoch eine Vorlage für weitere ermöglichen die Erstellung neuer Klassen, die basierend auf Typen, die Sie als Parameter übergeben. Diese neue Klassen implementieren als typsicherer Methoden zum Ausführen des Vorgangs im Vorlagencode ausgedrückt.  

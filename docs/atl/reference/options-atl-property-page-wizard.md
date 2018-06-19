@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358768"
 ---
 # <a name="options-atl-property-page-wizard"></a>Optionen, ATL-Eigenschaftenseiten-Assistent
 Verwenden Sie diese Seite des Assistenten das Threadingmodell Modell- und Aggregation Maß Eigenschaftenseite definieren, die Sie erstellen.  

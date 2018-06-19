@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360948"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Unterstützung der IDispatch und IErrorInfo
 Können Sie die Vorlagenklasse [IDispatchImpl](../atl/reference/idispatchimpl-class.md) , geben Sie eine Standardimplementierung der `IDispatch Interface` Teil jeder dualen Schnittstellen für das Objekt.  

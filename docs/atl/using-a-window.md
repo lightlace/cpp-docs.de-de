@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358393"
 ---
 # <a name="using-a-window"></a>Verwenden ein Fenster
 Klasse [CWindow](../atl/reference/cwindow-class.md) können Sie ein Fenster verwenden. Nachdem Sie ein Fenster zum Anfügen einer `CWindow` -Objekt, rufen Sie dann `CWindow` Methoden zum Ändern des Fensters. `CWindow` enthält auch eine `HWND` -Operator konvertiert einen `CWindow` -Objekt an eine `HWND`. Daher können Sie übergeben ein `CWindow` Objekt, das alle Funktionen, die ein Handle für ein Fenster ist erforderlich. Sie können problemlos kombinieren `CWindow` Methodenaufrufen und Win32-Funktionsaufrufe, ohne eine temporäre Objekte erstellen.  

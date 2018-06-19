@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418509"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsargument und jeder Rückgabewert muss über einen Typ verfügen, um kompiliert werden zu können. Außerdem wird jedem Ausdruck (einschließlich Literalwerten) vom Compiler implizit ein Typ angegeben, bevor der Ausdruck ausgewertet wird. Einige Beispiele für Typen `int` zum Speichern von ganzzahliger Werten `double` zum Speichern von Gleitkommawerten (auch bekannt als *skalare* Datentypen), oder der Standardbibliothek Klasse [Standardbibliotheksklasse](../standard-library/basic-string-class.md) zum Speichern von Text. Sie können auch einen eigenen Typ erstellen, indem Sie eine `class` oder ein `struct` definieren. Der Typ gibt den Speicher an, der für die Variable (oder das Ausdrucksergebnis) zugeordnet ist, die Wertarten, die in dieser Variablen gespeichert werden können, wie diese Werte (als Bitmuster) interpretiert werden, und die Vorgänge, die darauf ausgeführt werden können. In diesem Artikel ist eine informelle Übersicht der Hauptfunktionen des C++-Typsystems enthalten.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357505"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes-Klasse
 Diese Klasse ist ein thin Wrapper für die Struktur der Sicherheits-Attribute.  

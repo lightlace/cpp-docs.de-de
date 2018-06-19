@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360344"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Testen des geänderten ATL-DHTML-Steuerelements
 Probieren Sie das neue Steuerelement zu sehen, wie er nun funktioniert.  

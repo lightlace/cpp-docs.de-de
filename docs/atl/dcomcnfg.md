@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357244"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG** ist ein Windows NT 4.0-Hilfsprogramm, das Ihnen ermöglicht, die verschiedene DCOM-spezifische Einstellungen in der Registrierung zu konfigurieren. Die **DCOMCNFG** Fenster hat drei Seiten: Default Security Standardeigenschaften und Anwendungen. Unter Windows 2000 ist eine vierte Seite Standardprotokolle vorhanden.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363281"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX-Klasse
 Diese Klasse wird verwendet, indem die Makros zur zeichenfolgenkonvertierung `CW2CTEX` und `CT2CWEX`, und die Typedef `CW2W`.  

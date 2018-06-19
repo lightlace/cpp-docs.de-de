@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359356"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM+ 1.0-Unterstützung in ATL-Projekte
 Sie können die [ATL-Projekt-Assistent](../../atl/reference/creating-an-atl-project.md) zum Erstellen eines Projekts mit grundlegende Unterstützung für COM+ 1.0-Komponenten.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423495"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Objektlebenszeit und Ressourcenverwaltung (Modern C++)
 Im Gegensatz zu anderen verwalteten Sprachen keinen C++ Garbagecollection (GC) an, der nicht-mehr-used Speicherressourcen automatisch freigibt, während ein Programm ausgeführt wird. In C++ ressourcenverwaltung direkt Lebensdauer eines Objekts bezieht sich auf. Dieses Dokument beschreibt die Faktoren, die Lebensdauer eines Objekts in C++ und Verwaltung zu beeinflussen.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360174"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject-Klasse
 Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegiert Vorgänge an den Besitzer des Objekts **IUnknown**.  

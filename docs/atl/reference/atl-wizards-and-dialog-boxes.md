@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356672"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL-Assistenten und Dialogfeldern
 Die Active Template Library (ATL)-Assistenten generieren Standardcode für verschiedene Arten von COM-Objekten. Sie können die Assistenten ausführen, öffnen Sie das Kontextmenü für ein Projekt in **Projektmappen-Explorer** auswählen und **hinzufügen**, **Klasse**.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357814"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementierung eines benutzerdefinierten Zeichenfolge-Managers (Erweiterte Methode)
 In speziellen Fällen empfiehlt es sich möglicherweise so implementieren Sie einen benutzerdefinierte Zeichenfolge-Manager, der mehr als nur ändert die Heaps belegen von Speicher verwendet wird. In diesem Fall müssen Sie manuell implementieren die [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) Schnittstelle als benutzerdefinierte Zeichenfolge-Manager.  

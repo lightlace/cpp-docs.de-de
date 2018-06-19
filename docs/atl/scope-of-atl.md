@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360030"
 ---
 # <a name="scope-of-atl"></a>Geltungsbereich von ATL
 ATL ermöglicht die einfache Erstellung von COM-Objekten, Automatisierungsserver und ActiveX-Steuerelemente. ATL stellt integrierten Unterstützung für viele grundlegenden COM-Schnittstellen.  

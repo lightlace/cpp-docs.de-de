@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360187"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Einrichten einer statischen Verknüpfung an den Code Registrierungsstelle (nur C++)
 C++-Clients können eine statische Verknüpfung für die Registrierungsstelle Code erstellen. Statisches verknüpfen die Registrierungsstelle Parser wird ein Releasebuild dahingehend ca. 5 KB hinzugefügt.  

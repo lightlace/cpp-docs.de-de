@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356252"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting von ActiveX-Steuerelementen mit ATL AXHost
 Im Beispiel in diesem Thema wird gezeigt, wie AXHost erstellt und wie mit verschiedenen Funktionen von ATL-ActiveX-Steuerelement gehostet. Außerdem wird gezeigt, wie auf das Steuerelement und die Senke Ereignisse zugreifen (mit [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) aus dem Steuerelement, das gehostet wird. Im Beispiel hostet das Kalender-Steuerelement in ein Hauptfenster oder ein untergeordnetes Fenster.  

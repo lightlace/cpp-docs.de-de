@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356520"
 ---
 # <a name="atl-event-handling-summary"></a>ATL-Behandlung Ereigniszusammenfassung
 Im Allgemeinen ist die Behandlung von COM-Ereignissen ein relativ einfacher Vorgang. Es gibt drei Hauptschritte:  

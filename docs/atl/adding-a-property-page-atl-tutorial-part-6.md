@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361589"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Hinzufügen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)
 Eigenschaftenseiten werden als separate COM-Objekte implementiert, die wodurch die ihnen ermöglichen, auf gemeinsam genutzt werden, falls erforderlich. Führen Sie in diesem Schritt zum Hinzufügen einer Eigenschaftenseite für das Steuerelement die folgenden Aufgaben:  

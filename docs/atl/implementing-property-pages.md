@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357492"
 ---
 # <a name="implementing-property-pages"></a>Implementieren von Eigenschaftenseiten
 Eigenschaftenseiten sind COM-Objekte implementiert, die `IPropertyPage` oder **IPropertyPage2** Schnittstelle. ATL stellt Unterstützung für das Implementieren von Eigenschaftenseiten über die [ATL-Eigenschaftenseiten-Assistent](../atl/reference/atl-property-page-wizard.md) in der [Klasse hinzufügen (Dialogfeld)](../ide/add-class-dialog-box.md).  

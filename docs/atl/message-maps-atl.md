@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357257"
 ---
 # <a name="message-maps-atl"></a>Meldungszuordnungen (ATL)
 Eine meldungszuordnung ordnet eine bestimmte Meldung, einen Befehl oder Benachrichtigung eine Handlerfunktion. Mithilfe des ATL- [Nachricht Zuordnungsmakros](../atl/reference/message-map-macros-atl.md), Sie können eine meldungszuordnung für ein Fenster angeben. Die Fensterprozeduren in `CWindowImpl`, `CDialogImpl`, und `CContainedWindowT` ein Fenster seine meldungszuordnung, Nachrichten weiterleiten.  

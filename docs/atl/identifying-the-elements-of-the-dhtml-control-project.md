@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357681"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identifizieren die Elemente eines DHTML-Steuerelementprojekts
 Die meisten DHTML-Steuerungscode ist genau für ATL-Steuerelement erstellt. Für einen grundlegenden Überblick des generischen Codes zu arbeiten, durch die [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md), und Lesen Sie die Abschnitte [Erstellen eines ATL-Projekts](../atl/reference/creating-an-atl-project.md) und [Grundlagen von ATL-COM-Objekte](../atl/fundamentals-of-atl-com-objects.md).  

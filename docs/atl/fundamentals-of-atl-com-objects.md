@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358289"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Grundlagen von ATL-COM-Objekten
 Die folgende Abbildung zeigt die Beziehung zwischen Klassen und Schnittstellen, die zum Definieren eines ATL-COM-Objekts verwendet werden.  

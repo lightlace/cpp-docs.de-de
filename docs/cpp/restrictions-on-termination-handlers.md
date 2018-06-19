@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420581"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Einschränkungen bei Beendigungshandlern
 Sie können keine `goto`-Anweisung verwenden, um in einen `__try`-Anweisungsblock oder einen `__finally`-Anweisungsblock zu wechseln. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. (Sie können jedoch aus einem `__try`-Anweisungsblock herausspringen). Sie können auch keinen Ausnahmehandler oder Beendigungshandler innerhalb eines `__finally`-Blocks verschachteln.  

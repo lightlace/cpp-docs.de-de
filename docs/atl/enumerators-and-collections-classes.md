@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355645"
 ---
 # <a name="enumerators-and-collections-classes"></a>Enumeratoren und Auflistungsklassen
 Die folgenden Klassen bieten Unterstützung für COM-Auflistungen und Enumerationen:  

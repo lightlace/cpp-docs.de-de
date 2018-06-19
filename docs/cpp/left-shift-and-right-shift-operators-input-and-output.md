@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422396"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>LeftShift- und RightShift-Operatoren (&gt; &gt; und &lt; &lt;)
 Die bitweise Schiebeoperatoren sind der Right Shift Operator (>>), die verschiebt die Bits eines *UMSCHALT-Ausdruck* nach rechts, und der Left Shift-Operator (<<), die verschiebt die Bits eines *UMSCHALT-Ausdruck* auf der linken Seite. <sup>1</sup>  

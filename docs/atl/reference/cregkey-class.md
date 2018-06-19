@@ -57,6 +57,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366639"
 ---
 # <a name="cregkey-class"></a>CRegKey-Klasse
 Diese Klasse stellt Methoden zum Bearbeiten der Einträge in der systemregistrierung.  

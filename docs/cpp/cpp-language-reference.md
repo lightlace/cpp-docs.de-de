@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417202"
 ---
 # <a name="c-language-reference"></a>C++-Programmiersprachenreferenz
 In dieser Referenz wird die Implementierung der Programmiersprache C++ in Microsoft Visual C++ erläutert. Die Organisation basiert auf *der Annotated C++ Reference Manual* von Margaret Ellis und Bjarne Stroustrup sowie auf dem Standard ANSI/ISO C++ International (ISO/IEC FDIS 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.  
