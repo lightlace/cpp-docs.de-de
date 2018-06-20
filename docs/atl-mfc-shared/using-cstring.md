@@ -1,7 +1,7 @@
 ---
 title: Verwenden von CString | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361700"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238720"
 ---
 # <a name="using-cstring"></a>Verwenden von CString
 In den Themen in diesem Abschnitt wird die Programmierung mit `CString` beschrieben. Referenzdokumentation zu den `CString` -Klasse finden Sie in der Dokumentation für [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -32,7 +32,7 @@ In den Themen in diesem Abschnitt wird die Programmierung mit `CString` beschrie
   
  Ein `CStringW`-Objekt enthält den `wchar_t`-Typ und unterstützt Unicode-Zeichenfolgen. Ein `CStringA`-Objekt enthält den `char`-Typ und unterstützt Singlebyte- und Multibyte (MBCS)-Zeichenfolgen. Ein `CString`-Objekt unterstützt den `char`-Typ oder den `wchar_t`-Typ, je nachdem, ob das `MBCS`-Symbol oder das `UNICODE`-Symbol bei der Kompilierung definiert wurde.  
   
- Ein `CString`-Objekt hält Zeichendaten in einem `CStringData`-Objekt. `CString` akzeptiert `null`-beendete C-Stil Zeichenfolgen, jedoch wird keine beibehalten der `null` Zeichen in die gespeicherte Zeichendaten. Stattdessen verfolgt `CString` die Zeichenfolgenlänge. `CString` bietet ein null-Abschlusszeichen, wenn es sich um eine Zeichenfolge im C-Format exportiert. Sie können eine `null` in einen `CString` einfügen, dies kann jedoch zu unerwarteten Ergebnissen führen.  
+ Ein `CString`-Objekt hält Zeichendaten in einem `CStringData`-Objekt. `CString` akzeptiert `null`-Zeichenfolgen im C-Stil beendet. `CString` verfolgt die Zeichenfolgenlänge für bessere Leistung, aber auch behält die `null` Zeichen in die gespeicherte Zeichendaten in die Konvertierung in LPCWSTR zu unterstützen. `CString` enthält den null-Terminator an, wenn es sich um eine Zeichenfolge im C-Format exportiert. Sie können zum Einfügen einer `null` an anderen Speicherorten in einer `CString`, aber es kann zu unerwarteten Ergebnissen führen.  
   
  Die folgende Gruppe von Klassen kann verwendet werden, ohne zu verknüpfen eine MFC-Bibliothek mit oder ohne CRT-Unterstützung: `CAtlString`, `CAtlStringA`, und `CAtlStringW`.  
   
