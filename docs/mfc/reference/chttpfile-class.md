@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372618"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271346"
 ---
 # <a name="chttpfile-class"></a>CHttpFile-Klasse
 Stellt die Funktionalität bereit, um Dateien auf einem HTTP-Server anfordern und zu lesen.  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Ändert die Semantik der neuen Header an. Einer der folgenden Werte ist möglich:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Werden die Header mit dem gleichen Namen, verwenden das Flag zum Hinzufügen von des ersten Headers gefunden, die dem nachfolgenden Header zusammengeführt. Z. B. "annehmen: Text / *" gefolgt von "annehmen: Audio-/\*" führt zur Bildung eines einzelnen Header "Accept: Text /\*, audio /\*". Es ist Aufgabe der aufrufenden Anwendung um sicherzustellen, dass ein zusammenhängender Schema in Bezug auf die Daten vom mit zusammengeführte oder separate Header gesendeten Anforderungen empfangen werden.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Werden die Header mit dem gleichen Namen, verwenden das Flag zum Hinzufügen von des ersten Headers gefunden, die dem nachfolgenden Header zusammengeführt. Z. B. "annehmen: Text /\*" gefolgt von "annehmen: Audio-/\*" führt zur Bildung eines einzelnen Header "Accept: Text /\*, audio /\*". Es ist Aufgabe der aufrufenden Anwendung um sicherzustellen, dass ein zusammenhängender Schema in Bezug auf die Daten vom mit zusammengeführte oder separate Header gesendeten Anforderungen empfangen werden.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Führt eine entfernen und Ersetzen Sie den aktuellen Headerausgabestream hinzuzufügen. So entfernen Sie den aktuellen Headerausgabestream der Headernamen verwendet werden, und der vollständige Wert der neuen Header hinzuzufügen, verwendet werden. Wenn der Header-Wert leer ist, und der Header gefunden wird, wird es entfernt. Wenn dies nicht leer ist, wird der Header-Wert ersetzt.  
   
