@@ -1,7 +1,7 @@
 ---
 title: MASM für X64 (ml64.exe) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253801"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322247"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM für x64 (ml64.exe)
 
-Visual Studio enthält 32-Bit und 64-Bit-gehostete Versionen von Microsoft-Assembler (MASM) Zielcode X64. Mit dem Namen ml64.exe, dies ist der Assembler X64 akzeptiert, die Assembler-Sprache. Die Befehlszeilentools MASM werden installiert, wenn Sie eine C++-arbeitsauslastung während der Installation von Visual Studio auswählen. Die MASM-Tools sind nicht als separater Download verfügbar. Informationen zum Herunterladen und installieren eine Kopie von Visual Studio finden Sie unter [installieren Sie Visual Studio](/visualstudio/install/install-visual-studio). Wenn Sie nicht die vollständige Visual Studio-IDE installieren möchten, sondern nur die Befehlszeilentools benötigen, laden die [Build-Tools für Visual Studio-2017](https://go.microsoft.com/fwlink/p/?linkid=840931).
+Visual Studio enthält 32-Bit und 64-Bit-gehostete Versionen von Microsoft-Assembler (MASM) Zielcode X64. Mit dem Namen ml64.exe, dies ist der Assembler X64 akzeptiert, die Assembler-Sprache. Die Befehlszeilentools MASM werden installiert, wenn Sie eine C++-arbeitsauslastung während der Installation von Visual Studio auswählen. Die MASM-Tools sind nicht als separater Download verfügbar. Informationen zum Herunterladen und installieren eine Kopie von Visual Studio finden Sie unter [installieren Sie Visual Studio](/visualstudio/install/install-visual-studio). Wenn Sie nicht die vollständige Visual Studio-IDE installieren möchten, sondern nur die Befehlszeilentools benötigen, laden die [Build-Tools für Visual Studio-2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
 Mit MASM erstellen Code für X64 ausgerichtet ist, in der Befehlszeile angegeben, müssen Sie eine Developer-Eingabeaufforderung für X64 Ziele, die den erforderlichen Pfad und andere Umgebungsvariablen festlegt. Informationen zum Starten einer Developer-Eingabeaufforderung finden Sie unter [Erstellen von C/C++-Code in der Befehlszeile](../../build/building-on-the-command-line.md).
 

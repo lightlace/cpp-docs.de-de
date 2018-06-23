@@ -1,7 +1,7 @@
 ---
 title: Von MFC verwendete Stile | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 9af450071546691778dc607746870084a7b1f346
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271369"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322419"
 ---
 # <a name="styles-used-by-mfc"></a>Von MFC verwendete Stile  
   
@@ -321,7 +321,7 @@ Bearbeiten Sie Stile gelten für [CEdit-Klasse](../../mfc/reference/cedit-class.
 |`ES_NOHIDESEL`|Ein Bearbeitungssteuerelement Blendet in der Regel wird die Auswahl aus, wenn das Steuerelement den Eingabefokus verliert und die Auswahl, kehrt Wenn das Steuerelement den Eingabefokus erhält. Angeben von `ES_NOHIDESEL` löscht diese Standardaktion.|  
 |`ES_NUMBER`|Ermöglicht nur die Ziffern in das Bearbeitungssteuerelement eingegeben werden.|  
 |`ES_OEMCONVERT`|In das Bearbeitungssteuerelement eingegebene Text wird von ANSI-Zeichensatz in den OEM-Zeichensatz und wieder zurück zu ANSI konvertiert. Dadurch wird sichergestellt, dass ordnungsgemäße zeichenkonvertierung Aufrufen der `AnsiToOem` Windows-Funktion, um eine ANSI-Zeichenfolge in das Bearbeitungssteuerelement in OEM-Zeichen konvertieren. Dieses Format eignet sich am besten für Bearbeitungssteuerelemente, die Dateinamen enthalten.|  
-|`ES_PASSWORD`|Zeigt alle Zeichen als ein Sternchen (**\\\***), wie sie in das Bearbeitungssteuerelement eingegeben werden. Eine Anwendung kann mithilfe der `SetPasswordChar` Memberfunktion so ändern Sie das Zeichen, das angezeigt wird.|  
+|`ES_PASSWORD`|Zeigt alle Zeichen als ein Sternchen (__\*__), wie sie in das Bearbeitungssteuerelement eingegeben werden. Eine Anwendung kann mithilfe der `SetPasswordChar` Memberfunktion so ändern Sie das Zeichen, das angezeigt wird.|  
 |`ES_READONLY`|Verhindert, dass der Benutzer eingeben oder Bearbeiten von Text im Bearbeitungssteuerelement.|  
 |`ES_RIGHT`|Text rechtsbündig ausgerichtet, in einer Einzel- oder eines mehrzeiligen Bearbeitungssteuerelements an.|  
 |`ES_UPPERCASE`|Konvertiert alle Zeichen in Großbuchstaben, wie sie in das Bearbeitungssteuerelement eingegeben werden.|  
