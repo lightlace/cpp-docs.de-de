@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350848"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930351"
 ---
 # <a name="dynamic-layout"></a>Dynamisches Layout
 Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutzer ändern kann, und Sie können steuern, wie, die das Layout auf die Änderung der Größe angepasst. Beispielsweise können Sie Schaltflächen am unteren Rand eines Dialogfelds anfügen, sodass sie sich immer am unteren Rand befinden. Sie können auch bestimmte Steuerelemente einrichten, wie z. B. Textfelder, Listenfelder und Bearbeitungsfelder, die erweitert werden, wenn der Benutzer das Dialogfeld erweitert.  
@@ -31,7 +31,7 @@ Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutz
   
  ![Dialogfeld nach dem Ändern der Größe. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- Sie können das dynamische Layout steuern, indem Sie die Details für jedes Steuerelement im Ressourcen-Editor in der IDE angegeben, oder Sie können es programmgesteuert durch Zugriff auf das „CMFCDynamicLayout“-Objekt für ein bestimmtes Steuerelement und Festlegen der Eigenschaften steuern.  
+ Sie können das dynamische Layout steuern, indem Sie die Details für jedes Steuerelement im Ressourcen-Editor in der IDE angeben, oder Sie können es programmgesteuert durch Zugriff auf die `CMFCDynamicLayout` -Objekt für ein bestimmtes Steuerelement und Festlegen der Eigenschaften.  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Festlegen der Eigenschaften für das dynamische Layout im Ressourcen-Editor  
  Sie können das dynamische Layoutverhalten für ein Dialogfeld festlegen, ohne Code schreiben zu müssen, nämlich mit dem Ressourcen-Editor.  
@@ -61,7 +61,7 @@ Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutz
   
 1.  Suchen oder erstellen Sie eine Position im Implementierungscode der Dialogfeldklasse, an dem Sie das dynamische Layout für den Dialog angeben möchten. Sie können z. B. eine Methode wie `AdjustLayout` im Dialogfeld hinzufügen und von Positionen aus aufrufen, an denen das Layout geändert werden muss. Sie können dies zuerst vom Konstruktor aus oder nach dem Vornehmen von Änderungen am Dialog aufrufen.  
   
-2.  Rufen Sie für den Dialog [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), eine Methode der CWnd-Klasse. „GetDynamicLayout“ gibt einen Zeiger auf ein „CMFCDynamicLayout“-Objekt zurück.  
+2.  Rufen Sie für den Dialog [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), eine Methode der `CWnd` Klasse. `GetDynamicLayout` Gibt einen Zeiger auf eine `CMFCDynamicLayout` Objekt.  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutz
   
 9. Das nächste Mal mit dem Benutzer die Größe im Dialogfeld Ändern der [cmfcdynamiclayout:: Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) Methode wird aufgerufen, die die Einstellungen tatsächlich übernimmt.  
   
-10. Wenn Sie das dynamische Layout deaktivieren möchten, rufen Sie [CWnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) mit `FALSE` wie für die `bEnabled` Parameter.  
+10. Wenn Sie das dynamische Layout deaktivieren möchten, rufen Sie [CWnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) mit **"false"** wie für die *bAktiviert* Parameter.  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutz
 
  ```  
   
-     Die benannte Ressource muss auf ein Dialogfeld verweisen, das Layoutinformationen in Form eines AFX_DIALOG_LAYOUT-Eintrags in der Ressourcendatei enthält, wie im folgenden Beispiel gezeigt wird:  
+     Die benannte Ressource muss ein Dialogfeld, das Layoutinformationen in Form von enthält verweisen eine **AFX_DIALOG_LAYOUT** Eintrag in der Ressourcendatei, wie im folgenden Beispiel gezeigt:  
   
  "" * / / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  
