@@ -1,6 +1,6 @@
 ---
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
-ms.date: 5/11/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
-ms.sourcegitcommit: 06b1f7bde6b3f8bed0f3db91d14e2d974444c1e3
+ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2018
-ms.locfileid: "34336316"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253879"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -104,7 +104,7 @@ Fügen Sie weitere Details hinzu, die beim Diagnostizieren Ihres Problems hilfre
 
 ### <a name="the-repro"></a>Die Reproduktion
 
-Bei einer Reproduktion handelt es sich um ein vollständiges, eigenständiges Quellcodebeispiel, das Ihr Problem reproduzierbar veranschaulicht. Wir benötigen eine Reproduktion, um den Fehler auf unseren Computern zu reproduzieren. Der Code sollte dafür ausreichen, eine einfache ausführbare Datei zu erstellen, die kompiliert und ausgeführt werden kann bzw. die kompiliert und ausgeführt werden könnte, wenn kein Problem vorliegen würde. Bei einer Reproduktion handelt es sich nicht um einen Codeausschnitt. Es sollten alle Funktionen und Klassen sowie alle erforderlichen #include-Direktiven (auch für die Standardheader) enthalten sein.
+Bei einer Reproduktion handelt es sich um ein vollständiges, eigenständiges Quellcodebeispiel, das Ihr Problem reproduzierbar veranschaulicht. Wir benötigen eine Reproduktion, um den Fehler auf unseren Computern zu reproduzieren. Der Code sollte dafür ausreichen, eine einfache ausführbare Datei zu erstellen, die kompiliert und ausgeführt werden kann bzw. die kompiliert und ausgeführt werden könnte, wenn kein Problem vorliegen würde. Bei einer Reproduktion handelt es sich nicht um einen Codeausschnitt. Es sollten alle Funktionen und Klassen sowie alle erforderlichen #include-Anweisungen (auch für die Standardheader) enthalten sein.
 
 #### <a name="what-makes-a-good-repro"></a>Was zeichnet eine gute Reproduktion aus?
 
@@ -358,7 +358,7 @@ Erstellen Sie Ihre Reproduktion als minimales IDE-Projekt, und erstellen Sie dan
 Es gibt mehrere gute Möglichkeiten, uns Ihren Bericht zu übermitteln. Die können das in Visual Studio integrierte [Tool „Problem melden“](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) oder die Seiten der [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) verwenden. Sie gelangen direkt zu den Seiten der Developer Community, wenn Sie auf **Produktfeedback** unten auf der Seite klicken. Die Wahl hängt davon ab, ob Sie die integrierten Tools der IDE zum Erstellen von Screenshots und zum Organisieren Ihres Berichts verwenden möchten, um diesen auf den Seiten der Entwicklercommunity zu veröffentlichen, oder ob Sie lieber direkt die Website verwenden möchten.
 
 > [!NOTE]
-> Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Microsoft verpflichtet sich der Einhaltung aller Datenschutzgesetze- und regeln. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie unter [Microsoft Visual Studio-Produktfamilie – Datenschutzbestimmungen](https://www.visualstudio.com/dn948229).
+> Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Microsoft verpflichtet sich der Einhaltung aller Datenschutzgesetze- und regeln. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie in der [Datenschutzerklärung von Microsoft](https://www.visualstudio.com/dn948229).
 
 ### <a name="use-the-report-a-problem-tool"></a>Nutzen des Tools „Problem melden“
 
