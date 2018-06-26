@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346616"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928540"
 ---
 # <a name="document-classes"></a>Dokumentklassen
 Dokument-Klassenobjekten, erstellt von Dokumentvorlagen-Objekten, Verwalten der Anwendungsdaten verwendet werden. Eine Klasse wird für die Dokumente aus einer dieser Klassen abgeleitet werden.  
@@ -29,7 +29,7 @@ Dokument-Klassenobjekten, erstellt von Dokumentvorlagen-Objekten, Verwalten der 
  -Klasse Dokumentobjekte interagieren Objekte anzeigen. Anzeigen von Objekten der Clientbereich eines Fensters darstellen, Anzeigen von Daten eines Dokuments und ermöglichen Benutzern die Interaktion mit. Dokumente und Ansichten werden von einem Dokument-Template-Objekt erstellt.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- Die Basisklasse für anwendungsspezifische Dokumente. Leiten Sie Ihre Dokumentklasse oder Klassen von **CDocument**.  
+ Die Basisklasse für anwendungsspezifische Dokumente. Leiten Sie Ihre Dokumentklasse oder Klassen von `CDocument`.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  Für Verbunddokumente Implementierung als auch grundlegende containerunterstützung verwendet. Dient als Container für Klassen abgeleitet [CDocItem](../mfc/reference/cdocitem-class.md). Diese Klasse kann als Basisklasse verwendet werden, für Container dokumentiert und die Basisklasse für ist `COleServerDoc`.  

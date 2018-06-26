@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350011"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931017"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Ausnahmen: Änderungen für Ausnahmemakros in Version 3.0
 Dies ist ein-Thema für fortgeschrittene.  
@@ -46,13 +46,13 @@ Dies ist ein-Thema für fortgeschrittene.
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- wird ausgelöst, als eine **CException\***, obwohl es als konstruiert wird eine **CCustomException**. Die **CATCH** Makro in MFC-Version 2.5 und früheren verwendet `CObject::IsKindOf` So testen Sie den Typ zur Laufzeit. Da der Ausdruck  
+ wird ausgelöst, als eine `CException*`, obwohl es als konstruiert wird eine `CCustomException`. Die **CATCH** Makro in MFC-Version 2.5 und früheren verwendet `CObject::IsKindOf` So testen Sie den Typ zur Laufzeit. Da der Ausdruck  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  ist "true", der ersten Catch-Block die Ausnahme abgefangen. Entspricht der zweiten Catch-Block in Version 3.0, die C++-Ausnahmen verwendet, um viele der Ausnahmebehandlung Makros implementieren, die ausgelösten `CException`.  
   
- Der Code wie folgt ist ungewöhnlich. Es in der Regel wird angezeigt, wenn ein Exception-Objekt an eine andere Funktion übergeben wird, das einen generischen akzeptiert **CException\***, führt die Verarbeitung durch "Pre Throw" und schließlich wird die Ausnahme ausgelöst.  
+ Der Code wie folgt ist ungewöhnlich. Es in der Regel wird angezeigt, wenn ein Exception-Objekt an eine andere Funktion übergeben wird, das einen generischen akzeptiert `CException*`, führt die Verarbeitung durch "Pre Throw" und schließlich wird die Ausnahme ausgelöst.  
   
  Um dieses Problem zu umgehen, verschieben Sie die Throw-Ausdruck von der Funktion an den aufrufenden Code, und löst eine Ausnahme des aktuellen Typs an den Compiler zu dem Zeitpunkt, den die Ausnahme generiert hat, ist bekannt.  
   
@@ -63,7 +63,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- Mit **AUSLÖSEN** im Catch-Block verursacht den Zeiger `e` gelöscht werden soll, damit die äußeren Catch-Website einen ungültigen Zeiger erhält,. Verwendung `THROW_LAST` erneut auszulösende `e`.  
+ Mit **AUSLÖSEN** im Catch-Block verursacht den Zeiger `e` gelöscht werden soll, damit die äußeren Catch-Website einen ungültigen Zeiger erhält,. Verwendung **THROW_LAST** erneut auszulösende `e`.  
   
  Weitere Informationen finden Sie unter [Ausnahmen: Abfangen und Löschen von Ausnahmen](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

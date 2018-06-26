@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352788"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931888"
 ---
 # <a name="docking-and-floating-toolbars"></a>Andockbare und unverankerte Symbolleisten
 Die Microsoft Foundation Class-Bibliothek unterstützt die andockbare Symbolleisten. Eine andockbare Symbolleiste angefügt oder angedockt sind, klicken Sie auf jeder Seite des übergeordneten Fensters, oder es kann getrennt sein, in einem eigenen Minirahmenfenster umfließt. In diesem Artikel erläutert die andockbare Symbolleisten in Ihren Anwendungen verwenden.  
@@ -62,7 +62,7 @@ Die Microsoft Foundation Class-Bibliothek unterstützt die andockbare Symbolleis
  Finden Sie im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) Beispiele.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Aktivieren des Andockens in einem Rahmenfenster  
- Symbolleisten an ein Framefenster andocken möchten, muss die Rahmenfenster (oder das Ziel) aktiviert sein, um Andocken zu ermöglichen. Dies erfolgt mithilfe der [EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) -Funktion, die eine Überladung `DWORD` bits-Parameter, der einen Satz von Stil ist, der angibt, welcher Seite des Rahmenfensters Andocken akzeptiert. Wenn eine Symbolleiste ist angedockt werden und es sind mehrere Seiten, die es angedockt werden kann, die Seiten in der an übergebene Parameter `EnableDocking` dienen in der folgenden Reihenfolge: oben, unten, links, rechts. Wenn Sie in der Lage sein soll, Steuerelement angedockt Steuerleisten überall, übergeben Sie `CBRS_ALIGN_ANY` auf `EnableDocking`.  
+ Symbolleisten an ein Framefenster andocken möchten, muss die Rahmenfenster (oder das Ziel) aktiviert sein, um Andocken zu ermöglichen. Dies erfolgt mithilfe der [EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) -Funktion, die eine Überladung *DWORD* bits-Parameter, der einen Satz von Stil ist, der angibt, welcher Seite des Rahmenfensters Andocken akzeptiert. Wenn eine Symbolleiste ist angedockt werden und es sind mehrere Seiten, die es angedockt werden kann, die Seiten in der an übergebene Parameter `EnableDocking` dienen in der folgenden Reihenfolge: oben, unten, links, rechts. Wenn Sie in der Lage sein soll, Steuerelement angedockt Steuerleisten überall, übergeben Sie **CBRS_ALIGN_ANY** auf `EnableDocking`.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> Aktivieren des Andockens für eine Symbolleiste  
  Nachdem Sie das Ziel zum Andocken vorbereitet haben, müssen Sie die Symbolleiste (oder die Quelle) in ähnlicher Weise vorbereiten. Rufen Sie [CControlBar:: EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) Angabe des Ziels Seiten für jede Symbolleiste, das Sie andocken möchten, die die Symbolleiste angedockt werden soll. Wenn keines der Seiten, die im Aufruf angegeben `CControlBar::EnableDocking` entsprechen der Seiten, die zum Rahmenfenster Andocken aktiviert, die Symbolleiste kann nicht angedockt – es wird float. Sobald er umfließt wurde hat, bleibt er unverankerte Symbolleiste, kann die Frame-Fensters angedockt.  

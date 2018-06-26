@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e08ea95c9cfe4bd67c0904cc22e6db19dcfb52e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee88b7784abb6ca622e72a9dfb31efc39fa7816
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355681"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930939"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Empfehlungen zur Eingabe-/Ausgabebehandlung
 Gibt an, ob Sie dateibasierte e/a nicht verwenden, hängt davon ab, wie Sie die Fragen in der folgenden Entscheidungsstruktur beantworten:  
@@ -34,9 +34,9 @@ Gibt an, ob Sie dateibasierte e/a nicht verwenden, hängt davon ab, wie Sie die 
   
      **Die Anwendung die gesamte Datei zu lesen, in den Arbeitsspeicher auf die Datei öffnen und die gesamte Datei wieder auf dem Datenträger festgeschrieben auf die Datei zu speichern**  
   
-    -   Ja: Dies gilt standardmäßig MFC-Dokument. Verwendung **CDocument** Serialisierung.  
+    -   Ja: Dies gilt standardmäßig MFC-Dokument. Verwendung `CDocument` Serialisierung.  
   
-    -   No: Dies ist normalerweise die Groß-/Kleinschreibung transaktionsbasierten Aktualisieren der Datei. Aktualisieren Sie die Datei auf der Basis eines pro Transaktion und müssen nicht **CDocument** Serialisierung.  
+    -   No: Dies ist normalerweise die Groß-/Kleinschreibung transaktionsbasierten Aktualisieren der Datei. Aktualisieren Sie die Datei auf der Basis eines pro Transaktion und müssen nicht `CDocument` Serialisierung.  
   
 -   Nein, nicht die primären Daten in einer Datenträgerdatei befinden:  
   
@@ -50,7 +50,7 @@ Gibt an, ob Sie dateibasierte e/a nicht verwenden, hängt davon ab, wie Sie die 
   
          Beispiele für diesen Fall: die Daten befindet sich in einem nicht - ODBC DBMS; die Daten werden über einen anderen Mechanismus, wie z. B. OLE oder DDE gelesen.  
   
-         In solchen Fällen Serialisierung nicht verwenden, und Ihre Anwendung keine geöffneten und Menüelemente zu speichern. Sie können weiterhin verwenden möchten eine **CDocument** als Basis Home, ebenso wie eine MFC-ODBC Anwendung wird das Dokument verwendet zum Speichern von `CRecordset` Objekte. Aber Sie können das Framework Standardserialisierung Datei öffnen oder speichern Dokument nicht verwendet.  
+         In solchen Fällen Serialisierung nicht verwenden, und Ihre Anwendung keine geöffneten und Menüelemente zu speichern. Sie können weiterhin verwenden möchten eine `CDocument` als Basis Home, ebenso wie eine MFC-ODBC Anwendung wird das Dokument verwendet zum Speichern von `CRecordset` Objekte. Aber Sie können das Framework Standardserialisierung Datei öffnen oder speichern Dokument nicht verwendet.  
   
  Zur Unterstützung von öffnen, speichern, und speichern Sie als Befehle im Menü Datei, bietet das Framework Dokumentserialisierung. Die Serialisierung liest und schreibt Daten, z. B. Objekte, die von Klasse abgeleitet `CObject`, zu dauerhaften Speicher, normalerweise eine Datenträgerdatei. Serialisierung ist einfach zu verwenden und viele der Ihre Anforderungen erfüllt, aber möglicherweise im viele formularbasierten datenzugriffsanwendungen nicht zulässig. Formularbasierten datenzugriffsanwendungen Aktualisierungsdaten in der Regel auf Basis eines pro Transaktion. Sie zum Aktualisieren der Datensätze, die von der Transaktion statt lesen und schreiben eine gesamte Datei auf einmal betroffen sind.  
   

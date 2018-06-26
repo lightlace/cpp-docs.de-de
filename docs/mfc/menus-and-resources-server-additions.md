@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351350"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930201"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menüs und Ressourcen: Servererweiterungen
 Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressourcen in ein visual bearbeitungsanwendung-Server (Komponente) vorgenommen werden müssen. Eine Serveranwendung muss viele Ergänzungen für die Menüstruktur und andere Ressourcen, da er in einem von drei Modi gestartet werden kann: Standalone, eingebettet sind, oder vorhanden. Wie in beschrieben die [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md) Artikel, es sind maximal vier Sätze von Menüs. Alle vier werden für eine MDI-Vollserver-Anwendung verwendet, während nur drei für ein Miniserver verwendet werden. Der Anwendungs-Assistent wird das Layout im Menü für den Typ des Servers erforderlich erstellt werden sollen. Einige Anpassung kann notwendig sein.  
@@ -63,14 +63,14 @@ Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressou
   
  Die zweite Tabelle ist nahezu eine genaue Kopie der Ansicht Zugriffstastentabelle. Alle Unterschiede parallele Änderungen in der vollständig Öffnen des Menüs in erwähnt [Server Menüerweiterungen](#_core_server_menu_additions).  
   
- Ein Beispiel für diese Zugriffstaste tabellenänderungen, Vergleichen der **IDR_HIERSVRTYPE_SRVR_IP** und **IDR_HIERSVRTYPE_SRVR_EMB** Accelerator-Tabellen mit **IDR_MAINFRAME** in der HIERSVR. RC-Datei in der MFC-OLE-Beispiel enthaltenen [HIERSVR](../visual-cpp-samples.md). Die Datei und Fenster-Zugriffstasten fehlen in der Tabelle für die direkte und genaue Kopien der Berichtsmomentaufnahmen werden in der eingebettete Tabelle.  
+ Ein Beispiel für diese Zugriffstaste tabellenänderungen vergleichen Sie die Zugriffstastentabellen IDR_HIERSVRTYPE_SRVR_IP und IDR_HIERSVRTYPE_SRVR_EMB mit IDR_MAINFRAME in die HIERSVR. RC-Datei in der MFC-OLE-Beispiel enthaltenen [HIERSVR](../visual-cpp-samples.md). Die Datei und Fenster-Zugriffstasten fehlen in der Tabelle für die direkte und genaue Kopien der Berichtsmomentaufnahmen werden in der eingebettete Tabelle.  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Zeichenfolge Tabelle Ergänzungen für Serveranwendungen  
  Die Tabelle außerdem nur eine Zeichenfolge ist erforderlich, in einer Serveranwendung – eine Zeichenfolge, um anzugeben, dass der OLE-Initialisierung fehlgeschlagen ist. Beispielsweise ist hier der Zeichenfolgentabelle Eintrag, den die Anwendungs-Assistent erstellt ein:  
   
 |Id|Zeichenfolge|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|  
+|IDP_OLE_INIT_FAILED|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> Miniserver Ergänzungen  
  Die gleichen Ergänzungen gelten für Miniserver als die oben aufgeführten für vollständige-Server. Weil ein Miniserver im eigenständigen Modus ausgeführt werden kann, ist dessen Hauptmenü deutlich kleiner. Das Hauptmenü vom Anwendungs-Assistenten erstellt wurde, nur eine im Dateimenü, enthält nur die Elemente beenden und zu. Eingebettete und direkte Menüs und Zugriffstasten für Miniserver sind identisch für vollständige-Server.  

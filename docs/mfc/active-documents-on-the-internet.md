@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334885"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930887"
 ---
 # <a name="active-documents-on-the-internet"></a>Active Documents für das Internet
 Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte. Aktive Dokumente möglicherweise mehrseitigen und werden in den gesamten Clientbereich angezeigt. Sie herkömmliche Menü-Aushandlung und direkte als auch in einem geöffneten Fenster in der Serveranwendung bearbeitet werden können. Anstatt als kleine Rechteck von einem schraffierten Rahmen umgeben sind aktive Dokumente vollständigen Frame und immer direkt aktiv.  
@@ -55,7 +55,7 @@ Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte
 |-------------------------|---------------------------------|  
 |Verwendet Verbunddateien als Speichermechanismus.|`IPersistStorage`|  
 |Unterstützt die grundlegenden Einbetten von Funktionen für aktive Dokumente, einschließlich aus Datei erstellen.|`IPersistFile`, `IOleObject` und `IDataObject`.|  
-|Unterstützt direkte Aktivierung.|`IOleInPlaceObject` und `IOleInPlaceActiveObject` (unter Verwendung des Containers `IOleInPlaceSite` und **IOleInPlaceFrame** Schnittstellen).|  
+|Unterstützt direkte Aktivierung.|`IOleInPlaceObject` und `IOleInPlaceActiveObject` (unter Verwendung des Containers `IOleInPlaceSite` und `IOleInPlaceFrame` Schnittstellen).|  
 |Unterstützt das aktive Dokument-Erweiterungen, die diese neuen Schnittstellen einschließen. Einige Schnittstellen sind optional.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` und `IPrint`.|  
   
  MFC bietet Unterstützung für die vorhandenen eingebetteten Serversupport, um aktive Dokumente zu erweitern.  
@@ -68,7 +68,7 @@ Aktive Dokumente bieten eine Erweiterung für herkömmliche eingebettete Objekte
   
 |Klassentyp|Früher abgeleitet wurde.|Ableiten von|  
 |----------------|---------------------------|---------------------------|  
-|In-Place-Frame|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|In-Place-Frame|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Element|`COleServerItem`|`CDocObjectServerItem`|  
   
  Sie werden auch ändern, wie Informationen in der Registrierung eingegeben wird und mehrere andere Änderungen vornehmen. Wenn die Anwendung derzeit keine Unterstützung der COM-Komponenten verfügt, können Sie Server-Unterstützung durch Ausführen des Assistenten für die Anwendung und die Integration des COM-Komponente-spezifische Codes in der vorhandenen Anwendung hinzufügen.  

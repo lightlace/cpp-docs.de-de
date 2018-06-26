@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351838"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928363"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC-ActiveX-Steuerelemente: Weiterführende Eigenschaftenimplementierung
 In diesem Artikel werden Themen zur Implementierung erweiterter Eigenschaften in einem ActiveX-Steuerelement beschrieben:  
@@ -66,9 +66,9 @@ In diesem Artikel werden Themen zur Implementierung erweiterter Eigenschaften in
  In diesem Codebeispiel ruft `SetNotSupported` Wenn die `m_bReadOnlyMode` -Datenmember ist **"true"**. Wenn **"false"**, und klicken Sie dann die Eigenschaft auf den neuen Wert festgelegt ist.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Zurückgeben von Fehlercodes aus einer Eigenschaft  
- Um anzugeben, dass ein Fehler aufgetreten ist, bei dem Versuch, eine Eigenschaft abzurufen oder festzulegen, verwenden Sie die `COleControl::ThrowError` -Funktion, die akzeptiert ein `SCODE` (Statuscode) als Parameter. Sie können eine vordefinierte `SCODE` oder ein eigenes definieren. Eine Liste der vordefinierten `SCODE`s sowie Anweisungen zum Definieren von benutzerdefinierten `SCODE`s, finden Sie unter [Behandeln von Fehlern in ActiveX-Steuerelementen](../mfc/mfc-activex-controls-advanced-topics.md) in Artikel ActiveX-Steuerelemente: Weiterführende Themen.  
+ Um anzugeben, dass ein Fehler aufgetreten ist, bei dem Versuch, eine Eigenschaft abzurufen oder festzulegen, verwenden Sie die `COleControl::ThrowError` -Funktion, die einen SCODE (Statuscode) als Parameter akzeptiert. Sie können einen vordefinierten SCODE oder definieren ein eigenes. Eine Liste der vordefinierten SCODEs und Anweisungen zum Definieren von benutzerdefinierten SCODEs, finden Sie unter [Behandeln von Fehlern in ActiveX-Steuerelementen](../mfc/mfc-activex-controls-advanced-topics.md) in Artikel ActiveX-Steuerelemente: Weiterführende Themen.  
   
- Hilfsfunktionen für die am häufigsten verwendeten vordefinierten vorhanden `SCODE`s, z. B. [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), und [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Hilfsfunktionen vorhanden, für die am häufigsten verwendeten SCODEs, z. B. vordefinierte [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), und [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` sollen nur als Mittel zum Zurückgeben von kein Fehlers aus einer Eigenschaft abzurufen oder festzulegen, verwendet werden-Funktion oder ein Automatisierungsmethode. Dies sind die einzigen Fälle, in denen die passenden Ausnahmehandler werden auf dem Stapel vorhanden.  
@@ -76,7 +76,7 @@ In diesem Artikel werden Themen zur Implementierung erweiterter Eigenschaften in
  Weitere Informationen zur Meldung von Ausnahmen in anderen Bereichen des Codes finden Sie unter [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror) und im Abschnitt [Behandeln von Fehlern in ActiveX-Steuerelementen](../mfc/mfc-activex-controls-advanced-topics.md) Artikel ActiveX-Steuerelemente: erweitert Themen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md)   
  [MFC-ActiveX-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
  [COleControl-Klasse](../mfc/reference/colecontrol-class.md)

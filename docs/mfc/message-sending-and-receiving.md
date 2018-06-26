@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347177"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932003"
 ---
 # <a name="message-sending-and-receiving"></a>Senden und Empfangen von Meldungen
 Betrachten Sie den Sendevorgang des Prozesses und wie das Framework reagiert.  
   
  Die meisten Nachrichten ergeben durch eine Benutzerinteraktion mit dem Programm haben. Befehle werden von Mausklicks auf Menüelemente und Symbolleisten-Schaltflächen oder durch Drücken von Zugriffstasten generiert. Der Benutzer wird generiert auch Windows-Meldungen, z. B. verschieben oder Ändern der Größe eines Fensters. Anderen Windows-Meldungen werden gesendet, wenn z. B. Programmstart oder Beendigung Ereignissen wie Windows abzurufen oder den Fokus verliert und so weiter. Steuerelemente-benachrichtigungsmeldungen werden vom Mausklicks oder andere Benutzerinteraktionen mit einem Steuerelement, z. B. eine Schaltfläche oder im Listenfeld-Steuerelement in einem Dialogfeld generiert.  
   
- Die **ausführen** Memberfunktion der Klasse `CWinApp` ruft Nachrichten ab und sendet sie an das entsprechende Fenster. Die meisten befehlsmeldungen werden an das Hauptrahmenfenster der Anwendung gesendet. Die `WindowProc` durch die Klasse Bibliothek ruft Nachrichten vorab definiert und diese unterschiedlich, abhängig von der Kategorie der empfangenen Nachricht weiterleitet.  
+ Die `Run` Memberfunktion der Klasse `CWinApp` ruft Nachrichten ab und sendet sie an das entsprechende Fenster. Die meisten befehlsmeldungen werden an das Hauptrahmenfenster der Anwendung gesendet. Die `WindowProc` durch die Klasse Bibliothek ruft Nachrichten vorab definiert und diese unterschiedlich, abhängig von der Kategorie der empfangenen Nachricht weiterleitet.  
   
  Nun sehen wir uns die empfangenden Teil des Prozesses.  
   

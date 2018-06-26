@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351662"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931579"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Anpassen von Tastatur und Maus
 MFC ermöglicht dem Benutzer der Anwendung anpassen, wie es sich um Tastatur- und Mauseingaben behandelt. Der Benutzer kann Tastatureingaben anpassen, indem Sie Befehle Tastenkombinationen zuweisen zu können. Der Benutzer kann die Mauseingabe auch anpassen, indem Sie den Befehl, der ausgeführt werden soll, wenn der Benutzer innerhalb der Anwendung bestimmte Windows doppelklickt auswählen. In diesem Thema wird erläutert, wie die Eingabe für die Anwendung angepasst wird.  
@@ -61,7 +61,7 @@ Registerkarte "Anpassung" Maus
   
  Nachdem die Anwendung die Maus Manager initialisiert, fügt das Framework der **Maus** die Registerkarte der **anpassen** (Dialogfeld). Wenn Sie keine Ansichten hinzufügen, verursacht der Zugriff auf die Registerkarte "eine nicht behandelte Ausnahme aus. Nach der Erstellung einer Liste der Ansichten, die **Maus** Registerkarte für den Benutzer verfügbar ist.  
   
- Wenn Sie eine neue Ansicht der Maus-Manager hinzufügen, weisen Sie dieser eine eindeutige ID. Wenn Sie die Maus Anpassung für ein Fenster unterstützen möchten, müssen Sie verarbeiten die `WM_LBUTTONDBLCLICK` Nachricht und rufen die [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) Funktion. Wenn Sie diese Funktion aufrufen, ist einer der Parameter die ID für dieses Fensters. Es ist der Verantwortung des Programmierers zum Nachverfolgen der ID-Nummern und die ihnen zugeordneten Objekte.  
+ Wenn Sie eine neue Ansicht der Maus-Manager hinzufügen, weisen Sie dieser eine eindeutige ID. Wenn Sie die Maus Anpassung für ein Fenster unterstützen möchten, müssen Sie Verarbeiten der WM_LBUTTONDBLCLICK-Nachricht und rufen die [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) Funktion. Wenn Sie diese Funktion aufrufen, ist einer der Parameter die ID für dieses Fensters. Es ist der Verantwortung des Programmierers zum Nachverfolgen der ID-Nummern und die ihnen zugeordneten Objekte.  
   
 ## <a name="security-concerns"></a>Sicherheitsaspekte  
  Wie in beschrieben [benutzerdefinierte Tools](../mfc/user-defined-tools.md), die Benutzer kann das Doppelklickereignis benutzerdefiniertes Tool-ID zuordnen. Wenn der Benutzer eine Ansicht doppelklickt, sucht die Anwendung ein Tool, das die zugeordneten-ID übereinstimmt. Wenn die Anwendung ein übereinstimmendes Tool gefunden wird, führt er das Tool an. Wenn die Anwendung ein entsprechendes Tool finden kann, wird eine WM_COMMAND-Nachricht mit der ID auf die Ansicht, die doppelgeklickt wurde gesendet.  

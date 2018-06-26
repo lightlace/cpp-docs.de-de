@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349466"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929355"
 ---
 # <a name="message-handling-and-command-targets"></a>Meldungsbehandlung und Befehlsziele
 Die Dispatch-Befehlsschnittstelle `IOleCommandTarget` definiert einen einfachen und erweiterbaren Mechanismus zum Abfragen und Befehle ausführen. Dieser Mechanismus ist einfacher als das Automation `IDispatch` daran, dass es einen Standardsatz von Befehlen; vollständig benötigt Befehle sind selten, Argumente und keine Typinformationen beteiligt ist (typsicherheit wird für die Befehlsargumente ebenfalls verringert).  
@@ -33,7 +33,7 @@ Die Dispatch-Befehlsschnittstelle `IOleCommandTarget` definiert einen einfachen 
   
  `IOleCommandTarget` behandelt die folgenden Szenarien:  
   
--   Wenn ein Objekt ist direktes aktiviert, nur das Objekt Symbolleisten in der Regel angezeigt sind und das Objekt Symbolleisten möglicherweise Schaltflächen für einige der containerbefehle wie **Drucken**, **Seitenansicht**,  **Speichern Sie**, `New`, **Zoom**, und andere. (Direkte Aktivierung Standards wird empfohlen, die Objekte entfernen deaktivieren Sie solche Schaltflächen aus ihren Symbolleisten oder auf mindestens diese. Dieser Entwurf ermöglicht dieser Befehle zu aktiviert und noch an den richtigen Handler weitergeleitet werden.) Es gibt derzeit keinen Mechanismus für das Objekt, das diese Befehle auf den Container zu verteilen.  
+-   Wenn ein Objekt ist direktes aktiviert, nur das Objekt Symbolleisten in der Regel angezeigt sind und das Objekt Symbolleisten möglicherweise Schaltflächen für einige der containerbefehle wie **Drucken**, **Seitenansicht**,  **Speichern Sie**, **neu**, **Zoom**, und andere. (Direkte Aktivierung Standards wird empfohlen, die Objekte entfernen deaktivieren Sie solche Schaltflächen aus ihren Symbolleisten oder auf mindestens diese. Dieser Entwurf ermöglicht dieser Befehle zu aktiviert und noch an den richtigen Handler weitergeleitet werden.) Es gibt derzeit keinen Mechanismus für das Objekt, das diese Befehle auf den Container zu verteilen.  
   
 -   Wenn ein aktiven Dokuments in einer active Document-Container (z. B. Office Binder) eingebettet ist, der Container müssen u. u. eine solche Senden von Befehlen **Drucken**, **Seiteneinrichtung**, **Eigenschaften**, und andere enthaltenen aktiven Dokument.  
   
@@ -56,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- Die `QueryStatus` Methode an dieser Stelle testet, ob eine bestimmte Reihe von Befehlen, die mit identifiziert wird eine **GUID**, wird unterstützt. Dieser Aufruf füllt ein Array von **OLECMD** Werte (Strukturen) mit der Liste der unterstützten Befehle sowie das Zurückgeben von Text, der den Namen von einem Befehl und/oder Statusinformationen-Informationen beschreibt. Beim Aufrufen eines Befehls ist der Aufrufer möchte, können sie den Befehl übergeben (und die Gruppe **GUID**) zu **Exec** zusammen mit Optionen und Argumente, wieder einen Rückgabewert abrufen.  
+ Die `QueryStatus` Methode an dieser Stelle testet, ob eine bestimmte Reihe von Befehlen, die mit identifiziert wird eine **GUID**, wird unterstützt. Dieser Aufruf füllt ein Array von **OLECMD** Werte (Strukturen) mit der Liste der unterstützten Befehle sowie das Zurückgeben von Text, der den Namen von einem Befehl und/oder Statusinformationen-Informationen beschreibt. Beim Aufrufen eines Befehls ist der Aufrufer möchte, können sie den Befehl übergeben (und die Gruppe **GUID**) zu `Exec` zusammen mit Optionen und Argumente, wieder einen Rückgabewert abrufen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktive Dokumente-Container](../mfc/active-document-containers.md)

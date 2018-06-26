@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348527"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931033"
 ---
 # <a name="message-handling-and-mapping"></a>Meldungsbehandlung und -zuordnung
 Diese Artikelreihe wird beschrieben, wie Meldungen und Befehle durch MFC-Frameworks verarbeitet werden und wie Sie sie mit Ihren jeweiligen Handlerfunktionen zu verbinden.  
   
  In herkömmlichen Programmen für Windows Windows-Meldungen in einer großen Switch-Anweisung in eine Fensterprozedur behandelt werden. Stattdessen verwendet MFC [meldungszuordnungen](../mfc/message-categories.md) , direkte Nachrichten unterschiedliche Klassenmemberfunktionen zuzuordnen. Meldungszuordnungen sind effizienter als virtuelle Funktionen für diesen Zweck, und ermöglichen den Nachrichten von den am besten geeigneten C++-Objekt behandelt werden: Anwendung, Dokument anzeigen und So weiter. Sie können eine einzelne Nachricht oder eine Reihe von Nachrichten, die Befehls-IDs zuordnen oder Steuerelement-IDs.  
   
- **WM_COMMAND** Nachrichten – in der Regel von Menüs, Symbolleisten-Schaltflächen und Zugriffstasten generiert – auch die meldungszuordnungsmechanismus verwenden. MFC definiert einen Standard [routing](../mfc/command-routing.md) von befehlsmeldungen zwischen der Anwendung, frame-Fensters, Ansicht und aktive Dokumente in Ihrem Programm. Sie können die dieses routing bei Bedarf überschreiben.  
+ WM_COMMAND-Meldungen – in der Regel von Menüs, Symbolleisten-Schaltflächen und Zugriffstasten generiert – auch die meldungszuordnungsmechanismus verwenden. MFC definiert einen Standard [routing](../mfc/command-routing.md) von befehlsmeldungen zwischen der Anwendung, frame-Fensters, Ansicht und aktive Dokumente in Ihrem Programm. Sie können die dieses routing bei Bedarf überschreiben.  
   
  Meldungszuordnungen geben auch eine Möglichkeit zum Aktualisieren von Benutzeroberflächenobjekten (z. B. Menüs und Symbolleisten-Schaltflächen), aktivieren oder deaktivieren sie entsprechend den aktuellen Kontext.  
   

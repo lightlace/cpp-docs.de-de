@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349310"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931059"
 ---
 # <a name="memory-management-frame-allocation"></a>Speicherverwaltung: Rahmenzuordnung
 Zuordnung für den Frame nimmt seinen Namen aus der "Stapelrahmen", die festgelegt wird nach oben, wenn eine Funktion aufgerufen wird. Die Stack-Frame ist ein Bereich des Arbeitsspeichers, der vorübergehend die Argumente der Funktion sowie alle Variablen, die definiert enthält, werden in der Funktion lokal. Framevariablen werden häufig "Automatische" Variablen bezeichnet, da der Compiler automatisch die Speicherplatz für sie reserviert.  
@@ -42,7 +42,7 @@ Zuordnung für den Frame nimmt seinen Namen aus der "Stapelrahmen", die festgele
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Für lokale Variablen erfolgt dieser Übergang Bereich auf, wenn die Funktion beendet wird, aber der Gültigkeitsbereich einer Variablen Frame kleiner als eine Funktion werden können, wenn geschachtelte geschweifter Klammern verwendet werden. Diese automatische Löschen von Framevariablen ist sehr wichtig. Bei einfacher, primitiver Typen (z. B. `int` oder **Byte**), Arrays oder Datenstrukturen, das automatische Löschen gibt einfach den Arbeitsspeicher, die durch die Variable verwendet. Da die Variable den Gültigkeitsbereich verlassen hat, kann es dennoch zugegriffen werden. Im Fall von C++-Objekte versteht man jedoch Automatisches Löschen etwas komplizierter.  
+ Für lokale Variablen erfolgt dieser Übergang Bereich auf, wenn die Funktion beendet wird, aber der Gültigkeitsbereich einer Variablen Frame kleiner als eine Funktion werden können, wenn geschachtelte geschweifter Klammern verwendet werden. Diese automatische Löschen von Framevariablen ist sehr wichtig. Bei einfacher, primitiver Typen (z. B. **Int** oder **Byte**), Arrays oder Datenstrukturen, das automatische Löschen gibt einfach den Arbeitsspeicher, die durch die Variable verwendet. Da die Variable den Gültigkeitsbereich verlassen hat, kann es dennoch zugegriffen werden. Im Fall von C++-Objekte versteht man jedoch Automatisches Löschen etwas komplizierter.  
   
  Wenn ein Objekt als Framevariable definiert ist, wird dessen Konstruktor automatisch an dem Punkt aufgerufen, in dem die Definition gefunden wird. Wenn das Objekt den Gültigkeitsbereich verlässt, wird der Destruktor automatisch aufgerufen, bevor der Speicher für das Objekt freigegeben wird. Diese automatische Konstruktion und Zerstörung können sehr nützlich sein müssen, jedoch Sie beachten Sie die automatische Aufrufe, insbesondere den Destruktor.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344623"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928223"
 ---
 # <a name="containers-client-item-notifications"></a>Container: Client-Element-Benachrichtigungen
 Dieser Artikel beschreibt die überschreibbaren-Funktionen, die MFC-Framework Ruft auf, wenn die serveranwendungen in Ihrer Clientanwendung Dokument Elemente ändern.  
@@ -32,11 +32,11 @@ Dieser Artikel beschreibt die überschreibbaren-Funktionen, die MFC-Framework Ru
   
 |benachrichtigungs-|Bedeutung|  
 |------------------|-------------|  
-|`OLE_CHANGED`|Darstellung der OLE-Element wurde geändert.|  
-|`OLE_SAVED`|OLE-Element wurde gespeichert.|  
-|`OLE_CLOSED`|OLE-Element wurde geschlossen.|  
+|**OLE_CHANGED**|Darstellung der OLE-Element wurde geändert.|  
+|**OLE_SAVED**|OLE-Element wurde gespeichert.|  
+|**OLE_CLOSED**|OLE-Element wurde geschlossen.|  
 |**OLE_RENAMED**|Das Serverdokument, die mit der OLE-Element wurde umbenannt.|  
-|`OLE_CHANGED_STATE`|OLE-Element wurde von einem Zustand in einen anderen geändert.|  
+|**OLE_CHANGED_STATE**|OLE-Element wurde von einem Zustand in einen anderen geändert.|  
 |**OLE_CHANGED_ASPECT**|Der OLE-Element zeichnen Aspekt wurde durch das Framework geändert.|  
   
  Diese Werte werden aus der **OLE_NOTIFICATION** -Enumeration, die in AFXOLE definiert ist. H.  
@@ -45,9 +45,9 @@ Dieser Artikel beschreibt die überschreibbaren-Funktionen, die MFC-Framework Ru
   
 |Wenn die erste Argument ist|Zweites argument|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` oder `OLE_CLOSED`|Wird nicht verwendet.|  
-|`OLE_CHANGED`|Gibt den Aspekt des OLE-Elements, das geändert wurde.|  
-|`OLE_CHANGED_STATE`|Beschreibt den Status eingegeben werden (`emptyState`, **LoadedState**, `openState`, `activeState`, oder `activeUIState`).|  
+|**OLE_SAVED** oder **OLE_CLOSED**|Wird nicht verwendet.|  
+|**OLE_CHANGED**|Gibt den Aspekt des OLE-Elements, das geändert wurde.|  
+|**OLE_CHANGED_STATE**|Beschreibt den Status eingegeben werden (*EmptyState*, *LoadedState*, *OpenState*, *ActiveState*, oder  *ActiveUIState*).|  
   
  Weitere Informationen zu den Status einer Clientelement kann davon ausgehen, finden Sie unter [Container: Client-Element-Zustände](../mfc/containers-client-item-states.md).  
   

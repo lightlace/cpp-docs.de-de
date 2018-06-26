@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349998"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930325"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE-Hintergrund: MFC-Implementierung
 Aufgrund der Größe und Komplexität der unformatierten OLE-API kann das Aufrufen dieser zum Schreiben von OLE-Anwendungen direkt sehr zeitaufwändig sein. Das Ziel der Microsoft Foundation Class Library-Implementierung von OLE ist der verbleibende Arbeitsaufwand zu reduzieren, Sie müssen lediglich mit umfassenden, OLE-fähige Anwendungen schreiben können.  
@@ -43,10 +43,10 @@ Aufgrund der Größe und Komplexität der unformatierten OLE-API kann das Aufruf
  Die `IMoniker` Schnittstelle wird von der Klassenbibliothek implementiert (z. B. die `COleServerItem` Klasse), aber für den Programmierer vorher nicht verfügbar gemacht wurde. Weitere Informationen über diese Schnittstelle finden Sie in der OLE-Moniker-Implementierungen in der OLE-Abschnitt des Windows SDK. Siehe jedoch auch Klasse [CMonikerFile](../mfc/reference/cmonikerfile-class.md) und [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
  IUnknown und IMarshal-Schnittstellen  
- Die **IUnknown** Schnittstelle wird von der Klassenbibliothek implementiert, aber nicht für den Programmierer verfügbar gemacht. Die **IMarshal** Schnittstelle ist nicht von der Klassenbibliothek implementiert, jedoch wird intern verwendet. Automatisierungsserver, die bereits mit die Klassenbibliothek erstellt haben, Marshalling-Funktionen.  
+ Die `IUnknown` Schnittstelle wird von der Klassenbibliothek implementiert, aber nicht für den Programmierer verfügbar gemacht. Die `IMarshal` Schnittstelle ist nicht von der Klassenbibliothek implementiert, jedoch wird intern verwendet. Automatisierungsserver, die bereits mit die Klassenbibliothek erstellt haben, Marshalling-Funktionen.  
   
  Docfiles (Verbunddateien)  
- Verbunddateien werden von der Klassenbibliothek teilweise unterstützt. Keine der Funktionen, die direkt Verbunddateien abgesehen von der Erstellung bearbeiten werden unterstützt. MFC verwendet Klasse **COleFileStream** Manipulation von Datenströmen mit standard-Datei-Funktionen zu unterstützen. Weitere Informationen finden Sie im Artikel [Container: Verbunddateien](../mfc/containers-compound-files.md).  
+ Verbunddateien werden von der Klassenbibliothek teilweise unterstützt. Keine der Funktionen, die direkt Verbunddateien abgesehen von der Erstellung bearbeiten werden unterstützt. MFC verwendet Klasse `COleFileStream` Manipulation von Datenströmen mit standard-Datei-Funktionen zu unterstützen. Weitere Informationen finden Sie im Artikel [Container: Verbunddateien](../mfc/containers-compound-files.md).  
   
  In-Process-Servern und Objekthandler  
  In-Process-Servern und Objekthandler können die Implementierung von visual Bearbeiten von Daten oder vollständige Component Object Model (COM)-Objekten in einer Dynamic Link Library (DLL). Zu diesem Zweck können Sie die DLL implementieren, durch die OLE-API direkt aufrufen. Wenn Sie eines Automatisierungsservers schreiben, und der Server keine Benutzeroberfläche hat, Sie können jedoch AppWizard stellen Ihre Server in-Process-Server, und fügen Sie sie vollständig in eine DLL. Weitere Informationen zu diesen Themen finden Sie unter [Automatisierungsserver](../mfc/automation-servers.md).  

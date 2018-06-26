@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349265"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929798"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden
-Eine vordefinierte Methode unterscheidet sich von einer benutzerdefinierten Methode, da er bereits von der Klasse implementiert wird [COleControl](../mfc/reference/colecontrol-class.md). Beispielsweise `COleControl` enthält eine vordefinierte Memberfunktion, die die Aktualisierungsmethode für das Steuerelement unterstützt. Die Dispatch-Eintrag für die Zuordnung für diese vordefinierten Methode ist **DISP_STOCKFUNC_REFRESH**.  
+Eine vordefinierte Methode unterscheidet sich von einer benutzerdefinierten Methode, da er bereits von der Klasse implementiert wird [COleControl](../mfc/reference/colecontrol-class.md). Beispielsweise `COleControl` enthält eine vordefinierte Memberfunktion, die die Aktualisierungsmethode für das Steuerelement unterstützt. Die Dispatch-Eintrag für die Zuordnung für diese vordefinierten Methode lautet DISP_STOCKFUNC_REFRESH.  
   
  `COleControl` unterstützt zwei vordefinierte Methoden: DoClick und aktualisieren. Aktualisierung wird aufgerufen, vom Benutzer des Steuerelements, um die Darstellung des Steuerelements sofort zu aktualisieren. DoClick wird aufgerufen, um auf das Steuerelement ausgelöst Ereignis.  
   
 |Methode|Dispatch-Zuordnungseintrag|Kommentar|  
 |------------|------------------------|-------------|  
 |`DoClick`|**DISP_STOCKPROP_DOCLICK)**|Wird ausgelöst Click-Ereignis aus.|  
-|**Aktualisieren**|**DISP_STOCKPROP_REFRESH)**|Sofort aktualisiert die Darstellung des Steuerelements.|  
+|`Refresh`|**DISP_STOCKPROP_REFRESH)**|Sofort aktualisiert die Darstellung des Steuerelements.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Hinzufügen einer vordefinierten Methode mithilfe der Methode Assistent zum Hinzufügen von  
  Hinzufügen einer vordefinierten Methode ist einfach mithilfe der [Assistenten zum Hinzufügen von Methoden](../ide/add-method-wizard.md). Das folgende Verfahren veranschaulicht das Hinzufügen von die Aktualisierungsmethode an ein Steuerelement mit dem MFC-ActiveX-Steuerelement-Assistenten erstellt.  

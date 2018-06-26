@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355040"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929954"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer
 Dieser Artikel beschreibt den Prozess für den Zugriff auf den verfügbar gemachten [Methoden](../mfc/mfc-activex-controls-methods.md) und [Eigenschaften](../mfc/mfc-activex-controls-properties.md) von eingebetteten ActiveX-Steuerelementen. Im Wesentlichen müssen Sie die folgenden Schritte ausführen:  
@@ -76,7 +76,7 @@ Dieser Artikel beschreibt den Prozess für den Zugriff auf den verfügbar gemach
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Member Variable Änderungen am Projekt  
  Sobald das ActiveX-Steuerelement dem Projekt hinzugefügt und in einem Dialogfeld Feld Container eingebettet wurde, kann es von anderen Teilen des Projekts zugegriffen werden. Die einfachste Möglichkeit zum Zugriff auf das Steuerelement entspricht [erstellen Sie eine Membervariable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) der Dialogklasse, `CContainerDlg` (Schritt 2), d. h. den gleichen Typ aufweisen wie die Wrapperklasse, die dem Projekt hinzugefügt, die von Visual C++. Sie können die Membervariable klicken Sie dann auf das eingebettete Steuerelement zu einem beliebigen Zeitpunkt verwenden.  
   
- Wenn die **Hinzufügen von Membervariablen** das Dialogfeld fügt die `m_circctl` Member-Variable auf das Projekt ist, werden außerdem hinzugefügt, die folgenden Zeilen der Headerdatei (. H) von der `CContainerDlg` Klasse:  
+ Wenn die **Hinzufügen von Membervariablen** das Dialogfeld fügt die *M_circctl* Member-Variable auf das Projekt ist, werden außerdem hinzugefügt, die folgenden Zeilen der Headerdatei (. H) von der `CContainerDlg` Klasse:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ Dieser Artikel beschreibt den Prozess für den Zugriff auf den verfügbar gemach
   
  So ändern Sie die Eigenschaften des Steuerelements wird häufig den `OnInitDialog` Memberfunktion der Hauptdialogfeld-Klasse. Diese Funktion wird aufgerufen, kurz bevor das Dialogfeld wird angezeigt und verwendet wird, um seinen Inhalt, einschließlich aller seiner Steuerelemente zu initialisieren.  
   
- Im folgenden Codebeispiel wird mit der `m_circctl` Membervariable beim Ändern der Beschriftung und CircleShape Eigenschaften des eingebetteten Circ Steuerelements:  
+ Im folgenden Codebeispiel wird mit der *M_circctl* Membervariable beim Ändern der Beschriftung und CircleShape Eigenschaften des eingebetteten Circ Steuerelements:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

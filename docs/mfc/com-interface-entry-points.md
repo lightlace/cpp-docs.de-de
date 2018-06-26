@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341410"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929886"
 ---
 # <a name="com-interface-entry-points"></a>Einstiegspunkte für COM-Schnittstellen
 Verwenden Sie die Memberfunktionen einer COM-Schnittstelle, die [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) Makro, um den richtigen globalen Status beizubehalten, beim Aufrufen von Methoden einer exportierten Schnittstelle.  
@@ -33,7 +33,7 @@ Verwenden Sie die Memberfunktionen einer COM-Schnittstelle, die [METHOD_PROLOGUE
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- Weitere Informationen finden Sie unter [technischen Hinweis 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) auf MFC/OLE **IUnknown** Implementierung.  
+ Weitere Informationen finden Sie unter [technischen Hinweis 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) auf MFC/OLE `IUnknown` Implementierung.  
   
  Die `METHOD_PROLOGUE` -Makro wird definiert als:  
   

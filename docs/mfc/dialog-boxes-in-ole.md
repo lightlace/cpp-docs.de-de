@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347840"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929662"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogfelder in OLE
 Während ein Benutzer eine OLE-fähige Anwendung ausgeführt wird, stehen die Zeiten, wenn die Anwendung Informationen vom Benutzer benötigt, um den Vorgang durchzuführen. Die MFC-OLE-Klassen bieten eine Reihe von Dialogfeldern, um die erforderlichen Informationen zu sammeln. Dieses Thema listet die Aufgaben, die von der OLE-Dialogfelder behandelt und den Klassen erforderlich, um diese Dialogfelder angezeigt. Weitere Informationen zu OLE-Dialogfelder und die Strukturen verwendet, um ihr Verhalten anzupassen, finden Sie unter [MFC-Referenz](../mfc/mfc-desktop-applications.md).  
@@ -46,7 +46,7 @@ Während ein Benutzer eine OLE-fähige Anwendung ausgeführt wird, stehen die Ze
  Das Dialogfeld "Verknüpfungen bearbeiten" ermöglicht des Benutzers Informationen über die Quelle eines verknüpften Objekts ändern. Das Dialogfeld Update Links überprüft die Quellen für die verknüpften Elemente im aktuellen Dialogfeld und zeigt das Dialogfeld "Verknüpfungen bearbeiten" an, falls erforderlich. Das Dialogfeld "Verknüpfungen bearbeiten" angezeigt, wenn Benutzer Verknüpfungen aus dem Menü Bearbeiten. Das Dialogfeld Update Links wird in der Regel angezeigt, wenn ein Verbunddokument erstmalig geöffnet wird. Verwenden Sie entweder die [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) oder [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) Klasse, abhängig vom Dialogfeld, das Sie anzeigen möchten.  
   
  *Server ist ausgelastet oder Server reagiert nicht*  
- Das Dialogfeld "Server ausgelastet" wird angezeigt, wenn der Benutzer versucht, ein Element zu aktivieren, und der Server momentan nicht ist auf die Anforderung behandelt, in der Regel verwendet werden, da der Server ist von einem anderen Benutzer verwendet oder Aufgabe. Der Server antwortet nicht-Dialogfeld wird angezeigt, wenn der Server nicht auf die Aktivierungsanfrage überhaupt reagiert. Diese Dialogfelder werden angezeigt, über `COleMessageFilter`basierend auf einer Implementierung der OLE-Schnittstelle **IMessageFilter**, und der Benutzer kann entscheiden, ob die Aktivierungsanfrage erneut zu versuchen. Verwenden der [COleBusyDialog](../mfc/reference/colebusydialog-class.md) Klasse, um das Dialogfeld anzuzeigen.  
+ Das Dialogfeld "Server ausgelastet" wird angezeigt, wenn der Benutzer versucht, ein Element zu aktivieren, und der Server momentan nicht ist auf die Anforderung behandelt, in der Regel verwendet werden, da der Server ist von einem anderen Benutzer verwendet oder Aufgabe. Der Server antwortet nicht-Dialogfeld wird angezeigt, wenn der Server nicht auf die Aktivierungsanfrage überhaupt reagiert. Diese Dialogfelder werden angezeigt, über `COleMessageFilter`basierend auf einer Implementierung der OLE-Schnittstelle `IMessageFilter`, und der Benutzer kann entscheiden, ob die Aktivierungsanfrage erneut zu versuchen. Verwenden der [COleBusyDialog](../mfc/reference/colebusydialog-class.md) Klasse, um das Dialogfeld anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dialogfelder](../mfc/dialog-boxes.md)   

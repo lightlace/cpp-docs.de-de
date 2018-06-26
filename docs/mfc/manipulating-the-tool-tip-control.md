@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346437"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929827"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Bearbeiten des QuickInfo-Steuerelements
 Klasse `CToolTipCtrl` bietet eine Gruppe von Member Funktionen, die die verschiedenen Attribute steuern die `CToolTipCtrl` Objekt und das QuickInfo-Fenster.  
@@ -37,7 +37,7 @@ Klasse `CToolTipCtrl` bietet eine Gruppe von Member Funktionen, die die verschie
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) und [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) ab oder legt die Textfarbe des Tools QuickInfo-Fensters.  
   
- In der Reihenfolge für das QuickInfo-Steuerelement von wichtige Nachrichten benachrichtigt werden, z. B. **WM_LBUTTONXXX** Nachrichten, Sie müssen die Nachrichten weiterleiten, um die QuickInfo-Steuerelement. Die beste Methode für dieses Relay wird, um einen Aufruf an [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)in die `PreTranslateMessage` Funktion des Besitzerfensters. Das folgende Beispiel veranschaulicht eine mögliche Methode (vorausgesetzt, das QuickInfo-Steuerelement heißt `m_ToolTip`):  
+ In der Reihenfolge für das QuickInfo-Steuerelement wichtige Nachrichten, z. B. WM_LBUTTONXXX-Nachrichten benachrichtigt werden müssen Sie die Nachrichten, die QuickInfo-Steuerelement leiten. Die beste Methode für dieses Relay wird, um einen Aufruf an [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)in die `PreTranslateMessage` Funktion des Besitzerfensters. Das folgende Beispiel veranschaulicht eine mögliche Methode (vorausgesetzt, das QuickInfo-Steuerelement heißt `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

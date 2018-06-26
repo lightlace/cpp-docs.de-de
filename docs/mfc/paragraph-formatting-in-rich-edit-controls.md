@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 113d47a88f0de7ddd12f474678705688569ad50d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9417fe9bab9b1fca8ec8292e27efc02afec5511c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348116"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929146"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Formatieren von Absätzen in RichEdit-Steuerelementen
 Können Sie Memberfunktionen des rich-Edit-Steuerelements ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) zum Formatieren von Absätzen und Formatierungsinformationen abzurufen. Absatz Formatierungsattribute einschließen Ausrichtung, Registerkarten, Einzüge und Nummerierung  
   
- Sie können mithilfe von Formatieren von Absätzen Anwenden der [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) Memberfunktion. Verwenden Sie zum Bestimmen der aktuellen für den ausgewählten Text Formatieren von Absätzen der [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) Memberfunktion. Die [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) Struktur wird mit diesen Memberfunktionen verwendet, um Absatzattribute angeben. Eine der wichtigen Member der **PARAFORMAT** ist **DwMask**. In `SetParaFormat`, **DwMask** gibt an, welche Absatzattribute durch Aufrufen der Funktion festgelegt werden. `GetParaFormat` meldet die Attribute aus dem ersten Absatz in der Auswahl. **DwMask** gibt die Attribute, die gesamte Auswahl konsistent sind.  
+ Sie können mithilfe von Formatieren von Absätzen Anwenden der [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) Memberfunktion. Verwenden Sie zum Bestimmen der aktuellen für den ausgewählten Text Formatieren von Absätzen der [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) Memberfunktion. Die [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) Struktur wird mit diesen Memberfunktionen verwendet, um Absatzattribute angeben. Eine der wichtigen Member der **PARAFORMAT** ist *DwMask*. In `SetParaFormat`, *DwMask* gibt an, welche Absatzattribute durch Aufrufen der Funktion festgelegt werden. `GetParaFormat` meldet die Attribute aus dem ersten Absatz in der Auswahl. *DwMask* gibt die Attribute, die gesamte Auswahl konsistent sind.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   

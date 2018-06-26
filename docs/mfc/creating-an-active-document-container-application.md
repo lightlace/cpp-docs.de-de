@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341348"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929444"
 ---
 # <a name="creating-an-active-document-container-application"></a>Erstellen einer Containeranwendung für aktive Dokumente
 Die einfachste und die empfohlene Methode zum Erstellen einer containeranwendung für aktive Dokument besteht darin, eine MFC-EXE-Container-Anwendung mit dem MFC-Anwendung-Assistenten erstellen, und ändern die Anwendung zur Unterstützung von active Document-Container.  
@@ -36,7 +36,7 @@ Die einfachste und die empfohlene Methode zum Erstellen einer containeranwendung
   
 3.  Wählen Sie **MFC-Anwendung** aus dem rechten Bereich.  
   
-4.  Nennen Sie das Projekt `MyProj`, klicken Sie auf **OK**.  
+4.  Nennen Sie das Projekt *MyProj*, klicken Sie auf **OK**.  
   
 5.  Wählen Sie die **Verbunddokumente** Seite.  
   
@@ -48,9 +48,9 @@ Die einfachste und die empfohlene Methode zum Erstellen einer containeranwendung
   
 9. Öffnen Sie die folgenden Dateien, die mit dem Projektmappen-Explorer, Beendigung des MFC-Assistenten zum Generieren der Anwendung:  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. Nehmen Sie in MyProjview.cpp die folgenden Änderungen:  
+10. In *MyProjview.cpp*, nehmen Sie die folgenden Änderungen:  
   
     -   In `CMyProjView::OnPreparePrinting`, ersetzen Sie den Inhalt für die Funktion, durch den folgenden Code:  
   

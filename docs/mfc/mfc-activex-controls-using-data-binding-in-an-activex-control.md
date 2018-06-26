@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353272"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929730"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 Einer der leistungsfähigeren von ActiveX-Steuerelementen ist Datenbindung, wodurch eine Eigenschaft des Steuerelements an ein bestimmtes Feld in einer Datenbank gebunden werden soll. Wenn ein Benutzer Daten in dieser gebundenen Eigenschaft ändert, benachrichtigt das Steuerelement an die Datenbank und fordert an, dass der Datensatz das Feld aktualisiert werden. Anschließend benachrichtigt die Datenbank, die Kontrolle über den Erfolg oder Fehler der Anforderung.  
@@ -51,7 +51,7 @@ Konzeptionelles Diagramm eines datengebundenen Steuerelements
  Es ist möglich, eine datengebundene-Systemeigenschaft erstellen, obwohl es wahrscheinlicher ist, Sie sollten eine [bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Vordefinierte Eigenschaften haben die **bindbare** und **Requestedit** Attribute standardmäßig.  
+>  Vordefinierte Eigenschaften haben die `bindable` und `requestedit` Attribute standardmäßig.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>So fügen Sie eine bindbare Systemeigenschaft mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzu  
   

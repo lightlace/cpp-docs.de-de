@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d9e21589fde2ff53d56908342620fe23aca5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348061"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931709"
 ---
 # <a name="ready-to-use-map-classes"></a>Gebrauchsfertige Zuordnungsklassen
 Die folgenden Klassen sind Zuordnungsklassen Ready to Use an.  
   
  [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- Verwendet `void` Zeigern als Schlüssel für die Suche nach anderen `void` Zeiger.  
+ Verwendet **"void"** Zeigern als Schlüssel für die Suche nach anderen **"void"** Zeiger.  
   
  [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- Verwendet `void` Zeigern als Schlüssel zum Suchen von Daten vom Typ **WORD**.  
+ Verwendet **"void"** Zeigern als Schlüssel zum Suchen von Daten vom Typ **WORD**.  
   
  [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
  Verwendet `CString` Objekte als Schlüssel zum Auffinden von `CObject` Zeiger.  
   
  [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- Verwendet `CString` Objekte als Schlüssel zum Auffinden von `void` Zeiger.  
+ Verwendet `CString` Objekte als Schlüssel zum Auffinden von **"void"** Zeiger.  
   
  [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
  Verwendet `CString` Objekte als Schlüssel für die Suche nach anderen `CString` Objekte.  
@@ -47,7 +47,7 @@ Die folgenden Klassen sind Zuordnungsklassen Ready to Use an.
  Wird verwendet, Daten vom Typ **WORD** gefunden `CObject` Zeiger.  
   
  [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- Wird verwendet, Daten vom Typ **WORD** gefunden `void` Zeiger.  
+ Wird verwendet, Daten vom Typ **WORD** gefunden **"void"** Zeiger.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../mfc/class-library-overview.md)

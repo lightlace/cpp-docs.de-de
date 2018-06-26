@@ -24,29 +24,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80fefde054ed411dcb30836b2b89cef89cc54e64
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349712"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928793"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Empfangen von Benachrichtigungen von Standardsteuerelementen
 Allgemeine Steuerelemente sind untergeordnete Fenster, die benachrichtigungsmeldungen an das übergeordnete Fenster zu senden, wenn Ereignisse, wie Eingaben des Benutzers im Steuerelement auftreten.  
   
- Die Anwendung verwendet diese benachrichtigungsmeldungen, um zu bestimmen, welche Aktion der Benutzer es durchführen möchte. Am häufigsten verwendeten Steuerelemente Senden von benachrichtigungsmeldungen als **WM_NOTIFY** Nachrichten. Windows-Steuerelemente senden, als die meisten benachrichtigungsmeldungen **WM_COMMAND** Nachrichten. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) ist der Handler für das **WM_NOTIFY** Nachricht. Wie bei `CWnd::OnCommand`, die Implementierung von `OnNotify` verteilt die Benachrichtigung `OnCmdMsg` für die Behandlung in meldungszuordnungen. Der meldungszuordnung Eintrag für die Verarbeitung von Benachrichtigungen ist `ON_NOTIFY`. Weitere Informationen finden Sie unter [technischen Hinweis 61: ON_NOTIFY- und WM_NOTIFY-Meldungen](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
+ Die Anwendung verwendet diese benachrichtigungsmeldungen, um zu bestimmen, welche Aktion der Benutzer es durchführen möchte. Am häufigsten verwendeten Steuerelemente werden benachrichtigungsmeldungen als WM_NOTIFY-Meldungen senden. Windows-Steuerelemente werden die meisten benachrichtigungsmeldungen als WM_COMMAND-Meldungen senden. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) ist der Handler für die WM_NOTIFY-Meldung. Wie bei `CWnd::OnCommand`, die Implementierung von `OnNotify` verteilt die Benachrichtigung `OnCmdMsg` für die Behandlung in meldungszuordnungen. Die Meldungszuordnungseintrags für die Verarbeitung von Benachrichtigungen ist ON_NOTIFY. Weitere Informationen finden Sie unter [technischen Hinweis 61: ON_NOTIFY- und WM_NOTIFY-Meldungen](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
   
  Alternativ können Sie behandeln eine abgeleitete Klasse einen eigenen benachrichtigungsmeldungen mithilfe von "Meldungsreflektion." Weitere Informationen finden Sie unter [technischen Hinweis 62: Meldung Reflektion für Windows-Steuerelemente](../mfc/tn062-message-reflection-for-windows-controls.md).  
   
 ## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Abrufen der Cursorposition in einer Benachrichtigung  
- In manchen Fällen ist es hilfreich, die die aktuelle Position des Cursors ermitteln, wenn bestimmte benachrichtigungsmeldungen von eines allgemeinen Steuerelements empfangen werden. Beispielsweise wäre es hilfreich, die zur aktuellen Cursorposition zu bestimmen, wann ein allgemeinen Steuerelements empfängt eine **NM_RCLICK** benachrichtigungsmeldung.  
+ In manchen Fällen ist es hilfreich, die die aktuelle Position des Cursors ermitteln, wenn bestimmte benachrichtigungsmeldungen von eines allgemeinen Steuerelements empfangen werden. Beispielsweise wäre es hilfreich, die zur aktuellen Cursorposition zu bestimmen, wann ein allgemeines Steuerelement eine NM_RCLICK-Benachrichtigung erhält.  
   
- Es ist eine einfache Möglichkeit hierzu durch Aufrufen von `CWnd::GetCurrentMessage`. Allerdings ruft diese Methode nur die Cursorposition ab, zu dem Zeitpunkt, der die Nachricht gesendet wurde. Da der Cursor verschoben wurde, da die Nachricht gesendet wurde, rufen Sie **GetCursorPos** zum Abrufen der aktuellen Cursorposition.  
+ Es ist eine einfache Möglichkeit hierzu durch Aufrufen von `CWnd::GetCurrentMessage`. Allerdings ruft diese Methode nur die Cursorposition ab, zu dem Zeitpunkt, der die Nachricht gesendet wurde. Da der Cursor verschoben wurde, da die Nachricht gesendet wurde, rufen Sie `CWnd::GetCursorPos` zum Abrufen der aktuellen Cursorposition.  
   
 > [!NOTE]
 >  `CWnd::GetCurrentMessage` sollte nur in Message-Handler aufgerufen werden.  
   
- Fügen Sie den folgenden Code in den Text der Benachrichtigung Message-Handler (in diesem Beispiel **NM_RCLICK**):  
+ Fügen Sie den folgenden Code in den Text der Benachrichtigung-Message-Handler (in diesem Beispiel NM_RCLICK):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]  
   

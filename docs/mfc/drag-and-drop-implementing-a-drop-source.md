@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345611"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928979"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Drag & Drop: Implementieren einer Drag & Drop-Quelle
 In diesem Artikel wird erläutert, wie Ihre Anwendung zum Bereitstellen eines Drag & Drop-Vorgangs zu machen.  
   
- Grundlegende Implementierung einer Drop-Quelle ist relativ einfach. Der erste Schritt besteht, um zu bestimmen, welche Ereignisse Einleiten eines Ziehvorgangs. Empfohlene Richtlinien zur Benutzeroberfläche der Anfang eines Ziehvorgangs als die Auswahl der Daten definieren und ein `WM_LBUTTONDOWN` Ereignis auf einen Punkt innerhalb der ausgewählten Daten auftreten. MFC-OLE-Beispielen [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md) gelten folgende Richtlinien.  
+ Grundlegende Implementierung einer Drop-Quelle ist relativ einfach. Der erste Schritt besteht, um zu bestimmen, welche Ereignisse Einleiten eines Ziehvorgangs. Empfohlene Richtlinien zur Benutzeroberfläche der Anfang eines Ziehvorgangs als die Auswahl der Daten definieren und eine **WM_LBUTTONDOWN** Ereignis auf einen Punkt innerhalb der ausgewählten Daten auftreten. MFC-OLE-Beispielen [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md) gelten folgende Richtlinien.  
   
  Wenn Ihre Anwendung ein Container ist, und die ausgewählten Daten ein verknüpftes oder ein eingebettetes Objekt des Typs ist `COleClientItem`, rufen Sie die `DoDragDrop` Memberfunktion. Erstellen Sie andernfalls eine `COleDataSource` -Objekt, initialisieren Sie es mit der Auswahl und rufen Sie des Datenquellenobjekts `DoDragDrop` Memberfunktion. Wenn Ihre Anwendung auf einem Server ist, verwenden `COleServerItem::DoDragDrop`. Informationen zum Anpassen von standard-Drag & Drop-Verhalten, finden Sie im Artikel [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md).  
   
- Wenn `DoDragDrop` gibt `DROPEFFECT_MOVE`, löschen Sie die Quelldaten sofort aus dem Quelldokument. Keine andere Rückgabewert `DoDragDrop` hat keine Auswirkung auf eine Drop-Quelle.  
+ Wenn `DoDragDrop` gibt **den Wert DROPEFFECT_MOVE**, löschen Sie die Quelldaten sofort aus dem Quelldokument. Keine andere Rückgabewert `DoDragDrop` hat keine Auswirkung auf eine Drop-Quelle.  
   
  Weitere Informationen finden Sie unter:  
   

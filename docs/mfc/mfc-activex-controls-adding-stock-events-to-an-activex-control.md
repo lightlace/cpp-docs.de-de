@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359337"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930786"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement
-Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen, insofern, dass sie automatisch von-Klasse ausgelöst wurden [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` enthält vordefinierte Memberfunktionen, die häufig verwendete Aktionen infolge Ereignisse ausgelöst werden. Einige häufig verwendete Aktionen von implementiert `COleControl` enthalten einzelne - und double - clicks auf das Steuerelement, Tastaturereignisse und Änderungen in den Zustand der Maustasten. Ereignis-Zuordnungseinträge für vordefinierte Ereignisse immer vorangestellt werden die **EVENT_STOCK** Präfix.  
+Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen, insofern, dass sie automatisch von-Klasse ausgelöst wurden [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` enthält vordefinierte Memberfunktionen, die häufig verwendete Aktionen infolge Ereignisse ausgelöst werden. Einige häufig verwendete Aktionen von implementiert `COleControl` enthalten einzelne - und double - clicks auf das Steuerelement, Tastaturereignisse und Änderungen in den Zustand der Maustasten. Ereignis ordnen Sie Einträge für vordefinierte Ereignisse immer EVENT_STOCK-Präfix vorangestellt sind.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> Vordefinierte Ereignisse, die von unterstützt die Ereignis-Assistent zum Hinzufügen von  
  Die `COleControl` Klasse enthält zehn vordefinierte Ereignisse, die in der folgenden Tabelle aufgeführt. Sie können angeben, dass die Ereignisse in Ihrer Steuerelement mit der [Assistenten zum Hinzufügen von Ereignis](../ide/add-event-wizard.md).  
@@ -76,7 +76,7 @@ Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen,
 |KeyPress|**"void" FireKeyPress (kurze\***`pnChar`**)** |Wird ausgelöst, wenn eine `WM_CHAR` Nachricht empfangen wird.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_KEYPRESS)**|  
 |KeyUp|**"void" FireKeyUp (kurze** `nChar` **, short**`nShiftState`**)** |Wird ausgelöst, wenn eine `WM_SYSKEYUP` oder `WM_KEYUP` Nachricht empfangen wird.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_KEYUP)**|  
 |MouseDown|**"void" FireMouseDown (kurze** `nButton` **, short** `nShiftState` **, "float"***x* **, "float"** *y***)** |Wird ausgelöst, wenn alle **BUTTONDOWN** (links, zentriert oder rechts) empfangen wird. Unmittelbar vor dem Ausführen dieses Ereignis ausgelöst wird, wird die Maus erfasst.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_MOUSEDOWN)**|  
-|MouseMove|**"void" FireMouseMove (kurze** `nButton` **, short** `nShiftState` **, "float"***x* **, "float"** *y***)** |Wird ausgelöst, wenn eine `WM_MOUSEMOVE` Nachricht empfangen wird.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_MOUSEMOVE)**|  
+|MouseMove|**"void" FireMouseMove (kurze** `nButton` **, short** `nShiftState` **, "float"***x* **, "float"** *y***)** |Wird ausgelöst, wenn eine WM_MOUSEMOVE-Meldung empfangen wird.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_MOUSEMOVE)**|  
 |MouseUp|**"void" FireMouseUp (kurze** `nButton` **, short** `nShiftState` **, "float"***x* **, "float"** *y***)** |Wird ausgelöst, wenn alle **BUTTONUP** (links, zentriert oder rechts) empfangen wird. Das Erfassen von Mauseingaben wird freigegeben, bevor Sie dieses Ereignis ausgelöst wird.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**"void" FireReadyStateChange)**|Wird ausgelöst, wenn der Übergang eines Steuerelement zum nächsten Zustand "bereit" aufgrund des Umfangs der Daten empfangen wurde.<br /><br /> Eintrag für die Zuordnung: **EVENT_STOCK_READYSTATECHANGE)**|  
   
@@ -102,7 +102,7 @@ Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen,
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- Hinzufügen dieses Codes wird eine KeyPress-Ereignis ausgelöst, wenn eine `WM_CHAR` Nachricht empfangen wird und das Steuerelement aktiv ist. Das KeyPress-Ereignis kann zu anderen Zeiten durch Aufrufen der Funktion Auslösen von Ereignissen ausgelöst werden (z. B. `FireKeyPress`) von innerhalb der Steuerungscode.  
+ Durch diesen Code löst eine KeyPress-Ereignis, wenn eine WM_CHAR-Nachricht empfangen wird und das Steuerelement aktiv ist. Das KeyPress-Ereignis kann zu anderen Zeiten durch Aufrufen der Funktion Auslösen von Ereignissen ausgelöst werden (z. B. `FireKeyPress`) von innerhalb der Steuerungscode.  
   
  Den Assistenten zum Hinzufügen hinzugefügt des Steuerelements die folgende Codezeile. IDL-Datei:  
   
@@ -111,6 +111,6 @@ Vordefinierte Ereignisse unterscheiden sich von benutzerdefinierten Ereignissen,
  Diese Zeile ordnet das KeyPress-Ereignis mit der standardmäßigen Dispatch-ID und der Container kann das KeyPress-Ereignis zu erwarten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [MFC-ActiveX-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
  [COleControl-Klasse](../mfc/reference/colecontrol-class.md)

@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343255"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932233"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Ausnahmen: Untersuchen von Ausnahmeinhalten
 Obwohl eine **catch** des Blocks-Argument des fast jeden Datentyps sein, die MFC-Funktionen Ausnahmen von Typen, die von der Klasse abgeleitet `CException`. Um eine von einer MFC-Funktion ausgelöste Ausnahme abzufangen, klicken Sie dann, Sie schreiben eine **catch** blockieren, deren Argument ein Zeiger ist, auf eine `CException` Objekt (oder ein Objekt abgeleitet `CException`, wie z. B. `CMemoryException`). Untersuchen Sie je nach den genauen Typ der Ausnahme die Datenmember des Ausnahmeobjekts, um Informationen über die Ursache der Ausnahme zu erfassen.  
   
- Z. B. die `CFileException` Typ verfügt über die `m_cause` Datenmember, die einen enumerierten Typ enthält, der die Ursache der Ausnahme Datei angibt. Einige Beispiele für die möglichen Rückgabewerte sind **CFileException:: FileNotFound** und **CFileException:: ReadOnly**.  
+ Z. B. die `CFileException` Typ verfügt über die `m_cause` Datenmember, die einen enumerierten Typ enthält, der die Ursache der Ausnahme Datei angibt. Einige Beispiele für die möglichen Rückgabewerte sind `CFileException::fileNotFound` und `CFileException::readOnly`.  
   
  Im folgende Beispiel wird gezeigt, wie auf den Inhalt untersuchen eine `CFileException`. Andere Ausnahmetypen können auf ähnliche Weise untersucht werden.  
   

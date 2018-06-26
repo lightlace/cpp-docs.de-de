@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351649"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928996"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Gewusst wie: Umwandeln eines vorhandenen MFC-Menübands in eine Menübandressource
 Menübandressourcen sind einfacher zu visualisieren, ändern und als manuell codierten Menübänder verwalten. In diesem Thema wird beschrieben, wie ein manuell codiertes Menüband in einem MFC-Projekt in eine menübandressource konvertieren.  
@@ -29,7 +29,7 @@ Menübandressourcen sind einfacher zu visualisieren, ändern und als manuell cod
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Eine MFC-Menübands in eine menübandressource konvertieren  
   
-1.  Öffnen Sie in Visual Studio in einem vorhandenen MFC-Projekt die Quelldatei, in dem das Objekt CMFCRibbonBar initialisiert wird. In der Regel ist die Datei "MainFrm.cpp". Fügen Sie den folgenden Code nach der Initialisierungscode für das Menüband aus.  
+1.  Öffnen Sie in Visual Studio in einem vorhandenen MFC-Projekt die Quelldatei, in denen die `CMFCRibbonBar` -Objekt initialisiert wird. In der Regel ist die Datei "MainFrm.cpp". Fügen Sie den folgenden Code nach der Initialisierungscode für das Menüband aus.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

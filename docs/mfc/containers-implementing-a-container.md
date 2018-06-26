@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342829"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930074"
 ---
 # <a name="containers-implementing-a-container"></a>Container: Implementieren eines Containers
 In diesem Artikel werden die Verfahren zum Implementieren eines Containers zusammengefasst und verweist auf die anderen Artikeln, die ausführlichere erläuterungen zum Implementieren von Containern enthalten. Außerdem werden einige optionale OLE-Funktionen, die Sie implementieren möchten, und die Artikel beschreiben diese Funktionen aufgeführt.  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>So bereiten Sie Ihre CWinApp abgeleitete Klasse vor  
   
-1.  Initialisieren die OLE-Bibliotheken durch Aufrufen von **AfxOleInit** in die `InitInstance` Memberfunktion.  
+1.  Initialisieren die OLE-Bibliotheken durch Aufrufen von `AfxOleInit` in die `InitInstance` Memberfunktion.  
   
 2.  Rufen Sie `CDocTemplate::SetContainerInfo` in `InitInstance` zur Zuweisung des Menü und der Zugriffstaste Ressourcen verwendet, wenn ein eingebettetes Element direktes aktiviert. Weitere Informationen zu diesem Thema finden Sie unter [Aktivierung](../mfc/activation-cpp.md).  
   
@@ -39,7 +39,7 @@ In diesem Artikel werden die Verfahren zum Implementieren eines Containers zusam
   
 2.  Überschreiben Sie `IsSelected` zu überprüfen, ob das übergebene Element derzeit ausgewählt ist.  
   
-3.  Implementieren einer **OnInsertObject** Message-Handler zum Anzeigen der **Objekt einfügen** (Dialogfeld).  
+3.  Implementieren einer `OnInsertObject` Message-Handler zum Anzeigen der **Objekt einfügen** (Dialogfeld).  
   
 4.  Implementieren einer `OnSetFocus` Message-Handler, an den Fokus aus der Ansicht um eine direkte aktive OLE übertragen eingebettet Element.  
   
@@ -51,9 +51,9 @@ In diesem Artikel werden die Verfahren zum Implementieren eines Containers zusam
   
 1.  Leiten Sie eine Klasse von [COleClientItem](../mfc/reference/coleclientitem-class.md). Objekte dieser Klasse dargestellt, Elemente, die in eingebettet oder in Ihr Dokument OLE verknüpft wurden.  
   
-2.  Überschreiben Sie **OnChange**, `OnChangeItemPosition`, und `OnGetItemPosition`. Diese Funktionen behandeln, Größe und Positionierung eingebettete und verknüpfte Elemente ändern.  
+2.  Überschreiben Sie `OnChange`, `OnChangeItemPosition`, und `OnGetItemPosition`. Diese Funktionen behandeln, Größe und Positionierung eingebettete und verknüpfte Elemente ändern.  
   
- Der Anwendungs-Assistent wird zum Ableiten der Klasse für Sie, aber Sie müssen wahrscheinlich überschreiben **OnChange** und die andere Funktionen, die mit ihm in Schritt 2 in der vorherigen Prozedur aufgeführt. Das Gerüst eines Implementierungen müssen für die meisten Anwendungen angepasst werden, da diese Funktionen aus einer Anwendung in der nächsten auf andere Weise implementiert werden. Beispiele hierzu finden Sie unter MFC-Beispiele [DRAWCLI](../visual-cpp-samples.md) und [CONTAINER](../visual-cpp-samples.md).  
+ Der Anwendungs-Assistent wird zum Ableiten der Klasse für Sie, aber Sie müssen wahrscheinlich überschreiben `OnChange` und die andere Funktionen, die mit ihm in Schritt 2 in der vorherigen Prozedur aufgeführt. Das Gerüst eines Implementierungen müssen für die meisten Anwendungen angepasst werden, da diese Funktionen aus einer Anwendung in der nächsten auf andere Weise implementiert werden. Beispiele hierzu finden Sie unter MFC-Beispiele [DRAWCLI](../visual-cpp-samples.md) und [CONTAINER](../visual-cpp-samples.md).  
   
  Sie müssen die containeranwendung Menüstruktur zur Unterstützung von OLE eine Anzahl von Elementen hinzufügen. Weitere Informationen dazu finden Sie unter [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).  
   

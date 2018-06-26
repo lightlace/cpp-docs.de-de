@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360965"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929227"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementieren der MFC-Symbolleiste
 Eine Symbolleiste ist eine [Steuerleiste](../mfc/control-bars.md) , die die Bitmapbilder von Steuerelementen enthält. Diese Bilder können sich wie Druckknöpfe, Kontrollkästchen oder Optionsfelder verhalten. MFC stellt die Klasse [CToolbar](../mfc/reference/ctoolbar-class.md) Symbolleisten zu verwalten.  
@@ -44,7 +44,7 @@ Eine Symbolleiste ist eine [Steuerleiste](../mfc/control-bars.md) , die die Bitm
 > [!NOTE]
 >  Ab MFC 4.0 werden Symbolleisten und QuickInfo mit der Funktionalität von Windows 95 und höher anstelle der vorherigen, MFC-spezifischen Implementierung implementiert.  
   
- Für die Abwärtskompatibilität behält MFC die ältere symbolleistenimplementierung in Klasse **COldToolBar**. Die Dokumentation für frühere Versionen von MFC beschrieben **COldToolBar** unter `CToolBar`.  
+ Für die Abwärtskompatibilität behält MFC die ältere symbolleistenimplementierung in Klasse `COldToolBar`. Die Dokumentation für frühere Versionen von MFC beschrieben `COldToolBar` unter `CToolBar`.  
   
  Erstellen Sie die erste Symbolleiste im Programm, indem Sie die Symbolleistenoption im Anwendungs-Assistenten auswählen. Sie können auch weitere Symbolleisten erstellen.  
   

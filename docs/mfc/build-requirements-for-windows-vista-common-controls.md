@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342159"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930975"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
 Die Microsoft Foundation Class (MFC)-Bibliothek unterstützt allgemeine Windows-Steuerelemente, Version 6.1. Allgemeine Steuerelemente sind in enthalten [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] und in die Bibliothek enthalten die [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Die Bibliothek stellt neue Methoden, die Verbesserung der vorhandenen Klassen und neue Klassen und Methoden, die unterstützen [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] allgemeine Steuerelemente. Wenn Sie eine Anwendung erstellen, sollten Sie die Kompilierung und die Migration Anforderungen befolgen, die in den folgenden Abschnitten beschrieben werden.  
@@ -44,7 +44,7 @@ Die Microsoft Foundation Class (MFC)-Bibliothek unterstützt allgemeine Windows-
  Die ANSI-Version von mehreren MFC-Methoden sind veraltet allgemeine Windows-Steuerelemente, Version 6.1 ab. Weitere Informationen finden Sie unter [ANSI-APIs veraltet](../mfc/deprecated-ansi-apis.md).  
   
 ## <a name="migration-requirements"></a>Migrationsanforderungen  
- Wenn Sie Visual Studio-IDE verwenden, um eine neue MFC-Anwendung zu erstellen, die allgemeine Windows-Steuerelemente, Version 6.1 verwendet, deklariert die IDE automatisch eine entsprechende Manifest. Jedoch wenn Sie eine vorhandene MFC-Anwendung von einer früheren Version von Visual Studio migrieren und die neuen Standardsteuerelemente verwenden möchten, bietet die IDE automatisch Manifestinformationen zum Aktualisieren der Anwendungsstatus keine. Stattdessen müssen Sie manuell den folgenden Quellcode in der Datei "stdafx.h" einfügen:  
+ Wenn Sie Visual Studio-IDE verwenden, um eine neue MFC-Anwendung zu erstellen, die allgemeine Windows-Steuerelemente, Version 6.1 verwendet, deklariert die IDE automatisch eine entsprechende Manifest. Jedoch wenn Sie eine vorhandene MFC-Anwendung von einer früheren Version von Visual Studio migrieren und die neuen Standardsteuerelemente verwenden möchten, bietet die IDE automatisch Manifestinformationen zum Aktualisieren der Anwendungsstatus keine. Stattdessen müssen Sie manuell in den folgenden Quellcode einfügen Ihrer **"stdafx.h"** Datei:  
   
 ```  
 #ifdef UNICODE  

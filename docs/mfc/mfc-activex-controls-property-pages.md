@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351744"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930432"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseite
 Eigenschaftenseiten können Benutzer eines ActiveX-Steuerelements anzeigen und Ändern der Eigenschaften von ActiveX-Steuerelements. Diese Eigenschaften erfolgt durch den Aufruf ein Dialogfeld der Eigenschaftenseiten für eine oder mehrere enthält, die eine benutzerdefinierte grafische Schnittstelle zum Anzeigen und bearbeiten die Eigenschaften des Steuerelements bereitstellen.  
@@ -80,13 +80,13 @@ Eigenschaften (Dialogfeld)
   
 2.  Doppelklicken Sie auf die **Dialogfeld** Symbol "Directory".  
   
-3.  Öffnen der **IDD_PROPPAGE_SAMPLE** (Dialogfeld).  
+3.  Öffnen Sie das Dialogfeld IDD_PROPPAGE_SAMPLE.  
   
      Die ActiveX-Steuerelement-Assistent fügt den Namen des Projekts an das Ende der Dialogfeld-ID, in diesem Beispiel.  
   
 4.  Ziehen Sie das ausgewählte Steuerelement aus der Toolbox auf das Dialogfeld im Feld Bereich.  
   
-5.  In diesem Beispiel ein Text label-Steuerelement "Beschriftung:" und ein Bearbeitungsfeld-Steuerelement mit einer **IDC_CAPTION** Bezeichner sind ausreichend.  
+5.  In diesem Beispiel ein Text label-Steuerelement "Caption:" und ein Bearbeitungsfeld-Steuerelement mit einer ID, IDC_CAPTION reichen.  
   
 6.  Klicken Sie auf **speichern** auf der Symbolleiste, um die Änderungen zu speichern.  
   
@@ -99,9 +99,9 @@ Eigenschaften (Dialogfeld)
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Diese Funktion ordnet der Eigenschaftenseite `m_caption` Membervariable mit der Beschriftung mithilfe der `DDP_TEXT` Funktion.  
+ Diese Funktion ordnet der Eigenschaftenseite *M_caption* Membervariable mit der Beschriftung mithilfe der `DDP_TEXT` Funktion.  
   
- Nachdem Sie die Eigenschaftenseiten-Steuerelement eingefügt haben, müssen Sie eine Verknüpfung zwischen den Steuerelementen für die Eigenschaft einrichten `IDC_CAPTION`, und verwenden Sie die tatsächliche Steuerelementeigenschaft Beschriftung, die **DDP_Text** funktionieren wie oben beschrieben.  
+ Nachdem Sie die Eigenschaftenseiten-Steuerelement eingefügt haben, müssen Sie eine Verknüpfung zwischen dem Eigenschaftenseiten-Steuerelement, IDC_CAPTION und die tatsächliche Steuerelementeigenschaft einrichten Beschriftung, mit der `DDP_Text` funktionieren wie oben beschrieben.  
   
  [Eigenschaftenseiten](../mfc/reference/property-pages-mfc.md) stehen für andere Dialogfeld-Steuerelementtypen, z. B. Kontrollkästchen, Optionsfelder, und Listenfelder. Die folgende Tabelle enthält den gesamten Satz von Eigenschaftenseite **DDP_** Funktionen und ihre Zwecke zu verwenden:  
   
@@ -117,8 +117,8 @@ Eigenschaften (Dialogfeld)
 |`DDP_LBString`|Die ausgewählte Zeichenfolge in einem Listenfeld mit einer Steuerelementeigenschaft. Die ausgewählte Zeichenfolge dieselben Buchstaben als Wert der Eigenschaft kann beginnen, darf jedoch muss nicht vollständig damit übereinstimmen.|  
 |`DDP_LBStringExact`|Die ausgewählte Zeichenfolge in einem Listenfeld mit einer Steuerelementeigenschaft. Der markierten Zeichenfolge und den Wert der Eigenschaft Zeichenfolge müssen genau übereinstimmen.|  
 |`DDP_Radio`|Ein Optionsfeld mit einer Steuerelementeigenschaft.|  
-|**DDP_Text**|Text mit einer Steuerelementeigenschaft.|  
+|`DDP_Text`|Text mit einer Steuerelementeigenschaft.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [COlePropertyPage-Klasse](../mfc/reference/colepropertypage-class.md)

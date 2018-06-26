@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349908"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929860"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datenobjekte und Datenquellen: Bearbeitung
 Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse häufig verwendeter Vorgänge auf die Daten, z. B. das Einfügen und Entfernen von Daten, die beim Aufzählen der Formate, denen die Daten in enthalten ist, und vieles mehr. Dieser Artikel beschreibt die Techniken zum Durchführen der am häufigsten verwendeten Vorgänge erforderlich sind. Folgende Themen werden behandelt:  
@@ -73,7 +73,7 @@ Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse 
   
     -   Rufen Sie des Datenobjekts `BeginEnumFormats` Memberfunktion anfangen, der in der Zwischenablage verfügbaren Formate. Rufen Sie anschließend `GetNextFormat` bis Zwischenablage gibt ein Format auf die Anwendung unterstützt, oder es sind keine weitere Formate.  
   
- Bei Verwendung von `ON_UPDATE_COMMAND_UI`, Sie können jetzt das Einfügen und möglicherweise Inhalte einfügen Elemente im Menü Bearbeiten. Rufen Sie hierzu entweder `CMenu::EnableMenuItem` oder `CCmdUI::Enable`. Weitere Informationen zu welchem Container Anwendungen sollten mit Menüelementen wann sehen und [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).  
+ Bei Verwendung von **ON_UPDATE_COMMAND_UI**, Sie können jetzt das Einfügen und möglicherweise Inhalte einfügen Elemente im Menü Bearbeiten. Rufen Sie hierzu entweder `CMenu::EnableMenuItem` oder `CCmdUI::Enable`. Weitere Informationen zu welchem Container Anwendungen sollten mit Menüelementen wann sehen und [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Abrufen von Daten aus einem Datenobjekt  
  Nachdem Sie ein Datenformat entschieden haben, übrig bleibt zum Abrufen der Daten aus dem Datenobjekt. Zu diesem Zweck der Benutzer entscheidet, die Daten eingefügt werden soll, und die Anwendung aufruft, die entsprechende Funktion. Die Daten in einem der folgenden Medien zur Verfügung:  

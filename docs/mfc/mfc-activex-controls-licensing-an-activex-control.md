@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353925"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929743"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements
 Unterstützen der Lizenzierung, können ein optionales Feature von ActiveX-Steuerelemente, Sie steuern, wer verwenden oder verteilen Sie das Steuerelement ist. (Weitere Erläuterung der Lizenzierungsproblemen, finden Sie unter Lizenzierung Probleme in [Upgrading eines vorhandenen ActiveX-Steuerelements](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -44,7 +44,7 @@ Unterstützen der Lizenzierung, können ein optionales Feature von ActiveX-Steue
  ActiveX-Steuerelemente, die Lizenzierung implementieren ermöglicht es Ihnen als Entwickler von Steuerelementen, um zu bestimmen, wie andere Personen das ActiveX-Steuerelement verwendet werden. Geben Sie das Steuerelement "Käufer", mit dem Steuerelement und. – Lizenzvereinbarung-Datei mit der Vereinbarung, die "Käufer" das Steuerelement, aber nicht verteilen, kann die. – Lizenzvereinbarung-Datei mit einer Anwendung, die das Steuerelement verwendet. Dies verhindert, dass Benutzer diese Anwendung schreiben Sie neue Anwendungen, die das Steuerelement zu verwenden, ohne die erste Lizenzierung des Steuerelements.  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> Übersicht über die Lizenzierung von ActiveX-Steuerelement  
- Um die Lizenzierung unterstützen ActiveX-Steuerelemente, die [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) -Klasse stellt eine Implementierung für mehrere Funktionen in der **IClassFactory2** Schnittstelle: **IClassFactory2 :: RequestLicKey**, **IClassFactory2:: GetLicInfo**, und **Iclassfactory2**. Wenn der Container-Anwendungsentwickler stellt eine Anforderung zum Erstellen einer Instanz des Steuerelements, einen Aufruf von `GetLicInfo` wird ausgelöst, um zu überprüfen, ob das Steuerelement. – Lizenzvereinbarung-Datei ist vorhanden. Wenn das Steuerelement lizenziert ist, kann eine Instanz des Steuerelements erstellt und im Container platziert werden. Nach Abschluss der Steuerelementcontainer-Anwendung erstellen und der Entwickler eine andere Funktion aufrufen, zurzeit `RequestLicKey`, erfolgt. Diese Funktion gibt einen Lizenzschlüssel (eine einfache Zeichenfolge) für die containeranwendung. Der zurückgegebene Schlüssel wird dann in der Anwendung eingebettet.  
+ Um die Lizenzierung unterstützen ActiveX-Steuerelemente, die [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) -Klasse stellt eine Implementierung für mehrere Funktionen in der `IClassFactory2` Schnittstelle: `IClassFactory2::RequestLicKey`, `IClassFactory2::GetLicInfo`, und `IClassFactory2::CreateInstanceLic`. Wenn der Container-Anwendungsentwickler stellt eine Anforderung zum Erstellen einer Instanz des Steuerelements, einen Aufruf von `GetLicInfo` wird ausgelöst, um zu überprüfen, ob das Steuerelement. – Lizenzvereinbarung-Datei ist vorhanden. Wenn das Steuerelement lizenziert ist, kann eine Instanz des Steuerelements erstellt und im Container platziert werden. Nach Abschluss der Steuerelementcontainer-Anwendung erstellen und der Entwickler eine andere Funktion aufrufen, zurzeit `RequestLicKey`, erfolgt. Diese Funktion gibt einen Lizenzschlüssel (eine einfache Zeichenfolge) für die containeranwendung. Der zurückgegebene Schlüssel wird dann in der Anwendung eingebettet.  
   
  Die folgende Abbildung zeigt die Überprüfung der Lizenz ein ActiveX-Steuerelement, das während der Entwicklung eine Steuerelementcontainer-Anwendung verwendet wird. Wie bereits erwähnt, muss der Anwendungsentwickler Container die geeignete verfügen. – Lizenzvereinbarung-Datei, die auf dem Entwicklungscomputer zum Erstellen einer Instanz des Steuerelements installiert.  
   
@@ -79,15 +79,15 @@ Unterstützen der Lizenzierung, können ein optionales Feature von ActiveX-Steue
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     Stellt sicher, dass das Steuerelement zur Entwurfszeit-Nutzung durch Überprüfen des Systems für das Vorhandensein der Lizenzdatei Steuerelement zulässt. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung **IClassFactory2:: GetLicInfo** und **IClassFactory:: CreateInstanceLic**.  
+     Stellt sicher, dass das Steuerelement zur Entwurfszeit-Nutzung durch Überprüfen des Systems für das Vorhandensein der Lizenzdatei Steuerelement zulässt. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::GetLicInfo` und `IClassFactory::CreateInstanceLic`.  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     Fordert einen eindeutigen Schlüssel aus der DLL des Steuerelements an. Dieser Schlüssel ist in den Steuerelementcontainer-Anwendung eingebettet und höher in Verbindung mit verwendet `VerifyLicenseKey`, um eine Instanz des Steuerelements zu erstellen. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung **IClassFactory2:: RequestLicKey**.  
+     Fordert einen eindeutigen Schlüssel aus der DLL des Steuerelements an. Dieser Schlüssel ist in den Steuerelementcontainer-Anwendung eingebettet und höher in Verbindung mit verwendet `VerifyLicenseKey`, um eine Instanz des Steuerelements zu erstellen. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::RequestLicKey`.  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     Überprüft, ob die eingebetteten und eindeutige Schlüssel des Steuerelements identisch sind. Dadurch wird den Container zum Erstellen einer Instanz des Steuerelements für die Verwendung. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung **Iclassfactory2** und kann überschrieben werden, um benutzerdefinierte Überprüfung des Lizenzschlüssels bereitzustellen. Die standardmäßige Implementierung führt einen Vergleich von Zeichenfolgen. Weitere Informationen finden Sie unter [Anpassen der Lizenzierung eines ActiveX-Steuerelements](#_core_customizing_the_licensing_of_an_activex_control)weiter unten in diesem Artikel.  
+     Überprüft, ob die eingebetteten und eindeutige Schlüssel des Steuerelements identisch sind. Dadurch wird den Container zum Erstellen einer Instanz des Steuerelements für die Verwendung. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::CreateInstanceLic` und kann überschrieben werden, um benutzerdefinierte Überprüfung des Lizenzschlüssels bereitzustellen. Die standardmäßige Implementierung führt einen Vergleich von Zeichenfolgen. Weitere Informationen finden Sie unter [Anpassen der Lizenzierung eines ActiveX-Steuerelements](#_core_customizing_the_licensing_of_an_activex_control)weiter unten in diesem Artikel.  
   
 ###  <a name="_core_header_file_modifications"></a> Header-Dateiänderungen  
  ActiveX-Steuerelement-Assistent fügt den folgenden Code in der Headerdatei des Steuerelements. In diesem Beispiel werden zwei Memberfunktionen der `CSampleCtrl`des Objekts `factory` deklariert werden, einen, überprüft das Vorhandensein des Steuerelements. – Lizenzvereinbarung-Datei und ein anderes, das den Lizenzschlüssel in die Anwendung, die das Steuerelement zu verwendende abruft:  
@@ -100,7 +100,7 @@ Unterstützen der Lizenzierung, können ein optionales Feature von ActiveX-Steue
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  Wenn Sie ändern **SzLicString** in keiner Weise müssen Sie auch die erste Zeile im Steuerelement ändern. – Lizenzvereinbarung Datei- oder Lizenzierung funktioniert nicht ordnungsgemäß.  
+>  Wenn Sie ändern `szLicString` in keiner Weise müssen Sie auch die erste Zeile im Steuerelement ändern. – Lizenzvereinbarung Datei- oder Lizenzierung funktioniert nicht ordnungsgemäß.  
   
  Die ActiveX-Steuerelement-Assistent stellt den folgenden Code in der Implementierungsdatei des Steuerelements zum Definieren der Steuerelementklasse `VerifyUserLicense` und `GetLicenseKey` Funktionen:  
   
@@ -123,6 +123,6 @@ Unterstützen der Lizenzierung, können ein optionales Feature von ActiveX-Steue
  Weitere Erläuterung der Lizenzierungsproblemen, finden Sie unter Lizenzierung Probleme in [Upgrading eines vorhandenen ActiveX-Steuerelements](../mfc/upgrading-an-existing-activex-control.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md)
 

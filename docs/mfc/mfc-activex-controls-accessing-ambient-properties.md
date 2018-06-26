@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348226"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931722"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC-ActiveX-Steuerelemente: Zugreifen auf Umgebungseigenschaften
 In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement die Umgebungseigenschaften des Steuerelementcontainers zugreifen kann.  
@@ -44,7 +44,7 @@ In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement die Umgebungsei
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Aufrufer muss Aufrufen **freigeben ()** der zurückgegebenen Schriftart.  
+    >  Aufrufer muss Aufrufen `Release( )` der zurückgegebenen Schriftart.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement die Umgebungsei
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- Wenn der Wert der ambient-Eigenschaft (über eine Aktion des Containers) ändert die **OnAmbientPropertyChanged** Memberfunktion des Steuerelements aufgerufen. Überschreiben Sie diese Memberfunktion, um solche eine Benachrichtigung zu behandeln. Der Parameter für **OnAmbientPropertyChanged** ist die Dispatch-ID der betroffenen ambient-Eigenschaft. Der Wert dieser Dispatch-ID ist möglicherweise **u. DISPID_UNKNOWN lauten**, was bedeutet, dass eine oder mehrere Umgebungseigenschaften wurde geändert, aber Informationen darüber, welche Eigenschaften betroffen nicht verfügbar ist.  
+ Wenn der Wert der ambient-Eigenschaft (über eine Aktion des Containers) ändert die `OnAmbientPropertyChanged` Memberfunktion des Steuerelements aufgerufen. Überschreiben Sie diese Memberfunktion, um solche eine Benachrichtigung zu behandeln. Der Parameter für `OnAmbientPropertyChanged` ist die Dispatch-ID der betroffenen ambient-Eigenschaft. Der Wert dieser Dispatch-ID handelt es sich möglicherweise um u. DISPID_UNKNOWN lauten, d. ein oder mehrere Umgebungseigenschaften wurde geändert h., jedoch sind keine Informationen darüber, welche Eigenschaften betroffen sind verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)

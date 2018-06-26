@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381169"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930689"
 ---
 # <a name="registration"></a>Registrierung
 Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet OLE eine Liste der Objekttypen zur Auswahl. OLE ruft diese Liste in die Systemdatenbank für die Registrierung, die durch alle serveranwendungen bereitgestellten Informationen enthält. Wenn ein Server selbst registriert, wird der Einträge, die sie in der Registrierung Systemdatenbank (Registrierung) legt beschreiben jeden Typ von ihm bereitgestellten Objekt, Erweiterungen und den Pfad auf sich selbst neben anderen Informationen die Datei.  
@@ -59,7 +59,7 @@ Wenn ein Benutzer ein OLE-Element in einer Anwendung einfügen möchte, bietet O
   
  Wenn die Server-Anwendung gestartet wird, müssen Sie sicherstellen, dass sie die Registrierung der Instanz ausführen kann. Registrierung der Instanz informiert der OLE-System-DLLs, dass der Server aktiv und Anforderungen von Containern empfangen kann. Es fügt nicht die Registrierungsdatenbank einen Eintrag hinzu. Führen Sie die Registrierung der Instanz des Servers durch Aufrufen der `ConnectTemplate` Memberfunktion, die durch definierten `COleTemplateServer`. Dies stellt eine Verbindung her den `CDocTemplate` -Objekt an die `COleTemplateServer` Objekt.  
   
- Die `ConnectTemplate` Funktion akzeptiert drei Parameter: des Serverzertifikat **CLSID**, ein Zeiger auf die `CDocTemplate` Objekt und ein Flag, der angibt, ob der Server mehrere Instanzen unterstützt. Ein Miniserver muss in der Lage, mehrere Instanzen unterstützen, d. h. es muss möglich sein für mehrere Instanzen des Servers, eines für jeden Container gleichzeitig ausgeführt werden. Übergeben Sie daher **"true"** für dieses Flag beim Starten ein Miniserver.  
+ Die `ConnectTemplate` Funktion akzeptiert drei Parameter: des Serverzertifikat *CLSID*, ein Zeiger auf die `CDocTemplate` Objekt und ein Flag, der angibt, ob der Server mehrere Instanzen unterstützt. Ein Miniserver muss in der Lage, mehrere Instanzen unterstützen, d. h. es muss möglich sein für mehrere Instanzen des Servers, eines für jeden Container gleichzeitig ausgeführt werden. Übergeben Sie daher **"true"** für dieses Flag beim Starten ein Miniserver.  
   
  Wenn Sie ein Miniserver definitionsgemäß schreiben, die immer von einem Container gestartet werden soll. Die Befehlszeile für die Option "/ einbetten" überprüfen sollten weiterhin analysiert werden. Das Fehlen dieser Option in der Befehlszeile bedeutet, dass der Benutzer versucht hat, um den Miniserver als eigenständige Anwendung zu starten. In diesem Fall registrieren Sie den Server mit der Registrierung-Systemdatenbank, und zeigen Sie anschließend ein Meldungsfeld informiert den Benutzer um den Miniserver in eine Steuerelementcontainer-Anwendung zu starten.  
   

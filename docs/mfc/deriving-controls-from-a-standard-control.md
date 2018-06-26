@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344499"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932246"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Ableiten von Steuerelementen von einem Standardsteuerelement
 Wie jede [CWnd](../mfc/reference/cwnd-class.md)-abgeleitete Klasse, Sie können Verhalten eines Steuerelements ändern, indem das Ableiten einer neuen Klasse aus einer vorhandenen Steuerelementklasse.  
   
 ### <a name="to-create-a-derived-control-class"></a>So erstellen Sie eine abgeleitetes Steuerelement-Klasse  
   
-1.  Leiten Sie eine Klasse aus einer vorhandenen Steuerelementklasse, und überschreiben Sie optional die **erstellen** -Memberfunktion aufrufen, damit die erforderlichen Argumente für die Basisklasse bereitgestellt **erstellen** Funktion.  
+1.  Leiten Sie eine Klasse aus einer vorhandenen Steuerelementklasse, und überschreiben Sie optional die `Create` -Memberfunktion aufrufen, damit die erforderlichen Argumente für die Basisklasse bereitgestellt `Create` Funktion.  
   
 2.  Geben Sie Meldungshandler Memberfunktionen und Meldungszuordnungseinträge so ändern Sie das Verhalten des Steuerelements in Reaktion auf bestimmte Windows-Meldungen. Finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md).  
   

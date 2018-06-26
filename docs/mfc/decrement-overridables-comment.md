@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345387"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928726"
 ---
 # <a name="-overridables-comment"></a>// Overridables-Kommentar
 Die `// Overridables` Abschnitt der Deklaration eines MFC-Klasse enthält virtuelle Funktionen, die Sie in einer abgeleiteten Klasse überschreiben können, wenn Sie das Verhalten der Basisklasse ändern müssen. Sie sind in der Regel mit dem Namen beginnend mit "On", obwohl dies nicht unbedingt erforderlich ist. Hier Funktionen dienen zur außer Kraft gesetzt werden, und häufig zu implementieren oder geben Sie irgendeine der "Callback" oder "verknüpfen". In der Regel sind diese Member geschützt.  
@@ -31,7 +31,7 @@ Die `// Overridables` Abschnitt der Deklaration eines MFC-Klasse enthält virtue
   
  `virtual void OnDraw( ) = 0;`  
   
- In der Stichprobe, die von Klasse auflisten `CStdioFile`im [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md), die Liste enthält keine Overridables-Abschnitt. Klasse **CDocument**, andererseits, ungefähr 10 überschreibbare Memberfunktionen aufgeführt.  
+ In der Stichprobe, die von Klasse auflisten `CStdioFile`im [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md), die Liste enthält keine Overridables-Abschnitt. Klasse `CDocument`, andererseits, ungefähr 10 überschreibbare Memberfunktionen aufgeführt.  
   
  In einige Klassen möglicherweise auch den Kommentar angezeigt `// Advanced Overridables`. Hierbei handelt es sich um Funktionen, die nur von erfahrenen Programmierern sollten versuchen, um zu überschreiben. Sie benötigen wahrscheinlich nie sie zu überschreiben.  
   

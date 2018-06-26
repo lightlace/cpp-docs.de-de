@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344268"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928917"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Drag & Drop: Implementieren eines Drag & Drop-Ziels
 Dieser Artikel beschreibt, wie die Anwendung ein Ablageziel machen. Implementieren die Drop-Ziel etwas mehr als implementieren eine Drop-Quelle arbeiten belegt, aber es ist immer noch relativ einfach. Diese Techniken gelten auch für nicht-OLE-Anwendungen.  
@@ -30,11 +30,11 @@ Dieser Artikel beschreibt, wie die Anwendung ein Ablageziel machen. Implementier
   
 1.  Fügen Sie eine Membervariable zu den einzelnen Sichten in der Anwendung, die auf ein Ablageziel sein sollen. Diese Membervariable muss vom Typ `COleDropTarget` oder eine Klasse abgeleitet.  
   
-2.  Aus Ihrer Ansichtsklasse-Funktion, behandelt der `WM_CREATE` Nachricht (in der Regel `OnCreate`), rufen Sie der neue Membervariable `Register` Memberfunktion. `Revoke` wird automatisch für Sie aufgerufen werden, wenn die Ansicht zerstört wird.  
+2.  Aus Ihrer Ansichtsklasse-Funktion, behandelt der **WM_CREATE** Nachricht (in der Regel `OnCreate`), rufen Sie der neue Membervariable `Register` Memberfunktion. `Revoke` wird automatisch für Sie aufgerufen werden, wenn die Ansicht zerstört wird.  
   
 3.  Überschreiben Sie die folgenden Funktionen. Wenn Sie das gleiche Verhalten in der gesamten Anwendung möchten, überschreiben Sie diese Funktionen in Ihrer Ansichtsklasse. Gegebenenfalls Verhalten in isolierten Fällen ändern oder Löschen der nicht aktivieren möchten`CView` Windows, überschreiben Sie diese Funktionen in Ihrer `COleDropTarget`-Klasse abgeleitet.  
   
-    |außer Kraft setzen|Um zu ermöglichen|  
+    |Außer Kraft setzen|Um zu ermöglichen|  
     |--------------|--------------|  
     |`OnDragEnter`|Drop-Operationen in das Fenster erfolgen. Wird aufgerufen, wenn der Cursor zuerst das Fenster wechselt.|  
     |`OnDragLeave`|Besonderes Verhalten des Ziehvorgangs des angegebenen Fensters verlässt.|  

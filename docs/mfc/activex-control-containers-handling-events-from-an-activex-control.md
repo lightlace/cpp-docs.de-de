@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333829"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930660"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements
 In diesem Artikel wird erläutert, mithilfe des Eigenschaftenfensters Ereignishandlern für ActiveX-Steuerelemente in einem ActiveX-Steuerelementcontainer installieren. Die Ereignishandler dienen zum Empfang von Benachrichtigungen (aus dem Steuerelement) über bestimmte Ereignisse und Ausführen einer Aktion als Antwort. Diese Benachrichtigung wird das Ereignis "Auslösen" aufgerufen.  
@@ -46,7 +46,7 @@ In diesem Artikel wird erläutert, mithilfe des Eigenschaftenfensters Ereignisha
   
  Wie Sie das Eigenschaftenfenster verwenden, um Ereignisse hinzuzufügen, zuordnen ein Ereignisses Eintrag (`ON_EVENT`) hinzugefügt wird, die Senke ereigniszuordnung und ein Ereignishandler Funktion des Containers Implementierung hinzugefügt (. CPP)-Datei.  
   
- Das folgende Beispiel deklariert einen Ereignishandler namens `OnClickInCircCtrl`, für des Circ Steuerelements **ClickIn** Ereignis:  
+ Das folgende Beispiel deklariert einen Ereignishandler namens `OnClickInCircCtrl`, für des Circ Steuerelements `ClickIn` Ereignis:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

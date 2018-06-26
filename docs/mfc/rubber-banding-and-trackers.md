@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379241"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931735"
 ---
 # <a name="rubber-banding-and-trackers"></a>Gummibandtechnik und Ziehpunkte
 Eine weitere Funktion, die im Lieferumfang von Trackern ist die Auswahl "Kunststoff-Band-", die einem Benutzer ermöglicht, mehrere OLE-Elemente auswählen, durch Ziehen eines Rechtecks anpassen, um die Elemente ausgewählt werden. Wenn der Benutzer die linke Maustaste loslässt, Elemente innerhalb des Bereichs, der vom Benutzer ausgewählten markiert sind, und Sie werden vom Benutzer bearbeitet werden können. Beispielsweise kann der Benutzer die Auswahl in einem anderen Steuerelementcontainer-Anwendung ziehen.  
   
- Diese Funktion erfordert zusätzlichen Code in Ihrer Anwendungsverzeichnis `WM_LBUTTONDOWN` Handlerfunktion.  
+ Diese Funktion erfordert zusätzlichen Code in Ihrer Anwendung WM_LBUTTONDOWN Handlerfunktion.  
   
  Das folgende Codebeispiel implementiert Kunststoff-Band-Auswahl und zusätzliche Funktionen.  
   
