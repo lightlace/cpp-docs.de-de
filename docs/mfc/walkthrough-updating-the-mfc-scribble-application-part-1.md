@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385108"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956794"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhandene MFC-Anwendung so ändern, dass die Menüband-Benutzeroberfläche verwendet wird. Visual Studio unterstützt sowohl das Menüband von Office 2007 als auch das "Scenic Ribbon" von Windows 7. Weitere Informationen zur Menüband-Benutzeroberfläche finden Sie unter [Menübänder](http://go.microsoft.com/fwlink/p/?linkid=129233) auf der MSDN-Website.  
@@ -186,31 +186,31 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
 3.  Sie können die Anwendungsschaltfläche anpassen, indem Sie ihre Eigenschaften ändern. Die Meldungs-IDs, die in diesem Code verwendet werden, sind bereits im Menü für Scribble 1.0 definiert.  
   
-4.  Klicken Sie in der Designansicht auf die Anwendungsschaltfläche, um ihre Eigenschaften anzuzeigen. Eigenschaftswerte wie folgt ändern: **Image** auf `IDB_RIBBON_MAIN`, **Prompt** auf `File`, **Schlüssel** auf `f`, **große Bilder** auf `IDB_RIBBON_FILELARGE`, und **kleine Bilder** auf `IDB_RIBBON_FILESMALL`.  
+4.  Klicken Sie in der Designansicht auf die Anwendungsschaltfläche, um ihre Eigenschaften anzuzeigen. Ändern Sie Eigenschaftswerte wie folgt: **Image** auf *IDB_RIBBON_MAIN*, **Prompt** auf *Datei*, **Schlüssel** um *f*, **große Bilder** auf *IDB_RIBBON_FILELARGE*, und **kleine Bilder** auf *IDB_RIBBON_ FILESMALL*.  
   
 5.  Durch die folgenden Änderungen wird das Menü erstellt, das angezeigt wird, wenn der Benutzer auf die Anwendungsschaltfläche klickt. Klicken Sie auf die Auslassungspunkte (**...** ) neben **Main Items** So öffnen die **Elemente-Editor**.  
   
-    1.  Klicken Sie auf **hinzufügen** , eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `&New`, **ID** auf `ID_FILE_NEW`, **Image** auf `0`, **Bild groß** auf `0`.  
+    1.  Klicken Sie auf **hinzufügen** , eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *& neue*, **ID** auf *ID_FILE_NEW*, **Image** auf *0*, **Bild groß** auf *0*.  
   
-    2.  Klicken Sie auf **hinzufügen** um eine zweite Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `&Save`, **ID** auf `ID_FILE_SAVE`, **Image** auf `2`, und **Bild groß** zu `2`.  
+    2.  Klicken Sie auf **hinzufügen** um eine zweite Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *& speichern*, **ID** auf *ID_FILE_SAVE*, **Image** auf *2* , und **Bild groß** auf *2*.  
   
-    3.  Klicken Sie auf **hinzufügen** um eine dritte Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `Save &As`, **ID** auf `ID_FILE_SAVE_AS`, **Image** auf `3`, und **Bild groß** zu `3`.  
+    3.  Klicken Sie auf **hinzufügen** um eine dritte Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *speichern & unter*, **ID** auf *ID_FILE_SAVE_AS*, **Image** auf *3*, und **Bild groß** auf *3*.  
   
-    4.  Klicken Sie auf **hinzufügen** um eine vierte Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `&Print`, **ID** auf `ID_FILE_PRINT`, **Image** auf `4`, und **Bild groß** zu `4`.  
+    4.  Klicken Sie auf **hinzufügen** um eine vierte Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *& Drucken*, **ID** auf *ID_FILE_PRINT*, **Image** auf *4* , und **Bild groß** auf *4*.  
   
     5.  Ändern der **Element** zu Typ **Trennzeichen** , und klicken Sie dann auf **hinzufügen**.  
   
-    6.  Ändern der **Element** zu Typ **Schaltfläche**. Klicken Sie auf **hinzufügen** um eine fünfte Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `&Close`, **ID** auf `ID_FILE_CLOSE`, **Image** auf `5`, und **Bild groß** zu `5`.  
+    6.  Ändern der **Element** zu Typ **Schaltfläche**. Klicken Sie auf **hinzufügen** um eine fünfte Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *& Schließen*, **ID** auf *ID_FILE_CLOSE*, **Image** auf *5* , und **Bild groß** auf *5*.  
   
 6.  Durch die folgenden Änderungen wird ein Untermenü unter der Druckschaltfläche erstellt, die Sie im vorherigen Schritt erstellt haben.  
   
-    1.  Klicken Sie auf die **Drucken** Schaltfläche, ändern Sie die **Element** geben **Bezeichnung**, und klicken Sie dann auf **einfügen**. Änderung **Beschriftung** auf `Preview and print the document`.  
+    1.  Klicken Sie auf die **Drucken** Schaltfläche, ändern Sie die **Element** geben **Bezeichnung**, und klicken Sie dann auf **einfügen**. Änderung **Beschriftung** auf *Vorschau anzeigen und Drucken des Dokuments*.  
   
-    2.  Klicken Sie auf die **Drucken** Schaltfläche, ändern Sie die **Element** geben **Schaltfläche**, und klicken Sie auf **einfügen**. Änderung **Beschriftung** auf `&Print`, **ID** auf `ID_FILE_PRINT`, **Image** auf `4`, und **Bild groß** zu `4`.  
+    2.  Klicken Sie auf die **Drucken** Schaltfläche, ändern Sie die **Element** geben **Schaltfläche**, und klicken Sie auf **einfügen**. Änderung **Beschriftung** auf *& Drucken*, **ID** auf *ID_FILE_PRINT*, **Image** auf *4* , und **Bild groß** auf *4*.  
   
-    3.  Klicken Sie auf die **Drucken** Schaltfläche, und klicken Sie dann auf **einfügen** , eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `&Quick Print`, **ID** auf `ID_FILE_PRINT_DIRECT`, **Image** auf `7`, und **Bild groß** zu `7`.  
+    3.  Klicken Sie auf die **Drucken** Schaltfläche, und klicken Sie dann auf **einfügen** , eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *& schnelle Drucken*, **ID** auf *ID_FILE_PRINT_DIRECT*, **Image** zu *7*, und **Bild groß** auf *7*.  
   
-    4.  Klicken Sie auf die **Drucken** Schaltfläche, und klicken Sie dann auf **einfügen** um eine weitere Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `Print Pre&view`, **ID** auf `ID_FILE_PRINT_PREVIEW`, **Image** auf `6`, und **Bild groß** zu `6`.  
+    4.  Klicken Sie auf die **Drucken** Schaltfläche, und klicken Sie dann auf **einfügen** um eine weitere Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *drucken & Ansicht*, **ID** auf *ID_FILE_PRINT_PREVIEW*, **Image** an *6*, und **Bild groß** auf *6*.  
   
     5.  Sie haben nun geändert. die **Main Items**. Klicken Sie auf **schließen** zum Beenden der **Elemente-Editor**.  
   
@@ -218,7 +218,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
     1.  In der **Eigenschaften** Fenster, klicken Sie auf die Auslassungspunkte (**...** ) neben **Schaltfläche** So öffnen die **Elemente-Editor**.  
   
-    2.  Klicken Sie auf **hinzufügen** , eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf `E&xit`, **ID** auf `ID_APP_EXIT`, **Image** auf `8`.  
+    2.  Klicken Sie auf **hinzufügen** , eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** auf *& xitcode*, **ID** auf *ID_APP_EXIT*, **Image** auf *8* .  
   
  [[Abschnitte](#top)]  
   
@@ -233,7 +233,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
     CMFCRibbonBar M_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>So fügen Sie eine Kategorie "Startseite" und einen Bereich "Bearbeiten" hinzu  
   
-1.  Das Scribble-Programm erfordert nur eine Kategorie. Klicken Sie in der Entwurfsansicht auf **Kategorie** um seine Eigenschaften anzuzeigen. Ändern Sie Eigenschaftswerte wie folgt: **Beschriftung** auf `&Home`, **große Bilder** auf `IDB_RIBBON_HOMELARGE`, **kleine Bilder** auf `IDB_RIBBON_HOMESMALL`.  
+1.  Das Scribble-Programm erfordert nur eine Kategorie. Klicken Sie in der Entwurfsansicht auf **Kategorie** um seine Eigenschaften anzuzeigen. Ändern Sie Eigenschaftswerte wie folgt: **Beschriftung** auf *& Startseite*, **große Bilder** auf *IDB_RIBBON_HOMELARGE*,  **Kleine Bilder** auf *IDB_RIBBON_HOMESMALL*.  
   
-2.  Jede Menübandkategorie ist in benannte Bereiche unterteilt. Jeder Bereich enthält einen Satz von Steuerelementen, die verwandte Vorgänge ausführen. Diese Kategorie verfügt über einen Bereich. Klicken Sie auf **Bereich**, und ändern Sie dann **Beschriftung** auf `Edit` und **Abbildindex** auf `0`.  
+2.  Jede Menübandkategorie ist in benannte Bereiche unterteilt. Jeder Bereich enthält einen Satz von Steuerelementen, die verwandte Vorgänge ausführen. Diese Kategorie verfügt über einen Bereich. Klicken Sie auf **Bereich**, und ändern Sie dann **Beschriftung** auf *bearbeiten* und **Abbildindex** auf *0*.  
   
-3.  Um die **bearbeiten** Bereich, fügen Sie eine Schaltfläche, die für das Löschen des Inhalts des Dokuments zuständig ist. Die Meldungs-ID für diese Schaltfläche wurde bereits in der Menüressource IDR_SCRIBBTYPE definiert. Geben Sie `Clear All` als Schaltflächentext und der Index der Bitmap, die die Schaltfläche dekoriert. Öffnen der **Toolbox**, und ziehen Sie dann eine **Schaltfläche** auf die **bearbeiten** Bereich. Klicken Sie auf die Schaltfläche "", und ändern Sie dann **Beschriftung** auf `Clear All`, **ID** auf `ID_EDIT_CLEAR_ALL`, **Abbildindex** auf `0`, **große Abbildindex**  auf `0`.  
+3.  Um die **bearbeiten** Bereich, fügen Sie eine Schaltfläche, die für das Löschen des Inhalts des Dokuments zuständig ist. Die Meldungs-ID für diese Schaltfläche wurde bereits in der Menüressource IDR_SCRIBBTYPE definiert. Geben Sie *alle löschen* als Schaltflächentext und der Index der Bitmap, die die Schaltfläche dekoriert. Öffnen der **Toolbox**, und ziehen Sie dann eine **Schaltfläche** auf die **bearbeiten** Bereich. Klicken Sie auf die Schaltfläche "", und ändern Sie dann **Beschriftung** auf *alle löschen*, **ID** auf *ID_EDIT_CLEAR_ALL*, **Abbildindex** auf *0*, **große Abbildindex** auf *0*.  
   
 4.  Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Die Scribble-Anwendung sollte angezeigt werden, und sie sollte am oberen Rand des Fensters über eine Menübandleiste anstelle einer Menüleiste verfügen. Die menübandleiste sollte eine Kategorie verfügen **Home**, und **Home** sollten einen Bereich haben **bearbeiten**. Die Menübandschaltflächen, die Sie hinzugefügt mit den vorhandenen Ereignishandlern zugeordnet werden soll und die **öffnen**, **schließen**, **speichern**, **Drucken**, und **alle löschen** Schaltflächen sollte wie erwartet funktionieren.  
   

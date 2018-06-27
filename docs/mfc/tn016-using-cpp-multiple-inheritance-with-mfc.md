@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384087"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954857"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Verwenden von C++-Mehrfachvererbung mit MFC
 Dieser Hinweis wird beschrieben, wie mehrfache Vererbung (MI) mit der Microsoft Foundation Classes verwendet wird. Die Verwendung von MI ist nicht mit MFC erforderlich. MI wird von MFC-Klassen nicht verwendet und ist nicht erforderlich, die eine Klassenbibliothek schreiben.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- In diesem Fall `CObject` zweimal enthalten ist. Dies bedeutet, dass Sie eine Möglichkeit, alle Verweise auf eindeutig `CObject` Methoden oder Operatoren. Die `operator new` und [Delete-Operator](../mfc/reference/cobject-class.md#operator_delete) sind zwei Operatoren, die eindeutig gemacht werden müssen. Wenn Sie beispielsweise verursacht der folgende Code einen Fehler zur Kompilierzeit:  
+ In diesem Fall `CObject` zweimal enthalten ist. Dies bedeutet, dass Sie eine Möglichkeit, alle Verweise auf eindeutig `CObject` Methoden oder Operatoren. Die **new-Operator** und [Delete-Operator](../mfc/reference/cobject-class.md#operator_delete) sind zwei Operatoren, die eindeutig gemacht werden müssen. Wenn Sie beispielsweise verursacht der folgende Code einen Fehler zur Kompilierzeit:  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Implementierung von CObject-Methoden  
- Wenn Sie eine neue Klasse erstellt hat, zwei oder mehr `CObject` Basisklassen abgeleitet Sie implementieren sollten die `CObject` Methoden, die andere Personen verwendet werden soll. Operatoren `new` und `delete` sind obligatorisch und [Dump](../mfc/reference/cobject-class.md#dump) wird empfohlen. Das folgende Beispiel Reimplements der `new` und `delete` Operatoren und die `Dump` Methode:  
+ Wenn Sie eine neue Klasse erstellt hat, zwei oder mehr `CObject` Basisklassen abgeleitet Sie implementieren sollten die `CObject` Methoden, die andere Personen verwendet werden soll. Operatoren **neue** und **löschen** sind obligatorisch und [Dump](../mfc/reference/cobject-class.md#dump) wird empfohlen. Das folgende Beispiel Reimplements der **neue** und **löschen** Operatoren und die `Dump` Methode:  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  Es scheint, praktisch erben `CObject` würde Lösung des Problems Funktion Mehrdeutigkeit, aber dies ist nicht der Fall. Da es keine Elementdaten in ist `CObject`, ist es nicht erforderlich, dass die virtuellen Vererbung, um zu verhindern, dass mehrere Kopien von einer Basisklasse Elementdaten. Im ersten Beispiel, das zuvor gezeigt wurde die `Dump` virtuelle Methode ist immer noch mehrdeutig, da sie unterschiedlich in implementiert ist `CFrameWnd` und `CObList`. Die beste Möglichkeit, um Mehrdeutigkeit ist die Empfehlungen angezeigt, die im vorherigen Abschnitt folgen.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf und zur Laufzeit eingeben  
- Die Eingabe zur Laufzeit-Mechanismus von in MFC unterstützt `CObject` verwendet die Makros `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` und `IMPLEMENT_SERIAL`. Diese Makros können eine Überprüfung Laufzeittyp, um sichere Umwandlungen zu gewährleisten.  
+ Die Eingabe zur Laufzeit-Mechanismus von in MFC unterstützt `CObject` Makros DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL und IMPLEMENT_SERIAL verwendet. Diese Makros können eine Überprüfung Laufzeittyp, um sichere Umwandlungen zu gewährleisten.  
   
- Diese Makros unterstützen nur eine einzelne Basisklasse und funktioniert auf eingeschränkte Weise für multiply der geerbten Klassen. Die Basisklasse, die Sie, in angeben `IMPLEMENT_DYNAMIC` oder `IMPLEMENT_SERIAL` sollte die erste (oder ganz links) Basisklasse sein. Diese Platzierung aktivieren Sie für die am weitesten links Basisklasse nur typüberprüfung. Die Laufzeit-Typsystem kennen keinerlei wissen über zusätzliche Basisklassen. Im folgenden Beispiel werden die Systeme zur Laufzeit führen typüberprüfung für `CFrameWnd`, doch kennen nichts `CObList`.  
+ Diese Makros unterstützen nur eine einzelne Basisklasse und funktioniert auf eingeschränkte Weise für multiply der geerbten Klassen. Die Basisklasse, die Sie in IMPLEMENT_DYNAMIC oder IMPLEMENT_SERIAL angeben, sollte die erste (oder ganz links) Basisklasse. Diese Platzierung aktivieren Sie für die am weitesten links Basisklasse nur typüberprüfung. Die Laufzeit-Typsystem kennen keinerlei wissen über zusätzliche Basisklassen. Im folgenden Beispiel werden die Systeme zur Laufzeit führen typüberprüfung für `CFrameWnd`, doch kennen nichts `CObList`.  
   
 ```  
 class CListWnd : public CFrameWnd,

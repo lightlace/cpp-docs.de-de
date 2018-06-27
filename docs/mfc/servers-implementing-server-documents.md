@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380275"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950827"
 ---
 # <a name="servers-implementing-server-documents"></a>Server: Implementieren von Serverdokumenten
 Dieser Artikel beschreibt die Schritte, die Sie ausführen müssen, um erfolgreich Serverdokument implementieren, wenn Sie nicht die OLE-Serveroption im Anwendungs-Assistenten angegeben haben.  
   
 #### <a name="to-define-a-server-document-class"></a>So definieren Sie eine Server-Dokument-Klasse  
   
-1.  Leiten Sie eine Dokumentklasse aus `COleServerDoc` anstelle von **CDocument**.  
+1.  Leiten Sie eine Dokumentklasse aus `COleServerDoc` anstelle von `CDocument`.  
   
 2.  Erstellen Sie eine Server-Element-Klasse abgeleitet `COleServerItem`.  
   

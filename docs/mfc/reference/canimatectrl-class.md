@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356395"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952325"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Animationssteuerelements bereit.  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Format der Animationssteuerelements an. Wenden Sie eine beliebige Kombination der Formate beschrieben im Abschnitt "Hinweise" und der Steuerelementtypen für die Animation in beschriebenen Windows [Steuerelementtypen für die Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) im Windows SDK.  
   
- `rect`  
+ *Rect*  
  Gibt an, die Animationssteuerelements Position und Größe. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
   
- `pParentWnd`  
- Gibt an, die Animationssteuerelements übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL.**  
+ *pParentWnd*  
+ Gibt an, die Animationssteuerelements übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt an, die Animationssteuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CAnimateCtrl` in zwei Schritten. Zunächst den Konstruktor, und rufen dann **erstellen**, die die Animation-Steuerelement erstellt, und fügt es der `CAnimateCtrl` Objekt.  
+ Sie erstellen eine `CAnimateCtrl` in zwei Schritten. Zunächst den Konstruktor, und rufen dann `Create`, die die Animation-Steuerelement erstellt, und fügt es der `CAnimateCtrl` Objekt.  
   
  Übernehmen Sie die folgenden [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) , eines Animationssteuerelements.  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED** selten  
   
- Wenn Sie die erweiterten Fensterstile mit Ihrem Animationssteuerelements verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von **erstellen**.  
+ Wenn Sie die erweiterten Fensterstile mit Ihrem Animationssteuerelements verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von `Create`.  
   
  Zusätzlich zu den oben aufgeführten Fensterstile können Sie eine oder mehrere der Steuerelementtypen für die Animation auf eines Animationssteuerelements anwenden möchten. Das Windows SDK für Weitere Informationen finden Sie [Steuerelementtypen für die Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Format der Animationssteuerelements an. Eine beliebige Kombination aus dem Fenster anwenden und Steuerelementtypen für die Animation beschrieben [Steuerelementtypen für die Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) im Windows SDK.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFileName`  
+ *lpszFileName*  
  Ein `CString` Objekt oder ein Zeiger auf eine auf Null endende Zeichenfolge, die entweder den Namen der AVI-Datei oder der Name einer AVI-Ressource enthält. Wenn dieser Parameter ist **NULL**, das System schließt die AVI-Videoclips an, die zuvor für das Animationssteuerelement geöffnet wurde, falls vorhanden.  
   
- `nID`  
+ *nID*  
  Der Ressourcenbezeichner des AVI. Wenn dieser Parameter ist **NULL**, das System schließt die AVI-Videoclips an, die zuvor für das Animationssteuerelement geöffnet wurde, falls vorhanden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFrom`  
+ *nFrom*  
  Nullbasierte Index des Frames, an der Wiedergabe beginnt. Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass mit der erste Frame in der AVI-Videoclips beginnen.  
   
- `nTo`  
+ *Bringt*  
  Nullbasierten Index des Frames, in denen Wiedergabe enden. Wert muss kleiner als 65.536 sein. Ein Wert von - bedeutet 1 mit dem letzten Frame im AVI-Videoclips enden.  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nTo`  
+ *Bringt*  
  Nullbasierte Index des anzuzeigenden Rahmens. Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass den ersten Frame in der AVI-Videoclips angezeigt. Der Wert-1 bedeutet, dass den letzten Frame in der AVI-Videoclips angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  

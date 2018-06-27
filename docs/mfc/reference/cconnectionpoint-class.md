@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357389"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952221"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint-Klasse
 Definiert einen besonderen Schnittstellentyp, "Verbindungspunkt" genannt, der verwendet wird, um mit anderen OLE-Objekten zu kommunizieren.  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|Ruft den Container des Steuerelements, das die Zuordnung für die Verbindung besitzt.|  
 |[CConnectionPoint:: GetIID](#getiid)|Ruft die Schnittstellen-ID von einem Verbindungspunkt ab.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Ruft die maximale Anzahl von Verbindungspunkten, die von einem Steuerelement unterstützt.|  
-|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Ruft einen Zeiger auf das Verbindungselement auf `pos`.|  
+|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Ruft einen Zeiger auf das Verbindungselement auf *pos*.|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Startet eine Iteration Zuordnung wird durch Zurückgeben einer **POSITION** -Wert, der übergeben werden kann eine `GetNextConnection` aufrufen.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|Wird aufgerufen, durch das Framework beim Einrichten oder das Unterbrechen von Clientverbindungen.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- Die `BEGIN_CONNECTION_PART` und `END_CONNECTION_PART` Makros deklarieren eine eingebettete Klasse `XSampleConnPt` (abgeleitet `CConnectionPoint`), das diesen bestimmten Verbindungspunkt implementiert. Wenn Sie überschreiben möchten `CConnectionPoint` Memberfunktionen oder Hinzufügen von Memberfunktionen von Ihren eigenen, zwischen diesen zwei Makros zu deklarieren. Z. B. die `CONNECTION_IID` Makro überschreibt die `CConnectionPoint::GetIID` Memberfunktion, wenn zwischen diesen beiden Makros platziert.  
+ Die BEGIN_CONNECTION_PART und END_CONNECTION_PART deklarieren einer eingebetteten Klasse `XSampleConnPt` (abgeleitet `CConnectionPoint`), das diesen bestimmten Verbindungspunkt implementiert. Wenn Sie überschreiben möchten `CConnectionPoint` Memberfunktionen oder Hinzufügen von Memberfunktionen von Ihren eigenen, zwischen diesen zwei Makros zu deklarieren. CONNECTION_IID-Makro z. B. überschreibt der `CConnectionPoint::GetIID` Memberfunktion, wenn zwischen diesen beiden Makros platziert.  
   
  Das zweite Codefragment wird in der Implementierungsdatei eingefügt (. CPP) von der Control-Klasse. Dieser Code implementiert die Verbindungstabelle, darunter die zusätzliche Verbindungspunkt `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- Sobald die Codefragmente eingefügt wurden, stellt das Beispiel OLE-Steuerelement einen Verbindungspunkt für die **ISampleSink** Schnittstelle.  
+ Sobald die Codefragmente eingefügt wurden, stellt das Beispiel OLE-Steuerelement einen Verbindungspunkt für die `ISampleSink` Schnittstelle.  
   
  Verbindungspunkte unterstützen in der Regel "Multicasting", die Möglichkeit zum Senden an mehrere senken, die auf die gleiche Schnittstelle verbunden ist. Das folgende Codefragment veranschaulicht, wie Multicasting zu erreichen, indem Sie jede Senke auf einem Verbindungspunkt durchlaufen:  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  Bei Erfolg, ein Zeiger auf den Container; andernfalls **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ist in der Regel implementiert, indem die `BEGIN_CONNECTION_PART` Makro.  
+ Diese Funktion wird in der Regel durch das BEGIN_CONNECTION_PART-Makro implementiert.  
   
 ##  <a name="getiid"></a>  CConnectionPoint:: GetIID  
  Wird aufgerufen, durch das Framework die Schnittstellen-ID eines Verbindungspunktes abgerufen.  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  Überschreiben Sie diese Funktion, wenn Sie die Anzahl der senken, die dem Steuerelement eine Verbindung herstellen können, einschränken möchten.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint:: GetNextConnection  
- Ruft einen Zeiger auf das Verbindungselement auf `pos`.  
+ Ruft einen Zeiger auf das Verbindungselement auf *pos*.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pos`  
+ *POS*  
  Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextConnection` oder [GetStartPosition](#getstartposition) aufrufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Verbindungselement gemäß `pos`, oder NULL.  
+ Ein Zeiger auf das Verbindungselement gemäß *pos*, oder NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist besonders hilfreich für die Iteration durch alle Elemente in der Zuordnung für die Verbindung. Beim Überspringen von dieser Funktion zurückgegebenen NULL-Werte.  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bAdvise`  
+ *bAdvise*  
  **"True"**, wenn eine Verbindung hergestellt ist, andernfalls wird **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pUnkSink`  
+ *pUnkSink*  
  Der Bezeichner der Senkenschnittstelle angefordert wird.  
   
- `ppInterface`  
- Ein Zeiger auf den Schnittstellenzeiger, der durch `pUnkSink`. Wenn das Objekt nicht über diese Schnittstelle unterstützt \* `ppInterface` festgelegt ist, um **NULL**.  
+ *ppInterface*  
+ Ein Zeiger auf den Schnittstellenzeiger, der durch *pUnkSink*. Wenn das Objekt nicht über diese Schnittstelle unterstützt \* *PpInterface* festgelegt ist, um **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  

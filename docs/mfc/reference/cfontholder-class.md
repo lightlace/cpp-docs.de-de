@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6e85500f87c1ea88c46418d1f6b698a2d10976
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367515"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954116"
 ---
 # <a name="cfontholder-class"></a>CFontHolder-Klasse
 Implementiert die vordefinierte Schriftarteigenschaft und kapselt die Funktionalität eines Windows-Schriftartobjekts und der `IFont` -Schnittstelle.  
@@ -112,7 +112,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `strValue`  
+ *StrValue*  
  Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) , halten Sie die Anzeigezeichenfolge liegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -126,7 +126,7 @@ LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die `CFontHolder` des Objekts **IFontDisp** Schnittstelle. Beachten Sie, dass die Funktion aufruft `GetFontDispatch` müssen Aufrufen `IUnknown::Release` für diese Schnittstellenzeiger auf, wenn es nicht mehr benötigen.  
+ Ein Zeiger auf die `CFontHolder` des Objekts `IFontDisp` Schnittstelle. Beachten Sie, dass die Funktion aufruft `GetFontDispatch` müssen Aufrufen `IUnknown::Release` für diese Schnittstellenzeiger auf, wenn es nicht mehr benötigen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie `InitializeFont` vor dem Aufruf `GetFontDispatch`.  
@@ -144,19 +144,19 @@ HFONT GetFontHandle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cyLogical`  
+ *cyLogical*  
  Höhe in logischen Einheiten, der das Rechteck, in dem das Steuerelement gezeichnet wird.  
   
- `cyHimetric`  
+ *cyHimetric*  
  Höhe im `MM_HIMETRIC` Einheiten des Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für die Schriftart-Objekt; andernfalls **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Verhältnis von `cyLogical` und `cyHimetric` dient zum Berechnen der Größe ordnungsgemäße Anzeige in logischen Einheiten für die Punktgröße der Schriftart in ausgedrückt `MM_HIMETRIC` Einheiten:  
+ Das Verhältnis von *CyLogical* und *CyHimetric* dient zum Berechnen der Größe ordnungsgemäße Anzeige in logischen Einheiten für die Punktgröße der Schriftart in ausgedrückt `MM_HIMETRIC` Einheiten:  
   
- Anzeigegröße = ( `cyLogical`  /  `cyHimetric`) X Schriftgrad  
+ Anzeigegröße = ( *CyLogical* / *CyHimetric*) X Schriftgrad  
   
  Die Version ohne Parameter gibt ein Handle für eine Schriftart ordnungsgemäß dimensioniert wird, für den Bildschirm an.  
   
@@ -170,16 +170,16 @@ void InitializeFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFontDesc`  
+ *pFontDesc*  
  Zeiger auf eine Schriftart Beschreibung-Struktur ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), der Schriftmerkmale angibt.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Ein Zeiger auf den Container ambient-Font-Eigenschaft.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `pFontDispAmbient` ist nicht **NULL**, die `CFontHolder` -Objekt verbunden ist, um einen Klon der `IFont` Schnittstelle verwendet, die für den Container ambient-Font-Eigenschaft.  
+ Wenn *pFontDispAmbient* ist nicht **NULL**, die `CFontHolder` -Objekt verbunden ist, um einen Klon der `IFont` Schnittstelle verwendet, die für den Container ambient-Font-Eigenschaft.  
   
- Wenn `pFontDispAmbient` ist **NULL**, ein neues Schriftartobjekt wird erstellt, entweder von der Schriftart Beschreibung verweist `pFontDesc` oder, wenn der `pFontDesc` ist **NULL**, aus einer standardbeschreibung.  
+ Wenn *pFontDispAmbient* ist **NULL**, ein neues Schriftartobjekt wird erstellt, entweder von der Schriftart Beschreibung verweist *pFontDesc* oder, wenn der *pFontDesc*ist **NULL**, aus einer standardbeschreibung.  
   
  Mit dieser Funktion wird nach dem Erstellen einer `CFontHolder` Objekt.  
   
@@ -198,7 +198,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lptm`  
+ *lptm*  
  Ein Zeiger auf eine [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) -Struktur, die die Informationen erhält.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
@@ -219,20 +219,20 @@ CFont* Select(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Gerätekontext, in dem die Schriftart ausgewählt ist.  
   
- `cyLogical`  
+ *cyLogical*  
  Höhe in logischen Einheiten, der das Rechteck, in dem das Steuerelement gezeichnet wird.  
   
- `cyHimetric`  
+ *cyHimetric*  
  Höhe im `MM_HIMETRIC` Einheiten des Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Schriftart, die ersetzt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [GetFontHandle](#getfonthandle) eine Erläuterung der `cyLogical` und `cyHimetric` Parameter.  
+ Finden Sie unter [GetFontHandle](#getfonthandle) eine Erläuterung der *CyLogical* und *CyHimetric* Parameter.  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
  Alle vorhandenen Schriftarten freigegeben und eine Verbindung der `CFontHolder` -Objekt an eine `IFont` Schnittstelle.  

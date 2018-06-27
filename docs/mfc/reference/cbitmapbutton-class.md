@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358354"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952179"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton-Klasse
 Erstellt Pushbutton-Steuerelemente, die mit Bitmapbildern statt mit Text bezeichnet sind.  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  In der `CDialog` des Objekts [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) Aufruf der Routine, die `CBitmapButton` des Objekts [AutoLoad](#autoload) Funktion als Parameter Kontroll-ID für die Schaltfläche mit und die `CDialog` Objekt **dies** Zeiger.  
   
- Wenn Sie z. B. Windows-benachrichtigungsmeldungen behandeln möchten **BN_CLICKED**, durch ein Bitmap-Schaltflächen-Steuerelement zu seinem übergeordneten Element gesendet (in der Regel eine abgeleitete Klasse **CDialog)**, zum Hinzufügen der `CDialog`-abgeleitet eine meldungszuordnung Eintrag und Nachrichtenhandler Memberfunktion für jede Nachricht-Objekt. Die Benachrichtigungen gesendet werden, indem eine `CBitmapButton` Objekt sind identisch mit denen per eine [CButton](../../mfc/reference/cbutton-class.md) Objekt.  
+ Wenn Sie Windows-benachrichtigungsmeldungen, z. B. BN_CLICKED, behandeln möchten von ein Bitmap-Schaltflächen-Steuerelement zu seinem übergeordneten Element gesendet (in der Regel eine abgeleitete Klasse `CDialog`), zum Hinzufügen der `CDialog`-abgeleitete Objekt ein meldungszuordnung Eintrag und Meldungshandler Element die Funktion für jede Nachricht. Die Benachrichtigungen gesendet werden, indem eine `CBitmapButton` Objekt sind identisch mit denen per eine [CButton](../../mfc/reference/cbutton-class.md) Objekt.  
   
  Die Klasse [CToolBar](../../mfc/reference/ctoolbar-class.md) benötigt einen anderen Ansatz für ein Bitmapschaltflächen.  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Die Schaltfläche Steuerelement-ID.  
   
- `pParent`  
+ *pParent*  
  Ein Zeiger auf das Objekt, das die Schaltfläche "" besitzt.  
   
 ### <a name="return-value"></a>Rückgabewert  

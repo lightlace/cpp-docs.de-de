@@ -15,33 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7f3dbdf4d386e40802d74459dd2854035b5b7c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aec02a07de8fad2f9ad063295090be5ace4146e6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380600"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953801"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Festlegen der Bilder für ein bestimmtes Element
-Die verschiedenen Typen von Bildern, durch die erweiterten Kombinationsfeldelement werden bestimmt anhand der Werte in der `iImage`, **iSelectedImage**, und **iOverlay** Mitglied der [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) Struktur. Jeder Wert ist der Index eines Bilds in der zugehörigen Bildliste des Steuerelements. Standardmäßig werden diese Member auf 0 festgelegt, verursacht das Steuerelement kein Bild für das Element an. Wenn Sie Bilder für ein bestimmtes Element verwenden möchten, können Sie die Struktur entsprechend beim Einfügen der Kombinationsfeldelement oder durch Ändern einer vorhandenen Kombinationsfeldelement ändern.  
+Die verschiedenen Typen von Bildern, durch die erweiterten Kombinationsfeldelement werden bestimmt anhand der Werte in der *iImage*, *iSelectedImage*, und *iOverlay* Mitglied der [ COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) Struktur. Jeder Wert ist der Index eines Bilds in der zugehörigen Bildliste des Steuerelements. Standardmäßig werden diese Member auf 0 festgelegt, verursacht das Steuerelement kein Bild für das Element an. Wenn Sie Bilder für ein bestimmtes Element verwenden möchten, können Sie die Struktur entsprechend beim Einfügen der Kombinationsfeldelement oder durch Ändern einer vorhandenen Kombinationsfeldelement ändern.  
   
 ## <a name="setting-the-image-for-a-new-item"></a>Einstellen des Bildes für ein neues Element  
- Wenn Sie ein neues Element einfügen, initialisieren Sie die `iImage`, **iSelectedImage**, und **iOverlay** Strukturmember mit den richtigen Werten, und fügen Sie dann das Element mit einem Aufruf von [ CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
+ Wenn Sie ein neues Element einfügen, initialisieren Sie die *iImage*, *iSelectedImage*, und *iOverlay* Strukturmember mit den richtigen Werten, und fügen Sie dann das Element mit einem Aufruf von [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
  Das folgende Beispiel fügt ein neue erweiterte Kombinationsfeldelement (`cbi`) in der erweiterten Kombinationsfeld-Steuerelement (`m_comboEx`), stellt Indizes für alle drei Zustände Abbild:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
 ## <a name="setting-the-image-for-an-existing-item"></a>Einstellen des Bildes für ein vorhandenes Element  
- Wenn Sie ein vorhandenes Element ändern, müssen Sie zur Bearbeitung der **Maske** Mitglied einer **COMBOBOXEXITEM** Struktur.  
+ Wenn Sie ein vorhandenes Element ändern, müssen Sie zur Bearbeitung der *Maske* Mitglied einer **COMBOBOXEXITEM** Struktur.  
   
 #### <a name="to-modify-an-existing-item-to-use-images"></a>So ändern Sie ein vorhandenes Element zum Verwenden von Bildern  
   
-1.  Deklarieren Sie eine **COMBOBOXEXITEM** -Struktur, und legen Sie die **Maske** -Datenmember auf die Werte sind Sie interessiert, ändern.  
+1.  Deklarieren Sie eine **COMBOBOXEXITEM** -Struktur, und legen Sie die *Maske* -Datenmember auf die Werte sind Sie interessiert, ändern.  
   
 2.  Diese Struktur mit einen Aufruf von stellen [:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  Ändern der **Maske**, `iImage`, und **iSelectedImage** Member neu zurückgegebenen Struktur, die entsprechenden Werte verwendet.  
+3.  Ändern der *Maske*, *iImage*, und *iSelectedImage* Member neu zurückgegebenen Struktur, die entsprechenden Werte verwendet.  
   
 4.  Rufen Sie [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), und übergeben Sie die geänderte Struktur.  
   

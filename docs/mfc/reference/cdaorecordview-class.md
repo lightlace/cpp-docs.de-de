@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368949"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952302"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView-Klasse
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.  
@@ -104,10 +104,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Enthält eine Null-terminierte Zeichenfolge, die den Namen des einer Dialogfeldvorlagen-Ressource ist.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Enthält die ID einer Dialogfeldvorlagen-Ressource.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -116,10 +116,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  Die abgeleitete Klasse muss einen eigenen Konstruktor angeben. Rufen Sie im Konstruktor der abgeleiteten Klasse den Konstruktor `CDaoRecordView::CDaoRecordView` mit dem Ressourcennamen oder die ID als Argument.  
   
- **CDaoRecordView::OnInitialUpdate** Aufrufe `CWnd::UpdateData`, welche Aufrufe `CWnd::DoDataExchange`. Diese ersten Aufruf der `DoDataExchange` verbindet `CDaoRecordView` steuert (indirekt) zu `CDaoRecordset` Felddatenmember von ClassWizard erstellt. Diese Datenmember können nicht erst verwendet werden, nach dem Aufruf der Basisklasse **CFormView::OnInitialUpdate** Memberfunktion.  
+ `CDaoRecordView::OnInitialUpdate` Aufrufe `CWnd::UpdateData`, welche Aufrufe `CWnd::DoDataExchange`. Diese ersten Aufruf der `DoDataExchange` verbindet `CDaoRecordView` steuert (indirekt) zu `CDaoRecordset` Felddatenmember von ClassWizard erstellt. Diese Datenmember können nicht erst verwendet werden, nach dem Aufruf der Basisklasse `CFormView::OnInitialUpdate` Memberfunktion.  
   
 > [!NOTE]
->  Bei Verwendung von ClassWizard definiert der Assistent eine `enum` Wert `CDaoRecordView::IDD` in der Deklaration der Klasse und verwendet, die sie bei der Memberinitialisierung auflisten, für den Konstruktor.  
+>  Bei Verwendung von ClassWizard definiert der Assistent eine **Enum** Wert `CDaoRecordView::IDD` in der Deklaration der Klasse und verwendet, die sie bei der Memberinitialisierung auflisten, für den Konstruktor.  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -165,7 +165,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
  Ein Zeiger auf eine `CDaoRecordset`-abgeleitetes Objekt aus, wenn das Objekt erfolgreich erstellt; andernfalls wurde eine **NULL** Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Memberfunktion zum Erstellen oder einem Recordset-Objekt abrufen und einen Zeiger darauf zurückgeben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die Standardimplementierung gibt den Recordsets Zeiger in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, die es einem Recordset-Objekt des Typs erstellt angegebenen mit ClassWizard und ruft seine **öffnen** Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann einen Zeiger auf das Objekt zurückgibt.  
+ Überschreiben Sie diese Memberfunktion zum Erstellen oder einem Recordset-Objekt abrufen und einen Zeiger darauf zurückgeben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die Standardimplementierung gibt den Recordsets Zeiger in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, die es einem Recordset-Objekt des Typs erstellt angegebenen mit ClassWizard und ruft seine `Open` Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann einen Zeiger auf das Objekt zurückgibt.  
   
  Weitere Informationen und Beispiele finden Sie im Artikel [Datensatzansichten: Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Einer der folgenden Werte Standardbefehls-ID:  
   
 - `ID_RECORD_FIRST` Verschieben Sie auf den ersten Eintrag in das Recordset.  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, weiterhin die Datensatzansicht den letzten Datensatz anzuzeigen. Wenn Sie nach dem ersten Datensatz rückwärts verschieben, können Sie weiterhin die Datensatzansicht des ersten Datensatzes angezeigt.  
   
 > [!CAUTION]
->  Aufrufen von `OnMove` löst eine Ausnahme aus, wenn das Recordset keine Datensätze enthält. Rufen Sie die entsprechende Schnittstelle Update Handlerfunktion – **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, oder  **OnUpdateRecordPrev** – vor den entsprechenden Verschiebevorgang, um zu bestimmen, ob das Recordset alle Datensätze aufweist.  
+>  Aufrufen von `OnMove` löst eine Ausnahme aus, wenn das Recordset keine Datensätze enthält. Rufen Sie die entsprechende Schnittstelle Update Handlerfunktion – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, oder `OnUpdateRecordPrev` – vor den entsprechenden Verschiebevorgang, um zu bestimmen, ob das Recordset alle Datensätze aufweist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CFormView-Klasse](../../mfc/reference/cformview-class.md)   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357981"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952111"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog-Klasse
 Bietet die Möglichkeit, ein Farbauswahl Dialogfeld in die Anwendung integrieren.  
@@ -80,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  So erstellen Sie eine `CColorDialog` Objekt, verwenden Sie den bereitgestellten Konstruktor oder leiten Sie eine neue Klasse und Ihre eigenen benutzerdefinierten Konstruktor verwenden.  
   
- Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [M_cc](#m_cc) Struktur der Werte von Steuerelementen für das Dialogfeld zu initialisieren. Die `m_cc` Struktur ist vom Typ [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [M_cc](#m_cc) Struktur der Werte von Steuerelementen für das Dialogfeld zu initialisieren. Die *M_cc* Struktur ist vom Typ [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
  Rufen Sie nach dem initialisieren das Dialogfeld-Steuerelemente, die `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen, und ermöglicht dem Benutzer eine Farbe auszuwählen. `DoModal` Gibt die Auswahl des Benutzers entweder das Dialogfeld OK ( **IDOK**) oder "Abbrechen" ( **IDCANCEL**) Schaltfläche.  
   
@@ -129,10 +129,10 @@ CColorDialog(
  *clrInit*  
  Die Standardauswahl für die Farbe. Wenn kein Wert angegeben wird, ist die Standardeinstellung RGB(0,0,0) (Schwarz).  
   
- `dwFlags`  
+ *dwFlags*  
  Ein Satz von Flags, die die Funktion und die Darstellung des Dialogfelds anpassen. Weitere Informationen finden Sie unter der [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Struktur im Windows SDK.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Dialogfeld über- oder Besitzer Fenster.  
   
 ### <a name="example"></a>Beispiel  
@@ -197,7 +197,7 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Nach dem Erstellen einer `CColorDialog` -Objekt können Sie `m_cc` festzulegende verschiedene Aspekte des Dialogfelds vor dem Aufruf der [DoModal](#domodal) Memberfunktion.  
+ Nach dem Erstellen einer `CColorDialog` -Objekt können Sie *M_cc* festzulegende verschiedene Aspekte des Dialogfelds vor dem Aufruf der [DoModal](#domodal) Memberfunktion.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
@@ -231,18 +231,18 @@ virtual BOOL OnColorOK();
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- Mit dieser Funktion wird nach dem Aufruf `DoModal` erzwingen Sie die aktuelle Farbauswahl auf Farbwert in angegebenen `clr`.  
+ Mit dieser Funktion wird nach dem Aufruf `DoModal` erzwingen Sie die aktuelle Farbauswahl auf Farbwert in angegebenen *Clr*.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clr`  
+ *CLR*  
  Ein Wert für den RGB-Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird von einem Message-Handler aufgerufen oder `OnColorOK`. Das Dialogfeld aktualisiert automatisch die Auswahl des Benutzers anhand des Werts von der `clr` Parameter.  
+ Diese Funktion wird von einem Message-Handler aufgerufen oder `OnColorOK`. Das Dialogfeld aktualisiert automatisch die Auswahl des Benutzers anhand des Werts von der *Clr* Parameter.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CColorDialog::OnColorOK](#oncolorok).  

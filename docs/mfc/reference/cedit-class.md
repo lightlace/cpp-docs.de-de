@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 98410fb8b62eb160e21803b60a14ce731ffc8c23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463078"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957454"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Stellt die Funktionalität eines Windows-Bearbeitungssteuerelements bereit.  
@@ -181,7 +181,7 @@ class CEdit : public CWnd
   
  Sie können ein Bearbeitungssteuerelement aus einer Dialogfeldvorlage oder direkt im Code erstellen. In beiden Fällen rufen Sie zunächst den Konstruktor `CEdit` zum Erstellen der `CEdit` -Objekt, und rufen Sie dann die [erstellen](#create) Memberfunktion zum Erstellen der Windows-Bearbeitungssteuerelements und fügen Sie es auf die `CEdit` Objekt.  
   
- Konstruktion kann ein langwieriger Vorgang in einer abgeleiteten Klasse `CEdit`. Schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen **erstellen** von innerhalb des Konstruktors.  
+ Konstruktion kann ein langwieriger Vorgang in einer abgeleiteten Klasse `CEdit`. Schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen `Create` von innerhalb des Konstruktors.  
   
  `CEdit` erbt die wichtigsten Features von `CWnd`. Festlegen und Abrufen von Text aus einer `CEdit` -Objekts die `CWnd` Memberfunktionen [SetWindowText](cwnd-class.md#setwindowtext) und [GetWindowText](cwnd-class.md#getwindowtext), welche Set- oder Get den gesamten Inhalt bearbeiten steuern, auch wenn es ist ein mehrzeiliges Steuerelement. Textzeilen in einem mehrzeiligen Steuerelement werden durch '\r\n' Zeichensequenzen getrennt. Auch wenn ein Bearbeitungssteuerelement mehrzeilig ist, abrufen und festlegen Teil der Text des Steuerelements durch Aufrufen der `CEdit` Memberfunktionen [GetLine](#getline), [Memberfunktion SetSel](#setsel), [Memberfunktion GetSel](#getsel), und [ ReplaceSel](#replacesel).  
   
@@ -249,7 +249,7 @@ BOOL CanUndo() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn die letzte Bearbeitung durch einen Aufruf von rückgängig gemacht werden, kann die **Rückgängig** Memberfunktion; 0, wenn sie kann nicht rückgängig gemacht werden.  
+ Ungleich NULL, wenn die letzte Bearbeitung durch einen Aufruf von rückgängig gemacht werden, kann die `Undo` Memberfunktion; 0, wenn sie kann nicht rückgängig gemacht werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) im Windows SDK.  
@@ -278,7 +278,7 @@ int CharFromPos(CPoint pt) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Die Koordinaten eines Punkts in den Clientbereich dieses `CEdit` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -302,7 +302,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Löschen von ausgeführten **deaktivieren** können rückgängig gemacht werden, durch Aufrufen der [Rückgängig](#undo) Memberfunktion.  
+ Das Löschen von ausgeführten `Clear` können rückgängig gemacht werden, durch Aufrufen der [Rückgängig](#undo) Memberfunktion.  
   
  Rufen Sie zum Löschen der aktuellen Auswahl, und fügen Sie den gelöschten Inhalt in die Zwischenablage, die [Ausschneiden](#cut) Memberfunktion.  
   
@@ -336,25 +336,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Bearbeitungssteuerelement-Stil. Wenden Sie eine beliebige Kombination von [Bearbeiten von Stilen](styles-used-by-mfc.md#edit-styles) an das Steuerelement.  
   
- `rect`  
+ *Rect*  
  Gibt des Bearbeitungssteuerelements Größe und Position. Kann eine `CRect` Objekt oder `RECT` Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, das Steuerelement zum Bearbeiten des übergeordneten Fensters (in der Regel eine `CDialog`). Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt den Edit-Steuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Initialisierung erfolgreich ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CEdit` Objekt in zwei Schritten. Rufen Sie zunächst die `CEdit` Konstruktor und rufen Sie dann **erstellen**, die die Windows-Bearbeitungssteuerelements erstellt, und fügt es der `CEdit` Objekt.  
+ Sie erstellen eine `CEdit` Objekt in zwei Schritten. Rufen Sie zunächst die `CEdit` Konstruktor und rufen Sie dann `Create`, die die Windows-Bearbeitungssteuerelements erstellt, und fügt es der `CEdit` Objekt.  
   
- Wenn **erstellen** ausgeführt wird, sendet Windows die [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), und [WM_ GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) Nachrichten an das Steuerelement zum Bearbeiten.  
+ Wenn `Create` ausgeführt wird, sendet Windows die [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), und [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) Meldungen an das Steuerelement zum Bearbeiten.  
   
  Diese Nachrichten werden standardmäßig verarbeitet der [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), und [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) Memberfunktionen in der `CWnd` Basisklasse. Um die Standard-Meldungsbehandlung zu erweitern, leiten Sie eine Klasse von `CEdit`, eine meldungszuordnung an die neue Klasse hinzufügen und die oben genannten Meldungshandler Memberfunktionen überschreiben. Überschreiben Sie `OnCreate`, z. B. für die erforderliche Initialisierung für die neue Klasse.  
   
@@ -381,7 +381,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Löschen von ausgeführten **Ausschneiden** können rückgängig gemacht werden, durch Aufrufen der [rückgängig machen](#undo) Memberfunktion.  
+ Das Löschen von ausgeführten `Cut` können rückgängig gemacht werden, durch Aufrufen der [Rückgängig](#undo) Memberfunktion.  
   
  Um die aktuelle Auswahl ohne platzieren den gelöschten Text in die Zwischenablage zu löschen, rufen die [deaktivieren](#clear) Memberfunktion.  
   
@@ -445,10 +445,10 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `lpszText`  
+ [out] *LpszText*  
  Ein Zeiger auf eine Zeichenfolge, die den Hinweistext enthält.  
   
- [in] `cchText`  
+ [in] *CchText*  
  Die Anzahl der Zeichen, die empfangen werden können. Diese Zahl umfasst das abschließende `NULL` Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `pichStart`|Nullbasierte Index des ersten Zeichens in den Bereich der Text, der hervorgehoben ist.|  
-|[out] `pichEnd`|Nullbasierte Index des letzten Zeichens in den Bereich der Text, der hervorgehoben ist.|  
+|[out] *PichStart*|Nullbasierte Index des ersten Zeichens in den Bereich der Text, der hervorgehoben ist.|  
+|[out] *PichEnd*|Nullbasierte Index des letzten Zeichens in den Bereich der Text, der hervorgehoben ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -544,7 +544,7 @@ UINT GetLimitText() const;
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
- Mit dieser Funktion wird zum Abrufen einer Zeile des Texts aus einem Bearbeitungssteuerelement und platziert es in `lpszBuffer`.  
+ Mit dieser Funktion wird zum Abrufen einer Zeile des Texts aus einem Bearbeitungssteuerelement und platziert es in *LpszBuffer*.  
   
 ```  
 int GetLine(
@@ -558,17 +558,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt die Zeilennummer, Abrufen aus einer mehrzeiligen Bearbeitungssteuerelements. Zeilennummern sind nullbasiert. der Wert 0 gibt die erste Zeile an. Dieser Parameter wird von einem einzeiligen Edit-Steuerelement ignoriert.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Verweist auf den Puffer, der eine Kopie der Zeile empfängt. Das erste Wort des Puffers muss die maximale Anzahl von Zeichen angeben, die in den Puffer kopiert werden können.  
   
- `nMaxLength`  
- Gibt die maximale Anzahl von Bytes, die in den Puffer kopiert werden können. `GetLine` Dieser Wert in das erste Wort platziert `lpszBuffer` vor dem Aufruf von Windows.  
+ *nMaxLength*  
+ Gibt die maximale Anzahl von Bytes, die in den Puffer kopiert werden können. `GetLine` Dieser Wert in das erste Wort platziert *LpszBuffer* vor dem Aufruf von Windows.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Bytes, die tatsächlich kopiert. Der Rückgabewert ist 0, wenn die Nummer der Zeile, wird angegeben `nIndex` ist größer als die Anzahl der Zeilen im Bearbeitungssteuerelement.  
+ Die Anzahl der Bytes, die tatsächlich kopiert. Der Rückgabewert ist 0, wenn die Nummer der Zeile, wird angegeben *nIndex* ist größer als die Anzahl der Zeilen im Bearbeitungssteuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Der kopierte Zeile enthält einen Null-Abschlusszeichen nicht.  
@@ -661,7 +661,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  Verweist auf die `RECT` -Struktur, die die Formatierung Rechteck empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -686,10 +686,10 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStartChar`  
+ *nStartChar*  
  Verweis auf eine ganze Zahl, die die Position des ersten Zeichens in der aktuellen Auswahl erhalten.  
   
- `nEndChar`  
+ *nEndChar*  
  Verweis auf eine ganze Zahl, die die Position des ersten Zeichens nicht ausgewählten nach dem Ende der aktuellen Auswahl erhalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -722,7 +722,7 @@ void LimitText(int nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nChars`  
+ *nChars*  
  Gibt die Länge (in Bytes) des Texts, der der Benutzer eingeben kann. Wenn dieser Parameter 0 ist, auf die Textlänge festgelegt **UINT_MAX** Bytes. Dies ist das Standardverhalten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -744,11 +744,11 @@ int LineFromChar(int nIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Den nullbasierte Indexwert für das gewünschte Zeichen im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn `nIndex` ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
+ *nIndex*  
+ Den nullbasierte Indexwert für das gewünschte Zeichen im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn *nIndex* ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die nullbasierte Zeilennummer der Zeile mit der Zeichenindex gemäß `nIndex`. Wenn `nIndex` ist-1. die Zahl der Zeile, die das erste Zeichen der Auswahl zurückgegeben. Wenn keine Auswahl vorhanden ist, wird die aktuelle Zeilennummer zurückgegeben.  
+ Die nullbasierte Zeilennummer der Zeile mit der Zeichenindex gemäß *nIndex*. Wenn *nIndex* ist-1. die Zahl der Zeile, die das erste Zeichen der Auswahl zurückgegeben. Wenn keine Auswahl vorhanden ist, wird die aktuelle Zeilennummer zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Zeichenindex ist die Anzahl der Zeichen vom Anfang des Bearbeitungssteuerelements an.  
@@ -768,11 +768,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLine`  
- Den Indexwert für die gewünschte Position im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn `nLine` ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
+ *nLine*  
+ Den Indexwert für die gewünschte Position im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn *nLine* ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Zeichenindex der Zeile im angegebenen `nLine` oder -1, wenn die angegebene Zeilennummer größer als die Anzahl der Zeilen in das Bearbeitungssteuerelement ist.  
+ Der Zeichenindex der Zeile im angegebenen *nLine* oder -1, wenn die angegebene Zeilennummer größer als die Anzahl der Zeilen in das Bearbeitungssteuerelement ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Zeichenindex ist die Anzahl der Zeichen vom Anfang des Bearbeitungssteuerelements in die angegebene Zeile.  
@@ -792,17 +792,17 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLine`  
+ *nLine*  
  Der nullbasierte Index von einem Zeichen in der Zeile, deren Länge abgerufen werden sollen. Der Standardwert ist -1.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist für einzeilige Bearbeitungssteuerelemente, die Länge `TCHAR`s, der den Text im Bearbeitungssteuerelement.  
   
- Der Rückgabewert ist die Länge für mehrzeilige Bearbeitungssteuerelemente `TCHAR`s, der die angegebene Zeile die `nLine` Parameter. Für [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] Text, beträgt die Anzahl der Bytes in der Zeile; für Unicode-Text, beträgt die Anzahl der Zeichen in der Zeile. Die Länge schließt nicht die Zeichen Wagenrücklauf am Ende der Zeile.  
+ Der Rückgabewert ist die Länge für mehrzeilige Bearbeitungssteuerelemente `TCHAR`s, der die angegebene Zeile die *nLine* Parameter. Für [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] Text, beträgt die Anzahl der Bytes in der Zeile; für Unicode-Text, beträgt die Anzahl der Zeichen in der Zeile. Die Länge schließt nicht die Zeichen Wagenrücklauf am Ende der Zeile.  
   
- Wenn die `nLine` Parameter ist größer als die Anzahl der Zeichen im Steuerelement, der Rückgabewert ist 0 (null).  
+ Wenn die *nLine* Parameter ist größer als die Anzahl der Zeichen im Steuerelement, der Rückgabewert ist 0 (null).  
   
- Wenn die `nLine` Parameter ist-1, der Rückgabewert ist die Anzahl der nicht ausgewählte Zeichen in den Zeilen, die ausgewählten Zeichen enthalten. Wenn die Auswahl aus dem vierten Zeichen des zeilenweise Zeichen vom Ende der nächsten Zeile erweitert wird, ist der Rückgabewert z. B. 10. D. h. Zeichen drei auf der ersten Zeile und sieben am nächsten.  
+ Wenn die *nLine* Parameter ist-1, der Rückgabewert ist die Anzahl der nicht ausgewählte Zeichen in den Zeilen, die ausgewählten Zeichen enthalten. Wenn die Auswahl aus dem vierten Zeichen des zeilenweise Zeichen vom Ende der nächsten Zeile erweitert wird, ist der Rückgabewert z. B. 10. D. h. Zeichen drei auf der ersten Zeile und sieben am nächsten.  
   
  Weitere Informationen zu den `TCHAR` finden Sie unter der `TCHAR` Zeile in der Tabelle in [Windows Data Types](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
@@ -822,16 +822,16 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLines`  
+ *nLines*  
  Gibt die Anzahl der Zeilen vertikaler Bildlauf durchgeführt wird.  
   
- `nChars`  
+ *nChars*  
  Gibt die Anzahl von Zeichenpositionen einen horizontalen Bildlauf durchführen. Dieser Wert wird ignoriert, wenn das Bearbeitungssteuerelement entweder verfügt die **ES_RIGHT** oder **ES_CENTER** Stil.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion wird nur von mehrzeiligen Bearbeitungssteuerelementen verarbeitet.  
   
- Das Bearbeitungssteuerelement Bildlauf vertikal nicht hinter die letzte Zeile des Texts im Bearbeitungssteuerelement. Wenn plus die Anzahl der Zeilen, die gemäß der aktuellen Zeile `nLines` überschreitet die Gesamtanzahl der Zeilen im Bearbeitungssteuerelement, der Wert wird angepasst, damit die letzte Zeile des Bearbeitungssteuerelements an den Anfang der Edit-Steuerelement Fenster ein Bildlauf durchgeführt wird.  
+ Das Bearbeitungssteuerelement Bildlauf vertikal nicht hinter die letzte Zeile des Texts im Bearbeitungssteuerelement. Wenn plus die Anzahl der Zeilen, die gemäß der aktuellen Zeile *nLines* überschreitet die Gesamtanzahl der Zeilen im Bearbeitungssteuerelement, der Wert wird angepasst, damit die letzte Zeile des Bearbeitungssteuerelements an den Anfang der Edit-Steuerelement Fenster ein Bildlauf durchgeführt wird.  
   
  `LineScroll` kann verwendet werden, einen horizontalen Bildlauf hinter dem letzten Zeichen, der eine beliebige Zeile durchführen.  
   
@@ -863,14 +863,14 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nChar`  
+ *nChar*  
  Der nullbasierte Index des angegebenen Zeichens.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Koordinaten der linken oberen Ecke des durch angegebene Zeichen `nChar`.  
+ Die Koordinaten der linken oberen Ecke des durch angegebene Zeichen *nChar*.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Zeichen wird durch die Vergabe ihres nullbasierten Indexwerts angegeben. Wenn `nChar` ist größer als der Index des letzten Zeichens in dieser `CEdit` -Objekt, der Rückgabewert gibt die Koordinaten der Position des Zeichens hinter dem letzten Zeichen in dieser `CEdit` Objekt.  
+ Das Zeichen wird durch die Vergabe ihres nullbasierten Indexwerts angegeben. Wenn *nChar* ist größer als der Index des letzten Zeichens in dieser `CEdit` -Objekt, der Rückgabewert gibt die Koordinaten der Position des Zeichens hinter dem letzten Zeichen in dieser `CEdit` Objekt.  
   
 > [!NOTE]
 >  Diese Memberfunktion ist verfügbar ab Windows 95 und Windows NT 4.0.  
@@ -881,17 +881,17 @@ CPoint PosFromChar(UINT nChar) const;
   Siehe das Beispiel für [CEdit::LineFromChar](#linefromchar).  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
- Mit dieser Funktion können Sie die aktuelle Auswahl in einem Bearbeitungssteuerelement durch den angegebenen Text ersetzen `lpszNewText`.  
+ Mit dieser Funktion können Sie die aktuelle Auswahl in einem Bearbeitungssteuerelement durch den angegebenen Text ersetzen *LpszNewText*.  
   
 ```  
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszNewText`  
+ *lpszNewText*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Ersetzungstext enthält.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Um anzugeben, dass diese Funktion rückgängig gemacht werden kann, legen Sie den Wert dieses Parameters auf **"true"** . Der Standardwert ist **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -917,10 +917,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Ein Zeiger auf eine Zeichenfolge, die enthält den Hinweis im Bearbeitungssteuerelement angezeigt.  
   
- [in] `fDrawWhenFocused`  
+ [in] *fDrawWhenFocused*  
  Wenn `false`, das hinweisbanner wird nicht gezeichnet werden, wenn der Benutzer in der Edit-Steuerelement klickt und das Steuerelement den Fokus erhält.  
   
  Wenn `true`, das hinweisbanner gezeichnet wird, selbst wenn das Steuerelement den Fokus besitzt. Das hinweisbanner verschwindet, wenn der Benutzer beginnt, geben Sie in das Steuerelement.  
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `ichStart`|Nullbasierte Index des ersten Zeichens in den Bereich von Text zu markieren.|  
-|[in] `ichEnd`|Nullbasierte Index des letzten Zeichens in den Bereich von Text zu markieren.|  
+|[in] *IchStart*|Nullbasierte Index des ersten Zeichens in den Bereich von Text zu markieren.|  
+|[in] *IchEnd*|Nullbasierte Index des letzten Zeichens in den Bereich von Text zu markieren.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) Nachricht, die im Windows SDK beschrieben wird.  
@@ -995,7 +995,7 @@ void SetLimitText(UINT nMax);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMax`  
+ *nMax*  
  Der neue Text Grenzwert in Zeichen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1044,7 +1044,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bModified`  
+ *bModified*  
  Der Wert **"true"** gibt an, dass der Text geändert wurde, und der Wert **"false"** gibt an, es ist unverändert. Die geänderten Kennzeichen ist standardmäßig festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1088,7 +1088,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bReadOnly`  
+ *bReadOnly*  
  Gibt an, ob festlegen oder entfernen den schreibgeschützten Status des Edit-Steuerelements. Der Wert **"true"** legt den Zustand auf schreibgeschützt, der Wert **"false"** legt den Zustand auf Lese-/Schreibzugriff.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1110,7 +1110,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  Verweist auf die `RECT` Struktur oder `CRect` Objekt, das die Abmessungen des Rechtecks Formatierung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1135,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  Verweist auf eine `RECT` Struktur oder `CRect` Objekt, das die Abmessungen des Rechtecks angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1176,10 +1176,10 @@ void SetSel(
  *bNoScroll*  
  Gibt an, ob die Einfügemarke in die Ansicht gescrollt werden soll. Wenn **"false"**, Einfügemarke angezeigt wird. Wenn **"true"**, die Einfügemarke wird nicht angezeigt.  
   
- `nStartChar`  
- Gibt die Startposition. Wenn `nStartChar` ist 0 und `nEndChar` ist-1 und alle in der Text im Bearbeitungssteuerelement ausgewählt ist. Wenn `nStartChar` ist-1 und keine aktuelle Auswahl entfernt wird.  
+ *nStartChar*  
+ Gibt die Startposition. Wenn *nStartChar* ist 0 und *nEndChar* ist-1 und alle in der Text im Bearbeitungssteuerelement ausgewählt ist. Wenn *nStartChar* ist-1 und keine aktuelle Auswahl entfernt wird.  
   
- `nEndChar`  
+ *nEndChar*  
  Gibt die Endposition.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1202,13 +1202,13 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cxEachStop`  
- Gibt an, dass Tabstopps zu jedem `cxEachStop` Dialogeinheiten.  
+ *cxEachStop*  
+ Gibt an, dass Tabstopps zu jedem *CxEachStop* Dialogeinheiten.  
   
- `nTabStops`  
- Gibt die Anzahl der in enthaltenen Tabstopps `rgTabStops`. Diese Zahl muss größer als 1 sein.  
+ *nTabStops*  
+ Gibt die Anzahl der in enthaltenen Tabstopps *RgTabStops*. Diese Zahl muss größer als 1 sein.  
   
- `rgTabStops`  
+ *rgTabStops*  
  Verweist auf ein Array von Ganzzahlen ohne Vorzeichen, die die Registerkarte angeben, die in Dialogeinheiten wird beendet. Eine Dialogeinheit ist einen horizontalen oder vertikalen Abstand an. Eine horizontale Dialogeinheit ein Viertel der aktuellen Dialogfeld Basis Breite Einheit entspricht, und 1 vertikale Dialogeinheit entspricht einem Achtel des aktuellen Dialogfeld Basis Höhe Komponententest. Die Basis Dialogeinheiten werden basierend auf die Höhe und Breite der aktuellen Systemschriftart berechnet. Die **GetDialogBaseUnits** Windows-Funktion gibt den aktuellen Dialogfeld Basis Einheiten in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1217,7 +1217,7 @@ BOOL SetTabStops(
 ### <a name="remarks"></a>Hinweise  
  Wenn Text in ein Bearbeitungssteuerelement für mehrzeiligen kopiert werden, verursachen alle Tabstoppzeichen im Text Leerzeichen bis zum nächsten Tabstopp generiert werden soll.  
   
- Rufen Sie die parameterlose Version von dieser Memberfunktion, um die Standardgröße des 32 Dialogeinheiten Tabstopps festzulegen. Tabstopps auf einer anderen Größe als 32 festlegen möchten, rufen Sie die Version mit der `cxEachStop` Parameter. Um ein Array von Größen Tabstopps festzulegen, verwenden Sie die Version mit zwei Parametern aus.  
+ Rufen Sie die parameterlose Version von dieser Memberfunktion, um die Standardgröße des 32 Dialogeinheiten Tabstopps festzulegen. Tabstopps auf einer anderen Größe als 32 festlegen möchten, rufen Sie die Version mit der *CxEachStop* Parameter. Um ein Array von Größen Tabstopps festzulegen, verwenden Sie die Version mit zwei Parametern aus.  
   
  Diese Memberfunktion wird nur von mehrzeiligen Bearbeitungssteuerelementen verarbeitet.  
   
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pEditBalloonTip`|Zeiger auf eine [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) Struktur, die die SprechblasenInfo beschreibt.|  
-|[in] `lpszTitle`|Ein Zeiger auf eine Unicodezeichenfolge, die den Titel der SprechblasenInfo enthält.|  
-|[in] `lpszText`|Ein Zeiger auf eine Unicodezeichenfolge, die die Sprechblase Tipptext beinhaltet.|  
-|[in] `ttiIcon`|Ein `INT` , der den Typ des Symbols die SprechblasenInfo zuzuordnende angibt. Der Standardwert ist `TTI_NONE`. Weitere Informationen finden Sie unter der `ttiIcon` Mitglied der [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) Struktur.|  
+|[in] *pEditBalloonTip*|Zeiger auf eine [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) Struktur, die die SprechblasenInfo beschreibt.|  
+|[in] *LpszTitle*|Ein Zeiger auf eine Unicodezeichenfolge, die den Titel der SprechblasenInfo enthält.|  
+|[in] *LpszText*|Ein Zeiger auf eine Unicodezeichenfolge, die die Sprechblase Tipptext beinhaltet.|  
+|[in] *TtiIcon*|Ein **INT** , die den Typ des Symbols die SprechblasenInfo zuzuordnende angibt. Der Standardwert ist `TTI_NONE`. Weitere Informationen finden Sie unter der `ttiIcon` Mitglied der [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -1277,7 +1277,7 @@ BOOL Undo();
  Für eine einzeilige Edit-Steuerelement ist der Rückgabewert immer ungleich NULL. Der Rückgabewert ist ungleich NULL, wenn der Rückgängig-Vorgang erfolgreich ist, ist für ein Bearbeitungssteuerelement für mehrzeiligen oder 0, wenn der Rückgängig-Vorgang fehlschlägt.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Rückgängig-Vorgang kann auch rückgängig gemacht werden. Sie können z. B. Wiederherstellen gelöschten Text mit dem ersten Aufruf **Rückgängig**. Solange keine Beteiligte Bearbeitungsvorgang vorhanden ist, können, entfernen Sie den Text erneut mit einem zweiten Aufruf von **Rückgängig**.  
+ Ein Rückgängig-Vorgang kann auch rückgängig gemacht werden. Sie können z. B. Wiederherstellen gelöschten Text mit dem ersten Aufruf `Undo`. Solange keine Beteiligte Bearbeitungsvorgang vorhanden ist, können, entfernen Sie den Text erneut mit einem zweiten Aufruf von `Undo`.  
   
  Weitere Informationen finden Sie unter [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) im Windows SDK.  
   

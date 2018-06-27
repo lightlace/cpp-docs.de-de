@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255768"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955244"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 Kapselt das allgemeine Dialogfeld, das für öffnen oder Datei speichern Vorgänge verwendet wird.  
@@ -248,7 +248,7 @@ class CFileDialog : public CCommonDialog
   
  Sie können `CFileDialog` wie mit dem Konstruktor bereitgestellt wird oder Sie können eigene Dialogfeldklasse von ableiten `CFileDialog` und einen Konstruktor für Ihre speziellen Anforderungen zu schreiben. In beiden Fällen wird diese Dialogfelder verhält sich wie standard-MFC-Dialogfelder, weil sie abgeleitet sind die [CCommonDialog Klasse](../../mfc/reference/ccommondialog-class.md). `CFileDialog` basiert auf der COMMDLG. DLL-Datei, die in Windows enthalten ist.  
   
- Die Darstellung und die Funktionalität von der `CFileDialog` mit Windows Vista oder höher unterscheiden sich von früheren Versionen von Windows. Die Standardeinstellung `CFileDialog` automatisch die neue Windows Vista oder höher Stil ohne codeänderungen verwendet, wenn ein Programm kompiliert und Ausführung unter Windows Vista oder höher ist. Verwenden der `bVistaStyle` Parameter im Konstruktor auf dieses automatische Update manuell überschreiben. Die Ausnahme, die automatische Aktualisierung ist angepasste Dialogfelder. Sie werden nicht in das neue Format konvertiert werden. Weitere Informationen zu den Konstruktor, finden Sie unter [CFileDialog::CFileDialog](#cfiledialog).  
+ Die Darstellung und die Funktionalität von der `CFileDialog` mit Windows Vista oder höher unterscheiden sich von früheren Versionen von Windows. Die Standardeinstellung `CFileDialog` automatisch die neue Windows Vista oder höher Stil ohne codeänderungen verwendet, wenn ein Programm kompiliert und Ausführung unter Windows Vista oder höher ist. Verwenden der *bVistaStyle* Parameter im Konstruktor auf dieses automatische Update manuell überschreiben. Die Ausnahme, die automatische Aktualisierung ist angepasste Dialogfelder. Sie werden nicht in das neue Format konvertiert werden. Weitere Informationen zu den Konstruktor, finden Sie unter [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
 >  Das System der Steuerelement-ID unterscheidet sich in Windows Vista oder höher aus früheren Versionen von Windows, bei der Verwendung einer `CFileDialog`. Sie müssen alle Verweise auf Aktualisieren `CFileDialog` Steuerelemente im Code, bevor Sie das Projekt von einer früheren Version von Windows Portieren können.  
@@ -319,13 +319,13 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID der Schaltfläche "Überprüfen", hinzugefügt werden soll.  
   
- `strLabel`  
+ *strLabel*  
  Der Name des Kontrollkästchen-Schaltfläche.  
   
- `bChecked`  
+ *bChecked*  
  Ein boolescher Wert, der angibt, des aktuellen Zustands der Schaltfläche "Überprüfen". `TRUE` Wenn diese Option aktiviert ist; `FALSE` andernfalls  
   
 ### <a name="remarks"></a>Hinweise  
@@ -338,7 +338,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Kombinationsfelds, hinzugefügt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -354,13 +354,13 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements auf das Element hinzuzufügen.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements.  
   
- `strLabel`  
+ *strLabel*  
  Text des Elements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -375,10 +375,10 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des im Bearbeitungsfeld, hinzugefügt werden soll.  
   
- `strText`  
+ *strText*  
  Der Name des bearbeiten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -393,10 +393,10 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Menüs hinzufügen.  
   
- `strLabel`  
+ *strLabel*  
  Der Name des Menüs.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -416,13 +416,13 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFolder`  
+ *lpszFolder*  
  Ein Pfad zu dem Ordner, dem Benutzer zur Verfügung gestellt werden. Dies kann nur ein Ordner sein.  
   
- `fdap`  
+ *fdap*  
  Gibt an, in dem der Ordner in der Liste platziert wird.  
   
- `psi`  
+ *PSI*  
  Ein Zeiger auf ein IShellItem, die für den Ordner für dem Benutzer verfügbar gemacht werden. Dies kann nur ein Ordner sein.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -437,10 +437,10 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID der Schaltfläche hinzufügen.  
   
- `strLabel`  
+ *strLabel*  
  Der Name der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -453,7 +453,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID der Gruppe "die Option Schaltfläche" hinzufügen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -466,7 +466,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID für das Trennzeichen hinzufügen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -481,10 +481,10 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Texts, hinzugefügt werden soll.  
   
- `strText`  
+ *strText*  
  Der Name des Texts.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -522,36 +522,36 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  Der Parameter, der angibt, welche Art von Dialogfeld erstellen. Legen Sie es auf `TRUE` zum Erstellen einer **Datei öffnen** (Dialogfeld). Legen Sie es auf `FALSE` zum Erstellen einer **Datei speichern unter** (Dialogfeld).  
   
- [in] `lpszDefExt`  
- Die Standarddateierweiterung. Wenn der Benutzer keine bekannte Erweiterung (eine, die eine Zuordnung auf dem Computer des Benutzers hat) in das Feld Dateiname enthalten, die Erweiterung gemäß `lpszDefExt` automatisch an den Dateinamen angefügt wird. Wenn dieser Parameter ist `NULL`, keine Erweiterung angefügt wird.  
+ [in] *LpszDefExt*  
+ Die Standarddateierweiterung. Wenn der Benutzer keine bekannte Erweiterung (eine, die eine Zuordnung auf dem Computer des Benutzers hat) in das Feld Dateiname enthalten, die Erweiterung gemäß *LpszDefExt* automatisch an den Dateinamen angefügt wird. Wenn dieser Parameter ist `NULL`, keine Erweiterung angefügt wird.  
   
- [in] `lpszFileName`  
+ [in] *LpszFileName*  
  Der ursprüngliche Dateiname, der in der Filename-Feld angezeigt wird. Wenn `NULL`, keine anfangsdateiname angezeigt wird.  
   
- [in] `dwFlags`  
+ [in] *DwFlags*  
  Eine Kombination von ein oder mehrere Flags, die Sie verwenden können, um das Dialogfeld anzupassen. Eine Beschreibung dieser Flags finden Sie in der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur im Windows SDK. Wenn Sie ändern die `m_ofn.Flags` Member-Struktur, einen bitweisen OR-Operator bei Ihren Änderungen verwenden, um das Standardverhalten unverändert zu lassen.  
   
- [in] `lpszFilter`  
+ [in] *LpszFilter*  
  Eine Reihe von Zeichenfolge-Paaren, die Filter angeben, können Sie auf die Datei anwenden. Wenn Sie Filter angeben, werden nur die Dateien, die Filterkriterien entsprechen in der Liste angezeigt. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zum Arbeiten mit Filter.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ein Zeiger auf Fenster übergeordnete oder Besitzer von Dateidialogfeld.  
   
- [in] `dwSize`  
+ [in] *DwSize*  
  Die Größe der `OPENFILENAME` Struktur. Dieser Wert hängt von der Version des Betriebssystems ab. Dieser Parameter wird von MFC verwendet, um bestimmen die geeignete Arten von Dialogfeld zum Erstellen. Die Standardgröße von 0 bedeutet, die der MFC-Code die richtigen Dialogfeld Feldgröße verwenden bestimmt, auf der Grundlage der Version des Betriebssystems auf der das Programm ausgeführt wird.  
   
- [in] `bVistaStyle`  
+ [in] *bVistaStyle*  
  **Hinweis** dieser Parameter wird in Visual Studio 2008 und höher verfügbar und wird dazu führen, dass das Dialogfeld "neue Formatvorlage" verwendet werden, nur dann, wenn Sie in Windows Vista oder höher ausgeführt werden.  
   
  Der Parameter, der den Stil der mit dem Dialogfeld "Datei" angibt. Legen Sie es auf `TRUE` verwenden die neue Vista Stil Dateidialogfelder. Andernfalls wird das alte Format von Dialogfeldern verwendet werden. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zu unter Vista ausgeführt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Entweder eine **Datei öffnen** oder **Datei speichern unter** Dialogfeld erstellt werden, abhängig vom Wert des `bOpenFileDialog`.  
+ Entweder eine **Datei öffnen** oder **Datei speichern unter** Dialogfeld erstellt werden, abhängig vom Wert der *bOpenFileDialog*.  
   
- Angeben eines Standard-Erweiterung mit `lpszDefExt` das Verhalten, das Sie davon ausgehen dass, möglicherweise nicht erstellt werden, da es nur selten vorhersagbar ist, welche Erweiterungen dateizuordnungen auf dem Computer des Benutzers haben. Wenn Sie mehr Kontrolle über das Anfügen einer Standard-Erweiterung benötigen, leiten Sie eine eigene Klasse von `CFileDialog`, und überschreiben die `CFileDialog::OnFileNameOK` Methode, um eine eigene Behandlung für die Erweiterung ausführen.  
+ Angeben eines Standard-Erweiterung mit *LpszDefExt* das Verhalten, das Sie davon ausgehen dass, möglicherweise nicht erstellt werden, da es nur selten vorhersagbar ist, welche Erweiterungen dateizuordnungen auf dem Computer des Benutzers haben. Wenn Sie mehr Kontrolle über das Anfügen einer Standard-Erweiterung benötigen, leiten Sie eine eigene Klasse von `CFileDialog`, und überschreiben die `CFileDialog::OnFileNameOK` Methode, um eine eigene Behandlung für die Erweiterung ausführen.  
   
  Um den Benutzer zum Auswählen mehrerer Dateien zu aktivieren, legen die `OFN_ALLOWMULTISELECT` flag vor dem Aufruf [DoModal](#domodal). Sie müssen einen eigene Dateinamenpuffer zum Speichern der zurückgegebenen Liste der mehrere Dateinamen angeben. Ersetzen Sie hierzu `m_ofn.lpstrFile` mit einem Zeiger auf einen Puffer Sie zugeordnet haben, wenn Sie erstellt haben, die [CFileDialog](../../mfc/reference/cfiledialog-class.md), aber vor dem Aufruf `DoModal`. Darüber hinaus müssen Sie festlegen `m_ofn.nMaxFile` mit der Anzahl von Zeichen im Puffer verweist `m_ofn.lpstrFile`. Wenn Sie festlegen, dass die maximale Anzahl von Dateien zum auszuwählenden `n`, ist die erforderliche Puffergröße `n`*(_MAX_PATH + 1) + 1. Zum Beispiel:  
   
@@ -559,7 +559,7 @@ explicit CFileDialog(
   
  Um dem Benutzer ein Dialogfeld Explorer-ähnliche Größe ändern, indem Sie mit der Maus oder Tastatur zu aktivieren, legen die `OFN_ENABLESIZING` Flag. Dieses Flag ist nur erforderlich, wenn Sie einen Hookprozedur oder eine benutzerdefinierte Vorlage bereitzustellen. Das Flag kann nur mit einer Explorer-ähnliche Dialogfeld; Dialogfelder im alten Stil können nicht geändert werden.  
   
- Die `lpszFilter` Parameter wird verwendet, um zu bestimmen, den Typ des Dateinamens eine Datei benötigen, die in der Liste angezeigt werden. Die erste Zeichenfolge im String-Paar beschreibt den Filter. die zweite Zeichenfolge gibt an, die Name-Dateierweiterung verwendet wird. Mehrere Erweiterungen können durch ein Semikolon (';'-Zeichen) als Trennzeichen angegeben werden. Mit zwei endet die Zeichenfolge "&#124;" Zeichen, gefolgt von einem `NULL` Zeichen. Sie können auch eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt für diesen Parameter.  
+ Die *LpszFilter* Parameter wird verwendet, um zu bestimmen, den Typ des Dateinamens eine Datei benötigen, die in der Liste angezeigt werden. Die erste Zeichenfolge im String-Paar beschreibt den Filter. die zweite Zeichenfolge gibt an, die Name-Dateierweiterung verwendet wird. Mehrere Erweiterungen können durch ein Semikolon (';'-Zeichen) als Trennzeichen angegeben werden. Mit zwei endet die Zeichenfolge "&#124;" Zeichen, gefolgt von einem `NULL` Zeichen. Sie können auch eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt für diesen Parameter.  
   
  Beispielsweise [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] ermöglicht Benutzern das Öffnen von Dateien, die Erweiterungen .xlc (Diagramm) oder einer XLS (Tabelle), haben o. ä. Der Filter für Excel kann als formuliert werden:  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  Jedoch, wenn Sie planen, verwenden Sie diese Zeichenfolge für den direkten Aktualisieren der `OPENFILENAME` -Struktur, sollten Sie die Zeichenfolgen mit Null-Zeichen, '\0', statt die senkrechten Striche begrenzen ("&#124;").  
   
- Die `bVistaStyle` Parameter gilt nur, wenn unter Windows Vista oder höher ausgeführt wird. Unter früheren Versionen von Windows wird dieser Parameter ignoriert. Wenn `bVistaStyle` festgelegt ist, um `TRUE`können beim Kompilieren eines Programms mit Visual Studio 2008 oder höher, die neue Vista-Formatvorlage **Dialogfeld "Datei"** verwendet werden. Andernfalls den vorherigen MFC-Stil **Dialogfeld "Datei"** verwendet werden.  
+ Die *bVistaStyle* Parameter gilt nur, wenn unter Windows Vista oder höher ausgeführt wird. Unter früheren Versionen von Windows wird dieser Parameter ignoriert. Wenn *bVistaStyle* festgelegt ist, um `TRUE`können beim Kompilieren eines Programms mit Visual Studio 2008 oder höher, die neue Vista-Formatvorlage **Dialogfeld "Datei"** verwendet werden. Andernfalls den vorherigen MFC-Stil **Dialogfeld "Datei"** verwendet werden.  
   
- Dialogfeldvorlagen werden auf Dialogfeldern basierend auf nicht unterstützt. `bVistaStyle`  
+ Dialogfeldvorlagen werden nicht unterstützt, auf Dialogfeldern basierend auf *bVistaStyle*  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFileDialog::DoModal](#domodal).  
@@ -606,7 +606,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID der Dropdown-Liste.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -633,10 +633,10 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Kontrollkästchens.  
   
- `bChecked`  
+ *bChecked*  
  Der Status des Kontrollkästchens. `TRUE` weist darauf hin überprüft. `FALSE` deaktiviert angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -652,13 +652,13 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements.  
   
- `dwState`  
+ *dwState-Datenmember*  
  Ein Verweis auf eine Variable, die mehrere Werte aus der Enumeration CDCONTROLSTATE empfängt, der den aktuellen Status des Steuerelements angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -673,10 +673,10 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Steuerelements.  
   
- `dwState`  
+ *dwState-Datenmember*  
  Ein Verweis auf eine Variable, die einen oder mehrere Werte aus der Enumeration CDCONTROLSTATE empfängt, der den aktuellen Status des Steuerelements angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -691,10 +691,10 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des im Bearbeitungsfeld.  
   
- `strText`  
+ *strText*  
  Der Textwert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -773,7 +773,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  Der Zeiger auf das interne COM-Objekt für die `CFileDialog`. Es liegt in Ihrer Verantwortung this-Zeiger ordnungsgemäß freigegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit `bVistaStyle` festgelegt `true`. Wenn Sie diese Funktion verwenden, wenn `bVistaStyle` ist `false`, zurückgegeben `NULL` im Releasemodus und löst eine Assertion im Debugmodus.  
+ Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit *bVistaStyle* festgelegt `true`. Wenn Sie diese Funktion verwenden, wenn *bVistaStyle* ist `false`, zurückgegeben `NULL` im Releasemodus und löst eine Assertion im Debugmodus.  
   
  Weitere Informationen zu den `IFileDialogCustomize` Benutzeroberfläche, siehe [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
@@ -793,7 +793,7 @@ IFileOpenDialog* GetIFileOpenDialog();
  Der Zeiger auf das interne COM-Objekt für die `CFileDialog`. Es liegt in Ihrer Verantwortung this-Zeiger ordnungsgemäß freigegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit `bVistaStyle` festgelegt `true`. Diese Funktion gibt `NULL` Wenn die `CFileDialog` kein **öffnen** (Dialogfeld) oder wenn `bVistaStyle` auf festgelegt ist `false`. In diesem letzten Fall gibt die Funktion nur `NULL` im Releasemodus - im Debugmodus befinden, löst sie eine Assertion.  
+ Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit *bVistaStyle* festgelegt `true`. Diese Funktion gibt `NULL` Wenn die `CFileDialog` kein **öffnen** (Dialogfeld) oder wenn *bVistaStyle* auf festgelegt ist `false`. In diesem letzten Fall gibt die Funktion nur `NULL` im Releasemodus - im Debugmodus befinden, löst sie eine Assertion.  
   
  Weitere Informationen zu den `IFileOpenDialog` Benutzeroberfläche, siehe [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
@@ -813,7 +813,7 @@ IFileSaveDialog* GetIFileSaveDialog();
  Der Zeiger auf das interne COM-Objekt für die `CFileDialog`. Es liegt in Ihrer Verantwortung this-Zeiger ordnungsgemäß freigegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit `bVistaStyle` festgelegt `true`. Diese Funktion zurück `NULL` Wenn die `CFileDialog` ist keine **speichern** Dialogfeld oder, wenn `bVistaStyle` auf festgelegt ist `false`. In diesem letzten Fall gibt die Funktion nur `NULL` im Releasemodus - im Debugmodus befinden, löst sie eine Assertion.  
+ Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit *bVistaStyle* festgelegt `true`. Diese Funktion zurück `NULL` Wenn die `CFileDialog` ist keine **speichern** Dialogfeld oder, wenn *bVistaStyle* auf festgelegt ist `false`. In diesem letzten Fall gibt die Funktion nur `NULL` im Releasemodus - im Debugmodus befinden, löst sie eine Assertion.  
   
  Weitere Informationen zu den `IFileSaveDialog` Benutzeroberfläche, siehe [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
@@ -830,7 +830,7 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pos`  
+ *POS*  
  Ein Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextPathName` oder `GetStartPosition` Funktionsaufruf. **NULL** , wenn das Ende der Liste erreicht wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -924,10 +924,10 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements, das der Benutzer im Steuerelement ausgewählt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -950,7 +950,7 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Die ID des Steuerelements ausgeblendet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -972,7 +972,7 @@ BOOL IsPickFoldersMode() const;
  `m_ofn` ist eine Struktur vom Typ `OPENFILENAME`. Die Daten in dieser Struktur entspricht dem aktuellen Zustand von der `CFileDialog`.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Struktur initialisiert werden, die Darstellung von einer **Datei öffnen** oder **Datei speichern unter** Dialogfeld, wenn Sie es erstellt haben, aber bevor Sie ihn mit Anzeigen der [DoModal](#domodal) Methode. Sie können z. B. Festlegen der `lpstrTitle` Mitglied `m_ofn` auf die Beschriftung im Dialogfeld verfügen sollen.  
+ Verwenden Sie diese Struktur initialisiert werden, die Darstellung von einer **Datei öffnen** oder **Datei speichern unter** Dialogfeld, wenn Sie es erstellt haben, aber bevor Sie ihn mit Anzeigen der [DoModal](#domodal) Methode. Sie können z. B. Festlegen der *LpstrTitle* Mitglied `m_ofn` auf die Beschriftung im Dialogfeld verfügen sollen.  
   
  Mit dem Windows Vista oder höher Stil der [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` entspricht nicht unbedingt immer den Status des Dialogfelds. Es wird mit dem Dialogfeld in früheren Versionen von Windows synchronisiert werden. Finden Sie unter [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) und [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) für Weitere Informationen zum Synchronisieren der `m_ofn` Struktur und die `CFileDialog` Zustand unter Windows Vista oder höher ausgeführt.  
   
@@ -1026,7 +1026,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Steuerelements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1039,7 +1039,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1054,10 +1054,10 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Kontrollkästchens.  
   
- `bChecked`  
+ *bChecked*  
  Aktiviert oder deaktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1070,7 +1070,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Steuerelements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1139,10 +1139,10 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1161,17 +1161,17 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  Die ID der im Listenfeld oder Kombinationsfeld, in dem die Markierung auftrat.  
   
- `iCurSel`  
+ *iCurSel*  
  Der Index der aktuellen Auswahl.  
   
- `nCode`  
+ *nCode*  
  Der Steuerungscode Benachrichtigung. Dieser Parameter muss einen der folgenden Werte aufweisen:  
   
-- **CD_LBSELCHANGE** gibt `iCurSel` wird das ausgewählte Element in einem Listenfeld mit einfacher Auswahl.  
+- **CD_LBSELCHANGE** gibt *iCurSel* wird das ausgewählte Element in einem Listenfeld mit einfacher Auswahl.  
   
-- **CD_LBSELSUB** gibt an, dass `iCurSel` nicht mehr in einem Listensteuerelement Listenfeld ausgewählt ist.  
+- **CD_LBSELSUB** gibt an, dass *iCurSel* nicht mehr in einem Listensteuerelement Listenfeld ausgewählt ist.  
   
-- **CD_LBSELADD** gibt an, dass `iCurSel` in einem Listensteuerelement Listenfeld ausgewählt ist.  
+- **CD_LBSELADD** gibt an, dass *iCurSel* in einem Listensteuerelement Listenfeld ausgewählt ist.  
   
 - **CD_LBSELNOITEMS** gibt an, die in einem Listensteuerelement Listenfeld keine Auswahl vorhanden ist.  
   
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszPathName`  
+ *lpszPathName*  
  Der Pfad der Datei auf der sich die Freigabe Verletzung auftrat.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1225,10 +1225,10 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements auf das Element entfernt werden soll.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1243,10 +1243,10 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Kontrollkästchens.  
   
- `bChecked`  
+ *bChecked*  
  Der Status des Kontrollkästchens. `TRUE` weist darauf hin überprüft. `FALSE` Unchecked angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1262,13 +1262,13 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements.  
   
- `dwState`  
+ *dwState-Datenmember*  
  Eine oder mehrere Werte aus der CDCONTROLSTATE-Enumeration, die den neuen Zustand des Steuerelements angeben.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1284,13 +1284,13 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements.  
   
- `strLabel`  
+ *strLabel*  
  Text des Elements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1305,10 +1305,10 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Steuerelements.  
   
- `strLabel`  
+ *strLabel*  
  Der Name des Steuerelements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1323,10 +1323,10 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Steuerelements.  
   
- `dwState`  
+ *dwState-Datenmember*  
  Eine oder mehrere Werte aus der CDCONTROLSTATE-Enumeration, die den aktuellen Status des Steuerelements angeben.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1346,10 +1346,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Die ID des Steuerelements für die den Text festgelegt.  
   
- [in] `lpsz`  
+ [in] *Lpsz*  
  Ein Zeiger auf die Zeichenfolge, die Text enthält, der für das Steuerelement festlegen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1365,7 +1365,7 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpsz`  
+ *lpsz*  
  Ein Zeiger auf eine Zeichenfolge, enthält die standarderweiterung für die Dialogfeldobjekt verwendet. Diese Zeichenfolge muss nicht auf einen Punkt (.) enthalten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1381,10 +1381,10 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des im Bearbeitungsfeld.  
   
- `strText`  
+ *strText*  
  Der Textwert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1397,7 +1397,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszPropList`  
+ *lpszPropList*  
  Eine Liste der vordefinierten Eigenschaften, die durch ein ";" voneinander getrennt sind. Eine Liste der Flags finden Sie die `Flags` Abschnitt [OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1412,10 +1412,10 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID des Containersteuerelements.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Die ID des Elements, das der Benutzer im Steuerelement ausgewählt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1435,16 +1435,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nWin3ID`  
+ [in] *nWin3ID*  
  Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Diese Vorlage dient nur unter Windows NT 3.51 oder wenn das Format OFN_EXPLORER nicht vorhanden ist.  
   
- [in] `nWin4ID`  
+ [in] *nWin4ID*  
  Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Diese Vorlage dient nur dazu [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] und höher, Windows 95 und höher, oder wenn das Format OFN_EXPLORER vorhanden ist.  
   
- [in] `lpWin3ID`  
+ [in] *lpWin3ID*  
  Enthält den Namen der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Diese Vorlage dient nur unter Windows NT 3.51 oder wenn das Format OFN_EXPLORER nicht vorhanden ist.  
   
- [in] `lpWin4ID`  
+ [in] *lpWin4ID*  
  Enthält den Namen der Dialogfeldvorlagen-Ressource des Explorers `CFileDialog` Objekt. Diese Vorlage dient nur dazu [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] und höher, Windows 95 und höher, oder wenn das Format OFN_EXPLORER vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1463,10 +1463,10 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwIDCtl`  
+ *dwIDCtl*  
  Die ID der Gruppe "visual".  
   
- `strLabel`  
+ *strLabel*  
  Der Gruppenname.  
   
 ### <a name="remarks"></a>Hinweise  

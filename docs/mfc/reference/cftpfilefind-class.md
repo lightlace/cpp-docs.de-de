@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370519"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956277"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind-Klasse
 Unterstützt die Internetsuche nach Dateien auf FTP-Servern.  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pConnection`  
+ *pConnection*  
  Ein Zeiger auf eine `CFtpConnection` Objekt. Erhalten Sie eine FTP-Verbindung durch Aufrufen von [CInternetSession:: GetFTPConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  Der Kontextbezeichner für den `CFtpFileFind` Objekt. Finden Sie unter **"Hinweise"** für Weitere Informationen zu diesem Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Standardwert für `dwContext` wird gesendet, von MFC ermöglicht, die `CFtpFileFind` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CFtpFileFind` Objekt. Sie können die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen überschreiben. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
+ Der Standardwert für *DwContext* wird gesendet, von MFC ermöglicht, die `CFtpFileFind` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CFtpFileFind` Objekt. Sie können die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen überschreiben. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel in der Übersicht zur Klasse weiter oben in diesem Thema.  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pstrName`  
+ *pstrName*  
  Ein Zeiger auf eine Zeichenfolge mit dem Namen des zu suchenden Datei. Wenn **NULL**, Ausführen des Aufrufs eine Suche mit Platzhalterzeichen (*).  
   
- `dwFlags`  
+ *dwFlags*  
  Die Flags, die beschreiben, wie diese Sitzung zu behandeln. Diese Flags mit dem bitweisen OR-Operator kombiniert werden können (&#124;) und lauten wie folgt:  
   
 -   INTERNET_FLAG_RELOAD rufen Sie Daten aus der Übertragung, auch wenn diese lokal zwischengespeichert wird. Dies ist das Standardflag.  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368032"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951708"
 ---
 # <a name="cexception-class"></a>CException-Klasse
 Die Basisklasse für alle Ausnahmen in der Microsoft Foundation Class-Bibliothek.  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>Parameter  
  *b_AutoDelete*  
- Geben Sie **"true"** Wenn der Arbeitsspeicher für die `CException` Objekt auf dem Heap zugewiesen wurde. Dies bewirkt, dass die `CException` zu Wenn löschendes Objekt die **löschen** Member-Funktion wird aufgerufen, um die Ausnahme zu löschen. Geben Sie **"false"** Wenn die `CException` Objekt ist auf dem Stapel oder ein globales Objekt. In diesem Fall die `CException` Objekt werden nicht gelöscht, sobald die **löschen** Memberfunktion aufgerufen wird.  
+ Geben Sie **"true"** Wenn der Arbeitsspeicher für die `CException` Objekt auf dem Heap zugewiesen wurde. Dies bewirkt, dass die `CException` zu Wenn löschendes Objekt die `Delete` Member-Funktion wird aufgerufen, um die Ausnahme zu löschen. Geben Sie **"false"** Wenn die `CException` Objekt ist auf dem Stapel oder ein globales Objekt. In diesem Fall die `CException` Objekt werden nicht gelöscht, sobald die `Delete` Memberfunktion aufgerufen wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie müssen normalerweise nicht direkt aufrufen dieses Konstruktors. Erstellen Sie eine Funktion, die eine Ausnahme auslöst, sollte eine Instanz von einem `CException`-abgeleitete Klasse, und rufen Sie ihren Konstruktor, oder es sollten gehen die MFC-Bibliothek auslösen, Funktionen, wie z. B. [AfxThrowFileException](exception-processing.md#afxthrowfileexception), einen vordefinierten Typ ausgelöst werden soll. In dieser Dokumentation wird nur aus Gründen der Vollständigkeit bereitgestellt.  
   
 ##  <a name="delete"></a>  CException::Delete  
- Diese Funktion überprüft, ob die **CException** Objekt auf dem Heap erstellt wurde, und wenn dies der Fall ist, ruft es die **löschen** Operator für das Objekt.  
+ Diese Funktion überprüft, ob die `CException` Objekt auf dem Heap erstellt wurde, und wenn dies der Fall ist, ruft es die **löschen** Operator für das Objekt.  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Beim Löschen einer **CException** -Objekts die **löschen** Memberfunktion zum Löschen der Ausnahme. Verwenden Sie nicht die **löschen** -Operators direkt, da die `CException` Objekt möglicherweise ein globales Objekt, oder auf dem Stapel erstellt wurden.  
+ Beim Löschen einer `CException` -Objekts die `Delete` Memberfunktion zum Löschen der Ausnahme. Verwenden Sie nicht die **löschen** -Operators direkt, da die `CException` Objekt möglicherweise ein globales Objekt, oder auf dem Stapel erstellt wurden.  
   
  Sie können angeben, ob das Objekt gelöscht werden soll, wenn das Objekt erstellt wird. Weitere Informationen finden Sie unter [CException::CException](#cexception).  
   
- Sie müssen nur aufrufen **löschen** bei Verwendung von C++ **versuchen Sie es**- **catch** Mechanismus. Bei Verwendung von MFC-Makros **versuchen** und **CATCH**, und klicken Sie dann diese Makros automatisch diese Funktion aufrufen.  
+ Sie müssen nur aufrufen `Delete` bei Verwendung von C++ **versuchen**- **catch** Mechanismus. Bei Verwendung von MFC-Makros **versuchen** und **CATCH**, und klicken Sie dann diese Makros automatisch diese Funktion aufrufen.  
   
 ### <a name="example"></a>Beispiel  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nType`  
+ *%nbenachrichtigungen zu*  
  Gibt den Stil des Meldungsfelds. Wenden Sie eine beliebige Kombination der [meldungsfeldstile](styles-used-by-mfc.md#message-box-styles) in das Feld. Wenn Sie diesen Parameter nicht angeben, wird standardmäßig **MB_OK**.  
   
  *nMessageID*  

@@ -1,7 +1,7 @@
 ---
 title: CFile-Klasse | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957489"
 ---
 # <a name="cfile-class"></a>CFile-Klasse
 Die Basisklasse für Microsoft Foundation Class-Dateiklassen.  
@@ -169,9 +170,9 @@ virtual void Abort();
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die Datei nicht vor dem Löschen des Objekts geschlossen haben, wird es von der Destruktor geschlossen.  
   
- Beim Verarbeiten von Ausnahmen, `CFile::Abort` unterscheidet sich von `CFile::Close` in zwei wichtigen Aspekten. Zuerst die **Abort** Funktion nicht löst eine Ausnahme auf Fehler, da Fehler, indem ignoriert werden **Abort**. Zweitens **Abort** nicht **ASSERT** Wenn die Datei nicht geöffnet wurde oder wurde bereits geschlossen.  
+ Beim Verarbeiten von Ausnahmen, `CFile::Abort` unterscheidet sich von `CFile::Close` in zwei wichtigen Aspekten. Zunächst wird die `Abort` Funktion nicht löst eine Ausnahme auf Fehler, da Fehler, indem ignoriert werden `Abort`. Zweitens `Abort` nicht **ASSERT** Wenn die Datei nicht geöffnet wurde oder wurde bereits geschlossen.  
   
- Bei Verwendung **neue** Zuweisen der `CFile` Objekt auf dem Heap, und Sie sie löschen müssen, nach dem Schließen der Datei. **Abort** legt `m_hFile` auf `CFile::hFileNull`.  
+ Bei Verwendung **neue** Zuweisen der `CFile` Objekt auf dem Heap, und Sie sie löschen müssen, nach dem Schließen der Datei. `Abort` Legt `m_hFile` auf `CFile::hFileNull`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hFile`  
+ *hFile*  
  Handle einer Datei zum Anhängen an das `CFile`-Objekt.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Relativer oder vollständiger Pfad einer Datei zum Anhängen an das `CFile`-Objekt.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Bitweise Kombination (OR) der Dateizugriffsoptionen für die angegebene Datei. Mögliche Optionen finden Sie im Abschnitt "Hinweise".  
   
- `pTM`  
+ *pTM*  
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="remarks"></a>Hinweise  
- Die folgenden fünf Tabellen enthalten die möglichen Optionen für die `nOpenFlags`-Parameter.  
+ Die folgenden fünf Tabellen enthalten die möglichen Optionen für die *nOpenFlags* Parameter.  
   
  Wählen Sie eine der folgenden Dateizugriffsmodus-Optionen. Der standardmäßige Dateizugriffsmodus ist `CFile::modeRead`, wobei es sich um einen schreibgeschützten Modus handelt.  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|Erstellt eine neue Datei, wenn keine Datei existiert.; Wenn die Datei bereits vorhanden ist, [CFileException](../../mfc/reference/cfileexception-class.md) ausgelöst wird.|  
+|`CFile::modeCreate`|Erstellt eine neue Datei an, wenn keine Datei vorhanden ist. Wenn die Datei bereits vorhanden ist, wird sie überschrieben, und anfänglich auf NULL festgelegt.|  
 |`CFile::modeNoTruncate`|Erstellt eine neue Datei, wenn keine Datei existiert. Wenn die Datei bereits vorhanden ist, wird sie anderenfalls an das `CFile`-Objekt angehängt.|  
   
  Wählen Sie die folgenden Datei-Cache-Optionen wie beschrieben. Standardmäßig verwendet das System ein allgemeines Cache-Schema, das nicht als Option verfügbar ist.  
@@ -282,7 +283,7 @@ virtual void Close();
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die Datei nicht vor dem Löschen des Objekts geschlossen haben, wird es von der Destruktor geschlossen.  
   
- Bei Verwendung **neue** Zuweisen der `CFile` Objekt auf dem Heap, und Sie sie löschen müssen, nach dem Schließen der Datei. **Schließen** legt `m_hFile` auf `CFile::hFileNull`.  
+ Bei Verwendung **neue** Zuweisen der `CFile` Objekt auf dem Heap, und Sie sie löschen müssen, nach dem Schließen der Datei. `Close` Legt `m_hFile` auf `CFile::hFileNull`.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CFile::CFile](#cfile).  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rStatus`  
+ *rStatus*  
  Ein Verweis auf eine vom Benutzer bereitgestellte **CFileStatus** Struktur, die die Statusinformationen zu erhalten. Die **CFileStatus** Struktur enthält die folgenden Felder:  
   
 - **CTime M_ctime** Datum und Uhrzeit die Datei erstellt wurde.  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **M_szFullName [_MAX_PATH] char** den absoluten Dateinamen in den Windows-Zeichensatz.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Eine Zeichenfolge in das Windows-Zeichen werden also den Pfad zu der gewünschten Datei fest. Der Pfad kann relativ oder absolut sein, oder es kann ein Name des Netzwerkpfads enthalten.  
   
- `pTM`  
+ *pTM*  
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwPos`  
+ *dwPos*  
  Der Byte-Offset vom Anfang des zu sperrenden Bytebereichs.  
   
- `dwCount`  
+ *dwCount*  
  Die Anzahl der Bytes in der zu sperrenden Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="open"></a>  CFile::Open  
- Überladen. **Open** dient zur Verwendung mit der standardmäßigen `CFile` Konstruktor.  
+ Überladen. `Open` Dient zur Verwendung mit der standardmäßigen `CFile` Konstruktor.  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFileName`  
+ *lpszFileName*  
  Eine Zeichenfolge, die den Pfad zu der gewünschten Datei ist. Der Pfad kann relativ, absolut oder den Namen eines Netzwerks (UNC) sein.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Ein **"uint"** , definiert die Datei freigeben und Zugriffsmodus. Es gibt die zu ergreifende Maßnahme beim Öffnen der Datei an. Sie können Optionen kombinieren, mit dem bitweisen OR-( **&#124;** ) Operator. Eine Access-Berechtigung und eine Freigabe Option sind erforderlich. die **ModeCreate** und **ModeNoInherit** Modi sind optional. Finden Sie unter der [CFile](#cfile) eine Liste der Optionen für den Konstruktor.  
   
- `pError`  
+ *pError*  
  Ein Zeiger auf ein vorhandenes Datei-Ausnahme-Objekt, das den Status eines fehlgeschlagenen Vorgangs erhält.  
   
- `pTM`  
+ *pTM*  
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL, wenn das Öffnen erfolgreich war; andernfalls 0. Die `pError` Parameter ist nur sinnvoll, wenn 0 zurückgegeben wird.  
+ Der Wert ist ungleich NULL, wenn das Öffnen erfolgreich war; andernfalls 0. Die *pError* Parameter ist nur sinnvoll, wenn 0 zurückgegeben wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Die zwei Funktionen bilden einen "sicheren"-Methode zum Öffnen einer Datei, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
- Während der `CFile` Konstruktors löst eine Ausnahme in einem Fehlerzustand **öffnen** zurück **"false"** für fehlerbedingungen. **Open** können weiterhin initialisieren eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt, das den Fehler jedoch zu beschreiben. Falls Sie nicht angeben der `pError` Parameter, oder wenn Sie übergeben **NULL** für `pError`, **öffnen** zurück **"false"** und löst eine `CFileException`. Wenn Sie einen Zeiger auf eine vorhandene übergeben `CFileException`, und **öffnen** prüfpunkterstellung einen Fehler erkennt, die Funktion wird mit Informationen gefüllt, die den Fehler beschreibt. Keine Groß-/Kleinschreibung wird **öffnen** lösen eine Ausnahme aus.  
+ Während der `CFile` Konstruktors löst eine Ausnahme in einem Fehlerzustand `Open` zurück **"false"** für fehlerbedingungen. `Open` können weiterhin Initialisieren einer [CFileException](../../mfc/reference/cfileexception-class.md) Objekt, das den Fehler jedoch zu beschreiben. Wenn Sie nicht angeben der *pError* Parameter, oder wenn Sie weitergeben **NULL** für *pError*, `Open` zurück **"false"** und lösen kein `CFileException`. Wenn Sie einen Zeiger auf eine vorhandene übergeben `CFileException`, und `Open` prüfpunkterstellung einen Fehler erkennt, die Funktion wird mit Informationen gefüllt, die den Fehler beschreibt. Keine Groß-/Kleinschreibung wird `Open` lösen eine Ausnahme aus.  
   
- Die folgende Tabelle beschreibt die möglichen Ergebnisse **öffnen**.  
+ Die folgende Tabelle beschreibt die möglichen Ergebnisse `Open`.  
   
 |`pError`|Fehler:|Rückgabewert|CFileException Inhalt|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -583,14 +584,14 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpBuf`  
+ *lpBuf*  
  Zeiger auf den vom Benutzer bereitgestellte Puffer, die die Daten empfangen, die aus der Datei gelesen werden.  
   
- `nCount`  
+ *nCount*  
  Die maximale Anzahl von Bytes aus der Datei gelesen werden. Für Textmodus Dateien, Carriage Return-Zeilenvorschub-Paare werden als einzelne Zeichen gezählt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der in den Puffer übertrageben Bytes. Beachten Sie, dass für alle `CFile` Klassen, ist der Rückgabewert möglicherweise kleiner als `nCount` , wenn das Ende der Datei erreicht wurde.  
+ Die Anzahl der in den Puffer übertrageben Bytes. Beachten Sie, dass für alle `CFile` Klassen, ist der Rückgabewert möglicherweise kleiner als *nCount* , wenn das Ende der Datei erreicht wurde.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFileName`  
+ *lpszFileName*  
  Eine Zeichenfolge, die den Pfad zu der gewünschten Datei ist. Der Pfad kann relativ oder absolut sein und darf einen Netzwerknamen.  
   
- `pTM`  
+ *pTM*  
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="remarks"></a>Hinweise  
@@ -632,13 +633,13 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszOldName`  
+ *lpszOldName*  
  Der alte Pfad.  
   
- `lpszNewName`  
+ *lpszNewName*  
  Der neue Pfad.  
   
- `pTM`  
+ *pTM*  
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="remarks"></a>Hinweise  
@@ -657,17 +658,17 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lOff`  
+ *lOff*  
  Die Anzahl der Bytes, den Dateizeiger zu verschieben. Positive Werte verschieben den Dateizeiger am Ende der Datei; negative Werte bewegen den Dateizeiger für den Anfang der Datei.  
   
- `nFrom`  
+ *nFrom*  
  Die Position zu suchende aus. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Position des Dateizeigers, wenn die Methode erfolgreich ausgeführt wurde; Andernfalls ist der Rückgabewert nicht definiert und einen Zeiger auf eine `CFileException` Ausnahme wird ausgelöst.  
   
 ### <a name="remarks"></a>Hinweise  
- Die folgende Tabelle enthält die möglichen Werte für die `nFrom` Parameter.  
+ Die folgende Tabelle enthält die möglichen Werte für die *nFrom* Parameter.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszNewName`  
+ *lpszNewName*  
  Zeiger auf eine Zeichenfolge, die den neuen Pfad angeben.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwNewLen`  
+ *dwNewLen*  
  Die gewünschte Länge der Datei in Bytes. Dieser Wert kann größer oder kleiner als die aktuelle Länge der Datei sein. Die Datei werden erweitert oder je nach Bedarf abgeschnitten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFileName`  
+ *lpszFileName*  
  Eine Zeichenfolge, die den Pfad zu der gewünschten Datei ist. Der Pfad kann relativ oder absolut sein und darf einen Netzwerknamen.  
   
  *status*  
  Der Puffer mit den neuen Statusinformationen. Rufen Sie die **GetStatus** Memberfunktion prefill der **CFileStatus** -Struktur mit den aktuellen Werten, und ändern Sie dann nach Bedarf. Wenn ein Wert 0 ist, wird das entsprechende Element der Status nicht aktualisiert. Finden Sie unter der [GetStatus](#getstatus) Memberfunktion, die eine Beschreibung der **CFileStatus** Struktur.  
   
- `pTM`  
+ *pTM*  
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="remarks"></a>Hinweise  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwPos`  
+ *dwPos*  
  Der Byte-Offset vom Anfang des zu entsperrenden Bytebereichs.  
   
- `dwCount`  
+ *dwCount*  
  Die Anzahl der Bytes in der zu entsperrenden Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -814,10 +815,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpBuf`  
+ *lpBuf*  
  Ein Zeiger auf den vom Benutzer bereitgestellte Puffer mit den Daten in die Datei geschrieben werden sollen.  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der Bytes, die aus dem Puffer übertragen werden. Für Textmodus Dateien, Carriage Return-Zeilenvorschub-Paare werden als einzelne Zeichen gezählt.  
   
 ### <a name="remarks"></a>Hinweise  

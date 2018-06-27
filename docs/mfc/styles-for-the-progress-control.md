@@ -17,35 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1044c82c2864d71047e4fe3c7461d03a17d9d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b29d0df8342ce00a2ddb0d46970d9504a06edd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380109"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956680"
 ---
 # <a name="styles-for-the-progress-control"></a>Stile für das Statussteuerelement
-Beim anfänglichen Erstellen des Statussteuerelements ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md#create)), verwenden Sie die `dwStyle` Parameter, um das gewünschte Fensterstile für Ihre Statussteuerelement anzugeben. In der folgenden Liste sind die entsprechenden Fensterstile. Das Steuerelement ignoriert alle Fensterstil als diejenigen, die hier aufgeführten. Sie sollten immer das Steuerelement als untergeordnetes Fenster, in der Regel von einem Dialogfeld übergeordnetes Element erstellen.  
+Beim anfänglichen Erstellen des Statussteuerelements ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md#create)), verwenden Sie die *DwStyle* Parameter, um das gewünschte Fensterstile für Ihre Statussteuerelement anzugeben. In der folgenden Liste sind die entsprechenden Fensterstile. Das Steuerelement ignoriert alle Fensterstil als diejenigen, die hier aufgeführten. Sie sollten immer das Steuerelement als untergeordnetes Fenster, in der Regel von einem Dialogfeld übergeordnetes Element erstellen.  
   
 |Fensterstil|Effekt|  
 |------------------|------------|  
-|`WS_BORDER`|Erstellt einen Rahmen um das Fenster an.|  
-|**WS_CHILD**|Erstellt ein untergeordnetes Fenster (sollte immer verwendet werden, für die `CProgressCtrl`).|  
-|**WS_CLIPCHILDREN**|Schließt den Bereich von untergeordnete Fenster belegt wird, wenn Sie innerhalb des übergeordneten Fensters zeichnen. Wird verwendet, wenn Sie das übergeordnete Fenster erstellen.|  
-|**WS_CLIPSIBLINGS**|Kappt untergeordnete Fenster relativ zueinander.|  
-|**WS_DISABLED**|Erstellt ein Fenster, das anfänglich deaktiviert ist.|  
-|**WS_VISIBLE**|Erstellt ein Fenster, das anfänglich sichtbar ist.|  
-|**WS_TABSTOP**|Gibt an, dass das Steuerelement den Fokus, beim Drücken der TAB-Taste erhalten kann, um darauf zu verschieben.|  
+|WS_BORDER|Erstellt einen Rahmen um das Fenster an.|  
+|WS_CHILD|Erstellt ein untergeordnetes Fenster (sollte immer verwendet werden, für die `CProgressCtrl`).|  
+|WS_CLIPCHILDREN|Schließt den Bereich von untergeordnete Fenster belegt wird, wenn Sie innerhalb des übergeordneten Fensters zeichnen. Wird verwendet, wenn Sie das übergeordnete Fenster erstellen.|  
+|WS_CLIPSIBLINGS|Kappt untergeordnete Fenster relativ zueinander.|  
+|WS_DISABLED|Erstellt ein Fenster, das anfänglich deaktiviert ist.|  
+|WS_VISIBLE|Erstellt ein Fenster, das anfänglich sichtbar ist.|  
+|WS_TABSTOP|Gibt an, dass das Steuerelement den Fokus, beim Drücken der TAB-Taste erhalten kann, um darauf zu verschieben.|  
   
- Darüber hinaus können Sie angeben, zwei Formate, die nur für das Statussteuerelement gelten `PBS_VERTICAL` und `PBS_SMOOTH`.  
+ Darüber hinaus können Sie zwei Formate, die nur für das Statussteuerelement gelten PBS_VERTICAL und PBS_SMOOTH angeben.  
   
- Verwendung `PBS_VERTICAL` um das Steuerelement vertikal statt horizontal auszurichten. Verwendung `PBS_SMOOTH` das Steuerelement vollständig gefüllt wird, anstatt kleine abgegrenzt Quadrate, die inkrementell füllen Sie das Steuerelement anzeigen.  
+ Verwenden Sie PBS_VERTICAL, um das Steuerelement vertikal statt horizontal auszurichten. Verwenden Sie PBS_SMOOTH, um das Steuerelement vollständig aufgefüllt wird, anstatt kleine abgegrenzt Quadrate, die inkrementell füllen Sie das Steuerelement anzeigen.  
   
- Ohne `PBS_SMOOTH` Format:  
+ Ohne PBS_SMOOTH-Format:  
   
  ![Standardstil der Statusleiste](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- Mit `PBS_SMOOTH` und `PBS_VERTICAL` Formatvorlagen:  
+ Mit PBS_SMOOTH und PBS_VERTICAL-Formate:  
   
  ![Balkenart, glatt und vertikal Status](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   

@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb514531e600243fe02f8b5a6a9cd91a30c14542
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357240"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952579"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
 Stellt die Funktionalität eines Windows-Kombinationsfelds bereit.  
@@ -254,7 +254,7 @@ class CComboBox : public CWnd
   
  Wenn Sie Einbetten einer `CComboBox` Objekt in ein anderes Fenster Objekt, das Sie brauchen sie zerstört werden. Bei Erstellung der `CComboBox` Objekt im Stapel befindet, automatisch zerstört wird. Bei Erstellung der `CComboBox` Objekt auf dem Heap mit dem **neue** -Funktion, die Sie aufrufen müssen **löschen** auf das Objekt, das sie zerstört werden, wenn die Windows-Kombinationsfelds zerstört wird.  
   
- **Hinweis** Wenn Sie behandeln möchten `WM_KEYDOWN` und `WM_CHAR` Nachrichten müssen Unterklasse des Kombinationsfelds bearbeiten und Liste Listenfeldsteuerelemente, leiten Sie eine Klasse von `CEdit` und `CListBox`, und die abgeleiteten Handler für diese Nachrichten hinzufügen Klassen. Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspxscid=kb; En-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) und [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Hinweis** Wenn WM_KEYDOWN und WM_CHAR Nachrichten behandelt werden sollen, müssen Sie Unterklasse des Kombinationsfelds bearbeiten und Liste Listenfeldsteuerelemente, leiten Sie eine Klasse von `CEdit` und `CListBox`, und die abgeleiteten Klassen Handler für diese Nachrichten hinzuzufügen. Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspxscid=kb; En-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) und [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -276,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszString`  
+ *lpszString*  
  Verweist auf die Null-terminierte Zeichenfolge, die hinzugefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -324,7 +324,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  Eine long-Zeiger auf eine [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -366,25 +366,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Format des Kombinationsfelds. Wenden Sie eine beliebige Kombination von [kombinationsfeldstile](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) in das Feld.  
   
- `rect`  
+ *Rect*  
  Verweist auf die Position und Größe des Kombinationsfelds. Kann eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) oder ein `CRect` Objekt.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, das Kombinationsfeld des übergeordneten Fensters (in der Regel eine `CDialog`). Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt an, das Kombinationsfeld-Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CComboBox` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, das erstellt die Windows-Kombinationsfelds und fügt es der `CComboBox` Objekt.  
+ Sie erstellen eine `CComboBox` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann `Create`, das erstellt die Windows-Kombinationsfelds und fügt es der `CComboBox` Objekt.  
   
- Wenn **erstellen** ausgeführt wird, sendet Windows die [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), und [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Nachrichten dem Kombinationsfeld.  
+ Wenn `Create` ausgeführt wird, sendet Windows die [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), und [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Nachrichten im Kombinationsfeld.  
   
  Diese Nachrichten werden standardmäßig verarbeitet der [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), und [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Memberfunktionen in der `CWnd` Basisklasse. Um die Standard-Meldungsbehandlung zu erweitern, leiten Sie eine Klasse von `CComboBox`eine meldungszuordnung an die neue Klasse hinzufügen und die vorherigen Meldungshandler Memberfunktionen überschreiben. Überschreiben Sie `OnCreate`, z. B. für die erforderliche Initialisierung für eine neue Klasse.  
   
@@ -428,7 +428,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Eine long-Zeiger auf ein Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) -Struktur, die Informationen über das gelöschte Element enthält. Finden Sie unter [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) eine Beschreibung dieser Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -438,21 +438,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
 ##  <a name="deletestring"></a>  CComboBox::DeleteString  
- Löscht das Element an Position `nIndex` aus dem Kombinationsfeld.  
+ Löscht das Element an Position *nIndex* aus dem Kombinationsfeld.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt den Index in der Zeichenfolge, die gelöscht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Rückgabewert größer als oder gleich 0 ist, ist es die Anzahl der Zeichenfolgen in der Liste Verbleibende. Der Rückgabewert ist **CB_ERR** Wenn `nIndex` Index größer als die Anzahl der Elemente in der Liste angibt.  
+ Wenn der Rückgabewert größer als oder gleich 0 ist, ist es die Anzahl der Zeichenfolgen in der Liste Verbleibende. Der Rückgabewert ist **CB_ERR** Wenn *nIndex* Index größer als die Anzahl der Elemente in der Liste angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Elemente, die nach `nIndex` nun eine Position nach unten verschieben. Z. B. wenn ein Kombinationsfeld zwei Elemente enthält, verursacht löschen das erste Element der verbleibenden Element aus, um in der ersten Position aussehen. `nIndex`= 0 für das Element in der ersten Position.  
+ Alle Elemente, die nach *nIndex* nun eine Position nach unten verschieben. Z. B. wenn ein Kombinationsfeld zwei Elemente enthält, verursacht löschen das erste Element der verbleibenden Element aus, um in der ersten Position aussehen. *nIndex*= 0 für das Element in der ersten Position.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
@@ -467,8 +467,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `attr`  
- Kann eine beliebige Kombination der `enum` Werte, die in beschriebenen [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) oder eine beliebige Kombination der folgenden Werte:  
+ *attr*  
+ Kann eine beliebige Kombination der **Enum** Werte, die in beschriebenen [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) oder eine beliebige Kombination der folgenden Werte:  
   
 - **DDL_READWRITE** Datei auslesen oder geschrieben werden kann.  
   
@@ -478,15 +478,15 @@ int Dir(
   
 - **DDL_SYSTEM** Datei ist eine Systemdatei.  
   
-- **DDL_DIRECTORY** angegebene `lpszWildCard` gibt das Verzeichnis an.  
+- **DDL_DIRECTORY** angegebene *LpszWildCard* gibt das Verzeichnis an.  
   
 - **DDL_ARCHIVE** Datei wurde archiviert.  
   
-- **DDL_DRIVES** umfassen alle Laufwerke, die die vom angegebenen Namen entsprechen `lpszWildCard`.  
+- **DDL_DRIVES** umfassen alle Laufwerke, die die vom angegebenen Namen entsprechen *LpszWildCard*.  
   
 - **DDL_EXCLUSIVE** exklusive Flag. Wenn die exklusive Flag festgelegt ist, werden nur Dateien des angegebenen Typs aufgeführt. Dateien des angegebenen Typs werden hingegen neben "Standard"-Dateien aufgeführt.  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  Zeigt auf eine Dateispezifikation Zeichenfolge. Die Zeichenfolge kann Platzhalter enthalten (z. B. *.\*).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -506,13 +506,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Ein Zeiger auf eine [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) -Struktur, die Informationen über den Typ der Zeichnung erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
  Die **ItemAction** Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll. Finden Sie unter [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) eine Beschreibung dieser Struktur.  
   
- Standardmäßig wird diese Memberfunktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CComboBox` Objekt. Bevor diese Memberfunktion beendet wird, sollte die Anwendung alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct`.  
+ Standardmäßig wird diese Memberfunktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CComboBox` Objekt. Bevor diese Memberfunktion beendet wird, sollte die Anwendung alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen *LpDrawItemStruct*.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
@@ -527,10 +527,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStartAfter`  
- Enthält den nullbasierten Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am Ende das Listenfeld erreicht wird, weiterhin von der obersten Position des Listenfelds zurück durch angegebene Element `nStartAfter`. Wenn 1, wird der gesamte Listenfeld vom Anfang durchsucht.  
+ *nStartAfter*  
+ Enthält den nullbasierten Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am Ende das Listenfeld erreicht wird, weiterhin von der obersten Position des Listenfelds zurück durch angegebene Element *nStartAfter*. Wenn 1, wird der gesamte Listenfeld vom Anfang durchsucht.  
   
- `lpszString`  
+ *lpszString*  
  Verweist auf die auf Null endende Zeichenfolge, die das Präfix für die Suche enthält. Die Suche gilt unabhängig, damit diese Zeichenfolge eine beliebige Kombination von Groß- und Kleinbuchstaben enthalten kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -543,7 +543,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
- Rufen Sie die `FindStringExact` Member-Funktion, um die erste im Listenfeld-Zeichenfolge (in ein Kombinationsfeld) zu suchen, der im angegebenen Zeichenfolge übereinstimmt `lpszFind`.  
+ Rufen Sie die `FindStringExact` Member-Funktion, um die erste im Listenfeld-Zeichenfolge (in ein Kombinationsfeld) zu suchen, der im angegebenen Zeichenfolge übereinstimmt *LpszFind*.  
   
 ```  
 int FindStringExact(
@@ -552,17 +552,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndexStart`  
- Gibt den nullbasierten Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am Ende das Listenfeld erreicht wird, weiterhin von der obersten Position des Listenfelds zurück durch angegebene Element `nIndexStart`. Wenn `nIndexStart` ist-1 und das gesamte Listenfeld wird vom Anfang durchsucht.  
+ *nIndexStart*  
+ Gibt den nullbasierten Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am Ende das Listenfeld erreicht wird, weiterhin von der obersten Position des Listenfelds zurück durch angegebene Element *nIndexStart*. Wenn *nIndexStart* ist-1 und das gesamte Listenfeld wird vom Anfang durchsucht.  
   
- `lpszFind`  
+ *lpszFind*  
  Verweist auf die Null-terminierte Zeichenfolge gesucht. Diese Zeichenfolge kann einen vollständigen Dateinamen, einschließlich der Erweiterung enthalten. Die Suche ist nicht Groß-/Kleinschreibung beachtet, sodass diese Zeichenfolge eine beliebige Kombination von Groß- und Kleinbuchstaben enthalten kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des entsprechenden Elements oder **CB_ERR** , wenn die Suche nicht erfolgreich war.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Kombinationsfeld mit einem Ownerdrawn-Stil, aber ohne erstellt wurde die [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil `FindStringExact` versucht, mit der Doppelwort Wert gegen den Wert von `lpszFind`.  
+ Wenn das Kombinationsfeld mit einem Ownerdrawn-Stil, aber ohne erstellt wurde die [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil `FindStringExact` versucht, mit der Doppelwort Wert gegen den Wert von *LpszFind*.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `lpszText`|Ein Zeiger auf einen Puffer, der den hinweisbannertext empfängt.|  
-|[in] `cchText`|Größe des Puffers, der `lpszText` -Parameter zeigt.|  
+|[out] *LpszText*|Ein Zeiger auf einen Puffer, der den hinweisbannertext empfängt.|  
+|[in] *CchText*|Größe des Puffers, der *LpszText* -Parameter zeigt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  In der ersten Überladung eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt, das den hinweisbannertext enthält, wenn er vorhanden ist, andernfalls ein `CString` -Objekt, das 0 (null) Länge aufweist.  
@@ -747,14 +747,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält den nullbasierten Index eines Elements im Listenfeld des Kombinationsfelds.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der 32-Bit-Wert, der dem Element zugeordnet oder **CB_ERR** Wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die 32-Bit-Wert kann festgelegt werden, mit der `dwItemData` Parameter, der eine [SetItemData](#setitemdata) memberfunktionsaufruf. Verwenden der `GetItemDataPtr` Memberfunktion, wenn der 32-Bit-Wert abgerufen werden soll, ein Zeiger ist ( **"void"\***).  
+ Die 32-Bit-Wert kann festgelegt werden, mit der *DwItemData* Parameter, der eine [SetItemData](#setitemdata) memberfunktionsaufruf. Verwenden der `GetItemDataPtr` Memberfunktion, wenn der 32-Bit-Wert abgerufen werden soll, ein Zeiger ist ( **"void"\***).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
@@ -767,7 +767,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält den nullbasierten Index eines Elements im Listenfeld des Kombinationsfelds.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -784,8 +784,8 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Gibt die Komponente des Kombinationsfelds, dessen Höhe ist abgerufen werden sollen. Wenn die `nIndex` Parameter ist-1, der die Höhe der Edit-Steuerelement (oder statischer Text) Teil des Kombinationsfelds abgerufen wird. Wenn das Kombinationsfeld kann die [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil `nIndex` gibt den nullbasierten Index des Listenelements, dessen Höhe ist abgerufen werden sollen. Andernfalls `nIndex` muss auf 0 festgelegt werden.  
+ *nIndex*  
+ Gibt die Komponente des Kombinationsfelds, dessen Höhe ist abgerufen werden sollen. Wenn die *nIndex* Parameter ist-1, der die Höhe der Edit-Steuerelement (oder statischer Text) Teil des Kombinationsfelds abgerufen wird. Wenn das Kombinationsfeld kann die [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil *nIndex* gibt den nullbasierten Index des Listenelements, dessen Höhe ist abgerufen werden sollen. Andernfalls *nIndex* muss auf 0 festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Höhe des angegebenen Elements in einem Kombinationsfeld in Pixel. Der Rückgabewert beim Auftreten eines Fehlers ist **CB_ERR** .  
@@ -807,17 +807,17 @@ void GetLBText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält den nullbasierten Index der Zeichenfolge im Listenfeld kopiert werden soll.  
   
- `lpszText`  
+ *lpszText*  
  Zeigt auf einen Puffer, der die Zeichenfolge empfangen. Der Puffer muss genügend Speicherplatz für die Zeichenfolge und ein abschließendes Nullzeichen aufweisen.  
   
- `rString`  
+ *rString*  
  Ein Verweis auf eine `CString`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Länge (in Byte) der Zeichenfolge ist, außer das abschließende Nullzeichen. Wenn `nIndex` gibt keinen gültigen Index, der Rückgabewert ist **CB_ERR**.  
+ Die Länge (in Byte) der Zeichenfolge ist, außer das abschließende Nullzeichen. Wenn *nIndex* gibt keinen gültigen Index, der Rückgabewert ist **CB_ERR**.  
   
 ### <a name="remarks"></a>Hinweise  
  Die zweite Form dieses Members-Funktion füllt eine `CString` Objekt mit den Text des Elements.  
@@ -833,11 +833,11 @@ int GetLBTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält den nullbasierten Index der Zeichenfolge im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Länge der Zeichenfolge in Bytes, ausgenommen das abschließende Nullzeichen. Wenn `nIndex` gibt keinen gültigen Index, der Rückgabewert ist **CB_ERR**.  
+ Die Länge der Zeichenfolge in Bytes, ausgenommen das abschließende Nullzeichen. Wenn *nIndex* gibt keinen gültigen Index, der Rückgabewert ist **CB_ERR**.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CComboBox::GetLBText](#getlbtext).  
@@ -897,10 +897,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItems`  
+ *nItems*  
  Gibt die Anzahl von Elementen hinzufügen.  
   
- `nBytes`  
+ *Anzahl_byte*  
  Gibt die Größe des Speichers in Bytes, die für Element Zeichenfolgen zugeordnet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -909,7 +909,7 @@ int InitStorage(
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird vor dem Hinzufügen von einer großen Anzahl von Elementen zu der im Listenfeld Teil der `CComboBox`.  
   
- Windows 95/98: der `wParam` Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder mehr als 32.767 Elemente enthalten können. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld, das nur durch den verfügbaren Speicher beschränkt.  
+ Windows 95/98: die *wParam* Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder mehr als 32.767 Elemente enthalten können. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld, das nur durch den verfügbaren Speicher beschränkt.  
   
  Diese Funktion hilft der Initialisierung des Listenfelder beschleunigen, die eine große Anzahl von Elementen (mehr als 100) aufweisen. Es reserviert so, dass bei nachfolgenden angegebene Arbeitsspeichermenge [AddString](#addstring), [InsertString](#insertstring), und [Dir](#dir) akzeptieren Funktionen kurz wie möglich. Sie können die Schätzungen für die Parameter verwenden. Wenn Sie überschätzen, wird zusätzlicher Arbeitsspeicher reserviert. Wenn Sie unterschätzen, wird die normale Verteilung für Elemente verwendet, die den eingeteilt überschreiten.  
   
@@ -926,10 +926,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält den nullbasierten Index der Position im Listenfeld, die die Zeichenfolge aufnehmen soll. Wenn dieser Parameter-1 ist, wird die Zeichenfolge am Ende der Liste hinzugefügt.  
   
- `lpszString`  
+ *lpszString*  
  Zeigt auf die einzufügende nullterminierte Zeichenfolge.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -952,7 +952,7 @@ BOOL LimitText(int nMaxChars);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMaxChars`  
+ *nMaxChars*  
  Gibt die Länge (in Bytes) des Texts, der der Benutzer eingeben kann. Wenn dieser Parameter 0 ist, wird die Textlänge auf 65.535 Byte festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -974,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Eine long-Zeiger auf eine [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1020,10 +1020,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStartAfter`  
- Enthält den nullbasierten Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am Ende das Listenfeld erreicht wird, weiterhin von der obersten Position des Listenfelds zurück durch angegebene Element `nStartAfter`. Wenn 1, wird der gesamte Listenfeld vom Anfang durchsucht.  
+ *nStartAfter*  
+ Enthält den nullbasierten Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am Ende das Listenfeld erreicht wird, weiterhin von der obersten Position des Listenfelds zurück durch angegebene Element *nStartAfter*. Wenn 1, wird der gesamte Listenfeld vom Anfang durchsucht.  
   
- `lpszString`  
+ *lpszString*  
  Verweist auf die auf Null endende Zeichenfolge, die das Präfix für die Suche enthält. Die Suche gilt unabhängig, damit diese Zeichenfolge eine beliebige Kombination von Groß- und Kleinbuchstaben enthalten kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1059,7 +1059,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
  Diese Methode sendet die [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_combobox`, d. h. verwendet, um ein Kombinationsfeld-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert die Variable *M_combobox*, d. h. verwendet, um ein Kombinationsfeld-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1076,11 +1076,11 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nSelect`  
+ *Wählen Sie*  
  Gibt den nullbasierten Index des zu wählen Sie die Zeichenfolge an. Wenn-1 und aktuelle Auswahl im Listenfeld entfernt, und das Bearbeitungssteuerelement ist deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des Elements ausgewählt, wenn die Nachricht erfolgreich ist. Der Rückgabewert ist **CB_ERR** Wenn `nSelect` ist größer als die Anzahl der Elemente in der Liste oder wenn `nSelect` wird auf-1 festgelegt, die die Auswahl löscht.  
+ Der nullbasierte Index des Elements ausgewählt, wenn die Nachricht erfolgreich ist. Der Rückgabewert ist **CB_ERR** Wenn *wählen* ist größer als die Anzahl der Elemente in der Liste oder wenn *wählen* wird auf-1 festgelegt, die die Auswahl löscht.  
   
 ### <a name="remarks"></a>Hinweise  
  Bei Bedarf führt einen Bildlauf im Listenfeld die Zeichenfolge in der Ansicht (Wenn Sie im Listenfeld angezeigt wird). Der Text im Bearbeitungssteuerelement des Kombinationsfelds wird geändert, um die neue Auswahl angewendet. Die vorherige Auswahl im Listenfeld wird entfernt.  
@@ -1096,7 +1096,7 @@ int SetDroppedWidth(UINT nWidth);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWidth`  
+ *nWidth*  
  Die zulässige Mindestbreite des Listenfeld Teils der im Kombinationsfeld in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1120,10 +1120,10 @@ BOOL SetEditSel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStartChar`  
+ *nStartChar*  
  Gibt die Startposition. Wenn die Anfangsposition auf-1 festgelegt ist, wird die vorhandene Auswahl entfernt.  
   
- `nEndChar`  
+ *nEndChar*  
  Gibt die Endposition. Wenn die Endposition-1, klicken Sie dann alle Text aus der Startposition, bis zum letzten festgelegt ist wird Zeichen in das Bearbeitungssteuerelement ausgewählt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1191,10 +1191,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält einen nullbasierte Index des Elements festlegen.  
   
- `dwItemData`  
+ *dwItemData*  
  Enthält den neuen Wert des Elements zugeordnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1216,10 +1216,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Enthält einen nullbasierten Index des Elements an.  
   
- `pData`  
+ *pData*  
  Enthält die Zeiger auf die Verknüpfung mit dem Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1241,15 +1241,15 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt an, ob die Höhe der Listenelemente oder die Höhe der Edit-Steuerelement (oder statischer Text) Teil des Kombinationsfelds festgelegt ist.  
   
- Wenn das Kombinationsfeld kann die [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil `nIndex` gibt den nullbasierten Index des Listenelements, dessen Höhe ist auf festgelegt ist, andernfalls werden `nIndex` 0 und die Höhe der alle Liste Elemente festgelegt werden muss.  
+ Wenn das Kombinationsfeld kann die [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil *nIndex* gibt den nullbasierten Index des Listenelements, dessen Höhe ist auf festgelegt ist, andernfalls werden *nIndex* muss 0 sein und die Höhe aller Elemente der Liste wird festgelegt.  
   
- Wenn `nIndex` ist-1 und die Höhe des Bearbeitungssteuerelements- oder statischer Text Aspekt des Kombinationsfelds besteht darin, festgelegt werden.  
+ Wenn *nIndex* ist-1 und die Höhe des Bearbeitungssteuerelements- oder statischer Text Aspekt des Kombinationsfelds besteht darin, festgelegt werden.  
   
- `cyItemHeight`  
- Gibt die Höhe in Pixel, der im Kombinationsfeld Komponente identifizierten `nIndex`.  
+ *cyItemHeight*  
+ Gibt die Höhe in Pixel, der im Kombinationsfeld Komponente identifizierten *nIndex*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  **CB_ERR** , wenn der Index oder der Höhe ungültig, andernfalls 0 ist.  
@@ -1268,7 +1268,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewLocale`  
+ *nNewLocale*  
  Das neue Gebietsschema Gebietsschemabezeichner (LCID) für das Kombinationsfeld festzulegende Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|Gibt die minimale Anzahl von sichtbaren Elemente an.|  
+|[in] *iMinVisible*|Gibt die minimale Anzahl von sichtbaren Elemente an.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -1300,7 +1300,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Diese Methode sendet die [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_combobox`, d. h. verwendet, um ein Kombinationsfeld-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert die Variable *M_combobox*, d. h. verwendet, um ein Kombinationsfeld-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1317,14 +1317,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt den nullbasierten Index des Elements im Listenfeld an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  NULL Wenn erfolgreich, oder **CB_ERR** Wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das System führt einen Bildlauf im Listenfeld, bis das durch angegebene Element `nIndex` wird am oberen Rand der Liste im Feld oder den maximalen Bildlaufbereich wurde erreicht.  
+ Das System führt einen Bildlauf im Listenfeld, bis das durch angegebene Element *nIndex* wird am oberen Rand der Liste im Feld oder den maximalen Bildlaufbereich wurde erreicht.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  

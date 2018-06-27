@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382036"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953144"
 ---
 # <a name="tree-control-styles"></a>Struktursteuerelementstile
-Strukturansicht ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Stile steuern Aspekte der Darstellung eine Struktur des Steuerelements. Bei der Erstellung des Strukturansicht-Steuerelements, legen Sie die anfänglichen Formate. Abrufen und ändern Sie die Stile nach dem Erstellen des Strukturansicht-Steuerelements mithilfe der [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) und [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows-Funktionen, die Angabe **GWL_STYLE** für die `nIndex` Parameter. Eine vollständige Liste der Formate finden Sie unter [Ansicht Fenster Struktursteuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb760013) im Windows SDK.  
+Strukturansicht ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Stile steuern Aspekte der Darstellung eine Struktur des Steuerelements. Bei der Erstellung des Strukturansicht-Steuerelements, legen Sie die anfänglichen Formate. Abrufen und ändern Sie die Stile nach dem Erstellen des Strukturansicht-Steuerelements mithilfe der [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) und [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows-Funktionen, die Angabe **GWL_STYLE** für die *nIndex* Parameter. Eine vollständige Liste der Formate finden Sie unter [Ansicht Fenster Struktursteuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb760013) im Windows SDK.  
   
  Die **Formate TVS_HASLINES** Stil verbessert die grafische Darstellung der Hierarchie eine Strukturansicht-Steuerelements durch Zeichnen von Linien, die untergeordnete Elemente mit ihren entsprechenden übergeordneten Element verknüpft. Dieses Format jedoch nicht Elemente auf der Stammebene der Hierarchie verknüpft. Zu diesem Zweck müssen Sie zum Kombinieren der **Formate TVS_HASLINES** und **TVS_LINESATROOT** Stile.  
   

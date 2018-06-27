@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352739"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951932"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo-Struktur
 Die `CDaoDatabaseInfo` Struktur enthält Informationen über ein Datenbankobjekt für Datenzugriffsobjekte (DAO) definiert.  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `m_strName`  
+ *m_strName*  
  Eindeutig benennt das Datenbankobjekt. Um diese Eigenschaft direkt abzurufen, rufen Sie [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Details finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Gibt an, ob Änderungen an der Datenbank vorgenommen werden können. Um diese Eigenschaft direkt abzurufen, rufen Sie [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Details finden Sie im Thema "Aktualisierbare Property" in der DAO-Hilfe.  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Gibt die Version der Microsoft Jet-Datenbankmodul. Um den Wert dieser Eigenschaft direkt abzurufen, rufen Sie des Datenbankobjekts [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) Memberfunktion. Details finden Sie im Thema "Version-Eigenschaft" DAO-Hilfe.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Gibt die Sequenz der Sortierreihenfolge im Text für den Zeichenfolgenvergleich oder sortieren. Mögliche Werte:  
   
 - **DbSortGeneral** verwenden Sie die allgemeine Sortierreihenfolge (Englisch, Französisch, Deutsch, Portugiesisch, Italienisch und Modern Spanisch).  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  Die Anzahl der Sekunden, die das Microsoft Jet-Datenbankmodul, bevor ein Timeout-Fehler wartet tritt auf, wenn eine Abfrage auf eine ODBC-Datenbank ausgeführt wird. Der Standard-Timeoutwert ist 60 Sekunden. Wenn QueryTimeout auf 0 festgelegt ist, tritt kein Timeout. Dies kann dazu führen, dass das Programm nicht mehr reagiert. Um den Wert dieser Eigenschaft direkt abzurufen, rufen Sie des Datenbankobjekts [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) Memberfunktion. Details finden Sie im Thema "QueryTimeout-Eigenschaft" DAO-Hilfe.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Enthält Informationen zur Quelle des eine geöffnete Datenbank. Informationen zu Verbindungszeichenfolgen und Informationen direkt das Abrufen des Werts dieser Eigenschaft finden Sie unter der [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) Memberfunktion. Weitere Informationen finden Sie im Thema "Verbinden der Eigenschaft" DAO-Hilfe.  
   
 ## <a name="remarks"></a>Hinweise  

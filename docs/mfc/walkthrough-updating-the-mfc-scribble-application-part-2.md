@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385390"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952429"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)
 [Teil 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) Scribble-Anwendung in dieser exemplarischen Vorgehensweise wurde gezeigt, wie das klassische Office Fluent-Menüband hinzugefügt. In diesem Teil werden zum Hinzufügen von menübandbereichen und Steuerelemente, die Benutzer anstelle von Menüs und Befehle verwenden können.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385390"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Die menübandleiste Sichtbereich und Fenster-Bereich hinzufügen  
   
-1.  Erstellen Sie einen Bereich mit dem Namen `View`, verfügt über zwei Kontrollkästchen angezeigt, die die Symbolleiste und Statusleiste umzuschalten.  
+1.  Erstellen Sie einen Bereich mit dem Namen *Ansicht*, verfügt über zwei Kontrollkästchen angezeigt, die die Symbolleiste und Statusleiste umzuschalten.  
   
     1.  Aus der **Toolbox**, ziehen Sie eine **Bereich** auf die **Home** Kategorie. Ziehen Sie zwei **Kontrollkästchen** in den Bereich.  
   
-    2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf `View`.  
+    2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf *Ansicht*.  
   
-    3.  Klicken Sie auf das erste Kontrollkästchen, um seine Eigenschaften zu ändern. Änderung **ID** auf `ID_VIEW_TOOLBAR` und **Beschriftung** auf `Toolbar`.  
+    3.  Klicken Sie auf das erste Kontrollkästchen, um seine Eigenschaften zu ändern. Änderung **ID** auf *ID_VIEW_TOOLBAR* und **Beschriftung** auf *Symbolleiste*.  
   
-    4.  Klicken Sie auf das zweite Kontrollkästchen, um seine Eigenschaften zu ändern. Änderung **ID** auf `ID_VIEW_STATUS_BAR` und **Beschriftung** auf `Status Bar`.  
+    4.  Klicken Sie auf das zweite Kontrollkästchen, um seine Eigenschaften zu ändern. Änderung **ID** auf *ID_VIEW_STATUS_BAR* und **Beschriftung** auf *Statusleiste*.  
   
-2.  Erstellen Sie einen Bereich mit dem Namen `Window` , die eine unterteilte Schaltfläche verfügt. Wenn ein Benutzer die unterteilte Schaltfläche klickt, zeigt ein Kontextmenü drei Befehle, die bereits in der Scribble-Anwendung definiert sind.  
+2.  Erstellen Sie einen Bereich mit dem Namen *Fenster* , die eine unterteilte Schaltfläche verfügt. Wenn ein Benutzer die unterteilte Schaltfläche klickt, zeigt ein Kontextmenü drei Befehle, die bereits in der Scribble-Anwendung definiert sind.  
   
     1.  Aus der **Toolbox**, ziehen Sie eine **Bereich** auf die **Home** Kategorie. Ziehen Sie dann eine **Schaltfläche** in den Bereich.  
   
-    2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf `Window`.  
+    2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf *Fenster*.  
   
-    3.  Klicken Sie auf die Schaltfläche. Änderung **Beschriftung** auf `Windows`, **Schlüssel** auf `w`, **große Abbildindex** auf `1`, und **Teilen Modus** um `False`. Klicken Sie dann auf die Auslassungspunkte (**...** ) neben **Menüelemente** So öffnen die **Elemente-Editor** (Dialogfeld).  
+    3.  Klicken Sie auf die Schaltfläche. Änderung **Beschriftung** auf *Windows*, **Schlüssel** auf *w*, **große Abbildindex** auf *1* , und **Teilen Modus** auf *"false"*. Klicken Sie dann auf die Auslassungspunkte (**...** ) neben **Menüelemente** So öffnen die **Elemente-Editor** (Dialogfeld).  
   
     4.  Klicken Sie auf **hinzufügen** dreimal drei Schaltflächen hinzufügen.  
   
-    5.  Klicken Sie auf die erste Schaltfläche aus, und ändern Sie dann **Beschriftung** auf `New Window`, und **ID** auf `ID_WINDOW_NEW`.  
+    5.  Klicken Sie auf die erste Schaltfläche aus, und ändern Sie dann **Beschriftung** auf *neues Fenster*, und **ID** auf *ID_WINDOW_NEW*.  
   
-    6.  Klicken Sie auf die zweite Schaltfläche aus, und ändern Sie dann **Beschriftung** auf `Cascade`, und **ID** auf `ID_WINDOW_CASCADE`.  
+    6.  Klicken Sie auf die zweite Schaltfläche aus, und ändern Sie dann **Beschriftung** auf *Cascade*, und **ID** auf *ID_WINDOW_CASCADE*.  
   
-    7.  Klicken Sie auf die dritte Schaltfläche aus, und ändern Sie dann **Beschriftung** auf `Tile`, und **ID** auf `ID_WINDOW_TILE_HORZ`.  
+    7.  Klicken Sie auf die dritte Schaltfläche aus, und ändern Sie dann **Beschriftung** auf *Kachel*, und **ID** auf *ID_WINDOW_TILE_HORZ*.  
   
 3.  Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Die **Ansicht** und **Fenster** Bereiche angezeigt werden soll. Klicken Sie auf die Schaltflächen, um sicherzustellen, dass sie ordnungsgemäß funktionieren.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385390"
   
 1.  Aus der **Toolbox**, ziehen Sie eine **Bereich** auf die **Home** Kategorie. Ziehen Sie zwei **Schaltflächen** in den Bereich.  
   
-2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf `Help`.  
+2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf *Hilfe*.  
   
-3.  Klicken Sie auf die erste Schaltfläche. Änderung **Beschriftung** auf `Help Topics`, und **ID** auf `ID_HELP_FINDER`.  
+3.  Klicken Sie auf die erste Schaltfläche. Änderung **Beschriftung** auf *Hilfethemen*, und **ID** auf *ID_HELP_FINDER*.  
   
-4.  Klicken Sie auf die zweite Schaltfläche. Änderung **Beschriftung** auf `About Scribble...`, und **ID** auf `ID_APP_ABOUT`.  
+4.  Klicken Sie auf die zweite Schaltfläche. Änderung **Beschriftung** auf *zu Scribble...* , und **ID** auf *ID_APP_ABOUT*.  
   
 5.  Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Ein **Hilfe** Bereich, der zwei Menübandschaltflächen enthält angezeigt werden soll.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385390"
   
 1.  Aus der **Toolbox**, ziehen Sie eine **Bereich** auf die **Home** Kategorie. Ziehen Sie dann eine **Kontrollkästchen** und zwei **Kombinationsfelder** in den Bereich.  
   
-2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf `Pen`.  
+2.  Klicken Sie auf den Bereich, um seine Eigenschaften zu ändern. Änderung **Beschriftung** auf *Stift*.  
   
-3.  Klicken Sie auf das Kontrollkästchen. Änderung **Beschriftung** auf `Use Thick`, und **ID** auf `ID_PEN_THICK_OR_THIN`.  
+3.  Klicken Sie auf das Kontrollkästchen. Änderung **Beschriftung** auf *verwenden dick*, und **ID** auf *ID_PEN_THICK_OR_THIN*.  
   
-4.  Klicken Sie auf das erste Kombinationsfeld. Änderung **Beschriftung** auf `Thin Pen`, **ID** auf `ID_PEN_THIN_WIDTH`, **Text** auf `2`, **Typ** auf `Drop List`, und **Daten** auf `1;2;3;4;5;6;7;8;9;`.  
+4.  Klicken Sie auf das erste Kombinationsfeld. Änderung **Beschriftung** auf *dünn Stift*, **ID** auf *ID_PEN_THIN_WIDTH*, **Text** auf *2* , **Typ** auf *Dropdown-Listenfeld*, und **Daten** auf *1; 2; 3; 4, 5, 6; 7; 8; 9;*.  
   
-5.  Klicken Sie auf das zweite Kombinationsfeld. Änderung **Beschriftung** auf `Thick Pen`, **ID** auf `ID_PEN_THICK_WIDTH`, **Text** auf `5`, **Typ** auf `Drop List`, und **Daten** auf `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
+5.  Klicken Sie auf das zweite Kombinationsfeld. Änderung **Beschriftung** auf *Stift dick*, **ID** auf *ID_PEN_THICK_WIDTH*, **Text** auf  *5*, **Typ** auf *Dropdown-Listenfeld*, und **Daten** auf *5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18, 19; 20;*.  
   
 6.  Die neue Kombinationsfelder müssen keine vorhandenen Menüelementen entsprechen. Aus diesem Grund müssen Sie ein Menüelement für jede Stiftoption erstellen.  
   
     1.  In der **Ressourcenansicht** Fenster der Menüressource idr_scribbtype zu öffnen.  
   
-    2.  Klicken Sie auf **Stift** , öffnen Sie die p**En** Menü. Klicken Sie dann auf **hier eingeben** und Typ `Thi&n Pen`.  
+    2.  Klicken Sie auf **Stift** , öffnen Sie die p**En** Menü. Klicken Sie dann auf **hier eingeben** und Typ *Di & n Stift*.  
   
-    3.  Mit der rechten Maustaste in des Texts, den Sie gerade eingegeben, zum Öffnen haben der **Eigenschaften** Fenster, und klicken Sie dann ändern Sie die ID-Eigenschaft, um `ID_PEN_THIN_WIDTH`.  
+    3.  Mit der rechten Maustaste in des Texts, den Sie gerade eingegeben, zum Öffnen haben der **Eigenschaften** Fenster, und klicken Sie dann ändern Sie die ID-Eigenschaft, um *ID_PEN_THIN_WIDTH*.  
   
     4.  Sie müssen auch einen Ereignishandler für jedes Element der Stift im Menü erstellen. Mit der rechten Maustaste die **Di & n Stift** Menüelement, das Sie gerade erstellt haben, und klicken Sie dann auf **Ereignishandler hinzufügen**. Die **Ereignishandler-Assistent** wird angezeigt.  
   
@@ -142,9 +142,9 @@ M_nThinWidth = Atoi (pThinComboBox -> GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>So fügen Sie eine farbenschaltfläche, wenn der Stift Bereich hinzu  
   
-1.  Bevor Sie auf die Farbschaltfläche hinzufügen, erstellen Sie ein Menüelement für. In der **Ressourcenansicht** Fenster der Menüressource idr_scribbtype zu öffnen. Klicken Sie auf die **Stift** Menüelement, um den Stiftmenü zu öffnen. Klicken Sie dann auf **hier eingeben** und Typ `&Color`. Mit der rechten Maustaste in des Texts, die Sie gerade eingegeben, zum Anzeigen haben der **Eigenschaften** Fenster. Ändern Sie die ID in `ID_PEN_COLOR`.  
+1.  Bevor Sie auf die Farbschaltfläche hinzufügen, erstellen Sie ein Menüelement für. In der **Ressourcenansicht** Fenster der Menüressource idr_scribbtype zu öffnen. Klicken Sie auf die **Stift** Menüelement, um den Stiftmenü zu öffnen. Klicken Sie dann auf **hier eingeben** und Typ *& Farbe*. Mit der rechten Maustaste in des Texts, die Sie gerade eingegeben, zum Anzeigen haben der **Eigenschaften** Fenster. Ändern Sie die ID in *ID_PEN_COLOR*.  
   
 2.  Nun fügen Sie die Schaltfläche "Farbe" hinzu. Aus der **Toolbox**, ziehen Sie eine **Farbenschaltfläche** auf die **Stift** Bereich.  
   
-3.  Klicken Sie auf die Farbschaltfläche. Änderung **Beschriftung** auf `Color`, **ID** auf `ID_PEN_COLOR`, **SimpleLook** auf `True`, **große Abbildindex** auf `1`, und **Teilen Modus** auf `False`.  
+3.  Klicken Sie auf die Farbschaltfläche. Änderung **Beschriftung** auf *Farbe*, **ID** auf *ID_PEN_COLOR*, **SimpleLook** auf  *"True"*, **große Abbildindex** auf *1*, und **Teilen Modus** auf *"false"*.  
   
 4.  Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Schaltfläche für die neue Farbe angezeigt werden soll, auf die **Stift** Bereich. Allerdings kann nicht verwendet werden, da er noch nicht über einen Ereignishandler verfügt. Die nächsten Schritte zeigen, wie ein Ereignishandler für die Schaltfläche "Farbe" hinzugefügt.  
   

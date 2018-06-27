@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385306"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955673"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 Vorhandenen ActiveX-Steuerelementen (früher OLE-Steuerelemente) im Internet, ohne Änderungen verwendet werden können. Allerdings empfiehlt es sich so ändern Sie Steuerelemente, um ihre Leistung zu verbessern. Wenn das Steuerelement auf einer Webseite verwenden, sind weitere Überlegungen. Die Datei ".ocx" und alle unterstützenden Dateien müssen auf dem Zielcomputer sein oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch Download Zeit einen wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  Die `-s 6144` Parameter reserviert Speicherplatz in der CAB-Datei zum Signieren von Code.  
   
 ### <a name="the-version-tag"></a>Das Versionstag  
- Wie Sie sehen, die `#Version` Informationen, die mit einer CAB-Datei angegeben gelten für das Steuerelement, das gemäß der `CLASSID` Parameter von der `<OBJECT>` Tag.  
+ Wie Sie sehen, die `#Version` Informationen, die mit einer CAB-Datei angegeben gelten für das Steuerelement, das gemäß der *CLASSID* Parameter von der `<OBJECT>` Tag.  
   
- Abhängig von der Version, die angegeben wird können Sie den Download des Steuerelements erzwingen. Für die vollständige Spezifikation der der `OBJECT` Tag einschließlich der `CODEBASE` Parameter, finden Sie in der W3C-Verweis.  
+ Abhängig von der Version, die angegeben wird können Sie den Download des Steuerelements erzwingen. Für die vollständige Spezifikation der der `OBJECT` Tag einschließlich der *CODEBASIS* Parameter, finden Sie in der W3C-Verweis.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Markieren ein sicheres Steuerelement für Skripting und Initialisierung  
  ActiveX-Steuerelemente verwendet, die in Webseiten sollte als sicher für Skripting und zum Initialisieren, wenn diese in der Tat sicher sind sichere gekennzeichnet werden. Ein sicheres Steuerelement Datenträger-e/a auszuführen oder direkt Zugriff auf den Arbeitsspeicher oder die Register eines Computers nicht.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Ein Steuerelement muss immer ihre Palette im Hintergrund realisiert, unter OCX-96-Richtlinien.  
   
- Ältere Container, die die Palette der ambient-Eigenschaft nicht verwenden sendet `WM_QUERYNEWPALETTE` und `WM_PALETTECHANGED` Nachrichten. Ein Steuerelement kann überschreiben `OnQueryNewPalette` und `OnPaletteChanged` diese Nachrichten zu verarbeiten.  
+ Ältere Container, die die Palette der ambient-Eigenschaft nicht verwenden, werden WM_QUERYNEWPALETTE und WM_PALETTECHANGED Nachrichten gesendet. Ein Steuerelement kann überschreiben `OnQueryNewPalette` und `OnPaletteChanged` diese Nachrichten zu verarbeiten.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer-Browser-Sicherheitsstufen und Verhalten des Steuerelements  
  Optionen für die Sicherheitsstufe, die vom Benutzer konfigurierbar über einen Browser verfügt. Da Webseiten aktiven Inhalte enthalten kann, der dem Computer eines Benutzers beschädigen kann, können Browser den Benutzer zur Auswahl von Optionen für die Sicherheitsstufe für. Abhängig von der Anzeigemethode ein Browser Sicherheitsstufen implementiert, ein Steuerelement gar nicht heruntergeladen werden kann, oder zeigt ein Zertifikat oder eine Warnmeldung angezeigt, damit der Benutzer zur Laufzeit, ob das Steuerelement heruntergeladen wird oder nicht auswählen kann. Das Verhalten des ActiveX-Steuerelemente unter hoher, mittlerer und geringer Sicherheitsstufen in Internet Explorer ist unten aufgeführt.  

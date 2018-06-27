@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366934"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957031"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition-Klasse
 Kapselt einen einzelnen Übergang.  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `delay`  
+ *Verzögerung*  
  Die Zeitspanne, um die unmittelbare Umstellung auf den endgültigen Wert zu verzögern.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
- `hold`  
+ *Halten Sie*  
  Die Zeitspanne, um die Variable an den endgültigen Wert zu halten.  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  Ein Zeiger auf ein [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
 
   

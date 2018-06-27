@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353949"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956706"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame-Klasse
 Implementiert die grundlegende Funktion eines Keyframe.  
@@ -94,10 +94,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf ein Storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Wenn dieser Parameter "true ist", und der Keyframe hinzugefügt wird, abhängig von einem anderen Keyframe oder Übergang, versucht diese Methode diesen Keyframe oder Übergang Storyboard zuerst hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  

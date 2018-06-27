@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352111"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956358"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler-Klasse
 Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn sich der Wert einer Animationsvariablen ändert.  
@@ -88,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pAnimationController`  
+ *pAnimationController*  
  Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `storyboard`  
+ *Storyboard*  
  Das Storyboard, das die Variable animiert.  
   
- `variable`  
+ *Variable*  
  Die Animationsvariable, die aktualisiert wurde.  
   
- `newValue`  
+ *newValue*  
  Der neue gerundete Wert.  
   
- `previousValue`  
+ *previousValue*  
  Der vorherige gerundete Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pAnimationController`  
+ *pAnimationController*  
  Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
   
 ## <a name="see-also"></a>Siehe auch  

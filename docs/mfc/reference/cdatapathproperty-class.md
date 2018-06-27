@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2559b4917f16bb8ddc49b73ace8bda6e1a9bafc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e274a3fabf10e96aec41a92bb484f4ebcc5bf377
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367307"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955812"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty-Klasse
 Implementiert eine OLE-Steuerelementeigenschaft, die asynchron geladen werden kann.  
@@ -68,7 +68,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="remarks"></a>Hinweise  
  Asynchrone Eigenschaften werden nach der synchronen Initiierung geladen.  
   
- Die Klasse `CDataPathProperty` stammt aus **CAysncMonikerFile**. Um asynchrone Eigenschaften in die OLE-Steuerelemente implementieren, leiten Sie eine Klasse von `CDataPathProperty`, und überschreiben [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).  
+ Die Klasse `CDataPathProperty` stammt aus `CAysncMonikerFile`. Um asynchrone Eigenschaften in die OLE-Steuerelemente implementieren, leiten Sie eine Klasse von `CDataPathProperty`, und überschreiben [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).  
   
  Weitere Informationen zum Verwenden von asynchronen Monikern und ActiveX-Steuerelemente im Internet-Anwendungen finden Sie unter den folgenden Artikeln:  
   
@@ -101,14 +101,14 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pControl`  
+ *pControl*  
  Ein Zeiger auf das OLE-Control-Objekt zugeordnet sein `CDataPathProperty` Objekt.  
   
- `lpszPath`  
+ *lpszPath*  
  Der Pfad absolut oder relativ sein kann, verwendet, um eine asynchrone Moniker zu erstellen, die die eigentliche absolute Position der Eigenschaft verweist. `CDataPathProperty` URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CDataPathProperty` -Objekt für eine Datei, voranstellen `file://` auf den Pfad.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `COleControl` Objekt verweist `pControl` dient der **öffnen** und abgeleitete Klassen abgerufen. Wenn `pControl` ist **NULL**, das Steuerelement mit verwendet **öffnen** sollte festgelegt werden, mit `SetControl`. Wenn `lpszPath` ist **NULL**, können Sie den Pfad durch übergeben **öffnen** oder legen Sie sie mit `SetPath`.  
+ Die `COleControl` Objekt verweist `pControl` dient der `Open` und abgeleitete Klassen abgerufen. Wenn *pControl* ist **NULL**, das Steuerelement mit verwendet `Open` sollte festgelegt werden, mit `SetControl`. Wenn `lpszPath` ist **NULL**, können Sie den Pfad durch übergeben `Open` oder legen Sie sie mit `SetPath`.  
   
 ##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
  Rufen Sie diese Memberfunktion zum Abrufen der `COleControl` zugeordnete Objekt der `CDataPathProperty` Objekt.  
@@ -121,7 +121,7 @@ COleControl* GetControl();
  Gibt ein Zeiger auf die OLE-Steuerelements zugeordnet der `CDataPathProperty` Objekt. **NULL** , wenn kein Steuerelement zugeordnet wird.  
   
 ##  <a name="getpath"></a>  CDataPathProperty::GetPath  
- Rufen Sie diese Memberfunktion zum Abrufen des Pfads festgelegt, wenn die `CDataPathProperty` Objekt erstellt wurde, oder im angegebenen **öffnen**, oder in einem vorherigen Aufruf angegebenen die `SetPath` Memberfunktion.  
+ Rufen Sie diese Memberfunktion zum Abrufen des Pfads festgelegt, wenn die `CDataPathProperty` Objekt erstellt wurde, oder im angegebenen `Open`, oder in einem vorherigen Aufruf angegebenen die `SetPath` Memberfunktion.  
   
 ```  
 CString GetPath() const;  
@@ -153,13 +153,13 @@ virtual BOOL Open(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pControl`  
+ *pControl*  
  Ein Zeiger auf das OLE-Control-Objekt zugeordnet sein `CDataPathProperty` Objekt.  
   
- `pError`  
+ *pError*  
  Ein Zeiger auf eine Datei-Ausnahme. Im Falle eines Fehlers wird auf die Ursache festgelegt werden.  
   
- `lpszPath`  
+ *lpszPath*  
  Der Pfad absolut oder relativ sein kann, verwendet, um eine asynchrone Moniker zu erstellen, die die eigentliche absolute Position der Eigenschaft verweist. `CDataPathProperty` URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CDataPathProperty` -Objekt für eine Datei, voranstellen `file://` auf den Pfad.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -168,9 +168,9 @@ virtual BOOL Open(CFileException* pError = NULL);
 ### <a name="remarks"></a>Hinweise  
  Die Funktion versucht, erhalten die `IBindHost` Schnittstelle aus dem Steuerelement.  
   
- Vor dem Aufruf **öffnen** ohne Pfad muss der Wert für den Pfad für die Eigenschaft festgelegt werden. Dies ist möglich, wenn das Objekt konstruierten, oder durch Aufrufen der `SetPath` Memberfunktion.  
+ Vor dem Aufruf `Open` ohne Pfad muss der Wert für den Pfad für die Eigenschaft festgelegt werden. Dies ist möglich, wenn das Objekt konstruierten, oder durch Aufrufen der `SetPath` Memberfunktion.  
   
- Vor dem Aufruf **öffnen** ohne ein Steuerelement kann ein ActiveX-Steuerelement (früher OLE-Steuerelements) kann das Objekt zugeordnet werden. Dies ist möglich, wenn das Objekt konstruierten, oder durch den Aufruf ist `SetControl`.  
+ Vor dem Aufruf `Open` ohne ein Steuerelement kann ein ActiveX-Steuerelement (früher OLE-Steuerelements) kann das Objekt zugeordnet werden. Dies ist möglich, wenn das Objekt konstruierten, oder durch den Aufruf ist `SetControl`.  
   
  Alle Überladungen der [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) stehen auch über `CDataPathProperty`.  
   
@@ -192,7 +192,7 @@ void SetControl(COleControl* pControl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pControl`  
+ *pControl*  
  Ein Zeiger auf den asynchronen OLE-Steuerelements mit der Eigenschaft zugeordnet werden soll.  
   
 ##  <a name="setpath"></a>  CDataPathProperty::SetPath  
@@ -203,7 +203,7 @@ void SetPath(LPCTSTR lpszPath);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszPath`  
+ *lpszPath*  
  Ein Pfad, die absolut oder relativ ist, für die Eigenschaft, die asynchron geladen werden. `CDataPathProperty` URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CDataPathProperty` -Objekt für eine Datei, voranstellen `file://` auf den Pfad.  
   
 ## <a name="see-also"></a>Siehe auch  

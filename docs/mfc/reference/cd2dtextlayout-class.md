@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355924"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951610"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout-Klasse
 Ein Wrapper für IDWriteTextLayout.  
@@ -119,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `strText`  
+ *strText*  
  Eines CString-Objekts mit der Zeichenfolge zum Erstellen eines neuen CD2DTextLayout-Objekts aus.  
   
- `textFormat`  
+ *textFormat*  
  Ein CString-Objekt, das auf die Zeichenfolge anzuwendende Format enthält.  
   
- `sizeMax`  
+ *sizeMax*  
  Die Größe des im Layout.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -171,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `currentPosition`  
+ *currentPosition*  
  Die Position des Texts zu untersuchen.  
   
- `textRange`  
+ *textRange*  
  Der Textbereich mit dem gleichen Formatierung als Text an der Position von CurrentPosition angegeben. Dies bedeutet, dass die Ausführung ist die exakte Formatierung als die angegebene Position, einschließlich, aber nicht beschränkt auf den Namen der Schriftfamilie.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -190,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `currentPosition`  
+ *currentPosition*  
  Die Position des Texts, zu überprüfen.  
   
- `textRange`  
+ *textRange*  
  Der Textbereich mit dem gleichen Formatierung als Text an der Position von CurrentPosition angegeben. Dies bedeutet, dass die Ausführung ist die exakte Formatierung als die angegebene Position, einschließlich, aber nicht beschränkt auf den Namen des Gebietsschemas.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -246,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  Den Namen der Schriftfamilie, der für die gesamte Textzeichenfolge innerhalb des Bereichs von TextRange angegebenen gilt  
   
- `textRange`  
+ *textRange*  
  Textbereich, dem diese Änderung gilt  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -265,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  Eine Gebietsschema Null-terminierte Zeichenfolge  
   
- `textRange`  
+ *textRange*  
  Textbereich, dem diese Änderung gilt  
   
 ### <a name="return-value"></a>Rückgabewert  

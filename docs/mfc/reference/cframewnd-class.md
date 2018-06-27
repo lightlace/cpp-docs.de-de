@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35a3fb35115e1fd86a2ccf168e048a697a17dc01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0be95b0092db315dd3af7086770411b93eb2ae23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378504"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955211"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd-Klasse
 Stellt die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface) bereit, wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters.  
@@ -152,7 +152,7 @@ class CFrameWnd : public CWnd
 |[EnableDocking](#enabledocking)|Ermöglicht eine Steuerleiste angedockt werden.|  
 |[CFrameWnd::EndModalState](#endmodalstate)|Beendet das Rahmenfenster modalen Zustand. Ermöglicht allen Fenstern deaktiviert `BeginModalState`.|  
 |[CFrameWnd::FloatControlBar](#floatcontrolbar)|: Eine Steuerleiste verschiebt.|  
-|[CFrameWnd::GetActiveDocument](#getactivedocument)|Gibt den aktiven **CDocument** Objekt.|  
+|[CFrameWnd::GetActiveDocument](#getactivedocument)|Gibt den aktiven `CDocument` Objekt.|  
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|Gibt den aktiven `CFrameWnd` Objekt.|  
 |[CFrameWnd::GetActiveView](#getactiveview)|Gibt den aktiven `CView` Objekt.|  
 |[CFrameWnd::GetControlBar](#getcontrolbar)|Ruft die Steuerleiste ab.|  
@@ -215,11 +215,11 @@ class CFrameWnd : public CWnd
   
 -   Erstellen Sie mithilfe einer Dokumentvorlage indirekt.  
   
- Vor dem Aufruf entweder **erstellen** oder `LoadFrame`, müssen Sie das Rahmenfenster Objekt auf dem Heap mithilfe des C++ erstellen **neue** Operator. Vor dem Aufruf **erstellen**, Sie können auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globale Funktion die Stile-Symbol und die Klasse für den Frame festgelegt.  
+ Vor dem Aufruf entweder `Create` oder `LoadFrame`, müssen Sie das Rahmenfenster Objekt auf dem Heap mithilfe des C++ erstellen **neue** Operator. Vor dem Aufruf `Create`, Sie können auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globale Funktion die Stile-Symbol und die Klasse für den Frame festgelegt.  
   
- Verwenden der **erstellen** Memberfunktion, die Frame-Erstellungsparameter als sofortige Argumente zu übergeben.  
+ Verwenden der `Create` Memberfunktion, die Frame-Erstellungsparameter als sofortige Argumente zu übergeben.  
   
- `LoadFrame` erfordert weniger Argumente als **erstellen**, und ruft stattdessen die meisten die Standardwerte aus Ressourcen, einschließlich der Frame Beschriftung, Symbol Zugriffstastentabelle und im Menü ab. Um zugänglich `LoadFrame`, alle diese Ressourcen müssen die gleichen Ressourcen-ID (z. B. **IDR_MAINFRAME**).  
+ `LoadFrame` erfordert weniger Argumente als `Create`, und ruft stattdessen die meisten die Standardwerte aus Ressourcen, einschließlich der Frame Beschriftung, Symbol Zugriffstastentabelle und im Menü ab. Um zugänglich `LoadFrame`, alle diese Ressourcen müssen die gleichen Ressourcen-ID (z. B. **IDR_MAINFRAME**).  
   
  Wenn ein `CFrameWnd` Objekt enthält, Ansichten und Dokumente, die indirekt durch das Framework statt direkt vom Programmierer erstellt werden. Die `CDocTemplate` Objekt organisiert, die Erstellung des Frames, die Erstellung der enthaltenden Ansichten und die Verbindung der Ansichten dem entsprechenden Dokument. Die Parameter von der `CDocTemplate` Konstruktor angeben der `CRuntimeClass` der drei Klassen beteiligt (Dokument, Rahmen und Ansicht). Ein `CRuntimeClass` Objekt wird vom Framework verwendet, dynamisch neue Frames an, wenn vom Benutzer angegeben (z. B. mithilfe der neuen Datei Befehl oder neue Fenster mehrere Document Interface (MDI)-Befehl) erstellt.  
   
@@ -271,7 +271,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCmdShow`  
+ *nCmdShow*  
  Gibt den Parameter an übergeben [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow). Standardmäßig wird der Frame dargestellt und ordnungsgemäß wiederhergestellt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -279,7 +279,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
   
  Die standardmäßige Implementierung den Frame und schaltet sie am Anfang der Z-Reihenfolge und bei Bedarf führt dieselben Schritte für die Anwendung Hauptrahmenfenster.  
   
- Überschreiben Sie diese Memberfunktion zum Ändern, wie ein Frame aktiviert ist. Beispielsweise können Sie untergeordnete MDI-Fenster zu maximiert werden erzwingen. Fügen Sie der entsprechenden Funktionalität hinzu, und rufen Sie die Basisklassenversion mit einem expliziten `nCmdShow`.  
+ Überschreiben Sie diese Memberfunktion zum Ändern, wie ein Frame aktiviert ist. Beispielsweise können Sie untergeordnete MDI-Fenster zu maximiert werden erzwingen. Fügen Sie der entsprechenden Funktionalität hinzu, und rufen Sie die Basisklassenversion mit einem expliziten *nCmdShow*.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
@@ -317,37 +317,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszClassName`  
+ *lpszClassName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert die `AfxRegisterWndClass` globale Funktion oder die **RegisterClass** Windows-Funktion. Wenn **NULL**, verwendet die vordefinierten Standardwerte `CFrameWnd` Attribute.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt. Als Text verwendet der Titelleiste.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Zeitfenster [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute. Enthalten die **FWS_ADDTOTITLE** Format zuzuweisen, wenn die Titelleiste automatisch der Name des Dokuments dargestellt, die im Fenster angezeigt werden soll.  
   
- `rect`  
- Gibt die Größe und Position des Fensters. Die `rectDefault` Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
+ *Rect*  
+ Gibt die Größe und Position des Fensters. Die *RectDefault* Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt das übergeordnete Fenster eines dieses Rahmenfenster. Dieser Parameter muss **NULL** für Rahmenfenster der obersten Ebene.  
   
  *lpszMenuName*  
  Identifiziert den Namen der Menüressource im mit Fenster verwendet werden soll. Verwendung **MAKEINTRESOURCE** verfügt im Menü eine ganzzahlige ID anstelle einer Zeichenfolge. Dieser Parameter kann **NULL**.  
   
- `dwExStyle`  
+ *dwExStyle*  
  Gibt an, das Fenster Erweitert [Stil](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) Attribute.  
   
- `pContext`  
+ *"pContext"*  
  Gibt einen Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Initialisierung erfolgreich ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Erstellen einer `CFrameWnd` Objekt in zwei Schritten. Rufen Sie zuerst den Konstruktor, der erstellt die `CFrameWnd` Objekt, und rufen Sie anschließend **erstellen**, das erstellt des Windows-Rahmenfensters und fügt es der `CFrameWnd` Objekt. **Erstellen Sie** Klassennamen und entweder ist der Name des Fensters initialisiert und Standardwerte für seine, übergeordnete und die zugeordneten registriert.  
+ Erstellen einer `CFrameWnd` Objekt in zwei Schritten. Rufen Sie zuerst den Konstruktor, der erstellt die `CFrameWnd` Objekt, und rufen Sie anschließend `Create`, das erstellt des Windows-Rahmenfensters und fügt es der `CFrameWnd` Objekt. `Create` Initialisiert das Fenster-Klassennamen und entweder ist der Name und Standardwerte für seine, übergeordnete und die zugeordneten registriert.  
   
- Verwendung `LoadFrame` statt **erstellen** aus einer Ressource, die Argumente angeben, statt das Rahmenfenster geladen.  
+ Verwendung `LoadFrame` statt `Create` das Rahmenfenster aus einer Ressource, die Argumente angeben, statt zu laden.  
   
 ##  <a name="createview"></a>  CFrameWnd::CreateView  
  Rufen Sie `CreateView` zum Erstellen einer Ansicht innerhalb eines Rahmens.  
@@ -359,10 +359,10 @@ CWnd* CreateView(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pContext`  
+ *"pContext"*  
  Gibt den Typ des Dokuments und anzeigen.  
   
- `nID`  
+ *nID*  
  Die ID-Nummer einer Sicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -382,15 +382,15 @@ void DockControlBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBar`  
+ *pBar*  
  Verweist auf die Steuerleiste angedockt werden.  
   
- `nDockBarID`  
+ *nDockBarID*  
  Bestimmt, welche Seiten des Rahmenfensters Andocken berücksichtigen. Sie können 0 (null) oder mindestens eine der folgenden sein:  
   
 - `AFX_IDW_DOCKBAR_TOP` Docken Sie an, am oberen Rand des Rahmenfensters.  
   
-- **AFX_IDW_DOCKBAR_BOTTOM** Andocken an die Unterseite des Rahmenfensters.  
+- `AFX_IDW_DOCKBAR_BOTTOM` Docken Sie die Unterseite des Rahmenfensters.  
   
 - `AFX_IDW_DOCKBAR_LEFT` Andocken von der linken Seite des Rahmenfensters.  
   
@@ -398,11 +398,11 @@ void DockControlBar(
   
  Bei 0, kann eine Seite zum Andocken in das Ziel-Rahmenfenster aktiviert Steuerleiste angedockt werden.  
   
- `lpRect`  
+ *lpRect*  
  Bestimmt, in Bildschirmkoordinaten, die in den Clientbereich des Rahmenfensters Ziel, in dem die Steuerleiste angedockt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Steuerleiste wird auf eine der Seiten des Rahmenfensters angegeben, die in den Aufrufen für beide angedockt werden [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) und [EnableDocking](#enabledocking). Die ausgewählte Seite richtet sich nach `nDockBarID`.  
+ Steuerleiste wird auf eine der Seiten des Rahmenfensters angegeben, die in den Aufrufen für beide angedockt werden [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) und [EnableDocking](#enabledocking). Das ausgewählte Seite richtet sich nach *nDockBarID*.  
   
 ##  <a name="enabledocking"></a>  EnableDocking  
  Mit dieser Funktion können andockbaren Balken in einem Rahmenfenster zu aktivieren.  
@@ -412,7 +412,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDockStyle`  
+ *dwDockStyle*  
  Gibt an, welche Seiten des Rahmenfensters als Andocken von Websites für Steuerleisten dienen können. Es kann eine oder mehrere der folgenden sein:  
   
 - `CBRS_ALIGN_TOP` Ermöglicht das Andocken am oberen Rand des Clientbereichs.  
@@ -452,13 +452,13 @@ void FloatControlBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBar`  
+ *pBar*  
  Verweist auf die Steuerleiste umfließt sein.  
   
- `point`  
+ *Punkt*  
  Der Speicherort, in Bildschirmkoordinaten, in der oberen linken Ecke der Steuerleiste platziert werden.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt an, ob die Steuerleiste in das neue Rahmenfenster horizontal oder vertikal ausgerichtet werden soll. Es kann einer der folgenden sein:  
   
 - `CBRS_ALIGN_TOP` Steuerleiste vertikal ausgerichtet.  
@@ -510,7 +510,7 @@ CView* GetActiveView() const;
  Ein Zeiger auf die aktuelle [CView](../../mfc/reference/cview-class.md). Wenn keine aktuelle Ansicht vorhanden ist, gibt **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion gibt **NULL** beim Aufruf für eine MDI-Hauptrahmenfenster ( `CMDIFrameWnd`). In einer MDI-Anwendung verfügt der MDI-Hauptrahmenfenster keine Sicht zugeordnet. Stattdessen jedes einzelnen untergeordneten Fenster ( `CMDIChildWnd`) verfügt über eine oder mehrere zugeordnete Ansichten. Die aktive Ansicht in einer MDI-Anwendung kann abgerufen werden, indem zuerst das aktive untergeordnete MDI-Fenster Suchen und klicken Sie dann die aktive Ansicht für diese untergeordnete Fenster suchen. Das aktive untergeordnete MDI-Fenster verwendbaren durch Aufrufen der Funktion `MDIGetActive` oder **GetActiveFrame** wie im folgenden gezeigt:  
+ Diese Funktion gibt **NULL** beim Aufruf für eine MDI-Hauptrahmenfenster ( `CMDIFrameWnd`). In einer MDI-Anwendung verfügt der MDI-Hauptrahmenfenster keine Sicht zugeordnet. Stattdessen jedes einzelnen untergeordneten Fenster ( `CMDIChildWnd`) verfügt über eine oder mehrere zugeordnete Ansichten. Die aktive Ansicht in einer MDI-Anwendung kann abgerufen werden, indem zuerst das aktive untergeordnete MDI-Fenster Suchen und klicken Sie dann die aktive Ansicht für diese untergeordnete Fenster suchen. Das aktive untergeordnete MDI-Fenster verwendbaren durch Aufrufen der Funktion `MDIGetActive` oder `GetActiveFrame` wie im folgenden gezeigt:  
   
  [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
@@ -522,14 +522,14 @@ CControlBar* GetControlBar(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Die ID einer Steuerleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Steuerleiste, die mit der ID verknüpft ist  
   
 ### <a name="remarks"></a>Hinweise  
- Die `nID` Parameter verweist auf den eindeutigen Bezeichner übergeben, um die **erstellen** Methode der Steuerleiste. Weitere Informationen zu Steuerleisten, finden Sie im Thema [Steuerleisten](../../mfc/control-bars.md).  
+ Die *nID* Parameter verweist auf den eindeutigen Bezeichner übergeben, um die `Create` Methode der Steuerleiste. Weitere Informationen zu Steuerleisten, finden Sie im Thema [Steuerleisten](../../mfc/control-bars.md).  
   
  `GetControlBar` Gibt die Steuerleiste zurück, auch wenn es unverankert ist und daher befindet sich derzeit kein untergeordnetes Fenster von Frames.  
   
@@ -541,7 +541,7 @@ void GetDockState(CDockState& state) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `state`  
+ *state*  
  Enthält den aktuellen Status von Steuerleisten bei der Rückgabe das Rahmenfenster.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -603,14 +603,14 @@ virtual void GetMessageString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Ressourcen-ID der gewünschten Nachricht.  
   
- `rMessage`  
+ *rMessage*  
  `CString` Objekt in das die Nachricht eingefügt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung lädt einfach angegebene Zeichenfolge `nID` aus der Ressourcendatei. Diese Funktion wird vom Framework aufgerufen, wenn die Zeichenfolge in der Statusleiste Aktualisierung benötigt.  
+ Die standardmäßige Implementierung lädt einfach angegebene Zeichenfolge *nID* aus der Ressourcendatei. Diese Funktion wird vom Framework aufgerufen, wenn die Zeichenfolge in der Statusleiste Aktualisierung benötigt.  
   
 ##  <a name="gettitle"></a>  CFrameWnd::GetTitle  
  Ruft den Titel des Window-Objekts ab.  
@@ -632,16 +632,16 @@ void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDoc`  
+ *pDoc*  
  Verweist auf das Dokument, das das Rahmenfenster zugeordnet ist. Kann **NULL**.  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  Wenn **"true"**, gibt an, dass Frames angezeigt werden soll. Wenn **"false"**, keine abhängigen Elemente sichtbar gemacht werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Dies bewirkt, dass alle Ansichten in diesem Fenster Frame erhalten ihre `OnInitialUpdate` aufrufen.  
   
- Außerdem war es nicht bereits eine aktive Ansicht, die Hauptansicht des Rahmenfensters active erfolgt. Die primäre Ansicht ist eine Ansicht mit der ID untergeordneten **AFX_IDW_PANE_FIRST**. Schließlich wird das Rahmenfenster sichtbar gemacht Wenn `bMakeVisible` ungleich NULL ist. Wenn `bMakeVisible` gleich 0 ist, das gegenwärtig den Fokus und der sichtbaren Zustand des Rahmenfensters bleiben unverändert. Es ist nicht notwendig, diese Funktion aufrufen, wenn das Framework-Implementierung der neuen Datei und die Datei öffnen zu verwenden.  
+ Außerdem war es nicht bereits eine aktive Ansicht, die Hauptansicht des Rahmenfensters active erfolgt. Die primäre Ansicht ist eine Ansicht mit der ID untergeordneten **AFX_IDW_PANE_FIRST**. Schließlich wird das Rahmenfenster sichtbar gemacht Wenn *bMakeVisible* ungleich NULL ist. Wenn *bMakeVisible* gleich 0 ist, das gegenwärtig den Fokus und der sichtbaren Zustand des Rahmenfensters bleiben unverändert. Es ist nicht notwendig, diese Funktion aufrufen, wenn das Framework-Implementierung der neuen Datei und die Datei öffnen zu verwenden.  
   
 ##  <a name="inmodalstate"></a>  CFrameWnd::InModalState  
  Rufen Sie diese Memberfunktion, um festzustellen, ob ein Framefenster gebunden oder ungebunden ist.  
@@ -671,7 +671,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszResourceName`  
+ *lpszResourceName*  
  Identifiziert den Namen der Zugriffstastenressource. Verwendung **MAKEINTRESOURCE** , wenn die Ressource mit einer ganzzahligen ID identifiziert wird  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -692,7 +692,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszProfileName`  
+ *lpszProfileName*  
  Der Name von einem Abschnitt in der Initialisierungsdatei (INI) oder einen Schlüssel in der Windows-Registrierung, in dem Statusinformationen gespeichert ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -712,26 +712,26 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDResource`  
+ *nIDResource*  
  Die ID des freigegebenen Ressourcen, die das Rahmenfenster zugeordnet.  
   
  *dwDefaultStyle*  
  Der Frame [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles). Enthalten die **FWS_ADDTOTITLE** Format zuzuweisen, wenn die Titelleiste automatisch der Name des Dokuments dargestellt, die im Fenster angezeigt werden soll.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf den Frame übergeordneten.  
   
- `pContext`  
+ *"pContext"*  
  Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Erstellen einer `CFrameWnd` Objekt in zwei Schritten. Zunächst Aufrufen den Konstruktor, der erstellt die `CFrameWnd` Objekt, und rufen Sie anschließend `LoadFrame`, dem lädt das Windows-Rahmenfenster und die zugehörigen Ressourcen und fügt die Frame-Fenster an die `CFrameWnd` Objekt. Die `nIDResource` Parameter gibt an, klicken Sie im Menü, die Zugriffstastentabelle, das Symbol und eine Zeichenfolgenressource des Titels für das Rahmenfenster.  
+ Erstellen einer `CFrameWnd` Objekt in zwei Schritten. Zunächst Aufrufen den Konstruktor, der erstellt die `CFrameWnd` Objekt, und rufen Sie anschließend `LoadFrame`, dem lädt das Windows-Rahmenfenster und die zugehörigen Ressourcen und fügt die Frame-Fenster an die `CFrameWnd` Objekt. Die *nIDResource* Parameter gibt an, klicken Sie im Menü, die Zugriffstastentabelle, das Symbol und eine Zeichenfolgenressource des Titels für das Rahmenfenster.  
   
- Verwenden der **erstellen** Memberfunktion statt `LoadFrame` Wenn Sie alle Erstellungsparameter für das Rahmenfenster angeben möchten.  
+ Verwenden der `Create` Memberfunktion statt `LoadFrame` Wenn Sie alle Erstellungsparameter für das Rahmenfenster angeben möchten.  
   
  Das Framework ruft `LoadFrame` beim Erstellen eines Rahmenfensters mit einem Dokument Template-Objekt.  
   
- Das Framework verwendet die `pContext` Argument, um die Objekte an das Rahmenfenster, einschließlich eines beliebigen verbunden sein anzugeben enthaltenen Objekte anzeigen. Sie können festlegen, die `pContext` Argument **NULL** beim Aufruf `LoadFrame`.  
+ Das Framework verwendet die *"pContext"* Argument, um die Objekte an das Rahmenfenster, einschließlich eines beliebigen verbunden sein anzugeben enthaltenen Objekte anzeigen. Sie können festlegen, die *"pContext"* Argument **NULL** beim Aufruf `LoadFrame`.  
   
 ##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable  
  Wenn dieses Datenelement aktiviert ist (die Standardeinstellung), Menüelemente, die keine `ON_UPDATE_COMMAND_UI` oder `ON_COMMAND` Handler werden automatisch deaktiviert, wenn der Benutzer aus einer abruft.  
@@ -772,7 +772,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - **BorderSet** = 3  
   
- `lpRectBorder`  
+ *lpRectBorder*  
  Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Koordinaten des Rahmens angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -789,7 +789,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Die ID des Steuerelements Leiste angezeigt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -821,10 +821,10 @@ virtual BOOL OnCreateClient(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpcs`  
+ *LPCs*  
  Ein Zeiger auf ein Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Struktur.  
   
- `pContext`  
+ *"pContext"*  
  Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -833,7 +833,7 @@ virtual BOOL OnCreateClient(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion nicht.  
   
- Die Standardimplementierung dieser Funktion erstellt eine `CView` Objekt aus den Angaben in `pContext`, sofern dies möglich.  
+ Die Standardimplementierung dieser Funktion erstellt eine `CView` Objekt aus den Angaben in *"pContext"*, sofern dies möglich.  
   
  Überschreiben Sie diese Funktion, um die empfangenen Werte überschreiben die `CCreateContext` Objekt oder um zu ändern, wie Steuerelemente in das Hauptfenster den Clientbereich des Rahmenfensters erstellt werden. Die `CCreateContext` beschrieben Elemente, die Sie überschreiben können, sind die [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Klasse.  
   
@@ -863,7 +863,7 @@ virtual void OnSetPreviewMode(
  *bPreview*  
  Gibt an, ob die Anwendung im Seitenansichtsmodus-platzieren. Legen Sie auf **"true"** , platzieren Sie in der Seitenansicht, **"false"** Vorschaumodus Abbrechen.  
   
- `pState`  
+ *pState*  
  Ein Zeiger auf eine **CPrintPreviewState** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -889,8 +889,8 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pCmdUI`  
- Ein Zeiger auf eine [CCmdUI](../../mfc/reference/ccmdui-class.md) Objekt, das das Menü, das den Updatebefehl generiert darstellt. Ruft das Update der [aktivieren](../../mfc/reference/ccmdui-class.md#enable) Memberfunktion der `CCmdUI` -Objekt über `pCmdUI` zum Aktualisieren der Benutzeroberfläche.  
+ *nämlich pCmdUI*  
+ Ein Zeiger auf eine [CCmdUI](../../mfc/reference/ccmdui-class.md) Objekt, das das Menü, das den Updatebefehl generiert darstellt. Ruft das Update der [aktivieren](../../mfc/reference/ccmdui-class.md#enable) Memberfunktion der `CCmdUI` -Objekt über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.  
   
 ##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout  
  Vom Framework aufgerufen, wenn die standard Steuerleisten ein- oder ausgeschaltet werden, oder beim Ändern der Größe des Rahmenfensters.  
@@ -900,7 +900,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNotify`  
+ *bNotify*  
  Bestimmt, ob das aktive direkte-Element für das Rahmenfenster Benachrichtigung von der layoutänderung empfängt. Wenn **"true"**, das Element ist, andernfalls benannten **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -923,7 +923,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszProfileName`  
+ *lpszProfileName*  
  Name eines Abschnitts in der Initialisierungsdatei oder einen Schlüssel in der Windows-Registrierung, in dem Statusinformationen gespeichert ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -937,7 +937,7 @@ void SetActivePreviewView(CView* pViewNew);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pViewNew`  
+ *pViewNew*  
  Ein Zeiger auf eine Sicht aktiviert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -955,7 +955,7 @@ void SetActiveView(
  *pViewNew*  
  Gibt einen Zeiger auf eine [CView](../../mfc/reference/cview-class.md) -Objekt, oder **NULL** für keine aktive Ansicht.  
   
- `bNotify`  
+ *bNotify*  
  Gibt an, ob die Sicht der Aktivierung benachrichtigt werden. Wenn **"true"**, `OnActivateView` wird für die neue Sicht; aufgerufen, wenn **"false"**, es ist nicht.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -969,7 +969,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `state`  
+ *state*  
  Wenden Sie den gespeicherten Zustand, auf das Rahmenfenster Steuerleisten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `nState`|Gibt an, ob das Menü anzeigen oder ausblenden. Die `nState` Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBS_VISIBLE (0 x 01) – zeigt das Menü an, wenn es ausgeblendet ist, aber hat keine Auswirkung, wenn es sichtbar ist.<br />-AFX_MBS_HIDDEN (0 x 02) - Blendet das Menü wird angezeigt, jedoch hat keine Auswirkung, wenn es ausgeblendet ist.|  
+|[in] *nState*|Gibt an, ob das Menü anzeigen oder ausblenden. Die *nState* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBS_VISIBLE (0 x 01) – zeigt das Menü an, wenn es ausgeblendet ist, aber hat keine Auswirkung, wenn es sichtbar ist.<br />-AFX_MBS_HIDDEN (0 x 02) - Blendet das Menü wird angezeigt, jedoch hat keine Auswirkung, wenn es ausgeblendet ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich Menü; Zustandsänderungen andernfalls `false`.  
@@ -1005,10 +1005,10 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `nStyle`|Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die `nStyle` Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü jederzeit angezeigt wird, und in der Standardeinstellung verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Klicken Sie im Menü wird standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die ALT-Taste auf das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü wird standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um ihn auszublenden.|  
+|[in] *nStyle*|Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü jederzeit angezeigt wird, und in der Standardeinstellung verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Klicken Sie im Menü wird standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die ALT-Taste auf das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü wird standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um ihn auszublenden.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Wert der `nStyle` -Parameter ist ungültig, im Debugmodus befindet und löst diese Methode bestätigt [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) im Releasemodus. Klicken Sie im Falle eines andere Laufzeitfehler diese Methode Assertionen im Debugmodus befindet, und löst eine Ausnahme abgeleitet aus dem [CException](../../mfc/reference/cexception-class.md) Klasse.  
+ Wenn der Wert der *nStyle* -Parameter ist ungültig, im Debugmodus befindet und löst diese Methode bestätigt [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) im Releasemodus. Klicken Sie im Falle eines andere Laufzeitfehler diese Methode Assertionen im Debugmodus befindet, und löst eine Ausnahme abgeleitet aus dem [CException](../../mfc/reference/cexception-class.md) Klasse.  
   
  Diese Methode wirkt sich auf den Status des Menüs in Anwendungen für [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] und höher.  
   
@@ -1021,10 +1021,10 @@ void SetMessageText(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszText`  
+ *lpszText*  
  Verweist auf die Zeichenfolge, die auf der Statusleiste platziert werden.  
   
- `nID`  
+ *nID*  
  String-Ressourcen-ID der Zeichenfolge auf der Statusleiste abgelegt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1038,7 +1038,7 @@ void SetProgressBarPosition(int nProgressPos);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nProgressPos`  
+ *nProgressPos*  
  Gibt die Position festgelegt. Muss er innerhalb des Bereichs festlegen, indem `SetProgressBarRange`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1053,10 +1053,10 @@ void SetProgressBarRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRangeMin`  
+ *nRangeMin*  
  Minimaler Wert.  
   
- `nRangeMax`  
+ *nRangeMax*  
  Maximale Wert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1069,7 +1069,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `tbpFlags`  
+ *tbpFlags*  
  Flags, die den aktuellen Zustand der Schaltfläche mit den Fortschritt zu steuern. Geben Sie nur eines der folgenden flags, weil alle Status gegenseitig: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1089,14 +1089,14 @@ BOOL SetTaskbarOverlayIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDResource`  
- Gibt die Ressourcen-ID eines Symbols, das als das Overlay verwendet. Finden Sie in der Beschreibung für `hIcon` Einzelheiten.  
+ *nIDResource*  
+ Gibt die Ressourcen-ID eines Symbols, das als das Overlay verwendet. Finden Sie in der Beschreibung für *hIcon* Details.  
   
- `lpcszDescr`  
+ *lpcszDescr*  
  Ein Zeiger auf eine Zeichenfolge, die eine Alternativtext-Version von der Informationen, durch das Overlay, für die Barrierefreiheit bietet.  
   
- `hIcon`  
- Das Handle eines Symbols, das als das Overlay verwendet werden soll. Dabei sollte es sich um ein kleines Symbol, das Messen von 16 x 16 Pixel bei 96 dpi (Dots per Inch) handeln. Wenn ein Overlay-Symbol auf die Schaltfläche auf der Taskleiste bereits angewendet wird, wird diese vorhandenen Überlagerung ersetzt. Dieser Wert kann `NULL` sein. Wie eine `NULL` Wert erfolgt abhängig, ob die Schaltfläche auf der Taskleiste ein einziges Fenster oder eine Gruppe von Windows darstellt. Es ist Aufgabe der aufrufenden Anwendung um freizugeben `hIcon` wenn er nicht mehr benötigt.  
+ *hIcon*  
+ Das Handle eines Symbols, das als das Overlay verwendet werden soll. Dabei sollte es sich um ein kleines Symbol, das Messen von 16 x 16 Pixel bei 96 dpi (Dots per Inch) handeln. Wenn ein Overlay-Symbol auf die Schaltfläche auf der Taskleiste bereits angewendet wird, wird diese vorhandenen Überlagerung ersetzt. Dieser Wert kann `NULL` sein. Wie eine `NULL` Wert erfolgt abhängig, ob die Schaltfläche auf der Taskleiste ein einziges Fenster oder eine Gruppe von Windows darstellt. Es ist Aufgabe der aufrufenden Anwendung um freizugeben *hIcon* wenn er nicht mehr benötigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Bei Erfolg; `FALSE` Wenn Betriebssystemversion kleiner als Windows 7 ist oder wenn ein Fehler auftritt, das Symbol "festlegen.  
@@ -1111,7 +1111,7 @@ void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszTitle`  
+ *lpszTitle*  
  Ein Zeiger auf eine Zeichenfolge mit dem Titel des Window-Objekt.  
   
 ##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar  
@@ -1125,10 +1125,10 @@ void ShowControlBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBar`  
+ *pBar*  
  Ein Zeiger auf die Steuerleiste ein-oder ausgeblendet werden.  
   
- `bShow`  
+ *bShow*  
  Wenn **"true"**, gibt an, dass die Steuerleiste angezeigt werden. Wenn **"false"**, gibt an, dass die Steuerleiste ausgeblendet werden.  
   
  *bDelay*  
@@ -1142,7 +1142,7 @@ void ShowOwnedWindows(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bShow`  
+ *bShow*  
  Gibt an, ob die zugehörige Windows oder ausgeblendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  

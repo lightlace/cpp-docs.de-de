@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306007"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954870"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt
 
@@ -48,7 +48,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie Visual Stud
 
 1. Auf der **Datei** Sie im Menü **neu** und wählen Sie dann **Projekt**.
 
-2. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. Geben Sie im Feld **Name** `MFCD2DWalkthrough`ein. Klicken Sie auf **OK**.
+2. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCD2DWalkthrough*. Klicken Sie auf **OK**.
 
 3. In der **MFC-Anwendung-Assistent**, wählen Sie **Fertig stellen** ohne Änderung von Einstellungen.
 
@@ -132,7 +132,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie Visual Stud
 
 3. Auf der **Nachrichten** Registerkarte **benutzerdefinierte Meldung hinzufügen**.
 
-4. In der **benutzerdefinierte Meldung hinzufügen** Dialogfeld die **benutzerdefinierte Windows-Meldung** geben `AFX_WM_DRAW2D`. In der **Handler Nachrichtenname** geben `OnDraw2D`. Wählen Sie die **registrierte Meldung** aus, und wählen Sie dann **OK**. Dieser Vorgang fügt einen Meldungshandler für die `AFX_WM_DRAW2D` -Meldung an das `CMFCD2DWalkthroughView` Klasse.
+4. In der **benutzerdefinierte Meldung hinzufügen** Dialogfeld die **benutzerdefinierte Windows-Meldung** geben *AFX_WM_DRAW2D*. In der **Handler Nachrichtenname** geben *OnDraw2D*. Wählen Sie die **registrierte Meldung** aus, und wählen Sie dann **OK**. Dieser Vorgang fügt einen Meldungshandler für die AFX_WM_DRAW2D-Nachricht an die `CMFCD2DWalkthroughView` Klasse.
 
 5. In der **vorhandene Handler** wählen Sie im `OnDraw2D`. Wählen Sie **-Code bearbeiten** zum Anzeigen der `CMFCD2DWalkthroughView::OnDraw2D` Methode. Verwenden Sie diesen Code für die `CMFCD2DWalkthroughView::OnDrawD2D` Methode:
 

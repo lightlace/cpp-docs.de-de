@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357182"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953387"
 ---
 # <a name="carray-class"></a>CArray-Klasse
 Unterstützt Arrays, die C-Arrays ähneln, jedoch können dynamisch verkleinern oder Vergrößern nach Bedarf.  
@@ -70,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `TYPE`  
- Ein Vorlagenparameter, der den Typ der im Array gespeicherten Objekte angibt. `TYPE` ist ein Parameter, die zurückgegebene `CArray`.  
+ *TYPE*  
+ Ein Vorlagenparameter, der den Typ der im Array gespeicherten Objekte angibt. *Typ* ist ein Parameter, die zurückgegebene `CArray`.  
   
- `ARG` *_* `TYPE`  
- Ein Vorlagenparameter, der den Argumenttyp, der verwendet wird angibt, um den Zugriff auf Objekte im Array gespeichert. Häufig einen Verweis auf `TYPE`. `ARG_TYPE` ist ein Parameter, der an übergebene `CArray`.  
+ *ARG* *_* *TYP*  
+ Ein Vorlagenparameter, der den Argumenttyp, der verwendet wird angibt, um den Zugriff auf Objekte im Array gespeichert. Häufig einen Verweis auf *Typ*. *ARG_TYPE* ist ein Parameter, der an übergebene `CArray`.  
   
 ## <a name="members"></a>Member  
   
@@ -147,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Template-Parameter, die den Typ der Argumente verweisen auf Elemente in diesem Array angeben.  
   
- `newElement`  
+ *newElement*  
  Das Element mit diesem Array hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des hinzugefügten Elements.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn [SetSize](#setsize) wurde mit verwendet ein `nGrowBy` Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugeordnet werden kann. Allerdings wird die obere Grenze nur 1 erhöhen.  
+ Wenn [SetSize](#setsize) wurde mit verwendet ein *nGrowBy* Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugeordnet werden kann. Allerdings wird die obere Grenze nur 1 erhöhen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -179,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>Hinweise  
  Die Arrays sein des gleichen Typs.  
   
- Bei Bedarf **Append** möglicherweise belegen zusätzlichen Speicherplatz, um die Elemente, die angefügt werden, auf das Array aufnehmen.  
+ Bei Bedarf `Append` möglicherweise belegen zusätzlichen Speicherplatz, um die Elemente, die angefügt werden, auf das Array aufnehmen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -211,7 +211,7 @@ void Copy(const CArray& src);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Memberfunktion, um die Elemente eines Arrays mit den Elementen von einem anderen Array zu überschreiben.  
   
- **Kopie** keinen Speicherplatz frei, aber bei Bedarf **Kopie** möglicherweise belegen zusätzlichen Speicherplatz, um die in das Array kopierten Elemente aufzunehmen.  
+ **Kopie** keinen Speicherplatz frei, aber bei Bedarf `Copy` möglicherweise belegen zusätzlichen Speicherplatz, um die in das Array kopierten Elemente aufzunehmen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -225,7 +225,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -262,7 +262,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TYPE*  
  Der Vorlagenparameter, der den Typ der Elemente des Arrays angibt.  
   
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -336,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Hinweise  
  Da Arrayindizes nullbasiert sind, gibt diese Funktion einen Wert von 1 kleiner als `GetSize`.  
   
- Die Bedingung **GetUpperBound ()** =-1 bedeutet, dass das Array keine Elemente enthält.  
+ Die Bedingung `GetUpperBound( )` =-1 bedeutet, dass das Array keine Elemente enthält.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArray::GetAt](#getat).  
@@ -356,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Der Vorlagenparameter, den Typ der Elemente im Array angibt.  
   
- `newElement`  
+ *newElement*  
  Das Element im Array abgelegt werden soll.  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der Häufigkeit, mit die dieses Element liegen eingefügt (Standardwert: 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
+ *pNewArray*  
  Ein anderes Array mit Elementen mit diesem Array hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Im Prozess, werden Sie verschoben (durch erhöhen den Index) Verschiebt das vorhandene Element in dieser Index, und es werden alle Elemente davor.  
   
- Die zweite Version fügt alle Elemente aus einer anderen `CArray` -Auflistung, beginnend ab dem `nStartIndex` Position.  
+ Die zweite Version fügt alle Elemente aus einer anderen `CArray` -Auflistung, beginnend ab dem *nStartIndex* Position.  
   
  Die `SetAt` -Funktion im Gegensatz dazu ersetzt ein angegebenes Array-Element und alle Elemente werden nicht verschoben.  
   
@@ -406,7 +406,7 @@ const TYPE& operator[](int_ptr nindex) const;
  *TYPE*  
  Der Vorlagenparameter, den Typ der Elemente im Array angibt.  
   
- `nIndex`  
+ *nIndex*  
  Der Index des Elements zugegriffen werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -429,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pNewData`  
+ *pNewData*  
  Ein neuer Puffer für das Array von Elementen.  
   
- `pData`  
+ *pData*  
  Das alte Array von Elementen.  
   
- `nCount`  
+ *nCount*  
  Anzahl der Elemente im alten Array.  
   
 ### <a name="remarks"></a>Hinweise  
- `pNewData` ist immer groß genug für alle der `pData` Elemente.  
+ *pNewData* ist immer groß genug für alle der *pData* Elemente.  
   
  Die [CArray](../../mfc/reference/carray-class.md) Implementierung verwendet diese Methode, um die alten Daten in einen neuen Puffer kopieren, wenn das Array vergrößert oder verkleinert werden soll (Wenn [SetSize](#setsize) oder [FreeExtra](#freeextra) heißen). Die standardmäßige Implementierung kopiert nur die Daten.  
   
@@ -468,10 +468,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der zu entfernenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -490,13 +490,13 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Der Vorlagenparameter Angabe des Typs der Argumente, die für Verweise auf Elemente des Arrays verwendet.  
   
- `newElement`  
+ *newElement*  
  Der neue Elementwert an der angegebenen Position gespeichert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -515,13 +515,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Ein Integer-Index, der größer als oder gleich 0 ist.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Der Vorlagenparameter, den Typ der Elemente im Array angibt.  
   
- `newElement`  
+ *newElement*  
  Das Element mit diesem Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -540,10 +540,10 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewSize`  
+ *nNewSize*  
  Das neue Arraygröße (Anzahl der Elemente). Muss größer als oder gleich 0 sein.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Die minimale Anzahl der Element-Slots zugewiesen werden, wenn eine Größenzuwachs erforderlich ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -551,7 +551,7 @@ void SetSize(
   
  Verwenden Sie diese Funktion, um die Größe des Arrays festgelegt, bevor Sie beginnen mit dem Array. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
   
- Die `nGrowBy` Parameter wirkt sich auf interne speicherbelegung, während das Array zunimmt. Verwendungsmöglichkeiten nie wirkt sich auf die Arraygröße von gemeldeten [GetSize](#getsize) und [GetUpperBound](#getupperbound). Wenn der Standardwert verwendet wird, reserviert MFC in eine Möglichkeit zur Vermeidung von Fragmentierung des Arbeitsspeichers und erhöht die Effizienz in den meisten Fällen berechnet.  
+ Die *nGrowBy* Parameter wirkt sich auf interne speicherbelegung, während das Array zunimmt. Verwendungsmöglichkeiten nie wirkt sich auf die Arraygröße von gemeldeten [GetSize](#getsize) und [GetUpperBound](#getupperbound). Wenn der Standardwert verwendet wird, reserviert MFC in eine Möglichkeit zur Vermeidung von Fragmentierung des Arbeitsspeichers und erhöht die Effizienz in den meisten Fällen berechnet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetData](#getdata).  

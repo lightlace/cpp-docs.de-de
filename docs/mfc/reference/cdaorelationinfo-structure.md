@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366261"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951291"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo-Struktur
 Die `CDaoRelationInfo` Struktur enthält Informationen über eine Beziehung zwischen zwei Tabellen in Feldern definiert eine [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) Objekt.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `m_strName`  
+ *m_strName*  
  Eindeutig benennt die Relation-Objekt. Weitere Informationen finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  Namen die fremde Tabelle in der Beziehung an. Fremdtabelle ist eine Tabelle verwendet, um den Fremdschlüssel enthalten. Im Allgemeinen verwenden Sie eine Fremdtabelle hergestellt oder die referenzielle Integrität erzwingen. Die fremde Tabelle ist in der Regel auf der n-Seite einer 1: n-Beziehung. Beispiele für fremde Tabellen sind Tabellen, die Codes für den US-amerikanischen Bundesstaaten oder kanadischen Provinzen oder kundenbestellungen enthalten.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Enthält Informationen zu den Beziehungstyp. Der Wert dieses Elements kann eine der folgenden sein:  
   
 - **DbRelationUnique** Beziehung 1: 1 ist.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **DbRelationDeleteCascade** Löschvorgänge werden weitergegeben.  
   
- `m_pFieldInfos`  
- Ein Zeiger auf ein Array von [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) Strukturen. Das Array enthält ein Objekt für jedes Feld in der Beziehung. Die `m_nFields` -Datenmember enthält die Anzahl der Elemente des Arrays.  
+ *m_pFieldInfos*  
+ Ein Zeiger auf ein Array von [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) Strukturen. Das Array enthält ein Objekt für jedes Feld in der Beziehung. Die *M_nFields* Datenmember gibt die Anzahl der Elemente des Arrays.  
   
- `m_nFields`  
- Die Anzahl der `CDaoRelationFieldInfo` Objekte in der `m_pFieldInfos` -Datenmember.  
+ *m_nFields*  
+ Die Anzahl der `CDaoRelationFieldInfo` Objekte in der *M_pFieldInfos* -Datenmember.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Verweise auf die primären und sekundären Datenbank, die oben genannten anzugeben, wie die Informationen zurückgegeben werden, durch die [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) Memberfunktion in Klasse `CDaoDatabase`.  

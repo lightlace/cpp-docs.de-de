@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354147"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951742"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor-Klasse
 Implementiert die Funktion einer Farbe, deren Rot-, Grün- und Blauanteil animiert werden kann.  
@@ -121,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRTransition`  
+ *pRTransition*  
  Übergang für Red-Komponente.  
   
- `pGTransition`  
+ *pGTransition*  
  Übergang für Green-Komponente.  
   
- `pBTransition`  
+ *pBTransition*  
  Übergang für Blue-Komponente.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -147,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Gibt die Standardfarbe.  
   
- `nGroupID`  
+ *nGroupID*  
  Gibt Gruppen-ID.  
   
- `nObjectID`  
+ *nObjectID*  
  Gibt die Objekt-ID.  
   
- `dwUserData`  
+ *dwUserData*  
  Gibt die benutzerdefinierten Daten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -170,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lst`  
+ *lst*  
  Wenn die Funktion zurückgibt, enthält Zeiger auf drei CAnimationVariable-Objekte, die rote, grünen und blaue Komponenten darstellt.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -233,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Die Ausgabe. Enthält den aktuellen Wert an, wenn diese Methode zurückgegeben wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -279,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Gibt an, neuer Wert Animationsfarbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -293,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Gibt neue Standardwerte für Rot, Grün und Blau-Komponenten an.  
   
 ### <a name="remarks"></a>Hinweise  

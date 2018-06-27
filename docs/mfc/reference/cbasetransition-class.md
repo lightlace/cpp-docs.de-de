@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356379"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953569"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition-Klasse
 Stellt einen einfachen Übergang dar.  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf das storyboard, der die verwandte Variable animiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf das storyboard, der die verwandte Variable animiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLibrary`  
+ *pLibrary*  
  Ein Zeiger auf den Übergangsbibliothek, die standard-Übergänge erstellt. Für benutzerdefinierte Übergänge kann NULL sein.  
   
- `pFactory`  
+ *pFactory*  
  Ein Zeiger auf den Übergang-Klassenfactory, die benutzerdefinierte Übergänge erstellt. Für standard Übergänge kann NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLibrary`  
+ *pLibrary*  
  Ein Zeiger auf den Übergangsbibliothek, die standard-Übergänge erstellt. Für benutzerdefinierte Übergänge kann NULL sein.  
   
- `pFactory`  
+ *pFactory*  
  Ein Zeiger auf den Übergang-Klassenfactory, die benutzerdefinierte Übergänge erstellt. Für standard Übergänge kann NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStart`  
+ *pStart*  
  Einen Keyframe, der den Anfang des Übergangs angibt.  
   
- `pEnd`  
+ *Dateiversion*  
  Einen Keyframe, der das Ende des Übergangs angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pVariable`  
+ *pVariable*  
  Ein Zeiger auf Verwandte Animationsvariablen.  
   
 ### <a name="remarks"></a>Hinweise  

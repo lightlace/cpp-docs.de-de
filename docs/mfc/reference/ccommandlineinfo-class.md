@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357014"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952384"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo-Klasse
 Unterstützt die Analyse der Befehlszeile beim Anwendungsstart.  
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pszParam`  
+ *pszParam*  
  Der Parameter oder ein Flag.  
   
  *bFlag*  
- Gibt an, ob `pszParam` ist ein Parameter oder ein Flag.  
+ Gibt an, ob *PszParam* ist ein Parameter oder ein Flag.  
   
- `bLast`  
+ *Aktion*  
  Gibt an, ob dies der letzte Parameter oder -Flag in der Befehlszeile angegeben ist.  
   
 ### <a name="remarks"></a>Hinweise  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) Aufrufe `ParseParam` einmal für jeden Parameter oder ein Flag in der Befehlszeile, um als Argument übergeben `pszParam`. Wenn das erste Zeichen des Parameters ist eine " **-**"oder" **/**", wird es entfernt wird und *bFlag* auf festgelegt ist `TRUE`. Beim Analysieren des letzten Parameters, `bLast` festgelegt ist, um `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) Aufrufe `ParseParam` einmal für jeden Parameter oder ein Flag in der Befehlszeile, um als Argument übergeben *PszParam*. Wenn das erste Zeichen des Parameters ist eine " **-**"oder" **/**", wird es entfernt wird und *bFlag* auf festgelegt ist `TRUE`. Beim Analysieren des letzten Parameters, *Explosion* festgelegt ist, um `TRUE`.  
   
  Die standardmäßige Implementierung dieser Funktion erkennt die folgenden Flags: `/p`, `/pt`, `/dde`, `/Automation`, und `/Embedding`, wie in der folgenden Tabelle dargestellt:  
   

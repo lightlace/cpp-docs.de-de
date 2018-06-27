@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358257"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955647"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler-Klasse
 Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn der Status eines Animations-Managers geändert wird.  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pAnimationController`  
+ *pAnimationController*  
  Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  Die Ausgabe. Wenn die Methode erfolgreich, es ist enthält einen Zeiger auf COM-Objekt, das Behandeln von statusaktualisierungen eines Animations-Managers wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `newStatus`  
+ *newStatus*  
  Neuer Status.  
   
- `previousStatus`  
+ *previousStatus*  
  Vorherigen Status.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pAnimationController`  
+ *pAnimationController*  
  Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
   
 ## <a name="see-also"></a>Siehe auch  

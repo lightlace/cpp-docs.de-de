@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355413"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954659"
 ---
 # <a name="afx-messages"></a>AFX-Meldungen
 Diese Nachrichten werden in MFC verwendet.  
@@ -89,7 +89,7 @@ Diese Nachrichten werden in MFC verwendet.
   
 ||||||  
 |-|-|-|-|-|  
-|Meldung|Beschreibung|[in] `wParam`|`lParam` (Alle Parameter sind [in], sofern nicht anders angegeben.)|Rückgabewert|  
+|Meldung|Beschreibung|[in] *wParam*|*lParam* (alle Parameter sind [in], sofern nicht anders angegeben.)|Rückgabewert|  
 |AFX_WM_ACCGETOBJECT|Nicht verwendet.|Nicht verwendet.|Nicht zutreffend.|Nicht zutreffend.|  
 |AFX_WM_ACCGETSTATE|Für Accessibility-Unterstützung verwendet. Senden Sie diese Nachricht an `CMFCPopupMenu` oder `CMFCRibbonPanelMenu` beim Abrufen des Status des aktuellen Elements.|Der Index des Elements, die eine Menüschaltfläche oder Trennzeichen sein könnte.|Nicht verwendet.|Der Status des Elements. Es ist 1, wenn der Index ungültig ist, ist 0, wenn die Menüschaltfläche keine besonderen Attribute hat. Andernfalls ist es eine Kombination der folgenden Flags:<br /><br /> TBBS_DISABLED: "Item" ist deaktiviert.<br /><br /> TBBS_CHECKED – Element aktiviert ist<br /><br /> TBBS_BUTTON – das Element ist eine standardmäßige pushbutton<br /><br /> TBBS_PRESSED – gedrückt wird<br /><br /> TBBS_INDETERMINATE – nicht definierten Zustand<br /><br /> TBBS_SEPARATOR - anstelle einer Menüschaltfläche, dieses Element Forms Trennung zwischen anderen Menüelementen|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Das Framework sendet diese Nachricht an das Steuerelement in der Größe veränderbaren Steuerelement. Diese Meldung für den Empfang von Benachrichtigungen verarbeiten `CMFCTabCtrl` Objekte, wenn ein Benutzer mit eine aktive Registerkarte ändert.|Der Index einer Registerkarte.|Nicht verwendet.|Ungleich NULL ist.|  
@@ -131,7 +131,7 @@ Diese Nachrichten werden in MFC verwendet.
 |AFX_WM_UPDATETOOLTIPS|Für alle QuickInfo-Besitzer gesendet, um anzugeben, dass die QuickInfo-Steuerelemente neu erstellt werden soll.|Der Typ des Steuerelements, das diese Nachricht verarbeiten soll. Finden Sie in der Tabelle weiter unten in diesem Thema eine Liste der möglichen Werte.|Nicht verwendet.|Nicht verwendet.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` sendet diese Nachricht an den übergeordneten Frame, klickt der Benutzer die **Hilfe** klicken, oder wechselt in den Hilfemodus durch Klicken auf die **Hilfe** Titelleistenschaltfläche oder die Taste F1 drücken.|Nicht verwendet.|Ein Zeiger auf die Instanz von `CMFCWindowsManagerDialog`.|Nicht verwendet.|  
   
- Die folgende Tabelle zeigt die Werte für das niedrige Wort von der `lParam` Parameters der Methode AFX_WM_HSCROLL:  
+ Die folgende Tabelle zeigt die Werte für das niedrige Wort von der *lParam* Parameters der Methode AFX_WM_HSCROLL:  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ Diese Nachrichten werden in MFC verwendet.
 |SB_THUMBTRACK|Der Benutzer ist die bildlaufbox. Die AFX_WM_ON_HSCROLL-Nachricht wird mit diesem Wert wiederholt gesendet, bis der Benutzer die Maustaste loslässt. Das höherwertige Wort gibt an, die Position, an der das Bildlauffeld gezogen wurde.|  
   
 > [!NOTE]
->  Das höherwertige Wort von der `lParam` Parameter gibt die aktuelle Position des Bildlauffelds an, wenn das niederwertige Wort SB_THUMBPOSITION oder SB_THUMBTRACK ist; andernfalls wird dieses Wort nicht verwendet.  
+>  Das höherwertige Wort von der *lParam* Parameter gibt die aktuelle Position des Bildlauffelds an, wenn das niederwertige Wort SB_THUMBPOSITION oder SB_THUMBTRACK ist; andernfalls wird dieses Wort nicht verwendet.  
   
- Die folgende Tabelle enthält die Flagwerte für die `lParam` -Parameter der Nachricht AFX_WM_UPDATETOOLTIPS:  
+ Die folgende Tabelle enthält die Flagwerte für die *lParam* -Parameter der Nachricht AFX_WM_UPDATETOOLTIPS:  
   
 |||  
 |-|-|  

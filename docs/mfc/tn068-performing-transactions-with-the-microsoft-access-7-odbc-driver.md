@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63cce7532d93b1bd44b6a44c526310bd894d5e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653e1cf29ff2b2e2338df7e8e3a1e74d73a7d6fe
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384816"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950226"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: Ausführen von Transaktionen mit dem Microsoft Access 7 ODBC-Treiber
 > [!NOTE]
@@ -34,21 +34,21 @@ ms.locfileid: "33384816"
 ## <a name="overview"></a>Übersicht  
  Wenn Ihre datenbankanwendung Transaktionen ausgeführt werden, achten Sie aufrufen `CDatabase::BeginTrans` und `CRecordset::Open` in der richtigen Reihenfolge in der Anwendung. Der Microsoft Access 7.0-Treiber verwendet den Microsoft Jet-Datenbankmodul und Jet erfordert, dass Ihre Anwendung eine Transaktion für jede Datenbank, die einen geöffneten Cursor wurde nicht beginnen. Für die MFC-ODBC-Datenbankklassen entspricht ein geöffneten Cursor ein offenes `CRecordset` Objekt.  
   
- Wenn Sie ein Recordset vor dem Aufruf öffnen **BeginTrans**, möglicherweise keine Fehlermeldungen angezeigt. Allerdings alle Recordset aktualisiert Ihre Anwendung vereinfacht werden permanente nach dem Aufruf `CRecordset::Update`, und die Updates werden kein Rollback durch Aufrufen von **Rollback**. Um dieses Problem zu vermeiden, rufen Sie **BeginTrans** erste, und öffnen Sie das Recordset.  
+ Wenn Sie ein Recordset vor dem Aufruf öffnen `BeginTrans`, möglicherweise keine Fehlermeldungen angezeigt. Allerdings alle Recordset aktualisiert Ihre Anwendung vereinfacht werden permanente nach dem Aufruf `CRecordset::Update`, und die Updates werden kein Rollback durch Aufrufen von `Rollback`. Um dieses Problem zu vermeiden, rufen Sie `BeginTrans` erste, und öffnen Sie das Recordset.  
   
- MFC überprüft die Funktionalität des Treibers für Cursorverhalten Commit- und Rollback. Klasse `CDatabase` stellt zwei Memberfunktionen `GetCursorCommitBehavior` und `GetCursorRollbackBehavior`, um zu bestimmen, die Auswirkungen von Transaktionen auf geöffneter `CRecordset` Objekt. Microsoft Access 7.0-ODBC-Treiber diese Memberfunktionen geben `SQL_CB_CLOSE` , da die Access-Treiber die Beibehaltung der Cursor nicht unterstützt. Aus diesem Grund müssen Sie aufrufen `CRecordset::Requery` folgende eine **CommitTrans** oder **Rollback** Vorgang.  
+ MFC überprüft die Funktionalität des Treibers für Cursorverhalten Commit- und Rollback. Klasse `CDatabase` stellt zwei Memberfunktionen `GetCursorCommitBehavior` und `GetCursorRollbackBehavior`, um zu bestimmen, die Auswirkungen von Transaktionen auf geöffneter `CRecordset` Objekt. Microsoft Access 7.0-ODBC-Treiber diese Memberfunktionen geben `SQL_CB_CLOSE` , da die Access-Treiber die Beibehaltung der Cursor nicht unterstützt. Aus diesem Grund müssen Sie aufrufen `CRecordset::Requery` folgende eine `CommitTrans` oder `Rollback` Vorgang.  
   
- Wenn Sie mehrere Transaktionen nacheinander ausführen müssen, rufen Sie können nicht **Requery** nach der ersten Transaktion und der nächsten dann neu gestartet. Sie müssen das Recordset vor dem nächsten Aufruf von schließen **BeginTrans** um des Jet-Anforderung zu erfüllen. In diesem technischen Hinweis werden zwei Methoden zur Handhabung dieser Situation beschrieben:  
+ Wenn Sie mehrere Transaktionen nacheinander ausführen müssen, rufen Sie können nicht `Requery` nach der ersten Transaktion und der nächsten dann neu gestartet. Sie müssen das Recordset vor dem nächsten Aufruf von schließen `BeginTrans` um des Jet-Anforderung zu erfüllen. In diesem technischen Hinweis werden zwei Methoden zur Handhabung dieser Situation beschrieben:  
   
--   Schließen das Recordset nach jedem **CommitTrans** oder **Rollback** Vorgang.  
+-   Schließen das Recordset nach jedem `CommitTrans` oder `Rollback` Vorgang.  
   
--   Mithilfe der ODBC-API-Funktion **SQLFreeStmt**.  
+-   Mithilfe der ODBC-API-Funktion `SQLFreeStmt`.  
   
 ## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Schließen das Recordset nach jedem CommitTrans oder Rollback-Vorgangs  
- Vor dem Start einer Transaktions: Stellen Sie sicher, dass das Recordsetobjekt geschlossen wird. Nach dem Aufruf **BeginTrans**, rufen Sie des Recordsets **öffnen** Memberfunktion. Schließen Sie das Recordset sofort nach dem Aufruf **CommitTrans** oder **Rollback**. Beachten Sie, dass wiederholte öffnen und schließen das Recordset die Leistung einer Anwendung verlangsamen können.  
+ Vor dem Start einer Transaktions: Stellen Sie sicher, dass das Recordsetobjekt geschlossen wird. Nach dem Aufruf `BeginTrans`, rufen Sie des Recordsets `Open` Memberfunktion. Schließen Sie das Recordset sofort nach dem Aufruf `CommitTrans` oder `Rollback`. Beachten Sie, dass wiederholte öffnen und schließen das Recordset die Leistung einer Anwendung verlangsamen können.  
   
 ## <a name="using-sqlfreestmt"></a>SQLFreeStmt verwenden  
- Sie können auch die ODBC-API-Funktion **SQLFreeStmt** explizit schließen des Cursors nach dem Beenden einer Transaktions. Um eine andere Transaktion zu starten, rufen **BeginTrans** gefolgt von `CRecordset::Requery`. Beim Aufrufen von **SQLFreeStmt**, Sie müssen das Recordset Befehls beschäftigt als erster Parameter angeben und **SQL_CLOSE** als zweiten Parameter. Diese Methode ist schneller als schließen und öffnen das Recordset am Anfang jeder Transaktion auf. Der folgende Code zeigt, wie diese Technik implementiert wird:  
+ Sie können auch die ODBC-API-Funktion `SQLFreeStmt` explizit schließen des Cursors nach dem Beenden einer Transaktions. Um eine andere Transaktion zu starten, rufen `BeginTrans` gefolgt von `CRecordset::Requery`. Beim Aufrufen von `SQLFreeStmt`, Sie müssen das Recordset Befehls beschäftigt als erster Parameter angeben und *SQL_CLOSE* als zweiten Parameter. Diese Methode ist schneller als schließen und öffnen das Recordset am Anfang jeder Transaktion auf. Der folgende Code zeigt, wie diese Technik implementiert wird:  
   
 ```  
 CMyDatabase db;  
@@ -93,11 +93,11 @@ rs.Close();
 db.Close();
 ```  
   
- Eine weitere Möglichkeit zum Implementieren dieser Technik ist, Schreiben Sie eine neue Funktion **RequeryWithBeginTrans**, die Sie aufrufen können, um die nächste Transaktion zu starten, nachdem Sie einen commit oder Rollback der ersten Aktivität. Um eine solche Funktion schreiben, müssen Sie die folgenden Schritte aus:  
+ Eine weitere Möglichkeit zum Implementieren dieser Technik ist, Schreiben Sie eine neue Funktion `RequeryWithBeginTrans`, die Sie aufrufen können, um die nächste Transaktion zu starten, nachdem Sie einen commit oder Rollback der ersten Aktivität. Um eine solche Funktion schreiben, müssen Sie die folgenden Schritte aus:  
   
-1.  Kopieren Sie den Code für **CRecordset ()** an die neue Funktion.  
+1.  Kopieren Sie den Code für `CRecordset::Requery( )` an die neue Funktion.  
   
-2.  Fügen Sie die folgende Zeile unmittelbar nach dem Aufruf von **SQLFreeStmt**:  
+2.  Fügen Sie die folgende Zeile unmittelbar nach dem Aufruf von `SQLFreeStmt`:  
   
  `m_pDatabase->BeginTrans( );`  
   
@@ -131,7 +131,7 @@ db.CommitTrans();
 ```  
   
 > [!NOTE]
->  Verwenden Sie dieses Verfahren nicht, wenn Sie die Membervariablen Recordset ändern müssen **M_strFilter** oder `m_strSort` zwischen den Transaktionen. In diesem Fall sollten Sie das Recordset schließen Sie nach jedem **CommitTrans** oder **Rollback** Vorgang.  
+>  Verwenden Sie dieses Verfahren nicht, wenn Sie die Membervariablen Recordset ändern müssen *M_strFilter* oder *M_strSort* zwischen den Transaktionen. In diesem Fall sollten Sie das Recordset schließen Sie nach jedem `CommitTrans` oder `Rollback` Vorgang.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   

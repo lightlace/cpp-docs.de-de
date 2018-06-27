@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383187"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950434"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Apartmentmodellthreading in ActiveX-Steuerelementen
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383187"
  Aktivieren von apartmentmodellthreading ist für die meisten Steuerelemente einfach, insbesondere, wenn sie wenig oder keine freigegebene Daten haben.  
   
 ## <a name="protecting-shared-data"></a>Schutz auf freigegebene Daten  
- Wenn das Steuerelement auf freigegebene Daten verwendet z. B. eine statische Membervariable der Zugriff auf die Daten mit einem kritischen Abschnitt, um zu verhindern, dass mehrere Threads Ändern der Daten zur gleichen Zeit geschützt werden soll. Informationen zum Einrichten eines kritischen Abschnitts für diesen Zweck, deklarieren Sie eine statische Membervariable der Klasse `CCriticalSection` in der Klasse des Steuerelements. Verwenden der `Lock` und **Unlock** Memberfunktionen dieser kritischen Abschnitt-Objekt, wo Code auf die freigegebenen Daten zugreift.  
+ Wenn das Steuerelement auf freigegebene Daten verwendet z. B. eine statische Membervariable der Zugriff auf die Daten mit einem kritischen Abschnitt, um zu verhindern, dass mehrere Threads Ändern der Daten zur gleichen Zeit geschützt werden soll. Informationen zum Einrichten eines kritischen Abschnitts für diesen Zweck, deklarieren Sie eine statische Membervariable der Klasse `CCriticalSection` in der Klasse des Steuerelements. Verwenden der `Lock` und `Unlock` Memberfunktionen dieser kritischen Abschnitt-Objekt, wo Code auf die freigegebenen Daten zugreift.  
   
  Betrachten Sie z. B. eine Steuerelementklasse, die eine Zeichenfolge, die von allen Instanzen gemeinsam genutzt wird, verwalten muss. Diese Zeichenfolge kann in eine statische Membervariable verwaltet und durch einen kritischen Abschnitt geschützt werden. Das Steuerelement Klassendeklaration würde Folgendes enthalten:  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>Registriert ein Steuerelement Apartment-Modell-fähig  
- Steuerelemente, die apartmentmodellthreading unterstützen sollte dieser Funktion in der Registrierung durch Hinzufügen des benannten Werts "ThreadingModel" angeben, mit dem Wert "Apartment" ihre Klasse-ID-Registrierungseintrags unter dem *Klassenkennung* \\ **InprocServer32** Schlüssel. Um dazu führen, dass dieser Schlüssel für das Steuerelement automatisch registriert werden, übergeben die `afxRegApartmentThreading` -Flag in der sechsten Parameter `AfxOleRegisterControlClass`:  
+ Steuerelemente, die apartmentmodellthreading unterstützen sollte dieser Funktion in der Registrierung durch Hinzufügen des benannten Werts "ThreadingModel" angeben, mit dem Wert "Apartment" ihre Klasse-ID-Registrierungseintrags unter dem *Klassenkennung* \\ **InprocServer32** Schlüssel. Um dazu führen, dass dieser Schlüssel für das Steuerelement automatisch registriert werden, übergeben die *AfxRegApartmentThreading* -Flag in der sechsten Parameter `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  Wenn Steuerelementprojekt vom Steuerelement in Visual C++, Version 4.1 oder höher generiert wurde, wird dieses Flag bereits in Ihrem Code vorhanden sein. Es sind keine Änderungen erforderlich, um das Threadingmodell zu registrieren.  
   
- Wenn das Projekt von einer früheren Version der Assistent generiert wurde, müssen der vorhandene Code einen booleschen Wert als sechsten Parameters. Wenn der vorhandene Parameter auf "true" ist, ändern Sie ihn in `afxRegInsertable | afxRegApartmentThreading`. Wenn der vorhandene Parameter auf false festgelegt ist, ändern Sie ihn in `afxRegApartmentThreading`.  
+ Wenn das Projekt von einer früheren Version der Assistent generiert wurde, müssen der vorhandene Code einen booleschen Wert als sechsten Parameters. Wenn der vorhandene Parameter auf "true" ist, ändern Sie ihn in *AfxRegInsertable | AfxRegApartmentThreading*. Wenn der vorhandene Parameter auf false festgelegt ist, ändern Sie ihn in *AfxRegApartmentThreading*.  
   
- Wenn das Steuerelement nicht die Regeln für apartmentmodellthreading, müssen Sie nicht übergeben `afxRegApartmentThreading` in diesem Parameter.  
+ Wenn das Steuerelement nicht die Regeln für apartmentmodellthreading, müssen Sie nicht übergeben *AfxRegApartmentThreading* in diesem Parameter.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   

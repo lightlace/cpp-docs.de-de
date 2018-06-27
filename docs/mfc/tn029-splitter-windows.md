@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384722"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957223"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Splitterfenster
 In diesem Hinweis werden die MFC-Bibliothek [CSplitterWnd Klasse](../mfc/reference/csplitterwnd-class.md), dort finden Sie im Fenster unterteilt und verwaltet die Größenänderung des anderen Fenstern Bereich.  
@@ -66,7 +66,7 @@ In diesem Hinweis werden die MFC-Bibliothek [CSplitterWnd Klasse](../mfc/referen
  Bereich:  
  Eine anwendungsspezifische-Fenster, die eine `CSplitterWnd` verwaltet. Ein Bereich ist in der Regel ein Objekt, das von abgeleitet ist die [CView-Klasse](../mfc/reference/cview-class.md), jedoch kann eine [CWnd](../mfc/reference/cwnd-class.md) -Objekt, das über die entsprechenden untergeordneten Fenster ID verfügt  
   
- Verwenden eine `CWnd`-abgeleitete Objekt, und übergeben der `RUNTIME_CLASS` des Objekts, das die `CreateView` fungieren, als würden Sie verwenden eine `CView`-abgeleitete Klasse. Muss Ihre Klasse verwenden `DECLARE_DYNCREATE` und `IMPLEMENT_DYNCREATE` , da das Framework die dynamische Erstellung zur Laufzeit verwendet. Es gibt zwar viel Code in `CSplitterWnd` speziell für die `CView` -Klasse, [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) wird immer verwendet werden, bevor diese Aktionen ausgeführt werden.  
+ Verwendet eine `CWnd`-abgeleitete Objekt, und übergeben Sie die RUNTIME_CLASS des Objekts, das der `CreateView` fungieren, als würden Sie verwenden eine `CView`-abgeleitete Klasse. Ihre Klasse muss DECLARE_DYNCREATE und IMPLEMENT_DYNCREATE verwenden, da das Framework die dynamische Erstellung zur Laufzeit verwendet. Es gibt zwar viel Code in `CSplitterWnd` speziell für die `CView` -Klasse, [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) wird immer verwendet werden, bevor diese Aktionen ausgeführt werden.  
   
  Teilerleiste:  
  Ein Steuerelement, das zwischen Zeilen und Spalten des Bereiche eingefügt wird. Es kann verwendet werden, um die Größe der Zeilen oder Spalten der Bereiche anzupassen.  
@@ -88,14 +88,14 @@ In diesem Hinweis werden die MFC-Bibliothek [CSplitterWnd Klasse](../mfc/referen
 [      ][      ][v]  
 ```  
   
- Wenn der Benutzer die Bildlaufleiste bewegt `WM_VSCROLL` Nachrichten an beide Ansichten gesendet werden. Bei Ansichten der Position der Bildlaufleiste festlegt, wird die freigegebene Bildlaufleiste festgelegt werden.  
+ Wenn der Benutzer die Bildlaufleiste verschoben wird, werden WM_VSCROLL-Nachrichten an beide Ansichten gesendet werden. Bei Ansichten der Position der Bildlaufleiste festlegt, wird die freigegebene Bildlaufleiste festgelegt werden.  
   
  Beachten Sie, dass freigegebene Bildlaufleisten mit ähnlichen Sichtobjekte besonders hilfreich sind. Wenn Sie Sichten unterschiedlicher Typen im eines Splitters kombinieren, müssen Sie möglicherweise ihre Bildlaufpositionen koordinieren speziellen Code schreiben. Alle `CView`-abgeleitete Klasse, verwendet die `CWnd` Bildlaufleiste APIs an die freigegebene Bildlaufleiste Delegieren wird, falls vorhanden. Die `CScrollView` Implementierung ist ein Beispiel für eine `CView` Klasse, die unterstützt freigegebene Bildlaufleisten. Die nicht von abgeleiteten Klassen `CView`, Klassen, die auf nicht-Steuerelement Bildlaufleisten basieren oder Klassen, die standard-Windows-Implementierungen verwenden (z. B. `CEditView`) funktioniert nicht mit der freigegebenen Scroll Bar-Funktion von `CSplitterWnd`.  
   
 ## <a name="minimum-sizes"></a>Minimale Größe  
  Für jede Zeile eine minimale Zeilenhöhe vorhanden ist, und für jede Spalte eine minimale Spaltenbreite vorhanden ist. Dieser Mindestwert garantiert, dass ein Bereich nicht zu klein, um die vollständige detailliert angezeigt ist.  
   
- Für ein statisches Splitterfenster ist die Anfangszeile minimale Zeilenhöhe und Spaltenbreite 0. Für ein dynamisches Splitterfenster, werden die Anfangszeile minimale Zeilenhöhe und Spaltenbreite festgelegt, indem die `sizeMin` Parameter von der `CSplitterWnd::Create` Funktion.  
+ Für ein statisches Splitterfenster ist die Anfangszeile minimale Zeilenhöhe und Spaltenbreite 0. Für ein dynamisches Splitterfenster, werden die Anfangszeile minimale Zeilenhöhe und Spaltenbreite festgelegt, indem die *SizeMin* Parameter von der `CSplitterWnd::Create` Funktion.  
   
  Sie können diese minimale Größe ändern, indem Sie mit der [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) und [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) Funktionen.  
   

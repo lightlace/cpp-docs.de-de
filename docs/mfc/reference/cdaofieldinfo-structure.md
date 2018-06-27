@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368406"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952197"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo-Struktur
 Die `CDaoFieldInfo` Struktur enthält Informationen über ein Field-Objekt, das für Datenzugriffsobjekte (DAO) definiert.  
@@ -50,10 +50,10 @@ struct CDaoFieldInfo
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `m_strName`  
+ *m_strName*  
  Eindeutig benennt das Feldobjekt. Details finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
- `m_nType`  
+ *m_nType*  
  Ein Wert, der den Datentyp des Felds angibt. Details finden Sie im Thema "Typeigenschaft" DAO-Hilfe. Der Wert dieser Eigenschaft kann einen der folgenden sein:  
   
 - **DbBoolean** Ja/Nein, wie **"true"**/**"false"**  
@@ -101,7 +101,7 @@ struct CDaoFieldInfo
 |**Wert dbMemo**|0|Memo ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbGUID**|16|Ein global eindeutiger Bezeichner/universell eindeutige Bezeichner mit Remoteprozeduraufrufe verwendet.|  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Gibt die Eigenschaften des ein Field-Objekt, das eine Tabledef, Recordset, Querydef oder Index-Objekt enthalten sind. Der zurückgegebene Wert kann eine Summe der folgenden Konstanten, erstellt mit dem C++-bitweise OR (**&#124;**) Operator:  
   
 - **DbFixedField** die Feldgröße ist (Standardeinstellung für numerische Felder) fest.  
@@ -119,16 +119,16 @@ struct CDaoFieldInfo
  *m_nOrdinalPosition*  
  Ein Wert, der die numerische Reihenfolge angibt, in der ein Feld, das durch ein DAO-Field-Objekt dargestellt wird, relativ zu anderen Feldern angezeigt werden soll. Sie können diese Eigenschaft festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). Details finden Sie im Thema "OrdinalPosition-Eigenschaft" DAO-Hilfe.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Gibt an, ob ein DAO-Field-Objekt einen Wert ungleich Null erfordert. Wenn diese Eigenschaft ist **"true"**, das Feld lässt sich nicht auf einen Null-Wert. Falls erforderlich ist, legen Sie auf **"false"**, das Feld darf Null-Werte als auch Werte, die durch die Einstellungen für die leere Zeichenfolge und ValidationRule-Eigenschaft angegebenen Bedingungen erfüllen. Details finden Sie im Thema "Erforderliche Eigenschaft" DAO-Hilfe. Sie können diese Eigenschaft für eine Tabledef mit festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_bAllowZeroLength*  
  Gibt an, ob eine leere Zeichenfolge ("") ist ein gültiger Wert von DAO-Field-Objekt mit einem Text- oder Memo-Datentyp. Wenn diese Eigenschaft ist **"true"**, eine leere Zeichenfolge ist ein gültiger Wert. Sie können diese Eigenschaft festlegen, um **"false"** , stellen Sie sicher, dass Sie eine leere Zeichenfolge verwenden können, um den Wert eines Felds festzulegen. Details finden Sie im Thema "Leere Zeichenfolge-Eigenschaft" DAO-Hilfe. Sie können diese Eigenschaft für eine Tabledef mit festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Gibt die Sequenz der Sortierreihenfolge im Text für den Zeichenfolgenvergleich oder sortieren. Details finden Sie im Thema "Anpassen von Windows-Registrierung Einstellungen für den Datenzugriff" DAO-Hilfe. Eine Liste der möglichen Werte zurückgegeben werden, finden Sie unter der **M_lCollatingOrder** Mitglied der [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) Struktur. Sie können diese Eigenschaft für eine Tabledef mit festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  Ein Wert, der den Namen des DAO-Field-Objekt in einer Fremdschlüsseltabelle in einer Beziehung angibt, die ein Feld in einer primären Tabelle entspricht. Details finden Sie im Thema "ForeignName Property" in der DAO-Hilfe.  
   
  *m_strSourceField*  
@@ -137,12 +137,12 @@ struct CDaoFieldInfo
  *m_strSourceTable*  
  Gibt den Namen der Tabelle, die die ursprüngliche Quelle der Daten für ein DAO-Field-Objekt durch eine Tabledef, Recordset oder DAO Querydef-Objekt enthalten ist. Diese Eigenschaft gibt den ursprünglichen Tabellennamen ein Field-Objekt zugeordnet. Beispielsweise können Sie diese Eigenschaft verwenden, um die ursprüngliche Quelle der Daten in einem Abfragefeld zu ermitteln, deren Name nicht mit den Namen des Felds in der zugrunde liegenden Tabelle verknüpft ist. Weitere Informationen finden Sie im Thema "SourceField SourceTable-Eigenschaften" in der Hilfe von DAO ein. Sie können diese Eigenschaft für eine Tabledef mit festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  Ein Wert, der die Daten in einem Feld überprüft, da sie geändert oder einer Tabelle hinzugefügt. Details finden Sie im Thema "ValidationRule-Eigenschaft" DAO-Hilfe. Sie können diese Eigenschaft für eine Tabledef mit festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  Weitere Informationen über Tabledefs, finden Sie unter der **M_strValidationRule** Mitglied der [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) Struktur.  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  Ein Wert, der den Text der Nachricht, in dem Ihre Anwendung angezeigt wird angibt, falls der Wert eines Objekts des DAO-Feld nicht die Gültigkeitsprüfungsregel durch die Einstellung der Eigenschaft ValidationRule angegeben erfüllen. Details finden Sie im Thema "ValidationText-Eigenschaft" DAO-Hilfe. Sie können diese Eigenschaft für eine Tabledef mit festlegen [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_strDefaultValue*  

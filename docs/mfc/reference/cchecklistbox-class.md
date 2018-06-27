@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358198"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956566"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox-Klasse
 Stellt die Funktionalität eines Windows-Kontrolllistenfelds bereit.  
@@ -82,7 +82,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox` gilt nur für Ownerdrawn-Schaltflächen, da die Liste mehrere Textzeichenfolgen enthält. Am einfachsten eine Prüfliste Textzeichenfolgen und Kontrollkästchen enthält, aber nicht Text überhaupt verwenden möchten. Sie konnten z. B. eine Liste der kleine Bitmaps mit einem Kontrollkästchen neben jedem Element haben.  
   
- Um eine eigene checklistbox zu erstellen, leiten Sie eine eigene Klasse von `CCheckListBox`. Leiten Sie eine eigene Klasse schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen dann **erstellen**.  
+ Um eine eigene checklistbox zu erstellen, leiten Sie eine eigene Klasse von `CCheckListBox`. Leiten Sie eine eigene Klasse schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen dann `Create`.  
   
  Wenn Sie ein Listenfeld an seinem übergeordneten Element per Windows-benachrichtigungsmeldungen behandeln möchten (normalerweise eine abgeleitete Klasse [CDialog](../../mfc/reference/cdialog-class.md)), die übergeordnete Klasse für jede Nachricht eine meldungszuordnung Eintrag und Nachrichtenhandler Memberfunktion hinzufügen.  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **Afx_msg** `void` `memberFxn` **();**  
   
- Es ist nur eine Meldungszuordnungseintrags, die sich speziell auf beziehen **CCheckListBox** (aber finden Sie auch die Meldungszuordnungseinträge für [CListBox](../../mfc/reference/clistbox-class.md)):  
+ Es ist nur eine Meldungszuordnungseintrags, die sich speziell auf beziehen `CCheckListBox` (aber finden Sie auch die Meldungszuordnungseinträge für [CListBox](../../mfc/reference/clistbox-class.md)):  
   
 - **ON_CLBN_CHKCHANGE** den Status des Kontrollkästchens für ein Element geändert wurde.  
   
@@ -126,7 +126,7 @@ CCheckListBox();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CCheckListBox` Objekt in zwei Schritten. Zuerst definieren Sie eine Klasse, die von abgeleiteten `CCheckListBox`, rufen Sie anschließend **erstellen**, die Windows-kontrolllistenfelds initialisiert und fügt es der `CCheckListBox` Objekt.  
+ Sie erstellen eine `CCheckListBox` Objekt in zwei Schritten. Zuerst definieren Sie eine Klasse, die von abgeleiteten `CCheckListBox`, rufen Sie anschließend `Create`, die Windows-kontrolllistenfelds initialisiert und fügt es der `CCheckListBox` Objekt.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt die Art des Felds Prüfliste. Das Format muss **LBS_HASSTRINGS** und entweder **LBS_OWNERDRAWFIXED** (alle Elemente in der Liste sind die gleichen Höhe) oder **LBS_OWNERDRAWVARIABLE** (Elemente in der Liste ist ein variabler Höhe). Dieses Format kann zusammen mit anderen [listenfeldstile](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) außer **LBS_USETABSTOPS**.  
   
- `rect`  
+ *Rect*  
  Gibt an, die checklistbox Größe und Position. Kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, die checklistbox übergeordnete Fenster (normalerweise eine `CDialog` Objekt). Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt an, die checklistbox Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CCheckListBox` Objekt in zwei Schritten. Zuerst definieren eine Klasse abgeleitet wurde. **CcheckListBox** und rufen dann **erstellen**, die die Windows-kontrolllistenfelds initialisiert und fügt es der `CCheckListBox`. Finden Sie unter [CCheckListBox::CCheckListBox](#cchecklistbox) ein Beispiel.  
+ Sie erstellen eine `CCheckListBox` Objekt in zwei Schritten. Zuerst definieren eine Klasse abgeleitet wurde. `CcheckListBox` und rufen dann `Create`, die die Windows-kontrolllistenfelds initialisiert und fügt es der `CCheckListBox`. Finden Sie unter [CCheckListBox::CCheckListBox](#cchecklistbox) ein Beispiel.  
   
- Wenn **erstellen** ausgeführt wird, sendet Windows die [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), und [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Nachrichten an die Prüfliste-Steuerelement.  
+ Wenn `Create` ausgeführt wird, sendet Windows die [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), und [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) die Nachrichten an die Prüfliste-Steuerelement.  
   
  Diese Nachrichten werden standardmäßig verarbeitet der [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), und [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Memberfunktionen in der `CWnd` Basisklasse. Um die Standard-Meldungsbehandlung zu erweitern, fügen Sie eine meldungszuordnung, die der abgeleiteten Klasse und Überschreiben der vorherigen Meldungshandler-Memberfunktionen. Überschreiben Sie `OnCreate`, z. B. für die erforderliche Initialisierung für eine neue Klasse.  
   
@@ -189,7 +189,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Eine long-Zeiger auf eine [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) -Struktur, die Informationen über den Typ der Zeichnung erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -197,9 +197,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Standardmäßig zeichnet diese Funktion ist eine Kontrollkästchen Standardliste bestehend aus einer Liste von Zeichenfolgen, jede mit einem Standardgröße Kontrollkästchen auf der linken Seite. Die Listengröße Kontrollkästchen wird [erstellen](#create).  
   
- Überschreiben Sie diese Memberfunktion zum Zeichnen der Ownerdrawn-Checkliste Felder zu implementieren, die nicht die Standardeinstellung, z. B. Prüfliste Felder mit Listen, die keine Zeichenfolgen sind, mit variabler Höhe Elementen oder mit Kontrollkästchen dargestellt, die auf der linken Seite sind. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor dem Beenden des diese Memberfunktion.  
+ Überschreiben Sie diese Memberfunktion zum Zeichnen der Ownerdrawn-Checkliste Felder zu implementieren, die nicht die Standardeinstellung, z. B. Prüfliste Felder mit Listen, die keine Zeichenfolgen sind, mit variabler Höhe Elementen oder mit Kontrollkästchen dargestellt, die auf der linken Seite sind. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen *LpDrawItemStruct* vor dem Beenden des diese Memberfunktion.  
   
- Wenn Prüfliste Listenfeldelemente nicht die gleiche Höhe sind, wird die Knotenart Prüfliste (im angegebenen **erstellen**) muss **LBS_OWNERVARIABLE**, und Sie überschreiben, müssen die [MeasureItem](#measureitem) Funktion.  
+ Wenn Prüfliste Listenfeldelemente nicht die gleiche Höhe sind, wird die Knotenart Prüfliste (im angegebenen `Create`) muss **LBS_OWNERVARIABLE**, und Sie überschreiben, müssen die [MeasureItem](#measureitem) Funktion.  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  Mit dieser Funktion wird zum Aktivieren oder deaktivieren eine Prüflistenelement.  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Index des Elements im Feld Prüfliste aktiviert werden.  
   
- `bEnabled`  
+ *bAktiviert*  
  Gibt an, ob das Element aktiviert oder deaktiviert ist.  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,7 +225,7 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Nullbasierte Index des ein Kontrollkästchen, die Sie im Listenfeld enthalten sind.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -272,7 +272,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Eine long-Zeiger auf eine [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -291,7 +291,7 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  Die Position und Größe des Listenelements.  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  Kontrollkästchen für die Standardposition und Größe eines Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -310,14 +310,14 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Nullbasierte Index des ein Kontrollkästchen, die Sie im Listenfeld enthalten sind.  
   
- `nCheck`  
+ *nPrüfen*  
  Der Schaltflächenzustand für das angegebene Kontrollkästchen. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Die folgende Tabelle enthält die möglichen Werte für die `nCheck` Parameter.  
+ Die folgende Tabelle enthält die möglichen Werte für die *nPrüfen* Parameter.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -333,7 +333,7 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStyle`  
+ *nStyle*  
  Bestimmt den Stil der Kontrollkästchen im Prüfliste.  
   
 ### <a name="remarks"></a>Hinweise  

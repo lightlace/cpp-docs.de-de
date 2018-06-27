@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322510"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957389"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrieren von MFC ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen
 
@@ -99,9 +99,9 @@ Die wichtigsten Änderungen an Funktionen, die möglicherweise Auswirkungen auf 
 
    Mit dem ODBC-Klassen MFC erforderlich, um diese Optionen über Makros definieren oder Enumerationstypen.
 
-   Mit den DAO-Klassen stellt DAO die Definition dieser Optionen in einer Headerdatei (DBDAOINT. H). Daher ist der Recordsettyp ein enumerierter Element `CRecordset`, jedoch mit DAO Dies ist eine Konstante stattdessen. Verwenden Sie z. B. `snapshot` beim Angeben des Typs des `CRecordset` in ODBC jedoch `DB_OPEN_SNAPSHOT` beim Angeben des Typs des `CDaoRecordset`.
+   Mit den DAO-Klassen stellt DAO die Definition dieser Optionen in einer Headerdatei (DBDAOINT. H). Daher ist der Recordsettyp ein enumerierter Element `CRecordset`, jedoch mit DAO Dies ist eine Konstante stattdessen. Verwenden Sie z. B. **Momentaufnahme** beim Angeben des Typs des `CRecordset` in ODBC jedoch **DB_OPEN_SNAPSHOT** beim Angeben des Typs des `CDaoRecordset`.
 
-- Der Recordset-Standardtyp für `CRecordset` ist `snapshot` Recordset Standardtyp für while `CDaoRecordset` ist `dynaset` (siehe Hinweis unten für ein weiteres Problem zu Snapshots der ODBC-Klasse).
+- Der Recordset-Standardtyp für `CRecordset` ist **Momentaufnahme** while Recordset Standardtyp für `CDaoRecordset` ist **Dynaset** (siehe Hinweis unten für ein weiteres Problem zu Snapshots der ODBC-Klasse).
 
 - Die ODBC `CRecordset` -Klasse verfügt über eine Option zum Erstellen eines Forward-only-Recordset-Typs. In der `CDaoRecordset` Vorwärtscursor-Klasse ist kein ein Recordset aber stattdessen-Eigenschaft (oder -Option) bestimmter Typen von Recordsets.
 
@@ -111,7 +111,7 @@ Die wichtigsten Änderungen an Funktionen, die möglicherweise Auswirkungen auf 
 
 - Exception-Klasse wurde geändert. `CDBExceptions` in den ODBC-Klassen ausgelöst werden und `CDaoExceptions` in den DAO-Klassen.
 
-- `RFX_Date` verwendet `CTime` und `TIMESTAMP_STRUCT` Objekte beim `DFX_Date` verwendet `COleDateTime`. Die `COleDateTime` ist nahezu identisch mit `CTime`, aber basierend auf einer 8-Byte-OLE `DATE` anstatt ein 4-Byte- `time_t` , sodass er einen viel größeren Bereich der Daten aufnehmen kann.
+- `RFX_Date` verwendet `CTime` und `TIMESTAMP_STRUCT` Objekte beim `DFX_Date` verwendet `COleDateTime`. Die `COleDateTime` ist nahezu identisch mit `CTime`, aber basierend auf einer 8-Byte-OLE **Datum** anstatt ein 4-Byte- **Time_t** , sodass er einen viel größeren Bereich der Daten aufnehmen kann.
 
    > [!NOTE]
    > DAO (`CDaoRecordset`) Momentaufnahmen sind schreibgeschützt, während ODBC (`CRecordset`) Momentaufnahmen können abhängig von der Treiber und die Verwendung von ODBC-Cursorbibliothek aktualisiert werden. Bei Verwendung die Cursorbibliothek `CRecordset` Momentaufnahmen aktualisierbar sind. Wenn Sie keines der Microsoft-Treiber von Desktop Driver Pack 3.0 ohne die ODBC-Cursorbibliothek verwenden die `CRecordset` Momentaufnahmen sind schreibgeschützt. Wenn Sie einen anderen Treiber verwenden, Überprüfen der Treiber-Dokumentation, um festzustellen, ob Momentaufnahmen (`STATIC_CURSORS`) sind schreibgeschützt.

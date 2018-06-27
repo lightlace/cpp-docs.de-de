@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368045"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951851"
 ---
 # <a name="cdialogex-class"></a>CDialogEx-Klasse
 Die `CDialogEx`-Klasse gibt die Hintergrundfarbe und das Hintergrundbild eines Dialogfelds an.  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  Die Ressourcen-ID von einer Dialogfeldvorlage.  
   
- [in] `lpszTemplateName`  
+ [in] *LpszTemplateName*  
  Der Ressourcenname von einer Dialogfeldvorlage.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist `NULL`.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist `NULL`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Ein Wert für den RGB-Farbe.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` um den Bildschirm sofort zu aktualisieren; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Ein Handle für das Hintergrundbild.  
   
- [in] `uiBmpResId`  
+ [in] *UiBmpResId*  
  Die Ressourcen-ID des Hintergrundbilds.  
   
- [in] `location`  
+ [in] *Speicherort*  
  Eines der `CDialogEx::BackgroundLocation` Werte, die den Speicherort des Bilds angeben. Gültige Werte sind BACKGR_TILE, BACKGR_TOPLEFT BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT und BACKGR_BOTTOMRIGHT. Der Standardwert ist BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` das Hintergrundbild automatisch zerstört; andernfalls `FALSE`.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Das Dialogfeld sofort neu zeichnet; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  

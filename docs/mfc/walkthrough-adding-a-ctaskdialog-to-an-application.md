@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384910"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951623"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Exemplarische Vorgehensweise: Hinzufügen eines CTaskDialog zu einer Anwendung
 In dieser exemplarische Vorgehensweise wird [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) vorgestellt, und Sie erfahren, wie Sie eine Ihrer Anwendung hinzufügen können.  
@@ -44,7 +44,7 @@ In dieser exemplarische Vorgehensweise wird [CTaskDialog Class](../mfc/reference
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>So ersetzen Sie ein Windows-Meldungsfeld durch einen CTaskDialog  
   
-1.  Erstellen Sie ein neues MFC-Anwendungsprojekt mit den Standardeinstellungen. Geben Sie ihm den Namen `MyProject`.  
+1.  Erstellen Sie ein neues MFC-Anwendungsprojekt mit den Standardeinstellungen. Rufen sie *"meinProjekt"*.  
   
 2.  Verwenden Sie den **Projektmappen-Explorer** , die Datei „MyProject.cpp“ zu öffnen.  
   
@@ -74,7 +74,7 @@ In dieser exemplarische Vorgehensweise wird [CTaskDialog Class](../mfc/reference
  }  
  ```  
   
-6.  Fügen Sie folgenden Code zwischen den Klammern hinter der `if` -Anweisung aus Schritt 5 ein. Dieser Code erstellt den `CTaskDialog`.  
+6.  Fügen Sie den folgenden Code zwischen den Klammern hinter dem **Wenn** -Anweisung aus Schritt 5. Dieser Code erstellt den `CTaskDialog`.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ In dieser exemplarische Vorgehensweise wird [CTaskDialog Class](../mfc/reference
   
 2.  Erweitern Sie die **Ressourcenansicht** , bis Sie den Ordner **Zeichenfolgentabelle** auswählen können. Erweitern Sie ihn, und doppelklicken Sie auf den Eintrag **Zeichenfolgentabelle** .  
   
-3.  Führen Sie einen Bildlauf zum unteren Rand der Tabelle durch, und fügen Sie einen neuen Eintrag hinzu. Ändern Sie die ID in `TEMP_LINE1`. Legen Sie **Befehlszeile 1**als Beschriftung fest.  
+3.  Führen Sie einen Bildlauf zum unteren Rand der Tabelle durch, und fügen Sie einen neuen Eintrag hinzu. Ändern Sie die ID in *TEMP_LINE1*. Legen Sie die Beschriftung um *Befehlszeile 1*.  
   
-4.  Fügen Sie einen weiteren neuen Eintrag hinzu. Ändern Sie die ID in `TEMP_LINE2`. Legen Sie **Befehlszeile 2**als Beschriftung fest.  
+4.  Fügen Sie einen weiteren neuen Eintrag hinzu. Ändern Sie die ID in *TEMP_LINE2*. Legen Sie die Beschriftung um *Befehlszeile 2*.  
   
 5.  Navigieren Sie zurück zu „MyProject.cpp“.  
   
@@ -192,7 +192,7 @@ In dieser exemplarische Vorgehensweise wird [CTaskDialog Class](../mfc/reference
   
 2.  Navigieren Sie zur schließenden Klammer für die `if (CTaskDialog::IsSupported())` -Anweisung.  
   
-3.  Fügen Sie den folgenden Code direkt vor der schließenden Klammer der `if` -Anweisung (vor dem `else` -Block) ein:  
+3.  Fügen Sie den folgenden Code unmittelbar vor der schließenden Klammer der der **Wenn** Anweisung (vor der **else** Block):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

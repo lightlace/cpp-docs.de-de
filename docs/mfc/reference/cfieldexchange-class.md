@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367060"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951686"
 ---
 # <a name="cfieldexchange-class"></a>CDBException-Klasse
 Unterstützt die von den Datenbankklassen verwendeten Routinen für den Datensatzfeldaustausch (Record Field Exchange, RFX) und den Massen-Datensatzfeldaustausch (Bulk-RFX).  
@@ -53,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt der Open Database Connectivity (ODBC)-Klassen arbeiten, verwenden Sie die Klasse [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
   
- Ein `CFieldExchange` -Objekt stellt die Kontextinformationen benötigt für den Datensatzfeldaustausch oder Massen-Datensatzfeldaustausch auszuführenden platzieren. `CFieldExchange` Objekte unterstützen eine Reihe von Vorgängen, einschließlich Bindungsparameter und Felddatenmember und Festlegen von verschiedenen Flags für die Felder des aktuellen Datensatzes. Recordset-Klasse Datenmember von definierten Typen RFX und Bulk-RFX-Vorgänge ausgeführt werden die `enum` **FieldType** in `CFieldExchange`. Mögliche **FieldType** Werte sind:  
+ Ein `CFieldExchange` -Objekt stellt die Kontextinformationen benötigt für den Datensatzfeldaustausch oder Massen-Datensatzfeldaustausch auszuführenden platzieren. `CFieldExchange` Objekte unterstützen eine Reihe von Vorgängen, einschließlich Bindungsparameter und Felddatenmember und Festlegen von verschiedenen Flags für die Felder des aktuellen Datensatzes. Recordset-Klasse Datenmember von definierten Typen RFX und Bulk-RFX-Vorgänge ausgeführt werden die **Enum** **FieldType** in `CFieldExchange`. Mögliche **FieldType** Werte sind:  
   
 - **CFieldExchange::outputColumn** für Felddatenmember.  
   
@@ -96,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFieldType`  
+ *nFieldType*  
  Der Wert der **Enum FieldType**, die im deklariert `CFieldExchange`, können die eines der folgenden sein:  
   
 - **CFieldExchange::outputColumn**  
@@ -121,7 +121,7 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|Output-Parameter. Ein Rückgabewert einer gespeicherten Prozedur das Recordset.|  
 |**CFieldExchange::inoutParam**|Eingabe-/Ausgabeparameter. Ein Wert, der an übergeben und von einer gespeicherten Prozedur das Recordset zurückgegeben.|  
   
- Im Allgemeinen muss jede Gruppe von RFX-Funktionsaufrufe Felddatenmember oder Parameterdatenmember zugeordnet vorangestellt werden, durch einen Aufruf von `SetFieldType`. Die `nFieldType` Parameter jeder `SetFieldType` Aufruf gibt den Typ der Datenmember, dargestellt durch die RFX-Funktionsaufrufe, die Folgen der `SetFieldType` aufrufen.  
+ Im Allgemeinen muss jede Gruppe von RFX-Funktionsaufrufe Felddatenmember oder Parameterdatenmember zugeordnet vorangestellt werden, durch einen Aufruf von `SetFieldType`. Die *nFieldType* Parameter jeder `SetFieldType` Aufruf gibt den Typ der Datenmember, dargestellt durch die RFX-Funktionsaufrufe, die Folgen der `SetFieldType` aufrufen.  
   
  Weitere Informationen zur Behandlung von Ausgabe und Eingabe/Ausgabe-Parameter finden Sie unter der `CRecordset` Memberfunktion [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Weitere Informationen zu den RFX und Bulk-RFX-Funktionen finden Sie im Thema [Funktionen für den Datensatzfeldaustausch](../../mfc/reference/record-field-exchange-functions.md). Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   

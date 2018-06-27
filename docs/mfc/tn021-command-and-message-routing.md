@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384949"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955721"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Befehls- und Meldungsrouting
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384949"
  Details finden Sie in Visual c++ Allgemein auf die hier beschriebenen Architekturen insbesondere den Unterschied zwischen Windows-Meldungen, steuerelementbenachrichtigungen und Befehle. Dieser Hinweis wird davon ausgegangen werden, mit der in der Dokumentation beschriebenen Probleme sehr vertraut sind und nur sehr Erweiterte Themen behandelt.  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Befehlsrouting und Verteilung MFC 1.0 Funktionalität weiterentwickelt mit MFC 2.0 Architektur  
- Windows verfügt über die **WM_COMMAND** Meldung, die überladen ist, sodass Benachrichtigungen über Menübefehle, Zugriffstasten und dialogsteuerelement Benachrichtigungen sind.  
+ Windows verfügt über die WM_COMMAND-Nachricht, die überladen ist, sodass Benachrichtigungen über Menübefehle, Zugriffstasten und dialogsteuerelement Benachrichtigungen sind.  
   
- MFC-1.0 basiert auf, die etwas Befehlshandler (z. B. "OnFileNew") können einer **CWnd** abgeleitete Klasse, um als Antwort auf eine bestimmte aufgerufen **WM_COMMAND**. Dies wird zusammen mit der eine Datenstruktur, die die meldungszuordnung geklebt und führt einen Befehl sehr platzsparend-Mechanismus.  
+ MFC-1.0 basiert auf, die etwas Befehlshandler (z. B. "OnFileNew") können einer `CWnd` abgeleitete Klasse, um als Antwort auf eine bestimmte WM_COMMAND aufgerufen. Dies wird zusammen mit der eine Datenstruktur, die die meldungszuordnung geklebt und führt einen Befehl sehr platzsparend-Mechanismus.  
   
- MFC-1.0 bereitgestellten auch zusätzliche Funktionen zur Trennung von steuerelementbenachrichtigungen von befehlsmeldungen. Befehle werden durch eine 16-Bit-ID, auch bezeichnet als eine Befehls-ID dargestellt. Befehle beginnen normalerweise aus einer **CFrameWnd** (d. h. ein Menü die Option oder eine übersetzte Zugriffstaste) und mit einer Vielzahl von anderen Fenstern geleitet.  
+ MFC-1.0 bereitgestellten auch zusätzliche Funktionen zur Trennung von steuerelementbenachrichtigungen von befehlsmeldungen. Befehle werden durch eine 16-Bit-ID, auch bezeichnet als eine Befehls-ID dargestellt. Befehle beginnen normalerweise aus einer `CFrameWnd` (d. h. ein Menü die Option oder eine übersetzte Zugriffstaste) und mit einer Vielzahl von anderen Fenstern geleitet.  
   
  MFC-1.0 verwendet Befehlsrouting beschränkt, wie für die Implementierung von dem Arbeitsspeicher (MDI, Multiple Document Interface). (Ein MDI-Rahmenfenster delegieren Befehle an das aktive untergeordnete MDI-Fenster.)  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384949"
   
 -   Vielleicht In einem ID-Array, das zum Erstellen einer Symbolleiste verwendet.  
   
--   In einer **ON_COMMAND** Makro.  
+-   In einem ON_COMMAND-Makro.  
   
--   Vielleicht In einem **ON_UPDATE_COMMAND_UI** Makro.  
+-   Vielleicht In einem ON_UPDATE_COMMAND_UI-Makro.  
   
  Derzeit ist die einzige Implementierung in MFC, die Befehls-IDs erfordert werden > = 0 x 8000 ist die Implementierung der GOSUB Dialoge/Befehle.  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384949"
   
  Sie können eine normale Schaltfläche in einem normalen modales Dialogfeld mit der IDC neben der Schaltfläche festlegen, um die entsprechenden Befehls-ID. platzieren. Wenn der Benutzer die Schaltfläche auswählt, ruft den Besitzer des Dialogfelds (in der Regel das Hauptrahmenfenster) den Befehl genau wie alle anderen Befehl ab. Dies wird als GOSUB-Befehl bezeichnet, da es in der Regel verwendet wird, um ein weiteres Dialogfeld (eine GOSUB der das erste Dialogfeld ") zu öffnen.  
   
- Sie können auch die Funktion aufrufen **CWnd::UpdateDialogControls** auf Ihr Dialogfeld, und übergeben sie die Adresse eines Ihrer Hauptrahmenfenster. Diese Funktion wird aktivieren oder Deaktivieren der Dialogfeld-Steuerelemente, die basierend darauf, ob sie im Frame Befehlshandler haben. Diese Funktion wird für Sie automatisch aufgerufen, bei Steuerleisten in Ihrer Anwendung Leerlaufschleife, jedoch müssen Sie es für normale Dialoge, die diese Funktion aufweisen sollen direkt aufrufen.  
+ Sie können auch die Funktion aufrufen `CWnd::UpdateDialogControls` auf Ihr Dialogfeld, und übergeben sie die Adresse eines Ihrer Hauptrahmenfenster. Diese Funktion wird aktivieren oder Deaktivieren der Dialogfeld-Steuerelemente, die basierend darauf, ob sie im Frame Befehlshandler haben. Diese Funktion wird für Sie automatisch aufgerufen, bei Steuerleisten in Ihrer Anwendung Leerlaufschleife, jedoch müssen Sie es für normale Dialoge, die diese Funktion aufweisen sollen direkt aufrufen.  
   
 ## <a name="when-onupdatecommandui-is-called"></a>Wenn ON_UPDATE_COMMAND_UI aufgerufen wird  
- Verwalten den Zustand aktiviert/überprüft der Menüelemente eines Programms ständig kann eine rechenintensive Problem darstellen. Ein gängiges Verfahren ist zum Aktivieren/Menüelemente Kontrollkästchen nur, wenn der Benutzer das POPUP auswählt. Die MFC-2.0-Implementierung von **CFrameWnd** behandelt die **WM_INITMENUPOPUP** Nachricht und der routing-befehlsarchitektur verwendet, um zu bestimmen, die Zustände von Menüs, die über **ON_UPDATE_COMMAND_ UI** Handler.  
+ Verwalten den Zustand aktiviert/überprüft der Menüelemente eines Programms ständig kann eine rechenintensive Problem darstellen. Ein gängiges Verfahren ist zum Aktivieren/Menüelemente Kontrollkästchen nur, wenn der Benutzer das POPUP auswählt. Die MFC-2.0-Implementierung von `CFrameWnd` der WM_INITMENUPOPUP Nachricht verarbeitet, und der routing-befehlsarchitektur verwendet, um die Zustände von Menüs, die über ON_UPDATE_COMMAND_UI-Handler zu bestimmen.  
   
- **CFrameWnd** verarbeitet auch die **WM_ENTERIDLE** Nachricht im aktuelle Menü ausgewählten Elements auf der Statusleiste (auch bekannt als die Nachricht Zeile) beschreiben.  
+ `CFrameWnd` verarbeitet auch die WM_ENTERIDLE-Meldung, die im aktuelle Menü ausgewählten Elements auf der Statusleiste (auch bekannt als die Nachricht Zeile) beschreiben.  
   
- Menüstruktur einer Anwendung, die von Visual C++ bearbeitet wird verwendet, um die potenziellen Befehle unter darstellen **WM_INITMENUPOPUP** Zeit. **ON_UPDATE_COMMAND_UI** Handler können ändern, das Bundesland oder den Text eines Menüs oder im Menü für erweiterten verwendet (z. B. der Datei MRU-Liste oder das Menü das Popupmenü OLE-Verben) tatsächlich ändern die Menüstruktur vor gezeichnet wird.  
+ Menüstruktur einer Anwendung, die von Visual C++ bearbeitet wird verwendet, um potenzielle WM_INITMENUPOPUP Zeitpunkt verfügbaren Befehle darstellen. ON_UPDATE_COMMAND_UI-Handler können das Bundesland oder den Text eines Menüs ändern oder für erweiterte verwendet (z. B. der Datei MRU-Liste oder das Menü das Popupmenü OLE-Verben) tatsächlich ändern, die Menüstruktur bevor im Menü gezeichnet wird.  
   
- Dem Sortieren des **ON_UPDATE_COMMAND_UI** Verarbeitung erfolgt für Symbolleisten (und anderen Steuerleisten) Wenn die Anwendung die Leerlaufschleife eingibt. Finden Sie unter der *Klassenbibliotheksreferenz* und [technischer Hinweis 31](../mfc/tn031-control-bars.md) für Weitere Informationen zu Schiebeleisten-Steuerelemente.  
+ Diese Art von ON_UPDATE_COMMAND_UI Verarbeitung erfolgt für Symbolleisten (und anderen Steuerleisten) Wenn die Anwendung die Leerlaufschleife eingibt. Finden Sie unter der *Klassenbibliotheksreferenz* und [technischer Hinweis 31](../mfc/tn031-control-bars.md) für Weitere Informationen zu Schiebeleisten-Steuerelemente.  
   
 ## <a name="nested-pop-up-menus"></a>Geschachtelte Popupmenüs  
- Wenn Sie eine geschachtelte Menüstruktur verwenden, werden Sie feststellen, dass die **ON_UPDATE_COMMAND_UI** Handler für das erste Menüelement im Popupmenü in zwei verschiedenen Fällen aufgerufen wird.  
+ Wenn Sie eine geschachtelte Menüstruktur verwenden, bemerken Sie, dass der ON_UPDATE_COMMAND_UI-Handler für das erste Menüelement im Popupmenü in zwei verschiedenen Fällen aufgerufen wird.  
   
- Es wird zuerst für das Menü das Popupmenü selbst aufgerufen. Dies ist erforderlich, da Popupmenüs keine IDs und wir die ID des ersten Menüelements im das Popupmenü zum Verweisen auf die gesamte Popupmenü verwenden. In diesem Fall die **M_pSubMenu** Membervariable der der **CCmdUI** Objekt nicht NULL und verweist auf das Menü das Popupmenü.  
+ Es wird zuerst für das Menü das Popupmenü selbst aufgerufen. Dies ist erforderlich, da Popupmenüs keine IDs und wir die ID des ersten Menüelements im das Popupmenü zum Verweisen auf die gesamte Popupmenü verwenden. In diesem Fall die *M_pSubMenu* Membervariable der der `CCmdUI` Objekt nicht NULL und verweist auf das Menü das Popupmenü.  
   
- Zweitens wird sie aufgerufen, kurz bevor die Menüelemente im Popupmenü sind, gezeichnet werden soll. In diesem Fall die ID verweist nur auf das erste Menüelement und **M_pSubMenu** Membervariable der der **CCmdUI** Objekt werden auf NULL.  
+ Zweitens wird sie aufgerufen, kurz bevor die Menüelemente im Popupmenü sind, gezeichnet werden soll. In diesem Fall die ID verweist nur auf das erste Menüelement und *M_pSubMenu* Membervariable der der `CCmdUI` Objekt werden auf NULL.  
   
  Dies ermöglicht es Ihnen so aktivieren Sie das Menü das Popupmenü die Menüelemente unterscheiden, erfordert jedoch, beachten Sie im Menücode zu schreiben. Beispielsweise ist in einer geschachtelten Menüs mit der folgenden Struktur:  
   

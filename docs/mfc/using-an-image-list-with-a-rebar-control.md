@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381744"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950705"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Verwenden einer Bildliste mit einem Grundleisten-Steuerelement
 Jedes Band Grundleisten kann unter anderem ein Bild aus einer Bildliste zugeordneten enthalten. Das folgende Verfahren erläutert die notwendigen Schritte zum Anzeigen eines Bilds in einem Grundleisten-Band.  
@@ -31,9 +31,9 @@ Jedes Band Grundleisten kann unter anderem ein Bild aus einer Bildliste zugeordn
   
 2.  Ändern der **REBARBANDINFO** -Struktur mit einem Grundleisten-Sperrband ein Bild zuzuweisen:  
   
-    -   Legen Sie die **fMask** Element **RBBIM_IMAGE**, mit dem bitweisen OR-Operator nach Bedarf zusätzliche Flags enthalten.  
+    -   Legen Sie die *fMask* Member `RBBIM_IMAGE`, mit dem bitweisen OR-Operator nach Bedarf zusätzliche Flags enthalten.  
   
-    -   Legen Sie die `iImage` Element der Liste Abbildindex des Bilds angezeigt werden.  
+    -   Legen Sie die *iImage* Element der Liste Abbildindex des Bilds angezeigt werden.  
   
 3.  Initialisieren Sie alle verbleibenden Datenmember, z. B. die Größe, Text und Handle des enthaltenen untergeordneten Fenster mit den erforderlichen Informationen.  
   

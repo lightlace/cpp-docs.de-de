@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367405"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956459"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer-Klasse
 Implementiert die zusätzlichen OLE-Schnittstellen, die erforderlich sind, um aus einem normalen `COleDocument` -Server einen vollständigen DocObject-Server zu machen: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`und `IPrint`.  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `ActivateDocObject` Aufrufe `IOleDocumentSite`des **ActivateMe** -Methode, aber nicht die Ansicht angezeigt wird, da es für bestimmte Anweisungen zum Einrichten und zeigen Sie die Sicht auf die im Aufruf angegebenen wartet [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` Aufrufe `IOleDocumentSite`des `ActivateMe` -Methode, aber nicht die Ansicht angezeigt wird, da es für bestimmte Anweisungen zum Einrichten und zeigen Sie die Sicht auf die im Aufruf angegebenen wartet [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Zusammen `ActivateDocObject` und `OnActivateView` aktivieren und die DocObject-Ansicht anzuzeigen. DocObject-Aktivierung unterscheidet sich von anderen Arten von OLE direkte Aktivierung. Umgeht, Anzeigen von direkten Schraffur Rahmen und Objekt Zusatzelemente (z. B. Ziehpunkten), Objekt Block Funktionen ignoriert und zeichnet Bildlaufleisten innerhalb des Rechtecks Sicht im Gegensatz zum Zeichnen von außerhalb dieses Rechteck (wie bei normalen DocObject-Aktivierung direkte Aktivierung).  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Ein Zeiger auf das Client-Standort-Dokument, das der Client für den DocObject-Server ist.  
   
- `pDocSite`  
+ *pDocSite*  
  Ein Zeiger auf die `IOleDocumentSite` Schnittstelle, die vom Container implementiert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ar`  
+ *ar*  
  Ein `CArchive` Objekt aus, das den Ansichtszustand zu serialisieren.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ar`  
+ *ar*  
  Ein `CArchive` -Objekt, in dem der Ansichtszustand serialisiert wird.  
   
 ### <a name="remarks"></a>Hinweise  

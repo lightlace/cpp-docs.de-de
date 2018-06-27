@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368334"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952247"
 ---
 # <a name="cdbexception-class"></a>CDBException-Klasse
 Stellt eine Ausnahmebedingung dar, die von Datenbankklassen ausgelöst wird.  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** Ihre Anforderung zum Sperren von Datensätzen für das Update konnte nicht erfüllt werden, da Sperren der ODBC-Treiber nicht unterstützt wird.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** aufgerufen `CRecordset::Update` oder **löschen** für eine Tabelle ohne eindeutigen Schlüssel und mehreren Datensätzen geändert.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** aufgerufen `CRecordset::Update` oder `Delete` für eine Tabelle ohne eindeutigen Schlüssel und mehreren Datensätzen geändert.  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD** Sie haben versucht, bearbeiten oder Löschen einen zuvor gelöschten Datensatz. Sie müssen nach einem Löschvorgang zu einem neuen aktuellen Datensatz blättern.  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** Ihre Anforderung für ein Dynaset nicht erfüllt werden konnte, da der ODBC-Treiber nicht unterstützt positionierte Updates.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** aufgerufen `CRecordset::Update` oder **löschen**, wenn der Vorgang begonnen hat der Datensatz konnte jedoch nicht mehr gefunden werden.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** aufgerufen `CRecordset::Update` oder `Delete`, wenn der Vorgang begonnen hat der Datensatz konnte jedoch nicht mehr gefunden werden.  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** Versuch zum Laden der ODBC. Fehler bei der DLL; Windows konnte nicht gefunden werden, oder diese DLL konnte nicht geladen werden. Dieser Fehler ist schwerwiegend.  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY** Sie versucht, ein schreibgeschütztes Recordset zu aktualisieren, oder die Datenquelle ist schreibgeschützt. Das Recordset können keine Updatevorgänge ausgeführt werden oder die `CDatabase` Objekt es zugeordnet ist.  
   
-- **SQL_ERROR** Funktion fehlgeschlagen. Die Fehlermeldung, die von der ODBC-Funktion zurückgegebenen **SQLError** befindet sich in der **M_strError** -Datenmember.  
+- **SQL_ERROR** Funktion fehlgeschlagen. Die Fehlermeldung, die von der ODBC-Funktion zurückgegebenen `SQLError` befindet sich in der **M_strError** -Datenmember.  
   
 - **SQL_INVALID_HANDLE** Fehler bei der Funktion aufgrund einer ungültigen Umgebungshandle, Verbindungshandle oder Anweisungshandle. Hiermit wird einen Programmierfehler. Keine zusätzlichen Informationen aus der ODBC-Funktion steht **SQLError**.  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>Hinweise  
  Die Zeichenfolge weist das Format "Status: % s, systemeigene: %ld Ursprung: % s", auf, wobei die Formatcodes in der Reihenfolge, durch die Werte ersetzt werden, in denen beschrieben:  
   
--   Die **SQLSTATE**, eine Null-terminierte Zeichenfolge aus einen fünf Zeichen zurückgegebenen Fehlercode in der *SzSqlState* -Parameter der ODBC-Funktion **SQLError**. **SQLSTATE** Werte werden in Anhang A, aufgeführt [ODBC-Fehlercodes](https://msdn.microsoft.com/library/ms714687.aspx)in der *ODBC Programmer's Reference*. Beispiel: "S0022".  
+-   Die **SQLSTATE**, eine Null-terminierte Zeichenfolge aus einen fünf Zeichen zurückgegebenen Fehlercode in der *SzSqlState* -Parameter der ODBC-Funktion `SQLError`. **SQLSTATE** Werte werden in Anhang A, aufgeführt [ODBC-Fehlercodes](https://msdn.microsoft.com/library/ms714687.aspx)in der *ODBC Programmer's Reference*. Beispiel: "S0022".  
   
--   Der systemeigene Fehlercode für die Datenquelle spezifischen zurückgegeben, der *PfNativeError* Parameter von der **SQLError** Funktion. Beispiel: 207.  
+-   Der systemeigene Fehlercode für die Datenquelle spezifischen zurückgegeben, der *PfNativeError* Parameter von der `SQLError` Funktion. Beispiel: 207.  
   
--   Der Text der Fehlermeldung zurückgegeben, die der *von SQLDiagRec()* Parameter von der **SQLError** Funktion. Diese Nachricht besteht aus mehreren in Klammern gesetzten Namen. Wie ein Fehler von der Quelle an den Benutzer übergeben wird, fügt jede ODBC-Komponente (Datenquelle, Treiber, Treiber-Manager) einen eigenen Namen an. Diese Informationen helfen, um den Ursprung des Fehlers zu ermitteln. Beispiel: [Microsoft] [ODBC SQL Server Driver] [SQLServer]  
+-   Der Text der Fehlermeldung zurückgegeben, die der *von SQLDiagRec()* Parameter von der `SQLError` Funktion. Diese Nachricht besteht aus mehreren in Klammern gesetzten Namen. Wie ein Fehler von der Quelle an den Benutzer übergeben wird, fügt jede ODBC-Komponente (Datenquelle, Treiber, Treiber-Manager) einen eigenen Namen an. Diese Informationen helfen, um den Ursprung des Fehlers zu ermitteln. Beispiel: [Microsoft] [ODBC SQL Server Driver] [SQLServer]  
   
  Das Framework interpretiert die Fehlerzeichenfolge und setzt seine Komponenten in **M_strStateNativeOrigin**; Wenn **M_strStateNativeOrigin** enthält Informationen für mehrere Fehler sind die Fehler durch getrennt Zeilenumbrüche. Das Framework setzt den alphanumerischen Fehlertext in **M_strError**.  
   

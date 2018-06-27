@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383496"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956293"
 ---
 # <a name="toolbar-tool-tips"></a>QuickInfos für die Symbolleiste
 QuickInfos sind die kleine Popupfenster, die kurze Beschreibungen der Zweck einer Symbolleisten-Schaltfläche darstellen, wenn die Maus über eine Schaltfläche für eine bestimmte Zeitspanne zu positionieren. Wenn Sie eine Anwendung mit dem Assistenten zum Erstellen, die eine Symbolleiste aufweist, wird für Sie Tipp Toolsupport bereitgestellt. Dieser Artikel beschreibt beide den Tipp Toolsupport erstellt, indem der Anwendungs-Assistent und wie Ihre Anwendung Tipp Toolsupport hinzugefügt.  
@@ -42,7 +42,7 @@ QuickInfos sind die kleine Popupfenster, die kurze Beschreibungen der Zweck eine
 ##  <a name="_core_activating_tool_tips"></a> Aktivieren von QuickInfos  
  Um QuickInfos in Ihrer Anwendung zu aktivieren, müssen Sie zwei Schritte ausführen:  
   
--   Hinzufügen der `CBRS_TOOLTIPS` Stil in die anderen Formate (z. B. **WS_CHILD**, **WS_VISIBLE**, und andere **CBRS_** Stile) übergeben, als die `dwStyle` Parameter an die [ Symbolleistenformate](../mfc/reference/ctoolbar-class.md#create) Funktion oder im [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
+-   Fügen Sie den CBRS_TOOLTIPS-Stil auf die anderen Formate (z. B. WS_CHILD, WS_VISIBLE und andere **CBRS_** Stile) als übergeben der *DwStyle* Parameter an die [Symbolleistenformate](../mfc/reference/ctoolbar-class.md#create) Funktion oder im [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
 -   Wie im folgenden Verfahren beschrieben wird, fügen Sie die Symbolleiste QuickInfo-Text, getrennt durch ein neue Zeilenvorschubzeichen ("\n"), um eine Zeichenfolgenressource mit der Eingabeaufforderung für die Befehle der Hilfesymbolleiste. Eine Zeichenfolgenressource teilt die ID der Symbolleisten-Schaltfläche.  
   
@@ -62,7 +62,7 @@ QuickInfos sind die kleine Popupfenster, die kurze Beschreibungen der Zweck eine
 -   Der Zeichenfolgentabelle Eintrag mit derselben ID wie das untergeordnete Steuerelement in der Ressourcendatei verfügt über ein Tool QuickInfo-Zeichenfolge.  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> Statusleiste Flyby Updates  
- Eine Funktion, die im Zusammenhang mit QuickInfos ist "Flyby" Statusleiste aktualisieren. Standardmäßig beschreibt die Nachricht auf der Statusleiste nur eine bestimmte Symbolleisten-Schaltfläche, wenn die Schaltfläche aktiviert ist. Dazu `CBRS_FLYBY` in der Liste der Stile an übergeben `CToolBar::Create`, dass diese Nachrichten aktualisiert, wenn der Mauszeiger über der Symbolleiste bewegt wird, ohne tatsächlich aktiviert die Schaltfläche "".  
+ Eine Funktion, die im Zusammenhang mit QuickInfos ist "Flyby" Statusleiste aktualisieren. Standardmäßig beschreibt die Nachricht auf der Statusleiste nur eine bestimmte Symbolleisten-Schaltfläche, wenn die Schaltfläche aktiviert ist. Durch CBRS_FLYBY in der Liste der Stile übergeben einschließlich `CToolBar::Create`, dass diese Nachrichten aktualisiert, wenn der Mauszeiger über der Symbolleiste bewegt wird, ohne tatsächlich aktiviert die Schaltfläche.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

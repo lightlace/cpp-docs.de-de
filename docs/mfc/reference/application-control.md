@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355911"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954039"
 ---
 # <a name="application-control"></a>Anwendungssteuerelement
 OLE erfordert erhebliche Kontrolle über die Anwendungen und ihre Objekte. Die OLE-System-DLLs muss vorliegen zum Starten und Anwendungen automatisch freigeben, koordinieren ihre Produktions- und Änderung von Objekten und so weiter. Die Funktionen in diesem Thema werden diese Anforderungen erfüllen. Zusätzlich zu den von der OLE-System-DLLs aufgerufen werden, müssen diese Funktionen in einigen Fällen von Anwendungen sowie aufgerufen werden. 
@@ -53,7 +53,7 @@ BOOL AFXAPI AfxOleCanExitApp();
  Wert ungleich NULL, wenn die Anwendung beendet werden kann; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Anwendung sollen nicht beendet werden, wenn ausstehende Verweise auf seine Objekte vorhanden sind. Die globalen Funktionen `AfxOleLockApp` und `AfxOleUnlockApp` Inkrementieren und Dekrementieren bzw. einen Zähler der Verweise auf Objekte von der Anwendung. Die Anwendung sollen nicht beendet werden, wenn dieser Leistungsindikator ungleich NULL ist. Wenn der Leistungsindikator ungleich NULL ist, wird im Hauptfenster der Anwendung (nicht-getrennt) ausgeblendet, wenn der Benutzer aus dem Systemmenü oder über das Menü Datei beenden schließen auswählt. Das Framework ruft diese Funktion **CFrameWnd::OnClose**.  
+ Eine Anwendung sollen nicht beendet werden, wenn ausstehende Verweise auf seine Objekte vorhanden sind. Die globalen Funktionen `AfxOleLockApp` und `AfxOleUnlockApp` Inkrementieren und Dekrementieren bzw. einen Zähler der Verweise auf Objekte von der Anwendung. Die Anwendung sollen nicht beendet werden, wenn dieser Leistungsindikator ungleich NULL ist. Wenn der Leistungsindikator ungleich NULL ist, wird im Hauptfenster der Anwendung (nicht-getrennt) ausgeblendet, wenn der Benutzer aus dem Systemmenü oder über das Menü Datei beenden schließen auswählt. Das Framework ruft diese Funktion `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -147,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter `AfxOleLockApp` für Weitere Informationen zu erhalten.  
   
- Wenn die Anzahl von aktiven Objekten NULL ist, erreicht **AfxOleOnReleaseAllObjects** aufgerufen wird.  
+ Wenn die Anzahl von aktiven Objekten NULL ist, erreicht `AfxOleOnReleaseAllObjects` aufgerufen wird.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [AfxOleLockApp](#afxolelockapp).  
@@ -164,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Die eindeutige Klassen-ID des Steuerelements.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Die eindeutige Programm-ID des Steuerelements.  
    
 ### <a name="return-value"></a>Rückgabewert  
@@ -207,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Verweis auf den Server OLE-Klassen-ID.  
   
- `lpszClassName`  
+ *lpszClassName*  
  Ein Zeiger auf eine Zeichenfolge, die den Klassennamen von Objekten des Servers enthält.  
   
  *lpszShortTypeName*  
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  Zeiger auf eine Zeichenfolge, enthält den langen Namen des Objekttyps des Servers, z. B. "Microsoft Excel 5.0 Chart".  
   
- `nAppType`  
+ *nAppType*  
  Ein Wert aus der **OLE_APPTYPE** Enumeration, die Angabe des Typs der OLE-Anwendung. Mögliche Werte sind die folgenden:  
   
 - `OAT_INPLACE_SERVER` Server hat vollständige Server-Benutzeroberfläche.  
@@ -230,19 +230,19 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`-fähigen Objekt.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Array von Zeigern auf Zeichenfolgen, die die Schlüssel und Werte der OLE-System-Registrierung hinzugefügt werden, wenn keine vorhandenen Werte für die Schlüssel nicht gefunden werden.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Array von Zeigern auf Zeichenfolgen, die die Schlüssel und Werte der OLE-System-Registrierung hinzugefügt werden, wenn es sich bei die Registrierung vorhandene Werte für den angegebenen Schlüssel enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Klasse des Servers erfolgreich registriert ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die meisten Anwendungen verwenden können **COleTemplateServer::Register** Dokumenttypen für die Anwendung zu registrieren. Wenn Ihre Anwendung systemregistrierung Format nicht das normale Muster passt, können Sie `AfxOleRegisterServerClass` mehr Kontrolle.  
+ Die meisten Anwendungen verwenden können `COleTemplateServer::Register` Dokumenttypen für die Anwendung zu registrieren. Wenn Ihre Anwendung systemregistrierung Format nicht das normale Muster passt, können Sie `AfxOleRegisterServerClass` mehr Kontrolle.  
   
- Die Registrierung besteht aus einem Satz von Schlüsseln und Werten. Die `rglpszRegister` und `rglpszOverwrite` Argumente sind Arrays von Zeigern auf Zeichenfolgen, bestehend aus einem Schlüssel und einem Wert durch voneinander getrennte eine **NULL** Zeichen ( `'\0'`). Die einzelnen Zeichenfolgen können ersetzbare Parameter, deren Stellen durch die Zeichensequenzen gekennzeichnet sind `%1` über `%5`.  
+ Die Registrierung besteht aus einem Satz von Schlüsseln und Werten. Die *RglpszRegister* und *RglpszOverwrite* Argumente sind Arrays von Zeigern auf Zeichenfolgen, bestehend aus einem Schlüssel und einem Wert durch voneinander getrennte eine **NULL** Zeichen ( `'\0'`). Die einzelnen Zeichenfolgen können ersetzbare Parameter, deren Stellen durch die Zeichensequenzen gekennzeichnet sind *%1* über *%5*.  
   
  Die Symbole sind wie folgt ausgefüllt:  
   
@@ -271,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pClient`  
+ *pClient*  
  Ein Zeiger auf das Client-OLE-Element.  
   
- `pMenu`  
+ *pMenu*  
  Ein Zeiger auf das Menu-Objekt aktualisiert werden.  
   
  *iMenuItem*  
  Der Index des Menüelements aktualisiert werden.  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  Die Befehls-ID, die das primäre Verb entspricht.  
   
  *nIDVerbMax*  
@@ -290,7 +290,7 @@ void AFXAPI AfxOleSetEditMenu(
  Die ID für das Menüelement konvertieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Server nur ein primäres Verb erkennt, wird das Menüelement "Verb *Typename* Objekt" und der `nIDVerbMin` -Befehl gesendet wird, wenn der Benutzer den Befehl auswählt. Wenn der Server erkennt mehrere Verben, wird das Menüelement " *Typename* Objekt" und ein Untermenü mit alle Verben wird angezeigt, wenn der Benutzer den Befehl auswählt. Wenn der Benutzer über das Untermenü die Option, ein Verb auswählt `nIDVerbMin` wird gesendet, wenn das erste Verb ausgewählt wird, `nIDVerbMin` + 1 wird gesendet, wenn das zweite Verb ausgewählte usw. ist. Die Standardeinstellung `COleDocument` Implementierung behandelt automatisch diese Funktion.  
+ Wenn der Server nur ein primäres Verb erkennt, wird das Menüelement "Verb *Typename* Objekt" und die *nIDVerbMin* -Befehl gesendet wird, wenn der Benutzer den Befehl auswählt. Wenn der Server erkennt mehrere Verben, wird das Menüelement " *Typename* Objekt" und ein Untermenü mit alle Verben wird angezeigt, wenn der Benutzer den Befehl auswählt. Wenn der Benutzer über das Untermenü die Option, ein Verb auswählt *nIDVerbMin* wird gesendet, wenn das erste Verb ausgewählt wird, *nIDVerbMin* + 1 wird gesendet, wenn das zweite Verb ausgewählte usw. ist. Die Standardeinstellung `COleDocument` Implementierung behandelt automatisch diese Funktion.  
   
  Sie benötigen die folgende Anweisung im Ressourcenskript für Ihre Client-Anwendung (. RC)-Datei:  
   
@@ -311,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Die eindeutige Klassen-ID des Steuerelements.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Die eindeutige Programm-ID des Steuerelements.  
    
 ### <a name="return-value"></a>Rückgabewert  

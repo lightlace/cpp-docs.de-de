@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d875f2b93309e96bc3d612a8adc55b5af387026
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380918"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956810"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Festlegen des CStatusBarCtrl-Objektmodus
 Es gibt zwei Modi für einen `CStatusBarCtrl` Objekt: einfache und nicht einfache. In den meisten Fällen müssen Ihre Statusleisten-Steuerelement von einem oder mehreren Teilen zusammen mit Text und vielleicht ein Symbol oder Symbole. Dies wird als nicht einfacher Modus bezeichnet. Weitere Informationen zu diesen Modus, finden Sie unter [Initialisieren der Teile eines CStatusBarCtrl-Objekts](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
   
- Es gibt jedoch Fälle, in denen Sie nur eine einzelne Textzeile anzeigen. In diesem Fall ist der einfache Modus für Ihre Anforderungen ausreichend. So ändern Sie den Modus der `CStatusBarCtrl` "auf" einfach Objekt, rufen Sie die [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) Memberfunktion. Sobald das StatusBar-Steuerelement im einfachen Modus befindet, legen Sie den Text durch Aufrufen der **SetText** Memberfunktion ist, übergeben 255 als Wert für die **nPane** Parameter.  
+ Es gibt jedoch Fälle, in denen Sie nur eine einzelne Textzeile anzeigen. In diesem Fall ist der einfache Modus für Ihre Anforderungen ausreichend. So ändern Sie den Modus der `CStatusBarCtrl` "auf" einfach Objekt, rufen Sie die [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) Memberfunktion. Sobald das StatusBar-Steuerelement im einfachen Modus befindet, legen Sie den Text durch Aufrufen der `SetText` Memberfunktion ist, übergeben 255 als Wert für die *nPane* Parameter.  
   
  Sie können die [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) Funktion, um zu bestimmen, welchen Modus der `CStatusBarCtrl` Objekt befindet sich im.  
   

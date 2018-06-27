@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355888"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954103"
 ---
 # <a name="cbrush-class"></a>CBrush-Klasse
 Kapselt einen Pinsel der Windows GDI (Graphics Device Interface).  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `crColor`  
+ *crColor*  
  Gibt die Vordergrundfarbe des Pinsels als RGB-Farbe. Wenn der Pinsel eingestellt ist, gibt dieser Parameter die Farbe der Schraffur an.  
   
- `nIndex`  
+ *nIndex*  
  Gibt die Schraffurart des Pinsels. Eine der folgenden Werte sind möglich:  
   
 - `HS_BDIAGONAL` Nach unten weisenden Schraffur (von links nach rechts) auf 45 Grad  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Vertikale Schraffur  
   
- `pBitmap`  
+ *pBitmap*  
  Verweist auf ein `CBitmap` Objekt, das eine Bitmap angibt, mit denen die Pinsel zeichnet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Der Konstruktor mit einem einzelnen [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter erstellt ein Pinsels in Volltonfarbe mit der angegebenen Farbe. Die Farbe Gibt einen RGB-Wert und konstruiert werden kann, mit der `RGB` Makro in WINDOWS. H.  
   
- Der Konstruktor mit zwei Parametern erstellt ein Schraffurpinsel. Die `nIndex` Parameter gibt den Index einer Schraffur. Die `crColor` Parameter gibt die Farbe an.  
+ Der Konstruktor mit zwei Parametern erstellt ein Schraffurpinsel. Die *nIndex* Parameter gibt den Index einer Schraffur. Die *CrColor* Parameter gibt die Farbe an.  
   
  Der Konstruktor mit einem `CBitmap` Parameter erstellt einen Pinsel. Der Parameter identifiziert eine Bitmap. Wird angenommen, dass die Bitmap mit erstellten [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Die minimale Größe für eine Bitmap in einem Füllmusters vorgesehen ist 8 x 8 Pixel.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  Die beiden Versionen unterscheiden sich in der, wie Sie die DIB behandelt:  
   
--   In der ersten Version ein Handle für die DIB abrufen rufen Sie auf der Windows **GlobalAlloc** Funktion, um einen globalen Speicherblock zuordnen und geben Sie dann den Speicher mit dem gepackten DIB.  
+-   In der ersten Version um ein Handle für die DIB erhalten Sie die Windows aufrufen `GlobalAlloc` Funktion, um einen globalen Speicherblock zuordnen und geben Sie dann den Speicher mit dem gepackten DIB.  
   
--   In der zweiten Version ist es nicht notwendig, **GlobalAlloc** für die gepackte DIB Arbeitsspeicher belegt werden.  
+-   In der zweiten Version ist es nicht notwendig, `GlobalAlloc` für die gepackte DIB Arbeitsspeicher belegt werden.  
   
  Eine gepackte DIB besteht aus einem `BITMAPINFO` Datenstruktur, die unmittelbar nach der das Array von Bytes, die die Pixel der Bitmap definiert. Als Füllung Muster verwendet Bitmaps muss 8 x 8 Pixel. Wenn die Bitmap größer ist, erstellt Windows eine Füllmusters verwenden nur die Bits, die die ersten 8 Zeilen und 8 Spalten in der oberen linken Ecke der Bitmap Pixel entspricht.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Informationen zur Verwendung der folgenden Windows-Funktionen finden Sie im Windows-SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (diese Funktion wird nur für Kompatibilität mit Anwendungen für Windows-Versionen vor 3.0 bereitgestellt; verwenden Sie die **CreateDIBPatternBrushPt** Funktion.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (diese Funktion wird nur für Kompatibilität mit Anwendungen für Windows-Versionen vor 3.0 bereitgestellt; verwenden Sie die `CreateDIBPatternBrushPt` Funktion.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (diese Funktion sollte für Win32-basierte Anwendungen verwendet werden.)  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt die Schraffurart des Pinsels. Eine der folgenden Werte sind möglich:  
   
 - `HS_BDIAGONAL` Nach unten weisenden Schraffur (von links nach rechts) auf 45 Grad  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Vertikale Schraffur  
   
- `crColor`  
+ *crColor*  
  Gibt die Vordergrundfarbe des Pinsels als eine RGB-Farbe (die Farbe der Schraffuren) an. Finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in das Windows SDK für Weitere Informationen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitmap`  
+ *pBitmap*  
  Identifiziert eine Bitmap an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend für jeden Gerätekontext ausgewählt werden, die auszuführenden Vorgängen unterstützen. Die Bitmap identifizierte `pBitmap` ist in der Regel initialisiert, indem die [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) Funktion.  
+ Der Pinsel kann anschließend für jeden Gerätekontext ausgewählt werden, die auszuführenden Vorgängen unterstützen. Die Bitmap identifizierte *pBitmap* ist in der Regel initialisiert, indem die [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) Funktion.  
   
  Als Füllung Muster verwendet Bitmaps muss 8 x 8 Pixel. Wenn die Bitmap größer ist, verwendet Windows nur die Bits, die ersten 8 Zeilen und Spalten der Pixel in der oberen linken Ecke der Bitmap entsprechen.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `crColor`  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Struktur, die Farbe des Pinsels angibt. Die Farbe Gibt einen RGB-Wert und konstruiert werden kann, mit der `RGB` Makro in WINDOWS. H.  
+ *crColor*  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Struktur, die Farbe des Pinsels angibt. Die Farbe RGB-Wert gibt an, und kann mit dem RGB-Makro in WINDOWS erstellt werden. H.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt einen Index für die Farbe an. Dieser Wert entspricht der Farbe verwendet, um eines der Fensterelemente 21 zeichnen. Finden Sie unter [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) in das Windows SDK für eine Liste von Werten.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hBrush`  
+ *hBrush*  
  `HANDLE` auf einem Windows-GDI-Pinsel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLogBrush`  
+ *pLogBrush*  
  Verweist auf eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) -Struktur, die Informationen zu den Pinsel enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Funktion erfolgreich ausgeführt wird, und `pLogBrush` gültiger Zeiger ist, ist der Rückgabewert ist die Anzahl der Bytes im Puffer gespeichert.  
+ Wenn die Funktion erfolgreich ausgeführt wird, und *pLogBrush* gültiger Zeiger ist, ist der Rückgabewert ist die Anzahl der Bytes im Puffer gespeichert.  
   
- Wenn die Funktion erfolgreich ausgeführt wird, und `pLogBrush` ist **NULL**, der Rückgabewert ist die Anzahl der Bytes, die erforderlich sind, für die Informationen der Funktion würde im Puffer gespeichert.  
+ Wenn die Funktion erfolgreich ausgeführt wird, und *pLogBrush* ist **NULL**, der Rückgabewert ist die Anzahl der Bytes, die erforderlich sind, für die Informationen der Funktion würde im Puffer gespeichert.  
   
  Wenn die Funktion fehlschlägt, ist der Rückgabewert 0.  
   

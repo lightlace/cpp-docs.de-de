@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356687"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954151"
 ---
 # <a name="ccmdui-class"></a>CCmdUI-Klasse
 Wird verwendet, nur innerhalb einer `ON_UPDATE_COMMAND_UI` Ereignishandler in einer `CCmdTarget`-abgeleitete Klasse.  
@@ -79,7 +79,7 @@ class CCmdUI
   
  Wenn ein Benutzer der Anwendung herunterlädt ein Menü, jede Menü Element muss wissen, ob er als aktiviert angezeigt werden sollen oder deaktiviert. Das Ziel eines Menübefehls stellt diese Informationen durch die Implementierung einer `ON_UPDATE_COMMAND_UI` Handler. Verwenden Sie für jede von der Benutzeroberfläche Befehlsobjekten in Ihrer Anwendung des Eigenschaftenfensters zum Erstellen eines meldungszuordnung Eintrag und die Funktion die Prototypen für jeden Handler.  
   
- Wenn Sie im Menü abgerufen wird, wird das Framework sucht und ruft jede `ON_UPDATE_COMMAND_UI` Handler, jeden Handler aufruft `CCmdUI` -Elementfunktionen wie z. B. **aktivieren** und **überprüfen**, und klicken Sie dann das Framework entsprechend zeigt jedes Menüelements.  
+ Wenn Sie im Menü abgerufen wird, wird das Framework sucht und ruft jede `ON_UPDATE_COMMAND_UI` Handler, jeden Handler aufruft `CCmdUI` -Elementfunktionen wie z. B. `Enable` und `Check`, und das Framework zeigt dann entsprechend jedes Menüelements.  
   
  Ein Menüelement kann mit einer Steuerleiste-Schaltfläche oder eines anderen Benutzeroberfläche Befehlsobjekt ersetzt werden, ohne Ändern des Codes in der `ON_UPDATE_COMMAND_UI` Handler.  
   
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bOn`  
+ *BAM*  
  **"True"** So aktivieren Sie das Element **"false"** zu deaktivieren.  
   
 ### <a name="example"></a>Beispiel  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- **NULL** , wenn das Element nicht um ein Menü ist. Wenn das Untermenü ein Popupfenster wird `m_nID` enthält die ID des ersten Elements im Popupmenü. Weitere Informationen finden Sie unter [technischen Hinweis 21](../../mfc/tn021-command-and-message-routing.md).  
+ **NULL** , wenn das Element nicht um ein Menü ist. Wenn das Untermenü ein Popupfenster wird *M_nID* enthält die ID des ersten Elements im Popupmenü. Weitere Informationen finden Sie unter [technischen Hinweis 21](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Zeiger (vom Typ `CWnd`) in das Fensterobjekt, z. B. ein Tool oder Status-Leiste, die die Benachrichtigung gesendet.  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCheck`  
+ *nPrüfen*  
  Gibt den Aktivierungszustand festlegen. Wenn 0, deaktiviert; Wenn 1, überprüft. Wenn 2 wird unbestimmt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszText`  
+ *lpszText*  
  Ein Zeiger auf eine Textzeichenfolge.  
   
 ### <a name="example"></a>Beispiel  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383174"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952036"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: MFC-Standardressourcen
 In diesem Hinweis werden die standard-Ressourcen mit bereitgestellt und von der MFC-Bibliothek erforderlich.  
@@ -45,7 +45,7 @@ In diesem Hinweis werden die standard-Ressourcen mit bereitgestellt und von der 
   
 -   Indicate.rc: Enthält die Zeichenfolgenressourcen für die Statusleiste Schlüssel-Status-Indikatoren, z. B. "Obergrenze" für die FESTSTELLTASTE aktiviert.  
   
--   Prompts.rc: Enthält das Menü eingabeaufforderungs-Zeichenfolgenressourcen für jeden Befehl, z. B. "Neues Dokument erstellen" für `ID_FILE_NEW`.  
+-   Prompts.rc: Enthält eingabeaufforderungs-Menü Zeichenfolgenressourcen für jeden Befehl, z. B. "Neues Dokument erstellen" für ID_FILE_NEW.  
   
 -   COMMDLG.rc: Eine Visual C++ kompatibel RC-Datei, die die standardmäßigen COMMDLG Dialogfeldvorlagen enthält.  
   
@@ -77,7 +77,7 @@ In diesem Hinweis werden die standard-Ressourcen mit bereitgestellt und von der 
 >  Achten Sie darauf, dass nicht auf Ressourcen außerhalb des gültigen Common.rc unbeabsichtigt dauerhaft zu verschieben. Wenn Sie die STRG-Taste halten, während Sie Ressourcen ziehen, erstellen Sie eine Kopie. Wenn Sie nicht STRG Sie beim Ziehen gedrückt werden, werden die Ressourcen verschoben. Wenn Sie Bedenken haben, dass Sie versehentlich Änderungen an der Datei Common.rc vorgenommen haben, möglicherweise, klicken Sie auf "Nein", wenn Sie gefragt werden, an, ob die Änderungen zu Common.rc gespeichert.  
   
 > [!NOTE]
->  Die RC-Ressourcendateien haben eine spezielle `TEXTINCLUDE` Ressource darin, die Sie versehentlich zusätzlich zu den standardmäßigen RC-Dateien speichern verhindern.  
+>  Die RC-Ressourcendateien enthalten eine besondere TEXTINCLUDE-Ressource, die Sie versehentlich zusätzlich zu den standardmäßigen RC-Dateien speichern verhindern.  
   
 ### <a name="customizing-standard-framework-resources"></a>Anpassen des Standard-Framework-Ressourcen  
  Standardframeworkressourcen Ressourcen werden in der Regel in einer Anwendung enthalten, mithilfe der #include Befehl in einer Anwendung Ressourcendatei. AppWizard wird eine Ressourcendatei zu generieren. Diese Datei enthält die entsprechenden standardframeworkressourcen-Ressourcen, je nachdem welche AppWizard-Optionen, die Sie auswählen. Sie können überprüfen, hinzufügen oder entfernen, welche Ressourcen durch Ändern der Kompilierzeitdirektiven enthalten sind. Öffnen Sie hierzu die **Ressource** Menü **Gruppe enthält**. Betrachten Sie das Element der "Kompilierzeitdirektiven" Bearbeiten. Zum Beispiel:  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366713"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951555"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar-Klasse
 Stellt die Funktionalität eines nicht modalen Windows-Dialogfelds in einer Steuerleiste bereit.  
@@ -53,7 +53,7 @@ class CDialogBar : public CControlBar
 ## <a name="remarks"></a>Hinweise  
  Eine Dialogleiste ähnelt ein Dialogfeld, insofern, dass sie Windows-Standardsteuerelemente, denen der Benutzer enthält zwischen TAB-Taste. Eine andere Ähnlichkeit ist das Erstellen einer Dialogfeldvorlage, um die Dialogleiste darzustellen.  
   
- Erstellen und Verwenden einer Dialogleiste gleicht dem Erstellen und Verwenden einer `CFormView` Objekt. Verwenden Sie zuerst die [Dialog-Editor](../../windows/dialog-editor.md) zum Definieren einer Dialogfeldvorlage in dem Format **WS_CHILD** und keine anderen Stil. Die Vorlage darf nicht das Format sein **WS_VISIBLE**. In Ihrem Anwendungscode, rufen Sie den Konstruktor zum Erstellen der `CDialogBar` -Objekt, und rufen Sie dann **erstellen** zum Erstellen des Zeitfensters für Dialogfeld-weißem Zebrastreifeneffekt und fügen Sie es auf die `CDialogBar` Objekt.  
+ Erstellen und Verwenden einer Dialogleiste gleicht dem Erstellen und Verwenden einer `CFormView` Objekt. Verwenden Sie zuerst die [Dialog-Editor](../../windows/dialog-editor.md) zum Definieren einer Dialogfeldvorlage in dem Format **WS_CHILD** und keine anderen Stil. Die Vorlage darf nicht das Format sein **WS_VISIBLE**. In Ihrem Anwendungscode, rufen Sie den Konstruktor zum Erstellen der `CDialogBar` -Objekt, und rufen Sie dann `Create` zum Erstellen des Zeitfensters für Dialogfeld-weißem Zebrastreifeneffekt und fügen Sie es auf die `CDialogBar` Objekt.  
   
  Weitere Informationen zu `CDialogBar`, finden Sie im Artikel [Dialogleisten](../../mfc/dialog-bars.md) und [technischer Hinweis 31](../../mfc/tn031-control-bars.md), Steuerleisten.  
   
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das übergeordnete Element `CWnd` Objekt.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Ein Zeiger auf den Namen der `CDialogBar` des Objekts im Dialogfeld Ressourcenvorlage.  
   
- `nStyle`  
+ *nStyle*  
  Das Toolbar-Stil. Zusätzliche Toolbar-Stile unterstützt werden:  
   
-- `CBRS_TOP` Steuerleiste wird am oberen Rand des Fensters Frame.  
+- **CBRS_TOP** Steuerleiste am oberen Rand des Fensters Frame ist.  
   
-- `CBRS_BOTTOM` Steuerleiste wird am unteren Rand der Frame-Fensters.  
+- **CBRS_BOTTOM** Steuerleiste am unteren Rand der Frame-Fensters ist.  
   
-- `CBRS_NOALIGN` Steuerleiste ist nicht neu angeordnet, wenn die übergeordnetem Element geändert wird.  
+- **CBRS_NOALIGN** Steuerleiste nicht neu angeordnet, wenn die übergeordnetem Element geändert wird.  
   
-- `CBRS_TOOLTIPS` Steuerleiste zeigt QuickInfos an.  
+- **CBRS_TOOLTIPS** Steuerleiste zeigt QuickInfos an.  
   
 - **CBRS_SIZE_DYNAMIC** Steuerleiste ist dynamisch.  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** Steuerleiste unverankert ist.  
   
-- `CBRS_FLYBY` Statusleiste zeigt Informationen über die Schaltfläche an.  
+- **CBRS_FLYBY** Statusleiste zeigt Informationen über die Schaltfläche.  
   
 - **CBRS_HIDE_INPLACE** Steuerleiste ist nicht für den Benutzer angezeigt.  
   
- `nID`  
+ *nID*  
  Die Steuerelement-ID die Dialogleiste.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Die Ressourcen-ID, der die `CDialogBar` des Objekts im Dialogfeld Vorlage.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Bei Angabe der `CBRS_TOP` oder `CBRS_BOTTOM` Ausrichtungsstil, Breite für die Dialogleiste ist, mit der das Rahmenfenster und seine Höhe ist, mit der durch die angegebene Ressource `nIDTemplate`. Bei Angabe der `CBRS_LEFT` oder `CBRS_RIGHT` Ausrichtungsstil, die Dialogleiste Höhe ist, mit der das Rahmenfenster und seine Breite ist, mit der durch die angegebene Ressource `nIDTemplate`.  
+ Bei Angabe der **CBRS_TOP** oder **CBRS_BOTTOM** Ausrichtungsstil, Breite für die Dialogleiste ist, mit der das Rahmenfenster und seine Höhe ist, mit der durch die angegebene Ressource *nIDTemplate*. Bei Angabe der **CBRS_LEFT** oder **CBRS_RIGHT** Ausrichtungsstil, die Dialogleiste Höhe ist, mit der das Rahmenfenster und seine Breite ist, mit der durch die angegebene Ressource *nIDTemplate*.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  

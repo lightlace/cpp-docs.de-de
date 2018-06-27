@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349934"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950522"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU-Klasse
 Ein Wrapper für D2D1_SIZE_U.  
@@ -48,7 +48,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Gibt eine `boolean` Wert, der angibt, ob ein Ausdruck keine gültigen Daten enthält ( `null`).|  
+|[CD2DSizeU::IsNull](#isnull)|Gibt eine **booleschen** Wert, der angibt, ob ein Ausdruck keine gültigen Daten enthält ( **null**).|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -79,13 +79,13 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
+ *size*  
  Größe der Datenquelle  
   
- `cx`  
+ *CX*  
  Quelle Breite  
   
- `cy`  
+ *CY*  
  Quelle Höhe  
   
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull  

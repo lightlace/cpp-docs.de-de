@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356031"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956667"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 Die Basisklasse für die steuerleisteklassen [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), und [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLength`  
- Die angeforderte Dimension der Steuerleiste, horizontal oder vertikal, je nach `dwMode`.  
+ *nLength*  
+ Die angeforderte Dimension der Steuerleiste, horizontal oder vertikal, je nach *DwMode*.  
   
- `nMode`  
+ *nMode*  
  Die folgenden vordefinierten Flags werden verwendet, um die Höhe und Breite der dynamischen Steuerleiste zu bestimmen. Verwenden Sie den bitweisen OR (&#124;) Operator, um die Flags zu kombinieren.  
   
 |Layout-Modus-flags|Bedeutung|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|Gibt an, ob die Steuerleiste soll, auf die Größe des Frames gestreckt werden. Legt fest, ob die Leiste keine andockleiste (nicht verfügbar für Andocken) ist. Nicht festgelegt, wenn die Leiste angedockt oder unverankert ist (zum Andocken verfügbar). Wenn festgelegt, `LM_STRETCH` ignoriert `nLength` und Dimensionen basierend darauf, gibt die `LM_HORZ` Zustand. `LM_STRETCH` funktioniert ähnlich wie die `bStretch` verwendeten im Parameters [CalcFixedLayout](#calcfixedlayout); finden Sie weitere Informationen über die Beziehung zwischen Strecken und die Ausrichtung dieser Memberfunktion.|  
-|`LM_HORZ`|Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Festgelegt, wenn die Leiste horizontal ausgerichtet ist, und wenn es vertikal ausgerichtet ist, wird es nicht festgelegt. `LM_HORZ` funktioniert ähnlich wie die `bHorz` verwendeten im Parameters [CalcFixedLayout](#calcfixedlayout); finden Sie weitere Informationen über die Beziehung zwischen Strecken und die Ausrichtung dieser Memberfunktion.|  
-|**LM_MRUWIDTH**|Dynamische Breite zuletzt verwendete. Ignoriert `nLength` Parameter und verwendet die gespeicherte zuletzt verwendete Breite.|  
-|`LM_HORZDOCK`|Horizontal angedockt Dimensionen. Ignoriert `nLength` Parameter und gibt die dynamische Größe mit der größten Breite zurück.|  
-|`LM_VERTDOCK`|Vertikale angedockt Dimensionen. Ignoriert `nLength` Parameter und gibt die dynamische Größe durch die Höhe des größten zurück.|  
-|`LM_LENGTHY`|Legen Sie, wenn `nLength` gibt die Höhe (Y-Richtung) anstelle der Breite an.|  
-|`LM_COMMIT`|Setzt **LM_MRUWIDTH** aktuelle Breite der unverankerte Steuerleiste.|  
+|`LM_STRETCH`|Gibt an, ob die Steuerleiste soll, auf die Größe des Frames gestreckt werden. Legt fest, ob die Leiste keine andockleiste (nicht verfügbar für Andocken) ist. Nicht festgelegt, wenn die Leiste angedockt oder unverankert ist (zum Andocken verfügbar). Wenn festgelegt, `LM_STRETCH` ignoriert *nLength* und Dimensionen basierend darauf, gibt die `LM_HORZ` Zustand. `LM_STRETCH` funktioniert ähnlich wie die *bStretch* verwendeten im Parameters [CalcFixedLayout](#calcfixedlayout); finden Sie weitere Informationen über die Beziehung zwischen Strecken und die Ausrichtung dieser Memberfunktion.|  
+|`LM_HORZ`|Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Festgelegt, wenn die Leiste horizontal ausgerichtet ist, und wenn es vertikal ausgerichtet ist, wird es nicht festgelegt. `LM_HORZ` funktioniert ähnlich wie die *bHorz* verwendeten im Parameters [CalcFixedLayout](#calcfixedlayout); finden Sie weitere Informationen über die Beziehung zwischen Strecken und die Ausrichtung dieser Memberfunktion.|  
+|`LM_MRUWIDTH`|Dynamische Breite zuletzt verwendete. Ignoriert *nLength* Parameter und verwendet die gespeicherte zuletzt verwendete Breite.|  
+|`LM_HORZDOCK`|Horizontal angedockt Dimensionen. Ignoriert *nLength* Parameter und gibt die dynamische Größe mit der größten Breite zurück.|  
+|`LM_VERTDOCK`|Vertikale angedockt Dimensionen. Ignoriert *nLength* Parameter und gibt die dynamische Größe durch die Höhe des größten zurück.|  
+|`LM_LENGTHY`|Legen Sie, wenn *nLength* gibt die Höhe (Y-Richtung) anstelle der Breite an.|  
+|`LM_COMMIT`|Setzt `LM_MRUWIDTH` aktuelle Breite der unverankerte Steuerleiste.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Steuerleiste Größe, in Pixel, der eine [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bStretch`  
- Gibt an, ob die Leiste soll, auf die Größe des Frames gestreckt werden. Die `bStretch` Parameter ist ungleich NULL, wenn die Leiste keine andockleiste (nicht verfügbar für Andocken ist) und 0, ist wenn angedockt oder unverankert ist (zum Andocken verfügbar).  
+ *bStretch*  
+ Gibt an, ob die Leiste soll, auf die Größe des Frames gestreckt werden. Die *bStretch* Parameter ist ungleich NULL, wenn die Leiste keine andockleiste (nicht verfügbar für Andocken ist) und 0, ist wenn angedockt oder unverankert ist (zum Andocken verfügbar).  
   
- `bHorz`  
- Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die `bHorz` Parameter ungleich NULL ist, wenn die Leiste horizontal ausgerichtet ist, und 0, ist wenn es vertikal ausgerichtet ist.  
+ *bHorz*  
+ Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die *bHorz* -Parameter ist ungleich NULL, wenn die Leiste horizontal ausgerichtet ist, und 0, ist wenn es vertikal ausgerichtet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Steuerleiste Größe, in Pixel, der eine `CSize` Objekt.  
@@ -185,7 +185,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Hinweise  
  Steuerleisten, z. B. Symbolleisten können horizontal oder vertikal um die Schaltflächen Rechnung zu tragen enthalten sind, in der Steuerleiste.  
   
- Wenn `bStretch` ist **"true"**, dehnen Sie die Dimension entlang der Ausrichtung von bereitgestellten `bHorz`. Das heißt, wenn `bHorz` ist **"false"**, Steuerleiste vertikal gestreckt wird. Wenn `bStretch` ist **"false"**, keine Stretch auftritt. Die folgende Tabelle zeigt die möglichen Permutationen und die resultierende Steuerleiste Stile der `bStretch` und `bHorz`.  
+ Wenn *bStretch* ist **"true"**, dehnen Sie die Dimension entlang der Ausrichtung von bereitgestellten *bHorz*. Das heißt, wenn *bHorz* ist **"false"**, Steuerleiste vertikal gestreckt wird. Wenn *bStretch* ist **"false"**, keine Stretch auftritt. Die folgende Tabelle zeigt die möglichen Permutationen und die resultierende Steuerleiste Stile der *bStretch* und *bHorz*.  
   
 |bStretch|bHorz|Ein Strecken|Ausrichtung|Andocken/nicht Andocken|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Enthält die aktuelle Größe der Steuerleiste. einschließlich der Rahmen an.  
   
- `bHorz`  
- Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die `bHorz` Parameter ungleich NULL ist, wenn die Leiste horizontal ausgerichtet ist, und 0, ist wenn es vertikal ausgerichtet ist.  
+ *bHorz*  
+ Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die *bHorz* -Parameter ist ungleich NULL, wenn die Leiste horizontal ausgerichtet ist, und 0, ist wenn es vertikal ausgerichtet ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird aufgerufen, bevor die Steuerleiste gezeichnet wird.  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Gerätekontext für das Rendern der Rahmen und das ziehelement der Steuerleiste verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Gerätekontext für das Rendern von Rahmen der Steuerleiste verwendet werden.  
   
- `rect`  
+ *Rect*  
  Ein `CRect` Objekt, das die Dimensionen der Steuerleiste enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Gerätekontext für das Rendern des Steuerelements Leiste ziehelements verwendet werden.  
   
- `rect`  
+ *Rect*  
  Ein `CRect` Objekt, das die Dimensionen des ziehelements Leiste Steuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDockStyle`  
+ *dwDockStyle*  
  Gibt an, ob die Steuerleiste unterstützt Andocken und den Seiten des übergeordneten Fensters auf die Steuerleiste angedockt werden kann, wenn unterstützt. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
 - `CBRS_ALIGN_TOP` Ermöglicht das Andocken am oberen Rand des Clientbereichs.  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CRect` Objekt, das die aktuelle Breite (in Pixel) der einzelnen Seiten des Steuerelementobjekts Balken enthält. Z. B. der Wert von der `left` Member auf, der [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Breite des linken Rahmens.  
+ Ein `CRect` Objekt, das die aktuelle Breite (in Pixel) der einzelnen Seiten des Steuerelementobjekts Balken enthält. Beispielsweise den Wert der die *linken* Member, der [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Breite des linken Rahmens.  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  Gibt die Anzahl der nicht - `HWND` Elemente auf der `CControlBar` Objekt.  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `m_bAutoDelete` ist eine öffentliche Variable des Typs **BOOL**.  
+ *M_bAutoDelete* ist eine öffentliche Variable des Typs **BOOL**.  
   
- Eine Steuerleiste-Objekt eingebettet ist in der Regel in einem Rahmenfenster Objekt. In diesem Fall `m_bAutoDelete` ist 0, da das Objekt eingebettete Steuerleiste zerstört wird, wenn das Rahmenfenster zerstört wird.  
+ Eine Steuerleiste-Objekt eingebettet ist in der Regel in einem Rahmenfenster Objekt. In diesem Fall *M_bAutoDelete* ist 0, da das Objekt eingebettete Steuerleiste zerstört wird, wenn das Rahmenfenster zerstört wird.  
   
  Legen Sie diese Variable auf einen Wert ungleich NULL, wenn Sie Zuweisen einer `CControlBar` Objekt auf dem Heap, und Sie nicht beabsichtigen, rufen Sie **löschen**.  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pTarget`  
+ *pTarget*  
  Verweist auf das Hauptrahmenfenster der Anwendung. This-Zeiger wird für das Nachrichtenrouting Update verwendet.  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  Flag, die angibt, ob ein Steuerelement, das kein der updatehandler weist automatisch als deaktiviert angezeigt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Die gewünschte Stile für die Steuerleiste. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
 - `CBRS_ALIGN_TOP` Ermöglicht die Steuerleiste am oberen Rand der Clientbereich eines Rahmenfensters angedockt werden.  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` Bewirkt, dass Meldungstext zur gleichen Zeit wie QuickInfos aktualisiert werden.  
   
-- **CBRS_GRIPPER** bewirkt, dass ein ziehelements, ähnlich wie auf Bänder in einer **CReBar** -Objekt, für eine beliebige gezeichnet werden `CControlBar`-abgeleitete Klasse.  
+- `CBRS_GRIPPER` Bewirkt, dass ein ziehelements, ähnlich wie auf Bänder in einer `CReBar` -Objekt, für eine beliebige gezeichnet werden `CControlBar`-abgeleitete Klasse.  
   
 ### <a name="remarks"></a>Hinweise  
  Hat keinen Einfluss auf die **WS_** (Fensterstil)-Einstellungen.  
@@ -476,7 +476,7 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  Die Höhe (in Pixel) für die untere Rahmenlinie der Steuerleiste.  
   
- `lpRect`  
+ *lpRect*  
  Ein Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die aktuelle Breite (in Pixel) der einzelnen Rahmen der Steuerleistenobjekt enthält.  
   
 ### <a name="example"></a>Beispiel  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf eine `CWnd` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  

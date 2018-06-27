@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354281"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954746"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap-Klasse
 Ein Wrapper für ID2D1Bitmap.  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pResource`  
+ *pResource*  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `uiResID`  
+ *uiResID*  
  Die Ressourcen-ID-Nummer der Ressource.  
   
- `lpszType`  
+ *lpszType*  
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Ressourcentyp enthält.  
   
- `sizeDest`  
+ *sizeDest*  
  Die Zielgröße der Bitmap.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
- `lpszPath`  
+ *lpszPath*  
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Datei enthält.  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  Handle für die Bitmap.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitmap`  
+ *pBitmap*  
  Die Bitmap aus kopieren  
   
- `destPoint`  
+ *destPoint*  
  In der aktuellen Bitmap wird der linken oberen Ecke des Bereichs, der der Bereich durch SrcRect angegebene, kopiert.  
   
- `srcRect`  
+ *srcRect*  
  Der Bereich der Bitmap kopieren  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `srcData`  
+ *srcData*  
  Die zu kopierenden Daten  
   
- `pitch`  
+ *Tonhöhe*  
  Der Stride oder Tonhöhe, der die Quellbitmap in SrcData gespeichert. Stride ist die Byteanzahl, die von einer Scanzeile (eine Zeile der Pixel im Arbeitsspeicher). Stride aus der folgenden Formel berechnet werden kann: Pixelbreite * Bytes pro Pixel + Auffüllung der Speicher  
   
- `destRect`  
+ *destRect*  
  In der aktuellen Bitmap wird der linken oberen Ecke des Bereichs, der der Bereich durch SrcRect angegebene, kopiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Das Renderziel, das die zu kopierenden Bereich enthält  
   
- `destPoint`  
+ *destPoint*  
  In der aktuellen Bitmap wird der linken oberen Ecke des Bereichs, der der Bereich durch SrcRect angegebene, kopiert.  
   
- `srcRect`  
+ *srcRect*  
  Der Bereich der Renderziel kopieren  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ein Zeiger auf das Renderziel.  
   
 ### <a name="return-value"></a>Rückgabewert  

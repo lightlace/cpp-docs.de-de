@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369082"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951818"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-Klasse
 Stellt einen varianten Datentyp für die MFC-ODBC-Klassen dar.  
@@ -85,7 +85,7 @@ class CDBVariant
 |name|Beschreibung|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Enthält einen Wert vom Typ **BOOL**.|  
-|[CDBVariant::m_chVal](#m_chval)|Enthält einen Wert vom Typ `unsigned char`.|  
+|[CDBVariant::m_chVal](#m_chval)|Enthält einen Wert vom Typ **unsigned Char**.|  
 |[CDBVariant::m_dblVal](#m_dblval)|Enthält einen Wert vom Typ **doppelte**.|  
 |[CDBVariant::m_fltVal](#m_fltval)|Enthält einen Wert vom Typ **"float"**.|  
 |[CDBVariant::m_iVal](#m_ival)|Enthält einen Wert vom Typ **kurze**.|  
@@ -99,7 +99,7 @@ class CDBVariant
 ## <a name="remarks"></a>Hinweise  
  `CDBVariant` eine Basisklasse verfügt nicht über.  
   
- `CDBVariant` ähnelt dem [COleVariant](../../mfc/reference/colevariant-class.md)jedoch `CDBVariant` verwendet keinen OLE. `CDBVariant` Können Sie einen Wert zu speichern, ohne befürchten Datentyp des Werts. `CDBVariant` verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.  
+ `CDBVariant` ähnelt dem [COleVariant](../../mfc/reference/colevariant-class.md)jedoch `CDBVariant` verwendet keinen OLE. `CDBVariant` können Sie einen Wert zu speichern, ohne befürchten Datentyp des Werts. `CDBVariant` verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.  
   
  Klasse [CRecordset](../../mfc/reference/crecordset-class.md) nutzt `CDBVariant` Objekte in drei Memberfunktionen: `GetFieldValue`, `GetBookmark`, und `SetBookmark`. Beispielsweise `GetFieldValue` ermöglicht Ihnen, Daten in einer Spalte dynamisch abzurufen. Da der Datentyp der Spalte nicht zur Laufzeit möglicherweise feststeht `GetFieldValue` verwendet eine `CDBVariant` Objekt zum Speichern von Daten in der Spalte.  
   
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Wert der [M_dwType](#m_dwtype) -Datenmember ist **DBVT_DATE**, **DBVT_STRING**, oder **DBVT_BINARY**, **deaktivieren**gibt den Arbeitsspeicher frei der union Zeiger-Element zugeordnet sind. **Clear** legt `m_dwType` auf **DBVT_NULL**.  
+ Wenn der Wert der [M_dwType](#m_dwtype) -Datenmember ist **DBVT_DATE**, **DBVT_STRING**, oder **DBVT_BINARY**, `Clear` gibt den Arbeitsspeicher frei die union Zeigermember zugeordnet ist. `Clear` Legt `m_dwType` auf **DBVT_NULL**.  
   
- Die `CDBVariant` Destruktoraufrufe **löschen**.  
+ Die `CDBVariant` Destruktoraufrufe `Clear`.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Speichert einen Wert vom Typ **BOOL**.  

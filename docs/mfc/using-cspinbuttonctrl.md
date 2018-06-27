@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b1e83977c1d75070e8878dfdcc53c7afca7a86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bea2f2f51ed3b012ee9b5afe2572b2a6be9e0d57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384399"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955481"
 ---
 # <a name="using-cspinbuttonctrl"></a>Verwenden von CSpinButtonCtrl
 Die *Drehfeld* Control (auch bekannt als ein *nach oben und unten* Steuerelement) stellt einem pfeilepaar zusammenlaufen, die ein Benutzer klicken kann, um einen Wert anzupassen. Dieser Wert wird als bezeichnet den *aktuelle Position*. Die Position, die innerhalb des Bereichs von dem Drehfeld bleibt bestehen. Klickt der Benutzer auf den Pfeil nach oben, verschiebt die Position für die maximale Anzahl; und klickt der Benutzer auf den Pfeil nach unten, verschiebt die Position in Richtung der Mindestwert.  
@@ -36,7 +36,7 @@ Die *Drehfeld* Control (auch bekannt als ein *nach oben und unten* Steuerelement
   
  In der Regel wird die aktuelle Position in einem Begleit-Steuerelement angezeigt. Das Begleit-Steuerelement heißt die *Buddy-Fenster*. Eine Abbildung ein Drehfeldsteuerelement, finden Sie unter [zu auf-ab-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb759889) im Windows SDK.  
   
- Um ein Drehfeld-Steuerelement und Steuerelementfensters Buddy eine Bearbeiten in Visual Studio zu erstellen, ziehen Sie zuerst ein Bearbeitungssteuerelement zum Dialogfeld oder Fenster, und ziehen Sie dann ein Drehfeld-Steuerelement. Wählen Sie das Drehfeld-Steuerelement, und legen seine **Auto-Buddy** und **Buddy-Integer festgelegt** Eigenschaften **"true"**. Legen Sie auch die **Ausrichtung** Eigenschaft ein. **Rechtsbündig** liegt meist daran ist. Mit diesen Einstellungen wird das Bearbeitungssteuerelement als Buddy-Fensters festgelegt, weil er direkt das Bearbeitungssteuerelement in der Aktivierreihenfolge vorangestellt. Das Bearbeitungssteuerelement Zeigt ganze Zahlen, und das Drehfeld-Steuerelement auf der rechten Seite des Bearbeitungssteuerelements eingebettet ist. Sie können optional, den gültigen Bereich für das Drehfeld-Steuerelement festlegen, mit der [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) Methode. Keine Ereignishandler sind erforderlich, für die Kommunikation zwischen den Drehfeld-Steuerelement und Buddy-Fenster, da sie Daten direkt austauschen. Wenn Sie ein Drehfeld-Steuerelement zu einem anderen Zweck verwenden, z. B. um einen Bildlauf durch eine Sequenz von Windows oder Dialogfeldern, klicken Sie dann hinzufügen einen Handler für das `UDN_DELTAPOS` Meldungen, und führen Sie die benutzerdefinierte Aktion vorhanden.  
+ Um ein Drehfeld-Steuerelement und Steuerelementfensters Buddy eine Bearbeiten in Visual Studio zu erstellen, ziehen Sie zuerst ein Bearbeitungssteuerelement zum Dialogfeld oder Fenster, und ziehen Sie dann ein Drehfeld-Steuerelement. Wählen Sie das Drehfeld-Steuerelement, und legen seine **Auto-Buddy** und **Buddy-Integer festgelegt** Eigenschaften **"true"**. Legen Sie auch die **Ausrichtung** Eigenschaft ein. **Rechtsbündig** liegt meist daran ist. Mit diesen Einstellungen wird das Bearbeitungssteuerelement als Buddy-Fensters festgelegt, weil er direkt das Bearbeitungssteuerelement in der Aktivierreihenfolge vorangestellt. Das Bearbeitungssteuerelement Zeigt ganze Zahlen, und das Drehfeld-Steuerelement auf der rechten Seite des Bearbeitungssteuerelements eingebettet ist. Sie können optional, den gültigen Bereich für das Drehfeld-Steuerelement festlegen, mit der [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) Methode. Keine Ereignishandler sind erforderlich, für die Kommunikation zwischen den Drehfeld-Steuerelement und Buddy-Fenster, da sie Daten direkt austauschen. Wenn Sie ein Drehfeld-Steuerelement zu einem anderen Zweck verwenden, z. B. über eine Abfolge von Windows oder Dialogfelder, um einen Bildlauf fügen Sie einen Handler für die Nachricht UDN_DELTAPOS hinzu und führen Sie die benutzerdefinierte Aktion vorhanden.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

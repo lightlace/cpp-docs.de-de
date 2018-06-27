@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1dada4601b7e20dd4e05af861d48099ce2391c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385228"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950979"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 Diese exemplarische Vorgehensweise zeigt, wie die **MFC-Anwendung-Assistent** zum Erstellen einer Anwendung, die ein Menüband in der Standardeinstellung verfügt. Sie können das Menüband anschließend erweitern, indem Sie Hinzufügen einer **benutzerdefinierte** Menübandkategorie, die verfügt über eine **Favoriten** Bereich, und fügen einige häufig verwendete Befehle in den Bereich des Menübands.  
@@ -32,7 +32,7 @@ Diese exemplarische Vorgehensweise zeigt, wie die **MFC-Anwendung-Assistent** zu
   
 1.  Verwenden der **MFC-Anwendung-Assistent** zum Erstellen einer MFC_Anwendung, die ein Menüband verfügt. Zum Ausführen des Assistenten die **Datei** Sie im Menü **neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  In der **neues Projekt** Dialogfeld erweitern Sie die **Visual C++** Knoten unter **installierte Vorlagen**Option **MFC**, und wählen Sie dann  **MFC-Anwendung**. Geben Sie einen Namen für das Projekt, z. B. `MFCRibbonApp`, und klicken Sie dann auf **OK**.  
+2.  In der **neues Projekt** Dialogfeld erweitern Sie die **Visual C++** Knoten unter **installierte Vorlagen**Option **MFC**, und wählen Sie dann  **MFC-Anwendung**. Geben Sie einen Namen für das Projekt, z. B. *MFCRibbonApp*, und klicken Sie dann auf **OK**.  
   
 3.  Auf der ersten Seite des der **MFC-Anwendung-Assistent**, klicken Sie auf **Weiter**.  
   
@@ -40,7 +40,7 @@ Diese exemplarische Vorgehensweise zeigt, wie die **MFC-Anwendung-Assistent** zu
   
 5.  Auf der **Verbunddokumente** Seite, stellen Sie sicher, dass **keine** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
   
-6.  Auf der **Eigenschaften für Dokumentvorlagen** Seite in der **Dateierweiterung** geben eine Dateinamenerweiterung für Dokumente, die diese Anwendung erstellt werden, z. B. `mfcrbnapp`. Klicken Sie auf **Weiter**.  
+6.  Auf der **Eigenschaften für Dokumentvorlagen** Seite in der **Dateierweiterung** geben eine Dateinamenerweiterung für Dokumente, die diese Anwendung erstellt werden, z. B. *Mfcrbnapp*. Klicken Sie auf **Weiter**.  
   
 7.  Auf der **Datenbankunterstützung** Seite, stellen Sie sicher, dass **keine** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
   
@@ -62,14 +62,14 @@ Diese exemplarische Vorgehensweise zeigt, wie die **MFC-Anwendung-Assistent** zu
   
      Eine Kategorie aus, die die Beschriftung besitzt **Category1** wird erstellt. Standardmäßig enthält die Kategorie einen Bereich.  
   
-     Mit der rechten Maustaste **Category1** , und klicken Sie dann auf **Eigenschaften**. In der **Eigenschaften** ändern **Beschriftung** auf `Custom`.  
+     Mit der rechten Maustaste **Category1** , und klicken Sie dann auf **Eigenschaften**. In der **Eigenschaften** ändern **Beschriftung** auf *benutzerdefinierte*.  
   
      Die **große Bilder** und **kleine Bilder** Eigenschaften geben Sie die Bitmaps, die als Symbole für die Menübandelemente in dieser Kategorie verwendet werden. Da die Erläuterungen zum Erstellen von benutzerdefinierten Bitmaps über den Rahmen dieser exemplarischen Vorgehensweise hinausgehen, verwenden Sie einfach die vom Assistenten erstellten Bitmaps erneut. Kleine Bitmaps sind 16 Pixel x 16 Pixel. Für kleine Bilder verwenden Sie die Bitmaps, auf die über die Ressourcen-ID IDB_FILESMALL zugegriffen wird. Große Bitmaps sind 32 Pixel x 32 Pixel. Für große Bilder verwenden Sie die Bitmaps, auf die über die Ressourcen-ID IDB_FILELARGE zugegriffen wird.  
   
     > [!NOTE]
     >  In HDPI-Anzeigen, die mehr Pixel pro Zoll enthalten, werden automatisch die HDPI-Versionen der Bilder verwendet.  
   
-3.  Passen Sie danach den Bereich an. Bereiche werden zum Gruppieren von Elementen verwendet, die sich logisch aufeinander beziehen. Z. B. auf die **Home** Registerkarte dieser Anwendung die **Ausschneiden**, **Kopie**, und **einfügen** Befehle alle befinden sich auf die  **Zwischenablage** Bereich. Um den Bereich anzupassen, Maustaste **Panel1** , und klicken Sie dann auf **Eigenschaften**. In der **Eigenschaften** ändern **Beschriftung** auf `Favorites`.  
+3.  Passen Sie danach den Bereich an. Bereiche werden zum Gruppieren von Elementen verwendet, die sich logisch aufeinander beziehen. Z. B. auf die **Home** Registerkarte dieser Anwendung die **Ausschneiden**, **Kopie**, und **einfügen** Befehle alle befinden sich auf die  **Zwischenablage** Bereich. Um den Bereich anzupassen, Maustaste **Panel1** , und klicken Sie dann auf **Eigenschaften**. In der **Eigenschaften** ändern **Beschriftung** auf *Favoriten*.  
   
      Sie können angeben, die **Abbildindex** des Panels. Diese Zahl gibt an, das Symbol, das angezeigt wird, wenn der Menübandbereich hinzugefügt wird die **Symbolleiste für den Schnellzugriff**. Das Symbol wird nicht im Menübandbereich selbst angezeigt.  
   
@@ -83,9 +83,9 @@ Diese exemplarische Vorgehensweise zeigt, wie die **MFC-Anwendung-Assistent** zu
   
      Zum Erstellen der **Drucken** Schaltfläche, ziehen Sie ein schaltflächentool in den Bereich.  
   
-     In der **Eigenschaften** Ändern der **ID** Eigenschaft **ID_FILE_PRINT**, die sollte bereits definiert. Änderung **Beschriftung** auf `Print`. Änderung **Image Index** auf `4`.  
+     In der **Eigenschaften** Ändern der **ID** Eigenschaft **ID_FILE_PRINT**, die sollte bereits definiert. Änderung **Beschriftung** auf *Drucken*. Änderung **Image Index** auf *4*.  
   
-     Zum Erstellen der **Schnelldruck** Schaltfläche, klicken Sie auf Spalte mit den Eigenschaftswerten neben **Menüelemente**, und klicken Sie dann auf die Auslassungspunkte (**...** ). In der **Elemente-Editor**, klicken Sie auf die unbeschriftete **hinzufügen** um ein Menüelement zu erstellen. In der **Eigenschaften** ändern **Beschriftung** auf `Quick Print`, **ID** auf `ID_FILE_PRINT_DIRECT`, und **Image** auf `5` . Die Bildeigenschaft gibt das Symbol für Schnelldruck in der IDB_FILESMALL-Bitmapressource an.  
+     Zum Erstellen der **Schnelldruck** Schaltfläche, klicken Sie auf Spalte mit den Eigenschaftswerten neben **Menüelemente**, und klicken Sie dann auf die Auslassungspunkte (**...** ). In der **Elemente-Editor**, klicken Sie auf die unbeschriftete **hinzufügen** um ein Menüelement zu erstellen. In der **Eigenschaften** ändern **Beschriftung** auf *Schnelldruck*, **ID** auf *ID_FILE_PRINT_DIRECT*, und **Image** auf *5*. Die Bildeigenschaft gibt das Symbol für Schnelldruck in der IDB_FILESMALL-Bitmapressource an.  
   
 3.  Um zu überprüfen, ob die Schaltflächen zum Menübandbereich hinzugefügt wurden, erstellen Sie die Anwendung, und führen Sie sie aus. Um die Anwendung zu erstellen. die **erstellen** Menü klicken Sie auf **Projektmappe**. Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung, indem Sie auf **Debuggen** auf die **Debuggen** Menü. Die **Drucken** Schaltfläche und das Kombinationsfeld Feld der **Favoriten** Bereich auf die **benutzerdefinierte** Menüband auf der Registerkarte angezeigt werden soll.  
   

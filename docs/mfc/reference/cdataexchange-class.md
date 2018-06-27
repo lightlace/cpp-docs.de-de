@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368936"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953346"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange-Klasse
 Unterstützt die Routinen für den Dialogdatenaustausch (Dialog Data Exchange, DDX) und die Dialogfelddatenvalidierung (Dialog Data Validation, DDV), die von den Microsoft Foundation-Klassen verwendet werden.  
@@ -75,7 +75,7 @@ class CDataExchange
   
  Verwenden Sie diese Klasse aus, wenn Sie Daten Exchange Routinen für benutzerdefinierte Datentypen oder Steuerelemente, schreiben oder wenn Sie eine eigene datenvalidierungsroutine schreiben. Weitere Informationen über Ihre eigenen DDX- und DDV-Routinen schreiben, finden Sie unter [technischen Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfelder](../../mfc/dialog-boxes.md).  
   
- Ein `CDataExchange` Objekt stellt die Kontextinformationen für DDX- und DDV auszuführenden platzieren erforderlich. Das Flag `m_bSaveAndValidate` ist **"false"** Wenn DDX füllen die Anfangswerte für Dialogfeld-Steuerelemente aus Datenmember verwendet wird. Das Flag `m_bSaveAndValidate` ist **"true"** Wenn DDX verwendet wird, legen Sie die aktuellen Werte der Dialogfeld-Steuerelemente in Datenmember und wenn DDV verwendet wird, um die Datenwerte zu überprüfen. Wenn die DDV-Überprüfung ein Fehler auftritt, wird die DDV-Prozedur ein Meldungsfeld erläutern die Eingabefehler angezeigt. Ruft die Prozedur DDV dann **fehlschlagen** den Fokus auf das problematische Steuerelement zurückgesetzt und löst eine Ausnahme aus, um die Überprüfung abzubrechen.  
+ Ein `CDataExchange` Objekt stellt die Kontextinformationen für DDX- und DDV auszuführenden platzieren erforderlich. Das Flag *M_bSaveAndValidate* ist **"false"** Wenn DDX füllen die Anfangswerte für Dialogfeld-Steuerelemente aus Datenmember verwendet wird. Das Flag *M_bSaveAndValidate* ist **"true"** Wenn DDX verwendet wird, legen Sie die aktuellen Werte der Dialogfeld-Steuerelemente in Datenmember und wenn DDV verwendet wird, um die Datenwerte zu überprüfen. Wenn die DDV-Überprüfung ein Fehler auftritt, wird die DDV-Prozedur ein Meldungsfeld erläutern die Eingabefehler angezeigt. Ruft die Prozedur DDV dann `Fail` den Fokus auf das problematische Steuerelement zurückgesetzt und löst eine Ausnahme aus, um die Überprüfung abzubrechen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CDataExchange`  
@@ -96,7 +96,7 @@ CDataExchange(
  *pDlgWnd*  
  Ein Zeiger auf das übergeordnete Fenster, das das Steuerelement enthält. Dies ist normalerweise eine [CDialog](../../mfc/reference/cdialog-class.md)-abgeleitetes Objekt.  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  Wenn **"true"**, dieses Objekt Daten überprüft und dann auf die Mitglieder können Daten aus den Steuerelementen geschrieben. Wenn **"false"**, dieses Objekt wird Daten von Mitgliedern zu Steuerelementen bewegt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -113,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- **Fehlschlagen** stellt den Fokus und Auswahl an das Steuerelement, dessen Überprüfung ist fehlgeschlagen (wenn ein Steuerelement zum Wiederherstellen) wieder her. **Fehlschlagen** löst dann eine Ausnahme vom Typ [CUserException](../../mfc/reference/cuserexception-class.md) zum Beenden des Überprüfungsprozesses. Die Ausnahme bewirkt, dass ein Meldungsfeld, einer Beschreibung des Fehlers angezeigt werden. Wenn DDV-Validierung fehlgeschlagen ist, kann der Benutzer Daten im betreffenden Steuerelement erneut ein.  
+ `Fail` stellt Sie den Fokus und Auswahl an das Steuerelement, dessen Überprüfung ist fehlgeschlagen (wenn ein Steuerelement zum Wiederherstellen) wieder her. `Fail` Klicken Sie dann löst eine Ausnahme vom Typ [CUserException](../../mfc/reference/cuserexception-class.md) zum Beenden des Überprüfungsprozesses. Die Ausnahme bewirkt, dass ein Meldungsfeld, einer Beschreibung des Fehlers angezeigt werden. Wenn DDV-Validierung fehlgeschlagen ist, kann der Benutzer Daten im betreffenden Steuerelement erneut ein.  
   
- In einer Implementierung der benutzerdefinierten DDV-Routinen können Aufrufen **fehlschlagen** aus ihren Routinen, die bei einem Überprüfungsfehler fehlschlägt.  
+ In einer Implementierung der benutzerdefinierten DDV-Routinen können Aufrufen `Fail` aus ihren Routinen, die bei einem Überprüfungsfehler fehlschlägt.  
   
  Weitere Informationen über Ihre eigenen DDX- und DDV-Routinen schreiben, finden Sie unter [technischen Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
   
@@ -153,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDC`  
+ *nIDC*  
  Die ID des Steuerelements für DDX oder DDV vorbereitet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -176,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDC`  
+ *nIDC*  
  Die ID des Bearbeitungssteuerelements für DDX oder DDV vorbereitet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -199,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDC`  
+ *nIDC*  
  Die ID des OLE-Steuerelements für DDX oder DDV vorbereitet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  

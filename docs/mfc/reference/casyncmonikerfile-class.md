@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 765f88ef021b333a563fd92f7e9c7806960902e1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356011"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956982"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile-Klasse
 Stellt Funktionalität für die Verwendung von asynchronen Monikern in ActiveX-Steuerelementen (früher OLE-Steuerelemente) bereit.  
@@ -121,7 +121,7 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Werden keine erstellt die `IBindHost` Schnittstelle. `IBindHost` wird verwendet, nur dann, wenn Sie ihn im Angeben der **öffnen** Memberfunktion.  
+ Werden keine erstellt die `IBindHost` Schnittstelle. `IBindHost` wird verwendet, nur dann, wenn Sie ihn im Angeben der `Open` Memberfunktion.  
   
  Eine Beschreibung der `IBindHost` -Schnittstelle, finden Sie im Windows SDK.  
   
@@ -143,16 +143,16 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pUnkControlling`  
- Ein Zeiger auf die controlling Unknown (die äußere **IUnknown**) oder **NULL** Aggregation nicht mehr verwendet wird.  
+ *pUnkControlling*  
+ Ein Zeiger auf die controlling Unknown (die äußere `IUnknown`) oder **NULL** Aggregation nicht mehr verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn `pUnkControlling` nicht **NULL**, die Funktion gibt einen Zeiger auf die innere **IUnknown** auf eine neue COM-Unterstützung `IBindStatusCallback`. Wenn `pUnkControlling` ist **NULL**, die Funktion gibt einen Zeiger auf eine **IUnknown** auf eine neue COM-Unterstützung `IBindStatusCallback`.  
+ Wenn *pUnkControlling* nicht **NULL**, die Funktion gibt einen Zeiger auf die innere `IUnknown` auf eine neue COM-Unterstützung `IBindStatusCallback`. Wenn `pUnkControlling` ist **NULL**, die Funktion gibt einen Zeiger auf eine `IUnknown` auf eine neue COM-Unterstützung `IBindStatusCallback`.  
   
 ### <a name="remarks"></a>Hinweise  
- `CAsyncMonikerFile` erfordert ein COM-Objekt, das implementiert `IBindStatusCallback`. MFC implementiert ein solches Objekt, und es aggregiert wird. Sie können außer Kraft setzen `CreateBindStatusCallback` eigene COM-Objekt zurückgegeben. Das COM-Objekt kann MFC Implementierung aggregieren, durch den Aufruf `CreateBindStatusCallback` mit der controlling Unknown COM-Objekts. COM-Objekte implementiert, mit der `CCmdTarget` COM-Unterstützung kann rufen Sie die steuernde unbekannte mithilfe **CCmdTarget::GetControllingUnknown**.  
+ `CAsyncMonikerFile` erfordert ein COM-Objekt, das implementiert `IBindStatusCallback`. MFC implementiert ein solches Objekt, und es aggregiert wird. Sie können außer Kraft setzen `CreateBindStatusCallback` eigene COM-Objekt zurückgegeben. Das COM-Objekt kann MFC Implementierung aggregieren, durch den Aufruf `CreateBindStatusCallback` mit der controlling Unknown COM-Objekts. COM-Objekte implementiert, mit der `CCmdTarget` COM-Unterstützung kann rufen Sie die steuernde unbekannte mithilfe `CCmdTarget::GetControllingUnknown`.  
   
- Klicken Sie alternativ das COM-Objekt durch Aufrufen von MFC Implementierung delegieren kann **CreateBindStatusCallback (NULL)**.  
+ Klicken Sie alternativ das COM-Objekt durch Aufrufen von MFC Implementierung delegieren kann `CreateBindStatusCallback( NULL )`.  
   
  [CAsyncMonikerFile::Open](#open) Aufrufe `CreateBindStatusCallback`.  
   
@@ -166,7 +166,7 @@ virtual DWORD GetBindInfo() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ruft die Einstellungen ab **IBindStatusCallBack**. Eine Beschreibung der `IBindStatusCallback` -Schnittstelle, finden Sie im Windows SDK.  
+ Ruft die Einstellungen ab `IBindStatusCallBack`. Eine Beschreibung der `IBindStatusCallback` -Schnittstelle, finden Sie im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung legt fest, die Bindung auf einem Speichermedium (einen Stream) zu verwenden und so verwenden Sie das Modell datenpush-asynchron sein. Überschreiben Sie diese Funktion, wenn Sie das Verhalten der Bindung ändern möchten.  
@@ -184,7 +184,7 @@ IBinding* GetBinding() const;
  Ein Zeiger auf die `IBinding` Schnittstelle bereitgestellt, wenn asynchrone Übertragung beginnt. Gibt **NULL** Wenn aus irgendeinem Grund die Übertragung asynchron hergestellt werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Dadurch können Sie steuern, die die Datenübertragung Prozess über den `IBinding` -Schnittstelle ein, z. B. mit **IBinding::Abort**, **IBinding::Pause**, und **IBinding::Resume**.  
+ Dadurch können Sie steuern, die die Datenübertragung Prozess über den `IBinding` -Schnittstelle ein, z. B. mit `IBinding::Abort`, `IBinding::Pause`, und `IBinding::Resume`.  
   
  Eine Beschreibung der `IBinding` -Schnittstelle, finden Sie im Windows SDK.  
   
@@ -209,7 +209,7 @@ virtual LONG GetPriority() const;
  Die Priorität, an der der asynchrone Übertragung stattfindet. Eines der standardmäßigen Thread Priorität Flags: **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**,  **THREAD_PRIORITY_IDLE**, **Rangfolge von THREAD_PRIORITY_LOWEST**, **THREAD_PRIORITY_NORMAL**, und **THREAD_PRIORITY_TIME_CRITICAL**. Finden Sie im Windows-Funktion [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) eine Beschreibung dieser Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetPriority` Sollte nicht direkt aufgerufen werden. **THREAD_PRIORITY_NORMAL** von die standardmäßige Implementierung zurückgegeben wird.  
+ `GetPriority` sollte nicht direkt aufgerufen werden. **THREAD_PRIORITY_NORMAL** von die standardmäßige Implementierung zurückgegeben wird.  
   
 ##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  Ruft eine asynchrone Moniker `OnDataAvailable` binden Sie um die Daten an den Client bereitstellen, sobald sie verfügbar sind, während der asynchronen Vorgänge.  
@@ -219,7 +219,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwSize`  
+ *dwSize*  
  Die kumulierte Datenmenge (in Byte) seit dem Beginn der Bindung zur Verfügung. Kann 0 (null), der angibt, dass die Menge der Daten nicht an den Vorgang relevant ist oder keine bestimmten Betrag verfügbar war.  
   
  *bscfFlag*  
@@ -259,47 +259,47 @@ virtual void OnProgress(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ulProgress`  
- Gibt den aktuellen Status der relativ zum erwarteten maximalen angegeben, dem Bindungsvorgang `ulProgressMax`.  
+ *ulProgress*  
+ Gibt den aktuellen Status der relativ zum erwarteten maximalen angegeben, dem Bindungsvorgang *UlProgressMax*.  
   
- `ulProgressMax`  
- Gibt an, die erwartete maximale Wert des `ulProgress` für die Dauer der Aufrufe an `OnProgress` für diesen Vorgang.  
+ *ulProgressMax*  
+ Gibt an, die erwartete maximale Wert des *UlProgress* für die Dauer der Aufrufe an `OnProgress` für diesen Vorgang.  
   
- `ulStatusCode`  
+ *ulStatusCode*  
  Enthält zusätzliche Informationen über den Status des Bindungsvorgangs. Gültige Werte stammen aus den `BINDSTATUS` Enumeration. Mögliche Werte finden Sie unter "Hinweise".  
   
- `szStatusText`  
- Informationen zum aktuellen Status, abhängig vom Wert `ulStatusCode`. Mögliche Werte finden Sie unter "Hinweise".  
+ *szStatusText*  
+ Informationen zum aktuellen Status, abhängig vom Wert *UlStatusCode*. Mögliche Werte finden Sie unter "Hinweise".  
   
 ### <a name="remarks"></a>Hinweise  
- Mögliche Werte für `ulStatusCode` (und die `szStatusText` für jeden Wert) sind:  
+ Mögliche Werte für *UlStatusCode* (und die *SzStatusText* für jeden Wert) sind:  
   
  **BINDSTATUS_FINDINGRESOURCE**  
- Die Bind-Operation findet die Ressource, die das Objekt oder die speicherplatzbegrenzung auf enthält. Die `szStatusText` enthält den Anzeigenamen der zu durchsuchenden Ressource für (z. B. "www.microsoft.com").  
+ Die Bind-Operation findet die Ressource, die das Objekt oder die speicherplatzbegrenzung auf enthält. Die *SzStatusText* enthält den Anzeigenamen der zu durchsuchenden Ressource für (z. B. "www.microsoft.com").  
   
  **BINDSTATUS_CONNECTING**  
- Die Bind-Operation wird auf die Ressource eine Verbindung herstellen, der das Objekt oder die speicherplatzbegrenzung enthält. Die `szStatusText` enthält den Anzeigenamen der Ressource, die aktuell mit verbunden sind (z. B. eine IP-Adresse).  
+ Die Bind-Operation wird auf die Ressource eine Verbindung herstellen, der das Objekt oder die speicherplatzbegrenzung enthält. Die *SzStatusText* enthält den Anzeigenamen der Ressource, die aktuell mit verbunden sind (z. B. eine IP-Adresse).  
   
  **BINDSTATUS_SENDINGREQUEST**  
- Die Bind-Operation wird das Objekt oder die speicherplatzbegrenzung zu angefordert. Die `szStatusText` enthält den Anzeigenamen des Objekts (z. B. ein Dateiname).  
+ Die Bind-Operation wird das Objekt oder die speicherplatzbegrenzung zu angefordert. Die *SzStatusText* enthält den Anzeigenamen des Objekts (z. B. ein Dateiname).  
   
  **BINDSTATUS_REDIRECTING**  
- Die Bind-Operation wurde auf einen anderen Datenspeicherort umgeleitet. Die `szStatusText` enthält den Anzeigenamen für den neuen Datenspeicherort.  
+ Die Bind-Operation wurde auf einen anderen Datenspeicherort umgeleitet. Die *SzStatusText* enthält den Anzeigenamen für den neuen Datenspeicherort.  
   
  **BINDSTATUS_USINGCACHEDCOPY**  
- Die Bind-Operation wird das angeforderte Objekt oder Speicher über eine zwischengespeicherte Kopie abrufen. Die `szStatusText` ist **NULL**.  
+ Die Bind-Operation wird das angeforderte Objekt oder Speicher über eine zwischengespeicherte Kopie abrufen. Die *SzStatusText* ist **NULL**.  
   
  **BINDSTATUS_BEGINDOWNLOADDATA**  
- Die Bind-Operation begonnen hat, das Objekt oder die speicherplatzbegrenzung zu empfangen. Die `szStatusText` enthält den Anzeigenamen des Datenspeicherorts.  
+ Die Bind-Operation begonnen hat, das Objekt oder die speicherplatzbegrenzung zu empfangen. Die *SzStatusText* enthält den Anzeigenamen des Datenspeicherorts.  
   
  **BINDSTATUS_DOWNLOADINGDATA**  
- Bindung weiterhin auf das Objekt oder die speicherplatzbegrenzung zu erhalten. Die `szStatusText` enthält den Anzeigenamen des Datenspeicherorts.  
+ Bindung weiterhin auf das Objekt oder die speicherplatzbegrenzung zu erhalten. Die *SzStatusText* enthält den Anzeigenamen des Datenspeicherorts.  
   
  **BINDSTATUS_ENDDOWNLOADDATA**  
- Die Bind-Operation wurde das Objekt oder die speicherplatzbegrenzung zu empfangen. Die `szStatusText` enthält den Anzeigenamen des Datenspeicherorts.  
+ Die Bind-Operation wurde das Objekt oder die speicherplatzbegrenzung zu empfangen. Die *SzStatusText* enthält den Anzeigenamen des Datenspeicherorts.  
   
  **BINDSTATUS_CLASSIDAVAILABLE**  
- Eine Instanz des Objekts an wird nur erstellt werden. Die `szStatusText` bietet die CLSID des neuen Objekts im Zeichenfolgenformat, sodass die Möglichkeit, die den Bindungsvorgang "Abbrechen" bei Bedarf.  
+ Eine Instanz des Objekts an wird nur erstellt werden. Die *SzStatusText* bietet die CLSID des neuen Objekts im Zeichenfolgenformat, sodass die Möglichkeit, die den Bindungsvorgang "Abbrechen" bei Bedarf.  
   
 ##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  Überschreiben Sie diese Funktion in Ihren abgeleiteten Klassen aus, um Aktionen durchzuführen, wenn die Bindung neu gestartet wird.  
@@ -319,7 +319,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hresult`  
+ *HRESULT*  
  Ein `HRESULT` also den Fehler oder Warnungswert.  
   
  *szErrort*  
@@ -374,23 +374,23 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszURL`  
+ *lpszURL*  
  Ein Zeiger auf die Datei, die asynchron geöffnet werden. Die Datei kann eine beliebige gültige URL oder Dateiname sein.  
   
- `pError`  
+ *pError*  
  Ein Zeiger auf die Datei Ausnahmen. Im Falle eines Fehlers wird es auf die Ursache festgelegt werden.  
   
- `pMoniker`  
- Ein Zeiger auf die Schnittstelle für die asynchrone Moniker `IMoniker`, ein Moniker ist präzise, die Sie abrufen können, mit der Kombination aus den Moniker des Dokuments wird **IOleClientSite::GetMoniker (** *OLEWHICHMK_ CONTAINER* **)**, und ein Moniker, der aus dem Pfadnamen erstellt. Das Steuerelement kann diesen Moniker Binden verwenden, jedoch ist dies nicht der verwendete Moniker, den des Steuerelements gespeichert werden soll.  
+ *pMoniker*  
+ Ein Zeiger auf die Schnittstelle für die asynchrone Moniker `IMoniker`, ein Moniker ist präzise, die Sie abrufen können, mit der Kombination aus den Moniker des Dokuments wird `IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`, und ein Moniker, der aus dem Pfadnamen erstellt. Das Steuerelement kann diesen Moniker Binden verwenden, jedoch ist dies nicht der verwendete Moniker, den des Steuerelements gespeichert werden soll.  
   
  *pBindHost*  
- Ein Zeiger auf die `IBindHost` -Schnittstelle, die verwendet wird, um den Moniker aus einem potenziell relativen Pfadnamen zu erstellen. Wenn der Bind-Host ungültig ist oder enthält keinen Moniker ist, wird standardmäßig der Aufruf zum **öffnen (** `lpszFileName` **,**`pError`**)**. Eine Beschreibung der `IBindHost` -Schnittstelle, finden Sie im Windows SDK.  
+ Ein Zeiger auf die `IBindHost` -Schnittstelle, die verwendet wird, um den Moniker aus einem potenziell relativen Pfadnamen zu erstellen. Wenn der Bind-Host ungültig ist oder enthält keinen Moniker ist, wird standardmäßig der Aufruf zum `Open(lpszFileName,pError)`. Eine Beschreibung der `IBindHost` -Schnittstelle, finden Sie im Windows SDK.  
   
- `pServiceProvider`  
- Ein Zeiger auf die `IServiceProvider`-Schnittstelle. Wenn der Dienstanbieter ungültig ist, oder geben Sie den Dienst für nicht `IBindHost`, der Aufruf wird standardmäßig auf **öffnen (** `lpszFileName` **,**`pError`**)**.  
+ *pServiceProvider*  
+ Ein Zeiger auf die `IServiceProvider`-Schnittstelle. Wenn der Dienstanbieter ungültig ist, oder geben Sie den Dienst für nicht `IBindHost`, der Aufruf wird standardmäßig auf `Open(lpszFileName,pError)`.  
   
  *pUnknown*  
- Ein Zeiger auf die **IUnknown** Schnittstelle. Wenn `IServiceProvider` gefunden wird, wird die Funktion fragt für `IBindHost`. Wenn der Dienstanbieter ungültig ist, oder geben Sie den Dienst für nicht `IBindHost`, der Aufruf wird standardmäßig auf **öffnen (** `lpszFileName` **,**`pError`**)**.  
+ Ein Zeiger auf die `IUnknown`-Schnittstelle. Wenn `IServiceProvider` gefunden wird, wird die Funktion fragt für `IBindHost`. Wenn der Dienstanbieter ungültig ist, oder geben Sie den Dienst für nicht `IBindHost`, der Aufruf wird standardmäßig auf `Open(lpszFileName,pError)`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Datei erfolgreich geöffnet wird; andernfalls 0.  
@@ -398,7 +398,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>Hinweise  
  Dieser Aufruf initiiert des Bindungsvorgangs.  
   
- Sie können eine URL oder einen Dateinamen für die `lpszURL` Parameter. Zum Beispiel:  
+ Sie können eine URL oder einen Dateinamen für die *LpszURL* Parameter. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

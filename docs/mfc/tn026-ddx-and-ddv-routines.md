@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386053"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955891"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX- und DDV-Routinen
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  Eine Liste aller dialogdatenaustauschroutinen und zur Validierung der Dialogfelddaten bereitgestellt, die mit MFC finden Sie unter "afxdd_.h".  
   
- Dialogfelddaten handelt es sich um: Elementdaten in die **CMyDialog** Klasse. Es ist nicht in einer Struktur oder ähnliches gespeichert.  
+ Dialogfelddaten handelt es sich um: Elementdaten in die `CMyDialog` Klasse. Es ist nicht in einer Struktur oder ähnliches gespeichert.  
   
 ## <a name="notes"></a>Hinweise  
  Obwohl wir diese Dialogfelddaten"" aufrufen, stehen alle Funktionen in einer Klasse abgeleitet `CWnd` und sind nicht auf nur Dialoge beschränkt.  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>Wie funktioniert es  
  Sie müssen sich nicht um Folgendes zu Dialogfelddaten verwenden. Allerdings hilft Grundlegendes zur Funktionsweise im Hintergrund eine eigene Prozedur Exchange oder Validierung schreiben Ihnen.  
   
- Die `DoDataExchange` Memberfunktion ähnelt in vielerlei Hinsicht der `Serialize` Memberfunktion - es dient zum Abrufen oder Festlegen von Daten zu/von einem externen Formular (in diesem Fall in einem Dialogfeld-Steuerelemente) vom bzw. auf Memberdaten in der Klasse. Die `pDX` Parameter ist der Kontext dafür Datenaustausch und ähnelt der `CArchive` Parameter `CObject::Serialize`. Die `pDX` (eine `CDataExchange` Objekt) verfügt über eine Richtung viele ähnliche flag `CArchive` verfügt über ein Kennzeichen Richtung:  
+ Die `DoDataExchange` Memberfunktion ähnelt in vielerlei Hinsicht der `Serialize` Memberfunktion - es dient zum Abrufen oder Festlegen von Daten zu/von einem externen Formular (in diesem Fall in einem Dialogfeld-Steuerelemente) vom bzw. auf Memberdaten in der Klasse. Die *pDX* Parameter ist der Kontext dafür Datenaustausch und ähnelt der `CArchive` Parameter `CObject::Serialize`. Die *pDX* (eine `CDataExchange` Objekt) verfügt über eine Richtung viele ähnliche flag `CArchive` verfügt über ein Kennzeichen Richtung:  
   
--   Wenn **! M_bSaveAndValidate**, laden Sie den Datenzustand in die Steuerelemente.  
+-   If! *M_bSaveAndValidate*, laden Sie den Datenzustand in die Steuerelemente.  
   
--   Wenn `m_bSaveAndValidate`, legen Sie den Datenzustand aus den Steuerelementen.  
+-   Wenn *M_bSaveAndValidate*, legen Sie den Datenzustand aus den Steuerelementen.  
   
- Überprüfung erfolgt nur, wenn `m_bSaveAndValidate` festgelegt ist. Der Wert der `m_bSaveAndValidate` richtet sich nach dem BOOL-Parameter `CWnd::UpdateData`.  
+ Überprüfung erfolgt nur, wenn *M_bSaveAndValidate* festgelegt ist. Der Wert der *M_bSaveAndValidate* richtet sich nach dem BOOL-Parameter `CWnd::UpdateData`.  
   
  Es gibt drei weitere interessante `CDataExchange` Elemente:  
   
-- `m_pDlgWnd`: Das Fenster (normalerweise ein Dialogfeld "), das die Steuerelemente enthält. Dadurch wird verhindert, dass Aufrufer DDX_ und DDV_ globalen Funktionen "this" übergeben müssen jede DDX-/DDV-Routine.  
+- *M_pDlgWnd*: das Fenster (normalerweise ein Dialogfeld "), die Steuerelemente enthält. Dadurch wird verhindert, dass Aufrufer DDX_ und DDV_ globalen Funktionen "this" übergeben müssen jede DDX-/DDV-Routine.  
   
 - `PrepareCtrl`, und `PrepareEditCtrl`: bereitet ein dialogsteuerelement für den Datenaustausch. Speichert dieses Steuerelement Handle zum Festlegen des Fokus, wenn es sich bei einem Überprüfungsfehler fehlschlägt. `PrepareCtrl` wird für Steuerelemente Nonedit verwendet und `PrepareEditCtrl` für Bearbeitungssteuerelemente verwendet wird.  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  Solche willkürlicher Ausdrücke können nicht von ClassWizard nicht bearbeitet werden und sollte daher verschoben werden, außerhalb der besonderen Format Kommentare (/ / {{AFX_DATA_MAP(CMyClass)).  
   
- Haben die **DoDialogExchange** Memberfunktion enthalten Konditionelle Abschnitte oder allen anderen gültigen C++-Anweisungen mit gemischt Dialogdatenaustausch und-Validierung Funktionsaufrufe.  
+ Haben die `DoDialogExchange` Memberfunktion enthalten Konditionelle Abschnitte oder allen anderen gültigen C++-Anweisungen mit gemischt Dialogdatenaustausch und-Validierung Funktionsaufrufe.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

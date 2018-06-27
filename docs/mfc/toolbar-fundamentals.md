@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383973"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951636"
 ---
 # <a name="toolbar-fundamentals"></a>Grundlegendes über Symbolleisten
 Dieser Artikel beschreibt die grundlegende MFC-Implementierung, in dem Sie eine Standardsymbolleiste Ihrer Anwendung hinzufügen, indem Sie eine Option im Anwendungs-Assistenten auswählen kann. Zu den behandelten Themen gehören:  
@@ -56,11 +56,11 @@ Dieser Artikel beschreibt die grundlegende MFC-Implementierung, in dem Sie eine 
 -   Verwaltet die Symbolleiste, einschließlich der Fähigkeit, andocken oder verschieben.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> Die Symbolleiste im Code  
- Die Symbolleiste ist eine [CToolBar](../mfc/reference/ctoolbar-class.md) Objekt deklariert als Datenmember Ihrer Anwendung **CMainFrame** Klasse. Das heißt, ist die Symbolleistenobjekt in die Hauptframe-Fensterobjekt eingebettet. Dies bedeutet, dass MFC die Symbolleiste erstellt, wenn das Rahmenfenster erstellt und zerstört wird, wenn es das Rahmenfenster zerstört. Die folgende Deklaration der partiellen Klasse, für eine Anwendung multiple Document Interface (MDI), zeigt der Datenmember für eine eingebettete Symbolleiste und eine eingebettete Statusleiste. Darüber hinaus wird gezeigt, die Außerkraftsetzung von der `OnCreate` Memberfunktion.  
+ Die Symbolleiste ist eine [CToolBar](../mfc/reference/ctoolbar-class.md) Objekt deklariert als Datenmember Ihrer Anwendung `CMainFrame` Klasse. Das heißt, ist die Symbolleistenobjekt in die Hauptframe-Fensterobjekt eingebettet. Dies bedeutet, dass MFC die Symbolleiste erstellt, wenn das Rahmenfenster erstellt und zerstört wird, wenn es das Rahmenfenster zerstört. Die folgende Deklaration der partiellen Klasse, für eine Anwendung multiple Document Interface (MDI), zeigt der Datenmember für eine eingebettete Symbolleiste und eine eingebettete Statusleiste. Darüber hinaus wird gezeigt, die Außerkraftsetzung von der `OnCreate` Memberfunktion.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Symbolleiste Erstellung erfolgt in **CMainFrame::OnCreate**. MFC-Aufrufe [OnCreate](../mfc/reference/cwnd-class.md#oncreate) nach dem Erstellen des Fensters für den Rahmen, aber bevor er angezeigt wird. Die Standardeinstellung `OnCreate` , der Assistent für die Anwendung generiert führt die folgenden Tasks aus Symbolleiste:  
+ Symbolleiste Erstellung erfolgt in `CMainFrame::OnCreate`. MFC-Aufrufe [OnCreate](../mfc/reference/cwnd-class.md#oncreate) nach dem Erstellen des Fensters für den Rahmen, aber bevor er angezeigt wird. Die Standardeinstellung `OnCreate` , der Assistent für die Anwendung generiert führt die folgenden Tasks aus Symbolleiste:  
   
 1.  Ruft die `CToolBar` des Objekts [erstellen](../mfc/reference/ctoolbar-class.md#create) Memberfunktion zum Erstellen des zugrunde liegenden [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt.  
   
@@ -69,7 +69,7 @@ Dieser Artikel beschreibt die grundlegende MFC-Implementierung, in dem Sie eine 
 3.  Ruft die Funktionen zum Andocken, Gleitkommatyp und QuickInfos aktivieren. Weitere Informationen zu diesen aufrufen, finden Sie im Artikel [andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  Im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) enthält Abbildungen des alten und neuen MFC-Symbolleisten. Die Symbolleisten, mit denen **COldToolbar** erfordern Aufrufe in Schritt 2 `LoadBitmap` (statt `LoadToolBar`) und `SetButtons`. Die neue Symbolleisten erfordern Aufrufe von `LoadToolBar`.  
+>  Im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) enthält Abbildungen des alten und neuen MFC-Symbolleisten. Die Symbolleisten, mit denen `COldToolbar` erfordern Aufrufe in Schritt 2 `LoadBitmap` (statt `LoadToolBar`) und `SetButtons`. Die neue Symbolleisten erfordern Aufrufe von `LoadToolBar`.  
   
  Das Andocken, Gleitkommatyp und Tool Tipps Aufrufe sind optional. Sie können diese Zeilen entfernen `OnCreate` Falls gewünscht. Das Ergebnis ist eine Symbolleiste, die festen, "float" oder Redock nicht und kann nicht zum Anzeigen von QuickInfos bleibt.  
   

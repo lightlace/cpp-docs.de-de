@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367210"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955988"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox-Klasse
 Zusätzlich zur Bereitstellung der Funktionalität eines Windows-Listenfelds, die `CDragListBox` Klasse kann der Benutzer Listenfeldelemente, beispielsweise Dateinamen, innerhalb des Listenfelds verschieben.  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, das die Koordinaten des gezogenen Elements enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, das die Koordinaten des gezogenen Elements enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, das die x- und y enthält Bildschirmkoordinaten des Cursors.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
+ *nItem*  
  Nullbasierte Index der Einfügemarke.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  Gibt den nullbasierten Index der gelöschten Zeichenfolge an.  
   
- `pt`  
+ *pt*  
  Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, das die Koordinaten des Drop-Standorts enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Standardverhalten das Listenfeldelement und die Daten an den neuen Speicherort kopiert und löscht dann das ursprüngliche Element. Überschreiben Sie diese Funktion, um das Standardverhalten, z. B. das Aktivieren von Kopien der Listenfeldelemente an anderen Speicherorten in der Liste gezogen wird anpassen.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Aufruf dieser Funktion zum Abrufen des nullbasierten Indexes, der das Listenfeldelement controllerarbeitsverzeichnis `pt`.  
+ Aufruf dieser Funktion zum Abrufen des nullbasierten Indexes, der das Listenfeldelement controllerarbeitsverzeichnis *pt*.  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, das die Koordinaten eines Punkts innerhalb des Listenfelds enthält.  
   
  *bAutoScroll*  

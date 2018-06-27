@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367772"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955686"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection-Klasse
 Verwaltet die Verbindung mit einem Gopherinternetserver.  
@@ -99,32 +99,32 @@ CGopherConnection(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pSession`  
+ *pSession*  
  Ein Zeiger auf den zugehörigen [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt.  
   
- `hConnected`  
+ *hConnected*  
  Das Windows-handle von der aktuellen Internet-Sitzung.  
   
- `pstrServer`  
+ *pstrServer*  
  Ein Zeiger auf eine Zeichenfolge, die den Namen des FTP-Server enthält.  
   
- `dwContext`  
- Der Kontextbezeichner für den Vorgang. `dwContext` identifiziert den Vorgang vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie eine bestimmten Kontext-ID für den Vorgang explizit zuweisen. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden.  
+ *dwContext*  
+ Der Kontextbezeichner für den Vorgang. *DwContext* identifiziert den Vorgang vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie eine bestimmten Kontext-ID für den Vorgang explizit zuweisen. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden.  
   
- `pstrUserName`  
+ *pstrUserName*  
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des Benutzers anmelden angibt. Wenn **NULL**, der Standardwert ist anonymous.  
   
- `pstrPassword`  
- Ein Zeiger auf eine auf Null endende Zeichenfolge, die angibt, das Kennwort zur Anmeldung verwenden. Wenn beide `pstrPassword` und `pstrUserName` sind **NULL**, das anonymen Standard-Kennwort ist die e-Mail-Namen des Benutzers. Wenn `pstrPassword` ist **NULL** (oder eine leere Zeichenfolge), aber `pstrUserName` nicht **NULL**, ein leeres Kennwort verwendet. Die folgende Tabelle beschreibt das Verhalten für die vier möglichen Einstellungen der `pstrUserName` und `pstrPassword`:  
+ *pstrPassword*  
+ Ein Zeiger auf eine auf Null endende Zeichenfolge, die angibt, das Kennwort zur Anmeldung verwenden. Wenn beide *PstrPassword* und *PstrUserName* sind **NULL**, das anonymen Standard-Kennwort ist die e-Mail-Namen des Benutzers. Wenn *PstrPassword* ist **NULL** (oder eine leere Zeichenfolge), aber *PstrUserName* nicht **NULL**, ein leeres Kennwort verwendet. Die folgende Tabelle beschreibt das Verhalten für die vier möglichen Einstellungen der *PstrUserName* und *PstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|FTP-Server gesendeten Benutzernamen|Kennwort mit FTP-Server gesendet wird.|  
+|*pstrUserName*|*pstrPassword*|FTP-Server gesendeten Benutzernamen|Kennwort mit FTP-Server gesendet wird.|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL** oder ""|**NULL** oder ""|"Anonym"|Die e-Mail-Namen des Benutzers|  
-|Nicht- **NULL** Zeichenfolge|**NULL** oder ""|`pstrUserName`|" "|  
+|Nicht- **NULL** Zeichenfolge|**NULL** oder ""|*pstrUserName*|" "|  
 |**NULL** nicht- **NULL** Zeichenfolge|**FEHLER**|**FEHLER**||  
-|Nicht- **NULL** Zeichenfolge|Nicht- **NULL** Zeichenfolge|`pstrUserName`|`pstrPassword`|  
+|Nicht- **NULL** Zeichenfolge|Nicht- **NULL** Zeichenfolge|*pstrUserName*|*pstrPassword*|  
   
- `nPort`  
+ *%nPort*  
  Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -151,22 +151,22 @@ static CGopherLocator CreateLocator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pstrDisplayString`  
- Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Gopher-Dokuments oder des Verzeichnisses abgerufen werden sollen. Wenn die `pstrDisplayString` Parameter ist **NULL**, das Standardverzeichnis für das Gopher-Server zurückgegeben.  
+ *pstrDisplayString*  
+ Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Gopher-Dokuments oder des Verzeichnisses abgerufen werden sollen. Wenn die *PstrDisplayString* Parameter ist **NULL**, das Standardverzeichnis für das Gopher-Server zurückgegeben.  
   
- `pstrSelectorString`  
- Ein Zeiger auf die Auswahlzeiger-Zeichenfolge, die an den Gopherserver gesendet werden, um ein Element abgerufen werden. `pstrSelectorString` kann **NULL**.  
+ *pstrSelectorString*  
+ Ein Zeiger auf die Auswahlzeiger-Zeichenfolge, die an den Gopherserver gesendet werden, um ein Element abgerufen werden. *PstrSelectorString* kann **NULL**.  
   
  *dwGopherType*  
- Dies gibt an, ob `pstrSelectorString` bezieht sich auf ein Verzeichnis oder das Dokument, und gibt an, ob die Anforderung Gopher oder Gopher erfolgt. Finden Sie die Attribute für die Struktur [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) im Windows SDK.  
+ Dies gibt an, ob *PstrSelectorString* bezieht sich auf ein Verzeichnis oder das Dokument, und gibt an, ob die Anforderung Gopher oder Gopher erfolgt. Finden Sie die Attribute für die Struktur [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) im Windows SDK.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Ein Zeiger auf eine Zeichenfolge, die zu öffnende Datei identifiziert. Im Allgemeinen wird diese Zeichenfolge zurückgegeben, Aufrufen von [CGopherFileFind:: GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
   
  *pstrServerName*  
  Ein Zeiger auf eine Zeichenfolge, die den Gopher-Servernamen enthält.  
   
- `nPort`  
+ *%nPort*  
  Die Anzahl den Internet-Port für diese Verbindung identifiziert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -187,13 +187,13 @@ BOOL GetAttribute(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refLocator`  
+ *refLocator*  
  Ein Verweis auf eine [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt.  
   
  *strRequestedAttributes*  
  Eine durch Leerzeichen getrennte Zeichenfolge die Namen der angeforderten Attribute angeben.  
   
- `strResult`  
+ *"strResult"*  
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) , empfängt den URL-Typ.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -211,23 +211,23 @@ CGopherFile* OpenFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refLocator`  
+ *refLocator*  
  Ein Verweis auf eine [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt.  
   
- `dwFlags`  
+ *dwFlags*  
  Eine beliebige Kombination von INTERNET_FLAG_ * kennzeichnet. Finden Sie unter [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) für Weitere Informationen zu INTERNET_FLAG_\* Flags.  
   
- `pstrView`  
- Ein Zeiger auf eine Dateiansicht Zeichenfolge. Wenn mehrere Ansichten der Datei auf dem Server vorhanden sind, gibt dieser Parameter die Dateiansicht zu öffnen. Wenn `pstrView` ist **NULL**, die Standardansicht für die Datei wird verwendet.  
+ *pstrView*  
+ Ein Zeiger auf eine Dateiansicht Zeichenfolge. Wenn mehrere Ansichten der Datei auf dem Server vorhanden sind, gibt dieser Parameter die Dateiansicht zu öffnen. Wenn *PstrView* ist **NULL**, die Standardansicht für die Datei wird verwendet.  
   
- `dwContext`  
- Die Kontext-ID für die Datei geöffnet wird. Finden Sie unter **"Hinweise"** Weitere Informationen zu `dwContext`.  
+ *dwContext*  
+ Die Kontext-ID für die Datei geöffnet wird. Finden Sie unter **"Hinweise"** Weitere Informationen zu *DwContext*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die [CGopherFile](../../mfc/reference/cgopherfile-class.md) zu öffnende Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie den `dwContext`-Standard, um den Kontextbezeichner auf einen ausgewählten Wert festzulegen. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordneten der `CGopherConnection` Objekt erstellt wird, dessen [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Vorgangs bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
+ Überschreiben Sie die *DwContext* Standard, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordneten der `CGopherConnection` Objekt erstellt wird, dessen [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Vorgangs bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CInternetConnection-Klasse](../../mfc/reference/cinternetconnection-class.md)   

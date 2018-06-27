@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367392"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955442"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext-Klasse
 Unterstützt die Darstellung gestreamter Diagnoseausgaben als Klartext.  
@@ -79,7 +79,7 @@ class CDumpContext
   
  Die `CDumpContext` -Klasse verfügt über eine überladene Einfügung ( **<<**) Operator für `CObject` Zeiger, die Daten des Objekts einen Dump erstellt. Wenn Sie eine benutzerdefinierte dumpformat für ein abgeleitetes Objekt benötigen, überschreiben [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Die meisten Microsoft Foundation Classes implementieren eine überschriebene `Dump` Memberfunktion.  
   
- Die nicht von abgeleiteten Klassen `CObject`, wie z. B. `CString`, `CTime`, und `CTimeSpan`, haben ihre eigenen überladene `CDumpContext` Einfügeoperatoren als führen häufig verwendeten Strukturen, z. B. **CFileStatus**, `CPoint`, und `CRect`.  
+ Die nicht von abgeleiteten Klassen `CObject`, wie z. B. `CString`, `CTime`, und `CTimeSpan`, haben ihre eigenen überladene `CDumpContext` Einfügeoperatoren als führen häufig verwendeten Strukturen, z. B. `CFileStatus`, `CPoint`, und `CRect`.  
   
  Bei Verwendung der [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) oder [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) Makros in der Implementierung Ihrer Klasse `CObject::Dump` druckt den Namen des Ihrer `CObject`-abgeleitete Klasse. Wird hingegen Drucken `CObject`.  
   
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFile`  
+ *pFile*  
  Ein Zeiger auf die `CFile` -Objekt, das das Ziel Dump ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -180,10 +180,10 @@ void HexDump(
  *pby*  
  Ein Zeiger auf einen Puffer, der zu sichernden Bytes enthält.  
   
- `nBytes`  
+ *Anzahl_byte*  
  Die Anzahl der Bytes, die zu speichern.  
   
- `nWidth`  
+ *nWidth*  
  Maximale Anzahl von Bytes pro Zeile (nicht die Stärke der Linie Ausgabe) ausgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -223,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  Ein `CDumpContext` Verweis. Verwenden den Rückgabewert, können Sie mehrere einfügungen in einer einzelnen Zeile des Quellcodes schreiben.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Operator zum Einfügen ist überladen für `CObject` Zeiger ebenso wie für die meisten primitiven Typen. Ein Zeiger auf Zeichen führt ein Speicherabbild der Zeichenfolgeninhalt; Ein Zeiger auf `void` führt zu einer hexadezimalen Dump der Adresse nur. Ein **LONGLONG** führt zu einem Speicherabbild einer 64-Bit-Ganzzahl mit Vorzeichen; Ein **ULONGLONG** führt zu einem Speicherabbild einer 64-Bit-Ganzzahl ohne Vorzeichen.  
+ Der Operator zum Einfügen ist überladen für `CObject` Zeiger ebenso wie für die meisten primitiven Typen. Ein Zeiger auf Zeichen führt ein Speicherabbild der Zeichenfolgeninhalt; Ein Zeiger auf **"void"** führt zu einer hexadezimalen Dump der Adresse nur. Ein **LONGLONG** führt zu einem Speicherabbild einer 64-Bit-Ganzzahl mit Vorzeichen; Ein **ULONGLONG** führt zu einem Speicherabbild einer 64-Bit-Ganzzahl ohne Vorzeichen.  
   
  Bei Verwendung der `IMPLEMENT_DYNAMIC` oder `IMPLEMENT_SERIAL` Makros in der Implementierung der Klasse, und klicken Sie dann auf den Operator zum Einfügen, über `CObject::Dump`, druckt den Namen des Ihrer `CObject`-abgeleitete Klasse. Wird hingegen Drucken `CObject`. Wenn Sie überschreiben die `Dump` Funktion von der Klasse, und Sie können eine aussagekräftigere Ausgabe der Inhalt des Objekts, statt einen hexadezimalen Dump bereitzustellen.  
   

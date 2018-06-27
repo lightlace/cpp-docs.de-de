@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368981"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957077"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog-Klasse
 Ermöglicht die Standardzeichenfolge in Dateien suchen/ersetzen-Dialogfelder in der Anwendung zu implementieren.  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Einmal eine `CFindReplaceDialog` -Objekts, rufen Sie die [erstellen](#create) Memberfunktion zum Erstellen und Anzeigen des Dialogfelds "".  
   
- Verwenden der [M_fr](#m_fr) Struktur initialisieren Sie das Dialogfeld vor dem Aufruf **erstellen**. Die `m_fr` Struktur ist vom Typ [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
+ Verwenden der [M_fr](#m_fr) Struktur initialisiert werden, vor dem Aufrufen des Dialogfelds `Create`. Die `m_fr` Struktur ist vom Typ [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
   
  In der Reihenfolge für das übergeordnete Fenster in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, verwenden Sie die Windows [RegisterWindowMessage registriert](http://msdn.microsoft.com/library/windows/desktop/ms644947) Funktion, und verwenden Sie die [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) meldungszuordnung Makro in Ihrem Rahmen Fenster, in dem diese registrierte Meldung verarbeitet.  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Da die `CFindReplaceDialog` Objekt ist ein nicht modales Dialogfeld, Sie müssen es auf dem Heap erstellen, mit der `new` Operator.  
+ Da die `CFindReplaceDialog` Objekt ist ein nicht modales Dialogfeld, Sie müssen es auf dem Heap erstellen, mit der **neue** Operator.  
   
- Während der Zerstörung, versucht das Framework zum Ausführen einer `delete this` auf den Zeiger auf das Dialogfeld. Wenn Sie im Dialogfeld auf den Stapel, erstellt der `this` Zeiger ist nicht vorhanden und kann zu nicht definiertem Verhalten führen.  
+ Während der Zerstörung, versucht das Framework zum Ausführen einer **löscht** auf den Zeiger auf das Dialogfeld. Wenn Sie im Dialogfeld auf den Stapel, erstellt der **dies** Zeiger ist nicht vorhanden und kann zu nicht definiertem Verhalten führen.  
   
  Weitere Informationen zu der Konstruktion des `CFindReplaceDialog` anzuzeigen, die [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) (Übersicht). Verwenden der [CFindReplaceDialog::Create](#create) Member-Funktion, um das Dialogfeld anzuzeigen.  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Legen Sie diesen Parameter auf `TRUE` zum Anzeigen einer **suchen** (Dialogfeld). Legen Sie es auf `FALSE` zum Anzeigen einer **in Dateien suchen/ersetzen** (Dialogfeld).  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Ein Zeiger auf die Suchzeichenfolge Standardeinstellung, wenn das Dialogfeld angezeigt wird. Wenn `NULL`, des Dialogfelds "" enthält keine Standardwert zu suchende Zeichenfolge.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Ein Zeiger auf die Ersatzzeichenfolge Standardeinstellung, wenn das Dialogfeld angezeigt wird. Wenn `NULL`, des Dialogfelds "" enthält keine Standard-Ersetzungszeichenfolge.  
   
- `dwFlags`  
+ *dwFlags*  
  Ein oder mehrere Flags, die Sie verwenden können, zum Anpassen der Einstellungen im Dialogfeld mit dem bitweisen OR-Operator kombiniert. Der Standardwert ist `FR_DOWN`, was bedeutet, dass wird bei der Suche nach unten zu fortfahren. Finden Sie unter der [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) Struktur in das Windows SDK für Weitere Informationen zu diesen Flags.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Dialogfeld über- oder Besitzer Fenster. Dies ist das Fenster, das erhält die Sondermeldung gibt an, dass eine Aktion in Dateien suchen/ersetzen angefordert wird. Wenn `NULL`, das Hauptfenster der Anwendung verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lParam`  
+ *lParam*  
  Die **Lparam** an des Rahmenfensters übergebene Wert **OnFindReplace** Memberfunktion.  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcf6fd613231567cbb54b95c8be924919d93269
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e232c363da4c9bbaf7e049551f9e2915671098c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357727"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957441"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 Stellt die Funktionalität von Windows-Schaltflächensteuerelementen bereit.  
@@ -153,9 +153,9 @@ class CButton : public CWnd
   
  Darüber hinaus die [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) abgeleitete Klasse `CButton` unterstützt die Erstellung von Schaltflächen-Steuerelemente, die mit Bitmapbildern statt mit Text beschriftet. Ein `CBitmapButton` können separate Bitmaps für eine Schaltfläche des oben, unten, mit Fokus und Zustand deaktivierten.  
   
- Sie können ein Schaltflächen-Steuerelement aus einer Dialogfeldvorlage oder direkt im Code erstellen. In beiden Fällen rufen Sie zunächst den Konstruktor `CButton` zum Erstellen der `CButton` Objekt; rufen Sie anschließend die **erstellen** Memberfunktion zum Erstellen der Windows Schaltflächensteuerelement und fügen Sie es auf die `CButton` Objekt.  
+ Sie können ein Schaltflächen-Steuerelement aus einer Dialogfeldvorlage oder direkt im Code erstellen. In beiden Fällen rufen Sie zunächst den Konstruktor `CButton` zum Erstellen der `CButton` Objekt; rufen Sie anschließend die `Create` Memberfunktion zum Erstellen der Windows Schaltflächensteuerelement und fügen Sie es auf die `CButton` Objekt.  
   
- Konstruktion kann ein langwieriger Vorgang in einer abgeleiteten Klasse `CButton`. Schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen **erstellen** von innerhalb des Konstruktors.  
+ Konstruktion kann ein langwieriger Vorgang in einer abgeleiteten Klasse `CButton`. Schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen `Create` von innerhalb des Konstruktors.  
   
  Wenn Sie ein Button-Steuerelement an der übergeordnete per Windows-benachrichtigungsmeldungen behandeln möchten (normalerweise eine abgeleitete Klasse [CDialog](../../mfc/reference/cdialog-class.md)), die übergeordnete Klasse für jede Nachricht eine meldungszuordnung Eintrag und Nachrichtenhandler Memberfunktion hinzufügen.  
   
@@ -215,26 +215,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszCaption`  
+ *lpszCaption*  
  Gibt den Text für das Schaltflächen-Steuerelement.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Schaltflächen-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Schaltfläche Stile](../../mfc/reference/styles-used-by-mfc.md#button-styles) auf die Schaltfläche.  
   
- `rect`  
+ *Rect*  
  Gibt des Schaltflächen-Steuerelements Größe und Position. Es kann es sich um eine `CRect` Objekt oder eine `RECT` Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, das Schaltflächen-Steuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt das Schaltflächen-Steuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CButton` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, das erstellt des Schaltflächen-Steuerelements von Windows und fügt es der `CButton` Objekt.  
+ Sie erstellen eine `CButton` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann `Create`, das erstellt des Schaltflächen-Steuerelements von Windows und fügt es der `CButton` Objekt.  
   
  Wenn die **WS_VISIBLE** Stil angegeben ist, sendet Windows dem Schaltflächen-Steuerelement alle Nachrichten, die für die Aktivierung und die Schaltfläche "anzeigen".  
   
@@ -261,11 +261,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Eine long-Zeiger auf eine [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) Struktur. Die Struktur enthält Informationen über das Element gezeichnet werden und den Typ der Zeichnung erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Ownerdrawn-Schaltfläche verfügt über die **BS_OWNERDRAW** Satz formatieren. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein vom Besitzer gezeichnetes `CButton` Objekt. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor dem Element Funktion beendet wird.  
+ Eine Ownerdrawn-Schaltfläche verfügt über die **BS_OWNERDRAW** Satz formatieren. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein vom Besitzer gezeichnetes `CButton` Objekt. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen *LpDrawItemStruct* vor dem Element Funktion beendet wird.  
   
  Siehe auch die [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style-Werte.  
   
@@ -370,7 +370,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  Ein Zeiger auf die Bildliste des der `CButton` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `lpszNote`|Ein Zeiger auf einen Puffer, die der Aufrufer für das zuordnen und Freigeben von verwendet wird. Wenn der Rückgabewert ist `true`, enthält den Hinweis Text, der dem aktuellen Befehl Link-Steuerelement zugeordnet ist; andernfalls ist der Puffer, der Puffer ist unverändert.|  
-|[in, out] `cchNote`|Ein Zeiger auf eine Variable Ganzzahl ohne Vorzeichen.<br /><br /> Wenn diese Methode aufgerufen wird, wird die Variable enthält die Größe des Puffers, die gemäß der `lpszNote` Parameter.<br /><br /> Wenn diese Methode zurückgegeben, wenn der Rückgabewert ist `true` die Variable enthält die Größe des den Hinweis, der dem aktuellen Befehl Link-Steuerelement zugeordnet. Wenn der Rückgabewert ist `false`, die Variable enthält, die Puffergröße benötigt, um den Text aufzunehmen.|  
+|[out] *LpszNote*|Ein Zeiger auf einen Puffer, die der Aufrufer für das zuordnen und Freigeben von verwendet wird. Wenn der Rückgabewert ist `true`, enthält den Hinweis Text, der dem aktuellen Befehl Link-Steuerelement zugeordnet ist; andernfalls ist der Puffer, der Puffer ist unverändert.|  
+|[in, out] *CchNote*|Ein Zeiger auf eine Variable Ganzzahl ohne Vorzeichen.<br /><br /> Wenn diese Methode aufgerufen wird, wird die Variable enthält die Größe des Puffers, die gemäß der *LpszNote* Parameter.<br /><br /> Wenn diese Methode zurückgegeben, wenn der Rückgabewert ist `true` die Variable enthält die Größe des den Hinweis, der dem aktuellen Befehl Link-Steuerelement zugeordnet. Wenn der Rückgabewert ist `false`, die Variable enthält, die Puffergröße benötigt, um den Text aufzunehmen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  In der ersten Überladung eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt, das dem aktuellen Befehl Link-Steuerelement zugeordneten Hinweis Text enthält.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `pInfo`|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) -Struktur, die Informationen zu den aktuellen SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
+|[out] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) -Struktur, die Informationen zu den aktuellen SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `pSize`|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die die Beschreibung eines Rechtecks empfängt.|  
+|[out] *pSize*|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die die Beschreibung eines Rechtecks empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -549,7 +549,7 @@ BOOL GetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pmargin`  
+ *pmargin*  
  Ein Zeiger auf den Textrand der `CButton` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -569,7 +569,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hBitmap`  
+ *hBitmap*  
  Das Handle einer Bitmap.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -607,10 +607,10 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStyle`  
+ *nStyle*  
  Gibt an, die [Schaltfläche Stil](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- `bRedraw`  
+ *bRedraw*  
  Gibt an, ob die Schaltfläche neu gezeichnet wird. Ein Wert ungleich NULL zeichnet die Schaltfläche. Wert 0 ist nicht die Schaltfläche neu zeichnet. Die Schaltfläche mit der in der Standardeinstellung neu gezeichnet wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -627,7 +627,7 @@ void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCheck`  
+ *nPrüfen*  
  Gibt den Aktivierungszustand an. Dieser Parameter kann eine der folgenden sein:  
   
 |Wert|Bedeutung|  
@@ -650,7 +650,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hCursor`  
+ *hCursor*  
  Das Handle eines Cursors.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true` festzulegende `BST_DROPDOWNPUSHED` Zustand befindet, andernfalls `false`.|  
+|[in] *fDropDown*|`true` festzulegende `BST_DROPDOWNPUSHED` Zustand befindet, andernfalls `false`.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -698,7 +698,7 @@ BOOL SetDropDownState(BOOL fDropDown);
  Diese Methode sendet die [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
+ Das folgende Codebeispiel definiert die Variable *M_splitButton*, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -736,7 +736,7 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hIcon`  
+ *hIcon*  
  Das Handle eines Symbols.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -770,7 +770,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  Ein Zeiger auf die neue Bildliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `lpszNote`|Ein Zeiger auf eine Unicode-Zeichenfolge, die als Hinweis Text für das Link-Steuerelement festgelegt wird.|  
+|[in] *LpszNote*|Ein Zeiger auf eine Unicode-Zeichenfolge, die als Hinweis Text für das Link-Steuerelement festgelegt wird.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -801,7 +801,7 @@ BOOL SetNote(LPCTSTR lpszNote);
  Diese Methode sendet die [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_cmdLink`, d. h. verwendet, um das Link-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
+ Das folgende Codebeispiel definiert die Variable *M_cmdLink*, d. h. verwendet, um das Link-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `chGlyph`|Ein Zeichen, der angibt, das Symbol, das als die unterteilte Schaltfläche Dropdown-Pfeil verwendet.|  
+|[in] *ChGlyph*|Ein Zeichen, der angibt, das Symbol, das als die unterteilte Schaltfläche Dropdown-Pfeil verwendet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -829,7 +829,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur für Steuerelemente, die das Schaltflächenformat `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- Ein Symbol ist die physikalische Darstellung eines Zeichens in einer bestimmten Schriftart. Die `chGlyph` Parameter wird nicht verwendet werden, als das Symbol, jedoch wird stattdessen verwendet werden, um aus einem Satz von vordefinierten Symbolen ein Symbol auswählen. Dropdown-Pfeil Standardglyphe wird angegeben, indem ein Zeichen "6" und das Unicode-Zeichen Schwarz nach unten ZEIGENDEN DREIECK (U + 25BC) ähnelt.  
+ Ein Symbol ist die physikalische Darstellung eines Zeichens in einer bestimmten Schriftart. Die *ChGlyph* Parameter wird nicht verwendet werden, als das Symbol, jedoch wird stattdessen verwendet werden, um aus einem Satz von vordefinierten Symbolen ein Symbol auswählen. Dropdown-Pfeil Standardglyphe wird angegeben, indem ein Zeichen "6" und das Unicode-Zeichen Schwarz nach unten ZEIGENDEN DREIECK (U + 25BC) ähnelt.  
   
  Diese Methode initialisiert die `mask` Mitglied ein [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_GLYPH` Flag und die `himlGlyph` Element mit der `chGlyph` übergeben wird, und sendet, die in der -Struktur[ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
   
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, das das aktuelle SplitButton-Steuerelement zugewiesen.|  
+|[in] *pSplitImageList*|Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, das das aktuelle SplitButton-Steuerelement zugewiesen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- Diese Methode initialisiert die `mask` Mitglied ein [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_IMAGE` Flag und die `himlGlyph` Element mit der `pSplitImageList` übergeben wird, und sendet, die in der -Struktur[ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_IMAGE` Flag und die `himlGlyph` Element mit der *pSplitImageList* Parameter, und klicken Sie dann sendet, die der Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Gibt Parameter an, die bestimmen, wie das aktuelle SplitButton-Steuerelement von Windows gezeichnet.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pInfo`|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
+|[in] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pSize`|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
+|[in] *pSize*|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Wenn das SplitButton-Steuerelement erweitert ist, können sie eine Dropdown-Komponente wie z. B. ein Listensteuerelement oder Pager-Steuerelement anzeigen. Diese Methode gibt die Größe des umschließenden Rechtecks, das Dropdown-Komponente enthält.  
   
- Diese Methode initialisiert die `mask` Mitglied ein [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_SIZE` Flag und die `size` Element mit der `pSize` übergeben wird, und sendet, die in der -Struktur[ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_SIZE` Flag und der `size` Element mit der *pSize* Parameter, und sendet dann, die -Struktur der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|Eine bitweise Kombination der Split-Schaltflächenstile. Weitere Informationen finden Sie unter der `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.|  
+|[in] *uSplitStyle*|Eine bitweise Kombination der Split-Schaltflächenstile. Weitere Informationen finden Sie unter der `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -939,7 +939,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  Der Split-Schaltflächenstile Geben Sie die Ausrichtung, Seitenverhältnis und grafischen Format mit dem Windows eine Teilung Schaltflächensymbol zeichnet. Weitere Informationen finden Sie unter der `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.  
   
- Diese Methode initialisiert die `mask` Mitglied ein [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_STYLE` Flag und die `uSplitStyle` Element mit der `uSplitStyle` übergeben wird, und sendet, die in der -Struktur[ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_STYLE` Flag und die `uSplitStyle` Element mit der *uSplitStyle* übergeben wird, und sendet Diese Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen.  
@@ -978,7 +978,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pmargin`  
+ *pmargin*  
  Ein Zeiger auf den neuen Textrand.  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cd74a20f0ccc54a366c1a62d913ee30e72471a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 942c3e8aa2aeccefc9c92cd9fd32d453dc5353cf
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384370"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956421"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Beispiel für Sockets mithilfe der Archive
 In diesem Artikel zeigt ein Beispiel zur Verwendung der Klasse [CSocket](../mfc/reference/csocket-class.md). Das Beispiel setzt `CArchive` Objekte zum Serialisieren von Daten über ein Socket. Beachten Sie, dass dies nicht Dokumentserialisierung zu bzw. aus einer Datei ist.  
@@ -30,26 +30,26 @@ In diesem Artikel zeigt ein Beispiel zur Verwendung der Klasse [CSocket](../mfc/
   
  [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- Der wichtigste Vorteil in diesem Beispiel ist, dass seine Struktur, die von einer MFC codenavigation `Serialize` Funktion. Die **PacketSerialize** Memberfunktion besteht aus einer **Wenn** -Anweisung mit einer **else** Klausel. Die Funktion empfängt zwei [CArchive](../mfc/reference/carchive-class.md) Verweise als Parameter: `arData` und `arAck`. Wenn die `arData` Archivobjekt zum Speichern von (senden) festgelegt ist die **Wenn** Branch ausgeführt wird; andernfalls gilt: Wenn `arData` festgelegt ist für das Laden (empfangen) die Funktion nimmt die **else** Verzweigung. Weitere Informationen zur Serialisierung in MFC finden Sie unter [Serialisierung](../mfc/how-to-make-a-type-safe-collection.md).  
+ Der wichtigste Vorteil in diesem Beispiel ist, dass seine Struktur, die von einer MFC codenavigation `Serialize` Funktion. Die `PacketSerialize` Memberfunktion besteht aus einer **Wenn** -Anweisung mit einer **else** Klausel. Die Funktion empfängt zwei [CArchive](../mfc/reference/carchive-class.md) Verweise als Parameter: *ArData* und *ArAck*. Wenn die *ArData* Archivobjekt zum Speichern von (senden) festgelegt ist die **Wenn** Branch ausgeführt wird; andernfalls, wenn *ArData* festgelegt ist für das Laden (empfangen) die Funktion nimmt die **else** Verzweigung. Weitere Informationen zur Serialisierung in MFC finden Sie unter [Serialisierung](../mfc/how-to-make-a-type-safe-collection.md).  
   
 > [!NOTE]
->  Die `arAck` wird davon ausgegangen, dass Archivobjekt ist das Gegenteil von `arData`. Wenn `arData` ist für das Senden, `arAck` empfängt, und das Gegenteil ist "true".  
+>  Die *ArAck* wird davon ausgegangen, dass Archivobjekt ist das Gegenteil von *ArData*. Wenn *ArData* ist für das Senden, *ArAck* empfängt, und das Gegenteil ist "true".  
   
- Zum Senden durchläuft die Beispielfunktion für eine angegebene Anzahl von Malen, jedes Mal generiert einige Zufallsdaten zu Demonstrationszwecken. Ihre Anwendung würde sich um echte Daten von einer Quelle, z. B. eine Datei abrufen. Die `arData` Operator zum Einfügen des Archivs (**<<**) wird verwendet, um einen Datenstrom von drei aufeinander folgende Segmente der Daten zu senden:  
+ Zum Senden durchläuft die Beispielfunktion für eine angegebene Anzahl von Malen, jedes Mal generiert einige Zufallsdaten zu Demonstrationszwecken. Ihre Anwendung würde sich um echte Daten von einer Quelle, z. B. eine Datei abrufen. Die *ArData* Operator zum Einfügen des Archivs (**<<**) wird verwendet, um einen Datenstrom von drei aufeinander folgende Segmente der Daten zu senden:  
   
--   Einem "Header", die die Art der Daten angibt (in diesem Fall werden die Werte von der `bValue` Variable und wie viele Kopien gesendet werden).  
+-   Einem "Header", die die Art der Daten angibt (in diesem Fall werden die Werte von der *bValue* Variable und wie viele Kopien gesendet werden).  
   
      Beide Elemente werden in diesem Beispiel nach dem Zufallsprinzip generiert.  
   
 -   Die angegebene Anzahl von Kopien der Daten.  
   
-     Die innere **für** Schleife sendet `bValue` die angegebene Anzahl von Malen.  
+     Die innere **für** Schleife sendet *bValue* die angegebene Anzahl von Malen.  
   
--   Eine Zeichenfolge mit dem Namen `strText` , die der Empfänger die Benutzer werden angezeigt.  
+-   Eine Zeichenfolge mit dem Namen *StrText* , die der Empfänger die Benutzer werden angezeigt.  
   
  Für den Empfang, die Funktion kann auf ähnliche Weise identisch, jedoch das Archiv Extraktionsoperator verwendet (**>>**) zum Abrufen von Daten aus dem Archiv. Die empfangende Anwendung überprüft die Daten empfängt, zeigt die endgültige "Empfangen"-Nachricht und sendet dann eine Nachricht, die besagt, dass "Gesendet" für die sendende Anwendung angezeigt.  
   
- In diesem Kommunikationsmodell auf das Wort "Empfangen", die Nachricht gesendet, dem `strText` Variable ist für die Anzeige am anderen Ende der Kommunikation, sodass sie dem empfangenden Benutzer angibt, dass eine bestimmte Anzahl von Datenpaketen empfangen wurden. Der Empfänger antwortet mit einer ähnlichen Zeichenfolge, die besagt, auf den ursprünglichen Absender Bildschirm "Gesendet" für die Anzeige dass. Empfang der beiden Zeichenfolgen gibt an, dass erfolgreiche Kommunikation stattgefunden hat.  
+ In diesem Kommunikationsmodell auf das Wort "Empfangen", die Nachricht gesendet, der *StrText* Variable ist für die Anzeige am anderen Ende der Kommunikation, sodass für den Empfang von Benutzer angibt, dass eine bestimmte Anzahl von Datenpaketen wurden empfangen. Der Empfänger antwortet mit einer ähnlichen Zeichenfolge, die besagt, auf den ursprünglichen Absender Bildschirm "Gesendet" für die Anzeige dass. Empfang der beiden Zeichenfolgen gibt an, dass erfolgreiche Kommunikation stattgefunden hat.  
   
 > [!CAUTION]
 >  Wenn Sie ein MFC-Clientprogramm zur Kommunikation mit Servern hergestellt (MFC-Fremd) schreiben, senden Sie C++-Objekte über das Archiv nicht. Wenn der Server eine MFC-Anwendung, die die Arten von Objekten zu verstehen, die Sie senden möchten ist, ist es kann nicht zum Empfangen und deserialisiert Objekte. Ein Beispiel, in dem Artikel [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md) zeigt eine Kommunikation dieses Typs.  

@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a0255bae48ad61f140bdc8aa8a6091cf10bc77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b297f8ea4cb4b6e6a0866a717f9107281cce37
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376005"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957428"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager-Klasse
 Die `CDrawingManager` Klasse implementiert komplexe zeichnen Algorithmen.  
@@ -139,7 +139,7 @@ CDrawingManager(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dc`  
+ [in] *dc*  
  Ein Verweis zu einem Gerätekontext. Die `CDrawingManager` dieser Kontext zum Zeichnen verwendet.  
   
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
@@ -160,10 +160,10 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `size`|Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Parameter, der die Größe der Bitmap angibt.|  
-|[out] `pBits`|Ein Zeiger in einen Datenzeiger, der den Speicherort der der DIB empfängt Bitwerte.|  
-|`bitmap`|Ein Handle für die ursprüngliche bitmap|  
-|`clrTransparent`|Transparente Farbe des ursprünglichen Bitmap angeben RGB-Wert.|  
+|[in] *Größe*|Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Parameter, der die Größe der Bitmap angibt.|  
+|[out] *pBits*|Ein Zeiger in einen Datenzeiger, der den Speicherort der der DIB empfängt Bitwerte.|  
+|*Mithilfe einer Bitmap*|Ein Handle für die ursprüngliche bitmap|  
+|*clrTransparent*|Transparente Farbe des ursprünglichen Bitmap angeben RGB-Wert.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für die neu erstellte DIB Bitmap aus, wenn diese Methode erfolgreich ist; andernfalls `NULL`.  
@@ -183,16 +183,16 @@ void DrawAlpha(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDstDC`  
+ [in] *pDstDC*  
  Ein Zeiger auf den Gerätekontext für das Ziel.  
   
- [in] `rectDst`  
+ [in] *RectDst*  
  Das Zielrechteck.  
   
- [in] `pSrcDC`  
+ [in] *pSrcDC*  
  Ein Zeiger auf den Gerätekontext für die Quelle.  
   
- [in] `rectSrc`  
+ [in] *RectSrc*  
  Das Quellrechteck.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -209,13 +209,13 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck für die Ellipse.  
   
- [in] `clrFill`  
+ [in] *ClrFill*  
  Die Farbe, die diese Methode verwendet, um die Ellipse zu füllen.  
   
- [in] `clrLine`  
+ [in] *ClrLine*  
  Die Farbe verwendet diese Methode als Rahmen der Ellipse.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -236,32 +236,32 @@ BOOL DrawGradientRing(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Parameter, der die Grenze für den Farbverlauf Ring angibt.  
   
- [in] `colorStart`  
+ [in] *ColorStart*  
  Der ersten Farbe für den Farbverlauf.  
   
- [in] `colorFinish`  
+ [in] *ColorFinish*  
  Die letzte Farbe für den Farbverlauf.  
   
- [in] `colorBorder`  
+ [in] *ColorBorder*  
  Die Farbe des Rahmens.  
   
- [in] `nAngle`  
+ [in] *nAngle*  
  Ein Parameter, der angibt, die anfängliche Winkel der Verlaufsfläche zeichnen. Dieser Wert muss zwischen 0 und 360 liegen.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Die Breite des Rahmens für den Ring.  
   
- [in] `clrFace`  
+ [in] *ClrFace*  
  Die Farbe des inneren des Rings.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Die definierten Rechtecks `rect` müssen mindestens 5 Pixel breit und 5 Pixel sein.  
+ Die definierten Rechtecks *Rect* müssen mindestens 5 Pixel breit und 5 Pixel sein.  
   
 ##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine CDrawingManager::DrawLineA  
  Zeichnet eine verbindende Linie.  
@@ -287,14 +287,14 @@ void DrawLineA(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `x1`|Die X-Koordinate, in die Zeile beginnt.|  
-|[in] `y1`|Die y-Koordinate, in die Zeile beginnt.|  
-|[in] `x2`|Die X-Koordinate, in die Zeile endet.|  
-|[in] `y2`|Die y-Koordinate, in die Zeile endet.|  
-|[in] `clrLine`|Die Farbe der Linie.|  
+|[in] *X1*|Die X-Koordinate, in die Zeile beginnt.|  
+|[in] *y1*|Die y-Koordinate, in die Zeile beginnt.|  
+|[in] *X2*|Die X-Koordinate, in die Zeile endet.|  
+|[in] *y2*|Die y-Koordinate, in die Zeile endet.|  
+|[in] *ClrLine*|Die Farbe der Linie.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode schlägt fehl, wenn `clrLine` gleich -1.  
+ Diese Methode schlägt fehl, wenn *ClrLine* gleich -1.  
   
 ##  <a name="drawrect"></a>  CDrawingManager::DrawRect  
  Zeichnet ein Rechteck mit den angegebenen ausfüllen und die Rahmenfarben.  
@@ -307,13 +307,13 @@ void DrawRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Die Grenzen für das Rechteck.  
   
- [in] `clrFill`  
+ [in] *ClrFill*  
  Die Farbe, die diese Methode verwendet, um das Rechteck zu füllen.  
   
- [in] `clrLine`  
+ [in] *ClrLine*  
  Diese Methode wird von der Farbe für den Rahmen des Rechtecks verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -335,39 +335,39 @@ BOOL DrawShadow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Eine rechteckige Bereich, in der Anwendung. Der Zeichnen-Manager wird unter diesem Bereich einen Schatten gezeichnet.  
   
- [in] `nDepth`  
+ [in] *nDepth*  
  Die Breite und Höhe des Schattens.  
   
- [in] `iMinBrightness`  
+ [in] *iMinBrightness*  
  Die minimale Helligkeit des Schattens.  
   
- [in] `iMaxBrightness`  
+ [in] *iMaxBrightness*  
  Die maximale Helligkeit des Schattens.  
   
- [in] `pBmpSaveBottom`  
+ [in] *pBmpSaveBottom*  
  Ein Zeiger auf eine Bitmap, die das Bild für den unteren Teil des Schattens enthält.  
   
- [in] `pBmpSaveRight`  
+ [in] *pBmpSaveRight*  
  Ein Zeiger auf eine Bitmap, die das Bild für den Schatten enthält, die auf der rechten Seite des Rechtecks gezeichnet wird.  
   
- [in] `clrBase`  
+ [in] *ClrBase*  
  Die Farbe des Schattens.  
   
- [in] `bRightShadow`  
- Ein boolescher Parameter, der angibt, wie der Schatten gezeichnet wird. Wenn `bRightShadow` ist `TRUE`, `DrawShadow` einen Schatten auf der rechten Seite des Rechtecks zeichnet.  
+ [in] *bRightShadow*  
+ Ein boolescher Parameter, der angibt, wie der Schatten gezeichnet wird. Wenn *bRightShadow* ist `TRUE`, `DrawShadow` einen Schatten auf der rechten Seite des Rechtecks zeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können zwei gültige Bitmaps für die unteren und rechten Schatten bereitstellen, indem Sie mit den Parametern `pBmpSaveBottom` und `pBmpSaveRight`. Wenn diese [CBitmap](../../mfc/reference/cbitmap-class.md) Objekte verfügen über eine angefügte GDI-Objekt `DrawShadow` verwendet diese Bitmaps als Schatten. Wenn die `CBitmap` Parameter weisen eine angefügte GDI-Objekt nicht `DrawShadow` den Schatten gezeichnet und fügt die Bitmaps für die Parameter. In Zukunft Aufrufe `DrawShadow`, Sie können diese musterbitmaps so, dass das Zeichnen beschleunigen bereitstellen. Weitere Informationen zu den `CBitmap` Klasse und GDI-Objekte, finden Sie unter [Grafikobjekte](../../mfc/graphic-objects.md).  
+ Sie können zwei gültige Bitmaps für die unteren und rechten Schatten bereitstellen, indem Sie mit den Parametern *pBmpSaveBottom* und *pBmpSaveRight*. Wenn diese [CBitmap](../../mfc/reference/cbitmap-class.md) Objekte verfügen über eine angefügte GDI-Objekt `DrawShadow` verwendet diese Bitmaps als Schatten. Wenn die `CBitmap` Parameter weisen eine angefügte GDI-Objekt nicht `DrawShadow` den Schatten gezeichnet und fügt die Bitmaps für die Parameter. In Zukunft Aufrufe `DrawShadow`, Sie können diese musterbitmaps so, dass das Zeichnen beschleunigen bereitstellen. Weitere Informationen zu den `CBitmap` Klasse und GDI-Objekte, finden Sie unter [Grafikobjekte](../../mfc/graphic-objects.md).  
   
  Wenn dieser Parameter ist `NULL`, `DrawShadow` wird automatisch den Schatten gezeichnet.  
   
- Wenn Sie festlegen, `bRightShadow` zu `FALSE`, darunter und auf der linken Seite des rechteckigen Bereichs der Schatten gezeichnet werden.  
+ Wenn Sie festlegen, *bRightShadow* zu `FALSE`, darunter und auf der linken Seite des rechteckigen Bereichs der Schatten gezeichnet werden.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `DrawShadow` Methode der `CDrawingManager` Klasse. Dieser Codeausschnitt ist Teil der [Prop Blatt Demobeispiel](../../visual-cpp-samples.md).  
@@ -389,31 +389,31 @@ void Fill4ColorsGradient(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Die zu füllenden Rechtecks.  
   
- [in] `colorStart1`  
+ [in] *colorStart1*  
  Die ursprüngliche Farbe für den ersten Farbverlauf.  
   
- [in] `colorFinish1`  
+ [in] *colorFinish1*  
  Die letzte Farbe für den ersten Farbverlauf.  
   
- [in] `colorStart2`  
+ [in] *colorStart2*  
  Die ursprüngliche Farbe für den zweiten Farbverlauf.  
   
- [in] `colorFinish2`  
+ [in] *colorFinish2*  
  Die letzte Farbe für den zweiten Farbverlauf.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Ein boolescher Parameter, der angibt, ob `Fill4ColorsGradient` einen horizontalen oder vertikalen Farbverlauf der Farben. `TRUE` Gibt einen horizontalen Farbverlauf an.  
   
- [in] `nPercentage`  
+ [in] *nPercentage*  
  Eine ganze Zahl von 0 bis 100. Dieser Wert gibt den Prozentsatz der zu mit den ersten Farbverlauf zu füllenden Rechtecks.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Rechteck mit zwei Farbverläufe gefüllt ist, sind sie entweder über miteinander befindet oder weiter zu "other" je nach dem Wert des `bHorz`. Jede Farbverlauf wird unabhängig voneinander berechnet, mit der Methode [CDrawingManager::FillGradient](#fillgradient).  
+ Ein Rechteck mit zwei Farbverläufe gefüllt ist, sind sie entweder über miteinander befindet oder weiter zu "other" abhängig vom Wert der *bHorz*. Jede Farbverlauf wird unabhängig voneinander berechnet, mit der Methode [CDrawingManager::FillGradient](#fillgradient).  
   
- Diese Methode generiert ein Assertionsfehler ausgelöst, wenn `nPercentage` kleiner als 0 oder mehr als 100 ist.  
+ Diese Methode generiert ein Assertionsfehler ausgelöst, wenn *nPercentage* ist kleiner als 0 oder mehr als 100.  
   
 ##  <a name="fillgradient"></a>  CDrawingManager::FillGradient  
  Füllt einen rechteckigen Bereich mit den angegebenen Farbverlauf aus.  
@@ -429,23 +429,23 @@ void FillGradient(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Der rechteckige Bereich zu füllen.  
   
- [in] `colorStart`  
+ [in] *ColorStart*  
  Der ersten Farbe für den Farbverlauf.  
   
- [in] `colorFinish`  
+ [in] *ColorFinish*  
  Die letzte Farbe für den Farbverlauf.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Ein boolescher Parameter, der angibt, ob `FillGradient` einen horizontalen oder vertikalen Farbverlauf zeichnen soll.  
   
- [in] `nStartFlatPercentage`  
- Der Prozentsatz des Rechtecks, `FillGradient` füllt mit `colorStart` vor dem Beginn des Farbverlaufs.  
+ [in] *nStartFlatPercentage*  
+ Der Prozentsatz des Rechtecks, `FillGradient` füllt mit *ColorStart* vor dem Beginn des Farbverlaufs.  
   
- [in] `nEndFlatPercentage`  
- Der Prozentsatz des Rechtecks, `FillGradient` füllt mit `colorFinish` nach Abschluss der Farbverlauf.  
+ [in] *nEndFlatPercentage*  
+ Der Prozentsatz des Rechtecks, `FillGradient` füllt mit *ColorFinish* nach Abschluss der Farbverlauf.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `FillGradient` Methode der `CDrawingManager` Klasse. Dieser Codeausschnitt ist Teil der [MS Office 2007 Demobeispiel für](../../visual-cpp-samples.md).  
@@ -464,20 +464,20 @@ void FillGradient2 (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Der rechteckige Bereich zu füllen.  
   
- [in] `colorStart`  
+ [in] *ColorStart*  
  Der ersten Farbe des Farbverlaufs.  
   
- [in] `colorFinish`  
+ [in] *ColorFinish*  
  Die letzte Farbe des Farbverlaufs.  
   
- [in] `nAngle`  
+ [in] *nAngle*  
  Eine ganze Zahl zwischen 0 und 360. Dieser Parameter gibt die Richtung der Farbverlauf.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `nAngle` um die Richtung der Farbverlauf anzugeben. Wenn Sie die Richtung der Farbverlauf angeben, geben Sie auch der Farbverlauf beginnt. Der Wert 0 für `nAngle` gibt an, der Verlauf von der obersten Position des Rechtecks beginnt. Als `nAngle` zunimmt, die Startposition für Farbverlauf in basierend auf der Winkel gegen den Uhrzeigersinn Richtung bewegt.  
+ Verwendung *nAngle* um die Richtung der Farbverlauf anzugeben. Wenn Sie die Richtung der Farbverlauf angeben, geben Sie auch der Farbverlauf beginnt. Der Wert 0 für *nAngle* gibt an, der Verlauf von der obersten Position des Rechtecks beginnt. Als *nAngle* zunimmt, die Startposition für Farbverlauf in basierend auf der Winkel gegen den Uhrzeigersinn Richtung bewegt.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `FillGradient2` Methode der `CDrawingManager` Klasse. Dieser Codeausschnitt ist Teil der [neues Steuerelement-Beispiel](../../visual-cpp-samples.md).  
@@ -496,25 +496,25 @@ BOOL GrayRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Der rechteckige Bereich zu füllen.  
   
- [in] `nPercentage`  
+ [in] *nPercentage*  
  Der Prozentsatz der Grau in das Rechteck gewünschte.  
   
- [in] `clrTransparent`  
+ [in] *ClrTransparent*  
  Die transparente Farbe.  
   
- [in] `clrDisabled`  
- Die Farbe, die diese Methode für die Deduplizierung Sättigung verwendet, wenn `nPercentage` auf-1 festgelegt ist.  
+ [in] *ClrDisabled*  
+ Die Farbe, die diese Methode für die Deduplizierung Sättigung verwendet, wenn *nPercentage* auf-1 festgelegt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn die Methode erfolgreich ausgeführt wurde; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Für den Parameter `nPercentage`, ein niedrigerer Wert gibt eine dunklere Farbe.  
+ Für den Parameter *nPercentage*, ein niedrigerer Wert gibt eine dunklere Farbe.  
   
- Der Höchstwert für `nPercentage` liegt bei 200. Ein Wert größer als 200 ändert sich nicht auf die Darstellung des Rechtecks aus. Diese Methode wird verwendet, wenn der Wert-1 ist, `clrDisabled` beschränken die Sättigung des Rechtecks.  
+ Der Höchstwert für *nPercentage* liegt bei 200. Ein Wert größer als 200 ändert sich nicht auf die Darstellung des Rechtecks aus. Diese Methode wird verwendet, wenn der Wert-1 ist, *ClrDisabled* beschränken die Sättigung des Rechtecks.  
   
 ##  <a name="highlightrect"></a>  CDrawingManager::HighlightRect  
  Markiert einen rechteckigen Bereich an.  
@@ -529,28 +529,28 @@ BOOL HighlightRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Eine rechteckige Bereich zu markieren.  
   
- [in] `nPercentage`  
+ [in] *nPercentage*  
  Ein Prozentwert, der angibt, wie transparent die Hervorhebung werden soll.  
   
- [in] `clrTransparent`  
+ [in] *ClrTransparent*  
  Die transparente Farbe.  
   
- [in] `nTolerance`  
+ [in] *nTolerance*  
  Eine ganze Zahl zwischen 0 und 255, die die Toleranz Farbe angibt.  
   
- [in] `clrBlend`  
+ [in] *ClrBlend*  
  Die Basisfarbe für das füllen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn die Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `nPercentage` liegt zwischen 0 und 99, `HighlightRect` der Alphablending-Algorithmus verwendet. Weitere Informationen zu Alphablending, finden Sie unter [Alpha Mischen von Linien und Füllungen](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Wenn `nPercentage` -1 ist, wird diese Methode verwendet die Standardebene der Markierung. Wenn `nPercentage` ist 100, wird diese Methode führt keine Aktion aus und gibt `TRUE`.  
+ Wenn *nPercentage* liegt zwischen 0 und 99, `HighlightRect` der Alphablending-Algorithmus verwendet. Weitere Informationen zu Alphablending, finden Sie unter [Alpha Mischen von Linien und Füllungen](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Wenn *nPercentage* -1 ist, wird diese Methode verwendet die Standardebene der Markierung. Wenn *nPercentage* ist 100, wird diese Methode führt keine Aktion aus und gibt `TRUE`.  
   
- Die Methode verwendet den Parameter `nTolerance` bestimmt, ob den rechteckigen Bereich zu markieren. Markieren Sie das Rechteck, unterscheiden sich die Hintergrundfarbe der Anwendung und `clrTransparent` muss kleiner als `nTolerance` in jeder Farbe-Komponente (Rot, Grün und Blau).  
+ Die Methode verwendet den Parameter *nTolerance* bestimmt, ob den rechteckigen Bereich zu markieren. Markieren Sie das Rechteck, unterscheiden sich die Hintergrundfarbe der Anwendung und *ClrTransparent* muss weniger als *nTolerance* in jeder Farbe-Komponente (Rot, Grün und Blau).  
   
 ##  <a name="hlstorgb_one"></a>  CDrawingManager::HLStoRGB_ONE  
  Konvertiert eine Farbe aus einer HLS-Darstellung in eine RGB-Darstellung.  
@@ -563,13 +563,13 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `H`  
+ [in] *H*  
  Eine Zahl zwischen 0 und 1, die den Farbton für die Farbe darstellt.  
   
- [in] `L`  
+ [in] *L*  
  Eine Zahl zwischen 0 und 1, der die Helligkeit für die Farbe angibt.  
   
- [in] `S`  
+ [in] *S*  
  Eine Zahl zwischen 0 und 1, gibt die Sättigung für die Farbe an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -578,7 +578,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ### <a name="remarks"></a>Hinweise  
  Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Diese Methode und die `CDrawingManager::HLStoRGB_TWO` -Methode der gleichen Vorgang ausgeführt, aber erfordern andere Werte für die `H` Parameter. Bei dieser Methode `H` ist ein Prozentsatz des Kreises. In der `CDrawingManager::HLStoRGB_TWO` Methode `H` ein Wert zwischen 0 und 360 liegen, die rot dargestellt wird. Z. B. mit `HLStoRGB_ONE`, 0,25 für `H` entspricht der Wert 90 mit `HLStoRGB_TWO`.  
+ Diese Methode und die `CDrawingManager::HLStoRGB_TWO` -Methode der gleichen Vorgang ausgeführt, aber erfordern andere Werte für die *H* Parameter. Bei dieser Methode *H* ist ein Prozentsatz des Kreises. In der `CDrawingManager::HLStoRGB_TWO` Methode *H* ein Wert zwischen 0 und 360 liegen, die rot dargestellt wird. Z. B. mit `HLStoRGB_ONE`, 0,25 für *H* entspricht der Wert 90 mit `HLStoRGB_TWO`.  
   
 ##  <a name="hlstorgb_two"></a>  CDrawingManager::HLStoRGB_TWO  
  Konvertiert eine Farbe aus einer HLS-Darstellung in eine RGB-Darstellung.  
@@ -591,13 +591,13 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `H`  
+ [in] *H*  
  Eine Zahl zwischen 0 und 360, die den Farbton für die Farbe darstellt.  
   
- [in] `L`  
+ [in] *L*  
  Eine Zahl zwischen 0 und 1, der die Helligkeit für die Farbe angibt.  
   
- [in] `S`  
+ [in] *S*  
  Eine Zahl zwischen 0 und 1, gibt die Sättigung für die Farbe an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -606,7 +606,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ### <a name="remarks"></a>Hinweise  
  Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Diese Methode und die [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) -Methode der gleichen Vorgang ausgeführt, aber erfordern andere Werte für die `H` Parameter. Bei dieser Methode `H` ein Wert zwischen 0 und 360 liegen, die rot dargestellt wird. In der [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) Methode `H` ist ein Prozentsatz des Kreises. Z. B. mit `HLStoRGB_ONE`, 0,25 für `H` entspricht der Wert 90 mit `HLStoRGB_TWO`.  
+ Diese Methode und die [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) -Methode der gleichen Vorgang ausgeführt, aber erfordern andere Werte für die *H* Parameter. Bei dieser Methode *H* ein Wert zwischen 0 und 360 liegen, die rot dargestellt wird. In der [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) Methode *H* ist ein Prozentsatz des Kreises. Z. B. mit `HLStoRGB_ONE`, 0,25 für *H* entspricht der Wert 90 mit `HLStoRGB_TWO`.  
   
 ##  <a name="hsvtorgb"></a>  CDrawingManager::HSVtoRGB  
  Konvertiert eine Farbe aus einer Darstellung HSV in eine RGB-Darstellung.  
@@ -623,9 +623,9 @@ static COLORREF __stdcall HSVtoRGB(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `H`|Eine Zahl zwischen 0 und 360, die den Farbton für die Farbe angibt.|  
-|[in] `S`|Eine Zahl zwischen 0 und 1, gibt die Sättigung für die Farbe an.|  
-|[in] `V`|Eine Zahl zwischen 0 und 1, der den Wert für die Farbe angibt.|  
+|[in] *H*|Eine Zahl zwischen 0 und 360, die den Farbton für die Farbe angibt.|  
+|[in] *S*|Eine Zahl zwischen 0 und 1, gibt die Sättigung für die Farbe an.|  
+|[in] *V*|Eine Zahl zwischen 0 und 1, der den Wert für die Farbe angibt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die RGB-Darstellung der HSV Farbe bereitgestellt werden soll.  
@@ -650,22 +650,22 @@ static BYTE __stdcall HueToRGB(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `m1`  
+ [in] *m1*  
  Siehe Hinweise.  
   
- [in] `m2`  
+ [in] *m2*  
  Siehe Hinweise.  
   
- [in] `h`  
+ [in] *h*  
  Siehe Hinweise.  
   
- [in] `rm1`  
+ [in] *rm1*  
  Siehe Hinweise.  
   
- [in] `rm2`  
+ [in] *rm2*  
  Siehe Hinweise.  
   
- [in] `rh`  
+ [in] *Rh*  
  Siehe Hinweise.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -692,14 +692,14 @@ void MirrorRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck des Bereichs blättern.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Ein boolescher Parameter, der angibt, ob das Rechteck horizontal oder vertikal gekippt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode kann einen beliebigen Bereich auf den Gerätekontext, der im Besitz von spiegeln die `CDrawingManager` Klasse. Wenn `bHorz` festgelegt ist, um `TRUE`, diese Methode wird den Bereich horizontal gekippt. Andernfalls, sie den Bereich vertikal gekippt.  
+ Diese Methode kann einen beliebigen Bereich auf den Gerätekontext, der im Besitz von spiegeln die `CDrawingManager` Klasse. Wenn *bHorz* festgelegt ist, um `TRUE`, diese Methode wird den Bereich horizontal gekippt. Andernfalls, sie den Bereich vertikal gekippt.  
   
 ##  <a name="pixelalpha"></a>  CDrawingManager::PixelAlpha  
  Berechnet die endgültige Farbe ein halbtransparenten Pixel.  
@@ -722,22 +722,22 @@ static COLORREF __stdcall PixelAlpha(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `srcPixel`  
+ [in] *SrcPixel*  
  Die erste Farbe des Pixels.  
   
- [in] `percent`  
+ [in] *Prozent*  
  Eine Zahl zwischen 0 und 100, die den Prozentsatz der Transparenz darstellt. Ein Wert von 100 gibt an, dass die Ausgangsfarbe vollständig transparent ist.  
   
- [in] `percentR`  
+ [in] *PercentR*  
  Eine Zahl zwischen 0 und 100, die den Prozentsatz der Transparenz für die red-Komponente darstellt.  
   
- [in] `percentG`  
+ [in] *PercentG*  
  Eine Zahl zwischen 0 und 100, die den Prozentsatz der Transparenz für die grünen Komponente darstellt.  
   
- [in] `percentB`  
+ [in] *PercentB*  
  Eine Zahl zwischen 0 und 100, die den Prozentsatz der Transparenz für die blaue Komponente darstellt.  
   
- [in] `dstPixel`  
+ [in] *DstPixel*  
  Die Basisfarbe des Pixels.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -746,7 +746,7 @@ static COLORREF __stdcall PixelAlpha(
 ### <a name="remarks"></a>Hinweise  
  Dies ist eine Hilfsklasse zum Farbgebung halb transparente Bitmaps und nicht direkt vom Programmierer aufgerufen werden soll.  
   
- Bei Verwendung die Version der Methode, die hat `dstPixel`, endgültige Farbe ist eine Kombination von `dstPixel` und `srcPixel`. Die `srcPixel` entspricht der Farbe teilweise transparent über die Basisfarbe des `dstPixel`.  
+ Bei Verwendung die Version der Methode, die hat *DstPixel*, endgültige Farbe ist eine Kombination von *DstPixel* und *SrcPixel*. Die *SrcPixel* entspricht der Farbe teilweise transparent über die Basisfarbe des *DstPixel*.  
   
 ##  <a name="prepareshadowmask"></a>  CDrawingManager::PrepareShadowMask  
  Erstellt eine Bitmap, die als einen Schatten verwendet werden kann.  
@@ -760,23 +760,23 @@ static HBITMAP __stdcall PrepareShadowMask (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nDepth`  
+ [in] *nDepth*  
  Die Breite und Höhe des Schattens.  
   
- [in] `clrBase`  
+ [in] *ClrBase*  
  Die Farbe des Schattens.  
   
- [in] `iMinBrightness`  
+ [in] *iMinBrightness*  
  Die minimale Helligkeit des Schattens.  
   
- [in] `iMaxBrightness`  
+ [in] *iMaxBrightness*  
  Die maximale Helligkeit des Schattens.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für die erstellte Bitmap, wenn diese Methode erfolgreich ist; andernfalls `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `nDepth` ist auf 0 festgelegt, diese Methode beendet und gibt `NULL`. Wenn `nDepth` kleiner als 3 ist, werden die Breite und Höhe des Schattens auf 3 Pixel festgelegt.  
+ Wenn *nDepth* ist auf 0 festgelegt, diese Methode beendet und gibt `NULL`. Wenn *nDepth* kleiner als 3 ist, werden die Breite und Höhe des Schattens auf 3 Pixel festgelegt.  
   
 ##  <a name="rgbtohsl"></a>  CDrawingManager::RGBtoHSL  
  Konvertiert eine Farbe aus einer Rot-, Grün- und Blau (RGB) Darstellung auf eine Farbton, Sättigung und Helligkeit (HSL) Darstellung.  
@@ -794,15 +794,15 @@ static void __stdcall RGBtoHSL(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `rgb`|Die Farbe im RGB-Werte.|  
-|[out] `H`|Ein Zeiger auf ein Double-Wert, in dem die Methode den Farbton für die Farbe speichert.|  
-|[out] `S`|Ein Zeiger auf ein Double-Wert, in dem die Methode für die Sättigung für die Farbe speichert.|  
-|[out] `L`|Ein Zeiger auf ein Double-Wert, in dem die Methode für die Helligkeit für die Farbe speichert.|  
+|[in] *Rgb*|Die Farbe im RGB-Werte.|  
+|[out] *H*|Ein Zeiger auf ein Double-Wert, in dem die Methode den Farbton für die Farbe speichert.|  
+|[out] *S*|Ein Zeiger auf ein Double-Wert, in dem die Methode für die Sättigung für die Farbe speichert.|  
+|[out] *L*|Ein Zeiger auf ein Double-Wert, in dem die Methode für die Helligkeit für die Farbe speichert.|  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Der zurückgegebene Wert für `H` wird dargestellt, als Bruchzahl zwischen 0 und 1, wobei 0 und 1 rot darstellen. Die zurückgegebenen Werte für `S` und `L` sind Zahlen zwischen 0 und 1.  
+ Der zurückgegebene Wert für *H* wird dargestellt, als Bruchzahl zwischen 0 und 1, wobei 0 und 1 rot darstellen. Die zurückgegebenen Werte für *S* und *L* sind Zahlen zwischen 0 und 1.  
   
 ##  <a name="rgbtohsv"></a>  CDrawingManager::RGBtoHSV  
  Konvertiert eine Farbe aus einer RGB-Darstellung in eine HSV-Darstellung.  
@@ -816,22 +816,22 @@ static void __stdcall RGBtoHSV(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rgb`  
+ [in] *Rgb*  
  Die Farbe für die Konvertierung in eine RGB-Darstellung.  
   
- [out] `H`  
+ [out] *H*  
  Ein Zeiger auf ein Double-Wert, in dem diese Methode den resultierenden Farbton für die Farbe speichert.  
   
- [out] `S`  
+ [out] *S*  
  Ein Zeiger auf ein Double-Wert, in dem diese Methode die resultierende Sättigung für die Farbe speichert.  
   
- [out] `V`  
+ [out] *V*  
  Ein Zeiger auf ein Double-Wert, in dem diese Methode für die Farbe den resultierenden Wert speichert.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Der zurückgegebene Wert für `H` ist eine Zahl zwischen 0 und 360, in denen 0 und 360 Rot anzugeben. Das zurückgegebene Werte für `S` und `V` sind Zahlen zwischen 0 und 1.  
+ Der zurückgegebene Wert für *H* ist eine Zahl zwischen 0 und 360, in denen 0 und 360 Rot anzugeben. Das zurückgegebene Werte für *S* und *V* sind Zahlen zwischen 0 und 1.  
   
 ##  <a name="setalphapixel"></a>  CDrawingManager::SetAlphaPixel  
  Farben in eine Bitmap eine transparente Pixel.  
@@ -849,34 +849,34 @@ static void __stdcall SetAlphaPixel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBits`  
+ [in] *pBits*  
  Ein Zeiger auf die Bitwerte für die Bitmap.  
   
- [in] `rect`  
+ [in] *Rect*  
  Eine rechteckige Bereich, in der Anwendung. Die Zeichnung Manager zeichnet einen Schatten unter und rechts von diesem Bereich.  
   
- [in] `x`  
+ [in] *x*  
  Die horizontale Koordinate des Pixels Farbe.  
   
- [in] `y`  
+ [in] *y*  
  Die vertikale Koordinate des Pixels Farbe.  
   
- [in] `percent`  
+ [in] *Prozent*  
  Der Prozentsatz der Transparenz.  
   
- [in] `iShadowSize`  
+ [in] *iShadowSize*  
  Die Breite und Höhe des Schattens.  
   
- [in] `clrBase`  
+ [in] *ClrBase*  
  Die Farbe des Schattens.  
   
- [in] `bIsRight`  
+ [in] *bIsRight*  
  Ein boolescher Parameter, der die Pixel Farbe angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist eine Hilfsmethode, die von verwendet wird, die [CDrawingManager::DrawShadow](#drawshadow) Methode. Es wird empfohlen, wenn Sie, um einen Schatten zeichnen möchten Aufrufen `CDrawingManager::DrawShadow` stattdessen.  
   
- Wenn `bIsRight` festgelegt ist, um `TRUE`, wird das Pixel Farbe gemessen `x` Pixel aus dem rechten Rand des `rect`. Ist er `FALSE`, wird das Pixel Farbe gemessen `x` Pixel vom linken Rand des `rect`.  
+ Wenn *bIsRight* festgelegt ist, um `TRUE`, wird das Pixel Farbe gemessen *x* Pixel aus dem rechten Rand des *Rect*. Ist er `FALSE`, wird das Pixel Farbe gemessen *x* Pixel vom linken Rand des *Rect*.  
   
 ##  <a name="setpixel"></a>  CDrawingManager::SetPixel  
  Ein einzelnes Pixel in einer Bitmap in der angegebenen Farbe geändert.  
@@ -896,12 +896,12 @@ static void __stdcall SetPixel(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pBits`|Ein Zeiger auf die Bitwerte der Bitmap.|  
-|[in] `cx`|Die Gesamtbreite der Bitmap.|  
-|[in] `cy`|Die gesamte Höhe der Bitmap.|  
-|[in] `x`|Die X-Koordinate des Pixels in der Bitmap zu ändern.|  
-|[in] `y`|Die y-Koordinate des Pixels in der Bitmap zu ändern.|  
-|[in] `color`|Die neu ausgewählte Farbe des Pixels identifiziert durch den angegebenen Koordinaten.|  
+|[in] *pBits*|Ein Zeiger auf die Bitwerte der Bitmap.|  
+|[in] *Cx*|Die Gesamtbreite der Bitmap.|  
+|[in] *cy*|Die gesamte Höhe der Bitmap.|  
+|[in] *x*|Die X-Koordinate des Pixels in der Bitmap zu ändern.|  
+|[in] *y*|Die y-Koordinate des Pixels in der Bitmap zu ändern.|  
+|[in] *Farbe*|Die neu ausgewählte Farbe des Pixels identifiziert durch den angegebenen Koordinaten.|  
   
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
  Kombiniert zwei Farben basierend auf einem gewichteten Verhältnis.  
@@ -920,19 +920,19 @@ static COLORREF __stdcall SmartMixColors(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `color1`|Der ersten Farbe mischen.|  
-|[in] `color2`|Der zweiten Farbe mischen.|  
-|[in] `dblLumRatio`|Das Verhältnis für die neu ausgewählte Farbe Brillanz. `SmartMixColors` Multipliziert die Helligkeit der gemischten Farbe dieses Verhältnis vor eine endgültige Farbe zu bestimmen.|  
-|[in] `k1`|Die gewichtete Verhältnis für die erste Farbe.|  
-|[in] `k2`|Die gewichtete Verhältnis für die zweite Farbe.|  
+|[in] *color1*|Der ersten Farbe mischen.|  
+|[in] *color2*|Der zweiten Farbe mischen.|  
+|[in] *DblLumRatio*|Das Verhältnis für die neu ausgewählte Farbe Brillanz. `SmartMixColors` Multipliziert die Helligkeit der gemischten Farbe dieses Verhältnis vor eine endgültige Farbe zu bestimmen.|  
+|[in] *k1*|Die gewichtete Verhältnis für die erste Farbe.|  
+|[in] *K2*|Die gewichtete Verhältnis für die zweite Farbe.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Farbe, die eine gewichtete Mischung angegebenen Farben darstellt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode schlägt fehl mit Fehler, wenn `k1` oder `k2` ist kleiner als 0 (null). Wenn beide Parameter auf 0 festgelegt sind, gibt die Methode `RGB(0, 0, 0)`.  
+ Diese Methode schlägt fehl mit Fehler, wenn *k1* oder *K2* ist kleiner als 0 (null). Wenn beide Parameter auf 0 festgelegt sind, gibt die Methode `RGB(0, 0, 0)`.  
   
- Die gewichtete Verhältnis wird anhand der folgenden Formel berechnet: (color1 * k1 + color2 \* K2) /(k1 + k2). Nachdem die gewichtete Verhältnis bestimmt ist, wird die Methode die Helligkeit für die Farbe von gemischten berechnet. Dann multipliziert die Helligkeit durch `dblLumRatio`. Wenn der Wert größer als 1,0 ist, legt die Methode die Helligkeit für die gemischte Farbe auf den neuen Wert fest. Andernfalls wird die Brillanz auf 1.0 festgelegt.  
+ Die gewichtete Verhältnis wird anhand der folgenden Formel berechnet: (color1 * k1 + color2 \* K2) /(k1 + k2). Nachdem die gewichtete Verhältnis bestimmt ist, wird die Methode die Helligkeit für die Farbe von gemischten berechnet. Dann multipliziert die Helligkeit durch *DblLumRatio*. Wenn der Wert größer als 1,0 ist, legt die Methode die Helligkeit für die gemischte Farbe auf den neuen Wert fest. Andernfalls wird die Brillanz auf 1.0 festgelegt.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Dreht ein Quell-DC-Inhalt in einem angegebenen Rechteck 90 Grad.  
@@ -945,13 +945,13 @@ void DrawRotated(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rectDest`  
+ *rectDest*  
  Zielrechtecks.  
   
- `dcSrc`  
+ *dcSrc*  
  Dem Quellgerätekontext.  
   
- `bClockWise`  
+ *bClockWise*  
  `TRUE` Gibt an, drehen bis + 90 Grad. `FALSE` drehen-90 Grad angibt.  
   
 ### <a name="remarks"></a>Hinweise  

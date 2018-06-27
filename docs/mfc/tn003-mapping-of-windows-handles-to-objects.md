@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382972"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951507"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Zuordnen von Fensterhandles zu Objekten
 In diesem Hinweis werden die MFC-Bibliothek Routinen, die Unterstützung für die Zuordnung von Windows-Objekt-Handles zu C++-Objekte.  
@@ -56,15 +56,15 @@ In diesem Hinweis werden die MFC-Bibliothek Routinen, die Unterstützung für di
   
 -   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Wenn ein Handle für jede dieser Objekte, finden Sie die MFC-Objekt, das das Handle durch Aufrufen der statischen Methode umschließt `FromHandle`. Angenommen, einen HWND bezeichnet `hWnd`, die folgende Zeile zurück, einen Zeiger auf die `CWnd` , umschließt `hWnd`:  
+ Wenn ein Handle für jede dieser Objekte, finden Sie die MFC-Objekt, das das Handle durch Aufrufen der statischen Methode umschließt `FromHandle`. Angenommen, einen HWND bezeichnet *hWnd*, die folgende Zeile zurück, einen Zeiger auf die `CWnd` , umschließt *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Wenn `hWnd` verfügt nicht über einen bestimmten Wrapperobjekt, ein temporäres `CWnd` erstellt, um umschließen `hWnd`. Dadurch möglich, ein gültiges C++-Objekt aus beliebiges Handle zu erhalten.  
+ Wenn *hWnd* verfügt nicht über einen bestimmten Wrapperobjekt, ein temporäres `CWnd` erstellt, um umschließen *hWnd*. Dadurch möglich, ein gültiges C++-Objekt aus beliebiges Handle zu erhalten.  
   
- Nachdem Sie ein Wrapperobjekt haben, können Sie dessen Handle aus einer Variablen öffentlichen Member von der Wrapperklasse abrufen. Im Fall von einem `CWnd`, `m_hWnd` das HWND für dieses Objekt enthält.  
+ Nachdem Sie ein Wrapperobjekt haben, können Sie dessen Handle aus einer Variablen öffentlichen Member von der Wrapperklasse abrufen. Im Fall von einem `CWnd`, *M_hWnd* HWND für dieses Objekt enthält.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>Anfügen von Handles zu MFC-Objekten  
  Eine neu erstellte Handle-Wrapperobjekt und ein Handle, ein Windows-Objekt zugewiesen, können Sie die beiden durch Aufrufen von Zuordnen der `Attach` wie in diesem Beispiel funktionieren:  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Dadurch wird einen Eintrag in der permanenten Zuordnung zuordnen `myWnd` und `hWnd`. Aufrufen von `CWnd::FromHandle(hWnd)` wird nun einen Zeiger auf zurückgeben `myWnd`. Wenn `myWnd` wird gelöscht, der Destruktor automatisch zerstört `hWnd` durch Aufruf der Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) Funktion. Wenn dies nicht erwünscht ist, `hWnd` muss getrennt von `myWnd` vor `myWnd` zerstört wird (normalerweise beim Verlassen des Bereichs an dem `myWnd` definiert wurde). Die `Detach` Methode geschieht.  
+ Dadurch wird einen Eintrag in der permanenten Zuordnung zuordnen *MyWnd* und *hWnd*. Aufrufen von `CWnd::FromHandle(hWnd)` wird nun einen Zeiger auf zurückgeben *MyWnd*. Wenn *MyWnd* wird gelöscht, der Destruktor automatisch zerstört *hWnd* durch Aufruf der Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) Funktion. Wenn dies nicht erwünscht ist, *hWnd* muss getrennt von *MyWnd* vor *MyWnd* zerstört wird (normalerweise beim Verlassen des Bereichs an dem *MyWnd*definiert wurde). Die `Detach` Methode geschieht.  
   
 ```  
 myWnd.Detach();

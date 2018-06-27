@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 476e9b0bc5e9f4c3eec64e5d0d36d3f900988f48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355862"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954215"
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 Kapselt eine Bitmap der Windows GDI (Graphics Device Interface) und stellt Memberfunktionen zur Bearbeitung der Bitmap bereit.  
@@ -130,26 +130,26 @@ BOOL CreateBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWidth`  
+ *nWidth*  
  Gibt die Breite der Bitmap (in Pixeln) an.  
   
- `nHeight`  
+ *nHeight*  
  Gibt die Höhe der Bitmap (in Pixeln) an.  
   
- `nPlanes`  
+ *nPlanes*  
  Gibt die Anzahl von Farbebenen in der Bitmap an.  
   
- `nBitcount`  
+ *nBitcount*  
  Gibt die Anzahl der Farbbits pro Anzeigepixel an.  
   
- `lpBits`  
+ *lpBits*  
  Zeigt auf ein Array von Bytes, das die ursprünglichen Bitwerte der Bitmap enthält. Ist dieser Wert **NULL**, bleibt die neue Bitmap nicht initialisiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Für eine Farbbitmap muss entweder der `nPlanes` - oder `nBitcount` -Parameter auf 1 festgelegt werden. Wenn beide Parameter auf 1 festgelegt sind, erstellt `CreateBitmap` eine monochrome Bitmap.  
+ Für eine Farbbitmap muss entweder der *nPlanes* oder *nBitcount* Parameter sollte auf 1 festgelegt werden. Wenn beide Parameter auf 1 festgelegt sind, erstellt `CreateBitmap` eine monochrome Bitmap.  
   
  Obwohl eine Bitmap kann nicht direkt für ein Anzeigegerät ausgewählt werden, er kann ausgewählt werden, als aktuelle Bitmap für einen "Speichergerätekontext" mithilfe von [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) und auf einen beliebigen kompatiblen Gerätekontext kopiert werden, mithilfe der [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) Funktion.  
   
@@ -158,14 +158,14 @@ BOOL CreateBitmap(
  Weitere Informationen finden Sie unter der Beschreibung des **bmBits** -Felds der **BITMAP** -Struktur. Die [BITMAP](../../mfc/reference/bitmap-structure.md) Struktur wird beschrieben, unter der [CBitmap:: Createbitmapindirect](#createbitmapindirect) Memberfunktion.  
   
 ##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect  
- Initialisiert eine Bitmap, die die Breite, Höhe und Bitmuster (sofern diese angegeben ist), die in der Struktur verweist angegeben hat `lpBitmap`.  
+ Initialisiert eine Bitmap, die die Breite, Höhe und Bitmuster (sofern diese angegeben ist), die in der Struktur verweist angegeben hat *LpBitmap*.  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpBitmap`  
+ *lpBitmap*  
  Verweist auf eine [BITMAP](../../mfc/reference/bitmap-structure.md) -Struktur, die Informationen über die Bitmap enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -174,12 +174,12 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Hinweise  
  Obwohl eine Bitmap kann nicht direkt für ein Anzeigegerät ausgewählt werden, er kann ausgewählt werden, als aktuelle Bitmap für einen Gerätekontext Arbeitsspeicher mit [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) und auf einen beliebigen kompatiblen Gerätekontext kopiert werden, mithilfe der [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) oder [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) Funktion. (Die [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) Funktion kann die Bitmap für die aktuelle Pinsel direkt an den Anzeigekontext für das Gerät kopieren.)  
   
- Wenn die **BITMAP** Struktur an, die durch die `lpBitmap` Parameter ausgefüllt ist, mithilfe der `GetObject` -Funktion, die Bits der Bitmap wurden nicht angegeben und die Bitmap wird nicht initialisiert. Um das Bitmuster zu initialisieren, eine Anwendung können eine Funktion wie z. B. [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) oder [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) So kopieren Sie die Bits aus der Bitmap, die durch den ersten Parameter identifiziert `CGdiObject::GetObject` für die Bitmap erstellt von `CreateBitmapIndirect`.  
+ Wenn die **BITMAP** Struktur an, die durch die *LpBitmap* Parameter ausgefüllt ist, mithilfe der `GetObject` -Funktion, die Bits der Bitmap wurden nicht angegeben und die Bitmap wird nicht initialisiert. Um das Bitmuster zu initialisieren, eine Anwendung können eine Funktion wie z. B. [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) oder [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) So kopieren Sie die Bits aus der Bitmap, die durch den ersten Parameter identifiziert `CGdiObject::GetObject` für die Bitmap erstellt von `CreateBitmapIndirect`.  
   
  Wenn Sie fertig sind, mit der `CBitmap` mit erstellte Objekt `CreateBitmapIndirect` funktionieren, zunächst wählen Sie die Bitmap im Gerätekontext, löschen Sie die `CBitmap` Objekt.  
   
 ##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
- Initialisiert eine Bitmap, die kompatibel mit den durch das angegebene Gerät ist `pDC`.  
+ Initialisiert eine Bitmap, die kompatibel mit den durch das angegebene Gerät ist *pDC*.  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -189,22 +189,22 @@ BOOL CreateCompatibleBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Gibt den Gerätekontext.  
   
- `nWidth`  
+ *nWidth*  
  Gibt die Breite der Bitmap (in Pixeln) an.  
   
- `nHeight`  
+ *nHeight*  
  Gibt die Höhe der Bitmap (in Pixeln) an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Bitmap hat die gleiche Anzahl von Farbebenen oder das gleiche Bits pro Pixel-Format als den angegebenen Gerätekontext. Er kann ausgewählt werden, als aktuelle Bitmap für Arbeitsspeicher-Geräte, die kompatibel mit der vom angegebenen `pDC`.  
+ Die Bitmap hat die gleiche Anzahl von Farbebenen oder das gleiche Bits pro Pixel-Format als den angegebenen Gerätekontext. Er kann ausgewählt werden, als aktuelle Bitmap für Arbeitsspeicher-Geräte, die kompatibel mit der vom angegebenen *pDC*.  
   
- Wenn `pDC` ist eine Speichergerätekontext Bitmap zurückgegeben hat das gleiche Format wie die aktuell ausgewählte Bitmap dieser Gerätekontext. Einen "Speichergerätekontext" ist ein Speicherblock, der eine Anzeigeoberfläche darstellt. Es dient zum Vorbereiten von Images im Arbeitsspeicher, bevor Sie sie der tatsächlichen Anzeigeoberfläche des Geräts kompatibel zu kopieren.  
+ Wenn *pDC* ist eine Speichergerätekontext Bitmap zurückgegeben hat das gleiche Format wie die aktuell ausgewählte Bitmap dieser Gerätekontext. Einen "Speichergerätekontext" ist ein Speicherblock, der eine Anzeigeoberfläche darstellt. Es dient zum Vorbereiten von Images im Arbeitsspeicher, bevor Sie sie der tatsächlichen Anzeigeoberfläche des Geräts kompatibel zu kopieren.  
   
  Wenn eine Speichergerätekontext erstellt wird, wählt GDI automatisch eine monochrome Bitmap für die vordefinierte dafür an.  
   
@@ -213,7 +213,7 @@ BOOL CreateCompatibleBitmap(
  Wenn Sie fertig sind, mit der `CBitmap` Objekt erstellt, mit der `CreateCompatibleBitmap` Funktion, zunächst die Bitmap im Gerätekontext auswählen und dann Löschen der `CBitmap` Objekt.  
   
 ##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
- Initialisiert eine entfernbare Bitmap, die kompatibel mit den Gerätekontext erkennbar ist `pDC`.  
+ Initialisiert eine entfernbare Bitmap, die kompatibel mit den Gerätekontext erkennbar ist *pDC*.  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -223,20 +223,20 @@ BOOL CreateDiscardableBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Gibt einen Gerätekontext.  
   
- `nWidth`  
+ *nWidth*  
  Gibt die Breite (in Bits) der Bitmap an.  
   
- `nHeight`  
+ *nHeight*  
  Gibt die Höhe der Bitmap (in Bits) an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Bitmap hat die gleiche Anzahl von Farbebenen oder das gleiche Bits pro Pixel-Format als den angegebenen Gerätekontext. Eine Anwendung kann diese Bitmap wählen Sie als aktuelle Bitmap für ein Speichergerät, die kompatibel mit der vom angegebenen `pDC`.  
+ Die Bitmap hat die gleiche Anzahl von Farbebenen oder das gleiche Bits pro Pixel-Format als den angegebenen Gerätekontext. Eine Anwendung kann diese Bitmap wählen Sie als aktuelle Bitmap für ein Speichergerät, die kompatibel mit der vom angegebenen *pDC*.  
   
  Windows kann eine Bitmap, die von dieser Funktion nur erstellt, wenn eine Anwendung sie nicht in einen Anzeigekontext ausgewählt wurde verworfen. Wenn Windows verwirft die Bitmap aus, wenn es nicht aktiviert ist und die Anwendung später versucht wird, um diese auszuwählen, die [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) Funktion zurück **NULL**.  
   
@@ -250,7 +250,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hBitmap`  
+ *hBitmap*  
  Gibt eine Windows-GDI-Bitmap.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -267,7 +267,7 @@ int GetBitmap(BITMAP* pBitMap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitMap`  
+ *pBitMap*  
  Zeiger auf eine [Bitmapstruktur](../../mfc/reference/bitmap-structure.md) -Struktur, die die abbildeigenschaften erhält. Dieser Parameter darf nicht `NULL` sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -285,10 +285,10 @@ DWORD GetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCount`  
+ *dwCount*  
  Die Anzahl von Bytes, die in den Puffer kopiert werden sollen.  
   
- `lpBits`  
+ *lpBits*  
  Zeiger auf den Puffer, der die Bitmap empfangen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -311,7 +311,7 @@ CSize GetBitmapDimension() const;
  Die Höhe und Breite werden als zuvor festgelegt wurden mithilfe der [SetBitmapDimension](#setbitmapdimension) Memberfunktion.  
   
 ##  <a name="loadbitmap"></a>  LoadBitmap  
- Lädt die Bitmapressource mit dem Namen von `lpszResourceName` oder durch die ID-Nummer in identifiziert `nIDResource` aus der ausführbaren Datei der Anwendung.  
+ Lädt die Bitmapressource mit dem Namen von *LpszResourceName* oder durch die ID-Nummer in identifiziert *nIDResource* aus der ausführbaren Datei der Anwendung.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -319,10 +319,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszResourceName`  
+ *lpszResourceName*  
  Zeigt auf eine auf Null endende Zeichenfolge, die den Namen der Bitmapressource enthält.  
   
- `nIDResource`  
+ *nIDResource*  
  Gibt die Ressourcen-ID-Nummer der Bitmapressource an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -331,7 +331,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="remarks"></a>Hinweise  
  Die geladene Bitmap angefügt ist die `CBitmap` Objekt.  
   
- Wenn die Bitmap identifizierte `lpszResourceName` ist nicht vorhanden oder ist nicht genügend Arbeitsspeicher zum Laden der Bitmap, die Funktion gibt 0 zurück.  
+ Wenn die Bitmap identifizierte *LpszResourceName* ist nicht vorhanden oder ist nicht genügend Arbeitsspeicher zum Laden der Bitmap, die Funktion gibt 0 zurück.  
   
  Können Sie die [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Funktion, um das Löschen der Bitmap geladen werden, indem die `LoadBitmap` -Funktion, oder die `CBitmap` Destruktor wird das Objekt für Sie zu löschen.  
   
@@ -356,17 +356,17 @@ BOOL LoadMappedBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDBitmap`  
+ *nIDBitmap*  
  Die ID der Bitmapressource.  
   
- `nFlags`  
+ *nFlags*  
  Ein Flag für eine Bitmap. Kann 0 (null) sein oder **CMB_MASKED**.  
   
- `lpColorMap`  
+ *lpColorMap*  
  Ein Zeiger auf eine **COLORMAP** Struktur, die die Farbe benötigten Informationen zum Zuordnen von Bitmaps enthält. Wenn dieser Parameter ist **NULL**, die Funktion verwendet die Standard-Farbkarte.  
   
  *nMapSize*  
- Die Anzahl der farbkarten enthalten verweist `lpColorMap`.  
+ Die Anzahl der farbkarten enthalten verweist *LpColorMap*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -384,7 +384,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDBitmap`  
+ *nIDBitmap*  
  ID-Nummer der vordefinierten Windows-Bitmap. Die möglichen Werte sind unten aufgeführt, von WINDOWS. H  
   
 |||  
@@ -431,7 +431,7 @@ operator HBITMAP() const;
  Weitere Informationen zum Verwenden von Grafikobjekten, finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
- Legt die Bits einer Bitmap, die Bitwerten auf der Grundlage von `lpBits`.  
+ Legt die Bits einer Bitmap, die Bitwerten auf der Grundlage von *LpBits*.  
   
 ```  
 DWORD SetBitmapBits(
@@ -440,10 +440,10 @@ DWORD SetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCount`  
- Gibt die Anzahl der Bytes, die durch `lpBits`.  
+ *dwCount*  
+ Gibt die Anzahl der Bytes, die durch *LpBits*.  
   
- `lpBits`  
+ *lpBits*  
  Verweist auf die **BYTE** Array, die Pixelwerte zum Kopieren enthält, der `CBitmap` Objekt. Damit für die Bitmap, damit das Bild ordnungsgemäß gerendert werden kann sollte die Werte formatiert werden, um die Höhe, Breite und Farbe Tiefenwerte entsprechen, die angegeben wurden, wenn die CBitmap-Instanz erstellt wurde. Weitere Informationen finden Sie unter [CBitmap::CreateBitmap](#createbitmap).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -459,10 +459,10 @@ CSize SetBitmapDimension(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWidth`  
+ *nWidth*  
  Gibt die Breite der Bitmap (in Einheiten von 0,1-Millimeter).  
   
- `nHeight`  
+ *nHeight*  
  Gibt die Höhe der Bitmap (in Einheiten von 0,1-Millimeter).  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366472"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953700"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget-Klasse
 Ein Wrapper für ID2D1DCRenderTarget.  
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pTarget`  
+ *pTarget*  
  Vorhandene Render-Ziel-Schnittstelle. NULL darf nicht sein  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dc`  
+ *dc*  
  Der Gerätekontext, an dem das Renderziel Zeichnungsbefehlen ausgibt  
   
- `rect`  
+ *Rect*  
  Die Dimensionen des Handles für einen Gerätekontext (HDC) an dem das Renderziel gebunden ist  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `props`  
+ *Eigenschaftendateien enthalten*  
  Der Renderingmodus, Pixelformat, Remotingoptionen, DPI-Informationen und die minimale DirectX-Unterstützung für Hardwarerendering erforderlich sind.  
   
 ### <a name="return-value"></a>Rückgabewert  

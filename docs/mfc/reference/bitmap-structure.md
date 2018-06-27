@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351636"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950303"
 ---
 # <a name="bitmap-structure"></a>BITMAP-Struktur
 Die **BITMAP** Struktur definiert die Höhe, Breite, farbenformat und die Bitwerte einer logischen Bitmap **.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Gibt die Höhe der Bitmap in Rasterzeilen an. Die Höhe muss größer als 0 sein.  
   
  *bmWidthBytes*  
- Gibt die Anzahl von Bytes in jeder Rasterzeile an. Dieser Wert muss eine gerade Zahl sein, da die Graphics Device Interface (GDI) davon ausgeht, dass die Bitwerte einer Bitmap ein Array von ganzzahligen (2-Byte-)Werten bilden. Das heißt, **BmWidthBytes** \* 8 muss das nächste Vielfache von 16 größer oder gleich dem Wert, wenn die **BmWidth** Member multipliziert wird die **BmBitsPixel**  Member.  
+ Gibt die Anzahl von Bytes in jeder Rasterzeile an. Dieser Wert muss eine gerade Zahl sein, da die Graphics Device Interface (GDI) davon ausgeht, dass die Bitwerte einer Bitmap ein Array von ganzzahligen (2-Byte-)Werten bilden. Das heißt, *BmWidthBytes* \* 8 muss das nächste Vielfache von 16 größer oder gleich dem Wert, wenn die *BmWidth* Member multipliziert wird die *BmBitsPixel*  Member.  
   
  *bmPlanes*  
  Gibt die Anzahl von Farbebenen in der Bitmap an.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Gibt die Anzahl der benachbarten Farbbits auf jeder Ebene an, die zur Definition eines Pixels erforderlich sind.  
   
  *bmBits*  
- Zeigt auf den Speicherort der Bitwerte für die Bitmap. Die **BmBits** angehören muss ein long-Zeiger auf ein Array von 1-Byte-Werten.  
+ Zeigt auf den Speicherort der Bitwerte für die Bitmap. Die *BmBits* angehören muss ein long-Zeiger auf ein Array von 1-Byte-Werten.  
   
 ## <a name="remarks"></a>Hinweise  
  Die aktuell verwendeten Bitmapformate sind monochrom und Farbe. Die monochrome Bitmap verwendet ein 1-Bit-/1-Plane-Format. Jeder Scan ist ein Vielfaches von 16 Bits.  

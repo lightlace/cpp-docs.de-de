@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367502"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950884"
 ---
 # <a name="cevent-class"></a>CEvent-Klasse
 Stellt ein Ereignis dar-ein Synchronisierungsobjekt, die es einem Thread ermöglicht anderen darüber zu benachrichtigen, die ein Ereignis aufgetreten ist.  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` Objekte verfügen über zwei Arten: Manuelles und automatisches.  
   
- Eine automatische `CEvent` Objekt wird automatisch in einen nicht signalisierten (nicht verfügbar) Zustand zurückkehrt, mindestens einen Thread freigegeben ist. Wird standardmäßig ein `CEvent` Objekt erfolgt automatisch, es sei denn, Sie übergeben `TRUE` für die `bManualReset` Parameter während der Erstellung.  
+ Eine automatische `CEvent` Objekt wird automatisch in einen nicht signalisierten (nicht verfügbar) Zustand zurückkehrt, mindestens einen Thread freigegeben ist. Wird standardmäßig ein `CEvent` Objekt erfolgt automatisch, es sei denn, Sie übergeben `TRUE` für die *bManualReset* Parameter während der Erstellung.  
   
  Eine manuelle `CEvent` Objekt verbleibt im Status "festlegen, indem" [SetEvent](#setevent) oder [ResetEvent](#resetevent) , bis die andere Funktion aufgerufen wird. So erstellen eine manuelle `CEvent` Objekt, und übergeben `TRUE` für die `bManualReset` Parameter während der Erstellung.  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bInitiallyOwn`  
- Wenn **"true"**, den Thread für die **CMultilock** oder `CSingleLock` Objekt aktiviert ist. Andernfalls müssen alle Threads, die Zugriff auf die Ressource endversatz warten.  
+ *bInitiallyOwn*  
+ Wenn **"true"**, den Thread für die `CMultilock` oder `CSingleLock` Objekt aktiviert ist. Andernfalls müssen alle Threads, die Zugriff auf die Ressource endversatz warten.  
   
  *bManualReset*  
  Wenn **"true"**, gibt an, dass das Ereignisobjekt eines manuellen Ereignisses ist, andernfalls ist das Ereignisobjekt automatische Ereignis.  
   
- `lpszName`  
+ *Wert*  
  Name des `CEvent`-Objekts. Muss angegeben werden, wenn das Objekt über Prozessgrenzen hinweg verwendet werden soll. Ein vorhandenes Ereignis mit dem Namen übereinstimmt, der Konstruktor erstellt ein neues `CEvent` Objekt, das das Ereignis mit diesem Namen verweist. Wenn der Name einer vorhandenen Synchronisierungsobjekt, die nicht auf ein Ereignis ist übereinstimmt, schlägt die Erstellung fehl. Wenn **NULL**, wird der Name null sein.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Die Sicherheitsattribute für das Ereignisobjekt. Eine vollständige Beschreibung dieser Struktur finden Sie unter [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  

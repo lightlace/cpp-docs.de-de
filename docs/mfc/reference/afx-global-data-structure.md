@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357227"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956306"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA-Struktur
 Die `AFX_GLOBAL_DATA` -Struktur enthält Felder und Methoden, mit denen das Framework verwaltet oder die Darstellung und das Verhalten der Anwendung angepasst werden können.  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- `angle`  
+ *Winkel*  
  Der Winkel der Drehung im Uhrzeigersinn in Grad.  
   
- `center`  
+ *Center*  
  Der Punkt, um die gedreht.  
   
- `matrix`  
+ *Matrix*  
  Wenn diese Methode zurückgibt, enthält neue Drehtransformation. Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `pWnd`  
+ [in] *pWnd*  
  Zeiger auf Fenster eines Steuerelements.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `lpRect`  
+ [in] *LpRect*  
  Ein Zeiger auf ein Rechteck, umschließt den Bereich gezeichnet werden soll. Der Standardwert ist `NULL`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `hTheme`  
+ [in] *hTheme*  
  Handle zu den Designdaten eines Fensters oder `NULL`. Das Framework verwendet das angegebene Design, um den Text zu zeichnen, wenn dieser Parameter nicht `NULL` lautet und Designs unterstützt werden. Andernfalls verwendet das Framework kein Design zum Zeichnen des Texts.  
   
  Verwenden Sie die [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) -Methode, um `HTHEME`zu erstellen.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `iPartId`  
+ [in] *iPartId*  
  Das Steuerelementteil, in dem das gewünschte Erscheinungsbild für den Text gespeichert ist. Weitere Informationen finden Sie im Artikel [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(Teile und Zustände) in der Tabellenspalte „Part“ (Teil). Wenn der Wert 0 lautet, wird der Text in der Standardschriftart oder in einer im Gerätekontext ausgewählten Schriftart gezeichnet.  
   
- [in] `iStateId`  
+ [in] *iStateId*  
  Der Steuerelementzustand, in dem das gewünschte Erscheinungsbild für den Text gespeichert ist. Weitere Informationen finden Sie im Artikel [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(Teile und Zustände) in der Tabellenspalte „States“ (Zustände).  
   
- [in] `strText`  
+ [in] *StrText*  
  Der zu zeichnende Text.  
   
- [in] `rect`  
+ [in] *Rect*  
  Die Grenze des Bereichs, in dem der angegebene Text gezeichnet wird.  
   
- [in] `dwFlags`  
+ [in] *DwFlags*  
  Eine bitweise Kombination (OR) von Flags, die angibt, wie der angegebene Text gezeichnet wird.  
   
- Wenn die `hTheme` Parameter ist `NULL` oder wenn Designs sind nicht unterstützt und aktiviert die `nFormat` Parameter von der [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) Methode beschreibt die gültigen Flags. Wenn Themen unterstützt werden, beschreibt der `dwFlags` -Parameter der [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) -Methode die gültigen Flags.  
+ Wenn die *hTheme* Parameter ist `NULL` oder wenn Designs sind nicht unterstützt und aktiviert die *nFormat* Parameter von der [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) Methode beschreibt die gültigen Flags. Wenn Designs unterstützt werden, die *DwFlags* Parameter von der [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) Methode beschreibt die gültigen Flags.  
   
- [in] `nGlowSize`  
+ [in] *nGlowSize*  
  Die Größe eines Leuchteffekts, der auf dem Hintergrund gezeichnet wird, bevor der angegebene Text gezeichnet wird. Der Standardwert ist 0.  
   
- [in] `clrText`  
+ [in] *ClrText*  
  Die Farbe, in der der angegebene Text gezeichnet wird. Der Standardwert ist die Standardfarbe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn ein Design zum Zeichnen des angegebenen Texts verwendet wird. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Design definiert den visuellen Stil einer Anwendung. In folgenden Fällen wird kein Design zum Zeichnen des Textes verwendet: Der `hTheme` -Parameter lautet `NULL`; die [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) -Methode wird nicht unterstützt; die Komposition über den [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) ist deaktiviert.  
+ Ein Design definiert den visuellen Stil einer Anwendung. Ein Design dient nicht zum Zeichnen des Texts, wenn die *hTheme* Parameter ist `NULL`, oder, wenn die [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) Methode wird nicht unterstützt, oder wenn [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) ( Komposition des DWMS) ist deaktiviert.  
   
 ### <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` Accessibility-Unterstützung zu aktivieren; `FALSE` Accessibility-Unterstützung zu deaktivieren. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `strBuffer`  
+ [in] *StrBuffer*  
  Ein Puffer von Text.  
   
- [in] `lpszTag`  
+ [in] *LpszTag*  
  Der Name eines Paars von öffnenden und schließenden XML-Tags.  
   
- [out] `strTag`  
- Bei Rückgabe dieser Methode die `strTag` Parameter enthält den Text, der zwischen den öffnenden und schließenden XML Tags, die durch benannte sind die `lpszTag` Parameter. Führende oder nachfolgende Leerzeichen werden aus dem Ergebnis gekürzt.  
+ [out] *StrTag*  
+ Bei Rückgabe dieser Methode die *StrTag* Parameter enthält den Text, der zwischen den öffnenden und schließenden XML Tags, die durch benannte sind die *LpszTag* Parameter. Führende oder nachfolgende Leerzeichen werden aus dem Ergebnis gekürzt.  
   
- [in] `bIsCharsList`  
- `TRUE` Konvertieren von Symbolen für Escapezeichen in der `strTag` Parameter in der tatsächlichen Escapezeichen; `FALSE` nicht zum Durchführen der Konvertierung. Der Standardwert ist `FALSE`. Weitere Informationen finden Sie in den Hinweisen.  
+ [in] *bIsCharsList*  
+ `TRUE` Konvertieren von Symbolen für Escapezeichen in der *StrTag* Parameter in der tatsächlichen Escapezeichen; `FALSE` nicht zum Durchführen der Konvertierung. Der Standardwert ist `FALSE`. Weitere Informationen finden Sie in den Hinweisen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein XML-Tagpaar besteht aus mit dem Namen Start- und Endtags, die angeben, die Start- und Ende einer Ausführung des Texts in den angegebenen Puffer. Die `strBuffer` Parameter gibt den Puffer und der `lpszTag` Parameter gibt den Namen des XML-Tags.  
+ Ein XML-Tagpaar besteht aus mit dem Namen Start- und Endtags, die angeben, die Start- und Ende einer Ausführung des Texts in den angegebenen Puffer. Die *StrBuffer* Parameter gibt den Puffer und der *LpszTag* Parameter gibt den Namen des XML-Tags.  
   
- Verwenden Sie die Symbole in der folgenden Tabelle, um die Codierung eines Satzes von Escapezeichen in den angegebenen Puffer. Geben Sie `TRUE` für die `bIsCharsList` zu konvertierenden Symbole im Parameters die `strTag` Parameter in der tatsächlichen Escape-Zeichen. Die folgende Tabelle verwendet den [_T()](../../c-runtime-library/data-type-mappings.md) Makro auf das Symbol angeben und Zeichenfolgen mit Escapezeichen versehen.  
+ Verwenden Sie die Symbole in der folgenden Tabelle, um die Codierung eines Satzes von Escapezeichen in den angegebenen Puffer. Geben Sie `TRUE` für die *bIsCharsList* zu konvertierenden Symbole im Parameters die *StrTag* Parameter in der tatsächlichen Escape-Zeichen. Die folgende Tabelle verwendet den [_T()](../../c-runtime-library/data-type-mappings.md) Makro auf das Symbol angeben und Zeichenfolgen mit Escapezeichen versehen.  
   
 |Symbol|Escapezeichen|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `nColor`  
- Ein Wert, der ein Benutzeroberflächenelement angibt, dessen Farbe abgerufen wird. Eine Liste der gültigen Werte finden Sie unter der `nIndex` Parameter von der [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Methode.  
+ [in] *nColor*  
+ Ein Wert, der ein Benutzeroberflächenelement angibt, dessen Farbe abgerufen wird. Eine Liste der gültigen Werte finden Sie unter der *nIndex* Parameter von der [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der RGB-Farbe-Wert, der das angegebene Element der Debuggerbenutzeroberfläche werden soll. Weitere Informationen finden Sie in den Hinweisen.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `nColor` Parameter liegt außerhalb des Bereichs, der Rückgabewert ist 0 (null). Da 0 (null), die auch einen gültigen RGB-Wert ist, können nicht Sie diese Methode verwenden, um zu bestimmen, ob eine Systemfarbe durch das aktuelle Betriebssystem unterstützt wird. Verwenden Sie stattdessen die [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) Methode, die zurückgibt `NULL` , wenn die Farbe nicht unterstützt wird.  
+ Wenn die *nColor* Parameter liegt außerhalb des Bereichs, der Rückgabewert ist 0 (null). Da 0 (null), die auch einen gültigen RGB-Wert ist, können nicht Sie diese Methode verwenden, um zu bestimmen, ob eine Systemfarbe durch das aktuelle Betriebssystem unterstützt wird. Verwenden Sie stattdessen die [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) Methode, die zurückgibt `NULL` , wenn die Farbe nicht unterstützt wird.  
   
 ### <a name="see-also"></a>Siehe auch  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in, out] `info`  
+ [in, out] *Info*  
  Ein [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) -Struktur, die skalierbare Metriken zugeordneten nicht-Clientbereich eines nicht minimierten Fensters enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` die Höhe der Zeichen abrufen, wenn der Text horizontal verläuft; `FALSE` die Höhe der Zeichen abrufen, wenn der Text vertikal verläuft. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  Das Threadingmodell der D2D-Factory und die Ressourcen erstellt.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Ein Wert, der angibt, ob das Write-Factoryobjekt freigegeben oder isoliert wird  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `lpszClassNamePrefix`  
+ [in] *LpszClassNamePrefix*  
  Der Name der Fensterklasse registriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der qualifizierte Name der registrierten Klasse, wenn diese Methode erfolgreich ausgeführt wird; andernfalls ein [Ressourcenausnahme](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Rückgabewert ist ein Doppelpunkt getrennte Liste von der `lpszClassNamePrefix` -Parameterzeichenfolge verwenden und die hexadezimale Textdarstellungen von Handles für die aktuelle Anwendungsinstanz; die Anwendung-Cursor, in dem der Pfeilcursor, deren Bezeichner IDC_ARROW; und Der Hintergrundpinsel. Weitere Informationen zum Registrieren von Fensterklassen MFC finden Sie unter [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
+ Der Rückgabewert ist ein Doppelpunkt getrennte Liste von der *LpszClassNamePrefix* -Parameterzeichenfolge verwenden und die hexadezimale Textdarstellungen von Handles für die aktuelle Anwendungsinstanz; die Anwendung-Cursor, also den Pfeil Cursor, deren Bezeichner IDC_ARROW ist; und der Hintergrundpinsel. Weitere Informationen zum Registrieren von Fensterklassen MFC finden Sie unter [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Siehe auch    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `hwnd`  
+ [in] *Hwnd*  
  Handle für das überlappende Fenster.  
   
- [in] `crKey`  
+ [in] *CrKey*  
  Die der Transparenzfarbe Schlüssel, der [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) verwendet, um überlappende Fenster verfassen.  
   
- [in] `bAlpha`  
+ [in] *bAlpha*  
  Der alpha-Wert, der mit der die Deckkraft des Fensters geschichteten beschrieben werden.  
   
- [in] `dwFlags`  
- Eine bitweise Kombination (OR) von Flags, die angeben, welche Methodenparameter verwendet werden. Geben Sie LWA_COLORKEY verwenden die `crKey` Parameter als Transparenzfarbe. Geben Sie LWA_ALPHA verwenden die `bAlpha` Parameter, um die Deckkraft des Fensters mit Ebenen zu ermitteln.  
+ [in] *DwFlags*  
+ Eine bitweise Kombination (OR) von Flags, die angeben, welche Methodenparameter verwendet werden. Geben Sie LWA_COLORKEY verwenden die *CrKey* Parameter als Transparenzfarbe. Geben Sie LWA_ALPHA verwenden die *bAlpha* Parameter, um die Deckkraft des Fensters mit Ebenen zu ermitteln.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn diese Methode erfolgreich ist. andernfalls `FALSE`.   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] `lpLogFont`  
+ [in] *LpLogFont*  
  Ein Zeiger auf eine Struktur, die Attribute einer Schriftart enthält.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` um anzugeben, dass der Text horizontal ausgeführt wird; `FALSE` um anzugeben, dass der Text vertikal verläuft.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- `pszPath`  
+ *pszPath*  
  [in] Ein Zeiger auf einen Anzeigenamen ein.  
   
- `pbc`  
+ *pbc*  
  Ein Zeiger auf einen Bindungskontext, das den Analysevorgang steuert.  
   
- `riid`  
+ *riid*  
  Ein Verweis auf eine Schnittstellen-ID.  
   
- `ppv`  
- [out] Wenn diese Funktion zurückgibt, enthält den Schnittstellenzeiger, der im angeforderten `riid`. Dies ist in der Regel wird `IShellItem` oder `IShellItem2`.  
+ *ppv*  
+ [out] Wenn diese Funktion zurückgibt, enthält den Schnittstellenzeiger, der im angeforderten *Riid*. Dies ist in der Regel wird `IShellItem` oder `IShellItem2`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK, wenn erfolgreich; ein Fehlerwert andernfalls.  

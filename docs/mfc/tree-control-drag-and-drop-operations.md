@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382765"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956251"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Drag & Drop-Operationen für das Struktursteuerelement
-Ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet eine Benachrichtigung, wenn der Benutzer beginnt, ein Element zu ziehen. Sendet das Steuerelement eine [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) Benachrichtigung, wenn der Benutzer beginnt, ein Element mit der linken Maustaste ziehen und ein [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) Benachrichtigung, wenn der Benutzer beginnt mit ziehen mit der rechten Maustaste. Sie können verhindern, dass ein Strukturansicht-Steuerelement diese Benachrichtigungen senden, durch die Vergabe der Strukturansicht die **TVS_DISABLEDRAGDROP** Stil.  
+Ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet eine Benachrichtigung, wenn der Benutzer beginnt, ein Element zu ziehen. Sendet das Steuerelement eine [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) Benachrichtigung, wenn der Benutzer beginnt, ein Element mit der linken Maustaste ziehen und ein [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) Benachrichtigung, wenn der Benutzer beginnt mit ziehen mit der rechten Maustaste. Sie können verhindern, dass ein Strukturansicht-Steuerelement diese Benachrichtigungen senden, durch die Vergabe der Strukturansicht des TVS_DISABLEDRAGDROP-Stils.  
   
  Sie erhalten ein Bild anzuzeigenden während eines Ziehvorgangs durch Aufrufen der [Memberfunktion CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) Memberfunktion. Strukturansicht-Steuerelements erstellt eine ziehen Bitmap basierend auf der Bezeichnung des Elements gezogen wird. Strukturansicht-Steuerelements eine Bildliste erstellt, die Bitmap hinzugefügt, und gibt einen Zeiger auf die [CImageList](../mfc/reference/cimagelist-class.md) Objekt.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6fd065d13d3c61b88cc24144cfc64368020d16
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385579"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953970"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Socketbenachrichtigungen
 Dieser Artikel beschreibt die Benachrichtigungsfunktionen in den Socketklassen. Diese Memberfunktionen sind Rückruffunktionen, die vom Framework aufgerufen, um Ihre Socketobjekt von wichtigen Ereignissen zu benachrichtigen. Die Benachrichtigungsfunktionen sind:  
@@ -43,14 +43,14 @@ Dieser Artikel beschreibt die Benachrichtigungsfunktionen in den Socketklassen. 
   
  Diese Funktionen sind überschreibbare Rückruffunktionen. `CAsyncSocket` und `CSocket` Konvertieren von Nachrichten an die Benachrichtigungen, aber Sie müssen implementieren, wie die Benachrichtigung reagieren funktioniert, wenn Sie sie verwenden möchten. Die Benachrichtigungsfunktionen heißen zum Zeitpunkt, zu die der Socket eines Ereignisses von Interesse sind, wie etwa der Anwesenheit von zu lesenden Daten benachrichtigt wird.  
   
- MFC Ruf die Benachrichtigungsfunktionen auf, können Sie die Socket-Verhalten zu dem Zeitpunkt anpassen, die sie darüber benachrichtigt wird. Rufen Sie z. B. möglicherweise **Receive** aus Ihrer `OnReceive` Benachrichtigungsfunktion, d. h. auf wird darüber benachrichtigt, dass die zu lesenden Daten vorhanden ist, rufen Sie **Receive** lesen. Dieser Ansatz ist nicht erforderlich, aber es ist ein gültiges Szenario. Als Alternative können Ihre Benachrichtigungsfunktion zum Nachverfolgen des Verlaufs, Drucken **ABLAUFVERFOLGUNG** Nachrichten und So weiter.  
+ MFC Ruf die Benachrichtigungsfunktionen auf, können Sie die Socket-Verhalten zu dem Zeitpunkt anpassen, die sie darüber benachrichtigt wird. Sie können z. B. Aufrufen `Receive` aus Ihrer `OnReceive` Benachrichtigungsfunktion, d. h. auf wird darüber benachrichtigt, dass die zu lesenden Daten vorhanden ist, rufen Sie `Receive` lesen. Dieser Ansatz ist nicht erforderlich, aber es ist ein gültiges Szenario. Als Alternative können Ihre Benachrichtigungsfunktion zum Nachverfolgen des Verlaufs, Drucken **ABLAUFVERFOLGUNG** Nachrichten und So weiter.  
   
  Sie können diese Benachrichtigungen nutzen die Benachrichtigungsfunktionen in einer abgeleiteten Socketklasse zu überschreiben und eine Implementierung bereitstellen.  
   
- Während eines Vorgangs, z. B. empfangen oder Senden von Daten eine `CSocket` Objekt wird synchron. Während der synchronen Zustand werden alle Benachrichtigungen, die für andere Sockets vorgesehen in Warteschlangen eingereiht, während der aktuellen Socket für die Benachrichtigung wartet werden. (Z. B. während einer **Receive** Aufruf der, der Socket möchte eine Benachrichtigung zum Lesen.) Um, sobald der Socket Staffelung synchron abgeschlossen und ist das asynchrone wieder, können anderen Sockets beginnen, die in der Warteschlange Benachrichtigungen empfangen.  
+ Während eines Vorgangs, z. B. empfangen oder Senden von Daten eine `CSocket` Objekt wird synchron. Während der synchronen Zustand werden alle Benachrichtigungen, die für andere Sockets vorgesehen in Warteschlangen eingereiht, während der aktuellen Socket für die Benachrichtigung wartet werden. (Z. B. während einer `Receive` Aufruf der, der Socket möchte eine Benachrichtigung zum Lesen.) Um, sobald der Socket Staffelung synchron abgeschlossen und ist das asynchrone wieder, können anderen Sockets beginnen, die in der Warteschlange Benachrichtigungen empfangen.  
   
 > [!NOTE]
->  In `CSocket`die `OnConnect` Benachrichtigungsfunktion wird nie aufgerufen. Rufen Sie für Verbindungen, **verbinden**, die dann zurück, wenn die Verbindung (erfolgreich oder fehlerhaft) abgeschlossen ist. Behandlung von Verbindung Benachrichtigungen ist ein Implementierungsdetail MFC.  
+>  In `CSocket`die `OnConnect` Benachrichtigungsfunktion wird nie aufgerufen. Rufen Sie für Verbindungen, `Connect`, die dann zurück, wenn die Verbindung (erfolgreich oder fehlerhaft) abgeschlossen ist. Behandlung von Verbindung Benachrichtigungen ist ein Implementierungsdetail MFC.  
   
  Weitere Informationen zu jeder Benachrichtigungsfunktion, finden Sie unter der Funktion unter Klasse `CAsyncSocket` in der *MFC-Referenz*. Quellcode und Informationen über MFC-Beispiele finden Sie unter [MFC-Beispiele](../visual-cpp-samples.md).  
   

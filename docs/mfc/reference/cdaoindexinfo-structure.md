@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367034"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954064"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo-Struktur
 Die `CDaoIndexInfo` Struktur enthält Informationen zu einem Indexobjekt, das für Datenzugriffsobjekte (DAO) definiert.  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `m_strName`  
+ *m_strName*  
  Eindeutig benennt das Feldobjekt. Details finden Sie im Thema "Name-Eigenschaft" DAO-Hilfe.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  Ein Zeiger auf ein Array von [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) Objekte, der angibt, welche Tabledef oder ein Recordset-Felder in einem Index Schlüsselfelder sind. Jedes Objekt identifiziert ein Feld im Index. Der Index Standardreihenfolge ist Aufsteigend. Ein Indexobjekt kann ein oder mehrere Felder, die für jeden Datensatz Indexschlüssel darstellt haben. Diese können, absteigend, oder eine Kombination aufsteigend sortiert sein.  
   
- `m_nFields`  
- Die Anzahl der Felder, die in gespeicherten `m_pFieldInfos`.  
+ *m_nFields*  
+ Die Anzahl der Felder, die in gespeicherten *M_pFieldInfos*.  
   
  *m_bPrimary*  
  Wenn die primäre Eigenschaft **"true"**, Index-Objekt stellt einen primären Index dar. Ein primärer Index besteht aus einem oder mehreren Feldern, die alle Datensätze in einer Tabelle in einer vordefinierten Reihenfolge eindeutig zu identifizieren. Da Indexfeld eindeutig sein muss, ist die Unique-Eigenschaft des Indexobjekts auch zum Festlegen **"true"** über DAO. Wenn es sich bei der Primärindex aus mehr als ein Feld besteht, kann jedes Feld doppelte Werte enthalten, aber jede Kombination von Werten aus den indizierten Feldern muss eindeutig sein. Ein primärer Index besteht aus einem Schlüssel für die Tabelle und in der Regel enthält die gleichen Felder als Primärschlüssel.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  Weitere Informationen finden Sie im Thema "IgnoreNulls-Eigenschaft" DAO-Hilfe.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Gibt an, ob ein DAO-Index-Objekt einen Wert ungleich Null erfordert. Wenn diese Eigenschaft ist **"true"**, das Indexobjekt lässt sich nicht auf einen Null-Wert. Weitere Informationen finden Sie im Thema "Erforderliche Eigenschaft" DAO-Hilfe.  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  Index-Objekte werden nicht von einer MFC-Klasse dargestellt. Stattdessen DAO Objekten zugrunde liegenden MFC-Objekte der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) eine Auflistung von indexobjekten, bezeichnet die Auflistung von Indizes enthalten. Diese Klassen geben Memberfunktionen für den Zugriff auf einzelne Elemente von Indexinformationen, oder Sie auf Sie zugreifen können alle gleichzeitig mit einem `CDaoIndexInfo` Objekt durch Aufrufen der `GetIndexInfo` Memberfunktion Rand des enthaltenden Objekts.  
   
- `CDaoIndexInfo` verfügt über einen Konstruktor und einen Destruktor, um ordnungsgemäß zuordnen und Aufheben der Zuordnung der Feldinformationen Index in `m_pFieldInfos`.  
+ `CDaoIndexInfo` verfügt über einen Konstruktor und einen Destruktor, um ordnungsgemäß zuordnen und Aufheben der Zuordnung der Feldinformationen Index in *M_pFieldInfos*.  
   
  Informationen, die abgerufen, indem die `GetIndexInfo` Memberfunktion eines Objekts Tabledef befindet sich in einer `CDaoIndexInfo` Struktur. Rufen Sie die `GetIndexInfo` Memberfunktion Rand des enthaltenden Tabledef-Objekts, das in die Auflistung, deren Indizes das Indexobjekt gespeichert ist. `CDaoIndexInfo` definiert auch einen `Dump` Memberfunktion in Debug-builds. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoIndexInfo` Objekt.  
   

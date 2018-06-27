@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383835"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951139"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistenten und der Ressourcen-Editor
 Visual C++ enthält mehrere Assistenten für die Verwendung in MFC-Programmierung, zusammen mit vielen integrierten Ressourcen-Editoren. Für ActiveX-Programmierung, Steuerelemente der [ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md) dient dem Zweck, ähnlich der MFC-Anwendung-Assistenten. Während Sie die MFC-Anwendungen ohne die meisten dieser Tools schreiben können, wird die Tools erheblich vereinfachen und beschleunigen Ihre Arbeit.  
@@ -41,7 +41,7 @@ Visual C++ enthält mehrere Assistenten für die Verwendung in MFC-Programmierun
 > [!NOTE]
 >  Klassenansicht können Sie virtuelle Funktionen in den MFC-Klassen überschreiben. Wählen Sie die Klasse und die virtuelle Funktion, die außer Kraft setzen. Die restliche Prozess ähnelt Meldungsbehandlung, wie in den folgenden Abschnitten beschrieben.  
   
- Anwendungen, die unter Windows ausgeführt werden [Nachricht driven](../mfc/message-handling-and-mapping.md). Dazu führen, dass Windows zum Senden von Nachrichten auf dem Windows im Programm Benutzeraktionen und andere Ereignisse, die in der ausgeführten Anwendung auftreten. Beispielsweise, wenn der Benutzer die Maus in einem Fenster klickt, sendet Windows eine `WM_LBUTTONDOWN` Nachricht, wenn die linke Maustaste gedrückt wird und ein `WM_LBUTTONUP` Meldung, wenn die Maustaste losgelassen wird. Außerdem sendet Windows **WM_COMMAND** Nachrichten, wenn der Benutzer über die Menüleiste Befehle auswählt.  
+ Anwendungen, die unter Windows ausgeführt werden [Nachricht driven](../mfc/message-handling-and-mapping.md). Dazu führen, dass Windows zum Senden von Nachrichten auf dem Windows im Programm Benutzeraktionen und andere Ereignisse, die in der ausgeführten Anwendung auftreten. Z. B. wenn der Benutzer die Maus in einem Fenster klickt, sendet Windows eine WM_LBUTTONDOWN-Meldung, wenn die linke Maustaste gedrückt wird und eine Nachricht WM_LBUTTONUP, wenn die Maustaste losgelassen wird. Wenn der Benutzer über die Menüleiste Befehle auswählt, sendet Windows auch WM_COMMAND-Meldungen.  
   
  In der MFC-Framework können verschiedene Objekte, z. B. Dokumente, Ansichten, Rahmenfenster, Dokumentvorlagen und das Anwendungsobjekt "Nachrichten verarbeiten". Ein solches Objekt "Handlerfunktion" als eines seiner Member stellt Funktionen bereit, und das Framework wird die eingehende Nachricht der Handler zugeordnet.  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369124"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954532"
 ---
 # <a name="cfileexception-class"></a>CFileException-Klasse
 Stellt eine dateibezogene Ausnahmebedingung dar.  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cause`  
+ *Ursache*  
  Ein Aufzählungstyp-Variable, die die Ursache der Ausnahme angibt. Finden Sie unter [CFileException::m_cause](#m_cause) eine Liste der möglichen Werte.  
   
- `lOsError`  
- Ein System-betriebssystemspezifische Ursache der Ausnahme, falls verfügbar. Die `lOsError` Parameter bietet mehr Informationen als `cause` verfügt.  
+ *lOsError*  
+ Ein System-betriebssystemspezifische Ursache der Ausnahme, falls verfügbar. Die *lOsError* Parameter bietet mehr Informationen als *dazu führen, dass* verfügt.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Verweist auf eine Zeichenfolge mit dem Namen des dem `CFile` Objekt, der die Ausnahme verursacht.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diesen Konstruktor nicht direkt, aber stattdessen rufen Sie die globale Funktion [AfxThrowFileException](exception-processing.md#afxthrowfileexception).  
   
 > [!NOTE]
->  Die Variable `lOsError` gilt nur für `CFile` und `CStdioFile` Objekte. Die `CMemFile` -Klasse behandelt keine mit diesem Fehlercode.  
+>  Die Variable *lOsError* gilt nur für `CFile` und `CStdioFile` Objekte. Die `CMemFile` -Klasse behandelt keine mit diesem Fehlercode.  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  Konvertiert einen angegebenen Laufzeit-Bibliothekscode Fehlerwert in einer `CFileException` Fehlerwert aufgelistet.  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nErrno`  
+ *nErrno*  
  Ganzzahlige Fehlercode in der Laufzeit-Includedatei ERRNO definiert. H.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `lpszError`  
+ [in, out] *LpszError*  
  Ein Zeiger auf einen Puffer, der eine Fehlermeldung empfängt.  
   
- [in] `nMaxError`  
+ [in] *nMaxError*  
  Die maximale Anzahl von Zeichen, die der angegebene Puffer aufnehmen kann. Dies schließt das abschließende Nullzeichen.  
   
- [in, out] `pnHelpContext`  
+ [in, out] *PnHelpContext*  
  Zeiger auf eine Ganzzahl ohne Vorzeichen, die die Hilfe-Kontext-ID empfängt. Wenn `NULL`, keine ID zurückgegeben wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Datenmember ist eine öffentliche Variable des Typs `int`. Die Enumeratoren und ihre Bedeutungen lauten wie folgt:  
+ Datenmember ist eine öffentliche Variable des Typs **Int**. Die Enumeratoren und ihre Bedeutungen lauten wie folgt:  
   
 - `CFileException::none` 0: kein Fehler aufgetreten ist.  
   
@@ -235,14 +235,14 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- Gibt einen Enumerator, der entspricht einem bestimmten `lOsError` Wert. Wenn der Fehlercode unbekannt ist, und klicken Sie dann die Funktion gibt **CFileException::generic**.  
+ Gibt einen Enumerator, der entspricht einem bestimmten *lOsError* Wert. Wenn der Fehlercode unbekannt ist, und klicken Sie dann die Funktion gibt **CFileException::generic**.  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lOsError`  
+ *lOsError*  
  Ein System-betriebssystemspezifische Fehlercode.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -252,34 +252,34 @@ static int PASCAL OsErrorToException(LONG lOsError);
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- Erstellt eine `CFileException` , Objekt entspricht einer bestimmten `nErrno` Wert, dann wird die Ausnahme ausgelöst.  
+ Erstellt eine `CFileException` , Objekt entspricht einer bestimmten *nErrno* -Wert, dann wird die Ausnahme ausgelöst.  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nErrno`  
+ *nErrno*  
  Ganzzahlige Fehlercode in der Laufzeit-Includedatei ERRNO definiert. H.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Ein Zeiger auf die Zeichenfolge, die mit dem Namen der Datei, die der Ausnahme verursacht hat, falls verfügbar.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- Löst ein `CFileException` entspricht einem bestimmten `lOsError` Wert. Wenn der Fehlercode ist unbekannt, löst die Funktion eine Ausnahme, die als **CFileException::generic**.  
+ Löst ein `CFileException` entspricht einem bestimmten *lOsError* Wert. Wenn der Fehlercode ist unbekannt, löst die Funktion eine Ausnahme, die als **CFileException::generic**.  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lOsError`  
+ *lOsError*  
  Ein System-betriebssystemspezifische Fehlercode.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Ein Zeiger auf die Zeichenfolge, die mit dem Namen der Datei, die der Ausnahme verursacht hat, falls verfügbar.  
   
 ### <a name="example"></a>Beispiel  
