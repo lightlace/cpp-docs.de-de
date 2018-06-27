@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c577a153536b7c9a5def95915e802301841a485b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369667"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955026"
 ---
 # <a name="cfont-class"></a>CFont-Klasse
 Kapselt eine Schriftart der Windows GDI (Graphics Device Interface) und stellt Memberfunktionen zum Bearbeiten der Schriftart bereit.  
@@ -123,31 +123,31 @@ BOOL CreateFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nHeight`  
- Gibt die gewünschte Höhe (in logischen Einheiten) der Schriftart an. Finden Sie unter der `lfHeight` Mitglied der [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)Struktur in das Windows SDK für eine Beschreibung. Der Absolute Wert des `nHeight` darf maximal 16.384 Geräteeinheiten aus, nachdem er konvertiert wird. Für alle Höhe Vergleiche sucht der Schriftartenmapper die größte Schriftart, die nicht die angeforderte Größe überschreitet oder die kleinste Schriftart alle Schriftarten die angeforderte Größe überschreiten.  
+ *nHeight*  
+ Gibt die gewünschte Höhe (in logischen Einheiten) der Schriftart an. Finden Sie unter der `lfHeight` Mitglied der [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)Struktur in das Windows SDK für eine Beschreibung. Der Absolute Wert des *nHeight* darf maximal 16.384 Geräteeinheiten aus, nachdem er konvertiert wird. Für alle Höhe Vergleiche sucht der Schriftartenmapper die größte Schriftart, die nicht die angeforderte Größe überschreitet oder die kleinste Schriftart alle Schriftarten die angeforderte Größe überschreiten.  
   
- `nWidth`  
- Gibt die durchschnittliche Breite (in logischen Einheiten) der Zeichen in der Schriftart an. Wenn `nWidth` gleich 0 ist, wird das Seitenverhältnis des Geräts das Seitenverhältnis Digitalisierung verfügbaren Schriftarten, die bestmögliche Übereinstimmung gefunden werden, die durch den absoluten Wert des Unterschieds bestimmt wird abgeglichen werden.  
+ *nWidth*  
+ Gibt die durchschnittliche Breite (in logischen Einheiten) der Zeichen in der Schriftart an. Wenn *nWidth* gleich 0 ist, wird das Seitenverhältnis des Geräts das Seitenverhältnis Digitalisierung verfügbaren Schriftarten, die bestmögliche Übereinstimmung gefunden werden, die durch den absoluten Wert des Unterschieds bestimmt wird abgeglichen werden.  
   
- `nEscapement`  
+ *nEscapement*  
  Gibt den Winkel (in Grad 0,1 Einheiten) zwischen der Vorschubvektor und die x-Achse des der Anzeigeoberfläche an. Der Vorschubvektor ist die Zeile über die Ursprünge an, der das erste und letzten Zeichen in einer Zeile. Der Winkel wird gegen den Uhrzeigersinn von der x-Achse aus gemessen. Finden Sie unter der `lfEscapement` Element in der `LOGFONT` Struktur in das Windows SDK für Weitere Informationen.  
   
- `nOrientation`  
+ *nOrientation*  
  Gibt den Winkel (in Grad 0,1 Einheiten) zwischen dem Basis-eines Zeichens und der x-Achse an. Der Winkel wird gegen den Uhrzeigersinn von der x-Achse für Koordinatensysteme gemessen in der ist die y-Richtung nach unten und gegen den Uhrzeigersinn von der x-Achse für Koordinatensysteme, die in denen die y-Richtung nach oben weist.  
   
- `nWeight`  
- Gibt die Schriftbreite (in gezeichneten Pixel pro 1000) an. Finden Sie unter der `lfWeight` Element in der `LOGFONT` Struktur in das Windows SDK für Weitere Informationen. Die beschriebenen Werte sind ungefähre; die tatsächliche Darstellung hängt von der Schriftart ab. Einige Schriftarten haben nur `FW_NORMAL`, `FW_REGULAR`, und `FW_BOLD` Gewichtungen. Wenn `FW_DONTCARE` angegeben ist, wird eine standardgewichtung verwendet wird.  
+ *nWeight*  
+ Gibt die Schriftbreite (in gezeichneten Pixel pro 1000) an. Finden Sie unter der *LfWeight* Element in der `LOGFONT` Struktur in das Windows SDK für Weitere Informationen. Die beschriebenen Werte sind ungefähre; die tatsächliche Darstellung hängt von der Schriftart ab. Einige Schriftarten haben nur `FW_NORMAL`, `FW_REGULAR`, und `FW_BOLD` Gewichtungen. Wenn `FW_DONTCARE` angegeben ist, wird eine standardgewichtung verwendet wird.  
   
- `bItalic`  
+ *bItalic*  
  Gibt an, ob die Schriftart kursiv formatiert ist.  
   
- `bUnderline`  
+ *bUnderline*  
  Gibt an, ob die Schriftart unterstrichen ist.  
   
- `cStrikeOut`  
+ *cStrikeOut*  
  Gibt an, ob die Zeichen in der Schriftart durchgestrichen sind. Gibt eine Schriftart durchgestrichen an, ob ein Wert ungleich NULL festgelegt.  
   
- `nCharSet`  
+ *nCharSet*  
  Gibt die Schriftart Zeichen SetSee der `lfCharSet` Element in der `LOGFONT` Struktur in das Windows SDK für eine Liste von Werten.  
   
  Die OEM-Zeichensatz ist systemabhängig.  
@@ -156,24 +156,24 @@ BOOL CreateFont(
   
  Der Schriftartenmapper verwendet nicht die `DEFAULT_CHARSET` Wert. Eine Anwendung kann diesen Wert verwenden, um den Namen und die Größe einer Schriftart, um die logische Schriftart vollständig beschreiben zu ermöglichen. Wenn eine Schriftart mit dem angegebenen Namen nicht vorhanden ist, kann eine Schriftart aus jeder beliebige Zeichensatz für die angegebene Schriftart ersetzt werden. Um unerwartete Ergebnisse zu vermeiden, sollten Anwendungen verwenden die `DEFAULT_CHARSET` Wert nur selten.  
   
- `nOutPrecision`  
+ *nOutPrecision*  
  Gibt die gewünschte Ausgabe Genauigkeit. Die Genauigkeit der Ausgabe definiert, wie genau die Ausgabe der angeforderten Schriftart Höhe, Breite Zeichen Ausrichtung, Vorschub und Tonhöhe übereinstimmen muss. Finden Sie unter der `lfOutPrecision` Element in der `LOGFONT` Struktur in das Windows SDK für eine Liste von Werten und Weitere Informationen.  
   
- `nClipPrecision`  
+ *nClipPrecision*  
  Gibt die gewünschte Clipping Genauigkeit. Genauigkeit für das Ausschneiden definiert, wie Zeichen, die teilweise außerhalb des Clippingbereichs sind. Finden Sie unter der `lfClipPrecision` Element in der `LOGFONT` Struktur in das Windows SDK für eine Liste von Werten.  
   
  Eine Anwendung muss für die Verwendung eine eingebettete nur-Lese Schriftart angeben `CLIP_ENCAPSULATE`.  
   
- Um konsistent Drehung des Geräts, TrueType und Vektorschriftarten zu erreichen, kann eine Anwendung den OR-Operator verwenden, um Kombinieren der `CLIP_LH_ANGLES` Wert mit beliebigen anderen `nClipPrecision` Werte. Wenn die `CLIP_LH_ANGLES` Bit festgelegt ist, wird die Rotation für alle Schriftarten, hängt davon ab, ob die Ausrichtung des Koordinatensystems Linkshändig ist oder rechtshändige. (Weitere Informationen zu die Ausrichtung des Koordinatensysteme, finden Sie unter der Beschreibung der `nOrientation` Parameter.) Wenn `CLIP_LH_ANGLES` ist nicht festgelegt, Schriftarten immer gegen den Uhrzeigersinn, aber die Rotation eines anderen Schriftarten ist abhängig von der Ausrichtung des Koordinatensystems.  
+ Um konsistent Drehung des Geräts, TrueType und Vektorschriftarten zu erreichen, kann eine Anwendung den OR-Operator verwenden, um Kombinieren der `CLIP_LH_ANGLES` Wert mit beliebigen anderen *nClipPrecision* Werte. Wenn die `CLIP_LH_ANGLES` Bit festgelegt ist, wird die Rotation für alle Schriftarten, hängt davon ab, ob die Ausrichtung des Koordinatensystems Linkshändig ist oder rechtshändige. (Weitere Informationen zu die Ausrichtung des Koordinatensysteme, finden Sie unter der Beschreibung der *nOrientation* Parameter.) Wenn `CLIP_LH_ANGLES` ist nicht festgelegt, Schriftarten immer gegen den Uhrzeigersinn, aber die Rotation eines anderen Schriftarten ist abhängig von der Ausrichtung des Koordinatensystems.  
   
- `nQuality`  
+ *nQuality*  
  Gibt die Ausgabequalitäten die Schriftart, die definiert, wie sorgfältig die GDI versuchen muss, die logische Schriftart-Attribute, die denen des eigentlichen physischen Schriftart entsprechend an. Finden Sie unter der `lfQuality` Element in der `LOGFONT` Struktur in das Windows SDK für eine Liste von Werten.  
   
- `nPitchAndFamily`  
+ *nPitchAndFamily*  
  Gibt die Schriftbreite und Familie der Schriftart an. Finden Sie unter der `lfPitchAndFamily` Element in der `LOGFONT` Struktur in das Windows SDK für eine Liste von Werten und Weitere Informationen.  
   
- `lpszFacename`  
- Ein `CString` oder ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Schriftart angibt. Die Länge dieser Zeichenfolge darf maximal 30 Zeichen lang sein. Die Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) Funktion kann verwendet werden, um alle derzeit verfügbaren Schriftarten aufzulisten. Wenn `lpszFacename` ist `NULL`, GDI verwendet eine geräteunabhängige Schriftart.  
+ *lpszFacename*  
+ Ein `CString` oder ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Schriftart angibt. Die Länge dieser Zeichenfolge darf maximal 30 Zeichen lang sein. Die Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) Funktion kann verwendet werden, um alle derzeit verfügbaren Schriftarten aufzulisten. Wenn *LpszFacename* ist `NULL`, GDI verwendet eine geräteunabhängige Schriftart.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -183,7 +183,7 @@ BOOL CreateFont(
   
  Die `CreateFont` Funktion erstellt eine neue Windows-GDI-Schriftart nicht. Er wählt lediglich die bestmögliche Übereinstimmung aus den verfügbaren physischen Schriftarten auf die GDI.  
   
- Anwendungen können die Standardeinstellungen für die meisten Parameter verwenden, für die Erstellung eine logischen Schriftart. Die Parameter, die immer bestimmte Werte zugewiesen werden soll, sind `nHeight` und `lpszFacename`. Wenn `nHeight` und `lpszFacename` nicht festgelegt werden von der Anwendung ist die logische Schriftart, die erstellt wird vom Gerät abhängig.  
+ Anwendungen können die Standardeinstellungen für die meisten Parameter verwenden, für die Erstellung eine logischen Schriftart. Die Parameter, die immer bestimmte Werte zugewiesen werden soll, sind *nHeight* und *LpszFacename*. Wenn *nHeight* und *LpszFacename* nicht festgelegt werden von der Anwendung ist die logische Schriftart, die erstellt wird vom Gerät abhängig.  
   
  Wenn Sie fertig sind, mit der `CFont` Objekt erstellt, indem die `CreateFont` funktionieren, verwenden Sie `CDC::SelectObject` um eine andere Schriftart in den Gerätekontext ausgewählt haben, löschen Sie Sie dann die `CFont` -Objekt, das nicht mehr benötigt wird.  
   
@@ -198,7 +198,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpLogFont`  
+ *lpLogFont*  
  Verweist auf eine `LOGFONT` -Struktur, die die Eigenschaften der die logische Schriftart definiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -225,20 +225,20 @@ BOOL CreatePointFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPointSize`  
+ *nPointSize*  
  Die Höhe der Schriftart in Zehntelsekunden eines Punkts wird angefordert. (Z. B. übergeben Sie 120 zum Anfordern einer Schriftart 12 Punkt.)  
   
- `lpszFaceName`  
- Ein `CString` oder ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Schriftart angibt. Die Länge dieser Zeichenfolge darf maximal 30 Zeichen lang sein. Die Windows **EnumFontFamilies** Funktion kann verwendet werden, um alle derzeit verfügbaren Schriftarten aufzulisten. Wenn `lpszFaceName` ist **NULL**, GDI verwendet eine geräteunabhängige Schriftart.  
+ *lpszFaceName*  
+ Ein `CString` oder ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Schriftart angibt. Die Länge dieser Zeichenfolge darf maximal 30 Zeichen lang sein. Die Windows **EnumFontFamilies** Funktion kann verwendet werden, um alle derzeit verfügbaren Schriftarten aufzulisten. Wenn *LpszFaceName* ist **NULL**, GDI verwendet eine geräteunabhängige Schriftart.  
   
- `pDC`  
- Zeiger auf die [CDC](../../mfc/reference/cdc-class.md) Objekt, das verwendet werden, konvertieren die Höhe in `nPointSize` zu logischen Einheiten. Wenn **NULL**, ein Bildschirm Gerätekontext für die Konvertierung verwendet wird.  
+ *pDC*  
+ Zeiger auf die [CDC](../../mfc/reference/cdc-class.md) Objekt, das verwendet werden, konvertieren die Höhe in *nPointSize* zu logischen Einheiten. Wenn **NULL**, ein Bildschirm Gerätekontext für die Konvertierung verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL bei Erfolg, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Höhe in automatisch konvertiert `nPointSize` auf logischen Einheiten, die mithilfe der `CDC` Objekt verweist `pDC`.  
+ Die Höhe in automatisch konvertiert *nPointSize* auf logischen Einheiten, die mithilfe der `CDC` Objekt verweist *pDC*.  
   
  Wenn Sie fertig sind, mit der `CFont` Objekt erstellt wird, die `CreatePointFont` funktionieren, zunächst wählen Sie die Schriftart im Gerätekontext, löschen Sie die `CFont` Objekt.  
   
@@ -255,17 +255,17 @@ BOOL CreatePointFontIndirect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpLogFont`  
+ *lpLogFont*  
  Verweist auf eine [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) -Struktur, die die Eigenschaften der die logische Schriftart definiert. Die **LfHeight** Mitglied der `LOGFONT` Struktur in Zehntelsekunden ein Punkt anstatt auf logischen Einheiten gemessen wird. (Legen Sie z. B. **LfHeight** 120 eine Schriftart 12 Punkt anfordern.)  
   
- `pDC`  
+ *pDC*  
  Zeiger auf die [CDC](../../mfc/reference/cdc-class.md) Objekt, das verwendet werden, konvertieren die Höhe in **LfHeight** zu logischen Einheiten. Wenn **NULL**, ein Bildschirm Gerätekontext für die Konvertierung verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL bei Erfolg, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion konvertiert automatisch die Höhe in **LfHeight** auf logischen Einheiten, die mithilfe der `CDC` Objekt verweist `pDC` vor der Übergabe der `LOGFONT` Struktur sich bei Windows.  
+ Diese Funktion konvertiert automatisch die Höhe in **LfHeight** auf logischen Einheiten, die mithilfe der `CDC` Objekt verweist *pDC* vor der Übergabe der `LOGFONT` Struktur sich bei Windows.  
   
  Wenn Sie fertig sind, mit der `CFont` Objekt erstellt wird, die `CreatePointFontIndirect` funktionieren, zunächst wählen Sie die Schriftart im Gerätekontext, löschen Sie die `CFont` Objekt.  
   
@@ -280,7 +280,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hFont`  
+ *hFont*  
  Ein **HFONT** handle für eine Windows-Schriftart.  
   
 ### <a name="return-value"></a>Rückgabewert  

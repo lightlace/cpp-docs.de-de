@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe1b1676c5d1944adf61f6ae4234a7e3478c3b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 943d1bf01890696466638eca3c73839297807fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380145"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953121"
 ---
 # <a name="standard-commands"></a>Standardbefehle
 Das Framework definiert viele Standardbefehls-Nachrichten. Die IDs für diese Befehle werden in der Regel in der Form:  
   
  **ID_** *Quelle*_*Element*  
   
- wobei *Quelle* ist in der Regel ein Menünamen und *Element* ist ein Menüelement. Die Befehls-ID für den neuen Befehl im Menü Datei ist z. B. `ID_FILE_NEW`. Standardbefehle-IDs werden in der Dokumentation fett angezeigt. Programmiererdefinierte IDs werden in einer Schriftart angezeigt, die sich aus dem umgebenden Text unterscheidet.  
+ wobei *Quelle* ist in der Regel ein Menünamen und *Element* ist ein Menüelement. Beispielsweise ist die Befehls-ID für den neuen Befehl im Menü Datei ID_FILE_NEW. Standardbefehle-IDs werden in der Dokumentation fett angezeigt. Programmiererdefinierte IDs werden in einer Schriftart angezeigt, die sich aus dem umgebenden Text unterscheidet.  
   
  Im folgenden finden eine Übersicht über einige der wichtigsten Befehle unterstützt:  
   
@@ -59,7 +59,7 @@ Das Framework definiert viele Standardbefehls-Nachrichten. Die IDs für diese Be
  *OLE-Befehle (Menü "Bearbeiten")*  
  Neues Objekt, Verknüpfungen bearbeiten, verknüpfen, einfügen, einfügen und *Typename* Objekt (Verbbefehle).  
   
- Das Framework bietet verschiedene Ebenen der Unterstützung für diese Befehle. Einige Befehle sind nur als definierten Befehls-IDs unterstützt, während andere Benutzer mit gründliche-Implementierungen unterstützt werden. Beispielsweise implementiert das Framework der Befehl zum Öffnen auf das Menü Datei durch Erstellen eines neuen Dokumentobjekts, ein geöffnetes Dialogfenster anzeigen und öffnen und Lesen der Datei. Im Gegensatz dazu müssen Sie implementieren die Befehle im Menü Bearbeiten selbst seit Befehle wie **ID_EDIT_COPY** abhängig von der Art der Daten, die Sie kopieren.  
+ Das Framework bietet verschiedene Ebenen der Unterstützung für diese Befehle. Einige Befehle sind nur als definierten Befehls-IDs unterstützt, während andere Benutzer mit gründliche-Implementierungen unterstützt werden. Beispielsweise implementiert das Framework der Befehl zum Öffnen auf das Menü Datei durch Erstellen eines neuen Dokumentobjekts, ein geöffnetes Dialogfenster anzeigen und öffnen und Lesen der Datei. Im Gegensatz dazu, Sie müssen Befehle im Menü Bearbeiten selbst implementieren, da Befehle wie ID_EDIT_COPY von der Art der Daten abhängig sind, die Sie kopieren.  
   
  Weitere Informationen zu unterstützten Befehle und die Ebene der bereitgestellte Implementierung finden Sie unter [technischen Hinweis 22](../mfc/tn022-standard-commands-implementation.md). Der standard-Befehle werden in der Datei AFXRES definiert. H.  
   

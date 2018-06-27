@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350884"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956833"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
 Drei Fehlerrückruf-Funktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. Diese Rückruffunktionen übergeben werden, um [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), und [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc). Beachten Sie, dass alle Rückruffunktionen MFC-Ausnahmen abfangen müssen, vor der Rückgabe an Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht aus. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  Verweist auf eine [LOGPEN](../../mfc/reference/logpen-structure.md) oder [LOGBRUSH](../../mfc/reference/logbrush-structure.md) Datenstruktur, die Informationen zu den logischen Attributen des Objekts enthält.  
   
- `lpData`  
+ *lpData*  
  Verweist auf die von der Anwendung bereitgestellten übergeben, um die `EnumObjects` Funktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Rückruffunktion gibt eine `int`. Der Wert dieser Rendite ist benutzerdefiniert. Wenn die Rückruffunktion 0 (null) zurückgibt `EnumObjects` Enumeration vorzeitig beendet.  
+ Die Rückruffunktion gibt eine **Int**. Der Wert dieser Rendite ist benutzerdefiniert. Wenn die Rückruffunktion 0 (null) zurückgibt `EnumObjects` Enumeration vorzeitig beendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Der tatsächliche Name muss exportiert werden.  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hDC`  
- Bezeichnet einen Speichergerätekontext mit einer Bitmap mit mindestens der Breite und Höhe gemäß `nWidth` und `nHeight` auf `GrayString`.  
+ *hDC*  
+ Bezeichnet einen Speichergerätekontext mit einer Bitmap mit mindestens der Breite und Höhe gemäß *nWidth* und *nHeight* auf `GrayString`.  
   
- `lpData`  
+ *lpData*  
  Zeigt auf die zu zeichnende Zeichenfolge.  
   
- `nCount`  
+ *nCount*  
  Gibt die Anzahl von Zeichen ausgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  Identifiziert den Gerätekontext.  
   
- `code`  
- Gibt an, ob ein Fehler aufgetreten ist. Es ist 0, wenn kein Fehler aufgetreten ist. Es ist **SP_OUTOFDISK** , wenn der Druck-Manager derzeit kein Speicherplatz mehr ist und mehr Speicherplatz Verfügung gestellt zur, wenn die Anwendung wartet. Wenn `code` ist **SP_OUTOFDISK**, die Anwendung muss sich nicht in den Druckauftrag abbrechen. Wenn dies nicht der Fall sein, es muss Zurückhalten Druck-Manager durch Aufrufen der **PeekMessage** oder **GetMessage** Windows-Funktion.  
+ *Code*  
+ Gibt an, ob ein Fehler aufgetreten ist. Es ist 0, wenn kein Fehler aufgetreten ist. Es ist **SP_OUTOFDISK** , wenn der Druck-Manager derzeit kein Speicherplatz mehr ist und mehr Speicherplatz Verfügung gestellt zur, wenn die Anwendung wartet. Wenn *Code* ist **SP_OUTOFDISK**, die Anwendung muss sich nicht in den Druckauftrag abbrechen. Wenn dies nicht der Fall sein, es muss Zurückhalten Druck-Manager durch Aufrufen der `PeekMessage` oder `GetMessage` Windows-Funktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert der Funktion Abort-Handler ist ungleich NULL, wenn der Druckauftrag wird fortgesetzt, und 0, wenn sie abgebrochen wird.  

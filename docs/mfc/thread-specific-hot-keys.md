@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd6cf2f2bb76c30f4cc00d75eb55d7d2c01fa7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14da7f0e5b0adbe72b6705700c1e9298751bc345
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380418"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953608"
 ---
 # <a name="thread-specific-hot-keys"></a>Threadspezifische Abkürzungstasten
-Eine Anwendung legt eine threadspezifische Abkürzungstaste ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) mithilfe der Windows **RegisterHotKey** Funktion. Wenn der Benutzer eine threadspezifische Abkürzungstaste drückt, sendet Windows eine [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) Nachricht an den Anfang der Warteschlange für einen bestimmten Thread-Nachrichten. Die **WM_HOTKEY** Nachricht enthält den virtueller Tastencode, die UMSCHALT-Status und die benutzerdefinierte-ID des jeweiligen Abkürzungstaste, die gedrückt wurde. Eine Liste der standardmäßigen virtuellen Tastencodes finden Sie unter Winuser.h. Weitere Informationen zu dieser Methode finden Sie unter [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+Eine Anwendung legt eine threadspezifische Abkürzungstaste ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) mithilfe der Windows `RegisterHotKey` Funktion. Wenn der Benutzer eine threadspezifische Abkürzungstaste drückt, sendet Windows eine [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) Nachricht an den Anfang der Warteschlange für einen bestimmten Thread-Nachrichten. Die WM_HOTKEY-Nachricht enthält den virtueller Tastencode UMSCHALT-Status und benutzerdefinierte-ID des jeweiligen Abkürzungstaste, die gedrückt wurde. Eine Liste der standardmäßigen virtuellen Tastencodes finden Sie unter Winuser.h. Weitere Informationen zu dieser Methode finden Sie unter [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- Hinweis, das den Umschaltzustand kennzeichnet, die im Aufruf verwendet **RegisterHotKey** sind nicht identisch mit denen zurückgegebene der [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) Memberfunktion; Sie müssen diese Flags, die vor dem Aufrufen von Übersetzen**RegisterHotKey**.  
+ Beachten Sie, das den Umschaltzustand kennzeichnet im Aufruf verwendet `RegisterHotKey` sind nicht identisch mit denen zurückgegebene der [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) Memberfunktion; stehen Ihnen übersetzt diese Flags vor dem Aufruf `RegisterHotKey`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

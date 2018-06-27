@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 160b88a7069ac9a5851c0f472f756d694e59874e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ec424729a7bd0eb4da9ec62282ff2aafd4da133
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384696"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955553"
 ---
 # <a name="tn006-message-maps"></a>TN006: Meldungszuordnungen
 In diesem Hinweis werden die MFC-Nachricht Map-Funktion.  
@@ -50,11 +50,11 @@ In diesem Hinweis werden die MFC-Nachricht Map-Funktion.
 ## <a name="defining-a-message-map"></a>Definieren einer Meldungszuordnung  
  Die [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) Makro deklariert drei Member für eine Klasse.  
   
--   Eine private Array von `AFX_MSGMAP_ENTRY` Einträge mit der Bezeichnung `_messageEntries`.  
+-   Eine private Array von AFX_MSGMAP_ENTRY Einträge bezeichnet *_messageEntries*.  
   
--   Eine geschützte `AFX_MSGMAP` Struktur mit dem Namen `messageMap` , verweist auf die `_messageEntries` Array.  
+-   Wird aufgerufen, eine geschützte AFX_MSGMAP Struktur *MessageMap* , verweist auf die *_messageEntries* Array.  
   
--   Eine geschützte virtuelle Funktion mit dem Namen `GetMessageMap` , die die Adresse des zurückgibt `messageMap`.  
+-   Eine geschützte virtuelle Funktion mit dem Namen `GetMessageMap` , die die Adresse des zurückgibt *MessageMap*.  
   
  Dieses Makro sollten in der Deklaration einer Klasse, die anhand von Karten, Nachricht abgelegt werden. Gemäß der Konvention ist es am Ende der Klassendeklaration. Zum Beispiel:  
   
@@ -76,12 +76,12 @@ protected: *//{{AFX_MSG(CMyWnd)
   
  Ist Sie ein Eintrag für jede Nachricht von diesem meldungszuordnung behandelt werden, zwischen diesen beiden-Makro aufrufen. Alle standardmäßigen Windows-Meldung ist ein Makro im Format ON_WM_*MESSAGE_NAME* , einen Eintrag für diese Nachricht generiert.  
   
- Eine Standardfunktion Signatur wurde definiert, Entpacken die Parameter der einzelnen Windows-Nachrichten und typsicherheit zu bieten. Diese Signaturen finden Sie in der Datei Afxwin.h in der Deklaration des [CWnd](../mfc/reference/cwnd-class.md). Jede einer ist mit dem Schlüsselwort markiert `afx_msg` leicht identifiziert.  
+ Eine Standardfunktion Signatur wurde definiert, Entpacken die Parameter der einzelnen Windows-Nachrichten und typsicherheit zu bieten. Diese Signaturen finden Sie in der Datei Afxwin.h in der Deklaration des [CWnd](../mfc/reference/cwnd-class.md). Jede einer ist mit dem Schlüsselwort markiert **Afx_msg** leicht identifiziert.  
   
 > [!NOTE]
->  Klassen-Assistent setzt voraus, dass Sie die `afx_msg` Schlüsselwort in der Nachricht Zuordnung Handler-Deklarationen.  
+>  Klassen-Assistent setzt voraus, dass Sie die **Afx_msg** Schlüsselwort in der Nachricht Zuordnung Handler-Deklarationen.  
   
- Diese Funktionssignaturen wurden mithilfe einer einfachen Konvention abgeleitet. Der Name der Funktion beginnt immer mit `"On`". Dies ist der Name des Windows-Meldung mit der "WM_" entfernt und der erste Buchstabe jedes Wortes großgeschrieben folgen. Die Reihenfolge der Parameter ist `wParam` gefolgt von `LOWORD`(`lParam`) dann `HIWORD`(`lParam`). Nicht verwendete Parameter werden nicht übergeben. Alle Handles, die von MFC-Klassen umschlossen sind, werden in Zeiger auf die entsprechenden MFC-Objekte konvertiert. Das folgende Beispiel zeigt, wie behandelt die `WM_PAINT` Meldungen und dazu führen, dass die `CMyWnd::OnPaint` Funktion aufgerufen werden:  
+ Diese Funktionssignaturen wurden mithilfe einer einfachen Konvention abgeleitet. Der Name der Funktion beginnt immer mit `"On`". Dies ist der Name des Windows-Meldung mit der "WM_" entfernt und der erste Buchstabe jedes Wortes großgeschrieben folgen. Die Reihenfolge der Parameter ist *wParam* gefolgt von `LOWORD`(*lParam*) dann `HIWORD`(*lParam*). Nicht verwendete Parameter werden nicht übergeben. Alle Handles, die von MFC-Klassen umschlossen sind, werden in Zeiger auf die entsprechenden MFC-Objekte konvertiert. Im folgende Beispiel wird gezeigt, wie die WM_PAINT-Meldung behandeln und dazu führen, dass die `CMyWnd::OnPaint` Funktion aufgerufen werden:  
   
 ```  
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass) *//{{AFX_MSG_MAP(CMyWnd)  
@@ -108,20 +108,20 @@ BEGIN_MESSAGE_MAP (CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()  
 ```  
   
- In this example, we establish a handler for a custom message that has a Windows message ID derived from the standard `WM_USER` base for user-defined messages. The following example shows how to call this handler:  
+ In this example, we establish a handler for a custom message that has a Windows message ID derived from the standard WM_USER base for user-defined messages. The following example shows how to call this handler:  
   
 ```  
 CWnd * pWnd =...;  
 pWnd-SendMessage(WM_MYMESSAGE) >;
 ```  
   
- The range of user-defined messages that use this approach must be in the range `WM_USER` to 0x7fff.  
+ The range of user-defined messages that use this approach must be in the range WM_USER to 0x7fff.  
   
 > [!NOTE]
->  ClassWizard does not support entering `ON_MESSAGE` handler routines from the ClassWizard user interface. You must manually enter them from the Visual C++ editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
+>  ClassWizard does not support entering ON_MESSAGE handler routines from the ClassWizard user interface. You must manually enter them from the Visual C++ editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
   
 ## Registered Windows Messages  
- The [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function is used to define a new window message that is guaranteed to be unique throughout the system. The macro `ON_REGISTERED_MESSAGE` is used to handle these messages. This macro accepts a name of a `UINT NEAR` variable that contains the registered windows message ID. For example  
+ The [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function is used to define a new window message that is guaranteed to be unique throughout the system. The macro ON_REGISTERED_MESSAGE is used to handle these messages. This macro accepts a name of a *UINT NEAR* variable that contains the registered windows message ID. For example  
   
 ```  
 -Klasse CMyWnd: öffentliche CMyParentWndClass  
@@ -143,27 +143,27 @@ BEGIN_MESSAGE_MAP (CMyWnd, CMyParentWndClass) *//{{AFX_MSG_MAP(CMyWnd)
 END_MESSAGE_MAP()  
 ```  
   
- The registered Windows message ID variable (WM_FIND in this example) must be a `NEAR` variable because of the way `ON_REGISTERED_MESSAGE` is implemented.  
+ The registered Windows message ID variable (WM_FIND in this example) must be a *NEAR* variable because of the way ON_REGISTERED_MESSAGE is implemented.  
   
  The range of user-defined messages that use this approach will be in the range 0xC000 to 0xFFFF.  
   
 > [!NOTE]
->  ClassWizard does not support entering `ON_REGISTERED_MESSAGE` handler routines from the ClassWizard user interface. You must manually enter them from the text editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
+>  ClassWizard does not support entering ON_REGISTERED_MESSAGE handler routines from the ClassWizard user interface. You must manually enter them from the text editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
   
 ## Command Messages  
- Command messages from menus and accelerators are handled in message maps with the `ON_COMMAND` macro. This macro accepts a command ID and a method. Only the specific `WM_COMMAND` message that has a `wParam` equal to the specified command ID is handled by the method specified in the message-map entry. Command handler member functions take no parameters and return `void`. The macro has the following form:  
+ Command messages from menus and accelerators are handled in message maps with the ON_COMMAND macro. This macro accepts a command ID and a method. Only the specific WM_COMMAND message that has a *wParam* equal to the specified command ID is handled by the method specified in the message-map entry. Command handler member functions take no parameters and return **void**. The macro has the following form:  
   
 ```  
 ON_COMMAND (Id, MemberFxn)  
 ```  
   
- Command update messages are routed through the same mechanism, but use the `ON_UPDATE_COMMAND_UI` macro instead. Command update handler member functions take a single parameter, a pointer to a [CCmdUI](../mfc/reference/ccmdui-class.md) object, and return `void`. The macro has the form  
+ Command update messages are routed through the same mechanism, but use the ON_UPDATE_COMMAND_UI macro instead. Command update handler member functions take a single parameter, a pointer to a [CCmdUI](../mfc/reference/ccmdui-class.md) object, and return **void**. The macro has the form  
   
 ```  
 ON_UPDATE_COMMAND_UI (Id, MemberFxn)  
 ```  
   
- Advanced users can use the `ON_COMMAND_EX` macro, which is an extended form of command message handlers. The macro provides a superset of the `ON_COMMAND` functionality. Extended command-handler member functions take a single parameter, a `UINT` that contains the command ID, and return a `BOOL`. The return value should be `TRUE` to indicate that the command has been handled. Otherwise routing will continue to other command target objects.  
+ Advanced users can use the ON_COMMAND_EX macro, which is an extended form of command message handlers. The macro provides a superset of the ON_COMMAND functionality. Extended command-handler member functions take a single parameter, a **UINT** that contains the command ID, and return a **BOOL**. The return value should be **TRUE** to indicate that the command has been handled. Otherwise routing will continue to other command target objects.  
   
  Examples of these forms:  
   
@@ -212,17 +212,17 @@ Afx_msg "void" OnUpdateMyCommand (CCmdUI * nämlich pCmdUI);
  }  
  ```  
   
- Advanced users can handle a range of commands by using a single command handler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) or `ON_COMMAND_RANGE_EX`. See the product documentation for more information about these macros.  
+ Advanced users can handle a range of commands by using a single command handler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) or ON_COMMAND_RANGE_EX. See the product documentation for more information about these macros.  
   
 > [!NOTE]
->  ClassWizard supports creating `ON_COMMAND` and `ON_UPDATE_COMMAND_UI` handlers, but it does not support creating `ON_COMMAND_EX` or `ON_COMMAND_RANGE` handlers. However, Class Wizard will parse and let you browse all four command handler variants.  
+>  ClassWizard supports creating ON_COMMAND and ON_UPDATE_COMMAND_UI handlers, but it does not support creating ON_COMMAND_EX or ON_COMMAND_RANGE handlers. However, Class Wizard will parse and let you browse all four command handler variants.  
   
 ## Control Notification Messages  
  Messages that are sent from child controls to a window have an extra bit of information in their message map entry: the control's ID. The message handler specified in a message map entry is called only if the following conditions are true:  
   
--   The control notification code (high word of `lParam`), such as BN_CLICKED, matches the notification code specified in the message-map entry.  
+-   The control notification code (high word of *lParam*), such as BN_CLICKED, matches the notification code specified in the message-map entry.  
   
--   The control ID (`wParam`) matches the control ID specified in the message-map entry.  
+-   The control ID (*wParam*) matches the control ID specified in the message-map entry.  
   
  Custom control notification messages may use the [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) macro to define a message map entry with a custom notification code. This macro has the form  
   
@@ -233,9 +233,9 @@ ON_CONTROL (wNotificationCode, Id, MemberFxn)
  For advanced usage [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) can be used to handle a specific control notification from a range of controls with the same handler.  
   
 > [!NOTE]
->  ClassWizard does not support creating an `ON_CONTROL` or `ON_CONTROL_RANGE` handler in the user interface. You must manually enter them with the text editor. ClassWizard will parse these entries and let you browse them just like any other message map entries.  
+>  ClassWizard does not support creating an ON_CONTROL or ON_CONTROL_RANGE handler in the user interface. You must manually enter them with the text editor. ClassWizard will parse these entries and let you browse them just like any other message map entries.  
   
- The Windows Common Controls use the more powerful [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) for complex control notifications. This version of MFC has direct support for this new message by using the `ON_NOTIFY` and `ON_NOTIFY_RANGE` macros. See the product documentation for more information about these macros.  
+ The Windows Common Controls use the more powerful [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) for complex control notifications. This version of MFC has direct support for this new message by using the ON_NOTIFY and ON_NOTIFY_RANGE macros. See the product documentation for more information about these macros.  
   
 ## See Also  
  [Technical Notes by Number](../mfc/technical-notes-by-number.md)   

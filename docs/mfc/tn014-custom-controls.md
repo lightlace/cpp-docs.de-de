@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384581"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956846"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 Dieser Hinweis beschreibt die MFC-Unterstützung für benutzerdefinierte und selbst zeichnen-Steuerelemente. Außerdem wird die dynamische Erstellung von Unterklassen von beschrieben, und beschreibt die Beziehung zwischen [CWnd](../mfc/reference/cwnd-class.md) Objekte und `HWND`s.  
@@ -100,11 +100,11 @@ Dieser Hinweis beschreibt die MFC-Unterstützung für benutzerdefinierte und sel
 ## <a name="using-self-draw-controls-and-menus"></a>Mit den Steuerelementen selbst zeichnen und Menüs  
  Für Menüs selbst zeichnen, müssen Sie beide überschreiben die `OnMeasureItem` und `OnDrawItem` Methoden.  
   
- Für selbst zeichnen Listenfelder und Kombinationsfelder, müssen Sie überschreiben `OnMeasureItem` und `OnDrawItem`. Sie müssen angeben, die `LBS_OWNERDRAWVARIABLE` Stil für Listenfelder oder `CBS_OWNERDRAWVARIABLE` Stil für Kombinationsfelder, die in der Dialogfeldvorlage Felder. Die `OWNERDRAWFIXED` Stil selbst funktioniert nicht mit Elemente selbst zeichnen, da die Höhe des festen Elements bestimmt wird, bevor selbst zeichnen-Steuerelemente in das Listenfeld angefügt sind. (Sie können mithilfe der Methoden [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) und [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) , diese Einschränkung zu umgehen.)  
+ Für selbst zeichnen Listenfelder und Kombinationsfelder, müssen Sie überschreiben `OnMeasureItem` und `OnDrawItem`. Sie müssen den LBS_OWNERDRAWVARIABLE-Stil für Listenfelder oder CBS_OWNERDRAWVARIABLE-Stil für Kombinationsfelder in der Dialogfeldvorlage angeben. Das Format OWNERDRAWFIXED funktioniert nicht mit Elemente selbst zeichnen, da die Höhe des festen Elements bestimmt wird, bevor selbst zeichnen-Steuerelemente in das Listenfeld angefügt sind. (Sie können mithilfe der Methoden [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) und [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) , diese Einschränkung zu umgehen.)  
   
- Wechsel zu einer `OWNERDRAWVARIABLE` Stil erzwingt das System Anwenden der `NOINTEGRALHEIGHT` Stil für das Steuerelement. Da das Steuerelement eine Gesamthöhe mit variabler Größe berechnen kann Elemente, den Standardstil der `INTEGRALHEIGHT` wird ignoriert, und das Steuerelement ist immer `NOINTEGRALHEIGHT`. Wenn Ihre Elemente Höhe behoben sind, können Sie verhindern, dass Elemente abgeschnitten durch Angabe der Steuerelementgröße, um eine ganze Zahl Multiplikator der Elementgröße werden gezeichnet werden.  
+ Wechsel zu einer Formatvorlage OWNERDRAWVARIABLE erzwingt, dass das System das NOINTEGRALHEIGHT-Format auf das Steuerelement anzuwenden. Da das Steuerelement eine Gesamthöhe mit variabler Größe Elemente berechnen kann, der Standardstil der INTEGRALHEIGHT wird ignoriert, und das Steuerelement ist immer NOINTEGRALHEIGHT. Wenn Ihre Elemente Höhe behoben sind, können Sie verhindern, dass Elemente abgeschnitten durch Angabe der Steuerelementgröße, um eine ganze Zahl Multiplikator der Elementgröße werden gezeichnet werden.  
   
- Für das Self-zeichnen, Listenfelder und Kombinationsfelder, mit der `LBS_SORT` oder `CBS_SORT` Stil, müssen Sie überschreiben die `OnCompareItem` Methode.  
+ Zum Self-Zeichnen von Listenfelder und Kombinationsfelder, mit der Formatvorlage LBS_SORT oder CBS_SORT, müssen Sie überschreiben die `OnCompareItem` Methode.  
   
  Für das Self-zeichnen, Listenfelder und Kombinationsfelder, `OnDeleteItem` normalerweise nicht überschrieben. Sie können außer Kraft setzen `OnDeleteItem` Wenn jegliche spezielle Verarbeitung ausgeführt werden sollen. Einen Fall, in dem anwendbar dies wäre, wird mit jeder Listenfeldelement oder Kombinationsfeld zusätzlichen Arbeitsspeicher oder andere Ressourcen gespeichert sind.  
   

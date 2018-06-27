@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355459"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951415"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty-Klasse
 Implementiert eine asynchron übertragene und in einer Arbeitsspeicherdatei zwischengespeicherte OLE-Steuerelementeigenschaft.  
@@ -53,7 +53,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="remarks"></a>Hinweise  
  Eine Arbeitsspeicherdatei wird im Arbeitsspeicher und nicht auf dem Datenträger gespeichert und eignet sich für schnelle temporäre Übertragungen.  
   
- Zusammen mit **CAysncMonikerFile** und `CDataPathProperty`, `CCachedDataPathProperty` bietet Funktionen für die Verwendung von asynchronen Monikern in OLE-Steuerelemente. Mit `CCachedDataPathProperty` Objekte können Sie Daten aus einer Quelle URL- oder asynchron übertragen und speichern Sie sie in einer Arbeitsspeicherdatei über die `m_Cache` öffentliche Variable. Alle Daten in der Speicherdatei gespeichert ist, und besteht keine Notwendigkeit, überschreiben [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) es sei denn, Sie verwenden möchten, sehen Sie sich für Benachrichtigungen und reagieren. Beispielsweise, wenn Sie eine große übertragen werden. GIF-Datei und möchten dem Steuerelement zu benachrichtigen, dass mehr Daten empfangen wurden, und es sollte, die selbst neu zeichnet überschreiben `OnDataAvailable` die Benachrichtigung vornehmen.  
+ Zusammen mit `CAysncMonikerFile` und `CDataPathProperty`, `CCachedDataPathProperty` bietet Funktionen für die Verwendung von asynchronen Monikern in OLE-Steuerelemente. Mit `CCachedDataPathProperty` Objekte können Sie Daten aus einer Quelle URL- oder asynchron übertragen und speichern Sie sie in einer Arbeitsspeicherdatei über die `m_Cache` öffentliche Variable. Alle Daten in der Speicherdatei gespeichert ist, und besteht keine Notwendigkeit, überschreiben [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) es sei denn, Sie verwenden möchten, sehen Sie sich für Benachrichtigungen und reagieren. Beispielsweise, wenn Sie eine große übertragen werden. GIF-Datei und möchten dem Steuerelement zu benachrichtigen, dass mehr Daten empfangen wurden, und es sollte, die selbst neu zeichnet überschreiben `OnDataAvailable` die Benachrichtigung vornehmen.  
   
  Die Klasse `CCachedDataPathProperty` stammt aus `CDataPathProperty`.  
   
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pControl`  
+ *pControl*  
  Ein Zeiger auf das ActiveX-Steuerelementobjekt mit diesem verbunden sein, `CCachedDataPathProperty` Objekt.  
   
- `lpszPath`  
+ *lpszPath*  
  Der Pfad absolut oder relativ sein kann, verwendet, um eine asynchrone Moniker zu erstellen, die die eigentliche absolute Position der Eigenschaft verweist. `CCachedDataPathProperty` URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CCachedDataPathProperty` -Objekt für eine Datei, file:// auf den Pfad voranstellen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `COleControl` Objekt verweist `pControl` dient der [öffnen](../../mfc/reference/cdatapathproperty-class.md#open) und abgeleitete Klassen abgerufen. Wenn `pControl` ist **NULL**, das Steuerelement mit verwendet **öffnen** sollte festgelegt werden, mit [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Wenn `lpszPath` ist **NULL**, können Sie den Pfad durch übergeben **öffnen** oder legen Sie sie mit [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
+ Die `COleControl` Objekt verweist *pControl* dient der [öffnen](../../mfc/reference/cdatapathproperty-class.md#open) und abgeleitete Klassen abgerufen. Wenn *pControl* ist **NULL**, das Steuerelement mit verwendet `Open` sollte festgelegt werden, mit [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Wenn *LpszPath* ist **NULL**, können Sie den Pfad durch übergeben `Open` oder legen Sie sie mit [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Enthält den Klassennamen die Arbeitsspeicher-Datei in die Daten zwischengespeichert werden.  

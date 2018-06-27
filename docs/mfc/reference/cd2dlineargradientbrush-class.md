@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353683"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957246"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush-Klasse
 Ein Wrapper für ID2D1LinearGradientBrush.  
@@ -121,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pResource`  
+ *pResource*  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -140,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `gradientStops`  
+ *gradientStops*  
  Ein Zeiger auf ein Array von D2D1_GRADIENT_STOP-Strukturen.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Ein Wert größer als oder gleich 1, der die Anzahl der Farbverlaufsstopps im Array GradientStops angibt.  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  Die Start- und die Endpunkte des Farbverlaufs.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Der Speicherplatz in der die, den Farbe Interpolation zwischen dem Farbverlaufsstopps ausgeführt wird.  
   
- `extendMode`  
+ *extendMode*  
  Das Verhalten des Farbverlaufs außerhalb des Bereichs, [0,1] normalisierte.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ein Zeiger auf die Deckkraft- und Transformation eines Pinsels.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -172,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ein Zeiger auf das Renderziel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -257,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Punkt*  
  Die zweidimensionalen Endkoordinaten des linearen Farbverlaufs, im Koordinatenbereich des Pinsels.  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -268,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Punkt*  
  Die zweidimensionalen Anfangskoordinaten des linearen Farbverlaufs, im Koordinatenbereich des Pinsels.  
   
 ## <a name="see-also"></a>Siehe auch  
