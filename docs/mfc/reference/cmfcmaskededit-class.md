@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371796"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040102"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit-Klasse
 Die `CMFCMaskedEdit` Klasse unterstützt ein maskiertes Bearbeitungssteuerelement, das Benutzereingaben anhand einer Maske überprüft und zeigt die überprüften Ergebnisse einer Vorlage entsprechend.  
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` um anzugeben, dass die [CMFCMaskedEdit::GetWindowText](#getwindowtext) Methode abrufen maskiert nur Zeichen; `FALSE` um anzugeben, dass die Methode den gesamten Text abrufen. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszMask`  
- Eine Maskenzeichenfolge, die den Typ der Zeichen angibt, die an jede Position in die Benutzereingabe angezeigt werden können. Die Länge der `lpszInputTemplate` und `lpszMask` Parameterzeichenfolgen müssen identisch sein. Finden Sie im Abschnitt "Hinweise" Weitere Details zur Maskenzeichen ein.  
+ [in] *LpszMask*  
+ Eine Maskenzeichenfolge, die den Typ der Zeichen angibt, die an jede Position in die Benutzereingabe angezeigt werden können. Die Länge der *LpszInputTemplate* und *LpszMask* Parameterzeichenfolgen müssen identisch sein. Finden Sie im Abschnitt "Hinweise" Weitere Details zur Maskenzeichen ein.  
   
- [in] `lpszInputTemplate`  
- Eine Maske Vorlagenzeichenfolge, die angibt, dass das Literal Zeichen kann an jede Position in die Benutzereingabe angezeigt werden. Verwenden Sie der Unterstrich (_) als zeichenplatzhalter. Die Länge der `lpszInputTemplate` und `lpszMask` Parameterzeichenfolgen müssen identisch sein.  
+ [in] *LpszInputTemplate*  
+ Eine Maske Vorlagenzeichenfolge, die angibt, dass das Literal Zeichen kann an jede Position in die Benutzereingabe angezeigt werden. Verwenden Sie der Unterstrich (_) als zeichenplatzhalter. Die Länge der *LpszInputTemplate* und *LpszMask* Parameterzeichenfolgen müssen identisch sein.  
   
- [in] `chMaskInputTemplate`  
+ [in] *ChMaskInputTemplate*  
  Ein Standardzeichen, die das Framework für jedes ungültige Zeichen in der Benutzereingabe ersetzt. Der Standardwert dieses Parameters ist Unterstrich ("_").  
   
- [in] `lpszValid`  
+ [in] *LpszValid*  
  Eine Zeichenfolge, die einen Satz von gültigen Zeichen enthält. `NULL` Gibt an, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` nur Gruppen auswählen; `FALSE` um den gesamten Text auszuwählen. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So überprüfen Sie den Benutzer maskiert Eingabe anhand von nur Zeichen; `FALSE` die gesamte Maske überprüft. Der Standardwert ist `TRUE`.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `lpszStringBuf`  
+ [out] *LpszStringBuf*  
  Ein Zeiger auf einen Puffer, der den Text in das Bearbeitungssteuerelement empfängt.  
   
- [in] `nMaxCount`  
+ [in] *nMaxCount*  
  Die maximale Anzahl von Zeichen zu erhalten.  
   
- [out] `rstrString`  
+ [out] *RstrString*  
  Ein Verweis auf das String-Objekt, das den Text von das Bearbeitungssteuerelement empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die erste methodenüberladung gibt die Anzahl der Bytes der Zeichenfolge, die in kopiert die `lpszStringBuf` Parameterpuffer; 0, wenn die MaskedEdit-Steuerelement keinen Text enthält.  
+ Die erste methodenüberladung gibt die Anzahl der Bytes der Zeichenfolge, die in kopiert die *LpszStringBuf* Parameterpuffer; 0, wenn die MaskedEdit-Steuerelement keinen Text enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode kopiert den Text aus dem MaskedEdit-Steuerelement an die `lpszStringBuf` Puffer oder die `rstrString` Zeichenfolge.  
+ Diese Methode kopiert den Text aus dem MaskedEdit-Steuerelement an die *LpszStringBuf* Puffer oder die *RstrString* Zeichenfolge.  
   
  Diese Methode definiert [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `chChar`  
+ [in] *ChChar*  
  Das Zeichen überprüft werden.  
   
- [in] `chMaskChar`  
+ [in] *ChMaskChar*  
  Das entsprechende Zeichen aus der Maskenzeichenfolge.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die `chChar` Parameter weist den Typ der Höchstzahl von Zeichen der `chMaskChar` Parameter ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die *ChChar* Parameter weist den Typ der Höchstzahl von Zeichen der *ChMaskChar* Parameter ist, andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Eingabezeichen selbst zu validieren. Weitere Informationen zu Formatzeichen, finden Sie unter der [CMFCMaskedEdit::EnableMask](#enablemask) Methode.  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszValid`  
+ [in] *LpszValid*  
  Eine Zeichenfolge, die den Satz von gültigen Eingabezeichen enthält. `NULL` bedeutet, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszString`  
+ [in] *LpszString*  
  Zeigt auf eine auf Null endende Zeichenfolge, die als Eingabeaufforderung verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  

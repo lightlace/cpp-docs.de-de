@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374896"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038220"
 ---
 # <a name="coledropsource-class"></a>COleDropSource-Klasse
 Können Daten auf ein Ablageziel gezogen werden.  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dropEffect`  
+ *-DropEffect-*  
  Den Effekt, der dem Benutzer angezeigt werden sollen, in der Regel, der angibt, was passiert, wenn ein solches Löschen an diesem Punkt mit den ausgewählten Daten aufgetreten ist. Dies ist in der Regel vom letzten Aufruf zurückgegebene Wert [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) oder [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_NONE` Ein solches löschen, ist nicht zulässig.  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster, das die ausgewählten Daten enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  Gibt an, ob die ESC-Taste seit dem letzten Aufruf von gedrückt wurde `COleDropSource::QueryContinueDrag`.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Enthält den Status der Zusatztasten der Tastatur. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
   
 ### <a name="return-value"></a>Rückgabewert  

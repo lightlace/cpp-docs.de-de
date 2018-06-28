@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375388"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040167"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton-Klasse
 Eine Schaltfläche, die ein Popupmenü anzeigt und die vom Benutzer gewählte Menüoption meldet.  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMsg`  
+ [in] *pMsg*  
  Verweist auf eine [MSG](../../mfc/reference/msg-structure1.md) Struktur, die die zu verarbeitende Meldung enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Ein boolescher Parameter, der angibt, ob diese Methode ändert die Größe der Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die neue Größe für die Schaltfläche angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie diese Funktion aufrufen und `bCalcOnly` ist `TRUE`, `SizeToContent` wird nur die neue Größe der Schaltfläche zu berechnen.  
+ Wenn Sie diese Funktion aufrufen und *bCalcOnly* ist `TRUE`, `SizeToContent` wird nur die neue Größe der Schaltfläche zu berechnen.  
   
  Die neue Größe der Schaltfläche wird berechnet, an den Schaltflächentext, Bild und Pfeil anpassen. Das Framework fügt auch in vordefinierten Ränder 10 Pixel für die horizontale Kante und 5 Pixel für die vertikale Kante.  
   

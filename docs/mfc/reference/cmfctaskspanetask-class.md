@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371331"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040700"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask-Klasse
 Die `CMFCTasksPaneTask` Klasse ist eine Hilfsklasse, die Aufgaben für die Aufgabenbereich-Steuerelement darstellt ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Das Aufgabenobjekt stellt ein Element in der Aufgabengruppe ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Jede Aufgabe kann über einen Befehl verfügen, den das Framework ausführt, wenn ein Benutzer auf die Aufgabe klickt, und über ein Symbol, das auf der linken Seite des Aufgabennamens angezeigt wird.  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pGroup`  
+ *pGroup*  
  Gibt an, die [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) zu dem die Aufgabe gehört.  
   
- `lpszName`  
+ *Wert*  
  Gibt den Namen des Tasks.  
   
- `nIcon`  
+ *nIcon*  
  Gibt den Index des Bilds für die Aufgabe in der Bildliste an.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Gibt die Befehls-ID des Befehls, der ausgeführt wird, wenn die Aufgabe geklickt wird.  
   
- `dwUserData`  
+ *dwUserData*  
  Benutzerdefinierte Daten.  
   
- `hwndTask`  
+ *hwndTask*  
  Gibt das Handle für das Aufgabenfenster an.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Wenn `TRUE`, das Aufgabenfenster wird automatisch zerstört werden.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Gibt die Höhe des Fensters Aufgabe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParent`  
+ [in] *pParent*  
  Stellt das übergeordnete Fenster des aktuellen Task dar.  
   
- [out] `data`  
+ [out] *Daten*  
  Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Aufgabe aufgefüllt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die `data` Parameter wurde erfolgreich mit der aktuellen Aufgabe die barrierefreiheitsdaten gefüllt ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die *Daten* Parameter wurde erfolgreich mit der aktuellen Aufgabe die barrierefreiheitsdaten gefüllt ist, andernfalls `FALSE`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

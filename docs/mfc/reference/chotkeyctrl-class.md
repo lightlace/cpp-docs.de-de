@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368751"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040154"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Abkürzungstasten-Steuerelements bereit.  
@@ -73,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  Dieses Steuerelement (und somit die `CHotKeyCtrl` Klasse) und höher verfügbar nur für Programme, die unter Windows 95-und Windows 98 und Windows NT, Version 3.51 ausgeführt wird.  
   
- Wenn der Benutzer eine Tastenkombination ausgewählt hat, die Anwendung die angegebene Tastenkombination aus dem Steuerelement abrufen und Verwenden der **WM_SETHOTKEY** Nachricht im System die Abkürzungstaste einrichten. Wenn der Benutzer die Zugriffstaste aus einem beliebigen Teil des Systems danach drückt des Fensters angegeben, der **WM_SETHOTKEY** Nachricht empfängt eine `WM_SYSCOMMAND` Nachricht angeben **SC_HOTKEY**. Diese Meldung aktiviert das Fenster, das es empfängt. Die Abkürzungstaste bleibt gültig, bis die Anwendung, die aufgerufen **WM_SETHOTKEY** beendet wird.  
+ Wenn der Benutzer eine Tastenkombination ausgewählt hat, die Anwendung die angegebene Tastenkombination aus dem Steuerelement abrufen und Verwenden der **WM_SETHOTKEY** Nachricht im System die Abkürzungstaste einrichten. Wenn der Benutzer die Zugriffstaste aus einem beliebigen Teil des Systems danach drückt des Fensters angegeben, der **WM_SETHOTKEY** Nachricht empfängt eine **WM_SYSCOMMAND** Nachricht angeben **SC_HOTKEY** . Diese Meldung aktiviert das Fenster, das es empfängt. Die Abkürzungstaste bleibt gültig, bis die Anwendung, die aufgerufen **WM_SETHOTKEY** beendet wird.  
   
  Dieser Mechanismus unterscheidet sich von der hot Key Unterstützung, von denen abhängt der **WM_HOTKEY** Nachricht und die Windows- [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) und [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) Funktionen.  
   
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt die Abkürzungstasten-Steuerelements Stil. Wenden Sie eine beliebige Kombination von Steuerelementtypen. Finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) in das Windows SDK für Weitere Informationen.  
   
- `rect`  
+ *Rect*  
  Gibt an, die Abkürzungstasten-Steuerelements die Größe und Position. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT-Struktur](../../mfc/reference/rect-structure1.md).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, die Abkürzungstasten-Steuerelements des übergeordneten Fensters, in der Regel eine [CDialog](../../mfc/reference/cdialog-class.md). Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt die Abkürzungstasten-Steuerelements ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CHotKeyCtrl` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, das erstellt die Abkürzungstasten-Steuerelements, und fügt es der `CHotKeyCtrl` Objekt.  
+ Sie erstellen eine `CHotKeyCtrl` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann `Create`, das erstellt die Abkürzungstasten-Steuerelements, und fügt es der `CHotKeyCtrl` Objekt.  
   
- Wenn Sie die erweiterten Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von **erstellen**.  
+ Wenn Sie die erweiterten Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Mit dieser Funktion wird zum Erstellen eines Steuerelements (ein untergeordnetes Fenster), und ordnen sie die `CHotKeyCtrl` Objekt.  
@@ -143,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt die Abkürzungstasten-Steuerelements Stil. Wenden Sie eine beliebige Kombination von Steuerelementtypen. Weitere Informationen finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) im Windows SDK.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `wVirtualKeyCode`  
+ [out] *wVirtualKeyCode*  
  Virtueller Tastencode der Tastenkombination zugreifen. Eine Liste der standardmäßigen virtuellen Tastencodes finden Sie unter Winuser.h.  
   
- [out] `wModifiers`  
+ [out] *wModifiers*  
  Eine bitweise Kombination (OR) von Flags, die in die Tastenkombination Zusatztasten angeben.  
   
  Die Modifiziererflags sind wie folgt aus:  
@@ -220,14 +220,14 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `vk`  
+ *VK*  
  Den virtueller Tastencode.  
   
  *fExtended*  
  Der virtuelle Tastencode ist eine erweiterte Schlüssel **"true"** andernfalls **"false"**.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der lokalisierte Name des Schlüssels angegeben wird, indem Sie die `vk` Parameter. Wenn der Schlüssel keinen zugeordneten Namen besitzt, `GetKeyName` eine leere Zeichenfolge zurückgegeben.  
+ Der lokalisierte Name des Schlüssels angegeben wird, indem Sie die *Vk* Parameter. Wenn der Schlüssel keinen zugeordneten Namen besitzt, `GetKeyName` eine leere Zeichenfolge zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Name, der diese Funktion gibt stammt aus dem Tastaturtreiber einen Tastaturtreiber nicht lokalisierten in einer lokalisierten Version von Windows installiert werden können und umgekehrt.  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `wVirtualKeyCode`  
+ [in] *wVirtualKeyCode*  
  Virtueller Tastencode der Tastenkombination zugreifen. Eine Liste der standardmäßigen virtuellen Tastencodes finden Sie unter Winuser.h.  
   
- [in] `wModifiers`  
+ [in] *wModifiers*  
  Eine bitweise Kombination (OR) von Flags, die in die Tastenkombination Zusatztasten angeben.  
   
  Die Modifiziererflags sind wie folgt aus:  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `wInvalidComb`  
+ *wInvalidComb*  
  Ein Array von Flags, die ungültige Schlüsselkombinationen angibt. Eine Kombination der folgenden Werte sind möglich:  
   
 - `HKCOMB_A` ALT-TASTE  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` UMSCHALT + STRG + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  Ein Array von Flags, die angibt, die Tastenkombination zu verwenden, wenn der Benutzer eine ungültige Kombination gibt. Weitere Informationen zu den Modifiziererflags finden Sie unter [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn ein Benutzer eine ungültige Tastenkombination eingibt, gemäß der Definition von Flags, die im angegebenen `wInvalidComb`, verwendet das System den OR-Operator, um die mit den Flags, die im angegebenen vom Benutzer eingegebenen Schlüssel zu kombinieren `wModifiers`. Die resultierende Tastenkombination wird in eine Zeichenfolge konvertiert und dann in die Abkürzungstasten-Steuerelements angezeigt.  
+ Wenn ein Benutzer eine ungültige Tastenkombination eingibt, gemäß der Definition von Flags, die im angegebenen *wInvalidComb*, verwendet das System den OR-Operator, um die mit den Flags, die im angegebenen vom Benutzer eingegebenen Schlüssel zu kombinieren *wModifiers*. Die resultierende Tastenkombination wird in eine Zeichenfolge konvertiert und dann in die Abkürzungstasten-Steuerelements angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   

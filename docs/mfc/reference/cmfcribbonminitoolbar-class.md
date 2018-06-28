@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371672"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041749"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar-Klasse
 Implementiert eine kontextbezogene Popup-Symbolleiste.  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Die menübandleiste, die für die anzuzeigenden Schaltflächen die Minisymbolleiste sucht.  
   
- [in] `lstCommands`  
+ [in] *LstCommands*  
  Die Liste der Befehle, die auf die Minisymbolleiste angezeigt werden. Alle menübandkategorien werden durchsucht, um die zugehörigen Schaltflächen zu suchen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `x`  
+ [in] *x*  
  Gibt die horizontale Position der Minisymbolleiste in Bildschirmkoordinaten.  
   
- [in] `y`  
+ [in] *y*  
  Gibt die vertikale Position der Minisymbolleiste in Bildschirmkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `x`  
+ [in] *x*  
  Gibt die horizontale Position des Kontextmenüs in Bildschirmkoordinaten.  
   
- [in] `y`  
+ [in] *y*  
  Gibt die vertikale Position des Kontextmenüs in Bildschirmkoordinaten.  
   
- [in] `uiMenuResID`  
+ [in] *UiMenuResID*  
  Gibt die Ressourcen-ID des Kontextmenüs angezeigt.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Identifiziert das Fenster, das Nachrichten aus dem Kontextmenü empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  

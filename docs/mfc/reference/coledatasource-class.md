@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376706"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038554"
 ---
 # <a name="coledatasource-class"></a>COleDataSource-Klasse
 Dient als Cache, in den eine Anwendung die Daten für Datenübertragungsoperationen ablegt, beispielsweise bei Zwischenablage- oder Drag & Drop-Operationen.  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur, die die Daten im angegebenen Format enthält.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie müssen die Daten angeben, da diese Funktion bietet sofortigen Rendering mit. Die Daten werden zwischengespeichert, bis Sie benötigt.  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
  *hGlobal*  
  Handle für den globalen Speicherblock, der Daten im angegebenen Format enthält.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion bietet, die Daten mit sofortige rendern, sodass Sie die Daten angeben müssen, wenn die Funktion aufgerufen wird; die Daten werden zwischengespeichert, bis Sie benötigt. Verwenden der `CacheData` Memberfunktion, wenn Sie eine große Menge an Daten oder wenn Sie eine strukturierte Speichermedium benötigen angegeben haben.  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion bietet die Daten mit verzögerte rendering, damit die Daten nicht direkt bereitgestellt werden. Die [OnRenderData](#onrenderdata) oder [OnRenderGlobalData](#onrenderglobaldata) Member-Funktion wird aufgerufen, um die Daten anfordern.  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion bietet die Daten mit verzögerte rendering, damit die Daten nicht direkt bereitgestellt werden. Die [OnRenderFileData](#onrenderfiledata) Member-Funktion wird aufgerufen, um die Daten anfordern.  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Format der Zwischenablage, in dem die Daten abgelegt werden soll. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten ersetzt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten ersetzt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  [OnSetData](#onsetdata) wird vom Framework aufgerufen, wenn dies geschieht. Dies wird nur verwendet, wenn das Framework gibt die Datenquelle aus [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Wenn `DelaySetData` nicht aufgerufen wird, Ihre `OnSetData` Funktion wird nie aufgerufen werden. `DelaySetData` sollte für jede Zwischenablage aufgerufen werden oder **FORMATETC** Format, die Sie unterstützen.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwEffects`  
+ *dwEffects*  
  Drag & Drop-Vorgänge, die zulässig sind für diese Datenquelle. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_COPY` Ein Vorgang zum Kopieren konnte ausgeführt werden.  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` Gibt an, dass es sich bei Auftreten ein Ziehvorgangs ein Bildlauf.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Ein Zeiger auf das Rechteck, das definiert, in dem der Ziehvorgang beginnt. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  Löschen Sie die Auswirkungen von dem Drag-and-Drop-Vorgang generierte; andernfalls `DROPEFFECT_NONE` , wenn der Vorgang nie gestartet werden, da der Benutzer die Maustaste losgelassen, vor dem Verlassen des angegebenen Rechtecks.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Drag-and-Drop-Vorgang wird nicht sofort gestartet. Es wartet, bis der Cursor auf das Rechteck, angegeben durch verlässt `lpRectStartDrag` oder bis eine angegebene Anzahl von Millisekunden erfolgreich abgeschlossen wurden. Wenn `lpRectStartDrag` ist **NULL**, die Größe des Rechtecks beträgt ein Pixel.  
+ Die Drag-and-Drop-Vorgang wird nicht sofort gestartet. Es wartet, bis der Cursor auf das Rechteck, angegeben durch verlässt *LpRectStartDrag* oder bis eine angegebene Anzahl von Millisekunden erfolgreich abgeschlossen wurden. Wenn *LpRectStartDrag* ist **NULL**, die Größe des Rechtecks beträgt ein Pixel.  
   
  Die Verzögerung wird durch eine Einstellung des Registrierungsschlüssels angegeben. Sie können die Verzögerungszeit ändern, durch den Aufruf [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) oder [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Wenn Sie die Verzögerung nicht angeben, wird ein Standardwert von 200 Millisekunden verwendet. Ziehen Sie Verzögerungszeit werden wie folgt gespeichert:  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Informationen angefordert, angibt.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur, in dem die Daten zurückgegeben werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Hinweise  
  Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Memberfunktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion rufen [OnRenderFileData](#onrenderfiledata) oder [OnRenderGlobalData](#onrenderglobaldata) Wenn das angegebene Speichermedium eine Datei oder einen Arbeitsspeicher ist. Wenn keines dieser Formate angegeben werden, wird die standardmäßige Implementierung gibt 0 zurück und Unternehmen Sie nichts. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Wenn `lpStgMedium` ->  *Tymed* ist **TYMED_NULL**, **STGMEDIUM** reserviert und entsprechend den Angaben von gefüllt werden soll *LpFormatEtc -> TYMED*. Ist er nicht **TYMED_NULL**, **STGMEDIUM** direkt mit den Daten ausgefüllt werden soll.  
+ Wenn *LpStgMedium*-> *Tymed* ist **TYMED_NULL**, **STGMEDIUM** reserviert und entsprechend den Angaben von gefülltwerdensoll*LpFormatEtc -> Tymed*. Ist er nicht **TYMED_NULL**, **STGMEDIUM** direkt mit den Daten ausgefüllt werden soll.  
   
  Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten können Sie eine der anderen Versionen dieser Funktion stattdessen überschreiben möchten. Wenn Ihre Daten klein und fester Größe ist, überschreiben `OnRenderGlobalData`. Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben `OnRenderFileData`.  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Informationen angefordert, angibt.  
   
- `pFile`  
+ *pFile*  
  Verweist auf eine [CFile](../../mfc/reference/cfile-class.md) Objekt, in dem die Daten gerendert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Informationen angefordert, angibt.  
   
- `phGlobal`  
+ *phGlobal*  
  Verweist auf ein Handle für den globalen Arbeitsspeicher, in dem die Daten zurückgegeben werden. Dieser Parameter kann sein, wenn eine noch nicht belegt wurde, **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Hinweise  
  Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) Memberfunktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion gibt einfach auftragsantwortnachrichten zurück **"false"**.  
   
- Wenn `phGlobal` ist **NULL**, klicken Sie dann ein neues `HGLOBAL` reserviert und in zurückgegeben werden soll `phGlobal`. Andernfalls die `HGLOBAL` gemäß `phGlobal` mit Daten gefüllt werden soll. Die Menge der Daten platziert werden, der `HGLOBAL` darf sich nicht auf die aktuelle Größe des Speicherblocks. Darüber hinaus kann nicht der Block auf eine Größe neu zugeordnet werden.  
+ Wenn *PhGlobal* ist **NULL**, klicken Sie dann ein neues `HGLOBAL` reserviert und in zurückgegeben werden soll *PhGlobal*. Andernfalls die `HGLOBAL` gemäß *PhGlobal* mit Daten gefüllt werden soll. Die Menge der Daten platziert werden, der `HGLOBAL` darf sich nicht auf die aktuelle Größe des Speicherblocks. Darüber hinaus kann nicht der Block auf eine Größe neu zugeordnet werden.  
   
  Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten können Sie eine der anderen Versionen dieser Funktion stattdessen überschreiben möchten. Wenn Sie mehrere Speichermedien behandeln möchten, überschreiben [OnRenderData](#onrenderdata). Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben [OnRenderFileData](#onrenderfiledata). Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Daten ausgetauscht werden, angibt.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Verweist auf die [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur mit den Daten, die dem aktuellen Inhalt zu ersetzen, werden die `COleDataSource` Objekt.  
   
- `bRelease`  
- Gibt an, wer das Speichermedium nach Abschluss des Funktionsaufrufs hat. Der Aufrufer entscheidet, die für die Freigabe der Ressourcen für das Speichermedium zuständig ist. Der Aufrufer geschieht durch Festlegen von `bRelease`. Wenn `bRelease` ist ungleich NULL ist, die Datenquelle übernimmt den Besitz, das Medium freigeben, wenn er abgeschlossen ist, verwenden. Wenn `bRelease` ist 0, der Aufrufer besitzt und die Datenquelle kann das Speichermedium nur für die Dauer des Aufrufs verwendet.  
+ *bRelease*  
+ Gibt an, wer das Speichermedium nach Abschluss des Funktionsaufrufs hat. Der Aufrufer entscheidet, die für die Freigabe der Ressourcen für das Speichermedium zuständig ist. Der Aufrufer geschieht durch Festlegen von *bRelease*. Wenn *bRelease* ist ungleich NULL ist, die Datenquelle übernimmt den Besitz, das Medium freigeben, wenn er abgeschlossen ist, verwenden. Wenn *bRelease* ist 0, der Aufrufer besitzt und die Datenquelle kann das Speichermedium nur für die Dauer des Aufrufs verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  

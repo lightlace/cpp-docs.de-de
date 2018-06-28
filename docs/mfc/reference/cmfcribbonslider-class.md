@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372696"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037724"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider-Klasse
 Die `CMFCRibbonSlider` Klasse implementiert ein Schieberegler-Steuerelement, das einer menübandleiste oder einer Menüband-Statusleiste hinzugefügt werden können. Das Schieberegler-Steuerelement im Menüband ähnelt den Zoomschiebereglern, die in Office 2007-Anwendungen verwendet werden.  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Schieberegler-ID.  
   
- [in]. `nWidth`  
+ [in]. *nWidth*  
  Schieberegler-Breite in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Erstellt einen Menüband-Schieberegler, die `nWidth` Pixel breit ist, in der Systemsteuerung Kategorie, wo der Schieberegler hinzugefügt wird. Standardmäßig ist der Schieberegler horizontal.  
+ Erstellt einen Menüband-Schieberegler, die *nWidth* Pixel breit ist, in der Systemsteuerung Kategorie, wo der Schieberegler hinzugefügt wird. Standardmäßig ist der Schieberegler horizontal.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Gibt die aktuelle Position des Schieberegler-Steuerelements zurück.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPos`  
+ [in] *nPos*  
  Gibt die Position, die für den Schieberegler festgelegt. Die Position ist relativ zum Anfang des Schiebereglers.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Wenn `TRUE`, der Schieberegler wird neu gezeichnet werden.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nMin`  
+ [in] *nMin*  
  Gibt die minimale Wert des Schieberegler-Steuerelements an.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Gibt die maximale Wert des Schieberegler-Steuerelements an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in]. `bSet`  
+ [in]. *bSet*  
  `TRUE` Zoom-Schaltflächen angezeigt; `FALSE` zum Ausblenden.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  Gibt das Inkrement Zoom des Schieberegler-Steuerelements an.  
   
 ## <a name="see-also"></a>Siehe auch  

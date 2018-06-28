@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367795"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038912"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty-Klasse
 Die `CMFCPropertyGridFileProperty` Klasse unterstützt einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Dateiauswahl öffnet.  
@@ -78,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strName`  
+ [in] *StrName*  
  Der Eigenschaftenname.  
   
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  `TRUE` So öffnen ein **Datei öffnen** Dialogfeld; `FALSE` zum Öffnen einer **Datei speichern** (Dialogfeld).  
   
- [in] `strFileName`  
+ [in] *StrFileName*  
  Der ursprüngliche Dateiname.  
   
- [in] `lpszDefExt`  
- Eine Zeichenfolge mit einer oder mehreren Dateinamenerweiterungen. Der Standardwert ist `NULL`.  
+ [in] *LpszDefExt*  
+ Eine Zeichenfolge mit einer oder mehreren Dateierweiterungen. Der Standardwert ist `NULL`.  
   
- [in] `dwFlags`  
+ [in] *DwFlags*  
  Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von `OFN_HIDEREADONLY` und `OFN_OVERWRITEPROMPT`.  
   
- [in] `lpszFilter`  
+ [in] *LpszFilter*  
  Eine Zeichenfolge mit einer oder mehreren Dateinfiltern. Der Standardwert ist `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *LpszDescr*  
  Die Beschreibung des Eigenschaftenelements. Der Standardwert ist `NULL`.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet sind. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43c9fdc667f5bd40b6c683f6e48753a084266847
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368142"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037647"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString-Klasse
 Unterstützt Zuordnungen von `CString` -Objekten mit `CString` -Objekten als Schlüssel.  
@@ -69,7 +69,7 @@ class CMapStringToString : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CMapStringToString` ähneln den Memberfunktionen der Klasse [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CMapStringToOb`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` Zeiger als Rückgabewert oder "Ausgabe"-Parameter, Funktion, ersetzen Sie einen Zeiger auf `char`. Immer dort, wo eine `CObject` Zeiger als Parameter "input"-Funktion, ersetzen Sie einen Zeiger auf `char`.  
+ Die Memberfunktionen von `CMapStringToString` ähneln den Memberfunktionen der Klasse [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CMapStringToOb`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` Zeiger als Rückgabewert oder "Ausgabe"-Parameter, Funktion, ersetzen Sie einen Zeiger auf **Char**. Immer dort, wo eine `CObject` Zeiger als Parameter "input"-Funktion, ersetzen Sie einen Zeiger auf **Char**.  
   
  `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`  
   
@@ -169,7 +169,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
- Ruft das kartenelement verweist `pAssocRec`.  
+ Ruft das kartenelement verweist *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;  
@@ -200,7 +200,7 @@ CPair* PLookup(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Ein Zeiger auf den Schlüssel für das Element nach dem gesucht werden.  
   
 ### <a name="return-value"></a>Rückgabewert  

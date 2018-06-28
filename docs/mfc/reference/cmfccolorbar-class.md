@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2083c26943768afff4b3b20a2ba95c709648dd50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8786a35653dbf3d4de14b81563011b3a031c9c4b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376137"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038997"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar-Klasse
 Die `CMFCColorBar` -Klasse stellt eine andockbare Symbolleiste, die Farben in einem Dokument oder die Anwendung auswählen können.  
@@ -244,7 +244,7 @@ virtual void AdjustLocations();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird aufgerufen, durch das Framework während `WM_SIZE` Verarbeitung von Nachrichten.  
+ Diese Methode wird vom Framework aufgerufen, während der Nachrichtenverarbeitung WM_SIZE.  
   
 ##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels  
  Gibt an, ob die Beschriftung der Color-Schaltflächen geändert werden kann.  
@@ -280,7 +280,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bVertDock`  
+ [in] *bVertDock*  
  `TRUE` um anzugeben, dass die Farbleiste Steuerelement vertikal angedockt ist; `FALSE` um anzugeben, dass die Farbleiste Steuerelement horizontal angedockt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -324,50 +324,50 @@ CMFCColorBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `colors`  
+ [in] *Farben*  
  Ein Array von Farben aus, denen vom Framework für das Steuerelement der Farbleiste angezeigt wird.  
   
- [in] `color`  
+ [in] *Farbe*  
  Die anfänglich ausgewählte Farbe.  
   
- [in] `lpszAutoColor`  
+ [in] *LpszAutoColor*  
  Die Beschriftung für die *automatische* farbenschaltfläche (Standard), oder `NULL`.  
   
  Die standardmäßige Bezeichnung für die Schaltfläche "automatisch" ist **automatische**.  
   
- [in] `lpszOtherColor`  
+ [in] *LpszOtherColor*  
  Die Beschriftung für die *andere* Schaltfläche, die weitere Farben angezeigt wird, oder `NULL`.  
   
  Der standard als Bezeichnung für die Schaltfläche "Sonstige" **Weitere Farben...** .  
   
- [in] `lpszDocColors`  
+ [in] *LpszDocColors*  
  Die Beschriftung der Schaltfläche Dokument Farben. Die Dokument-Farben-Palette Listet alle Farben, die das Dokument derzeit verwendet.  
   
- [in] `lstDocColors`  
+ [in] *LstDocColors*  
  Eine Liste von Farben, die das Dokument derzeit verwendet.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Die Anzahl der Spalten, die das Array von Farben aufweist.  
   
- [in] `nRowsDockHorz`  
+ [in] *nRowsDockHorz*  
  Die Anzahl der Zeilen, die die Farbleiste hat, wenn er horizontal angedockt ist.  
   
- [in] `nColDockVert`  
+ [in] *nColDockVert*  
  Die Anzahl der Spalten, die die Farbleiste hat, wenn es vertikal angedockt ist.  
   
- [in] `colorAutomatic`  
+ [in] *ColorAutomatic*  
  Die Standardfarbe, die das Framework gilt, wenn Sie auf die Schaltfläche "Automatische" klicken.  
   
- [in] `nCommandID`  
+ [in] *nCommandID*  
  Die Farbleiste steuerungsbefehls-ID.  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Ein Zeiger auf eine übergeordnete Schaltfläche.  
   
- [in] `src`  
+ [in] *Src*  
  Eine vorhandene `CMFCColorBar` -Objekt, in das neue kopiert werden `CMFCColorBar` Objekt.  
   
- [in] `uiCommandID`  
+ [in] *UiCommandID*  
  Die Befehls-ID.  
   
 ##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
@@ -383,8 +383,8 @@ void ContextToSize(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `bSquareButtons`|`TRUE` um anzugeben, dass die Form der Schaltflächen auf ein Steuerelement Farbleiste sind quadratische; andernfalls `FALSE`. Der Standardwert ist `TRUE`.|  
-|[in] `bCenterButtons`|`TRUE` um anzugeben, dass der Inhalt in einer Farbleiste Schaltflächensteuerelement zentriert; andernfalls `FALSE`. Der Standardwert ist `TRUE`.|  
+|[in] *bSquareButtons*|`TRUE` um anzugeben, dass die Form der Schaltflächen auf ein Steuerelement Farbleiste sind quadratische; andernfalls `FALSE`. Der Standardwert ist `TRUE`.|  
+|[in] *bCenterButtons*|`TRUE` um anzugeben, dass der Inhalt in einer Farbleiste Schaltflächensteuerelement zentriert; andernfalls `FALSE`. Der Standardwert ist `TRUE`.|  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -403,25 +403,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  Die Befehls-ID.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Ein Zeiger auf eine Palette von Farben. Die Standardeinstellung ist `NULL`.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Die Anzahl der Spalten im Steuerelement Farbleiste. Der Standard ist 0.  
   
- [in] `nRowsDockHorz`  
+ [in] *nRowsDockHorz*  
  Die Anzahl der Zeilen in der Farbleiste steuern, wann er horizontal angedockt ist. Der Standard ist 0.  
   
- [in] `nColDockVert`  
+ [in] *nColDockVert*  
  Die Anzahl der Spalten in der Farbleiste steuern, wann es vertikal angedockt ist. Der Standard ist 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -443,26 +443,26 @@ virtual BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster. Nicht mit `NULL`.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein umschließendes Rechteck, das angibt, wo die Farbleiste Steuerelement gezeichnet werden soll.  
   
- [in] `nID`  
+ [in] *nID*  
  Die Steuerelement-ID.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Die ideale Anzahl von Spalten im Steuerelement Farbleiste. Diese Methode ändert die Anzahl die Palette angegebene Farben anpassen. Der Standardwert ist-1 und bedeutet, dass dieser Parameter nicht angegeben wird.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Zeiger auf eine Palette von Farben, oder `NULL`. Wenn dieser Parameter ist `NULL`, diese Methode berechnet die Größe des Steuerelements Farbleiste an, wie wenn 20 Farben angegeben wurden. Die Standardeinstellung ist `NULL`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn diese Methode erfolgreich ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet die `rect`, `nColumns`, und `pPalette` Parameter zum Berechnen der erforderlichen Anzahl oder Zeilen und Spalten in der Farbleiste-Steuerelement, und ruft dann die [CMFCColorBar::Create](#create) Methode.  
+ Diese Methode verwendet die *Rect*, *nColumns*, und *pPalette* Parameter zum Berechnen der erforderlichen Anzahl oder Zeilen und Spalten in der Farbleiste-Steuerelement, und ruft dann die [CMFCColorBar::Create](#create) Methode.  
   
 ##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette  
  Initialisiert eine Palette mit Farben in einem angegebenen Array von Farben an.  
@@ -477,8 +477,8 @@ static BOOL CreatePalette(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `arColors`|Ein Array von Farben.|  
-|[in] `palette`|Eine Palette von Farben.|  
+|[in] *ArColors*|Ein Array von Farben.|  
+|[in] *Palette*|Eine Palette von Farben.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
@@ -494,19 +494,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Die Beschriftung für die *automatische* farbenschaltfläche (Standard), oder `NULL`.  
   
  Die standardmäßige Bezeichnung für die Schaltfläche "automatisch" ist **automatische**.  
   
- [in] `colorAutomatic`  
+ [in] *ColorAutomatic*  
  Die Standardfarbe, die das Framework gilt, wenn Sie auf die Schaltfläche "Automatische" klicken.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie die Schaltfläche "Automatische"; `FALSE` auf die Schaltfläche "Automatische" zu deaktivieren. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Beschriftung für die Schaltfläche "automatisch" wird gelöscht, wenn die `lpszLabel` Parameter ist `NULL` oder `bEnable` Parameter ist `FALSE`.  
+ Die Beschriftung für die Schaltfläche "automatisch" wird gelöscht, wenn die *LpszLabel* Parameter ist `NULL` oder *bAktivieren* Parameter ist `FALSE`.  
   
 ##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton  
  Aktiviert oder deaktiviert die Anzeige eines Dialogfelds, in dem den Benutzer weitere Farben auswählen können.  
@@ -519,12 +519,12 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Die Beschriftung für die *andere* Schaltfläche, die weitere Farben angezeigt wird, oder `NULL`.  
   
  Die standardmäßige Bezeichnung für diese Schaltfläche ist **Weitere Farben...** .  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` zum Anzeigen der [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld; `FALSE` zum Anzeigen des Standards [CColorDialog](../../mfc/reference/ccolordialog-class.md) (Dialogfeld). Der Standardwert ist `TRUE`.  
   
  [in] `bEnable`  
@@ -551,7 +551,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `bVertDock`|`TRUE` die Berechnung für ein Steuerelement vertikal angedockten Farbleiste ausführen; Führen Sie andernfalls die Berechnung für ein Steuerelement horizontal angedockt.|  
+|[in] *bVertDock*|`TRUE` die Berechnung für ein Steuerelement vertikal angedockten Farbleiste ausführen; Führen Sie andernfalls die Berechnung für ein Steuerelement horizontal angedockt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, dessen `cx` Komponente enthält die Anzahl der Spalten und deren `cy` Komponente enthält die Anzahl der Zeilen.  
@@ -567,7 +567,7 @@ UINT GetCommandID() const;
  Eine Befehls-ID.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Benutzer eine neue Farbe auswählt, sendet das Framework die Befehls-ID in einem `WM_COMMAND` Nachricht an das übergeordnete Element des benachrichtigen der `CMFCColorBar` Objekt.  
+ Wenn der Benutzer eine neue Farbe auswählt, sendet das Framework die Befehls-ID in einer WM_COMMAND-Nachricht an das übergeordnete Element des benachrichtigen der `CMFCColorBar` Objekt.  
   
 ##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight  
  Berechnet die zusätzliche Höhe, die der aktuellen Farbleiste erfordert verschiedene Elemente einer Benutzeroberfläche angezeigt, wie z. B. die **andere** Schaltfläche oder das Dokument Farben.  
@@ -580,7 +580,7 @@ int GetExtraHeight(int nNumColumns) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `nNumColumns`|Wenn das Steuerelement Farbleiste Dokumentfarben, die Anzahl der Spalten im Raster des Dokumentfarben anzeigen enthält. Andernfalls wird dieser Wert nicht verwendet.|  
+|[in] *nNumColumns*|Wenn das Steuerelement Farbleiste Dokumentfarben, die Anzahl der Spalten im Raster des Dokumentfarben anzeigen enthält. Andernfalls wird dieser Wert nicht verwendet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die berechnete Höhe zusätzliche, die erforderlich ist.  
@@ -630,8 +630,8 @@ static int InitColors(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pPalette`|Ein Zeiger auf ein Palettenobjekt oder `NULL`. Wenn dieser Parameter ist `NULL`, diese Methode verwendet die Standardpalette des Betriebssystems.|  
-|[in] `arColors`|Ein Array von Farben.|  
+|[in] *pPalette*|Ein Zeiger auf ein Palettenobjekt oder `NULL`. Wenn dieser Parameter ist `NULL`, diese Methode verwendet die Standardpalette des Betriebssystems.|  
+|[in] *ArColors*|Ein Array von Farben.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente im Array der Farben.  
@@ -657,7 +657,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nChar`  
+ [in] *nChar*  
  Der virtuelle Taste Code für den Schlüssel, den ein Benutzer gedrückt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -674,7 +674,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pButton`|Ein Zeiger auf ein Steuerelement, das auf einer Symbolleiste befindet.|  
+|[in] *pButton*|Ein Zeiger auf ein Steuerelement, das auf einer Symbolleiste befindet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
@@ -689,10 +689,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTarget`  
+ [in] *pTarget*  
  Ein Zeiger auf ein Fenster, das ein Element der Benutzeroberfläche aktualisiert enthält.  
   
- [in] `bDisableIfNoHndler`  
+ [in] *bDisableIfNoHndler*  
  `TRUE` in einer meldungszuordnung werden zum Deaktivieren von Benutzeroberflächen-Elements, wenn kein Handler definiert. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -708,10 +708,10 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `colorDefault`  
+ [in] *ColorDefault*  
  Die Farbe, die standardmäßig ausgewählt ist, wenn das Dialogfeld "Farbe" geöffnet wird.  
   
- [out] `colorRes`  
+ [out] *ColorRes*  
  Die Farbe, die ein Benutzer ausgewählt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -737,7 +737,7 @@ CPalette* SelectPalette(CDC* pDC);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pDC`|Ein Zeiger auf den Gerätekontext, der übergeordneten Schaltfläche des aktuellen Farbleiste-Steuerelements.|  
+|[in] *pDC*|Ein Zeiger auf den Gerätekontext, der übergeordneten Schaltfläche des aktuellen Farbleiste-Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf der Palette, die durch die Palette der übergeordneten Schaltfläche des aktuellen Steuerelements Farbleiste ersetzt wird.  
@@ -750,7 +750,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Ein Wert für den RGB-Farbe.  
   
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
@@ -763,10 +763,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Die RGB-Wertes einer Farbe.  
   
- [in] `strName`  
+ [in] *StrName*  
  Der neue Name für die angegebene Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -780,7 +780,7 @@ void SetCommandID(UINT nCommandID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nCommandID`  
+ [in] *nCommandID*  
  Eine Befehls-ID.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -797,13 +797,13 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszCaption`  
+ [in] *LpszCaption*  
  Eine Beschriftung, die angezeigt wird, wenn das Steuerelement Farbleiste nicht angedockt ist.  
   
- [in] `lstDocColors`  
+ [in] *LstDocColors*  
  Eine Liste von Farben, die das aktuelle Dokumentfarben ersetzt.  
   
- [in] `bShowWhenDocked`  
+ [in] *bShowWhenDocked*  
  `TRUE` Dokumentfarben angezeigt, wenn das Steuerelement Farbleiste Dockingstation ist; andernfalls `FALSE`. Der Standardwert ist `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -817,7 +817,7 @@ void SetHorzMargin(int nHorzMargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nHorzMargin`  
+ [in] *nHorzMargin*  
  Der horizontale Rand in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -834,7 +834,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pWndList`|Zeiger auf Property Grid-Steuerelement-Objekt.|  
+|[in] *pWndList*|Zeiger auf Property Grid-Steuerelement-Objekt.|  
   
 ##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
  Legt den vertikalen Rand, der den Abstand zwischen der obersten oder untersten Zelle Farbe und die Client-Bereich-Grenze ist.  
@@ -844,7 +844,7 @@ void SetVertMargin(int nVertMargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nVertMargin`  
+ [in] *nVertMargin*  
  Der vertikale Rand in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -858,11 +858,11 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
  Eine Befehls-ID. (Dieser Parameter wird ignoriert).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die `WM_SETMESSAGESTRING` Nachricht an den Besitzer des Steuerelements Farbleiste.  
+ Diese Methode sendet die WM_SETMESSAGESTRING-Nachricht an den Besitzer des Steuerelements Farbleiste an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

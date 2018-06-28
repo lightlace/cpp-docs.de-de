@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370756"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040713"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI-Klasse
 Implementiert eine Methode, die es MFC ermöglicht, den Zustand von Benutzeroberflächenobjekten zu aktualisieren, die in Bezug zu den `IOleCommandTarget`-gesteuerten Funktionen der Anwendung stehen.  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rgCmds`  
+ *rgCmds*  
  Eine Liste der unterstützten Befehle, die die angegebene GUID zugeordnet. Die **OLECMD** Struktur Befehlsflags Befehle zugeordnet.  
   
  *cCmds*  
- Die Anzahl der Befehle in `rgCmds`.  
+ Die Anzahl der Befehle in *RgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Ein Zeiger auf eine GUID, die eine Reihe von Befehlen identifiziert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bOn`  
+ *BAM*  
  Gibt an, ob die zugeordnete der Befehl die `COleCmdUI` Objekt aktiviert oder deaktiviert werden soll. Nonzero ermöglicht den Befehl. 0 deaktiviert den Befehl.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCheck`  
+ *nPrüfen*  
  Ermitteln des Status einer Umschaltfläche ein-oder auszuschalten festzulegende Wert Befehl. Gültige Werte:  
   
 |Wert|Beschreibung|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszText`  
+ *lpszText*  
  Ein Zeiger auf den Text, mit dem Befehl verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  

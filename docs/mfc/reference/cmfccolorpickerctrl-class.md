@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374814"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042042"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl-Klasse
 Die `CMFCColorPickerCtrl` -Klasse bietet eine Funktionalität für ein Steuerelement, das verwendet wird, um Farben auszuwählen.  
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Gibt einen rechteckigen Bereich, um die ausgewählte Farbe an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `hue`  
+ [out] *farbt.:*  
  Ein Zeiger auf eine Variable vom Typ double, das Informationen Farbton empfängt.  
   
- [out] `luminance`  
+ [out] *Intensität*  
  Ein Zeiger auf eine Variable vom Typ double, die Intensität-Informationen erhält.  
   
- [out] `saturation`  
+ [out] *Sättigung*  
  Ein Zeiger auf eine Variable vom Typ double, das Informationen zu einer Überlastung des empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `R`  
+ [in] *R*  
  Die Farbe Rot-Komponente.  
   
- [in] `G`  
+ [in] *G*  
  Die Komponente grün.  
   
- [in] `B`  
+ [in] *B*  
  Die blaue Farbe-Komponente.  
   
- [in] `x`  
+ [in] *x*  
  Die X-Koordinate des Cursors an, die auf eine Zelle Sechseck verweist.  
   
- [in] `y`  
+ [in] *y*  
  Die y-Koordinate des Cursors an, die auf eine Zelle Sechseck verweist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `Color`  
+ [in] *Farbe*  
  Ein Wert für den RGB-Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hue`  
+ [in] *farbt.:*  
  Ein Farbtonwert.  
   
- [in] `luminance`  
+ [in] *Intensität*  
  Ein Intensitätswert.  
   
- [in] `saturation`  
+ [in] *Sättigung*  
  Ein Wert zu einer Überlastung.  
   
- [in] `bInvalidate`  
+ [in] *bInvalidate*  
  `TRUE` Erzwingen Sie das Fenster, um sofort auf die neu ausgewählte Farbe zu aktualisieren; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `Hue`  
+ [in] *Farbt.:*  
  Ein Farbtonwert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `Luminance`  
+ [in] *Intensität*  
  Ein Intensitätswert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `w`  
+ [in] *w*  
  Die Breite des Balkens Intensität gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um die Größe von der Intensität-Leiste auf der **benutzerdefinierte** Farben-Auswahlsteuerelement auf der Registerkarte. Die `w` Parameter gibt die neue Breite des Balkens Intensität an. Der Wert der Zeilenbreite wird ignoriert, wenn sie drei Viertel der Breite des Clientbereichs überschreitet.  
+ Verwenden Sie diese Methode, um die Größe von der Intensität-Leiste auf der **benutzerdefinierte** Farben-Auswahlsteuerelement auf der Registerkarte. Die *w* Parameter gibt die neue Breite des Balkens Intensität an. Der Wert der Zeilenbreite wird ignoriert, wenn sie drei Viertel der Breite des Clientbereichs überschreitet.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Legt die erste ausgewählte Farbe an.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `ref`  
+ [in] *Ref*  
  Ein Wert für den RGB-Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pPalette`  
+ [in] *pPalette*  
  Ein Zeiger auf eine Farbpalette.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `Saturation`  
+ [in] *Sättigung*  
  Ein Wert zu einer Überlastung.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `colorType`  
+ [in] *ColorType*  
  Eine Farbe Picker-Steuerelementtyp.  
   
  Die-Kerntypen werden durch die `CMFCColorPickerCtrl::COLORTYPE` Enumeration. Die möglichen Typen sind `LUMINANCE`, `PICKER`, `HEX` und `HEX_GREYSCALE`. Der Standardtyp ist `PICKER`.  

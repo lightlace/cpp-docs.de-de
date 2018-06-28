@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368858"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037433"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup-Klasse
 Die `CMFCRibbonButtonsGroup` -Klasse ermöglicht es Ihnen, einen Satz von Menübandschaltflächen in einer Gruppe zu organisieren. Alle Schaltflächen der Gruppe liegen innerhalb eines Rahmens direkt horizontal nebeneinander.  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf eine Schaltfläche hinzufügen.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lstButtons`  
+ [in] *LstButtons*  
  Eine Liste von Zeigern auf die Schaltflächen, die Sie hinzufügen möchten.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
  Gibt an, eine Schaltfläche hinzufügen auf das neu erstellte `CMFCRibbonButtonsGroup` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `i`  
+ [in] *ich*  
  Ein nullbasierter Index, der eine Schaltfläche, um zurückzukehren.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger auf den Gerätekontext, der Gruppe "Menüband".  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger auf den Gerätekontext, der die `CMFCRibbonButtonsGroup` Objekt.  
   
- [in] `rectImage`  
+ [in] *RectImage*  
  Das Rechteck, in dem das Bild gezeichnet werden soll.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Die Schaltfläche für die das Bild gezeichnet werden soll.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  Der Index des Bilds (in eines der drei Arrays für normale, hervorgehobene oder deaktivierte Schaltflächen) auf die Schaltfläche gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pImages`  
+ [in] *pImages*  
  Reguläre Bilder.  
   
- [in] `pHotImages`  
+ [in] *pHotImages*  
  Hervorgehobenen Bilder.  
   
- [in] `pDisabledImages`  
+ [in] *pDisabledImages*  
  Deaktivierte Bilder.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pCategory`  
+ [in] *pCategory*  
  Zeiger auf die übergeordnete Kategorie festlegen (der Gruppen im Registerkartenformat im Menübandsteuerelemente sind Kategorien genannt).  
   
 ### <a name="remarks"></a>Hinweise  

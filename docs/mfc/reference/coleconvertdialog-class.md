@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370288"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042520"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog-Klasse
 Weitere Informationen finden Sie unter der [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Struktur im Windows SDK.  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element konvertiert oder aktiviert werden.  
   
- `dwFlags`  
+ *dwFlags*  
  Erstellung-Flag, das eine beliebige Anzahl von die folgenden Werte enthält kombiniert mit dem bitweisen- or -Operator:  
   
 - **CF_SELECTCONVERTTO** gibt an, dass das Optionsfeld konvertieren in anfänglich ausgewählt wird, wenn das Dialogfeld aufgerufen wird. Dies ist die Standardeinstellung.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** gibt an, dass die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld aufgerufen wird.  
   
- `pClassID`  
- Verweist auf die CLSID des Elements, das konvertiert oder aktiviert werden. Wenn **NULL**, **CLSID** zugeordneten `pItem` verwendet werden.  
+ *pClassID*  
+ Verweist auf die CLSID des Elements, das konvertiert oder aktiviert werden. Wenn **NULL**, **CLSID** zugeordneten *pItem* verwendet werden.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element konvertiert oder aktiviert werden. Nicht mit **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bddd7274feb9ecde268a94d7e9a6e857c906650
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e6c4493239030380ab935d473af48d4107556d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376817"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041421"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Bearbeitungssteuerelement enthält ( [CEdit-Klasse](../../mfc/reference/cedit-class.md)).  
@@ -110,7 +110,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und andockzustand berechnet. (Überschreibt [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche "" in eine neue Symbolleiste eingefügt wird. (Überschreibt [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarEditBoxButton::OnClick](#onclick)|Wird vom Framework aufgerufen, klickt der Benutzer die Maustaste los. (Überschreibt [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine `WM_CTLCOLOR` Nachricht. (Überschreibt [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste WM_CTLCOLOR-Meldung verarbeitet. (Überschreibt [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
 |`CMFCToolBarEditBoxButton::OnDraw`|Wird aufgerufen, durch das Framework der Schaltfläche gezeichnet werden soll, mithilfe des angegebenen Stile und Optionen. (Überschreibt [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
 |`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|Wird aufgerufen, durch das Framework der Schaltfläche gezeichnet werden soll, der **Befehle** im Bereich der **anpassen** (Dialogfeld). (Überschreibt [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|Vom Framework aufgerufen, wenn die globale Schriftart geändert hat. (Überschreibt [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
@@ -133,7 +133,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  2. Konstruieren Sie ein `CMFCToolBarEditBoxButton`-Objekt.  
   
- 3. In der Message-Handler, der verarbeitet die `AFX_WM_RESETTOOLBAR` angezeigt wird, ersetzen Sie die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche mit [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Ersetzen Sie in der Message-Handler, der die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
@@ -177,16 +177,16 @@ CMFCToolBarEditBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Gibt an, die Steuerelement-ID.  
   
- [in] `iImage`  
+ [in] *iImage*  
  Gibt den nullbasierten Index des ein Symbolleistenbild an. Image befindet sich der [CMFCToolBarImages Klasse](../../mfc/reference/cmfctoolbarimages-class.md) Objekt, mit [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md) -Klasse verwaltet.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Gibt das Format des Steuerelements bearbeiten.  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Gibt die Breite in Pixel des Bearbeitungssteuerelements an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
  Ein Verweis auf die Schaltfläche "Quelle" aus dem kopiert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche. `src` muss vom Typ `CMFCToolBarEditBoxButton`.  
+ Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche. *Src* muss vom Typ `CMFCToolBarEditBoxButton`.  
   
 ##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
  Erstellt ein neue Edit-Steuerelement in der Schaltfläche.  
@@ -220,10 +220,10 @@ virtual CEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] pWndParent`  
+ [in] *pWndParent*  
  Gibt das übergeordnete Fenster des Bearbeitungssteuerelements an. Es darf nicht NULL sein.  
   
- `[in] rect`  
+ [in] *Rect*  
  Gibt des Bearbeitungssteuerelements Größe und Position.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -240,7 +240,7 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID der Schaltfläche abgerufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -257,7 +257,7 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID der Schaltfläche aus der Inhalt abgerufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -287,7 +287,7 @@ virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `rectBorder`  
+ [out] *RectBorder*  
  Ein Verweis auf die `CRect` Objekt, das das umschließende Rechteck empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -368,11 +368,11 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  Die Benachrichtigung, die dem Befehl zugeordnet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Taste verarbeitet die `WM_COMMAND` Nachricht oder `FALSE` um anzugeben, dass die Nachricht vom übergeordneten Symbolleiste verarbeitet werden muss.  
+ `TRUE` Wenn die Schaltfläche "" die Nachricht WM_COMMAND verarbeitet oder `FALSE` um anzugeben, dass die Nachricht vom übergeordneten Symbolleiste verarbeitet werden muss.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht an das übergeordnete Fenster.  
@@ -399,7 +399,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das neue übergeordnete Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -415,10 +415,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWnd`  
+ [in] *pWnd*  
  Nicht verwendet.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -428,7 +428,7 @@ virtual BOOL OnClick(
  Diese Methode überschreibt die basisklassenimplementierung ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) durch einen Wert ungleich NULL zurückgeben, wenn das interne `CEdit` -Objekts sichtbar ist.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
- Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine `WM_CTLCOLOR` Nachricht.  
+ Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste WM_CTLCOLOR-Meldung verarbeitet.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -437,10 +437,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -481,11 +481,11 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
  Gibt an, ob die Schaltfläche sichtbar ist. Wenn dieser Parameter ist `TRUE`, die Schaltfläche sichtbar ist. Andernfalls ist die Schaltfläche nicht sichtbar.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) durch die Schaltfläche anzeigen, wenn `bShow` ist `TRUE`. Diese Methode ist, andernfalls die Schaltfläche ausgeblendet.  
+ Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) durch die Schaltfläche anzeigen, wenn *bShow* ist `TRUE`. Diese Methode ist, andernfalls die Schaltfläche ausgeblendet.  
   
 ##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
  Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste seine Größe ändert oder Position und diese Änderung bewirkt, dass die Schaltfläche, um die Größe zu ändern.  
@@ -495,7 +495,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iSize`  
+ [in] *iSize*  
  Die neue Breite der Schaltfläche in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -513,16 +513,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Nicht verwendet.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  Nicht verwendet.  
   
- [in] `wndToolTip`  
+ [in] *WndToolTip*  
  Das Steuerelement, das den QuickInfo-Text anzeigt.  
   
- [out] `str`  
+ [out] *str*  
  Ein `CString` Objekt, das die aktualisierten QuickInfo-Text empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -539,7 +539,7 @@ virtual void SetContents(const CString& sContents);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] sContents`  
+ [in] *sContents*  
  Gibt den neuen Text festgelegt.  
   
 ##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
@@ -552,10 +552,10 @@ static BOOL SetContentsAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Gibt die Befehls-ID des Steuerelements für die der Text geändert werden.  
   
- [in] `strContents`  
+ [in] *StrContents*  
  Gibt den neuen Text festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -569,7 +569,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Ressourcen-ID des Kontextmenüs.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -583,7 +583,7 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bFlat`  
+ [in] *bFlat*  
  Die flache Darstellung für Schaltflächen bearbeiten. Wenn dieser Parameter ist `TRUE`, die unformatierte Darstellung aktiviert ist; andernfalls ist die flache Darstellung deaktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -597,11 +597,11 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nStyle`  
+ [in] *nStyle*  
  Eine neue Formatvorlage festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode legt [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) auf `nStyle` auch wird das Textfeld deaktiviert, wenn die Anwendung befindet sich im Modus anpassen und es, ermöglicht Wenn die Anwendung nicht im anpassen-Modus befindet (finden Sie unter [CMFCToolBar: : SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) und [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Finden Sie unter [Steuerelementtypen für die Symbolleiste](../../mfc/reference/toolbar-control-styles.md) eine Liste der gültigen Style Flags.  
+ Diese Methode legt [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) auf *nStyle* auch wird das Textfeld deaktiviert, wenn die Anwendung befindet sich im Modus anpassen, und es ermöglicht, wenn die Anwendung nicht im Modus für anpassen (siehe ist[ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) und [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Finden Sie unter [Steuerelementtypen für die Symbolleiste](../../mfc/reference/toolbar-control-styles.md) eine Liste der gültigen Style Flags.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

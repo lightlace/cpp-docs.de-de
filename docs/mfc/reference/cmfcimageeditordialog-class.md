@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376248"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040768"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog-Klasse
 Die `CMFCImageEditorDialog` Klasse unterstützt ein bildbearbeitungs-Dialogfeld.  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitmap`  
+ *pBitmap*  
  Ein Zeiger auf ein Bild.  
   
- `pParent`  
+ *pParent*  
  Ein Zeiger auf das übergeordnete Fenster für das aktuelle Bild-Editor (Dialogfeld).  
   
- `nBitsPixel`  
- Die Anzahl der Bits verwendet, um die Farbe eines einzelnen Pixels darzustellen, die auch als Farbtiefe bezeichnet wird.  Wenn die `nBitsPixel` Parameter ist-1, die Farbtiefe stammt aus dem Image gemäß der `pBitmap` Parameter. Der Standardwert ist -1.  
+ *nBitsPixel*  
+ Die Anzahl der Bits verwendet, um die Farbe eines einzelnen Pixels darzustellen, die auch als Farbtiefe bezeichnet wird.  Wenn die *nBitsPixel* Parameter ist-1, die Farbtiefe stammt aus dem Image gemäß der *pBitmap* Parameter. Der Standardwert ist -1.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Um ein Bild zu ändern, übergeben Sie einen Image-Zeiger auf die `CMFCImageEditorDialog` Konstruktor. Rufen Sie anschließend die `DoModal` Methode, um ein modales Dialogfeld zu öffnen. Wenn die `DoModal` Methode zurückgegeben wird, enthält das Bitmuster das neue Image.  

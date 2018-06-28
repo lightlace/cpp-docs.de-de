@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369189"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038431"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane-Klasse
 Die `CMFCRibbonStatusBarPane` Klasse implementiert ein Menübandelement, das einer Menüband-Statusleiste hinzugefügt werden können.  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  Gibt die Befehls-ID des Bereichs an.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Gibt die Textzeichenfolge, die im Bereich angezeigt werden.  
   
- [in] `bIsStatic`  
+ [in] *bIsStatic*  
  Wenn `TRUE`, Statusbereich nicht hervorgehoben oder markiert, indem Sie darauf klicken.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Gibt ein Handle für ein Symbol, um im Bereich angezeigt werden.  
   
- [in] `lpszAlmostLargeText`  
+ [in] *LpszAlmostLargeText*  
  Gibt die längste Zeichenfolge, die im Bereich angezeigt werden können.  
   
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Gibt ein Handle für eine Bildliste, die für die Animation verwendet wird.  
   
- [in] `cxAnimation`  
+ [in] *CxAnimation*  
  Gibt die Breite in Pixel des Symbols in der Bildliste, die für die Animation verwendet wird.  
   
- [in] `clrTrnsp`  
+ [in] *ClrTrnsp*  
  Gibt die transparente Farbe des Bilder in der Bildliste, die für die Animation verwendet werden.  
   
- [in] `uiAnimationListResID`  
+ [in] *UiAnimationListResID*  
  Gibt eine Ressourcen-ID von einer Bildliste, die für die Animation verwendet wird.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CDC*`  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszAlmostLargeText`  
+ [in] *LpszAlmostLargeText*  
  Gibt die längste Zeichenfolge, die auf den Status-Leistenbereich ungekürzt angezeigt werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Bibliothek berechnet die Größe des Texts, `lpszAlmostLargeText` gibt an, und der Bereich entsprechend ändert. Der Text wird abgeschnitten, wenn er noch nicht im Bereich passt.  
+ Die Bibliothek berechnet die Größe des Texts, *LpszAlmostLargeText* gibt an, und der Bereich entsprechend ändert. Der Text wird abgeschnitten, wenn er noch nicht im Bereich passt.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  Fügt an die Status-Leistenbereich eine Bildliste, die für die Animation verwendet werden kann.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Gibt ein Handle für eine Bildliste an.  
   
- [in] `cxAnimation`  
+ [in] *CxAnimation*  
  Gibt die Breite des Frames, in der Bildliste in Pixel an.  
   
- [in] `clrTransp`  
+ [in] *ClrTransp*  
  Gibt die transparente Farbe des der Bildliste an.  
   
- [in] `uiAnimationListResID`  
+ [in] *UiAnimationListResID*  
  Gibt die Ressourcen-ID der Bildliste an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -298,17 +298,17 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nAlign`  
+ [in] *nAlign*  
  Gibt die Ausrichtung des Texts an.  
   
 ### <a name="remarks"></a>Hinweise  
- `nAlign` Dabei kann es sich um einen der folgenden Werte aufweisen:  
+ *nAlign* kann einen der folgenden Werte aufweisen:  
   
 - `TA_LEFT`: Ausrichtung links  
   
-- `TA_CENTER:` Zentrierte Ausrichtung  
+- `TA_CENTER:` zentrierte Ausrichtung  
   
-- `TA_RIGHT:` Rechtsbündige Ausrichtung  
+- `TA_RIGHT:` rechtsbündige Ausrichtung  
   
 ##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
  Startet die Animation, die Sie in den Bereich zuweisen.  
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nFrameDelay`  
+ [in] *nFrameDelay*  
  Gibt die Framerate Animation in Millisekunden an.  
   
- [in] `nDuration`  
+ [in] *nDuration*  
  Gibt an, wie lange die Animation im Millisekunden wiedergegeben. Verwenden Sie-1. für eine Endlosschleife.  
   
 ### <a name="remarks"></a>Hinweise  

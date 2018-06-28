@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368776"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040628"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton-Klasse
 Die `CMFCCaptionButton` Klasse implementiert eine Schaltfläche, die auf der Titelleiste für einen andockbaren Bereich oder ein Minirahmenfenster angezeigt wird. In der Regel erstellt das Framework Beschriftungsschaltflächen automatisch.  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nHit`  
+ [in] *nHit*  
  Der Befehl der Schaltfläche zugeordnet ist.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  Gibt an, ob die Schaltfläche links ausgerichtet ist.  
   
- Die folgende Tabelle enthält die möglichen Werte für die `nHit` Parameter.  
+ Die folgende Tabelle enthält die möglichen Werte für die *nHit* Parameter.  
   
 |Wert|Befehl|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Bild-IDs für nach links oder rechts-Pfeil; `FALSE` für nach oben oder nach-unten ein Abbild IDs.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` Abbild-ID für eine maximieren; `FALSE` für eine Minimieren-Abbild-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `ptTo`  
+ [in] *PtTo*  
  Der neue Speicherort.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Ob die Schaltfläche anzuzeigen.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für die Schaltfläche.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Ob ein Schaltflächenbild der aktiven gezeichnet werden soll.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Reserviert für die Verwendung in einer abgeleiteten Klasse.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Ob ein Schaltflächenbild maximierten gezeichnet werden soll.  
   
- [in] `bDisabled`  
+ [in] *bDeaktiviert*  
  Ob eine aktivierte Schaltflächenbild gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `bMaximized` Parameter wird verwendet, wenn die Schaltfläche eine maximieren ist oder Minimieren-Schaltfläche.  
+ Die *bMaximized* Parameter wird verwendet, wenn die Schaltfläche eine maximieren ist oder Minimieren-Schaltfläche.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Legt die Mini Größe der Titelleiste angezeigt.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` für Mini Höhe der Titelleiste; `FALSE` für die Höhe der Titelleiste Standard.  
   
 ## <a name="see-also"></a>Siehe auch  

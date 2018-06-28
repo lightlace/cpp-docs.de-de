@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370121"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042494"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel-Klasse
 Implementiert eine nicht anklickbare Bezeichnung für ein Menüband.  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text in der Bezeichnung angezeigt werden.  
   
- [in] `bIsMultiLine`  
+ [in] *bIsMultiLine*  
  `TRUE` um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung; andernfalls `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParent`  
+ [in] *pParent*  
  Stellt das übergeordnete Fenster des die aktuelle Bezeichnung an Menüband dar.  
   
- [out] `data`  
+ [out] *Daten*  
  Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Menüband Bezeichnung aufgefüllt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die `data` Parameter wurde erfolgreich mit der aktuellen Menüband Bezeichnung die barrierefreiheitsdaten gefüllt ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die *Daten* Parameter wurde erfolgreich mit der aktuellen Menüband Bezeichnung die barrierefreiheitsdaten gefüllt ist, andernfalls `FALSE`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ff8f622eb3af52ad23f8f4fc7a20ecb8be9b77
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369101"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041135"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager-Klasse
 Verwaltet Tastenkombinationstabellen für das Hauptrahmenfenster und die untergeordneten Rahmenfenster.  
@@ -134,23 +134,23 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID.  
   
- [out] `str`  
+ [out] *str*  
  Ein Verweis auf ein `CString`-Objekt.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  Ein Zeiger auf ein Rahmenfenster.  
   
- [in] `bIsDefaultFrame`  
+ [in] *bIsDefaultFrame*  
  Gibt an, ob das Rahmenfenster der Standard-Rahmenfenster ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Verknüpfung gefunden wird; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sucht den vom angegebenen Befehl `uiCmd` und ruft die standardmäßige Tastenkombination ab. Die Methode nimmt die Zeichenfolge, die diese Tastenkombination zugeordnet, und schreibt den Wert der `str` Parameter.  
+ Diese Methode sucht den vom angegebenen Befehl *UiCmd* und ruft die standardmäßige Tastenkombination ab. Die Methode nimmt die Zeichenfolge, die diese Tastenkombination zugeordnet, und schreibt den Wert der *str* Parameter.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Bestimmt, ob der angegebene Schlüssel vom behandelt wird die [CKeyboardManager Klasse](../../mfc/reference/ckeyboardmanager-class.md).  
@@ -168,16 +168,16 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `nKey`|Der zu überprüfende Schlüssel.|  
-|[in] `fVirt`|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte finden Sie unter [ACCELERATION Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Einem Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination in diesem Frame behandelt wird.|  
-|[in] `bIsDefaultFrame`|Ein boolescher Parameter, der angibt, ob `pWndFrame` ist das Standard-Rahmenfenster.|  
+|[in] *nKey*|Der zu überprüfende Schlüssel.|  
+|[in] *fVirt*|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte finden Sie unter [ACCELERATION Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *pWndFrame*|Einem Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination in diesem Frame behandelt wird.|  
+|[in] *bIsDefaultFrame*|Ein boolescher Parameter, der angibt, ob *pWndFrame* ist das Standard-Rahmenfenster.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Tastenkombination behandelt wird. `FALSE` Wenn der Schlüssel nicht behandelt wird oder wenn `pWndFrame` ist `NULL`.  
+ `TRUE` Wenn die Tastenkombination behandelt wird. `FALSE` Wenn der Schlüssel nicht behandelt wird oder wenn *pWndFrame* ist `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Eingabeparameter müssen den Eintrag in der Zugriffstastentabelle sowohl für entsprechen `nKey` und `fVirt` zu bestimmen, ob eine Tastenkombination im behandelt wird `pWndFrame`.  
+ Der Eingabeparameter müssen den Eintrag in der Zugriffstastentabelle sowohl für entsprechen *nKey* und *fVirt* zu bestimmen, ob eine Tastenkombination im behandelt wird *pWndFrame*.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Gibt an, ob ein Zeichen ist, die gedruckt werden können.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `nChar`|Das Zeichen, das diese Methode überprüft.|  
+|[in] *nChar*|Das Zeichen, das diese Methode überprüft.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist das Zeichen gedruckt werden können, ist er nicht auf NULL.  
@@ -222,17 +222,17 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Der Registrierungspfad, in denen `CKeyboardManager` Daten gespeichert ist.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Ein Zeiger auf ein Rahmenfenster als Standardfenster verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Zustand erfolgreich geladen oder 0 ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `lpszProfileName` Parameter ist `NULL`, diese Methode überprüft den Standardspeicherort für die Registrierung für `CKeyboardManager` Daten. Der Standardspeicherort für die Registrierung wird angegeben, indem die [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Die Daten müssen zuvor geschrieben werden, mit der Methode [CKeyboardManager::SaveState](#savestate).  
+ Wenn die *LpszProfileName* Parameter ist `NULL`, diese Methode überprüft den Standardspeicherort für die Registrierung für `CKeyboardManager` Daten. Der Standardspeicherort für die Registrierung wird angegeben, indem die [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Die Daten müssen zuvor geschrieben werden, mit der Methode [CKeyboardManager::SaveState](#savestate).  
   
  Wenn Sie ein Standardfenster nicht angeben, wird das Hauptrahmenfenster Ihrer Anwendung verwendet werden.  
   
@@ -256,17 +256,17 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Der Registrierungspfad zum Speichern der `CKeyboardManager` Zustand.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Ein Zeiger auf ein Rahmenfenster, die im Fenster wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn der Zustand der Tastatur-Manager erfolgreich gespeichert wurde oder andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `lpszProfileName` Parameter ist `NULL`, diese Methode schreibt den `CKeyboardManager` Zustands, in der vom angegebenen Standardspeicherort der [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Wenn Sie einen Speicherort angeben, können Sie die Daten, die später mithilfe der Methode laden [CKeyboardManager::LoadState](#loadstate).  
+ Wenn die *LpszProfileName* Parameter ist `NULL`, diese Methode schreibt den `CKeyboardManager` Zustands, in der vom angegebenen Standardspeicherort der [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Wenn Sie einen Speicherort angeben, können Sie die Daten, die später mithilfe der Methode laden [CKeyboardManager::LoadState](#loadstate).  
   
  Wenn Sie ein Standardfenster nicht angeben, wird das Hauptrahmenfenster als Standardfenster verwendet werden.  
   
@@ -280,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShowAll`  
+ [in] *bShowAll*  
  Wenn `true`, alle Tastenkombinationen angezeigt. Wenn `false`, nur die ersten Tastenkombination wird angezeigt.  
   
- [in] `lpszDelimiter`  
+ [in] *LpszDelimiter*  
  Eine Zeichenfolge, die zwischen Tastenkombinationen eingefügt. Diese Trennzeichen hat keine Auswirkungen, wenn nur eine Tastenkombination angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig verfügt ein Befehl mehr als eine Tastenkombination zugeordnet, wird nur die erste Tastenkombination angezeigt. Diese Funktion können Sie alle zugeordneten alle Befehle Tastenkombinationen aufgeführt.  
   
- Neben den Befehl in der Menüleiste werden die Tastenkombinationen aufgeführt. Wenn alle Tastenkombinationen angezeigt werden, wird die Zeichenfolge von bereitgestellten `lpszDelimiter` einzelne Tastenkombinationen getrennt wird.  
+ Neben den Befehl in der Menüleiste werden die Tastenkombinationen aufgeführt. Wenn alle Tastenkombinationen angezeigt werden, wird die Zeichenfolge von bereitgestellten *LpszDelimiter* einzelne Tastenkombinationen getrennt wird.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Konvertiert ein Zeichen in der oberen registrieren.  
@@ -299,7 +299,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nChar`  
+ [in] *nChar*  
  Das zu konvertierende Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -323,19 +323,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  Ein Zeiger auf eine Dokumentvorlage.  
   
- [in] `lpAccel`  
+ [in] *LpAccel*  
  Ein Zeiger auf die neue Tastenkombination.  
   
- [in] `nSize`  
+ [in] *nSize*  
  Die Größe der neuen Verknüpfung-Tabelle.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Ein Zeiger auf das Standard-Rahmenfenster.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  Ein Handle für die neue Tabelle für die Verknüpfung.  
   
 ### <a name="return-value"></a>Rückgabewert  

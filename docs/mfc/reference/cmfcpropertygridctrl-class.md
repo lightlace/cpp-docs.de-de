@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d40ad0bf70fb3fda32265da321a3474723e8037
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379020"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039257"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Klasse
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `flagsSelect`  
- [in] `varChild`  
+ [in] *FlagsSelect*  
+ [in] *VarChild*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -350,13 +350,13 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf eine Eigenschaft.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` die Eigenschaft sofort neu zeichnet; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` neu berechnen, wie zeichnen Sie den Text und den Wert der Eigenschaft, und klicken Sie dann die Eigenschaft; `FALSE` zu vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -383,7 +383,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -418,19 +418,19 @@ virtual int CompareProps(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pProp1`  
+ *pProp1*  
  Ein Zeiger auf eine Eigenschaft.  
   
- `pProp2`  
+ *pProp2*  
  Ein Zeiger auf eine Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 |Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
-|< 0|Der Name des der `pProp1` -Parameter kleiner ist als der Name des der `pProp2` Parameter.|  
-|0|Der Name des der `pProp1` Parameter entspricht der Name des der `pProp2` Parameter.|  
-|> 0|Der Name des der `pProp1` -Quellobjekt ist größer als der Name des der `pProp2` Parameter.|  
+|< 0|Der Name des der *pProp1* -Parameter kleiner ist als der Name des der *pProp2* Parameter.|  
+|0|Der Name des der *pProp1* Parameter entspricht der Name des der *pProp2* Parameter.|  
+|> 0|Der Name des der *pProp1* -Quellobjekt ist größer als der Name des der *pProp2* Parameter.|  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig verwendet diese Methode die [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode zum Vergleichen der `CMFCPropertyGridProperty::m_strName` Mitglieder der angegebenen Parameter.  
@@ -447,16 +447,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Ein umschließendes Rechteck, der angibt, die Größe und Position des Fensters im Client-Koordinaten der `pParentWnd`.  
+ [in] *Rect*  
+ Ein umschließendes Rechteck, der angibt, die Größe und Position des Fensters im Client-Koordinaten der *pParentWnd*.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster. Dieser Wert darf nicht `NULL` sein.  
   
- [in] `nID`  
+ [in] *nID*  
  Die ID des untergeordneten Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -481,13 +481,13 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf eine Eigenschaft.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` um das Eigenschaftenraster-Steuerelement neu gezeichnet werden; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` neu berechnen, wie zeichnen den Text, Bilder und Elemente in das Eigenschaftenraster-Steuerelement, und zeichnen Sie dann auf das Steuerelement; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -517,10 +517,10 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf eine Eigenschaft.  
   
- [in] `lptClick`  
+ [in] *LptClick*  
  Der Punkt in der Eigenschaftenraster-Steuerelement, das der Benutzer geklickt hat, um die Bearbeitung zu beginnen. Der Punkt ist in der Clientkoordinaten des Steuerelements. Der Standardwert ist `NULL`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -536,7 +536,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie den Bereich der Beschreibung; `FALSE` Bereich der Beschreibung zu deaktivieren. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -553,13 +553,13 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie das Headersteuerelement; `FALSE` Headersteuerelement deaktivieren. Der Standardwert ist `TRUE`.  
   
- [in] `lpszLeftColumn`  
+ [in] *LpszLeftColumn*  
  Der Titel der linken Spalte des Headersteuerelements. Der Standardwert ist **Eigenschaft**.  
   
- [in] `lpszRightColumn`  
+ [in] *LpszRightColumn*  
  Der Titel der rechten Spalte des Headersteuerelements. Der Standardwert ist **Wert**.  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
@@ -570,7 +570,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bUpdateData`  
+ [in] *bUpdateData*  
  `TRUE` um anzugeben, dass die Eigenschaft "Änderung" Daten überprüft werden müssen, wenn die Bearbeitungsoperation abgeschlossen ist; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -588,10 +588,10 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf eine Eigenschaft.  
   
- [in] `bExpandParents`  
+ [in] *bExpandParents*  
  `TRUE` Erweitern Sie übergeordneten Elemente, um die angegebene Eigenschaft sichtbar zu machen; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -604,7 +604,7 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bExpand`  
+ [in] *bExpand*  
  `TRUE` Um alle Knoten zu erweitern; `FALSE` auf alle Knoten zu reduzieren. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -619,10 +619,10 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwData`  
+ [in] *DwData*  
  Ein `DWORD`-Wert.  
   
- [in] `bSearchSubItems`  
+ [in] *bSearchSubItems*  
  `TRUE` Unterelemente Eigenschaft gesucht werden soll. andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -653,7 +653,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pvarChild`  
+ [in] *PvarChild*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `varChild`  
- [in] `pszHelp`  
+ [in] *VarChild*  
+ [in] *PszHelp*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -687,9 +687,9 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pszHelpFile`  
- [in] `varChild`  
- [in] `pidTopic`  
+ [in] *PszHelpFile*  
+ [in] *VarChild*  
+ [in] *PidTopic*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `varChild`  
- [in] `pszKeyboardShortcut`  
+ [in] *VarChild*  
+ [in] *PszKeyboardShortcut*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -720,7 +720,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pvarChildren`  
+ [in] *PvarChildren*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -776,25 +776,25 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `clrBackground`  
+ [out] *ClrBackground*  
  Die Hintergrundfarbe von Eigenschaftswerten.  
   
- [out] `clrText`  
+ [out] *ClrText*  
  Die Farbe der Eigenschaftennamen und den Text der Eigenschaft-Wert.  
   
- [out] `clrGroupBackground`  
+ [out] *ClrGroupBackground*  
  Die Hintergrundfarbe einer Eigenschaft Gruppe.  
   
- [out] `clrGroupText`  
+ [out] *ClrGroupText*  
  Die Farbe des Texts in der Eigenschaftengruppe.  
   
- [out] `clrDescriptionBackground`  
+ [out] *ClrDescriptionBackground*  
  Die Hintergrundfarbe der Bereich der Beschreibung.  
   
- [out] `clrDescriptionText`  
+ [out] *ClrDescriptionText*  
  Die Farbe des Texts im Bereich der Beschreibung.  
   
- [out] `clrLine`  
+ [out] *ClrLine*  
  Die Farbe der Zeilen, die zwischen Eigenschaften gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -883,10 +883,10 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
  Der nullbasierte Index, der eine Eigenschaft Grid-Steuerelement ein Element.  
   
- Diese Methode überprüft, wenn die `nIndex` -Parameter ist kleiner als 0 (null) oder größer als oder gleich der Anzahl von Eigenschaften.  
+ Diese Methode überprüft, wenn die *nIndex* -Parameter ist kleiner als 0 (null) oder größer als oder gleich der Anzahl von Eigenschaften.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Property-Objekt, das dem angegebenen Index entspricht, wenn diese Methode erfolgreich ist; andernfalls `NULL`.  
@@ -939,7 +939,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nBar`  
+ [in] *nBar*  
  Die Ausrichtung der Bildlaufleiste, muss u. `SB_VERT`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -972,24 +972,24 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pt`  
+ [in] *pt*  
  Einen Punkt, in Clientkoordinaten.  
   
- [in, out] `pnArea`  
+ [in, out] *PnArea*  
  Ein Zeiger auf eine `ClickArea` Variable. Wenn diese Methode zurückgibt, gibt die Variable an die *Eigenschaft Bereich* , die den angegebenen Punkt enthält. Weitere Informationen zu einem Eigenschaft-Bereich finden Sie unter "Hinweise".  
   
- [in] `bPropsOnly`  
+ [in] *bPropsOnly*  
  `TRUE` So testen Sie nur die Eigenschaft Bereich; `FALSE` zum Testen der *Beschreibungsbereich* , wenn der angegebene Punkt nicht im Bereich "Eigenschaft" ist. Der Standardwert ist `FALSE`. Weitere Informationen zu den Beschreibungsbereich finden Sie unter "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die `bPropsOnly` Parameter ist `TRUE` und der angegebene Punkt in einem Eigenschaft-Bereich, der Rückgabewert ist ein Zeiger auf das entsprechende Eigenschaftenobjekt. Darüber hinaus die `pnArea` Parameter festgelegt ist, die bestimmten Bereich, der den angegebenen Punkt enthält. Der Rückgabewert hingegen ist `NULL` und die `pnArea` Parameter wird nicht geändert.  
+ Wenn die *bPropsOnly* Parameter ist `TRUE` und der angegebene Punkt in einem Eigenschaft-Bereich, der Rückgabewert ist ein Zeiger auf das entsprechende Eigenschaftenobjekt. Darüber hinaus die *PnArea* Parameter festgelegt ist, die bestimmten Bereich, der den angegebenen Punkt enthält. Der Rückgabewert, andernfalls ist `NULL` und *PnArea* Parameter wird nicht geändert.  
   
- Wenn die `bPropsOnly` Parameter ist `FALSE`, der Rückgabewert ist immer `NULL`. Jedoch, wenn der angegebene Punkt im Bereich "Beschreibung" ist die `pnArea` Parametersatz auf `CMFCPropertyGridProperty::ClickDescription`.  
+ Wenn die *bPropsOnly* Parameter ist `FALSE`, der Rückgabewert ist immer `NULL`. Jedoch, wenn der angegebene Punkt im Bereich "Beschreibung" ist die *PnArea* Parametersatz auf `CMFCPropertyGridProperty::ClickDescription`.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Begriff *Eigenschaft Bereich* bezieht sich auf alle mit dem Namen, Wert, oder Erweitern Sie im Feld Bereiche einer Eigenschaft Grid-Steuerelement ein Element. Die *Beschreibungsbereich* ist die Zone am unteren Rand einer Eigenschaftenraster-Steuerelement. Wenn Sie eine Eigenschaft Grid-Steuerelement ein Element klicken, zeigt der Bereich der Beschreibung eine Beschreibung der entsprechenden Eigenschaft.  
   
- Diese Methode legt dem Wert der Variablen, die die `pnArea` -Parameter zeigt. Die folgende Tabelle enthält die möglichen Werte und die entsprechenden Bereiche.  
+ Diese Methode legt dem Wert der Variablen, die die *PnArea* -Parameter zeigt. Die folgende Tabelle enthält die möglichen Werte und die entsprechenden Bereiche.  
   
 |Wert|Bereich|  
 |-----------|----------|  
@@ -1127,10 +1127,10 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bMark`  
+ [in] *bMark*  
  `TRUE` anzuzeigende Änderung in fett; `FALSE` geänderte Eigenschaften im regulären Format angezeigt. Der Standardwert ist `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` um sofort Neuzeichnen der Eigenschaftenraster-Steuerelement andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pNewSel`|Ein Zeiger auf die neu ausgewählte Eigenschaft.|  
-|[in] `pOldSel`|Ein Zeiger auf die zuvor ausgewählte Eigenschaft.|  
+|[in] *pNewSel*|Ein Zeiger auf die neu ausgewählte Eigenschaft.|  
+|[in] *pOldSel*|Ein Zeiger auf die zuvor ausgewählte Eigenschaft.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode wird keine Aktion ausgeführt.  
@@ -1162,7 +1162,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Einen Punkt, in Clientkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1176,7 +1176,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1191,10 +1191,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein Rechteck, der angibt, wo Sie den Bereich der Beschreibung zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1208,7 +1208,7 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1223,10 +1223,10 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf ein Eigenschaftenobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1242,7 +1242,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf ein Objekt, dessen Wert geändert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1274,7 +1274,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` zum Neuzeichnen der Eigenschaftenliste andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1287,7 +1287,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` zum Festlegen der Standardeinstellungen alphabetischen Modus; `FALSE` alphabetischen Zurücksetzmodus. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1303,10 +1303,10 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszTrue`  
+ [in] *LpszTrue*  
  Die Textzeichenfolge, die für den booleschen Wert "true" angezeigt.  
   
- [in] `lpszFalse`  
+ [in] *LpszFalse*  
  Die Textzeichenfolge, die für den booleschen Wert "false" angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1321,10 +1321,10 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pProp`  
+ [in] *pProp*  
  Ein Zeiger auf ein Eigenschaftenobjekt.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` um sofort Neuzeichnen der Eigenschaftenraster-Steuerelement andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1345,25 +1345,25 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clrBackground`  
+ [in] *ClrBackground*  
  Die Hintergrundfarbe von Eigenschaftswerten.  
   
- [in] `clrText`  
+ [in] *ClrText*  
  Die Farbe der Eigenschaftennamen und den Text der Eigenschaft-Wert.  
   
- [in] `clrGroupBackground`  
+ [in] *ClrGroupBackground*  
  Die Hintergrundfarbe einer Eigenschaft Gruppe.  
   
- [in] `clrGroupText`  
+ [in] *ClrGroupText*  
  Die neue Textfarbe der Eigenschaftengruppe.  
   
- [in] `clrDescriptionBackground`  
+ [in] *ClrDescriptionBackground*  
  Die Hintergrundfarbe der Bereich der Beschreibung.  
   
- [in] `clrDescriptionText`  
+ [in] *ClrDescriptionText*  
  Die Farbe des Texts im Bereich der Beschreibung.  
   
- [in] `clrLine`  
+ [in] *ClrLine*  
  Die Farbe der Zeilen, die zwischen Eigenschaften gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1379,7 +1379,7 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nDescRows`  
+ [in] *nDescRows*  
  Die Anzahl der Zeilen in der Beschreibung der Eigenschaft angezeigt.  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
@@ -1392,10 +1392,10 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bGroupNameFullWidth`  
+ [in] *bGroupNameFullWidth*  
  `TRUE` um die vollständige Breite neben dem Kategorienamen unabhängig von der Breite der Spalte Name Eigenschaft anzuzeigen. `FALSE` um die Breite der Namen der Kategorie, der die Breite der Eigenschaft Name-Spalte zu beschränken. Der Standardwert ist `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` um das Eigenschaftenraster-Steuerelement sofort zu aktualisieren; `FALSE` das Steuerelement zu aktualisieren, wenn das nächste Neuzeichnen Ereignis auftritt. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1411,11 +1411,11 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `c`  
+ [in] *c*  
  Ein Zeichen als Trennzeichen dienen.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Methode können Sie um ein Trennzeichen in einer Liste von Eigenschaftswerten zu definieren, die in verwendet werden die [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) Konstruktor. Legen Sie diesen Konstruktor, der `bIsValueList` Parameter `TRUE`.  
+ Mit dieser Methode können Sie um ein Trennzeichen in einer Liste von Eigenschaftswerten zu definieren, die in verwendet werden die [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) Konstruktor. Legen Sie diesen Konstruktor, der *bIsValueList* Parameter `TRUE`.  
   
  Wird standardmäßig die [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) Konstruktor legt die Trennzeichen, Komma (',').  
   
@@ -1427,7 +1427,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShowDragContext`  
+ [in] *bShowDragContext*  
  `TRUE` die Spalten Name und Wert während eines Vorgangs zum Ändern der Größe neu zeichnet; `FALSE` Spalten neu zeichnet, nach Abschluss des Ziehvorgangs. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1441,7 +1441,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` um das Eigenschaftenraster-Steuerelement das Format fest, die in Visual Studio .NET verwendet wird; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1454,7 +1454,7 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Ein Wert für den RGB-Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1471,13 +1471,13 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pProp`|Ein Zeiger auf eine Eigenschaft. Dieser Parameter wird nicht verwendet.|  
+|[in] *pProp*|Ein Zeiger auf eine Eigenschaft. Dieser Parameter wird nicht verwendet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die [CMFCPropertyGridCtrl::EndEditItem](#endedititem) Methode ruft diese Methode zum Validieren von Daten. Standardmäßig wird diese Methode nicht verwenden die `pProp` Parameter und der Rückgabewert ist immer `TRUE`.  
+ Die [CMFCPropertyGridCtrl::EndEditItem](#endedititem) Methode ruft diese Methode zum Validieren von Daten. Standardmäßig wird diese Methode nicht verwenden die *pProp* Parameter und der Rückgabewert ist immer `TRUE`.  
   
  Wenn Sie diese Methode überschreiben, zurückgeben `TRUE` , wenn die angegebene Eigenschaftendaten gültig sind. Andernfalls zurückgeben `FALSE`, in diesem Fall das Framework die Eigenschaft nicht aktualisiert.  
   

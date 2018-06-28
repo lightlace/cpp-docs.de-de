@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368617"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041993"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame-Klasse
 Bietet Dropdown-Frame Fensterfunktionalität Dropdownelement Symbolleisten und Dropdown Schaltflächen.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pWndParent`|Das übergeordnete Fenster des Dropdown-Frames.|  
-|[in] `x`|Die horizontale Bildschirmkoordinate für die Position des Dropdown-Frames.|  
-|[in] `y`|Die vertikale Bildschirmkoordinate für die Position des Dropdown-Frames.|  
-|[in] `pWndOriginToolbar`|Die Symbolleiste mit den Dropdown-Schaltflächen, die diese Methode verwendet, um das neue Dropdown-Frameobjekt aufzufüllen.|  
+|[in] *pWndParent*|Das übergeordnete Fenster des Dropdown-Frames.|  
+|[in] *x*|Die horizontale Bildschirmkoordinate für die Position des Dropdown-Frames.|  
+|[in] *y*|Die vertikale Bildschirmkoordinate für die Position des Dropdown-Frames.|  
+|[in] *pWndOriginToolbar*|Die Symbolleiste mit den Dropdown-Schaltflächen, die diese Methode verwendet, um das neue Dropdown-Frameobjekt aufzufüllen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn der Dropdown-Frame erfolgreich erstellt wurde. andernfalls `FALSE`.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `bNotify`|Nicht verwendet.|  
+|[in] *bNotify*|Nicht verwendet.|  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn der Dropdown-Frame erstellt wird oder das übergeordnete Fenster geändert wird. Diese Methode berechnet die Position und Größe des Dropdown-Frames mit die Position und Größe des übergeordneten Fensters.  
@@ -171,11 +171,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Das Fenster zugeordneten Dropdown-Symbolleiste automatisch zerstört; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bAutoDestroy` ist `TRUE`, und klicken Sie dann die `CMFCDropDownFrame` Destruktor zerstört den zugeordneten Dropdown-Symbolleiste im Fenster. Der Standardwert ist `TRUE`.  
+ Wenn *bAutoDestroy* ist `TRUE`, und klicken Sie dann die `CMFCDropDownFrame` Destruktor zerstört den zugeordneten Dropdown-Symbolleiste im Fenster. Der Standardwert ist `TRUE`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

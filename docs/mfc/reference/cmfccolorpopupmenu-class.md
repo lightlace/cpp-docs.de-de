@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372375"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037303"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu-Klasse
 Stellt ein Popupmenü aufrufen, die Benutzer verwenden, um Farben auszuwählen, in einem Dokument oder einer Anwendung dar.  
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `colors`  
+ [in] *Farben*  
  Ein Array von Farben aus, denen vom Framework im Popupmenü angezeigt wird.  
   
- [in] `color`  
+ [in] *Farbe*  
  Die standardmäßig ausgewählten Farbe.  
   
- [in] `lpszAutoColor`  
+ [in] *LpszAutoColor*  
  Die Beschriftung für die *automatische* farbenschaltfläche (Standard), oder `NULL`.  
   
  Die standardmäßige Bezeichnung für die Schaltfläche "automatisch" ist **automatische**.  
   
- [in] `lpszOtherColor`  
+ [in] *LpszOtherColor*  
  Die Beschriftung für die *andere* Schaltfläche, die weitere Farben angezeigt wird, oder `NULL`.  
   
  Der standard als Bezeichnung für die Schaltfläche "Sonstige" **Weitere Farben...** .  
   
- [in] `lpszDocColors`  
+ [in] *LpszDocColors*  
  Die Beschriftung der Schaltfläche Dokument Farben. Die Dokument-Farben-Palette Listet alle Farben, die das Dokument derzeit verwendet.  
   
- [in] `lstDocColors`  
+ [in] *LstDocColors*  
  Eine Liste von Farben, die das Dokument derzeit verwendet.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Die Anzahl der Spalten, die das Array von Farben aufweist.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  Die Anzahl der Zeilen, die die Farbleiste hat, wenn er horizontal angedockt ist.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  Die Anzahl der Spalten, die die Farbleiste hat, wenn es vertikal angedockt ist.  
   
- [in] `colorAutomatic`  
+ [in] *ColorAutomatic*  
  Die Standardfarbe, die das Framework gilt, wenn Sie auf die Schaltfläche "Automatische" klicken.  
   
- [in] `uiCommandID`  
+ [in] *UiCommandID*  
  Die Farbleiste steuerungsbefehls-ID.  
   
- [in] `bStdColorDlg`  
+ [in] *bStdColorDlg*  
  Ein boolescher Wert, der angibt, ob das Dialogfeld Farbe Standardbetriebssystem angezeigt oder [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) (Dialogfeld).  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Ein Zeiger auf eine übergeordnete Schaltfläche.  
   
- [in] `nID`  
+ [in] *nID*  
  Die Befehls-ID.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pWndMain`|Ein Zeiger auf das übergeordnete Fenster eines abtrennbarer Leiste.|  
-|[in] `uiID`|Die Befehls-ID des abtrennbarer Leiste.|  
-|[in] `lpszName`|Der Text der abtrennbarer Leiste aus.|  
+|[in] *pWndMain*|Ein Zeiger auf das übergeordnete Fenster eines abtrennbarer Leiste.|  
+|[in] *UiID*|Die Befehls-ID des abtrennbarer Leiste.|  
+|[in] *Wert*|Der Text der abtrennbarer Leiste aus.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neue abtrennbare Steuerleistenobjekt.  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndList`  
+ [in] *pWndList*  
  Ein Zeiger auf ein Eigenschaftenobjekt der Grid-Steuerelement.  
   
 ## <a name="see-also"></a>Siehe auch  

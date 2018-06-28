@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374473"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037754"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar-Klasse
 Eine Menüleiste, die in einem Popupmenü eingebettet ist.  
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Das Layout der Popup-Menü-Leistenbereich automatisch neu berechnet; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiMenuResID`  
+ [in] *UiMenuResID*  
  Gibt die im Menü-ID für die Menüressource laden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Einen Punkt auf dem Bildschirm.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hMenu`  
+ [in] *hMenu*  
  Klicken Sie im Menü aus der Popup-Menüschaltflächen importiert.  
   
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  `TRUE` Wenn alle Befehle in diesem Menü sind importiert werden, oder `FALSE` Wenn selten verwendeten ausgeblendet werden können.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hMenu`  
+ [in] *hMenu*  
  Ein Handle für das archivierte Menü zu laden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
  Der nullbasierte Index der Symbolleisten-Schaltfläche, dessen Format ist, festgelegt werden.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Die Art der Schaltfläche. Finden Sie unter [Steuerelementtypen für die Symbolleiste](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen verfügbar.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iOffset`  
+ [in] *iOffset*  
  Die Anzahl der Zeilen an, die die Popup-Menüleiste versetzt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Ein Zeiger auf die Menüschaltfläche, für die den Zeitgeber Verzögerung festgelegt.  
   
- [in] `nDelayFactor`  
+ [in] *nDelayFactor*  
  Eine Verzögerung der Faktor, gleich mindestens eins mit Standardmenü, um die Verzögerung (in der Regel zwischen einer halben Sekunde und fünf Sekunden) multipliziert.  
   
 ### <a name="remarks"></a>Hinweise  

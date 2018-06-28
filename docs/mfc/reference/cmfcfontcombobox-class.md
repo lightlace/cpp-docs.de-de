@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375744"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039998"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox-Klasse
 Die `CMFCFontComboBox` Klasse erstellt ein Kombinationsfeld-Steuerelement, das eine Liste von Schriftarten enthält.  
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDesc`  
+ [in] *pDesc*  
  Zeigt auf eine Schriftart Beschreibung-Objekt.  
   
- [in] `lpszName`  
+ [in] *Wert*  
  Gibt den Namen einer Schriftart an.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Gibt einen Zeichensatz. Der Standardwert ist DEFAULT_CHARSET. Weitere Informationen finden Sie unter der `lfCharSet` Mitglied der [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nFontType`  
+ [in] *nFontType*  
  Gibt den Schriftarttyp. Der Standardwert ist die bitweise Kombination (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Gibt den Zeichensatz der Schriftart an. Der Standardwert ist DEFAULT_CHARSET.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Gibt die Schriftbreite der Schriftart und Familie. Der Standardwert ist DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Rückgabewert  

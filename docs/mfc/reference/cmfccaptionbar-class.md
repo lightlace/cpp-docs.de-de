@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375832"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038971"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar-Klasse
 Ein `CMFCCaptionBar` Objekt ist eine Steuerleiste, die drei Elemente anzeigen können: eine Schaltfläche, eine Bezeichnung und eine Bitmap. Es kann jeweils nur ein Element eines Typs angezeigt werden. Sie können jedes Element links, rechts oder in der Mitte des Steuerelements positionieren. Sie können zudem den oberen und unteren Rand der Titelleiste flach oder dreidimensional darstellen.  
@@ -189,19 +189,19 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Der logische OR-Kombination der Beschriftung Leiste Stile.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Das übergeordnete Fenster des Steuerelements Beschriftung.  
   
- `uID`  
+ *UID*  
  Die ID der Beschriftung Statusleisten-Steuerelement.  
   
- `nHeight`  
+ *nHeight*  
  Die Höhe in Pixel, der das Caption-Steuerelement. Wenn Sie sie-1 ist, wird die Höhe entsprechend der Höhe der das Symbol ", den Text und die Schaltfläche, die die Beschriftung StatusBar-Steuerelement zeigt berechnet.  
   
- `bIsMessageBarMode`  
+ *bIsMessageBarMode*  
  `TRUE` Wenn die Titelleiste in die Nachricht leistenmodus ist. `FALSE` andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -230,7 +230,7 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie die Schaltfläche `FALSE` auf die Schaltfläche deaktiviert.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
@@ -241,7 +241,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `elem`  
+ [in] *Elem*  
  Eine Caption-Element der Leiste für die Ausrichtung abzurufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -332,10 +332,10 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger auf den Gerätekontext Rand der Titelleiste.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck ausgefüllt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -353,10 +353,10 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Einen Gerätekontext, der verwendet wird, um den Rahmen anzuzeigen.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -376,16 +376,16 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext, der verwendet wird, auf die Schaltfläche anzuzeigen.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck der Schaltfläche.  
   
- [in] `strButton`  
+ [in] *StrButton*  
  Die Bezeichnung der Schaltfläche Text.  
   
- [in] `bEnabled`  
+ [in] *bAktiviert*  
  `TRUE` Wenn die Schaltfläche aktiviert ist. `FALSE` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -401,10 +401,10 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext, der zur Anzeige des Bilds verwendet wird.  
   
- [in] `rect`  
+ [in] *Rect*  
  Gibt das umschließende Rechteck des Bilds an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -421,13 +421,13 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext, der verwendet wird, auf die Schaltfläche anzuzeigen.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck des Texts.  
   
- [in] `strText`  
+ [in] *StrText*  
  Die Textzeichenfolge angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -485,16 +485,16 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Das Handle für die Bitmap festgelegt.  
   
- [in] `clrTransparent`  
+ [in] *ClrTransparent*  
  Ein RGB-Wert, der die transparente Farbe des Bitmaps angibt.  
   
- [in] `bStretch`  
+ [in] *bStretch*  
  Wenn `TRUE`, Bitmap gestreckt wird, wenn es nicht zu dem Bild, das umgebende Rechteck passt. Andernfalls wird die Bitmap nicht gestreckt.  
   
- [in] `bmpAlignment`  
+ [in] *BmpAlignment*  
  Die Ausrichtung der Bitmap.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -502,7 +502,7 @@ void SetBitmap(
   
  Die vorherigen Bitmap wird automatisch zerstört. Wenn die Titelleiste ein Symbol angezeigt, da Sie aufgerufen der [CMFCCaptionBar::SetIcon](#seticon) -Methode, die Bitmap wird nicht angezeigt, es sei denn, Sie entfernen Sie das Symbol "durch den Aufruf [CMFCCaptionBar::RemoveIcon](#removeicon).  
   
- Die Bitmap ausgerichtet wird nach den Angaben von der `bmpAlignment` Parameter.  Dieser Parameter kann einen der folgenden `BarElementAlignment`-Werte aufweisen:  
+ Die Bitmap ausgerichtet wird nach den Angaben von der *BmpAlignment* Parameter.  Dieser Parameter kann einen der folgenden `BarElementAlignment`-Werte aufweisen:  
   
 -   ALIGN_INVALID  
   
@@ -520,7 +520,7 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nSize`  
+ [in] *nSize*  
  Die neue Größe des Rahmens Leiste Beschriftung in Pixel.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
@@ -535,16 +535,16 @@ void SetButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszLabel`  
+ *lpszLabel*  
  Die Bezeichnung der Schaltfläche-Befehl.  
   
- `uiCmdUI`  
+ *uiCmdUI*  
  Die Befehlsschaltfläche-ID.  
   
- `btnAlignmnet`  
+ *btnAlignmnet*  
  Die Schaltfläche Ausrichtung.  
   
- `bHasDropDownArrow`  
+ *bHasDropDownArrow*  
  `TRUE` Wenn die Schaltfläche einen Dropdownpfeil angezeigt `FALSE` andernfalls.  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
@@ -555,7 +555,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bPresed`  
+ *bPresed*  
  `TRUE` Wenn die Schaltfläche mit der der Zustand "gedrückt" beibehält `FALSE` andernfalls.  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
@@ -568,10 +568,10 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszToolTip`  
+ [in] *LpszToolTip*  
  Die QuickInfo-Beschriftung.  
   
- [in] `lpszDescription`  
+ [in] *LpszDescription*  
  Die QuickInfo-Beschreibung.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
@@ -582,7 +582,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` Wenn am Rand der Titelleiste flach ist. `FALSE` Wenn der Rahmen 3D ist.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
@@ -595,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hIcon`  
+ [in] *hIcon*  
  Das Handle für das Symbol "festgelegt.  
   
- [in] `iconAlignment`  
+ [in] *IconAlignment*  
  Die Ausrichtung des Symbols.  
   
 ### <a name="remarks"></a>Hinweise  
  Titelleisten können Symbolen oder Bitmaps anzeigen. Finden Sie unter [CMFCCaptionBar::SetBitmap](#setbitmap) um herauszufinden, wie eine Bitmap angezeigt. Wenn Sie ein Symbol und eine Bitmap festlegen, wird das Symbol immer angezeigt. Rufen Sie [CMFCCaptionBar::RemoveIcon](#removeicon) So entfernen Sie ein Symbol in der Titelleiste.  
   
- Das Symbol wird entsprechend dem ausgerichtet der `iconAlignment` Parameter. Es kann eine der folgenden `BarElementAlignment` Werte:  
+ Das Symbol wird entsprechend dem ausgerichtet der *IconAlignment* Parameter. Es kann eine der folgenden `BarElementAlignment` Werte:  
   
 -   ALIGN_INVALID  
   
@@ -624,10 +624,10 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszToolTip`  
+ [in] *LpszToolTip*  
  Der Text der QuickInfo.  
   
- [in] `lpszDescription`  
+ [in] *LpszDescription*  
  Die QuickInfo-Beschreibung.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
@@ -638,7 +638,7 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nMargin`  
+ [in] *nMargin*  
  Der Abstand zwischen dem Rand der Beschriftung menübandleisten-Elementen und den Rand des Steuerelements Beschriftung in Pixel.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
@@ -651,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strText`  
+ [in] *StrText*  
  Die Textzeichenfolge festlegen.  
   
- [in] `textAlignment`  
+ [in] *TextAlignment*  
  Die Ausrichtung des Texts.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Beschriftung ausgerichtet wird nach den Angaben von der `textAlignment` Parameter. Es kann eine der folgenden `BarElementAlignment` Werte:  
+ Die Beschriftung ausgerichtet wird nach den Angaben von der *TextAlignment* Parameter. Es kann eine der folgenden `BarElementAlignment` Werte:  
   
 -   ALIGN_INVALID  
   

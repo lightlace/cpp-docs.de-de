@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3826a1a649cf4a2c3f292b660e90384edac2575e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373526"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040089"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement, die dem Benutzer ermöglicht enthält, wählen Sie eine Schriftart aus einer Liste von Systemschriftarten.  
@@ -64,7 +64,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 2.  Konstruieren Sie ein `CMFCToolBarFontComboBox`-Objekt.  
   
-3.  In der Message-Handler, der verarbeitet die `AFX_WM_RESETTOOLBAR` angezeigt wird, ersetzen Sie die Schaltfläche "ursprünglichen" mit der neuen kombinationsfeldschaltfläche mithilfe [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+3.  Ersetzen Sie in der Message-Handler, der die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Schaltfläche "ursprünglichen" mit der neuen kombinationsfeldschaltfläche [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
 4.  Synchronisieren Sie die Schriftart, die im Kombinationsfeld mit der Schriftart im Dokument mit ausgewählt ist die [CMFCToolBarFontComboBox::SetFont](#setfont) Methode.  
   
@@ -110,13 +110,13 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Die Befehls-ID des Kombinationsfelds.  
   
- [in] `iImage`  
+ [in] *iImage*  
  Der nullbasierte Index des ein Symbolleistenbild. Image befindet sich der [CMFCToolBarImages Klasse](../../mfc/reference/cmfctoolbarimages-class.md) Objekt, mit [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md) -Klasse verwaltet.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Die Typen von Schriftarten, die im Kombinationsfeld enthält. Dieser Parameter kann eine Kombination (boolesche OR) der folgenden Werte sein:  
   
  DEVICE_FONTTYPE  
@@ -125,23 +125,23 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Wenn auf DEFAULT_CHARSET im Kombinationsfeld Schriftarten allen eindeutig benannt, in allen Zeichensätzen enthält. (Wenn es zwei Schriftarten mit demselben Namen sind, enthält im Kombinationsfeld eine von ihnen.) Wenn auf einen gültigen Zeichen festgelegten Wert, der im Kombinationsfeld nur die Schriftarten in den angegebenen Zeichensatz enthält. Finden Sie unter [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) für eine Liste der möglichen Zeichen fest.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Das Format des Kombinationsfelds. (siehe [Kombinationsfeldstile](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Die Breite in Pixel des Edit-Steuerelements.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Wenn auf DEFAULT_PITCH im Kombinationsfeld festgelegt Schriftarten unabhängig von der Tonhöhe enthält. Wenn auf FIXED_PITCH oder VARIABLE_PITCH festgelegt, der im Kombinationsfeld nur Schriftarten mit diesem Typ Tonhöhe enthält. Für die Schriftfamilie Filterung wird derzeit nicht unterstützt.  
   
- [out] `pLstFontsExternal`  
+ [out] *pLstFontsExternal*  
  Zeiger auf eine [CObList Klasse](../../mfc/reference/coblist-class.md) Objekt, das die verfügbaren Schriftarten speichert.  
   
 ### <a name="remarks"></a>Hinweise  
- In der Regel `CMFCToolBarFontComboBox` Speichern von Objekten die Liste der verfügbaren Schriftarten in einer einzigen, gemeinsam genutzten `CObList` Objekt. Wenn Sie die zweite Überladung des Konstruktors verwenden, und geben Sie einen gültigen Zeiger auf `pLstFontsExternal`, `CMFCToolBarFontComboBox` Objekt wird stattdessen Füllen der `CObList` , `pLstFontsExternal` verweist, mit den verfügbaren Schriftarten.  
+ In der Regel `CMFCToolBarFontComboBox` Speichern von Objekten die Liste der verfügbaren Schriftarten in einer einzigen, gemeinsam genutzten `CObList` Objekt. Wenn Sie die zweite Überladung des Konstruktors verwenden, und geben Sie einen gültigen Zeiger auf *pLstFontsExternal*, `CMFCToolBarFontComboBox` Objekt wird stattdessen Füllen der `CObList` , *pLstFontsExternal* verweist auf mit verfügbaren Schriftarten.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCToolBarFontComboBox` Objekt. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../visual-cpp-samples.md).  
@@ -156,11 +156,11 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Gibt den nullbasierten Index des eine Kombinationsfeldelement an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine `CMFCFontInfo` Objekt. Wenn `iIndex` gibt keinen Index gültiges Element der Rückgabewert ist `NULL`.  
+ Ein Zeiger auf eine `CMFCFontInfo` Objekt. Wenn *iIndex* gibt keinen Index gültiges Element der Rückgabewert ist `NULL`.  
   
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  Gibt die Höhe in Pixel, der Zeichen in das schriftartkombinationsfeld, wenn das Kombinationsfeld Besitzer Stil zu zeichnen kann.  
@@ -183,20 +183,20 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszName`  
+ [in] *Wert*  
  Gibt den Schriftartnamen oder Präfix.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Gibt den Zeichensatz an.  
   
- [in] `bExact`  
- Gibt an, ob `lpszName` enthält den Namen der Schriftart oder das Präfix Schriftart.  
+ [in] *bExact*  
+ Gibt an, ob *Wert* enthält den Namen der Schriftart oder das Präfix Schriftart.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Schriftart erfolgreich aktiviert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bExact` ist `TRUE`, diese Methode wählt eine Schriftart, die genau mit dem Namen, die Sie angegeben haben übereinstimmt, als `lpszName`. Wenn `bExact` ist `FALSE`, diese Methode wählt eine Schriftart, die mit dem angegebenen als Text beginnt `lpszName` und den Zeichensatz, den Sie als angegeben verwendet `nCharSet`. Wenn `nCharSet` festgelegt ist, DEFAULT_CHARSET, der Zeichensatz werden ignoriert und nur `lpszName` wird verwendet, um eine Schriftart auswählen.  
+ Wenn *bExact* ist `TRUE`, diese Methode wählt eine Schriftart, die genau mit dem Namen, die Sie angegeben haben übereinstimmt, als *Wert*. Wenn *bExact* ist `FALSE`, diese Methode wählt eine Schriftart, die mit dem angegebenen als Text beginnt *Wert* und den Zeichensatz, den Sie als angegeben verwendet *nCharSet*. Wenn *nCharSet* festgelegt ist, DEFAULT_CHARSET, der Zeichensatz werden ignoriert und nur *Wert* wird verwendet, um eine Schriftart auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

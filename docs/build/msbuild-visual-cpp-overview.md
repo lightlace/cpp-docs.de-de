@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379262"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039088"
 ---
 # <a name="msbuild-visual-c-overview"></a>Übersicht über MSBuild (Visual C++)  
   
@@ -139,7 +139,10 @@ In der folgenden Tabelle sind einige nützliche benutzerorientierte Ziele aufgef
 |Neu erstellen|Bereinigt und erstellt das Projekt.|  
 |ResourceCompile|Führt das Microsoft Windows-Ressourcencompilertool ("rc.exe") aus.|  
 |XdcMake|Führt das XML-Dokumentationstool ("xdcmake.exe") aus.|  
-|Xsd|Führt das XML-Schemadefinitionstool ("Xsd.exe") aus.|  
+|Xsd|Führt das XML-Schemadefinitionstool ("Xsd.exe") aus. *Siehe den Hinweis unten.*|  
+
+> [!NOTE] 
+> In Visual Studio 2017 C++-Projekt-Unterstützung für **Xsd** Dateien ist veraltet. Sie können weiterhin **Microsoft.VisualC.CppCodeProvider** durch Hinzufügen von **CppCodeProvider.dll** manuell zum GAC.
   
 ## <a name="see-also"></a>Siehe auch  
   

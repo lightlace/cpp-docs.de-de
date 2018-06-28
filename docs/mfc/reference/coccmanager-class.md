@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b19b52135678ebd798f61143b5bad953b8629a5
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376111"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038148"
 ---
 # <a name="coccmanager-class"></a>COccManager-Klasse
 Verwaltet unterschiedliche benutzerdefinierte ControlSites. Wird von `COleControlContainer` - und `COleControlSite` -Objekten implementiert.  
@@ -62,7 +62,7 @@ class COccManager : public CNoTrackObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|Erstellt eine **COleContainer** Objekt.|  
+|[COccManager::CreateContainer](#createcontainer)|Erstellt ein `COleContainer`-Objekt.|  
 |[COccManager::CreateDlgControls](#createdlgcontrols)|ActiveX-Steuerelemente, die durch den zugehörigen gehostet erstellt `COleContainer` Objekt.|  
 |[COccManager::CreateSite](#createsite)|Erstellt ein `COleClientSite`-Objekt.|  
 |[COccManager::GetDefBtnCode](#getdefbtncode)|Ruft den Code für die Standardschaltfläche ab.|  
@@ -76,7 +76,7 @@ class COccManager : public CNoTrackObject
 |[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Trennt alle vorhandenen ActiveX-Steuerelemente aus allgemeinen Steuerelementen in der angegebenen Dialogfeldvorlage.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Basisklasse **CNoTrackObject**, ist eine nicht dokumentierte Basisklasse (im Verzeichnis AFXTLS. H). Abgeleitete Klassen von für die Verwendung von MFC-Framework konzipiert, die **CNoTrackObject** Klasse speicherverlusterkennung ausgeschlossen werden. Es wird nicht empfohlen, dass Sie direkt von ableiten **CNoTrackObject**.  
+ Die Basisklasse `CNoTrackObject`, ist eine nicht dokumentierte Basisklasse (im Verzeichnis AFXTLS. H). Abgeleitete Klassen von für die Verwendung von MFC-Framework konzipiert, die `CNoTrackObject` -Klasse speicherverlusterkennung ausgeschlossen sind. Es wird nicht empfohlen, dass Sie direkt von ableiten `CNoTrackObject`.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CNoTrackObject`  
@@ -94,7 +94,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf das Window-Objekt, das die benutzerdefinierte Website Container zugewiesen sind.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -104,7 +104,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
  Weitere Informationen zum Erstellen von benutzerdefinierten Websites finden Sie unter [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
- Mit dieser Funktion wird zum Erstellen von ActiveX-Steuerelemente, die gemäß der `pOccDialogInfo` Parameter.  
+ Mit dieser Funktion wird zum Erstellen von ActiveX-Steuerelemente, die gemäß der *pOccDialogInfo* Parameter.  
   
 ```  
 virtual BOOL CreateDlgControls(
@@ -123,27 +123,27 @@ virtual BOOL CreateDlgControls(
  *pWndParent*  
  Ein Zeiger auf das übergeordnete Element des dem Dialogfeldobjekt.  
   
- `lpszResourceName`  
+ *lpszResourceName*  
  Der Name der Ressource erstellt wird.  
   
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  Ein Zeiger auf die Dialogfeldvorlage verwendet, um das Dialogfeldobjekt zu erstellen.  
   
- `lpResource`  
+ *lpResource*  
  Ein Zeiger auf eine Ressource.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Steuerelement erfolgreich erstellt wurde; andernfalls 0 (null).  
   
 ##  <a name="createsite"></a>  COccManager::CreateSite  
- Wird aufgerufen, durch das Framework zum Erstellen einer Steuerelement-Website, die vom Container verweist gehostet `pCtrlCont`.  
+ Wird aufgerufen, durch das Framework zum Erstellen einer Steuerelement-Website, die vom Container verweist gehostet *pCtrlCont*.  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pCtrlCont`  
+ *pCtrlCont*  
  Ein Zeiger auf dem Steuerelementcontainer hostet die Website des neuen Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -162,7 +162,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Das Window-Objekt, das das Schaltflächen-Steuerelement enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -187,7 +187,7 @@ virtual BOOL IsDialogMessage(
  *pWndDlg*  
  Ein Zeiger auf das Dialogfeld vorgesehenes Ziel der Nachricht.  
   
- `lpMsg`  
+ *lpMsg*  
  Ein Zeiger auf eine `MSG` Struktur mit der Nachricht überprüft werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -207,7 +207,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -231,10 +231,10 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement enthält.  
   
- `lpMsg`  
+ *lpMsg*  
  Ein Zeiger auf die Nachricht, enthält das mnemonische Zeichen übereinstimmen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -257,13 +257,13 @@ virtual BOOL OnEvent(
  *pCmdTarget*  
  Ein Zeiger auf die `CCmdTarget` Objekt versucht wird, das Ereignis behandeln  
   
- `idCtrl`  
+ *idCtrl*  
  Die Ressourcen-ID des Steuerelements.  
   
- `pEvent`  
+ *pEvent*  
  Das Ereignis behandelt wird.  
   
- `pHandlerInfo`  
+ *pHandlerInfo*  
  Wenn dies nicht der **NULL**, `OnEvent` füllt die **pTarget** und **Pmf** Mitglied der **AFX_CMDHANDLERINFO** Struktur anstelle von Verteilen den Befehl. Dieser Parameter muss in der Regel **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -282,7 +282,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  Ein **_AFX_OCC_DIALOG_INFO** Struktur, die Informationen auf der Dialogfeldvorlage und alle ActiveX-Steuerelemente gehostet werden, indem Sie das Dialogfeld "enthält.  
   
  *pOrigTemplate*  
@@ -304,7 +304,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  Ein **_AFX_OCC_DIALOG_INFO** Struktur, die Informationen auf der Dialogfeldvorlage und alle ActiveX-Steuerelemente gehostet werden, indem Sie das Dialogfeld "enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -322,10 +322,10 @@ static void AFX_CDECL SetDefaultButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement enthält.  
   
- `bDefault`  
+ *bStandardstufe*  
  Wert ungleich NULL, wenn das Steuerelement die Standardschaltfläche werden sollte; andernfalls 0 (null).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -346,17 +346,17 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pTemplate`  
+ *pTemplate*  
  Ein Zeiger auf die Dialogfeldvorlage untersucht werden.  
   
- `ppOleDlgItems`  
+ *ppOleDlgItems*  
  Eine Liste von Zeigern auf Elemente, die ActiveX-Steuerelemente sind.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Dialogfeld Vorlagenstruktur nur nicht-ActiveX-Steuerelemente enthält. Wenn keine ActiveX-Steuerelemente vorhanden sind **NULL** zurückgegeben wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn alle ActiveX-Steuerelemente gefunden werden, wird die Vorlage wird analysiert, und erstellt eine neue Vorlage, die nur mit nicht-ActiveX-Steuerelemente enthält. Alle ActiveX-Steuerelemente, die während dieses Vorgangs gefunden werden hinzugefügt, um `ppOleDlgItems`.  
+ Wenn alle ActiveX-Steuerelemente gefunden werden, wird die Vorlage wird analysiert, und erstellt eine neue Vorlage, die nur mit nicht-ActiveX-Steuerelemente enthält. Alle ActiveX-Steuerelemente, die während dieses Vorgangs gefunden werden hinzugefügt, um *PpOleDlgItems*.  
   
  Wenn es keine ActiveX-Steuerelemente in der Vorlage gibt **NULL** zurückgegeben *.*  
   

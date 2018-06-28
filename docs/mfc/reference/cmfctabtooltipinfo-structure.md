@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373728"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037482"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo-Struktur
 Diese Struktur enthält Informationen über die MDI-Registerkarte, der der Benutzer über bewegen.  
@@ -43,7 +43,7 @@ struct CMFCTabToolTipInfo
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|Der QuickInfo-Text.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Zeiger auf eine `CMFCTabToolTipInfo` Struktur wird als Parameter übergeben der `AFX_WM_ON_GET_TAB_TOOLTIP` Nachricht. Diese Meldung wird generiert, wenn MDI-Registerkarten aktiviert sind und der Benutzer über ein Registerkarten-Steuerelement bewegt wird.  
+ Ein Zeiger auf eine `CMFCTabToolTipInfo` Struktur als Parameter der AFX_WM_ON_GET_TAB_TOOLTIP Nachricht übergeben wird. Diese Meldung wird generiert, wenn MDI-Registerkarten aktiviert sind und der Benutzer über ein Registerkarten-Steuerelement bewegt wird.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt wie `CMFCTabToolTipInfo` werden in der [MDITabsDemo-Beispiel: MFC im Registerkartenformat MDI-Anwendung](../../visual-cpp-samples.md).  

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369872"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042182"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar-Klasse
 Die `CMFCAutoHideBar`-Klasse ist eine besondere Symbolleistenklasse, die die Funktion „Automatisch im Hintergrund“ implementiert.  
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Das Fenster, das Sie ausblenden möchten.  
   
- [in] `dwAlignment`  
+ [in] *DwAlignment*  
  Ein Wert, der die Ausrichtung der Automatisch-im-Hintergrund-Schaltfläche zum Anwendungsfenster angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- Der `dwAlignment` -Parameter gibt an, wo sich die Automatisch-im-Hintergrund-Schaltfläche in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
+ Die *DwAlignment* Parameter gibt an, in dem die Schaltfläche zum automatischen Ausblenden in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -207,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *LpszClassName*  
+ [in] *DwStyle*  
+ [in] *Rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *DwControlBarStyle*  
+ [in] *"pContext"*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -261,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -275,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  Das Automatisch-im-Hintergrund-Fenster, das entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] BOOL `bActive`  
+ [in] BOOL *bActive*  
  TRUE, um auf aktiv festzulegen; andernfalls FALSE.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -305,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -320,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] BOOL *bShow*  
  TRUE, um das Fenster anzuzeigen.  
   
- [in] BOOL `bDelay`  
+ [in] BOOL *bDelay*  
  Dieser Parameter wird ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -342,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nLength`  
+ [in] *nLength*  
  Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie diesen Wert in abgeleiteten Implementierungen, um die Länge des Bereichs mit der geänderten Größe anzuzeigen.  
   
- [in] `bVert`  
+ [in] *bHoriz*  
  Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen `TRUE` um den Fall abzudecken, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und `FALSE` für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  

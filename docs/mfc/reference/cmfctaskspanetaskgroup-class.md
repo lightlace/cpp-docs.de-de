@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370844"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037495"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup-Klasse
 Die `CMFCTasksPaneTaskGroup` Klasse ist eine Hilfsklasse, die verwendet werden, indem Sie die [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Steuerelement. Objekte des Typs `CMFCTasksPaneTaskGroup` stellen eine *Aufgabengruppe*dar. Die Aufgabengruppe ist eine Liste von Elementen, die vom Framework in einem separaten Feld angezeigt wird, das eine Schaltfläche zum Reduzieren enthält. Das Feld kann über eine optionale Beschriftung (Gruppennamen) verfügen. Wenn eine Gruppe reduziert ist, ist die Liste der Aufgaben nicht sichtbar.  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszName`  
+ *Wert*  
  Gibt den Namen der Gruppe in der gruppenbeschriftung an.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Gibt an, ob die Gruppe an das Ende der Aufgabenbereich-Steuerelement ausgerichtet wird.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Gibt an, ob die Gruppe, als festgelegt ist *spezielle* und folglich gibt an, ob die gruppenbeschriftung mit einer anderen Farbe ausgefüllt wird.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Gibt an, ob die Gruppe reduziert ist.  
   
- `pPage`  
+ *pPage*  
  Gibt die Eigenschaftenseite, der zu dieser Aufgabengruppe gehört.  
   
- `hIcon`  
+ *hIcon*  
  Gibt das Symbol, das in der gruppenbeschriftung anzeigt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParent`  
+ [in] *pParent*  
  Stellt das übergeordnete Fenster von der aktuellen Aufgabengruppe dar.  
   
- [out] `data`  
+ [out] *Daten*  
  Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Aufgabengruppe aufgefüllt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die `data` Parameter wurde erfolgreich mit den Zugriff auf Daten der aktuellen Aufgabengruppe aufgefüllt ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die *Daten* Parameter wurde erfolgreich mit den Zugriff auf Daten der aktuellen Aufgabengruppe aufgefüllt ist, andernfalls `FALSE`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

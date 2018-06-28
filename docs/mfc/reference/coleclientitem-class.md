@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a277293cd4b192af0a8a069b82b1b1614490a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69836eb254b23c05f2405c8f11b55a6d6293a9cb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378760"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039335"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem-Klasse
 Definiert die Containerschnittstelle zu OLE-Elementen.  
@@ -323,7 +323,7 @@ void Activate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nVerb`  
+ *nVerb*  
  Gibt das Verb ausgeführt. Es kann einer der folgenden sein:  
   
 |Wert|Bedeutung|Symbol|  
@@ -336,21 +336,21 @@ void Activate(
   
  Der Wert-1 ist in der Regel ein Alias für einen anderen Verb. Wenn Bearbeiten öffnen nicht unterstützt wird, hat-2 dieselbe Wirkung wie – 1. Weitere Werte finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) im Windows SDK.  
   
- `pView`  
+ *pView*  
  Zeiger auf die Container-Ansichtsfenster, das das OLE-Element enthält; Dies ist für die direkte Aktivierung von Server-Anwendung verwendet. Dieser Parameter muss **NULL** Wenn der Container die direkte Aktivierung nicht unterstützt.  
   
- `lpMsg`  
+ *lpMsg*  
  Ein Zeiger auf die Nachricht, die zu aktivierenden Elements verursacht hat.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die Anwendung für die Verwendung der Microsoft Foundation Class-Bibliothek geschrieben wurde, diese Funktion führt dazu, dass die [OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb) Memberfunktion der entsprechenden `COleServerItem` Objekt, das ausgeführt werden.  
   
- Wenn das primäre Verb bearbeiten und 0 (null), in angegeben wird der `nVerb` Parameter, die Server-Anwendung wird gestartet, damit das OLE-Element, das bearbeitet werden kann. Wenn die containeranwendung direkte Aktivierung unterstützt, kann bearbeiten festliegen erfolgen. Wenn der Container nicht unterstützt wird, direkte Aktivierung (oder wenn das Verb "Open" angegeben ist), wird der Server in einem separaten Fenster gestartet und bearbeiten kann ausgeführt werden vorhanden. In der Regel, wenn der Benutzer der containeranwendung doppelklickt OLE-Element, den Wert für das primäre Verb in der `nVerb` Parameter bestimmt, welche Aktion der Benutzer ausführen kann. Allerdings bei der Server nur eine Aktion unterstützt wird, dauert es diese Aktion aus, unabhängig davon, welche Wert, in angegeben wird der `nVerb` Parameter.  
+ Wenn das primäre Verb bearbeiten und 0 (null), in angegeben wird der *nVerb* Parameter, die Server-Anwendung wird gestartet, damit das OLE-Element, das bearbeitet werden kann. Wenn die containeranwendung direkte Aktivierung unterstützt, kann bearbeiten festliegen erfolgen. Wenn der Container nicht unterstützt wird, direkte Aktivierung (oder wenn das Verb "Open" angegeben ist), wird der Server in einem separaten Fenster gestartet und bearbeiten kann ausgeführt werden vorhanden. In der Regel, wenn der Benutzer der containeranwendung doppelklickt OLE-Element, den Wert für das primäre Verb in der *nVerb* Parameter bestimmt, welche Aktion der Benutzer ausführen kann. Allerdings bei der Server nur eine Aktion unterstützt wird, dauert es diese Aktion aus, unabhängig davon, welche Wert, in angegeben wird der *nVerb* Parameter.  
   
  Weitere Informationen finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) im Windows SDK.  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
- OLE Objekt Konvertierung Einrichtungen verwendet, um das Element zu aktivieren, als wäre es ein Element des Typs gemäß `clsidNew`.  
+ OLE Objekt Konvertierung Einrichtungen verwendet, um das Element zu aktivieren, als wäre es ein Element des Typs gemäß *ClsidNew*.  
   
 ```  
 virtual BOOL ActivateAs(
@@ -366,7 +366,7 @@ virtual BOOL ActivateAs(
  *clsidOld*  
  Ein Verweis auf die aktuelle Elementklasse-ID. Die Klassen-ID muss den Typ des eigentlichen Objekts darstellen, wie gespeichert, wenn es sich um einen Link handelt. In diesem Fall sollten sie die CLSID des Elements sein, auf die der Link verweist. Die [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md) stellt automatisch die ordnungsmäßige Klassen-ID für das Element.  
   
- `clsidNew`  
+ *clsidNew*  
  Ein Verweis auf das Ziel-Klassen-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -409,7 +409,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der OLE-Element erstellt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -430,7 +430,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der OLE-Element erstellt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -477,7 +477,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCloseOption`  
+ *dwCloseOption*  
  Kennzeichen, das angibt, unter welchen Umständen der OLE-Element gespeichert wird, wenn er in den geladenen Zustand zurückversetzt. Es kann einen der folgenden Werte aufweisen:  
   
 - `OLECLOSE_SAVEIFDIRTY` Speichern Sie das OLE-Element.  
@@ -499,7 +499,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pContainerDoc`  
+ *pContainerDoc*  
  Ein Zeiger auf die Containerdokument, das dieses Element enthält. Dies kann eine [COleDocument](../../mfc/reference/coledocument-class.md) Ableitung.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -528,14 +528,14 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 - [CreateCloneFrom](#createclonefrom)  
   
 ##  <a name="convertto"></a>  COleClientItem::ConvertTo  
- Rufen Sie diese Memberfunktion, um das Element in den vom angegebenen Typ konvertieren `clsidNew`.  
+ Rufen Sie diese Memberfunktion, um das Element in den vom angegebenen Typ konvertieren *ClsidNew*.  
   
 ```  
 virtual BOOL ConvertTo(REFCLSID clsidNew);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsidNew`  
+ *clsidNew*  
  Die Klassen-ID des Zieltyps.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -552,7 +552,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bIncludeLink`  
+ *bIncludeLink*  
  **"True"** Wenn Linkinformationen in die Zwischenablage kopiert werden sollen, sodass ein verknüpftes Element eingefügte andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -591,11 +591,11 @@ BOOL CreateFromClipboard(
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -617,17 +617,17 @@ BOOL CreateFromData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der OLE-Element erstellt werden.  
   
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -650,20 +650,20 @@ BOOL CreateFromFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFileName`  
+ *lpszFileName*  
  Ein Zeiger auf den Namen der Datei an, von dem der OLE-Element erstellt werden.  
   
- `clsid`  
+ *clsid*  
  Für zukünftige Verwendung reserviert.  
   
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -687,11 +687,11 @@ BOOL CreateLinkFromClipboard(
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -713,17 +713,17 @@ BOOL CreateLinkFromData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der OLE-Element erstellt werden.  
   
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -745,17 +745,17 @@ BOOL CreateLinkFromFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszFileName`  
+ *lpszFileName*  
  Ein Zeiger auf den Namen der Datei an, von dem der OLE-Element erstellt werden.  
   
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -777,17 +777,17 @@ BOOL CreateNewItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  ID, die den Typ des zu erstellenden OLE-Elements eindeutig identifiziert.  
   
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -811,11 +811,11 @@ BOOL CreateStaticFromClipboard(
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -837,17 +837,17 @@ BOOL CreateStaticFromData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der OLE-Element erstellt werden.  
   
  *Rendern*  
  Kennzeichen, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) im Windows SDK.  
   
- `cfFormat`  
+ *cfFormat*  
  Gibt das Datenformat der Zwischenablage zwischengespeichert werden soll, wenn OLE-Element zu erstellen.  
   
- `lpFormatEtc`  
- Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Zeiger auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur verwendet, wenn *Rendern* ist **OLERENDER_FORMAT** oder **OLERENDER_DRAW**. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Wenn Sie diesen Parameter weglassen, werden Standardwerte verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -895,7 +895,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bAutoDelete`  
+ *bAutoDelete*  
  Gibt an, ob das Element aus dem Dokument entfernt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -914,26 +914,26 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpItemRect`  
+ *lpItemRect*  
  Das Element Rechteck auf dem Bildschirm, in Clientkoordinaten (in Pixel).  
   
- `ptOffset`  
- Der Offset vom `lpItemRect` , bei denen die Position des Mauszeigers war zum Zeitpunkt des Ziehvorgangs.  
+ *ptOffset*  
+ Der Offset vom *LpItemRect* , bei denen die Position des Mauszeigers war zum Zeitpunkt des Ziehvorgangs.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  Legen Sie **"true"** , wenn die Link-Daten in die Zwischenablage kopiert werden sollen. Legen Sie es auf **"false"** Wenn Ihre Serveranwendung Links nicht unterstützt.  
   
- `dwEffects`  
+ *dwEffects*  
  Bestimmt die Auswirkungen, die die Quelle des Ziehvorgangs in des Ziehvorgangs ermöglichen.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Ein Zeiger auf das Rechteck, das definiert, in dem der Ziehvorgang beginnt. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `DROPEFFECT`-Wert. Ist er `DROPEFFECT_MOVE`, sollte die ursprünglichen Daten entfernt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Drag-and-Drop-Vorgang wird nicht sofort gestartet. Es wartet, bis der Cursor auf das Rechteck, angegeben durch verlässt `lpRectStartDrag` oder bis eine angegebene Anzahl von Millisekunden erfolgreich abgeschlossen wurden. Wenn `lpRectStartDrag` ist **NULL**, die Größe des Rechtecks beträgt ein Pixel.  
+ Die Drag-and-Drop-Vorgang wird nicht sofort gestartet. Es wartet, bis der Cursor auf das Rechteck, angegeben durch verlässt *LpRectStartDrag* oder bis eine angegebene Anzahl von Millisekunden erfolgreich abgeschlossen wurden. Wenn *LpRectStartDrag* ist **NULL**, die Größe des Rechtecks beträgt ein Pixel.  
   
  Die Verzögerung wird durch eine Einstellung des Registrierungsschlüssels angegeben. Sie können die Verzögerungszeit ändern, durch den Aufruf [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) oder [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Wenn Sie die Verzögerung nicht angeben, wird ein Standardwert von 200 Millisekunden verwendet. Ziehen Sie Verzögerungszeit werden wie folgt gespeichert:  
   
@@ -956,7 +956,7 @@ virtual BOOL DoVerb(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nVerb`  
+ *nVerb*  
  Gibt das Verb ausgeführt. Sie können eine der folgenden enthalten:  
   
 |Wert|Bedeutung|Symbol|  
@@ -969,10 +969,10 @@ virtual BOOL DoVerb(
   
  Der Wert-1 ist in der Regel ein Alias für einen anderen Verb. Wenn Bearbeiten öffnen nicht unterstützt wird, hat-2 dieselbe Wirkung wie – 1. Weitere Werte finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) im Windows SDK.  
   
- `pView`  
+ *pView*  
  Zeiger auf das Fenster "; Dies wird vom Server für die direkte Aktivierung verwendet werden. Dieser Parameter muss **NULL** Wenn Steuerelementcontainer-Anwendung keine direkte Aktivierung zulässt.  
   
- `lpMsg`  
+ *lpMsg*  
  Ein Zeiger auf die Nachricht, die zu aktivierenden Elements verursacht hat.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -981,7 +981,7 @@ virtual BOOL DoVerb(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ruft die [aktivieren](#activate) Memberfunktion, die das Verb ausgeführt. Außerdem Ausnahmen abfängt und zeigt ein Meldungsfeld an den Benutzer, sofern eine ausgelöst wird.  
   
- Wenn das primäre Verb bearbeiten und 0 (null), in angegeben wird der `nVerb` Parameter, die Server-Anwendung wird gestartet, damit das OLE-Element, das bearbeitet werden kann. Wenn die containeranwendung direkte Aktivierung unterstützt, kann bearbeiten festliegen erfolgen. Wenn der Container nicht unterstützt wird, direkte Aktivierung (oder wenn das Verb "Open" angegeben ist), wird der Server in einem separaten Fenster gestartet und bearbeiten kann ausgeführt werden vorhanden. In der Regel, wenn der Benutzer der containeranwendung doppelklickt OLE-Element, den Wert für das primäre Verb in der `nVerb` Parameter bestimmt, welche Aktion der Benutzer ausführen kann. Allerdings bei der Server nur eine Aktion unterstützt wird, dauert es diese Aktion aus, unabhängig davon, welche Wert, in angegeben wird der `nVerb` Parameter.  
+ Wenn das primäre Verb bearbeiten und 0 (null), in angegeben wird der *nVerb* Parameter, die Server-Anwendung wird gestartet, damit das OLE-Element, das bearbeitet werden kann. Wenn die containeranwendung direkte Aktivierung unterstützt, kann bearbeiten festliegen erfolgen. Wenn der Container nicht unterstützt wird, direkte Aktivierung (oder wenn das Verb "Open" angegeben ist), wird der Server in einem separaten Fenster gestartet und bearbeiten kann ausgeführt werden vorhanden. In der Regel, wenn der Benutzer der containeranwendung doppelklickt OLE-Element, den Wert für das primäre Verb in der *nVerb* Parameter bestimmt, welche Aktion der Benutzer ausführen kann. Allerdings bei der Server nur eine Aktion unterstützt wird, dauert es diese Aktion aus, unabhängig davon, welche Wert, in angegeben wird der *nVerb* Parameter.  
   
 ##  <a name="draw"></a>  COleClientItem::Draw  
  Mit dieser Funktion wird zum Zeichnen des OLE-Elements in der angegebenen umschließende Rechteck mit den angegebenen Gerätekontext.  
@@ -994,14 +994,14 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Zeiger auf eine [CDC](../../mfc/reference/cdc-class.md) Objekt, das zum Zeichnen der OLE-Element verwendet.  
   
- `lpBounds`  
+ *lpBounds*  
  Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder `RECT` Struktur, die das umschließende Rechteck in der zum Zeichnen des OLE-Elements (in logischen Einheiten, die durch den Gerätekontext bestimmt) definiert.  
   
- `nDrawAspect`  
- Gibt an, der Aspekt der OLE-Elements, d. h., wie sie angezeigt werden soll. Wenn `nDrawAspect` ist-1 und der letzte Aspekt Festlegung mithilfe von [SetDrawAspect](#setdrawaspect) verwendet wird. Weitere Informationen zu den möglichen Werten für dieses Flag finden Sie unter [SetDrawAspect](#setdrawaspect).  
+ *nDrawAspect*  
+ Gibt an, der Aspekt der OLE-Elements, d. h., wie sie angezeigt werden soll. Wenn *nDrawAspect* ist-1 und der letzte Aspekt Festlegung mithilfe von [SetDrawAspect](#setdrawaspect) verwendet wird. Weitere Informationen zu den möglichen Werten für dieses Flag finden Sie unter [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -1009,9 +1009,9 @@ BOOL Draw(
 ### <a name="remarks"></a>Hinweise  
  Die Funktion können die Metadateidarstellung des OLE-Elements erstellt, indem die [OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw) Memberfunktion von `COleServerItem`.  
   
- In der Regel **zeichnen** für die Bildschirmanzeige, übergeben Sie den Bildschirm Gerätekontext als `pDC`. In diesem Fall müssen Sie nur die ersten beiden Parameter angeben.  
+ In der Regel **zeichnen** für die Bildschirmanzeige, übergeben Sie den Bildschirm Gerätekontext als *pDC*. In diesem Fall müssen Sie nur die ersten beiden Parameter angeben.  
   
- Die `lpBounds` Parameter identifiziert das Rechteck in der Ziel-Gerätekontext (in Bezug auf seine aktuellen Zuordnungsmodus). Rendering kann zur Folge haben das Bild zu skalieren und kann von containeranwendungen verwendet werden, um eine Ansicht zu erzwingen, die zwischen der Ansicht und das endgültige gedruckten Bild skaliert.  
+ Die *LpBounds* Parameter identifiziert das Rechteck in der Ziel-Gerätekontext (in Bezug auf seine aktuellen Zuordnungsmodus). Rendering kann zur Folge haben das Bild zu skalieren und kann von containeranwendungen verwendet werden, um eine Ansicht zu erzwingen, die zwischen der Ansicht und das endgültige gedruckten Bild skaliert.  
   
  Weitere Informationen finden Sie unter [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) im Windows SDK.  
   
@@ -1035,10 +1035,10 @@ BOOL GetCachedExtent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpSize`  
+ *lpSize*  
  Zeiger auf eine **Größe** Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt, das die Informationen zur Datenbankgröße erhält.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Gibt den Aspekt des OLE-Elements, dessen Grenzen werden abgerufen werden sollen. Mögliche Werte finden Sie unter [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1052,14 +1052,14 @@ BOOL GetCachedExtent(
  Weitere Informationen finden Sie unter [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) im Windows SDK.  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
- Gibt die Klassen-ID des Elements in den Arbeitsspeicher verweist `pClassID`.  
+ Gibt die Klassen-ID des Elements in den Arbeitsspeicher verweist *pClassID*.  
   
 ```  
 void GetClassID(CLSID* pClassID) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pClassID`  
+ *pClassID*  
  Zeiger auf den Bezeichner eines Typs [CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) zum Abrufen der Klassen-ID. Informationen zu **CLSID**, finden Sie im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1079,16 +1079,16 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataSource`  
+ *pDataSource*  
  Zeiger auf eine [COleDataSource](../../mfc/reference/coledatasource-class.md) -Objekt, das die enthaltenen Daten in der OLE-Element erhält.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **"True"** Wenn Verknüpfungsdaten, andernfalls enthalten werden sollen **"false"**.  
   
- `lpOffset`  
+ *lpOffset*  
  Der Offset des Mauszeigers vom Ursprung des Objekts in Pixel.  
   
- `lpSize`  
+ *lpSize*  
  Die Größe des Objekts in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1130,10 +1130,10 @@ BOOL GetExtent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpSize`  
+ *lpSize*  
  Zeiger auf eine **Größe** Struktur oder ein `CSize` -Objekt, das die Informationen zur Datenbankgröße erhält.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Gibt den Aspekt des OLE-Elements, dessen Grenzen werden abgerufen werden sollen. Mögliche Werte finden Sie unter [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1157,7 +1157,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Ein Verweis auf die CLSID für den Server, auf das Symbol zugeordnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1202,7 +1202,7 @@ UINT GetItemState() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **COleClientItem:: ItemState** Enumerationswert, der in der folgenden Werte sind möglich: `emptyState`, **LoadedState**, `openState`, `activeState`, `activeUIState`. Informationen zu diesen Statuswerten finden Sie im Artikel [Container: Client-Element-Zustände](../../mfc/containers-client-item-states.md).  
+ Ein **COleClientItem:: ItemState** Enumerationswert, der in der folgenden Werte sind möglich: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Informationen zu diesen Statuswerten finden Sie im Artikel [Container: Client-Element-Zustände](../../mfc/containers-client-item-states.md).  
   
 ### <a name="remarks"></a>Hinweise  
  Um benachrichtigt zu werden, wenn das OLE-Element Zustand ändert verwenden die [OnChange](#onchange) Memberfunktion.  
@@ -1280,7 +1280,7 @@ void GetUserType(
   
 - `USERCLASSTYPE_APPNAME` Der Name der Anwendung, die Wartung der-Klasse.  
   
- `rString`  
+ *rString*  
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, in dem die Zeichenfolge, die OLE-Element-Typ beschreibt zurückgegeben werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1393,7 +1393,7 @@ virtual void OnChange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCode`  
+ *nCode*  
  Der Grund der Server geändert, dieses Element aus. Es kann einen der folgenden Werte aufweisen:  
   
 - `OLE_CHANGED` Darstellung der OLE-Element wurde geändert.  
@@ -1404,11 +1404,11 @@ virtual void OnChange(
   
 - `OLE_CHANGED_STATE` OLE-Element wurde von einem Zustand in einen anderen geändert.  
   
- `dwParam`  
- Wenn `nCode` ist `OLE_SAVED` oder `OLE_CLOSED`, dieser Parameter wird nicht verwendet. Wenn `nCode` ist `OLE_CHANGED`, dieser Parameter gibt den Aspekt des OLE-Elements, das geändert wurde. Mögliche Werte finden Sie unter der `dwParam` Parameter [COleClientItem::Draw](#draw). Wenn `nCode` ist `OLE_CHANGED_STATE`, dieser Parameter ist ein **COleClientItem:: ItemState** Enumerationswert und beschreibt den Status eingegeben werden. Es kann einen der folgenden Werte aufweisen: `emptyState`, **LoadedState**, `openState`, `activeState`, oder `activeUIState`.  
+ *dwParam*  
+ Wenn *nCode* ist `OLE_SAVED` oder `OLE_CLOSED`, dieser Parameter wird nicht verwendet. Wenn *nCode* ist `OLE_CHANGED`, dieser Parameter gibt den Aspekt des OLE-Elements, das geändert wurde. Mögliche Werte finden Sie unter der *DwParam* Parameter [COleClientItem::Draw](#draw). Wenn *nCode* ist `OLE_CHANGED_STATE`, dieser Parameter ist ein **COleClientItem:: ItemState** Enumerationswert und beschreibt den Status eingegeben werden. Es kann einen der folgenden Werte aufweisen: `emptyState`, `loadedState`, `openState`, `activeState`, oder `activeUIState`.  
   
 ### <a name="remarks"></a>Hinweise  
- (Wenn die Anwendung für die Verwendung der Microsoft Foundation Class-Bibliothek geschrieben wird, wird diese Funktion aufgerufen, als Antwort auf die `Notify` Memberfunktionen der `COleServerDoc` oder `COleServerItem`.) Die standardmäßige Implementierung Containerdokument markiert, als wenn geändert `nCode` ist `OLE_CHANGED` oder `OLE_SAVED`.  
+ (Wenn die Anwendung für die Verwendung der Microsoft Foundation Class-Bibliothek geschrieben wird, wird diese Funktion aufgerufen, als Antwort auf die `Notify` Memberfunktionen der `COleServerDoc` oder `COleServerItem`.) Die standardmäßige Implementierung Containerdokument markiert, als wenn geändert *nCode* ist `OLE_CHANGED` oder `OLE_SAVED`.  
   
  Für `OLE_CHANGED_STATE`, den aktuellen Status von zurückgegebenen [GetItemState](#getitemstate) werden immer noch der alte Status, d. h. den Zustand, der vor dieser Änderung war.  
   
@@ -1465,13 +1465,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bUndoable`  
+ *bUndoable*  
  Gibt an, ob die Bearbeitung rückgängig zu machen sind.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion stellt die Benutzeroberfläche der Steuerelementcontainer-Anwendung in den Originalzustand, Ausblenden von alle Menüs und andere Steuerelemente, die für die direkte Aktivierung erstellt wurden wieder her.  
   
- Wenn `bUndoable` ist **"false"**, der Container sollte der Befehl "Rückgängig" deaktivieren, faktisch Verwerfen von Rückgängig-Zustand des Containers, da bedeutet dies, dass der letzte Vorgang vom Server ausgeführt ist nicht rückgängig gemacht werden.  
+ Wenn *bUndoable* ist **"false"**, der Container sollte der Befehl "Rückgängig" deaktivieren, ist nicht wirksam Verwerfen von Rückgängig-Zustand des Containers, da darauf, dass der letzte Vorgang vom Server ausgeführt rückgängig gemacht werden.  
   
 ##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
  Vom Framework aufgerufen, wenn der Benutzer eine Aktion ausführt, die wieder rückgängig zu machen, die beim Bearbeiten der OLE-Element werden verworfen.  
@@ -1498,13 +1498,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bIncludeLink`  
+ *bIncludeLink*  
  Legen Sie **"true"** Wenn Verknüpfen von Daten in die Zwischenablage kopiert werden sollen. Legen Sie **"false"** Wenn Ihre Serveranwendung Links nicht unterstützt.  
   
- `lpOffset`  
+ *lpOffset*  
  Zeiger auf den Offset des Mauszeigers vom Ursprung des Objekts in Pixel.  
   
- `lpSize`  
+ *lpSize*  
  Zeiger auf die Größe des Objekts in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1537,7 +1537,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rPosition`  
+ *rposition zurück*  
  Ein Verweis auf die [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das das Element Positionskoordinaten enthalten wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1556,13 +1556,13 @@ virtual BOOL OnGetWindowContext(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppMainFrame`  
+ *ppMainFrame*  
  Ein Zeiger auf einen Zeiger auf das Hauptrahmenfenster.  
   
- `ppDocFrame`  
+ *ppDocFrame*  
  Ein Zeiger auf einen Zeiger auf die Dokumentrahmenfenster.  
   
- `lpFrameInfo`  
+ *lpFrameInfo*  
  Zeiger auf eine [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) -Struktur, die Frame-Fensters-Informationen erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1571,7 +1571,7 @@ virtual BOOL OnGetWindowContext(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion dient zum Abrufen von Informationen über OLE-Element des übergeordneten Fensters.  
   
- Wenn der Container eine MDI-Anwendung ist, wird die standardmäßige Implementierung gibt einen Zeiger auf die [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) -Objekt in `ppMainFrame` und einen Zeiger auf die aktive [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) Objekt im `ppDocFrame`. Wenn der Container eine SDI-Anwendung ist, wird die standardmäßige Implementierung gibt einen Zeiger auf die [CFrameWnd](../../mfc/reference/cframewnd-class.md) -Objekt in `ppMainFrame` und gibt **NULL** in `ppDocFrame`. Füllt die standardmäßige Implementierung auch die Elemente der `lpFrameInfo`.  
+ Wenn der Container eine MDI-Anwendung ist, wird die standardmäßige Implementierung gibt einen Zeiger auf die [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) -Objekt in *PpMainFrame* und einen Zeiger auf die aktive [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)-Objekt in *PpDocFrame*. Wenn der Container eine SDI-Anwendung ist, wird die standardmäßige Implementierung gibt einen Zeiger auf die [CFrameWnd](../../mfc/reference/cframewnd-class.md) -Objekt in *PpMainFrame* und gibt **NULL** in  *PpDocFrame*. Füllt die standardmäßige Implementierung auch die Mitglieder der *LpFrameInfo*.  
   
  Überschreiben Sie diese Funktion nur, wenn die standardmäßige Implementierung Ihrer Anwendung nicht geeignet ist; beispielsweise, wenn die Anwendung eine Sichtweise der Benutzeroberfläche, die von SDI- oder MDI-abweicht. Dies ist eine erweiterte überschrieben.  
   
@@ -1587,16 +1587,16 @@ virtual void OnInsertMenus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMenuShared`  
+ *pMenuShared*  
  Verweist auf ein leeres Menü.  
   
- `lpMenuWidths`  
+ *lpMenuWidths*  
  Zeigt auf ein Array von sechs **lange** Werte, der angibt, wie viele Menüs in jeder der folgenden Menügruppen sind: Datei, bearbeiten, Container, Fenster Objekt-Hilfe. Die Container-Anwendung ist verantwortlich für die Datei, Container und Fenster Menügruppen, Elemente, 0, 2 und 4 dieses Arrays entspricht.  
   
 ### <a name="remarks"></a>Hinweise  
  Dieses Menü wird dann an den Server übergeben, die eigene Menüs, Erstellen eines zusammengesetzten Menüs einfügt. Diese Funktion kann wiederholt aufgerufen werden, um mehrere zusammengesetzte Menüs zu erstellen.  
   
- Fügt die standardmäßige Implementierung `pMenuShared` den direkten Containermenüs, d. h. der Datei, Container und Fenster Menügruppen. [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) wird verwendet, um diese Menüressource festgelegt. Die standardmäßige Implementierung weist auch die entsprechenden Werte auf die Elemente 0, 2 und 4 im `lpMenuWidths`, je nachdem, auf die Menüressource. Überschreiben Sie diese Funktion, wenn die standardmäßige Implementierung nicht für Ihre Anwendung geeignet ist; beispielsweise, wenn die Anwendung für das Zuordnen von Ressourcen zu Dokumenttypen keine Dokumentvorlagen verwendet. Wenn Sie diese Funktion überschreiben, sollten Sie auch überschreiben [OnSetMenu](#onsetmenu) und [OnRemoveMenus](#onremovemenus). Dies ist eine erweiterte überschrieben.  
+ Fügt die standardmäßige Implementierung *pMenuShared* den direkten Containermenüs, d. h. der Datei, Container und Fenster Menügruppen. [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) wird verwendet, um diese Menüressource festgelegt. Die standardmäßige Implementierung weist auch die entsprechenden Werte auf die Elemente 0, 2 und 4 im *LpMenuWidths*, je nachdem, auf die Menüressource. Überschreiben Sie diese Funktion, wenn die standardmäßige Implementierung nicht für Ihre Anwendung geeignet ist; beispielsweise, wenn die Anwendung für das Zuordnen von Ressourcen zu Dokumenttypen keine Dokumentvorlagen verwendet. Wenn Sie diese Funktion überschreiben, sollten Sie auch überschreiben [OnSetMenu](#onsetmenu) und [OnRemoveMenus](#onremovemenus). Dies ist eine erweiterte überschrieben.  
   
  Weitere Informationen finden Sie unter [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) im Windows SDK.  
   
@@ -1608,13 +1608,13 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMenuShared`  
+ *pMenuShared*  
  Verweist auf das zusammengesetzte Menü erstellt, die durch Aufrufe der [OnInsertMenus](#oninsertmenus) Memberfunktion.  
   
 ### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung entfernt aus `pMenuShared` den direkten Containermenüs, die, die Datei, Container und Fenster Menügruppen. Überschreiben Sie diese Funktion, wenn die standardmäßige Implementierung nicht für Ihre Anwendung geeignet ist; beispielsweise, wenn die Anwendung für das Zuordnen von Ressourcen zu Dokumenttypen keine Dokumentvorlagen verwendet. Wenn Sie diese Funktion überschreiben, müssen Sie wahrscheinlich überschreiben [OnInsertMenus](#oninsertmenus) und [OnSetMenu](#onsetmenu) ebenfalls. Dies ist eine erweiterte überschrieben.  
+ Die standardmäßige Implementierung entfernt aus *pMenuShared* den direkten Containermenüs, die, die Datei, Container und Fenster Menügruppen. Überschreiben Sie diese Funktion, wenn die standardmäßige Implementierung nicht für Ihre Anwendung geeignet ist; beispielsweise, wenn die Anwendung für das Zuordnen von Ressourcen zu Dokumenttypen keine Dokumentvorlagen verwendet. Wenn Sie diese Funktion überschreiben, müssen Sie wahrscheinlich überschreiben [OnInsertMenus](#oninsertmenus) und [OnSetMenu](#onsetmenu) ebenfalls. Dies ist eine erweiterte überschrieben.  
   
- Die Untermenüs auf `pMenuShared` möglicherweise über mehr als eine zusammengesetzte Menü "freigegeben werden, wenn der Server wiederholt aufgerufen hat `OnInsertMenus`. Aus diesem Grund sollten Sie alle Untermenüs nicht löschen, in der Überschreibung der `OnRemoveMenus`; Sie sollten nur trennen.  
+ Die Untermenüs auf *pMenuShared* möglicherweise über mehr als eine zusammengesetzte Menü "freigegeben werden, wenn der Server wiederholt aufgerufen hat `OnInsertMenus`. Aus diesem Grund sollten Sie alle Untermenüs nicht löschen, in der Überschreibung der `OnRemoveMenus`; Sie sollten nur trennen.  
   
  Weitere Informationen finden Sie unter [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) im Windows SDK.  
   
@@ -1638,7 +1638,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
  Weitere Informationen finden Sie unter [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) im Windows SDK.  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
- Vom Framework aufgerufen, zwei Mal bei der direkten Aktivierung beginnt und endet; So installieren Sie das zusammengesetzte Menü und ein zweites Mal beim ersten (mit `holemenu` gleich **NULL**) zu entfernen.  
+ Vom Framework aufgerufen, zwei Mal bei der direkten Aktivierung beginnt und endet; So installieren Sie das zusammengesetzte Menü und ein zweites Mal beim ersten (mit *Holemenu* gleich **NULL**) zu entfernen.  
   
 ```  
 virtual void OnSetMenu(
@@ -1648,10 +1648,10 @@ virtual void OnSetMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMenuShared`  
+ *pMenuShared*  
  Zeiger auf das zusammengesetzte Menü erstellt, die durch Aufrufe der [OnInsertMenus](#oninsertmenus) Memberfunktion und die `InsertMenu` Funktion.  
   
- `holemenu`  
+ *holemenu*  
  Handle für den Menü-Deskriptor zurückgegebenes der **OleCreateMenuDescriptor** -Funktion oder **NULL** Wenn verteilen Code entfernt werden.  
   
  *hwndActiveObject*  
@@ -1672,17 +1672,17 @@ virtual BOOL OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFrameWnd`  
+ *pFrameWnd*  
  Ein Zeiger auf die containeranwendung Rahmenfenster. Dies kann entweder einem Hauptrahmenfenster oder ein untergeordnetes MDI-Fenster sein.  
   
- `bShow`  
+ *bShow*  
  Gibt an, ob die Steuerleisten ein-oder ausgeblendet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Aufruf der Funktion bewirkt, dass eine Änderung in den Steuerleisten Status; 0, wenn der Aufruf bewirkt, dass keine Änderung oder `pFrameWnd` zeigt nicht auf den Container Rahmenfenster.  
+ Wert ungleich NULL, wenn der Aufruf der Funktion bewirkt, dass eine Änderung in den Steuerleisten Status; 0, wenn der Aufruf bewirkt, dass keine Änderung oder *pFrameWnd* zeigt nicht auf den Container Rahmenfenster.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion gibt 0 zurück, wenn die Steuerleisten bereits vom angegebenen Zustand werden *bShow.* Dies würde z. B. auftreten, wenn die Steuerleisten ausgeblendet sind und `bShow` ist **"false"**.  
+ Diese Funktion gibt 0 zurück, wenn die Steuerleisten bereits vom angegebenen Zustand werden *bShow.* Dies würde z. B. auftreten, wenn die Steuerleisten ausgeblendet sind und *bShow* ist **"false"**.  
   
  Die standardmäßige Implementierung entfernt die Symbolleiste im Fenster Framefenster auf oberster Ebene an.  
   
@@ -1734,11 +1734,11 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCloseOption`  
+ *dwCloseOption*  
  Kennzeichen, das angibt, unter welchen Umständen der OLE-Element gespeichert wird, wenn er in den geladenen Zustand zurückversetzt. Eine Liste der möglichen Werte finden Sie unter [COleClientItem::Close](#close).  
   
 ### <a name="remarks"></a>Hinweise  
- **Version** wird aufgerufen, indem die `COleClientItem` Destruktor.  
+ `Release` wird aufgerufen, indem die `COleClientItem` Destruktor.  
   
  Weitere Informationen finden Sie unter [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) im Windows SDK.  
   
@@ -1763,7 +1763,7 @@ void Run();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie die **ausführen** Memberfunktion zum Starten der Serveranwendung vor dem Aktivieren des Elements. Dies erfolgt automatisch vom [aktivieren](#activate) und [DoVerb](#doverb), daher ist es in der Regel nicht notwendig, diese Funktion aufzurufen. Mit dieser Funktion wird bei Bedarf auf dem Server ausgeführt werden, um ein Elementattribut festzulegen, wie z. B. [SetExtent](#setextent), vor der Ausführung [DoVerb](#doverb).  
+ Rufen Sie die `Run` Memberfunktion zum Starten der Serveranwendung vor dem Aktivieren des Elements. Dies erfolgt automatisch vom [aktivieren](#activate) und [DoVerb](#doverb), daher ist es in der Regel nicht notwendig, diese Funktion aufzurufen. Mit dieser Funktion wird bei Bedarf auf dem Server ausgeführt werden, um ein Elementattribut festzulegen, wie z. B. [SetExtent](#setextent), vor der Ausführung [DoVerb](#doverb).  
   
 ##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
  Rufen Sie die `SetDrawAspect` Memberfunktion zum Festlegen von "Aspekt" oder die Ansicht des Elements.  
@@ -1773,7 +1773,7 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nDrawAspect`  
+ *nDrawAspect*  
  Ein Wert aus der `DVASPECT`-Enumeration. Dieser Parameter kann einen der folgenden Werte aufweisen:  
   
 - `DVASPECT_CONTENT` Element wird so dargestellt, als eingebettetes Objekt in dessen Container angezeigt werden können.  
@@ -1799,10 +1799,10 @@ void SetExtent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
+ *size*  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt, das Informationen zur Datenbankgröße enthält.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Gibt den Aspekt des OLE-Elements, dessen Grenzen sind festgelegt werden. Mögliche Werte finden Sie unter [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1820,10 +1820,10 @@ void SetHostNames(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszHost`  
+ *lpszHost*  
  Ein Zeiger auf den Benutzer sichtbare Name des Steuerelementcontainer-Anwendung.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  Ein Zeiger auf eine identifizierende Zeichenfolge des Containers, die das OLE-Element enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1841,7 +1841,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hMetaPict`  
+ *hMetaPict*  
  Ein Handle für die Metadatei, die zum Zeichnen des Symbols.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1850,7 +1850,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ### <a name="remarks"></a>Hinweise  
  Verwendung [GetIconicMetafile](#geticonicmetafile) die Metadatei abgerufen.  
   
- Die `hMetaPict` Parameter in das Element kopiert wird deshalb `hMetaPict` muss vom Aufrufer freigegeben werden.  
+ Die *hMetaPict* Parameter in das Element kopiert wird deshalb *hMetaPict* muss vom Aufrufer freigegeben werden.  
   
 ##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
  Mit dieser Funktion wird zum Festlegen des umschließenden Rechtecks oder die sichtbaren Rechteck des OLE-Elements.  
@@ -1905,10 +1905,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ptd`  
+ *ptd*  
  Zeiger auf eine [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Datenstruktur, die Informationen zu dem neuen Druckserver Zielgerät enthält. Kann **NULL**.  
   
- `ppd`  
+ *PPD*  
  Zeiger auf eine [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940) Datenstruktur, die Informationen zu dem neuen Druckserver Zielgerät enthält. Kann **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  

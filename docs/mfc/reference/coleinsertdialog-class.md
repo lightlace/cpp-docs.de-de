@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374880"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042169"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog-Klasse
 Wird für das OLE-Dialogfeld "Objekt einfügen" verwendet.  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Erstellung-Flag, die einer beliebigen Anzahl von die folgenden Werte hinzu, mit dem bitweisen OR-Operator kombiniert werden:  
   
 - **IOF_SHOWHELP** gibt an, dass die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld aufgerufen wird.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** gibt an, dass das Dialogfeld überprüfen soll, der Klassen werden hinzugefügt, in das Listenfeld sicherstellen, dass der in der Registrierungsdatenbank angegebenen Server vorhanden sind, bevor Sie das Dialogfeld angezeigt wird. Dieses Flag kann die Leistung erheblich beeinträchtigen.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster eines jedoch stattdessen das Dialogfeld auf das Hauptanwendungsfenster festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element erstellt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Einer der folgenden Werte:  
   
  `COleInsertDialog::DocObjectsOnly` Fügt nur DocObjects an.  

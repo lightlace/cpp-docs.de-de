@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369033"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037287"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog-Klasse
 Die `CMFCKeyMapDialog` Klasse unterstützt ein Steuerelement, das Befehlen Tastaturtasten zuordnet.  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Ein Zeiger auf das übergeordnete Fenster eines der `CMFCKeyMapDialog` Objekt.  
   
- [in] `bEnablePrint`  
+ [in] *bEnablePrint*  
  `TRUE` Wenn die Liste mit Zugriffstasten gedruckt werden kann; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nItem`  
+ [in] *nItem*  
  Der nullbasierte Index eines Elements in der internen Liste von Schlüssel-Zuordnungen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Eine Befehls-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf eine Symbolleisten-Schaltfläche, die verwendet wird, um einen Befehlsnamen und eine Beschreibung eine Tastatur Tastenkombination zuordnen. Das schlüsselzuordnung-Element wird in einem Steuerelement für die interne Liste gespeichert.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Ein nullbasierter Index, der angibt, wo der neue Schlüssel Zuordnungselement in das interne Strukturelement-Steuerelement eingefügt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dc`  
+ [in] *dc*  
  Der Gerätekontext für den Drucker.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Die Seitenzahl der Seite zu drucken.  
   
- [in] `cx`  
+ [in] *Cx*  
  Der horizontale Offset des Headers, in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dc`  
+ [in] *dc*  
  Der Gerätekontext des Druckers.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Der nullbasierte Index des Elements, das gedruckt werden soll.  
   
- [in] `y`  
+ [in] *y*  
  Der vertikale Offset zwischen dem oberen Rand der Seite und die Position des Elements.  
   
- [in] `cx`  
+ [in] *Cx*  
  Der horizontale Offset zwischen dem linken Rand der Seite und die Position des Elements.  
   
- [in] `bCalcHeight`  
+ [in] *bCalcHeight*  
  `TRUE` um die optimale Höhe für das Drucken Element zu berechnen; `FALSE` drucken Element abgeschnitten, damit er den Standardzwischenraum passt.  
   
 ### <a name="return-value"></a>Rückgabewert  

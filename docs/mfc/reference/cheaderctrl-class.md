@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376019"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041957"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Headersteuerelements bereit.  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nColumn`  
+ *nColumn*  
  Der Spaltenwert, der angibt, welcher filter um zu löschen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Headersteuerelement-Stil. Eine Beschreibung der Steuerelementtypen für die Header, finden Sie unter [Steuerelementtypen für die Header](http://msdn.microsoft.com/library/windows/desktop/bb775241) im Windows SDK.  
   
- `rect`  
+ *Rect*  
  Gibt an, Größe und Position des Headersteuerelements. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Das Headersteuerelement übergeordnetes Fenster, in der Regel gibt eine `CDialog`. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt die Header-Steuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CHeaderCtrl` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, dem Headersteuerelement erstellt, und fügt es der `CHeaderCtrl` Objekt.  
+ Sie erstellen eine `CHeaderCtrl` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann `Create`, dem Headersteuerelement erstellt, und fügt es der `CHeaderCtrl` Objekt.  
   
  Zusätzlich zu den Steuerelementtypen für die Header können Sie die folgenden allgemeinen Steuerelementtypen bestimmt, wie das Header-Steuerelement positioniert und ändert die Größe selbst (finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) für Weitere Informationen):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** gibt eines von beliebig vielen Steuerelementen, zwischen denen der Benutzer mit der TAB-TASTE wechseln kann. Die TAB-Taste wechselt der Benutzer auf das nächste Steuerelement gemäß der **WS_TABSTOP** Stil.  
   
- Wenn Sie die erweiterten Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von **erstellen**.  
+ Wenn Sie die erweiterten Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von `Create`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Das Headersteuerelement-Stil. Eine Beschreibung der Steuerelementtypen für die Header, finden Sie unter [Steuerelementtypen für die Header](http://msdn.microsoft.com/library/windows/desktop/bb775241) im Windows SDK. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von **erstellen** anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von `Create` anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Erstellt eine transparente Abbildversion, ein Element in einem Headersteuerelement an.  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der nullbasierte Index des Elements innerhalb des Headersteuerelements. Das Bild zu diesem Element zugewiesen bildet die Grundlage für das transparente Bild.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Gibt den nullbasierten Index des Elements, das gelöscht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Ein Zeiger auf eine [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) Struktur, die das Element zu zeichnenden beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Standardmäßig wird diese Memberfunktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CHeaderCtrl` Objekt.  
   
- Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor diesem Element Funktion beendet wird.  
+ Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen *LpDrawItemStruct* vor diesem Element Funktion beendet wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nColumn`  
+ *nColumn*  
  Die Spalte zu bearbeiten.  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  Ein Wert, der angibt, wie den Benutzer behandelt die Änderungen bearbeiten, wenn der Benutzer gerade den Filter bearbeiten bei der [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) Nachricht gesendet wird.  
   
  Geben Sie `true` , die vom Benutzer vorgenommenen Änderungen zu verwerfen oder `false` , die vom Benutzer vorgenommene Änderungen zu übernehmen.  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Gibt den nullbasierten Index des abzurufenden Elements.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Zeiger auf eine [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die das neue Element empfängt. Diese Struktur wird verwendet, mit der `InsertItem` und `SetItem` Memberfunktionen. Flags festgelegt wird, der **Maske** Element stellen Sie sicher, dass die Werte in die entsprechenden Elemente nach der Rückgabe ordnungsgemäß ausgefüllt werden. Wenn die **Maske** Element auf 0 (null) festgelegt ist, sind bedeutungslos, Werte in den anderen Strukturelementen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iItem`|Nullbasierten Index des ein Headerelement, dessen Format ist `HDF_SPLITBUTTON`. Weitere Informationen finden Sie unter der `fmt` Mitglied der [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) Struktur.|  
-|[out] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, um die umschließende Rechteck Informationen zu erhalten.|  
+|[in] *iItem*|Nullbasierten Index des ein Headerelement, dessen Format ist `HDF_SPLITBUTTON`. Weitere Informationen finden Sie unter der `fmt` Mitglied der [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) Struktur.|  
+|[out] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, um die umschließende Rechteck Informationen zu erhalten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Funktion erfolgreich ist; andernfalls `false`.  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der nullbasierte Index, der das Headerelement-Steuerelement.  
   
- `lpRect`  
+ *lpRect*  
  Ein Zeiger auf die Adresse einer [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck-Informationen erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `piArray`  
+ *piArray*  
  Ein Zeiger auf die Adresse eines Puffers, der die Indexwerte der Elemente im Header-Steuerelement in der Reihenfolge empfängt in dem sie von links nach rechts angezeigt werden.  
   
- `iCount`  
+ *iCount*  
  Die Anzahl der Header-Steuerelemente. Darf nicht negativ sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck-Informationen erhält.|  
+|[out] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck-Informationen erhält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Funktion erfolgreich ist; andernfalls `false`.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|Zeiger auf eine [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) -Struktur, gibt den Punkt zu testen und erhält es die Ergebnisse des Tests.|  
+|[in, out] *Phdhti*|Zeiger auf eine [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) -Struktur, gibt den Punkt zu testen und erhält es die Ergebnisse des Tests.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des Header-Elements, sofern vorhanden, an der angegebenen Position; andernfalls -1.  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Der nullbasierte Index des einzufügenden Elements. Wenn der Wert 0 (null) ist, wird das Element am Anfang des Headersteuerelements eingefügt. Wenn der Wert größer als der maximale Wert ist, wird das Element am Ende des Headersteuerelements eingefügt.  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWidth`  
+ *nWidth*  
  Breite in Pixel, der den Rand, der eine Bitmap in eine vorhandene Headersteuerelement umgibt angegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iItem`|Nullbasierte Index des Headerelements.|  
+|[in] *iItem*|Nullbasierte Index des Headerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Die Position des Zeigers. Das Headersteuerelement werden den entsprechenden Unterteiler basierend auf den Zeiger Position hervorgehoben.  
   
- `nIndex`  
+ *nIndex*  
  Der Index des Unterteilers hervorgehoben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pImageList`  
+ *pImageList*  
  Ein Zeiger auf ein `CImageList` Objekt, das die Bildliste des Headersteuerelements zuzuweisenden enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Der nullbasierte Index des Elements, das bearbeitet werden.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Zeiger auf eine [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die Informationen über das neue Element enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iCount`  
+ *iCount*  
  Die Anzahl der Header-Steuerelemente.  
   
- `piArray`  
+ *piArray*  
  Ein Zeiger auf die Adresse eines Puffers, der die Indexwerte der Elemente im Header-Steuerelement in der Reihenfolge empfängt in dem sie von links nach rechts angezeigt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  

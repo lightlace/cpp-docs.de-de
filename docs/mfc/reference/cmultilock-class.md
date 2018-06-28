@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c5424018c3863ce64435bcc09d2d539560285e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3e578d3aece15f191bfad858923470d09bede74
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373976"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039806"
 ---
 # <a name="cmultilock-class"></a>CMultiLock-Klasse
 Stellt den Mechanismus zur Zugriffssteuerung dar, mit dessen Hilfe der Zugriff auf Ressourcen in einem Multithreadprogramm gesteuert wird.  
@@ -59,13 +59,13 @@ class CMultiLock
 ## <a name="remarks"></a>Hinweise  
  `CMultiLock` eine Basisklasse verfügt nicht über.  
   
- Der Synchronisierungsklassen [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), und [CEvent](../../mfc/reference/cevent-class.md), erstellen Sie entweder eine **CMultiLock** oder [CSingleLock](../../mfc/reference/csinglelock-class.md) Objekt gewartet werden soll, und lassen das Synchronisierungsobjekt. Verwenden Sie **CMultiLock** Wenn mehrere Objekte, die Sie zu einem bestimmten Zeitpunkt verwenden konnte. Verwendung `CSingleLock` Wenn müssen Sie nur auf ein Objekt zu einem Zeitpunkt zu warten.  
+ Der Synchronisierungsklassen [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), und [CEvent](../../mfc/reference/cevent-class.md), erstellen Sie entweder eine `CMultiLock` oder [CSingleLock](../../mfc/reference/csinglelock-class.md)Objekt gewartet werden soll, und lassen das Synchronisierungsobjekt. Verwenden Sie `CMultiLock` , wenn mehrere Objekte, die Sie zu einem bestimmten Zeitpunkt verwenden konnte. Verwendung `CSingleLock` Wenn müssen Sie nur auf ein Objekt zu einem Zeitpunkt zu warten.  
   
- Verwenden einer **CMultiLock** Objekt, das zuerst erstellt ein Array von die Synchronisierungsobjekte, die auf das gewartet werden soll. Rufen Sie als Nächstes die **CMultiLock** Objektkonstruktor innerhalb einer Memberfunktion in der gesteuerte Ressource-Klasse. Rufen Sie anschließend die [Sperre](#lock) Member-Funktion, um festzustellen, ob eine Ressource verfügbar ist (signalisiert). Wenn eine ist, fahren Sie mit dem Rest der Memberfunktion. Wenn keine Ressource verfügbar ist, warten Sie, bis eine angegebene Zeitspanne für eine Ressource freigegeben wird, oder Fehler zurück. Rufen Sie nach dem Verwenden einer Ressource abgeschlossen ist, entweder die [Unlock](#unlock) funktioniert, wenn die **CMultiLock** Objekt ist, erneut verwendet werden, oder die **CMultiLock** Objekt zerstört werden.  
+ Verwenden einer `CMultiLock` Objekt, das zuerst erstellt ein Array von die Synchronisierungsobjekte, die auf das gewartet werden soll. Rufen Sie als Nächstes die `CMultiLock` Objektkonstruktor innerhalb einer Memberfunktion in der gesteuerte Ressource-Klasse. Rufen Sie anschließend die [Sperre](#lock) Member-Funktion, um festzustellen, ob eine Ressource verfügbar ist (signalisiert). Wenn eine ist, fahren Sie mit dem Rest der Memberfunktion. Wenn keine Ressource verfügbar ist, warten Sie, bis eine angegebene Zeitspanne für eine Ressource freigegeben wird, oder Fehler zurück. Rufen Sie nach dem Verwenden einer Ressource abgeschlossen ist, entweder die [Unlock](#unlock) funktioniert, wenn die `CMultiLock` Objekt ist, erneut verwendet werden, oder die `CMultiLock` Objekt zerstört werden.  
   
- **CMultiLock** Objekte sind besonders hilfreich, wenn ein Thread eine große Anzahl von `CEvent` Objekten kann es zu reagieren. Erstellen Sie ein Array, das alle enthält die `CEvent` Zeiger, und rufen `Lock`. Dadurch wird den Thread wartet, bis eines der Ereignisse signalisiert wird.  
+ `CMultiLock` Objekte sind besonders hilfreich, wenn ein Thread eine große Anzahl von `CEvent` Objekten kann es zu reagieren. Erstellen Sie ein Array, das alle enthält die `CEvent` Zeiger, und rufen `Lock`. Dadurch wird den Thread wartet, bis eines der Ereignisse signalisiert wird.  
   
- Weitere Informationen zur Verwendung von **CMultiLock** Objekte finden Sie im Artikel [Multithreading: Gewusst wie: Verwenden von Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Weitere Informationen zur Verwendung von `CMultiLock` Objekte finden Sie im Artikel [Multithreading: Gewusst wie: Verwenden von Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CMultiLock`  
@@ -74,7 +74,7 @@ class CMultiLock
  **Header:** afxmt.h  
   
 ##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
- Erstellt eine **CMultiLock** Objekt.  
+ Erstellt ein `CMultiLock`-Objekt.  
   
 ```  
 CMultiLock(
@@ -84,13 +84,13 @@ CMultiLock(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppObjects`  
+ *ppObjects*  
  Array von Zeigern, die alle Synchronisierungsobjekte, auf die gewartet werden. Nicht mit **NULL**.  
   
- `dwCount`  
- Anzahl der Objekte in `ppObjects`. Muss größer als 0 sein.  
+ *dwCount*  
+ Anzahl der Objekte in *PpObjects*. Muss größer als 0 sein.  
   
- `bInitialLock`  
+ *bInitialLock*  
  Gibt an, ob zunächst versuchen, auf die angegebenen Objekte zuzugreifen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -111,7 +111,7 @@ BOOL IsLocked(DWORD dwItem);
  Wert ungleich NULL, wenn das angegebene Objekt gesperrt ist; andernfalls 0.  
   
 ##  <a name="lock"></a>  CMultiLock::Lock  
- Mit dieser Funktion können Sie Zugriff auf eine oder mehrere Ressourcen gesteuert durch die Synchronisierungsobjekte, die **CMultiLock** Konstruktor.  
+ Mit dieser Funktion können Sie Zugriff auf eine oder mehrere Ressourcen gesteuert durch die Synchronisierungsobjekte, die `CMultiLock` Konstruktor.  
   
 ```  
 DWORD Lock(
@@ -124,10 +124,10 @@ DWORD Lock(
  *dwTimeOut*  
  Gibt die Zeitdauer Synchronisierungsobjekts Protokollpuffers warten (signalisiert). Wenn **UNENDLICHE**, `Lock` wird gewartet, bis das Objekt vor der Rückgabe signalisiert wird.  
   
- `bWaitForAll`  
+ *bWaitForAll*  
  Gibt an, ob alle Objekte, die auf die gewartet zur gleichen Zeit vor der Rückgabe signalisiert werden müssen. Wenn **"false"**, `Lock` zurück, wenn die Objekte, auf die gewartet signalisiert wird.  
   
- `dwWakeMask`  
+ *dwWakeMask*  
  Gibt andere Bedingungen, die zulässig sind, die Wartezeit abgebrochen. Eine vollständige Liste der verfügbaren Optionen für diesen Parameter finden Sie unter [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -135,24 +135,24 @@ DWORD Lock(
   
 -   Zwischen **WAIT_OBJECT_0** und **WAIT_OBJECT_0** + (Anzahl der Objekte - 1)  
   
-     Wenn `bWaitForAll` ist **"true"**, werden alle Objekte (verfügbar) signalisiert. Wenn `bWaitForAll` ist **"false"**, den Rückgabewert - **WAIT_OBJECT_0** steht der Index im Array von Objekten des Objekts, das signalisiert wird, ().  
+     Wenn *bWaitForAll* ist **"true"**, werden alle Objekte (verfügbar) signalisiert. Wenn *bWaitForAll* ist **"false"**, den Rückgabewert - **WAIT_OBJECT_0** steht der Index im Array von Objekten des Objekts, das signalisiert wird, ().  
   
 - **WAIT_OBJECT_0** + (Anzahl der Objekte)  
   
-     Ein Ereignis, das im angegebenen `dwWakeMask` steht in der Eingabewarteschlange des Threads.  
+     Ein Ereignis, das im angegebenen *DwWakeMask* steht in der Eingabewarteschlange des Threads.  
   
 -   Zwischen **WAIT_ABANDONED_0** und **WAIT_ABANDONED_0** + (Anzahl der Objekte - 1)  
   
-     Wenn `bWaitForAll` ist **"true"**, alle Objekte signalisiert sind und mindestens eines der Objekte ist ein abgebrochenes Mutex-Objekt. Wenn `bWaitForAll` ist **"false"**, den Rückgabewert - **WAIT_ABANDONED_0** ist der Index im Array von Objekten von den abgebrochenes Mutex-Objekt, das den Wartevorgang erfüllt hat.  
+     Wenn *bWaitForAll* ist **"true"**, alle Objekte signalisiert sind und mindestens eines der Objekte ist ein abgebrochenes Mutex-Objekt. Wenn *bWaitForAll* ist **"false"**, den Rückgabewert - **WAIT_ABANDONED_0** ist der Index im Array von Objekten von den abgebrochenes Mutex-Objekt, das den Wartevorgang erfüllt hat.  
   
 - **WAIT_TIMEOUT**  
   
      Das Timeoutintervall, die im angegebenen *DwTimeOut* erfolglos den Wartevorgang abgelaufen ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bWaitForAll` ist **"true"**, `Lock` wird erfolgreich zurückgegeben, sobald die Synchronisierungsobjekte gleichzeitig signalisiert werden. Wenn `bWaitForAll` ist **"false"**, `Lock` wird zurückgegeben, sobald eine oder mehrere der Synchronisierungsobjekte signalisiert wird.  
+ Wenn *bWaitForAll* ist **"true"**, `Lock` wird erfolgreich zurückgegeben, sobald die Synchronisierungsobjekte gleichzeitig signalisiert werden. Wenn *bWaitForAll* ist **"false"**, `Lock` wird zurückgegeben, sobald eine oder mehrere der Synchronisierungsobjekte signalisiert wird.  
   
- Wenn `Lock` ist nicht in der Lage, Rückgaben unverzüglich, wartet es nicht mehr als die Anzahl der Millisekunden, die im angegebenen der *DwTimeOut* Parameter vor der Rückgabe. Wenn *DwTimeOut* ist **UNENDLICHE**, `Lock` wird erst zurückgegeben, Zugriff auf ein Objekt erzielt wird, oder eine Bedingung angegeben wird, `dwWakeMask` erfüllt wurde. Andernfalls gilt: Wenn `Lock` wurde ein Synchronisierungsobjekt abrufen können, wird zurückgegeben, die erfolgreich; Wenn nicht der Fall, wird Fehler zurückgegeben.  
+ Wenn `Lock` ist nicht in der Lage, Rückgaben unverzüglich, wartet es nicht mehr als die Anzahl der Millisekunden, die im angegebenen der *DwTimeOut* Parameter vor der Rückgabe. Wenn *DwTimeOut* ist **UNENDLICHE**, `Lock` wird erst zurückgegeben, Zugriff auf ein Objekt erzielt wird, oder eine Bedingung angegeben wird, *DwWakeMask* erfüllt wurde. Andernfalls gilt: Wenn `Lock` wurde ein Synchronisierungsobjekt abrufen können, wird zurückgegeben, die erfolgreich; Wenn nicht der Fall, wird Fehler zurückgegeben.  
   
 ##  <a name="unlock"></a>  CMultiLock::Unlock  
  Gibt das Synchronisierungsobjekt, das im Besitz von `CMultiLock`.  
@@ -167,10 +167,10 @@ BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lCount`  
+ *lCount*  
  Anzahl der Verweis zählt um freizugeben. Muss größer als 0 sein. Wenn die angegebene Menge Verweiszählerwert des Objekts überschreitet die maximale Anzahl führen würde, die Anzahl die nicht geändert, und die Funktion gibt **"false"**.  
   
- `lPrevCount`  
+ *lPrevCount*  
  Zeigt auf eine Variable, um die vorherige Anzahl für das Synchronisierungsobjekt zu empfangen. Wenn **NULL**, die vorherige Anzahl nicht zurückgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -179,7 +179,7 @@ BOOL Unlock(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird aufgerufen, indem Sie `CMultiLock`den Destruktor.  
   
- Die erste Form der `Unlock` versucht, die von verwalteten Synchronisierungsobjekts Entsperren `CMultiLock`. Die zweite Form der `Unlock` versucht zum Entsperren der `CSemaphore` Objekte, die im Besitz von `CMultiLock`. Wenn `CMultiLock` besitzt eine nicht gesperrte `CSemaphore` -Objekt gibt die Funktion **"false"** ist, andernfalls gibt **"true"**. `lCount` und `lpPrevCount` stimmen exakt mit den Parametern des [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Die zweite Form der `Unlock` selten gilt für Situationen multilock.  
+ Die erste Form der `Unlock` versucht, die von verwalteten Synchronisierungsobjekts Entsperren `CMultiLock`. Die zweite Form der `Unlock` versucht zum Entsperren der `CSemaphore` Objekte, die im Besitz von `CMultiLock`. Wenn `CMultiLock` besitzt eine nicht gesperrte `CSemaphore` -Objekt gibt die Funktion **"false"** ist, andernfalls gibt **"true"**. *lCount* und *LpPrevCount* stimmen exakt mit den Parametern des [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Die zweite Form der `Unlock` selten gilt für Situationen multilock.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)

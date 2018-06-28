@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367759"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041272"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase-Klasse
 Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn ein neuer Wert einer Animationsvariablen berechnet werden muss.  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pInterpolator`  
+ *pInterpolator*  
  Ein Zeiger auf benutzerdefinierten Interpolator.  
   
- `ppHandler`  
+ *ppHandler*  
  Die Ausgabe. Einen Zeiger auf die Instanz von CInterpolatorBase enthält, wenn die Funktion zurückgibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Die Ausgabe. Aspekte des Interpolators, die den anfänglichen Wert abhängig sind, die an SetInitialValueAndVelocity übergeben werden.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Die Ausgabe. Aspekte des Interpolators, die von der ursprünglichen Geschwindigkeit abhängen, die an SetInitialValueAndVelocity übergeben werden.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Die Ausgabe. Aspekte des Interpolators, von die die Dauer abhängen, die an SetDuration übergeben werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `duration`  
+ *Dauer*  
  Die Ausgabe. Die Dauer des Übergangs, in Sekunden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `value`  
+ *Wert*  
  Die Ausgabe. Der endgültige Wert einer Variablen am Ende des Übergangs.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `offset`  
+ *offset*  
  Der Offset vom Beginn des Übergangs. Der Offset ist immer größer als oder gleich 0 (null) und kleiner als die Dauer des Übergangs. Diese Methode wird nicht aufgerufen, wenn die Dauer des Übergangs 0 (null) ist.  
   
- `value`  
+ *Wert*  
  Die Ausgabe. Den interpolierten Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `offset`  
+ *offset*  
  Der Offset vom Beginn des Übergangs. Der Offset ist immer größer als oder gleich 0 (null) und kleiner oder gleich der Dauer des Übergangs. Diese Methode wird nicht aufgerufen, wenn die Dauer des Übergangs 0 (null) ist.  
   
- `velocity`  
+ *Geschwindigkeit*  
  Die Ausgabe. Die Geschwindigkeit der Animationsvariablen am Offset.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pInterpolator`  
+ *pInterpolator*  
  Ein Zeiger auf benutzerdefinierten Interpolator.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `duration`  
+ *Dauer*  
  Die Dauer des Übergangs.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `initialValue`  
+ *initialValue*  
  Der Wert der Variablen zu Beginn des Übergangs.  
   
- `initialVelocity`  
+ *initialVelocity*  
  Die Geschwindigkeit der Variablen zu Beginn des Übergangs.  
   
 ### <a name="return-value"></a>Rückgabewert  

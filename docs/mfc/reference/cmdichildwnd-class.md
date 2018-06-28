@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369348"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040846"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd-Klasse
 Stellt die Funktionalität eines untergeordneten Windows-MDI-Fensters (Multiple Document Interface) bereit, zusammen mit Membern zum Verwalten des Fensters.  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  Es gibt drei Möglichkeiten, ein untergeordnetes MDI-Fenster zu erstellen:  
   
--   Erstellen Sie direkt mit **erstellen**.  
+-   Erstellen Sie direkt mit `Create`.  
   
 -   Erstellen Sie direkt mit `LoadFrame`.  
   
 -   Erstellen Sie sie indirekt über eine Dokumentvorlage.  
   
- Vor dem Aufruf **erstellen** oder `LoadFrame`, müssen Sie das Rahmenfenster Objekt auf dem Heap mithilfe des C++ erstellen **neue** Operator. Vor dem Aufruf **erstellen** können Sie auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion die Stile-Symbol und die Klasse für den Frame festgelegt.  
+ Vor dem Aufruf `Create` oder `LoadFrame`, müssen Sie das Rahmenfenster Objekt auf dem Heap mithilfe des C++ erstellen **neue** Operator. Vor dem Aufruf `Create` können Sie auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion die Stile-Symbol und die Klasse für den Frame festgelegt.  
   
- Verwenden der **erstellen** Memberfunktion, die Frame-Erstellungsparameter als sofortige Argumente zu übergeben.  
+ Verwenden der `Create` Memberfunktion, die Frame-Erstellungsparameter als sofortige Argumente zu übergeben.  
   
- `LoadFrame` erfordert weniger Argumente als **erstellen**, und ruft stattdessen die meisten die Standardwerte aus Ressourcen, einschließlich der Frame Beschriftung, Symbol Zugriffstastentabelle und im Menü ab. Um zugänglich `LoadFrame`, alle diese Ressourcen müssen die gleichen Ressourcen-ID (z. B. **IDR_MAINFRAME**).  
+ `LoadFrame` erfordert weniger Argumente als `Create`, und ruft stattdessen die meisten die Standardwerte aus Ressourcen, einschließlich der Frame Beschriftung, Symbol Zugriffstastentabelle und im Menü ab. Um zugänglich `LoadFrame`, alle diese Ressourcen müssen die gleichen Ressourcen-ID (z. B. **IDR_MAINFRAME**).  
   
  Wenn ein `CMDIChildWnd` Objekt enthält, Ansichten und Dokumente, die indirekt durch das Framework statt direkt vom Programmierer erstellt werden. Die `CDocTemplate` Objekt organisiert, die Erstellung des Frames, die Erstellung der enthaltenden Ansichten und die Verbindung der Ansichten dem entsprechenden Dokument. Die Parameter von der `CDocTemplate` Konstruktor angeben der `CRuntimeClass` der drei Klassen beteiligt (Dokument, Rahmen und Ansicht). Ein `CRuntimeClass` Objekt wird vom Framework verwendet, um neue Frames an, wenn vom Benutzer angegeben (z. B. mithilfe der neuen Datei Befehl oder MDI-Fenster neue) dynamisch zu erstellen.  
   
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszClassName`  
+ *lpszClassName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse (eine [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur). Der Klassenname kann einen beliebigen Namen registriert die [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion. Sollte **NULL** für einen Standard `CMDIChildWnd`.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt. Als Text verwendet der Titelleiste.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Zeitfenster [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute. Die **WS_CHILD** Stil ist erforderlich.  
   
- `rect`  
+ *Rect*  
  Enthält die Größe und Position des Fensters. Die `rectDefault` Wert zulässt, geben Sie die Größe und Position des neuen Windows `CMDIChildWnd`.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt das Fenster übergeordnete an. Wenn **NULL**, Hauptfenster der Anwendung verwendet wird.  
   
- `pContext`  
+ *"pContext"*  
  Gibt eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Der derzeit aktive untergeordneten-MDI-Rahmenfenster kann die Beschriftung des übergeordneten Rahmenfensters bestimmen. Diese Funktion ist deaktiviert, durch das Deaktivieren der **FWS_ADDTOTITLE** Formatbit für die untergeordneten Rahmenfenster.  
   
- Das Framework ruft diese Memberfunktion als Antwort auf eine Benutzerbefehl aus, um ein untergeordnetes Fenster erstellt, und das Framework verwendet die `pContext` Parameter ordnungsgemäß das untergeordnete Fenster an die Anwendung eine Verbindung herstellen. Beim Aufruf **erstellen**, `pContext` kann **NULL**.  
+ Das Framework ruft diese Memberfunktion als Antwort auf eine Benutzerbefehl aus, um ein untergeordnetes Fenster erstellt, und das Framework verwendet die *"pContext"* Parameter ordnungsgemäß das untergeordnete Fenster an die Anwendung eine Verbindung herstellen. Beim Aufruf `Create`, *"pContext"* kann **NULL**.  
   
 ### <a name="example"></a>Beispiel  
  Beispiel 1:  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hMenu`  
+ *hMenu*  
  Das Handle des eine Menüressource.  
   
- `hAccel`  
+ *hAccel*  
  Das Handle einer Zugriffstaste-Ressource.  
   
 ### <a name="remarks"></a>Hinweise  

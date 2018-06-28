@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376329"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040128"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl-Klasse
 Dies ist eine Klasse, die Segment und Eigenschaft-Wert-Paar Logik vereinfacht.  
@@ -166,7 +166,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStatChunk`  
+ *pStatChunk*  
  Ein Zeiger auf den Zielwert, beschreibt die Merkmale des Segments.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -182,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pValue`  
+ *pValue*  
  Gibt den Quellwert, aus dem kopiert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -243,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppPropVariant`  
+ *ppPropVariant*  
  Wenn die Funktion zurückgibt, enthält dieser Parameter die Block-Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- S_OK, wenn PROPVARIANT erfolgreich zugewiesen wurde und die Block-Wert wurde erfolgreich kopiert wurde `ppPropVariant`andernfalls ein Fehlercode.  
+ S_OK, wenn PROPVARIANT erfolgreich zugewiesen wurde und die Block-Wert wurde erfolgreich kopiert wurde *PpPropVariant*andernfalls ein Fehlercode.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -300,25 +300,25 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `bVal`  
+ *bVal*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -340,22 +340,22 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -378,25 +378,25 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `dwVal`  
+ *dwVal*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -419,25 +419,25 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `dtVal`  
+ *dtVal*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -460,25 +460,25 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `nVal`  
+ *nVal*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -501,25 +501,25 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `nVal`  
+ *nVal*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -542,25 +542,25 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `lVal`  
+ *lVal*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -583,25 +583,25 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `systemTime`  
+ *systemTime*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -624,25 +624,25 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pkey`  
+ *Primärschlüssel*  
  Gibt einen Schlüssel an.  
   
- `pszValue`  
+ *pszValue*  
  Gibt den Block-Wert festgelegt.  
   
- `chunkType`  
+ *chunkType*  
  Flags geben an, ob dieses Segment einen Text-Typ oder ein Werttyp Eigenschaft enthält. Flagwerte stammen aus der CHUNKSTATE-Enumeration.  
   
- `locale`  
+ *locale*  
  Die Sprache und der untersprachen eines Teils der Text zugeordnet. Block-Gebietsschema Dokument Indexer wird von führen Sie die richtige wörtertrennung des Texts. Wenn das Segment weder ein Werttyp, mit dem Datentyp VT_LPWSTR, VT_LPSTR oder "VT_BSTR" als auch Text-Datentyp ist, wird dieses Feld ignoriert.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Die Länge in Zeichen des Quelltexts aus dem das aktuelle Segment abgeleitet wurde. Ein NULL-Wert gibt die Zeichen für Zeichen-Entsprechung zwischen den Quell- und die abgeleiteten Text an. Ein Wert ungleich NULL bedeutet, dass keine solche direkte Entsprechung vorhanden ist.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Der Offset aus dem des Quelltexts für einen abgeleiteten Datenblock in den Quell-Block beginnt.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Der Typ der Pause, die von der aktuellen Block den vorherigen Block trennt. Werte reichen von der CHUNK_BREAKTYPE-Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  

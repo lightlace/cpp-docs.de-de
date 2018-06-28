@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370506"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039374"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox-Klasse
 Implementiert ein Kombinationsfeld, das eine Liste von Schriftarten enthält. Das Kombinationsfeld kann in einem Menübandbereich platziert werden.  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nFontType`  
+ [in] *nFontType*  
  Gibt die Schriftart der Schriftarten hinzufügen.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Gibt den Zeichensatz der Schriftarten hinzufügen.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Gibt die Schriftbreite und Schriftfamilie der Schriftarten hinzufügen.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element im Kombinationsfeld auswählt.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Gibt an, welche Schriftart Typen im Kombinationsfeld angezeigt. Gültige Optionen sind **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, und **TRUETYPE_FONTTYPE**, oder jede bitweise Kombination davon.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Filtert die Schriftarten in das Kombinationsfeld auf solche, die dem angegebenen Zeichensatz gehören...  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Gibt die Schriftbreite und Schriftfamilie der Schriftarten, die im Kombinationsfeld angezeigt werden.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Gibt die Breite des im Kombinationsfeld in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu möglichen `nFontType` Parameterwerte, finden Sie unter [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) in das Windows SDK-Dokumentation.  
+ Weitere Informationen zu möglichen *nFontType* Parameterwerte, finden Sie unter [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) in das Windows SDK-Dokumentation.  
   
- Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können `nCharSet`, und gültigen Werten, die zugewiesen werden können `nPitchAndFamily`, finden Sie unter [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) in das Windows SDK-Dokumentation.  
+ Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können *nCharSet*, gültige Werte, die zugewiesen werden können, und *nPitchAndFamily*, finden Sie unter [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) in der Windows SDK-Dokumentation.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszName`  
+ ' Wert *  
  Gibt den Namen der Schriftart auswählen.  
   
- `nCharSet`  
+ *nCharSet*  
  Gibt den Zeichensatz für die ausgewählte Schriftart an.  
   
- `bExact`  
+ *bExact*  
  `TRUE` um anzugeben, dass es sich bei der Zeichensatz übereinstimmen muss, wenn Sie eine Schriftart auswählen; `FALSE` um anzugeben, dass der Zeichensatz ignoriert werden kann, wenn Sie eine Schriftart auswählen.  
   
 ### <a name="return-value"></a>Rückgabewert  

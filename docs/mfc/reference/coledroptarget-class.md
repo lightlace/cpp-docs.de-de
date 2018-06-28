@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373132"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039601"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget-Klasse
 Stellt den Kommunikationsmechanismus zwischen einem Fenster und den OLE-Bibliotheken bereit.  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster den Cursor wird in Betrieb.  
   
- `pDataObject`  
+ *pDataObject*  
  Verweist auf das Datenobjekt, das mit den Daten, die gelöscht werden können.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
   
- `point`  
+ *Punkt*  
  Enthält die aktuelle Position des Cursors in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Auswirkungen, die auftreten würden, wenn ein solches löschen, an der vom angegebenen Position versucht wurden `point`. Es kann eine oder mehrere der folgenden sein:  
+ Die Auswirkungen, die auftreten würden, wenn ein solches löschen, an der vom angegebenen Position versucht wurden *zeigen*. Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_NONE` Ein solches löschen, ist nicht zulässig.  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster den Cursor verlässt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster, dem der Cursor über befindet.  
   
- `pDataObject`  
+ *pDataObject*  
  Verweist auf das Datenobjekt, das die Daten, die gelöscht werden sollen.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
   
- `point`  
+ *Punkt*  
  Enthält die aktuelle Position des Cursors in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Auswirkungen, die auftreten würden, wenn ein solches löschen, an der vom angegebenen Position versucht wurden `point`. Es kann eine oder mehrere der folgenden sein:  
+ Die Auswirkungen, die auftreten würden, wenn ein solches löschen, an der vom angegebenen Position versucht wurden *zeigen*. Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_NONE` Ein solches löschen, ist nicht zulässig.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Wird aufgerufen, durch das Framework vor dem Aufruf [OnDragEnter](#ondragenter) oder [OnDragOver](#ondragover) um zu bestimmen, ob `point` befindet sich im Bildlaufbereich.  
+ Wird aufgerufen, durch das Framework vor dem Aufruf [OnDragEnter](#ondragenter) oder [OnDragOver](#ondragover) um zu bestimmen, ob *zeigen* befindet sich im Bildlaufbereich.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster den Cursor ist derzeit über.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
   
- `point`  
+ *Punkt*  
  Enthält die Position des Cursors in Pixel relativ zu dem Bildschirm.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Auswirkungen, die auftreten würden, wenn ein solches löschen, an der vom angegebenen Position versucht wurden `point`. Es kann eine oder mehrere der folgenden sein:  
+ Die Auswirkungen, die auftreten würden, wenn ein solches löschen, an der vom angegebenen Position versucht wurden *zeigen*. Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_NONE` Ein solches löschen, ist nicht zulässig.  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster den Cursor ist derzeit über.  
   
- `pDataObject`  
+ *pDataObject*  
  Verweist auf das Datenobjekt, das die Daten, die gelöscht werden sollen.  
   
- `dropEffect`  
+ *-DropEffect-*  
  Die Auswirkungen, die der Benutzer für den Löschvorgang ausgewählt haben. Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_COPY` Ein Kopiervorgang würde ausgeführt werden.  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten würde hergestellt werden.  
   
- `point`  
+ *Punkt*  
  Enthält die Position des Cursors in Pixel relativ zu dem Bildschirm.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster den Cursor ist derzeit über.  
   
- `pDataObject`  
+ *pDataObject*  
  Verweist auf das Datenobjekt, das die Daten, die gelöscht werden sollen.  
   
- `dropDefault`  
+ *dropDefault*  
  Die Auswirkungen, die für die Standard-Drop-Vorgang basierend auf den aktuellen Status der Benutzer ausgewählt haben. Es kann sein `DROPEFFECT_NONE`. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
   
- `dropList`  
+ *Dropdownliste*  
  Eine Liste der Drop-Effekte, die die Drop-Quelle unterstützt. Drop-Effekt-Werte können mit dem bitweisen OR kombiniert werden ( **&#124;**) Vorgang. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
   
- `point`  
+ *Punkt*  
  Enthält die Position des Cursors in Pixel relativ zu dem Bildschirm.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Drop-Effekt, die aus der Drop-Versuch, an der vom angegebenen Position resultieren `point`. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
+ Die Drop-Effekt, die aus der Drop-Versuch, an der vom angegebenen Position resultieren *zeigen*. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft zuerst diese Funktion. Wenn sie den Löschvorgang nicht verarbeiten kann, ruft das Framework dann [OnDrop](#ondrop). Setzen Sie in der Regel [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in Ansichtsklasse zur Unterstützung der rechten Maustaste ziehen und ablegen. In der Regel die Ansichtsklasse [OnDrop](../../mfc/reference/cview-class.md#ondrop) wird verwendet, um die Groß-/Kleinschreibung Unterstützung für einfache Drag & Drop zu behandeln.  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster, das als Ablageziel registriert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  

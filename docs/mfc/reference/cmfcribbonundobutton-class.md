@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370167"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041246"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton-Klasse
 Die `CMFCRibbonUndoButton` Klasse implementiert eine Dropdownliste-Schaltfläche, die letzten Benutzerbefehle enthält. Benutzer können eine oder mehrere der neuesten Befehle auswählen, aus der Dropdown-Liste entweder wiederherstellen oder rückgängig machen.  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Die aktionsbezeichnung, die in der Dropdown-Liste angezeigt werden sollen.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Gibt die Befehls-ID an.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Gibt die Beschriftung der Schaltfläche.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Nullbasierte Index in der Bildliste des übergeordneten Objekts für die Schaltfläche Miniaturansicht.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Nullbasierten Index in der Bildliste des übergeordneten Objekts für die von großen Schaltflächenbild.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Ein Handle für ein Symbol, das Sie als eine Schaltfläche verwenden können.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

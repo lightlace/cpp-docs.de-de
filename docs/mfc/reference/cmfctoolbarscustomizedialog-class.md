@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7015e3be189bce8745777ef7353e1f2788a6f6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b4c2d7de8c9be8aa33cd5849c089a2caac1271b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378180"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041876"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog-Klasse
 Ein nicht modales Registerkarte-Dialogfeld ( [CPropertySheet-Klasse](../../mfc/reference/cpropertysheet-class.md)) mit der der Benutzer die Symbolleisten, Menüs, Tastenkombinationen, benutzerdefinierte Tools und visuellen Stil in einer Anwendung anpassen. In der Regel greift der Benutzer durch Auswählen von **Anpassen** im Menü **Tools** auf dieses Dialogfeld zu.  
@@ -137,16 +137,16 @@ void AddButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCategoryId`  
+ [in] *UiCategoryId*  
  Gibt die Kategorie-ID in der die Schaltfläche eingefügt.  
   
- [in] `button`  
+ [in] *Schaltfläche*  
  Gibt die Schaltfläche zum Einfügen.  
   
- [in] `iInsertBefore`  
+ [in] *iInsertBefore*  
  Gibt den nullbasierten Index des eine Symbolleisten-Schaltfläche, die vor der die Schaltfläche "" eingefügt wird.  
   
- [in] `lpszCategory`  
+ [in] *LpszCategory*  
  Gibt die Kategoriezeichenfolge "zum Einfügen der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -171,14 +171,14 @@ BOOL AddMenu(UINT uiMenuResId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiMenuResId`  
+ [in] *UiMenuResId*  
  Gibt die Ressourcen-ID eines Menüs zu laden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn ein Menü erfolgreich hinzugefügt wurde. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Aufruf von `AddMenuCommands`, `bPopup` ist `FALSE`. Diese Methode ist daher nicht Menüelemente hinzugefügt, die Untermenüs zur Liste der Befehle enthalten. Diese Methode fügt die Menüelemente in der Untermenüs in die Liste der Befehle.  
+ Im Aufruf von `AddMenuCommands`, *bPopup* ist `FALSE`. Diese Methode ist daher nicht Menüelemente hinzugefügt, die Untermenüs zur Liste der Befehle enthalten. Diese Methode fügt die Menüelemente in der Untermenüs in die Liste der Befehle.  
   
 ##  <a name="addmenucommands"></a>  CMFCToolBarsCustomizeDialog::AddMenuCommands  
  Fügt Elemente zur Liste der Befehle in der **Befehle** Seite, um alle Elemente im angegebenen Menü darstellen.  
@@ -192,22 +192,22 @@ void AddMenuCommands(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMenu`  
+ [in] *pMenu*  
  Ein Zeiger auf das CMenu hinzuzufügende Objekt.  
   
- [in] `bPopup`  
+ [in] *bPopup*  
  Gibt an, ob die Popup-Menüelemente zur Liste der Befehle eingefügt.  
   
- [in] `lpszCategory`  
+ [in] *LpszCategory*  
  Der Name der Kategorie, die Sie im Menü Einfügen.  
   
- [in] `lpszMenuPath`  
+ [in] *LpszMenuPath*  
  Ein Präfix, das den Namen hinzugefügt wird, wenn der Befehl, in angezeigt wird, der **alle Kategorien** Liste.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `AddMenuCommands` Methode durchläuft alle Menüelemente des `pMenu`. Für jedes Menüelement, das nicht über ein Untermenü enthält, erstellt diese Methode eine [CMFCToolBarButton Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) -Objekt und ruft die [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) Methode, um das Menüelement als eine Symbolleiste hinzufügen Schaltfläche, um die Liste der Befehle auf den **Befehle** Seite. Trennzeichen werden dabei ignoriert.  
+ Die `AddMenuCommands` Methode durchläuft alle Menüelemente des *pMenu*. Für jedes Menüelement, das nicht über ein Untermenü enthält, erstellt diese Methode eine [CMFCToolBarButton Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) -Objekt und ruft die [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) Methode, um das Menüelement als eine Symbolleiste hinzufügen Schaltfläche, um die Liste der Befehle auf den **Befehle** Seite. Trennzeichen werden dabei ignoriert.  
   
- Wenn `bPopup` ist `TRUE`, für jedes Menüelement, das ein Untermenü enthält diese Methode erstellt eine [CMFCToolBarMenuButton Klasse](../../mfc/reference/cmfctoolbarmenubutton-class.md) -Objekt und fügt es in die Liste der Befehle durch Aufrufen von `AddButton`. Andernfalls werden die Menüelemente, die darin enthaltenen Untermenüs enthalten nicht in der Liste der Befehle angezeigt. In beiden Fällen wird beim `AddMenuCommands` findet ein Menüelement mit einem Untermenü ruft er sich selbst rekursiv Übergabe eines Zeigers an das Untermenü die Option als die `pMenu` Parameter und die Bezeichnung des das Untermenü die Option zum Anfügen `lpszMenuPath`.  
+ Wenn *bPopup* ist `TRUE`, für jedes Menüelement, das ein Untermenü enthält diese Methode erstellt eine [CMFCToolBarMenuButton Klasse](../../mfc/reference/cmfctoolbarmenubutton-class.md) -Objekt und fügt es in die Liste der Befehle durch Aufrufen von `AddButton` . Andernfalls werden die Menüelemente, die darin enthaltenen Untermenüs enthalten nicht in der Liste der Befehle angezeigt. In beiden Fällen wird beim `AddMenuCommands` findet ein Menüelement mit einem Untermenü ruft er sich selbst rekursiv Übergabe eines Zeigers an das Untermenü die Option als die *pMenu* Parameter und die Bezeichnung des das Untermenü die Option zum Anfügen *LpszMenuPath*.  
   
 ##  <a name="addtoolbar"></a>  CMFCToolBarsCustomizeDialog::AddToolBar  
  Lädt eine Symbolleiste aus der Ressourcen an. Klicken Sie dann für jeden Befehl in den Menüs Aufrufen der [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) Methode zum Einfügen einer Schaltfläche in der Liste der Befehle auf den **Befehle** Seite in der angegebenen Kategorie.  
@@ -223,13 +223,13 @@ BOOL AddToolBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCategoryId`  
+ [in] *UiCategoryId*  
  Gibt die Ressourcen-ID der Kategorie, um die Symbolleiste hinzugefügt.  
   
- [in] `uiToolbarResId`  
+ [in] *UiToolbarResId*  
  Gibt die Ressourcen-ID, einer Symbolleiste die Liste der Befehle, deren Befehle eingefügt werden.  
   
- [in] `lpszCategory`  
+ [in] *LpszCategory*  
  Gibt den Namen der Kategorie, der die Symbolleiste hinzugefügt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -251,7 +251,7 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lstTools`  
+ [in] *LstTools*  
  Die Liste der benutzerdefinierten Tools, um zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -274,13 +274,13 @@ CMFCToolBarsCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Ein Zeiger auf den übergeordneten Frame. Dieser Parameter darf nicht `NULL` sein.  
   
- [in] `bAutoSetFromMenus`  
+ [in] *bAutoSetFromMenus*  
  Ein boolescher Wert, der angibt, ob die Befehle im Menü auf alle Menüs zur Liste der Befehle hinzufügen der **Befehle** Seite. Wenn dieser Parameter ist `TRUE`, werden die Befehle im Menü hinzugefügt. Andernfalls sind die Menübefehle nicht hinzugefügt werden.  
   
- [in] `uiFlags`  
+ [in] *UiFlags*  
  Eine Kombination von Flags, die das Verhalten des Dialogfelds auswirken. Dieser Parameter kann eine oder mehrere der folgenden Werte sein:  
   
 - `AFX_CUSTOMIZE_MENU_SHADOWS`  
@@ -299,13 +299,13 @@ CMFCToolBarsCustomizeDialog(
   
 - `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
   
- [in] `plistCustomPages`  
+ [in] *PlistCustomPages*  
  Ein Zeiger auf eine Liste von `CRuntimeClass` Objekten, die zusätzliche benutzerdefinierte Seiten angeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `plistCustomPages` Parameter bezieht sich auf die Liste der `CRuntimeClass` Objekte, die zusätzliche benutzerdefinierte Seiten angeben. Der Konstruktor hinzugefügt mehr Seiten im Dialogfeld mit den [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) Methode. Finden Sie im Beispiel CustomPages ein Beispiel für die weiteren Seiten fügt die **anpassen** (Dialogfeld).  
+ Die *PlistCustomPages* Parameter bezieht sich auf die Liste der `CRuntimeClass` Objekte, die zusätzliche benutzerdefinierte Seiten angeben. Der Konstruktor hinzugefügt mehr Seiten im Dialogfeld mit den [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) Methode. Finden Sie im Beispiel CustomPages ein Beispiel für die weiteren Seiten fügt die **anpassen** (Dialogfeld).  
   
- Weitere Informationen zu den Werten, die Sie übergeben können die `uiFlags` Parameter, finden Sie unter [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
+ Weitere Informationen zu den Werten, die Sie übergeben können die *UiFlags* Parameter, finden Sie unter [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht das Erstellen von ein Objekt von der `CMFCToolBarsCustomizeDialog` Klasse. Dieser Codeausschnitt ist Teil der [benutzerdefinierte Seiten Beispiel](../../visual-cpp-samples.md).  
@@ -333,13 +333,13 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie die benutzerdefinierten Symbolleisten; `FALSE` um Symbolleisten zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bEnable` ist `TRUE`, **neu**, **umbenennen** und **löschen** Schaltflächen angezeigt werden, auf die **Symbolleisten** Seite.  
+ Wenn *bAktivieren* ist `TRUE`, **neu**, **umbenennen** und **löschen** Schaltflächen angezeigt werden, auf die **Symbolleisten**  Seite.  
   
- Standardmäßig oder wenn `bEnable` ist `FALSE`, diese Schaltflächen nicht angezeigt, und der Benutzer keine neue Symbolleisten definieren.  
+ Standardmäßig oder wenn *bAktivieren* ist `FALSE`, diese Schaltflächen nicht angezeigt, und der Benutzer keine neue Symbolleisten definieren.  
   
 ##  <a name="fillallcommandslist"></a>  CMFCToolBarsCustomizeDialog::FillAllCommandsList  
  Füllt die angegebene `CListBox` Objekt mit den Befehlen in der **alle Befehle** Kategorie.  
@@ -369,10 +369,10 @@ void FillCategoriesComboBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `wndCategory`  
+ [out] *WndCategory*  
  Ein Verweis auf die `CComboBox` zu füllende Objekt.  
   
- [in] `bAddEmpty`  
+ [in] *bAddEmpty*  
  Ein boolescher Wert, der angibt, ob das Kombinationsfeld, denen keine Befehle sind Kategorien hinzugefügt werden. Wenn dieser Parameter ist `TRUE`, leere Kategorien werden dem Kombinationsfeld hinzugefügt. Andernfalls werden leere Kategorien nicht hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -394,10 +394,10 @@ void FillCategoriesListBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `wndCategory`  
+ [out] *WndCategory*  
  Ein Verweis auf die `CListBox` zu füllende Objekt.  
   
- [in] `bAddEmpty`  
+ [in] *bAddEmpty*  
  Ein boolescher Wert, der angibt, ob dem Listenfeld aus, denen keine Befehle sind Kategorien hinzugefügt werden. Wenn dieser Parameter ist `TRUE`, leere Kategorien im Listenfeld hinzugefügt werden. Andernfalls werden leere Kategorien nicht hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -417,7 +417,7 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die ID des Befehls abgerufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -433,17 +433,17 @@ int GetCountInCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszItemName`  
+ [in] *LpszItemName*  
  Die Beschriftung entsprechend.  
   
- [in] `lstCommands`  
+ [in] *LstCommands*  
  Ein Verweis auf eine Liste mit `CMFCToolBarButton` Objekte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Elemente in der bereitgestellten Liste entspricht, dessen Text-Bezeichnung `lpszItemName`.  
+ Die Anzahl der Elemente in der bereitgestellten Liste entspricht, dessen Text-Bezeichnung *LpszItemName*.  
   
 ### <a name="remarks"></a>Hinweise  
- Jedes Element in der Liste der bereitgestellten Objekt muss vom Typ `CMFCToolBarButton`. Diese Methode vergleicht `lpszItemName` mit der [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) -Datenmember.  
+ Jedes Element in der Liste der bereitgestellten Objekt muss vom Typ `CMFCToolBarButton`. Diese Methode vergleicht *LpszItemName* mit der [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) -Datenmember.  
   
 ##  <a name="getflags"></a>  CMFCToolBarsCustomizeDialog::GetFlags  
  Ruft den Satz von Flags, die das Verhalten des Dialogfelds beeinflussen ab.  
@@ -456,7 +456,7 @@ UINT GetFlags() const;
  Der Satz von Flags, die das Verhalten des Dialogfelds auswirken.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft den Wert des der `uiFlags` Parameter, der an den Konstruktor übergeben wird. Der Rückgabewert kann es sich um eine oder mehrere der folgenden Werte sein:  
+ Diese Methode ruft den Wert des der *UiFlags* Parameter, der an den Konstruktor übergeben wird. Der Rückgabewert kann es sich um eine oder mehrere der folgenden Werte sein:  
   
  `AFX_CUSTOMIZE_MENU_SHADOWS`  
  Ermöglicht es dem Benutzer, die Shadow-Darstellung des Menüs festzulegen.  
@@ -492,7 +492,7 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `pSelTool`  
+ [in, out] *pSelTool*  
  Ein Zeiger auf die Benutzer-Tool-Objekt, das geändert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -506,7 +506,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `pAccel`  
+ [in, out] *pAccel*  
  Zeiger auf die vorgeschlagene Tastatur-speicherzuweisung, die als ausgedrückt ist eine [ACCELERATION](http://msdn.microsoft.com/library/windows/desktop/ms646340) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -523,11 +523,11 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `pSelTool`  
+ [in, out] *pSelTool*  
  Ein Zeiger auf das Tool-Benutzerobjekt, die ersetzt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird vom Framework aufgerufen, wenn die Eigenschaften eines benutzerdefinierten Tools zu ändern. Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie die `OnBeforeChangeTool` Methode in einer Klasse abgeleitet `CMFCToolBarsCustomizeDialog` Wunsch Verarbeitung auszuführen, bevor eine Änderung an einem Tool, das auftritt, z. B. Freigeben von Ressourcen, `pSelTool` verwendet.  
+ Diese Methode wird vom Framework aufgerufen, wenn die Eigenschaften eines benutzerdefinierten Tools zu ändern. Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie die `OnBeforeChangeTool` Methode in einer Klasse abgeleitet `CMFCToolBarsCustomizeDialog` Wunsch Verarbeitung auszuführen, bevor eine Änderung an einem Tool, das auftritt, z. B. Freigeben von Ressourcen, *pSelTool* verwendet.  
   
 ##  <a name="onedittoolbarmenuimage"></a>  CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
  Startet einen Grafik-Editor, damit ein Benutzer eine Symbolleiste oder Element auf das Symbol anpassen kann.  
@@ -540,13 +540,13 @@ virtual BOOL OnEditToolbarMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster.  
   
- [in] `bitmap`  
+ [in] *mithilfe einer Bitmap*  
  Ein Verweis auf ein Bitmapobjekt mithilfe einer bearbeitet werden.  
   
- [in] `nBitsPerPixel`  
+ [in] *nBitsPerPixel*  
  Bitmap-Farbe Auflösung in Bits pro Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -604,20 +604,20 @@ int RemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCategoryId`  
+ [in] *UiCategoryId*  
  Gibt die Kategorie-ID aus dem die Schaltfläche zu entfernen.  
   
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
  Gibt die Befehls-ID der Schaltfläche.  
   
- [in] `lpszCategory`  
+ [in] *LpszCategory*  
  Gibt den Namen der Kategorie, von dem die Schaltfläche zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der entfernten Schaltfläche oder-1 zurück, wenn die angegebene Befehls-ID in der angegebenen Kategorie nicht gefunden wurde. Wenn `uiCategoryId` ist-1, wird 0 zurückgegeben.  
+ Der nullbasierte Index der entfernten Schaltfläche oder-1 zurück, wenn die angegebene Befehls-ID in der angegebenen Kategorie nicht gefunden wurde. Wenn *UiCategoryId* ist-1, wird 0 zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Um eine Schaltfläche aus allen Kategorien zu entfernen, rufen Sie die erste Überladung dieser Methode und Set `uiCategoryId` auf-1 festgelegt.  
+ Um eine Schaltfläche aus allen Kategorien zu entfernen, rufen Sie die erste Überladung dieser Methode und Set *UiCategoryId* auf-1 festgelegt.  
   
 ##  <a name="renamecategory"></a>  CMFCToolBarsCustomizeDialog::RenameCategory  
  Benennt eine Kategorie im Listenfeld der Kategorien auf die **Befehle** Seite.  
@@ -629,10 +629,10 @@ BOOL RenameCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszCategoryOld`  
+ [in] *LpszCategoryOld*  
  Der Name der Kategorie zu ändern.  
   
- [in] `lpszCategoryNew`  
+ [in] *LpszCategoryNew*  
  Der neue Kategoriename.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -651,11 +651,11 @@ void ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Gibt den Befehl an der Schaltfläche ersetzt werden.  
   
- [in] `button`  
- Ein `const` Verweis auf die Symbolleiste Button-Objekt, das die Schaltfläche mit den alten ersetzt.  
+ [in] *Schaltfläche*  
+ Ein **const** Verweis auf die Symbolleiste Button-Objekt, das die Schaltfläche mit den alten ersetzt.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), oder [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) Fügt eine -Befehls auf die **Befehle** Seite in Form von Befehl ist eine [CMFCToolBarButton Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) Objekt (oder eine [CMFCToolBarMenuButton Klasse](../../mfc/reference/cmfctoolbarmenubutton-class.md) Objekt für ein Menü Element, das ein Untermenü hinzugefügt, indem enthält `AddMenuCommands`). Das Framework ruft auch die folgenden drei Methoden zum automatischen Hinzufügen von Befehlen. Wenn Sie einen Befehl aus, um stattdessen durch ein abgeleiteter Typ dargestellt werden soll, rufen Sie `ReplaceButton` und eine Schaltfläche des abgeleiteten Typs übergeben.  
@@ -673,7 +673,7 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszCategory`  
+ [in] *LpszCategory*  
  Der Name der Kategorie.  
   
 ### <a name="return-value"></a>Rückgabewert  

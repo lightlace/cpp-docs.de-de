@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377365"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039192"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement enthält ( [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)).  
@@ -138,7 +138,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  2. Konstruieren Sie ein `CMFCToolBarComboBoxButton`-Objekt.  
   
- 3. In der Message-Handler, der verarbeitet die `AFX_WM_RESETTOOLBAR` angezeigt wird, ersetzen Sie die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche mit [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Ersetzen Sie in der Message-Handler, der die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md). Ein Beispiel für eine Symbolleiste kombinationsfeldschaltfläche finden Sie in diesem Beispielprojekt VisualStudioDemo.  
   
@@ -168,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszItem`  
+ [in] *LpszItem*  
  Der Text des Elements zum Listenfeld hinzugefügt werden soll.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Die Daten, die Verbindung mit den Elementen im Listenfeld hinzu.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -192,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszItem`  
+ [in] *LpszItem*  
  Der Text des Elements zum Listenfeld hinzugefügt werden soll.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Die Daten, die Verbindung mit den Elementen im Listenfeld hinzu.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -226,16 +226,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Die Befehls-ID von der Schaltfläche "Neu".  
   
- [in] `iImage`  
+ [in] *iImage*  
  Der Image-Index des Bilds der Schaltfläche "Neu" zugeordnet werden soll.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Der Stil der mit der Schaltfläche "Neu".  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Die Breite in Pixel der Schaltfläche "Neu".  
   
 ### <a name="remarks"></a>Hinweise  
@@ -263,10 +263,10 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszItem1`  
+ [in] *lpszItem1*  
  Die erste zu vergleichende Zeichenfolge.  
   
- [in] `lpszItem2`  
+ [in] *lpszItem2*  
  Die zweite zu vergleichende Zeichenfolge.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -306,10 +306,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.  
   
- [in] `rect`  
+ [in] *Rect*  
  Umschließende Rechteck des Kombinationsfelds.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -326,13 +326,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umgebende Rechteck neben dem neuen Bearbeitungsfeld.  
   
- [in] `dwEditStyle`  
+ [in] *DwEditStyle*  
  Das Format des neuen Steuerelements Eingabefeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -351,13 +351,13 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index des Elements gelöscht werden soll.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Die Daten, die Verbindung mit den Elementen gelöscht werden soll.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text des Elements gelöscht werden soll. Wenn mehrere Elemente mit demselben Text vorhanden sind, wird das erste Element gelöscht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -383,7 +383,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie die Felder bearbeiten und Kombinationsfelder; `FALSE` So deaktivieren Sie die Felder bearbeiten und Kombinationsfelder.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -397,7 +397,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `menuButton`  
+ [out] *MenuButton*  
  Verweis auf eine Menüschaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -411,7 +411,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text für die Suche im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -429,10 +429,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] `bIsFocus`  
+ [in] *bIsFocus*  
  `TRUE` mit Fokus Schaltflächen, um nur zu suchen; `FALSE` , alle Schaltflächen gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -482,7 +482,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -511,7 +511,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -550,7 +550,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Nullbasierten Index eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -569,10 +569,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -589,7 +589,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -608,10 +608,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -630,10 +630,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -674,7 +674,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID von einer bestimmten Kombinationsfelds-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -728,7 +728,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hwnd`  
+ [in] *Hwnd*  
  Ein Fensterhandle.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -765,7 +765,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  Die Benachrichtigung, die dem Befehl zugeordnet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -789,13 +789,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
   
- [in] `sizeDefault`  
+ [in] *SizeDefault*  
  Die Standardgröße des Kombinationsfelds-Schaltfläche.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Der Status der Andocken der übergeordneten Symbolleiste. `TRUE` Wenn die Symbolleiste horizontal angedockt und `FALSE` Wenn die Symbolleiste vertikal verankert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -809,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf den neuen übergeordneten Symbolleiste.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -822,10 +822,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWnd`  
+ [in] *pWnd*  
  Ein Zeiger auf das übergeordnete Fenster eines Kombinationsfelds-Schaltfläche.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Reserviert für die Verwendung in einer abgeleiteten Klasse.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -841,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -869,28 +869,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `Pdc`  
+ [in] *Pdc*  
  Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck der Schaltfläche.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Die Auflistung der Bilder, die die Schaltfläche zugeordnet ist.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Der Status der Andocken der übergeordneten Symbolleiste. `TRUE` Wenn die Symbolleiste horizontal angedockt und `FALSE` Wenn die Symbolleiste vertikal verankert ist.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  Gibt an, ob die Anwendung im Anpassungsmodus ist.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Ob der kombinationsfeldschaltfläche hervorgehoben gezeichnet werden soll.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  Ob der kombinationsfeldschaltfläche mit einem Rahmen gezeichnet werden soll.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` schattierte deaktivierte Schaltflächen gezeichnet werden soll; `FALSE` verwenden Sie die deaktivierten Bilder Auflistung.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
@@ -904,13 +904,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck des Kombinationsfelds-Schaltfläche.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` Wenn das Kombinationsfeld für den Schaltfläche Feld ausgewählt ist; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -938,7 +938,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
  Ob der kombinationsfeldschaltfläche anzeigen oder ausblenden.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
@@ -949,7 +949,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iSize`  
+ [in] *iSize*  
  Die neue Breite des Kombinationsfelds-Schaltfläche.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
@@ -964,16 +964,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster für die Kombinationsfelds-Schaltfläche.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  ID des Kombinationsfelds-Schaltfläche.  
   
- [in] `wndToolTip`  
+ [in] *WndToolTip*  
  Die QuickInfo der kombinationsfeldschaltfläche zugeordnet werden soll.  
   
- [in] `str`  
+ [in] *str*  
  Der QuickInfo-Text.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1002,16 +1002,16 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index eines Elements im Listenfeld.  
   
- [in] `bNotify`  
+ [in] *bNotify*  
  `TRUE` Um der Auswahl der kombinationsfeldschaltfläche benachrichtigen; andernfalls `FALSE`.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Die Daten, die einem Element im Listenfeld zugeordnet.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1039,16 +1039,16 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID der kombinationsfeldschaltfläche an, die im Listenfeld enthält.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index des Elements im Listenfeld. Der Wert-1 entfernt alle aktuellen Auswahl im Listenfeld und löscht im Bearbeitungsfeld.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Die Daten eines Elements im Listenfeld.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text eines Elements im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1064,7 +1064,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `ar`  
+ [in, out] *Ar*  
  Die `CArchive` zu serialisierende Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1080,10 +1080,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParent`  
+ [in] *pParent*  
  Das übergeordnete Fenster des Kombinationsfelds-Schaltfläche.  
   
- [out] `data`  
+ [out] *Daten*  
  Ein `CAccessibilityData` Objekt, das die barrierefreiheitsdaten aus der kombinationsfeldschaltfläche empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1097,7 +1097,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCenterVert`  
+ [in] *bCenterVert*  
  `TRUE` Um Centers Kombinationsfelds-Schaltfläche auf der Symbolleiste. `FALSE` zum Ausrichten der Kombinationsfelds-Schaltfläche am oberen Rand der Symbolleiste.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1111,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiResID`  
+ [in] *UiResID*  
  Die Verknüpfung im Menü-Ressourcen-ID.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1122,7 +1122,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nHeight`  
+ [in] *nHeight*  
  Die Höhe in Pixel, der im Listenfeld.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1136,7 +1136,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` für eine flache Darstellung; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1150,7 +1150,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nStyle`  
+ [in] *nStyle*  
  Eine bitweise Kombination (OR) von Toolbar-Stile.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1164,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Ein Zeiger auf eine Zeichenfolge, die den Text für das Eingabefeld enthält.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376876"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041632"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray-Klasse
 Eine Klasse zum Arbeiten mit Arrays beliebiger Dimension und beliebigen Typs.  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppvData`  
+ *ppvData*  
  Ein Zeiger auf einen Zeiger auf die Arraydaten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDims`  
+ *dwDims*  
  Die Anzahl der Dimensionen in der sicheren Arrays.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `saSrc`  
+ *saSrc*  
  Eine vorhandene `COleSafeArray` Objekt oder **SAFEARRAY** in das neue kopiert werden `COleSafeArray` Objekt.  
   
- `vtSrc`  
+ *vtSrc*  
  Die **VARTYPE** des neuen `COleSafeArray` Objekt.  
   
- `psaSrc`  
+ *psaSrc*  
  Ein Zeiger auf eine **SAFEARRAY** in das neue kopiert werden `COleSafeArray` Objekt.  
   
  *varSrc*  
  Eine vorhandene **VARIANT** oder `COleVariant` -Objekt, in das neue kopiert werden `COleSafeArray` Objekt.  
   
- `pSrc`  
+ *pSrc*  
  Ein Zeiger auf eine **VARIANT** -Objekt, in das neue kopiert werden `COleSafeArray` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Alle diese Konstruktoren erstellen Sie eine neue `COleSafeArray` Objekte. Wenn es keinen Parameter, ein leeres gibt `COleSafeArray` Objekt erstellt wird ( `VT_EMPTY`). Wenn die `COleSafeArray` wird kopiert, von einem anderen array, dessen [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) wird implizit bezeichnet (eine `COleSafeArray`, `COleVariant`, oder **VARIANT**), die **VARTYPE** von Das Quellarray beibehalten, und es muss nicht angegeben werden. Wenn die `COleSafeArray` wird kopiert, von einem anderen array, dessen **VARTYPE** nicht bekannt ist ( **SAFEARRAY**), die **VARTYPE** muss angegeben werden, der `vtSrc` Parameter.  
+ Alle diese Konstruktoren erstellen Sie eine neue `COleSafeArray` Objekte. Wenn es keinen Parameter, ein leeres gibt `COleSafeArray` Objekt erstellt wird ( `VT_EMPTY`). Wenn die `COleSafeArray` wird kopiert, von einem anderen array, dessen [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) wird implizit bezeichnet (eine `COleSafeArray`, `COleVariant`, oder **VARIANT**), die **VARTYPE** von Das Quellarray beibehalten, und es muss nicht angegeben werden. Wenn die `COleSafeArray` wird kopiert, von einem anderen array, dessen **VARTYPE** nicht bekannt ist ( **SAFEARRAY**), die **VARTYPE** muss angegeben werden, der *VtSrc* Parameter.  
   
  Bei einem Fehler, löst die Funktion eine [CMemoryException](../../mfc/reference/cmemoryexception-class.md) oder [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `vtSrc`  
- Der Basistyp des Arrays (d. h. die **VARTYPE** jedes Element des Arrays). Die **VARTYPE** auf eine Teilmenge von Varianten-Typen beschränkt ist. Weder die **VT_ARRAY** noch die **VT_BYREF** Flag festgelegt werden. `VT_EMPTY` und **VT_NULL** sind keine gültigen Basis-Typen für das Array. Alle anderen Typen sind zulässig.  
+ *vtSrc*  
+ Der Basistyp des Arrays (d. h. die **VARTYPE** jedes Element des Arrays). Die **VARTYPE** auf eine Teilmenge von Varianten-Typen beschränkt ist. Weder die **VT_ARRAY** noch die **VT_BYREF** Flag festgelegt werden. **VT_EMPTY** und **VT_NULL** sind keine gültigen Basis-Typen für das Array. Alle anderen Typen sind zulässig.  
   
- `dwDims`  
+ *dwDims*  
  Die Anzahl der Dimensionen im Array. Dies kann geändert werden, nachdem das Array erstellt wurde, mit [Redim](#redim).  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `vtSrc`  
+ *vtSrc*  
  Der Basistyp des Arrays (d. h. die **VARTYPE** jedes Element des Arrays).  
   
- `dwElements`  
+ *dwElements*  
  Anzahl der Elemente im Array. Dies kann geändert werden, nachdem das Array erstellt wurde, mit [ResizeOneDim](#resizeonedim).  
   
- `pvSrcData`  
+ *pvSrcData*  
  Zeiger auf die Daten in das Array kopieren.  
   
  *nLBound*  
  Die untere Grenze des Arrays.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Funktion zuordnet und initialisiert die Daten für das Array, das die angegebenen Daten kopieren, wenn der Zeiger `pvSrcData` nicht **NULL**.  
+ Die Funktion zuordnet und initialisiert die Daten für das Array, das die angegebenen Daten kopieren, wenn der Zeiger *PvSrcData* nicht **NULL**.  
   
  Bei einem Fehler, löst die Funktion eine [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bytes`  
+ *Bytes*  
  Ein Verweis auf eine [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt.  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rgIndices`  
+ *rgIndices*  
  Zeiger auf ein Array von Indizes für jede Dimension des Arrays.  
   
- `pvData`  
+ *pvData*  
  Ein Zeiger auf den Speicherort für das Element des Arrays.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ruft automatisch die Windows-Funktionen `SafeArrayLock` und `SafeArrayUnlock` vor und nach dem Abrufen des Elements. Wenn das Datenelement eine Zeichenfolge, Objekt oder Variante ist, kopiert die Funktion das Element in korrekter Weise ab. Der Parameter `pvData` sollte zeigen Sie auf einer großen ausreichend Puffer, um das Element enthalten.  
+ Diese Funktion ruft automatisch die Windows-Funktionen `SafeArrayLock` und `SafeArrayUnlock` vor und nach dem Abrufen des Elements. Wenn das Datenelement eine Zeichenfolge, Objekt oder Variante ist, kopiert die Funktion das Element in korrekter Weise ab. Der Parameter *PvData* sollte zeigen Sie auf einer großen ausreichend Puffer, um das Element enthalten.  
   
  Bei einem Fehler, löst die Funktion eine [CMemoryException](../../mfc/reference/cmemoryexception-class.md) oder [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDim`  
+ *dwDim*  
  Die Arraydimension, für die die untere Grenze abgerufen werden soll.  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDim`  
+ *dwDim*  
  Die Arraydimension, für die die obere Grenze abgerufen werden soll.  
   
  *pUBound*  
@@ -581,11 +581,11 @@ Operator CDumpContext & AFXAPI << (CDumpContext & dc
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ Operator CDumpContext & AFXAPI << (CDumpContext & dc
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ Operator CDumpContext & AFXAPI << (CDumpContext & dc
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

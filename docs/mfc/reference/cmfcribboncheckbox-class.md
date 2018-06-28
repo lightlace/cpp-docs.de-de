@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369706"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042055"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox-Klasse
 Die `CMFCRibbonCheckBox`-Klasse implementiert ein Kontrollkästchen, das einem Menübandbereich, einer Symbolleiste für den Schnellzugriff oder einem Popupmenü hinzugefügt werden kann.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-`nID` ist hierbei die Kontrollkästchenbefehls-ID, und `lpszText` ist die Textbezeichnung des Kontrollkästchens.  
+wobei *nID* ist die Befehls-ID für das Kontrollkästchen und *LpszText* ist die textbezeichnung des Kontrollkästchens.  
   
  Sie können mithilfe ein Kontrollkästchens zu einem Menübandbereich hinzufügen [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Gibt die Befehls-ID.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Gibt die Beschriftung an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger auf die `CDC` das Kontrollkästchen zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger auf die `CDC` dieses Kontrollkästchen zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger auf die `CDC` mit diesem Kontrollkästchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger auf die `CDC` in der das Kontrollkästchen gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CDC*`  
+ [in] *CDC**  
  Zeiger auf die `CDC` das Kontrollkästchen zugeordnet.  
   
- [in] `CRect`  
+ [in] *CRect*  
  Ein `CRect` Objekt, das Rechteck in der das Bild gezeichnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger auf den Gerätekontext, in dem das Kontrollkästchen gezeichnet werden soll.  
   
- [in] `strText`  
+ [in] *StrText*  
  Der Anzeigetext.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Der Abstand vom links neben dem Listenfeld auf den Anzeigetext in Pixel.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das Anzeigerechteck für das Kontrollkästchen.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Wenn das Kontrollkästchen aktiviert ist, oder `FALSE` Wenn dies nicht.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Wenn das Kontrollkästchen markiert ist, oder `FALSE` Wenn dies nicht.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParent`  
+ *pParent*  
  Das übergeordnete Fenster des Kontrollkästchens.  
   
- `data`  
+ *data*  
  Die barrierefreiheitsdaten für das Kontrollkästchen.  
   
 ### <a name="return-value"></a>Rückgabewert  

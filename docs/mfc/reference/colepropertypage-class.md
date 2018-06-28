@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376209"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042546"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage-Klasse
 Wird verwendet, um die Eigenschaften eines benutzerdefinierten Steuerelements in einer grafischen Oberfläche anzuzeigen, ähnlich wie in einem Dialogfeld.  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Ressourcen-ID eines Steuerelements Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pnObjects`  
+ *pnObjects*  
  Ein Zeiger auf eine lange Ganzzahl ohne Vorzeichen, die die Anzahl der Objekte, die bearbeitet wird, von der Seite zu erhalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Array von `IDispatch` Zeigern, die Zugriff auf die Eigenschaften jedes Steuerelements auf der Eigenschaftenseite verwendet werden. Der Aufrufer muss diese Schnittstellenzeiger nicht freigegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Jede Eigenschaft Page-Objekt verwaltet ein Array von Zeigern auf die `IDispatch` Schnittstellen der Objekte, die von der Seite bearbeitet wird. Diese Funktion legt seine `pnObjects` Argument für die Anzahl der Elemente im Array und gibt einen Zeiger auf das erste Element des Arrays zurück.  
+ Jede Eigenschaft Page-Objekt verwaltet ein Array von Zeigern auf die `IDispatch` Schnittstellen der Objekte, die von der Seite bearbeitet wird. Diese Funktion legt seine *PnObjects* Argument für die Anzahl der Elemente im Array und gibt einen Zeiger auf das erste Element des Arrays zurück.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Ruft einen Zeiger auf der Eigenschaftenseite `IPropertyPageSite` Schnittstelle.  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Die ID des Steuerelements, ignoriert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dispid`  
+ *DISPID*  
  Dispatch-ID, der der bearbeiteten Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Enthält die ID eines Steuerelements Eigenschaft.  
   
- `bDirty`  
+ *bDirty*  
  Gibt an, ob ein Feld der Eigenschaftenseite geändert wurde. Legen Sie auf **"true"** , wenn das Feld geändert wurde, **"false"** , wenn es nicht geändert wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  Eine Zeichenfolge mit kurzen Hilfeinformationen für die Anzeige in einer Statusleiste oder einen anderen Speicherort.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Der Name der Hilfedatei die Eigenschaftenseite.  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bModified`  
+ *bModified*  
  Gibt den neuen Wert für die Eigenschaftenseite Änderungsflag an.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

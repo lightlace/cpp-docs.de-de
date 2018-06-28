@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371698"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042377"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-SysLink-Steuerelements bereit.  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das markierte anzuzeigenden Text enthält. Weitere Informationen finden Sie im Abschnitt "Markup und Link-Zugriff" in diesem Thema [Übersicht-SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Format der Link-Steuerelements an. Wenden Sie eine beliebige Kombination von Steuerelementtypen. Finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) in der `Windows SDK` für Weitere Informationen.  
   
- `rect`  
+ *Rect*  
  Gibt an, Größe und Position der Link-Steuerelement. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt das Linksteuerelement übergeordneten Fenster. Es muss nicht `NULL`.  
   
- `nID`  
+ *nID*  
  Gibt die Link-Steuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>Hinweise  
  Sie erstellen eine `CLinkCtrl` Objekt in zwei Schritten. Zunächst den Konstruktor aufrufen und dann `Create`, die das Linksteuerelement erstellt, und fügt es der `CLinkCtrl` Objekt. Wenn Sie die erweiterten Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CLinkCtrl::CreateEx](#createex) anstelle von `Create`.  
   
- Die zweite Form der `Create` Methode ist veraltet. Die erste Form, der angibt, die `lpszLinkMarkup` Parameter.  
+ Die zweite Form der `Create` Methode ist veraltet. Die erste Form, der angibt, die *LpszLinkMarkup* Parameter.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert zwei Variablen, die mit dem Namen `m_Link1` und `m_Link2`, die Zugriff auf zwei Link-Steuerelemente verwendet werden.  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das markierte anzuzeigenden Text enthält. Weitere Informationen finden Sie im Abschnitt "Markup und Link-Zugriff" in diesem Thema [Übersicht-SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwExStyle`  
- Gibt den erweiterten Stil des Link-Steuerelements an. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Link-Steuerelements an. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Format der Link-Steuerelements an. Wenden Sie eine beliebige Kombination von Steuerelementtypen. Weitere Informationen finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) im Windows SDK.  
   
- `rect`  
+ *Rect*  
  Gibt an, Größe und Position der Link-Steuerelement. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt das Linksteuerelement übergeordneten Fenster. Es muss nicht `NULL`.  
   
- `nID`  
+ *nID*  
  Gibt die Link-Steuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>Hinweise  
  Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Style-Konstanten.  
   
- Die zweite Form der `CreateEx` Methode ist veraltet. Die erste Form, der angibt, die `lpszLinkMarkup` Parameter.  
+ Die zweite Form der `CreateEx` Methode ist veraltet. Die erste Form, der angibt, die *LpszLinkMarkup* Parameter.  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Ruft die optimale Höhe der Link-Steuerelement ab.  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|Die maximale Breite des Links, in Pixel.|  
-|[Out] * `pSize`|Ein Zeiger auf ein Windows [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Rückkehr dieser Methode die `cy` Mitglied der `SIZE` Struktur enthält die ideale Link Texthöhe für die Breite der Link-Text, der angegebenen `cxMaxWidth`. Die `cx` Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|  
+|[in] *CxMaxWidth*|Die maximale Breite des Links, in Pixel.|  
+|[Out] * *pSize*|Ein Zeiger auf ein Windows [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Rückkehr dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die ideale Link Texthöhe für die Breite der Link-Text, der angegebenen *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die bevorzugte Höhe der Text des Links in Pixeln. Der Rückgabewert ist identisch mit dem Wert von der `cy` Mitglied der `SIZE` Struktur.  
+ Die bevorzugte Höhe der Text des Links in Pixeln. Der Rückgabewert ist identisch mit dem Wert von der *cy* Mitglied der `SIZE` Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Beispiel für die `GetIdealSize` -Methode, siehe das Beispiel in [CLinkCtrl::Create](#create).  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Ein Zeiger auf eine [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur Elementinformationen zu erhalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iLink`  
+ *iLink*  
  Der Index von einem Link-Steuerelement ein Element.  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iLink`  
+ *iLink*  
  Der Index von einem Link-Steuerelement ein Element.  
   
- `pnState`  
+ *pnState*  
  Der Wert des angegebenen Elements.  
   
- `stateMask`  
+ *stateMask*  
  Kombination von Flags, welche Status, der abzurufende Element beschreibt. Eine Liste von Werten, finden Sie unter der Beschreibung der der **Status** Element in der [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur. Zulässige Elemente sind identisch mit denen in zulässig **Zustand**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iLink`  
+ *iLink*  
  Der Index von einem Link-Steuerelement ein Element.  
   
- `strUrl`  
+ *strUrl*  
  Ein [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, das die URL, dargestellt durch das angegebene Element enthält  
   
- `szUrl`  
+ *szUrl*  
  Eine Null-terminierte Zeichenfolge, der die URL, die durch das angegebene Element dargestellt wird  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Ein Zeiger auf eine [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur mit Informationen über das festlegen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iLink`  
+ *iLink*  
  Der Index von einem Link-Steuerelement ein Element.  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iLink`  
+ *iLink*  
  Der Index von einem Link-Steuerelement ein Element.  
   
- `pnState`  
+ *pnState*  
  Der Wert des angegebenen Zustand Elements festgelegt wird.  
   
- `stateMask`  
+ *stateMask*  
  Kombination von Flags, beschreiben das State-Element, das festgelegt wird. Eine Liste von Werten, finden Sie unter der Beschreibung der der **Status** Element in der [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur. Zulässige Elemente sind identisch mit denen in zulässig **Zustand**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iLink`  
+ *iLink*  
  Der Index von einem Link-Steuerelement ein Element.  
   
- `szUrl`  
+ *szUrl*  
  Eine Null-terminierte Zeichenfolge, der die URL, die durch das angegebene Element dargestellt wird  
   
 ### <a name="return-value"></a>Rückgabewert  

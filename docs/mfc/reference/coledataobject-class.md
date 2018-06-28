@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374509"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038332"
 ---
 # <a name="coledataobject-class"></a>COleDataObject-Klasse
 Wird in Datenübertragungen zum Abrufen von Daten in unterschiedlichen Formaten aus der Zwischenablage, per Drag & Drop oder von einem eingebetteten OLE-Element verwendet.  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  Verweist auf eine OLE-Datenobjekt.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **"True"** , wenn das OLE-Datenobjekt sein sollte freigegeben, wenn die `COleDataObject` Objekt wird zerstört; andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Format, in dem Daten zurückgegeben werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) -Struktur, die Daten erhält.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem Daten zurückgegeben werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem Daten zurückgegeben werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Format, in dem Daten zurückgegeben werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem Daten zurückgegeben werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem Daten zurückgegeben werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die neue `CFile` oder `CFile`-abgeleitete Objekt, das Daten enthält, wenn erfolgreich; andernfalls **NULL**.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
+ *cfFormat*  
  Das Format, in dem Daten zurückgegeben werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem Daten zurückgegeben werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem Daten zurückgegeben werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter *CfFormat*. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle des globalen Speicherblocks mit den Daten, wenn erfolgreich; andernfalls **NULL**.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Struktur, die Informationen über das empfängt, wenn der Funktionsaufruf zurückgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cfFormat`  
- Das Datenformat der Zwischenablage in die Struktur zu verwendende verweist `lpFormatEtc`. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
+ *cfFormat*  
+ Das Datenformat der Zwischenablage in die Struktur zu verwendende verweist *LpFormatEtc*. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
- `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das gewünschte Format beschreibt. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten `cfFormat`. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
+ *lpFormatEtc*  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das gewünschte Format beschreibt. Geben Sie einen Wert für diesen Parameter nur, wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten *CfFormat*. Ist er **NULL**, die Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn Daten in das angegebene Format verfügbar sind; andernfalls 0.  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die `IDataObject` zugeordnet wurde die `COleDataObject` durch Aufrufen von **Anfügen** oder `AttachClipboard` explizit oder durch das Framework. Wenn die `bAutoRelease` Parameter **Anfügen** ist **"false"** die `IDataObject` Objekt wird nicht freigegeben werden. In diesem Fall der Aufrufer ist verantwortlich für die Freigabe der `IDataObject` durch Aufrufen von [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ Die `IDataObject` zugeordnet wurde die `COleDataObject` durch Aufrufen von `Attach` oder `AttachClipboard` explizit oder durch das Framework. Wenn die `bAutoRelease` Parameter `Attach` ist **"false"** die `IDataObject` Objekt wird nicht freigegeben werden. In diesem Fall der Aufrufer ist verantwortlich für die Freigabe der `IDataObject` durch Aufrufen von [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)   

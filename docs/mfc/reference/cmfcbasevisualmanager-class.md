@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369150"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040726"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager-Klasse
 Eine Softwareebene zwischen abgeleiteten visuelle Manager und der Windows-Design-API.  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck des Kontrollkästchens.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Gibt an, ob das Kontrollkästchen hervorgehoben ist.  
   
- [in] `nState`  
+ [in] *nState*  
  0 für deaktiviert wurde, 1 für aktivierte Normal  
   
  2 für gemischte Normal.  
   
- [in] `bEnabled`  
+ [in] *bAktiviert*  
  Gibt an, ob das Kontrollkästchen aktiviert ist.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Gibt an, ob das Kontrollkästchen gedrückt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Werte der `nState` die folgenden Kontrollkästchen-Stile entsprechen.  
+ Die Werte der *nState* die folgenden Kontrollkästchen-Stile entsprechen.  
   
 |nState|Kontrollkästchen-Stil|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umgebende Rechteck für den Rahmen des Kombinationsfelds.  
   
- [in] `bDisabled`  
+ [in] *bDeaktiviert*  
  Gibt an, ob der Rahmen des Kombinationsfelds deaktiviert ist.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Gibt an, ob das Kombinationsfeld Rahmen unten gelöscht wird.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Gibt an, ob der Rahmen des Kombinationsfelds markiert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pDC`|Ein Zeiger zu einem Gerätekontext.|  
-|[in] `rect`|Das umschließende Rechteck der Dropdownschaltfläche des Kombinationsfelds.|  
-|[in] `bDisabled`|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.|  
-|[in] `bIsDropped`|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche, nach unten gelöscht wird.|  
-|[in] `bIsHighlighted`|Gibt an, ob die Dropdownschaltfläche des Kombinationsfelds markiert ist.|  
+|[in] *pDC*|Ein Zeiger zu einem Gerätekontext.|  
+|[in] *Rect*|Das umschließende Rechteck der Dropdownschaltfläche des Kombinationsfelds.|  
+|[in] *bDeaktiviert*|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.|  
+|[in] *bIsDropped*|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche, nach unten gelöscht wird.|  
+|[in] *bIsHighlighted*|Gibt an, ob die Dropdownschaltfläche des Kombinationsfelds markiert ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck der Push-Schaltfläche.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf die [CMFCButton Klasse](../../mfc/reference/cmfcbutton-class.md) Objekt gezeichnet werden soll.  
   
- [in] `uiState`  
- Ignoriert. Der Status entnommen `pButton`.  
+ [in] *UiState*  
+ Ignoriert. Der Status entnommen *pButton*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn Design-API aktiviert ist; andernfalls `FALSE`.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck des Optionsfelds.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Gibt an, ob das Optionsfeld markiert ist.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  Gibt an, ob das Optionsfeld aktiviert ist.  
   
- [in] `bEnabled`  
+ [in] *bAktiviert*  
  Gibt an, ob das Optionsfeld aktiviert ist.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Gibt an, ob das Optionsfeld gedrückt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  Ein Zeiger auf der Statusleiste. Dieser Wert wird ignoriert.  
   
- [in] `rectProgress`  
- Das umschließende Rechteck der Statusanzeige im `pDC` Koordinaten.  
+ [in] *RectProgress*  
+ Das umschließende Rechteck der Statusanzeige im *pDC* Koordinaten.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  Der Wert des Gesamtstatus.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  Der aktuelle Statuswert.  
   
- [in] `clrBar`  
+ [in] *ClrBar*  
  Die Startfarbe. `CMFCBaseVisualManager` ignoriert. Abgeleitete Klassen können sie für Farbverläufe.  
   
- [in] `clrProgressBarDest`  
+ [in] *ClrProgressBarDest*  
  Die Endfarbe. `CMFCBaseVisualManager` ignoriert. Abgeleitete Klassen können sie für Farbverläufe.  
   
- [in] `clrProgressText`  
+ [in] *ClrProgressText*  
  Textfarbe ausgeführt. `CMFCBaseVisualManager` ignoriert. Die Textfarbe wird definiert, indem `afxGlobalData.clrBtnText`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Gibt an, ob der Text angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Ein Zeiger auf einen Bereich, dessen Hintergrund gezeichnet werden soll.  
   
- [in] `rectClient`  
+ [in] *RectClient*  
  Das umschließende Rechteck des Bereichs gefüllt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  

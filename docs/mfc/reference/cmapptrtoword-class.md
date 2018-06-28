@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180c6db999ed72a83de3f4addbec3db73ee64fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fee346e1bc16206df72f3056e6fbb3d73d0d21a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368073"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038246"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord-Klasse
 Unterstützt Zuordnungen von 16-Bit-Wörtern mit void-Zeigern als Schlüssel.  
@@ -61,7 +61,7 @@ class CMapPtrToWord : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CMapPtrToWord` ähneln den Memberfunktionen der Klasse [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CMapStringToOb`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` Zeiger als Funktionsparameter oder Rückgabewert ersetzen **WORD**. Immer dort, wo eine `CString` oder ein **const** Zeiger auf `char` als Funktionsparameter oder als Rückgabewert, ersetzen Sie einen Zeiger auf `void`.  
+ Die Memberfunktionen von `CMapPtrToWord` ähneln den Memberfunktionen der Klasse [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CMapStringToOb`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` Zeiger als Funktionsparameter oder Rückgabewert ersetzen **WORD**. Immer dort, wo eine `CString` oder ein **const** Zeiger auf **Char** als Funktionsparameter oder als Rückgabewert, ersetzen Sie einen Zeiger auf **"void"**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

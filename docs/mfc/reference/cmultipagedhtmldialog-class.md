@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373891"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038005"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog-Klasse
 Ein mehrseitiges Dialogfeld zeigt mehrere HTML-Seiten sequenziell an und behandelt die Ereignisse jeder Seite.  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Die Null-terminierte Zeichenfolge, die eine Dialogfeldvorlagen-Ressource im Dialogfeld heißt.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  Die Null-terminierte Zeichenfolge, die den Namen des HTML-Ressource ist.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf den übergeordneten oder Besitzer-Fensterobjekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Enthält die ID einer Dialogfeldvorlagen-Ressource im Dialogfeld an.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Enthält die ID-Nummer, der eine HTML-Ressource an.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

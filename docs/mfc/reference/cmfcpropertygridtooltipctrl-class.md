@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367928"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040960"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl-Klasse
 Implementiert eine QuickInfo zu steuern, die die [CMFCPropertyGridCtrl Klasse](../../mfc/reference/cmfcpropertygridctrl-class.md) verwendet, um QuickInfos anzuzeigen.  
@@ -106,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -130,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `rect`  
+ [out] *Rect*  
  Enthält die letzte Position des QuickInfo-Steuerelements an.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -148,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  Gibt den Abstand zwischen der QuickInfo-Text-Steuerelement und den Rahmen des QuickInfo-Fenster. Der Standardwert ist 10 Pixel.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Gibt die Position und Größe des QuickInfo-Steuerelements.  
   
- [in] `strText`  
+ [in] *StrText*  
  Gibt den Text, in der QuickInfo angezeigt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode zeigt das QuickInfo-Steuerelement an der Position und Größe von angegebenen `rect`. Wenn die Position, Größe und Text nicht seit der letzten Ausführung geändert haben, wenn, die diese Methode aufgerufen wurde, hat diese Methode keine Auswirkung.  
+ Diese Methode zeigt das QuickInfo-Steuerelement an der Position und Größe von angegebenen *Rect*. Wenn die Position, Größe und Text nicht seit der letzten Ausführung geändert haben, wenn, die diese Methode aufgerufen wurde, hat diese Methode keine Auswirkung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

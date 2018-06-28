@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374962"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040820"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl-Klasse
 Die `CMFCShellListCtrl` Klasse bietet Windows eine Liste und erweitert diese durch die Fähigkeit, eine Liste von shellelementen anzeigen.  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszPath`  
+ [in] *LpszPath*  
  Eine Zeichenfolge, die den Pfad eines Ordners enthält.  
   
- [in] `lpItemInfo`  
+ [in] *LpItemInfo*  
  Ein Zeiger auf eine `LPAFX_SHELLITEMINFO` -Struktur, die beschreibt, einen Ordner anzeigen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Wert, der angibt, ob das Framework das Kontextmenü aktiviert.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `strPath`  
+ [out] *StrPath*  
  Ein Verweis auf einen Zeichenfolgenparameter, an die Methode den Pfad schreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `strName`  
+ [out] *StrName*  
  Ein Verweis auf einen Zeichenfolgenparameter, an die Methode den Namen schreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `strPath`  
+ [out] *StrPath*  
  Ein Verweis auf eine Zeichenfolge, die den Pfad empfängt.  
   
- [in] `iItem`  
+ [in] *iItem*  
  Der Index des Listenelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Bei Erfolg; `FALSE` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Index von bereitgestellten `iItem` basiert auf der derzeit vom angezeigten Elemente die [CMFCShellListCtrl Klasse](../../mfc/reference/cmfcshelllistctrl-class.md) Objekt.  
+ Der Index von bereitgestellten *iItem* basiert auf der derzeit vom angezeigten Elemente die [CMFCShellListCtrl Klasse](../../mfc/reference/cmfcshelllistctrl-class.md) Objekt.  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  Gibt den Typ der Elemente angezeigt, indem die [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) Objekt.  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [in] *lParam1*  
+ [in] *lParam2*  
+ [in] *der iColumn*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `tmFile`  
+ [in] *TmFile*  
  Das Datum, an einer Datei zugeordnet.  
   
- [out] `str`  
+ [out] *str*  
  Eine Zeichenfolge, die das formatierte Datum enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lFileSize`  
+ [in] *lFileSize*  
  Die Größe der Datei, die das Framework angezeigt werden.  
   
- [out] `str`  
+ [out] *str*  
  Eine Zeichenfolge, die die formatierte Dateigröße enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iItem`  
+ [in] *iItem*  
  Der Index des Elements.  
   
- [in] `pItem`  
+ [in] *pItem*  
  Ein `LPAFX_SHELLITEMINFO` Parameter, der das Element beschreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>Hinweise  
  Das Symbol "Abbildindex basiert auf die Systembildliste.  
   
- Standardmäßig verwendet diese Methode auf die `pItem` Parameter. Der Wert des `iItem` wird nicht in der Standardimplementierung verwendet. Sie können `iItem` , benutzerdefiniertes Verhalten zu implementieren.  
+ Standardmäßig verwendet diese Methode auf die *pItem* Parameter. Der Wert der *iItem* wird nicht in der Standardimplementierung verwendet. Sie können *iItem* , benutzerdefiniertes Verhalten zu implementieren.  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  Das Framework ruft diese Methode auf, wenn sie den Text ein Shellelement abrufen muss.  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iItem`  
+ [in] *iItem*  
  Der Index des Elements.  
   
- [in] `iColumn`  
+ [in] *der iColumn*  
  Der betreffenden Spalte.  
   
- [in] `pItem`  
+ [in] *pItem*  
  Ein `LPAFX_SHELLITEMINFO` Parameter, der das Element beschreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>Hinweise  
  Jedes Element in der `CMFCShellListCtrl` Objekt kann Text in einer oder mehreren Spalten enthalten. Wenn das Framework über diese Methode aufruft, wird die Spalte, der von Interesse sind. Wenn Sie diese Funktion manuell aufrufen, müssen Sie auch die Spalte angeben, der Sie interessiert sind.  
   
- Standardmäßig verwendet diese Methode auf die `pItem` Parameter zu bestimmen, die den Prozess Element. Der Wert des `iItem` wird nicht in der Standardimplementierung verwendet.  
+ Standardmäßig verwendet diese Methode auf die *pItem* Parameter zu bestimmen, die den Prozess Element. Der Wert der *iItem* wird nicht in der Standardimplementierung verwendet.  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  Das Framework ruft diese Methode auf, wenn er festlegt, dass die Namen der Spalten.  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nTypes`  
+ [in] *nTypes*  
  Eine Liste der Typen, die die `CMFCShellListCtrl` -Objekt unterstützt.  
   
 ### <a name="remarks"></a>Hinweise  

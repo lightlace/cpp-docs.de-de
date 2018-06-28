@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbc5972d244d9dfd969221d88299e868f617a5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378281"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039348"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 Stellt die Funktionalität des WebBrowser-Steuerelements im Kontext der MFC-Dokument-/Ansichtarchitektur bereit.  
@@ -383,25 +383,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszClassName`  
+ *lpszClassName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert die [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globale Funktion oder die **RegisterClass** Windows-Funktion. Wenn **NULL**, verwendet die vordefinierten Standardwerte [CFrameWnd](../../mfc/reference/cframewnd-class.md) Attribute.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt an, die Fenster-Stilattribute. Wird standardmäßig die **WS_VISIBLE** und **WS_CHILD** Fensterstile festgelegt sind.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters angibt. Die `rectDefault` Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster des Steuerelements.  
   
- `nID`  
+ *nID*  
  Die ID der Sicht. Standardmäßig festgelegt, um **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *"pContext"*  
  Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md). **NULL** standardmäßig.  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
@@ -416,16 +416,16 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pContainer`  
+ *pContainer*  
  Ein Zeiger auf eine [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) Objekt, das das Steuerelement enthält.  
   
- `ppSite`  
+ *ppSite*  
  Ein Zeiger auf einen Zeiger auf eine [COleControlSite](../../mfc/reference/colecontrolsite-class.md) -Objekt, für das Steuerelement den Standort bereitstellen.  
   
- `nID`  
+ *nID*  
  Der Bezeichner des Steuerelements gehostet werden.  
   
- `clsid`  
+ *clsid*  
  Die CLSID des Steuerelements gehostet werden  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -445,7 +445,7 @@ HRESULT ExecFormsCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCommandID`  
+ *dwCommandID*  
  Der Befehl, der ausgeführt werden soll. Dieser Befehl muss gehören zu den **CMDSETID3_Forms3** Gruppe.  
   
  *pVarIn*  
@@ -472,13 +472,13 @@ void ExecWB(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Der auszuführende Befehl.  
   
  *cmdexecopt*  
  Die Optionen für die Ausführung des Befehls.  
   
- `pvaIn`  
+ *pvaIn*  
  Eine Variante, die zum Angeben der Befehl Eingabeargumente verwendet.  
   
  *pvaOut*  
@@ -684,10 +684,10 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszProperty`  
+ *lpszProperty*  
  Ein Zeiger auf eine Zeichenfolge, enthält die abzurufende Eigenschaft.  
   
- `strValue`  
+ *StrValue*  
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, das den aktuellen Wert der Eigenschaft empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -759,7 +759,7 @@ BOOL GetSource(CString& strRef);
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="parameters"></a>Parameter  
- `refString`  
+ *refString*  
  Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) , wird der Quellcode aufnehmen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -911,10 +911,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszResource`  
+ *lpszResource*  
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Ressource geladen.  
   
- `nRes`  
+ *nRes*  
  Die ID des Puffers, der mit dem Namen der Ressource geladen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -940,19 +940,19 @@ void Navigate(
  *URL*  
  Ein vom Aufrufer reservierten Zeichenfolge mit der URL zu navigieren oder den vollständigen Pfad der Datei angezeigt.  
   
- `dwFlags`  
+ *dwFlags*  
  Die Flags für eine Variable, die angibt, ob die Ressource die Verlaufsliste hinzugefügt, angibt, ob das zum Lesen und Schreiben aus dem Cache und, ob die Ressource in einem neuen Fenster angezeigt. Die Variable kann eine Kombination der Werte von definiert die [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) Enumeration.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Ein Zeiger auf eine Zeichenfolge, die enthält der Name des Frames, in dem die Ressource angezeigt.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Ein Zeiger auf einen Wert, der angibt, die HTTP-Header an den Server gesendet. Diese Header werden die Standard-Internet Explorer-Header hinzugefügt. Die Header können u. a. als die des Servers, den Typ der Daten, die auf dem Server oder einen Statuscode übergebenen erforderliche Aktion angeben. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP-URL.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Ein Zeiger auf die Daten, die mit der HTTP POST-Transaktion gesendet. Beispielsweise wird die POST-Transaktion zum Senden von Daten von einem HTML-Formular erhobenen verwendet. Wenn dieser Parameter keine Post-Daten **navigieren** stellt eine HTTP GET-Transaktion. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP-URL.  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  Daten, die mit der HTTP POST-Transaktion gesendet. Beispielsweise wird die POST-Transaktion zum Senden von Daten von einem HTML-Formular erhobenen verwendet. Wenn dieser Parameter keine Post-Daten **navigieren** stellt eine HTTP GET-Transaktion. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP-URL.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -989,25 +989,25 @@ void Navigate2(
  *pIDL*  
  Ein Zeiger auf ein [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) Struktur.  
   
- `dwFlags`  
+ *dwFlags*  
  Die Flags für eine Variable, die angibt, ob die Ressource die Verlaufsliste hinzugefügt, angibt, ob das zum Lesen und Schreiben aus dem Cache und, ob die Ressource in einem neuen Fenster angezeigt. Die Variable kann eine Kombination der Werte von definiert die [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) Enumeration.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Ein Zeiger auf eine Zeichenfolge, die enthält der Name des Frames, in dem die Ressource angezeigt.  
   
- `lpszURL`  
+ *lpszURL*  
  Ein Zeiger auf eine Zeichenfolge, die die URL enthält.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Daten, die mit der HTTP POST-Transaktion gesendet. Beispielsweise wird die POST-Transaktion zum Senden von Daten von einem HTML-Formular erhobenen verwendet. Wenn dieser Parameter keine Post-Daten `Navigate2` stellt eine HTTP GET-Transaktion. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP oder HTTPS-URL.  
   
- `dwPostDataLen`  
- Die Länge in Bytes der Daten verweist die `lpvPostData` Parameter.  
+ *dwPostDataLen*  
+ Die Länge in Bytes der Daten verweist die *LpvPostData* Parameter.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Ein Zeiger auf einen Wert, der angibt, die HTTP- oder HTTPS-Header an den Server gesendet. Diese Header werden die Standard-Internet Explorer-Header hinzugefügt. Die Header können u. a. als die des Servers, den Typ der Daten, die auf dem Server oder einen Statuscode übergebenen erforderliche Aktion angeben. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP oder HTTPS-URL.  
   
- `baPostedData`  
+ *baPostedData*  
  Ein Verweis auf eine [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1032,22 +1032,22 @@ virtual void OnBeforeNavigate2(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszURL`  
+ *lpszURL*  
  Ein Zeiger auf eine Zeichenfolge, enthält die URL zu navigieren.  
   
- `nFlags`  
+ *nFlags*  
  Für zukünftige Verwendung reserviert.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Eine Zeichenfolge, enthält der Name des Frames, in dem die Ressource angezeigt, oder **NULL** , wenn keine benannten Frame als Ziel für die Ressource verwendet wird.  
   
- `baPostedData`  
+ *baPostedData*  
  Ein Verweis auf eine `CByteArray` Objekt mit Daten, die an den Server gesendet werden soll, wenn die HTTP POST-Transaktion verwendet wird.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Ein Zeiger auf eine Zeichenfolge, enthält zusätzliche HTTP-Header mit dem Server (gilt nur für HTTP-URLs) zu senden. Die Header können u. a. als die des Servers, den Typ der Daten, die auf dem Server oder einen Statuscode übergebenen erforderliche Aktion angeben.  
   
- `pbCancel`  
+ *pbCancel*  
  Ein Zeiger auf ein Flag "Abbrechen". Eine Anwendung kann dieser Parameter auf ungleich Null den Navigationsvorgang abgebrochen oder 0 (null), damit Sie fortfahren kann festgelegt werden.  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
@@ -1063,7 +1063,7 @@ virtual void OnCommandStateChange(
  *%nbefehl*  
  Der Bezeichner des Befehls, deren Aktivierungsstatus geändert hat.  
   
- `bEnable`  
+ *bAktivieren*  
  Aktivierten Status. Dieser Parameter ist ungleich NULL, wenn der Befehl ist aktiviert, oder 0 (null), wenn er deaktiviert ist.  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
@@ -1074,13 +1074,13 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszURL`  
+ *lpszURL*  
  Ein Zeiger auf eine Zeichenfolge, die die UNC-URL ergibt Datei Namen, oder eine PIDL (ein Zeiger auf eine Liste der Bezeichner), zu der navigiert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
  Nicht jeder Frame immer dann ausgelöst, dieses Ereignis, aber alle Frames, die ausgelöst wird ein [OnDownloadBegin](#ondownloadbegin) -Ereignis immer dann ausgelöst, eine entsprechende `OnDocumentComplete` Ereignis.  
   
- Die URL erkennbar `lpszURL` können von der URL, die der Browser, navigieren mitgeteilt wurde, da diese URL die URL kanonisierten und qualifizierte ist unterschiedlich sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [navigieren](#navigate) oder [Navigate2](#navigate2), die URL übergebenes `OnNavigateComplete2` werden "http://www.microsoft.com/". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, werden die umgeleitete URL hier berücksichtigt.  
+ Die URL erkennbar *LpszURL* können von der URL, die der Browser, navigieren mitgeteilt wurde, da diese URL die URL kanonisierten und qualifizierte ist unterschiedlich sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [navigieren](#navigate) oder [Navigate2](#navigate2), die URL übergebenes `OnNavigateComplete2` werden "http://www.microsoft.com/". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, werden die umgeleitete URL hier berücksichtigt.  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  Wird von der Implementierung von **IOleInPlaceActiveObject::OnDocWindowActivate**von Internet Explorer oder MSHTML aufgerufen, die das aktive direkte Objekt benachrichtigt, wenn das Dokumentfenster des Containers aktiviert oder deaktiviert wird.  
@@ -1090,7 +1090,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `fActivate`  
+ *fActivate*  
  Gibt den Status des Dokumentfensters. Wenn dieser Wert ungleich NULL ist, wird das Fenster aktiviert. Wenn dieser Wert 0 (null) ist, wird das Fenster deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1124,7 +1124,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `fEnable`  
+ *fEnable*  
  Gibt an, ob der Host nicht modale Dialogfelder aktiviert oder deaktiviert sind. Wenn dieser Wert ungleich NULL ist, werden nicht modale Dialogfelder aktiviert. Wenn dieser Wert 0 (null) ist, werden nicht modale Dialogfelder deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1143,7 +1143,7 @@ virtual HRESULT OnFilterDataObject(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Der Adresse der ["IDataObject"](http://msdn.microsoft.com/library/windows/desktop/ms688421) Schnittstelle, die von Internet Explorer oder MSHTML angegeben.  
   
  *ppDataObject*  
@@ -1163,7 +1163,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `fActivate`  
+ *fActivate*  
  Gibt den Status der der Container der obersten Ebene Rahmenfenster. Wenn dieser Wert ungleich NULL ist, wird das Fenster aktiviert. Wenn dieser Wert 0 (null) ist, wird das Fenster deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1193,10 +1193,10 @@ virtual HRESULT OnGetDropTarget(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDropTarget`  
+ *pDropTarget*  
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer oder MSHTML vorgeschlagen werden soll.  
   
- `ppDropTarget`  
+ *ppDropTarget*  
  Der Adresse der `IDropTarget` , empfängt die `IDropTarget` Schnittstellenzeiger auf der Host bereitstellen möchte.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1230,7 +1230,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pInfo`  
+ *"pInfo"*  
  Adresse der einen [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) -Struktur, die dem Host Benutzeroberflächenfunktionen empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1249,10 +1249,10 @@ virtual HRESULT OnGetOptionKeyPath(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pchKey`  
+ *pchKey*  
  Adresse der ein `LPOLESTR` , empfängt der Unterschlüssel Registrierungszeichenfolge, in dem der Host seine Standardoptionen speichert. Dieser Unterschlüssel werden unter dem Schlüssel HKEY_CURRENT_USER. Reservieren Sie diesen Speicher mit [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727). Die aufrufende Anwendung ist verantwortlich für die Freigabe von Arbeitsspeicher verwenden [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722). Dieser Parameter sollte immer initialisiert werden, um **NULL**, selbst wenn die Methode fehlschlägt.  
   
- `dwReserved`  
+ *dwReserved*  
  Für zukünftige Verwendung reserviert. Zurzeit nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1313,16 +1313,16 @@ virtual void OnNavigateError(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszURL`  
+ *lpszURL*  
  Die URL für die Navigation fehlgeschlagen ist.  
   
  *lpszFrame*  
  Der Name des Frames, in dem die Ressource ist, werden Sie angezeigt werden, oder NULL, wenn keine benannten Frame für die Ressource vorgesehen war.  
   
- `dwError`  
+ *dwError*  
  Ein Fehlerstatuscode, falls verfügbar. Eine Liste der möglichen HRESULT und HTTP-Statuscodes finden Sie [NavigateError Ereignis Statuscodes.](https://msdn.microsoft.com/library/aa768365.aspx)  
   
- `pbCancel`  
+ *pbCancel*  
  Gibt an, ob die Navigation zu einer Fehlerseite oder weiteren automatische Suche "Abbrechen". Wenn **"true"** (Standard), Navigation zu einem Fehler (Seite) oder die automatische Suche; fort, wenn **"false"**, Navigation zu einer Fehlerseite oder eine automatische Suche abgebrochen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1340,10 +1340,10 @@ virtual void OnNewWindow2(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppDisp`  
+ *ppDisp*  
  Ein Zeiger auf einen Schnittstellenzeiger, der optional empfängt die `IDispatch` Schnittstellenzeiger eines neuen WebBrowser oder der Internet Explorer-Objekts.  
   
- `Cancel`  
+ *Kündigung*  
  Ein Zeiger auf ein Flag "Abbrechen". Eine Anwendung kann dieser Parameter auf ungleich Null den Navigationsvorgang abgebrochen oder 0 (null), damit Sie fortfahren kann festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszProperty`  
+ *lpszProperty*  
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Eigenschaft.  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
@@ -1397,13 +1397,13 @@ virtual HRESULT OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `prcBorder`  
+ *prcBorder*  
  Neues äußere Rechteck Platzgründen Rahmen.  
   
- `pUIWindow`  
+ *pUIWindow*  
  Ein Zeiger auf die Schnittstelle für das Frame oder das Dokumentfenster Window-Objekt, dessen Rahmen geändert hat.  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  **"True"** wäre das Rahmenfenster ist [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms680053), da andernfalls **"false"**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1424,16 +1424,16 @@ virtual HRESULT OnShowContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwID`  
+ *dwID*  
  Der Bezeichner des Kontextmenüs, die angezeigt werden. Finden Sie unter **IDocHostUIHandler::ShowContextMenu** in das Windows SDK für eine Liste von Werten.  
   
- `ppt`  
+ *PPT*  
  Bildschirmkoordinaten für das Menü.  
   
- `pcmdtReserved`  
+ *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) Schnittstelle, die zum Abfragen von Befehlsstatus und Ausführen von Befehlen für dieses Objekt verwendet.  
   
- `pdispReserved`  
+ *pdispReserved*  
  IDispatch-Schnittstelle des Objekts an den Bildschirmkoordinaten. Dies ermöglicht es einem Host zur Unterscheidung von bestimmter Objekten um spezifischere Kontext bereitzustellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1455,19 +1455,19 @@ virtual HRESULT OnShowUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwID`  
+ *dwID*  
  Für zukünftige Verwendung reserviert.  
   
- `pActiveObject`  
+ *pActiveObject*  
  [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) Schnittstelle des derzeit aktives Objekt.  
   
- `pCommandTarget`  
+ *pCommandTarget*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) -Schnittstelle des Objekts.  
   
- `pFrame`  
+ *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) -Schnittstelle des Objekts. Dies ist für Menüs und Symbolleisten erforderlich.  
   
- `pDoc`  
+ *pDoc*  
  [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) Schnittstelle für das Objekt. Dies ist für Symbolleisten erforderlich.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1495,7 +1495,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszText`  
+ *lpszText*  
  Eine Zeichenfolge, die den neuen Statusleistentext enthält.  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
@@ -1517,7 +1517,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszText`  
+ *lpszText*  
  Der neue Titel des Dokuments.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1545,13 +1545,13 @@ virtual HRESULT OnTranslateAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMsg`  
+ *lpMsg*  
  Verweist auf die Nachricht, die möglicherweise übersetzt werden müssen.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Gruppen-ID-Befehl.  
   
- `nCmdID`  
+ *nCmdID*  
  Befehls-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1571,13 +1571,13 @@ virtual HRESULT OnTranslateUrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwTranslate`  
+ *dwTranslate*  
  Für zukünftige Verwendung reserviert.  
   
- `pchURLIn`  
+ *pchURLIn*  
  Die Adresse einer Zeichenfolge angegeben, die von Internet Explorer oder MSHTML AUFGERUFEN, der die URL zu übersetzende darstellt.  
   
- `ppchURLOut`  
+ *ppchURLOut*  
  Die Adresse eines Zeichenfolgenzeigers, die die Adresse der übersetzte URL empfängt. Der Host weist den Puffer mit der Speicherbelegungsfunktion Aufgaben. Den Inhalt dieses Parameters sollte immer initialisiert werden, um **NULL**, selbst wenn die URL nicht übersetzt wird oder die Methode fehlschlägt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1607,7 +1607,7 @@ virtual void OnVisible(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bVisible`  
+ *bVisible*  
  Ungleich NULL, wenn das Objekt sichtbar ist, oder andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1643,11 +1643,11 @@ void PutProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszProperty`  
+ *lpszProperty*  
  Eine Zeichenfolge mit die festzulegende Eigenschaft.  
   
  *vtValue*  
- Der neue Wert der Eigenschaft erkennbar `lpszProperty`.  
+ Der neue Wert der Eigenschaft erkennbar *LpszProperty*.  
   
  *lpszPropertyName*  
  Ein Zeiger auf eine Zeichenfolge mit dem Namen der festzulegenden Eigenschaft.  
@@ -1655,13 +1655,13 @@ void PutProperty(
  *dValue*  
  Der neue Wert der Eigenschaft.  
   
- `lValue`  
+ *l-Wert*  
  Der neue Wert der Eigenschaft.  
   
- `lpszValue`  
+ *lpszValue*  
  Ein Zeiger auf eine Zeichenfolge, enthält den neuen Wert der Eigenschaft.  
   
- `nValue`  
+ *nWert*  
  Der neue Wert der Eigenschaft.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1679,17 +1679,17 @@ HRESULT QueryFormsCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCommandID`  
+ *dwCommandID*  
  Der Bezeichner des Befehls abgefragt wird.  
   
  *pbSupported*  
- Ein Zeiger auf eine **BOOL** Angabe If den Befehl (identifiziert durch `dwCommandID`) wird unterstützt. Bei "true", wird der Befehl unterstützt. andernfalls "false".  
+ Ein Zeiger auf eine **BOOL** Angabe If den Befehl (identifiziert durch *DwCommandID*) wird unterstützt. Bei "true", wird der Befehl unterstützt. andernfalls "false".  
   
- `pbEnabled`  
- Ein Zeiger auf eine **BOOL** Angabe If den Befehl (identifiziert durch `dwCommandID`) aktiviert ist. Bei "true", wird der Befehl unterstützt. andernfalls "false".  
+ *pbEnabled*  
+ Ein Zeiger auf eine **BOOL** Angabe If den Befehl (identifiziert durch *DwCommandID*) aktiviert ist. Bei "true", wird der Befehl unterstützt. andernfalls "false".  
   
  *pbChecked*  
- Ein Zeiger auf eine **BOOL** Angabe If den Befehl (identifiziert durch `dwCommandID`) aktiviert ist. Bei "true", wird der Befehl unterstützt. andernfalls "false".  
+ Ein Zeiger auf eine **BOOL** Angabe If den Befehl (identifiziert durch *DwCommandID*) aktiviert ist. Bei "true", wird der Befehl unterstützt. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert. Eine vollständige Liste der möglichen Werte finden Sie unter [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) im Windows SDK.  
@@ -1705,7 +1705,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) Wert des Befehls für die der Aufrufer Statusinformationen benötigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1736,7 +1736,7 @@ void Refresh2(int nLevel);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLevel`  
+ *nLevel*  
  Die Adresse der Variablen, die die Aktualisierung Ebene angeben. Die möglichen Variablen sind im definiert [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1752,7 +1752,7 @@ void SetAddressBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Ungleich-Adressleiste angezeigt; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1766,7 +1766,7 @@ void SetFullScreen(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Ungleich NULL für den Vollbildmodus; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1782,7 +1782,7 @@ void SetHeight(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewValue`  
+ *nNewValue*  
  Die Höhe in Pixel des Hauptfensters.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1796,7 +1796,7 @@ void SetLeft(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewValue`  
+ *nNewValue*  
  Die Bildschirmkoordinate des linken Rands des Hauptfensters.  
   
 ##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar  
@@ -1807,7 +1807,7 @@ void SetMenuBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Ungleich NULL Menüleiste anzeigen; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1821,7 +1821,7 @@ void SetOffline(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Wert ungleich NULL aus dem lokalen Cache gelesen werden; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1837,7 +1837,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Bestimmt, ob Internet Explorer als Browser der obersten Ebene registriert ist. Wert ungleich NULL wird als Browser der obersten Ebene der Webbrowser registriert; Wenn der Wert 0 ist, ist es nicht über einen Browser der obersten Ebene. Der Standardwert ist 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1853,7 +1853,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Bestimmt, ob das WebBrowser-Steuerelement als Ablageziel für die Navigation registriert ist. Wert ungleich NULL ist, wird das Objekt als Ablageziel registriert; Wenn der Wert 0 ist, ist es nicht Drop-Ziel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1867,7 +1867,7 @@ void SetSilent(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Wert ungleich Null werden keine Dialogfelder angezeigt; Wenn der Wert 0 ist, werden Dialogfelder angezeigt. Der Standardwert ist 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1881,7 +1881,7 @@ void SetStatusBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Wert ungleich NULL, wenn die Statusleiste sichtbar ist; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1895,7 +1895,7 @@ void SetTheaterMode(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Wert ungleich Null festzulegen, der das WebBrowser-Steuerelement Kinomodus ausgeführt werden; andernfalls 0 (null). Der Standardwert ist 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1911,7 +1911,7 @@ void SetToolBar(int nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewValue`  
+ *nNewValue*  
  Gibt an, ob die Symbolleiste angezeigt werden soll. Wert ungleich NULL, wenn die Symbolleiste angezeigt werden; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1925,7 +1925,7 @@ void SetTop(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewValue`  
+ *nNewValue*  
  Die Bildschirmkoordinate des oberen Rands des Hauptfensters.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1939,7 +1939,7 @@ void SetVisible(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bNewValue`  
+ *bNewValue*  
  Wert ungleich NULL, wenn das Steuerelement sichtbar ist; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1953,7 +1953,7 @@ void SetWidth(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewValue`  
+ *nNewValue*  
  Die Breite in Pixel des Internet Explorer-Hauptfensters.  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  

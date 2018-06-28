@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371445"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041944"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl-Klasse
 Die `CMFCShellTreeCtrl` -Klasse erweitert [CTreeCtrl-Klasse](../../mfc/reference/ctreectrl-class.md) Funktionalität durch eine Hierarchie mit shellelementen anzeigen.  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Wert, der angibt, ob das Kontextmenü aktiviert.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `strPath`  
+ [out] *StrPath*  
  Ein Verweis auf einen Zeichenfolgenparameter. Die Methode schreibt den Pfad des Elements an diesen Parameter an.  
   
- [in] `htreeItem`  
+ [in] *HtreeItem*  
  Die Methode ruft den Pfad für diese Strukturelement-Steuerelement ab.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert ist ungleich NULL bei Erfolg; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn diese Methode fehlschlägt, `strPath` die leere Zeichenfolge enthält.  
+ Wenn diese Methode fehlschlägt, *StrPath* die leere Zeichenfolge enthält.  
   
- Wenn Sie keinen angeben `hTreeItem`, diese Methode versucht, die Zeichenfolge für das aktuell ausgewählte Element abzurufen. Wenn kein Element ausgewählt ist und `hTreeItem` ist `NULL`, diese Methode ein Fehler auftritt.  
+ Wenn Sie keinen angeben *hTreeItem*, diese Methode versucht, die Zeichenfolge für das aktuell ausgewählte Element abzurufen. Wenn kein Element ausgewählt ist und *hTreeItem* ist `NULL`, diese Methode ein Fehler auftritt.  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  Gibt einen Zeiger auf die [CMFCShellListCtrl Klasse](../../mfc/reference/cmfcshelllistctrl-class.md) -Objekt, das mit dieser verknüpft ist [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) Objekt.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `message`  
- [in] `wParam`  
- [in] `lParam`  
- [in] `pLResult`  
+ [in] *Nachricht*  
+ [in] *wParam*  
+ [in] *lParam*  
+ [in] *pLResult*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pItem`  
- [in] `bSelected`  
+ [in] *pItem*  
+ [in] *bSelected*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pItem`  
+ [in] *pItem*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszPath`  
+ [in] *LpszPath*  
  Eine Zeichenfolge, die den Pfad eines Elements angibt.  
   
- [in] `lpidl`  
+ [in] *Lpidl*  
  Ein PIDL, der das Element angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwFlags`  
+ [in] *DwFlags*  
  Die festzulegenden Flags.  
   
- [in] `bRefresh`  
+ [in] *bRefresh*  
  Ein boolescher Wert, der angibt, ob die `CMFCShellTreeCtrl` sofort aktualisiert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pShellList`  
+ [in] *pShellList*  
  Ein Zeiger auf eine `CMFCShellListCtrl` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  

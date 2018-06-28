@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367613"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039038"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty-Klasse
 Die `CMFCPropertyGridFileProperty` Klasse unterstützt die Listenelement-Steuerelement eine Eigenschaft, die ein Dialogfeld des zur Schriftartauswahl öffnet.  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strName`  
+ [in] *StrName*  
  Den Namen der Eigenschaft.  
   
- [in] `lf`  
+ [in] *lf*  
  Eine logische Schriftart-Struktur, die die Attribute der Schriftart angibt.  
   
- [in] `dwFontDialogFlags`  
- Formatvorlagen, die im Dialogfeld "Schriftart" angewendet werden, die angezeigt wird, wenn Sie die Eigenschaft Wert Dropdown-Schaltfläche klicken. Der Standardwert ist die bitweise Kombination (OR) von CF_EFFECTS und CF_SCREENFONTS. Weitere Informationen finden Sie unter der `Flags` Parameter von der [CHOOSEFONT Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ [in] *DwFontDialogFlags*  
+ Formatvorlagen, die im Dialogfeld "Schriftart" angewendet werden, die angezeigt wird, wenn Sie die Eigenschaft Wert Dropdown-Schaltfläche klicken. Der Standardwert ist die bitweise Kombination (OR) von CF_EFFECTS und CF_SCREENFONTS. Weitere Informationen finden Sie unter der *Flags* Parameter von der [CHOOSEFONT Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [in] `lpszDescr`  
+ [in] *LpszDescr*  
  Beschreibung der Font-Eigenschaft. Der Standardwert ist `NULL`.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
   
- [in] `color`  
+ [in] *Farbe*  
  Die Farbe der Schriftart. Der Standardwert ist die Standardfarbe.  
   
 ### <a name="remarks"></a>Hinweise  

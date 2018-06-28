@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368360"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040063"
 ---
 # <a name="cmemfile-class"></a>CMemFile-Klasse
 Die [CFile](../../mfc/reference/cfile-class.md)-abgeleitete Klasse, die arbeitsspeicherdateien unterstützt.  
@@ -108,7 +108,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBytes`  
+ *Anzahl_byte*  
  Anzahl der Bytes an Arbeitsspeicher zugeordnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -130,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpBuffer`  
+ *lpBuffer*  
  Zeiger auf den Puffer anzufügenden `CMemFile`.  
   
- `nBufferSize`  
+ *nBufferSize*  
  Eine ganze Zahl, die die Größe des Puffers in Bytes angibt.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  Das Inkrement Zuweisung, Arbeitsspeicher in Bytes.  
   
 ### <a name="remarks"></a>Hinweise  
  Dies bewirkt, dass `CMemFile` , die den Speicherblock, der als Datei für den Speicher verwendet.  
   
- Wenn `nGrowBytes` ist 0, `CMemFile` wird festgelegt, der die Dateilänge mit `nBufferSize`. Dies bedeutet, dass die Daten im Speicherblock, bevor er angefügt war `CMemFile` wird die Datei verwendet werden. Arbeitsspeicherdateien erstellt, die auf diese Weise können nicht vergrößert werden.  
+ Wenn *nGrowBytes* ist 0, `CMemFile` wird festgelegt, der die Dateilänge mit *nBufferSize*. Dies bedeutet, dass die Daten im Speicherblock, bevor er angefügt war `CMemFile` wird die Datei verwendet werden. Arbeitsspeicherdateien erstellt, die auf diese Weise können nicht vergrößert werden.  
   
- Da die Datei vergrößert werden kann, achten Sie darauf, nicht bewirken, dass `CMemFile` versucht, die Datei vergrößert werden. Beispielsweise rufen Sie nicht die `CMemFile` überschreibt der [CFile:Write](../../mfc/reference/cfile-class.md#write) , hinter dem Ende schreiben, oder rufen Sie nicht [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) mit einer Länge von mehr als `nBufferSize`.  
+ Da die Datei vergrößert werden kann, achten Sie darauf, nicht bewirken, dass `CMemFile` versucht, die Datei vergrößert werden. Beispielsweise rufen Sie nicht die `CMemFile` überschreibt der [CFile:Write](../../mfc/reference/cfile-class.md#write) , hinter dem Ende schreiben, oder rufen Sie nicht [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) mit einer Länge von mehr als *nBufferSize*.  
   
- Wenn `nGrowBytes` ist größer als 0 (null) `CMemFile` ignoriert den Inhalt des Speicherblocks, der Sie angefügt haben. Sie müssen den Inhalt der Datei für den Speicher aus mithilfe von Grund auf neu zu schreiben der `CMemFile` Überschreiben von `CFile::Write`. Wenn Sie versuchen, nach dem Ende der Datei schreiben oder die Vergrößerung der das durch Aufrufen der `CMemFile` Überschreiben von `CFile::SetLength`, `CMemFile` wächst die speicherbelegung in Schritten von `nGrowBytes`. Wächst die speicherbelegung schlägt fehl, wenn der Speicherblock an Sie übergeben **Anfügen** wurde nicht mit einer Methode, die kompatibel mit zugeordneten [Alloc](#alloc). Für die Kompatibilität mit die standardmäßige Implementierung des `Alloc`, müssen Sie den Speicher mit der Funktion der Laufzeitbibliothek reservieren ["malloc"](../../c-runtime-library/reference/malloc.md) oder [Calloc](../../c-runtime-library/reference/calloc.md).  
+ Wenn *nGrowBytes* ist größer als 0 (null) `CMemFile` ignoriert den Inhalt des Speicherblocks, der Sie angefügt haben. Sie müssen den Inhalt der Datei für den Speicher aus mithilfe von Grund auf neu zu schreiben der `CMemFile` Überschreiben von `CFile::Write`. Wenn Sie versuchen, nach dem Ende der Datei schreiben oder die Vergrößerung der das durch Aufrufen der `CMemFile` Überschreiben von `CFile::SetLength`, `CMemFile` wächst die speicherbelegung in Schritten von *nGrowBytes*. Wächst die speicherbelegung schlägt fehl, wenn der Speicherblock an Sie übergeben `Attach` wurde nicht mit einer Methode, die kompatibel mit zugeordneten [Alloc](#alloc). Für die Kompatibilität mit die standardmäßige Implementierung des `Alloc`, müssen Sie den Speicher mit der Funktion der Laufzeitbibliothek reservieren ["malloc"](../../c-runtime-library/reference/malloc.md) oder [Calloc](../../c-runtime-library/reference/calloc.md).  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  Die erste Überladung wird ein leeres Arbeitsspeicherdatei geöffnet.  
@@ -162,19 +162,19 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nGrowBytes`  
+ *nGrowBytes*  
  Das Inkrement Zuweisung, Arbeitsspeicher in Bytes.  
   
  *LpBuffe*r  
- Zeiger auf einen Puffer, der Informationen der Größe empfängt `nBufferSize`.  
+ Zeiger auf einen Puffer, der Informationen der Größe empfängt *nBufferSize*.  
   
- `nBufferSize`  
+ *nBufferSize*  
  Eine ganze Zahl, die die Größe des Dateipuffers in Bytes angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die Datei, die vom Konstruktor geöffnet wird und Sie nicht rufen [CFile::Open](../../mfc/reference/cfile-class.md#open).  
   
- Die zweite Überladung entspricht das Verhalten, als wäre den ersten Konstruktor verwendet und wird sofort aufgerufen, [Anfügen](#attach) mit denselben Parametern. Finden Sie unter **Anfügen** Details.  
+ Die zweite Überladung entspricht das Verhalten, als wäre den ersten Konstruktor verwendet und wird sofort aufgerufen, [Anfügen](#attach) mit denselben Parametern. Ausführliche Informationen finden Sie unter `Attach`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
@@ -190,7 +190,7 @@ BYTE* Detach();
  Ein Zeiger auf den Speicherblock mit dem Inhalt der Datei für den Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufen dieser Funktion schließt auch die `CMemFile`. Sie können den Speicherblock Anfügen `CMemFile` durch Aufrufen von [Anfügen](#attach). Wenn Sie die Datei anfügen und die Daten darin möchten, sollten Sie aufrufen [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) die Länge der Datei vor dem Aufruf abgerufen **trennen**. Beachten Sie, dass, wenn Sie einen Speicherblock zu Anfügen `CMemFile` , damit Sie ihre Daten verwenden können ( `nGrowBytes` == 0), und Sie können zur Vergrößerung der Arbeitsspeicherdatei nicht.  
+ Aufrufen dieser Funktion schließt auch die `CMemFile`. Sie können den Speicherblock Anfügen `CMemFile` durch Aufrufen von [Anfügen](#attach). Wenn Sie die Datei anfügen und die Daten darin möchten, sollten Sie aufrufen [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) die Länge der Datei vor dem Aufruf abgerufen `Detach`. Beachten Sie, dass, wenn Sie einen Speicherblock zu Anfügen `CMemFile` , damit Sie ihre Daten verwenden können ( `nGrowBytes` == 0), und Sie können zur Vergrößerung der Arbeitsspeicherdatei nicht.  
   
 ##  <a name="free"></a>  CMemFile::Free  
  Diese Funktion wird aufgerufen, indem `CMemFile` Memberfunktionen.  
@@ -200,7 +200,7 @@ virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMem`  
+ *lpMem*  
  Zeiger auf den Speicher freigegeben werden muss.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -214,7 +214,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwNewLen`  
+ *dwNewLen*  
  Neue Größe der Datei für den Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -231,17 +231,17 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMemTarget`  
+ *lpMemTarget*  
  Zeiger zum Speicherblock, der in dem Quelle Speicher kopiert wird.  
   
- `lpMemSource`  
+ *lpMemSource*  
  Zeiger zum Speicherblock Quelle.  
   
- `nBytes`  
+ *Anzahl_byte*  
  Anzahl der zu kopierenden Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Kopie des `lpMemTarget`es.  
+ Eine Kopie des *LpMemTarget*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn Sie die Art ändern möchten, `CMemFile` diese Speicher kopiert wird.  
@@ -256,10 +256,10 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMem`  
+ *lpMem*  
  Ein Zeiger auf den Speicherblock zugewiesen werden.  
   
- `nBytes`  
+ *Anzahl_byte*  
  Neue Größe für den Speicherblock.  
   
 ### <a name="return-value"></a>Rückgabewert  

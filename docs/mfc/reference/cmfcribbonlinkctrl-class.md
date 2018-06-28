@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368435"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039010"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl-Klasse
 Implementiert einen Hyperlink, der auf einem Menüband positioniert wird. Wenn Sie den Hyperlink anklicken, wird eine Webseite geöffnet.  
@@ -106,13 +106,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Gibt die Befehls-ID des Befehls, der ausgeführt wird, wenn das Linksteuerelement geklickt wird.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Gibt die Bezeichnung auf die Link-Steuerelement angezeigt werden sollen.  
   
- [in] `lpszLink`  
+ [in] *LpszLink*  
  Gibt den Link, der dem Linksteuerelement zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLink`  
+ [in] *LpszLink*  
  Gibt den Text des Links.  
   
 ## <a name="see-also"></a>Siehe auch  

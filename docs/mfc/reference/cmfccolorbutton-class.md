@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd59f9575fdbde798b46bee343f7f7724968a478
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371112"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038311"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton-Klasse
 Die `CMFCColorButton` und [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Klassen werden zusammen verwendet, um ein Farben-Auswahlsteuerelement zu implementieren.  
@@ -159,13 +159,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt die automatische Schaltflächentext an.  
   
- [in] `colorAutomatic`  
+ [in] *ColorAutomatic*  
  Ein RGB-Wert, der Schaltfläche "automatisch" die Standardfarbe angibt.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Gibt an, ob die Schaltfläche "Automatische" aktiviert oder deaktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -181,13 +181,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt an, der Text der Schaltfläche.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  Gibt an, ob die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld oder im Dialogfeld Farbe System wird geöffnet, wenn der Benutzer auf die Schaltfläche klickt.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Gibt an, ob die Schaltfläche "Sonstige" aktiviert oder deaktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -249,13 +249,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Verweist auf den Gerätekontext, der verwendet wird, um das Bild der Schaltfläche zu rendern.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein Rechteck, das die Schaltfläche "" umschließt.  
   
- [in] `uiState`  
+ [in] *UiState*  
  Gibt den visuellen Status der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -272,13 +272,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Verweist auf den Gerätekontext, der zum Zeichnen des Rahmens.  
   
- [in] `rectClient`  
- Ein Rechteck in den Gerätekontext, der durch angegeben ist das der `pDC` Parameter, der die Begrenzungen der Schaltfläche gezeichnet werden definiert.  
+ [in] *RectClient*  
+ Ein Rechteck in den Gerätekontext, der durch angegeben ist das der *pDC* Parameter, der die Begrenzungen der Schaltfläche gezeichnet werden definiert.  
   
- [in] `uiState`  
+ [in] *UiState*  
  Gibt den visuellen Status der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -294,11 +294,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Verweist auf den Gerätekontext, der zum Zeichnen des Fokusrechtecks verwendet.  
   
- [in] `rectClient`  
- Ein Rechteck in den Gerätekontext, der gemäß der `pDC` Parameter, der die Begrenzungen der Schaltfläche definiert.  
+ [in] *RectClient*  
+ Ein Rechteck in den Gerätekontext, der gemäß der *pDC* Parameter, der die Begrenzungen der Schaltfläche definiert.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um die Darstellung des Systemfokusrechtecks anpassen.  
@@ -323,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pPal`|Ein Zeiger auf eine logische Palette oder `NULL`. Wenn `NULL`, die Standardpalette-System verwendet wird.|  
+|[in] *pPal*|Ein Zeiger auf eine logische Palette oder `NULL`. Wenn `NULL`, die Standardpalette-System verwendet wird.|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  Gibt die Farbe der Schaltfläche.  
@@ -333,7 +333,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  RGB-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -348,10 +348,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Die Farbe RGB-Wert.  
   
- [in] `strName`  
+ [in] *StrName*  
  Der Name der Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -365,7 +365,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nColumns`  
+ [in] *nColumns*  
  Gibt die Anzahl der Spalten an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -381,14 +381,14 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt die Bezeichnung, die mit dem Satz von Dokumentfarben angezeigt werden.  
   
- [in] `lstColors`  
+ [in] *LstColors*  
  Ein Verweis auf eine Liste mit RGB-Werten.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein `CMFCColorButton` Objekt verwaltet eine Liste mit RGB-Werten, die zum Übertragen einer [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Objekt. Wenn der Farbleiste angezeigt wird, werden diese Farben angezeigt, in einem speziellen Abschnitt, dessen Bezeichnung, indem angegeben wird, die `lpszLabel` Parameter.  
+ Ein `CMFCColorButton` Objekt verwaltet eine Liste mit RGB-Werten, die zum Übertragen einer [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Objekt. Wenn der Farbleiste angezeigt wird, werden diese Farben angezeigt, in einem speziellen Abschnitt, dessen Bezeichnung, indem angegeben wird, die *LpszLabel* Parameter.  
   
 ##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
  Gibt die standardmäßigen Farben auf die Farbleiste Popupfenster angezeigt werden sollen.  
@@ -398,7 +398,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pPalette`  
+ [in] *pPalette*  
  Ein Zeiger auf eine Farbpalette.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -411,7 +411,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Wert ungleich NULL ist, wird die neue Größe des Schaltflächensteuerelements jedoch die tatsächliche Größe wird nicht geändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -427,11 +427,11 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Ein vom Benutzer ausgewählten Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `UpdateColor` Funktion ändert den aktuell ausgewählten Schaltflächenfarbe und benachrichtigt von seinem übergeordneten Element durch Senden einer `WM_COMMAND` -Nachricht mit einer `BN_CLICKED` standard Notification. Verwenden der [CMFCColorButton::GetColor](#getcolor) Methode, um die ausgewählte Farbe abzurufen.  
+ Die `UpdateColor` Funktion ändert den aktuell ausgewählten Schaltflächenfarbe und benachrichtigt, die das übergeordnete Element durch Senden einer Nachricht WM_COMMAND mit standardmäßigen BN_CLICKED der Benachrichtigung. Verwenden der [CMFCColorButton::GetColor](#getcolor) Methode, um die ausgewählte Farbe abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368968"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042533"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog-Klasse
 Wird für das OLE-Dialogfeld "Verknüpfungen bearbeiten" verwendet.  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDoc`  
+ *pDoc*  
  Verweist auf das OLE-Dokument, das den zu bearbeitenden enthält.  
   
- `pView`  
- Verweist auf die aktuelle Ansicht auf `pDoc`.  
+ *pView*  
+ Verweist auf die aktuelle Ansicht auf *pDoc*.  
   
- `dwFlags`  
+ *dwFlags*  
  Erstellung-Flag, das entweder 0 enthält oder **ELF_SHOWHELP** angeben, ob die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld angezeigt wird.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  

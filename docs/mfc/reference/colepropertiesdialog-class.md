@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371685"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040180"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog-Klasse
 Kapselt das allgemeine Windows-OLE-Dialogfeld "Objekteigenschaften".  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Ein Zeiger auf das Dokumentelement, dessen Eigenschaften zugegriffen wird.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Der maximale Prozentsatz für das Dokument Elementbild Skalierung.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf den übergeordneten oder den Besitzer des Dialogfelds.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Ein Zeiger auf das Dokumentelement, dessen Eigenschaften zugegriffen wird.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Numerischen Wert der Skala Dialogfeld.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  Bei der Standardimplementierung wird keine Aktion ausgeführt. Sie müssen diese Funktion, um die Skalierung Steuerelemente ermöglichen überschreiben.  
   
 > [!NOTE]
->  Bevor Sie das Dialogfeld Allgemeine Eigenschaften für das OLE-Objekts angezeigt wird, wird das Framework ruft diese Funktion mit einem **NULL** für `pItem` und a - 1 für `nCurrentScale`. Dies erfolgt, um festzustellen, ob die Skalierung Steuerelemente aktiviert werden soll.  
+>  Bevor Sie das Dialogfeld Allgemeine Eigenschaften für das OLE-Objekts angezeigt wird, wird das Framework ruft diese Funktion mit einem **NULL** für *pItem* und a - 1 für *nCurrentScale*. Dies erfolgt, um festzustellen, ob die Skalierung Steuerelemente aktiviert werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel CIRC](../../visual-cpp-samples.md)   

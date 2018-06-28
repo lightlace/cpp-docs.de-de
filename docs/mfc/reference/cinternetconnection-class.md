@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 227637dc042777725692122babe0d4c7b232d578
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366677"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037777"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection-Klasse
 Verwaltet die Verbindung mit einem Internetserver.  
@@ -89,17 +89,17 @@ CInternetConnection(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pSession`  
+ *pSession*  
  Ein Zeiger auf eine [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt.  
   
- `pstrServer`  
+ *pstrServer*  
  Ein Zeiger auf eine Zeichenfolge, die den Namen des Servers enthält.  
   
- `nPort`  
+ *%nPort*  
  Die Zahl, die den Internet-Port für diese Verbindung identifiziert.  
   
- `dwContext`  
- Der Kontextbezeichner für den `CInternetConnection` Objekt. Finden Sie unter **"Hinweise"** Weitere Informationen zu `dwContext`.  
+ *dwContext*  
+ Der Kontextbezeichner für den `CInternetConnection` Objekt. Finden Sie unter **"Hinweise"** Weitere Informationen zu *DwContext*.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie nie `CInternetConnection` selbst; rufen Sie stattdessen die [CInternetSession](../../mfc/reference/cinternetsession-class.md) Memberfunktion für die Art der Verbindung, die Sie einrichten möchten:  
@@ -110,7 +110,7 @@ CInternetConnection(
   
 - [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)  
   
- Der Standardwert für `dwContext` wird gesendet, von MFC ermöglicht, die `CInternetConnection`-abgeleitetes Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die **InternetConnection**-abgeleitetes Objekt. Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie explizit eine bestimmten Kontext-ID im Zuweisen der [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) Konstruktor für die Verbindung. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
+ Der Standardwert für *DwContext* wird gesendet, von MFC ermöglicht, die `CInternetConnection`-abgeleitetes Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die **InternetConnection**- abgeleitetes Objekt. Die Standardeinstellung ist auf 1 festgelegt. Allerdings können Sie explizit eine bestimmten Kontext-ID im Zuweisen der [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) Konstruktor für die Verbindung. Das Objekt und jede Arbeit, die es ausführt, werden dieser Kontext-ID zugeordnet werden. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Rufen Sie diese Memberfunktion, um die Kontext-ID für diese Sitzung zu erhalten.  
@@ -125,7 +125,7 @@ DWORD_PTR GetContext() const;
 ### <a name="remarks"></a>Hinweise  
  Die Kontext-ID ist im ursprünglich angegebene [CInternetSession](../../mfc/reference/cinternetsession-class.md) und wird an übertragen `CInternetConnection`- und [CInternetFile](../../mfc/reference/cinternetfile-class.md)-abgeleiteten Klassen aus, es sei denn, die im Aufruf einer Funktion anders angegeben, der geöffnet wird die Verbindung. Die Kontext-ID jeder Vorgang, der das angegebene Objekt zugeordnet ist, und identifiziert den Vorgang vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
- Weitere Informationen dazu, wie **GetContext** funktioniert mit anderen WinInet-Klassen so erteilen Sie die Benutzerinformationen zum clientinstallationsstatus finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontext Der Bezeichner.  
+ Weitere Informationen dazu, wie `GetContext` funktioniert mit anderen WinInet-Klassen so erteilen Sie die Benutzerinformationen zum clientinstallationsstatus finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens des Servers, der dieser Internet-Verbindung zugeordnet.  

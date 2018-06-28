@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372913"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040986"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget-Klasse
 Stellt den Kommunikationsmechanismus zwischen einem Registerkarten-Steuerelement und den OLE-Bibliotheken bereit.  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pWnd`|Nicht verwendet.|  
-|[in] `pDataObject`|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
-|[in] `dwKeyState`|Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, und `MK_RBUTTON`.|  
-|[in] `point`|Die Position des Cursors in Clientkoordinaten.|  
+|[in] *pWnd*|Nicht verwendet.|  
+|[in] *pDataObject*|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
+|[in] *DwKeyState*|Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, und `MK_RBUTTON`.|  
+|[in] *zeigen*|Die Position des Cursors in Clientkoordinaten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Auswirkungen, die sich ergibt, erfolgt die Dropdownliste am vom angegebenen Speicherort `point`. Es kann eine oder mehrere der folgenden sein:  
+ Die Auswirkungen, die sich ergibt, erfolgt die Dropdownliste am vom angegebenen Speicherort *zeigen*. Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pWnd`|Nicht verwendet.|  
+|[in] *pWnd*|Nicht verwendet.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die `CMFCBaseTabCtrl::OnDragLeave` Methode zum Ausführen des Ziehvorgangs.  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pWnd`|Nicht verwendet.|  
-|[in] `pDataObject`|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
-|[in] `dwKeyState`|Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, und `MK_RBUTTON`.|  
-|[in] `point`|Die Position des Mauszeigers in Clientkoordinaten.|  
+|[in] *pWnd*|Nicht verwendet.|  
+|[in] *pDataObject*|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
+|[in] *DwKeyState*|Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, und `MK_RBUTTON`.|  
+|[in] *zeigen*|Die Position des Mauszeigers in Clientkoordinaten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Auswirkungen, die sich ergibt, erfolgt die Dropdownliste am vom angegebenen Speicherort `point`. Es kann eine oder mehrere der folgenden sein:  
+ Die Auswirkungen, die sich ergibt, erfolgt die Dropdownliste am vom angegebenen Speicherort *zeigen*. Es kann eine oder mehrere der folgenden sein:  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pWnd`|Nicht verwendet.|  
-|[in] `pDataObject`|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
-|[in] `dropEffect`|Der Standard-Drop-Vorgang.|  
-|[in] `dropList`|Nicht verwendet.|  
-|[in] `point`|Die Position des Mauszeigers in Clientkoordinaten.|  
+|[in] *pWnd*|Nicht verwendet.|  
+|[in] *pDataObject*|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
+|[in] *-DropEffect-*|Der Standard-Drop-Vorgang.|  
+|[in] *Dropdownliste*|Nicht verwendet.|  
+|[in] *zeigen*|Die Position des Mauszeigers in Clientkoordinaten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die resultierende Drop-Effekt. Es kann eine oder mehrere der folgenden sein:  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft `CMFCBaseTabCtrl::OnDrop` Wenn die Symbolleiste-Framework im Anpassungsmodus ist und das Datenformat der Zwischenablage verfügbar ist. Wenn der Aufruf von `CMFCBaseTabCtrl::OnDrop` gibt ein Wert ungleich NULL, diese Methode die Standard-Drop-Effekt gemäß gibt `dropEffect`. Diese Methode hingegen gibt `DROPEFFECT_NONE`. Weitere Informationen über die Drop-Effekte finden Sie unter [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Diese Methode ruft `CMFCBaseTabCtrl::OnDrop` Wenn die Symbolleiste-Framework im Anpassungsmodus ist und das Datenformat der Zwischenablage verfügbar ist. Wenn der Aufruf von `CMFCBaseTabCtrl::OnDrop` gibt ein Wert ungleich NULL, diese Methode die Standard-Drop-Effekt gemäß gibt *-DropEffect-*. Diese Methode hingegen gibt `DROPEFFECT_NONE`. Weitere Informationen über die Drop-Effekte finden Sie unter [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Weitere Informationen zu Anpassungsmodus, finden Sie unter [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Weitere Informationen zu zwischenablagedatenformate, finden Sie unter [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pOwner`|Das Registerkarten-Steuerelement als Ablageziel registriert werden soll.|  
+|[in] *pOwner*|Das Registerkarten-Steuerelement als Ablageziel registriert werden soll.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Registrierung erfolgreich war; andernfalls 0.  

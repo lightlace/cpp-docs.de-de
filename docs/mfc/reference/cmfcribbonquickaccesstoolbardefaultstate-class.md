@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370919"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041804"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState-Klasse
 Eine Hilfsklasse, die Standardstatus für die Symbolleiste für den Schnellzugriff verwaltet, die auf der menübandleiste befindet ( [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] uiCmd`  
+ *[in] uiCmd*  
  Gibt die Befehls-ID.  
   
- `[in] bIsVisible`  
+ *[in] bIsVisible*  
  Legt die Sichtbarkeit des Befehls fest, wenn die Symbolleiste für den Schnellzugriff im Standardzustand befindet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
  Ein Verweis auf die Quelle `CMFCRibbonQuickAccessToolBarDefaultState` Objekt, das kopiert.  
   
 ### <a name="remarks"></a>Hinweise  

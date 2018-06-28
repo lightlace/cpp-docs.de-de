@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369163"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037420"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton-Klasse
 Implementiert eine spezielle Schaltfläche in der oberen linken Ecke des Anwendungsfensters. Wenn sie angeklickt wird, öffnet die Schaltfläche ein Menü, das normalerweise allgemeine **Datei** -Befehle wie **Öffnen**, **Speichern**und **Beenden**enthält.  
@@ -98,10 +98,10 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiBmpResID`  
+ [in] *UiBmpResID*  
  Die Ressourcen-ID des Bilds auf der Schaltfläche angezeigt werden sollen.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Ein Handle für eine Bitmap, die auf die Anwendungsschaltfläche angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370655"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039985"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 Die `CMFCDesktopAlertWnd` Klasse implementiert die Funktion ein nicht modales Dialogfeld angezeigt wird, auf dem Bildschirm, um den Benutzer zu einem Ereignis zu informieren.  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  Gibt den Besitzer des Fensters Warnung. Dieser Besitzer erhält alle Benachrichtigungen für die Warnung Desktopfenster. Dieser Wert darf nicht `NULL` sein.  
   
- [in] `uiDlgResID`  
+ [in] *UiDlgResID*  
  Gibt die Ressourcen-ID des Fensters Warnung an.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Gibt an, das Menü, das angezeigt wird, wenn der Benutzer die Schaltfläche klickt. Wenn `NULL`, die Menüschaltfläche wird nicht angezeigt.  
   
- [in] `ptPos`  
+ [in] *PtPos*  
  Gibt die erste Position, in dem die Warnung wird angezeigt, die anhand der Bildschirmkoordinaten. Wenn dieser Parameter ist (-1, -1), wird die Warnung im Fenster in der unteren rechten Ecke des Bildschirms angezeigt.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  Laufzeit-Klasseninformationen für eine benutzerdefinierte Dialogfeldklasse, die das Benachrichtigungsfenster Clientbereich abdeckt.  
   
- [in] `params`  
+ [in] *Params*  
  Gibt Parameter an, die beim Erstellen einer Warnung Fensters verwendet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hwnd`  
+ [in] *Hwnd*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  Gibt die neue animationsgeschwindigkeit in Millisekunden an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `type`  
+ [in] *Typ*  
  Gibt den Animationstyp.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nTime`  
+ [in] *nTime*  
  Die Zeit in Millisekunden die, verstreicht, die vor dem Fenster Warnungen automatisch geschlossen wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` um anzugeben, dass die Warnung im Fenster eine kleine Beschriftung anzeigt; andernfalls `FALSE` um anzugeben, dass die Warnung eine Beschriftung für die reguläre Größe angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  Gibt die der Transparenzebene. Dieser Wert muss zwischen 0 und 255 einschließlich liegen. Je größer der Wert, der weitere undurchsichtig des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  

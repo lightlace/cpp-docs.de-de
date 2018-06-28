@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367970"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040741"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState-Struktur
 Bietet eine einfache Möglichkeit zum Erkennen von Speicherverlusten in Ihrem Programm an.  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  Wie bei anderen Diagnose der `CMemoryState` Diagnose sind nur in Debugversionen des Programms verfügbar. Eine Debugversion benötigen die **_DEBUG** definierte Konstante.  
   
- Wenn Sie vermuten, das Programm weist einen Speicherverlust dass, können Sie die `Checkpoint`, **Unterschied**, und `DumpStatistics` Funktionen, um den Unterschied zwischen den Speicherzustand (Objekte, die zugeordnet werden) an zwei verschiedenen Punkten im Programm zu ermitteln. die Ausführung. Diese Informationen können hilfreich bei der Bestimmung, ob eine Funktion aller Objekte bereinigt wird er reserviert sein.  
+ Wenn Sie vermuten, das Programm weist einen Speicherverlust dass, können Sie die `Checkpoint`, `Difference`, und `DumpStatistics` Funktionen, um den Unterschied zwischen den Speicherzustand (Objekte, die zugeordnet werden) an zwei verschiedenen Punkten in der Ausführung des Programms zu ermitteln. Diese Informationen können hilfreich bei der Bestimmung, ob eine Funktion aller Objekte bereinigt wird er reserviert sein.  
   
  Wenn Sie einfach zu wissen, wo die Diskrepanz in der Zuordnung und Aufhebung der Zuordnung tritt auf, nicht genügend Informationen bereitstellt, können Sie mithilfe der `DumpAllObjectsSince` Funktion, um alle Objekte, die seit des letzten Aufrufs von dump `Checkpoint`. Das Speicherabbild zeigt die Reihenfolge der Zuordnung, die Quelldatei und das Liniendiagramm, in dem das Objekt zugeordnet wurde (bei Verwendung von `DEBUG_NEW` für die Zuordnung), und die Ableitung des Objekts, dessen Adresse und seine Größe. `DumpAllObjectsSince` Ruft auch jedes Objekt `Dump` Funktion, um Informationen zum aktuellen Zustand bereitzustellen.  
   

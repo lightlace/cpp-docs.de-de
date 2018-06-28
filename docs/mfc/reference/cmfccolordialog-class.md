@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367915"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040232"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog-Klasse
 Die `CMFCColorDialog` Klasse stellt ein Farbauswahl-Dialogfeld.  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clrInit`  
+ [in] *ClrInit*  
  Die Standardauswahl für die Farbe. Wenn kein Wert angegeben wird, ist die Standardeinstellung RGB(0,0,0) (Schwarz).  
   
- [in] `dwFlags`  
+ [in] *DwFlags*  
  (Reserviert).  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ein Zeiger auf das Dialogfeld über- oder Besitzer Fenster.  
   
- [in] `hPal`  
+ [in] *hPal*  
  Ein Handle für eine Farbpalette.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rgb`  
+ [in] *Rgb*  
  Ein RGB-Wert  
   
 ### <a name="remarks"></a>Hinweise  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rgb`  
+ [in] *Rgb*  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , die eine RGB-Farbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `R`  
+ [in] *R*  
  Gibt die rote Komponente RGB-Wertes.  
   
- [in] `G`  
+ [in] *G*  
  Gibt die grünen Komponente RGB-Wertes.  
   
- [in] `B`  
+ [in] *B*  
  Gibt die blaue Komponente RGB-Wertes.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `R`  
+ [in] *R*  
  Gibt eine rote Komponente RGB-Wertes  
   
- [in] `G`  
+ [in] *G*  
  Gibt eine grüne Komponente RGB-Wertes  
   
- [in] `B`  
+ [in] *B*  
  Gibt eine blaue Komponente RGB-Wertes  
   
 ### <a name="remarks"></a>Hinweise  

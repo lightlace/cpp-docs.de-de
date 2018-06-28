@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373302"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042308"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Ein Registerkarten-Steuerelement mit dem Aussehen des **Navigationsbereichs** in Microsoft Outlook verfügt.  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  Ein Zeiger auf ein Steuerelement hinzufügen.  
   
- [in] `lpszName`  
+ [in] *Wert*  
  Gibt den Namen der Registerkarte ".  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Wenn `TRUE`, die Seite wird als lösbare erstellt werden.  
   
- [in] `nImageID`  
+ [in] *nImageID*  
  Abbildindex in der internen Bildliste für das Bild in der neuen Registerkarte angezeigt werden.  
   
- [in] `dwControlBarStyle`  
+ [in] *DwControlBarStyle*  
  Gibt an, die AFX_ `CBRS_`* Stil für umschlossene andockbare Bereiche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -168,7 +168,7 @@ void AddControl(
   
  Diese Funktion ruft intern auf [:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- Wenn Sie festlegen, `bDetachable` auf `TRUE`, `AddControl` erstellt intern ein `CDockablePaneAdapter` -Objekt und dient als Wrapper für das hinzugefügte Steuerelement. Die Common Language Runtime-Klasse, der dem Fenster im Registerkartenformat automatisch auf die Laufzeitklasse festgelegt `CMFCOutlookBar` und die Common Language Runtime-Klasse des floating Frames in `CMultiPaneFrameWnd`.  
+ Wenn Sie festlegen, *bDetachable* auf `TRUE`, `AddControl` erstellt intern ein `CDockablePaneAdapter` -Objekt und dient als Wrapper für das hinzugefügte Steuerelement. Die Common Language Runtime-Klasse, der dem Fenster im Registerkartenformat automatisch auf die Laufzeitklasse festgelegt `CMFCOutlookBar` und die Common Language Runtime-Klasse des floating Frames in `CMultiPaneFrameWnd`.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `AddControl` Methode in der `CMFCOutlookBarTabCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Outlook Demobeispiel](../../visual-cpp-samples.md).  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Gibt die anfängliche Größe und Position in Pixel.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Verweist auf das übergeordnete Fenster. Dieser Wert darf nicht `NULL` sein.  
   
- [in] `nID`  
+ [in] *nID*  
  Die Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Steuerelement erfolgreich erstellt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- In der Regel Outlook-Leiste Registerkarten-Steuerelemente werden erstellt, wenn [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md) Steuerelemente der `WM_CREATE` Nachricht des Prozesses.  
+ In der Regel Outlook-Leiste Registerkarten-Steuerelemente werden erstellt, wenn [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md) steuert die WM_DESTROY-Meldung des Prozesses.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Gibt an, ob die Animation, die während der Wechsel zwischen Registerkarten active auftritt aktiviert ist.  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Gibt an, ob die Animation aktiviert oder deaktiviert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
+ *bAktivieren*  
  Wenn `TRUE`, aktivieren Sie die direkte Bearbeitung der Beschriftung. Wenn `FALSE`, deaktivieren Sie die direkte Bearbeitung.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Bestimmt, ob das Scroll-Schaltflächen angezeigt werden.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  Bestimmt, ob die oberste Bildlaufleiste angezeigt wird.  
   
- [in] `bIsDown`  
+ [in] *bIsDown*  
  Bestimmt, ob die untere Bildlaufleiste angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte geöffnet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  Gibt die neue Rahmengröße in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -400,22 +400,22 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiAlign`  
+ [in] *UiAlign*  
  Gibt die Ausrichtung des Texts an.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Wenn `TRUE`, das Outlook-Fenster wird neu gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um die Ausrichtung des Texts für Schaltflächen zu ändern.  
   
- `uiAlign` Die folgenden Werte sind möglich:  
+ *UiAlign* kann einen der folgenden Werte sein:  
   
 |Konstante|Bedeutung|  
 |--------------|-------------|  
 |TA_LEFT|Linksbündige Ausrichtung|  
-|TA_CENTER|Zentrierte Ausrichtung|  
-|TA_RIGHT|Rechtsbündige Ausrichtung|  
+|TA_CENTER|zentrierte Ausrichtung|  
+|TA_RIGHT|rechtsbündige Ausrichtung|  
   
  Der Standardwert ist TA_CENTER.  
   
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Gibt die Ressourcen-ID beim Laden des Bilds an.  
   
- [in] `cx`  
+ [in] *Cx*  
  Gibt die Breite eines Bilds in der Bildliste in Pixel an.  
   
- [in] `clrTransp`  
+ [in] *ClrTransp*  
  Ein RGB-Wert, der die transparente Farbe angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nVisiblePageButtons`  
+ [in] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>Hinweise  
   

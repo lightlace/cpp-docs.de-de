@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370379"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040024"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd-Klasse
 Die Basis für der Fenster zur direkten Bearbeitung der Anwendung.  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpPosRect`  
+ *lpPosRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` -Objekt, das lokal enthält frame-Fensters aktuellen Positionskoordinaten, in Pixel relativ zum Clientbereich.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` -Objekt, das lokal enthält frame-Fensters aktuellen Clippingrechteck Koordinaten, in Pixel relativ zum Clientbereich.  
   
 ### <a name="remarks"></a>Hinweise  

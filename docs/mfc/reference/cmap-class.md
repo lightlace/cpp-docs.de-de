@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239423"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039154"
 ---
 # <a name="cmap-class"></a>CMap-Klasse
 Eine Wörterbuchauflistungsklasse, die eindeutigen Schlüsseln Werte zuordnet.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `KEY`  
+ *KEY*  
  Die Klasse des Objekts, das als Schlüssel für die Zuordnung verwendet.  
   
- `ARG_KEY`  
- Für verwendeten Datentyp `KEY` Argumente, in der Regel einen Verweis auf `KEY`.  
+ *ARG_KEY*  
+ Für verwendeten Datentyp *Schlüssel* Argumente, in der Regel einen Verweis auf *Schlüssel*.  
   
- `VALUE`  
+ *WERT*  
  Die Klasse des Objekts in der Zuordnung gespeichert.  
   
- `ARG_VALUE`  
- Für verwendeten Datentyp `VALUE` Argumente, in der Regel einen Verweis auf `VALUE`.  
+ *ARG_VALUE*  
+ Für verwendeten Datentyp *Wert* Argumente, in der Regel einen Verweis auf *Wert*.  
   
 ## <a name="members"></a>Member  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBlockSize`  
+ *nBlockSize*  
  Gibt die Granularität der speicherbelegung zum Erweitern der Zuordnung an.  
   
 ### <a name="remarks"></a>Hinweise  
- Wächst die Zuordnung wird Speicherplatz belegt in der Einheit `nBlockSize` Einträge.  
+ Wächst die Zuordnung wird Speicherplatz belegt in Einheiten von *nBlockSize* Einträge.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rNextPosition`  
+ *rNextPosition*  
  Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextAssoc` oder `GetStartPosition` aufrufen.  
   
  *KEY*  
  Vorlagenparameter, den Typ des Schlüssels der Zuordnung angibt.  
   
- `rKey`  
+ *rKey*  
  Gibt an, der zurückgegebene Schlüssel des Elements abgerufen.  
   
  *WERT*  
  Der Vorlagenparameter, den Typ des Werts der Zuordnung angibt.  
   
- `rValue`  
+ *rValue*  
  Gibt den zurückgegebenen Wert des abgerufenen Elements.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist besonders hilfreich für die Iteration durch alle Elemente in der Zuordnung. Beachten Sie, dass die Sequenz Position nicht notwendigerweise die Sequenz von Schlüssel-Wert identisch ist.  
   
- Wenn das abgerufene Element das letzte Element in der Zuordnung klicken Sie dann der neue Wert des `rNextPosition` festgelegt ist, um **NULL**.  
+ Wenn das abgerufene Element das letzte Element in der Zuordnung klicken Sie dann der neue Wert des *rNextPosition* festgelegt ist, um **NULL**.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::SetAt](#setat).  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hashSize`  
+ *hashSize*  
  Anzahl von Einträgen in der Hashtabelle.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Wenn **"true"**, ordnet Sie die Hashtabelle, bei der Initialisierung; andernfalls wird die Tabelle zugeordnet, wenn erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ARG_KEY`  
- Angabe des Typs der Vorlagenparameter der `key` Wert.  
+ *ARG_KEY*  
+ Angabe des Typs der Vorlagenparameter der *Schlüssel* Wert.  
   
- `key`  
+ *key*  
  Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.  
   
  *WERT*  
  Gibt den Typ des Werts gesucht werden soll.  
   
- `rValue`  
+ *rValue*  
  Empfängt der gebundene Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *WERT*  
  Angeben des Datentyps für den Zuordnungswert Vorlagenparameter.  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  Der Vorlagenparameter, der Typ des Schlüsselwerts angibt.  
   
- `key`  
+ *key*  
  Der Schlüssel, der zum Abrufen des Werts aus der Zuordnung verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- Ruft das kartenelement verweist `pAssocRec`.  
+ Ruft das kartenelement verweist *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Schlüssel für das Element, nach dem gesucht werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ARG_KEY`  
+ *ARG_KEY*  
  Der Vorlagenparameter, der der Typ des Schlüssels angibt.  
   
- `key`  
+ *key*  
  Schlüssel für das Element entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ARG_KEY`  
- Angabe des Typs der Vorlagenparameter der `key` Parameter.  
+ *ARG_KEY*  
+ Angabe des Typs der Vorlagenparameter der *Schlüssel* Parameter.  
   
- `key`  
+ *key*  
  Gibt den Schlüssel des neuen Elements.  
   
- `ARG_VALUE`  
- Angabe des Typs der Vorlagenparameter der `newValue` Parameter.  
+ *ARG_VALUE*  
+ Angabe des Typs der Vorlagenparameter der *NewValue* Parameter.  
   
- `newValue`  
+ *newValue*  
  Gibt den Wert des neuen Elements.  
   
 ### <a name="remarks"></a>Hinweise  

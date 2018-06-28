@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367155"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040141"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl-Klasse
 Stellt die Funktionalität des WebBrowser-ActiveX-Steuerelements in einem MFC-Fenster bereit.  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszWindowName`  
+ *lpszWindowName*  
  Dieser Parameter wird nicht verwendet.  
   
- `dwStyle`  
+ *dwStyle*  
  Dieser Parameter wird nicht verwendet.  
   
- `rect`  
+ *Rect*  
  Gibt die Größe und Position des Steuerelements.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt die übergeordnete Fenster des Steuerelements an. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt das Steuerelement-ID an.  
   
- `pContext`  
+ *"pContext"*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppDocument`  
+ *ppDocument*  
  Der Dokumentschnittstelle.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

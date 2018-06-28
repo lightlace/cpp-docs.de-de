@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375098"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041044"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog-Klasse
 Wird für das OLE-Dialogfeld "Symbol ändern" verwendet.  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element, das konvertiert werden.  
   
- `dwFlags`  
+ *dwFlags*  
  Erstellung-Flag, das eine beliebige Anzahl von die folgenden Werte enthält kombiniert mit dem bitweisen- or -Operator:  
   
 - **CIF_SELECTCURRENT** gibt an, dass das aktuelle Optionsfeld anfänglich ausgewählt wird, wenn das Dialogfeld aufgerufen wird. Dies ist die Standardeinstellung.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** gibt an, dass das Symbol aus der ausführbaren Datei im angegebenen extrahiert werden sollen die **SzIconExe** Feld [M_ci](#m_ci) anstelle von abgerufen, von dem Typ. Dies ist hilfreich beim Einbetten von und Verknüpfen von nicht-OLE-Dateien.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element, dessen Symbol geändert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  

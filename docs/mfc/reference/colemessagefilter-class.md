@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371363"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037610"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter-Klasse
 Verwaltet die Parallelität, die für die Interaktion von OLE-Anwendungen benötigt wird.  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  Die `BeginBusyState` und `EndBusyState` Aufrufe Inkrementieren und Dekrementieren, bzw. einen Leistungsindikator, der bestimmt, ob die Anwendung ausgelastet ist. Beispielsweise die beiden Aufrufe von `BeginBusyState` und ein Aufruf von `EndBusyState` bleibt in einem ausgelasteten Zustand. Ausgelasteten Zustand Abbrechen, es erforderlich ist, rufen Sie `EndBusyState` die gleiche Anzahl von Zeiten `BeginBusyState` aufgerufen wurde.  
   
- Wird standardmäßig das Framework wechselt in den ausgelastet Status während der leerlaufverarbeitung von ausgeführt wird [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung verarbeitet **ON_COMMANDUPDATEUI** Benachrichtigungen, eingehende Aufrufe werden später verarbeitet, nachdem leerlaufverarbeitung abgeschlossen ist.  
+ Wird standardmäßig das Framework wechselt in den ausgelastet Status während der leerlaufverarbeitung von ausgeführt wird [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während der Anwendung ON_COMMANDUPDATEUI Benachrichtigungen behandelt wird, werden eingehende Aufrufe später behandelt, nach dem Abschluss der Verarbeitung im Leerlauf.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Erstellt ein `COleMessageFilter`-Objekt.  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  Die `BeginBusyState` und `EndBusyState` Aufrufe Inkrementieren und Dekrementieren, bzw. einen Leistungsindikator, der bestimmt, ob die Anwendung ausgelastet ist. Beispielsweise die beiden Aufrufe von `BeginBusyState` und ein Aufruf von `EndBusyState` bleibt in einem ausgelasteten Zustand. Ausgelasteten Zustand Abbrechen, es erforderlich ist, rufen Sie `EndBusyState` die gleiche Anzahl von Zeiten `BeginBusyState` aufgerufen wurde.  
   
- Wird standardmäßig das Framework wechselt in den ausgelastet Status während der leerlaufverarbeitung von ausgeführt wird [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung verarbeitet `ON_UPDATE_COMMAND_UI` Benachrichtigungen, eingehende Aufrufe werden verarbeitet, nachdem die leerlaufverarbeitung abgeschlossen ist.  
+ Wird standardmäßig das Framework wechselt in den ausgelastet Status während der leerlaufverarbeitung von ausgeführt wird [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung ON_UPDATE_COMMAND_UI Benachrichtigungen behandeln ist, werden eingehende Aufrufe behandelt, nach Abschluss der Verarbeitung im Leerlauf.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Vom Framework zum Verarbeiten von Nachrichten aufgerufen, während ein OLE-Aufruf ausgeführt wird.  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMsg`  
+ *pMsg*  
  Ein Zeiger auf die ausstehende Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Bei Erfolg ein Wert ungleich 0 (null), andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn eine aufrufende Anwendung für einen Aufruf abgeschlossen werden, wartet das Framework ruft `OnMessagePending` mit einem Zeiger auf die ausstehende Nachricht. Standardmäßig sendet das Framework `WM_PAINT` Nachrichten verwenden, sodass Fenster Updates während eines Aufrufs auftreten können, die einen längeren Zeitraum benötigt wird.  
+ Wenn eine aufrufende Anwendung für einen Aufruf abgeschlossen werden, wartet das Framework ruft `OnMessagePending` mit einem Zeiger auf die ausstehende Nachricht. Standardmäßig sendet das Framework WM_PAINT-Nachrichten, sodass Fenster Updates während eines Aufrufs auftreten können, die einen längeren Zeitraum benötigt wird.  
   
  Sie müssen Ihre Nachrichtenfilter registrieren, durch einen Aufruf von [registrieren](#register) , bevor es aktiviert werden kann.  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nTimeout`  
+ *%ntimeout*  
  Anzahl der Millisekunden für die Verzögerung Nachricht aussteht.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRetryReply`  
+ *nRetryReply*  
  Anzahl der Millisekunden zwischen den Wiederholungsversuchen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  Der Aufrufer Antwort wird gesteuert, indem die Funktionen `SetRetryReply` und [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Bestimmt, wie lange die aufrufende Anwendung zwischen den Wiederholungsversuchen für einen bestimmten Aufruf warten soll. `SetMessagePendingDelay` Bestimmt, wie lange die aufrufende Anwendung auf eine Antwort vom Server wartet, bevor eine weitere Aktion ausgeführt.  
   
- In der Regel werden die Standardwerte sind zulässig und müssen nicht geändert werden. Das Framework versucht, den Aufruf jeder `nRetryReply` Millisekunden, bis der Aufruf durchläuft oder die Nachricht ausstehende Verzögerung ist abgelaufen. Der Wert 0 für `nRetryReply` eine sofortige Wiederholung und -1 gibt an, Abbruch des Aufrufs angibt.  
+ In der Regel werden die Standardwerte sind zulässig und müssen nicht geändert werden. Das Framework versucht, den Aufruf jeder *nRetryReply* Millisekunden, bis der Aufruf durchläuft oder die Nachricht ausstehende Verzögerung ist abgelaufen. Der Wert 0 für *nRetryReply* eine sofortige Wiederholung und -1 gibt an, Abbruch des Aufrufs angibt.  
   
  Wenn die Nachricht ausstehende Verzögerung abgelaufen ist, das OLE "ausgelastet Dialogfeld" (finden Sie unter [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) wird angezeigt, sodass der Benutzer auswählen kann, auf "Abbrechen", oder wiederholen den Aufruf. Rufen Sie [EnableBusyDialog](#enablebusydialog) aktivieren oder deaktivieren das Dialogfeld zu öffnen.  
   

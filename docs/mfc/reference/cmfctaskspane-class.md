@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10f183ed498fde15166a6e8ee7e7d10cfe9f60d7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378618"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040934"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -399,19 +399,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Gibt die nullbasierte Seitenindex.  
   
- [in] `lpszGroupName`  
+ [in] *LpszGroupName*  
  Gibt den Gruppennamen.  
   
- [in] `bBottomLocation`  
+ [in] *bBottomLocation*  
  `TRUE` So erstellen Sie die Gruppe am unteren Rand der Aufgabenbereich-Steuerelement; andernfalls `FALSE`.  
   
- [in] `bSpecial`  
+ [in] *bBesondere*  
  `TRUE` Markieren Sie diese Gruppe als eine *spezielle* Gruppe ist, andernfalls `FALSE`. Weitere Informationen zu speziellen Gruppen, finden Sie im Abschnitt "Hinweise" `CMFCTasksPane`.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Gibt das Symbol in der gruppenbeschriftung angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -434,20 +434,20 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den Index der Gruppe "", wo die Bezeichnung hinzugefügt wird.  
   
- [in] `lpszLabelName`  
+ [in] *LpszLabelName*  
  Gibt den Namen der Bezeichnung.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Gibt das Symbol neben der Beschriftung angezeigt. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
   
- [in] `bIsBold`  
+ [in] *bIsBold*  
  `TRUE` um die Bezeichnung in Fettschrift angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der Gruppe, in dem die Bezeichnung hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
+ Der nullbasierte Index der Gruppe, in dem die Bezeichnung hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben *Elementgr* ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework behandelt Aufgaben und Bezeichnungen anders. Klickt ein Benutzer auf eine Aufgabe, führt das Framework einen Befehl an. Klickt ein Benutzer auf eine Bezeichnung, wird kein Befehl ausgeführt. Weitere Informationen finden Sie unter [cmfctaskspane:: Addtask](#addtask).  
@@ -462,14 +462,14 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den Index einer Gruppe. Diese Methode fügt der Liste der zuletzt verwendeten Dateien mit diesem Parameter angegebenen Gruppe.  
   
- [in] `nMaxFiles`  
+ [in] *nMaxFiles*  
  Gibt die Anzahl der Dateien in der Liste der zuletzt verwendeten Dateien angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der Gruppe, in dem Liste der zuletzt verwendeten Dateien hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
+ Der nullbasierte Index der Gruppe, in dem Liste der zuletzt verwendeten Dateien hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben *Elementgr* ist nicht vorhanden.  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  Im Aufgabenbereich hinzugefügt eine Seite.  
@@ -479,7 +479,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszPageLabel`  
+ [in] *LpszPageLabel*  
  Gibt die Bezeichnung für die Seite.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -493,7 +493,7 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -512,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt die gruppenindex, in dem die Aufgabe hinzugefügt wird.  
   
- [in] `lpszTaskName`  
+ [in] *LpszTaskName*  
  Gibt den Namen des Tasks.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Gibt das Symbol, das neben der Aufgabe angezeigt. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
   
- [in] `uiCommandID`  
- Gibt die Befehls-ID des Befehls ausführen, wenn der Benutzer auf die Aufgabe klickt. Die Aufgabe wird als Bezeichnung behandelt, wenn `uiCommandID` ist 0.  
+ [in] *UiCommandID*  
+ Gibt die Befehls-ID des Befehls ausführen, wenn der Benutzer auf die Aufgabe klickt. Die Aufgabe wird als Bezeichnung behandelt, wenn *UiCommandID* ist 0.  
   
- [in] `dwUserData`  
+ [in] *DwUserData*  
  Gibt die benutzerdefinierten Daten der Aufgabe zugeordnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der Gruppe, in dem der Task hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
+ Der nullbasierte Index der Gruppe, in dem der Task hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben *Elementgr* ist nicht vorhanden.  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  Fügt dem Aufgabenbereich ein untergeordnetes Fenster hinzu.  
@@ -543,23 +543,23 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt die gruppenindex, wo das Fenster hinzugefügt wird.  
   
- [in] `hwndTask`  
+ [in] *HwndTask*  
  Gibt das Handle des Fensters hinzufügen.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Gibt die Höhe des Fensters.  
   
- [in] `bAutoDestroyWindow`  
+ [in] *bAutoDestroyWindow*  
  `TRUE` Das Fenster zerstört beim Entfernen des Tasks; andernfalls `FALSE`.  
   
- [in] `dwUserData`  
+ [in] *DwUserData*  
  Gibt die benutzerdefinierten Daten, die dem Task zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der Gruppe, in dem Fenster hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben `nGroup` ist nicht vorhanden.  
+ Der nullbasierte Index der Gruppe, in dem Fenster hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben *Elementgr* ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um ein Steuerelement zu einem Aufgabenbereich hinzufügen. Beispielsweise können Sie ein Bearbeitungssteuerelement hinzufügen, wie eine Suchleiste.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCollapse`  
- [in] `nPageIdx`  
+ [in] *bCollapse*  
+ [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -604,13 +604,13 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pGroup`  
+ [in] *pGroup*  
  Gibt die Gruppe zu reduzieren.  
   
- [in] `bCollapse`  
+ [in] *bCollapse*  
  `TRUE` So reduzieren Sie die Gruppe; `FALSE` auf die Gruppe erweitern.  
   
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe "in der internen Liste von Gruppen zu reduzieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -627,7 +627,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rectInitial`  
+ [in] *RectInitial*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -656,7 +656,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie die Animation, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -670,7 +670,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` Wenn Benutzer Aufgabengruppen reduziert werden können; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -684,7 +684,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie auf die Dropdown-Menüs die **Weiter** und **vorherige** Navigationsschaltflächen ist, andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -706,16 +706,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie die Navigationssymbolleiste; andernfalls `FALSE`.  
   
- [in] `uiToolbarBmpRes`  
+ [in] *UiToolbarBmpRes*  
  Gibt die Ressourcen-ID der Bitmap, die die auf der Symbolleiste anzuzeigenden Bilder enthält.  
   
- [in] `sizeToolbarImage`  
+ [in] *SizeToolbarImage*  
  Gibt die Größe eines Bilds Symbolleiste.  
   
- [in] `sizeToolbarButton`  
+ [in] *SizeToolbarButton*  
  Gibt die Größe einer Symbolleisten-Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -731,7 +731,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -743,7 +743,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` Bildlaufschaltflächen statt einer Bildlaufleiste im Aufgabenbereich angezeigt; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -757,7 +757,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` um den Text in Bezeichnungen zu umschließen, die im Aufgabenbereich angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -771,7 +771,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` um Aufgaben in den Aufgabenbereich zu umschließen; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -840,10 +840,10 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pGroup`  
+ [in] *pGroup*  
  Gibt an, die Aufgabengruppe, dessen Position abgerufen wird.  
   
- [out] `nGroup`  
+ [out] *Elementgr*  
  Enthält den nullbasierten Index der Aufgabengruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -880,7 +880,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lstNextPages`  
+ [in] *LstNextPages*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -894,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Aufgabengruppe an.  
   
- [out] `nPage`  
+ [out] *nPage*  
  Enthält den Seitenindex für die angegebene Gruppe. Wenn die Aufgabengruppe, die nur eine Standardseite enthält, ist der zurückgegebene Wert 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Gruppe `nGroup` vorhanden ist, andernfalls `FALSE`.  
+ `TRUE` Wenn die Gruppe *Elementgr* vorhanden ist, andernfalls `FALSE`.  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  Gibt die Anzahl der Seiten zurück.  
@@ -921,7 +921,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lstPrevPages`  
+ [in] *LstPrevPages*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -933,7 +933,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nBar`  
+ [in] *nBar*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe, die den Task enthält.  
   
- [in] `nTask`  
- Gibt den nullbasierten Index des Tasks in der Liste von angegebenen `nGroup`.  
+ [in] *nTask*  
+ Gibt den nullbasierten Index des Tasks in der Liste von angegebenen *Elementgr*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Task am angegebenen Index.  
@@ -966,11 +966,11 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den Index der Aufgabengruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Aufgaben in der angegebenen Gruppe oder 0, wenn `nGroup` ist ungültig.  
+ Die Anzahl der Aufgaben in der angegebenen Gruppe oder 0, wenn *Elementgr* ist ungültig.  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  Gibt eine Aufgabengruppe für einen angegebenen gruppenindex zurück.  
@@ -980,7 +980,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index des abzurufenden Gruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1007,26 +1007,26 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCommandID`  
+ [in] *UiCommandID*  
  Gibt die Befehls-ID des Tasks "" gefunden.  
   
- [out] `nGroup`  
+ [out] *Elementgr*  
  Enthält den gruppenindex der Aufgabe.  
   
- [out] `nTask`  
+ [out] *nTask*  
  Enthält den Index des Tasks in der Aufgabengruppe.  
   
- [in] `hwndTask`  
+ [in] *HwndTask*  
  Gibt das Fenster für diese Aufgabe an.  
   
- [in] `pTask`  
+ [in] *pTask*  
  Gibt die Aufgabe finden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn taskspeicherort gefunden wurde. `FALSE` ist die angegebene Aufgabe ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft die Gruppe und Taskindex für den angegebenen Vorgang ab. Wenn die-Methode zurückgibt `FALSE`, `nGroup` und `nTask` auf-1 festgelegt sind.  
+ Diese Methode ruft die Gruppe und Taskindex für den angegebenen Vorgang ab. Wenn die-Methode zurückgibt `FALSE`, *Elementgr* und *nTask* auf-1 festgelegt sind.  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  Gibt den horizontale Offset von Aufgaben zurück.  
@@ -1199,9 +1199,9 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *LpszProfileName*  
+ [in] *nIndex*  
+ [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1238,20 +1238,20 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroupNumber`  
+ [in] *nGroupNumber*  
  Gibt den nullbasierten Index der Gruppe "", das Sie geklickt haben Task enthält.  
   
- [in] `nTaskNumber`  
+ [in] *nTaskNumber*  
  Gibt den nullbasierten Index des Tasks "geklickt wurde".  
   
- [in] `uiCommandID`  
+ [in] *UiCommandID*  
  Gibt die Befehls-ID, die dem Task zugeordnet.  
   
- [in] `dwUserData`  
+ [in] *DwUserData*  
  Enthält eine benutzerdefinierte Daten, die für diese Aufgabe geklickt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode klickt ein Benutzer eine Aufgabe. Wird standardmäßig das Framework die Befehls-ID für diese Aufgabe geklickt wurde überprüft und ist er nicht NULL ist, sendet der `WM_COMMAND` Nachricht an den Besitzer des Aufgabenbereich-Steuerelements.  
+ Das Framework ruft diese Methode klickt ein Benutzer eine Aufgabe. Wird standardmäßig das Framework überprüft die Befehls-ID für diese Aufgabe geklickt wurde und ist er nicht NULL ist, sendet die WM_COMMAND-Nachricht an den Besitzer des Aufgabenbereich-Steuerelements.  
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum benutzerdefinierten Code ausführen, wenn eine Aufgabe geklickt wird.  
   
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pbtn`  
- [in] `pWndOwner`  
+ [in] *Pbtn*  
+ [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1323,7 +1323,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lVal`  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1352,7 +1352,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1366,7 +1366,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bRedraw`  
+ [in] *bRedraw*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1378,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Gibt den nullbasierten Index der Seite an.  
   
 ### <a name="remarks"></a>Hinweise  
- Entfernt alle Gruppen auf der Seite gemäß `nPageIdx`, oder alle Gruppen, wenn nur eine Standardseite vorhanden ist.  
+ Entfernt alle Gruppen auf der Seite gemäß *nPageIdx*, oder alle Gruppen, wenn nur eine Standardseite vorhanden ist.  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  Entfernt alle Seiten aus dem Aufgabenbereich mit Ausnahme der Standardseite (erste).  
@@ -1399,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe an.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1410,7 +1410,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe zu entfernen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1426,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Gibt den nullbasierten Index des zu entfernenden Seite.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1440,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Aufgabengruppe, die der Task zum Entfernen von enthält.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Gibt den nullbasierten Index des den Task zum Entfernen an.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Funktion erfolgreich ist. `FALSE` Wenn `nGroup` oder `nTask` ist ungültig.  
+ `TRUE` Wenn die Funktion erfolgreich ist. `FALSE` Wenn *Elementgr* oder *nTask* ist ungültig.  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1463,9 +1463,9 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *LpszProfileName*  
+ [in] *nIndex*  
+ [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1479,7 +1479,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `ar`  
+ [in] *Ar*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1491,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Gibt den nullbasierten Index des anzuzeigenden Seite an.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überprüft, wenn die `nPageIdx` ist ungültig.  
+ Diese Methode überprüft, wenn die *nPageIdx* ist ungültig.  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  Legt den Beschriftungsnamen eines Aufgabenbereichs fest.  
@@ -1505,7 +1505,7 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszName`  
+ [in] *Wert*  
  Gibt den Beschriftungsnamen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1519,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt die Überschriftenhöhe.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Ränder der Elemente im Bereich Tasks anpassen.  
   
- Wenn `n` ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Die Überschriftenhöhe Standard ist 25 Pixel.  
+ Wenn *n* ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Die Überschriftenhöhe Standard ist 25 Pixel.  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  Legt den horizontalen Offset einer Gruppenbeschriftung fest.  
@@ -1535,7 +1535,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt den horizontale Offset von der gruppenbeschriftung an.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
@@ -1546,7 +1546,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt den vertikalen Offset in Pixel, der die gruppenbeschriftung an.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
@@ -1559,10 +1559,10 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe an.  
   
- [in] `lpszGroupName`  
+ [in] *LpszGroupName*  
  Gibt den Namen der Gruppe an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1579,13 +1579,13 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe an.  
   
- [in] `color`  
+ [in] *Farbe*  
  Gibt die Textfarbe.  
   
- [in] `colorHot`  
+ [in] *ColorHot*  
  Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, wird die standardmäßige Hervorhebungsfarbe verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1599,13 +1599,13 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt den vertikalen Offset.  
   
 ### <a name="remarks"></a>Hinweise  
  Der vertikale Offset entspricht dem Abstand zwischen einer Aufgabengruppe und die Rahmen des Aufgabenbereichs.  
   
- Rufen Sie diese Methode, um die Ränder der Elemente des Vorgangs anpassen. Wenn `n` ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Der Standardwert beträgt 15 Pixel.  
+ Rufen Sie diese Methode, um die Ränder der Elemente des Vorgangs anpassen. Wenn *n* ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Der Standardwert beträgt 15 Pixel.  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  Legt den horizontalen Rand an.  
@@ -1615,7 +1615,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt den Rand in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1636,16 +1636,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiImageListResID`  
+ [in] *UiImageListResID*  
  Gibt die Ressourcen-ID der Bildliste an.  
   
- [in] `cx`  
+ [in] *Cx*  
  Gibt die Größe der Symbole in der Bildliste an.  
   
- [in] `clrTransparent`  
+ [in] *ClrTransparent*  
  Gibt die transparente Farbe.  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Gibt die Bildliste, die die Symbole für den Aufgabenbereich enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1663,10 +1663,10 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Gibt den nullbasierten Index der Seite an.  
   
- [in] `lpszName`  
+ [in] *Wert*  
  Gibt den Beschriftungstext auf der Seite angezeigt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1683,13 +1683,13 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Aufgabengruppe an.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Gibt den nullbasierten Index des Tasks an.  
   
- [in] `lpszTaskName`  
+ [in] *LpszTaskName*  
  Gibt den Aufgabennamen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1703,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt den horizontale Offset.  
   
 ### <a name="remarks"></a>Hinweise  
  Der horizontale Offset ist der Abstand in Pixel vom linken und rechten Rand einer Gruppe.  
   
- Wenn `n` ist-1, diese Methode legt den horizontalen Offset auf den Rückgabewert von der `CMFCVisualManager::GetTasksPaneTaskHorzOffset` Methode.  
+ Wenn *n* ist-1, diese Methode legt den horizontalen Offset auf den Rückgabewert von der `CMFCVisualManager::GetTasksPaneTaskHorzOffset` Methode.  
   
  Der horizontalen Offset der Standardwert ist 12 Pixel.  
   
@@ -1721,7 +1721,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1733,7 +1733,7 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1749,16 +1749,16 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Aufgabengruppe, die die Aufgabe enthält.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Gibt den nullbasierten Index des Tasks an.  
   
- [in] `color`  
+ [in] *Farbe*  
  Gibt die Textfarbe für den Task an.  
   
- [in] `colorHot`  
+ [in] *ColorHot*  
  Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, verwendet diese Methode die standardmäßige Hervorhebungsfarbe.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1772,13 +1772,13 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `n`  
+ [in] *n*  
  Gibt den vertikalen Rand festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
  Der vertikale Rand entspricht dem Abstand zwischen einem Aufgabenbereich und den vertikalen Rändern des Clientbereichs.  
   
- Wenn `n` ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneVertMargin`). Der Standardrand beträgt 12 Pixel.  
+ Wenn *n* ist-1 und das Framework bestimmt den Wert für den Rand mit dem visuellen Manager ( `CMFCVisualManager::GetTasksPaneVertMargin`). Der Standardrand beträgt 12 Pixel.  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  Legt die Höhe für ein Window-Steuerelement fest.  
@@ -1796,17 +1796,17 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe, die das Window-Steuerelement enthält.  
   
- [in] `hwndTask`  
+ [in] *HwndTask*  
  Gibt das Handle für das Window-Steuerelement an.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Gibt die Höhe festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Höhe des Window-Steuerelement festgelegt wurde; `FALSE` Wenn `nGroup` ist ungültig oder, wenn `hwndTask` ist nicht vorhanden.  
+ `TRUE` Wenn die Höhe des Window-Steuerelement festgelegt wurde; `FALSE` Wenn *Elementgr* ist ungültig oder, wenn *HwndTask* ist nicht vorhanden.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [CMFCTasksPane::AddWindow](#addwindow) Aufgaben im Zusammenhang mit Window-Steuerelemente hinzufügen.  
@@ -1819,7 +1819,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1835,16 +1835,16 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nGroup`  
+ [in] *Elementgr*  
  Gibt den nullbasierten Index der Gruppe an.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Gibt den nullbasierten Index des Tasks anzeigen oder ausblenden.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` um die Aufgabe anzuzeigen; `FALSE` auf die Aufgabe auszublenden.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1864,13 +1864,13 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCommandID`  
+ [in] *UiCommandID*  
  Gibt die Befehls-ID des Tasks zum ein- oder ausblenden.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` um die Aufgabe anzuzeigen; `FALSE` auf die Aufgabe auszublenden.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` zum Neuzeichnen des Aufgabenbereichs andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  

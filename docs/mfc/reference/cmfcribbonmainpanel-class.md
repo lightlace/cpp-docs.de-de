@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367957"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037364"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel-Klasse
 Implementiert einen Menübandbereich, der anzeigt, wenn Sie auf die [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -90,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Ein Zeiger auf das Menübandelement der Hauptbereich hinzu.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -106,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszLabel`  
+ *lpszLabel*  
  Gibt die Zeichenfolge, die Dateiliste der zuletzt geöffneten hinzugefügt.  
   
- `nWidth`  
+ *nWidth*  
  Gibt die Breite in Pixel der aktuellen Liste Dateibereich an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -122,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Ein Zeiger auf das Menübandelement an das Ende der Hauptbereich hinzufügen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -137,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pElem`  
+ *pElem*  
  Ein Zeiger auf ein Menübandelement rechts neben der Hauptbereich hinzugefügt werden.  
   
- `nWidth`  
+ *nWidth*  
  Gibt die Breite in Pixel im rechten Bereich an.  
   
 ### <a name="remarks"></a>Hinweise  

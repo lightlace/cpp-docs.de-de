@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367073"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038231"
 ---
 # <a name="class-factories-and-licensing"></a>Klassenfabriken und Lizenzierung
 Um eine Instanz des OLE-Steuerelements zu erstellen, ruft eine Steuerelementcontainer-Anwendung Memberfunktion einer Klassenfactory für das Steuerelement. Da das Steuerelement ein tatsächliches OLE-Objekt ist, ist die Klassenfactory für die Erstellung von Instanzen des Steuerelements verantwortlich. Jede Steuerelementklasse OLE muss eine Klassenfactory haben.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hInstance`  
+ *hInstance*  
  Der Instanzhandle, der DLL, die das lizenzierte Steuerelement zugeordnet werden soll.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Verweist auf eine Null-terminierte Zeichenfolge, enthält der Dateiname der Lizenz.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Verweist auf eine Bytesequenz, die die Sequenz, die am Anfang der Lizenzdatei gefunden entsprechen muss.  
   
- `cch`  
- Anzahl der Zeichen in `pszLicFileContents`.  
+ *CCH*  
+ Anzahl der Zeichen in *PszLicFileContents*.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn die Datei des License vorhanden ist, und mit der Zeichenfolge im beginnt `pszLicFileContents`, andernfalls 0.  
+ Ungleich NULL, wenn die Datei des License vorhanden ist, und mit der Zeichenfolge im beginnt *PszLicFileContents*, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `cch` ist-1, diese Funktion verwendet:  
+ Wenn *Cch* ist-1, diese Funktion verwendet:  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

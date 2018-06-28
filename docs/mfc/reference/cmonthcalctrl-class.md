@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8dd962a06d6c7edadcdd029bd83d44b251aec8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45e0499297c814e4a214962bc2f51404960a8c38
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377738"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039218"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-Klasse
 Kapselt die Funktionalität eines Monatskalender-Steuerelements.  
@@ -226,19 +226,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt die Kombination von Windows-Formatvorlagen im Monatskalender-Steuerelement zugewiesen. Finden Sie unter [Steuerelementtypen für die Calendar Month](http://msdn.microsoft.com/library/windows/desktop/bb760919) in das Windows SDK für Weitere Informationen zu den Stilen.  
   
- `rect`  
+ *Rect*  
  Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Enthält die Position und Größe der im Monatskalender-Steuerelement.  
   
- `pt`  
+ *pt*  
  Ein Verweis auf eine [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Speicherort der im Monatskalender-Steuerelement bezeichnet.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster eines Monatskalender-Steuerelements ist. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt an, im Monatskalender-Steuerelement der Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -251,11 +251,11 @@ virtual BOOL Create(
   
 2.  Rufen Sie diese Memberfunktion, die ein Monatskalender-Steuerelement erstellt, und fügt es der `CMonthCalCtrl` Objekt.  
   
- Beim Aufruf **erstellen**, die allgemeine Steuerelemente werden initialisiert. Die Version des **erstellen** Sie Aufruf bestimmt, wie sie festgelegt wird:  
+ Beim Aufruf `Create`, die allgemeine Steuerelemente werden initialisiert. Die Version des `Create` Sie Aufruf bestimmt, wie sie festgelegt wird:  
   
--   Um automatisch die Größe des Steuerelements ein Monat MFC haben, rufen Sie die Außerkraftsetzung, die verwendet die `pt` Parameter.  
+-   Um automatisch die Größe des Steuerelements ein Monat MFC haben, rufen Sie die Außerkraftsetzung, die verwendet die *pt* Parameter.  
   
--   Um die Größe des Steuerelements selbst, die Überschreibung dieser Funktion, die mithilfe der `rect` Parameter.  
+-   Um die Größe des Steuerelements selbst, die Überschreibung dieser Funktion, die mithilfe der *Rect* Parameter.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `pmcGridInfo`|Zeiger auf eine [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) -Struktur, die Informationen zu den aktuellen Monatskalender-Steuerelement empfängt. Der Aufrufer ist verantwortlich für das zuordnen und diese Struktur initialisieren.|  
+|[out] *PmcGridInfo*|Zeiger auf eine [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) -Struktur, die Informationen zu den aktuellen Monatskalender-Steuerelement empfängt. Der Aufrufer ist verantwortlich für das zuordnen und diese Struktur initialisieren.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -331,15 +331,15 @@ CALID GetCalID() const;
  Diese Methode sendet die [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
- Ruft die Farbe eines Bereichs des Monats Monatskalender-Steuerelement, die vom angegebenen `nRegion`.  
+ Ruft die Farbe eines Bereichs des Monats Monatskalender-Steuerelement, die vom angegebenen *nRegion*.  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRegion`  
- Der Bereich der im Monatskalender-Steuerelement aus dem die Farbe abgerufen werden. Eine Liste von Werten, finden Sie unter der `nRegion` Parameter [SetColor](#setcolor).  
+ *nRegion*  
+ Der Bereich der im Monatskalender-Steuerelement aus dem die Farbe abgerufen werden. Eine Liste von Werten, finden Sie unter der *nRegion* Parameter [SetColor](#setcolor).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der im Erfolgsfall den Teil der im Monatskalender-Steuerelement, zugeordnete Farbe angibt. Diese Memberfunktion gibt, andernfalls-1 zurück.  
@@ -384,10 +384,10 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refDateTime`  
+ *refDateTime*  
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt oder eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt. Empfängt die aktuelle Uhrzeit.  
   
- `pDateTime`  
+ *pDateTime*  
  Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die die aktuell ausgewählten Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht sein **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -480,7 +480,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRect`  
+ *pRect*  
  Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die umschließende Rechteck-Informationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht sein **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -523,19 +523,19 @@ int GetMonthRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refMinRange`  
+ *refMinRange*  
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, enthält das kleinstmögliche Datum zulässig.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Ein Verweis auf eine `COleDateTime` oder `CTime` -Objekt, das maximal zulässige Datum enthält.  
   
- `pMinRange`  
+ *pMinRange*  
  Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ein Zeiger auf eine `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
   
- `dwFlags`  
+ *dwFlags*  
  -Wert, der den Rahmen der Bereichsgrenzen abgerufen werden sollen. Dieser Wert muss eine der folgenden sein.  
   
 |Wert|Bedeutung|  
@@ -544,7 +544,7 @@ int GetMonthRange(
 |GMR_VISIBLE|Schließen Sie nur diese Monate an, die vollständig angezeigt werden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Ganzzahl, des Bereichs in Monaten darstellt, von der beiden Grenzwerte umfassten, erkennbar `refMinRange` und `refMaxRange` in den ersten und zweiten Versionen oder `pMinRange` und `pMaxRange` in der dritten Version.  
+ Eine Ganzzahl, des Bereichs in Monaten darstellt, von der beiden Grenzwerte umfassten, erkennbar *RefMinRange* und *RefMaxRange* in den ersten und zweiten Versionen oder *pMinRange* und *pMaxRange* in der dritten Version.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981)gemäß der Beschreibung im Windows SDK. In MFC Implementierung von `GetMonthRange`, können Sie angeben, `COleDateTime` Verwendung "," eine `CTime` Verwendung "," oder eine `SYSTEMTIME` Verwendung-Struktur.  
@@ -570,10 +570,10 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMinRange`  
+ *pMinRange*  
  Ein Zeiger auf eine `COleDateTime` -Objekt, eine `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ein Zeiger auf eine `COleDateTime` -Objekt, eine `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -581,8 +581,8 @@ DWORD GetRange(
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
-|GDTR_MAX|Für das Steuerelement wird eine Obergrenze festgelegt. `pMaxRange` gültig ist und die entsprechenden Datumsinformationen enthält.|  
-|GDTR_MIN|Eine Untergrenze ist für das Steuerelement festgelegt; `pMinRange` gültig ist und die entsprechenden Datumsinformationen enthält.|  
+|GDTR_MAX|Für das Steuerelement wird eine Obergrenze festgelegt. *pMaxRange* gültig ist und die entsprechenden Datumsinformationen enthält.|  
+|GDTR_MIN|Eine Untergrenze ist für das Steuerelement festgelegt; *pMinRange* gültig ist und die entsprechenden Datumsinformationen enthält.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983)gemäß der Beschreibung im Windows SDK. In MFC Implementierung von `GetRange`, können Sie angeben, eine `COleDateTime` Verwendung "," eine `CTime` Verwendung "," oder eine `SYSTEMTIME` Verwendung-Struktur.  
@@ -608,16 +608,16 @@ BOOL GetSelRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refMinRange`  
+ *refMinRange*  
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, enthält das kleinstmögliche Datum zulässig.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Ein Verweis auf eine `COleDateTime` oder `CTime` -Objekt, das maximal zulässige Datum enthält.  
   
- `pMinRange`  
+ *pMinRange*  
  Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ein Zeiger auf eine `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -638,10 +638,10 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refDateTime`  
+ *refDateTime*  
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, das den aktuellen Tag angibt.  
   
- `pDateTime`  
+ *pDateTime*  
  Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die die Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht sein **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -733,10 +733,10 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `cxyBorder`|Die Breite des Rahmens in Pixel.|  
+|[in] *CxyBorder*|Die Breite des Rahmens in Pixel.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn diese Methode erfolgreich ist, ist die Breite des Rahmens legen Sie auf der `cxyBorder` Parameter. Andernfalls wird die Breite des Rahmens auf den Standardwert, der vom aktuellen angegeben wird zurückgesetzt [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oder 0 (null), wenn Designs nicht verwendet werden.  
+ Wenn diese Methode erfolgreich ist, ist die Breite des Rahmens legen Sie auf der *CxyBorder* Parameter. Andernfalls wird die Breite des Rahmens auf den Standardwert, der vom aktuellen angegeben wird zurückgesetzt [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oder 0 (null), wenn Designs nicht verwendet werden.  
   
  Diese Methode sendet die [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) Nachricht, die im Windows SDK beschrieben wird.  
   
@@ -773,13 +773,13 @@ BOOL SetCalID(CALID calid);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `calid`|Eines der [Kalender Bezeichner](http://msdn.microsoft.com/library/windows/desktop/dd317732) Konstanten.|  
+|[in] *Calid*|Eines der [Kalender Bezeichner](http://msdn.microsoft.com/library/windows/desktop/dd317732) Konstanten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Kalender Bezeichner gibt regionsspezifisches-Kalender dar, z. B. den gregorianischen (lokalisiert), Japanisch oder Hijri Kalender. Verwenden der `SetCalID` Methode zum Anzeigen eines Kalenders, der von angegeben wird die `calid` Parameter an, wenn das Gebietsschema, das dem Kalender auf Ihrem Computer installiert ist.  
+ Ein Kalender Bezeichner gibt regionsspezifisches-Kalender dar, z. B. den gregorianischen (lokalisiert), Japanisch oder Hijri Kalender. Verwenden der `SetCalID` Methode zum Anzeigen eines Kalenders, der durch angegeben ist die *Calid* Parameter an, wenn das Gebietsschema, das dem Kalender auf Ihrem Computer installiert ist.  
   
  Diese Methode sendet die [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) Nachricht, die im Windows SDK beschrieben wird.  
   
@@ -816,7 +816,7 @@ COLORREF SetColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRegion`  
+ *nRegion*  
  Ein Ganzzahlwert, der Monat Kalenderfarbe festzulegende angeben. Dieser Wert kann eine der folgenden Werte sein.  
   
 |Wert|Bedeutung|  
@@ -828,7 +828,7 @@ COLORREF SetColor(
 |MCSC_TITLETEXT|Die Farbe, zum Anzeigen von Text in der Calendar-Titel.|  
 |MCSC_TRAILINGTEXT|Die Farbe, die zum Anzeigen von Kopf-und nachfolgende Tag verwendet. Kopf- und die nachfolgenden Tage sind die Tage von der vorherigen und folgenden Monate, die auf dem aktuellen Kalender angezeigt werden.|  
   
- `ref`  
+ *ref*  
  Ein **COLORREF** Wert für die neue Farbe-Einstellung für den angegebenen Teil der Monatskalender-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwNewView`|Einer der folgenden Werte, der eine monatlich, jährlich, Decade oder Jahrhundert Ansicht angibt.<br /><br /> MCMV_MONTH: Monatliche Ansicht<br /><br /> MCMV_YEAR: Jährliche Ansicht<br /><br /> MCMV_DECADE: Jahrzehnt anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|  
+|[in] *DwNewView*|Einer der folgenden Werte, der eine monatlich, jährlich, Decade oder Jahrhundert Ansicht angibt.<br /><br /> MCMV_MONTH: Monatliche Ansicht<br /><br /> MCMV_YEAR: Jährliche Ansicht<br /><br /> MCMV_DECADE: Jahrzehnt anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -869,10 +869,10 @@ BOOL SetCurSel(const CTime& refDateTime);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refDateTime`  
+ *refDateTime*  
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, das den aktuell ausgewählten Monatskalender-Steuerelement angibt.  
   
- `pDateTime`  
+ *pDateTime*  
  Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, das die aktuelle Auswahl festzulegen, enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -895,9 +895,9 @@ BOOL SetDayState(
   
 ### <a name="parameters"></a>Parameter  
  *nMonths*  
- Wert, der angibt, wie viele Elemente im Array enthalten sind, die `pStates` verweist auf.  
+ Wert, der angibt, wie viele Elemente im Array enthalten sind, *pStates* verweist auf.  
   
- `pStates`  
+ *pStates*  
  Ein Zeiger auf eine [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) Array von Werten, die definieren, wie im Monatskalender-Steuerelement, jeden Tag in der Anzeige gezeichnet wird. Die **MONTHDAYSTATE** -Datentyp ist ein Bitfeld, in dem jedes Bit (1 bis 31) stellt den Zustand für einen Tag eines Monats dar. Wenn eine Bit aktiviert ist, wird das entsprechende Tag angezeigt werden fett; Andernfalls wird es mit keine Hervorhebung angezeigt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -955,7 +955,7 @@ BOOL SetMaxSelCount(int nMax);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMax`  
+ *nMax*  
  Der Wert, der festgelegt wird, um die maximale Anzahl von Tagen auswählbare darzustellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1027,10 +1027,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMinRange`  
+ *pMinRange*  
  Ein Zeiger auf eine `COleDateTime` -Objekt, eine `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ein Zeiger auf eine `COleDateTime` -Objekt, eine `CTime` -Objekt, oder `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1062,10 +1062,10 @@ BOOL SetSelRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMinRange`  
+ *pMinRange*  
  Ein Zeiger auf eine `COleDateTime` -Objekt, eine `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ein Zeiger auf eine `COleDateTime` -Objekt, eine `CTime` -Objekt, oder `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1084,10 +1084,10 @@ void SetToday(const CTime* pDateTime);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `refDateTime`  
+ *refDateTime*  
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt, das das aktuelle Datum enthält.  
   
- `pDateTime`  
+ *pDateTime*  
  In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt mit Informationen über das aktuelle Datum. In der dritten Version, ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die das aktuelle Datumsinformationen enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1117,7 +1117,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bRepaint`  
+ *bRepaint*  
  Gibt an, ob das Steuerelement neu gezeichnet wird. Standardmäßig **"true"**. Wenn **"false"**, tritt keine Zwischenablagenansicht neu gezeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1137,13 +1137,13 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl von Kalendern enthält.|  
+|[in] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl von Kalendern enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, dessen Größe kleiner oder gleich dem Rechteck ist, definiert, indem die `lpRect` Parameter.  
+ Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, dessen Größe kleiner oder gleich dem Rechteck ist, definiert, indem die *LpRect* Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode berechnet, wie viele Kalender in das Rechteck, angegeben durch passen die `lpRect` Parameter, und klicken Sie dann gibt das kleinste Rechteck befindet, die diese Anzahl von Kalendern enthalten kann. Diese Methode verkleinert tatsächlich die gewünschte Anzahl von Kalendern genau entsprechend des angegebenen Rechtecks.  
+ Diese Methode berechnet, wie viele Kalender in das Rechteck, angegeben durch passen die *LpRect* Parameter, und klicken Sie dann gibt das kleinste Rechteck befindet, die diese Anzahl von Kalendern enthalten kann. Diese Methode verkleinert tatsächlich die gewünschte Anzahl von Kalendern genau entsprechend des angegebenen Rechtecks.  
   
  Diese Methode sendet die [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) Nachricht, die im Windows SDK beschrieben wird.  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367343"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040612"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView-Klasse
 Stellt die Funktionalität der WebBrowser-Bearbeitungsplattform im Kontext der MFC-Dokument-/Ansichtarchitektur bereit.  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszClassName`  
+ *lpszClassName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert die [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion oder die **RegisterClass** Windows-Funktion. Wenn **NULL**, verwendet die vordefinierten Standardwerte [CFrameWnd](../../mfc/reference/cframewnd-class.md) Attribute.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt an, die Fenster-Stilattribute. Wird standardmäßig die **WS_VISIBLE** und **WS_CHILD** Fensterstile festgelegt sind.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters angibt. Die `rectDefault` Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster des Steuerelements.  
   
- `nID`  
+ *nID*  
  Die ID der Sicht. Standardmäßig festgelegt, um **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *"pContext"*  
  Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md). **NULL** standardmäßig.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppDocument`  
+ *ppDocument*  
  Die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

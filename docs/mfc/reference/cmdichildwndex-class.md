@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377622"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041889"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx-Klasse
 Die `CMDIChildWndEx` Klasse stellt die Funktionalität eines Windows untergeordneten Fensters der multiple Document Interface (MDI) bereit. Erweitert die Funktionalität des [CMDIChildWnd-Klasse](../../mfc/reference/cmdichildwnd-class.md). Das Framework benötigt diese Klasse, wenn eine MDI-Anwendung bestimmte MFC-Klassen verwendet.  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Ein Zeiger auf den Bereich.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` So fügen Sie den Bereich an das Ende der Liste von Bereichen für Dock-Manager; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Ein Zeiger auf den Bereich.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hdwp`  
+ [in] *Hdwp*  
  Handle für eine verzögerte Fenster Position-Struktur.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBar`  
+ [in] *pBar*  
  Ein Zeiger auf den Bereich.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Die ID des Bereichs.  
   
- [in] `lpRect`  
+ [in] *LpRect*  
  Ein Zeiger auf ein Rechteck.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `lpRect` Parameter wird nicht verwendet.  
+ Die *LpRect* Parameter wird nicht verwendet.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Dockt einen Bereich auf der linken Seite eines anderen Bereichs an.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBar`  
+ *pBar*  
  Ein Zeiger auf den Bereich, der angedockt werden.  
   
- `pLeftOf`  
+ *pLeftOf*  
  Ein Zeiger auf den Bereich, der als Bezugspunkt dient.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Bei Erfolg `FALSE` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nimmt Bereich gemäß `pBar` und Dockt es auf der linken Seite des Bereichs von angegebenen `pLeftOf`.  
+ Diese Methode nimmt Bereich gemäß *pBar* und Dockt es auf der linken Seite des Bereichs von angegebenen *pLeftOf*.  
   
  Rufen Sie diese Methode, wenn Sie mehrere Informationsbereiche in einer vordefinierten Reihenfolge andocken möchten.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwDockStyle`  
+ [in] *DwDockStyle*  
  Gibt die Seiten des Hauptrahmenfenster aktiviert ist. Verwenden Sie eine oder mehrere der folgenden Flags.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwDockStyle`  
+ [in] *DwDockStyle*  
  Gibt die andockbare Ausrichtung zu aktivieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Die Steuerelement-ID des Bereichs zu suchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Ein Zeiger auf den Bereich eingefügt.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Ein Zeiger auf angrenzenden Bereich.  
   
- [in] `bAfter`  
- Wenn `TRUE`, `pControlBar` eingefügt, nachdem `pTarget`. Wenn `FALSE`, `pControlBar` eingefügt wird, bevor Sie `pTarget`.  
+ [in] *bNach*  
+ Wenn `TRUE`, *pControlBar* eingefügt, nachdem *pTarget*. Wenn `FALSE`, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn die Methode erfolgreich ist, `FALSE` andernfalls.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Der angegebene Punkt.  
   
- [in] `dwBarAlignment`  
+ [in] *DwBarAlignment*  
  Gibt an, welche Kante, die in der Nähe der Punkt ist. Mögliche Werte sind `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, und `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Wenn der Punkt in der Nähe von den äußeren Rahmen der DockPosition ist; `FALSE` andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pFrame`  
+ [in] *pFrame*  
  Ein Zeiger auf ein Minirahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bPreview`  
+ [in] *bPreview*  
  Wenn `TRUE`, geben Sie die Seitenansicht. Wenn `FALSE`, Seitenansicht beenden.  
   
- [in] `pState`  
+ [in] *pState*  
  Ein Zeiger auf die Seitenansicht-Status-Struktur.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  Wenn `TRUE`, fügen Sie den Namen des Dokuments an den Titel.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Erhöhen Sie den Suchbereich, indem Sie diese Menge. Ein Bereich erfüllt die Suchkriterien, fällt der angegebene Punkt in der höheren Bereich.  
   
- [in] `bExactBar`  
- `TRUE` ignoriert die `nSensitivity` Parameter ist, andernfalls `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` ignoriert die *nSensitivity* Parameter ist, andernfalls `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Wenn dies nicht der `NULL`, sucht die Methode nur Bereiche des angegebenen Typs.  
   
- [in] `dwAlignment`  
+ [in] *DwAlignment*  
  Wenn Sie ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter den Rand des Bereichs, der den angegebenen Punkt am nächsten gelegenen war. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um zu bestimmen, ob ein Bereich auf den angegebenen Punkt gemäß den angegebenen Bedingungen wie z. B. Laufzeitklasse und Sichtbarkeit enthält.  
   
- Wenn die Funktion zurückgibt und ein Bereich gefunden wurde, `dwAlignment` die Ausrichtung des angegebenen Punkt enthält. Beispielsweise war der Punkt am Anfang des Bereichs am nächsten gelegenen `dwAlignment` festgelegt ist, um `CBRS_ALIGN_TOP`.  
+ Wenn die Funktion zurückgibt und ein Bereich gefunden wurde, *DwAlignment* die Ausrichtung des angegebenen Punkt enthält. Beispielsweise war der Punkt am Anfang des Bereichs am nächsten gelegenen *DwAlignment* festgelegt ist, um `CBRS_ALIGN_TOP`.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Berechnet das Layout des Fensters neu.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bNotify`  
+ [in] *bNotify*  
  Wenn `TRUE`, das aktive direkte-Element für das Fenster erhält eine Benachrichtigung von der layoutänderung.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Ein Zeiger auf den Bereich zu entfernen.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  Wenn `TRUE`, entfernte Bereich zerstört wird.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  Wenn `TRUE`, passen Sie das Layout des Docks sofort.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  Wenn `TRUE`, am Layout des Docks bezieht sich auf die Liste der leisten zum automatischen ausblenden. Wenn `FALSE`, am Layout des Docks bezieht sich auf die Liste der regulären Bereiche.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hIcon`  
+ *hIcon*  
  Ein Handle für ein Symbol auf der Registerkarte der Windows 7-Taskleiste angezeigt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  Gibt an, ob diese Funktion die Anzahl der untergeordnete MDI-Fenster, die mit MDI-Registerkarten registriert überprüfen muss. Wenn diese Zahl 0 ist, entfernt diese Funktion das Clippingrechteck an, aus der Anwendung Taskleistenminiaturansicht.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Gibt das neue Clippingrechteck an. Wenn das Rechteck leer oder null ist, wird das Clipping entfernt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Eine Kombination von STPFLAG-Werten. Weitere Informationen finden Sie unter [itaskbarlist4:: Settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndBefore`  
+ *pWndBefore*  
  Ein Zeiger auf die untergeordneten MDI-Fensters, dessen Miniaturansicht auf der linken Seite eingefügt wird. In diesem Fenster muss bereits registriert werden, über `RegisterTaskbarTab`. Wenn dieser Wert ist `NULL`, die neue Miniaturansicht wird bis zum Ende der Liste hinzugefügt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndBefore`  
+ *pWndBefore*  
  Ein Zeiger auf die untergeordneten MDI-Fensters, dessen Miniaturansicht auf der linken Seite eingefügt wird. In diesem Fenster muss bereits registriert werden, über `RegisterTaskbarTab`. Wenn dieser Wert ist `NULL`, die neue Miniaturansicht wird bis zum Ende der Liste hinzugefügt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hBmpDst`  
+ *hBmpDst*  
  Ein Handle für eine Zielbitmap.  
   
- `rectDst`  
+ *rectDst*  
  Gibt die Zielrechtecks an.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  Ein Handle für eine Quellbitmap.  
   
- `rectSrc`  
+ *rectSrc*  
  Gibt das Quellrechteck an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  Gibt einen Zeiger auf das übergeordnete Fenster des Fensters aktiviert wird. Der Zeiger kann temporär sein und sollte nicht gespeichert werden.  
   
- `nHitTest`  
+ *nHitTest*  
  Gibt an, die Ortskennzahl Treffertests. Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.  
   
- `message`  
+ *message*  
  Gibt die Anzahl der Maus-Nachricht.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nState`  
+ *nState*  
  Gibt an, ob die `CWnd` aktiviert bzw. deaktiviert wird.  
   
- `pWndOther`  
+ *pWndOther*  
  Zeiger auf die `CWnd` aktiviert bzw. deaktiviert. Der Zeiger kann `NULL`, und es kann temporär sein.  
   
- `bMinimized`  
+ *bMinimized*  
  Gibt den minimierten Zustand der `CWnd` aktiviert bzw. deaktiviert. Der Wert `TRUE` gibt an, das Fenster wird minimiert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWidth`  
+ *nWidth*  
  Gibt die Breite der Bitmap erforderlich.  
   
- `nHeight`  
+ *nHeight*  
  Gibt die Höhe der Bitmap erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  Dieser Parameter ist `TRUE` , wenn die Bitmap für die untergeordneten MDI-Fensters angefordert wird, die derzeit aktiv ist und das Hauptfenster wird nicht minimiert. In diesem Fall die standardverarbeitung nimmt eine Momentaufnahme des Hauptfensters.  
   
- `ptLocation`  
+ *ptLocation*  
  Gibt den Speicherort der Bitmap in der Main (oberste Ebene) Fenster Clientkoordinaten. Dieser Punkt muss vom aufgerufenen bereitgestellt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
+ *bAktivieren*  
  Gibt an, ob ( `TRUE`), oder deaktivieren ( `FALSE`) automatischen Auswahl eines Teils des Clientbereichs des Fensters angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  

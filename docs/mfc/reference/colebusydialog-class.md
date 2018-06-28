@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374369"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040911"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog-Klasse
 Wird für die OLE-Dialogfelder "Server antwortet nicht" oder "Server ausgelastet" verwendet.  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  Wenn **"true"**, rufen Sie das Dialogfeld nicht mehr reagiert anstatt das Dialogfeld Server ausgelastet. Klicken Sie im Dialogfeld reagiert nicht mit der Wortlaut weicht etwas mit dem Wortlaut in das Dialogfeld "Server ausgelastet" und die Schaltfläche "Abbrechen" ist deaktiviert.  
   
- `dwFlags`  
+ *dwFlags*  
  Erstellen Sie das Flag. Kann 0 (null) oder mehrere der folgenden Werte mit dem bitweisen OR-Operator kombiniert enthalten:  
   
 - **BZ_DISABLECANCELBUTTON** deaktivieren Sie die Schaltfläche "Abbrechen", beim Aufrufen des Dialogfelds "".  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** deaktivieren Sie die Schaltfläche "Wiederholen", beim Aufrufen des Dialogfelds "".  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster eines jedoch stattdessen das Dialogfeld auf das Hauptanwendungsfenster festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  

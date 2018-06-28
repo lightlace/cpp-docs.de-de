@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369322"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037973"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
 Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durchsuchen, also ein Bearbeitungsfeld, das eine Schaltfläche zum Durchsuchen optional enthält. Wenn der Benutzer auf die Schaltfläche zum Durchsuchen klicken, führt das Steuerelement eine benutzerdefinierte Aktion aus oder zeigt ein Standarddialogfeld an, das einen Dateibrowser oder einen Ordnerbrowser enthält.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Rufen Sie zum Bereitstellen eines benutzerdefinierten Abbilds für die Schaltfläche zum Durchsuchen der [SetBrowseButtonImage](#setbrowsebuttonimage) -Methode oder Überschreibung der [OnDrawBrowseButton](#ondrawbrowsebutton) Methode.  
   
-7.  Rufen Sie zum Entfernen der Schaltfläche zum Durchsuchen von Bearbeitungssteuerelements zum Durchsuchen der [EnableBrowseButton](#enablebrowsebutton) Methode mit der `bEnable` Parametersatz auf `FALSE`.  
+7.  Rufen Sie zum Entfernen der Schaltfläche zum Durchsuchen von Bearbeitungssteuerelements zum Durchsuchen der [EnableBrowseButton](#enablebrowsebutton) Methode mit der *bAktivieren* Parametersatz auf `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
+ *bAktivieren*  
  `TRUE` auf die Schaltfläche zum Durchsuchen angezeigt. `FALSE` nicht auf die Schaltfläche zum Durchsuchen angezeigt. Der Standardwert ist `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  Die Bezeichnung, die auf die Schaltfläche zum Durchsuchen angezeigt wird. Der Standardwert ist " **...** ".  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `bEnable` Parameter ist `TRUE`, implementieren Sie eine benutzerdefinierte Aktion ausführen, wenn die Durchsuchen-Schaltfläche geklickt wird. Um eine benutzerdefinierte Aktion zu implementieren, leiten Sie eine Klasse von der `CMFCEditBrowseCtrl` Klasse, und klicken Sie dann überschreiben die [OnBrowse](#onbrowse) Methode.  
+ Wenn die *bAktivieren* Parameter ist `TRUE`, implementieren Sie eine benutzerdefinierte Aktion ausführen, wenn die Durchsuchen-Schaltfläche geklickt wird. Um eine benutzerdefinierte Aktion zu implementieren, leiten Sie eine Klasse von der `CMFCEditBrowseCtrl` Klasse, und klicken Sie dann überschreiben die [OnBrowse](#onbrowse) Methode.  
   
  Wenn die `bEnable` Parameter ist `TRUE`, ist die Durchsuchen-Modus des Steuerelements `BrowseMode_Default`ist, andernfalls der Durchsuchenmodus ist `BrowseMode_None`. Weitere Informationen zum von Durchsuchenmodi finden Sie unter der [GetMode](#getmode) Methode.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszDefExt`  
+ *lpszDefExt*  
  Gibt die Standard-Dateierweiterung an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Gibt die Standardfilterzeichenfolge an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist `NULL`.  
   
- `dwFlags`  
+ *dwFlags*  
  Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- `Rect`  
+ *Rect*  
  Das Begrenzungsrechteck der Schaltfläche zum Durchsuchen.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` Wenn die Schaltfläche aufgerufen werden; andernfalls `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Wenn die Schaltfläche hervorgehoben ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hIcon`  
+ *hIcon*  
  Das Handle eines Symbols.  
   
- `hBitmap`  
+ *hBitmap*  
  Das Handle einer Bitmap.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  Die Ressourcen-ID einer Bitmap.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` So löschen Sie das angegebene Symbol oder eine Bitmap, wenn diese Methode beendet wird; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `strFileName`  
+ *strFileName*  
  Gibt den Dateinamen nicht zulässig.  
   
 ### <a name="return-value"></a>Rückgabewert  

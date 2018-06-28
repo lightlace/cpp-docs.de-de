@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5640f634276f87d0a41633354a7dde0ed65a2940
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 935728856a00a27afa1f386f493832ddb955538b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372494"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040999"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar-Klasse
 Eine Seite im Registerformat mit dem Aussehen des **Navigationsbereichs** in Microsoft Outlook 2000 oder Outlook 2003. Die `CMFCOutlookBar` Objekt enthält eine [CMFCOutlookBarTabCtrl-Klasse](../../mfc/reference/cmfcoutlookbartabctrl-class.md) Objekt und eine Reihe von Registerkarten. Die Registerkarten können es sich um [CMFCOutlookBarPane Klasse](../../mfc/reference/cmfcoutlookbarpane-class.md) Objekte oder `CWnd`--abgeleitete Objekte. Für den Benutzer wird die Outlook-Leiste in Form einer Reihe von Schaltflächen und eines Anzeigebereichs dargestellt. Wenn der Benutzer auf eine Schaltfläche klickt, wird der entsprechende Steuerelement- oder Schaltflächenbereich angezeigt.  
@@ -111,7 +111,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  Bei der Verarbeitung der `WM_CREATE` Nachricht in die Hauptframe Aufruf der [CMFCOutlookBar::Create](#create) Methode, um die Outlook-Leiste Registerkarten-Steuerelement zu erstellen.  
+2.  Rufen Sie bei der Verarbeitung der WM_DESTROY-Meldung in die Hauptframe der [CMFCOutlookBar::Create](#create) Methode, um die Outlook-Leiste Registerkarten-Steuerelement zu erstellen.  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -147,7 +147,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  Rufen Sie [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) jede neue Registerkarte hinzufügen. Legen Sie die `bDetachable` Parameter `FALSE` auf eine Seite nicht lösbare stellen. Oder verwenden Sie [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) lösbare Seiten hinzufügen.  
+5.  Rufen Sie [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) jede neue Registerkarte hinzufügen. Legen Sie die *bDetachable* Parameter `FALSE` auf eine Seite nicht lösbare stellen. Oder verwenden Sie [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) lösbare Seiten hinzufügen.  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
@@ -207,7 +207,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBar`  
+ [in] *pBar*  
  Ein Zeiger auf einen anderen Bereich an, der in diesen Bereich angedockt werden wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -216,7 +216,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="remarks"></a>Hinweise  
  Wenn die Outlook-Leiste in Outlook 2003-Modus befindet, Andocken wird nicht unterstützt, sodass der Rückgabewert ist `FALSE`.  
   
- Wenn die `pBar` Parameter ist `NULL`, gibt diese Methode `FALSE`.  
+ Wenn die *pBar* Parameter ist `NULL`, gibt diese Methode `FALSE`.  
   
  Diese Methode verhält sich hingegen als der Basismethode [cbasepane:: Canacceptpane](../../mfc/reference/cbasepane-class.md#canacceptpane), außer dass selbst wenn Andocken nicht aktiviert ist, eine Outlook-Leiste noch einem anderen Outlook-Leiste darüber angedockt werden aktivieren kann.  
   
@@ -250,25 +250,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszCaption`  
+ [in] *LpszCaption*  
  Gibt die fensterbeschriftung.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Gibt einen Zeiger auf ein übergeordnetes Fenster. Es darf nicht NULL sein.  
   
- [in] `rect`  
+ [in] *Rect*  
  Gibt an, die Outlook-Leiste Größe und Position in Pixel.  
   
- [in] `nID`  
+ [in] *nID*  
  Gibt an, die Steuerelement-ID. Muss sich von anderen Steuerelement-IDs, die in der Anwendung verwendet werden.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Gibt das Format des gewünschten Steuerelements Balken an. Mögliche Werte finden Sie unter [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `dwControlBarStyle`  
+ [in] *DwControlBarStyle*  
  Gibt an, die spezielle Bibliothek definierte Stile.  
   
- [in] `pContext`  
+ [in] *"pContext"*  
  Kontext zu erstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -277,7 +277,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Sie erstellen eine `CMFCOutlookBar` Objekt in zwei Schritten. Rufen Sie zunächst den Konstruktor aus, und rufen dann `Create`, der das Outlook-Steuerelement erstellt, und fügt es der `CMFCOutlookBar` Objekt.  
   
- Finden Sie unter [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) für die Liste der verfügbaren Bibliothek definierte Formatvorlagen durch angegeben werden `dwControlBarStyle`.  
+ Finden Sie unter [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) für die Liste der verfügbaren Bibliothek definierte Formatvorlagen durch angegeben werden *DwControlBarStyle*.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CMFCOutlookBar` Klasse. Dieser Codeausschnitt ist Teil der [Outlook mehreren Ansichten Beispiel](../../visual-cpp-samples.md).  
@@ -297,16 +297,16 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszPageName`  
+ [in] *LpszPageName*  
  Die Seite-Bezeichnung.  
   
- [in] `bActivatePage`  
+ [in] *bActivatePage*  
  Wenn `TRUE`, die Seite wird bei der Erstellung aktiviert.  
   
- [in] `dwEnabledDocking`  
+ [in] *DwEnabledDocking*  
  Eine Kombination von CBRS_ALIGN_-Flags, die angibt, die aktiviert Andocken Seiten aus, wenn die Seite getrennt wird.  
   
- [in] `bEnableTextLabels`  
+ [in] *bEnableTextLabels*  
  Wenn `TRUE`, die Bezeichnungen aktiviert sind, für die Schaltflächen, die auf der Seite befinden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -347,16 +347,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBar`  
+ [in] *pBar*  
  Ein Zeiger auf den Bereich, um "float".  
   
- [in] `nTabID`  
+ [in] *nTabID*  
  Der nullbasierte Index der Registerkarte "float".  
   
- [in] `dockMethod`  
+ [in] *DockMethod*  
  Gibt die Methode zu verwenden, um den Bereich "float" auszuführen.  Weitere Informationen finden Sie unter [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` der Bereich ausgeblendet vor Gleitkommawert; andernfalls `FALSE`. Anders als die Basisklassenversion dieser Methode ist dieser Parameter keinen Standardwert aufweisen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -388,10 +388,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `rectTabAreaTop`  
+ [out] *RectTabAreaTop*  
  Enthält die Größe und Position des Registerkartenbereichs Top (in Clientkoordinaten), wenn die Funktion zurückgibt.  
   
- [out] `rectTabAreaBottom`  
+ [out] *RectTabAreaBottom*  
  Enthält die Größe und Position des Registerkartenbereichs unteren (in Clientkoordinaten), wenn die Funktion zurückgibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -422,7 +422,7 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPage`  
+ [in] *nPage*  
  Der nullbasierte Index der Registerkarte, die aktive vorgenommen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -436,7 +436,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPage`  
+ [in] *nPage*  
  Der nullbasierte Index der Registerkarte, die aktiv festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -452,7 +452,7 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bDown`  
+ [in] *bDown*  
  `TRUE` Wenn die Outlook-Leiste, Durchführen eines Bildlaufs ist oder `FALSE` Wenn oben durchführen eines Bildlaufs ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -467,10 +467,10 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiPage`  
+ [in] *uipage fehlgeschlagen*  
  Nullbasierte Index der Seite in der übergeordneten Outlook-Fenster.  
   
- [in] `pTargetWnd`  
+ [in] *pTargetWnd*  
  Pointerto Outlook übergeordneten Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -493,10 +493,10 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pFont`  
+ [in] *pFont*  
  Gibt die neue Schriftart an.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Wenn `TRUE`, wird die Outlook-Leiste neu gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -510,7 +510,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bMode2003`  
+ [in] *bMode2003*  
  Bei "true", ist Office 2003-Modus aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  

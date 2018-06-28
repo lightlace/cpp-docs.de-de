@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ee30d461bac43831bf59c19f5aac95884057eea
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378453"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042234"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementiert die Basisfunktionalität für Fenster im Registerkartenformat.  
@@ -436,10 +436,10 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hIcon`  
+ [in] *hIcon*  
  Ein Handle für das Symbol "hinzugefügt werden.  
   
- [in] `iIcon`  
+ [in] *iIcon*  
  Nullbasierten Index des Symbols in der geschützten `CImageList m_Images` Member.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -463,23 +463,23 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Ein Zeiger auf das Fenster, das diese Methode als neue Registerkarte darstellt.  
   
- [in] `lpszTabLabel`  
+ [in] *LpszTabLabel*  
  Eine Zeichenfolge, die die Bezeichnung für die neue Registerkarte enthält.  
   
- [in] `uiImageId`  
+ [in] *UiImageId*  
  Ein Bild-ID aus der Bildliste. Das Registerkarten-Steuerelement verwendet dieses Bild als Symbol für die neue Registerkarte ein.  
   
- [in] `uiResTabLabel`  
+ [in] *UiResTabLabel*  
  Die Ressourcen-ID für die Bezeichnung.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Ein boolescher Parameter, der bestimmt, ob die neue Registerkarte gelöst werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `pTabWnd` verweist auf ein Objekt, das nicht von abgeleitet ist die [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) und `bDetachable` ist `TRUE`, erstellt das Framework automatisch einen Wrapper für die `pTabWnd` Objekt. Der Wrapper macht die `pTabWnd` lösbare Objekt. Standardmäßig ist der Wrapper eine Instanz von der [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md). Wenn die Funktionalität von der Standard-Wrapper nicht akzeptabel ist, verwenden die [cmfcbasetabctrl::](#setdockingbarwrapperrtc) Methode, um einen anderen Wrapper anzugeben.  
+ Wenn *pTabWnd* verweist auf ein Objekt, das nicht von abgeleitet ist die [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) und *bDetachable* ist `TRUE`, erstellt das Framework automatisch ein Wrapper für die *pTabWnd* Objekt. Der Wrapper macht die *pTabWnd* lösbare Objekt. Standardmäßig ist der Wrapper eine Instanz von der [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md). Wenn die Funktionalität von der Standard-Wrapper nicht akzeptabel ist, verwenden die [cmfcbasetabctrl::](#setdockingbarwrapperrtc) Methode, um einen anderen Wrapper anzugeben.  
   
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
@@ -489,7 +489,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -501,7 +501,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -513,7 +513,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rectEdit`  
+ [in] *RectEdit*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -546,24 +546,24 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndToWrap`  
+ [in] *pWndToWrap*  
  Ein Zeiger auf das Rahmenfenster, das umschlossen wird.  
   
- [in] `lpszTabLabel`  
+ [in] *LpszTabLabel*  
  Eine Zeichenfolge, die die Bezeichnung für das Fenster enthält.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Ein boolescher Parameter, der angibt, ob das Fenster gelöst werden kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Wrapper abgeleitet wurde. die `CDockablePane` Klasse, wenn `CreateWrapper` erfolgreich erstellt eine Wrapperklasse für `pWndToWrap`. Wenn die Methode fehlschlägt, es gibt `pWndToWrap`.  
+ Ein Zeiger auf den Wrapper abgeleitet wurde. die `CDockablePane` Klasse, wenn `CreateWrapper` erfolgreich erstellt eine Wrapperklasse für *pWndToWrap*. Wenn die Methode fehlschlägt, es gibt *pWndToWrap*.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Fenster im Registerkartenformat kann jedes Objekt abgeleitet Andocken `CWnd`. Allerdings in der Reihenfolge für eine `CMFCBaseTabCtrl Class` -Objekt Andockbar sein, jedes Objekt auf der `CMFCBaseTabCtrl` gelöst werden müssen. Aus diesem Grund `CMFCBaseTabCtrl` automatisch dient als Wrapper für alle Objekte, die nicht abgeleitet werden `CDockablePane`.  
   
  Wird standardmäßig die `CMFCBaseTabCtrl` erstellt Instanzen von der [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md). Rufen Sie zum Ändern der Wrapper-Standardklasse [cmfcbasetabctrl::](#setdockingbarwrapperrtc).  
   
- Wenn `pWndToWrap` stammt aus `CDockablePane`, diese Methode erstellt einen Wrapper keine. Stattdessen wird fehlschlagen und zurückgeben `pWndToWrap`.  
+ Wenn *pWndToWrap* stammt aus `CDockablePane`, diese Methode erstellt einen Wrapper keine. Stattdessen wird fehlschlagen und zurückgeben *pWndToWrap*.  
   
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  Das Framework ruft diese Methode, um eine Registerkarte von Registerkarten-Steuerelement zu trennen.  
@@ -576,20 +576,20 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dockMethod`  
+ [in] *DockMethod*  
  Enumerierten Datentyps gemäß der [CBasePane Klasse](../../mfc/reference/cbasepane-class.md). Dieser Datentyp gibt die Methode, die verwendet wurde, auf die Registerkarte "zu trennen.  
   
- [in] `nTabNum`  
+ [in] *nTabNum*  
  Der nullbasierte Index der Registerkarte kann nur getrennt werden.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Ein boolescher Parameter, der angibt, ob das Framework die Registerkarte "getrennte" ausgeblendet werden sollte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn von die Registerkarte angegeben `nTabNum` nicht lösbare, wird diese Funktion fehl und gibt `FALSE`.  
+ Wenn von die Registerkarte angegeben *nTabNum* nicht lösbare, wird diese Funktion fehl und gibt `FALSE`.  
   
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
@@ -599,7 +599,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bLastActive`  
+ [in] *bLastActive*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -611,7 +611,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Parameter, der bestimmt, ob das Framework automatische Farben verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -627,7 +627,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Wert, der bestimmt, ob benutzerdefinierte QuickInfos verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -644,7 +644,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Parameter, der angibt, ob die direkte Bearbeitung der registerkartenbezeichnungen aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -664,10 +664,10 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Wert, der angibt, ob die Registerkarte lösbar hergestellt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -681,7 +681,7 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Wert, der angibt, ob die Registerkarte Auslagerung aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -695,14 +695,14 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode hat keine Auswirkung, wenn die Registerkarte ersichtlich `iTab` bereits sichtbar ist.  
+ Diese Methode hat keine Auswirkung, wenn die Registerkarte ersichtlich *iTab* bereits sichtbar ist.  
   
  Standardmäßig wird diese Methode nicht durch unterstützt die `CMFCBaseTabCtrl Class`. Implementieren Sie diese Funktion in einer benutzerdefinierten Klasse abgeleitet `CMFCBaseTabCtrl` , wenn diese benutzerdefinierte Registerkarten-Steuerelement Registerkarte Durchführen eines Bildlaufs unterstützt. Diese Methode unterstützt die [CMFCTabCtrl-Klasse](../../mfc/reference/cmfctabctrl-class.md).  
   
@@ -723,7 +723,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pt`  
+ [in] *pt*  
  Ein Punkt, der definiert wird, mithilfe von Client-Bereich-Koordinaten der [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -740,7 +740,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nNewTab`  
+ [in] *nNewTab*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -752,7 +752,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nNewTab`  
+ [in] *nNewTab*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -830,19 +830,19 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `iTabNum`  
+ [out] *iTabNum*  
  Ein Verweis auf eine ganze Zahl. Diese Methode schreibt den nullbasierten Index des erste eingeblendete Registerkarte an diesen Parameter an.  
   
- [in] `iStartFrom`  
+ [in] *iStartFrom*  
  Der nullbasierte Index der ersten Registerkarte zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die erste eingeblendete Registerkarte im Erfolgsfall; andernfalls `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn diese Methode fehlschlägt, schreibt er den Wert-1 auf `iStartFrom`.  
+ Wenn diese Methode fehlschlägt, schreibt er den Wert-1 auf *iStartFrom*.  
   
- Wenn `iStartFrom` ist größer als oder gleich der Anzahl der Registerkarten im Registerkarten-Steuerelement `GetFirstVisibleTab` führt automatisch ein.  
+ Wenn *iStartFrom* ist größer als oder gleich der Anzahl der Registerkarten im Registerkarten-Steuerelement `GetFirstVisibleTab` führt automatisch ein.  
   
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
@@ -895,7 +895,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTabNum`  
+ [in] *iTabNum*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -935,10 +935,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rectTabAreaTop`  
+ [in] *RectTabAreaTop*  
  Ein Verweis auf ein `CRect`-Objekt. `GetTabArea` mit diesem Objekt verwendet zum Speichern von Größe und Position des Registerkartenbereichs Top.  
   
- [in] `rectTabAreaBottom`  
+ [in] *RectTabAreaBottom*  
  Ein Verweis auf ein `CRect`-Objekt. `GetTabArea` verwendet dieses Objekt zum Speichern von Größe und Position des Registerkartenbereichs unten an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -954,11 +954,11 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die Hintergrundfarbe der angegebenen Registerkarte angibt; 1, wenn `iTab` liegt außerhalb des gültigen Bereichs.  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die Hintergrundfarbe der angegebenen Registerkarte angibt; 1, wenn *iTab* liegt außerhalb des gültigen Bereichs.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Ruft die Größe der registerkartenrahmen im Registerkarten-Steuerelement ab.  
@@ -981,7 +981,7 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `id`  
+ [in] *Id*  
  Eine Registerkarte-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1009,11 +1009,11 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hwnd`  
+ [in] *Hwnd*  
  Ein Handle für ein Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der Registerkarte im Erfolgsfall; 1, wenn keine Registerkarte enthält `hwnd`.  
+ Der nullbasierte Index der Registerkarte im Erfolgsfall; 1, wenn keine Registerkarte enthält *Hwnd*.  
   
 ##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  Ruft die Registerkarte, die einen angegebenen Punkt enthält.  
@@ -1023,11 +1023,11 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pt`  
+ [in] *pt*  
  Ein Punkt in Clientkoordinaten des Registerkarten-Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index der Registerkarte, die enthält `pt`; 1, wenn keine Registerkarte enthält `pt`.  
+ Der Index der Registerkarte, die enthält *pt*; 1, wenn keine Registerkarte enthält *pt*.  
   
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
@@ -1037,7 +1037,7 @@ virtual int GetTabFullWidth(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1051,7 +1051,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index für die Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1065,7 +1065,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1082,11 +1082,11 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- ID der Registerkarte "oder 1, wenn `iTab` liegt außerhalb des gültigen Bereichs.  
+ ID der Registerkarte "oder 1, wenn *iTab* liegt außerhalb des gültigen Bereichs.  
   
 ##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  Ruft den Text einer Registerkarte Bezeichnung ab.  
@@ -1098,17 +1098,17 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
- [out] `strLabel`  
+ [out] *StrLabel*  
  Ein Verweis auf ein `CString`-Objekt. Diese Methode speichert die Bezeichnung der Registerkarte in diesem Parameter.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Bei Erfolg; `FALSE` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode schlägt fehl, wenn der Index `iTab` ist ungültig.  
+ Diese Methode schlägt fehl, wenn der Index *iTab* ist ungültig.  
   
  Wenn Sie mithilfe die Registerkarte "erstellen, legen Sie die Bezeichnung für eine Registerkarte [:: addTab](#addtab). Sie können auch die Bezeichnung nach der Erstellung ändern, mit der Methode [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
@@ -1122,10 +1122,10 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
- [out] `rect`  
+ [out] *Rect*  
  Ein Verweis auf ein `CRect`-Objekt. Diese Methode speichert die Größe und Position der Registerkarte in diesem Parameter.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1160,7 +1160,7 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1172,11 +1172,11 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe der angegebenen Registerkarte angibt; 1, wenn `iTab` liegt außerhalb des gültigen Bereichs.  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe der angegebenen Registerkarte angibt; 1, wenn *iTab* liegt außerhalb des gültigen Bereichs.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Gibt den Zeiger auf den Bereich, der auf die angegebene Registerkarte befindet.  
@@ -1186,11 +1186,11 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das auf der Registerkarte befindet, `iTab` angibt. `NULL` Wenn `iTab` ist ungültig.  
+ Ein Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das auf der Registerkarte befindet, *iTab* angibt. `NULL` Wenn *iTab* ist ungültig.  
   
 ### <a name="remarks"></a>Hinweise  
  Das zurückgegebene Objekt ist dasjenige, das die Anwendung hinzugefügt werden, wenn sie entweder aufgerufen [:: addTab](#addtab) oder [cmfcbasetabctrl:: insertTab](#inserttab).  
@@ -1205,11 +1205,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das auf die angegebene Registerkarte; befindet. `NULL` Wenn `iTab` ist ungültig.  
+ Ein Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das auf die angegebene Registerkarte; befindet. `NULL` Wenn *iTab* ist ungültig.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft einen direkten Zeiger auf die `CWnd` Objekt, das Sie hinzugefügt haben, mithilfe der beiden Methoden [:: addTab](#addtab) oder [cmfcbasetabctrl:: insertTab](#inserttab). `GetTabWndNoWrapper` Ruft einen Zeiger auf die hinzugefügte `CWnd`, selbst wenn das Framework einen Wrapper für das Objekt hinzugefügt. Weitere Informationen zu Wrapper und das [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md), finden Sie unter [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
@@ -1244,7 +1244,7 @@ virtual BOOL HasImage(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1258,7 +1258,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bHide`  
+ [in] *bHide*  
  Ein boolescher Wert, der angibt, ob die einzelne Registerkarten ausblenden aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1285,26 +1285,26 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pNewWnd`  
+ [in] *pNewWnd*  
  Ein Zeiger auf das Fenster, das diese Methode als neue Registerkarte hinzugefügt.  
   
- [in] `lpszTabLabel`  
+ [in] *LpszTabLabel*  
  Eine Zeichenfolge, die die Bezeichnung für die neue Registerkarte enthält.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  Der nullbasierte Index der neuen Registerkarte.  
   
- [in] `uiImageId`  
+ [in] *UiImageId*  
  Ein Bild-ID aus der Bildliste. Das Registerkarten-Steuerelement verwendet dieses Bild als Symbol für die neue Registerkarte ein.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Ein boolescher Parameter, der bestimmt, ob die neue Registerkarte gelöst werden kann.  
   
- [in] `uiResTabLabel`  
+ [in] *UiResTabLabel*  
  Die Ressourcen-ID für die Bezeichnung.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Objekt vom angegebenen `pNewWnd` stammt nicht aus der [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) und, wenn die `bDetachable` Parameter ist `TRUE`, das Framework erstellt einen speziellen Wrapper für die neue Registerkarte. Standardmäßig ist der Wrapper eine Instanz von der [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md). Verwenden der [cmfcbasetabctrl::](#setdockingbarwrapperrtc) Methode, um eine andere Wrapperklasse erstellen. Jede benutzerdefinierte Wrapperklasse abgeleitet werden, muss `CDockablePaneAdapter`.  
+ Wenn das Objekt vom angegebenen *pNewWnd* stammt nicht aus der [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) und, wenn die *bDetachable* Parameter ist `TRUE`, erstellt das Framework eine spezielle Wrapper für die neue Registerkarte. Standardmäßig ist der Wrapper eine Instanz von der [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md). Verwenden der [cmfcbasetabctrl::](#setdockingbarwrapperrtc) Methode, um eine andere Wrapperklasse erstellen. Jede benutzerdefinierte Wrapperklasse abgeleitet werden, muss `CDockablePaneAdapter`.  
   
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
@@ -1314,7 +1314,7 @@ void InvalidateTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hIcon`  
- [in] `iIcon`  
+ [in] *hIcon*  
+ [in] *iIcon*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1500,7 +1500,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Der Punkt zu testen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1539,7 +1539,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte, um zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1556,7 +1556,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1586,7 +1586,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte, um zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nSource`  
- [in] `nDest`  
+ [in] *nquelle*  
+ [in] *nDest*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1659,9 +1659,9 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `COleDataObject*`  
- [in] `DROPEFFECT`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *-DropEffect-*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1678,9 +1678,9 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DWORD*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1706,9 +1706,9 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DWORD*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `int`  
- [in] `CString&`  
+ [in] *Int*  
+ [in] *CString &*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1737,7 +1737,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1773,10 +1773,10 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Ein boolescher Parameter, der angibt, ob das Layout der Registerkarte neu zu berechnen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1811,7 +1811,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `ar`  
+ [in] *Ar*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1823,7 +1823,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index des eine Registerkarte `SetActiveTab` aktiviert die Registerkarte mit diesen Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1840,7 +1840,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clr`  
+ [in] *Clr*  
  Die neue Hintergrundfarbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1854,7 +1854,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clr`  
+ [in] *Clr*  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die neue Farbe des Textes angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1868,11 +1868,11 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `arColors`  
+ [in] *ArColors*  
  Ein Array von RGB-Farben.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie ein benutzerdefiniertes Array von Farben angeben, wird das Standard-Array der Farben ignoriert. Wenn der Parameter `arColors` ist leer, das Framework auf dem Standard-Array der Farben zurückgesetzt.  
+ Wenn Sie ein benutzerdefiniertes Array von Farben angeben, wird das Standard-Array der Farben ignoriert. Wenn der Parameter *ArColors* ist leer, das Framework auf dem Standard-Array der Farben zurückgesetzt.  
   
  Verwenden Sie zum Aktivieren des Modus für automatische Farbe der [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) Methode.  
   
@@ -1884,7 +1884,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRTC`  
+ [in] *pRTC*  
  Die laufzeitklasseninformationen für die neue Wrapperklasse.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1900,10 +1900,10 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bNoPrefix`  
+ [in] *bNoPrefix*  
  `TRUE` Wenn Sie die Verarbeitung von Präfixzeichen möchten; andernfalls `FALSE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Wenn das Fenster im Registerkartenformat neu gezeichnet werden sollen; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1922,16 +1922,16 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Eine Bitmap-Ressourcen-ID. `SetImageList` Lädt die Bildliste aus der Ressource an.  
   
- [in] `cx`  
+ [in] *Cx*  
  Die Breite eines Bilds in Pixel.  
   
- [in] `clrTransp`  
+ [in] *ClrTransp*  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die transparente Farbe des Bilds angibt.  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  Ein Handle für einen vorab geladenen Bildliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1940,7 +1940,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>Hinweise  
  Die Bilder aus der symbolbildliste werden zusammen mit den Bezeichnungen für die Registerkarte angezeigt. Sie müssen ein Symbol angezeigt, deren Index angeben, beim Aufrufen [:: addTab](#addtab).  
   
- `SetImageList` schlägt fehl, wenn das Registerkarten-Steuerelement in ein Flatfile-Format erstellt wurde. Sie schlägt auch fehl, wenn das Framework das durch Bild laden kann `uiID`.  
+ `SetImageList` schlägt fehl, wenn das Registerkarten-Steuerelement in ein Flatfile-Format erstellt wurde. Sie schlägt auch fehl, wenn das Framework das durch Bild laden kann *UiID*.  
   
  Diese Methode berechnet die Höhe der Registerkarte gemäß den Größen Bild und Text.  
   
@@ -1952,7 +1952,7 @@ virtual void SetLocation(Location location);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `location`  
+ [in] *Speicherort*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1966,10 +1966,10 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
- [in] `color`  
+ [in] *Farbe*  
  Die Farbe fest.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1985,10 +1985,10 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nTabBorderSize`  
+ [in] *nTabBorderSize*  
  Die neue Rahmen Größe in Pixel.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  Ein boolescher Parameter, der angibt, ob das Framework das Steuerelement neu gezeichnet wird.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
@@ -2001,10 +2001,10 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index einer Registerkarte. Diese Methode wird das Symbol für diese Registerkarte geändert.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Ein Handle für ein Symbol.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2020,10 +2020,10 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte zu aktualisieren.  
   
- [in] `uiIcon`  
+ [in] *UiIcon*  
  Die Symbol-ID für das Symbol "Neu". Diese ID verweist auf das interne [CImageList](../../mfc/reference/cimagelist-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2040,13 +2040,13 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte zu ändern.  
   
- [in] `bIconOnly`  
+ [in] *bIconOnly*  
  Ein boolescher Parameter, der bestimmt, ob nur einige Symbole angezeigt werden sollen.  
   
- [in] `bShowTooltipAlways`  
+ [in] *bShowTooltipAlways*  
  Ein boolescher Parameter, der bestimmt, ob das Framework QuickInfos für eine registerkartenbezeichnung anzeigt, in dem nur einige Symbole angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2065,10 +2065,10 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte zu aktualisieren.  
   
- [in] `strLabel`  
+ [in] *StrLabel*  
  Ein Verweis auf eine Zeichenfolge, die den neuen Text für die Bezeichnung der Registerkarte "enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2091,14 +2091,14 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `arOrder`  
+ [in] *ArOrder*  
  Ein Array von nullbasierten Indizes, die die neue Registerkarte Reihenfolge definiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Bei Erfolg; `FAIL` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Größe der `arOrder` Array muss gleich der Anzahl der Registerkarten im Registerkarten-Steuerelement sein.  
+ Die Größe der *ArOrder* Array muss gleich der Anzahl der Registerkarten im Registerkarten-Steuerelement sein.  
   
 ##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  Legt die Textfarbe für eine bestimmte Registerkarte fest.  
@@ -2110,10 +2110,10 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der nullbasierte Index der Registerkarte.  
   
- [in] `color`  
+ [in] *Farbe*  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die neue Farbe des Textes angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2131,23 +2131,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
  Der Index der Registerkarte, `ShowTab` ein- oder ausgeblendet wird.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Ein boolescher Parameter, der angibt, ob die Registerkarte angezeigt.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Ein boolescher Parameter, der angibt, ob das Fensterlayout sofort neu zu berechnen.  
   
- [in] `bActivate`  
- Einen booleschen Parameter, der angibt, ob auf der Registerkarte "" gemäß `iTab`.  
+ [in] *bActivate*  
+ Einen booleschen Parameter, der angibt, ob auf der Registerkarte "angegeben durch" *iTab*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Parameter `bActivate` gilt nur, wenn `bShow` ist `TRUE`. Wenn `bActivate` ist `TRUE` und `ShowTab` erfolgreich ist, `ShowTab` sendet die Nachricht AFX_WM_CHANGE_ACTIVE_TAB an das übergeordnete Element von der "Verwaltung".  
+ Der Parameter *bActivate* gilt nur, wenn *bShow* ist `TRUE`. Wenn *bActivate* ist `TRUE` und `ShowTab` erfolgreich ist, `ShowTab` sendet die Nachricht AFX_WM_CHANGE_ACTIVE_TAB an das übergeordnete Element von der "Verwaltung".  
   
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
@@ -2157,7 +2157,7 @@ virtual BOOL StartRenameTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nFisrtTabID`  
- [in] `nSecondTabID`  
+ [in] *nFisrtTabID*  
+ [in] *nSecondTabID*  
   
 ### <a name="remarks"></a>Hinweise  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377239"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041710"
 ---
 # <a name="cobject-class"></a>CObject-Klasse
 Die prinzipale Basisklasse für die Microsoft Foundation Class-Bibliothek.  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>Hinweise  
  Die Standardversion wird vom Konstruktor einer abgeleiteten Klasse automatisch aufgerufen.  
   
- Wenn Ihre Klasse serialisierbar ist (er beinhaltet die `IMPLEMENT_SERIAL` Makro), dann müssen Sie einen Standardkonstruktor (einen Konstruktor ohne Argumente) in der Klassendeklaration verfügen. Wenn Sie nicht über einen Standardkonstruktor benötigen, deklarieren Sie eines privaten oder geschützten Sie Konstruktor "empty". Weitere Informationen finden Sie unter [Verwenden von CObject](../../mfc/using-cobject.md).  
+ Wenn Ihre Klasse serialisierbar ist (er beinhaltet das IMPLEMENT_SERIAL-Makro), dann müssen Sie einen Standardkonstruktor (einen Konstruktor ohne Argumente) in der Klassendeklaration verfügen. Wenn Sie nicht über einen Standardkonstruktor benötigen, deklarieren Sie eines privaten oder geschützten Sie Konstruktor "empty". Weitere Informationen finden Sie unter [Verwenden von CObject](../../mfc/using-cobject.md).  
   
  Der standard C++ Standard-Copy-Konstruktor wird eine Kopie von Mitgliedern. Das Vorhandensein des privaten `CObject` Kopierkonstruktor gewährleistet eine Fehlermeldung des Compilers, wenn es sich bei der Kopierkonstruktor der Klasse erforderlich, aber nicht verfügbar ist. Sie müssen daher einen Kopierkonstruktor angeben, wenn Ihre Klasse diese Funktion erfordert.  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dc`  
+ *dc*  
  Die Diagnose Dumpkontext für Sicherung, in der Regel `afxDump`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie eine eigene Klasse schreiben, sollten Sie überschreiben die `Dump` Funktion zur Diagnose selbst und anderen Benutzern Ihrer Klasse Dienstleistungen. Die überschriebene `Dump` in der Regel ruft der `Dump` Funktion der Basisklasse vor dem Drucken Datenmember, die für die abgeleitete Klasse eindeutig. `CObject::Dump` Gibt den Klassennamen abrufen, wenn Ihre Klasse verwendet die `IMPLEMENT_DYNAMIC` oder `IMPLEMENT_SERIAL` Makro.  
+ Wenn Sie eine eigene Klasse schreiben, sollten Sie überschreiben die `Dump` Funktion zur Diagnose selbst und anderen Benutzern Ihrer Klasse Dienstleistungen. Die überschriebene `Dump` in der Regel ruft der `Dump` Funktion der Basisklasse vor dem Drucken Datenmember, die für die abgeleitete Klasse eindeutig. `CObject::Dump` Gibt den Klassennamen abrufen, wenn Ihre Klasse verwendet die `IMPLEMENT_DYNAMIC` oder IMPLEMENT_SERIAL-Makro.  
   
 > [!NOTE]
 >  Ihre `Dump` Funktion sollte ein Zeilenumbruchzeichen am Ende der Ausgabe nicht gedruckt.  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pClass`  
+ *pClass*  
  Ein Zeiger auf eine [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) zugeordnete Struktur Ihrer `CObject`-abgeleitete Klasse.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Objekt der Klasse entspricht; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion prüft `pClass` um festzustellen, ob (1) Es handelt sich um ein Objekt der angegebenen Klasse oder (2) Es handelt sich um ein Objekt einer Klasse, die von der angegebenen Klasse abgeleitet. Diese Funktion funktioniert nur für Klassen, die mit der [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), oder [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) Makro.  
+ Diese Funktion prüft *pClass* um festzustellen, ob (1) Es handelt sich um ein Objekt der angegebenen Klasse oder (2) Es handelt sich um ein Objekt einer Klasse, die von der angegebenen Klasse abgeleitet. Diese Funktion funktioniert nur für Klassen, die mit der [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), oder [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) Makro.  
   
  Verwenden Sie diese Funktion nicht sehr häufig auf, da es die Polymorphie-Funktion von C++ unterlaufen kann. Verwenden Sie stattdessen virtuelle Funktionen.  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ar`  
+ *ar*  
  Ein `CArchive` zu an / von zu serialisierende Objekt.  
   
 ### <a name="remarks"></a>Hinweise  

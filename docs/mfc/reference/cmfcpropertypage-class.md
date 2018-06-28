@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366641"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042081"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage-Klasse
 Die `CMFCPropertyPage` Klasse unterstützt die Anzeige von Popupmenüs auf einer Eigenschaftenseite.  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDTemplate`  
+ *nIDTemplate*  
  Ressourcen-ID der Vorlage für diese Seite.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Ressourcen-ID der Bezeichnung, auf der Registerkarte für diese Seite eingefügt werden soll. Bei 0 wird der Name aus der Dialogfeldvorlage für diese Seite abgerufen. Der Standardwert ist 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Verweist auf den Namen der Vorlage für diese Seite. Nicht mit `NULL`.  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 6e1020c8b0f2b97053951cde6eeb0724dcf60d02
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271346"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039062"
 ---
 # <a name="chttpfile-class"></a>CHttpFile-Klasse
 Stellt die Funktionalität bereit, um Dateien auf einem HTTP-Server anfordern und zu lesen.  
@@ -109,10 +109,10 @@ BOOL AddRequestHeaders(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pstrHeaders`  
+ *pstrHeaders*  
  Ein Zeiger auf eine Zeichenfolge, enthält der Kopf- oder der Header, um die Anforderung angefügt werden soll. Jeder Header muss durch ein Koordinatenpaar CR/LF beendet werden.  
   
- `dwFlags`  
+ *dwFlags*  
  Ändert die Semantik der neuen Header an. Einer der folgenden Werte ist möglich:  
   
 - `HTTP_ADDREQ_FLAG_COALESCE` Werden die Header mit dem gleichen Namen, verwenden das Flag zum Hinzufügen von des ersten Headers gefunden, die dem nachfolgenden Header zusammengeführt. Z. B. "annehmen: Text /\*" gefolgt von "annehmen: Audio-/\*" führt zur Bildung eines einzelnen Header "Accept: Text /\*, audio /\*". Es ist Aufgabe der aufrufenden Anwendung um sicherzustellen, dass ein zusammenhängender Schema in Bezug auf die Daten vom mit zusammengeführte oder separate Header gesendeten Anforderungen empfangen werden.  
@@ -123,10 +123,10 @@ BOOL AddRequestHeaders(
   
 - `HTTP_ADDREQ_FLAG_ADD` Wird verwendet, und ersetzen. Fügt den Header an, wenn er nicht vorhanden ist.  
   
- `dwHeadersLen`  
- Die Länge in Zeichen, d. h. der `pstrHeaders`. Wenn dies-1 L, dann ist `pstrHeaders` wird davon ausgegangen, dass null-terminiert sein und die Länge berechnet wird.  
+ *dwHeadersLen*  
+ Die Länge in Zeichen, d. h. der *PstrHeaders*. Wenn dies-1 L, dann ist *PstrHeaders* wird davon ausgegangen, dass null-terminiert sein und die Länge berechnet wird.  
   
- `str`  
+ *str*  
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, enthält der Anforderungsheader oder dem Header hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -136,7 +136,7 @@ BOOL AddRequestHeaders(
  `AddRequestHeaders` fügt zusätzliche, freiem Format Header an das Handle des HTTP-Anforderung an. Es dient zur Verwendung von anspruchsvollen Clients, die detaillierte Kontrolle über die genaue Anforderung an den HTTP-Server gesendet.  
   
 > [!NOTE]
->  Leitet die Anwendung kann mehrere Header in `pstrHeaders` oder `str` für eine `AddRequestHeaders` -Aufruf mit `HTTP_ADDREQ_FLAG_ADD` oder `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Wenn die Anwendung versucht, entfernen oder Ersetzen Sie einen Header mit **HTTP_ADDREQ_FLAG_REMOVE** oder `HTTP_ADDREQ_FLAG_REPLACE`, nur einen Header kann angegeben werden, in `lpszHeaders`.  
+>  Leitet die Anwendung kann mehrere Header in *PstrHeaders* oder *str* für eine `AddRequestHeaders` -Aufruf mit `HTTP_ADDREQ_FLAG_ADD` oder `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Wenn die Anwendung versucht, entfernen oder Ersetzen Sie einen Header mit `HTTP_ADDREQ_FLAG_REMOVE` oder `HTTP_ADDREQ_FLAG_REPLACE`, nur einen Header kann angegeben werden, in *LpszHeaders*.  
   
 ##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  Diese Memberfunktion wird aufgerufen, um das Erstellen einer `CHttpFile` Objekt.  
@@ -159,25 +159,25 @@ CHttpFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hFile`  
+ *hFile*  
  Ein Handle für eine Internetdatei.  
   
- `hSession`  
+ *hSession*  
  Ein Handle für eine Internet-Sitzung.  
   
  *pstrObject*  
  Ein Zeiger auf eine Zeichenfolge mit der `CHttpFile` Objekt.  
   
- `pstrServer`  
+ *pstrServer*  
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des Servers.  
   
- `pstrVerb`  
- Ein Zeiger auf eine Zeichenfolge, enthält die Methode, die beim Senden der Anforderung verwendet werden. Kann **POST**, **HEAD**, oder `GET`.  
+ *pstrVerb*  
+ Ein Zeiger auf eine Zeichenfolge, enthält die Methode, die beim Senden der Anforderung verwendet werden. Kann **POST**, **HEAD**, oder **abrufen**.  
   
- dwContext  
+ *dwContext*  
  Der Kontextbezeichner für den `CHttpFile` Objekt. Finden Sie unter **"Hinweise"** für Weitere Informationen zu diesem Parameter.  
   
- `pConnection`  
+ *pConnection*  
  Ein Zeiger auf eine [CHttpConnection](../../mfc/reference/chttpconnection-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -196,20 +196,20 @@ BOOL EndRequest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Flags, die den Vorgang beschreiben. Eine Liste der erforderlichen Flags, finden Sie unter [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) im Windows SDK.  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  Zeiger auf ein initialisiertes [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , beschreibt der Eingabepuffer für den Vorgang verwendet.  
   
- `dwContext`  
+ *dwContext*  
  Der Kontextbezeichner für den `CHttpFile`-Vorgang. Weitere Informationen zu diesem Parameter finden Sie unter "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, ermitteln Sie die Ursache des Fehlers durch Untersuchen der ausgelösten [CInternetException](../../mfc/reference/cinternetexception-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Standardwert für `dwContext` wird gesendet, von MFC ermöglicht, die `CHttpFile` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CHttpFile` Objekt. Beim Aufruf [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oder [CHttpConnection](../../mfc/reference/chttpconnection-class.md) zum Erstellen einer `CHttpFile` -Objekt, Sie können angeben, überschreiben die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
+ Der Standardwert für *DwContext* wird gesendet, von MFC ermöglicht, die `CHttpFile` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CHttpFile` Objekt. Beim Aufruf [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oder [CHttpConnection](../../mfc/reference/chttpconnection-class.md) zum Erstellen einer `CHttpFile` -Objekt, Sie können angeben, überschreiben die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens der HTTP-Datei als URL verwendet wird.  
@@ -272,10 +272,10 @@ BOOL QueryInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwInfoLevel`  
+ *dwInfoLevel*  
  Eine Kombination des Attributs Abfragen ausgeführt und die folgenden Flags, die den Typ der angeforderten Informationen anzugeben:  
   
-- **HTTP_QUERY_CUSTOM** sucht nach den Headernamen an und gibt diesen Wert im `lpvBuffer` bei der Ausgabe. **HTTP_QUERY_CUSTOM** löst Sie eine Assertion aus, wenn der Header nicht gefunden wird.  
+- **HTTP_QUERY_CUSTOM** sucht nach den Headernamen an und gibt diesen Wert im *LpvBuffer* bei der Ausgabe. **HTTP_QUERY_CUSTOM** löst Sie eine Assertion aus, wenn der Header nicht gefunden wird.  
   
 - **HTTP_QUERY_FLAG_REQUEST_HEADERS** in der Regel wird die Anwendung fordert die Antwortheader, aber eine Anwendung kann auch Anforderungsheader mithilfe dieses Flag Abfragen.  
   
@@ -285,20 +285,20 @@ BOOL QueryInfo(
   
  Finden Sie unter der **"Hinweise"** Abschnitt für eine Liste der möglichen Werte.  
   
- `lpvBuffer`  
+ *lpvBuffer*  
  Ein Zeiger auf den Puffer, der die Informationen erhält.  
   
- `lpdwBufferLength`  
+ *lpdwBufferLength*  
  Bei der Eintrag zeigt dies auf einen Wert, der die Länge des Datenpuffers in Anzahl von Zeichen oder Bytes. Finden Sie unter der **"Hinweise"** Abschnitt Ausführlichere Informationen zu diesem Parameter.  
   
- `lpdwIndex`  
- Ein Zeiger auf einen nullbasierten Headerindex. Kann **NULL**. Verwenden Sie dieses Flag, um mehrere Header mit dem gleichen Namen aufzulisten. Bei der Eingabe `lpdwIndex` gibt den Index des angegebenen Headers zurückgegeben. Bei der Ausgabe `lpdwIndex` gibt den Index des nächsten-Header. Wenn der nächste Index kann nicht gefunden werden, **ERROR_HTTP_HEADER_NOT_FOUND** wird zurückgegeben.  
+ *lpdwIndex*  
+ Ein Zeiger auf einen nullbasierten Headerindex. Kann **NULL**. Verwenden Sie dieses Flag, um mehrere Header mit dem gleichen Namen aufzulisten. Bei der Eingabe *LpdwIndex* gibt den Index des angegebenen Headers zurückgegeben. Bei der Ausgabe *LpdwIndex* gibt den Index des nächsten-Header. Wenn der nächste Index kann nicht gefunden werden, **ERROR_HTTP_HEADER_NOT_FOUND** wird zurückgegeben.  
   
- `str`  
+ *str*  
  Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt empfängt die zurückgegebene Informationen.  
   
- `dwIndex`  
- Ein Indexwert. Siehe `lpdwIndex`.  
+ *dwIndex ab*  
+ Ein Indexwert. Finden Sie unter *LpdwIndex*.  
   
  *pSysTime*  
  Ein Zeiger auf eine Win32- [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.  
@@ -319,7 +319,7 @@ BOOL QueryInfo(
   
  Wenn eine Zeichenfolge in den Puffer geschrieben wird, und die Member-Funktion erfolgreich ist, `lpdwBufferLength` enthält die Länge der Zeichenfolge in Zeichen minus 1 für das abschließende **NULL** Zeichen.  
   
- Die möglichen `dwInfoLevel` Werte sind:  
+ Die möglichen *DwInfoLevel* Werte sind:  
   
 - **HTTP_QUERY_MIME_VERSION**  
   
@@ -368,14 +368,14 @@ BOOL QueryInfo(
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
 ##  <a name="queryinfostatuscode"></a>  QueryInfoStatusCode  
- Rufen Sie diese Memberfunktion zum Abrufen des Statuscode einer HTTP-Anforderung zugeordnet ist, und fügen Sie ihn in das angegebene `dwStatusCode` Parameter.  
+ Rufen Sie diese Memberfunktion zum Abrufen des Statuscode einer HTTP-Anforderung zugeordnet ist, und fügen Sie ihn in das angegebene *DwStatusCode* Parameter.  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStatusCode`  
+ *dwStatusCode*  
  Ein Verweis auf einen Statuscode. Statuscodes geben an, den Erfolg oder Fehler des angeforderten Ereignisses. Finden Sie unter **"Hinweise"** für eine Auswahl von Status Code Beschreibungen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -422,19 +422,19 @@ BOOL SendRequest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pstrHeaders`  
+ *pstrHeaders*  
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Header zu senden.  
   
- `dwHeadersLen`  
- Die Länge der identifizierten Header `pstrHeaders`.  
+ *dwHeadersLen*  
+ Die Länge der identifizierten Header *PstrHeaders*.  
   
- `lpOptional`  
+ *lpOptional*  
  Optionale Daten unmittelbar nach der Anforderungsheader zu senden. Dies wird im Allgemeinen zum **POST** und **PUT** Vorgänge. Dies kann **NULL** , wenn keine optionalen Daten senden.  
   
  *dwOptionalLen*  
- Die Länge von `lpOptional`.  
+ Die Länge des *LpOptional*.  
   
- `strHeaders`  
+ *strHeaders*  
  Eine Zeichenfolge, die mit dem Namen der Header für die Anforderung gesendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -461,13 +461,13 @@ BOOL SendRequestEx(
  *dwTotalLen*  
  Anzahl der Bytes, die in der Anforderung gesendet werden.  
   
- `dwFlags`  
+ *dwFlags*  
  Flags, die den Vorgang beschreiben. Eine Liste der erforderlichen Flags, finden Sie unter [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) im Windows SDK.  
   
- `dwContext`  
+ *dwContext*  
  Der Kontextbezeichner für den `CHttpFile`-Vorgang. Weitere Informationen zu diesem Parameter finden Sie unter "Hinweise".  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  Zeiger auf ein initialisiertes [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , beschreibt der Eingabepuffer für den Vorgang verwendet.  
   
  *lpBuffOut*  
@@ -481,7 +481,7 @@ BOOL SendRequestEx(
   
  Rufen Sie nach dem Inhalt der Datei geschrieben wird, [EndRequest](#endrequest) um den Vorgang zu beenden.  
   
- Der Standardwert für `dwContext` wird gesendet, von MFC ermöglicht, die `CHttpFile` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CHttpFile` Objekt. Beim Aufruf [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oder [CHttpConnection](../../mfc/reference/chttpconnection-class.md) zum Erstellen einer `CHttpFile` -Objekt, Sie können angeben, überschreiben die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
+ Der Standardwert für *DwContext* wird gesendet, von MFC ermöglicht, die `CHttpFile` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CHttpFile` Objekt. Beim Aufruf [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oder [CHttpConnection](../../mfc/reference/chttpconnection-class.md) zum Erstellen einer `CHttpFile` -Objekt, Sie können angeben, überschreiben die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
   
 ### <a name="example"></a>Beispiel  
  Dieses Codefragment sendet den Inhalt einer Zeichenfolge in eine DLL mit dem Namen MFCISAPI. Die DLL auf dem Server "localhost". Zwar in diesem Beispiel wird nur ein Aufruf von nutzt `WriteString`, verwenden mehrere Aufrufe zum Senden von Daten in Blöcken akzeptabel ist.  

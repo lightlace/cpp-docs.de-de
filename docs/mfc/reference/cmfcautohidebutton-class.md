@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375310"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038298"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton-Klasse
 Eine Schaltfläche, die [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) anzeigt oder ausblendet (vorausgesetzt, die Klasse ist so konfiguriert, dass sie ausgeblendet werden kann).  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentBar`  
+ [in] *pParentBar*  
  Ein Zeiger auf der übergeordneten Symbolleiste.  
   
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Ein Zeiger auf eine [CDockablePane](../../mfc/reference/cdockablepane-class.md) Objekt. Diese Schaltfläche zum automatischen Ausblenden blendet Sie aus, und zeigt, dass `CDockablePane`.  
   
- [in] `dwAlignment`  
+ [in] *DwAlignment*  
  Ein Wert, der die Ausrichtung der Schaltfläche mit dem Hauptrahmenfenster angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Beim Erstellen einer `CMFCAutoHideButton` -Objekt, müssen Sie die Schaltfläche zum automatischen Ausblenden einer bestimmten zuordnen `CDockablePane`. Der Benutzer kann die Schaltfläche zum automatischen Ausblenden verwendet, um ein- und Ausblenden der zugeordneten `CDockablePane`.  
   
- Der `dwAlignment` -Parameter gibt an, wo sich die Automatisch-im-Hintergrund-Schaltfläche in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
+ Die *DwAlignment* Parameter gibt an, in dem die Schaltfläche zum automatischen Ausblenden in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rectBounds`  
+ [in] *RectBounds*  
  Das umschließende Rechteck der Schaltfläche zum automatischen ausblenden.  
   
- [in] `rectBorderSize`  
+ [in] *RectBorderSize*  
  Die Stärke des Rahmens für jede Seite der Schaltfläche zum automatischen ausblenden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck der Schaltfläche zum automatischen ausblenden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
  Ein boolescher Wert, der angibt, ob diese Methode den angefügten zeigt `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
  Ein boolescher Wert, der angibt, ob die Schaltfläche zum automatischen Ausblenden anzeigen.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pNewBar`  
+ [in] *pNewBar*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pFirstBarInGroup`  
+ [in] *pFirstBarInGroup*  
  Ein Zeiger auf die erste Leiste in der Gruppe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bHighlight`  
+ *bHighlight*  
  Gibt an, die neue automatisch im Hintergrund Schaltflächenzustand. `TRUE` Gibt an, die Schaltfläche wird hervorgehoben, `FALSE` gibt an, die Schaltfläche measureraster nicht hervorgehoben ist.  
   
 ### <a name="remarks"></a>Hinweise  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e80b74262a05548d9aede80df44d204b759b84da
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373076"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038515"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl-Klasse
 Die Klasse `CNetAddressCtrl` stellt das Netzwerkadressen-Steuerelement dar, das verwendet werden kann, um IPv4-, IPv6- und benannte DNS-Adressen einzugeben und ihr Format zu überprüfen.  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Eine bitweise Kombination der Formate auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter [Stile bearbeiten](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] `rect`|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
-|[in] `pParentWnd`|Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt.|  
-|[in] `nID`|Die ID des Steuerelements.|  
+|[in] *DwStyle*|Eine bitweise Kombination der Formate auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter [Stile bearbeiten](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
+|[in] *pParentWnd*|Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt.|  
+|[in] *nID*|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Eine bitweise Kombination (OR) von erweiterten Stile, die auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter der `dwExStyle` Parameter von der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
-|[in] `dwStyle`|Eine bitweise Kombination (OR) von Formaten auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter [Stile bearbeiten](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] `rect`|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
-|[in] `pParentWnd`|Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt.|  
-|[in] `nID`|Die ID des Steuerelements.|  
+|[in] *DwExStyle*|Eine bitweise Kombination (OR) von erweiterten Stile, die auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter der *DwExStyle* Parameter von der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
+|[in] *DwStyle*|Eine bitweise Kombination (OR) von Formaten auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter [Stile bearbeiten](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
+|[in] *pParentWnd*|Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt.|  
+|[in] *nID*|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -186,7 +186,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in, out] `pAddress`|Zeiger auf eine [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) Struktur.  Legen Sie die `pAddrInfo` Mitglied dieser Struktur an die Adresse des eine [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) strukturieren, bevor Sie die GetAddress-Methode aufrufen.|  
+|[in, out] *pAddress*|Zeiger auf eine [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) Struktur.  Legen Sie die *pAddrInfo* Mitglied dieser Struktur an die Adresse des eine [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) strukturieren, bevor Sie die GetAddress-Methode aufrufen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert `S_OK` ist diese Methode erfolgreich ist, andernfalls ein COM-Fehlercode. Weitere Informationen zu den möglichen Fehlercodes finden Sie im Abschnitt "Rückgabewert" von der [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) Makro.  
@@ -209,7 +209,7 @@ DWORD GetAllowType() const;
  Eine bitweise Kombination (OR) von Flags, die die Typen von Adressen gibt, kann das Netzwerkadressen-Steuerelement unterstützen. Weitere Informationen finden Sie unter [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Nachricht Ruft die [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die `NCM_GETALLOWTYPE` Nachricht.  
+ Diese Nachricht Ruft die [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die Nachricht NCM_GETALLOWTYPE.  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Legt den Typ der Netzwerkadresse, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden.  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwAddrMask`|Eine bitweise Kombination (OR) von Flags, die die Typen von Adressen gibt, kann das Netzwerkadressen-Steuerelement unterstützen. Weitere Informationen finden Sie unter [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|[in] *DwAddrMask*|Eine bitweise Kombination (OR) von Flags, die die Typen von Adressen gibt, kann das Netzwerkadressen-Steuerelement unterstützen. Weitere Informationen finden Sie unter [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `S_OK` Wenn diese Methode erfolgreich ist; andernfalls ein COM-Fehlercode.  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CNetAddressCtrl::SetAllowType](#setallowtype) Methode, um die Typen von Adressen anzugeben, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden. Verwenden der [CNetAddressCtrl::GetAddress](#getaddress) Methode, um zu überprüfen und analysieren die Netzwerkadresse, die der Benutzer eingibt. Verwenden der [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) Methode einen Fehler Nachricht Infotipp anzuzeigen, wenn die [CNetAddressCtrl::GetAddress](#getaddress) Methode ist nicht erfolgreich.  
   
- Diese Nachricht Ruft die [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die `NCM_SETALLOWTYPE` Nachricht.  
+ Diese Nachricht Ruft die [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) -Makro, das im Windows SDK beschrieben wird. Dieses Makro sendet die Nachricht NCM_SETALLOWTYPE.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CNetAddressCtrl-Klasse](../../mfc/reference/cnetaddressctrl-class.md)   

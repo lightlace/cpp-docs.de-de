@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377793"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039270"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar-Klasse
 Eine Menüleiste, die Andocken implementiert.  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwMode`  
- [in] `nLength`  
+ [in] *DwMode*  
+ [in] *nLength*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -333,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Zeiger auf das übergeordnete Fenster für die neue `CMFCMenuBar` Objekt.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Die Art der neuen Menüleiste.  
   
- [in] `nID`  
+ [in] *nID*  
  Die ID für das untergeordnete Fenster der Menüleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -366,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Zeiger auf das übergeordnete Fenster des neuen `CMFCMenuBar` Objekt.  
   
- [in] `dwCtrlStyle`  
+ [in] *DwCtrlStyle*  
  Weitere Formate für die neue Menüleiste.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Der Hauptunterschied Stil der neuen Menüleiste.  
   
- [in] `rcBorders`  
+ [in] *RcBorders*  
  Ein `CRect` Parameter, der angibt, die Größen für die Rahmen der `CMFCMenuBar` Objekt.  
   
- [in] `nID`  
+ [in] *nID*  
  Die ID für das untergeordnete Fenster der Menüleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -406,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hMenu`  
+ [in] *hMenu*  
  Ein Handle für eine Menüressource. `CreateFromMenu` verwendet diese Ressource als Vorlage für die `CMFCMenuBar`.  
   
- [in] `bDefaultMenu`  
+ [in] *bDefaultMenu*  
  Ein boolescher Wert, der angibt, ob das neue Menü Standardmenü ist.  
   
- [in] `bForceUpdate`  
+ [in] *bForceUpdate*  
  Ein boolescher Wert, der angibt, ob diese Methode ein Menü Update erzwingt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Die Befehls-ID für die Schaltfläche in der die **Hilfe** Kombinationsfeld.  
   
- [in] `lpszPrompt`  
+ [in] *LpszPrompt*  
  Eine Zeichenfolge, die Text, den vom Framework im Kombinationsfeld angezeigt wird enthält, wenn sie leer sind und nicht aktiv ist. Z. B. ": Geben Sie hier den Text".  
   
- [in] `nComboBoxWidth`  
+ [in] *nComboBoxWidth*  
  Die Breite der Schaltfläche für das Kombinationsfeld in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
  Die **Hilfe** Kombinationsfeld ähnelt der **Hilfe** Kombinationsfeld in der Menüleiste des [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
   
- Beim Aufrufen dieser Methode mit `uiID` auf 0 festgelegt wird, blendet diese Methode im Kombinationsfeld. Andernfalls zeigt diese Methode im Kombinationsfeld automatisch auf der rechten Seite der Menüleiste. Nachdem Sie diese Methode aufrufen, rufen Sie [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) um einen Zeiger auf die eingefügten [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) Objekt.  
+ Beim Aufrufen dieser Methode mit *UiID* auf 0 festgelegt wird, blendet diese Methode im Kombinationsfeld. Andernfalls zeigt diese Methode im Kombinationsfeld automatisch auf der rechten Seite der Menüleiste. Nachdem Sie diese Methode aufrufen, rufen Sie [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) um einen Zeiger auf die eingefügten [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) Objekt.  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  Ermöglicht bei Popupmenüs Schatten.  
@@ -451,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Parameter, der angibt, ob ein Schatten bei Popupmenüs aktiviert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -513,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -558,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bHorz`  
+ [in] *bHorz*  
  Ein boolescher Parameter, der angibt, ob die horizontale oder vertikale Schriftart zurückgegeben. `TRUE` Gibt die horizontale Schriftart an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iItem`  
+ [in] *iItem*  
  Der Index des zurückzugebenden Menüelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die `CMFCToolBarButton` -Objekt, das den angegebenen Index entspricht `iItem`. `NULL` Wenn der Index ungültig ist.  
+ Ein Zeiger auf die `CMFCToolBarButton` -Objekt, das den angegebenen Index entspricht *iItem*. `NULL` Wenn der Index ungültig ist.  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiBtn`  
- [in] `bByCommand`  
+ [in] *UiBtn*  
+ [in] *bByCommand*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -639,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Ein boolescher Parameter, der angibt, ob das Framework Menüelemente nicht verfügbar markiert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -740,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Eine Zeichenfolge, die den Pfad des Windows-Registrierungsschlüssel enthält.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Die Steuerelement-ID für die Menüleiste.  
   
- [in] `uiID`  
+ [in] *UiID*  
  Ein reservierter Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -765,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iHot`  
+ [in] *iHot*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -777,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hMenu`  
+ [in] *hMenu*  
  Das Handle für das Menü angefügt, um die `CMFCMenuBar` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -791,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -805,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf die [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) -Objekt, das der Benutzer möchte anpassen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
- [in] `pTI`  
+ [in] *zeigen*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -839,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -871,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Eine Zeichenfolge, die den Pfad des Windows-Registrierungsschlüssel enthält.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Die Steuerelement-ID für die Menüleiste.  
   
- [in] `uiID`  
+ [in] *UiID*  
  Ein reservierter Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -896,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiResId`  
+ [in] *UiResId*  
  Die Ressourcen-ID für das neue Standardmenü.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -912,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bValue`  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bMax`  
+ [in] *bMax*  
  Ein boolescher Wert, der den Modus angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Ein Zeiger auf die untergeordneten MDI-Fensters, die geändert wird.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Ein boolescher Wert, der angibt, ob das Layout der Menüleiste sofort neu berechnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn ein untergeordnetes MDI-Fenster maximiert ist, zeigt eine Menüleiste, angefügt an das MDI-Hauptrahmenfenster das Systemmenü und die **Minimieren**, **Maximieren** und **schließen** Schaltflächen. Wenn `bMax` ist `TRUE` und `pWnd` nicht `NULL`, das untergeordnete MDI-Fenster wird maximiert und die Menüleiste muss die zusätzlichen Steuerelemente integrieren. Andernfalls gibt die Menüleiste den normalen Zustand.  
+ Wenn ein untergeordnetes MDI-Fenster maximiert ist, zeigt eine Menüleiste, angefügt an das MDI-Hauptrahmenfenster das Systemmenü und die **Minimieren**, **Maximieren** und **schließen** Schaltflächen. Wenn *bMax* ist `TRUE` und *pWnd* nicht `NULL`, das untergeordnete MDI-Fenster wird maximiert und die Menüleiste muss die zusätzlichen Steuerelemente integrieren. Andernfalls gibt die Menüleiste den normalen Zustand.  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  Legt die laufzeitklasseninformationen, die das Framework verwendet, wenn der Benutzer Menüschaltflächen erstellt.  
@@ -947,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMenuButtonRTC`  
+ [in] *pMenuButtonRTC*  
  Die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) Informationen für eine Klasse abgeleitet wird, aus der [CMFCMenuButton-Klasse](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpLogFont`  
+ [in] *LpLogFont*  
  Ein Zeiger auf eine [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) Struktur, die die Schriftart fest definiert.  
   
- [in] `bHorz`  
- "True", wenn Sie möchten die `lpLogFont` Parameter für die vertikale Schriftart, "false" verwendet werden soll, wenn der Wert für horizontale Schriftarten verwendet werden soll.  
+ [in] *bHorz*  
+ "True", wenn Sie möchten die *LpLogFont* Parameter für die vertikale Schriftart, "false" verwendet werden soll, wenn der Wert für horizontale Schriftarten verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE` Wenn die Methode erfolgreich ausgeführt wurde; andernfalls `FALSE`.  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bOn`  
+ [in] *BAM*  
  Ein boolescher Wert, der steuert, ob die zuletzt verwendeten Menübefehlen angezeigt werden.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  Ein boolescher Parameter, der angibt, ob das Menü das Popupmenü die Menübefehle anzeigt.  
   
 ### <a name="remarks"></a>Hinweise  

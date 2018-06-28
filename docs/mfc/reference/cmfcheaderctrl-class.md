@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370028"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037660"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 Die `CMFCHeaderCtrl` Klasse unterstützt Sortieren mehrerer Spalten in einem Headersteuerelement.  
@@ -137,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` So aktivieren Sie mehrere Spalte Sortiermodus; `FALSE` Sortiermodus für mehrere Spalten zu deaktivieren und um alle Spalten aus der Liste der sortierten Spalten zu entfernen. Der Standardwert ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -151,7 +151,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iColumn`  
+ [in] *der iColumn*  
  Der nullbasierte Index der Spalte.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -227,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `iItem`  
+ [in] *iItem*  
  Der nullbasierte Index des Elements gezeichnet werden soll.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das umschließende Rechteck des Elements gezeichnet werden soll.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` zum Zeichnen des Elements im Zustand "gedrückt"; andernfalls `FALSE`.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` zum Zeichnen des Elements in der markierten Status; andernfalls `FALSE`.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -252,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rectArrow`  
+ [in] *RectArrow*  
  Das umschließende Rechteck des Pfeils sortieren.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -266,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -279,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iColumn`  
+ [in] *der iColumn*  
  Der nullbasierte Index des zu entfernenden Spalte.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iColumn`  
+ [in] *der iColumn*  
  Der nullbasierte Index, der eine Spalte des Header-Steuerelement. Wenn dieser Parameter ist kleiner als 0 (null), entfernt diese Methode alle Spalten aus der Liste der Sortierspalten.  
   
- [in] `bAscending`  
- Gibt die Sortierreihenfolge der Spalte, die die `iColumn` gibt Parameter an. `TRUE` festzulegende aufsteigend; `FALSE` absteigend festlegen. Der Standardwert ist `TRUE`.  
+ [in] *bAscending*  
+ Gibt die Sortierreihenfolge der Spalte, die die *der iColumn* gibt Parameter an. `TRUE` festzulegende aufsteigend; `FALSE` absteigend festlegen. Der Standardwert ist `TRUE`.  
   
- [in] `bAdd`  
- `TRUE` zum Festlegen der Sortierreihenfolge der Spalte, die die `iColumn` gibt Parameter an.  
+ [in] *hinzufügen*  
+ `TRUE` zum Festlegen der Sortierreihenfolge der Spalte, die die *der iColumn* gibt Parameter an.  
   
  Ist die aktuelle Headersteuerelement *Sortieren mehrerer Spalten* Modus, diese Methode fügt die angegebene Spalte der Liste der Sortierspalten. Verwendung [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) Sortiermodus für mehrere Spalten festlegen.  
   

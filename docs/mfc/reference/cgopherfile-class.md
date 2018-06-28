@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366882"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040973"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile-Klasse
 Stellt die Funktionalität bereit, um Dateien auf einem Gopherserver zu suchen und zu lesen.  
@@ -46,7 +46,7 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|Erstellt ein `CGopherFile`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Gopher-Dienst können Benutzer Daten in einem Gopherdatei zu schreiben, da dieser Dienst hauptsächlich als menügesteuerten-Schnittstelle für die Suche nach Informationen Funktionen nicht. Die `CGopherFile` Memberfunktionen **schreiben**, `WriteString`, und `Flush` nicht implementiert werden `CGopherFile`. Diese Funktionen aufrufen, auf eine `CGopherFile` -Objekt gibt ein [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Gopher-Dienst können Benutzer Daten in einem Gopherdatei zu schreiben, da dieser Dienst hauptsächlich als menügesteuerten-Schnittstelle für die Suche nach Informationen Funktionen nicht. Die `CGopherFile` Memberfunktionen `Write`, `WriteString`, und `Flush` nicht implementiert werden `CGopherFile`. Diese Funktionen aufrufen, auf eine `CGopherFile` -Objekt gibt ein [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
  Erfahren Sie mehr darüber, wie `CGopherFile` funktioniert mit anderen Internet MFC-Klassen finden Sie im Artikel [Internet Programmieren mit WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hFile`  
+ *hFile*  
  Ein Handle für ein `HINTERNET` Datei.  
   
- `refLocator`  
+ *refLocator*  
  Ein Verweis auf eine [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt.  
   
- `pConnection`  
+ *pConnection*  
  Ein Zeiger auf eine [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) Objekt.  
   
- `hSession`  
+ *hSession*  
  Ein Handle für die aktuelle Internet-Sitzung.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Ein Zeiger auf eine Zeichenfolge, mit der Gopherserver zu suchen. Finden Sie unter [Gopher-Sitzungen](cgopherlocator-class.md) für Weitere Informationen zu Gopher-Locators.  
   
  *dwLocLen*  
- Einen DWORD-Wert mit der Anzahl der Bytes im `pstrLocator`.  
+ Einen DWORD-Wert mit der Anzahl der Bytes im *PstrLocator*.  
   
- `dwContext`  
+ *dwContext*  
  Ein Zeiger auf die Kontext-ID der Datei geöffnet wird.  
   
 ### <a name="remarks"></a>Hinweise  

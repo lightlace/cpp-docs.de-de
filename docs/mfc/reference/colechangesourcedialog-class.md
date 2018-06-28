@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376449"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037595"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog-Klasse
 Wird für das OLE-Dialogfeld "Quelle ändern" verwendet.  
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Zeiger auf die verknüpften [COleClientItem](../../mfc/reference/coleclientitem-class.md) , deren Datenquellen aktualisiert werden wird.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  

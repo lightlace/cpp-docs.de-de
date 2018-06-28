@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369621"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037728"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl-Klasse
 Die `CMFCListCtrl` Klasse erweitert die Funktionalität der [CListCtrl-Klasse](../../mfc/reference/clistctrl-class.md) Klasse durch die Unterstützung der Funktion der erweiterten Zugriffskontrolle von der [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bMark`  
+ [in] *bMark*  
  Ein boolescher Parameter, der bestimmt, ob eine andere Hintergrundfarbe aktiviert.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Ein boolescher Parameter, der bestimmt, ob das Steuerelement sofort neu gezeichnet wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Ein boolescher Wert, der angibt, ob mehrere Spalte Sortiermodus aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lParam1`  
+ [in] *lParam1*  
  Das erste zu vergleichende Element.  
   
- [in] `lParam2`  
+ [in] *lParam2*  
  Das zweite zu vergleichende Element.  
   
- [in] `iColumn`  
+ [in] *der iColumn*  
  Der Index der Spalte, die diese Methode sortiert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nRow`  
+ [in] *nRow*  
  Die Zeile für die betreffende Zelle.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  Die Spalte die betreffende Zelle.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Benutzerdefinierte Daten. Die Standardimplementierung verwendet diesen Parameter nicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nRow`  
+ [in] *nRow*  
  Die Zeile für die betreffende Zelle.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  Die Spalte die betreffende Zelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iColumn`  
+ [in] *der iColumn*  
  Die zu entfernende Spalte.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iColumn`  
+ [in] *der iColumn*  
  Die Spalte zu sortieren.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Ein boolescher Wert, der die Sortierreihenfolge angibt.  
   
- [in] `bAdd`  
- Ein boolescher Wert, der angibt, ob die Methode die Spalte erkennbar fügt `iColumn` zur Liste der Sortierspalten.  
+ [in] *hinzufügen*  
+ Ein boolescher Wert, der angibt, ob die Methode die Spalte erkennbar fügt *der iColumn* zur Liste der Sortierspalten.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode übergibt die Eingabeparameter an das Header-Steuerelement mithilfe der Methode [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iColumn`  
+ [in] *der iColumn*  
  Die Spalte zu sortieren.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Ein boolescher Wert, der die Sortierreihenfolge angibt.  
   
- [in] `bAdd`  
- Ein boolescher Wert, der angibt, ob diese Methode die Spalte erkennbar fügt `iColumn` zur Liste der Sortierspalten.  
+ [in] *hinzufügen*  
+ Ein boolescher Wert, der angibt, ob diese Methode die Spalte erkennbar fügt *der iColumn* zur Liste der Sortierspalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

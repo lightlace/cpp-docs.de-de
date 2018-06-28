@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374356"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039163"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog-Klasse
 Wird für das OLE-Dialogfeld "Inhalte einfügen" verwendet.  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Die Liste der Formate, die Ihre Anwendung einfügen kann hinzugefügt benutzerdefinierte Formate.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Fügt einen neuen Eintrag zur Liste der unterstützten Zwischenablageformate.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Fügt **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`, und optional `CF_LINKSOURCE` zur Liste der Formate kann Ihre Anwendung einfügen.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Fügt **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**, und optional **CF_LINKSOURCE** zur Liste der Formate kann Ihre Anwendung einfügen .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Erstellt das Element im Containerdokument mit dem angegebenen Format.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Zeigt das Dialogfeld OLE Inhalte einfügen.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Legt fest, ob das Element als ein Symbol oder nicht gezeichnet.|  
@@ -130,22 +130,22 @@ void AddFormat(
  *FMT*  
  Verweis auf den Datentyp hinzufügen.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Eine Zeichenfolge, die das Format für den Benutzer beschreibt.  
   
  *lpszResult*  
  Eine Zeichenfolge, die Beschreibung des Ergebnisses, wenn dieses Format im Dialogfeld ausgewählt wird.  
   
- `flags`  
+ *flags*  
  Die anderen verlinken und Einbetten für dieses Format verfügbaren Optionen. Dieses Flag ist eine bitweise Kombination von mindestens einer der anderen Werte in der **OLEUIPASTEFLAG** Aufzählungstyp.  
   
- `cf`  
+ *CF*  
  Das Format der Zwischenablage hinzufügen.  
   
  *TYMED*  
  Die Typen von Medien in diesem Format verfügbar sind. Dies ist eine bitweise Kombination von mindestens einer der Werte in der **TYMED** Aufzählungstyp.  
   
- `nFormatID`  
+ *nFormatID*  
  Die ID der Zeichenfolge, die dieses Format bezeichnet. Das Format dieser Zeichenfolge wird zwei separate Zeichenfolgen, die jeweils durch ein "\n" getrennt sind. Die erste Zeichenfolge ist identisch, die im übergeben werden die *LpstrFormat* Parameter und das zweite ist identisch mit der *LpstrResult* Parameter.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cf`  
+ *CF*  
  Das Format der Zwischenablage hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"Eingebettetes Objekt"**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Erstellung-Flag enthält eine beliebige Anzahl von die folgenden Flags, die mit dem bitweisen OR-Operator kombiniert werden:  
   
 - `PSF_SELECTPASTE` Gibt an, dass das Optionsfeld einfügen zunächst geprüft wird, wenn das Dialogfeld aufgerufen wird. Kann nicht verwendet werden, in Kombination mit `PSF_SELECTPASTELINK`. Dies ist die Standardeinstellung.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Gibt an, dass die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld aufgerufen wird.  
   
- `pDataObject`  
+ *pDataObject*  
  Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) einfügen. Wenn dieser Wert ist **NULL**, erhält er die `COleDataObject` aus der Zwischenablage.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  

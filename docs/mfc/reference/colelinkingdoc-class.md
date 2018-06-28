@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369846"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039972"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc-Klasse
 Die Basisklasse für OLE-Containerdokumente, die das Verknüpfen mit den enthaltenen eingebetteten Elementen unterstützt.  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- Verbinden der `COleTemplateServer` Objekt, das die Dokumentvorlagen durch Aufrufen des Objekts `ConnectTemplate` Memberfunktion, und registrieren Sie Klasse alle Objekte mit dem OLE-System durch Aufrufen von **COleTemplateServer::RegisterAll**:  
+ Verbinden der `COleTemplateServer` Objekt, das die Dokumentvorlagen durch Aufrufen des Objekts `ConnectTemplate` Memberfunktion, und registrieren Sie Klasse alle Objekte mit dem OLE-System durch Aufrufen von `COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszItemName`  
+ *lpszItemName*  
  Ein Zeiger auf den Namen der eingebetteten OLE-Element angefordert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszItemName`  
+ *lpszItemName*  
  Ein Zeiger auf den Namen der verknüpften OLE Element angefordert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  Zeiger auf ein OLE-Factory-Objekt (kann **NULL**).  
   
- `lpszPathName`  
+ *lpszPathName*  
  Ein Zeiger auf den vollqualifizierten Pfad des Containerdokuments.  
   
 ### <a name="return-value"></a>Rückgabewert  

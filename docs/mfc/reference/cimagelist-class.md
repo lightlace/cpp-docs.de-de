@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86250968fa8f6dfd9cb1a3b9a790549f70baa569
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375845"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039110"
 ---
 # <a name="cimagelist-class"></a>CImageList-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Bildlisten-Steuerelements bereit.  
@@ -189,16 +189,16 @@ int Add(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pbmImage`  
+ *pbmImage*  
  Zeiger auf die Bitmap, die das Bild oder die Bilder enthält. Die Anzahl von Images wird von der Breite der Bitmap abgeleitet.  
   
- `pbmMask`  
+ *pbmMask*  
  Zeiger auf die Bitmap, die mit der Maske. Wenn keine Maske mit der Bildliste verwendet wird, wird dieser Parameter ignoriert.  
   
- `crMask`  
+ *crMask*  
  Farbe, die zum Generieren der Maske verwendet werden. Jedes dieser Farbe in der angegebenen Bitmap Pixel auf Schwarz geändert wird, und das entsprechende Bit in der Maske auf einen festgelegt.  
   
- `hIcon`  
+ *hIcon*  
  Handle des Symbols, das mithilfe einer Bitmap und eine Maske für das neue Abbild enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -218,7 +218,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hImageList`  
+ *hImageList*  
  Ein Handle für ein Bildlistenobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -237,10 +237,10 @@ BOOL BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImage`  
+ *nImage*  
  Nullbasierte Index des Bilds zu ziehen.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Die Koordinaten der Drag & Startposition (in der Regel die Cursorposition). Die Koordinaten sind relativ zur oberen linken Ecke des Bilds.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -280,10 +280,10 @@ BOOL Copy(
  *iDst*  
  Der nullbasierte Index des Bilds als Ziel des Kopiervorgangs verwendet werden soll.  
   
- `iSrc`  
+ *iSrc*  
  Der nullbasierte Index des Bilds als die Quelle des Kopiervorgangs verwendet werden soll.  
   
- `uFlags`  
+ *uFlags*  
  Die Bit-Flagwert, der angibt, den Typ des Kopiervorgangs vorgenommen werden. Dieser Parameter kann einen der folgenden Werte sein:  
   
 |Wert|Bedeutung|  
@@ -291,7 +291,7 @@ BOOL Copy(
 |`ILCF_MOVE`|Das Bild wird in Abbildindex das Ziel kopiert. Dieser Vorgang führt zu mehreren Instanzen eines bestimmten Images. Standardmäßig ist `ILCF_MOVE` festgelegt.|  
 |`ILCF_SWAP`|Die Quell- und Zielschemas Bilder tauschen Positionen in der Bildliste.|  
   
- `pSrc`  
+ *pSrc*  
  Ein Zeiger auf eine `CImageList` -Objekt, das das Ziel des Kopiervorgangs ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -338,13 +338,13 @@ BOOL Create(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cx`  
+ *CX*  
  Die Dimensionen der einzelnen Bilds in Pixel.  
   
- `cy`  
+ *CY*  
  Die Dimensionen der einzelnen Bilds in Pixel.  
   
- `nFlags`  
+ *nFlags*  
  Gibt den Typ der Bildliste zu erstellen. Dieser Parameter kann eine Kombination der folgenden Werte sein, aber er kann nur eine der enthalten die `ILC_COLOR` Werte.  
   
 |Wert|Bedeutung|  
@@ -358,40 +358,40 @@ BOOL Create(CImageList* pImageList);
 |`ILC_COLORDDB`|Verwenden Sie eine geräteabhängige Bitmap.|  
 |`ILC_MASK`|Verwendet eine Maske. Die Bildliste enthält zwei Bitmaps, von denen eine monochrome Bitmap, die als Maske verwendet wird. Wenn dieser Wert nicht enthalten ist, enthält die Bildliste nur einer einzigen Bitmap. Finden Sie unter [Zeichnen von Bildern aus einer Bildliste](../../mfc/drawing-images-from-an-image-list.md) zusätzliche Informationen zu maskierten Images.|  
   
- `nInitial`  
+ *nInitial*  
  Anzahl der Bilder, die zunächst die Bildliste enthält.  
   
- `nGrow`  
+ *nGrow*  
  Anzahl der Bilder, die mit denen die Bildliste vergrößert werden kann, wenn das System, um die Größe der Liste, um Platz für neue Images zu machen muss. Dieser Parameter entspricht der Anzahl von neuen Images, die die Größe Bildliste enthalten kann.  
   
- `nBitmapID`  
+ *nBitmapID*  
  Ressourcen-IDs der Bitmap die Bildliste zugeordnet werden soll.  
   
- `crMask`  
+ *crMask*  
  Farbe, die zum Generieren einer Maske verwendet werden. Jedes dieser Farbe in der angegebenen Bitmap Pixel auf Schwarz geändert wird, und das entsprechende Bit in der Maske auf einen festgelegt.  
   
- `lpszBitmapID`  
+ *lpszBitmapID*  
  Eine Zeichenfolge, die die Ressourcen-IDs der Bilder enthält.  
   
- `imagelist1`  
+ *imageList1*  
  Ein Verweis auf ein `CImageList`-Objekt.  
   
- `nImage1`  
+ *nImage1*  
  Der Index des ersten vorhandenen Images.  
   
- `imagelist2`  
+ *ImageList2*  
  Ein Verweis auf ein `CImageList`-Objekt.  
   
- `nImage2`  
+ *nImage2*  
  Der Index des zweiten vorhandenen Images.  
   
- `dx`  
+ *DX*  
  Der Offset der x-Achse des zweiten Bilds in Beziehung zu den ersten Bilds in Pixel.  
   
- `dy`  
+ *dy*  
  Der Offset der y-Achse des zweiten Bilds in Beziehung zu den ersten Bilds in Pixel.  
   
- `pImageList`  
+ *pImageList*  
  Ein Zeiger auf eine `CImageList` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -443,7 +443,7 @@ HIMAGELIST Detach();
   Siehe das Beispiel für [CImageList::Attach](#attach).  
   
 ##  <a name="dragenter"></a>  CImageList::DragEnter  
- Sperren Sie während eines Ziehvorgangs Updates vom angegebenen Fensters `pWndLock` und zeigt das Bild an der Position angegeben `point`.  
+ Sperren Sie während eines Ziehvorgangs Updates vom angegebenen Fensters *pWndLock* und zeigt das Bild an der Position angegeben *zeigen*.  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -452,10 +452,10 @@ static BOOL PASCAL DragEnter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndLock`  
+ *pWndLock*  
  Ein Zeiger auf das Fenster, das Bild besitzt.  
   
- `point`  
+ *Punkt*  
  Position, an der zur Anzeige des Bilds ziehen. Koordinaten sind relativ zur oben links im Fenster (nicht den Clientbereich).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -464,7 +464,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="remarks"></a>Hinweise  
  Die Koordinaten sind relativ zur oberen linken Ecke des Fensters, damit Sie beim Angeben der Koordinaten für die Breite der Elemente des Fensters, z. B. die Rahmen, die Titelleiste und die Menüleiste ausgleichen müssen.  
   
- Wenn `pWndLock` ist **NULL**, diese Funktion zeichnet das Bild in den Anzeigekontext Desktopfenster zugeordnet und Koordinaten sind relativ zu der oberen linken Ecke des Bildschirms.  
+ Wenn *pWndLock* ist **NULL**, diese Funktion zeichnet das Bild in den Anzeigekontext Desktopfenster zugeordnet und Koordinaten sind relativ zu der oberen linken Ecke des Bildschirms.  
   
  Diese Funktion sperrt alle anderen Updates, die auf das angegebene Fenster, während des Ziehvorgangs. Wenn Sie während eines Ziehvorgangs, z. B. das Ziel eines Drag-and-Drop-Vorgangs, Hervorhebung Zeichnung durchführen müssen können Sie das gezogene Bild vorübergehend ausblenden, indem die [CImageList::DragLeave](#dragleave) Funktion.  
   
@@ -472,14 +472,14 @@ static BOOL PASCAL DragEnter(
   Siehe das Beispiel für [CImageList::BeginDrag](#begindrag).  
   
 ##  <a name="dragleave"></a>  CImageList::DragLeave  
- Vom angegebenen Fensters entsperrt `pWndLock` und blendet Sie aus der Drag &-Image, ermöglichen das Fenster aktualisiert werden.  
+ Vom angegebenen Fensters entsperrt *pWndLock* und blendet Sie aus der Drag &-Image, ermöglichen das Fenster aktualisiert werden.  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndLock`  
+ *pWndLock*  
  Ein Zeiger auf das Fenster, das Bild besitzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -496,7 +496,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Ziehen Sie neue Position.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -516,7 +516,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bShow`  
+ *bShow*  
  Gibt an, ob der Drag-Bild angezeigt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -537,23 +537,23 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger auf den Ziel-Gerätekontext.  
   
- `nImage`  
+ *nImage*  
  Nullbasierte Index des zu zeichnenden Bilds.  
   
- `pt`  
+ *pt*  
  Ort, an dem in den angegebenen Gerätekontext gezeichnet werden soll.  
   
- `nStyle`  
+ *nStyle*  
  Kennzeichen, das die Zeichnungsart angibt. Eine oder mehrere der folgenden Werte sind möglich:  
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
 |`ILD_BLEND25`, **ILD_FOCUS**|Zeichnet das Bild, das Mischen von 25 Prozent mit der Hervorhebungsfarbe des Systems. Dieser Wert hat keine Auswirkung, wenn die Bildliste eine Maske keinen enthält.|  
 |`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Zeichnet das Bild, das Mischen von 50 Prozent mit der Hervorhebungsfarbe des Systems. Dieser Wert hat keine Auswirkung, wenn die Bildliste eine Maske keinen enthält.|  
-|**ILD_MASK**|Zeichnet die Maske.|  
+|`ILD_MASK`|Zeichnet die Maske.|  
 |`ILD_NORMAL`|Zeichnet das Bild, das die Hintergrundfarbe für die Bildliste verwenden. Ist die Hintergrundfarbe der `CLR_NONE` Wert, der das Bild gezeichnet wird, transparent mit der Maske.|  
 |`ILD_TRANSPARENT`|Zeichnet das Bild transparent die Maske, unabhängig von der die Farbe des Hintergrunds.|  
   
@@ -578,17 +578,17 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger auf den Ziel-Gerätekontext.  
   
- `nImage`  
+ *nImage*  
  Nullbasierte Index des zu zeichnenden Bilds.  
   
- `pt`  
+ *pt*  
  Ort, an dem in den angegebenen Gerätekontext gezeichnet werden soll.  
   
- `sz`  
- Die Größe des Anteils des Bilds relativ zur linken oberen Ecke des Bilds gezeichnet werden soll. Finden Sie unter `dx` und *dy* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
+ *sz*  
+ Die Größe des Anteils des Bilds relativ zur linken oberen Ecke des Bilds gezeichnet werden soll. Finden Sie unter *Dx* und *dy* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
   
  *clrBk*  
  Die Hintergrundfarbe des Bilds. Finden Sie unter *RgbBk* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
@@ -596,7 +596,7 @@ BOOL DrawEx(
  *clrFg*  
  Die Vordergrundfarbe des Bilds. Finden Sie unter *RgbFg* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
   
- `nStyle`  
+ *nStyle*  
  Kennzeichen, das die Zeichnungsart angibt. Finden Sie unter *fStyle* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -634,30 +634,30 @@ BOOL DrawIndirect(
  *pimldp*  
  Ein Zeiger auf ein [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) -Struktur, die Informationen zu den Ziehvorgang enthält.  
   
- `pDC`  
+ *pDC*  
  Ein Zeiger auf den Ziel-Gerätekontext. Sie müssen dies löschen [CDC](../../mfc/reference/cdc-class.md) Objekt, wenn Sie damit fertig sind.  
   
- `nImage`  
+ *nImage*  
  Der nullbasierte Index des Bilds gezeichnet werden.  
   
- `pt`  
+ *pt*  
  Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, enthält die x- und y-Koordinaten, in dem das Bild gezeichnet wird.  
   
- `sz`  
+ *sz*  
  Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, der angibt, der Größe des Bilds gezeichnet werden.  
   
  *ptOrigin*  
  Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, enthält die x- und y-Koordinaten der oberen linken Ecke des zeichnen-Vorgangs in Bezug auf das eigentliche Bild angeben. Pixel des Bilds, die auf der linken Seite der X-Koordinate und höher die y-Koordinate sind werden nicht gezeichnet.  
   
- `fStyle`  
+ *fStyle*  
  Kennzeichen, das angibt, die Zeichnungsart und optional das Overlaybild. Finden Sie im Abschnitt "Hinweise" Informationen auf dem Bild überlagert. Die MFC-Standardimplementierung `ILD_NORMAL`, zeichnet das Bild, das die Hintergrundfarbe für die Bildliste verwenden. Ist die Hintergrundfarbe der `CLR_NONE` Wert, der das Bild gezeichnet wird, transparent mithilfe einer Maske.  
   
- Andere mögliche Formate sind unter beschrieben die **fStyle** Mitglied der [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur.  
+ Andere mögliche Formate sind unter beschrieben die *fStyle* Mitglied der [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur.  
   
  *dwRop*  
- Wert, der ein Raster Vorgangscode angibt. Diese Codes definieren, wie die Farbdaten für das Quellrechteck mit der Farbdaten für Zielrechtecks Erreichen des endgültige Farbe kombiniert werden. MFC Standardimplementierung **SRCCOPY**, Quellrechtecks direkt an das Zielrechteck kopiert. Dieser Parameter wird ignoriert, wenn die `fStyle` Parameter enthält keinen der **ILD_ROP** Flag.  
+ Wert, der ein Raster Vorgangscode angibt. Diese Codes definieren, wie die Farbdaten für das Quellrechteck mit der Farbdaten für Zielrechtecks Erreichen des endgültige Farbe kombiniert werden. MFC Standardimplementierung **SRCCOPY**, Quellrechtecks direkt an das Zielrechteck kopiert. Dieser Parameter wird ignoriert, wenn die *fStyle* Parameter enthält keinen der **ILD_ROP** Flag.  
   
- Weitere mögliche Werte sind unter beschrieben die **DwRop** Mitglied der [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur.  
+ Weitere mögliche Werte sind unter beschrieben die *DwRop* Mitglied der [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur.  
   
  *rgbBack*  
  Die Hintergrundfarbe Bild standardmäßig `CLR_DEFAULT`. Dieser Parameter kann eine anwendungsdefinierte RGB-Wert oder einen der folgenden Werte sein:  
@@ -675,7 +675,7 @@ BOOL DrawIndirect(
 |`CLR_DEFAULT`|Die Standardvordergrundfarbe. Mit der Hervorhebungsfarbe des Systems als die Vordergrundfarbe für das Bild gezeichnet.|  
 |`CLR_NONE`|Keine Blend-Farbe. Das Bild wird mit der Farbe des Zielgerätekontexts gemischt.|  
   
- Dieser Parameter wird nur verwendet, wenn `fStyle` enthält die `ILD_BLEND25` oder `ILD_BLEND50` Flag.  
+ Dieser Parameter wird nur verwendet, wenn *fStyle* enthält die `ILD_BLEND25` oder `ILD_BLEND50` Flag.  
   
  *fState*  
  Kennzeichen, das die Zeichnung Status angibt. Dieser Member kann ein oder mehrere Status-Flags für Image-Liste enthalten.  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die Win32-Struktur selbst eingeben möchten, verwenden Sie die erste Version. Verwenden Sie die zweite Version, wenn Sie eine oder mehrere der MFC Standardargumente nutzen oder zu vermeiden, verwalten Sie die Struktur von möchten.  
   
- Ein Overlay-Image ist ein Bild, das auf das primäre Bild, das in diese Memberfunktion von angegeben gezeichnet wird die `nImage` Parameter. Zeichnen eine Overlaymaske mithilfe der [zeichnen](#draw) Memberfunktion mit dem einsbasierten Index für die Überlagerung-Maske, die mithilfe von angegeben die [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) Makro.  
+ Ein Overlay-Image ist ein Bild, das auf das primäre Bild, das in diese Memberfunktion von angegeben gezeichnet wird die *nImage* Parameter. Zeichnen eine Overlaymaske mithilfe der [zeichnen](#draw) Memberfunktion mit dem einsbasierten Index für die Überlagerung-Maske, die mithilfe von angegeben die [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) Makro.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -722,7 +722,7 @@ HICON ExtractIcon(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImage`  
+ *nImage*  
  Nullbasierte Index des Bilds.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -742,7 +742,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hImageList`  
+ *hImageList*  
  Gibt die Bildliste an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -762,7 +762,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hImageList`  
+ *hImageList*  
  Gibt die Bildliste an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -797,7 +797,7 @@ static CImageList* PASCAL GetDragImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpPoint`  
+ *lpPoint*  
  Adresse der einen [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, die das aktuelle empfängt ziehen Position.  
   
  *lpPointHotSpot*  
@@ -829,7 +829,7 @@ BOOL GetImageInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImage`  
+ *nImage*  
  Nullbasierte Index des Bilds.  
   
  *pImageInfo*  
@@ -889,7 +889,7 @@ BOOL Read(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pArchive`  
+ *pArchive*  
  Ein Zeiger auf ein `CArchive` Objekt, von dem die Bildliste gelesen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -906,14 +906,14 @@ BOOL Remove(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImage`  
+ *nImage*  
  Nullbasierte Index des Bilds zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Elemente, die nach `nImage` nun eine Position nach unten verschieben. Z. B. wenn eine Bildliste zwei Elemente enthält, verursacht löschen das erste Element der verbleibenden Element jetzt in der ersten Position. `nImage`= 0 für das Element in der ersten Position.  
+ Alle Elemente, die nach *nImage* nun eine Position nach unten verschieben. Z. B. wenn eine Bildliste zwei Elemente enthält, verursacht löschen das erste Element der verbleibenden Element jetzt in der ersten Position. *nImage*= 0 für das Element in der ersten Position.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
@@ -934,22 +934,22 @@ int Replace(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImage`  
+ *nImage*  
  Nullbasierte Index des Bilds zu ersetzen.  
   
- `pbmImage`  
+ *pbmImage*  
  Ein Zeiger auf die Bitmap, die das Bild enthält.  
   
- `pbmMask`  
+ *pbmMask*  
  Ein Zeiger auf die Bitmap, die mit der Maske. Wenn keine Maske mit der Bildliste verwendet wird, wird dieser Parameter ignoriert.  
   
- `hIcon`  
+ *hIcon*  
  Ein Handle für das Symbol, das mithilfe einer Bitmap und eine Maske für das neue Abbild enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Version zurückgeben **BOOL** ungleich NULL zurückgibt, wenn erfolgreich, andernfalls 0.  
   
- Die Version zurückgeben `int` gibt den nullbasierten Index des Bilds zurück, wenn erfolgreich, andernfalls - 1.  
+ Die Version zurückgeben **Int** gibt den nullbasierten Index des Bilds zurück, wenn erfolgreich, andernfalls - 1.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Memberfunktion auf, nach dem Aufruf [SetImageCount](#setimagecount) zum Zuweisen von den neuen gültigen Bilder auf den Platzhalter Indexnummern image.  
@@ -965,7 +965,7 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cr`  
+ *CR*  
  Hintergrundfarbe festlegen. Es kann sein `CLR_NONE`. In diesem Fall werden Bilder transparent mit der Maske gezeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -987,7 +987,7 @@ BOOL SetDragCursorImage(
  *nDrag*  
  Der Index des neuen Images mit dem Image ziehen Sie kombiniert werden.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Die Position des Hotspots in das neue Image.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1028,7 +1028,7 @@ BOOL SetOverlayImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImage`  
+ *nImage*  
  Nullbasierte Index des Bilds, das als eine Overlaymaske verwendet.  
   
  *nOverlay*  
@@ -1053,7 +1053,7 @@ BOOL Write(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pArchive`  
+ *pArchive*  
  Ein Zeiger auf ein `CArchive` Objekt, in dem die Bildliste gespeichert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  

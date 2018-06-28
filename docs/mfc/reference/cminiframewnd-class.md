@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378381"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038582"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd-Klasse
 Stellt ein Rahmenfenster mit halber Höhe dar, das in der Regel um unverankerte Symbolleisten sichtbar ist.  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpClassName`  
+ *lpClassName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen, die mit dem globalen registriert sein [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) Funktion. Wenn **NULL**, Window-Klasse wird vom Framework für Sie registriert werden. MFC bietet der Standardklasse, die folgenden Formate und Attribute:  
   
 -   Legt formatieren Bit **CS_DBLCLKS**, sendet Nachrichten an die Fensterprozedur doppelklicken, wenn der Benutzer die Maustaste doppelklickt.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Das Fenster festgelegt an Standardeinstellung Größe und Position, wie von Windows angegeben.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen enthält.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt an, die Fenster-Stilattribute. Diese können standard Fensterstile und mindestens eine der folgenden Sonderzeichen enthalten:  
   
 - **MFS_MOVEFRAME** ermöglicht das Minirahmenfenster verschoben werden soll, indem Sie auf keinem Rand des Fensters, nicht nur die Beschriftung.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  Finden Sie unter [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) eine Beschreibung der möglichen Fensterstilwerte. Ist die typische Kombination Minirahmenfenster zum **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
- `rect`  
+ *Rect*  
  Ein `RECT` Struktur, die die gewünschten Dimensionen des Fensters angibt.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete Fenster. Verwendung **NULL** für Fenster auf oberster Ebene.  
   
- `nID`  
+ *nID*  
  Wenn das Minirahmenfenster als untergeordnetes Fenster erstellt wird, ist dies der Bezeichner des untergeordneten Steuerelements. andernfalls 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
+ *dwExStyle*  
  Gibt den erweiterten Stil des der `CMiniFrameWnd` erstellt wird. Wendet keine der der [erweiterten Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) an das Fenster.  
   
- `lpClassName`  
+ *lpClassName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse (eine [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur). Der Klassenname kann einen beliebigen Namen, die mit dem globalen registriert sein [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) Funktion oder einem der vordefinierten Steuerelementklasse Namen. Es muss nicht **NULL**.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen enthält.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt an, die Fenster-Stilattribute. Finden Sie unter [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) eine Beschreibung der möglichen Werte.  
   
- `rect`  
- Die Größe und Position des Fensters, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Die Größe und Position des Fensters, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete Fenster-Objekt.  
   
- `nID`  
+ *nID*  
  Der Bezeichner des untergeordneten Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  Weitere überschreiben **auf *** Nachricht* message-Handler können Sie weitere Funktionen in der abgeleiteten Klasse hinzufügen.  
   
- Wenn die **WS_VISIBLE** Stil angegeben ist, sendet Windows die Fenster alle Nachrichten, die für die Aktivierung und die Fenster anzeigen. Der Fensterstil eine Titelleiste an, der Fenstertitel verweist, zu der `lpszWindowName` Parameter in der Titelleiste angezeigt wird.  
+ Wenn die **WS_VISIBLE** Stil angegeben ist, sendet Windows die Fenster alle Nachrichten, die für die Aktivierung und die Fenster anzeigen. Der Fensterstil eine Titelleiste an, der Fenstertitel verweist, zu der *LpszWindowName* Parameter in der Titelleiste angezeigt wird.  
   
- Die `dwStyle` Parameter kann eine beliebige Kombination von [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ Die *DwStyle* Parameter kann eine beliebige Kombination von [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  Die alten Stil Palette Toolbox-Fenster werden nicht mehr unterstützt. Das alte Format, eine Schaltfläche "X" schließen keine, wurde unterstützt, wenn eine MFC-Anwendung unter älteren Versionen von Windows ausgeführt, aber nicht mehr in Visual c++.NET unterstützt wird. Nur das neue `WS_EX_TOOLWINDOW` Stil wird jetzt unterstützt; eine Beschreibung dieses Formats, finden Sie unter [erweiterten Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   

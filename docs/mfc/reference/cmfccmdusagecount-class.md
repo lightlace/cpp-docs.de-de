@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369241"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037342"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount-Klasse
 Überwacht die Verwendungsanzahl der Windows-Meldungen, z. B. wenn der Benutzer ein Element aus einem Menü auswählt.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `uiCmd`|Gibt den Befehl Zähler erhöht.|  
+|[in] *UiCmd*|Gibt den Befehl Zähler erhöht.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt einen neuen Eintrag zur Zuordnung Struktur des Befehls Anzahlen `m_CmdUsage`, wenn der Eintrag nicht bereits vorhanden ist.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   Die Symbolleiste-Framework ist im Anpassungsmodus (die [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) Methode gibt einen Wert ungleich NULL zurück).  
   
--   Der Befehl bezieht sich auf ein Untermenü oder Menü als Trennzeichen ( `uiCmd` gleich 0 oder -1).  
+-   Der Befehl bezieht sich auf ein Untermenü oder Menü als Trennzeichen ( *UiCmd* gleich 0 oder -1).  
   
-- `uiCmd` bezieht sich auf einen Standardbefehl (globalen `IsStandardCommand` Funktion gibt einen Wert ungleich NULL zurück).  
+- *UiCmd* bezieht sich auf einen Standardbefehl (globalen `IsStandardCommand` Funktion gibt einen Wert ungleich NULL zurück).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Ruft die Verwendungsanzahl der, die der angegebenen Befehls-ID zugeordnet ist.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `uiCmd`|Die ID des Leistungsindikators Befehl abrufen.|  
+|[in] *UiCmd*|Die ID des Leistungsindikators Befehl abrufen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Verwendungsanzahl der, die der angegebenen Befehls-ID zugeordnet ist.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `uiCmd`|Gibt den Befehl aus, um zu überprüfen.|  
+|[in] *UiCmd*|Gibt den Befehl aus, um zu überprüfen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Befehl häufig verwendet wird; andernfalls 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `ar`|Ein `CArchive` zu von oder zu serialisierende Objekt.|  
+|[in] *Ar*|Ein `CArchive` zu von oder zu serialisierende Objekt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode serialisiert die Map-Struktur der Befehl Anzahlen `m_CmdUsage`, und die gesamte Befehlssyntax `m_nTotalUsage`, Leistungsindikator aus oder in der angegebenen Archiv.  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `nStartCount`|Die anfängliche Anzahl neuer alle nachverfolgten Befehle.|  
-|[in] `nMinUsagePercentage`|Die neue minimale Auslastung in Prozent.|  
+|[in] *nStartCount*|Die anfängliche Anzahl neuer alle nachverfolgten Befehle.|  
+|[in] *nMinUsagePercentage*|Die neue minimale Auslastung in Prozent.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Methode erfolgreich ist, `FALSE` Wenn die `nMinUsagePercentage` Parameter ist größer als oder gleich 100.  
+ `TRUE` Wenn die Methode erfolgreich ist, `FALSE` Wenn die *nMinUsagePercentage* Parameter ist größer als oder gleich 100.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Methode wird die freigegebene `CMFCCmdUsageCount` Klassendatenmember `m_nStartCount` und `m_nMinUsagePercentage` auf `nStartCount` und `nMinUsagePercentage`zugeordnet. `m_nStartCount` wird verwendet, durch die [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) Methode, um zu bestimmen, ob dieses Objekt die Mindestmenge an Überwachungsdaten gesammelt hat. `m_nMinUsagePercentage` wird verwendet, durch die [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) Methode, um zu bestimmen, ob ein bestimmter Befehl häufig verwendet wird.  
+ Mit dieser Methode wird die freigegebene `CMFCCmdUsageCount` Klassendatenmember `m_nStartCount` und `m_nMinUsagePercentage` auf *nStartCount* und *nMinUsagePercentage*zugeordnet. `m_nStartCount` wird verwendet, durch die [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) Methode, um zu bestimmen, ob dieses Objekt die Mindestmenge an Überwachungsdaten gesammelt hat. `m_nMinUsagePercentage` wird verwendet, durch die [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) Methode, um zu bestimmen, ob ein bestimmter Befehl häufig verwendet wird.  
   
  In Debugbuilds diese Methode generiert ein Assertionsfehler ausgelöst, wenn die `nMinUsagePercentage` Parameter ist größer als oder gleich 100.  
   

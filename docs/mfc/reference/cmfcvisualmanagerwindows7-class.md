@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373702"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042221"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7-Klasse
 Die `CMFCVisualManagerWindows7` ermöglicht es einer Anwendung die Darstellung einer [!INCLUDE[win7](../../build/includes/win7_md.md)] Anwendung.  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pEdit`  
+ [in] *pEdit*  
  Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht `NULL` sein.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  Gibt zurück, ob das Menüband Feld hervorgehoben ist.  
   
- [out] `bIsPaneHighlighted`  
- Gibt `TRUE` , wenn das Menüband, der Bereich enthält `pEdit` wird hervorgehoben.  
+ [out] *bIsPaneHighlighted*  
+ Gibt `TRUE` , wenn das Menüband, der Bereich enthält *pEdit* wird hervorgehoben.  
   
- [out] `bIsDisabled`  
- Gibt zurück, ob `pEdit` ist deaktiviert.  
+ [out] *bIsDisabled*  
+ Gibt zurück, ob *pEdit* ist deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Farbe des Hintergrunds neben dem Bearbeitungsfeld `pEdit`.  
+ Die Farbe des Hintergrunds neben dem Bearbeitungsfeld *pEdit*.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger auf den Gerätekontext einer Menüschaltfläche.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein Rechteck, das die Grenzen des Bilds im Menübereich-Schaltfläche angibt.  
   
- [in] `state`  
+ [in] *Zustand*  
  Der Zustand der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  

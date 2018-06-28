@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371727"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038353"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl-Klasse
 Die `CMFCLinkCtrl` Klasse zeigt eine Schaltfläche als Hyperlink an und ruft das Ziel des Links auf, wenn die Schaltfläche geklickt wird.  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rectClient`  
+ [in] *RectClient*  
  Ein Rechteck, das das Linksteuerelement umschließt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszURL`  
+ [in] *LpszURL*  
  Der Schaltflächentext angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszPrefix`  
+ [in] *LpszPrefix*  
  Das Präfix des URL-Protokoll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` Zentrieren Sie die Schaltflächentext und Bitmap vertikal zwischen dem oberen und unteren Rand des Steuerelements Link; andernfalls `FALSE`. Der Standardwert ist `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` um die Schaltflächentext und Bitmap horizontal zwischen dem linken und rechten Seite des Link-Steuerelement zu zentrieren; andernfalls `FALSE`. Der Standardwert ist `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  

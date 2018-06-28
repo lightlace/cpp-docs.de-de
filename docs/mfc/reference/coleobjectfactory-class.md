@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375936"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038207"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory-Klasse
 Implementiert die OLE-Klassenfactory, die OLE-Objekte wie Server, Automatisierungsobjekte und Dokumente erstellt.  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Verweis auf die OLE-Klassen-ID dieser Objektfactory darstellt.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  Ein Zeiger auf die Laufzeitklasse der C++-Objekte, die dieser Factory erstellen kann.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Gibt an, ob eine einzelne Instanz der Anwendung mehrere Instanziierungen unterstützen kann. Wenn **"true"**, werden mehrere Instanzen der Anwendung, die für jede Anforderung zum Erstellen eines Objekts gestartet.  
   
- `nFlags`  
+ *nFlags*  
  Enthält eine oder mehrere der folgenden Flags:  
   
 - **AfxRegDefault** legt das Threadingmodell an ThreadingModel = Apartment.  
   
 - **AfxRegInsertable** ermöglicht es dem Steuerelement angezeigt werden die **Objekt einfügen** im Dialogfeld für OLE-Objekte.  
   
-- `afxRegApartmentThreading` Legt das Threadingmodell in der Registrierung auf ThreadingModel = Apartment.  
+- **AfxRegApartmentThreading** legt das Threadingmodell in der Registrierung auf ThreadingModel = Apartment.  
   
 - **AfxRegFreeThreading** legt das Threadingmodell in der Registrierung auf ThreadingModel = frei.  
   
      Sie können die zwei Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in das Windows SDK für Weitere Informationen zum Modell Registrierung threading.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Zeiger auf eine Zeichenfolge, enthält ein verbale Programmbezeichner, z. B. "Microsoft Excel".  
   
 ### <a name="remarks"></a>Hinweise  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  Weitere Informationen finden Sie unter [Schlüssel CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) im Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- Fordert einen eindeutigen Lizenzschlüssel in die DLL des Steuerelements und speichert ihn in die `BSTR` verweist `pbstrKey`.  
+ Fordert einen eindeutigen Lizenzschlüssel in die DLL des Steuerelements und speichert ihn in die `BSTR` verweist *PbstrKey*.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwReserved`  
+ *dwReserved*  
  Für zukünftige Verwendung reserviert.  
   
- `pbstrKey`  
+ *pbstrKey*  
  Zeiger auf eine `BSTR` den Lizenzschlüssel gespeichert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszProgID`  
+ *lpszProgID*  
  Zeiger auf eine Zeichenfolge, enthält die lesbare Programm-ID, z. B. "Excel.Document.5."  
   
- `bRegister`  
+ *bRegistrieren Sie sich*  
  Bestimmt, ob der Steuerelement-Class-Objektfactory registriert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** dieser Objektfactory mit der OLE-systemregistrierung registriert. Diese Funktion wird in der Regel aufgerufen, indem [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) beim Start der Anwendung.  
   
-- **UpdateRegistry (** `bRegister` **)** diese Form der Funktion ist überschreibbar. Wenn `bRegister` ist **"true"**, diese Funktion wird die Control-Klasse mit der Registrierung registriert. Andernfalls, hebt die Klasse Registrierung.  
+- **UpdateRegistry (** `bRegister` **)** diese Form der Funktion ist überschreibbar. Wenn *bRegistrieren Sie sich* ist **"true"**, diese Funktion wird die Control-Klasse mit der Registrierung registriert. Andernfalls, hebt die Klasse Registrierung.  
   
      Wenn Sie MFC-ActiveX-Steuerelement verwenden, um das Projekt zu erstellen, liefert Steuerelement diese rein virtuelle Funktion überschreibt.  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bRegister`  
+ *bRegistrieren Sie sich*  
  Bestimmt, ob der Steuerelement-Class-Objektfactory registriert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bstrKey`  
+ *bstrKey*  
  Ein `BSTR` des Containers Version der Lizenzzeichenfolge gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert ist ungleich NULL, wenn die Lizenz zur Laufzeit gültig ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Ruft die Standard-Version [GetLicenseKey](#getlicensekey) abzurufenden eine Kopie des Steuerelements des Lizenzzeichenfolge und vergleicht ihn mit der Zeichenfolge in `bstrKey`. Wenn zwei Zeichenfolgen übereinstimmen, gibt die Funktion einen Wert ungleich NULL zurück. Andernfalls wird 0 zurückgegeben.  
+ Ruft die Standard-Version [GetLicenseKey](#getlicensekey) abzurufenden eine Kopie des Steuerelements des Lizenzzeichenfolge und vergleicht ihn mit der Zeichenfolge in *BstrKey*. Wenn zwei Zeichenfolgen übereinstimmen, gibt die Funktion einen Wert ungleich NULL zurück. Andernfalls wird 0 zurückgegeben.  
   
  Sie können diese Funktion, um eine benutzerdefinierte Überprüfung der Lizenz überschreiben.  
   

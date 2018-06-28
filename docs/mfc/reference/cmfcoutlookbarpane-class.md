@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374083"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037901"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane-Klasse
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiImage`  
+ [in] *UiImage*  
  Gibt den Ressourcenbezeichner einer Bitmap an.  
   
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt an, der Text der Schaltfläche.  
   
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Gibt das Schaltflächen-Steuerelement-ID an.  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Gibt den nullbasierten Index auf Seite "der Outlook-Leiste" auf die Schaltfläche mit den eingefügt.  
   
- [in] `uiLabel`  
+ [in] *UiLabel*  
  Eine Zeichenfolge-Ressourcen-ID.  
   
- [in] `szBmpFileName`  
+ [in] *SzBmpFileName*  
  Gibt den Namen der Abbilddatei zu laden.  
   
- [in] `szLabel`  
+ [in] *SzLabel*  
  Gibt an, der Text der Schaltfläche.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Ein Handle für eine Schaltfläche mithilfe einer Bitmap.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Ein Handle für ein Schaltflächen-Symbol.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Schaltfläche "Neu" in eine Outlook-Leiste Seite einfügen. Bild der Schaltfläche kann aus den Anwendungsressourcen oder von einer Datenträgerdatei geladen werden.  
   
- Wenn die Seiten-ID, wird angegeben `uiPageID` ist-1, wird die Schaltfläche mit der in der ersten Seite eingefügt.  
+ Wenn die Seiten-ID, wird angegeben *UiPageID* ist-1, wird die Schaltfläche mit der in der ersten Seite eingefügt.  
   
- Wenn der Index von angegebenen `iInsertAt` ist-1, wird die Schaltfläche am Ende der Seite hinzugefügt.  
+ Wenn der Index von angegebenen *iInsertAt* ist-1, wird die Schaltfläche am Ende der Seite hinzugefügt.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Gibt das übergeordnete Fenster des Outlook-Leiste-Steuerelements an. Dieser Wert darf nicht `NULL` sein.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Der Fensterstil.  Eine Liste der Fensterstile, finden Sie unter [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `uiID`  
+ [in] *UiID*  
  Die Steuerelement-ID. Muss eindeutig sein, um aktivieren Speichern des Status des Steuerelements.  
   
- [in] `dwControlBarStyle`  
+ [in] *DwControlBarStyle*  
  Gibt spezielle Formate, die das Verhalten des Steuerelements Outlook-Leiste definieren, wenn sie von der Outlook-Leiste getrennt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf eine Symbolleisten-Schaltfläche, die ein Benutzer geklickt hat.  
   
- [in] `pPopup`  
+ [in] *pPopup*  
  Ein Zeiger auf das Kontextmenü.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bPageScroll`  
+ [in] *bPageScroll*  
  Wenn `TRUE`, den Seite einen Bildlauf-Modus zu aktivieren. Wenn `FALSE`, deaktivieren Sie die Bildlaufleiste Page-Modus.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Gibt die Befehls-ID einer Schaltfläche zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Die neue Hintergrundfarbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiImageID`  
+ [in] *UiImageID*  
  Gibt die Bild-Ressourcen-ID.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clrRegText`  
+ [in] *ClrRegText*  
  Gibt die neue Farbe für den Text nicht ausgewählt.  
   
- [in] `clrSelText`  
+ [in] *ClrSelText*  
  Gibt die neue Farbe für den ausgewählten Text.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Gibt die neue transparente Farbe an.  
   
 ### <a name="remarks"></a>Hinweise  

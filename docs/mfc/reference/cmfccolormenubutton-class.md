@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c19386aeac0d85565ae7834a881d710d9226ef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9fddef1b032d1e17ea46229a992c23ca960822
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370704"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039023"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton-Klasse
 Die `CMFCColorMenuButton` Klasse unterstützt einen Menübefehl oder eine Symbolleisten-Schaltfläche, die ein Farben-Auswahldialogfeld startet.  
@@ -143,13 +143,13 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Eine Schaltfläche Befehls-ID.  
   
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text der Schaltfläche.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Ein Zeiger auf die Schaltfläche-Farbpalette.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -167,7 +167,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
  Quelle, um zu kopieren.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -197,13 +197,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt den Text der Schaltfläche angezeigt wird, wenn die Schaltfläche "" Automatische steht.  
   
- [in] `colorAutomatic`  
+ [in] *ColorAutomatic*  
  Gibt eine neue automatische Farbe an.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Gibt an, ob die Schaltfläche automatisch erfolgt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -219,10 +219,10 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt den Text der Schaltfläche.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` Um dokumentspezifische Farben anzuzeigen oder `FALSE` Systemfarben angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -239,13 +239,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt den Text der Schaltfläche.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  Geben Sie `TRUE` anzuzeigende der `CMFCColorDialog` (Dialogfeld), oder `FALSE` um das Dialogfeld Farbe Standardbetriebssystem anzuzeigen.  
   
- [in] `bEnable`  
+ [in] *bAktivieren*  
  Geben Sie `TRUE` auf die Schaltfläche "other"; anzuzeigen, andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -261,13 +261,13 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
  Gibt die ID für den Bereich abtrennbare.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  Gibt die Anzahl der Spalten im Bereich vertikal angedockten Farbe im abtrennbare Status an.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  Gibt die Anzahl der Zeilen für den Bereich horizontal angedockt Farbe im abtrennbare Status an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -306,14 +306,14 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Eine Befehls-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Farbe, die der angegebenen Befehls-ID entspricht.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, wenn Sie mehrere Farbe Schaltflächen in einer Anwendung verfügen. Klickt der Benutzer eine farbenschaltfläche, sendet die Schaltfläche "" die Befehls-ID in einem `WM_COMMAND` Nachricht an seinem übergeordneten Element. Die `GetColorByCmdID` Methode verwendet die Befehls-ID, um die entsprechende Farbe abzurufen.  
+ Verwenden Sie diese Methode, wenn Sie mehrere Farbe Schaltflächen in einer Anwendung verfügen. Klickt der Benutzer eine farbenschaltfläche, sendet die Schaltfläche "" die Befehls-ID in einer Nachricht WM_COMMAND an seinem übergeordneten Element an. Die `GetColorByCmdID` Methode verwendet die Befehls-ID, um die entsprechende Farbe abzurufen.  
   
 ##  <a name="isemptymenuallowed"></a>  CMFCColorMenuButton::IsEmptyMenuAllowed  
  Gibt an, ob leere Menüs unterstützt werden.  
@@ -336,7 +336,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das neue übergeordnete Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -357,28 +357,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein Rechteck, das den Bereich zu zeichnenden umschließt.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Verweist auf eine Liste von symbolleistenbildern.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` um anzugeben, dass die Symbolleiste in einem horizontalen angedockten Zustand ist; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  `TRUE` um anzugeben, dass die Anwendung im Anpassungsmodus; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` um anzugeben, dass die Schaltfläche "" markiert ist; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  `TRUE` um anzugeben, dass der Rahmen der Schaltfläche angezeigt wird; andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` um anzugeben, dass, die deaktiviert werden Schaltflächen (abgeblendet); abgeblendet. andernfalls `FALSE`. Die Standardeinstellung ist `TRUE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -394,13 +394,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein Rechteck, das die Schaltfläche gezeichnet werden umschließt.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` Gibt an, dass die Schaltfläche mit der ausgewählten Status aufweist. andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -419,17 +419,17 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `colorDefault`  
+ [in] *ColorDefault*  
  Die Standardfarbe, die im Dialogfeld "Farbe" ausgewählt ist.  
   
- [out] `colorRes`  
+ [out] *ColorRes*  
  Gibt die Farbe, die der Benutzer über das Farbendialogfeld auswählt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Benutzer eine neue Farbe auswählt; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Schaltfläche geklickt wird, rufen Sie diese Methode, um ein Dialogfeld zu öffnen. Wenn der Rückgabewert ungleich NULL ist, wird die Farbe, die der Benutzer wählt gespeichert, der `colorRes` Parameter. Verwenden der [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) Methode zum Wechseln zwischen den standardmäßigen Farbe (Dialogfeld) und die [CMFCColorDialog Klasse](../../mfc/reference/cmfccolordialog-class.md) (Dialogfeld).  
+ Wenn die Schaltfläche geklickt wird, rufen Sie diese Methode, um ein Dialogfeld zu öffnen. Wenn der Rückgabewert ungleich NULL ist, wird die Farbe, die der Benutzer wählt gespeichert, der *ColorRes* Parameter. Verwenden der [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) Methode zum Wechseln zwischen den standardmäßigen Farbe (Dialogfeld) und die [CMFCColorDialog Klasse](../../mfc/reference/cmfccolordialog-class.md) (Dialogfeld).  
   
 ##  <a name="setcolor"></a>  CMFCColorMenuButton::SetColor  
  Legt die Farbe der Schaltfläche für die aktuelle Farbe fest.  
@@ -441,14 +441,14 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clr`  
+ [in] *Clr*  
  Ein Wert für den RGB-Farbe.  
   
- [in] `bNotify`  
- `TRUE` Anwenden der `clr` Parameter Farbe an, die alle zugeordneten Menüschaltfläche oder Symbolleisten-Schaltfläche; anderenfalls `FALSE`.  
+ [in] *bNotify*  
+ `TRUE` Anwenden der *Clr* Parameter Farbe an, die alle zugeordneten Menüschaltfläche oder Symbolleisten-Schaltfläche; anderenfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um die Farbe der Schaltfläche für die aktuelle Farbe zu ändern. Wenn die `bNotify` Parameter ungleich NULL ist, wird die Farbe der entsprechenden Schaltflächen auf alle zugehörigen Popup-Menü oder auf der Symbolleiste auf die angegebene durch Farbe geändert die `clr` Parameter.  
+ Rufen Sie diese Methode, um die Farbe der Schaltfläche für die aktuelle Farbe zu ändern. Wenn die *bNotify* Parameter ungleich NULL ist, wird die Farbe der entsprechenden Schaltflächen auf alle zugehörigen Popup-Menü oder auf der Symbolleiste auf die angegebene durch Farbe geändert die *Clr* Parameter.  
   
 ##  <a name="setcolorbycmdid"></a>  CMFCColorMenuButton::SetColorByCmdID  
  Legt die Farbe der Schaltfläche für die angegebene Farbe-Menü an.  
@@ -460,10 +460,10 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Die Ressourcen-ID einer Menüschaltfläche Farbe.  
   
- [in] `color`  
+ [in] *Farbe*  
  Ein Wert für den RGB-Farbe.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
@@ -476,10 +476,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
+ [in] *Farbe*  
  Den RGB-Wert, der die Farbe, deren Name geändert.  
   
- [in] `strName`  
+ [in] *StrName*  
  Der neue Name der Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -492,7 +492,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nColumns`  
+ [in] *nColumns*  
  Die Anzahl der anzuzeigenden Spalten.  
   
 ### <a name="remarks"></a>Hinweise  

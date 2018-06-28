@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368321"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037372"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea-Klasse
 Stellt den Bildbereich, mit denen Sie ein Bild in einem Bild-Editor (Dialogfeld) ändern.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pParentDlg`|Ein Zeiger auf das Dialogfeld, das das übergeordnete Element des Grafik-Editor ist.|  
+|[in] *pParentDlg*|Ein Zeiger auf das Dialogfeld, das das übergeordnete Element des Grafik-Editor ist.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Ruft den aktuellen Zeichnungsmodus ab.  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pBitmap`|Die neue Bitmap-Bild angezeigt.|  
+|[in] *pBitmap*|Die neue Bitmap-Bild angezeigt.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `pBitmap` ist `NULL`, diese Methode legt die Größe des Bereichs änderbaren Paint auf 0 (null). Andernfalls wird die Größe des Bereichs änderbaren Paint auf die Größe des bereitgestellten Bitmapbilds.  
+ Wenn *pBitmap* ist `NULL`, diese Methode legt die Größe des Bereichs änderbaren Paint auf 0 (null). Andernfalls wird die Größe des Bereichs änderbaren Paint auf die Größe des bereitgestellten Bitmapbilds.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Legt die aktuelle zeichnen Farbe fest.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `color`|Die neue zeichnen Farbe.|  
+|[in] *Farbe*|Die neue zeichnen Farbe.|  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie wählen eine Farbe aus der Bild-Editor Palette Leiste oder Farbauswahl, das Framework ruft diese Methode zum Aktualisieren der aktuellen zeichnen Farbe. Ist "Schwarz der Zeichnung Ausgangsfarbe" (ein `COLORREF` Wert 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `mode`|Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den aktuellen Zeichnungsmodus angibt.|  
+|[in] *Modus*|Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den aktuellen Zeichnungsmodus angibt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

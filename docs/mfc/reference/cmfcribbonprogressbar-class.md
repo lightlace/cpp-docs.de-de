@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369335"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040219"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar-Klasse
 Implementiert ein Steuerelement, das den Fortschritt einer längeren Operation visuell darstellt.  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Gibt die Befehls-ID für die Menüband-Statusanzeige an.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Gibt die Breite in Pixel der Menüband-Statusanzeige an.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Gibt die Höhe in Pixel der Menüband-Statusanzeige an.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` um anzugeben, dass die Statusanzeige im unbegrenzten Modus; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPos`  
+ [in] *nPos*  
  Gibt die Position, die auf der der Statusanzeige auf festgelegt ist.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Gibt an, ob die Statusanzeige neu gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nMin`  
+ [in] *nMin*  
  Gibt den Mindestwert des Bereichs an.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Gibt den Höchstwert des Bereichs an.  
   
 ### <a name="remarks"></a>Hinweise  

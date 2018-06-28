@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378680"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042263"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement-Klasse
 Die `CMFCRibbonBaseElement` Klasse ist die Basisklasse für alle Elemente, die Sie hinzufügen können eine [menübandleiste](../../mfc/reference/cmfcribbonbar-class.md). Beispiele für Menübandelemente sind Menübandschaltflächen, Menübandkontrollkästchen und Menübandkombinationsfelder.  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `arElems`  
+ [in] *ArElems*  
  Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) der Zugriffstasteninfos.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Ein Zeiger auf ein Listenfeld Befehle.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
  Die Quelle [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `type`  
+ [in] *Typ*  
  Ein Bildtyp-Enumerationswert. Finden Sie im Abschnitt "Hinweise" eine Liste von möglichen Werten.  
   
- [in] `rectImage`  
+ [in] *RectImage*  
  Das Image-Rechteck.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird diese Methode keine Aktion ausgeführt. Überschreiben Sie diese Methode in einer abgeleiteten Klasse auf das Bild für das Menübandelement zu zeichnen.  
   
- Die folgende Tabelle enthält die möglichen Werte für die `type` Parameter:  
+ Die folgende Tabelle enthält die möglichen Werte für die *Typ* Parameter:  
   
  `RibbonImageLarge`  
  32 x 32 Pixel großes Bild groß.  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pElement`  
+ [in] *pElement*  
  Ein Zeiger auf ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Menübandelement Wenn `pElement` verweist auf das aktuelle Objekt; andernfalls `NULL`.  
+ Ein Zeiger auf das Menübandelement Wenn *pElement* verweist auf das aktuelle Objekt; andernfalls `NULL`.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwData`  
+ [in] *DwData*  
  Die Daten, die ein Menübandelement zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Befehls-ID für ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Ein Zeiger auf ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `arElements`  
+ [in, out] *ArElements*  
  Ein Array von Menübandelementen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Befehls-ID von einem Menübandelement.  
   
- [in] `arElements`  
+ [in] *ArElements*  
  Ein Array von Menübandelementen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Wenn das Menübandelement ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nDelay`  
+ [in] *nDelay*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bWithDelay`  
+ [in] *bWithDelay*  
  `TRUE` der Befehl-Benachrichtigung an die Nachrichtenwarteschlange des übergeordneten Fensters hinzufügen; `FALSE` zum Senden der Nachricht sofort an das übergeordnete Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
  Der Index des Menübandelements "in der Liste.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `qat`  
+ [in] *Schnellzugriff*  
  Der schnellen zugriffssymbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pPanelMenuBar`  
+ [in] *pPanelMenuBar*  
  Dieser Parameter wird nicht verwendet.  
   
- [in] `pHot`  
+ [in] *pHot*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das Begrenzungsrechteck für die Zugriffstasteninfo.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Wenn der ZugriffstastenInfo für eine Schaltfläche im Popupmenü ist. andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- [in] `rect`  
+ [in] *Rect*  
  Menü Bild Rechteck.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das Menübandelement.  
   
- [in] `strText`  
+ [in] *StrText*  
  Der Anzeigetext.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Abstand vom links neben dem Listenfeld auf den Anzeigetext in Pixel.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das Anzeigerechteck für das Menübandelement.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Dieser Parameter wird nicht verwendet.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Wenn der Zugriffstasteninfo ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nUpperChar`  
+ [in] *nUpperChar*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nChar`  
+ [in] *nChar*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
  Der Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParent`  
+ *pParent*  
  Das übergeordnete Fenster für die Menübandelement.  
   
- `data`  
+ *data*  
  Die Barrierefreiheitsdaten für das Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCompactMode`  
+ [in] *bCompactMode*  
  `TRUE` Reduzieren Sie die Größe des Menübandelements; `FALSE` erhöhen die Größe des Menübandelements.  
   
 ### <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle sind die Logik für diese Methode zusammengefasst.  
   
-|`bCompactMode`|Aktuelle Größe der Menüband-element|Neue Größe der Menüband-element|  
+|*bCompactMode*|Aktuelle Größe der Menüband-element|Neue Größe der Menüband-element|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|Komprimieren|Keine Änderung.|  
 |`TRUE`|Zwischenzertifizierungsstellen|Komprimieren Sie wenn möglich.|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwData`  
+ [in] *DwData*  
  Der Datenwert.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bIsDefaultMenuLook`  
+ [in] *bIsDefaultMenuLook*  
  `TRUE` festzulegende das Menübandelement als Popup-Befehl angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Die Beschreibung für das Menübandelement.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Die Befehls-ID.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bOneRow`  
+ [in] *bOneRow*  
  `TRUE` Beschränken Sie die Anzeigegröße für das Menübandelement zu komprimieren oder das bei zwischenänderungen festgelegt; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszKeys`  
+ [in] *LpszKeys*  
  Der ZugriffstastenInfo für das Menübandelement.  
   
- [in] `lpszMenuKeys`  
+ [in] *LpszMenuKeys*  
  Der ZugriffstastenInfo für das Menü das Popupmenü des Menübandelements.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Ein Zeiger auf ein Menübandelement.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParent`  
+ [in] *pParent*  
  Ein Zeiger auf eine Menübandkategorie.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Klicken Sie im übergeordneten Menü.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Ein Zeiger auf die übergeordnete menübandleiste.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
  Die Abmessungen des Rechtecks.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Der Text und ZugriffstastenInfo für das Menübandelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Fügen Sie zum Festlegen der ZugriffstastenInfo für das Menübandelement neue-Zeile-Escape-Zeichenfolge gefolgt von den Zeichen Zugriffstasteninfo zu `lpszText`.  
+ Fügen Sie zum Festlegen der ZugriffstastenInfo für das Menübandelement neue-Zeile-Escape-Zeichenfolge gefolgt von den Zeichen Zugriffstasteninfo auf *LpszText*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` um den Text auf der rechten Seite anzuzeigen; andernfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszText`  
+ [in] *LpszText*  
  Der QuickInfo-Text.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` um das Menübandelement anzuzeigen; `FALSE` um das Menübandelement auszublenden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Dieser Parameter wird nicht verwendet.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Die Höhe der Zeile.  
   
 ### <a name="return-value"></a>Rückgabewert  

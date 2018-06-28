@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370193"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040898"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog-Klasse
 Zeigt das Menüband **anpassen** Seite.  
@@ -82,10 +82,10 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster (normalerweise der Hauptframe).  
   
- [in] `pRibbon`  
+ [in] *pRibbon*  
  Ein Zeiger auf die `CMFCRibbonBar` also angepasst werden.  
   
 ### <a name="example"></a>Beispiel  

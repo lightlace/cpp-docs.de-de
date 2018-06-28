@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370411"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040076"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl-Klasse
 Diese Klasse implementiert ein Fenster, das in einem von der Shell for Rich Preview bereitgestellten Hostfenster platziert wird.  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hWndParent`  
+ *hWndParent*  
  Ein Handle für das Hostfenster, die von der Shell for Rich Preview angegeben.  
   
- `prc`  
+ *VR China*  
  Gibt an, die ursprüngliche Größe und Position des Fensters.  
   
- `pContext`  
+ *"pContext"*  
  Ein Zeiger auf einen Kontext für die Erstellung.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger auf einen Gerätekontext für das Paint-Ereignisse.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDocument`  
+ *pDocument*  
  Ein Zeiger auf die Implementierung des Dokuments.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hWndParent`  
+ *hWndParent*  
  Ein Handle für das neue übergeordnete Fenster.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clrBack`  
+ *clrBack*  
  Hintergrundfarbe des Vorschaufensters.  
   
- `clrText`  
+ *clrText*  
  Die Textfarbe des Vorschaufensters.  
   
- `plf`  
+ *PLF*  
  Zum Anzeigen von Text im Vorschaufenster verwendete Schriftart. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `prc`  
+ *VR China*  
  Gibt an, die neue Größe und Position des Steuerelements Preview.  
   
- `bRedraw`  
+ *bRedraw*  
  Gibt an, ob das Steuerelement neu gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  

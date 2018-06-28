@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377809"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040872"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite-Klasse
 Stellt Unterstützung für benutzerdefinierte clientseitige Steuerelement-Schnittstellen bereit.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Die Dimensionen für die Website des Steuerelements.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Unterstützung ist das primäre Mittel, mit dem ein eingebettetes ActiveX-Steuerelement ruft Informationen über den Speicherort und den Umfang der seines Standorts anzeigen, seinen Moniker, seine Benutzeroberfläche, die ambient-Eigenschaften und anderen Ressourcen, die durch den Container bereitgestellt ab. `COleControlSite` vollständig implementiert die [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),  **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) Schnittstellen. Darüber hinaus wird auch die IDispatch-Schnittstelle (Bereitstellen von Unterstützung für Umgebungseigenschaften und Ereignissenken) implementiert.  
+ Diese Unterstützung ist das primäre Mittel, mit dem ein eingebettetes ActiveX-Steuerelement ruft Informationen über den Speicherort und den Umfang der seines Standorts anzeigen, seinen Moniker, seine Benutzeroberfläche, die ambient-Eigenschaften und anderen Ressourcen, die durch den Container bereitgestellt ab. `COleControlSite` vollständig implementiert die [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) Schnittstellen. Darüber hinaus wird auch die IDispatch-Schnittstelle (Bereitstellen von Unterstützung für Umgebungseigenschaften und Ereignissenken) implementiert.  
   
  Um eine Website mit ActiveX-Steuerelement erstellen `COleControlSite`, leiten Sie eine Klasse von `COleControlSite`. In Ihrem `CWnd`-abgeleitete Klasse für den Container (z. B. ein Dialogfeld) überschreiben die **CWnd::CreateControlSite** Funktion.  
   
@@ -231,16 +231,16 @@ virtual void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Gibt an, die **DISPID** einer Eigenschaft in einem datengebundenen Steuerelement, die an ein Datenquellen-Steuerelement gebunden werden soll.  
   
- `vtProp`  
- Gibt den Typ der zu bindenden Eigenschaft – z. B. `VT_BSTR`, **VT_VARIANT**und so weiter.  
+ *vtProp*  
+ Gibt den Typ der zu bindenden Eigenschaft – z. B. **"VT_BSTR"**, **VT_VARIANT**und so weiter.  
   
- `szFieldName`  
+ *szFieldName*  
  Gibt den Namen der Spalte, in den Cursor zur Verfügung gestellt, von dem Datenquellen-Steuerelement, an dem die Eigenschaft gebunden wird.  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  Ein Zeiger auf die `CWnd`-abgeleitete Objekt, das die Datenquellen-Steuerelement hostet, der die Eigenschaft gebunden werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -259,7 +259,7 @@ virtual void BindProperty(
  *dwDispId*  
  Gibt an, die **DISPID** einer Eigenschaft in einem datengebundenen Steuerelement, die an ein Datenquellen-Steuerelement gebunden werden soll.  
   
- `pWndDSC`  
+ *pWndDSC*  
  Ein Zeiger auf die `CWnd`-abgeleitete Objekt, das die Datenquellen-Steuerelement hostet, der die Eigenschaft gebunden werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -273,7 +273,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pCtrlCont`  
+ *pCtrlCont*  
  Ein Zeiger auf das Steuerelement-Container (die das Fenster, das Hosten des Steuerelements des AtiveX darstellt).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -309,50 +309,50 @@ virtual HRESULT CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndCtrl`  
+ *pWndCtrl*  
  Ein Zeiger auf das Window-Objekt, das das Steuerelement darstellt.  
   
- `clsid`  
+ *clsid*  
  Die eindeutige Klassen-ID des Steuerelements.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Eigenschaft für die Winodw Beschriftung oder den Text fest, (sofern vorhanden).  
   
- `dwStyle`  
+ *dwStyle*  
  Windows-Formate. Die verfügbaren Formate sind aufgeführt, unter der **"Hinweise"** Abschnitt.  
   
- `rect`  
+ *Rect*  
  Gibt die Größe und Position des Steuerelements. Es kann es sich um eine `CRect` Objekt oder eine `RECT` Struktur.  
   
- `nID`  
+ *nID*  
  Gibt an, das Steuerelement untergeordnete Fenster-ID.  
   
- `pPersist`  
+ *pPersist*  
  Ein Zeiger auf eine `CFile` , die den dauerhaften Status für das Steuerelement enthält. Der Standardwert ist **NULL**, gibt an, dass das Steuerelement selbst initialisiert, ohne den Zustand aus dem persistenten Speicher wiederherzustellen. Wenn dies nicht der **NULL**, es muss ein Zeiger auf eine `CFile`-abgeleitetes Objekt mit persistenten Daten des Steuerelements in Form von einem Stream oder einem Speicher. Diese Daten können in einer vorherigen Aktivierung des Clients gespeichert worden sein. Die `CFile` können andere Daten enthalten, aber benötigen die Lese-/ Schreibzugriff Zeiger auf das erste Byte der Daten festgelegt werden, zum Zeitpunkt des Aufrufs von `CreateControl`.  
   
- `bStorage`  
- Gibt an, ob die Daten in `pPersist` interpretiert werden soll, als `IStorage` oder `IStream` Daten. Wenn die Daten in `pPersist` ist ein Speicher `bStorage` muss **"true"**. Wenn die Daten in `pPersist` ist ein Datenstrom `bStorage` muss **"false"**. Der Standardwert ist **"false"**.  
+ *bStorage*  
+ Gibt an, ob die Daten in *pPersist* interpretiert werden soll, als `IStorage` oder `IStream` Daten. Wenn die Daten in *pPersist* ist ein Speicher *bStorage* muss **"true"**. Wenn die Daten in *pPersist* ist ein Datenstrom *bStorage* muss **"false"**. Der Standardwert ist **"false"**.  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  Dies ist optional Lizenz Schlüsseldaten. Diese Daten ist erforderlich, nur für das Erstellen von Steuerelementen, die einen Laufzeit-Lizenzschlüssel erfordern. Wenn das Steuerelement Lizenzierung unterstützt, müssen Sie einen Lizenzschlüssel für die Erstellung des Steuerelements erfolgreich bereitstellen. Der Standardwert ist **NULL**.  
   
- `ppt`  
- Ein Zeiger auf eine **Punkt** Struktur, die der oberen linken Ecke des Steuerelements enthält. Die Größe des Steuerelements wird bestimmt durch den Wert des *Psize*. Die `ppt` und *Psize* Werte sind eine optionale Methode, um die Größe anzugeben, und positionieren Sie Opf des Steuerelements.  
+ *PPT*  
+ Ein Zeiger auf eine **Punkt** Struktur, die der oberen linken Ecke des Steuerelements enthält. Die Größe des Steuerelements wird bestimmt durch den Wert des *Psize*. Die *ppt* und *Psize* Werte sind eine optionale Methode, um die Größe anzugeben, und positionieren Sie Opf des Steuerelements.  
   
  *psize*  
- Ein Zeiger auf eine **Größe** Struktur, die die Größe des Steuerelements enthält. Die linken oberen Ecke wird bestimmt durch den Wert des `ppt`. Die `ppt` und *Psize* Werte sind eine optionale Methode, um die Größe anzugeben, und positionieren Sie Opf des Steuerelements.  
+ Ein Zeiger auf eine **Größe** Struktur, die die Größe des Steuerelements enthält. Die oberen linken Ecke richtet sich nach dem Wert der *ppt*. Die *ppt* und *Psize* Werte sind eine optionale Methode, um die Größe anzugeben, und positionieren Sie Opf des Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Nur eine Teilmenge der Windows `dwStyle` Flags werden unterstützt, indem Sie `CreateControl`:  
+ Nur eine Teilmenge der Windows *DwStyle* Flags werden unterstützt, indem Sie `CreateControl`:  
   
 - **WS_VISIBLE** erstellt ein Fenster, das anfänglich sichtbar ist. Erforderlich, wenn das Steuerelement sofort wie gewöhnliche Fenster sichtbar sein soll.  
   
 - **WS_DISABLED** erstellt ein Fenster, das anfänglich deaktiviert ist. Ein deaktivierter Fenster kann nicht vom Benutzer Eingaben zu empfangen. Kann festgelegt werden, wenn das Steuerelement eine Enabled-Eigenschaft verfügt.  
   
-- `WS_BORDER` Erstellt ein Fenster mit einem Rahmen thin-Zeile. Kann festgelegt werden, wenn Steuerelement eine Rahmenart-Eigenschaft verfügt.  
+- **WS_BORDER** erstellt ein Fenster mit einem Rahmen thin-Zeile. Kann festgelegt werden, wenn Steuerelement eine Rahmenart-Eigenschaft verfügt.  
   
 - **WS_GROUP** gibt das erste Steuerelement einer Gruppe von Steuerelementen. Die Benutzer kann den Tastaturfokus von einem Steuerelement in der Gruppe zur nächsten ändern, indem die Richtungstasten verwenden. Alle Steuerelemente, die definiert, mit der **WS_GROUP** formatieren, nachdem das erste Steuerelement zur selben Gruppe gehören. Das nächste Steuerelement mit der **WS_GROUP** Stil beendet die Gruppe und startet die nächste Gruppe.  
   
@@ -383,7 +383,7 @@ virtual HRESULT DoVerb(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nVerb`  
+ *nVerb*  
  Gibt das Verb ausgeführt. Sie können eine der folgenden enthalten:  
   
 |Wert|Bedeutung|Symbol|  
@@ -394,10 +394,10 @@ virtual HRESULT DoVerb(
 |-2|Das Element in einem separaten Fenster bearbeitet wird.|`OLEIVERB_OPEN`|  
 |-3|Blendet das Objekt aus.|`OLEIVERB_HIDE`|  
 |-4|Aktiviert ein Steuerelement platzieren.|`OLEIVERB_UIACTIVATE`|  
-|-5|Aktiviert eine Steuerelement direkt ohne zusätzliche Elemente der Benutzeroberfläche.|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|Anzeigen der Eigenschaften des Steuerelements an.|**OLEIVERB_PROPERTIES**|  
+|-5|Aktiviert eine Steuerelement direkt ohne zusätzliche Elemente der Benutzeroberfläche.|`OLEIVERB_INPLACEACTIVATE`|  
+|-7|Anzeigen der Eigenschaften des Steuerelements an.|`OLEIVERB_PROPERTIES`|  
   
- `lpMsg`  
+ *lpMsg*  
  Ein Zeiger auf die Nachricht, die zu aktivierenden Elements verursacht hat.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -426,7 +426,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
+ *bAktivieren*  
  Gibt an, ob aktivieren oder deaktivieren das Fenster: **"true"** wenn Fenster Eingabe verwendet wird, andernfalls aktiviert werden **"false"**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -440,11 +440,11 @@ void FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bFreeze`  
+ *bFreeze*  
  Gibt an, ob die Steuerelementsite das Akzeptieren von Ereignissen beenden möchte. Wert ungleich NULL, wenn das Steuerelement keine Ereignisse akzeptiert; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bFreeze` ist **"true"**, die Website des Steuerelements fordert das Steuerelement Fring Ereignisse zu beenden. Wenn `bFreeze` ist **"false"**, die Website des Steuerelements fordert das Steuerelement zum Auslösen von Ereignissen fortgesetzt.  
+ Wenn *bFreeze* ist **"true"**, die Website des Steuerelements fordert das Steuerelement Fring Ereignisse zu beenden. Wenn *bFreeze* ist **"false"**, die Website des Steuerelements fordert das Steuerelement zum Auslösen von Ereignissen fortgesetzt.  
   
 > [!NOTE]
 >  Das Steuerelement ist nicht erforderlich, um die Ereignisse auslösen, wenn von der Website des Steuerelements angefordert beendet. Auslösen von Ereignissen fortgesetzt werden kann, jedoch alle nachfolgenden Ereignisse durch die Website des Steuerelements ignoriert werden.  
@@ -493,11 +493,11 @@ BOOL GetEventIID(IID* piid);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `piid`  
+ *piid*  
  Ein Zeiger auf eine Schnittstellen-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL bei Erfolg, andernfalls 0. Im Erfolgsfall `piid` enthält die Schnittstellen-ID für das Steuerelement Standardschnittstelle-Ereignis.  
+ Ungleich NULL bei Erfolg, andernfalls 0. Im Erfolgsfall *Piid* enthält die Schnittstellen-ID für das Steuerelement Standardschnittstelle-Ereignis.  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  Ruft die erweiterten Fensterstile ab.  
@@ -513,7 +513,7 @@ virtual DWORD GetExStyle() const;
  Rufen Sie zum Abrufen der regulären Stile [COleControlSite::GetStyle](#getstyle).  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- Ruft die Steuerelementeigenschaft gemäß `dwDispID`.  
+ Ruft die Steuerelementeigenschaft gemäß *DwDispID*.  
   
 ```  
 virtual void GetProperty(
@@ -523,17 +523,17 @@ virtual void GetProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Identifiziert die Dispatch-ID der Eigenschaft, finden Sie auf das Steuerelement standardmäßig `IDispatch` Schnittstelle abgerufen werden sollen.  
   
- `vtProp`  
+ *vtProp*  
  Gibt den Typ der Eigenschaft abgerufen werden sollen. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvProp`  
- Die Adresse der Variablen, die den Wert der Eigenschaft zugewiesen wird. Mit den vom angegebenen Typ übereinstimmen muss `vtProp`.  
+ *pvProp*  
+ Die Adresse der Variablen, die den Wert der Eigenschaft zugewiesen wird. Mit den vom angegebenen Typ übereinstimmen muss *VtProp*.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wert wird zurückgegeben, durch `pvProp`.  
+ Der Wert wird zurückgegeben, durch *PvProp*.  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  Ruft die Stile für die Website des Steuerelements ab.  
@@ -556,14 +556,14 @@ virtual void GetWindowText(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str`  
+ *str*  
  Ein Verweis auf ein `CString` Objekt, das den aktuellen Text des Steuerelements enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Steuerelement die vordefinierte Caption-Eigenschaft unterstützt, wird dieser Wert zurückgegeben. Wenn die vordefinierte Caption-Eigenschaft nicht unterstützt wird, wird der Wert für die Text-Eigenschaft zurückgegeben.  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- Ruft die Methode oder Eigenschaft gemäß `dwDispID`, in dem durch angegebenen Kontext `wFlags`.  
+ Ruft die Methode oder Eigenschaft gemäß *DwDispID*, in dem durch angegebenen Kontext *wFlags*.  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -575,31 +575,31 @@ virtual void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Identifiziert die Dispatch-ID der Eigenschaft oder Methode, finden Sie auf des Steuerelements `IDispatch` Schnittstelle, um aufgerufen werden.  
   
- `wFlags`  
- Flags, die den Kontext des Aufrufs von IDispatch:: Invoke beschreiben. Nach möglichen `wFlags` -Werte finden Sie in `IDispatch::Invoke` im Windows SDK.  
+ *wFlags*  
+ Flags, die den Kontext des Aufrufs von IDispatch:: Invoke beschreiben. Nach möglichen *wFlags* -Werte finden Sie in `IDispatch::Invoke` im Windows SDK.  
   
- `vtRet`  
+ *vtRet*  
  Gibt den Typ des Rückgabewerts an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvRet`  
- Die Adresse der Variablen, die den Eigenschaftswert oder Rückgabewert aufnimmt. Sie muss mit dem durch `vtRet`angegebenen Typ übereinstimmen.  
+ *pvRet*  
+ Die Adresse der Variablen, die den Eigenschaftswert oder Rückgabewert aufnimmt. Mit den vom angegebenen Typ übereinstimmen muss *VtRet*.  
   
- `pbParamInfo`  
- Zeiger auf eine NULL-terminierte Zeichenfolge aus Bytes, die die Typen der Parameter angeben, die auf `pbParamInfo`folgen. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ *pbParamInfo*  
+ Zeiger auf eine Null-terminierte Zeichenfolge von Bytes, die die Typen der folgenden Parameter angeben *PbParamInfo*. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Variable Parameterliste aus den in `pbParamInfo`angegebenen Typen.  
+ Variable Parameterliste, der in der angegebenen Typen *PbParamInfo*.  
   
 ### <a name="remarks"></a>Hinweise  
- Der `pbParamInfo` -Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter an. Die Variable Argumentliste wird in der Deklaration Syntax... durch dargestellt.  
+ Die *PbParamInfo* Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter. Die Variable Argumentliste wird in der Deklaration Syntax... durch dargestellt.  
   
- Diese Funktion konvertiert die Parameter für **VARIANTARG** Werte und ruft anschließend die **IDispatch:: Invoke** Methode für das Steuerelement. Wenn der Aufruf von **IDispatch:: Invoke** ein Fehler auftritt, wird diese Funktion eine Ausnahme ausgelöst. Wenn der zurückgegebene Statuscode von **IDispatch:: Invoke** ist `DISP_E_EXCEPTION`, diese Funktion löst eine **COleDispatchException** Objekt ist, andernfalls löst eine `COleException`.  
+ Diese Funktion konvertiert die Parameter für **VARIANTARG** Werte und ruft anschließend die `IDispatch::Invoke` Methode für das Steuerelement. Wenn der Aufruf von `IDispatch::Invoke` ein Fehler auftritt, wird diese Funktion eine Ausnahme ausgelöst. Wenn der zurückgegebene Statuscode von `IDispatch::Invoke` ist `DISP_E_EXCEPTION`, diese Funktion löst eine `COleDispatchException` Objekt ist, andernfalls löst eine `COleException`.  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- Ruft die Methode oder Eigenschaft gemäß `dwDispID`, in dem durch angegebenen Kontext `wFlags`.  
+ Ruft die Methode oder Eigenschaft gemäß *DwDispID*, in dem durch angegebenen Kontext *wFlags*.  
   
 ```  
 virtual void InvokeHelperV(
@@ -612,26 +612,26 @@ virtual void InvokeHelperV(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Identifiziert die Dispatch-ID der Eigenschaft oder Methode, finden Sie auf des Steuerelements `IDispatch` Schnittstelle, um aufgerufen werden.  
   
- `wFlags`  
+ *wFlags*  
  Flags, die den Kontext des Aufrufs von IDispatch:: Invoke beschreiben.  
   
- `vtRet`  
+ *vtRet*  
  Gibt den Typ des Rückgabewerts an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvRet`  
- Die Adresse der Variablen, die den Eigenschaftswert oder Rückgabewert aufnimmt. Sie muss mit dem durch `vtRet`angegebenen Typ übereinstimmen.  
+ *pvRet*  
+ Die Adresse der Variablen, die den Eigenschaftswert oder Rückgabewert aufnimmt. Mit den vom angegebenen Typ übereinstimmen muss *VtRet*.  
   
- `pbParamInfo`  
- Zeiger auf eine NULL-terminierte Zeichenfolge aus Bytes, die die Typen der Parameter angeben, die auf `pbParamInfo`folgen. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ *pbParamInfo*  
+ Zeiger auf eine Null-terminierte Zeichenfolge von Bytes, die die Typen der folgenden Parameter angeben *PbParamInfo*. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `argList`  
+ *argList*  
  Ein Zeiger auf eine Variable Argumentliste.  
   
 ### <a name="remarks"></a>Hinweise  
- Der `pbParamInfo` -Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter an. Zusätzliche Parameter für die Methode oder Eigenschaft aufgerufen können übergeben werden, mithilfe der *Va_list* Parameter.  
+ Die *PbParamInfo* Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter. Zusätzliche Parameter für die Methode oder Eigenschaft aufgerufen können übergeben werden, mithilfe der *Va_list* Parameter.  
   
  In der Regel wird diese Funktion aufgerufen, indem `COleControlSite::InvokeHelper`.  
   
@@ -790,13 +790,13 @@ virtual BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwRemove`  
+ *dwRemove*  
  Die Formate aus der aktuellen Fensterstile entfernt werden soll.  
   
- `dwAdd`  
+ *dwAdd*  
  Die Formate aus der aktuellen Fensterstile hinzugefügt werden.  
   
- `nFlags`  
+ *nFlags*  
  Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte finden Sie unter der [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Funktion im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -807,7 +807,7 @@ virtual BOOL ModifyStyle(
   
  Ändert die Fensterstile des Steuerelements an. Stile hinzugefügt oder entfernt werden soll, können mit den bitweisen OR-Operator kombiniert werden ( &#124; ) Operator. Finden Sie unter der [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) -Funktion in das Windows SDK für Informationen zu den verfügbaren Fensterstile.  
   
- Wenn `nFlags` ungleich NULL ist `ModifyStyle` Ruft die Win32-Funktion `SetWindowPos`, und zeichnet das Fenster kombinierten `nFlags` mit den folgenden vier Flags:  
+ Wenn *nFlags* ungleich NULL ist `ModifyStyle` Ruft die Win32-Funktion `SetWindowPos`, und zeichnet das Fenster kombinierten *nFlags* mit den folgenden vier Flags:  
   
 - `SWP_NOSIZE` Behält die aktuelle Größe an.  
   
@@ -830,13 +830,13 @@ virtual BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwRemove`  
+ *dwRemove*  
  Die erweiterten Stile aus der aktuellen Fensterstile entfernt werden soll.  
   
- `dwAdd`  
+ *dwAdd*  
  Die erweiterten Stile aus dem aktuellen Fensterstile hinzugefügt werden.  
   
- `nFlags`  
+ *nFlags*  
  Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte finden Sie unter der [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Funktion im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -847,7 +847,7 @@ virtual BOOL ModifyStyleEx(
   
  Ändert das Fenster Stile des Steuerelementobjekts Standort erweitert. Stile hinzugefügt oder entfernt werden soll, können mit den bitweisen OR-Operator kombiniert werden ( &#124; ) Operator. Finden Sie unter der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) -Funktion in das Windows SDK für Informationen zu den verfügbaren Fensterstile.  
   
- Wenn `nFlags` ungleich NULL ist `ModifyStyleEx` Ruft die Win32-Funktion `SetWindowPos`, und zeichnet das Fenster kombinierten `nFlags` mit den folgenden vier Flags:  
+ Wenn *nFlags* ungleich NULL ist `ModifyStyleEx` Ruft die Win32-Funktion `SetWindowPos`, und zeichnet das Fenster kombinierten *nFlags* mit den folgenden vier Flags:  
   
 - `SWP_NOSIZE` Behält die aktuelle Größe an.  
   
@@ -877,10 +877,10 @@ virtual void MoveWindow(
  *y*  
  Die neue Position des oberen Rand des Fensters.  
   
- `nWidth`  
+ *nWidth*  
  Die neue Breite des Fensters  
   
- `nHeight`  
+ *nHeight*  
  Die neue Höhe des Fensters.  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
@@ -899,7 +899,7 @@ virtual BOOL QuickActivate();
  Die `IPersist*::Load` und `IPersist*::InitNew` Methoden aufgerufen werden, nachdem unverzügliche Aktivierung erfolgt. Das Steuerelement sollte dessen Verbindungen zu senken des Containers während unverzügliche Aktivierung herstellen. Diese Verbindungen sind jedoch nicht live bis `IPersist*::Load` oder `IPersist*::InitNew` aufgerufen wurde.  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- Legt die Steuerelementeigenschaft gemäß `dwDispID`.  
+ Legt die Steuerelementeigenschaft gemäß *DwDispID*.  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -908,14 +908,14 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Identifiziert die Dispatch-ID der Eigenschaft oder Methode, finden Sie auf des Steuerelements `IDispatch` Schnittstelle, um festgelegt werden.  
   
- `vtProp`  
+ *vtProp*  
  Gibt den Typ der festzulegenden Eigenschaft an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Ein einzelner Parameter des durch `vtProp`angegebenen Typs.  
+ Einen einzelnen Parameter des Typs gemäß *VtProp*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -933,7 +933,7 @@ void SetDefaultButton(BOOL bDefault);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bDefault`  
+ *bStandardstufe*  
  Wert ungleich NULL, wenn das Steuerelement die Standardschaltfläche werden sollte; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -949,7 +949,7 @@ virtual int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
+ *nID*  
  Der neue Bezeichnerwert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -973,7 +973,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
  Ein Zeiger auf das Fenster, das zuvor den Fokus hat.  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- Legt die Steuerelementeigenschaft gemäß `dwDispID`.  
+ Legt die Steuerelementeigenschaft gemäß *DwDispID*.  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -982,22 +982,22 @@ virtual void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Identifiziert die Dispatch-ID der Eigenschaft oder Methode, finden Sie auf des Steuerelements `IDispatch` Schnittstelle, um festgelegt werden.  
   
- `vtProp`  
+ *vtProp*  
  Gibt den Typ der festzulegenden Eigenschaft an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Ein einzelner Parameter des durch `vtProp`angegebenen Typs.  
+ Einen einzelnen Parameter des Typs gemäß *VtProp*.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn `SetProperty` prüfpunkterstellung einen Fehler erkennt, wird eine Ausnahme ausgelöst.  
   
- Der Typ der Ausnahme richtet sich nach den Rückgabewert des Versuchs, legen Sie die Eigenschaft oder Methode. Wenn der Rückgabewert ist `DISP_E_EXCEPTION`, **COleDispatchExcpetion** ausgelöst wird andernfalls eine `COleException`.  
+ Der Typ der Ausnahme richtet sich nach den Rückgabewert des Versuchs, legen Sie die Eigenschaft oder Methode. Wenn der Rückgabewert ist `DISP_E_EXCEPTION`, `COleDispatchExcpetion` ausgelöst wird andernfalls eine `COleException`.  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- Legt die Steuerelementeigenschaft gemäß `dwDispID`.  
+ Legt die Steuerelementeigenschaft gemäß *DwDispID*.  
   
 ```  
 virtual void SetPropertyV(
@@ -1007,19 +1007,19 @@ virtual void SetPropertyV(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwDispID`  
+ *dwDispID*  
  Identifiziert die Dispatch-ID der Eigenschaft oder Methode, finden Sie auf des Steuerelements `IDispatch` Schnittstelle, um festgelegt werden.  
   
- `vtProp`  
+ *vtProp*  
  Gibt den Typ der festzulegenden Eigenschaft an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `argList`  
+ *argList*  
  Zeiger auf die Liste der Argumente.  
   
 ### <a name="remarks"></a>Hinweise  
  Zusätzliche Parameter für die Methode oder Eigenschaft, die aufgerufen wird, können Passeed werden mithilfe der *Arg_list* Parameter. Wenn `SetProperty` prüfpunkterstellung einen Fehler erkennt, wird eine Ausnahme ausgelöst.  
   
- Der Typ der Ausnahme richtet sich nach den Rückgabewert des Versuchs, legen Sie die Eigenschaft oder Methode. Wenn der Rückgabewert ist `DISP_E_EXCEPTION`, **COleDispatchExcpetion** ausgelöst wird andernfalls eine `COleException`.  
+ Der Typ der Ausnahme richtet sich nach den Rückgabewert des Versuchs, legen Sie die Eigenschaft oder Methode. Wenn der Rückgabewert ist `DISP_E_EXCEPTION`, `COleDispatchExcpetion` ausgelöst wird andernfalls eine `COleException`.  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  Legt die Größe, Position und Z-Reihenfolge von der Website des Steuerelements.  
@@ -1035,7 +1035,7 @@ virtual BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndInsertAfter`  
+ *pWndInsertAfter*  
  Ein Zeiger auf das Fenster.  
   
  *w*  
@@ -1044,13 +1044,13 @@ virtual BOOL SetWindowPos(
  *y*  
  Die neue Position des oberen Rand des Fensters.  
   
- `cx`  
+ *CX*  
  Die neue Breite des Fensters  
   
- `cy`  
+ *CY*  
  Die neue Höhe des Fensters.  
   
- `nFlags`  
+ *nFlags*  
  Gibt an, das Fenster größenanpassung und Positionierung von Flags. Mögliche Werte finden Sie im Abschnitt "Hinweise" [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1064,7 +1064,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszString`  
+ *lpszString*  
  Ein Zeiger auf eine Null-terminierte Zeichenfolge als den neuen Text für Titel oder Steuerelement verwendet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1078,7 +1078,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCmdShow`  
+ *nCmdShow*  
  Gibt an, wie die Website des Steuerelements angezeigt werden. Es muss eine der folgenden Werte sein:  
   
 - **SW_HIDE** Blendet das Fenster aus und übergibt die Aktivierung zu einem anderen Fenster.  
