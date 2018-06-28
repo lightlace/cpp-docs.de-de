@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366342"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037614"
 ---
 # <a name="clistview-class"></a>CListView-Klasse
 Vereinfacht die Verwendung des Listensteuerelements und von [CListCtrl](../../mfc/reference/clistctrl-class.md), die Klasse, die Listensteuerelement-Funktionalität, mit der MFC-Dokument-/ Ansichtsarchitektur kapselt.  
@@ -105,7 +105,7 @@ void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImageList`  
+ *nImageList*  
  Der nullbasierte Index des Bilds zu entfernen.  
   
 ## <a name="see-also"></a>Siehe auch  

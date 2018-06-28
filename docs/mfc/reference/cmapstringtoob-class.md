@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375770"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042247"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb Class
 Eine Wörterbuchauflistungsklasse, die eindeutige `CString` -Objekte und `CObject` -Zeiger einander zuordnet.  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBlockSize`  
+ *nBlockSize*  
  Gibt die Granularität der speicherbelegung zum Erweitern der Zuordnung an.  
   
 ### <a name="remarks"></a>Hinweise  
- Wächst die Zuordnung wird Speicherplatz belegt in der Einheit `nBlockSize` Einträge.  
+ Wächst die Zuordnung wird Speicherplatz belegt in Einheiten von *nBlockSize* Einträge.  
   
  Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind **CMapStringToOb:: CMapStringToOb**.  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Der Schlüssel, dessen Hashwert wird berechnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hashSize`  
+ *hashSize*  
  Anzahl von Einträgen in der Hashtabelle.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Wenn **"true"**, ordnet Sie die Hashtabelle, bei der Initialisierung; andernfalls wird die Tabelle zugeordnet, wenn erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.  
   
- `rValue`  
+ *rValue*  
  Gibt den zurückgegebenen Wert aus dem nachgeschlagenen-Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.  
   
- `rKey`  
+ *rKey*  
  Der Verweis auf den zugehörigen Schlüssel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf einen Zeiger auf eine `CObject` Objekt; oder **NULL** , wenn die Zuordnung leer ist oder `key` liegt außerhalb des gültigen Bereichs.  
+ Ein Verweis auf einen Zeiger auf eine `CObject` Objekt; oder **NULL** , wenn die Zuordnung leer ist oder *Schlüssel* liegt außerhalb des gültigen Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
  Daher kann er nur auf der linken Seite einer zuweisungsanweisung (ein l-Wert) verwendet werden. Wenn kein Map-Element mit dem angegebenen Schlüssel vorhanden ist, wird ein neues Element erstellt.  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Gibt die Zeichenfolge, die für die Karte Suche verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `key`  
+ *key*  
  Gibt die Zeichenfolge, die die Schlüssel des neuen Elements ist.  
   
- `newValue`  
+ *newValue*  
  Gibt an, die `CObject` Zeiger, der den Wert des neuen Elements ist.  
   
 ### <a name="remarks"></a>Hinweise  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377913"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040206"
 ---
 # <a name="cobarray-class"></a>CObArray-Klasse
 Unterstützt Arrays mit `CObject` -Zeigern.  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  Wie bei einem C-Array, die Uhrzeit des Zugriffs für einen `CObArray` indizierte Element ist konstant und ist unabhängig von der Größe des Arrays.  
   
- `CObArray` enthält die `IMPLEMENT_SERIAL` -Makro für die Unterstützung von Serialisierung laufzeittypenzugriff und zum Sichern der Elemente. Wenn ein Array von `CObject` Zeiger befindet sich in ein Archiv, das mit den überladenen Operator zum Einfügen oder die `Serialize` Member-Funktion, `CObject` Element ist, zusammen mit dem Arrayindex wiederum serialisiert.  
+ `CObArray` enthält die IMPLEMENT_SERIAL-Makro, um die Unterstützung der Serialisierung und die Ausgabe der Elemente an. Wenn ein Array von `CObject` Zeiger befindet sich in ein Archiv, das mit den überladenen Operator zum Einfügen oder die `Serialize` Member-Funktion, `CObject` Element ist, zusammen mit dem Arrayindex wiederum serialisiert.  
   
  Wenn Sie eine Sicherung einzelner benötigen `CObject` Elemente in einem Array, müssen Sie die Tiefe der Festlegen der `CDumpContext` Objekt auf 1 oder größer.  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  Array-klassenableitung ähnelt Liste Ableitung. Ausführliche Informationen zu der Ableitung von einem bestimmten Zweck ausgerichteter List-Klasse, finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
   
 > [!NOTE]
->  Verwenden Sie die `IMPLEMENT_SERIAL` Makros in der Implementierung von der abgeleiteten Klasse, wenn Sie beabsichtigen, das Array zu serialisieren.  
+>  Sie müssen in der Implementierung der abgeleiteten Klasse das IMPLEMENT_SERIAL-Makro verwenden, wenn Sie beabsichtigen, das Array zu serialisieren.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `newElement`  
+ *newElement*  
  Die `CObject` Zeiger auf dieses Array hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des hinzugefügten Elements.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn [SetSize](#setsize) wurde mit verwendet ein `nGrowBy` Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugeordnet werden kann. Allerdings wird die obere Grenze nur 1 erhöhen.  
+ Wenn [SetSize](#setsize) wurde mit verwendet ein *nGrowBy* Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugeordnet werden kann. Allerdings wird die obere Grenze nur 1 erhöhen.  
   
  Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::Add`.  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Hinweise  
  Die Arrays sein des gleichen Typs.  
   
- Bei Bedarf **Append** möglicherweise belegen zusätzlichen Speicherplatz, um die Elemente, die angefügt werden, auf das Array aufnehmen.  
+ Bei Bedarf `Append` möglicherweise belegen zusätzlichen Speicherplatz, um die Elemente, die angefügt werden, auf das Array aufnehmen.  
   
  Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::Append`.  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  Die Quelle der Elemente in das Array kopiert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- **Kopie** keinen Speicherplatz frei, aber bei Bedarf **Kopie** möglicherweise belegen zusätzlichen Speicherplatz, um die in das Array kopierten Elemente aufzunehmen.  
+ `Copy` Gibt Arbeitsspeicher frei; jedoch, bei Bedarf `Copy` möglicherweise belegen zusätzlichen Speicherplatz, um die in das Array kopierten Elemente aufzunehmen.  
   
  Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::Copy`.  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `GetUpperBound`.  
   
- `newElement`  
- Die `CObject` Zeiger auf die in diesem Array platziert werden. Ein `newElement` des Werts **NULL** ist zulässig.  
+ *newElement*  
+ Die `CObject` Zeiger auf die in diesem Array platziert werden. Ein *NewElement* des Werts **NULL** ist zulässig.  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der Häufigkeit, mit die dieses Element liegen eingefügt (Standardwert: 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `GetUpperBound`.  
   
- `pNewArray`  
+ *pNewArray*  
  Ein anderes Array mit Elementen mit diesem Array hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Die erste Version des `InsertAt` Fügt ein Element (oder mehrere Kopien eines Elements) an einem angegebenen Index in einem Array. Im Prozess, werden Sie verschoben (durch erhöhen den Index) Verschiebt das vorhandene Element in dieser Index, und es werden alle Elemente davor.  
   
- Die zweite Version fügt alle Elemente aus einer anderen `CObArray` -Auflistung, beginnend ab dem `nStartIndex` Position.  
+ Die zweite Version fügt alle Elemente aus einer anderen `CObArray` -Auflistung, beginnend ab dem *nStartIndex* Position.  
   
  Die `SetAt` -Funktion im Gegensatz dazu ersetzt ein angegebenes Array-Element und alle Elemente werden nicht verschoben.  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der zu entfernenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
   
- `newElement`  
+ *newElement*  
  Der Zeiger in dieses Array eingefügt werden sollen. Ein **NULL** Wert ist zulässig.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Ein Integer-Index, der größer als oder gleich 0 ist.  
   
- `newElement`  
+ *newElement*  
  Die Objektzeiger dieses Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewSize`  
+ *nNewSize*  
  Das neue Arraygröße (Anzahl der Elemente). Muss größer als oder gleich 0 sein.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Die minimale Anzahl der Element-Slots zugewiesen werden, wenn eine Größenzuwachs erforderlich ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die neue Größe kleiner als die alte Größe ist, wird das Array abgeschnitten, und alle nicht verwendeter Arbeitsspeicher freigegeben wird. Rufen Sie für die Effizienz, `SetSize` die Größe des Arrays festgelegt wird, bevor Sie ihn verwenden. Dies verhindert, dass die Notwendigkeit neu zuordnen und kopieren das Array jedes Mal, wenn ein Element hinzugefügt wird.  
   
- Die `nGrowBy` Parameter wirkt sich auf interne speicherbelegung, während das Array zunimmt. Verwendungsmöglichkeiten nie wirkt sich auf die Arraygröße von gemeldeten `GetSize` und `GetUpperBound`.  
+ Die *nGrowBy* Parameter wirkt sich auf interne speicherbelegung, während das Array zunimmt. Verwendungsmöglichkeiten nie wirkt sich auf die Arraygröße von gemeldeten `GetSize` und `GetUpperBound`.  
   
  Wenn die Größe des Arrays angewachsen ist, alle neu zugeordneten **CObject \***  Zeigern auf NULL festgelegt werden.  
   

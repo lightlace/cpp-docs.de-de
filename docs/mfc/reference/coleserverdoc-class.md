@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7df4ea13313758c517188e1c4ce0441618a99b4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377667"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039057"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc-Klasse
 Die Basisklasse für OLE-Serverdokumente.  
@@ -237,7 +237,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf die containeranwendung übergeordneten Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -269,7 +269,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFrameWnd`  
+ *pFrameWnd*  
  Ein Zeiger auf das direkte Rahmenfenster zerstört werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -306,7 +306,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDocSite`  
+ *pDocSite*  
  Zeiger auf die `IOleDocumentSite` -Schnittstelle, die diesem Dokument mit dem Server hergestellt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -340,7 +340,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpClipRect`  
+ *lpClipRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` -Objekt, das Clippingrechteck Koordinaten des Elements zu erhalten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -356,7 +356,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpPosRect`  
+ *lpPosRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` Objekt, das die Koordinaten des Elements zu erhalten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -381,7 +381,7 @@ BOOL GetZoomFactor(
  *lpSizeDenom*  
  Zeiger auf ein Objekt der Klasse `CSize` , wird der Zoomfaktor Nenner aufnehmen. Kann **NULL**.  
   
- `lpPosRect`  
+ *lpPosRect*  
  Zeiger auf ein Objekt der Klasse `CRect` , die neue Position des Elements beschreibt. Wenn dieses Argument **NULL**, der die Funktion verwendet die aktuelle Position des Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -456,7 +456,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszNewName`  
+ *lpszNewName*  
  Zeiger auf eine Zeichenfolge, die den neuen Namen des Serverdokuments angibt; Dies ist in der Regel einen vollqualifizierten Pfad.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -480,7 +480,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwCloseOption`  
+ *dwCloseOption*  
  Ein Wert aus der Enumeration `OLECLOSE`. Dieser Parameter kann einen der folgenden Werte aufweisen:  
   
 - `OLECLOSE_SAVEIFDIRTY` Die Datei wird gespeichert, wenn er geändert wurde.  
@@ -516,13 +516,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bUndoable`  
+ *bUndoable*  
  Gibt an, ob die Bearbeitung rückgängig gemacht werden können.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion stellt die Benutzeroberfläche der Steuerelementcontainer-Anwendung in den Originalzustand, Ausblenden von alle Menüs und andere Steuerelemente, die für die direkte Aktivierung erstellt wurden wieder her.  
   
- Legt das Framework `bUndoable` auf **"false"**. Wenn der Server rückgängig unterstützt, und es wird ein Vorgang, der rückgängig gemacht werden kann, rufen Sie die Implementierung der Basisklasse mit `bUndoable` festgelegt **"true"**.  
+ Legt das Framework *bUndoable* auf **"false"**. Wenn der Server rückgängig unterstützt, und es wird ein Vorgang, der rückgängig gemacht werden kann, rufen Sie die Implementierung der Basisklasse mit *bUndoable* festgelegt **"true"**.  
   
 ##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  Das Framework ruft diese Funktion aktivieren oder Deaktivieren von einem Dokumentfenster für die direkte Bearbeitung.  
@@ -532,7 +532,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bActivate`  
+ *bActivate*  
  Gibt an, ob das Dokumentfenster ist aktiviert oder deaktiviert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -553,11 +553,11 @@ virtual HRESULT OnExecOleCmd(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Ein Zeiger auf eine GUID, die eine Reihe von Befehlen identifiziert. Kann **NULL** an Standardeinstellung Befehlsgruppe.  
   
- `nCmdID`  
- Der auszuführende Befehl. Muss in der identifizierten Gruppe `pguidCmdGroup`.  
+ *nCmdID*  
+ Der auszuführende Befehl. Muss in der identifizierten Gruppe *PguidCmdGroup*.  
   
  *nCmdExecOut*  
  Die Methode das Objekt ausgeführt werden soll der Befehl, eine oder mehrere der folgenden Werte aus der **OLECMDEXECOPT** Enumeration:  
@@ -570,10 +570,10 @@ virtual HRESULT OnExecOleCmd(
   
  **OLECMDEXECOPT_SHOWHELP**  
   
- `pvarargIn`  
+ *pvarargIn*  
  Zeiger auf eine **VARIANTARG** mit Eingabeargumenten für den Befehl. Kann **NULL**.  
   
- `pvarargOut`  
+ *pvarargOut*  
  Zeiger auf eine **VARIANTARG** die Rückgabewerte für die Ausgabe des Befehls erhalten. Kann **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -584,10 +584,10 @@ virtual HRESULT OnExecOleCmd(
 |**E_UNEXPECTED**|Unerwarteter Fehler aufgetreten ist.|  
 |**E_FAIL**|Fehler|  
 |**E_NOTIMPL**|Gibt an MFC selbst sollten versuchen, übersetzen und verteilen den Befehl|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` ist ungleich **NULL** aber nicht an eine Gruppe Befehl erkannt|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` als ein gültiger Befehl in der Gruppe wird nicht erkannt werden. `pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|Der Befehl identifizierte `nCmdID` ist deaktiviert und kann nicht ausgeführt werden|  
-|**OLECMDERR_NOHELP**|Aufrufer aufgefordert Hilfe zum Befehl "identifizierte" `nCmdID` , aber es ist keine Hilfe verfügbar|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*PguidCmdGroup* nicht **NULL** aber nicht an eine Gruppe Befehl erkannt|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* wird nicht als gültiger Befehl in der Gruppe erkannt *PguidCmdGroup*|  
+|**OLECMDERR_DISABLED**|Der Befehl identifizierte *nCmdID* ist deaktiviert und kann nicht ausgeführt werden|  
+|**OLECMDERR_NOHELP**|Aufrufer aufgefordert Hilfe zum Befehl "identifizierte" *nCmdID* , aber es ist keine Hilfe verfügbar|  
 |**OLECMDERR_CANCELED**|Die Ausführung wurde vom Benutzer abgebrochen.|  
   
 ### <a name="remarks"></a>Hinweise  
@@ -595,11 +595,11 @@ virtual HRESULT OnExecOleCmd(
   
  Das Framework Ruft die Funktion, bevor Sie versuchen, übersetzen und verteilen einen OLE-Dokument-Befehl. Sie müssen diese Funktion zum Behandeln von OLE-Dokument-Standardbefehle überschrieben, aber eine Überschreibung dieser Funktion müssen Sie angeben, sollten Sie eine eigene benutzerdefinierte Befehle zu behandeln oder Behandeln von Befehlen, die Parameter akzeptieren oder geben Ergebnisse zurück.  
   
- Die meisten Befehle verwenden Argumente oder Rückgabewerte nicht. Für die Mehrheit der Befehle kann der Aufrufer übergeben **NULL**s für `pvarargIn` und `pvarargOut`. Der Aufrufer kann für Befehle, die Eingabewerte zu erwarten, deklarieren und Initialisieren einer **VARIANTARG** Variable, und übergeben Sie einen Zeiger auf die Variable in `pvarargIn`. Für Befehle, die einen einzelnen Wert erfordern, das Argument gespeichert werden kann direkt in die **VARIANTARG** und an die Funktion übergeben. Mehrere Argumente verpackt werden müssen, in der **VARIANTARG** mithilfe einer der unterstützten Typen (z. B. `IDispatch` und **SAFEARRAY** ).  
+ Die meisten Befehle verwenden Argumente oder Rückgabewerte nicht. Für die Mehrheit der Befehle kann der Aufrufer übergeben **NULL**s für *PvarargIn* und *PvarargOut*. Der Aufrufer kann für Befehle, die Eingabewerte zu erwarten, deklarieren und Initialisieren einer **VARIANTARG** Variable, und übergeben Sie einen Zeiger auf die Variable in *PvarargIn*. Für Befehle, die einen einzelnen Wert erfordern, das Argument gespeichert werden kann direkt in die **VARIANTARG** und an die Funktion übergeben. Mehrere Argumente verpackt werden müssen, in der **VARIANTARG** mithilfe einer der unterstützten Typen (z. B. `IDispatch` und **SAFEARRAY** ).  
   
- Auf ähnliche Weise bei einem Befehl Argumente den Aufrufer zurückgegeben wird erwartet, dass Deklarieren einer **VARIANTARG**, initialisieren Sie sie mit `VT_EMPTY`, und übergeben Sie die Adresse in `pvarargOut`. Wenn ein Befehl einen einzelnen Wert zurückgibt, kann das Objekt direkt im Wert speichern `pvarargOut`. Mehrere Ausgabewerte müssen folglich validierungsmodi verpackt werden die **VARIANTARG**.  
+ Auf ähnliche Weise bei einem Befehl Argumente den Aufrufer zurückgegeben wird erwartet, dass Deklarieren einer **VARIANTARG**, initialisieren Sie sie mit `VT_EMPTY`, und übergeben Sie die Adresse in *PvarargOut*. Wenn ein Befehl einen einzelnen Wert zurückgibt, kann das Objekt direkt im Wert speichern *PvarargOut*. Mehrere Ausgabewerte müssen folglich validierungsmodi verpackt werden die **VARIANTARG**.  
   
- Die basisklassenimplementierung dieser Funktion führt den **OLE_COMMAND_MAP** Strukturen, die den Befehlsziel und es wurde versucht, verteilen den Befehl aus, um einem entsprechenden Handler zugeordnet. Die basisklassenimplementierung funktioniert nur mit Befehlen, die keine Argumente akzeptieren oder Werte zurück. Wenn Sie Befehle zu behandeln, die Argumente annehmen oder Werte zurückgeben möchten, müssen Sie überschreiben diese Funktion und Arbeiten mit der `pvarargIn` und `pvarargOut` Parameter selbst.  
+ Die basisklassenimplementierung dieser Funktion führt den **OLE_COMMAND_MAP** Strukturen, die den Befehlsziel und es wurde versucht, verteilen den Befehl aus, um einem entsprechenden Handler zugeordnet. Die basisklassenimplementierung funktioniert nur mit Befehlen, die keine Argumente akzeptieren oder Werte zurück. Wenn Sie Befehle zu behandeln, die Argumente annehmen oder Werte zurückgeben möchten, müssen Sie überschreiben diese Funktion und Arbeiten mit der *PvarargIn* und *PvarargOut* Parameter selbst.  
   
 ##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  Das Framework ruft diese Funktion auf, wenn Rahmenfenster der Steuerelementcontainer-Anwendung aktiviert oder deaktiviert ist.  
@@ -609,7 +609,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bActivate`  
+ *bActivate*  
  Gibt an, ob das Rahmenfenster aktiviert oder deaktiviert wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -656,14 +656,14 @@ virtual void OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRectBorder`  
+ *lpRectBorder*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` Objekt, das die Koordinaten des Rahmens angibt.  
   
- `lpUIWindow`  
+ *lpUIWindow*  
  Zeiger auf ein Objekt der Klasse **IOleInPlaceUIWindow** , die die aktuelle bearbeitungssitzung direktes besitzt.  
   
  *bFrame*  
- **"True"** Wenn `lpUIWindow` verweist auf die containeranwendung Rahmenfenster der obersten Ebene, oder **"false"** Wenn `lpUIWindow` verweist auf die containeranwendung auf Dokumentebene Rahmenfenster.  
+ **"True"** Wenn *LpUIWindow* verweist auf die containeranwendung Rahmenfenster der obersten Ebene, oder **"false"** Wenn *LpUIWindow* verweist auf den Container der Anwendung auf Dokumentebene Rahmenfenster.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ändert die Größe und Symbolleisten und andere Benutzeroberflächenelemente in Übereinstimmung mit der Größe des neuen Fensters anpasst.  
@@ -682,10 +682,10 @@ virtual void OnSetHostNames(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszHost`  
+ *lpszHost*  
  Ein Zeiger auf eine Zeichenfolge, die den Namen der containeranwendung angibt.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  Ein Zeiger auf eine Zeichenfolge, die Container-Namen für das Dokument angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -703,10 +703,10 @@ virtual void OnSetItemRects(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpPosRect`  
+ *lpPosRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` Objekt, das direkte Rahmenfenster Position relativ zum Clientbereich der Steuerelementcontainer-Anwendung angibt.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` Objekt, das direkte Rahmenfenster Clippingrechteck relativ zum Clientbereich der Steuerelementcontainer-Anwendung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -715,7 +715,7 @@ virtual void OnSetItemRects(
  Diese Funktion wird in der Regel aufgerufen, als Antwort auf eine `RequestPositionChange` aufzurufen, obwohl es durch den Container an eine Position für das direkte Element änderungsanforderung zu einem beliebigen Zeitpunkt aufgerufen werden kann.  
   
 ##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
- Das Framework ruft diese Funktion zum ein- oder Ausblenden der Serveranwendung Steuerleisten das Rahmenfenster identifizierte zugeordnet `pFrameWnd`.  
+ Das Framework ruft diese Funktion zum ein- oder Ausblenden der Serveranwendung Steuerleisten das Rahmenfenster identifizierte zugeordnet *pFrameWnd*.  
   
 ```  
 virtual void OnShowControlBars(
@@ -724,10 +724,10 @@ virtual void OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFrameWnd`  
+ *pFrameWnd*  
  Ein Zeiger auf das Rahmenfenster, deren Steuerleisten ausgeblendet oder angezeigt werden soll.  
   
- `bShow`  
+ *bShow*  
  Bestimmt, ob die Steuerleisten angezeigt oder ausgeblendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -741,11 +741,11 @@ virtual void OnShowDocument(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bShow`  
+ *bShow*  
  Gibt an, ob die Benutzeroberfläche für das Dokument oder ausgeblendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bShow` ist **"true"**, die standardmäßige Implementierung aktiviert die Serveranwendung bei Bedarf, und bewirkt, dass die Container-Anwendung das Fenster einen Bildlauf durchführen, damit das Element sichtbar ist. Wenn `bShow` ist **"false"**, die standardmäßige Implementierung deaktiviert das Element durch einen Aufruf von `OnDeactivate`, zerstört, oder blendet Sie aus allen Rahmenfenster, die für das Dokument, mit Ausnahme des ersten erstellt wurden. Wenn die Dokumente nicht sichtbar bleiben, blendet die standardmäßige Implementierung die Serveranwendung aus.  
+ Wenn *bShow* ist **"true"**, die standardmäßige Implementierung aktiviert die Serveranwendung bei Bedarf, und bewirkt, dass die Container-Anwendung das Fenster einen Bildlauf durchführen, damit das Element sichtbar ist. Wenn *bShow* ist **"false"**, die standardmäßige Implementierung deaktiviert das Element durch einen Aufruf von `OnDeactivate`, zerstört, oder blendet Sie aus allen Rahmenfenster, die für das Dokument, mit Ausnahme des ersten erstellt wurden ein. Wenn die Dokumente nicht sichtbar bleiben, blendet die standardmäßige Implementierung die Serveranwendung aus.  
   
 ##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  Beim Speichern eines Dokuments, die ein eingebettetes Element in einem Verbunddokument wird vom Framework aufgerufen.  
@@ -768,7 +768,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpPosRect`  
+ *lpPosRect*  
  Zeiger auf eine `RECT` Struktur oder ein `CRect` Objekt, das neue Position des Elements enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -792,7 +792,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `sizeScroll`  
+ *sizeScroll*  
  Gibt an, wie weit Containerdokument Bildlauf durchgeführt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -813,16 +813,16 @@ void UpdateAllItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pSender`  
+ *pSender*  
  Zeiger auf das Element, das das Dokument geändert oder **NULL** Wenn alle Elemente aktualisiert werden.  
   
- `lHint`  
+ *lHint*  
  Enthält Informationen über die Änderung.  
   
- `pHint`  
+ *pHint*  
  Zeiger auf ein Objekt, das Informationen über die Änderung zu speichern.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Bestimmt, wie das Element, gezeichnet werden soll. Dies ist ein Wert aus der `DVASPECT` Enumeration. Dieser Parameter kann einen der folgenden Werte aufweisen:  
   
 - `DVASPECT_CONTENT` Element wird so dargestellt, als eingebettetes Objekt in dessen Container angezeigt werden können.  
@@ -836,7 +836,7 @@ void UpdateAllItems(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird in der Regel aufrufen, nachdem der Benutzer das Serverdokument ändert. Wenn ein OLE-Element auf das Dokument mit einer automatischen Verknüpfung verknüpft ist, wird das Element aktualisiert, um die Änderungen wiederzugeben. In containeranwendungen, die mit der Microsoft Foundation Class-Bibliothek geschrieben wurden die [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) Memberfunktion `COleClientItem` aufgerufen wird.  
   
- Diese Funktion ruft die `OnUpdate` Memberfunktion für jede Dokumentelemente außer dem sendenden Element, das Übergeben von `pHint`, `lHint`, und `nDrawAspect`. Verwenden Sie diese Parameter, um Informationen zu den Elementen zu den Änderungen an den das Dokument zu übergeben. Können Sie codieren, Informationen mit `lHint` oder definieren Sie eine `CObject`-abgeleitete Klasse zum Speichern von Informationen zu den Änderungen, und übergeben Sie ein Objekt der Klasse verwenden `pHint`. Überschreiben der `OnUpdate` Memberfunktion in Ihrem `COleServerItem`-abgeleitete Klasse zu optimieren, die Aktualisierung der einzelnen Elemente abhängig davon, ob deren Präsentation geändert hat.  
+ Diese Funktion ruft die `OnUpdate` Memberfunktion für jede Dokumentelemente außer dem sendenden Element, das Übergeben von *pHint*, *lHint*, und *nDrawAspect*. Verwenden Sie diese Parameter, um Informationen zu den Elementen zu den Änderungen an den das Dokument zu übergeben. Können Sie codieren, Informationen mit *lHint* oder definieren Sie eine `CObject`-abgeleitete Klasse zum Speichern von Informationen zu den Änderungen, und übergeben Sie ein Objekt der Klasse verwenden *pHint*. Überschreiben der `OnUpdate` Memberfunktion in Ihrem `COleServerItem`-abgeleitete Klasse zu optimieren, die Aktualisierung der einzelnen Elemente abhängig davon, ob deren Präsentation geändert hat.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)   

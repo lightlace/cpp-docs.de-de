@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374175"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040859"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit-Klasse
 Implementiert ein Bearbeitungssteuerelement, das befindet, ist auf eine menübandleiste.  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Befehls-ID für die `CMFCRibbonEdit` Steuerelement.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Die Breite in Pixel, der im Textfeld für die `CMFCRibbonEdit` Steuerelement.  
   
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Die Bezeichnung für die `CMFCRibbonEdit` Steuerelement.  
   
- [in] `nImage`  
+ [in] *nImage*  
  Index für das kleine Bild für die `CMFCRibbonEdit` Steuerelement. Die Auflistung der kleine Bilder wird von der übergeordneten Menübandkategorie verwaltet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
  Das `CMFCRibbonEdit`-Quellobjekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `src` Parameter muss vom Typ `CMFCRibbonEdit`.  
+ Die *Src* Parameter muss vom Typ `CMFCRibbonEdit`.  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  Erstellt ein neues Textfeld für die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ein Zeiger auf das übergeordnete Fenster eines der `CMFCRibbonEdit` Objekt.  
   
- [in] `dwEditStyle`  
+ [in] *DwEditStyle*  
  Gibt die Art des Textfelds. Können Sie die im Abschnitt "Hinweise" mit aufgeführten Fensterstile Kombinieren der [bearbeiten Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb775464) , werden im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nMin`  
+ [in] *nMin*  
  Der minimale Wert für das Drehfeld.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Der maximale Wert für das Drehfeld.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das `CMFCRibbonEdit` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das `CMFCRibbonEdit` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bInFloatyMode`  
+ [in] *bInFloatyMode*  
  `TRUE` Wenn die `CMFCRibbonEdit` -Steuerelement befindet sich im unverankerten Modus; anderenfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das `CMFCRibbonEdit` Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das `CMFCRibbonEdit` Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das `CMFCRibbonEdit` Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext für das `CMFCRibbonEdit` Steuerelement.  
   
- [in] `strText`  
- Der Anzeigetext [ ] (../../mfc/reference/cmfcribbonedit-class.md "Cmfcribbonedit Klasse").  
+ [in] *StrText*  
+ Der Anzeigetext [Cmfcribbonedit Klasse](../../mfc/reference/cmfcribbonedit-class.md "").  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Abstand vom links neben dem Listenfeld auf den Anzeigetext in Pixel.  
   
- [in] `rect`  
+ [in] *Rect*  
  Das Anzeigerechteck für die `CMFCRibbonEdit` Steuerelement.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Dieser Parameter wird nicht verwendet.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
+ [in] *bAktivieren*  
  `TRUE` um das Steuerelement zu aktivieren; `FALSE` So deaktivieren Sie das Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` Wenn der Mauszeiger innerhalb der Grenzen des befindet der `CMFCRibbonEdit` steuern; anderenfalls `FALSE`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Wenn der Zugriffstasteninfo ein Popupmenü angezeigt werden; andernfalls `FALSE`.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Wenn das Layout rechts-nach-links wird; `FALSE` ist das Layout links nach rechts.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` um das Steuerelement anzuzeigen; `FALSE` zum Ausblenden des Steuerelements.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParent`  
+ *pParent*  
  Zeiger auf das übergeordnete Fenster für die `CMFCRibbonEdit` Objekt.  
   
- `data`  
+ *data*  
  Die barrierefreiheitsdaten für das `CMFCRibbonEdit` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strText`  
+ [in] *StrText*  
  Der Text im Textfeld.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nAlign`  
+ [in] *nAlign*  
  Ein Textwert Ausrichtung aufgelistet. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Parameter `nAlign` ist eine der folgenden Bearbeitung Steuerelementtypen:  
+ Der Parameter *nAlign* ist einer der folgenden bearbeiten Steuerelementtypen:  
   
 - **ES_LEFT** für die linksbündige Ausrichtung  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nWidth`  
+ [in] *nWidth*  
  Die Breite des Textfelds in Pixel.  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` zum Festlegen der Breite der unverankerten Modus; `FALSE` zum Festlegen der Breite der für den normalen Modus.  
   
 ### <a name="remarks"></a>Hinweise  

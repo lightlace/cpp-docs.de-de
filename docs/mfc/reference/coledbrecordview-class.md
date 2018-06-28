@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372205"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037856"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView-Klasse
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Enthält eine Null-terminierte Zeichenfolge, die den Namen einer Dialogfeldvorlagen-Ressource ist.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Enthält die ID-Nummer einer Dialogfeldvorlagen-Ressource.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie müssen diese Memberfunktion zum Erstellen oder ein Rowsetobjekt abzurufen und ein Handle zu einer zurückkehren, überschreiben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die standardmäßige Implementierung gibt das Rowset-Handle, das in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, es eine Rowset-Objekte des Typs erstellt angegebenen mit ClassWizard und ruft seine **öffnen** Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann ein Handle für das Objekt zurückgegeben.  
+ Sie müssen diese Memberfunktion zum Erstellen oder ein Rowsetobjekt abzurufen und ein Handle zu einer zurückkehren, überschreiben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die standardmäßige Implementierung gibt das Rowset-Handle, das in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, es eine Rowset-Objekte des Typs erstellt angegebenen mit ClassWizard und ruft seine `Open` Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann ein Handle für das Objekt zurückgegeben.  
   
 > [!NOTE]
 >  "Zurück", MFC 7.0 `OnGetRowset` zurückgegeben wird einen Zeiger auf `CRowset`. Wenn Sie über Code verfügen, die aufruft `OnGetRowset`, müssen Sie den Rückgabetyp der vorlagenbasierten Klasse ändern **CRowset <>**.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Einer der folgenden Werte Standardbefehls-ID:  
   
 - `ID_RECORD_FIRST` – Wechseln Sie zu den ersten Datensatz des Recordsets.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Wert ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die Anforderung zum Verschieben von verweigert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung Ruft die entsprechende **verschieben** Memberfunktion der `CRowset` Objekt, das mit der Datensatzansicht zugeordnet.  
+ Die Standardimplementierung Ruft die entsprechende `Move` Memberfunktion der `CRowset` Objekt, das mit der Datensatzansicht zugeordnet.  
   
  Standardmäßig `OnMove` den aktuellen Datensatz in der Datenquelle aktualisiert, wenn der Benutzer in der Datensatzansicht geändert hat.  
   

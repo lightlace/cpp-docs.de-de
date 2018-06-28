@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374038"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038889"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd-Klasse
 Stellt die Funktionalität eines untergeordneten Windows-MDI-Rahmenfensters (Multiple Document Interface) bereit, zusammen mit Membern zum Verwalten des Fensters.  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Sie können ein MDI-Rahmenfenster erstellen, durch Aufrufen der [erstellen](../../mfc/reference/cframewnd-class.md#create) oder [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) Memberfunktion von `CFrameWnd`.  
   
- Vor dem Aufruf **erstellen** oder `LoadFrame`, müssen Sie die Frame-Fensterobjekt auf dem Heap mithilfe des C++ erstellen **neue** Operator. Vor dem Aufruf **erstellen** können Sie auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion die Stile-Symbol und die Klasse für den Frame festgelegt.  
+ Vor dem Aufruf `Create` oder `LoadFrame`, müssen Sie die Frame-Fensterobjekt auf dem Heap mithilfe des C++ erstellen **neue** Operator. Vor dem Aufruf `Create` können Sie auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion die Stile-Symbol und die Klasse für den Frame festgelegt.  
   
- Verwenden der **erstellen** Memberfunktion, die Frame-Erstellungsparameter als sofortige Argumente zu übergeben.  
+ Verwenden der `Create` Memberfunktion, die Frame-Erstellungsparameter als sofortige Argumente zu übergeben.  
   
- `LoadFrame` erfordert weniger Argumente als **erstellen**, und ruft stattdessen die meisten die Standardwerte aus Ressourcen, einschließlich der Frame Beschriftung, Symbol Zugriffstastentabelle und im Menü ab. Zugriff durch `LoadFrame`, alle diese Ressourcen müssen die gleichen Ressourcen-ID (z. B. **IDR_MAINFRAME**).  
+ `LoadFrame` erfordert weniger Argumente als `Create`, und ruft stattdessen die meisten die Standardwerte aus Ressourcen, einschließlich der Frame Beschriftung, Symbol Zugriffstastentabelle und im Menü ab. Zugriff durch `LoadFrame`, alle diese Ressourcen müssen die gleichen Ressourcen-ID (z. B. **IDR_MAINFRAME**).  
   
  Obwohl **MDIFrameWnd** stammt aus `CFrameWnd`, einem Rahmenfenster (Klasse) abgeleitet `CMDIFrameWnd` müssen nicht deklariert werden, mit `DECLARE_DYNCREATE`.  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie die **erstellen** oder `LoadFrame` Memberfunktion versucht, das sichtbar MDI-Rahmenfenster erstellen.  
+ Rufen Sie die `Create` oder `LoadFrame` Memberfunktion versucht, das sichtbar MDI-Rahmenfenster erstellen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Eine long-Zeiger auf eine [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Struktur.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Ein Zeiger auf das Menü das Popupmenü Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pClass`  
+ *pClass*  
  Die Laufzeitklasse für das untergeordnete Fenster erstellt werden soll.  
   
  *nResource*  
  Die ID des freigegebenen Ressourcen, die das untergeordnete Fenster zugeordnet.  
   
- `hMenu`  
+ *hMenu*  
  Das untergeordnete Fenster im Menü.  
   
- `hAccel`  
+ *hAccel*  
  Das untergeordnete Fenster Zugriffstaste.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nType`  
+ *%nbenachrichtigungen zu*  
  Gibt ein Flag Cascade an. Nur die folgenden Flags können angegeben werden: `MDITILE_SKIPDISABLED`, wodurch verhindert wird, dass deaktivierte untergeordnete MDI-Fenster kaskadiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster zu maximieren.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster wiederherzustellen.  
   
 ### <a name="example"></a>Beispiel  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Gibt an, klicken Sie im Menü des neuen Menüs Rahmenfenster. Wenn **NULL**, klicken Sie im Menü wird nicht geändert.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Gibt an, das Menü des neuen Fenster im Popupmenü. Wenn **NULL**, klicken Sie im Menü wird nicht geändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nType`  
+ *%nbenachrichtigungen zu*  
  Gibt ein Flag Tiling. Dieser Parameter kann eine der folgenden Flags sein:  
   
 - `MDITILE_HORIZONTAL` Kacheln untergeordnete MDI-Fenster damit, ein Fenster über anderen angezeigt wird.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Kacheln untergeordnete MDI-Fenster neben anderen Kanton, ein Fenster festlegen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Version des `MDITile`, ohne Angabe von Parametern werden die Fenster unter Windows-Versionen 3.1 und höher vertikal angeordnet. Die zweite Version Kacheln Windows vertikal oder horizontal, abhängig vom Wert der `nType` Parameter.  
+ Die erste Version des `MDITile`, ohne Angabe von Parametern werden die Fenster unter Windows-Versionen 3.1 und höher vertikal angeordnet. Die zweite Version Kacheln Windows vertikal oder horizontal, abhängig vom Wert der *%nbenachrichtigungen zu* Parameter.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMDIFrameWnd::MDICascade](#mdicascade).  

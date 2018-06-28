@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368799"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037960"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar-Klasse
 Ein `CMFCReBar` Objekt ist eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grundleisten-Steuerelemente bereitstellt.  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Ein Zeiger auf das untergeordnete Fenster, in die Infoleiste eingefügt werden soll. Das referenzierte Objekt benötigen die **WS_CHILD** Fensterstil.  
   
- [in] `pszText`  
+ [in] *PszText*  
  Gibt den Text auf der grundleiste angezeigt werden. Der Text ist nicht Teil des untergeordneten Fensters. Stattdessen wird er auf die Infoleiste selbst angezeigt.  
   
- [in] [out] `pbmp`  
+ [in] [out] *Pbmp*  
  Gibt die Bitmap auf den Hintergrund Infoleiste angezeigt werden.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Enthält die Formatvorlage, die auf dem Band angewendet. Eine vollständige Liste von-Band-Formaten finden Sie in der Beschreibung für `fStyle` in der [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Struktur in der Windows-SDK-Dokumentation.  
   
- [in] `clrFore`  
+ [in] *ClrFore*  
  Die Vordergrundfarbe der Infoleiste darstellt.  
   
- [in] `clrBack`  
+ [in] *ClrBack*  
  Die Hintergrundfarbe der Infoleiste darstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster eines dieser Grundleisten-Steuerelement.  
   
- [in] `dwCtrlStyle`  
+ [in] *DwCtrlStyle*  
  Gibt den Stil für das Grundleistensteuerelement. Der Standardwert für den Stil ist **RBS_BANDBORDERS**, welche zeigt eingrenzen Zeilen ein, um benachbarte Bänder für das Grundleistensteuerelement zu trennen. Eine Liste der gültigen Formatvorlagen, finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) in der Windows-SDK-Dokumentation.  
   
- [in] `dwStyle`  
+ [in] *DwStyle*  
  Der Fensterstil des Grundleisten-Steuerelements. Eine Liste der gültigen Formatvorlagen, finden Sie unter [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  Die Infoleiste untergeordneten Fensters-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwDockStyle`  
+ [in] *DwDockStyle*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
- [in] `pTI`  
+ [in] *zeigen*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwAlignment`  
+ [in] *DwAlignment*  
   
 ### <a name="remarks"></a>Hinweise  
   
