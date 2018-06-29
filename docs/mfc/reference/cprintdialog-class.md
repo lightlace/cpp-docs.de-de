@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377226"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079647"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog-Klasse
 Kapselt die Dienste, die vom allgemeinen Windows-Dialogfeld für das Drucken bereitgestellt werden.  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bPrintSetupOnly`  
- Gibt an, ob die Windows-Druckserver-Standarddialogfeld oder Drucken einrichten (Dialogfeld) angezeigt wird. Legen Sie diesen Parameter auf **"true"** die Print-Installation von Windows-Standarddialogfeld angezeigt. Legen Sie es auf **"false"** zum Anzeigen des Dialogfelds Windows drucken. Wenn `bPrintSetupOnly` ist **"false"**, einen Drucker einrichten Optionsfeld wird weiterhin in das Dialogfeld Drucken angezeigt.  
+ *bPrintSetupOnly*  
+ Gibt an, ob die Windows-Druckserver-Standarddialogfeld oder Drucken einrichten (Dialogfeld) angezeigt wird. Legen Sie diesen Parameter auf **"true"** die Print-Installation von Windows-Standarddialogfeld angezeigt. Legen Sie es auf **"false"** zum Anzeigen des Dialogfelds Windows drucken. Wenn *bPrintSetupOnly* ist **"false"**, einen Drucker einrichten Optionsfeld wird weiterhin in das Dialogfeld Drucken angezeigt.  
   
- `dwFlags`  
+ *dwFlags*  
  Ein oder mehrere Flags, die Sie verwenden können, zum Anpassen der Einstellungen im Dialogfeld mit dem bitweisen OR-Operator kombiniert. Z. B. die **PD_ALLPAGES** Flag legt den Standardbereich drucken für alle Seiten des Dokuments. Finden Sie unter der [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Struktur in das Windows SDK für Weitere Informationen zu diesen Flags.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Dialogfeld über- oder Besitzer Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Nach dem Aufruf `DoModal`, Sie können andere Memberfunktionen aufrufen zum Abrufen von Einstellungen oder Eingabe von Informationen vom Benutzer in das Dialogfeld.  
   
- Beachten Sie, dass beim Aufrufen des Konstruktors mit `bPrintSetupOnly` festgelegt **"false"**, **PD_RETURNDC** Flag wird automatisch verwendet. Nach dem Aufruf `DoModal`, `GetDefaults`, oder `GetPrinterDC`, ein druckerdomänencontroller im zurückgegeben `m_pd.hDC`. Dieser Domänencontroller muss freigegeben werden, mit einem Aufruf von [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) durch den Aufrufer der `CPrintDialog`.  
+ Beachten Sie, dass beim Aufrufen des Konstruktors mit *bPrintSetupOnly* festgelegt **"false"**, **PD_RETURNDC** Flag wird automatisch verwendet. Nach dem Aufruf `DoModal`, `GetDefaults`, oder `GetPrinterDC`, ein druckerdomänencontroller im zurückgegeben `m_pd.hDC`. Dieser Domänencontroller muss freigegeben werden, mit einem Aufruf von [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) durch den Aufrufer der `CPrintDialog`.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Hinweise  
  Die abgerufenen Werte befinden sich der `m_pd` Struktur.  
   
- In einigen Fällen ein Aufruf dieser Funktion rufen die [Konstruktor](#cprintdialog) für `CPrintDialog` mit `bPrintSetupOnly` festgelegt **"false"**. In diesen Fällen einen druckerdomänencontroller und **hDevNames** und **hDevMode-Feld** (zwei Handles befindet sich in der `m_pd` -Datenmember) werden automatisch zugewiesen.  
+ In einigen Fällen ein Aufruf dieser Funktion rufen die [Konstruktor](#cprintdialog) für `CPrintDialog` mit *bPrintSetupOnly* festgelegt **"false"**. In diesen Fällen einen druckerdomänencontroller und **hDevNames** und **hDevMode-Feld** (zwei Handles befindet sich in der `m_pd` -Datenmember) werden automatisch zugewiesen.  
   
  Wenn der Konstruktor für `CPrintDialog` aufgerufen wurde, wobei `bPrintSetupOnly` festgelegt **"false"**, diese Funktion wird nicht nur zurück **hDevNames** und **hDevMode-Feld** (befindet sich unter **m_pd.hDevNames** und **m_pd.hDevMode**) an den Aufrufer jedoch auch einen Drucker-Gerätekontext in zurück **m_pd.hDC**. Es liegt in der Verantwortung des Aufrufers, löschen die Drucker-Gerätekontext und rufen Sie die Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) Funktion auf die Handles Sie abschließend mit der `CPrintDialog` Objekt.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Ein Handle für den Drucker-Gerätekontext bei Erfolg; andernfalls **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `bPrintSetupOnly` Parameter von der `CPrintDialog` Konstruktor wurde **"false"** (d. h., dass das Drucken-Dialogfeld angezeigt wird), klicken Sie dann `GetPrinterDC` gibt ein Handle für den Drucker-Gerätekontext zurück. Rufen Sie die Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) Funktion, um den Gerätekontext löschen, wenn Sie fertig sind verwenden.  
+ Wenn die *bPrintSetupOnly* Parameter von der `CPrintDialog` Konstruktor wurde **"false"** (d. h., dass das Drucken-Dialogfeld angezeigt wird), klicken Sie dann `GetPrinterDC` gibt ein Handle für das Druckgerät Kontext. Rufen Sie die Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) Funktion, um den Gerätekontext löschen, wenn Sie fertig sind verwenden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
